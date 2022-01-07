@@ -19,10 +19,10 @@
 />
 
 <next_in_chain key="gkw_88typemod3.weapon" share_ammo="0" />
-<inventory  price="300.0" />
-<animation state_key="recoil"   animation_key="stabbing1, 88typemod3_melee" />
-<animation state_key="recoil"   animation_key="stabbing2, 88typemod3_melee" />
-<animation state_key="recoil"   animation_key="stabbing3, 88typemod3_melee" />
+<inventory price="300.0" />
+    <animation state_key="recoil"   animation_key="stabbing1, 88typemod3_melee" speed="0.600000"/>
+    <animation state_key="recoil"   animation_key="stabbing2, 88typemod3_melee" speed="0.600000"/>
+    <animation state_key="recoil"   animation_key="stabbing3, 88typemod3_melee" speed="0.600000"/>
     <animation state_key="stabbing" animation_key="stabbing1, 88typemod3_melee" />
     <animation state_key="stabbing" animation_key="stabbing2, 88typemod3_melee" />
     <animation state_key="stabbing" animation_key="stabbing3, 88typemod3_melee" />
