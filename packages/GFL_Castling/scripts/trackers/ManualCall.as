@@ -69,6 +69,8 @@ class ManualCall : Tracker {
                         " position='" + target.toString() + "' />";
                         //m_metagame.getComms().send(c);
                         CallTaskArray.insertLast(ManualCallTask(characterId,c,8.0,Faction,target));
+                        sendFactionMessage(m_metagame,Faction,"Request trauma team support!");
+                        sendFactionMessage(m_metagame,Faction,"Receive, transport aircraft is maneuvering");
                         //_log("Add Call Task Success");
                     }
                 }
@@ -84,6 +86,7 @@ class ManualCall : Tracker {
 			{
                 playSoundAtLocation(m_metagame,"osprey.wav",CallTaskArray[0].m_factions,CallTaskArray[0].m_pos,7.0f);
                 m_metagame.getComms().send(CallTaskArray[0].Callkey);
+                sendFactionMessage(m_metagame,CallTaskArray[0].m_factions,"Echelon enter the battlefield");
                 //_log("excuteCallnow");
 				CallTaskArray.removeAt(0);
 			}			
