@@ -258,7 +258,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 		stage.m_soldierCapacityVariance = 0.3;
 		stage.m_playerAiCompensation = 4.5;                                         // was 4 (1.82)
-        stage.m_playerAiReduction = 2.5;                                          // was 2 (test3)    
+        stage.m_playerAiReduction = 0;                                          // was 2 (test3)    
 
 		stage.m_minRandomCrates = 2; 
 		stage.m_maxRandomCrates = 4;
@@ -308,7 +308,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.addTracker(CommsCapacityHandler(m_metagame));
 		stage.m_maxSoldiers = 17 * 6;
 		stage.m_playerAiCompensation = 4;                                         // was 5 (test4)
-    stage.m_playerAiReduction = 2.5;                                            // was 2 (test3)
+    stage.m_playerAiReduction = 0;                                            // was 2 (test3)
 
     stage.m_minRandomCrates = 2; 
     stage.m_maxRandomCrates = 3;    
@@ -345,7 +345,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.addTracker(CommsCapacityHandler(m_metagame));
 		stage.m_maxSoldiers = 14 * 8;
 		stage.m_playerAiCompensation = 5;                                         // was 6 (test4)
-    stage.m_playerAiReduction = 2.0;                                              // was 2.5 (test4)   
+    stage.m_playerAiReduction = 0;                                              // was 2.5 (test4)   
 
 		stage.m_soldierCapacityVariance = 0.4;                                   // was 0.31 in 1.65
 
@@ -399,7 +399,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 		stage.m_maxSoldiers = 30 * 3;                                             // was 28*3 in 1.75
 		stage.m_playerAiCompensation = 4;                                         // was 5 (test4)
-    stage.m_playerAiReduction = 2;                                            // was 3 (test4)  
+    stage.m_playerAiReduction = 0;                                            // was 3 (test4)  
     stage.m_soldierCapacityModel = "constant";                                // was set to default in 1.65
     
     stage.m_minRandomCrates = 0; 
@@ -456,7 +456,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 		stage.m_maxSoldiers = 18 * 14;
 		stage.m_playerAiCompensation = 3;                                     // was 4 (test4)     
-    stage.m_playerAiReduction = 1.5;                                            // was 1 (test3)    
+    stage.m_playerAiReduction = 0;                                            // was 1 (test3)    
 
 		stage.m_soldierCapacityVariance = 0.4; // map1 is a big map; using high variance helps keep the attack group not growing super large when more bases are captured
 
@@ -512,7 +512,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 		stage.m_maxSoldiers = 11 * 10;
 		stage.m_playerAiCompensation = 4;                                       // was 5 (test4)
-    stage.m_playerAiReduction = 2.5;                                              // was 2 (test3)
+    stage.m_playerAiReduction = 0;                                              // was 2 (test3)
 
 		stage.addTracker(PeacefulLastBase(m_metagame, 0));
 		stage.addTracker(CommsCapacityHandler(m_metagame));
@@ -558,7 +558,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 		stage.m_maxSoldiers = 15 * 9;                                             // was 17*7 in 1.65
 		stage.m_playerAiCompensation = 5;                                         // was 7 (test4)
-        stage.m_playerAiReduction = 2;                                            // was 3 (test2)
+        stage.m_playerAiReduction = 0;                                            // was 3 (test2)
     
     stage.addTracker(Spawner(m_metagame, 1, Vector3(485,5,705), 10, "default_ai"));        // outpost filler (1.70)
 
@@ -616,7 +616,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 		stage.m_maxSoldiers = 21 * 5;     // was 33 * 3 in 1.65
 		stage.m_playerAiCompensation = 5;                                         // was 4 (1.81)
-    stage.m_playerAiReduction = 2.5;                                            // was 2 (1.81)   
+    stage.m_playerAiReduction = 0;                                            // was 2 (1.81)   
 		stage.m_soldierCapacityModel = "constant";
 
     stage.m_minRandomCrates = 1; 
@@ -673,7 +673,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.m_maxSoldiers = 17 * 13;                // 220 in 1.65
 		stage.m_soldierCapacityVariance = 0.55;       // 0.4 in 1.65
 		stage.m_playerAiCompensation = 4;                                     // was 6 (test4)
-    stage.m_playerAiReduction = 2;                                            // wasn't set in 1.65, thus 0
+    stage.m_playerAiReduction = 0;                                            // wasn't set in 1.65, thus 0
 
 		stage.addTracker(PeacefulLastBase(m_metagame, 0));
 		stage.addTracker(CommsCapacityHandler(m_metagame));
@@ -730,7 +730,7 @@ class StageConfiguratorInvasion : StageConfigurator {
   
 		stage.m_soldierCapacityVariance = 0.45;                                   // 0.4 in 1.65
 		stage.m_playerAiCompensation = 4;                                     // was 5 (test4)
-    stage.m_playerAiReduction = 2;                                            // was 1.5 (test3)
+    stage.m_playerAiReduction = 0;                                            // was 1.5 (test3)
 
 		stage.addTracker(Spawner(m_metagame, 1, Vector3(309,15,524), 10, "default_ai"));        // 1st tow slot filler
 		stage.addTracker(Spawner(m_metagame, 1, Vector3(658,10,374), 10, "default_ai"));        // vulcan slot filler
@@ -783,7 +783,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 		stage.m_maxSoldiers = 15 * 15;
 		stage.m_playerAiCompensation = 4;                                       // was 5 (test4)
-    stage.m_playerAiReduction = 2.0;                                            // was 2.5 (test4) 
+    stage.m_playerAiReduction = 0;                                            // was 2.5 (test4) 
 
 		stage.m_soldierCapacityVariance = 0.4; 
 
@@ -849,7 +849,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 		stage.m_maxSoldiers = 11 * 13;
 		stage.m_playerAiCompensation = 4;                                       // was 5 (test4)
-    stage.m_playerAiReduction = 2.0;                                            // was 2.5 (test4)
+    stage.m_playerAiReduction = 0;                                            // was 2.5 (test4)
   
 		stage.m_soldierCapacityVariance = 0.45;    // instead of 0.4 in 1.50  
 
@@ -913,7 +913,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 		stage.m_maxSoldiers = 18 * 13;
 		stage.m_playerAiCompensation = 3;                                       // was 4 (test4)
-    stage.m_playerAiReduction = 2;                                            // was 1.5 (test3)
+    stage.m_playerAiReduction = 0;                                            // was 1.5 (test3)
 
 		stage.m_soldierCapacityVariance = 0.45;        // was 0.4
 
@@ -993,7 +993,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 		stage.m_maxSoldiers = 15 * 9;                                             
 		stage.m_playerAiCompensation = 5;                                       // was 7 (test4) 
-        stage.m_playerAiReduction = 2;                                          // was 1.5 (test3)    
+        stage.m_playerAiReduction = 0;                                          // was 1.5 (test3)    
 
 		stage.addTracker(PeacefulLastBase(m_metagame, 0));
 		stage.addTracker(CommsCapacityHandler(m_metagame));
@@ -1069,7 +1069,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 		stage.m_maxSoldiers = 20 * 9;                                             
 		stage.m_playerAiCompensation = 4;                                       // was 5 (test4) 
-        stage.m_playerAiReduction = 1;                                          // was 2 (test2)
+        stage.m_playerAiReduction = 0;                                          // was 2 (test2)
         
 		stage.m_soldierCapacityVariance = 0.45;                                                       
 
@@ -1143,7 +1143,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.m_soldierCapacityVariance = 0.6;                              
 
 		stage.m_playerAiCompensation = 4;                                         
-        stage.m_playerAiReduction = 2.0;                                       // was 1.5 (test5)        
+        stage.m_playerAiReduction = 0;                                       // was 1.5 (test5)        
 		stage.addTracker(PeacefulLastBase(m_metagame, 0));
 		stage.addTracker(CommsCapacityHandler(m_metagame));
 
@@ -1205,7 +1205,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 		stage.m_soldierCapacityVariance = 0.55;                                  // was 0.4
 		stage.m_playerAiCompensation = 4;                                       // was 4
-        stage.m_playerAiReduction = 2.0;                                        // was 2    
+        stage.m_playerAiReduction = 0;                                        // was 2    
 
 		stage.m_minRandomCrates = 1; 
 		stage.m_maxRandomCrates = 3;
@@ -1261,7 +1261,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 		stage.m_maxSoldiers = 10 * 20;                                             
 		stage.m_playerAiCompensation = 4;                                         
-    stage.m_playerAiReduction = 2;                                              
+    stage.m_playerAiReduction = 0;                                              
     stage.m_soldierCapacityModel = "constant";       
 
 	stage.addTracker(Spawner(m_metagame, 3, Vector3(506,0,465), 50, "default"));
@@ -1480,7 +1480,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 		stage.m_maxSoldiers = 70;                                               // was 80 in 1.70
 		stage.m_playerAiCompensation = 3;                                       // was 5 (test4)
-    stage.m_playerAiReduction = 2;                                              // wasn't set in 1.65, thus 0
+    stage.m_playerAiReduction = 0;                                              // wasn't set in 1.65, thus 0
     
     stage.m_minRandomCrates = 0; 
     stage.m_maxRandomCrates = 1;
