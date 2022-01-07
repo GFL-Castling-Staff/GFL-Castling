@@ -16,7 +16,7 @@
         stab_range="3.0" />
     <inventory  buy_price="5.0" sell_price="5.0" />
     <commonness in_stock="0" can_respawn_with="1" />
-	<next_in_chain key="gkw_type100_skill.weapon" share_ammo="1" />
+	<next_in_chain key="gkw_cl.weapon" share_ammo="0" />
     <sound key="fire" fileref="type100_fire_FromINS.wav" pitch_variety="0.05" volume="1" />
     <sound key="magazine_out" fileref="type100_mgz_out_FromINS.wav" volume="1" />
     <sound key="magazine_in" fileref="type100_mgz_in_FromINS.wav" volume="1" />
