@@ -2,7 +2,7 @@
 <weapon file="gf_ar.base_weapon" key="gkw_cl.weapon">
 
   <specification 
-     slot="0"
+     slot="1"
 	 retrigger_time="-1" 
 	 accuracy_factor="0.85" 
 	 sight_range_modifier="1"
@@ -21,7 +21,6 @@
 	 projectiles_per_shot="1"
      spread_range="0.0005"
 	/> 
-	<next_in_chain key="gkw_type100_1.weapon" share_ammo="0" />
 	<commonness value="0" in_stock="1" can_respawn_with="1" />
 	<capacity value="0" source="rank" source_value="0.0" />
 	<capacity value="1" source="rank" source_value="2.21" />
