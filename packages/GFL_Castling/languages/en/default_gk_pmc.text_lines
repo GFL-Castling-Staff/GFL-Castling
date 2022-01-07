@@ -3,6 +3,8 @@
   <!-- defined in default.character for differentiation, see maps/lobby/default.character too -->
 <!--  <comment key="Hmm, no signal" text="Hmm, no signal?"/> -->
 <comment key="Driver, abandon vehicle" text="This vehicle is Toast" />
+<comment key="Driver, abandon vehicle" text="This thing is gonna blow!" />
+<comment key="Driver, abandon vehicle" text="Damn, I gotta find another one" />
 
   <comment key="Driver, abandon vehicle" text="Bail out!" />
   <comment key="Driver, abandon vehicle" text="Get out!" />
@@ -25,6 +27,7 @@
   <comment key="Squad, get in" text="Hop in, girls!" />
   <comment key="Squad, get in" text="Take that vehicle" />
   <comment key="Squad, get in" text="Get in! Quickly!" />
+  <comment key="Squad, get in" text="Squad, mount up!" />
   
   <comment key="Squad, follow the vehicle" text="Follow the vehicle!" />
   <comment key="Squad, follow the vehicle" text="This will be hard.. keep up with it" />
@@ -70,6 +73,7 @@
   <comment key="Squad, move over there" text="...Yes, sir. Team! New Orders!" />
   <comment key="Squad, move over there" text="Over there!" />
   <comment key="Squad, move over there" text="Let's move!" />
+  <comment key="Squad, move over there" text="Move up!" />
   
   <comment key="Squad, change position" text="Move, ladies!" />
   <comment key="Squad, change position" text="Keep moving!" />
@@ -91,6 +95,9 @@
   <comment key="We surrender!" text="I`ve failed the Commander..." />
   <comment key="We surrender!" text="Damn it." />
   <comment key="We surrender!" text="……We surrender." />
+  <comment key="We surrender!" text="Damn it!" />
+  <comment key="We surrender!" text="Hey, hold your fire, we surrender." />
+  <comment key="We surrender!" text="This is the Commander's fault." />
   
   <comment key="Medic!" text="Help me, please!!" />
   <comment key="Medic!" text="Help me! I need help!" />  
@@ -101,18 +108,22 @@
   <comment key="Medic!" text="This hurts! I should have turned off the pain module..." />
   <comment key="Medic!" text="I don't want to die here!" />
   <comment key="Medic!" text="This is a lot more painful than I expected." /> 
+  <comment key="Medic!" text="I'm down! Medic!" />
+  <comment key="Medic!" text="Medic! Over here!" />
   
   <comment key="I feel good!" text="I can move now, thanks!" />
   <comment key="I feel good!" text="Thank you! I owe you one!" />
   <comment key="I feel good!" text="Alright, I`m back!" />
   <comment key="I feel good!" text="Some systems haven't recovered yet... not a big deal for now, at least" />
   <comment key="I feel good!" text="Thanks! I'll be more careful now!" />
-  <comment key="I feel good!" text="I thought I would forget you forever..." />
+  <comment key="I feel good!" text="I thought I would be forgetten..." />
+  <comment key="I feel good!" text="Hey, thanks alot!" />
   
   <comment key="Reloading" text="Reloading" />
   <comment key="Reloading" text="Cover me!" />
   <comment key="Reloading" text="Changing mags!" />
   <comment key="Reloading" text="Mag empty! Swapping!" />
+  <comment key="Reloading" text="I'm bingo, cover me!" />
   
   <comment key="cancel radio call" text="Disregard that, out." />
   <comment key="initiate radio call" text="T.C.C, Channel 3, Do you read, over?" />
@@ -134,27 +145,34 @@
   <comment key="Quickly!" text="Quickly! Double Time!" />
   <comment key="Quickly!" text="Move quickly!" />
   
-  <comment key="Buzz off" text="Hey, that's mine!" />
+  <comment key="Buzz off" text="Hey, this is mine!" />
   <comment key="Buzz off" text="F#%k off." />
   <comment key="Buzz off" text="I took it first, so go find a different one." />
+  <comment key="Buzz off" text="Go look for your own." />
   
   <comment key="Step out, kid" text="Sorry, but I need this." />
+  <comment key="Step out, kid" text="I'll be needing that." />
   
   <comment key="hostile vehicle takeover" text="??" />
   <comment key="hostile vehicle takeover" text="Who the heck are you?!" />
   <comment key="hostile vehicle takeover" text="......!" />
   <comment key="hostile vehicle takeover" text="What the?!" />
+  <comment key="hostile vehicle takeover" text="How rude!" />
+  <comment key="hostile vehicle takeover" text="Enemy hijack!" />
   
   <comment key="Can't respawn-the last base is under attack" text="Can't respawn, our last base is under attack" />
   <comment key="Can't respawn-spawning is locked" text="Can't respawn, no Redeployment Permission" />
   <comment key="Can't respawn-spawning is locked" text="Can't respawn, no Redeployment Point Available." />
   
   <comment key="Hmm.. not enough room here" text="No room available." />
-  <comment key="Hmm.. not enough room here" text="No more seats." />
+  <comment key="Hmm.. not enough room here" text="I can't put this here." />
+  <comment key="Hmm.. not enough room here" text="I can't set this here, too tight." />
   
   <comment key="I'm outta here" text="I'm outta here" />
   <comment key="I'm outta here" text="Nope, I'm out" />
   <comment key="I'm outta here" text="Screw this!" />
+  <comment key="I'm outta here" text="Tactical retreat!" />
+  <comment key="I'm outta here" text="I'm getting out of here!" />
   
   <comment key="Good job, soldiers" text="Good job!" />
   <comment key="Good job, soldiers" text="Let's Freaking Gooooo!" />
@@ -165,12 +183,16 @@
   <comment key="Good job, soldiers" text="This sector is under our control now." />
   <comment key="Good job, soldiers" text="We win these!" />
   <comment key="Good job, soldiers" text="It's ours now!" />
-  <comment key="Good job, soldiers" text="Mission Complete!" />
+  <comment key="Good job, soldiers" text="Objective Successful!" />
+  <comment key="Good job, soldiers" text="Alright!" />
+  <comment key="Good job, soldiers" text="Keep up the pace!" />
   
   <comment key="Open fire" text="I see them!" />
   <comment key="Open fire" text="Open fire!" />
   <comment key="Open fire" text="Enemy spotted!" />
   <comment key="Open fire" text="Contact! Movement!" />
+  <comment key="Open fire" text="Contact!" />
+  <comment key="Open fire" text="Enemies sighted!" />
   
   <comment key="Lone leader, open fire" text="Fire! Fire!" />
   
@@ -186,9 +208,14 @@
   <comment key="grenade alert, grenade tag = grenade" text="that's a Grenade!" />
   <comment key="grenade alert, grenade tag = grenade" text="OMG! Thats a Grenade!" />
   <comment key="grenade alert, grenade tag = grenade" text="Get down!" />
+  <comment key="grenade alert, grenade tag = grenade" text="Grenade! It's live!" />
+  <comment key="grenade alert, grenade tag = grenade" text="That's a live one!" />
+  <comment key="grenade alert, grenade tag = grenade" text="Hit the dirt!" />
+  <comment key="grenade alert, grenade tag = grenade" text="Explosive!" />
   
   <comment key="grenade alert, grenade tag = flashbang" text="Watchout!" />
   <comment key="grenade alert, grenade tag = flashbang" text="Flash Bang!" />
+  <comment key="grenade alert, grenade tag = flashbang" text="Cover your optics!" />
   
   <comment key="grenade alert, grenade tag = rocket" text="R!....P!....G!.....!" />
   <comment key="grenade alert, grenade tag = rocket" text="OMG! That's a Flying big one!" />
@@ -202,12 +229,15 @@
   <comment key="enemy not seen, area alerted" text="I feel like someone is watching me..." />
   <comment key="enemy not seen, area alerted" text="If fighting is sure to result in victory, then you must fight!' Sun Tzu said that..." />
   <comment key="enemy not seen, area alerted" text="Enemies might be still around here" />
+  <comment key="enemy not seen, area alerted" text="Enemy prescence felt, keep alert." />
+  <comment key="enemy not seen, area alerted" text="Something doen't feel right..." />
   
   <comment key="enemy not seen, area alert" text="Stay alert" />
   <comment key="enemy not seen, area alert" text="Stay low! Take cover! Enemy spotted nearby!" />
   <comment key="enemy not seen, area alert" text="I think I heard something" />
   <comment key="enemy not seen, area alert" text="Hang on I heard something" />
   <comment key="enemy not seen, area alert" text="Perpare for combat!" />
+  <comment key="enemy not seen, area alert" text="Keep your sensors up!" />
   
   <comment key="Lone leader, enemy not seen, area alerted" text="My scanner is reading something..." />
   
@@ -237,6 +267,7 @@
   <comment key="enemy seen" text="Engaging!" />
   <comment key="enemy seen" text="I see them!" />
   <comment key="enemy seen" text="We have Contact with the enemy! Requesting Support!" />
+  <comment key="enemy seen" text="There they are!" />
   
   <comment key="enemy seen, vehicle tag = tank" text="Armor Alert!!" />
   <comment key="enemy seen, vehicle tag = tank" text="Tank!" />
@@ -294,6 +325,10 @@
   <comment key="All quiet here" text="……I want some sweets..." />
   <comment key="All quiet here" text="……I want to eat cake." />
   <comment key="All quiet here" text="This is my duty, to protect the commander and everyone I love." /> 
+  <comment key="All quiet here" text="This is too quiet..." /> 
+  <comment key="All quiet here" text="I'm getting bored." /> 
+  <comment key="All quiet here" text="*Yawns*" /> 
+  <comment key="All quiet here" text="Nagareteku toki no na ka de demo..." /> 
   
   <comment key="Yes sir" text="Got it!" />
   <comment key="Yes sir" text="Affirmative!" />
@@ -302,6 +337,9 @@
   <comment key="Yes sir" text="Yes sir!" />
   <comment key="Yes sir" text="Order received." />
   <comment key="Yes sir" text="Copy that." />
+  <comment key="Yes sir" text="Roger." />
+  <comment key="Yes sir" text="Roger that." />
+  <comment key="Yes sir" text="Roger lead." />
   
   <comment key="Uh, I can't drive this thing" text="Vehicle data is being adapted...eh? What does it mean the database version is too old?" />
   <comment key="Uh, I can't drive this thing" text="What does this symbol mean?" />
@@ -317,6 +355,7 @@
   <comment key="Uh, I can't drive this thing" text="Can i change my seat......?" />
   <comment key="Uh, I can't drive this thing" text="The screen is full of russian words, I don't understand!" />
   <comment key="Uh, I can't drive this thing" text="I only remember When the commander driving this thing..." />
+  <comment key="Uh, I can't drive this thing" text="Wait, why are there 6 pedals if there are only 4 directions?" />
   
   <comment key="Waiting for squad" text="Wait for others" />
   <comment key="Waiting for squad" text="Squad Replenishing!" />
@@ -327,11 +366,14 @@
   <comment key="overencumbered" text="Ugh! shouldn't have brought those snacks!" />
   <comment key="overencumbered" text="It's too heavy" />
   <comment key="overencumbered" text="Overloaded..." />
+  <comment key="overencumbered" text="Uh oh, this is too much for my capacity." />
   
   <comment key="Where to, chief?" text="Where to go?" />
   <comment key="Where to, chief?" text="Waiting for further instructions" />
   <comment key="Where to, chief?" text="Waiting for orders" />
   <comment key="Where to, chief?" text="Waiting for new commands" />
+  <comment key="Where to, chief?" text="Waiting for orders." />
+  <comment key="Where to, chief?" text="Awaiting orders." />
   
   <comment key="Press SPACE to continue!" text="Press SPACE to continue!" />
   
@@ -351,13 +393,19 @@
   <comment key="celebrating" text="Mopping up areas" />
   <comment key="celebrating" text="I wanna go back to the dormitory to have a cake......" />
   <comment key="celebrating" text="The battle is over, Did I sent the data to Miss Heliana?" />
+  <comment key="celebrating" text="Mission Accomplished!" />
+  <comment key="celebrating" text="We did it! Great job everyone!" />
   
   <comment key="about to drive over a friendly" text="Did I bump into something just now?" />
   <comment key="about to drive over a friendly" text="……I will write an inspection report." />
+  <comment key="about to drive over a friendly" text="Get out of the way!" />
+  <comment key="about to drive over a friendly" text="Out the bloody way!" />
+  <comment key="about to drive over a friendly" text="Who the bloody hell are you you great gangly...*swearing ensues*" />
   
   <comment key="this is as close as i can get" text="this is as close as i can get" />
   <comment key="this is as close as i can get" text="This is the limit of possible range I can reach so far" />
   <comment key="this is as close as i can get" text="I don't think I can get there" />
+  <comment key="this is as close as i can get" text="Unable to proceed." />
   
   <comment key="enemy vehicle spotted, near base" text="Confirm the enemy &#37;vehicle_name near the &#37;base_name" />
   <comment key="enemy vehicle spotted, not near base" text="Confirm the &#37;vehicle_name" />
@@ -368,13 +416,163 @@
   <comment key="enemy comms have been destroyed, by us" text="Well done, the communication system of &#37;enemy_name has been destroyed!" /> 
   
   <dialogue key="defense dialogue 2 men">
-    <comment text="" />
-    <comment text="" />
+    <comment text="They're coming! Get ready ladies!" />
+    <comment text="Roger that!" />
   </dialogue>
+
   <dialogue key="defense dialogue 2 men">
-    <comment text="" />
-    <comment text="" />
+    <comment text="Hostiles incoming!" />
+    <comment text="Alright, everyone get to positions!" />
   </dialogue>
+
+  <dialogue key="defense dialogue 2 men">
+    <comment text="Hostiles will be bearing down on us!" />
+    <comment text="Alright, everyone take defensive positions!" />
+  </dialogue>
+
+
+	<dialogue key="wander dialogue 2 men">
+		<comment text="I'm getting hungry, hey you got anything to eat?" />
+		<comment text="I have a candy bar, here you go." />
+                <comment text="Thanks." />
+	</dialogue>
+
+	<dialogue key="wander dialogue 2 men">
+		<comment text="Are you sure you've brought everything with you this time?" />
+		<comment text="Yes ma'am!...I think..." />
+	</dialogue>
+
+	<dialogue key="wander dialogue 2 men">
+		<comment text="Should I finally confess my feelings to the commander? Can you help me out?" />
+		<comment text="Oh give me a break, the commander has more to worry about than you." />
+	</dialogue>
+
+	<dialogue key="wander dialogue 2 men">
+		<comment text="Mate, I don't like the earlier Squad Lead, she's so bossy." />
+		<comment text="Careful, she might hear that and send our Neural Clouds into solitary." />
+                <comment text="Eeep!" />
+	</dialogue>
+
+	<dialogue key="wander dialogue 2 men">
+		<comment text="Did you get anyone from today's banner?" />
+		<comment text="Who did you get?" />
+                <comment text="I managed to get Mecha Myon and Tenko, how about you?" />
+                <comment text="Bullshit! I only got 50 story cards from this and now I'll have to grind for more resources!" />
+	</dialogue>
+
+	<dialogue key="wander dialogue 2 men">
+		<comment text="Hey! is that liquor!? Hand that over or else I'm sending you off to do logistics!" />
+		<comment text="Alright, fine, sheesh." />
+	</dialogue>
+
+	<dialogue key="wander dialogue 2 men">
+		<comment text="Have you paid attention to the briefing this time?" />
+		<comment text="Huh?...uhh yes attack this and defend that, right?" />
+                <comment text="Oh for crying out loud!" />
+	</dialogue>
+
+	<dialogue key="wander dialogue 2 men">
+		<comment text="I've realized something." />
+		<comment text="What?" />
+                <comment text="War teaches ignorant Dolls and Humans geography." />
+	</dialogue>
+  
+	<dialogue key="wander dialogue 2 men">
+		<comment text="If I make it out of this and get paid, perhaps I should get some "Physical Upgrades"?" />
+		<comment text="Just take note, there's a fine line between looking good and hampering your effectiveness." />
+	</dialogue>
+
+	<dialogue key="wander dialogue 2 men">
+		<comment text="Are we moving out yet?" />
+		<comment text="Nope." />
+                <comment text="Awww..." />
+	</dialogue>
+
+	<dialogue key="wander dialogue 2 men">
+		<comment text="Damn it! Where did she run off to again?" />
+		<comment text="Again? Man we need a Doll with a command module to keep our squad together." />
+	</dialogue>
+
+	<dialogue key="vehicle dialogue 2 men">
+		<comment text="Capacitors at 100, Sensors; 100, Functions; 100, All systems; Nominal" />
+		<comment text="Do you really have to do a system check every minute?" />
+                <comment text="Hey, better safe than sorry.">
+	</dialogue>
+
+	<dialogue key="wander dialogue 2 men">
+		<comment text="You sure your stocked up on essentials?" />
+		<comment text="Affirmative, ammo, repair kits, rations, are all stocked up." />
+	</dialogue>
+  
+	<dialogue key="wander dialogue 2 men">
+		<comment text="Did you check your firearm before deploying?" />
+		<comment text="I got it properly cleaned up from the last base, there's nothing to worry about." />
+	</dialogue>
+
+	<dialogue key="wander dialogue 2 men">
+		<comment text="See anyone?" />
+		<comment text="Don't see or hear anything out of the ordinary." />
+	</dialogue>
+
+	<dialogue key="wander dialogue 2 men">
+		<comment text="Alright, I can get through this, I have sweets waiting for me at the dorm." />
+		<comment text="Hey, don't be planting death flags!" />
+	</dialogue>
+
+	<dialogue key="wander dialogue 2 men">
+		<comment text="Have you backed up your Neural Cloud before deployment?" />
+		<comment text="I did but, isn't it hardcoded in us to do so?" />
+                <comment text="I just wanted to make sure." />
+	</dialogue>
+
+	<dialogue key="wander dialogue 2 men">
+		<comment text="Have you seen the new post from GrifChan?" />
+		<comment text="I don't think now is a good time for that, we're in an active warzone." />
+	</dialogue>
+
+	<dialogue key="wander dialogue 2 men">
+		<comment text="Any update on the situation on the frontline?" />
+		<comment text="I haven't heard anything yet. Hopefully things are going well..." />
+	</dialogue>
+
+	<dialogue key="wander dialogue 2 men">
+		<comment text="What's with Dolls having varied clothing?" />
+		<comment text="What about it?" />
+                <comment text="Shouldn't we all have a uniform or something?" />
+                <comment text="Ehh..." />
+	</dialogue>
+
+	<dialogue key="vehicle dialogue 2 men tag=truck" >
+		<comment text="Do you know how to drive this thing?" />
+		<comment text="Uhh...I only do now." />
+                <comment text="Oh you dork! I'll die before I make it to the frontline!" />   
+	</dialogue>          
+
+	<dialogue key="vehicle dialogue 2 men tag=truck" >
+		<comment text="So many Dolls can fit in one vehicle." />
+		<comment text="Yeah, one rocket and almost a squad is down the drain." />   
+	</dialogue>
+
+	<dialogue key="vehicle dialogue 2 men tag=truck" >
+		<comment text="Ughh, such a bumpy ride." />
+		<comment text="This thing is a war machine, of course it isn't a smooth ride." />   
+	</dialogue>
+
+	<dialogue key="vehicle dialogue 2 men tag=truck" >
+		<comment text="This thing looks like it's seen better days..." />
+		<comment text="Yeah, I'm surprised this still runs despite the abuse." />   
+	</dialogue>
+
+	<dialogue key="vehicle dialogue 2 men tag=campfire">
+		<comment text="" />
+		<comment text="" />
+	</dialogue>
+
+	<dialogue key="vehicle dialogue 2 men tag=tank">
+		<comment text="" />
+		<comment text="" />
+	</dialogue> 
+
   <!-- commander comments -->
   <comment key="player promotion" text="According to the combat statistics, You have now have access to new items." />
   <comment key="we captured a base" text="&#37;base_name is now ours." />
