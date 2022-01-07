@@ -28,8 +28,8 @@
 
 	<animation state_key="stabbing" animation_key="melee, bayonet" />
 
-	<animation state_key="reload" animation_key="reloading, mp5sd" />
-	<animation key="reload" stance_key="prone" animation_key="reloading, ar1, prone" />	<!-- 别忘了用太平洋的装弹动作“reloading, type 100”和“reloading, type 100, prone” -->
+    <animation key="reload" animation_key="mgzSideR" />
+	<animation key="reload" stance_key="prone" animation_key="mgzSideRp" />	<!-- 别忘了用太平洋的装弹动作“reloading, type 100”和“reloading, type 100, prone” -->
 
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet.projectile">
