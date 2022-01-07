@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<projectile class="grenade" name="rocket" key="SopmodSk_script.projectile" slot="2" pulldown_in_air="26">
+    <tag name="rocket"/>
+    <result class="notify_script" key="SOPMOD_skill" />
+    <trigger class="impact" />
+    <rotation class="motion" />
+    <model mesh_filename="agl.xml" />
+
+    <commonness value="0.0" />
+    
+    <effect class="result" key="other" ref="SmokeBurst" post_processing="1" />
+    <effect class="result" key="other" ref="Shine" lighting="0" />
+    <effect class="result" key="other" ref="HitTankSparks" lighting="0" />     
+
+    <!--<effect class="activated" ref="Propulsion" />-->
+
+</projectile>

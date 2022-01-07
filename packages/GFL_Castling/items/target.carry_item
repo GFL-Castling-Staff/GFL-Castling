@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<carry_items>
+        <carry_item file="wearables.base_carry_item" key="target.carry_item" name="Punch it！" slot="1" transform_on_consume="target_2" >
+            <hud_icon filename="testing.png" />
+            <commonness value="0.0000001"  in_stock="1"  can_respawn_with="0" />
+          
+            <model mesh_filename="vestexo.xml" />
+                                                                                                                                                                              
+     
+            <!-- death or wound or stun -> no effect -->
+            <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"  />
+            <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+            <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none"  consumes_item="0"/>
+            <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+            <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+            <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+            <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
+    
+            <modifier class="speed" value="-3.1" />
+            <modifier class="hit_success_probability" value="-1.4" />
+            <modifier class="detectability" value="5" />
+        </carry_item>
+
+        <carry_item file="wearables.base_carry_item" key="target_2" name="Punch it！" slot="1" transform_on_consume="target_3" >
+            <hud_icon filename="testing.png" />
+     
+            <model mesh_filename="vestexo.xml" />
+                                                                                                                                                                              
+     
+            <!-- death or wound or stun -> no effect -->
+            <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"  />
+            <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+            <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none"  consumes_item="0"/>
+            <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+            <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+            <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+            <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
+    
+            <modifier class="speed" value="-3.1" />
+            <modifier class="hit_success_probability" value="-1.4" />
+            <modifier class="detectability" value="5" />
+        </carry_item>
+
+        <carry_item file="wearables.base_carry_item" key="target_3" name="Punch it！" slot="1" transform_on_consume="target_4" >
+            <hud_icon filename="testing.png" />
+     
+            <model mesh_filename="vestexo.xml" />
+                                                                                                                                                                              
+     
+            <!-- death or wound or stun -> no effect -->
+            <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"  />
+            <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+            <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none"  consumes_item="0"/>
+            <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+            <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+            <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+            <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
+    
+            <modifier class="speed" value="-3.1" />
+            <modifier class="hit_success_probability" value="-1.4" />
+            <modifier class="detectability" value="5" />
+        </carry_item>        
+        <carry_item file="wearables.base_carry_item" key="target_4" name="Punch it！" slot="1" transform_on_consume="target_5" >
+            <hud_icon filename="testing.png" />
+     
+            <model mesh_filename="vestexo.xml" />
+                                                                                                                                                                              
+     
+            <!-- death or wound or stun -> no effect -->
+            <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"  />
+            <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+            <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none"  consumes_item="0"/>
+            <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+            <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+            <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+            <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
+    
+            <modifier class="speed" value="-3.1" />
+            <modifier class="hit_success_probability" value="-1.4" />
+            <modifier class="detectability" value="5" />
+        </carry_item>       
+        <carry_item file="wearables.base_carry_item" key="target_5" name="Punch it！" slot="1" transform_on_consume="target_6" >
+            <hud_icon filename="testing.png" />
+     
+            <model mesh_filename="vestexo.xml" />
+                                                                                                                                                                              
+     
+            <!-- death or wound or stun -> no effect -->
+            <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"  />
+            <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+            <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none"  consumes_item="0"/>
+            <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+            <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+            <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+            <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
+    
+            <modifier class="speed" value="-3.1" />
+            <modifier class="hit_success_probability" value="-1.4" />
+            <modifier class="detectability" value="5" />
+        </carry_item>        
+        
+        <carry_item file="wearables.base_carry_item" key="target_6" name="Punch it！" slot="1" transform_on_consume="target_7" >
+            <hud_icon filename="testing.png" />
+     
+            <model mesh_filename="vestexo.xml" />
+                                                                                                                                                                              
+     
+            <!-- death or wound or stun -> no effect -->
+            <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"  />
+            <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+            <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none"  consumes_item="0"/>
+            <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+            <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+            <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+            <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
+    
+            <modifier class="speed" value="-3.1" />
+            <modifier class="hit_success_probability" value="-1.4" />
+            <modifier class="detectability" value="5" />
+        </carry_item>        
+        
+        <carry_item file="wearables.base_carry_item" key="target_7" name="Punch it！" slot="1" transform_on_consume="target_8" >
+            <hud_icon filename="testing.png" />
+     
+            <model mesh_filename="vestexo.xml" />
+                                                                                                                                                                              
+     
+            <!-- death or wound or stun -> no effect -->
+            <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"  />
+            <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+            <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none"  consumes_item="0"/>
+            <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+            <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+            <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+            <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
+    
+            <modifier class="speed" value="-3.1" />
+            <modifier class="hit_success_probability" value="-1.4" />
+            <modifier class="detectability" value="5" />
+        </carry_item>       
+        
+        <carry_item file="wearables.base_carry_item" key="target_8" name="Punch it！" slot="1" transform_on_consume="target_9" >
+            <hud_icon filename="testing.png" />
+     
+            <model mesh_filename="vestexo.xml" />
+                                                                                                                                                                              
+     
+            <!-- death or wound or stun -> no effect -->
+            <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"  />
+            <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+            <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none"  consumes_item="0"/>
+            <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+            <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+            <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+            <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
+    
+            <modifier class="speed" value="-3.1" />
+            <modifier class="hit_success_probability" value="-1.4" />
+            <modifier class="detectability" value="5" />
+        </carry_item>    
+
+        <carry_item file="wearables.base_carry_item" key="target_9" name="Punch it！" slot="1" transform_on_consume="target_10" >
+            <hud_icon filename="testing.png" />
+     
+            <model mesh_filename="vestexo.xml" />
+                                                                                                                                                                              
+     
+            <!-- death or wound or stun -> no effect -->
+            <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"  />
+            <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+            <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none"  consumes_item="0"/>
+            <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+            <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+            <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+            <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
+    
+            <modifier class="speed" value="-3.1" />
+            <modifier class="hit_success_probability" value="-1.4" />
+            <modifier class="detectability" value="5" />
+        </carry_item>        
+        
+        <carry_item file="wearables.base_carry_item" key="target_10" name="Punch it！" slot="1" transform_on_consume="target_11" >
+            <hud_icon filename="testing.png" />
+     
+            <model mesh_filename="vestexo.xml" />
+                                                                                                                                                                              
+     
+            <!-- death or wound or stun -> no effect -->
+            <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"  />
+            <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+            <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none"  consumes_item="0"/>
+            <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+            <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+            <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+            <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
+    
+            <modifier class="speed" value="-3.1" />
+            <modifier class="hit_success_probability" value="-1.4" />
+            <modifier class="detectability" value="5" />
+        </carry_item>        
+        
+        <carry_item file="wearables.base_carry_item" key="target_11" name="Punch it！" slot="1" transform_on_consume="target_12" >
+            <hud_icon filename="testing.png" />
+     
+            <model mesh_filename="vestexo.xml" />
+                                                                                                                                                                              
+     
+            <!-- death or wound or stun -> no effect -->
+            <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"  />
+            <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+            <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none"  consumes_item="0"/>
+            <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+            <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+            <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+            <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
+    
+            <modifier class="speed" value="-3.1" />
+            <modifier class="hit_success_probability" value="-1.4" />
+            <modifier class="detectability" value="5" />
+        </carry_item>        
+        
+        <carry_item file="wearables.base_carry_item" key="target_12" name="Punch it！" slot="1" transform_on_consume="target_13" >
+            <hud_icon filename="testing.png" />
+     
+            <model mesh_filename="vestexo.xml" />
+                                                                                                                                                                              
+     
+            <!-- death or wound or stun -> no effect -->
+            <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"  />
+            <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+            <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none"  consumes_item="0"/>
+            <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+            <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+            <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+            <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
+    
+            <modifier class="speed" value="-3.1" />
+            <modifier class="hit_success_probability" value="-1.4" />
+            <modifier class="detectability" value="5" />
+        </carry_item>       
+        
+        <carry_item file="wearables.base_carry_item" key="target_13" name="Punch it！" slot="1" transform_on_consume="target_14" >
+            <hud_icon filename="testing.png" />
+     
+            <model mesh_filename="vestexo.xml" />
+                                                                                                                                                                              
+     
+            <!-- death or wound or stun -> no effect -->
+            <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"  />
+            <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+            <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none"  consumes_item="0"/>
+            <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+            <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+            <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+            <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
+    
+            <modifier class="speed" value="-3.1" />
+            <modifier class="hit_success_probability" value="-1.4" />
+            <modifier class="detectability" value="5" />
+        </carry_item>        
+        
+        <carry_item file="wearables.base_carry_item" key="target_14" name="Punch it！" slot="1" transform_on_consume="target_15" >
+            <hud_icon filename="testing.png" />
+     
+            <model mesh_filename="vestexo.xml" />
+                                                                                                                                                                              
+     
+            <!-- death or wound or stun -> no effect -->
+            <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"  />
+            <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+            <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none"  consumes_item="0"/>
+            <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+            <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+            <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+            <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
+    
+            <modifier class="speed" value="-3.1" />
+            <modifier class="hit_success_probability" value="-1.4" />
+            <modifier class="detectability" value="5" />
+        </carry_item>        
+        
+        <carry_item file="wearables.base_carry_item" key="target_15" name="Punch it！" slot="1" transform_on_consume="target_16" >
+            <hud_icon filename="testing.png" />
+     
+            <model mesh_filename="vestexo.xml" />
+                                                                                                                                                                              
+     
+            <!-- death or wound or stun -> no effect -->
+            <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"  />
+            <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+            <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none"  consumes_item="0"/>
+            <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+            <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+            <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+            <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
+    
+            <modifier class="speed" value="-3.1" />
+            <modifier class="hit_success_probability" value="-1.4" />
+            <modifier class="detectability" value="5" />
+        </carry_item>        
+        
+        <carry_item file="wearables.base_carry_item" key="target_16" name="Punch it！" slot="1" transform_on_consume="target_17" >
+            <hud_icon filename="testing.png" />
+     
+            <model mesh_filename="vestexo.xml" />
+                                                                                                                                                                              
+     
+            <!-- death or wound or stun -> no effect -->
+            <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"  />
+            <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+            <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none"  consumes_item="0"/>
+            <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+            <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+            <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+            <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
+    
+            <modifier class="speed" value="-3.1" />
+            <modifier class="hit_success_probability" value="-1.4" />
+            <modifier class="detectability" value="5" />
+        </carry_item>     
+
+        <carry_item file="wearables.base_carry_item" key="target_17" name="Punch it！" slot="1" transform_on_consume="target_18" >
+            <hud_icon filename="testing.png" />
+     
+            <model mesh_filename="vestexo.xml" />
+                                                                                                                                                                              
+     
+            <!-- death or wound or stun -> no effect -->
+            <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"  />
+            <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+            <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none"  consumes_item="0"/>
+            <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+            <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+            <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+            <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
+    
+            <modifier class="speed" value="-3.1" />
+            <modifier class="hit_success_probability" value="-1.4" />
+            <modifier class="detectability" value="5" />
+        </carry_item>        
+        
+        <carry_item file="wearables.base_carry_item" key="target_18" name="Punch it！" slot="1" transform_on_consume="target_19" >
+            <hud_icon filename="testing.png" />
+     
+            <model mesh_filename="vestexo.xml" />
+                                                                                                                                                                              
+     
+            <!-- death or wound or stun -> no effect -->
+            <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"  />
+            <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+            <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none"  consumes_item="0"/>
+            <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+            <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+            <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+            <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
+    
+            <modifier class="speed" value="-3.1" />
+            <modifier class="hit_success_probability" value="-1.4" />
+            <modifier class="detectability" value="5" />
+        </carry_item>        
+        
+        <carry_item file="wearables.base_carry_item" key="target_19" name="Punch it！" slot="1" transform_on_consume="target_20" >
+            <hud_icon filename="testing.png" />
+     
+            <model mesh_filename="vestexo.xml" />
+                                                                                                                                                                              
+     
+            <!-- death or wound or stun -> no effect -->
+            <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"  />
+            <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+            <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none"  consumes_item="0"/>
+            <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+            <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+            <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+            <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
+    
+            <modifier class="speed" value="-3.1" />
+            <modifier class="hit_success_probability" value="-1.4" />
+            <modifier class="detectability" value="5" />
+        </carry_item>        
+        
+        <carry_item file="wearables.base_carry_item" key="target_20" name="Punch it！" slot="1" transform_on_consume="target_21" >
+            <hud_icon filename="testing.png" />
+     
+            <model mesh_filename="vestexo.xml" />
+                                                                                                                                                                              
+     
+            <!-- death or wound or stun -> no effect -->
+            <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"  />
+            <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+            <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none"  consumes_item="0"/>
+            <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+            <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+            <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+            <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
+    
+            <modifier class="speed" value="-3.1" />
+            <modifier class="hit_success_probability" value="-1.4" />
+            <modifier class="detectability" value="5" />
+        </carry_item>       
+        
+        <carry_item file="wearables.base_carry_item" key="target_21" name="Punch it！" slot="1" transform_on_consume="target_22" >
+            <hud_icon filename="testing.png" />
+     
+            <model mesh_filename="vestexo.xml" />
+                                                                                                                                                                              
+     
+            <!-- death or wound or stun -> no effect -->
+            <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"  />
+            <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+            <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none"  consumes_item="0"/>
+            <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+            <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+            <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+            <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
+    
+            <modifier class="speed" value="-3.1" />
+            <modifier class="hit_success_probability" value="-1.4" />
+            <modifier class="detectability" value="5" />
+        </carry_item>       
+        
+        <carry_item file="wearables.base_carry_item" key="target_22" name="Punch it！" slot="1" transform_on_consume="target_23" >
+            <hud_icon filename="testing.png" />
+     
+            <model mesh_filename="vestexo.xml" />
+                                                                                                                                                                              
+     
+            <!-- death or wound or stun -> no effect -->
+            <modifier class="projectile_blast_result" input_character_state="death" output_character_state="death"  />
+            <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="death" consumes_item="0"/>
+            <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="death"  consumes_item="0"/>
+            <modifier class="projectile_hit_result" input_character_state="death" output_character_state="death" />
+            <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="death" consumes_item="0"/>
+            <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="death" consumes_item="0"/>
+            <modifier class="melee_hit_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
+    
+            <modifier class="speed" value="-3.1" />
+            <modifier class="hit_success_probability" value="-1.4" />
+            <modifier class="detectability" value="5" />
+        </carry_item>
+</carry_items>

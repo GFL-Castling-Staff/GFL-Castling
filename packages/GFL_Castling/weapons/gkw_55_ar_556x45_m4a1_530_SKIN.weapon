@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapons>
+    <weapon file="two_hands_ar.animation_base" key="gkw_m4a1_530.weapon">
+        <specification
+            accuracy_factor="0.98"
+            barrel_offset="0.4"
+            
+            class="0"
+            solt="0"
+            magazine_size="30"
+            name="M4A1-[Girl`s Balloon Roaming]"
+            projectile_speed="187.23"
+            retrigger_time="0.086"
+            suppressed="1"
+            sustained_fire_diminish_rate="1.8"
+            sustained_fire_grow_step="0.3"/>
+
+
+
+
+        <animation state_key="reload" animation_key="ARreload1.5" />
+        <animation key="reload" stance_key="prone" animation_key="ARreloadp1.5" />
+        <inventory  buy_price="7.0" sell_price="7.0" />	
+        <commonness in_stock="0" value="0"/>
+
+        <sound key="fire" fileref="M4A1_Fire_FromCOD16_1.wav" pitch_variety="0.05" volume="0.27" />
+        <sound key="magazine_out" fileref="m4a1_mgz_out_FromINS.wav" volume="1" />
+        <sound key="magazine_in" fileref="m4a1_mgz_in_FromINS.wav" volume="1" />
+        <sound key="cycle" fileref="m4a1_cycle_FromINS.wav" volume="1" />
+        <sound class="impact" fileref="rifle_drop.wav" />
+        <model filename="gkw_ar_m4a1_530.xml" />
+        <hud_icon filename="gkw_m4a1_530.png" />
+
+        <weak_hand_hold offset="0.2" />
+        <projectile file="bullet.projectile">
+            <result class="hit" kill_probability="1.35" kill_decay_start_time="1.023" kill_decay_end_time="1.705" />
+        </projectile>
+        <stance state_key="running" accuracy="0.3" />
+        <stance state_key="walking" accuracy="0.75" />
+        <stance state_key="crouch_moving" accuracy="0.9" />
+        <stance state_key="prone_moving" accuracy="0.9" />
+        <stance state_key="standing" accuracy="0.85" />
+        <stance state_key="crouching" accuracy="0.95" />
+        <stance state_key="prone" accuracy="1" />
+    </weapon>
+</weapons>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon file="gk_sf_boss.base_weapon" key="ff_architect_1.weapon">
+
+    <specification 
+  retrigger_time="0.15" 
+  accuracy_factor="1.0" 
+  sustained_fire_grow_step="0.4" 
+  sustained_fire_diminish_rate="0.1" 
+  magazine_size="1" 
+  can_shoot_standing="1" 
+  can_shoot_crouching="1" 
+  can_shoot_prone="0"
+  suppressed="0" 
+  name="GK-Architect (Direct hit)" 
+  class="0" 
+  sight_range_modifier="3.0" 
+  projectile_speed="85.0" 
+  slot="0" 
+  projectiles_per_shot="1" />
+<next_in_chain key="ff_architect.weapon" share_ammo="1" />
+  <inventory 
+  encumbrance="27.0" 
+  buy_price="1000.0" 
+  sell_price="100.0"/>
+
+	<animation key="recoil" ref="40" />
+    <animation key="reload" animation_key="reload architect" />
+	<animation key="reload" stance_key="prone" animation_key="magBrifleRpntw" />
+    <animation key="hold" ref="39" />
+    <animation key="hold_on_wall" ref="39" />
+    <animation state_key="walking" animation_key="walking, hip fire" />
+    <animation state_key="running" animation_key="walking, hip fire" />
+    <animation state_key="crouch_moving" animation_key="crouching forwards, hip fire" />
+    <animation state_key="walking_backwards" animation_key="walking backwards, hip fire" />  
+	
+    <sound key="fire" fileref="at4_fire_FromCOD16StrelaP.wav" pitch_variety="0.00" volume="1.7"/>
+    <sound key="cycle" fileref="sf_boss_re.wav" />
+    <sound key="magazine_out" fileref="sf_boss_re.wav" /> 
+    <sound key="magazine_in" fileref="" />
+    <sound key="cycle_out" fileref="" />
+    <sound key="cycle_in" fileref="" />
+    <sound class="impact" fileref="rifle_drop.wav" />
+    <model filename="sfw_architect.xml" />
+
+
+
+	<ballistics curve_height="20.0" near_far_distance="25.0" speed_estimation_near="20.0" speed_estimation_far="40.0" max_speed="90.0" randomness="0.0" tweak_factor="1.5" /> 
+
+    <projectile file="sfw_architect_rocket_1.projectile" />
+    <weak_hand_hold offset="0.3" />
+	<commonness value="0.00001" in_stock="0" can_spawn_with="1" />
+	<inventory encumbrance="45.0" buy_price="200.0" sell_price="150.0" />
+	<hud_icon filename="sfw_architect.png" />
+
+
+
+    <effect class="muzzle" ref="LawMuzzle" />
+    <effect class="muzzle" ref="UpDust" />    
+    <modifier class="speed" value="-0.1" />
+
+</weapon>

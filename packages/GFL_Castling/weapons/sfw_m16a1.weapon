@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon file="two_hands_ar.animation_base" key="sfw_m16a1.weapon">
+
+    <specification 
+		accuracy_factor="0.98" 
+		barrel_offset="0.4" 
+		 
+		class="0"
+        solt="0" 
+		magazine_size="45" 
+		name="SF-M16A1" 
+		projectile_speed="204.26" 
+		retrigger_time="0.036" 
+		suppressed="0" 
+		sustained_fire_diminish_rate="2.1" 
+		sustained_fire_grow_step="0.6" />
+
+
+
+
+    <animation state_key="reload" animation_key="ARreload1.5" />
+	<animation key="reload" stance_key="prone" animation_key="ARreloadp1.5" />
+    <inventory  buy_price="6.0" sell_price="6.0" />	
+	<commonness 
+	value="0.0000001" 
+	in_stock="1" 
+	can_respawn_with="1" />
+    <capacity value="0" source="rank" source_value="0.0" />
+    <capacity value="1" source="rank" source_value="30.622" />
+
+    <sound key="fire" fileref="m16a1_fire_FromINS.wav" pitch_variety="0" volume="1" />
+    <sound key="magazine_out" fileref="m16a1_mgz_out_FromINS.wav" volume="1" />
+    <sound key="magazine_in" fileref="m16a1_mgz_in_FromINS.wav" volume="1" />
+    <sound key="cycle" fileref="m16a1_cycle_FromINS.wav" volume="1" />
+    <sound class="impact" fileref="rifle_drop.wav" />    
+    <model filename="gkw_ar_m16a1.xml" />
+
+    <hud_icon filename="sfw_m16a1.png" />
+
+
+
+    <weak_hand_hold offset="0.2" />
+    <projectile file="bullet.projectile">
+        <result class="hit"  kill_probability="1.6" kill_decay_start_time="1.031" kill_decay_end_time="1.719" />
+    </projectile>
+
+    <drop_on_death_result class="spawn" instance_class="carry_item" instance_key="snow_gifts.carry_item" min_amount="3" max_amount="4.0" offset="0 1.0 0" position_spread="0 0" direction_spread="0 0" />
+    <stance state_key="running" accuracy="0.3" />
+    <stance state_key="walking" accuracy="0.75" />
+    <stance state_key="crouch_moving" accuracy="0.9" />
+    <stance state_key="prone_moving" accuracy="0.9" />
+
+    <stance state_key="standing" accuracy="0.9" />
+    <stance state_key="crouching" accuracy="1" />
+    <stance state_key="prone" accuracy="1" />
+    
+    <modifier class="speed" value="0.15" />
+</weapon>

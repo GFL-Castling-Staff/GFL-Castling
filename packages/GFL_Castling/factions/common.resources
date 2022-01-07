@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources clear_weapons="1" clear_vehicles="1" clear_calls="1" clear_carry_items="1" clear_grenades="1">
+	<!-- always load common first; it"s the one that clears the initial weapon resources -->
+	
+	
+	<!-- <weapon key="gkw_idw.weapon" /> -->
+	<!-- 副武器类 -->
+	
+	<weapon key="deployable_hvy_store.weapon" />
+	<weapon key="deployable_sg_store.weapon" />
+	<weapon key="deployable_mg_store.weapon" />
+	<weapon key="deployable_rf_store.weapon" />
+	<weapon key="deployable_ar_store.weapon" />
+	<weapon key="deployable_smg_store.weapon" />
+	<weapon key="deployable_hg_store.weapon" />
+	<weapon key="deployable_vehicle.weapon" />
+	<weapon key="deployable_weapon.weapon" />
+	<weapon key="deployable_carry_item.weapon" />
+	<weapon key="deployable_rubber_boat.weapon" />
+	<weapon key="medikit.weapon" />
+	<weapon key="ogas.weapon" />
+	<weapon key="vest_repair.weapon" />
+	<weapon key="vest_repair_quick.weapon"/>
+	<weapon key="riot_shield.weapon" />
+	<weapon key="cover_resource.weapon" />
+	<weapon key="mg_resource.weapon" />
+	<weapon key="tank_trap_resource.weapon" />
+	<weapon key="chicken_carrier.weapon" />
+	
+	<weapon key="minig_resource.weapon" />
+	<weapon key="mortar_resource.weapon" />
+	<weapon key="tow_resource.weapon" />
+	<weapon key="gl_resource.weapon" />
+	<weapon key="humvee_gl.weapon" />
+	<weapon key="gkw_ltlx7000_icecream.weapon" />
+	<!-- 手雷类 -->
+	<projectile key="hand_grenade.projectile"/>
+	<projectile key="claymore.projectile" />
+	<projectile key="flare.projectile" />
+	<projectile key="shuriken.projectile" enabled="1" />
+	<projectile key="kunai.projectile" enabled="1" />
+	<projectile key="icecream.projectile" enabled="1" />
+    <projectile key="acid_bomb.projectile" enabled="1" />
+	<projectile key="impact_grenade.projectile" />
+	<projectile key="c4.projectile" />
+	
+	<!--	<weapon key="m79.weapon" /> -->
+	<!-- <weapon key="binoculars.weapon" /> -->
+	<!-- <weapon key="javelin.weapon" /> -->
+	<!-- <weapon key="m712.weapon" /> -->
+	<!-- <weapon key="model_29.weapon" /> -->
+	<!-- <weapon key="sawnoff.weapon" /> -->
+	<!-- <weapon key="beretta_93r.weapon" /> -->
+	<!-- <weapon key="claymore_resource.weapon" /> -->
+	<!-- <weapon key="wrench.weapon" enabled="0" /> -->
+	<!-- <weapon key="wrench_small.weapon" enabled="1" /> -->
+	<!-- <weapon key="mp7.weapon" /> -->
+	<!-- <weapon key="honey_badger.weapon" /> -->
+	<!-- <weapon key="m60e4.weapon" /> -->
+	<!-- <weapon key="mk23.weapon" enabled="0" /> -->
+	<!-- <weapon key="smaw.weapon" enabled="0" /> -->
+	<!-- <weapon key="ares_shrike.weapon" /> -->
+	<!-- <weapon key="tracer_dart.weapon" /> -->
+	<!-- <weapon key="taser.weapon" /> -->
+	<!-- <weapon key="flamethrower.weapon" /> -->
+	<!-- <weapon key="aa12_frag.weapon" /> -->
+	<!--  <weapon key="bandage.weapon" /> -->
+
+	<!-- <weapon key="dartgun.weapon" /> -->
+	<!-- <weapon key="fal_bayonet.weapon" /> -->
+	<!-- <weapon key="golden_knife.weapon" /> -->
+	<!-- <weapon key="javelin_ap.weapon" /> -->
+	<!-- <weapon key="l30p.weapon" /> -->
+	<!-- <weapon key="m16a4_support.weapon" /> -->
+	<!-- <weapon key="tti.weapon" /> -->
+
+	<!-- <weapon key="chainsaw.weapon" /> -->
+	<!-- <weapon key="ump40.weapon" /> -->
+	<!-- <weapon key="mx4_storm.weapon" /> -->
+	<!-- <weapon key="bizon.weapon" /> -->
+	<!-- <weapon key="dragons_breath.weapon" /> -->
+	<!-- <weapon key="enforcer.weapon" /> -->
+	<!-- <weapon key="gps_laptop.weapon" /> -->
+	<!-- <weapon key="hornet_resource.weapon" /> -->
+	<!-- <weapon key="repair_crane_resource.weapon" /> -->
+	<!-- <weapon key="squall.weapon" /> -->
+	<!-- <weapon key="vest_repair.weapon" /> -->
+
+
+	<!-- <weapon key="compound_bow.weapon" /> -->
+	<!-- <weapon key="blowgun.weapon" /> -->
+	<!-- <weapon key="g11.weapon" /> -->
+	<!-- <weapon key="pf98.weapon" /> -->
+	<!-- <weapon key="gepard_m6_lynx.weapon" /> -->
+	<!-- <weapon key="portable_mortar.weapon" /> -->
+	<!-- <weapon key="tkb059.weapon" /> -->
+	<!-- <weapon key="golden_ak47.weapon" /> -->
+
+
+	<!-- <weapon key="suomi.weapon" /> -->
+	<!-- <weapon key="p416.weapon" /> -->
+	<!-- <weapon key="ninjato.weapon" /> -->
+	<!-- <weapon key="squad_equipment_kit.weapon" /> -->
+
+	<!-- note, we have faction specific bazookas, therefore not included here -->
+
+	<!-- <carry_item key="vest3.carry_item" enabled="0" /> -->
+	<!-- <carry_item key="eodvest.carry_item" enabled="0" />  -->
+	<!-- <carry_item key="eodvest_ai.carry_item" enabled="0" />   -->
+
+	<!-- <carry_item key="camouflage_suit.carry_item" enabled="0" /> -->
+
+	<!-- <carry_item key="costume_were.carry_item" /> -->
+	<!-- <carry_item key="costume_clown.carry_item" /> -->
+	<!-- <carry_item key="costume_santa.carry_item" /> -->
+	<!-- <carry_item key="costume_lizard.carry_item" /> -->
+	<!-- <carry_item key="costume_underpants.carry_item" /> -->
+	<!-- <carry_item key="vest_blackops.carry_item" enabled="0" /> -->
+
+	<!-- <carry_item key="costume_banana.carry_item" /> -->
+	<!-- <carry_item key="camo_vest.carry_item" /> -->
+
+	<!-- <carry_item key="vest_exo.carry_item" /> -->
+
+	<!-- common vehicles -->
+
+	<!-- <vehicle key="humvee.vehicle" /> -->
+	<!-- <vehicle key="humvee_gl.vehicle" /> -->
+
+	<vehicle key="armored_truck.vehicle" />
+	<vehicle key="radar_truck.vehicle" />
+	<vehicle key="mobile_armory.vehicle" />
+
+	<vehicle key="rubber_boat.vehicle" />
+	<vehicle key="patrol_ship.vehicle" />
+
+	<vehicle key="m113_tank_mortar.vehicle" />
+	<vehicle key="atv_base.vehicle" />
+	<vehicle key="atv_armory.vehicle" />
+
+	<vehicle key="tow.vehicle" />
+	<vehicle key="tow_2.vehicle" />
+	<vehicle key="cover1.vehicle" />
+	<vehicle key="deployable_mg.vehicle" />
+	<vehicle key="deployable_mg_2.vehicle" />
+	<vehicle key="deployable_minig.vehicle" />
+	<vehicle key="deployable_minig_2.vehicle" />
+	<vehicle key="mortar.vehicle" />
+	<vehicle key="mortar_2.vehicle" />
+	<vehicle key="deployable_gl.vehicle" />
+	<vehicle key="deployable_gl_2.vehicle" />
+
+	<vehicle key="radar_tower.vehicle" />
+	<vehicle key="gas_tank.vehicle" />
+	<vehicle key="radio_jammer.vehicle" />
+	<vehicle key="radio_jammer2.vehicle" />
+	<vehicle key="water_tower.vehicle" />
+	<vehicle key="mortar_ammunition_crates.vehicle" />
+
+	<vehicle key="para_spawn.vehicle" />
+
+	<vehicle key="deco_car1_brown.vehicle" />
+	<vehicle key="deco_car1_blue.vehicle" />
+	<vehicle key="deco_car1_yellow.vehicle" />
+	<vehicle key="deco_car1_black.vehicle" />
+	<vehicle key="deco_car1_white.vehicle" />
+	<vehicle key="deco_car1_red.vehicle" />
+	<vehicle key="deco_car1_pink.vehicle" />
+	<vehicle key="deco_car1_green.vehicle" />
+
+	<vehicle key="deco_car2_red.vehicle" />
+	<vehicle key="deco_car2_green.vehicle" />
+	<vehicle key="deco_car2_yellow.vehicle" />
+	<vehicle key="deco_car2_white.vehicle" />
+	<vehicle key="deco_car2_silver.vehicle" />
+	<vehicle key="deco_car2_grey.vehicle" />
+	<vehicle key="deco_car2_brown.vehicle" />
+	<vehicle key="deco_car2_blue.vehicle" />
+	<vehicle key="deco_car2_black.vehicle" />
+
+	<vehicle key="deco_car3_sky.vehicle" />
+	<vehicle key="deco_car3_green.vehicle" />
+	<vehicle key="deco_car3_blue.vehicle" />
+	<vehicle key="deco_car3_red.vehicle" />
+	<vehicle key="deco_car3_yellow.vehicle" />
+	<vehicle key="deco_car3_black.vehicle" />
+
+	<vehicle key="deco_van_blue.vehicle" />
+	<vehicle key="deco_van_khaki.vehicle" />
+	<vehicle key="deco_van_sky.vehicle" />
+	<vehicle key="deco_van_brown.vehicle" />
+	<vehicle key="deco_van_yellow.vehicle" />
+	<vehicle key="deco_van_red.vehicle" />
+	<vehicle key="deco_van_green.vehicle" />
+
+	<vehicle key="deco_pickup_red.vehicle" />
+	<vehicle key="deco_pickup_yellow.vehicle" />
+	<vehicle key="deco_pickup_blue.vehicle" />
+	<vehicle key="deco_pickup_green.vehicle" />
+	<vehicle key="deco_pickup_khaki.vehicle" />
+
+	<vehicle key="racing_car1.vehicle" />
+	<vehicle key="racing_car2.vehicle" />
+	<vehicle key="racing_car3.vehicle" />
+	<vehicle key="racing_car4.vehicle" />
+	<vehicle key="racing_car5.vehicle" />
+	<vehicle key="racing_car6.vehicle" />
+	<vehicle key="racing_car7.vehicle" />
+	<vehicle key="racing_car8.vehicle" />
+
+	<vehicle key="jeep_ee.vehicle" />
+
+	<vehicle key="dumpster.vehicle" />
+	<vehicle key="tractor.vehicle" />
+	<vehicle key="flare_checkpoint.vehicle" />
+	<vehicle key="heli_extraction_broken.vehicle" />
+	<vehicle key="heli_broken1.vehicle" />
+	<vehicle key="heli_broken2.vehicle" />
+	<vehicle key="cargo_helicopter_broken.vehicle" />
+
+	<vehicle key="cargo_truck.vehicle" />
+	<vehicle key="prison_bus.vehicle" />
+	<vehicle key="prison_door.vehicle" />
+	<vehicle key="prison_hatch.vehicle" />
+
+	<vehicle key="tank_trap.vehicle" />
+
+	<!-- aa_emplacement can not be enabled by default; will be enabled by campaign script dynamically for the faction that has it -->
+<!-- 	<vehicle key="aa_emplacement.vehicle" /> -->
+	<!-- heli extraction is dynamic campaign decoration, not used by default -->
+<!-- 	<vehicle key="heli_extraction.vehicle" /> -->
+
+<!-- 	<vehicle key="tank2.vehicle" /> -->
+
+	<vehicle key="special_cargo_vehicle1.vehicle" />
+	<vehicle key="special_cargo_vehicle2.vehicle" />
+	<vehicle key="special_cargo_vehicle3.vehicle" />
+	<vehicle key="special_cargo_vehicle4.vehicle" />
+	<vehicle key="special_cargo_vehicle5.vehicle" />
+
+	<vehicle key="special_crate1.vehicle" />
+	<vehicle key="special_crate2.vehicle" />
+	<vehicle key="special_crate3.vehicle" />
+	<vehicle key="special_crate4.vehicle" />
+	<vehicle key="special_crate5.vehicle" />
+	<vehicle key="special_crate6.vehicle" />
+	<vehicle key="special_crate7.vehicle" />
+	<vehicle key="special_crate8.vehicle" />
+	<vehicle key="special_crate9.vehicle" />
+	<vehicle key="special_crate10.vehicle" />
+	<vehicle key="special_crate11.vehicle" />
+	<vehicle key="special_crate12.vehicle" />
+	<vehicle key="special_crate13.vehicle" />
+	<vehicle key="special_crate14.vehicle" />
+	<vehicle key="special_crate15.vehicle" />
+	<vehicle key="special_crate16.vehicle" />
+	<vehicle key="special_crate17.vehicle" />
+	<vehicle key="special_crate18.vehicle" />
+	<vehicle key="special_crate19.vehicle" />
+	<vehicle key="special_crate20.vehicle" />
+	<vehicle key="special_crate21.vehicle" />
+	<vehicle key="special_crate22.vehicle" />
+	<vehicle key="special_crate23.vehicle" />
+	<vehicle key="special_crate24.vehicle" />
+	<vehicle key="special_crate25.vehicle" />
+	<vehicle key="special_crate26.vehicle" />
+	<vehicle key="special_crate27.vehicle" />
+	<vehicle key="special_crate28.vehicle" />
+	<vehicle key="special_crate29.vehicle" />
+	<vehicle key="special_crate30.vehicle" />
+	<vehicle key="special_crate31.vehicle" />
+	<vehicle key="special_crate32.vehicle" />
+	<vehicle key="special_crate33.vehicle" />
+	<vehicle key="special_crate34.vehicle" />
+	<vehicle key="special_crate35.vehicle" />
+	<vehicle key="special_crate36.vehicle" />
+	<vehicle key="special_crate37.vehicle" />
+	<vehicle key="special_crate38.vehicle" />
+	<vehicle key="special_crate39.vehicle" />
+	<vehicle key="special_crate40.vehicle" />
+	<vehicle key="special_crate41.vehicle" />
+
+	<vehicle key="special_crate_wood1.vehicle" />
+	<vehicle key="special_crate_wood2.vehicle" />
+	<vehicle key="special_crate_wood3.vehicle" />
+	<vehicle key="special_crate_wood4.vehicle" />
+	<vehicle key="special_crate_wood5.vehicle" />
+	<vehicle key="special_crate_wood6.vehicle" />
+	<vehicle key="special_crate_wood7.vehicle" />
+	<vehicle key="special_crate_wood8.vehicle" />
+	<vehicle key="special_crate_wood9.vehicle" />
+	<vehicle key="special_crate_wood10.vehicle" />
+
+	<vehicle key="radar_tank.vehicle" />
+	<vehicle key="radar_tank2.vehicle" />
+
+	<vehicle key="vulcan_tank.vehicle" />
+	<vehicle key="buggy.vehicle" />
+	<vehicle key="technical.vehicle" />
+
+	<vehicle key="wiesel_tow.vehicle" />
+	<vehicle key="wiesel_spawn.vehicle" />
+
+	<vehicle key="banana_car.vehicle" />
+	<vehicle key="banana_car_spawn.vehicle" />
+	<vehicle key="banana_car_para.vehicle" />
+	<vehicle key="banana_peel_spawner.vehicle" />
+
+	<vehicle key="aav7.vehicle" />
+	<vehicle key="aav7_spawn.vehicle" />
+	<vehicle key="aav7_para.vehicle" />
+	<vehicle key="atv_armory_para.vehicle" />
+	<vehicle key="buggy_para.vehicle" />
+	<vehicle key="humvee_gl_para.vehicle" />
+	<vehicle key="rubber_boat_para.vehicle" />
+	<vehicle key="wiesel_tow_para.vehicle" />
+	<vehicle key="cover_crate_para.vehicle" />
+
+
+	<vehicle key="emp.vehicle" />
+	<vehicle key="guntruck.vehicle" />
+	<vehicle key="guntruck_para.vehicle" />
+	<vehicle key="guntruck_spawn.vehicle" />
+	<vehicle key="hornet.vehicle" />
+	<vehicle key="hornet_2.vehicle" />
+	<vehicle key="m113_tank_acav.vehicle" />
+	<vehicle key="m113_tank_acav_para.vehicle" />
+	<vehicle key="icecream.vehicle" />
+	<vehicle key="medivan.vehicle" />
+	<vehicle key="repair.vehicle" />
+	<vehicle key="repair_crane.vehicle" />
+	<vehicle key="vulcan_acav_spawn.vehicle" />
+
+	<vehicle key="zjx19.vehicle" />
+	<vehicle key="zjx19_para.vehicle" />
+	<vehicle key="zjx19_spawn.vehicle" />
+
+	<vehicle key="wiesel_mk20.vehicle" />
+	<vehicle key="noxe.vehicle" />
+	<vehicle key="noxe_para.vehicle" />
+	<vehicle key="sev90.vehicle" />
+	<vehicle key="sev90_para.vehicle" />
+	<vehicle key="legion.vehicle" />
+	<vehicle key="flamer_tank.vehicle" />
+	<vehicle key="flamer_tank_para.vehicle" />
+	<vehicle key="m528.vehicle" />	
+	
+
+	
+	
+	<call key="rubber_boat.call" />
+	
+
+	<!-- <call key="chicken.call" /> -->
+	<!-- <call key="rubber_airboat.call" /> -->
+	
+	<!-- 垃圾/箱子 -->
+	<carry_item key="cigars.carry_item" />
+	<carry_item key="beer_can.carry_item" />
+	<carry_item key="lighter.carry_item" />   
+	<carry_item key="steroids.carry_item" />  
+	<carry_item key="teddy.carry_item" />    
+
+	<carry_item key="gold_bar.carry_item" />
+	<carry_item key="balloon.carry_item" />   
+
+	<carry_item key="bible.carry_item" /> 
+	<carry_item key="koran.carry_item" /> 
+	<carry_item key="chewing_gum.carry_item" />
+	<carry_item key="bizarre_rubber_bullet.carry_item" />
+	<carry_item key="chocolate.carry_item" />
+	<carry_item key="dollars_300.carry_item" /> 
+	<carry_item key="energy_drink.carry_item" />
+	<carry_item key="fancy_sunglasses.carry_item" />
+	<carry_item key="radio.carry_item" />
+	<carry_item key="razor.carry_item" />   
+	<carry_item key="sheaths.carry_item" />
+	<carry_item key="sheaths_xxl.carry_item" />  
+	<carry_item key="sunglasses.carry_item" /> 
+	<carry_item key="ipoo_player_blue.carry_item" /> 
+	<carry_item key="ipoo_player_red.carry_item" />
+	<carry_item key="ipoo_player_white.carry_item" />     
+	<carry_item key="ipoo_player_silver.carry_item" />
+	<carry_item key="ipoo_player_yellow.carry_item" />
+	<carry_item key="ipoo_player_green.carry_item" />
+	<carry_item key="ipoo_player_pink.carry_item" />   
+	<carry_item key="playing_cards.carry_item" />   
+
+	<carry_item key="suitcase.carry_item" />
+
+
+	<carry_item key="underpants.carry_item" /> 
+	<carry_item key="kamasutra.carry_item" /> 
+	<carry_item key="cd.carry_item" /> 
+	<carry_item key="pickashoe.carry_item" />  
+
+	<carry_item key="whiskey_bottle.carry_item" />
+	<carry_item key="cigarettes.carry_item" />
+	<carry_item key="dollars.carry_item" />
+	<carry_item key="gamingdevice.carry_item" />
+	<carry_item key="gem.carry_item" />
+	<carry_item key="painting.carry_item" />
+	<carry_item key="horny_magazine.carry_item" />
+	<carry_item key="comic_book.carry_item" />
+	<carry_item key="rwr_handbook.carry_item" />
+	<carry_item key="oscar_statue.carry_item" />
+	<carry_item key="laptop.carry_item" />  
+
+	<carry_item key="gift_box_1.carry_item" />  
+	<carry_item key="gift_box_2.carry_item" />
+	<carry_item key="gift_box_3.carry_item" />  
+	<carry_item key="gift_box_community_1.carry_item" /> 
+
+	<carry_item key="gift_box_community_2.carry_item" />  
+	<carry_item key="gift_box_community_3.carry_item" /> 
+
+	<carry_item key="gift_box_community_4.carry_item" />
+	<carry_item key="gift_box_community_5.carry_item" />      
+
+	<carry_item key="gift_box_community_6.carry_item" /> 	
+	
+    <carry_item key="wild_gifts.carry_item" />
+    <carry_item key="snow_gifts.carry_item" />
+    <carry_item key="forest_gifts.carry_item" />
+    <carry_item key="city_gifts.carry_item" />
+	<carry_item key="SOPII_Ant_Doll.carry_item" />
+	<carry_item key="RO365_Ant_Doll.carry_item" />
+	<carry_item key="sweet_bomb_box.carry_item" />
+	<carry_item key="double_enjoyment_package.carry_item" />
+	<carry_item key="holy_meat_buns.carry_item" />
+	<carry_item key="ice_theatre.carry_item" />
+	<!-- 群友甲及其他皮肤甲 -->
+	<carry_item key="gentiane.carry_item" />
+	<carry_item key="machlian.carry_item" />
+	<carry_item key="kalina.carry_item" />
+	<carry_item key="m1903.carry_item" />
+	<carry_item key="light.carry_item" />
+	<carry_item key="jill.carry_item" />
+	<carry_item key="K309.carry_item" />
+	<carry_item key="IAQS.carry_item" />
+	<carry_item key="NZ75.carry_item" />
+	<carry_item key="woshieoe.carry_item" />
+</resources>

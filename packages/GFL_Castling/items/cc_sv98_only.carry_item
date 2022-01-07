@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<carry_items>
+    <carry_item file="cc.base_carry_item" key="cc_sv98_only.carry_item" name="Digital camouflage cloak" transform_on_consume="cc_sv98_2">
+        <hud_icon filename="arm_cc_sv98.png" />
+        <capacity value="0" source="rank" source_value="0.0" />
+        <capacity value="1" source="rank" source_value="4.662" />
+        <inventory price="80" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="-0.40" />
+    </carry_item>
+    <carry_item file="cc.base_carry_item" key="cc_sv98_2" name="Digital camouflage cloak" transform_on_consume="cc_sv98_1">
+        <hud_icon filename="arm_cc_sv98_1.png" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="-0.40" />
+    </carry_item>
+    <carry_item file="none.base_carry_item" key="cc_sv98_1" name="Digital camouflage cloak" >
+        <hud_icon filename="arm_cc_sv98_2.png" />
+        <inventory price="1" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="-0.40" />
+    </carry_item>
+</carry_items>

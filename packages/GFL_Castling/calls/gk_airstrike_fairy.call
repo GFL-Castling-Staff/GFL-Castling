@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<call 
+name="Drone air strikes" 
+key="gk_airstrike_fairy.call"
+      initiation_comment1="Request drone air strikes"
+      acknowledge_comment="Confirmed, UAV is online, situational awareness is complete "
+      acknowledge_time="0"
+      launch_comment="Execution of air strikes"
+	  notify_metagame="1">
+     
+      <round instances="35"
+        instance_class="grenade"
+        instance_key="artillery_airstrike_fairies.projectile" 
+        instance_spread="10 10 10" 
+        common_spread="5 0 5" 
+        launch_time="2.0"
+        spawn_time="5.0">
+        
+        <effect class="launch" ref="gk_ShadowCallFlyby" shadow="1" />
+      <sound class="launch" fileref="plane_flyby.wav" volume="6.0" />    
+      <sound class="spawn" fileref="woosh1.wav" volume="0.3" />
+     </round>
+
+    <round instances="35"
+           instance_class="grenade"
+           instance_key="artillery_airstrike_fairies.projectile" 
+           instance_spread="10 10 10" 
+           common_spread="5 0 5" 
+           launch_time="3.0"
+           spawn_time="6.0">
+           
+
+     <sound class="launch" fileref="plane_flyby.wav" volume="6.0" />    
+	   <sound class="spawn" fileref="woosh1.wav" volume="0.3" />
+    </round>
+
+   
+
+    <hud_icon filename="call_Firesupport_AirborneFairy.png" />
+    <capacity value="0" source="rank" source_value="0.0" />
+    <capacity value="100" source="rank" source_value="13.008" />
+    <inventory encumbrance="0.0" price="500.0" />
+
+</call>

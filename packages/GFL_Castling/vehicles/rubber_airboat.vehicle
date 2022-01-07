@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vehicles>
+	<vehicle key="airboat_landing.vehicle" file="airboat_landing.base_vehicle">
+		<event>
+			<trigger class="destroy" />
+			<result class="spawn" instance_class="vehicle" instance_key="rubber_airboat_holding" min_amount="1" max_amount="1" offset="0 0.0 0" position_spread="0 0" direction_spread="0 -1" />
+		</event>
+	</vehicle>
+	<!-- 放人 -->
+	<vehicle name="" key="rubber_airboat_holding" file="airboat_holding.base_vehicle">
+		<event>
+			<trigger class="destroy" />
+			<result class="spawn" instance_class="soldier" instance_key="default_hg" min_amount="1" max_amount="1" offset="0 0.0 0" position_spread="0 0" direction_spread="0 -1" />
+		</event>
+		<event>
+			<trigger class="destroy" />
+			<result class="spawn" instance_class="soldier" instance_key="default_smg" min_amount="1" max_amount="1" offset="0 0.0 0" position_spread="0 0" direction_spread="0 -1" />
+		</event>
+		<event>
+			<trigger class="destroy" />
+			<result class="spawn" instance_class="soldier" instance_key="default_ar" min_amount="1" max_amount="1" offset="0 0.0 0" position_spread="0 0" direction_spread="0 -1" />
+		</event>
+		<event>
+			<trigger class="destroy" />
+			<result class="spawn" instance_class="soldier" instance_key="default_rf" min_amount="1" max_amount="1" offset="0 0.0 0" position_spread="0 0" direction_spread="0 -1" />
+		</event>
+		<event>
+			<trigger class="destroy" />
+			<result class="spawn" instance_class="soldier" instance_key="default_mg" min_amount="1" max_amount="1" offset="0 0.0 0" position_spread="0 0" direction_spread="0 -1" />
+		</event>
+		<event>
+			<trigger class="destroy" />
+			<result class="spawn" instance_class="soldier" instance_key="default_sg" min_amount="1" max_amount="1" offset="0 0.0 0" position_spread="0 0" direction_spread="0 -1" />
+		</event>
+	</vehicle>
+	
+	<vehicle key="hvy_landing.vehicle" file="airboat_landing.base_vehicle">
+		<event>
+			<trigger class="destroy" />
+			<result class="spawn" instance_class="vehicle" instance_key="hvy_airboat_holding" min_amount="1" max_amount="1" offset="0 0.0 0" position_spread="0 0" direction_spread="0 -1" />
+		</event>
+	</vehicle>
+	<!-- 放人 -->
+	<vehicle name="" key="hvy_airboat_holding" file="airboat_holding.base_vehicle">
+		<event>
+			<trigger class="destroy" />
+			<result class="spawn" instance_class="soldier" instance_key="default_hvy" min_amount="1" max_amount="1" offset="0 0.0 0" position_spread="0 0" direction_spread="0 -1" />
+		</event>
+		<!-- <event> -->
+			<!-- <trigger class="destroy" /> -->
+			<!-- <result class="spawn" instance_class="soldier" instance_key="default_smg" min_amount="1" max_amount="1" offset="0 0.0 0" position_spread="0 0" direction_spread="0 -1" /> -->
+		<!-- </event> -->
+		<!-- <event> -->
+			<!-- <trigger class="destroy" /> -->
+			<!-- <result class="spawn" instance_class="soldier" instance_key="default_ar" min_amount="1" max_amount="1" offset="0 0.0 0" position_spread="0 0" direction_spread="0 -1" /> -->
+		<!-- </event> -->
+		<!-- <event> -->
+			<!-- <trigger class="destroy" /> -->
+			<!-- <result class="spawn" instance_class="soldier" instance_key="default_rf" min_amount="1" max_amount="1" offset="0 0.0 0" position_spread="0 0" direction_spread="0 -1" /> -->
+		<!-- </event> -->
+		<event>
+			<trigger class="destroy" />
+			<result class="spawn" instance_class="soldier" instance_key="default_mg" min_amount="2" max_amount="2" offset="0 0.0 0" position_spread="0 0" direction_spread="0 -1" />
+		</event>
+		<event>
+			<trigger class="destroy" />
+			<result class="spawn" instance_class="soldier" instance_key="default_hvy" min_amount="2" max_amount="2" offset="0 0.0 0" position_spread="0 0" direction_spread="0 -1" />
+		</event>
+	</vehicle>
+	
+	<vehicle key="sg1hg1mg2_landing.vehicle" file="airboat_landing.base_vehicle">
+		<event>
+			<trigger class="destroy" />
+			<result class="spawn" instance_class="vehicle" instance_key="sg1hg1mg2_airboat_holding" min_amount="1" max_amount="1" offset="0 0.0 0" position_spread="0 0" direction_spread="0 -1" />
+		</event>
+	</vehicle>
+	<!-- 放人 -->
+	<vehicle name="" key="sg1hg1mg2_airboat_holding" file="airboat_holding.base_vehicle">
+		<event>
+			<trigger class="destroy" />
+			<result class="spawn" instance_class="soldier" instance_key="default_hg" min_amount="1" max_amount="1" offset="0 0.0 0" position_spread="0 0" direction_spread="0 -1" />
+		</event>
+		<!-- <event> -->
+			<!-- <trigger class="destroy" /> -->
+			<!-- <result class="spawn" instance_class="soldier" instance_key="default_smg" min_amount="1" max_amount="1" offset="0 0.0 0" position_spread="0 0" direction_spread="0 -1" /> -->
+		<!-- </event> -->
+		<!-- <event> -->
+			<!-- <trigger class="destroy" /> -->
+			<!-- <result class="spawn" instance_class="soldier" instance_key="default_ar" min_amount="1" max_amount="1" offset="0 0.0 0" position_spread="0 0" direction_spread="0 -1" /> -->
+		<!-- </event> -->
+		<!-- <event> -->
+			<!-- <trigger class="destroy" /> -->
+			<!-- <result class="spawn" instance_class="soldier" instance_key="default_rf" min_amount="1" max_amount="1" offset="0 0.0 0" position_spread="0 0" direction_spread="0 -1" /> -->
+		<!-- </event> -->
+		<event>
+			<trigger class="destroy" />
+			<result class="spawn" instance_class="soldier" instance_key="default_mg" min_amount="3" max_amount="3" offset="0 0.0 0" position_spread="0 0" direction_spread="0 -1" />
+		</event>
+		<event>
+			<trigger class="destroy" />
+			<result class="spawn" instance_class="soldier" instance_key="default_sg" min_amount="1" max_amount="1" offset="0 0.0 0" position_spread="0 0" direction_spread="0 -1" />
+		</event>
+	</vehicle>
+	
+	<vehicle key="medic_landing.vehicle" file="airboat_landing.base_vehicle">
+		<event>
+			<trigger class="destroy" />
+			<result class="spawn" instance_class="vehicle" instance_key="medic_airboat_holding" min_amount="1" max_amount="1" offset="0 0.0 0" position_spread="0 0" direction_spread="0 -1" />
+		</event>
+	</vehicle>
+	<!-- 放人 -->
+	<vehicle name="" key="medic_airboat_holding" file="airboat_holding.base_vehicle">
+		<!-- <event> -->
+			<!-- <trigger class="destroy" /> -->
+			<!-- <result class="spawn" instance_class="soldier" instance_key="default_hg" min_amount="1" max_amount="1" offset="0 0.0 0" position_spread="0 0" direction_spread="0 -1" /> -->
+		<!-- </event> -->
+		<event>
+			<trigger class="destroy" />
+			<result class="spawn" instance_class="soldier" instance_key="default_smg" min_amount="2" max_amount="2" offset="0 0.0 0" position_spread="0 0" direction_spread="0 -1" />
+		</event>
+		<event>
+			<trigger class="destroy" />
+			<result class="spawn" instance_class="soldier" instance_key="default_ar" min_amount="3" max_amount="3" offset="0 0.0 0" position_spread="0 0" direction_spread="0 -1" />
+		</event>
+		<!-- <event> -->
+			<!-- <trigger class="destroy" /> -->
+			<!-- <result class="spawn" instance_class="soldier" instance_key="default_rf" min_amount="1" max_amount="1" offset="0 0.0 0" position_spread="0 0" direction_spread="0 -1" /> -->
+		<!-- </event> -->
+		<!-- <event> -->
+			<!-- <trigger class="destroy" /> -->
+			<!-- <result class="spawn" instance_class="soldier" instance_key="default_mg" min_amount="1" max_amount="1" offset="0 0.0 0" position_spread="0 0" direction_spread="0 -1" /> -->
+		<!-- </event> -->
+		<!-- <event> -->
+			<!-- <trigger class="destroy" /> -->
+			<!-- <result class="spawn" instance_class="soldier" instance_key="default_sg" min_amount="1" max_amount="1" offset="0 0.0 0" position_spread="0 0" direction_spread="0 -1" /> -->
+		<!-- </event> -->
+	</vehicle>
+
+	<vehicle key="sass_landing.vehicle" file="airboat_landing.base_vehicle">
+		<event>
+			<trigger class="destroy" />
+			<result class="spawn" instance_class="vehicle" instance_key="sass_airboat_holding" min_amount="1" max_amount="1" offset="0 0.0 0" position_spread="0 0" direction_spread="0 -1" />
+		</event>
+	</vehicle>
+	<!-- 放人 -->
+	<vehicle name="" key="sass_airboat_holding" file="airboat_holding.base_vehicle">
+		<!-- <event> -->
+			<!-- <trigger class="destroy" /> -->
+			<!-- <result class="spawn" instance_class="soldier" instance_key="default_hg" min_amount="1" max_amount="1" offset="0 0.0 0" position_spread="0 0" direction_spread="0 -1" /> -->
+		<!-- </event> -->
+		<event>
+			<trigger class="destroy" />
+			<result class="spawn" instance_class="soldier" instance_key="124_supersassmod3_rf" min_amount="1" max_amount="1" offset="0 0.0 0" position_spread="0 0" direction_spread="0 -1" />
+		</event>
+		<event>
+			<trigger class="destroy" />
+			<result class="spawn" instance_class="soldier" instance_key="44_sv98mod3_rf" min_amount="1" max_amount="1" offset="0 0.0 0" position_spread="0 0" direction_spread="0 -1" />
+		</event>
+		<event>
+			<trigger class="destroy" />
+			<result class="spawn" instance_class="soldier" instance_key="312_vsk94_rf" min_amount="1" max_amount="1" offset="0 0.0 0" position_spread="0 0" direction_spread="0 -1" />
+		</event>
+		<event>
+			<trigger class="destroy" />
+			<result class="spawn" instance_class="soldier" instance_key="57_ar15_ar" min_amount="1" max_amount="1" offset="0 0.0 0" position_spread="0 0" direction_spread="0 -1" />
+		</event>
+		<!-- <event> -->
+			<!-- <trigger class="destroy" /> -->
+			<!-- <result class="spawn" instance_class="soldier" instance_key="default_rf" min_amount="1" max_amount="1" offset="0 0.0 0" position_spread="0 0" direction_spread="0 -1" /> -->
+		<!-- </event> -->
+		<!-- <event> -->
+			<!-- <trigger class="destroy" /> -->
+			<!-- <result class="spawn" instance_class="soldier" instance_key="default_mg" min_amount="1" max_amount="1" offset="0 0.0 0" position_spread="0 0" direction_spread="0 -1" /> -->
+		<!-- </event> -->
+		<!-- <event> -->
+			<!-- <trigger class="destroy" /> -->
+			<!-- <result class="spawn" instance_class="soldier" instance_key="default_sg" min_amount="1" max_amount="1" offset="0 0.0 0" position_spread="0 0" direction_spread="0 -1" /> -->
+		<!-- </event> -->
+	</vehicle>
+	
+	<vehicle key="rubber_airboat_takeoff" file="airboat_takeoff.base_vehicle">
+	</vehicle>
+</vehicles>

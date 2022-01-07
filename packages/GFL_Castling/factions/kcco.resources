@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- 武器 -->
+	<weapon key="kcco_ar.weapon" />
+	<weapon key="compound_bow.weapon" />
+	<weapon key="kcco_sg.weapon" />
+	<weapon key="kccow_hydra.weapon" />
+	<weapon key="kccow_cerynitis.weapon" />
+	<weapon key="kccow_dactyl.weapon" />
+	<weapon key="kcco_teslatrooper.weapon" />
+	<weapon key="sfw_aegis.weapon"/>
+	
+	<!-- 护甲 -->
+	<carry_item key="kcco_ar.carry_item" />
+	<carry_item key="kcco_arc.carry_item" />
+	<carry_item key="kcco_cet.carry_item" />
+	<carry_item key="kcco_doe.carry_item" />
+	<carry_item key="kcco_ga.carry_item" />
+	<carry_item key="kcco_sg.carry_item" />
+	<carry_item key="kcco_qwd.carry_item"/>
+	<carry_item key="kcco_boom.carry_item"/>
+	
+	<!-- 载具 -->
+	<vehicle key="typhon.vehicle" />
+	<vehicle key="coeus.vehicle" />
+	<!-- 增援 -->
+	<call key="kcco_artillery_1.call" />
+	<!--<call key="tank.call" />-->
+	<!--<call key="apc.call" />-->
+	<call key="kcco_argo_puppis.call" />
+	<call key="kcco_argo_vela.call" />
+	<call key="kcco_argo_carina.call" />
+	<call key="kcco_Hephaestus.call" />
+</resources>

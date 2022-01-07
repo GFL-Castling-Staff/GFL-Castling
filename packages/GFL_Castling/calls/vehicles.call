@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<calls>
+<call 
+name="tank" 
+key="tank.call"
+initiation_comment1="tank"
+acknowledge_comment="Confirmed, rubber boat is in the air."
+launch_comment="Airdropping rubber boat now."
+notify_metagame="1">
+
+    <round instances="1"
+           instance_class="vehicle"
+           instance_tag="tank"
+           instance_spread="0 0 0" 
+           common_spread="0 0 0" 
+           launch_time="8.0"
+           spawn_time="15.0"
+           horizontal_offset_at_spawn="0.0"
+           vertical_offset_at_spawn="50.0"
+           initial_speed_to_target="0.0">
+        <effect class="launch" ref="ShadowAirplaneFlyby" shadow="1" />
+        <sound class="launch" fileref="plane_flyby.wav" />
+    </round>
+
+    <hud_icon filename="hud_rubber_boat.png" />
+    <capacity value="100" source="rank" source_value="0.0" />
+    <!-- <capacity value="100" source="rank" source_value="0.3" /> -->
+    <inventory encumbrance="0.0" price="10.0" />
+
+</call>
+<call 
+name="apc" 
+key="apc.call"
+initiation_comment1="apc"
+acknowledge_comment="A"
+launch_comment="B"
+notify_metagame="1">
+
+    <round instances="1"
+           instance_class="vehicle"
+           instance_tag="apc"
+           instance_spread="0 0 0" 
+           common_spread="0 0 0" 
+           launch_time="8.0"
+           spawn_time="15.0"
+           horizontal_offset_at_spawn="0.0"
+           vertical_offset_at_spawn="50.0"
+           initial_speed_to_target="0.0">
+        <effect class="launch" ref="ShadowAirplaneFlyby" shadow="1" />
+        <sound class="launch" fileref="plane_flyby.wav" />
+    </round>
+
+    <hud_icon filename="hud_rubber_boat.png" />
+    <capacity value="100" source="rank" source_value="0.0" />
+    <!-- <capacity value="100" source="rank" source_value="0.3" /> -->
+    <inventory encumbrance="0.0" price="10.0" />
+
+</call>
+	<call 
+	name="Pierre II" 
+	key="humvee.call"
+	initiation_comment1="Launch Pierre II"
+	acknowledge_comment="Launch Pierre II and MG T-Doll"
+	launch_comment="droping in"
+	notify_metagame="1">
+
+    <round 
+			instances="1"
+           instance_class="vehicle"
+           instance_key="pierre.vehicle"
+           instance_spread="0 0 0" 
+           common_spread="0 0 0" 
+           launch_time="5.0"
+           spawn_time="8.0"
+           horizontal_offset_at_spawn="0.0"
+           vertical_offset_at_spawn="50.0"
+           initial_speed_to_target="0.0">
+        <effect class="launch" ref="ShadowAirplaneFlyby" shadow="1" />
+        <sound class="launch" fileref="plane_flyby.wav" />
+    </round>
+	<round 
+		instances="4"
+		instance_class="soldier"
+		instance_key="default_mg"
+		instance_spread="0 0 0" 
+		common_spread="1 0 1" 
+		launch_time="5.0"
+		spawn_time="8.0">
+	</round>
+
+    <hud_icon filename="call_Airborne_pierre.png" />
+    <capacity value="0" source="rank" source_value="0.0" />
+    <capacity value="100" source="rank" source_value="20.88" />
+    <inventory encumbrance="0.0" price="1480.0" />
+
+</call>
+
+
+
+</calls>

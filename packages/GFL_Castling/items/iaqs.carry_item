@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<carry_items>
+    <carry_item file="exo.base_carry_item" key="IAQS.carry_item" name="[Dreams worth 5 pounds 4 pence] 5/5" transform_on_consume="IAQS_5">
+        <hud_icon filename="IAQS.png" />
+        <commonness value="0" in_stock="0" />
+        <inventory price="35" />
+        <modifier class="speed" value="0.3" />
+        <modifier class="hit_success_probability" value="-1.0" />
+    </carry_item>
+    <carry_item file="exo.base_carry_item" key="IAQS_5" name="[Dreams worth 5 pounds 4 pence] 4/5" transform_on_consume="IAQS_4">
+        <hud_icon filename="IAQS_1.png" />
+        <modifier class="hit_success_probability" value="-0.98" />
+        <modifier class="speed" value="0.26" />
+    </carry_item>
+    <carry_item file="exo.base_carry_item" key="IAQS_4" name="[Dreams worth 5 pounds 4 pence] 3/5" transform_on_consume="IAQS_3">
+        <hud_icon filename="IAQS_2.png" />
+        <modifier class="hit_success_probability" value="-0.96" />
+        <modifier class="speed" value="0.27" />
+    </carry_item>
+    <carry_item file="exo.base_carry_item" key="IAQS_3" name="[Dreams worth 5 pounds 4 pence] 2/5" transform_on_consume="IAQS_2">
+        <hud_icon filename="IAQS_3.png" />
+        <modifier class="hit_success_probability" value="-0.94" />
+        <modifier class="speed" value="0.28" />
+    </carry_item>
+    <carry_item file="wearables.base_carry_item" key="IAQS_2" name="[Dreams worth 5 pounds 4 pence] 1/5" transform_on_consume="IAQS_1">
+        <hud_icon filename="IAQS_4.png" />
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="wound"  />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="wound" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="wound" />
+        <modifier class="hit_success_probability" value="-0.92" />
+        <modifier class="speed" value="0.27" />
+    </carry_item>
+    <carry_item file="none.base_carry_item" key="IAQS_1" name="[Dreams worth 5 pounds 4 pence] 0/5">
+        <hud_icon filename="IAQS_5.png" />
+        <modifier class="speed" value="0.25" />
+        <modifier class="detectability" value="-0.15" />
+    </carry_item>
+</carry_items>

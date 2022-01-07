@@ -1,0 +1,167 @@
+particle_system coeusphere
+{
+	quota	500
+	material	Dust3
+	particle_width	0.1
+	particle_height	0.1
+	cull_each	false
+	renderer	billboard
+	billboard_type	point
+
+	emitter Point
+	{
+		angle	50
+		colour_range_start	1 1 1 0.2
+		colour_range_end	1 1 1 0.8
+		direction	0 1 0
+		emission_rate	500
+		position	0 0 0
+		velocity	6
+		velocity_min	2.0
+		velocity_max	6.0
+		time_to_live	2.5
+		time_to_live_min	2
+		time_to_live_max	3
+		duration	0.2
+		duration_min	0.15
+		duration_max	0.2
+	}
+
+	affector Scaler
+	{
+		rate	8
+	}
+
+	affector Rotator
+	{
+		rotation_speed_range_start	-45
+		rotation_speed_range_end	45
+		rotation_range_start	0
+		rotation_range_end	360
+	}
+
+
+	affector ColourFader
+	{
+		red	1
+		green	1
+		blue	1
+		alpha	-1
+	}
+}
+particle_system coeus
+{
+	quota	500
+	material	Dust3
+	particle_width	0.1
+	particle_height	0.1
+	cull_each	false
+	renderer	billboard
+	billboard_type	point
+
+	emitter Point
+	{
+		angle	10
+		colour_range_start	1 1 1 0.2
+		colour_range_end	1 1 1 1.0
+		direction	0 0 1
+		emission_rate	500
+		position	0 0 0
+		velocity	12
+		velocity_min	5.0
+		velocity_max	12.0
+		time_to_live	2.5
+		time_to_live_min	2
+		time_to_live_max	3
+		duration	0.2
+		duration_min	0.05
+		duration_max	0.2
+	}
+
+	affector Scaler
+	{
+		rate	3.0
+	}
+
+	affector Rotator
+	{
+		rotation_speed_range_start	-45
+		rotation_speed_range_end	45
+		rotation_range_start	0
+		rotation_range_end	360
+	}
+
+
+	affector ColourFader
+	{
+		red	1
+		green	1
+		blue	1
+		alpha	-1
+	}
+}
+particle_system coeusmuzzle
+{
+	quota	1000
+	material	coeus_muzzle
+	particle_width	2.7
+	particle_height	3.9
+	cull_each	false
+	renderer	billboard
+	billboard_type	oriented_self
+	common_direction	0 -1 0
+
+	emitter Box
+	{
+		angle	10
+		colour	1 1 1 1
+		colour_range_start	1 1 1 1
+		colour_range_end	1 1 1 1
+		direction	0 1 0
+		emission_rate	150
+		position	0 0 0
+		velocity	0
+		velocity_min	1
+		velocity_max	8
+		time_to_live	0.08
+		time_to_live_min	0.08
+		time_to_live_max	0.08
+		duration	0.05
+		duration_min	0.05
+		duration_max	0.05
+		width	0.25
+		height	0.25
+		depth	0.2
+	}
+
+	affector ColourInterpolator
+	{
+		colour0	1 1 1 1
+		time0	0.1
+		colour1	1 1 0 1
+		time1	0.3
+		colour2	1 0 0 0
+		time2	0.7
+		colour3	0 0 0 0
+		time3	0.8
+		colour4	0 0 0 0
+		time4	1
+		colour5	0.5 0.5 0.5 0
+		time5	1
+	}
+}
+material coeus_muzzle {
+        receive_shadows off
+	technique {
+		pass {
+			lighting off
+			depth_write off
+			scene_blend add
+			fog_override true
+
+			texture_unit {
+				texture coeus.png
+			}
+		}
+	}
+}

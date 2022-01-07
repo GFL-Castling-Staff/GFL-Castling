@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<carry_items>
+    <carry_item file="none.base_carry_item" key="cc_t1.carry_item" name="Optical camouflage cloak Mk.I" transform_on_consume="cc_t1_2">
+        <hud_icon filename="cc_t1.png" />
+        <inventory price="1" />
+        <model mesh_filename="camouflage_suit.xml" />
+        <modifier class="hit_success_probability" value="-0.8" />
+        <modifier class="detectability" value="-0.15" />
+    </carry_item>
+</carry_items>

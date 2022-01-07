@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<call 
+name="Targetdrone" 
+key="target.call"
+radio_view_text="Targetdrone" 
+initiation_comment1="Targetdrone is launching"
+acknowledge_comment="Unlock"
+launch_comment="Targetdrone,Unlock!"
+notify_metagame="1">
+	  
+	<hud_icon filename="call_Airborne_targetdrone.png" />
+	<capacity value="100" source="rank" source_value="0.0" />
+	<!-- <capacity value="100" source="rank" source_value="0.1" /> -->
+	<inventory encumbrance="0.0" price="300.0" />
+
+	<round 
+			instances="1" 
+			instance_class="soldier" 
+			instance_key="GK_target" 
+			instance_spread="1 0 1" 
+			common_spread="1 0 1" 
+			launch_time="5.0" 
+			spawn_time="5.5" 
+			horizontal_offset_at_spawn="0.0" 
+			vertical_offset_at_spawn="-5.0" 
+			initial_speed_to_target="0.0">
+			<sound class="spawn" fileref="hello.wav" volume="1.0" />
+		</round>
+
+
+
+</call>

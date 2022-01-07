@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon file="gk_sf_boss.base_weapon" key="gkw_88typemod3_skill.weapon" on_ground_up="0 0 1" time_to_live_out_in_the_open="0.0" drop_count_factor_on_death="0.0" player_death_drop_owner_lock_time="0">
+    <tag name="cqb" />
+     
+    <specification 
+     retrigger_time="0.5"
+     magazine_size="20"
+     can_shoot_standing="1" 
+     can_shoot_crouching="0" 
+     can_shoot_prone="0" 
+     carry_in_two_hands="0" 
+     name="Hanyang-made Type88(MOD3)-skill-[Almighty Combat Skills]" 
+     class="0"
+     supperessed="0"
+     use_basic_muzzle_smoke_effect="0"
+     stab_enabled="1"
+     stab_range="5" 
+     barrel_offset="-0.05" 
+/>
+
+<next_in_chain key="gkw_88typemod3.weapon" share_ammo="0" />
+<inventory  price="300.0" />
+<animation state_key="recoil"   animation_key="stabbing1, 88typemod3_melee" />
+<animation state_key="recoil"   animation_key="stabbing2, 88typemod3_melee" />
+<animation state_key="recoil"   animation_key="stabbing3, 88typemod3_melee" />
+    <animation state_key="stabbing" animation_key="stabbing1, 88typemod3_melee" />
+    <animation state_key="stabbing" animation_key="stabbing2, 88typemod3_melee" />
+    <animation state_key="stabbing" animation_key="stabbing3, 88typemod3_melee" />
+    <animation state_key="hold" animation_key="still, 88typemod3_melee" />
+    <animation state_key="hold_on_wall" animation_key="still overwall, 88typemod3_melee" />
+    <animation state_key="still_against_wall"   animation_key="still against wall, 88typemod3_melee" />
+    <animation state_key="hold_casual"  animation_key="relaxed, 88typemod3_melee" />
+    <animation state_key="running"  animation_key="running, 88typemod3_melee" />
+    <animation state_key="walking"  animation_key="walking, 88typemod3_melee" />
+    <animation state_key="crouching"    animation_key="still, 88typemod3_melee" />
+    <animation state_key="crouch_moving"    animation_key="walking, 88typemod3_melee" />
+    <animation state_key="crouch_moving_backwards"  animation_key="walking backwards, 88typemod3_melee" />
+    <animation state_key="prone_still" animation_key="still, 88typemod3_melee" />
+    <animation state_key="prone_moving" animation_key="walking, 88typemod3_melee" />
+    <animation state_key="walking_backwards" animation_key="walking backwards, 88typemod3_melee" />
+    <animation state_key="changing_weapon_in"   animation_key="change weapon in, sword" />
+    <animation state_key="changing_weapon_out"  animation_key="change weapon out, sword" />
+    <animation state_key="reload"   animation_key="reload, 88typemod3_melee" />
+    <model filename="gkw_88typemod3_melee.xml" />
+
+     
+
+    <projectile file="teal.projectile"/>
+  
+    <stance state_key="running" accuracy="1" />
+    <stance state_key="walking" accuracy="1" />
+    <stance state_key="crouch_moving" accuracy="1" />
+    <stance state_key="standing" accuracy="1" />
+    <stance state_key="crouching" accuracy="1" />
+    <stance state_key="prone" accuracy="1" /> 
+    <stance state_key="prone_moving" accuracy="1" />
+    <stance state_key="over_wall" accuracy="1" /> 
+
+    <hud_icon filename="testing.png" />
+    <effect class="muzzle" ref="sawsnone" />
+     
+	<commonness 
+	value="0.0000001" 
+	in_stock="0" 
+	can_respawn_with="1" />
+
+  
+     <modifier class="speed" value="0.3" />
+     <shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" />
+     <!-- state modifiers for weapons are connected to shield impact events -->
+     <!-- deflects all bullets; death, stun, wound become none, doesn't consume -->
+     <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0" />
+     <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+     <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+     <!-- death and wound blast causes the item to be consumed, stun is ignored -->
+     <modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0" />
+     <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+     <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+ 
+     
+</weapon>

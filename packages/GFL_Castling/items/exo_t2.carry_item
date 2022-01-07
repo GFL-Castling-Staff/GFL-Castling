@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<carry_items>
+    <carry_item file="exo.base_carry_item" key="exo_t2.carry_item" name="Standard Exo Mk.II"  transform_on_consume="exo_t2_3">
+        <hud_icon filename="exo_t2.png" />
+        <inventory price="5" />
+        <modifier class="speed" value="0.15" />
+        <modifier class="hit_success_probability" value="-0.7" />
+    </carry_item>
+    <carry_item file="exo.base_carry_item" key="exo_t2_3" name="Standard Exo Mk.II"  transform_on_consume="exo_t2_2">
+        <hud_icon filename="exo_t2_1.png" />
+        <modifier class="speed" value="0.15" />
+        <modifier class="hit_success_probability" value="-0.7" />
+    </carry_item>
+    <carry_item file="wearables.base_carry_item" key="exo_t2_2" name="Standard Exo Mk.II"  transform_on_consume="exo_t2_1">
+        <hud_icon filename="exo_t2_2.png" />
+        <model mesh_filename="vestexo.xml" />
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="wound"  />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="wound" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="wound" />
+        <modifier class="speed" value="0.15" />
+        <modifier class="hit_success_probability" value="-0.7" />
+    </carry_item>
+    <carry_item file="none.base_carry_item" key="exo_t2_1" name="Standard Exo Mk.II"  >
+        <hud_icon filename="exo_t2_3.png" />
+    </carry_item>
+</carry_items>

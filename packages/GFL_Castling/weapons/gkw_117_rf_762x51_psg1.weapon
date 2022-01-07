@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapons>
+    <weapon file="two_hands_ar.animation_base" key="gkw_psg1.weapon">
+        <specification
+            accuracy_factor="1"
+            barrel_offset="0.8"
+            
+            class="4"
+            burst_shots="1"
+            solt="0"
+            magazine_size="20"
+            name="PSG-1"
+            projectile_speed="234.83"
+            retrigger_time="-1"
+            last_burst_retrigger_time="0.25"
+            suppressed="0"
+            sight_range_modifier="2.8" 
+            sustained_fire_diminish_rate="1.5"
+            sustained_fire_grow_step="0.3"
+            />
+>
+        <inventory  buy_price="10.0" sell_price="10.0" />
+
+
+        <animation state_key="reload" animation_key="ARreload1.5" />
+        <animation key="reload" stance_key="prone" animation_key="ARreloadp1.5" />
+
+        <sound key="fire" fileref="psg1_fire_FromINS.wav" pitch_variety="0.01" volume="0.8"/>
+        <sound key="magazine_out" fileref="psg1_mgz_out_FromINS.wav" volume="1" />
+        <sound key="magazine_in" fileref="psg1_mgz_in_FromINS.wav" volume="1" />
+        <sound key="cycle" fileref="psg1_cycle_FromINS.wav" volume="1" />
+        <sound class="impact" fileref="rifle_drop.wav" />
+        <model filename="gkw_rf_psg1.xml" />
+        <hud_icon filename="gkw_psg1.png" />
+
+        <weak_hand_hold offset="0.2" />
+        <projectile file="bullet.projectile">
+            <result class="hit" kill_probability="2.3" kill_decay_start_time="2.072" kill_decay_end_time="3.454" />
+        </projectile>
+        <stance state_key="running" accuracy="0.3" />
+        <stance state_key="walking" accuracy="0.6" />
+        <stance state_key="crouch_moving" accuracy="0.9" />
+        <stance state_key="prone_moving" accuracy="0.9" />
+        <stance state_key="standing" accuracy="0.95" />
+        <stance state_key="crouching" accuracy="1" />
+        <stance state_key="prone" accuracy="1.1" />
+    </weapon>
+</weapons>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vehicle name="Degeyter I" key="rubber_boat.vehicle" map_view_atlas_index="4">
+	<tag name="vehicle" />
+	<tire_set offset="0.85 0.0 1.55" radius="0.4" />
+	<tire_set offset="0.85 0.0 -1.55" radius="0.4" />
+
+	<control 
+	max_speed="32.0" 
+	acceleration="8.0" 
+	max_reverse_speed="9.0" 
+	min_health_to_steer="0" 
+	max_rotation="0.8" 
+	max_water_depth="3.3" 
+	steer_smoothening="0.6" />
+
+	<physics 
+	max_health="15" 
+	mass="50.0" 
+	gravity="-28" 
+	extent="1.87 0.0 3.41" 
+	offset="0 0.2 0" 
+	collision_model_pos="0 0.5 0" 
+	collision_model_extent="3.2 1.0 4.3" 
+	visual_offset="0 0.7 -1.2" 
+	top_offset="0 3.0 0" 	
+	friction_offset="0.05"
+	drag_offset="-0.05" /> 
+
+
+	<visual  offset="0 0 0.28" class="turret" turret_index="0" mesh_filename="Crusher_turret.mesh" texture_filename="Crasher_Base_color.png" />
+	<visual  offset="0 0 0.28" class="turret" turret_index="0" key="broken" mesh_filename="Crusher_turret.mesh" texture_filename="humvee_broken.png" />
+    <visual class="chassis" mesh_filename="Crusher_body.mesh" texture_filename="Crasher_Base_color.png" />
+    <visual class="chassis" key="broken" mesh_filename="Crusher_body.mesh" texture_filename="humvee_broken.png" />
+
+	<visual class="tire" mesh_filename="" texture_filename="" />
+	
+	<character_slot type="driver" position="0.48 0.7 -1.2" rotation="-0.785" exit_rotation="1.57" hiding="1" animation_id="47" marker_offset="0 0.5 0"/>
+	<character_slot type="passenger" position="-0.376 0.7 -1.2" rotation="-1.57" exit_rotation="-1.57" hiding="1" animation_id="48" marker_offset="0 0.5 0"/>
+
+	<character_slot type="passenger" position="0.34 0.74 0" rotation="1.0" exit_rotation="1.57" hiding="1" animation_id="48" marker_offset="0 0.1 0"/>
+	<character_slot type="passenger" position="-0.34 0.74 0" rotation="-1.0" exit_rotation="-1.57" hiding="1" animation_id="48" marker_offset="0 0.1 0"/>
+
+	<character_slot type="passenger" position="0.34 0.74 1.04" rotation="0.2" exit_rotation="1.57" hiding="1" animation_id="48" marker_offset="0 0.1 0"/>
+	<character_slot type="passenger" position="-0.34 0.74 1.04" rotation="-0.2" exit_rotation="-1.57" hiding="1" animation_id="48" marker_offset="0 0.1 0"/>
+
+	<!-- sound handling -->
+	<rev_sound filename="jeep2_rev0.wav" low_pitch="0.8" high_pitch="1.0" low_rev="0.0" high_rev="0.15" volume="0.6" />
+	<rev_sound filename="jeep2_rev3.wav" low_pitch="0.6" high_pitch="1.7" low_rev="0.08" high_rev="1.0" volume="0.6" />
+	<sound key="ignition" filename="jeep2_ignition.wav" />
+	<sound key="hit" filename="rubber_boat_hit1.wav" /> 
+	<sound key="hit" filename="rubber_boat_hit2.wav" />  
+	<sound key="hit" filename="rubber_boat_hit3.wav" />  
+  
+
+	<event key="receive_damage_xp_reward">
+		<trigger class="receive_damage" />
+		<result class="reward" xp="0.0010" />
+	</event>
+  
+	<event key="spot_rp_reward">
+		<trigger class="spot" />
+		<result class="reward" rp="10.0" />
+	</event>
+</vehicle>

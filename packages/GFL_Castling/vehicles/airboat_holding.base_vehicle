@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<vehicle name="" map_view_atlas_index="18" time_to_live="2.0">
+	<tag name="vehicle" />
+	<tire_set offset="0.68 0.0 1.24" radius="0.32" />
+	<tire_set offset="0.68 0.0 -1.24" radius="0.32" />
+	<control max_speed="0.0" acceleration="0.0" max_reverse_speed="0.0" max_rotation="0.0" max_water_depth="10.3" can_steer_in_water="0" can_steer_on_ground="1" gears="1" />
+	<physics max_health="0.75" mass="1.0" extent="1.496 0.0 2.728" offset="0 0.16 0" collision_model_pos="0 0.4 0" collision_model_extent="2.56 0.8 3.44" visual_offset="0 0.7 -0.96" gravity="0" />
+	<visual class="chassis" mesh_filename="Osprey_FastRoping.mesh" texture_filename="Ospray_Body.png" />
+	<!-- <visual class="chassis" key="broken" mesh_filename="rubber_boat_broken.mesh" texture_filename="rubber_boat_broken.png" /> -->
+	<!-- <spawn_point /> -->
+	<!-- <item_container class="armory" offset="0 0.8 -4.8" /> -->		<!-- <item_container class="stash" offset="0 0.8 -4.8" /> -->		<!-- sound handling -->
+	<rev_sound filename="jeep2_rev0.wav" low_pitch="0.8" high_pitch="1.0" low_rev="0.0" high_rev="0.15" volume="0.6" />
+	<rev_sound filename="jeep2_rev3.wav" low_pitch="0.6" high_pitch="1.7" low_rev="0.08" high_rev="1.0" volume="0.6" />
+	<sound key="ignition" filename="jeep2_ignition.wav" />
+	<sound key="hit" filename="rubber_boat_hit1.wav" />
+	<sound key="hit" filename="rubber_boat_hit2.wav" />
+	<sound key="hit" filename="rubber_boat_hit3.wav" />
+	<event>
+	<trigger class="destroy" />
+	<result class="spawn" instance_class="vehicle" instance_key="rubber_airboat_takeoff" min_amount="1" max_amount="1" offset="0 0.0 0" position_spread="0 0" direction_spread="0 -1" />
+	</event>
+</vehicle>

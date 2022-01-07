@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon file="heavy_mg.animation_base" key="gkw_qjy88.weapon">
+
+    <specification 
+  barrel_offset="0.5" 
+  retrigger_time="0.0667" 
+  accuracy_factor="0.98" 
+  sustained_fire_grow_step="0.35" 
+  sustained_fire_diminish_rate="1.8" 
+  magazine_size="200" 
+  suppressed="0" 
+  name="QJY88" 
+  class="0" 
+  projectile_speed="225" 
+  spread_range="0.25"
+  sight_range_modifier="1.5"/>
+
+
+
+    <animation key="reload" animation_key="MGreload6" />
+    <inventory  buy_price="16.0" sell_price="16.0" />	
+    <next_in_chain key="gkw_qjy88_skill.weapon" share_ammo="1" />
+
+
+    <sound key="fire" fileref="pkp_fire_FromINS.wav" pitch_variety="0.05" volume="1" />
+    <sound key="magazine_out" fileref="pkp_mgz_out_FromINS.wav" volume="0.8" />
+    <sound key="magazine_in" fileref="pkp_mgz_in_FromINS.wav" volume="0.8" />
+    <sound key="cycle" fileref="pkp_cycle_FromINS.wav" volume="0.8" />
+    <sound class="impact" fileref="rifle_drop.wav" />
+    <model filename="gkw_mg_qjy88.xml" />
+
+    <hud_icon filename="gkw_type88.png" />
+
+
+
+
+    <projectile file="bullet.projectile">
+        <result class="hit" kill_probability="1.6" kill_decay_start_time="1.967" kill_decay_end_time="3.279" />
+    </projectile>
+       <stance state_key="running" accuracy="0.6" />
+
+    <stance state_key="crouch_moving" accuracy="0.6" />
+    <stance state_key="prone_moving" accuracy="0.6" />
+    <stance state_key="standing" accuracy="0.6" />
+    <stance state_key="crouching" accuracy="0.8" />
+    <stance state_key="prone" accuracy="1" />
+    <stance state_key="over_wall" accuracy="1" />  
+    <modifier class="speed" value="-0.2" /> 
+
+</weapon>

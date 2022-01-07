@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon file="heavy_anti_materiel_rifle.animation_base" key="gkw_m99.weapon" >
+
+
+    <!--Weapon specifications-->
+    
+    <specification 
+	retrigger_time="-1.0" 
+	accuracy_factor="1" 
+	sustained_fire_grow_step="1.4" 
+	sustained_fire_diminish_rate="1.5" 
+	magazine_size="5" 
+	can_shoot_standing="0" 
+	can_shoot_crouching="1"
+	can_shoot_prone="1"
+	suppressed="0" 
+	name="M99" 
+	class="4" 
+	reload_one_at_a_time="0" 
+	sight_range_modifier="3" 
+	projectile_speed="170.21" 
+	barrel_offset="0.4" 
+	projectiles_per_shot="1"
+	last_burst_retrigger_time="0.333"
+	burst_shots="1"/>
+	
+	<inventory  buy_price="50.0" sell_price="10.0" />
+	<!--Animations-->
+	
+
+
+    <animation key="reload" animation_key="magBrifleR" />
+	<animation key="reload" stance_key="prone" animation_key="magBrifleRp" />		
+	
+	<!--Sounds-->
+	
+    <sound key="fire" fileref="m99_fire_FromINS.wav" pitch_variety="0.05" volume="1" />
+    <sound key="cycle" fileref="m99_cycle_FromINS.wav" volume="1"/>
+    <sound key="magazine_out" fileref="m99_mgz_out_FromINS.wav" volume="1"/>
+    <sound key="magazine_in" fileref="m99_mgz_in_FromINS.wav" volume="1"/>
+    <sound key="cycle_in" fileref="m99_cycle_FromINS.wav" />
+    <sound class="impact" fileref="rifle_drop.wav" volume="1"/>
+   
+	<!--Model, Icon, Cost-->
+   
+    <model filename="gkw_rf_m99.xml" />
+    <hud_icon filename="gkw_m99.png" />
+
+
+	
+	<!--Ballistics-->
+	
+
+    <weak_hand_hold offset="0.3" />
+    <projectile file="bullet.projectile">
+        <result class="blast" damage="3.9"   radius="2.8" decal="1" push="0" character_state="death" 	faction_compare="not_equal"/>
+    </projectile>
+    
+    <!--Accuracy, Movement speed-->
+
+	<stance state_key="walking" accuracy="0.7" />
+    <stance state_key="crouch_moving" accuracy="0.7" />
+    <stance state_key="prone_moving" accuracy="0.7" />
+    <stance state_key="standing" accuracy="0.7"/>
+    <stance state_key="crouching" accuracy="0.95" />
+    <stance state_key="prone" accuracy="1" />
+    <stance state_key="over_wall" accuracy="1" />
+    <modifier class="speed" value="-0.3" /> 
+
+
+
+</weapon>

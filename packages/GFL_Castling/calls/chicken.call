@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<call name="chicken strike (1x8)" key="chicken.call"
+      initiation_comment1="Fire chicken"
+      initiation_comment2="fire one round chicken."
+      acknowledge_comment="Roger, wait one."
+      launch_comment="chicken on the way."
+      notify_metagame="1">
+
+    <round instances="8"
+           instance_class="grenade"
+           instance_key="chicken.projectile" 
+           instance_spread="7 8 7" 
+           common_spread="0 0 0" 
+           launch_time="5.0"
+           spawn_time="8.0">
+	   <sound class="spawn" fileref="woosh1.wav" volume="0.07" />
+    </round>
+
+    <hud_icon filename="hud_chickencarrier.png" />
+    <capacity value="100" source="rank" source_value="0.0" />
+    <!-- <capacity value="100" source="rank" source_value="0.1" /> -->
+    <inventory encumbrance="0.0" price="5.0" />
+
+</call>

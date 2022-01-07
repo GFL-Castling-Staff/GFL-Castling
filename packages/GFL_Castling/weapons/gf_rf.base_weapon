@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0">
+	<specification slot="0" />
+    <tag name="stealth" />    
+	<!-- 常见 军械库 重生自带 -->
+	<commonness value="0.2" in_stock="1" can_respawn_with="1" />
+	<!-- 重量 游戏内x2 价格 -->
+	<inventory 
+	encumbrance="20.0" 
+	buy_price="1.0" 
+	sell_price="0.0"/>
+	<!-- 可携带数 需求 需求数 -->	<!-- rank=狗官 0.001=3xp -->
+	<capacity value="1" source="rank" source_value="0.0" />
+	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone" />
+	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone" />
+	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone" />
+	<animation key="recoil" ref="12" />
+	<animation key="recoil" ref="13" />
+	<animation key="recoil" ref="14" />
+	<stance state_key="running" accuracy="0.1" />
+	<stance state_key="walking" accuracy="0.5" />
+	<stance state_key="crouch_moving" accuracy="0.1" />
+	<stance state_key="standing" accuracy="0.8" />
+	<stance state_key="crouching" accuracy="0.9" />
+	<stance state_key="prone" accuracy="1.0" />
+	<stance state_key="prone_moving" accuracy="0.1" />
+	<stance state_key="over_wall" accuracy="1" />
+	<modifier class="speed" value="-0.05" />
+</weapon>

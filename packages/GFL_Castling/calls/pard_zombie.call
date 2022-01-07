@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<call 
+name="infected" 
+key="pard_zombie.call"
+radio_view_text="Baptized Apostles" 
+initiation_comment1="Activate the baptized apostles around "
+acknowledge_comment="Roger,Starting Divination Box "
+launch_comment="For The Father."
+notify_metagame="1">
+	  
+	<hud_icon filename="par_call_infected.png" />
+	<capacity value="100" source="rank" source_value="0.0" />
+	<!-- <capacity value="100" source="rank" source_value="0.1" /> -->
+	<inventory encumbrance="0.0" price="500.0" />
+
+	<round 
+			instances="40" 
+			instance_class="soldier" 
+			instance_key="infected" 
+			instance_spread="10 0 10" 
+			common_spread="5 0 5" 
+			launch_time="5.0" 
+			spawn_time="5.5" 
+			horizontal_offset_at_spawn="0.0" 
+			vertical_offset_at_spawn="-5.0" 
+			initial_speed_to_target="0.0">
+			<sound class="spawn" fileref="zomb_stab6.wav" volume="1.07" />
+		</round>
+
+
+
+</call>

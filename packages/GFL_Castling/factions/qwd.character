@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<character filename="default_base.character">
+
+	<!-- <sound key="death" fileref="bot_die1.wav" volume="0.25" /> -->
+	<!-- <sound key="death" fileref="bot_die2.wav" volume="0.25" /> -->
+	<!-- <sound key="death" fileref="bot_die3.wav" volume="0.25" /> -->
+	<sound key="death" fileref="qwd_die.wav" volume="0.8" />
+	<!-- <sound key="death" fileref="die6.wav" volume="0.55" /> -->
+	<!-- <sound key="death" fileref="die7.wav" volume="0.55" /> -->
+	<!-- <sound key="footstep" fileref="qwd_walk2.wav" volume="0.7" /> -->
+	<sound key="footstep" fileref="qwd_walk1.wav" volume="0.9" />
+
+
+
+
+	<animation state_key="hold"  animation_key="still, hydra and manticore" />
+	<animation state_key="hold_one_wall"  animation_key="still, hydra and manticore" />
+	<animation key="still" target_key="still, hydra and manticore" />
+	<animation key="still against wall" target_key="still, hydra and manticore" />
+	<animation key="still, heavy weapon" target_key="still, hydra and manticore" />
+	<animation key="walking" target_key="walking, hydra and manticore" />
+	<animation key="walking backwards" target_key="walking, hydra and manticore" />
+	<animation key="running" target_key="running, hydra and manticore" />
+	<animation key="crouch still" target_key="still, hydra and manticore" />
+	<animation key="crouching forwards" target_key="walking, hydra and manticore" />
+	<animation key="crouching backwards" target_key="walking, hydra and manticore" />
+	<animation key="prone" target_key="still, hydra and manticore" />
+	<animation key="prone, moving forwards" target_key="walking, hydra and manticore" />
+	<animation key="going prone" target_key="still, hydra and manticore" />
+	<animation key="leaving prone" target_key="still, hydra and manticore" />
+	<animation key="dive" target_key="dive, hydra and manticore" />
+	<animation key="jumping" target_key="jumping, hydra and manticore" />
+	<animation key="lifting up" target_key="jumping, hydra and manticore" />
+	<animation key="throwing self over" target_key="jumping, hydra and manticore" />
+	<animation key="falling" target_key="dive, hydra and manticore" />
+	<animation key="arriving ground" target_key="arriving ground, hydra and manticore" />
+	<animation key="climbing ladder, still" target_key="climbing still, hydra and manticore" />
+	<animation key="climbing ladder" target_key="climbing, hydra and manticore" />
+	<animation key="climbing ladder ending" target_key="arriving ground, hydra and manticore" />
+	<animation key="stunned" target_key="stun, hydra and manticore" />
+	<animation key="tank mg still" target_key="still, hydra and manticore" />
+	<animation key="stabbing" target_key="stabbing, hydra and manticore" />
+	<animation key="throwing, upside" target_key="stabbing, hydra and manticore" />
+	<animation key="travelling car, aiming" target_key="still, hydra and manticore" />
+	<animation key="change weapon out" target_key="reload, hydra and manticore" />
+	<animation key="change weapon in" target_key="reload, hydra and manticore" />
+	<animation key="change weapon out, reversed" target_key="reload, hydra and manticore" />
+	<animation key="change weapon in, reversed" target_key="reload, hydra and manticore" />
+	<animation key="change weapon in, single hand carry" target_key="reload, hydra and manticore" />
+	<animation key="swimming still" target_key="swiming, hydra and manticore" />
+	<animation key="swimming forwards" target_key="swiming, hydra and manticore" />
+	<animation key="reloading" target_key="reload, hydra and manticore" />
+	<animation key="celebrating" target_key="stick bug dance, hydra and manticore" />
+	<animation key="celebrating, shooting" target_key="stick bug dance, hydra and manticore" />
+	<animation key="surrender" target_key="surrender, hydra and manticore" />
+	<animation key="throwing, upside" target_key="throwing, large mecha" />
+
+
+</character>

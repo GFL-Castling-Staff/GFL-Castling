@@ -1,0 +1,296 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<journal>
+	<!-- pre-added journal entries with key="start" -->
+	<!-- end of pre-added journal entries -->
+
+	<!-- hello_note is a special note and isn't stored in journal -->
+	<entry key="hello_note">
+	    <title value="日志通知" />
+		<text value="您好! 在接下来的时间里，你将不时收到来自指挥部的作战指示和通知帮助您熟悉此游戏。当您看到右上角的信息条时，请按下并打开它!" />
+		<image filename="journal_welcome.png" />
+	</entry>
+	
+	<!-- hello happens after hello_note, is stored in journal -->
+	<entry key="hello" _old_key="xp_achieved/0">
+		<title value="入门" />
+		<text value="首先，打开地图（&#37;control_map键）了解你所处的位置；你应该关注离你最近的友军基地还有哪些地方被敌军占领。&#37;PS找到友军，并按照指挥官（或是指挥节点）的命令加入攻势。当你的权限一开始不足以获得基本战术指挥权限时，明智的做法是与友军呆在一起并为他们提供掩护，参与救护等非击杀操作同样可以获得经验奖励。&#37;PS在聊天记录（&#37;control_statistics键）中重新查看指挥官在无线电中说的话。" />
+		<image filename="journal_welcome.png" />
+	</entry>
+
+	<entry key="move_against_stabbable_static_object">
+		<title value="近战攻击&#47;刺刀" />
+		<text value="用近战攻击（&#37;control_knife键）打破箱子来获得一些基础物资。近战攻击同样可以用来近距离迅速而无声的杀敌，此外还可以获得显著的XP经验奖励。" />
+		<image filename="journal_stab.png" />
+	</entry>
+
+	<entry key="first_death_at_start">
+		<title value="掩体系统" />
+		<text value="作战科目中最重要的一点是寻找各种障碍物作为掩护。你可以通过蹲伏（&#37;control_crouch键）或者卧倒（&#37;control_prone键）来让自己减小被子弹击中的可能。如果蹲伏在合适的障碍物后面，开火（&#37;control_shoot键）的时候会自动站起身。同时掩体也可以用于架设一些需要脚架来稳定射击的武器。" />
+		<image filename="journal_cover.png" />
+	</entry>
+
+	<entry key="a_few_deaths_at_start">
+		<title value="重生配给" />
+		<text value="当你阵亡的时候，你背包中的武器装备会按照再部署前的状态扣除资源点进行再部署，战利品不在此列。&#37;PS死后重生时，你身上重新配备的武器装备会自动以RP抵扣，非自动供给装备除外（例如极少部分活动装备）。" />
+		<image filename="journal_non_respawnable_items.png" />
+	</entry>
+
+	<entry key="low_encumbrance_exceeded">
+		<title value="背包&#38;负重" />
+		<text value="背包是将装备带回储藏处或者军械库的临时储藏空间。&#37;PS每件物品都有重量。如果背包中的负重超过20&#37;，会出现负重惩罚：移动速度和射击精度会随着负重的增加和逐步降低。&#37;PS如果负重到了60&#37;，角色身上的背包会看起来很大，你的战斗能力也会受到严重限制。注意在战斗前减少负重。" />
+		<image filename="journal_backpack.png" />
+	</entry>
+
+	<entry key="base_capture/friendly">
+		<title value="占领基地" />
+		<image filename="journal_base.png" />
+		<text value="要想占领基地，需要当前区域内我方兵力大于敌方两倍。&#37;PS一旦占领基地，敌人可能会发起反攻重新夺回基地，所以最好在组织下一次进攻前确保当前基地留有一些防守兵力来应对敌人的渗透"/>
+	</entry>
+
+	<entry key="inspect/armory">
+		<title value="军械库" />
+		<image filename="journal_armory.png" />
+		<text value="军械库提供了我方阵营的基础武器和装备&#37;PS你在战场上搜集到的战利品可以在军械库卖掉以获取资源点（RP）"/>
+	</entry>
+
+	<entry key="inspect/stash">
+		<title value="储藏处" />
+		<image filename="journal_stash.png" />
+		<text value="储藏处是你的私人永久物品存放点。如果你有不想卖掉或者暂时用不到的装备，可以放到这里保留。&#37;PS把你当前没有解锁使用权的武器放到储藏处是个好主意，直到你的经验达到要求再拿出来使用。&#37;PS注意游戏中所有储藏处内的物品是共通的，所以你可以在地图上包括敌军领地在内的所有储藏处中存取物品。别想什么为什么，这部分文案实在是遍不下去了" />
+	</entry>
+
+	<entry key="inspect/item_unlocker">
+		<title value="公文包&#38;笔记本电脑" />
+		<image filename="journal_briefcase.png" />
+		<text value="公文包与笔记本电脑可以被送到军械库中解锁新装备" />
+	</entry>
+
+	<entry key="inspect/vehicle/any">
+		<title value="载具" />
+		<text value="乘坐载具可以加快行军效率。载具的种类分为：轻型/运输载具、中型载具、重型载具。&#37;PS载具有多种座位，如驾驶位、炮手位和乘客位，它们由上车的位置决定。靠近座位的时候按下&#37;control_jump键进入。如果权限足够高，你可以拽下座位上的敌军。这对征用低级友军的载具同样有效。&#37;PS注意有的载具仅在凑齐车组成员的时候才能发挥最大火力。" />
+		<image filename="journal_truck.png" />
+	</entry>
+
+	<entry key="inspect/vehicle/enemy">
+		<title value="敌军载具" />
+		<text value="要想对载具造成伤害，格里芬方可以使用重装部队人形、反器材步枪人形以及大口径机枪人形，C4等爆炸物以及部分改型Ⅲ人形的特殊技能也可以对载具造成伤害；KCCO可以选择九头蛇机甲以及牝鹿等反装甲以及准载具单位；铁血与帕拉蒂斯则可以选择精英单位。当然，你也可以用另一辆载具进行还击&#37;PS敌军占有的车辆会在地图上的图标是红色的。" />
+		<image filename="journal_vehicle.png" />
+	</entry>
+
+	<entry key="inspect/apc/friendly">
+		<title value="步战车" />
+		<text value="步战车除了驾驶位还有一个炮手位置，剩下的都是位于载具后部的乘客位置。如果使用步战车，你至少再需要一名队员才能发挥载具的能力。使用小队命令（&#37;control_squad_command键）为驾驶员或者炮手下达命令。&#37;PS步战车是个反步兵利器，但是反装甲能力薄弱。" />
+		<image filename="journal_apc.png" />
+	</entry>
+
+	<entry key="inspect/tank/friendly">
+		<title value="坦克" />
+		<text value="坦克除了驾驶位还有两个炮手位。你至少需要一个额外的队员才能发挥坦克的价值，有两个更棒。使用小队命令（&#37;control_squad_command键）来为驾驶员和炮手下命令。&#37;PS坦克既可以反步兵还能反装甲，而且移动不受地形限制。" />
+		<image filename="journal_tank.png" />
+	</entry>
+
+	<entry key="inspect/armored_truck.vehicle/friendly">
+		<title value="重生车" />
+		<text value="重生车只能由一名玩家操控。重生车在静止的时候，如果附近没有敌兵，你就可以在车辆附近重生。这使得它在进行侧翼攻击和附近缺乏重生点的区域进行战斗时非常有价值。&#37;PS重生车还可以在深入敌后的时候当成一个检查点。&#37;PS除了驾驶位，车后还可以坐很多人。" />
+		<image filename="journal_spawntruck.png" />
+	</entry>
+
+	<entry key="inspect/mobile_armory.vehicle/any">
+		<title value="军械车" />
+		<text value="军械车是个移动武器库，它的功能与军械库相同，只能由玩家控制。军械车在静止时，周围会有少量友军徘徊。&#37;PS把军械车开到前线是个不错的做法，省得为了找军械库而到处奔波。" />
+		<image filename="journal_mobarmory.png" />
+	</entry>
+
+	<entry key="xp_achieved/150">
+		<title value="手榴弹" />
+		<text value="手榴弹的爆炸伤害对清除掩体和消灭成群敌人尤为有效。按&#37;control_grenade键朝十字准心的位置掷出手榴弹。你可能需要多试几次来找找感觉，因为不同的手榴弹的掷出距离和高度会有所不同。&#37;PS手榴弹击杀也是个制造连杀获得额外XP奖励的好方法。" />
+		<image filename="journal_grenade.png" />
+	</entry>
+
+	<entry key="xp_achieved/50">
+		<title value="突击步枪" />
+		<text value="突击步枪通常是个射程与火力均衡的武器。尝试以全自动射击模式保持最大火力输出。蹲伏或者卧倒射击可以获得比移动射击更要好的精度。留意准心十字的大小，它直观的反应出武器的后坐力大小。" />
+		<image filename="journal_ar.png" />
+	</entry>
+
+	<entry key="xp_achieved/250">
+		<title value="各种部署包" />
+		<text value="沙袋可以为你提供一个可承受任意轻武器和手榴弹伤害的掩体。按下&#37;control_swap_weapon键切换第二武器位置，按住&#37;control_shoot并选定方向来在指定朝向放置沙包。&#37;PS其它部署包可以通过运货卡车和公文包来解锁。" />
+		<image filename="journal_sandbag.png" />
+	</entry>
+
+	<entry key="inspect/riot_shield.weapon">
+		<title value="防爆盾" />
+		<text value="防爆盾可以用来抵挡子弹。首先，按&#37;control_swap_weapon键切换到副武器位置，然后用鼠标指向你要防御的方向并按住&#37;control_shoot。另一名士兵可以用盾牌作为掩体架在上面射击。&#37;PS手榴弹的爆炸会损坏盾牌并且会震晕使用者，激发式手雷更致命。&#37;PS盾牌在缺乏掩护的开放区域特别有用。" />
+		<image filename="journal_riot_shield.png" />
+	</entry>
+
+	<entry key="xp_achieved/100">
+		<title value="霰弹枪" />
+		<text value="霰弹枪在近距离有着强大的火力，但是在远处遇敌时显得力不从心。这就必然决定了它只能在近战发挥优势，例如巷战和堑壕战。射姿对枪的准度几乎没有影响，所以即使在移动的时候也能很好地射击。" />
+		<image filename="journal_shotguns.png" />
+	</entry>
+
+	<entry key="inspect/medikit.weapon">
+		<title value="医疗包" />
+		<text value="医疗包可以治疗受伤倒地的士兵。走近受伤的士兵，切换到第二武器位置（&#37;control_swap_weapon键）并按住&#37;control_shoot）直至受伤的士兵可以重新站起来。&#37;PS仅身着防弹衣受伤的士兵才可以被治疗，你不能为自己治疗。&#37;PS医疗包在多人游戏中特别有用！！！" />
+		<image filename="journal_medikit.png" />
+	</entry>
+
+	<!--
+	- at first rank up
+	-->
+	<entry key="xp_achieved/500">
+		<title value="机枪" />
+		<text value="机枪是种散布大、射程远和伤害高的武器，但是需要卧倒或者架在掩体上使用，这就使得它和其他武器比起来通用型较低。在身陷重围和与大波敌人作战的时候使用它吧。" />
+		<image filename="journal_mg.png" />
+	</entry>
+
+	<entry key="xp_achieved/500">
+		<title value="火箭筒" />
+		<text value="火箭筒是单兵反装甲武器。切换到第二武器位置（&#37;control_swap_weapon键）并瞄准好目标——盯着十字准心的大小，准备好了就按下&#37;control_shoot开火吧！&#37;PS注意火箭筒无法重新装填弹药，用后即丢。" />
+		<image filename="journal_bazooka.png" />
+	</entry>
+
+
+	<!-- objective vehicles -->
+	<entry key="spawn/aa_emplacement.vehicle/enemy">
+		<title value="防空设施" />
+		<image filename="journal_aa.png" />
+		<text value="有些地图会存在敌军防空设施，它会阻碍你使用空投支援，如伞兵支援。定位并摧毁掉敌军的防空设施以重新启用空投支援。伪装服/夜行特战服和C4是执行此类任务的绝佳装备。&#37;PS防空设置一旦摧毁不会重新出现。" />
+	</entry>
+
+	<entry key="spawn/radar_tower.vehicle/enemy">
+		<title value="雷达塔&#38;通讯" />
+		<image filename="journal_radar_tower.png" />
+		<text value="雷达塔是指挥官与部队之间通信的桥梁。使敌方雷达塔瘫痪可以让敌人：1）停止攻击；2）减少士兵的重生率和数量；3）在雷达塔重生之前不能在基地之间移动部队。&#37;PS由于它的重要性，塔被高度戒备，所以你可能需要以潜行的方式才能接近它。别忘了C4！&#37;PS雷达塔会干扰周围区域的无线电呼叫。" />
+	</entry>
+
+	<entry key="inspect/radar_truck.vehicle/enemy">
+		<title value="通讯车&#38;通讯" />
+		<image filename="journal_radar_truck.png" />
+		<text value="通讯车是指挥官与部队之间通信的桥梁。摧毁敌方通讯车可以让敌人：1）停止攻击；2）减少士兵的重生率和数量；3）在雷达塔重生之前不能在基地之间移动部队。&#37;PS通讯车附近会有额外的戒备，而且驾驶员会在遇到危险的时候逃到其他基地。&#37;PS通讯车会干扰周围区域的无线电呼叫。" />
+	</entry>
+
+	<entry key="inspect/radio_jammer.vehicle/enemy">
+		<title value="无线电干扰发生器" />
+		<image filename="journal_radio_jammer.png" />
+		<text value="敌军的无线电干扰发生器会阻碍你在附近使用无线电，有效的抵御了火炮打击和伞兵空降。无线电干扰发生器会有少量士兵看守。偷偷的溜进去用C4或者其他爆炸物来摧毁它。" />
+	</entry>
+
+	<entry key="inspect/cargo_truck.vehicle/enemy">
+		<title value="运货卡车" />
+		<image filename="journal_cargo_truck.png" />
+		<text value="敌军的运货卡车可以用多种方式截获，把它运送到友军的军械库就可以解锁一个新的装备。&#37;PS卡车司机通常会把车停在敌军领地的某个地方，而且会在遇敌的时候逃走。你需要快速溜到车门，把司机拽下来（&#37;control_jump键）并打倒他。&#37;PS你可以用爆炸物打残卡车使其瘫痪（如果你没有玩过火把它炸掉的话！）这样你就得用扳手把车修理好再开回军械库了。"/>
+		<!-- no space left: Once you've captured the truck, any enemy will try to stop the vehicle so watch out!" -->
+	</entry>
+
+	<entry key="inspect/prison/enemy">
+		<title value="监狱" />
+		<image filename="journal_prison.png" />
+		<text value="运囚车和监狱大门可以用爆炸物炸掉来释放囚犯。释放出的囚犯会为你的阵营临时增加兵力值。" />
+	</entry>
+
+	<!-- map completion -->
+	<entry key="match_end/friendly">
+		<title value="胜利！" />
+		<image filename="journal_completed.png" />
+		<text value="做得好！&#37;PS一旦战斗结束，地图上（&#37;control_map键）会出现一个或多个小门的图标，它们是传送你到下一张地图的撤离点。&#37;PS现在这片区域已经安全了，如果你的RP不是很高，最好多去几个基地逛逛，开开箱子，找找有趣的东西。"/>
+	</entry>
+	<entry key="match_end/friendly">
+		<title value="战报Campaign view" />
+		<image filename="journal_worldview.png" />
+		<text value="战报显示了战役的整体情况，Campaign view shows the overall status of the campaign, the different maps and their occupying factions.一旦你的阵营控制了整张地图，你就可以走到对应的撤离点，进入下一张地图继续战斗。&#37;PS你也可以返回已经占领的地图，那里会有一些隐藏的武器箱或者你错过的运货卡车。"/>
+	</entry>
+	<entry key="match_end/enemy">
+		<title value="战败" />
+		<image filename="journal_defeated.png" />
+		<text value="哦不！敌人获得了胜利！&#37;PS要不要再试试？游戏马上重新开始。" />
+	</entry>
+
+	<!-- at 1000xp -->	
+	<entry key="xp_achieved/1000">
+		<title value="无线电呼叫" />
+		<image filename="journal_radio_device.png" />
+		<text value="你现在可以使用电台了！随着军衔的提高，你先后可以使用迫击炮支援、伞兵支援和其它空降支援。将鼠标指针放置在要空投的位置，按住&#37;control_radio查看呼叫选项，在用鼠标左键选择你想要使用的无线电支援。" />
+	</entry>
+
+	<!-- squad -->
+	<entry key="xp_achieved/1250">
+		<title value="队员" />
+		<image filename="journal_squad_init.png" />
+		<text value="AI会自动加入级别更高的队长的小队。&#37;PS你可以按&#37;control_decrease_squad_size或&#37;control_increase_squad_size键控制小队规模，但是小队人数会受你的军衔控制。&#37;PS如果右下角的小队图标出现了红十字则表明有队员携带着医疗包。&#37;PS使用小队命令（&#37;control_squad_command键）为小队下达行军路线，双击则是命令他们加快行进速度。如果在固定武器（如重机枪、反坦克炮）上使用小队命令键，那么队员会上前操控它。" />
+	</entry>
+
+	<!-- vests & getting wounded & calling for help -->
+	<entry key="xp_achieved/1250">
+		<title value="防弹背心" />
+		<text value="防弹背心可以为你抵挡几次袭击。三级防弹衣在每次被子弹击中后都会受到损伤——它可以吸收第一次被子弹击中的能量，第二次会让你昏厥，最后一次则会让你受伤倒地。&#37;PS受伤倒地的时候，你可以按&#37;control_shoot键呼叫救助，也可以按住&#37;control_stab键强制重生。如果附近正好有医疗兵，他会跑过来治疗你。&#37;PS受伤的时候，你依然可以使用无线电求救——每一波伞降的增援小队中至少会有一名医疗名。" />
+		<image filename="journal_vest.png" />
+	</entry>	
+
+	<entry key="xp_achieved/1500">
+		<title value="载具中的队员" />
+		<image filename="journal_squad_vehicle.png" />
+		<text value="当你进入载具的时候，你的队员会把载具中空闲的作为坐满。你可以对你的驾驶员和炮手下达命令（&#37;control_squad_command键）。你还可以在地图上（&#37;control_map键打开）为驾驶员选定（&#37;control_squad_command键）远距离目标" />
+	</entry>
+
+	<entry key="xp_achieved/1500">
+		<title value="狙击步枪" />
+		<text value="狙击步枪有极远的视野、极高的准度和强大的火力，但是每一次射击都需要花费一定时间去瞄准。在蹲伏或者卧倒时射击可以打得更准。" />
+		<image filename="journal_sniper_rifles.png" />
+	</entry>
+
+	<!-- stealth, suppressed weapons -->
+	<entry key="xp_achieved/1000">
+		<title value="消音武器" />
+		<image filename="journal_suppressed.png" />
+		<text value="消音武器是用来对付放松戒备的敌人的最佳武器，但是它对机警和积极战斗的敌人效果不佳。&#37;PS这类武器对于暗杀战线后落单的敌人尤为有效，但是注意在潜入前解散小队（&#37;control_decrease_squad_size键）以避免他们妨碍你；&#37;control_increase_squad_size键可以重新集结小队。" />
+	</entry>
+
+	<entry key="xp_achieved/1100">
+		<title value="C4炸药" />
+		<text value="C4可以像手榴弹一样掷出并附着在接触的地方——建筑物、载具、墙壁等任何地方。 一旦掷出，就可以按&#37;control_shoot键遥控引爆它。注意在引爆前寻找掩护！&#37;PS没有什么是一枚C4解决不了的事情，如果有，那就两枚…" />
+		<image filename="journal_c4.png" />
+	</entry>	
+
+	<entry key="xp_achieved/1250">
+		<title value="侦查基地" />
+		<image filename="journal_investigate.png" />
+		<text value="侦查基地任务包括：潜入到敌军控制的基地、接近基地中心。一旦基地侦查完毕，指挥官会在电台报告当地的守兵情况并作出战斗指示。&#37;PS如果主攻目标陷入胶着状态，为了抓住机会，侦察其他基地通常是值得的。" />
+	</entry>
+
+	<entry key="xp_achieved/1400">
+		<title value="侧翼偷袭" />
+		<image filename="journal_base_tactics.png" />
+		<text value="你可以独自一人或者带领小队占领基地。如果你成功的深入到了敌后又发现防守较为薄弱，你可以把它夺下来——小心敌军的顽强反击。地图（&#37;control_map键）上标注成红色圈圈的基地都可以被占领。"/>
+	</entry>
+
+	<entry key="xp_achieved/1500">
+		<title value="伞降重生" />
+		<text value="重生信号弹用于创建一个仅供玩家重生的伞降着陆点，你可以扔到任何地方。然而如果敌军离信号弹太近，这个重生点会变为临时不可用，直到他们离开。" />
+		<image filename="journal_flare.png" />
+	</entry>	
+
+	<!-- stealth, visibility, night -->
+	<entry key="xp_achieved/1750">
+		<title value="潜行要领" />
+		<image filename="journal_stealth1.png" />
+		<text value="不打草惊蛇是偷袭成功的基础；你的隐蔽性决定你能存活多久。&#37;PS你可以用多种方式提高隐蔽性：走路（&#37;control_walk键）、 蹲伏（&#37;control_crouch键）、卧倒（&#37;control_prone键）和保持静止都可以做到。天黑时你的可见性会比白天降低。敌兵的视野有限，不太可能从侧面或后面发现你。&#37;ps伪装服和黑色的背心可以进一步增强你的潜行效果，夜行衣在晚上会有隐蔽性加成，但是白天没有效果。" />
+	</entry>
+
+	<!-- stealth, execution -->
+	<entry key="xp_achieved/2000">
+		<title value="潜行进阶" />
+		<image filename="journal_stealth2.png" />
+		<text value="带着消音武器的时候，先侦查目标区域，心里大概有个底，知道需要解决多少个敌人。&#37;PS守兵通常会单独或几个人一起巡逻，这使他们容易被暗杀。如果敌人发现你并发出了警报，最好是逃跑、等待和观察——直到他们放松警惕。&#37;PS在向敌人射击之前，确保武器已尽可能的瞄准好。&#37;PS如果你提前放置一个信号弹或者停一辆重生车，你就可以在死后快速杀个回马枪。" />
+	</entry>
+
+	<!-- difficult change -->
+    <entry key="difficulty_change">
+        <title value="进展如何？" />
+        <image filename="journal_difficulty.png" />
+        <text value="是不是觉得游戏难度太高，或者太简单？如有需要，你可在菜单中按自己的偏好调整当前难度。" />
+    </entry>
+
+</journal>

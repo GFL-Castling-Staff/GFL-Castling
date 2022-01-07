@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon file="two_hands_single_hg.animation_base" key="gkw_desert_eagle_s.weapon">
+
+	
+    <specification
+	retrigger_time="-1"	
+	last_burst_retrigger_time="0.3"
+	accuracy_factor="0.98"
+	sustained_fire_grow_step="0.8"
+	sustained_fire_diminish_rate="1.8"
+	magazine_size="7"
+	
+    
+	suppressed="0"
+	name="Desert Eagle"
+	class="4"
+	reload_one_at_a_time="0"
+	sight_range_modifier="1.0"
+	projectile_speed="100.0"
+	projectiles_per_shot="1"
+	burst_shots="1"
+     />
+	
+	
+	
+    
+	
+	
+	
+	
+	
+	
+	
+	
+    
+     <inventory  buy_price="7.0" sell_price="7.0" />
+    
+	
+	<sound key="fire" fileref="DE_Fire_FromFC4.wav" pitch_variety="0.05" volume="1" />
+    <sound key="magazine_out" fileref="DE_mgz_out_FromCOD16.wav" volume="0.6" />
+    <sound key="magazine_in" fileref="DE_mgz_in_FromCOD16.wav" volume="0.6"/>    
+    <sound key="cycle" fileref="DE_cycle_FromCOD16.wav" volume="0.6" />
+    <model filename="gkw_hg_deserteagle.xml" />
+
+    <hud_icon filename="gkw_deserteagle.png" />
+
+
+
+    
+    <weak_hand_hold offset="0.1" />
+    <projectile file="bullet.projectile">
+        <result class="blast" damage="0.75"   radius="1.0" decal="1" push="0" character_state="death" 	faction_compare="not_equal"/>
+    </projectile>
+    
+    <stance state_key="running" accuracy="0.5" />
+    <stance state_key="walking" accuracy="0.85" />
+    <stance state_key="crouch_moving" accuracy="0.8" />
+    <stance state_key="prone_moving" accuracy="0.8" />
+
+    <stance state_key="standing" accuracy="0.9" />
+    <stance state_key="crouching" accuracy="0.95" />
+    <stance state_key="prone" accuracy="1" />
+
+
+</weapon>

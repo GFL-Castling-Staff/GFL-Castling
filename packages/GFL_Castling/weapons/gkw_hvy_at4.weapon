@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon file="gf_hvy.base_weapon" key="gkw_hvy_at4.weapon">
+
+    <specification 
+   retrigger_time="-1.0" 
+   accuracy_factor="1.0" 
+   sustained_fire_grow_step="0.4" 
+   sustained_fire_diminish_rate="1.5" 
+   magazine_size="1" 
+   can_shoot_standing="1" 
+   can_shoot_crouching="1" 
+   can_shoot_prone="0"
+   suppressed="0" 
+   name="AT4" 
+   class="0" 
+   sight_range_modifier="1.5" 
+   projectile_speed="75" 
+   slot="0" 
+   projectiles_per_shot="1" />
+   <next_in_chain key="gkw_at4_tec-9.weapon" share_ammo="0" />
+	<inventory  buy_price="100.0" sell_price="10.0" />
+	<capacity value="0" source="rank" source_value="0.0" />
+    <capacity value="1" source="rank" source_value="3.457" />
+
+
+    <animation key="recoil" ref="40" />
+    <animation key="cycle" ref="30" />
+    <animation key="reload" animation_key="AT4Reload" />
+    <animation key="hold" ref="39" />
+    <animation key="hold_on_wall" ref="39" />
+    <sound key="fire" fileref="at4_fire_FromCOD16StrelaP.wav" pitch_variety="0.05" volume="1.0"/>
+    <sound key="cycle" fileref="" />
+    <sound key="magazine_out" fileref="" />
+    <sound key="magazine_in" fileref="" />
+    <sound key="cycle_out" fileref="" />
+    <sound key="cycle_in" fileref="" />
+    <sound class="impact" fileref="rifle_drop.wav" />
+    <model filename="gkw_hvy_at4.xml" />
+
+
+    <ballistics near_far_distance="1000.0" speed_estimation_near="50.0" speed_estimation_far="50.0" max_speed="125.0" randomness="0.0" />
+	
+
+    <projectile file="at4.projectile" />
+    
+    <weak_hand_hold offset="0.3" />
+    <commonness value="0.00001"  />
+    <hud_icon filename="gkw_at4.png" />
+
+
+
+    <effect class="muzzle" ref="LawMuzzle" />
+    <effect class="muzzle" ref="UpDust" />    
+    
+	<stance state_key="running" accuracy="0.9" />
+    <stance state_key="walking" accuracy="0.9" />
+    <stance state_key="crouch_moving" accuracy="0.9" />
+    <stance state_key="standing" accuracy="1" />
+    <stance state_key="crouching" accuracy="1" />
+    <stance state_key="prone" accuracy="1" /> 
+    <stance state_key="prone_moving" accuracy="0.9" />
+    <stance state_key="over_wall" accuracy="1" />     
+    
+	<modifier class="speed" value="0" />
+</weapon>

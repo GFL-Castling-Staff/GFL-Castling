@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<carry_items>
+    <carry_item file="exo.base_carry_item" key="kalina.carry_item" name="Kalina 5/5" transform_on_consume="kalina_5">
+        <hud_icon filename="Kalina.png" />
+        <inventory price="150" />
+        <commonness value="0" in_stock="0" />
+        <modifier class="speed" value="0.25" />
+        <modifier class="hit_success_probability" value="-1.0" />
+    </carry_item>
+    <carry_item file="exo.base_carry_item" key="kalina_5" name="Kalina 4/5" transform_on_consume="kalina_4">
+        <hud_icon filename="Kalina_2.png" />
+        <modifier class="speed" value="0.25" />
+        <modifier class="hit_success_probability" value="-1.0" />
+    </carry_item>
+    <carry_item file="exo.base_carry_item" key="kalina_4" name="Kalina 3/5" transform_on_consume="kalina_3">
+        <hud_icon filename="Kalina_3.png" />
+        <modifier class="speed" value="0.25" />
+        <modifier class="hit_success_probability" value="-1.0" />
+    </carry_item>
+    <carry_item file="exo.base_carry_item" key="kalina_3" name="Kalina 2/5" transform_on_consume="kalina_2">
+        <hud_icon filename="Kalina_4.png" />
+        <modifier class="speed" value="0.25" />
+        <modifier class="hit_success_probability" value="-1.0" />
+    </carry_item>
+    <carry_item file="exo.base_carry_item" key="kalina_2" name="Kalina 1/5" transform_on_consume="kalina_1">
+        <hud_icon filename="Kalina_5.png" />
+        <modifier class="speed" value="0.25" />
+        <modifier class="hit_success_probability" value="-1.0" />
+    </carry_item>
+    <carry_item file="none.base_carry_item" key="kalina_1" name="Kalina 0/5">
+        <hud_icon filename="Kalina_6.png" />
+        <modifier class="speed" value="0.2" />
+        <modifier class="hit_success_probability" value="-0.9" />
+        <modifier class="detectability" value="0" />
+    </carry_item>
+</carry_items>

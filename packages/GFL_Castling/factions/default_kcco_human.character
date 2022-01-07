@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<character filename="kcco.text_lines">
+
+  <sound key="death" fileref="die1.wav" volume="0.55" />
+	<sound key="death" fileref="die3.wav" volume="0.55" />
+	<sound key="death" fileref="die4.wav" volume="0.55" />
+	<sound key="death" fileref="die5.wav" volume="0.55" />
+	<sound key="death" fileref="die6.wav" volume="0.55" />
+	<sound key="death" fileref="die7.wav" volume="0.55" />
+
+    <effect class="blood" ref="BloodSplat" />
+    <effect class="blood" type="splat_map" size="2.0" atlas_index="3" layer="3" additive="1" apply_gore_factor="1" />
+</character>

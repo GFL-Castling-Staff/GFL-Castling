@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon file="two_hands_ar.animation_base" key="gkw_fal_2406.weapon">
+
+    <specification 
+		accuracy_factor="0.98" 
+		barrel_offset="0.8" 
+		 
+		class="0"
+        solt="0" 
+		magazine_size="20" 
+		name="FAL-[FAL's summer ]" 
+		projectile_speed="178.72" 
+		retrigger_time="0.0615" 
+		suppressed="0" 
+		sustained_fire_diminish_rate="1.8" 
+		sustained_fire_grow_step="0.8" 
+		sight_range_modifier="1.3"/>
+
+
+
+
+    <animation state_key="reload" animation_key="ARreload1.8" />
+	<animation key="reload" stance_key="prone" animation_key="ARreloadp1.8" />
+
+    <inventory  buy_price="8.0" sell_price="8.0" />
+    <commonness value="0" in_stock="0" can_respawn_with="1" />
+
+
+    <sound key="fire" fileref="fnfal_fire_FromINS.wav" pitch_variety="0.05" volume="1" />
+    <sound key="magazine_out" fileref="fnfal_mgz_out_FromINS.wav" volume="1" />
+    <sound key="magazine_in" fileref="fnfal_mgz_in_FromINS.wav" volume="1" />
+    <sound key="cycle" fileref="fnfal_cycle_FromINS.wav" volume="1" />
+    <sound class="impact" fileref="rifle_drop.wav" volume="1"/>   
+	
+    <model filename="gkw_ar_fnfal.xml" />
+
+    <hud_icon filename="gkw_fnfal_2406.png" />
+
+
+
+    <weak_hand_hold offset="0.2" />
+    <projectile file="bullet.projectile">
+        <result class="hit"  kill_probability="1.45" kill_decay_start_time="1.286" kill_decay_end_time="2.143" />
+    </projectile>
+    
+    <stance state_key="running" accuracy="0.5" />
+    <stance state_key="walking" accuracy="0.7" />
+    <stance state_key="crouch_moving" accuracy="0.5" />
+    <stance state_key="prone_moving" accuracy="0.5" />
+    <stance state_key="standing" accuracy="0.85" />
+    <stance state_key="crouching" accuracy="0.95" />
+    <stance state_key="prone" accuracy="1" />
+    
+
+</weapon>

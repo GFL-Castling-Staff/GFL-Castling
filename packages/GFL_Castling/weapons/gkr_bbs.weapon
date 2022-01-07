@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon file="base_secondary.weapon" key="gkr_bbs.weapon" radius="0.45">
+    <tag name="wrench" />
+    <specification 
+    retrigger_time="0.5" 
+    accuracy_factor="1.0" 
+    sustained_fire_grow_step="0.0" 
+    sustained_fire_diminish_rate="1.0" 
+    magazine_size="50" 
+    carry_in_two_hands="0" 
+    can_shoot_standing="0" 
+    can_shoot_crouching="1" 
+    can_shoot_prone="0" 
+    slot="0" 
+    name="PPSH41-Engineering Mecha" 
+    class="0" 
+    projectile_speed="10.0" 
+    barrel_offset_3d="0 0.52 0.0"/>
+    <animation state_key="recoil" 		animation_key="isc repairing, large mecha" />
+    <animation state_key="reload" animation_key="isc reload, large mecha" />
+    <animation state_key="hold" 		animation_key="isc still, large mecha" />
+    <animation state_key="hold_on_wall" 	animation_key="isc still, large mecha" />
+    <animation state_key="hold_casual" 		animation_key="isc still, large mecha" />
+    <animation state_key="still_against_wall" 	animation_key="isc still, large mecha" />
+    <animation state_key="crouching" 		animation_key="isc crouch, large mecha" />
+    <animation state_key="running" animation_key="isc walking, large mecha" />
+    <animation state_key="walking" 		animation_key="isc walking, large mecha" />
+    <animation state_key="walking_backwards" animation_key="isc walking, large mecha" />
+    <animation state_key="crouch_moving" 	animation_key="isc crouch walking, large mecha" />
+
+    <animation state_key="stabbing" 		animation_key="isc stabbing, large mecha" />
+    
+    <effect class="muzzle" ref="FlareFlashTorch" />
+    <effect class="muzzle" ref="FlareSparkleTorch" />
+
+
+    <sound key="fire" fileref="bbs_r.wav"  volume="0.9" pitch_variety="0.03" />
+	<sound key="magazine_out" fileref="flamer_out.wav" />
+	<sound key="magazine_in" fileref="portable_mortar_reload.wav" />
+    <sound key="cycle" fileref="musket_magazine_out.wav" volume="0.25" />
+    <sound class="impact" fileref="rifle_drop.wav" />
+    <model filename="" />
+
+      
+	<addon_model filename="backpack_propane.xml" />
+
+    <drop_on_death_result class="spawn" instance_class="projectile" instance_key="propane.projectile" min_amount="1" max_amount="1" offset="0 1 0" position_spread="0 0" direction_spread="0.01 0.01" />    
+    <projectile file="bbs_r.projectile" />
+
+    <model filename=""/>
+
+    <capacity value="4" source="rank" source_value="0.0" />
+
+    <hud_icon filename="gkr_bbs.png" />
+    <commonness value="0.0" />
+    <inventory encumbrance="20.0" price="80.0" />
+    <modifier class="speed" value="-0.35" />    
+
+</weapon>

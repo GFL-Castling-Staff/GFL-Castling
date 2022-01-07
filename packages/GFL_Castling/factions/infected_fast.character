@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<character filename="default_base.character">
+
+	<comment key="Open fire" text="!"/>
+	<comment key="Open fire" text="urgh"/>  
+	<comment key="Open fire" text="rawr"/>  
+  
+	<comment key="enemy seen" text="!" /> 
+	<comment key="enemy seen" text="urgh!" />
+	<comment key="enemy seen" text="rawr!" />   
+  
+	<parameter class="can_use_inventory" value="0" />  
+	<parameter class="can_use_vehicles" value="0" />  
+
+	<parameter class="prone_moving_steer_amount" value="1.3" />
+	<parameter class="prone_moving_steer_amount_stroke" value="0.0" />
+	<parameter class="prone_moving_max_dot_to_move" value="0.1" />
+
+	<parameter class="diving_steer_amount" value="1.2" />
+	<parameter class="diving_steer_amount_sliding_with_friction" value="0.05" />
+	<parameter class="diving_steer_amount_push" value="0.1" />
+	<parameter class="diving_steer_amount_jump" value="0.14" />
+	
+	<parameter class="ending_climbing_up_ladder_steer_amount" value="0.075" />
+
+	<parameter class="detectability_prone" value="1.0" />
+	
+	<animation key="dive" target_key="fast zombie leap" />
+	<animation key="going prone" target_key="fast zombie still" />  
+	<animation key="prone" target_key="fast zombie still" />  
+	<animation key="prone, without weapon, 63" target_key="fast zombie still" />  
+	<animation key="prone, moving forwards" target_key="fast zombie running" />
+	<animation key="leaving prone" target_key="fast zombie still" />
+	<animation key="arriving ground" target_key="arriving ground, fast zombie" />
+	<animation key="climbing ladder ending" target_key="climbing ladder ending, fast zombie" />  
+	<animation key="throwing, upside" target_key="fast zombie throw" />  
+  
+	<animation key="change weapon in" target_key="fast zombie still" />
+	<animation key="change weapon out" target_key="fast zombie still" />     
+	
+	<animation key="still, heavy weapon" target_key="fast zombie still" />
+	<animation key="still, instructor" target_key="fast zombie still" />
+
+	<sound key="death" fileref="zomb_die1.wav" volume="0.75" />
+	<sound key="death" fileref="zomb_die2.wav" volume="0.75" />
+	<sound key="death" fileref="zomb_die3.wav" volume="0.75" />
+	<sound key="death" fileref="zomb_die4.wav" volume="0.75" />  
+	<sound key="death" fileref="zomb_die5.wav" volume="0.75" /> 
+	<sound key="death" fileref="zomb_die6.wav" volume="0.75" />
+	<sound key="death" fileref="zomb_die7.wav" volume="0.75" /> 
+	<sound key="death" fileref="zomb_die8.wav" volume="0.75" />
+	<sound key="death" fileref="zomb_die9.wav" volume="0.75" />
+	<sound key="death" fileref="zomb_die10.wav" volume="0.75" />    
+  
+  <sound key="stab" fileref="grenade_throw1.wav" volume="0.4" />
+  
+	<sound key="throw" fileref="zomb_stab1.wav" volume="0.7" />
+	<sound key="throw" fileref="zomb_stab2.wav" volume="0.7" />
+	<sound key="throw" fileref="zomb_stab3.wav" volume="0.7" />
+	<sound key="throw" fileref="zomb_stab4.wav" volume="0.7" />
+	<sound key="throw" fileref="zomb_stab5.wav" volume="0.7" />
+	<sound key="throw" fileref="zomb_stab6.wav" volume="0.7" />
+
+	<parameter class="being_stunned_steer_amount" value="-0.5" />
+	<animation key="stunned" target_key="fast zombie stun leap" />
+</character>

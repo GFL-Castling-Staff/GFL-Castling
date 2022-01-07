@@ -1,0 +1,43 @@
+particle_system woosh1
+{
+
+        quota                                   500
+        material                                woosh
+        particle_width                          15.0
+        particle_height                         15.0
+        renderer                                billboard 
+        billboard_type                          oriented_common
+      	common_up_vector                  			0 0 1 
+
+        emitter                                 Point 
+        {
+
+		colour	0.9 0.9 0.9 0.2
+
+    position 0 0 0
+		direction	0 1 0
+		emission_rate	40
+		time_to_live	0.3
+		duration	0.05
+		duration_min	0.05
+		duration_max	0.05    
+
+
+        }
+        affector                                Scaler 
+        {
+            rate                                60.0
+        }
+
+	affector ColourFader
+	{
+		red	-1.0
+		green	-1.0
+		blue	-1.0
+		alpha	-1.0
+	}
+        
+   
+}
+
+

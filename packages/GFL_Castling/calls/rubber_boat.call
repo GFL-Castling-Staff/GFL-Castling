@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<call name="Dryland Rowing Boat" key="rubber_boat.call"
+     initiation_comment1="Dryland boating!"
+     acknowledge_comment="Confirmed, The great sultan will rule over his loyal Istanbul today！"
+     launch_comment="Istanbul！">
+
+    <round instances="1"
+           instance_class="vehicle"
+           instance_key="rubber_boat.vehicle" 
+           instance_spread="0 0 0" 
+           common_spread="0 0 0" 
+           launch_time="8.0"
+           spawn_time="15.0"
+           horizontal_offset_at_spawn="0.0"
+           vertical_offset_at_spawn="50.0"
+           initial_speed_to_target="0.0">
+        <effect class="launch" ref="ShadowAirplaneFlyby" shadow="1" />
+        <sound class="launch" fileref="plane_flyby.wav" />
+    </round>
+
+    <hud_icon filename="call_Airborne_armory.png" />
+    <capacity value="0" source="rank" source_value="0.0" />
+    <capacity value="100" source="rank" source_value="0.532" />
+    <!-- <capacity value="100" source="rank" source_value="0.3" /> -->
+    <inventory encumbrance="0.0" price="128.0" />
+
+</call>

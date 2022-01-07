@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon file="two_hands_ar.animation_base" key="gkw_art556_1803.weapon">
+
+    <specification 
+		accuracy_factor="0.98" 
+		barrel_offset="0.4" 
+		 
+		class="0"
+        solt="0" 
+		magazine_size="30" 
+		name="ART556-[Louts White]" 
+		projectile_speed="170.21" 
+		retrigger_time="0.1" 
+		suppressed="0" 
+		sustained_fire_diminish_rate="2" 
+		sustained_fire_grow_step="0.36"/>
+
+
+
+
+    <animation state_key="reload" animation_key="ARreload1.5" />
+	<animation key="reload" stance_key="prone" animation_key="ARreloadp1.5" />
+    <inventory  buy_price="8.0" sell_price="8.0" />
+    <commonness value="0" in_stock="0" />
+
+
+
+    <sound key="fire" fileref="scar_fire_FromPUBG.wav" pitch_variety="0.03" volume="1" />
+    <sound key="magazine_out" fileref="scar_mgz_out_FromPUBG.wav" volume="1" />
+    <sound key="magazine_in" fileref="scar_mgz_in_FromPUBG.wav" volume="1" />
+    <sound key="cycle" fileref="scar_cycle_FromPUBG.wav" volume="1" />
+    <sound class="impact" fileref="rifle_drop.wav" />    
+    <model filename="gkw_ar_art556_1803.xml" />
+
+    <hud_icon filename="gkw_art556_1803.png" />
+
+
+
+    <weak_hand_hold offset="0.2" />
+    <projectile file="bullet.projectile">
+        <result class="hit"  kill_probability="1.40" kill_decay_start_time="1.35" kill_decay_end_time="2.25" />
+    </projectile>
+    
+    <stance state_key="running" accuracy="0.3" />
+    <stance state_key="walking" accuracy="0.75" />
+    <stance state_key="crouch_moving" accuracy="0.9" />
+    <stance state_key="prone_moving" accuracy="0.9" />
+
+    <stance state_key="standing" accuracy="0.8" />
+    <stance state_key="crouching" accuracy="0.9" />
+    <stance state_key="prone" accuracy="1" />
+    
+
+</weapon>

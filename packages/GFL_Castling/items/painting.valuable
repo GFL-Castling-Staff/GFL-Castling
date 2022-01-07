@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<carry_item file="base_valuable.carry_item" name="Egor Lebedev" key="painting.carry_item">
+    <hud_icon filename="hud_painting.png" />
+    <inventory encumbrance="0.5" price="800.0" />
+
+    <model mesh_filename="painting.mesh" texture_filename="painting.png" />
+
+    <commonness value="0.5" in_stock="0" />
+</carry_item>

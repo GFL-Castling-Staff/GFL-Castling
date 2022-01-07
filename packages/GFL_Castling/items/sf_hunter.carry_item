@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8"?>
+<carry_items>
+    <carry_item file="wearables.base_carry_item"  key="sf_hunter.carry_item" name="Hunter" slot="1" transform_on_consume="sf_hun_2" >
+        <hud_icon filename="sfd_ar.png" />
+ 
+        <model mesh_filename="vestexo.xml" />
+                                                                                                                                                                          
+ 
+        <!-- death or wound or stun -> no effect -->
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+ 
+        
+        <modifier class="speed" value="0.1" />
+		<modifier class="hit_success_probability" value="-0.4" />
+	    <modifier class="detectability" value="0.6" />
+    </carry_item>
+
+    <carry_item file="wearables.base_carry_item" key="sf_hun_2" name="Hunter" slot="1" transform_on_consume="sf_hun_3" >
+        <hud_icon filename="sfd_ar.png" />
+ 
+        <model mesh_filename="vestexo.xml" />
+
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+
+        
+        <modifier class="speed" value="0.1" />
+		<modifier class="hit_success_probability" value="-0.4" />
+	    <modifier class="detectability" value="0.6" />
+    </carry_item>
+
+    <carry_item file="wearables.base_carry_item" key="sf_hun_3" name="Hunter" slot="1" transform_on_consume="sf_hun_4" >
+        <hud_icon filename="sfd_ar.png" />
+ 
+        <model mesh_filename="vestexo.xml" />
+
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+
+        
+        <modifier class="speed" value="0.1" />
+		<modifier class="hit_success_probability" value="-0.4" />
+	    <modifier class="detectability" value="0.6" />
+    </carry_item>
+
+    <carry_item file="wearables.base_carry_item" key="sf_hun_4" name="Hunter-Slight Damage-" slot="1" transform_on_consume="sf_hun_5" >
+        <hud_icon filename="sfd_ar.png" />
+ 
+        <model mesh_filename="vestexo.xml" />
+
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+
+        
+        <modifier class="speed" value="0.1" />
+		<modifier class="hit_success_probability" value="-0.4" />
+	    <modifier class="detectability" value="0.6" />
+    </carry_item>
+
+    <carry_item file="wearables.base_carry_item" key="sf_hun_5" name="Hunter-Slight Damage-" slot="1" transform_on_consume="sf_hun_6" >
+        <hud_icon filename="sfd_ar.png" />
+ 
+        <model mesh_filename="vestexo.xml" />
+
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+
+        
+        <modifier class="speed" value="0.1" />
+		<modifier class="hit_success_probability" value="-0.5" />
+	    <modifier class="detectability" value="0.6" />
+    </carry_item>
+
+    <carry_item file="wearables.base_carry_item" key="sf_hun_6" name="Hunter-Slight Damage-" slot="1" transform_on_consume="sf_hun_7" >
+        <hud_icon filename="sfd_ar.png" />
+ 
+        <model mesh_filename="vestexo.xml" />
+
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+
+        
+        <modifier class="speed" value="0.1" />
+		<modifier class="hit_success_probability" value="-0.5" />
+	    <modifier class="detectability" value="0.6" />
+    </carry_item>
+
+    <carry_item file="wearables.base_carry_item" key="sf_hun_7" name="Hunter-Moderate Damage-" slot="1" transform_on_consume="sf_hun_8" >
+        <hud_icon filename="sfd_ar.png" />
+ 
+        <model mesh_filename="vestexo.xml" />
+
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+
+        
+        <modifier class="speed" value="0.1" />
+		<modifier class="hit_success_probability" value="-0.5" />
+	    <modifier class="detectability" value="0.6" />
+    </carry_item>
+
+    
+    <carry_item file="wearables.base_carry_item" key="sf_hun_8" name="Hunter-Moderate Damage-" slot="1" transform_on_consume="sf_hun_9" >
+        <hud_icon filename="sfd_ar.png" />
+ 
+        <model mesh_filename="vestexo.xml" />
+
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+
+        
+        <modifier class="speed" value="0.1" />
+		<modifier class="hit_success_probability" value="-0.5" />
+	    <modifier class="detectability" value="0.6" />
+    </carry_item>
+
+    
+    <carry_item file="wearables.base_carry_item" key="sf_hun_9" name="Hunter-Moderate Damage-" slot="1" transform_on_consume="sf_hun_10" >
+        <hud_icon filename="sfd_ar.png" />
+ 
+        <model mesh_filename="vestexo.xml" />
+
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+
+        
+        <modifier class="speed" value="0.1" />
+		<modifier class="hit_success_probability" value="-0.5" />
+	    <modifier class="detectability" value="0.6" />
+    </carry_item>
+
+    
+    <carry_item file="wearables.base_carry_item" key="sf_hun_10" name="Hunter-Moderate Damage-" slot="1" transform_on_consume="sf_hun_11" >
+        <hud_icon filename="sfd_ar.png" />
+ 
+        <model mesh_filename="vestexo.xml" />
+
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="stun" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+
+        
+        <modifier class="speed" value="0.1" />
+		<modifier class="hit_success_probability" value="-0.5" />
+	    <modifier class="detectability" value="0.6" />
+    </carry_item>
+
+    <carry_item file="wearables.base_carry_item" key="sf_hun_11" name="Hunter-Seriously Damaged-" slot="1" transform_on_consume="sf_hun_12" >
+        <hud_icon filename="sfd_ar.png" />
+ 
+        <model mesh_filename="vestexo.xml" />
+
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="stun" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+
+        <modifier class="speed" value="0.1" />
+		<modifier class="hit_success_probability" value="-0.5" />
+	    <modifier class="detectability" value="0.6" />
+    </carry_item>
+
+    <carry_item file="wearables.base_carry_item" key="sf_hun_12" name="Hunter-Severe Damage-" slot="1" transform_on_consume="sf_hun_13" >
+        <hud_icon filename="sfd_ar.png" />
+ 
+        <model mesh_filename="vestexo.xml" />
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="stun" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+
+        <modifier class="speed" value="0.1" />
+		<modifier class="hit_success_probability" value="-0.5" />
+	    <modifier class="detectability" value="0.6" />
+    </carry_item>
+
+    <carry_item file="wearables.base_carry_item" key="sf_hun_13" name="Hunter-Severe Damage-" slot="1" transform_on_consume="sf_hun_14" >
+        <hud_icon filename="sfd_ar.png" />
+ 
+        <model mesh_filename="vestexo.xml" />
+
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="stun" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+
+
+        <modifier class="speed" value="0.1" />
+		<modifier class="hit_success_probability" value="-0.5" />
+	    <modifier class="detectability" value="0.6" />
+    </carry_item>
+
+
+    <carry_item file="wearables.base_carry_item" key="sf_hun_14" name="Hunter-Severe Damage-" slot="1" transform_on_consume="sf_hun_15" >
+        <hud_icon filename="sfd_ar.png" />
+ 
+        <model mesh_filename="vestexo.xml" />
+
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="stun" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+
+        <modifier class="speed" value="0.1" />
+		<modifier class="hit_success_probability" value="-0.5" />
+	    <modifier class="detectability" value="0.6" />
+    </carry_item>
+
+
+    <carry_item file="wearables.base_carry_item" key="sf_hun_15" name="Hunter-Severe Damage-" slot="1" transform_on_consume="sf_hun_16" >
+        <hud_icon filename="sfd_ar.png" />
+ 
+        <model mesh_filename="vestexo.xml" />
+
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="stun" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+
+
+        <modifier class="speed" value="0.1" />
+		<modifier class="hit_success_probability" value="-0.5" />
+	    <modifier class="detectability" value="0.6" />
+    </carry_item>
+
+    <carry_item file="wearables.base_carry_item" key="sf_hun_16" name="Hunter-Severe Damage-" slot="1" transform_on_consume="sf_hun_17" >
+        <hud_icon filename="sfd_ar.png" />
+ 
+        <model mesh_filename="vestexo.xml" />
+
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="stun" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+
+
+        <modifier class="speed" value="0.1" />
+		<modifier class="hit_success_probability" value="-0.5" />
+	    <modifier class="detectability" value="0.6" />
+    </carry_item>
+
+
+    <carry_item file="wearables.base_carry_item" key="sf_hun_17" name="Hunter-Severe Damage-" slot="1" transform_on_consume="sf_hun_18" >
+        <hud_icon filename="sfd_ar.png" />
+ 
+        <model mesh_filename="vestexo.xml" />
+
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="stun" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+
+
+        <modifier class="speed" value="0.1" />
+		<modifier class="hit_success_probability" value="-0.5" />
+	    <modifier class="detectability" value="0.6" />
+    </carry_item>
+
+
+    <carry_item file="wearables.base_carry_item" key="sf_hun_18" name="Hunter-Severe Damage-" slot="1" transform_on_consume="sf_hun_19" >
+        <hud_icon filename="sfd_ar.png" />
+ 
+        <model mesh_filename="vestexo.xml" />
+
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="stun" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+
+
+        <modifier class="speed" value="0.1" />
+		<modifier class="hit_success_probability" value="-0.5" />
+	    <modifier class="detectability" value="0.6" />
+    </carry_item>
+
+
+    <carry_item file="wearables.base_carry_item" key="sf_hun_19" name="Hunter-Severe Damage-" slot="1" transform_on_consume="sf_hun_20" >
+        <hud_icon filename="sfd_ar.png" />
+ 
+        <model mesh_filename="vestexo.xml" />
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="stun" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+
+        <modifier class="speed" value="0.1" />
+		<modifier class="hit_success_probability" value="-0.5" />
+	    <modifier class="detectability" value="0.6" />
+    </carry_item>
+
+
+    <carry_item file="wearables.base_carry_item" key="sf_hun_21" name="Hunter-Severe Damage-" slot="1" transform_on_consume="sf_hun_22" >
+        <hud_icon filename="sfd_ar.png" />
+ 
+        <model mesh_filename="vestexo.xml" />
+
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="death" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+
+        <modifier class="speed" value="0.1" />
+		<modifier class="hit_success_probability" value="-0.5" />
+	    <modifier class="detectability" value="0.6" />
+    </carry_item>
+
+
+
+</carry_items>

@@ -1,0 +1,80 @@
+
+particle_system hit
+{
+	quota	1000
+	material	hit
+	particle_width	0.3
+	particle_height	0.3
+	cull_each	false
+	renderer	billboard
+	billboard_type	point
+
+	emitter Point
+	{
+		angle	10
+		colour	1 1 1 0.4
+		colour_range_start	1 1 1 0.4
+		colour_range_end	1 1 1 1
+		direction	0 1 0
+		emission_rate	30
+		position	0 0 0
+		velocity	200.0
+		velocity_min	180.0
+		velocity_max	220.0
+		time_to_live	1.5
+		time_to_live_min	0.10
+		time_to_live_max	0.10
+		duration	0.1
+		duration_min	0.1
+		duration_max	0.1
+		width	2
+		height	2
+		depth	0.1
+		inner_width	0.9
+		inner_height	0.9
+	}
+
+	affector Scaler
+	{
+		rate	0.7
+	}
+
+	affector Rotator
+	{
+		rotation_speed_range_start	30
+		rotation_speed_range_end	175
+		rotation_range_start	0
+		rotation_range_end	20
+	}
+
+	affector ColourFader
+	{
+		red	0
+		green	0
+		blue	0
+		alpha	-0.75
+	}
+}
+
+
+
+material hit
+{
+	receive_shadows off
+	technique
+	{
+		pass
+		{
+			lighting off
+			alpha_rejection greater 32
+			depth_write off
+
+			texture_unit
+			{
+				texture hit.png
+				tex_address_mode clamp
+			}
+		}
+	}
+}
+

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<reward_config>
+	<reward class="enemy_shot" 							base="+0.001" 	bonus="0.000"  type="xp" />
+	<reward class="enemy_shot" 							base="+12" 		bonus="0.0"  type="rp" />
+	<reward class="enemy_killed_in_explosion" 			base="+0.001" 	bonus="0.000"  type="xp" />
+	<reward class="enemy_killed_in_explosion" 			base="+12" 		bonus="0.0"  type="rp" />
+	
+	<reward class="enemy_stabbed" 						base="+0.003" 	bonus="0.000"  type="xp" />
+	<reward class="enemy_stabbed" 						base="+15" 		bonus="0.0"  type="rp" />   
+	
+	<reward class="enemy_kill_combo" 					base="+0.002"	type="xp" />
+	<reward class="enemy_kill_combo" 					base="+2"		type="rp" />
+
+	<reward class="self_killed" 						base="-0.000"	type="xp" />
+	<reward class="self_killed" 						base="+10" 		type="rp" />
+
+	<reward class="fellow_killed_in_explosion" 			base="-0.0001" 	type="xp" />
+	<reward class="fellow_killed_in_explosion" 			base="-40.0" 	type="rp" />
+
+	<reward class="fellow_unwound" 						base="+0.005"	type="xp" />  
+	<reward class="fellow_unwound" 						base="+25" 		type="rp" />  
+
+	<reward class="staying_alive" 						base="0" 		type="rp" />
+	
+	<reward class="base_capture" 						base="+0.050" 	type="xp" />
+	<reward class="base_capture" 						base="300" 		type="rp" />
+
+	<reward class="side_base_capture" 					base="+0.025" 	type="xp" />
+	<reward class="side_base_capture" 					base="80" 		type="rp" />
+
+	<reward class="spotting" 							base="1" 		type="rp" />
+	<reward class="spotting" 							base="+0.010"	type="xp" />
+	
+	<reward class="promotion" 							base="100" 		type="rp" />
+
+	<reward class="enemy_player_shot" 					base="+0.010" 	type="xp" />
+	<reward class="enemy_player_shot" 					base="10" 		type="rp" />
+	<reward class="enemy_player_stabbed" 				base="+0.010" 	type="xp" />
+	<reward class="enemy_player_stabbed" 				base="10" 		type="rp" />
+	<reward class="enemy_player_killed_in_explosion"	base="+0.010" 	type="xp" />
+	<reward class="enemy_player_killed_in_explosion" 	base="10" 		type="rp" />
+
+	<reward class="repair" 								base="+0.001" bonus="0.001" type="xp" />
+	<reward class="repair_coop" 						base="+0.001" bonus="0.001" type="xp" />  
+	<reward class="repair_coop" 						base="+1" bonus="1.0" type="rp" />  
+</reward_config>

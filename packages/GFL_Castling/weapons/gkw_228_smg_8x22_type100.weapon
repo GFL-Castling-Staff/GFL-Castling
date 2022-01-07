@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon file="two_hands_smg.animation_base" key="gkw_type100.weapon">
+
+    <specification 
+		accuracy_factor="0.98" 
+		barrel_offset="0.4" 
+		class="0"
+		magazine_size="30" 
+		name="Type 100" 
+		projectile_speed="79.83" 
+		retrigger_time="0.133" 
+		suppressed="0" 
+		sustained_fire_diminish_rate="2.0" 
+		sustained_fire_grow_step="0.4" 
+        stab_enabled="1"
+        stab_range="3.0" />
+    <inventory  buy_price="5.0" sell_price="5.0" />
+
+	<next_in_chain key="gkw_type100_skill.weapon" share_ammo="1" />
+    <sound key="fire" fileref="type100_fire_FromINS.wav" pitch_variety="0.05" volume="1" />
+    <sound key="magazine_out" fileref="type100_mgz_out_FromINS.wav" volume="1" />
+    <sound key="magazine_in" fileref="type100_mgz_in_FromINS.wav" volume="1" />
+    <sound key="cycle" fileref="type100_cycle_FromINS.wav" volume="1" />
+    <sound class="impact" fileref="rifle_drop.wav" volume="1"/>    
+    <model filename="gkw_smg_type100.xml" />
+
+    <hud_icon filename="gkw_type100.png" />
+
+	<animation state_key="stabbing" animation_key="melee, bayonet" />
+
+	<animation state_key="reload" animation_key="reloading, mp5sd" />
+	<animation key="reload" stance_key="prone" animation_key="reloading, ar1, prone" />	<!-- 别忘了用太平洋的装弹动作“reloading, type 100”和“reloading, type 100, prone” -->
+
+    <weak_hand_hold offset="0.2" />
+    <projectile file="bullet.projectile">
+        <result class="hit"  kill_probability="1.4" kill_decay_start_time="0.358" kill_decay_end_time="1.790" />
+    </projectile>
+    
+    <stance state_key="running" accuracy="0.85" />
+    <stance state_key="walking" accuracy="0.9" />
+    <stance state_key="crouch_moving" accuracy="0.9" />
+    <stance state_key="prone_moving" accuracy="0.9" />
+
+    <stance state_key="standing" accuracy="0.96" />
+
+    <stance state_key="prone" accuracy="1" />
+    <modifier class="speed" value="0.4" />  <!-- 得比其他smg移速高0.1 -->
+
+</weapon>

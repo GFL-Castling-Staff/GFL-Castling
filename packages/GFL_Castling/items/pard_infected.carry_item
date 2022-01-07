@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<carry_items>
+        <carry_item file="bp.base_carry_item" key="par_infected.carry_item" name="infected" transform_on_consume="pra_infected_2" >
+            <hud_icon filename="pard_ar.png" />
+			
+            <modifier class="speed" value="0.1" />
+            <modifier class="hit_success_probability" value="-0.6" />
+            <modifier class="detectability" value="0" />
+        </carry_item>
+
+        <carry_item file="bp.base_carry_item" key="pra_infected_2" name="infected" transform_on_consume="pra_infected_3" >
+            <hud_icon filename="pard_ar.png" />
+			
+            <modifier class="speed" value="0.1" />
+            <modifier class="hit_success_probability" value="-0.6" />
+            <modifier class="detectability" value="0.05" />
+        </carry_item>
+
+        <carry_item file="bp.base_carry_item" key="pra_infected_3" name="infected">
+            <hud_icon filename="pard_ar.png" />
+			
+            <modifier class="speed" value="0.1" />
+            <modifier class="hit_success_probability" value="-0.6" />
+            <modifier class="detectability" value="0.05" />
+        </carry_item>
+</carry_items>

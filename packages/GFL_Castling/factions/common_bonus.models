@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<models>
+
+	<!-- Musketeer -->
+	
+	<model filename="kccod_ye_xmas.xml">
+		<requirement class="rank" range="0 10000" />
+		<requirement class="weapon" slot="1" key="costume_santa.carry_item"/>
+	</model>	
+	<model filename="kccod_ye_xmas.xml">
+		<requirement class="rank" range="0 10000" />
+		<requirement class="weapon" slot="1" key="costume_santa_1"/>
+	</model>
+	
+
+</models>

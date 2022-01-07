@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon file="designated_marksman_rifle.animation_base" key="gkw_vsk94.weapon">
+
+
+    <!--Weapon specifications-->
+    
+    <specification 
+	retrigger_time="-1.0" 
+	accuracy_factor="1" 
+	sustained_fire_grow_step="0.3" 
+	sustained_fire_diminish_rate="1.4" 
+	magazine_size="20" 
+	can_shoot_standing="1" 
+	suppressed="1" 
+	name="VSK94" 
+	class="4" 
+	burst_shots="1"
+	last_burst_retrigger_time="0.083"
+	reload_one_at_a_time="0" 
+	sight_range_modifier="2.8" 
+	projectile_speed="107.45" 
+	barrel_offset="0.4" 
+	projectiles_per_shot="1" />
+	
+	<!--Animations-->
+	
+  	<animation state_key="hold_casual"			animation_key="dancing, kazachok" />
+	<inventory  buy_price="10.0" sell_price="10.0" />
+    <animation key="reload" animation_key="magBrifleR" />
+	<animation key="reload" stance_key="prone" animation_key="magBrifleRp" />		
+	
+	<!--Sounds-->
+	
+    <sound key="fire" fileref="vsk94_Fire_FromCOD16ASVAL.wav" pitch_variety="0.05" volume="1" />
+    <sound key="magazine_out" fileref="asval_mgz_out_FromCOD16.wav" volume="0.4" />
+    <sound key="magazine_in" fileref="asval_mgz_in_FromCOD16.wav" volume="0.7" />
+    <!--<sound key="cycle" fileref="asval_cycle_FromINS.wav" volume="1" />-->
+    <sound key="cycle_in" fileref="vsk94_cycle_in_FromCOD16ASVAL.wav" volume="0.5" />
+    <sound key="cycle_out" fileref="vsk94_cycle_out_FromCOD16ASVAL.wav" volume="1.2" />
+    <sound class="impact" fileref="rifle_drop.wav" />
+   
+	<!--Model, Icon, Cost-->
+   
+    <model filename="gkw_rf_vsk94.xml" />
+    <hud_icon filename="gkw_vsk94.png" />
+
+    <!-- <inventory  price="4.0" /> -->
+	
+	<!--Ballistics-->
+	
+    
+    <weak_hand_hold offset="0.3" />
+    <projectile file="bullet.projectile">
+        <result class="hit" 
+        kill_probability="2.7" 
+        kill_decay_start_time="1.83" 
+        kill_decay_end_time="2.222" />
+    </projectile>
+    
+    <!--Accuracy, Movement speed-->
+    
+	<stance state_key="walking" accuracy="0.6" />
+    <stance state_key="crouch_moving" accuracy="0.7" />
+    <stance state_key="prone_moving" accuracy="0.7" />
+    <stance state_key="standing" accuracy="0.8"/>
+    <stance state_key="crouching" accuracy="0.95" />
+    <stance state_key="prone" accuracy="1" />
+    <stance state_key="over_wall" accuracy="1" />  
+    <modifier class="speed" value="0" /> 
+
+</weapon>

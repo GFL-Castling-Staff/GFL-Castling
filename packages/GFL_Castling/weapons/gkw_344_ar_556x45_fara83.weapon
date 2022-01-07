@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon file="two_hands_ar.animation_base" key="gkw_fara83.weapon">
+
+    <specification 
+		accuracy_factor="0.98" 
+		barrel_offset="0.8" 
+		 
+		class="0"
+        solt="0" 
+		magazine_size="30" 
+		name="FARA 83" 
+		projectile_speed="208.51" 
+		retrigger_time="0.08" 
+		suppressed="0" 
+		sustained_fire_diminish_rate="1.8" 
+		sustained_fire_grow_step="0.35" 
+		sight_range_modifier="1"/>
+
+
+
+
+    <animation state_key="reload" animation_key="ARreload1.5" />
+	<animation key="reload" stance_key="prone" animation_key="ARreloadp1.5" />
+	
+    <inventory  buy_price="8.0" sell_price="8.0" />
+
+
+
+    <sound key="fire" fileref="fara83_Fire_FromCOD17.wav" pitch_variety="0.05" volume="1" />
+    <sound key="magazine_out" fileref="fara83_mgz_out_FromCOD17.wav" volume="1" />
+    <sound key="magazine_in" fileref="fara83_mgz_in_FromCOD17.wav" volume="1" />
+    <sound key="cycle" fileref="fara83_cycle_FromCOD17.wav" volume="1" />
+    <sound class="impact" fileref="rifle_drop.wav" volume="1"/>   
+	
+    <model filename="gkw_smg_fara83.xml" />
+
+    <hud_icon filename="gkw_fara83.png" />
+
+
+
+    <weak_hand_hold offset="0.2" />
+    <projectile file="bullet.projectile">
+        <result class="hit"  kill_probability="1.35" kill_decay_start_time="0.551" kill_decay_end_time="0.918" />
+    </projectile>
+    
+    <stance state_key="running" accuracy="0.5" />
+    <stance state_key="walking" accuracy="0.7" />
+    <stance state_key="crouch_moving" accuracy="0.5" />
+    <stance state_key="prone_moving" accuracy="0.5" />
+    <stance state_key="standing" accuracy="0.85" />
+    <stance state_key="crouching" accuracy="0.95" />
+    <stance state_key="prone" accuracy="1" />
+    
+
+</weapon>

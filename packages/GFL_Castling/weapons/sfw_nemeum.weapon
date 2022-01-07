@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon file="sf.base_weapon" key="sfw_nemeum.weapon">
+    <!--Weapon specifications-->
+    <specification
+	retrigger_time="0.5" 
+	accuracy_factor="1.0" 
+	sustained_fire_grow_step="2.0" 
+	sustained_fire_diminish_rate="0.5" 
+	magazine_size="10" 
+	can_shoot_standing="1" 
+	can_shoot_crouching="0"
+	can_shoot_prone="0"
+	suppressed="0" 
+	name="Nemeum" 
+	class="4" 
+	reload_one_at_a_time="0"
+	sight_range_modifier="1.2" 
+	projectile_speed="100.0" 
+	carry_in_two_hands="0" 
+	projectiles_per_shot="1" 
+	slot="0" 
+	stab_enabled="1"/>
+    <!--Animations-->
+    <animation state_key="recoil"	animation_key="recoil, pistol dual 1" />
+    <animation state_key="recoil"	animation_key="recoil, pistol dual 2" />
+    <animation state_key="reload"	animation_key="recoil, pistol dual 1" />
+    <animation state_key="hold"	animation_key="still, pistol dual" />
+    <animation state_key="hold_casual"	animation_key="still, pistol dual" />
+    <animation state_key="hold_on_wall"	animation_key="still, pistol dual" />
+    <animation state_key="walking"	animation_key="walking, pistol dual" />
+    <animation state_key="stabbing" animation_key="recoil, pistol dual 1" />
+    <animation state_key="running"	animation_key="walking, pistol dual" />
+    <animation state_key="crouching"	animation_key="still, pistol dual" />
+    <!--Sounds-->
+    <sound key="fire" fileref="Jaeger_Fire_FromPS2ADVXMako.wav" pitch_variety="0.05" volume="1" />
+    <sound key="magazine_out" fileref="m1911_mgz_out_FromINS.wav" volume="0.8" />
+    <sound key="magazine_in" fileref="m1911_mgz_in_FromINS.wav" volume="0.8"/>
+    <sound key="cycle" fileref="m1911_cycle_FromINS.wav" volume="0.8" />
+    <!--Model, Icon, Cost-->
+    <model filename="" />
+    <hud_icon filename="sfw_nemeum.png" />
+
+    <!--Ballistics-->
+    
+    <!-- <weak_hand_hold offset="0.1" /> -->
+    <projectile file="bullet_sf.projectile">
+        <result class="blast" radius="2.0" damage="2.0" decal="1" push="0.05" character_state="death" faction_compare="not_equal"/>
+    </projectile>
+    <!-- state modifiers for weapons are connected to shield impact events -->
+    <!-- <shield offset="0 0 0.2" extent="0.4 1.6 0.6" /> -->
+    <shield offset="-0.2 0 1.0" extent="0.4 1.6 1.0" />
+    <shield offset="-0.2 0 -0.6" extent="0.4 1.6 1.0" />
+    <!-- deflects all bullets; death, stun, wound become none, doesn't consume -->
+    <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0" />
+    <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+    <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+    <!-- death and wound blast causes the item to be consumed, stun is ignored -->
+    <modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
+    <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+    <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+    <modifier class="melee_blast_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
+    <modifier class="melee_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+    <modifier class="melee_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+	
+    <!--Accuracy, Movement speed-->
+    <stance state_key="running" accuracy="0.9" />
+    <stance state_key="walking" accuracy="1.0" />
+    <stance state_key="crouch_moving" accuracy="0.75" />
+    <stance state_key="prone_moving" accuracy="0.3" />
+    <stance state_key="standing" accuracy="1.2" />
+    <stance state_key="crouching" accuracy="0.85" />
+    <stance state_key="prone" accuracy="0.94" />
+    <modifier class="speed" value="-0.4" />
+</weapon>

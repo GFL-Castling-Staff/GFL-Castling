@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon file="gf_rf.base_weapon" key="gkw_m1.weapon">
+<tag name="assault" />
+	<tag name="has_bayonet" />
+	
+	<specification 
+	retrigger_time="0.2" 
+	accuracy_factor="1" 
+	sustained_fire_grow_step="0.4" 
+	sustained_fire_diminish_rate="1.8"
+	magazine_size="8" 
+	can_shoot_standing="1" 
+	suppressed="0" 
+	name="M1" 
+	class="4" 
+	burst_shots="1"
+	reload_one_at_a_time="0" 
+	sight_range_modifier="2" 
+	projectile_speed="231.49" 
+	barrel_offset="0.6" 
+	projectiles_per_shot="1"
+	/>
+	<!--recoil recovery was 1.5-->
+	<!--kill probability was 0.75-->
+
+
+	
+	<animation key="recoil" ref="27" />
+	<animation key="cycle" ref="30" />
+	<animation state_key="reload" animation_key="reloading, m1 garand" />
+	<animation state_key="reload" stance_key="prone" animation_key="reloading, m1 garand, prone" />
+	
+	<weak_hand_hold offset="0.3" />
+	
+	<sound key="fire" fileref="m1_fire_FromINS.wav" pitch_variety="0.05" volume="2"/>
+	<sound key="cycle" fileref="pistol2_chamber.wav" />
+	<sound key="magazine_out" fileref="rifle_02_m1_garand_ping.wav" />
+	<sound key="magazine_in" fileref="rifle_clip_in.wav" />
+	<sound key="last_ammo" fileref="rifle_02_m1_garand_ping.wav" />
+	
+	<model filename="gkw_rf_m1.xml" />
+	<hud_icon filename="gkw_m1.png" />
+	
+	<commonness value="0.2" can_respawn_with="1"/>
+	<inventory encumbrance="10.0" price="5.0" />
+	
+	<capacity value="0" source="rank" source_value="0.0" />
+	<capacity value="1" source="rank" source_value="0.0" />
+	
+	<projectile file="bullet.projectile">
+		<result 
+		class="hit" 
+		kill_probability="2.6" 
+		kill_decay_start_time="0.964" 
+		kill_decay_end_time="1.607"
+		/>
+	</projectile>
+	    <stance state_key="running" accuracy="0.3" />
+        <stance state_key="walking" accuracy="0.6" />
+        <stance state_key="crouch_moving" accuracy="0.9" />
+        <stance state_key="prone_moving" accuracy="0.9" />
+        <stance state_key="standing" accuracy="0.95" />
+        <stance state_key="crouching" accuracy="0.98" />
+        <stance state_key="prone" accuracy="1" />
+	
+</weapon>

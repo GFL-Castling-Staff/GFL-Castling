@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon file="two_hands_ar.animation_base" key="gkw_vp1915_6604.weapon">
+
+    <specification 
+		accuracy_factor="0.98" 
+		barrel_offset="0.4" 
+		class="0"
+        solt="0" 
+		magazine_size="25" 
+		name="VP1915-[Sitting Beside Perosa]" 
+		projectile_speed="170.12" 
+		retrigger_time="0.04" 
+		suppressed="0" 
+		sustained_fire_diminish_rate="1.9" 
+		sustained_fire_grow_step="0.4"
+		sight_range_modifier="1.0"
+		spread_range="0.1"
+        projectiles_per_shot="2"
+		/>
+
+
+    <commonness in_stock="0" value="0"/>
+  	<animation state_key="hold_casual"			animation_key="dancing, kazachok" />
+    <animation key="reload" animation_key="MGreload3" />
+    <inventory  buy_price="13.0" sell_price="13.0" />
+
+
+
+    <sound key="fire" fileref="RPD_Fire_FromCODOLRPD.wav" pitch_variety="0.02" volume="1" />
+    <sound key="magazine_out" fileref="rpk16_mgz_out_FromEFT.wav" volume="1" />
+    <sound key="magazine_in" fileref="rpk16_mgz_in_FromEFT.wav" volume="1" />
+    <sound key="cycle" fileref="rpk16_cycle_FromEFT.wav" volume="1" />
+    <sound class="impact" fileref="rifle_drop.wav" />    
+    <model filename="gkw_vp1915_6604_From_melondove.xml" />
+
+    <hud_icon filename="gkw_vp1915_6604.png" />
+
+
+
+    <weak_hand_hold offset="0.2" />
+    <projectile file="bullet.projectile">
+        <result class="hit"
+		kill_probability="1.35"
+		kill_decay_start_time="0.313"
+		kill_decay_end_time="1.022"  />
+    </projectile>
+    
+    <stance state_key="running" accuracy="0.5" />
+    <stance state_key="walking" accuracy="0.65" />
+    <stance state_key="crouch_moving" accuracy="0.8" />
+    <stance state_key="prone_moving" accuracy="0.8" />
+
+    <stance state_key="standing" accuracy="0.95" />
+    <stance state_key="crouching" accuracy="0.87" />
+    <stance state_key="prone" accuracy="1" />
+    <modifier class="speed" value="-0.2" /> 
+</weapon>

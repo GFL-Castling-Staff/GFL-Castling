@@ -1,0 +1,390 @@
+material bullet_new
+  {
+    receive_shadows off
+    technique
+    {
+      pass
+      {
+	// drawn when hidden behind something
+        depth_write off
+        depth_check on
+	depth_func greater
+
+        lighting on
+        ambient 0.5 0.5 0.5 0.5
+        diffuse 0.5 0.5 0.5 0.5
+        scene_blend alpha_blend
+
+	// fog_override true
+	//alpha_rejection greater 128
+        
+        texture_unit {
+          texture bullet_new_trail.png
+        }
+      } 
+  
+      pass
+      {
+        lighting off
+        ambient vertexcolour
+        diffuse vertexcolour
+        depth_write off
+        scene_blend alpha_blend
+
+	texture_unit {
+          texture bullet_new_trail.png
+        }
+      } 
+    }
+  }
+  
+material laser_hyz {
+	receive_shadows off
+	technique {
+		pass {
+			lighting off
+			fog_override true
+
+			depth_write off
+			scene_blend add
+
+			texture_unit {
+				texture laser_hyz.png
+			}
+		}
+	}
+}
+material laser_red {
+	receive_shadows off
+	technique {
+		pass {
+			lighting off
+			fog_override true
+
+			depth_write off
+			scene_blend add
+
+			texture_unit {
+				texture laser_red.png
+			}
+		}
+	}
+}
+material laser_tiaotiao {
+	receive_shadows off
+	technique {
+		pass {
+			lighting off
+			fog_override true
+
+			depth_write off
+			scene_blend add
+
+			texture_unit {
+				texture laser_tiaotiao.png
+			}
+		}
+	}
+}
+
+material laser_tifeng
+{
+receive_shadows off
+technique
+{
+  pass
+  {
+// drawn when hidden behind something
+	depth_write off
+	depth_check on
+depth_func greater
+
+	lighting on
+	ambient 0.5 0.5 0.5 0.5
+	diffuse 0.5 0.5 0.5 0.5
+	scene_blend alpha_blend
+
+// fog_override true
+//alpha_rejection greater 128
+	
+	texture_unit {
+	  texture laser_tifeng.png
+	}
+  } 
+
+  pass
+  {
+	lighting off
+	ambient vertexcolour
+	diffuse vertexcolour
+	depth_write off
+	scene_blend alpha_blend
+
+texture_unit {
+	  texture laser_tifeng.png
+	}
+  } 
+}
+}
+
+material laser_thor {
+	receive_shadows off
+	technique {
+		pass {
+			lighting off
+			fog_override true
+
+			depth_write off
+			scene_blend add
+
+			texture_unit {
+				texture laser_dandely.png
+			}
+		}
+	}
+}
+
+material red
+  {
+    receive_shadows off
+    technique
+    {
+      pass
+      {
+	// drawn when hidden behind something
+        depth_write off
+        depth_check on
+	depth_func greater
+
+        lighting on
+        ambient 0.5 0.5 0.5 0.5
+        diffuse 0.5 0.5 0.5 0.5
+        scene_blend alpha_blend
+
+	// fog_override true
+	//alpha_rejection greater 128
+        
+        texture_unit {
+          texture bullet_red.png
+        }
+      } 
+  
+      pass
+      {
+        lighting off
+        ambient vertexcolour
+        diffuse vertexcolour
+        depth_write off
+        scene_blend alpha_blend
+
+	texture_unit {
+          texture bullet_red.png
+        }
+      } 
+    }
+  }
+  material green
+  {
+    receive_shadows off
+    technique
+    {
+      pass
+      {
+	// drawn when hidden behind something
+        depth_write off
+        depth_check on
+	depth_func greater
+
+        lighting on
+        ambient 0.5 0.5 0.5 0.5
+        diffuse 0.5 0.5 0.5 0.5
+        scene_blend alpha_blend
+
+	// fog_override true
+	//alpha_rejection greater 128
+        
+        texture_unit {
+          texture bullet_green.png
+        }
+      } 
+  
+      pass
+      {
+        lighting off
+        ambient vertexcolour
+        diffuse vertexcolour
+        depth_write off
+        scene_blend alpha_blend
+
+	texture_unit {
+          texture bullet_green.png
+        }
+      } 
+    }
+  }
+ 
+ material blue
+  {
+    receive_shadows off
+    technique
+    {
+      pass
+      {
+	// drawn when hidden behind something
+        depth_write off
+        depth_check on
+	depth_func greater
+
+        lighting on
+        ambient 0.5 0.5 0.5 0.5
+        diffuse 0.5 0.5 0.5 0.5
+        scene_blend alpha_blend
+
+	// fog_override true
+	//alpha_rejection greater 128
+        
+        texture_unit {
+          texture bullet_blue.png
+        }
+      } 
+  
+      pass
+      {
+        lighting off
+        ambient vertexcolour
+        diffuse vertexcolour
+        depth_write off
+        scene_blend alpha_blend
+
+	texture_unit {
+          texture bullet_blue.png
+        }
+      } 
+    }
+  } 
+  material laser_argo {
+  receive_shadows off
+  technique {
+    pass {
+      lighting off
+      fog_override true
+
+      depth_write off
+      scene_blend add
+
+      texture_unit {
+        texture laser_liechepao.png
+      }
+    }
+  }
+}
+  material laser_dreamer {
+  receive_shadows off
+  technique {
+    pass {
+      lighting off
+      fog_override true
+
+      depth_write off
+      scene_blend add
+
+      texture_unit {
+        texture laser_dreamer.png
+      }
+    }
+  }
+}
+material manticore {
+  receive_shadows off
+  technique {
+    pass {
+      lighting off
+      fog_override true
+
+      depth_write off
+      scene_blend add
+
+      texture_unit {
+        texture manticore.png
+      }
+    }
+  }
+}
+material redlong
+  {
+    receive_shadows off
+    technique
+    {
+      pass
+      {
+  // drawn when hidden behind something
+        depth_write off
+        depth_check on
+  depth_func greater
+
+        lighting on
+        ambient 0.5 0.5 0.5 0.5
+        diffuse 0.5 0.5 0.5 0.5
+        scene_blend alpha_blend
+
+  // fog_override true
+  //alpha_rejection greater 128
+        
+        texture_unit {
+          texture sf_longbullet.png
+        }
+      } 
+  
+      pass
+      {
+        lighting off
+        ambient vertexcolour
+        diffuse vertexcolour
+        depth_write off
+        scene_blend alpha_blend
+
+  texture_unit {
+          texture sf_longbullet.png
+        }
+      } 
+    }
+  }
+  material bluelong
+  {
+    receive_shadows off
+    technique
+    {
+      pass
+      {
+  // drawn when hidden behind something
+        depth_write off
+        depth_check on
+  depth_func greater
+
+        lighting on
+        ambient 0.5 0.5 0.5 0.5
+        diffuse 0.5 0.5 0.5 0.5
+        scene_blend alpha_blend
+
+  // fog_override true
+  //alpha_rejection greater 128
+        
+        texture_unit {
+          texture paradeus_longbullet.png
+        }
+      } 
+  
+      pass
+      {
+        lighting off
+        ambient vertexcolour
+        diffuse vertexcolour
+        depth_write off
+        scene_blend alpha_blend
+
+  texture_unit {
+          texture paaradeus_longbullet.png
+        }
+      } 
+    }
+  }

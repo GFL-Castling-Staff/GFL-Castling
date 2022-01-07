@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon file="designated_marksman_rifle.animation_base" key="gkw_supersassmod3.weapon">
+
+
+    <!--Weapon specifications-->
+    
+    <specification 
+	retrigger_time="-1.0" 
+	accuracy_factor="1" 
+	sustained_fire_grow_step="0.5" 
+	sustained_fire_diminish_rate="1.7" 
+	magazine_size="20" 
+	can_shoot_standing="1" 
+	suppressed="1" 
+	name="Super SASS (MOD3)" 
+	class="4" 
+	burst_shots="1"
+	last_burst_retrigger_time="0.125"
+	reload_one_at_a_time="0" 
+	sight_range_modifier="2.8"  
+	projectile_speed="216.6" 
+	barrel_offset="0.4" 
+	projectiles_per_shot="1" />
+
+	<next_in_chain key="gkw_supersassmod3_skill.weapon" share_ammo="0" />
+	<!--Animations-->
+    <inventory  buy_price="120.0" sell_price="40.0" />
+
+
+    <animation key="reload" animation_key="ARreload1.8" />
+	<animation key="reload" stance_key="prone" animation_key="ARreloadp1.8" />			
+	
+	<!--Sounds-->
+	
+    <sound key="fire" fileref="sass_fire_From_arma2.wav" pitch_variety="0.01" volume="0.17" />
+    <sound key="cycle" fileref="supersass_cycle_FromINS.wav"  volume="1" />
+    <sound key="magazine_out" fileref="supersass_mgz_out_FromINS.wav"  volume="1" />
+    <sound key="magazine_in" fileref="supersass_cycle_FromINS.wav"  volume="1" />
+    <sound class="impact" fileref="rifle_drop.wav" />
+   
+	<!--Model, Icon, Cost-->
+   
+    <model filename="gkw_rf_supersassmod3.xml" />
+    <hud_icon filename="gkw_supersassmod3.png" />
+    <capacity value="0" source="rank" source_value="0.0" />
+    <capacity value="1" source="rank" source_value="4.622" />
+
+
+
+
+	
+	<!--Ballistics-->
+	
+    
+    <weak_hand_hold offset="0.3" />
+    <projectile file="bullet.projectile">
+        <result class="hit" 
+        kill_probability="2.75" 
+        kill_decay_start_time="1.448" 
+        kill_decay_end_time="2.414" />
+    </projectile>
+    
+    <!--Accuracy, Movement speed-->
+    
+	<stance state_key="walking" accuracy="0.45" />
+    <stance state_key="crouch_moving" accuracy="0.4" />
+    <stance state_key="prone_moving" accuracy="0.4" />
+    <stance state_key="standing" accuracy="0.85"/>
+    <stance state_key="crouching" accuracy="0.98" />
+    <stance state_key="prone" accuracy="1" />
+    <stance state_key="over_wall" accuracy="1" />
+    <modifier class="speed" value="0" />   
+
+</weapon>

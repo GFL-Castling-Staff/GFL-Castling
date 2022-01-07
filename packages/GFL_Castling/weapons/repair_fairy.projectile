@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<projectile class="grenade" name="repair loader" slot="0" radius="0.15" key="repair_fairy.projectile" pulldown_in_air="26.0">
+    <tag name="flashbang" />
+    <result class="notify_script" key="repair_fairy"/>
+    <trigger class="impact" />
+    <rotation class="motion" />
+    <model mesh_filename="agl.xml" />
+    <hud_icon filename="hud_stun_grenade.png" />
+
+    <!-- projectile slot 0 is used for hand grenade items currently -->
+    <!-- bound to change -->
+    <commonness value="0.01" />
+
+    <sound class="result" key="other" fileref="stun_grenade1.wav" />
+
+    <sound class="result" key="terrain" copy="other" />
+    <sound class="result" key="static_object" copy="other" />
+    <sound class="result" key="vehicle" copy="other" />
+    <sound class="result" key="character" copy="other" />
+
+    <effect class="result" key="terrain" ref="BigBurst" use_surface_color="1" />
+    <effect class="result" key="terrain" ref="FlashShine" lighting="0" />
+    <effect class="result" key="terrain" ref="FlashBeam" lighting="0" />
+
+    <effect class="result" key="other" ref="FlashShine" lighting="0" />
+    <effect class="result" key="other" ref="FlashBeam" lighting="0" />
+
+    <effect class="result" key="static_object" copy="terrain" />
+    <effect class="result" key="vehicle" copy="terrain" />
+    <effect class="result" key="character" copy="terrain" />
+
+</projectile>

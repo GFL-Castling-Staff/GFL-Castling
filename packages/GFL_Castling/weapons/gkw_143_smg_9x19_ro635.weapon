@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon file="two_hands_smg.animation_base" key="gkw_ro635.weapon">
+    <tag name="assault" />
+    
+    <!--Weapon specifications-->
+             
+	<specification 
+	accuracy_factor="0.98" 
+	barrel_offset="-0.1" 
+	can_shoot_standing="1" 
+	class="0"
+    solt="0" 
+	magazine_size="32" 
+	name="RO635" 
+	projectile_speed="84.25" 
+	retrigger_time="0.06" 
+	suppressed="0"
+	sustained_fire_diminish_rate="1.8" 
+	sustained_fire_grow_step="0.3" />
+
+	<!--Animations-->
+
+
+    <animation state_key="reload" animation_key="ARreload1.5" />
+	<animation key="reload" stance_key="prone" animation_key="ARreloadp1.5" />
+
+
+	<!--Sounds-->
+	
+    <sound key="fire" fileref="ro635_fire_FromINS.wav" pitch_variety="0.05" volume="1" />
+    <sound key="magazine_out" fileref="ro635_mgz_out_FromINS.wav"  />
+    <sound key="magazine_in" fileref="ro635_mgz_in_FromINS.wav"  />
+    <sound key="cycle" fileref="ro635_cycle_FromINS.wav"  />
+    <sound class="impact" fileref="rifle_drop.wav" />    
+    
+    <!--Model, Icon, Cost-->
+    	
+    <model filename="gkw_smg_ro635.xml" />
+    <hud_icon filename="gkw_ro635.png" />
+    <commonness value="0.2" />
+    <inventory  buy_price="7.0" sell_price="7.0" />
+
+	<!--Ballistics-->
+	
+    <weak_hand_hold offset="0.2" />
+    <projectile file="bullet.projectile">
+        <result class="hit"  
+        kill_probability="1.3" 
+        kill_decay_start_time="0.2275" 
+        kill_decay_end_time="0.68175" />
+    </projectile>
+    
+    <!--Accuracy, Movement speed-->
+        
+    <stance state_key="running" accuracy="0.85" />
+    <stance state_key="walking" accuracy="0.85" />
+    <stance state_key="crouch_moving" accuracy="0.9" />
+    <stance state_key="prone_moving" accuracy="0.9" />
+	<stance state_key="standing" accuracy="0.9" />
+    <stance state_key="crouching" accuracy="0.95" />
+    <stance state_key="prone" accuracy="1" />  
+</weapon>

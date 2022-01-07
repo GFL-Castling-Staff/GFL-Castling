@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<character filename="default_infected.character">
+
+  <!-- character specific animation override table -->
+  <animation key="running, no weapon, 60" target_key="running, zombie" />
+  <animation key="still, instructor" target_key="still, zombie" />
+  <animation key="crouch still, no weapon, 62" target_key="crouch still, zombie" />
+  <animation key="stabbing" target_key="stabbing, zombie" />
+  <animation key="walking" target_key="walking, zombie" />
+  <animation key="throwing, upside" target_key="recoil, barf" />  
+  <animation key="crouching forwards" 	target_key="crouching forwards, no weapon, 61" /> 
+  
+  <animation key="change weapon in" target_key="recoil, barf" />
+  <animation key="change weapon out" target_key="stabbing, zombie" />     
+
+	<sound key="death" fileref="zomb_die1.wav" volume="0.75" />
+	<sound key="death" fileref="zomb_die2.wav" volume="0.75" />
+	<sound key="death" fileref="zomb_die3.wav" volume="0.75" />
+	<sound key="death" fileref="zomb_die4.wav" volume="0.75" />  
+	<sound key="death" fileref="zomb_die5.wav" volume="0.75" /> 
+	<sound key="death" fileref="zomb_die6.wav" volume="0.75" />
+	<sound key="death" fileref="zomb_die7.wav" volume="0.75" /> 
+	<sound key="death" fileref="zomb_die8.wav" volume="0.75" />
+	<sound key="death" fileref="zomb_die9.wav" volume="0.75" />
+	<sound key="death" fileref="zomb_die10.wav" volume="0.75" />    
+  
+  <sound key="stab" fileref="zomb_stab1.wav" volume="0.4" />
+  <sound key="stab" fileref="zomb_stab2.wav" volume="0.4" />
+  <sound key="stab" fileref="zomb_stab3.wav" volume="0.4" />
+  <sound key="stab" fileref="zomb_stab4.wav" volume="0.4" />
+  <sound key="stab" fileref="zomb_stab5.wav" volume="0.4" />
+  <sound key="stab" fileref="zomb_stab6.wav" volume="0.4" />  
+  
+	<sound key="throw" fileref="vomit.wav" volume="1.0" />
+ 	<sound key="throw" fileref="vomit.wav" volume="1.0" />
+ 	<sound key="throw" fileref="vomit.wav" volume="1.0" />
+ 	<sound key="throw" fileref="vomit.wav" volume="1.0" />
+ 	<sound key="throw" fileref="vomit.wav" volume="1.0" />
+ 	<sound key="throw" fileref="vomit.wav" volume="1.0" />                  
+
+
+</character>

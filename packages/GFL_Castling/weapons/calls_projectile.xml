@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<projectiles>
+
+  <!-- rather awkward place for this definition, but for now, that's the way it is -->
+  <!-- projectile itself defines its slot, 0 being actual throwables that can also equipped, thrown, bought and found -->
+  <!-- mortar shell is in slot 2 -->
+
+  <projectile file="artillery_shell_fairies.projectile" />
+  <projectile file="artillery_airstrike_fairies.projectile" />
+  <projectile file="artillery_jupiter_420.projectile" />
+  <projectile file="artillery_laser_420.projectile" />
+  <projectile file="artillery_rocket_fairies.projectile" />
+  <projectile file="artillery_shell_152.projectile" />
+  <projectile file="artillery_shell_310.projectile" />
+  <projectile file="artillery_shell_203.projectile" />
+
+</projectiles>

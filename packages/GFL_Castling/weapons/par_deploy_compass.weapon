@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapons>
+<weapon file="deployable.base_weapon" key="par_deploy_compass.weapon" radius="0.25" >
+    <specification
+    name="Compass"
+    spawn_instance_class="vehicle" 
+    spawn_instance_key="par_compass" 
+    />
+    <inventory  buy_price="1.0" sell_price="1.0" />
+    <capacity value="1" source="rank" source_value="0.0" />
+    <commonness  can_respawn_with="0" />
+    <model mesh_filename="barrier_item.mesh" texture_filename="none.png" />
+    <hud_icon filename="testing.png" />
+</weapon>
+</weapons>

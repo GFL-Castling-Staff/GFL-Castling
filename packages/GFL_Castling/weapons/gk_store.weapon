@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapons>
+<weapon file="deployable.base_weapon" key="deployable_hg_store.weapon" radius="0.25" >
+    <specification
+	name="hg"
+    spawn_instance_class="vehicle" 
+    spawn_instance_key="hg_store" 
+	/>
+    <model mesh_filename="barrier_item.mesh" texture_filename="hg_store.png" />
+    <hud_icon filename="HG.png" />
+</weapon>
+<weapon file="deployable.base_weapon" key="deployable_smg_store.weapon" radius="0.25" >
+    <specification
+	name="smg"
+    spawn_instance_class="vehicle" 
+    spawn_instance_key="smg_store" 
+	/>
+    <model mesh_filename="barrier_item.mesh" texture_filename="smg_store.png" />
+    <hud_icon filename="SMG.png" />
+</weapon>
+<weapon file="deployable.base_weapon" key="deployable_ar_store.weapon" radius="0.25" >
+    <specification
+	name="ar"
+    spawn_instance_class="vehicle" 
+    spawn_instance_key="ar_store" 
+	/>
+    <model mesh_filename="barrier_item.mesh" texture_filename="ar_store.png" />
+    <hud_icon filename="AR.png" />
+</weapon>
+<weapon file="deployable.base_weapon" key="deployable_rf_store.weapon" radius="0.25" >
+    <specification
+	name="rf"
+    spawn_instance_class="vehicle" 
+    spawn_instance_key="rf_store" 
+	/>
+    <model mesh_filename="barrier_item.mesh" texture_filename="rf_store.png" />
+    <hud_icon filename="RF.png" />
+</weapon>
+<weapon file="deployable.base_weapon" key="deployable_mg_store.weapon" radius="0.25" >
+    <specification
+	name="mg"
+    spawn_instance_class="vehicle" 
+    spawn_instance_key="mg_store" 
+	/>
+    <model mesh_filename="barrier_item.mesh" texture_filename="mg_store.png" />
+    <hud_icon filename="MG.png" />
+</weapon>
+<weapon file="deployable.base_weapon" key="deployable_sg_store.weapon" radius="0.25" >
+    <specification
+	name="sg"
+    spawn_instance_class="vehicle" 
+    spawn_instance_key="sg_store" 
+	/>
+    <model mesh_filename="barrier_item.mesh" texture_filename="sg_store.png" />
+    <hud_icon filename="SG.png" />
+</weapon>
+<weapon file="deployable.base_weapon" key="deployable_hvy_store.weapon" radius="0.25" >
+    <specification
+	name="HVY"
+    spawn_instance_class="vehicle" 
+    spawn_instance_key="hvy_store" 
+	/>
+    <model mesh_filename="barrier_item.mesh" texture_filename="sg_store.png" />
+    <hud_icon filename="HVY.png" />
+</weapon>
+<weapon file="deployable.base_weapon" key="ogas.weapon" radius="0.25" >
+    <specification
+    name="Ogas"
+    spawn_instance_class="vehicle" 
+    spawn_instance_key="ogas_pulse_generator.vehicle" 
+    />
+    <inventory  buy_price="1500.0" sell_price="1500.0" />
+    <capacity value="0" source="rank" source_value="0.0" />
+    <capacity value="1" source="rank" source_value="0.5" />
+    <commonness  can_respawn_with="0" />
+    <model mesh_filename="barrier_item.mesh" texture_filename="none.png" />
+    <hud_icon filename="ogas_jammer.png" />
+</weapon>
+<weapon file="deployable.base_weapon" key="gkw_deploy_bunker.weapon" radius="0.25" >
+    <specification
+    name="Bunker"
+    spawn_instance_class="vehicle" 
+    spawn_instance_key="gk_bunker.vehicle" 
+    />
+    <inventory  buy_price="800.0" sell_price="2000.0" />
+    <capacity value="0" source="rank" source_value="0.0" />
+    <capacity value="1" source="rank" source_value="0.5" />
+    <commonness  can_respawn_with="0" />
+    <model mesh_filename="barrier_item.mesh" texture_filename="none.png" />
+    <hud_icon filename="testing.png" />
+</weapon>
+</weapons>

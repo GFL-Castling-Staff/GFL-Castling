@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon key="deployable_minig.weapon">
+    <specification retrigger_time="0.03" 
+    accuracy_factor="1.0" 
+    sustained_fire_grow_step="0.17" 
+    sustained_fire_diminish_rate="1.9" 
+    spread_range="0.35"
+    sight_range_modifier="1.0"
+    ai_sight_range_modifier="1.15" 
+    magazine_size="-1" 
+    can_shoot_standing="0" 
+    can_shoot_crouching="0" 
+    suppressed="0" 
+    name="Minigun" 
+    class="0" 
+    projectile_speed="125.0" 
+    slot="2" 
+    barrel_offset="0" 
+    barrel_offset_3d="0 0.2 1.1"
+    projectiles_per_shot="1"
+    sight_height_offset="2.0" />
+
+    <model mesh_filename="deployable_migu.mesh" texture_filename="deployable_mg.png" />
+    <hud_icon filename="hud_minigun.png" />
+    <commonness value="0.0" can_respawn_with="0" in_stock="1"/>
+    <inventory encumbrance="10.0" price="40.0" />    
+  
+    <projectile file="bullet.projectile">
+        <result class="hit"  kill_probability="1.45" kill_decay_start_time="1.933" kill_decay_end_time="3.222" />
+    </projectile>
+
+    <effect class="muzzle" ref="BigMuzzle" />
+
+    <sound class="operation" key="fire" fileref="minigun_shot.wav" pitch_variety="0.05" volume="0.75"/>
+    
+<!-- mid plate -->    
+    <shield offset="-0.2 0 0" extent="0.2 0.3 0.5" />
+<!-- front-L plate -->    
+    <shield offset="-0.2 0.1 0.15" extent="0.2 0.4 0.2" /> 
+<!-- front-R plate -->    
+    <shield offset="-0.2 0.1 -0.15" extent="0.2 0.4 0.2" />        
+
+</weapon>

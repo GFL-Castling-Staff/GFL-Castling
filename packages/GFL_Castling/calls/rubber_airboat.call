@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<calls>
+
+	<call 
+	name="Airborne Trauma Team" 
+	key="gk_medic.call"
+	initiation_comment1="Request trauma team support!"
+	acknowledge_comment="Receive, transport aircraft is maneuvering"
+	launch_comment="Echelon enter the battlefield"
+	notify_metagame="1">
+
+	<round instances="1"
+		   instance_class="vehicle"
+		   instance_key="medic_landing.vehicle" 
+		   instance_spread="0 0 0" 
+		   common_spread="0 0 0" 
+		   launch_time="8.0"
+		   spawn_time="15.0"
+		   horizontal_offset_at_spawn="0.0"
+		   vertical_offset_at_spawn="50.0"
+		   initial_speed_to_target="0.0">
+		   <sound class="launch" fileref="osprey.wav" volume="7.0" />
+	</round>
+	<hud_icon filename="call_Airbone_Traumateam.png" />
+	<capacity value="0" source="rank" source_value="0.0" />
+	<capacity value="100" source="rank" source_value="0.0" />
+	<inventory encumbrance="0.0" price="38.0" />
+	</call>
+	<call 
+	name="Airborne SG-MG echelon" 
+	key="sg1hg1mg2.call"
+	initiation_comment1="Request MG-SG echelon support!"
+	acknowledge_comment="Receive, transport aircraft is maneuvering"
+	launch_comment="Echelon enter the battlefield"
+	notify_metagame="1">
+
+	<round instances="1"
+		   instance_class="vehicle"
+		   instance_key="sg1hg1mg2_landing.vehicle" 
+		   instance_spread="0 0 0" 
+		   common_spread="0 0 0" 
+		   launch_time="8.0"
+		   spawn_time="15.0"
+		   horizontal_offset_at_spawn="0.0"
+		   vertical_offset_at_spawn="50.0"
+		   initial_speed_to_target="0.0">
+		   <sound class="launch" fileref="osprey.wav" volume="7.0" />
+	</round>
+	<hud_icon filename="call_Airborne_MG-SGsquad.png" />
+	<capacity value="0" source="rank" source_value="0.0" />
+	<capacity value="100" source="rank" source_value="0.532" />
+	<inventory encumbrance="0.0" price="128.0" />
+	</call>
+	<call 
+	name="Airborne HVY echelon" 
+	key="hvy_landing.call"
+	initiation_comment1="Request HVY echelon support!"
+	acknowledge_comment="Receive, transport aircraft is maneuvering"
+	launch_comment="Echelon enter the battlefield"
+	notify_metagame="1">
+
+	<round instances="1"
+		   instance_class="vehicle"
+		   instance_key="hvy_landing.vehicle" 
+		   instance_spread="0 0 0" 
+		   common_spread="0 0 0" 
+		   launch_time="8.0"
+		   spawn_time="15.0"
+		   horizontal_offset_at_spawn="0.0"
+		   vertical_offset_at_spawn="50.0"
+		   initial_speed_to_target="0.0">
+		   <sound class="launch" fileref="osprey.wav" volume="7.0" />
+	</round>
+	<hud_icon filename="call_Airbone_HVY.png" />
+	<capacity value="0" source="rank" source_value="0.0" />
+	<capacity value="100" source="rank" source_value="1.794" />
+	<inventory encumbrance="0.0" price="328.0" />
+	</call>
+
+	<call 
+	name="Airborne SASS echelon" 
+	key="sass_landing.call"
+	initiation_comment1="Request SASS echelon support!"
+	acknowledge_comment="Receive, transport aircraft is maneuvering"
+	launch_comment="Echelon enter the battlefield"
+	notify_metagame="1">
+
+	<round instances="1"
+		   instance_class="vehicle"
+		   instance_key="sass_landing.vehicle" 
+		   instance_spread="0 0 0" 
+		   common_spread="0 0 0" 
+		   launch_time="8.0"
+		   spawn_time="15.0"
+		   horizontal_offset_at_spawn="0.0"
+		   vertical_offset_at_spawn="50.0"
+		   initial_speed_to_target="0.0">
+		   <sound class="launch" fileref="osprey.wav" volume="7.0" />
+	</round>
+	<hud_icon filename="call_Airbone_HVY.png" />
+	<capacity value="0" source="rank" source_value="0.0" />
+	<capacity value="100" source="rank" source_value="0.532" />
+	<inventory encumbrance="0.0" price="238.0" />
+	</call>
+</calls>
+<!-- <call key="gk_medic.call" /> -->
+<!-- <call key="sg1hg1mg2.call" /> -->
+<!-- <call key="hvy_landing.call" /> -->

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<carry_items>
+    <carry_item file="bp.base_carry_item" key="K309.carry_item" name="[Hello, remember to read the tutorial] 8/8" transform_on_consume="K309_8">
+        <hud_icon filename="K309.png" />
+        <inventory price="50" />
+        <commonness value="0" in_stock="0" />
+        <modifier class="speed" value="0.05" />
+        <modifier class="hit_success_probability" value="-1.2" />
+    </carry_item>
+	
+    <carry_item file="bp.base_carry_item" key="K309_8" name="[Hello, remember to read the tutorial] 7/8" transform_on_consume="K309_7">
+        <hud_icon filename="K309_1.png" />
+        <modifier class="hit_success_probability" value="-1.2" />
+    </carry_item>
+    <carry_item file="bp.base_carry_item" key="K309_7" name="[Hello, remember to read the tutorial] -Slight Damage-6/8" transform_on_consume="K309_6">
+        <hud_icon filename="K309_2.png" />
+        <modifier class="hit_success_probability" value="-1.2" />
+    </carry_item>
+    <carry_item file="bp.base_carry_item" key="K309_6" name="[Hello, remember to read the tutorial] -Slight Damage-5/8" transform_on_consume="K309_5">
+        <hud_icon filename="K309_3.png" />
+        <modifier class="hit_success_probability" value="-1.2" />
+    </carry_item>
+    <carry_item file="bp.base_carry_item" key="K309_5" name="[Hello, remember to read the tutorial] -Moderate Damage-4/8" transform_on_consume="K309_4">
+        <hud_icon filename="K309_4.png" />
+        <modifier class="hit_success_probability" value="-1.2" />
+    </carry_item>
+    <carry_item file="bp.base_carry_item" key="K309_4" name="[Hello, remember to read the tutorial] -Moderate Damage-3/8" transform_on_consume="K309_3">
+        <hud_icon filename="K309_5.png" />
+        <modifier class="hit_success_probability" value="-1.2" />
+    </carry_item>
+    <carry_item file="bp.base_carry_item" key="K309_3" name="[Hello, remember to read the tutorial] -Moderate Damage-2/8" transform_on_consume="K309_2">
+        <hud_icon filename="K309_6.png" />
+        <modifier class="hit_success_probability" value="-1.2" />
+    </carry_item>
+    <carry_item file="wearables.base_carry_item" key="K309_2" name="[Hello, remember to read the tutorial] -Moderate Damage-1/8" transform_on_consume="K309_1">
+        <hud_icon filename="K309_7.png" />
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="wound"  />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="wound" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="wound" />
+        <modifier class="speed" value="-0.15" />
+        <modifier class="hit_success_probability" value="-1.2" />
+    </carry_item>
+	
+    <carry_item file="none.base_carry_item" key="K309_1" name="[Hello, remember to read the tutorial] -Severe Damage-0/8">
+        <hud_icon filename="K309_7.png" />
+        <modifier class="hit_success_probability" value="-0.5" />
+    </carry_item>
+</carry_items>

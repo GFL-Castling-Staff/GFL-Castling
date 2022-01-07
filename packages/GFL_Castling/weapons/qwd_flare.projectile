@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<projectile class="grenade" name="flare" key="qwd_flare.projectile" slot="0" radius="0.15" time_to_live_out_in_the_open="90.0" drop_count_factor_on_death="1.0">
+<!--    <tag name="vehicle" />  -->
+
+    <result class="spawn" instance_class="vehicle" instance_key="qwd_call.vehicle" min_amount="1" max_amount="1" offset="0 0.5 0" position_spread="0 0" direction_spread="0 0" />
+
+
+    <trigger class="time" time_to_live="3.0"/>  
+
+    <rotation class="random" />
+
+    <model mesh_filename="flare_stick.mesh" texture_filename="flare_stick.png" />
+    <hud_icon filename="hud_flare.png" />
+
+    <!-- <throwable curve_height="5.0" near_far_distance="5.0" speed_estimation_near="9.0" speed_estimation_far="15.0" max_speed="13.0" randomness="0.07" /> -->
+    <!-- <throwable curve_height="6.0" near_far_distance="5.0" speed_estimation_near="20.0" speed_estimation_far="17.0" max_speed="11.0" randomness="0.07" /> -->
+    <throwable curve_height="3.0" near_far_distance="5.0" speed_estimation_near="9.0" speed_estimation_far="17.0" max_speed="9.0" randomness="0.07" />
+
+    <!-- projectile slot 0 is used for hand grenade items currently -->
+    <!-- bound to change -->
+
+    <commonness value="0.0" can_respawn_with="0" />
+    <capacity value="0" source="rank" source_value="0.0" />
+    <capacity value="1" source="rank" source_value="0.15" />
+    <capacity value="2" source="rank" source_value="0.3" />
+    <inventory encumbrance="3.0" price="150.0" />
+
+</projectile>

@@ -1,0 +1,69 @@
+particle_system gk_ShadowCallFlyby
+{
+	quota	50
+	// RWR will internally extend shadow material names with Simple/Integrated
+	material	gkShadowCall
+    particle_width	15
+	particle_height	15
+	cull_each	false
+	renderer	billboard
+	billboard_type	perpendicular_common
+	common_direction 0 1 0
+	common_up_vector 1 0 0
+
+	emitter Point
+	{
+		angle	0
+
+		colour	1 1 1 1
+		colour_range_start	1 1 1 1
+		colour_range_end	1 1 1 1
+
+		// set by RWR
+		direction	0 0 0
+
+		position	-60 50 -14
+
+		emission_rate	1
+		velocity	30.0
+		time_to_live	10.0
+		duration	0.99
+
+		//repeat_delay    1.0
+	}
+
+}
+
+
+particle_system gk_CallFlyby
+{
+	quota	100
+	material	HudWeapon
+	particle_width	40
+	particle_height	40
+	cull_each	false
+	renderer	billboard
+	billboard_type	perpendicular_common
+	common_direction 0 1 0
+	common_up_vector 1 0 0
+
+	emitter Point
+	{
+		angle	0
+		colour	1 1 1 1
+		colour_range_start	1 1 1 1
+		colour_range_end	1 1 1 1
+		direction	0 1 0
+		emission_rate	1
+
+		position	-60 50 -14
+
+		emission_rate	1
+		velocity	30.0
+		time_to_live	5.0
+		duration	0.99
+
+		//repeat_delay    1.0
+	}
+
+}

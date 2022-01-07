@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapons>
+	<weapon file="KCCO.base_weapon" key="kcco_ar.weapon">
+		<tag name="cqb" />   
+		<specification 
+			accuracy_factor="0.98" 
+			barrel_offset="0.5" 
+			class="0"
+			solt="0" 
+			magazine_size="60" 
+			name="KCCO-AR" 
+			projectile_speed="191.49" 
+			retrigger_time="0.0457" 
+			suppressed="0" 
+			sustained_fire_diminish_rate="1.8"
+			sustained_fire_grow_step="0.5" 
+			stab_enabled="1"/>
+
+		<next_in_chain key="kcco_ar_g.weapon" share_ammo="0" />
+		<commonness value="2.0" in_stock="1" />
+		<animation state_key="recoil" animation_key="recoil, hip fire" />
+		<animation state_key="recoil" animation_key="recoil2, hip fire" />
+		<animation state_key="recoil" animation_key="recoil3, hip fire" />
+		<animation key="recoil" stance_key="over_wall" ref="12" />
+		<animation key="recoil" stance_key="over_wall" ref="13" />
+		<animation key="recoil" stance_key="over_wall" ref="14" />
+		<animation key="recoil" stance_key="crouching" ref="12" />
+		<animation key="recoil" stance_key="crouching" ref="13" />
+		<animation key="recoil" stance_key="crouching" ref="14" />
+		<animation key="recoil" stance_key="prone" animation_key="recoil1, prone" />
+		<animation key="recoil" stance_key="prone" animation_key="recoil2, prone" />
+		<animation key="recoil" stance_key="prone" animation_key="recoil3, prone" />
+		
+		<animation state_key="hold" animation_key="hold, hip fire" />
+		<animation state_key="hold_on_wall" ref="1" />
+		<animation state_key="walking" animation_key="walking, hip fire" />
+		<animation state_key="walking_backwards" animation_key="walking backwards, hip fire" />
+		
+		<animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
+		
+		
+		<animation state_key="stabbing" animation_key="melee, quick knife" />
+		<animation state_key="stabbing" animation_key="pistol whip 3" />
+		
+		<animation state_key="reload" animation_key="reloading, mp5sd" />
+		<animation key="reload" stance_key="prone" animation_key="reloading, smg1, prone" />	
+		
+		<animation state_key="next_in_chain_in" animation_key="switch fire mode" />
+		
+
+
+		<sound key="fire" fileref="kccoar_fire_FromINS.wav" pitch_variety="0.05" volume="1" />
+		<sound key="magazine_out" fileref="kccoar_mgz_out_FromINS.wav" volume="0.8" />
+		<sound key="magazine_in" fileref="kccoar_mgz_in_FromINS.wav" volume="0.8" />
+		<sound key="cycle" fileref="kccoar_cycle_FromINS.wav" volume="0.8" />
+		<sound class="impact" fileref="rifle_drop.wav" />    
+		<model filename="kccow_ar.xml" />
+
+		<hud_icon filename="kccow_ar.png" />
+
+
+
+		<weak_hand_hold offset="0.2" />
+		<projectile file="bullet_kcco.projectile">
+			<result class="hit"  kill_probability="1.5" kill_decay_start_time="0.8" kill_decay_end_time="1.333" />
+		</projectile>
+		
+		<stance state_key="running" accuracy="0.5" />
+		<stance state_key="walking" accuracy="0.8" />
+		<stance state_key="crouch_moving" accuracy="0.8" />
+		<stance state_key="prone_moving" accuracy="0.8" />
+
+		<stance state_key="standing" accuracy="0.98" />
+		<stance state_key="crouching" accuracy="1" />
+		<stance state_key="prone" accuracy="1" />
+		
+		<modifier class="speed" value="0" />
+	</weapon>
+	<weapon file="KCCO.base_weapon" key="kcco_ar_g.weapon">
+
+		<specification 
+		  retrigger_time="-1" 
+		  accuracy_factor="1" 
+		  sustained_fire_grow_step="3.0" 
+		  sustained_fire_diminish_rate="0.2" 
+		  magazine_size="1" 
+		  can_shoot_standing="1" 
+		  suppressed="0" 
+		  name="KCCO-AR-G" 
+		  class="4" 
+		  projectile_speed="120.0" 
+		  barrel_offset="0.5" 
+		  spread_range="0.04"
+		/>
+
+		<next_in_chain key="kcco_ar.weapon" share_ammo="0" />
+			
+		<animation key="recoil" ref="12" />
+		<animation key="recoil" ref="13" />
+		<animation key="recoil" ref="14" />
+		<animation state_key="reload" animation_key="reloading, m79" />
+		<animation state_key="next_in_chain_in" animation_key="switch fire mode" />
+		<sound key="fire" fileref="mgl_shot.wav" pitch_variety="0.05" volume="1.0" />
+		<sound key="magazine_out" fileref="m79_clip_out.wav" volume="0.7" />
+		<sound key="magazine_in" fileref="m79_reload.wav" volume="0.7"/>
+		<sound key="cycle" fileref="m79_cycle.wav" volume="0.7"/>
+		<sound class="impact" fileref="rifle_drop.wav" />
+		
+		<model filename="kccow_ar.xml" />
+
+		<hud_icon filename="kccow_ar.png" />
+
+
+
+		<weak_hand_hold offset="0.2" />
+		
+		<projectile file="standard_agl.projectile">
+			<result class="blast"  damage="3.5"  radius="2.5" decal="1" push="1" character_state="death" 	faction_compare="not_equal"/>
+		</projectile>
+
+		<ballistics curve_height="3.0" near_far_distance="16.0" speed_estimation_near="10.0" speed_estimation_far="16.0" max_speed="47.0" randomness="0.0" tweak_factor="1.55" /> 
+		
+		<stance state_key="running" accuracy="0.5" />
+		<stance state_key="walking" accuracy="0.8" />
+		<stance state_key="crouch_moving" accuracy="0.8" />
+		<stance state_key="prone_moving" accuracy="0.8" />
+
+		<stance state_key="standing" accuracy="0.98" />
+		<stance state_key="crouching" accuracy="1" />
+		<stance state_key="prone" accuracy="1" />
+		
+		<modifier class="speed" value="0" />
+	</weapon>
+</weapons>

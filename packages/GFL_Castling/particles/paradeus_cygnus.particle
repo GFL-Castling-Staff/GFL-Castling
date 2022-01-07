@@ -1,0 +1,58 @@
+
+particle_system cygnus_blue
+{
+	quota	1000
+	material	cygnus
+	particle_width	2.3
+	particle_height	2.3
+	cull_each	false
+	renderer	billboard
+	billboard_type	oriented_self
+	common_direction	0 0 0
+
+	emitter Box
+	{
+		angle	1
+		colour	0.1 0.3 1 1
+		colour_range_start	0.1 0.3 1 1
+		colour_range_end	1 1 1 0.1
+		direction	0 0 0
+		emission_rate	150
+		position	0 0 0
+		velocity	1
+		velocity_min	1
+		velocity_max	1
+		time_to_live	0.3
+		time_to_live_min	0.2
+		time_to_live_max	0.4
+		duration	0.08
+		duration_min	0.08
+		duration_max	0.08
+		width	0.25
+		height	0.25
+		depth	0.2
+	}
+
+	affector ColourInterpolator
+	{
+		colour0	0.1 0.3 1 1
+		time0	0.25
+		
+	}
+}
+material cygnus {
+        receive_shadows off
+	technique {
+		pass {
+			lighting off
+			depth_write off
+			scene_blend add
+			fog_override true
+
+			texture_unit {
+				texture cygnus.png
+			}
+		}
+	}
+}
+

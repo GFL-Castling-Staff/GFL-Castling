@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon file="base_primary_rare.weapon" key="gkw_ump9mod3_skill.weapon">
+
+    <specification 		
+		class="0"
+		magazine_size="1" 
+		name="UMP9 (MOD3)-skill-[Snow Owl's Roar]" 
+		projectile_speed="45" 
+		retrigger_time="6"
+        last_burst_retrigger_time='6' 
+		suppressed="1" 
+		sustained_fire_diminish_rate="2.1" 
+		sustained_fire_grow_step="0.25" />
+
+    <inventory  buy_price="150.0" sell_price="150.0" />
+
+    <sound class="impact" fileref="rifle_drop.wav" volume="1"/>
+    <sound key="fire" fileref="UMP9_skill1.wav" pitch_variety="0" volume="0.75" />
+    <sound key="fire" fileref="UMP9_skill2.wav" pitch_variety="0" volume="0.75" />
+    <sound key="fire" fileref="UMP9_skill3.wav" pitch_variety="0" volume="0.75" />
+    <sound key="fire" fileref="UMP9_skill4.wav" pitch_variety="0" volume="0.75" />
+    <sound key="fire" fileref="UMP9_skill5.wav" pitch_variety="0" volume="0.75" />
+
+    <model filename="gkw_smg_ump9.xml" />
+	<next_in_chain key="gkw_ump9mod3.weapon" share_ammo="0" />
+
+    <hud_icon filename="gkw_ump9mod3_skill.png" />
+    <capacity value="0" source="rank" source_value="0.0" />
+    <capacity value="1" source="rank" source_value="4.622" />
+    <commonness value="0" in_stock="0" can_respawn_with="1" />
+	<animation state_key="recoil"	animation_key="recoil, ninjato" />
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil overwall, ninjato" />
+	<animation state_key="recoil" stance_key="crouching" animation_key="recoil crouching, ninjato" />
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil prone, ninjato" />
+    <animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
+	<animation state_key="reload" animation_key="ARreloadpUmpSister" />
+	<animation key="reload" stance_key="prone" animation_key="ARreloadpUmpSister" />	
+	<animation state_key="stabbing" animation_key="melee, quick knife" />
+	<animation state_key="stabbing" animation_key="pistol whip 3" />
+
+    <weak_hand_hold offset="0.2" />
+    <projectile file="ump9_stun_grenade_spawner.projectile"/>
+    
+	<shield offset="-0.05 0.0 0.05" extent="0.15 0.3 0.4" />
+</weapon>

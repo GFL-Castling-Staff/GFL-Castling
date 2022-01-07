@@ -1,0 +1,7 @@
+<weapon file="deployable.base_weapon" key="ogas.weapon" radius="0.25" >
+    <specification
+    name="[Ogas Pulse Generator] deployment package"
+    spawn_instance_class="vehicle" 
+    spawn_instance_key="ogas_pulse_generator.vehicle" 
+    />
+</weapon>

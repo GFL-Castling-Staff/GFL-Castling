@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<call 
+	name="humvee[MINIGUN]" 
+	key="humvee1.call"
+	initiation_comment1="Humvee[MINIGUN]"
+	acknowledge_comment="Launch Humvee and MG T-Doll "
+	launch_comment="droping in"
+	notify_metagame="1">
+
+    <round 
+			instances="1"
+           instance_class="vehicle"
+           instance_key="humvee_mg"
+           instance_spread="0 0 0" 
+           common_spread="0 0 0" 
+           launch_time="5.0"
+           spawn_time="8.0"
+           horizontal_offset_at_spawn="0.0"
+           vertical_offset_at_spawn="50.0"
+           initial_speed_to_target="0.0">
+        <effect class="launch" ref="ShadowAirplaneFlyby" shadow="1" />
+        <sound class="launch" fileref="plane_flyby.wav" />
+    </round>
+	<round 
+		instances="4"
+		instance_class="soldier"
+		instance_key="default_mg"
+		instance_spread="0 0 0" 
+		common_spread="1 0 1" 
+		launch_time="5.0"
+		spawn_time="8.0">
+	</round>
+
+    <hud_icon filename="call_Airborne_humvee_mg.png" />
+    <capacity value="0" source="rank" source_value="0.0" />
+    <capacity value="100" source="rank" source_value="10.3" />
+    <inventory encumbrance="0.0" price="428.0" />
+
+</call>

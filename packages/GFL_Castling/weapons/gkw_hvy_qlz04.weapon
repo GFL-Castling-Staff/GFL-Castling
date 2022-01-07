@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon file="gf_hvy.base_weapon" key="gkw_hvy_qlz04.weapon">
+
+    
+    <!--Weapon specifications-->
+    
+    <specification 
+	accuracy_factor="1" 
+	barrel_offset="0.6" 
+	can_shoot_standing="0" 
+	can_shoot_crouching="1"
+	can_shoot_prone="0"
+	class="0"
+   sight_range_modifier="1.8"
+    solt="0" 
+	magazine_size="30" 
+	name="QLZ04" 
+	projectile_speed="95" 
+	retrigger_time="0.151" 
+	suppressed="0" 
+	sustained_fire_diminish_rate="1.2" 
+	sustained_fire_grow_step="0.9"
+	spread_range="0.12" />
+	
+    <next_in_chain key="gkw_qlz04_peak79.weapon" share_ammo="0" />
+    <inventory  buy_price="180.0" sell_price="10.0" />
+	<!--Animations-->
+    <animation key="recoil" ref="12" />
+    <animation key="recoil" ref="13" />
+    <animation key="recoil" ref="14" />
+    <animation key="reload" animation_key="MGreload6" />
+    <animation key="hold" ref="32" />
+    <animation key="hold_on_wall" ref="1" />
+    <animation state_key="walking" animation_key="walking, heavy weapon" />
+    <animation state_key="walking_backwards" animation_key="walking backwards, heavy weapon" />
+    <inventory  buy_price="80.0" sell_price="10.0" />
+	
+	<!--Sounds-->
+	
+    <sound key="fire" fileref="MGL_Fire_Frompayday2.wav" pitch_variety="0.05" volume="0.3" />
+    <sound key="magazine_out" fileref="mg42_mgz_out_FromINS.wav" volume="1" />
+    <sound key="magazine_in" fileref="mg42_mgz_in_FromINS.wav" volume="1" />
+    <sound key="cycle" fileref="m2hb_cycle_FromINT.wav" volume="1" />
+    <sound class="impact" fileref="rifle_drop.wav" />
+   
+	<!--Model, Icon, Cost-->
+    <commonness value="0.00001"  />
+   
+	<model filename="gkw_hvy_qlz04.xml" />
+    <hud_icon filename="gkw_qlz04.png" />
+    <capacity value="0" source="rank" source_value="0.0" />
+    <capacity value="1" source="rank" source_value="3.457" />
+
+
+	
+	<!--Ballistics-->
+	
+    
+    <weak_hand_hold offset="0.3" />
+    <projectile file="standard_agl.projectile">
+       <result class="blast"  damage="3"  radius="4" decal="1" push="0.3" character_state="death" faction_compare="not_equal"/> 
+    </projectile>
+    <ballistics curve_height="6.0" near_far_distance="25.0" speed_estimation_near="10.0" speed_estimation_far="16.0" max_speed="150.0" randomness="0.0" tweak_factor="1.55" /> 
+    <!--Accuracy, Movement speed-->
+    
+    <stance state_key="running" accuracy="0.3" />
+    <stance state_key="walking" accuracy="0.3" />
+    <stance state_key="crouch_moving" accuracy="0.3" />
+    <stance state_key="prone_moving" accuracy="0.5" />
+    <stance state_key="standing" accuracy="0.5" />
+    <stance state_key="crouching" accuracy="0.9" />
+    <stance state_key="prone" accuracy="0.8" /> 
+    <modifier class="speed" value="-1.5"/>
+
+</weapon>

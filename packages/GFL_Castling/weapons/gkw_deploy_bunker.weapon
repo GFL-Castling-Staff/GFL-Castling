@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon file="deployable.base_weapon" key="gkw_deploy_bunker.weapon" radius="0.25" >
+    <specification
+    name="Construction_Fairy"
+    spawn_instance_class="vehicle" 
+    spawn_instance_key="gk_bunker.vehicle" 
+    />
+
+    <model filename="vest_repair.xml" />
+    <hud_icon filename="call_Construction_Fairy.png" />
+    <inventory encumbrance="0.5" price="1500.0" />
+</weapon>

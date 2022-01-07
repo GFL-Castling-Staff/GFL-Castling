@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<carry_items>
+    <carry_item file="wearables.base_carry_item" key="sf_dg.carry_item" name="Dg—EXO" slot="1" transform_on_consume="sf_dg_2" >
+        <hud_icon filename="sfd_ar.png" />
+ 
+        <model mesh_filename="vestexo.xml" />
+                                                                                                                                                                          
+            <!-- death or wound or stun -> no effect -->
+            <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"  />
+            <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+            <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+            <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+            <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+            <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+            <modifier class="melee_hit_result" input_character_state="death" output_character_state="wound"/>
+    
+            <modifier class="speed" value="-0.13" />
+            <modifier class="hit_success_probability" value="-1.1" />
+            <modifier class="detectability" value="0.3" />
+        </carry_item>
+
+        <carry_item file="wearables.base_carry_item" key="sf_dg_2" name="Dg—EXO" slot="1" transform_on_consume="sf_dg_3" >
+            <hud_icon filename="sfd_ar.png" />
+     
+            <model mesh_filename="vestexo.xml" />
+                                                                                                                                                                              
+                <!-- death or wound or stun -> no effect -->
+                <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"  />
+                <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+                <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+                <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+                <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+                <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+                <modifier class="melee_hit_result" input_character_state="death" output_character_state="wound"/>
+        
+                <modifier class="speed" value="-0.13" />
+                <modifier class="hit_success_probability" value="-1.0" />
+                <modifier class="detectability" value="0.3" />
+            </carry_item>
+
+            <carry_item file="wearables.base_carry_item" key="sf_dg_3" name="Dg—EXO" slot="1" transform_on_consume="sf_dg_4" >
+                <hud_icon filename="sfd_ar.png" />
+         
+                <model mesh_filename="vestexo.xml" />
+                                                                                                                                                                                  
+                    <!-- death or wound or stun -> no effect -->
+                    <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"  />
+                    <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+                    <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+                    <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+                    <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+                    <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+                    <modifier class="melee_hit_result" input_character_state="death" output_character_state="wound"/>
+            
+                    <modifier class="speed" value="-0.13" />
+                    <modifier class="hit_success_probability" value="-0.85" />
+                    <modifier class="detectability" value="0.3" />
+                </carry_item>
+
+        <carry_item file="wearables.base_carry_item" key="sf_dg_4" name="Dg—EXO" slot="1" transform_on_consume="sf_dg_5" >
+            <hud_icon filename="sfd_ar.png" />
+     
+            <model mesh_filename="vestexo.xml" />
+                                                                                                                                                                              
+     
+            <!-- death or wound or stun -> no effect -->
+            <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"  />
+            <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+            <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+            <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+            <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+            <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+            <modifier class="melee_hit_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
+    
+            <modifier class="speed" value="-0.13" />
+            <modifier class="hit_success_probability" value="-0.75" />
+            <modifier class="detectability" value="0.3" />
+        </carry_item>
+</carry_items>

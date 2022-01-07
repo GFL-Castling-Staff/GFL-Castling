@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<carry_item file="base_valuable.carry_item" name="Wild Gifts" key="wild_gifts.carry_item">
+    <hud_icon filename="Item_wild_gifts.png" />
+    <inventory encumbrance="-1.0" buy_price="150" sell_price="150" />
+
+    <model mesh_filename="wild gifts.xml" texture_filename="" />
+
+    <commonness value="1.0" in_stock="1" />
+</carry_item>

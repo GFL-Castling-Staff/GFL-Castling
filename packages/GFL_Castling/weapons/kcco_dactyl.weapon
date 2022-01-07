@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon file="KCCO.base_weapon" key="kccow_dactyl.weapon">
+
+	<tag name="engineer" />
+
+	<specification 
+	magazine_size="1" 
+	can_shoot_standing="1" 
+	can_shoot_crouching="1" 
+	carry_in_two_hands="0" 
+	can_shoot_prone="0" 
+	name="Dactyl" 
+	class="5" 
+	spawn_instance_class="projectile" 
+	spawn_instance_key="bounding_mine.projectile" 
+	consume="0" 
+	sight_range_modifier="1" 
+	slot="0" 
+	deployment="0" />
+
+	<animation state_key="recoil" animation_key="dactyl recoil" />
+	<animation state_key="reload" animation_key="dactyl recoil" />
+
+	<animation state_key="hold" animation_key="dactyl still" />
+	<animation state_key="hold_on_wall" animation_key="dactyl still" />
+	<animation state_key="hold_casual" animation_key="dactyl still" />
+	<animation state_key="still_against_wall" animation_key="dactyl still" />
+	<animation state_key="crouching" animation_key="dactyl still" />
+
+	<animation state_key="running" animation_key="dactyl running" />
+	<animation state_key="walking" animation_key="dactyl walking" />
+	<animation state_key="walking_backwards" animation_key="dactyl walking" />
+	<animation state_key="crouch_moving" animation_key="dactyl walking" />
+	<animation state_key="crouch_moving_backwards" animation_key="dactyl walking" />
+
+	<sound class="impact" fileref="sandbag_drop.wav" />
+
+	<model filename="" />
+	<hud_icon filename="kccow_dactyl.png" />
+	<modifier class="speed" value="1.0" />
+</weapon>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vehicles>
+	<vehicle file="humvee.base_vehicle" name="Humvee[MiniGun]" key="humvee_mg">
+		<!-- <tag name="metal_thin" /> -->
+		<tag name="metal_heavy" />
+		<!-- <tag name="light_combat" />     -->
+		<!-- <tag name="deco_car" /> -->
+		<tag name="guntruck" />
+		<!-- <tag name="truck" /> -->
+		<!-- <tag name="tank" /> -->
+		<tag name="apc" />
+		<!-- <tag name="jeep" />  -->
+		<turret offset="0 1.88 -0.36" weapon_key="humvee_mg.weapon" weapon_offset="0.0 0.4 1.0" weapon_recoil="0.0" max_rotation_step="0.0053" />
+		<visual class="turret" turret_index="0" mesh_filename="CSLM5_turret_adjusted.mesh" texture_filename="CSLM5_turret.png" />
+		<visual class="turret" turret_index="0" key="broken" mesh_filename="CSLM5_turret_adjusted.mesh" texture_filename="humvee_broken.png" />
+
+		<character_slot type="driver" position="0.8 0.48 0.4" rotation="0" exit_rotation="1.57" hiding="1" animation_id="36" />
+		<character_slot type="gunner" seat_position="0.0 0.78 -0.25" enter_position="0 0 -2.72" rotation="0" exit_rotation="-1.57" hiding="0" animation_key="tank mg still" marker_offset="0 1.2 0">
+			<turret index="0" />
+		</character_slot>
+
+		<character_slot type="passenger" position="-0.8 0.48 0.8" rotation="0" exit_rotation="-1.57" hiding="1" animation_id="37" />
+		<character_slot type="passenger" position="0.8 0.48 -0.8" rotation="1.57" exit_rotation="1.57" hiding="1" animation_id="37" />
+		<character_slot type="passenger" position="-0.8 0.48 -0.8" rotation="-1.57" exit_rotation="-1.57" hiding="1" animation_id="37" />
+	</vehicle>
+	<vehicle file="humvee.base_vehicle" name="Humvee1" key="humvee.vehicle">
+		<tag name="metal_thin" />
+		<!-- <tag name="metal_heavy" /> -->
+		<!-- <tag name="light_combat" />     -->
+		<!-- <tag name="deco_car" /> -->
+		<!-- <tag name="guntruck" /> -->
+		<tag name="truck" />
+		<!-- <tag name="tank" /> -->
+		<!-- <tag name="apc" /> -->
+		<tag name="jeep" /> 
+		<character_slot type="driver" position="0.8 0.48 0.4" rotation="0" exit_rotation="1.57" hiding="1" animation_id="36" />
+
+		<character_slot type="passenger" position="-0.8 0.48 0.8" rotation="0" exit_rotation="-1.57" hiding="1" animation_id="37" />
+		<character_slot type="passenger" position="0.8 0.48 -0.8" rotation="1.57" exit_rotation="1.57" hiding="1" animation_id="37" />
+		<character_slot type="passenger" position="-0.8 0.48 -0.8" rotation="-1.57" exit_rotation="-1.57" hiding="1" animation_id="37" />
+
+	</vehicle>
+</vehicles>

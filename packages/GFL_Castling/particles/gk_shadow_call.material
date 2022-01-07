@@ -1,0 +1,32 @@
+// TODO: clean this up
+
+import ShadowPlantIntegrated from "shadow_plant.material"
+import ShadowPlantIntegrated2 from "shadow_plant.material"
+import ShadowPlantSimple from "shadow_plant.material"
+
+material gkShadowCallIntegrated : ShadowPlantIntegrated {
+	technique Basic {
+		shadow_caster_material gkShadowCallIntegrated2
+	}
+}
+
+material gkShadowCallIntegrated2 : ShadowPlantIntegrated2 {
+	technique ShadersShadows {
+		pass Basic {	
+			texture_unit Basic {
+				texture gk_shadow_call.png
+			}
+		}
+	}
+}
+
+material gkShadowCallSimple : ShadowPlantSimple {
+	technique NoShaders {
+		pass Basic {
+			texture_unit Basic {
+				texture gk_shadow_call.png
+        		}
+		} 
+	}
+}
+

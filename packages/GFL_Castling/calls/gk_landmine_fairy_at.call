@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<call 
+name="UAV landmine(AT)" 
+key="gk_landmine_fairy_at.call"
+      initiation_comment1="UAV landmine(AT)"
+      acknowledge_comment="Request for support confirmed."
+      acknowledge_time="0"
+      launch_comment="An anti-tank minefield is being laid out."
+	  notify_metagame="1">
+     
+    <round instances="10"
+           instance_class="grenade"
+           instance_key="artillery_landmine_fairy_at.projectile" 
+           instance_spread="5 5 5" 
+           common_spread="0 0 0" 
+           launch_time="1.5"
+           spawn_time="3.0">
+     <sound class="launch" fileref="artillery_barrage_1.wav" volume="1.0" />
+     <sound class="launch" fileref="artillery_barrage_2.wav" volume="1.0" />      
+	   <sound class="spawn" fileref="woosh1.wav" volume="0.2" />
+    </round>
+
+
+    <hud_icon filename="call_Landmine_Fairy.png" />
+    <inventory encumbrance="0.0" price="400.0" />
+
+</call>

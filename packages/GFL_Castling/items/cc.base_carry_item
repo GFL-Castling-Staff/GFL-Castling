@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<carry_item file="wearables.base_carry_item" >
+	<inventory encumbrance="3" price="1" />
+
+	<model mesh_filename="camouflage_suit.xml" />
+																																									  
+
+	<!-- death or wound or stun -> no effect -->
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+
+	<!-- <modifier class="detectability" value="-0.40" /> -->
+</carry_item>

@@ -1,0 +1,662 @@
+particle_system NavalGodray
+{
+	quota	1000
+	material	Godray
+	particle_width	0.2
+	particle_height	20
+	cull_each	true
+	renderer	billboard
+	billboard_type	oriented_self
+
+	emitter Point
+	{
+		angle	180
+		colour	1 1 0.680628 1.0
+		colour_range_start	0.47 0.45 0.41 1.0
+		colour_range_end	0.50 0.47 0.38 1.0
+		direction	0 1 0
+		emission_rate	800
+		position	0 0 0
+		velocity	50
+		velocity_min	50
+		velocity_max	50
+		time_to_live	0.2
+		time_to_live_min	0.2
+		time_to_live_max	0.2
+		duration	0.1
+		duration_min	0.1
+		duration_max	0.1
+	}
+
+	affector ColourFader
+	{
+		red	-1
+		green	-1
+		blue	-1
+		alpha	0
+	}
+}
+
+particle_system NavalBurstInner
+{
+    material        Piece
+    particle_width  0.1
+    particle_height 0.1
+    cull_each       false
+    quota           1000
+    billboard_type  point
+    
+	emitter Ring
+	{
+		angle	50
+		colour_range_start	0.47 0.45 0.41 1.0
+		colour_range_end	0.50 0.47 0.38 1.0
+		direction	0 1 0
+		emission_rate	1000
+		position	0 0 0
+		velocity	0.5
+		velocity_min	4
+		velocity_max	8
+		time_to_live_min	0.3
+		time_to_live_max	0.5
+		duration	0.1
+		duration_min	0.1
+		duration_max	0.1
+		width	18
+		height	18
+		depth	0
+		inner_width	0.8
+		inner_height	0.8
+	}
+
+	affector Scaler
+	{
+		rate	1.5
+	}
+
+	affector Rotator
+	{
+		rotation_speed_range_start	-45
+		rotation_speed_range_end	45
+		rotation_range_start	0
+		rotation_range_end	360
+	}
+
+	affector ColourFader
+	{
+		red	0
+		green	0
+		blue	0
+		alpha	-0.5
+	}
+	
+    affector LinearForce
+    {
+        force_vector      0 -25 0
+        force_application add
+    }
+}
+
+particle_system NavalBurstOuter
+{
+    material        Piece
+    particle_width  0.1
+    particle_height 0.1
+    cull_each       false
+    quota           1000
+    billboard_type  point
+    
+	emitter Ring
+	{
+		angle	50
+		colour_range_start	0.47 0.45 0.41 1.0
+		colour_range_end	0.50 0.47 0.38 1.0
+		direction	0 1 0
+		emission_rate	1000
+		position	0 0 0
+		velocity	0.5
+		velocity_min	4
+		velocity_max	8
+		time_to_live_min	0.3
+		time_to_live_max	0.5
+		duration	0.1
+		duration_min	0.1
+		duration_max	0.1
+		width	23
+		height	23
+		depth	0
+		inner_width	0.8
+		inner_height	0.8
+	}
+
+	affector Scaler
+	{
+		rate	1.5
+	}
+
+	affector Rotator
+	{
+		rotation_speed_range_start	-45
+		rotation_speed_range_end	45
+		rotation_range_start	0
+		rotation_range_end	360
+	}
+
+	affector ColourFader
+	{
+		red	0
+		green	0
+		blue	0
+		alpha	-0.5
+	}
+	
+    affector LinearForce
+    {
+        force_vector      0 -25 0
+        force_application add
+    }
+}
+
+particle_system NavalBurstUp
+{
+    material        Piece
+    particle_width  0.1
+    particle_height 0.1
+    cull_each       false
+    quota           1000
+    billboard_type  point
+    
+	emitter Ring
+	{
+		angle	60
+		colour_range_start	0.47 0.45 0.41 1.0
+		colour_range_end	0.50 0.47 0.38 1.0
+		direction	0 1 0
+		emission_rate	2000
+		position	0 0 0
+		velocity	20
+		velocity_min	40
+		velocity_max	50
+		time_to_live_min	0.35
+		time_to_live_max	0.45
+		duration	0.3
+		duration_min	0.25
+		duration_max	0.35
+		width	3
+		height	3
+		depth	0
+		inner_width	0.8
+		inner_height	0.8
+	}
+
+	affector Scaler
+	{
+		rate	1.5
+	}
+
+	affector Rotator
+	{
+		rotation_speed_range_start	-45
+		rotation_speed_range_end	45
+		rotation_range_start	0
+		rotation_range_end	360
+	}
+
+	affector ColourFader
+	{
+		red	0
+		green	0
+		blue	0
+		alpha	-0.5
+	}
+	
+    affector LinearForce
+    {
+        force_vector      0 -50 0
+        force_application add
+    }
+}
+
+particle_system NavalSmoke1
+{
+	quota	9741
+	material	SmokeNormal
+	particle_width	1
+	particle_height	1
+	cull_each	false
+	renderer	billboard
+	billboard_type	point
+
+	emitter Ring
+	{
+		angle	50
+		colour	1 1 1 1
+		colour_range_start	0.47 0.45 0.41 1.0
+		colour_range_end	0.50 0.47 0.38 1.0
+		direction	0 1 0
+		emission_rate	355.9
+		position	0 0 0
+		velocity	0.5
+		velocity_min	0.5
+		velocity_max	1
+		time_to_live_min	3
+		time_to_live_max	3
+		duration	0.05
+		duration_min	0.05
+		duration_max	0.05
+		width	8
+		height	8
+		depth	0
+		inner_width	0.8
+		inner_height	0.8
+	}
+
+	affector Scaler
+	{
+		rate	1.5
+	}
+
+	affector Rotator
+	{
+		rotation_speed_range_start	-45
+		rotation_speed_range_end	45
+		rotation_range_start	0
+		rotation_range_end	360
+	}
+
+	affector ColourFader
+	{
+		red	0
+		green	0
+		blue	0
+		alpha	-0.5
+	}
+}
+
+particle_system NavalSmoke2
+{
+	quota	9741
+	material	SmokeNormal
+	particle_width	1
+	particle_height	1
+	cull_each	false
+	renderer	billboard
+	billboard_type	point
+
+	emitter Ring
+	{
+		angle	50
+		colour	1 1 1 1
+		colour_range_start	0.47 0.45 0.41 1.0
+		colour_range_end	0.50 0.47 0.38 1.0
+		direction	0 1 0
+		emission_rate	355.9
+		position	0 0 0
+		velocity	0.5
+		velocity_min	0.5
+		velocity_max	1
+		time_to_live_min	3
+		time_to_live_max	3
+		duration	0.05
+		duration_min	0.05
+		duration_max	0.05
+		width	11
+		height	11
+		depth	0
+		inner_width	0.8
+		inner_height	0.8
+	}
+
+	affector Scaler
+	{
+		rate	1.5
+	}
+
+	affector Rotator
+	{
+		rotation_speed_range_start	-45
+		rotation_speed_range_end	45
+		rotation_range_start	0
+		rotation_range_end	360
+	}
+
+	affector ColourFader
+	{
+		red	0
+		green	0
+		blue	0
+		alpha	-0.5
+	}
+}
+
+particle_system NavalSmoke3
+{
+	quota	9741
+	material	SmokeNormal
+	particle_width	1
+	particle_height	1
+	cull_each	false
+	renderer	billboard
+	billboard_type	point
+
+	emitter Ring
+	{
+		angle	50
+		colour	1 1 1 1
+		colour_range_start	0.47 0.45 0.41 1.0
+		colour_range_end	0.50 0.47 0.38 1.0
+		direction	0 1 0
+		emission_rate	355.9
+		position	0 0 0
+		velocity	0.5
+		velocity_min	0.5
+		velocity_max	1
+		time_to_live_min	3
+		time_to_live_max	3
+		duration	0.05
+		duration_min	0.05
+		duration_max	0.05
+		width	14
+		height	14
+		depth	0
+		inner_width	0.8
+		inner_height	0.8
+	}
+
+	affector Scaler
+	{
+		rate	1.5
+	}
+
+	affector Rotator
+	{
+		rotation_speed_range_start	-45
+		rotation_speed_range_end	45
+		rotation_range_start	0
+		rotation_range_end	360
+	}
+
+	affector ColourFader
+	{
+		red	0
+		green	0
+		blue	0
+		alpha	-0.5
+	}
+}
+
+particle_system NavalSmokeTop1
+{
+	quota	9741
+	material	SmokeTop
+	particle_width	1
+	particle_height	1
+	cull_each	false
+	renderer	billboard
+	billboard_type	point
+
+	emitter Ring
+	{
+		angle	30
+		colour	1 1 1 1
+		colour_range_start	0.47 0.45 0.41 1.0
+		colour_range_end	0.50 0.47 0.38 1.0
+		direction	0 1 0
+		emission_rate	200
+		position	0 0.5 0
+		velocity	1
+		velocity_min	1
+		velocity_max	2
+		time_to_live_min	3
+		time_to_live_max	3
+		duration	0.05
+		duration_min	0.05
+		duration_max	0.05
+		width	8
+		height	8
+		depth	1
+		inner_width	0.8
+		inner_height	0.8
+	}
+
+	affector Scaler
+	{
+		rate	0.8
+	}
+
+	affector Rotator
+	{
+		rotation_speed_range_start	-30
+		rotation_speed_range_end	30
+		rotation_range_start	-40
+		rotation_range_end	40
+	}
+
+	affector ColourFader
+	{
+		red	0
+		green	0
+		blue	0
+		alpha	-0.5
+	}
+}
+
+particle_system NavalSmokeTop2
+{
+	quota	9741
+	material	SmokeTop
+	particle_width	1
+	particle_height	1
+	cull_each	false
+	renderer	billboard
+	billboard_type	point
+
+	emitter Ring
+	{
+		angle	30
+		colour	1 1 1 1
+		colour_range_start	0.47 0.45 0.41 1.0
+		colour_range_end	0.50 0.47 0.38 1.0
+		direction	0 1 0
+		emission_rate	200
+		position	0 0.5 0
+		velocity	1
+		velocity_min	1
+		velocity_max	2
+		time_to_live_min	3
+		time_to_live_max	3
+		duration	0.05
+		duration_min	0.05
+		duration_max	0.05
+		width	11
+		height	11
+		depth	1
+		inner_width	0.8
+		inner_height	0.8
+	}
+
+	affector Scaler
+	{
+		rate	0.8
+	}
+
+	affector Rotator
+	{
+		rotation_speed_range_start	-30
+		rotation_speed_range_end	30
+		rotation_range_start	-40
+		rotation_range_end	40
+	}
+
+	affector ColourFader
+	{
+		red	0
+		green	0
+		blue	0
+		alpha	-0.5
+	}
+}
+
+particle_system NavalSmokeTop3
+{
+	quota	9741
+	material	SmokeTop
+	particle_width	1
+	particle_height	1
+	cull_each	false
+	renderer	billboard
+	billboard_type	point
+
+	emitter Ring
+	{
+		angle	30
+		colour	1 1 1 1
+		colour_range_start	0.47 0.45 0.41 1.0
+		colour_range_end	0.50 0.47 0.38 1.0
+		direction	0 1 0
+		emission_rate	200
+		position	0 0.5 0
+		velocity	1
+		velocity_min	1
+		velocity_max	2
+		time_to_live_min	3
+		time_to_live_max	3
+		duration	0.05
+		duration_min	0.05
+		duration_max	0.05
+		width	14
+		height	14
+		depth	1
+		inner_width	0.8
+		inner_height	0.8
+	}
+
+	affector Scaler
+	{
+		rate	0.8
+	}
+
+	affector Rotator
+	{
+		rotation_speed_range_start	-30
+		rotation_speed_range_end	30
+		rotation_range_start	-40
+		rotation_range_end	40
+	}
+
+	affector ColourFader
+	{
+		red	0
+		green	0
+		blue	0
+		alpha	-0.5
+	}
+}
+
+particle_system NavalSmokeUp1
+{
+	quota	9741
+	material	SmokeTop
+	particle_width	1
+	particle_height	1
+	cull_each	false
+	renderer	billboard
+	billboard_type	point
+
+	emitter Ring
+	{
+		angle	3
+		colour	1 1 1 1
+		colour_range_start	0.50 0.47 0.38 1.0
+		colour_range_end	0.50 0.47 0.38 1.0
+		direction	0 1 0
+		emission_rate	300
+		position	0 0.5 0
+		velocity	45
+		velocity_min	30
+		velocity_max	40
+		time_to_live_min	0.9
+		time_to_live_max	1.2
+		duration	0.5	
+		duration_min	0.45
+		duration_max	0.5
+		width	3
+		height	3
+		depth	1
+		inner_width	0.8
+		inner_height	0.8
+	}
+
+	affector Scaler
+	{
+		rate	0.8
+	}
+
+	affector ColourFader
+	{
+		red	0
+		green	0
+		blue	0
+		alpha	-0.5
+	}
+	
+    affector LinearForce
+    {
+        force_vector      0 -35 0
+        force_application add
+    }
+}
+
+particle_system NavalSmokeUp2
+{
+	quota	9741
+	material	SmokeTop
+	particle_width	1
+	particle_height	1
+	cull_each	false
+	renderer	billboard
+	billboard_type	point
+
+	emitter Ring
+	{
+		angle	5
+		colour	1 1 1 1
+		colour_range_start	0.47 0.45 0.41 1.0
+		colour_range_end	0.50 0.47 0.38 1.0
+		direction	0 1 0
+		emission_rate	500
+		position	0 0.5 0
+		velocity	25
+		velocity_min	20
+		velocity_max	25
+		time_to_live_min	0.6
+		time_to_live_max	0.8
+		duration	0.95
+		duration_min	0.9
+		duration_max	1.0
+		width	6
+		height	6
+		depth	1
+		inner_width	0.8
+		inner_height	0.8
+	}
+
+	affector Scaler
+	{
+		rate	0.8
+	}
+
+	affector ColourFader
+	{
+		red	0
+		green	0
+		blue	0
+		alpha	-0.5
+	}
+	
+    affector LinearForce
+    {
+        force_vector      0 -35 0
+        force_application add
+    }
+}

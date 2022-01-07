@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon file="two_hands_sg.animation_base" key="gkw_dp12.weapon">
+
+    
+    <!--Weapon specifications-->
+    
+    <specification 
+	retrigger_time="0.15" 
+	accuracy_factor="0.9" 
+	sustained_fire_grow_step="2.0" 
+	sustained_fire_diminish_rate="0.9" 
+	magazine_size="12" 
+	can_shoot_standing="1" 
+	suppressed="0" 
+	name="DP12" 
+	class="4" 
+	last_burst_retrigger_time="0.7"
+	reload_one_at_a_time="1"
+	sight_range_modifier="1.0" 
+	projectile_speed="75" 
+	barrel_offset="0.4" 
+	projectiles_per_shot="14"
+	spread_range="0.3"
+	burst_shots="2" />
+    <inventory  buy_price="20.0" sell_price="10.0" />
+	<!--Animations-->
+	
+
+    <animation key="reload" animation_key="KSGR" />
+	<animation key="reload" stance_key="prone" animation_key="KSGRp" />	
+	<animation state_key="cycle" animation_key="Pshotgun0.7" />
+    <animation state_key="cycle" stance_key="prone" animation_key="Pshotgun0.7p" />
+	
+	<!--Sounds-->
+	
+    <sound key="fire" fileref="DP12_Fire_FromCOD16.wav"pitch_variety="0.03" volume="1" />
+    <sound key="cycle" fileref="DP12_cycle_FromCOD16.wav" />
+    <sound key="reload_one" fileref="DP12_reload_FromCOD16.wav" />
+    
+    <sound class="impact" fileref="rifle_drop.wav" />
+   
+	<!--Model, Icon, Cost-->
+   
+    <model filename="gkw_sg_dp12.xml" />
+    <hud_icon filename="gkw_dp12.png" />
+
+
+	
+	<!--Ballistics-->
+	
+    
+    <weak_hand_hold offset="0.3" />
+    <projectile file="bullet.projectile">
+        <result class="hit" 
+        kill_probability="2.0" 
+        kill_decay_start_time="0.1" 
+        kill_decay_end_time="0.6" />
+    </projectile>
+    
+    <!--Accuracy, Movement speed-->
+    
+	<stance state_key="walking" accuracy="0.6" />
+    <stance state_key="crouch_moving" accuracy="0.5" />
+    <stance state_key="prone_moving" accuracy="0.5" />
+    <stance state_key="standing" accuracy="0.65"/>
+    <stance state_key="crouching" accuracy="0.7" />
+    <stance state_key="prone" accuracy="0.8" />
+    <stance state_key="over_wall" accuracy="0.8" />  
+
+</weapon>

@@ -1,0 +1,65 @@
+particle_system muzzle_pink
+{
+	quota	1000
+	material	flame_pink
+	particle_width	2.0
+	particle_height	3.0
+	cull_each	false
+	renderer	billboard
+	billboard_type	oriented_self
+	common_direction	0 -1 0
+
+	emitter Box
+	{
+		angle	1
+		colour	1 1 1 1
+		colour_range_start	1 1 1 1
+		colour_range_end	1 1 1 1
+		direction	0 1 0
+		emission_rate	150
+		position	0 0 0
+		velocity	0
+		velocity_min	1
+		velocity_max	8
+		time_to_live	0.08
+		time_to_live_min	0.08
+		time_to_live_max	0.08
+		duration	0.05
+		duration_min	0.05
+		duration_max	0.05
+		width	0.25
+		height	0.25
+		depth	0.2
+	}
+
+	affector ColourInterpolator
+	{
+		colour0	1 1 1 1
+		time0	0.1
+		colour1	1 1 1 1
+		time1	0.3
+		colour2	1 0 0 0
+		time2	0.7
+		colour3	1 0 0 0
+		time3	0.8
+		colour4	1 1 1 1
+		time4	1
+		colour5	1 1 1 1
+		time5	1
+	}
+}
+material flame_pink {
+        receive_shadows off
+	technique {
+		pass {
+			lighting off
+			depth_write off
+			scene_blend add
+			fog_override true
+
+			texture_unit {
+				texture muzzle_pink.png
+			}
+		}
+	}
+}

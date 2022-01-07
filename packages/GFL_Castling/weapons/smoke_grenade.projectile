@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<projectile class="grenade" name="smoke grenade" key="smoke_grenade.projectile" slot="0" radius="0.15" pulldown_in_air="26.0">
+    <tag name="grenade" />
+
+    <result class="spawn" instance_class="vehicle" instance_key="smoke_grenade_spawner.vehicle" min_amount="1" max_amount="1" offset="0 0.2 0" position_spread="0 0" direction_spread="0 0" />
+    <trigger class="time" time_to_live="2.0"/>
+
+    <rotation class="random" />
+
+    <model mesh_filename="grenade.xml" />
+
+    <effect class="result" key="terrain" ref="ShadowSmoke" shadow="1" />
+    <effect class="result" key="terrain" ref="NavalSmokeUp1" post_processing="1" />
+    <effect class="result" key="terrain" ref="NavalSmokeUp2" post_processing="1" />
+    <effect class="result" key="terrain" ref="NavalSmokeTop1" post_processing="1" />
+    <effect class="result" key="terrain" ref="NavalSmokeTop2" post_processing="1" />
+    <effect class="result" key="terrain" ref="NavalSmokeTop3" post_processing="1" />
+    <effect class="result" key="terrain" ref="NavalSmoke1" post_processing="1" />
+    <effect class="result" key="terrain" ref="NavalSmoke2" post_processing="1" />
+    <effect class="result" key="terrain" ref="NavalSmoke3" post_processing="1" />
+    
+    <!-- <throwable curve_height="5.0" near_far_distance="5.0" speed_estimation_near="9.0" speed_estimation_far="15.0" max_speed="13.0" randomness="0.07" /> -->
+    <!-- <throwable curve_height="6.0" near_far_distance="5.0" speed_estimation_near="20.0" speed_estimation_far="17.0" max_speed="11.0" randomness="0.07" /> -->
+    <!-- projectile slot 0 is used for hand grenade items currently -->
+    <!-- bound to change -->
+    <commonness value="0.0" />
+    <inventory encumbrance="3.0" price="2.0" />
+
+    <effect class="activated" ref="ThrownSmokeGrenade" />
+</projectile>

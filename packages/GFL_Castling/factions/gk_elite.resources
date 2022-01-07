@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	
+	<!-- 武器 -->
+	<!-- <weapon key="gkw_idw.weapon" /> -->
+	<weapon key="medikit.weapon" />
+	
+	<!-- 护甲 -->
+	<!-- <carry_item key="kcco_ar.carry_item" /> -->
+	
+	<!-- 载具 -->
+	<!-- <vehicle key="typhon.vehicle" /> -->
+	<!-- 增援 -->
+	<!-- <call key="kcco_artillery_1.call" /> -->
+    <call key="gk_medic.call" />
+    <call key="sg1hg1mg2.call" />
+    <call key="hvy_landing.call" />
+	
+	<call key="gk_bombardment_fairy.call" />
+	<call key="gk_rocket_fairy.call" />
+	<call key="gk_airstrike_fairy.call" />
+</resources>

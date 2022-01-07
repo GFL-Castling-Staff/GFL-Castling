@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<call 
+name="repair_fairy" 
+key="gk_repair_fairy.call"
+      initiation_comment1="Request Barrier Fairy"
+      acknowledge_comment="Confirm, data reception is normal"
+      acknowledge_time="0"
+      launch_comment="Armor Fortification in progress."
+	  notify_metagame="1">
+     
+    <round instances="1"
+           instance_class="grenade"
+           instance_key="repair_fairy.projectile" 
+           instance_spread="0 0 0" 
+           common_spread="0 0 0" 
+           launch_time="2.0"
+           spawn_time="3.0">
+     <sound class="launch" fileref="artillery_barrage_1.wav" volume="1.0" />
+     <sound class="launch" fileref="artillery_barrage_2.wav" volume="1.0" />      
+	   <sound class="spawn" fileref="woosh1.wav" volume="0.2" />
+    </round>
+
+
+    <hud_icon filename="calll_Barrier_Fairy.png" />
+    <capacity value="0" source="rank" source_value="0.0" />
+    <capacity value="100" source="rank" source_value="0.0" />
+    <inventory encumbrance="0.0" price="300.0" />
+
+</call>

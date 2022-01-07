@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<carry_item file="base_valuable.carry_item" name="But I only want ice cream" key="lottery.carry_item">
+    <hud_icon filename="Memory_Fragment.png" />
+    <inventory encumbrance="1.0" buy_price="5280.0" sell_price="0.0" />
+
+    <model mesh_filename="memory_fragment.xml" texture_filename="" />
+
+    <commonness value="0.0001" in_stock="1" />
+</carry_item>

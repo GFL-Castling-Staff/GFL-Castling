@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon file="gf_hvy.base_weapon" key="gkw_hvy_m2.weapon">
+
+  <specification 
+	 retrigger_time="-1" 
+	 accuracy_factor="0.85" 
+	 sight_range_modifier="5"
+     sight_height_offset="4.9"   
+	 sustained_fire_grow_step="1.0" 
+	 sustained_fire_diminish_rate="0.3" 
+	 magazine_size="1" 
+	 can_shoot_standing="0" 
+	 can_shoot_crouching="1" 
+	 can_shoot_prone="0" 
+	 suppressed="0" 
+	 name="M2 Mortar" 
+	 class="0" 
+   projectile_speed="100.0"  
+   barrel_offset="0.6"  
+	 projectiles_per_shot="1"
+   spread_range="0.05"
+	/> 
+	<next_in_chain key="gkw_m2_m1a1.weapon" share_ammo="0" />
+	<animation state_key="recoil"	animation_key="recoil, portable mortar" />
+	<animation state_key="crouching"	animation_key="crouch, still, portable mortar" />
+	<animation state_key="reload" animation_key="reloading, portable mortar" />
+    <animation state_key="hold" animation_key="crouch, still, portable mortar" />
+    <animation state_key="hold_on_wall" animation_key="crouch, still, portable mortar" />
+    <animation state_key="still_against_wall" animation_key="crouch, still, portable mortar" />
+    <animation state_key="hold_casual" animation_key="crouch, still, portable mortar" />
+	<animation state_key="running" animation_key="crouch, still, portable mortar" />  
+    <animation state_key="walking" animation_key="crouch, still, portable mortar" />
+    <animation state_key="walking_backwards" animation_key="crouch, still, portable mortar" /> 
+  <!-- <sound key="fire" fileref="fireworks_woosh.wav" pitch_variety="0.05" volume="1.0"/> -->
+  <sound key="fire" fileref="portable_mortar_shot.wav" pitch_variety="0.1" />
+	<sound key="magazine_out" fileref="portable_mortar_reload.wav" volume="0.7" />
+	<sound key="magazine_in" fileref="dry_fire.wav" volume="0.7"/>
+	<sound key="cycle" fileref="portable_mortar_reload.wav" volume="0.7"/>
+	<sound class="impact" fileref="rifle_drop.wav" />
+	
+	<inventory  buy_price="420.0" sell_price="10.0" />
+	<commonness value="0.00001"  />
+	<model filename="gkw_hvy_m2mortar.xml" />
+	<hud_icon filename="gkw_m2.png" />
+    <capacity value="0" source="rank" source_value="0.0" />
+    <capacity value="1" source="rank" source_value="3.457" />
+
+
+	<weak_hand_hold offset="0.3" />
+	<projectile file="standard_mortar.projectile" />
+  <ballistics
+	 near_far_distance="1.0"
+	 speed_estimation_near="20.0"
+	 speed_estimation_far="40.0"
+	 max_speed="100.0"
+	 randomness="0.05"
+	 curve_height="20"
+	/>
+	
+	<effect class="muzzle" ref="MusketMuzzle" />
+	<effect class="muzzle" ref="UpDust" />
+	
+	<stance state_key="running" accuracy="0.3" />
+	<stance state_key="walking" accuracy="0.4" />
+	<stance state_key="crouch_moving" accuracy="0.3" />
+	<stance state_key="prone_moving" accuracy="0.1" />
+	
+	<stance state_key="standing" accuracy="0.5" />
+	<stance state_key="crouching" accuracy="1.0" />
+	<stance state_key="prone" accuracy="1.0" />
+
+	<modifier class="speed" value="-3.0" />
+</weapon>

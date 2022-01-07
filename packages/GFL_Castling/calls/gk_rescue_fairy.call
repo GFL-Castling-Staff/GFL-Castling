@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<call 
+name="UAV medical support" 
+key="gk_rescue_fairy.call"
+      initiation_comment1="Rescue Fairy--Smoke Medical Support"
+      acknowledge_comment="Medical UAV is online and closing in on the target."
+      acknowledge_time="0"
+      launch_comment="Medical support is complete. May everyone survive the mission."
+	  notify_metagame="1">
+     
+    <round instances="3"
+           instance_class="grenade"
+           instance_key="smoke_grenade.projectile" 
+           instance_spread="0 0 0" 
+           common_spread="0 0 0" 
+           launch_time="1.5"
+           spawn_time="1.5">
+     <sound class="launch" fileref="artillery_barrage_1.wav" volume="1.0" />
+     <sound class="launch" fileref="artillery_barrage_2.wav" volume="1.0" />      
+	   <sound class="spawn" fileref="woosh1.wav" volume="0.2" />
+    </round>
+
+    <round instances="8"
+           instance_class="grenade"
+           instance_key="medical_agl_call.projectile" 
+           instance_spread="6 6 6" 
+           common_spread="0 0 0" 
+           launch_time="2.0"
+           spawn_time="3.0">
+      <sound class="launch" fileref="artillery_barrage_1.wav" volume="1.0" />
+      <sound class="launch" fileref="artillery_barrage_2.wav" volume="1.0" />      
+	   <sound class="spawn" fileref="woosh1.wav" volume="0.2" />
+    </round>
+
+
+    <hud_icon filename="call_medic.png" />
+    <inventory encumbrance="0.0" price="225.0" />
+
+</call>

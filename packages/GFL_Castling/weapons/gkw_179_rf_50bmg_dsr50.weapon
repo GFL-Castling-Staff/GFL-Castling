@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon file="designated_marksman_rifle.animation_base" key="gkw_dsr50.weapon">
+
+
+    <!--Weapon specifications-->
+    
+    <specification 
+	retrigger_time="-1.0" 
+	accuracy_factor="1" 
+	sustained_fire_grow_step="2" 
+	sustained_fire_diminish_rate="1.2" 
+	magazine_size="3" 
+	can_shoot_standing="1" 
+	can_shoot_crouching="1"
+	can_shoot_prone="1"
+	suppressed="1" 
+	name="DSR-50" 
+	class="2"
+	reload_one_at_a_time="0" 
+	sight_range_modifier="3.2" 
+	projectile_speed="230.85" 
+	barrel_offset="0.4" 
+	projectiles_per_shot="3" />
+    
+    <inventory  buy_price="45.0" sell_price="9.0" />	
+	<!--Animations-->
+	
+
+
+    <animation key="cycle" animation_key="Brifle1.5" />
+	<animation key="cycle" stance_key="prone" animation_key="Brifle1.5p" />	
+    <animation key="reload" animation_key="magBrifleR" />
+	<animation key="reload" stance_key="prone" animation_key="magBrifleRp" />		
+	
+	<!--Sounds-->
+	
+    <sound key="fire" fileref="dsr50_Fire_FromCOD16AX50.wav" volume="2.2" />
+    <sound key="cycle" fileref="dsr50_cycle_FromCOD16AX50.wav" volume="1"/>
+    <sound key="magazine_out" fileref="dsr50_mgz_out_FromCOD16AX50.wav" volume="1"/>
+    <sound key="magazine_in" fileref="dsr50_mgz_in_FromCOD16AX50.wav" volume="1"/>
+    <sound key="cycle_out" fileref="dsr50_cycle_out_FromCOD16AX50.wav" volume="1"/>
+    <sound key="cycle_in" fileref="dsr50_cycle_in_FromCOD16AX50.wav" volume="1"/>
+    <sound class="impact" fileref="rifle_drop.wav" />
+   
+	<!--Model, Icon, Cost-->
+   
+    <model filename="gkw_rf_dsr50.xml" />
+    <hud_icon filename="gkw_dsr50.png" />
+
+    <!-- <inventory  price="4.0" /> -->
+	
+	<!--Ballistics-->
+	
+
+    <weak_hand_hold offset="0.3" />
+    <projectile file="ntw.projectile">
+        <result class="blast" 
+        damage="2.5" 
+        radius="2.5" 
+        decal="1" 
+        push="0" 
+        character_state="death"
+        faction_compare="not_equal"
+		/>
+    </projectile>
+    <!--Accuracy, Movement speed-->
+    <stance state_key="running" accuracy="0.9" />
+	<stance state_key="walking" accuracy="1.1" />
+    <stance state_key="crouch_moving" accuracy="0.8" />
+    <stance state_key="prone_moving" accuracy="0.8" />
+    <stance state_key="standing" accuracy="1.1"/>
+    <stance state_key="crouching" accuracy="1.1" />
+    <stance state_key="prone" accuracy="1.1" />
+    <stance state_key="over_wall" accuracy="1.1" /> 
+    <modifier class="speed" value="-0.3" /> 
+
+</weapon>

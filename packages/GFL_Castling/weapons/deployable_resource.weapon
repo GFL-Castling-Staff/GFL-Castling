@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapons>
+<!-- 测试武器 -->
+<weapon file="deployable.base_weapon" key="deployable_weapon.weapon" radius="0.25" >
+    <specification
+	name="-test only- weapon"
+    spawn_instance_class="weapon" 
+    spawn_instance_key="m16a4.weapon" 
+	/>
+
+    <model mesh_filename="barrier_item.mesh" texture_filename="barrier_item.png" />
+    <hud_icon filename="hud_hesco_barrier.png" />
+</weapon>
+<!-- 测试载具 -->
+<weapon file="deployable.base_weapon" key="deployable_vehicle.weapon" radius="0.25" >
+    <specification
+	name="-test only- vehicle"
+    spawn_instance_class="vehicle" 
+    spawn_instance_key="typhon.vehicle" 
+	/>
+
+    <model mesh_filename="barrier_item.mesh" texture_filename="barrier_item.png" />
+    <hud_icon filename="hud_hesco_barrier.png" />
+</weapon>
+<!-- 测试携带品 -->
+<weapon file="deployable.base_weapon" key="deployable_carry_item.weapon" radius="0.25" >
+    <specification
+	name="-test only- carry_item"
+    spawn_instance_class="carry_item" 
+    spawn_instance_key="gift_box_1.carry_item" 
+	/>
+
+    <model mesh_filename="barrier_item.mesh" texture_filename="barrier_item.png" />
+    <hud_icon filename="hud_hesco_barrier.png" />
+</weapon>
+<weapon file="deployable.base_weapon" key="deployable_rubber_boat.weapon" radius="0.25" >
+    <specification
+	name="rubber_boat"
+    spawn_instance_class="vehicle" 
+    spawn_instance_key="rubber_boat.vehicle" 
+	/>
+
+    <model mesh_filename="barrier_item.mesh" texture_filename="barrier_item.png" />
+    <hud_icon filename="hud_rubber_boat.png" />
+</weapon>
+</weapons>

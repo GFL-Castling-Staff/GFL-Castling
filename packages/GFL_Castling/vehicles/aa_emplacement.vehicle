@@ -1,0 +1,85 @@
+<vehicle name="Anti-Air" key="aa_emplacement.vehicle" map_view_atlas_index="21" respawn_time="86400" existence="one_per_faction" reserves_spawn_point="1" protectors="3" soldier_capacity_offset="3">
+<!--  <tag name="metal heavy" /> -->
+	<tag name="target" />
+	<tire_set offset="1.0 0.0 1.0" radius="0.65" />
+	<tire_set offset="1.0 0.0 -1.0" radius="0.65" />
+
+	<control max_speed="20.0" acceleration="6.7" max_reverse_speed="6.0" max_rotation="0.8" max_water_depth="1.9" />
+
+	<physics max_health="15.0" mass="100000" extent="4 4.0 4" offset="0 0.0 0" top_offset="0 1 0" collision_model_pos="0 0.2 0" collision_model_extent="4 4.0 4" visual_offset="0 0.2 0" /> 
+
+	<visual class="chassis" mesh_filename="aa_emplacement.mesh" texture_filename="aa_emplacement.png" />
+	<visual class="chassis" key="broken" mesh_filename="aa_emplacement_broken.mesh" texture_filename="aa_emplacement_broken.png" />
+
+	<event>
+		<trigger class="spawn" />
+  		<result class="faction_resources" affect_enemies="1">
+			<call key="rubber_airboat.call" enabled="0" />
+			<call key="gk_medic.call" enabled="0" />
+            <call key="sg1hg1mg2.call" enabled="0" />
+			<call key="hvy_landing.call" enabled="0" />
+			<call key="sass_landing.call" enabled="0" />
+			<call key="humvee1.call" enabled="0" />
+			<call key="humvee.call" enabled="0" />
+			<call key="gk_airstrike_fairy.call" enabled="0" />
+			<call key="manticore.call" enabled="0" /> 
+			<call key="manticore2.call" enabled="0" />                                             
+		</result>
+	</event> 
+
+	<event>
+		<trigger class="destroy" />
+  		<result class="faction_resources" affect_enemies="1">
+			<call key="rubber_airboat.call" enabled="1" />
+			<call key="gk_medic.call" enabled="1" />
+            <call key="sg1hg1mg2.call" enabled="1" />
+			<call key="hvy_landing.call" enabled="1" />
+			<call key="sass_landing.call" enabled="1" />
+			<call key="humvee1.call" enabled="1" />
+			<call key="humvee.call" enabled="1" />
+			<call key="gk_airstrike_fairy.call" enabled="1" />
+			<call key="manticore.call" enabled="1" /> 
+			<call key="manticore2.call" enabled="1" />                                 
+		</result>
+	</event> 
+
+	<!-- prevent respawn from loading a savegame; ideally savegame loading would handle vehicles right, but it doesn't -->
+<!--
+	<event>
+		<trigger class="destroy" />
+  		<result class="faction_resources" affect_enemies="0">
+			<vehicle key="aa_emplacement.vehicle" enabled="0" />
+		</result>
+	</event> 
+-->
+
+	<event key="destroy_xp_reward">
+		<trigger class="destroy" />
+		<result class="reward" xp="0.0010" />
+	</event>
+  
+	<event key="destroy_rp_reward">
+		<trigger class="destroy" />
+		<result class="reward" rp="200" />
+	</event>
+
+	<event key="spot_rp_reward">
+		<trigger class="spot" />
+		<result class="reward" rp="40.0" />
+	</event>
+
+	<effect event_key="destroy" key="other" ref="SmokeMinor" post_processing="1" />
+	<effect event_key="destroy" key="other" ref="ShadowSmokeMinor" shadow="1" />
+	<effect event_key="destroyed" ref="MediumSmokeFuel" offset="0.0 2.5 0" />
+	<effect event_key="destroyed" ref="MediumSmokeFuel" offset="2 0.5 0" />  
+  
+	<event>
+		<trigger class="destroy" />
+  		<result class="spawn" instance_class="visual_item" instance_key="burning_piece_gas_tank1.visual_item" min_amount="1" max_amount="2" offset="0 3.0 0" position_spread="1.5 1.5" direction_spread="0.15 0.3" />
+	</event> 
+	
+	<event>
+		<trigger class="destroy" />  	
+    		<result class="spawn" instance_class="visual_item" instance_key="burning_piece_aa.visual_item" min_amount="1" max_amount="1" offset="0.0 2.0 0" position_spread="0 0" direction_spread="0.2 0.1" />
+	</event>
+</vehicle>

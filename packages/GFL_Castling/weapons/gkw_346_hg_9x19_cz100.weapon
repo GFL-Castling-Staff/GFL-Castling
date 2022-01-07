@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon file="two_hands_single_hg.animation_base" key="gkw_cz100.weapon">
+
+	
+	<!--Weapon specifications-->
+	
+    <specification
+	retrigger_time="0.2"
+	last_burst_retrigger_time="0.085"
+	accuracy_factor="0.95"
+	sustained_fire_grow_step="0.3"
+	sustained_fire_diminish_rate="1.8"
+	magazine_size="13"
+	
+    
+	suppressed="0"
+	name="CZ 100"
+	class="4"
+	reload_one_at_a_time="0"
+	sight_range_modifier="1.0"
+	projectile_speed="76.6"
+	projectiles_per_shot="1"
+	burst_shots="1"
+     />
+	
+
+	<inventory  buy_price="3.0" sell_price="3.0" />
+	<commonness in_stock="0" />
+
+    
+	
+	<!--Sounds-->
+		
+    <sound key="fire" fileref="m9_fire_FromINS.wav" pitch_variety="0.05" volume="1" />
+    <sound key="magazine_out" fileref="m9_mgz_out_FromINS.wav" volume="0.8" />
+    <sound key="magazine_in" fileref="m9_mgz_in_FromINS.wav" volume="0.8"/>    
+    <sound key="cycle" fileref="m9_cycle_FromINS.wav" volume="0.8" />
+
+   
+	<!--Model, Icon, Cost-->
+    <model filename="gkw_hg_cz100.xml" />
+    <hud_icon filename="gkw_cz100.png" />
+
+
+	
+	<!--Ballistics-->
+	
+    
+    <weak_hand_hold offset="0.1" />
+    <projectile file="bullet.projectile">
+        <result class="hit"
+		kill_probability="1.1"
+		kill_decay_start_time="0.125"
+		kill_decay_end_time="0.208"  />
+    </projectile>
+    
+    <!--Accuracy, Movement speed-->
+        
+    <stance state_key="running" accuracy="0.8" />
+    <stance state_key="walking" accuracy="0.85" />
+    <stance state_key="crouch_moving" accuracy="0.8" />
+    <stance state_key="prone_moving" accuracy="0.8" />
+    <stance state_key="standing" accuracy="0.9" />
+    <stance state_key="crouching" accuracy="0.95" />
+    <stance state_key="prone" accuracy="1" />
+
+
+</weapon>

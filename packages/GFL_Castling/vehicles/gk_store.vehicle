@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vehicles>
+	<vehicle name="hg" key="hg_store" file="store.base_vehicle">
+		<item_container class="armory" offset="0 0 0.0" soldier_group="default_hg"/>
+		<visual class="chassis" mesh_filename="hesco_barrier.mesh" texture_filename="hg_store.png" />
+	</vehicle>
+	<vehicle name="smg" key="smg_store" file="store.base_vehicle">
+		<item_container class="armory" offset="0 0 0.0" soldier_group="default_smg"/>
+		<visual class="chassis" mesh_filename="hesco_barrier.mesh" texture_filename="smg_store.png" />
+	</vehicle>
+	<vehicle name="ar" key="ar_store" file="store.base_vehicle">
+		<item_container class="armory" offset="0 0 0.0" soldier_group="default_ar"/>
+		<visual class="chassis" mesh_filename="hesco_barrier.mesh" texture_filename="ar_store.png" />
+	</vehicle>
+	<vehicle name="rf" key="rf_store" file="store.base_vehicle">
+		<item_container class="armory" offset="0 0 0.0" soldier_group="default_rf"/>
+		<visual class="chassis" mesh_filename="hesco_barrier.mesh" texture_filename="rf_store.png" />
+	</vehicle>
+	<vehicle name="mg" key="mg_store" file="store.base_vehicle">
+		<item_container class="armory" offset="0 0 0.0" soldier_group="default_mg"/>
+		<visual class="chassis" mesh_filename="hesco_barrier.mesh" texture_filename="mg_store.png" />
+	</vehicle>
+	<vehicle name="sg" key="sg_store" file="store.base_vehicle">
+		<item_container class="armory" offset="0 0 0.0" soldier_group="default_sg"/>
+		<visual class="chassis" mesh_filename="hesco_barrier.mesh" texture_filename="sg_store.png" />
+	</vehicle>
+	<vehicle name="HVY" key="hvy_store" file="store.base_vehicle">
+		<item_container class="armory" offset="0 0 0.0" soldier_group="player_hvy"/>
+		<visual class="chassis" mesh_filename="hesco_barrier.mesh" texture_filename="hvy_store.png" />
+	</vehicle>
+</vehicles>

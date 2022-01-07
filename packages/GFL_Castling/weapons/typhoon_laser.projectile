@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<projectile class="grenade" name="flamethrower" slot="1" pulldown_in_air="0.0" time_to_live="1.00" key="flamethrower_flame_tank.projectile">
+	<tag name="flamethrower_flame"/>
+	
+	<trigger class="impact" />
+	<result
+	class="blast"
+	radius="1.8"
+	damage="0.02"
+	push="0"  
+	character_state="death"
+    make_vehicle_hit_sound="0"
+	/>
+
+	<rotation class="motion" />
+	
+	<commonness value="0.0" />
+
+    <sound class="result" key="other" fileref="burn.wav" />
+    <sound class="result" key="vehicle" fileref="burn.wav" />
+ 
+    <sound class="result" key="terrain" copy="other" />
+    <sound class="result" key="static_object" copy="other" />
+    <sound class="result" key="character" copy="other" />
+
+	<!-- <effect class="activated" ref="SmokePropulsion" /> -->
+	<!--<effect class="activated" ref="FlamePropulsion" lighting="0" />
+	<effect class="activated" ref="FlameSparkle" lighting="1" />-->
+
+	<!--<effect class="result" ref="SmokePropulsionEnd" />
+	<effect class="result" ref="FlamePropulsionEnd" lighting="0" />
+	<effect class="result" ref="FlameSparkleEnd" lighting="0" />-->
+
+	<!-- <effect class="result" type="splat_map" surface_tag="" size="3.0" atlas_index="0" layer="1" /> -->
+	<effect class="result" type="splat_map" surface_tag="" size="2.0" atlas_index="4" layer="0" />
+
+	<trail probability="1.0" key="laser_tifeng" />
+
+</projectile>

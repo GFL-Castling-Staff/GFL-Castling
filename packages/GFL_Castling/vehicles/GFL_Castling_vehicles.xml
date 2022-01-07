@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vehicles>
+	<!-- if you add something here, remember to add it in common.resources or specific faction resources too! -->
+	<!-- <vehicle file="invasion_all_vehicles.xml" /> -->
+	<!-- <vehicle file="rubber_airboat_landing.vehicle" /> -->
+	<!-- <vehicle file="rubber_airboat_takeoff.vehicle" /> -->
+	<!-- <vehicle file="jeep.vehicle" /> -->
+	<vehicle file="rubber_airboat.vehicle" />
+	<!-- kcco -->
+	<vehicle file="kcco_coeus.vehicle" />
+    <vehicle file="kcco_typhon.vehicle" />
+	<!-- paradeus -->
+	<vehicle file="paradeus_uhlan.vehicle" />
+	<vehicle file="par_compass.vehicle" />
+	<!-- G&K -->
+	<vehicle file="gk_bunker.vehicle" />
+	<vehicle file="gk_store.vehicle" />
+	<vehicle file="gk_pierre.vehicle" />
+
+</vehicles>

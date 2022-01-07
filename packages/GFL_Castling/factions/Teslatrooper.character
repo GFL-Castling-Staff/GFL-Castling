@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<character filename="kcco.text_lines">
+
+	<sound key="footstep" fileref="qwd_walk1.wav" volume="0.9" />
+	<sound key="death" fileref="qwd_die.wav" volume="0.8" />
+
+
+
+	<animation state_key="hold"  animation_key="still, large mecha" />
+	<animation state_key="hold_one_wall"  animation_key="still, large mecha" />
+	<animation key="still" target_key="still, large mecha" />
+	<animation state_key="hold_casual"  animation_key="still, large mecha" />
+	<animation key="still against wall" target_key="still, large mecha" />
+	<animation key="still, heavy weapon" target_key="still, large mecha" />
+	<animation key="walking" target_key="walking, large mecha" />
+	<animation key="walking backwards" target_key="walking, large mecha" />
+	<animation key="running" target_key="walking, large mecha" />
+	<animation key="crouch still" target_key="crouch2, large mecha" />
+	<animation key="crouching forwards" target_key="crouch walking, large mecha" />
+	<animation key="crouching backwards" target_key="crouch walking, large mecha" />
+	<animation key="prone" target_key="defence, large mecha" />
+	<animation key="prone, moving forwards" target_key="ork prone, moving forwards" />
+	<animation key="going prone" target_key="going defence, large mecha" />
+	<animation key="leaving prone" target_key="defence walking, large mecha" />
+	<animation key="dive" target_key="arriving ground, large mecha" />
+	<animation key="jumping" target_key="jumping, large mecha" />
+	<animation key="lifting up" target_key="jumping, large mecha" />
+	<animation key="throwing self over" target_key="jumping, large mecha" />
+	<animation key="falling" target_key="arriving ground, large mecha" />
+	<animation key="arriving ground" target_key="arriving ground, large mecha" />
+	<animation key="climbing ladder, still" target_key="jumping, large mecha" />
+	<animation key="climbing ladder" target_key="jumping still, large mecha" />
+	<animation key="climbing ladder ending" target_key="arriving ground, large mecha" />
+	<animation key="wounded, still, 66" target_key="wounded, large mecha" />
+	<animation key="wounded, moving forwards, 67" target_key="defence walking, large mecha" />
+	<animation key="stunned" target_key="stun, large mecha" />
+	<animation key="surrender" target_key="surrender, large mecha" />
+	<animation key="stabbing" target_key="stabbing, large mecha" />
+	<animation key="throwing, upside" target_key="throwing, large mecha" />
+	<animation key="change weapon out" target_key="change weapon, large mecha" />
+	<animation key="change weapon in" target_key="change weapon, large mecha" />
+	<animation key="change weapon out, reversed" target_key="change weapon, large mecha" />
+	<animation key="change weapon in, reversed" target_key="change weapon, large mecha" />
+	<animation key="change weapon in, single hand carry" target_key="change weapon, large mecha" />
+<animation key="celebrating" target_key="jumping, large mecha" />
+<animation key="celebrating, shooting" target_key="jumping, large mecha" />
+
+    <effect class="blood" ref="BloodSplat" />
+    <effect class="blood" type="splat_map" size="2.0" atlas_index="3" layer="3" additive="1" apply_gore_factor="1" />
+</character>

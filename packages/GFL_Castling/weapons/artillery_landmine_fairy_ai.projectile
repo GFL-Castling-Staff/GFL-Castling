@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<projectile class="grenade" name="rocket" key="artillery_landmine_fairy_ai.projectile" slot="2" pulldown_in_air="11" >
+    <tag name="rocket"/>
+    <result class="spawn" instance_class="projectile" instance_key="artillery_landmine_fairy_ai_spread.projectile" min_amount="5" max_amount="5" offset="0 0.0 0" position_spread="0.1 0.1" direction_spread="0.1 0.1" />
+    <trigger class="time" time_to_live="1"/>
+    <rotation class="motion" />
+    <model mesh_filename="mortar.xml" />
+
+    <commonness value="0.0" />
+    
+    <effect class="result" key="other" ref="SmokeBurst" post_processing="1" />
+    <effect class="result" key="other" ref="Shine" lighting="0" />
+    <effect class="result" key="other" ref="HitTankSparks" lighting="0" />     
+
+    <effect class="activated" ref="Propulsion" />
+
+</projectile>
