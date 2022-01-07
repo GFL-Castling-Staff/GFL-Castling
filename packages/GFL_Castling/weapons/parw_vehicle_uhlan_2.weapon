@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapons>
-<weapon key="uhlan_main_cannon">
+<weapon key="uhlan_main_cannon_2">
     <specification 
-	retrigger_time="0.15" 
+	retrigger_time="0.13" 
     accuracy_factor="0.9" 
     sustained_fire_grow_step="0.2" 
     sustained_fire_diminish_rate="1.0" 
@@ -24,9 +24,9 @@
     <hud_icon filename="uhlan_main_cannon.png" />
     <commonness value="0.0" />
     <projectile file="bullet_paradeus.projectile">
-        <result class="blast"  damage="3.5"  radius="2.2" decal="1" push="0.5" character_state="death" 	faction_compare="not_equal"/>
+        <result class="hit" kill_probability="3.5" kill_decay_start_time="2.682" kill_decay_end_time="5.7" />
     </projectile>
-
+    
 	<!-- Scoring for target priority. Distance is between 0 and 1 based on range; direction is between 0 and 1 based on whether its near the barrel; squad_command is between 0 and on based on how close to the player's command order is, and base_score is a weight.. -->
 	<!-- These all add together and the highest 'score' is the new target, targets are rescanned every 2.5 seconds to see if a new higher-score target is in sight-range. -->
 	<!-- You must define a blank tag at the top of the list to handle all cases where the vehicle is fighting something "undefined", which is what common infantry might best fit under. -->

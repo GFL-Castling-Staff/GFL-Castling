@@ -26,9 +26,9 @@
 	<tire_set offset="1.5 -0.0 -3.0" radius="0.5" />
 
 	<control 
-	max_speed="30.0" 
-	acceleration="65.0" 
-	max_reverse_speed="8.0" 
+	max_speed="24.0" 
+	acceleration="45.0" 
+	max_reverse_speed="22.0" 
 	min_health_to_steer="5.0" 
 	max_rotation="0.0" 
 	max_water_depth="9.4" 
@@ -36,7 +36,7 @@
 	gears="1" />
 
 	<physics 
-	max_health="45.00" 
+	max_health="38.80" 
 	blast_damage_threshold="0.9" 
 	mass="150.0" 
 	broken_mass="100"
@@ -53,7 +53,10 @@
 	<!-- one weapon per turret so that only one soldier controls the turret orientation -->
 	<!-- similarly, a controllable turret can only exist if it has a weapon -->
 	<!-- turrets may have sub-turrets, which may have more weapons, in the future -->
-	<turret offset="0 2.5 -1.5" weapon_key="uhlan_main_cannon" weapon_offset="0.0 0.45 4.0" weapon_recoil="0.0" physics_recoil="0.0" max_rotation_step="0.00065" />
+	<turret offset="0 2.5 -1.5" weapon_key="uhlan_main_cannon" weapon_offset="0.0 0.45 4.0" weapon_recoil="0.0" physics_recoil="0.0" max_rotation_step="0.00165" />
+	<turret offset="0 2.5 -1.5" weapon_key="uhlan_main_cannon_2" weapon_offset="0.0 0.45 4.0" weapon_recoil="0.0" physics_recoil="0.0" max_rotation_step="0.00165" />
+	<turret offset="0 2.5 -1.5" weapon_key="uhlan_main_shield" weapon_offset="0.0 -2.0 4.0" weapon_recoil="0.0" physics_recoil="0.0" max_rotation_step="0.00165" rotation_range="0"/>
+	<turret offset="0 2.5 -1.5" weapon_key="uhlan_main_shield_2" weapon_offset="0.0 -2.0 4.0" weapon_recoil="0.0" physics_recoil="0.0" max_rotation_step="0.00165" rotation_range="0"/>
 
 	<visual class="chassis" mesh_filename="Uhlan_body.mesh" texture_filename="Uhlan_Body_Color.png" max_tilt="0.06" />
 	<visual class="turret" turret_index="0" mesh_filename="Uhlan_turret.mesh" texture_filename="Uhlan_Turret_Color.png" offset="-0.00 -2.5 1.0" max_tilt="0.00"/>
@@ -76,7 +79,7 @@
 
 	<character_slot type="driver" position="1.1 0.5 -2.3" rotation="0" exit_rotation="-3.14" hiding="1" animation_id="36" />
 	<character_slot type="gunner" position="-1.1 0.5 -2.3" seat_position="0 1.5 -2" rotation="0" exit_rotation="-3.14" hiding="1" animation_id="37">
-		<turret index="0" />
+		<turret index="0" />  <turret index="1"/> <turret index="2"/>
 	</character_slot>
 
 	<!-- sound handling -->

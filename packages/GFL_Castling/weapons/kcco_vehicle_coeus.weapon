@@ -2,7 +2,7 @@
 <weapon key="coeus_cannon">
     <specification 
     slot="2" 
-    retrigger_time="3.0"
+    retrigger_time="2.0"
 	accuracy_factor="1.0" 
 	sustained_fire_grow_step="0.1" 
 	sustained_fire_diminish_rate="2.1" 
@@ -39,7 +39,7 @@
 
     <weak_hand_hold offset="0.4" />
     <projectile file="at4.projectile">
-        <result class="blast" radius="4.5" damage="9.3" push="0.2" decal="1" faction_compare="not_equal"/>
+        <result class="blast" radius="7.5" damage="10" push="0.2" decal="1" faction_compare="not_equal"/>
         <effect class="result" key="terrain" ref="SmokeBurst" post_processing="1" />
         <effect class="result" key="terrain" ref="Shine" lighting="0" />
         <effect class="result" key="terrain" ref="HitTankSparks" lighting="0" />
