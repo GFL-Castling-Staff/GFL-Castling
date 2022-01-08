@@ -3,7 +3,7 @@
     <tag name="flashbang" />
 
     <result class="notify_script" key="ump9_skill" />
-    <trigger class="time" time_to_live="1.0" />
+    <trigger class="time" time_to_live="1.5" />
     <rotation class="random" />
 
     <model mesh_filename="stun_grenade.xml" />
