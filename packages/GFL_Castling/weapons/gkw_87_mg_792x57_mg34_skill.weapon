@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<weapon file="heavy_mg_standing.animation_base" key="gkw_mg34.weapon">
+<weapon file="heavy_mg.animation_base" key="gkw_mg34_skill.weapon">
 
     <specification 
   barrel_offset="0.5" 
@@ -9,17 +9,21 @@
   sustained_fire_diminish_rate="1.8" 
   magazine_size="75" 
   suppressed="0" 
-  name="MG34" 
+  name="MG34-skill-[Damage Focus MG]" 
   class="0" 
   projectile_speed="162.77" 
   spread_range="0.15"
-  sight_range_modifier="1.5"/>
+  sight_range_modifier="1.5"
+  can_shoot_standing="0" 
+  can_shoot_crouching="0"
+  can_shoot_prone="1"/>
 
 
 
     <animation key="reload" animation_key="MGreload3" />
     <inventory  buy_price="16.0" sell_price="16.0" />	
-    <next_in_chain key="gkw_mg34_skill.weapon" share_ammo="1" />
+    <commonness  value="0" in_stock="0" can_spawn_with="1" />
+    <next_in_chain key="gkw_mg34.weapon" share_ammo="1" />
 
 
 
@@ -30,16 +34,16 @@
     <sound class="impact" fileref="rifle_drop.wav" />
     <model filename="gkw_mg_mg34.xml" />
 
-    <hud_icon filename="gkw_mg34.png" />
+    <hud_icon filename="gkw_mg34_skill.png" />
 
     <!-- <inventory  price="3.0" /> -->
 
 
     <projectile file="bullet.projectile">
-        <result class="hit" kill_probability="1.75" kill_decay_start_time="2.432" kill_decay_end_time="4.054" />
+        <result class="hit" kill_probability="1.85" kill_decay_start_time="2.432" kill_decay_end_time="4.054" />
     </projectile>
-    <stance state_key="running" accuracy="0.3" />
-    <stance state_key="walking" accuracy="0.3" />
+    <stance state_key="running" accuracy="0.4" />
+
     <stance state_key="crouch_moving" accuracy="0.4" />
     <stance state_key="prone_moving" accuracy="0.4" />
     <stance state_key="standing" accuracy="0.65" />
