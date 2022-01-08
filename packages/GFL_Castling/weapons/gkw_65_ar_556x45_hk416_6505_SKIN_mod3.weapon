@@ -13,18 +13,18 @@
 	magazine_size="30" 
 	name="HK416(MOD3)-[Midnight Evangelion]" 
 	projectile_speed="167.66" 
-	retrigger_time="0.0857" 
+	retrigger_time="0.06" 
 	suppressed="1" 
-    sustained_fire_diminish_rate="1.8"
+    sustained_fire_diminish_rate="1.9"
     sustained_fire_grow_step="0.3"/>
 	
 	<!--Animations-->
-    <inventory  buy_price="270.0" sell_price="150.0" />	
+    <inventory  buy_price="270.0" sell_price="270.0" />	
     <commonness value="0" in_stock="0" />
     <next_in_chain key="gkw_hk416_6505_mod3_skill.weapon" share_ammo="0" />
 
-    <animation state_key="reload" animation_key="ARreload1.5" />
-	<animation key="reload" stance_key="prone" animation_key="ARreloadp1.5" />
+    <animation state_key="reload" animation_key="ARreload1.2" />
+	<animation key="reload" stance_key="prone" animation_key="ARreloadp1.2" />
 
     <capacity value="0" source="rank" source_value="0.0" />
     <capacity value="1" source="rank" source_value="6.048" />
@@ -40,7 +40,7 @@
    
 	<model filename="gkw_ar_hk416_537.xml" />
     <hud_icon filename="gkw_hk416_6505.png" />
-    <commonness value="0.2" />
+
 
 	
 	<!--Ballistics-->
@@ -60,7 +60,7 @@
     <stance state_key="walking" accuracy="0.75" />
     <stance state_key="crouch_moving" accuracy="0.9" />
     <stance state_key="prone_moving" accuracy="0.9" />
-    <stance state_key="standing" accuracy="0.85" />
-    <stance state_key="crouching" accuracy="0.95" />
-    <stance state_key="prone" accuracy="1" />
+    <stance state_key="standing" accuracy="0.93" />
+    <stance state_key="crouching" accuracy="1" />
+    <stance state_key="prone" accuracy="1.1" />
 </weapon>
