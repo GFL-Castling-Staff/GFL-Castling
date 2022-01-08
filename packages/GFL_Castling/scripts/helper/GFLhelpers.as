@@ -11,6 +11,16 @@ void playSoundAtLocation(const Metagame@ metagame, string filename, int factionI
 	metagame.getComms().send(command);
 }
 
+void playSoundAtLocation(const Metagame@ metagame, string filename, int factionId, string position, float volume=1.0) {
+	XmlElement command("command");
+	command.setStringAttribute("class", "play_sound");
+	command.setStringAttribute("filename", filename);
+	command.setIntAttribute("faction_id", factionId);
+	command.setFloatAttribute("volume", volume);
+	command.setStringAttribute("position", position);
+	metagame.getComms().send(command);
+}
+
 void editPlayerVest(const Metagame@ metagame, int characterId, string Itemkey, uint numVests){
 	if (numVests < 1) return;
 	for (uint j = numVests; j > 0; --j) {
