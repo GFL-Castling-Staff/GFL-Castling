@@ -20,8 +20,9 @@ class GFLskill : Tracker {
 	// --------------------------------------------
 	protected void handleResultEvent(const XmlElement@ event) {
 	
-		//checking if the event was triggered by a rangefinder notify_script		
-		if (event.getStringAttribute("key") == "RO635_skill") {
+		//checking if the event was triggered by a rangefinder notify_script
+		string EventKeyGet = event.getStringAttribute("key");	
+		if (EventKeyGet == "RO635_skill") {
 			int characterId = event.getIntAttribute("character_id");
 			const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
 			
@@ -44,7 +45,7 @@ class GFLskill : Tracker {
 				}
 			}
 		}
-		if (event.getStringAttribute("key") == "SOPMOD_skill") {
+		if (EventKeyGet == "SOPMOD_skill") {
 			int characterId = event.getIntAttribute("character_id");
 			const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
 			if (character !is null) {
@@ -72,7 +73,7 @@ class GFLskill : Tracker {
 				}
 			}
 		}
-		if (event.getStringAttribute("key") == "ump9_skill") {
+		if (EventKeyGet == "ump9_skill") {
 			int characterId = event.getIntAttribute("character_id");
 			const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
 			if (character !is null) {
@@ -118,7 +119,7 @@ class GFLskill : Tracker {
 				}
 			}
 		}
-		if (event.getStringAttribute("key") == "repair_fairy"){
+		if (EventKeyGet == "repair_fairy"){
 			int characterId = event.getIntAttribute("character_id");
 			const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
 			if (character !is null) {
@@ -135,12 +136,6 @@ class GFLskill : Tracker {
 				}
 			}
 		}
-
-
-
-
-
-
 
 	}
 }
