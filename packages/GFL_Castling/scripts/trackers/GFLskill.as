@@ -97,7 +97,7 @@ class GFLskill : Tracker {
 					}
 					string sendtext= "白鸮轰鸣击中了"+ affectedNumber +"个敌人";
 					sendPrivateMessage(m_metagame,playerId,sendtext);
-					PlayerfactionId = player.getIntAttribute("faction_id")
+					int PlayerfactionId = player.getIntAttribute("faction_id");
                     string c = 
                         "<command class='create_instance'" +
                         " faction_id='"+ PlayerfactionId +"'" +
@@ -107,7 +107,7 @@ class GFLskill : Tracker {
 				        " character_id='" + characterId + "' />";
                     m_metagame.getComms().send(c);					
 					if (affectedNumber >= 5){
-						Vector3 UMP9_pos=stringToVector3(character.getStringAttribute("position"));
+						Vector3 UMP9_pos = stringToVector3(character.getStringAttribute("position"));
 						string c1 = 
 							"<command class='create_instance'" +
 							" faction_id='"+ PlayerfactionId +"'" +
@@ -119,6 +119,7 @@ class GFLskill : Tracker {
 						playSoundAtLocation(m_metagame,"UMP9_skill_Extra2.wav",PlayerfactionId,UMP9_pos,0.8);						
 					}
 					else {
+						Vector3 UMP9_pos = stringToVector3(character.getStringAttribute("position"));
 						playSoundAtLocation(m_metagame,"UMP9_skill_Extra1.wav",PlayerfactionId,UMP9_pos,0.8);
 					}
 				}
