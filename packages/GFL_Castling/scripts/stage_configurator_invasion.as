@@ -179,8 +179,8 @@ class StageConfiguratorInvasion : StageConfigurator {
 	addStage(setupStage1());          // map2
     addStage(setupStage9());          // map9
     // addStage(setupStage16());         // map8_2
-    // addStage(setupStage4());          // map7
-    // addStage(setupStage15());         // map1_2
+    addStage(setupStage4());          // map7
+    addStage(setupStage15());         // map1_2
     addStage(setupStage12());         // map14
     addStage(setupStage10());         // map10
     addStage(setupStage17());         // map17    
