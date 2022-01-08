@@ -36,7 +36,8 @@ class ManualCall : Tracker {
     //Author: NetherCrow
     //妖精指令
     protected void handleResultEvent(const XmlElement@ event) {
-        if(event.getStringAttribute("key") == "fc_medic"){
+        string EventKeyGet = event.getStringAttribute("key");	
+        if(EventKeyGet == "fc_medic"){
             //_log("getEventFc");
             int characterId = event.getIntAttribute("character_id");
             const XmlElement@ character = getCharacterInfo(m_metagame, characterId);

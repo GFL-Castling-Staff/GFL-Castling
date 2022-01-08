@@ -20,8 +20,9 @@ class GFLskill : Tracker {
 	// --------------------------------------------
 	protected void handleResultEvent(const XmlElement@ event) {
 	
-		//checking if the event was triggered by a rangefinder notify_script		
-		if (event.getStringAttribute("key") == "RO635_skill") {
+		//checking if the event was triggered by a rangefinder notify_script
+		string EventKeyGet = event.getStringAttribute("key");	
+		if (EventKeyGet == "RO635_skill") {
 			int characterId = event.getIntAttribute("character_id");
 			const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
 			
@@ -44,7 +45,7 @@ class GFLskill : Tracker {
 				}
 			}
 		}
-		if (event.getStringAttribute("key") == "SOPMOD_skill") {
+		if (EventKeyGet == "SOPMOD_skill") {
 			int characterId = event.getIntAttribute("character_id");
 			const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
 			if (character !is null) {
@@ -72,7 +73,7 @@ class GFLskill : Tracker {
 				}
 			}
 		}
-		if (event.getStringAttribute("key") == "ump9_skill") {
+		if (EventKeyGet == "ump9_skill") {
 			int characterId = event.getIntAttribute("character_id");
 			const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
 			if (character !is null) {
@@ -96,29 +97,35 @@ class GFLskill : Tracker {
 					}
 					string sendtext= "白鸮轰鸣击中了"+ affectedNumber +"个敌人";
 					sendPrivateMessage(m_metagame,playerId,sendtext);
+					int PlayerfactionId = player.getIntAttribute("faction_id");
                     string c = 
                         "<command class='create_instance'" +
-                        " faction_id='"+ player.getIntAttribute("faction_id") +"'" +
+                        " faction_id='"+ PlayerfactionId +"'" +
                         " instance_class='grenade'" +
                         " instance_key='ump9_stun_grenade.projectile'" +
                         " position='" + grenade_pos.toString() + "'"+
 				        " character_id='" + characterId + "' />";
                     m_metagame.getComms().send(c);					
-					if (affectedNumber >= 7){
-						Vector3 UMP9_pos=stringToVector3(character.getStringAttribute("position"));
+					if (affectedNumber >= 5){
+						Vector3 UMP9_pos = stringToVector3(character.getStringAttribute("position"));
 						string c1 = 
 							"<command class='create_instance'" +
-							" faction_id='"+ player.getIntAttribute("faction_id") +"'" +
+							" faction_id='"+ PlayerfactionId +"'" +
 							" instance_class='grenade'" +
 							" instance_key='ump9_skill_soldier_spawner.projectile'" +
 							" position='" + UMP9_pos.toString() + "'"+
 							" character_id='" + characterId + "' />";
-						m_metagame.getComms().send(c1);			
+						m_metagame.getComms().send(c1);
+						playSoundAtLocation(m_metagame,"UMP9_skill_Extra2.wav",PlayerfactionId,UMP9_pos,0.8);						
+					}
+					else {
+						Vector3 UMP9_pos = stringToVector3(character.getStringAttribute("position"));
+						playSoundAtLocation(m_metagame,"UMP9_skill_Extra1.wav",PlayerfactionId,UMP9_pos,0.8);
 					}
 				}
 			}
 		}
-		if (event.getStringAttribute("key") == "repair_fairy"){
+		if (EventKeyGet == "repair_fairy"){
 			int characterId = event.getIntAttribute("character_id");
 			const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
 			if (character !is null) {
@@ -135,12 +142,6 @@ class GFLskill : Tracker {
 				}
 			}
 		}
-
-
-
-
-
-
 
 	}
 }
