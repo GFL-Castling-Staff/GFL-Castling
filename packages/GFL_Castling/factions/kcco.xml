@@ -283,12 +283,12 @@
 	</soldier>
 
 	<!-- aegis 圣盾军方版本 -->
-	<soldier name="kcco_cerynitis" spawn_score="0.3" copy_from="default_bot">
-		<model filename="sfd_aegis_1.xml" />
+	<soldier name="kcco_aegis" spawn_score="0.3" copy_from="default_bot">
+		<model filename="kccod_aegis_1.xml" />
 		<ai filename="melee.ai" />
 		<resources clear_calls="1"  clear_grenades="1" >
 			<weapon key="sfw_aegis.weapon" enabled="1"/>  
-			<carry_item key="kcco_sg.carry_item" enabled="1" />
+			<carry_item key="kcco_ga.carry_item" enabled="1" />
 	    </resources>
 
 		<attribute_config class="xp">
