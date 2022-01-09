@@ -11,7 +11,7 @@
 	can_shoot_crouching="1"
 	can_shoot_prone="0"
 	class="0"
-   sight_range_modifier="1.8"
+    sight_range_modifier="1.8"
     solt="0" 
 	magazine_size="30" 
 	name="QLZ04" 
@@ -33,7 +33,7 @@
     <animation key="hold_on_wall" ref="1" />
     <animation state_key="walking" animation_key="walking, heavy weapon" />
     <animation state_key="walking_backwards" animation_key="walking backwards, heavy weapon" />
-    <inventory  buy_price="80.0" sell_price="10.0" />
+
 	
 	<!--Sounds-->
 	
