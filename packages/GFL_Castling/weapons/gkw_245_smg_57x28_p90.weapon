@@ -7,19 +7,12 @@
 		class="0"
 		magazine_size="50" 
 		name="P90" 
-		projectile_speed="152.13" 
+		projectile_speed="170.47" 
 		retrigger_time="0.0667" 
 		suppressed="0" 
 		sustained_fire_diminish_rate="1.7" 
 		sustained_fire_grow_step="0.4" />
-
-
-
-
-    
 	
-	
-
     
     <inventory  buy_price="9.0" sell_price="9.0" />
     <sound key="fire" fileref="P90_Fire_FromCODOL.wav" pitch_variety="0.05" volume="0.7" />
@@ -35,16 +28,14 @@
 
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet.projectile">
-        <result class="hit"  kill_probability="1.4" kill_decay_start_time="0.126" kill_decay_end_time="0.4875" />
+        <result class="hit"  kill_probability="1.7" kill_decay_start_time="0.224" kill_decay_end_time="0.374" />
     </projectile>
     
     <stance state_key="running" accuracy="0.85" />
     <stance state_key="walking" accuracy="0.82" />
     <stance state_key="crouch_moving" accuracy="0.9" />
     <stance state_key="prone_moving" accuracy="0.9" />
-
     <stance state_key="standing" accuracy="0.9" />
-
     <stance state_key="prone" accuracy="0.95" />
     
 
