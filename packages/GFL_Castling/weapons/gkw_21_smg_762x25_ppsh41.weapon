@@ -7,18 +7,13 @@
 		class="0"
 		magazine_size="71" 
 		name="PPSH41" 
-		projectile_speed="103.83" 
+		projectile_speed="116.19" 
 		retrigger_time="0.06" 
 		suppressed="0" 
 		sustained_fire_diminish_rate="1.6" 
 		sustained_fire_grow_step="0.6" />
     <inventory  buy_price="5.0" sell_price="5.0" />
   	<animation state_key="hold_casual"			animation_key="dancing, kazachok" />
-
-
-    
-	
-	
 
     
 
@@ -35,17 +30,14 @@
 
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet.projectile">
-        <result class="hit"  kill_probability="1.3" kill_decay_start_time="0.246" kill_decay_end_time="0.9" />
+        <result class="hit"  kill_probability="1.6" kill_decay_start_time="0.549" kill_decay_end_time="0.915" />
     </projectile>
     
     <stance state_key="running" accuracy="0.85" />
     <stance state_key="walking" accuracy="0.9" />
     <stance state_key="crouch_moving" accuracy="0.9" />
     <stance state_key="prone_moving" accuracy="0.9" />
-
     <stance state_key="standing" accuracy="0.96" />
-
     <stance state_key="prone" accuracy="1" />
-    
 
 </weapon>
