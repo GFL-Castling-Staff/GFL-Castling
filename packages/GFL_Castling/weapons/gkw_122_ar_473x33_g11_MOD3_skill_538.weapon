@@ -3,18 +3,17 @@
 
     <specification 
 	accuracy_factor="0.98" 
-    last_burst_retrigger_time="-1"
-	barrel_offset="-0.1" 
+	barrel_offset="0.23" 
 	class="4"
-	magazine_size="50" 
+	magazine_size="45" 
 	name="G11 (MOD3)-[Courage Seeking Rex Rabbit]-[Stance of the Assaulter]" 
 	projectile_speed="230.81" 
-	retrigger_time="0.02" 
+	retrigger_time="0.01" 
 	suppressed="0" 
-    sustained_fire_diminish_rate="0.9" 
-    sustained_fire_grow_step="0.60"
-    projectiles_per_shot="2"
+	sustained_fire_diminish_rate="2.2" 
+	sustained_fire_grow_step="0.5"
 	burst_shots="3"
+	last_burst_retrigger_time="0.12"
 />
 
 
@@ -41,7 +40,7 @@
 
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet.projectile">
-        <result class="hit"  kill_probability="1.5" kill_decay_start_time="0.976" kill_decay_end_time="1.46" />
+        <result class="hit"  kill_probability="1.9" kill_decay_start_time="0.976" kill_decay_end_time="1.46" />
     </projectile>
     
     <stance state_key="running" accuracy="0.3" />
