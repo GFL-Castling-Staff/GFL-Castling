@@ -45,6 +45,7 @@
     <!-- <weak_hand_hold offset="0.1" /> -->
     <projectile file="bullet_sf.projectile">
         <result class="blast" radius="2.0" damage="2.0" decal="1" push="0.05" character_state="death" faction_compare="not_equal"/>
+        <trail probability="1.0" key="red_nemeum" />
     </projectile>
     <!-- state modifiers for weapons are connected to shield impact events -->
     <!-- <shield offset="0 0 0.2" extent="0.4 1.6 0.6" /> -->
