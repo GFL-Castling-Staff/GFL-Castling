@@ -176,6 +176,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 	// ------------------------------------------------------------------------------------------------
 	protected void setupNormalStages() {
 	addStage(setupStage101());        // mapnana
+	addStage(setupStage102());
 	addStage(setupStage7());          // map6
 	addStage(setupStage1());          // map2
     addStage(setupStage9());          // map9
@@ -499,15 +500,15 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 		stage.m_maxSoldiers = 18 * 14;
 		stage.m_playerAiCompensation = 3;                                     // was 4 (test4)     
-    stage.m_playerAiReduction = 0;                                            // was 1 (test3)    
+		stage.m_playerAiReduction = 0;                                            // was 1 (test3)    
 
 		stage.m_soldierCapacityVariance = 0.4; // map1 is a big map; using high variance helps keep the attack group not growing super large when more bases are captured
 
 		stage.addTracker(PeacefulLastBase(m_metagame, 0));
 		stage.addTracker(CommsCapacityHandler(m_metagame));
 
-    stage.m_minRandomCrates = 3; 
-    stage.m_maxRandomCrates = 5;
+		stage.m_minRandomCrates = 3; 
+		stage.m_maxRandomCrates = 5;
 
 		{
 			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0));
@@ -537,6 +538,49 @@ class StageConfiguratorInvasion : StageConfigurator {
 			addFactionResourceElements(command, "vehicle", array<string> = {"aa_emplacement.vehicle"}, true);
 
 			stage.m_extraCommands.insertLast(command);
+		}
+
+		// metadata
+		stage.m_primaryObjective = "capture";
+
+		setDefaultAttackBreakTimes(stage);
+		return stage;
+	}
+
+	protected Stage@ setupStage102() {
+		Stage@ stage = createStage();
+		stage.m_mapInfo.m_name = "ftg test";
+		stage.m_mapInfo.m_path = "media/packages/GFL_Castling/maps/map102";
+		stage.m_mapInfo.m_id = "map102";
+
+		stage.m_maxSoldiers = 18 * 14;
+		stage.m_playerAiCompensation = 3;                                     // was 4 (test4)     
+		stage.m_playerAiReduction = 0;                                            // was 1 (test3)    
+
+		stage.m_soldierCapacityVariance = 0.4; // map1 is a big map; using high variance helps keep the attack group not growing super large when more bases are captured
+
+		stage.addTracker(PeacefulLastBase(m_metagame, 0));
+		stage.addTracker(CommsCapacityHandler(m_metagame));
+
+		stage.m_minRandomCrates = 3; 
+		stage.m_maxRandomCrates = 5;
+
+		{
+			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0));
+			f.m_overCapacity = 6;                                                   
+			f.m_bases = 1;
+			f.m_capacityMultiplier = 0.79;                                          // was 0.81 in 1.65 
+			stage.m_factions.insertLast(f);
+		}
+		{
+			Faction f(getFactionConfigs()[1], createCommanderAiCommand(1));
+			f.m_overCapacity = 60;                                                  // was 50 (test2)   
+			stage.m_factions.insertLast(f);
+		}
+		{
+			Faction f(getFactionConfigs()[2], createCommanderAiCommand(2));
+			f.m_overCapacity = 60;                                                  // was 50 (test2)      
+			stage.m_factions.insertLast(f);
 		}
 
 		// metadata
