@@ -176,7 +176,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 	// ------------------------------------------------------------------------------------------------
 	protected void setupNormalStages() {
 	addStage(setupStage101());        // mapnana
-	addStage(setupStage102());
+	//addStage(setupStage102());	  // mapftg
 	addStage(setupStage7());          // map6
 	addStage(setupStage1());          // map2
     addStage(setupStage9());          // map9
@@ -250,12 +250,10 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.m_mapInfo.m_name = "Uprising";
 		stage.m_mapInfo.m_path = "media/packages/GFL_Castling/maps/uprising";
 		stage.m_mapInfo.m_id = "map101";
-		
-		stage.m_includeLayers.insertLast("layer1.invasion"); 
 
 		stage.addTracker(PeacefulLastBase(m_metagame, 0));
 		stage.addTracker(CommsCapacityHandler(m_metagame));
-		stage.m_maxSoldiers = 14 * 10;                                             // was 12*7 in 1.65, 1 base added
+		stage.m_maxSoldiers = 14 * 16;                                             // was 12*7 in 1.65, 1 base added
 
 		stage.m_soldierCapacityVariance = 0.4;
 		stage.m_playerAiCompensation = 4.5;                                         // was 4 (1.82)
@@ -273,8 +271,8 @@ class StageConfiguratorInvasion : StageConfigurator {
 		}
 		{
 			Faction f(getFactionConfigs()[1], createCommanderAiCommand(1));
-			f.m_overCapacity = 60;                                               
-			f.m_capacityOffset = 8;                                                 
+			f.m_overCapacity = 80;                                               
+			f.m_capacityOffset = 20;                                                 
 			stage.m_factions.insertLast(f);                                         
 		}
 		
