@@ -175,6 +175,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 	// ------------------------------------------------------------------------------------------------
 	protected void setupNormalStages() {
+	addStage(setupStage101());        // mapnana
 	addStage(setupStage7());          // map6
 	addStage(setupStage1());          // map2
     addStage(setupStage9());          // map9
@@ -243,6 +244,48 @@ class StageConfiguratorInvasion : StageConfigurator {
 	}
 	
 	// ------------------------------------------------------------------------------------------------
+	protected Stage@ setupStage101() {
+		Stage@ stage = createStage();
+		stage.m_mapInfo.m_name = "Uprising";
+		stage.m_mapInfo.m_path = "media/packages/GFL_Castling/maps";
+		stage.m_mapInfo.m_id = "map101";
+		
+		stage.m_includeLayers.insertLast("layer1.invasion"); 
+
+		stage.addTracker(PeacefulLastBase(m_metagame, 0));
+		stage.addTracker(CommsCapacityHandler(m_metagame));
+		stage.m_maxSoldiers = 14 * 10;                                             // was 12*7 in 1.65, 1 base added
+
+		stage.m_soldierCapacityVariance = 0.4;
+		stage.m_playerAiCompensation = 4.5;                                         // was 4 (1.82)
+        stage.m_playerAiReduction = 0;                                          // was 2 (test3)    
+
+		stage.m_minRandomCrates = 2; 
+		stage.m_maxRandomCrates = 4;
+
+		{
+			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0));                                                  
+			f.m_capacityOffset = 0; 
+			f.m_capacityMultiplier = 1.0;
+			f.m_bases = 1;
+			stage.m_factions.insertLast(f);
+		}
+		{
+			Faction f(getFactionConfigs()[1], createCommanderAiCommand(1));
+			f.m_overCapacity = 60;                                               
+			f.m_capacityOffset = 8;                                                 
+			stage.m_factions.insertLast(f);                                         
+		}
+		
+
+
+		// metadata
+		stage.m_primaryObjective = "capture";
+
+		setDefaultAttackBreakTimes(stage);
+		// setReduceDefenseForFinalAttack(stage, 0.1); // use this for final attack boost if needed for friendlies
+		return stage;
+	}
 	protected Stage@ setupStage1() {
 		Stage@ stage = createStage();
 		stage.m_mapInfo.m_name = "Keepsake Bay";
@@ -301,17 +344,17 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.m_mapInfo.m_path = "media/packages/vanilla.winter/maps/map4";
 		stage.m_mapInfo.m_id = "map4";
 
-    stage.m_fogOffset = 20.0;    
-    stage.m_fogRange = 50.0;     
+		stage.m_fogOffset = 20.0;    
+		stage.m_fogRange = 50.0;     
 
 		stage.addTracker(PeacefulLastBase(m_metagame, 0));
 		stage.addTracker(CommsCapacityHandler(m_metagame));
 		stage.m_maxSoldiers = 17 * 6;
 		stage.m_playerAiCompensation = 4;                                         // was 5 (test4)
-    stage.m_playerAiReduction = 0;                                            // was 2 (test3)
+		stage.m_playerAiReduction = 0;                                            // was 2 (test3)
 
-    stage.m_minRandomCrates = 2; 
-    stage.m_maxRandomCrates = 3;    
+		stage.m_minRandomCrates = 2; 
+		stage.m_maxRandomCrates = 3;    
 
 		{
 			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0));
@@ -321,7 +364,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		{
 			Faction f(getFactionConfigs()[1], createCommanderAiCommand(1));
 			f.m_overCapacity = 40;                                              // was 30 (test2)
-      f.m_capacityOffset = 5;                                                // was 0 in 1.65
+			f.m_capacityOffset = 5;                                                // was 0 in 1.65
 			stage.m_factions.insertLast(f); 
 		}
 
@@ -1261,14 +1304,14 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 		stage.m_maxSoldiers = 10 * 20;                                             
 		stage.m_playerAiCompensation = 4;                                         
-    stage.m_playerAiReduction = 0;                                              
-    stage.m_soldierCapacityModel = "constant";       
+		stage.m_playerAiReduction = 0;                                              
+		stage.m_soldierCapacityModel = "constant";       
 
-	stage.addTracker(Spawner(m_metagame, 3, Vector3(506,0,465), 50, "default"));
-	
-    
-    stage.m_minRandomCrates = 0; 
-    stage.m_maxRandomCrates = 1;
+		stage.addTracker(Spawner(m_metagame, 3, Vector3(506,0,465), 50, "default"));
+		
+		
+		stage.m_minRandomCrates = 0; 
+		stage.m_maxRandomCrates = 1;
          
 		stage.m_defenseWinTime = 800; 
 		stage.m_defenseWinTimeMode = "custom";
@@ -1369,7 +1412,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.m_maxSoldiers = 110;   // 100 in 0.99.4
 
 		stage.m_playerAiCompensation = 5;                                       // was 3 (test2)
-    stage.m_playerAiReduction = 0;                                              
+		stage.m_playerAiReduction = 0;                                              
 
 		stage.m_minRandomCrates = 1; 
 		stage.m_maxRandomCrates = 3;
