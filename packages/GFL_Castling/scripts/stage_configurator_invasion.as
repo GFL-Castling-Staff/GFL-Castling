@@ -247,7 +247,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 	protected Stage@ setupStage101() {
 		Stage@ stage = createStage();
 		stage.m_mapInfo.m_name = "Uprising";
-		stage.m_mapInfo.m_path = "media/packages/GFL_Castling/maps";
+		stage.m_mapInfo.m_path = "media/packages/GFL_Castling/maps/uprising";
 		stage.m_mapInfo.m_id = "map101";
 		
 		stage.m_includeLayers.insertLast("layer1.invasion"); 
