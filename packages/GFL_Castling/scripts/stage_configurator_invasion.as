@@ -176,7 +176,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 	// ------------------------------------------------------------------------------------------------
 	protected void setupNormalStages() {
 	addStage(setupStage101());        // mapnana
-	addStage(setupStage102());
+	//addStage(setupStage102());	  // mapftg
 	addStage(setupStage7());          // map6
 	addStage(setupStage1());          // map2
     addStage(setupStage9());          // map9
