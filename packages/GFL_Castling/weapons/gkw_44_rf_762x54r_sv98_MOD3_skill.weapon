@@ -9,12 +9,10 @@
 	accuracy_factor="1.0" 
 	sustained_fire_grow_step="1" 
 	sustained_fire_diminish_rate="2.2" 
-	magazine_size="1" 
-	can_shoot_standing="1" 
+	magazine_size="3" 
 	suppressed="1" 
 	name="SV-98 (MOD3)-skill-[Shadowy Savior]" 
 	class="2" 
-	reload_one_at_a_time="0" 
 	sight_range_modifier="3" 
 	projectile_speed="174.47" 
 	barrel_offset="0.4" />
@@ -50,7 +48,7 @@
 	
 	<!--Ballistics-->
 	
-    <projectiles_per_shot value="1" />
+
     <weak_hand_hold offset="0.3" />
     <projectile file="bullet.projectile">
         <result class="blast" 
