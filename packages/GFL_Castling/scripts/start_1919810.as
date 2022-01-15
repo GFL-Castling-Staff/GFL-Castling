@@ -1,6 +1,7 @@
 // declare include paths
 #include "path://media/packages/vanilla/scripts"
 #include "path://media/packages/GFL_Castling/scripts"
+#include "path://media/packages/GFLC_Map/scripts"
 #include "gamemode_invasion.as"
 
 // --------------------------------------------
@@ -30,8 +31,8 @@ void main(dictionary@ inputData) {
 
         array<string> overlays = {
 			"media/packages/invasion",
-			"media/packages/GFL_Castling"
-                
+			"media/packages/GFL_Castling",
+            "media/packages/GFLC_Map"
         };
         settings.m_overlayPaths = overlays;
 

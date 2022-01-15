@@ -331,6 +331,7 @@ class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 		addTracker(GFLskill(this));
 		addTracker(kill_event(this));
 		addTracker(ManualCall(this));
+		addTracker(BanManager(this,true));
 	}
 
 	// --------------------------------------------
