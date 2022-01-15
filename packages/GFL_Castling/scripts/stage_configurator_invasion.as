@@ -266,7 +266,6 @@ class StageConfiguratorInvasion : StageConfigurator {
 			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0));                                                  
 			f.m_capacityOffset = 0; 
 			f.m_capacityMultiplier = 1.0;
-			f.m_bases = 1;
 			stage.m_factions.insertLast(f);
 		}
 		{
@@ -1572,7 +1571,7 @@ class StageConfiguratorInvasion : StageConfigurator {
     stage.m_fogOffset = 20.0;    
     stage.m_fogRange = 50.0; 
 
-		stage.m_maxSoldiers = 70;                                               // was 80 in 1.70
+		stage.m_maxSoldiers = 100;                                               // was 80 in 1.70
 		stage.m_playerAiCompensation = 3;                                       // was 5 (test4)
     stage.m_playerAiReduction = 0;                                              // wasn't set in 1.65, thus 0
     
