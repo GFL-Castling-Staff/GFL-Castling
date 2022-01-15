@@ -248,7 +248,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 	protected Stage@ setupStage101() {
 		Stage@ stage = createStage();
 		stage.m_mapInfo.m_name = "Uprising";
-		stage.m_mapInfo.m_path = "media/packages/GFL_Castling/maps/uprising";
+		stage.m_mapInfo.m_path = "media/packages/GFLC_Map/maps/uprising";
 		stage.m_mapInfo.m_id = "map101";
 
 		stage.addTracker(PeacefulLastBase(m_metagame, 0));
@@ -270,7 +270,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 			stage.m_factions.insertLast(f);
 		}
 		{
-			Faction f(getFactionConfigs()[1], createCommanderAiCommand(1));
+			Faction f(getFactionConfigs()[1], createCommanderAiCommand(1,0.5,0.2));
 			f.m_overCapacity = 80;                                               
 			f.m_capacityOffset = 20;                                                 
 			stage.m_factions.insertLast(f);                                         
