@@ -42,7 +42,7 @@ class ServerHelper : Tracker {
                 int faction= player.getIntAttribute("faction_id");
                 sendPrivateMessageKey(m_metagame, senderId, "Send Alert Success",dictionary());
                 playSoundAtLocation(m_metagame,"objective_priority.wav",faction,pos);
-                sendPrivateMessageKey(m_metagame, playerId, (sender+"ServerQuickChatAlert001",dictionary()));
+                sendPrivateMessageKey(m_metagame, playerId, (sender+"ServerQuickChatAlert001"),dictionary());
                 sendPrivateMessageKey(m_metagame, playerId, "ServerQuickChatAlert002",dictionary());
             }
         }
@@ -56,7 +56,7 @@ class ServerHelper : Tracker {
                 int faction= player.getIntAttribute("faction_id");
                 sendPrivateMessageKey(m_metagame, senderId, "Send Alert Success",dictionary());
                 playSoundAtLocation(m_metagame,"objective_priority.wav",faction,pos);
-                sendPrivateMessageKey(m_metagame, playerId, (sender+"ServerQuickChatAlert003",dictionary()));
+                sendPrivateMessageKey(m_metagame, playerId, (sender+"ServerQuickChatAlert003"),dictionary());
                 sendPrivateMessageKey(m_metagame, playerId, "ServerQuickChatAlert002",dictionary());
             }
         }
@@ -70,7 +70,7 @@ class ServerHelper : Tracker {
                 int faction= player.getIntAttribute("faction_id");
                 sendPrivateMessageKey(m_metagame, senderId, "Send Alert Success",dictionary());
                 playSoundAtLocation(m_metagame,"objective_priority.wav",faction,pos);
-                sendPrivateMessageKey(m_metagame, playerId, (sender+"ServerQuickChatAlert004",dictionary()));
+                sendPrivateMessageKey(m_metagame, playerId, (sender+"ServerQuickChatAlert004"),dictionary());
                 sendPrivateMessageKey(m_metagame, playerId, "ServerQuickChatAlert002",dictionary());
             }
         }
