@@ -41,6 +41,7 @@
 #include "GFLskill.as"
 #include "kill_event.as"
 #include "ManualCall.as"
+#include "ServerHelper.as"
 
 // --------------------------------------------
 class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
@@ -320,17 +321,18 @@ class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 	}
 
 	// --------------------------------------------
-	protected void setupExperimentalFeatures() {
+	protected void setupExperimentalFeatures() {s
 		addTracker(GpsLaptop(this));
 		addTracker(EmpGrenade(this));
 		addTracker(RepairCrane(this));
 		addTracker(A10GunRun(this));
 		addTracker(AC130GunRun(this));        
-		addTracker(SquadEquipmentKit(this)); 
+		addTracker(SquadEquipmentKit(this)); s
 		addTracker(RangeFinder(this)); 
 		addTracker(GFLskill(this));
 		addTracker(kill_event(this));
 		addTracker(ManualCall(this));
+		addTracker(ServerHelper(this));
 		addTracker(BanManager(this,true));
 	}
 
