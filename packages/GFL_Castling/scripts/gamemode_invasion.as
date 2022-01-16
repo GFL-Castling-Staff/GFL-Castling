@@ -321,13 +321,13 @@ class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 	}
 
 	// --------------------------------------------
-	protected void setupExperimentalFeatures() {s
+	protected void setupExperimentalFeatures() {
 		addTracker(GpsLaptop(this));
 		addTracker(EmpGrenade(this));
 		addTracker(RepairCrane(this));
 		addTracker(A10GunRun(this));
 		addTracker(AC130GunRun(this));        
-		addTracker(SquadEquipmentKit(this)); s
+		addTracker(SquadEquipmentKit(this)); 
 		addTracker(RangeFinder(this)); 
 		addTracker(GFLskill(this));
 		addTracker(kill_event(this));
