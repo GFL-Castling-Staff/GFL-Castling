@@ -1,0 +1,78 @@
+#include "tracker.as"
+#include "helpers.as"
+#include "admin_manager.as"
+#include "log.as"
+#include "query_helpers.as"
+#include "generic_call_task.as"
+#include "task_sequencer.as"
+#include "GFLhelpers.as"
+
+
+class ServerHelper : Tracker {
+	protected Metagame@ m_metagame;
+
+	// --------------------------------------------
+	BasicCommandHandler(Metagame@ metagame) {
+		@m_metagame = @metagame;
+	}
+	
+	// ----------------------------------------------------
+
+	protected void handleChatEvent(const XmlElement@ event) {
+
+        string message = event.getStringAttribute("message");
+		if (!startsWith(message, "/")) {
+			return;
+		}
+
+        
+        string sender = event.getStringAttribute("player_name");
+		int senderId = event.getIntAttribute("player_id");
+
+        if (!m_metagame.getAdminManager().isAdmin(sender, senderId) && !m_metagame.getModeratorManager().isModerator(sender, senderId)) {
+			return;
+		}
+
+        if(checkCommand(message,"alertgrab")){
+            const XmlElement@ player = getPlayerByIdOrNameFromCommand(m_metagame, message);
+            if (player !is null) {
+                int playerId = player.getIntAttribute("player_id");
+                string playerName = player.getStringAttribute("name");
+                string pos= player.getStringAttribute("position");
+                int faction= player.getIntAttribute("faction_id");
+                sendPrivateMessageKey(m_metagame, senderId, "Send Alert Success");
+                playSoundAtLocation(m_metagame,"objective_priority.wav",faction,pos);
+                sendPrivateMessageKey(m_metagame, playerId, (sender+"ServerQuickChatAlert001"));
+                sendPrivateMessageKey(m_metagame, playerId, "ServerQuickChatAlert002");
+            }
+        }
+
+        if(checkCommand(message,"alerttk")){
+            const XmlElement@ player = getPlayerByIdOrNameFromCommand(m_metagame, message);
+            if (player !is null) {
+                int playerId = player.getIntAttribute("player_id");
+                string playerName = player.getStringAttribute("name");
+                string pos= player.getStringAttribute("position");
+                int faction= player.getIntAttribute("faction_id");
+                sendPrivateMessageKey(m_metagame, senderId, "Send Alert Success");
+                playSoundAtLocation(m_metagame,"objective_priority.wav",faction,pos);
+                sendPrivateMessageKey(m_metagame, playerId, (sender+"ServerQuickChatAlert003"));
+                sendPrivateMessageKey(m_metagame, playerId, "ServerQuickChatAlert002");
+            }
+        }
+
+        if(checkCommand(message,"alert")){
+            const XmlElement@ player = getPlayerByIdOrNameFromCommand(m_metagame, message);
+            if (player !is null) {
+                int playerId = player.getIntAttribute("player_id");
+                string playerName = player.getStringAttribute("name");
+                string pos= player.getStringAttribute("position");
+                int faction= player.getIntAttribute("faction_id");
+                sendPrivateMessageKey(m_metagame, senderId, "Send Alert Success");
+                playSoundAtLocation(m_metagame,"objective_priority.wav",faction,pos);
+                sendPrivateMessageKey(m_metagame, playerId, (sender+"ServerQuickChatAlert004"));
+                sendPrivateMessageKey(m_metagame, playerId, "ServerQuickChatAlert002");
+            }
+        }
+    }
+}
