@@ -40,6 +40,8 @@ class ServerHelper : Tracker {
                 string playerName = player.getStringAttribute("name");
                 string pos= player.getStringAttribute("position");
                 int faction= player.getIntAttribute("faction_id");
+                dictionary a;
+				a["%name"] = sender;
                 sendPrivateMessageKey(m_metagame, senderId, "Send Alert Success",dictionary());
                 playSoundAtLocation(m_metagame,"objective_priority.wav",faction,pos);
                 sendPrivateMessageKey(m_metagame, playerId, "ServerQuickChatAlert001",a);
@@ -55,7 +57,7 @@ class ServerHelper : Tracker {
                 string pos= player.getStringAttribute("position");
                 int faction= player.getIntAttribute("faction_id");
                 dictionary a;
-				a["%player_name"] = sender;
+				a["%name"] = sender;
                 sendPrivateMessageKey(m_metagame, senderId, "Send Alert Success",dictionary());
                 playSoundAtLocation(m_metagame,"objective_priority.wav",faction,pos);
                 sendPrivateMessageKey(m_metagame, playerId, "ServerQuickChatAlert003",a);
@@ -63,13 +65,15 @@ class ServerHelper : Tracker {
             }
         }
 
-        if(checkCommand(message,"alert")){
+        if(checkCommand(message,"alertother")){
             const XmlElement@ player = getPlayerByIdOrNameFromCommand(m_metagame, message,false);
             if (player !is null) {
                 int playerId = player.getIntAttribute("player_id");
                 string playerName = player.getStringAttribute("name");
                 string pos= player.getStringAttribute("position");
                 int faction= player.getIntAttribute("faction_id");
+                dictionary a;
+				a["%name"] = sender;
                 sendPrivateMessageKey(m_metagame, senderId, "Send Alert Success",dictionary());
                 playSoundAtLocation(m_metagame,"objective_priority.wav",faction,pos);
                 sendPrivateMessageKey(m_metagame, playerId, "ServerQuickChatAlert004",a);
