@@ -12,7 +12,7 @@ class ServerHelper : Tracker {
 	protected Metagame@ m_metagame;
 
 	// --------------------------------------------
-	BasicCommandHandler(Metagame@ metagame) {
+	ServerHelper(Metagame@ metagame) {
 		@m_metagame = @metagame;
 	}
 	
@@ -34,45 +34,56 @@ class ServerHelper : Tracker {
 		}
 
         if(checkCommand(message,"alertgrab")){
-            const XmlElement@ player = getPlayerByIdOrNameFromCommand(m_metagame, message);
+            const XmlElement@ player = getPlayerByIdOrNameFromCommand(m_metagame, message,false);
             if (player !is null) {
                 int playerId = player.getIntAttribute("player_id");
                 string playerName = player.getStringAttribute("name");
                 string pos= player.getStringAttribute("position");
                 int faction= player.getIntAttribute("faction_id");
-                sendPrivateMessageKey(m_metagame, senderId, "Send Alert Success");
+                sendPrivateMessageKey(m_metagame, senderId, "Send Alert Success",dictionary());
                 playSoundAtLocation(m_metagame,"objective_priority.wav",faction,pos);
-                sendPrivateMessageKey(m_metagame, playerId, (sender+"ServerQuickChatAlert001"));
-                sendPrivateMessageKey(m_metagame, playerId, "ServerQuickChatAlert002");
+                sendPrivateMessageKey(m_metagame, playerId, (sender+"ServerQuickChatAlert001",dictionary()));
+                sendPrivateMessageKey(m_metagame, playerId, "ServerQuickChatAlert002",dictionary());
             }
         }
 
         if(checkCommand(message,"alerttk")){
-            const XmlElement@ player = getPlayerByIdOrNameFromCommand(m_metagame, message);
+            const XmlElement@ player = getPlayerByIdOrNameFromCommand(m_metagame, message,false);
             if (player !is null) {
                 int playerId = player.getIntAttribute("player_id");
                 string playerName = player.getStringAttribute("name");
                 string pos= player.getStringAttribute("position");
                 int faction= player.getIntAttribute("faction_id");
-                sendPrivateMessageKey(m_metagame, senderId, "Send Alert Success");
+                sendPrivateMessageKey(m_metagame, senderId, "Send Alert Success",dictionary());
                 playSoundAtLocation(m_metagame,"objective_priority.wav",faction,pos);
-                sendPrivateMessageKey(m_metagame, playerId, (sender+"ServerQuickChatAlert003"));
-                sendPrivateMessageKey(m_metagame, playerId, "ServerQuickChatAlert002");
+                sendPrivateMessageKey(m_metagame, playerId, (sender+"ServerQuickChatAlert003",dictionary()));
+                sendPrivateMessageKey(m_metagame, playerId, "ServerQuickChatAlert002",dictionary());
             }
         }
 
         if(checkCommand(message,"alert")){
-            const XmlElement@ player = getPlayerByIdOrNameFromCommand(m_metagame, message);
+            const XmlElement@ player = getPlayerByIdOrNameFromCommand(m_metagame, message,false);
             if (player !is null) {
                 int playerId = player.getIntAttribute("player_id");
                 string playerName = player.getStringAttribute("name");
                 string pos= player.getStringAttribute("position");
                 int faction= player.getIntAttribute("faction_id");
-                sendPrivateMessageKey(m_metagame, senderId, "Send Alert Success");
+                sendPrivateMessageKey(m_metagame, senderId, "Send Alert Success",dictionary());
                 playSoundAtLocation(m_metagame,"objective_priority.wav",faction,pos);
-                sendPrivateMessageKey(m_metagame, playerId, (sender+"ServerQuickChatAlert004"));
-                sendPrivateMessageKey(m_metagame, playerId, "ServerQuickChatAlert002");
+                sendPrivateMessageKey(m_metagame, playerId, (sender+"ServerQuickChatAlert004",dictionary()));
+                sendPrivateMessageKey(m_metagame, playerId, "ServerQuickChatAlert002",dictionary());
             }
         }
     }
+
+    bool hasEnded() const {
+		// always on
+		return false;
+	}
+
+	// --------------------------------------------
+	bool hasStarted() const {
+		// always on
+		return true;
+	}
 }
