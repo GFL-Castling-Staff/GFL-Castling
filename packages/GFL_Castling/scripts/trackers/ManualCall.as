@@ -57,7 +57,7 @@ class ManualCall : Tracker {
                     // }
                     if (player.hasAttribute("aim_target")) {
                         Vector3 target = stringToVector3(player.getStringAttribute("aim_target"));
-                        Vector3 height = Vector3(0,20,0);
+                        Vector3 height = Vector3(0,50,0);
                         target = target.add(height);
                         string Callposition = target.toString();
                         int Faction= character.getIntAttribute("faction_id");
