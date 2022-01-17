@@ -67,7 +67,7 @@ class ManualCall : Tracker {
                         " position='" + target.toString() + "' />";
                         //m_metagame.getComms().send(c);
                         CallTaskArray.insertLast(ManualCallTask(characterId,c,8.0,Faction,target,"medic_call"));
-                        _log("Queue+1");
+                        //_log("Queue+1");
                         _log("QueueLegeth:"+CallTaskArray.length());
                         sendFactionMessageKey(m_metagame,Faction,"Request trauma team support!");
                         sendFactionMessageKey(m_metagame,Faction,"Receive, transport aircraft is maneuvering");
