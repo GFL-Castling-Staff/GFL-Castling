@@ -12,6 +12,7 @@ class ManualCallTask{
     string Callkey;
     int m_factions;
     Vector3 m_pos;
+    string CallType;
 
     ManualCallTask(int characterId,string command,float time,int faction,Vector3 position,string callType)
 	{
@@ -46,7 +47,7 @@ class ManualCall : Tracker {
                 int playerId = character.getIntAttribute("player_id");
                 const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
                 if(player !is null){
-                    if (CallTaskArray.length()> 3){
+                    if (CallTaskArray.length()>= 3){
                         sendPrivateMessageKey(m_metagame,playerId,"Fairy Command System is overload, please try again later.");
                         addItemInBackpack(m_metagame,characterId,"weapon","reinforcement_fairy_medic.weapon");
                         return;
@@ -66,6 +67,8 @@ class ManualCall : Tracker {
                         " position='" + target.toString() + "' />";
                         //m_metagame.getComms().send(c);
                         CallTaskArray.insertLast(ManualCallTask(characterId,c,8.0,Faction,target,"medic_call"));
+                        _log("Queue+1");
+                        _log("QueueLegeth:"+CallTaskArray.length());
                         sendFactionMessageKey(m_metagame,Faction,"Request trauma team support!");
                         sendFactionMessageKey(m_metagame,Faction,"Receive, transport aircraft is maneuvering");
                         //_log("Add Call Task Success");
@@ -113,7 +116,7 @@ class ManualCall : Tracker {
 			CallTaskArray[0].m_time -= time;
 			if(CallTaskArray[0].m_time < 0.0)
 			{
-                if(CallTaskArray[0].CallType="medic_call"){
+                if(CallTaskArray[0].CallType=="medic_call"){
                     playSoundAtLocation(m_metagame,"osprey.wav",CallTaskArray[0].m_factions,CallTaskArray[0].m_pos,7.0f);
                     m_metagame.getComms().send(CallTaskArray[0].Callkey);
                     sendFactionMessageKey(m_metagame,CallTaskArray[0].m_factions,"Echelon enter the battlefield");
