@@ -13,13 +13,14 @@ class ManualCallTask{
     int m_factions;
     Vector3 m_pos;
 
-    ManualCallTask(int characterId,string command,float time,int faction,Vector3 position)
+    ManualCallTask(int characterId,string command,float time,int faction,Vector3 position,string callType)
 	{
 		m_characterId = characterId;
 		m_time = time;
         m_factions =faction;
         m_pos = position;
 		Callkey = command;
+        CallType = callType;
 	}
 }
 
@@ -45,16 +46,11 @@ class ManualCall : Tracker {
                 int playerId = character.getIntAttribute("player_id");
                 const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
                 if(player !is null){
-                    // if (player.hasAttribute("aim_target")) {
-                    //     Vector3 target = stringToVector3(player.getStringAttribute("aim_target"));
-                    //     string c = 
-                    //     "<command class='create_call'" +
-                    //     " faction_id='"+ character.getIntAttribute("faction_id") +"'" +
-                    //     " key='gk_medic.call'" +
-                    //     " character_id='" + characterId +"'" +
-                    //     " position='" + target.toString() + "' />";
-                    //     m_metagame.getComms().send(c);
-                    // }
+                    if (CallTaskArray.length()> 3){
+                        sendPrivateMessageKey(m_metagame,playerId,"Fairy Command System is overload, please try again later.");
+                        addItemInBackpack(m_metagame,characterId,"weapon","reinforcement_fairy_medic.weapon");
+                        return;
+                    }
                     if (player.hasAttribute("aim_target")) {
                         Vector3 target = stringToVector3(player.getStringAttribute("aim_target"));
                         Vector3 height = Vector3(0,50,0);
@@ -69,14 +65,46 @@ class ManualCall : Tracker {
                         " character_id='" + characterId +"'" +
                         " position='" + target.toString() + "' />";
                         //m_metagame.getComms().send(c);
-                        CallTaskArray.insertLast(ManualCallTask(characterId,c,8.0,Faction,target));
-                        sendFactionMessage(m_metagame,Faction,"Request trauma team support!");
-                        sendFactionMessage(m_metagame,Faction,"Receive, transport aircraft is maneuvering");
+                        CallTaskArray.insertLast(ManualCallTask(characterId,c,8.0,Faction,target,"medic_call"));
+                        sendFactionMessageKey(m_metagame,Faction,"Request trauma team support!");
+                        sendFactionMessageKey(m_metagame,Faction,"Receive, transport aircraft is maneuvering");
                         //_log("Add Call Task Success");
                     }
                 }
             }
         }
+        // if(EventKeyGet == "fc_medic"){
+        //     int characterId = event.getIntAttribute("character_id");
+        //     const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+        //     if (character !is null) {
+        //         int playerId = character.getIntAttribute("player_id");
+        //         const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+        //         if (CallTaskArray.length()> 3){
+        //             sendPrivateMessageKey(m_metagame,playerId,"Fairy Command System is overload, please try again later.");
+        //             addItemInBackpack(m_metagame,characterId,"weapon","reinforcement_fairy_medic.weapon");
+        //             return;
+        //         }
+        //         if(player !is null){
+        //             if (player.hasAttribute("aim_target")) {
+        //                 Vector3 target = stringToVector3(player.getStringAttribute("aim_target"));
+        //                 Vector3 height = Vector3(0,50,0);
+        //                 target = target.add(height);
+        //                 string Callposition = target.toString();
+        //                 int Faction= character.getIntAttribute("faction_id");
+        //                 string c = 
+        //                 "<command class='create_instance'" +
+        //                 " faction_id='"+ Faction +"'" +
+        //                 " instance_class='vehicle'" +
+        //                 " instance_key='medic_landing.vehicle' " +
+        //                 " character_id='" + characterId +"'" +
+        //                 " position='" + target.toString() + "' />";
+        //                 CallTaskArray.insertLast(ManualCallTask(characterId,c,8.0,Faction,target,"medic_call"));
+        //                 sendFactionMessageKey(m_metagame,Faction,"Request trauma team support!");
+        //                 sendFactionMessageKey(m_metagame,Faction,"Receive, transport aircraft is maneuvering");
+        //             }
+        //         }
+        //     }
+        // }
     }
 
     void update(float time) {
@@ -85,11 +113,14 @@ class ManualCall : Tracker {
 			CallTaskArray[0].m_time -= time;
 			if(CallTaskArray[0].m_time < 0.0)
 			{
-                playSoundAtLocation(m_metagame,"osprey.wav",CallTaskArray[0].m_factions,CallTaskArray[0].m_pos,7.0f);
-                m_metagame.getComms().send(CallTaskArray[0].Callkey);
-                sendFactionMessage(m_metagame,CallTaskArray[0].m_factions,"Echelon enter the battlefield");
-                //_log("excuteCallnow");
-				CallTaskArray.removeAt(0);
+                if(CallTaskArray[0].CallType="medic_call"){
+                    playSoundAtLocation(m_metagame,"osprey.wav",CallTaskArray[0].m_factions,CallTaskArray[0].m_pos,7.0f);
+                    m_metagame.getComms().send(CallTaskArray[0].Callkey);
+                    sendFactionMessageKey(m_metagame,CallTaskArray[0].m_factions,"Echelon enter the battlefield");
+                    //_log("excuteCallnow");
+                }
+
+                CallTaskArray.removeAt(0);
 			}			
 		}
 

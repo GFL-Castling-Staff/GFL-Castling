@@ -50,6 +50,14 @@ void GiveRP(const Metagame@ metagame,int character_id,int rp){
 	string c = "<command class='rp_reward' character_id='" + character_id + "' reward='" + rp + "' />";
     metagame.getComms().send(c);
 }
+
+void addItemInBackpack(Metagame@ metagame, int characterId, string ItemType, string ItemKey) {
+	string c = 
+		"<command class='update_inventory' character_id='" + characterId + "' container_type_class='backpack'>" + 
+			"<item class='" + ItemType + "' key='" + ItemKey + "' />" +
+		"</command>";
+	metagame.getComms().send(c);
+}
 		// query for Equipment
 		// TagName=query_result query_id=22
 		// TagName=character
