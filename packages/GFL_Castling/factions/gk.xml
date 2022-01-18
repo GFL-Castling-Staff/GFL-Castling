@@ -1018,7 +1018,7 @@
 		</character>
 		<resources file="gk_elite.resources"  >
 			<weapon key="gkw_an94.weapon" />
-			<carry_item key="exo_t3.carry_item" />
+			<carry_item key="exo_t4.carry_item" />
 
 		</resources>
 		<attribute_config class="xp">
@@ -1028,14 +1028,14 @@
 
 
 	<soldier name="206_ak12_ar" spawn_score="0.05"  copy_from="default_ar">
-		<character filename="default_gk_pmc.text_lines">
+		<character filename="gk_ak12.text_lines">
 			<sound key="death" fileref="AK12_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
 			<sound key="throw" fileref="AK12_MEET_JP.wav" pitch_variety="0.01" volume="0.8" />
 			<sound key="throw" fileref="AK12_SKILL3_JP.wav" pitch_variety="0.01" volume="0.8" />
 		</character>
 		<resources file="gk_elite.resources"  >
 			<weapon key="gkw_ak12.weapon" />
-			<carry_item key="exo_t3.carry_item" />
+			<carry_item key="exo_t4.carry_item" />
 
 		</resources>
 		<attribute_config class="xp">
@@ -1043,7 +1043,20 @@
 		</attribute_config>
 	</soldier>
 
-
+	<soldier name="206_ak12_ar_defy" spawn_score="0.00001"  copy_from="default_ar">
+		<character filename="gk_ak12.text_lines">
+			<sound key="death" fileref="AK12_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
+			<sound key="throw" fileref="AK12_MEET_JP.wav" pitch_variety="0.01" volume="0.8" />
+			<sound key="throw" fileref="AK12_SKILL3_JP.wav" pitch_variety="0.01" volume="0.8" />
+		</character>
+		<resources file="gk_elite.resources"  >
+			<weapon key="gkw_ak12_defyAI.weapon" />
+			<carry_item key="exo_t4.carry_item" />
+		</resources>
+		<attribute_config class="xp">
+			<attribute weight="1.0" min="0.100" max="102.833" />
+		</attribute_config>
+	</soldier>
 	
 	<soldier name="229_m870_sg" spawn_score="0.05"  copy_from="default_sg">
 		<character filename="default_gk_pmc.text_lines">
