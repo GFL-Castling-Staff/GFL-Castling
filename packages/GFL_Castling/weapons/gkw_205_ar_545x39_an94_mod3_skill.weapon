@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<weapon file="two_hands_ar.animation_base" key="gkw_an94_mod3_skill.weapon">
+<weapon file="two_hands_ar.animation_base" key="gkw_an94mod3_skill.weapon">
 
     <specification 
-		accuracy_factor="0.98" 
-        last_burst_retrigger_time="0.06"
+		accuracy_factor="1" 
 		barrel_offset="0.4" 
 		class="4"
-        slot="0" 
+        solt="0" 
 		magazine_size="30" 
-		name="AN-94(MOD3)-skill-[Doll Trigger]" 
-		projectile_speed="191.49" 
-		retrigger_time="0.06" 
-		suppressed="0" 
+		name="AN-94 (MOD3)-skill-[Doll Trigger]" 
+		projectile_speed="214.28" 
+		retrigger_time="0.1" 
+		suppressed="1" 
         projectiles_per_shot="2"
-        burst_shot="2"
-		sustained_fire_diminish_rate="1.9" 
-		sustained_fire_grow_step="0.60"/>
+        burst_shots="2"
+        sight_range_modifier="1.5"
+		sustained_fire_diminish_rate="1.8" 
+		sustained_fire_grow_step="0.35"/>
 
 
-    <next_in_chain key="gkw_an94_mod3.weapon" share_ammo="1" />
+    <next_in_chain key="gkw_an94mod3.weapon" share_ammo="1" />
     <commonness value="0" in_stock="0" can_respawn_with="1" />
   	<animation state_key="hold_casual"			animation_key="dancing, kazachok" />
-    <animation state_key="reload" animation_key="ARreload1.8" />
-	<animation key="reload" stance_key="prone" animation_key="ARreloadp1.8" />
-    <inventory  buy_price="300" sell_price="300" />
+    <animation state_key="reload" animation_key="ARreload1.2" />
+	<animation key="reload" stance_key="prone" animation_key="ARreloadp1.2" />
+    <inventory  buy_price="350.0" sell_price="350.0" />
 
 
 
@@ -40,17 +40,16 @@
 	<effect class="muzzle" ref="muzzle_blue"/>
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet.projectile">
-        <result class="hit"  kill_probability="1.5" kill_decay_start_time="2.8" kill_decay_end_time="3.333" />
+        <result class="hit"  kill_probability="1.55" kill_decay_start_time="2.8" kill_decay_end_time="3.333" />
     </projectile>
     
-    <stance state_key="running" accuracy="0.5" />
-    <stance state_key="walking" accuracy="0.65" />
+    <stance state_key="running" accuracy="0.4" />
+    <stance state_key="walking" accuracy="0.55" />
     <stance state_key="crouch_moving" accuracy="0.8" />
     <stance state_key="prone_moving" accuracy="0.8" />
-
     <stance state_key="standing" accuracy="0.98" />
-    <stance state_key="crouching" accuracy="1" />
-    <stance state_key="prone" accuracy="1" />
-    
+    <stance state_key="crouching" accuracy="1.2" />
+    <stance state_key="prone" accuracy="1.2" />
+    <modifier class="speed" value="-0.25" />
 
 </weapon>
