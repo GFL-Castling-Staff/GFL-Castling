@@ -1,5 +1,5 @@
 #include "query_helpers2.as"
-
+#include "helpers.as"
 
 void playSoundAtLocation(const Metagame@ metagame, string filename, int factionId, const Vector3@ position, float volume=1.0) {
 	XmlElement command("command");
@@ -40,6 +40,7 @@ string getPlayerEquipmentKey(const Metagame@ metagame, int characterId, uint slo
 	if (slot <0) return "";
 	if (slot >5) return "";
 	const XmlElement@ targetCharacter = getCharacterInfo2(metagame,characterId);
+	if (targetCharacter==null) return "";
 	array<const XmlElement@>@ equipment = targetCharacter.getElementsByTagName("item");
 	if (equipment.size() == 0) return "";
 	string ItemKey = equipment[slot].getStringAttribute("key");
@@ -58,6 +59,11 @@ void addItemInBackpack(Metagame@ metagame, int characterId, string ItemType, str
 		"</command>";
 	metagame.getComms().send(c);
 }
+
+bool checkCommandAlter(string message, string target, string target1) {
+    return startsWith(message.toLowerCase(), "/" + target) || endsWith(message.toLowerCase(),"/"+ target1);
+}
+
 		// query for Equipment
 		// TagName=query_result query_id=22
 		// TagName=character
