@@ -1018,7 +1018,7 @@
 		</character>
 		<resources file="gk_elite.resources"  >
 			<weapon key="gkw_an94.weapon" />
-			<carry_item key="exo_t4.carry_item" />
+			<carry_item key="exo_t3.carry_item" />
 
 		</resources>
 		<attribute_config class="xp">
@@ -1036,43 +1036,18 @@
 		<resources file="gk_elite.resources"  >
 			<weapon key="gkw_ak12.weapon" />
 			<carry_item key="exo_t4.carry_item" />
-
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="0.100" max="102.833" />
 		</attribute_config>
 	</soldier>
-
-	<soldier name="206_ak12_ar_defy" spawn_score="0.0" copy_from="default">
-		<ai filename="default.ai" />
-		<character filename="gk_ak12.text_lines">
-			<sound key="death" fileref="AK12_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
-			<sound key="throw" fileref="AK12_MEET_JP.wav" pitch_variety="0.01" volume="0.8" />
-			<sound key="throw" fileref="AK12_SKILL3_JP.wav" pitch_variety="0.01" volume="0.8" />
-		</character>
-		<model file="gkd_xxv_idwmod.xml" />
-		<models file="gk.models" />
-		<models file="gk_2.models" />
-		<models file="gk_arm.models" />
-		<models file="common_bonus.models" />
-		<item_class_existence_config>
-			<!-- secondaries -->
-			<item_class_existence class="weapon" slot="1" probability="0" />
-			<!-- wearables -->
-			<item_class_existence class="carry_item" slot="1" probability="1" />
-			<!-- backpack -->
-			<item_class_existence class="carry_item" slot="0" probability="1" />
-		</item_class_existence_config>
-		<resources file="common.resources" />
-		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
-			<weapon key="gkw_ak12_defyAI.weapon" enabled="1"/>
-			<weapon key="medikit.weapon" enabled="1"/>
-			<carry_item key="exo_t4.carry_item" />
+	<soldier name="206_ak12_ar_defyAI" spawn_score="0.0" copy_from="206_ak12_ar">
+		<resources clear_weapons="1"  >
+			<weapon key="gkw_ak12_defyAI" />
 		</resources>
-		<attribute_config class="xp">
-			<attribute weight="1.0" min="0.100" max="0.833" />
-		</attribute_config>
 	</soldier>
+
+
 	
 	<soldier name="229_m870_sg" spawn_score="0.05"  copy_from="default_sg">
 		<character filename="default_gk_pmc.text_lines">

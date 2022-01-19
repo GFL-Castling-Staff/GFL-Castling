@@ -103,7 +103,7 @@ class CommandSkill : Tracker {
             command.setStringAttribute("class", "create_instance");
             command.setIntAttribute("faction_id", info.getIntAttribute("faction_id"));
             command.setStringAttribute("instance_class", "character");
-            command.setStringAttribute("instance_key","206_ak12_ar_defy");
+            command.setStringAttribute("instance_key","206_ak12_ar_defyAI");
             command.setStringAttribute("position",info.getStringAttribute("position"));
             m_metagame.getComms().send(command);    
         sendPrivateMessage(m_metagame,playerId,"Defy AK-12 summoned");
