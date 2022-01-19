@@ -42,6 +42,7 @@
 #include "kill_event.as"
 #include "ManualCall.as"
 #include "ServerHelper.as"
+#include "commandskill.as"
 
 // --------------------------------------------
 class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
@@ -334,6 +335,7 @@ class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 		addTracker(ManualCall(this));
 		addTracker(ServerHelper(this));
 		addTracker(BanManager(this,true));
+		addTracker(CommandSkill(this));
 	}
 
 	// --------------------------------------------

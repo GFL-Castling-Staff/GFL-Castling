@@ -14,7 +14,6 @@
 //02:29:23: SCRIPT:  received: TagName=query_result query_id=18     TagName=player aim_target=154.627 19.7851 688.99 character_id=174 color=0.68 0.85 0 1 faction_id=0 name=NETHER_CROW player_id=0 profile_hash=ID3580998501 sid=ID0 
 class SkillTrigger{
     int m_character_id;
-    float cdr_time;
     float m_time;
     string m_weapontype;
     SkillTrigger(int characterId, float time,string weapontype){
@@ -44,9 +43,9 @@ class CommandSkill : Tracker {
         string sender = event.getStringAttribute("player_name");
 		int senderId = event.getIntAttribute("player_id");
 
-        if (checkCommand(message,"skill") || message=="s"){
+        if (checkCommand(message,"skill") || message=="/s"){
             const XmlElement@ info = getPlayerInfo(m_metagame, senderId);
-			if (info != null) {
+			if (info !is null) {
                 int cId = info.getIntAttribute("character_id");
                 string c_weaponType = getPlayerEquipmentKey(m_metagame,cId,0);
                 if (c_weaponType=="") return;
@@ -61,10 +60,10 @@ class CommandSkill : Tracker {
     void update(float time) {
         if(SkillArray.length()>0)
 		{
-            for (i=0,i<SkillArray.length()-1,i++){
-                SkillArray[i].m_time-=time;
-                if(SkillArray[i].m_time<0){
-                    SkillArray.removeAt(i);
+            for (int a=0;a<SkillArray.length()-1;a++){
+                SkillArray[a].m_time-=time;
+                if(SkillArray[a].m_time<0){
+                    SkillArray.removeAt(a);
                 }
             }
         }
@@ -80,17 +79,21 @@ class CommandSkill : Tracker {
 		// always on
 		return true;
 	}
-}
 
-void excuteAN94skill(int characterId,int playerId){
+    void excuteAN94skill(int characterId,int playerId){
     bool ExistQueue = false;
-    for (i=0,i<SkillArray.length()-1,i++){
-        if (SkillArray[i].m_character_id==characterId) ExistQueue=true;
+    int j =-1;
+    for (int i=0;i<SkillArray.length()-1;i++){
+        if (SkillArray[i].m_character_id==characterId && SkillArray[i].m_weapontype=="AN94") {
+            ExistQueue=true;
+            j=i;
+        }
     }
     if (ExistQueue){
         dictionary a;
-        a["%time"] = ""+SkillArray[i].m_time;
+        a["%time"] = ""+SkillArray[j].m_time;
         sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+        _log("skill cooldown" + SkillArray[j].m_time);
         return;
     }
     const XmlElement@ info = getCharacterInfo(m_metagame, characterId);
@@ -103,5 +106,8 @@ void excuteAN94skill(int characterId,int playerId){
         command.setStringAttribute("position",info.getStringAttribute("position"));
         m_metagame.getComms().send(command);    
     sendPrivateMessage(m_metagame,playerId,"Defy AK-12 summoned");
-    
+    _log("summonAK12");
+    SkillArray.insertLast(SkillTrigger(characterId,180,"AN94"));
 }
+}
+

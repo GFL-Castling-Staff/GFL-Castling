@@ -1043,12 +1043,26 @@
 		</attribute_config>
 	</soldier>
 
-	<soldier name="206_ak12_ar_defy" spawn_score="0.00001"  copy_from="default_ar">
+	<soldier name="206_ak12_ar_defy" spawn_score="0.0" >
+		<ai filename="default.ai" />
 		<character filename="gk_ak12.text_lines">
 			<sound key="death" fileref="AK12_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
 			<sound key="throw" fileref="AK12_MEET_JP.wav" pitch_variety="0.01" volume="0.8" />
 			<sound key="throw" fileref="AK12_SKILL3_JP.wav" pitch_variety="0.01" volume="0.8" />
 		</character>
+		<model file="gkd_xxv_idwmod.xml" />
+		<models file="gk.models" />
+		<models file="gk_2.models" />
+		<models file="gk_arm.models" />
+		<models file="common_bonus.models" />
+		<item_class_existence_config>
+			<!-- secondaries -->
+			<item_class_existence class="weapon" slot="1" probability="0" />
+			<!-- wearables -->
+			<item_class_existence class="carry_item" slot="1" probability="1" />
+			<!-- backpack -->
+			<item_class_existence class="carry_item" slot="0" probability="0.03" />
+		</item_class_existence_config>
 		<resources file="gk_elite.resources"  >
 			<weapon key="gkw_ak12_defyAI.weapon" />
 			<carry_item key="exo_t4.carry_item" />
