@@ -56,11 +56,16 @@ class CommandSkill : Tracker {
             }
         }
     }
+
+
     void update(float time) {
         if(SkillArray.length()>0)
 		{
             for (i=0,i<SkillArray.length()-1,i++){
                 SkillArray[i].m_time-=time;
+                if(SkillArray[i].m_time<0){
+                    SkillArray.removeAt(i);
+                }
             }
         }
 	}
@@ -89,5 +94,14 @@ void excuteAN94skill(int characterId,int playerId){
         return;
     }
     const XmlElement@ info = getCharacterInfo(m_metagame, characterId);
+    string soldierClass = info.getStringAttribute("soldier_group_name");
+        XmlElement command("command");
+        command.setStringAttribute("class", "create_instance");
+        command.setIntAttribute("faction_id", info.getIntAttribute("faction_id"));
+        command.setStringAttribute("instance_class", "character");
+        command.setStringAttribute("instance_key","206_ak12_ar_defy");
+        command.setStringAttribute("position",info.getStringAttribute("position"));
+        m_metagame.getComms().send(command);    
+    sendPrivateMessage(m_metagame,playerId,"Defy AK-12 summoned");
     
 }
