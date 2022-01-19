@@ -1042,8 +1042,9 @@
 		</attribute_config>
 	</soldier>
 	<soldier name="206_ak12_ar_defyAI" spawn_score="0.0" copy_from="206_ak12_ar">
-		<resources clear_weapons="1"  >
+		<resources clear_weapons="1" clear_carry_items="1">
 			<weapon key="gkw_ak12_defyAI.weapon" enabled="1" />
+			<carry_item key="exo_AK12_defy.carry_item" enabled="1"/>
 		</resources>
 	</soldier>
 
