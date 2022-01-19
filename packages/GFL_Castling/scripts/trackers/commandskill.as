@@ -60,7 +60,7 @@ class CommandSkill : Tracker {
     void update(float time) {
         if(SkillArray.length()>0)
 		{
-            for (int a=0;a<SkillArray.length()-1;a++){
+            for (int a=0;a<SkillArray.length();a++){
                 SkillArray[a].m_time-=time;
                 if(SkillArray[a].m_time<0){
                     SkillArray.removeAt(a);
@@ -81,33 +81,33 @@ class CommandSkill : Tracker {
 	}
 
     void excuteAN94skill(int characterId,int playerId){
-    bool ExistQueue = false;
-    int j =-1;
-    for (int i=0;i<SkillArray.length()-1;i++){
-        if (SkillArray[i].m_character_id==characterId && SkillArray[i].m_weapontype=="AN94") {
-            ExistQueue=true;
-            j=i;
+        bool ExistQueue = false;
+        int j =-1;
+        for (int i=0;i<SkillArray.length();i++){
+            if (SkillArray[i].m_character_id==characterId && SkillArray[i].m_weapontype=="AN94") {
+                ExistQueue=true;
+                j=i;
+            }
         }
+        if (ExistQueue){
+            dictionary a;
+            a["%time"] = ""+SkillArray[j].m_time;
+            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            _log("skill cooldown" + SkillArray[j].m_time);
+            return;
+        }
+        SkillArray.insertLast(SkillTrigger(characterId,180,"AN94"));
+        const XmlElement@ info = getCharacterInfo(m_metagame, characterId);
+        string soldierClass = info.getStringAttribute("soldier_group_name");
+            XmlElement command("command");
+            command.setStringAttribute("class", "create_instance");
+            command.setIntAttribute("faction_id", info.getIntAttribute("faction_id"));
+            command.setStringAttribute("instance_class", "character");
+            command.setStringAttribute("instance_key","206_ak12_ar_defy");
+            command.setStringAttribute("position",info.getStringAttribute("position"));
+            m_metagame.getComms().send(command);    
+        sendPrivateMessage(m_metagame,playerId,"Defy AK-12 summoned");
+        _log("summonAK12");
     }
-    if (ExistQueue){
-        dictionary a;
-        a["%time"] = ""+SkillArray[j].m_time;
-        sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
-        _log("skill cooldown" + SkillArray[j].m_time);
-        return;
-    }
-    const XmlElement@ info = getCharacterInfo(m_metagame, characterId);
-    string soldierClass = info.getStringAttribute("soldier_group_name");
-        XmlElement command("command");
-        command.setStringAttribute("class", "create_instance");
-        command.setIntAttribute("faction_id", info.getIntAttribute("faction_id"));
-        command.setStringAttribute("instance_class", "character");
-        command.setStringAttribute("instance_key","206_ak12_ar_defy");
-        command.setStringAttribute("position",info.getStringAttribute("position"));
-        m_metagame.getComms().send(command);    
-    sendPrivateMessage(m_metagame,playerId,"Defy AK-12 summoned");
-    _log("summonAK12");
-    SkillArray.insertLast(SkillTrigger(characterId,180,"AN94"));
-}
 }
 
