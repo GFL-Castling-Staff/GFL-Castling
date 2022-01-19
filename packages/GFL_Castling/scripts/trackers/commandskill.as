@@ -57,7 +57,12 @@ class CommandSkill : Tracker {
         }
     }
     void update(float time) {
-
+        if(SkillArray.length()>0)
+		{
+            for (i=0,i<SkillArray.length()-1,i++){
+                SkillArray[i].m_time-=time;
+            }
+        }
 	}
 
     bool hasEnded() const {
