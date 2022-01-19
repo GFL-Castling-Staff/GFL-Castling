@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon file="paradeus.base_weapon" time_to_live_out_in_the_open="0">
+    <specification 
+	retrigger_time="0.1" 
+	accuracy_factor="1.0" 
+	sustained_fire_grow_step="0.40" 
+	sustained_fire_diminish_rate="1.2" 
+	magazine_size="200" 
+	can_shoot_standing="1" 
+	can_shoot_crouching="0"
+	can_shoot_prone="0"
+	suppressed="0" 
+	name="Doppelsoldner-MG" 
+	class="4" 
+	slot="1"
+	reload_one_at_a_time="0"
+	sight_range_modifier="2.0" 
+	projectile_speed="76.0" 
+	carry_in_two_hands="0" 
+	projectiles_per_shot="2" 
+	stab_enabled="1"
+	barrel_offset_3d="0.0 1 0.5"/>
+
+  	<animation state_key="recoil"	animation_key="still, pistol dual" />
+    <animation state_key="reload"	animation_key="still, pistol dual" />
+  	<animation state_key="hold"		animation_key="still, pistol dual" />
+  	<animation state_key="hold_casual"	animation_key="still, pistol dual" />
+  	<animation state_key="hold_on_wall"	animation_key="still, pistol dual" />
+  	<animation state_key="walking"	animation_key="walking, pistol dual" />
+	<animation state_key="stabbing" animation_key="still, pistol dual" />
+	
+	<animation state_key="crouching"	animation_key="still, pistol dual" />
+	<animation state_key="crouch_moving"	animation_key="walking, pistol dual" />
+	<animation state_key="crouch_moving_backwards"	animation_key="walking, pistol dual" />
+	<animation state_key="running" animation_key="walking, pistol dual" />
+	
+	
+    <sound key="fire" fileref="mossberg500_fire.wav" volume="0.7" />
+    <sound key="cycle" fileref="mossberg500_cycle.wav" />
+    <sound key="reload_one" fileref="mossberg500_reload.wav" />
+    <sound class="impact" fileref="rifle_drop.wav" />
+    <model filename="" />
+
+    <hud_icon filename="parw_Doppelsoldner.png" />
+      <commonness value="0.0" in_stock="1" can_respawn_with="1"/>
+	
+    <capacity value="1" source="rank" source_value="0.0" />
+
+    <weak_hand_hold offset="0.2" />
+    <projectile file="bullet_paradeus.projectile" >
+		<result class="hit" 
+        kill_probability="1.999" 
+        kill_decay_start_time="0.175" 
+        kill_decay_end_time="0.700" />
+    </projectile>
+    
+    <stance state_key="running" accuracy="1" />
+    <stance state_key="walking" accuracy="1" />
+    <stance state_key="crouch_moving" accuracy="1" />
+    <stance state_key="prone_moving" accuracy="1" />
+
+    <stance state_key="standing" accuracy="1" />
+    <stance state_key="crouching" accuracy="1" />
+    <stance state_key="prone" accuracy="1" />
+
+    <shield offset="0.5 -0.35 0" extent="0.8 1.4 1.6" />
+
+    <modifier class="speed" value="-0.6" />    
+</weapon>
