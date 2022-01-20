@@ -677,7 +677,20 @@
 	</soldier>
 
 
-
+	<!-- dinergate兵蚁 -->
+	<soldier name="sf_dinergate" spawn_score="1.00">
+		<models filename="sf_dinergate.models" /> 
+		<character filename="sf_dinergate.character" />
+		<ai filename="eod.ai" />
+		
+		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1">
+			<weapon key="sfw_dinergate.weapon"/>
+			<carry_item key="sf_qwd.carry_item" />
+		</resources>
+		<attribute_config class="xp">
+				<attribute weight="0.3" min="0.0" max="1.0" />
+		</attribute_config>
+	</soldier>
 
 	<!-- store -->
 	<soldier name="default_hg" spawn_score="0.0">

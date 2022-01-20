@@ -13,7 +13,9 @@
 		retrigger_time="0.1" 
 		suppressed="0" 
 		sustained_fire_diminish_rate="0.8"
-		sustained_fire_grow_step="0.5" />
+		sustained_fire_grow_step="0.5" 
+		carry_in_two_hands="0"
+		stab_enabled="1"/>
 
     <!--space-->
 	<animation state_key="recoil"	animation_key="recoil, dinergate" />
