@@ -5,21 +5,14 @@
 		accuracy_factor="0.99" 
 		barrel_offset="0.4" 
     sight_range_modifier="1.3" 
-		class="0"
-         
+		class="0" 
 		magazine_size="35" 
 		name="UMP9 (MOD3)" 
 		projectile_speed="95" 
-		retrigger_time="0.1" 
+		retrigger_time="0.085" 
 		suppressed="1" 
 		sustained_fire_diminish_rate="1.5" 
 		sustained_fire_grow_step="0.2" />
-
-
-
-
-    
-	
 	
 
     
@@ -40,16 +33,14 @@
 
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet.projectile">
-      <result class="hit"  kill_probability="1.7" kill_decay_start_time="0.210" kill_decay_end_time="0.820" />
+      <result class="hit"  kill_probability="1.85" kill_decay_start_time="0.283" kill_decay_end_time="0.472" />
     </projectile>
     
     <stance state_key="running" accuracy="0.9" />
     <stance state_key="walking" accuracy="0.95" />
     <stance state_key="crouch_moving" accuracy="0.9" />
     <stance state_key="prone_moving" accuracy="0.9" />
-
     <stance state_key="standing" accuracy="1" />
-
     <stance state_key="prone" accuracy="1.1" />
     
 

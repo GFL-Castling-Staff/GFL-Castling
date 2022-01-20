@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<weapon file="heavy_mg.animation_base" key="gkw_mg4mod3.weapon">
+<weapons>
+<weapon file="heavy_mg_standing.animation_base" key="gkw_mg4mod3.weapon">
 
-    <specification 
+  <specification 
   barrel_offset="0.5" 
-  retrigger_time="0.08" 
-  accuracy_factor="0.99" 
+  retrigger_time="0.075" 
+  accuracy_factor="0.7" 
   sustained_fire_grow_step="0.35" 
   sustained_fire_diminish_rate="1.5" 
   magazine_size="200" 
@@ -12,13 +13,13 @@
   name="MG4(MOD3)" 
   class="0" 
   projectile_speed="195" 
-  spread_range="0.25"
-  sight_range_modifier="1.75"/>
+  spread_range="0.2"
+  sight_range_modifier="1.5"/>
 
 
 
     <animation key="reload" animation_key="MGreload6" />
-    <inventory  buy_price="200.0" sell_price="200.0" />	
+    <inventory  buy_price="270.0" sell_price="270.0" />	
 	  <capacity value="0" source="rank" source_value="0.0" />
     <capacity value="1" source="rank" source_value="6.048" />
     <next_in_chain key="gkw_mg4mod3_skill.weapon" share_ammo="1" />
@@ -36,7 +37,69 @@
 
 
     <projectile file="bullet.projectile">
-        <result class="hit" kill_probability="1.75" kill_decay_start_time="1.967" kill_decay_end_time="3.279" />
+        <result class="hit" kill_probability="1.70" kill_decay_start_time="1.967" kill_decay_end_time="3.279" />
+    </projectile>
+    <stance state_key="running" accuracy="0.15" />
+    <stance state_key="walking" accuracy="0.15" />
+    <stance state_key="crouch_moving" accuracy="1.05" />
+    <stance state_key="prone_moving" accuracy="1.25" />
+    <stance state_key="standing" accuracy="0.75" />
+    <stance state_key="crouching" accuracy="1.17" />
+    <stance state_key="prone" accuracy="1.45" />
+    <stance state_key="over_wall" accuracy="1.45" />  
+    <modifier class="speed" value="-0.2" /> 
+
+</weapon>
+<weapon file="heavy_mg.animation_base" key="gkw_mg4mod3_skill.weapon">
+
+  <specification 
+  barrel_offset="0.5" 
+  retrigger_time="0.075" 
+  accuracy_factor="1" 
+  sustained_fire_grow_step="0.35" 
+  sustained_fire_diminish_rate="1.5" 
+  magazine_size="200" 
+  suppressed="0" 
+  name="MG4(MOD3)-[Haunted House Hammer]" 
+  class="0" 
+  projectile_speed="195" 
+  spread_range="0.2"
+  sight_range_modifier="1.5"
+  can_shoot_standing="0" 
+	can_shoot_crouching="0"
+	can_shoot_prone="1"
+  />
+ 
+
+
+    <animation key="reload" animation_key="MGreload6" />
+    <inventory  buy_price="270.0" sell_price="270.0" />	
+    <commonness  value="0" in_stock="0" />
+	  <capacity value="0" source="rank" source_value="0.0" />
+    <capacity value="1" source="rank" source_value="6.048" />
+    <next_in_chain key="gkw_mg4mod3.weapon" share_ammo="1" />
+
+    <sound key="fire" fileref="m60_fire_FromINS.wav" pitch_variety="0.05" volume="1" />
+    <sound key="magazine_out" fileref="m60_mgz_out_FromINS.wav" volume="0.8" />
+    <sound key="magazine_in" fileref="m60_mgz_in_FromINS.wav" volume="0.8" />
+    <sound key="cycle" fileref="m60_cycle_FromINS.wav" volume="0.8" />
+    <sound class="impact" fileref="rifle_drop.wav" />
+    <model filename="gkw_mg_mg4.xml" />
+
+    <hud_icon filename="gkw_mg4mod3.png" />
+
+
+
+
+    <projectile file="bullet.projectile">
+        <result class="blast"  damage="0.25" radius="2.5" decal="1" push="0.3" character_state="death" faction_compare="not_equal" />
+        <trigger class="impact" />
+        <effect class="result" key="terrain" ref="BigBurst" use_surface_color="1" />
+        <effect class="result" key="terrain" ref="SmokeTop" post_processing="1" />
+        <effect class="result" key="terrain" ref="Smoke" post_processing="1" />
+        <effect class="result" key="terrain" ref="Shine" lighting="0" />
+        <effect class="result" key="terrain" ref="Godray" lighting="0" />
+        <effect class="result" key="terrain" ref="ShadowSmoke" shadow="1" />
     </projectile>
        <stance state_key="running" accuracy="0.6" />
 
@@ -49,3 +112,4 @@
     <modifier class="speed" value="-0.2" /> 
 
 </weapon>
+</weapons>
