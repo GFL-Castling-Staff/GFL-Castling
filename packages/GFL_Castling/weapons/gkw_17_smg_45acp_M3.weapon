@@ -7,17 +7,11 @@
 		class="0"
 		magazine_size="30" 
 		name="M3" 
-		projectile_speed="58.3" 
+		projectile_speed="72.85" 
 		retrigger_time="0.133" 
 		suppressed="0" 
 		sustained_fire_diminish_rate="2.2" 
 		sustained_fire_grow_step="0.4" />
-
-
-
-
-    
-	
 	
 
     
@@ -35,9 +29,9 @@
 
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet.projectile">
-        <result class="hit"  kill_probability="1.4"
-         kill_decay_start_time="0.109" 
-         kill_decay_end_time="0.547" />
+        <result class="hit"  kill_probability="1.7"
+         kill_decay_start_time="0.35" 
+         kill_decay_end_time="0.584" />
     </projectile>
     
     <stance state_key="running" accuracy="0.85" />
