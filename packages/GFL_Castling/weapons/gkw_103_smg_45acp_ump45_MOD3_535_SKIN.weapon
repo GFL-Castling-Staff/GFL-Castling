@@ -4,9 +4,7 @@
     <specification 
 		accuracy_factor="0.99" 
 		barrel_offset="0.4" 
-		
 		class="0"
-         
 		magazine_size="25" 
 		name="UMP45 (MOD3)-[The wish-seeking firework magician]" 
 		projectile_speed="90" 
@@ -14,12 +12,6 @@
 		suppressed="1" 
 		sustained_fire_diminish_rate="2.1" 
 		sustained_fire_grow_step="0.25" />
-
-
-
-
-    
-	
 	
 
     
@@ -40,16 +32,14 @@
 
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet.projectile">
-        <result class="hit"  kill_probability="1.7" kill_decay_start_time="0.211" kill_decay_end_time="1" />
+        <result class="hit"  kill_probability="2.0" kill_decay_start_time="0.283" kill_decay_end_time="0.472" />
     </projectile>
     
     <stance state_key="running" accuracy="0.85" />
     <stance state_key="walking" accuracy="0.9" />
     <stance state_key="crouch_moving" accuracy="0.9" />
     <stance state_key="prone_moving" accuracy="0.9" />
-
     <stance state_key="standing" accuracy="1" />
-
     <stance state_key="prone" accuracy="1.1" />
     
 
