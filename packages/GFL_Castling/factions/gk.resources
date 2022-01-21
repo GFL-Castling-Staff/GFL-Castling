@@ -12,6 +12,7 @@
 	<weapon key="gkw_ak12.weapon" />
 	<weapon key="gkw_ak12_blm.weapon" />
 	<weapon key="gkw_ak12_2402.weapon" />
+	<!-- <weapon key="gkw_ak12_defyAI.weapon"/> -->
 	<weapon key="gkw_ak47.weapon" />
 	<weapon key="gkw_ak47_501.weapon" />
 	<weapon key="gkw_ak74u.weapon" />
@@ -396,6 +397,8 @@
 	<weapon key="gkw_lwmmg_skill.weapon"/>
 	<weapon key="gkw_m1895mod3.weapon"/>
 	<weapon key="gkw_sacr.weapon"/>
+	<weapon key="gkw_an94_mod3.weapon"/>
+
 
 	<!-- 重装梯队 -->
 	<weapon key="gkw_hvy_qlz04.weapon" />
@@ -433,9 +436,10 @@
 	<weapon key="gkw_ump9mod3_skill.weapon" />
 	<weapon key="gkw_m1895mod3_skill.weapon"/>
 	<weapon key="gkw_lwmmgmod3_skill.weapon"/>
+	<weapon key="gkw_an94_mod3_skill.weapon"/>
 	<weapon key="gkw_m14mod3_skill.weapon" />
-	
-	<!-- 载具 -->
+  
+		<!-- 载具 -->
 	<vehicle key="humvee_mg" />
 	<vehicle key="humvee.vehicle" />
 	<vehicle key="pierre.vehicle" />
@@ -536,6 +540,7 @@
 	<weapon key="ff_vespid.weapon" />
 	<weapon key="ff_weaver.weapon" />
 	<weapon key="ff_dreamer.weapon" />
+    <weapon key="ff_dreamer_skill.weapon"/> 
 	<weapon key="ff_excutioner_1.weapon" />
 	<weapon key="ff_excutioner_2.weapon" />
 	<weapon key="ff_parw_alina.weapon" />

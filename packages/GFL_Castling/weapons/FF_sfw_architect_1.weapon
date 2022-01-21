@@ -11,13 +11,13 @@
   can_shoot_crouching="1" 
   can_shoot_prone="0"
   suppressed="0" 
-  name="GK-Architect (Direct hit)" 
+  name="GK-Architect-[Direct hit]" 
   class="0" 
   sight_range_modifier="3.0" 
   projectile_speed="85.0" 
   slot="0" 
   projectiles_per_shot="1" />
-<next_in_chain key="ff_architect.weapon" share_ammo="1" />
+<next_in_chain key="ff_architect.weapon" share_ammo="0" />
   <inventory 
   encumbrance="27.0" 
   buy_price="1000.0" 
