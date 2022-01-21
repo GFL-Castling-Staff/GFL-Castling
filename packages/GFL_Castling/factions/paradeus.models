@@ -1,18 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <models>
-	<model file="pard_Strelet_Christmas_98.xml" />
-	<model filename="pard_Soldier_Christmas_98.xml"><requirement class="weapon" slot="0" key="parw_streletplus.weapon" /></model>
-	<model filename="pard_Rodelero_Chrsitmas_98.xml"><requirement class="weapon" slot="0" key="parw_rodelero.weapon" /></model>
+	<model file="pard_strelet.xml" />
+	<model filename="pard_streletplus.xml"><requirement class="weapon" slot="0" key="parw_streletplus.weapon" /></model>
+	<model filename="pard_rodelero.xml"><requirement class="weapon" slot="0" key="parw_rodelero.weapon" /></model>
 	<model filename="pard_punish.xml"><requirement class="weapon" slot="0" key="parw_punish.weapon" /></model>
 	<model filename="pard_hev_art.xml"><requirement class="weapon" slot="0" key="parw_hev_art.weapon" /></model>
 
 	<model filename="pard_boss_nyto_white.xml"><requirement class="weapon" slot="0" key="parw_alina.weapon" /></model>
     <model filename="pard_teal.xml"><requirement class="weapon" slot="0" key="parw_teal.weapon" /></model>
-	<model filename="pard_commander_Christmas_98.xml"><requirement class="weapon" slot="0" key="parw_commander.weapon" /></model>
-	<model filename="pard_Thrower_Christmas_98.xml"><requirement class="weapon" slot="0" key="parw_thrower.weapon" /></model>
+	<model filename="pard_commander.xml"><requirement class="weapon" slot="0" key="parw_commander.weapon" /></model>
+	<model filename="pard_Thrower.xml"><requirement class="weapon" slot="0" key="parw_thrower.weapon" /></model>
 	<model filename="pard_Doppelsoldner.xml"><requirement class="weapon" slot="0" key="parw_doppelsoldner_mg" /></model>
 	<model filename="pard_Doppelsoldner.xml"><requirement class="weapon" slot="0" key="parw_doppelsoldner_rocket" /></model>
 	<model filename="pard_boss_nyto_black.xml"><requirement class="weapon" slot="0" key="parw_nyto_black.weapon" /></model>
 	<model filename="pard_nimogen.xml"><requirement class="weapon" slot="0" key="parw_nimogen.weapon" /></model>
 	<model filename="pard_narciss.xml"><requirement class="weapon" slot="0" key="parw_narciss.weapon" /></model>
+	<model filename="pard_zombie.xml"><requirement class="weapon" slot="0" key="parw_infected.weapon" /></model>
+
+	<model filename="pard_teal.xml"><requirement class="weapon" slot="0" key="parw_teal.weapon" /><requirement class="carry_item" slot="0" key="pard_nyw_14"/><requirement class="rank" range="0 1000000" /></model>
+	<model filename="pard_teal.xml"><requirement class="weapon" slot="0" key="parw_teal.weapon" /><requirement class="carry_item" slot="0" key="pard_nyw_15"/><requirement class="rank" range="0 1000000" /></model>
 </models>

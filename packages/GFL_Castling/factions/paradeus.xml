@@ -326,7 +326,7 @@
 
 	<soldier name="infected" spawn_score="0.01" squad_size_xp_cap="0.5">
 		<ai filename="melee.ai" />
-		<model filename="pard_Zombie_Christmas_98.xml" />
+		<model filename="pard_zombie.xml" />
 		<character filename="infected.character"/>
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="parw_infected.weapon" enabled="1" />
