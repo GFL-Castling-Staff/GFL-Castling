@@ -2,34 +2,28 @@
 <character filename="default_base.character">
   <!-- defined in default.character for differentiation, see maps/lobby/default.character too -->
 <!--  <comment key="Hmm, no signal" text="嗯...没有信号"/> -->
-  <comment key="Driver, abandon vehicle" text="小心！" />
-  <comment key="Driver, abandon vehicle" text="快跳车啊！" />
-  <comment key="Gunner, abandon vehicle" text="炮手位下车！" />
-  <comment key="Gunner, abandon vehicle" text="炮手位小心！" />
+  <comment key="Driver, abandon vehicle" text="受损度已过警戒值！" />
+  <comment key="Driver, abandon vehicle" text="弃车！" />
+  <comment key="Gunner, abandon vehicle" text="炮手位弃车！" />
+  <comment key="Gunner, abandon vehicle" text="炮手位注意！" />
   <comment key="Squad, abandon vehicle" text="全队弃车！" />
   <comment key="Squad, get out" text="离开那个战位！" />
   <comment key="Squad, get in" text="小队上车" />
   <comment key="Squad, get in" text="开车！" />
   <comment key="Squad, get in" text="占领那个载具" />
   <comment key="Squad, follow the vehicle" text="跟上载具" />
-  <comment key="Squad, follow the vehicle" text="这有点强人所难……努力跟上吧" />
   <comment key="Squad, follow the vehicle" text="注意掩护载具！" />
-  <comment key="Squad, follow me" text="跟着我" />
-  <comment key="Squad, follow me" text="跟上队长" />
-  <comment key="Squad, follow me" text="检查外骨骼，该走了" />
-  <comment key="Squad, follow me" text="左翼机枪阵地前移五米……我早就想这样说说看了" />
-  <comment key="Squad, follow me" text="放低姿态，不要挑战对手的命中率" />
-  <comment key="Squad, follow me" text="向指挥官指示的地点前进" />
+  <comment key="Squad, follow me" text="跟着我!" />
+  <comment key="Squad, follow me" text="这是命令，要听话哦" />
+  <comment key="Squad, follow me" text="向安洁莉娅指示的地点前进" />
   <comment key="Driver, stop the vehicle" text="停车" />
   <comment key="Driver, stop the vehicle" text="控制速度" />
-  <comment key="Driver, stop the vehicle" text="你确定你装了驾驶程序吧？你没骗我对吧？" />
   <comment key="Driver, stop the vehicle" text="急刹车！" />
   <comment key="Gunner, fire at will" text="自由射击！" />
   <comment key="Driver, stay close" text="保持作战间距" />
   <comment key="Driver, stay close" text="注意四周" />
   <comment key="Driver, stay close" text="跟上" />
-  <comment key="Squad, move over there" text="我们去那边好了" />
-  <comment key="Squad, move over there" text="是~是~标记已获悉" />
+  <comment key="Squad, move over there" text="前往那里！" />
   <comment key="Squad, move over there" text="协议同步完成，确认目标" />
   <comment key="Squad, change position" text="跃进！" />
   <comment key="Squad, change position" text="转移阵地" />
@@ -40,20 +34,15 @@
   <comment key="Gunner, there" text="随意射击" />
   <comment key="Gunner, there" text="移除安全协议！" />
   <comment key="Gunner, there" text="射界内发现敌军！" />
-  <comment key="We surrender!" text="唔……指挥官说的……留得青山在……" />
-  <comment key="We surrender!" text="呜……" />
-  <comment key="We surrender!" text="该死" />
-  <comment key="We surrender!" text="……我们投降" />
-  <comment key="Medic!" text="谁能帮帮我！" />
-  <comment key="Medic!" text="呜……这是……循环液？" />
-  <comment key="Medic!" text="感觉不到手臂了……" />
+  <comment key="We surrender!" text="至少，我们都还活着" />
+  <comment key="We surrender!" text="哼，狡猾的家伙" />
+  <comment key="We surrender!" text="哎呀……" />
+  <comment key="Medic!" text="帮帮我！" />
+  <comment key="Medic!" text="哎呀……" />
   <comment key="Medic!" text="完全……站不起来" />
-  <comment key="Medic!" text="还好……已经备份了心智" />
-  <comment key="I feel good!" text="手臂又可以动了！" />
-  <comment key="I feel good!" text="居然一直没意识到你这么厉害……" />
+  <comment key="I feel good!" text="……我还没死" />
   <comment key="I feel good!" text="我还可以作战！" />
-  <comment key="I feel good!" text="一部分驱动还没加载好……无伤大雅" />
-  <comment key="I feel good!" text="我刚刚还以为又要忘记你了……" />
+  <comment key="I feel good!" text="修复后的表现还不错" />
   <comment key="Reloading" text="换弹" />
   <comment key="Reloading" text="掩护！" />
   <comment key="Reloading" text="没子弹了！" />
@@ -65,17 +54,16 @@
   <comment key="no radio equipment" text="当前权限不足以使用战术妖精" />
   <comment key="no radio equipment" text="还没有分配战术妖精" />
   <comment key="no radio equipment" text="权限不够哇" />
-  <comment key="squad chat, not in squad" text="我现在还不在小队里……活下来的话就去写申请建一个好了" />
+  <comment key="squad chat, not in squad" text="我现在还没联系到安洁，得赶快了" />
   <comment key="Hey, wait up" text="等一等！" />
-  <comment key="Hey, wait up" text="等等我啊！" />
-  <comment key="Hey, wait up" text="你赶着奔丧嘛！" />
-  <comment key="Hey, wait up" text="等等！又不是抢冰淇淋！" />
-  <comment key="Quickly!" text="跃进！" />
-  <comment key="Quickly!" text="迅速行动！" />
+  <comment key="Hey, wait up" text="赶着奔丧？" />
+  <comment key="Hey, wait up" text="哦？你一个人要去哪儿啊？" />
+  <comment key="Quickly!" text="前进" />
+  <comment key="Quickly!" text="快点！" />
   <comment key="Buzz off" text="想啥呢" />
-  <comment key="Buzz off" text="不给坐" />
-  <comment key="Buzz off" text="我先来的，不给坐" />
-  <comment key="Step out, kid" text="跟上我，我会保护你们的" />
+  <comment key="Buzz off" text="不要" />
+  <comment key="Buzz off" text="……恐怕不行" />
+  <comment key="Step out, kid" text="这些傀儡的运算没到我的主机级别，主要还是得依靠我呢" />
   <comment key="hostile vehicle takeover" text="？" />
   <comment key="hostile vehicle takeover" text="————！" />
   <comment key="hostile vehicle takeover" text="是从哪里跳出来的？！" />
@@ -85,8 +73,7 @@
   <comment key="I'm outta here" text="啊，溜了溜了" />
   <comment key="I'm outta here" text="我不要继续呆这里了" />
   <comment key="Good job, soldiers" text="干得漂亮！" />
-  <comment key="Good job, soldiers" text="好耶！" />
-  <comment key="Good job, soldiers" text="你果然很强！" />
+  <comment key="Good job, soldiers" text="好" />
   <comment key="Open fire" text="开火！" />
   <comment key="Open fire" text="发现敌方单位！" />
   <comment key="Lone leader, open fire" text="射击！" />
@@ -101,17 +88,13 @@
   <comment key="grenade alert, grenade tag = rocket" text="火箭弹来袭！" />
   <comment key="grenade alert, grenade tag = rocket" text="火箭弹打击！" />
   <comment key="enemy not seen, area alerted" text="确保随时能躲进最近的掩体" />
-  <comment key="enemy not seen, area alerted" text="保持警惕" />
+  <comment key="enemy not seen, area alerted" text="探测中，准备交战" />
   <comment key="Lone leader, enemy not seen, area alerted" text="传感器读数不太对劲" />
   <comment key="leader, enemy not seen, taking suppressed fire" text="隐蔽！" />
   <comment key="leader, enemy not seen, taking suppressed fire" text="火力来袭！" />
-  <comment key="leader, enemy not seen, taking suppressed fire" text="*Griffin匿名板经典脏话*" />
   <comment key="Lone leader, enemy not seen, taking suppressed fire" text="受到攻击！" />
   <comment key="Lone leader, enemy not seen, taking suppressed fire" text="火力来袭！" />
   <comment key="Lone leader, enemy not seen, taking suppressed fire" text="搜索攻击方向！" />
-  <comment key="Lone leader, enemy not seen, taking suppressed fire" text="偷袭！不讲武德！" />
-  <comment key="Lone leader, enemy not seen, taking suppressed fire" text="*Griffin匿名板经典脏话*" />
-  <comment key="Lone leader, enemy not seen, taking suppressed fire" text="*意义不明的脏话*" />
   <comment key="enemy seen" text="敌方单位！" />
   <comment key="enemy seen" text="发现敌军！" />
   <comment key="enemy seen" text="敌方单位！数据上传！" />
@@ -119,7 +102,6 @@
   <comment key="enemy seen, vehicle tag = tank" text="需要反坦克武器！" />
   <comment key="enemy seen, vehicle tag = tank" text="装甲目标！" />
   <comment key="enemy seen, vehicle tag = tank" text="大型载具！" />
-  <comment key="enemy seen, vehicle tag = tank" text="我们打的，都什么啊！" />
   <comment key="enemy seen, vehicle tag = tank" text="发现敌军坦克！" />
   <comment key="enemy seen, vehicle tag = tank" text="重装火力单位！" />
   <comment key="enemy seen, vehicle tag = apc" text="APC！" />
@@ -131,31 +113,20 @@
   <comment key="enemy seen, vehicle tag = truck" text="发现运输载具！" />
   <comment key="enemy seen, vehicle tag = truck" text="发现敌军运输载具！" />
   <comment key="enemy seen, vehicle tag = truck" text="运输载具进入视距！" />
-  <comment key="enemy seen, vehicle tag = truck" text="他们的运输车！" />
-  <comment key="enemy not seen, taking suppressed fire" text="呜……是火力覆盖！" />
+  <comment key="enemy seen, vehicle tag = truck" text="敌方的运输车！" />
   <comment key="enemy not seen, taking suppressed fire" text="找掩护！" />
   <comment key="enemy not seen, taking suppressed fire" text="快趴下！" />
-  <comment key="enemy not seen, taking suppressed fire" text="火力来袭" />
-  <comment key="Waiting for reinforcements" text="等一下其他人"/>
-  <comment key="Waiting for reinforcements" text="先收拢人员" />
+  <comment key="enemy not seen, taking suppressed fire" text="火力来袭！" />
+  <comment key="Waiting for reinforcements" text="待命"/>
   <comment key="Hold on!" text="挺住！" />
-  <comment key="Hold on!" text="坚持住，一定要坚持住！" />
-  <comment key="Hold on!" text="我马上就来！" />
+  <comment key="Hold on!" text="马上就来！" />
   <comment key="Hold on!" text="坚持下去！" />
-  <comment key="Move out" text="好了！出发！" />
+  <comment key="Move out" text="接下来就得认真了……任务开始" />
   <comment key="Move out" text="我们走" />
   <comment key="Move out" text="跟我来" />
-  <comment key="All quiet here" text="好安静啊" />
-  <comment key="All quiet here" text="我过滤一下传感器杂波……" />
-  <comment key="All quiet here" text="*偷吃零食声*" />
-  <comment key="All quiet here" text="注意四周，我们的敌人肯定也有潜入计划" />
-  <comment key="All quiet here" text="*外骨骼自适配声*" />
-  <comment key="All quiet here" text="打完这场仗我就和指挥官说……嗯……果然还是不好意思说出来" />
-  <comment key="All quiet here" text="……想吃蛋糕" />
-  <comment key="All quiet here" text="要保护好指挥官他们才行" />
+  <comment key="All quiet here" text="视野内无敌方反应" />
   <comment key="Yes sir" text="是！" />
   <comment key="Yes sir" text="路线已规划" />
-  <comment key="Yes sir" text="我明白了！" />
   <comment key="Yes sir" text="正在路上" />
   <comment key="Yes sir" text="明白" />
   <comment key="Yes sir" text="收到" />
@@ -173,35 +144,21 @@
   <comment key="Uh, I can't drive this thing" text="那个……你们其他人更会开车对吧？" />
   <comment key="Uh, I can't drive this thing" text="我想换个位置……" />
   <comment key="Uh, I can't drive this thing" text="全是片假名怎么可能看得懂啊！" />
-  <comment key="Uh, I can't drive this thing" text="我记得之前看指挥官是这样开的……" />
   <comment key="Uh, I can't drive this thing" text="姑且声明，我没有驾照，一切交通事故由赶鸭子上架的各位乘客负责" />
   <comment key="Waiting for squad" text="等等其他人" />
   <comment key="Waiting for squad" text="小队集合" />
   <comment key="Shield up" text="竖盾" />
   <comment key="Shield up" text="防御模式" />
   <comment key="overencumbered" text="负重过高" />
-  <comment key="overencumbered" text="好重啊" />
   <comment key="overencumbered" text="关节读数不太乐观……" />
   <comment key="Where to, chief?" text="去哪？" />
   <comment key="Where to, chief?" text="等待路线指示" />
   <comment key="Where to, chief?" text="等待作战命令" />
   <comment key="Where to, chief?" text="等待命令" />
   <comment key="Press SPACE to continue!" text="按 空格键 进行再部署" />
-  <comment key="celebrating" text="我们赢了！" />
-  <comment key="celebrating" text="好耶！！！" />
-  <comment key="celebrating" text="作战结束" />
-  <comment key="celebrating" text="目标肃清" />
-  <comment key="celebrating" text="终于……" />
-  <comment key="celebrating" text="作战目标已达成" />
-  <comment key="celebrating" text="我们胜利了……胜利了" />
-  <comment key="celebrating" text="回报指挥官，重要目标已经夺取！" />
-  <comment key="celebrating" text="作战结束，果然不能小看对手" />
-  <comment key="celebrating" text="……可以松口气了" />
-  <comment key="celebrating" text="正在肃清" />
-  <comment key="celebrating" text="想回宿舍吃蛋糕……" />
-  <comment key="celebrating" text="作战结束，数据我记得是发送给格林娜小姐？" />
-  <comment key="about to drive over a friendly" text="刚刚是不是撞到了什么东西？" />
-  <comment key="about to drive over a friendly" text="……我会写检查报告的" />
+  <comment key="celebrating" text="任务结果记录中……记录完成" />
+  <comment key="celebrating" text="终于结束了，快安排新的任务吧"/>
+  <comment key="about to drive over a friendly" text="多少是我的错啦" />
   <comment key="this is as close as i can get" text="我觉得那里过不去" />
   <comment key="this is as close as i can get" text="我走不过去了" />
   <comment key="enemy vehicle spotted, near base" text="在&#37;base_name附近确认敌方&#37;enemy_name的&#37;vehicle_name" />
@@ -399,7 +356,7 @@
 	<comment key="ServerQuickChatAlert002" text="若您被警告多次，可能将会受到一定程度的惩罚"/>
 	<comment key="ServerQuickChatAlert003" text="&#37;name向您发出警告--请不要恶意击杀友军"/>
 	<comment key="ServerQuickChatAlert004" text="&#37;name向您发出警告--请不要恶意扰乱游戏秩序"/>
-  <comment key="skillcooldownhint" text="技能冷却还有&#37;time秒"/>
+  
 	<comment key="Request trauma team support!" text="索降创伤小组" />
 	<comment key="Receive, transport aircraft is maneuvering" text="收到, 运输机突防中" />
   <comment key="Request MG-SG echelon support!" text="索降机霰梯队" />

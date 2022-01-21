@@ -1,5 +1,5 @@
 #include "query_helpers2.as"
-
+#include "helpers.as"
 
 void playSoundAtLocation(const Metagame@ metagame, string filename, int factionId, const Vector3@ position, float volume=1.0) {
 	XmlElement command("command");
@@ -23,27 +23,50 @@ void playSoundAtLocation(const Metagame@ metagame, string filename, int factionI
 
 void editPlayerVest(const Metagame@ metagame, int characterId, string Itemkey, uint numVests){
 	if (numVests < 1) return;
-	for (uint j = numVests; j > 0; --j) {
 		XmlElement c("command");
 			c.setStringAttribute("class", "update_inventory");
 			c.setIntAttribute("character_id", characterId);
-			c.setIntAttribute("container_type_id", 4); 
+			c.setIntAttribute("container_type_id", numVests); 
 			XmlElement item("item");
 			item.setStringAttribute("class", "carry_item");
 			item.setStringAttribute("key", Itemkey);
 			c.appendChild(item);
 		metagame.getComms().send(c);
-	}
+}
+
+void editPlayerNade(const Metagame@ metagame, int characterId, string Itemkey, uint numVests){
+	if (numVests < 1) return;
+		XmlElement c("command");
+			c.setStringAttribute("class", "update_inventory");
+			c.setIntAttribute("character_id", characterId);
+			c.setIntAttribute("container_type_id", numVests); 
+			XmlElement item("item");
+			item.setStringAttribute("class", "projectile");
+			item.setStringAttribute("key", Itemkey);
+			c.appendChild(item);
+		metagame.getComms().send(c);
 }
 
 string getPlayerEquipmentKey(const Metagame@ metagame, int characterId, uint slot){
 	if (slot <0) return "";
 	if (slot >5) return "";
 	const XmlElement@ targetCharacter = getCharacterInfo2(metagame,characterId);
+	if (targetCharacter==null) return "";
 	array<const XmlElement@>@ equipment = targetCharacter.getElementsByTagName("item");
 	if (equipment.size() == 0) return "";
 	string ItemKey = equipment[slot].getStringAttribute("key");
 	return ItemKey;
+}
+
+int getPlayerEquipmentAmount(const Metagame@ metagame, int characterId, uint slot){
+	if (slot <0) return -1;
+	if (slot >5) return -1;
+	const XmlElement@ targetCharacter = getCharacterInfo2(metagame,characterId);
+	if (targetCharacter==null) return -1;
+	array<const XmlElement@>@ equipment = targetCharacter.getElementsByTagName("item");
+	if (equipment.size() == 0) return -1;
+	int amount = equipment[slot].getIntAttribute("amount");
+	return amount;
 }
 
 void GiveRP(const Metagame@ metagame,int character_id,int rp){
@@ -58,6 +81,11 @@ void addItemInBackpack(Metagame@ metagame, int characterId, string ItemType, str
 		"</command>";
 	metagame.getComms().send(c);
 }
+
+bool checkCommandAlter(string message, string target, string target1) {
+    return startsWith(message.toLowerCase(), "/" + target) || endsWith(message.toLowerCase(),"/"+ target1);
+}
+
 		// query for Equipment
 		// TagName=query_result query_id=22
 		// TagName=character
