@@ -9,7 +9,7 @@
 		magazine_size="30" 
 		name="AN-94 (MOD3)-skill-[Doll Trigger]" 
 		projectile_speed="214.28" 
-		retrigger_time="0.1" 
+		retrigger_time="0.05" 
         last_burst_retrigger_time="0.3"
 		suppressed="1" 
         projectiles_per_shot="2"
@@ -41,7 +41,7 @@
 	<effect class="muzzle" ref="muzzle_blue"/>
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet.projectile">
-        <result class="hit"  kill_probability="1.55" kill_decay_start_time="2.8" kill_decay_end_time="3.333" />
+        <result class="hit"  kill_probability="1.65" kill_decay_start_time="2.8" kill_decay_end_time="3.333" />
     </projectile>
     
     <stance state_key="running" accuracy="0.4" />

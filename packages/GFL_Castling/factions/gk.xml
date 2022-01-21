@@ -1046,6 +1046,9 @@
 			<weapon key="gkw_ak12_defyAI.weapon" enabled="1" />
 			<carry_item key="exo_AK12_defy.carry_item" enabled="1"/>
 		</resources>
+		<attribute_config class="xp">
+			<attribute weight="1.0" min="0.100" max="0.101" />
+		</attribute_config>
 	</soldier>
 
 
