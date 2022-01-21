@@ -23,17 +23,28 @@ void playSoundAtLocation(const Metagame@ metagame, string filename, int factionI
 
 void editPlayerVest(const Metagame@ metagame, int characterId, string Itemkey, uint numVests){
 	if (numVests < 1) return;
-	for (uint j = numVests; j > 0; --j) {
 		XmlElement c("command");
 			c.setStringAttribute("class", "update_inventory");
 			c.setIntAttribute("character_id", characterId);
-			c.setIntAttribute("container_type_id", 4); 
+			c.setIntAttribute("container_type_id", numVests); 
 			XmlElement item("item");
 			item.setStringAttribute("class", "carry_item");
 			item.setStringAttribute("key", Itemkey);
 			c.appendChild(item);
 		metagame.getComms().send(c);
-	}
+}
+
+void editPlayerNade(const Metagame@ metagame, int characterId, string Itemkey, uint numVests){
+	if (numVests < 1) return;
+		XmlElement c("command");
+			c.setStringAttribute("class", "update_inventory");
+			c.setIntAttribute("character_id", characterId);
+			c.setIntAttribute("container_type_id", numVests); 
+			XmlElement item("item");
+			item.setStringAttribute("class", "projectile");
+			item.setStringAttribute("key", Itemkey);
+			c.appendChild(item);
+		metagame.getComms().send(c);
 }
 
 string getPlayerEquipmentKey(const Metagame@ metagame, int characterId, uint slot){

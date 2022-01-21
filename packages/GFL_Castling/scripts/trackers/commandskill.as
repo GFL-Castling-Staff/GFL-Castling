@@ -52,6 +52,9 @@ class CommandSkill : Tracker {
                 if (c_weaponType=="gkw_an94_mod3.weapon" || c_weaponType=="gkw_an94_mod3_skill.weapon"){
                     excuteAN94skill(cId,senderId);
                 }
+                if (c_weaponType=="gkw_vector.weapon"){
+                    excuteVVskill(cId,senderId);
+                }
             }
         }
     }
@@ -108,6 +111,32 @@ class CommandSkill : Tracker {
             m_metagame.getComms().send(command);    
         sendPrivateMessage(m_metagame,playerId,"Defy AK-12 summoned");
         _log("summonAK12");
+    }
+    void excuteVVskill(int characterId,int playerId){
+        bool ExistQueue = false;
+        int j =-1;
+        for (int i=0;i<SkillArray.length();i++){
+            if (SkillArray[i].m_character_id==characterId && SkillArray[i].m_weapontype=="VECTOR") {
+                ExistQueue=true;
+                j=i;
+            }
+        }
+        if (ExistQueue){
+            dictionary a;
+            a["%time"] = ""+SkillArray[j].m_time;
+            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            _log("skill cooldown" + SkillArray[j].m_time);
+            return;
+        }
+        SkillArray.insertLast(SkillTrigger(characterId,20,"VECTOR"));
+        if(getPlayerEquipmentKey(m_metagame,characterId,2)==""){
+            editPlayerNade(m_metagame,characterId,"VVfirenade.projectile",2);
+        }
+        else{
+            addItemInBackpack(m_metagame,characterId,"projectile","VVfirenade.projectile");
+        }
+        sendPrivateMessage(m_metagame,playerId,"Firenade Added");
+
     }
 }
 
