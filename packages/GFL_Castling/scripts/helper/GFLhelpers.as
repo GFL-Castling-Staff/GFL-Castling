@@ -58,6 +58,17 @@ string getPlayerEquipmentKey(const Metagame@ metagame, int characterId, uint slo
 	return ItemKey;
 }
 
+string getPlayerEquipmentAmount(const Metagame@ metagame, int characterId, uint slot){
+	if (slot <0) return "";
+	if (slot >5) return "";
+	const XmlElement@ targetCharacter = getCharacterInfo2(metagame,characterId);
+	if (targetCharacter==null) return "";
+	array<const XmlElement@>@ equipment = targetCharacter.getElementsByTagName("item");
+	if (equipment.size() == 0) return "";
+	string amount = equipment[slot].getIntAttribute("amount");
+	return amount;
+}
+
 void GiveRP(const Metagame@ metagame,int character_id,int rp){
 	string c = "<command class='rp_reward' character_id='" + character_id + "' reward='" + rp + "' />";
     metagame.getComms().send(c);

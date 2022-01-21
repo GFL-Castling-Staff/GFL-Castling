@@ -6,13 +6,13 @@
 
 
     <trigger class="impact" />
-    <result class="spawn" instance_class="grenade" instance_key="firenade_sub.projectile" min_amount="6" max_amount="6" offset="0 4.0 0" position_spread="2 -4" direction_spread="0.0 0.0" />   
+    <result class="spawn" instance_class="grenade" instance_key="firenade_sub.projectile" min_amount="15" max_amount="15" offset="0 6.0 0" position_spread="1 -6" direction_spread="0.0 0.0" />   
 
     <rotation class="random" />
 
     <model mesh_filename="40mm.mesh" texture_filename="40mm.png" />
-
-    <throwable curve_height="5.0" near_far_distance="10.0" speed_estimation_near="9.0" speed_estimation_far="17.0" max_speed="13.0" randomness="0.07" />
+    <hud_icon filename="hud_c4.png" />
+    <throwable curve_height="7.0" near_far_distance="5.0" speed_estimation_near="9.0" speed_estimation_far="30.0" max_speed="20.0" randomness="0.07" />
 
     <!-- projectile slot 0 is used for hand grenade items currently -->
     <!-- bound to change -->

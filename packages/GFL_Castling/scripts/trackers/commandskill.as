@@ -129,7 +129,7 @@ class CommandSkill : Tracker {
             return;
         }
         SkillArray.insertLast(SkillTrigger(characterId,20,"VECTOR"));
-        if(getPlayerEquipmentKey(m_metagame,characterId,2)==""){
+        if(getPlayerEquipmentAmount(m_metagame,characterId,2)==0){
             editPlayerNade(m_metagame,characterId,"VVfirenade.projectile",2);
         }
         else{
