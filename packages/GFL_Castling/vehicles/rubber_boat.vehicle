@@ -1,47 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<vehicle name="Degeyter I" key="rubber_boat.vehicle" map_view_atlas_index="4">
+<vehicle name="Degeyter I" 
+	key="rubber_boat.vehicle" 
+	map_view_atlas_index="4"
+	character_leave_request_mode="friendly" >
+	
 	<tag name="vehicle" />
 	<tire_set offset="0.85 0.0 1.55" radius="0.4" />
 	<tire_set offset="0.85 0.0 -1.55" radius="0.4" />
 
 	<control 
-	max_speed="32.0" 
-	acceleration="8.0" 
-	max_reverse_speed="9.0" 
+	max_speed="40.0" 
+	acceleration="10.0" 
+	max_reverse_speed="7.0" 
 	min_health_to_steer="0" 
-	max_rotation="0.8" 
+	max_rotation="1.0" 
 	max_water_depth="3.3" 
-	steer_smoothening="0.6" />
+	steer_smoothening="0.8" />
 
 	<physics 
-	max_health="15" 
-	mass="50.0" 
+	max_health="36" 
+	mass="2.0" 
 	gravity="-28" 
 	extent="1.87 0.0 3.41" 
 	offset="0 0.2 0" 
 	collision_model_pos="0 0.5 0" 
-	collision_model_extent="3.2 1.0 4.3" 
-	visual_offset="0 0.7 -1.2" 
+	collision_model_extent="2.8 2.0 6.0" 
+	visual_offset="0 0.7 0" 
 	top_offset="0 3.0 0" 	
 	friction_offset="0.05"
 	drag_offset="-0.05" /> 
 
 
-	<visual  offset="0 0 0.28" class="turret" turret_index="0" mesh_filename="Crusher_turret.mesh" texture_filename="Crasher_Base_color.png" />
-	<visual  offset="0 0 0.28" class="turret" turret_index="0" key="broken" mesh_filename="Crusher_turret.mesh" texture_filename="humvee_broken.png" />
+
+	<visual  offset="0 0 0.24" class="turret" turret_index="0" mesh_filename="Crusher_turret.mesh" texture_filename="Crasher_Base_color.png" />
+	<visual  offset="0 0 0.24" class="turret" turret_index="0" key="broken" mesh_filename="Crusher_turret.mesh" texture_filename="humvee_broken.png" />
     <visual class="chassis" mesh_filename="Crusher_body.mesh" texture_filename="Crasher_Base_color.png" />
     <visual class="chassis" key="broken" mesh_filename="Crusher_body.mesh" texture_filename="humvee_broken.png" />
 
 	<visual class="tire" mesh_filename="" texture_filename="" />
 	
-	<character_slot type="driver" position="0.48 0.7 -1.2" rotation="-0.785" exit_rotation="1.57" hiding="1" animation_id="47" marker_offset="0 0.5 0"/>
-	<character_slot type="passenger" position="-0.376 0.7 -1.2" rotation="-1.57" exit_rotation="-1.57" hiding="1" animation_id="48" marker_offset="0 0.5 0"/>
+	<turret offset="0 1.80 0" weapon_key="crasher_mg.weapon" weapon_offset="0 1.32 0.0" weapon_recoil="0.0" max_rotation_step="0.0053" />
+	
+	<character_slot type="driver" position="0.64 0.74 1.04" rotation="-0.785" exit_rotation="1.57" hiding="1" animation_id="47" marker_offset="0 0.5 0"/>
+	<character_slot type="gunner" seat_position="-0.64 0.74 1.04" enter_position="-0.64 0.74 1.04"  rotation="0" exit_rotation="-1.57" hiding="1" animation_key="tank mg still" marker_offset="0 1.2 0">
+		<turret index="0" />
+	</character_slot>
 
-	<character_slot type="passenger" position="0.34 0.74 0" rotation="1.0" exit_rotation="1.57" hiding="1" animation_id="48" marker_offset="0 0.1 0"/>
-	<character_slot type="passenger" position="-0.34 0.74 0" rotation="-1.0" exit_rotation="-1.57" hiding="1" animation_id="48" marker_offset="0 0.1 0"/>
-
-	<character_slot type="passenger" position="0.34 0.74 1.04" rotation="0.2" exit_rotation="1.57" hiding="1" animation_id="48" marker_offset="0 0.1 0"/>
-	<character_slot type="passenger" position="-0.34 0.74 1.04" rotation="-0.2" exit_rotation="-1.57" hiding="1" animation_id="48" marker_offset="0 0.1 0"/>
+	<character_slot type="passenger" position="0.96 0.74 -0.52" rotation="1.57" exit_rotation="1.57" hiding="0" animation_id="48" marker_offset="0 0.0 0" rotation_range="1.48"/>
+	<character_slot type="passenger" position="-0.96 0.74 -0.52" rotation="-1.57" exit_rotation="-1.57" hiding="0" animation_id="48" marker_offset="0 0.0 0" rotation_range="1.48"/>
 
 	<!-- sound handling -->
 	<rev_sound filename="jeep2_rev0.wav" low_pitch="0.8" high_pitch="1.0" low_rev="0.0" high_rev="0.15" volume="0.6" />
