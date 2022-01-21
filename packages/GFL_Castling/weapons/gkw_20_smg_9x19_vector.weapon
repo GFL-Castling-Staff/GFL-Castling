@@ -15,15 +15,7 @@
 		/>
     <inventory  buy_price="8.0" sell_price="8.0" />
 
-
-
-
     
-	
-	
-
-    
-
     <sound key="fire" fileref="Vector_Fire_FromCODOL.wav" pitch_variety="0.05" volume="0.8" />
     <sound key="magazine_out" fileref="vector_mgz_out_FromL4D2.wav" volume="0.5" />
     <sound key="magazine_in" fileref="vector_mgz_in_FromL4D2.wav" volume="0.5" />
@@ -37,17 +29,14 @@
 
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet.projectile">
-        <result class="hit"  kill_probability="1.25" kill_decay_start_time="0.104" kill_decay_end_time="0.392" />
+        <result class="hit"  kill_probability="1.55" kill_decay_start_time="0.226" kill_decay_end_time="0.337" />
     </projectile>
     
     <stance state_key="running" accuracy="0.85" />
     <stance state_key="walking" accuracy="0.93" />
     <stance state_key="crouch_moving" accuracy="0.9" />
     <stance state_key="prone_moving" accuracy="0.9" />
-
     <stance state_key="standing" accuracy="0.95" />
-
     <stance state_key="prone" accuracy="0.98" />
-    
 
 </weapon>

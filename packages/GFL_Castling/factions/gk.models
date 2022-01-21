@@ -108,6 +108,9 @@
 <model filename="gkd_hvy_m2_1.xml"><requirement class="weapon" slot="0" key="gkw_hvy_m2.weapon"/></model>
 <model filename="gkd_hvy_m2_2.xml"><requirement class="weapon" slot="0" key="gkw_hvy_m2.weapon"/></model>
 <model filename="gkd_hvy_m2_3.xml"><requirement class="weapon" slot="0" key="gkw_hvy_m2.weapon"/></model>
+<model filename="gkd_hvy_m2_1.xml"><requirement class="weapon" slot="0" key="gkw_hvy_m2_ai.weapon"/></model>
+<model filename="gkd_hvy_m2_2.xml"><requirement class="weapon" slot="0" key="gkw_hvy_m2_ai.weapon"/></model>
+<model filename="gkd_hvy_m2_3.xml"><requirement class="weapon" slot="0" key="gkw_hvy_m2_ai.weapon"/></model>
 <model filename="gkd_hvy_m2_1.xml"><requirement class="weapon" slot="0" key="gkw_m2_m1a1.weapon"/></model>
 <model filename="gkd_hvy_m2_2.xml"><requirement class="weapon" slot="0" key="gkw_m2_m1a1.weapon"/></model>
 <model filename="gkd_hvy_m2_3.xml"><requirement class="weapon" slot="0" key="gkw_m2_m1a1.weapon"/></model>
@@ -286,7 +289,7 @@
 <model filename="gkd_ar_fx05.xml"><requirement class="weapon" slot="0" key="gkw_fx05.weapon"/></model>
 <model filename="gkd_ar_apc556.xml"><requirement class="weapon" slot="0" key="gkw_apc556.weapon"/></model>
 <model filename="gkd_hg_cz100.xml"><requirement class="weapon" slot="0" key="gkw_cz100.weapon"/></model>
-<model filename="gkd_rf_m14mod3.xml"><requirement class="weapon" slot="0" key="gkw_m14mod3.weapon"/></model>
+<model filename="gkd_rf_m14mod3.xml"><requirement class="weapon" slot="0" key="gkw_m14mod3_skill.weapon"/></model>
 <model filename="gkd_smg_sp9.xml"><requirement class="weapon" slot="0" key="gkw_sp9.weapon"/></model>
 <model filename="gkd_sg_dp12.xml"><requirement class="weapon" slot="0" key="gkw_dp12.weapon"/></model>
 <model filename="gkd_rf_4type.xml"><requirement class="weapon" slot="0" key="gkw_4type.weapon"/></model>
@@ -354,6 +357,7 @@
 <model filename="sfd_justice.xml"><requirement class="weapon" slot="0" key="ff_justice.weapon"/></model>
 <model filename="sfd_justice.xml"><requirement class="weapon" slot="0" key="ff_justice.weapon"/></model>
 <model filename="sfd_dreamer.xml"><requirement class="weapon" slot="0" key="ff_dreamer.weapon"/></model>
+<model filename="sfd_dreamer.xml"><requirement class="weapon" slot="0" key="ff_dreamer_skill.weapon"/></model>
 <model filename="gkd_isc_large_mecha.xml"><requirement class="weapon" slot="0" key="gkr_bbs.weapon"/></model>
 
 

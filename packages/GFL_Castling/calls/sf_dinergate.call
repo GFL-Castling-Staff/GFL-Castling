@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<call 
+name="dinergate" 
+key="sf_dinergate.call"
+radio_view_text="dinergate" 
+initiation_comment1="dinergate"
+acknowledge_comment="dinergate"
+launch_comment="dinergate！"
+notify_metagame="1">
+	  
+	<hud_icon filename="testing.png" />
+	<capacity value="100" source="rank" source_value="0.0" />
+	<!-- <capacity value="100" source="rank" source_value="0.1" /> -->
+	<inventory encumbrance="0.0" price="500.0" />
+
+	<round 
+			instances="20" 
+			instance_class="soldier" 
+			instance_key="sf_dinergate" 
+			instance_spread="10 0 10" 
+			common_spread="5 0 5" 
+			launch_time="5.0" 
+			spawn_time="5.5" 
+			horizontal_offset_at_spawn="0.0" 
+			vertical_offset_at_spawn="-5.0" 
+			initial_speed_to_target="0.0">
+			<sound class="spawn" fileref="zomb_stab6.wav" volume="0" />
+		</round>
+
+		<round 
+		instances="30" 
+		instance_class="soldier" 
+		instance_key="sf_dinergate" 
+		instance_spread="10 0 10" 
+		common_spread="5 0 5" 
+		launch_time="6.0" 
+		spawn_time="6.5" 
+		horizontal_offset_at_spawn="0.0" 
+		vertical_offset_at_spawn="-5.0" 
+		initial_speed_to_target="0.0">
+		<sound class="spawn" fileref="zomb_stab6.wav" volume="0" />
+	</round>
+
+
+
+</call>

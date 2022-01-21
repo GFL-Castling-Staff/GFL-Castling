@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <models>
 	<!-- <model filename="gkd_smg_idw.xml"><requirement class="weapon" slot="0" key="gkw_idw.weapon"/></model> -->
-	<model filename="sfd_guard_christmas_gua.xml"><requirement class="weapon" slot="0" key="sfw_guard.weapon"/></model>
-	<model filename="sfd_jaeger_christmas.xml"><requirement class="weapon" slot="0" key="sfw_jaeger.weapon"/></model>
+	<model filename="sfd_guard.xml"><requirement class="weapon" slot="0" key="sfw_guard.weapon"/></model>
+	<model filename="sfd_jaeger.xml"><requirement class="weapon" slot="0" key="sfw_jaeger.weapon"/></model>
 	<model filename="sfd_vespid.xml"><requirement class="weapon" slot="0" key="sfw_vespid.weapon"/></model>
 	<model filename="sfd_striker.xml"><requirement class="weapon" slot="0" key="sfw_striker.weapon"/></model>
 	<model filename="sfd_ripper.xml"><requirement class="weapon" slot="0" key="sfw_ripper.weapon"/></model>
@@ -25,8 +25,9 @@
     <model filename="sfd_justice.xml"><requirement class="weapon" slot="0" key="sfw_justice.weapon"/></model>
 	<model filename="sfd_dragoon_SAIWA.xml"><requirement class="weapon" slot="0" key="sfw_dragoon.weapon"/></model>
 	<model filename="sfd_Brute_gua.xml"><requirement class="weapon" slot="0" key="sfw_brute.weapon"/></model>
-
-	
+	<model filename="sfd_dinergate_from_SAIWA.xml"><requirement class="weapon" slot="0" key="sfw_dinergate.weapon"/></model>
+	<model filename="sfd_dinergate_christmas2_from_SAIWA.xml"><requirement class="weapon" slot="0" key="sfw_dinergate.weapon"/></model>
+	<model filename="sfd_dinergate_christmas_from_SAIWA.xml"><requirement class="weapon" slot="0" key="sfw_dinergate.weapon"/></model>
 	<model filename="sfd_manticore.xml">
 	<requirement class="weapon" slot="0" key="sfw_manticore.weapon"/>
 	</model>

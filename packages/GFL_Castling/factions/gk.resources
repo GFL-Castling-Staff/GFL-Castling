@@ -414,6 +414,12 @@
 	<weapon key="gkw_at4_tec-9.weapon" />
     <weapon key="gkw_cl.weapon" />
 	
+    <!-- MG技能 -->
+	<weapon key="gkw_m2hb_skill.weapon" />
+	<weapon key="gkw_mg34_skill.weapon" />
+	<weapon key="gkw_mk46_skill.weapon" />
+	<weapon key="gkw_mk48_skill.weapon" />
+	<weapon key="gkw_qjy88_skill.weapon" />
 
 	<!-- 靶机 -->
 	<weapon key="target.weapon" />
@@ -431,7 +437,9 @@
 	<weapon key="gkw_m1895mod3_skill.weapon"/>
 	<weapon key="gkw_lwmmgmod3_skill.weapon"/>
 	<weapon key="gkw_an94_mod3_skill.weapon"/>
-	<!-- 载具 -->
+	<weapon key="gkw_m14mod3_skill.weapon" />
+  
+		<!-- 载具 -->
 	<vehicle key="humvee_mg" />
 	<vehicle key="humvee.vehicle" />
 	<vehicle key="pierre.vehicle" />
@@ -532,6 +540,7 @@
 	<weapon key="ff_vespid.weapon" />
 	<weapon key="ff_weaver.weapon" />
 	<weapon key="ff_dreamer.weapon" />
+    <weapon key="ff_dreamer_skill.weapon"/> 
 	<weapon key="ff_excutioner_1.weapon" />
 	<weapon key="ff_excutioner_2.weapon" />
 	<weapon key="ff_parw_alina.weapon" />

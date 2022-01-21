@@ -7,11 +7,11 @@
 		class="0"
 		magazine_size="30" 
 		name="Type 100" 
-		projectile_speed="79.83" 
-		retrigger_time="0.133" 
+		projectile_speed="79.52" 
+		retrigger_time="0.075" 
 		suppressed="0" 
 		sustained_fire_diminish_rate="2.0" 
-		sustained_fire_grow_step="0.4" 
+		sustained_fire_grow_step="0.2" 
         stab_enabled="1"
         stab_range="3.0" />
     <inventory  buy_price="5.0" sell_price="5.0" />
@@ -32,16 +32,14 @@
 
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet.projectile">
-        <result class="hit"  kill_probability="1.4" kill_decay_start_time="0.358" kill_decay_end_time="1.790" />
+        <result class="hit"  kill_probability="1.7" kill_decay_start_time="0.3853" kill_decay_end_time="0.6421" />
     </projectile>
     
     <stance state_key="running" accuracy="0.85" />
     <stance state_key="walking" accuracy="0.9" />
     <stance state_key="crouch_moving" accuracy="0.9" />
     <stance state_key="prone_moving" accuracy="0.9" />
-
     <stance state_key="standing" accuracy="0.96" />
-
     <stance state_key="prone" accuracy="1" />
     <modifier class="speed" value="0.4" />  <!-- 得比其他smg移速高0.1 -->
 

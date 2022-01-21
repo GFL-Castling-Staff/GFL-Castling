@@ -12,7 +12,7 @@
     solt="0" 
 	magazine_size="30" 
 	name="X95" 
-	projectile_speed="91" 
+	projectile_speed="204.76" 
 	retrigger_time="0.063" 
 	suppressed="1"
 	sustained_fire_diminish_rate="1.6" 
@@ -45,9 +45,9 @@
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet.projectile">
         <result class="hit"  
-        kill_probability="1.5" 
-        kill_decay_start_time="0.419" 
-        kill_decay_end_time="1.0465" />
+        kill_probability="1.65" 
+        kill_decay_start_time="0.374" 
+        kill_decay_end_time="0.6235" />
     </projectile>
     
     <!--Accuracy, Movement speed-->
