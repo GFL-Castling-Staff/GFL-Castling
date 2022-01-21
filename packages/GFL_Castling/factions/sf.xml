@@ -693,7 +693,7 @@
 	</soldier>
 	<!-- Tarantula狼蛛 -->
 	<soldier name="sf_tarantula" spawn_score="0.50" copy_from="sf_dinergate">
-		<ai filename="eod.ai" />
+		<ai filename="infected.ai" />
 		<model filename="sfd_tarantula.xml" />
 				
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1">
