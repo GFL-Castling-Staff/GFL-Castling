@@ -51,7 +51,7 @@ string getPlayerEquipmentKey(const Metagame@ metagame, int characterId, uint slo
 	if (slot <0) return "";
 	if (slot >5) return "";
 	const XmlElement@ targetCharacter = getCharacterInfo2(metagame,characterId);
-	if (targetCharacter==null) return "";
+	if (targetCharacter is null) return "";
 	array<const XmlElement@>@ equipment = targetCharacter.getElementsByTagName("item");
 	if (equipment.size() == 0) return "";
 	string ItemKey = equipment[slot].getStringAttribute("key");
@@ -62,7 +62,7 @@ int getPlayerEquipmentAmount(const Metagame@ metagame, int characterId, uint slo
 	if (slot <0) return -1;
 	if (slot >5) return -1;
 	const XmlElement@ targetCharacter = getCharacterInfo2(metagame,characterId);
-	if (targetCharacter==null) return -1;
+	if (targetCharacter is null) return -1;
 	array<const XmlElement@>@ equipment = targetCharacter.getElementsByTagName("item");
 	if (equipment.size() == 0) return -1;
 	int amount = equipment[slot].getIntAttribute("amount");
