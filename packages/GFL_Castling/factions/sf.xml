@@ -691,6 +691,16 @@
 				<attribute weight="0.3" min="0.0" max="1.0" />
 		</attribute_config>
 	</soldier>
+	<!-- Tarantula狼蛛 -->
+	<soldier name="sf_tarantula" spawn_score="0.50" copy_from="sf_dinergate">
+		<ai filename="eod.ai" />
+		<model filename="sfd_tarantula.xml" />
+				
+		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1">
+			<weapon key="sfw_tarantula.weapon"/>
+			<carry_item key="sf_ar.carry_item" />
+		</resources>
+	</soldier>
 
 	<!-- store -->
 	<soldier name="default_hg" spawn_score="0.0">

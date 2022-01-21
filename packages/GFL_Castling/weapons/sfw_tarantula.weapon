@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<weapon file="sf.base_weapon" key="sfw_dinergate.weapon">
+<weapon file="sf.base_weapon" key="sfw_tarantula.weapon">
 
     <specification 
 		accuracy_factor="0.85" 
@@ -8,12 +8,11 @@
 		class="0"
         solt="0" 
 		magazine_size="30" 
-		name="SF-Dinergate" 
+		name="SF-Tarantula" 
 		projectile_speed="80" 
 		retrigger_time="0.25" 
 		suppressed="0" 
-        carry_in_two_hands="0"
-        sight_range_modifier="1.2"
+        carry_in_two_hands="1"
 		sustained_fire_diminish_rate="0.8"
 		sustained_fire_grow_step="0.5"
         stab_enabled="1" />
@@ -78,5 +77,5 @@
     <stance state_key="crouching" accuracy="0.9" />
     <stance state_key="prone" accuracy="0.95" />
     
-    <modifier class="speed" value="0.45" />
+    <modifier class="speed" value="0.55" />
 </weapon>
