@@ -8,9 +8,9 @@
         solt="0" 
 		magazine_size="30" 
 		name="Task Force Defy: AK-12" 
-		projectile_speed="152.13" 
-        retrigger_time="0.02" 
-		suppressed="0" 
+		projectile_speed="204.13" 
+        retrigger_time="0.2" 
+		suppressed="1" 
         last_burst_retrigger_time="0.2"
         burst_shots="3"
         sight_range_modifier="2.0"
@@ -46,9 +46,8 @@
     
     <stance state_key="running" accuracy="1" />
     <stance state_key="walking" accuracy="1" />
-    <stance state_key="crouch_moving" accuracy="0.8" />
-    <stance state_key="prone_moving" accuracy="0.8" />
-
+    <stance state_key="crouch_moving" accuracy="1" />
+    <stance state_key="prone_moving" accuracy="1" />
     <stance state_key="standing" accuracy="1" />
     <stance state_key="crouching" accuracy="1" />
     <stance state_key="prone" accuracy="1" />
