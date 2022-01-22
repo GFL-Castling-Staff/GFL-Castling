@@ -25,7 +25,8 @@
     <animation state_key="reload" animation_key="ARreload1.2" />
 	<animation key="reload" stance_key="prone" animation_key="ARreloadp1.2" />
     <inventory  buy_price="350.0" sell_price="350.0" />
-
+    <capacity value="0" source="rank" source_value="0.0" />
+    <capacity value="1" source="rank" source_value="6.048" />
 
 
     <sound key="fire" fileref="AN94_Fire_FromCODOL.wav" pitch_variety="0.02" volume="1" />
