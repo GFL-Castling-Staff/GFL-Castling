@@ -69,7 +69,7 @@
 	<!--Model, Icon, Cost-->
     <model filename="" />
     <hud_icon filename="parw_nimogen.png" />
-	<drop_on_death_result class="spawn" instance_class="carry_item" instance_key="snow_gifts.carry_item" min_amount="1" max_amount="2" offset="0 1.0 0" position_spread="0 0" direction_spread="0 0" />
+	<drop_on_death_result class="spawn" instance_class="carry_item" instance_key="wild_gifts.carry_item" min_amount="1" max_amount="2" offset="0 1.0 0" position_spread="0 0" direction_spread="0 0" />
     <!-- <inventory  price="3.0" /> -->
 	
 	<!--Ballistics-->
