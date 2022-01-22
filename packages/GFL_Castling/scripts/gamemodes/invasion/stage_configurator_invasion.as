@@ -177,7 +177,6 @@ class StageConfiguratorInvasion : StageConfigurator {
 	protected void setupNormalStages() {
 	addStage(setupStage101());        // mapnana
 	//addStage(setupStage102());	  // mapftg
-	addStage(setupStage103()); 		  // map Palo Island by diling
 	addStage(setupStage7());          // map6
 	addStage(setupStage1());          // map2
     addStage(setupStage9());          // map9
@@ -186,6 +185,7 @@ class StageConfiguratorInvasion : StageConfigurator {
     addStage(setupStage15());         // map1_2
     addStage(setupStage12());         // map14
     addStage(setupStage10());         // map10
+	addStage(setupStage103()); 		  // map Palo Island by diling
     addStage(setupStage17());         // map17    
     addStage(setupStage18());         // map13_2
     addStage(setupStage3());          // map3
@@ -309,6 +309,8 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.m_playerAiCompensation = 6;                                         // was 4 (1.82)
         stage.m_playerAiReduction = 0;                                          // was 2 (test3)    
 
+		stage.m_finalBattle = true;
+
 		stage.m_minRandomCrates = 0; 
 		stage.m_maxRandomCrates = 0;
 
@@ -321,14 +323,14 @@ class StageConfiguratorInvasion : StageConfigurator {
 		{
 			Faction f(getFactionConfigs()[1], createCommanderAiCommand(1,0.3,0.1));
 			f.m_overCapacity = 40;                                               
-			f.m_capacityOffset = 20;
+			f.m_capacityOffset = 10;
 			f.m_capacityMultiplier = 1.0;                                                 
 			stage.m_factions.insertLast(f);                                         
 		}
 		{
 			Faction f(getFactionConfigs()[2], createCommanderAiCommand(2,0.3,0.1));
 			f.m_overCapacity = 40;                                               
-			f.m_capacityOffset = 20;
+			f.m_capacityOffset = 10;
 			f.m_capacityMultiplier = 1.0;                                                 
 			stage.m_factions.insertLast(f);                                         
 		}
