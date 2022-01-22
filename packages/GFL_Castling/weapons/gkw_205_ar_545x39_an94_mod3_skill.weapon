@@ -28,7 +28,7 @@
 
 
 
-    <sound key="fire" fileref="an94_fire_FromCODBO2.wav" pitch_variety="0.02" volume="0.6" />
+    <sound key="fire" fileref="AN94_Fire_FromCODOL.wav" pitch_variety="0.02" volume="1" />
     <sound key="magazine_out" fileref="an94_mgz_out_FromL4D2.wav" volume="1" />
     <sound key="magazine_in" fileref="an94_mgz_in_FromL4D2.wav" volume="1" />
     <sound key="cycle" fileref="an94_cycle_FromL4D2.wav" volume="1" />
@@ -41,7 +41,7 @@
 	<effect class="muzzle" ref="muzzle_blue"/>
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet.projectile">
-        <result class="hit"  kill_probability="1.65" kill_decay_start_time="2.8" kill_decay_end_time="3.333" />
+        <result class="hit"  kill_probability="1.7" kill_decay_start_time="2.8" kill_decay_end_time="3.333" />
     </projectile>
     
     <stance state_key="running" accuracy="0.4" />
@@ -51,6 +51,6 @@
     <stance state_key="standing" accuracy="0.98" />
     <stance state_key="crouching" accuracy="1.2" />
     <stance state_key="prone" accuracy="1.2" />
-    <modifier class="speed" value="-0.25" />
+    <modifier class="speed" value="-0.3" />
 
 </weapon>
