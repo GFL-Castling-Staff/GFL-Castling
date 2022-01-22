@@ -5,7 +5,7 @@
   <specification 
   barrel_offset="0.5" 
   retrigger_time="0.09" 
-  accuracy_factor="0.7" 
+  accuracy_factor="0.5" 
   sustained_fire_grow_step="0.35" 
   sustained_fire_diminish_rate="1.8" 
   magazine_size="200" 
@@ -13,7 +13,7 @@
   name="MK46" 
   class="0" 
   projectile_speed="225" 
-  spread_range="0.25"
+  spread_range="0.3"
   sight_range_modifier="1.5"/>
 
 
@@ -43,10 +43,10 @@
     <stance state_key="walking" accuracy="0.1" />
     <stance state_key="crouch_moving" accuracy="1" />
     <stance state_key="prone_moving" accuracy="1.2" />
-    <stance state_key="standing" accuracy="0.8" />
-    <stance state_key="crouching" accuracy="1.12" />
-    <stance state_key="prone" accuracy="1.4" />
-    <stance state_key="over_wall" accuracy="1.4" />  
+    <stance state_key="standing" accuracy="0.7" />
+    <stance state_key="crouching" accuracy="1.45" />
+    <stance state_key="prone" accuracy="1.8" />
+    <stance state_key="over_wall" accuracy="1.8" />  
     <modifier class="speed" value="-0.2" /> 
 
 </weapon>
