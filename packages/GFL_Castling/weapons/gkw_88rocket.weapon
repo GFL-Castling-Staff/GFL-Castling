@@ -16,10 +16,10 @@
     consume="1"
     reload_one_at_a_time="1" 
     sight_range_modifier="1.5" 
-    projectile_speed="80.0" 
+    projectile_speed="120.0" 
     slot="1" 
     projectiles_per_shot="1" />
-  <inventory encumbrance="3.0" buy_price="30.0" sell_price="30.0" />
+  <inventory encumbrance="3.0" buy_price="15.0" sell_price="15.0" />
   <capacity value="4" source="rank" source_value="0.0" />
   <commonness value="0.2" in_stock="1" can_respawn_with="1" />
 
@@ -42,7 +42,9 @@
     <ballistics near_far_distance="1000.0" speed_estimation_near="50.0" speed_estimation_far="50.0" max_speed="125.0" randomness="0.0" />
 	
 
-    <projectile file="88_HEAT.projectile" />
+    <projectile file="88_HEAT.projectile" radius="0.3" >
+        <result class="blast"  damage="9.1"  radius="6" decal="1" push="0.5" character_state="death"  faction_compare="not_equal"/>
+    </projectile>
     <weak_hand_hold offset="0.3" />
     <commonness value="0.00001"  />
     <hud_icon filename="88rocket.png" />

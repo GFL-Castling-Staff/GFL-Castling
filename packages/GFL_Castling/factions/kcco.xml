@@ -283,11 +283,11 @@
 	</soldier>
 
 	<!-- aegis 圣盾军方版本 -->
-	<soldier name="kcco_aegis" spawn_score="0.3" copy_from="default_bot">
+	<soldier name="kcco_aegis" spawn_score="0.4" copy_from="default_bot">
 		<model filename="kccod_aegis.xml" />
 		<ai filename="melee.ai" />
 		<resources clear_calls="1"  clear_grenades="1" >
-			<weapon key="sfw_aegis.weapon" enabled="1"/>  
+			<weapon key="kcco_aegis.weapon" enabled="1"/>  
 			<carry_item key="kcco_ga.carry_item" enabled="1" />
 	    </resources>
 
@@ -311,7 +311,7 @@
 	</soldier>
 
 	<!-- KCCO强无敌Hydra -->
-	<soldier name="kcco_Hydra" firstnames="KCCO-LIGHT ARMORED UNIT-" lastnames_file="qwd_last.name" spawn_score="0.27">
+	<soldier name="kcco_Hydra" firstnames="KCCO-LIGHT ARMORED UNIT-" lastnames_file="qwd_last.name" spawn_score="0.2">
 		<models file="kcco_qwd.models" />
 		<character filename="qwd.character" />
 		<ai filename="hydra.ai" />

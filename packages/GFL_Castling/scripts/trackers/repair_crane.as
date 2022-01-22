@@ -48,8 +48,8 @@ class RepairCrane : Tracker {
 			overHealth = 1.0;
 			y_offset = -5.0;
 		} else if (key == "bbs_repair") {
-			range = 3.0;
-			repairValue = 0.5;
+			range = 3.5;
+			repairValue = 1.0;
 			overHealth = 1.1;
 			y_offset = 0.0;
 			rpReward = 0;
@@ -79,11 +79,13 @@ class RepairCrane : Tracker {
 						const XmlElement@ vehicleInfo = getVehicleInfo(m_metagame, vehicleId);
 						if (vehicleInfo !is null) {
 							string key2 = vehicleInfo.getStringAttribute("key");
-							
+							vehicleInfo.
 							//repair tank can't repair repair tanks to prevent self repair
 							if (not(key == "repair_tank" && key2 == "zjx19.vehicle")) {
 								float vehicleHealth = vehicleInfo.getFloatAttribute("health");
-								
+								if(key2 == "typhon.vehicle" || key2 == "coeus.vehicle" || key2 == "paradeus_uhlan.vehicle"){
+									repairValue= 0.25;
+								}
 								//not running for destroyed vehicles
 								if (vehicleHealth > 0.0) {
 									float vehicleMaxHealth = vehicleInfo.getFloatAttribute("max_health");
