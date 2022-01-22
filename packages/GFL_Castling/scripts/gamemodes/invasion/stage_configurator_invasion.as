@@ -306,7 +306,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.m_maxSoldiers = 15 * 20;                                             // was 12*7 in 1.65, 1 base added
 
 		stage.m_soldierCapacityVariance = 0.4;
-		stage.m_playerAiCompensation = 6;                                         // was 4 (1.82)
+		stage.m_playerAiCompensation = 3;                                         // was 4 (1.82)
         stage.m_playerAiReduction = 0;                                          // was 2 (test3)    
 
 		stage.m_finalBattle = true;
@@ -322,15 +322,15 @@ class StageConfiguratorInvasion : StageConfigurator {
 		}
 		{
 			Faction f(getFactionConfigs()[1], createCommanderAiCommand(1,0.3,0.1));
-			f.m_overCapacity = 40;                                               
-			f.m_capacityOffset = 10;
+			f.m_overCapacity = 10;                                               
+			f.m_capacityOffset = 6;
 			f.m_capacityMultiplier = 1.0;                                                 
 			stage.m_factions.insertLast(f);                                         
 		}
 		{
 			Faction f(getFactionConfigs()[2], createCommanderAiCommand(2,0.3,0.1));
-			f.m_overCapacity = 40;                                               
-			f.m_capacityOffset = 10;
+			f.m_overCapacity = 10;                                               
+			f.m_capacityOffset = 6;
 			f.m_capacityMultiplier = 1.0;                                                 
 			stage.m_factions.insertLast(f);                                         
 		}
