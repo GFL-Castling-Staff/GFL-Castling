@@ -17,6 +17,9 @@ class GFLskill : Tracker {
 		@m_metagame = @metagame;
 	}
 
+    protected array<XM8tracker@> XM8track;
+	
+
 	// --------------------------------------------
 	protected void handleResultEvent(const XmlElement@ event) {
 	
@@ -142,6 +145,80 @@ class GFLskill : Tracker {
 				}
 			}
 		}
+		if (EventKeyGet == "xm8_skill") {
+			int characterId = event.getIntAttribute("character_id");
+			const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+			if (character !is null) {
+				int playerId = character.getIntAttribute("player_id");
+				const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+				if (player !is null) {
+					Vector3 Pos_40mm = stringToVector3(event.getStringAttribute("position"));
+					int factionid = player.getIntAttribute("faction_id");
+					//获取技能影响的敌人数量
+					array<int> enemyfaction = {0,1,2,3,4};
+					array<const XmlElement@>@ affectedCharacter;
+					for(int i =0;i<4;i++){
+						if (enemyfaction[i] ==factionid){
+							enemyfaction.removeAt(i);
+						}
+					}
+					int n=enemyfaction.length-1;
+					for(int i=0;i<n;i++){
+						array<const XmlElement@> affectedCharacter += getCharactersNearPosition(m_metagame,grenade_pos,enemyfaction[i],8.0f);
+					}
+					XM8track.insertLast(XM8tracker(characterId,1.0,affectedCharacter,factionid));
+                    string c = 
+                        "<command class='create_instance'" +
+                        " faction_id='"+ factionid +"'" +
+                        " instance_class='grenade'" +
+                        " instance_key='40mm_xm8mod3.projectile'" +
+                        " position='" + Pos_40mm.toString() + "'"+
+				        " character_id='" + characterId + "' />";
+					m_metagame.getComms().send(c);
+				}
+			}
+		}
+	}
 
+	void update(float time) {
+        if(XM8track.length()>0)
+		{
+            for (int a=0;a<XM8track.length();a++){
+                XM8track[a].m_time-=time;
+                if(XM8track[a].m_time<0){
+					int enemynum= XM8track[a].m_affected.length-1;
+					int luckyone = rand(0,enemynum);
+					string lucyonepos = XM8track[a].m_affected[luckyone].getStringAttribute("position");
+					string c = 
+                        "<command class='create_instance'" +
+                        " faction_id='"+ XM8track[a].m_factionid +"'" +
+                        " instance_class='grenade'" +
+                        " instance_key='skill_xm8mod3.projectile'" +
+                        " position='" + lucyonepos + "'"+
+				        " character_id='" + XM8track[a].m_characterId + "' />";
+					m_metagame.getComms().send(c);
+                    XM8track[a].m_numtime--;
+					if (XM8track[a].m_numtime<1){
+						XM8track.removeAt(a);
+					}
+                }
+            }
+        }
+	}
+
+}
+
+class XM8tracker{
+    int m_characterId;
+	float m_time;
+	int m_numtime=8;
+	int m_factionid;
+	array<const XmlElement@> m_affected;
+	XM8tracker(int characterId,float time,array<const XmlElement@> affected,int factionid)
+	{
+		m_characterId = characterId;
+		m_time = time;
+		m_affected = affected;
+		m_factionid= factionid;
 	}
 }
