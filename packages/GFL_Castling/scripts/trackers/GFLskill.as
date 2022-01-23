@@ -61,7 +61,6 @@ class GFLskill : Tracker {
                         " instance_key='40mm.projectile'" +
                         " position='" + Pos_40mm.toString() + "'"+
 				        " character_id='" + characterId + "' />";
-                    m_metagame.getComms().send(c);
 				    string c1 = 
                         "<command class='create_instance'" +
                         " faction_id='"+ player.getIntAttribute("faction_id") +"'" +
@@ -70,6 +69,7 @@ class GFLskill : Tracker {
                         " position='" + Pos_40mm.toString() + "'"+
 				        " character_id='" + characterId + "' />";
                     m_metagame.getComms().send(c1);
+					m_metagame.getComms().send(c);
 				}
 			}
 		}
