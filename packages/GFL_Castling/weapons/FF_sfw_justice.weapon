@@ -2,8 +2,9 @@
 <weapon file="gk_sf_boss.base_weapon" key="ff_justice.weapon">
 
     <specification
-		accuracy_factor="1"
-		barrel_offset="0.5"
+		accuracy_factor="5.2"
+    barrel_offset_3d="0 0.0 -0.4"
+    use_basic_muzzle_smoke_effect="0"
 		class="0"
     solt="0"
 		magazine_size="42"
@@ -11,6 +12,7 @@
     projectile_speed="120"
     retrigger_time="0.085"
 		suppressed="0"
+    spread_range="0.25"
     carry_in_two_hands="0"
     can_shoot_standing="1"
     can_shoot_crouching="0"
@@ -20,9 +22,9 @@
 		sustained_fire_grow_step="1" />
 
 
-    <animation state_key="recoil" animation_key="recoil,justice" />
-    <animation state_key="recoil" stance_key="prone" animation_key="recoil,justice" />
-    <animation state_key="recoil" stance_key="over_wall" animation_key="recoil,justice" />
+    <animation state_key="recoil"       animation_key="recoil,justice" />
+    <animation state_key="recoil"       stance_key="prone" animation_key="recoil,justice" />
+    <animation state_key="recoil"       stance_key="over_wall" animation_key="recoil,justice" />
     <animation state_key="hold"					animation_key="still,justice" />
   	<animation state_key="hold_casual"			animation_key="relax,justice" />
 	  <animation state_key="hold_on_wall"			animation_key="still,justice" />
@@ -30,6 +32,9 @@
     <animation state_key="running" animation_key="running,justice" />
     <animation state_key="walking"	animation_key="walking,justice" />
     <animation state_key="walking_backwards" animation_key="walking,justice" />
+    <animation state_key="crouching"			animation_key="still,justice" />
+    <animation state_key="crouch_moving" animation_key="walking,justice" />
+    <animation state_key="crouch_moving_backwards" animation_key="walking,justice" />
     <animation state_key="changing_weapon_in" 	animation_key="change weapon in, single hand carry" />
     <animation state_key="prone_still" animation_key="prone_still, pistol dual" />
     <animation state_key="reload"	animation_key="reload,justice" />
@@ -51,7 +56,7 @@
 
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet_sf.projectile">
-      <result class="hit"  kill_probability="1.55" kill_decay_start_time="1" kill_decay_end_time="1" />
+      <result class="hit"  kill_probability="1.572" kill_decay_start_time="0.22" kill_decay_end_time="0.42" />
      </projectile>
 
     <stance state_key="running" accuracy="0.6" />
@@ -60,10 +65,10 @@
     <stance state_key="prone_moving" accuracy="0.8" />
 
     <stance state_key="standing" accuracy="0.6" />
-    <stance state_key="crouching" accuracy="1.1" />
-    <stance state_key="prone" accuracy="1.2" />
+    <stance state_key="crouching" accuracy="0.6" />
+    <stance state_key="prone" accuracy="0.6" />
 
-    <modifier class="speed" value="-0.165" />
+    <modifier class="speed" value="-0.17" />
     <shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" />
     <!-- state modifiers for weapons are connected to shield impact events -->
     <!-- deflects all bullets; death, stun, wound become none, doesn't consume -->
