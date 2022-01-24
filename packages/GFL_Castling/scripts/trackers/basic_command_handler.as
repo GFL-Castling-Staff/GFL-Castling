@@ -313,7 +313,31 @@ class BasicCommandHandler : Tracker {
 		} else  if(checkCommand(message, "spawntyphon")) {
 			spawnInstanceNearPlayer(senderId, "typhon.vehicle", "vehicle", 0);
 		} else  if(checkCommand(message, "spawnpierre")) {
-			spawnInstanceNearPlayer(senderId, "pierre.vehicle", "vehicle", 0);              			
+			spawnInstanceNearPlayer(senderId, "pierre.vehicle", "vehicle", 0);
+		} else if (checkCommand(message, "spawntarget")) {
+			spawnInstanceNearPlayer(senderId, "GK_target", "soldier", 1);
+            spawnInstanceNearPlayer(senderId, "GK_target", "soldier", 1);
+            spawnInstanceNearPlayer(senderId, "GK_target", "soldier", 1);
+            spawnInstanceNearPlayer(senderId, "GK_target", "soldier", 1);
+            spawnInstanceNearPlayer(senderId, "GK_target", "soldier", 1);
+		} else if (checkCommand(message, "spawnqwd")) {
+			spawnInstanceNearPlayer(senderId, "kcco_Hydra", "soldier", 1);
+            spawnInstanceNearPlayer(senderId, "kcco_Hydra", "soldier", 1);
+            spawnInstanceNearPlayer(senderId, "kcco_Hydra", "soldier", 1);
+            spawnInstanceNearPlayer(senderId, "kcco_Hydra", "soldier", 1);
+            spawnInstanceNearPlayer(senderId, "kcco_Hydra", "soldier", 1);
+		} else if (checkCommand(message, "spawnlhh")) {
+			spawnInstanceNearPlayer(senderId, "kcco_teslatrooper", "soldier", 1);
+            spawnInstanceNearPlayer(senderId, "kcco_teslatrooper", "soldier", 1);
+            spawnInstanceNearPlayer(senderId, "kcco_teslatrooper", "soldier", 1);
+            spawnInstanceNearPlayer(senderId, "kcco_teslatrooper", "soldier", 1);
+            spawnInstanceNearPlayer(senderId, "kcco_teslatrooper", "soldier", 1);
+		} else if (checkCommand(message, "spawnkccoar")) {
+			spawnInstanceNearPlayer(senderId, "kcco_ar", "soldier", 1);
+            spawnInstanceNearPlayer(senderId, "kcco_ar", "soldier", 1);
+            spawnInstanceNearPlayer(senderId, "kcco_ar", "soldier", 1);
+            spawnInstanceNearPlayer(senderId, "kcco_ar", "soldier", 1);
+            spawnInstanceNearPlayer(senderId, "kcco_ar", "soldier", 1);                			
 		} else  if(checkCommand(message, "wound")) {
 			for (int i = 2; i < 100; ++i) {
 				string command =

@@ -254,10 +254,10 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 		stage.addTracker(PeacefulLastBase(m_metagame, 0));
 		stage.addTracker(CommsCapacityHandler(m_metagame));
-		stage.m_maxSoldiers = 14 * 16;                                             // was 12*7 in 1.65, 1 base added
+		stage.m_maxSoldiers = 12 * 17;                                             // was 12*7 in 1.65, 1 base added
 
 		stage.m_soldierCapacityVariance = 0.4;
-		stage.m_playerAiCompensation = 4.5;                                         // was 4 (1.82)
+		stage.m_playerAiCompensation = 3;                                         // was 4 (1.82)
         stage.m_playerAiReduction = 0;                                          // was 2 (test3)    
 
 		stage.m_minRandomCrates = 2; 
@@ -272,18 +272,10 @@ class StageConfiguratorInvasion : StageConfigurator {
 		{
 			Faction f(getFactionConfigs()[1], createCommanderAiCommand(1,0.3,0.1));
 			f.m_overCapacity = 80;                                               
-			f.m_capacityOffset = 20;
 			f.m_capacityMultiplier = 1.0;                                                 
 			stage.m_factions.insertLast(f);                                         
 		}
-		
-		{
-			XmlElement command("command");
-			command.setStringAttribute("class", "faction_resources");
-			command.setIntAttribute("faction_id", 1);
-			addFactionResourceElements(command, "vehicle", array<string> = {"aa_emplacement.vehicle"}, true);
-			stage.m_extraCommands.insertLast(command);
-		}
+
 		
 
 
@@ -298,15 +290,15 @@ class StageConfiguratorInvasion : StageConfigurator {
 	protected Stage@ setupStage103() {
 		Stage@ stage = createStage();
 		stage.m_mapInfo.m_name = "Palo Island";
-		stage.m_mapInfo.m_path = "media/packages/GFLC_Map/maps/map103_PaloIsland";
+		stage.m_mapInfo.m_path = "media/packages/GFLC_Map/maps/map103";
 		stage.m_mapInfo.m_id = "map103";
 
 		stage.addTracker(PeacefulLastBase(m_metagame, 0));
 		stage.addTracker(CommsCapacityHandler(m_metagame));
-		stage.m_maxSoldiers = 15 * 20;                                             // was 12*7 in 1.65, 1 base added
+		stage.m_maxSoldiers = 200;                                             // was 12*7 in 1.65, 1 base added
 
 		stage.m_soldierCapacityVariance = 0.4;
-		stage.m_playerAiCompensation = 3;                                         // was 4 (1.82)
+		stage.m_playerAiCompensation = 5;                                         // was 4 (1.82)
         stage.m_playerAiReduction = 0;                                          // was 2 (test3)    
 
 		stage.m_finalBattle = true;
@@ -322,14 +314,14 @@ class StageConfiguratorInvasion : StageConfigurator {
 		}
 		{
 			Faction f(getFactionConfigs()[1], createCommanderAiCommand(1,0.3,0.1));
-			f.m_overCapacity = 10;                                               
+			f.m_overCapacity = 20;                                               
 			f.m_capacityOffset = 6;
 			f.m_capacityMultiplier = 1.0;                                                 
 			stage.m_factions.insertLast(f);                                         
 		}
 		{
-			Faction f(getFactionConfigs()[2], createCommanderAiCommand(2,0.3,0.1));
-			f.m_overCapacity = 10;                                               
+			Faction f(getFactionConfigs()[2], createCommanderAiCommand(2,0.4,0.3));
+			f.m_overCapacity = 20;                                               
 			f.m_capacityOffset = 6;
 			f.m_capacityMultiplier = 1.0;                                                 
 			stage.m_factions.insertLast(f);                                         
