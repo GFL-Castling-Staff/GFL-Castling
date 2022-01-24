@@ -95,7 +95,7 @@ class GFLskill : Tracker {
 					}
 					int n=enemyfaction.length-1;
 					for(int i=0;i<n;i++){
-						array<const XmlElement@>@ affectedCharacter = getCharactersNearPosition(m_metagame,grenade_pos,enemyfaction[i],15.0f);
+						array<const XmlElement@> affectedCharacter = getCharactersNearPosition(m_metagame,grenade_pos,enemyfaction[i],15.0f);
 						affectedNumber += affectedCharacter.length;
 					}
 					string sendtext= "白鸮轰鸣击中了"+ affectedNumber +"个敌人";
@@ -155,16 +155,22 @@ class GFLskill : Tracker {
 					Vector3 Pos_40mm = stringToVector3(event.getStringAttribute("position"));
 					int factionid = player.getIntAttribute("faction_id");
 					//获取技能影响的敌人数量
-					array<int> enemyfaction = {0,1,2,3,4};
-					array<const XmlElement@>@ affectedCharacter;
-					for(int i =0;i<4;i++){
-						if (enemyfaction[i] ==factionid){
-							enemyfaction.removeAt(i);
+					array<const XmlElement@> affectedCharacter;
+					array<const XmlElement@> affectedCharacter2;
+					array<const XmlElement@> affectedCharacter3;
+
+					affectedCharacter = getCharactersNearPosition(m_metagame,Pos_40mm,1,8.0f);
+					affectedCharacter2 = getCharactersNearPosition(m_metagame,Pos_40mm,2,8.0f);
+					affectedCharacter3 = getCharactersNearPosition(m_metagame,Pos_40mm,3,8.0f);
+					if (affectedCharacter2 != null){
+						for(int x=0;x<affectedCharacter2.length;x++){
+							affectedCharacter.insertLast(affectedCharacter2[x]);
 						}
 					}
-					int n=enemyfaction.length-1;
-					for(int i=0;i<n;i++){
-						array<const XmlElement@> affectedCharacter += getCharactersNearPosition(m_metagame,grenade_pos,enemyfaction[i],8.0f);
+					if (affectedCharacter3 != null){
+						for(int x=0;x<affectedCharacter3.length;x++){
+							affectedCharacter.insertLast(affectedCharacter3[x]);
+						}
 					}
 					XM8track.insertLast(XM8tracker(characterId,1.0,affectedCharacter,factionid));
                     string c = 
