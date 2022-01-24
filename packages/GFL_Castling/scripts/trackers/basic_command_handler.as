@@ -284,74 +284,6 @@ class BasicCommandHandler : Tracker {
             spawnInstanceNearPlayer(senderId, "gift_box_community_6.carry_item", "carry_item", 0);
             spawnInstanceNearPlayer(senderId, "gift_box_community_6.carry_item", "carry_item", 0);
             spawnInstanceNearPlayer(senderId, "gift_box_community_6.carry_item", "carry_item", 0);   			
-        } else if (checkCommand(message, "lottery")) {
-			spawnInstanceNearPlayer(senderId, "lottery.carry_item", "carry_item", 0);
-        } else if (checkCommand(message, "177")) {
-			spawnInstanceNearPlayer(senderId, "vest_exo.carry_item", "carry_item", 0);
-            spawnInstanceNearPlayer(senderId, "balloon.carry_item", "carry_item", 0);
-            spawnInstanceNearPlayer(senderId, "ninjato.weapon", "weapon", 0); 
-            spawnInstanceNearPlayer(senderId, "m320.weapon", "weapon", 0); 
-            spawnInstanceNearPlayer(senderId, "p416.weapon", "weapon", 0);
-            spawnInstanceNearPlayer(senderId, "suomi.weapon", "weapon", 0);
-            spawnInstanceNearPlayer(senderId, "chicken_carrier.weapon", "weapon", 0);
-            spawnInstanceNearPlayer(senderId, "microgun.weapon", "weapon", 0);
-            spawnInstanceNearPlayer(senderId, "g11.weapon", "weapon", 0);
-            spawnInstanceNearPlayer(senderId, "gepard_m6_lynx.weapon", "weapon", 0);
-            spawnInstanceNearPlayer(senderId, "vest3.carry_item", "carry_item", 0);
-            spawnInstanceNearPlayer(senderId, "vest_blackops.carry_item", "carry_item", 0);      
-            spawnInstanceNearPlayer(senderId, "stim.projectile", "projectile");
-            spawnInstanceNearPlayer(senderId, "kunai.projectile", "projectile");                  
-            spawnInstanceNearPlayer(senderId, "squad_equipment_kit.weapon", "weapon", 0);
-            spawnInstanceNearPlayer(senderId, "l30p.weapon", "weapon", 0);
-/*            spawnInstanceNearPlayer(senderId, "zjx19_flare.projectile", "projectile", 0);
-            spawnInstanceNearPlayer(senderId, "noxe_flare.projectile", "projectile", 0);
-            spawnInstanceNearPlayer(senderId, "sev90_flare.projectile", "projectile", 0);
-            spawnInstanceNearPlayer(senderId, "m528_flare.projectile", "projectile", 0);
-            spawnInstanceNearPlayer(senderId, "flamer_tank_flare.projectile", "projectile", 0);
-*/		} else if (checkCommand(message, "184")) {
-            spawnInstanceNearPlayer(senderId, "ninjato.weapon", "weapon", 0); 
-            spawnInstanceNearPlayer(senderId, "model_29.weapon", "weapon", 0);
-			spawnInstanceNearPlayer(senderId, "sabre.weapon", "weapon", 0);
-			spawnInstanceNearPlayer(senderId, "doublebarrel.weapon", "weapon", 0);
-			spawnInstanceNearPlayer(senderId, "compound_bow.weapon", "weapon", 0);
-			spawnInstanceNearPlayer(senderId, "ultimax.weapon", "weapon", 0);
-			spawnInstanceNearPlayer(senderId, "ash12.weapon", "weapon", 0);
-			spawnInstanceNearPlayer(senderId, "mac10.weapon", "weapon", 0);
-			spawnInstanceNearPlayer(senderId, "ares_shrike.weapon", "weapon", 0);
-			spawnInstanceNearPlayer(senderId, "rpd.weapon", "weapon", 0);
-			spawnInstanceNearPlayer(senderId, "kulakov.weapon", "weapon", 0);
-			spawnInstanceNearPlayer(senderId, "zweihander.weapon", "weapon", 0);
-			spawnInstanceNearPlayer(senderId, "golden_mp5sd.weapon", "weapon", 0);
-			spawnInstanceNearPlayer(senderId, "musket.weapon", "weapon", 0);
-			spawnInstanceNearPlayer(senderId, "ak47_w_gp25.weapon", "weapon", 0);
-			spawnInstanceNearPlayer(senderId, "g36_w_ag36.weapon", "weapon", 0);
-			spawnInstanceNearPlayer(senderId, "m16a4_w_m203.weapon", "weapon", 0);
-			spawnInstanceNearPlayer(senderId, "tti.weapon", "weapon", 0);
-			spawnInstanceNearPlayer(senderId, "gepard_m6_lynx.weapon", "weapon", 0);
-
-		} else  if(checkCommand(message, "guntruck")) {
-			spawnInstanceNearPlayer(senderId, "guntruck_flare.projectile", "projectile");  
-                                                       
-		} else if (checkCommand(message, "quad")) {
-			spawnInstanceNearPlayer(senderId, "atv_armory.vehicle", "vehicle", 0); 
-		} else if (checkCommand(message, "armory")) {
-			spawnInstanceNearPlayer(senderId, "mobile_armory.vehicle", "vehicle", 0);		
-		} else if (checkCommand(message, "noxe")) {
-			spawnInstanceNearPlayer(senderId, "noxe.vehicle", "vehicle", 0); 
-		} else if (checkCommand(message, "legion")) {
-			spawnInstanceNearPlayer(senderId, "legion.vehicle", "vehicle", 0);  
-		} else if (checkCommand(message, "m528")) {
-			spawnInstanceNearPlayer(senderId, "m528.vehicle", "vehicle", 0); 
-		} else if (checkCommand(message, "croc")) {
-			spawnInstanceNearPlayer(senderId, "flamer_tank.vehicle", "vehicle", 0);
-		} else if (checkCommand(message, "sev90")) {
-			spawnInstanceNearPlayer(senderId, "sev90.vehicle", "vehicle", 0);                                                                        
-		} else if (checkCommand(message, "repair_crane")) {
-			spawnInstanceNearPlayer(senderId, "repair_crane.vehicle", "vehicle", 0);
-		} else if (checkCommand(message, "repair_tank")) {
-			spawnInstanceNearPlayer(senderId, "zjx19_flare.projectile", "projectile", 0);                                                                                                           
-		} else  if(checkCommand(message, "mg42")) {
-			spawnInstanceNearPlayer(senderId, "mg42.weapon", "weapon", 0);         
 		} else  if(checkCommand(message, "kill_rt")) {
 			destroyAllEnemyVehicles("radar_tower.vehicle");
 		} else  if(checkCommand(message, "kill_own_rt")) {
@@ -377,7 +309,9 @@ class BasicCommandHandler : Tracker {
 		} else  if(checkCommand(message, "cat")) {
 			spawnInstanceNearPlayer(senderId, "darkcat.vehicle", "vehicle", 0);
 		} else  if(checkCommand(message, "ecat")) {
-			spawnInstanceNearPlayer(senderId, "darkcat.vehicle", "vehicle", 1);    			
+			spawnInstanceNearPlayer(senderId, "darkcat.vehicle", "vehicle", 1);
+		} else  if(checkCommand(message, "testtower")) {
+			spawnInstanceNearPlayer(senderId, "radar_tower.vehicle", "vehicle", 0);       			
 		} else  if(checkCommand(message, "wound")) {
 			for (int i = 2; i < 100; ++i) {
 				string command =
