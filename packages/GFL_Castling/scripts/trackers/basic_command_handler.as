@@ -166,13 +166,7 @@ class BasicCommandHandler : Tracker {
         } else if (checkCommand(message, "create_vehicle")) {
 			spawnInstanceNearPlayer(senderId, "special_cargo_vehicle1.vehicle", "vehicle");
 		} else if (checkCommand(message, "jeep")) {
-			spawnInstanceNearPlayer(senderId, "jeep.vehicle", "vehicle");
-		} else  if(checkCommand(message, "laptop")) {
-			// .. create laptop near local player
-			spawnInstanceNearPlayer(senderId, "laptop.carry_item", "carry_item");    
-		} else  if(checkCommand(message, "laptop")) {
-			// .. create laptop near local player
-			spawnInstanceNearPlayer(senderId, "laptop.carry_item", "carry_item");      
+			spawnInstanceNearPlayer(senderId, "jeep.vehicle", "vehicle");      
 		} else  if(checkCommand(message, "c4")) {
 			spawnInstanceNearPlayer(senderId, "c4.projectile", "projectile");      
 		} else if (checkCommand(message, "dc")) {
@@ -311,7 +305,15 @@ class BasicCommandHandler : Tracker {
 		} else  if(checkCommand(message, "ecat")) {
 			spawnInstanceNearPlayer(senderId, "darkcat.vehicle", "vehicle", 1);
 		} else  if(checkCommand(message, "testtower")) {
-			spawnInstanceNearPlayer(senderId, "radar_tower.vehicle", "vehicle", 0);       			
+			spawnInstanceNearPlayer(senderId, "radar_tower.vehicle", "vehicle", 0); 
+		} else  if(checkCommand(message, "spawnuhlan")) {
+			spawnInstanceNearPlayer(senderId, "paradeus_uhlan.vehicle", "vehicle", 0);
+		} else  if(checkCommand(message, "spawncoeus")) {
+			spawnInstanceNearPlayer(senderId, "coeus.vehicle", "vehicle", 0);
+		} else  if(checkCommand(message, "spawntyphon")) {
+			spawnInstanceNearPlayer(senderId, "typhon.vehicle", "vehicle", 0);
+		} else  if(checkCommand(message, "spawnpierre")) {
+			spawnInstanceNearPlayer(senderId, "pierre.vehicle", "vehicle", 0);              			
 		} else  if(checkCommand(message, "wound")) {
 			for (int i = 2; i < 100; ++i) {
 				string command =
