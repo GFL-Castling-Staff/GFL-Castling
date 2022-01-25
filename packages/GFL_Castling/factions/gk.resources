@@ -12,6 +12,7 @@
 	<weapon key="gkw_ak12.weapon" />
 	<weapon key="gkw_ak12_blm.weapon" />
 	<weapon key="gkw_ak12_2402.weapon" />
+	<!-- <weapon key="gkw_ak12_defyAI.weapon"/> -->
 	<weapon key="gkw_ak47.weapon" />
 	<weapon key="gkw_ak47_501.weapon" />
 	<weapon key="gkw_ak74u.weapon" />
@@ -396,6 +397,8 @@
 	<weapon key="gkw_lwmmg_skill.weapon"/>
 	<weapon key="gkw_m1895mod3.weapon"/>
 	<weapon key="gkw_sacr.weapon"/>
+	<weapon key="gkw_an94_mod3.weapon"/>
+
 
 	<!-- 重装梯队 -->
 	<weapon key="gkw_hvy_qlz04.weapon" />
@@ -433,9 +436,10 @@
 	<weapon key="gkw_ump9mod3_skill.weapon" />
 	<weapon key="gkw_m1895mod3_skill.weapon"/>
 	<weapon key="gkw_lwmmgmod3_skill.weapon"/>
+	<weapon key="gkw_an94_mod3_skill.weapon"/>
 	<weapon key="gkw_m14mod3_skill.weapon" />
-	
-	<!-- 载具 -->
+  
+		<!-- 载具 -->
 	<vehicle key="humvee_mg" />
 	<vehicle key="humvee.vehicle" />
 	<vehicle key="pierre.vehicle" />
@@ -581,11 +585,10 @@
 	<weapon key="gkw_gsh18mod3_523.weapon" />
 	<weapon key="gkw_medical_agl_hg_523.weapon" />
 	
-	<!--
 	<weapon key="gkw_m4a1mod3_530.weapon" />
 	<weapon key="gkw_m4a1mod3_530_skill.weapon" />
+	
 	<weapon key="gkw_ar15mod3_532.weapon" />
 	<weapon key="gkw_ar15mod3_532_skill.weapon" />
-	-->
 
 </resources>

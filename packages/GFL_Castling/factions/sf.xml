@@ -131,7 +131,7 @@
 		</character>
 		<ai filename="default.ai" />
 
-		<model file="gkd_xxv_idwmod.xml" />
+		<model file="sfd_vespid.xml" />
 		<models file="sf.models" />
 		<models file="common_bonus.models" />
 		<!-- <models file="common_bonus.models" /> -->
@@ -229,6 +229,13 @@
 			<carry_item key="sf_smg.carry_item" enabled="1" />
 		</resources>
 	</soldier>
+	<!-- <soldier name="sf_ripper_SWAP" spawn_score="0.75" copy_from="default_spawn_ai">
+		<model filename="sfd_ripper_swap_from_dusk.xml" />
+		<resources clear_calls="1">
+			<weapon key="sfw_ripper_swap.weapon" enabled="1"/>  
+			<carry_item key="sf_ar.carry_item" enabled="1" />
+		</resources>
+	</soldier> -->
 	<!-- guard -->
 	<soldier name="sf_guard" spawn_score="1.5" copy_from="default_spawn_ai">
 		<model filename="sfd_guard_christmas_gua.xml" />
@@ -656,7 +663,7 @@
 
 	
 	<!-- 强无敌 -->
-	<soldier name="sf_manticore" firstnames="sf_first.name" lastnames_file="sf_last.name" spawn_score="0.13">
+	<soldier name="sf_manticore" firstnames="sf_first.name" lastnames_file="sf_last.name" spawn_score="0.25">
 		<models filename="sf_qwd.models" /> 
 				<character filename="qwd.character" />
 		<ai filename="hydra.ai" />
@@ -685,7 +692,22 @@
 		
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1">
 			<weapon key="sfw_dinergate.weapon"/>
-			<carry_item key="sf_ar.carry_item" />
+			<carry_item key="sf_smg.carry_item" />
+		</resources>
+		<attribute_config class="xp">
+				<attribute weight="0.3" min="0.0" max="1.0" />
+		</attribute_config>
+	</soldier>
+
+	<!-- tarantula狼蛛 -->
+	<soldier name="sf_tarantula" spawn_score="1.00">
+		<models filename="sf_tarantula.models" /> 
+		<character filename="sf_dinergate.character" />
+		<ai filename="eod.ai" />
+			
+		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1">
+			<weapon key="sfw_tarantula.weapon"/>
+			<carry_item key="sf_tarantula.carry_item" />
 		</resources>
 		<attribute_config class="xp">
 				<attribute weight="0.3" min="0.0" max="1.0" />

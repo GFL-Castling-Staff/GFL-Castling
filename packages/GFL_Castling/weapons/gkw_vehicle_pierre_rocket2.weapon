@@ -37,7 +37,7 @@
 
 
     <weak_hand_hold offset="0.4" />
-    <projectile file="Doppelsoldner_rocket.projectile" >
+    <projectile file="pierre_rocket.projectile" >
         <result class="blast" radius="3.0" damage="2.5" push="0.2" decal="1" faction_compare="not_equal"/>
     </projectile>
     

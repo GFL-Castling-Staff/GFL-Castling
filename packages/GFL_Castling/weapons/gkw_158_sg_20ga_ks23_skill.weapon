@@ -21,10 +21,10 @@
 	projectiles_per_shot="20"
 	spread_range="0.6"
 	 />
-     <inventory  buy_price="35.0" sell_price="35.0" />
+     <inventory  buy_price="100.0" sell_price="100.0" />
 	<!--Animations-->
 	
-
+    <next_in_chain key="gkw_ks23.weapon" share_ammo="1" />
     <animation state_key="cycle" animation_key="Pshotgun0.5" />
     <animation state_key="cycle" stance_key="prone" animation_key="Pshotgun0.5p" />
     <animation key="reload" animation_key="shotgunROaaT" />
@@ -39,8 +39,8 @@
    
 	<!--Model, Icon, Cost-->
     <commonness  value="0" in_stock="0" can_spawn_with="1" />
-    <model filename="gkw_sg_m870.xml" />
-    <hud_icon filename="testing.png" />
+    <model filename="gkw_ks-23_from_melondove.xml" />
+    <hud_icon filename="gkw_ks23.png" />
 
 
 	

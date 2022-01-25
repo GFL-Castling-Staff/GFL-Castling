@@ -185,6 +185,7 @@ class StageConfiguratorInvasion : StageConfigurator {
     addStage(setupStage15());         // map1_2
     addStage(setupStage12());         // map14
     addStage(setupStage10());         // map10
+	addStage(setupStage103()); 		  // map Palo Island by diling
     addStage(setupStage17());         // map17    
     addStage(setupStage18());         // map13_2
     addStage(setupStage3());          // map3
@@ -293,6 +294,55 @@ class StageConfiguratorInvasion : StageConfigurator {
 		// setReduceDefenseForFinalAttack(stage, 0.1); // use this for final attack boost if needed for friendlies
 		return stage;
 	}
+
+	protected Stage@ setupStage103() {
+		Stage@ stage = createStage();
+		stage.m_mapInfo.m_name = "Palo Island";
+		stage.m_mapInfo.m_path = "media/packages/GFLC_Map/maps/map103_PaloIsland";
+		stage.m_mapInfo.m_id = "map103";
+
+		stage.addTracker(PeacefulLastBase(m_metagame, 0));
+		stage.addTracker(CommsCapacityHandler(m_metagame));
+		stage.m_maxSoldiers = 15 * 20;                                             // was 12*7 in 1.65, 1 base added
+
+		stage.m_soldierCapacityVariance = 0.4;
+		stage.m_playerAiCompensation = 3;                                         // was 4 (1.82)
+        stage.m_playerAiReduction = 0;                                          // was 2 (test3)    
+
+		stage.m_finalBattle = true;
+
+		stage.m_minRandomCrates = 0; 
+		stage.m_maxRandomCrates = 0;
+
+		{
+			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0));                                                  
+			f.m_capacityOffset = 0; 
+			f.m_capacityMultiplier = 1.0;
+			stage.m_factions.insertLast(f);
+		}
+		{
+			Faction f(getFactionConfigs()[1], createCommanderAiCommand(1,0.3,0.1));
+			f.m_overCapacity = 10;                                               
+			f.m_capacityOffset = 6;
+			f.m_capacityMultiplier = 1.0;                                                 
+			stage.m_factions.insertLast(f);                                         
+		}
+		{
+			Faction f(getFactionConfigs()[2], createCommanderAiCommand(2,0.3,0.1));
+			f.m_overCapacity = 10;                                               
+			f.m_capacityOffset = 6;
+			f.m_capacityMultiplier = 1.0;                                                 
+			stage.m_factions.insertLast(f);                                         
+		}
+		
+		// metadata
+		stage.m_primaryObjective = "capture";
+
+		setDefaultAttackBreakTimes(stage);
+		// setReduceDefenseForFinalAttack(stage, 0.1); // use this for final attack boost if needed for friendlies
+		return stage;
+	}
+	
 	protected Stage@ setupStage1() {
 		Stage@ stage = createStage();
 		stage.m_mapInfo.m_name = "Keepsake Bay";

@@ -13,7 +13,7 @@
 	class="4" 
 	reload_one_at_a_time="0" 
 	sight_range_modifier="1.8" 
-	projectile_speed="300.0" 
+	projectile_speed="200.0" 
 	barrel_offset="0.65" 
 	projectiles_per_shot="1" 
 	burst_shots="1"/>
@@ -42,6 +42,7 @@
     <weak_hand_hold offset="0.3" />
     <projectile file="bullet_sf.projectile">
 		<result class="blast" damage="2.0"   radius="1.2" decal="1" push="0" character_state="death" faction_compare="not_equal"/>
+		<trail probability="2.0" key="red" />
     </projectile>
  
     <modifier class="speed" value="-0.2" />
