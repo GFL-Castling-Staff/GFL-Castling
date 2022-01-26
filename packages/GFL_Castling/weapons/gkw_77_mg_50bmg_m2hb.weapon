@@ -118,7 +118,7 @@
     
 
     <projectile file="bullet.projectile">
-        <result class="blast"  damage="1"  radius="2" decal="1" push="0" character_state="death" 	faction_compare="not_equal"/>
+        <result class="blast"  damage="1"  radius="3" decal="1" push="0" character_state="death" 	faction_compare="not_equal"/>
     </projectile>
     
     <!--Accuracy, Movement speed-->
