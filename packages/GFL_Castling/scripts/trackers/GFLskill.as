@@ -10,10 +10,11 @@
 
 	// --------------------------------------------
 class GFLskill : Tracker {
-	protected Metagame@ m_metagame;
+	protected GameMode@ m_metagame;
+	uint m_fnum;
 
 	// --------------------------------------------
-	GFLskill(Metagame@ metagame) {
+	GFLskill(GameMode@ metagame) {
 		@m_metagame = @metagame;
 	}
 
@@ -214,23 +215,25 @@ class GFLskill : Tracker {
             for (uint a=0;a<XM8track.length();a++){
                 XM8track[a].m_time-=time;
                 if(XM8track[a].m_time<0){
-					unit fnum=m_metagame.getFactionCount();
+					m_fnum= m_metagame.getFactionCount();
 					array<const XmlElement@> affectedCharacter;
 					affectedCharacter = getCharactersNearPosition(m_metagame,XM8track[a].m_pos,1,8.0f);
-					if (fnum==3){
+					if (m_fnum==3){
 						array<const XmlElement@> affectedCharacter2;
 						affectedCharacter2 = getCharactersNearPosition(m_metagame,XM8track[a].m_pos,2,8.0f);
 						if (affectedCharacter2 !is null){
-						for(uint x=0;x<affectedCharacter2.length();x++){
-							affectedCharacter.insertLast(affectedCharacter2[x]);
+							for(uint x=0;x<affectedCharacter2.length();x++){
+								affectedCharacter.insertLast(affectedCharacter2[x]);
+							}
 						}
 					}
-					if (fnum==4){
+					if (m_fnum==4){
 						array<const XmlElement@> affectedCharacter3;
 						affectedCharacter3 = getCharactersNearPosition(m_metagame,XM8track[a].m_pos,3,8.0f);
 						if (affectedCharacter3 !is null){
-						for(uint x=0;x<affectedCharacter3.length();x++){
-							affectedCharacter.insertLast(affectedCharacter3[x]);
+							for(uint x=0;x<affectedCharacter3.length();x++){
+								affectedCharacter.insertLast(affectedCharacter3[x]);
+							}
 						}
 					}
 					if (affectedCharacter.length()>0){

@@ -63,7 +63,7 @@ class CommandSkill : Tracker {
     void update(float time) {
         if(SkillArray.length()>0)
 		{
-            for (int a=0;a<SkillArray.length();a++){
+            for (uint a=0;a<SkillArray.length();a++){
                 SkillArray[a].m_time-=time;
                 if(SkillArray[a].m_time<0){
                     SkillArray.removeAt(a);
@@ -86,7 +86,7 @@ class CommandSkill : Tracker {
     void excuteAN94skill(int characterId,int playerId){
         bool ExistQueue = false;
         int j =-1;
-        for (int i=0;i<SkillArray.length();i++){
+        for (uint i=0;i<SkillArray.length();i++){
             if (SkillArray[i].m_character_id==characterId && SkillArray[i].m_weapontype=="AN94") {
                 ExistQueue=true;
                 j=i;
@@ -114,8 +114,8 @@ class CommandSkill : Tracker {
     }
     void excuteVVskill(int characterId,int playerId){
         bool ExistQueue = false;
-        int j =-1;
-        for (int i=0;i<SkillArray.length();i++){
+        int j=-1;
+        for (uint i=0;i<SkillArray.length();i++){
             if (SkillArray[i].m_character_id==characterId && SkillArray[i].m_weapontype=="VECTOR") {
                 ExistQueue=true;
                 j=i;
