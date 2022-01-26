@@ -2,7 +2,7 @@
 <projectile class="grenade" name="XM8 skillnade" key="skill_xm8mod3.projectile" slot="0" radius="0.05">
 
 
-    <result class="blast" radius="1.0" damage="1.1" push="0.1" decal="1" character_state="stun" faction_compare="not_equal" />
+    <result class="blast" radius="1.5" damage="1.1" push="0.1" decal="1" character_state="stun" faction_compare="not_equal" />
     <trigger class="time" time_to_live="0.0"/>
 
     <rotation class="random" />

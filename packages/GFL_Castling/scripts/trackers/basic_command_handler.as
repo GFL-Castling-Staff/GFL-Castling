@@ -6,6 +6,7 @@
 #include "query_helpers.as"
 #include "generic_call_task.as"
 #include "task_sequencer.as"
+#include "GFLhelpers.as"
 
 // --------------------------------------------
 class BasicCommandHandler : Tracker {
@@ -315,11 +316,11 @@ class BasicCommandHandler : Tracker {
 		} else  if(checkCommand(message, "spawnpierre")) {
 			spawnInstanceNearPlayer(senderId, "pierre.vehicle", "vehicle", 0);
 		} else if (checkCommand(message, "spawntarget")) {
-			spawnInstanceNearPlayer(senderId, "GK_target", "soldier", 1);
-            spawnInstanceNearPlayer(senderId, "GK_target", "soldier", 1);
-            spawnInstanceNearPlayer(senderId, "GK_target", "soldier", 1);
-            spawnInstanceNearPlayer(senderId, "GK_target", "soldier", 1);
-            spawnInstanceNearPlayer(senderId, "GK_target", "soldier", 1);
+			spawnInstanceNearPlayer(senderId, "GK_target", "soldier", 0);
+            spawnInstanceNearPlayer(senderId, "GK_target", "soldier", 0);
+            spawnInstanceNearPlayer(senderId, "GK_target", "soldier", 0);
+            spawnInstanceNearPlayer(senderId, "GK_target", "soldier", 0);
+            spawnInstanceNearPlayer(senderId, "GK_target", "soldier", 0);
 		} else if (checkCommand(message, "spawnqwd")) {
 			spawnInstanceNearPlayer(senderId, "kcco_Hydra", "soldier", 1);
             spawnInstanceNearPlayer(senderId, "kcco_Hydra", "soldier", 1);
@@ -337,7 +338,11 @@ class BasicCommandHandler : Tracker {
             spawnInstanceNearPlayer(senderId, "kcco_ar", "soldier", 1);
             spawnInstanceNearPlayer(senderId, "kcco_ar", "soldier", 1);
             spawnInstanceNearPlayer(senderId, "kcco_ar", "soldier", 1);
-            spawnInstanceNearPlayer(senderId, "kcco_ar", "soldier", 1);                			
+            spawnInstanceNearPlayer(senderId, "kcco_ar", "soldier", 1);      
+		} else if (checkCommand(message,"giveSFWweapon")){
+			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
+			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","ff_agent.weapon");
+			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","ff_alchemist.weapon");          			
 		} else  if(checkCommand(message, "wound")) {
 			for (int i = 2; i < 100; ++i) {
 				string command =
