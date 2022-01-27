@@ -199,7 +199,9 @@ class GFLskill : Tracker {
 							}
 						}
 					}
-					HK416_track.insertLast(HK416_tracker(characterId,factionid,Pos_40mm,affectedCharacter));
+					if (affectedCharacter.length()>0){
+						HK416_track.insertLast(HK416_tracker(characterId,factionid,Pos_40mm,affectedCharacter));
+					}
 
                     string c = 
                         "<command class='create_instance'" +
@@ -251,8 +253,12 @@ class GFLskill : Tracker {
 						}
 						int luckyoneid = affectedCharacter[luckyone].getIntAttribute("id");
 						const XmlElement@ luckyoneC = getCharacterInfo(m_metagame, luckyoneid);
-						if (luckyoneC !is null){
+						if (luckyoneC !is null && luckyoneid!= -1){
 							string luckyonepos = luckyoneC.getStringAttribute("position");
+							Vector3 luckyoneposV = stringToVector3(luckyonepos);
+							Vector3 height = Vector3(0,0.5,0);
+							luckyoneposV = luckyoneposV.add(height);
+							luckyonepos = luckyoneposV.toString();
 							string c = 
 								"<command class='create_instance'" +
 								" faction_id='"+ XM8track[a].m_factionid +"'" +
@@ -279,20 +285,25 @@ class GFLskill : Tracker {
 						for(uint b=0;b<HK416_track[a].m_affected.length();b++){
 							int luckyoneid = HK416_track[a].m_affected[b].getIntAttribute("id");
 							const XmlElement@ luckyoneC = getCharacterInfo(m_metagame, luckyoneid);
-							string luckyonepos = luckyoneC.getStringAttribute("position");
-							string c = 
-								"<command class='create_instance'" +
-								" faction_id='"+ HK416_track[a].m_factionid +"'" +
-								" instance_class='grenade'" +
-								" instance_key='firenade_sub_416.projectile'" +
-								" position='" + luckyonepos + "'"+
-								" character_id='" + HK416_track[a].m_characterId + "' />";
-							m_metagame.getComms().send(c);
-							m_metagame.getComms().send(c);
+							if (luckyoneC.getIntAttribute("id")!=-1){
+								string luckyonepos = luckyoneC.getStringAttribute("position");
+								Vector3 luckyoneposV = stringToVector3(luckyonepos);
+								Vector3 height = Vector3(0,0.5,0);
+								luckyoneposV = luckyoneposV.add(height);
+								luckyonepos = luckyoneposV.toString();
+								string c = 
+									"<command class='create_instance'" +
+									" faction_id='"+ HK416_track[a].m_factionid +"'" +
+									" instance_class='grenade'" +
+									" instance_key='firenade_sub_416.projectile'" +
+									" position='" + luckyonepos + "'"+
+									" character_id='" + HK416_track[a].m_characterId + "' />";
+								m_metagame.getComms().send(c);
+							}
 						}
 					}
 					HK416_track[a].m_numtime--;
-					HK416_track[a].m_time=0.5;
+					HK416_track[a].m_time=0.33;
 					if (HK416_track[a].m_numtime<0){
 						HK416_track.removeAt(a);
 					}
@@ -329,8 +340,8 @@ class XM8tracker{
 
 class HK416_tracker{
     int m_characterId;
-	float m_time=0.5;
-	int m_numtime=6;
+	float m_time=0.33;
+	int m_numtime=12;
 	int m_factionid;
 	array<const XmlElement@> m_affected;
 	Vector3 m_pos;
