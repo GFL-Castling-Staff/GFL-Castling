@@ -180,10 +180,10 @@ class GFLskill : Tracker {
 					//获取技能影响的敌人数量
 					m_fnum= m_metagame.getFactionCount();
 					array<const XmlElement@> affectedCharacter;
-					affectedCharacter = getCharactersNearPosition(m_metagame,Pos_40mm,1,6.0f);
+					affectedCharacter = getCharactersNearPosition(m_metagame,Pos_40mm,1,5.0f);
 					if (m_fnum==3){
 						array<const XmlElement@> affectedCharacter2;
-						affectedCharacter2 = getCharactersNearPosition(m_metagame,Pos_40mm,2,6.0f);
+						affectedCharacter2 = getCharactersNearPosition(m_metagame,Pos_40mm,2,5.0f);
 						if (affectedCharacter2 !is null){
 							for(uint x=0;x<affectedCharacter2.length();x++){
 								affectedCharacter.insertLast(affectedCharacter2[x]);
@@ -192,7 +192,7 @@ class GFLskill : Tracker {
 					}
 					if (m_fnum==4){
 						array<const XmlElement@> affectedCharacter3;
-						affectedCharacter3 = getCharactersNearPosition(m_metagame,Pos_40mm,3,6.0f);
+						affectedCharacter3 = getCharactersNearPosition(m_metagame,Pos_40mm,3,5.0f);
 						if (affectedCharacter3 !is null){
 							for(uint x=0;x<affectedCharacter3.length();x++){
 								affectedCharacter.insertLast(affectedCharacter3[x]);
@@ -205,7 +205,7 @@ class GFLskill : Tracker {
                         "<command class='create_instance'" +
                         " faction_id='"+ factionid +"'" +
                         " instance_class='grenade'" +
-                        " instance_key='40mm_xm8mod3.projectile'" +
+                        " instance_key='40mm_hk416_main.projectile'" +
                         " position='" + Pos_40mm.toString() + "'"+
 				        " character_id='" + characterId + "' />";
 					m_metagame.getComms().send(c);
@@ -279,6 +279,7 @@ class GFLskill : Tracker {
 						for(uint b=0;b<HK416_track[a].m_affected.length();b++){
 							int luckyoneid = HK416_track[a].m_affected[b].getIntAttribute("id");
 							const XmlElement@ luckyoneC = getCharacterInfo(m_metagame, luckyoneid);
+							string luckyonepos = luckyoneC.getStringAttribute("position");
 							string c = 
 								"<command class='create_instance'" +
 								" faction_id='"+ HK416_track[a].m_factionid +"'" +
@@ -286,7 +287,8 @@ class GFLskill : Tracker {
 								" instance_key='firenade_sub_416.projectile'" +
 								" position='" + luckyonepos + "'"+
 								" character_id='" + HK416_track[a].m_characterId + "' />";
-							m_metagame.getComms().send(c);								
+							m_metagame.getComms().send(c);
+							m_metagame.getComms().send(c);
 						}
 					}
 					HK416_track[a].m_numtime--;
