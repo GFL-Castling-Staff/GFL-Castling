@@ -252,9 +252,9 @@
 	</soldier>
 
 	<!-- archer -->
-	<soldier name="kcco_archer" spawn_score="0.067" squad_size_xp_cap="0.0" copy_from="default_bot">
+	<soldier name="kcco_archer" spawn_score="0.2" squad_size_xp_cap="0.0" copy_from="default_bot">
 		<model filename="kccod_archer.xml" />
-		<ai filename="lonewolf.ai" />
+		<ai filename="elite.ai" />
 		<resources file="kcco_lonewolf_archer.resources">
 			<weapon key="compound_bow.weapon" enabled="1" />
 			<carry_item key="camouflage_suit.carry_item" />
