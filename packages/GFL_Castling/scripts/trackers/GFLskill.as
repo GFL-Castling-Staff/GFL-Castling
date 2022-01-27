@@ -19,7 +19,8 @@ class GFLskill : Tracker {
 	}
 
     protected array<XM8tracker@> XM8track;
-	
+	protected array<HK416_tracker@> HK416_track;
+
 
 	// --------------------------------------------
 	protected void handleResultEvent(const XmlElement@ event) {
@@ -177,25 +178,29 @@ class GFLskill : Tracker {
 					Vector3 Pos_40mm = stringToVector3(event.getStringAttribute("position"));
 					int factionid = player.getIntAttribute("faction_id");
 					//获取技能影响的敌人数量
+					m_fnum= m_metagame.getFactionCount();
 					array<const XmlElement@> affectedCharacter;
-					array<const XmlElement@> affectedCharacter2;
-					array<const XmlElement@> affectedCharacter3;
+					affectedCharacter = getCharactersNearPosition(m_metagame,Pos_40mm,1,6.0f);
+					if (m_fnum==3){
+						array<const XmlElement@> affectedCharacter2;
+						affectedCharacter2 = getCharactersNearPosition(m_metagame,Pos_40mm,2,6.0f);
+						if (affectedCharacter2 !is null){
+							for(uint x=0;x<affectedCharacter2.length();x++){
+								affectedCharacter.insertLast(affectedCharacter2[x]);
+							}
+						}
+					}
+					if (m_fnum==4){
+						array<const XmlElement@> affectedCharacter3;
+						affectedCharacter3 = getCharactersNearPosition(m_metagame,Pos_40mm,3,6.0f);
+						if (affectedCharacter3 !is null){
+							for(uint x=0;x<affectedCharacter3.length();x++){
+								affectedCharacter.insertLast(affectedCharacter3[x]);
+							}
+						}
+					}
+					HK416_track.insertLast(HK416_tracker(characterId,factionid,Pos_40mm,affectedCharacter));
 
-					affectedCharacter = getCharactersNearPosition(m_metagame,Pos_40mm,1,8.0f);
-					affectedCharacter2 = getCharactersNearPosition(m_metagame,Pos_40mm,2,8.0f);
-					affectedCharacter3 = getCharactersNearPosition(m_metagame,Pos_40mm,3,8.0f);
-					if (affectedCharacter2 !is null){
-						for(uint x=0;x<affectedCharacter2.length();x++){
-							affectedCharacter.insertLast(affectedCharacter2[x]);
-						}
-					}
-					if (affectedCharacter3 !is null){
-						for(uint x=0;x<affectedCharacter3.length();x++){
-							affectedCharacter.insertLast(affectedCharacter3[x]);
-						}
-					}
-					if (affectedCharacter !is null){
-					}
                     string c = 
                         "<command class='create_instance'" +
                         " faction_id='"+ factionid +"'" +
@@ -210,8 +215,7 @@ class GFLskill : Tracker {
 	}
 
 	void update(float time) {
-        if(XM8track.length()>0)
-		{
+        if(XM8track.length()>0){
             for (uint a=0;a<XM8track.length();a++){
                 XM8track[a].m_time-=time;
                 if(XM8track[a].m_time<0){
@@ -267,6 +271,32 @@ class GFLskill : Tracker {
                 }
             }
         }
+		if(HK416_track.length()>0){
+            for (uint a=0;a<HK416_track.length();a++){
+                HK416_track[a].m_time-=time;
+                if(HK416_track[a].m_time<0){	
+					if (HK416_track[a].m_affected.length()>0){
+						for(uint b=0;b<HK416_track[a].m_affected.length();b++){
+							int luckyoneid = HK416_track[a].m_affected[b].getIntAttribute("id");
+							const XmlElement@ luckyoneC = getCharacterInfo(m_metagame, luckyoneid);
+							string c = 
+								"<command class='create_instance'" +
+								" faction_id='"+ HK416_track[a].m_factionid +"'" +
+								" instance_class='grenade'" +
+								" instance_key='firenade_sub_416.projectile'" +
+								" position='" + luckyonepos + "'"+
+								" character_id='" + HK416_track[a].m_characterId + "' />";
+							m_metagame.getComms().send(c);								
+						}
+					}
+					HK416_track[a].m_numtime--;
+					HK416_track[a].m_time=0.5;
+					if (HK416_track[a].m_numtime<0){
+						HK416_track.removeAt(a);
+					}
+				}			
+			}
+		}
 	}
 	bool hasEnded() const {
 		// always on
@@ -292,5 +322,21 @@ class XM8tracker{
 		m_time = time;
 		m_factionid= factionid;
 		m_pos=pos;
+	}
+}
+
+class HK416_tracker{
+    int m_characterId;
+	float m_time=0.5;
+	int m_numtime=6;
+	int m_factionid;
+	array<const XmlElement@> m_affected;
+	Vector3 m_pos;
+	HK416_tracker(int characterId,int factionid,Vector3 pos,array<const XmlElement@> affected)
+	{
+		m_characterId = characterId;
+		m_factionid= factionid;
+		m_pos= pos;
+		m_affected= affected;
 	}
 }
