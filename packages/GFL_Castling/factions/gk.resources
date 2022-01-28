@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<!-- 主武器 -->
+	<!-- 主武器 -->
 	<weapon key="gkw_QBZ95.weapon" />
 	<weapon key="gkw_QBZ95_1102.weapon" />
 	<weapon key="gkw_QBZ95_3702.weapon" />
@@ -301,7 +301,7 @@
 	<weapon key="gkw_vector_549.weapon" />
 	<weapon key="gkw_vector_agent.weapon" />
 	<weapon key="gkw_vector_fire.weapon" />
-    <weapon key="gkw_gsh18mod3_medikit.weapon" />
+	<weapon key="gkw_gsh18mod3_medikit.weapon" />
 	<weapon key="gkw_ak15.weapon" />
 	<weapon key="gkw_ak15_blm.weapon" />
 	<weapon key="gkw_fal_2406.weapon" />
@@ -390,17 +390,15 @@
 	<weapon key="gkw_hs2000_5304.weapon" />
 	<weapon key="gkw_fnc_6608.weapon" />
 	<weapon key="gkw_vp1915_6604.weapon" />
-	<weapon key="gkw_ks23.weapon"/>
-	<weapon key="gkw_ks23_skill.weapon"/>
-	<weapon key="gkw_lwmmgmod3.weapon"/>
+	<weapon key="gkw_ks23.weapon" />
+	<weapon key="gkw_ks23_skill.weapon" />
+	<weapon key="gkw_lwmmgmod3.weapon" />
 	<weapon key="gkw_lwmmg.weapon" />
-	<weapon key="gkw_lwmmg_skill.weapon"/>
-	<weapon key="gkw_m1895mod3.weapon"/>
-	<weapon key="gkw_sacr.weapon"/>
-	<weapon key="gkw_an94_mod3.weapon"/>
-	<weapon key="gkw_xm8_mod3.weapon"/>
-
-
+	<weapon key="gkw_lwmmg_skill.weapon" />
+	<weapon key="gkw_m1895mod3.weapon" />
+	<weapon key="gkw_sacr.weapon" />
+	<weapon key="gkw_an94_mod3.weapon" />
+	<weapon key="gkw_xm8_mod3.weapon" />
 	<!-- 重装梯队 -->
 	<weapon key="gkw_hvy_qlz04.weapon" />
 	<weapon key="gkw_hvy_qlz04_ai.weapon" />
@@ -413,15 +411,13 @@
 	<weapon key="gkw_mk153_m93r.weapon" />
 	<weapon key="gkw_hvy_at4.weapon" />
 	<weapon key="gkw_at4_tec-9.weapon" />
-    <weapon key="gkw_cl.weapon" />
-	
-    <!-- MG技能 -->
+	<weapon key="gkw_cl.weapon" />
+	<!-- MG技能 -->
 	<weapon key="gkw_m2hb_skill.weapon" />
 	<weapon key="gkw_mg34_skill.weapon" />
 	<weapon key="gkw_mk46_skill.weapon" />
 	<weapon key="gkw_mk48_skill.weapon" />
 	<weapon key="gkw_qjy88_skill.weapon" />
-
 	<!-- 靶机 -->
 	<weapon key="target.weapon" />
 	<!-- MODⅢ技能 -->
@@ -429,39 +425,35 @@
 	<weapon key="gkw_ar15mod3_skill.weapon" />
 	<weapon key="gkw_hk416mod3_skill.weapon" />
 	<weapon key="gkw_sv98mod3_skill.weapon" />
-    <weapon key="gkw_ntw20mod3_skill.weapon" />
+	<weapon key="gkw_ntw20mod3_skill.weapon" />
 	<weapon key="gkw_m4sopmodiimod3_skill.weapon" />
 	<weapon key="gkw_supersassmod3_skill.weapon" />
 	<weapon key="gkw_88type_skill.weapon" />
 	<weapon key="gkw_ump45mod3_skill.weapon" />
 	<weapon key="gkw_ump9mod3_skill.weapon" />
-	<weapon key="gkw_m1895mod3_skill.weapon"/>
-	<weapon key="gkw_lwmmgmod3_skill.weapon"/>
-	<weapon key="gkw_an94_mod3_skill.weapon"/>
+	<weapon key="gkw_m1895mod3_skill.weapon" />
+	<weapon key="gkw_lwmmgmod3_skill.weapon" />
+	<weapon key="gkw_an94_mod3_skill.weapon" />
 	<weapon key="gkw_m14mod3_skill.weapon" />
-	<weapon key="gkw_xm8_mod3_skill.weapon"/>
-
-  
-		<!-- 载具 -->
+	<weapon key="gkw_xm8_mod3_skill.weapon" />
+	<!-- 载具 -->
 	<vehicle key="humvee_mg" />
 	<vehicle key="humvee.vehicle" />
 	<vehicle key="pierre.vehicle" />
-
 	<!-- 妖精指令 -->
-	<weapon key="reinforcement_fairy_medic.weapon"/>
-	<weapon key="reinforcement_fairy_mgsg.weapon"/>
-	<weapon key="reinforcement_fairy_hvy.weapon"/>
-
+	<weapon key="reinforcement_fairy_medic.weapon" />
+	<weapon key="reinforcement_fairy_mgsg.weapon" />
+	<weapon key="reinforcement_fairy_hvy.weapon" />
 	<!-- 打call -->
 	<call key="gk_medic.call" />
 	<call key="rubber_airboat.call" />
-    <call key="sg1hg1mg2.call" />
-    <call key="hvy_landing.call" />
+	<call key="sg1hg1mg2.call" />
+	<call key="hvy_landing.call" />
 	<call key="humvee1.call" />
-    <call key="humvee.call" />
+	<call key="humvee.call" />
 	<call key="gk_medic_agl.call" />
-	<call key="gk_rescue_fairy.call"/>
-	<call key="gk_repair_fairy.call"/>
+	<call key="gk_rescue_fairy.call" />
+	<call key="gk_repair_fairy.call" />
 	<call key="target.call" />
 	<call key="gk_bombardment_fairy.call" />
 	<call key="gk_airstrike_fairy.call" />
@@ -470,11 +462,10 @@
 	<call key="manticore2.call" />
 	<!-- <call key="gk_landmine_fairy_ai.call"/> -->
 	<!-- <call key="gk_landmine_fairy_at.call"/> -->
-
 	<!-- 手雷类 -->
 	<!-- <projectile key="hand_grenade.projectile"/> -->
-	<projectile key="hand_88grenade.projectile"/>
-	<projectile key="gkw_cz75_axe.projectile"/>
+	<projectile key="hand_88grenade.projectile" />
+	<projectile key="gkw_cz75_axe.projectile" />
 	<!-- 护甲 -->
 	<carry_item key="bp_t1.carry_item" />
 	<carry_item key="bp_t2.carry_item" />
@@ -521,13 +512,10 @@
 	<carry_item key="woshieoe.carry_item" />
 	<!-- 二号位 -->
 	<weapon key="gkw_88rocker.weapon" />
-
 	<!-- 维修机甲 -->
 	<weapon key="gkr_bbs.weapon" />
-
 	<!-- HG医疗榴弹 -->
 	<weapon key="gkw_medical_agl_hg.weapon" />
-	
 	<!-- 融合势力 -->
 	<weapon key="ff_agent.weapon" />
 	<weapon key="ff_alchemist.weapon" />
@@ -545,7 +533,7 @@
 	<weapon key="ff_vespid.weapon" />
 	<weapon key="ff_weaver.weapon" />
 	<weapon key="ff_dreamer.weapon" />
-    <weapon key="ff_dreamer_skill.weapon"/> 
+	<weapon key="ff_dreamer_skill.weapon" />
 	<weapon key="ff_excutioner_1.weapon" />
 	<weapon key="ff_excutioner_2.weapon" />
 	<weapon key="ff_parw_alina.weapon" />
@@ -554,11 +542,9 @@
 	<weapon key="ff_manticore.weapon" />
 	<!-- <weapon key="ff_dreamer_skill.weapon"/> -->
 	<carry_item key="ff_qwd.carry_item" />
-	
 	<!-- 工事妖精 -->
-	<weapon key="gkw_deploy_bunker.weapon"/>
-	<weapon key="gkw_deploy_shelter.weapon"/>
-
+	<weapon key="gkw_deploy_bunker.weapon" />
+	<weapon key="gkw_deploy_shelter.weapon" />
 	<!-- mod3皮肤 -->
 	<weapon key="gkw_hk416_6505_mod3.weapon" />
 	<weapon key="gkw_hk416_537_mod3.weapon" />
@@ -566,36 +552,27 @@
 	<weapon key="gkw_hk416_3401_mod3_skill.weapon" />
 	<weapon key="gkw_hk416_537_mod3_skill.weapon" />
 	<weapon key="gkw_hk416_6505_mod3_skill.weapon" />
-
 	<weapon key="gkw_g11mod3_538.weapon" />
 	<weapon key="gkw_g11mod3_skill_538.weapon" />
 	<weapon key="gkw_g11mod3_9.weapon" />
 	<weapon key="gkw_g11mod3_skill_9.weapon" />
-
 	<weapon key="gkw_ntw20mod3_307.weapon" />
 	<weapon key="gkw_ntw20mod3_307_skill.weapon" />
 	<weapon key="gkw_ntw20mod3_4801.weapon" />
 	<weapon key="gkw_ntw20mod3_4801_skill.weapon" />
-
 	<weapon key="gkw_idwmod3_2108.weapon" />
 	<weapon key="gkw_idwmod3_3205.weapon" />
 	<weapon key="gkw_idwmod3_4908.weapon" />
-
 	<weapon key="gkw_ump45mod3_410.weapon" />
 	<weapon key="gkw_ump45mod3_410_skill.weapon" />
 	<weapon key="gkw_ump45mod3_535.weapon" />
 	<weapon key="gkw_ump45mod3_535_skill.weapon" />
-
 	<weapon key="gkw_supersassmod3_1407.weapon" />
 	<weapon key="gkw_supersassmod3_1407_skill.weapon" />
-
 	<weapon key="gkw_gsh18mod3_523.weapon" />
 	<weapon key="gkw_medical_agl_hg_523.weapon" />
-	
 	<weapon key="gkw_m4a1mod3_530.weapon" />
 	<weapon key="gkw_m4a1mod3_530_skill.weapon" />
-	
 	<weapon key="gkw_ar15mod3_532.weapon" />
 	<weapon key="gkw_ar15mod3_532_skill.weapon" />
-
 </resources>
