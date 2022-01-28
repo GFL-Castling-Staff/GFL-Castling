@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vehicle name="hg" key="GKshelter.vehicle" map_view_atlas_index="-1" respawn_time="36000.0">
+    <tag name="sandbag" />
+    <tire_set offset="1.0 0.0 0.5" radius="0.65" />
+    <tire_set offset="1.0 0.0 -0.5" radius="0.65" />
+    
+    <control max_speed="1" acceleration="1" max_reverse_speed="1.0" max_rotation="0.8" max_water_depth="1.9" />
+    
+    <physics max_health="50" mass="1000.0" extent="7.0 0.0 1.5" offset="0 0.0 0" top_offset="0 2 0" collision_model_pos="0 0.2 0" collision_model_extent="7.0 2.0 1.5" visual_offset="0 -0.1 0" collision_response_factor="0.2" blast_push_threshold="1000.0" vehicle_collision_damage_factor="50.0" /> 
+    
+    <modifier class="blast_damage" value="-1.0" />
+    
+    <sound key="hit" filename="barrier_impact1.wav" />
+    <sound key="hit" filename="barrier_impact2.wav" />
+    
+    <effect event_key="destroy" key="other" ref="SmokeMinor" post_processing="1" />
+    <effect event_key="destroy" key="other" ref="ShadowSmokeMinor" shadow="1" />
+    <event>
+        <trigger class="destroy" />		
+        <result class="spawn" instance_class="visual_item" instance_key="burning_piece_barrier.visual_item" min_amount="20" max_amount="30" offset="0 2.0 0" position_spread="1.5 1.5" direction_spread="0.1 0.1" /> 
+    </event>    
+    <visual class="chassis" mesh_filename="Shelter.mesh" texture_filename="shelter_texture.png" />
+    
+    
+    
+</vehicle>
