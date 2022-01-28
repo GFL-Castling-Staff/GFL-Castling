@@ -20,7 +20,7 @@ class GFLskill : Tracker {
 
     protected array<XM8tracker@> XM8track;
 	protected array<HK416_tracker@> HK416_track;
-
+	protected array<Vector_tracker@> Vector_track;
 
 	// --------------------------------------------
 	protected void handleResultEvent(const XmlElement@ event) {
@@ -214,6 +214,15 @@ class GFLskill : Tracker {
 				}
 			}
 		}
+		if (EventKeyGet == "VV_skill"){
+			int characterId = event.getIntAttribute("character_id");
+			const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+			if (character !is null) {
+				Vector3 grenade_pos = stringToVector3(event.getStringAttribute("position"));
+				int factionid = character.getIntAttribute("faction_id");
+				Vector_track.insertLast(Vector_tracker(characterId,factionid,grenade_pos));
+			}
+		}
 	}
 
 	void update(float time) {
@@ -310,6 +319,26 @@ class GFLskill : Tracker {
 				}			
 			}
 		}
+        if(Vector_track.length()>0){
+            for (uint a=0;a<Vector_track.length();a++){
+                Vector_track[a].m_time-=time;
+                if(Vector_track[a].m_time<0){
+					string c = 
+						"<command class='create_instance'" +
+						" faction_id='"+ Vector_track[a].m_factionid +"'" +
+						" instance_class='grenade'" +
+						" instance_key='VVfirenade_sub.projectile'" +
+						" position='" + Vector_track[a].m_pos.toString() + "'"+
+						" character_id='" + Vector_track[a].m_characterId + "' />";
+					m_metagame.getComms().send(c);		
+                    Vector_track[a].m_numtime--;
+					Vector_track[a].m_time=1;
+					if (Vector_track[a].m_numtime<1){
+						Vector_track.removeAt(a);
+					}
+                }
+            }
+        }
 	}
 	bool hasEnded() const {
 		// always on
@@ -351,5 +380,18 @@ class HK416_tracker{
 		m_factionid= factionid;
 		m_pos= pos;
 		m_affected= affected;
+	}
+}
+
+class Vector_tracker{
+    int m_characterId;
+	int m_numtime=4;
+	int m_time=0;
+	int m_factionid;
+	Vector3 m_pos;
+	Vector_tracker(int characterId,int factionid,,Vector3 pos){
+		m_characterId = characterId;
+		m_factionid= factionid;
+		m_pos= pos;
 	}
 }

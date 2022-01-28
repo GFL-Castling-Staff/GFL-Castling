@@ -6,7 +6,7 @@
 
 
     <trigger class="impact" />
-    <result class="spawn" instance_class="grenade" instance_key="firenade_sub.projectile" min_amount="15" max_amount="15" offset="0 6.0 0" position_spread="1 -6" direction_spread="0.0 0.0" />   
+    <result class="notify_script" key="VV_skill" />
 
     <rotation class="random" />
 
