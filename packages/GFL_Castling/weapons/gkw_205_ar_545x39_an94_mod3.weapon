@@ -32,7 +32,7 @@
     <sound class="impact" fileref="rifle_drop.wav" />    
     <model filename="gkw_ar_an94.xml" />
 
-    <hud_icon filename="gkw_an94.png" />
+    <hud_icon filename="gkw_an94mod3.png" />
 
 
 
@@ -48,6 +48,6 @@
     <stance state_key="standing" accuracy="0.98" />
     <stance state_key="crouching" accuracy="1" />
     <stance state_key="prone" accuracy="1" />
-    
+    <modifier class="speed" value="0.25" />
 
 </weapon>

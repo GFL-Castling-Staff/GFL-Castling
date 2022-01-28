@@ -16,10 +16,10 @@
 	class="1" 
 	reload_one_at_a_time="1"
 	sight_range_modifier="1" 
-	projectile_speed="76" 
+	projectile_speed="80" 
 	barrel_offset="0.4" 
 	projectiles_per_shot="20"
-	spread_range="0.4"
+	spread_range="0.3"
 	 />
      <inventory  buy_price="100.0" sell_price="100.0" />
 	<!--Animations-->
@@ -51,8 +51,8 @@
     <projectile file="bullet.projectile">
         <result class="hit" 
         kill_probability="2.6" 
-        kill_decay_start_time="0.1" 
-        kill_decay_end_time="0.55" />
+        kill_decay_start_time="0.159" 
+        kill_decay_end_time="0.266" />
     </projectile>
     
     <!--Accuracy, Movement speed-->
