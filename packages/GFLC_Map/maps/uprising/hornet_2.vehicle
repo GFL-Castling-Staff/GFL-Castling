@@ -1,0 +1,79 @@
+<vehicle name="Hornet" key="hornet_2.vehicle" map_view_atlas_index="36"  usable_for_cover="0" protectors="1" soldier_capacity_offset="1" respawn_time="36000">
+	<tag name="target" />
+	<tag name="defensive_at" />    
+	<tire_set offset="1.0 0.0 1.0" radius="0.65" />
+	<tire_set offset="1.0 0.0 -1.0" radius="0.65" />
+
+  <modifier class="blast_range" value="-4.0" />
+
+	<control max_speed="20.0" acceleration="6.7" max_reverse_speed="6.0" max_rotation="0.8" max_water_depth="1.9" />
+
+	<physics 
+	max_health="2.7" 
+	mass="19.5" 
+	extent="2.0 0.0 2.0" 
+	offset="0 0.0 0" 
+	top_offset="0 1 0" 
+	collision_model_pos="0 0.2 0" 
+	collision_model_extent="1.2 0.6 1.5" 
+	visual_offset="0 0.1 0" 
+	collision_response_factor="0.2" 
+	blast_push_threshold="10.0" 
+	vehicle_collision_damage_factor="2.0" /> 
+
+	<turret offset="0 1.2 0.16" weapon_key="hornet.weapon" weapon_offset="0.0 0.3 0.0" weapon_recoil="0.05"  max_rotation_step="0.00008" rotation="0" rotation_range="1.92" />
+
+	<visual class="chassis" mesh_filename="tow_tripod.mesh" texture_filename="tow.png" />
+<!--	<visual class="chassis" key="broken" mesh_filename="tow_tripod.mesh" texture_filename="tow.png" /> -->
+
+	<character_slot type="gunner" attached_on_turret="0" hiding="0">
+		<state class="entering" animation_key="crouching forwards short, no weapon" position="0.2 0 -0.7" rotation="0" />
+		<state class="leaving" animation_key="crouching forwards short, no weapon" position="0.2 0 -0.7" rotation="-3.14" />
+		<state class="idle" animation_key="crouch still, no weapon, 62" position="0.2 -1.0 -1.0" />
+	</character_slot>
+
+	<!-- sound handling -->
+	<rev_sound filename="truck_rev0.wav" low_pitch="0.95" high_pitch="1.05" low_rev="0.0" high_rev="0.2" volume="1.0" />
+	<rev_sound filename="truck_rev3.wav" low_pitch="0.7" high_pitch="1.0" low_rev="0.05" high_rev="0.7" volume="1.0" />
+	<rev_sound filename="truck_rev4.wav" low_pitch="0.8" high_pitch="1.0" low_rev="0.4" high_rev="1.0" volume="1.0" />
+
+	<sound key="slide" filename="slide_noise.wav" />
+	<sound key="squeal" filename="tire_squeal.wav" />
+	<sound key="ignition" filename="truck_ignition.wav" />
+	<sound key="hit" filename="car_hit1.wav" />
+	<sound key="hit" filename="car_hit2.wav" />
+	<sound key="hit" filename="car_hit3.wav" />
+  
+  <effect event_key="destroyed" ref="SmallSmokeVehicle" offset="0.0 0.6 0.0" />
+
+	<event key="receive_damage_xp_reward">
+		<trigger class="receive_damage" />
+		<result class="reward" xp="0.0090" />
+	</event>
+
+	<event key="spot_rp_reward">
+		<trigger class="spot" />
+		<result class="reward" rp="10.0" />
+	</event>
+  <event>
+		<trigger class="destroy" />		
+    <result class="spawn" instance_class="visual_item" instance_key="deployable_mg_tripod.visual_item" min_amount="1" max_amount="1" offset="0 2.0 0" position_spread="0 0" direction_spread="0.03 0.2" /> 
+  </event>  
+  <event>
+		<trigger class="destroy" />		
+    <result class="spawn" instance_class="visual_item" instance_key="burning_piece_tow.visual_item" min_amount="1" max_amount="1" offset="0 2.0 0" position_spread="1.5 1.5" direction_spread="0.1 0.2" /> 
+  </event>
+  <event>
+		<trigger class="destroy" />		
+    <result class="spawn" instance_class="visual_item" instance_key="burning_piece_armor1.visual_item" min_amount="2" max_amount="3" offset="0 2.0 0" position_spread="1.5 1.5" direction_spread="0.1 0.2" /> 
+  </event>  
+  <event>
+		<trigger class="destroy" />		
+    <result class="spawn" instance_class="visual_item" instance_key="burning_piece_truck1.visual_item" min_amount="1" max_amount="2" offset="0 2.0 0" position_spread="1.5 1.5" direction_spread="0.1 0.2" /> 
+  </event>   
+  <event>
+		<trigger class="destroy" />		
+    <result class="spawn" instance_class="visual_item" instance_key="burning_piece_armor4.visual_item" min_amount="1" max_amount="1" offset="0 2.0 0" position_spread="1.5 1.5" direction_spread="0.05 0.2" /> 
+  </event>   
+  
+</vehicle>

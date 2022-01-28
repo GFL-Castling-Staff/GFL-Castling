@@ -4,7 +4,7 @@
     <!-- <result class="blast" radius="15.0" damage="20" push="1.1" decal="1" /> -->
     <!-- <trigger class="impact" /> -->
 
-	<result class="spawn" instance_class="projectile" instance_key="sfw_architect_rocket_sub.projectile" min_amount="4" max_amount="4" offset="0 0.0 0" position_spread="0 0" direction_spread="0 0" />
+	<result class="spawn" instance_class="projectile" instance_key="sfw_architect_rocket_sub.projectile" min_amount="3" max_amount="3" offset="0 0.0 0" position_spread="0 0" direction_spread="0 0" />
     <trigger class="time" time_to_live="1.3"/>
     <rotation class="motion" />
     <model  />

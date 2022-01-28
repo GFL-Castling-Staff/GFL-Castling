@@ -17,7 +17,7 @@
 	<parameter class="player_aim_to_crosshair" value="0" /> 
 	
 	<!-- 初始速度 -->
-	<parameter class="speed" value="2.0" />
+	<parameter class="speed" value="1.25" />
 	<!-- 重量，或者引力就像cs月球重力那个 -->
 	<parameter class="gravity" value="-15.0" />
 	<!-- 水里的 -->
@@ -48,7 +48,7 @@
 	<animation key="throwing self over" target_key="jump, dinergate" />
 	<animation key="falling" target_key="arrive, dinergate" />
 	<animation key="arriving ground" target_key="arrive, dinergate" />
-	<animation key="climbing ladder, still" target_key="climb, dinergate" />
+	<animation key="climbing ladder, still" target_key="climb still, dinergate" />
 	<animation key="climbing ladder" target_key="climb moving, dinergate" />
 	<animation key="climbing ladder ending" target_key="arrive, dinergate" />
 	<animation key="stunned" target_key="stun, dinergate" />
