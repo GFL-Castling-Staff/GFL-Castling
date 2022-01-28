@@ -36,7 +36,7 @@
     <sound class="impact" fileref="rifle_drop.wav" />    
     <model filename="gkw_ar_an94.xml" />
 
-    <hud_icon filename="gkw_an94_skill.png" />
+    <hud_icon filename="gkw_an94mod3_skill.png" />
 
 
 	<effect class="muzzle" ref="muzzle_blue"/>
@@ -52,6 +52,5 @@
     <stance state_key="standing" accuracy="0.98" />
     <stance state_key="crouching" accuracy="1.2" />
     <stance state_key="prone" accuracy="1.2" />
-    <modifier class="speed" value="-0.3" />
 
 </weapon>
