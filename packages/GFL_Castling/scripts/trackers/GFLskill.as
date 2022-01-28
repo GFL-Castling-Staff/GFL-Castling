@@ -240,7 +240,7 @@ class GFLskill : Tracker {
                         " position='" + Pos_40mm.toString() + "'"+
 				        " character_id='" + characterId + "' />";
 					m_metagame.getComms().send(c);
-				    string c = 
+				    c = 
                         "<command class='create_instance'" +
                         " faction_id='"+ player.getIntAttribute("faction_id") +"'" +
                         " instance_class='grenade'" +
@@ -248,7 +248,7 @@ class GFLskill : Tracker {
                         " position='" + Pos_40mm.toString() + "'"+
 				        " character_id='" + characterId + "' />";
 					m_metagame.getComms().send(c);
-				    string c = 
+				    c = 
                         "<command class='create_instance'" +
                         " faction_id='"+ player.getIntAttribute("faction_id") +"'" +
                         " instance_class='grenade'" +
@@ -422,10 +422,10 @@ class HK416_tracker{
 class Vector_tracker{
     int m_characterId;
 	int m_numtime=4;
-	int m_time=0;
+	float m_time=0;
 	int m_factionid;
 	Vector3 m_pos;
-	Vector_tracker(int characterId,int factionid,,Vector3 pos){
+	Vector_tracker(int characterId,int factionid,Vector3 pos){
 		m_characterId = characterId;
 		m_factionid= factionid;
 		m_pos= pos;
