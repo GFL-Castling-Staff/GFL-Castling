@@ -76,38 +76,72 @@ class ManualCall : Tracker {
                 }
             }
         }
-        // if(EventKeyGet == "fc_medic"){
-        //     int characterId = event.getIntAttribute("character_id");
-        //     const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
-        //     if (character !is null) {
-        //         int playerId = character.getIntAttribute("player_id");
-        //         const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
-        //         if (CallTaskArray.length()> 3){
-        //             sendPrivateMessageKey(m_metagame,playerId,"Fairy Command System is overload, please try again later.");
-        //             addItemInBackpack(m_metagame,characterId,"weapon","reinforcement_fairy_medic.weapon");
-        //             return;
-        //         }
-        //         if(player !is null){
-        //             if (player.hasAttribute("aim_target")) {
-        //                 Vector3 target = stringToVector3(player.getStringAttribute("aim_target"));
-        //                 Vector3 height = Vector3(0,50,0);
-        //                 target = target.add(height);
-        //                 string Callposition = target.toString();
-        //                 int Faction= character.getIntAttribute("faction_id");
-        //                 string c = 
-        //                 "<command class='create_instance'" +
-        //                 " faction_id='"+ Faction +"'" +
-        //                 " instance_class='vehicle'" +
-        //                 " instance_key='medic_landing.vehicle' " +
-        //                 " character_id='" + characterId +"'" +
-        //                 " position='" + target.toString() + "' />";
-        //                 CallTaskArray.insertLast(ManualCallTask(characterId,c,8.0,Faction,target,"medic_call"));
-        //                 sendFactionMessageKey(m_metagame,Faction,"Request trauma team support!");
-        //                 sendFactionMessageKey(m_metagame,Faction,"Receive, transport aircraft is maneuvering");
-        //             }
-        //         }
-        //     }
-        // }
+        if(EventKeyGet == "fc_mgsg"){
+            int characterId = event.getIntAttribute("character_id");
+            const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+            if (character !is null) {
+                int playerId = character.getIntAttribute("player_id");
+                const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+                if(player !is null){
+                    if (CallTaskArray.length()>= 3){
+                        sendPrivateMessageKey(m_metagame,playerId,"Fairy Command System is overload, please try again later.");
+                        addItemInBackpack(m_metagame,characterId,"weapon","reinforcement_fairy_mgsg.weapon");
+                        return;
+                    }
+                    if (player.hasAttribute("aim_target")) {
+                        Vector3 target = stringToVector3(player.getStringAttribute("aim_target"));
+                        Vector3 height = Vector3(0,50,0);
+                        target = target.add(height);
+                        string Callposition = target.toString();
+                        int Faction= character.getIntAttribute("faction_id");
+                        string c = 
+                        "<command class='create_instance'" +
+                        " faction_id='"+ Faction +"'" +
+                        " instance_class='vehicle'" +
+                        " instance_key='sg1hg1mg2_landing.vehicle' " +
+                        " character_id='" + characterId +"'" +
+                        " position='" + target.toString() + "' />";
+                        CallTaskArray.insertLast(ManualCallTask(characterId,c,8.0,Faction,target,"mgsg_call"));
+                        _log("QueueLegeth:"+CallTaskArray.length());
+                        sendFactionMessageKey(m_metagame,Faction,"Request MG-SG echelon support!");
+                        sendFactionMessageKey(m_metagame,Faction,"Receive, transport aircraft is maneuvering");
+                    }
+                }
+            }
+        }
+        if(EventKeyGet == "fc_hvy"){
+            int characterId = event.getIntAttribute("character_id");
+            const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+            if (character !is null) {
+                int playerId = character.getIntAttribute("player_id");
+                const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+                if(player !is null){
+                    if (CallTaskArray.length()>= 3){
+                        sendPrivateMessageKey(m_metagame,playerId,"Fairy Command System is overload, please try again later.");
+                        addItemInBackpack(m_metagame,characterId,"weapon","reinforcement_fairy_hvy.weapon");
+                        return;
+                    }
+                    if (player.hasAttribute("aim_target")) {
+                        Vector3 target = stringToVector3(player.getStringAttribute("aim_target"));
+                        Vector3 height = Vector3(0,50,0);
+                        target = target.add(height);
+                        string Callposition = target.toString();
+                        int Faction= character.getIntAttribute("faction_id");
+                        string c = 
+                        "<command class='create_instance'" +
+                        " faction_id='"+ Faction +"'" +
+                        " instance_class='vehicle'" +
+                        " instance_key='hvy_landing.vehicle' " +
+                        " character_id='" + characterId +"'" +
+                        " position='" + target.toString() + "' />";
+                        CallTaskArray.insertLast(ManualCallTask(characterId,c,8.0,Faction,target,"hvy_call"));
+                        _log("QueueLegeth:"+CallTaskArray.length());
+                        sendFactionMessageKey(m_metagame,Faction,"Request HVY echelon support!");
+                        sendFactionMessageKey(m_metagame,Faction,"Receive, transport aircraft is maneuvering");
+                    }
+                }
+            }
+        }
     }
 
     void update(float time) {
@@ -116,11 +150,10 @@ class ManualCall : Tracker {
 			CallTaskArray[0].m_time -= time;
 			if(CallTaskArray[0].m_time < 0.0)
 			{
-                if(CallTaskArray[0].CallType=="medic_call"){
+                if(CallTaskArray[0].CallType=="medic_call" || CallTaskArray[0].CallType=="mgsg_call" || CallTaskArray[0].CallType=="hvy_call"){
                     playSoundAtLocation(m_metagame,"osprey.wav",CallTaskArray[0].m_factions,CallTaskArray[0].m_pos,7.0f);
                     m_metagame.getComms().send(CallTaskArray[0].Callkey);
                     sendFactionMessageKey(m_metagame,CallTaskArray[0].m_factions,"Echelon enter the battlefield");
-                    //_log("excuteCallnow");
                 }
 
                 CallTaskArray.removeAt(0);

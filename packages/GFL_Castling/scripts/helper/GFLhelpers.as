@@ -54,6 +54,7 @@ string getPlayerEquipmentKey(const Metagame@ metagame, int characterId, uint slo
 	if (targetCharacter is null) return "";
 	array<const XmlElement@>@ equipment = targetCharacter.getElementsByTagName("item");
 	if (equipment.size() == 0) return "";
+	if (equipment[slot].getIntAttribute("amount") == 0) return "";
 	string ItemKey = equipment[slot].getStringAttribute("key");
 	return ItemKey;
 }
