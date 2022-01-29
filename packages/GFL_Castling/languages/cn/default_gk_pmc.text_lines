@@ -60,10 +60,10 @@
   <comment key="cancel radio call" text="完毕" />
   <comment key="initiate radio call" text="指挥部，信道3，听到请回答" />
   <comment key="commander radio response" text="这里是临时指挥部，通讯清晰" />
-  <comment key="commander radio full" text="这里是临时指挥部， Tactical Fairy已经到运算极限了，请等待当前的支援请求执行完成"/>  
-  <comment key="no radio equipment" text="Tactical Fairy离线" />
-  <comment key="no radio equipment" text="当前权限不足以使用Tactical Fairy" />
-  <comment key="no radio equipment" text="还没有分配Tactical Fairy" />
+  <comment key="commander radio full" text="这里是临时指挥部， 战术妖精已经到运算极限了，请等待当前的支援请求执行完成"/>  
+  <comment key="no radio equipment" text="战术妖精离线" />
+  <comment key="no radio equipment" text="当前权限不足以使用战术妖精" />
+  <comment key="no radio equipment" text="还没有分配战术妖精" />
   <comment key="no radio equipment" text="权限不够哇" />
   <comment key="squad chat, not in squad" text="我现在还不在小队里……活下来的话就去写申请建一个好了" />
   <comment key="Hey, wait up" text="等一等！" />
@@ -270,7 +270,7 @@
   <comment key="Final mission I start with 1 base, part 1" text="啧，指挥节点怎么可能没有防空设施" />
   <comment key="Final mission I start with 1 base, part 2" text="两天不睡果然会导致作战误判……" />
   <comment key="Final mission I start with 1 base, part 3" text="我方损失很大，只有一部分人形还可以执行任务" />
-  <comment key="Final mission I start with 1 base, part 4" text="附近空域被军方封锁，Tactical Fairy的支援无法进入这一区域，但不摧毁这里整个格里芬都玩完了" />
+  <comment key="Final mission I start with 1 base, part 4" text="附近空域被军方封锁，战术妖精的支援无法进入这一区域，但不摧毁这里整个格里芬都玩完了" />
   <comment key="Final mission I start with 1 base, part 5" text="找到并摧毁分散在这个地区的通讯装置，尽全力消灭敌人" />
   <comment key="Final mission II advance, held by enemy, part 1" text="漂亮！&#37;faction_name已经成功被击退" />
   <comment key="Final mission II advance, held by enemy, part 2" text="WAVE的设备发现&#37;faction_name指挥信号出现于雪山地域" />
@@ -285,7 +285,7 @@
   <comment key="Final mission II, phase 2, part 1" text="看起来敌方的攻势慢慢减弱了" />
   <comment key="Final mission II, phase 2, part 2" text="他们现在似乎转而组织防御" />
   <comment key="Final mission II, phase 2, part 3" text="趁他们还没有站稳脚跟，组织精英人形开始反击！" />
-  <comment key="Final mission II, phase 2, part 4" text="防空系统阻止了一部分Tactical Fairy呼叫的增援，摧毁它" />
+  <comment key="Final mission II, phase 2, part 4" text="防空系统阻止了一部分战术妖精呼叫的增援，摧毁它" />
   <comment key="Final mission II, phase 2, part 5" text="WAVE侦测到了敌方的通讯设备，找到并摧毁它" />
   <comment key="Final mission II, phase 3, part 1" text="他们退到了大门后面，重装人形可以炸开障碍，但他们似乎还布置了强力的干扰协议" />
   <comment key="Final mission II, phase 3, part 2" text="人形在那种环境下行动很可能导致心智融解" />
@@ -340,10 +340,10 @@
   <comment key="prison_door.vehicle spotted, instructions" text="炸掉监狱大门！" />
   <comment key="prison_door.vehicle destroyed" text="救出的人形来自其他格里芬承包区，他们会加入我们的队伍！" />
 
-  <comment key="aa_emplacement.vehicle spotted, instructions" text="摧毁防空设施才能让一部分Tactical Fairy呼叫支援" />
-  <comment key="aa_emplacement.vehicle destroyed" text="防空炮已摧毁，Tactical Fairy已与支援系统建立连接" />
+  <comment key="aa_emplacement.vehicle spotted, instructions" text="摧毁防空设施才能让一部分战术妖精呼叫支援" />
+  <comment key="aa_emplacement.vehicle destroyed" text="防空炮已摧毁，战术妖精已与支援系统建立连接" />
 
-  <comment key="intel radio reminder" text="别忘了在需要的时候呼叫Tactical Fairy支援" />
+  <comment key="intel radio reminder" text="别忘了在需要的时候呼叫战术妖精支援" />
 
   <comment key="report very weak defense" text="情报显示，&#37;base_name区域几乎没有设防。" />
   <comment key="respond very weak defense" text="占领基地" />
@@ -393,4 +393,23 @@
   <comment key="squad_equipment_kit, equip" text="我可以用这个来给附近的人形装备护甲！" /> 
   <comment key="squad_equipment_kit, done" text="护甲发放完毕！" />   
   
+  <comment key="Send Alert Success" text="发送警告成功"/>
+
+	<comment key="ServerQuickChatAlert001" text="&#37;name向您发出警告--请不要恶意抢夺他人战利品"/>
+	<comment key="ServerQuickChatAlert002" text="若您被警告多次，可能将会受到一定程度的惩罚"/>
+	<comment key="ServerQuickChatAlert003" text="&#37;name向您发出警告--请不要恶意击杀友军"/>
+	<comment key="ServerQuickChatAlert004" text="&#37;name向您发出警告--请不要恶意扰乱游戏秩序"/>
+  <comment key="skillcooldownhint" text="技能冷却还有&#37;time秒"/>
+	<comment key="Request trauma team support!" text="索降创伤小组" />
+	<comment key="Receive, transport aircraft is maneuvering" text="收到, 运输机突防中" />
+  <comment key="Request MG-SG echelon support!" text="索降机霰梯队" />
+	<comment key="Request HVY echelon support!" text="索降重装小队" />
+	<comment key="Echelon enter the battlefield" text="场地清空，开始投放" />	
+  <comment key="Fairy Command System is overload, please try again later." text="妖精指令系统目前过载中，请稍后再试" />
+  <comment key="Targetdrone" text="嘲讽妖精" />
+	<comment key="Manticore x2" text="协议同归-启用两台蝎甲兽" />
+	<comment key="Manticore x5" text="协议同归-启用五台蝎甲兽" />
+  <comment key="Humvee[MINIGUN]" text="投放机枪悍马" />
+	<comment key="Launch Pierre II" text="投放Pierre II" />
+	<comment key="Launch Pierre II and MG T-Doll" text="投放Pierre II 和机枪人形"/>
 </character>

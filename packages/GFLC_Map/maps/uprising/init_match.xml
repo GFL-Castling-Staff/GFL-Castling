@@ -1,0 +1,103 @@
+<commands>
+  <!-- start_game command: new game menu picks up defaults from here and allows user to override certain settings -->
+  <command 
+	  class="start_game" 
+	  vehicles="1" 
+	  max_soldiers="150" 
+	  player_bot_compensation="4" 
+	  xp_multiplier="1.0"
+	  rp_multiplier="1.0"
+	  friendly_fire="0" 
+	  base_capture_system="any">
+
+    <faction initial_over_capacity="10" ai_accuracy="0.94" capacity_multiplier="0.7" />
+    <faction initial_over_capacity="0" ai_accuracy="0.94" />
+  </command>
+  
+<!--   <command
+  class="faction_resources"
+  faction_id="1">
+  <vehicle key="mobile_armory.vehicle" enabled="0"/>
+  </command>
+  <command
+  class="faction_resources"
+  faction_id="1">
+  <vehicle key="campfire.vehicle" enabled="1"/>
+  </command>
+  <command
+  class="faction_resources"
+  faction_id="0">
+  <vehicle key="radio_jammer.vehicle" enabled="0"/>
+  </command> -->
+  
+  <command 
+	  class="commander_ai" 
+	  faction="0"
+	  base_defense="0.2"
+	  border_defense="0.0">
+  </command>
+    <command 
+	  class="commander_ai" 
+	  faction="1"
+	  base_defense="1.0"
+	  border_defense="0.0">
+  </command>
+  <command 
+	  class="commander_ai" 
+	  faction="2"
+	  base_defense="1.0"
+	  border_defense="0.0">
+  </command>
+<!--   <command
+	  class="faction_resources"
+	  faction_id="0">
+    <vehicle key="radar_truck.vehicle" enabled="0"/>
+  </command>
+ -->
+<!-- <command 
+	class="create_instance" 
+	faction_id="1"
+	position="186 4 702"
+	offset="0 0 0"
+	character_id="0" 
+	instance_class="projectile"
+	instance_key="claymore.projectile" >
+</command> 
+
+<command 
+	class="create_instance" 
+	faction_id="1"
+	position="176 4 708"
+	offset="0 0 0"
+	character_id="0" 
+	instance_class="projectile"
+	instance_key="claymore.projectile" >
+</command>  -->
+
+<!-- <command 
+	class="create_instance" 
+	position="752 4 700"
+	offset="0 0 0"
+	instance_class="vehicle"
+	instance_key="tut_sign_cover.vehicle" >
+</command>  -->
+
+  <command
+	  class="faction_resources"
+	  faction_id="1">
+    <vehicle key="tank2.vehicle" enabled="1"/>
+  </command>
+
+  <command
+	  class="faction_resources"
+	  faction_id="1">
+    <vehicle key="hornet_2.vehicle" enabled="1"/>
+  </command>
+
+  <command
+	  class="faction_resources"
+	  faction_id="1">
+    <vehicle key="aa_emplacement.vehicle" enabled="1"/>
+  </command>  
+
+</commands>

@@ -124,12 +124,12 @@
 
 	<event key="spot_rp_reward">
 		<trigger class="spot" />
-		<result class="reward" rp="50.0" />
+		<result class="reward" rp="100.0" />
 	</event>
 
 	<event key="destroy_rp_reward">
 		<trigger class="destroy" />
-		<result class="reward" rp="50.0" />
+		<result class="reward" rp="500.0" />
 	</event>
     
 	<event>

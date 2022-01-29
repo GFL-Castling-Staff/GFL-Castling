@@ -1,0 +1,146 @@
+<vehicle file="vehicle_base.vehicle" name="DarkCat Tank" key="tank2.vehicle" 
+	respawn_time="36000" 
+	protectors="1" 
+	map_view_atlas_index="24" 
+	minimum_fill_requirement="0.0" 
+	designated_squad_as_driver_only="0" 
+	allow_character_leave_request="0" 
+	allow_owner_to_use_only="1" 
+	max_character_collision_speed_on_normal="8.0" 
+	ai_navigation_offset="0" >
+	
+	<tag name="metal_heavy" />
+	<tag name="heavy_combat" />
+  
+	<tire_set offset="1.8 0.0 +3" radius="0.52" />
+	<tire_set offset="1.8 0.0 -3" radius="0.52" />
+
+	<control max_speed="12.0" acceleration="12.0" max_reverse_speed="8.0" TODO_min_health_to_steer="3.0" max_rotation="0.0" max_water_depth="1.9" steer_smoothening="0.99" tracked="1" gears="1" max_limiter_speed="6.0" />
+
+	<physics max_health="200.0" TODO_blast_damage_threshold="1.02" mass="500.0" 	broken_mass="10"  remove_collision_threshold="0.2"	extent="5 0.0 7" offset="0 0.0 0" top_offset="0 6.0 0" collision_model_pos="0 1.2 0" collision_model_extent="4.0 4.8 8.0" visual_offset="0 0.6 0.0" /> 
+
+	<!-- one weapon per turret so that only one soldier controls the turret orientation -->
+	<!-- similarly, a controllable turret can only exist if it has a weapon -->
+	<!-- turrets may have sub-turrets, which may have more weapons, in the future -->
+	<turret offset="0 2.6 2.8" weapon_key="tank2_cannon.weapon" weapon_offset="-0.4 0.6 1.3" weapon_recoil="0.1" rotation_range="4.17" max_rotation_step="0.0001" aim_shoot_threshold="0.9" />
+	<turret offset="0 2.6 2.8" weapon_key="tank2_cannon.weapon" weapon_offset="+0.4 0.6 1.3" weapon_recoil="0.1" rotation_range="4.17" max_rotation_step="0.0001" aim_shoot_threshold="0.9" />  
+	<turret offset="0 3.6 -3.2" weapon_key="tank2_mg.weapon" weapon_offset="0.0 0.0 1.0" weapon_recoil="0.0" rotation="3.14" rotation_range="4.4" max_rotation_step="0.00025" />
+	<turret offset="0 3.3 -0.5" weapon_key="tank2_missile_launcher.weapon" weapon_offset="-1.3 0.4 0.0" weapon_recoil="0.2" max_rotation_step="0.00005" /> 
+	<turret offset="0 3.3 -0.5" weapon_key="tank2_missile_launcher.weapon" weapon_offset="+1.3 0.4 0.0" weapon_recoil="0.2" max_rotation_step="0.00005" />    
+
+
+	<visual class="chassis" mesh_filename="tank2_body.mesh" texture_filename="tank2.png" max_tilt="0.04" />
+	<visual class="chassis" key="broken" mesh_filename="tank2_broken.mesh" texture_filename="tank2_broken.png" />
+	<visual class="turret" turret_index="0" key="broken" mesh_filename="tank2_turret2.mesh" texture_filename="tank2_broken.png" /> 
+	<visual class="turret" turret_index="3" key="broken" mesh_filename="tank2_turret1_broken.mesh" texture_filename="tank2_broken.png" />   
+	<visual class="turret" turret_index="0" mesh_filename="tank2_turret2.mesh" texture_filename="tank2.png" />
+	<visual class="turret" turret_index="1" mesh_filename="tank2_turret2.mesh" texture_filename="tank2.png" />  
+	<visual class="turret" turret_index="2" mesh_filename="tank2_mg.mesh" texture_filename="tank2.png" />
+  <visual class="turret" turret_index="3" mesh_filename="tank2_turret1.mesh" texture_filename="tank2.png" />
+
+
+	<visual class="track" mesh_filename="tank_track.mesh" offset="-1.6 0.5 0" >
+		<part texture_filename="tank2.png" />
+		<part texture_filename="tank2_track.png" texture_animation="translate" tire_binding="0" />
+		<part texture_filename="tank2_wheel.png" texture_animation="rotate" tire_binding="0" />
+	</visual>
+
+	<visual class="track" mesh_filename="tank_track.mesh" offset="+1.6 0.5 0" >
+		<part texture_filename="tank2.png" />
+		<part texture_filename="tank2_track.png" texture_animation="translate" tire_binding="1" />
+		<part texture_filename="tank2_wheel.png" texture_animation="rotate" tire_binding="1" />
+	</visual>
+
+	<character_slot type="driver" position="1.5 0.5 2" rotation="0" exit_rotation="1.57" hiding="1" animation_id="36" />
+
+ 	<character_slot type="gunner" position="-1.5 0.5 2" rotation="0" exit_rotation="-1.57" hiding="1" animation_id="37">
+		<turret index="0" />  	<turret index="1" />
+	</character_slot>    
+
+	<character_slot type="gunner" enter_position="0 0.5 -4.5" seat_position="0 2.2 -3.2" rotation="0" exit_rotation="3.14" hiding="0" animation_key="tank mg still" marker_offset="0 1.0 0">
+		<turret index="2" />
+	</character_slot>
+  
+	<character_slot type="gunner" position="1.5 0.7 -1" rotation="0" exit_rotation="1.57" hiding="1" animation_id="37">
+		<turret index="3" />  <turret index="4" />
+	</character_slot>  
+
+
+
+
+	<!-- sound handling -->
+	<rev_sound filename="tank_rev0.wav" low_pitch="0.4" high_pitch="0.5" low_rev="0.0" high_rev="1.0" volume="0.9" />
+	<rev_sound filename="tank_rev0_b.wav" low_pitch="0.6" high_pitch="0.7" low_rev="0.0" high_rev="1.0" volume="0.6" /> 
+	<rev_sound filename="tank_rev1.wav" low_pitch="0.2" high_pitch="0.4" low_rev="0.4" high_rev="0.7" volume="1.0" />
+	<rev_sound filename="tank_tracks.wav" low_pitch="0.4" high_pitch="0.8" low_rev="0.1" high_rev="1.0" volume="0.9" />  
+	<rev_sound filename="tank_rev2.wav" low_pitch="0.3" high_pitch="0.5" low_rev="0.9" high_rev="1.0" volume="0.9" />
+
+	<sound key="squeal" filename="tire_squeal.wav" />
+	<sound key="ignition" filename="jeep2_ignition.wav" />
+	<sound key="hit" filename="car_hit1.wav" />
+	<sound key="hit" filename="car_hit2.wav" />
+	<sound key="destroy" filename="vehicle_explosion_1.wav" />   
+	<sound key="cleanup" filename="vehicle_explosion_1.wav" />    
+
+	<sound key="turret_rotation" filename="turret_rotation1.wav" volume="0.8" />
+	<sound key="turret_rotation" filename="turret_rotation2.wav" volume="0.8"/>
+  
+	<effect event_key="drive" type="splat_map" surface_tag="dirt" size="1.0" atlas_index="2" layer="1" />
+	<effect event_key="drive" type="particle" key="terrain" surface_tag="dirt" ref="Burst" use_surface_color="1" />
+
+	<effect event_key="health" value="15" ref="SmallSmokeVehicle" offset="0.0 2.4 -3.1" />  
+  <effect event_key="destroyed" ref="SmallSmokeVehicle" offset="0.0 2.4 -3.1" />
+  <effect event_key="destroyed" ref="SmallSmokeVehicle" offset="-0.8 2.5 -3.1" />  
+  <effect event_key="destroyed" ref="MediumSmokeVehicle" offset="0.0 3.2 0.5" />  
+  <effect event_key="destroyed" ref="MediumSmokeVehicle" offset="-0.6 3.0 -0.2" />    
+  <effect event_key="destroyed" ref="SmallFireRepeat" offset="0.0 2.4 -3.1" />
+        <effect event_key="destroy" key="other" ref="woosh_big" post_processing="0" shadow="0" />   
+        <effect event_key="cleanup" key="other" ref="woosh_big" post_processing="0" shadow="0" />   
+   
+
+	<event key="receive_damage_xp_reward">
+		<trigger class="receive_damage" />
+		<result class="reward" xp="0.300" />
+	</event>
+	
+	<event key="receive_damage_rp_reward">
+		<trigger class="receive_damage" />
+		<result class="reward" rp="1000" />
+	</event>
+
+	<event key="spot_rp_reward">
+		<trigger class="spot" />
+		<result class="reward" rp="100.0" />
+	</event>
+
+	<event key="destroy_rp_reward">
+		<trigger class="destroy" />
+		<result class="reward" rp="500.0" />
+	</event>
+    
+	<event>
+		<trigger class="destroy" />
+  	<result class="spawn" instance_class="visual_item" instance_key="burning_piece_armor1.visual_item" min_amount="1" max_amount="3" offset="0 3.0 0" position_spread="1.5 1.5" direction_spread="0.15 0.3" />
+	</event>
+	<event>
+		<trigger class="destroy" />  	
+    <result class="spawn" instance_class="visual_item" instance_key="burning_piece_armor2.visual_item" min_amount="0" max_amount="1" offset="0 3.0 0" position_spread="1.5 1.5" direction_spread="0.10 0.15" />
+	</event>
+  <event>
+		<trigger class="destroy" />		
+    <result class="spawn" instance_class="visual_item" instance_key="burning_piece_armor3.visual_item" min_amount="1" max_amount="2" offset="0 3.0 0" position_spread="1.5 1.5" direction_spread="0.12 0.20" />
+	</event>
+  <event>
+		<trigger class="destroy" />		
+    <result class="spawn" instance_class="visual_item" instance_key="burning_piece_armor4.visual_item" min_amount="1" max_amount="2" offset="0 3.0 0" position_spread="1.5 1.5" direction_spread="0.1 0.25" />
+	</event>    
+
+  <event>
+		<trigger class="cleanup" />		
+    <result class="spawn" instance_class="visual_item" instance_key="burning_piece_cleanup.visual_item" min_amount="20" max_amount="30" offset="0 2.0 0" position_spread="1.5 1.5" direction_spread="0.1 0.1" /> 
+  </event>    
+ 	<event>
+		<trigger class="cleanup" />
+    <result class="spawn" instance_class="projectile" instance_key="debri_stun" min_amount="1" max_amount="1" offset="0 3.0 0" position_spread="0.0 0.0" direction_spread="0.0 0.0" />
+  </event>   
+</vehicle>
