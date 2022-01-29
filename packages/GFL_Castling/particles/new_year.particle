@@ -1,0 +1,288 @@
+particle_system new_year_1 {
+	quota	500
+	material new_year_1
+	particle_width	10
+	particle_height	7.5
+	cull_each	false
+	renderer	billboard
+	billboard_type	point
+
+	emitter Box
+	{
+		angle	1
+		colour	1 1 1 0.4
+		colour_range_start	1 1 1 1
+		colour_range_end	1 1 1 0.4
+		direction	0 0 0
+		emission_rate	150
+		position	5 0 0
+		velocity	0
+		velocity_min	1
+		velocity_max	1
+		time_to_live	3.7
+		time_to_live_min	3.5
+		time_to_live_max	4.0
+		duration	0.05
+		duration_min	0.05
+		duration_max	0.05
+		width	0.25
+		height	0.25
+		depth	0.2
+	}
+	}
+
+material new_year_1 {
+        receive_shadows off
+	technique {
+		pass {
+			lighting off
+			depth_write off
+			scene_blend add
+			fog_override true
+
+			texture_unit {
+				texture 1.jpg
+			}
+		}
+	}
+}
+particle_system new_year_4 {
+	quota	500
+	material new_year_4
+	particle_width	10
+	particle_height	7.5
+	cull_each	false
+	renderer	billboard
+	billboard_type	point
+
+	emitter Box
+	{
+		angle	1
+		colour	1 1 1 0.4
+		colour_range_start	1 1 1 1
+		colour_range_end	1 1 1 0.4
+		direction	0 0 0
+		emission_rate	150
+		position	5 0 0
+		velocity	0
+		velocity_min	1
+		velocity_max	1
+		time_to_live	4.0
+		time_to_live_min	3.8
+		time_to_live_max	4.5
+		duration	0.05
+		duration_min	0.05
+		duration_max	0.05
+		width	0.25
+		height	0.25
+		depth	0.2
+	}
+	}
+
+material new_year_4 {
+        receive_shadows off
+	technique {
+		pass {
+			lighting off
+			depth_write off
+			scene_blend add
+			fog_override true
+
+			texture_unit {
+				texture 4.jpg
+			}
+		}
+	}
+}
+particle_system new_year_2 {
+	quota	500
+	material new_year_2
+	particle_width	10
+	particle_height	7.5
+	cull_each	false
+	renderer	billboard
+	billboard_type	point
+
+	emitter Box
+	{
+		angle	1
+		colour	1 1 1 0.4
+		colour_range_start	1 1 1 1
+		colour_range_end	1 1 1 0.4
+		direction	0 0 0
+		emission_rate	150
+		position	-5 0 0
+		velocity	0
+		velocity_min	1
+		velocity_max	1
+		time_to_live	4.2
+		time_to_live_min	4.0
+		time_to_live_max	4.7
+		duration	0.05
+		duration_min	0.05
+		duration_max	0.05
+		width	0.25
+		height	0.25
+		depth	0.2
+	}
+	}
+
+material new_year_2 {
+        receive_shadows off
+	technique {
+		pass {
+			lighting off
+			depth_write off
+			scene_blend add
+			fog_override true
+
+			texture_unit {
+				texture 2.jpg
+			}
+		}
+	}
+}
+particle_system new_year_5 {
+	quota	500
+	material new_year_5
+	particle_width	10
+	particle_height	7.5
+	cull_each	false
+	renderer	billboard
+	billboard_type	point
+
+	emitter Box
+	{
+		angle	1
+		colour	1 1 1 0.4
+		colour_range_start	1 1 1 1
+		colour_range_end	1 1 1 0.4
+		direction	0 0 0
+		emission_rate	150
+		position	-5 0 0
+		velocity	0
+		velocity_min	1
+		velocity_max	1
+		time_to_live	4.5
+		time_to_live_min	4.3
+		time_to_live_max	4.9
+		duration	0.05
+		duration_min	0.05
+		duration_max	0.05
+		width	0.25
+		height	0.25
+		depth	0.2
+	}
+	}
+
+material new_year_5 {
+        receive_shadows off
+	technique {
+		pass {
+			lighting off
+			depth_write off
+			scene_blend add
+			fog_override true
+
+			texture_unit {
+				texture 5.jpg
+			}
+		}
+	}
+}
+particle_system new_year_3 {
+	quota	500
+	material new_year_3
+	particle_width	10
+	particle_height	7.5
+	cull_each	false
+	renderer	billboard
+	billboard_type	point
+
+	emitter Box
+	{
+		angle	1
+		colour	1 1 1 0.4
+		colour_range_start	1 1 1 1
+		colour_range_end	1 1 1 0.4
+		direction	0 0 0
+		emission_rate	150
+		position	0 0 0
+		velocity	0
+		velocity_min	1
+		velocity_max	1
+		time_to_live	5.4
+		time_to_live_min	5.0
+		time_to_live_max	5.9
+		duration	0.05
+		duration_min	0.05
+		duration_max	0.05
+		width	0.25
+		height	0.25
+		depth	0.2
+	}
+	}
+
+material new_year_3 {
+        receive_shadows off
+	technique {
+		pass {
+			lighting off
+			depth_write off
+			scene_blend add
+			fog_override true
+
+			texture_unit {
+				texture 3.jpg
+			}
+		}
+	}
+}
+particle_system new_year {
+	quota	500
+	material new_year
+	particle_width	16.28
+	particle_height	12.52
+	cull_each	false
+	renderer	billboard
+	billboard_type	point
+
+	emitter Box
+	{
+		angle	1
+		colour	1 1 1 0.4
+		colour_range_start	1 1 1 0.4
+		colour_range_end	1 1 1 1
+		direction	0 0 0
+		emission_rate	60
+		position	0 0 0
+		velocity	1
+		velocity_min	1
+		velocity_max	1
+		time_to_live	5.3
+		time_to_live_min	5.3
+		time_to_live_max	5.5
+		duration	0.05
+		duration_min	0.05
+		duration_max	0.05
+		width	0.25
+		height	0.25
+		depth	0.1
+	}
+	}
+
+material new_year {
+        receive_shadows off
+	technique {
+		pass {
+			lighting off
+			depth_write off
+			scene_blend add
+			fog_override true
+
+			texture_unit {
+				texture happy_new_year_1.png
+			}
+		}
+	}
+}

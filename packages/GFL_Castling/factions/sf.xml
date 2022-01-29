@@ -1,126 +1,368 @@
 <?xml version="1.0" encoding="utf-8"?>
 <faction name="S.F." color="0.91 0.11 0.20" firstnames_file="sf_first.name" lastnames_file="sf_last.name" chat_icon_filename="sf_chat_soldier.png" chat_icon_commander_filename="sf_chat_commander.png" campaign_completion_icon_filename="campaign_win_gk.png" radio_queue_size="3">
-<rank xp="0" name="10"><hud_icon filename="lv_000.png" /></rank>
-<rank xp="0.001" name="30"><hud_icon filename="lv_001.png" /></rank>
-<rank xp="0.003" name="60"><hud_icon filename="lv_002.png" /></rank>
-<rank xp="0.006" name="100"><hud_icon filename="lv_003.png" /></rank>
-<rank xp="0.01" name="150"><hud_icon filename="lv_004.png" /></rank>
-<rank xp="0.015" name="210"><hud_icon filename="lv_005.png" /></rank>
-<rank xp="0.021" name="280"><hud_icon filename="lv_006.png" /></rank>
-<rank xp="0.028" name="360"><hud_icon filename="lv_007.png" /></rank>
-<rank xp="0.036" name="450"><hud_icon filename="lv_008.png" /></rank>
-<rank xp="0.045" name="550"><hud_icon filename="lv_009.png" /></rank>
-<rank xp="0.055" name="660"><hud_icon filename="lv_010.png" /></rank>
-<rank xp="0.066" name="780"><hud_icon filename="lv_011.png" /></rank>
-<rank xp="0.078" name="910"><hud_icon filename="lv_012.png" /></rank>
-<rank xp="0.091" name="1050"><hud_icon filename="lv_013.png" /></rank>
-<rank xp="0.105" name="1200"><hud_icon filename="lv_014.png" /></rank>
-<rank xp="0.12" name="1360"><hud_icon filename="lv_015.png" /></rank>
-<rank xp="0.136" name="1530"><hud_icon filename="lv_016.png" /></rank>
-<rank xp="0.153" name="1710"><hud_icon filename="lv_017.png" /></rank>
-<rank xp="0.101" name="1900"><hud_icon filename="lv_018.png" /></rank>
-<rank xp="0.19" name="2100"><hud_icon filename="lv_019.png" /></rank>
-<rank xp="0.21" name="2310"><hud_icon filename="lv_020.png" /></rank>
-<rank xp="0.231" name="2530"><hud_icon filename="lv_021.png" /></rank>
-<rank xp="0.253" name="2760"><hud_icon filename="lv_022.png" /></rank>
-<rank xp="0.276" name="3000"><hud_icon filename="lv_023.png" /></rank>
-<rank xp="0.3" name="3250"><hud_icon filename="lv_024.png" /></rank>
-<rank xp="0.325" name="3510"><hud_icon filename="lv_025.png" /></rank>
-<rank xp="0.351" name="3790"><hud_icon filename="lv_026.png" /></rank>
-<rank xp="0.379" name="4100"><hud_icon filename="lv_027.png" /></rank>
-<rank xp="0.41" name="4440"><hud_icon filename="lv_028.png" /></rank>
-<rank xp="0.444" name="4860"><hud_icon filename="lv_029.png" /></rank>
-<rank xp="0.486" name="5320"><hud_icon filename="lv_030.png" /></rank>
-<rank xp="0.532" name="5820"><hud_icon filename="lv_031.png" /></rank>
-<rank xp="0.582" name="6360"><hud_icon filename="lv_032.png" /></rank>
-<rank xp="0.636" name="6940"><hud_icon filename="lv_033.png" /></rank>
-<rank xp="0.694" name="7570"><hud_icon filename="lv_034.png" /></rank>
-<rank xp="0.757" name="8240"><hud_icon filename="lv_035.png" /></rank>
-<rank xp="0.824" name="8960"><hud_icon filename="lv_036.png" /></rank>
-<rank xp="0.896" name="9730"><hud_icon filename="lv_037.png" /></rank>
-<rank xp="0.973" name="10550"><hud_icon filename="lv_038.png" /></rank>
-<rank xp="1.055" name="11430"><hud_icon filename="lv_039.png" /></rank>
-<rank xp="1.143" name="12360"><hud_icon filename="lv_040.png" /></rank>
-<rank xp="1.236" name="13350"><hud_icon filename="lv_041.png" /></rank>
-<rank xp="1.335" name="14400"><hud_icon filename="lv_042.png" /></rank>
-<rank xp="1.44" name="15510"><hud_icon filename="lv_043.png" /></rank>
-<rank xp="1.551" name="16690"><hud_icon filename="lv_044.png" /></rank>
-<rank xp="1.669" name="17940"><hud_icon filename="lv_045.png" /></rank>
-<rank xp="1.794" name="19250"><hud_icon filename="lv_046.png" /></rank>
-<rank xp="1.925" name="20640"><hud_icon filename="lv_047.png" /></rank>
-<rank xp="2.064" name="22100"><hud_icon filename="lv_048.png" /></rank>
-<rank xp="2.21" name="23640"><hud_icon filename="lv_049.png" /></rank>
-<rank xp="2.364" name="25250"><hud_icon filename="lv_050.png" /></rank>
-<rank xp="2.525" name="26940"><hud_icon filename="lv_051.png" /></rank>
-<rank xp="2.694" name="28720"><hud_icon filename="lv_052.png" /></rank>
-<rank xp="2.872" name="30580"><hud_icon filename="lv_053.png" /></rank>
-<rank xp="3.058" name="32530"><hud_icon filename="lv_054.png" /></rank>
-<rank xp="3.253" name="34570"><hud_icon filename="lv_055.png" /></rank>
-<rank xp="3.457" name="36700"><hud_icon filename="lv_056.png" /></rank>
-<rank xp="3.67" name="38930"><hud_icon filename="lv_057.png" /></rank>
-<rank xp="3.893" name="41260"><hud_icon filename="lv_058.png" /></rank>
-<rank xp="4.126" name="43690"><hud_icon filename="lv_059.png" /></rank>
-<rank xp="4.369" name="46220"><hud_icon filename="lv_060.png" /></rank>
-<rank xp="4.622" name="48850"><hud_icon filename="lv_061.png" /></rank>
-<rank xp="4.885" name="51590"><hud_icon filename="lv_062.png" /></rank>
-<rank xp="5.159" name="54440"><hud_icon filename="lv_063.png" /></rank>
-<rank xp="5.444" name="57400"><hud_icon filename="lv_064.png" /></rank>
-<rank xp="5.74" name="60480"><hud_icon filename="lv_065.png" /></rank>
-<rank xp="6.048" name="63680"><hud_icon filename="lv_066.png" /></rank>
-<rank xp="6.368" name="67000"><hud_icon filename="lv_067.png" /></rank>
-<rank xp="6.7" name="70440"><hud_icon filename="lv_068.png" /></rank>
-<rank xp="7.044" name="74950"><hud_icon filename="lv_069.png" /></rank>
-<rank xp="7.495" name="79630"><hud_icon filename="lv_070.png" /></rank>
-<rank xp="7.963" name="84490"><hud_icon filename="lv_071.png" /></rank>
-<rank xp="8.449" name="89530"><hud_icon filename="lv_072.png" /></rank>
-<rank xp="8.953" name="94750"><hud_icon filename="lv_073.png" /></rank>
-<rank xp="9.475" name="100150"><hud_icon filename="lv_074.png" /></rank>
-<rank xp="10.015" name="105740"><hud_icon filename="lv_075.png" /></rank>
-<rank xp="10.574" name="111530"><hud_icon filename="lv_076.png" /></rank>
-<rank xp="11.153" name="117510"><hud_icon filename="lv_077.png" /></rank>
-<rank xp="11.751" name="123690"><hud_icon filename="lv_078.png" /></rank>
-<rank xp="12.369" name="130080"><hud_icon filename="lv_079.png" /></rank>
-<rank xp="13.008" name="136680"><hud_icon filename="lv_080.png" /></rank>
-<rank xp="13.668" name="143490"><hud_icon filename="lv_081.png" /></rank>
-<rank xp="14.349" name="150520"><hud_icon filename="lv_082.png" /></rank>
-<rank xp="15.052" name="157780"><hud_icon filename="lv_083.png" /></rank>
-<rank xp="15.778" name="165260"><hud_icon filename="lv_084.png" /></rank>
-<rank xp="16.526" name="172970"><hud_icon filename="lv_085.png" /></rank>
-<rank xp="17.297" name="180920"><hud_icon filename="lv_086.png" /></rank>
-<rank xp="18.092" name="189110"><hud_icon filename="lv_087.png" /></rank>
-<rank xp="18.911" name="197540"><hud_icon filename="lv_088.png" /></rank>
-<rank xp="19.754" name="208800"><hud_icon filename="lv_089.png" /></rank>
-<rank xp="20.88" name="220410"><hud_icon filename="lv_090.png" /></rank>
-<rank xp="22.041" name="232360"><hud_icon filename="lv_091.png" /></rank>
-<rank xp="23.236" name="244670"><hud_icon filename="lv_092.png" /></rank>
-<rank xp="24.467" name="257340"><hud_icon filename="lv_093.png" /></rank>
-<rank xp="25.734" name="270380"><hud_icon filename="lv_094.png" /></rank>
-<rank xp="27.038" name="283790"><hud_icon filename="lv_095.png" /></rank>
-<rank xp="28.379" name="297580"><hud_icon filename="lv_096.png" /></rank>
-<rank xp="29.758" name="311760"><hud_icon filename="lv_097.png" /></rank>
-<rank xp="31.176" name="326330"><hud_icon filename="lv_098.png" /></rank>
-<rank xp="32.633" name="336330"><hud_icon filename="lv_099.png" /></rank>
-<rank xp="33.633" name="348330"><hud_icon filename="lv_100.png" /></rank>
-<rank xp="34.833" name="362330"><hud_icon filename="lv_101.png" /></rank>
-<rank xp="36.233" name="378330"><hud_icon filename="lv_102.png" /></rank>
-<rank xp="37.833" name="396330"><hud_icon filename="lv_103.png" /></rank>
-<rank xp="39.633" name="416330"><hud_icon filename="lv_104.png" /></rank>
-<rank xp="41.633" name="438330"><hud_icon filename="lv_105.png" /></rank>
-<rank xp="43.833" name="462330"><hud_icon filename="lv_106.png" /></rank>
-<rank xp="46.233" name="490330"><hud_icon filename="lv_107.png" /></rank>
-<rank xp="49.033" name="526330"><hud_icon filename="lv_108.png" /></rank>
-<rank xp="52.633" name="574330"><hud_icon filename="lv_109.png" /></rank>
-<rank xp="57.433" name="638330"><hud_icon filename="lv_110.png" /></rank>
-<rank xp="63.833" name="728330"><hud_icon filename="lv_111.png" /></rank>
-<rank xp="72.833" name="848330"><hud_icon filename="lv_112.png" /></rank>
-<rank xp="84.833" name="1008330"><hud_icon filename="lv_113.png" /></rank>
-<rank xp="100.833" name="1228330"><hud_icon filename="lv_114.png" /></rank>
-<rank xp="122.833" name="1528330"><hud_icon filename="lv_115.png" /></rank>
-<rank xp="152.833" name="1928330"><hud_icon filename="lv_116.png" /></rank>
-<rank xp="192.833" name="2428330"><hud_icon filename="lv_117.png" /></rank>
-<rank xp="242.833" name="3028330"><hud_icon filename="lv_118.png" /></rank>
-<rank xp="302.833" name="max"><hud_icon filename="lv_119.png" /></rank>
-<rank xp="1000" name="叶"><hud_icon filename="commander_ye.png" /></rank>
+	<rank xp="0" name="10">
+		<hud_icon filename="lv_000.png" />
+	</rank>
+	<rank xp="0.001" name="30">
+		<hud_icon filename="lv_001.png" />
+	</rank>
+	<rank xp="0.003" name="60">
+		<hud_icon filename="lv_002.png" />
+	</rank>
+	<rank xp="0.006" name="100">
+		<hud_icon filename="lv_003.png" />
+	</rank>
+	<rank xp="0.01" name="150">
+		<hud_icon filename="lv_004.png" />
+	</rank>
+	<rank xp="0.015" name="210">
+		<hud_icon filename="lv_005.png" />
+	</rank>
+	<rank xp="0.021" name="280">
+		<hud_icon filename="lv_006.png" />
+	</rank>
+	<rank xp="0.028" name="360">
+		<hud_icon filename="lv_007.png" />
+	</rank>
+	<rank xp="0.036" name="450">
+		<hud_icon filename="lv_008.png" />
+	</rank>
+	<rank xp="0.045" name="550">
+		<hud_icon filename="lv_009.png" />
+	</rank>
+	<rank xp="0.055" name="660">
+		<hud_icon filename="lv_010.png" />
+	</rank>
+	<rank xp="0.066" name="780">
+		<hud_icon filename="lv_011.png" />
+	</rank>
+	<rank xp="0.078" name="910">
+		<hud_icon filename="lv_012.png" />
+	</rank>
+	<rank xp="0.091" name="1050">
+		<hud_icon filename="lv_013.png" />
+	</rank>
+	<rank xp="0.105" name="1200">
+		<hud_icon filename="lv_014.png" />
+	</rank>
+	<rank xp="0.12" name="1360">
+		<hud_icon filename="lv_015.png" />
+	</rank>
+	<rank xp="0.136" name="1530">
+		<hud_icon filename="lv_016.png" />
+	</rank>
+	<rank xp="0.153" name="1710">
+		<hud_icon filename="lv_017.png" />
+	</rank>
+	<rank xp="0.101" name="1900">
+		<hud_icon filename="lv_018.png" />
+	</rank>
+	<rank xp="0.19" name="2100">
+		<hud_icon filename="lv_019.png" />
+	</rank>
+	<rank xp="0.21" name="2310">
+		<hud_icon filename="lv_020.png" />
+	</rank>
+	<rank xp="0.231" name="2530">
+		<hud_icon filename="lv_021.png" />
+	</rank>
+	<rank xp="0.253" name="2760">
+		<hud_icon filename="lv_022.png" />
+	</rank>
+	<rank xp="0.276" name="3000">
+		<hud_icon filename="lv_023.png" />
+	</rank>
+	<rank xp="0.3" name="3250">
+		<hud_icon filename="lv_024.png" />
+	</rank>
+	<rank xp="0.325" name="3510">
+		<hud_icon filename="lv_025.png" />
+	</rank>
+	<rank xp="0.351" name="3790">
+		<hud_icon filename="lv_026.png" />
+	</rank>
+	<rank xp="0.379" name="4100">
+		<hud_icon filename="lv_027.png" />
+	</rank>
+	<rank xp="0.41" name="4440">
+		<hud_icon filename="lv_028.png" />
+	</rank>
+	<rank xp="0.444" name="4860">
+		<hud_icon filename="lv_029.png" />
+	</rank>
+	<rank xp="0.486" name="5320">
+		<hud_icon filename="lv_030.png" />
+	</rank>
+	<rank xp="0.532" name="5820">
+		<hud_icon filename="lv_031.png" />
+	</rank>
+	<rank xp="0.582" name="6360">
+		<hud_icon filename="lv_032.png" />
+	</rank>
+	<rank xp="0.636" name="6940">
+		<hud_icon filename="lv_033.png" />
+	</rank>
+	<rank xp="0.694" name="7570">
+		<hud_icon filename="lv_034.png" />
+	</rank>
+	<rank xp="0.757" name="8240">
+		<hud_icon filename="lv_035.png" />
+	</rank>
+	<rank xp="0.824" name="8960">
+		<hud_icon filename="lv_036.png" />
+	</rank>
+	<rank xp="0.896" name="9730">
+		<hud_icon filename="lv_037.png" />
+	</rank>
+	<rank xp="0.973" name="10550">
+		<hud_icon filename="lv_038.png" />
+	</rank>
+	<rank xp="1.055" name="11430">
+		<hud_icon filename="lv_039.png" />
+	</rank>
+	<rank xp="1.143" name="12360">
+		<hud_icon filename="lv_040.png" />
+	</rank>
+	<rank xp="1.236" name="13350">
+		<hud_icon filename="lv_041.png" />
+	</rank>
+	<rank xp="1.335" name="14400">
+		<hud_icon filename="lv_042.png" />
+	</rank>
+	<rank xp="1.44" name="15510">
+		<hud_icon filename="lv_043.png" />
+	</rank>
+	<rank xp="1.551" name="16690">
+		<hud_icon filename="lv_044.png" />
+	</rank>
+	<rank xp="1.669" name="17940">
+		<hud_icon filename="lv_045.png" />
+	</rank>
+	<rank xp="1.794" name="19250">
+		<hud_icon filename="lv_046.png" />
+	</rank>
+	<rank xp="1.925" name="20640">
+		<hud_icon filename="lv_047.png" />
+	</rank>
+	<rank xp="2.064" name="22100">
+		<hud_icon filename="lv_048.png" />
+	</rank>
+	<rank xp="2.21" name="23640">
+		<hud_icon filename="lv_049.png" />
+	</rank>
+	<rank xp="2.364" name="25250">
+		<hud_icon filename="lv_050.png" />
+	</rank>
+	<rank xp="2.525" name="26940">
+		<hud_icon filename="lv_051.png" />
+	</rank>
+	<rank xp="2.694" name="28720">
+		<hud_icon filename="lv_052.png" />
+	</rank>
+	<rank xp="2.872" name="30580">
+		<hud_icon filename="lv_053.png" />
+	</rank>
+	<rank xp="3.058" name="32530">
+		<hud_icon filename="lv_054.png" />
+	</rank>
+	<rank xp="3.253" name="34570">
+		<hud_icon filename="lv_055.png" />
+	</rank>
+	<rank xp="3.457" name="36700">
+		<hud_icon filename="lv_056.png" />
+	</rank>
+	<rank xp="3.67" name="38930">
+		<hud_icon filename="lv_057.png" />
+	</rank>
+	<rank xp="3.893" name="41260">
+		<hud_icon filename="lv_058.png" />
+	</rank>
+	<rank xp="4.126" name="43690">
+		<hud_icon filename="lv_059.png" />
+	</rank>
+	<rank xp="4.369" name="46220">
+		<hud_icon filename="lv_060.png" />
+	</rank>
+	<rank xp="4.622" name="48850">
+		<hud_icon filename="lv_061.png" />
+	</rank>
+	<rank xp="4.885" name="51590">
+		<hud_icon filename="lv_062.png" />
+	</rank>
+	<rank xp="5.159" name="54440">
+		<hud_icon filename="lv_063.png" />
+	</rank>
+	<rank xp="5.444" name="57400">
+		<hud_icon filename="lv_064.png" />
+	</rank>
+	<rank xp="5.74" name="60480">
+		<hud_icon filename="lv_065.png" />
+	</rank>
+	<rank xp="6.048" name="63680">
+		<hud_icon filename="lv_066.png" />
+	</rank>
+	<rank xp="6.368" name="67000">
+		<hud_icon filename="lv_067.png" />
+	</rank>
+	<rank xp="6.7" name="70440">
+		<hud_icon filename="lv_068.png" />
+	</rank>
+	<rank xp="7.044" name="74950">
+		<hud_icon filename="lv_069.png" />
+	</rank>
+	<rank xp="7.495" name="79630">
+		<hud_icon filename="lv_070.png" />
+	</rank>
+	<rank xp="7.963" name="84490">
+		<hud_icon filename="lv_071.png" />
+	</rank>
+	<rank xp="8.449" name="89530">
+		<hud_icon filename="lv_072.png" />
+	</rank>
+	<rank xp="8.953" name="94750">
+		<hud_icon filename="lv_073.png" />
+	</rank>
+	<rank xp="9.475" name="100150">
+		<hud_icon filename="lv_074.png" />
+	</rank>
+	<rank xp="10.015" name="105740">
+		<hud_icon filename="lv_075.png" />
+	</rank>
+	<rank xp="10.574" name="111530">
+		<hud_icon filename="lv_076.png" />
+	</rank>
+	<rank xp="11.153" name="117510">
+		<hud_icon filename="lv_077.png" />
+	</rank>
+	<rank xp="11.751" name="123690">
+		<hud_icon filename="lv_078.png" />
+	</rank>
+	<rank xp="12.369" name="130080">
+		<hud_icon filename="lv_079.png" />
+	</rank>
+	<rank xp="13.008" name="136680">
+		<hud_icon filename="lv_080.png" />
+	</rank>
+	<rank xp="13.668" name="143490">
+		<hud_icon filename="lv_081.png" />
+	</rank>
+	<rank xp="14.349" name="150520">
+		<hud_icon filename="lv_082.png" />
+	</rank>
+	<rank xp="15.052" name="157780">
+		<hud_icon filename="lv_083.png" />
+	</rank>
+	<rank xp="15.778" name="165260">
+		<hud_icon filename="lv_084.png" />
+	</rank>
+	<rank xp="16.526" name="172970">
+		<hud_icon filename="lv_085.png" />
+	</rank>
+	<rank xp="17.297" name="180920">
+		<hud_icon filename="lv_086.png" />
+	</rank>
+	<rank xp="18.092" name="189110">
+		<hud_icon filename="lv_087.png" />
+	</rank>
+	<rank xp="18.911" name="197540">
+		<hud_icon filename="lv_088.png" />
+	</rank>
+	<rank xp="19.754" name="208800">
+		<hud_icon filename="lv_089.png" />
+	</rank>
+	<rank xp="20.88" name="220410">
+		<hud_icon filename="lv_090.png" />
+	</rank>
+	<rank xp="22.041" name="232360">
+		<hud_icon filename="lv_091.png" />
+	</rank>
+	<rank xp="23.236" name="244670">
+		<hud_icon filename="lv_092.png" />
+	</rank>
+	<rank xp="24.467" name="257340">
+		<hud_icon filename="lv_093.png" />
+	</rank>
+	<rank xp="25.734" name="270380">
+		<hud_icon filename="lv_094.png" />
+	</rank>
+	<rank xp="27.038" name="283790">
+		<hud_icon filename="lv_095.png" />
+	</rank>
+	<rank xp="28.379" name="297580">
+		<hud_icon filename="lv_096.png" />
+	</rank>
+	<rank xp="29.758" name="311760">
+		<hud_icon filename="lv_097.png" />
+	</rank>
+	<rank xp="31.176" name="326330">
+		<hud_icon filename="lv_098.png" />
+	</rank>
+	<rank xp="32.633" name="336330">
+		<hud_icon filename="lv_099.png" />
+	</rank>
+	<rank xp="33.633" name="348330">
+		<hud_icon filename="lv_100.png" />
+	</rank>
+	<rank xp="34.833" name="362330">
+		<hud_icon filename="lv_101.png" />
+	</rank>
+	<rank xp="36.233" name="378330">
+		<hud_icon filename="lv_102.png" />
+	</rank>
+	<rank xp="37.833" name="396330">
+		<hud_icon filename="lv_103.png" />
+	</rank>
+	<rank xp="39.633" name="416330">
+		<hud_icon filename="lv_104.png" />
+	</rank>
+	<rank xp="41.633" name="438330">
+		<hud_icon filename="lv_105.png" />
+	</rank>
+	<rank xp="43.833" name="462330">
+		<hud_icon filename="lv_106.png" />
+	</rank>
+	<rank xp="46.233" name="490330">
+		<hud_icon filename="lv_107.png" />
+	</rank>
+	<rank xp="49.033" name="526330">
+		<hud_icon filename="lv_108.png" />
+	</rank>
+	<rank xp="52.633" name="574330">
+		<hud_icon filename="lv_109.png" />
+	</rank>
+	<rank xp="57.433" name="638330">
+		<hud_icon filename="lv_110.png" />
+	</rank>
+	<rank xp="63.833" name="728330">
+		<hud_icon filename="lv_111.png" />
+	</rank>
+	<rank xp="72.833" name="848330">
+		<hud_icon filename="lv_112.png" />
+	</rank>
+	<rank xp="84.833" name="1008330">
+		<hud_icon filename="lv_113.png" />
+	</rank>
+	<rank xp="100.833" name="1228330">
+		<hud_icon filename="lv_114.png" />
+	</rank>
+	<rank xp="122.833" name="1528330">
+		<hud_icon filename="lv_115.png" />
+	</rank>
+	<rank xp="152.833" name="1928330">
+		<hud_icon filename="lv_116.png" />
+	</rank>
+	<rank xp="192.833" name="2428330">
+		<hud_icon filename="lv_117.png" />
+	</rank>
+	<rank xp="242.833" name="3028330">
+		<hud_icon filename="lv_118.png" />
+	</rank>
+	<rank xp="302.833" name="max">
+		<hud_icon filename="lv_119.png" />
+	</rank>
+	<rank xp="1000" name="叶">
+		<hud_icon filename="commander_ye.png" />
+	</rank>
 
 
 	<!-- player group -->
@@ -141,7 +383,7 @@
 		<!-- <resources file="green_secondaries.resources" /> -->
 		<!-- <resources file="green_default.resources" /> -->
 		<!-- <resources> -->
-			<!-- <carry_item key="camouflage_suit.carry_item" enabled="1" /> -->
+		<!-- <carry_item key="camouflage_suit.carry_item" enabled="1" /> -->
 		<!-- </resources> -->
 
 		<item_class_existence_config>
@@ -169,10 +411,10 @@
 	<soldier name="default_ai" spawn_score="0.0" copy_from="default">
 		<character filename="default_sf_bot.character" />
 		<!-- <resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" > -->
-		
+
 		<resources file="common.resources" />
-		<resources >
-			<weapon key="sfw_vespid.weapon" enabled="1"/>  
+		<resources>
+			<weapon key="sfw_vespid.weapon" enabled="1"/>
 			<carry_item key="sf_ar.carry_item" enabled="1" />
 		</resources>
 		<item_class_existence_config>
@@ -183,7 +425,7 @@
 			<!-- backpack -->
 			<item_class_existence class="carry_item" slot="0" probability="1.0" />
 		</item_class_existence_config>
-		
+
 		<attribute_config class="xp">
 			<attribute weight="0.3" min="13.008" max="302.833" />
 		</attribute_config>
@@ -192,11 +434,11 @@
 			<attribute weight="1.0" min="700.0" max="1500.0" />
 		</attribute_config>
 	</soldier>
-	
+
 	<soldier name="default_spawn_ai" spawn_score="0.0" copy_from="default_ai">
 		<resources file="common.resources" />
 		<resources file="sf_call.resources" />
-			<item_class_existence_config>
+		<item_class_existence_config>
 			<!-- secondaries -->
 			<item_class_existence class="weapon" slot="1" probability="1.0" />
 			<!-- wearables -->
@@ -212,12 +454,19 @@
 			<attribute weight="1.0" min="700.0" max="1500.0" />
 		</attribute_config>
 	</soldier>
-	
+
 	<!-- vespid -->
 	<soldier name="sf_vespid" spawn_score="1.5" copy_from="default_spawn_ai">
 		<model filename="sfd_vespid.xml" />
 		<resources clear_calls="1">
-			<weapon key="sfw_vespid.weapon" enabled="1"/>  
+			<weapon key="sfw_vespid.weapon" enabled="1"/>
+			<carry_item key="sf_ar.carry_item" enabled="1" />
+		</resources>
+	</soldier>
+	<soldier name="sf_vespid_swap" spawn_score="0.75" copy_from="default_spawn_ai">
+		<model filename="sfd_vespid_swap_from_dusk.xml" />
+		<resources clear_calls="1">
+			<weapon key="sfw_vespid_swap.weapon" enabled="1"/>
 			<carry_item key="sf_ar.carry_item" enabled="1" />
 		</resources>
 	</soldier>
@@ -225,32 +474,37 @@
 	<soldier name="sf_ripper" spawn_score="1.5" copy_from="default_spawn_ai">
 		<model filename="sfd_ripper.xml" />
 		<resources clear_calls="1">
-			<weapon key="sfw_ripper.weapon" enabled="1"/>  
+			<weapon key="sfw_ripper.weapon" enabled="1"/>
 			<carry_item key="sf_smg.carry_item" enabled="1" />
 		</resources>
 	</soldier>
-	<!-- <soldier name="sf_ripper_SWAP" spawn_score="0.75" copy_from="default_spawn_ai">
+	<soldier name="sf_ripper_swap" spawn_score="0.75" copy_from="default_spawn_ai">
 		<model filename="sfd_ripper_swap_from_dusk.xml" />
 		<resources clear_calls="1">
-			<weapon key="sfw_ripper_swap.weapon" enabled="1"/>  
+			<weapon key="sfw_ripper_swap.weapon" enabled="1"/>
 			<carry_item key="sf_ar.carry_item" enabled="1" />
 		</resources>
-	</soldier> -->
+	</soldier>
 	<!-- guard -->
 	<soldier name="sf_guard" spawn_score="1.5" copy_from="default_spawn_ai">
-		<model filename="sfd_guard_christmas_gua.xml" />
 		<ai filename="eod.ai" />
 		<resources clear_calls="1">
-			<weapon key="sfw_guard.weapon" enabled="1"/>  
+			<weapon key="sfw_guard.weapon" enabled="1"/>
 			<carry_item key="sf_sh.carry_item" enabled="1" />
 		</resources>
 	</soldier>
 	<!-- jaeger -->
 	<soldier name="sf_jaeger" spawn_score="1.5" copy_from="default_spawn_ai">
-		<model filename="sfd_jaeger_christmas.xml" />
 		<ai filename="sniper.ai" />
 		<resources clear_calls="1">
-			<weapon key="sfw_jaeger.weapon" enabled="1"/>  
+			<weapon key="sfw_jaeger.weapon" enabled="1"/>
+			<carry_item key="sf_rf.carry_item" enabled="1" />
+		</resources>
+	</soldier>
+	<soldier name="sf_jaeger_swap" spawn_score="0.75" copy_from="default_spawn_ai">
+		<ai filename="sniper.ai" />
+		<resources clear_calls="1">
+			<weapon key="sfw_jaeger_swap.weapon" enabled="1"/>
 			<carry_item key="sf_rf.carry_item" enabled="1" />
 		</resources>
 	</soldier>
@@ -258,7 +512,14 @@
 	<soldier name="sf_striker" spawn_score="1.5" copy_from="default_spawn_ai">
 		<model filename="sfd_striker.xml" />
 		<resources clear_calls="1">
-			<weapon key="sfw_striker.weapon" enabled="1"/>  
+			<weapon key="sfw_striker.weapon" enabled="1"/>
+			<carry_item key="sf_str.carry_item" enabled="1" />
+		</resources>
+	</soldier>
+	<soldier name="sf_striker_swap" spawn_score="0.75" copy_from="default_spawn_ai">
+		<model filename="sfd_striker_swap_from_dusk.xml" />
+		<resources clear_calls="1">
+			<weapon key="sfw_striker_swap.weapon" enabled="1"/>
 			<carry_item key="sf_str.carry_item" enabled="1" />
 		</resources>
 	</soldier>
@@ -267,25 +528,25 @@
 		<ai filename="hydra.ai" />
 		<model filename="sfd_sangvisfeaal.xml" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_calls="1">
-			<weapon key="sfw_nemeum.weapon" enabled="1"/>  
+			<weapon key="sfw_nemeum.weapon" enabled="1"/>
 			<carry_item key="sf_sh.carry_item" enabled="1" />
 		</resources>
 	</soldier>
-		<!-- 圣盾 -->
+	<!-- 圣盾 -->
 	<soldier name="sfw_aegis" spawn_score="1.5" copy_from="default_spawn_ai">
 		<model filename="sfd_aegis_1.xml" />
 		<ai filename="melee.ai" />
-		<resources clear_calls="1"  clear_grenades="1" >
-			<weapon key="sfw_aegis.weapon" enabled="1"/>  
-			<carry_item key="sf_dg.carry_item" enabled="1" />
-	    </resources>
-    </soldier>
-		<!--龙骑兵-->
+		<resources clear_calls="1" clear_grenades="1">
+			<weapon key="sfw_aegis.weapon" enabled="1"/>
+			<carry_item key="sf_aegis.carry_item" enabled="1" />
+		</resources>
+	</soldier>
+	<!--龙骑兵-->
 	<soldier name="sfw_dragoon" firstnames="sf_first.name" lastnames_file="sf_last.name" spawn_score="0.8" copy_from="default_spawn_ai">
-		<models filename="sfd_dragoon_SAIWA.models" /> 
+		<models filename="sfd_dragoon_SAIWA.models" />
 		<character filename="dragoon.character" />
 		<ai filename="hydra.ai" />
-		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" >
+		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1">
 			<weapon key="sfw_dragoon.weapon" enabled="1"/>
 			<carry_item key="sf_dg.carry_item" enabled="1"/>
 		</resources>
@@ -296,7 +557,7 @@
 			<item_class_existence class="carry_item" slot="0" probability="1.0" />
 		</item_class_existence_config>
 	</soldier>
-	
+
 	<soldier name="Brute" spawn_score="1.3" squad_size_xp_cap="0.5" copy_from="default_spawn_ai">
 		<ai filename="melee.ai" />
 		<model filename="sfd_Brute_gua.xml" />
@@ -315,14 +576,14 @@
 	<!-- BOSS-hunter -->
 	<soldier name="sf_hunter" spawn_score="0.10" copy_from="default_spawn_ai">
 		<character filename="default_sf.text_lines">
-		    <sound key="death" fileref="Hunter_buhuo_RETREAT_JP.wav" pitch_variety="0.001" volume="0.8" />
+			<sound key="death" fileref="Hunter_buhuo_RETREAT_JP.wav" pitch_variety="0.001" volume="0.8" />
 			<sound key="throw" fileref="Hunter_buhuo_SKILL01_JP.wav" pitch_variety="0.001" volume="0.8" />
 			<sound key="throw" fileref="Hunter_buhuo_SKILL03_JP.wav" pitch_variety="0.001" volume="0.8" />
 		</character>
 		<model filename="sfd_boss_hunter.xml" />
-			<ai filename="eod.ai" />
-		<resources clear_vehicles="1" clear_weapons="1" >
-			<weapon key="sfw_hunter.weapon" enabled="1"/>  
+		<ai filename="eod.ai" />
+		<resources clear_vehicles="1" clear_weapons="1">
+			<weapon key="sfw_hunter.weapon" enabled="1"/>
 			<call key="sf_destroyer.call" />
 			<projectile key="hand_grenade.projectile"/>
 			<carry_item key="sf_hunter.carry_item" enabled="1" />
@@ -330,126 +591,126 @@
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="12.0" max="350.05" />
 		</attribute_config>
-		
+
 		<attribute_config class="rp">
 			<attribute weight="1.0" min="800.0" max="1000.0" />
 		</attribute_config>
 	</soldier>
-	
+
 	<!-- BOSS-architect -->
 	<soldier name="sf_architect" spawn_score="0.057" copy_from="default_spawn_ai">
-	<character filename="default_sf.text_lines">
-		<sound key="death" fileref="BossArchitect_buhuo_RETREAT_JP.wav" pitch_variety="0.001" volume="0.8" />
-		<sound key="throw" fileref="BossArchitect_buhuo_SKILL02_JP.wav" pitch_variety="0.001" volume="0.8" />
-	</character>
-	<model filename="sfd_boss_architect.xml" />
+		<character filename="default_sf.text_lines">
+			<sound key="death" fileref="BossArchitect_buhuo_RETREAT_JP.wav" pitch_variety="0.001" volume="0.8" />
+			<sound key="throw" fileref="BossArchitect_buhuo_SKILL02_JP.wav" pitch_variety="0.001" volume="0.8" />
+		</character>
+		<model filename="sfd_boss_architect.xml" />
 		<ai filename="grenadier.ai" />
-	<resources clear_vehicles="1" clear_weapons="1"  >
-		<call key="sf_destroyer.call" />
-		<weapon key="sfw_architect.weapon" enabled="1"/>  
-		<projectile key="hand_grenade.projectile"/>
-		<carry_item key="sf_hunter.carry_item" enabled="1" />
-	</resources>
-	<attribute_config class="xp">
-		<attribute weight="1.0" min="150.0" max="300.05" />
-	</attribute_config>
-	
-	<attribute_config class="rp">
-		<attribute weight="1.0" min="1000.0" max="1200.0" />
-    </attribute_config>
-    </soldier>
+		<resources clear_vehicles="1" clear_weapons="1">
+			<call key="sf_destroyer.call" />
+			<weapon key="sfw_architect.weapon" enabled="1"/>
+			<projectile key="hand_grenade.projectile"/>
+			<carry_item key="sf_hunter.carry_item" enabled="1" />
+		</resources>
+		<attribute_config class="xp">
+			<attribute weight="1.0" min="150.0" max="300.05" />
+		</attribute_config>
 
-		<!-- BOSS-Intruder -->
-		<soldier name="sfw_Intruder" spawn_score="0.10" copy_from="default_spawn_ai">
+		<attribute_config class="rp">
+			<attribute weight="1.0" min="1000.0" max="1200.0" />
+		</attribute_config>
+	</soldier>
+
+	<!-- BOSS-Intruder -->
+	<soldier name="sfw_Intruder" spawn_score="0.10" copy_from="default_spawn_ai">
 		<character filename="default_sf.text_lines">
 			<sound key="death" fileref="Intruder_buhuo_DEAD02_JP.wav" pitch_variety="0.001" volume="0.8" />
 			<sound key="throw" fileref="Intruder_buhuo_SKILL03_JP.wav" pitch_variety="0.001" volume="0.8" />
 		</character>
 		<model filename="sfd_intruder.xml" />
-			<ai filename="eod.ai" />
-		<resources clear_vehicles="1" clear_weapons="1" >
+		<ai filename="eod.ai" />
+		<resources clear_vehicles="1" clear_weapons="1">
 			<call key="sf_jaguar.call" />
-			<weapon key="sfw_Intruder.weapon" enabled="1"/>  
+			<weapon key="sfw_Intruder.weapon" enabled="1"/>
 			<projectile key="hand_grenade.projectile"/>
 			<carry_item key="sf_boss_blast_none.carry_item" enabled="1" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="300.0" max="300.05" />
 		</attribute_config>
-		
+
 		<attribute_config class="rp">
 			<attribute weight="1.0" min="800.0" max="1000.0" />
 		</attribute_config>
-		</soldier>
+	</soldier>
 
-		<soldier name="sfw_Dreamer" spawn_score="0.10" copy_from="default_spawn_ai">
-			<character filename="default_sf.text_lines">
-				<sound key="death" fileref="Dreamer_buhuo_DEAD02_JP.wav" pitch_variety="0.001" volume="0.8" />
-				<sound key="throw" fileref="Dreamer_buhuo_SKILL01_JP.wav" pitch_variety="0.001" volume="0.8" />
-				<sound key="throw" fileref="Dreamer_buhuo_SKILL03_JP.wav" pitch_variety="0.001" volume="0.8" />
-			</character>
-			<model filename="sfd_dreamer.xml" />
-				<ai filename="elite.ai" />
-			<resources clear_vehicles="1" clear_weapons="1" >
-				<call key="sf_jupiter.call" />
-				<weapon key="sfw_dreamer.weapon" enabled="1"/>  
-				<projectile key="hand_grenade.projectile"/>
-				<carry_item key="sf_boss_blast_none.carry_item" enabled="1" />
-			</resources>
-			<attribute_config class="xp">
-				<attribute weight="1.0" min="310.0" max="400.05" />
-			</attribute_config>
-			
-			<attribute_config class="rp">
-				<attribute weight="1.0" min="800.0" max="1000.0" />
-			</attribute_config>
-		</soldier>
+	<soldier name="sfw_Dreamer" spawn_score="0.10" copy_from="default_spawn_ai">
+		<character filename="default_sf.text_lines">
+			<sound key="death" fileref="Dreamer_buhuo_DEAD02_JP.wav" pitch_variety="0.001" volume="0.8" />
+			<sound key="throw" fileref="Dreamer_buhuo_SKILL01_JP.wav" pitch_variety="0.001" volume="0.8" />
+			<sound key="throw" fileref="Dreamer_buhuo_SKILL03_JP.wav" pitch_variety="0.001" volume="0.8" />
+		</character>
+		<model filename="sfd_dreamer.xml" />
+		<ai filename="elite.ai" />
+		<resources clear_vehicles="1" clear_weapons="1">
+			<call key="sf_jupiter.call" />
+			<weapon key="sfw_dreamer.weapon" enabled="1"/>
+			<projectile key="hand_grenade.projectile"/>
+			<carry_item key="sf_boss_blast_none.carry_item" enabled="1" />
+		</resources>
+		<attribute_config class="xp">
+			<attribute weight="1.0" min="310.0" max="400.05" />
+		</attribute_config>
 
-		<soldier name="sfw_Alchemist" spawn_score="0.10" copy_from="default_spawn_ai">
-				<character filename="default_sf.text_lines">
-					<sound key="death" fileref="Alchemist_buhuo_DEAD02_JP.wav" pitch_variety="0.001" volume="0.8" />
-					<sound key="throw" fileref="Alchemist_buhuo_SKILL02_JP.wav" pitch_variety="0.001" volume="0.8" />
-					<sound key="throw" fileref="Alchemist_buhuo_SKILL01_JP.wav" pitch_variety="0.001" volume="0.8" />
-				</character>
-				<model filename="sfd_alchemist.xml" />
-					<ai filename="eod.ai" />
-				<resources clear_vehicles="1" clear_weapons="1" >
-            		<call key="sf_destroyer.call" />
-					<weapon key="sfw_alchemist.weapon" enabled="1"/>  
-					<projectile key="hand_grenade.projectile"/>
-					<carry_item key="sf_boss_blast_none.carry_item" enabled="1" />
-				</resources>
-				<attribute_config class="xp">
-					<attribute weight="1.0" min="310.0" max="400.05" />
-				</attribute_config>
-				
-				<attribute_config class="rp">
-					<attribute weight="1.0" min="800.0" max="1000.0" />
-				</attribute_config>
-		</soldier>
-	
-		<soldier name="sfw_Gager" spawn_score="0.10" copy_from="default_spawn_ai">
-			<character filename="default_sf.text_lines">
-				<sound key="death" fileref="BossGager_buhuo_RETREAT_JP.wav" pitch_variety="0.001" volume="0.8" />
-				<sound key="throw" fileref="BossGager_buhuo_SKILL01_JP.wav" pitch_variety="0.001" volume="0.8" />
-				<sound key="throw" fileref="BossGager_buhuo_SKILL03_JP.wav" pitch_variety="0.001" volume="0.8" />
-			</character>
-			<model filename="sfd_gager.xml" />
-				<ai filename="eod.ai" />
-			<resources clear_vehicles="1" clear_weapons="1" >
-				<call key="sf_jaguar.call" />
-				<call key="sf_destroyer.call" />
-				<weapon key="sfw_gager.weapon" enabled="1"/>  
-				<projectile key="hand_grenade.projectile"/>
-				<carry_item key="sf_hunter.carry_item" enabled="1" />
-			</resources>
-			<attribute_config class="xp">
-				<attribute weight="1.0" min="300.0" max="300.05"  />
-			</attribute_config>
-			
-			<attribute_config class="rp">
-				<attribute weight="1.0" min="800.0" max="1000.0" />
-			</attribute_config>
+		<attribute_config class="rp">
+			<attribute weight="1.0" min="800.0" max="1000.0" />
+		</attribute_config>
+	</soldier>
+
+	<soldier name="sfw_Alchemist" spawn_score="0.10" copy_from="default_spawn_ai">
+		<character filename="default_sf.text_lines">
+			<sound key="death" fileref="Alchemist_buhuo_DEAD02_JP.wav" pitch_variety="0.001" volume="0.8" />
+			<sound key="throw" fileref="Alchemist_buhuo_SKILL02_JP.wav" pitch_variety="0.001" volume="0.8" />
+			<sound key="throw" fileref="Alchemist_buhuo_SKILL01_JP.wav" pitch_variety="0.001" volume="0.8" />
+		</character>
+		<model filename="sfd_alchemist.xml" />
+		<ai filename="eod.ai" />
+		<resources clear_vehicles="1" clear_weapons="1">
+			<call key="sf_destroyer.call" />
+			<weapon key="sfw_alchemist.weapon" enabled="1"/>
+			<projectile key="hand_grenade.projectile"/>
+			<carry_item key="sf_boss_blast_none.carry_item" enabled="1" />
+		</resources>
+		<attribute_config class="xp">
+			<attribute weight="1.0" min="310.0" max="400.05" />
+		</attribute_config>
+
+		<attribute_config class="rp">
+			<attribute weight="1.0" min="800.0" max="1000.0" />
+		</attribute_config>
+	</soldier>
+
+	<soldier name="sfw_Gager" spawn_score="0.10" copy_from="default_spawn_ai">
+		<character filename="default_sf.text_lines">
+			<sound key="death" fileref="BossGager_buhuo_RETREAT_JP.wav" pitch_variety="0.001" volume="0.8" />
+			<sound key="throw" fileref="BossGager_buhuo_SKILL01_JP.wav" pitch_variety="0.001" volume="0.8" />
+			<sound key="throw" fileref="BossGager_buhuo_SKILL03_JP.wav" pitch_variety="0.001" volume="0.8" />
+		</character>
+		<model filename="sfd_gager.xml" />
+		<ai filename="eod.ai" />
+		<resources clear_vehicles="1" clear_weapons="1">
+			<call key="sf_jaguar.call" />
+			<call key="sf_destroyer.call" />
+			<weapon key="sfw_gager.weapon" enabled="1"/>
+			<projectile key="hand_grenade.projectile"/>
+			<carry_item key="sf_hunter.carry_item" enabled="1" />
+		</resources>
+		<attribute_config class="xp">
+			<attribute weight="1.0" min="300.0" max="300.05" />
+		</attribute_config>
+
+		<attribute_config class="rp">
+			<attribute weight="1.0" min="800.0" max="1000.0" />
+		</attribute_config>
 	</soldier>
 
 	<soldier name="sfw_Excutioner-Wind_rose" spawn_score="0.10" copy_from="default_spawn_ai">
@@ -459,219 +720,219 @@
 			<sound key="throw" fileref="Excutioner_buhuo_SKILL03_JP.wav" pitch_variety="0.001" volume="0.8" />
 		</character>
 		<model filename="sfd_excutioner.xml" />
-			<ai filename="melee.ai" />
-		<resources clear_vehicles="1" clear_weapons="1" >
+		<ai filename="melee.ai" />
+		<resources clear_vehicles="1" clear_weapons="1">
 			<call key="sf_jaguar.call" />
-			<weapon key="sfw_excutioner_1.weapon" enabled="1"/>  
+			<weapon key="sfw_excutioner_1.weapon" enabled="1"/>
 			<projectile key="hand_grenade.projectile"/>
 			<carry_item key="sf_boss_blast_none.carry_item" enabled="1" />
 		</resources>
 		<attribute_config class="xp">
-			<attribute weight="1.0" min="300.0" max="300.05"  />
+			<attribute weight="1.0" min="300.0" max="300.05" />
 		</attribute_config>
-		
+
 		<attribute_config class="rp">
 			<attribute weight="1.0" min="800.0" max="1000.0" />
 		</attribute_config>
-</soldier>
+	</soldier>
 
-<soldier name="sfw_Excutioner-Queen_of_the_Moon" spawn_score="0.10" copy_from="default_spawn_ai">
-	<character filename="default_sf.text_lines">
-		<sound key="death" fileref="Excutioner_buhuo_DEAD01_JP.wav" pitch_variety="0.001" volume="0.8" />
-		<sound key="throw" fileref="Excutioner_buhuo_SKILL02_JP.wav" pitch_variety="0.001" volume="0.8" />
-		<sound key="throw" fileref="Excutioner_buhuo_SKILL03_JP.wav" pitch_variety="0.001" volume="0.8" />
-	</character>
-	<model filename="sfd_excutioner.xml" />
+	<soldier name="sfw_Excutioner-Queen_of_the_Moon" spawn_score="0.10" copy_from="default_spawn_ai">
+		<character filename="default_sf.text_lines">
+			<sound key="death" fileref="Excutioner_buhuo_DEAD01_JP.wav" pitch_variety="0.001" volume="0.8" />
+			<sound key="throw" fileref="Excutioner_buhuo_SKILL02_JP.wav" pitch_variety="0.001" volume="0.8" />
+			<sound key="throw" fileref="Excutioner_buhuo_SKILL03_JP.wav" pitch_variety="0.001" volume="0.8" />
+		</character>
+		<model filename="sfd_excutioner.xml" />
 		<ai filename="eod.ai" />
-	<resources clear_vehicles="1" clear_weapons="1" >
-		<call key="sf_jaguar.call" />
-		<weapon key="sfw_excutioner_2.weapon" enabled="1"/>  
-		<projectile key="hand_grenade.projectile"/>
-		<carry_item key="sf_boss_blast_none.carry_item" enabled="1" />
-	</resources>
-	<attribute_config class="xp">
-		<attribute weight="1.0" min="300.0" max="300.05"  />
-	</attribute_config>
-	
-	<attribute_config class="rp">
-		<attribute weight="1.0" min="800.0" max="1000.0" />
-	</attribute_config>
-</soldier>
+		<resources clear_vehicles="1" clear_weapons="1">
+			<call key="sf_jaguar.call" />
+			<weapon key="sfw_excutioner_2.weapon" enabled="1"/>
+			<projectile key="hand_grenade.projectile"/>
+			<carry_item key="sf_boss_blast_none.carry_item" enabled="1" />
+		</resources>
+		<attribute_config class="xp">
+			<attribute weight="1.0" min="300.0" max="300.05" />
+		</attribute_config>
+
+		<attribute_config class="rp">
+			<attribute weight="1.0" min="800.0" max="1000.0" />
+		</attribute_config>
+	</soldier>
 
 	<soldier name="sfw_M16A1" spawn_score="0.06" copy_from="default_spawn_ai">
 		<character filename="default_sf.text_lines">
 			<sound key="death" fileref="" pitch_variety="0.001" volume="0.8" />
 			<sound key="throw" fileref="" pitch_variety="0.001" volume="0.8" />
-			<parameter class ="throw_grenade_time_interval_max" value="15.0" />
-			<parameter class ="throw_grenade_time_interval_min" value="15.0" />
-			<parameter class ="min_number_of_enemies_to_throw_grenade" value="1.0" />
+			<parameter class="throw_grenade_time_interval_max" value="15.0" />
+			<parameter class="throw_grenade_time_interval_min" value="15.0" />
+			<parameter class="min_number_of_enemies_to_throw_grenade" value="1.0" />
 		</character>
 		<model filename="sfd_m16a1.xml" />
-			<ai filename="elite.ai" />
-		<resources clear_vehicles="1" clear_weapons="1" >
-			<weapon key="sfw_m16a1.weapon" enabled="1"/>  
+		<ai filename="elite.ai" />
+		<resources clear_vehicles="1" clear_weapons="1">
+			<weapon key="sfw_m16a1.weapon" enabled="1"/>
 			<projectile key="stun_grenade.projectile"/>
 			<carry_item key="sf_boss_blast_none.carry_item" enabled="1" />
 			<call file="sf_m16a1.call" />
 		</resources>
 		<attribute_config class="xp">
-			<attribute weight="1.0" min="600.0" max="800.05"  />
+			<attribute weight="1.0" min="600.0" max="800.05" />
 		</attribute_config>
-		
+
 		<attribute_config class="rp">
 			<attribute weight="1.0" min="2000.0" max="4000.0" />
 		</attribute_config>
-</soldier>
+	</soldier>
 
-<soldier name="sfw_Agent" spawn_score="0.06" copy_from="default_spawn_ai">
-	<character filename="default_sf.text_lines">
-		<sound key="death" fileref="Agent_buhuo_DEAD01_JP.wav" pitch_variety="0.001" volume="0.8" />
-		<sound key="death" fileref="Agent_buhuo_DEAD02_JP.wav" pitch_variety="0.001" volume="0.8" />
-		<sound key="throw" fileref="Agent_buhuo_SKILL01_JP.wav" pitch_variety="0.001" volume="0.8" />
-		<sound key="throw" fileref="Agent_buhuo_SKILL02_JP.wav" pitch_variety="0.001" volume="0.8" />
-		<sound key="throw" fileref="Agent_buhuo_ATTACK_JP.wav" pitch_variety="0.001" volume="0.8" />
-		<sound key="throw" fileref="Agent_buhuo_MEET_JP.wav" pitch_variety="0.001" volume="0.8" />
-	</character>
-	<model filename="sfd_agent.xml" />
+	<soldier name="sfw_Agent" spawn_score="0.06" copy_from="default_spawn_ai">
+		<character filename="default_sf.text_lines">
+			<sound key="death" fileref="Agent_buhuo_DEAD01_JP.wav" pitch_variety="0.001" volume="0.8" />
+			<sound key="death" fileref="Agent_buhuo_DEAD02_JP.wav" pitch_variety="0.001" volume="0.8" />
+			<sound key="throw" fileref="Agent_buhuo_SKILL01_JP.wav" pitch_variety="0.001" volume="0.8" />
+			<sound key="throw" fileref="Agent_buhuo_SKILL02_JP.wav" pitch_variety="0.001" volume="0.8" />
+			<sound key="throw" fileref="Agent_buhuo_ATTACK_JP.wav" pitch_variety="0.001" volume="0.8" />
+			<sound key="throw" fileref="Agent_buhuo_MEET_JP.wav" pitch_variety="0.001" volume="0.8" />
+		</character>
+		<model filename="sfd_agent.xml" />
 		<ai filename="elite.ai" />
-	<resources clear_vehicles="1" clear_weapons="1" >
-		<weapon key="sfw_agent.weapon" enabled="1"/>  
-		<projectile key="hand_grenade.projectile"/>
-		<carry_item key="sf_boss_blast_none.carry_item" enabled="1" />
-		<call file="sf_m16a1.call" />
-	</resources>
-	<attribute_config class="xp">
-		<attribute weight="1.0" min="600.0" max="800.05"  />
-	</attribute_config>
-	
-	<attribute_config class="rp">
-		<attribute weight="1.0" min="2000.0" max="4000.0" />
-	</attribute_config>
-</soldier>
+		<resources clear_vehicles="1" clear_weapons="1">
+			<weapon key="sfw_agent.weapon" enabled="1"/>
+			<projectile key="hand_grenade.projectile"/>
+			<carry_item key="sf_boss_blast_none.carry_item" enabled="1" />
+			<call file="sf_m16a1.call" />
+		</resources>
+		<attribute_config class="xp">
+			<attribute weight="1.0" min="600.0" max="800.05" />
+		</attribute_config>
 
-<soldier name="sfw_Destroyer" spawn_score="0.08" copy_from="default_spawn_ai">
-	<character filename="default_sf.text_lines">
-		<sound key="death" fileref="Destroyer_buhuo_DEAD02_JP.wav" pitch_variety="0.001" volume="0.8" />
-		<sound key="death" fileref="Destroyer_buhuo_DEAD01_JP.wav" pitch_variety="0.001" volume="0.8" />
-		<sound key="throw" fileref="Destroyer_buhuo_MEET_JP.wav" pitch_variety="0.001" volume="0.8" />
-		<sound key="throw" fileref="Destroyer_buhuo_SKILL02_JP.wav" pitch_variety="0.001" volume="0.8" />
-		<sound key="throw" fileref="Destroyer_buhuo_SKILL01_JP.wav" pitch_variety="0.001" volume="0.8" />
-	</character>
-	<model filename="sfd_destroyer.xml" />
+		<attribute_config class="rp">
+			<attribute weight="1.0" min="2000.0" max="4000.0" />
+		</attribute_config>
+	</soldier>
+
+	<soldier name="sfw_Destroyer" spawn_score="0.08" copy_from="default_spawn_ai">
+		<character filename="default_sf.text_lines">
+			<sound key="death" fileref="Destroyer_buhuo_DEAD02_JP.wav" pitch_variety="0.001" volume="0.8" />
+			<sound key="death" fileref="Destroyer_buhuo_DEAD01_JP.wav" pitch_variety="0.001" volume="0.8" />
+			<sound key="throw" fileref="Destroyer_buhuo_MEET_JP.wav" pitch_variety="0.001" volume="0.8" />
+			<sound key="throw" fileref="Destroyer_buhuo_SKILL02_JP.wav" pitch_variety="0.001" volume="0.8" />
+			<sound key="throw" fileref="Destroyer_buhuo_SKILL01_JP.wav" pitch_variety="0.001" volume="0.8" />
+		</character>
+		<model filename="sfd_destroyer.xml" />
 		<ai filename="elite.ai" />
-	<resources clear_vehicles="1" clear_weapons="1" >
-		<weapon key="sfw_destroyer.weapon" enabled="1"/>  
-		<projectile key="hand_grenade.projectile"/>
-		<carry_item key="sf_hunter.carry_item" enabled="1" />
-		<call key="sf_destroyer.call" />
-	</resources>
-	<attribute_config class="xp">
-		<attribute weight="1.0" min="300.0" max="300.05"  />
-	</attribute_config>
-	
-	<attribute_config class="rp">
-		<attribute weight="1.0" min="800.0" max="1000.0" />
-	</attribute_config>
-</soldier>
+		<resources clear_vehicles="1" clear_weapons="1">
+			<weapon key="sfw_destroyer.weapon" enabled="1"/>
+			<projectile key="hand_grenade.projectile"/>
+			<carry_item key="sf_hunter.carry_item" enabled="1" />
+			<call key="sf_destroyer.call" />
+		</resources>
+		<attribute_config class="xp">
+			<attribute weight="1.0" min="300.0" max="300.05" />
+		</attribute_config>
+
+		<attribute_config class="rp">
+			<attribute weight="1.0" min="800.0" max="1000.0" />
+		</attribute_config>
+	</soldier>
 
 
-<soldier name="sfw_Weaver" spawn_score="0.08" copy_from="default_spawn_ai">
-	<character filename="default_sf.text_lines">
-		<sound key="death" fileref="Weaver_buhuo_DEAD01_JP.wav" pitch_variety="0.001" volume="0.8" />
-		<sound key="death" fileref="Weaver_buhuo_DEAD02_JP.wav" pitch_variety="0.001" volume="0.8" />
-		<sound key="throw" fileref="Weaver_buhuo_SKILL01_JP.wav" pitch_variety="0.001" volume="0.8" />
-		<sound key="throw" fileref="Weaver_buhuo_SKILL02_JP.wav" pitch_variety="0.001" volume="0.8" />
-		<sound key="throw" fileref="Weaver_buhuo_SKILL03_JP.wav" pitch_variety="0.001" volume="0.8" />
-		<sound key="throw" fileref="Weaver_buhuo_WIN_JP.wav" pitch_variety="0.001" volume="0.8" />
-	</character>
-	<model filename="sfd_ouroboros.xml" />
+	<soldier name="sfw_Weaver" spawn_score="0.08" copy_from="default_spawn_ai">
+		<character filename="default_sf.text_lines">
+			<sound key="death" fileref="Weaver_buhuo_DEAD01_JP.wav" pitch_variety="0.001" volume="0.8" />
+			<sound key="death" fileref="Weaver_buhuo_DEAD02_JP.wav" pitch_variety="0.001" volume="0.8" />
+			<sound key="throw" fileref="Weaver_buhuo_SKILL01_JP.wav" pitch_variety="0.001" volume="0.8" />
+			<sound key="throw" fileref="Weaver_buhuo_SKILL02_JP.wav" pitch_variety="0.001" volume="0.8" />
+			<sound key="throw" fileref="Weaver_buhuo_SKILL03_JP.wav" pitch_variety="0.001" volume="0.8" />
+			<sound key="throw" fileref="Weaver_buhuo_WIN_JP.wav" pitch_variety="0.001" volume="0.8" />
+		</character>
+		<model filename="sfd_ouroboros.xml" />
 		<ai filename="elite.ai" />
-	<resources clear_vehicles="1" clear_weapons="1" >
-		<weapon key="sfw_weaver.weapon" enabled="1"/>  
-		<projectile key="hand_grenade.projectile"/>
-		<carry_item key="sf_hunter.carry_item" enabled="1" />
-		<call key="sf_destroyer.call" />
-		<call key="sf_jaguar.call" />
-	</resources>
-	<attribute_config class="xp">
-		<attribute weight="1.0" min="500.0" max="500.05"  />
-	</attribute_config>
-	
-	<attribute_config class="rp">
-		<attribute weight="1.0" min="800.0" max="1000.0" />
-	</attribute_config>
-</soldier>
+		<resources clear_vehicles="1" clear_weapons="1">
+			<weapon key="sfw_weaver.weapon" enabled="1"/>
+			<projectile key="hand_grenade.projectile"/>
+			<carry_item key="sf_hunter.carry_item" enabled="1" />
+			<call key="sf_destroyer.call" />
+			<call key="sf_jaguar.call" />
+		</resources>
+		<attribute_config class="xp">
+			<attribute weight="1.0" min="500.0" max="500.05" />
+		</attribute_config>
+
+		<attribute_config class="rp">
+			<attribute weight="1.0" min="800.0" max="1000.0" />
+		</attribute_config>
+	</soldier>
 
 
-<soldier name="sfw_Justice" spawn_score="0.09" copy_from="default_spawn_ai">
-	<character filename="default_sf.text_lines">
-		<sound key="death" fileref="Justice_buhuo_DEAD01_JP.wav" pitch_variety="0.001" volume="0.8" />
-		<sound key="death" fileref="Justice_buhuo_DEAD02_JP.wav" pitch_variety="0.001" volume="0.8" />
-		<sound key="throw" fileref="Justice_buhuo_SKILL01_JP.wav" pitch_variety="0.001" volume="0.8" />
-		<sound key="throw" fileref="Justice_buhuo_SKILL02_JP.wav" pitch_variety="0.001" volume="0.8" />
-		<sound key="throw" fileref="Justice_buhuo_SKILL03_JP.wav" pitch_variety="0.001" volume="0.8" />
-		<sound key="throw" fileref="Justice_buhuo_ATTACK_JP.wav" pitch_variety="0.001" volume="0.8" />
-	</character>
-	<model filename="sfd_justice.xml" />
+	<soldier name="sfw_Justice" spawn_score="0.09" copy_from="default_spawn_ai">
+		<character filename="default_sf.text_lines">
+			<sound key="death" fileref="Justice_buhuo_DEAD01_JP.wav" pitch_variety="0.001" volume="0.8" />
+			<sound key="death" fileref="Justice_buhuo_DEAD02_JP.wav" pitch_variety="0.001" volume="0.8" />
+			<sound key="throw" fileref="Justice_buhuo_SKILL01_JP.wav" pitch_variety="0.001" volume="0.8" />
+			<sound key="throw" fileref="Justice_buhuo_SKILL02_JP.wav" pitch_variety="0.001" volume="0.8" />
+			<sound key="throw" fileref="Justice_buhuo_SKILL03_JP.wav" pitch_variety="0.001" volume="0.8" />
+			<sound key="throw" fileref="Justice_buhuo_ATTACK_JP.wav" pitch_variety="0.001" volume="0.8" />
+		</character>
+		<model filename="sfd_justice.xml" />
 		<ai filename="elite.ai" />
-	<resources clear_vehicles="1" clear_weapons="1" >
-		<weapon key="sfw_justice.weapon" enabled="1"/>  
-		<projectile key="hand_grenade.projectile"/>
-		<carry_item key="sf_hunter.carry_item" enabled="1" />
-		<call key="sf_destroyer.call" />
-		<call key="sf_jaguar.call" />
-	</resources>
-	<attribute_config class="xp">
-		<attribute weight="1.0" min="500.0" max="500.05"  />
-	</attribute_config>
-	
-	<attribute_config class="rp">
-		<attribute weight="1.0" min="800.0" max="1000.0" />
-	</attribute_config>
-</soldier>
+		<resources clear_vehicles="1" clear_weapons="1">
+			<weapon key="sfw_justice.weapon" enabled="1"/>
+			<projectile key="hand_grenade.projectile"/>
+			<carry_item key="sf_hunter.carry_item" enabled="1" />
+			<call key="sf_destroyer.call" />
+			<call key="sf_jaguar.call" />
+		</resources>
+		<attribute_config class="xp">
+			<attribute weight="1.0" min="500.0" max="500.05" />
+		</attribute_config>
+
+		<attribute_config class="rp">
+			<attribute weight="1.0" min="800.0" max="1000.0" />
+		</attribute_config>
+	</soldier>
 
 
 
-<soldier name="sfw_Scarecrow" spawn_score="0.09" copy_from="default_spawn_ai">
-	<character filename="default_sf.text_lines">
-		<sound key="death" fileref="Scarecrow_buhuo_DEAD01_JP.wav" pitch_variety="0.001" volume="0.8" />
-		<sound key="death" fileref="Scarecrow_buhuo_DEAD01_JP.wav" pitch_variety="0.001" volume="0.8" />
-		<sound key="throw" fileref="Scarecrow_buhuo_SKILL01_JP.wav" pitch_variety="0.001" volume="0.8" />
-		<sound key="throw" fileref="Scarecrow_buhuo_SKILL02_JP.wav" pitch_variety="0.001" volume="0.8" />
-		<sound key="throw" fileref="Scarecrow_buhuo_SKILL03_JP.wav" pitch_variety="0.001" volume="0.8" />
-		<sound key="throw" fileref="Scarecrow_buhuo_WIN_JP.wav" pitch_variety="0.001" volume="0.8" />
-		<sound key="throw" fileref="Scarecrow_buhuo_GOATTACK_JP.wav" pitch_variety="0.001" volume="0.8" />
-	</character>
-	<model filename="sfd_scarecrow.xml" />
+	<soldier name="sfw_Scarecrow" spawn_score="0.09" copy_from="default_spawn_ai">
+		<character filename="default_sf.text_lines">
+			<sound key="death" fileref="Scarecrow_buhuo_DEAD01_JP.wav" pitch_variety="0.001" volume="0.8" />
+			<sound key="death" fileref="Scarecrow_buhuo_DEAD01_JP.wav" pitch_variety="0.001" volume="0.8" />
+			<sound key="throw" fileref="Scarecrow_buhuo_SKILL01_JP.wav" pitch_variety="0.001" volume="0.8" />
+			<sound key="throw" fileref="Scarecrow_buhuo_SKILL02_JP.wav" pitch_variety="0.001" volume="0.8" />
+			<sound key="throw" fileref="Scarecrow_buhuo_SKILL03_JP.wav" pitch_variety="0.001" volume="0.8" />
+			<sound key="throw" fileref="Scarecrow_buhuo_WIN_JP.wav" pitch_variety="0.001" volume="0.8" />
+			<sound key="throw" fileref="Scarecrow_buhuo_GOATTACK_JP.wav" pitch_variety="0.001" volume="0.8" />
+		</character>
+		<model filename="sfd_scarecrow.xml" />
 		<ai filename="hydra.ai" />
-	<resources clear_vehicles="1" clear_weapons="1" >
-		<weapon key="sfw_scarecrow.weapon" enabled="1"/>  
-		<projectile key="hand_grenade.projectile"/>
-		<carry_item key="sf_hunter.carry_item" enabled="1" />
-		<call key="sf_destroyer.call" />
-		<call key="sf_jaguar.call" />
-	</resources>
-	<attribute_config class="xp">
-		<attribute weight="1.0" min="500.0" max="500.05"  />
-	</attribute_config>
-	
-	<attribute_config class="rp">
-		<attribute weight="1.0" min="800.0" max="1000.0" />
-	</attribute_config>
-</soldier>
+		<resources clear_vehicles="1" clear_weapons="1">
+			<weapon key="sfw_scarecrow.weapon" enabled="1"/>
+			<projectile key="hand_grenade.projectile"/>
+			<carry_item key="sf_hunter.carry_item" enabled="1" />
+			<call key="sf_destroyer.call" />
+			<call key="sf_jaguar.call" />
+		</resources>
+		<attribute_config class="xp">
+			<attribute weight="1.0" min="500.0" max="500.05" />
+		</attribute_config>
+
+		<attribute_config class="rp">
+			<attribute weight="1.0" min="800.0" max="1000.0" />
+		</attribute_config>
+	</soldier>
 
 
-	
+
 	<!-- 强无敌 -->
 	<soldier name="sf_manticore" firstnames="sf_first.name" lastnames_file="sf_last.name" spawn_score="0.25">
-		<models filename="sf_qwd.models" /> 
-				<character filename="qwd.character" />
+		<models filename="sf_qwd.models" />
+		<character filename="qwd.character" />
 		<ai filename="hydra.ai" />
-		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" >
+		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1">
 			<weapon key="sfw_manticore.weapon"/>
 			<carry_item key="sf_qwd.carry_item" />
 		</resources>
-		
+
 		<attribute_config class="xp">
 			<attribute weight="0.3" min="100.0" max="240.0" />
 		</attribute_config>
@@ -685,32 +946,32 @@
 
 
 	<!-- dinergate兵蚁 -->
-	<soldier name="sf_dinergate" spawn_score="1.00">
-		<models filename="sf_dinergate.models" /> 
+	<soldier name="sf_dinergate" spawn_score="0.5">
+		<models filename="sf_dinergate.models" />
 		<character filename="sf_dinergate.character" />
 		<ai filename="eod.ai" />
-		
+
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1">
 			<weapon key="sfw_dinergate.weapon"/>
 			<carry_item key="sf_smg.carry_item" />
 		</resources>
 		<attribute_config class="xp">
-				<attribute weight="0.3" min="0.0" max="1.0" />
+			<attribute weight="0.3" min="0.0" max="1.0" />
 		</attribute_config>
 	</soldier>
 
 	<!-- tarantula狼蛛 -->
-	<soldier name="sf_tarantula" spawn_score="1.00">
-		<models filename="sf_tarantula.models" /> 
+	<soldier name="sf_tarantula" spawn_score="0.30">
+		<models filename="sf_tarantula.models" />
 		<character filename="sf_dinergate.character" />
 		<ai filename="eod.ai" />
-			
+
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1">
 			<weapon key="sfw_tarantula.weapon"/>
 			<carry_item key="sf_tarantula.carry_item" />
 		</resources>
 		<attribute_config class="xp">
-				<attribute weight="0.3" min="0.0" max="1.0" />
+			<attribute weight="0.3" min="0.0" max="1.0" />
 		</attribute_config>
 	</soldier>
 	<!-- Tarantula狼蛛 -->
@@ -730,37 +991,37 @@
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="0.0" max="0.05" />
 		</attribute_config>
-	</soldier> 
+	</soldier>
 	<soldier name="default_sg" spawn_score="0.0">
 		<resources file="gk_sg.resources" />
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="0.0" max="0.05" />
 		</attribute_config>
-	</soldier> 
+	</soldier>
 	<soldier name="default_smg" spawn_score="0.0">
 		<resources file="gk_smg.resources" />
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="0.0" max="0.05" />
 		</attribute_config>
-	</soldier> 
+	</soldier>
 	<soldier name="default_ar" spawn_score="0.0">
 		<resources file="gk_ar.resources" />
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="0.0" max="0.05" />
 		</attribute_config>
-	</soldier> 
+	</soldier>
 	<soldier name="default_rf" spawn_score="0.0">
 		<resources file="gk_rf.resources" />
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="0.0" max="0.05" />
 		</attribute_config>
-	</soldier> 
+	</soldier>
 	<soldier name="default_mg" spawn_score="0.0">
 		<resources file="gk_mg.resources" />
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="0.0" max="0.05" />
 		</attribute_config>
-	</soldier> 
+	</soldier>
 	<!-- chicken -->
 	<soldier name="chicken" spawn_score="0.0" squad_size_xp_cap="0.0" firstnames_file="chicken_firstnames.txt" lastnames_file="chicken_lastnames.txt">
 		<character filename="chicken_base.character" />
@@ -776,7 +1037,7 @@
 			<model filename="chick_bananchick.xml" />
 		</models>
 
-		<resources clear_weapons="1" clear_vehicles="1"  clear_grenades="1"> </resources>
+		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1"/>
 
 		<item_class_existence_config>
 			<!-- secondaries -->
@@ -796,12 +1057,12 @@
 		</attribute_config>
 	</soldier>
 
-		<!-- icecream group -->
-		<soldier name="icecream" spawn_score="0.0">
-			<resources file="icecream.resources" />
-	
-			<attribute_config class="xp">
-				<attribute weight="1.0" min="0.0" max="0.05" />
-			</attribute_config>
-		</soldier>        
+	<!-- icecream group -->
+	<soldier name="icecream" spawn_score="0.0">
+		<resources file="icecream.resources" />
+
+		<attribute_config class="xp">
+			<attribute weight="1.0" min="0.0" max="0.05" />
+		</attribute_config>
+	</soldier>
 </faction>

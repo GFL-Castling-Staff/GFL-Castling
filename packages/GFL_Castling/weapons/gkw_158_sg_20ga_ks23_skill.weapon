@@ -16,9 +16,9 @@
 	class="1" 
 	reload_one_at_a_time="1"
 	sight_range_modifier="1" 
-	projectile_speed="76" 
+	projectile_speed="80" 
 	barrel_offset="0.4" 
-	projectiles_per_shot="20"
+	projectiles_per_shot="28"
 	spread_range="0.6"
 	 />
      <inventory  buy_price="100.0" sell_price="100.0" />
@@ -50,7 +50,7 @@
     <weak_hand_hold offset="0.3" />
     <projectile file="bullet.projectile">
         <result class="hit" 
-        kill_probability="2.8" 
+        kill_probability="3.2" 
         kill_decay_start_time="0.3" 
         kill_decay_end_time="0.755" />
     </projectile>
@@ -64,6 +64,6 @@
     <stance state_key="crouching" accuracy="0.85" />
     <stance state_key="prone" accuracy="0.95" />
     <stance state_key="over_wall" accuracy="0.95" />
-    <modifier class="speed" value="-0.2" /> 
+    <modifier class="speed" value="-0.1" /> 
 
 </weapon>
