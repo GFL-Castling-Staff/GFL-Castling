@@ -27,20 +27,18 @@
 	<tire_set offset="1.8 +0.1 -4.2" radius="0.5" />
 
 	<control 
-	max_speed="15.0" 
+	max_speed="10.0" 
 	acceleration="20.0" 
-	max_reverse_speed="15.0" 
+	max_reverse_speed="10.0" 
 	min_health_to_steer="1.5" 
-	max_rotation="0.3" 
 	max_water_depth="6.0" 
 	can_steer_in_water="0.0"
-	steer_smoothening="0.6" 
 	tracked="1" 
 	gears="0" 
 	max_limiter_speed="6.0"
-	tracked_visual_tire_max_rotation="1.0"
-	tracked_visual_tire_rotation_smoothening="0.9"
-	simulated_speed_factor="0.1"
+	steer_smoothening="0.99" 
+	tracked_visual_tire_max_rotation="3.0"
+	tracked_visual_tire_rotation_smoothening="0.5"
 	/>
 
 	<physics 
