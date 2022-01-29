@@ -12,7 +12,7 @@
         carry_in_two_hands="0" 
         burst_shots="1"
 		magazine_size="6" 
-		name="M4A1 (MOD3)-Skill-[Mark of the avenger] " 
+		name="M4A1 (MOD3)-Skill-[Mark of the avenger]" 
 		projectile_speed="2000.0" 
         sight_range_modifier="1.2"
 		retrigger_time="1" 
@@ -57,7 +57,7 @@
 
     <hud_icon filename="gkw_m4a1mod3only_skill.png" />
     <commonness value="0" in_stock="0" can_respawn_with="1" />
-    <inventory  buy_price="200.0" sell_price="150.0"  />
+    <inventory buy_price="270.0" sell_price="270.0" />	
 
     <capacity value="0" source="rank" source_value="0.0" />
     <capacity value="1" source="rank" source_value="6.048" />

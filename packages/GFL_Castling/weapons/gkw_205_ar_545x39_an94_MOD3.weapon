@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<weapon file="two_hands_ar.animation_base" key="gkw_an94mod3.weapon">
+<weapon file="two_hands_ar.animation_base" key="gkw_an94_mod3.weapon">
 
     <specification 
 		accuracy_factor="1" 
@@ -16,12 +16,13 @@
 		sustained_fire_grow_step="0.35"/>
 
 
-    <next_in_chain key="gkw_an94mod3_skill.weapon" share_ammo="1" />
+    <next_in_chain key="gkw_an94_mod3_skill.weapon" share_ammo="1" />
   	<animation state_key="hold_casual"			animation_key="dancing, kazachok" />
     <animation state_key="reload" animation_key="ARreload1.2" />
 	<animation key="reload" stance_key="prone" animation_key="ARreloadp1.2" />
     <inventory  buy_price="350.0" sell_price="350.0" />
-
+    <capacity value="0" source="rank" source_value="0.0" />
+    <capacity value="1" source="rank" source_value="6.048" />
 
 
     <sound key="fire" fileref="AN94_Fire_FromCODOL.wav" pitch_variety="0.02" volume="1" />
@@ -31,7 +32,7 @@
     <sound class="impact" fileref="rifle_drop.wav" />    
     <model filename="gkw_ar_an94.xml" />
 
-    <hud_icon filename="gkw_an94.png" />
+    <hud_icon filename="gkw_an94mod3.png" />
 
 
 
@@ -47,6 +48,6 @@
     <stance state_key="standing" accuracy="0.98" />
     <stance state_key="crouching" accuracy="1" />
     <stance state_key="prone" accuracy="1" />
-    
+    <modifier class="speed" value="0.25" />
 
 </weapon>
