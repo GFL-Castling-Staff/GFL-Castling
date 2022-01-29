@@ -143,14 +143,17 @@ class CommandSkill : Tracker {
         if (character !is null) {
             Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
             int factionid = character.getIntAttribute("faction_id");
-            int soundrnd= rand(0,2);
+            int soundrnd= rand(1,3);
             switch(soundrnd){
-                case 0:
-                    playSoundAtLocation(m_metagame,"Vector_SkillC1.wav",factionid,c_pos,0.8);
                 case 1:
-                    playSoundAtLocation(m_metagame,"Vector_SkillC2.wav",factionid,c_pos,0.8);
+                    playSoundAtLocation(m_metagame,"Vector_SkillC1.wav",factionid,c_pos,1);
+                    break;
                 case 2:
-                    playSoundAtLocation(m_metagame,"Vector_SkillC3.wav",factionid,c_pos,0.8);
+                    playSoundAtLocation(m_metagame,"Vector_SkillC2.wav",factionid,c_pos,1);
+                    break;
+                case 3:
+                    playSoundAtLocation(m_metagame,"Vector_SkillC3.wav",factionid,c_pos,1);
+                    break;
             }   
         }
     }
@@ -185,12 +188,14 @@ class CommandSkill : Tracker {
                 c.setIntAttribute("untransform_count", 6);
                 m_metagame.getComms().send(c);
             }
-            int soundrnd= rand(0,1);
+            int soundrnd= rand(1,2);
             switch(soundrnd){
-                case 0:
-                    playSoundAtLocation(m_metagame,"judge_skill_1.wav",factionid,c_pos);
                 case 1:
+                    playSoundAtLocation(m_metagame,"judge_skill_1.wav",factionid,c_pos);
+                    break;
+                case 2:
                     playSoundAtLocation(m_metagame,"judge_skill_2.wav",factionid,c_pos);
+                    break;
             } 
         }
     }
