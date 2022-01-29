@@ -55,6 +55,9 @@ class CommandSkill : Tracker {
                 if (c_weaponType=="gkw_vector.weapon"){
                     excuteVVskill(cId,senderId);
                 }
+                if (c_weaponType=="ff_justice.weapon"){
+                    excuteJudgeskill(cId,senderId);                    
+                }
             }
         }
     }
@@ -101,17 +104,22 @@ class CommandSkill : Tracker {
         }
         SkillArray.insertLast(SkillTrigger(characterId,180,"AN94"));
         const XmlElement@ info = getCharacterInfo(m_metagame, characterId);
+        int fID = info.getIntAttribute("faction_id");
+        string c_pos = info.getStringAttribute("position");
         string soldierClass = info.getStringAttribute("soldier_group_name");
             XmlElement command("command");
             command.setStringAttribute("class", "create_instance");
-            command.setIntAttribute("faction_id", info.getIntAttribute("faction_id"));
+            command.setIntAttribute("faction_id",fID);
             command.setStringAttribute("instance_class", "character");
             command.setStringAttribute("instance_key","206_ak12_ar_defyAI");
-            command.setStringAttribute("position",info.getStringAttribute("position"));
+            command.setStringAttribute("position",c_pos);
             m_metagame.getComms().send(command);    
         sendPrivateMessage(m_metagame,playerId,"Defy AK-12 summoned");
-        _log("summonAK12");
+        playSoundAtLocation(m_metagame,"AN94mod3_skill.wav",fID,c_pos,0.9);
+
+        // _log("summonAK12");
     }
+
     void excuteVVskill(int characterId,int playerId){
         bool ExistQueue = false;
         int j=-1;
@@ -131,7 +139,65 @@ class CommandSkill : Tracker {
         SkillArray.insertLast(SkillTrigger(characterId,20,"VECTOR"));
         addItemInBackpack(m_metagame,characterId,"projectile","VVfirenade.projectile");
         sendPrivateMessage(m_metagame,playerId,"Firenade Added");
+        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+        if (character !is null) {
+            Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
+            int factionid = character.getIntAttribute("faction_id");
+            int soundrnd= rand(1,3);
+            switch(soundrnd){
+                case 1:
+                    playSoundAtLocation(m_metagame,"Vector_SkillC1.wav",factionid,c_pos,1);
+                    break;
+                case 2:
+                    playSoundAtLocation(m_metagame,"Vector_SkillC2.wav",factionid,c_pos,1);
+                    break;
+                case 3:
+                    playSoundAtLocation(m_metagame,"Vector_SkillC3.wav",factionid,c_pos,1);
+                    break;
+            }   
+        }
+    }
 
+    void excuteJudgeskill(int characterId,int playerId){
+        bool ExistQueue = false;
+        int j =-1;
+        for (uint i=0;i<SkillArray.length();i++){
+            if (SkillArray[i].m_character_id==characterId && SkillArray[i].m_weapontype=="FF_JUDGE") {
+                ExistQueue=true;
+                j=i;
+            }
+        }
+        if (ExistQueue){
+            dictionary a;
+            a["%time"] = ""+SkillArray[j].m_time;
+            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            _log("skill cooldown" + SkillArray[j].m_time);
+            return;
+        }
+        SkillArray.insertLast(SkillTrigger(characterId,120,"FF_JUDGE"));
+        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+        if (character !is null) {
+            Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
+            int factionid = character.getIntAttribute("faction_id");
+            array<const XmlElement@>@ characters = getCharactersNearPosition(m_metagame, c_pos, factionid, 15.0f);
+            for (uint i = 0; i < characters.length; i++) {
+                int soldierId = characters[i].getIntAttribute("id");
+                XmlElement c ("command");
+                c.setStringAttribute("class", "update_inventory");
+                c.setIntAttribute("character_id", soldierId); 
+                c.setIntAttribute("untransform_count", 6);
+                m_metagame.getComms().send(c);
+            }
+            int soundrnd= rand(1,2);
+            switch(soundrnd){
+                case 1:
+                    playSoundAtLocation(m_metagame,"judge_skill_1.wav",factionid,c_pos);
+                    break;
+                case 2:
+                    playSoundAtLocation(m_metagame,"judge_skill_2.wav",factionid,c_pos);
+                    break;
+            } 
+        }
     }
 }
 
