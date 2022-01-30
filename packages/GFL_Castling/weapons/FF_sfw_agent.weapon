@@ -11,9 +11,9 @@
         projectile_speed="85"
 		retrigger_time="0.066"
 		suppressed="0"
-        can_shoot_standing="0"
+        can_shoot_standing="1"
         carry_in_two_hands="0"
-        can_shoot_crouching="1"
+        can_shoot_crouching="0"
         can_shoot_prone="0"
         projectiles_per_shot="4"
         use_basic_muzzle_smoke_effect="0"
@@ -34,7 +34,10 @@
       <animation state_key="crouch_moving" animation_key="walking, agent" />
       <animation state_key="crouch_moving_backwards" animation_key="walking, agent" />
       <animation state_key="changing_weapon_in" 	animation_key="change weapon in, single hand carry" />
-
+      <inventory 
+      encumbrance="17.0" 
+      buy_price="680.0" 
+      sell_price="680.0"/>
 
       <!-- <animation state_key="reload" animation_key="pistol whip" /> -->
       <!-- <animation state_key="reload" animation_key="pistol whip 2" /> -->
