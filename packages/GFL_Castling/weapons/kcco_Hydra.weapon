@@ -67,7 +67,7 @@
     <projectile file="qwd.projectile">
     </projectile>
 
-	<shield offset="0.2 3.0 1.5" extent="0.3 5.0 4.0" />
+	<shield offset="2.7 3.0 1.5" extent="0.3 5.0 4.0" />
 	<!-- state modifiers for weapons are connected to shield impact events -->
 	<!-- deflects all bullets; death, stun, wound become none, doesn't consume -->
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="death" consumes_item="0" />
