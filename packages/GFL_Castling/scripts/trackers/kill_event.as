@@ -56,6 +56,8 @@ class kill_event : Tracker {
         if (killer.getIntAttribute("player_id") == -1) return;
         if ((killer.getIntAttribute("faction_id")) != (target.getIntAttribute("faction_id"))){
             int targetId = target.getIntAttribute("id");
+            const XmlElement@ targetCharacter = getCharacterInfo2(m_metagame,targetId);
+        	if (targetCharacter is null) return;
             int characterId = killer.getIntAttribute("id");
             string VestKey = getPlayerEquipmentKey(m_metagame,targetId,0);
             if (VestKey=="") return;
