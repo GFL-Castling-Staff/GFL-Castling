@@ -97,6 +97,9 @@ __新增人形__
 >Vector  
 >* 技能 燃烧弹 使用技能后获得一个燃烧弹，携带上限4个，技能冷却时间 20 秒  
 
+
+
+
 2022/01/30
 ==============
 
@@ -106,6 +109,9 @@ __新增敌军单位__
 * S.F. Jeager SWAP 猎鸥SWAP
 * S.F. Ripper SWAP 切割者SWAP
 * S.F. Vespid SWAP 胡蜂SWAP
+* S.F. Scouts 侦查者
+* Paradeus Police 警备士
+
 
 __敌军属性平衡__
 -----------------
