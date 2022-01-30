@@ -14,7 +14,8 @@
 		sustained_fire_grow_step="0.25" 	/>
 
     <inventory buy_price="15.0" sell_price="5.0" />
-	<commonness value="0" in_stock="0" />
+    <commonness value="0" in_stock="0" can_respawn_with="1" />
+
     <sound key="fire" fileref="mp5_Fire_FromINS.wav" pitch_variety="0.05" volume="0.7" />
     <sound key="magazine_out" fileref="mp5_mgz_out_FromINS.wav" volume="1" />
     <sound key="magazine_in" fileref="mp5_mgz_in_FromINS.wav" volume="1" />
@@ -22,7 +23,7 @@
     <sound class="impact" fileref="rifle_drop.wav" />    
     <model filename="gkw_smg_mp5.xml"/>
 
-    <hud_icon filename="gkw_mp5.png"/>
+    <hud_icon filename="gkw_mp5_3006.png"/>
 
 
 
