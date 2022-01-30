@@ -363,21 +363,16 @@
 	<rank xp="1000" name="叶">
 		<hud_icon filename="commander_ye.png" />
 	</rank>
-
-
 	<!-- player group -->
-
 	<soldier name="default" spawn_score="0.0">
 		<character filename="default_sf.text_lines">
 			<parameter class="default_squad_config_index" value="0" />
 		</character>
 		<ai filename="default.ai" />
-
 		<model file="sfd_vespid.xml" />
 		<models file="sf.models" />
 		<models file="common_bonus.models" />
 		<!-- <models file="common_bonus.models" /> -->
-
 		<resources file="common.resources" />
 		<resources file="sf.resources" />
 		<!-- <resources file="green_secondaries.resources" /> -->
@@ -385,7 +380,6 @@
 		<!-- <resources> -->
 		<!-- <carry_item key="camouflage_suit.carry_item" enabled="1" /> -->
 		<!-- </resources> -->
-
 		<item_class_existence_config>
 			<!-- secondaries -->
 			<item_class_existence class="weapon" slot="1" probability="1" />
@@ -394,27 +388,21 @@
 			<!-- backpack -->
 			<item_class_existence class="carry_item" slot="0" probability="1" />
 		</item_class_existence_config>
-
 		<attribute_config class="rp">
 			<attribute weight="0.3" min="80.0" max="300.0" />
 			<attribute weight="0.7" min="0.0" max="0.0" />
 		</attribute_config>
-
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="0.0" max="0.45" />
 		</attribute_config>
 	</soldier>
-
-
 	<!-- default ai group -->
-
 	<soldier name="default_ai" spawn_score="0.0" copy_from="default">
 		<character filename="default_sf_bot.character" />
 		<!-- <resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" > -->
-
 		<resources file="common.resources" />
 		<resources>
-			<weapon key="sfw_vespid.weapon" enabled="1"/>
+			<weapon key="sfw_vespid.weapon" enabled="1" />
 			<carry_item key="sf_ar.carry_item" enabled="1" />
 		</resources>
 		<item_class_existence_config>
@@ -425,16 +413,13 @@
 			<!-- backpack -->
 			<item_class_existence class="carry_item" slot="0" probability="1.0" />
 		</item_class_existence_config>
-
 		<attribute_config class="xp">
 			<attribute weight="0.3" min="13.008" max="302.833" />
 		</attribute_config>
-
 		<attribute_config class="rp">
 			<attribute weight="1.0" min="700.0" max="1500.0" />
 		</attribute_config>
 	</soldier>
-
 	<soldier name="default_spawn_ai" spawn_score="0.0" copy_from="default_ai">
 		<resources file="common.resources" />
 		<resources file="sf_call.resources" />
@@ -449,24 +434,22 @@
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="0.0" max="0.05" />
 		</attribute_config>
-
 		<attribute_config class="rp">
 			<attribute weight="1.0" min="700.0" max="1500.0" />
 		</attribute_config>
 	</soldier>
-
 	<!-- vespid -->
 	<soldier name="sf_vespid" spawn_score="1.5" copy_from="default_spawn_ai">
 		<model filename="sfd_vespid.xml" />
 		<resources clear_calls="1">
-			<weapon key="sfw_vespid.weapon" enabled="1"/>
+			<weapon key="sfw_vespid.weapon" enabled="1" />
 			<carry_item key="sf_ar.carry_item" enabled="1" />
 		</resources>
 	</soldier>
 	<soldier name="sf_vespid_swap" spawn_score="0.75" copy_from="default_spawn_ai">
 		<model filename="sfd_vespid_swap_from_dusk.xml" />
 		<resources clear_calls="1">
-			<weapon key="sfw_vespid_swap.weapon" enabled="1"/>
+			<weapon key="sfw_vespid_swap.weapon" enabled="1" />
 			<carry_item key="sf_swap.carry_item" enabled="1" />
 		</resources>
 	</soldier>
@@ -474,14 +457,14 @@
 	<soldier name="sf_ripper" spawn_score="1.5" copy_from="default_spawn_ai">
 		<model filename="sfd_ripper.xml" />
 		<resources clear_calls="1">
-			<weapon key="sfw_ripper.weapon" enabled="1"/>
+			<weapon key="sfw_ripper.weapon" enabled="1" />
 			<carry_item key="sf_smg.carry_item" enabled="1" />
 		</resources>
 	</soldier>
 	<soldier name="sf_ripper_swap" spawn_score="0.75" copy_from="default_spawn_ai">
 		<model filename="sfd_ripper_swap_from_dusk.xml" />
 		<resources clear_calls="1">
-			<weapon key="sfw_ripper_swap.weapon" enabled="1"/>
+			<weapon key="sfw_ripper_swap.weapon" enabled="1" />
 			<carry_item key="sf_ar.carry_item" enabled="1" />
 		</resources>
 	</soldier>
@@ -489,7 +472,7 @@
 	<soldier name="sf_guard" spawn_score="1.5" copy_from="default_spawn_ai">
 		<ai filename="eod.ai" />
 		<resources clear_calls="1">
-			<weapon key="sfw_guard.weapon" enabled="1"/>
+			<weapon key="sfw_guard.weapon" enabled="1" />
 			<carry_item key="sf_sh.carry_item" enabled="1" />
 		</resources>
 	</soldier>
@@ -497,14 +480,14 @@
 	<soldier name="sf_jaeger" spawn_score="1.5" copy_from="default_spawn_ai">
 		<ai filename="sniper.ai" />
 		<resources clear_calls="1">
-			<weapon key="sfw_jaeger.weapon" enabled="1"/>
+			<weapon key="sfw_jaeger.weapon" enabled="1" />
 			<carry_item key="sf_rf.carry_item" enabled="1" />
 		</resources>
 	</soldier>
 	<soldier name="sf_jaeger_swap" spawn_score="0.75" copy_from="default_spawn_ai">
 		<ai filename="sniper.ai" />
 		<resources clear_calls="1">
-			<weapon key="sfw_jaeger_swap.weapon" enabled="1"/>
+			<weapon key="sfw_jaeger_swap.weapon" enabled="1" />
 			<carry_item key="sf_rf.carry_item" enabled="1" />
 		</resources>
 	</soldier>
@@ -512,14 +495,14 @@
 	<soldier name="sf_striker" spawn_score="1.5" copy_from="default_spawn_ai">
 		<model filename="sfd_striker.xml" />
 		<resources clear_calls="1">
-			<weapon key="sfw_striker.weapon" enabled="1"/>
+			<weapon key="sfw_striker.weapon" enabled="1" />
 			<carry_item key="sf_str.carry_item" enabled="1" />
 		</resources>
 	</soldier>
 	<soldier name="sf_striker_swap" spawn_score="0.75" copy_from="default_spawn_ai">
 		<model filename="sfd_striker_swap_from_dusk.xml" />
 		<resources clear_calls="1">
-			<weapon key="sfw_striker_swap.weapon" enabled="1"/>
+			<weapon key="sfw_striker_swap.weapon" enabled="1" />
 			<carry_item key="sf_swap.carry_item" enabled="1" />
 		</resources>
 	</soldier>
@@ -528,7 +511,7 @@
 		<ai filename="hydra.ai" />
 		<model filename="sfd_sangvisfeaal.xml" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_calls="1">
-			<weapon key="sfw_nemeum.weapon" enabled="1"/>
+			<weapon key="sfw_nemeum.weapon" enabled="1" />
 			<carry_item key="sf_sh.carry_item" enabled="1" />
 		</resources>
 	</soldier>
@@ -537,18 +520,18 @@
 		<model filename="sfd_aegis_1.xml" />
 		<ai filename="melee.ai" />
 		<resources clear_calls="1" clear_grenades="1">
-			<weapon key="sfw_aegis.weapon" enabled="1"/>
+			<weapon key="sfw_aegis.weapon" enabled="1" />
 			<carry_item key="sf_aegis.carry_item" enabled="1" />
 		</resources>
 	</soldier>
-	<!--龙骑兵-->
+	<!-- 龙骑兵 -->
 	<soldier name="sfw_dragoon" firstnames="sf_first.name" lastnames_file="sf_last.name" spawn_score="0.8" copy_from="default_spawn_ai">
 		<models filename="sfd_dragoon_SAIWA.models" />
 		<character filename="dragoon.character" />
 		<ai filename="hydra.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1">
-			<weapon key="sfw_dragoon.weapon" enabled="1"/>
-			<carry_item key="sf_dg.carry_item" enabled="1"/>
+			<weapon key="sfw_dragoon.weapon" enabled="1" />
+			<carry_item key="sf_dg.carry_item" enabled="1" />
 		</resources>
 		<item_class_existence_config>
 			<!-- wearables -->
@@ -557,7 +540,20 @@
 			<item_class_existence class="carry_item" slot="0" probability="1.0" />
 		</item_class_existence_config>
 	</soldier>
-
+	<!-- scouts侦查者 -->
+	<soldier name="sf_scouts" spawn_score="0.50">
+		<models filename="sfd_scout.xml" />
+		<ai filename="eod.ai" />
+		<character filename="default_sf_bot.character" />
+		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1">
+			<weapon key="sfw_scouts.weapon" />
+			<carry_item key="sf_ar.carry_item" />
+		</resources>
+		<attribute_config class="xp">
+			<attribute weight="0.3" min="0.0" max="1.0" />
+		</attribute_config>
+	</soldier>
+	<!-- 残兽 -->
 	<soldier name="Brute" spawn_score="1.3" squad_size_xp_cap="0.5" copy_from="default_spawn_ai">
 		<ai filename="melee.ai" />
 		<model filename="sfd_Brute_gua.xml" />
@@ -572,7 +568,6 @@
 			<item_class_existence class="carry_item" slot="1" probability="0.5" />
 		</item_class_existence_config>
 	</soldier>
-
 	<!-- BOSS-hunter -->
 	<soldier name="sf_hunter" spawn_score="0.10" copy_from="default_spawn_ai">
 		<character filename="default_sf.text_lines">
@@ -583,20 +578,18 @@
 		<model filename="sfd_boss_hunter.xml" />
 		<ai filename="eod.ai" />
 		<resources clear_vehicles="1" clear_weapons="1">
-			<weapon key="sfw_hunter.weapon" enabled="1"/>
+			<weapon key="sfw_hunter.weapon" enabled="1" />
 			<call key="sf_destroyer.call" />
-			<projectile key="hand_grenade.projectile"/>
+			<projectile key="hand_grenade.projectile" />
 			<carry_item key="sf_hunter.carry_item" enabled="1" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="12.0" max="350.05" />
 		</attribute_config>
-
 		<attribute_config class="rp">
 			<attribute weight="1.0" min="800.0" max="1000.0" />
 		</attribute_config>
 	</soldier>
-
 	<!-- BOSS-architect -->
 	<soldier name="sf_architect" spawn_score="0.057" copy_from="default_spawn_ai">
 		<character filename="default_sf.text_lines">
@@ -607,19 +600,17 @@
 		<ai filename="grenadier.ai" />
 		<resources clear_vehicles="1" clear_weapons="1">
 			<call key="sf_destroyer.call" />
-			<weapon key="sfw_architect.weapon" enabled="1"/>
-			<projectile key="hand_grenade.projectile"/>
+			<weapon key="sfw_architect.weapon" enabled="1" />
+			<projectile key="hand_grenade.projectile" />
 			<carry_item key="sf_hunter.carry_item" enabled="1" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="150.0" max="300.05" />
 		</attribute_config>
-
 		<attribute_config class="rp">
 			<attribute weight="1.0" min="1000.0" max="1200.0" />
 		</attribute_config>
 	</soldier>
-
 	<!-- BOSS-Intruder -->
 	<soldier name="sfw_Intruder" spawn_score="0.10" copy_from="default_spawn_ai">
 		<character filename="default_sf.text_lines">
@@ -630,19 +621,17 @@
 		<ai filename="eod.ai" />
 		<resources clear_vehicles="1" clear_weapons="1">
 			<call key="sf_jaguar.call" />
-			<weapon key="sfw_Intruder.weapon" enabled="1"/>
-			<projectile key="hand_grenade.projectile"/>
+			<weapon key="sfw_Intruder.weapon" enabled="1" />
+			<projectile key="hand_grenade.projectile" />
 			<carry_item key="sf_boss_blast_none.carry_item" enabled="1" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="300.0" max="300.05" />
 		</attribute_config>
-
 		<attribute_config class="rp">
 			<attribute weight="1.0" min="800.0" max="1000.0" />
 		</attribute_config>
 	</soldier>
-
 	<soldier name="sfw_Dreamer" spawn_score="0.10" copy_from="default_spawn_ai">
 		<character filename="default_sf.text_lines">
 			<sound key="death" fileref="Dreamer_buhuo_DEAD02_JP.wav" pitch_variety="0.001" volume="0.8" />
@@ -653,19 +642,17 @@
 		<ai filename="elite.ai" />
 		<resources clear_vehicles="1" clear_weapons="1">
 			<call key="sf_jupiter.call" />
-			<weapon key="sfw_dreamer.weapon" enabled="1"/>
-			<projectile key="hand_grenade.projectile"/>
+			<weapon key="sfw_dreamer.weapon" enabled="1" />
+			<projectile key="hand_grenade.projectile" />
 			<carry_item key="sf_boss_blast_none.carry_item" enabled="1" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="310.0" max="400.05" />
 		</attribute_config>
-
 		<attribute_config class="rp">
 			<attribute weight="1.0" min="800.0" max="1000.0" />
 		</attribute_config>
 	</soldier>
-
 	<soldier name="sfw_Alchemist" spawn_score="0.10" copy_from="default_spawn_ai">
 		<character filename="default_sf.text_lines">
 			<sound key="death" fileref="Alchemist_buhuo_DEAD02_JP.wav" pitch_variety="0.001" volume="0.8" />
@@ -676,19 +663,17 @@
 		<ai filename="eod.ai" />
 		<resources clear_vehicles="1" clear_weapons="1">
 			<call key="sf_destroyer.call" />
-			<weapon key="sfw_alchemist.weapon" enabled="1"/>
-			<projectile key="hand_grenade.projectile"/>
+			<weapon key="sfw_alchemist.weapon" enabled="1" />
+			<projectile key="hand_grenade.projectile" />
 			<carry_item key="sf_boss_blast_none.carry_item" enabled="1" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="310.0" max="400.05" />
 		</attribute_config>
-
 		<attribute_config class="rp">
 			<attribute weight="1.0" min="800.0" max="1000.0" />
 		</attribute_config>
 	</soldier>
-
 	<soldier name="sfw_Gager" spawn_score="0.10" copy_from="default_spawn_ai">
 		<character filename="default_sf.text_lines">
 			<sound key="death" fileref="BossGager_buhuo_RETREAT_JP.wav" pitch_variety="0.001" volume="0.8" />
@@ -700,19 +685,17 @@
 		<resources clear_vehicles="1" clear_weapons="1">
 			<call key="sf_jaguar.call" />
 			<call key="sf_destroyer.call" />
-			<weapon key="sfw_gager.weapon" enabled="1"/>
-			<projectile key="hand_grenade.projectile"/>
+			<weapon key="sfw_gager.weapon" enabled="1" />
+			<projectile key="hand_grenade.projectile" />
 			<carry_item key="sf_hunter.carry_item" enabled="1" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="300.0" max="300.05" />
 		</attribute_config>
-
 		<attribute_config class="rp">
 			<attribute weight="1.0" min="800.0" max="1000.0" />
 		</attribute_config>
 	</soldier>
-
 	<soldier name="sfw_Excutioner-Wind_rose" spawn_score="0.10" copy_from="default_spawn_ai">
 		<character filename="default_sf.text_lines">
 			<sound key="death" fileref="Excutioner_buhuo_DEAD01_JP.wav" pitch_variety="0.001" volume="0.8" />
@@ -723,19 +706,17 @@
 		<ai filename="melee.ai" />
 		<resources clear_vehicles="1" clear_weapons="1">
 			<call key="sf_jaguar.call" />
-			<weapon key="sfw_excutioner_1.weapon" enabled="1"/>
-			<projectile key="hand_grenade.projectile"/>
+			<weapon key="sfw_excutioner_1.weapon" enabled="1" />
+			<projectile key="hand_grenade.projectile" />
 			<carry_item key="sf_boss_blast_none.carry_item" enabled="1" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="300.0" max="300.05" />
 		</attribute_config>
-
 		<attribute_config class="rp">
 			<attribute weight="1.0" min="800.0" max="1000.0" />
 		</attribute_config>
 	</soldier>
-
 	<soldier name="sfw_Excutioner-Queen_of_the_Moon" spawn_score="0.10" copy_from="default_spawn_ai">
 		<character filename="default_sf.text_lines">
 			<sound key="death" fileref="Excutioner_buhuo_DEAD01_JP.wav" pitch_variety="0.001" volume="0.8" />
@@ -746,19 +727,17 @@
 		<ai filename="eod.ai" />
 		<resources clear_vehicles="1" clear_weapons="1">
 			<call key="sf_jaguar.call" />
-			<weapon key="sfw_excutioner_2.weapon" enabled="1"/>
-			<projectile key="hand_grenade.projectile"/>
+			<weapon key="sfw_excutioner_2.weapon" enabled="1" />
+			<projectile key="hand_grenade.projectile" />
 			<carry_item key="sf_boss_blast_none.carry_item" enabled="1" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="300.0" max="300.05" />
 		</attribute_config>
-
 		<attribute_config class="rp">
 			<attribute weight="1.0" min="800.0" max="1000.0" />
 		</attribute_config>
 	</soldier>
-
 	<soldier name="sfw_M16A1" spawn_score="0.06" copy_from="default_spawn_ai">
 		<character filename="default_sf.text_lines">
 			<sound key="death" fileref="" pitch_variety="0.001" volume="0.8" />
@@ -770,20 +749,18 @@
 		<model filename="sfd_m16a1.xml" />
 		<ai filename="elite.ai" />
 		<resources clear_vehicles="1" clear_weapons="1">
-			<weapon key="sfw_m16a1.weapon" enabled="1"/>
-			<projectile key="stun_grenade.projectile"/>
+			<weapon key="sfw_m16a1.weapon" enabled="1" />
+			<projectile key="stun_grenade.projectile" />
 			<carry_item key="sf_boss_blast_none.carry_item" enabled="1" />
 			<call file="sf_m16a1.call" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="600.0" max="800.05" />
 		</attribute_config>
-
 		<attribute_config class="rp">
 			<attribute weight="1.0" min="2000.0" max="4000.0" />
 		</attribute_config>
 	</soldier>
-
 	<soldier name="sfw_Agent" spawn_score="0.06" copy_from="default_spawn_ai">
 		<character filename="default_sf.text_lines">
 			<sound key="death" fileref="Agent_buhuo_DEAD01_JP.wav" pitch_variety="0.001" volume="0.8" />
@@ -796,20 +773,18 @@
 		<model filename="sfd_agent.xml" />
 		<ai filename="elite.ai" />
 		<resources clear_vehicles="1" clear_weapons="1">
-			<weapon key="sfw_agent.weapon" enabled="1"/>
-			<projectile key="hand_grenade.projectile"/>
+			<weapon key="sfw_agent.weapon" enabled="1" />
+			<projectile key="hand_grenade.projectile" />
 			<carry_item key="sf_boss_blast_none.carry_item" enabled="1" />
 			<call file="sf_m16a1.call" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="600.0" max="800.05" />
 		</attribute_config>
-
 		<attribute_config class="rp">
 			<attribute weight="1.0" min="2000.0" max="4000.0" />
 		</attribute_config>
 	</soldier>
-
 	<soldier name="sfw_Destroyer" spawn_score="0.08" copy_from="default_spawn_ai">
 		<character filename="default_sf.text_lines">
 			<sound key="death" fileref="Destroyer_buhuo_DEAD02_JP.wav" pitch_variety="0.001" volume="0.8" />
@@ -821,21 +796,18 @@
 		<model filename="sfd_destroyer.xml" />
 		<ai filename="elite.ai" />
 		<resources clear_vehicles="1" clear_weapons="1">
-			<weapon key="sfw_destroyer.weapon" enabled="1"/>
-			<projectile key="hand_grenade.projectile"/>
+			<weapon key="sfw_destroyer.weapon" enabled="1" />
+			<projectile key="hand_grenade.projectile" />
 			<carry_item key="sf_hunter.carry_item" enabled="1" />
 			<call key="sf_destroyer.call" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="300.0" max="300.05" />
 		</attribute_config>
-
 		<attribute_config class="rp">
 			<attribute weight="1.0" min="800.0" max="1000.0" />
 		</attribute_config>
 	</soldier>
-
-
 	<soldier name="sfw_Weaver" spawn_score="0.08" copy_from="default_spawn_ai">
 		<character filename="default_sf.text_lines">
 			<sound key="death" fileref="Weaver_buhuo_DEAD01_JP.wav" pitch_variety="0.001" volume="0.8" />
@@ -848,8 +820,8 @@
 		<model filename="sfd_ouroboros.xml" />
 		<ai filename="elite.ai" />
 		<resources clear_vehicles="1" clear_weapons="1">
-			<weapon key="sfw_weaver.weapon" enabled="1"/>
-			<projectile key="hand_grenade.projectile"/>
+			<weapon key="sfw_weaver.weapon" enabled="1" />
+			<projectile key="hand_grenade.projectile" />
 			<carry_item key="sf_hunter.carry_item" enabled="1" />
 			<call key="sf_destroyer.call" />
 			<call key="sf_jaguar.call" />
@@ -857,13 +829,10 @@
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="500.0" max="500.05" />
 		</attribute_config>
-
 		<attribute_config class="rp">
 			<attribute weight="1.0" min="800.0" max="1000.0" />
 		</attribute_config>
 	</soldier>
-
-
 	<soldier name="sfw_Justice" spawn_score="0.09" copy_from="default_spawn_ai">
 		<character filename="default_sf.text_lines">
 			<sound key="death" fileref="Justice_buhuo_DEAD01_JP.wav" pitch_variety="0.001" volume="0.8" />
@@ -876,8 +845,8 @@
 		<model filename="sfd_justice.xml" />
 		<ai filename="elite.ai" />
 		<resources clear_vehicles="1" clear_weapons="1">
-			<weapon key="sfw_justice.weapon" enabled="1"/>
-			<projectile key="hand_grenade.projectile"/>
+			<weapon key="sfw_justice.weapon" enabled="1" />
+			<projectile key="hand_grenade.projectile" />
 			<carry_item key="sf_hunter.carry_item" enabled="1" />
 			<call key="sf_destroyer.call" />
 			<call key="sf_jaguar.call" />
@@ -885,14 +854,10 @@
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="500.0" max="500.05" />
 		</attribute_config>
-
 		<attribute_config class="rp">
 			<attribute weight="1.0" min="800.0" max="1000.0" />
 		</attribute_config>
 	</soldier>
-
-
-
 	<soldier name="sfw_Scarecrow" spawn_score="0.09" copy_from="default_spawn_ai">
 		<character filename="default_sf.text_lines">
 			<sound key="death" fileref="Scarecrow_buhuo_DEAD01_JP.wav" pitch_variety="0.001" volume="0.8" />
@@ -906,8 +871,8 @@
 		<model filename="sfd_scarecrow.xml" />
 		<ai filename="hydra.ai" />
 		<resources clear_vehicles="1" clear_weapons="1">
-			<weapon key="sfw_scarecrow.weapon" enabled="1"/>
-			<projectile key="hand_grenade.projectile"/>
+			<weapon key="sfw_scarecrow.weapon" enabled="1" />
+			<projectile key="hand_grenade.projectile" />
 			<carry_item key="sf_hunter.carry_item" enabled="1" />
 			<call key="sf_destroyer.call" />
 			<call key="sf_jaguar.call" />
@@ -915,24 +880,19 @@
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="500.0" max="500.05" />
 		</attribute_config>
-
 		<attribute_config class="rp">
 			<attribute weight="1.0" min="800.0" max="1000.0" />
 		</attribute_config>
 	</soldier>
-
-
-
 	<!-- 强无敌 -->
 	<soldier name="sf_manticore" firstnames="sf_first.name" lastnames_file="sf_last.name" spawn_score="0.25">
 		<models filename="sf_qwd.models" />
 		<character filename="qwd.character" />
 		<ai filename="hydra.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1">
-			<weapon key="sfw_manticore.weapon"/>
+			<weapon key="sfw_manticore.weapon" />
 			<carry_item key="sf_qwd.carry_item" />
 		</resources>
-
 		<attribute_config class="xp">
 			<attribute weight="0.3" min="100.0" max="240.0" />
 		</attribute_config>
@@ -943,38 +903,32 @@
 			<item_class_existence class="carry_item" slot="0" probability="1.0" />
 		</item_class_existence_config>
 	</soldier>
-
-
 	<!-- dinergate兵蚁 -->
 	<soldier name="sf_dinergate" spawn_score="0.5">
 		<models filename="sf_dinergate.models" />
 		<character filename="sf_dinergate.character" />
 		<ai filename="eod.ai" />
-
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1">
-			<weapon key="sfw_dinergate.weapon"/>
+			<weapon key="sfw_dinergate.weapon" />
 			<carry_item key="sf_smg.carry_item" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="0.3" min="0.0" max="1.0" />
 		</attribute_config>
 	</soldier>
-
 	<!-- tarantula狼蛛 -->
 	<soldier name="sf_tarantula" spawn_score="0.30">
 		<models filename="sf_tarantula.models" />
 		<character filename="sf_dinergate.character" />
 		<ai filename="eod.ai" />
-
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1">
-			<weapon key="sfw_tarantula.weapon"/>
+			<weapon key="sfw_tarantula.weapon" />
 			<carry_item key="sf_tarantula.carry_item" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="0.3" min="0.0" max="1.0" />
 		</attribute_config>
 	</soldier>
-
 	<!-- store -->
 	<soldier name="default_hg" spawn_score="0.0">
 		<resources file="gk_hg.resources" />
@@ -1016,7 +970,6 @@
 	<soldier name="chicken" spawn_score="0.0" squad_size_xp_cap="0.0" firstnames_file="chicken_firstnames.txt" lastnames_file="chicken_lastnames.txt">
 		<character filename="chicken_base.character" />
 		<ai filename="chicken.ai" />
-
 		<models>
 			<model filename="chick_en1.xml" />
 			<model filename="chick_en2.xml" />
@@ -1026,9 +979,7 @@
 			<model filename="chick_glasses.xml" />
 			<model filename="chick_bananchick.xml" />
 		</models>
-
-		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1"/>
-
+		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" />
 		<item_class_existence_config>
 			<!-- secondaries -->
 			<item_class_existence class="weapon" slot="1" probability="0.0" />
@@ -1037,20 +988,16 @@
 			<!-- backpack -->
 			<item_class_existence class="carry_item" slot="0" probability="0.0" />
 		</item_class_existence_config>
-
 		<attribute_config class="rp">
 			<attribute weight="1.0" min="0.0" max="0.0" />
 		</attribute_config>
-
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="0.0" max="0.0" />
 		</attribute_config>
 	</soldier>
-
 	<!-- icecream group -->
 	<soldier name="icecream" spawn_score="0.0">
 		<resources file="icecream.resources" />
-
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="0.0" max="0.05" />
 		</attribute_config>
