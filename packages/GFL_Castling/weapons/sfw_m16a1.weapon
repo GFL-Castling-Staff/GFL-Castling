@@ -45,6 +45,8 @@
     </projectile>
 
     <drop_on_death_result class="spawn" instance_class="carry_item" instance_key="snow_gifts.carry_item" min_amount="3" max_amount="4.0" offset="0 1.0 0" position_spread="0 0" direction_spread="0 0" />
+    <drop_on_death_result class="spawn" instance_class="carry_item" instance_key="sf_box.carry_item" min_amount="1" max_amount="1" offset="0 1.0 0" position_spread="0 0" direction_spread="0 0" />
+
     <stance state_key="running" accuracy="0.3" />
     <stance state_key="walking" accuracy="0.75" />
     <stance state_key="crouch_moving" accuracy="0.9" />
