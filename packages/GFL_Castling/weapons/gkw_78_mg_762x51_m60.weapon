@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<weapon file="heavy_mg.animation_base" key="gkw_m60.weapon">
+<weapons>
+<weapon file="heavy_mg_standing.animation_base" key="gkw_m60.weapon">
 
     <specification 
   barrel_offset="0.5" 
   retrigger_time="0.0923" 
-  accuracy_factor="0.99" 
+  accuracy_factor="0.5" 
   sustained_fire_grow_step="0.35" 
   sustained_fire_diminish_rate="1.6" 
   magazine_size="100" 
@@ -17,9 +18,9 @@
 
 
 
-    <animation key="reload" animation_key="MGreload6" />
+    <animation key="reload" animation_key="MGreload3.8" />
     <inventory  buy_price="16.0" sell_price="16.0" />	
-
+    <next_in_chain key="gkw_m60_skill.weapon" share_ammo="1" />
 
 
 
@@ -38,6 +39,58 @@
     <projectile file="bullet.projectile">
         <result class="hit" kill_probability="1.6" kill_decay_start_time="2.321" kill_decay_end_time="3.869" />
     </projectile>
+    <stance state_key="running" accuracy="0.1" />
+    <stance state_key="walking" accuracy="0.1" />
+    <stance state_key="crouch_moving" accuracy="1" />
+    <stance state_key="prone_moving" accuracy="1.2" />
+    <stance state_key="standing" accuracy="1.1" />
+    <stance state_key="crouching" accuracy="1.584" />
+    <stance state_key="prone" accuracy="1.98" />
+    <stance state_key="over_wall" accuracy="1.98" />  
+    <modifier class="speed" value="-0.2" /> 
+
+</weapon>
+<weapon file="heavy_mg.animation_base" key="gkw_m60_skill.weapon">
+
+    <specification 
+  barrel_offset="0.5" 
+  retrigger_time="0.0923" 
+  accuracy_factor="0.99" 
+  sustained_fire_grow_step="0.35" 
+  sustained_fire_diminish_rate="1.6" 
+  magazine_size="100" 
+  suppressed="0" 
+  name="M60-[Damage Focus N-MG]" 
+  class="0" 
+  projectile_speed="181.49" 
+  spread_range="0.3"
+  sight_range_modifier="1.5"
+  can_shoot_crouching="0"
+  can_shoot_prone="1"/>
+
+
+
+    <animation key="reload" animation_key="MGreload3.8" />
+    <inventory  buy_price="16.0" sell_price="16.0" />	
+    <next_in_chain key="gkw_m60.weapon" share_ammo="1" />
+    <commonness  value="0" in_stock="0" can_spawn_with="1" />
+
+
+    <sound key="fire" fileref="m60_fire_FromINS.wav" pitch_variety="0.05" volume="1" />
+    <sound key="magazine_out" fileref="m60_mgz_out_FromINS.wav" volume="0.8" />
+    <sound key="magazine_in" fileref="m60_mgz_in_FromINS.wav" volume="0.8" />
+    <sound key="cycle" fileref="m60_cycle_FromINS.wav" volume="0.8" />
+    <sound class="impact" fileref="rifle_drop.wav" />
+    <model filename="gkw_mg_m60.xml" />
+
+    <hud_icon filename="gkw_m60_skill.png" />
+
+
+
+
+    <projectile file="bullet.projectile">
+        <result class="hit" kill_probability="1.9" kill_decay_start_time="2.321" kill_decay_end_time="3.869" />
+    </projectile>
        <stance state_key="running" accuracy="0.6" />
 
     <stance state_key="crouch_moving" accuracy="0.6" />
@@ -49,3 +102,4 @@
     <modifier class="speed" value="-0.2" /> 
 
 </weapon>
+</weapons>

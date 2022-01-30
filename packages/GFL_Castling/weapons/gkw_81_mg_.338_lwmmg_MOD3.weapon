@@ -4,7 +4,7 @@
     <specification 
   barrel_offset="0.5" 
   retrigger_time="0.12" 
-  accuracy_factor="0.99" 
+  accuracy_factor="0.5" 
   sustained_fire_grow_step="0.35" 
   sustained_fire_diminish_rate="1.5" 
   magazine_size="120" 
@@ -41,12 +41,14 @@
     </projectile>
        <stance state_key="running" accuracy="0.65" />
 
-    <stance state_key="crouch_moving" accuracy="0.75" />
-    <stance state_key="prone_moving" accuracy="0.75" />
-    <stance state_key="standing" accuracy="0.75" />
-    <stance state_key="crouching" accuracy="0.8" />
-    <stance state_key="prone" accuracy="1.1" />
-    <stance state_key="over_wall" accuracy="1.1" />  
+    <stance state_key="running" accuracy="-1" />
+    <stance state_key="walking" accuracy="-1" />
+    <stance state_key="crouch_moving" accuracy="0.7" />
+    <stance state_key="prone_moving" accuracy="0.8" />
+    <stance state_key="standing" accuracy="0.5" />
+    <stance state_key="crouching" accuracy="1.6" />
+    <stance state_key="prone" accuracy="1.9" />
+    <stance state_key="over_wall" accuracy="1.9" />  
     <modifier class="speed" value="-0.2" /> 
 
     <shield offset="-1.2 0.0 0" extent="0.4 1.5 2.0" />
