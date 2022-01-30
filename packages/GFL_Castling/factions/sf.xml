@@ -541,7 +541,7 @@
 		</item_class_existence_config>
 	</soldier>
 	<!-- scouts侦查者 -->
-	<!-- <soldier name="sf_scouts" spawn_score="0.50">
+	<soldier name="sf_scouts" spawn_score="0.50">
 		<models filename="sfd_scout.xml" />
 		<ai filename="eod.ai" />
 		<character filename="default_sf_bot.character" />
@@ -552,7 +552,7 @@
 		<attribute_config class="xp">
 			<attribute weight="0.3" min="0.0" max="1.0" />
 		</attribute_config>
-	</soldier> -->
+	</soldier>
 	<!-- 残兽 -->
 	<soldier name="Brute" spawn_score="1.3" squad_size_xp_cap="0.5" copy_from="default_spawn_ai">
 		<ai filename="melee.ai" />
