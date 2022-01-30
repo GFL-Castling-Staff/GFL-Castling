@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<weapon key="vest_repair_quick.weapon" on_ground_up="1 0 0" radius="0.45" time_to_live_out_in_the_open="30.0">
+<weapon key="vest_repair_quick.weapon" on_ground_up="1 0 0" radius="0.45" time_to_live_out_in_the_open="60.0">
     <tag name="bandage" />
     <specification 
     magazine_size="1" 
@@ -33,7 +33,7 @@
     <capacity value="2" source="rank" source_value="0.0" />
 
     <hud_icon filename="quick_repair.png" />
-    <commonness value="0.0" can_respawn_with="1" in_stock="1" />
+    <commonness value="0.0" can_respawn_with="0" in_stock="0" />
     <inventory encumbrance="2.0" price="30.0" />
     <modifier class="speed" value="0.15" />    
 

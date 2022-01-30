@@ -2,12 +2,12 @@
 <weapon key="pierre_mg.weapon">
     <specification 
     slot="2" 
-    retrigger_time="0.4"
+    retrigger_time="0.33"
 	accuracy_factor="1.0" 
 	sustained_fire_grow_step="0.1" 
 	sustained_fire_diminish_rate="2.1" 
-    sight_range_modifier="1.5"
-    ai_sight_range_modifier="1.35"
+    sight_range_modifier="1.6"
+    ai_sight_range_modifier="1.45"
     barrel_offset_3d="10 0 0.62"
     magazine_size="-1" 
     can_shoot_standing="0" 
@@ -15,15 +15,15 @@
     suppressed="0" 
     name="Pierre II MG" 
     class="0" 
-    projectile_speed="210.0" />
+    projectile_speed="240.0" />
 	
 	<!--<ballistics curve_height="1.2" near_far_distance="0.0" speed_estimation_near="210.0" speed_estimation_far="210.0" max_speed="210.0" randomness="0.0" tweak_factor="1.94" /> -->
 
 	 <ballistics
 	 near_far_distance="0.0"
-	 speed_estimation_near="180.0"
-	 speed_estimation_far="180.0"
-	 max_speed="180.0"
+	 speed_estimation_near="240.0"
+	 speed_estimation_far="240.0"
+	 max_speed="240.0"
 	 randomness="0.0"
 	 curve_height="1.0"
 	 tweak_factor="4.8"
