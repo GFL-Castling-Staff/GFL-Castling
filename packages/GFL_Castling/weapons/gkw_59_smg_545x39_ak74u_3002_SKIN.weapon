@@ -23,7 +23,7 @@
     <sound key="cycle" fileref="sp9_cycle_FromINS.wav" volume="0.6" />
     <sound class="impact" fileref="rifle_drop.wav" volume="1"/>    
     <model filename="gkw_smg_ak74u.xml" />
-
+    <commonness value="0" in_stock="0" can_respawn_with="1" />
     <hud_icon filename="gkw_ak74u_3002.png" />
 
 
@@ -72,7 +72,7 @@
 
     <hud_icon filename="gkw_ak74u_3002.png" />
 
-
+    <commonness value="0" in_stock="0" can_respawn_with="1" />
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet.projectile">
         <result class="hit"  kill_probability="1.85" kill_decay_start_time="0.292" kill_decay_end_time="0.486" />
