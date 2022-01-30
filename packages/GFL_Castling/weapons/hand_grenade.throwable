@@ -2,7 +2,7 @@
 <projectile class="grenade" name="RGD-5 Offensive grenade" key="hand_grenade.projectile" slot="0" radius="0.15">
 
 
-    <result class="blast" radius="7.0" damage="1.01" push="0.3" decal="1" character_state="death" />
+    <result class="blast" radius="7.0" damage="1.01" push="0.3" decal="1" character_state="death" faction_compare="not_equal" />
     <trigger class="time" time_to_live="3.0"/>
 
     <rotation class="random" />
