@@ -34,20 +34,23 @@
 
 	<visual  offset="0 0 0.24" class="turret" turret_index="0" mesh_filename="Crusher_turret.mesh" texture_filename="Crasher_Base_color.png" />
 	<visual  offset="0 0 0.24" class="turret" turret_index="0" key="broken" mesh_filename="Crusher_turret.mesh" texture_filename="humvee_broken.png" />
+
     <visual class="chassis" mesh_filename="Crusher_body.mesh" texture_filename="Crasher_Base_color.png" />
     <visual class="chassis" key="broken" mesh_filename="Crusher_body.mesh" texture_filename="humvee_broken.png" />
 
 	<visual class="tire" mesh_filename="" texture_filename="" />
 	
 	<turret offset="0 1.80 0" weapon_key="crasher_mg.weapon" weapon_offset="0 1.32 0.0" weapon_recoil="0.0" max_rotation_step="0.0053" />
+	<turret offset="0 2.5 -1.5" weapon_key="Crasher_shield1" weapon_offset="0.0 -2.0 4.0" weapon_recoil="0.0" physics_recoil="0.0" max_rotation_step="0.00165" rotation_range="0"/>
+	<turret offset="0 2.5 -1.5" weapon_key="Crasher_shield2" weapon_offset="0.0 -2.0 4.0" weapon_recoil="0.0" physics_recoil="0.0" max_rotation_step="0.00165" rotation_range="0"/>
 	
 	<character_slot type="driver" position="0.64 0.74 1.04" rotation="-0.785" exit_rotation="1.57" hiding="1" animation_id="47" marker_offset="0 0.5 0"/>
 	<character_slot type="gunner" seat_position="-0.64 0.74 1.04" enter_position="-0.64 0.74 1.04"  rotation="0" exit_rotation="-1.57" hiding="1" animation_key="tank mg still" marker_offset="0 1.2 0">
-		<turret index="0" />
+		<turret index="0" /><turret index="1" /><turret index="2" />
 	</character_slot>
 
-	<character_slot type="passenger" position="0.96 0.74 -0.52" rotation="1.57" exit_rotation="1.57" hiding="0" animation_id="48" marker_offset="0 0.0 0" rotation_range="1.48"/>
-	<character_slot type="passenger" position="-0.96 0.74 -0.52" rotation="-1.57" exit_rotation="-1.57" hiding="0" animation_id="48" marker_offset="0 0.0 0" rotation_range="1.48"/>
+	<character_slot type="passenger" position="0.96 0.74 -0.59" rotation="1.57" exit_rotation="1.57" hiding="0" animation_id="48" marker_offset="0 0.0 0" rotation_range="1.48"/>
+	<character_slot type="passenger" position="-0.96 0.74 -0.59" rotation="-1.57" exit_rotation="-1.57" hiding="0" animation_id="48" marker_offset="0 0.0 0" rotation_range="1.48"/>
 
 	<!-- sound handling -->
 	<rev_sound filename="jeep2_rev0.wav" low_pitch="0.8" high_pitch="1.0" low_rev="0.0" high_rev="0.15" volume="0.6" />
