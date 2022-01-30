@@ -27,17 +27,17 @@
 	<tire_set offset="1.8 +0.1 -4.2" radius="0.5" />
 
 	<control 
-	max_speed="15.0" 
-	acceleration="20.0" 
-	max_reverse_speed="15.0" 
+	max_speed="10.0" 
+	acceleration="5.0" 
+	max_reverse_speed="10.0" 
 	min_health_to_steer="1.5" 
-	max_rotation="0.3" 
+	max_rotation="0.6" 
 	max_water_depth="6.0" 
 	can_steer_in_water="0.0"
 	steer_smoothening="0.6" 
 	tracked="1" 
 	gears="0" 
-	max_limiter_speed="6.0"
+	max_limiter_speed="12"
 	tracked_visual_tire_max_rotation="1.0"
 	tracked_visual_tire_rotation_smoothening="0.9"
 	simulated_speed_factor="0.1"
@@ -62,9 +62,9 @@
 	
 	<modifier class="blast_damage" value="0" />
 	<modifier class="blast_range" value="-1" />
-	
-	<turret offset="-0.0 3.5 -1.6" weapon_key="typhoon_main_cannon" weapon_offset="0.0 0.0 0.0" weapon_recoil="0.0" physics_recoil="0.0" max_rotation_step="0.00016" rotation_range="1"/>
-	<turret offset="-0.0 3.5 -1.6" weapon_key="typhoon_main_cannon_2" weapon_offset="0.0 0.0 0.0" weapon_recoil="0.0" physics_recoil="0.0" max_rotation_step="0.00016" rotation_range="1"/>
+	<!--0.00016-->
+	<turret offset="-0.0 3.5 -1.6" weapon_key="typhoon_main_cannon" weapon_offset="0.0 0.0 0.0" weapon_recoil="0.0" physics_recoil="0.0" max_rotation_step="0.00005" rotation_range="1"/>
+	<turret offset="-0.0 3.5 -1.6" weapon_key="typhoon_main_cannon_2" weapon_offset="0.0 0.0 0.0" weapon_recoil="0.0" physics_recoil="0.0" max_rotation_step="0.00005" rotation_range="1"/>
 	
 	<visual class="chassis" mesh_filename="Typhoon_body.mesh" texture_filename="Typhoon_Body_Color.png" offset="0.0 -0.8 0.0" max_tilt="-0.05" />
 	<visual class="chassis" key="broken" mesh_filename="Typhoon_body.mesh" texture_filename="tank_2_broken.png" />
