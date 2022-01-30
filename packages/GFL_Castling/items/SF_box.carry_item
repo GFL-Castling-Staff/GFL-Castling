@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<carry_item file="base_valuable.carry_item" name="New Year Giftbox" key="sf_box.carry_item">
+    <hud_icon filename="SfBox.png" />
+    <inventory encumbrance="0.5" price="1.0" />
+
+    <model mesh_filename="sf_box.xml" texture_filename="" />
+
+    <commonness value="0.4" in_stock="0" />
+</carry_item>

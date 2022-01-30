@@ -2,7 +2,7 @@
 <weapon key="tank2_missile_launcher.weapon">
     <tag name="mortar" />
     <specification 
-  retrigger_time="10.0" 
+  retrigger_time="6.0" 
   accuracy_factor="0.9" 
   sustained_fire_grow_step="0.4" 
   sustained_fire_diminish_rate="0.1" 
@@ -16,7 +16,7 @@
   class="0" 
   projectile_speed="85.0" 
     slot="2"   
-  projectiles_per_shot="1" 
+  projectiles_per_shot="4" 
   sight_height_offset="3.0" />  />
 
     <!-- <ballistics curve_height="15.0" near_far_distance="1.0" speed_estimation_near="20.0" max_speed="100.0" randomness="0.0" /> -->

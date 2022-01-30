@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<projectile class="bullet" name="default" slot="1" time_to_live="2.0" pulldown_in_air="4" radius="0.15">
-    <result class="hit" 
-    kill_probability="7.0" 
-    kill_decay_start_time="1.211" 
-    kill_decay_end_time="2.233"/>
+<projectile class="bullet" name="default" slot="1" time_to_live="2.0" pulldown_in_air="4">
+     <result class="blast" 
+        damage="3" 
+        radius="2" 
+        decal="1" 
+        push="0" 
+        character_state="death"
+        faction_compare="not_equal" />
     <trigger class="impact" />
     <rotation class="motion" />
 
@@ -68,11 +71,11 @@
     <effect class="result" key="vehicle" ref="Burst" use_surface_color="1" />
 
     <effect class="result" key="terrain" ref="BigBurst" use_surface_color="1" />
-    <effect class="result" key="terrain" ref="SmokeTop" post_processing="1" />
-    <effect class="result" key="terrain" ref="Smoke" post_processing="1" />
+    <!--<effect class="result" key="terrain" ref="SmokeTop" post_processing="1" />-->
+    <!--<effect class="result" key="terrain" ref="Smoke" post_processing="1" />-->
     <effect class="result" key="terrain" ref="Shine" lighting="0" />
     <effect class="result" key="terrain" ref="Godray" lighting="0" />
-    <effect class="result" key="terrain" ref="ShadowSmoke" shadow="1" />
+    <!--<effect class="result" key="terrain" ref="ShadowSmoke" shadow="1" />-->
     <effect class="result" type="splat_map" surface_tag="" size="2.0" atlas_index="0" layer="1" />
     <effect class="result" type="splat_map" surface_tag="" size="3.5" atlas_index="4" layer="0" />
     <effect class="result" type="splat_map" surface_tag="" size="4.0" atlas_index="0" layer="2" additive="0" /> 

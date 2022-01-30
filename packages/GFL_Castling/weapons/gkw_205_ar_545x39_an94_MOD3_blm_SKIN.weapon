@@ -24,7 +24,7 @@
     <inventory  buy_price="350.0" sell_price="350.0" />
     <capacity value="0" source="rank" source_value="0.0" />
     <capacity value="1" source="rank" source_value="6.048" />
-
+    <commonness value="0" in_stock="0" can_respawn_with="1" />
 
     <sound key="fire" fileref="AN94_Fire_FromCODOL.wav" pitch_variety="0.02" volume="1" />
     <sound key="magazine_out" fileref="an94_mgz_out_FromL4D2.wav" volume="1" />
@@ -49,7 +49,6 @@
     <stance state_key="standing" accuracy="0.98" />
     <stance state_key="crouching" accuracy="1" />
     <stance state_key="prone" accuracy="1" />
-    <modifier class="speed" value="0.25" />
 
 </weapon>
 <weapon file="two_hands_ar.animation_base" key="gkw_an94mod3_blm_skill.weapon">
@@ -105,6 +104,7 @@
     <stance state_key="standing" accuracy="0.98" />
     <stance state_key="crouching" accuracy="1.2" />
     <stance state_key="prone" accuracy="1.2" />
+    <modifier class="speed" value="-0.3" />
 
 </weapon>
 </weapons>
