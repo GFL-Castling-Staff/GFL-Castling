@@ -109,6 +109,7 @@ __新增敌军单位__
 * S.F. Jeager SWAP 猎鸥SWAP
 * S.F. Ripper SWAP 切割者SWAP
 * S.F. Vespid SWAP 胡蜂SWAP
+* S.F. Scouts 侦察者
 * Paradeus Police 警备士
 
 
