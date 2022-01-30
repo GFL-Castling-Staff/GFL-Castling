@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<vehicle name="Bunker" key="gk_bunker.vehicle" map_view_atlas_index="13" usable_for_cover="1" protectors="1" soldier_capacity_offset="1" allow_owner_to_use_only="1" allow_character_leave_request="0">
+<vehicle name="Bunker" key="gk_bunker.vehicle" map_view_atlas_index="13" usable_for_cover="1" protectors="2" soldier_capacity_offset="1" allow_owner_to_use_only="1" allow_character_leave_request="0">
 
 	<tag name="target" />
 	<tire_set offset="0.5 0.0 0.5" radius="0.65" />
@@ -26,6 +26,10 @@
 
 	
 	<turret offset="0 0.4 0" weapon_key="bunker_mg.weapon" weapon_offset="0.0 2.15 0.8" weapon_recoil="0.02" physics_recoil="0.0"  max_rotation_step="0.005" rotation="0" />
+	<turret offset="0.0 0.6 1.2" weapon_key="bunker_base_mg1" weapon_offset="0 0.2 0" weapon_recoil="0.02" physics_recoil="0.0"  max_rotation_step="0.005" rotation="0" rotation_range="2.75" />	
+	<turret offset="1.2 0.6 -0.6" weapon_key="bunker_base_mg2" weapon_offset="0 0.2 0" weapon_recoil="0.02" physics_recoil="0.0"  max_rotation_step="0.005" rotation="2.10" rotation_range="2.75" />	
+	<turret offset="-1.2 0.6 -0.6" weapon_key="bunker_base_mg3" weapon_offset="0 0.2 0" weapon_recoil="0.02" physics_recoil="0.0"  max_rotation_step="0.005" rotation="-2.10" rotation_range="2.75" />	
+
 	<turret offset="0 0.4 0" weapon_key="bunker_mg2.weapon" weapon_offset="0.0 2.15 0.8" weapon_recoil="0.02" physics_recoil="0.0"  max_rotation_step="0.005" rotation="0" />
 	<turret offset="0 0 0" weapon_key="bunker_rocket0.weapon" 	weapon_offset="-1.0 2.6 -0.1" weapon_recoil="0.02" physics_recoil="0.0"  max_rotation_step="0.005" rotation="0"  />
 	<turret offset="0 0 0" weapon_key="bunker_rocket1.weapon" 	weapon_offset="-1.1 2.6 -0.1" weapon_recoil="0.02" physics_recoil="0.0"  max_rotation_step="0.005" rotation="0"  />
@@ -35,7 +39,14 @@
 	<turret offset="0 0 0" weapon_key="bunker_rocket5.weapon" 	weapon_offset="-1.1 2.8 -0.1" weapon_recoil="0.02" physics_recoil="0.0"  max_rotation_step="0.005" rotation="0"  />
 	<turret offset="0 0 0" weapon_key="bunker_hornet1.weapon" 	weapon_offset="1.0 2.4 0.0" weapon_recoil="0.02" physics_recoil="0.0"  max_rotation_step="0.005" rotation="0"  />
 	<turret offset="0 0 0" weapon_key="bunker_hornet2.weapon" 	weapon_offset="1.0 2.6 0.0" weapon_recoil="0.02" physics_recoil="0.0"  max_rotation_step="0.005" rotation="0"  />	
-		<visual offset="0 -0.6 0" class="turret" turret_index="0" mesh_filename="fin_bunker_turret.mesh" texture_filename="deployable_mg.png" />
+	
+	<visual offset="0 0 0" class="turret" turret_index="0" mesh_filename="fin_bunker_turret.mesh" texture_filename="deployable_mg.png" />
+		
+	<visual offset="0.1 0.4 0" class="turret" turret_index="1" mesh_filename="deployable_mg1.mesh" texture_filename="deployable_mg.png" />
+		
+	<visual offset="0.08 0.4 0" class="turret" turret_index="2" mesh_filename="deployable_mg2.mesh" texture_filename="deployable_mg.png" />
+		
+	<visual offset="0.08 0.4 0" class="turret" turret_index="3" mesh_filename="deployable_mg3.mesh" texture_filename="deployable_mg.png" />
 	
 	<visual class="chassis" mesh_filename="fin_bunker_base.mesh" texture_filename="deployable_mg.png" />
 <!--	<visual class="chassis" key="broken" mesh_filename="deployable_mg_tripod.mesh" texture_filename="deployable_mg.png" /> -->
@@ -43,12 +54,20 @@
   <character_slot type="gunner" attached_on_turret="1" seat_position="0.0 0.0 -0.8" enter_position="0 0 -2.0" rotation="0" exit_rotation="-1.57" hiding="1" animation_key="tank mg still">
   	<state class="entering" animation_key="crouching forwards short, no weapon" position="0 0 -1.0" rotation="0" />
 	  <state class="leaving" animation_key="crouching forwards short, no weapon" position="0.2 0 -0.7" rotation="3.14" />
-	  <turret index="0" /> <turret index="1" /><turret index="2" /><turret index="3" /><turret index="4" /><turret index="5" /><turret index="6" /><turret index="7" /><turret index="8" /><turret index="9" />
+	  <turret index="0" /> <turret index="4" /><turret index="5" /><turret index="6" /><turret index="7" /><turret index="8" /><turret index="9" /><turret index="10" /><turret index="11" /><turret index="12" />
   </character_slot>
   
-  	<character_slot type="passenger" position="0.0 0.6 1.2" rotation="0.0" rotation_range="3.00" exit_rotation="-1.57" hiding="0" animation_id="48" marker_offset="0 0.1 0"/>
-	<character_slot type="passenger" position="1.2 0.6 -0.6" rotation="2.10" rotation_range="3.00" exit_rotation="1.57" hiding="0" animation_id="48" marker_offset="0 0.1 0"/>
-	<character_slot type="passenger" position="-1.2 0.6 -0.6" rotation="-2.10" rotation_range="3.00" exit_rotation="-1.57" hiding="0" animation_id="48" marker_offset="0 0.1 0"/>
+  	<character_slot type="gunner" attached_on_turret="10" seat_position="0.0 1.0 1.0" position="0.0 1.0 2.0" rotation="0.0" exit_rotation="0" hiding="1" animation_id="tank mg still">
+		<turret index="1" />
+	</character_slot>
+	
+	<character_slot type="gunner" attached_on_turret="11" seat_position="1.1 1.0 -0.5" position="2.2 1.0 -1.0" rotation="0" exit_rotation="2.10" hiding="1" animation_id="tank mg still" >
+		<turret index="2" />
+	</character_slot>
+	
+	<character_slot type="gunner" attached_on_turret="12" seat_position="-1.1 1.0 -0.5" position="-2.2 1.0 -1.0" rotation="-0" exit_rotation="-2.10" hiding="1" animation_id="tank mg still" >
+		<turret index="3" />
+	</character_slot>
   
   <!--<character_slot type="passenger" attached_on_turret="0" seat_position="0.0 0.0 2.0" enter_position="0 0 4.2" rotation="0.54" rotation_range="2.15" exit_rotation="-1.57" hiding="0" animation_key="tank mg still">
   	<state class="entering" animation_key="crouching forwards short, no weapon" position="0 0 4.2" rotation="0" />

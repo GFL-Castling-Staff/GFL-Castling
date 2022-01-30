@@ -254,7 +254,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 		stage.addTracker(PeacefulLastBase(m_metagame, 0));
 		stage.addTracker(CommsCapacityHandler(m_metagame));
-		stage.m_maxSoldiers = 12 * 17;                                             // was 12*7 in 1.65, 1 base added
+		stage.m_maxSoldiers = 9 * 17;                                             // was 12*7 in 1.65, 1 base added
 
 		stage.m_soldierCapacityVariance = 0.4;
 		stage.m_playerAiCompensation = 4;                                         // was 4 (1.82)

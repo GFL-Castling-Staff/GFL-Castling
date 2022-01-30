@@ -445,7 +445,7 @@
 		</resources>
 	</soldier>
 	<!-- 警备士 -->
-	<!-- <soldier name="parw_police" spawn_score="0.8" squad_size_xp_cap="0.5" copy_from="default_ai">
+	<soldier name="parw_police" spawn_score="0.8" squad_size_xp_cap="0.5" copy_from="default_ai">
 		<ai filename="melee.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="parw_police.weapon" enabled="1" probability="1.0" />
@@ -458,7 +458,7 @@
 				<attribute weight="1.0" min="700.0" max="1500.0" />
 			</attribute_config>
 		</resources>
-	</soldier> -->
+	</soldier>
 	<soldier name="parw_thrower" spawn_score="1.0" squad_size_xp_cap="0.5" copy_from="default_ai">
 		<ai filename="eod.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">

@@ -389,7 +389,22 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		ScoredResource("gkw_svd_5506.weapon", "weapon", 1.0f),
 		ScoredResource("gkw_augpara_5503.weapon", "weapon", 1.0f),
 		ScoredResource("gkw_defender_5505.weapon", "weapon", 1.0f),
-		ScoredResource("gkw_mp5_3006.weapon", "weapon", 1.0f),    
+		ScoredResource("gkw_tkb408_6804.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_aps_6808.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_mp5_3006.weapon", "weapon", 1.0f)    
+			},
+			{
+		ScoredResource("city_gifts.carry_item", "carry_item", 1.0f, 5),
+		ScoredResource("wild_gifts.carry_item", "carry_item", 1.0f, 5),
+		ScoredResource("snow_gifts.carry_item", "carry_item", 1.0f, 5),
+		ScoredResource("forest_gifts.carry_item", "carry_item", 1.0f, 5),
+		ScoredResource("gift_box_community_2.carry_item", "carry_item", 0.01f),
+		ScoredResource("vest_repair_quick.weapon", "weapon", 1.0f, 10),
+		ScoredResource("reinforcement_fairy_hvy.weapon", "weapon", 1.0f, 3),
+		ScoredResource("reinforcement_fairy_mgsg.weapon", "weapon", 1.0f, 3),
+		ScoredResource("reinforcement_fairy_medic.weapon", "weapon", 1.0f, 7),
+		ScoredResource("SOPII_Ant_Doll.carry_item", "carry_item", 0.1f),
+		ScoredResource("RO365_Ant_Doll.carry_item", "carry_item", 0.2f)
 			}
 		};
 		processRewardPasses(rewardPasses);
