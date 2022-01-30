@@ -467,7 +467,7 @@
 		<model filename="sfd_vespid_swap_from_dusk.xml" />
 		<resources clear_calls="1">
 			<weapon key="sfw_vespid_swap.weapon" enabled="1"/>
-			<carry_item key="sf_ar.carry_item" enabled="1" />
+			<carry_item key="sf_swap.carry_item" enabled="1" />
 		</resources>
 	</soldier>
 	<!-- ripper -->
@@ -520,7 +520,7 @@
 		<model filename="sfd_striker_swap_from_dusk.xml" />
 		<resources clear_calls="1">
 			<weapon key="sfw_striker_swap.weapon" enabled="1"/>
-			<carry_item key="sf_str.carry_item" enabled="1" />
+			<carry_item key="sf_swap.carry_item" enabled="1" />
 		</resources>
 	</soldier>
 	<!-- nemeum -->
