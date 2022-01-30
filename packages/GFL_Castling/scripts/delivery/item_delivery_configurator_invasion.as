@@ -399,10 +399,10 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		ScoredResource("snow_gifts.carry_item", "carry_item", 1.0f, 5),
 		ScoredResource("forest_gifts.carry_item", "carry_item", 1.0f, 5),
 		ScoredResource("gift_box_community_2.carry_item", "carry_item", 0.01f),
-		ScoredResource("vest_repair_quick.carry_item", "weapon", 1.0f, 10),
-		ScoredResource("reinforcement_fairy_hvy.carry_item", "weapon", 1.0f, 3),
-		ScoredResource("reinforcement_fairy_mgsg.carry_item", "weapon", 1.0f, 3),
-		ScoredResource("reinforcement_fairy_medic.carry_item", "weapon", 1.0f, 7),
+		ScoredResource("vest_repair_quick.weapon", "weapon", 1.0f, 10),
+		ScoredResource("reinforcement_fairy_hvy.weapon", "weapon", 1.0f, 3),
+		ScoredResource("reinforcement_fairy_mgsg.weapon", "weapon", 1.0f, 3),
+		ScoredResource("reinforcement_fairy_medic.weapon", "weapon", 1.0f, 7),
 		ScoredResource("SOPII_Ant_Doll.carry_item", "carry_item", 0.1f),
 		ScoredResource("RO365_Ant_Doll.carry_item", "carry_item", 0.2f)
 			}
