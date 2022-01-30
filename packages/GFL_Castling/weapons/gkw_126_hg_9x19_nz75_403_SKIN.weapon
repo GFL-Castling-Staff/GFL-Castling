@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<weapon file="dual_hg.animation_base" key="gkw_nz75.weapon">
+<weapon file="dual_hg.animation_base" key="gkw_nz75_403.weapon">
 
 	
 	<!--Weapon specifications-->
@@ -14,7 +14,7 @@
 	
     
 	suppressed="0"
-	name="nz75"
+	name="NZ75-[Golden Coreopsis]"
 	class="4"
 	reload_one_at_a_time="0"
 	sight_range_modifier="1.0"
@@ -38,7 +38,7 @@
 	
 	
 	<inventory  buy_price="8.0" sell_price="8.0" />
-	<commonness in_stock="1" />
+	<commonness value="0" in_stock="0" />
 
     
 	
@@ -52,7 +52,7 @@
    
 	<!--Model, Icon, Cost-->
     <model filename="" />
-    <hud_icon filename="gkw_nz75.png" />
+    <hud_icon filename="gkw_nz75_403.png" />
 
 
 	
