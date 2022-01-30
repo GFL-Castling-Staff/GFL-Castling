@@ -32,7 +32,7 @@
 	
 	
 	
-    <commonness value="0" in_stock="0" />
+	
 	<inventory  buy_price="13.0" sell_price="13.0" />
 
     
@@ -48,7 +48,7 @@
 	<!--Model, Icon, Cost-->
     <model filename="gkw_m950a_From_melondove.xml" />
     <hud_icon filename="gkw_m950a_702.png" />
-
+    <commonness value="0" in_stock="0" can_respawn_with="1" />
 
 	
 	<!--Ballistics-->

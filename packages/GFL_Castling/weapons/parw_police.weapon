@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<weapon file="sf.base_weapon" key="kcco_aegis.weapon">
+<weapon file="paradeus.base_weapon" key="parw_police.weapon">
 
 	<specification 
 	accuracy_factor="0.95" 
@@ -12,7 +12,7 @@
 	burst_shots="1"
 	solt="0" 
 	magazine_size="10" 
-	name="Code:Aegis-GA" 
+	name="Police" 
 	projectile_speed="80" 
 	retrigger_time="0.1" 
 	suppressed="1" 
@@ -46,8 +46,8 @@
 	<sound key="magazine_in" fileref="kccoar_mgz_in_FromINS.wav" volume="0.8" />
 	<sound key="cycle" fileref="" volume="0.8" />
 	<sound class="impact" fileref="rifle_drop.wav" />    
-	<!-- <model filename="kccow_aegis_shield.xml" /> -->
-	<model filename="kccow_aegis_shield_NewYear.xml" />
+	<!-- <model filename="parw_police_shield.xml" /> -->
+	<model filename="parw_police_shield_NewYear.xml" />
 
 	<hud_icon filename="testing.png" />
 
@@ -55,7 +55,7 @@
 
 	<weak_hand_hold offset="0.2" />
     <projectile file="teal.projectile">
-        <result class="blast" damage="3.0"  radius="1.0" decal="1" push="0" character_state="death" 	faction_compare="not_equal"/>
+        <result class="blast" damage="2.1"   radius="1.0" decal="1" push="0" character_state="wound" faction_compare="not_equal"/>
     </projectile>
 
 	<stance state_key="running" accuracy="0.4" />
@@ -83,5 +83,5 @@
 	<modifier class="melee_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="melee_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
 	
-	<modifier class="speed" value="-0.3" />
+	<modifier class="speed" value="-0.4" />
 </weapon>

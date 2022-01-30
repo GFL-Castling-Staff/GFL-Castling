@@ -22,8 +22,9 @@
 	barrel_offset="0.4" 
 	projectiles_per_shot="1" />
     <inventory  buy_price="10.0" sell_price="10.0" />	
+    <commonness value="0" in_stock="0" can_respawn_with="1" />
 	<!--Animations-->
-    <commonness value="0" in_stock="0" />
+	
   	<animation state_key="hold_casual"			animation_key="dancing, kazachok" />
 
     <animation key="reload" animation_key="magBrifleR" />
@@ -51,7 +52,7 @@
     <weak_hand_hold offset="0.3" />
     <projectile file="bullet.projectile">
         <result class="hit" 
-        kill_probability="2.5" 
+        kill_probability="2.35" 
         kill_decay_start_time="1.735" 
         kill_decay_end_time="2.892" />
     </projectile>

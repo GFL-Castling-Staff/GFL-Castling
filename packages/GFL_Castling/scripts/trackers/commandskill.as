@@ -49,7 +49,7 @@ class CommandSkill : Tracker {
                 int cId = info.getIntAttribute("character_id");
                 string c_weaponType = getPlayerEquipmentKey(m_metagame,cId,0);
                 if (c_weaponType=="") return;
-                if (c_weaponType=="gkw_an94_mod3.weapon" || c_weaponType=="gkw_an94_mod3_skill.weapon"){
+                if (c_weaponType=="gkw_an94_mod3.weapon" || c_weaponType=="gkw_an94_mod3_skill.weapon" || c_weaponType=="gkw_an94mod3_3303.weapon" || c_weaponType=="gkw_an94mod3_3303_skill.weapon" || c_weaponType=="gkw_an94mod3_blm.weapon" || c_weaponType=="gkw_an94mod3_blm_skill.weapon" ){
                     excuteAN94skill(cId,senderId);
                 }
                 if (c_weaponType=="gkw_vector.weapon"){
