@@ -7,15 +7,15 @@
 		barrel_offset="0.2" 
 		class="0"
 		magazine_size="30" 
-		name="AK-74U" 
+		name="AK-74U-[Lily of the Valley]" 
 		projectile_speed="175" 
 		retrigger_time="0.082" 
 		suppressed="0" 
-		sustained_fire_diminish_rate="1.8" 
-		sustained_fire_grow_step="0.15" />
+		sustained_fire_diminish_rate="1.6" 
+		sustained_fire_grow_step="0.2" />
 
 
-    <next_in_chain key="gkw_ak74u_skill.weapon" share_ammo="1" />
+    <next_in_chain key="gkw_ak74u_3002_skill.weapon" share_ammo="1" />
     <inventory  buy_price="8.0" sell_price="8.0" />
     <sound key="fire" fileref="sp9_fire_FromINS.wav" pitch_variety="0.05" volume="1" />
     <sound key="magazine_out" fileref="sp9_mgz_out_FromINS.wav" volume="0.6" />
@@ -51,7 +51,7 @@
 		class="0"
         solt="0" 
 		magazine_size="30" 
-		name="AK74U-skill-[Repulsive Response]" 
+		name="AK-74U-[Lily of the Valley]-skill-[Repulsive Response]" 
 		projectile_speed="219.04" 
 		retrigger_time="0.07" 
 		suppressed="0" 
@@ -61,7 +61,7 @@
 
 
 
-    <next_in_chain key="gkw_ak74u.weapon" share_ammo="1" />
+    <next_in_chain key="gkw_ak74u_3002.weapon" share_ammo="1" />
     <inventory  buy_price="8.0" sell_price="8.0" />
     <sound key="fire" fileref="sp9_fire_FromINS.wav" pitch_variety="0.05" volume="1" />
     <sound key="magazine_out" fileref="sp9_mgz_out_FromINS.wav" volume="0.6" />
