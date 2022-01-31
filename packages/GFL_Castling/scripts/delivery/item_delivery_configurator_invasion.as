@@ -378,11 +378,9 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 
 		array<array<ScoredResource@>> rewardPasses = {
 			{
-		ScoredResource("gkw_fp6_2804.weapon", "weapon", 1.0f),
 		ScoredResource("gkw_ak74u_3002.weapon", "weapon", 1.0f),
 		ScoredResource("gkw_t91_4206.weapon", "weapon", 1.0f),
 		ScoredResource("gkw_mk23_1805.weapon", "weapon", 1.0f),
-		ScoredResource("gkw_m950a_702.weapon", "weapon", 1.0f),
 		ScoredResource("gkw_nz75_403.weapon", "weapon", 1.0f),
 		ScoredResource("gkw_spp1_4207.weapon", "weapon", 1.0f),
 		ScoredResource("gkw_lwmmg_1808.weapon", "weapon", 1.0f),
@@ -394,15 +392,11 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		ScoredResource("gkw_mp5_3006.weapon", "weapon", 1.0f)    
 			},
 			{
-		ScoredResource("city_gifts.carry_item", "carry_item", 1.0f, 5),
-		ScoredResource("wild_gifts.carry_item", "carry_item", 1.0f, 5),
-		ScoredResource("snow_gifts.carry_item", "carry_item", 1.0f, 5),
-		ScoredResource("forest_gifts.carry_item", "carry_item", 1.0f, 5),
+		ScoredResource("city_gifts.carry_item", "carry_item", 1.0f, 22),
+		ScoredResource("wild_gifts.carry_item", "carry_item", 1.0f, 22),
+		ScoredResource("snow_gifts.carry_item", "carry_item", 1.0f, 22),
+		ScoredResource("forest_gifts.carry_item", "carry_item", 1.0f, 22),
 		ScoredResource("gift_box_community_2.carry_item", "carry_item", 0.01f),
-		ScoredResource("vest_repair_quick.weapon", "weapon", 1.0f, 10),
-		ScoredResource("reinforcement_fairy_hvy.weapon", "weapon", 1.0f, 3),
-		ScoredResource("reinforcement_fairy_mgsg.weapon", "weapon", 1.0f, 3),
-		ScoredResource("reinforcement_fairy_medic.weapon", "weapon", 1.0f, 7),
 		ScoredResource("SOPII_Ant_Doll.carry_item", "carry_item", 0.1f),
 		ScoredResource("RO365_Ant_Doll.carry_item", "carry_item", 0.2f)
 			}

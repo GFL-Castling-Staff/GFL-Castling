@@ -43,8 +43,16 @@ class kill_event : Tracker {
         "parw_teal.weapon",
         "parw_nyto_black.weapon",
         "parw_doppelsoldner_mg.weapon",
+        "parw_doppelsoldner_rocket",
         "parw_nimogen.weapon",
-        "parw_narciss.weapon"
+        "parw_narciss.weapon",
+        "sfw_ripper_swap.weapon",
+        "sfw_striker_swap.weapon",
+        "sfw_jaeger_swap.weapon",
+        "sfw_vespid_swap.weapon",
+        "sfw_dragoon.weapon",
+        "kccow_cerynitis.weapon",
+        "sfw_nemeum.weapon"
 	};
 
 	protected void handleCharacterKillEvent(const XmlElement@ event){
@@ -56,29 +64,37 @@ class kill_event : Tracker {
         if (killer.getIntAttribute("player_id") == -1) return;
         if ((killer.getIntAttribute("faction_id")) != (target.getIntAttribute("faction_id"))){
             int targetId = target.getIntAttribute("id");
-            const XmlElement@ targetCharacter = getCharacterInfo2(m_metagame,targetId);
-        	if (targetCharacter is null) return;
             int characterId = killer.getIntAttribute("id");
-            string VestKey = getPlayerEquipmentKey(m_metagame,targetId,0);
+            string VestKey = getDeadPlayerEquipmentKey(m_metagame,targetId,0);
             if (VestKey=="") return;
             if(targetVestKey.find(VestKey)> -1){
                 if(VestKey=="parw_teal.weapon" || VestKey=="sfw_agent.weapon" || VestKey=="sfw_m16a1.weapon"){
-                    GiveRP(m_metagame,characterId,100);
+                    GiveRP(m_metagame,characterId,150);
                     return;
                 }
                 
                 if(VestKey=="sfw_manticore.weapon" || VestKey=="kccow_hydra.weapon" || VestKey=="kcco_teslatrooper.weapon"){
-                    GiveRP(m_metagame,characterId,50);
+                    GiveRP(m_metagame,characterId,80);
                     //_log("giveitmoney");
                     return;
                 }
-                if(VestKey=="parw_doppelsoldner_mg.weapon"){
-                    GiveRP(m_metagame,characterId,40);
+                if(VestKey=="parw_doppelsoldner_rocket.weapon"){
+                    GiveRP(m_metagame,characterId,70);
+                    //_log("giveitmoney");
+                    return;
+                }
+                if(VestKey=="sfw_ripper_swap.weapon" || VestKey=="sfw_striker_swap.weapon" || VestKey=="sfw_jaeger_swap.weapon" || VestKey=="sfw_vespid_swap.weapon"){
+                    GiveRP(m_metagame,characterId,18);
+                    //_log("giveitmoney");
+                    return;
+                }
+                if(VestKey=="sfw_dragoon.weapon" || VestKey=="kccow_cerynitis.weapon" || VestKey=="sfw_nemeum.weapon"){
+                    GiveRP(m_metagame,characterId,30);
                     //_log("giveitmoney");
                     return;
                 }
                 else{
-                    GiveRP(m_metagame,characterId,30);
+                    GiveRP(m_metagame,characterId,50);
                     //_log("giveitmoney");
                     return;
                 }
