@@ -24,7 +24,7 @@
      <inventory  buy_price="100.0" sell_price="100.0" />
 	<!--Animations-->
 	
-	<commonness value="0" in_stock="0" />
+    <commonness value="0" in_stock="0" can_respawn_with="1" />
     <animation state_key="cycle" animation_key="Pshotgun0.5" />
     <animation state_key="cycle" stance_key="prone" animation_key="Pshotgun0.5p" />
     <animation key="reload" animation_key="shotgunROaaT" />

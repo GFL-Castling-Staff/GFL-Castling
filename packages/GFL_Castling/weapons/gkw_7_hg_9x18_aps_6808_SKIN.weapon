@@ -21,12 +21,12 @@
   	<animation state_key="hold_casual"			animation_key="dancing, kazachok" />
 	<inventory  buy_price="10.0" sell_price="10.0" />
     <commonness value="0" in_stock="0" can_respawn_with="1" />
-	
+    
 	<!--Sounds-->
 		
-    <sound key="fire" fileref="APS_Fire.wav" pitch_variety="0.05" volume="3" />
-    <sound key="magazine_out" fileref="APS_maz_out.wav" volume="0.8" />
-    <sound key="magazine_in" fileref="APS_maz_in.wav" volume="0.8"/>    
+    <sound key="fire" fileref="APS_Fire_FromTarkov.wav" pitch_variety="0.05" volume="0.5" />
+    <sound key="magazine_out" fileref="APS_mgz_out_FromTarkov.wav" volume="0.7" />
+    <sound key="magazine_in" fileref="APS_mgz_in_FromTarkov.wav" volume="0.7"/>    
     <sound key="cycle" fileref="m9_cycle_FromINS.wav" volume="0.8" />
 
    
