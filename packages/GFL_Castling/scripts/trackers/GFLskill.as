@@ -191,6 +191,13 @@ class GFLskill : Tracker {
 						}
 					}
 					if (m_fnum==4){
+						array<const XmlElement@> affectedCharacter2;
+						affectedCharacter2 = getCharactersNearPosition(m_metagame,Pos_40mm,2,5.0f);
+						if (affectedCharacter2 !is null){
+							for(uint x=0;x<affectedCharacter2.length();x++){
+								affectedCharacter.insertLast(affectedCharacter2[x]);
+							}
+						}
 						array<const XmlElement@> affectedCharacter3;
 						affectedCharacter3 = getCharactersNearPosition(m_metagame,Pos_40mm,3,5.0f);
 						if (affectedCharacter3 !is null){
@@ -288,6 +295,13 @@ class GFLskill : Tracker {
 						}
 					}
 					if (m_fnum==4){
+						array<const XmlElement@> affectedCharacter2;
+						affectedCharacter2 = getCharactersNearPosition(m_metagame,XM8track[a].m_pos,2,8.0f);
+						if (affectedCharacter2 !is null){
+							for(uint x=0;x<affectedCharacter2.length();x++){
+								affectedCharacter.insertLast(affectedCharacter2[x]);
+							}
+						}
 						array<const XmlElement@> affectedCharacter3;
 						affectedCharacter3 = getCharactersNearPosition(m_metagame,XM8track[a].m_pos,3,8.0f);
 						if (affectedCharacter3 !is null){
