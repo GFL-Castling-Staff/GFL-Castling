@@ -1491,7 +1491,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 	protected Stage@ setupStage104() {
 		Stage@ stage = createStage();
 		stage.m_mapInfo.m_name = "Shock Zone";
-		stage.m_mapInfo.m_path = "media/packages/vanilla/maps/map104";
+		stage.m_mapInfo.m_path = "media/packages/GFLC_Map/maps/map104";
 		stage.m_mapInfo.m_id = "map104";
 
 		stage.addTracker(PeacefulLastBase(m_metagame, 0));
