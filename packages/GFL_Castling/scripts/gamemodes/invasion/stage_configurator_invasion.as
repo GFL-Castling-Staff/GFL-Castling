@@ -175,7 +175,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 	// ------------------------------------------------------------------------------------------------
 	protected void setupNormalStages() {
-	addStage(setupStage101());        // mapnana
+	addStage(setupStage104()); 		  // map104 shockzone by diling
 	//addStage(setupStage102());	  // mapftg
 	addStage(setupStage7());          // map6
 	addStage(setupStage1());          // map2
@@ -185,10 +185,11 @@ class StageConfiguratorInvasion : StageConfigurator {
     addStage(setupStage15());         // map1_2
     addStage(setupStage12());         // map14
     addStage(setupStage10());         // map10
-	addStage(setupStage103()); 		  // map Palo Island by diling
+	addStage(setupStage103()); 		  // map103 Palo Island by diling
     addStage(setupStage17());         // map17    
     addStage(setupStage18());         // map13_2
     addStage(setupStage3());          // map3
+	addStage(setupStage101());        // uprising by nana
     addStage(setupStage13());         // map16    
 	addStage(setupFinalStage1());     // map11
     addStage(setupStage8());          // map8
@@ -1485,6 +1486,52 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.m_primaryObjective = "koth";
 		stage.m_kothTargetBase = "Dry Enclave";
 
+		return stage;
+	} 	
+	protected Stage@ setupStage104() {
+		Stage@ stage = createStage();
+		stage.m_mapInfo.m_name = "Shock Zone";
+		stage.m_mapInfo.m_path = "media/packages/GFLC_Map/maps/map104";
+		stage.m_mapInfo.m_id = "map104";
+
+		stage.addTracker(PeacefulLastBase(m_metagame, 0));
+		stage.addTracker(CommsCapacityHandler(m_metagame));
+		stage.m_maxSoldiers = 13 * 16;                                          // was 11*10
+
+		stage.m_soldierCapacityVariance = 0.55;                                  // was 0.4
+		stage.m_playerAiCompensation = 6;                                       // was 4
+        stage.m_playerAiReduction = 0;                                        // was 2    
+
+		stage.m_minRandomCrates = 1; 
+		stage.m_maxRandomCrates = 3;
+
+		{
+			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0, 0.6, 0.14));                                            
+			f.m_capacityOffset = 0; 
+			f.m_capacityMultiplier = 1.0;
+			f.m_bases = 1;
+			stage.m_factions.insertLast(f);
+		}
+
+		{
+			Faction f(FactionConfig(1, "sf.xml", "S.F.", "0.91 0.11 0.20", "sf.xml"), createCommanderAiCommand(1, 0.60, 0.14));       
+			stage.m_factions.insertLast(f);                                                                       
+		}
+		{
+			Faction f(FactionConfig(2, "kcco.xml", "KCCO", "0.43 0.49 0.18", "kcco.xml"), createCommanderAiCommand(1, 0.5, 0.3));             
+			f.m_overCapacity = 80;                                             
+            f.m_capacityOffset = 20;                                            
+			stage.m_factions.insertLast(f);                                    
+		}
+		{
+			Faction f((3, "paradeus.xml", "Paradeus", "1 1 1", "paradeus.xml"), createCommanderAiCommand(1, 0.60, 0.14));  
+			stage.m_factions.insertLast(f);
+		}
+		// metadata
+		stage.m_primaryObjective = "capture";
+
+		setDefaultAttackBreakTimes(stage);
+		// setReduceDefenseForFinalAttack(stage, 0.1); // use this for final attack boost if needed for friendlies
 		return stage;
 	} 	
 
