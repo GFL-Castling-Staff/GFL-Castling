@@ -13,9 +13,9 @@ class MyGameMode : GameModeCampaign {
 
 	// --------------------------------------------
 	protected void setupMapRotator() {
-		MapRotatorINV MapRotatorInvasion(this);
-		MyStageConfigurator configurator(this, MapRotatorINV);
-		@m_mapRotator = @MapRotatorInvasion;
+		//MapRotatorInv MapRotatorInvasion(this);
+		@m_mapRotator = MapRotatorInvasion(this);
+		MyStageConfigurator configurator(this, m_mapRotator);
 	}
 
 	// --------------------------------------------
