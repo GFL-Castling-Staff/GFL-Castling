@@ -2,7 +2,7 @@
 <weapons>
 <weapon key="uhlan_main_cannon">
     <specification 
-	retrigger_time="0.15" 
+	retrigger_time="0.2" 
     accuracy_factor="0.9" 
     sustained_fire_grow_step="0.2" 
     sustained_fire_diminish_rate="1.0" 
@@ -47,7 +47,7 @@
 </weapon>
 <weapon key="uhlan_main_cannon_2">
     <specification 
-	retrigger_time="0.45" 
+	retrigger_time="0.5" 
     accuracy_factor="0.9" 
     sustained_fire_grow_step="0.2" 
     sustained_fire_diminish_rate="1.0" 
