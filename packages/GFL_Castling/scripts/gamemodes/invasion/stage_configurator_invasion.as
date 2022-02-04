@@ -1524,7 +1524,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 			stage.m_factions.insertLast(f);                                    
 		}
 		{
-			Faction f((3, "paradeus.xml", "Paradeus", "1 1 1", "paradeus.xml"), createCommanderAiCommand(1, 0.60, 0.14));  
+			Faction f(FactionConfig(3, "paradeus.xml", "Paradeus", "1 1 1", "paradeus.xml"), createCommanderAiCommand(1, 0.60, 0.14));  
 			stage.m_factions.insertLast(f);
 		}
 		// metadata

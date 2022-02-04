@@ -3,7 +3,7 @@
 #include "path://media/packages/GFL_Castling/scripts"
 #include "path://media/packages/GFLC_Map/scripts"
 #include "path://media/packages/GFLC_Invasion/scripts"
-#include "gamemode_invasion.as"
+#include "my_gamemode.as"
 
 // Author:GFLC STaff
 // --------------------------------------------
