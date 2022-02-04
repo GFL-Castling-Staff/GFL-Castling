@@ -175,7 +175,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 	// ------------------------------------------------------------------------------------------------
 	protected void setupNormalStages() {
-	addStage(setupStage104()); 		  // map104 shockzone by diling
+	addStage(setupStage105()); 		  // map105 shockzone by diling
 	//addStage(setupStage102());	  // mapftg
 	addStage(setupStage7());          // map6
 	addStage(setupStage1());          // map2
@@ -1488,22 +1488,24 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 		return stage;
 	} 	
-	protected Stage@ setupStage104() {
+	protected Stage@ setupStage105() {
 		Stage@ stage = createStage();
 		stage.m_mapInfo.m_name = "Shock Zone";
-		stage.m_mapInfo.m_path = "media/packages/GFLC_Map/maps/map104";
-		stage.m_mapInfo.m_id = "map104";
+		stage.m_mapInfo.m_path = "media/packages/GFLC_Map/maps/map105_2";
+		stage.m_mapInfo.m_id = "map105_2";
 
-		stage.addTracker(PeacefulLastBase(m_metagame, 0));
-		stage.addTracker(CommsCapacityHandler(m_metagame));
+		stage.addTracker(Overtime(m_metagame, 0));
 		stage.m_maxSoldiers = 13 * 16;                                          // was 11*10
-
-		stage.m_soldierCapacityVariance = 0.55;                                  // was 0.4
+		stage.m_soldierCapacityModel = "constant";     
 		stage.m_playerAiCompensation = 6;                                       // was 4
         stage.m_playerAiReduction = 0;                                        // was 2    
 
 		stage.m_minRandomCrates = 1; 
 		stage.m_maxRandomCrates = 3;
+
+		stage.m_defenseWinTime = 600; 
+		stage.m_defenseWinTimeMode = "custom";
+		stage.addTracker(PausingKothTimer(m_metagame, stage.m_defenseWinTime));
 
 		{
 			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0, 0.6, 0.14));                                            
@@ -1514,24 +1516,18 @@ class StageConfiguratorInvasion : StageConfigurator {
 		}
 
 		{
-			Faction f(FactionConfig(1, "sf.xml", "S.F.", "0.91 0.11 0.20", "sf.xml"), createCommanderAiCommand(1, 0.60, 0.14));       
+			Faction f(FactionConfig(1, "sf.xml", "S.F.", "0.91 0.11 0.20", "sf.xml"), createCommanderAiCommand(1, 0.60, 0.40));       
 			stage.m_factions.insertLast(f);                                                                       
 		}
 		{
-			Faction f(FactionConfig(2, "kcco.xml", "KCCO", "0.43 0.49 0.18", "kcco.xml"), createCommanderAiCommand(1, 0.5, 0.3));             
+			Faction f(FactionConfig(2, "kcco.xml", "KCCO", "0.43 0.49 0.18", "kcco.xml"), createCommanderAiCommand(2, 0.5, 0.3));             
 			f.m_overCapacity = 80;                                             
             f.m_capacityOffset = 20;                                            
 			stage.m_factions.insertLast(f);                                    
 		}
-		{
-			Faction f(FactionConfig(3, "paradeus.xml", "Paradeus", "1 1 1", "paradeus.xml"), createCommanderAiCommand(1, 0.60, 0.14));  
-			stage.m_factions.insertLast(f);
-		}
 		// metadata
-		stage.m_primaryObjective = "capture";
+		stage.m_primaryObjective = "koth";
 
-		setDefaultAttackBreakTimes(stage);
-		// setReduceDefenseForFinalAttack(stage, 0.1); // use this for final attack boost if needed for friendlies
 		return stage;
 	} 	
 
