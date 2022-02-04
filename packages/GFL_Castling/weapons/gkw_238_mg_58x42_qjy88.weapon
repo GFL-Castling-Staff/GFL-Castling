@@ -13,7 +13,7 @@
 		<model filename="gkw_mg_qjy88_n.xml" />
 		<hud_icon filename="gkw_type88.png" />
 		<projectile file="bullet.projectile">
-			<result class="hit" kill_probability="1.6" kill_decay_start_time="1.967" kill_decay_end_time="3.279" />
+			<result class="hit" kill_probability="1.9" kill_decay_start_time="1.967" kill_decay_end_time="3.279" />
 		</projectile>
 		<stance state_key="running" accuracy="-1" />
 		<stance state_key="walking" accuracy="-1" />
@@ -40,7 +40,7 @@
 		<model filename="gkw_mg_qjy88.xml" />
 		<hud_icon filename="gkw_type88_skill.png" />
 		<projectile file="bullet.projectile">
-			<result class="hit" kill_probability="1.70" kill_decay_start_time="1.967" kill_decay_end_time="3.279" />
+			<result class="hit" kill_probability="2.0" kill_decay_start_time="1.967" kill_decay_end_time="3.279" />
 		</projectile>
 		<stance state_key="prone" accuracy="1" />
 		<stance state_key="over_wall" accuracy="1" />

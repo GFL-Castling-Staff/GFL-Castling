@@ -37,7 +37,7 @@
 
 
     <projectile file="bullet.projectile">
-        <result class="hit" kill_probability="1.8" kill_decay_start_time="2.135" kill_decay_end_time="4.245" />
+        <result class="hit" kill_probability="2.1" kill_decay_start_time="2.135" kill_decay_end_time="4.245" />
     </projectile>
        <stance state_key="running" accuracy="0.65" />
 
