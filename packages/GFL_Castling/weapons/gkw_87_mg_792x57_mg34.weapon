@@ -37,7 +37,7 @@
 
 
     <projectile file="bullet.projectile">
-        <result class="hit" kill_probability="1.75" kill_decay_start_time="2.432" kill_decay_end_time="4.054" />
+        <result class="hit" kill_probability="2.05" kill_decay_start_time="2.432" kill_decay_end_time="4.054" />
     </projectile>
     <stance state_key="running" accuracy="0.1" />
     <stance state_key="walking" accuracy="0.1" />
@@ -90,7 +90,7 @@
 
 
     <projectile file="bullet.projectile">
-        <result class="hit" kill_probability="1.9" kill_decay_start_time="2.432" kill_decay_end_time="4.054" />
+        <result class="hit" kill_probability="2.2" kill_decay_start_time="2.432" kill_decay_end_time="4.054" />
     </projectile>
     <stance state_key="running" accuracy="0.4" />
 
