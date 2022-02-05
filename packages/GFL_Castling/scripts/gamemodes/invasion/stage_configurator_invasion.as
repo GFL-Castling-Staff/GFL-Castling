@@ -175,7 +175,8 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 	// ------------------------------------------------------------------------------------------------
 	protected void setupNormalStages() {
-	addStage(setupStage105()); 		  // map105 shockzone by diling
+	addStage(setupStage104()); 		  // map105_1 zoneAttack by diling
+	addStage(setupStage105()); 		  // map105_2 shockzone by diling
 	//addStage(setupStage102());	  // mapftg
 	addStage(setupStage7());          // map6
 	addStage(setupStage1());          // map2
@@ -336,6 +337,91 @@ class StageConfiguratorInvasion : StageConfigurator {
 		// setReduceDefenseForFinalAttack(stage, 0.1); // use this for final attack boost if needed for friendlies
 		return stage;
 	}
+
+	protected Stage@ setupStage104() {
+		Stage@ stage = createStage();
+		stage.m_mapInfo.m_name = "Zone Attack";
+		stage.m_mapInfo.m_path = "media/packages/GFLC_Map/maps/map105_1";
+		stage.m_mapInfo.m_id = "map105_1";
+
+		stage.addTracker(PeacefulLastBase(m_metagame, 0));
+		stage.addTracker(CommsCapacityHandler(m_metagame));
+		stage.m_maxSoldiers = 17*17;                                             // was 12*7 in 1.65, 1 base added
+
+		stage.m_soldierCapacityVariance = 0.4;
+		stage.m_playerAiCompensation = 5;                                         // was 4 (1.82)
+        stage.m_playerAiReduction = 0;                                          // was 2 (test3)    
+
+		stage.m_minRandomCrates = 1; 
+		stage.m_maxRandomCrates = 3;
+
+		{
+			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0));                                                  
+			f.m_capacityOffset = 0; 
+			f.m_capacityMultiplier = 1.0;
+			stage.m_factions.insertLast(f);
+		}
+		{
+			Faction f(FactionConfig(1, "sf.xml", "S.F.", "0.91 0.11 0.20", "sf.xml"), createCommanderAiCommand(1,0.3,0.1));
+			f.m_overCapacity = 50;                                               
+			f.m_capacityOffset = 6;
+			f.m_capacityMultiplier = 1.0;                                                 
+			stage.m_factions.insertLast(f);                                         
+		}
+
+		
+		// metadata
+		stage.m_primaryObjective = "capture";
+
+		setDefaultAttackBreakTimes(stage);
+		// setReduceDefenseForFinalAttack(stage, 0.1); // use this for final attack boost if needed for friendlies
+		return stage;
+	}
+
+	protected Stage@ setupStage105() {
+		Stage@ stage = createStage();
+		stage.m_mapInfo.m_name = "Shock Zone";
+		stage.m_mapInfo.m_path = "media/packages/GFLC_Map/maps/map105_2";
+		stage.m_mapInfo.m_id = "map105_2";
+
+		stage.addTracker(Overtime(m_metagame, 0));
+		stage.m_maxSoldiers = 13 * 16;                                          // was 11*10
+		stage.m_soldierCapacityModel = "constant";     
+		stage.m_playerAiCompensation = 6;                                       // was 4
+        stage.m_playerAiReduction = 0;                                        // was 2    
+
+		stage.m_minRandomCrates = 1; 
+		stage.m_maxRandomCrates = 3;
+
+		stage.m_defenseWinTime = 300; 
+		stage.m_defenseWinTimeMode = "custom";
+		stage.addTracker(PausingKothTimer(m_metagame, stage.m_defenseWinTime));
+
+		{
+			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0, 0.6, 0.14));                                            
+			f.m_capacityOffset = 0; 
+			f.m_capacityMultiplier = 1.0;
+			f.m_bases = 1;
+			stage.m_factions.insertLast(f);
+		}
+
+		{
+			Faction f(FactionConfig(1, "sf.xml", "S.F.", "0.91 0.11 0.20", "sf.xml"), createCommanderAiCommand(1, 0.70, 0.30));
+			f.m_capacityMultiplier = 0.2;       
+			stage.m_factions.insertLast(f);                                                                
+		}
+		{
+			Faction f(FactionConfig(2, "kcco.xml", "KCCO", "0.43 0.49 0.18", "kcco.xml"), createCommanderAiCommand(2, 0.35, 0.05));             
+			f.m_overCapacity = 80;                                             
+            f.m_capacityOffset = 30;                                            
+			stage.m_factions.insertLast(f);                                    
+		}
+		// metadata
+		stage.m_primaryObjective = "koth";
+		stage.m_kothTargetBase = "All SF Base";
+
+		return stage;
+	} 	
 	
 	protected Stage@ setupStage1() {
 		Stage@ stage = createStage();
@@ -1488,50 +1574,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 		return stage;
 	} 	
-	protected Stage@ setupStage105() {
-		Stage@ stage = createStage();
-		stage.m_mapInfo.m_name = "Shock Zone";
-		stage.m_mapInfo.m_path = "media/packages/GFLC_Map/maps/map105_2";
-		stage.m_mapInfo.m_id = "map105_2";
 
-		stage.addTracker(Overtime(m_metagame, 0));
-		stage.m_maxSoldiers = 13 * 16;                                          // was 11*10
-		stage.m_soldierCapacityModel = "constant";     
-		stage.m_playerAiCompensation = 6;                                       // was 4
-        stage.m_playerAiReduction = 0;                                        // was 2    
-
-		stage.m_minRandomCrates = 1; 
-		stage.m_maxRandomCrates = 3;
-
-		stage.m_defenseWinTime = 300; 
-		stage.m_defenseWinTimeMode = "custom";
-		stage.addTracker(PausingKothTimer(m_metagame, stage.m_defenseWinTime));
-
-		{
-			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0, 0.6, 0.14));                                            
-			f.m_capacityOffset = 0; 
-			f.m_capacityMultiplier = 1.0;
-			f.m_bases = 1;
-			stage.m_factions.insertLast(f);
-		}
-
-		{
-			Faction f(FactionConfig(1, "sf.xml", "S.F.", "0.91 0.11 0.20", "sf.xml"), createCommanderAiCommand(1, 0.70, 0.30));
-			f.m_capacityMultiplier = 0.2;       
-			stage.m_factions.insertLast(f);                                                                
-		}
-		{
-			Faction f(FactionConfig(2, "kcco.xml", "KCCO", "0.43 0.49 0.18", "kcco.xml"), createCommanderAiCommand(2, 0.35, 0.05));             
-			f.m_overCapacity = 80;                                             
-            f.m_capacityOffset = 30;                                            
-			stage.m_factions.insertLast(f);                                    
-		}
-		// metadata
-		stage.m_primaryObjective = "koth";
-		stage.m_kothTargetBase = "All SF Base";
-
-		return stage;
-	} 	
 
 	// ------------------------------------------------------------------------------------------------
 	// ------------------------------------------------------------------------------------------------
