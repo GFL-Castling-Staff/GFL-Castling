@@ -1503,7 +1503,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.m_minRandomCrates = 1; 
 		stage.m_maxRandomCrates = 3;
 
-		stage.m_defenseWinTime = 600; 
+		stage.m_defenseWinTime = 300; 
 		stage.m_defenseWinTimeMode = "custom";
 		stage.addTracker(PausingKothTimer(m_metagame, stage.m_defenseWinTime));
 
@@ -1516,17 +1516,19 @@ class StageConfiguratorInvasion : StageConfigurator {
 		}
 
 		{
-			Faction f(FactionConfig(1, "sf.xml", "S.F.", "0.91 0.11 0.20", "sf.xml"), createCommanderAiCommand(1, 0.60, 0.40));       
-			stage.m_factions.insertLast(f);                                                                       
+			Faction f(FactionConfig(1, "sf.xml", "S.F.", "0.91 0.11 0.20", "sf.xml"), createCommanderAiCommand(1, 0.70, 0.30));
+			f.m_capacityMultiplier = 0.2;       
+			stage.m_factions.insertLast(f);                                                                
 		}
 		{
-			Faction f(FactionConfig(2, "kcco.xml", "KCCO", "0.43 0.49 0.18", "kcco.xml"), createCommanderAiCommand(2, 0.5, 0.3));             
+			Faction f(FactionConfig(2, "kcco.xml", "KCCO", "0.43 0.49 0.18", "kcco.xml"), createCommanderAiCommand(2, 0.35, 0.05));             
 			f.m_overCapacity = 80;                                             
-            f.m_capacityOffset = 20;                                            
+            f.m_capacityOffset = 30;                                            
 			stage.m_factions.insertLast(f);                                    
 		}
 		// metadata
 		stage.m_primaryObjective = "koth";
+		stage.m_kothTargetBase = "All SF Base";
 
 		return stage;
 	} 	
