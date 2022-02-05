@@ -102,10 +102,10 @@
         
         
         <!-- death or wound or stun -> no effect -->
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="stun" />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="stun" />
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
@@ -256,10 +256,10 @@
         <hud_icon filename="kcco_ar.png" />
         
         <model mesh_filename="vestexo.xml" />
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="stun" />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="stun" />
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
