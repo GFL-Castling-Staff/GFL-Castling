@@ -15,7 +15,7 @@
         carry_in_two_hands="0"
         can_shoot_crouching="0"
         can_shoot_prone="0"
-        projectiles_per_shot="4"
+        projectiles_per_shot="3"
         use_basic_muzzle_smoke_effect="0"
 		sustained_fire_diminish_rate="1.0"
 		sustained_fire_grow_step="0.5" />
@@ -60,7 +60,7 @@
 
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet_sf.projectile">
-        <result class="blast"  damage="0.25" radius="1.5" decal="1" push="0.01" character_state="death" faction_compare="not_equal" damage_as_probability="1" />
+        <result class="blast"  damage="0.5" radius="1.5" decal="1" push="0.01" character_state="death" faction_compare="not_equal" damage_as_probability="1" />
      </projectile>
 
     <stance state_key="running" accuracy="0.5" />
