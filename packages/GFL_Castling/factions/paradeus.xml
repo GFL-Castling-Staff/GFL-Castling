@@ -520,7 +520,7 @@
 		</resources>
 	</soldier>
 	<soldier name="Narciss" spawn_score="0.12" squad_size_xp_cap="0.5" copy_from="default_ai">
-		<ai filename="elite.ai" />
+		<ai filename="eod.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="parw_narciss.weapon" enabled="1" />
 			<model filename="pard_narciss.xml" />
@@ -575,6 +575,7 @@
 		<ai filename="hydra.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="parw_doppelsoldner_rocket" enabled="1" />
+			<weapon key="parw_doppelsoldner_mg_1.weapon" enabled="1" />
 			<carry_item key="pard_doppelsoldner.carry_item" />
 		</resources>
 		<item_class_existence_config>
