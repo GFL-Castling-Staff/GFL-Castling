@@ -33,6 +33,25 @@ class BasicCommandHandler : Tracker {
 		string sender = event.getStringAttribute("player_name");
 		int senderId = event.getIntAttribute("player_id");
 
+		if (checkCommand(message, "chat1")) {
+			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
+			// string playerName = sender.getStringAttribute("name");
+			int cId= playerInfo.getIntAttribute("character_id");
+			sendFactionMessageKeySaidAsCharacter(m_metagame, 0, cId,"quickchat1",dictionary(),0.9);
+		}
+		if (checkCommand(message, "chat2")) {
+			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
+			int cId= playerInfo.getIntAttribute("character_id");
+			sendFactionMessageKeySaidAsCharacter(m_metagame, 0, cId,"quickchat2",dictionary(),0.9);
+		}
+		if (checkCommand(message, "chat3")) {
+			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
+			int cId= playerInfo.getIntAttribute("character_id");
+			sendFactionMessageKeySaidAsCharacter(m_metagame, 0, cId,"quickchat3",dictionary(),0.9);
+		}
+
+
+		
 		// admin and moderator only from here on
 		if (!m_metagame.getAdminManager().isAdmin(sender, senderId) && !m_metagame.getModeratorManager().isModerator(sender, senderId)) {
 			return;
