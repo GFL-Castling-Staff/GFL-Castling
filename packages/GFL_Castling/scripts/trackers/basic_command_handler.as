@@ -32,7 +32,7 @@ class BasicCommandHandler : Tracker {
 
 		string sender = event.getStringAttribute("player_name");
 		int senderId = event.getIntAttribute("player_id");
-		if (message=="/chat")) {
+		if (checkCommand(message, "chat")) {
 			if (message=="/chat1") {
 				const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
 				string strname= playerInfo.getStringAttribute("name");
@@ -51,7 +51,7 @@ class BasicCommandHandler : Tracker {
 				sendFactionMessageKey(m_metagame, 0,"quickchat2d",a,0.9);
 				sendFactionMessageKeySaidAsCharacter(m_metagame, 0, cId,"quickchat2",dictionary(),0.9);
 			}
-			if (message=="/chat3")) {
+			if (message=="/chat3") {
 				const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
 				string strname= playerInfo.getStringAttribute("name");
 				dictionary a;
@@ -60,7 +60,7 @@ class BasicCommandHandler : Tracker {
 				sendFactionMessageKey(m_metagame, 0,"quickchat3d",a,0.9);
 				sendFactionMessageKeySaidAsCharacter(m_metagame, 0, cId,"quickchat3",dictionary(),0.9);
 			}
-			if (message=="/chat4")) {
+			if (message=="/chat4") {
 				const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
 				string strname= playerInfo.getStringAttribute("name");
 				dictionary a;
@@ -69,7 +69,7 @@ class BasicCommandHandler : Tracker {
 				sendFactionMessageKey(m_metagame, 0,"quickchat4d",a,0.9);
 				sendFactionMessageKeySaidAsCharacter(m_metagame, 0, cId,"quickchat4",dictionary(),0.9);
 			}
-			if (message=="/chat5")) {
+			if (message=="/chat5") {
 				const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
 				string strname= playerInfo.getStringAttribute("name");
 				dictionary a;
@@ -79,7 +79,7 @@ class BasicCommandHandler : Tracker {
 				sendFactionMessageKey(m_metagame, 0,"quickchat5d",a,2.0);
 				sendFactionMessageKeySaidAsCharacter(m_metagame, 0, cId,"quickchat5",dictionary(),0.9);
 			}
-			if (message=="/chat6")) {
+			if (message=="/chat6") {
 				const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
 				string strname= playerInfo.getStringAttribute("name");
 				dictionary a;
@@ -88,7 +88,7 @@ class BasicCommandHandler : Tracker {
 				sendFactionMessageKey(m_metagame, 0,"quickchat6d",a,0.9);
 				sendFactionMessageKeySaidAsCharacter(m_metagame, 0, cId,"quickchat6",dictionary(),0.9);
 			}
-			if (message=="/chat7")) {
+			if (message=="/chat7") {
 				const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
 				string strname= playerInfo.getStringAttribute("name");
 				dictionary a;
@@ -97,7 +97,7 @@ class BasicCommandHandler : Tracker {
 				sendFactionMessageKey(m_metagame, 0,"quickchat7d",a,0.9);
 				sendFactionMessageKeySaidAsCharacter(m_metagame, 0, cId,"quickchat7",dictionary(),0.9);
 			}
-			if (message=="/chat8")) {
+			if (message=="/chat8") {
 				const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
 				string strname= playerInfo.getStringAttribute("name");
 				dictionary a;
@@ -106,7 +106,7 @@ class BasicCommandHandler : Tracker {
 				sendFactionMessageKey(m_metagame, 0,"quickchat8d",a,0.9);
 				sendFactionMessageKeySaidAsCharacter(m_metagame, 0, cId,"quickchat8",dictionary(),0.9);
 			}
-			if (message=="/chat9")) {
+			if (message=="/chat9") {
 				const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
 				string strname= playerInfo.getStringAttribute("name");
 				dictionary a;
@@ -115,7 +115,7 @@ class BasicCommandHandler : Tracker {
 				sendFactionMessageKey(m_metagame, 0,"quickchat9d",a,0.9);
 				sendFactionMessageKeySaidAsCharacter(m_metagame, 0, cId,"quickchat9",dictionary(),0.9);
 			}
-			if (message=="/chat10")) {
+			if (message=="/chat10") {
 				const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
 				string strname= playerInfo.getStringAttribute("name");
 				dictionary a;
@@ -124,7 +124,7 @@ class BasicCommandHandler : Tracker {
 				sendFactionMessageKey(m_metagame, 0,"quickchat10d",a,0.9);
 				sendFactionMessageKeySaidAsCharacter(m_metagame, 0, cId,"quickchat10",dictionary(),0.9);
 			}
-			if (message=="/chat11")) {
+			if (message=="/chat11") {
 				const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
 				string strname= playerInfo.getStringAttribute("name");
 				dictionary a;
@@ -133,7 +133,7 @@ class BasicCommandHandler : Tracker {
 				sendFactionMessageKey(m_metagame, 0,"quickchat11d",a,0.9);
 				sendFactionMessageKeySaidAsCharacter(m_metagame, 0, cId,"quickchat11",dictionary(),0.9);
 			}
-			if (message=="/chat12")) {
+			if (message=="/chat12") {
 				const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
 				string strname= playerInfo.getStringAttribute("name");
 				dictionary a;
@@ -142,7 +142,7 @@ class BasicCommandHandler : Tracker {
 				sendFactionMessageKey(m_metagame, 0,"quickchat12d",a,0.9);
 				sendFactionMessageKeySaidAsCharacter(m_metagame, 0, cId,"quickchat12",dictionary(),0.9);
 			}
-			if (message=="/chat13")) {
+			if (message=="/chat13") {
 				const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
 				string strname= playerInfo.getStringAttribute("name");
 				dictionary a;
@@ -151,7 +151,7 @@ class BasicCommandHandler : Tracker {
 				sendFactionMessageKey(m_metagame, 0,"quickchat13d",a,0.9);
 				sendFactionMessageKeySaidAsCharacter(m_metagame, 0, cId,"quickchat13",dictionary(),0.9);
 			}
-			if (message=="/chat14")) {
+			if (message=="/chat14") {
 				const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
 				string strname= playerInfo.getStringAttribute("name");
 				dictionary a;
@@ -160,7 +160,7 @@ class BasicCommandHandler : Tracker {
 				sendFactionMessageKey(m_metagame, 0,"quickchat14d",a,0.9);
 				sendFactionMessageKeySaidAsCharacter(m_metagame, 0, cId,"quickchat14",dictionary(),0.9);
 			}
-			if (message=="/chat15")) {
+			if (message=="/chat15") {
 				const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
 				string strname= playerInfo.getStringAttribute("name");
 				dictionary a;
@@ -169,7 +169,7 @@ class BasicCommandHandler : Tracker {
 				sendFactionMessageKey(m_metagame, 0,"quickchat15d",a,0.9);
 				sendFactionMessageKeySaidAsCharacter(m_metagame, 0, cId,"quickchat15",dictionary(),0.9);
 			}
-			if (message=="/chat16")) {
+			if (message=="/chat16") {
 				const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
 				string strname= playerInfo.getStringAttribute("name");
 				dictionary a;
@@ -178,7 +178,7 @@ class BasicCommandHandler : Tracker {
 				sendFactionMessageKey(m_metagame, 0,"quickchat16d",a,0.9);
 				sendFactionMessageKeySaidAsCharacter(m_metagame, 0, cId,"quickchat16",dictionary(),0.9);
 			}
-			if (message=="/chat17")) {
+			if (message=="/chat17") {
 				const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
 				string strname= playerInfo.getStringAttribute("name");
 				dictionary a;
@@ -187,7 +187,7 @@ class BasicCommandHandler : Tracker {
 				sendFactionMessageKey(m_metagame, 0,"quickchat17d",a,0.9);
 				sendFactionMessageKeySaidAsCharacter(m_metagame, 0, cId,"quickchat17",dictionary(),0.9);
 			}
-			if (message=="/chat18")) {
+			if (message=="/chat18") {
 				const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
 				string strname= playerInfo.getStringAttribute("name");
 				dictionary a;
@@ -196,7 +196,7 @@ class BasicCommandHandler : Tracker {
 				sendFactionMessageKey(m_metagame, 0,"quickchat18d",a,0.9);
 				sendFactionMessageKeySaidAsCharacter(m_metagame, 0, cId,"quickchat18",dictionary(),0.9);
 			}
-			if (message=="/chat19")) {
+			if (message=="/chat19") {
 				const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
 				string strname= playerInfo.getStringAttribute("name");
 				dictionary a;
@@ -205,7 +205,7 @@ class BasicCommandHandler : Tracker {
 				sendFactionMessageKey(m_metagame, 0,"quickchat19d",a,0.9);
 				sendFactionMessageKeySaidAsCharacter(m_metagame, 0, cId,"quickchat19",dictionary(),0.9);
 			}
-			if (message=="/chat20")) {
+			if (message=="/chat20") {
 				const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
 				string strname= playerInfo.getStringAttribute("name");
 				dictionary a;
