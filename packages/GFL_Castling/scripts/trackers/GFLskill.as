@@ -275,6 +275,34 @@ class GFLskill : Tracker {
 				}
 			}
 		}
+		if (EventKeyGet == "banzai100"){
+			int characterId = event.getIntAttribute("character_id");
+			const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+			if (character !is null) {
+				int playerId = character.getIntAttribute("player_id");
+				const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+				
+				if (player !is null) {
+					Vector3 Pos_40mm = stringToVector3(event.getStringAttribute("position"));
+                    string c = 
+                        "<command class='create_instance'" +
+                        " faction_id='"+ player.getIntAttribute("faction_id") +"'" +
+                        " instance_class='grenade'" +
+                        " instance_key='cl.projectile'" +
+                        " position='" + Pos_40mm.toString() + "'"+
+				        " character_id='" + characterId + "' />";
+				    string c1 = 
+                        "<command class='create_instance'" +
+                        " faction_id='"+ player.getIntAttribute("faction_id") +"'" +
+                        " instance_class='grenade'" +
+                        " instance_key='cl_1.projectile'" +
+                        " position='" + Pos_40mm.toString() + "'"+
+				        " character_id='" + characterId + "' />";
+                    m_metagame.getComms().send(c1);
+					m_metagame.getComms().send(c);
+				}
+			}
+		}
 	}
 
 	void update(float time) {
