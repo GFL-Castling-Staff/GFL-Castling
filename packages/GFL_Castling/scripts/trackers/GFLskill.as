@@ -40,7 +40,7 @@ class GFLskill : Tracker {
 		//checking if the event was triggered by a rangefinder notify_script
 		string EventKeyGet = event.getStringAttribute("key");
 		if (EventKeyGet == "aa_spawn"){
-			if(getFactionConfigs()[0].getName()=="GK"){
+			if(getFactionConfigs()[0].m_name=="GK"){
 				XmlElement command("command");
 				command.setStringAttribute("class", "faction_resources");
 				command.setIntAttribute("faction_id", 0);
@@ -48,7 +48,7 @@ class GFLskill : Tracker {
 			}
 		}
 		if (EventKeyGet == "aa_destroy"){
-			if(getFactionConfigs()[0].getName()=="GK"){
+			if(getFactionConfigs()[0].m_name=="GK"){
 				XmlElement command("command");
 				command.setStringAttribute("class", "faction_resources");
 				command.setIntAttribute("faction_id", 0);
