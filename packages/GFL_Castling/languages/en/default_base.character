@@ -13,7 +13,7 @@
 	<parameter class="prone_moving_steer_amount_stroke" value="3.0" />
 	<parameter class="prone_moving_max_dot_to_move" value="0.5" />
 
-	<parameter class="stopping_oppositesteer_amount" value="5.0" />
+	<parameter class="stopping_oppositesteer_amount" value="5.0" /> 
 
 	<parameter class="throwing_self_over_initial_bounce" value="0.07" />
 	<parameter class="throwing_self_over_steer_amount" value="0.30" />
@@ -54,7 +54,7 @@
 	<parameter class="being_stunned_steer_amount" value="0.1" />
 
 	<parameter class="request_strike_time" value="-1.0" />
-	<parameter class="request_strike_no_signal_time" value="-1.0" />
+	<parameter class="request_strike_no_signal_time" value="-1.0" /> 
 
 	<parameter class="warn_about_grenades_time" value="5.0" />
 
@@ -75,11 +75,11 @@
 	<parameter class="detectability_still" value="0.88" />
 	<parameter class="detectability_running" value="1.0" />
 
-	<!-- <parameter class="default_squad_config_index" value="0" /> -->
+<!-- <parameter class="default_squad_config_index" value="0" /> -->
 
 	<parameter class="gravity" value="-40.0" />
 	<parameter class="skydiving_gravity" value="-15.0" />
-	<parameter class="chute_y_offset" value="-0.4" />
+	<parameter class="chute_y_offset" value="-0.4" />    
 	<parameter class="swimming_gravity" value="8.0" />
 
 	<parameter class="overpacked_speed_modifier" value="-0.2" />
@@ -98,69 +98,69 @@
 	<parameter class="accuracy" value="1.0" />
 	<parameter class="accuracy_encumbered" low="1.0" high="0.94" />
 	<parameter class="use_walk_animation_instead_of_run_speed_threshold" value="0.5" />
-
+	
 	<parameter class="spawn_y_offset" value="0.0" />
 
 	<sound key="body_fall" fileref="body_fall1.wav" volume="1.0" />
 
 	<sound key="throw" fileref="grenade_throw1.wav" volume="0.4" />
 	<sound key="stab" fileref="meleeHitNothing.wav" volume="0.5" />
-	<sound key="stab_receive" fileref="meleeHitUMP45.wav" volume="0.7" />
+	<sound key="stab_receive" fileref="meleeHitUMP45.wav" volume="0.7" />  
 
-	<animation key="celebrating" target_key="celebrating" />
-	<animation key="celebrating" target_key="celebrating2" add="1" />
-	<animation key="celebrating, shooting" target_key="celebrating, shooting" />
-	<animation key="celebrating, shooting" target_key="celebrating, shooting2" add="1" />
+	<animation key="celebrating" target_key="celebrating" /> 
+	<animation key="celebrating" target_key="celebrating2" add="1" /> 
+	<animation key="celebrating, shooting" target_key="celebrating, shooting" /> 
+	<animation key="celebrating, shooting" target_key="celebrating, shooting2" add="1" /> 
 
-	<effect class="blood" ref="BloodSplat_bot" />
-	<effect class="blood" type="splat_map" size="2.0" atlas_index="3" layer="3" additive="1" apply_gore_factor="1" />
-
+    <effect class="blood" ref="BloodSplat_bot" />
+    <effect class="blood" type="splat_map" size="2.0" atlas_index="3" layer="3" additive="1" apply_gore_factor="1" />
+	
 	<parameter class="taxi_request_time" value="15" />
 
-	<comment key="Send Alert Success" text="发送警告成功"/>
-	<comment key="ServerQuickChatAlert001" text="&#37;name向您发出警告--请不要恶意抢夺他人战利品"/>
-	<comment key="ServerQuickChatAlert002" text="若您被警告多次，可能将会受到一定程度的惩罚"/>
-	<comment key="ServerQuickChatAlert003" text="&#37;name向您发出警告--请不要恶意击杀友军"/>
-	<comment key="ServerQuickChatAlert004" text="&#37;name向您发出警告--请不要恶意扰乱游戏秩序"/>
-	<comment key="skillcooldownhint" text="技能冷却还有&#37;time秒"/>
-	<comment key="quickchat1" text="谢谢！"/>
-	<comment key="quickchat1d" text="&#37;name>> 谢谢！"/>
-	<comment key="quickchat2" text="我的错"/>
-	<comment key="quickchat2d" text="&#37;name>> 我的错"/>
-	<comment key="quickchat3" text="小心！"/>
-	<comment key="quickchat3d" text="&#37;name>> 小心！"/>
-	<comment key="quickchat4" text="发现敌方载具！"/>
-	<comment key="quickchat4d" text="&#37;name>> 发现敌方载具！"/>
-	<comment key="quickchat5" text="敌方支援火力覆盖！"/>
-	<comment key="quickchat5d" text="&#37;name>> 敌方支援火力覆盖！"/>
-	<comment key="quickchat6" text="救救我！"/>
-	<comment key="quickchat6d" text="&#37;name>> 救救我！"/>
-	<comment key="quickchat7" text="已击毁敌方载具！"/>
-	<comment key="quickchat7d" text="&#37;name>> 已击毁敌方载具！"/>
-	<comment key="quickchat8" text="已窃取敌方载具！"/>
-	<comment key="quickchat8d" text="&#37;name>> 已窃取敌方载具！"/>
-	<comment key="quickchat9" text="注意枪线，勿伤友军！"/>
-	<comment key="quickchat9d" text="&#37;name>> 注意枪线，勿伤友军！"/>
-	<comment key="quickchat10" text="跟我来"/>
-	<comment key="quickchat10d" text="&#37;name>> 跟我来"/>
-	<comment key="quickchat11" text="寄了"/>
-	<comment key="quickchat11d" text="&#37;name>> 寄了"/>
-	<comment key="quickchat12" text="请加入群聊706234535交流"/>
-	<comment key="quickchat12d" text="&#37;name>> 请加入群聊706234535交流"/>
-	<comment key="quickchat13" text="欢迎"/>
-	<comment key="quickchat13d" text="&#37;name>> 欢迎"/>
-	<comment key="quickchat14" text="这个给你"/>
-	<comment key="quickchat14d" text="&#37;name>> 这个给你"/>
-	<comment key="quickchat15" text="让我来吧"/>
-	<comment key="quickchat15d" text="&#37;name>> 让我来吧"/>
-	<comment key="quickchat16" text="进攻！"/>
-	<comment key="quickchat16d" text="&#37;name>> 进攻！"/>
-	<comment key="quickchat17" text="坚守这里"/>
-	<comment key="quickchat17d" text="&#37;name>> 坚守这里"/>
-	<comment key="quickchat18" text="随我撤退"/>
-	<comment key="quickchat18d" text="&#37;name>> 随我撤退"/>
-	<comment key="quickchat19" text="请勿靠近我"/>
-	<comment key="quickchat19d" text="&#37;name>> 请勿靠近我"/>
-	<comment key="quickchat20" text="请保持隐匿"/>
-	<comment key="quickchat20d" text="&#37;name>> 请保持隐匿"/>
+	<comment key="Send Alert Success" text="Send Alert Success"/>
+    <comment key="ServerQuickChatAlert001" text="&#37;name Send a alert to you--Dont grab other's loot"/>
+    <comment key="ServerQuickChatAlert002" text="If you were alerted too much times, you will be punished"/>
+    <comment key="ServerQuickChatAlert003" text="&#37;name Send a alert to you--Dont Team Kill too much"/>
+    <comment key="ServerQuickChatAlert004" text="&#37;name Send a alert to you--Dont be a griefer in game"/>
+    <comment key="skillcooldownhint" text="Skill Cooldown has &#37;time seconds left"/>
+	<comment key="quickchat1" text="Thank you!"/>
+	<comment key="quickchat1d" text="&#37;name>> Thank you!"/>
+	<comment key="quickchat2" text="My bad"/>
+	<comment key="quickchat2d" text="&#37;name>> My bad"/>
+	<comment key="quickchat3" text="Danger!"/>
+	<comment key="quickchat3d" text="&#37;name>> Danger!"/>
+	<comment key="quickchat4" text="Spot enemy vehicle!"/>
+	<comment key="quickchat4d" text="&#37;name>> Spot enemy vehicle!"/>
+	<comment key="quickchat5" text="Enemy air-strike coming!"/>
+	<comment key="quickchat5d" text="&#37;name>> Enemy air-strike coming!"/>
+	<comment key="quickchat6" text="Help me!"/>
+	<comment key="quickchat6d" text="&#37;name>> Help me!"/>
+	<comment key="quickchat7" text="Enemy vehicle destoryed"/>
+	<comment key="quickchat7d" text="&#37;name>> Enemy vehicle destoryed"/>
+	<comment key="quickchat8" text="Enemy vehicle stolen"/>
+	<comment key="quickchat8d" text="&#37;name>> Enemy vehicle stolen"/>
+	<comment key="quickchat9" text="Be careful to not shoot friend!"/>
+	<comment key="quickchat9d" text="&#37;name>> Be careful to not shoot friend!"/>
+	<comment key="quickchat10" text="Follow me"/>
+	<comment key="quickchat10d" text="&#37;name>> Follow me"/>
+	<comment key="quickchat11" text="GG"/>
+	<comment key="quickchat11d" text="&#37;name>> GG"/>
+	<comment key="quickchat12" text="Add discord for Tutorial"/>
+	<comment key="quickchat12d" text="&#37;name>> Add discord for Tutorial"/>
+	<comment key="quickchat13" text="Welcome!"/>
+	<comment key="quickchat13d" text="&#37;name>> Welcome!"/>
+	<comment key="quickchat14" text="Here for you"/>
+	<comment key="quickchat14d" text="&#37;name>> Here for you"/>
+	<comment key="quickchat15" text="Let me do it."/>
+	<comment key="quickchat15d" text="&#37;name>> Let me do it."/>
+	<comment key="quickchat16" text="Attack!"/>
+	<comment key="quickchat16d" text="&#37;name>> Attack!"/>
+	<comment key="quickchat17" text="Stick to this place"/>
+	<comment key="quickchat17d" text="&#37;name>> Stick to this place"/>
+	<comment key="quickchat18" text="Retreat with me"/>
+	<comment key="quickchat18d" text="&#37;name>> Retreat with me"/>
+	<comment key="quickchat19" text="PLS Keep away from me"/>
+	<comment key="quickchat19d" text="&#37;name>> PLS Keep away from me"/>
+	<comment key="quickchat20" text="PLS Keep sneaking"/>
+	<comment key="quickchat20d" text="&#37;name>> PLS Keep sneaking"/>
 </character>
