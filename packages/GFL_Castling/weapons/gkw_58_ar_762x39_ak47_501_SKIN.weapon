@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<weapons>
 <weapon file="two_hands_ar.animation_base" key="gkw_ak47_501.weapon">
 
     <specification 
@@ -33,7 +34,7 @@
 
     <hud_icon filename="gkw_ak47_501.png" />
 
-
+    <next_in_chain key="gkw_ak47_501_skill.weapon" share_ammo="1" />
 
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet.projectile">
@@ -51,3 +52,56 @@
     
 
 </weapon>
+<weapon file="two_hands_ar.animation_base" key="gkw_ak47_501_skill.weapon">
+
+    <specification 
+		accuracy_factor="0.98" 
+		barrel_offset="0.4" 
+		 
+		class="0"
+        solt="0" 
+		magazine_size="30" 
+		name="AK-47-[Lord of War]-[Raid Focus]" 
+		projectile_speed="152.13" 
+		retrigger_time="0.1" 
+		suppressed="0" 
+		sustained_fire_diminish_rate="2" 
+		sustained_fire_grow_step="0.6" />
+
+
+  	<animation state_key="hold_casual"			animation_key="dancing, kazachok" />
+    <animation state_key="reload" animation_key="ARreload2.2" />
+    <animation key="reload" stance_key="prone" animation_key="ARreloadp2.2" />
+    <animation state_key="next_in_chain_in" animation_key="ARswitch1.2" />
+    <inventory  buy_price="7.0" sell_price="7.0" />	
+    <commonness value="0" in_stock="0" />
+
+
+    <sound key="fire" fileref="AK47_Fire_FromINS.wav" pitch_variety="0.05" volume="1" />
+    <sound key="magazine_out" fileref="AK47_mgz_out_FromINS.wav" volume="0.4" />
+    <sound key="magazine_in" fileref="AK47_mgz_in_FromINS.wav" volume="0.4" />
+    <sound key="cycle" fileref="AK47_cycle_FromINS.wav" volume="0.4" />
+    <sound class="impact" fileref="rifle_drop.wav" />    
+    <model filename="gkw_ar_ak47_501.xml" />
+
+    <hud_icon filename="gkw_ak47_501.png" />
+
+    <next_in_chain key="gkw_ak47_501.weapon" share_ammo="1" />
+
+    <weak_hand_hold offset="0.2" />
+    <projectile file="bullet.projectile">
+        <result class="hit"  kill_probability="1.6" kill_decay_start_time="0.881" kill_decay_end_time="1.469" />
+    </projectile>
+    
+    <stance state_key="running" accuracy="0.3" />
+    <stance state_key="walking" accuracy="0.7" />
+    <stance state_key="crouch_moving" accuracy="0.8" />
+    <stance state_key="prone_moving" accuracy="0.8" />
+
+    <stance state_key="standing" accuracy="0.85" />
+    <stance state_key="crouching" accuracy="0.9" />
+    <stance state_key="prone" accuracy="1" />
+    
+
+</weapon>
+</weapons>
