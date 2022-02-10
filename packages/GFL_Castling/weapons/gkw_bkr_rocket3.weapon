@@ -37,9 +37,7 @@
 
 
     <weak_hand_hold offset="0.4" />
-    <projectile file="bunker_rocket.projectile" >
-        <result class="blast" radius="3.0" damage="2.0" push="0.2" decal="1" faction_compare="not_equal"/>
-    </projectile>
-    
+    <projectile file="bunker_stun_grenade_spawner.projectile"/>
+       
     <ballistics near_far_distance="1000.0" speed_estimation_near="50.0" speed_estimation_far="50.0" max_speed="125.0" randomness="0.0" />
 </weapon>
