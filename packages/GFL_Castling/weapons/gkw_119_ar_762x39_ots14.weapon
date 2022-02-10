@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<weapons>
 <weapon file="two_hands_ar.animation_base" key="gkw_ots14.weapon">
 
     <specification 
@@ -22,7 +23,9 @@
     <animation state_key="reload" animation_key="ARreload1.8" />
 	<animation key="reload" stance_key="prone" animation_key="ARreloadp1.8" />
   	<animation state_key="hold_casual"			animation_key="dancing, kazachok" />
+    <animation state_key="next_in_chain_in" animation_key="ARswitch0.5" />
     <inventory  buy_price="9.0" sell_price="9.0" />	
+    <next_in_chain key="gkw_ots14_skill.weapon" share_ammo="1" />
 
 
 
@@ -50,6 +53,64 @@
     <stance state_key="standing" accuracy="0.9" />
     <stance state_key="crouching" accuracy="1.0" />
     <stance state_key="prone" accuracy="1.1" />
+    </weapon>
+
+
+    <weapon file="two_hands_ar.animation_base" key="gkw_ots14_skill.weapon">
+
+    <specification 
+        accuracy_factor="0.9" 
+        barrel_offset="0.4" 
+         
+        class="0"
+        solt="0" 
+        magazine_size="30" 
+        name="OTS14-[Damage Focus N]" 
+        projectile_speed="153.19" 
+        retrigger_time="0.085" 
+        suppressed="1" 
+        sustained_fire_diminish_rate="1.6" 
+        sustained_fire_grow_step="0.4" 
+        sight_range_modifier="1.2"/>
+
+
+
+
+    <animation state_key="reload" animation_key="ARreload2.2" />
+    <animation key="reload" stance_key="prone" animation_key="ARreloadp2.2" />
+    <animation state_key="hold_casual"          animation_key="dancing, kazachok" />
+    <animation state_key="next_in_chain_in" animation_key="ARswitch1.2" />
+    <inventory  buy_price="9.0" sell_price="9.0" /> 
+    <next_in_chain key="gkw_ots14.weapon" share_ammo="1" />
+    <commonness value="0" in_stock="0" can_respawn_with="1" />
+
+
+
+    <sound key="fire" fileref="ots14_fire_FromL4D2.wav" pitch_variety="0.05" volume="0.5" />
+    <sound key="magazine_out" fileref="ots14_mgz_out_FromL4D2.wav" volume="1" />
+    <sound key="magazine_in" fileref="ots14_mgz_in_FromL4D2.wav" volume="1" />
+    <sound key="cycle" fileref="ots14_cycle_FromL4D2.wav" volume="1" />
+    <sound class="impact" fileref="rifle_drop.wav" />    
+    <model filename="gkw_ar_ots14.xml" />
+
+    <hud_icon filename="gkw_ots14.png" />
+
+
+
+    <weak_hand_hold offset="0.2" />
+    <projectile file="bullet.projectile">
+        <result class="hit"  kill_probability="1.51" kill_decay_start_time="0.5" kill_decay_end_time="0.875" />
+    </projectile>
+    
+    <stance state_key="running" accuracy="0.5" />
+    <stance state_key="walking" accuracy="0.8" />
+    <stance state_key="crouch_moving" accuracy="0.9" />
+    <stance state_key="prone_moving" accuracy="0.95" />
+
+    <stance state_key="standing" accuracy="0.9" />
+    <stance state_key="crouching" accuracy="1.0" />
+    <stance state_key="prone" accuracy="1.1" />
     
 
 </weapon>
+</weapons>
