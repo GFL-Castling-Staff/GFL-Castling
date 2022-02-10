@@ -15,7 +15,6 @@
 	 suppressed="0" 
 	 name="Kamikaze" 
 	 class="3" 
-	 consume="1"
      projectile_speed="800.0"  
      barrel_offset="0.01"  
 	 projectiles_per_shot="1"
@@ -52,7 +51,7 @@
 
 
 	<weak_hand_hold offset="0.3" />
-	<projectile key="cl_s.projectile" />
+	<projectile file="cl_s.projectile" />
 
   <ballistics
 	 near_far_distance="0.0001"

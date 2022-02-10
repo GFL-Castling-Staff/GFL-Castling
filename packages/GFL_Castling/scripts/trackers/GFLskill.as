@@ -298,8 +298,18 @@ class GFLskill : Tracker {
                         " instance_key='cl_1.projectile'" +
                         " position='" + Pos_40mm.toString() + "'"+
 				        " character_id='" + characterId + "' />";
+				    string c2 = 
+                        "<command class='create_instance'" +
+                        " faction_id='"+ player.getIntAttribute("faction_id") +"'" +
+                        " instance_class='grenade'" +
+                        " instance_key='cl_e.projectile'" +
+                        " position='" + Pos_40mm.toString() + "'"+
+				        " character_id='" + characterId + "' />";
+					m_metagame.getComms().send(c2);
                     m_metagame.getComms().send(c1);
 					m_metagame.getComms().send(c);
+					string command = "<command class='update_character' id='" + characterId + "' dead='1' />";
+					m_metagame.getComms().send(command);
 				}
 			}
 		}
