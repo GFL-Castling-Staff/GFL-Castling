@@ -17,7 +17,19 @@ class GFLskill : Tracker {
 	GFLskill(GameMode@ metagame) {
 		@m_metagame = @metagame;
 	}
-
+	protected array<string> GKcallList={
+		"rubber_airboat.call",
+		"gk_medic.call",
+		"gk_rocket_fairy.call",
+		"gk_airstrike_fairy.call",
+		"sg1hg1mg2.call",
+		"hvy_landing.call",
+		"gk_rescue_fairy.call",
+		"gk_repair_fairy.call",
+		"target.call",
+		"manticore.call",
+		"manticore2.call"
+	};
     protected array<XM8tracker@> XM8track;
 	protected array<HK416_tracker@> HK416_track;
 	protected array<Vector_tracker@> Vector_track;
@@ -26,7 +38,23 @@ class GFLskill : Tracker {
 	protected void handleResultEvent(const XmlElement@ event) {
 	
 		//checking if the event was triggered by a rangefinder notify_script
-		string EventKeyGet = event.getStringAttribute("key");	
+		string EventKeyGet = event.getStringAttribute("key");
+		if (EventKeyGet == "aa_spawn"){
+			if(getFactionConfigs()[0].getName()=="GK"){
+				XmlElement command("command");
+				command.setStringAttribute("class", "faction_resources");
+				command.setIntAttribute("faction_id", 0);
+				addFactionResourceElements(command, "call", GKcallList, false);
+			}
+		}
+		if (EventKeyGet == "aa_destroy"){
+			if(getFactionConfigs()[0].getName()=="GK"){
+				XmlElement command("command");
+				command.setStringAttribute("class", "faction_resources");
+				command.setIntAttribute("faction_id", 0);
+				addFactionResourceElements(command, "call", GKcallList, true);
+			}
+		}		
 		if (EventKeyGet == "RO635_skill") {
 			int characterId = event.getIntAttribute("character_id");
 			const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
