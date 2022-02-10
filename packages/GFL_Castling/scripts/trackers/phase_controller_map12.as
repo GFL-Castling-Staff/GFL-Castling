@@ -179,8 +179,7 @@ class Phase2 : Phase {
 		bool found = false;
 		for (uint i = 0; i < destroyTargets.size(); ++i) {
 			string key = destroyTargets[i];
-			if (key == "radio_jammer.vehicle"
-				 || $key == "aa_emplacement.vehicle") {
+			if (key == "radio_jammer.vehicle" || key == "aa_emplacement.vehicle") {
 				// one of these still exist, can't end yet
 				found = true;
 				break;
