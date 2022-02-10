@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<projectile class="grenade" name="" slot="1" time_to_live="0.10" pulldown_in_air="-60">
+<projectile class="grenade" name="" slot="1" pulldown_in_air="-60" key="cl.projectile">
     <result class="blast" radius="10" damage="20" decal="0" push="5.0" character_state="death" make_vehicle_hit_sound="0" faction_compare="not_equal" />
-    <trigger class="time" time_to_live="0">
-        <collider class="terrain" enabled="1" />
-        <collider class="static_object" enabled="1" />
-        <collider class="vehicle" enabled="1" />
-        <collider class="character" enabled="1" />
-    </trigger>
+    <trigger class="time" time_to_live="0.0" />
+
     <rotation class="motion" />
 
     <model />
