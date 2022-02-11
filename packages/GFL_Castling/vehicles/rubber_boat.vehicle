@@ -5,8 +5,9 @@
 	character_leave_request_mode="friendly" >
 	
 	<tag name="vehicle" />
-	<tire_set offset="0.85 0.0 1.55" radius="0.4" />
-	<tire_set offset="0.85 0.0 -1.55" radius="0.4" />
+	<tire_set offset="0.5 0.0 1.55" radius="0.4" />
+	<tire_set offset="0.8 0.0 0" radius="0.4" />
+	<tire_set offset="0.8 0.0 -1.55" radius="0.4" />
 
 	<control 
 	max_speed="40.0" 
