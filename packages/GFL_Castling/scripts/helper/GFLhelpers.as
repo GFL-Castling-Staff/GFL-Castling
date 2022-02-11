@@ -86,6 +86,11 @@ void GiveRP(const Metagame@ metagame,int character_id,int rp){
     metagame.getComms().send(c);
 }
 
+void GiveXP(const Metagame@ metagame,int character_id,int rp){
+	string c = "<command class='xp_reward' character_id='" + character_id + "' reward='" + rp + "' />";
+    metagame.getComms().send(c);
+}
+
 void addItemInBackpack(Metagame@ metagame, int characterId, string ItemType, string ItemKey) {
 	string c = 
 		"<command class='update_inventory' character_id='" + characterId + "' container_type_class='backpack'>" + 
