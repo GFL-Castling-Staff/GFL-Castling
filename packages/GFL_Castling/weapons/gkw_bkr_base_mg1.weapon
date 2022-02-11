@@ -9,11 +9,12 @@
   sustained_fire_diminish_rate="1.5" 
   magazine_size="-1" 
   suppressed="0" 
-  name="Bunker base MG1" 
+  name="Bunker MG2" 
   class="0" 
   projectile_speed="180" 
   spread_range="0.25"
-  sight_range_modifier="1.75"
+  sight_range_modifier="1.5"
+  ai_sight_range_modifier="1.2"
   can_shoot_standing="0" 
 	can_shoot_crouching="0"
 	can_shoot_prone="1"
@@ -42,7 +43,14 @@
 
 
     <projectile file="bullet.projectile">
-        <result class="hit" kill_probability="1.70" kill_decay_start_time="1.967" kill_decay_end_time="3.279" />
+        <result class="blast"  damage="0.51" radius="2.5" decal="1" push="0.3" character_state="death" faction_compare="not_equal" />
+        <trigger class="impact" />
+        <effect class="result" key="terrain" ref="BigBurst" use_surface_color="1" />
+        <effect class="result" key="terrain" ref="SmokeTop" post_processing="1" />
+        <effect class="result" key="terrain" ref="Smoke" post_processing="1" />
+        <effect class="result" key="terrain" ref="Shine" lighting="0" />
+        <effect class="result" key="terrain" ref="Godray" lighting="0" />
+        <effect class="result" key="terrain" ref="ShadowSmoke" shadow="1" />
     </projectile>
        <stance state_key="running" accuracy="0.6" />
 

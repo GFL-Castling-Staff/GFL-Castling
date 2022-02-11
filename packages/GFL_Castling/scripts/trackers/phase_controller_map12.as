@@ -179,8 +179,7 @@ class Phase2 : Phase {
 		bool found = false;
 		for (uint i = 0; i < destroyTargets.size(); ++i) {
 			string key = destroyTargets[i];
-			if (key == "radio_jammer.vehicle"
-				/* || $key == "aa_emplacement.vehicle"*/) {
+			if (key == "radio_jammer.vehicle" || key == "aa_emplacement.vehicle") {
 				// one of these still exist, can't end yet
 				found = true;
 				break;
@@ -441,7 +440,7 @@ class PhaseControllerMap12 : PhaseController {
 
 		m_currentPhaseIndex = 0;
 
-		array<string> targets = {"radio_jammer.vehicle", /*"aa_emplacement.vehicle",*/ "radar_tower.vehicle"};
+		array<string> targets = {"radio_jammer.vehicle", "aa_emplacement.vehicle", "radar_tower.vehicle"};
 		m_destroyTargets = targets;
 	}
 

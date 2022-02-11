@@ -17,7 +17,19 @@ class GFLskill : Tracker {
 	GFLskill(GameMode@ metagame) {
 		@m_metagame = @metagame;
 	}
-
+	protected array<string> GKcallList={
+		"rubber_airboat.call",
+		"gk_medic.call",
+		"gk_rocket_fairy.call",
+		"gk_airstrike_fairy.call",
+		"sg1hg1mg2.call",
+		"hvy_landing.call",
+		"gk_rescue_fairy.call",
+		"gk_repair_fairy.call",
+		"target.call",
+		"manticore.call",
+		"manticore2.call"
+	};
     protected array<XM8tracker@> XM8track;
 	protected array<HK416_tracker@> HK416_track;
 	protected array<Vector_tracker@> Vector_track;
@@ -26,7 +38,27 @@ class GFLskill : Tracker {
 	protected void handleResultEvent(const XmlElement@ event) {
 	
 		//checking if the event was triggered by a rangefinder notify_script
-		string EventKeyGet = event.getStringAttribute("key");	
+		string EventKeyGet = event.getStringAttribute("key");
+		if (EventKeyGet == "aa_spawn"){
+			const XmlElement@ playerFaction = getFactionInfo(m_metagame,0);
+			if(playerFaction.getStringAttribute("name")=="G&K PMC"){
+				XmlElement command("command");
+				command.setStringAttribute("class", "faction_resources");
+				command.setIntAttribute("faction_id", 0);
+				addFactionResourceElements(command, "call", GKcallList, false);
+				m_metagame.getComms().send(command);
+			}
+		}
+		if (EventKeyGet == "aa_destroy"){
+			const XmlElement@ playerFaction = getFactionInfo(m_metagame,0);
+			if(playerFaction.getStringAttribute("name")=="G&K PMC"){
+				XmlElement command("command");
+				command.setStringAttribute("class", "faction_resources");
+				command.setIntAttribute("faction_id", 0);
+				addFactionResourceElements(command, "call", GKcallList, true);
+				m_metagame.getComms().send(command);
+			}
+		}		
 		if (EventKeyGet == "RO635_skill") {
 			int characterId = event.getIntAttribute("character_id");
 			const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
@@ -272,6 +304,44 @@ class GFLskill : Tracker {
                         " position='" + Pos_40mm.toString() + "'"+
 				        " character_id='" + characterId + "' />";
 					m_metagame.getComms().send(c);
+				}
+			}
+		}
+		if (EventKeyGet == "banzai100"){
+			int characterId = event.getIntAttribute("character_id");
+			const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+			if (character !is null) {
+				int playerId = character.getIntAttribute("player_id");
+				const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+				
+				if (player !is null) {
+					Vector3 Pos_40mm = stringToVector3(event.getStringAttribute("position"));
+                    string c = 
+                        "<command class='create_instance'" +
+                        " faction_id='"+ player.getIntAttribute("faction_id") +"'" +
+                        " instance_class='grenade'" +
+                        " instance_key='cl.projectile'" +
+                        " position='" + Pos_40mm.toString() + "'"+
+				        " character_id='" + characterId + "' />";
+				    string c1 = 
+                        "<command class='create_instance'" +
+                        " faction_id='"+ player.getIntAttribute("faction_id") +"'" +
+                        " instance_class='grenade'" +
+                        " instance_key='cl_1.projectile'" +
+                        " position='" + Pos_40mm.toString() + "'"+
+				        " character_id='" + characterId + "' />";
+				    string c2 = 
+                        "<command class='create_instance'" +
+                        " faction_id='"+ player.getIntAttribute("faction_id") +"'" +
+                        " instance_class='grenade'" +
+                        " instance_key='cl_e.projectile'" +
+                        " position='" + Pos_40mm.toString() + "'"+
+				        " character_id='" + characterId + "' />";
+					m_metagame.getComms().send(c2);
+                    m_metagame.getComms().send(c1);
+					m_metagame.getComms().send(c);
+					string command = "<command class='update_character' id='" + characterId + "' dead='1' />";
+					m_metagame.getComms().send(command);
 				}
 			}
 		}

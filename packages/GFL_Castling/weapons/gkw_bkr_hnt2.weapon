@@ -12,7 +12,7 @@
     suppressed="0" 
     name="Bunker Hornet" 
     class="0" 
-    projectile_speed="120.0" 
+    projectile_speed="2000.0" 
     slot="2" 
     barrel_offset_3d="0.4 0.1 0.4"
     projectiles_per_shot="1"
@@ -24,10 +24,17 @@
     <commonness value="0.0" />
 
 <!--     <ballistics curve_height="12.0" near_far_distance="0.0" speed_estimation_near="0.0" speed_estimation_far="28.0" max_speed="50.0" randomness="0.0" tweak_factor="1.1" /> -->
-    <ballistics curve_height="10.0" near_far_distance="0.0" speed_estimation_near="0.0" speed_estimation_far="58.0" max_speed="42.0" randomness="0.0" tweak_factor="1.2" />
-    <projectile file="hornet.projectile" >
-		<result class="blast" radius="5.6" damage="12.0" push="0.5" decal="1" faction_compare="not_equal"/>
-    </projectile>
+     <ballistics
+     near_far_distance="0"
+     speed_estimation_near="75.0"
+     speed_estimation_far="75.0"
+     max_speed="200"
+     randomness="0.0"
+     curve_height="6"
+     tweak_factor="2.5"
+    />
+	<weak_hand_hold offset="0.2" />
+	<projectile file="bunker_hornet.projectile" />
     
 	<!-- Scoring for target priority. Distance is between 0 and 1 based on range; direction is between 0 and 1 based on whether its near the barrel; squad_command is between 0 and on based on how close to the player's command order is, and base_score is a weight.. -->
 	<!-- These all add together and the highest 'score' is the new target, targets are rescanned every 2.5 seconds to see if a new higher-score target is in sight-range. -->

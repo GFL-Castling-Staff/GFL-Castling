@@ -15,7 +15,6 @@
 	 suppressed="0" 
 	 name="Kamikaze" 
 	 class="3" 
-	 consume="1"
      projectile_speed="800.0"  
      barrel_offset="0.01"  
 	 projectiles_per_shot="1"
@@ -44,7 +43,7 @@
 	<sound key="cycle" fileref="portable_mortar_reload.wav" volume="0.7"/>
 	<sound class="impact" fileref="rifle_drop.wav" />
 	
-	<inventory  buy_price="30.0" sell_price="30.0" />
+	<inventory  buy_price="100.0" sell_price="100.0" />
 	<commonness value="0.00001"  />
 	<model filename="gkw_cl_From_SAIWA.xml" />
 	<hud_icon filename="type4.png" />
@@ -52,7 +51,7 @@
 
 
 	<weak_hand_hold offset="0.3" />
-	<projectile file="cl.projectile" />
+	<projectile file="cl_s.projectile" />
 
   <ballistics
 	 near_far_distance="0.0001"
