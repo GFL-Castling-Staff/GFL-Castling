@@ -18,12 +18,13 @@ class GFLskill : Tracker {
 		@m_metagame = @metagame;
 	}
 	protected array<string> GKcallList={
-		"rubber_airboat.call",
-		"gk_medic.call",
 		"gk_rocket_fairy.call",
 		"gk_airstrike_fairy.call",
+		"gk_medic.call",
 		"sg1hg1mg2.call",
 		"hvy_landing.call",
+		"humvee1.call",
+		"humvee.call",
 		"gk_rescue_fairy.call",
 		"gk_repair_fairy.call",
 		"target.call",
