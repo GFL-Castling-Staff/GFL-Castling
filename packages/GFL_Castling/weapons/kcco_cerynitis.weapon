@@ -44,7 +44,7 @@
     
     <!-- <weak_hand_hold offset="0.1" /> -->
     <projectile file="bullet_kcco.projectile">
-        <result class="blast" radius="1.2" damage="1.2" decal="1" push="0.05" character_state="death" faction_compare="not_equal"/>
+        <result class="blast" radius="1.2" damage="2.0" decal="1" push="0.05" character_state="death" faction_compare="not_equal"/>
     </projectile>
     <!-- state modifiers for weapons are connected to shield impact events -->
     <!-- <shield offset="0 0 0.2" extent="0.4 1.6 0.6" /> -->
