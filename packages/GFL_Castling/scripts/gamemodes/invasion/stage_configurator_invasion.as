@@ -90,39 +90,15 @@ class StageConfiguratorInvasion : StageConfigurator {
 	// ------------------------------------------------------------------------------------------------
 	protected void addRandomSpecialCrates(Stage@ stage, int minCount, int maxCount) {
 		array<ScoredResource@> resources = {
-			ScoredResource("special_crate1.vehicle", "vehicle", 100.0f),           // m4
-			ScoredResource("special_crate2.vehicle", "vehicle", 80.0f),           // p90
-			ScoredResource("special_crate3.vehicle", "vehicle", 80.0f),           // aks
-			ScoredResource("special_crate4.vehicle", "vehicle", 80.0f),           // Stoner
-			ScoredResource("special_crate5.vehicle", "vehicle", 80.0f),           // neo
-			ScoredResource("special_crate6.vehicle", "vehicle", 70.0f),           // aa12
-			ScoredResource("special_crate7.vehicle", "vehicle", 40.0f),           // chain
-			ScoredResource("special_crate8.vehicle", "vehicle", 40.0f),           // m107
-			ScoredResource("special_crate9.vehicle", "vehicle", 50.0f),           // apr
-			ScoredResource("special_crate10.vehicle", "vehicle", 30.0f),          // ares
-			ScoredResource("special_crate11.vehicle", "vehicle", 30.0f),          // kriss
-			ScoredResource("special_crate12.vehicle", "vehicle", 40.0f),          // m712
-			ScoredResource("special_crate13.vehicle", "vehicle", 40.0f),          // jack
-			ScoredResource("special_crate14.vehicle", "vehicle", 10.0f),          // m60
-			ScoredResource("special_crate15.vehicle", "vehicle", 30.0f),          // paw
-			ScoredResource("special_crate16.vehicle", "vehicle", 5.0f),          // honey
-			ScoredResource("special_crate17.vehicle", "vehicle", 10.0f),          // flame
-			ScoredResource("special_crate18.vehicle", "vehicle", 1.0f),          // milk
-			ScoredResource("special_crate19.vehicle", "vehicle", 1.0f),          // l39
-			ScoredResource("special_crate20.vehicle", "vehicle", 1.0f),           // mg42
-			ScoredResource("special_crate31.vehicle", "vehicle", 3.0f),          // cb2
-			ScoredResource("special_crate32.vehicle", "vehicle", 5.0f),          // stoner62
-			ScoredResource("special_crate33.vehicle", "vehicle", 40.0f),          // camo_vest
-			ScoredResource("special_crate34.vehicle", "vehicle", 30.0f),          // deagle
-			ScoredResource("special_crate35.vehicle", "vehicle", 100.0f),          // banana peel
-			ScoredResource("special_crate36.vehicle", "vehicle", 15.0f),          // mp7
-			ScoredResource("special_crate37.vehicle", "vehicle", 60.0f),          // goldbar
-			ScoredResource("special_crate38.vehicle", "vehicle", 50.0f),          // medikit
-			ScoredResource("special_crate39.vehicle", "vehicle", 100.0f),          // resmini
-			ScoredResource("special_crate41.vehicle", "vehicle", 5.0f),           // cb3 
-			ScoredResource("special_crate42.vehicle", "vehicle", 4.0f)           // cb4 
-                             
-      
+			ScoredResource("gflc_crate1.vehicle", "vehicle", 50.0f),           // cgb
+			ScoredResource("gflc_crate2.vehicle", "vehicle", 100.0f),           // gift150
+			ScoredResource("gflc_crate3.vehicle", "vehicle", 100.0f),           // gift150
+			ScoredResource("gflc_crate4.vehicle", "vehicle", 30.0f),           // gift1000
+			ScoredResource("gflc_crate5.vehicle", "vehicle", 50.0f),           // 快修
+			ScoredResource("gflc_crate6.vehicle", "vehicle", 20.0f),           // 超导
+			ScoredResource("gflc_crate7.vehicle", "vehicle", 2.0f),           // 火神
+			ScoredResource("gflc_crate8.vehicle", "vehicle", 15.0f),           // fnc的零食盒子
+			ScoredResource("gflc_crate9.vehicle", "vehicle", 5.0f)           // 我自杀算了
 		};
 		int count = rand(minCount, maxCount);
 		stage.addTracker(SpawnAtNode(m_metagame, resources, "random_crate", 0, count));
@@ -131,19 +107,8 @@ class StageConfiguratorInvasion : StageConfigurator {
 	// ------------------------------------------------------------------------------------------------
 	protected void addFixedSpecialCrates(Stage@ stage) {
 		array<ScoredResource@> resources = {
-			ScoredResource("special_crate21.vehicle", "vehicle", 50.0f),          // xm25
-			ScoredResource("special_crate22.vehicle", "vehicle", 50.0f),          // musket
-			ScoredResource("special_crate23.vehicle", "vehicle", 40.0f),          // aafrag
-			ScoredResource("special_crate24.vehicle", "vehicle", 30.0f),          // Deagle
-			ScoredResource("special_crate25.vehicle", "vehicle", 100.0f),          // gb1
-			ScoredResource("special_crate26.vehicle", "vehicle", 30.0f),          // gb2
-			ScoredResource("special_crate27.vehicle", "vehicle", 10.0f),          // gb3
-			ScoredResource("special_crate28.vehicle", "vehicle", 5.0f),          // cb1
-			ScoredResource("special_crate29.vehicle", "vehicle", 100.0f),          // resmini
-			ScoredResource("special_crate30.vehicle", "vehicle", 100.0f),           // resgl
-      ScoredResource("special_crate35.vehicle", "vehicle", 100.0f),          // banana peel
-      ScoredResource("special_crate19.vehicle", "vehicle", 5.0f),          // l39
-      ScoredResource("special_crate32.vehicle", "vehicle", 5.0f)          // stoner62
+			ScoredResource("gflc_crate1.vehicle", "vehicle", 50.0f),          // cgb
+			ScoredResource("gflc_crate2.vehicle", "vehicle", 100.0f)          // gift150
 		};
 		stage.addTracker(SpawnAtNode(m_metagame, resources, "fixed_crate", 0, 1000));
 	}
@@ -306,8 +271,8 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 		stage.m_finalBattle = true;
 
-		stage.m_minRandomCrates = 0; 
-		stage.m_maxRandomCrates = 0;
+		stage.m_minRandomCrates = 1; 
+		stage.m_maxRandomCrates = 3;
 
 		{
 			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0));                                                  
@@ -581,8 +546,8 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.m_playerAiReduction = 0;                                            // was 3 (test4)  
 		stage.m_soldierCapacityModel = "constant";                                // was set to default in 1.65
 		
-		stage.m_minRandomCrates = 0; 
-		stage.m_maxRandomCrates = 0;
+		stage.m_minRandomCrates = 1; 
+		stage.m_maxRandomCrates = 3;
          
 		stage.m_defenseWinTime = 600;     // was 400 in 1.65 old koth mode
 		stage.m_defenseWinTimeMode = "custom";
