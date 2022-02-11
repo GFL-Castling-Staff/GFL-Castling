@@ -40,19 +40,23 @@ class GFLskill : Tracker {
 		//checking if the event was triggered by a rangefinder notify_script
 		string EventKeyGet = event.getStringAttribute("key");
 		if (EventKeyGet == "aa_spawn"){
-			if(getFactionInfo(m_metagame,0).getStringAttribute("name")=="G&K PMC"){
+			const XmlElement@ playerFaction = getFactionInfo(m_metagame,0);
+			if(playerFaction.getStringAttribute("name")=="G&K PMC"){
 				XmlElement command("command");
 				command.setStringAttribute("class", "faction_resources");
 				command.setIntAttribute("faction_id", 0);
 				addFactionResourceElements(command, "call", GKcallList, false);
+				m_metagame.getComms().send(command);
 			}
 		}
 		if (EventKeyGet == "aa_destroy"){
-			if(getFactionInfo(m_metagame,0).getStringAttribute("name")=="G&K PMC"){
+			const XmlElement@ playerFaction = getFactionInfo(m_metagame,0);
+			if(playerFaction.getStringAttribute("name")=="G&K PMC"){
 				XmlElement command("command");
 				command.setStringAttribute("class", "faction_resources");
 				command.setIntAttribute("faction_id", 0);
 				addFactionResourceElements(command, "call", GKcallList, true);
+				m_metagame.getComms().send(command);
 			}
 		}		
 		if (EventKeyGet == "RO635_skill") {
