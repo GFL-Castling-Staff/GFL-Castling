@@ -70,32 +70,34 @@ class kill_event : Tracker {
             if(targetVestKey.find(VestKey)> -1){
                 if(VestKey=="parw_teal.weapon" || VestKey=="sfw_agent.weapon" || VestKey=="sfw_m16a1.weapon"){
                     GiveRP(m_metagame,characterId,150);
+                    GiveXP(m_metagame,characterId,0.025);
                     return;
                 }
                 
                 if(VestKey=="sfw_manticore.weapon" || VestKey=="kccow_hydra.weapon" || VestKey=="kcco_teslatrooper.weapon"){
                     GiveRP(m_metagame,characterId,80);
+                    GiveXP(m_metagame,characterId,0.005);
                     //_log("giveitmoney");
                     return;
                 }
                 if(VestKey=="parw_doppelsoldner_rocket.weapon"){
                     GiveRP(m_metagame,characterId,70);
-                    //_log("giveitmoney");
+                    GiveXP(m_metagame,characterId,0.004);
                     return;
                 }
                 if(VestKey=="sfw_ripper_swap.weapon" || VestKey=="sfw_striker_swap.weapon" || VestKey=="sfw_jaeger_swap.weapon" || VestKey=="sfw_vespid_swap.weapon"){
                     GiveRP(m_metagame,characterId,18);
-                    //_log("giveitmoney");
+                    GiveXP(m_metagame,characterId,0.001);
                     return;
                 }
                 if(VestKey=="sfw_dragoon.weapon" || VestKey=="kccow_cerynitis.weapon" || VestKey=="sfw_nemeum.weapon"){
                     GiveRP(m_metagame,characterId,30);
-                    //_log("giveitmoney");
+                    GiveXP(m_metagame,characterId,0.002);
                     return;
                 }
                 else{
                     GiveRP(m_metagame,characterId,50);
-                    //_log("giveitmoney");
+                    GiveXP(m_metagame,characterId,0.003);
                     return;
                 }
             }
