@@ -370,19 +370,30 @@ class MapRotatorInvasion : MapRotator {
 					// add a little bit of delay to not intervene with some early journal notes
 					m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 2.5, 0, "", a));
 
-					// commander says something
-					m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 2.0, 0, "map start with 1 base, part 1", a));
-					m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 4.0, 0, "map start with 1 base, part 2", a));
-					m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 5.0, 0, "map start with 1 base, part 3", a));
+					if (stage.m_mapInfo.m_name == "Zone Attack") {
+						m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 2.0, 0, stage.m_mapInfo.m_name+" start with 1 base, part 1", a));
+						m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 3.0, 0, stage.m_mapInfo.m_name+" start with 1 base, part 2", a));
+						m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 3.0, 0, stage.m_mapInfo.m_name+" start with 1 base, part 3", a));
+						m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 3.0, 0, stage.m_mapInfo.m_name+" start with 1 base, part 4", a));
+						m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 3.0, 0, stage.m_mapInfo.m_name+" start with 1 base, part 5", a));
+						m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 3.0, 0, stage.m_mapInfo.m_name+" start with 1 base, part 6", a));
+					}
 
-					// capture map?
-					if (stage.isCapture()) {
-						m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 6.0, 0, "map start with 1 base, capture", a));
+					else{
+						// commander says something
+						m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 2.0, 0, "map start with 1 base, part 1", a));
+						m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 4.0, 0, "map start with 1 base, part 2", a));
+						m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 5.0, 0, "map start with 1 base, part 3", a));
 
-					} else if (stage.isKoth()) {
-						// koth map?
-						a["%target_base_name"] = stage.m_kothTargetBase;
-						m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 6.0, 0, "map start with 1 base, koth", a));
+						// capture map?
+						if (stage.isCapture()) {
+							m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 6.0, 0, "map start with 1 base, capture", a));
+
+						} else if (stage.isKoth()) {
+							// koth map?
+							a["%target_base_name"] = stage.m_kothTargetBase;
+							m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 6.0, 0, "map start with 1 base, koth", a));
+						}
 					}
 
 				} else {
@@ -451,17 +462,17 @@ class MapRotatorInvasion : MapRotator {
 				// nasty we're doing it here, but here goes
 				if (stage.m_mapInfo.m_name == "Final mission I") {
 					m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 2.0, 0, stage.m_mapInfo.m_name+" start with 1 base, part 1", a));
-					m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 5.0, 0, stage.m_mapInfo.m_name+" start with 1 base, part 2", a));
-					m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 5.0, 0, stage.m_mapInfo.m_name+" start with 1 base, part 3", a));
-					m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 5.0, 0, stage.m_mapInfo.m_name+" start with 1 base, part 4", a));
-					m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 5.0, 0, stage.m_mapInfo.m_name+" start with 1 base, part 5", a, 2.0, "objective_priority.wav"));
+					m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 3.0, 0, stage.m_mapInfo.m_name+" start with 1 base, part 2", a));
+					m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 3.0, 0, stage.m_mapInfo.m_name+" start with 1 base, part 3", a));
+					m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 3.0, 0, stage.m_mapInfo.m_name+" start with 1 base, part 4", a));
+					m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 3.0, 0, stage.m_mapInfo.m_name+" start with 1 base, part 5", a, 2.0, "objective_priority.wav"));
 				}				
 				if (stage.m_mapInfo.m_name == "Shock Zone") {
 					m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 2.0, 0, stage.m_mapInfo.m_name+" start with 1 base, part 1", a, 2.0, "objective_priority.wav"));
-					m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 5.0, 0, stage.m_mapInfo.m_name+" start with 1 base, part 2", a, 2.0, "objective_priority.wav"));
-					m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 5.0, 0, stage.m_mapInfo.m_name+" start with 1 base, part 3", a, 2.0, "objective_priority.wav"));
-					m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 5.0, 0, stage.m_mapInfo.m_name+" start with 1 base, part 4", a, 2.0, "objective_priority.wav"));
-					m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 5.0, 0, stage.m_mapInfo.m_name+" start with 1 base, part 5", a, 2.0, "objective_priority.wav"));
+					m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 3.0, 0, stage.m_mapInfo.m_name+" start with 1 base, part 2", a, 2.0, "objective_priority.wav"));
+					m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 3.0, 0, stage.m_mapInfo.m_name+" start with 1 base, part 3", a, 2.0, "objective_priority.wav"));
+					m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 3.0, 0, stage.m_mapInfo.m_name+" start with 1 base, part 4", a, 2.0, "objective_priority.wav"));
+					m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 3.0, 0, stage.m_mapInfo.m_name+" start with 1 base, part 5", a, 2.0, "objective_priority.wav"));
 				} else {
 					m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 2.0, 0, stage.m_mapInfo.m_name+" start with 1 base, part 1", a));
 					m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 5.0, 0, stage.m_mapInfo.m_name+" start with 1 base, part 2", a));
@@ -563,33 +574,47 @@ class MapRotatorInvasion : MapRotator {
 
 			// commander says something
 			if (enemyNames.size() > 0) {
-				// if there are enemies, report it
-				{
+				if (stage.m_mapInfo.m_name == "Zone Attack"){
 					dictionary a = {
-						{"%map_name", regionName}, 
+						{"%map_name", regionName},
 						{"%faction_name", enemyNames[0]}
 					};
-					m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 3.0, 0, "map advance, held by enemy", a));
+					m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 3.0, 0, stage.m_mapInfo.m_name+" advance, held by enemy, part 1", a));
+					m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 5.0, 0, stage.m_mapInfo.m_name+" advance, held by enemy, part 2", a));
+					m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 5.0, 0, stage.m_mapInfo.m_name+" advance, held by enemy, part 3", a));
+					m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 5.0, 0, stage.m_mapInfo.m_name+" advance, held by enemy, part 4", a));
+					m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 5.0, 0, stage.m_mapInfo.m_name+" advance, held by enemy, part 5", a));
+
+				}else{
+					// if there are enemies, report it
+					{
+						dictionary a = {
+							{"%map_name", regionName}, 
+							{"%faction_name", enemyNames[0]}
+						};
+						m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 3.0, 0, "map advance, held by enemy", a));
+					}
+
+					if (enemyNames.size() > 1) {
+						dictionary a = {
+							{"%faction_name", enemyNames[1]}
+						};
+						m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 2.0, 0, "map advance, another enemy present", a));
+					}
+
+					if (stage.m_factions[0].m_ownedBases.size() <= 1) {
+						// we haven't been there yet, basically
+						m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 2.0, 0, "map advance, new map"));
+
+					} else {
+						// we already own some bases
+						dictionary a = {
+							{"%number_of_bases", formatUInt(stage.m_factions[0].m_ownedBases.size())}
+						};
+						m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 1.0, 0, "map advance, been there before", a));
+					}
 				}
 
-				if (enemyNames.size() > 1) {
-					dictionary a = {
-						{"%faction_name", enemyNames[1]}
-					};
-					m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 2.0, 0, "map advance, another enemy present", a));
-				}
-
-				if (stage.m_factions[0].m_ownedBases.size() <= 1) {
-					// we haven't been there yet, basically
-					m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 2.0, 0, "map advance, new map"));
-
-				} else {
-					// we already own some bases
-					dictionary a = {
-						{"%number_of_bases", formatUInt(stage.m_factions[0].m_ownedBases.size())}
-					};
-					m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 1.0, 0, "map advance, been there before", a));
-				}
 
 			} else {
 				// just friendlies in this map
@@ -616,7 +641,8 @@ class MapRotatorInvasion : MapRotator {
 					m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 5.0, 0, stage.m_mapInfo.m_name+" advance, held by enemy, part 3", a));
 					m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 5.0, 0, stage.m_mapInfo.m_name+" advance, held by enemy, part 4", a));
 					if(stage.m_mapInfo.m_name=="Shock Zone"){
-						m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 5.0, 0, stage.m_mapInfo.m_name+" advance, held by enemy, part 5", a, 2.0, "objective_priority.wav"));
+						m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 5.0, 0, stage.m_mapInfo.m_name+" advance, held by enemy, part 5", a));
+						m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 5.0, 0, stage.m_mapInfo.m_name+" advance, held by enemy, part 6", a, 2.0, "objective_priority.wav"));
 					}
 					else{
 						m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 5.0, 0, stage.m_mapInfo.m_name+" advance, held by enemy, part 5", a));
