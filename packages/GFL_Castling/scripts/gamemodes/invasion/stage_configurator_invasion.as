@@ -147,7 +147,6 @@ class StageConfiguratorInvasion : StageConfigurator {
 	//addStage(setupStage102());	  // mapftg
 	addStage(setupStage1());          // map2
     addStage(setupStage9());          // map9
-    // addStage(setupStage16());         // map8_2
     addStage(setupStage4());          // map7
     addStage(setupStage15());         // map1_2
     addStage(setupStage12());         // map14
@@ -166,6 +165,7 @@ class StageConfiguratorInvasion : StageConfigurator {
     addStage(setupStage6());          // map5
     addStage(setupFinalStage2());     // map12
     addStage(setupStage11());         // map13
+	addStage(setupStage16());         // map8_2
 	}
 
 	// --------------------------------------------
