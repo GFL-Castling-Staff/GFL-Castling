@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <carry_items>
     <carry_item file="exo.base_carry_item" key="exo_x_t3.carry_item" name="Lightweight High-output Exo Mk.III"  transform_on_consume="exo_x_t3_1"   >
-        <hud_icon filename="exo_x_t3.png" />
+        <hud_icon filename="exo_x_t3_2.png" />
         <inventory price="5" />
         <model mesh_filename="vestexo.xml" />
         <modifier class="speed" value="0.35" />
@@ -11,7 +11,7 @@
 
 
     <carry_item file="wearables.base_carry_item" key="exo_x_t3_1" name="Lightweight High-output Exo Mk.III-Overrun!-" transform_on_consume="exo_x_t3_2">
-        <hud_icon filename="exo_x_t3.png" />
+        <hud_icon filename="exo_x_t3_1.png" />
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="wound"  />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
@@ -26,7 +26,7 @@
 
 
     <carry_item file="none.base_carry_item" key="exo_x_t3_2" name="Lightweight High-output Exo Mk.III-Overrun!-">
-        <hud_icon filename="exo_x_t3.png" />
+        <hud_icon filename="exo_x_t3_0.png" />
         <modifier class="speed" value="0.35" />
         <modifier class="detectability" value="-0.15" />
     </carry_item>

@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <carry_items>
-    <carry_item file="cc.base_carry_item" key="cc_t4.carry_item" name="Optical camouflage cloak Mk.IV" transform_on_consume="cc_t4_2">
-        <hud_icon filename="cc_t4.png" />
+    <carry_item file="cc.base_carry_item" key="cc_t4.carry_item" name="Optical camouflage cloak Mk.IV" transform_on_consume="cc_t4_1">
+        <hud_icon filename="cc_t4_5.png" />
+        <inventory price="30" />
+        <modifier class="hit_success_probability" value="-0.8" />
+        <modifier class="detectability" value="-0.45" />
+        <modifier class="speed" value="0.1" />
+    </carry_item>
+
+    <carry_item file="cc.base_carry_item" key="cc_t4_1" name="Optical camouflage cloak Mk.IV" transform_on_consume="cc_t4_2">
+        <hud_icon filename="cc_t4_4.png" />
         <inventory price="30" />
         <modifier class="hit_success_probability" value="-0.8" />
         <modifier class="detectability" value="-0.45" />
@@ -9,7 +17,7 @@
     </carry_item>
 
     <carry_item file="cc.base_carry_item" key="cc_t4_2" name="Optical camouflage cloak Mk.IV" transform_on_consume="cc_t4_3">
-        <hud_icon filename="cc_t4.png" />
+        <hud_icon filename="cc_t4_3.png" />
         <inventory price="30" />
         <modifier class="hit_success_probability" value="-0.8" />
         <modifier class="detectability" value="-0.45" />
@@ -17,7 +25,7 @@
     </carry_item>
 
     <carry_item file="cc.base_carry_item" key="cc_t4_3" name="Optical camouflage cloak Mk.IV" transform_on_consume="cc_t4_4">
-        <hud_icon filename="cc_t4_1.png" />
+        <hud_icon filename="cc_t4_2.png" />
         <inventory price="30" />
         <modifier class="hit_success_probability" value="-0.8" />
         <modifier class="detectability" value="-0.45" />
@@ -39,7 +47,7 @@
     </carry_item>
 
     <carry_item file="none.base_carry_item" key="cc_t4_5" name="Optical camouflage cloak Mk.IV-Overrun!-" transform_on_consume="cc_t4_6">
-        <hud_icon filename="cc_t4_2.png" />
+        <hud_icon filename="cc_t4_0.png" />
         <inventory price="1" />
         <modifier class="detectability" value="-0.25" />
         <modifier class="hit_success_probability" value="-0.8" />

@@ -1,15 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <carry_items>
-    <carry_item file="exo.base_carry_item" key="exo_t5_16lab.carry_item" name="16LAB Refined Standard Exo" transform_on_consume="exo_t5_16lab_2">
-        <hud_icon filename="exo_t5_16lab.png" />
+    <carry_item file="exo.base_carry_item" key="exo_t5_16lab.carry_item" name="16LAB Refined Standard Exo" transform_on_consume="exo_t5_16lab_1">
+        <hud_icon filename="exo_t5_16lab_9.png" />
         <inventory price="50" />
         <modifier class="speed" value="0.35" />
         <modifier class="hit_success_probability" value="-1.0" />
         <modifier class="detectability" value="-0.05" />
     </carry_item>
 
+    <carry_item file="exo.base_carry_item" key="exo_t5_16lab_1" name="16LAB Refined Standard Exo" transform_on_consume="exo_t5_16lab_2">
+        <hud_icon filename="exo_t5_16lab_8.png" />
+        <inventory price="1" />
+        <modifier class="speed" value="0.35" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="-0.05" />
+    </carry_item>
+
     <carry_item file="exo.base_carry_item" key="exo_t5_16lab_2" name="16LAB Refined Standard Exo" transform_on_consume="exo_t5_16lab_3">
-        <hud_icon filename="exo_t5_16lab_1.png" />
+        <hud_icon filename="exo_t5_16lab_7.png" />
         <inventory price="1" />
         <modifier class="speed" value="0.35" />
         <modifier class="hit_success_probability" value="-1.0" />
@@ -17,7 +25,7 @@
     </carry_item>
 
     <carry_item file="exo.base_carry_item" key="exo_t5_16lab_3" name="16LAB Refined Standard Exo" transform_on_consume="exo_t5_16lab_4">
-        <hud_icon filename="exo_t5_16lab_2.png" />
+        <hud_icon filename="exo_t5_16lab_6.png" />
         <inventory price="1" />
         <modifier class="speed" value="0.35" />
         <modifier class="hit_success_probability" value="-1.0" />
@@ -25,30 +33,6 @@
     </carry_item>
 
     <carry_item file="exo.base_carry_item" key="exo_t5_16lab_4" name="16LAB Refined Standard Exo" transform_on_consume="exo_t5_16lab_5">
-        <hud_icon filename="exo_t5_16lab_2.png" />
-        <inventory price="1" />
-        <modifier class="speed" value="0.35" />
-        <modifier class="hit_success_probability" value="-1.0" />
-        <modifier class="detectability" value="-0.05" />
-    </carry_item>
-
-    <carry_item file="exo.base_carry_item" key="exo_t5_16lab_5" name="16LAB Refined Standard Exo" transform_on_consume="exo_t5_16lab_6">
-        <hud_icon filename="exo_t5_16lab_3.png" />
-        <inventory price="1" />
-        <modifier class="speed" value="0.35" />
-        <modifier class="hit_success_probability" value="-1.0" />
-        <modifier class="detectability" value="-0.05" />
-    </carry_item>
-
-    <carry_item file="exo.base_carry_item" key="exo_t5_16lab_6" name="16LAB Refined Standard Exo" transform_on_consume="exo_t5_16lab_7">
-        <hud_icon filename="exo_t5_16lab_4.png" />
-        <inventory price="1" />
-        <modifier class="speed" value="0.35" />
-        <modifier class="hit_success_probability" value="-1.0" />
-        <modifier class="detectability" value="-0.05" />
-    </carry_item>
-
-    <carry_item file="exo.base_carry_item" key="exo_t5_16lab_7" name="16LAB Refined Standard Exo" transform_on_consume="exo_t5_16lab_8">
         <hud_icon filename="exo_t5_16lab_5.png" />
         <inventory price="1" />
         <modifier class="speed" value="0.35" />
@@ -56,8 +40,32 @@
         <modifier class="detectability" value="-0.05" />
     </carry_item>
 
+    <carry_item file="exo.base_carry_item" key="exo_t5_16lab_5" name="16LAB Refined Standard Exo" transform_on_consume="exo_t5_16lab_6">
+        <hud_icon filename="exo_t5_16lab_4.png" />
+        <inventory price="1" />
+        <modifier class="speed" value="0.35" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="-0.05" />
+    </carry_item>
+
+    <carry_item file="exo.base_carry_item" key="exo_t5_16lab_6" name="16LAB Refined Standard Exo" transform_on_consume="exo_t5_16lab_7">
+        <hud_icon filename="exo_t5_16lab_3.png" />
+        <inventory price="1" />
+        <modifier class="speed" value="0.35" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="-0.05" />
+    </carry_item>
+
+    <carry_item file="exo.base_carry_item" key="exo_t5_16lab_7" name="16LAB Refined Standard Exo" transform_on_consume="exo_t5_16lab_8">
+        <hud_icon filename="exo_t5_16lab_2.png" />
+        <inventory price="1" />
+        <modifier class="speed" value="0.35" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="-0.05" />
+    </carry_item>
+
     <carry_item file="wearables.base_carry_item" key="exo_t5_16lab_8" name="16LAB Refined Standard Exo-Overrun!-" transform_on_consume="exo_t5_16lab_9">
-        <hud_icon filename="exo_t5_16lab_6.png" />
+        <hud_icon filename="exo_t5_16lab_1.png" />
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="wound"  />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
@@ -71,7 +79,7 @@
     </carry_item>
 
     <carry_item file="none.base_carry_item" key="exo_t5_16lab_9" name="16LAB Refined Standard Exo-Overrun!-">
-        <hud_icon filename="exo_t5_16lab_6.png" />
+        <hud_icon filename="exo_t5_16lab_0.png" />
         <modifier class="speed" value="0.35" />
         <modifier class="hit_success_probability" value="-0.6" />
         <modifier class="detectability" value="-0.05" />
