@@ -4,9 +4,27 @@
         <hud_icon filename="cc_t4.png" />
         <inventory price="30" />
         <modifier class="hit_success_probability" value="-0.8" />
-        <modifier class="detectability" value="-0.40" />
+        <modifier class="detectability" value="-0.45" />
+        <modifier class="speed" value="0.1" />
     </carry_item>
-    <carry_item file="wearables.base_carry_item" key="cc_t4_2" name="Optical camouflage cloak Mk.IV" transform_on_consume="cc_t4_3">
+
+    <carry_item file="cc.base_carry_item" key="cc_t4_2" name="Optical camouflage cloak Mk.IV" transform_on_consume="cc_t4_3">
+        <hud_icon filename="cc_t4.png" />
+        <inventory price="30" />
+        <modifier class="hit_success_probability" value="-0.8" />
+        <modifier class="detectability" value="-0.45" />
+        <modifier class="speed" value="0.1" />
+    </carry_item>
+
+    <carry_item file="cc.base_carry_item" key="cc_t4_3" name="Optical camouflage cloak Mk.IV" transform_on_consume="cc_t4_4">
+        <hud_icon filename="cc_t4_1.png" />
+        <inventory price="30" />
+        <modifier class="hit_success_probability" value="-0.8" />
+        <modifier class="detectability" value="-0.45" />
+        <modifier class="speed" value="0.1" />
+    </carry_item>
+
+    <carry_item file="wearables.base_carry_item" key="cc_t4_4" name="Optical camouflage cloak Mk.IV-Overrun!-" transform_on_consume="cc_t4_5">
         <hud_icon filename="cc_t4_1.png" />
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="wound"  />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
@@ -16,12 +34,14 @@
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="wound" />
         <modifier class="hit_success_probability" value="-0.8" />
-        <modifier class="detectability" value="-0.40" />
+        <modifier class="detectability" value="-0.45" />
+        <modifier class="speed" value="0.1" />
     </carry_item>
-    <carry_item file="none.base_carry_item" key="cc_t4_3" name="Optical camouflage cloak Mk.IV" transform_on_consume="cc_t4_4">
+
+    <carry_item file="none.base_carry_item" key="cc_t4_5" name="Optical camouflage cloak Mk.IV-Overrun!-" transform_on_consume="cc_t4_6">
         <hud_icon filename="cc_t4_2.png" />
         <inventory price="1" />
-        <modifier class="detectability" value="-0.40" />
+        <modifier class="detectability" value="-0.25" />
         <modifier class="hit_success_probability" value="-0.8" />
     </carry_item>
 </carry_items>

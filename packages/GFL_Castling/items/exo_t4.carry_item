@@ -1,38 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <carry_items>
-    <carry_item file="exo.base_carry_item" key="exo_t4.carry_item" name="Standard Exo Mk.IV 6/6"  transform_on_consume="exo_t4_6"   >
+    <carry_item file="exo.base_carry_item" key="exo_t4.carry_item" name="Standard Exo Mk.IV" transform_on_consume="exo_t4_2">
         <hud_icon filename="exo_t4.png" />
-        <inventory price="30" />
-        <modifier class="speed" value="0.25" />
-		<modifier class="hit_success_probability" value="-1.0" />
-    </carry_item>
-	
-	<carry_item file="exo.base_carry_item" key="exo_t4_6" name="Standard Exo Mk.IV 5/6"  transform_on_consume="exo_t4_5"   >
-        <hud_icon filename="exo_t4_1.png" />
-        <modifier class="speed" value="0.25" />
-		<modifier class="hit_success_probability" value="-1.0" />
+        <inventory price="43" />
+        <modifier class="speed" value="0.3" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="-0.05" />
     </carry_item>
 
-    <carry_item file="exo.base_carry_item" key="exo_t4_5" name="Standard Exo Mk.IV 4/6"  transform_on_consume="exo_t4_4"   >
+    <carry_item file="exo.base_carry_item" key="exo_t4_2" name="Standard Exo Mk.IV" transform_on_consume="exo_t4_3">
         <hud_icon filename="exo_t4_1.png" />
-        <modifier class="speed" value="0.25" />
-		<modifier class="hit_success_probability" value="-1.0" />
+        <inventory price="1" />
+        <modifier class="speed" value="0.3" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="-0.05" />
     </carry_item>
 
-    <carry_item file="exo.base_carry_item" key="exo_t4_4" name="Standard Exo Mk.IV 3/6"  transform_on_consume="exo_t4_3"   >
+    <carry_item file="exo.base_carry_item" key="exo_t4_3" name="Standard Exo Mk.IV" transform_on_consume="exo_t4_4">
         <hud_icon filename="exo_t4_2.png" />
-        <modifier class="speed" value="0.25" />
-		<modifier class="hit_success_probability" value="-1.0" />
+        <inventory price="1" />
+        <modifier class="speed" value="0.3" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="-0.05" />
     </carry_item>
 
-    <carry_item file="exo.base_carry_item" key="exo_t4_3" name="Standard Exo Mk.IV 2/6"  transform_on_consume="exo_t4_2"   >
+    <carry_item file="exo.base_carry_item" key="exo_t4_4" name="Standard Exo Mk.IV" transform_on_consume="exo_t4_5">
+        <hud_icon filename="exo_t4_2.png" />
+        <inventory price="1" />
+        <modifier class="speed" value="0.3" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="-0.05" />
+    </carry_item>
+
+    <carry_item file="exo.base_carry_item" key="exo_t4_5" name="Standard Exo Mk.IV" transform_on_consume="exo_t4_6">
         <hud_icon filename="exo_t4_3.png" />
-        <modifier class="speed" value="0.25" />
-		<modifier class="hit_success_probability" value="-1.0" />
+        <inventory price="1" />
+        <modifier class="speed" value="0.3" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="-0.05" />
     </carry_item>
 
-    <carry_item file="wearables.base_carry_item" key="exo_t4_2" name="Standard Exo Mk.IV 1/6"  transform_on_consume="exo_t4_1"   >
+    <carry_item file="exo.base_carry_item" key="exo_t4_6" name="Standard Exo Mk.IV" transform_on_consume="exo_t4_7">
         <hud_icon filename="exo_t4_4.png" />
+        <inventory price="1" />
+        <modifier class="speed" value="0.3" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="-0.05" />
+    </carry_item>
+
+    <carry_item file="exo.base_carry_item" key="exo_t4_7" name="Standard Exo Mk.IV" transform_on_consume="exo_t4_8">
+        <hud_icon filename="exo_t4_4.png" />
+        <inventory price="1" />
+        <modifier class="speed" value="0.3" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="-0.05" />
+    </carry_item>
+
+    <carry_item file="wearables.base_carry_item" key="exo_t4_8" name="Standard Exo Mk.IV-Overrun!-" transform_on_consume="exo_t4_9">
+        <hud_icon filename="exo_t4_5.png" />
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="wound"  />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
@@ -40,11 +65,15 @@
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="wound" />
-        <modifier class="speed" value="0.25" />
-		<modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="speed" value="0.3" />
+        <modifier class="hit_success_probability" value="-0.6" />
+        <modifier class="detectability" value="-0.05" />
     </carry_item>
 
-    <carry_item file="none.base_carry_item" key="exo_t4_1" name="Standard Exo Mk.IV 0/6"  >
+    <carry_item file="none.base_carry_item" key="exo_t4_9" name="Standard Exo Mk.IV-Overrun!-">
         <hud_icon filename="exo_t4_5.png" />
+        <modifier class="speed" value="0.3" />
+        <modifier class="hit_success_probability" value="-0.6" />
+        <modifier class="detectability" value="-0.05" />
     </carry_item>
 </carry_items>

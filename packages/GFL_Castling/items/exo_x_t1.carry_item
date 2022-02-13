@@ -1,13 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <carry_items>
-    <carry_item file="none.base_carry_item" key="exo_x_t1.carry_item" name="Lightweight High-output Exo Mk.I"  transform_on_consume="exo_x_t1"   >
+    <carry_item file="exo.base_carry_item" key="exo_x_t1.carry_item" name="Lightweight High-output Exo Mk.I"  transform_on_consume="exo_x_t1_1"   >
         <hud_icon filename="exo_x_t1.png" />
         <inventory price="1" />
- 
         <model mesh_filename="vestexo.xml" />
-
-        <modifier class="speed" value="0.2" />
-		<modifier class="hit_success_probability" value="-0.8" />
+        <modifier class="speed" value="0.3" />
+		<modifier class="hit_success_probability" value="-1" />
 	    <modifier class="detectability" value="-0.1" />
+    </carry_item>
+
+    <carry_item file="wearables.base_carry_item" key="exo_x_t1_1" name="Lightweight High-output Exo Mk.I-Overrun!-" transform_on_consume="exo_x_t1_2">
+        <hud_icon filename="exo_x_t1.png" />
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="wound"  />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="wound" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="wound" />
+        <modifier class="speed" value="0.3" />
+        <modifier class="hit_success_probability" value="-0.6" />
+        <modifier class="detectability" value="-0.1" />
+    </carry_item>
+
+
+    <carry_item file="none.base_carry_item" key="exo_x_t1_2" name="Lightweight High-output Exo Mk.I-Overrun!-">
+        <hud_icon filename="exo_x_t1.png" />
+        <modifier class="speed" value="0.3" />
+        <modifier class="detectability" value="-0.1" />
     </carry_item>
 </carry_items>
