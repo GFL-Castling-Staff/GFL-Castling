@@ -175,7 +175,7 @@ class GFLskill : Tracker {
 					XmlElement c ("command");
 					c.setStringAttribute("class", "update_inventory");
 					c.setIntAttribute("character_id", soldierId); 
-					c.setIntAttribute("untransform_count", 10);
+					c.setIntAttribute("untransform_count", 20);
 					m_metagame.getComms().send(c);
 				}
 			}
