@@ -103,6 +103,26 @@ bool checkCommandAlter(string message, string target, string target1) {
     return startsWith(message.toLowerCase(), "/" + target) || endsWith(message.toLowerCase(),"/"+ target1);
 }
 
+void playSoundtrack(string filename) {
+	m_metagame.getComms().send(
+	"<command " +
+	" class='set_soundtrack' " + 
+	" enabled='1' " + 
+	" filename='" + filename + "'" + 
+	"</command>");
+}
+
+void stopSoundtrack(string filename) {
+	m_metagame.getComms().send(
+	"<command " +
+	" class='set_soundtrack' " + 
+	" enabled='0' " + 
+	" filename='" + filename + "'" + 
+	"</command>");
+}
+//soundtrack function from ww2dlc thanks for coding wheel
+
+
 		// query for Equipment
 		// TagName=query_result query_id=22
 		// TagName=character

@@ -3,6 +3,7 @@
 #include "stage_configurator.as"
 #include "stage_invasion.as"
 #include "phase_controller_map12.as"
+#include "phase_controller_shockzone.as"
 #include "pausing_koth_timer.as"
 #include "spawn_at_node.as"
 #include "comms_capacity_handler.as"
@@ -343,6 +344,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 	protected Stage@ setupStage105() {
 		Stage@ stage = createStage();
+		stage.setPhaseController(PhaseControllerMap105(m_metagame));
 		stage.m_mapInfo.m_name = "Shock Zone";
 		stage.m_mapInfo.m_path = "media/packages/GFLC_Map/maps/map105_2";
 		stage.m_mapInfo.m_id = "map105_2";
