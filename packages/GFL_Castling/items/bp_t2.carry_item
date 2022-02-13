@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <carry_items>
 	<carry_item file="bp.base_carry_item" key="bp_t2.carry_item" name="HFBLS Mk.II"  transform_on_consume="bp_t2_1">
-		<hud_icon filename="bp_t2.png" />
+		<hud_icon filename="bp_t2_9.png" />
 		<inventory price="20" />
 		<modifier class="hit_success_probability" value="-1.0" />
 	</carry_item>
-	
+
 	<carry_item file="bp.base_carry_item" key="bp_t2_1" name="HFBLS Mk.II-Slight Damage-"  transform_on_consume="bp_t2_2">
-		<hud_icon filename="bp_t2_1.png" />
+		<hud_icon filename="bp_t2_8.png" />
 		<modifier class="hit_success_probability" value="-1.0" />
 	</carry_item>
 
 	<carry_item file="bp.base_carry_item" key="bp_t2_2" name="HFBLS Mk.II-Slight Damage-"  transform_on_consume="bp_t2_3">
-		<hud_icon filename="bp_t2_1.png" />
+		<hud_icon filename="bp_t2_7.png" />
 		<modifier class="hit_success_probability" value="-1.0" />
 	</carry_item>
 
 	<carry_item file="bp.base_carry_item" key="bp_t2_3" name="HFBLS Mk.II-Moderate Damage-"  transform_on_consume="bp_t2_4">
-		<hud_icon filename="bp_t2_2.png" />
+		<hud_icon filename="bp_t2_6.png" />
 		<modifier class="hit_success_probability" value="-1.0" />
 	</carry_item>
 
 	<carry_item file="bp.base_carry_item" key="bp_t2_4" name="HFBLS Mk.II-Moderate Damage-"  transform_on_consume="bp_t2_5">
-		<hud_icon filename="bp_t2_2.png" />
+		<hud_icon filename="bp_t2_5.png" />
 		<modifier class="hit_success_probability" value="-1.0" />
 	</carry_item>
 
 	<carry_item file="bp.base_carry_item" key="bp_t2_5" name="HFBLS Mk.II-Severe Damage-"  transform_on_consume="bp_t2_6">
-		<hud_icon filename="bp_t2_3.png" />
+		<hud_icon filename="bp_t2_4.png" />
 		<modifier class="hit_success_probability" value="-1.0" />
 	</carry_item>
 
@@ -36,8 +36,13 @@
 		<modifier class="hit_success_probability" value="-0.6" />
 	</carry_item>
 
-	<carry_item file="wearables.base_carry_item" key="bp_t2_7" name="HFBLS Mk.II-Overrun!-"  transform_on_consume="bp_t2_8">
-		<hud_icon filename="bp_t2_4.png" />
+	<carry_item file="bp.base_carry_item" key="bp_t2_7" name="HFBLS Mk.II-Severe Damage-"  transform_on_consume="bp_t2_8">
+		<hud_icon filename="bp_t2_2.png" />
+		<modifier class="hit_success_probability" value="-0.6" />
+	</carry_item>
+
+	<carry_item file="wearables.base_carry_item" key="bp_t2_8" name="HFBLS Mk.II-Overrun!-"  transform_on_consume="bp_t2_9">
+		<hud_icon filename="bp_t2_1.png" />
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="wound"  />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
@@ -49,8 +54,8 @@
 		<modifier class="hit_success_probability" value="-0.6" />
 	</carry_item>
 	
-	<carry_item file="none.base_carry_item" key="bp_t2_8" name="HFBLS Mk.II-Overrun!-"  >
-		<hud_icon filename="bp_t2_4.png" />
+	<carry_item file="none.base_carry_item" key="bp_t2_9" name="HFBLS Mk.II-Overrun!-"  >
+		<hud_icon filename="bp_t2_0.png" />
 		<modifier class="hit_success_probability" value="-0.5" />
 		<modifier class="speed" value="-0.25" />
 	</carry_item>
