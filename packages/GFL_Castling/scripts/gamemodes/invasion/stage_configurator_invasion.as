@@ -140,10 +140,10 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 	// ------------------------------------------------------------------------------------------------
 	protected void setupNormalStages() {
+	addStage(setupStage7());          // map6
 	addStage(setupStage104()); 		  // map105_1 zoneAttack by diling
 	addStage(setupStage105()); 		  // map105_2 shockzone by diling
 	//addStage(setupStage102());	  // mapftg
-	addStage(setupStage7());          // map6
 	addStage(setupStage1());          // map2
     addStage(setupStage9());          // map9
     // addStage(setupStage16());         // map8_2

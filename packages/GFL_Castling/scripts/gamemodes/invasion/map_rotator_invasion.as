@@ -580,10 +580,11 @@ class MapRotatorInvasion : MapRotator {
 						{"%faction_name", enemyNames[0]}
 					};
 					m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 3.0, 0, stage.m_mapInfo.m_name+" advance, held by enemy, part 1", a));
-					m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 5.0, 0, stage.m_mapInfo.m_name+" advance, held by enemy, part 2", a));
-					m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 5.0, 0, stage.m_mapInfo.m_name+" advance, held by enemy, part 3", a));
-					m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 5.0, 0, stage.m_mapInfo.m_name+" advance, held by enemy, part 4", a));
-					m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 5.0, 0, stage.m_mapInfo.m_name+" advance, held by enemy, part 5", a));
+					m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 3.0, 0, stage.m_mapInfo.m_name+" advance, held by enemy, part 2", a));
+					m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 3.0, 0, stage.m_mapInfo.m_name+" advance, held by enemy, part 3", a));
+					m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 3.0, 0, stage.m_mapInfo.m_name+" advance, held by enemy, part 4", a));
+					m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 3.0, 0, stage.m_mapInfo.m_name+" advance, held by enemy, part 5", a));
+					m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 3.0, 0, stage.m_mapInfo.m_name+" advance, held by enemy, part 6", a));
 
 				}else{
 					// if there are enemies, report it
