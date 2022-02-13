@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <carry_items>
 	<carry_item file="bp.base_carry_item" key="bp_t5_16lab.carry_item" name="16LAB HFBLS"  transform_on_consume="bp_t5_16lab_1">
-		<hud_icon filename="bp_t5_16lab.png" />
+		<hud_icon filename="bp_t5.png" />
 		<inventory price="50" />
 		<modifier class="hit_success_probability" value="-1.1" />
 	</carry_item>
