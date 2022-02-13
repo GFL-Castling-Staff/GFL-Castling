@@ -3,6 +3,7 @@
 #include "stage_configurator.as"
 #include "stage_invasion.as"
 #include "phase_controller_map12.as"
+#include "phase_controller_shockzone.as"
 #include "pausing_koth_timer.as"
 #include "spawn_at_node.as"
 #include "comms_capacity_handler.as"
@@ -140,13 +141,12 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 	// ------------------------------------------------------------------------------------------------
 	protected void setupNormalStages() {
+	addStage(setupStage7());          // map6
 	addStage(setupStage104()); 		  // map105_1 zoneAttack by diling
 	addStage(setupStage105()); 		  // map105_2 shockzone by diling
 	//addStage(setupStage102());	  // mapftg
-	addStage(setupStage7());          // map6
 	addStage(setupStage1());          // map2
     addStage(setupStage9());          // map9
-    // addStage(setupStage16());         // map8_2
     addStage(setupStage4());          // map7
     addStage(setupStage15());         // map1_2
     addStage(setupStage12());         // map14
@@ -165,6 +165,7 @@ class StageConfiguratorInvasion : StageConfigurator {
     addStage(setupStage6());          // map5
     addStage(setupFinalStage2());     // map12
     addStage(setupStage11());         // map13
+	addStage(setupStage16());         // map8_2
 	}
 
 	// --------------------------------------------
@@ -327,7 +328,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		}
 		{
 			Faction f(FactionConfig(1, "sf.xml", "S.F.", "0.91 0.11 0.20", "sf.xml"), createCommanderAiCommand(1,0.3,0.1));
-			f.m_capacityOffset = 6;
+			f.m_capacityOffset = 10;
 			f.m_capacityMultiplier = 1.0;                                                 
 			stage.m_factions.insertLast(f);                                         
 		}
@@ -342,13 +343,14 @@ class StageConfiguratorInvasion : StageConfigurator {
 	}
 
 	protected Stage@ setupStage105() {
-		Stage@ stage = createStage();
+		PhasedStage@ stage = createPhasedStage();
+		stage.setPhaseController(PhaseControllerMap105(m_metagame));
 		stage.m_mapInfo.m_name = "Shock Zone";
 		stage.m_mapInfo.m_path = "media/packages/GFLC_Map/maps/map105_2";
 		stage.m_mapInfo.m_id = "map105_2";
 
 		stage.addTracker(Overtime(m_metagame, 0));
-		stage.m_maxSoldiers = 13 * 16;                                          // was 11*10
+		stage.m_maxSoldiers = 15 * 16;                                          // was 11*10
 		stage.m_soldierCapacityModel = "constant";     
 		stage.m_playerAiCompensation = 6;                                       // was 4
         stage.m_playerAiReduction = 0;                                        // was 2    
@@ -357,7 +359,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.m_minRandomCrates = 1; 
 		stage.m_maxRandomCrates = 3;
 
-		stage.m_defenseWinTime = 300; 
+		stage.m_defenseWinTime = 360; 
 		stage.m_defenseWinTimeMode = "custom";
 		stage.addTracker(PausingKothTimer(m_metagame, stage.m_defenseWinTime));
 
@@ -370,15 +372,23 @@ class StageConfiguratorInvasion : StageConfigurator {
 		}
 
 		{
-			Faction f(FactionConfig(1, "sf.xml", "S.F.", "0.91 0.11 0.20", "sf.xml"), createCommanderAiCommand(1, 0.70, 0.30));
-			f.m_capacityMultiplier = 0.2;       
+			Faction f(FactionConfig(1, "sf.xml", "S.F.", "0.91 0.11 0.20", "sf.xml"), createCommanderAiCommand(1, 0.80, 0.20));
+			f.m_capacityMultiplier = 0.35;       
 			stage.m_factions.insertLast(f);                                                                
 		}
 		{
-			Faction f(FactionConfig(2, "kcco.xml", "KCCO", "0.43 0.49 0.18", "kcco.xml"), createCommanderAiCommand(2, 0.25, 0.05));             
+			Faction f(FactionConfig(2, "kcco.xml", "KCCO", "0.43 0.49 0.18", "kcco.xml"), createCommanderAiCommand(2, 0.10, 0.10));             
 			f.m_overCapacity = 80;                                             
             f.m_capacityOffset = 30;                                            
 			stage.m_factions.insertLast(f);                                    
+		}
+		{
+			XmlElement command("command");
+			command.setStringAttribute("class", "faction_resources");
+			command.setIntAttribute("faction_id", 2);
+			addFactionResourceElements(command, "vehicle", array<string> = {"aa_emplacement.vehicle"}, true);
+
+			stage.m_extraCommands.insertLast(command);
 		}
 		// metadata
 		stage.m_primaryObjective = "koth";
@@ -510,15 +520,6 @@ class StageConfiguratorInvasion : StageConfigurator {
 			stage.m_factions.insertLast(f); 
 		}
         
-
-		{
-			XmlElement command("command");
-			command.setStringAttribute("class", "faction_resources");
-			command.setIntAttribute("faction_id", 0);
-			addFactionResourceElements(command, "vehicle", array<string> = {"flamer_tank.vehicle"}, false);
-
-			stage.m_extraCommands.insertLast(command);
-		}        
 
 		// metadata
 		stage.m_primaryObjective = "capture";
