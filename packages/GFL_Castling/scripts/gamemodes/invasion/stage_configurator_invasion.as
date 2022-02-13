@@ -343,7 +343,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 	}
 
 	protected Stage@ setupStage105() {
-		Stage@ stage = createStage();
+		PhasedStage@ stage = createPhasedStage();
 		stage.setPhaseController(PhaseControllerMap105(m_metagame));
 		stage.m_mapInfo.m_name = "Shock Zone";
 		stage.m_mapInfo.m_path = "media/packages/GFLC_Map/maps/map105_2";

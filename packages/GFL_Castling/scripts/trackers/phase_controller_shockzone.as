@@ -12,14 +12,14 @@
 #include "gamemode_invasion.as"
 #include "GFLhelpers.as"
 
-class Phase : Tracker {
+class map105_Phase : Tracker {
 	protected GameModeInvasion@ m_metagame;
 	protected PhaseControllerMap105@ m_controller;
 	protected bool m_started;
 	protected bool m_ended;
 
 	// --------------------------------------------
-	Phase(GameModeInvasion@ metagame, PhaseControllerMap105@ controller) {
+	map105_Phase(GameModeInvasion@ metagame, PhaseControllerMap105@ controller) {
 		@m_metagame = @metagame;
 		@m_controller = @controller;
 		m_started = false;
@@ -61,12 +61,12 @@ class Phase : Tracker {
 	}
 };
 
-class Phase1 : Phase {
-	Phase1(GameModeInvasion@ metagame, PhaseControllerMap105@ controller) {
+class map105_Phase1 : map105_Phase {
+	map105_Phase1(GameModeInvasion@ metagame, PhaseControllerMap105@ controller) {
 		super(metagame, controller);
 	}
 	void start() {
-		Phase::start();
+		map105_Phase::start();
 		_log("Phase1 starting");
 	}
 	
@@ -91,43 +91,44 @@ class Phase1 : Phase {
 		}
 		if(pause==false){
 			end();
-			m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 3.0, 0, "Map105HandleAll", dictionary{}));
-			playSoundtrack("Map105Defend.wav");
 		}
 	}
-}
+};
 
-class Phase2 : Phase {
-	Phase2(GameModeInvasion@ metagame, PhaseControllerMap105@ controller) {
+class map105_Phase2 : map105_Phase {
+	map105_Phase2(GameModeInvasion@ metagame, PhaseControllerMap105@ controller) {
 		super(metagame, controller);
 	}
 	void start() {
-		Phase::start();
+		map105_Phase::start();
 		_log("Phase2 starting");
+		m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 3.0, 0, "Map105HandleAll"));
+		playSoundtrack(m_metagame,"Map105Defend.wav");
 	}
 
-	protected void handleMatchEndEvent(const XmlElement@ event) {
-		int factionId = 2;
+	protected void handleFactionLoseEvent(const XmlElement@ event) {
+		// if green lost a battle, start over
+		int factionId = -1;
 
-		const XmlElement@ winCondition = event.getFirstElementByTagName("win_condition");
-		if (winCondition !is null) {
-			factionId = winCondition.getIntAttribute("faction_id");
-		} else {
-			_log("WARNING, couldn't find win_condition tag", -1);
+		const XmlElement@ loseCondition = event.getFirstElementByTagName("lose_condition");
+		if (loseCondition !is null) {
+			factionId = loseCondition.getIntAttribute("faction_id");
 		}
-		if (factionId == 0) {
-			m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 3.0, 0, "Map105WIN", dictionary{},2.0, "explosion3.wav"));
+
+		if (factionId == 2) {
+			// kcco倒了
+			m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 3.0, 0, "Map105WIN", dictionary(),2.0, "explosion3.wav"));
 		}
 	}
-}
+};
 
 
 // --------------------------------------------
-class PhaseControllerMap105 : Tracker {
+class PhaseControllerMap105 : PhaseController {
 	protected GameModeInvasion@ m_metagame;
 	protected bool m_started;
 	protected uint m_currentPhaseIndex;
-	protected array<Phase@> m_phases;
+	protected array<map105_Phase@> m_phases;
 	protected array<string> m_destroyTargets;
 
 	PhaseControllerMap105(GameModeInvasion@ metagame) {
@@ -138,10 +139,10 @@ class PhaseControllerMap105 : Tracker {
 	}
 
 	void reset() {
-		m_phases = array<Phase@>();
+		m_phases = array<map105_Phase@>();
 
-		m_phases.insertLast(Phase1(m_metagame, this));
-		m_phases.insertLast(Phase2(m_metagame, this));
+		m_phases.insertLast(map105_Phase1(m_metagame, this));
+		m_phases.insertLast(map105_Phase2(m_metagame, this));
 
 		m_currentPhaseIndex = 0;
 	}
@@ -174,7 +175,7 @@ class PhaseControllerMap105 : Tracker {
 
 	void startCurrentPhase() {
 		if (m_currentPhaseIndex < m_phases.size()) {
-			Phase@ phase = m_phases[m_currentPhaseIndex];
+			map105_Phase@ phase = m_phases[m_currentPhaseIndex];
 
 			m_metagame.addTracker(phase);
 		} 
@@ -201,7 +202,7 @@ class PhaseControllerMap105 : Tracker {
 
 		if (factionId == 1) {
 			// 铁血倒了
-			m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 3.0, 0, "Map105SFdown", dictionary{}));
+			m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 3.0, 0, "Map105SFdown"));
 		}
 	}
 
@@ -229,7 +230,7 @@ class PhaseControllerMap105 : Tracker {
 		}
 
 		if (checkCommand(message, "end_phase")) {
-			Phase@ phase = m_phases[m_currentPhaseIndex];
+			map105_Phase@ phase = m_phases[m_currentPhaseIndex];
 			phase.end();
 		}
 	}

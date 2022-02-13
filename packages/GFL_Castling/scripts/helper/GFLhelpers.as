@@ -86,7 +86,7 @@ void GiveRP(const Metagame@ metagame,int character_id,int rp){
     metagame.getComms().send(c);
 }
 
-void GiveXP(const Metagame@ metagame,int character_id,int rp){
+void GiveXP(const Metagame@ metagame,int character_id,float rp){
 	string c = "<command class='xp_reward' character_id='" + character_id + "' reward='" + rp + "' />";
     metagame.getComms().send(c);
 }
@@ -103,7 +103,7 @@ bool checkCommandAlter(string message, string target, string target1) {
     return startsWith(message.toLowerCase(), "/" + target) || endsWith(message.toLowerCase(),"/"+ target1);
 }
 
-void playSoundtrack(string filename) {
+void playSoundtrack(Metagame@ m_metagame,string filename) {
 	m_metagame.getComms().send(
 	"<command " +
 	" class='set_soundtrack' " + 
@@ -112,7 +112,7 @@ void playSoundtrack(string filename) {
 	"</command>");
 }
 
-void stopSoundtrack(string filename) {
+void stopSoundtrack(Metagame@ m_metagame,string filename) {
 	m_metagame.getComms().send(
 	"<command " +
 	" class='set_soundtrack' " + 
