@@ -86,7 +86,7 @@ void GiveRP(const Metagame@ metagame,int character_id,int rp){
     metagame.getComms().send(c);
 }
 
-void GiveXP(const Metagame@ metagame,int character_id,int rp){
+void GiveXP(const Metagame@ metagame,int character_id,float rp){
 	string c = "<command class='xp_reward' character_id='" + character_id + "' reward='" + rp + "' />";
     metagame.getComms().send(c);
 }
@@ -102,6 +102,26 @@ void addItemInBackpack(Metagame@ metagame, int characterId, string ItemType, str
 bool checkCommandAlter(string message, string target, string target1) {
     return startsWith(message.toLowerCase(), "/" + target) || endsWith(message.toLowerCase(),"/"+ target1);
 }
+
+void playSoundtrack(Metagame@ m_metagame,string filename) {
+	m_metagame.getComms().send(
+	"<command " +
+	" class='set_soundtrack' " + 
+	" enabled='1' " + 
+	" filename='" + filename + "'" + 
+	"</command>");
+}
+
+void stopSoundtrack(Metagame@ m_metagame,string filename) {
+	m_metagame.getComms().send(
+	"<command " +
+	" class='set_soundtrack' " + 
+	" enabled='0' " + 
+	" filename='" + filename + "'" + 
+	"</command>");
+}
+//soundtrack function from ww2dlc thanks for coding wheel
+
 
 		// query for Equipment
 		// TagName=query_result query_id=22
