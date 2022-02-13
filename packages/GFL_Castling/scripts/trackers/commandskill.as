@@ -136,7 +136,8 @@ class CommandSkill : Tracker {
             _log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
-        SkillArray.insertLast(SkillTrigger(characterId,20,"VECTOR"));
+        SkillArray.insertLast(SkillTrigger(characterId,30,"VECTOR"));
+        addItemInBackpack(m_metagame,characterId,"projectile","VVfirenade.projectile");
         addItemInBackpack(m_metagame,characterId,"projectile","VVfirenade.projectile");
         sendPrivateMessage(m_metagame,playerId,"Firenade Added");
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
@@ -174,7 +175,7 @@ class CommandSkill : Tracker {
             _log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
-        SkillArray.insertLast(SkillTrigger(characterId,120,"FF_JUDGE"));
+        SkillArray.insertLast(SkillTrigger(characterId,90,"FF_JUDGE"));
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         if (character !is null) {
             Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
