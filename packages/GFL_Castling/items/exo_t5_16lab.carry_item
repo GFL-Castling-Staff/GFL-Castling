@@ -2,6 +2,7 @@
 <carry_items>
     <carry_item file="exo.base_carry_item" key="exo_t5_16lab.carry_item" name="16LAB Refined Standard Exo" transform_on_consume="exo_t5_16lab_1">
         <hud_icon filename="exo_t5_16lab_9.png" />
+        <commonness value="0.00001" in_stock="0" />
         <inventory price="50" />
         <modifier class="speed" value="0.35" />
         <modifier class="hit_success_probability" value="-1.0" />
