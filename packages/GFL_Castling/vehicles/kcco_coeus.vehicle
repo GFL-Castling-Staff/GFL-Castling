@@ -53,8 +53,4 @@
 		<trigger class="destroy" />
 		<result class="reward" rp="250.0" />
 	</event>
-	<event>
-		<trigger class="destroy" />
-		<result class="spawn" instance_class="carry_item" instance_key="sf_box.carry_item" min_amount="1" max_amount="1" offset="0 1.0 0" position_spread="0 0" direction_spread="0 0" />
-	</event>
 </vehicle>
