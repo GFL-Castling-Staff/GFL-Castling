@@ -7,18 +7,18 @@
 		barrel_offset="0.5" 
 		class="0"
     solt="0" 
-		magazine_size="30" 
+		magazine_size="20" 
 		name="GK-Ouroboros" 
     projectile_speed="80" 
-		retrigger_time="0.085" 
+		retrigger_time="0.25" 
 		suppressed="0" 
     projectiles_per_shot="2"
     carry_in_two_hands="0"  
     can_shoot_standing="1" 
     can_shoot_crouching="0"
     can_shoot_prone="0"
-		sustained_fire_diminish_rate="1.2"
-		sustained_fire_grow_step="0.1"/>
+		sustained_fire_diminish_rate="0.8"
+		sustained_fire_grow_step="0.3"/>
 
     <inventory 
     encumbrance="27.0" 
@@ -61,19 +61,19 @@
     <next_in_chain key="ff_weaver_1.weapon" share_ammo="0" />
 
     <projectile file="bullet_sf.projectile">
-      <result class="hit"  kill_probability="1.4" kill_decay_start_time="1" kill_decay_end_time="1" />
+      <result class="hit"  kill_probability="2.1" kill_decay_start_time="1" kill_decay_end_time="1" />
      </projectile>
 
     <weak_hand_hold offset="0.2" />
 
     <projectile file="FF_weaver_rocket.projectile"/>
      
-    <stance state_key="running" accuracy="0.7" />
-    <stance state_key="walking" accuracy="0.7" />
+    <stance state_key="running" accuracy="0.5" />
+    <stance state_key="walking" accuracy="0.5" />
     <stance state_key="crouch_moving" accuracy="0.8" />
     <stance state_key="prone_moving" accuracy="0.8" />
 
-    <stance state_key="standing" accuracy="0.75" />
+    <stance state_key="standing" accuracy="0.64" />
     <stance state_key="crouching" accuracy="0.8" />
     
     <modifier class="speed" value="0.2" />
@@ -83,15 +83,17 @@
     <specification 
     accuracy_factor="1" 
 		barrel_offset="0.5" 
-		class="0"
+		class="4"
+  	burst_shots="8"
     solt="0" 
-		magazine_size="8" 
+		magazine_size="16" 
 		name="GK-Ouroboros-[Venomous Descent]" 
     projectile_speed="100" 
-		retrigger_time="0.9" 
+		retrigger_time="0.1" 
+	  last_burst_retrigger_time="4"
 		suppressed="0" 
     carry_in_two_hands="0"  
-    can_shoot_standing="0" 
+    can_shoot_standing="1" 
     can_shoot_crouching="1"
     can_shoot_prone="0"
 		sustained_fire_diminish_rate="1"
@@ -103,7 +105,7 @@
     sell_price="648.0"/>
        <animation state_key="recoil"	animation_key="recoil,ouroboros" />
       <animation state_key="recoil" stance_key="over_wall" animation_key="recoil,ouroboros" />
-      <animation state_key="reload"	animation_key="reloading, weapon dual3" />
+      <animation state_key="reload"	animation_key="reloading, weapon dual2" />
         <animation state_key="hold"	animation_key="still,ouroboros" />
         <animation state_key="hold_casual"	animation_key="relax,ouroboros" />
         <animation state_key="hold_on_wall"	animation_key="walking,ouroboros" />
@@ -146,16 +148,15 @@
      speed_estimation_far="75.0"
      max_speed="200"
      randomness="0.0"
-     curve_height="6"
+     curve_height="4"
      tweak_factor="2.5"
     />
+    <stance state_key="running" accuracy="0.3" />
+    <stance state_key="walking" accuracy="0.3" />
+    <stance state_key="crouch_moving" accuracy="0.6" />
 
-    <stance state_key="running" accuracy="0.5" />
-    <stance state_key="walking" accuracy="0.6" />
-    <stance state_key="crouch_moving" accuracy="0.8" />
-
-    <stance state_key="standing" accuracy="0.7" />
-    <stance state_key="crouching" accuracy="0.75" />
+    <stance state_key="standing" accuracy="0.5" />
+    <stance state_key="crouching" accuracy="0.8" />
     
     <modifier class="speed" value="0" />
 </weapon>
