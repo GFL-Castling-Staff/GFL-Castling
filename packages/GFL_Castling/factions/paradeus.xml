@@ -579,6 +579,7 @@
 			<carry_item key="pard_doppelsoldner.carry_item" />
 		</resources>
 		<item_class_existence_config>
+			<item_class_existence class="weapon" slot="1" probability="1" />
 			<!-- wearables -->
 			<item_class_existence class="carry_item" slot="1" probability="1" />
 			<!-- note, always bp items -->
@@ -588,7 +589,7 @@
 			<attribute weight="0.3" min="200.0" max="300.0" />
 		</attribute_config>
 		<attribute_config class="rp">
-			<attribute weight="1.0" min="0.0" max="0.0" />
+			<attribute weight="1.0" min="10.0" max="10.0" />
 		</attribute_config>
 	</soldier>
 	<!-- store -->
