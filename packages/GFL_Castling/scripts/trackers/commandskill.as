@@ -16,6 +16,7 @@ class SkillTrigger{
     int m_character_id;
     float m_time;
     string m_weapontype;
+    string m_specialkey1;
     SkillTrigger(int characterId, float time,string weapontype){
         m_character_id=characterId;
         m_time=time;
@@ -23,10 +24,26 @@ class SkillTrigger{
     }
 }
 
+class SkillEffectTimer{
+    int m_character_id;
+    float m_time;
+    string m_EffectKey="";
+    SkillEffectTimer(int characterId, float time,string EffectKey){
+        m_character_id=characterId;
+        m_time=time;
+        m_EffectKey=EffectKey;
+    }
+
+    setSkey(string key){
+        m_specialkey1=key;
+    }
+}
+
 class CommandSkill : Tracker {
     protected Metagame@ m_metagame;
     
 	protected array<SkillTrigger@> SkillArray;
+    protected array<SkillEffectTimer@> TimerArray;
 
 	// --------------------------------------------
 	CommandSkill(Metagame@ metagame) {
@@ -58,6 +75,9 @@ class CommandSkill : Tracker {
                 if (c_weaponType=="ff_justice.weapon"){
                     excuteJudgeskill(cId,senderId);                    
                 }
+                if (c_weaponType=="gkw_mp5.weapon"){
+                    excuteMP5skill(cId,senderId);                    
+                }
             }
         }
     }
@@ -73,6 +93,16 @@ class CommandSkill : Tracker {
                 }
             }
         }
+        if(TimerArray.length()>0)
+        {
+            for (uint a=0;a<TimerArray.length();a++){
+                TimerArray[a].m_time-=time;
+                if(TimerArray[a].m_time<0){
+                    excuteTimerEffect(TimerArray[a]);
+                    TimerArray.removeAt(a);
+                }
+            }
+        }
 	}
 
     bool hasEnded() const {
@@ -85,7 +115,22 @@ class CommandSkill : Tracker {
 		// always on
 		return true;
 	}
-
+    void excuteTimerEffect(SkillEffectTimer@ Trigger){
+        if (Trigger.m_EffectKey =="MP5MOD3"){
+            XmlElement c ("command");
+            c.setStringAttribute("class", "update_inventory");
+            c.setIntAttribute("container_type_id", 4);
+            c.setIntAttribute("character_id", Trigger.m_character_id); 
+            {
+                XmlElement j("item");
+                j.setStringAttribute("class", "carry_item");
+                j.setStringAttribute("key", Trigger.m_specialkey1);
+                c.appendChild(j);
+            }            
+            m_metagame.getComms().send(c);
+        }
+    }
+    
     void excuteAN94skill(int characterId,int playerId){
         bool ExistQueue = false;
         int j =-1;
@@ -199,6 +244,43 @@ class CommandSkill : Tracker {
                     break;
             } 
         }
+    }
+
+    void excuteMP5skill(int characterId,int playerId){
+        bool ExistQueue = false;
+        int j =-1;
+        for (uint i=0;i<SkillArray.length();i++){
+            if (SkillArray[i].m_character_id==characterId && SkillArray[i].m_weapontype=="MP5MOD3") {
+                ExistQueue=true;
+                j=i;
+            }
+        }
+        if (ExistQueue){
+            dictionary a;
+            a["%time"] = ""+SkillArray[j].m_time;
+            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            _log("skill cooldown" + SkillArray[j].m_time);
+            return;
+        }
+        SkillArray.insertLast(SkillTrigger(characterId,50,"MP5MOD3"));
+        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+        if (character !is null) {
+            string vestkey = getPlayerEquipmentKey(m_metagame,cID,4);
+            XmlElement c ("command");
+            c.setStringAttribute("class", "update_inventory");
+            c.setIntAttribute("container_type_id", 4);
+            c.setIntAttribute("character_id", soldierId); 
+            {
+                XmlElement j("item");
+                j.setStringAttribute("class", "carry_item");
+                j.setStringAttribute("key", "immunity_mp5.carry_item");
+                c.appendChild(j);
+            }            
+            m_metagame.getComms().send(c);
+        }
+        SkillEffectTimer@ stimer = SkillEffectTimer(characterId,4,"MP5MOD3");
+        stimer.setSkey(vestkey);
+        TimerArray.insertLast(stimer);
     }
 }
 
