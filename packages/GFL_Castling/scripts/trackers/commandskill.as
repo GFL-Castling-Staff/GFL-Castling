@@ -16,7 +16,6 @@ class SkillTrigger{
     int m_character_id;
     float m_time;
     string m_weapontype;
-    string m_specialkey1;
     SkillTrigger(int characterId, float time,string weapontype){
         m_character_id=characterId;
         m_time=time;
@@ -28,13 +27,14 @@ class SkillEffectTimer{
     int m_character_id;
     float m_time;
     string m_EffectKey="";
+    string m_specialkey1;
     SkillEffectTimer(int characterId, float time,string EffectKey){
         m_character_id=characterId;
         m_time=time;
         m_EffectKey=EffectKey;
     }
 
-    setSkey(string key){
+    void setSkey(string key){
         m_specialkey1=key;
     }
 }
@@ -262,19 +262,20 @@ class CommandSkill : Tracker {
             _log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
-        SkillArray.insertLast(SkillTrigger(characterId,50,"MP5MOD3"));
+        SkillArray.insertLast(SkillTrigger(characterId,29,"MP5MOD3"));
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+        string vestkey="";
         if (character !is null) {
-            string vestkey = getPlayerEquipmentKey(m_metagame,cID,4);
+            vestkey = getPlayerEquipmentKey(m_metagame,characterId,4);
             XmlElement c ("command");
             c.setStringAttribute("class", "update_inventory");
             c.setIntAttribute("container_type_id", 4);
-            c.setIntAttribute("character_id", soldierId); 
+            c.setIntAttribute("character_id", characterId); 
             {
-                XmlElement j("item");
-                j.setStringAttribute("class", "carry_item");
-                j.setStringAttribute("key", "immunity_mp5.carry_item");
-                c.appendChild(j);
+                XmlElement k("item");
+                k.setStringAttribute("class", "carry_item");
+                k.setStringAttribute("key", "immunity_mp5.carry_item");
+                c.appendChild(k);
             }            
             m_metagame.getComms().send(c);
         }
