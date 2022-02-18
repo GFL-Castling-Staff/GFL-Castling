@@ -79,7 +79,7 @@
     <inventory  buy_price="11.0" sell_price="11.0" />
     <next_in_chain key="gkw_f2000.weapon" share_ammo="1" />
 
-
+    <commonness value="0" in_stock="0" can_respawn_with="1" /> 
 
     <sound key="fire" fileref="F2000_Fire_FromBF3.wav" pitch_variety="0.05" volume="1.2" />
     <sound key="magazine_out" fileref="F2000_mgz_out_FromBF3.wav" volume="1" />
