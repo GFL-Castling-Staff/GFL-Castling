@@ -23,7 +23,7 @@
 	<animation key="reload" stance_key="prone" animation_key="ARreloadp1.8" />
     <animation state_key="next_in_chain_in" animation_key="ARswitch0.5" />
     <inventory  buy_price="14.0" sell_price="14.0" />	
-    <commonness value="0" in_stock="0" can_respawn_with="1" /> 
+
 
 
     <sound key="fire" fileref="AK47_Fire_FromINS.wav" pitch_variety="0.05" volume="1" />
@@ -77,7 +77,7 @@
     <animation state_key="next_in_chain_in" animation_key="ARswitch1.2" />
     <inventory  buy_price="14.0" sell_price="14.0" />	
 
-
+    <commonness value="0" in_stock="0" can_respawn_with="1" /> 
 
     <sound key="fire" fileref="AK47_Fire_FromINS.wav" pitch_variety="0.05" volume="1" />
     <sound key="magazine_out" fileref="AK47_mgz_out_FromINS.wav" volume="0.4" />

@@ -6,49 +6,36 @@
 	<weapon file="tank2_missile_launcher.weapon" />    
 	<weapon file="deployable_minig.weapon"/>
 	
-	<!--PARW_COMPASS-->
-	<weapon file="par_vehicle_Compass.weapon"/>
-	
-	<!--KCCO_TYPHOON-->
-	<weapon file="kcco_vehicle_typhoon.weapon"/>
-	<weapon file="kcco_vehicle_typhoon_2.weapon"/>
-	
 	<!--GK_HUMVEE-->
 	<weapon file="gkw_vehicle_mg_humvee.weapon"/>
 	
 	<!--GK_PIERRE-->
 	<weapon file="gkw_vehicle_pierre.weapon"/>
-	<weapon file="gkw_vehicle_pierre_2.weapon"/>
-	<weapon file="gkw_vehicle_pierre_rocket1.weapon"/>
-	<weapon file="gkw_vehicle_pierre_rocket2.weapon"/>
-	<weapon file="gkw_vehicle_pierre_rocket3.weapon"/>
-	<weapon file="gkw_vehicle_pierre_rocket4.weapon"/>
+	
+	<!--GK_BUNKER-->
+	<weapon file="gkw_deploy_bunker.weapon"/>
+	<weapon file="gkw_vehicle_bunker.weapon" />
+		
+	<!--GK_AMOS-->
+	<!-- <weapon file="gkw_vehicle_amos.weapon"/> -->
+	
+	<!--KCCO_TYPHOON-->
+	<weapon file="kcco_vehicle_typhoon.weapon"/>
+	<weapon file="kcco_vehicle_typhoon_2.weapon"/>
 
+	<!--KCCO_COEUS-->
 	<weapon file="kcco_vehicle_coeus.weapon"/>
 	<weapon file="kcco_vehicle_mg.weapon"/>
+	
+	<!--PARW_COMPASS-->
+	<weapon file="par_vehicle_Compass.weapon"/>
 	
 	<!--PARW_UHLAN-->
 	<weapon file="parw_vehicle_uhlan.weapon"/>
 	<weapon file="parw_vehicle_uhlan_2.weapon"/>
 	<weapon file="parw_vehicle_uhlan_shield_2.weapon"/>
 	<weapon file="parw_vehicle_uhlan_shield.weapon"/>
-	
-	<!--GK_BUNKER-->
-	<weapon file="gkw_bkr_mg.weapon" />
-	<weapon file="gkw_bkr_rocket0.weapon" />
-	<weapon file="gkw_bkr_rocket1.weapon" />
-	<weapon file="gkw_bkr_rocket2.weapon" />
-	<weapon file="gkw_bkr_rocket3.weapon" />
-	<weapon file="gkw_bkr_rocket4.weapon" />
-	<weapon file="gkw_bkr_rocket5.weapon" />
-	<weapon file="gkw_bkr_hnt1.weapon" />
-	<weapon file="gkw_bkr_hnt2.weapon" />
-	<weapon file="gkw_deploy_bunker.weapon"/>
-	<weapon file="gkw_bkr_mg2.weapon"/>
-	<weapon file="gkw_bkr_base_mg1.weapon"/>
-	<weapon file="gkw_bkr_base_mg2.weapon"/>
-	<weapon file="gkw_bkr_base_mg3.weapon"/>
-	  
+  
 	<!--ALL_CRASHER-->
 	<weapon file="gkw_vehicle_crasher.weapon"/>
 	<weapon file="gkw_vehicle_crasher_shield1.weapon"/>
