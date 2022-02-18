@@ -280,13 +280,13 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 		{
 			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0));                                                  
-			f.m_capacityOffset = 0; 
+			f.m_capacityOffset = 20; 
 			f.m_capacityMultiplier = 1.0;
 			stage.m_factions.insertLast(f);
 		}
 		{
-			Faction f(FactionConfig(1, "sf.xml", "S.F.", "0.91 0.11 0.20", "sf.xml"), createCommanderAiCommand(1,0.4,0.1));
-			f.m_capacityMultiplier = 1.0;                                                 
+			Faction f(FactionConfig(1, "sf.xml", "S.F.", "0.91 0.11 0.20", "sf.xml"), createCommanderAiCommand(1,0.3,0.2));
+			f.m_capacityMultiplier = 0.8;                                                 
 			stage.m_factions.insertLast(f);                                         
 		}
 
@@ -307,9 +307,9 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.m_mapInfo.m_id = "map105_2";
 
 		stage.addTracker(Overtime(m_metagame, 0));
-		stage.m_maxSoldiers = 15 * 16;                                          // was 11*10
+		stage.m_maxSoldiers = 14 * 16;                                          // was 11*10
 		stage.m_soldierCapacityModel = "constant";     
-		stage.m_playerAiCompensation = 6;                                       // was 4
+		stage.m_playerAiCompensation = 8;                                       // was 4
         stage.m_playerAiReduction = 0;                                        // was 2    
 		stage.m_finalBattle = true;
 
@@ -336,7 +336,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		{
 			Faction f(FactionConfig(2, "kcco.xml", "KCCO", "0.43 0.49 0.18", "kcco.xml"), createCommanderAiCommand(2, 0.10, 0.10));             
 			f.m_overCapacity = 80;                                             
-            f.m_capacityOffset = 30;                                            
+            f.m_capacityOffset = 10;                                            
 			stage.m_factions.insertLast(f);                                    
 		}
 		{
