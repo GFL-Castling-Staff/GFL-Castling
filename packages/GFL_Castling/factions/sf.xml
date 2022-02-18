@@ -785,7 +785,7 @@
 			<parameter class="min_number_of_enemies_to_throw_grenade" value="1.0" />
 		</character>
 		<model filename="sfd_m16a1.xml" />
-		<ai filename="elite.ai" />
+		<ai filename="eod.ai" />
 		<resources clear_vehicles="1" clear_weapons="1">
 			<weapon key="sfw_m16a1.weapon" enabled="1"/>
 			<projectile key="stun_grenade.projectile"/>

@@ -12,6 +12,11 @@
     <!-- projectile slot 0 is used for hand grenade items currently -->
     <!-- bound to change -->
     <commonness value="0.01" />
+    <throwable curve_height="6.0" near_far_distance="5.0" speed_estimation_near="9.0" speed_estimation_far="15.0" max_speed="14.0" randomness="0.07" />
+    <capacity value="2" source="rank" source_value="0.0" />
+    <capacity value="3" source="rank" source_value="0.0" />
+    <capacity value="4" source="rank" source_value="0.0" />
+    <inventory encumbrance="3.0" price="2.0" />
 
     <sound class="result" key="other" fileref="stun_grenade1.wav" />
 
