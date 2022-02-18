@@ -64,7 +64,8 @@
     <stance state_key="standing" accuracy="1" />
     <stance state_key="crouching" accuracy="1" />
     <stance state_key="prone" accuracy="1" />
-    <shield offset="0.5 -0.35 0" extent="0.8 1.4 1.6" />
+	
+	<shield offset="0.5 -0.35 0" extent="0.8 1.4 1.6" />
 
 
     <modifier class="speed" value="-0.6" />    
