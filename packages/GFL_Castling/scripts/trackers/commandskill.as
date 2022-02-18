@@ -137,7 +137,7 @@ class CommandSkill : Tracker {
             m_metagame.getComms().send(c);
             if(Trigger.m_EffectKey =="MP5MOD3"){
                 const XmlElement@ character = getCharacterInfo(m_metagame, Trigger.m_character_id);
-                string cpos = character.getStringAttribute("position"));
+                string cpos = character.getStringAttribute("position");
                 array<const XmlElement@> affectedCharacter = getCharactersNearPosition(m_metagame,stringToVector3(cpos),0,10.0f);
                 XmlElement c1 ("command");
                 c1.setStringAttribute("class", "update_inventory");
@@ -210,8 +210,8 @@ class CommandSkill : Tracker {
                 "Vector_SkillC1.wav",
                 "Vector_SkillC2.wav",
                 "Vector_SkillC3.wav"
-            }
-            playRandomSoundArray(m_metagame,Voice,factionid,c_pos,1);
+            };
+            playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
         }
     }
 
@@ -248,8 +248,8 @@ class CommandSkill : Tracker {
             array<string> Voice={
                 "judge_skill_1.wav",
                 "judge_skill_2.wav"
-            }
-            playRandomSoundArray(m_metagame,Voice,factionid,c_pos,1);
+            };
+            playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
         }
     }
 
@@ -274,6 +274,9 @@ class CommandSkill : Tracker {
         string vestkey="";
         if (character !is null) {
             vestkey = getPlayerEquipmentKey(m_metagame,characterId,4);
+            if (vestkey=="immunity_mp5.carry_item"){
+                vestkey=="";
+            }
             XmlElement c ("command");
             c.setStringAttribute("class", "update_inventory");
             c.setIntAttribute("container_type_id", 4);
@@ -294,8 +297,8 @@ class CommandSkill : Tracker {
             "MP5Mod_SKILL2_JP.wav",
             "MP5Mod_SKILL3_JP.wav",
             "MP5Mod_MEET_JP.wav"
-        }
-        playRandomSoundArray(m_metagame,Voice,factionid,character.getStringAttribute("position"),1);
+        };
+        playRandomSoundArray(m_metagame,Voice,0,character.getStringAttribute("position"),1);
     }
     void excuteMP5MOD3skill(int characterId,int playerId){
         bool ExistQueue = false;
@@ -318,6 +321,9 @@ class CommandSkill : Tracker {
         string vestkey="";
         if (character !is null) {
             vestkey = getPlayerEquipmentKey(m_metagame,characterId,4);
+            if (vestkey=="immunity_mp5.carry_item"){
+                vestkey=="";
+            }
             XmlElement c ("command");
             c.setStringAttribute("class", "update_inventory");
             c.setIntAttribute("container_type_id", 4);
@@ -338,8 +344,8 @@ class CommandSkill : Tracker {
             "MP5Mod_SKILL2_JP.wav",
             "MP5Mod_SKILL3_JP.wav",
             "MP5Mod_MEET_JP.wav"
-        }
-        playRandomSoundArray(m_metagame,Voice,factionid,character.getStringAttribute("position"),1);
+        };
+        playRandomSoundArray(m_metagame,Voice,0,character.getStringAttribute("position"),1);
     }
 }
 
