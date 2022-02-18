@@ -95,7 +95,7 @@
     <commonness value="0.0" />
 
     <projectile file="bullet.projectile">
-        <result class="blast"  damage="0.4" radius="2.4" decal="1" push="0.25" character_state="death" faction_compare="not_equal" />
+        <result class="blast"  damage="0.3" radius="2.4" decal="1" push="0.25" character_state="death" faction_compare="not_equal" />
         <trigger class="impact" />
         <effect class="result" key="terrain" ref="BigBurst" use_surface_color="1" />
         <effect class="result" key="terrain" ref="SmokeTop" post_processing="1" />
