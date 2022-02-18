@@ -28,6 +28,7 @@ class SkillEffectTimer{
     float m_time;
     string m_EffectKey="";
     string m_specialkey1;
+    string m_specialkey2;
     SkillEffectTimer(int characterId, float time,string EffectKey){
         m_character_id=characterId;
         m_time=time;
@@ -36,6 +37,9 @@ class SkillEffectTimer{
 
     void setSkey(string key){
         m_specialkey1=key;
+    }
+    void setSkey2(string key){
+        m_specialkey2=key;
     }
 }
 
@@ -75,8 +79,11 @@ class CommandSkill : Tracker {
                 if (c_weaponType=="ff_justice.weapon"){
                     excuteJudgeskill(cId,senderId);                    
                 }
-                if (c_weaponType=="gkw_mp5.weapon"){
+                if (c_weaponType=="gkw_mp5.weapon"||c_weaponType=="gkw_mp5_1205.weapon"||c_weaponType=="gkw_mp5_1903.weapon"||c_weaponType=="gkw_mp5_3.weapon"){
                     excuteMP5skill(cId,senderId);                    
+                }
+                if (c_weaponType=="gkw_mp5mod3.weapon"){
+                    excuteMP5MOD3skill(cId,senderId);                    
                 }
             }
         }
@@ -116,7 +123,7 @@ class CommandSkill : Tracker {
 		return true;
 	}
     void excuteTimerEffect(SkillEffectTimer@ Trigger){
-        if (Trigger.m_EffectKey =="MP5MOD3"){
+        if (Trigger.m_EffectKey =="MP5MOD3" || Trigger.m_EffectKey =="MP5" ){
             XmlElement c ("command");
             c.setStringAttribute("class", "update_inventory");
             c.setIntAttribute("container_type_id", 4);
@@ -126,8 +133,16 @@ class CommandSkill : Tracker {
                 j.setStringAttribute("class", "carry_item");
                 j.setStringAttribute("key", Trigger.m_specialkey1);
                 c.appendChild(j);
-            }            
+            }
             m_metagame.getComms().send(c);
+            if(Trigger.m_EffectKey =="MP5MOD3"){
+                array<const XmlElement@> affectedCharacter = getCharactersNearPosition(m_metagame,Trigger.m_specialkey2,0,10.0f);
+                XmlElement c1 ("command");
+                c1.setStringAttribute("class", "update_inventory");
+                c1.setIntAttribute("character_id", Trigger.m_character_id); 
+                c1.setIntAttribute("untransform_count", affectedCharacter.length());
+                m_metagame.getComms().send(c1);
+            }
         }
     }
     
@@ -250,6 +265,43 @@ class CommandSkill : Tracker {
         bool ExistQueue = false;
         int j =-1;
         for (uint i=0;i<SkillArray.length();i++){
+            if (SkillArray[i].m_character_id==characterId && SkillArray[i].m_weapontype=="MP5") {
+                ExistQueue=true;
+                j=i;
+            }
+        }
+        if (ExistQueue){
+            dictionary a;
+            a["%time"] = ""+SkillArray[j].m_time;
+            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            _log("skill cooldown" + SkillArray[j].m_time);
+            return;
+        }
+        SkillArray.insertLast(SkillTrigger(characterId,29,"MP5"));
+        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+        string vestkey="";
+        if (character !is null) {
+            vestkey = getPlayerEquipmentKey(m_metagame,characterId,4);
+            XmlElement c ("command");
+            c.setStringAttribute("class", "update_inventory");
+            c.setIntAttribute("container_type_id", 4);
+            c.setIntAttribute("character_id", characterId); 
+            {
+                XmlElement k("item");
+                k.setStringAttribute("class", "carry_item");
+                k.setStringAttribute("key", "immunity_mp5.carry_item");
+                c.appendChild(k);
+            }            
+            m_metagame.getComms().send(c);
+        }
+        SkillEffectTimer@ stimer = SkillEffectTimer(characterId,4,"MP5");
+        stimer.setSkey(vestkey);
+        TimerArray.insertLast(stimer);
+    }
+    void excuteMP5MOD3skill(int characterId,int playerId){
+        bool ExistQueue = false;
+        int j =-1;
+        for (uint i=0;i<SkillArray.length();i++){
             if (SkillArray[i].m_character_id==characterId && SkillArray[i].m_weapontype=="MP5MOD3") {
                 ExistQueue=true;
                 j=i;
@@ -279,8 +331,9 @@ class CommandSkill : Tracker {
             }            
             m_metagame.getComms().send(c);
         }
-        SkillEffectTimer@ stimer = SkillEffectTimer(characterId,4,"MP5MOD3");
+        SkillEffectTimer@ stimer = SkillEffectTimer(characterId,5,"MP5MOD3");
         stimer.setSkey(vestkey);
+        stimer.setSkey2(character.getStringAttribute("position"));
         TimerArray.insertLast(stimer);
     }
 }
