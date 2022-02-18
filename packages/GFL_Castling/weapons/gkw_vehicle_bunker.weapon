@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapons>
+<weapon key="bunker_mg.weapon">
+    <specification 
+    slot="2" 
+    retrigger_time="0.072"
+	accuracy_factor="0.80" 
+	spread_range ="0.8"
+	sustained_fire_grow_step="0.0" 
+	sustained_fire_diminish_rate="2.0" 
+    sight_range_modifier="1.6"
+    ai_sight_range_modifier="1.05"
+    magazine_size="-1" 
+    can_shoot_standing="0" 
+    can_shoot_crouching="0" 
+    suppressed="0" 
+    name="Bunker MG" 
+    class="0" 
+    projectile_speed="180.0" />
+    
+    <animation key="recoil" ref="12" />
+    <animation key="recoil" ref="13" />
+    <animation key="recoil" ref="14" />
+    <animation key="reload" ref="33" />
+    <animation key="hold" ref="32" />
+    <animation key="hold_on_wall" ref="1" />
+    <animation key="walking" ref="31" />
+    <sound key="fire" fileref="minigun_From_payday2.wav" pitch_variety="0.05" volume="0.1" />
+    <sound key="magazine_out" fileref="mg_clip_out.wav" />
+    <sound key="magazine_in" fileref="mg_clip_in.wav" />
+    <sound key="cycle" fileref="rifle_chamber.wav" />
+    <sound class="impact" fileref="rifle_drop.wav" />
+    <model filename="" />
+
+    <hud_icon filename="gkw_v_LM5.png" />
+    <commonness value="0.0" />
+
+
+    <weak_hand_hold offset="0.4" />
+    <projectile file="bullet.projectile">
+        <result class="hit"  kill_probability="1.45" kill_decay_start_time="2.00" kill_decay_end_time="3.60" />
+    </projectile>
+    
+<!-- front plate-mid -->    
+    <shield offset="0.3 -0.6 0" extent="0.2 0.8 0.3" />    
+<!-- front plate-L -->    
+    <shield offset="0.3 -0.4 0.3" extent="0.2 1.0 0.3" />
+<!-- front plate-R -->    
+    <shield offset="0.3 -0.4 -0.3" extent="0.2 1.0 0.3" />    
+<!-- left plate -->
+    <shield offset="0.9 -0.5 +0.6" extent="1.5 0.3 0.2" />
+<!-- right plate -->  
+    <shield offset="0.9 -0.5 -0.6" extent="1.5 0.3 0.2" />      
+<!-- rear plate --> 
+    <!-- <shield offset="1.7 -0.2 0" extent="0.2 1.0 0.8" />   -->
+    
+</weapon>
+
+<weapon key="bunker_base_mg">
+
+  <specification 
+  barrel_offset="0.5" 
+  retrigger_time="0.076" 
+  accuracy_factor="0.90" 
+  sustained_fire_grow_step="0.35" 
+  sustained_fire_diminish_rate="1.5" 
+  magazine_size="-1" 
+  suppressed="0" 
+  name="Bunker MG2" 
+  class="0" 
+  projectile_speed="180" 
+  spread_range="0.25"
+  sight_range_modifier="1.6"
+  ai_sight_range_modifier="1.05"
+  can_shoot_standing="0" 
+	can_shoot_crouching="0"
+	can_shoot_prone="1"
+  />
+
+    <animation key="recoil" ref="12" />
+    <animation key="recoil" ref="13" />
+    <animation key="recoil" ref="14" />
+    <animation key="reload" ref="33" />
+    <animation key="hold" ref="32" />
+    <animation key="hold_on_wall" ref="1" />
+    <animation key="walking" ref="31" />
+    <sound key="fire" fileref="minigun_From_payday2.wav" pitch_variety="0.05" volume="0.1" />
+    <sound key="magazine_out" fileref="mg_clip_out.wav" />
+    <sound key="magazine_in" fileref="mg_clip_in.wav" />
+    <sound key="cycle" fileref="rifle_chamber.wav" />
+    <sound class="impact" fileref="rifle_drop.wav" />
+    <model filename="" />
+
+    <hud_icon filename="gkw_v_LM5.png" />
+    <commonness value="0.0" />
+
+    <projectile file="bullet.projectile">
+        <result class="blast"  damage="0.4" radius="2.4" decal="1" push="0.25" character_state="death" faction_compare="not_equal" />
+        <trigger class="impact" />
+        <effect class="result" key="terrain" ref="BigBurst" use_surface_color="1" />
+        <effect class="result" key="terrain" ref="SmokeTop" post_processing="1" />
+        <effect class="result" key="terrain" ref="Smoke" post_processing="1" />
+        <effect class="result" key="terrain" ref="Shine" lighting="0" />
+        <effect class="result" key="terrain" ref="Godray" lighting="0" />
+        <effect class="result" key="terrain" ref="ShadowSmoke" shadow="1" />
+    </projectile>
+       <stance state_key="running" accuracy="0.6" />
+
+    <stance state_key="crouch_moving" accuracy="0.6" />
+    <stance state_key="prone_moving" accuracy="0.6" />
+    <stance state_key="standing" accuracy="0.6" />
+    <stance state_key="crouching" accuracy="0.8" />
+    <stance state_key="prone" accuracy="1" />
+    <stance state_key="over_wall" accuracy="1" />  
+    <modifier class="speed" value="-0.3" /> 
+
+</weapon>
+
+
+<weapon key="bunker_rocket0.weapon">
+    <specification 
+    slot="1" 
+	retrigger_time="5.8" 
+	accuracy_factor="0.60" 
+	sustained_fire_grow_step="-2.0" 
+	sustained_fire_diminish_rate="0.9" 
+    sight_range_modifier="1.2"
+    ai_sight_range_modifier="1.0"
+    barrel_offset_3d="10 0 0.8"
+    magazine_size="-1" 
+    can_shoot_standing="0" 
+    can_shoot_crouching="0" 
+    suppressed="0" 
+    name="Bunker ROCKET" 
+    class="0" 
+    projectile_speed="180.0" />
+    
+    <animation key="recoil" ref="12" />
+    <animation key="recoil" ref="13" />
+    <animation key="recoil" ref="14" />
+    <animation key="reload" ref="33" />
+    <animation key="hold" ref="32" />
+    <animation key="hold_on_wall" ref="1" />
+    <animation key="walking" ref="31" />
+    <sound key="fire" fileref="at4_fire_FromCOD16StrelaP.wav" pitch_variety="0.05"/>
+    <sound key="magazine_out" fileref="mg_clip_out.wav" />
+    <sound key="magazine_in" fileref="mg_clip_in.wav" />
+    <sound key="cycle" fileref="rifle_chamber.wav" />
+    <sound class="impact" fileref="rifle_drop.wav" />
+    <model filename="" />
+
+    <hud_icon filename="gkw_v_LM5.png" />
+    <commonness value="0.0" />
+
+    <weak_hand_hold offset="0.4" />
+	<ballistics
+	 near_far_distance="0.0"
+	 speed_estimation_near="240.0"
+	 speed_estimation_far="240.0"
+	 max_speed="240.0"
+	 randomness="0.0"
+	 curve_height="3.0"
+	 tweak_factor="4.8"
+	/>
+    <projectile file="bunker_stun_grenade_spawner.projectile"/>
+      
+    
+    <!-- <ballistics near_far_distance="1000.0" speed_estimation_near="50.0" speed_estimation_far="50.0" max_speed="125.0" randomness="0.0" /> -->
+</weapon>
+
+<weapon key="bunker_rocket1.weapon">
+    <specification 
+    slot="1" 
+	retrigger_time="6.0" 
+	accuracy_factor="0.60" 
+	sustained_fire_grow_step="-2.0" 
+	sustained_fire_diminish_rate="0.9" 
+    sight_range_modifier="1.2"
+    ai_sight_range_modifier="1.0"
+    barrel_offset_3d="10 0 0.8"
+    magazine_size="-1" 
+    can_shoot_standing="0" 
+    can_shoot_crouching="0" 
+    suppressed="0" 
+    name="Bunker ROCKET" 
+    class="0" 
+    projectile_speed="180.0" />
+    
+    <animation key="recoil" ref="12" />
+    <animation key="recoil" ref="13" />
+    <animation key="recoil" ref="14" />
+    <animation key="reload" ref="33" />
+    <animation key="hold" ref="32" />
+    <animation key="hold_on_wall" ref="1" />
+    <animation key="walking" ref="31" />
+    <sound key="fire" fileref="at4_fire_FromCOD16StrelaP.wav" pitch_variety="0.05"/>
+    <sound key="magazine_out" fileref="mg_clip_out.wav" />
+    <sound key="magazine_in" fileref="mg_clip_in.wav" />
+    <sound key="cycle" fileref="rifle_chamber.wav" />
+    <sound class="impact" fileref="rifle_drop.wav" />
+    <model filename="" />
+
+    <hud_icon filename="gkw_v_LM5.png" />
+    <commonness value="0.0" />
+
+    <weak_hand_hold offset="0.4" />
+	<ballistics
+	 near_far_distance="0.0"
+	 speed_estimation_near="240.0"
+	 speed_estimation_far="240.0"
+	 max_speed="240.0"
+	 randomness="0.0"
+	 curve_height="3.0"
+	 tweak_factor="4.8"
+	/>
+    <projectile file="bunker_stun_grenade_spawner.projectile"/>
+      
+    
+    <!-- <ballistics near_far_distance="1000.0" speed_estimation_near="50.0" speed_estimation_far="50.0" max_speed="125.0" randomness="0.0" /> -->
+</weapon>
+
+<weapon key="bunker_rocket2.weapon">
+    <specification 
+    slot="1" 
+	retrigger_time="6.2" 
+	accuracy_factor="0.60" 
+	sustained_fire_grow_step="-2.0" 
+	sustained_fire_diminish_rate="0.9" 
+    sight_range_modifier="1.2"
+    ai_sight_range_modifier="1.0"
+    barrel_offset_3d="10 0 0.8"
+    magazine_size="-1" 
+    can_shoot_standing="0" 
+    can_shoot_crouching="0" 
+    suppressed="0" 
+    name="Bunker ROCKET" 
+    class="0" 
+    projectile_speed="180.0" />
+    
+    <animation key="recoil" ref="12" />
+    <animation key="recoil" ref="13" />
+    <animation key="recoil" ref="14" />
+    <animation key="reload" ref="33" />
+    <animation key="hold" ref="32" />
+    <animation key="hold_on_wall" ref="1" />
+    <animation key="walking" ref="31" />
+    <sound key="fire" fileref="at4_fire_FromCOD16StrelaP.wav" pitch_variety="0.05"/>
+    <sound key="magazine_out" fileref="mg_clip_out.wav" />
+    <sound key="magazine_in" fileref="mg_clip_in.wav" />
+    <sound key="cycle" fileref="rifle_chamber.wav" />
+    <sound class="impact" fileref="rifle_drop.wav" />
+    <model filename="" />
+
+    <hud_icon filename="gkw_v_LM5.png" />
+    <commonness value="0.0" />
+
+    <weak_hand_hold offset="0.4" />
+	<ballistics
+	 near_far_distance="0.0"
+	 speed_estimation_near="240.0"
+	 speed_estimation_far="240.0"
+	 max_speed="240.0"
+	 randomness="0.0"
+	 curve_height="3.0"
+	 tweak_factor="4.8"
+	/>
+    <projectile file="bunker_stun_grenade_spawner.projectile"/>
+      
+    
+    <!-- <ballistics near_far_distance="1000.0" speed_estimation_near="50.0" speed_estimation_far="50.0" max_speed="125.0" randomness="0.0" /> -->
+</weapon>
+
+
+<weapon key="bunker_hornet1.weapon">
+     <specification retrigger_time="9.6" 
+    accuracy_factor="1" 
+    sustained_fire_grow_step="1.2" 
+    sustained_fire_diminish_rate="0.6" 
+    sight_range_modifier="1.2"
+    ai_sight_range_modifier="1.0" 
+    magazine_size="-1" 
+    can_shoot_standing="0" 
+    can_shoot_crouching="0" 
+    suppressed="0" 
+    name="Bunker Hornet" 
+    class="0" 
+    projectile_speed="2000.0" 
+    slot="2" 
+    barrel_offset_3d="0.4 0.1 0.4"
+    projectiles_per_shot="1"
+    sight_height_offset="2.0" />
+    
+    <model mesh_filename="" 
+    texture_filename="" />
+    <hud_icon filename="hud_hornet.png" />
+    <commonness value="0.0" />
+
+<!--     <ballistics curve_height="12.0" near_far_distance="0.0" speed_estimation_near="0.0" speed_estimation_far="28.0" max_speed="50.0" randomness="0.0" tweak_factor="1.1" /> -->
+     <ballistics
+     near_far_distance="0"
+     speed_estimation_near="75.0"
+     speed_estimation_far="75.0"
+     max_speed="200"
+     randomness="0.0"
+     curve_height="6"
+     tweak_factor="2.5"
+    />
+	<weak_hand_hold offset="0.2" />
+	<projectile file="bunker_hornet.projectile" />
+    
+    
+	<!-- Scoring for target priority. Distance is between 0 and 1 based on range; direction is between 0 and 1 based on whether its near the barrel; squad_command is between 0 and on based on how close to the player's command order is, and base_score is a weight.. -->
+	<!-- These all add together and the highest 'score' is the new target, targets are rescanned every 2.5 seconds to see if a new higher-score target is in sight-range. -->
+	<!-- You must define a blank tag at the top of the list to handle all cases where the vehicle is fighting something "undefined", which is what common infantry might best fit under. -->
+    <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5" />
+    <target_factors tag="heavy_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="10.0" />
+    <target_factors tag="apc" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0" />
+    <target_factors tag="light_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="6.0" />	
+    <target_factors tag="defensive_at" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.5" />
+    <target_factors tag="tactical" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0" />  <!-- important non combat player-only vehicles -->  
+    <target_factors tag="bazooka" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0" />      
+
+    <effect class="muzzle" ref="LawMuzzle" />
+    <effect class="muzzle" ref="UpDust" />
+
+    <sound key="fire" fileref="hornet_shot.wav" volume="0.5" />
+
+
+</weapon>
+
+
+<weapon key="bunker_hornet2.weapon">
+    <specification retrigger_time="9.0" 
+    accuracy_factor="1" 
+    sustained_fire_grow_step="1.2" 
+    sustained_fire_diminish_rate="0.6" 
+    sight_range_modifier="1.2"
+    ai_sight_range_modifier="1.0" 
+    magazine_size="-1" 
+    can_shoot_standing="0" 
+    can_shoot_crouching="0" 
+    suppressed="0" 
+    name="Bunker Hornet" 
+    class="0" 
+    projectile_speed="2000.0" 
+    slot="2" 
+    barrel_offset_3d="0.4 0.1 0.4"
+    projectiles_per_shot="1"
+    sight_height_offset="2.0" />
+    
+    <model mesh_filename="" 
+    texture_filename="" />
+    <hud_icon filename="hud_hornet.png" />
+    <commonness value="0.0" />
+
+<!--     <ballistics curve_height="12.0" near_far_distance="0.0" speed_estimation_near="0.0" speed_estimation_far="28.0" max_speed="50.0" randomness="0.0" tweak_factor="1.1" /> -->
+     <ballistics
+     near_far_distance="0"
+     speed_estimation_near="75.0"
+     speed_estimation_far="75.0"
+     max_speed="200"
+     randomness="0.0"
+     curve_height="6"
+     tweak_factor="2.5"
+    />
+	<weak_hand_hold offset="0.2" />
+	<projectile file="bunker_hornet.projectile" />
+    
+	<!-- Scoring for target priority. Distance is between 0 and 1 based on range; direction is between 0 and 1 based on whether its near the barrel; squad_command is between 0 and on based on how close to the player's command order is, and base_score is a weight.. -->
+	<!-- These all add together and the highest 'score' is the new target, targets are rescanned every 2.5 seconds to see if a new higher-score target is in sight-range. -->
+	<!-- You must define a blank tag at the top of the list to handle all cases where the vehicle is fighting something "undefined", which is what common infantry might best fit under. -->
+    <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5" />
+    <target_factors tag="heavy_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="10.0" />
+    <target_factors tag="apc" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0" />
+    <target_factors tag="light_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="6.0" />	
+    <target_factors tag="defensive_at" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.5" />
+    <target_factors tag="tactical" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0" />  <!-- important non combat player-only vehicles -->  
+    <target_factors tag="bazooka" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0" />      
+
+    <effect class="muzzle" ref="LawMuzzle" />
+    <effect class="muzzle" ref="UpDust" />
+
+    <sound key="fire" fileref="hornet_shot.wav" volume="0.5" />
+</weapon>
+
+</weapons>
