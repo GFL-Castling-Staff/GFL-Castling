@@ -136,7 +136,9 @@ class CommandSkill : Tracker {
             }
             m_metagame.getComms().send(c);
             if(Trigger.m_EffectKey =="MP5MOD3"){
-                array<const XmlElement@> affectedCharacter = getCharactersNearPosition(m_metagame,Trigger.m_specialkey2,0,10.0f);
+                const XmlElement@ character = getCharacterInfo(m_metagame, Trigger.m_character_id);
+                string cpos = character.getStringAttribute("position"));
+                array<const XmlElement@> affectedCharacter = getCharactersNearPosition(m_metagame,stringToVector3(cpos),0,10.0f);
                 XmlElement c1 ("command");
                 c1.setStringAttribute("class", "update_inventory");
                 c1.setIntAttribute("character_id", Trigger.m_character_id); 
@@ -204,18 +206,12 @@ class CommandSkill : Tracker {
         if (character !is null) {
             Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
             int factionid = character.getIntAttribute("faction_id");
-            int soundrnd= rand(1,3);
-            switch(soundrnd){
-                case 1:
-                    playSoundAtLocation(m_metagame,"Vector_SkillC1.wav",factionid,c_pos,1);
-                    break;
-                case 2:
-                    playSoundAtLocation(m_metagame,"Vector_SkillC2.wav",factionid,c_pos,1);
-                    break;
-                case 3:
-                    playSoundAtLocation(m_metagame,"Vector_SkillC3.wav",factionid,c_pos,1);
-                    break;
-            }   
+            array<string> Voice={
+                "Vector_SkillC1.wav",
+                "Vector_SkillC2.wav",
+                "Vector_SkillC3.wav"
+            }
+            playRandomSoundArray(m_metagame,Voice,factionid,c_pos,1);
         }
     }
 
@@ -249,15 +245,11 @@ class CommandSkill : Tracker {
                 c.setIntAttribute("untransform_count", 6);
                 m_metagame.getComms().send(c);
             }
-            int soundrnd= rand(1,2);
-            switch(soundrnd){
-                case 1:
-                    playSoundAtLocation(m_metagame,"judge_skill_1.wav",factionid,c_pos);
-                    break;
-                case 2:
-                    playSoundAtLocation(m_metagame,"judge_skill_2.wav",factionid,c_pos);
-                    break;
-            } 
+            array<string> Voice={
+                "judge_skill_1.wav",
+                "judge_skill_2.wav"
+            }
+            playRandomSoundArray(m_metagame,Voice,factionid,c_pos,1);
         }
     }
 
@@ -297,6 +289,13 @@ class CommandSkill : Tracker {
         SkillEffectTimer@ stimer = SkillEffectTimer(characterId,4,"MP5");
         stimer.setSkey(vestkey);
         TimerArray.insertLast(stimer);
+        array<string> Voice={
+            "MP5Mod_SKILL1_JP.wav",
+            "MP5Mod_SKILL2_JP.wav",
+            "MP5Mod_SKILL3_JP.wav",
+            "MP5Mod_MEET_JP.wav"
+        }
+        playRandomSoundArray(m_metagame,Voice,factionid,character.getStringAttribute("position"),1);
     }
     void excuteMP5MOD3skill(int characterId,int playerId){
         bool ExistQueue = false;
@@ -333,8 +332,14 @@ class CommandSkill : Tracker {
         }
         SkillEffectTimer@ stimer = SkillEffectTimer(characterId,5,"MP5MOD3");
         stimer.setSkey(vestkey);
-        stimer.setSkey2(character.getStringAttribute("position"));
         TimerArray.insertLast(stimer);
+        array<string> Voice={
+            "MP5Mod_SKILL1_JP.wav",
+            "MP5Mod_SKILL2_JP.wav",
+            "MP5Mod_SKILL3_JP.wav",
+            "MP5Mod_MEET_JP.wav"
+        }
+        playRandomSoundArray(m_metagame,Voice,factionid,character.getStringAttribute("position"),1);
     }
 }
 
