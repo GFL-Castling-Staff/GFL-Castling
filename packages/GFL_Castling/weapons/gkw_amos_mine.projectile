@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<projectile class="grenade" name="gkw_amos_mine" slot="1" pulldown_in_air="0.5" key="gkw_amos_mine.projectile">
+    <tag name="rocket"/>
+    <result class="spawn" instance_class="projectile" instance_key="gkw_amos_mine_s.projectile" min_amount="1" max_amount="2" offset="0 0.0 0" position_spread="0 0" direction_spread="0 -1" />
+    <trigger class="time" time_to_live="1.5"/>
+    <rotation class="motion" />
+    <model  />
+
+    <commonness value="0.0" />
+    
+    <effect class="result" key="other" ref="SmokeBurst" post_processing="1" />
+    <effect class="result" key="other" ref="Shine" lighting="0" />
+    <effect class="result" key="other" ref="HitTankSparks" lighting="0" />     
+
+    <effect class="activated" ref="Propulsion" />
+
+</projectile>
