@@ -3,23 +3,21 @@
     <tag name="cqb" />
      
     <specification 
-     retrigger_time="0.2"
-     last_burst_retrigger_time="0.5"
+     retrigger_time="0.3"
      magazine_size="100"
      can_shoot_standing="1" 
      can_shoot_crouching="0" 
      can_shoot_prone="0" 
-     burst_shots="3"
      carry_in_two_hands="0" 
      name="Alina" 
-     class="4"
+     class="0"
      supperessed="1"
      use_basic_muzzle_smoke_effect="0"
      stab_enabled="1"
      stab_range="6"
 />
 
-    <animation state_key="recoil"   animation_key="melee, nyto whip" />
+    <animation state_key="recoil"   animation_key="melee, ninjato whip" />
     <animation state_key="stabbing" animation_key="melee, ninjato whip" />
     <animation state_key="hold" animation_key="still, ninjato" />
     <animation state_key="hold_on_wall" animation_key="still overwall, ninjato" />
