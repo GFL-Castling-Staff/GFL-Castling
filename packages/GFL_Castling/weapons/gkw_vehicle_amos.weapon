@@ -83,7 +83,7 @@
     <specification 
     slot="2" 
     retrigger_time="0.075"
-	accuracy_factor="1.2" 
+	accuracy_factor="0.5" 
 	sustained_fire_grow_step="0.25" 
 	sustained_fire_diminish_rate="2.0" 
     sight_range_modifier="0.1"
@@ -158,7 +158,7 @@
 
 <weapon key="amos_emp.weapon">
     <specification 
-	retrigger_time="4.6" 
+	retrigger_time="4.3" 
     accuracy_factor="2.0" 
     sustained_fire_grow_step="0.0" 
     sustained_fire_diminish_rate="1.0" 
@@ -182,7 +182,7 @@
     <effect class="muzzle" ref="coeusmuzzle" lighting="1" />
     <sound key="fire" fileref="amos_main_fire.wav" pitch_variety="0.02" volume="1.0" />
     <projectile file="at4.projectile">
-        <result class="blast" radius="8.5" damage="9" push="0.2" decal="1" faction_compare="not_equal"/>
+        <result class="blast" radius="5.5" damage="6" push="0.2" decal="1" faction_compare="not_equal"/>
         <effect class="result" key="terrain" ref="SmokeBurst" post_processing="1" />
         <effect class="result" key="terrain" ref="Shine" lighting="0" />
         <effect class="result" key="terrain" ref="HitTankSparks" lighting="0" />

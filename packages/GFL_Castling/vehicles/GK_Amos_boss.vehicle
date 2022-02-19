@@ -23,6 +23,8 @@ ai_navigation_offset="0.0"
 jams_enemy_radio="1">
 
 	<tag name="Amos" />  
+	<tag name="metal_heavy" />
+	<tag name="heavy_combat" />
 
 	<tire_set offset="3.00 0.05 8.00" radius="0.3" />
 
@@ -161,9 +163,10 @@ jams_enemy_radio="1">
 	<rev_sound filename="jeep_rev1.wav" low_pitch="0.5" high_pitch="1.1" low_rev="0.1" high_rev="1.0" volume="1.0" />
 	-->
 
-	<rev_sound filename="jeep_rev0.wav" low_pitch="0.8" high_pitch="1.0" low_rev="0.0" high_rev="0.3" volume="1.3" />
-	<rev_sound filename="jeep2_rev2.wav" low_pitch="0.6" high_pitch="1.0" low_rev="0.1" high_rev="0.7" volume="1.3" />
-	<rev_sound filename="jeep2_rev3.wav" low_pitch="0.8" high_pitch="1.0" low_rev="0.5" high_rev="1.0" volume="1.3" />
+	<rev_sound filename="tank_rev0.wav" low_pitch="0.5" high_pitch="0.7" low_rev="0.0" high_rev="1.0" volume="1.8" />
+	<rev_sound filename="tank_rev0_b.wav" low_pitch="0.6" high_pitch="0.8" low_rev="0.0" high_rev="1.0" volume="1.7" /> 
+	<rev_sound filename="tank_rev1.wav" low_pitch="0.2" high_pitch="0.5" low_rev="0.4" high_rev="0.7" volume="1.9" />
+	<rev_sound filename="tank_rev2.wav" low_pitch="0.3" high_pitch="0.5" low_rev="0.9" high_rev="1.0" volume="1.7" />
 
 	<sound key="slide" filename="slide_noise.wav" />
 	<sound key="squeal" filename="tire_squeal.wav" />
