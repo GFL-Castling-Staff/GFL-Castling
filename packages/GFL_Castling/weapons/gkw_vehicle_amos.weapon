@@ -102,6 +102,7 @@
     <!-- <model filename="" /> -->
 	<model mesh_filename="Amos_drone.mesh" texture_filename="AMOS_drone.png" />
     <hud_icon filename="testing.png" />
+    <sound key="fire" fileref="MG34_fire_FromCOD16.wav" pitch_variety="0.05" volume="0.5" />
     <commonness value="0.0" />
     <weak_hand_hold offset="0.4" />
     <projectile file="bullet.projectile">
