@@ -1,70 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapon file="two_hands_sg.animation_base" key="gkw_aa12.weapon">
 
-    
+
     <!--Weapon specifications-->
-    
-    <specification 
-	retrigger_time="0.167" 
-	accuracy_factor="0.9" 
-	sustained_fire_grow_step="1.7" 
-	sustained_fire_diminish_rate="0.7" 
-	magazine_size="20" 
-	can_shoot_standing="1" 
-	suppressed="0" 
-	name="AA-12" 
-	class="0" 
-	reload_one_at_a_time="0"
-	sight_range_modifier="1.0" 
-	projectile_speed="74.47" 
-	barrel_offset="0.4" 
-	projectiles_per_shot="14"
-	spread_range="0.3"
-	 />
-     <inventory  buy_price="26.0" sell_price="13.0" />
+
+    <specification retrigger_time="0.167" accuracy_factor="0.9" sustained_fire_grow_step="1.7" sustained_fire_diminish_rate="0.7" magazine_size="20" can_shoot_standing="1" suppressed="0" name="AA-12" class="0" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="74.47" barrel_offset="0.4" projectiles_per_shot="14" spread_range="0.3" />
+    <inventory buy_price="50.0" sell_price="50.0" />
     <next_in_chain key="gkw_aa12_skill.weapon" share_ammo="1" />
-	<!--Animations-->
-	
+    <!--Animations-->
+
 
 
 
     <animation state_key="reload" animation_key="ARreload1.8" />
-	<animation key="reload" stance_key="prone" animation_key="ARreloadp1.8" />
-	
-	<!--Sounds-->
-	
-	<sound key="fire" fileref="AA12_Fire_FromCOD16.wav" pitch_variety="0.05" volume="1" />
+    <animation key="reload" stance_key="prone" animation_key="ARreloadp1.8" />
+
+    <!--Sounds-->
+
+    <sound key="fire" fileref="AA12_Fire_FromCOD16.wav" pitch_variety="0.05" volume="1" />
     <sound key="magazine_out" fileref="AA12_mgz_out_FromCOD16.wav" volume="1" />
     <sound key="magazine_in" fileref="AA12_mgz_in_FromCOD16.wav" volume="1" />
     <sound key="cycle" fileref="AA12_cycle_FromCOD16.wav" volume="1" />
     <sound class="impact" fileref="rifle_drop.wav" />
-   
-	<!--Model, Icon, Cost-->
-   
+
+    <!--Model, Icon, Cost-->
+
     <model filename="gkw_sg_aa12.xml" />
     <hud_icon filename="gkw_aa12.png" />
 
 
-	
-	<!--Ballistics-->
-	
-    
+
+    <!--Ballistics-->
+
+
     <weak_hand_hold offset="0.3" />
     <projectile file="bullet.projectile">
-        <result class="hit" 
-        kill_probability="1.7" 
-        kill_decay_start_time="0.094" 
-        kill_decay_end_time="0.537" />
+        <result class="hit" kill_probability="1.7" kill_decay_start_time="0.094" kill_decay_end_time="0.537" />
     </projectile>
-    
+
     <!--Accuracy, Movement speed-->
-    
-	<stance state_key="walking" accuracy="0.7" />
+
+    <stance state_key="walking" accuracy="0.7" />
     <stance state_key="crouch_moving" accuracy="0.65" />
     <stance state_key="prone_moving" accuracy="0.65" />
     <stance state_key="standing" accuracy="0.7"/>
     <stance state_key="crouching" accuracy="0.7" />
     <stance state_key="prone" accuracy="0.8" />
-    <stance state_key="over_wall" accuracy="0.8" />  
+    <stance state_key="over_wall" accuracy="0.8" />
 
 </weapon>

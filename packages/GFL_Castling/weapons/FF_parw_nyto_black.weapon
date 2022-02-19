@@ -12,20 +12,20 @@
 	sight_range_modifier="2.5"
 	solt="0" 
 	magazine_size="30" 
-	name="Adeline" 
+	name="GK-Adeline" 
 	projectile_speed="400" 
 	retrigger_time="0.15"
 	last_burst_retrigger_time="0.6" 
 	suppressed="0" 
 	sustained_fire_diminish_rate="2.5"
 	sustained_fire_grow_step="2.0" />
-<next_in_chain key="ff_parw_nyto_black_1.weapon" share_ammo="0" />
+    <next_in_chain key="ff_parw_nyto_black_1.weapon" share_ammo="0" />
 
-		<animation state_key="recoil"	animation_key="recoil, hip fire" />
+	<animation state_key="recoil"	animation_key="recoil, hip fire" />
 	<animation state_key="hold" animation_key="hold, hip fire" />
 	<animation state_key="crouching" animation_key="crouch, hold, hip fire" />
 	<animation state_key="crouch_moving" animation_key="crouching forwards, hip fire" />
-  <animation state_key="walking_backwards" animation_key="walking backwards, hip fire" />  
+    <animation state_key="walking_backwards" animation_key="walking backwards, hip fire" />  
     <animation state_key="reload" animation_key="reloading, microgun" volume="0.7" />
 	<animation state_key="hold_on_wall" animation_key="hold, hip fire" />
     <animation state_key="still_against_wall" 	animation_key="hold, hip fire" />
@@ -47,7 +47,7 @@
 
     <weak_hand_hold offset="0.4" />
     <projectile file="bullet_paradeus.projectile">
-        <result class="hit"  kill_probability="8" kill_decay_start_time="1.0" kill_decay_end_time="1.5" />
+        <result class="hit"  kill_probability="4.5" kill_decay_start_time="1.0" kill_decay_end_time="1.5" />
         <trail key="paradeus_long" />
     </projectile>
 

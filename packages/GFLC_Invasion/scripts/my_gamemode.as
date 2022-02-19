@@ -1,0 +1,32 @@
+#include "gamemode_campaign.as"
+#include "map_rotator_invasion.as"
+#include "my_stage_configurator.as" 
+#include "my_item_delivery_configurator.as"
+#include "my_vehicle_delivery_configurator.as"
+
+// --------------------------------------------
+class MyGameMode : GameModeCampaign {
+	// --------------------------------------------
+	MyGameMode(UserSettings@ settings) {
+		super(settings);
+	}
+
+	// --------------------------------------------
+	protected void setupMapRotator() {
+		//MapRotatorInv MapRotatorInvasion(this);
+		@m_mapRotator = MapRotatorInvasion(this);
+		MyStageConfigurator configurator(this, m_mapRotator);
+	}
+
+	// --------------------------------------------
+	protected void setupItemDeliveryOrganizer() {
+		MyItemDeliveryConfigurator configurator(this);
+		@m_itemDeliveryOrganizer = ItemDeliveryOrganizer(this, configurator);
+	}
+
+	// --------------------------------------------
+	protected void setupVehicleDeliveryObjectives() {
+		MyVehicleDeliveryConfigurator configurator(this);
+		configurator.setup();
+	}
+}

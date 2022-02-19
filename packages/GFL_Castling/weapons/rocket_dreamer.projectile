@@ -2,7 +2,7 @@
 <projectile class="grenade" name="HEAT" slot="2" pulldown_in_air="0.5" radius="0.15" >
     <tag name="rocket"/>
 	
-    <result class="blast"  damage="2"  radius="5" decal="1" push="0" character_state="death"  faction_compare="not_equal"/>
+    <result class="blast"  damage="1.8"  radius="3" decal="1" push="0" character_state="death"  faction_compare="not_equal"/>
     <trigger class="impact" />
     <rotation class="motion" />
     <model mesh_filename="" />

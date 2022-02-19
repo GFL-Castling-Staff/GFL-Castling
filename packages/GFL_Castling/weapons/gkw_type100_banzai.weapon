@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon file="gf_ar.base_weapon" key="gkw_type100_banzai.weapon">
+
+  <specification 
+     slot="0"
+	 retrigger_time="-1" 
+	 accuracy_factor="0.85" 
+	 sight_range_modifier="1"
+	 sustained_fire_grow_step="1.0" 
+	 sustained_fire_diminish_rate="0.3" 
+	 magazine_size="1" 
+	 can_shoot_standing="1" 
+	 can_shoot_crouching="0" 
+	 can_shoot_prone="0" 
+	 suppressed="0" 
+	 name="Kamikaze" 
+	 class="3" 
+     projectile_speed="800.0"  
+     barrel_offset="0.01"  
+	 projectiles_per_shot="1"
+     spread_range="0.0005"
+	/> 
+	<next_in_chain key="gkw_type100_1.weapon" share_ammo="0" />
+	<commonness value="0" in_stock="1" can_respawn_with="1" />
+	<capacity value="0" source="rank" source_value="0.0" />
+	<capacity value="1" source="rank" source_value="2.21" />
+	<animation state_key="recoil"	animation_key="recoil, hip fire" />
+	<animation state_key="hold" animation_key="hold, hip fire" />
+	<animation state_key="crouching" animation_key="crouch, hold, hip fire" />
+	<animation state_key="crouch_moving" animation_key="crouching forwards, hip fire" />
+  <animation state_key="walking_backwards" animation_key="walking backwards, hip fire" />  
+    <animation state_key="reload" animation_key="reloading, microgun" volume="0.7" />
+	<animation state_key="hold_on_wall" animation_key="hold, hip fire" />
+    <animation state_key="still_against_wall" 	animation_key="hold, hip fire" />
+	<animation state_key="walking" animation_key="walking, hip fire" />
+	<animation state_key="running" animation_key="running, bayonet" />  
+	<animation state_key="stabbing"	animation_key="melee, bayonet" />
+
+  <!-- <sound key="fire" fileref="fireworks_woosh.wav" pitch_variety="0.05" volume="1.0"/> -->
+  <sound key="fire" fileref="explosion2.wav" pitch_variety="0.1" />
+	<sound key="magazine_out" fileref="portable_mortar_reload.wav" volume="0.7" />
+	<sound key="magazine_in" fileref="dry_fire.wav" volume="0.7"/>
+	<sound key="cycle" fileref="portable_mortar_reload.wav" volume="0.7"/>
+	<sound class="impact" fileref="rifle_drop.wav" />
+	
+	<inventory  buy_price="100.0" sell_price="100.0" />
+	<commonness value="0.00001"  />
+	<model filename="gkw_cl_From_SAIWA.xml" />
+	<hud_icon filename="type4.png" />
+
+
+
+	<weak_hand_hold offset="0.3" />
+	<projectile file="cl_s.projectile" />
+
+  <ballistics
+	 near_far_distance="0.0001"
+	 speed_estimation_near="0.0001"
+	 speed_estimation_far="0.0001"
+	 max_speed="900.0"
+	 randomness="0.0001"
+	 curve_height="0.0001"
+	/>
+
+	<shield offset="-0.55 0.0 0" extent="0.8 0.5 1.0" />
+	<!-- state modifiers for weapons are connected to shield impact events -->
+	<!-- deflects all bullets; death, stun, wound become none, doesn't consume -->
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0" />
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+	<!-- death and wound blast causes the item to be consumed, stun is ignored -->
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0" />
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+	
+	<effect class="muzzle" ref="MusketMuzzle" />
+	<effect class="muzzle" ref="UpDust" />
+	
+	<stance state_key="running" accuracy="0.3" />
+	<stance state_key="walking" accuracy="0.4" />
+	<stance state_key="crouch_moving" accuracy="0.3" />
+	<stance state_key="prone_moving" accuracy="0.1" />
+	
+	<stance state_key="standing" accuracy="0.5" />
+	<stance state_key="crouching" accuracy="1.0" />
+	<stance state_key="prone" accuracy="1.0" />
+
+	<modifier class="speed" value="0.7" />
+</weapon>

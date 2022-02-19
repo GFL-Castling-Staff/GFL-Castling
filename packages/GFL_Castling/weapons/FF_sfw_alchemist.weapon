@@ -19,7 +19,7 @@
 	name="GK-Alchemist"
 	class="4"
 	sight_range_modifier="0.8"
-	projectile_speed="80"
+	projectile_speed="100"
 	projectiles_per_shot="2"
 	burst_shots="1"
     slot="0" 
@@ -83,6 +83,6 @@
     <stance state_key="standing" accuracy="0.9" />
     <stance state_key="crouching" accuracy="0.95" />
     <stance state_key="prone" accuracy="1" />
-    <modifier class="speed" value="0.35" /> 
+    <modifier class="speed" value="0.40" /> 
 
 </weapon>

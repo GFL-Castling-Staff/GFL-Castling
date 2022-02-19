@@ -517,6 +517,7 @@
 		</resources>
 	</soldier>
 	<soldier name="sf_striker_swap" spawn_score="0.75" copy_from="default_spawn_ai">
+		<ai filename="eod.ai" />
 		<model filename="sfd_striker_swap_from_dusk.xml" />
 		<resources clear_calls="1">
 			<weapon key="sfw_striker_swap.weapon" enabled="1"/>
@@ -538,7 +539,7 @@
 		<ai filename="melee.ai" />
 		<resources clear_calls="1" clear_grenades="1">
 			<weapon key="sfw_aegis.weapon" enabled="1"/>
-			<carry_item key="sf_dg.carry_item" enabled="1" />
+			<carry_item key="sf_aegis.carry_item" enabled="1" />
 		</resources>
 	</soldier>
 	<!--龙骑兵-->
@@ -546,7 +547,7 @@
 		<models filename="sfd_dragoon_SAIWA.models" />
 		<character filename="dragoon.character" />
 		<ai filename="hydra.ai" />
-		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1">
+		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="sfw_dragoon.weapon" enabled="1"/>
 			<carry_item key="sf_dg.carry_item" enabled="1"/>
 		</resources>
@@ -969,6 +970,20 @@
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1">
 			<weapon key="sfw_tarantula.weapon"/>
 			<carry_item key="sf_tarantula.carry_item" />
+		</resources>
+		<attribute_config class="xp">
+			<attribute weight="0.3" min="0.0" max="1.0" />
+		</attribute_config>
+	</soldier>
+
+	<!-- scouts侦查者 -->
+	<soldier name="sf_scouts" spawn_score="0.50">
+		<model filename="sfd_scout.xml" />
+		<ai filename="eod.ai" />
+		<character filename="default_sf_bot.character" />
+		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1">
+			<weapon key="sfw_scouts.weapon"/>
+			<carry_item key="sf_ar.carry_item" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="0.3" min="0.0" max="1.0" />

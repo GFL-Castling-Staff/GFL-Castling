@@ -30,6 +30,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		setupIcecream();                
 		setupEnemyWeaponUnlocks();
 		setupLaptopUnlocks();
+		setupSFgift();
 		
 	}
 
@@ -179,7 +180,20 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		ScoredResource("light.carry_item", "carry_item", 0.5f),
 		ScoredResource("gkw_idw_2108.weapon", "weapon", 2.0f),
 		ScoredResource("gkw_idw_3205.weapon", "weapon", 0.9f),
-		ScoredResource("gkw_idw_4908.weapon", "weapon", 2.0f)
+		ScoredResource("gkw_idw_4908.weapon", "weapon", 2.0f),
+		ScoredResource("gkw_ak74u_3002.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_t91_4206.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_mk23_1805.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_nz75_403.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_spp1_4207.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_lwmmg_1808.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_svd_5506.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_augpara_5503.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_defender_5505.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_tkb408_6804.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_aps_6808.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_aa12_4401.weapon","weapon", 1.0f),
+		ScoredResource("gkw_mp5_3006.weapon", "weapon", 1.0f)    
 			},
 			{
 		ScoredResource("bp_t5_16lab.carry_item", "carry_item", 1.0f),
@@ -309,7 +323,9 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 				ScoredResource("gkw_ump45mod3_410.weapon", "weapon", 1.0f),
 				ScoredResource("gkw_ump45mod3_535.weapon", "weapon", 1.0f),
 				ScoredResource("gkw_supersassmod3_1407.weapon", "weapon", 1.0f),
-				ScoredResource("gkw_gsh18mod3_523.weapon", "weapon", 1.0f)
+				ScoredResource("gkw_gsh18mod3_523.weapon", "weapon", 1.0f),
+				ScoredResource("gkw_an94mod3_3303.weapon","weapon",1.0f),
+				ScoredResource("gkw_an94mod3_blm.weapon","weapon",1.0f)
 			},
 			{
 				ScoredResource("icecream.projectile", "projectile", 1.0f, 1)         
@@ -359,6 +375,45 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 			}
 		};   
 			
+		processRewardPasses(rewardPasses);
+
+		GiftItemDeliveryRandomRewarder@ rewarder = GiftItemDeliveryRandomRewarder(m_metagame, rewardPasses);
+
+		m_itemDeliveryOrganizer.addObjective(
+			ItemDeliveryObjective(m_metagame, 0, deliveryList, m_itemDeliveryOrganizer, null, "", "", "", -1 /* loop */, rewarder)
+			);
+	}
+
+	protected void setupSFgift() {
+		array<Resource@> deliveryList = {
+			 Resource("sf_box.carry_item", "carry_item")
+		};
+
+		array<array<ScoredResource@>> rewardPasses = {
+			{
+		ScoredResource("gkw_ak74u_3002.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_t91_4206.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_mk23_1805.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_nz75_403.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_spp1_4207.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_lwmmg_1808.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_svd_5506.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_augpara_5503.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_defender_5505.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_tkb408_6804.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_aps_6808.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_mp5_3006.weapon", "weapon", 1.0f)    
+			},
+			{
+		ScoredResource("city_gifts.carry_item", "carry_item", 1.0f, 22),
+		ScoredResource("wild_gifts.carry_item", "carry_item", 1.0f, 22),
+		ScoredResource("snow_gifts.carry_item", "carry_item", 1.0f, 22),
+		ScoredResource("forest_gifts.carry_item", "carry_item", 1.0f, 22),
+		ScoredResource("gift_box_community_2.carry_item", "carry_item", 0.01f),
+		ScoredResource("SOPII_Ant_Doll.carry_item", "carry_item", 0.1f),
+		ScoredResource("RO365_Ant_Doll.carry_item", "carry_item", 0.2f)
+			}
+		};
 		processRewardPasses(rewardPasses);
 
 		GiftItemDeliveryRandomRewarder@ rewarder = GiftItemDeliveryRandomRewarder(m_metagame, rewardPasses);

@@ -15,10 +15,10 @@
 	can_shoot_crouching="0"
 	can_shoot_prone="1"
 	suppressed="0" 
-	name="NTW-20 (MOD3)-[Christmas elk]-skill-[chain reaction]" 
+	name="NTW-20(MOD3)-[Christmas elk]-[Chain Reaction]" 
 	class="2" 
 	reload_one_at_a_time="0" 
-	sight_range_modifier="3.2" 
+	sight_range_modifier="4" 
 	projectile_speed="250" 
 	barrel_offset="0.6" 
 	projectiles_per_shot="25" />
@@ -72,6 +72,6 @@
     <stance state_key="crouching" accuracy="1.0" />
     <stance state_key="prone" accuracy="1.0" />
     <stance state_key="over_wall" accuracy="1.0" /> 
-    <modifier class="speed" value="-0.3" />  
+    <modifier class="speed" value="-0.1" />  
 
 </weapon>

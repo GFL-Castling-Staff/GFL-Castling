@@ -59,6 +59,17 @@ string getPlayerEquipmentKey(const Metagame@ metagame, int characterId, uint slo
 	return ItemKey;
 }
 
+string getDeadPlayerEquipmentKey(const Metagame@ metagame, int characterId, uint slot){
+	if (slot <0) return "";
+	if (slot >5) return "";
+	const XmlElement@ targetCharacter = getCharacterInfo2(metagame,characterId);
+	if (targetCharacter is null) return "";
+	array<const XmlElement@>@ equipment = targetCharacter.getElementsByTagName("item");
+	if (equipment.size() == 0) return "";
+	string ItemKey = equipment[slot].getStringAttribute("key");
+	return ItemKey;
+}
+
 int getPlayerEquipmentAmount(const Metagame@ metagame, int characterId, uint slot){
 	if (slot <0) return -1;
 	if (slot >5) return -1;
@@ -75,6 +86,11 @@ void GiveRP(const Metagame@ metagame,int character_id,int rp){
     metagame.getComms().send(c);
 }
 
+void GiveXP(const Metagame@ metagame,int character_id,float rp){
+	string c = "<command class='xp_reward' character_id='" + character_id + "' reward='" + rp + "' />";
+    metagame.getComms().send(c);
+}
+
 void addItemInBackpack(Metagame@ metagame, int characterId, string ItemType, string ItemKey) {
 	string c = 
 		"<command class='update_inventory' character_id='" + characterId + "' container_type_class='backpack'>" + 
@@ -86,6 +102,26 @@ void addItemInBackpack(Metagame@ metagame, int characterId, string ItemType, str
 bool checkCommandAlter(string message, string target, string target1) {
     return startsWith(message.toLowerCase(), "/" + target) || endsWith(message.toLowerCase(),"/"+ target1);
 }
+
+void playSoundtrack(Metagame@ m_metagame,string filename) {
+	m_metagame.getComms().send(
+	"<command " +
+	" class='set_soundtrack' " + 
+	" enabled='1' " + 
+	" filename='" + filename + "'" + 
+	"</command>");
+}
+
+void stopSoundtrack(Metagame@ m_metagame,string filename) {
+	m_metagame.getComms().send(
+	"<command " +
+	" class='set_soundtrack' " + 
+	" enabled='0' " + 
+	" filename='" + filename + "'" + 
+	"</command>");
+}
+//soundtrack function from ww2dlc thanks for coding wheel
+
 
 		// query for Equipment
 		// TagName=query_result query_id=22

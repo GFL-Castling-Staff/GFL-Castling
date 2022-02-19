@@ -156,5 +156,7 @@
  	<event>
 		<trigger class="cleanup" />
     <result class="spawn" instance_class="projectile" instance_key="debri_stun" min_amount="1" max_amount="1" offset="0 3.0 0" position_spread="0.0 0.0" direction_spread="0.0 0.0" />
-  </event>   
+  </event>
+
+  
 </vehicle>

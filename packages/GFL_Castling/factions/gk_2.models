@@ -32,7 +32,7 @@
 <model filename="gkd_sg_ksg.xml"><requirement class="weapon" slot="0" key="gkw_ksg_skill.weapon"/></model>
 <model filename="gkd_smg_type100.xml"><requirement class="weapon" slot="0" key="gkw_type100.weapon"/></model>
 <model filename="gkd_smg_type100.xml"><requirement class="weapon" slot="0" key="gkw_type100_skill.weapon"/></model>
-<model filename="gkd_smg_type100.xml"><requirement class="weapon" slot="0" key="gkw_cl.weapon"/><requirement class="rank" range="0 1000000" /></model>
+<model filename="gkd_smg_type100.xml"><requirement class="weapon" slot="0" key="gkw_type100_banzai.weapon"/><requirement class="rank" range="0 1000000" /></model>
 <model filename="gkd_smg_type100.xml"><requirement class="weapon" slot="0" key="gkw_type100_1.weapon"/><requirement class="rank" range="0 1000000" /></model>
 <model filename="gkd_ar_fnc_From_asnana.xml"><requirement class="weapon" slot="0" key="gkw_fnc_6608.weapon"/></model>
 <model filename="gkd_smg_kp31.xml"><requirement class="weapon" slot="0" key="gkw_kp31.weapon"/></model>
@@ -70,6 +70,13 @@
 <model filename="gkd_mg_mk46.xml"><requirement class="weapon" slot="0" key="gkw_mk46_skill.weapon"/></model>
 <model filename="gkd_mg_mg34.xml"><requirement class="weapon" slot="0" key="gkw_mg34_skill.weapon"/></model>
 <model filename="gkd_mg_m2hb.xml"><requirement class="weapon" slot="0" key="gkw_m2hb_skill.weapon"/></model>
+<model filename="gkd_mg_m1918.xml"><requirement class="weapon" slot="0" key="gkw_m1918_skill.weapon"/></model>
+<model filename="gkd_mg_m60.xml"><requirement class="weapon" slot="0" key="gkw_m60_skill.weapon"/></model>
+<model filename="gkd_mg_rpd.xml"><requirement class="weapon" slot="0" key="gkw_rpd_skill.weapon"/></model>
+<model filename="gkd_mg_fg42.xml"><requirement class="weapon" slot="0" key="gkw_fg42_skill.weapon"/></model>
+<model filename="gkd_mg_fg42.xml"><requirement class="weapon" slot="0" key="gkw_fg42_only_skill.weapon"/></model>
+<model filename="gkd_mg_mg42.xml"><requirement class="weapon" slot="0" key="gkw_mg42_skill.weapon"/></model>
+<model filename="gkd_mg_aek999.xml"><requirement class="weapon" slot="0" key="gkw_aek999_skill.weapon"/></model>
 
 <model filename="gkd_ar_an94_mod3_from_melondove.xml"><requirement class="weapon" slot="0" key="gkw_an94_mod3.weapon"/></model>
 <model filename="gkd_ar_an94_mod3_from_melondove.xml"><requirement class="weapon" slot="0" key="gkw_an94_mod3_skill.weapon"/></model>
@@ -80,8 +87,26 @@
 <model filename="gkd_rf_hs50_from_melondove.xml"><requirement class="weapon" slot="0" key="gkw_hs50.weapon"/></model>
 <model filename="gkd_ks-23_from_melondove.xml"><requirement class="weapon" slot="0" key="gkw_ks23.weapon"/></model>
 <model filename="gkd_ks-23_from_melondove.xml"><requirement class="weapon" slot="0" key="gkw_ks23_skill.weapon"/></model>
-<model filename="gkd_ar_xm8_mod3_from_melondove.xml"><requirement class="weapon" slot="0" key="gkw_xm8mod3.weapon"/></model>
-<model filename="gkd_ar_xm8_mod3_from_melondove.xml"><requirement class="weapon" slot="0" key="gkw_xm8mod3_skill.weapon"/></model>
+<model filename="gkd_ar_xm8_mod3_from_melondove.xml"><requirement class="weapon" slot="0" key="gkw_xm8_mod3.weapon"/></model>
+<model filename="gkd_ar_xm8_mod3_from_melondove.xml"><requirement class="weapon" slot="0" key="gkw_xm8_mod3_skill.weapon"/></model>
+<model filename="gkd_hg_spp1_4207_from_melondove.xml"><requirement class="weapon" slot="0" key="gkw_spp1_4207.weapon"/></model>
+<model filename="gkd_smg_ak74u_3002_from_melondove.xml"><requirement class="weapon" slot="0" key="gkw_ak74u_3002.weapon"/></model>
+<model filename="gkd_smg_ak74u_3002_from_melondove.xml"><requirement class="weapon" slot="0" key="gkw_ak74u_3002_skill.weapon"/></model>
+<model filename="gkd_smg_mp5_3006_from_melondove.xml"><requirement class="weapon" slot="0" key="gkw_mp5_3006.weapon"/></model>
+<model filename="gkd_smg_augpara_5503_from_melondove.xml"><requirement class="weapon" slot="0" key="gkw_augpara_5503.weapon"/></model>
+<model filename="gkd_rf_svd_5506_from_melondove.xml"><requirement class="weapon" slot="0" key="gkw_svd_5506.weapon"/></model>
+<model filename="gkd_hg_mk23_1805_from_melondove.xml"><requirement class="weapon" slot="0" key="gkw_mk23_1805.weapon"/></model>
+<model filename="gkd_hg_m950a_702_from_melondove.xml"><requirement class="weapon" slot="0" key="gkw_m950a_702.weapon"/></model>
+<model filename="gkd_hg_aps_6808_from_melondove.xml"><requirement class="weapon" slot="0" key="gkw_aps_6808.weapon"/></model>
+<model filename="gkd_ar_tkb408_6804_from_melondove.xml"><requirement class="weapon" slot="0" key="gkw_tkb408_6804.weapon"/></model>
+<model filename="gkd_mg_lwmmg_1808_from_melondove.xml"><requirement class="weapon" slot="0" key="gkw_lwmmg_1808.weapon"/></model>
+<model filename="gkd_mg_lwmmg_1808_from_melondove.xml"><requirement class="weapon" slot="0" key="gkw_lwmmg_skill_1808.weapon"/></model>
+<model filename="gkd_sg_ColtDefender_5505_from_melondove.xml"><requirement class="weapon" slot="0" key="gkw_defender_5505.weapon"/></model>
+<model filename="gkd_hg_nZ75_403_from_melondove.xml"><requirement class="weapon" slot="0" key="gkw_nz75_403.weapon"/></model>
+<model filename="gkd_ar_t91_4206_from_melondove.xml"><requirement class="weapon" slot="0" key="gkw_t91_4206.weapon"/></model>
 
+<model filename="gkd_sg_aa12_4401.xml"><requirement class="weapon" slot="0" key="gkw_aa12_4401.weapon" /></model>
+<model filename="gkd_sg_aa12_4401.xml"><requirement class="weapon" slot="0" key="gkw_aa12_4401_skill.weapon" /></model>
 
+<model filename="gkd_ar_t91_4206_from_melondove.xml"><requirement class="weapon" slot="0" key="gkw_t91_4206_skill.weapon"/></model>
 </models>

@@ -8,7 +8,7 @@
 		class="0"
         solt="0" 
 		magazine_size="30" 
-		name="AN-94 (MOD3)-[Silent Bright red]" 
+		name="AN-94(MOD3)-[Silent Bright red]" 
 		projectile_speed="214.28" 
 		retrigger_time="0.1" 
 		suppressed="1" 
@@ -24,6 +24,7 @@
     <inventory  buy_price="350.0" sell_price="350.0" />
     <capacity value="0" source="rank" source_value="0.0" />
     <capacity value="1" source="rank" source_value="6.048" />
+    <commonness value="0" in_stock="0" can_respawn_with="1" />
 
 
     <sound key="fire" fileref="AN94_Fire_FromCODOL.wav" pitch_variety="0.02" volume="1" />
@@ -32,6 +33,7 @@
     <sound key="cycle" fileref="an94_cycle_FromL4D2.wav" volume="1" />
     <sound class="impact" fileref="rifle_drop.wav" />    
     <model filename="gkw_ar_an94.xml" />
+    <modifier class="speed" value="0.25" />
 
     <hud_icon filename="gkw_an94_MOD3_3303.png" />
 
@@ -49,7 +51,6 @@
     <stance state_key="standing" accuracy="0.98" />
     <stance state_key="crouching" accuracy="1" />
     <stance state_key="prone" accuracy="1" />
-    <modifier class="speed" value="0.25" />
 
 </weapon>
 <weapon file="two_hands_ar.animation_base" key="gkw_an94mod3_3303_skill.weapon">
@@ -60,7 +61,7 @@
 		class="4"
         slot="0" 
 		magazine_size="30" 
-		name="AN-94 (MOD3)-[Silent Bright red]-skill-[Doll Trigger]" 
+		name="AN-94(MOD3)-[Silent Bright red]-[Doll Trigger]" 
 		projectile_speed="214.28" 
 		retrigger_time="0.05" 
         last_burst_retrigger_time="0.3"

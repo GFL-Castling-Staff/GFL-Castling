@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<projectile class="grenade" name="" slot="1" pulldown_in_air="-60">
+    <result class="notify_script" key="banzai100" />
+    <trigger class="time" time_to_live="0.15" />
+    <rotation class="random" />
+
+    <model filename="" />
+    <commonness value="0.0" can_respawn_with="0" in_stock="0"/>
+
+</projectile>
