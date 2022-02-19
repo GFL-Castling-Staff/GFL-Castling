@@ -14,7 +14,7 @@ key="gk_airstrike_fairy.call"
         instance_spread="10 10 10" 
         common_spread="5 0 5" 
         launch_time="1.0"
-        spawn_time="7.3">
+        spawn_time="6.8">
         
         <effect class="launch" ref="gk_ShadowCallFlyby" shadow="1" />
       <sound class="launch" fileref="plane_flyby.wav" volume="6.0" />    
@@ -27,10 +27,10 @@ key="gk_airstrike_fairy.call"
            instance_spread="10 10 10" 
            common_spread="5 0 5" 
            launch_time="3.0"
-           spawn_time="8.0">
+           spawn_time="7.5">
            
 
-     <sound class="launch" fileref="plane_flyby.wav" volume="6.0" />    
+     <sound class="launch" fileref="plane_flyby.wav" volume="0" />    
 	   <sound class="spawn" fileref="woosh1.wav" volume="0.3" />
     </round>
 

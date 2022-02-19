@@ -182,7 +182,7 @@
     </projectile>
 </weapon>
 
-<weapon key="humvee_mg.weapon">
+<weapon key="amos_mg.weapon">
     <specification 
     slot="2" 
     retrigger_time="0.02"
@@ -207,7 +207,7 @@
     <hud_icon filename="hud_m16a4.png" />
     <commonness value="0.0" />
 
-
+    <sound key="fire" fileref="minigun_From_payday2.wav" pitch_variety="0.05" volume="0.1" />
     <weak_hand_hold offset="0.4" />
     <projectile file="bullet.projectile">
         <result class="hit"  kill_probability="1.45" kill_decay_start_time="1.933" kill_decay_end_time="3.222" />
@@ -258,4 +258,3 @@
 
     <sound key="fire" fileref="hornet_shot.wav" volume="0.5" />
 </weapon></weapons>
-
