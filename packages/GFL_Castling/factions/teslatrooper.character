@@ -42,8 +42,8 @@
 	<animation key="change weapon out, reversed" target_key="change weapon, large mecha" />
 	<animation key="change weapon in, reversed" target_key="change weapon, large mecha" />
 	<animation key="change weapon in, single hand carry" target_key="change weapon, large mecha" />
-<animation key="celebrating" target_key="jumping, large mecha" />
-<animation key="celebrating, shooting" target_key="jumping, large mecha" />
+	<animation key="celebrating" target_key="jumping, large mecha" />
+	<animation key="celebrating, shooting" target_key="jumping, large mecha" />
 
     <effect class="blood" ref="BloodSplat" />
     <effect class="blood" type="splat_map" size="2.0" atlas_index="3" layer="3" additive="1" apply_gore_factor="1" />

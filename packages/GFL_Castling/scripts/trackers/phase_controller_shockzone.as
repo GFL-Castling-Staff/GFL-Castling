@@ -68,6 +68,7 @@ class map105_Phase1 : map105_Phase {
 	void start() {
 		map105_Phase::start();
 		_log("Phase1 starting");
+		playSoundtrack(m_metagame,"ambient_nighttime.wav");
 	}
 	
 	protected void handleBaseOwnerChangeEvent(const XmlElement@ event) {
@@ -203,6 +204,7 @@ class PhaseControllerMap105 : PhaseController {
 		if (factionId == 1) {
 			// 铁血倒了
 			m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 3.0, 0, "Map105SFdown"));
+			playSoundtrack(m_metagame,"ambient_daytime.wav");
 		}
 	}
 

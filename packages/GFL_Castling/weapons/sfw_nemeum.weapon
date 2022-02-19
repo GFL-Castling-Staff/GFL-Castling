@@ -11,7 +11,7 @@
 	can_shoot_crouching="0"
 	can_shoot_prone="0"
 	suppressed="0" 
-	name="Nemeum" 
+	name="SF-Nemeum" 
 	class="4" 
 	reload_one_at_a_time="0"
 	sight_range_modifier="1.2" 
@@ -45,7 +45,7 @@
     <!-- <weak_hand_hold offset="0.1" /> -->
     <projectile file="bullet_sf.projectile">
         <result class="blast" radius="2.0" damage="2.0" decal="1" push="0.05" character_state="death" faction_compare="not_equal"/>
-        <trail probability="2.0" key="red_nemeum" />
+        <trail probability="1.0" key="red" />
         <!-- <trail probability="1.0" key="red_nemeum" /> -->
 
     </projectile>

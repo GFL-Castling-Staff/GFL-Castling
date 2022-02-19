@@ -445,7 +445,7 @@
 	<soldier name="kcco_ar" spawn_score="1.2" copy_from="default_bot">
 		<ai filename="elite.ai" />
 		<model filename="kccod_cyclops.xml" />
-		<resources clear_weapons="1" clear_vehicles="1">
+		<resources clear_weapons="1" clear_vehicles="1" clear_calls="1">
 			<weapon key="kcco_ar.weapon" enabled="1" />
 			<carry_item key="kcco_ar.carry_item" enabled="1" />
 		</resources>
@@ -454,11 +454,23 @@
 			<attribute weight="1.0" min="0.0" max="1.05" />
 		</attribute_config>
 	</soldier>
+	<soldier name="kcco_ar_human" spawn_score="0.5" copy_from="default_bot">
+		<ai filename="elite.ai" />
+		<model filename="kccod_human.xml" />
+		<resources clear_weapons="1" clear_vehicles="1">
+			<weapon key="kcco_ar.weapon" enabled="1" />
+			<carry_item key="kcco_ar.carry_item" enabled="1" />
+		</resources>
+		<!-- low XP, likely to join player squad -->
+		<attribute_config class="xp">
+			<attribute weight="1.0" min="0.5" max="3.8" />
+		</attribute_config>
+	</soldier>
 	<!-- ar——g -->
 	<soldier name="kcco_ar_g" spawn_score="0.5" copy_from="default_bot">
 		<model filename="kccod_cyclops.xml" />
 		<ai filename="grenadier.ai" />
-		<resources>
+		<resources clear_calls="1">
 			<weapon key="kcco_ar_g.weapon" enabled="1" />
 			<carry_item key="kcco_ar.carry_item" enabled="1" />
 		</resources>
@@ -473,7 +485,7 @@
 		</resources>
 	</soldier>
 	<!-- archer -->
-	<soldier name="kcco_archer" spawn_score="0.2" squad_size_xp_cap="0.0" copy_from="default_bot">
+	<soldier name="kcco_archer" spawn_score="0.4" squad_size_xp_cap="0.0" copy_from="default_bot">
 		<model filename="kccod_archer.xml" />
 		<ai filename="elite.ai" />
 		<resources file="kcco_lonewolf_archer.resources">
@@ -512,7 +524,7 @@
 		</attribute_config>
 	</soldier>
 	<!-- dactyl指灵\地雷 -->
-	<soldier name="kcco_dactyl" spawn_score="0.1" copy_from="default_bot">
+	<soldier name="kcco_dactyl" spawn_score="0.2" copy_from="default_bot">
 		<model filename="kccod_dactyl.xml" />
 		<ai filename="hydra.ai" />
 		<resources clear_weapons="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">

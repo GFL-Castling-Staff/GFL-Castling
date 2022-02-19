@@ -2,7 +2,7 @@
 <weapon file="sf.base_weapon" key="sfw_jaeger_swap.weapon">
 
 	<specification 
-	retrigger_time="-1.0" 
+	retrigger_time="3.0" 
 	accuracy_factor="1.0" 
 	sustained_fire_grow_step="3.0" 
 	sustained_fire_diminish_rate="0.55" 
@@ -41,8 +41,8 @@
 
     <weak_hand_hold offset="0.3" />
     <projectile file="bullet_sf.projectile">
-		<result class="blast" damage="3.0"  radius="2.0" decal="1" push="0" character_state="death" faction_compare="not_equal"/>
-		<trail probability="3.0" key="red" />
+		<result class="blast" damage="5.0" radius="2.0" decal="1" push="0.3" character_state="death" faction_compare="not_equal"/>
+		<trail probability="1.0" key="sf_long" />
     </projectile>
  
 </weapon>

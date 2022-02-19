@@ -23,10 +23,31 @@ class SkillTrigger{
     }
 }
 
+class SkillEffectTimer{
+    int m_character_id;
+    float m_time;
+    string m_EffectKey="";
+    string m_specialkey1;
+    string m_specialkey2;
+    SkillEffectTimer(int characterId, float time,string EffectKey){
+        m_character_id=characterId;
+        m_time=time;
+        m_EffectKey=EffectKey;
+    }
+
+    void setSkey(string key){
+        m_specialkey1=key;
+    }
+    void setSkey2(string key){
+        m_specialkey2=key;
+    }
+}
+
 class CommandSkill : Tracker {
     protected Metagame@ m_metagame;
     
 	protected array<SkillTrigger@> SkillArray;
+    protected array<SkillEffectTimer@> TimerArray;
 
 	// --------------------------------------------
 	CommandSkill(Metagame@ metagame) {
@@ -58,6 +79,12 @@ class CommandSkill : Tracker {
                 if (c_weaponType=="ff_justice.weapon"){
                     excuteJudgeskill(cId,senderId);                    
                 }
+                if (c_weaponType=="gkw_mp5.weapon"||c_weaponType=="gkw_mp5_1205.weapon"||c_weaponType=="gkw_mp5_1903.weapon"||c_weaponType=="gkw_mp5_3.weapon"){
+                    excuteMP5skill(cId,senderId);                    
+                }
+                if (c_weaponType=="gkw_mp5mod3.weapon"){
+                    excuteMP5MOD3skill(cId,senderId);                    
+                }
             }
         }
     }
@@ -73,6 +100,16 @@ class CommandSkill : Tracker {
                 }
             }
         }
+        if(TimerArray.length()>0)
+        {
+            for (uint a=0;a<TimerArray.length();a++){
+                TimerArray[a].m_time-=time;
+                if(TimerArray[a].m_time<0){
+                    excuteTimerEffect(TimerArray[a]);
+                    TimerArray.removeAt(a);
+                }
+            }
+        }
 	}
 
     bool hasEnded() const {
@@ -85,7 +122,32 @@ class CommandSkill : Tracker {
 		// always on
 		return true;
 	}
-
+    void excuteTimerEffect(SkillEffectTimer@ Trigger){
+        if (Trigger.m_EffectKey =="MP5MOD3" || Trigger.m_EffectKey =="MP5" ){
+            XmlElement c ("command");
+            c.setStringAttribute("class", "update_inventory");
+            c.setIntAttribute("container_type_id", 4);
+            c.setIntAttribute("character_id", Trigger.m_character_id); 
+            {
+                XmlElement j("item");
+                j.setStringAttribute("class", "carry_item");
+                j.setStringAttribute("key", Trigger.m_specialkey1);
+                c.appendChild(j);
+            }
+            m_metagame.getComms().send(c);
+            if(Trigger.m_EffectKey =="MP5MOD3"){
+                const XmlElement@ character = getCharacterInfo(m_metagame, Trigger.m_character_id);
+                string cpos = character.getStringAttribute("position");
+                array<const XmlElement@> affectedCharacter = getCharactersNearPosition(m_metagame,stringToVector3(cpos),0,10.0f);
+                XmlElement c1 ("command");
+                c1.setStringAttribute("class", "update_inventory");
+                c1.setIntAttribute("character_id", Trigger.m_character_id); 
+                c1.setIntAttribute("untransform_count", affectedCharacter.length());
+                m_metagame.getComms().send(c1);
+            }
+        }
+    }
+    
     void excuteAN94skill(int characterId,int playerId){
         bool ExistQueue = false;
         int j =-1;
@@ -144,18 +206,12 @@ class CommandSkill : Tracker {
         if (character !is null) {
             Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
             int factionid = character.getIntAttribute("faction_id");
-            int soundrnd= rand(1,3);
-            switch(soundrnd){
-                case 1:
-                    playSoundAtLocation(m_metagame,"Vector_SkillC1.wav",factionid,c_pos,1);
-                    break;
-                case 2:
-                    playSoundAtLocation(m_metagame,"Vector_SkillC2.wav",factionid,c_pos,1);
-                    break;
-                case 3:
-                    playSoundAtLocation(m_metagame,"Vector_SkillC3.wav",factionid,c_pos,1);
-                    break;
-            }   
+            array<string> Voice={
+                "Vector_SkillC1.wav",
+                "Vector_SkillC2.wav",
+                "Vector_SkillC3.wav"
+            };
+            playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
         }
     }
 
@@ -189,16 +245,107 @@ class CommandSkill : Tracker {
                 c.setIntAttribute("untransform_count", 6);
                 m_metagame.getComms().send(c);
             }
-            int soundrnd= rand(1,2);
-            switch(soundrnd){
-                case 1:
-                    playSoundAtLocation(m_metagame,"judge_skill_1.wav",factionid,c_pos);
-                    break;
-                case 2:
-                    playSoundAtLocation(m_metagame,"judge_skill_2.wav",factionid,c_pos);
-                    break;
-            } 
+            array<string> Voice={
+                "judge_skill_1.wav",
+                "judge_skill_2.wav"
+            };
+            playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
         }
+    }
+
+    void excuteMP5skill(int characterId,int playerId){
+        bool ExistQueue = false;
+        int j =-1;
+        for (uint i=0;i<SkillArray.length();i++){
+            if (SkillArray[i].m_character_id==characterId && SkillArray[i].m_weapontype=="MP5") {
+                ExistQueue=true;
+                j=i;
+            }
+        }
+        if (ExistQueue){
+            dictionary a;
+            a["%time"] = ""+SkillArray[j].m_time;
+            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            _log("skill cooldown" + SkillArray[j].m_time);
+            return;
+        }
+        SkillArray.insertLast(SkillTrigger(characterId,29,"MP5"));
+        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+        string vestkey="";
+        if (character !is null) {
+            vestkey = getPlayerEquipmentKey(m_metagame,characterId,4);
+            if (vestkey=="immunity_mp5.carry_item"){
+                vestkey=="";
+            }
+            XmlElement c ("command");
+            c.setStringAttribute("class", "update_inventory");
+            c.setIntAttribute("container_type_id", 4);
+            c.setIntAttribute("character_id", characterId); 
+            {
+                XmlElement k("item");
+                k.setStringAttribute("class", "carry_item");
+                k.setStringAttribute("key", "immunity_mp5.carry_item");
+                c.appendChild(k);
+            }            
+            m_metagame.getComms().send(c);
+        }
+        SkillEffectTimer@ stimer = SkillEffectTimer(characterId,4,"MP5");
+        stimer.setSkey(vestkey);
+        TimerArray.insertLast(stimer);
+        array<string> Voice={
+            "MP5Mod_SKILL1_JP.wav",
+            "MP5Mod_SKILL2_JP.wav",
+            "MP5Mod_SKILL3_JP.wav",
+            "MP5Mod_MEET_JP.wav"
+        };
+        playRandomSoundArray(m_metagame,Voice,0,character.getStringAttribute("position"),1);
+    }
+    void excuteMP5MOD3skill(int characterId,int playerId){
+        bool ExistQueue = false;
+        int j =-1;
+        for (uint i=0;i<SkillArray.length();i++){
+            if (SkillArray[i].m_character_id==characterId && SkillArray[i].m_weapontype=="MP5MOD3") {
+                ExistQueue=true;
+                j=i;
+            }
+        }
+        if (ExistQueue){
+            dictionary a;
+            a["%time"] = ""+SkillArray[j].m_time;
+            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            _log("skill cooldown" + SkillArray[j].m_time);
+            return;
+        }
+        SkillArray.insertLast(SkillTrigger(characterId,29,"MP5MOD3"));
+        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+        string vestkey="";
+        if (character !is null) {
+            vestkey = getPlayerEquipmentKey(m_metagame,characterId,4);
+            if (vestkey=="immunity_mp5.carry_item"){
+                vestkey=="";
+            }
+            XmlElement c ("command");
+            c.setStringAttribute("class", "update_inventory");
+            c.setIntAttribute("container_type_id", 4);
+            c.setIntAttribute("character_id", characterId); 
+            {
+                XmlElement k("item");
+                k.setStringAttribute("class", "carry_item");
+                k.setStringAttribute("key", "immunity_mp5.carry_item");
+                c.appendChild(k);
+            }            
+            m_metagame.getComms().send(c);
+        }
+        SkillEffectTimer@ stimer = SkillEffectTimer(characterId,5,"MP5MOD3");
+        stimer.setSkey(vestkey);
+        TimerArray.insertLast(stimer);
+        array<string> Voice={
+            "MP5Mod_SKILL1_JP.wav",
+            "MP5Mod_SKILL2_JP.wav",
+            "MP5Mod_SKILL3_JP.wav",
+            "MP5Mod_MEET_JP.wav"
+        };
+        playRandomSoundArray(m_metagame,Voice,0,character.getStringAttribute("position"),1);
     }
 }
 
