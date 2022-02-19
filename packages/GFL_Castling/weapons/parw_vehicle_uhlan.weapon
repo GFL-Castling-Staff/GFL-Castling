@@ -2,7 +2,7 @@
 <weapons>
 <weapon key="uhlan_main_cannon">
     <specification 
-	retrigger_time="0.2" 
+	retrigger_time="0.15" 
     accuracy_factor="0.9" 
     sustained_fire_grow_step="0.2" 
     sustained_fire_diminish_rate="1.0" 
@@ -14,7 +14,7 @@
     suppressed="0" 
     name="Tank cannon" 
     class="0" 
-    projectile_speed="80.0" 
+    projectile_speed="120.0" 
     slot="2" 
     barrel_offset="0" 
     projectiles_per_shot="1" 
@@ -26,7 +26,7 @@
     <projectile file="bullet_paradeus.projectile">
         <result class="blast"  damage="3.5"  radius="2.2" decal="1" push="0.5" character_state="death" 	faction_compare="not_equal"/>
     </projectile>
-    
+
 	<!-- Scoring for target priority. Distance is between 0 and 1 based on range; direction is between 0 and 1 based on whether its near the barrel; squad_command is between 0 and on based on how close to the player's command order is, and base_score is a weight.. -->
 	<!-- These all add together and the highest 'score' is the new target, targets are rescanned every 2.5 seconds to see if a new higher-score target is in sight-range. -->
 	<!-- You must define a blank tag at the top of the list to handle all cases where the vehicle is fighting something "undefined", which is what common infantry might best fit under. -->
@@ -45,95 +45,4 @@
     <sound class="operation" key="fire" fileref="uhlan_fire.wav" volume="0.4"/>
 
 </weapon>
-<weapon key="uhlan_main_cannon_2">
-    <specification 
-	retrigger_time="0.5" 
-    accuracy_factor="0.9" 
-    sustained_fire_grow_step="0.2" 
-    sustained_fire_diminish_rate="1.0" 
-    sight_range_modifier="1.5"
-    ai_sight_range_modifier="1.2"
-    magazine_size="-1" 
-    can_shoot_standing="0" 
-    can_shoot_crouching="0" 
-    suppressed="0" 
-    name="Tank cannon" 
-    class="0" 
-    projectile_speed="80.0" 
-    slot="2" 
-    barrel_offset="0" 
-    projectiles_per_shot="1" 
-	spread_range="0.1"/>
-    <model mesh_filename="" texture_filename="balloon.png" />
-	<!-- <model filename="l30p.xml" /> -->
-    <hud_icon filename="uhlan_main_cannon.png" />
-    <commonness value="0.0" />
-    <projectile file="bullet_paradeus.projectile">
-        <result class="hit" kill_probability="1.5" kill_decay_start_time="2.682" kill_decay_end_time="5.7" />
-    </projectile>
-    
-	<!-- Scoring for target priority. Distance is between 0 and 1 based on range; direction is between 0 and 1 based on whether its near the barrel; squad_command is between 0 and on based on how close to the player's command order is, and base_score is a weight.. -->
-	<!-- These all add together and the highest 'score' is the new target, targets are rescanned every 2.5 seconds to see if a new higher-score target is in sight-range. -->
-	<!-- You must define a blank tag at the top of the list to handle all cases where the vehicle is fighting something "undefined", which is what common infantry might best fit under. -->
-    <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5" />
-    <target_factors tag="heavy_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0" />
-    <target_factors tag="apc" distance="1.0" direction="0.0" squad_command="1.0" base_score="6.0" />
-    <target_factors tag="light_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="5.0" />	
-    <target_factors tag="defensive_at" distance="1.0" direction="0.0" squad_command="1.0" base_score="5.5" />
-    <target_factors tag="tactical" distance="1.0" direction="0.0" squad_command="1.0" base_score="7.0" />  <!-- important non combat player-only vehicles -->  
-    <target_factors tag="bazooka" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.5" />
-
-
-    <effect class="muzzle" ref="muzzle_uhlan" />       
-    <!-- <effect class="muzzle" ref="BigMuzzle" /> -->
-
-    <sound class="operation" key="fire" fileref="uhlan_fire.wav" volume="0"/>
-
-</weapon>
-<weapon key="uhlan_rocket">
-    <specification 
-	retrigger_time="3.5" 
-    accuracy_factor="1" 
-    sustained_fire_grow_step="1.2" 
-    sustained_fire_diminish_rate="0.6" 
-    sight_range_modifier="1.65"
-    ai_sight_range_modifier="0.75" 
-    magazine_size="-1" 
-    can_shoot_standing="0" 
-    can_shoot_crouching="0" 
-    suppressed="0" 
-    name="Hornet" 
-    class="0" 
-    projectile_speed="138.0" 
-    slot="2" 
-    barrel_offset_3d="0.0 0.0 0.0"
-    projectiles_per_shot="1"
-    sight_height_offset="2.0" />
-    
-    <!-- <model mesh_filename="hornet.mesh" texture_filename="hornet.png" />     -->
-	<model  />
-    <hud_icon filename="hud_hornet.png" />
-    <commonness value="0.0" />
-
-<!--     <ballistics curve_height="12.0" near_far_distance="0.0" speed_estimation_near="0.0" speed_estimation_far="28.0" max_speed="50.0" randomness="0.0" tweak_factor="1.1" /> -->
-    <ballistics curve_height="10.0" near_far_distance="0.0" speed_estimation_near="0.0" speed_estimation_far="58.0" max_speed="42.0" randomness="0.0" tweak_factor="1.2" />
-    <projectile file="hornet.projectile" />
-    
-	<!-- Scoring for target priority. Distance is between 0 and 1 based on range; direction is between 0 and 1 based on whether its near the barrel; squad_command is between 0 and on based on how close to the player's command order is, and base_score is a weight.. -->
-	<!-- These all add together and the highest 'score' is the new target, targets are rescanned every 2.5 seconds to see if a new higher-score target is in sight-range. -->
-	<!-- You must define a blank tag at the top of the list to handle all cases where the vehicle is fighting something "undefined", which is what common infantry might best fit under. -->
-    <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5" />
-    <target_factors tag="heavy_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="10.0" />
-    <target_factors tag="apc" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0" />
-    <target_factors tag="light_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="6.0" />	
-    <target_factors tag="defensive_at" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.5" />
-    <target_factors tag="tactical" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0" />  <!-- important non combat player-only vehicles -->  
-    <target_factors tag="bazooka" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0" />      
-
-    <effect class="muzzle" ref="LawMuzzle" />
-    <effect class="muzzle" ref="UpDust" />
-
-    <sound key="fire" fileref="hornet_shot.wav" volume="0.5" />
-</weapon>
-
 </weapons>

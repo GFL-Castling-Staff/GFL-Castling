@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon file="heavy_mg.animation_base" key="gkw_mg34_skill.weapon">
+
+    <specification 
+  barrel_offset="0.5" 
+  retrigger_time="0.075" 
+  accuracy_factor="0.98" 
+  sustained_fire_grow_step="0.5" 
+  sustained_fire_diminish_rate="1.8" 
+  magazine_size="75" 
+  suppressed="0" 
+  name="MG34-skill-[Damage Focus MG]" 
+  class="0" 
+  projectile_speed="162.77" 
+  spread_range="0.15"
+  sight_range_modifier="1.5"
+  can_shoot_standing="0" 
+  can_shoot_crouching="0"
+  can_shoot_prone="1"/>
+
+
+
+    <animation key="reload" animation_key="MGreload3" />
+    <inventory  buy_price="16.0" sell_price="16.0" />	
+    <commonness  value="0" in_stock="0" can_spawn_with="1" />
+    <next_in_chain key="gkw_mg34.weapon" share_ammo="1" />
+
+
+
+    <sound key="fire" fileref="MG34_fire_FromCOD16.wav" pitch_variety="0.05" volume="0.5" />
+    <sound key="magazine_out" fileref="mg34_mgz_out_FromINS.wav" volume="0.8" />
+    <sound key="magazine_in" fileref="mg34_mgz_in_FromINS.wav" volume="0.8" />
+    <sound key="cycle" fileref="mg34_cycle_FromINS.wav" volume="0.8" />
+    <sound class="impact" fileref="rifle_drop.wav" />
+    <model filename="gkw_mg_mg34.xml" />
+
+    <hud_icon filename="gkw_mg34_skill.png" />
+
+    <!-- <inventory  price="3.0" /> -->
+
+
+    <projectile file="bullet.projectile">
+        <result class="hit" kill_probability="1.85" kill_decay_start_time="2.432" kill_decay_end_time="4.054" />
+    </projectile>
+    <stance state_key="running" accuracy="0.4" />
+
+    <stance state_key="crouch_moving" accuracy="0.4" />
+    <stance state_key="prone_moving" accuracy="0.4" />
+    <stance state_key="standing" accuracy="0.65" />
+    <stance state_key="crouching" accuracy="0.85" />
+    <stance state_key="prone" accuracy="1" />
+    <stance state_key="over_wall" accuracy="1" />  
+    <modifier class="speed" value="-0.3" /> 
+
+</weapon>
