@@ -80,10 +80,10 @@ class CommandSkill : Tracker {
                     excuteJudgeskill(cId,senderId);                    
                 }
                 if (c_weaponType=="gkw_mp5.weapon"||c_weaponType=="gkw_mp5_1205.weapon"||c_weaponType=="gkw_mp5_1903.weapon"||c_weaponType=="gkw_mp5_3.weapon"){
-                    excuteMP5skill(cId,senderId);                    
+                    //excuteMP5skill(cId,senderId);                    
                 }
                 if (c_weaponType=="gkw_mp5mod3.weapon"){
-                    excuteMP5MOD3skill(cId,senderId);                    
+                    //excuteMP5MOD3skill(cId,senderId);                    
                 }
             }
         }
