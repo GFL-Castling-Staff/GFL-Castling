@@ -5,56 +5,67 @@
 		<inventory price="50" />
 		<commonness value="0.00001" in_stock="0" />
 		<modifier class="hit_success_probability" value="-1.1" />
+        <modifier class="speed" value="-0.05" />
 	</carry_item>
 	
 	<carry_item file="bp.base_carry_item" key="bp_t5_16lab_1" name="16LAB HFBLS-Slight Damage-"  transform_on_consume="bp_t5_16lab_2">
 		<hud_icon filename="bp_t5_16lab_11.png" />
 		<modifier class="hit_success_probability" value="-1.1" />
+        <modifier class="speed" value="-0.05" />
 	</carry_item>
 
 	<carry_item file="bp.base_carry_item" key="bp_t5_16lab_2" name="16LAB HFBLS-Slight Damage-"  transform_on_consume="bp_t5_16lab_3">
 		<hud_icon filename="bp_t5_16lab_10.png" />
 		<modifier class="hit_success_probability" value="-1.1" />
+        <modifier class="speed" value="-0.05" />
 	</carry_item>
 
     <carry_item file="bp.base_carry_item" key="bp_t5_16lab_3" name="16LAB HFBLS-Slight Damage-"  transform_on_consume="bp_t5_16lab_4">
 		<hud_icon filename="bp_t5_16lab_9.png" />
 		<modifier class="hit_success_probability" value="-1.1" />
+        <modifier class="speed" value="-0.05" />
 	</carry_item>
 
 	<carry_item file="bp.base_carry_item" key="bp_t5_16lab_4" name="16LAB HFBLS-Moderate Damage-"  transform_on_consume="bp_t5_16lab_5">
 		<hud_icon filename="bp_t5_16lab_8.png" />
 		<modifier class="hit_success_probability" value="-1.1" />
+        <modifier class="speed" value="-0.05" />
 	</carry_item>
 
     <carry_item file="bp.base_carry_item" key="bp_t5_16lab_5" name="16LAB HFBLS-Moderate Damage-"  transform_on_consume="bp_t5_16lab_6">
 		<hud_icon filename="bp_t5_16lab_7.png" />
 		<modifier class="hit_success_probability" value="-1.1" />
+        <modifier class="speed" value="-0.05" />
 	</carry_item>
 
 	<carry_item file="bp.base_carry_item" key="bp_t5_16lab_6" name="16LAB HFBLS-Moderate Damage-"  transform_on_consume="bp_t5_16lab_7">
 		<hud_icon filename="bp_t5_16lab_6.png" />
 		<modifier class="hit_success_probability" value="-1.1" />
+        <modifier class="speed" value="-0.05" />
 	</carry_item>
 
 	<carry_item file="bp.base_carry_item" key="bp_t5_16lab_7" name="16LAB HFBLS-Severe Damage-"  transform_on_consume="bp_t5_16lab_8">
 		<hud_icon filename="bp_t5_16lab_5.png" />
 		<modifier class="hit_success_probability" value="-1.1" />
+        <modifier class="speed" value="-0.05" />
 	</carry_item>
 
     <carry_item file="bp.base_carry_item" key="bp_t5_16lab_8" name="16LAB HFBLS-Severe Damage-"  transform_on_consume="bp_t5_16lab_9">
 		<hud_icon filename="bp_t5_16lab_4.png" />
 		<modifier class="hit_success_probability" value="-1.1" />
+        <modifier class="speed" value="-0.05" />
 	</carry_item>
 
     <carry_item file="bp.base_carry_item" key="bp_t5_16lab_9" name="16LAB HFBLS-Severe Damage-"  transform_on_consume="bp_t5_16lab_10">
 		<hud_icon filename="bp_t5_16lab_3.png" />
 		<modifier class="hit_success_probability" value="-1.1" />
+        <modifier class="speed" value="-0.05" />
 	</carry_item>
 
 	<carry_item file="bp.base_carry_item" key="bp_t5_16lab_10" name="16LAB HFBLS-Severe Damage-"  transform_on_consume="bp_t5_16lab_11">
 		<hud_icon filename="bp_t5_16lab_2.png" />
 		<modifier class="hit_success_probability" value="-1.1" />
+        <modifier class="speed" value="-0.05" />
 	</carry_item>
 
 	<carry_item file="wearables.base_carry_item" key="bp_t5_16lab_11" name="16LAB HFBLS-Overrun!-"  transform_on_consume="bp_t5_16lab_12">
