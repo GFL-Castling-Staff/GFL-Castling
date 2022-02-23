@@ -137,13 +137,15 @@ class CommandSkill : Tracker {
             m_metagame.getComms().send(c);
             if(Trigger.m_EffectKey =="MP5MOD3"){
                 const XmlElement@ character = getCharacterInfo(m_metagame, Trigger.m_character_id);
-                string cpos = character.getStringAttribute("position");
-                array<const XmlElement@> affectedCharacter = getCharactersNearPosition(m_metagame,stringToVector3(cpos),0,10.0f);
-                XmlElement c1 ("command");
-                c1.setStringAttribute("class", "update_inventory");
-                c1.setIntAttribute("character_id", Trigger.m_character_id); 
-                c1.setIntAttribute("untransform_count", affectedCharacter.length());
-                m_metagame.getComms().send(c1);
+                if (character !is null){
+                    string cpos = character.getStringAttribute("position");
+                    array<const XmlElement@> affectedCharacter = getCharactersNearPosition(m_metagame,stringToVector3(cpos),0,10.0f);
+                    XmlElement c1 ("command");
+                    c1.setStringAttribute("class", "update_inventory");
+                    c1.setIntAttribute("character_id", Trigger.m_character_id); 
+                    c1.setIntAttribute("untransform_count", affectedCharacter.length());
+                    m_metagame.getComms().send(c1);
+                }
             }
         }
     }
