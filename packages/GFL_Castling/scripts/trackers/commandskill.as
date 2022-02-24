@@ -48,10 +48,12 @@ class CommandSkill : Tracker {
     
 	protected array<SkillTrigger@> SkillArray;
     protected array<SkillEffectTimer@> TimerArray;
+	protected bool m_ended;
 
 	// --------------------------------------------
 	CommandSkill(Metagame@ metagame) {
 		@m_metagame = @metagame;
+        m_ended = false;
 	}
 
     protected void handleChatEvent(const XmlElement@ event) {
@@ -60,6 +62,10 @@ class CommandSkill : Tracker {
 		if (!startsWith(message, "/")) {
 			return;
 		}
+
+        if(m_ended){
+            return;
+        }
 
         string sender = event.getStringAttribute("player_name");
 		int senderId = event.getIntAttribute("player_id");
@@ -88,7 +94,9 @@ class CommandSkill : Tracker {
             }
         }
     }
-
+	protected void handleMatchEndEvent(const XmlElement@ event) {
+        m_ended=true;
+    }
 
     void update(float time) {
         if(SkillArray.length()>0)
@@ -110,6 +118,10 @@ class CommandSkill : Tracker {
                 }
             }
         }
+	}
+
+	void start() {
+		m_ended = false;
 	}
 
     bool hasEnded() const {
