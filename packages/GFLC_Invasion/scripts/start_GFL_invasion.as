@@ -19,7 +19,8 @@ void main(dictionary@ inputData) {
         array<string> overlays = {
 			"media/packages/invasion",
             "media/packages/GFLC_Map",
-			"media/packages/GFL_Castling"
+			"media/packages/GFL_Castling",
+            "media/packages/GFLC_Invasion"
         };
         settings.m_overlayPaths = overlays;
 
