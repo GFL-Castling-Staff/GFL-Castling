@@ -28,10 +28,10 @@ class ItemDropEvent : Tracker {
             c2.setStringAttribute("container_type_class", "stash");
             c2.setIntAttribute("character_id", cId); 
             c2.setIntAttribute("add",0);
-                    XmlElement k("item");
-                    k.setStringAttribute("class", "carry_item");
-                    k.setStringAttribute("key", "immunity_mp5.carry_item");
-                    c2.appendChild(k);
+                XmlElement k("item");
+                k.setStringAttribute("class", "carry_item");
+                k.setStringAttribute("key", "immunity_mp5.carry_item");
+                c2.appendChild(k);
             m_metagame.getComms().send(c2);
         }
         if (event.getStringAttribute("item_key") == "VVfirenade.projectile"){
@@ -41,39 +41,36 @@ class ItemDropEvent : Tracker {
             c2.setStringAttribute("container_type_class", "stash");
             c2.setIntAttribute("character_id", cId); 
             c2.setIntAttribute("add",0);
-                    XmlElement k("item");
-                    k.setStringAttribute("class", "projectile");
-                    k.setStringAttribute("key", "VVfirenade.projectile");
-                    c2.appendChild(k);
+                XmlElement k("item");
+                k.setStringAttribute("class", "projectile");
+                k.setStringAttribute("key", "VVfirenade.projectile");
+                c2.appendChild(k);
             m_metagame.getComms().send(c2);
         }
     }
 
-    protected void handlePlayerConnectEvent(const XmlElement@ event){
+    protected void handlePlayerSpawnEvent(const XmlElement@ event){
         const XmlElement@ player = event.getFirstElementByTagName("player");
         if (player !is null) {
-			const XmlElement@ info = getPlayerInfo(m_metagame, senderId);
-            if (info !is null) {
-				int cId = info.getIntAttribute("character_id");
-                string vestkey="";
-                vestkey = getPlayerEquipmentKey(m_metagame,cId,4);
-                if (vestkey=="immunity_mp5.carry_item"){
-                    XmlElement c ("command");
-                    c.setStringAttribute("class", "update_inventory");
-                    c.setIntAttribute("container_type_id", 4);
-                    c.setIntAttribute("character_id", characterId); 
-                    {
-                        XmlElement k("item");
-                        k.setStringAttribute("class", "carry_item");
-                        k.setStringAttribute("key", "");
-                        c.appendChild(k);
-                    }            
-                    m_metagame.getComms().send(c);
+            int cId = player.getIntAttribute("character_id");
+            string vestkey="";
+            vestkey = getPlayerEquipmentKey(m_metagame,cId,4);
+            if (vestkey=="immunity_mp5.carry_item"){
+                XmlElement c ("command");
+                c.setStringAttribute("class", "update_inventory");
+                c.setIntAttribute("container_type_id", 4);
+                c.setIntAttribute("character_id", cId); 
+                {
+                    XmlElement k("item");
+                    k.setStringAttribute("class", "carry_item");
+                    k.setStringAttribute("key", "exo_t4.carry_item");
+                    c.appendChild(k);
                 }
+                m_metagame.getComms().send(c);
             }
         }
     }
-    
+
 	bool hasEnded() const {
 		// always on
 		return false;
