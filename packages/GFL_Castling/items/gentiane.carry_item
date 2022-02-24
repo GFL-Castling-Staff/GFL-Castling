@@ -1,38 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
 <carry_items>
-    <carry_item file="exo.base_carry_item" key="gentiane.carry_item" name="Gentiane 5/5" transform_on_consume="gentiane_5">
+    <carry_item file="exo.base_carry_item" key="gentiane.carry_item" name="Gentiane" transform_on_consume="gentiane_9">
         <hud_icon filename="gentiane.png" />
         <commonness value="0" in_stock="0" />
+        <modifier class="speed" value="0.35" />
         <modifier class="hit_success_probability" value="-1.0" />
-        <modifier class="speed" value="0.3" />
+        <modifier class="detectability" value="-0.05" />
         <inventory price="150" />
     </carry_item>
-    <carry_item file="exo.base_carry_item" key="gentiane_5" name="Gentiane 4/5" transform_on_consume="gentiane_4">
+    <carry_item file="exo.base_carry_item" key="gentiane_9" name="Gentiane" transform_on_consume="gentiane_8">
         <hud_icon filename="gentiane_1.png" />
-        <modifier class="hit_success_probability" value="-0.98" />
-        <modifier class="speed" value="0.29" />
+        <modifier class="speed" value="0.35" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="-0.05" />
     </carry_item>
-    <carry_item file="exo.base_carry_item" key="gentiane_4" name="Gentiane 3/5" transform_on_consume="gentiane_3">
+    <carry_item file="exo.base_carry_item" key="gentiane_8" name="Gentiane" transform_on_consume="gentiane_7">
+        <hud_icon filename="gentiane_1.png" />
+        <modifier class="speed" value="0.35" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="-0.05" />
+    </carry_item>
+    <carry_item file="exo.base_carry_item" key="gentiane_7" name="Gentiane" transform_on_consume="gentiane_6">
+        <hud_icon filename="gentiane_1.png" />
+        <modifier class="speed" value="0.35" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="-0.05" />
+    </carry_item>
+    <carry_item file="exo.base_carry_item" key="gentiane_6" name="Gentiane" transform_on_consume="gentiane_5">
+        <hud_icon filename="gentiane_1.png" />
+        <modifier class="speed" value="0.35" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="-0.05" />
+    </carry_item>
+    <carry_item file="exo.base_carry_item" key="gentiane_5" name="Gentiane" transform_on_consume="gentiane_4">
+        <hud_icon filename="gentiane_1.png" />
+        <modifier class="speed" value="0.35" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="-0.05" />
+    </carry_item>
+    <carry_item file="exo.base_carry_item" key="gentiane_4" name="Gentiane" transform_on_consume="gentiane_3">
         <hud_icon filename="gentiane_2.png" />
-        <modifier class="hit_success_probability" value="-0.96" />
-        <modifier class="speed" value="0.28" />
+        <modifier class="speed" value="0.35" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="-0.05" />
     </carry_item>
-    <carry_item file="exo.base_carry_item" key="gentiane_3" name="Gentiane 2/5" transform_on_consume="gentiane_2">
+    <carry_item file="exo.base_carry_item" key="gentiane_3" name="Gentiane" transform_on_consume="gentiane_2">
         <hud_icon filename="gentiane_3.png" />
-        <modifier class="hit_success_probability" value="-0.94" />
-        <modifier class="speed" value="0.27" />
+        <modifier class="speed" value="0.35" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="-0.05" />
     </carry_item>
-    <carry_item file="exo.base_carry_item" key="gentiane_2" name="Gentiane 1/5" transform_on_consume="gentiane_1">
+    <carry_item file="wearables.base_carry_item" key="gentiane_2" name="Gentiane-Overrun!-" transform_on_consume="gentiane_1">
         <hud_icon filename="gentiane_4.png" />
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="wound" />
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="wound"  />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="death" output_character_state="wound" />
-        <modifier class="hit_success_probability" value="-0.92" />
-        <modifier class="speed" value="0.26" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="wound" />
+        <modifier class="speed" value="0.35" />
+        <modifier class="hit_success_probability" value="-0.6" />
+        <modifier class="detectability" value="-0.05" />
     </carry_item>
-    <carry_item file="none.base_carry_item" key="gentiane_1" name="Gentiane 0/5">
+    <carry_item file="none.base_carry_item" key="gentiane_1" name="Gentiane-Overrun!-">
         <hud_icon filename="gentiane_5.png" />
-        <modifier class="speed" value="0.25" />
-        <modifier class="hit_success_probability" value="-0.9" />
-        <modifier class="detectability" value="0" />
+        <modifier class="speed" value="0.35" />
+        <modifier class="hit_success_probability" value="-0.6" />
+        <modifier class="detectability" value="-0.05" />
     </carry_item>
 </carry_items>
