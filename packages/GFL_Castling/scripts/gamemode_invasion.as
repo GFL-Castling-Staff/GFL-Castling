@@ -43,6 +43,7 @@
 #include "ManualCall.as"
 #include "ServerHelper.as"
 #include "commandskill.as"
+#include "ItemDropEvent.as"
 
 // --------------------------------------------
 class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
@@ -80,7 +81,7 @@ class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 		setupSpecialCargoVehicleManager();
 		setupItemDeliveryOrganizer();
 		setupPenaltyManager();
-		setupLocalBanManager();
+		//setupLocalBanManager();
 		setupTestingToolsTracker();
 
 		if (m_userSettings.m_continue) {
@@ -336,6 +337,7 @@ class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 		addTracker(ServerHelper(this));
 		addTracker(BanManager(this,true));
 		addTracker(CommandSkill(this));
+		addTracker(ItemDropEvent(this));
 	}
 
 	// --------------------------------------------

@@ -80,10 +80,10 @@ class CommandSkill : Tracker {
                     excuteJudgeskill(cId,senderId);                    
                 }
                 if (c_weaponType=="gkw_mp5.weapon"||c_weaponType=="gkw_mp5_1205.weapon"||c_weaponType=="gkw_mp5_1903.weapon"||c_weaponType=="gkw_mp5_3.weapon"){
-                    //excuteMP5skill(cId,senderId);                    
+                    excuteMP5skill(cId,senderId);                    
                 }
                 if (c_weaponType=="gkw_mp5mod3.weapon"){
-                    //excuteMP5MOD3skill(cId,senderId);                    
+                    excuteMP5MOD3skill(cId,senderId);                    
                 }
             }
         }
@@ -147,6 +147,18 @@ class CommandSkill : Tracker {
                     m_metagame.getComms().send(c1);
                 }
             }
+            XmlElement c2 ("command");
+            c2.setStringAttribute("class", "update_inventory");
+            c2.setStringAttribute("container_type_class", "backpack");
+            c2.setIntAttribute("character_id", Trigger.m_character_id); 
+            c2.setIntAttribute("add",0);
+                XmlElement k("item");
+                k.setStringAttribute("class", "carry_item");
+                k.setStringAttribute("key", "immunity_mp5.carry_item");
+                c2.appendChild(k);
+            m_metagame.getComms().send(c2);
+            c2.setStringAttribute("container_type_class", "stash");
+            m_metagame.getComms().send(c2);
         }
     }
     
@@ -277,7 +289,7 @@ class CommandSkill : Tracker {
         if (character !is null) {
             vestkey = getPlayerEquipmentKey(m_metagame,characterId,4);
             if (vestkey=="immunity_mp5.carry_item"){
-                vestkey=="";
+                vestkey=="exo_t4.carry_item";
             }
             XmlElement c ("command");
             c.setStringAttribute("class", "update_inventory");
@@ -324,7 +336,7 @@ class CommandSkill : Tracker {
         if (character !is null) {
             vestkey = getPlayerEquipmentKey(m_metagame,characterId,4);
             if (vestkey=="immunity_mp5.carry_item"){
-                vestkey=="";
+                vestkey=="exo_t4.carry_item";
             }
             XmlElement c ("command");
             c.setStringAttribute("class", "update_inventory");
