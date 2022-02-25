@@ -1280,8 +1280,8 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.m_mapInfo.m_path = "media/packages/vanilla.winter/maps/map8_2";
 		stage.m_mapInfo.m_id = "map8_2";
 
-    stage.m_fogOffset = 10.0;    
-    stage.m_fogRange = 40.0;
+		stage.m_fogOffset = 10.0;    
+		stage.m_fogRange = 40.0;
 
 
 		stage.m_maxSoldiers = 12 * 11;                                         // 132
@@ -1292,11 +1292,8 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.addTracker(PeacefulLastBase(m_metagame, 0));
 		stage.addTracker(CommsCapacityHandler(m_metagame));
 
-		stage.addTracker(Spawner(m_metagame, 1, Vector3(146,10,173), 2, "miniboss"));           // Cargo helicopter filler 
-		stage.addTracker(Spawner(m_metagame, 1, Vector3(146,10,173), 10, "default_ai"));        // Cargo helicopter filler                  
-
-    stage.m_minRandomCrates = 1; 
-    stage.m_maxRandomCrates = 3;
+		stage.m_minRandomCrates = 1; 
+		stage.m_maxRandomCrates = 3;
 
 		{
 			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0, 0.5, 0.1));     
