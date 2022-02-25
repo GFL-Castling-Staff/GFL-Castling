@@ -26,9 +26,9 @@ jams_enemy_radio="1">
 	<tag name="metal_heavy" />
 	<tag name="heavy_combat" />
 
-	<tire_set offset="3.00 0.05 8.00" radius="0.3" />
+	<tire_set offset="2.6 0.05 7.00" radius="0.3" />
 
-	<tire_set offset="3.00 0.05 -8.00" radius="0.3" />
+	<tire_set offset="2.6 0.05 -7.00" radius="0.3" />
 
 	<control 
 		max_speed="5.0"
@@ -48,11 +48,11 @@ jams_enemy_radio="1">
 		gravity="-90"
 		broken_mass="10"
 		remove_collision_threshold="0.2"
-		extent="8 0.0 17"
+		extent="7.2 0.0 15.3"
 		offset="0 0.0 0"
-		top_offset="0 6.0 0"
-		collision_model_pos="0 2.2 0"
-		collision_model_extent="7.0 5.8 16.5"
+		top_offset="0 5.4 0"
+		collision_model_pos="0 2.00 0"
+		collision_model_extent="5.4 5.22 14.4"
 		visual_offset="0 0.6 0"/> 
 		
 	<event><trigger class="destroy" /><result class="map_disable" /></event>
@@ -81,7 +81,7 @@ jams_enemy_radio="1">
 	<visual  class="chassis" key="broken" mesh_filename="Amos_base.mesh" texture_filename="jeep_body_broken.png" offset="0 -2.9 0.0"/>
 	<!-- 炮台位置和模型 -->
 	<!-- 地雷发射器架子 -->
-	0<turret offset="0 8.2 0.46" weapon_key="amos_none.weapon" weapon_offset="0.0 0.0 0.0" />
+	0<turret offset="0 8.2 0.46" weapon_key="amos_mine_sight.weapon" weapon_offset="0.0 0.0 0.0" rotation_range="7.28"/>
 	<visual class="turret" turret_index="0" mesh_filename="Amos_turret_mine.mesh" texture_filename="AMOS_base.png" offset="0 0 -0.2"/>
 	<!-- 前emp枪塔 -->
 	1<turret offset="1.2 7.0 5.00" weapon_key="amos_emp.weapon" weapon_offset="0.0 -0.5 2.5" rotation_range="2.8"/>
@@ -116,10 +116,10 @@ jams_enemy_radio="1">
 	6<turret offset="0 16 0" weapon_key="amos_sightx2.weapon" weapon_offset="0 0 0" max_rotation_step="0.000010"/>
 	7<turret offset="0 0 18" weapon_key="amos_none.weapon" weapon_offset="0 0 0" parent_turret_index="6" max_rotation_step="0.000020" rotation="3.14" rotation_range="6.28"/>
 	8<turret offset="0 0 18" weapon_key="amos_none.weapon" weapon_offset="0 0 0" parent_turret_index="7" max_rotation_step="0.000040" rotation="3.14" rotation_range="6.28"/>
-	9<turret offset="0 0 12" weapon_key="amos_none.weapon" weapon_offset="0 0 0" parent_turret_index="8" max_rotation_step="0.000080" rotation="3.14" rotation_range="6.28"/>
-	10<turret offset="0 0 12" weapon_key="amos_none.weapon" weapon_offset="0 0 0" parent_turret_index="9" max_rotation_step="0.000160" rotation="3.14" rotation_range="6.28"/>
-	11<turret offset="0 0 9" weapon_key="amos_none.weapon" weapon_offset="0 0 0" parent_turret_index="10" max_rotation_step="0.000320" rotation="3.14" rotation_range="6.28"/>
-	12<turret offset="0 0 9" weapon_key="amos_none.weapon" weapon_offset="0 0 0" parent_turret_index="11" max_rotation_step="0.000640" rotation="3.14" rotation_range="6.28"/>
+	9<turret offset="0 0 12" weapon_key="amos_none.weapon" weapon_offset="0 0 0" parent_turret_index="8" max_rotation_step="0.000060" rotation="3.14" rotation_range="6.28"/>
+	10<turret offset="0 0 12" weapon_key="amos_none.weapon" weapon_offset="0 0 0" parent_turret_index="9" max_rotation_step="0.000080" rotation="3.14" rotation_range="6.28"/>
+	11<turret offset="0 0 9" weapon_key="amos_none.weapon" weapon_offset="0 0 0" parent_turret_index="10" max_rotation_step="0.000100" rotation="3.14" rotation_range="6.28"/>
+	12<turret offset="0 0 9" weapon_key="amos_none.weapon" weapon_offset="0 0 0" parent_turret_index="11" max_rotation_step="0.000120" rotation="3.14" rotation_range="6.28"/>
 	13<turret offset="0 0 0" weapon_key="amos_drone_rkt.weapon" weapon_offset="0 0 0" parent_turret_index="12" max_rotation_step="0.05" rotation="0" rotation_range="6.28"/>
 	14<turret offset="0 0 0" weapon_key="amos_drone_mg1.weapon" weapon_offset="0 0 0" parent_turret_index="13" rotation_range="0" />
 	15<turret offset="0 0 0" weapon_key="amos_drone_mg2.weapon" weapon_offset="0 0 0" parent_turret_index="13" rotation_range="0" />
@@ -131,8 +131,8 @@ jams_enemy_radio="1">
 		<turret index="1" />
 	</character_slot> 
 	<!-- 布雷位 -->
- 	<character_slot type="gunner"  position="-3.5 0.5 3" rotation="0" exit_rotation="-1.57" hiding="1" animation_id="37">
-		<turret index="0" />  	<turret index="4" />	<turret index="5" />
+ 	<character_slot type="gunner"  position="-3.5 0.5 3" rotation="0" exit_rotation="-1.57" hiding="1" animation_id="37" attached_on_turret="0">
+		<turret index="0" />	<turret index="4" />	<turret index="5" />	 
 	</character_slot> 
 	<!-- 右机枪手 -->
  	<character_slot type="gunner" position="-3.5 0.5 -1.15" rotation="0" exit_rotation="-1.57" hiding="1" animation_id="37">
@@ -143,18 +143,18 @@ jams_enemy_radio="1">
 		<turret index="2" /> 	
 	</character_slot> 
 	<!-- 无人机操控 -->
- 	<character_slot type="gunner" position="2.0 0.5 8.4"  seat_position="0.0 5.0 -0.0" rotation="0" exit_rotation="1.57" hiding="1" animation_id="37">
+ 	<character_slot type="gunner" position="2.0 0.5 -8.4"  seat_position="0.0 5.0 -0.0" rotation="0" exit_rotation="1.57" hiding="1" animation_id="37">
 		<turret index="6" />	<turret index="7" />  	<turret index="8" />	<turret index="9" />  	<turret index="10" />  	<turret index="11" />	<turret index="12" />  	
 	</character_slot> 
 	<!-- 无人机视角 -->
- 	<character_slot type="gunner" position="-2.0 0.5 8.4" rotation="0" exit_rotation="1.57" hiding="1" animation_id="37" attached_on_turret="13" seat_position="0.0 0.0 -0.0">
+ 	<character_slot type="gunner" position="-2.0 0.5 -8.4" rotation="0" exit_rotation="1.57" hiding="1" animation_id="37" attached_on_turret="13" seat_position="0.0 0.0 -0.0">
 		<turret index="13" /> <!--<turret index="14" />--> <turret index="15" />
 	</character_slot> 
 	
-	<character_slot type="passenger" position="3.0 0.5 -3" seat_position="2.0 5.6 -3.6" rotation="0" exit_rotation="1.57" hiding="0" animation_id="48" marker_offset="0 0.0 0" rotation_range="6.28" />
-	<character_slot type="passenger" position="3.0 0.5 -5" seat_position="2.0 5.9 -5.6" rotation="1.57" exit_rotation="1.57" hiding="0" animation_id="48" marker_offset="0 0.0 0" rotation_range="6.28" />
-	<character_slot type="passenger" position="-3.0 0.5 -3" seat_position="-2.0 5.6 -3.6" rotation="0" exit_rotation="-1.57" hiding="0" animation_id="48" marker_offset="0 0.0 0" rotation_range="6.28" />
-	<character_slot type="passenger" position="-3.0 0.5 -5" seat_position="-2.0 5.9 -5.6" rotation="-1.57" exit_rotation="-1.57" hiding="0" animation_id="48" marker_offset="0 0.0 0" rotation_range="6.28" /> 
+	<character_slot type="passenger" position="3.0 0.5 -3" seat_position="2.0 5.6 -3.6" rotation="1.45" exit_rotation="1.57" hiding="0" animation_id="48" marker_offset="0 0.0 0" rotation_range="1.350" />
+	<character_slot type="passenger" position="3.0 0.5 -5" seat_position="2.0 5.9 -5.8" rotation="2.45" exit_rotation="1.57" hiding="0" animation_id="48" marker_offset="0 0.0 0" rotation_range="2.750" />
+	<character_slot type="passenger" position="-3.0 0.5 -3" seat_position="-2.0 5.6 -3.6" rotation="-1.45" exit_rotation="-1.57" hiding="0" animation_id="48" marker_offset="0 0.0 0" rotation_range="1.350" />
+	<character_slot type="passenger" position="-3.0 0.5 -5" seat_position="-2.0 5.9 -5.8" rotation="-2.45" exit_rotation="-1.57" hiding="0" animation_id="48" marker_offset="0 0.0 0" rotation_range="2.750" /> 
 
 	
 	<!-- sound handling -->
