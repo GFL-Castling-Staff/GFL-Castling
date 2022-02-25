@@ -125,6 +125,34 @@ void stopSoundtrack(Metagame@ m_metagame,string filename) {
 	" filename='" + filename + "'" + 
 	"</command>");
 }
+
+void spawnSoldier(Metagame@ metagame, uint count, uint factionId, Vector3 position, string instanceKey) {
+	for (uint i = 0; i < count; ++i) {
+		metagame.getComms().send(
+		"<command " +
+		" class='create_instance' " + 
+		" faction_id='" + factionId + "' " +
+		" position='" + position.toString() + "' " + 
+		" offset='0 0 0' " +
+		" instance_class='soldier' " + 
+		" instance_key='" + instanceKey + "'> " + 
+		"</command>");
+	}
+}
+
+void spawnSoldier(Metagame@ metagame, uint count, uint factionId, string position, string instanceKey) {
+	for (uint i = 0; i < count; ++i) {
+		metagame.getComms().send(
+		"<command " +
+		" class='create_instance' " + 
+		" faction_id='" + factionId + "' " +
+		" position='" + position + "' " + 
+		" offset='0 0 0' " +
+		" instance_class='soldier' " + 
+		" instance_key='" + instanceKey + "'> " + 
+		"</command>");
+	}
+}
 //soundtrack function from ww2dlc thanks for coding wheel
 
 
