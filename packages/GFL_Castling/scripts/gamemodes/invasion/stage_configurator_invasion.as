@@ -358,7 +358,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 	protected Stage@ setupStage106(){
 		Stage@ stage = createStage();
-		stage.m_mapInfo.m_name = "Catastrophe Expressway";
+		stage.m_mapInfo.m_name = "Route E30";
 		stage.m_mapInfo.m_path = "media/packages/GFLC_Map/maps/map106";
 		stage.m_mapInfo.m_id = "map106";
 
