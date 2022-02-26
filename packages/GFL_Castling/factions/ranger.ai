@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ai filename="default.ai">
+  <parameter class="accuracy_offset" value="0.03" /> 
+  <parameter class="accuracy_offset_in_player_squad" value="0.01" />
+  <parameter class="willingness_to_charge" value="0.5" />
+
+<!-- firemode switching -->
+  <parameter class="throw_grenade_time_interval_max" value="30.0" />
+  <parameter class="throw_grenade_time_interval_min" value="5.0" />
+  <parameter class="min_distance_to_throw_grenade" value="13.0" />
+  <parameter class="max_distance_to_throw_grenade" value="100.0" />
+  <parameter class="grenade_throw_hold_time" value="0.5" />
+  <parameter class="min_number_of_enemies_to_throw_grenade" value="3.0" />
+
+<!-- flare usage -->
+  <parameter class="check_fellows_for_shield_use_range" value="100.0" />
+  <parameter class="max_active_shields_per_fellows" value="100.0" />
+</ai>
