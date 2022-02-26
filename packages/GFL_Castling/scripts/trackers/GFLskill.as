@@ -213,10 +213,10 @@ class GFLskill : Tracker {
 					//获取技能影响的敌人数量
 					m_fnum= m_metagame.getFactionCount();
 					array<const XmlElement@> affectedCharacter;
-					affectedCharacter = getCharactersNearPosition(m_metagame,Pos_40mm,1,5.0f);
+					affectedCharacter = getCharactersNearPosition(m_metagame,Pos_40mm,1,7.0f);
 					if (m_fnum==3){
 						array<const XmlElement@> affectedCharacter2;
-						affectedCharacter2 = getCharactersNearPosition(m_metagame,Pos_40mm,2,5.0f);
+						affectedCharacter2 = getCharactersNearPosition(m_metagame,Pos_40mm,2,7.0f);
 						if (affectedCharacter2 !is null){
 							for(uint x=0;x<affectedCharacter2.length();x++){
 								affectedCharacter.insertLast(affectedCharacter2[x]);
@@ -225,14 +225,14 @@ class GFLskill : Tracker {
 					}
 					if (m_fnum==4){
 						array<const XmlElement@> affectedCharacter2;
-						affectedCharacter2 = getCharactersNearPosition(m_metagame,Pos_40mm,2,5.0f);
+						affectedCharacter2 = getCharactersNearPosition(m_metagame,Pos_40mm,2,7.0f);
 						if (affectedCharacter2 !is null){
 							for(uint x=0;x<affectedCharacter2.length();x++){
 								affectedCharacter.insertLast(affectedCharacter2[x]);
 							}
 						}
 						array<const XmlElement@> affectedCharacter3;
-						affectedCharacter3 = getCharactersNearPosition(m_metagame,Pos_40mm,3,5.0f);
+						affectedCharacter3 = getCharactersNearPosition(m_metagame,Pos_40mm,3,7.0f);
 						if (affectedCharacter3 !is null){
 							for(uint x=0;x<affectedCharacter3.length();x++){
 								affectedCharacter.insertLast(affectedCharacter3[x]);
