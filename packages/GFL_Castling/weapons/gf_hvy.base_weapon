@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapon on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0">
 
-
+	
 	<tag name="bazooka" />
 	<specification slot="0" />
 
@@ -32,5 +32,13 @@
 	<stance state_key="prone_moving" accuracy="0.3" />
 	<stance state_key="over_wall" accuracy="1" />
 
+    <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5" />
+    <target_factors tag="heavy_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0" />
+    <target_factors tag="apc" distance="1.0" direction="0.0" squad_command="1.0" base_score="6.0" />
+    <target_factors tag="light_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="5.0" />	
+    <target_factors tag="defensive_at" distance="1.0" direction="0.0" squad_command="1.0" base_score="5.5" />
+    <target_factors tag="tactical" distance="1.0" direction="0.0" squad_command="1.0" base_score="7.0" /> 
+    <target_factors tag="bazooka" distance="1.0" direction="0.0" squad_command="1.0" base_score="5.0" />
+	
 	<modifier class="speed" value="-0.4" />
 </weapon>
