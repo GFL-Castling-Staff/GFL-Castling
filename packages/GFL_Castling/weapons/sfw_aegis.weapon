@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapon file="sf.base_weapon" key="sfw_aegis.weapon">
-
+	<tag name="melee" />
 	<specification 
 	accuracy_factor="0.95" 
 	barrel_offset="0.5" 
@@ -82,6 +82,6 @@
 	<modifier class="melee_blast_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="melee_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="melee_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-	
+	<modifier class="detectability" value="0.6"/>
 	<modifier class="speed" value="-0.4" />
 </weapon>

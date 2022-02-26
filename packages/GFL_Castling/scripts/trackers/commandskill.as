@@ -48,10 +48,12 @@ class CommandSkill : Tracker {
     
 	protected array<SkillTrigger@> SkillArray;
     protected array<SkillEffectTimer@> TimerArray;
+	protected bool m_ended;
 
 	// --------------------------------------------
 	CommandSkill(Metagame@ metagame) {
 		@m_metagame = @metagame;
+        m_ended = false;
 	}
 
     protected void handleChatEvent(const XmlElement@ event) {
@@ -60,6 +62,10 @@ class CommandSkill : Tracker {
 		if (!startsWith(message, "/")) {
 			return;
 		}
+
+        if(m_ended){
+            return;
+        }
 
         string sender = event.getStringAttribute("player_name");
 		int senderId = event.getIntAttribute("player_id");
@@ -80,15 +86,17 @@ class CommandSkill : Tracker {
                     excuteJudgeskill(cId,senderId);                    
                 }
                 if (c_weaponType=="gkw_mp5.weapon"||c_weaponType=="gkw_mp5_1205.weapon"||c_weaponType=="gkw_mp5_1903.weapon"||c_weaponType=="gkw_mp5_3.weapon"){
-                    //excuteMP5skill(cId,senderId);                    
+                    excuteMP5skill(cId,senderId);                    
                 }
                 if (c_weaponType=="gkw_mp5mod3.weapon"){
-                    //excuteMP5MOD3skill(cId,senderId);                    
+                    excuteMP5MOD3skill(cId,senderId);                    
                 }
             }
         }
     }
-
+	protected void handleMatchEndEvent(const XmlElement@ event) {
+        m_ended=true;
+    }
 
     void update(float time) {
         if(SkillArray.length()>0)
@@ -110,6 +118,10 @@ class CommandSkill : Tracker {
                 }
             }
         }
+	}
+
+	void start() {
+		m_ended = false;
 	}
 
     bool hasEnded() const {
@@ -147,6 +159,8 @@ class CommandSkill : Tracker {
                     m_metagame.getComms().send(c1);
                 }
             }
+        deleteItemInBackpack(m_metagame,Trigger.m_character_id,"carry_item","immunity_mp5.carry_item");
+        deleteItemInStash(m_metagame,Trigger.m_character_id,"carry_item","immunity_mp5.carry_item");
         }
     }
     
@@ -277,7 +291,7 @@ class CommandSkill : Tracker {
         if (character !is null) {
             vestkey = getPlayerEquipmentKey(m_metagame,characterId,4);
             if (vestkey=="immunity_mp5.carry_item"){
-                vestkey=="";
+                vestkey="exo_t4.carry_item";
             }
             XmlElement c ("command");
             c.setStringAttribute("class", "update_inventory");
@@ -291,6 +305,7 @@ class CommandSkill : Tracker {
             }            
             m_metagame.getComms().send(c);
         }
+        deleteItemInBackpack(m_metagame,characterId,"carry_item","immunity_mp5.carry_item");
         SkillEffectTimer@ stimer = SkillEffectTimer(characterId,4,"MP5");
         stimer.setSkey(vestkey);
         TimerArray.insertLast(stimer);
@@ -324,7 +339,7 @@ class CommandSkill : Tracker {
         if (character !is null) {
             vestkey = getPlayerEquipmentKey(m_metagame,characterId,4);
             if (vestkey=="immunity_mp5.carry_item"){
-                vestkey=="";
+                vestkey=="exo_t4.carry_item";
             }
             XmlElement c ("command");
             c.setStringAttribute("class", "update_inventory");

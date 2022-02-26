@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<projectile class="grenade" name="" key="binoculars.projectile" slot="0" pulldown_in_air="0.0" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" >
+
+    <result class="notify_script" key="rangefinder" />
+    <trigger class="time" time_to_live="0.0"/>
+    <rotation class="random" />
+
+    <model filename="" />
+
+    <commonness value="0.0" can_respawn_with="0" in_stock="0"/>
+
+</projectile>

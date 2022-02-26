@@ -13,6 +13,7 @@
     consume="0" 
     sight_range_modifier="1" 
     slot="1" />
+    <next_in_chain key="binoculars.weapon" share_ammo="0" />
     <animation state_key="recoil" 		animation_key="repairing vest" />
     <animation state_key="hold" 		animation_key="still, single hand carry" />
     <animation state_key="hold_on_wall" 	animation_key="still, single hand carry" />

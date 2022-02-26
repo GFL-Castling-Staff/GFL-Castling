@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<projectile class="grenade" name="Vector Firenade" key="VVfirenade.projectile"  pulldown_in_air="26.0" slot="0" radius="0.15" time_to_live_out_in_the_open="0.0" 
+<projectile class="grenade" name="Vector Firenade" key="VVfirenade.projectile" slot="0" radius="0.15" time_to_live_out_in_the_open="0.0" 
 >
     <tag name="grenade" />
 
@@ -12,7 +12,7 @@
 
     <model mesh_filename="40mm.mesh" texture_filename="40mm.png" />
     <hud_icon filename="hud_c4.png" />
-    <throwable curve_height="7.0" near_far_distance="15.0" speed_estimation_near="9.0" speed_estimation_far="30.0" max_speed="20.0" randomness="0.07" />
+    <throwable curve_height="7.0" near_far_distance="25.0" speed_estimation_near="15.0" speed_estimation_far="30.0" max_speed="30.0" randomness="0.07" />
 
     <!-- projectile slot 0 is used for hand grenade items currently -->
     <!-- bound to change -->

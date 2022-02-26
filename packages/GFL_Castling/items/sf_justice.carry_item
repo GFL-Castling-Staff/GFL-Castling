@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<carry_items>
+    <carry_item file="wearables.base_carry_item"  key="sf_justice.carry_item" name="Justice" slot="1" transform_on_consume="sf_jus_2" >
+        <hud_icon filename="sfd_ar.png" />
+ 
+        <model mesh_filename="vestexo.xml" />
+                                                                                                                                                                          
+ 
+        <!-- 法官第一形态 -->
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+ 
+        
+        <modifier class="speed" value="0.1" />
+		<modifier class="hit_success_probability" value="-0.65" />
+	    <modifier class="detectability" value="0.6" />
+    </carry_item>
+
+    <carry_item file="wearables.base_carry_item" key="sf_jus_2" name="Justice" slot="1" transform_on_consume="sf_jus_3" >
+        <hud_icon filename="sfd_ar.png" />
+ 
+        <model mesh_filename="vestexo.xml" />
+
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+
+        <modifier class="speed" value="0.1" />
+		<modifier class="hit_success_probability" value="-0.65" />
+	    <modifier class="detectability" value="0.6" />
+    </carry_item>
+
+    <carry_item file="wearables.base_carry_item" key="sf_jus_3" name="Justice" slot="1" transform_on_consume="sf_jus_4" >
+        <hud_icon filename="sfd_ar.png" />
+ 
+        <model mesh_filename="vestexo.xml" />
+
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+
+        <modifier class="speed" value="0.1" />
+		<modifier class="hit_success_probability" value="-0.65" />
+	    <modifier class="detectability" value="0.6" />
+    </carry_item>
+
+    <carry_item file="wearables.base_carry_item" key="sf_jus_4" name="Justice" slot="1" transform_on_consume="sf_jus_5" >
+        <hud_icon filename="sfd_ar.png" />
+ 
+        <model mesh_filename="vestexo.xml" />
+
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+
+        <modifier class="speed" value="0.1" />
+		<modifier class="hit_success_probability" value="-0.65" />
+	    <modifier class="detectability" value="0.6" />
+    </carry_item>
+
+    <carry_item file="wearables.base_carry_item" key="sf_jus_5" name="Justice" slot="1" transform_on_consume="sf_jus_6" >
+        <hud_icon filename="sfd_ar.png" />
+ 
+        <model mesh_filename="vestexo.xml" />
+
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+
+        <modifier class="speed" value="0.1" />
+		<modifier class="hit_success_probability" value="-0.65" />
+	    <modifier class="detectability" value="0.6" />
+    </carry_item>
+
+    <carry_item file="wearables.base_carry_item" key="sf_jus_6" name="Justice" slot="1" transform_on_consume="sf_jus_7" >
+        <hud_icon filename="sfd_ar.png" />
+ 
+        <model mesh_filename="vestexo.xml" />
+
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+
+        <modifier class="speed" value="0.1" />
+		<modifier class="hit_success_probability" value="-0.65" />
+	    <modifier class="detectability" value="0.6" />
+    </carry_item>
+
+    <!-- 法官第二形态 -->
+    <carry_item file="wearables.base_carry_item" key="sf_jus_7" name="Justice" slot="1" transform_on_consume="sf_jus_8" >
+        <hud_icon filename="sfd_ar.png" />
+ 
+        <model mesh_filename="vestexo.xml" />
+
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+
+        <modifier class="speed" value="0.1" />
+		<modifier class="hit_success_probability" value="-0.55" />
+	    <modifier class="detectability" value="0.6" />
+    </carry_item>
+
+    <carry_item file="wearables.base_carry_item" key="sf_jus_8" name="Justice" slot="1" transform_on_consume="sf_jus_9" >
+        <hud_icon filename="sfd_ar.png" />
+ 
+        <model mesh_filename="vestexo.xml" />
+
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+
+        <modifier class="speed" value="0.1" />
+		<modifier class="hit_success_probability" value="-0.55" />
+	    <modifier class="detectability" value="0.6" />
+    </carry_item>
+
+    <carry_item file="wearables.base_carry_item" key="sf_jus_9" name="Justice" slot="1" transform_on_consume="sf_jus_10" >
+        <hud_icon filename="sfd_ar.png" />
+ 
+        <model mesh_filename="vestexo.xml" />
+
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+
+        <modifier class="speed" value="0.1" />
+		<modifier class="hit_success_probability" value="-0.55" />
+	    <modifier class="detectability" value="0.6" />
+    </carry_item>
+
+    <carry_item file="wearables.base_carry_item" key="sf_jus_10" name="Justice" slot="1" transform_on_consume="sf_jus_11" >
+        <hud_icon filename="sfd_ar.png" />
+ 
+        <model mesh_filename="vestexo.xml" />
+
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+
+        <modifier class="speed" value="0.1" />
+		<modifier class="hit_success_probability" value="-0.55" />
+	    <modifier class="detectability" value="0.6" />
+    </carry_item>
+
+    <carry_item file="wearables.base_carry_item" key="sf_jus_11" name="Justice" slot="1" transform_on_consume="sf_jus_12" >
+        <hud_icon filename="sfd_ar.png" />
+ 
+        <model mesh_filename="vestexo.xml" />
+
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+
+        <modifier class="speed" value="0.1" />
+		<modifier class="hit_success_probability" value="-0.55" />
+	    <modifier class="detectability" value="0.6" />
+    </carry_item>
+
+    <carry_item file="wearables.base_carry_item" key="sf_jus_12" name="Justice" slot="1" transform_on_consume="sf_jus_13" >
+        <hud_icon filename="sfd_ar.png" />
+ 
+        <model mesh_filename="vestexo.xml" />
+
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+
+        <modifier class="speed" value="0.1" />
+		<modifier class="hit_success_probability" value="-0.55" />
+	    <modifier class="detectability" value="0.6" />
+    </carry_item>
+
+    <!-- 法官第三形态 -->
+    <carry_item file="wearables.base_carry_item" key="sf_jus_13" name="Justice" slot="1" transform_on_consume="sf_jus_14" >
+        <hud_icon filename="sfd_ar.png" />
+ 
+        <model mesh_filename="vestexo.xml" />
+
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+
+        <modifier class="speed" value="0.1" />
+		<modifier class="hit_success_probability" value="-0.45" />
+	    <modifier class="detectability" value="0.6" />
+    </carry_item>
+
+    <carry_item file="wearables.base_carry_item" key="sf_jus_14" name="Justice" slot="1" transform_on_consume="sf_jus_15" >
+        <hud_icon filename="sfd_ar.png" />
+ 
+        <model mesh_filename="vestexo.xml" />
+
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+
+        <modifier class="speed" value="0.1" />
+		<modifier class="hit_success_probability" value="-0.45" />
+	    <modifier class="detectability" value="0.6" />
+    </carry_item>
+
+    <carry_item file="wearables.base_carry_item" key="sf_jus_15" name="Justice" slot="1" transform_on_consume="sf_jus_16" >
+        <hud_icon filename="sfd_ar.png" />
+ 
+        <model mesh_filename="vestexo.xml" />
+
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+
+        <modifier class="speed" value="0.1" />
+		<modifier class="hit_success_probability" value="-0.45" />
+	    <modifier class="detectability" value="0.6" />
+    </carry_item>
+
+    <carry_item file="wearables.base_carry_item" key="sf_jus_16" name="Justice" slot="1" transform_on_consume="sf_jus_17" >
+        <hud_icon filename="sfd_ar.png" />
+ 
+        <model mesh_filename="vestexo.xml" />
+
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+
+        <modifier class="speed" value="0.1" />
+		<modifier class="hit_success_probability" value="-0.45" />
+	    <modifier class="detectability" value="0.6" />
+    </carry_item>
+
+    <carry_item file="wearables.base_carry_item" key="sf_jus_17" name="Justice" slot="1" transform_on_consume="sf_jus_18" >
+        <hud_icon filename="sfd_ar.png" />
+ 
+        <model mesh_filename="vestexo.xml" />
+
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+
+        <modifier class="speed" value="0.1" />
+		<modifier class="hit_success_probability" value="-0.45" />
+	    <modifier class="detectability" value="0.6" />
+    </carry_item>
+
+    <carry_item file="wearables.base_carry_item" key="sf_jus_18" name="Justice" slot="1" transform_on_consume="sf_jus_18" >
+        <hud_icon filename="sfd_ar.png" />
+ 
+        <model mesh_filename="vestexo.xml" />
+
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+
+        <modifier class="speed" value="0.1" />
+		<modifier class="hit_success_probability" value="-0.45" />
+	    <modifier class="detectability" value="0.6" />
+    </carry_item>
+
+</carry_items>

@@ -475,7 +475,7 @@
 	<weapon key="gkw_mg42_skill.weapon" />
 	<weapon key="gkw_aek999_skill.weapon" />
 	<!-- 靶机 -->
-	<weapon key="target.weapon" />
+	<!-- <weapon key="target.weapon" /> -->
 	<!-- MODⅢ技能 -->
 	<weapon key="gkw_m4a1mod3_skill.weapon" />
 	<weapon key="gkw_ar15mod3_skill.weapon" />
@@ -604,6 +604,14 @@
 	<!-- <weapon key="ff_dreamer_skill.weapon"/> -->
 	<carry_item key="ff_qwd.carry_item" />
 	<!-- 工事妖精 -->
+	<weapon key="ogas.weapon" />
+	<weapon key="deployable_hvy_store.weapon" />
+	<weapon key="deployable_sg_store.weapon" />
+	<weapon key="deployable_mg_store.weapon" />
+	<weapon key="deployable_rf_store.weapon" />
+	<weapon key="deployable_ar_store.weapon" />
+	<weapon key="deployable_smg_store.weapon" />
+	<weapon key="deployable_hg_store.weapon" />
 	<weapon key="gkw_deploy_bunker.weapon" />
 	<weapon key="gkw_deploy_shelter.weapon" />
 	<!-- mod3皮肤 -->

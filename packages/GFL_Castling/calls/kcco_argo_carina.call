@@ -1,51 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<call name="Carina" key="kcco_argo_carina.call"
-      initiation_comment1="Request Carina fire support！"
-      acknowledge_comment="Receive, we are adjusting artillery angle"
-      acknowledge_time="0"
-      launch_comment="Clearing"
-	  notify_metagame="1">
-    
-    <round instances="2"
-           instance_class="grenade"
-           instance_key="artillery_shell_310.projectile" 
-           instance_spread="6 6 6" 
-           common_spread="2 0 2" 
-           launch_time="5.0"
-           spawn_time="8.0">
-     <sound class="launch" fileref="artillery_barrage_1.wav" volume="1.0" />
-     <sound class="launch" fileref="artillery_barrage_2.wav" volume="1.0" />       
-	   <sound class="spawn" fileref="woosh1.wav" volume="0.2" />
-    </round>
+<call name="Carina" key="kcco_argo_carina.call" initiation_comment1="Request Carina fire support!" acknowledge_comment="Receive, we are adjusting artillery angle" acknowledge_time="0" launch_comment="Clearing" notify_metagame="1">
 
-    <round instances="2"
-           instance_class="grenade"
-           instance_key="artillery_shell_310.projectile" 
-           instance_spread="6 6 6" 
-           common_spread="2 0 2"
-           launch_time="7.0"
-           spawn_time="10.0">
-     <sound class="launch" fileref="artillery_barrage_1.wav" volume="1.0" />
-     <sound class="launch" fileref="artillery_barrage_2.wav" volume="1.0" />      
-	   <sound class="spawn" fileref="woosh1.wav" volume="0.2" />
-    </round>
-    <round instances="2"
-           instance_class="grenade"
-           instance_key="artillery_shell_310.projectile" 
-           instance_spread="6 6 6" 
-           common_spread="2 0 2"
-           launch_time="9.0"
-           spawn_time="11.0">
-     <sound class="launch" fileref="artillery_barrage_1.wav" volume="1.0" />
-     <sound class="launch" fileref="artillery_barrage_2.wav" volume="1.0" />      
-          <sound class="spawn" fileref="woosh1.wav" volume="0.2" />
-    </round>
+      <round instances="2" instance_class="grenade" instance_key="artillery_shell_310.projectile" instance_spread="6 6 6" common_spread="2 0 2" launch_time="5.0" spawn_time="8.0">
+            <sound class="launch" fileref="artillery_barrage_1.wav" volume="1.0" />
+            <sound class="launch" fileref="artillery_barrage_2.wav" volume="1.0" />
+            <sound class="spawn" fileref="woosh1.wav" volume="0.2" />
+      </round>
+
+      <round instances="2" instance_class="grenade" instance_key="artillery_shell_310.projectile" instance_spread="6 6 6" common_spread="2 0 2" launch_time="7.0" spawn_time="10.0">
+            <sound class="launch" fileref="artillery_barrage_1.wav" volume="1.0" />
+            <sound class="launch" fileref="artillery_barrage_2.wav" volume="1.0" />
+            <sound class="spawn" fileref="woosh1.wav" volume="0.2" />
+      </round>
+      <round instances="2" instance_class="grenade" instance_key="artillery_shell_310.projectile" instance_spread="6 6 6" common_spread="2 0 2" launch_time="9.0" spawn_time="11.0">
+            <sound class="launch" fileref="artillery_barrage_1.wav" volume="1.0" />
+            <sound class="launch" fileref="artillery_barrage_2.wav" volume="1.0" />
+            <sound class="spawn" fileref="woosh1.wav" volume="0.2" />
+      </round>
 
 
-    
-    <hud_icon filename="call_kcco_carina.png" />
-    <!-- <capacity value="0" source="rank" source_value="0.0" /> -->
-    <capacity value="100" source="rank" source_value="0.0" />
-    <inventory encumbrance="0.0" price="150.0" />
+
+      <hud_icon filename="call_kcco_carina.png" />
+      <!-- <capacity value="0" source="rank" source_value="0.0" /> -->
+      <capacity value="100" source="rank" source_value="0.0" />
+      <inventory encumbrance="0.0" price="150.0" />
 
 </call>

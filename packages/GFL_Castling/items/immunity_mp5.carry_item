@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <carry_items>
-    <carry_item key="immunity_mp5.carry_item" name="EXO-MP5-[Force Shield]" slot="1" draggable="0" drop_count_factor_on_death="0.0">
+    <carry_item key="immunity_mp5.carry_item" name="EXO-MP5-[Force Shield]" slot="1" draggable="0" drop_count_factor_on_death="0.0" time_to_live_out_in_the_open="0.0">
         <hud_icon filename="arm_exo_mp5.png" />
         <capacity value="1" source="rank" source_value="0.0" />
         <inventory encumbrance="0" price="0" />
