@@ -11,7 +11,7 @@
 	solt="0" 
 	magazine_size="30" 
 	name="GK-Intruder"
-	projectile_speed="120" 
+	projectile_speed="180" 
 	retrigger_time="0.075" 
 	suppressed="0" 
     use_basic_muzzle_smoke_effect="0"
@@ -52,6 +52,13 @@
         <result class="hit"  kill_probability="1.7" kill_decay_start_time="0.75" kill_decay_end_time="0.75"  />
     </projectile>
 
-    
-    <modifier class="speed" value="0.1" />
+    <stance state_key="running" accuracy="0.8" />
+    <stance state_key="walking" accuracy="0.8" />
+    <stance state_key="crouch_moving" accuracy="0.9" />
+    <stance state_key="prone_moving" accuracy="0.9" />
+
+    <stance state_key="standing" accuracy="0.8" />
+    <stance state_key="crouching" accuracy="0.9" />
+    <stance state_key="prone" accuracy="1" />
+    <modifier class="speed" value="0.2" />
 </weapon>
