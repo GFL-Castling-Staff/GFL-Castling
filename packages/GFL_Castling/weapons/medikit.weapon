@@ -6,12 +6,13 @@
     can_shoot_standing="0" 
     can_shoot_crouching="1" 
     carry_in_two_hands="0" 
-    name="Tactical doll repair kit" 
+    name="Tactical Doll repair kit" 
     class="5" 
     character_state="unwound" 
-    consume="1" 
+    consume="0" 
     sight_range_modifier="1" 
     slot="1" />
+    <next_in_chain key="vest_repair.weapon" share_ammo="0" />
     <animation state_key="recoil" 		animation_key="medic1" />
     <animation state_key="hold" 		animation_key="still, single hand carry" />
     <animation state_key="hold_on_wall" 	animation_key="still, single hand carry" />
@@ -30,7 +31,8 @@
 
     <model filename="medikit.xml" />
 
-    <capacity value="4" source="rank" source_value="0.0" />
+    <capacity value="1" source="rank" source_value="0.0" />
+    <inventory encumbrance="3.0" price="5.0" />
 
     <hud_icon filename="hud_medikit.png" />
     <commonness value="0.14" />
