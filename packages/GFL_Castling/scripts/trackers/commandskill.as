@@ -159,18 +159,8 @@ class CommandSkill : Tracker {
                     m_metagame.getComms().send(c1);
                 }
             }
-            XmlElement c2 ("command");
-            c2.setStringAttribute("class", "update_inventory");
-            c2.setStringAttribute("container_type_class", "backpack");
-            c2.setIntAttribute("character_id", Trigger.m_character_id); 
-            c2.setIntAttribute("add",0);
-                XmlElement k("item");
-                k.setStringAttribute("class", "carry_item");
-                k.setStringAttribute("key", "immunity_mp5.carry_item");
-                c2.appendChild(k);
-            m_metagame.getComms().send(c2);
-            c2.setStringAttribute("container_type_class", "stash");
-            m_metagame.getComms().send(c2);
+        deleteItemInBackpack(m_metagame,Trigger.m_character_id,"carry_item","immunity_mp5.carry_item");
+        deleteItemInStash(m_metagame,Trigger.m_character_id,"carry_item","immunity_mp5.carry_item");
         }
     }
     
@@ -301,7 +291,7 @@ class CommandSkill : Tracker {
         if (character !is null) {
             vestkey = getPlayerEquipmentKey(m_metagame,characterId,4);
             if (vestkey=="immunity_mp5.carry_item"){
-                vestkey=="exo_t4.carry_item";
+                vestkey="exo_t4.carry_item";
             }
             XmlElement c ("command");
             c.setStringAttribute("class", "update_inventory");
@@ -315,6 +305,7 @@ class CommandSkill : Tracker {
             }            
             m_metagame.getComms().send(c);
         }
+        deleteItemInBackpack(m_metagame,characterId,"carry_item","immunity_mp5.carry_item");
         SkillEffectTimer@ stimer = SkillEffectTimer(characterId,4,"MP5");
         stimer.setSkey(vestkey);
         TimerArray.insertLast(stimer);

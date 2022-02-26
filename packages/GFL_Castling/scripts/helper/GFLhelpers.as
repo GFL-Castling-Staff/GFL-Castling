@@ -96,6 +96,32 @@ void GiveXP(const Metagame@ metagame,int character_id,float rp){
     metagame.getComms().send(c);
 }
 
+void deleteItemInBackpack(Metagame@ metagame, int characterId, string ItemType, string ItemKey){
+	XmlElement c ("command");
+	c.setStringAttribute("class", "update_inventory");
+	c.setStringAttribute("container_type_class", "backpack");
+	c.setIntAttribute("character_id", characterId); 
+	c.setIntAttribute("add",0);
+	XmlElement k("item");
+	k.setStringAttribute("class", ItemType);
+	k.setStringAttribute("key", ItemKey);
+	c.appendChild(k);
+	metagame.getComms().send(c);	
+}
+
+void deleteItemInStash(Metagame@ metagame, int characterId, string ItemType, string ItemKey){
+	XmlElement c ("command");
+	c.setStringAttribute("class", "update_inventory");
+	c.setStringAttribute("container_type_class", "stash");
+	c.setIntAttribute("character_id", characterId); 
+	c.setIntAttribute("add",0);
+	XmlElement k("item");
+	k.setStringAttribute("class", ItemType);
+	k.setStringAttribute("key", ItemKey);
+	c.appendChild(k);
+	metagame.getComms().send(c);	
+}
+
 void addItemInBackpack(Metagame@ metagame, int characterId, string ItemType, string ItemKey) {
 	string c = 
 		"<command class='update_inventory' character_id='" + characterId + "' container_type_class='backpack'>" + 

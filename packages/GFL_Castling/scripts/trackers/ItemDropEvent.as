@@ -23,29 +23,11 @@ class ItemDropEvent : Tracker {
         if (event.getIntAttribute("target_container_type_id") != 3) return;
         if (event.getStringAttribute("item_key") == "immunity_mp5.carry_item"){
             int cId = event.getIntAttribute("character_id");
-            XmlElement c2 ("command");
-            c2.setStringAttribute("class", "update_inventory");
-            c2.setStringAttribute("container_type_class", "stash");
-            c2.setIntAttribute("character_id", cId); 
-            c2.setIntAttribute("add",0);
-                XmlElement k("item");
-                k.setStringAttribute("class", "carry_item");
-                k.setStringAttribute("key", "immunity_mp5.carry_item");
-                c2.appendChild(k);
-            m_metagame.getComms().send(c2);
+            deleteItemInStash(m_metagame,cId,"carry_item","immunity_mp5.carry_item");
         }
         if (event.getStringAttribute("item_key") == "VVfirenade.projectile"){
             int cId = event.getIntAttribute("character_id");
-            XmlElement c2 ("command");
-            c2.setStringAttribute("class", "update_inventory");
-            c2.setStringAttribute("container_type_class", "stash");
-            c2.setIntAttribute("character_id", cId); 
-            c2.setIntAttribute("add",0);
-                XmlElement k("item");
-                k.setStringAttribute("class", "projectile");
-                k.setStringAttribute("key", "VVfirenade.projectile");
-                c2.appendChild(k);
-            m_metagame.getComms().send(c2);
+            deleteItemInStash(m_metagame,cId,"projectile","VVfirenade.projectile");
         }
     }
 
