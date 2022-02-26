@@ -14,17 +14,17 @@
 	class="4" 
 	burst_shots="20"
 	slot="1"
-	last_burst_retrigger_time="3.0"
+	last_burst_retrigger_time="2.0"
 	reload_one_at_a_time="0"
 	sight_range_modifier="1.5" 
 	projectile_speed="100.0" 
 	carry_in_two_hands="0" 
 	projectiles_per_shot="2" 
-	stab_enabled="1"
+	stab_enabled="0"
 	barrel_offset_3d="0.0 1 0.5"/>
 
   	<animation state_key="recoil"	animation_key="still, pistol dual" />
-    <animation state_key="reload"	animation_key="still, pistol dual" />
+    <animation state_key="reload"	animation_key="reloading, pistol dual" />
   	<animation state_key="hold"		animation_key="still, pistol dual" />
   	<animation state_key="hold_casual"	animation_key="still, pistol dual" />
   	<animation state_key="hold_on_wall"	animation_key="still, pistol dual" />
