@@ -817,7 +817,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.m_minRandomCrates = 1; 
 		stage.m_maxRandomCrates = 2;
 
-		stage.m_defenseWinTime = 720.0;   // was 600 in 1.65
+		stage.m_defenseWinTime = 600.0;   // was 600 in 1.65
 		stage.m_defenseWinTimeMode = "custom";
 		stage.addTracker(PausingKothTimer(m_metagame, stage.m_defenseWinTime));
 
@@ -828,8 +828,8 @@ class StageConfiguratorInvasion : StageConfigurator {
 		{
 			Faction f(getFactionConfigs()[1], createCommanderAiCommand(1, 0.25, 0.05));             // was 0.2 0.1 in 1.65
 			f.m_overCapacity = 60;
-			f.m_capacityMultiplier = 0.0001;                                                      // was 1.32 in 1.65, now working with offset only
-			f.m_capacityOffset = 70;
+			f.m_capacityMultiplier = 1;                                                      // was 1.32 in 1.65, now working with offset only
+			f.m_capacityOffset = 40;
 			stage.m_factions.insertLast(f);
 		}
 		{
@@ -1462,7 +1462,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.m_minRandomCrates = 0; 
 		stage.m_maxRandomCrates = 1;
          
-		stage.m_defenseWinTime = 300; 
+		stage.m_defenseWinTime = 360; 
 		stage.m_defenseWinTimeMode = "custom";
 		stage.addTracker(PausingKothTimer(m_metagame, stage.m_defenseWinTime));
 		
@@ -1486,13 +1486,13 @@ class StageConfiguratorInvasion : StageConfigurator {
 		}
 		{
 			Faction f(getFactionConfigs()[2], createCommanderAiCommand(2, 0.32, 0.05));          // was 0.38 0.1 (1.82)  
-			f.m_overCapacity = 0;                                              
+			f.m_overCapacity = 40;                                              
 			f.m_capacityOffset = 15;                                                             
 			stage.m_factions.insertLast(f);
 		}
 		{
 			Faction f(getFactionConfigs()[1], createCommanderAiCommand(1, 0.32, 0.05));          // was 0.38 0.1 (1.82)  
-            f.m_overCapacity = 0;                                              
+            f.m_overCapacity = 40;                                              
 			f.m_capacityOffset = 15;                                                             
 			stage.m_factions.insertLast(f);
 		}
