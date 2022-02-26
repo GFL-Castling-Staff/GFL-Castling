@@ -141,10 +141,9 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 	// ------------------------------------------------------------------------------------------------
 	protected void setupNormalStages() {
-	adddStage(setupStage19());		  // map19
+	addStage(setupStage106());		  // map106 by diling
+	addStage(setupStage19());		  // map19
 	addStage(setupStage7());          // map6
-	addStage(setupStage104()); 		  // map105_1 zoneAttack by diling
-	addStage(setupStage105()); 		  // map105_2 shockzone by diling
 	//addStage(setupStage102());	  // mapftg
 	addStage(setupStage1());          // map2
     addStage(setupStage9());          // map9
@@ -158,6 +157,8 @@ class StageConfiguratorInvasion : StageConfigurator {
     addStage(setupStage3());          // map3
     addStage(setupStage13());         // map16    
 	addStage(setupFinalStage1());     // map11
+	addStage(setupStage104()); 		  // map105_1 zoneAttack by diling
+	addStage(setupStage105()); 		  // map105_2 shockzone by diling
     addStage(setupStage8());          // map8
  	addStage(setupStage14());         // map6_2
     addStage(setupStage2());          // map4
@@ -354,7 +355,55 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 		return stage;
 	} 	
-	
+
+	protected Stage@ setupStage106(){
+		Stage@ stage = createStage();
+		stage.m_mapInfo.m_name = "Catastrophe Expressway";
+		stage.m_mapInfo.m_path = "media/packages/GFLC_Map/maps/map106";
+		stage.m_mapInfo.m_id = "map106";
+
+		stage.addTracker(Overtime(m_metagame, 0));
+		stage.m_soldierCapacityModel = "constant";     
+		stage.m_maxSoldiers = 20 * 15;                                             // was 12*7 in 1.65, 1 base added
+
+		stage.m_soldierCapacityVariance = 0.3;
+		stage.m_playerAiCompensation = 4;                                         // was 4 (1.82)
+        stage.m_playerAiReduction = 0;                                          // was 2 (test3)    
+
+		stage.m_minRandomCrates = 2; 
+		stage.m_maxRandomCrates = 4;
+
+		stage.m_defenseWinTime = 360; 
+		stage.m_defenseWinTimeMode = "custom";
+		stage.addTracker(PausingKothTimer(m_metagame, stage.m_defenseWinTime));
+		{
+			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0));                                                  
+			f.m_capacityOffset = 0; 
+			f.m_capacityMultiplier = 1.0;
+			f.m_bases = 1;
+			stage.m_factions.insertLast(f);
+		}
+		{
+			Faction f(FactionConfig(1, "sf.xml", "S.F.", "0.91 0.11 0.20", "sf.xml"), createCommanderAiCommand(1, 0.20, 0.10));
+            f.m_capacityOffset = 15;                                            
+			stage.m_factions.insertLast(f);                                                                
+		}
+		{
+			Faction f(FactionConfig(2, "kcco.xml", "KCCO", "0.43 0.49 0.18", "kcco.xml"), createCommanderAiCommand(2, 0.20, 0.10));             
+            f.m_capacityOffset = 15;                                            
+			stage.m_factions.insertLast(f);                                    
+		}
+		{
+			Faction f(FactionConfig(3, "paradeus.xml", "Paradeus", "1 1 1", "paradeus.xml"), createCommanderAiCommand(3, 0.20, 0.10));             
+            f.m_capacityOffset = 5;                                            
+			stage.m_factions.insertLast(f);                                    
+		}
+                
+		stage.m_primaryObjective = "koth";
+		stage.m_kothTargetBase = "All Center Base";
+		return stage;		
+	}
+
 	protected Stage@ setupStage1() {
 		Stage@ stage = createStage();
 		stage.m_mapInfo.m_name = "Keepsake Bay";
@@ -1413,7 +1462,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.m_minRandomCrates = 0; 
 		stage.m_maxRandomCrates = 1;
          
-		stage.m_defenseWinTime = 800; 
+		stage.m_defenseWinTime = 300; 
 		stage.m_defenseWinTimeMode = "custom";
 		stage.addTracker(PausingKothTimer(m_metagame, stage.m_defenseWinTime));
 		
