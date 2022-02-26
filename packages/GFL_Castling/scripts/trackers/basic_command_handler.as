@@ -499,6 +499,12 @@ class BasicCommandHandler : Tracker {
 			spawnInstanceNearPlayer(senderId, "typhon.vehicle", "vehicle", 0);
 		} else  if(checkCommand(message, "spawnpierre")) {
 			spawnInstanceNearPlayer(senderId, "pierre.vehicle", "vehicle", 0);
+		} else  if(checkCommand(message, "spawnamos")) {
+			spawnInstanceNearPlayer(senderId, "armored_truck.vehicle", "vehicle", 0);
+		} else  if(checkCommand(message, "spawncompass")) {
+			spawnInstanceNearPlayer(senderId, "par_compass.vehicle", "vehicle", 0);
+		} else  if(checkCommand(message, "spawnjxk")) {
+			spawnInstanceNearPlayer(senderId, "mobile_armory.vehicle", "vehicle", 0);
 		} else if (checkCommand(message, "spawntarget")) {
 			spawnInstanceNearPlayer(senderId, "GK_target", "soldier", 0);
             spawnInstanceNearPlayer(senderId, "GK_target", "soldier", 0);

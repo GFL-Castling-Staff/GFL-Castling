@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapon key="parw_teal.weapon" on_ground_up="0 0 1" time_to_live_out_in_the_open="0.0" drop_count_factor_on_death="0.0" player_death_drop_owner_lock_time="0">
     <tag name="cqb" />
-     
+    <tag name="melee" />
     <specification 
      retrigger_time="0.35"
      magazine_size="1000"
@@ -58,7 +58,7 @@
      
      <commonness value="0.00001" can_respawn_with="1" in_stock="1" />
 
-  
+     <modifier class="detectability" value="0.6"/>
      <modifier class="speed" value="0.4" />
      <shield offset="-0.55 0.0 0" extent="0.8 0.5 1.0" />
      <!-- state modifiers for weapons are connected to shield impact events -->

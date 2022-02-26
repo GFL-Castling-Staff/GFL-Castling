@@ -96,6 +96,32 @@ void GiveXP(const Metagame@ metagame,int character_id,float rp){
     metagame.getComms().send(c);
 }
 
+void deleteItemInBackpack(Metagame@ metagame, int characterId, string ItemType, string ItemKey){
+	XmlElement c ("command");
+	c.setStringAttribute("class", "update_inventory");
+	c.setStringAttribute("container_type_class", "backpack");
+	c.setIntAttribute("character_id", characterId); 
+	c.setIntAttribute("add",0);
+	XmlElement k("item");
+	k.setStringAttribute("class", ItemType);
+	k.setStringAttribute("key", ItemKey);
+	c.appendChild(k);
+	metagame.getComms().send(c);	
+}
+
+void deleteItemInStash(Metagame@ metagame, int characterId, string ItemType, string ItemKey){
+	XmlElement c ("command");
+	c.setStringAttribute("class", "update_inventory");
+	c.setStringAttribute("container_type_class", "stash");
+	c.setIntAttribute("character_id", characterId); 
+	c.setIntAttribute("add",0);
+	XmlElement k("item");
+	k.setStringAttribute("class", ItemType);
+	k.setStringAttribute("key", ItemKey);
+	c.appendChild(k);
+	metagame.getComms().send(c);	
+}
+
 void addItemInBackpack(Metagame@ metagame, int characterId, string ItemType, string ItemKey) {
 	string c = 
 		"<command class='update_inventory' character_id='" + characterId + "' container_type_class='backpack'>" + 
@@ -124,6 +150,34 @@ void stopSoundtrack(Metagame@ m_metagame,string filename) {
 	" enabled='0' " + 
 	" filename='" + filename + "'" + 
 	"</command>");
+}
+
+void spawnSoldier(Metagame@ metagame, uint count, uint factionId, Vector3 position, string instanceKey) {
+	for (uint i = 0; i < count; ++i) {
+		metagame.getComms().send(
+		"<command " +
+		" class='create_instance' " + 
+		" faction_id='" + factionId + "' " +
+		" position='" + position.toString() + "' " + 
+		" offset='0 0 0' " +
+		" instance_class='soldier' " + 
+		" instance_key='" + instanceKey + "'> " + 
+		"</command>");
+	}
+}
+
+void spawnSoldier(Metagame@ metagame, uint count, uint factionId, string position, string instanceKey) {
+	for (uint i = 0; i < count; ++i) {
+		metagame.getComms().send(
+		"<command " +
+		" class='create_instance' " + 
+		" faction_id='" + factionId + "' " +
+		" position='" + position + "' " + 
+		" offset='0 0 0' " +
+		" instance_class='soldier' " + 
+		" instance_key='" + instanceKey + "'> " + 
+		"</command>");
+	}
 }
 //soundtrack function from ww2dlc thanks for coding wheel
 

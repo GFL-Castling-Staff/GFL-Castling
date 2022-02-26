@@ -2,7 +2,7 @@
 <weapons>
 <weapon file="deployable.base_weapon" key="deployable_hg_store.weapon" radius="0.25" >
     <specification
-	name="hg"
+	name="IOP Supply-HG T-Doll"
     spawn_instance_class="vehicle" 
     spawn_instance_key="hg_store" 
 	/>
@@ -11,7 +11,7 @@
 </weapon>
 <weapon file="deployable.base_weapon" key="deployable_smg_store.weapon" radius="0.25" >
     <specification
-	name="smg"
+	name="IOP Supply-SMG T-Doll"
     spawn_instance_class="vehicle" 
     spawn_instance_key="smg_store" 
 	/>
@@ -20,7 +20,7 @@
 </weapon>
 <weapon file="deployable.base_weapon" key="deployable_ar_store.weapon" radius="0.25" >
     <specification
-	name="ar"
+	name="IOP Supply-AR T-Doll"
     spawn_instance_class="vehicle" 
     spawn_instance_key="ar_store" 
 	/>
@@ -29,7 +29,7 @@
 </weapon>
 <weapon file="deployable.base_weapon" key="deployable_rf_store.weapon" radius="0.25" >
     <specification
-	name="rf"
+	name="IOP Supply-RF T-Doll"
     spawn_instance_class="vehicle" 
     spawn_instance_key="rf_store" 
 	/>
@@ -38,7 +38,7 @@
 </weapon>
 <weapon file="deployable.base_weapon" key="deployable_mg_store.weapon" radius="0.25" >
     <specification
-	name="mg"
+	name="IOP Supply-MG T-Doll"
     spawn_instance_class="vehicle" 
     spawn_instance_key="mg_store" 
 	/>
@@ -47,7 +47,7 @@
 </weapon>
 <weapon file="deployable.base_weapon" key="deployable_sg_store.weapon" radius="0.25" >
     <specification
-	name="sg"
+	name="IOP Supply-SG T-Doll"
     spawn_instance_class="vehicle" 
     spawn_instance_key="sg_store" 
 	/>
@@ -56,7 +56,7 @@
 </weapon>
 <weapon file="deployable.base_weapon" key="deployable_hvy_store.weapon" radius="0.25" >
     <specification
-	name="HVY"
+	name="IOP Supply-HVY T-Doll"
     spawn_instance_class="vehicle" 
     spawn_instance_key="hvy_store" 
 	/>
@@ -65,7 +65,7 @@
 </weapon>
 <weapon file="deployable.base_weapon" key="ogas.weapon" radius="0.25" >
     <specification
-    name="Ogas"
+    name="Portable Ogas Invasion System"
     spawn_instance_class="vehicle" 
     spawn_instance_key="ogas_pulse_generator.vehicle" 
     />
