@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon file="gf_hg.base_weapon" key="gkw_python_6603_skill.weapon">
+
+
+    <specification retrigger_time="0.2" last_burst_retrigger_time="1.2" accuracy_factor="0.98" sustained_fire_grow_step="0.8" sustained_fire_diminish_rate="1.8" magazine_size="6" carry_in_two_hands="0" suppressed="0" name="Colt Python-[Hunting Time]-[Embrace of the Dauntless]" class="4" burst_shots="6" reload_one_at_a_time="1" sight_range_modifier="1.0" projectile_speed="120.0" projectiles_per_shot="1" />
+	<next_in_chain key="gkw_python_6603.weapon" share_ammo="1" />
+    <animation state_key="recoil" animation_key="recoil, pistol" />
+    <animation state_key="recoil" stance_key="prone" animation_key="recoil, pistol, prone" />
+    <animation state_key="recoil" stance_key="over_wall" animation_key="recoil, overwall pistol" />
+
+    <animation state_key="cycle" animation_key="cycle, revolver" />
+    <animation state_key="cycle" stance_key="prone" animation_key="cycle, revolver, prone" />
+
+    <!-- 狗策划的换弹速度 -->
+    <animation state_key="reload" animation_key="RevolverReload" />
+    <!-- <animation state_key="reload" animation_key="reloading, swing out revolver" /> -->
+    <!-- <animation state_key="reload" animation_key="reloading, pistol" /> -->
+    <!-- <animation key="reload" stance_key="prone" animation_key="reloading, pistol, prone" />	 -->
+
+    <animation state_key="hold" animation_key="hold, pistol" />
+    <animation state_key="hold_casual" animation_key="dancing, kazachok" />
+    <animation state_key="hold_on_wall" animation_key="hold, overwall pistol" />
+    <animation state_key="still_against_wall" animation_key="hold_casual, pistol 4" />
+    <animation state_key="running" animation_key="running, pistol" />
+    <animation state_key="walking" animation_key="walking, pistol" />
+    <animation state_key="walking_backwards" animation_key="walking backwards, pistol" />
+
+    <animation state_key="crouching" animation_key="crouch, pistol" />
+    <animation state_key="crouch_moving" animation_key="crouching forwards, single hand carry" />
+    <animation state_key="crouch_moving_backwards" animation_key="crouching backwards, single hand carry" />
+
+    <animation state_key="prone_still" animation_key="prone_still, pistol" />
+
+    <animation state_key="changing_weapon_in" animation_key="change weapon in, single hand carry" />
+
+    <animation state_key="stabbing" animation_key="pistol whip" />
+    <animation state_key="stabbing" animation_key="pistol whip 3" />
+
+    <inventory buy_price="5.0" sell_price="5.0" />
+
+    <commonness in_stock="0" value="0"/>
+    <sound key="fire" fileref="model29_shot.wav" volume="0.8" pitch_variety="0.05" />
+    <sound key="magazine_out" fileref="revolver_magazine_out.wav" volume="1" />
+    <sound key="magazine_in" fileref="revolver_magazine_in.wav" volume="1" />
+    <sound key="cycle_out" fileref="revolver_cycle_out.wav" volume="1" />
+    <sound key="cycle_in" fileref="revolver_cycle_in.wav" volume="1" />
+    <sound key="cycle" fileref="revolver_cycle.wav" volume="1" />
+    <sound key="reload_one" fileref="revolver_magazine_in.wav" />
+
+    <model filename="gkw_python_From_melondove.xml" />
+
+    <hud_icon filename="gkw_python_6603.png" />
+
+
+
+
+    <weak_hand_hold offset="0.1" />
+    <projectile file="bullet.projectile">
+        <result class="blast" damage="1.5" radius="2.5" decal="1" push="0.3" character_state="death" faction_compare="not_equal" />
+    </projectile>
+
+    <stance state_key="running" accuracy="0.5" />
+    <stance state_key="walking" accuracy="0.85" />
+    <stance state_key="crouch_moving" accuracy="0.8" />
+    <stance state_key="prone_moving" accuracy="0.8" />
+
+    <stance state_key="standing" accuracy="0.9" />
+    <stance state_key="crouching" accuracy="0.95" />
+    <stance state_key="prone" accuracy="1" />
+
+
+</weapon>
