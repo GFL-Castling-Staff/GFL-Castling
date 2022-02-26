@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <carry_items>
     <carry_item file="cc.base_carry_item" key="cc_sv98_only.carry_item" name="Digital camouflage cloak" transform_on_consume="cc_sv98_5">
-        <hud_icon filename="arm_cc_sv98.png" />
+        <hud_icon filename="arm_cc_sv98_5.png" />
         <capacity value="0" source="rank" source_value="0.0" />
         <capacity value="1" source="rank" source_value="4.662" />
         <inventory price="80" />
@@ -10,19 +10,19 @@
         <modifier class="speed" value="0.15" />
     </carry_item>
     <carry_item file="cc.base_carry_item" key="cc_sv98_5" name="Digital camouflage cloak" transform_on_consume="cc_sv98_4">
-        <hud_icon filename="arm_cc_sv98_1.png" />
+        <hud_icon filename="arm_cc_sv98_4.png" />
         <modifier class="hit_success_probability" value="-0.8" />
         <modifier class="detectability" value="-0.45" />
         <modifier class="speed" value="0.15" />
     </carry_item>
     <carry_item file="cc.base_carry_item" key="cc_sv98_4" name="Digital camouflage cloak" transform_on_consume="cc_sv98_3">
-        <hud_icon filename="arm_cc_sv98_1.png" />
+        <hud_icon filename="arm_cc_sv98_3.png" />
         <modifier class="hit_success_probability" value="-0.8" />
         <modifier class="detectability" value="-0.45" />
         <modifier class="speed" value="0.15" />
     </carry_item>
     <carry_item file="cc.base_carry_item" key="cc_sv98_3" name="Digital camouflage cloak" transform_on_consume="cc_sv98_2">
-        <hud_icon filename="arm_cc_sv98_1.png" />
+        <hud_icon filename="arm_cc_sv98_2.png" />
         <modifier class="hit_success_probability" value="-0.8" />
         <modifier class="detectability" value="-0.45" />
         <modifier class="speed" value="0.15" />
@@ -41,7 +41,7 @@
         <modifier class="speed" value="0.15" />
     </carry_item>
     <carry_item file="none.base_carry_item" key="cc_sv98_1" name="Digital camouflage cloak-Overrun!-">
-        <hud_icon filename="cc_t5_16lab_0.png" />
+        <hud_icon filename="arm_cc_sv98_0.png" />
         <inventory price="1" />
         <modifier class="detectability" value="-0.25" />
         <modifier class="hit_success_probability" value="-0.8" />

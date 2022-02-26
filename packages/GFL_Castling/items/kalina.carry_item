@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <carry_items>
-    <carry_item file="exo.base_carry_item" key="kalina.carry_item" name="Kalina 5/5" transform_on_consume="kalina_9">
-        <hud_icon filename="Kalina.png" />
+    <carry_item file="exo.base_carry_item" key="kalina.carry_item" name="Kalina" transform_on_consume="kalina_9">
+        <hud_icon filename="Kalina_9.png" />
         <inventory price="150" />
         <commonness value="0" in_stock="0" />
         <modifier class="speed" value="0.35" />
@@ -9,31 +9,31 @@
         <modifier class="detectability" value="-0.05" />
     </carry_item>
     <carry_item file="exo.base_carry_item" key="kalina_9" name="Kalina" transform_on_consume="kalina_8">
-        <hud_icon filename="Kalina_2.png" />
+        <hud_icon filename="Kalina_8.png" />
         <modifier class="speed" value="0.35" />
         <modifier class="hit_success_probability" value="-1.0" />
         <modifier class="detectability" value="-0.05" />
     </carry_item>
     <carry_item file="exo.base_carry_item" key="kalina_8" name="Kalina" transform_on_consume="kalina_7">
-        <hud_icon filename="Kalina_2.png" />
+        <hud_icon filename="Kalina_7.png" />
         <modifier class="speed" value="0.35" />
         <modifier class="hit_success_probability" value="-1.0" />
         <modifier class="detectability" value="-0.05" />
     </carry_item>
     <carry_item file="exo.base_carry_item" key="kalina_7" name="Kalina" transform_on_consume="kalina_6">
-        <hud_icon filename="Kalina_2.png" />
+        <hud_icon filename="Kalina_6.png" />
         <modifier class="speed" value="0.35" />
         <modifier class="hit_success_probability" value="-1.0" />
         <modifier class="detectability" value="-0.05" />
     </carry_item>
     <carry_item file="exo.base_carry_item" key="kalina_6" name="Kalina" transform_on_consume="kalina_5">
-        <hud_icon filename="Kalina_2.png" />
+        <hud_icon filename="Kalina_5.png" />
         <modifier class="speed" value="0.35" />
         <modifier class="hit_success_probability" value="-1.0" />
         <modifier class="detectability" value="-0.05" />
     </carry_item>
     <carry_item file="exo.base_carry_item" key="kalina_5" name="Kalina" transform_on_consume="kalina_4">
-        <hud_icon filename="Kalina_2.png" />
+        <hud_icon filename="Kalina_4.png" />
         <modifier class="speed" value="0.35" />
         <modifier class="hit_success_probability" value="-1.0" />
         <modifier class="detectability" value="-0.05" />
@@ -45,13 +45,13 @@
         <modifier class="detectability" value="-0.05" />
     </carry_item>
     <carry_item file="exo.base_carry_item" key="kalina_3" name="Kalina" transform_on_consume="kalina_2">
-        <hud_icon filename="Kalina_4.png" />
+        <hud_icon filename="Kalina_2.png" />
         <modifier class="speed" value="0.35" />
         <modifier class="hit_success_probability" value="-1.0" />
         <modifier class="detectability" value="-0.05" />
     </carry_item>
     <carry_item file="exo.base_carry_item" key="kalina_2" name="Kalina-Overrun!-" transform_on_consume="kalina_1">
-        <hud_icon filename="Kalina_5.png" />
+        <hud_icon filename="Kalina_1.png" />
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="wound"  />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
@@ -64,7 +64,7 @@
         <modifier class="detectability" value="-0.05" />
     </carry_item>
     <carry_item file="none.base_carry_item" key="kalina_1" name="Kalina-Overrun!-">
-        <hud_icon filename="Kalina_6.png" />
+        <hud_icon filename="Kalina_0.png" />
         <modifier class="speed" value="0.35" />
         <modifier class="hit_success_probability" value="-0.6" />
         <modifier class="detectability" value="-0.05" />
