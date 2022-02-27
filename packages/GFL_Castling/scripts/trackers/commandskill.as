@@ -290,7 +290,7 @@ class CommandSkill : Tracker {
         string vestkey="";
         if (character !is null) {
             vestkey = getPlayerEquipmentKey(m_metagame,characterId,4);
-            if (vestkey=="immunity_mp5.carry_item"){
+            if (vestkey=="immunity_mp5.carry_item" || vestkey==""){
                 vestkey="exo_t4.carry_item";
             }
             XmlElement c ("command");
@@ -338,7 +338,7 @@ class CommandSkill : Tracker {
         string vestkey="";
         if (character !is null) {
             vestkey = getPlayerEquipmentKey(m_metagame,characterId,4);
-            if (vestkey=="immunity_mp5.carry_item"){
+            if (vestkey=="immunity_mp5.carry_item" || vestkey==""){
                 vestkey=="exo_t4.carry_item";
             }
             XmlElement c ("command");
