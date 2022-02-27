@@ -364,7 +364,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 		stage.addTracker(Overtime(m_metagame, 0));
 		stage.m_soldierCapacityModel = "constant";     
-		stage.m_maxSoldiers = 20 * 15;                                             // was 12*7 in 1.65, 1 base added
+		stage.m_maxSoldiers = 10 * 15;                                             // was 12*7 in 1.65, 1 base added
 
 		stage.m_soldierCapacityVariance = 0.3;
 		stage.m_playerAiCompensation = 4;                                         // was 4 (1.82)
