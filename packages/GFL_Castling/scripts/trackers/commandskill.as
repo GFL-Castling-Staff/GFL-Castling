@@ -136,17 +136,11 @@ class CommandSkill : Tracker {
 	}
     void excuteTimerEffect(SkillEffectTimer@ Trigger){
         if (Trigger.m_EffectKey =="MP5MOD3" || Trigger.m_EffectKey =="MP5" ){
-            XmlElement c ("command");
-            c.setStringAttribute("class", "update_inventory");
-            c.setIntAttribute("container_type_id", 4);
-            c.setIntAttribute("character_id", Trigger.m_character_id); 
-            {
-                XmlElement j("item");
-                j.setStringAttribute("class", "carry_item");
-                j.setStringAttribute("key", Trigger.m_specialkey1);
-                c.appendChild(j);
+            if(Trigger.m_specialkey1==""){
+                Trigger.m_specialkey1="exo_t4.carry_item";
             }
-            m_metagame.getComms().send(c);
+            editPlayerVest(m_metagame,Trigger.m_character_id,Trigger.m_specialkey1,4);
+
             if(Trigger.m_EffectKey =="MP5MOD3"){
                 const XmlElement@ character = getCharacterInfo(m_metagame, Trigger.m_character_id);
                 if (character !is null){
@@ -159,8 +153,8 @@ class CommandSkill : Tracker {
                     m_metagame.getComms().send(c1);
                 }
             }
-        deleteItemInBackpack(m_metagame,Trigger.m_character_id,"carry_item","immunity_mp5.carry_item");
-        deleteItemInStash(m_metagame,Trigger.m_character_id,"carry_item","immunity_mp5.carry_item");
+            deleteItemInBackpack(m_metagame,Trigger.m_character_id,"carry_item","immunity_mp5.carry_item");
+            deleteItemInStash(m_metagame,Trigger.m_character_id,"carry_item","immunity_mp5.carry_item");
         }
     }
     
@@ -304,18 +298,18 @@ class CommandSkill : Tracker {
                 c.appendChild(k);
             }            
             m_metagame.getComms().send(c);
+            deleteItemInBackpack(m_metagame,characterId,"carry_item","immunity_mp5.carry_item");
+            SkillEffectTimer@ stimer = SkillEffectTimer(characterId,4,"MP5");
+            stimer.setSkey(vestkey);
+            TimerArray.insertLast(stimer);
+            array<string> Voice={
+                "MP5Mod_SKILL1_JP.wav",
+                "MP5Mod_SKILL2_JP.wav",
+                "MP5Mod_SKILL3_JP.wav",
+                "MP5Mod_MEET_JP.wav"
+            };
+            playRandomSoundArray(m_metagame,Voice,0,character.getStringAttribute("position"),1);
         }
-        deleteItemInBackpack(m_metagame,characterId,"carry_item","immunity_mp5.carry_item");
-        SkillEffectTimer@ stimer = SkillEffectTimer(characterId,4,"MP5");
-        stimer.setSkey(vestkey);
-        TimerArray.insertLast(stimer);
-        array<string> Voice={
-            "MP5Mod_SKILL1_JP.wav",
-            "MP5Mod_SKILL2_JP.wav",
-            "MP5Mod_SKILL3_JP.wav",
-            "MP5Mod_MEET_JP.wav"
-        };
-        playRandomSoundArray(m_metagame,Voice,0,character.getStringAttribute("position"),1);
     }
     void excuteMP5MOD3skill(int characterId,int playerId){
         bool ExistQueue = false;
@@ -352,17 +346,17 @@ class CommandSkill : Tracker {
                 c.appendChild(k);
             }            
             m_metagame.getComms().send(c);
+            SkillEffectTimer@ stimer = SkillEffectTimer(characterId,5,"MP5MOD3");
+            stimer.setSkey(vestkey);
+            TimerArray.insertLast(stimer);
+            array<string> Voice={
+                "MP5Mod_SKILL1_JP.wav",
+                "MP5Mod_SKILL2_JP.wav",
+                "MP5Mod_SKILL3_JP.wav",
+                "MP5Mod_MEET_JP.wav"
+            };
+            playRandomSoundArray(m_metagame,Voice,0,character.getStringAttribute("position"),1);
         }
-        SkillEffectTimer@ stimer = SkillEffectTimer(characterId,5,"MP5MOD3");
-        stimer.setSkey(vestkey);
-        TimerArray.insertLast(stimer);
-        array<string> Voice={
-            "MP5Mod_SKILL1_JP.wav",
-            "MP5Mod_SKILL2_JP.wav",
-            "MP5Mod_SKILL3_JP.wav",
-            "MP5Mod_MEET_JP.wav"
-        };
-        playRandomSoundArray(m_metagame,Voice,0,character.getStringAttribute("position"),1);
     }
 }
 
