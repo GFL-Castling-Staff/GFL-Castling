@@ -287,7 +287,7 @@ class CommandSkill : Tracker {
         }
         SkillArray.insertLast(SkillTrigger(characterId,29,"MP5"));
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
-        string vestkey="";
+        string vestkey="exo_t4.carry_item";
         if (character !is null) {
             vestkey = getPlayerEquipmentKey(m_metagame,characterId,4);
             if (vestkey=="immunity_mp5.carry_item" || vestkey==""){
@@ -335,7 +335,7 @@ class CommandSkill : Tracker {
         }
         SkillArray.insertLast(SkillTrigger(characterId,29,"MP5MOD3"));
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
-        string vestkey="";
+        string vestkey="exo_t4.carry_item";
         if (character !is null) {
             vestkey = getPlayerEquipmentKey(m_metagame,characterId,4);
             if (vestkey=="immunity_mp5.carry_item" || vestkey==""){
