@@ -46,4 +46,85 @@
         <stance state_key="crouching" accuracy="0.95" />
         <stance state_key="prone" accuracy="1" />
     </weapon>
+    <weapon file="two_hands_ar.animation_base" key="gkw_m4a1mod3_530_skill.weapon">
+        <specification
+    		accuracy_factor="1" 
+		    barrel_offset="0.4" 
+		    can_shoot_standing="1"
+            can_shoot_crouching="1" 
+            can_shoot_prone="0"
+	     	class="4"
+            solt="0" 
+            carry_in_two_hands="0" 
+            burst_shots="1"
+		    magazine_size="6" 
+            name="M4A1(MOD3)-[Girl`s Balloon Roaming]-[Mark of the avenger]"
+		    projectile_speed="2000.0" 
+            sight_range_modifier="1.2"
+		    retrigger_time="1" 
+		    suppressed="0" 
+		    sustained_fire_diminish_rate="1.8" 
+		    sustained_fire_grow_step="0.3"
+            projectiles_per_shot="1"/>
+        <next_in_chain key="gkw_m4a1mod3_530.weapon" share_ammo="0" />
+
+        <animation state_key="recoil" animation_key="recoil, pistol dual 1" />
+        <animation state_key="recoil" animation_key="recoil, pistol dual 2" />
+        <animation state_key="recoil" stance_key="over_wall" animation_key="recoil, overwall dual" />
+        <animation state_key="reload" animation_key="reloading m4s" />
+        <animation state_key="hold" animation_key="still, pistol dual" />
+        <animation state_key="hold_casual" animation_key="hold_casual, pistol dual" />
+        <animation state_key="hold_on_wall" animation_key="hold, overwall dual" />
+        <animation state_key="still_against_wall" animation_key="hold_casual, pistol dual" />
+        <animation state_key="crouching" animation_key="crouch, pistol dual" />
+        <animation state_key="crouch_moving" animation_key="crouching, pistol 2" />
+        <animation state_key="crouch_moving_backwards" animation_key="crouching backwards, pistol 2" />
+        <animation state_key="running" animation_key="walking, pistol dual" />
+        <animation state_key="walking" animation_key="walking, pistol dual" />
+        <animation state_key="walking_backwards" animation_key="walking backwards, pistol dual" />
+        <animation state_key="next_in_chain_in" animation_key="change weapon in m4s" />
+        <animation state_key="prone_still" animation_key="prone_still, pistol dual" />
+        <animation state_key="stabbing" animation_key="pistol whip" />
+        <animation state_key="stabbing" animation_key="pistol whip 2" />
+        <animation state_key="stabbing" animation_key="pistol whip 3" />
+	    <animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
+        <inventory buy_price="270.0" sell_price="270.0" />	
+        <commonness in_stock="0" value="0"/>
+
+        <sound key="fire" fileref="M4mod.wav" pitch_variety="0.05" volume="2" />
+        <sound key="fire" fileref="M4mod.wav" pitch_variety="0.05" volume="2" />
+        <sound key="magazine_out" fileref="m4a1_mgz_out_FromINS.wav" volume="1" />
+        <sound key="magazine_in" fileref="m4a1_mgz_in_FromINS.wav" volume="1" />
+        <sound key="cycle" fileref="m4a1_cycle_FromINS.wav" volume="1" />
+        <sound class="impact" fileref="rifle_drop.wav" />    
+        <model filename="none.xml" />
+        <hud_icon filename="gkw_m4a1_MOD3_530_skill.png" />
+        <commonness value="0" in_stock="0" can_respawn_with="1" />
+        <inventory  buy_price="270.0" sell_price="270.0"  />
+
+        <capacity value="0" source="rank" source_value="0.0" />
+        <capacity value="1" source="rank" source_value="6.048" />  
+        <ballistics
+        near_far_distance="0"
+        speed_estimation_near="75.0"
+        speed_estimation_far="75.0"
+        max_speed="200"
+        randomness="0.0"
+        curve_height="6"
+        tweak_factor="2.5"
+        />
+    <weak_hand_hold offset="0.2" />
+    <projectile file="m4a1mod3_skill.projectile" />
+
+    <stance state_key="running" accuracy="0.3" />
+    <stance state_key="walking" accuracy="0.8" />
+    <stance state_key="crouch_moving" accuracy="0.9" />
+    <stance state_key="prone_moving" accuracy="0.9" />
+
+    <stance state_key="standing" accuracy="1" />
+    <stance state_key="crouching" accuracy="1" />
+    <stance state_key="prone" accuracy="1" />
+    <modifier class="speed" value="-0.5" />
+
+    </weapon>
 </weapons>
