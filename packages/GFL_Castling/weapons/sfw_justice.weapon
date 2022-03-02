@@ -12,9 +12,9 @@
 		retrigger_time="0.1" 
 		suppressed="0" 
     carry_in_two_hands="0"  
-        can_shoot_standing="1" 
-        can_shoot_crouching="0"
-        can_shoot_prone="0"
+    can_shoot_standing="1" 
+    can_shoot_crouching="0"
+    can_shoot_prone="0"
 		sustained_fire_diminish_rate="1.0"
 		sustained_fire_grow_step="0.5" />
 
@@ -24,7 +24,7 @@
     <animation state_key="recoil" stance_key="over_wall" animation_key="recoil,justice" />	
     <animation state_key="hold"					animation_key="still,justice" />
   	<animation state_key="hold_casual"			animation_key="relax,justice" />
-	<animation state_key="hold_on_wall"			animation_key="still,justice" />
+	  <animation state_key="hold_on_wall"			animation_key="still,justice" />
     <animation state_key="still_against_wall"	animation_key="still,justice" />
     <animation state_key="running" animation_key="running,justice" />
     <animation state_key="walking"	animation_key="walking,justice" />
@@ -33,9 +33,9 @@
     <animation state_key="prone_still" animation_key="prone_still, pistol dual" />
     <animation state_key="reload"	animation_key="reload,justice" />
     <animation key="reload" stance_key="prone" animation_key="reload,justice" />	
-      <animation state_key="stabbing" animation_key="pistol whip" />
-      <animation state_key="stabbing" animation_key="pistol whip 2" />
-      <animation state_key="stabbing" animation_key="pistol whip 3" />
+    <animation state_key="stabbing" animation_key="pistol whip" />
+    <animation state_key="stabbing" animation_key="pistol whip 2" />
+    <animation state_key="stabbing" animation_key="pistol whip 3" />
 
     <sound key="fire" fileref="sf_boss_fire_3.wav" pitch_variety="0.05" volume="0.3" />
     <sound key="magazine_out" fileref="kccoar_mgz_out_FromINS.wav" volume="0.8" />

@@ -2,18 +2,17 @@
 <weapon file="two_hands_ar.animation_base" key="sfw_m16a1.weapon">
 
     <specification 
-		accuracy_factor="0.98" 
-		barrel_offset="0.4" 
-		 
-		class="0"
-        solt="0" 
-		magazine_size="90" 
-		name="SF-M16A1" 
-		projectile_speed="204.26" 
-		retrigger_time="0.036" 
-		suppressed="0" 
-		sustained_fire_diminish_rate="2.1" 
-		sustained_fire_grow_step="0.6" />
+	accuracy_factor="0.98" 
+	barrel_offset="0.4"  
+	class="0"
+    solt="0" 
+	magazine_size="90" 
+	name="SF-M16A1" 
+	projectile_speed="204.26" 
+	retrigger_time="0.036" 
+	suppressed="0" 
+	sustained_fire_diminish_rate="2.1" 
+	sustained_fire_grow_step="0.6" />
 
 
 

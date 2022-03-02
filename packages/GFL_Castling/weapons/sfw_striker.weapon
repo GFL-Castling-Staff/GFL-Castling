@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapon file="sf.base_weapon" key="sfw_striker.weapon">
 
-	<specification accuracy_factor="0.75" barrel_offset="0.5" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" class="0" sight_range_modifier="1.1" solt="0" magazine_size="150" name="SF-Striker" projectile_speed="180" retrigger_time="0.05" suppressed="0" sustained_fire_diminish_rate="1.0" sustained_fire_grow_step="3.0" />
+	<specification 
+	accuracy_factor="0.75" 
+	barrel_offset="0.5" 
+	can_shoot_standing="1" 
+	can_shoot_crouching="1" 
+	can_shoot_prone="0" 
+	class="0" 
+	sight_range_modifier="1.1" 
+	solt="0" 
+	magazine_size="150" 
+	name="SF-Striker" 
+	projectile_speed="180" 
+	retrigger_time="0.05" 
+	suppressed="0" 
+	sustained_fire_diminish_rate="1.0" 
+	sustained_fire_grow_step="3.0" />
 
 
 	<animation state_key="recoil" animation_key="recoil, hip fire" />

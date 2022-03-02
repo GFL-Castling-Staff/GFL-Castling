@@ -2,42 +2,36 @@
 <weapon file="sf_boss.base_weapon" key="sfw_agent.weapon">
 
     <specification 
-		accuracy_factor="0.99" 
-		barrel_offset="0.5" 
-		class="4"
-        solt="0" 
-		magazine_size="50" 
-		name="SF-Agent" 
-        projectile_speed="140" 
-		retrigger_time="0.1" 
-		suppressed="0" 
-        can_shoot_standing="1"
-        carry_in_two_hands="0"  
-        can_shoot_crouching="0"
-        can_shoot_prone="0"
-		sustained_fire_diminish_rate="1.0"
-		sustained_fire_grow_step="0.5" />
+	accuracy_factor="0.99" 
+	barrel_offset="0.5" 
+	class="4"
+    solt="0" 
+	magazine_size="50" 
+	name="SF-Agent" 
+    projectile_speed="140" 
+	retrigger_time="0.1" 
+	suppressed="0" 
+    can_shoot_standing="1"
+    carry_in_two_hands="0"  
+    can_shoot_crouching="0"
+    can_shoot_prone="0"
+	sustained_fire_diminish_rate="1.0"
+	sustained_fire_grow_step="0.5" />
 
 		
-      <animation state_key="recoil" animation_key="recoil, agent" />
-      <animation state_key="reload"	animation_key="reload, agent" />
-      <animation state_key="hold"	animation_key="still, agent" />
-      <animation state_key="hold_casual"	animation_key="relax agent" />
-      <animation state_key="hold_on_wall"	animation_key="still, agent" />
-      <animation state_key="still_against_wall"	animation_key="still, agent" />
-      <animation state_key="running" animation_key="running, agent" />
-      <animation state_key="walking"	animation_key="walking, agent" />
-      <animation state_key="walking_backwards" animation_key="walking, agent" />
-      <animation state_key="changing_weapon_in" 	animation_key="change weapon in, single hand carry" />
-
-      
-      <!-- <animation state_key="reload" animation_key="pistol whip" /> -->
-      <!-- <animation state_key="reload" animation_key="pistol whip 2" /> -->
-      <!-- <animation state_key="reload" animation_key="pistol whip 3" /> -->
-      
-      <animation state_key="stabbing" animation_key="pistol whip" />
-      <animation state_key="stabbing" animation_key="pistol whip 2" />
-      <animation state_key="stabbing" animation_key="pistol whip 3" />
+    <animation state_key="recoil" animation_key="recoil, agent" />
+    <animation state_key="reload"	animation_key="reload, agent" />
+    <animation state_key="hold"	animation_key="still, agent" />
+    <animation state_key="hold_casual"	animation_key="relax agent" />
+    <animation state_key="hold_on_wall"	animation_key="still, agent" />
+    <animation state_key="still_against_wall"	animation_key="still, agent" />
+    <animation state_key="running" animation_key="running, agent" />
+    <animation state_key="walking"	animation_key="walking, agent" />
+    <animation state_key="walking_backwards" animation_key="walking, agent" />
+    <animation state_key="changing_weapon_in" 	animation_key="change weapon in, single hand carry" />
+    <animation state_key="stabbing" animation_key="pistol whip" />
+    <animation state_key="stabbing" animation_key="pistol whip 2" />
+    <animation state_key="stabbing" animation_key="pistol whip 3" />
 
     <sound key="fire" fileref="sf_boss_fire.wav" pitch_variety="0.05" volume="0.4" />
     <sound key="magazine_out" fileref="kccoar_mgz_out_FromINS.wav" volume="0.8" />
