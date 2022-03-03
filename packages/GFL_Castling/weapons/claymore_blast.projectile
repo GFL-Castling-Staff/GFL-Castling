@@ -2,7 +2,7 @@
 <projectile class="grenade" name="Claymore" key="claymore_blast.projectile" slot="2" on_ground_up="0 1 0" radius="0.4" can_be_disarmed="0" can_be_detected_by_driver="0" drop_count_factor_on_death="0.0" drop_count_factor_on_player_death="0.0" time_to_live_out_in_the_open="0.0" >
 
  <trigger class="time" time_to_live="0.0"/>
- <result class="blast" radius="6.0" damage="4.2" push="0.2" decal="1" character_state="death" />
+ <result class="blast" radius="6.0" damage="0.1" push="0.2" decal="1" character_state="death" />
 
 
     <throwable curve_height="2.0" near_far_distance="2.0" speed_estimation_near="5.0" speed_estimation_far="5.0" max_speed="5.0" randomness="0.0" />
