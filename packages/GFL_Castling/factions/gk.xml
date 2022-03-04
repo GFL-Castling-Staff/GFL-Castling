@@ -1201,6 +1201,19 @@
 			<attribute weight="1.0" min="100.0" max="300.0" />
 		</attribute_config>
 	</soldier>
+	<soldier name="gk_dinergate" spawn_score="0.5">
+		<models filename="sf_dinergate.models" />
+		<character filename="sf_dinergate.character" />
+		<ai filename="eod.ai" />
+
+		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1">
+			<weapon key="ff_dinergate.weapon"/>
+			<carry_item key="exo_t4.carry_item" />
+		</resources>
+		<attribute_config class="xp">
+			<attribute weight="0.3" min="0.0" max="1.0" />
+		</attribute_config>
+	</soldier>
 	<soldier name="gk_manticore" firstnames="gk_qwd.name" lastnames_file="gk_qwd_last.name" spawn_score="0.000001">
 		<model filename="gkd_manticore_pink.xml" />
 		<character filename="qwd.character" />
