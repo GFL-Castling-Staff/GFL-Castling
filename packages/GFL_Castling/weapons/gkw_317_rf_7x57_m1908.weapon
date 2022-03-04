@@ -7,7 +7,7 @@
     
     <specification 
 	retrigger_time="-1.0" 
-	accuracy_factor="1" 
+	accuracy_factor="0.95" 
 	sustained_fire_grow_step="0.35" 
 	sustained_fire_diminish_rate="1.4" 
 	magazine_size="10" 
@@ -41,8 +41,8 @@
    
 	<!--Model, Icon, Cost-->
    
-    <model filename="gkw_rf_m14.xml" />
-    <hud_icon filename="gkw_m1908.png" />
+    <model filename="gkw_rf_m1908.xml" />
+    <hud_icon filename="gkw_mondragonm1908.png" />
 
 
 	
@@ -76,13 +76,13 @@
     
     <specification 
 	retrigger_time="-1.0" 
-	accuracy_factor="1" 
+	accuracy_factor="0.95" 
 	sustained_fire_grow_step="0.35" 
 	sustained_fire_diminish_rate="1.4" 
 	magazine_size="10" 
 	can_shoot_standing="0" 
 	suppressed="0" 
-	name="Mondragon-skill-[Conviction of Certain Victory]" 
+	name="Mondragon-[Conviction of Certain Victory]" 
 	class="4" 
 	burst_shots="1"
 	last_burst_retrigger_time="0.358"
@@ -111,8 +111,8 @@
    
 	<!--Model, Icon, Cost-->
    
-    <model filename="gkw_rf_m14.xml" />
-    <hud_icon filename="testing.png" />
+    <model filename="gkw_rf_m1908.xml" />
+    <hud_icon filename="gkw_mondragonm1908_skill.png" />
 
 
 	
@@ -137,6 +137,8 @@
     <stance state_key="prone" accuracy="1.0" />
     <stance state_key="over_wall" accuracy="1.0" /> 
     <modifier class="speed" value="0" /> 
+    <modifier class="detectability" value="0.2"/>
+    <modifier class="hit_success_probability" value="0.2"/>
 
 </weapon>
 </weapons>
