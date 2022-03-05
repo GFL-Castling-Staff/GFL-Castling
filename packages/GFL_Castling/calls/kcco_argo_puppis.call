@@ -3,22 +3,20 @@
 
 
 
-      <round instances="2" instance_class="grenade" instance_key="artillery_shell_203.projectile" instance_spread="8 8 8" common_spread="6 0 6" launch_time="7.0" spawn_time="8.0">
-            <sound class="launch" fileref="artillery_barrage_1.wav" volume="1.0" />
-            <sound class="launch" fileref="artillery_barrage_2.wav" volume="1.0" />
+      <round instances="2" instance_class="grenade" instance_key="artillery_shell_203.projectile" instance_spread="8 8 8" common_spread="6 0 6" launch_time="3.0" spawn_time="6.0">
+            <sound class="launch" fileref="kcco_dn_3.wav" volume="3.0" />
+           
             <sound class="spawn" fileref="woosh1.wav" volume="0.2" />
       </round>
 
-      <round instances="2" instance_class="grenade" instance_key="artillery_shell_203.projectile" instance_spread="8 8 8" common_spread="6 0 6" launch_time="9.0" spawn_time="10.0">
-            <sound class="launch" fileref="artillery_barrage_1.wav" volume="1.0" />
-            <sound class="launch" fileref="artillery_barrage_2.wav" volume="1.0" />
+      <round instances="2" instance_class="grenade" instance_key="artillery_shell_203.projectile" instance_spread="8 8 8" common_spread="6 0 6" launch_time="7.0" spawn_time="9.0">
+             <sound class="launch" fileref="kcco_dn_3.wav" volume="3.0" />
             <sound class="spawn" fileref="woosh1.wav" volume="0.2" />
       </round>
 
-      <round instances="2" instance_class="grenade" instance_key="artillery_shell_203.projectile" instance_spread="8 8 8" common_spread="6 0 6" launch_time="11.0" spawn_time="12.0">
-            <sound class="launch" fileref="artillery_barrage_1.wav" volume="1.0" />
-            <sound class="launch" fileref="artillery_barrage_2.wav" volume="1.0" />
-            <sound class="spawn" fileref="woosh1.wav" volume="0.2" />
+      <round instances="2" instance_class="grenade" instance_key="artillery_shell_203.projectile" instance_spread="8 8 8" common_spread="6 0 6" launch_time="10.0" spawn_time="13.0">
+             <sound class="launch" fileref="kcco_dn_3.wav" volume="3.0" />
+            <sound class="spawn" fileref="woosh1.wav" volume="1.0" />
       </round>
 
 
