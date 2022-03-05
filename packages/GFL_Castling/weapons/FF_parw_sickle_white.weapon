@@ -39,7 +39,10 @@
     <animation state_key="reload"   animation_key="still, ninjato" />
     <model filename="parw_alina.xml" />
 
-
+  <inventory 
+  encumbrance="27.0" 
+  buy_price="328.0" 
+  sell_price="328.0"/>
      
     <projectile file="teal.projectile">
         <result class="blast" radius="5" damage="8" decal="0" push="0.0" character_state="death" faction_compare="not_equal" make_vehicle_hit_sound="0" />
