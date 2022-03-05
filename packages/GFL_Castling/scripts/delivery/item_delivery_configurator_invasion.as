@@ -193,7 +193,10 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		ScoredResource("gkw_tkb408_6804.weapon", "weapon", 1.0f),
 		ScoredResource("gkw_aps_6808.weapon", "weapon", 1.0f),
 		ScoredResource("gkw_aa12_4401.weapon","weapon", 1.0f),
-		ScoredResource("gkw_mp5_3006.weapon", "weapon", 1.0f)    
+		ScoredResource("gkw_mp5_3006.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_mp7_6806.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_kolibri_6802.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_hs50_6805.weapon", "weapon", 1.0f)
 			},
 			{
 		ScoredResource("bp_t5_16lab.carry_item", "carry_item", 1.0f),
