@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<weapons>
 <weapon file="heavy_anti_materiel_rifle.animation_base" key="gkw_ksvkmod3.weapon">
 
 
@@ -11,18 +12,19 @@
 	sustained_fire_diminish_rate="0.5" 
 	magazine_size="5" 
 	can_shoot_standing="0" 
-	can_shoot_crouching="0"
-	can_shoot_prone="1"
+	can_shoot_crouching="1"
+	can_shoot_prone="0"
 	suppressed="0" 
 	name="KSVK(MOD3)" 
 	class="4"
-	burst_shot="1" 
+	burst_shots="1" 
 	reload_one_at_a_time="0" 
 	sight_range_modifier="4" 
 	projectile_speed="224.47" 
 	barrel_offset="0.4" 
 	projectiles_per_shot="10" />
-    <inventory  buy_price="300.0" sell_price="9.0" />	
+    <inventory  buy_price="300.0" sell_price="300.0" />	
+    <next_in_chain key="gkw_ksvkmod3_skill.weapon" share_ammo="1" />
 	<!--Animations-->
 	
 
@@ -46,7 +48,7 @@
    
     <model filename="gkw_rf_ksvk_mod3.xml" />
     <hud_icon filename="gkw_ksvkmod3.png" />
-<capacity value="0" source="rank" source_value="0.0" />
+    <capacity value="0" source="rank" source_value="0.0" />
     <capacity value="1" source="rank" source_value="6.048" />
 <!--<inventory  price="4.0" />-->
 	
@@ -54,10 +56,9 @@
 	
 
     <weak_hand_hold offset="0.3" />
-    <projectile file="ksvk_mod3.projectile" />
-
+    <projectile file="ksvk_mod3.projectile" >
     <!--Accuracy, Movement speed-->
-    
+ 	<stance state_key="running" accuracy="1.0" />   
 	<stance state_key="walking" accuracy="1.0" />
     <stance state_key="crouch_moving" accuracy="1.0" />
     <stance state_key="prone_moving" accuracy="1.0" />
@@ -69,3 +70,75 @@
     <capacity value="1" source="rank" source_value="4.622" />
     <modifier class="speed" value="-0.1" /> 
 </weapon>
+<weapon file="heavy_anti_materiel_rifle.animation_base" key="gkw_ksvkmod3_skill.weapon">
+
+
+    <!--Weapon specifications-->
+    
+    <specification 
+	retrigger_time="-1" 
+	last_burst_retrigger_time="6" 
+	accuracy_factor="1" 
+	sustained_fire_grow_step="0" 
+	sustained_fire_diminish_rate="0.5" 
+	magazine_size="5" 
+	can_shoot_standing="0" 
+	can_shoot_crouching="1"
+	can_shoot_prone="0"
+	suppressed="0" 
+	name="KSVK(MOD3)-[Concussive Blast]" 
+	class="4"
+	burst_shots="5" 
+	reload_one_at_a_time="1" 
+	sight_range_modifier="4" 
+	projectile_speed="224.47" 
+	barrel_offset="0.4" 
+	projectiles_per_shot="5" />
+    <inventory  buy_price="300.0" sell_price="300.0" />	
+    <next_in_chain key="gkw_ksvkmod3.weapon" share_ammo="1" />
+	<!--Animations-->
+	
+
+  	<animation state_key="hold_casual"			animation_key="dancing, kazachok" />
+    <animation key="reload" animation_key="RfSkillReload1.3" />	
+	<animation state_key="next_in_chain_in" animation_key="RFswitch4" />
+	
+	<!--Sounds-->
+	
+    <sound key="fire" fileref="NTW20_Fire_FromCOD16HDR.wav" volume="0.7" />
+    <sound key="cycle" fileref="NTW20_cycle_FromCOD16HDR.wav" volume="0.6"/>
+    <sound key="magazine_out" fileref="NTW20_mgz_out_FromCOD16HDR.wav" volume="0.5"/>
+    <sound key="magazine_in" fileref="NTW20_mgz_in_FromCOD16HDR.wav" volume="0.5"/>
+    <sound key="cycle_out" fileref="NTW20_cycle_out_FromCOD16HDR.wav" volume="0.1"/>
+    <sound key="cycle_in" fileref="NTW20_cycle_in_FromCOD16HDR.wav" volume="0.5"/>
+    <sound class="impact" fileref="rifle_drop.wav" />
+   
+	<!--Model, Icon, Cost-->
+   
+    <model filename="gkw_rf_ksvk_mod3.xml" />
+    <hud_icon filename="gkw_ksvkmod3.png" />
+    <capacity value="0" source="rank" source_value="0.0" />
+    <capacity value="1" source="rank" source_value="6.048" />
+
+	<!--Ballistics-->
+	
+
+    <weak_hand_hold offset="0.3" />
+    <projectile file="ksvk_mod3.projectile" >
+        <result class="blast" radius="5" damage="7" push="0.4" decal="0" character_state="death" faction_compare="not_equal" />
+    </projectile>
+
+    <!--Accuracy, Movement speed-->
+ 	<stance state_key="running" accuracy="1.0" />   
+	<stance state_key="walking" accuracy="1.0" />
+    <stance state_key="crouch_moving" accuracy="1.0" />
+    <stance state_key="prone_moving" accuracy="1.0" />
+    <stance state_key="standing" accuracy="1.0"/>
+    <stance state_key="crouching" accuracy="1.0" />
+    <stance state_key="prone" accuracy="1.0" />
+    <stance state_key="over_wall" accuracy="1.0" />  
+    <capacity value="0" source="rank" source_value="0.0" />
+    <capacity value="1" source="rank" source_value="4.622" />
+    <modifier class="speed" value="-0.1" /> 
+</weapon>
+</weapons>
