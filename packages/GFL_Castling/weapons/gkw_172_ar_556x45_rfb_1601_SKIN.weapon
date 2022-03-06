@@ -23,7 +23,7 @@
   	<animation state_key="hold_casual"			animation_key="dancing, zoufang" />
     <animation state_key="reload" animation_key="ARreload1.8" />
 	<animation key="reload" stance_key="prone" animation_key="ARreloadp1.8" />
-    <animation state_key="next_in_chain_in" animation_key="ARswitch0.5" />
+    <animation state_key="next_in_chain_in" animation_key="ARswitch1.2" />
     <inventory  buy_price="8.0" sell_price="8.0" />
     <commonness value="0" in_stock="0" />
 
@@ -71,14 +71,14 @@
 		suppressed="0" 
 		sustained_fire_diminish_rate="1.9" 
 		sustained_fire_grow_step="0.45" 
-		sight_range_modifier="1.5"/>
+		sight_range_modifier="1.75"/>
 
 
 
     <animation state_key="hold_casual"          animation_key="dancing, zoufang" />
     <animation state_key="reload" animation_key="ARreload2.2" />
     <animation key="reload" stance_key="prone" animation_key="ARreloadp2.2" />
-    <animation state_key="next_in_chain_in" animation_key="ARswitch1.2" />
+    <animation state_key="next_in_chain_in" animation_key="ARswitch0.5" />
     <inventory  buy_price="8.0" sell_price="8.0" />
 
     <commonness value="0" in_stock="0" />
@@ -98,16 +98,18 @@
 
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet.projectile">
-        <result class="hit"  kill_probability="1.68" kill_decay_start_time="1.286" kill_decay_end_time="2.143" />
+        <result class="hit"  kill_probability="1.9" kill_decay_start_time="1.286" kill_decay_end_time="2.143" />
     </projectile>
     
-    <stance state_key="running" accuracy="0.5" />
-    <stance state_key="walking" accuracy="0.7" />
-    <stance state_key="crouch_moving" accuracy="0.5" />
-    <stance state_key="prone_moving" accuracy="0.5" />
-    <stance state_key="standing" accuracy="0.85" />
-    <stance state_key="crouching" accuracy="0.95" />
+    <stance state_key="running" accuracy="1.0" />
+    <stance state_key="walking" accuracy="1.0" />
+    <stance state_key="crouch_moving" accuracy="1.0" />
+    <stance state_key="prone_moving" accuracy="1.0" />
+    <stance state_key="standing" accuracy="1.0" />
+    <stance state_key="crouching" accuracy="1.0" />
     <stance state_key="prone" accuracy="1" />
+    <modifier class="speed" value="-0.5" />
+    <modifier class="hit_success_probability" value="+0.4" />
     
 
 </weapon>
