@@ -71,7 +71,7 @@
     
     <weak_hand_hold offset="0.1" />
     <projectile file="bullet_sf.projectile">
-		<result class="blast" radius="2" damage="1.5" push="0" decal="1" faction_compare="not_equal" />
+		<result class="blast" radius="2" damage="2.5" push="0" decal="1" faction_compare="not_equal" />
     </projectile>
     
     <!--Accuracy, Movement speed-->
@@ -83,6 +83,6 @@
     <stance state_key="standing" accuracy="0.9" />
     <stance state_key="crouching" accuracy="0.95" />
     <stance state_key="prone" accuracy="1" />
-    <modifier class="speed" value="0.40" /> 
+    <modifier class="speed" value="0.50" /> 
 
 </weapon>
