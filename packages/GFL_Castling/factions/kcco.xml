@@ -444,7 +444,7 @@
 	<!-- ar -->
 	<soldier name="kcco_ar" spawn_score="1.2" copy_from="default_bot">
 		<ai filename="elite.ai" />
-		<model filename="kccod_cyclops.xml" />
+		<model filename="kccod_cyclops_remake.xml" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_calls="1">
 			<weapon key="kcco_ar.weapon" enabled="1" />
 			<carry_item key="kcco_ar.carry_item" enabled="1" />
@@ -468,7 +468,7 @@
 	</soldier>
 	<!-- ar——g -->
 	<soldier name="kcco_ar_g" spawn_score="0.5" copy_from="default_bot">
-		<model filename="kccod_cyclops.xml" />
+		<model filename="kccod_cyclops_remake.xml" />
 		<ai filename="grenadier.ai" />
 		<resources clear_calls="1">
 			<weapon key="kcco_ar_g.weapon" enabled="1" />
@@ -477,7 +477,7 @@
 	</soldier>
 	<!-- sg -->
 	<soldier name="kcco_sg" spawn_score="1.0" copy_from="default_bot">
-		<model filename="kccod_cyclops_sg.xml" />
+		<model filename="kccod_cyclops_sg_remake.xml" />
 		<ai filename="eod.ai" />
 		<resources>
 			<weapon key="kcco_sg.weapon" enabled="1" />
