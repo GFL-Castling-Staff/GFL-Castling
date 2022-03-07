@@ -56,7 +56,7 @@
 	
 
     <weak_hand_hold offset="0.3" />
-    <projectile file="ksvk_mod3.projectile" >
+    <projectile file="ksvk_mod3.projectile" />
     <!--Accuracy, Movement speed-->
  	<stance state_key="running" accuracy="1.0" />   
 	<stance state_key="walking" accuracy="1.0" />
