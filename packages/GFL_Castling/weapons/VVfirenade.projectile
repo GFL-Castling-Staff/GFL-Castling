@@ -12,8 +12,8 @@
 
     <model mesh_filename="40mm.mesh" texture_filename="40mm.png" />
     <hud_icon filename="hud_c4.png" />
-    <throwable curve_height="7.0" near_far_distance="25.0" speed_estimation_near="15.0" speed_estimation_far="30.0" max_speed="30.0" randomness="0.07" />
-
+    <throwable curve_height="7.0" near_far_distance="10.0" speed_estimation_near="7.0" speed_estimation_far="10.0" max_speed="20.0" randomness="0.07" />
+    
     <!-- projectile slot 0 is used for hand grenade items currently -->
     <!-- bound to change -->
     <commonness value="0.0" in_stock="0" />

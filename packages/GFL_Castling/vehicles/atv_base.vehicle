@@ -3,6 +3,7 @@
 	<tag name="metal_thin" />
 	<tag name="atv" />
 	<tag name="jeep" />
+	<tag name="apc" />
 	<tire_set offset="0.63 0.0 0.81" radius="0.405" />
 	<tire_set offset="0.63 0.0 -0.81" radius="0.405" />
 
@@ -41,10 +42,10 @@
 	<effect event_key="slide" type="particle" key="terrain" surface_tag="dirt" ref="Burst" use_surface_color="1" />
   
     <effect event_key="destroyed" ref="SmallSmokeVehicle" offset="-0.0 0.9 0.18" />
-  <effect event_key="destroyed" ref="SmallSmokeVehicle" offset="-0.27 0.99 -1.17" />  
-  <effect event_key="destroyed" ref="SmallFireRepeat" offset="0.0 0.63 0.18" />
-        <effect event_key="destroy" key="other" ref="woosh" post_processing="0" shadow="0" />   
-        <effect event_key="cleanup" key="other" ref="woosh" post_processing="0" shadow="0" />     
+    <effect event_key="destroyed" ref="SmallSmokeVehicle" offset="-0.27 0.99 -1.17" />  
+    <effect event_key="destroyed" ref="SmallFireRepeat" offset="0.0 0.63 0.18" />
+    <effect event_key="destroy" key="other" ref="woosh" post_processing="0" shadow="0" />   
+    <effect event_key="cleanup" key="other" ref="woosh" post_processing="0" shadow="0" />     
 
 	<event>
 		<trigger class="receive_damage" />

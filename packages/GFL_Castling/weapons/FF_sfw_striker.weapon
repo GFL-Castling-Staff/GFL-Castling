@@ -2,21 +2,18 @@
 <weapon file="gk_sf_boss.base_weapon" key="ff_striker.weapon">
 
 	<specification
-	accuracy_factor="0.80"
-	barrel_offset="0.5"
-	can_shoot_standing="1"
-	can_shoot_crouching="1"
-	can_shoot_prone="0"
-	class="0"
-	sight_range_modifier="1.1"
-	solt="0"
-	magazine_size="120"
-	name="GK-Striker"
-	projectile_speed="180"
-	retrigger_time="0.07"
-	suppressed="0"
-	sustained_fire_diminish_rate="1.0"
-	sustained_fire_grow_step="2.8" />
+    retrigger_time="0.0333" 
+    accuracy_factor="0.5" 
+    sustained_fire_grow_step="1.5" 
+    sustained_fire_diminish_rate="0.7" 
+    magazine_size="200" 
+    can_shoot_standing="1" 
+    can_shoot_crouching="1" 
+    can_shoot_prone="0"
+    suppressed="0" 
+  	name="GK-Striker"
+    projectile_speed="120.0"
+    projectiles_per_shot="1" />
 
 	<inventory
 	encumbrance="10.0"
@@ -52,9 +49,9 @@
 
     <weak_hand_hold offset="0.4" />
     <projectile file="bullet_sf.projectile">
-        <result class="hit"  kill_probability="1.48" kill_decay_start_time="0.4" kill_decay_end_time="0.8" />
+        <result class="hit"  kill_probability="1.4" kill_decay_start_time="0.4" kill_decay_end_time="0.8" />
     </projectile>
 
 
-    <modifier class="speed" value="-0.1" />
+    <modifier class="speed" value="-0.45" />
 </weapon>
