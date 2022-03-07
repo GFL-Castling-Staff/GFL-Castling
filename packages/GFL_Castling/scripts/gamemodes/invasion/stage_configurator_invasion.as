@@ -774,7 +774,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 	protected Stage@ setupStage102() {
 		Stage@ stage = createStage();
 		stage.m_mapInfo.m_name = "M16A1's Farm 0-2";
-		stage.m_mapInfo.m_path = "media/packages/GFL_Castling/maps/map102";
+		stage.m_mapInfo.m_path = "media/packages/GFLC_Map/maps/map102";
 		stage.m_mapInfo.m_id = "map102";
 
 		stage.m_maxSoldiers = 14 * 14;
