@@ -144,6 +144,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		addStage(setupStage102());	  // mapftg
 		addStage(setupStage107());		  // map107 Until Death by nana
 		addStage(setupStage108());		  // map108 Until Death2 by nana
+		addStage(setupStage111());		  // map111  by nana
 		addStage(setupStage7());          // map6
 		addStage(setupStage1());          // map2
 		addStage(setupStage9());          // map9
@@ -479,6 +480,45 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.m_primaryObjective = "koth";
 		stage.m_kothTargetBase = "Main Base";
 		return stage;		
+	}
+
+	protected Stage@ setupStage111() {
+		Stage@ stage = createStage();
+		stage.m_mapInfo.m_name = "Intrusion";
+		stage.m_mapInfo.m_path = "media/packages/GFL_Castling/maps/nana005";
+		stage.m_mapInfo.m_id = "map111";
+
+		stage.m_maxSoldiers = 260;
+		stage.m_playerAiCompensation = 3;                                     // was 4 (test4)     
+		stage.m_playerAiReduction = 1;                                            // was 1 (test3)    
+
+		stage.m_soldierCapacityVariance = 0.4; 
+
+		stage.addTracker(PeacefulLastBase(m_metagame, 0));
+		stage.addTracker(CommsCapacityHandler(m_metagame));
+
+		stage.m_minRandomCrates = 3; 
+		stage.m_maxRandomCrates = 5;
+
+		{
+			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0));
+			f.m_overCapacity = 6;                                                   
+			f.m_bases = 1;
+			f.m_capacityMultiplier = 1.0;                                          // was 0.81 in 1.65 
+			stage.m_factions.insertLast(f);
+		}
+		{
+			Faction f(getFactionConfigs()[1], createCommanderAiCommand(1, 0.15, 0.3));
+			f.m_overCapacity = 70;                                                  // was 50 (test2)   
+			stage.m_factions.insertLast(f);
+		}
+
+
+		// metadata
+		stage.m_primaryObjective = "capture";
+
+		setDefaultAttackBreakTimes(stage);
+		return stage;
 	}
 	protected Stage@ setupStage1() {
 		Stage@ stage = createStage();
