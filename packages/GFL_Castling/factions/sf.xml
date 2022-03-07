@@ -576,7 +576,7 @@
 	</soldier>
 
 	<soldier name="Brute" spawn_score="1.3" squad_size_xp_cap="0.5" copy_from="default_spawn_ai">
-		<ai filename="melee.ai" />
+		<ai filename="melee_nb.ai" />
 		<model filename="sfd_Brute_gua.xml" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="sfw_brute.weapon" enabled="1" />
@@ -981,7 +981,7 @@
 	<soldier name="sf_tarantula" spawn_score="0.30">
 		<models filename="sf_tarantula.models" />
 		<character filename="sf_dinergate.character" />
-		<ai filename="eod.ai" />
+		<ai filename="melee_nb.ai" />
 
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1">
 			<weapon key="sfw_tarantula.weapon"/>
