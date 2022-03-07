@@ -43,13 +43,10 @@
 	</character_slot>
 	<character_slot type="gunner" attached_on_turret="10" seat_position="0.0 1.0 1.0" position="0.0 1.0 2.0" rotation="0.0" exit_rotation="0" hiding="1" animation_id="tank mg still">
 		<turret index="1" />
-	</character_slot>
-	<character_slot type="gunner" attached_on_turret="11" seat_position="1.1 1.0 -0.5" position="2.2 1.0 -1.0" rotation="0" exit_rotation="2.10" hiding="1" animation_id="tank mg still">
 		<turret index="2" />
-	</character_slot>
-	<character_slot type="gunner" attached_on_turret="12" seat_position="-1.1 1.0 -0.5" position="-2.2 1.0 -1.0" rotation="-0" exit_rotation="-2.10" hiding="1" animation_id="tank mg still">
 		<turret index="3" />
 	</character_slot>
+
 	<!--
 	<character_slot type="passenger" attached_on_turret="0" seat_position="0.0 0.0 2.0" enter_position="0 0 4.2" rotation="0.54" rotation_range="2.15" exit_rotation="-1.57" hiding="0" animation_key="tank mg still">
 	<state class="entering" animation_key="crouching forwards short, no weapon" position="0 0 4.2" rotation="0" />
