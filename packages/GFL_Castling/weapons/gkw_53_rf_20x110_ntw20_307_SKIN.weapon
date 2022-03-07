@@ -21,7 +21,7 @@
 	sight_range_modifier="4" 
 	projectile_speed="174.47" 
 	barrel_offset="0.6" 
-	projectiles_per_shot="7" />
+	projectiles_per_shot="8" />
     <inventory  buy_price="20.0" sell_price="10.0" />	
     <commonness in_stock="0" value="0"/>
 	<!--Animations-->
@@ -54,6 +54,8 @@
 	
 
     <weak_hand_hold offset="0.3" />
+    <projectile file="ntw.projectile" >
+       <result class="blast" damage="7.5" radius="2.5" decal="1" push="2" character_state="death" faction_compare="not_equal" />
     <projectile file="ntw.projectile" />
 
     <!--Accuracy, Movement speed-->
