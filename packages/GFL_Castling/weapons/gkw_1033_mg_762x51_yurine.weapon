@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapons>
+<weapon file="gf_mg.base_weapon" key="gkw_yurine.weapon">
+  <specification 
+  retrigger_time="0.03" 
+  accuracy_factor="0.5" 
+  sustained_fire_grow_step="1.5" 
+  sustained_fire_diminish_rate="0.7" 
+  magazine_size="200" 
+  can_shoot_standing="1" 
+  can_shoot_crouching="1" 
+  can_shoot_prone="0"
+  suppressed="0" 
+  name="Yurine" 
+  class="0" 
+  barrel_offset="0.6"
+  barrel_offset_3d="0 -0.1 0.6"
+  projectile_speed="120.0"
+  projectiles_per_shot="1" />
+
+	
+	<animation state_key="recoil"	animation_key="recoil, hip fire" />
+	<animation state_key="hold" animation_key="hold, hip fire" />
+	<animation state_key="crouching" animation_key="crouch, hold, hip fire" />
+	<animation state_key="crouch_moving" animation_key="crouching forwards, hip fire" />
+  <animation state_key="walking_backwards" animation_key="walking backwards, hip fire" />  
+  <animation state_key="reload" animation_key="reloading, microgun" volume="0.7" />
+	<animation state_key="hold_on_wall" animation_key="hold, hip fire" />
+  <animation state_key="still_against_wall" 	animation_key="hold, hip fire" />
+	<animation state_key="walking" animation_key="walking, hip fire" />
+	<animation state_key="running" animation_key="walking, hip fire" />  
+    
+    <sound key="fire" fileref="minigun_From_payday2.wav" pitch_variety="0.05" volume="0.15" />
+    <sound key="magazine_out" fileref="mg_clip_out.wav" />
+    <sound key="magazine_in" fileref="mg_clip_in.wav" />
+    <sound key="cycle" fileref="rifle_chamber.wav" />
+    <sound class="impact" fileref="rifle_drop.wav" />
+    <model filename="gkw_mg_yurine_from_Dusk.xml" />
+
+    <hud_icon filename="gkw_yurine.png" />
+    <commonness value="0" can_respawn_with="1" in_stock="1" />
+    <inventory price="200.0"/>
+
+    <weak_hand_hold offset="0.4" />
+    <projectile file="bullet.projectile">
+        <result class="hit"  kill_probability="1.6" kill_decay_start_time="1.933" kill_decay_end_time="3.222" />
+    </projectile>
+    <modifier class="speed" value="-0.45" /> 
+</weapon>
+</weapons>

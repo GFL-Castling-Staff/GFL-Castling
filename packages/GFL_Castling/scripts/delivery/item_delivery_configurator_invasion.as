@@ -193,7 +193,11 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		ScoredResource("gkw_tkb408_6804.weapon", "weapon", 1.0f),
 		ScoredResource("gkw_aps_6808.weapon", "weapon", 1.0f),
 		ScoredResource("gkw_aa12_4401.weapon","weapon", 1.0f),
-		ScoredResource("gkw_mp5_3006.weapon", "weapon", 1.0f)    
+		ScoredResource("gkw_mp5_3006.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_mp7_6806.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_kolibri_6802.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_hs50_6805.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_m4sopmodii_531.weapon", "weapon", 1.0f)
 			},
 			{
 		ScoredResource("bp_t5_16lab.carry_item", "carry_item", 1.0f),
@@ -325,7 +329,8 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 				ScoredResource("gkw_supersassmod3_1407.weapon", "weapon", 1.0f),
 				ScoredResource("gkw_gsh18mod3_523.weapon", "weapon", 1.0f),
 				ScoredResource("gkw_an94mod3_3303.weapon","weapon",1.0f),
-				ScoredResource("gkw_an94mod3_blm.weapon","weapon",1.0f)
+				ScoredResource("gkw_an94mod3_blm.weapon","weapon",1.0f),
+				ScoredResource("gkw_m4sopmodiimod3_531.weapon","weapon",1.0f)
 			},
 			{
 				ScoredResource("icecream.projectile", "projectile", 1.0f, 1)         
@@ -619,18 +624,6 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		ScoredResource("IAQS.carry_item", "carry_item", 0.7f),
 		ScoredResource("NZ75.carry_item", "carry_item", 0.7f),
 		ScoredResource("gkw_ltlx7000_icecream.weapon", "weapon", 0.5f),
-		ScoredResource("gkw_ak15_blm.weapon", "weapon", 0.65f),
-		ScoredResource("gkw_cz75_1604.weapon", "weapon", 0.65f),
-		ScoredResource("gkw_m1895_5309.weapon", "weapon", 0.65f),
-		ScoredResource("gkw_fp6_2804.weapon", "weapon", 0.65f),
-		ScoredResource("gkw_vp1915_6604.weapon", "weapon", 0.65f),
-		ScoredResource("gkw_hk21_4002.weapon", "weapon", 0.65f),
-		ScoredResource("gkw_fnc_6608.weapon", "weapon", 0.65f),
-		ScoredResource("gkw_type89_6601.weapon", "weapon", 0.65f),
-		ScoredResource("gkw_python_6603.weapon", "weapon", 0.65f),
-		ScoredResource("gkw_lewis_4001.weapon", "weapon", 0.65f),
-		ScoredResource("gkw_sacr_5303.weapon", "weapon", 0.65f),
-		ScoredResource("gkw_hs2000_5304.weapon", "weapon", 0.65f),
 		ScoredResource("woshieoe.carry_item", "carry_item", 0.7f)
 			},
 			{ 

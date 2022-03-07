@@ -35,10 +35,10 @@
 	min_health_to_steer="1.5" 
 	max_rotation="0.75" 
 	max_water_depth="2.0" 
-	steer_smoothening="0.7" />
+	steer_smoothening="0.85" />
 
 	<physics 
-	max_health="15.0" 
+	max_health="25.0" 
 	mass="8.0" 
 	extent="1.76 0.0 3.6" 
 	offset="0 0.0 -0.2" 

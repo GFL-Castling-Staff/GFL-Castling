@@ -165,6 +165,7 @@
 	<rank xp="2560.833" name="Ganduro"><hud_icon filename="Thank_you_Ganduro.png" /></rank>
 	<rank xp="2610.833" name="DILING"><hud_icon filename="Thank_you_DILING.png" /></rank>
 	<rank xp="2660.833" name="Profiteer-jr"><hud_icon filename="Thank_you_IAQS'.png" /></rank>
+	<rank xp="2710.833" name="O_oLonicera"><hud_icon filename="Thank_you_O_oLonicera.png" /></rank>
 
 	<rank xp="3000" name="Narcissus"><hud_icon filename="commander_narcissus.png" /></rank>
 	<rank xp="3500" name="commander"><hud_icon filename="commander_kudan.png" /></rank>	
@@ -1198,6 +1199,19 @@
 		</attribute_config>
 		<attribute_config class="rp">
 			<attribute weight="1.0" min="100.0" max="300.0" />
+		</attribute_config>
+	</soldier>
+	<soldier name="gk_dinergate" spawn_score="0.5">
+		<models filename="sf_dinergate.models" />
+		<character filename="sf_dinergate.character" />
+		<ai filename="eod.ai" />
+
+		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1">
+			<weapon key="ff_dinergate.weapon"/>
+			<carry_item key="exo_t4.carry_item" />
+		</resources>
+		<attribute_config class="xp">
+			<attribute weight="0.3" min="0.0" max="1.0" />
 		</attribute_config>
 	</soldier>
 	<soldier name="gk_manticore" firstnames="gk_qwd.name" lastnames_file="gk_qwd_last.name" spawn_score="0.000001">
