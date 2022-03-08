@@ -1201,7 +1201,7 @@
 			<attribute weight="1.0" min="100.0" max="300.0" />
 		</attribute_config>
 	</soldier>
-	<soldier name="gk_dinergate" spawn_score="0.5">
+	<soldier name="gk_dinergate" spawn_score="0">
 		<models filename="sf_dinergate.models" />
 		<character filename="sf_dinergate.character" />
 		<ai filename="eod.ai" />
