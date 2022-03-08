@@ -141,17 +141,16 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 	// ------------------------------------------------------------------------------------------------
 	protected void setupNormalStages() {
-		addStage(setupStage102());	  // mapftg
+		//addStage(setupStage102());	  // mapftg
 		addStage(setupStage107());		  // map107 Until Death by nana
-		addStage(setupStage108());		  // map108 Until Death2 by nana
-		addStage(setupStage111());		  // map111  by nana
-		addStage(setupStage7());          // map6
-		addStage(setupStage1());          // map2
 		addStage(setupStage9());          // map9
-		addStage(setupStage106());		  // map106 E30 Route by diling
+		addStage(setupStage7());          // map6
+		addStage(setupStage108());		  // map108 Until Death2 by nana
+		addStage(setupStage1());          // map2
 		addStage(setupStage4());          // map7
 		addStage(setupStage15());         // map1_2
 		addStage(setupStage12());         // map14
+		addStage(setupStage111());		  // map111  by nana
 		addStage(setupStage10());         // map10
 		addStage(setupStage103()); 		  // map103 Palo Island by diling
 		addStage(setupStage17());         // map17    
@@ -164,6 +163,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		addStage(setupStage8());          // map8
 		addStage(setupStage14());         // map6_2
 		addStage(setupStage2());          // map4
+		addStage(setupStage106());		  // map106 E30 Route by diling
 		addStage(setupStage5());          // map1
 		addStage(setupStage19());		  // map19
 		addStage(setupStage6());          // map5
