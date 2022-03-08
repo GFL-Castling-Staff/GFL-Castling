@@ -6,10 +6,10 @@
 	<modifier class="blast_damage" value="-0.3" />
 	<control max_speed="3.0" acceleration="1.0" max_reverse_speed="1.0" max_rotation="0.8" max_water_depth="1.0" />
 	<physics max_health="60" mass="300" extent="1.2 0.0 1.2" offset="0 0.0 0" top_offset="0 2 0" collision_model_pos="0 0.0 0" collision_model_extent="2.4 1.8 2.4" visual_offset="0 0.0 0" collision_response_factor="0.2" blast_push_threshold="10.0" vehicle_collision_damage_factor="2.0" />
-    <turret offset="0 0.4 0" weapon_key="bunker_mg.weapon" weapon_offset="0.0 2.15 0.8" weapon_recoil="0.02" physics_recoil="0.0"  max_rotation_step="0.005" rotation="0" />
-	<turret offset="0.0 0.96 1.0" weapon_key="bunker_base_mg" weapon_offset="0 0.5 1.0" weapon_recoil="0.02" physics_recoil="0.0"  max_rotation_step="0.005" rotation="0" rotation_range="2.05" />	
-	<turret offset="0.87 0.96 -0.5" weapon_key="bunker_base_mg" weapon_offset="0 0.5 1.0" weapon_recoil="0.02" physics_recoil="0.0"  max_rotation_step="0.005" rotation="2.10" rotation_range="2.05" />	
-	<turret offset="-0.87 0.96 -0.5" weapon_key="bunker_base_mg" weapon_offset="0 0.5 1.0" weapon_recoil="0.02" physics_recoil="0.0"  max_rotation_step="0.005" rotation="-2.10" rotation_range="2.05" />
+    <turret offset="0 0.4 0" weapon_key="humvee_mg.weapon" weapon_offset="0.0 2.15 0.8" weapon_recoil="0.02" physics_recoil="0.0"  max_rotation_step="0.005" rotation="0" />
+	<turret offset="0.0 0.96 1.0" weapon_key="humvee_mg.weapon" weapon_offset="0 0.5 1.0" weapon_recoil="0.02" physics_recoil="0.0"  max_rotation_step="0.005" rotation="0" rotation_range="2.05" />	
+	<turret offset="0.87 0.96 -0.5" weapon_key="humvee_mg.weapon" weapon_offset="0 0.5 1.0" weapon_recoil="0.02" physics_recoil="0.0"  max_rotation_step="0.005" rotation="2.10" rotation_range="2.05" />	
+	<turret offset="-0.87 0.96 -0.5" weapon_key="humvee_mg.weapon" weapon_offset="0 0.5 1.0" weapon_recoil="0.02" physics_recoil="0.0"  max_rotation_step="0.005" rotation="-2.10" rotation_range="2.05" />
 
 <!--<turret offset="0 0.4 0" weapon_key="bunker_mg2.weapon" weapon_offset="0.0 2.15 0.8" weapon_recoil="0.02" physics_recoil="0.0" max_rotation_step="0.005" rotation="0" /> -->
 
