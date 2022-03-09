@@ -1,21 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapons>
     <weapon file="two_hands_ar.animation_base" key="gkw_k11_ar.weapon">
-        <specification
-            accuracy_factor="0.98"
-            barrel_offset="0.4"
-            
-            class="0"
-            solt="0"
-            magazine_size="30"
-            name="K11 weapon system (AR)"
-            projectile_speed="160"
-            retrigger_time="0.09"
-            suppressed="0"
-            sustained_fire_diminish_rate="1.8"
-            sustained_fire_grow_step="0.3"/>
+        <specification accuracy_factor="0.98" barrel_offset="0.4" class="0" solt="0" magazine_size="30" name="K11 weapon system (AR)" projectile_speed="160" retrigger_time="0.09" suppressed="0" sustained_fire_diminish_rate="1.8" sustained_fire_grow_step="0.3"/>
         <next_in_chain key="gkw_k11_20mm_impact.weapon" share_ammo="0" />
-        <inventory  buy_price="35.0" sell_price="35.0" />	
+        <inventory buy_price="35.0" sell_price="35.0" />
 
 
 

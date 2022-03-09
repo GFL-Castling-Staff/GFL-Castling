@@ -1,58 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapon file="two_hands_ar.animation_base" key="gkw_k11_20mm_remote.weapon">
-    <tag name="assault" />
+  <tag name="assault" />
 
-    <specification 
-  retrigger_time="0.8" 
-  accuracy_factor="1.0" 
-  sustained_fire_grow_step="0.9" 
-  sustained_fire_diminish_rate="1.9" 
-  magazine_size="5" 
-  can_shoot_standing="1" 
-  suppressed="0" 
-  name="K11 weapon system (20mm remote)" 
-  class="0" 
-  sight_range_modifier="1.2"  
-  projectile_speed="100.0"
-  projectiles_per_shot="1"  
-  barrel_offset="0.3" 
-/>
+  <specification retrigger_time="0.8" accuracy_factor="1.0" sustained_fire_grow_step="0.9" sustained_fire_diminish_rate="1.9" magazine_size="5" can_shoot_standing="1" suppressed="0" name="K11 weapon system (20mm remote)" class="0" sight_range_modifier="1.2" projectile_speed="100.0" projectiles_per_shot="1" barrel_offset="0.3" />
 
 
 
-    <ballistics  near_far_distance="1000.0" speed_estimation_near="40.0" speed_estimation_far="40.0" max_speed="60.0" randomness="0.0" tweak_factor="0.95" /> 
-    <animation key="recoil" ref="12" />
-    <animation key="recoil" ref="13" />
-    <animation key="recoil" ref="14" />
-    <animation state_key="reload" animation_key="reloading, m79" />
-   
-    
-    <sound key="fire" fileref="xm25_shot.wav" pitch_variety="0.1" volume="1.0" />
-    <sound key="magazine_out" fileref="rifle_clip_out.wav" />
-    <sound key="magazine_in" fileref="rifle_clip_in.wav" />
-    <sound key="cycle" fileref="rifle_chamber.wav" />
-    <sound class="impact" fileref="rifle_drop.wav" />    
- 
-    <model filename="gkw_ar_k11.xml" />
-  
-    <projectile file="k11_remote.projectile" />
-    <weak_hand_hold offset="0.005" />
+  <ballistics near_far_distance="1000.0" speed_estimation_near="40.0" speed_estimation_far="40.0" max_speed="60.0" randomness="0.0" tweak_factor="0.95" />
+  <animation key="recoil" ref="12" />
+  <animation key="recoil" ref="13" />
+  <animation key="recoil" ref="14" />
+  <animation state_key="reload" animation_key="reloading, m79" />
+
+
+  <sound key="fire" fileref="xm25_shot.wav" pitch_variety="0.1" volume="1.0" />
+  <sound key="magazine_out" fileref="rifle_clip_out.wav" />
+  <sound key="magazine_in" fileref="rifle_clip_in.wav" />
+  <sound key="cycle" fileref="rifle_chamber.wav" />
+  <sound class="impact" fileref="rifle_drop.wav" />
+
+  <model filename="gkw_ar_k11.xml" />
+
+  <projectile file="k11_remote.projectile" />
+  <weak_hand_hold offset="0.005" />
 
 
 
-    <hud_icon filename="gkw_k11_skill.png" />
-    <commonness value="0.0" in_stock="0" can_respawn_with="1" />
-    <inventory encumbrance="35.0" price="35.0" />
+  <hud_icon filename="gkw_k11_skill.png" />
+  <commonness value="0.0" in_stock="0" can_respawn_with="1" />
+  <inventory encumbrance="35.0" price="35.0" />
 
-    <effect class="muzzle" ref="LawMuzzle" />
-    <effect class="muzzle" ref="UpDust" />
-    <stance state_key="running" accuracy="0.7" />
-    <stance state_key="walking" accuracy="0.75" />
-    <stance state_key="crouch_moving" accuracy="0.9" />
-    <stance state_key="prone_moving" accuracy="0.9" />
-    <stance state_key="standing" accuracy="0.93" />
-    <stance state_key="crouching" accuracy="1" />
-    <stance state_key="prone" accuracy="1.1" />
-    <modifier class="speed" value="-0.15" />    
+  <effect class="muzzle" ref="LawMuzzle" />
+  <effect class="muzzle" ref="UpDust" />
+  <stance state_key="running" accuracy="0.7" />
+  <stance state_key="walking" accuracy="0.75" />
+  <stance state_key="crouch_moving" accuracy="0.9" />
+  <stance state_key="prone_moving" accuracy="0.9" />
+  <stance state_key="standing" accuracy="0.93" />
+  <stance state_key="crouching" accuracy="1" />
+  <stance state_key="prone" accuracy="1.1" />
+  <modifier class="speed" value="-0.15" />
 
 </weapon>

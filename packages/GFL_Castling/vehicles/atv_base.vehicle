@@ -1,14 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
 <vehicle file="vehicle_base.vehicle" name="quad" key="atv_base.vehicle" map_view_atlas_index="27" minimum_fill_requirement="1">
 	<tag name="metal_thin" />
 	<tag name="atv" />
+	<tag name="jeep" />
 	<tag name="apc" />
-
 	<tire_set offset="0.63 0.0 0.81" radius="0.405" />
 	<tire_set offset="0.63 0.0 -0.81" radius="0.405" />
 
 	<control max_speed="32.0" acceleration="9.7" max_reverse_speed="5.0" max_rotation="0.6" max_water_depth="1.4" steer_smoothening="0.7"  />
 
-	<physics max_health="2.33" mass="1.0" extent="1.44 0.0 2.7" offset="0 0.0 0.0" top_offset="0 0.54 0" collision_model_pos="0.0 0.54 0.0" collision_model_extent="1.62 1.485 3.06" visual_offset="0 0.135 0" gravity="-38" friction_offset="0.1"  drag_offset="-0.25" destroy_on_top_hit="1" destroy_on_top_hit_time="1.0" top_hit_tracking_time="0.6" />  
+	<physics max_health="8" mass="1.0" extent="1.44 0.0 2.7" offset="0 0.0 0.0" top_offset="0 0.54 0" collision_model_pos="0.0 0.54 0.0" collision_model_extent="1.62 1.485 3.06" visual_offset="0 0.135 0" gravity="-38" friction_offset="0.1"  drag_offset="-0.25" destroy_on_top_hit="1" destroy_on_top_hit_time="1.0" top_hit_tracking_time="0.6" />  
 
 
 	<visual class="chassis" mesh_filename="atv_body.mesh" texture_filename="atv.png" max_tilt="0.04" />

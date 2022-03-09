@@ -22,7 +22,7 @@
 
         <animation state_key="reload" animation_key="ARreload1.5" />
         <animation key="reload" stance_key="prone" animation_key="ARreloadp1.5" />
-        <animation state_key="next_in_chain_in" animation_key="ARswitch0.5" />
+        <animation state_key="next_in_chain_in" animation_key="ARswitch1.2" />
 
         <sound key="fire" fileref="m16a1_fire_FromINS.wav" pitch_variety="0.05" volume="1.0" />
         <sound key="magazine_out" fileref="m4a1_mgz_out_FromINS.wav" volume="1" />
@@ -68,7 +68,7 @@
 
         <animation state_key="reload" animation_key="ARreload2.2" />
         <animation key="reload" stance_key="prone" animation_key="ARreloadp2.2" />
-        <animation state_key="next_in_chain_in" animation_key="ARswitch1.2" />
+        <animation state_key="next_in_chain_in" animation_key="ARswitch0.5" />
 
         <sound key="fire" fileref="m16a1_fire_FromINS.wav" pitch_variety="0.05" volume="1.0" />
         <sound key="magazine_out" fileref="m4a1_mgz_out_FromINS.wav" volume="1" />
@@ -80,7 +80,7 @@
 
         <weak_hand_hold offset="0.2" />
         <projectile file="bullet.projectile">
-            <result class="hit" kill_probability="1.48" kill_decay_start_time="1.023" kill_decay_end_time="1.705" />
+            <result class="hit" kill_probability="1.85" kill_decay_start_time="1.023" kill_decay_end_time="1.705" />
         </projectile>
         <stance state_key="running" accuracy="0.3" />
         <stance state_key="walking" accuracy="0.75" />
@@ -89,5 +89,7 @@
         <stance state_key="standing" accuracy="0.85" />
         <stance state_key="crouching" accuracy="0.95" />
         <stance state_key="prone" accuracy="1" />
+        <modifier class="speed" value="-0.2" />
+        <modifier class="hit_success_probability" value="+0.3" />
     </weapon>
 </weapons>

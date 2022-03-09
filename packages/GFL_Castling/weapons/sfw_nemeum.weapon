@@ -3,10 +3,10 @@
     <!--Weapon specifications-->
     <specification
 	retrigger_time="0.5" 
-	accuracy_factor="1.0" 
+	accuracy_factor="0.8" 
 	sustained_fire_grow_step="2.0" 
 	sustained_fire_diminish_rate="0.5" 
-	magazine_size="10" 
+	magazine_size="20" 
 	can_shoot_standing="1" 
 	can_shoot_crouching="0"
 	can_shoot_prone="0"
@@ -19,7 +19,7 @@
 	carry_in_two_hands="0" 
 	projectiles_per_shot="1" 
 	slot="0" 
-	stab_enabled="1"/>
+	/>
     <!--Animations-->
     <animation state_key="recoil"	animation_key="recoil, pistol dual 1" />
     <animation state_key="recoil"	animation_key="recoil, pistol dual 2" />
@@ -44,7 +44,7 @@
     
     <!-- <weak_hand_hold offset="0.1" /> -->
     <projectile file="bullet_sf.projectile">
-        <result class="blast" radius="2.0" damage="2.0" decal="1" push="0.05" character_state="death" faction_compare="not_equal"/>
+        <result class="blast" radius="2.0" damage="3.0" decal="1" push="0.05" character_state="death" faction_compare="not_equal"/>
         <trail probability="1.0" key="red" />
         <!-- <trail probability="1.0" key="red_nemeum" /> -->
 
