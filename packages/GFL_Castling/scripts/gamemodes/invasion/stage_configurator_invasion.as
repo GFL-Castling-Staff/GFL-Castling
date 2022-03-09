@@ -485,7 +485,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 	protected Stage@ setupStage111() {
 		Stage@ stage = createStage();
 		stage.m_mapInfo.m_name = "Intrusion";
-		stage.m_mapInfo.m_path = "media/packages/GFL_Castling/maps/nana005";
+		stage.m_mapInfo.m_path = "media/packages/GFLC_Map/maps/nana005";
 		stage.m_mapInfo.m_id = "map111";
 
 		stage.m_maxSoldiers = 260;
