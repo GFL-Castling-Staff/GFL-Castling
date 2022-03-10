@@ -6,7 +6,7 @@
     accuracy_factor="0.5" 
     sustained_fire_grow_step="1.5" 
     sustained_fire_diminish_rate="0.7" 
-    magazine_size="200" 
+    magazine_size="150" 
     can_shoot_standing="1" 
     can_shoot_crouching="1" 
     can_shoot_prone="0"
@@ -16,9 +16,9 @@
     projectiles_per_shot="1" />
 
 	<inventory
-	encumbrance="10.0"
-	buy_price="60.0"
-	sell_price="60.0"/>
+	encumbrance="40.0"
+	buy_price="200.0"
+	sell_price="200.0"/>
 
 	<capacity value="0" source="rank" source_value="0.0" />
     <capacity value="1" source="rank" source_value="4.126" />
