@@ -35,6 +35,7 @@ class BasicCommandHandler : Tracker {
 		if (checkCommand(message, "chat")) {
 			if (message=="/chat1") {
 				const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
+				if (playerInfo is null) return;				
 				string strname= playerInfo.getStringAttribute("name");
 				dictionary a;
 				a["%name"] = strname;
@@ -44,6 +45,7 @@ class BasicCommandHandler : Tracker {
 			}
 			if (message=="/chat2") {
 				const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
+				if (playerInfo is null) return;
 				string strname= playerInfo.getStringAttribute("name");
 				dictionary a;
 				a["%name"] = strname;
@@ -53,6 +55,7 @@ class BasicCommandHandler : Tracker {
 			}
 			if (message=="/chat3") {
 				const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
+				if (playerInfo is null) return;
 				string strname= playerInfo.getStringAttribute("name");
 				dictionary a;
 				a["%name"] = strname;
@@ -62,6 +65,7 @@ class BasicCommandHandler : Tracker {
 			}
 			if (message=="/chat4") {
 				const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
+				if (playerInfo is null) return;
 				string strname= playerInfo.getStringAttribute("name");
 				dictionary a;
 				a["%name"] = strname;
@@ -71,6 +75,7 @@ class BasicCommandHandler : Tracker {
 			}
 			if (message=="/chat5") {
 				const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
+				if (playerInfo is null) return;
 				string strname= playerInfo.getStringAttribute("name");
 				dictionary a;
 				a["%name"] = strname;
@@ -81,6 +86,7 @@ class BasicCommandHandler : Tracker {
 			}
 			if (message=="/chat6") {
 				const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
+				if (playerInfo is null) return;
 				string strname= playerInfo.getStringAttribute("name");
 				dictionary a;
 				a["%name"] = strname;
@@ -90,6 +96,7 @@ class BasicCommandHandler : Tracker {
 			}
 			if (message=="/chat7") {
 				const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
+				if (playerInfo is null) return;
 				string strname= playerInfo.getStringAttribute("name");
 				dictionary a;
 				a["%name"] = strname;
@@ -99,6 +106,7 @@ class BasicCommandHandler : Tracker {
 			}
 			if (message=="/chat8") {
 				const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
+				if (playerInfo is null) return;
 				string strname= playerInfo.getStringAttribute("name");
 				dictionary a;
 				a["%name"] = strname;
@@ -108,6 +116,7 @@ class BasicCommandHandler : Tracker {
 			}
 			if (message=="/chat9") {
 				const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
+				if (playerInfo is null) return;
 				string strname= playerInfo.getStringAttribute("name");
 				dictionary a;
 				a["%name"] = strname;
@@ -117,6 +126,7 @@ class BasicCommandHandler : Tracker {
 			}
 			if (message=="/chat10") {
 				const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
+				if (playerInfo is null) return;
 				string strname= playerInfo.getStringAttribute("name");
 				dictionary a;
 				a["%name"] = strname;
@@ -126,6 +136,7 @@ class BasicCommandHandler : Tracker {
 			}
 			if (message=="/chat11") {
 				const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
+				if (playerInfo is null) return;
 				string strname= playerInfo.getStringAttribute("name");
 				dictionary a;
 				a["%name"] = strname;
@@ -135,6 +146,7 @@ class BasicCommandHandler : Tracker {
 			}
 			if (message=="/chat12") {
 				const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
+				if (playerInfo is null) return;
 				string strname= playerInfo.getStringAttribute("name");
 				dictionary a;
 				a["%name"] = strname;
@@ -144,6 +156,7 @@ class BasicCommandHandler : Tracker {
 			}
 			if (message=="/chat13") {
 				const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
+				if (playerInfo is null) return;
 				string strname= playerInfo.getStringAttribute("name");
 				dictionary a;
 				a["%name"] = strname;
@@ -153,6 +166,7 @@ class BasicCommandHandler : Tracker {
 			}
 			if (message=="/chat14") {
 				const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
+				if (playerInfo is null) return;
 				string strname= playerInfo.getStringAttribute("name");
 				dictionary a;
 				a["%name"] = strname;
@@ -162,6 +176,7 @@ class BasicCommandHandler : Tracker {
 			}
 			if (message=="/chat15") {
 				const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
+				if (playerInfo is null) return;
 				string strname= playerInfo.getStringAttribute("name");
 				dictionary a;
 				a["%name"] = strname;
@@ -171,6 +186,7 @@ class BasicCommandHandler : Tracker {
 			}
 			if (message=="/chat16") {
 				const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
+				if (playerInfo is null) return;
 				string strname= playerInfo.getStringAttribute("name");
 				dictionary a;
 				a["%name"] = strname;
@@ -180,6 +196,7 @@ class BasicCommandHandler : Tracker {
 			}
 			if (message=="/chat17") {
 				const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
+				if (playerInfo is null) return;
 				string strname= playerInfo.getStringAttribute("name");
 				dictionary a;
 				a["%name"] = strname;
@@ -189,6 +206,7 @@ class BasicCommandHandler : Tracker {
 			}
 			if (message=="/chat18") {
 				const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
+				if (playerInfo is null) return;
 				string strname= playerInfo.getStringAttribute("name");
 				dictionary a;
 				a["%name"] = strname;
@@ -198,6 +216,7 @@ class BasicCommandHandler : Tracker {
 			}
 			if (message=="/chat19") {
 				const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
+				if (playerInfo is null) return;
 				string strname= playerInfo.getStringAttribute("name");
 				dictionary a;
 				a["%name"] = strname;
@@ -207,6 +226,7 @@ class BasicCommandHandler : Tracker {
 			}
 			if (message=="/chat20") {
 				const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
+				if (playerInfo is null) return;
 				string strname= playerInfo.getStringAttribute("name");
 				dictionary a;
 				a["%name"] = strname;
