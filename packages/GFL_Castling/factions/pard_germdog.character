@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <character filename="default_base.character">
 
+	<parameter class="can_use_vehicles" value="0" /> 
+	<parameter class="speed" value="1.4" />
+
 	<animation state_key="hold"  animation_key="still, germdog" />
 	<animation state_key="hold_one_wall"  animation_key="still, germdog" />
 	<animation key="still" target_key="still, germdog" />
