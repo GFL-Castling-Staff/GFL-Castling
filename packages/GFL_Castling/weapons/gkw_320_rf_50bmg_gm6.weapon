@@ -20,7 +20,7 @@
 	sight_range_modifier="3.0" 
 	projectile_speed="231.49" 
 	barrel_offset="0.4" 
-	projectiles_per_shot="6"
+	projectiles_per_shot="1"
 	last_burst_retrigger_time="0.333"
 	burst_shots="1"/>
 	
@@ -52,7 +52,7 @@
 
     <weak_hand_hold offset="0.3" />
     <projectile file="bullet.projectile">
-        <result class="blast" damage="4.2"   radius="2" decal="1" push="0" character_state="death" faction_compare="not_equal"/>
+        <result class="blast" damage="8"   radius="2" decal="1" push="0" character_state="death" faction_compare="not_equal"/>
     </projectile>
     
     <!--Accuracy, Movement speed-->
