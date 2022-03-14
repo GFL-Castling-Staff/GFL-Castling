@@ -22,10 +22,10 @@
         <animation state_key="reload" animation_key="ARreload1.5" />
         <animation key="reload" stance_key="prone" animation_key="ARreloadp1.5" />
 
-        <sound key="fire" fileref="acr_fire_FromINS.wav" pitch_variety="0.05" volume="1" />
-        <sound key="magazine_out" fileref="acr_mgz_out_FromINS.wav" volume="1" />
-        <sound key="magazine_in" fileref="acr_mgz_in_FromINS.wav" volume="1" />
-        <sound key="cycle" fileref="acr_cycle_FromINS.wav" volume="1" />
+        <sound key="fire" fileref="acr_fire_FromDIVISION2.wav" pitch_variety="0.05" volume="1" />
+        <sound key="magazine_out" fileref="acr_mgz_out_FromDIVISION2.wav" volume="1" />
+        <sound key="magazine_in" fileref="acr_mgz_in_FromDIVISION2.wav" volume="1" />
+        <sound key="cycle" fileref="acr_cycle_FromDIVISION2.wav" volume="1" />
         <sound class="impact" fileref="rifle_drop.wav" />
        
         <model filename="gkw_ar_acr.xml" />

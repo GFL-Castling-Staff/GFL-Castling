@@ -36,12 +36,12 @@
 	
 	<!--Sounds-->
 	
-    <sound key="fire" fileref="m99_fire_FromINS.wav" pitch_variety="0.05" volume="1.2" />
-    <sound key="cycle" fileref="" />
-    <sound key="magazine_out" fileref="m99_mgz_out_FromINS.wav" />
-    <sound key="magazine_in" fileref="m99_mgz_in_FromINS.wav" />
-    <sound key="cycle_out" fileref="" />
-    <sound key="cycle_in" fileref="m99_cycle_FromINS.wav" />
+    <sound key="fire" fileref="iws2000_fire_FromSAMTSE.wav" pitch_variety="0.05" volume="1" />
+    <sound key="cycle" fileref="iws2000_cycle_FromDIVISION2.wav" />
+    <sound key="magazine_out" fileref="iws2000_mgz_out_FromCOD17.wav" />
+    <sound key="magazine_in" fileref="iws2000_mgz_in_FromCOD17.wav" />
+    <sound key="cycle_out" fileref="iws2000_cycle_out_FromDIVISION2.wav" />
+    <sound key="cycle_in" fileref="iws2000_cycle_in_FromDIVISION2.wav" />
     <sound class="impact" fileref="rifle_drop.wav" />
    
 	<!--Model, Icon, Cost-->

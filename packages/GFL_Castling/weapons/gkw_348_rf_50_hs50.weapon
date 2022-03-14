@@ -36,7 +36,7 @@
 	
 	<!--Sounds-->
 	
-    <sound key="fire" fileref="hs50_fire_FromINS.wav" pitch_variety="0.05" volume="1.2" />
+    <sound key="fire" fileref="hs50_fire_FromBLACKSQUAD.wav" pitch_variety="0.05" volume="2.8" />
     <sound key="cycle" fileref="hs50_cycle_FromINS.wav" />
     <sound key="magazine_out" fileref="" />
     <sound key="magazine_in" fileref="G43_reload_FromBF5.wav"volume="0.5"  />
@@ -58,9 +58,9 @@
     <projectile file="ntw.projectile">
         <result class="blast" 
         damage="5" 
-        radius="2.5" 
+        radius="2" 
         decal="1" 
-        push="2" 
+        push="0" 
         character_state="death"
         faction_compare="not_equal"
 		/>

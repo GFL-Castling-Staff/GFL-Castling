@@ -23,10 +23,10 @@
     <inventory  buy_price="20.0" sell_price="20.0" />	
     <next_in_chain key="gkw_lwmmg_skill.weapon" share_ammo="1" />
 
-    <sound key="fire" fileref="m60_fire_FromINS.wav" pitch_variety="0.05" volume="1" />
-    <sound key="magazine_out" fileref="m60_mgz_out_FromINS.wav" volume="0.8" />
-    <sound key="magazine_in" fileref="m60_mgz_in_FromINS.wav" volume="0.8" />
-    <sound key="cycle" fileref="m60_cycle_FromINS.wav" volume="0.8" />
+    <sound key="fire" fileref="lwmmg_fire_FromARMA3.wav" pitch_variety="0.05" volume="1" />
+    <sound key="magazine_out" fileref="lwmmg_mgz_out_FromCOD16.wav" volume="0.8" />
+    <sound key="magazine_in" fileref="lwmmg_mgz_in_FromCOD16.wav" volume="0.8" />
+    <sound key="cycle" fileref="lwmmg_cycle_FromCOD16.wav" volume="0.8" />
     <sound class="impact" fileref="rifle_drop.wav" />
     <model filename="gkw_mg_lwmmg_from_melondove.xml" />
 

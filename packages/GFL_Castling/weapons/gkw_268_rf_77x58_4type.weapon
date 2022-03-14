@@ -29,10 +29,10 @@
 	
 	<weak_hand_hold offset="0.3" />
 	
-	<sound key="fire" fileref="m1903_Fire_FromGMOD.wav" pitch_variety="0.05" volume="1"/>
-	<sound key="cycle" fileref="pistol2_chamber.wav" />
-	<sound key="magazine_out" fileref="rifle_02_m1_garand_ping.wav" volume="1.5" />
-	<sound key="magazine_in" fileref="rifle_clip_in.wav" />
+	<sound key="fire" fileref="4type_fire_FromBFBC2.wav" pitch_variety="0.05" volume="2.6"/>
+	<sound key="cycle" fileref="4type_cycle_FromBFBC2.wav" volume="1" />
+	<sound key="magazine_out" fileref="4type_mgz_out_FromBFBC2.wav" volume="1" />
+	<sound key="magazine_in" fileref="4type_mgz_in_FromBFBC2.wav" volume="1" />
 	
 	<model filename="gkw_rf_4type.xml" />
 	<hud_icon filename="gkw_4type.png" />

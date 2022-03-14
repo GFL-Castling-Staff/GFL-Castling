@@ -17,10 +17,10 @@
 
   	<animation state_key="hold_casual"			animation_key="dancing, kazachok" />
 	
-    <sound key="fire" fileref="PPSH_Fire_FromCOD17.wav" pitch_variety="0.05" volume="1" />
-    <sound key="magazine_out" fileref="PPSH_mgz_out_FromCOD17.wav" volume="1" />
-    <sound key="magazine_in" fileref="PPSH_mgz_in_FromCOD17.wav" volume="1" />
-    <sound key="cycle" fileref="PPSH_cycle_FromCOD17.wav" volume="1" />
+    <sound key="fire" fileref="pps43_fire_FromRO2.wav" pitch_variety="0.05" volume="2.1" />
+    <sound key="magazine_out" fileref="pps43_mgz_out_FromRO2.wav" volume="1.9" />
+    <sound key="magazine_in" fileref="pps43_mgz_in_FromRO2.wav" volume="1.9" />
+    <sound key="cycle" fileref="pps43_cycle_FromRO2.wav" volume="1.9" />
     <sound class="impact" fileref="rifle_drop.wav" volume="1"/>    
 	
     <model filename="gkw_smg_pps43.xml" />

@@ -20,7 +20,7 @@
 	sight_range_modifier="3" 
 	projectile_speed="231.49" 
 	barrel_offset="0.4" 
-	projectiles_per_shot="1"
+	projectiles_per_shot="6"
 	last_burst_retrigger_time="0.25"
 	burst_shots="1"
 	spread_range="0.15"/>
@@ -34,12 +34,12 @@
 	
 	<!--Sounds-->
 	
-    <sound key="fire" fileref="m82a1_fire_FromINS.wav" pitch_variety="0.05" volume="0.8" />
-    <sound key="cycle" fileref="m82a1_cycle_FromINS.wav" volume="1"/>
-    <sound key="magazine_out" fileref="m82a1_mgz_out_FromINS.wav" volume="1"/>
-    <sound key="magazine_in" fileref="m82a1_mgz_in_FromINS.wav" volume="1"/>
-	<sound key="cycle_out" fileref="m82a1_cycle_out_FromINS.wav" />
-    <sound key="cycle_in" fileref="m82a1_cycle_in_FromINS.wav" />
+    <sound key="fire" fileref="m82a1_fire_FromSAM4.wav" pitch_variety="0.05" volume="3.5" />
+    <sound key="cycle" fileref="m82a1_cycle_FromCOD6R.wav" volume="0.7"/>
+    <sound key="magazine_out" fileref="m82a1_mgz_out_FromCOD6R.wav" volume="0.7"/>
+    <sound key="magazine_in" fileref="m82a1_mgz_in_FromCOD6R.wav" volume="0.7"/>
+	<sound key="cycle_out" fileref="m82a1_cycle_out_FromCOD16.wav" volume="0.7" />
+    <sound key="cycle_in" fileref="m82a1_cycle_in_FromCOD16.wav" volume="0.7" />
     <sound class="impact" fileref="rifle_drop.wav" volume="1"/>
    
 	<!--Model, Icon, Cost-->
@@ -54,7 +54,7 @@
 
     <weak_hand_hold offset="0.3" />
     <projectile file="bullet.projectile">
-        <result class="blast" damage="15"   radius="2" decal="1" push="0" character_state="death" 	faction_compare="not_equal"/>
+        <result class="blast" damage="2.5"   radius="2" decal="1" push="0" character_state="death" 	faction_compare="not_equal"/>
     </projectile>
     
     <!--Accuracy, Movement speed-->
