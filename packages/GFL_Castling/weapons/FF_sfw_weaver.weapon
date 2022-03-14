@@ -40,6 +40,7 @@
       <animation state_key="changing_weapon_in" 	animation_key="change weapon in, single hand carry" />
       <animation state_key="prone_still" animation_key="prone_still, pistol dual" />
       <animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
+	    <animation state_key="next_in_chain_in" animation_key="reloading, weapon dual2" />
       
       <!-- <animation state_key="reload" animation_key="pistol whip" /> -->
       <!-- <animation state_key="reload" animation_key="pistol whip 2" /> -->
@@ -90,7 +91,7 @@
 		name="GK-Ouroboros-[Venomous Descent]" 
     projectile_speed="125" 
 		retrigger_time="0.1" 
-	  last_burst_retrigger_time="3.5"
+	  last_burst_retrigger_time="3"
 		suppressed="0" 
     carry_in_two_hands="0"  
     can_shoot_standing="1" 
@@ -119,7 +120,7 @@
       <animation state_key="changing_weapon_in" 	animation_key="change weapon in, single hand carry" />
       <animation state_key="prone_still" animation_key="prone_still, pistol dual" />
       <animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
-      
+	    <animation state_key="next_in_chain_in" animation_key="reloading, weapon dual2" />
       <!-- <animation state_key="reload" animation_key="pistol whip" /> -->
       <!-- <animation state_key="reload" animation_key="pistol whip 2" /> -->
       <!-- <animation state_key="reload" animation_key="pistol whip 3" /> -->
