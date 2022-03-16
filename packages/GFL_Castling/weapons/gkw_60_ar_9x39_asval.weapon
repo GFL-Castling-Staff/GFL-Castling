@@ -29,10 +29,10 @@
 
 
 
-    <sound key="fire" fileref="asval_fire_FromINS.wav" pitch_variety="0.05" volume="1" />
-    <sound key="magazine_out" fileref="asval_mgz_out_FromCOD16.wav" volume="0.5" />
-    <sound key="magazine_in" fileref="asval_mgz_in_FromCOD16.wav" volume="0.5" />
-    <sound key="cycle" fileref="asval_cycle_FromCOD16.wav" volume="0.5" />
+    <sound key="fire" fileref="asval_fire_FromFC6.wav" pitch_variety="0.05" volume="0.9" />
+    <sound key="magazine_out" fileref="asval_mgz_out_FromFC6.wav" volume="0.7" />
+    <sound key="magazine_in" fileref="asval_mgz_in_FromFC6.wav" volume="0.7" />
+    <sound key="cycle" fileref="asval_cycle_FromWF.wav" volume="0.7" />
     <sound class="impact" fileref="rifle_drop.wav" />    
     <model filename="gkw_ar_asval.xml" />
 

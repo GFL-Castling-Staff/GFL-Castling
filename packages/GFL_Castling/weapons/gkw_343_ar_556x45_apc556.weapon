@@ -24,10 +24,10 @@
 
 
 
-    <sound key="fire" fileref="apc556_Fire_FromINS.wav" pitch_variety="0.05" volume="0.8" />
-    <sound key="magazine_out" fileref="g41_mgz_out_FromINS.wav" volume="1" />
-    <sound key="magazine_in" fileref="g41_mgz_in_FromINS.wav" volume="1" />
-    <sound key="cycle" fileref="g41_cycle_FromINS.wav" volume="1" />
+    <sound key="fire" fileref="apc556_fire_FromREALLIFE.wav" pitch_variety="0.05" volume="0.8" />
+    <sound key="magazine_out" fileref="apc556_mgz_out_FromWF.wav" volume="1" />
+    <sound key="magazine_in" fileref="apc556_mgz_in_FromWF.wav" volume="1" />
+    <sound key="cycle" fileref="apc556_cycle_FromWF.wav" volume="1" />
     <sound class="impact" fileref="rifle_drop.wav" />    
     <model filename="gkw_ar_apc556.xml" />
 

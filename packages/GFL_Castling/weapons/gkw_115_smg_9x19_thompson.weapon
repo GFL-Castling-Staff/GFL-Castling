@@ -19,10 +19,10 @@
 
     
 
-    <sound key="fire" fileref="thompson_Fire_FromBFV.wav" pitch_variety="0.05" volume="1" />
-    <sound key="magazine_out" fileref="PPSH_mgz_out_FromCOD17.wav" volume="1" />
-    <sound key="magazine_in" fileref="PPSH_mgz_in_FromCOD17.wav" volume="1" />
-    <sound key="cycle" fileref="PPSH_cycle_FromCOD17.wav" volume="1" />
+    <sound key="fire" fileref="thompson_fire_FromBF5.wav" pitch_variety="0.05" volume="1" />
+    <sound key="magazine_out" fileref="thompson_mgz_out_FromBF5.wav" volume="1" />
+    <sound key="magazine_in" fileref="thompson_mgz_in_FromBF5.wav" volume="1" />
+    <sound key="cycle" fileref="thompson_cycle_FromBF5.wav" volume="1" />
     <sound class="impact" fileref="rifle_drop.wav" volume="1"/>    
     <model filename="gkw_smg_thompson.xml" />
 

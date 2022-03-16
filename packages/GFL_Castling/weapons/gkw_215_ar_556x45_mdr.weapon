@@ -28,10 +28,10 @@
 
 
 
-    <sound key="fire" fileref="mdr_fire_FromINS.wav" pitch_variety="0.05" volume="1" />
-    <sound key="magazine_out" fileref="mdr_mgz_out_FromINS.wav" volume="1" />
-    <sound key="magazine_in" fileref="mdr_mgz_in_FromINS.wav" volume="1" />
-    <sound key="cycle" fileref="mdr_cycle_FromINS.wav" volume="1" />
+    <sound key="fire" fileref="mdr_fire_FromEFT.wav" pitch_variety="0.05" volume="1" />
+    <sound key="magazine_out" fileref="mdr_mgz_out_FromDIVISION2.wav" volume="1" />
+    <sound key="magazine_in" fileref="mdr_mgz_in_FromDIVISION2.wav" volume="1" />
+    <sound key="cycle" fileref="mdr_cycle_FromDIVISION2.wav" volume="1" />
     <sound class="impact" fileref="rifle_drop.wav" />    
     <model filename="gkw_ar_mdr.xml" />
 
