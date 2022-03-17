@@ -24,10 +24,10 @@
 
 
 
-    <sound key="fire" fileref="type89_Fire_From_R6.wav" pitch_variety="0.05" volume="0.8" />
-    <sound key="magazine_out" fileref="g41_mgz_out_FromINS.wav" volume="1" />
-    <sound key="magazine_in" fileref="g41_mgz_in_FromINS.wav" volume="1" />
-    <sound key="cycle" fileref="type89_cycle_From_R6.wav" volume="1" />
+    <sound key="fire" fileref="type89_fire_FromWF.wav" pitch_variety="0.05" volume="1" />
+    <sound key="magazine_out" fileref="type89_mgz_out_FromWF.wav" volume="0.8" />
+    <sound key="magazine_in" fileref="type89_mgz_in_FromWF.wav" volume="0.8" />
+    <sound key="cycle" fileref="type89_cycle_FromWF.wav" volume="0.8" />
     <sound class="impact" fileref="rifle_drop.wav" />    
     <model filename="gkw_type89_melondove.xml" />
 

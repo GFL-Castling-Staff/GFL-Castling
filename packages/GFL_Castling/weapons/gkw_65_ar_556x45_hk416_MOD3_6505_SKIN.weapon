@@ -31,10 +31,10 @@
     <capacity value="1" source="rank" source_value="6.048" />
 	<!--Sounds-->
 	
-	<sound key="fire" fileref="hk416_Fire_FromGSFL.wav" pitch_variety="0.05" volume="0.8" />
-    <sound key="magazine_out" fileref="m4a1_mgz_out_FromINS.wav" volume="0.6" />
-    <sound key="magazine_in" fileref="m4a1_mgz_in_FromINS.wav" volume="0.6" />
-    <sound key="cycle" fileref="m4a1_cycle_FromINS.wav" volume="1" />
+	<sound key="fire" fileref="hk416_fire_FromBFH.wav" pitch_variety="0.05" volume="0.8" />
+    <sound key="magazine_out" fileref="hk416_mgz_out_FromEFT.wav" volume="0.7" />
+    <sound key="magazine_in" fileref="hk416_mgz_in_FromEFT.wav" volume="0.7" />
+    <sound key="cycle" fileref="hk416_cycle_FromEFT.wav" volume="0.7" />
     <sound class="impact" fileref="rifle_drop.wav" />
 
 	<!--Model, Icon, Cost-->
@@ -102,9 +102,9 @@
     <sound key="fire" fileref="HK416_Skill2.wav" pitch_variety="0" volume="0.45" />
     <sound key="fire" fileref="HK416_Skill3.wav" pitch_variety="0" volume="0.45" />
 
-    <sound key="magazine_out" fileref="m4a1_mgz_out_FromINS.wav" volume="0.6" />
-    <sound key="magazine_in" fileref="m4a1_mgz_in_FromINS.wav" volume="0.6" />
-    <sound key="cycle" fileref="m4a1_cycle_FromINS.wav" volume="1" />
+    <sound key="magazine_out" fileref="m320_mgz_out_FromSQUAD.wav" volume="0.7" />
+    <sound key="magazine_in" fileref="m320_mgz_in_FromSQUAD.wav" volume="0.7" />
+    <sound key="cycle" fileref="m320_cycle_FromSQUAD.wav" volume="0.8" />
     <sound class="impact" fileref="rifle_drop.wav" />
    
 	<!--Model, Icon, Cost-->

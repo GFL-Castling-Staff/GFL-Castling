@@ -5,10 +5,10 @@
     <inventory buy_price="100.0" sell_price="100.0" />
     <commonness in_stock="0" can_respawn_with="1" />
     <next_in_chain key="gkw_type100_banzai.weapon" share_ammo="0" />
-    <sound key="fire" fileref="type100_fire_FromINS.wav" pitch_variety="0.05" volume="1" />
-    <sound key="magazine_out" fileref="type100_mgz_out_FromINS.wav" volume="1" />
-    <sound key="magazine_in" fileref="type100_mgz_in_FromINS.wav" volume="1" />
-    <sound key="cycle" fileref="type100_cycle_FromINS.wav" volume="1" />
+    <sound key="fire" fileref="type100_fire_FromRS.wav" pitch_variety="0.05" volume="1" />
+    <sound key="magazine_out" fileref="type100_mgz_out_FromBFBC2.wav" volume="0.8" />
+    <sound key="magazine_in" fileref="type100_mgz_in_FromBFBC2.wav" volume="0.8" />
+    <sound key="cycle" fileref="type100_cycle_FromBFBC2.wav" volume="0.8" />
     <sound class="impact" fileref="rifle_drop.wav" volume="1"/>
     <model filename="gkw_smg_type100.xml" />
 

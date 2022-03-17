@@ -23,10 +23,10 @@
     <commonness value="0" in_stock="0" />
 
 
-    <sound key="fire" fileref="g41_fire_FromINS.wav" pitch_variety="0.05" volume="1" />
-    <sound key="magazine_out" fileref="g41_mgz_out_FromINS.wav" volume="1" />
-    <sound key="magazine_in" fileref="g41_mgz_in_FromINS.wav" volume="1" />
-    <sound key="cycle" fileref="g41_cycle_FromINS.wav" volume="1" />
+    <sound key="fire" fileref="zastavam21_fire_FromCF.wav" pitch_variety="0.05" volume="1.1" />
+    <sound key="magazine_out" fileref="zastavam21_mgz_out_FromEFT.wav" volume="0.9" />
+    <sound key="magazine_in" fileref="zastavam21_mgz_in_FromEFT.wav" volume="0.9" />
+    <sound key="cycle" fileref="zastavam21_cycle_FromEFT.wav" volume="0.9" />
     <sound class="impact" fileref="rifle_drop.wav" />    
     <model filename="gkw_ar_zasm21_from_DUSK.xml" />
 

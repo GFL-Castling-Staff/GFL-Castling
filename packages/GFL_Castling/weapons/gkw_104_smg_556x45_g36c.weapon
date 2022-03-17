@@ -23,10 +23,10 @@
 
 
 
-    <sound key="fire" fileref="g36_fire_FromINS.wav" pitch_variety="0.05" volume="1.2" />
-    <sound key="magazine_out" fileref="g36_mgz_out_FromINS.wav" volume="1" />
-    <sound key="magazine_in" fileref="g36_mgz_in_FromINS.wav" volume="1" />
-    <sound key="cycle" fileref="g36_cycle_FromINS.wav" volume="1" />
+    <sound key="fire" fileref="g36c_fire_FromMOH2012.wav" pitch_variety="0.05" volume="1.2" />
+    <sound key="magazine_out" fileref="g36_mgz_out_FromWF.wav" volume="1" />
+    <sound key="magazine_in" fileref="g36_mgz_in_FromWF.wav" volume="1" />
+    <sound key="cycle" fileref="g36_cycle_FromWF.wav" volume="1" />
     <sound class="impact" fileref="rifle_drop.wav" volume="1"/>    
     <model filename="gkw_smg_g36c.xml" />
 

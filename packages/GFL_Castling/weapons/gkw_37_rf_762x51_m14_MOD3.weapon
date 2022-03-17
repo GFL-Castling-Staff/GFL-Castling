@@ -33,10 +33,10 @@
 	
 	<!--Sounds-->
 	
-    <sound key="fire" fileref="M14_Fire_FromCODOL.wav" pitch_variety="0.01" volume="0.8" />
-    <sound key="cycle" fileref="m14mod3_cycle_FromINS.wav"  volume="1" />
-    <sound key="magazine_out" fileref="m14mod3_mgz_out_FromINS.wav"  volume="1" />
-    <sound key="magazine_in" fileref="m14mod3_mgz_in_FromINS.wav"  volume="1" />
+    <sound key="fire" fileref="m14_fire_FromDIVISION2.wav" pitch_variety="0.01" volume="1" />
+    <sound key="magazine_out" fileref="m14_mgz_out_FromCOD8.wav"  volume="0.8" />
+    <sound key="magazine_in" fileref="m14_mgz_in_FromCOD8.wav"  volume="0.8" />
+	<sound key="cycle" fileref="m14_cycle_FromCOD8.wav"  volume="0.8" />
     <sound class="impact" fileref="rifle_drop.wav" />
    
 	<!--Model, Icon, Cost-->
@@ -102,10 +102,10 @@
 	
 	<!--Sounds-->
 	
-    <sound key="fire" fileref="M14_Fire_FromCODOL.wav" pitch_variety="0.01" volume="0.8" />
-    <sound key="cycle" fileref="m14mod3_cycle_FromINS.wav"  volume="1" />
-    <sound key="magazine_out" fileref="m14mod3_mgz_out_FromINS.wav"  volume="1" />
-    <sound key="magazine_in" fileref="m14mod3_mgz_in_FromINS.wav"  volume="1" />
+    <sound key="fire" fileref="m14skill_fire_FromBFH.wav" pitch_variety="0.01" volume="1" />
+    <sound key="magazine_out" fileref="m14_mgz_out_FromCOD8.wav"  volume="0.8" />
+    <sound key="magazine_in" fileref="m14_mgz_in_FromCOD8.wav"  volume="0.8" />
+	<sound key="cycle" fileref="m14_cycle_FromCOD8.wav"  volume="0.8" />
     <sound class="impact" fileref="rifle_drop.wav" />
    
 	<!--Model, Icon, Cost-->

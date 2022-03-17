@@ -25,10 +25,10 @@
     <animation key="reload" stance_key="prone" animation_key="reloading, sniper1, prone" />	
     <animation key="hold" ref="39" />
     <animation key="hold_on_wall" ref="39" />
-    <sound key="fire" fileref="mk153_fire_FromBFH.wav" volume="1.0"/>
+    <sound key="fire" fileref="mk153_fire_FromBFH.wav" volume="1.5"/>
     <sound key="cycle" fileref="" />
     <sound key="magazine_out" fileref="mk153_mgz_out_FromSQUAD.wav" />
-    <sound key="magazine_in" fileref="mk153_mgz_in_FromSQUAD" />
+    <sound key="magazine_in" fileref="mk153_mgz_in_FromSQUAD.wav" />
     <sound key="cycle_out" fileref="" />
     <sound key="cycle_in" fileref="" />
     <sound class="impact" fileref="rifle_drop.wav" />

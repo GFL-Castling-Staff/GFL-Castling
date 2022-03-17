@@ -31,10 +31,10 @@
 	
 	<!--Sounds-->
 	
-    <sound key="fire" fileref="m14_Fire_FromGMOD.wav" pitch_variety="0.01" volume="0.7" />
-    <sound key="cycle" fileref="m14_cycle_FromGMOD.wav"  volume="1" />
-    <sound key="magazine_out" fileref="m14_mgz_out_FromGMOD.wav"  volume="1" />
-    <sound key="magazine_in" fileref="M14_mgz_in_FromGMOD.wav"  volume="1" />
+    <sound key="fire" fileref="m14_fire_FromDIVISION2.wav" pitch_variety="0.01" volume="1" />
+    <sound key="magazine_out" fileref="m14_mgz_out_FromCOD8.wav"  volume="0.8" />
+    <sound key="magazine_in" fileref="m14_mgz_in_FromCOD8.wav"  volume="0.8" />
+	<sound key="cycle" fileref="m14_cycle_FromCOD8.wav"  volume="0.8" />
     <sound class="impact" fileref="rifle_drop.wav" />
    
 	<!--Model, Icon, Cost-->

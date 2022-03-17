@@ -27,11 +27,10 @@
 
 
 
-    <sound key="fire" fileref="M4A1_Fire_FromCOD16_1.wav" pitch_variety="0.05" volume="0.4" />
-    <sound key="fire" fileref="M4A1_Fire_FromCOD16_2.wav" pitch_variety="0.05" volume="0.4" />
-    <sound key="magazine_out" fileref="m4a1_mgz_out_FromINS.wav" volume="1" />
-    <sound key="magazine_in" fileref="m4a1_mgz_in_FromINS.wav" volume="1" />
-    <sound key="cycle" fileref="m4a1_cycle_FromINS.wav" volume="1" />
+    <sound key="fire" fileref="m4a1_fire_FromDIVISION2.wav" pitch_variety="0.05" volume="1.2" />
+    <sound key="magazine_out" fileref="m4a1_mgz_out_FromCSGO.wav" volume="0.7" />
+    <sound key="magazine_in" fileref="m4a1_mgz_in_FromCSGO.wav" volume="0.7" />
+    <sound key="cycle" fileref="m4a1_cycle_FromCSGO.wav" volume="0.7" />
     <sound class="impact" fileref="rifle_drop.wav" />    
     <model filename="gkw_ar_m4a1mod3.xml" />
 

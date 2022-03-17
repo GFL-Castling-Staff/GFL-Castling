@@ -28,10 +28,10 @@
 
 <ballistics curve_height="3.0" near_far_distance="16.0" speed_estimation_near="10.0" speed_estimation_far="16.0" max_speed="47.0" randomness="0.0" tweak_factor="1.55" /> 
 
-    <sound key="fire" fileref="416mod3skill_Fire_FromL4D2.wav" pitch_variety="0.05" volume="1" />
-    <sound key="magazine_out" fileref="m4sopmodii_mgz_out_FromINS.wav" volume="1" />
-    <sound key="magazine_in" fileref="m4sopmodii_mgz_in_FromINS.wav" volume="1" />
-    <sound key="cycle" fileref="m4sopmodii_cycle_FromINS.wav" volume="1" />
+    <sound key="fire" fileref="gp25_fire_FromSQUAD.wav" pitch_variety="0.05" volume="1.2" />
+    <sound key="magazine_out" fileref="gp25_mgz_out_FromSQUAD.wav" volume="0.8" />
+    <sound key="magazine_in" fileref="gp25_mgz_in_FromSQUAD.wav" volume="0.8" />
+    <sound key="cycle" fileref="gp25_cycle_FromSQUAD.wav" volume="0.8" />
     <sound class="impact" fileref="rifle_drop.wav" />    
     <model filename="gkw_ar_zasm21_from_DUSK.xml" />
 

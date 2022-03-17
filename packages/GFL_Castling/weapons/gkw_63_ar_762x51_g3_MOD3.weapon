@@ -24,10 +24,10 @@
 
 
 
-    <sound key="fire" fileref="g3_fire_FromINS.wav" pitch_variety="0.05" volume="1" />
-    <sound key="magazine_out" fileref="g3_mgz_out_FromINS.wav" volume="1" />
-    <sound key="magazine_in" fileref="g3_mgz_in_FromINS.wav" volume="1" />
-    <sound key="cycle" fileref="g3_cycle_FromINS.wav" volume="1" />
+    <sound key="fire" fileref="g3_fire_FromBF2.wav" pitch_variety="0.05" volume="1" />
+    <sound key="magazine_out" fileref="g3_mgz_out_FromCOD4R.wav" volume="0.9" />
+    <sound key="magazine_in" fileref="g3_mgz_in_FromCOD4R.wav" volume="0.9" />
+    <sound key="cycle" fileref="g3_cycle_FromCOD4R.wav" volume="0.9" />
     <sound class="impact" fileref="rifle_drop.wav" />    
     <model filename="gkw_ar_g3.xml" />
 

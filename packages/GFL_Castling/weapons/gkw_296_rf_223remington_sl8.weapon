@@ -30,10 +30,10 @@
 	
 	<!--Sounds-->
 	
-    <sound key="fire" fileref="SL8_Fire_FromPayday2.wav" volume="0.3" />
-    <sound key="cycle" fileref="fnfal_cycle_FromINS.wav" />
-    <sound key="magazine_out" fileref="m4a1_mgz_out_FromINS.wav" />
-    <sound key="magazine_in" fileref="m4a1_mgz_in_FromINS.wav" />
+    <sound key="fire" fileref="sl8_fire_FromWF.wav" volume="0.8" />
+    <sound key="magazine_out" fileref="g36_mgz_out_FromWF.wav" volume="1" />
+    <sound key="magazine_in" fileref="g36_mgz_in_FromWF.wav" volume="1" />
+    <sound key="cycle" fileref="g36_cycle_FromWF.wav" volume="1" />
     <sound class="impact" fileref="rifle_drop.wav" />
    
 	<!--Model, Icon, Cost-->

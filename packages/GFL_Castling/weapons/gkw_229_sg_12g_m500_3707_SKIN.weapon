@@ -33,9 +33,9 @@
 	
 	<!--Sounds-->
 	
-    <sound key="fire" fileref="m870_fire_FromINS.wav" pitch_variety="0.05" volume="1" />
-    <sound key="cycle" fileref="m870_cycle_FromINS.wav" />
-    <sound key="reload_one" fileref="m870_mgz_in_FromINS.wav" />
+    <sound key="fire" fileref="m500_fire_FromSAM4.wav" pitch_variety="0.05" volume="1" />
+    <sound key="cycle" fileref="m500_cycle_FromKF2.wav" />
+    <sound key="reload_one" fileref="m500_reload_FromCOD16.wav" />
     <sound class="impact" fileref="rifle_drop.wav" />
    
 	<!--Model, Icon, Cost-->
