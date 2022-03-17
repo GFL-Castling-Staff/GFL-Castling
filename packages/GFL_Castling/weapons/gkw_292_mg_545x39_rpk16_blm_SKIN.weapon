@@ -21,7 +21,8 @@
 
 
   	<animation state_key="hold_casual"			animation_key="dancing, kazachok" />
-    <animation key="reload" animation_key="MGreload3" />
+    <animation key="reload" animation_key="ARreload3" />
+	<animation key="reload" stance_key="prone" animation_key="ARreloadp3" />
     <inventory  buy_price="8.0" sell_price="8.0" />
     <commonness value="0" in_stock="0" />
 

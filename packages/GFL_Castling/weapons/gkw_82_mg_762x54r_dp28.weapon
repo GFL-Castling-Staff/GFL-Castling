@@ -2,7 +2,7 @@
 <weapon file="heavy_mg_standing.animation_base" key="gkw_dp28.weapon">
 
     <specification 
-barrel_offset="0.5" 
+    barrel_offset="0.5" 
 	retrigger_time="0.1" 
 	accuracy_factor="0.98" 
 	sustained_fire_grow_step="0.5" 
@@ -18,7 +18,7 @@ barrel_offset="0.5"
 
 
   	<animation state_key="hold_casual"			animation_key="dancing, kazachok" />
-    <animation key="reload" animation_key="MGreload3.8" />
+    <animation key="reload" animation_key="MGreload2.5" />
 	<inventory  buy_price="8.0" sell_price="8.0" />
 
 
