@@ -25,10 +25,10 @@
     <commonness value="0" in_stock="0" />
 
 
-    <sound key="fire" fileref="G11_Fire_FromCODOLBPR.wav" pitch_variety="0" volume="1.3" />
-    <sound key="magazine_out" fileref="famas_mgz_out_FromINS.wav" volume="1" />
-    <sound key="magazine_in" fileref="famas_mgz_in_FromINS.wav" volume="1" />
-    <sound key="cycle" fileref="G11_cycle_FromCOD7.wav" volume="1" />
+    <sound key="fire" fileref="g11_fire_FromCOD17.wav" pitch_variety="0" volume="1" />
+    <sound key="magazine_out" fileref="g11_mgz_out_FromCOD17.wav" volume="0.8" />
+    <sound key="magazine_in" fileref="g11_mgz_in_FromCOD7.wav" volume="0.8" />
+    <sound key="cycle" fileref="g11_cycle_FromCOD7.wav" volume="0.8" />
     <sound class="impact" fileref="rifle_drop.wav" />    
     <model filename="gkw_ar_g11_9.xml" />
 
@@ -82,10 +82,10 @@
 	<inventory  buy_price="250.0" sell_price="250.0" />
 
 
-    <sound key="fire" fileref="G11_Fire_FromCODOLBPR.wav" pitch_variety="0" volume="1.3" />
-    <sound key="magazine_out" fileref="famas_mgz_out_FromINS.wav" volume="1" />
-    <sound key="magazine_in" fileref="famas_mgz_in_FromINS.wav" volume="1" />
-    <sound key="cycle" fileref="G11_cycle_FromCOD7.wav" volume="1" />
+    <sound key="fire" fileref="g11skill_fire_FromCF.wav" pitch_variety="0" volume="1" />
+    <sound key="magazine_out" fileref="g11_mgz_out_FromCOD17.wav" volume="0.8" />
+    <sound key="magazine_in" fileref="g11_mgz_in_FromCOD7.wav" volume="0.8" />
+    <sound key="cycle" fileref="g11_cycle_FromCOD7.wav" volume="0.8" />
     <sound class="impact" fileref="rifle_drop.wav" />    
     <model filename="gkw_ar_g11_9.xml" />
 

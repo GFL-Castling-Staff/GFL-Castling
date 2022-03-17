@@ -31,12 +31,12 @@
 	
 	<!--Sounds-->
 	
-    <sound key="fire" fileref="m1903_Fire_FromGMOD.wav" pitch_variety="0.05" volume="0.8" />
-    <sound key="cycle" fileref="m1903_cycle_FromGMOD.wav" volume="0.7"/>
+    <sound key="fire" fileref="m1903only_fire_FromBF1.wav" pitch_variety="0.05" volume="1.3" />
+    <sound key="cycle" fileref="m1903_cycle_FromFC6.wav" volume="0.6"/>
       <!-- <sound key="magazine_out" fileref="" volume="1"/> -->
-    <sound key="reload_one" fileref="G43_reload_FromBF5.wav" volume="0.15" />
-    <sound key="cycle_out" fileref="m1903_cycle_out_FromBF1.wav"  volume="1"/>
-    <sound key="cycle_in" fileref="m1903_cycle_in_FromBF1.wav"  volume="1"/> 
+    <sound key="reload_one" fileref="m1903_reload_FromCOD16.wav" volume="0.4" />
+    <sound key="cycle_out" fileref="m1903_cycle_out_FromFC6.wav"  volume="0.6"/>
+    <sound key="cycle_in" fileref="m1903_cycle_in_FromFC6.wav"  volume="0.6"/> 
     <sound class="impact" fileref="rifle_drop.wav" volume="1"/>
    
 	<!--Model, Icon, Cost-->

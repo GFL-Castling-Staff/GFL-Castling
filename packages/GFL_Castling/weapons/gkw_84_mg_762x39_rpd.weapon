@@ -24,10 +24,10 @@
 
 
 
-    <sound key="fire" fileref="RPD_Fire_FromCODOLRPD.wav" pitch_variety="0.02" volume="1" />
-    <sound key="magazine_out" fileref="RPD_mgz_out_FromCODOLRPD.wav" volume="0.8" />
-    <sound key="magazine_in" fileref="RPD_mgz_in_FromCODOLRPD.wav" volume="0.8" />
-    <sound key="cycle" fileref="RPD_cycle_FromCODOLRPD.wav" volume="0.8" />
+    <sound key="fire" fileref="rpd_fire_FromRS2V.wav" pitch_variety="0.02" volume="1" />
+    <sound key="magazine_out" fileref="rpd_mgz_out_FromCOD6R.wav" volume="0.8" />
+    <sound key="magazine_in" fileref="rpd_mgz_in_FromCOD6R.wav" volume="0.8" />
+    <sound key="cycle" fileref="rpd_cycle_FromCOD6R.wav" volume="0.8" />
     <sound class="impact" fileref="rifle_drop.wav" />
     <model filename="gkw_mg_rpd.xml" />
 
@@ -77,9 +77,9 @@
 
 
     <sound key="fire" fileref="RPD_Fire_FromCODOLRPD.wav" pitch_variety="0.02" volume="1" />
-    <sound key="magazine_out" fileref="RPD_mgz_out_FromCODOLRPD.wav" volume="0.8" />
-    <sound key="magazine_in" fileref="RPD_mgz_in_FromCODOLRPD.wav" volume="0.8" />
-    <sound key="cycle" fileref="RPD_cycle_FromCODOLRPD.wav" volume="0.8" />
+    <sound key="magazine_out" fileref="rpd_mgz_out_FromCOD6R.wav" volume="0.8" />
+    <sound key="magazine_in" fileref="rpd_mgz_in_FromCOD6R.wav" volume="0.8" />
+    <sound key="cycle" fileref="rpd_cycle_FromCOD6R.wav" volume="0.8" />
     <sound class="impact" fileref="rifle_drop.wav" />
     <model filename="gkw_mg_rpd.xml" />
 

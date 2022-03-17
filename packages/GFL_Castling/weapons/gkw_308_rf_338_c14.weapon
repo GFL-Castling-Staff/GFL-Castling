@@ -31,12 +31,12 @@
 	
 	<!--Sounds-->
 	
-    <sound key="fire" fileref="c14_fire_FromINS.wav" volume="1.8" />
-    <sound key="cycle" fileref="c14_cycle_FromINS.wav" volume="1.2"/>
-    <sound key="magazine_out" fileref="c14_mgz_out_FromINS.wav" volume="1.2" />
-    <sound key="magazine_in" fileref="c14_mgz_in_FromINS.wav" volume="1.2" />
-    <sound key="cycle_out" fileref="m200_cycle_out_FromCOD.wav" volume="0.5" />
-    <sound key="cycle_in" fileref="m200_cycle_in_FromCOD.wav" volume="0.5" />
+    <sound key="fire" fileref="c14_fire_FromBF4.wav" volume="1" />
+    <sound key="cycle" fileref="c14_cycle_FromSQUAD.wav" volume="0.8"/>
+    <sound key="magazine_out" fileref="c14_mgz_out_FromSQUAD.wav" volume="0.8" />
+    <sound key="magazine_in" fileref="c14_mgz_in_FromSQUAD.wav" volume="0.8" />
+    <sound key="cycle_out" fileref="c14_cycle_out_FromSQUAD.wav" volume="0.5" />
+    <sound key="cycle_in" fileref="c14_cycle_in_FromSQUAD.wav" volume="0.5" />
     <sound class="impact" fileref="rifle_drop.wav" />
    
 	<!--Model, Icon, Cost-->

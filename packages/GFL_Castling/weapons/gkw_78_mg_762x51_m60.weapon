@@ -24,10 +24,10 @@
 
 
 
-    <sound key="fire" fileref="m60_fire_FromINS.wav" pitch_variety="0.05" volume="1" />
-    <sound key="magazine_out" fileref="m60_mgz_out_FromINS.wav" volume="0.8" />
-    <sound key="magazine_in" fileref="m60_mgz_in_FromINS.wav" volume="0.8" />
-    <sound key="cycle" fileref="m60_cycle_FromINS.wav" volume="0.8" />
+    <sound key="fire" fileref="m60_fire_FromRS2V.wav" pitch_variety="0.05" volume="1" />
+    <sound key="magazine_out" fileref="m60_mgz_out_FromCOD17.wav" volume="0.8" />
+    <sound key="magazine_in" fileref="m60_mgz_in_FromCOD17.wav" volume="0.8" />
+    <sound key="cycle" fileref="m60_cycle_FromFC5.wav" volume="0.8" />
     <sound class="impact" fileref="rifle_drop.wav" />
     <model filename="gkw_mg_m60.xml" />
 
@@ -76,10 +76,10 @@
     <commonness  value="0" in_stock="0" can_spawn_with="1" />
 
 
-    <sound key="fire" fileref="m60_fire_FromINS.wav" pitch_variety="0.05" volume="1" />
-    <sound key="magazine_out" fileref="m60_mgz_out_FromINS.wav" volume="0.8" />
-    <sound key="magazine_in" fileref="m60_mgz_in_FromINS.wav" volume="0.8" />
-    <sound key="cycle" fileref="m60_cycle_FromINS.wav" volume="0.8" />
+    <sound key="fire" fileref="m60skill_fire_FromCOD7.wav" pitch_variety="0.05" volume="1" />
+    <sound key="magazine_out" fileref="m60_mgz_out_FromCOD17.wav" volume="0.8" />
+    <sound key="magazine_in" fileref="m60_mgz_in_FromCOD17.wav" volume="0.8" />
+    <sound key="cycle" fileref="m60_cycle_FromFC5.wav" volume="0.8" />
     <sound class="impact" fileref="rifle_drop.wav" />
     <model filename="gkw_mg_m60.xml" />
 
