@@ -16,10 +16,10 @@
 
 
 
-        <sound key="fire" fileref="ots14_fire_FromFC6.wav" pitch_variety="0.05" volume="0.5" />
-        <sound key="magazine_out" fileref="ots14_mgz_out_FromCOD17.wav" volume="1" />
-        <sound key="magazine_in" fileref="ots14_mgz_in_FromCOD17.wav" volume="1" />
-        <sound key="cycle" fileref="ots14_cycle_FromCOD17.wav" volume="1" />
+        <sound key="fire" fileref="ots14_fire_FromFC6.wav" pitch_variety="0.05" volume="1" />
+        <sound key="magazine_out" fileref="ots14_mgz_out_FromCOD17.wav" volume="0.8" />
+        <sound key="magazine_in" fileref="ots14_mgz_in_FromCOD17.wav" volume="0.8" />
+        <sound key="cycle" fileref="ots14_cycle_FromCOD17.wav" volume="0.8" />
     <sound class="impact" fileref="rifle_drop.wav" />
     <model filename="gkw_ar_ots14.xml" />
 
@@ -59,10 +59,10 @@
 
 
 
-    <sound key="fire" fileref="ots14_fire_FromL4D2.wav" pitch_variety="0.05" volume="0.5" />
-    <sound key="magazine_out" fileref="ots14_mgz_out_FromL4D2.wav" volume="1" />
-    <sound key="magazine_in" fileref="ots14_mgz_in_FromL4D2.wav" volume="1" />
-    <sound key="cycle" fileref="ots14_cycle_FromL4D2.wav" volume="1" />
+        <sound key="fire" fileref="ots14skill_fire_FromBF4.wav" pitch_variety="0.05" volume="1" />
+        <sound key="magazine_out" fileref="ots14_mgz_out_FromCOD17.wav" volume="0.8" />
+        <sound key="magazine_in" fileref="ots14_mgz_in_FromCOD17.wav" volume="0.8" />
+        <sound key="cycle" fileref="ots14_cycle_FromCOD17.wav" volume="0.8" />
     <sound class="impact" fileref="rifle_drop.wav" />
     <model filename="gkw_ar_ots14.xml" />
 

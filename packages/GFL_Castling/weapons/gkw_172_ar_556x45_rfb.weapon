@@ -27,10 +27,10 @@
 
 
 
-    <sound key="fire" fileref="rfb_fire_FromINS.wav" pitch_variety="0.05" volume="1" />
-    <sound key="magazine_out" fileref="rfb_mgz_out_FromINS.wav" volume="1" />
-    <sound key="magazine_in" fileref="rfb_mgz_in_FromINS.wav" volume="1" />
-    <sound key="cycle" fileref="rfb_cycle_FromINS.wav" volume="1" />
+    <sound key="fire" fileref="rfb_fire_FromBF4.wav" pitch_variety="0.05" volume="1.2" />
+    <sound key="magazine_out" fileref="rfb_mgz_out_FromEFT.wav" volume="0.8" />
+    <sound key="magazine_in" fileref="rfb_mgz_in_FromEFT.wav" volume="0.8" />
+    <sound key="cycle" fileref="rfb_cycle_FromEFT.wav" volume="0.8" />
     <sound class="impact" fileref="rifle_drop.wav" volume="1"/>   
 	
     <model filename="gkw_ar_rfb.xml" />
@@ -83,10 +83,10 @@
 
 
 
-    <sound key="fire" fileref="rfb_fire_FromINS.wav" pitch_variety="0.05" volume="1" />
-    <sound key="magazine_out" fileref="rfb_mgz_out_FromINS.wav" volume="1" />
-    <sound key="magazine_in" fileref="rfb_mgz_in_FromINS.wav" volume="1" />
-    <sound key="cycle" fileref="rfb_cycle_FromINS.wav" volume="1" />
+    <sound key="fire" fileref="rfb_fire_FromBF4.wav" pitch_variety="0.05" volume="1.2" />
+    <sound key="magazine_out" fileref="rfb_mgz_out_FromEFT.wav" volume="0.8" />
+    <sound key="magazine_in" fileref="rfb_mgz_in_FromEFT.wav" volume="0.8" />
+    <sound key="cycle" fileref="rfb_cycle_FromEFT.wav" volume="0.8" />
     <sound class="impact" fileref="rifle_drop.wav" volume="1"/>   
     
     <model filename="gkw_ar_rfb.xml" />

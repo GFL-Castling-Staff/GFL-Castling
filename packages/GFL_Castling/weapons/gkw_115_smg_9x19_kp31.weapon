@@ -16,10 +16,10 @@
 
 
     
-    <sound key="fire" fileref="kp31_fire_FromINS.wav" pitch_variety="0.05" volume="1" />
-    <sound key="magazine_out" fileref="kp31_mgz_out_FromINS.wav" volume="1" />
-    <sound key="magazine_in" fileref="kp31_mgz_in_FromINS.wav" volume="1" />
-    <sound key="cycle" fileref="kp31_cycle_FromINS.wav" volume="1" />
+    <sound key="fire" fileref="kp31_fire_FromBF5.wav" pitch_variety="0.05" volume="1.1" />
+    <sound key="magazine_out" fileref="PPSH_mgz_out_FromCOD17.wav" volume="0.9" />
+    <sound key="magazine_in" fileref="PPSH_mgz_in_FromCOD17.wav" volume="0.9" />
+    <sound key="cycle" fileref="kp31_cycle_FromINS.wav" volume="0.8" />
     <sound class="impact" fileref="rifle_drop.wav" volume="1"/>    
     <model filename="gkw_smg_kp31.xml" />
 

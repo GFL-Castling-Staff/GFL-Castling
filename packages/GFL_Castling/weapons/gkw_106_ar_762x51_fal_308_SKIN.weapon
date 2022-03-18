@@ -25,10 +25,10 @@
     <inventory  buy_price="8.0" sell_price="8.0" />
 
 
-    <sound key="fire" fileref="fnfal_fire_FromINS.wav" pitch_variety="0.05" volume="1" />
-    <sound key="magazine_out" fileref="fnfal_mgz_out_FromINS.wav" volume="1" />
-    <sound key="magazine_in" fileref="fnfal_mgz_in_FromINS.wav" volume="1" />
-    <sound key="cycle" fileref="fnfal_cycle_FromINS.wav" volume="1" />
+    <sound key="fire" fileref="fal_fire_FromCOD16.wav" pitch_variety="0.05" volume="1" />
+    <sound key="magazine_out" fileref="fal_mgz_out_FromSQUAD.wav" volume="0.7" />
+    <sound key="magazine_in" fileref="fal_mgz_in_FromSQUAD.wav" volume="0.7" />
+    <sound key="cycle" fileref="fal_cycle_FromSQUAD.wav" volume="0.7" />
     <sound class="impact" fileref="rifle_drop.wav" volume="1"/>   
 	
     <model filename="gkw_ar_fnfal.xml" />

@@ -27,10 +27,10 @@
 
 	<!--Sounds-->
 	
-    <sound key="fire" fileref="X95_Fire_FromCOD15ABR223.wav" pitch_variety="0.05" volume="0.8" />
-    <sound key="magazine_out" fileref="X95_mgz_out_FromCOD15ABR223.wav"  />
-    <sound key="magazine_in" fileref="X95_mgz_in_FromCOD15ABR223.wav"  />
-    <sound key="cycle" fileref="X95_cycle_FromCOD15ABR223.wav"  />
+    <sound key="fire" fileref="x95_fire_FromBF4.wav" pitch_variety="0.05" volume="1" />
+    <sound key="magazine_out" fileref="x95_mgz_out_FromCOD16.wav" volume="0.6"  />
+    <sound key="magazine_in" fileref="x95_mgz_in_FromCOD16.wav" volume="0.6"  />
+    <sound key="cycle" fileref="x95_cycle_FromCOD16.wav" volume="0.6"  />
     <sound class="impact" fileref="rifle_drop.wav" />    
     
     <!--Model, Icon, Cost-->

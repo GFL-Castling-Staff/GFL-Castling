@@ -10,10 +10,10 @@
         <animation state_key="reload" animation_key="ARreload1.5" />
         <animation key="reload" stance_key="prone" animation_key="ARreloadp1.5" />
 
-        <sound key="fire" fileref="sigmcx_Fire_FromCOD16.wav" pitch_variety="0.05" volume="1.5" />
-        <sound key="magazine_out" fileref="m4a1_mgz_out_FromINS.wav" volume="1" />
-        <sound key="magazine_in" fileref="m4a1_mgz_in_FromINS.wav" volume="1" />
-        <sound key="cycle" fileref="m4a1_cycle_FromINS.wav" volume="1" />
+        <sound key="fire" fileref="k11_fire_FromBLACKSQUAD.wav" pitch_variety="0.05" volume="1.1" />
+        <sound key="magazine_out" fileref="k11_mgz_out_FromWF.wav" volume="0.8" />
+        <sound key="magazine_in" fileref="k11_mgz_in_FromWF.wav" volume="0.8" />
+        <sound key="cycle" fileref="k11_cycle_FromWF.wav" volume="0.8" />
         <sound class="impact" fileref="rifle_drop.wav" />
         <model filename="gkw_ar_k11.xml" />
         <hud_icon filename="gkw_k11.png" />

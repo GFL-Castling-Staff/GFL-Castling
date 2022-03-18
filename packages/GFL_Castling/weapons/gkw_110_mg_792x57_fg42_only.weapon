@@ -23,10 +23,10 @@
     <next_in_chain key="gkw_fg42_only_skill.weapon" share_ammo="1" />
 
 
-    <sound key="fire" fileref="FG42_Fire_FromBF5.wav" pitch_variety="0.05" volume="1" />
-    <sound key="magazine_out" fileref="FG42_mgz_out_FromBF5.wav" volume="1" />
-    <sound key="magazine_in" fileref="FG42_mgz_in_FromBF5.wav" volume="1" />
-    <sound key="cycle" fileref="FG42_cycle_FromBF5.wav" volume="1" />
+    <sound key="fire" fileref="fg42_fire_FromBF5.wav" pitch_variety="0.05" volume="1" />
+    <sound key="magazine_out" fileref="FG42_mgz_out_FromBF5.wav" volume="0.9" />
+    <sound key="magazine_in" fileref="FG42_mgz_in_FromBF5.wav" volume="0.9" />
+    <sound key="cycle" fileref="fg42_cycle_FromCOD14.wav" volume="0.7" />
     <sound class="impact" fileref="rifle_drop.wav" />
     <model filename="gkw_mg_fg42.xml" />
 
@@ -74,10 +74,10 @@
     <next_in_chain key="gkw_fg42_only.weapon" share_ammo="1" />
 
 
-    <sound key="fire" fileref="FG42_Fire_FromBF5.wav" pitch_variety="0.05" volume="1" />
-    <sound key="magazine_out" fileref="FG42_mgz_out_FromBF5.wav" volume="1" />
-    <sound key="magazine_in" fileref="FG42_mgz_in_FromBF5.wav" volume="1" />
-    <sound key="cycle" fileref="FG42_cycle_FromBF5.wav" volume="1" />
+    <sound key="fire" fileref="fg42skill_fire_FromZA4.wav" pitch_variety="0.05" volume="0.9" />
+    <sound key="magazine_out" fileref="FG42_mgz_out_FromBF5.wav" volume="0.9" />
+    <sound key="magazine_in" fileref="FG42_mgz_in_FromBF5.wav" volume="0.9" />
+    <sound key="cycle" fileref="fg42_cycle_FromCOD14.wav" volume="0.7" />
     <sound class="impact" fileref="rifle_drop.wav" />
     <model filename="gkw_mg_fg42.xml" />
 

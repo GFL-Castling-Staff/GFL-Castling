@@ -33,12 +33,12 @@
     <commonness value="0" in_stock="0" />
 	<!--Sounds-->
 	
-    <sound key="fire" fileref="NTW20_Fire_FromCOD16HDR.wav" volume="1.4" />
-    <sound key="cycle" fileref="NTW20_cycle_FromCOD16HDR.wav" volume="0.6"/>
-    <sound key="magazine_out" fileref="NTW20_mgz_out_FromCOD16HDR.wav" volume="0.5"/>
-    <sound key="magazine_in" fileref="NTW20_mgz_in_FromCOD16HDR.wav" volume="0.5"/>
-    <sound key="cycle_out" fileref="NTW20_cycle_out_FromCOD16HDR.wav" volume="0.1"/>
-    <sound key="cycle_in" fileref="NTW20_cycle_in_FromCOD16HDR.wav" volume="0.5"/>
+    <sound key="fire" fileref="ntw20_fire_FromBF2042.wav" volume="1.2" />
+    <sound key="cycle" fileref="ntw20_cycle_FromBF5.wav" volume="0.6"/>
+    <sound key="magazine_out" fileref="ntw20_mgz_out_FromBF2042.wav" volume="0.7"/>
+    <sound key="magazine_in" fileref="ntw20_mgz_in_FromBF2042.wav" volume="0.7"/>
+    <sound key="cycle_out" fileref="ntw20_cycle_out_FromBF5.wav" volume="0.4"/>
+    <sound key="cycle_in" fileref="ntw20_cycle_in_FromBF5.wav" volume="0.4"/>
     <sound class="impact" fileref="rifle_drop.wav" />
    
 	<!--Model, Icon, Cost-->

@@ -23,12 +23,12 @@
     <animation key="reload" ref="35" />
 	<animation key="reload" stance_key="prone" animation_key="reloading, sniper1, prone" />	
 	
-	<sound key="fire" fileref="Kar98K_Fire_FromCOD16.wav" volume="1.2" />  
-	<sound key="cycle" fileref="Kar98K_cycle_FromCOD16.wav" /> 
-	<sound key="magazine_out" fileref="Kar98K_mgz_out_FromCOD16.wav" />  
-	<sound key="magazine_in" fileref="Kar98K_mgz_in_FromCOD16.wav" />  
-	<sound key="cycle_out" fileref="Kar98K_cycle_out_FromCOD16.wav" />  
-	<sound key="cycle_in" fileref="Kar98K_cycle_in_FromCOD16.wav" />  
+	<sound key="fire" fileref="kar98k_fire_FromCOD16.wav" volume="1.2" />  
+	<sound key="cycle" fileref="Kar98K_cycle_FromCOD16.wav" volume="0.8" /> 
+	<sound key="magazine_out" fileref="Kar98K_mgz_out_FromCOD16.wav" volume="0.8" />  
+	<sound key="magazine_in" fileref="Kar98K_mgz_in_FromCOD16.wav" volume="0.8" />  
+	<sound key="cycle_out" fileref="Kar98K_cycle_out_FromCOD16.wav" volume="0.8" />  
+	<sound key="cycle_in" fileref="Kar98K_cycle_in_FromCOD16.wav" volume="0.8" />  
     <sound class="impact" fileref="rifle_drop.wav" />
     <model filename="gkw_rf_98k.xml" />
 

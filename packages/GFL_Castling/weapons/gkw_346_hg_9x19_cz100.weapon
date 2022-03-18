@@ -30,10 +30,10 @@
 	
 	<!--Sounds-->
 		
-    <sound key="fire" fileref="m9_fire_FromINS.wav" pitch_variety="0.05" volume="1" />
-    <sound key="magazine_out" fileref="m9_mgz_out_FromINS.wav" volume="0.8" />
-    <sound key="magazine_in" fileref="m9_mgz_in_FromINS.wav" volume="0.8"/>    
-    <sound key="cycle" fileref="m9_cycle_FromINS.wav" volume="0.8" />
+    <sound key="fire" fileref="cz100_fire_FromREALLIFE.wav" pitch_variety="0.05" volume="1" />
+    <sound key="magazine_out" fileref="cz100_mgz_out_FromR6S.wav" volume="0.8" />
+    <sound key="magazine_in" fileref="cz100_mgz_in_FromR6S.wav" volume="0.8"/>    
+    <sound key="cycle" fileref="cz100_cycle_FromR6S.wav" volume="0.8" />
 
    
 	<!--Model, Icon, Cost-->

@@ -27,10 +27,10 @@
 
 
 
-    <sound key="fire" fileref="scar_fire_FromPUBG.wav" pitch_variety="0.03" volume="1" />
-    <sound key="magazine_out" fileref="scar_mgz_out_FromPUBG.wav" volume="1" />
-    <sound key="magazine_in" fileref="scar_mgz_in_FromPUBG.wav" volume="1" />
-    <sound key="cycle" fileref="scar_cycle_FromPUBG.wav" volume="1" />
+    <sound key="fire" fileref="art556_fire_FromCOD16.wav" pitch_variety="0.03" volume="1" />
+    <sound key="magazine_out" fileref="art556_mgz_out_FromBF2042.wav" volume="0.8" />
+    <sound key="magazine_in" fileref="art556_mgz_in_FromBF2042.wav" volume="0.8" />
+    <sound key="cycle" fileref="fx05_cycle_FromBF2042.wav" volume="0.8" />
     <sound class="impact" fileref="rifle_drop.wav" />    
     <model filename="gkw_ar_art556_2803.xml" />
 
@@ -81,10 +81,10 @@
 
 
 
-    <sound key="fire" fileref="scar_fire_FromPUBG.wav" pitch_variety="0.03" volume="1" />
-    <sound key="magazine_out" fileref="scar_mgz_out_FromPUBG.wav" volume="1" />
-    <sound key="magazine_in" fileref="scar_mgz_in_FromPUBG.wav" volume="1" />
-    <sound key="cycle" fileref="scar_cycle_FromPUBG.wav" volume="1" />
+    <sound key="fire" fileref="art556_fire_FromBF2042.wav" pitch_variety="0.03" volume="1.3" />
+    <sound key="magazine_out" fileref="art556_mgz_out_FromBF2042.wav" volume="0.8" />
+    <sound key="magazine_in" fileref="art556_mgz_in_FromBF2042.wav" volume="0.8" />
+    <sound key="cycle" fileref="fx05_cycle_FromBF2042.wav" volume="0.8" />
     <sound class="impact" fileref="rifle_drop.wav" />    
     <model filename="gkw_ar_art556_2803.xml" />
 

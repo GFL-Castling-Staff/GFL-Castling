@@ -24,10 +24,10 @@
 
 
 
-    <sound key="fire" fileref="ameli_Fire_FromCOD17.wav" pitch_variety="0.05" volume="1" />
-    <sound key="magazine_out" fileref="ameli_mgz_out_FromCOD17.wav" volume="1" />
-    <sound key="magazine_in" fileref="ameli_mgz_in_FromCOD17.wav" volume="1" />
-    <sound key="cycle" fileref="ameli_cycle_FromCOD17.wav" volume="1" />
+    <sound key="fire" fileref="ameli_fire_FromCOD11.wav" pitch_variety="0.05" volume="1.1" />
+    <sound key="magazine_out" fileref="ameli_mgz_out_FromCF.wav" volume="0.6" />
+    <sound key="magazine_in" fileref="ameli_mgz_in_FromCF.wav" volume="0.6" />
+    <sound key="cycle" fileref="ameli_cycle_FromCF.wav" volume="0.6" />
     <sound class="impact" fileref="rifle_drop.wav" />
     <model filename="gkw_mg_ameli_2409.xml" />
 

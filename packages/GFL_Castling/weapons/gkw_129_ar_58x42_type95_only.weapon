@@ -24,10 +24,10 @@
 
 
 
-    <sound key="fire" fileref="type95_fire_FromBF4.wav" pitch_variety="0.05" volume="0.24" />
-    <sound key="magazine_out" fileref="95type_mgz_in_FromINS.wav" volume="1" />
-    <sound key="magazine_in" fileref="95type_mgz_out_FromINS.wav" volume="1" />
-    <sound key="cycle" fileref="95type_cycle_FromINS.wav" volume="1" />
+    <sound key="fire" fileref="type95_fire_FromBF4.wav" pitch_variety="0.05" volume="1.6" />
+    <sound key="magazine_out" fileref="type95_mgz_out_FromBF4.wav" volume="1.1" />
+    <sound key="magazine_in" fileref="type95_mgz_in_FromBF4.wav" volume="1.1" />
+    <sound key="cycle" fileref="type95_cycle_FromBF4.wav" volume="1.1" />
     <sound class="impact" fileref="rifle_drop.wav" />    
     <model filename="gkw_ar_type95.xml" />
 

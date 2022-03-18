@@ -23,10 +23,10 @@
 
 
 
-    <sound key="fire" fileref="AN94_Fire_FromCODOL.wav" pitch_variety="0.02" volume="1" />
-    <sound key="magazine_out" fileref="an94_mgz_out_FromL4D2.wav" volume="1" />
-    <sound key="magazine_in" fileref="an94_mgz_in_FromL4D2.wav" volume="1" />
-    <sound key="cycle" fileref="an94_cycle_FromL4D2.wav" volume="1" />
+    <sound key="fire" fileref="an94_fire_FromCOD12.wav" pitch_variety="0.02" volume="1.2" />
+    <sound key="magazine_out" fileref="an94_mgz_out_FromCOD16.wav" volume="0.8" />
+    <sound key="magazine_in" fileref="an94_mgz_in_FromCOD16.wav" volume="0.8" />
+    <sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.8" />
     <sound class="impact" fileref="rifle_drop.wav" />    
     <model filename="gkw_ar_an94.xml" />
 

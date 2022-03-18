@@ -24,10 +24,10 @@
 
 
 
-    <sound key="fire" fileref="AK47_Fire_FromINS.wav" pitch_variety="0.05" volume="1" />
-    <sound key="magazine_out" fileref="AK47_mgz_out_FromINS.wav" volume="0.4" />
-    <sound key="magazine_in" fileref="AK47_mgz_in_FromINS.wav" volume="0.4" />
-    <sound key="cycle" fileref="AK47_cycle_FromINS.wav" volume="0.4" />
+    <sound key="fire" fileref="tkb408_fire_FromCF.wav" pitch_variety="0.05" volume="0.6" />
+    <sound key="magazine_out" fileref="tkb408_mgz_out_FromTTF2.wav" volume="0.8" />
+    <sound key="magazine_in" fileref="tkb408_mgz_in_FromTTF2.wav" volume="0.8" />
+    <sound key="cycle" fileref="tkb408_cycle_FromTTF2.wav" volume="0.8" />
     <sound class="impact" fileref="rifle_drop.wav" />    
     <model filename="gkw_tkb408_melondove.xml" />
 

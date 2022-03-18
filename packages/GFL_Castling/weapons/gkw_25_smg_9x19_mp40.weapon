@@ -17,10 +17,10 @@
 
     
     <inventory  buy_price="15.0" sell_price="5.0" />
-    <sound key="fire" fileref="MP40_Fire_FromBFV.wav" pitch_variety="0.05" volume="1" />
-    <sound key="magazine_out" fileref="MP40_mgz_out_FromBFV.wav" volume="1" />
-    <sound key="magazine_in" fileref="MP40_mgz_in_FromBFV.wav" volume="1" />
-    <sound key="cycle" fileref="MP40_cycle_FromBFV.wav" volume="1" />
+    <sound key="fire" fileref="mp40_fire_FromCOD14.wav" pitch_variety="0.05" volume="1" />
+    <sound key="magazine_out" fileref="MP40_mgz_out_FromBFV.wav" volume="0.9" />
+    <sound key="magazine_in" fileref="MP40_mgz_in_FromBFV.wav" volume="0.9" />
+    <sound key="cycle" fileref="MP40_cycle_FromBFV.wav" volume="0.9" />
     <sound class="impact" fileref="rifle_drop.wav" />    
     <model filename="gkw_smg_mp40.xml"/>
 

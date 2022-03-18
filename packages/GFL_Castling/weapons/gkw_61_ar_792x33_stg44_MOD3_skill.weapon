@@ -30,9 +30,9 @@
     <capacity value="1" source="rank" source_value="4.622" />
 
 
-    <sound key="magazine_out" fileref="m4a1_mgz_out_FromINS.wav" volume="0.6" />
-    <sound key="magazine_in" fileref="m4a1_mgz_in_FromINS.wav" volume="0.6" />
-    <sound key="cycle" fileref="m4a1_cycle_FromINS.wav" volume="1" />
+    <sound key="magazine_out" fileref="" volume="0.6" />
+    <sound key="magazine_in" fileref="stg44skill_mgz_in_FromBF2PR.wav" volume="0.8" />
+    <sound key="cycle" fileref="stg44_cycle_FromCOD4R.wav" volume="1" />
     <sound class="impact" fileref="rifle_drop.wav" />
 
     <model filename="gkw_ar_stg44.xml" />

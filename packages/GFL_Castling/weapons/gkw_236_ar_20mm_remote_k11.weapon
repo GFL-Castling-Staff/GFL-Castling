@@ -13,10 +13,10 @@
   <animation state_key="reload" animation_key="reloading, m79" />
 
 
-  <sound key="fire" fileref="xm25_shot.wav" pitch_variety="0.1" volume="1.0" />
-  <sound key="magazine_out" fileref="rifle_clip_out.wav" />
-  <sound key="magazine_in" fileref="rifle_clip_in.wav" />
-  <sound key="cycle" fileref="rifle_chamber.wav" />
+  <sound key="fire" fileref="k11skill_fire_FromBF2042.wav" pitch_variety="0.1" volume="1.3" />
+  <sound key="magazine_out" fileref="js05_mgz_out_FromCOD17.wav" volume="0.7" />
+  <sound key="magazine_in" fileref="js05_mgz_in_FromCOD17.wav" volume="0.7" />
+  <sound key="cycle" fileref="js05_cycle_FromCOD17.wav" volume="0.6" />
   <sound class="impact" fileref="rifle_drop.wav" />
 
   <model filename="gkw_ar_k11.xml" />

@@ -22,10 +22,10 @@
 
     
     <inventory  buy_price="20.0" sell_price="20.0" />
-    <sound key="fire" fileref="ar57_fire_FromINS.wav" pitch_variety="0.05" volume="0.7" />
-    <sound key="magazine_out" fileref="ar57_mgz_out_FromINS.wav" volume="0.5" />
-    <sound key="magazine_in" fileref="ar57_mgz_in_FromINS.wav" volume="0.5" />
-    <sound key="cycle" fileref="ar57_cycle_FromINS.wav" volume="0.5" />
+    <sound key="fire" fileref="ar57_fire_FromIRONSIGHT.wav" pitch_variety="0.05" volume="1.2" />
+    <sound key="magazine_out" fileref="ar57_mgz_out_FromKF2.wav" volume="1.1" />
+    <sound key="magazine_in" fileref="ar57_mgz_in_FromKF2.wav" volume="1.1" />
+    <sound key="cycle" fileref="ar57_cycle_FromBORDERLAND3.wav" volume="1.1" />
     <sound class="impact" fileref="rifle_drop.wav" />    
     <model filename="gkw_smg_ar57.xml" />
 

@@ -24,11 +24,11 @@
 
 
 
-    <sound key="fire" fileref="vhs_fire_FromINS.wav" pitch_variety="0.05" volume="1.2" />
-    <sound key="magazine_out" fileref="vhs_mgz_out_FromINS.wav" volume="1" />
-    <sound key="magazine_in" fileref="vhs_mgz_in_FromINS.wav" volume="1" />
-    <sound key="cycle" fileref="vhs_cycle_FromINS.wav" volume="1" />
-    <sound class="impact" fileref="rifle_drop.wav" volume="1"/>    
+    <sound key="fire" fileref="vhs_fire_FromSURVARIUM.wav" pitch_variety="0.05" volume="1.1" />
+    <sound key="magazine_out" fileref="vhs_mgz_out_FromWF.wav" volume="0.6" />
+    <sound key="magazine_in" fileref="vhs_mgz_in_FromWF.wav" volume="0.6" />
+    <sound key="cycle" fileref="vhs_cycle_FromWF.wav" volume="0.7" />
+    <sound class="impact" fileref="rifle_drop.wav" volume="0.7"/>    
     <model filename="gkw_ar_vhs.xml" />
 
     <hud_icon filename="gkw_vhs.png" />

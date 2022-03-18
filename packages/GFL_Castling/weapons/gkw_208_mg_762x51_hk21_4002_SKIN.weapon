@@ -23,10 +23,10 @@
 
 
 
-    <sound key="fire" fileref="g3_fire_FromINS.wav" pitch_variety="0.05" volume="1" />
-    <sound key="magazine_out" fileref="g3_mgz_out_FromINS.wav" volume="1" />
-    <sound key="magazine_in" fileref="g3_mgz_in_FromINS.wav" volume="1" />
-    <sound key="cycle" fileref="g3_cycle_FromINS.wav" volume="1" />
+    <sound key="fire" fileref="hk21_fire_FromFC6.wav" pitch_variety="0.05" volume="1.2" />
+    <sound key="magazine_out" fileref="hk21_mgz_out_FromFC6.wav" volume="0.8" />
+    <sound key="magazine_in" fileref="hk21_mgz_in_FromFC6.wav" volume="0.8" />
+    <sound key="cycle" fileref="g3_cycle_FromCOD4R.wav" volume="0.6" />
     <sound class="impact" fileref="rifle_drop.wav" />    
     <model filename="gkw_hk21_4002_From_melondove.xml" />
 

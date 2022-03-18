@@ -22,10 +22,10 @@
         <animation state_key="reload" animation_key="ARreload1.5" />
         <animation key="reload" stance_key="prone" animation_key="ARreloadp1.5" />
 
-        <sound key="fire" fileref="arx160_fire_FromINS.wav" pitch_variety="0.05" volume="1" />
-        <sound key="magazine_out" fileref="arx160_mgz_out_FromINS.wav" volume="1" />
-        <sound key="magazine_in" fileref="arx160_mgz_in_FromINS.wav" volume="1" />
-        <sound key="cycle" fileref="arx160_cycle_FromINS.wav" volume="1" />
+        <sound key="fire" fileref="arx160_fire_FromWF.wav" pitch_variety="0.05" volume="1" />
+        <sound key="magazine_out" fileref="arx160_mgz_out_FromWF.wav" volume="0.8" />
+        <sound key="magazine_in" fileref="arx160_mgz_in_FromWF.wav" volume="0.8" />
+        <sound key="cycle" fileref="arx160_cycle_FromWF.wav" volume="0.8" />
         <sound class="impact" fileref="rifle_drop.wav" />
        
         <model filename="gkw_ar_arx160.xml" />

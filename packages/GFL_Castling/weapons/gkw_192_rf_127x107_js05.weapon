@@ -34,12 +34,12 @@
 	
 	<!--Sounds-->
 	
-    <sound key="fire" fileref="m99_fire_FromINS.wav" pitch_variety="0.05" volume="1.2" />
-    <sound key="cycle" fileref="" />
-    <sound key="magazine_out" fileref="m99_mgz_out_FromINS.wav" />
-    <sound key="magazine_in" fileref="m99_mgz_in_FromINS.wav" />
-    <sound key="cycle_out" fileref="" />
-    <sound key="cycle_in" fileref="m99_cycle_FromINS.wav" />
+    <sound key="fire" fileref="js05_fire_FromCOD14.wav" pitch_variety="0.05" volume="1.7" />
+    <sound key="cycle" fileref="js05_cycle_FromCOD17.wav" volume="0.6" />
+    <sound key="magazine_out" fileref="js05_mgz_out_FromCOD17.wav" volume="0.7" />
+    <sound key="magazine_in" fileref="js05_mgz_in_FromCOD17.wav" volume="0.7" />
+    <sound key="cycle_out" fileref="js05_cycle_out_FromCOD17.wav" volume="0.6" />
+    <sound key="cycle_in" fileref="js05_cycle_in_FromCOD17.wav" volume="0.6" />
     <sound class="impact" fileref="rifle_drop.wav" />
    
 	<!--Model, Icon, Cost-->

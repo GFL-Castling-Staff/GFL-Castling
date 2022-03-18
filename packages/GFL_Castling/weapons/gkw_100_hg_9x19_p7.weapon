@@ -43,10 +43,10 @@
 	
 	<!--Sounds-->
 	<inventory  buy_price="2.0" sell_price="2.0" />
-    <sound key="fire" fileref="p7_fire_FromPD2.wav" pitch_variety="0.05" volume="0.9" />
-    <sound key="magazine_out" fileref="p7_mgz_out_FromHALO4.wav" volume="1.6" />
-    <sound key="magazine_in" fileref="p7_mgz_in_FromHALO4.wav" volume="1.6"/>    
-    <sound key="cycle" fileref="p7_cycle_FromHALO4.wav" volume="1.6" />
+    <sound key="fire" fileref="p7_fire_FromPD2.wav" pitch_variety="0.05" volume="1" />
+    <sound key="magazine_out" fileref="p7_mgz_out_FromHALO4.wav" volume="0.9" />
+    <sound key="magazine_in" fileref="p7_mgz_in_FromHALO4.wav" volume="0.9"/>    
+    <sound key="cycle" fileref="p7_cycle_FromHALO4.wav" volume="0.9" />
 
    
 	<!--Model, Icon, Cost-->

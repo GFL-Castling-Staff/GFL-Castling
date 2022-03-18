@@ -16,10 +16,10 @@
 
     
     <inventory  buy_price="8.0" sell_price="8.0" />
-    <sound key="fire" fileref="sp9_fire_FromINS.wav" pitch_variety="0.05" volume="1" />
-    <sound key="magazine_out" fileref="sp9_mgz_out_FromINS.wav" volume="0.6" />
-    <sound key="magazine_in" fileref="sp9_mgz_in_FromINS.wav" volume="0.6" />
-    <sound key="cycle" fileref="sp9_cycle_FromINS.wav" volume="0.6" />
+    <sound key="fire" fileref="pp90_fire_FromBFH.wav" pitch_variety="0.05" volume="1.1" />
+    <sound key="magazine_out" fileref="pp90_mgz_out_FromBFH.wav" volume="0.7" />
+    <sound key="magazine_in" fileref="pp90_mgz_in_FromBFH.wav" volume="0.7" />
+    <sound key="cycle" fileref="pp90_cycle_FromBFH.wav" volume="0.7" />
     <sound class="impact" fileref="rifle_drop.wav" volume="1"/>    
     <model filename="gkw_pp90_From_nz75.xml" />
 
