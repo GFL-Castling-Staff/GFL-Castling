@@ -34,7 +34,8 @@
 	
     <sound key="fire" fileref="r93_fire_FromBLACKSQUAD.wav" pitch_variety="0.05" volume="1.2" />
     <sound key="cycle" fileref="r93_cycle_FromCF.wav" volume="0.7"/>
-    <sound key="reload_one" fileref="G43_reload_FromBF5.wav" volume="0.15" />
+    <sound key="magazine_out" fileref="r93_mgz_out_FromBLACKSQUAD.wav" volume="0.6" />
+    <sound key="magazine_in" fileref="r93_mgz_in_FromBLACKSQUAD.wav" volume="0.6" />
     <sound key="cycle_out" fileref="r93_cycle_out_FromCF.wav"  volume="0.8"/>
     <sound key="cycle_in" fileref="r93_cycle_in_FromCF.wav"  volume="0.8"/> 
     <sound class="impact" fileref="rifle_drop.wav" volume="1"/>
