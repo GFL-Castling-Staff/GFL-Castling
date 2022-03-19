@@ -15,7 +15,7 @@
 	name="SVD with 7N14" 
 	class="4" 
 	burst_shots="1"
-	last_burst_retrigger_time="0.2"
+	last_burst_retrigger_time="0.125"
 	reload_one_at_a_time="0" 
 	sight_range_modifier="2.8" 
 	projectile_speed="226.6" 
@@ -26,8 +26,8 @@
 	
   	<animation state_key="hold_casual"			animation_key="dancing, kazachok" />
 
-    <animation key="reload" animation_key="magBrifleR" />
-	<animation key="reload" stance_key="prone" animation_key="magBrifleRp" />		
+    <animation key="reload" animation_key="ARreload1.8" />
+	<animation key="reload" stance_key="prone" animation_key="ARreloadp1.8" />		
 	
 	<!--Sounds-->
 	
