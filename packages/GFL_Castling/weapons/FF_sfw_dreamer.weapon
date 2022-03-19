@@ -102,7 +102,7 @@
     <animation state_key="still_against_wall" 	animation_key="hold, hip fire" />
 	<animation state_key="walking" animation_key="walking, hip fire" />
 	<animation state_key="running" animation_key="walking, hip fire" />
-	<animation state_key="reload" animation_key="reloading, microgun" />
+	<animation state_key="reload" animation_key="reloading, dreamer" />
 	<animation state_key="next_in_chain_in" animation_key="ARswitch1.2" />
     <sound key="fire" fileref="sf_boss_fire_3.wav" pitch_variety="0.05" volume="0.2" />
     <sound key="magazine_out" fileref="kccoar_mgz_out_FromINS.wav" volume="0.8" />
@@ -112,7 +112,7 @@
 
     <model filename="sfw_dreamer.xml" />
 
-    <hud_icon filename="testing.png" />
+    <hud_icon filename="sfw_dreamer_skill1.png" />
 
     <weak_hand_hold offset="0.4" />
 
@@ -184,7 +184,7 @@
 	
     <model filename="sfw_dreamer.xml" />
 
-    <hud_icon filename="sfw_dreamer.png" />
+    <hud_icon filename="sfw_dreamer_skill2.png" />
 	<effect class="muzzle" ref="dreamer"/>
 
     <weak_hand_hold offset="0.4" />
