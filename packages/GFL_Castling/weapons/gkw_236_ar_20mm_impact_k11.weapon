@@ -27,7 +27,8 @@
     <inventory buy_price="35.0" sell_price="35.0" />
 
 
-    <animation state_key="reload" animation_key="reloading, m79" />
+    <animation key="reload" animation_key="magBrifleR" />
+	<animation key="reload" stance_key="prone" animation_key="magBrifleRp" />		
     <animation key="cycle" animation_key="Brifle0.8" />
 	<animation key="cycle" stance_key="prone" animation_key="Brifle0.8p" />	
 
