@@ -14,7 +14,7 @@
 	suppressed="0" 
 	name="Carcano1938" 
 	class="2" 
-	reload_one_at_a_time="1" 
+	reload_one_at_a_time="0" 
 	sight_range_modifier="2.8" 
 	projectile_speed="179.79" 
 	barrel_offset="0.4" 
@@ -26,15 +26,16 @@
 
     <animation key="cycle" animation_key="Brifle1.1" />
 	<animation key="cycle" stance_key="prone" animation_key="Brifle1.1p" />	
-    <animation key="reload" animation_key="BrifleROaaT" />
-	<animation key="reload" stance_key="prone" animation_key="BrifleROaaTp" />			
+    <animation key="reload" animation_key="magBrifleR" />
+	<animation key="reload" stance_key="prone" animation_key="magBrifleRp" />			
 	
 	<!--Sounds-->
 	
     <sound key="fire" fileref="carcano1938_fire_FromBF5.wav" pitch_variety="0.05" volume="1.5" />
     <sound key="cycle" fileref="carcano_cycle_FromBF5.wav" volume="0.6"/>
       <!-- <sound key="magazine_out" fileref="" volume="1"/> -->
-    <sound key="reload_one" fileref="carcano_reload_FromBF5.wav" volume="0.3" />
+    <sound key="magazine_out" fileref="carcano1891_mgz_out_FromINS.wav" volume="0.6" />
+    <sound key="magazine_in" fileref="carcano1891_mgz_in_FromINS.wav" volume="0.6" />
     <sound key="cycle_out" fileref="carcano_cycle_out_FromBF5.wav"  volume="0.8"/>
     <sound key="cycle_in" fileref="carcano_cycle_in_FromBF5.wav"  volume="0.8"/> 
     <sound class="impact" fileref="rifle_drop.wav" volume="1"/>
