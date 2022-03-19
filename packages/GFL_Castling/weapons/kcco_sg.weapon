@@ -34,9 +34,9 @@
 	
 	<animation state_key="stabbing" animation_key="melee, bayonet" />
 	
-    <sound key="fire" fileref="mossberg500_fire.wav" volume="0.7" />
-    <sound key="cycle" fileref="mossberg500_cycle.wav" />
-    <sound key="reload_one" fileref="mossberg500_reload.wav" />
+    <sound key="fire" fileref="kccosg_fire_FromTTF2.wav" volume="1" />
+    <sound key="cycle" fileref="ks23_cycle_fromSURVARIUM.wav" />
+    <sound key="reload_one" fileref="sg_reload_fromCOD10.wav" />
     <sound class="impact" fileref="rifle_drop.wav" />
     <model filename="kccow_sg.xml" />
 

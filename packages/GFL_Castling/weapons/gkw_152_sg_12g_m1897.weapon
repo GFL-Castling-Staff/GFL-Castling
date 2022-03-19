@@ -35,8 +35,8 @@
 	<!--Sounds-->
 	
     <sound key="fire" fileref="m1897_fire_FromCOD5.wav" pitch_variety="0.05" volume="1" />
-    <sound key="cycle" fileref="m1897_cycle_FromCOD5.wav" />
-    <sound key="reload_one" fileref="m1897_reload_FromCOD14.wav" />
+    <sound key="cycle" fileref="m1897_cycle_FromCOD5.wav" volume="0.7" />
+    <sound key="reload_one" fileref="m1897_reload_FromCOD14.wav" volume="0.9" />
     <sound class="impact" fileref="rifle_drop.wav" />
    
 	<!--Model, Icon, Cost-->
@@ -103,9 +103,9 @@
 	
 	<!--Sounds-->
 	
-    <sound key="fire" fileref="m1897_fire_FromCOD5.wav" pitch_variety="0.05" volume="1.4" />
-    <sound key="cycle" fileref="m1897_cycle_FromCOD5.wav" />
-    <sound key="reload_one" fileref="m1897_reload_FromCOD14.wav" />
+    <sound key="fire" fileref="m1897skill_fire_FromKF2.wav" pitch_variety="0.05" volume="1.2" />
+    <sound key="cycle" fileref="m1897_cycle_FromCOD5.wav" volume="0.7" />
+    <sound key="reload_one" fileref="m1897_reload_FromCOD14.wav" volume="0.9" />
     <sound class="impact" fileref="rifle_drop.wav" />
    
 	<!--Model, Icon, Cost-->

@@ -27,10 +27,10 @@
         <animation key="reload" stance_key="prone" animation_key="ARreloadp1.5" />
         <animation state_key="next_in_chain_in" animation_key="ARswitch0.5" />
 
-        <sound key="fire" fileref="ribeyrolles_Fire_FromBF1.wav" pitch_variety="0.01" volume="1"/>
-        <sound key="magazine_out" fileref="ribeyrolles_mgz_out_FromBF1.wav" volume="1" />
-        <sound key="magazine_in" fileref="ribeyrolles_mgz_in_FromBF1.wav" volume="1" />
-        <sound key="cycle" fileref="ribeyrolles_cycle_FromBF1.wav" volume="1" />
+        <sound key="fire" fileref="ribeyrolles_fire_FromBF5.wav" pitch_variety="0.01" volume="1"/>
+        <sound key="magazine_out" fileref="ribeyrolles_mgz_out_FromBF1.wav" volume="0.7" />
+        <sound key="magazine_in" fileref="ribeyrolles_mgz_in_FromBF1.wav" volume="0.7" />
+        <sound key="cycle" fileref="ribeyrolles_cycle_FromBF1.wav" volume="0.7" />
         <sound class="impact" fileref="rifle_drop.wav" />
         <model filename="gkw_ar_Ribeyrolles_from_MELONDOVE.xml" />
         <hud_icon filename="gkw_ribeyrolles.png" />
@@ -74,10 +74,10 @@
         <animation key="reload" stance_key="prone" animation_key="ARreloadp1.8" />
         <animation state_key="next_in_chain_in" animation_key="ARswitch1.2" />
 
-        <sound key="fire" fileref="ribeyrolles_Fire_FromBF1.wav" pitch_variety="0.01" volume="0.7"/>
-        <sound key="magazine_out" fileref="m1a1_mgz_out_FromINS.wav" volume="1" />
-        <sound key="magazine_in" fileref="m1a1_mgz_in_FromINS.wav" volume="1" />
-        <sound key="cycle" fileref="m1a1_cycle_FromINS.wav" volume="1" />
+        <sound key="fire" fileref="ribeyrolles_Fire_FromBF1.wav" pitch_variety="0.01" volume="1"/>
+        <sound key="magazine_out" fileref="ribeyrolles_mgz_out_FromBF1.wav" volume="0.7" />
+        <sound key="magazine_in" fileref="ribeyrolles_mgz_in_FromBF1.wav" volume="0.7" />
+        <sound key="cycle" fileref="ribeyrolles_cycle_FromBF1.wav" volume="0.7" />
         <sound class="impact" fileref="rifle_drop.wav" />
         <model filename="gkw_ar_Ribeyrolles_from_MELONDOVE.xml" />
         <hud_icon filename="gkw_ribeyrolles_skill.png" />
