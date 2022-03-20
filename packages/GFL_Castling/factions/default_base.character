@@ -123,47 +123,59 @@
 	<comment key="ServerQuickChatAlert003" text="&#37;name向您发出警告--请不要恶意击杀友军"/>
 	<comment key="ServerQuickChatAlert004" text="&#37;name向您发出警告--请不要恶意扰乱游戏秩序"/>
 	<comment key="skillcooldownhint" text="技能冷却还有&#37;time秒"/>
-	<!-- 快捷喊话——警告用语 -->
-	<comment key="quickchat1" text="敌方炮火打击！立即规避！"/>
-	<comment key="quickchat1d" text="&#37;name>> 敌方炮火打击！立即规避！"/>
-	<comment key="quickchat2" text="潜行中，请勿靠近！"/>
-	<comment key="quickchat2d" text="&#37;name>> 潜行中，请勿靠近！"/>
-	<comment key="quickchat3" text="注意火力，友方载具！"/>
-	<comment key="quickchat3d" text="&#37;name>> 注意火力，友方载具！"/>
-	<comment key="quickchat4" text="注意，已投掷C4！"/>
-	<comment key="quickchat4d" text="&#37;name>> 注意，已投掷C4！"/>
-	<comment key="quickchat5" text="我重伤倒地，但是不需要庸医！"/>
-	<comment key="quickchat5d" text="&#37;name>> 我重伤倒地，但是不需要庸医！"/>
-	<!-- 快捷喊话——战术交流用语 -->
-    <comment key="quickchat6" text="需要火力掩护！"/>
-	<comment key="quickchat6d" text="&#37;name>> 需要火力掩护！"/>
-	<comment key="quickchat7" text="需要医疗支援！"/>
-	<comment key="quickchat7d" text="&#37;name>> 需要医疗支援！"/>
-	<comment key="quickchat8" text="格里芬！冲锋！"/>
-	<comment key="quickchat8d" text="&#37;name>> 格里芬！冲锋！"/>
-	<comment key="quickchat9" text="跟我来！"/>
-	<comment key="quickchat9d" text="&#37;name>> 跟我来！"/>
-	<!-- 快捷喊话——乱七八糟整活向用语 -->
-	<comment key="quickchat10" text="欢迎各位玩家！请加入模组交流群进行交流，QQ：706234535"/>
-	<comment key="quickchat10d" text="&#37;name>> 欢迎各位玩家！请加入模组交流群进行交流，QQ：706234535"/>
-	<comment key="quickchat11" text="诸位萌新玩家可以到玩家Lappland处领取福利。"/>
-	<comment key="quickchat11d" text="&#37;name>> 诸位萌新玩家可以到玩家Lappland处领取福利。"/>
-	<comment key="quickchat12" text="M99小小的，软软的，嘿嘿嘿~"/>
-	<comment key="quickchat12d" text="&#37;name>> M99小小的，软软的，嘿嘿嘿~"/>
-	<comment key="quickchat13" text="Ypa！！！"/>
-	<comment key="quickchat13d" text="&#37;name>> Ypa！！！"/>
-	<comment key="quickchat14" text="寄！！！"/>
-	<comment key="quickchat14d" text="&#37;name>> 寄！！！"/>
-	<comment key="quickchat15" text="请勿抢夺我的战利品！"/>
-	<comment key="quickchat15d" text="&#37;name>> 请勿抢夺我的战利品！"/>
-	<comment key="quickchat16" text="萨尼铁塔！"/>
-	<comment key="quickchat16d" text="&#37;name>> 萨尼铁塔！"/>
-	<comment key="quickchat17" text="上车请换披风！"/>
-	<comment key="quickchat17d" text="&#37;name>> 上车请换披风！"/>
-	<comment key="quickchat18" text="发现敌方载具！"/>
-	<comment key="quickchat18d" text="&#37;name>> 发现敌方载具！"/>
-	<comment key="quickchat19" text="敌方载具已被摧毁！"/>
-	<comment key="quickchat19d" text="&#37;name>> 敌方载具已被摧毁！"/>
-	<comment key="quickchat20" text="小心Ame！"/>
-	<comment key="quickchat20d" text="&#37;name>> 小心Ame！"/>
+
+	<comment key="quickchat1" text="谢谢！"/>
+	<comment key="quickchat1d" text="&#37;name>> 谢谢！"/>
+	<comment key="quickchat2" text="我的错"/>
+	<comment key="quickchat2d" text="&#37;name>> 我的错"/>
+	<comment key="quickchat3" text="小心！"/>
+	<comment key="quickchat3d" text="&#37;name>> 小心！"/>
+	<comment key="quickchat4" text="发现敌方载具！"/>
+	<comment key="quickchat4d" text="&#37;name>> 发现敌方载具！"/>
+	<comment key="quickchat5" text="敌方支援火力覆盖！"/>
+	<comment key="quickchat5d" text="&#37;name>> 敌方支援火力覆盖！"/>
+	<comment key="quickchat6" text="救救我！"/>
+	<comment key="quickchat6d" text="&#37;name>> 救救我！"/>
+	<comment key="quickchat7" text="已击毁敌方载具！"/>
+	<comment key="quickchat7d" text="&#37;name>> 已击毁敌方载具！"/>
+	<comment key="quickchat8" text="已窃取敌方载具！"/>
+	<comment key="quickchat8d" text="&#37;name>> 已窃取敌方载具！"/>
+	<comment key="quickchat9" text="注意火力，友方载具！"/>
+	<comment key="quickchat9d" text="&#37;name>> 注意火力，友方载具！"/>
+	<comment key="quickchat10" text="跟我来"/>
+	<comment key="quickchat10d" text="&#37;name>> 跟我来"/>
+	<comment key="quickchat11" text="寄了"/>
+	<comment key="quickchat11d" text="&#37;name>> 寄了"/>
+	<comment key="quickchat12" text="欢迎各位玩家！请加入模组交流群进行交流，QQ：706234535"/>
+	<comment key="quickchat12d" text="&#37;name>> 欢迎各位玩家！请加入模组交流群进行交流，QQ：706234535"/>
+	<comment key="quickchat13" text="欢迎"/>
+	<comment key="quickchat13d" text="&#37;name>> 欢迎"/>
+	<comment key="quickchat14" text="这个给你"/>
+	<comment key="quickchat14d" text="&#37;name>> 这个给你"/>
+	<comment key="quickchat15" text="让我来吧"/>
+	<comment key="quickchat15d" text="&#37;name>> 让我来吧"/>
+	<comment key="quickchat16" text="格里芬！冲锋！"/>
+	<comment key="quickchat16d" text="&#37;name>> 格里芬！冲锋！"/>
+	<comment key="quickchat17" text="坚守这里"/>
+	<comment key="quickchat17d" text="&#37;name>> 坚守这里"/>
+	<comment key="quickchat18" text="随我撤退"/>
+	<comment key="quickchat18d" text="&#37;name>> 随我撤退"/>
+	<comment key="quickchat19" text="潜行中，请勿靠近！"/>
+	<comment key="quickchat19d" text="&#37;name>> 潜行中，请勿靠近！"/>
+	<comment key="quickchat20" text="请保持隐匿"/>
+	<comment key="quickchat20d" text="&#37;name>> 请保持隐匿"/>
+	<comment key="quickchat21" text="萨尼铁塔！"/>
+	<comment key="quickchat21d" text="&#37;name>> 萨尼铁塔！"/>
+	<comment key="quickchat22" text="上车请换披风！"/>
+	<comment key="quickchat22d" text="&#37;name>> 上车请换披风！"/>
+	<comment key="quickchat23" text="M99小小的，软软的，嘿嘿嘿~"/>
+	<comment key="quickchat23d" text="&#37;name>> M99小小的，软软的，嘿嘿嘿~"/>
+	<comment key="quickchat24" text="Ypa！！！"/>
+	<comment key="quickchat24d" text="&#37;name>> Ypa！！！"/>
+	<comment key="quickchat25" text="请勿抢夺我的战利品！"/>
+	<comment key="quickchat25d" text="&#37;name>> 请勿抢夺我的战利品！"/>
+	<comment key="quickchat26" text="润"/>
+	<comment key="quickchat26d" text="&#37;name>> 润"/>
+
+
 </character>
