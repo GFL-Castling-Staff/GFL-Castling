@@ -38,10 +38,10 @@
     <animation state_key="stabbing" animation_key="pistol whip 2" />
     <animation state_key="stabbing" animation_key="pistol whip 3" />
 
-    <sound key="fire" fileref="MGL_Fire_Frompayday2.wav" pitch_variety="0.05" volume="1" />
-    <sound key="magazine_out" fileref="kccoar_mgz_out_FromINS.wav" volume="0.8" />
-    <sound key="magazine_in" fileref="kccoar_mgz_in_FromINS.wav" volume="0.8" />
-    <sound key="cycle" fileref="kccoar_cycle_FromINS.wav" volume="0.8" />
+    <sound key="fire" fileref="destroyer_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.8" />
+    <sound key="magazine_out" fileref="ags30_mgz_out_FromBF1.wav" volume="0.9" />
+    <sound key="magazine_in" fileref="ags30_mgz_in_FromBF1.wav" volume="0.9" />
+    <sound key="cycle" fileref="ags30_cycle_FromCOD6R.wav" volume="0.9" />
     <sound class="impact" fileref="rifle_drop.wav" />    
     <model filename="" />
 

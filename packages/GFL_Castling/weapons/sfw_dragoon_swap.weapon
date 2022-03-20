@@ -33,10 +33,10 @@
 	
 	<commonness value="0.0001" in_stock="1" can_respawn_with="1" />
 
-    <sound key="fire" fileref="sf_ar.wav" pitch_variety="0.05" volume="1" />
-    <sound key="magazine_out" fileref="kccoar_mgz_out_FromINS.wav" volume="0.8" />
-    <sound key="magazine_in" fileref="kccoar_mgz_in_FromINS.wav" volume="0.8" />
-    <sound key="cycle" fileref="kccoar_cycle_FromINS.wav" volume="0.8" />
+    <sound key="fire" fileref="dragoon_fire_FromCOD13.wav" pitch_variety="0.05" volume="1.2" />
+    <sound key="magazine_out" fileref="" volume="0.8" />
+    <sound key="magazine_in" fileref="sf_boss_re.wav" volume="0.7" />
+    <sound key="cycle" fileref="" volume="0.8" />
     <sound class="impact" fileref="rifle_drop.wav" />    
     <model filename="" />
 

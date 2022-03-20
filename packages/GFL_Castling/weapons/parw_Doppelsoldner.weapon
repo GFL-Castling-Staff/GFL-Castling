@@ -38,9 +38,9 @@
 	<animation state_key="running" animation_key="walking, pistol dual" />
 	
 	
-    <sound key="fire" fileref="m202_flash_shot.wav" />
+    <sound key="fire" fileref="Doppelsoldner_fire_FromCOD13.wav" volume="1.2" />
     <sound key="cycle" fileref="mossberg500_cycle.wav" />
-    <sound key="reload_one" fileref="mossberg500_reload.wav" />
+    <sound key="reload_one" fileref="Doppelsoldner_reload_FromCOD13.wav" volume="0.7" />
     <sound class="impact" fileref="rifle_drop.wav" />
     <model filename="" />
 

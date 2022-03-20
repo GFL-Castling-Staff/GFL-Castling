@@ -6,10 +6,10 @@
         <animation key="reload" animation_key="MGreload3.8" />
         <inventory buy_price="30.0" sell_price="30.0" />
         <next_in_chain key="gkw_negev_skill_1.weapon" share_ammo="0" />
-        <sound key="fire" fileref="negevskill_fire_FromCF.wav" pitch_variety="0.05" volume="1.2" />
-        <sound key="magazine_out" fileref="negev_mgz_out_FromCF.wav" volume="0.8" />
-        <sound key="magazine_in" fileref="negev_mgz_in_FromCF.wav" volume="0.8" />
-        <sound key="cycle" fileref="negev_cycle_FromCF.wav" volume="0.8" />
+        <sound key="fire" fileref="negevskill_fire_FromCF.wav" pitch_variety="0.05" volume="1" />
+        <sound key="magazine_out" fileref="negev_mgz_out_FromCF.wav" volume="0.7" />
+        <sound key="magazine_in" fileref="negev_mgz_in_FromCF.wav" volume="0.7" />
+        <sound key="cycle" fileref="negev_cycle_FromCF.wav" volume="0.7" />
         <sound class="impact" fileref="rifle_drop.wav" />
         <model filename="gkw_mg_negev.xml" />
         <hud_icon filename="gkw_negev.png" />
@@ -34,10 +34,10 @@
         <commonness value="0" in_stock="0" />
         <inventory buy_price="30.0" sell_price="30.0" />
         <next_in_chain key="gkw_negev_skill_2.weapon" share_ammo="0" />
-        <sound key="fire" fileref="negevskill_fire_FromCF.wav" pitch_variety="0.05" volume="1.2" />
-        <sound key="magazine_out" fileref="negev_mgz_out_FromCF.wav" volume="0.8" />
-        <sound key="magazine_in" fileref="negev_mgz_in_FromCF.wav" volume="0.8" />
-        <sound key="cycle" fileref="negev_cycle_FromCF.wav" volume="0.8" />
+        <sound key="fire" fileref="negevskill_fire_FromCF.wav" pitch_variety="0.05" volume="1" />
+        <sound key="magazine_out" fileref="negev_mgz_out_FromCF.wav" volume="0.7" />
+        <sound key="magazine_in" fileref="negev_mgz_in_FromCF.wav" volume="0.7" />
+        <sound key="cycle" fileref="negev_cycle_FromCF.wav" volume="0.7" />
         <sound class="impact" fileref="rifle_drop.wav" />
         <model filename="gkw_mg_negev.xml" />
         <hud_icon filename="gkw_negev_skill.png" />
@@ -60,10 +60,10 @@
         <commonness value="0" in_stock="0" />
         <inventory buy_price="30.0" sell_price="30.0" />
         <next_in_chain key="gkw_negev_skill_3.weapon" share_ammo="0" />
-        <sound key="fire" fileref="negevskill_fire_FromCF.wav" pitch_variety="0.05" volume="1.2" />
-        <sound key="magazine_out" fileref="negev_mgz_out_FromCF.wav" volume="0.8" />
-        <sound key="magazine_in" fileref="negev_mgz_in_FromCF.wav" volume="0.8" />
-        <sound key="cycle" fileref="negev_cycle_FromCF.wav" volume="0.8" />
+        <sound key="fire" fileref="negevskill_fire_FromCF.wav" pitch_variety="0.05" volume="1" />
+        <sound key="magazine_out" fileref="negev_mgz_out_FromCF.wav" volume="0.7" />
+        <sound key="magazine_in" fileref="negev_mgz_in_FromCF.wav" volume="0.7" />
+        <sound key="cycle" fileref="negev_cycle_FromCF.wav" volume="0.7" />
         <sound class="impact" fileref="rifle_drop.wav" />
         <model filename="gkw_mg_negev.xml" />
         <hud_icon filename="gkw_negev_skill.png" />

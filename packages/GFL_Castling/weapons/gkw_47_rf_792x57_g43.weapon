@@ -30,10 +30,10 @@
 	
 	<!--Sounds-->
 	
-    <sound key="fire" fileref="g43_fire_FromPOSTSCRIPTUM.wav" pitch_variety="0.01" volume="1.1" />
-    <sound key="cycle" fileref="r93_cycle_FromCF.wav" volume="0.7"/>
-    <sound key="magazine_out" fileref="r93_mgz_out_FromBLACKSQUAD.wav" volume="0.6" />
-    <sound key="magazine_in" fileref="r93_mgz_in_FromBLACKSQUAD.wav" volume="0.6" />
+    <sound key="fire" fileref="g43_fire_FromPOSTSCRIPTUM.wav" pitch_variety="0.01" volume="1.4" />
+    <sound key="cycle" fileref="g43_cycle_FromBF5.wav" volume="0.7"/>
+    <sound key="magazine_out" fileref="g43_mgz_out_FromBF5.wav" volume="0.6" />
+    <sound key="magazine_in" fileref="g43_mgz_in_FromBF5.wav" volume="0.6" />
     <sound class="impact" fileref="rifle_drop.wav" />
    
 	<!--Model, Icon, Cost-->

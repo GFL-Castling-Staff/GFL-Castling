@@ -32,10 +32,10 @@
     <animation state_key="running" animation_key="walking, hip fire" />  
     
     
-    <sound key="fire" fileref="sf_minigun_fire.wav" pitch_variety="0.05" volume="0.18" />
-    <sound key="magazine_out" fileref="kccoar_mgz_out_FromINS.wav" volume="0.8" />
-    <sound key="magazine_in" fileref="kccoar_mgz_in_FromINS.wav" volume="0.8" />
-    <sound key="cycle" fileref="kccoar_cycle_FromINS.wav" volume="0.8" />
+    <sound key="fire" fileref="striker_fire_FromCOD11.wav" pitch_variety="0.05" volume="1.6" />
+	<sound key="magazine_out" fileref="ags30_mgz_out_FromBF1.wav" volume="0.8" />
+    <sound key="magazine_in" fileref="ags30_mgz_in_FromBF1.wav" volume="0.8" />
+	<sound key="cycle" fileref="striker_cycle_FromCOD12.wav" volume="0.7" />
     <sound class="impact" fileref="rifle_drop.wav" />    
     
     <model filename="sfw_striker_swap_from_dusk.xml" />

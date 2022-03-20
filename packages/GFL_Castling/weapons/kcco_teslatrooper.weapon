@@ -61,9 +61,9 @@
 <animation key="celebrating" target_key="jumping, large mecha" />
 <animation key="celebrating, shooting" target_key="jumping, large mecha" />
            
-<sound key="fire" fileref="mossberg500_fire.wav" volume="0.6" />
+<sound key="fire" fileref="Teslatrooper_fire_FromBF5.wav" volume="1.1" />
 <sound key="cycle" fileref="mossberg500_cycle.wav" />
-<sound key="reload_one" fileref="mossberg500_reload.wav" />
+<sound key="reload_one" fileref="Teslatrooper_reload_FromBF5.wav" volume="0.8" />
 <sound class="impact" fileref="rifle_drop.wav" />
 
 <drop_on_death_result class="spawn" instance_class="carry_item" instance_key="city_gifts.carry_item" min_amount="1.0" max_amount="2.0" offset="0 1.0 0" position_spread="0 0" direction_spread="0 0" />

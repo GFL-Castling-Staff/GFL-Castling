@@ -37,10 +37,10 @@
 
 	<!--Sounds-->
 	
-    <sound key="fire" fileref="MGL_Fire_Frompayday2.wav" pitch_variety="0.05" volume="0.3" />
-    <sound key="magazine_out" fileref="mg42_mgz_out_FromINS.wav" volume="1" />
-    <sound key="magazine_in" fileref="mg42_mgz_in_FromINS.wav" volume="1" />
-    <sound key="cycle" fileref="m2hb_cycle_FromINT.wav" volume="1" />
+    <sound key="fire" fileref="qlz04_fire_FromFC4.wav" pitch_variety="0.05" volume="1.4" />
+    <sound key="magazine_out" fileref="ags30_mgz_out_FromBF1.wav" volume="1.1" />
+    <sound key="magazine_in" fileref="ags30_mgz_in_FromBF1.wav" volume="1.1" />
+    <sound key="cycle" fileref="ags30_cycle_FromCOD6R.wav" volume="1.1" />
     <sound class="impact" fileref="rifle_drop.wav" />
    
 	<!--Model, Icon, Cost-->

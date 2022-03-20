@@ -31,10 +31,10 @@
 
     <animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
 
-	<sound key="fire" fileref="parw_plus_Fire_FromHS4.wav" pitch_variety="0.05" volume="0.3"/>
-    <sound key="magazine_out" fileref="mg_clip_out.wav" />
-    <sound key="magazine_in" fileref="mg_clip_in.wav" />
-    <sound key="cycle" fileref="rifle_chamber.wav" />
+	<sound key="fire" fileref="streletplus_fire_FromTTF2.wav" pitch_variety="0.05" volume="1.4"/>
+    <sound key="magazine_out" fileref="streletplus_mgz_out_FromTTF2.wav" volume="0.7" />
+    <sound key="magazine_in" fileref="streletplus_mgz_in_FromTTF2.wav" volume="0.7" />
+    <sound key="cycle" fileref="streletplus_cycle_FromTTF2.wav" volume="0.7" />
     <sound class="impact" fileref="rifle_drop.wav" />
 	
     <model filename="parw_soldier_gun.xml" />

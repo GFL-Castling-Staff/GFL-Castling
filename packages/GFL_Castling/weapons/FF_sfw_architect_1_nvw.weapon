@@ -26,10 +26,10 @@
     <animation key="reload" stance_key="prone" animation_key="reloading, sniper1, prone" />	
     <animation key="hold" ref="39" />
     <animation key="hold_on_wall" ref="39" />
-    <sound key="fire" fileref="smaw_shot.wav" volume="1.0"/>
-    <sound key="cycle" fileref="" />
-    <sound key="magazine_out" fileref="mk153_reloading_FromCOD16StrelaP.wav" />
-    <sound key="magazine_in" fileref="" />
+    <sound key="fire" fileref="Architectskill_fire_FromCOD17.wav" pitch_variety="0.00" volume="1.7"/>
+    <sound key="cycle" fileref="Architectskill_cycle_FromCOD17.wav" />
+    <sound key="magazine_out" fileref="Architectskill_mgz_out_FromCOD17.wav" /> 
+    <sound key="magazine_in" fileref="Architectskill_mgz_in_FromCOD17.wav" />
     <sound key="cycle_out" fileref="" />
     <sound key="cycle_in" fileref="" />
     <sound class="impact" fileref="rifle_drop.wav" />

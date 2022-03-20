@@ -32,10 +32,10 @@
 	<animation state_key="running" animation_key="walking, hip fire" />  
 	
 
-    <sound key="fire" fileref="sf_ar.wav" pitch_variety="0.05" volume="1" />
-    <sound key="magazine_out" fileref="kccoar_mgz_out_FromINS.wav" volume="0.8" />
-    <sound key="magazine_in" fileref="kccoar_mgz_in_FromINS.wav" volume="0.8" />
-    <sound key="cycle" fileref="kccoar_cycle_FromINS.wav" volume="0.8" />
+    <sound key="fire" fileref="Intruder_fire_FromCOD13.wav" pitch_variety="0.05" volume="2" />
+    <sound key="magazine_out" fileref="Intruder_mgz_out_FromSAM4.wav" volume="0.8" />
+    <sound key="magazine_in" fileref="Intruder_mgz_in_FromSAM4.wav" volume="0.8" />
+    <sound key="cycle" fileref="" volume="0.8" />
     <sound class="impact" fileref="rifle_drop.wav" />    
 	
     <model filename="sfw_Intruder.xml" />

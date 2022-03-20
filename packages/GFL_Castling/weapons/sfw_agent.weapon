@@ -33,10 +33,10 @@
     <animation state_key="stabbing" animation_key="pistol whip 2" />
     <animation state_key="stabbing" animation_key="pistol whip 3" />
 
-    <sound key="fire" fileref="sf_boss_fire.wav" pitch_variety="0.05" volume="0.4" />
-    <sound key="magazine_out" fileref="kccoar_mgz_out_FromINS.wav" volume="0.8" />
-    <sound key="magazine_in" fileref="kccoar_mgz_in_FromINS.wav" volume="0.8" />
-    <sound key="cycle" fileref="kccoar_cycle_FromINS.wav" volume="0.8" />
+    <sound key="fire" fileref="agent_fire_FromCOD11.wav" pitch_variety="0.05" volume="1.2" />
+    <sound key="magazine_out" fileref="" volume="0.8" />
+    <sound key="magazine_in" fileref="sf_boss_re.wav" volume="0.8" />
+    <sound key="cycle" fileref="" volume="0.8" />
     <sound class="impact" fileref="rifle_drop.wav" />    
     <model filename="" />
 

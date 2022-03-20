@@ -49,10 +49,10 @@
 		
 
 
-		<sound key="fire" fileref="kccoar_fire_FromINS.wav" pitch_variety="0.05" volume="1" />
-		<sound key="magazine_out" fileref="kccoar_mgz_out_FromINS.wav" volume="0.8" />
-		<sound key="magazine_in" fileref="kccoar_mgz_in_FromINS.wav" volume="0.8" />
-		<sound key="cycle" fileref="kccoar_cycle_FromINS.wav" volume="0.8" />
+		<sound key="fire" fileref="kccoar_fire_FromBORDERLAND3.wav" pitch_variety="0.05" volume="1.1" />
+		<sound key="magazine_out" fileref="an94_mgz_out_FromCOD16.wav" volume="0.8" />
+        <sound key="magazine_in" fileref="an94_mgz_in_FromCOD16.wav" volume="0.8" />
+        <sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.8" />
 		<sound class="impact" fileref="rifle_drop.wav" />    
 		<model filename="kccow_ar.xml" />
 
@@ -100,10 +100,10 @@
 		<animation key="recoil" ref="14" />
 		<animation state_key="reload" animation_key="reloading, m79" />
 		<animation state_key="next_in_chain_in" animation_key="switch fire mode" />
-		<sound key="fire" fileref="mgl_shot.wav" pitch_variety="0.05" volume="1.0" />
-		<sound key="magazine_out" fileref="m79_clip_out.wav" volume="0.7" />
-		<sound key="magazine_in" fileref="m79_reload.wav" volume="0.7"/>
-		<sound key="cycle" fileref="m79_cycle.wav" volume="0.7"/>
+		<sound key="fire" fileref="gp25_fire_FromSQUAD.wav" pitch_variety="0.05" volume="1.2" />
+        <sound key="magazine_out" fileref="gp25_mgz_out_FromSQUAD.wav" volume="0.8" />
+        <sound key="magazine_in" fileref="gp25_mgz_in_FromSQUAD.wav" volume="0.8" />
+        <sound key="cycle" fileref="gp25_cycle_FromSQUAD.wav" volume="0.8" />
 		<sound class="impact" fileref="rifle_drop.wav" />
 		
 		<model filename="kccow_ar.xml" />

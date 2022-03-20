@@ -25,10 +25,10 @@
         <animation state_key="reload" animation_key="ARreload1.5" />
         <animation key="reload" stance_key="prone" animation_key="ARreloadp1.5" />
 
-        <sound key="fire" fileref="m1a1_fire_FromPOSTSCRIPTUM.wav" pitch_variety="0.01" volume="1"/>
-        <sound key="magazine_out" fileref="m1a1_mgz_out_FromBF5.wav" volume="1" />
-        <sound key="magazine_in" fileref="m1a1_mgz_in_FromBF5.wav" volume="1" />
-        <sound key="cycle" fileref="m1a1_cycle_FromBF5.wav" volume="1" />
+        <sound key="fire" fileref="m1a1_fire_FromPOSTSCRIPTUM.wav" pitch_variety="0.01" volume="1.2"/>
+        <sound key="magazine_out" fileref="m1a1_mgz_out_FromBF5.wav" volume="0.7" />
+        <sound key="magazine_in" fileref="m1a1_mgz_in_FromBF5.wav" volume="0.7" />
+        <sound key="cycle" fileref="m1a1_cycle_FromBF5.wav" volume="0.7" />
         <sound class="impact" fileref="rifle_drop.wav" />
         <model filename="gkw_rf_m1a1.xml" />
         <hud_icon filename="gkw_m1a1.png" />

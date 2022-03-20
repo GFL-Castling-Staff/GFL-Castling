@@ -107,10 +107,10 @@
 	<effect class="muzzle" ref="muzzle_pink"/>
 	<!--Sounds-->
 		
-	<sound key="fire" fileref="star15mod3skill_fire_FromCOD16.wav" pitch_variety="0.05" volume="1" />
-    <sound key="magazine_out" fileref="pdw_mgz_out_FromDAYSGONE.wav" volume="0.6" />
-    <sound key="magazine_in" fileref="pdw_mgz_in_FromDAYSGONE.wav" volume="0.6" />
-    <sound key="cycle" fileref="pdw_cycle_FromDAYSGONE.wav" volume="0.6" />
+	<sound key="fire" fileref="ar15mod3skill_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.1" />
+    <sound key="magazine_out" fileref="star15_mgz_out_FromCOD17.wav" volume="0.7" />
+    <sound key="magazine_in" fileref="star15_mgz_in_FromCOD17.wav" volume="0.7" />
+    <sound key="cycle" fileref="star15_cycle_FromCOD17.wav" volume="0.7" />
  <commonness value="0" in_stock="0" can_respawn_with="1" />
    
  <capacity value="0" source="rank" source_value="0.0" />

@@ -26,10 +26,10 @@
     
     <animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
     
-    <sound key="fire" fileref="sf_ar.wav" pitch_variety="0.05" volume="1" />
-    <sound key="magazine_out" fileref="kccoar_mgz_out_FromINS.wav" volume="0.8" />
-    <sound key="magazine_in" fileref="kccoar_mgz_in_FromINS.wav" volume="0.8" />
-    <sound key="cycle" fileref="kccoar_cycle_FromINS.wav" volume="0.8" />
+    <sound key="fire" fileref="vespid_fire_FromAPEX.wav" pitch_variety="0.05" volume="1.2" />
+    <sound key="magazine_out" fileref="vespid_mgz_out_FromAPEX.wav" volume="0.8" />
+    <sound key="magazine_in" fileref="vespid_mgz_in_FromAPEX.wav" volume="0.8" />
+    <sound key="cycle" fileref="vespid_cycle_FromAPEX.wav" volume="0.8" />
     <sound class="impact" fileref="rifle_drop.wav" />    
     <model filename="sfw_vespid.xml" />
     

@@ -35,12 +35,12 @@
 	
 	<!--Sounds-->
 	
-    <sound key="fire" fileref="NTW20_Fire_FromCOD16HDR.wav" volume="1.4" />
-    <sound key="cycle" fileref="NTW20_cycle_FromCOD16HDR.wav" volume="0.6"/>
-    <sound key="magazine_out" fileref="NTW20_mgz_out_FromCOD16HDR.wav" volume="0.5"/>
-    <sound key="magazine_in" fileref="NTW20_mgz_in_FromCOD16HDR.wav" volume="0.5"/>
-    <sound key="cycle_out" fileref="NTW20_cycle_out_FromCOD16HDR.wav" volume="0.1"/>
-    <sound key="cycle_in" fileref="NTW20_cycle_in_FromCOD16HDR.wav" volume="0.5"/>
+    <sound key="fire" fileref="ksvk_fire_FromSURVARIUM.wav" volume="1.4" />
+    <sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.6"/>
+    <sound key="magazine_out" fileref="ksvk_mgz_out_FromSURVARIUM.wav" volume="0.5"/>
+    <sound key="magazine_in" fileref="ksvk_mgz_in_FromSURVARIUM.wav" volume="0.5"/>
+    <sound key="cycle_out" fileref="ksvk_cycle_out_FromSURVARIUM.wav" volume="0.1"/>
+    <sound key="cycle_in" fileref="ksvk_cycle_in_FromSURVARIUM.wav" volume="0.5"/>
     <sound class="impact" fileref="rifle_drop.wav" />
    
 	<!--Model, Icon, Cost-->
@@ -103,12 +103,12 @@
 	
 	<!--Sounds-->
 	
-    <sound key="fire" fileref="NTW20_Fire_FromCOD16HDR.wav" volume="0.7" />
-    <sound key="cycle" fileref="NTW20_cycle_FromCOD16HDR.wav" volume="0.6"/>
-    <sound key="magazine_out" fileref="NTW20_mgz_out_FromCOD16HDR.wav" volume="0.5"/>
-    <sound key="magazine_in" fileref="NTW20_mgz_in_FromCOD16HDR.wav" volume="0.5"/>
-    <sound key="cycle_out" fileref="NTW20_cycle_out_FromCOD16HDR.wav" volume="0.1"/>
-    <sound key="cycle_in" fileref="NTW20_cycle_in_FromCOD16HDR.wav" volume="0.5"/>
+     <sound key="fire" fileref="ksvkmod3skill_fire_FromAPEX.wav" volume="1.3" />
+    <sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.6"/>
+    <sound key="magazine_out" fileref="ksvk_mgz_out_FromSURVARIUM.wav" volume="0.5"/>
+    <sound key="magazine_in" fileref="ksvk_mgz_in_FromSURVARIUM.wav" volume="0.5"/>
+    <sound key="cycle_out" fileref="ksvk_cycle_out_FromSURVARIUM.wav" volume="0.1"/>
+    <sound key="cycle_in" fileref="ksvk_cycle_in_FromSURVARIUM.wav" volume="0.5"/>
     <sound class="impact" fileref="rifle_drop.wav" />
    
 	<!--Model, Icon, Cost-->

@@ -36,7 +36,7 @@
     <animation state_key="running" animation_key="running, bow" />
     <animation state_key="hold_casual" animation_key="casual, bow" />
 	
-    <sound key="fire" fileref="bow_shoot.wav" pitch_variety="0.1" volume="0.2" />
+    <sound key="fire" fileref="Archer_fire_FromCOD12.wav" pitch_variety="0.1" volume="1.2" />
     <!-- <sound key="cycle" fileref="bow_reload.wav" volume="0.1" /> -->
     <sound class="impact" fileref="rifle_drop.wav" />
 

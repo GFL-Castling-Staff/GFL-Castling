@@ -32,12 +32,12 @@
 	
 	<!--Sounds-->
 	
-    <sound key="fire" fileref="srs_fire_FromBF4.wav" pitch_variety="0.05" volume="1.3" />
-    <sound key="cycle" fileref="srs_cycle_FromFC5.wav" volume="0.9"/>
+    <sound key="fire" fileref="srs_fire_FromBF4.wav" pitch_variety="0.05" volume="1.2" />
+    <sound key="cycle" fileref="srs_cycle_FromFC5.wav" volume="0.8"/>
     <sound key="magazine_out" fileref="srs_mgz_out_FromBF4.wav" volume="0.7"/>
     <sound key="magazine_in" fileref="srs_mgz_in_FromBF4.wav" volume="0.7"/>
-    <sound key="cycle_out" fileref="srs_cycle_out_FromFC5.wav"  volume="1"/>
-    <sound key="cycle_in" fileref="srs_cycle_in_FromFC5.wav"  volume="1"/> 
+    <sound key="cycle_out" fileref="srs_cycle_out_FromFC5.wav"  volume="0.8"/>
+    <sound key="cycle_in" fileref="srs_cycle_in_FromFC5.wav"  volume="0.8"/> 
     <sound class="impact" fileref="rifle_drop.wav" volume="1"/>
    
 	<!--Model, Icon, Cost-->

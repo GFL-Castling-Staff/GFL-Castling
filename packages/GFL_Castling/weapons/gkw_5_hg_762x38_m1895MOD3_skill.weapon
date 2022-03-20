@@ -66,13 +66,13 @@
      <inventory  buy_price="2.0" sell_price="1.0" />
     
 	
-    <sound key="fire" fileref="UMP_Fire_FromCOD16Striker45.wav" pitch_variety="0.05" volume="3" />
-    <sound key="magazine_out" fileref="revolver_magazine_out.wav" volume="1" />
-    <sound key="magazine_in" fileref="revolver_magazine_in.wav" volume="1" />
-    <sound key="cycle_out" fileref="revolver_cycle_out.wav" volume="1" />
-    <sound key="cycle_in" fileref="revolver_cycle_in.wav" volume="1" />
-    <sound key="cycle" fileref="revolver_cycle.wav" volume="1" />
-	<sound key="reload_one" fileref="revolver_magazine_in.wav" />
+    <sound key="fire" fileref="m1895mod3skill_fire_FromBF5.wav" pitch_variety="0.05" volume="3" />
+    <sound key="magazine_out" fileref="revolver_magazine_out.wav" volume="0.8" />
+    <sound key="magazine_in" fileref="revolver_magazine_in.wav" volume="0.8" />
+    <sound key="cycle_out" fileref="revolver_cycle_out.wav" volume="0.8" />
+    <sound key="cycle_in" fileref="revolver_cycle_in.wav" volume="0.8" />
+    <sound key="cycle" fileref="m1895_cycle_FromBF1.wav" volume="0.6" />
+	<sound key="reload_one" fileref="m1895_reload_FromBF1.wav" />
 	
     <model filename="gkw_hg_m1895.xml" />
 

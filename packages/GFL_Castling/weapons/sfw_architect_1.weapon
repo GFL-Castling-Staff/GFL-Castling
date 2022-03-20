@@ -28,10 +28,10 @@
     <animation state_key="crouch_moving" animation_key="crouching forwards, hip fire" />
     <animation state_key="walking_backwards" animation_key="walking backwards, hip fire" />  
 	
-    <sound key="fire" fileref="BossArchitect_buhuo_SKILL02_JP.wav" pitch_variety="0.00" volume="1.7"/>
-    <sound key="cycle" fileref="sniper_cycle.wav" />
-    <sound key="magazine_out" fileref="sniper_clip_out.wav" /> 
-    <sound key="magazine_in" fileref="sniper_clip_in.wav" />
+    <sound key="fire" fileref="Architect_fire_FromCOD16.wav" pitch_variety="0.00" volume="2.4"/>
+    <sound key="cycle" fileref="Architectskill_cycle_FromCOD17.wav" />
+    <sound key="magazine_out" fileref="Architectskill_mgz_out_FromCOD17.wav" /> 
+    <sound key="magazine_in" fileref="Architectskill_mgz_in_FromCOD17.wav" />
     <sound key="cycle_out" fileref="sniper_cycle_out.wav" />
     <sound key="cycle_in" fileref="sniper_cycle_in.wav" />
     <sound class="impact" fileref="rifle_drop.wav" />

@@ -40,7 +40,7 @@
 	<animation state_key="running" animation_key="walking, hip fire" />
 	<animation state_key="reload" animation_key="reloading, dreamer" />
 
-    <sound key="fire" fileref="sf_boss_fire_3.wav" pitch_variety="0.05" volume="0.2" />
+    <sound key="fire" fileref="dreamer_fire_FromTTF2.wav" pitch_variety="0.05" volume="2.2" />
     <sound key="magazine_out" fileref="kccoar_mgz_out_FromINS.wav" volume="0.8" />
     <sound key="magazine_in" fileref="kccoar_mgz_in_FromINS.wav" volume="0.8" />
     <sound key="cycle" fileref="kccoar_cycle_FromINS.wav" volume="0.8" />

@@ -34,10 +34,10 @@
     <animation state_key="crouch_moving" animation_key="crouching forwards, hip fire" />
     <animation state_key="walking_backwards" animation_key="walking backwards, hip fire" />
 
-    <sound key="fire" fileref="sf_ar.wav" pitch_variety="0.05" volume="1" />
-    <sound key="magazine_out" fileref="kccoar_mgz_out_FromINS.wav" volume="0.8" />
-    <sound key="magazine_in" fileref="kccoar_mgz_in_FromINS.wav" volume="0.8" />
-    <sound key="cycle" fileref="kccoar_cycle_FromINS.wav" volume="0.8" />
+    <sound key="fire" fileref="Architect_fire_FromHALO4.wav" pitch_variety="0.05" volume="1.2" />
+    <sound key="magazine_out" fileref="Architect_mgz_out_FromCOD12.wav" volume="0.8" />
+    <sound key="magazine_in" fileref="Architect_mgz_in_FromCOD12.wav" volume="0.8" />
+    <sound key="cycle" fileref="Architect_cycle_FromCOD12.wav" volume="0.8" />
     <sound class="impact" fileref="rifle_drop.wav" />
     <model filename="sfw_architect.xml" />
 
@@ -92,10 +92,10 @@
     <animation state_key="crouch_moving" animation_key="crouching forwards, hip fire" />
     <animation state_key="walking_backwards" animation_key="walking backwards, hip fire" />  
 	
-    <sound key="fire" fileref="at4_fire_FromCOD16StrelaP.wav" pitch_variety="0.00" volume="1.7"/>
-    <sound key="cycle" fileref="sf_boss_re.wav" />
-    <sound key="magazine_out" fileref="sf_boss_re.wav" /> 
-    <sound key="magazine_in" fileref="" />
+    <sound key="fire" fileref="Architectskill_fire_FromCOD17.wav" pitch_variety="0.00" volume="1.7"/>
+    <sound key="cycle" fileref="Architectskill_cycle_FromCOD17.wav" />
+    <sound key="magazine_out" fileref="Architectskill_mgz_out_FromCOD17.wav" /> 
+    <sound key="magazine_in" fileref="Architectskill_mgz_in_FromCOD17.wav" />
     <sound key="cycle_out" fileref="" />
     <sound key="cycle_in" fileref="" />
     <sound class="impact" fileref="rifle_drop.wav" />

@@ -32,7 +32,7 @@
     <animation state_key="walking" animation_key="crouch, still, portable mortar" />
     <animation state_key="walking_backwards" animation_key="crouch, still, portable mortar" /> 
   <!-- <sound key="fire" fileref="fireworks_woosh.wav" pitch_variety="0.05" volume="1.0"/> -->
-  <sound key="fire" fileref="portable_mortar_shot.wav" pitch_variety="0.1" />
+    <sound key="fire" fileref="m2_fire_FromREALLIFE.wav" pitch_variety="0.1" volume="1.2" />
 	<sound key="magazine_out" fileref="portable_mortar_reload.wav" volume="0.7" />
 	<sound key="magazine_in" fileref="dry_fire.wav" volume="0.7"/>
 	<sound key="cycle" fileref="portable_mortar_reload.wav" volume="0.7"/>

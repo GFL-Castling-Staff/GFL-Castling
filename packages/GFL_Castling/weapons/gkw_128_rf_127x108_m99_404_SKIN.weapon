@@ -34,10 +34,10 @@
 	
 	<!--Sounds-->
 	
-    <sound key="fire" fileref="m99_fire_FromINS.wav" pitch_variety="0.05" volume="1" />
-    <sound key="cycle" fileref="m99_cycle_FromINS.wav" volume="1"/>
-    <sound key="magazine_out" fileref="m99_mgz_out_FromINS.wav" volume="1"/>
-    <sound key="magazine_in" fileref="m99_mgz_in_FromINS.wav" volume="1"/>
+    <sound key="fire" fileref="m99_fire_FromINSSANDSTORM.wav" pitch_variety="0.05" volume="1.2" />
+    <sound key="cycle" fileref="m99_cycle_FromINSSANDSTORM.wav" volume="0.7"/>
+    <sound key="magazine_out" fileref="m99_mgz_out_FromINSSANDSTORM.wav" volume="0.7"/>
+    <sound key="magazine_in" fileref="m99_mgz_in_FromINSSANDSTORM.wav" volume="0.7"/>
     <sound class="impact" fileref="rifle_drop.wav" volume="1"/>
    
 	<!--Model, Icon, Cost-->
