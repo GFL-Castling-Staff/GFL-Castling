@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<projectile class="grenade" name="XM8 skillnade" key="skill_stg44_3.projectile" slot="0" radius="0.05">
+<projectile class="grenade" name="XM8 skillnade" key="skill_stg44_2.projectile" slot="0" radius="0.05">
 
 
-    <result class="blast" radius="2" damage="5" push="0.3" decal="1" character_state="death" faction_compare="not_equal" />
-    <trigger class="time" time_to_live="0.6"/>
+    <result class="blast" radius="4" damage="4" push="0.3" decal="1" character_state="death" faction_compare="not_equal" />
+    <trigger class="time" time_to_live="0.3"/>
 
     <rotation class="random" />
     <model mesh_filename="" />
 
-    <sound class="result" key="other" fileref="explosion_FromSQUAD_1.wav" volume="2" />
-    <sound class="result" key="other" fileref="explosion_FromSQUAD_2.wav" volume="2" />
-    <sound class="result" key="other" fileref="explosion_FromSQUAD_3.wav" volume="2" />
+    <sound class="result" key="other" fileref="explosion1.wav" />
+    <sound class="result" key="other" fileref="explosion2.wav" />
+    <sound class="result" key="other" fileref="explosion2_1.wav" />    
 
     <sound class="result" key="terrain" copy="other" />
     <sound class="result" key="static_object" copy="other" />

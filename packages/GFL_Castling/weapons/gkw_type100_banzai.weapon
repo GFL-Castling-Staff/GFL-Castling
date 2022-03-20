@@ -37,7 +37,7 @@
 	<animation state_key="stabbing"	animation_key="melee, bayonet" />
 
   <!-- <sound key="fire" fileref="fireworks_woosh.wav" pitch_variety="0.05" volume="1.0"/> -->
-  <sound key="fire" fileref="explosion2.wav" pitch_variety="0.1" />
+    <sound key="fire" fileref="explosion_FromBF1.wav" pitch_variety="0.1" volume="1.3" />
 	<sound key="magazine_out" fileref="portable_mortar_reload.wav" volume="0.7" />
 	<sound key="magazine_in" fileref="dry_fire.wav" volume="0.7"/>
 	<sound key="cycle" fileref="portable_mortar_reload.wav" volume="0.7"/>

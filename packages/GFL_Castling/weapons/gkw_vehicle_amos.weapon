@@ -220,7 +220,7 @@
     <hud_icon filename="testing.png" />
     <commonness value="0.0" />
 
-    <sound key="fire" fileref="minigun_fire_fromSAM4.wav" pitch_variety="0.05" volume="0.25" />
+    <sound key="fire" fileref="minigun_fire_fromSAM4.wav" pitch_variety="0.05" volume="0.35" />
     <weak_hand_hold offset="0.4" />
     <projectile file="bullet.projectile">
         <result class="hit"  kill_probability="1.45" kill_decay_start_time="1.933" kill_decay_end_time="3.222" />

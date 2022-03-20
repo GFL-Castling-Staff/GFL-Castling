@@ -7,8 +7,8 @@
 
     <commonness value="0.0" />
 
-    <sound class="result" key="other" fileref="explosion_RPG_FromSQUAD_1.wav" volume="1.5" />
-    <sound class="result" key="other" fileref="explosion_RPG_FromSQUAD_2.wav" volume="1.5" />
+    <sound class="result" key="other" fileref="explosion1.wav" />
+    <sound class="result" key="other" fileref="explosion2.wav" />
 
     <sound class="result" key="vehicle" copy="other" />    
     <sound class="result" key="vehicle" tag="metal_heavy" fileref="blast_metal_hit_01.wav" pitch_variety="0.2" volume="0.8" />

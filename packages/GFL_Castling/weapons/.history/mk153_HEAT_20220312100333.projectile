@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<projectile class="grenade" name="" slot="1" pulldown_in_air="8.0" key="pierre_rocket.projectile">
+<projectile class="grenade" name="HEAT" slot="2" pulldown_in_air="0.5" >
     <tag name="rocket"/>
+	
+    <result class="blast"  damage="9.5"  radius="8.5" decal="1" push="0" character_state="death"  faction_compare="not_equal"/>
     <trigger class="impact" />
     <rotation class="motion" />
-    <model mesh_filename="m202_rocket.xml"/>
+    <model mesh_filename="mk153HEAT.xml" />
 
     <commonness value="0.0" />
 
-    <sound class="result" key="other" fileref="explosion_RPG_FromSQUAD_1.wav" volume="1.5" />
-    <sound class="result" key="other" fileref="explosion_RPG_FromSQUAD_2.wav" volume="1.5" />
+    <sound class="result" key="other" fileref="explosion1.wav" />
+    <sound class="result" key="other" fileref="explosion2.wav" />
 
     <sound class="result" key="vehicle" copy="other" />    
     <sound class="result" key="vehicle" tag="metal_heavy" fileref="blast_metal_hit_01.wav" pitch_variety="0.2" volume="0.8" />

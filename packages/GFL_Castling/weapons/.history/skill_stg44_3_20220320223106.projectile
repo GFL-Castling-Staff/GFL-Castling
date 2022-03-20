@@ -8,9 +8,9 @@
     <rotation class="random" />
     <model mesh_filename="" />
 
-    <sound class="result" key="other" fileref="explosion_FromSQUAD_1.wav" volume="2" />
-    <sound class="result" key="other" fileref="explosion_FromSQUAD_2.wav" volume="2" />
-    <sound class="result" key="other" fileref="explosion_FromSQUAD_3.wav" volume="2" />
+    <sound class="result" key="other" fileref="explosion_FromSQUAD_1.wav" />
+    <sound class="result" key="other" fileref="explosion_FromSQUAD_2.wav" />
+    <sound class="result" key="other" fileref="explosion_FromSQUAD_3.wav" />
 
     <sound class="result" key="terrain" copy="other" />
     <sound class="result" key="static_object" copy="other" />

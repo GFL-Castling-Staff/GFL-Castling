@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<projectile class="grenade" name="" slot="1" pulldown_in_air="8.0" key="pierre_rocket.projectile">
+<projectile class="grenade" name="" slot="1" pulldown_in_air="60" key="m4a1mod3_skill_s.projectile">
     <tag name="rocket"/>
+    <result class="blast" radius="4.5" damage="9.1125" push="0.2" decal="1" faction_compare="not_equal"/>
     <trigger class="impact" />
     <rotation class="motion" />
-    <model mesh_filename="m202_rocket.xml"/>
+    <model  />
 
     <commonness value="0.0" />
 
-    <sound class="result" key="other" fileref="explosion_RPG_FromSQUAD_1.wav" volume="1.5" />
-    <sound class="result" key="other" fileref="explosion_RPG_FromSQUAD_2.wav" volume="1.5" />
+    <sound class="result" key="other" fileref="explosion1.wav" />
+    <sound class="result" key="other" fileref="explosion2.wav" />
 
     <sound class="result" key="vehicle" copy="other" />    
     <sound class="result" key="vehicle" tag="metal_heavy" fileref="blast_metal_hit_01.wav" pitch_variety="0.2" volume="0.8" />
@@ -47,5 +48,5 @@
     <effect class="result" key="character" copy="terrain" />
 
     <effect class="activated" ref="Propulsion" />
-
+    <trail probability="1.0" key="bullet_new" />
 </projectile>
