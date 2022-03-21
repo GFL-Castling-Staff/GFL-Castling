@@ -2,7 +2,7 @@
 <weapon file="KCCO.base_weapon" key="kccow_cerynitis.weapon">
     <!--Weapon specifications-->
     <specification
-	retrigger_time="0.2" 
+	retrigger_time="0.33" 
 	accuracy_factor="1.0" 
 	sustained_fire_grow_step="2.0" 
 	sustained_fire_diminish_rate="0.5" 
@@ -70,4 +70,11 @@
     <stance state_key="crouching" accuracy="0.85" />
     <stance state_key="prone" accuracy="0.94" />
     <modifier class="speed" value="-0.4" />
+    <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5" />
+    <target_factors tag="heavy_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="10.0" />
+    <target_factors tag="apc" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0" />
+    <target_factors tag="light_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="6.0" />	
+    <target_factors tag="defensive_at" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.5" />
+    <target_factors tag="tactical" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0" />  <!-- important non combat player-only vehicles -->  
+    <target_factors tag="bazooka" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0" />      
 </weapon>
