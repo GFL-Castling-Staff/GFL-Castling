@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <character filename="kcco.text_lines">
+
 	<sound key="footstep" fileref="qwd_walk1.wav" volume="0.9" />
 	<sound key="death" fileref="qwd_die.wav" volume="0.8" />
+
+
+
 	<animation state_key="hold"  animation_key="still, large mecha" />
 	<animation state_key="hold_one_wall"  animation_key="still, large mecha" />
 	<animation key="still" target_key="still, large mecha" />
@@ -31,7 +35,7 @@
 	<animation key="wounded, moving forwards, 67" target_key="defence walking, large mecha" />
 	<animation key="stunned" target_key="stun, large mecha" />
 	<animation key="surrender" target_key="surrender, large mecha" />
-	<animation key="stabbing" target_key="stabbing2, large mecha" />
+	<animation key="stabbing" target_key="stabbing, large mecha" />
 	<animation key="throwing, upside" target_key="throwing, large mecha" />
 	<animation key="change weapon out" target_key="change weapon, large mecha" />
 	<animation key="change weapon in" target_key="change weapon, large mecha" />

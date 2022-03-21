@@ -7,10 +7,8 @@
 
     <model mesh_filename="sfw_architect_rocket.xml" />
 
-    <sound class="result" key="other" fileref="explosion1.wav" />
-    <sound class="result" key="other" fileref="explosion2.wav" />
-	<sound class="result" key="other" fileref="explosion3.wav" />
-    <sound class="result" key="other" fileref="explosion4.wav" />
+    <sound class="result" key="other" fileref="explosion_Large_FromSQUAD_1.wav" volume="2.7" />
+    <sound class="result" key="other" fileref="explosion_Large_FromSQUAD_2.wav" volume="2.7" />
 
     <sound class="result" key="vehicle" copy="other" />    
     <sound class="result" key="vehicle" tag="metal_heavy" fileref="blast_metal_hit_01.wav" pitch_variety="0.2" volume="0.8" />
