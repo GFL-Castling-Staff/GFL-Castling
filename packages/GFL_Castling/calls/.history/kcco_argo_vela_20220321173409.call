@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<call name="Vela" key="kcco_argo_vela.call" initiation_comment1="Request Vela fire support!" acknowledge_comment="Receive, we are adjusting artillery angle" acknowledge_time="0" launch_comment="Clearing" notify_metagame="1">
+
+      <round instances="2" instance_class="grenade" instance_key="artillery_laser_420.projectile" instance_spread="4 4 4" common_spread="2 0 2" launch_time="3.0" spawn_time="6.0">
+            <sound class="launch" fileref="argo_vela_Friesupport_laser_FromDOOMETEMAL.wav" volume="2.5" />
+            <sound class="spawn" fileref="woosh1.wav" volume="0.2" />
+      </round>
+
+      <round instances="3" instance_class="grenade" instance_key="artillery_laser_420.projectile" instance_spread="8 8 8" common_spread="4 0 4" launch_time="8.0" spawn_time="11.0">
+            <sound class="launch" fileref="kcco_artillery_FromBF2042.wav" volume="4.8" />
+            <sound class="spawn" fileref="woosh1.wav" volume="0.2" />
+      </round>
+
+      <round 
+      instances="6" 
+      instance_class="grenade" 
+      instance_key="artillery_shell_203.projectile" 
+      instance_spread="10 10 10" 
+      common_spread="8 0 8" 
+      launch_time="11.0" 
+      spawn_time="12.0">
+      <sound class="launch" fileref="artillery_barrage_1.wav" volume="1.0" />
+      <sound class="launch" fileref="artillery_barrage_2.wav" volume="1.0" />      
+      <sound class="spawn" fileref="woosh1.wav" volume="0.2" />
+</round>
+
+<round 
+instances="8" 
+instance_class="grenade" 
+instance_key="artillery_shell_203.projectile" 
+instance_spread="14 14 14" 
+common_spread="10 0 10" 
+launch_time="12.0" 
+spawn_time="13.0">
+<sound class="launch" fileref="artillery_barrage_1.wav" volume="1.0" />
+<sound class="launch" fileref="artillery_barrage_2.wav" volume="1.0" />   
+<sound class="spawn" fileref="woosh1.wav" volume="0.2" />
+</round>
+      <round instances="4" instance_class="grenade" instance_key="artillery_laser_420.projectile" instance_spread="8 8 8" common_spread="4 0 4" launch_time="13.0" spawn_time="14.0">
+
+            
+            <sound class="spawn" fileref="woosh1.wav" volume="0.2" />
+      </round>
+      <round instances="6" instance_class="grenade" instance_key="artillery_laser_420.projectile" instance_spread="16 16 16" common_spread="8 0 8" launch_time="10.0" spawn_time="13.5">
+            
+            <sound class="spawn" fileref="woosh1.wav" volume="0.2" />
+      </round>
+
+      <round 
+      instances="6" 
+      instance_class="grenade" 
+      instance_key="artillery_shell_203.projectile" 
+      instance_spread="16 16 16" 
+      common_spread="10 0 10" 
+      launch_time="15.0" 
+      spawn_time="15.5">
+
+      <sound class="spawn" fileref="woosh1.wav" volume="0.2" />
+</round>
+<round 
+instances="6" 
+instance_class="grenade" 
+instance_key="artillery_shell_203.projectile" 
+instance_spread="20 20 20" 
+common_spread="16 0 16" 
+launch_time="0.0" 
+spawn_time="16.2">
+<sound class="spawn" fileref="woosh1.wav" volume="0.2" />
+</round>
+<round 
+instances="6" 
+instance_class="grenade" 
+instance_key="artillery_shell_203.projectile" 
+instance_spread="22 22 22" 
+common_spread="19 0 19" 
+launch_time="0.0" 
+spawn_time="17.0">
+  
+<sound class="spawn" fileref="woosh1.wav" volume="0.2" />
+</round>
+
+
+
+
+
+
+      <hud_icon filename="call_kcco_vela.png" />
+      <!-- <capacity value="0" source="rank" source_value="0.0" /> -->
+      <capacity value="100" source="rank" source_value="0.0" />
+      <inventory encumbrance="0.0" price="150.0" />
+
+</call>
