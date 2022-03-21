@@ -36,9 +36,8 @@ time_to_live="360">
 
     <inventory encumbrance="4.0" price="5.0" />
 
-    <sound class="result" key="other" fileref="explosion_FromCOD16_1.wav" volume="2.8" />
-    <sound class="result" key="other" fileref="explosion_FromCOD16_2.wav" volume="2.8" />
-    <sound class="result" key="other" fileref="explosion_FromCOD16_3.wav" volume="2.8" />
+    <sound class="result" key="other" fileref="explosion1.wav" />
+    <sound class="result" key="other" fileref="explosion2.wav" />
 
     <sound class="result" key="terrain" copy="other" />
     <sound class="result" key="static_object" copy="other" />

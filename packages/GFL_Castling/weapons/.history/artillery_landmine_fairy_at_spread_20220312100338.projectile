@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projectile 
 class="grenade" 
-name="Landmine Fairy(AI)" 
-key="artillery_landmine_fairy_ai_spread.projectile" 
+name="Landmine Fairy(AT)" 
+key="artillery_landmine_fairy_at_spread.projectile" 
 slot="1" 
 on_ground_up="0 1 0" 
 
@@ -13,12 +13,12 @@ blast_damage_threshold="50"
 use_time_to_live="1" 
 time_to_live="360">
 
-    <result class="blast" radius="7.5" damage="5" push="1.5" decal="1" character_state="death" />
+    <result class="blast" radius="3.5" damage="15" push="1.5" decal="1" character_state="death" />
     <trigger class="impact"> 
      <collider class="terrain" enabled="0" /> 
      <collider class="static_object" enabled="0" /> 
      <collider class="vehicle" enabled="1"/> 
-     <collider class="character" enabled="1" faction_compare="not_equal" />
+     <collider class="character" enabled="0" faction_compare="not_equal" />
     </trigger>
     
     <rotation class="random" />
@@ -36,9 +36,8 @@ time_to_live="360">
 
     <inventory encumbrance="4.0" price="5.0" />
 
-    <sound class="result" key="other" fileref="explosion_FromCOD16_1.wav" volume="2.8" />
-    <sound class="result" key="other" fileref="explosion_FromCOD16_2.wav" volume="2.8" />
-    <sound class="result" key="other" fileref="explosion_FromCOD16_3.wav" volume="2.8" />
+    <sound class="result" key="other" fileref="explosion1.wav" />
+    <sound class="result" key="other" fileref="explosion2.wav" />
 
     <sound class="result" key="terrain" copy="other" />
     <sound class="result" key="static_object" copy="other" />
