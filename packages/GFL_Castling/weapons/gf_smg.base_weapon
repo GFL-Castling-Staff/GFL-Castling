@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapon on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0">
 
-	<tag name="cqb" />
-
+	<tag name="smg" />
+	
 	<specification slot="0" />
 	<!-- 常见 军械库 重生自带 -->
 	<commonness value="0.5" in_stock="1" can_respawn_with="1" />
