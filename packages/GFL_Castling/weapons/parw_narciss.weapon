@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapon file="paradeus.base_weapon" key="parw_narciss.weapon">
 
-	
+	<tag name="elite" />
+	<tag name="bazooka" />
+	<tag name="melee" />
+
 	<!--Weapon specifications-->
 	
     <specification
@@ -11,13 +14,12 @@
 	sustained_fire_grow_step="0.8"
 	sustained_fire_diminish_rate="1.8"
 	magazine_size="7"
-	
     carry_in_two_hands="0"
 	suppressed="1"
 	name="Narciss"
 	class="1"
 	sight_range_modifier="1.0"
-	projectile_speed="100.0"
+	projectile_speed="120.0"
 	projectiles_per_shot="1"
 	burst_shots="1"
      />
