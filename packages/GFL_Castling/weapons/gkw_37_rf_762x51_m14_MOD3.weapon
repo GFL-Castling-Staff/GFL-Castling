@@ -29,7 +29,7 @@
     <capacity value="1" source="rank" source_value="6.048" />
     <next_in_chain key="gkw_m14mod3_skill.weapon" share_ammo="1" />
     <animation key="reload" animation_key="ARreload1.8" />
-	<animation key="reload" stance_key="prone" animation_key="magBrifleRp" />		
+	<animation key="reload" stance_key="prone" animation_key="ARreloadp1.8" />		
 	
 	<!--Sounds-->
 	
@@ -97,8 +97,8 @@
 	<capacity value="0" source="rank" source_value="0.0" />
     <capacity value="1" source="rank" source_value="6.048" />
     <next_in_chain key="gkw_m14mod3.weapon" share_ammo="1" />
-    <animation key="reload" animation_key="magBrifleR" />
-	<animation key="reload" stance_key="prone" animation_key="magBrifleRp" />		
+    <animation key="reload" animation_key="ARreload1.8" />
+	<animation key="reload" stance_key="prone" animation_key="ARreloadp1.8" />			
 	
 	<!--Sounds-->
 	
@@ -131,10 +131,10 @@
     <!--Accuracy, Movement speed-->
     
 	<stance state_key="walking" accuracy="0.5" />
-    <stance state_key="crouch_moving" accuracy="0.4" />
+    <stance state_key="crouch_moving" accuracy="0.75" />
     <stance state_key="prone_moving" accuracy="0.9" />
-    <stance state_key="standing" accuracy="0.5"/>
-    <stance state_key="crouching" accuracy="0.5" />
+    <stance state_key="standing" accuracy="0.73"/>
+    <stance state_key="crouching" accuracy="0.88" />
     <stance state_key="prone" accuracy="1.0" />
     <stance state_key="over_wall" accuracy="1.0" /> 
     <modifier class="speed" value="0" /> 

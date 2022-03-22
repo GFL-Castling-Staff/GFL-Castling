@@ -2,7 +2,17 @@
 <weapons>
     <weapon file="two_hands_ar.animation_base" key="gkw_g41.weapon">
 
-        <specification accuracy_factor="1.0" barrel_offset="0.4" class="0" magazine_size="30" name="G41" projectile_speed="191.49" retrigger_time="0.071" suppressed="0" sustained_fire_diminish_rate="1.6" sustained_fire_grow_step="0.3" />
+        <specification 
+        accuracy_factor="1.0" 
+        barrel_offset="0.4" 
+        class="0" 
+        magazine_size="30" 
+        name="G41" 
+        projectile_speed="191.49" 
+        retrigger_time="0.071" 
+        suppressed="0" 
+        sustained_fire_diminish_rate="1.6" 
+        sustained_fire_grow_step="0.3" />
 
 
 
@@ -43,7 +53,19 @@
 
     </weapon>
     <weapon file="two_hands_ar.animation_base" key="gkw_g41_skill.weapon">
-        <specification accuracy_factor="1.0" barrel_offset="0.4" sight_range_modifier="1.25" class="0" solt="0" magazine_size="30" name="G41-[Damage Focus T]" projectile_speed="191.49" retrigger_time="0.071" suppressed="0" sustained_fire_diminish_rate="1.6" sustained_fire_grow_step="0.3" />
+        <specification 
+        accuracy_factor="1.0" 
+        barrel_offset="0.4" 
+        sight_range_modifier="1.25" 
+        class="0" 
+        solt="0" 
+        magazine_size="30" 
+        name="G41-[Damage Focus T]" 
+        projectile_speed="191.49" 
+        retrigger_time="0.071" 
+        suppressed="0" 
+        sustained_fire_diminish_rate="1.6" 
+        sustained_fire_grow_step="0.3" />
 
 
         <animation state_key="reload" animation_key="ARreload2.2" />

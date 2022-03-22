@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapons>
 	<weapon file="heavy_mg_standing.animation_base" key="gkw_qjy88.weapon">
-		<specification barrel_offset="0.5" retrigger_time="0.0667" accuracy_factor="0.5" sustained_fire_grow_step="0.35" sustained_fire_diminish_rate="1.8" magazine_size="200" suppressed="0" name="QJY88" class="0" projectile_speed="225" spread_range="0.35" sight_range_modifier="1.5" />
+		<specification 
+		barrel_offset="0.5" 
+		retrigger_time="0.0667" 
+		accuracy_factor="0.5" 
+		sustained_fire_grow_step="0.35" 
+		sustained_fire_diminish_rate="1.8" 
+		magazine_size="200" 
+		suppressed="0" 
+		name="QJY88" 
+		class="0" 
+		projectile_speed="225" 
+		spread_range="0.35" 
+		sight_range_modifier="1.5" />
 		<animation key="reload" animation_key="MGreload6" />
 		<inventory buy_price="16.0" sell_price="16.0" />
 		<next_in_chain key="gkw_qjy88_skill.weapon" share_ammo="1" />
@@ -27,7 +39,20 @@
 	</weapon>
   
 	<weapon file="heavy_mg.animation_base" key="gkw_qjy88_skill.weapon">
-		<specification barrel_offset="0.5" retrigger_time="0.0667" accuracy_factor="0.98" sustained_fire_grow_step="0.35" sustained_fire_diminish_rate="2.1" magazine_size="200" suppressed="0" name="QJY88-skill-[Slothful Rage]" class="0" projectile_speed="225" spread_range="0.22" sight_range_modifier="1.5" can_shoot_crouching="0" />
+		<specification 
+		barrel_offset="0.5" 
+		retrigger_time="0.0667" 
+		accuracy_factor="0.98" 
+		sustained_fire_grow_step="0.35" 
+		sustained_fire_diminish_rate="2.1" 
+		magazine_size="200" 
+		suppressed="0" 
+		name="QJY88-[Slothful Rage]" 
+		class="0" 
+		projectile_speed="225" 
+		spread_range="0.22" 
+		sight_range_modifier="1.5" 
+		can_shoot_crouching="0" />
 		<animation key="reload" animation_key="MGreload6" />
 		<inventory buy_price="16.0" sell_price="16.0" />
 		<commonness value="0" in_stock="0" />

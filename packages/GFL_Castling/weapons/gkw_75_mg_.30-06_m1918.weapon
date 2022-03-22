@@ -2,7 +2,18 @@
 <weapons>
     <weapon file="two_hands_ar.animation_base" key="gkw_m1918.weapon">
 
-        <specification barrel_offset="0.5" retrigger_time="0.1333" accuracy_factor="0.98" sustained_fire_grow_step="0.45" sustained_fire_diminish_rate="1.8" magazine_size="20" suppressed="0" name="M1918" class="0" projectile_speed="191.0" spread_range="0.25" sight_range_modifier="1.5"/>
+        <specification barrel_offset="0.5" 
+        retrigger_time="0.1333" 
+        accuracy_factor="0.98" 
+        sustained_fire_grow_step="0.45" 
+        sustained_fire_diminish_rate="1.8" 
+        magazine_size="20" 
+        suppressed="0" 
+        name="M1918" 
+        class="0" 
+        projectile_speed="191.0" 
+        spread_range="0.25" 
+        sight_range_modifier="1.5"/>
 
 
         <animation state_key="reload" animation_key="ARreload1.2" />
@@ -35,7 +46,19 @@
     </weapon>
     <weapon file="two_hands_ar.animation_base" key="gkw_m1918_skill.weapon">
 
-        <specification barrel_offset="0.5" retrigger_time="0.1333" accuracy_factor="0.98" sustained_fire_grow_step="0.45" sustained_fire_diminish_rate="1.8" magazine_size="20" suppressed="0" name="M1918-skill-[Damage Focus MG]" class="0" projectile_speed="200" spread_range="0.25" sight_range_modifier="2.0"/>
+        <specification 
+        barrel_offset="0.5" 
+        retrigger_time="0.1333" 
+        accuracy_factor="0.98" 
+        sustained_fire_grow_step="0.45" 
+        sustained_fire_diminish_rate="1.8" 
+        magazine_size="20" 
+        suppressed="0" 
+        name="M1918-[Damage Focus MG]" 
+        class="0" 
+        projectile_speed="200" 
+        spread_range="0.25" 
+        sight_range_modifier="2.0"/>
 
 
         <animation state_key="reload" animation_key="ARreload1.2" />

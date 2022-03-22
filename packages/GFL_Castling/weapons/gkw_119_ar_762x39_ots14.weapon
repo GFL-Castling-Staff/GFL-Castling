@@ -2,7 +2,19 @@
 <weapons>
     <weapon file="two_hands_ar.animation_base" key="gkw_ots14.weapon">
 
-        <specification accuracy_factor="0.9" barrel_offset="0.4" class="0" solt="0" magazine_size="30" name="OTS14" projectile_speed="153.19" retrigger_time="0.085" suppressed="1" sustained_fire_diminish_rate="1.6" sustained_fire_grow_step="0.4" sight_range_modifier="1.2"/>
+        <specification 
+        accuracy_factor="0.9" 
+        barrel_offset="0.4" 
+        class="0" 
+        solt="0" 
+        magazine_size="30" 
+        name="OTS14" 
+        projectile_speed="153.19" 
+        retrigger_time="0.085" 
+        suppressed="1" 
+        sustained_fire_diminish_rate="1.6" 
+        sustained_fire_grow_step="0.4" 
+        sight_range_modifier="1.2"/>
 
 
 
@@ -45,7 +57,19 @@
 
     <weapon file="two_hands_ar.animation_base" key="gkw_ots14_skill.weapon">
 
-        <specification accuracy_factor="0.9" barrel_offset="0.4" class="0" solt="0" magazine_size="30" name="OTS14-[Damage Focus N]" projectile_speed="153.19" retrigger_time="0.085" suppressed="1" sustained_fire_diminish_rate="1.6" sustained_fire_grow_step="0.4" sight_range_modifier="1.6"/>
+        <specification 
+        accuracy_factor="0.9" 
+        barrel_offset="0.4" 
+        class="0" 
+        solt="0" 
+        magazine_size="30" 
+        name="OTS14-[Damage Focus N]" 
+        projectile_speed="153.19" 
+        retrigger_time="0.085" 
+        suppressed="1" 
+        sustained_fire_diminish_rate="1.6" 
+        sustained_fire_grow_step="0.4" 
+        sight_range_modifier="1.6"/>
 
 
 
