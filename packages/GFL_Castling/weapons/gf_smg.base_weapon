@@ -2,7 +2,7 @@
 <weapon on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0">
 
 	<tag name="smg" />
-	
+
 	<specification slot="0" />
 	<!-- 常见 军械库 重生自带 -->
 	<commonness value="0.5" in_stock="1" can_respawn_with="1" />
@@ -21,4 +21,10 @@
 	<stance state_key="prone_moving" accuracy="0.3" />
 	<stance state_key="over_wall" accuracy="1" />
 	<modifier class="speed" value="+0.3" />
+
+	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0" />
+	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0" />
+    <target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0" />
+    <target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0" />
+    <target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0" />
 </weapon>

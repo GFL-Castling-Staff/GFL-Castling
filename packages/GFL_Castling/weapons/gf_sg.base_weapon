@@ -31,4 +31,12 @@
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0" />
 	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
 	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+
+	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0" />
+	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5" />
+    <target_factors tag="smg" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0" />
+	<target_factors tag="melee" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0" />
+    <target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0" />
+    <target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0" />
+
 </weapon>
