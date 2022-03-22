@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapon file="KCCO.base_weapon" key="kccow_cerynitis.weapon">
+    <tag name="antiarmor" />
+	<tag name="mecha" />
     <!--Weapon specifications-->
     <specification
 	retrigger_time="0.33" 
