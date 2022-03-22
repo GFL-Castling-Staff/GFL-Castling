@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapon file="KCCO.base_weapon" key="sfw_manticore.weapon" time_to_live_out_in_the_open="0">
+	<tag name="mecha" />
+	<tag name="antiarmor" />
+	<tag name="metal_heavy" />
 
     <specification 
 	  retrigger_time="0.2" 

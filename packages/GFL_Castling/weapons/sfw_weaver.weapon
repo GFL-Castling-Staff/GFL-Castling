@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapon file="sf_boss.base_weapon" key="sfw_weaver.weapon">
-  
+  <tag name="bazooka" />
+	<tag name="antiarmor" />
+	<tag name="elite" />
   <specification 
   accuracy_factor="0.95" 
   barrel_offset="0.5" 

@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapon file="two_hands_ar.animation_base" key="sfw_m16a1.weapon">
-
+	<tag name="elite" />
+	<tag name="commander" />
+    <tag name="autorifle" />
     <specification 
 	accuracy_factor="0.98" 
 	barrel_offset="0.4"  
