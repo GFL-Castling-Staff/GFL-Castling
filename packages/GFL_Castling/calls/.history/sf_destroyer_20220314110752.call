@@ -15,7 +15,7 @@ key="sf_destroyer.call"
            common_spread="8 0 8" 
            launch_time="5.0"
            spawn_time="8.0">
-     <sound class="launch" fileref="destroyer_firesupport_FromEFT.wav" volume="1.0" />
+     <sound class="launch" fileref="Ds_artillery_barrage.wav" volume="1.0" />
        <sound class="spawn" fileref="woosh1.wav" volume="0.2" />
     </round>
 
@@ -26,7 +26,7 @@ key="sf_destroyer.call"
            common_spread="8 0 8"
            launch_time="7.0"
            spawn_time="10.0">
-     <sound class="launch" fileref="kcco_artillery_FromBF2042.wav" volume="1.5" />      
+     <sound class="launch" fileref="artillery_barrage_1.wav" volume="1.0" />      
        <sound class="spawn" fileref="woosh1.wav" volume="0.2" />
     </round>
 
@@ -37,7 +37,7 @@ key="sf_destroyer.call"
            common_spread="8 0 8"
            launch_time="9.0"
            spawn_time="12.0">
-     <sound class="launch" fileref="kcco_artillery_FromBF2042.wav" volume="1.5" />           
+     <sound class="launch" fileref="artillery_barrage_2.wav" volume="1.0" />           
           <sound class="spawn" fileref="woosh1.wav" volume="0.2" />
     </round>
     <hud_icon filename="sf_call_destroyer.png" />

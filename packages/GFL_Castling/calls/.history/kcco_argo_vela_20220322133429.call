@@ -2,12 +2,12 @@
 <call name="Vela" key="kcco_argo_vela.call" initiation_comment1="Request Vela fire support!" acknowledge_comment="Receive, we are adjusting artillery angle" acknowledge_time="0" launch_comment="Clearing" notify_metagame="1">
 
       <round instances="2" instance_class="grenade" instance_key="artillery_laser_420.projectile" instance_spread="4 4 4" common_spread="2 0 2" launch_time="3.0" spawn_time="6.0">
-            <sound class="launch" fileref="argo_vela_Friesupport_laser_FromDOOMETEMAL.wav" volume="1" />
+            <sound class="launch" fileref="argo_vela_Friesupport_laser_FromDOOMETEMAL.wav" volume="1.5" />
             <sound class="spawn" fileref="woosh1.wav" volume="0.2" />
       </round>
 
       <round instances="3" instance_class="grenade" instance_key="artillery_laser_420.projectile" instance_spread="8 8 8" common_spread="4 0 4" launch_time="8.0" spawn_time="11.0">
-            <sound class="launch" fileref="kcco_artillery_FromBF2042.wav" volume="1.5" />
+            <sound class="launch" fileref="kcco_artillery_FromBF2042.wav" volume="2.1" />
             <sound class="spawn" fileref="woosh1.wav" volume="0.2" />
       </round>
 
@@ -19,7 +19,7 @@
       common_spread="8 0 8" 
       launch_time="11.0" 
       spawn_time="12.0">
-      <sound class="launch" fileref="kcco_artillery_FromBF2042.wav" volume="1.5" />      
+      <sound class="launch" fileref="kcco_artillery_FromBF2042.wav" volume="2.1" />      
       <sound class="spawn" fileref="woosh1.wav" volume="0.2" />
 </round>
 
@@ -31,7 +31,7 @@ instance_spread="14 14 14"
 common_spread="10 0 10" 
 launch_time="12.0" 
 spawn_time="13.0">
-<sound class="launch" fileref="kcco_artillery_FromBF2042.wav" volume="1.5" />   
+<sound class="launch" fileref="kcco_artillery_FromBF2042.wav" volume="2.1" />   
 <sound class="spawn" fileref="woosh1.wav" volume="0.2" />
 </round>
       <round instances="4" instance_class="grenade" instance_key="artillery_laser_420.projectile" instance_spread="8 8 8" common_spread="4 0 4" launch_time="13.0" spawn_time="14.0">

@@ -58,7 +58,8 @@ instance_spread="10 10 10"
 common_spread="6 0 6" 
 launch_time="13.0"
 spawn_time="15.0">
-<sound class="launch" fileref="Jaguar_firesupport_FromDOOMETERNAL.wav" volume="0.9" />      
+<sound class="launch" fileref="artillery_barrage_1.wav" volume="1.0" />
+<sound class="launch" fileref="artillery_barrage_2.wav" volume="1.0" />      
 <sound class="spawn" fileref="woosh1.wav" volume="0.2" />
 </round>
 <round instances="8"

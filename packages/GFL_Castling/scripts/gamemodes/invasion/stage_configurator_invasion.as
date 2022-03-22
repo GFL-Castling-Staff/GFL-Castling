@@ -141,12 +141,16 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 	// ------------------------------------------------------------------------------------------------
 	protected void setupNormalStages() {
+		//addStage(setupStage102());	  // mapftg
+		addStage(setupStage107());		  // map107 Until Death by nana
 		addStage(setupStage9());          // map9
 		addStage(setupStage7());          // map6
+		addStage(setupStage108());		  // map108 Until Death2 by nana
 		addStage(setupStage1());          // map2
 		addStage(setupStage4());          // map7
 		addStage(setupStage15());         // map1_2
 		addStage(setupStage12());         // map14
+		addStage(setupStage111());		  // map111  by nana
 		addStage(setupStage10());         // map10
 		addStage(setupStage103()); 		  // map103 Palo Island by diling
 		addStage(setupStage17());         // map17    
@@ -402,8 +406,120 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.m_kothTargetBase = "All Center Base";
 		return stage;		
 	}
+	protected Stage@ setupStage107(){
+		Stage@ stage = createStage();
+		stage.m_mapInfo.m_name = "Until Death";
+		stage.m_mapInfo.m_path = "media/packages/GFLC_Map/maps/nana001";
+		stage.m_mapInfo.m_id = "map107";
+
+		stage.addTracker(Overtime(m_metagame, 0));
+		stage.m_soldierCapacityModel = "constant";     
+		stage.m_maxSoldiers = 7 * 15;                                             // was 12*7 in 1.65, 1 base added
+
+		stage.m_soldierCapacityVariance = 0.3;
+		stage.m_playerAiCompensation = 6;                                         // was 4 (1.82)
+        stage.m_playerAiReduction = 0;                                          // was 2 (test3)    
+
+		stage.m_minRandomCrates = 2; 
+		stage.m_maxRandomCrates = 4;
+
+		stage.m_defenseWinTime = 360; 
+		stage.m_defenseWinTimeMode = "custom";
+		stage.addTracker(PausingKothTimer(m_metagame, stage.m_defenseWinTime));
+		{
+			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0));                                                  
+			f.m_capacityOffset = 0; 
+			f.m_capacityMultiplier = 1.0;
+			f.m_bases = 1;
+			stage.m_factions.insertLast(f);
+		}
+		{
+			Faction f(getFactionConfigs()[1], createCommanderAiCommand(1, 0.10, 0.10));
+			f.m_overCapacity = 75;                                            
+            f.m_capacityOffset = 30;                                            
+			stage.m_factions.insertLast(f);                                                                
+		}
+
+		stage.m_primaryObjective = "koth";
+		stage.m_kothTargetBase = "Main Base";
+		return stage;		
+	}
+	protected Stage@ setupStage108(){
+		Stage@ stage = createStage();
+		stage.m_mapInfo.m_name = "Until Death II";
+		stage.m_mapInfo.m_path = "media/packages/GFLC_Map/maps/nana002";
+		stage.m_mapInfo.m_id = "map108";
+
+		stage.addTracker(Overtime(m_metagame, 0));
+		stage.m_soldierCapacityModel = "constant";     
+		stage.m_maxSoldiers = 13 * 15;                                             // was 12*7 in 1.65, 1 base added
+
+		stage.m_soldierCapacityVariance = 0.3;
+		stage.m_playerAiCompensation = 4;                                         // was 4 (1.82)
+        stage.m_playerAiReduction = 1;                                          // was 2 (test3)    
+
+		stage.m_minRandomCrates = 2; 
+		stage.m_maxRandomCrates = 4;
+
+		stage.m_defenseWinTime = 360; 
+		stage.m_defenseWinTimeMode = "custom";
+		stage.addTracker(PausingKothTimer(m_metagame, stage.m_defenseWinTime));
+		{
+			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0));                                                  
+			f.m_capacityOffset = 0; 
+			f.m_capacityMultiplier = 1.0;
+			f.m_bases = 1;
+			stage.m_factions.insertLast(f);
+		}
+		{
+			Faction f(getFactionConfigs()[1], createCommanderAiCommand(1, 0.10, 0.10));
+			f.m_overCapacity = 10;                                            
+			stage.m_factions.insertLast(f);                                                                
+		}
+
+		stage.m_primaryObjective = "koth";
+		stage.m_kothTargetBase = "Main Base";
+		return stage;		
+	}
+
+	protected Stage@ setupStage111() {
+		Stage@ stage = createStage();
+		stage.m_mapInfo.m_name = "Intrusion";
+		stage.m_mapInfo.m_path = "media/packages/GFLC_Map/maps/nana005";
+		stage.m_mapInfo.m_id = "map111";
+
+		stage.m_maxSoldiers = 260;
+		stage.m_playerAiCompensation = 3;                                     // was 4 (test4)     
+		stage.m_playerAiReduction = 1;                                            // was 1 (test3)    
+
+		stage.m_soldierCapacityVariance = 0.4; 
+
+		stage.addTracker(PeacefulLastBase(m_metagame, 0));
+		stage.addTracker(CommsCapacityHandler(m_metagame));
+
+		stage.m_minRandomCrates = 3; 
+		stage.m_maxRandomCrates = 5;
+
+		{
+			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0));
+			f.m_overCapacity = 6;                                                   
+			f.m_bases = 1;
+			f.m_capacityMultiplier = 1.0;                                          // was 0.81 in 1.65 
+			stage.m_factions.insertLast(f);
+		}
+		{
+			Faction f(getFactionConfigs()[1], createCommanderAiCommand(1, 0.15, 0.3));
+			f.m_overCapacity = 70;                                                  // was 50 (test2)   
+			stage.m_factions.insertLast(f);
+		}
 
 
+		// metadata
+		stage.m_primaryObjective = "capture";
+
+		setDefaultAttackBreakTimes(stage);
+		return stage;
+	}
 	protected Stage@ setupStage1() {
 		Stage@ stage = createStage();
 		stage.m_mapInfo.m_name = "Keepsake Bay";
