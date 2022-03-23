@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon file="two_hands_smg.animation_base" key="gkw_js9.weapon">
+
+    <specification 
+	accuracy_factor="0.98" 
+	barrel_offset="0.4" 
+	class="0"
+	magazine_size="30" 
+	name="JS9" 
+	projectile_speed="76.42" 
+	retrigger_time="0.066" 
+	suppressed="1" 
+	sight_range_modifier="1"
+	sustained_fire_diminish_rate="2" 
+	sustained_fire_grow_step="0.2" />
+    
+	
+
+    
+	<inventory  buy_price="9.0" sell_price="9.0" />
+    <sound key="fire" fileref="js9_fire_FromBF4.wav" pitch_variety="0.05" volume="1.1" />
+    <sound key="magazine_out" fileref="js9_mgz_out_FromWF.wav" volume="0.8" />
+    <sound key="magazine_in" fileref="js9_mgz_in_FromBF4.wav" volume="0.8" />
+    <sound key="cycle" fileref="js9_cycle_FromBF4.wav" volume="0.8" />
+    <sound class="impact" fileref="rifle_drop.wav" />    
+    <model filename="gkw_smg_js9.xml" />
+
+    <hud_icon filename="gkw_js9.png" />
+
+
+
+    <weak_hand_hold offset="0.2" />
+    <projectile file="bullet.projectile">
+        <result class="hit"  kill_probability="1.65" kill_decay_start_time="0.668" kill_decay_end_time="1.113" />
+    </projectile>
+    
+    <stance state_key="running" accuracy="0.7" />
+    <stance state_key="walking" accuracy="0.88" />
+    <stance state_key="crouch_moving" accuracy="0.9" />
+    <stance state_key="prone_moving" accuracy="0.9" />
+	<stance state_key="crouching" accuracy="0.95" />
+    <stance state_key="standing" accuracy="0.9" />
+    <stance state_key="prone" accuracy="1.0" />
+    
+
+</weapon>

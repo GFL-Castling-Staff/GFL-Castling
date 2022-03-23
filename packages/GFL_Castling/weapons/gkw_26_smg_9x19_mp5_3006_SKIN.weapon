@@ -17,9 +17,9 @@
     <commonness value="0" in_stock="0" can_respawn_with="1" />
 
     <sound key="fire" fileref="mp5_fire_FromCOD16.wav" pitch_variety="0.05" volume="1" />
-    <sound key="magazine_out" fileref="mp5_mgz_out_FromCOD16.wav" volume="0.8" />
-    <sound key="magazine_in" fileref="mp5_mgz_in_FromCOD16.wav" volume="0.8" />
-    <sound key="cycle" fileref="mp5_cycle_FromCOD16.wav" volume="0.8" />
+    <sound key="magazine_out" fileref="mp5_mgz_out_FromCOD16.wav" volume="0.65" />
+    <sound key="magazine_in" fileref="mp5_mgz_in_FromCOD16.wav" volume="0.65" />
+    <sound key="cycle" fileref="mp5_cycle_FromCOD16.wav" volume="0.65" />
     <sound class="impact" fileref="rifle_drop.wav" />    
     <model filename="gkw_smg_mp5.xml"/>
 
