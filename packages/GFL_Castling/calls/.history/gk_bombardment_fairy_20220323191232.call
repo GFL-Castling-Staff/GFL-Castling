@@ -15,7 +15,7 @@ key="gk_bombardment_fairy.call"
            common_spread="2 0 2" 
            launch_time="1.5"
            spawn_time="3.0">
-     <sound class="launch" fileref="Fairy_artillery_FromRA3.wav" volume="1" />      
+     <sound class="launch" fileref="kcco_artillery_FromBF2042.wav" volume="0.9" />      
 	   <sound class="spawn" fileref="woosh1.wav" volume="0.2" />
     </round>
 
@@ -47,7 +47,7 @@ instance_spread="14 14 14"
 common_spread="8 0 8" 
 launch_time="6.0"
 spawn_time="7.5">      
-<sound class="launch" fileref="Fairy_artillery_FromRA3.wav" volume="1" />      
+<sound class="launch" fileref="kcco_artillery_FromBF2042.wav" volume="1.2" />      
 <sound class="spawn" fileref="woosh1.wav" volume="0.2" />
 </round>
 

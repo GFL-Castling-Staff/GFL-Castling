@@ -2,7 +2,7 @@
 <call name="Hematite Saturation Artillery" key="kcco_Hephaestus.call" initiation_comment1="To Hematite, request artillery support" acknowledge_comment="Receive, we are adjusting artillery angle" acknowledge_time="0" launch_comment="Orders, three salvo" notify_metagame="1">
 
     <round instances="12" instance_class="grenade" instance_key="artillery_shell_fairies.projectile" instance_spread="10 10 10" common_spread="6 0 6" launch_time="5.0" spawn_time="8.0">
-        <sound class="launch" fileref="kcco_artillery_FromBF2042.wav" volume="0.6" />
+        <sound class="launch" fileref="kcco_artillery_FromBF2042.wav" volume="0.7" />
         
         <sound class="spawn" fileref="woosh1.wav" volume="0.2" />
     </round>

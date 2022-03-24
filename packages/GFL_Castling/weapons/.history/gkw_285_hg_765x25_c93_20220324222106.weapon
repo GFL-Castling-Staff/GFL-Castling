@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<weapon file="two_hands_single_hg.animation_base" key="gkw_p7.weapon">
+<weapon file="two_hands_single_hg.animation_base" key="gkw_c93.weapon">
 
 	
 	<!--Weapon specifications-->
 	
     <specification
 	retrigger_time="-1"
-	last_burst_retrigger_time="0.1"
-	accuracy_factor="0.98"
-	sustained_fire_grow_step="0.4"
-	sustained_fire_diminish_rate="1.5"
+	last_burst_retrigger_time="-1"
+	accuracy_factor="0.95"
+	sustained_fire_grow_step="0.6"
+	sustained_fire_diminish_rate="1.6"
 	magazine_size="8"
 	
     
 	suppressed="0"
-	name="P7"
+	name="Borchardt C93"
 	class="4"
 	reload_one_at_a_time="0"
 	sight_range_modifier="1.0"
-	projectile_speed="74.68"
+	projectile_speed="138.3"
 	projectiles_per_shot="1"
 	burst_shots="1"
      />
@@ -37,21 +37,22 @@
 	
 	
 	
-    
-    
+	<inventory  buy_price="3.0" sell_price="3.0" />
+	<commonness in_stock="1" />
+
     
 	
 	<!--Sounds-->
-	<inventory  buy_price="2.0" sell_price="2.0" />
-    <sound key="fire" fileref="p7_fire_FromPD2.wav" pitch_variety="0.05" volume="1" />
-    <sound key="magazine_out" fileref="p7_mgz_out_FromHALO4.wav" volume="0.5" />
-    <sound key="magazine_in" fileref="p7_mgz_in_FromHALO4.wav" volume="0.5"/>    
-    <sound key="cycle" fileref="p7_cycle_FromHALO4.wav" volume="0.5" />
+		
+    <sound key="fire" fileref="c93_fire_FromBF1.wav" pitch_variety="0.05" volume="1" />
+    <sound key="magazine_out" fileref="c93_mgz_out_FromCOD14.wav" volume="0.7" />
+    <sound key="magazine_in" fileref="c93_mgz_in_FromCOD14.wav" volume="0.7"/>    
+    <sound key="cycle" fileref="c93_cycle_FromCOD14.wav" volume="0.7" />
 
    
 	<!--Model, Icon, Cost-->
-    <model filename="gkw_hg_p7.xml" />
-    <hud_icon filename="gkw_p7.png" />
+    <model filename="gkw_c93_From_melondove.xml" />
+    <hud_icon filename="gkw_c93.png" />
 
 
 	
@@ -61,9 +62,9 @@
     <weak_hand_hold offset="0.1" />
     <projectile file="bullet.projectile">
         <result class="hit"
-		kill_probability="1.11"
-		kill_decay_start_time="0.185"
-		kill_decay_end_time="0.308"  />
+		kill_probability="1.3"
+		kill_decay_start_time="0.138"
+		kill_decay_end_time="0.231"  />
     </projectile>
     
     <!--Accuracy, Movement speed-->
