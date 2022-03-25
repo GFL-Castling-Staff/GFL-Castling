@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon file="designated_marksman_rifle.animation_base" key="gkw_mlemk1.weapon">
+
+
+    <!--Weapon specifications-->
+    
+    <specification 
+	retrigger_time="-1.0" 
+	accuracy_factor="1.0" 
+	sustained_fire_grow_step="1" 
+	sustained_fire_diminish_rate="0.8" 
+	magazine_size="10" 
+	can_shoot_standing="1" 
+	suppressed="0" 
+	name="Lee-Enfield" 
+	class="2" 
+	reload_one_at_a_time="5" 
+	sight_range_modifier="2.5" 
+	projectile_speed="239.66" 
+	barrel_offset="0.4" 
+	projectiles_per_shot="1" />
+    <inventory  buy_price="8.0" sell_price="8.0" />
+	<!--Animations-->
+	
+
+
+    <animation key="cycle" animation_key="Brifle1.1" />
+	<animation key="cycle" stance_key="prone" animation_key="Brifle1.1p" />	
+    <animation key="reload" animation_key="BrifleROaaT" />
+	<animation key="reload" stance_key="prone" animation_key="BrifleROaaTp" />			
+	
+	<!--Sounds-->
+	
+    <sound key="fire" fileref="mlemk1_fire_FromPOSTSCRIPTUM.wav" pitch_variety="0.05" volume="2.3" />
+    <sound key="cycle" fileref="mlemk1_cycle_FromINS.wav" volume="0.7"/>
+      <!-- <sound key="magazine_out" fileref="" volume="1"/> -->
+    <sound key="reload_one" fileref="carcano_reload_FromBF5.wav" volume="0.3" />
+    <sound key="cycle_out" fileref="m1903_cycle_out_FromBF1.wav"  volume="1"/>
+    <sound key="cycle_in" fileref="m1903_cycle_in_FromBF1.wav"  volume="1"/> 
+    <sound class="impact" fileref="rifle_drop.wav" volume="1"/>
+   
+	<!--Model, Icon, Cost-->
+   
+    <model filename="gkw_rf_mlemk1.xml" />
+    <hud_icon filename="gkw_mlemk1.png" />
+
+
+	
+	<!--Ballistics-->
+	
+    
+    <weak_hand_hold offset="0.3" />
+    <projectile file="bullet.projectile">
+        <result class="hit" 
+        kill_probability="9.45" 
+        kill_decay_start_time="0.895" 
+        kill_decay_end_time="1.659" />
+    </projectile>
+    
+    <!--Accuracy, Movement speed-->
+    
+	<stance state_key="walking" accuracy="0.4" />
+    <stance state_key="crouch_moving" accuracy="0.6" />
+    <stance state_key="prone_moving" accuracy="0.6" />
+    <stance state_key="standing" accuracy="0.9"/>
+    <stance state_key="crouching" accuracy="0.95" />
+    <stance state_key="prone" accuracy="1" />
+    <stance state_key="over_wall" accuracy="1" /> 
+	
+
+</weapon>
