@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapons>
-<weapon file="two_hands_smg.animation_base" key="gkw_ak74u.weapon">
+<weapon file="two_hands_ar.animation_base" key="gkw_ak74u.weapon">
 
     <specification 
 		accuracy_factor="0.98" 
@@ -43,7 +43,7 @@
     <modifier class="speed" value="0.45" /> 
 
 </weapon>
-<weapon file="two_hands_smg.animation_base" key="gkw_ak74u_skill.weapon">
+<weapon file="two_hands_ar.animation_base" key="gkw_ak74u_skill.weapon">
 
     <specification 
 		accuracy_factor="0.85" 
