@@ -1,50 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapon file="paradeus.base_weapon" key="parw_hev_art.weapon">
-    <tag name="assault" />
-    <specification 
-  retrigger_time="0.123" 
-  accuracy_factor="1.0" 
-  sustained_fire_grow_step="0.40" 
-  sustained_fire_diminish_rate="1.2" 
-  magazine_size="30" 
-  can_shoot_standing="1" 
-  suppressed="0" 
-  name="hev_art" 
-  class="0" 
-  projectile_speed="100.0" />
 
-    <animation key="recoil" ref="12" />
-    <animation key="recoil" ref="13" />
-    <animation key="recoil" ref="14" />
-    <animation state_key="reload" animation_key="reloading, ak47" />
-	<animation key="reload" stance_key="prone" animation_key="reloading, ar1, prone" />	
+  <specification retrigger_time="0.123" accuracy_factor="1.0" sustained_fire_grow_step="0.40" sustained_fire_diminish_rate="1.2" magazine_size="30" can_shoot_standing="1" suppressed="0" name="hev_art" class="0" projectile_speed="100.0" />
 
-    <animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
+  <animation key="recoil" ref="12" />
+  <animation key="recoil" ref="13" />
+  <animation key="recoil" ref="14" />
+  <animation state_key="reload" animation_key="reloading, ak47" />
+  <animation key="reload" stance_key="prone" animation_key="reloading, ar1, prone" />
 
-    <sound key="fire" fileref="ak47_shot.wav" pitch_variety="0.06" />
-    <sound key="magazine_out" fileref="rifle_clip_out.wav" />
-    <sound key="magazine_in" fileref="rifle_clip_in.wav" />
-    <sound key="cycle" fileref="rifle_chamber.wav" />
-    <sound class="impact" fileref="rifle_drop.wav" />
-    <model filename="assault_rifle1.xml" />
+  <animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
 
-    <hud_icon filename="testing.png" />
+  <sound key="fire" fileref="ak47_shot.wav" pitch_variety="0.06" />
+  <sound key="magazine_out" fileref="rifle_clip_out.wav" />
+  <sound key="magazine_in" fileref="rifle_clip_in.wav" />
+  <sound key="cycle" fileref="rifle_chamber.wav" />
+  <sound class="impact" fileref="rifle_drop.wav" />
+  <model filename="assault_rifle1.xml" />
+
+  <hud_icon filename="testing.png" />
 
 
 
-    <projectile file="bullet_paradeus.projectile">
-	    <result class="hit" kill_probability="0.55" kill_decay_start_time="0.33" kill_decay_end_time="0.68" />
-    </projectile>
-    <modifier class="speed" value="-0.02" />
-    <shield offset="-0.55 0.0 0" extent="0.8 0.5 1.0" />
-	<!-- state modifiers for weapons are connected to shield impact events -->
-	<!-- deflects all bullets; death, stun, wound become none, doesn't consume -->
-	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0" />
-	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-	<!-- death and wound blast causes the item to be consumed, stun is ignored -->
-	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0" />
-	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
-	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
->    
+  <projectile file="bullet_paradeus.projectile">
+    <result class="hit" kill_probability="0.55" kill_decay_start_time="0.33" kill_decay_end_time="0.68" />
+  </projectile>
+  <modifier class="speed" value="-0.02" />
+  <shield offset="-0.55 0.0 0" extent="0.8 0.5 1.0" />
+  <!-- state modifiers for weapons are connected to shield impact events -->
+  <!-- deflects all bullets; death, stun, wound become none, doesn't consume -->
+  <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0" />
+  <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+  <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+  <!-- death and wound blast causes the item to be consumed, stun is ignored -->
+  <modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0" />
+  <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+  <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+>
 </weapon>

@@ -1,39 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapon file="paradeus.base_weapon" key="parw_strelet.weapon">
-    <tag name="assault" />
-    <specification 
-  retrigger_time="0.059" 
-  accuracy_factor="1.0" 
-  sustained_fire_grow_step="0.40" 
-  sustained_fire_diminish_rate="1.2" 
-  magazine_size="30" 
-  can_shoot_standing="1" 
-  suppressed="0" 
-  name="strelet" 
-  class="0" 
-  projectile_speed="100.0" />
+  <tag name="autorifle" />
 
-    <animation key="recoil" ref="12" />
-    <animation key="recoil" ref="13" />
-    <animation key="recoil" ref="14" />
-    <animation state_key="reload" animation_key="reloading, ak47" />
-	<animation key="reload" stance_key="prone" animation_key="reloading, ar1, prone" />	
+  <specification retrigger_time="0.059" accuracy_factor="1.0" sustained_fire_grow_step="0.40" sustained_fire_diminish_rate="1.2" magazine_size="30" can_shoot_standing="1" suppressed="0" name="strelet" class="0" projectile_speed="100.0" />
 
-    <animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
+  <animation key="recoil" ref="12" />
+  <animation key="recoil" ref="13" />
+  <animation key="recoil" ref="14" />
+  <animation state_key="reload" animation_key="reloading, ak47" />
+  <animation key="reload" stance_key="prone" animation_key="reloading, ar1, prone" />
 
-    <sound key="fire" fileref="Strelet_fire_FromRE6.wav" pitch_variety="0.06" volume="1"/>
-    <sound key="magazine_out" fileref="Strelet_mgz_out_FromRE6.wav" volume="0.8" />
-    <sound key="magazine_in" fileref="Strelet_mgz_in_FromRE6.wav" volume="0.8" />
-    <sound key="cycle" fileref="Strelet_cycle_FromRE6.wav" volume="0.8" />
-    <sound class="impact" fileref="rifle_drop.wav" />
-    <model filename="parw_strelet.xml" />
+  <animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
 
-    <hud_icon filename="testing.png" />
+  <sound key="fire" fileref="Strelet_fire_FromRE6.wav" pitch_variety="0.06" volume="1"/>
+  <sound key="magazine_out" fileref="Strelet_mgz_out_FromRE6.wav" volume="0.8" />
+  <sound key="magazine_in" fileref="Strelet_mgz_in_FromRE6.wav" volume="0.8" />
+  <sound key="cycle" fileref="Strelet_cycle_FromRE6.wav" volume="0.8" />
+  <sound class="impact" fileref="rifle_drop.wav" />
+  <model filename="parw_strelet.xml" />
+
+  <hud_icon filename="testing.png" />
 
 
 
-    <projectile file="bullet_paradeus.projectile">
-	    <result class="hit" kill_probability="1.5" kill_decay_start_time="0.33" kill_decay_end_time="0.68" />
-    </projectile>
-    <modifier class="speed" value="0.1" />
+  <projectile file="bullet_paradeus.projectile">
+    <result class="hit" kill_probability="1.5" kill_decay_start_time="0.33" kill_decay_end_time="0.68" />
+  </projectile>
+  <modifier class="speed" value="0.1" />
 </weapon>

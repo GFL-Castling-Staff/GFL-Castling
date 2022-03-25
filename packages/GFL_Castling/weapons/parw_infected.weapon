@@ -1,45 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapon file="paradeus.base_weapon" on_ground_up="0 0 1" key="parw_infected.weapon" time_to_live_out_in_the_open="0.0">
+    <tag name="melee" />
 
-<specification 
-magazine_size="1"
-consume="0"  
-can_shoot_standing="1" 
-can_shoot_crouching="1" 
-can_shoot_prone="0" 
-carry_in_two_hands="0" 
-name="Infected" 
-class="5"
-stab_enabled="0"
-success_probability="2.0"
-damage="1.5"
-range="2.5"  
-character_state="death" 
-affect_characters="1"
-affect_vehicles="1"/>
-
-  
-<animation state_key="recoil" 			animation_key="claw_fast attack, zombie" />
-<animation state_key="hold" 			animation_key="still, zombie" />
-<animation state_key="hold_on_wall" 		animation_key="still, zombie" />
-<animation state_key="still_against_wall" 	animation_key="still, zombie" />
-<animation state_key="crouching" 		animation_key="crouch still, zombie" />
-<animation state_key="running" 			animation_key="running, zombie" />
-<animation state_key="walking" 			animation_key="walking, zombie" />
-
-<animation state_key="stabbing"	animation_key="stabbing, zombie" />
-        
-<sound key="effect" fileref="zomb_stab1.wav" pitch_variety="0.03" volume="0.7" />
-<sound key="effect" fileref="zomb_stab2.wav" pitch_variety="0.03" volume="0.7" />
-<sound key="effect" fileref="zomb_stab3.wav" pitch_variety="0.03" volume="0.7" />
-<sound key="effect" fileref="zomb_stab4.wav" pitch_variety="0.03" volume="0.7" />
-<sound key="effect" fileref="zomb_stab5.wav" pitch_variety="0.03" volume="0.7" />
-<sound key="effect" fileref="zomb_stab6.wav" pitch_variety="0.03" volume="0.7" />
+    <specification magazine_size="1" consume="0" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" carry_in_two_hands="0" name="Infected" class="5" stab_enabled="0" success_probability="2.0" damage="1.5" range="2.5" character_state="death" affect_characters="1" affect_vehicles="1"/>
 
 
-<control key="effect" value="1" />        
+    <animation state_key="recoil" animation_key="claw_fast attack, zombie" />
+    <animation state_key="hold" animation_key="still, zombie" />
+    <animation state_key="hold_on_wall" animation_key="still, zombie" />
+    <animation state_key="still_against_wall" animation_key="still, zombie" />
+    <animation state_key="crouching" animation_key="crouch still, zombie" />
+    <animation state_key="running" animation_key="running, zombie" />
+    <animation state_key="walking" animation_key="walking, zombie" />
 
-     <model  />
+    <animation state_key="stabbing" animation_key="stabbing, zombie" />
+
+    <sound key="effect" fileref="zomb_stab1.wav" pitch_variety="0.03" volume="0.7" />
+    <sound key="effect" fileref="zomb_stab2.wav" pitch_variety="0.03" volume="0.7" />
+    <sound key="effect" fileref="zomb_stab3.wav" pitch_variety="0.03" volume="0.7" />
+    <sound key="effect" fileref="zomb_stab4.wav" pitch_variety="0.03" volume="0.7" />
+    <sound key="effect" fileref="zomb_stab5.wav" pitch_variety="0.03" volume="0.7" />
+    <sound key="effect" fileref="zomb_stab6.wav" pitch_variety="0.03" volume="0.7" />
+
+
+    <control key="effect" value="1" />
+
+    <model  />
 
     <hud_icon filename="testing.png" />
     <commonness value="0.00001" can_respawn_with="1" in_stock="1"/>

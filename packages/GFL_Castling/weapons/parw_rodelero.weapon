@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapon file="paradeus.base_weapon" key="parw_rodelero.weapon">
-  <tag name="assault" />
+  <tag name="autorifle" />       
+
   <specification retrigger_time="0.8" accuracy_factor="1.0" sustained_fire_grow_step="0.40" sustained_fire_diminish_rate="1.2" magazine_size="10" can_shoot_standing="1" suppressed="0" name="rodelero" class="0" projectile_speed="100.0" />
 
   <animation key="recoil" ref="12" />

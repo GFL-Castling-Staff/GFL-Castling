@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapon key="parw_alina.weapon" on_ground_up="0 0 1" time_to_live_out_in_the_open="0.0" drop_count_factor_on_death="0.0" player_death_drop_owner_lock_time="0">
-    <tag name="cqb" />
+    <tag name="elite" />       
     <tag name="melee" />
+    <tag name="antiarmor" />
+
     <specification retrigger_time="0.35" magazine_size="1000" can_shoot_standing="1" can_shoot_crouching="0" can_shoot_prone="0" carry_in_two_hands="0" name="Alina" class="0" supperessed="0" use_basic_muzzle_smoke_effect="0" stab_enabled="1" stab_range="5" />
 
     <animation state_key="recoil" animation_key="melee, ninjato whip" />

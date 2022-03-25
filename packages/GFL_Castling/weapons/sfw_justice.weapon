@@ -1,66 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapon file="sf_boss.base_weapon" key="sfw_justice.weapon">
+  <tag name="elite" />
+  <tag name="shotgun" />
+  <tag name="antiarmor" />
+  <specification accuracy_factor="0.95" barrel_offset="0.5" class="4" solt="0" magazine_size="50" name="SF-Judge" projectile_speed="85" retrigger_time="0.1" suppressed="0" carry_in_two_hands="0" can_shoot_standing="1" can_shoot_crouching="0" can_shoot_prone="0" sustained_fire_diminish_rate="1.0" sustained_fire_grow_step="0.5" />
 
-    <specification 
-		accuracy_factor="0.95" 
-		barrel_offset="0.5" 
-		class="4"
-    solt="0" 
-		magazine_size="50" 
-		name="SF-Judge" 
-    projectile_speed="85" 
-		retrigger_time="0.1" 
-		suppressed="0" 
-    carry_in_two_hands="0"  
-    can_shoot_standing="1" 
-    can_shoot_crouching="0"
-    can_shoot_prone="0"
-		sustained_fire_diminish_rate="1.0"
-		sustained_fire_grow_step="0.5" />
 
-		
-    <animation state_key="recoil" animation_key="recoil,justice" />
-    <animation state_key="recoil" stance_key="prone" animation_key="recoil,justice" />
-    <animation state_key="recoil" stance_key="over_wall" animation_key="recoil,justice" />	
-    <animation state_key="hold"					animation_key="still,justice" />
-  	<animation state_key="hold_casual"			animation_key="relax,justice" />
-	  <animation state_key="hold_on_wall"			animation_key="still,justice" />
-    <animation state_key="still_against_wall"	animation_key="still,justice" />
-    <animation state_key="running" animation_key="running,justice" />
-    <animation state_key="walking"	animation_key="walking,justice" />
-    <animation state_key="walking_backwards" animation_key="walking backwards, pistol dual" />
-    <animation state_key="changing_weapon_in" 	animation_key="change weapon in, single hand carry" />
-    <animation state_key="prone_still" animation_key="prone_still, pistol dual" />
-    <animation state_key="reload"	animation_key="reload,justice" />
-    <animation key="reload" stance_key="prone" animation_key="reload,justice" />	
-    <animation state_key="stabbing" animation_key="pistol whip" />
-    <animation state_key="stabbing" animation_key="pistol whip 2" />
-    <animation state_key="stabbing" animation_key="pistol whip 3" />
+  <animation state_key="recoil" animation_key="recoil,justice" />
+  <animation state_key="recoil" stance_key="prone" animation_key="recoil,justice" />
+  <animation state_key="recoil" stance_key="over_wall" animation_key="recoil,justice" />
+  <animation state_key="hold" animation_key="still,justice" />
+  <animation state_key="hold_casual" animation_key="relax,justice" />
+  <animation state_key="hold_on_wall" animation_key="still,justice" />
+  <animation state_key="still_against_wall" animation_key="still,justice" />
+  <animation state_key="running" animation_key="running,justice" />
+  <animation state_key="walking" animation_key="walking,justice" />
+  <animation state_key="walking_backwards" animation_key="walking backwards, pistol dual" />
+  <animation state_key="changing_weapon_in" animation_key="change weapon in, single hand carry" />
+  <animation state_key="prone_still" animation_key="prone_still, pistol dual" />
+  <animation state_key="reload" animation_key="reload,justice" />
+  <animation key="reload" stance_key="prone" animation_key="reload,justice" />
+  <animation state_key="stabbing" animation_key="pistol whip" />
+  <animation state_key="stabbing" animation_key="pistol whip 2" />
+  <animation state_key="stabbing" animation_key="pistol whip 3" />
 
-    <sound key="fire" fileref="judge_fire_FromCOD13.wav" pitch_variety="0.05" volume="1.3" />
-    <sound key="magazine_out" fileref="gager_mgz_out_FromCOD13.wav" volume="0.8" />
-    <sound key="magazine_in" fileref="gager_mgz_in_FromCOD13.wav" volume="0.8" />
-    <sound key="cycle" fileref="gager_cycle_FromCOD13.wav" volume="0.8" />
-    <sound class="impact" fileref="rifle_drop.wav" />    
-    <model filename="" />
+  <sound key="fire" fileref="judge_fire_FromCOD13.wav" pitch_variety="0.05" volume="1.3" />
+  <sound key="magazine_out" fileref="gager_mgz_out_FromCOD13.wav" volume="0.8" />
+  <sound key="magazine_in" fileref="gager_mgz_in_FromCOD13.wav" volume="0.8" />
+  <sound key="cycle" fileref="gager_cycle_FromCOD13.wav" volume="0.8" />
+  <sound class="impact" fileref="rifle_drop.wav" />
+  <model filename="" />
 
-    <hud_icon filename="sfw_justice.png" />
+  <hud_icon filename="sfw_justice.png" />
 
 
 
-    <weak_hand_hold offset="0.2" />
-    <projectile file="bullet_sf.projectile">
-        <result class="blast"  damage="1.9"  radius="2.5" decal="1" push="0" character_state="death" faction_compare="not_equal"/> 
-     </projectile>
-     
-    <stance state_key="running" accuracy="0.5" />
-    <stance state_key="walking" accuracy="0.6" />
-    <stance state_key="crouch_moving" accuracy="0.8" />
-    <stance state_key="prone_moving" accuracy="0.8" />
+  <weak_hand_hold offset="0.2" />
+  <projectile file="bullet_sf.projectile">
+    <result class="blast" damage="1.9" radius="2.5" decal="1" push="0" character_state="death" faction_compare="not_equal"/>
+  </projectile>
 
-    <stance state_key="standing" accuracy="0.98" />
-    <stance state_key="crouching" accuracy="1.1" />
-    <stance state_key="prone" accuracy="1.2" />
-    
-    <modifier class="speed" value="-0.6" />
+  <stance state_key="running" accuracy="0.5" />
+  <stance state_key="walking" accuracy="0.6" />
+  <stance state_key="crouch_moving" accuracy="0.8" />
+  <stance state_key="prone_moving" accuracy="0.8" />
+
+  <stance state_key="standing" accuracy="0.98" />
+  <stance state_key="crouching" accuracy="1.1" />
+  <stance state_key="prone" accuracy="1.2" />
+
+  <modifier class="speed" value="-0.6" />
 </weapon>

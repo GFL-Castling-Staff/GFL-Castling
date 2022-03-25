@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapon file="sf.base_weapon" key="sfw_nemeum.weapon">
+    <tag name="mecha" />
+	<tag name="antiarmor" />
     <!--Weapon specifications-->
     <specification
 	retrigger_time="0.5" 

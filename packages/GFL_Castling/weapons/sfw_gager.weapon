@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapon file="sf.base_weapon" key="sfw_gager.weapon">
-
+	<tag name="machine gun" />
+	<tag name="elite" />
 	<specification 
 	accuracy_factor="0.9" 
 	barrel_offset="0.5" 

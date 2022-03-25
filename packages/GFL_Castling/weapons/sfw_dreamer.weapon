@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapon file="sf.base_weapon" key="sfw_dreamer.weapon">
-
+	<tag name="rifle" />
+	<tag name="antiarmor" />
+	<tag name="elite" />
 	<specification 
 	accuracy_factor="0.8" 
 	barrel_offset="0.5" 
