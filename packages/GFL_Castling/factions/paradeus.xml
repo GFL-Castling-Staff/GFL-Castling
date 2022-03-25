@@ -553,7 +553,7 @@
 		</resources>
 	</soldier>
 	<soldier name="Adeline" spawn_score="0.12" squad_size_xp_cap="0.5" copy_from="default_ai">
-		<ai filename="melee.ai" />
+		<ai filename="sniper.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="parw_nyto_black.weapon" enabled="1" />
 			<model filename="pard_boss_nyto_black.xml" />
