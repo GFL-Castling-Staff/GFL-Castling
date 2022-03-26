@@ -23,8 +23,10 @@
 	<animation key="jumping" target_key="jumping, germdog" />
 	<animation key="lifting up" target_key="jumping, germdog" />
 	<animation key="throwing self over" target_key="jumping, germdog" />
+	<animation key="falling" target_key="arrive, germdog" />
 	<animation key="stunned" target_key="stun, germdog" />
 	<animation key="wounded, still, 66" target_key="wounded, germdog" />
+	<animation key="wounded, moving forwards, 67" target_key="wound moving, germdog" />
 	<animation key="tank mg still" target_key="still, germdog" />
 	<animation key="stabbing" target_key="stab attack, germdog" />
 	<animation key="throwing, upside" target_key="stab attack, germdog" />
@@ -34,12 +36,13 @@
 	<animation key="change weapon out, reversed" target_key="reload, germdog" />
 	<animation key="change weapon in, reversed" target_key="reload, germdog" />
 	<animation key="change weapon in, single hand carry" target_key="reload, germdog" />
-	<animation key="swimming still" target_key="swiming, germdog" />
-	<animation key="swimming forwards" target_key="swiming, germdog" />
+	<animation key="swimming still" target_key="swimming, germdog" />
+	<animation key="swimming forwards" target_key="swimming, germdog" />
 	<animation key="reloading" target_key="reload, germdog" />
 	<animation key="celebrating" target_key="relax, germdog" />
 	<animation key="celebrating, shooting" target_key="reload, germdog" />
 	<animation key="surrender" target_key="wound, germdog" />
+	<animation key="leaving_wounded" target_key="unwound, germdog" />
 	<animation key="throwing, upside" target_key="jumping, germdog" />
 	<animation key="climbing ladder, still" target_key="climb, germdog" />
 	<animation key="climbing ladder" target_key="climb moving, germdog" />

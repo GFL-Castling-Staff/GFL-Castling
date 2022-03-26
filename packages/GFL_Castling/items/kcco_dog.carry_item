@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<carry_items>
+    <carry_item file="bp.base_carry_item" key="kcco_dog.carry_item" name="Code:Orthrus" slot="1" transform_on_consume="kcco_dog9" >
+        <hud_icon filename="kcco_doe.png" />
+        <model mesh_filename="" />
+        <modifier class="speed" value="0.4" />
+		<modifier class="hit_success_probability" value="-0.75" />
+	    <modifier class="detectability" value="0" />
+    </carry_item>
+    <carry_item file="bp.base_carry_item" key="kcco_dog9" name="Code:Orthrus" slot="1" transform_on_consume="kcco_dog8" >
+        <hud_icon filename="kcco_doe.png" />
+        <model mesh_filename="" />
+        <modifier class="speed" value="0.4" />
+		<modifier class="hit_success_probability" value="-0.75" />
+	    <modifier class="detectability" value="0" />
+    </carry_item>
+    <carry_item file="bp.base_carry_item" key="kcco_dog8" name="Code:Orthrus" slot="1" transform_on_consume="kcco_dog7" >
+        <hud_icon filename="kcco_doe.png" />
+        <model mesh_filename="" />
+        <modifier class="speed" value="0.4" />
+		<modifier class="hit_success_probability" value="-0.75" />
+	    <modifier class="detectability" value="0" />
+    </carry_item>
+    <carry_item file="bp.base_carry_item" key="kcco_dog7" name="Code:Orthrus" slot="1" transform_on_consume="kcco_dog6" >
+        <hud_icon filename="kcco_doe.png" />
+        <model mesh_filename="" />
+        <modifier class="speed" value="0.4" />
+		<modifier class="hit_success_probability" value="-0.75" />
+	    <modifier class="detectability" value="0" />
+    </carry_item>
+    <carry_item file="bp.base_carry_item" key="kcco_dog6" name="Code:Orthrus" slot="1" transform_on_consume="kcco_dog5" >
+        <hud_icon filename="kcco_doe.png" />
+        <model mesh_filename="" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="stun" />
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="stun" />
+        <modifier class="speed" value="0.4" />
+		<modifier class="hit_success_probability" value="-0.75" />
+	    <modifier class="detectability" value="0" />
+    </carry_item>
+    <carry_item file="bp.base_carry_item" key="kcco_dog5" name="Code:Orthrus" slot="1" transform_on_consume="kcco_dog4" >
+        <hud_icon filename="kcco_doe.png" />
+        <model mesh_filename="" />
+        <modifier class="speed" value="-0.2" />
+		<modifier class="hit_success_probability" value="-0.6" />
+	    <modifier class="detectability" value="0" />
+    </carry_item>
+    <carry_item file="bp.base_carry_item" key="kcco_dog4" name="Code:Orthrus" slot="1" transform_on_consume="kcco_dog3" >
+        <hud_icon filename="kcco_doe.png" />
+        <model mesh_filename="" />
+        <modifier class="speed" value="-0.2" />
+		<modifier class="hit_success_probability" value="-0.6" />
+	    <modifier class="detectability" value="0" />
+    </carry_item>
+    <carry_item file="bp.base_carry_item" key="kcco_dog3" name="Code:Orthrus" slot="1" transform_on_consume="kcco_dog2" >
+        <hud_icon filename="kcco_doe.png" />
+        <model mesh_filename="" />
+        <modifier class="speed" value="-0.2" />
+		<modifier class="hit_success_probability" value="-0.6" />
+	    <modifier class="detectability" value="0" />
+    </carry_item>
+    <carry_item file="bp.base_carry_item" key="kcco_dog2" name="Code:Orthrus" slot="1" transform_on_consume="kcco_dog1" >
+        <hud_icon filename="kcco_doe.png" />
+        <model mesh_filename="" />
+        <modifier class="speed" value="-0.2" />
+		<modifier class="hit_success_probability" value="-0.6" />
+	    <modifier class="detectability" value="0" />
+    </carry_item>
+    <carry_item file="wound.base_carry_item" key="kcco_dog1" name="Code:Orthrus" slot="1" transform_on_consume="kcco_dog0" >
+        <hud_icon filename="kcco_doe.png" />
+        <model mesh_filename="" />
+        <modifier class="speed" value="-0.2" />
+		<modifier class="hit_success_probability" value="-0.6" />
+	    <modifier class="detectability" value="0" />
+    </carry_item>
+    <carry_item file="none.base_carry_item" key="kcco_dog0" name="Code:Orthrus" slot="1">
+        <hud_icon filename="kcco_doe.png" />
+        <model mesh_filename="" />
+    </carry_item>
+</carry_items>
