@@ -443,7 +443,7 @@
 	</soldier>
 	<!-- ar -->
 	<soldier name="kcco_ar" spawn_score="1.2" copy_from="default_bot">
-		<ai filename="elite.ai" />
+		<ai filename="kcco_bot.ai" />
 		<model filename="kccod_cyclops_remake.xml" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_calls="1">
 			<weapon key="kcco_ar.weapon" enabled="1" />
@@ -455,7 +455,7 @@
 		</attribute_config>
 	</soldier>
 	<soldier name="kcco_ar_human" spawn_score="0.5" copy_from="default_bot">
-		<ai filename="elite.ai" />
+		<ai filename="kcco_bot.ai" />
 		<model filename="kccod_human.xml" />
 		<resources clear_weapons="1" clear_vehicles="1">
 			<weapon key="kcco_ar.weapon" enabled="1" />
@@ -482,6 +482,14 @@
 		<resources>
 			<weapon key="kcco_sg.weapon" enabled="1" />
 			<carry_item key="kcco_sg.carry_item" enabled="1" />
+		</resources>
+	</soldier>
+	<soldier name="kcco_dog" spawn_score="0.5" copy_from="default_bot">
+		<model filename="kccod_othrusdog.xml" />
+		<ai filename="melee_nb.ai" />
+		<resources clear_weapons="1" clear_vehicles="1" clear_calls="1">
+			<weapon key="kcco_othrusdog.weapon" enabled="1" />
+			<carry_item key="kcco_dog.carry_item" enabled="1" />
 		</resources>
 	</soldier>
 	<!-- archer -->
