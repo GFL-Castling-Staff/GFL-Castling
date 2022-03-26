@@ -17,6 +17,7 @@
 	<animation key="crouching backwards" target_key="walking, othrusdog" />
 	<animation key="prone" target_key="still, othrusdog" />
 	<animation key="prone, moving forwards" target_key="walking, othrusdog" />
+	<animation key="falling" target_key="arrive ground, othrusdog" />
 	<animation key="going prone" target_key="arrive ground, othrusdog" />
 	<animation key="leaving prone" target_key="jumping, othrusdog" />
 	<animation key="dive" target_key="dive, othrusdog" />
@@ -41,7 +42,6 @@
 	<animation key="celebrating" target_key="relax1, othrusdog" />
 	<animation key="surrender" target_key="wound, othrusdog" />
 	<animation key="leaving_wounded" target_key="unwound, othrusdog" />
-	<animation key="throwing, upside" target_key="jumping, othrusdog" />
 	<animation key="climbing ladder, still" target_key="climb still, othrusdog" />
 	<animation key="climbing ladder" target_key="climb moving, othrusdog" />
 	<animation key="climbing ladder ending" target_key="arrive ground, othrusdog" />

@@ -486,6 +486,7 @@
 	</soldier>
 	<soldier name="kcco_dog" spawn_score="0.5" copy_from="default_bot">
 		<model filename="kccod_othrusdog.xml" />
+		<character filename="kcco_othrusdog.character" />
 		<ai filename="melee_nb.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_calls="1">
 			<weapon key="kcco_othrusdog.weapon" enabled="1" />
