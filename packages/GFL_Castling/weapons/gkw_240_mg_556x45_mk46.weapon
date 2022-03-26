@@ -25,9 +25,9 @@
 
 
     <sound key="fire" fileref="mk46_fire_FromDIVISION2.wav" pitch_variety="0.05" volume="1" />
-    <sound key="magazine_out" fileref="mk48_cycle_FromCOD9.wav" volume="0.8" />
+    <sound key="magazine_out" fileref="mk48_mgz_out_FromCOD9.wav" volume="0.8" />
     <sound key="magazine_in" fileref="mk48_mgz_in_FromCOD9.wav" volume="0.8" />
-    <sound key="cycle" fileref="mk48_mgz_out_FromCOD9.wav" volume="0.8" />
+    <sound key="cycle" fileref="mk48_cycle_FromCOD9.wav" volume="0.8" />
     <sound class="impact" fileref="rifle_drop.wav" />
     <model filename="gkw_mg_mk46.xml" />
 
