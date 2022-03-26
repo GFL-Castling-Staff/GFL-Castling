@@ -103,14 +103,14 @@
 	<animation state_key="walking" animation_key="walking, hip fire" />
 	<animation state_key="running" animation_key="walking, hip fire" />
 	<animation state_key="reload" animation_key="reloading, dreamer" />
-	<animation state_key="next_in_chain_in" animation_key="ARswitch1.2" />
+	<animation state_key="next_in_chain_in" animation_key="ARswitch0.5" />
     <sound key="fire" fileref="sf_boss_fire_3.wav" pitch_variety="0.05" volume="0.2" />
     <sound key="magazine_out" fileref="kccoar_mgz_out_FromINS.wav" volume="0.8" />
     <sound key="magazine_in" fileref="kccoar_mgz_in_FromINS.wav" volume="0.8" />
     <sound key="cycle" fileref="kccoar_cycle_FromINS.wav" volume="0.8" />
     <sound class="impact" fileref="rifle_drop.wav" />
 
-    <model filename="sfw_dreamer.xml" />
+    <model filename="sfw_dreamer_skill.xml" />
 
     <hud_icon filename="sfw_dreamer_skill1.png" />
 
@@ -135,7 +135,7 @@
 
 	<specification 
 	accuracy_factor="1.5" 
-	barrel_offset="0.5" 
+	barrel_offset="1.4" 
 	can_shoot_standing="1" 
 	can_shoot_crouching="1"
 	can_shoot_prone="0"
@@ -171,7 +171,7 @@
     <animation state_key="still_against_wall" 	animation_key="hold, hip fire" />
 	<animation state_key="walking" animation_key="walking, hip fire" />
     <animation state_key="walking_backwards" animation_key="walking backwards, hip fire" />  
-	<animation state_key="running" animation_key="hold, hip fire" />  
+	<animation state_key="running" animation_key="walking, hip fire" />  
 	<animation state_key="reload" animation_key="reloading, microgun" />
     <animation state_key="crouching"			animation_key="hold, hip fire" />
     <animation state_key="crouch_moving" animation_key="walking, hip fire" />
@@ -182,7 +182,7 @@
     <sound key="cycle" fileref="kccoar_cycle_FromINS.wav" volume="0.8" />
     <sound class="impact" fileref="rifle_drop.wav" />    
 	
-    <model filename="sfw_dreamer.xml" />
+    <model filename="sfw_dreamer_skill.xml" />
 
     <hud_icon filename="sfw_dreamer_skill2.png" />
 	<effect class="muzzle" ref="dreamer"/>
