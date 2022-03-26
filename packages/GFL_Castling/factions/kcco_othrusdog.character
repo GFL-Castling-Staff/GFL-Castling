@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<character filename="default_base.character">
+
+	<parameter class="can_use_vehicles" value="0" /> 
+	<parameter class="speed" value="1.2" />
+
+	<animation state_key="hold"  animation_key="still, othrusdog" />
+	<animation state_key="hold_one_wall"  animation_key="still, othrusdog" />
+	<animation key="still" target_key="still, othrusdog" />
+	<animation key="still against wall" target_key="still, othrusdog" />
+	<animation key="still, heavy weapon" target_key="still, othrusdog" />
+	<animation key="walking" target_key="walking, othrusdog" />
+	<animation key="walking backwards" target_key="walking, othrusdog" />
+	<animation key="running" target_key="running, othrusdog" />
+	<animation key="crouch still" target_key="still, othrusdog" />
+	<animation key="crouching forwards" target_key="walking, othrusdog" />
+	<animation key="crouching backwards" target_key="walking, othrusdog" />
+	<animation key="prone" target_key="still, othrusdog" />
+	<animation key="prone, moving forwards" target_key="walking, othrusdog" />
+	<animation key="going prone" target_key="arrive ground, othrusdog" />
+	<animation key="leaving prone" target_key="jumping, othrusdog" />
+	<animation key="dive" target_key="dive, othrusdog" />
+	<animation key="jumping" target_key="jumping, othrusdog" />
+	<animation key="lifting up" target_key="jumping, othrusdog" />
+	<animation key="throwing self over" target_key="jumping, othrusdog" />
+	<animation key="stunned" target_key="stun, othrusdog" />
+	<animation key="wounded, still, 66" target_key="wound, othrusdog" />
+	<animation key="wounded, moving forwards, 67" target_key="wound moving, othrusdog" />
+	<animation key="tank mg still" target_key="still, othrusdog" />
+	<animation key="stabbing" target_key="stab attack, othrusdog" />
+	<animation key="throwing, upside" target_key="stab attack, othrusdog" />
+	<animation key="travelling car, aiming" target_key="still, othrusdog" />
+	<animation key="change weapon out" target_key="change weaponreload, othrusdog" />
+	<animation key="change weapon in" target_key="change weaponreload, othrusdog" />
+	<animation key="change weapon out, reversed" target_key="change weaponreload, othrusdog" />
+	<animation key="change weapon in, reversed" target_key="change weaponreload, othrusdog" />
+	<animation key="change weapon in, single hand carry" target_key="change weaponreload, othrusdog" />
+	<animation key="swimming still" target_key="swim still, othrusdog" />
+	<animation key="swimming forwards" target_key="swimming, othrusdog" />
+	<animation key="reloading" target_key="change weaponreload, othrusdog" />
+	<animation key="celebrating" target_key="relax1, othrusdog" />
+	<animation key="surrender" target_key="wound, othrusdog" />
+	<animation key="leaving_wounded" target_key="unwound, othrusdog" />
+	<animation key="throwing, upside" target_key="jumping, othrusdog" />
+	<animation key="climbing ladder, still" target_key="climb still, othrusdog" />
+	<animation key="climbing ladder" target_key="climb moving, othrusdog" />
+	<animation key="climbing ladder ending" target_key="arrive ground, othrusdog" />
+
+</character>
