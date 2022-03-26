@@ -24,21 +24,25 @@
 	projectiles_per_shot="1" />
 
 	<next_in_chain key="ff_dreamer_skill.weapon" share_ammo="0" />
-  <inventory 
-  encumbrance="27.0" 
-  buy_price="648.0" 
-  sell_price="648.0"/>
+    <inventory 
+    encumbrance="27.0" 
+    buy_price="648.0" 
+    sell_price="648.0"/>
 
-	<animation state_key="recoil"	animation_key="recoil, hip fire" />
-	<animation state_key="hold" animation_key="hold, hip fire" />
-	<animation state_key="crouching" animation_key="crouch, hold, hip fire" />
-	<animation state_key="crouch_moving" animation_key="crouching forwards, hip fire" />
-    <animation state_key="walking_backwards" animation_key="walking backwards, hip fire" />
-	<animation state_key="hold_on_wall" animation_key="hold, hip fire" />
-    <animation state_key="still_against_wall" 	animation_key="hold, hip fire" />
-	<animation state_key="walking" animation_key="walking, hip fire" />
-	<animation state_key="running" animation_key="walking, hip fire" />
-	<animation state_key="reload" animation_key="reloading, dreamer" />
+	<animation state_key="recoil"	animation_key="recoil2, dreamer" />
+    <animation key="recoil" stance_key="over_wall" animation_key="recoil2, dreamer" />
+    <animation key="recoil" stance_key="crouching" animation_key="recoil2, dreamer" />
+	<animation state_key="hold" animation_key="hold, dreamer" />
+  	<animation state_key="hold_casual"			animation_key="relax, dreamer" />
+	<animation state_key="hold_on_wall" animation_key="hold, dreamer" />
+    <animation state_key="still_against_wall" 	animation_key="hold, dreamer" />
+	<animation state_key="walking" animation_key="walking, dreamer" />
+    <animation state_key="walking_backwards" animation_key="walking backwards, dreamer" />  
+	<animation state_key="running" animation_key="rush, dreamer" />  
+    <animation state_key="crouching"	 animation_key="hold, dreamer" />
+    <animation state_key="crouch_moving" animation_key="walking, dreamer" />
+    <animation state_key="crouch_moving_backwards" animation_key="walking backwards, dreamer" />
+	<animation state_key="reload" animation_key="reloading, dreamer1.5" />
 
     <sound key="fire" fileref="dreamer_fire_FromTTF2.wav" pitch_variety="0.05" volume="2.7" />
     <sound key="magazine_out" fileref="kccoar_mgz_out_FromINS.wav" volume="0.8" />
@@ -88,21 +92,25 @@
 	projectiles_per_shot="1" />
 
 	<next_in_chain key="ff_dreamer_skill_1.weapon" share_ammo="0" />
-  <inventory 
-  encumbrance="27.0" 
-  buy_price="648.0" 
-  sell_price="648.0"/>
+    <inventory 
+    encumbrance="27.0" 
+    buy_price="648.0" 
+    sell_price="648.0"/>
 
-	<animation state_key="recoil"	animation_key="recoil, hip fire" />
-	<animation state_key="hold" animation_key="hold, hip fire" />
-	<animation state_key="crouching" animation_key="crouch, hold, hip fire" />
-	<animation state_key="crouch_moving" animation_key="crouching forwards, hip fire" />
-    <animation state_key="walking_backwards" animation_key="walking backwards, hip fire" />
-	<animation state_key="hold_on_wall" animation_key="hold, hip fire" />
-    <animation state_key="still_against_wall" 	animation_key="hold, hip fire" />
-	<animation state_key="walking" animation_key="walking, hip fire" />
-	<animation state_key="running" animation_key="walking, hip fire" />
-	<animation state_key="reload" animation_key="reloading, dreamer" />
+	<animation state_key="recoil"	animation_key="recoil, dreamer skill" />
+    <animation key="recoil" stance_key="over_wall" animation_key="recoil, dreamer skill" />
+    <animation key="recoil" stance_key="crouching" animation_key="recoil, dreamer skill" />
+	<animation state_key="hold" animation_key="hold, dreamer" />
+  	<animation state_key="hold_casual"			animation_key="relax, dreamer" />
+	<animation state_key="hold_on_wall" animation_key="hold, dreamer" />
+    <animation state_key="still_against_wall" 	animation_key="hold, dreamer" />
+	<animation state_key="walking" animation_key="walking, dreamer" />
+    <animation state_key="walking_backwards" animation_key="walking backwards, dreamer" />  
+	<animation state_key="running" animation_key="rush, dreamer" />  
+    <animation state_key="crouching"	 animation_key="hold, dreamer" />
+    <animation state_key="crouch_moving" animation_key="walking, dreamer" />
+    <animation state_key="crouch_moving_backwards" animation_key="walking backwards, dreamer" />
+	<animation state_key="reload" animation_key="reloading, dreamer1.5" />
 	<animation state_key="next_in_chain_in" animation_key="ARswitch0.5" />
     <sound key="fire" fileref="sf_boss_fire_3.wav" pitch_variety="0.05" volume="0.2" />
     <sound key="magazine_out" fileref="kccoar_mgz_out_FromINS.wav" volume="0.8" />
@@ -156,26 +164,24 @@
 
 	<next_in_chain key="ff_dreamer.weapon" share_ammo="0" />
 
-  <inventory 
-  encumbrance="27.0" 
-  buy_price="648.0" 
-  sell_price="648.0"/>
-	<animation state_key="recoil"	animation_key="hold, hip fire" />
-	<animation state_key="hold" animation_key="hold, hip fire" />
-	<!--<animation key="hold" stance_key="prone"  animation_key="hold, hip fire" />
-	<animation key="recoil"	stance_key="prone" animation_key="recoil, hip fire" />-->
-	
-
-
-	<animation state_key="hold_on_wall" animation_key="hold, hip fire" />
-    <animation state_key="still_against_wall" 	animation_key="hold, hip fire" />
-	<animation state_key="walking" animation_key="walking, hip fire" />
-    <animation state_key="walking_backwards" animation_key="walking backwards, hip fire" />  
-	<animation state_key="running" animation_key="walking, hip fire" />  
-	<animation state_key="reload" animation_key="reloading, microgun" />
-    <animation state_key="crouching"			animation_key="hold, hip fire" />
-    <animation state_key="crouch_moving" animation_key="walking, hip fire" />
-    <animation state_key="crouch_moving_backwards" animation_key="walking backwards, hip fire" />
+    <inventory 
+    encumbrance="27.0" 
+    buy_price="648.0" 
+    sell_price="648.0"/>
+	<animation state_key="recoil"	animation_key="recoil2, dreamer" />
+    <animation key="recoil" stance_key="over_wall" animation_key="recoil2, dreamer" />
+    <animation key="recoil" stance_key="crouching" animation_key="recoil2, dreamer" />
+	<animation state_key="hold" animation_key="hold, dreamer" />
+  	<animation state_key="hold_casual"			animation_key="relax, dreamer" />
+	<animation state_key="hold_on_wall" animation_key="hold, dreamer" />
+    <animation state_key="still_against_wall" 	animation_key="hold, dreamer" />
+	<animation state_key="walking" animation_key="walking, dreamer" />
+    <animation state_key="walking_backwards" animation_key="walking backwards, dreamer" />  
+	<animation state_key="running" animation_key="rush, dreamer" />  
+    <animation state_key="crouching"	 animation_key="hold, dreamer" />
+    <animation state_key="crouch_moving" animation_key="walking, dreamer" />
+    <animation state_key="crouch_moving_backwards" animation_key="walking backwards, dreamer" />
+	<animation state_key="reload" animation_key="reloading, dreamer3" />
     <sound key="fire" fileref="Typhon_Fire.wav" pitch_variety="0.00" volume="0.2" />
     <sound key="magazine_out" fileref="kccoar_mgz_out_FromINS.wav" volume="0.8" />
     <sound key="magazine_in" fileref="kccoar_mgz_in_FromINS.wav" volume="0.8" />
