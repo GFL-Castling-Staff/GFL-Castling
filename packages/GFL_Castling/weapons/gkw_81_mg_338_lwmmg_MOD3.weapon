@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapon file="heavy_mg_standing.animation_base" key="gkw_lwmmgmod3.weapon">
 
-    <specification 
+  <specification 
   barrel_offset="0.5" 
   retrigger_time="0.12" 
   accuracy_factor="0.5" 
@@ -19,7 +19,7 @@
 
 
 
-    <animation key="reload" animation_key="MGreload6" />
+    <animation key="reload" animation_key="reloading, Machine gun 4" />
     <inventory  buy_price="250.0" sell_price="250.0" />	
     <next_in_chain key="gkw_lwmmgmod3_skill.weapon" share_ammo="1" />
 

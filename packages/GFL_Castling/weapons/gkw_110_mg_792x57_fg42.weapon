@@ -20,8 +20,7 @@
 
 
 
-    <animation key="reload" animation_key="mgzSideR" />
-	<animation key="reload" stance_key="prone" animation_key="mgzSideRp" />
+    <animation key="reload" animation_key="reloading, Machine gun 0.8" />
     <inventory  buy_price="15.0" sell_price="15.0" />
     <next_in_chain key="gkw_fg42_skill.weapon" share_ammo="1" />
 
@@ -73,8 +72,7 @@
 
 
 
-    <animation key="reload" animation_key="mgzSideR" />
-	<animation key="reload" stance_key="prone" animation_key="mgzSideRp" />
+    <animation key="reload" animation_key="reloading, Machine gun 0.8" />
     <inventory  buy_price="15.0" sell_price="15.0" />
     <commonness  value="0" in_stock="0" can_spawn_with="1" />
     <next_in_chain key="gkw_fg42.weapon" share_ammo="1" />

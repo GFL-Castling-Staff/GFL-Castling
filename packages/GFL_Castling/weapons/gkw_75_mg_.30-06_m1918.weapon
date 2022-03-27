@@ -16,8 +16,7 @@
         sight_range_modifier="1.5"/>
 
 
-        <animation state_key="reload" animation_key="ARreload1.2" />
-        <animation key="reload" stance_key="prone" animation_key="ARreloadp1.2" />
+        <animation key="reload" animation_key="reloading, Machine gun 0.8" />
         <inventory buy_price="3.0" sell_price="3.0" />
         <next_in_chain key="gkw_m1918_skill.weapon" share_ammo="1" />
 
@@ -61,8 +60,7 @@
         sight_range_modifier="2.0"/>
 
 
-        <animation state_key="reload" animation_key="ARreload1.2" />
-        <animation key="reload" stance_key="prone" animation_key="ARreloadp1.2" />
+        <animation key="reload" animation_key="reloading, Machine gun 0.8" />
         <inventory buy_price="3.0" sell_price="3.0" />
         <commonness value="0" in_stock="0" can_spawn_with="1" />
         <next_in_chain key="gkw_m1918.weapon" share_ammo="1" />
