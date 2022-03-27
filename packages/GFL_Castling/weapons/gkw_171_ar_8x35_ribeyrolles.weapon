@@ -23,8 +23,7 @@
 
 
 
-        <animation state_key="reload" animation_key="ARreload1.5" />
-        <animation key="reload" stance_key="prone" animation_key="ARreloadp1.5" />
+        <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
         <animation state_key="next_in_chain_in" animation_key="ARswitch0.5" />
 
         <sound key="fire" fileref="ribeyrolles_fire_FromBF5.wav" pitch_variety="0.01" volume="1"/>
@@ -70,8 +69,7 @@
 
 
 
-        <animation state_key="reload" animation_key="ARreload1.8" />
-        <animation key="reload" stance_key="prone" animation_key="ARreloadp1.8" />
+        <animation key="reload" animation_key="reloading, magazine rifle 1.5" />
         <animation state_key="next_in_chain_in" animation_key="ARswitch1.2" />
 
         <sound key="fire" fileref="ribeyrolles_Fire_FromBF1.wav" pitch_variety="0.01" volume="1"/>
@@ -93,5 +91,7 @@
         <stance state_key="standing" accuracy="0.95" />
         <stance state_key="crouching" accuracy="1" />
         <stance state_key="prone" accuracy="1" />
+        <modifier class="speed" value="-0.2" />
+        <modifier class="hit_success_probability" value="+0.3" />
     </weapon>
 </weapons>

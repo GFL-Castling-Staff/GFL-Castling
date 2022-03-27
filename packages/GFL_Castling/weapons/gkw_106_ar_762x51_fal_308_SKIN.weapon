@@ -9,8 +9,8 @@
         solt="0" 
 		magazine_size="20" 
 		name="FAL-[Operation Winter Veil Supply]" 
-		projectile_speed="178.72" 
-		retrigger_time="0.0615" 
+		projectile_speed="200" 
+		retrigger_time="0.0857" 
 		suppressed="0" 
 		sustained_fire_diminish_rate="1.8" 
 		sustained_fire_grow_step="0.8" 
@@ -19,8 +19,7 @@
 
 
 
-    <animation state_key="reload" animation_key="ARreload1.8" />
-	<animation key="reload" stance_key="prone" animation_key="ARreloadp1.8" />
+    <animation key="reload" animation_key="reloading, magazine rifle 0.9" />
 
     <inventory  buy_price="8.0" sell_price="8.0" />
 

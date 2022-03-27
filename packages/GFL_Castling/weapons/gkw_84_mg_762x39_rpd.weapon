@@ -60,7 +60,7 @@
 	sustained_fire_diminish_rate="1.7" 
 	magazine_size="100" 
 	suppressed="0" 
-	name="RPD-skill-[Damage Focus MG]" 
+	name="RPD-[Damage Focus MG]" 
 	class="0" 
 	projectile_speed="156" 
 	spread_range="0.28"
@@ -83,7 +83,7 @@
     <sound class="impact" fileref="rifle_drop.wav" />
     <model filename="gkw_mg_rpd.xml" />
 
-    <hud_icon filename="gkw_rpd.png" />
+    <hud_icon filename="gkw_rpd_skill.png" />
 
 
 

@@ -32,8 +32,8 @@
 	<animation state_key="cycle"	animation_key="cycle, revolver" />
 	<animation state_key="cycle" stance_key="prone" animation_key="cycle, revolver, prone" />
 	
-	<!-- 狗策划的换弹速度 -->
-    <animation state_key="reload"	animation_key="reloading, pistol 2" />
+    <animation state_key="reload"	animation_key="reloading, SA OHG 0.5" />
+    <animation state_key="reload"	animation_key="reloading2, SA OHG 0.5" />
 	<animation key="reload" stance_key="prone" animation_key="reloading, pistol, prone" />	
 	<!-- <animation state_key="reload"	animation_key="reloading, swing out revolver" /> -->
     <!-- <animation state_key="reload"	animation_key="reloading, pistol" /> -->

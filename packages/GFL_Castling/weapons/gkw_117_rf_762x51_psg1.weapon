@@ -22,8 +22,7 @@
         <inventory  buy_price="10.0" sell_price="10.0" />
 
 
-        <animation state_key="reload" animation_key="ARreload1.5" />
-        <animation key="reload" stance_key="prone" animation_key="ARreloadp1.5" />
+    <animation key="reload" animation_key="reloading, magazine rifle 1.8" />	
 
         <sound key="fire" fileref="psg1_fire_FromCOD7.wav" pitch_variety="0.01" volume="1.2"/>
         <sound key="magazine_out" fileref="g3_mgz_out_FromCOD4R.wav" volume="0.8" />

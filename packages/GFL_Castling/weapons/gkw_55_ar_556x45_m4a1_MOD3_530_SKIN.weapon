@@ -18,8 +18,7 @@
 
 
 
-        <animation state_key="reload" animation_key="ARreload1.5" />
-        <animation key="reload" stance_key="prone" animation_key="ARreloadp1.5" />
+        <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
         <next_in_chain key="gkw_m4a1mod3_530_skill.weapon" share_ammo="0" />
         <inventory buy_price="270.0" sell_price="270.0" />	
         <commonness in_stock="0" value="0"/>

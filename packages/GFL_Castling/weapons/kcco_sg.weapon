@@ -23,8 +23,7 @@
 	<animation key="recoil"  ref="13" />
 	<animation key="recoil"  ref="14" />
     <animation state_key="cycle" ref="28" />
-    <animation state_key="reload" animation_key="reloading, mp5sd" />
-    <animation key="reload" stance_key="prone" animation_key="reloading, smg1, prone" />	
+    <animation key="reload" animation_key="reloading, magazine rifle 1.5" />
     <commonness value="1.5" in_stock="1" />
 	
 	<animation state_key="running" animation_key="running, bayonet" />

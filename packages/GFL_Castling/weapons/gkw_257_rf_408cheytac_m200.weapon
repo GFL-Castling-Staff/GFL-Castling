@@ -26,9 +26,8 @@
   	<animation state_key="hold_casual"			animation_key="dancing, raise hands" />
     <animation key="cycle" animation_key="Brifle1.3" />
 	<animation key="cycle" stance_key="prone" animation_key="Brifle1.3p" />	
-    <animation key="reload" animation_key="magBrifleR" />
-	<animation key="reload" stance_key="prone" animation_key="magBrifleRp" />		
-	
+    <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
+
 	<!--Sounds-->
 	
     <sound key="fire" fileref="m200_fire_FromARMA3.wav" volume="1.3" />
