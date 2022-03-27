@@ -31,7 +31,8 @@
 	
     <animation state_key="stabbing" 			animation_key="pistol whip 2" />
 	
-	<animation state_key="reload" animation_key="reloading, mp5sd" />
-	<animation key="reload" stance_key="prone" animation_key="reloading, smg1, prone" />
+    <animation state_key="reload"	animation_key="reloading, A OHG 0.75" />
+    <animation state_key="reload"	animation_key="reloading2, A OHG 0.75" />
+
 	<modifier class="hit_success_probability" value="-0.15" />
 </weapon>
