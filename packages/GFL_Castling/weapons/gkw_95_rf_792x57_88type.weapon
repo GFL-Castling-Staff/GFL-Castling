@@ -18,11 +18,10 @@
   projectiles_per_shot="1" />
 
 
-  <inventory  buy_price="2.0" sell_price="2.0" />
+    <inventory  buy_price="2.0" sell_price="2.0" />
     <animation key="cycle" animation_key="Brifle0.8" />
 	<animation key="cycle" stance_key="prone" animation_key="Brifle0.8p" />	
-    <animation key="reload" animation_key="BrifleROaaT" />
-	<animation key="reload" stance_key="prone" animation_key="BrifleROaaTp" />	
+    <animation key="reload" animation_key="reloading, oaat" />		
 	
 	
     <sound key="fire" fileref="type88mod3_fire_FromKF2.wav" pitch_variety="0.05" volume="1.1" />
