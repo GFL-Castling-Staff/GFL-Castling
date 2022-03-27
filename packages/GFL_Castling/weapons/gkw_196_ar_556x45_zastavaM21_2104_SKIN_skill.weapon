@@ -18,10 +18,9 @@
 		sustained_fire_grow_step="0.3" />
 
 
-<next_in_chain key="gkw_zasm21_2104.weapon" share_ammo="0" />
+    <next_in_chain key="gkw_zasm21_2104.weapon" share_ammo="0" />
 
-    <animation state_key="reload" animation_key="ARreload1.8" />
-    <animation key="reload" stance_key="prone" animation_key="ARreload1.8" />
+    <animation key="reload" animation_key="reloading, magazine rifle 1.8" />
     <animation state_key="next_in_chain_in" animation_key="change weapon in 416" />
     <inventory  buy_price="7.0" sell_price="7.0" />	
     <commonness value="0" in_stock="0" />

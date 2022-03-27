@@ -17,6 +17,7 @@
 
     <next_in_chain key="gkw_ak74u_3002_skill.weapon" share_ammo="1" />
     <inventory  buy_price="8.0" sell_price="8.0" />
+    <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
     <sound key="fire" fileref="ak74u_fire_FromSQUAD.wav" pitch_variety="0.05" volume="1" />
     <sound key="magazine_out" fileref="ak74u_mgz_out_FromSQUAD.wav" volume="0.9" />
     <sound key="magazine_in" fileref="ak74u_mgz_in_FromSQUAD.wav" volume="0.9" />
@@ -43,7 +44,7 @@
     <modifier class="speed" value="0.45" /> 
 
 </weapon>
-<weapon file="two_hands_smg.animation_base" key="gkw_ak74u_3002_skill.weapon">
+<weapon file="two_hands_ar.animation_base" key="gkw_ak74u_3002_skill.weapon">
 
     <specification 
 		accuracy_factor="0.85" 
@@ -63,6 +64,7 @@
 
     <next_in_chain key="gkw_ak74u_3002.weapon" share_ammo="1" />
     <inventory  buy_price="8.0" sell_price="8.0" />
+    <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
     <sound key="fire" fileref="ak74uskill_fire_FromINSMIC.wav" pitch_variety="0.05" volume="0.9" />
     <sound key="magazine_out" fileref="ak74u_mgz_out_FromSQUAD.wav" volume="0.9" />
     <sound key="magazine_in" fileref="ak74u_mgz_in_FromSQUAD.wav" volume="0.9" />

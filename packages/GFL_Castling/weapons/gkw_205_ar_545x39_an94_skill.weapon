@@ -20,8 +20,7 @@
     <next_in_chain key="gkw_an94.weapon" share_ammo="1" />
     <commonness value="0" in_stock="0" can_respawn_with="1" />
   	<animation state_key="hold_casual"			animation_key="dancing, kazachok" />
-    <animation state_key="reload" animation_key="ARreload1.8" />
-	<animation key="reload" stance_key="prone" animation_key="ARreloadp1.8" />
+    <animation key="reload" animation_key="reloading, magazine rifle 1.5" />
     <inventory  buy_price="8.0" sell_price="8.0" />
 
 
@@ -49,6 +48,7 @@
     <stance state_key="standing" accuracy="0.98" />
     <stance state_key="crouching" accuracy="1.2" />
     <stance state_key="prone" accuracy="1.2" />
-    <modifier class="speed" value="-0.25" />
+    <modifier class="speed" value="-0.2" />
+    <modifier class="hit_success_probability" value="+0.3" />
 
 </weapon>

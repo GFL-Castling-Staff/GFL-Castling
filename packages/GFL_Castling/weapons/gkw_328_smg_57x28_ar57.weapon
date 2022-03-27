@@ -22,6 +22,7 @@
 
     
     <inventory  buy_price="20.0" sell_price="20.0" />
+    <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
     <sound key="fire" fileref="ar57_fire_FromIRONSIGHT.wav" pitch_variety="0.05" volume="1" />
     <sound key="magazine_out" fileref="ar57_mgz_out_FromKF2.wav" volume="1.1" />
     <sound key="magazine_in" fileref="ar57_mgz_in_FromKF2.wav" volume="1.1" />
