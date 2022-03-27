@@ -9,12 +9,17 @@
             <sound class="spawn" fileref="woosh1.wav" volume="0.2" />
       </round>
 
-      <round instances="2" instance_class="grenade" instance_key="artillery_shell_203.projectile" instance_spread="8 8 8" common_spread="6 0 6" launch_time="7.0" spawn_time="9.0">
+      <round instances="2" instance_class="grenade" instance_key="artillery_shell_203.projectile" instance_spread="8 8 8" common_spread="6 0 6" launch_time="3.0" spawn_time="7.0">
              <sound class="launch" fileref="argo_puppis_firesupport_FromBF1.wav" volume="2.6" />
             <sound class="spawn" fileref="woosh1.wav" volume="0.2" />
       </round>
 
-      <round instances="2" instance_class="grenade" instance_key="artillery_shell_203.projectile" instance_spread="8 8 8" common_spread="6 0 6" launch_time="10.0" spawn_time="13.0">
+      <round instances="1" instance_class="grenade" instance_key="artillery_shell_203.projectile" instance_spread="8 8 8" common_spread="6 0 6" launch_time="3.0" spawn_time="7.3">
+            <sound class="launch" fileref="argo_puppis_firesupport_FromBF1.wav" volume="2.6" />
+           <sound class="spawn" fileref="woosh1.wav" volume="0.2" />
+     </round>
+
+      <round instances="3" instance_class="grenade" instance_key="artillery_shell_203.projectile" instance_spread="8 8 8" common_spread="6 0 6" launch_time="3.0" spawn_time="7.7">
              <sound class="launch" fileref="argo_puppis_firesupport_FromBF1.wav" volume="2.6" />
             <sound class="spawn" fileref="woosh1.wav" volume="1.0" />
       </round>
