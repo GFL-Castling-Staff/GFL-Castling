@@ -26,13 +26,12 @@
 	<!--Animations-->
 	
     <commonness value="0" in_stock="0" />
-    <animation key="reload" animation_key="shotgunROaaT" />
-	<animation key="reload" stance_key="prone" animation_key="shotgunROaaTp" />	
+    <animation key="reload" animation_key="reloading, oaat" />		
 	
 	<!--Sounds-->
 	
     <sound key="fire" fileref="ltlx7000_fire_FromCOD16.wav" volume="1.3" />
-    <sound key="reload_one" fileref="sg_reload_fromCOD10.wav"volume="0.7" />
+    <sound key="reload_one" fileref="sg_reload_fromCOD10.wav" volume="0.7" />
     <sound class="impact" fileref="rifle_drop.wav" />
    
 	<!--Model, Icon, Cost-->

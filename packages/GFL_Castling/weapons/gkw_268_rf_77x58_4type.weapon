@@ -14,7 +14,7 @@
 	name="4 Type" 
 	class="4" 
 	burst_shots="1"
-	reload_one_at_a_time="0" 
+	reload_one_at_a_time="1" 
 	projectile_speed="228.72" 
 	barrel_offset="0.6" 
 	projectiles_per_shot="1"
@@ -24,8 +24,7 @@
 	
 	<animation key="recoil" ref="27" />
 	<animation key="cycle" ref="30" />
-	<animation state_key="reload" animation_key="reloading, m1 garand" />
-	<animation state_key="reload" stance_key="prone" animation_key="reloading, m1 garand, prone" />
+    <animation key="reload" animation_key="reloading, m1908" />
 	
 	<weak_hand_hold offset="0.3" />
 	
