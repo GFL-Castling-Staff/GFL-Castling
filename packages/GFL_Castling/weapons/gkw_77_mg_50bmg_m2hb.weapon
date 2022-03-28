@@ -26,7 +26,7 @@
 
 
     <inventory  buy_price="20.0" sell_price="10.0" />	
-    <animation key="reload" animation_key="reloading, Machine gun 2.8" />
+    <animation key="reload" animation_key="reloading, Machine gun 4" />
     <next_in_chain key="gkw_m2hb_skill.weapon" share_ammo="1" />
 
 
@@ -92,7 +92,7 @@
 
     <inventory  buy_price="20.0" sell_price="10.0" />	
     <commonness  value="0" in_stock="0" can_spawn_with="1" />
-    <animation key="reload" animation_key="reloading, Machine gun 2.8" />
+    <animation key="reload" animation_key="reloading, Machine gun 4" />
     <next_in_chain key="gkw_m2hb.weapon" share_ammo="1" />
 
 
@@ -118,7 +118,7 @@
     
 
     <projectile file="bullet.projectile">
-        <result class="blast"  damage="1"  radius="3" decal="1" push="0" character_state="death" 	faction_compare="not_equal"/>
+        <result class="blast"  damage="1"  radius="2.5" decal="1" push="0" character_state="death" 	faction_compare="not_equal"/>
     </projectile>
     
     <!--Accuracy, Movement speed-->

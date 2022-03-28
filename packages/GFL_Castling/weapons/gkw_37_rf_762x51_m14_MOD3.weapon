@@ -13,7 +13,7 @@
 	magazine_size="20" 
 	can_shoot_standing="1" 
 	suppressed="0" 
-	name="M14 (MOD3) with M2 Bipod" 
+	name="M14(MOD3) with M2 Bipod" 
 	class="4" 
 	burst_shots="1"
 	last_burst_retrigger_time="0.125"
@@ -29,7 +29,7 @@
     <capacity value="1" source="rank" source_value="6.048" />
     <next_in_chain key="gkw_m14mod3_skill.weapon" share_ammo="1" />
     <animation key="reload" animation_key="reloading, magazine rifle 1.8" />	
-	
+    <animation state_key="next_in_chain_in" animation_key="ARswitch0.5" />
 	<!--Sounds-->
 	
     <sound key="fire" fileref="m14_fire_FromDIVISION2.wav" pitch_variety="0.01" volume="1" />
@@ -58,13 +58,13 @@
     
     <!--Accuracy, Movement speed-->
     
-	<stance state_key="walking" accuracy="0.75" />
-    <stance state_key="crouch_moving" accuracy="0.85" />
-    <stance state_key="prone_moving" accuracy="0.9" />
-    <stance state_key="standing" accuracy="0.95"/>
+	<stance state_key="walking" accuracy="0.45" />
+    <stance state_key="crouch_moving" accuracy="0.4" />
+    <stance state_key="prone_moving" accuracy="0.4" />
+    <stance state_key="standing" accuracy="0.80"/>
     <stance state_key="crouching" accuracy="0.98" />
-    <stance state_key="prone" accuracy="1.1" />
-    <stance state_key="over_wall" accuracy="1.0" /> 
+    <stance state_key="prone" accuracy="1" />
+    <stance state_key="over_wall" accuracy="1" />
     <modifier class="speed" value="0" /> 
 
 </weapon>
@@ -96,8 +96,8 @@
 	<capacity value="0" source="rank" source_value="0.0" />
     <capacity value="1" source="rank" source_value="6.048" />
     <next_in_chain key="gkw_m14mod3.weapon" share_ammo="1" />
-    <animation key="reload" animation_key="reloading, magazine rifle 1.8" />
-	
+    <animation key="reload" animation_key="reloading, magazine rifle 2.1" />
+    <animation state_key="next_in_chain_in" animation_key="ARswitch0.5" />
 	<!--Sounds-->
 	
     <sound key="fire" fileref="m14skill_fire_FromBFH.wav" pitch_variety="0.01" volume="1" />
@@ -127,10 +127,10 @@
     </projectile>
     
     <!--Accuracy, Movement speed-->
-    
-	<stance state_key="walking" accuracy="0.5" />
-    <stance state_key="crouch_moving" accuracy="0.75" />
-    <stance state_key="prone_moving" accuracy="0.9" />
+    <stance state_key="running" accuracy="0.3" />
+	<stance state_key="walking" accuracy="0.40" />
+    <stance state_key="crouch_moving" accuracy="0.35" />
+    <stance state_key="prone_moving" accuracy="0.4" />
     <stance state_key="standing" accuracy="0.73"/>
     <stance state_key="crouching" accuracy="0.88" />
     <stance state_key="prone" accuracy="1.0" />

@@ -20,6 +20,7 @@
     <next_in_chain key="gkw_g11mod3_skill_9.weapon" share_ammo="1" />
     <animation key="reload" animation_key="reloading, magazine rifle 1.5" />
 	<animation state_key="stabbing" animation_key="melee, bayonet" />
+    <animation state_key="next_in_chain_in" animation_key="ARswitch0.5" />
     <inventory  buy_price="250.0" sell_price="250.0" />
     <commonness value="0" in_stock="0" />
 
@@ -77,6 +78,7 @@
     <commonness value="0" in_stock="0" can_respawn_with="1" />
     <animation key="reload" animation_key="reloading, magazine rifle 1.8" />
 	<animation state_key="stabbing" animation_key="melee, bayonet" />
+    <animation state_key="next_in_chain_in" animation_key="ARswitch0.5" />
 	<inventory  buy_price="250.0" sell_price="250.0" />
 
 

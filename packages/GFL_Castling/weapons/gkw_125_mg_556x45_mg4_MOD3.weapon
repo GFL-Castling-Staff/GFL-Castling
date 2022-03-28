@@ -19,6 +19,7 @@
 
 
     <animation key="reload" animation_key="reloading, Machine gun 5" />
+    <animation state_key="next_in_chain_in" animation_key="ARswitch0.5" />
     <inventory  buy_price="270.0" sell_price="270.0" />	
 	  <capacity value="0" source="rank" source_value="0.0" />
     <capacity value="1" source="rank" source_value="6.048" />
@@ -73,6 +74,7 @@
 
 
     <animation key="reload" animation_key="reloading, Machine gun 5" />
+    <animation state_key="next_in_chain_in" animation_key="ARswitch0.5" />
     <inventory  buy_price="270.0" sell_price="270.0" />	
     <commonness  value="0" in_stock="0" />
 	  <capacity value="0" source="rank" source_value="0.0" />
