@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon file="gf_smg.base_weapon" key="gkw_idw_3205.weapon">
+    <specification 
+    retrigger_time="0.06" 
+    accuracy_factor="1.0" 
+    sustained_fire_grow_step="0.2" 
+    sustained_fire_diminish_rate="1.7" 
+    magazine_size="32" 
+    suppressed="0" 
+    name="IDW-[Cloak and cat]" 
+    class="0" 
+    projectile_speed="74.88" 
+    barrel_offset="0.1" 
+    stab_enabled="1" 
+    carry_in_two_hands="0" 
+    spread_range="0.1"/>
+	
+    <animation state_key="recoil" animation_key="recoil, pistol 2" />
+    <animation state_key="recoil" stance_key="prone" animation_key="recoil, pistol, prone" />
+    <animation state_key="recoil" stance_key="over_wall" animation_key="recoil, overwall pistol" />
+	
+    <animation state_key="hold" animation_key="still, pistol 2" />
+    <animation state_key="hold_casual" animation_key="hold_casual, pistol 2" />
+    <animation state_key="hold_on_wall" animation_key="hold, overwall pistol" />
+    <animation state_key="still_against_wall" animation_key="hold_casual, pistol 4" />
+	
+    <animation state_key="running" animation_key="dog running" />
+    <animation state_key="walking" animation_key="walking, pistol 2" />
+    <animation state_key="walking_backwards" animation_key="walking backwards, pistol" />
+	
+    <animation state_key="crouching" animation_key="crouch, pistol 2" />
+    <animation state_key="crouch_moving" animation_key="crouching forwards, single hand carry" />
+    <animation state_key="crouch_moving_backwards" animation_key="crouching backwards, pistol 2" />
+	
+    <animation state_key="prone_still" animation_key="prone_still, pistol" />
+	
+    <animation state_key="changing_weapon_in" animation_key="change weapon in, single hand carry" />
+	
+    <animation state_key="stabbing" animation_key="pistol whip 2" />
+	
+    <animation state_key="reload" animation_key="reloading, mp5sd" />
+    <animation key="reload" stance_key="prone" animation_key="reloading, ar1, prone" />
+	
+    <sound key="fire" fileref="idw_fire_FromBORDERLAND3.wav" pitch_variety="0" volume="1" />
+    <sound key="magazine_out" fileref="klin_mgz_out_FromEFT.wav" volume="0.7" />
+    <sound key="magazine_in" fileref="klin_mgz_in_FromEFT.wav" volume="0.7" />
+    <sound key="cycle" fileref="klin_cycle_FromEFT.wav" volume="0.7" />
+    <sound class="impact" fileref="rifle_drop.wav" />
+    <model filename="gkw_smg_idw_3205.xml" />
+    <hud_icon filename="gkw_idw_3205.png" />
+    <commonness value="0" in_stock="0" can_respawn_with="1" />
+    <inventory buy_price="30.0" sell_price="1.0"/>
+	
+    <projectile file="bullet.projectile">
+        <result class="hit" kill_probability="1.35" kill_decay_start_time="0.682" kill_decay_end_time="2.7" />
+    </projectile>    
+	<modifier class="speed" value="+0.5" />
+	</weapon>

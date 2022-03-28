@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon file="heavy_mg.animation_base" key="gkw_lwmmg_skill.weapon">
+
+    <specification 
+  barrel_offset="0.5" 
+  retrigger_time="0.12" 
+  accuracy_factor="0.99" 
+  sustained_fire_grow_step="0.35" 
+  sustained_fire_diminish_rate="1.5" 
+  magazine_size="120" 
+  suppressed="0" 
+  name="LWMMG-[Hunting Impulse]" 
+  class="0" 
+  projectile_speed="210" 
+  spread_range="0.25"
+  sight_range_modifier="1.75"
+  can_shoot_crouching="1" 
+  />
+ 
+
+
+    <animation key="reload" animation_key="MGreload6" />
+    <inventory  buy_price="20.0" sell_price="20.0" />	
+    <commonness  value="0" in_stock="0" can_spawn_with="1" />
+    <next_in_chain key="gkw_lwmmg.weapon" share_ammo="1" />
+
+    <sound key="fire" fileref="lwmmgskill_fire_FromBFBC2.wav" pitch_variety="0.05" volume="1.2" />
+    <sound key="magazine_out" fileref="lwmmg_mgz_out_FromCOD16.wav" volume="0.6" />
+    <sound key="magazine_in" fileref="lwmmg_mgz_in_FromCOD16.wav" volume="0.6" />
+    <sound key="cycle" fileref="lwmmg_cycle_FromCOD16.wav" volume="0.6" />
+    <sound class="impact" fileref="rifle_drop.wav" />
+    <model filename="gkw_mg_lwmmg_from_melondove.xml" />
+
+    <hud_icon filename="gkw_lwmmg.png" />
+
+
+
+
+    <projectile file="bullet.projectile">
+        <result class="blast"  damage="1" radius="1.7" decal="1" push="0.3" character_state="death" faction_compare="not_equal" />
+        <trigger class="impact" />
+        <effect class="result" key="terrain" ref="BigBurst" use_surface_color="1" />
+        <effect class="result" key="terrain" ref="SmokeTop" post_processing="1" />
+        <effect class="result" key="terrain" ref="Smoke" post_processing="1" />
+        <effect class="result" key="terrain" ref="Shine" lighting="0" />
+        <effect class="result" key="terrain" ref="Godray" lighting="0" />
+        <effect class="result" key="terrain" ref="ShadowSmoke" shadow="1" />
+    </projectile>
+       <stance state_key="running" accuracy="0.65" />
+
+    <stance state_key="crouch_moving" accuracy="0.65" />
+    <stance state_key="prone_moving" accuracy="0.65" />
+    <stance state_key="standing" accuracy="0.7" />
+    <stance state_key="crouching" accuracy="0.75" />
+    <stance state_key="prone" accuracy="1" />
+    <stance state_key="over_wall" accuracy="1" />  
+    <modifier class="speed" value="-0.2" /> 
+
+</weapon>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon file="two_hands_single_hg.animation_base" key="gkw_c96.weapon">
+
+	
+	<!--Weapon specifications-->
+	
+    <specification
+	retrigger_time="-1"
+	last_burst_retrigger_time="0.1"
+	accuracy_factor="0.98"
+	sustained_fire_grow_step="0.4"
+	sustained_fire_diminish_rate="1.5"
+	magazine_size="10"
+	suppressed="0"
+	name="C96"
+	class="4"
+	reload_one_at_a_time="0"
+	sight_range_modifier="1.0"
+	projectile_speed="90.43"
+	projectiles_per_shot="1"
+	burst_shots="1"
+     />
+	
+	<!--Animations-->
+	
+	<inventory  buy_price="3.0" sell_price="3.0" />
+	
+	
+    
+	
+	
+	
+	
+	
+	
+	
+	
+    
+    
+    
+	
+	<!--Sounds-->
+		
+    <sound key="fire" fileref="c96_Fire_FromBF1.wav" pitch_variety="0.05" volume="1" />
+    <sound key="magazine_out" fileref="c96_mgz_out_FromBF1.wav" volume="0.6" />
+    <sound key="magazine_in" fileref="c96_mgz_in_FromBF1.wav" volume="0.6"/>    
+    <sound key="cycle" fileref="c96_cycle_FromBF1.wav" volume="0.6" />
+
+   
+	<!--Model, Icon, Cost-->
+    <model filename="gkw_hg_c96.xml" />
+    <hud_icon filename="gkw_c96.png" />
+
+
+	
+	<!--Ballistics-->
+	
+    
+    <weak_hand_hold offset="0.1" />
+    <projectile file="bullet.projectile">
+        <result class="hit"
+		kill_probability="1.1"
+		kill_decay_start_time="0.424"
+		kill_decay_end_time="0.706"  />
+    </projectile>
+    
+    <!--Accuracy, Movement speed-->
+        
+    <stance state_key="running" accuracy="0.8" />
+    <stance state_key="walking" accuracy="0.85" />
+    <stance state_key="crouch_moving" accuracy="0.8" />
+    <stance state_key="prone_moving" accuracy="0.8" />
+    <stance state_key="standing" accuracy="0.9" />
+    <stance state_key="crouching" accuracy="0.95" />
+    <stance state_key="prone" accuracy="1" />
+
+
+</weapon>

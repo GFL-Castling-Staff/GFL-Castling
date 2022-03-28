@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon file="designated_marksman_rifle.animation_base" key="gkw_wa2000.weapon">
+
+
+    <!--Weapon specifications-->
+    
+    <specification 
+	retrigger_time="-1.0" 
+	accuracy_factor="1" 
+	sustained_fire_grow_step="0.6" 
+	sustained_fire_diminish_rate="2.2" 
+	magazine_size="6" 
+	can_shoot_standing="1" 
+	suppressed="0" 
+	name="WA2000" 
+	class="4" 
+	burst_shots="1"
+	last_burst_retrigger_time="0.333"
+	reload_one_at_a_time="0" 
+	sight_range_modifier="2.8" 
+	projectile_speed="260" 
+	barrel_offset="0.4" 
+	projectiles_per_shot="1" />
+	
+	<!--Animations-->
+	
+	<inventory  buy_price="10.0" sell_price="10.0" />
+    <animation key="reload" animation_key="magBrifleR" />
+	<animation key="reload" stance_key="prone" animation_key="magBrifleRp" />		
+	
+	<!--Sounds-->
+	
+    <sound key="fire" fileref="wa2000_fire_FromCOD6R.wav" volume="1.2" />
+    <sound key="cycle" fileref="wa2000_cycle_FromCOD6R.wav" volume="0.8"/>
+    <sound key="cycle_in" fileref="wa2000_cycle_FromCOD6R.wav" volume="0.8"/>
+    <sound key="magazine_out" fileref="wa2000_mgz_out_FromCOD6R.wav" volume="0.8" />
+    <sound key="magazine_in" fileref="wa2000_mgz_in_FromCOD6R.wav" volume="0.8"/>
+    <sound class="impact" fileref="rifle_drop.wav" />
+   
+	<!--Model, Icon, Cost-->
+   
+    <model filename="gkw_rf_wa2000.xml" />
+    <hud_icon filename="gkw_wa2000.png" />
+
+
+	
+	<!--Ballistics-->
+	
+    
+    <weak_hand_hold offset="0.3" />
+    <projectile file="bullet.projectile">
+        <result class="hit" 
+        kill_probability="13.7" 
+        kill_decay_start_time="1.824" 
+        kill_decay_end_time="3.04" />
+    </projectile>
+    
+    <!--Accuracy, Movement speed-->
+    
+	<stance state_key="walking" accuracy="0.4" />
+    <stance state_key="crouch_moving" accuracy="0.4" />
+    <stance state_key="prone_moving" accuracy="0.4" />
+    <stance state_key="standing" accuracy="0.87"/>
+    <stance state_key="crouching" accuracy="0.92" />
+    <stance state_key="prone" accuracy="1.1" />
+    <stance state_key="over_wall" accuracy="1.1" /> 
+    <modifier class="speed" value="0" />  
+
+</weapon>

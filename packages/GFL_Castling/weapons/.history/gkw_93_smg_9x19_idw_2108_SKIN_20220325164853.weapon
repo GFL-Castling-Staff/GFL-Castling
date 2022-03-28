@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon file="one_hand_smg.animation_base" key="gkw_idw_2108.weapon">
+
+    <specification 
+		retrigger_time="0.1" 
+		accuracy_factor="1.0" 
+		sustained_fire_grow_step="0.2" 
+		sustained_fire_diminish_rate="1.7" 
+		magazine_size="32" 
+		suppressed="0" 
+		name="IDW-[Cat in a box]" 
+		class="0" 
+		projectile_speed="74.88" 
+		barrel_offset="0.1" 
+		spread_range="0.1"
+	/>
+
+
+
+
+    
+	
+	
+    <sound key="fire" fileref="idw_fire_FromBORDERLAND3.wav" pitch_variety="0" volume="1" />
+    <sound key="magazine_out" fileref="klin_mgz_out_FromEFT.wav" volume="0.7" />
+    <sound key="magazine_in" fileref="klin_mgz_in_FromEFT.wav" volume="0.7" />
+    <sound key="cycle" fileref="klin_cycle_FromEFT.wav" volume="0.7" />
+    <sound key="cycle" fileref="IDW_cycle_FromPD2.wav" />
+    <sound class="impact" fileref="rifle_drop.wav" />
+
+    <model filename="gkw_smg_idw_2108.xml" />
+    <hud_icon filename="gkw_idw_2108.png" />
+
+	<commonness value="0" in_stock="0" can_respawn_with="1" />
+	<inventory  price="3.0" />
+    <projectile file="bullet.projectile">
+        <result class="hit" kill_probability="1.35" kill_decay_start_time="0.682" kill_decay_end_time="2.7" />
+    </projectile>
+
+</weapon>

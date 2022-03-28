@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon file="heavy_mg_standing.animation_base" key="gkw_lewis_4001.weapon">
+
+    <specification 
+    barrel_offset="0.5" 
+	retrigger_time="0.1" 
+	accuracy_factor="0.98" 
+	sustained_fire_grow_step="0.4" 
+	sustained_fire_diminish_rate="1.7" 
+	magazine_size="97" 
+
+	suppressed="0" 
+	name="Lewis Gun-[Holy Night Promise]" 
+	class="0" 
+	projectile_speed="198.72" 
+	spread_range="0.1"
+	sight_range_modifier="1.5"/>
+    <commonness in_stock="0" value="0"/>
+
+
+    <animation key="reload" animation_key="MGreload3.8" />
+	<inventory  buy_price="8.0" sell_price="8.0" />
+
+
+
+
+    <sound key="fire" fileref="lewis_fire_FromBF5.wav" pitch_variety="0.05" volume="1.3" />
+    <sound key="magazine_out" fileref="lewis_mgz_in_FromBF1.wav" volume="0.8" />
+    <sound key="magazine_in" fileref="lewis_mgz_in_FromBF1.wav" volume="0.8" />
+    <sound key="cycle" fileref="lewis_cycle_FromBF5.wav" volume="0.8" />
+    <sound class="impact" fileref="rifle_drop.wav" />
+    <model filename="gkw_lewis_4001_From_melondove.xml" />
+
+    <hud_icon filename="gkw_lewis_4001.png" />
+
+
+
+
+    <projectile file="bullet.projectile">
+        <result class="hit" kill_probability="1.9" kill_decay_start_time="1.714" kill_decay_end_time="2.857" />
+    </projectile>
+       <stance state_key="running" accuracy="0.6" />
+
+    <stance state_key="crouch_moving" accuracy="0.6" />
+    <stance state_key="prone_moving" accuracy="0.6" />
+    <stance state_key="standing" accuracy="0.75" />
+    <stance state_key="crouching" accuracy="0.9" />
+    <stance state_key="prone" accuracy="1.1" />
+    <stance state_key="over_wall" accuracy="1.1" />  
+    <modifier class="speed" value="-0.15" /> 
+
+</weapon>
