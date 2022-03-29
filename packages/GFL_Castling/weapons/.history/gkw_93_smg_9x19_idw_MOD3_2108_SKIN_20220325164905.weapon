@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon file="one_hand_smg.animation_base" key="gkw_idwmod3_2108.weapon">
+    <next_in_chain key="gkw_idwmod3-skill" share_ammo="1" />
+    <specification
+retrigger_time="0.042"
+accuracy_factor="1.0"
+sustained_fire_grow_step="1.0"
+sustained_fire_diminish_rate="4.1"
+magazine_size="32"
+suppressed="0"
+name="IDW(MOD3)-[Cat in a box]"
+class="0"
+projectile_speed="74.88"
+barrel_offset="0.1"
+spread_range="0.1"/>
+    <sound key="fire" fileref="idw_fire_FromBORDERLAND3.wav" pitch_variety="0" volume="1" />
+    <sound key="magazine_out" fileref="klin_mgz_out_FromEFT.wav" volume="0.7" />
+    <sound key="magazine_in" fileref="klin_mgz_in_FromEFT.wav" volume="0.7" />
+    <sound key="cycle" fileref="klin_cycle_FromEFT.wav" volume="0.7" />
+    <sound key="cycle" fileref="IDW_cycle_FromPD2.wav" />
+    <sound class="impact" fileref="rifle_drop.wav" />
+    <model filename="gkw_smg_idw_2108.xml" />
+    <hud_icon filename="gkw_idw_MOD3_2108_SKIN.png" />
+    <commonness value="0" in_stock="0" can_respawn_with="1" />
+    <inventory  price="50.0" />
+    <capacity value="0" source="rank" source_value="0.0" />
+    <capacity value="1" source="rank" source_value="4.622" />
+    <projectile file="bullet.projectile">
+        <result class="hit" kill_probability="1.65" kill_decay_start_time="0.682" kill_decay_end_time="2.7" />
+    </projectile>
+</weapon>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon file="designated_marksman_rifle.animation_base" key="gkw_gm6.weapon" >
+
+
+    <!--Weapon specifications-->
+    
+    <specification 
+	retrigger_time="-1.0" 
+	accuracy_factor="1" 
+	sustained_fire_grow_step="1.3" 
+	sustained_fire_diminish_rate="0.7" 
+	magazine_size="5" 
+	can_shoot_standing="1" 
+	can_shoot_crouching="1"
+	can_shoot_prone="1"
+	suppressed="0" 
+	name="GM6 Lynx" 
+	class="4" 
+	reload_one_at_a_time="0" 
+	sight_range_modifier="3.0" 
+	projectile_speed="231.49" 
+	barrel_offset="0.4" 
+	projectiles_per_shot="1"
+	last_burst_retrigger_time="0.333"
+	burst_shots="1"/>
+	
+	<!--Animations-->
+	
+
+	<inventory  buy_price="50.0" sell_price="10.0" />
+    <animation key="reload" animation_key="ARreload2.2" />
+	<animation key="reload" stance_key="prone" animation_key="ARreloadp2.2" />		
+	
+	<!--Sounds-->
+	
+    <sound key="fire" fileref="gm6_fire_FromCOD10.wav" pitch_variety="0.05" volume="1.3" />
+    <sound key="cycle" fileref="gm6_cycle_FromWF.wav" volume="0.7"/>
+    <sound key="magazine_out" fileref="gm6_mgz_out_FromFC5.wav" volume="0.7"/>
+    <sound key="magazine_in" fileref="gm6_mgz_in_FromFC5.wav" volume="0.7"/>
+    <sound class="impact" fileref="rifle_drop.wav" volume="1"/>
+   
+	<!--Model, Icon, Cost-->
+   
+    <model filename="gkw_rf_gm6.xml" />
+    <hud_icon filename="gkw_gm6lynx.png" />
+
+
+	
+	<!--Ballistics-->
+
+    <weak_hand_hold offset="0.3" />
+    <projectile file="bullet.projectile">
+        <result class="blast" damage="8"   radius="2" decal="1" push="0" character_state="death" faction_compare="not_equal"/>
+    </projectile>
+    
+    <!--Accuracy, Movement speed-->
+
+	<stance state_key="walking" accuracy="0.65" />
+    <stance state_key="crouch_moving" accuracy="0.8" />
+    <stance state_key="prone_moving" accuracy="0.8" />
+    <stance state_key="standing" accuracy="0.9"/>
+    <stance state_key="crouching" accuracy="1" />
+    <stance state_key="prone" accuracy="1" />
+    <stance state_key="over_wall" accuracy="1.0" />
+    <modifier class="speed" value="-0.1" /> 
+
+
+
+</weapon>

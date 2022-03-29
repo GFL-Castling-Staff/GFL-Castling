@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon file="sf.base_weapon" key="sfw_jaeger_swap.weapon">
+
+	<specification 
+	retrigger_time="2.0" 
+	accuracy_factor="1.0" 
+	sustained_fire_grow_step="3.0" 
+	sustained_fire_diminish_rate="0.55" 
+	magazine_size="4" 
+	can_shoot_standing="0" 
+	suppressed="0" 
+	name="SF-Jaeger SWAP" 
+	class="4" 
+	reload_one_at_a_time="0" 
+	sight_range_modifier="1.8" 
+	projectile_speed="300.0" 
+	barrel_offset="0.65" 
+	projectiles_per_shot="1" 
+	burst_shots="1"/>
+	  
+    <animation key="recoil" ref="27" />
+	<animation key="recoil" stance_key="prone" animation_key="recoil1, big, prone" />
+    <animation key="cycle" ref="30" />
+	<animation key="cycle" stance_key="prone" animation_key="bolt cycle, prone" />	
+    <animation state_key="reload" animation_key="reloading, dragunov_svd" />
+	<animation key="reload" stance_key="prone" animation_key="reloading, sniper1, prone" />
+
+    <sound key="fire" fileref="Gauss_fire_FromBORDERLAND3.wav" pitch_variety="0.03" volume="2.5" />
+    <sound key="cycle" fileref="sniper_cycle.wav" />
+    <sound key="magazine_out" fileref="jaeger_mgz_out_FromCOD13.wav" />
+    <sound key="magazine_in" fileref="jaeger_mgz_in_FromCOD13.wav" />
+    <sound key="cycle_out" fileref="sniper_cycle_out.wav" />
+    <sound key="cycle_in" fileref="sniper_cycle_in.wav" />
+    <sound class="impact" fileref="rifle_drop.wav" />
+
+    <model filename="sfw_jaeger_swap_from_dusk.xml" />
+    <hud_icon filename="sfw_jaeger.png" />
+
+
+
+
+    <weak_hand_hold offset="0.3" />
+    <projectile file="bullet_sf.projectile">
+        <result class="hit"  kill_probability="5.0" kill_decay_start_time="0.53" kill_decay_end_time="0.6" />
+		<trail probability="1.0" key="sf_long" />
+    </projectile>
+ 
+</weapon>

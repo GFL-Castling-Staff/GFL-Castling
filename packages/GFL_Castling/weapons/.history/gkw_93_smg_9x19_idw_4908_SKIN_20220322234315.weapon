@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon file="one_hand_smg.animation_base" key="gkw_idw_4908.weapon">
+	<specification 
+	retrigger_time="0.075" 
+	accuracy_factor="1.0" 
+	sustained_fire_grow_step="0.2" 
+	sustained_fire_diminish_rate="1.7" 
+	magazine_size="32" 
+	suppressed="0" 
+	name="IDW-[Tumbler Cat]" 
+	class="0" 
+	projectile_speed="74.88" 
+	barrel_offset="0.1" 
+	spread_range="0.1" />
+	<sound key="fire" fileref="IDW_Fire_FromPD2.wav" pitch_variety="0" volume="0.3" />
+	<sound key="reload_one" fileref="IDW_mgz_in_FromPD2.wav" />
+	<sound key="magazine_out" fileref="IDW_mgz_out_FromPD2.wav" />
+	<sound key="magazine_in" fileref="IDW_mgz_in_FromPD2.wav" />
+	<sound key="cycle" fileref="IDW_cycle_FromPD2.wav" />
+	<sound class="impact" fileref="rifle_drop.wav" />
+	<model filename="gkw_smg_idw_4908.xml" />
+	<hud_icon filename="gkw_idw_4908.png" />
+	<commonness value="0" in_stock="0" can_respawn_with="1" />
+	<inventory  price="3.0" />
+	<projectile file="bullet.projectile">
+		<result class="hit" kill_probability="1.35" kill_decay_start_time="0.682" kill_decay_end_time="2.7" />
+	</projectile>
+</weapon>

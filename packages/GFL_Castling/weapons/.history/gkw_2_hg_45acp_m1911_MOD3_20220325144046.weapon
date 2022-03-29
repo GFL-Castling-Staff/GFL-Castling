@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon file="dual_hg.animation_base" key="gkw_m1911_mod3.weapon">
+
+	
+	<!--Weapon specifications-->
+	
+    <specification
+	retrigger_time="-1"
+	last_burst_retrigger_time="0.12"
+	accuracy_factor="0.98"
+	sustained_fire_grow_step="0.45"
+	sustained_fire_diminish_rate="1.6"
+	magazine_size="14"
+	suppressed="0"
+	name="M1911 (MOD3) with XM261 ACP"
+	class="4"
+	reload_one_at_a_time="0"
+	sight_range_modifier="1.0"
+	projectile_speed="53.4"
+	projectiles_per_shot="6"
+	burst_shots="1"
+	/>
+	<inventory  buy_price="50.0" sell_price="35.0" />
+    <capacity value="0" source="rank" source_value="0.0" />
+    <capacity value="1" source="rank" source_value="4.622" />
+	<!--Animations-->
+	
+
+	<!--Sounds-->
+		
+	<sound key="fire" fileref="m1911_fire_FromMOH2012.wav" pitch_variety="0.05" volume="1" />
+    <sound key="magazine_out" fileref="m1911_mgz_out_FromFC5.wav" volume="0.4" />
+    <sound key="magazine_in" fileref="m1911_mgz_in_FromFC5.wav" volume="0.4"/>    
+    <sound key="cycle" fileref="m1911_cycle_FromFC5.wav" volume="0.4" />
+
+   
+	<!--Model, Icon, Cost-->
+    <model filename="" />
+    <hud_icon filename="gkw_m1911mod3_skill.png" />
+
+	
+	<!--Ballistics-->
+	
+    
+    <weak_hand_hold offset="0.1" />
+    <projectile file="bullet.projectile">
+        <result class="hit"
+		kill_probability="1.5"
+		kill_decay_start_time="0.094"
+		kill_decay_end_time="0.468"  />
+    </projectile>
+    
+    <!--Accuracy, Movement speed-->
+        
+    <stance state_key="running" accuracy="0.85" />
+    <stance state_key="walking" accuracy="0.85" />
+    <stance state_key="crouch_moving" accuracy="0.8" />
+    <stance state_key="prone_moving" accuracy="0.8" />
+    <stance state_key="standing" accuracy="0.9" />
+    <stance state_key="crouching" accuracy="0.95" />
+    <stance state_key="prone" accuracy="1" />
+
+
+</weapon>

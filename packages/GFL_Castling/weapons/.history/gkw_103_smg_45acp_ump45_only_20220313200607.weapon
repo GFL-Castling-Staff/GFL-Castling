@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon file="two_hands_smg.animation_base" key="gkw_ump45_only.weapon">
+
+    <specification 
+		accuracy_factor="0.99" 
+		barrel_offset="0.4" 
+		
+		class="0"
+         
+		magazine_size="25" 
+		name="UMP45 with Additional Process Module" 
+		projectile_speed="60.64" 
+		retrigger_time="0.1" 
+		suppressed="1" 
+		sustained_fire_diminish_rate="2.1" 
+		sustained_fire_grow_step="0.25" />
+
+
+
+
+    
+	
+	
+
+    
+    <inventory  buy_price="10.0" sell_price="10.0" />
+    <sound key="fire" fileref="ump45_fire_FromBF4.wav" pitch_variety="0.05" volume="1" />
+    <sound key="magazine_out" fileref="ump45_mgz_out_FromKF2.wav" volume="1.2" />
+    <sound key="magazine_in" fileref="ump45_mgz_in_FromKF2.wav" volume="1.2" />
+    <sound key="cycle" fileref="ump45_cycle_FromKF2.wav" volume="1.2" />
+    <sound class="impact" fileref="rifle_drop.wav" volume="1"/>    
+    <model filename="gkw_smg_ump45.xml" />
+
+    <hud_icon filename="testing.png" />
+
+
+
+    <weak_hand_hold offset="0.2" />
+    <projectile file="bullet.projectile">
+        <result class="hit"  kill_probability="1.5" kill_decay_start_time="0.211" kill_decay_end_time="1" />
+    </projectile>
+    
+    <stance state_key="running" accuracy="0.85" />
+    <stance state_key="walking" accuracy="0.9" />
+    <stance state_key="crouch_moving" accuracy="0.9" />
+    <stance state_key="prone_moving" accuracy="0.9" />
+
+    <stance state_key="standing" accuracy="0.96" />
+
+    <stance state_key="prone" accuracy="1" />
+    <modifier class="speed" value="+0.4" />
+	
+	<shield offset="-0.05 0.0 0.05" extent="0.15 0.3 0.4" />
+</weapon>
