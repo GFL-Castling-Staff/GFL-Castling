@@ -5,6 +5,7 @@
 #include "query_helpers.as"
 #include "query_helpers2.as"
 #include "GFLhelpers.as"
+#include "call_marker_tracker.as"
 
 class ManualCallTask{
     int m_characterId;
@@ -13,6 +14,11 @@ class ManualCallTask{
     int m_factions;
     Vector3 m_pos;
     string CallType;
+    int m_callId;
+	int m_atlasIndex=0;
+	float m_size=2.0;
+	float m_range=1.0;
+    string m_typeKey;
 
     ManualCallTask(int characterId,string command,float time,int faction,Vector3 position,string callType)
 	{
@@ -23,11 +29,27 @@ class ManualCallTask{
 		Callkey = command;
         CallType = callType;
 	}
+
+    void setIndex(int key){
+        m_atlasIndex=key;
+    }
+    void setSize(float key){
+        m_size=key;
+    }
+    void setRange(float key){
+        m_range=key;
+    }
+    void setIconTypeKey(string key){
+        m_typeKey=key;
+    }
+    void setDummyId(int key){
+        m_callId=key;
+    }
 }
 
 class ManualCall : Tracker {
 	protected Metagame@ m_metagame;
-
+    protected int m_DummyCallID=0;
 	// --------------------------------------------
 	ManualCall(Metagame@ metagame) {
 		@m_metagame = @metagame;
@@ -66,8 +88,14 @@ class ManualCall : Tracker {
                         " character_id='" + characterId +"'" +
                         " position='" + target.toString() + "' />";
                         //m_metagame.getComms().send(c);
-                        CallTaskArray.insertLast(ManualCallTask(characterId,c,8.0,Faction,target,"medic_call"));
-                        //_log("Queue+1");
+                        ManualCallTask@ FairyRequest = ManualCallTask(characterId,c,8.0,Faction,target,"medic_call");
+                        FairyRequest.setIconTypeKey("call_marker_drop");
+                        FairyRequest.setIndex(4);
+                        FairyRequest.setSize(0.5);
+                        FairyRequest.setDummyId(m_DummyCallID);
+                        m_DummyCallID++;                        
+                        CallTaskArray.insertLast(FairyRequest);
+                        addCastlnigMarker(FairyRequest);
                         _log("QueueLegeth:"+CallTaskArray.length());
                         sendFactionMessageKey(m_metagame,Faction,"Request trauma team support!");
                         sendFactionMessageKey(m_metagame,Faction,"Receive, transport aircraft is maneuvering");
@@ -101,7 +129,14 @@ class ManualCall : Tracker {
                         " instance_key='sg1hg1mg2_landing.vehicle' " +
                         " character_id='" + characterId +"'" +
                         " position='" + target.toString() + "' />";
-                        CallTaskArray.insertLast(ManualCallTask(characterId,c,8.0,Faction,target,"mgsg_call"));
+                        ManualCallTask@ FairyRequest = ManualCallTask(characterId,c,8.0,Faction,target,"mgsg_call");
+                        FairyRequest.setIconTypeKey("call_marker_drop");
+                        FairyRequest.setIndex(8);
+                        FairyRequest.setSize(0.5);
+                        FairyRequest.setDummyId(m_DummyCallID);
+                        m_DummyCallID++;                        
+                        CallTaskArray.insertLast(FairyRequest);
+                        addCastlnigMarker(FairyRequest);                        
                         _log("QueueLegeth:"+CallTaskArray.length());
                         sendFactionMessageKey(m_metagame,Faction,"Request MG-SG echelon support!");
                         sendFactionMessageKey(m_metagame,Faction,"Receive, transport aircraft is maneuvering");
@@ -134,7 +169,14 @@ class ManualCall : Tracker {
                         " instance_key='hvy_landing.vehicle' " +
                         " character_id='" + characterId +"'" +
                         " position='" + target.toString() + "' />";
-                        CallTaskArray.insertLast(ManualCallTask(characterId,c,8.0,Faction,target,"hvy_call"));
+                        ManualCallTask@ FairyRequest = ManualCallTask(characterId,c,8.0,Faction,target,"hvy_call");
+                        FairyRequest.setIconTypeKey("call_marker_drop");
+                        FairyRequest.setIndex(8);
+                        FairyRequest.setSize(0.5);
+                        FairyRequest.setDummyId(m_DummyCallID);
+                        m_DummyCallID++;                        
+                        CallTaskArray.insertLast(FairyRequest);
+                        addCastlnigMarker(FairyRequest);                   
                         _log("QueueLegeth:"+CallTaskArray.length());
                         sendFactionMessageKey(m_metagame,Faction,"Request HVY echelon support!");
                         sendFactionMessageKey(m_metagame,Faction,"Receive, transport aircraft is maneuvering");
@@ -143,7 +185,6 @@ class ManualCall : Tracker {
             }
         }
         if(EventKeyGet == "fc_repair"){
-            //_log("getEventFc");
             int characterId = event.getIntAttribute("character_id");
             const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
             if (character !is null) {
@@ -168,19 +209,22 @@ class ManualCall : Tracker {
                         " instance_key='repair_fairy.projectile'" +
                         " character_id='" + characterId +"'" +
                         " position='" + target.toString() + "' />";
-                        //m_metagame.getComms().send(c);
-                        CallTaskArray.insertLast(ManualCallTask(characterId,c,3.0,Faction,target,"repair_call"));
-                        //_log("Queue+1");
+                        ManualCallTask@ FairyRequest = ManualCallTask(characterId,c,3.0,Faction,target,"repair_call");
+                        FairyRequest.setIconTypeKey("call_marker_drop");
+                        FairyRequest.setIndex(8);
+                        FairyRequest.setSize(0.5);
+                        FairyRequest.setDummyId(m_DummyCallID);
+                        m_DummyCallID++;                        
+                        CallTaskArray.insertLast(FairyRequest);
+                        addCastlnigMarker(FairyRequest);                   
                         _log("QueueLegeth:"+CallTaskArray.length());
                         sendFactionMessageKey(m_metagame,Faction,"Request Barrier Fairy");
                         sendFactionMessageKey(m_metagame,Faction,"Armor Fortification in progress");
-                        //_log("Add Call Task Success");
                     }
                 }
             }
         }
         if(EventKeyGet == "fc_rescue"){
-            //_log("getEventFc");
             int characterId = event.getIntAttribute("character_id");
             const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
             if (character !is null) {
@@ -205,19 +249,22 @@ class ManualCall : Tracker {
                         " instance_key='medical_agl_call.projectile' " +
                         " character_id='" + characterId +"'" +
                         " position='" + target.toString() + "' />";
-                        //m_metagame.getComms().send(c);
-                        CallTaskArray.insertLast(ManualCallTask(characterId,c,3.0,Faction,target,"rescue_call"));
-                        //_log("Queue+1");
+                        ManualCallTask@ FairyRequest = ManualCallTask(characterId,c,3.0,Faction,target,"rescue_call");
+                        FairyRequest.setIconTypeKey("call_marker_drop");
+                        FairyRequest.setIndex(8);
+                        FairyRequest.setSize(0.5);
+                        FairyRequest.setDummyId(m_DummyCallID);
+                        m_DummyCallID++;                        
+                        CallTaskArray.insertLast(FairyRequest);
+                        addCastlnigMarker(FairyRequest);
                         _log("QueueLegeth:"+CallTaskArray.length());
                         sendFactionMessageKey(m_metagame,Faction,"Request Rescue Fairy support!");
                         sendFactionMessageKey(m_metagame,Faction,"Nano repair capsules in progress");
-                        //_log("Add Call Task Success");
                     }
                 }
             }
         }
         if(EventKeyGet == "fc_target"){
-            //_log("getEventFc");
             int characterId = event.getIntAttribute("character_id");
             const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
             if (character !is null) {
@@ -242,13 +289,17 @@ class ManualCall : Tracker {
                         " instance_key='GK_target' " +
                         " character_id='" + characterId +"'" +
                         " position='" + target.toString() + "' />";
-                        //m_metagame.getComms().send(c);
-                        CallTaskArray.insertLast(ManualCallTask(characterId,c,5.0,Faction,target,"target_call"));
-                        //_log("Queue+1");
+                        ManualCallTask@ FairyRequest = ManualCallTask(characterId,c,5.0,Faction,target,"target_call");
+                        FairyRequest.setIconTypeKey("call_marker_drop");
+                        FairyRequest.setIndex(8);
+                        FairyRequest.setSize(0.5);
+                        FairyRequest.setDummyId(m_DummyCallID);
+                        m_DummyCallID++;                        
+                        CallTaskArray.insertLast(FairyRequest);
+                        addCastlnigMarker(FairyRequest);
                         _log("QueueLegeth:"+CallTaskArray.length());
                         sendFactionMessageKey(m_metagame,Faction,"Request Targetdrone!");
                         sendFactionMessageKey(m_metagame,Faction,"Targetdrone,Unlock!");
-                        //_log("Add Call Task Success");
                     }
                 }
             }
@@ -264,16 +315,19 @@ class ManualCall : Tracker {
                 if(CallTaskArray[0].CallType=="medic_call" || CallTaskArray[0].CallType=="mgsg_call" || CallTaskArray[0].CallType=="hvy_call"){
                     playSoundAtLocation(m_metagame,"osprey.wav",CallTaskArray[0].m_factions,CallTaskArray[0].m_pos,7.0f);
                     m_metagame.getComms().send(CallTaskArray[0].Callkey);
+                    removeCastlnigMarker(CallTaskArray[0]);
                     sendFactionMessageKey(m_metagame,CallTaskArray[0].m_factions,"Echelon enter the battlefield");
                 }
                 if(CallTaskArray[0].CallType=="target_call"){
                     playSoundAtLocation(m_metagame,"hello.wav",CallTaskArray[0].m_factions,CallTaskArray[0].m_pos,3.0f);
                     m_metagame.getComms().send(CallTaskArray[0].Callkey);
+                    removeCastlnigMarker(CallTaskArray[0]);
                     sendFactionMessageKey(m_metagame,CallTaskArray[0].m_factions,"Targetdrone,Unlock!");
                 }
                 if(CallTaskArray[0].CallType=="rescue_call" || CallTaskArray[0].CallType=="repair_call"){
                     playSoundAtLocation(m_metagame,"woosh1.wav",CallTaskArray[0].m_factions,CallTaskArray[0].m_pos,3.0f);
                     m_metagame.getComms().send(CallTaskArray[0].Callkey);
+                    removeCastlnigMarker(CallTaskArray[0]);
                     sendFactionMessageKey(m_metagame,CallTaskArray[0].m_factions,"Confirm, data reception is normal");
                 }
                 CallTaskArray.removeAt(0);
@@ -292,4 +346,34 @@ class ManualCall : Tracker {
 		// always on
 		return true;
 	}
+
+    void addCastlnigMarker(ManualCallTask@ info){
+        int flagId = info.m_callId + 114514;
+        XmlElement command("command");
+            command.setStringAttribute("class", "set_marker");
+            command.setIntAttribute("id", flagId);
+            command.setIntAttribute("faction_id", info.m_factions);
+            command.setIntAttribute("atlas_index", info.m_atlasIndex);
+            command.setFloatAttribute("size", info.m_size);
+            command.setFloatAttribute("range", info.m_range);
+            command.setIntAttribute("enabled", 1);
+            command.setStringAttribute("position", info.m_pos.toString());
+            command.setStringAttribute("text", "");
+            command.setStringAttribute("type_key", info.m_typeKey);
+            command.setBoolAttribute("show_in_map_view", true);
+            command.setBoolAttribute("show_in_game_view", true);
+            command.setBoolAttribute("show_at_screen_edge", false);
+        m_metagame.getComms().send(command);
+    }
+
+    void removeCastlnigMarker(ManualCallTask@ info){
+        int flagId = info.m_callId + 114514;
+        XmlElement command("command");
+            command.setStringAttribute("class", "set_marker");
+            command.setIntAttribute("id", flagId);
+            command.setIntAttribute("faction_id", info.m_factions);
+            command.setIntAttribute("enabled", 0);
+        m_metagame.getComms().send(command);
+    }
 }
+
