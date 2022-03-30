@@ -25,15 +25,12 @@
     <sound class="result" key="character" fileref="impact_body3.wav" pitch_variety="0.4" volume="0.7" />
     <sound class="result" key="character" fileref="impact_body4.wav" pitch_variety="0.4" volume="0.7" />
 	
-    <!-- <sound class="result" key="character" file="metal_thin_01.wav" pitch_variety="0.3" volume="0.5" /> -->
-    <!-- <sound class="result" key="character" file="metal_thin_02.wav" pitch_variety="0.3" volume="0.5" /> -->
-    <sound class="result" key="character" file="metal_thin_03.wav" pitch_variety="0.3" volume="0.5" />
-    <!-- <sound class="result" key="character" file="metal_thin_04.wav" pitch_variety="0.3" volume="0.5" /> -->
-    <!-- <sound class="result" key="character" file="metal_thin_05.wav" pitch_variety="0.3" volume="0.5" />   -->
-	
-    <!-- <sound class="result" key="character" file="metal_heavy_01.wav" pitch_variety="0.3" volume="0.5" /> -->
-    <sound class="result" key="character" file="metal_heavy_02.wav" pitch_variety="0.3" volume="0.5" /> 
-    <!-- <sound class="result" key="character" file="metal_heavy_03.wav" pitch_variety="0.3" volume="0.5" /> -->
+    <sound class="result" key="character" tag="metal_man" file="metal_hit_1.wav" pitch_variety="0.3" volume="0.7" />
+    <sound class="result" key="character" tag="metal_man" file="metal_hit_2.wav" pitch_variety="0.3" volume="0.7" /> 
+    <sound class="result" key="character" tag="metal_man" file="metal_hit_3.wav" pitch_variety="0.3" volume="0.7" /> 
+    <sound class="result" key="character" tag="metal_man" file="metal_hit_4.wav" pitch_variety="0.3" volume="0.7" /> 
+    <sound class="result" key="character" tag="metal_man" file="metal_hit_5.wav" pitch_variety="0.3" volume="0.7" /> 
+    <sound class="result" key="character" tag="metal_man" file="metal_hit_6.wav" pitch_variety="0.3" volume="0.7" /> 
 	
 
     <sound class="result" key="vehicle" copy="terrain" />
