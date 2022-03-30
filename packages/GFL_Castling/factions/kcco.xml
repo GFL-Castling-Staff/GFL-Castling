@@ -455,7 +455,7 @@
 		</attribute_config>
 	</soldier>
 	<soldier name="kcco_ar_human" spawn_score="0.5" copy_from="default_bot">
-		<ai filename="kcco_bot.ai" />
+		<ai filename="default.ai" />
 		<model filename="kccod_human.xml" />
 		<resources clear_weapons="1" clear_vehicles="1">
 			<weapon key="kcco_ar.weapon" enabled="1" />
