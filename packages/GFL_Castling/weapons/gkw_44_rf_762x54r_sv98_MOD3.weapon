@@ -55,8 +55,8 @@
     <weak_hand_hold offset="0.3" />
     <projectile file="bullet.projectile">
         <result class="hit" 
-        kill_probability="3.75" 
-        kill_probability_offset_on_successful_hit="2"
+        kill_probability="3.25" 
+        kill_probability_offset_on_successful_hit="0.75"
         kill_decay_start_time="2.195" 
         kill_decay_end_time="3.659" />
     </projectile>
