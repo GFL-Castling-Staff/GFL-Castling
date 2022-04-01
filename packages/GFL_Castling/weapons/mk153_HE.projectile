@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<projectile class="grenade" name="HEAT" slot="2" pulldown_in_air="0.5" >
+<projectile class="grenade" name="HE" slot="2" pulldown_in_air="0.5" >
     <tag name="rocket"/>
 	
-    <result class="blast"  damage="16.7"  radius="5" decal="1" push="0" character_state="death"  faction_compare="not_equal"/>
+    <result class="blast"  damage="6"  radius="9.5" decal="1" push="0" character_state="death"  faction_compare="not_equal"/>
     <trigger class="impact" />
     <rotation class="motion" />
     <model mesh_filename="mk153HEAT.xml" />
