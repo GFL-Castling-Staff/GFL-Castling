@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<weapon file="two_hands_ar.animation_base" key="gkw_hk416_agent.weapon">
+<weapon file="two_hands_ar.animation_base" key="gkw_hk416_agent_blast.weapon">
     
     
     <!--Weapon specifications-->
@@ -10,7 +10,7 @@
 	class="0"
     solt="0" 
 	magazine_size="30" 
-	name="HK416-AGENT-Hit" 
+	name="HK416-AGENT-Blast" 
 	projectile_speed="182.33" 
 	retrigger_time="0.067" 
 	suppressed="0" 
@@ -21,7 +21,7 @@
     <inventory  buy_price="8.0" sell_price="8.0" />	
 
 
-    <next_in_chain key="gkw_hk416_agent_blast.weapon" share_ammo="0" />
+    <next_in_chain key="gkw_hk416_agent_skill.weapon" share_ammo="0" />
     <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
 
 	
@@ -45,10 +45,7 @@
     
     <weak_hand_hold offset="0.3" />
     <projectile file="bullet.projectile">
-        <result class="hit" 
-        kill_probability="1.65" 
-        kill_decay_start_time="1.142" 
-        kill_decay_end_time="1.904" />
+        <result class="blast" damage="1.0"   radius="2" decal="1" push="0.1" character_state="death" faction_compare="not_equal"/>
     </projectile>
     
     <!--Accuracy, Movement speed-->

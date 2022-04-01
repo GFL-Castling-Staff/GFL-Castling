@@ -69,6 +69,8 @@
 <model filename="gkd_ar_hk416_6505_from_melondove.xml"><requirement class="weapon" slot="0" key="gkw_hk416_6505_mod3.weapon"/></model>
 <model filename="gkd_ar_hk416_6505_from_melondove.xml"><requirement class="weapon" slot="0" key="gkw_hk416_6505_mod3_skill.weapon"/></model>
 <model filename="gkd_ar_hk416_agent.xml"><requirement class="weapon" slot="0" key="gkw_hk416_agent.weapon"/></model>
+<model filename="gkd_ar_hk416_agent.xml"><requirement class="weapon" slot="0" key="gkw_hk416_agent_blast.weapon"/></model>
+<model filename="gkd_ar_hk416_agent.xml"><requirement class="weapon" slot="0" key="gkw_hk416_agent_skill.weapon"/></model>
 <model filename="gkd_ar_hk416mod.xml"><requirement class="weapon" slot="0" key="gkw_hk416mod3_skill.weapon"/></model>
 <model filename="gkd_ar_m16a1.xml"><requirement class="weapon" slot="0" key="gkw_m16a1.weapon"/></model>
 <model filename="gkd_ar_m16a1_533.xml"><requirement class="weapon" slot="0" key="gkw_m16a1_533.weapon"/></model>
@@ -144,9 +146,9 @@
 <model filename="gkd_hvy_mk153_1.xml"><requirement class="weapon" slot="0" key="gkw_mk153_m93r.weapon"/></model>
 <model filename="gkd_hvy_mk153_2.xml"><requirement class="weapon" slot="0" key="gkw_mk153_m93r.weapon"/></model>
 <model filename="gkd_hvy_mk153_3.xml"><requirement class="weapon" slot="0" key="gkw_mk153_m93r.weapon"/></model>
-<model filename="gkd_hvy_mk153_1.xml"><requirement class="weapon" slot="0" key="gkw_hvy_mk153_he.weapon"/></model>
-<model filename="gkd_hvy_mk153_2.xml"><requirement class="weapon" slot="0" key="gkw_hvy_mk153_he.weapon"/></model>
-<model filename="gkd_hvy_mk153_3.xml"><requirement class="weapon" slot="0" key="gkw_hvy_mk153_he.weapon"/></model>
+<model filename="gkd_hvy_mk153_1.xml"><requirement class="weapon" slot="0" key="gkw_mk153_he.weapon"/></model>
+<model filename="gkd_hvy_mk153_2.xml"><requirement class="weapon" slot="0" key="gkw_mk153_he.weapon"/></model>
+<model filename="gkd_hvy_mk153_3.xml"><requirement class="weapon" slot="0" key="gkw_mk153_he.weapon"/></model>
 <model filename="gkd_hvy_qlz04_1.xml"><requirement class="weapon" slot="0" key="gkw_hvy_qlz04_ai.weapon"/></model>
 <model filename="gkd_hvy_qlz04_2.xml"><requirement class="weapon" slot="0" key="gkw_hvy_qlz04_ai.weapon"/></model>
 <model filename="gkd_hvy_qlz04_3.xml"><requirement class="weapon" slot="0" key="gkw_hvy_qlz04_ai.weapon"/></model>
@@ -400,7 +402,6 @@
 <model filename="sfd_dreamer.xml"><requirement class="weapon" slot="0" key="ff_dreamer.weapon"/></model>
 <model filename="sfd_alchemist.xml"><requirement class="weapon" slot="0" key="ff_alchemist.weapon"/></model>
 <model filename="sfd_gager.xml"><requirement class="weapon" slot="0" key="ff_gager.weapon"/></model>
-<model filename="sfd_gager.xml"><requirement class="weapon" slot="0" key="ff_gager_1.weapon"/></model>
 <model filename="sfd_m16a1.xml"><requirement class="weapon" slot="0" key="ff_m16a1.weapon"/></model>
 <model filename="sfd_excutioner.xml"><requirement class="weapon" slot="0" key="ff_excutioner_1.weapon"/></model>
 <model filename="sfd_excutioner.xml"><requirement class="weapon" slot="0" key="ff_excutioner_2.weapon"/></model>
