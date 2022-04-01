@@ -176,6 +176,7 @@
 	can_respawn_with="1" />
 
     <modifier class="speed" value="0.8" />
+    <modifier class="hit_success_probability" value="-0.1"/>
      <shield offset="-0.60 0.0 0" extent="0.4 1.5 0.3" />
 	  <!-- state modifiers for weapons are connected to shield impact events -->
       <!-- deflects all bullets; death, stun, wound become none, doesn't consume -->
