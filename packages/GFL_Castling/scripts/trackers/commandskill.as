@@ -91,6 +91,12 @@ class CommandSkill : Tracker {
                 if (c_weaponType=="gkw_mp5mod3.weapon"){
                     excuteMP5MOD3skill(cId,senderId);                    
                 }
+                if (c_weaponType=="gkw_p22.weapon"){
+                    excuteP22skill(cId,senderId);        
+                }
+                if (c_weaponType=="gkw_hs2000.weapon"||c_weaponType=="gkw_hs2000_5304.weapon"){
+                    excuteHS2000skill(cId,senderId);        
+                }
             }
         }
     }
@@ -258,6 +264,84 @@ class CommandSkill : Tracker {
             array<string> Voice={
                 "judge_skill_1.wav",
                 "judge_skill_2.wav"
+            };
+            playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+        }
+    }
+
+    void excuteP22skill(int characterId,int playerId){
+        bool ExistQueue = false;
+        int j =-1;
+        for (uint i=0;i<SkillArray.length();i++){
+            if (SkillArray[i].m_character_id==characterId && SkillArray[i].m_weapontype=="P22") {
+                ExistQueue=true;
+                j=i;
+            }
+        }
+        if (ExistQueue){
+            dictionary a;
+            a["%time"] = ""+SkillArray[j].m_time;
+            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            _log("skill cooldown" + SkillArray[j].m_time);
+            return;
+        }
+        SkillArray.insertLast(SkillTrigger(characterId,12,"P22"));
+        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+        if (character !is null) {
+            Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
+            int factionid = character.getIntAttribute("faction_id");
+            array<const XmlElement@>@ characters = getCharactersNearPosition(m_metagame, c_pos, factionid, 15.0f);
+            for (uint i = 0; i < characters.length; i++) {
+                int soldierId = characters[i].getIntAttribute("id");
+                XmlElement c ("command");
+                c.setStringAttribute("class", "update_inventory");
+                c.setIntAttribute("character_id", soldierId); 
+                c.setIntAttribute("untransform_count", 1);
+                m_metagame.getComms().send(c);
+            }
+            array<string> Voice={
+                "P22_SKILL1_JP.wav",
+                "P22_SKILL2_JP.wav",
+                "P22_SKILL3_JP.wav"
+            };
+            playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+        }
+    }
+
+    void excuteHS2000skill(int characterId,int playerId){
+        bool ExistQueue = false;
+        int j =-1;
+        for (uint i=0;i<SkillArray.length();i++){
+            if (SkillArray[i].m_character_id==characterId && SkillArray[i].m_weapontype=="HS2000") {
+                ExistQueue=true;
+                j=i;
+            }
+        }
+        if (ExistQueue){
+            dictionary a;
+            a["%time"] = ""+SkillArray[j].m_time;
+            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            _log("skill cooldown" + SkillArray[j].m_time);
+            return;
+        }
+        SkillArray.insertLast(SkillTrigger(characterId,15,"HS2000"));
+        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+        if (character !is null) {
+            Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
+            int factionid = character.getIntAttribute("faction_id");
+            array<const XmlElement@>@ characters = getCharactersNearPosition(m_metagame, c_pos, factionid, 15.0f);
+            for (uint i = 0; i < characters.length; i++) {
+                int soldierId = characters[i].getIntAttribute("id");
+                XmlElement c ("command");
+                c.setStringAttribute("class", "update_inventory");
+                c.setIntAttribute("character_id", soldierId); 
+                c.setIntAttribute("untransform_count", 1);
+                m_metagame.getComms().send(c);
+            }
+            array<string> Voice={
+                "HS2000_SKILL1_JP.wav",
+                "HS2000_SKILL2_JP.wav",
+                "HS2000_SKILL3_JP.wav"
             };
             playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
         }
