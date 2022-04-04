@@ -63,57 +63,54 @@ class RepairCrane : Tracker {
 			//extracting the repair position
 			Vector3 repairPos = stringToVector3(event.getStringAttribute("position"));
 			repairPos = Vector3(repairPos.get_opIndex(0), repairPos.get_opIndex(1) + y_offset, repairPos.get_opIndex(2));
-
-			//checking for all factions, including neutral
-			for (uint f = 0; f < 4; ++f){
-				//custom query, collects all vehicles of a faction
-				array<const XmlElement@>@ vehicles = getAllVehicles(m_metagame, f);
+			const XmlElement@ repairer = getCharacterInfo(repairerId);
+			if (repairer == null) return;
+			int f = repairer.getIntAttribute("faction_id");
+			array<const XmlElement@>@ vehicles = getAllVehicles(m_metagame, f);
+			if (vehicles == null) return;
+			for (uint i = 0; i < vehicles.length(); ++i) {
+				//collecting vehicle positions
+				Vector3 vehiclePos = stringToVector3(vehicles[i].getStringAttribute("position"));
 				
-				for (uint i = 0; i < vehicles.length(); ++i) {
-					//collecting vehicle positions
-					Vector3 vehiclePos = stringToVector3(vehicles[i].getStringAttribute("position"));
-					
-					//checking for vehicles within the repair radius and extracting their keys
-					if (checkRange(repairPos, vehiclePos, range)) {
-						int vehicleId = vehicles[i].getIntAttribute("id");
-						const XmlElement@ vehicleInfo = getVehicleInfo(m_metagame, vehicleId);
-						if (vehicleInfo !is null) {
-							string key2 = vehicleInfo.getStringAttribute("key");
-							//repair tank can't repair repair tanks to prevent self repair
-							if (not(key == "repair_tank" && key2 == "zjx19.vehicle")) {
-								float vehicleHealth = vehicleInfo.getFloatAttribute("health");
-								if (key2 == "typhon.vehicle" || key2 == "coeus.vehicle" || key2 == "paradeus_uhlan.vehicle") repairValue= 0.25;
-								//not running for destroyed vehicles
-								if (vehicleHealth > 0.0) {
-									float vehicleMaxHealth = vehicleInfo.getFloatAttribute("max_health");
-									float vehicleMaxOverHealth = vehicleMaxHealth * overHealth;
+				if (checkRange(repairPos, vehiclePos, range)) {
+					int vehicleId = vehicles[i].getIntAttribute("id");
+					const XmlElement@ vehicleInfo = getVehicleInfo(m_metagame, vehicleId);
+					if (vehicleInfo !is null) {
+						string key2 = vehicleInfo.getStringAttribute("key");
+						//repair tank can't repair repair tanks to prevent self repair
+						if (not(key == "repair_tank" && key2 == "zjx19.vehicle")) {
+							float vehicleHealth = vehicleInfo.getFloatAttribute("health");
+							if (key2 == "typhon.vehicle" || key2 == "coeus.vehicle" || key2 == "paradeus_uhlan.vehicle") repairValue= 0.25;
+							//not running for destroyed vehicles
+							if (vehicleHealth > 0.0) {
+								float vehicleMaxHealth = vehicleInfo.getFloatAttribute("max_health");
+								float vehicleMaxOverHealth = vehicleMaxHealth * overHealth;
+								
+								//only running the update command when necessary
+								if (vehicleHealth < vehicleMaxOverHealth) {
+									//rounding error fix
+									vehicleMaxOverHealth += 0.01;
 									
-									//only running the update command when necessary
-									if (vehicleHealth < vehicleMaxOverHealth) {
-										//rounding error fix
-										vehicleMaxOverHealth += 0.01;
-										
-										string command = "";
-										
-										//calculating and applying repairs
-										float vehicleHealthDifference = vehicleMaxOverHealth - vehicleHealth;
-										if (vehicleHealthDifference > repairValue){
-											vehicleHealth += repairValue;
-											vehicleHealthDifference = repairValue;
-											command = "<command class='update_vehicle' id='" + vehicleId + "' health='" + vehicleHealth + "' />";
-										} else {
-											command = "<command class='update_vehicle' id='" + vehicleId + "' health='" + vehicleMaxOverHealth + "' />";
-										}
-										m_metagame.getComms().send(command);
-										
-										//rewarding the repairer
-										float xpRewardFinal = xpReward * vehicleHealthDifference;
-										float rpRewardFinal = rpReward * vehicleHealthDifference;
-										command = "<command class='xp_reward' character_id='" + repairerId + "' reward='" + xpRewardFinal + "' />";
-										m_metagame.getComms().send(command);
-										command = "<command class='rp_reward' character_id='" + repairerId + "' reward='" + rpRewardFinal + "' />";
-										m_metagame.getComms().send(command);
+									string command = "";
+									
+									//calculating and applying repairs
+									float vehicleHealthDifference = vehicleMaxOverHealth - vehicleHealth;
+									if (vehicleHealthDifference > repairValue){
+										vehicleHealth += repairValue;
+										vehicleHealthDifference = repairValue;
+										command = "<command class='update_vehicle' id='" + vehicleId + "' health='" + vehicleHealth + "' />";
+									} else {
+										command = "<command class='update_vehicle' id='" + vehicleId + "' health='" + vehicleMaxOverHealth + "' />";
 									}
+									m_metagame.getComms().send(command);
+									
+									//rewarding the repairer
+									float xpRewardFinal = xpReward * vehicleHealthDifference;
+									float rpRewardFinal = rpReward * vehicleHealthDifference;
+									command = "<command class='xp_reward' character_id='" + repairerId + "' reward='" + xpRewardFinal + "' />";
+									m_metagame.getComms().send(command);
+									command = "<command class='rp_reward' character_id='" + repairerId + "' reward='" + rpRewardFinal + "' />";
+									m_metagame.getComms().send(command);
 								}
 							}
 						}
