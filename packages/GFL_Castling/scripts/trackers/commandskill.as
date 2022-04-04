@@ -97,6 +97,9 @@ class CommandSkill : Tracker {
                 if (c_weaponType=="gkw_hs2000.weapon"||c_weaponType=="gkw_hs2000_5304.weapon"){
                     excuteHS2000skill(cId,senderId);        
                 }
+                if (c_weaponType=="ff_Intruder.weapon"){
+                    excuteIntruderskill(cId,senderId);        
+                }
             }
         }
     }
@@ -441,6 +444,36 @@ class CommandSkill : Tracker {
             };
             playRandomSoundArray(m_metagame,Voice,0,character.getStringAttribute("position"),1);
         }
+    }
+    void excuteIntruderskill(int characterId,int playerId){
+        bool ExistQueue = false;
+        int j =-1;
+        for (uint i=0;i<SkillArray.length();i++){
+            if (SkillArray[i].m_character_id==characterId && SkillArray[i].m_weapontype=="FF_INTRUDER") {
+                ExistQueue=true;
+                j=i;
+            }
+        }
+        if (ExistQueue){
+            dictionary a;
+            a["%time"] = ""+SkillArray[j].m_time;
+            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            _log("skill cooldown" + SkillArray[j].m_time);
+            return;
+        }
+        SkillArray.insertLast(SkillTrigger(characterId,90,"FF_INTRUDER"));
+        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+        const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+            if (player.hasAttribute("aim_target")) {
+                Vector3 target = stringToVector3(player.getStringAttribute("aim_target"));
+                int Faction= character.getIntAttribute("faction_id");
+                spawnSoldier(m_metagame,5,0,target.toString(),"gk_dinergate");
+                SkillEffectTimer@ stimer = SkillEffectTimer(characterId,5,"FF_INTRUDER");
+            }
+            array<string> Voice={
+                "Intruder_buhuo_SKILL03_JP.wav"
+            };
+            playRandomSoundArray(m_metagame,Voice,0,character.getStringAttribute("position"),1);
     }
 }
 

@@ -6,7 +6,7 @@
 		barrel_offset_3d="0 -0.1 0"
 		can_shoot_standing="1" 
 		class="0"
-        solt="0" 
+        slot="0" 
 		magazine_size="30" 
 		name="GK-Dinergate" 
 		projectile_speed="70" 
@@ -57,11 +57,13 @@
     <hud_icon filename="testing.png" />
 
     <commonness 
-	value="0" 
+	value="0.1" 
 	in_stock="0" 
-	can_respawn_with="1" />
+	can_respawn_with="0" />
 
-
+	<capacity value="0" source="rank" source_value="0.0" />
+	<capacity value="1" source="rank" source_value="0.1" />
+	<inventory encumbrance="17.0" buy_price="1.0" sell_price="1.0"/>
 
     <projectile file="bullet_sf.projectile">
         <result class="hit"  kill_probability="2.0"

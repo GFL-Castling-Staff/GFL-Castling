@@ -1209,13 +1209,19 @@
 		<character filename="sf_dinergate.character" />
 		<ai filename="eod.ai" />
 
-		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1">
-			<weapon key="ff_dinergate.weapon"/>
-			<carry_item key="exo_t4.carry_item" />
+		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
+			<weapon key="ff_dinergate.weapon"  enabled="1"/>
+			<carry_item key="exo_x_t1.carry_item"  enabled="1"/>
 		</resources>
 		<attribute_config class="xp">
-			<attribute weight="0.3" min="0.0" max="1.0" />
+			<attribute weight="1.0" min="0.2" max="1.0" />
 		</attribute_config>
+		<attribute_config class="rp">
+			<attribute weight="1.0" min="2.0" max="3.0" />
+		</attribute_config>
+		<item_class_existence_config>
+			<item_class_existence class="weapon" slot="1" probability="1.0" />
+		</item_class_existence_config>
 	</soldier>
 	<soldier name="gk_manticore" firstnames="gk_qwd.name" lastnames_file="gk_qwd_last.name" spawn_score="0.000001">
 		<model filename="gkd_manticore_pink.xml" />
