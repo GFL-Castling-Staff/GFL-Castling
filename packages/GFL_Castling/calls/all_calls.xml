@@ -9,7 +9,7 @@
 	<!-- <call file="artillery2.call" /> -->
 	<!-- <call file="cover_drop.call" /> -->
 	<!-- <call file="rubber_boat.call" />-->
-	<call file="rubber_airboat.call" />
+	<!-- <call file="rubber_airboat.call" />
 
 
 	<call file="vehicles.call" />
@@ -29,11 +29,11 @@
 	<call file="manticore.call" />
 	<call file="humvee1.call" />
 	<call file="gk_medic.call" />
-	<call file="gk_repair_fairy.call" />
+	<call file="gk_repair_fairy.call" /> -->
 	<!-- <call file="gk_landmine_fairy_at.call" /> -->
 	<!-- <call file="gk_landmine_fairy_ai.call" /> -->
-	<call file="gk_rescue_fairy.call" />
-	<call file="sf_dinergate.call" />
+<!-- 	<call file="gk_rescue_fairy.call" />
+	<call file="sf_dinergate.call" /> -->
 	<!-- <call file="humvee.call" /> -->
 	<!-- <call file="tank.call" /> -->
 	<!-- <call file="buggy.call" /> -->
@@ -45,4 +45,11 @@
 	<!-- <call file="paratroopers_medic.call" /> -->
 
     <!-- <call file="experimental_calls.xml" /> -->
+
+	<call file="gk_all_call.call"/>
+	<call file="sf_all_call.call"/>
+	<call file="kcco_all_call.call"/>
+	<call file="par_all_call.call"/>
+	<call file="extra_all_call.call"/>
+
 </calls>

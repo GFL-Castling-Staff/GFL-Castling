@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="utf-8"?>
+<calls>
+
+<!--嘲讽妖精-->
+<call 
+name="Targetdrone" 
+key="target.call"
+radio_view_text="Targetdrone" 
+initiation_comment1="Targetdrone is launching"
+acknowledge_comment="Unlock"
+launch_comment="Targetdrone,Unlock!"
+notify_metagame="1">
+	  
+	<hud_icon filename="call_Airborne_targetdrone.png" />
+	<capacity value="100" source="rank" source_value="0.0" />
+	<!-- <capacity value="100" source="rank" source_value="0.1" /> -->
+	<inventory encumbrance="0.0" price="300.0" />
+
+	<round 
+			instances="1" 
+			instance_class="soldier" 
+			instance_key="GK_target" 
+			instance_spread="0 0 0" 
+			common_spread="0 0 0" 
+			launch_time="5.0" 
+			spawn_time="5.5" 
+			horizontal_offset_at_spawn="0.0" 
+			vertical_offset_at_spawn="-5.0" 
+			initial_speed_to_target="0.0">
+			<sound class="spawn" fileref="hello.wav" volume="1.0" />
+		</round>
+
+
+
+</call>
+
+<!--Martina V-->
+<call 
+	name="Martina V" 
+	key="martina.call"
+	initiation_comment1="Launch Martina V"
+	acknowledge_comment="Launch Martina V and AR T-Doll "
+	launch_comment="droping in"
+	notify_metagame="1">
+
+    <round 
+			instances="1"
+           instance_class="vehicle"
+           instance_key="martina.vehicle"
+           instance_spread="0 0 0" 
+           common_spread="0 0 0" 
+           launch_time="5.0"
+           spawn_time="8.0"
+           horizontal_offset_at_spawn="0.0"
+           vertical_offset_at_spawn="50.0"
+           initial_speed_to_target="0.0">
+        <effect class="launch" ref="ShadowAirplaneFlyby" shadow="1" />
+        <sound class="launch" fileref="plane_flyby.wav" />
+    </round>
+	<round 
+		instances="6"
+		instance_class="soldier"
+		instance_key="default_ar"
+		instance_spread="0 0 0" 
+		common_spread="1 0 1" 
+		launch_time="5.0"
+		spawn_time="8.0">
+	</round>
+
+    <hud_icon filename="call_Airborne_humvee_mg.png" />
+    <capacity value="0" source="rank" source_value="0.0" />
+    <capacity value="100" source="rank" source_value="10.3" />
+    <inventory encumbrance="0.0" price="324.0" />
+
+</call>
+
+<!--Chiara IV-->
+<call 
+	name="Chiara IV" 
+	key="chiara.call"
+	initiation_comment1="Launch Chiara IV"
+	acknowledge_comment="Launch Chiara IV and AR T-Doll "
+	launch_comment="droping in"
+	notify_metagame="1">
+
+    <round 
+			instances="1"
+           instance_class="vehicle"
+           instance_key="chiara.vehicle"
+           instance_spread="0 0 0" 
+           common_spread="0 0 0" 
+           launch_time="5.0"
+           spawn_time="8.0"
+           horizontal_offset_at_spawn="0.0"
+           vertical_offset_at_spawn="50.0"
+           initial_speed_to_target="0.0">
+        <effect class="launch" ref="ShadowAirplaneFlyby" shadow="1" />
+        <sound class="launch" fileref="plane_flyby.wav" />
+    </round>
+	<round 
+		instances="4"
+		instance_class="soldier"
+		instance_key="default_ar"
+		instance_spread="0 0 0" 
+		common_spread="1 0 1" 
+		launch_time="5.0"
+		spawn_time="8.0">
+	</round>
+
+    <hud_icon filename="call_Airborne_humvee_mg.png" />
+    <capacity value="0" source="rank" source_value="0.0" />
+    <capacity value="100" source="rank" source_value="10.3" />
+    <inventory encumbrance="0.0" price="428.0" />
+
+</call>
+
+<!--Pierre II-->
+</call>
+	<call 
+	name="Pierre II" 
+	key="pierre.call"
+	initiation_comment1="Launch Pierre II"
+	acknowledge_comment="Launch Pierre II and AR T-Doll"
+	launch_comment="droping in"
+	notify_metagame="1">
+
+    <round 
+			instances="1"
+           instance_class="vehicle"
+           instance_key="pierre.vehicle"
+           instance_spread="0 0 0" 
+           common_spread="0 0 0" 
+           launch_time="5.0"
+           spawn_time="8.0"
+           horizontal_offset_at_spawn="0.0"
+           vertical_offset_at_spawn="50.0"
+           initial_speed_to_target="0.0">
+        <effect class="launch" ref="ShadowAirplaneFlyby" shadow="1" />
+        <sound class="launch" fileref="plane_flyby.wav" />
+    </round>
+	<round 
+		instances="4"
+		instance_class="soldier"
+		instance_key="default_ar"
+		instance_spread="0 0 0" 
+		common_spread="1 0 1" 
+		launch_time="5.0"
+		spawn_time="8.0">
+	</round>
+
+    <hud_icon filename="call_Airborne_pierre.png" />
+    <capacity value="0" source="rank" source_value="0.0" />
+    <capacity value="100" source="rank" source_value="20.88" />
+    <inventory encumbrance="0.0" price="1480.0" />
+
+</call>
+
+<!--2x蝎甲兽-->
+<call 
+name="manticore" 
+key="manticore.call"
+radio_view_text="Manticore x2" 
+initiation_comment1="Manticore is launching"
+acknowledge_comment="Unlock"
+launch_comment="Manticore,Unlock!"
+notify_metagame="1">
+	  
+	<hud_icon filename="call_qwd.png" />
+    <capacity value="0" source="rank" source_value="0.0" />
+    <capacity value="100" source="rank" source_value="57.433" />
+	<!-- <capacity value="100" source="rank" source_value="0.1" /> -->
+	<inventory encumbrance="0.0" price="2680.0" />
+
+	<round 
+			instances="2" 
+			instance_class="soldier" 
+			instance_key="gk_manticore" 
+			instance_spread="2 2 2" 
+			common_spread="2 2 2" 
+			launch_time="5.0" 
+			spawn_time="5.5" 
+			horizontal_offset_at_spawn="0.0" 
+			vertical_offset_at_spawn="-5.0" 
+			initial_speed_to_target="0.0">
+			<!-- <sound class="spawn" fileref="hello.wav" volume="1.0" />-->
+		</round>
+</call>
+
+<!--5x蝎甲兽-->
+<call
+name="manticore" 
+key="manticore2.call"
+radio_view_text="Manticore x5" 
+initiation_comment1="Manticore is launching"
+acknowledge_comment="Unlock"
+launch_comment="Manticore,Unlock!"
+notify_metagame="1">
+	  
+	<hud_icon filename="call_qwd.png" />
+    <capacity value="0" source="rank" source_value="0.0" />
+    <capacity value="100" source="rank" source_value="57.433" />
+	<!-- <capacity value="100" source="rank" source_value="0.1" /> -->
+	<inventory encumbrance="0.0" price="6280.0" />
+
+	<round 
+			instances="5" 
+			instance_class="soldier" 
+			instance_key="gk_manticore" 
+			instance_spread="5 5 5" 
+			common_spread="5 5 5" 
+			launch_time="5.0" 
+			spawn_time="5.5" 
+			horizontal_offset_at_spawn="0.0" 
+			vertical_offset_at_spawn="-5.0" 
+			initial_speed_to_target="0.0">
+			<!-- <sound class="spawn" fileref="hello.wav" volume="1.0" />-->
+		</round>
+
+
+
+</call>
+
+<!--火箭妖精-->
+<call 
+name="Rocket Fairy" 
+key="gk_rocket_fairy.call"
+      initiation_comment1="Request rocket strike"
+      acknowledge_comment="Confirm, upload the coordinates"
+      acknowledge_time="0"
+      launch_comment="Start rocket strike"
+	  notify_metagame="1">
+     
+    <round instances="15"
+           instance_class="grenade"
+           instance_key="artillery_rocket_fairies.projectile" 
+           instance_spread="14 14 14" 
+           common_spread="8 0 8" 
+           launch_time="3.0"
+           spawn_time="6.0">
+     <sound class="launch" fileref="Fairy_multirocket_FromCOD16.wav" volume="0.8" /> 
+	   <sound class="spawn" fileref="woosh1.wav" volume="0.2" />
+    </round>
+
+    <round instances="15"
+    instance_class="grenade"
+    instance_key="artillery_rocket_fairies.projectile" 
+    instance_spread="14 14 14" 
+    common_spread="8 0 8"
+    launch_time="4.0"
+    spawn_time="6.5">        
+   <sound class="spawn" fileref="woosh1.wav" volume="0.2" />
+</round>
+
+<round instances="15"
+instance_class="grenade"
+instance_key="artillery_rocket_fairies.projectile" 
+instance_spread="14 14 14" 
+common_spread="8 0 8"
+launch_time="3.0"
+spawn_time="7.3">        
+<sound class="spawn" fileref="woosh1.wav" volume="0.2" />
+</round>
+
+    <round instances="15"
+           instance_class="grenade"
+           instance_key="artillery_rocket_fairies.projectile" 
+           instance_spread="14 14 14" 
+           common_spread="8 0 8"
+           launch_time="5.0"
+           spawn_time="8.0">         
+	   <sound class="spawn" fileref="woosh1.wav" volume="0.2" />
+    </round>
+
+    <round instances="15"
+    instance_class="grenade"
+    instance_key="artillery_rocket_fairies.projectile" 
+    instance_spread="14 14 14" 
+    common_spread="8 0 8"
+    launch_time="7.0"
+    spawn_time="8.5">
+         
+  <sound class="spawn" fileref="woosh1.wav" volume="0.2" />
+</round>
+
+        <round instances="15"
+           instance_class="grenade"
+           instance_key="artillery_rocket_fairies.projectile" 
+           instance_spread="14 14 14" 
+           common_spread="8 0 8"
+           launch_time="7.0"
+           spawn_time="9.0">     
+          <sound class="spawn" fileref="woosh1.wav" volume="0.2" />
+    </round>
+
+    <round instances="15"
+    instance_class="grenade"
+    instance_key="artillery_rocket_fairies.projectile" 
+    instance_spread="14 14 14" 
+    common_spread="8 0 8"
+    launch_time="7.0"
+    spawn_time="9.5">     
+   <sound class="spawn" fileref="woosh1.wav" volume="0.2" />
+</round>
+
+<round instances="15"
+instance_class="grenade"
+instance_key="artillery_rocket_fairies.projectile" 
+instance_spread="14 14 14" 
+common_spread="8 0 8"
+launch_time="7.0"
+spawn_time="10.0">     
+<sound class="spawn" fileref="woosh1.wav" volume="0.2" />
+</round>
+
+<round instances="15"
+instance_class="grenade"
+instance_key="artillery_rocket_fairies.projectile" 
+instance_spread="14 14 14" 
+common_spread="8 0 8"
+launch_time="7.0"
+spawn_time="10.5">     
+<sound class="spawn" fileref="woosh1.wav" volume="0.2" />
+</round>
+
+    <hud_icon filename="call_Firesupport_RocketFairy.png" />
+    <capacity value="0" source="rank" source_value="0.0" />
+    <capacity value="100" source="rank" source_value="1.794" />
+    <inventory encumbrance="0.0" price="600.0" />
+
+</call>
+
+
+<!--烟雾搜救妖精-->
+<call 
+name="UAV medical support" 
+key="gk_rescue_fairy.call"
+      initiation_comment1="Rescue Fairy--Smoke Medical Support"
+      acknowledge_comment="Medical UAV is online and closing in on the target."
+      acknowledge_time="0"
+      launch_comment="Medical support is complete. May everyone survive the mission."
+	  notify_metagame="1">
+     
+    <round instances="1"
+           instance_class="grenade"
+           instance_key="smoke_grenade.projectile" 
+           instance_spread="0 0 0" 
+           common_spread="0 0 0" 
+           launch_time="1.5"
+           spawn_time="1.5">
+     <sound class="launch" fileref="artillery_barrage_1.wav" volume="1.0" />
+     <sound class="launch" fileref="artillery_barrage_2.wav" volume="1.0" />      
+	   <sound class="spawn" fileref="woosh1.wav" volume="0.2" />
+    </round>
+
+    <round instances="8"
+           instance_class="grenade"
+           instance_key="medical_agl_call.projectile" 
+           instance_spread="6 6 6" 
+           common_spread="0 0 0" 
+           launch_time="5.0"
+           spawn_time="6.0">
+      <sound class="launch" fileref="artillery_barrage_1.wav" volume="1.0" />
+      <sound class="launch" fileref="artillery_barrage_2.wav" volume="1.0" />      
+	   <sound class="spawn" fileref="woosh1.wav" volume="0.2" />
+    </round>
+
+
+    <hud_icon filename="call_medic.png" />
+    <inventory encumbrance="0.0" price="285.0" />
+
+</call>
+
+<!--立盾妖精-->
+<call 
+name="repair_fairy" 
+key="gk_repair_fairy.call"
+      initiation_comment1="Request Barrier Fairy"
+      acknowledge_comment="Confirm, data reception is normal"
+      acknowledge_time="0"
+      launch_comment="Armor Fortification in progress."
+	  notify_metagame="1">
+     
+    <round instances="1"
+           instance_class="grenade"
+           instance_key="repair_fairy.projectile" 
+           instance_spread="0 0 0" 
+           common_spread="0 0 0" 
+           launch_time="2.0"
+           spawn_time="3.0">
+     <sound class="launch" fileref="artillery_barrage_1.wav" volume="1.0" />
+     <sound class="launch" fileref="artillery_barrage_2.wav" volume="1.0" />      
+	   <sound class="spawn" fileref="woosh1.wav" volume="0.2" />
+    </round>
+
+
+    <hud_icon filename="calll_Barrier_Fairy.png" />
+    <capacity value="0" source="rank" source_value="0.0" />
+    <capacity value="100" source="rank" source_value="0.0" />
+    <inventory encumbrance="0.0" price="300.0" />
+
+</call>
+
+<!--搜救妖精-->
+<call 
+name="repair_capsules" 
+key="gk_medic_agl.call"
+      initiation_comment1="Rescue Fairy--Nano Repair Capsules"
+      acknowledge_comment="Confirm, data reception is normal"
+      acknowledge_time="0"
+      launch_comment="Nano repair capsules in progress."
+	  notify_metagame="1">
+     
+    <round instances="8"
+           instance_class="grenade"
+           instance_key="medical_agl_call.projectile" 
+           instance_spread="6 6 6" 
+           common_spread="0 0 0" 
+           launch_time="2.0"
+           spawn_time="3.0">
+     <sound class="launch" fileref="artillery_barrage_1.wav" volume="1.0" />
+     <sound class="launch" fileref="artillery_barrage_2.wav" volume="1.0" />      
+	   <sound class="spawn" fileref="woosh1.wav" volume="0.2" />
+    </round>
+
+
+    <hud_icon filename="call_medic.png" />
+    <capacity value="0" source="rank" source_value="0.0" />
+    <capacity value="100" source="rank" source_value="0.0" />
+    <inventory encumbrance="0.0" price="108.0" />
+
+</call>
+
+<!--炮击妖精-->
+<call 
+name="UAV shelling" 
+key="gk_bombardment_fairy.call"
+      initiation_comment1="Request fire guidance to the bombardment point!"
+      acknowledge_comment="Confirm, data reception is normal"
+      acknowledge_time="0"
+      launch_comment="Artillery strikes in progress."
+	  notify_metagame="1">
+     
+    <round instances="3"
+           instance_class="grenade"
+           instance_key="artillery_shell_fairies.projectile" 
+           instance_spread="4 4 4" 
+           common_spread="2 0 2" 
+           launch_time="1.5"
+           spawn_time="3.0">
+     <sound class="launch" fileref="Fairy_artillery_FromRA3.wav" volume="2.5" />      
+	   <sound class="spawn" fileref="woosh1.wav" volume="0.2" />
+    </round>
+
+    <round instances="5"
+           instance_class="grenade"
+           instance_key="artillery_shell_fairies.projectile" 
+           instance_spread="4 4 4" 
+           common_spread="2 0 2" 
+           launch_time="2.0"
+           spawn_time="3.5">      
+	   <sound class="spawn" fileref="woosh1.wav" volume="0.2" />
+    </round>
+
+    <round instances="3"
+        instance_class="grenade"
+        instance_key="artillery_shell_fairies.projectile" 
+        instance_spread="4 4 4" 
+        common_spread="2 0 2" 
+        launch_time="2.0"
+        spawn_time="4.5">      
+    <sound class="spawn" fileref="woosh1.wav" volume="0.2" />
+    </round>
+
+
+    <round instances="10"
+        instance_class="grenade"
+        instance_key="artillery_shell_fairies.projectile" 
+        instance_spread="14 14 14" 
+        common_spread="8 0 8" 
+        launch_time="6.0"
+        spawn_time="7.5">      
+        <sound class="launch" fileref="Fairy_artillery_FromRA3.wav" volume="2.5" />      
+        <sound class="spawn" fileref="woosh1.wav" volume="0.2" />
+    </round>
+
+    <round instances="10"
+        instance_class="grenade"
+        instance_key="artillery_shell_fairies.projectile" 
+        instance_spread="14 14 14" 
+        common_spread="8 0 8" 
+        launch_time="6.0"
+        spawn_time="8.0">      
+        <sound class="spawn" fileref="woosh1.wav" volume="0.2" />
+    </round>
+
+
+    <hud_icon filename="call_Firesupport_ShellingFairy.png" />
+    <capacity value="0" source="rank" source_value="0.0" />
+    <capacity value="100" source="rank" source_value="0.231" />
+    <inventory encumbrance="0.0" price="200.0" />
+
+</call>
+
+<!--空袭妖精-->
+<call 
+name="Drone air strikes" 
+key="gk_airstrike_fairy.call"
+      initiation_comment1="Request drone air strikes"
+      acknowledge_comment="Confirmed, UAV is online, situational awareness is complete "
+      acknowledge_time="0"
+      launch_comment="Execution of air strikes"
+	  notify_metagame="1">
+     
+      <round instances="35"
+        instance_class="grenade"
+        instance_key="artillery_airstrike_fairies.projectile" 
+        instance_spread="10 10 10" 
+        common_spread="5 0 5" 
+        launch_time="1.0"
+        spawn_time="6.8">
+        
+        <effect class="launch" ref="gk_ShadowCallFlyby" shadow="1" />
+      <sound class="launch" fileref="plane_flyby.wav" volume="6.0" />    
+      <sound class="spawn" fileref="woosh1.wav" volume="0.3" />
+     </round>
+
+    <round instances="35"
+           instance_class="grenade"
+           instance_key="artillery_airstrike_fairies.projectile" 
+           instance_spread="10 10 10" 
+           common_spread="5 0 5" 
+           launch_time="3.0"
+           spawn_time="7.5">
+           
+
+     <sound class="launch" fileref="plane_flyby.wav" volume="0" />    
+	   <sound class="spawn" fileref="woosh1.wav" volume="0.3" />
+    </round>
+
+   
+
+    <hud_icon filename="call_Firesupport_AirborneFairy.png" />
+    <capacity value="0" source="rank" source_value="0.0" />
+    <capacity value="100" source="rank" source_value="13.008" />
+    <inventory encumbrance="0.0" price="500.0" />
+
+</call>
+
+</calls>

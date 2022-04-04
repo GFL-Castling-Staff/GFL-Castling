@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--这里用来存放地图脚本,建筑脚本,实验中脚本或者其他特殊脚本-->
+<calls>
+
+	<call file="map_all_call.call" />
+    <call file="structure_all_call.call" />
+    <call file="experiment_all_call.call"/>
+
+</calls>
