@@ -458,22 +458,24 @@ class CommandSkill : Tracker {
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
             sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
-            _log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
         SkillArray.insertLast(SkillTrigger(characterId,90,"FF_INTRUDER"));
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
-        const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
-            if (player.hasAttribute("aim_target")) {
-                Vector3 target = stringToVector3(player.getStringAttribute("aim_target"));
-                int Faction= character.getIntAttribute("faction_id");
-                spawnSoldier(m_metagame,5,0,target.toString(),"gk_dinergate");
-                SkillEffectTimer@ stimer = SkillEffectTimer(characterId,5,"FF_INTRUDER");
+        if (character !is null) {
+            const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+            if (player !is null){
+                if (player.hasAttribute("aim_target")) {
+                    string target = player.getStringAttribute("aim_target");
+                    int Faction= character.getIntAttribute("faction_id");
+                    spawnSoldier(m_metagame,5,0,target,"gk_dinergate");
+                }
+                array<string> Voice={
+                    "Intruder_buhuo_SKILL03_JP.wav"
+                };
+                playRandomSoundArray(m_metagame,Voice,0,character.getStringAttribute("position"),1);
             }
-            array<string> Voice={
-                "Intruder_buhuo_SKILL03_JP.wav"
-            };
-            playRandomSoundArray(m_metagame,Voice,0,character.getStringAttribute("position"),1);
+        }
     }
 }
 
