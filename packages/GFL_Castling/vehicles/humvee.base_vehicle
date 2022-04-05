@@ -11,8 +11,8 @@ max_character_collision_speed="20">
 	<!-- <tag name="apc" /> -->
 	<!-- <tag name="jeep" />  -->
   
-	<tire_set offset="0.96 0 1.77" radius="0.48" />
-	<tire_set offset="0.96 0 -1.7" radius="0.48" />
+	<tire_set offset="0.96 0 1.70" radius="0.48" />
+	<tire_set offset="0.96 0 -1.70" radius="0.48" />
 
 	<control 
 	max_speed="35.0" 
@@ -27,11 +27,11 @@ max_character_collision_speed="20">
 	max_health="25.0" 
 	mass="4.5" 
 	extent="2.08 0.0 4.0" 
-	offset="0 0.0 -0.2" 
+	offset="0 0.0 0" 
 	top_offset="0 4.0 0" 
-	collision_model_pos="0 0.8 -0.24" 
+	collision_model_pos="0 0.8 -0.44" 
 	collision_model_extent="2.56 2.0 5.44" 
-	visual_offset="0 0.12 0.2" 
+	visual_offset="0 0.12 -0.08" 
 	friction_offset="0.05"
 	drag_offset="-0.05" /> 
 	

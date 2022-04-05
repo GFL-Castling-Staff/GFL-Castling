@@ -11,12 +11,12 @@
         </round>
     </call>
     <!-- Martina V -->
-    <call name="Martina V" key="martina.call" initiation_comment1="Launch Martina V" acknowledge_comment="Launch Martina V and AR T-Doll " launch_comment="droping in" notify_metagame="1">
+    <call name="Martina V" key="martina.call" radio_view_text="Martina V" initiation_comment1="Launch Martina V" acknowledge_comment="Launch Martina V and MG T-Doll " launch_comment="droping in" notify_metagame="1">
         <round instances="1" instance_class="vehicle" instance_key="martina.vehicle" instance_spread="0 0 0" common_spread="0 0 0" launch_time="5.0" spawn_time="8.0" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="50.0" initial_speed_to_target="0.0">
             <effect class="launch" ref="ShadowAirplaneFlyby" shadow="1" />
             <sound class="launch" fileref="plane_flyby.wav" />
         </round>
-        <round instances="6" instance_class="soldier" instance_key="default_ar" instance_spread="0 0 0" common_spread="1 0 1" launch_time="5.0" spawn_time="8.0">
+        <round instances="6" instance_class="soldier" instance_key="default_mg" instance_spread="0 0 0" common_spread="1 0 1" launch_time="5.0" spawn_time="8.0">
 		</round>
         <hud_icon filename="call_Airborne_humvee_mg.png" />
         <capacity value="0" source="rank" source_value="0.0" />
@@ -24,7 +24,7 @@
         <inventory encumbrance="0.0" price="324.0" />
     </call>
     <!-- Chiara IV -->
-    <call name="Chiara IV" key="chiara.call" initiation_comment1="Launch Chiara IV" acknowledge_comment="Launch Chiara IV and AR T-Doll " launch_comment="droping in" notify_metagame="1">
+    <call name="Chiara IV" key="chiara.call" radio_view_text="Chiara IV" initiation_comment1="Launch Chiara IV" acknowledge_comment="Launch Chiara IV and AR T-Doll " launch_comment="droping in" notify_metagame="1">
         <round instances="1" instance_class="vehicle" instance_key="chiara.vehicle" instance_spread="0 0 0" common_spread="0 0 0" launch_time="5.0" spawn_time="8.0" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="50.0" initial_speed_to_target="0.0">
             <effect class="launch" ref="ShadowAirplaneFlyby" shadow="1" />
             <sound class="launch" fileref="plane_flyby.wav" />
@@ -37,7 +37,7 @@
         <inventory encumbrance="0.0" price="428.0" />
     </call>
     <!-- Pierre II -->
-    <call name="Pierre II" key="pierre.call" initiation_comment1="Launch Pierre II" acknowledge_comment="Launch Pierre II and AR T-Doll" launch_comment="droping in" notify_metagame="1">
+    <call name="Pierre II" key="pierre.call" radio_view_text="Pierre II" initiation_comment1="Launch Pierre II" acknowledge_comment="Launch Pierre II and AR T-Doll" launch_comment="droping in" notify_metagame="1">
         <round instances="1" instance_class="vehicle" instance_key="pierre.vehicle" instance_spread="0 0 0" common_spread="0 0 0" launch_time="5.0" spawn_time="8.0" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="50.0" initial_speed_to_target="0.0">
             <effect class="launch" ref="ShadowAirplaneFlyby" shadow="1" />
             <sound class="launch" fileref="plane_flyby.wav" />

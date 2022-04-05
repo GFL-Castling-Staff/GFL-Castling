@@ -205,7 +205,7 @@
 		</attribute_config>
 	</soldier>
 	<!-- default ai group -->
-	<soldier name="default_ai" spawn_score="0.0" copy_from="default">
+	<soldier name="default_ai" spawn_score="0.0" copy_from="gk_base">
 		<resources file="common.resources" />
 		<resources file="gk_call.resources" />
 		<resources>
@@ -258,6 +258,7 @@
 		<resources file="gk_smg.resources" />
 	</soldier>
 	<soldier name="default_ar" spawn_score="0.8" squad_size_xp_cap="0.0" copy_from="default_spawn_ai">
+		<ai filename="eod.ai" />
 		<resources file="gk_ar.resources" />
 	</soldier>
 	<soldier name="default_rf" spawn_score="0.8" squad_size_xp_cap="0.0" copy_from="default_spawn_ai">
@@ -265,6 +266,7 @@
 		<resources file="gk_rf.resources" />
 	</soldier>
 	<soldier name="default_mg" spawn_score="0.8" squad_size_xp_cap="0.0" copy_from="default_spawn_ai">
+		<ai filename="gk_base.ai" />
 		<resources file="gk_mg.resources" />
 	</soldier>
 	<soldier name="default_sg" spawn_score="0.8" squad_size_xp_cap="0.0" copy_from="default_spawn_ai">
@@ -272,7 +274,7 @@
 		<resources file="gk_sg.resources" />
 	</soldier>
 	<soldier name="default_hvy" spawn_score="0.8" squad_size_xp_cap="0.0" copy_from="default_spawn_ai">
-		<ai filename="grenadier.ai" />
+		<ai filename="eod.ai" />
 		<resources file="gk_hvy_ai.resources" />
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="19.754" max="102.833" />
