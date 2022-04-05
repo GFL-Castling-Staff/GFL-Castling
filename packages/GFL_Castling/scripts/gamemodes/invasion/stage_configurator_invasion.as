@@ -109,7 +109,8 @@ class StageConfiguratorInvasion : StageConfigurator {
 	protected void addFixedSpecialCrates(Stage@ stage) {
 		array<ScoredResource@> resources = {
 			ScoredResource("gflc_crate1.vehicle", "vehicle", 50.0f),          // cgb
-			ScoredResource("gflc_crate2.vehicle", "vehicle", 100.0f)          // gift150
+			ScoredResource("gflc_crate2.vehicle", "vehicle", 100.0f),          // gift150
+			ScoredResource("gflc_crate5.vehicle", "vehicle", 50.0f)           // 快修
 		};
 		stage.addTracker(SpawnAtNode(m_metagame, resources, "fixed_crate", 0, 1000));
 	}
@@ -414,15 +415,15 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.m_playerAiCompensation = 5;                                     
 		stage.m_playerAiReduction = 2;                                         
 		stage.m_minRandomCrates = 2; 
-		stage.m_maxRandomCrates = 3;
+		stage.m_maxRandomCrates = 6;
 		{
 			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0));
 			stage.m_factions.insertLast(f);
 		}
 		{
 			Faction f(getFactionConfigs()[1], createCommanderAiCommand(1));
-			f.m_overCapacity = 40;                                            
-			f.m_capacityOffset = 5;                                           
+			f.m_overCapacity = 80;                                            
+			f.m_capacityOffset = 20;                                           
 			stage.m_factions.insertLast(f); 
 		}
 		stage.m_primaryObjective = "capture";
