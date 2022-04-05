@@ -141,6 +141,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 	// ------------------------------------------------------------------------------------------------
 	protected void setupNormalStages() {
+		addStage(setupStage107());		  // chapter1 by diling
 		addStage(setupStage9());          // map9
 		addStage(setupStage7());          // map6
 		addStage(setupStage1());          // map2
@@ -402,7 +403,32 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.m_kothTargetBase = "All Center Base";
 		return stage;		
 	}
-
+	protected Stage@ setupStage107(){
+		Stage@ stage = createStage();
+		stage.m_mapInfo.m_name = "Awakening";
+		stage.m_mapInfo.m_path = "media/packages/GFLC_Map/maps/Chapter01";
+		stage.m_mapInfo.m_id = "chapter01";
+		stage.addTracker(PeacefulLastBase(m_metagame, 0));
+		stage.addTracker(CommsCapacityHandler(m_metagame));
+		stage.m_maxSoldiers = 150;
+		stage.m_playerAiCompensation = 5;                                     
+		stage.m_playerAiReduction = 2;                                         
+		stage.m_minRandomCrates = 2; 
+		stage.m_maxRandomCrates = 3;
+		{
+			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0));
+			stage.m_factions.insertLast(f);
+		}
+		{
+			Faction f(getFactionConfigs()[1], createCommanderAiCommand(1));
+			f.m_overCapacity = 40;                                            
+			f.m_capacityOffset = 5;                                           
+			stage.m_factions.insertLast(f); 
+		}
+		stage.m_primaryObjective = "capture";
+		setDefaultAttackBreakTimes(stage);
+		return stage;
+	}
 
 	protected Stage@ setupStage1() {
 		Stage@ stage = createStage();
