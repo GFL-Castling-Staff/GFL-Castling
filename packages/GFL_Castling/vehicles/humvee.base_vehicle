@@ -36,7 +36,7 @@ max_character_collision_speed="20">
 	drag_offset="-0.05" /> 
 	
 	<visual class="chassis" mesh_filename="jeep_base.mesh" texture_filename="jeep.png" />
-	<visual class="chassis" key="broken" mesh_filename="jeep_ruin.mesh" texture_filename="jeep.png" />
+	<visual class="chassis" key="broken" mesh_filename="jeep_ruin.mesh" texture_filename="humvee_broken.png" />
 
 	<visual class="tire" mesh_filename="jeep_wheel.mesh" texture_filename="jeep.png" />
 
