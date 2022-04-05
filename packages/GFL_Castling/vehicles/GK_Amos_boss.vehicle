@@ -63,20 +63,36 @@ jams_enemy_radio="1">
 	<spawn_point offset="0 21 -12.5"/> 
 	
 	
-	<effect event_key="health" value="90" ref="SmallSmokeVehicle" offset="0.32 5.84 -5.0" /> 
+	<effect event_key="health" value="90" ref="BrokenSparkle" post_processing="0" offset="0.32 5.84 -5.4" /> 
 
-	<effect event_key="health" value="60" ref="SmallSmokeVehicle" offset="0.32 5.84 -5.0" /> 
-	<effect event_key="health" value="60" ref="BrokenSparkle" offset="0.32 5.84 -5.0" /> 	
-	<effect event_key="health" value="60" ref="SmallSmokeVehicle" offset="-2.0 4.44 +5.0" />         
+	<effect event_key="health" value="60" ref="SmallSmokeVehicle" offset="0.32 5.84 -5.4" /> 
+	<effect event_key="health" value="60" ref="BrokenSparkle" offset="0.32 5.84 -5.4" /> 	      
 	<effect event_key="health" value="60" ref="BrokenSparkle" post_processing="0" offset="-2.0 4.44 +5.0" /> 
 	
 
-	<effect event_key="health" value="30" ref="SmallSmokeVehicle" offset="0.32 5.84 -5.0" /> 
-	<effect event_key="health" value="30" ref="SmallFireRepeat" offset="0.32 5.84 -5.0" /> 		
-	<effect event_key="health" value="30" ref="SmallSmokeVehicle" offset="-2.0 4.44 +4.8" />         
-	<effect event_key="health" value="30" ref="SmallFireRepeat" post_processing="0" offset="-2.0 4.44 +5.0" /> 
+	<effect event_key="health" value="30" ref="SmallSmokeVehicle" offset="0.32 5.84 -5.4" /> 
+	<effect event_key="health" value="30" ref="SmallFireRepeat" offset="0.32 5.84 -5.4" /> 		
+	<effect event_key="health" value="30" ref="SmallSmokeVehicle" offset="-2.0 4.44 +5.0" />         
+	<effect event_key="health" value="30" ref="BrokenSparkle" post_processing="0" offset="-2.0 4.44 +5.0" /> 
 	<effect event_key="health" value="30" ref="SmallSmokeVehicle" offset="2.02 6.04 -1.6" />         
-	<effect event_key="health" value="30" ref="SmallFireRepeat" post_processing="0" offset="2.02 6.04 -1.6" /> 	
+	<effect event_key="health" value="30" ref="BrokenSparkle" post_processing="0" offset="2.02 6.04 -1.6" /> 	
+	
+	<effect event_key="health" value="15" ref="SmallSmokeVehicle" offset="0.32 5.84 -5.4" /> 
+	<effect event_key="health" value="15" ref="SmallFireRepeat" offset="0.32 5.84 -5.4" /> 		
+	<effect event_key="health" value="15" ref="SmallSmokeVehicle" offset="-2.0 4.44 +5.0" />         
+	<effect event_key="health" value="15" ref="SmallFireRepeat" post_processing="0" offset="-2.0 4.44 +5.0" /> 
+	<effect event_key="health" value="15" ref="SmallSmokeVehicle" offset="2.02 6.04 -1.6" />         
+	<effect event_key="health" value="15" ref="SmallFireRepeat" post_processing="0" offset="2.02 6.04 -1.6" /> 
+
+	<effect event_key="health" value="15" ref="BrokenSparkle" post_processing="0" offset="2.0 5.64 +5.0" /> 
+	<effect event_key="health" value="15" ref="BrokenSparkle" post_processing="0" offset="-2.35 5.64 +0.5" /> 
+	<effect event_key="health" value="15" ref="SmallSmokeVehicle" offset="-2.35 5.64 +0.5" />
+	<effect event_key="health" value="15" ref="BrokenSparkle" post_processing="0" offset="0.0 6.24 0.3" /> 
+	<effect event_key="health" value="15" ref="SmallSmokeVehicle" offset="0.0 6.24 -0.0" /> 
+	<effect event_key="health" value="15" ref="SmallSmokeVehicle" offset="0.32 5.84 -3.5" /> 
+	<effect event_key="health" value="15" ref="BrokenSparkle" post_processing="0" offset="0.32 5.84 -3.5" /> 		  
+	
+	
 	
 	<effect event_key="destroyed" ref="SmallSmokeVehicle" offset="0.32 1.44 1.45" />
 	<effect event_key="destroyed" ref="SmallFireRepeat" offset="0.32 0.96 1.45" />
