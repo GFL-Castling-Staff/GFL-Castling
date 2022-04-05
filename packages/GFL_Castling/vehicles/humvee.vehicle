@@ -2,7 +2,7 @@
 <vehicles>
 	<vehicle file="vehicle_base.vehicle" 	
 	name="Chiara-IV" 
-	key="humvee_mg"
+	key="chiara.vehicle"
 	respawn_time="100" 
 	time_to_live_unsteerable="95" 
 	map_view_atlas_index="26" 
@@ -146,7 +146,7 @@
   </event>   
 </vehicle>
 
-	<vehicle file="humvee.base_vehicle" name="Martina-V" key="humvee.vehicle">
+	<vehicle file="humvee.base_vehicle" name="Martina-V" key="martina.vehicle">
 		<tag name="metal_thin" />
 		<tag name="truck" />
 		<tag name="jeep" /> 

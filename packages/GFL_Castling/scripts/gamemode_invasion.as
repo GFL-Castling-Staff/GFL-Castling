@@ -429,8 +429,9 @@ class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 			CallMarkerConfig("hvy_landing.call", "call_marker_drop", 8, 0.5),
 			CallMarkerConfig("apc.call", "call_marker_drop", 7, 0.5),
 			CallMarkerConfig("tank.call", "call_marker_drop", 7, 0.5),
-			CallMarkerConfig("humvee.call", "call_marker_drop", 7, 0.5),
-			CallMarkerConfig("humvee1.call", "call_marker_drop", 7, 0.5),
+			CallMarkerConfig("martina.call", "call_marker_drop", 7, 0.5),
+			CallMarkerConfig("chiara.call", "call_marker_drop", 7, 0.5),
+			CallMarkerConfig("pierre.call", "call_marker_drop", 7, 0.5),			
 			CallMarkerConfig("gk_medic_agl.call", "call_marker_drop", 7, 0.5),
 			CallMarkerConfig("gk_repair_fairy.call", "call_marker_drop", 7, 0.5),
 

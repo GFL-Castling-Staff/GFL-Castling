@@ -535,12 +535,12 @@
 	<weapon key="rescue_fairy.weapon" />
 	<weapon key="target_fairy.weapon" />
 	<!-- 打call -->
-	<call key="gk_medic.call" />
 	<call key="rubber_airboat.call" />
 	<call key="sg1hg1mg2.call" />
 	<call key="hvy_landing.call" />
-	<call key="humvee1.call" />
-	<call key="humvee.call" />
+	<call key="martina.call" />
+	<call key="chiara.call" />
+	<call key="pierre.call" />
 	<call key="gk_medic_agl.call" />
 	<call key="gk_rescue_fairy.call" />
 	<call key="gk_repair_fairy.call" />
@@ -550,8 +550,6 @@
 	<call key="gk_rocket_fairy.call" />
 	<call key="manticore.call" />
 	<call key="manticore2.call" />
-	<!-- <call key="gk_landmine_fairy_ai.call"/> -->
-	<!-- <call key="gk_landmine_fairy_at.call"/> -->
 	<!-- 手雷类 -->
 	<projectile key="hand_grenade.projectile"/>
 	<projectile key="hand_88grenade.projectile" />

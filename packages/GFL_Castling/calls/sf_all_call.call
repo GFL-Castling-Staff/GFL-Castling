@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<calls>
+
+<!--16鸽召唤蝎甲兽-->
+<call 
+name="M16A1" 
+key="sf_m16a1.call"
+radio_view_text="It's time" 
+initiation_comment1="It's time"
+acknowledge_comment="Confirm, unlock"
+launch_comment="SANGVIS FERRI,Attack!"
+notify_metagame="1">
+	  
+	<hud_icon filename="sf_call_m16a1.png" />
+	<capacity value="100" source="rank" source_value="0.0" />
+	<!-- <capacity value="100" source="rank" source_value="0.1" /> -->
+	<inventory encumbrance="0.0" price="1200.0" />
+
+	<round 
+			instances="6" 
+			instance_class="soldier" 
+			instance_key="sf_manticore" 
+			instance_spread="10 0 10" 
+			common_spread="5 0 5" 
+			launch_time="5.0" 
+			spawn_time="5.5" 
+			horizontal_offset_at_spawn="0.0" 
+			vertical_offset_at_spawn="-5.0" 
+			initial_speed_to_target="0.0">
+			<sound class="spawn" fileref="qwd_walk1.wav" volume="1.3" />
+		</round>
+
+
+
+</call>
+
+<!--木星炮打击-->
+<call name="木星炮打击" key="sf_jupiter.call"
+      initiation_comment1="请求木星炮打击"
+      initiation_comment2="请求远程打击."
+      acknowledge_comment="权限确认，请求通过"
+      acknowledge_time="0"
+      launch_comment="木星炮火力投射中"
+	  notify_metagame="1">
+    
+    <round instances="2"
+           instance_class="grenade"
+           instance_key="artillery_jupiter_420.projectile" 
+           instance_spread="5 5 5" 
+           common_spread="2 0 2" 
+           launch_time="4.0"
+           spawn_time="5.0">
+     <sound class="launch" fileref="Jupitercannon_firesupport_FromDOOMETERNAL.wav" volume="0.4" />
+         
+	   <sound class="spawn" fileref="woosh1.wav" volume="0.2" />
+    </round>
+
+    <round instances="2"
+           instance_class="grenade"
+           instance_key="artillery_jupiter_420.projectile" 
+           instance_spread="5 5 5" 
+           common_spread="2 0 2" 
+           launch_time="6.0"
+           spawn_time="7.0">
+     <sound class="launch" fileref="kcco_artillery_FromBF2042.wav" volume="0.7" />       
+	   <sound class="spawn" fileref="woosh1.wav" volume="0.2" />
+    </round>
+
+
+    <round instances="2"
+           instance_class="grenade"
+           instance_key="artillery_jupiter_420.projectile" 
+           instance_spread="5 5 5" 
+           common_spread="2 0 2"
+           launch_time="10.0"
+           spawn_time="11.0">
+     <sound class="launch" fileref="kcco_artillery_FromBF2042.wav" volume="0.7" />      
+	   <sound class="spawn" fileref="woosh1.wav" volume="0.2" />
+    </round>
+   
+
+    <round instances="2"
+           instance_class="grenade"
+           instance_key="artillery_jupiter_420.projectile" 
+           instance_spread="5 5 5" 
+           common_spread="2 0 2"
+           launch_time="11.0"
+           spawn_time="12.0">
+     <sound class="launch" fileref="kcco_artillery_FromBF2042.wav" volume="0.7" />      
+	   <sound class="spawn" fileref="woosh1.wav" volume="0.2" />
+    </round>
+   
+    
+    <hud_icon filename="sf_call_jupiter.png" />
+    <!-- <capacity value="0" source="rank" source_value="0.0" /> -->
+    <capacity value="100" source="rank" source_value="0.0" />
+    <inventory encumbrance="0.0" price="500.0" />
+
+</call>
+
+<!--捷豹炮击-->
+<call 
+name="捷豹群齐射" 
+key="sf_jaguar.call"
+      initiation_comment1="请求调用捷豹打击"
+      acknowledge_comment="确认，请求通过 "
+      acknowledge_time="0"
+      launch_comment="打击开始."
+	  notify_metagame="1">
+     
+    <round instances="5"
+           instance_class="grenade"
+           instance_key="artillery_shell_fairies.projectile" 
+           instance_spread="10 10 10" 
+           common_spread="6 0 6" 
+           launch_time="5.0"
+           spawn_time="8.0">
+     <sound class="launch" fileref="Jaguar_firesupport_FromDOOMETERNAL.wav" volume="0.7" />
+           
+          <sound class="spawn" fileref="woosh1.wav" volume="0.2" />
+    </round>
+
+    <round instances="5"
+           instance_class="grenade"
+           instance_key="artillery_shell_fairies.projectile" 
+           instance_spread="10 10 10" 
+           common_spread="6 0 6" 
+           launch_time="9.0"
+           spawn_time="12.0">
+     <sound class="launch" fileref="Jaguar_firesupport_FromDOOMETERNAL.wav" volume="0.7" />    
+          <sound class="spawn" fileref="woosh1.wav" volume="0.2" />
+    </round>
+
+    <round instances="8"
+    instance_class="grenade"
+    instance_key="artillery_shell_fairies.projectile" 
+    instance_spread="10 10 10" 
+    common_spread="6 0 6" 
+    launch_time="10.0"
+    spawn_time="13.0">
+<sound class="launch" fileref="Jaguar_firesupport_FromDOOMETERNAL.wav" volume="0.7" />      
+   <sound class="spawn" fileref="woosh1.wav" volume="0.2" />
+</round>
+<round instances="9"
+instance_class="grenade"
+instance_key="artillery_shell_fairies.projectile" 
+instance_spread="10 10 10" 
+common_spread="6 0 6" 
+launch_time="11.0"
+spawn_time="14.0">
+<sound class="launch" fileref="Jaguar_firesupport_FromDOOMETERNAL.wav" volume="0.4" />      
+<sound class="spawn" fileref="woosh1.wav" volume="0.2" />
+</round>
+<round instances="9"
+instance_class="grenade"
+instance_key="artillery_shell_fairies.projectile" 
+instance_spread="10 10 10" 
+common_spread="6 0 6" 
+launch_time="13.0"
+spawn_time="15.0">
+<sound class="launch" fileref="Jaguar_firesupport_FromDOOMETERNAL.wav" volume="0.4" />      
+<sound class="spawn" fileref="woosh1.wav" volume="0.2" />
+</round>
+<round instances="8"
+instance_class="grenade"
+instance_key="artillery_shell_fairies.projectile" 
+instance_spread="10 10 10" 
+common_spread="6 0 6" 
+launch_time="14.0"
+spawn_time="16.0">
+<sound class="launch" fileref="Jaguar_firesupport_FromDOOMETERNAL.wav" volume="0.4" />      
+<sound class="spawn" fileref="woosh1.wav" volume="0.2" />
+</round>
+
+    <round instances="20"
+           instance_class="grenade"
+           instance_key="artillery_shell_fairies.projectile" 
+           instance_spread="10 10 10" 
+           common_spread="6 0 6"
+           launch_time="16.0"
+           spawn_time="17.0">
+     <sound class="launch" fileref="Jaguar_firesupport_FromDOOMETERNAL.wav" volume="0.4" />           
+          <sound class="spawn" fileref="woosh1.wav" volume="0.2" />
+    </round>
+
+    <hud_icon filename="sf_call_jahuar.png" />
+    <capacity value="0" source="rank" source_value="0.0" />
+    <capacity value="100" source="rank" source_value="0.0" />
+    <inventory encumbrance="0.0" price="350.0" />
+
+</call>
+
+<!--兵蚁召唤-->
+<call 
+name="dinergate" 
+key="sf_dinergate.call"
+radio_view_text="dinergate" 
+initiation_comment1="dinergate"
+acknowledge_comment="dinergate"
+launch_comment="dinergate！"
+notify_metagame="1">
+	  
+	<hud_icon filename="sf_call_dinergate.png" />
+	<capacity value="100" source="rank" source_value="0.0" />
+	<!-- <capacity value="100" source="rank" source_value="0.1" /> -->
+	<inventory encumbrance="0.0" price="500.0" />
+
+	<round 
+			instances="20" 
+			instance_class="soldier" 
+			instance_key="sf_dinergate" 
+			instance_spread="10 0 10" 
+			common_spread="5 0 5" 
+			launch_time="5.0" 
+			spawn_time="5.5" 
+			horizontal_offset_at_spawn="0.0" 
+			vertical_offset_at_spawn="-5.0" 
+			initial_speed_to_target="0.0">
+			<sound class="spawn" fileref="zomb_stab6.wav" volume="0" />
+		</round>
+
+		<round 
+		instances="30" 
+		instance_class="soldier" 
+		instance_key="sf_dinergate" 
+		instance_spread="10 0 10" 
+		common_spread="5 0 5" 
+		launch_time="6.0" 
+		spawn_time="6.5" 
+		horizontal_offset_at_spawn="0.0" 
+		vertical_offset_at_spawn="-5.0" 
+		initial_speed_to_target="0.0">
+		<sound class="spawn" fileref="zomb_stab6.wav" volume="0" />
+	</round>
+
+</call>
+
+<!--破坏者炮击-->
+<call 
+name="航点打击" 
+key="sf_destroyer.call"
+      initiation_comment1="请求破坏者航点打击"
+      acknowledge_comment="权限确认，请求通过"
+      acknowledge_time="0"
+      launch_comment="航点打击已开始"
+	  notify_metagame="1">
+     
+     <round instances="15"
+           instance_class="grenade"
+           instance_key="artillery_rocket_fairies.projectile" 
+           instance_spread="14 14 14" 
+           common_spread="8 0 8" 
+           launch_time="5.0"
+           spawn_time="8.0">
+     <sound class="launch" fileref="destroyer_firesupport_FromEFT.wav" volume="0.5" />
+       <sound class="spawn" fileref="woosh1.wav" volume="0.2" />
+    </round>
+
+    <round instances="20"
+           instance_class="grenade"
+           instance_key="artillery_rocket_fairies.projectile" 
+           instance_spread="14 14 14" 
+           common_spread="8 0 8"
+           launch_time="7.0"
+           spawn_time="10.0">
+     <sound class="launch" fileref="kcco_artillery_FromBF2042.wav" volume="0.6" />      
+       <sound class="spawn" fileref="woosh1.wav" volume="0.2" />
+    </round>
+
+        <round instances="35"
+           instance_class="grenade"
+           instance_key="artillery_rocket_fairies.projectile" 
+           instance_spread="14 14 14" 
+           common_spread="8 0 8"
+           launch_time="9.0"
+           spawn_time="12.0">
+     <sound class="launch" fileref="kcco_artillery_FromBF2042.wav" volume="0.6" />           
+          <sound class="spawn" fileref="woosh1.wav" volume="0.2" />
+    </round>
+    <hud_icon filename="sf_call_destroyer.png" />
+    <capacity value="0" source="rank" source_value="0.0" />
+    <capacity value="100" source="rank" source_value="0.0" />
+    <inventory encumbrance="0.0" price="600.0" />
+
+</call>
+
+</calls>

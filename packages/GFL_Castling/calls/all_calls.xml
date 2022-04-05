@@ -1,48 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <calls>
-	<!-- <call file="mortar1.call" /> -->
-<!--	<call file="mortar2.call" /> -->    <!-- has been replaced in 1.77 with cluster bomb call -->
-	<!-- <call file="cluster_bomb.call" /> -->
-	<!-- <call file="paratroopers1.call" /> -->
-	<!-- <call file="paratroopers2.call" /> -->
-	<!-- <call file="artillery1.call" /> -->
-	<!-- <call file="artillery2.call" /> -->
-	<!-- <call file="cover_drop.call" /> -->
-	<!-- <call file="rubber_boat.call" />-->
-	<call file="rubber_airboat.call" />
+	<call file="gk_all_call.call"/>
+	<call file="sf_all_call.call"/>
+	<call file="kcco_all_call.call"/>
+	<call file="par_all_call.call"/>
+	<call file="extra_all_call.call"/>
 
-
-	<call file="vehicles.call" />
-	<call file="gk_bombardment_fairy.call" />
-	<call file="gk_rocket_fairy.call" />
-	<call file="gk_airstrike_fairy.call" />
-	<call file="kcco_argo_puppis.call" />
-	<call file="kcco_argo_vela.call" />
-	<call file="kcco_argo_carina.call" />
-	<call file="kcco_Hephaestus.call" />
-	<call file="sf_jaguar.call" />
-	<call file="sf_destroyer.call" />
-	<call file="sf_jupiter.call" />
-	<call file="pard_zombie.call" />
-	<call file="sf_m16a1.call" />
-	<call file="target.call" />
-	<call file="manticore.call" />
-	<call file="humvee1.call" />
-	<call file="gk_medic.call" />
-	<call file="gk_repair_fairy.call" />
-	<!-- <call file="gk_landmine_fairy_at.call" /> -->
-	<!-- <call file="gk_landmine_fairy_ai.call" /> -->
-	<call file="gk_rescue_fairy.call" />
-	<call file="sf_dinergate.call" />
-	<!-- <call file="humvee.call" /> -->
-	<!-- <call file="tank.call" /> -->
-	<!-- <call file="buggy.call" /> -->
-	<!-- <call file="supply_quad.call" /> -->
-  
-<!--	<call file="tracer_dart.call" /> -->   <!-- weapon is not a call anymore (1.77) -->
-
-	<!-- <call file="gps.call" /> -->
-	<!-- <call file="paratroopers_medic.call" /> -->
-
-    <!-- <call file="experimental_calls.xml" /> -->
 </calls>
