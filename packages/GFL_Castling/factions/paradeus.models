@@ -20,4 +20,8 @@
 	<model filename="pard_germdog.xml"><requirement class="weapon" slot="0" key="parw_germdog.weapon" /></model>
 	<model filename="pard_teal.xml"><requirement class="weapon" slot="0" key="parw_teal.weapon" /><requirement class="carry_item" slot="0" key="pard_nyw_14"/><requirement class="rank" range="0 1000000" /></model>
 	<model filename="pard_teal.xml"><requirement class="weapon" slot="0" key="parw_teal.weapon" /><requirement class="carry_item" slot="0" key="pard_nyw_15"/><requirement class="rank" range="0 1000000" /></model>
+
+	<model filename="pard_eagleyes.xml"><requirement class="weapon" slot="0" key="parw_eagleyes.weapon" /></model>
+	<model filename="pard_vanguard.xml"><requirement class="weapon" slot="0" key="parw_vanguard.weapon" /></model>
+
 </models>
