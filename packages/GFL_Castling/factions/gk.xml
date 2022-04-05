@@ -205,7 +205,7 @@
 		</attribute_config>
 	</soldier>
 	<!-- default ai group -->
-	<soldier name="default_ai" spawn_score="0.0" copy_from="gk_base">
+	<soldier name="default_ai" spawn_score="0.0" copy_from="default">
 		<resources file="common.resources" />
 		<resources file="gk_call.resources" />
 		<resources>
