@@ -113,7 +113,7 @@
             <sound class="launch" fileref="artillery_barrage_2.wav" volume="1.0" />
             <sound class="spawn" fileref="woosh1.wav" volume="0.2" />
         </round>
-        <round instances="8" instance_class="grenade" instance_key="medical_agl_call.projectile" instance_spread="6 6 6" common_spread="0 0 0" launch_time="5.0" spawn_time="6.0">
+        <round instances="8" instance_class="grenade" instance_key="medical_agl_call.projectile" instance_spread="6 6 6" common_spread="0 0 0" launch_time="3.0" spawn_time="3.0">
             <sound class="launch" fileref="artillery_barrage_1.wav" volume="1.0" />
             <sound class="launch" fileref="artillery_barrage_2.wav" volume="1.0" />
             <sound class="spawn" fileref="woosh1.wav" volume="0.2" />

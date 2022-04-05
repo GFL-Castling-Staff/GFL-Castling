@@ -420,7 +420,7 @@ class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 		array<CallMarkerConfig@> configs = {
 			// CallMarkerConfig("callkey", "call_marker\call_marker_drop", 6, 0.5, 30.0)
 			//CallMarkerConfig(string key, int atlasIndex = 0, float size = 2.0, float range = 1.0, string text = "")
-			CallMarkerConfig("gk_airstrike_fairy.call", "call_marker", 6, 0.5, 30.0),
+			CallMarkerConfig("gk_airstrike_fairy.call", "call_marker", 6, 0.5, 20.0),
 			CallMarkerConfig("gk_bombardment_fairy.call", "call_marker", 6, 0.5, 30.0),
 			CallMarkerConfig("gk_rocket_fairy.call", "call_marker", 6, 0.5, 30.0),
 			
@@ -432,9 +432,7 @@ class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 			CallMarkerConfig("martina.call", "call_marker_drop", 7, 0.5),
 			CallMarkerConfig("chiara.call", "call_marker_drop", 7, 0.5),
 			CallMarkerConfig("pierre.call", "call_marker_drop", 7, 0.5),			
-			CallMarkerConfig("gk_medic_agl.call", "call_marker_drop", 7, 0.5),
 			CallMarkerConfig("gk_repair_fairy.call", "call_marker_drop", 7, 0.5),
-
 			CallMarkerConfig("gk_medic_agl.call", "call_marker", 3, 0.5, 5.0),
 			CallMarkerConfig("kcco_argo_carina.call", "call_marker", 14, 0.5, 30.0),
 			CallMarkerConfig("kcco_argo_puppis.call", "call_marker", 14, 0.5, 30.0),
