@@ -2,18 +2,18 @@
 <weapon file="gk_sf_boss.base_weapon" key="ff_vespid.weapon">
 
     <specification
-	accuracy_factor="0.97"
-	barrel_offset="0.5"
-	can_shoot_standing="1"
-	class="0"
-    solt="0"
-	magazine_size="35"
-	name="GK-Vespid"
-	projectile_speed="150"
-	retrigger_time="0.1"
-	suppressed="0"
-	sustained_fire_diminish_rate="1.0"
-	sustained_fire_grow_step="0.4"
+		accuracy_factor="0.97"
+		barrel_offset="0.5"
+		can_shoot_standing="1"
+		class="0"
+        slot="0"
+		magazine_size="35"
+		name="GK-Vespid"
+		projectile_speed="150"
+		retrigger_time="0.1"
+		suppressed="0"
+		sustained_fire_diminish_rate="1.0"
+		sustained_fire_grow_step="0.4"
     />
     <inventory
     encumbrance="10.0"
