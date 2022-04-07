@@ -42,6 +42,8 @@ class kill_event : Tracker {
         "parw_alina.weapon",
         "parw_teal.weapon",
         "parw_nyto_black.weapon",
+        "parw_vanguard.weapon",
+        "parw_eagleyes.weapon",
         "parw_doppelsoldner_mg.weapon",
         "parw_doppelsoldner_rocket",
         "parw_nimogen.weapon",
@@ -51,6 +53,7 @@ class kill_event : Tracker {
         "sfw_jaeger_swap.weapon",
         "sfw_vespid_swap.weapon",
         "sfw_dragoon.weapon",
+        "sfw_dragoon_swap.weapon",
         "kccow_cerynitis.weapon",
         "sfw_nemeum.weapon"
 	};
