@@ -23,7 +23,7 @@
     <model filename="gkw_mg_m1919a4.xml" />
     <hud_icon filename="gkw_m1919a4.png" />
     <projectile file="bullet.projectile">
-        <result class="hit" kill_probability="1.55" kill_decay_start_time="2.954" kill_decay_end_time="4.924" />
+        <result class="hit" kill_probability="1.3" kill_probability_offset_on_successful_hit="0.8" kill_decay_start_time="2.954" kill_decay_end_time="4.924" />
     </projectile>
     <stance state_key="running" accuracy="0.6" />
     <stance state_key="crouch_moving" accuracy="0.6" />
@@ -32,5 +32,4 @@
     <stance state_key="crouching" accuracy="0.8" />
     <stance state_key="prone" accuracy="1.2" />
     <stance state_key="over_wall" accuracy="1.2" />
-    <modifier class="speed" value="-0.2" />
 </weapon>
