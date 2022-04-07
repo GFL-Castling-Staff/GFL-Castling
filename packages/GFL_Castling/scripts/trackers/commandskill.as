@@ -226,12 +226,12 @@ class CommandSkill : Tracker {
                     Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
                     int factionid = character.getIntAttribute("faction_id");
                     array<string> Voice={
-                        "Vector_SkillC1.wav",
-                        "Vector_SkillC2.wav",
+                        "Vector_SKILL2_JP.wav",
+                        "Vector_SKILL1_JP.wav",
                         "Vector_SkillC3.wav"
                     };
                     playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
-                    c_pos.add(Vector3(0,1.3,0));
+                    c_pos.add(Vector3(0,2.0,0));
                     CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"VVfirenade.projectile",characterId,factionid,20.0,4.0);
                 }
             }

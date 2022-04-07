@@ -261,16 +261,7 @@ class GFLskill : Tracker {
 			if (character !is null) {
 				Vector3 grenade_pos = stringToVector3(event.getStringAttribute("position"));
 				int factionid = character.getIntAttribute("faction_id");
-				Vector_track.insertLast(Vector_tracker(characterId,factionid,grenade_pos));
-				int soundrnd= rand(1,2);
-				switch(soundrnd){
-					case 1:
-						playSoundAtLocation(m_metagame,"Vector_SKILL1_JP.wav",factionid,grenade_pos,1);
-						break;
-					case 2:
-						playSoundAtLocation(m_metagame,"Vector_SKILL2_JP.wav",factionid,grenade_pos,1);
-						break;
-				}   			
+				Vector_track.insertLast(Vector_tracker(characterId,factionid,grenade_pos));			
 			}
 		}
 		if (EventKeyGet == "stg44_skill") {
