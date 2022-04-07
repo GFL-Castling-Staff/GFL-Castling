@@ -330,7 +330,8 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 				ScoredResource("gkw_gsh18mod3_523.weapon", "weapon", 1.0f),
 				ScoredResource("gkw_an94mod3_3303.weapon","weapon",1.0f),
 				ScoredResource("gkw_an94mod3_blm.weapon","weapon",1.0f),
-				ScoredResource("gkw_m4sopmodiimod3_531.weapon","weapon",1.0f)
+				ScoredResource("gkw_m4sopmodiimod3_531.weapon","weapon",1.0f),
+				ScoredResource("gkw_lwmmgmod3_1808.weapon","weapon",1.0f)
 			},
 			{
 				ScoredResource("icecream.projectile", "projectile", 1.0f, 1)         
