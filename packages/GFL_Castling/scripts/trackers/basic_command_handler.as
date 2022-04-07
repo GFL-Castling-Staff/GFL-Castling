@@ -397,7 +397,12 @@ class BasicCommandHandler : Tracker {
 				m_metagame.getComms().send(command);
 			}
 			sendPrivateMessage(m_metagame, senderId, "defensive ai set");
-
+		} else if (checkCommand(message,"bpiq")){
+			const XmlElement@ info = getPlayerInfo(m_metagame, senderId);
+			if (info !is null) {
+				int characterId = info.getIntAttribute("character_id");
+				@info = getCharacterInfo2(m_metagame, characterId);
+			}
 		} else if (checkCommand(message, "0_attack")) {
 			// make ai attack only, both sides
 			string command =
@@ -531,8 +536,6 @@ class BasicCommandHandler : Tracker {
 			spawnInstanceNearPlayer(senderId, "grenadier", "soldier", 0);            
 		} else if (checkCommand(message, "foe")) {
 			spawnInstanceNearPlayer(senderId, "default", "soldier", 1);
-		} else if (checkCommand(message, "lw")) {
-			spawnInstanceNearPlayer(senderId, "lonewolf", "soldier", 0);
 		} else if (checkCommand(message, "eod")) {
 			spawnInstanceNearPlayer(senderId, "eod", "soldier", 0);
 		} else if (checkCommand(message, "sniper")) {
