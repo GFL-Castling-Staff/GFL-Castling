@@ -236,7 +236,7 @@ class CommandSkill : Tracker {
                 }
             }
         }
-        SkillArray.insertLast(SkillTrigger(characterId,30,"VECTOR"));
+        SkillArray.insertLast(SkillTrigger(characterId,15,"VECTOR"));
     }
 
     void excuteJudgeskill(int characterId,int playerId){
