@@ -27,8 +27,8 @@
     <hud_icon filename="gkw_type100.png" />
 
 	<animation state_key="stabbing" animation_key="melee, bayonet" />
-    <animation key="reload" animation_key="mgzSideR" />
-	<animation key="reload" stance_key="prone" animation_key="mgzSideRp" /><!-- 别忘了用太平洋的装弹动作“reloading, type 100”和“reloading, type 100, prone” -->
+    <animation state_key="reload" animation_key="reloading, magazine rifle 0.9" />
+
 
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet.projectile">
