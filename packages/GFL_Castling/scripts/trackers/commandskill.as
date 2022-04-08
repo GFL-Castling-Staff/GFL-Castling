@@ -267,7 +267,7 @@ class CommandSkill : Tracker {
             return;
         }
 
-        if (player.hasAttribute("aim_target")) {
+        if (playerinfo.hasAttribute("aim_target")) {
             string target = playerinfo.getStringAttribute("aim_target");
             Vector3 c_pos = stringToVector3(characterinfo.getStringAttribute("position"));
             int factionid = characterinfo.getIntAttribute("faction_id");

@@ -90,7 +90,6 @@ class GFLskill : Tracker {
 			if (character !is null) {
 				int playerId = character.getIntAttribute("player_id");
 				const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
-				
 				if (player !is null) {
 					Vector3 Pos_40mm = stringToVector3(event.getStringAttribute("position"));
                     string c = 

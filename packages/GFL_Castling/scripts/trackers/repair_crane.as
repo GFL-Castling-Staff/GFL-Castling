@@ -64,10 +64,10 @@ class RepairCrane : Tracker {
 			Vector3 repairPos = stringToVector3(event.getStringAttribute("position"));
 			repairPos = Vector3(repairPos.get_opIndex(0), repairPos.get_opIndex(1) + y_offset, repairPos.get_opIndex(2));
 			const XmlElement@ repairer = getCharacterInfo(m_metagame,repairerId);
-			if (repairer == null) return;
+			if (repairer is null) return;
 			int f = repairer.getIntAttribute("faction_id");
 			array<const XmlElement@>@ vehicles = getAllVehicles(m_metagame, f);
-			if (vehicles == null) return;
+			if (vehicles is null) return;
 			for (uint i = 0; i < vehicles.length(); ++i) {
 				//collecting vehicle positions
 				Vector3 vehiclePos = stringToVector3(vehicles[i].getStringAttribute("position"));
