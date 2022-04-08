@@ -10,7 +10,7 @@
 	can_shoot_standing="1" 
 	can_shoot_crouching="0"
 	can_shoot_prone="0"
-	class="2"
+	class="4"
 	slot="0" 
 	magazine_size="10" 
 	name="Nyto-Eagleyes" 
@@ -21,6 +21,9 @@
 	sustained_fire_grow_step="2.0" />
 	<capacity value="1" source="rank" source_value="0.0" />
 
+	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone" />
+	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone" />
+	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone" />
     <animation state_key="recoil"	animation_key="recoil, hip fire" />
 	<animation state_key="hold" animation_key="hold, hip fire" />
 	<animation state_key="crouching" animation_key="crouch, hold, hip fire" />
