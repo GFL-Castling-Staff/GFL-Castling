@@ -63,10 +63,10 @@
         can_shoot_prone="0"
 		class="0"
         slot="0" 
-		magazine_size="1" 
+		magazine_size="-1" 
 		name="M4 SOPMODII(MOD3)-[Frenzy Circus]"
 		projectile_speed="120" 
-		retrigger_time="0.086" 
+		retrigger_time="1.0" 
 		suppressed="0" 
 		sustained_fire_diminish_rate="2.1" 
 		sustained_fire_grow_step="0.3" />

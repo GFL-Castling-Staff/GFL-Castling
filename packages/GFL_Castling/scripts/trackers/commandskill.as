@@ -106,7 +106,20 @@ class CommandSkill : Tracker {
 	protected void handleMatchEndEvent(const XmlElement@ event) {
         m_ended=true;
     }
-
+    protected void handleResultEvent(const XmlElement@ event) {
+		string EventKeyGet = event.getStringAttribute("key");
+        if (EventKeyGet == "SOPMOD_lanuch"){
+            int characterId = event.getIntAttribute("character_id");
+			const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+			if (character !is null) {
+				int playerId = character.getIntAttribute("player_id");
+				const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+                if (player !is null) {
+                    excuteSopmodskill(characterId,playerId,character,player);
+                }
+            }
+		}
+    }
     void update(float time) {
         if(SkillArray.length()>0)
 		{
@@ -238,7 +251,31 @@ class CommandSkill : Tracker {
         }
         SkillArray.insertLast(SkillTrigger(characterId,15,"VECTOR"));
     }
+    void excuteSopmodskill(int characterId,int playerId,const XmlElement@ characterinfo, const XmlElement@ playerinfo){
+        bool ExistQueue = false;
+        int j=-1;
+        for (uint i=0;i<SkillArray.length();i++){
+            if (SkillArray[i].m_character_id==characterId && SkillArray[i].m_weapontype=="SOPMOD") {
+                ExistQueue=true;
+                j=i;
+            }
+        }
+        if (ExistQueue){
+            dictionary a;
+            a["%time"] = ""+SkillArray[j].m_time;
+            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            return;
+        }
 
+        if (player.hasAttribute("aim_target")) {
+            string target = playerinfo.getStringAttribute("aim_target");
+            Vector3 c_pos = stringToVector3(characterinfo.getStringAttribute("position"));
+            int factionid = characterinfo.getIntAttribute("faction_id");
+            c_pos.add(Vector3(0,2.0,0));
+            CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"SopmodSk_script.projectile",characterId,factionid,26.0,4.0);
+        }
+        SkillArray.insertLast(SkillTrigger(characterId,20,"SOPMOD"));
+    }
     void excuteJudgeskill(int characterId,int playerId){
         bool ExistQueue = false;
         int j =-1;
