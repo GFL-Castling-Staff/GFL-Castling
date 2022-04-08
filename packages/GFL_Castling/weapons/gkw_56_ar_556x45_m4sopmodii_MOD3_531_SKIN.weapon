@@ -82,10 +82,6 @@
 
 <ballistics curve_height="3.0" near_far_distance="16.0" speed_estimation_near="10.0" speed_estimation_far="16.0" max_speed="47.0" randomness="0.0" tweak_factor="1.55" /> 
 
-    <sound key="fire" fileref="sopmod1.wav" pitch_variety="0.00" volume="0.4" />
-    <sound key="fire" fileref="sopmod2.wav" pitch_variety="0.00" volume="0.4" />
-    <sound key="fire" fileref="sopmod3.wav" pitch_variety="0.00" volume="0.4" />
-    <sound key="fire" fileref="sopmod4.wav" pitch_variety="0.00" volume="0.4" />
     <sound key="magazine_out" fileref="m203_mgz_out_FromEFT.wav" volume="1" />
     <sound key="magazine_in" fileref="m203_mgz_in_FromEFT.wav" volume="1" />
     <sound key="cycle" fileref="m203_cycle_FromEFT.wav" volume="1" />
@@ -101,7 +97,7 @@
 
 
     <weak_hand_hold offset="0.2" />
-    <projectile file="SopmodSk_script.projectile" />      
+    <projectile file="SopmodSk_script_0.projectile" />      
     
     <stance state_key="running" accuracy="0.7" />
     <stance state_key="walking" accuracy="0.8" />

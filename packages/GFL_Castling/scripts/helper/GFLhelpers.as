@@ -180,7 +180,7 @@ void spawnSoldier(Metagame@ metagame, uint count, uint factionId, string positio
 	}
 }
 
-void CreateProjectile(Metagame@ m_metagame,Vector3 startPos,Vector3 endPos,string key,int cId,int fId,float initspeed){
+void CreateProjectile(Metagame@ m_metagame,Vector3 startPos,Vector3 endPos,string key,int cId,int fId,float initspeed,float ggg){
 	initspeed=initspeed/60;
 	startPos = startPos.add(Vector3(0,1,0));
 	Vector3 direction = endPos.subtract(startPos);
@@ -188,11 +188,11 @@ void CreateProjectile(Metagame@ m_metagame,Vector3 startPos,Vector3 endPos,strin
 	direction.set(direction.get_opIndex(0),0,direction.get_opIndex(2));
 	float Vmod = sqrt(pow(direction.get_opIndex(0),2) + pow(direction.get_opIndex(2),2));
 	if (Vmod< 0.00001f) Vmod= 0.00001f;
-	float foobar = pow(initspeed,4)- 26 * (26*Vmod*Vmod + 2*realy*initspeed*initspeed);
+	float foobar = pow(initspeed,4)- ggg * (ggg*Vmod*Vmod + 2*realy*initspeed*initspeed);
 	if (foobar < 0) foobar=0.1f;
 	float inner = sqrt(foobar);
-	float root1 = (pow(initspeed,2)+inner) / (26*Vmod);
-	float root2 = (pow(initspeed,2)-inner) / (26*Vmod);
+	float root1 = (pow(initspeed,2)+inner) / (ggg*Vmod);
+	float root2 = (pow(initspeed,2)-inner) / (ggg*Vmod);
 	float angle1 = atan(root1);
 	float angle2 = atan(root2);
 	float t = 0.0f;
@@ -236,6 +236,23 @@ void CreateProjectile_H(Metagame@ m_metagame,Vector3 startPos,Vector3 endPos,str
 		" character_id='" + cId + "'" +
 		" offset='" + speed.toString() + "' />";
 	m_metagame.getComms().send(c);
+}
+
+float getFlatPositionDistance(const Vector3@ pos1, const Vector3@ pos2) {
+	//_log("get_position_distance, pos1=" + $pos1[0] + ", " + $pos1[1] + ", " + $pos1[2] + ", pos2=" + $pos2[0] + ", " + $pos2[1] + ", " + $pos2[2]);
+	Vector3 d = pos1.subtract(pos2);
+
+	d.m_values[0] *= d.m_values[0];
+	d.m_values[2] *= d.m_values[2];
+
+	float result = sqrt(d.m_values[0] + d.m_values[2]);
+	return result;
+}
+
+// --------------------------------------------
+bool checkFlatRange(const Vector3@ pos1, const Vector3@ pos2, float range) {
+	float length = getFlatPositionDistance(pos1, pos2);
+	return length <= range; 
 }
 //soundtrack function from ww2dlc thanks for coding wheel
 
