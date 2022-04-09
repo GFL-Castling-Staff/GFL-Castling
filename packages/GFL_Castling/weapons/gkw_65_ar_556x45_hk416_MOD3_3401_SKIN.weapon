@@ -96,10 +96,6 @@
     <animation state_key="next_in_chain_in" animation_key="change weapon in 416" />
 	
 	<!--Sounds-->
-	
-	<sound key="fire" fileref="HK416_Skill1.wav" pitch_variety="0" volume="0.45" />        
-    <sound key="fire" fileref="HK416_Skill2.wav" pitch_variety="0" volume="0.45" />
-    <sound key="fire" fileref="HK416_Skill3.wav" pitch_variety="0" volume="0.45" />    
     <sound key="magazine_out" fileref="m320_mgz_out_FromSQUAD.wav" volume="0.7" />
     <sound key="magazine_in" fileref="m320_mgz_in_FromSQUAD.wav" volume="0.7" />
     <sound key="cycle" fileref="m320_cycle_FromSQUAD.wav" volume="0.8" />
