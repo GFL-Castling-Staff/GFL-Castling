@@ -789,44 +789,6 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 	array<Resource@>@ getDeliverablesList() const {
 		array<Resource@> list;
 
-		// list here what we want to track as delivering to armory, with intention of unlocking that same item
-
-		// the upgrade weapons, l85a2, famas, sg552, are considered semi-rare, only unlockable through cargo truck & suitcases, see get_unlock_weapon_list
-		// in 4.21 we removed the weapons as unlockables that are not dropped by the AI 
-
-		// green weapons
-		list.push_back(Resource("m16a4.weapon", "weapon"));
-		list.push_back(Resource("m240.weapon", "weapon"));
-		list.push_back(Resource("m24_a2.weapon", "weapon"));
-		//list.push_back(Resource("mp5sd.weapon", "weapon"));
-		list.push_back(Resource("mossberg.weapon", "weapon"));
-		//list.push_back(Resource("l85a2.weapon", "weapon"));
-		list.push_back(Resource("m72_law.weapon", "weapon"));
-		//list.push_back(Resource("beretta_m9.weapon", "weapon"));
-		//list.push_back(Resource("mini_uzi.weapon", "weapon"));     
-
-		// grey weapons
-		list.push_back(Resource("g36.weapon", "weapon"));
-		list.push_back(Resource("imi_negev.weapon", "weapon"));
-		list.push_back(Resource("psg90.weapon", "weapon"));
-		//list.push_back(Resource("scorpion-evo.weapon", "weapon"));
-		list.push_back(Resource("spas-12.weapon", "weapon"));
-		//list.push_back(Resource("famasg1.weapon", "weapon"));
-		list.push_back(Resource("m2_carlgustav.weapon", "weapon"));
-		//list.push_back(Resource("glock17.weapon", "weapon"));
-		//list.push_back(Resource("steyr_tmp.weapon", "weapon"));     
-
-		// brown weapons
-		list.push_back(Resource("ak47.weapon", "weapon"));
-		list.push_back(Resource("pkm.weapon", "weapon"));
-		list.push_back(Resource("dragunov_svd.weapon", "weapon"));
-		//list.push_back(Resource("qcw-05.weapon", "weapon"));
-		list.push_back(Resource("qbs-09.weapon", "weapon"));
-		//list.push_back(Resource("sg552.weapon", "weapon"));
-		list.push_back(Resource("rpg-7.weapon", "weapon"));
-		//list.push_back(Resource("pb.weapon", "weapon")); 
-		//list.push_back(Resource("aek_919k.weapon", "weapon"));     
-
 		return list;
 	}
 }
