@@ -105,6 +105,8 @@ class map105_Phase2 : map105_Phase {
 		_log("Phase2 starting");
 		m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 3.0, 0, "Map105HandleAll"));
 		playSoundtrack(m_metagame,"Map105Defend.wav");
+		m_metagame.getComms().send("<command class='commander_ai' faction='0' base_defense='0.0' border_defense='0.05' />");
+
 	}
 
 	protected void handleFactionLoseEvent(const XmlElement@ event) {
