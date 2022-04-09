@@ -97,11 +97,11 @@
         <result class="blast"  damage="0.25" radius="2.5" decal="1" push="0.3" character_state="death" faction_compare="not_equal" />
         <trigger class="impact" />
         <effect class="result" key="terrain" ref="BigBurst" use_surface_color="1" />
-        <effect class="result" key="terrain" ref="SmokeTop" post_processing="1" />
-        <effect class="result" key="terrain" ref="Smoke" post_processing="1" />
+        <effect class="result" key="terrain" ref="LowDust"/>
         <effect class="result" key="terrain" ref="Shine" lighting="0" />
         <effect class="result" key="terrain" ref="Godray" lighting="0" />
-        <effect class="result" key="terrain" ref="ShadowSmoke" shadow="1" />
+        <effect class="result" key="static_object" copy="terrain"/>
+        <effect class="result" key="vehicle" copy="terrain"/>
     </projectile>
        <stance state_key="running" accuracy="0.6" />
 
