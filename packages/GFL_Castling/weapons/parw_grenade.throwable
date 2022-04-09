@@ -2,7 +2,7 @@
 <projectile drop_count_factor_on_death="0.0" drop_count_factor_on_player_death="0.0"  class="grenade" name="Ofanim" key="parw_grenade.projectile" slot="0" radius="0.15">
 
 
-    <result class="blast" radius="7.5" damage="4.00" push="0.3" decal="1" character_state="death" />
+    <result class="blast" radius="5.5" damage="3.0" push="0.3" decal="1" character_state="death" />
     <trigger class="time" time_to_live="2.5"/>
 
     <rotation class="random" />
