@@ -31,6 +31,7 @@
     <effect class="result" key="terrain" ref="Shine" lighting="0" />
     <effect class="result" key="terrain" ref="Godray" lighting="0" />
     <effect class="result" key="terrain" ref="ShadowSmoke" shadow="1" />
+    <trail probability="1.0" key="laser_tiaotiao" />
   </projectile>
   <shield offset="-0.55 0.0 0" extent="0.8 0.5 1.0" />
   <!-- state modifiers for weapons are connected to shield impact events -->
