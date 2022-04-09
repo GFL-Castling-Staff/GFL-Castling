@@ -9,7 +9,7 @@
 		magazine_size="30" 
 		name="Task Force Defy: AK-12" 
 		projectile_speed="204.13" 
-        retrigger_time="0.1" 
+        retrigger_time="0.06" 
 		suppressed="1" 
         last_burst_retrigger_time="0.2"
         burst_shots="3"
@@ -17,8 +17,6 @@
         ai_sight_range_modifier="2.0"  
 		sustained_fire_diminish_rate="1.8" 
 		sustained_fire_grow_step="0.4"/>
-
-
 
   	<animation state_key="hold_casual"			animation_key="dancing, kazachok" />
     <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
@@ -40,7 +38,7 @@
 
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet.projectile">
-        <result class="hit"  kill_probability="2.0" kill_decay_start_time="0.8" kill_decay_end_time="1.333" />
+        <result class="hit"  kill_probability="2.4" kill_decay_start_time="0.8" kill_decay_end_time="1.333" />
     </projectile>
     
     <stance state_key="running" accuracy="1" />
