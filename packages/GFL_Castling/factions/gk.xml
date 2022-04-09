@@ -1,3 +1,4 @@
+
 <?xml version="1.0" encoding="utf-8"?>
 <faction name="G&amp;K PMC" color="0.95 0.59 0.20" firstnames_file="gk_first.name" lastnames_file="gk_last.name" chat_icon_filename="gk_chat_soldier.png" chat_icon_commander_filename="gk_chat_commander.png" campaign_completion_icon_filename="campaign_win_gk.png" radio_queue_size="3">
 	<rank xp="0" name="10"><hud_icon filename="lv_000.png" /></rank>
@@ -258,6 +259,7 @@
 		<resources file="gk_smg.resources" />
 	</soldier>
 	<soldier name="default_ar" spawn_score="0.8" squad_size_xp_cap="0.0" copy_from="default_spawn_ai">
+		<ai filename="eod.ai" />
 		<resources file="gk_ar.resources" />
 	</soldier>
 	<soldier name="default_rf" spawn_score="0.8" squad_size_xp_cap="0.0" copy_from="default_spawn_ai">
@@ -272,7 +274,7 @@
 		<resources file="gk_sg.resources" />
 	</soldier>
 	<soldier name="default_hvy" spawn_score="0.8" squad_size_xp_cap="0.0" copy_from="default_spawn_ai">
-		<ai filename="grenadier.ai" />
+		<ai filename="eod.ai" />
 		<resources file="gk_hvy_ai.resources" />
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="19.754" max="102.833" />
@@ -1209,19 +1211,13 @@
 		<character filename="sf_dinergate.character" />
 		<ai filename="eod.ai" />
 
-		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
-			<weapon key="ff_dinergate.weapon"  enabled="1"/>
-			<carry_item key="exo_x_t1.carry_item"  enabled="1"/>
+		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1">
+			<weapon key="ff_dinergate.weapon"/>
+			<carry_item key="exo_t4.carry_item" />
 		</resources>
 		<attribute_config class="xp">
-			<attribute weight="1.0" min="0.2" max="1.0" />
+			<attribute weight="0.3" min="0.0" max="1.0" />
 		</attribute_config>
-		<attribute_config class="rp">
-			<attribute weight="1.0" min="2.0" max="3.0" />
-		</attribute_config>
-		<item_class_existence_config>
-			<item_class_existence class="weapon" slot="1" probability="1.0" />
-		</item_class_existence_config>
 	</soldier>
 	<soldier name="gk_manticore" firstnames="gk_qwd.name" lastnames_file="gk_qwd_last.name" spawn_score="0.000001">
 		<model filename="gkd_manticore_pink.xml" />
@@ -1233,6 +1229,32 @@
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="0.3" min="302.0" max="303.0" />
+		</attribute_config>
+		<item_class_existence_config>
+			<!-- wearables -->
+			<item_class_existence class="carry_item" slot="1" probability="1.0" />
+			<!-- backpack -->
+			<item_class_existence class="carry_item" slot="0" probability="1.0" />
+		</item_class_existence_config>
+	</soldier>
+	
+	<soldier name="GK_Agent" spawn_score="0.000001" >
+		<character filename="default_sf.text_lines">
+			<sound key="death" fileref="Agent_buhuo_DEAD01_JP.wav" pitch_variety="0.001" volume="0.8" />
+			<sound key="death" fileref="Agent_buhuo_DEAD02_JP.wav" pitch_variety="0.001" volume="0.8" />
+			<sound key="throw" fileref="Agent_buhuo_SKILL01_JP.wav" pitch_variety="0.001" volume="0.8" />
+			<sound key="throw" fileref="Agent_buhuo_SKILL02_JP.wav" pitch_variety="0.001" volume="0.8" />
+			<sound key="throw" fileref="Agent_buhuo_ATTACK_JP.wav" pitch_variety="0.001" volume="0.8" />
+			<sound key="throw" fileref="Agent_buhuo_MEET_JP.wav" pitch_variety="0.001" volume="0.8" />
+		</character>
+		<model filename="sfd_agent.xml" />
+		<ai filename="hydra.ai" />
+		<resources clear_vehicles="1" clear_weapons="1" clear_grenades="1" clear_carry_items="1">
+			<weapon key="sfw_agent.weapon" />
+			<carry_item key="agent_drone.carry_item" />
+		</resources>
+		<attribute_config class="xp">
+			<attribute weight="0.3" min="0.0" max="0.05" />
 		</attribute_config>
 		<item_class_existence_config>
 			<!-- wearables -->

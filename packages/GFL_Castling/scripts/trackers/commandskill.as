@@ -100,40 +100,16 @@ class CommandSkill : Tracker {
                 if (c_weaponType=="ff_Intruder.weapon"){
                     excuteIntruderskill(cId,senderId);        
                 }
+                if (c_weaponType=="ff_agent.weapon"){
+                    excuteAgentskill(cId,senderId);        
+                }
             }
         }
     }
 	protected void handleMatchEndEvent(const XmlElement@ event) {
         m_ended=true;
     }
-    protected void handleResultEvent(const XmlElement@ event) {
-		string EventKeyGet = event.getStringAttribute("key");
-        if (EventKeyGet == "SOPMOD_lanuch"){
-            int characterId = event.getIntAttribute("character_id");
-			const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
-			if (character !is null) {
-				int playerId = character.getIntAttribute("player_id");
-				const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
-                if (player !is null) {
-                    excuteSopmodskill(characterId,playerId,character,player);
-                }
-            }
-		}
-        else if (EventKeyGet == "416_lanuch"){
-            int characterId = event.getIntAttribute("character_id");
-			const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
-			if (character !is null) {
-				int playerId = character.getIntAttribute("player_id");
-				const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
-                if (player !is null) {
-                    if(getPlayerEquipmentKey(m_metagame,characterId,0) == "gkw_hk416_3401_mod3_skill.weapon"){
-                        excute416modskill(characterId,playerId,character,player,true);
-                    }
-                    excute416modskill(characterId,playerId,character,player,false);
-                }
-            }
-		}
-    }
+
     void update(float time) {
         if(SkillArray.length()>0)
 		{
@@ -244,122 +220,23 @@ class CommandSkill : Tracker {
             _log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
+        SkillArray.insertLast(SkillTrigger(characterId,30,"VECTOR"));
+        addItemInBackpack(m_metagame,characterId,"projectile","VVfirenade.projectile");
+        addItemInBackpack(m_metagame,characterId,"projectile","VVfirenade.projectile");
+        sendPrivateMessage(m_metagame,playerId,"Firenade Added");
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         if (character !is null) {
-            const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
-            if (player !is null){
-                if (player.hasAttribute("aim_target")) {
-                    string target = player.getStringAttribute("aim_target");
-                    Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
-                    int factionid = character.getIntAttribute("faction_id");
-                    array<string> Voice={
-                        "Vector_SKILL2_JP.wav",
-                        "Vector_SKILL1_JP.wav",
-                        "Vector_SkillC3.wav"
-                    };
-                    playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
-                    c_pos.add(Vector3(0,2.0,0));
-                    if (checkFlatRange(c_pos,stringToVector3(target),18)){
-                        CreateProjectile(m_metagame,c_pos,stringToVector3(target),"VVfirenade.projectile",characterId,factionid,50,20.0);
-                    }
-                    else{
-                        CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"VVfirenade.projectile",characterId,factionid,20.0,4.0);
-                    }
-                }
-            }
-        }
-        SkillArray.insertLast(SkillTrigger(characterId,15,"VECTOR"));
-    }
-    void excuteSopmodskill(int characterId,int playerId,const XmlElement@ characterinfo, const XmlElement@ playerinfo){
-        bool ExistQueue = false;
-        int j=-1;
-        for (uint i=0;i<SkillArray.length();i++){
-            if (SkillArray[i].m_character_id==characterId && SkillArray[i].m_weapontype=="SOPMOD") {
-                ExistQueue=true;
-                j=i;
-            }
-        }
-        if (ExistQueue){
-            dictionary a;
-            a["%time"] = ""+SkillArray[j].m_time;
-            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
-            return;
-        }
-
-        if (playerinfo.hasAttribute("aim_target")) {
-            string target = playerinfo.getStringAttribute("aim_target");
-            Vector3 c_pos = stringToVector3(characterinfo.getStringAttribute("position"));
-            int factionid = characterinfo.getIntAttribute("faction_id");
-            c_pos.add(Vector3(0,2.5,0));
-            if (checkFlatRange(c_pos,stringToVector3(target),13)){
-                CreateProjectile(m_metagame,c_pos,stringToVector3(target),"SopmodSk_script.projectile",characterId,factionid,60,26.0);
-            }
-            else{
-                CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"SopmodSk_script.projectile",characterId,factionid,26.0,6.0);
-            }
+            Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
+            int factionid = character.getIntAttribute("faction_id");
             array<string> Voice={
-            "sopmod1.wav",
-            "sopmod2.wav",
-            "sopmod3.wav",
-            "sopmod4.wav"
+                "Vector_SkillC1.wav",
+                "Vector_SkillC2.wav",
+                "Vector_SkillC3.wav"
             };
             playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
-            SkillArray.insertLast(SkillTrigger(characterId,16,"SOPMOD"));
         }
     }
-    void excute416modskill(int characterId,int playerId,const XmlElement@ characterinfo, const XmlElement@ playerinfo,bool pussyskin){
-        bool ExistQueue = false;
-        int j=-1;
-        for (uint i=0;i<SkillArray.length();i++){
-            if (SkillArray[i].m_character_id==characterId && SkillArray[i].m_weapontype=="HK416MOD3") {
-                ExistQueue=true;
-                j=i;
-            }
-        }
-        if (ExistQueue){
-            dictionary a;
-            a["%time"] = ""+SkillArray[j].m_time;
-            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
-            return;
-        }
 
-        if (playerinfo.hasAttribute("aim_target")) {
-            string target = playerinfo.getStringAttribute("aim_target");
-            Vector3 c_pos = stringToVector3(characterinfo.getStringAttribute("position"));
-            int factionid = characterinfo.getIntAttribute("faction_id");
-            c_pos.add(Vector3(0,2.5,0));
-            if(pussyskin){
-                if (checkFlatRange(c_pos,stringToVector3(target),13)){
-                    CreateProjectile(m_metagame,c_pos,stringToVector3(target),"40mm_hk416_3401.projectile",characterId,factionid,60,26.0);
-                }
-                else{
-                    CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"40mm_hk416_3401.projectile",characterId,factionid,26.0,6.0);
-                }
-                array<string> Voice={
-                "HK416_Skill4.wav",
-                "HK416_Skill5.wav",
-                "HK416_Skill6.wav"
-                };
-                playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
-                SkillArray.insertLast(SkillTrigger(characterId,16,"HK416MOD3"));
-            }
-            else{
-                if (checkFlatRange(c_pos,stringToVector3(target),13)){
-                    CreateProjectile(m_metagame,c_pos,stringToVector3(target),"40mm_hk416.projectile",characterId,factionid,60,26.0);
-                }
-                else{
-                    CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"40mm_hk416.projectile",characterId,factionid,26.0,6.0);
-                }
-                array<string> Voice={
-                "HK416_Skill1.wav",
-                "HK416_Skill2.wav",
-                "HK416_Skill3.wav"
-                };
-                playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
-                SkillArray.insertLast(SkillTrigger(characterId,16,"HK416MOD3"));
-            }
-        }
-    }
     void excuteJudgeskill(int characterId,int playerId){
         bool ExistQueue = false;
         int j =-1;
@@ -586,7 +463,7 @@ class CommandSkill : Tracker {
             sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
             return;
         }
-        SkillArray.insertLast(SkillTrigger(characterId,90,"FF_INTRUDER"));
+        SkillArray.insertLast(SkillTrigger(characterId,30,"FF_INTRUDER"));
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         if (character !is null) {
             const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
@@ -594,7 +471,7 @@ class CommandSkill : Tracker {
                 if (player.hasAttribute("aim_target")) {
                     string target = player.getStringAttribute("aim_target");
                     int Faction= character.getIntAttribute("faction_id");
-                    spawnSoldier(m_metagame,5,0,target,"gk_dinergate");
+                    spawnSoldier(m_metagame,7,0,target,"gk_dinergate");
                 }
                 array<string> Voice={
                     "Intruder_buhuo_SKILL03_JP.wav"
@@ -603,5 +480,52 @@ class CommandSkill : Tracker {
             }
         }
     }
-}
+        void excuteAgentskill(int characterId,int playerId){
+        bool ExistQueue = false;
+        int j =-1;
+        for (uint i=0;i<SkillArray.length();i++){
+            if (SkillArray[i].m_character_id==characterId && SkillArray[i].m_weapontype=="FF_AGENT") {
+                ExistQueue=true;
+                j=i;
+            }
+        }
+        if (ExistQueue){
+            dictionary a;
+            a["%time"] = ""+SkillArray[j].m_time;
+            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            return;
+        }
+        SkillArray.insertLast(SkillTrigger(characterId,60,"FF_AGENT"));
+        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+        if (character !is null) {
+            const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+            if (player !is null){
+                if (player.hasAttribute("aim_target")) {
+                    string target = player.getStringAttribute("aim_target");
+                    int Faction= character.getIntAttribute("faction_id");
+					
+					float xx1=1.0,yy1=1.7;
+					Vector3 target0 = stringToVector3(target);
+					
+					target0.m_values[0] = target0.m_values[0]-xx1;
+					target0.m_values[2] = target0.m_values[2]-yy1;
+					target = target0.toString();
+                    spawnSoldier(m_metagame,1,0,target,"GK_Agent");
+					
+					target0.m_values[2] = target0.m_values[2]+2*yy1;
+					target = target0.toString();
+                    spawnSoldier(m_metagame,1,0,target,"GK_Agent");
 
+					target0.m_values[0] = target0.m_values[0]+3*xx1;
+					target0.m_values[2] = target0.m_values[2]-yy1;
+					target = target0.toString();					
+                    spawnSoldier(m_metagame,1,0,target,"GK_Agent");					
+                }
+                array<string> Voice={
+                    "Agent_buhuo_SKILL02_JP.wav"
+                };
+                playRandomSoundArray(m_metagame,Voice,0,character.getStringAttribute("position"),1);
+            }
+        }
+    }
+}
