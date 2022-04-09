@@ -108,9 +108,15 @@ class StageConfiguratorInvasion : StageConfigurator {
 	// ------------------------------------------------------------------------------------------------
 	protected void addFixedSpecialCrates(Stage@ stage) {
 		array<ScoredResource@> resources = {
-			ScoredResource("gflc_crate1.vehicle", "vehicle", 50.0f),          // cgb
-			ScoredResource("gflc_crate2.vehicle", "vehicle", 100.0f),          // gift150
-			ScoredResource("gflc_crate5.vehicle", "vehicle", 50.0f)           // 快修
+			ScoredResource("gflc_crate1.vehicle", "vehicle", 50.0f),           // cgb
+			ScoredResource("gflc_crate2.vehicle", "vehicle", 100.0f),           // gift150
+			ScoredResource("gflc_crate3.vehicle", "vehicle", 100.0f),           // gift150
+			ScoredResource("gflc_crate4.vehicle", "vehicle", 30.0f),           // gift1000
+			ScoredResource("gflc_crate5.vehicle", "vehicle", 50.0f),           // 快修
+			ScoredResource("gflc_crate6.vehicle", "vehicle", 20.0f),           // 超导
+			ScoredResource("gflc_crate7.vehicle", "vehicle", 2.0f),           // 火神
+			ScoredResource("gflc_crate8.vehicle", "vehicle", 15.0f),           // fnc的零食盒子
+			ScoredResource("gflc_crate9.vehicle", "vehicle", 5.0f)           // 我自杀算了
 		};
 		stage.addTracker(SpawnAtNode(m_metagame, resources, "fixed_crate", 0, 1000));
 	}
@@ -120,8 +126,8 @@ class StageConfiguratorInvasion : StageConfigurator {
 		array<ScoredResource@> resources = {
 			// for testing: 0 score no spawn -> 100% chance for icecream
 			//ScoredResource("", "", 0.0f),          
-			ScoredResource("", "", 85.0f),
-			ScoredResource("icecream.vehicle", "vehicle", 15.0f)
+			ScoredResource("", "", 70.0f),
+			ScoredResource("icecream.vehicle", "vehicle", 30.0f)
 		};
 		stage.addTracker(SpawnAtNode(m_metagame, resources, "icecream", 0, 1));
 	}
@@ -411,7 +417,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.m_mapInfo.m_id = "chapter01";
 		stage.addTracker(PeacefulLastBase(m_metagame, 0));
 		stage.addTracker(CommsCapacityHandler(m_metagame));
-		stage.m_maxSoldiers = 150;
+		stage.m_maxSoldiers = 180;
 		stage.m_playerAiCompensation = 5;                                     
 		stage.m_playerAiReduction = 2;                                         
 		stage.m_minRandomCrates = 2; 
@@ -421,7 +427,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 			stage.m_factions.insertLast(f);
 		}
 		{
-			Faction f(getFactionConfigs()[1], createCommanderAiCommand(1));
+			Faction f(getFactionConfigs()[1], createCommanderAiCommand(1,0.4,0.2));
 			f.m_overCapacity = 80;                                            
 			f.m_capacityOffset = 20;                                           
 			stage.m_factions.insertLast(f); 
