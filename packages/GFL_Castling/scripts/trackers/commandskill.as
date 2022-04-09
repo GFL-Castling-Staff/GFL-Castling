@@ -119,6 +119,20 @@ class CommandSkill : Tracker {
                 }
             }
 		}
+        else if (EventKeyGet == "416_lanuch"){
+            int characterId = event.getIntAttribute("character_id");
+			const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+			if (character !is null) {
+				int playerId = character.getIntAttribute("player_id");
+				const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+                if (player !is null) {
+                    if(getPlayerEquipmentKey(m_metagame,characterId,0) == "gkw_hk416_3401_mod3_skill.weapon"){
+                        excute416modskill(characterId,playerId,character,player,true);
+                    }
+                    excute416modskill(characterId,playerId,character,player,false);
+                }
+            }
+		}
     }
     void update(float time) {
         if(SkillArray.length()>0)
@@ -277,7 +291,7 @@ class CommandSkill : Tracker {
             Vector3 c_pos = stringToVector3(characterinfo.getStringAttribute("position"));
             int factionid = characterinfo.getIntAttribute("faction_id");
             c_pos.add(Vector3(0,2.5,0));
-            if (checkFlatRange(c_pos,stringToVector3(target),18)){
+            if (checkFlatRange(c_pos,stringToVector3(target),13)){
                 CreateProjectile(m_metagame,c_pos,stringToVector3(target),"SopmodSk_script.projectile",characterId,factionid,60,26.0);
             }
             else{
@@ -291,6 +305,59 @@ class CommandSkill : Tracker {
             };
             playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
             SkillArray.insertLast(SkillTrigger(characterId,16,"SOPMOD"));
+        }
+    }
+    void excute416modskill(int characterId,int playerId,const XmlElement@ characterinfo, const XmlElement@ playerinfo,bool pussyskin){
+        bool ExistQueue = false;
+        int j=-1;
+        for (uint i=0;i<SkillArray.length();i++){
+            if (SkillArray[i].m_character_id==characterId && SkillArray[i].m_weapontype=="HK416MOD3") {
+                ExistQueue=true;
+                j=i;
+            }
+        }
+        if (ExistQueue){
+            dictionary a;
+            a["%time"] = ""+SkillArray[j].m_time;
+            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            return;
+        }
+
+        if (playerinfo.hasAttribute("aim_target")) {
+            string target = playerinfo.getStringAttribute("aim_target");
+            Vector3 c_pos = stringToVector3(characterinfo.getStringAttribute("position"));
+            int factionid = characterinfo.getIntAttribute("faction_id");
+            c_pos.add(Vector3(0,2.5,0));
+            if(pussyskin){
+                if (checkFlatRange(c_pos,stringToVector3(target),13)){
+                    CreateProjectile(m_metagame,c_pos,stringToVector3(target),"40mm_hk416_3401.projectile",characterId,factionid,60,26.0);
+                }
+                else{
+                    CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"40mm_hk416_3401.projectile",characterId,factionid,26.0,6.0);
+                }
+                array<string> Voice={
+                "HK416_Skill4.wav",
+                "HK416_Skill5.wav",
+                "HK416_Skill6.wav"
+                };
+                playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+                SkillArray.insertLast(SkillTrigger(characterId,16,"HK416MOD3"));
+            }
+            else{
+                if (checkFlatRange(c_pos,stringToVector3(target),13)){
+                    CreateProjectile(m_metagame,c_pos,stringToVector3(target),"40mm_hk416.projectile",characterId,factionid,60,26.0);
+                }
+                else{
+                    CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"40mm_hk416.projectile",characterId,factionid,26.0,6.0);
+                }
+                array<string> Voice={
+                "HK416_Skill1.wav",
+                "HK416_Skill2.wav",
+                "HK416_Skill3.wav"
+                };
+                playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+                SkillArray.insertLast(SkillTrigger(characterId,16,"HK416MOD3"));
+            }
         }
     }
     void excuteJudgeskill(int characterId,int playerId){

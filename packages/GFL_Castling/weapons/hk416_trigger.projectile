@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<projectile class="grenade" name="rocket" key="hk416_trigger.projectile" slot="2" pulldown_in_air="26">
+    <result class="notify_script" key="416_lanuch" />
+    <trigger class="time" time_to_live="0.0"/>
+    <rotation class="motion" />
+    <model mesh_filename="" />
+
+    <commonness value="0.0" />
+
+</projectile>

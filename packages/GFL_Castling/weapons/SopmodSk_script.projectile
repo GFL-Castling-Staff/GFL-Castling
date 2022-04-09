@@ -2,7 +2,9 @@
 <projectile class="grenade" name="rocket" key="SopmodSk_script.projectile" slot="2" pulldown_in_air="26">
     <tag name="rocket"/>
     <result class="notify_script" key="SOPMOD_skill" />
-    <trigger class="impact" />
+    <trigger class="impact">
+        <collider class="character" enabled="1" faction_compare="not_equal"/>
+    </trigger>
     <rotation class="motion" />
     <model mesh_filename="agl.xml" />
 

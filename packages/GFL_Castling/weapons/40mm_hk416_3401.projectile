@@ -2,7 +2,9 @@
 <projectile class="grenade" name="40mm" slot="2" pulldown_in_air="26.0" key="40mm_hk416_3401.projectile">
     <tag name="grenade"/>
     <result class="notify_script" key="416_skill" />
-    <trigger class="impact" />
+    <trigger class="impact">
+        <collider class="character" enabled="1" faction_compare="not_equal"/>
+    </trigger>
     <rotation class="motion" />
     <model mesh_filename="gkw_ar_hk416_3401_s.xml" />
 

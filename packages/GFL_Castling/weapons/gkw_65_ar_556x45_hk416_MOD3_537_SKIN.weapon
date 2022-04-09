@@ -77,10 +77,10 @@
     can_shoot_prone="0"
 	class="0"
     slot="0" 
-	magazine_size="1" 
+	magazine_size="-1" 
 	name="HK416(MOD3)-[Primrose-Flavored Foil Candy]-[Parasitic grenade]" 
 	projectile_speed="120" 
-	retrigger_time="0.06" 
+	retrigger_time="1.0" 
 	suppressed="1" 
     sight_range_modifier="0.7"
     sustained_fire_diminish_rate="1.9"
@@ -121,7 +121,7 @@
 	
  
     <weak_hand_hold offset="0.3" />
-    <projectile file="40mm_hk416.projectile" />
+    <projectile file="hk416_trigger.projectile" />
 <ballistics curve_height="3.0" near_far_distance="16.0" speed_estimation_near="10.0" speed_estimation_far="16.0" max_speed="47.0" randomness="0.0" tweak_factor="1.55" /> 
         
     
