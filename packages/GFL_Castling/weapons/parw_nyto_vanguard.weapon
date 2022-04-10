@@ -61,7 +61,7 @@
 
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet_paradeus.projectile">
-        <result class="hit"  kill_probability="1.85" kill_decay_start_time="0.021" kill_decay_end_time="0.536" />
+        <result class="hit"  kill_probability="1.85" kill_decay_start_time="0.021" kill_decay_end_time="0.4" />
     </projectile>
     <stance state_key="running" accuracy="0.6" />
     <stance state_key="walking" accuracy="0.675" />

@@ -11,8 +11,8 @@ max_character_collision_speed="20">
 	<!-- <tag name="apc" /> -->
 	<!-- <tag name="jeep" />  -->
   
-	<tire_set offset="0.96 0 1.70" radius="0.48" />
-	<tire_set offset="0.96 0 -1.70" radius="0.48" />
+	<tire_set offset="0.96 0 1.7" radius="0.48" />
+	<tire_set offset="0.96 0 -1.7" radius="0.48" />
 
 	<control 
 	max_speed="35.0" 
@@ -39,6 +39,7 @@ max_character_collision_speed="20">
 	<visual class="chassis" key="broken" mesh_filename="jeep_ruin.mesh" texture_filename="humvee_broken.png" />
 
 	<visual class="tire" mesh_filename="jeep_wheel.mesh" texture_filename="jeep.png" />
+	<visual class="tire" key="broken" />
 
 	<item_container class="stash" offset="0.0 0.78 -2.4" />
 	<spawn_point />
