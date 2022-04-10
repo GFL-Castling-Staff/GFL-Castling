@@ -29,7 +29,6 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
         setupCommunity6(); 		
 		setupIcecream();                
 		setupEnemyWeaponUnlocks();
-		setupLaptopUnlocks();
 		setupSFgift();
 		
 	}
@@ -615,17 +614,13 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		ScoredResource("gentiane.carry_item", "carry_item", 1.0f),
 		ScoredResource("m1903.carry_item", "carry_item", 1.0f),
 		ScoredResource("jill.carry_item", "carry_item", 1.0f),
-		ScoredResource("arm_exo_mp5.carry_item", "carry_item", 0.7f),
-		ScoredResource("arm_exo_thompson.carry_item", "carry_item", 0.7f),
-		ScoredResource("arm_m16a1.carry_item", "carry_item", 0.7f),
-		ScoredResource("arm_ump.carry_item", "carry_item", 0.7f),
-		ScoredResource("arm_ro635.carry_item", "carry_item", 0.7f),
 		ScoredResource("light.carry_item", "carry_item", 1.0f),
 		ScoredResource("K309.carry_item", "carry_item", 0.7f),
 		ScoredResource("IAQS.carry_item", "carry_item", 0.7f),
 		ScoredResource("NZ75.carry_item", "carry_item", 0.7f),
 		ScoredResource("gkw_ltlx7000_icecream.weapon", "weapon", 0.5f),
-		ScoredResource("woshieoe.carry_item", "carry_item", 0.7f)
+		ScoredResource("woshieoe.carry_item", "carry_item", 0.7f),
+		ScoredResource("gkw_yurine.weapon","weapon",0.7f)
 			},
 			{ 
 		ScoredResource("icecream.projectile", "projectile", 1.0f, 5)
