@@ -621,7 +621,7 @@ class CommandSkill : Tracker {
             sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
             return;
         }
-        SkillArray.insertLast(SkillTrigger(characterId,60,"FF_AGENT"));
+        SkillArray.insertLast(SkillTrigger(characterId,90,"FF_AGENT"));
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         if (character !is null) {
             const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
