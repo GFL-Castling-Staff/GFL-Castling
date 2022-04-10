@@ -8,6 +8,7 @@
   sustained_fire_diminish_rate="0.7" 
   magazine_size="200" 
   can_shoot_standing="1" 
+  carry_in_two_hands="1"
   can_shoot_crouching="1" 
   can_shoot_prone="0"
   suppressed="0" 
@@ -35,7 +36,7 @@
     <sound key="magazine_in" fileref="mg_clip_in.wav" />
     <sound key="cycle" fileref="rifle_chamber.wav" />
     <sound class="impact" fileref="rifle_drop.wav" />
-    <model filename="gkw_mg_yurine_from_Dusk.xml" />
+    <model filename="gkw_cb_Yurine_Hanazono_from_dusk.xml" />
 
     <hud_icon filename="gkw_yurine.png" />
     <commonness value="0" can_respawn_with="1" in_stock="0" />
