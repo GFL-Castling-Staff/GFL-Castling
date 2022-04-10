@@ -261,7 +261,7 @@ class CommandSkill : Tracker {
                         "Vector_SkillC3.wav"
                     };
                     playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
-                    c_pos.add(Vector3(0,2.0,0));
+                    c_pos=c_pos.add(Vector3(0,1.5,0));
                     if (checkFlatRange(c_pos,stringToVector3(target),18)){
                         CreateProjectile(m_metagame,c_pos,stringToVector3(target),"VVfirenade.projectile",characterId,factionid,50,20.0);
                     }
@@ -293,7 +293,7 @@ class CommandSkill : Tracker {
             string target = playerinfo.getStringAttribute("aim_target");
             Vector3 c_pos = stringToVector3(characterinfo.getStringAttribute("position"));
             int factionid = characterinfo.getIntAttribute("faction_id");
-            c_pos.add(Vector3(0,2.5,0));
+            c_pos=c_pos.add(Vector3(0,1.5,0));
             if (checkFlatRange(c_pos,stringToVector3(target),13)){
                 CreateProjectile(m_metagame,c_pos,stringToVector3(target),"SopmodSk_script.projectile",characterId,factionid,40,26.0);
             }
@@ -330,7 +330,7 @@ class CommandSkill : Tracker {
             string target = playerinfo.getStringAttribute("aim_target");
             Vector3 c_pos = stringToVector3(characterinfo.getStringAttribute("position"));
             int factionid = characterinfo.getIntAttribute("faction_id");
-            c_pos.add(Vector3(0,2.5,0));
+            c_pos=c_pos.add(Vector3(0,1.5,0));
             if(pussyskin){
                 if (checkFlatRange(c_pos,stringToVector3(target),13)){
                     CreateProjectile(m_metagame,c_pos,stringToVector3(target),"40mm_hk416_3401.projectile",characterId,factionid,40,26.0);
