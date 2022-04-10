@@ -34,4 +34,5 @@
         <effect class="result" key="terrain" ref="ShadowSmoke" shadow="1" />
         <trail probability="1.0" key="laser_tiaotiao" />
     </projectile>
-</weapon>
+    <modifier class="speed" value="0.3" />
+  </weapon>
