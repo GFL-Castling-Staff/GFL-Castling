@@ -17,7 +17,7 @@
             <modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
     
             <modifier class="speed" value="-0.3" />
-            <modifier class="hit_success_probability" value="-1.8" />
+            <modifier class="hit_success_probability" value="-0.6" />
             <modifier class="detectability" value="1.5" />
         </carry_item>
 
@@ -37,7 +37,7 @@
             <modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
     
             <modifier class="speed" value="-0.3" />
-            <modifier class="hit_success_probability" value="-1.8" />
+            <modifier class="hit_success_probability" value="-0.6" />
             <modifier class="detectability" value="1.5" />
         </carry_item>
 
@@ -57,7 +57,7 @@
             <modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
     
             <modifier class="speed" value="-0.3" />
-            <modifier class="hit_success_probability" value="-1.8" />
+            <modifier class="hit_success_probability" value="-0.6" />
             <modifier class="detectability" value="1.5" />
         </carry_item>        
         <carry_item file="wearables.base_carry_item" key="agent_drone_4" name="Punch it！" slot="1" transform_on_consume="agent_drone_5" >
@@ -76,7 +76,7 @@
             <modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
     
             <modifier class="speed" value="-0.3" />
-            <modifier class="hit_success_probability" value="-1.8" />
+            <modifier class="hit_success_probability" value="-0.6" />
             <modifier class="detectability" value="1.5" />
         </carry_item>       
         <carry_item file="wearables.base_carry_item" key="agent_drone_5" name="Punch it！" slot="1" transform_on_consume="agent_drone_6" >
@@ -95,7 +95,7 @@
             <modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
     
             <modifier class="speed" value="-0.3" />
-            <modifier class="hit_success_probability" value="-1.8" />
+            <modifier class="hit_success_probability" value="-0.6" />
             <modifier class="detectability" value="1.5" />
         </carry_item>        
         
@@ -115,7 +115,7 @@
             <modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
     
             <modifier class="speed" value="-0.3" />
-            <modifier class="hit_success_probability" value="-1.8" />
+            <modifier class="hit_success_probability" value="-0.6" />
             <modifier class="detectability" value="1.5" />
         </carry_item>        
         
@@ -135,7 +135,7 @@
             <modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
     
             <modifier class="speed" value="-0.3" />
-            <modifier class="hit_success_probability" value="-1.8" />
+            <modifier class="hit_success_probability" value="-0.6" />
             <modifier class="detectability" value="1.5" />
         </carry_item>       
         
@@ -155,7 +155,7 @@
             <modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
     
             <modifier class="speed" value="-0.3" />
-            <modifier class="hit_success_probability" value="-1.8" />
+            <modifier class="hit_success_probability" value="-0.6" />
             <modifier class="detectability" value="1.5" />
         </carry_item>    
 
@@ -175,7 +175,7 @@
             <modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
     
             <modifier class="speed" value="-0.3" />
-            <modifier class="hit_success_probability" value="-1.8" />
+            <modifier class="hit_success_probability" value="-0.6" />
             <modifier class="detectability" value="1.5" />
         </carry_item>        
         
@@ -195,7 +195,7 @@
             <modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
     
             <modifier class="speed" value="-0.3" />
-            <modifier class="hit_success_probability" value="-1.8" />
+            <modifier class="hit_success_probability" value="-0.6" />
             <modifier class="detectability" value="1.5" />
         </carry_item>        
         
@@ -215,7 +215,7 @@
             <modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
     
             <modifier class="speed" value="-0.3" />
-            <modifier class="hit_success_probability" value="-1.8" />
+            <modifier class="hit_success_probability" value="-0.6" />
             <modifier class="detectability" value="1.5" />
         </carry_item>        
         
@@ -235,7 +235,7 @@
             <modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
     
             <modifier class="speed" value="-0.3" />
-            <modifier class="hit_success_probability" value="-1.8" />
+            <modifier class="hit_success_probability" value="-0.6" />
             <modifier class="detectability" value="1.5" />
         </carry_item>       
         
@@ -255,7 +255,7 @@
             <modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
     
             <modifier class="speed" value="-0.3" />
-            <modifier class="hit_success_probability" value="-1.8" />
+            <modifier class="hit_success_probability" value="-0.6" />
             <modifier class="detectability" value="1.5" />
         </carry_item>        
         
@@ -275,7 +275,7 @@
             <modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
     
             <modifier class="speed" value="-0.3" />
-            <modifier class="hit_success_probability" value="-1.8" />
+            <modifier class="hit_success_probability" value="-0.6" />
             <modifier class="detectability" value="1.5" />
         </carry_item>        
         
@@ -293,7 +293,7 @@
             <modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
     
             <modifier class="speed" value="-0.3" />
-            <modifier class="hit_success_probability" value="-1.8" />
+            <modifier class="hit_success_probability" value="-0.6" />
             <modifier class="detectability" value="1.5" />
         </carry_item>        
        
