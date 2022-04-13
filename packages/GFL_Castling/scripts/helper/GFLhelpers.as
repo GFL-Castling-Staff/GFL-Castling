@@ -226,7 +226,7 @@ class Orientation{
 		a4=a_4;
 	}
 	string output(){
-		return a1+""+a2+""+a3+""+a4;
+		return a1+" "+a2+" "+a3+" "+a4;
 	}
 }
 
