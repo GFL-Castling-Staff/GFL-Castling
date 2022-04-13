@@ -213,6 +213,58 @@ void CreateProjectile(Metagame@ m_metagame,Vector3 startPos,Vector3 endPos,strin
 		" offset='" + direction.toString() + "' />";
 	m_metagame.getComms().send(c);
 }
+
+class Orientation{
+	float a1;
+	float a2;
+	float a3;
+	float a4;
+	Orientation(float a_1, float a_2, float a_3,float a_4){
+		a1=a_1;
+		a2=a_2;
+		a3=a_3;
+		a4=a_4;
+	}
+	string output(){
+		return a1+""+a2+""+a3+""+a4;
+	}
+}
+
+void CreateProjectile(Metagame@ m_metagame,Vector3 startPos,Vector3 endPos,string key,int cId,int fId,float initspeed,float ggg,Orientation@ rotation){
+	initspeed=initspeed/60;
+	startPos = startPos.add(Vector3(0,1,0));
+	Vector3 direction = endPos.subtract(startPos);
+	float realy = direction.get_opIndex(1);
+	direction.set(direction.get_opIndex(0),0,direction.get_opIndex(2));
+	float Vmod = sqrt(pow(direction.get_opIndex(0),2) + pow(direction.get_opIndex(2),2));
+	if (Vmod< 0.00001f) Vmod= 0.00001f;
+	float foobar = pow(initspeed,4)- ggg * (ggg*Vmod*Vmod + 2*realy*initspeed*initspeed);
+	if (foobar < 0) foobar=0.1f;
+	float inner = sqrt(foobar);
+	float root1 = (pow(initspeed,2)+inner) / (ggg*Vmod);
+	float root2 = (pow(initspeed,2)-inner) / (ggg*Vmod);
+	float angle1 = atan(root1);
+	float angle2 = atan(root2);
+	float t = 0.0f;
+	t = angle1 < angle2 ? angle1 : angle2;
+	direction.set(direction.get_opIndex(0),tan(t)*Vmod,direction.get_opIndex(2));
+	float barfoo = pow(direction.get_opIndex(0),2) + pow(direction.get_opIndex(2),2) + pow(direction.get_opIndex(1),2);
+	if (barfoo < 0) barfoo=0.1f;
+	barfoo = sqrt(barfoo);
+	direction.set(direction.get_opIndex(0)/barfoo,direction.get_opIndex(1)/barfoo,direction.get_opIndex(2)/barfoo);
+	direction.scale(initspeed);
+	string c = 
+		"<command class='create_instance'" +
+		" faction_id='" + fId + "'" +
+		" instance_class='grenade'" +
+		" instance_key='" + key + "'" +
+		" position='" + startPos.toString() + "'" +
+		" character_id='" + cId + "'" +
+		" orientation='" + rotation.output() + "'" +
+		" offset='" + direction.toString() + "' />";
+	m_metagame.getComms().send(c);
+}
+
 void CreateProjectile_H(Metagame@ m_metagame,Vector3 startPos,Vector3 endPos,string key,int cId,int fId,float gspeed,float height){
 	float topY = ((startPos.get_opIndex(1)>endPos.get_opIndex(1))?startPos.get_opIndex(1):endPos.get_opIndex(1));
 	topY+=height;
@@ -234,6 +286,32 @@ void CreateProjectile_H(Metagame@ m_metagame,Vector3 startPos,Vector3 endPos,str
 		" instance_key='" + key + "'" +
 		" position='" + startPos.toString() + "'" +
 		" character_id='" + cId + "'" +
+		" offset='" + speed.toString() + "' />";
+	m_metagame.getComms().send(c);
+}
+
+void CreateProjectile_H(Metagame@ m_metagame,Vector3 startPos,Vector3 endPos,string key,int cId,int fId,float gspeed,float height,Orientation@ rotation){
+	float topY = ((startPos.get_opIndex(1)>endPos.get_opIndex(1))?startPos.get_opIndex(1):endPos.get_opIndex(1));
+	topY+=height;
+	float g1= -gspeed/100;
+	float d1= height;
+	float d2= topY - endPos.get_opIndex(1);
+	float g2= 2/ -g1;
+	float t1= sqrt(g2*d1);
+	float t2= sqrt(g2*d2);
+	float t=t1+t2;
+	float vX = (endPos.get_opIndex(0) - startPos.get_opIndex(0)) / t /6 ;
+	float vZ = (endPos.get_opIndex(2) - startPos.get_opIndex(2)) / t /6 ;
+	float vY = t1*-g1 / 6;
+	Vector3 speed = Vector3(vX,vY,vZ);
+	string c = 
+		"<command class='create_instance'" +
+		" faction_id='" + fId + "'" +
+		" instance_class='grenade'" +
+		" instance_key='" + key + "'" +
+		" position='" + startPos.toString() + "'" +
+		" character_id='" + cId + "'" +
+		" orientation='" + rotation.output() + "'" +
 		" offset='" + speed.toString() + "' />";
 	m_metagame.getComms().send(c);
 }
