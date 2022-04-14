@@ -20,7 +20,7 @@
         <animation state_key="hold_casual"			animation_key="dancing, kazachok" />
         <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
         <inventory  buy_price="8.0" sell_price="8.0" />
-        <sound key="fire" fileref="ak12_fire_FromCOD10.wav" pitch_variety="0.02" volume="1" />
+        <sound key="fire" fileref="ak12_fire_FromWF.wav" pitch_variety="0.02" volume="0.9" />
         <sound key="magazine_out" fileref="ak12_mgz_out_FromKF2.wav" volume="0.8" />
         <sound key="magazine_in" fileref="ak12_mgz_in_FromKF2.wav" volume="0.8" />
         <sound key="cycle" fileref="ak12_cycle_FromKF2.wav" volume="0.8" />
