@@ -1,0 +1,37 @@
+<commands>
+  <!-- start_game command: new game menu picks up defaults from here and allows user to override certain settings -->
+  <command 
+	  class="start_game" 
+	  vehicles="1" 
+	  max_soldiers="150" 
+          soldier_capacity_model="constant"
+	  player_bot_compensation="8" 
+	  xp_multiplier="1.0"
+	  rp_multiplier="1.0"
+	  friendly_fire="0"
+    	  defense_win_time="600"
+	  base_capture_system="any"> 
+
+    <faction initial_over_capacity="0" ai_accuracy="0.94" />
+    <faction initial_over_capacity="0" ai_accuracy="0.94" />
+    <faction initial_over_capacity="0" ai_accuracy="0.94" capacity_multiplier="0.0" />
+  </command>
+  <command 
+	  class="commander_ai" 
+	  faction="0"
+	  base_defense="0.2"
+	  border_defense="0.1">
+  </command>
+  <command 
+	  class="commander_ai" 
+	  faction="1"
+	  base_defense="0.2"
+	  border_defense="0.1">
+  </command>
+  <command 
+	  class="commander_ai" 
+	  faction="2"
+	  base_defense="0.2"
+	  border_defense="0.4">
+  </command>
+</commands>
