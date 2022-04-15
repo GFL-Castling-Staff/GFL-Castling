@@ -21,15 +21,21 @@ class ItemDropEvent : Tracker {
 	protected void handleItemDropEvent(const XmlElement@ event) 
 	{
         if (event.getIntAttribute("target_container_type_id") != 3) return;
-        if (event.getStringAttribute("item_key") == "immunity_mp5.carry_item"){
-            int cId = event.getIntAttribute("character_id");
-            deleteItemInStash(m_metagame,cId,"carry_item","immunity_mp5.carry_item");
-        }
-        if (event.getStringAttribute("item_key") == "VVfirenade.projectile"){
-            int cId = event.getIntAttribute("character_id");
-            deleteItemInStash(m_metagame,cId,"projectile","VVfirenade.projectile");
+        int cId = event.getIntAttribute("character_id");
+        string key = event.getStringAttribute("item_key");
+        dealwithillegalitem(key,cId);
+    }
+
+    protected void dealwithillegalitem(string foobar,int id){
+        if (illegalitem.find(foobar)>-1){
+            deleteItemInStash(m_metagame,id,"carry_item",foobar);
         }
     }
+	array<string> illegalitem = {
+        "immunity_mp5.carry_item",
+        "immunity_g36c.carry_item",
+        "immunity_thompson.carry_item"
+    }    
 
     protected void handlePlayerSpawnEvent(const XmlElement@ event){
         const XmlElement@ player = event.getFirstElementByTagName("player");
@@ -37,7 +43,7 @@ class ItemDropEvent : Tracker {
             int cId = player.getIntAttribute("character_id");
             string vestkey="";
             vestkey = getPlayerEquipmentKey(m_metagame,cId,4);
-            if (vestkey=="immunity_mp5.carry_item"){
+            if (illegalitem.find(vestkey)>-1){
                 XmlElement c ("command");
                 c.setStringAttribute("class", "update_inventory");
                 c.setIntAttribute("container_type_id", 4);
