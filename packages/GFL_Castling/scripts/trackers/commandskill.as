@@ -88,7 +88,7 @@ class CommandSkill : Tracker {
                 if (c_weaponType=="gkw_mp5.weapon"||c_weaponType=="gkw_mp5_1205.weapon"||c_weaponType=="gkw_mp5_1903.weapon"||c_weaponType=="gkw_mp5_3.weapon"){
                     excuteMP5skill(cId,senderId);                    
                 }
-                if (c_weaponType=="gkw_mp5mod3.weapon"){
+                if (c_weaponType=="gkw_mp5mod3.weapon"||c_weaponType=="gkw_mp5mod3_3006.weapon"){
                     excuteMP5MOD3skill(cId,senderId);                    
                 }
                 if (c_weaponType=="gkw_p22.weapon"){
