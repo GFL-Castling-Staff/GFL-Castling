@@ -490,12 +490,6 @@ class BasicCommandHandler : Tracker {
 			spawnInstanceNearPlayer(senderId, "m72_law.weapon", "weapon");
 			spawnInstanceNearPlayer(senderId, "m72_law.weapon", "weapon");
 			spawnInstanceNearPlayer(senderId, "m72_law.weapon", "weapon");
-		} else if (checkCommand(message, "g36")) {
-			spawnInstanceNearPlayer(senderId, "g36.weapon", "weapon");
-			spawnInstanceNearPlayer(senderId, "g36.weapon", "weapon");
-			spawnInstanceNearPlayer(senderId, "g36.weapon", "weapon");
-			spawnInstanceNearPlayer(senderId, "g36.weapon", "weapon");
-			spawnInstanceNearPlayer(senderId, "g36.weapon", "weapon");
 		} else if (checkCommand(message, "cargo")) {
 			spawnInstanceNearPlayer(senderId, "cargo_truck.vehicle", "vehicle", 1);
 		} else if (checkCommand(message, "tank")) {
