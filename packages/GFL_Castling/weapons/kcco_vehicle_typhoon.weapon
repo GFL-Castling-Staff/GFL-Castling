@@ -25,7 +25,7 @@
 	<!-- <model filename="l30p.xml" /> -->
     <hud_icon filename="typhoon_main_cannon.png" />
     <commonness value="0.0" />
-    <sound key="fire" fileref="typhon_fire_FromHALO4.wav" pitch_variety="0.05" volume="0.95" />
+    <sound key="fire" fileref="typhon_fire_FromHALO4.wav" pitch_variety="0.05" volume="0.75" />
     <projectile file="typhoon_laser.projectile">
         <result class="blast"  damage="1.00"  radius="3.5" decal="1" push="0.0" character_state="death" 	faction_compare="not_equal"/>
     </projectile>
