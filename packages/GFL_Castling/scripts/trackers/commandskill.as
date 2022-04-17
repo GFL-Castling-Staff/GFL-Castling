@@ -294,7 +294,7 @@ class CommandSkill : Tracker {
             Vector3 c_pos = stringToVector3(characterinfo.getStringAttribute("position"));
             int factionid = characterinfo.getIntAttribute("faction_id");
             c_pos=c_pos.add(Vector3(0,1.5,0));
-            if (checkFlatRange(c_pos,stringToVector3(target),13)){
+            if (checkFlatRange(c_pos,stringToVector3(target),5)){
                 CreateProjectile(m_metagame,c_pos,stringToVector3(target),"SopmodSk_script.projectile",characterId,factionid,40,26.0);
             }
             else{
@@ -347,7 +347,7 @@ class CommandSkill : Tracker {
                 SkillArray.insertLast(SkillTrigger(characterId,16,"HK416MOD3"));
             }
             else{
-                if (checkFlatRange(c_pos,stringToVector3(target),13)){
+                if (checkFlatRange(c_pos,stringToVector3(target),5)){
                     CreateProjectile(m_metagame,c_pos,stringToVector3(target),"40mm_hk416.projectile",characterId,factionid,40,26.0);
                 }
                 else{
