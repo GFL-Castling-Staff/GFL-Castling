@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<carry_items>
+    <carry_item file="exo.base_carry_item" key="ange.carry_item" name="[What can I serve you?]" transform_on_consume="ange_9">
+        <hud_icon filename="ange_9.png" />
+        <commonness value="0" in_stock="0" />
+        <inventory price="50" />
+        <modifier class="speed" value="0.35" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="-0.05" />
+    </carry_item>
+    <carry_item file="exo.base_carry_item" key="ange_9" name="[What can I serve you?]" transform_on_consume="ange_8">
+        <hud_icon filename="ange_8.png" />
+        <modifier class="speed" value="0.35" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="-0.05" />
+    </carry_item>
+    <carry_item file="exo.base_carry_item" key="ange_8" name="[What can I serve you?]" transform_on_consume="ange_7">
+        <hud_icon filename="ange_7.png" />
+        <modifier class="speed" value="0.35" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="-0.05" />
+    </carry_item>
+    <carry_item file="exo.base_carry_item" key="ange_7" name="[What can I serve you?]" transform_on_consume="ange_6">
+        <hud_icon filename="ange_6.png" />
+        <modifier class="speed" value="0.35" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="-0.05" />
+    </carry_item>
+    <carry_item file="exo.base_carry_item" key="ange_6" name="[What can I serve you?]" transform_on_consume="ange_5">
+        <hud_icon filename="ange_5.png" />
+        <modifier class="speed" value="0.35" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="-0.05" />
+    </carry_item>
+    <carry_item file="exo.base_carry_item" key="ange_5" name="[What can I serve you?]" transform_on_consume="ange_4">
+        <hud_icon filename="ange_4.png" />
+        <modifier class="speed" value="0.35" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="-0.05" />
+    </carry_item>
+    <carry_item file="exo.base_carry_item" key="ange_4" name="[What can I serve you?]" transform_on_consume="ange_3">
+        <hud_icon filename="ange_3.png" />
+        <modifier class="speed" value="0.35" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="-0.05" />
+    </carry_item>
+    <carry_item file="exo.base_carry_item" key="ange_3" name="[What can I serve you?]" transform_on_consume="ange_2">
+        <hud_icon filename="ange_2.png" />
+        <modifier class="speed" value="0.35" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="-0.05" />
+    </carry_item>
+    <carry_item file="wearables.base_carry_item" key="ange_2" name="[What can I serve you?]-Overrun!-" transform_on_consume="ange_1">
+        <hud_icon filename="ange_1.png" />
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="wound"  />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="wound" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="wound" />
+        <modifier class="speed" value="0.35" />
+        <modifier class="hit_success_probability" value="-0.6" />
+        <modifier class="detectability" value="-0.05" />
+    </carry_item>
+    <carry_item file="none.base_carry_item" key="ange_1" name="[What can I serve you?]-Overrun!-">
+        <hud_icon filename="ange_0.png" />
+        <modifier class="speed" value="0.35" />
+        <modifier class="hit_success_probability" value="-0.6" />
+        <modifier class="detectability" value="-0.05" />
+    </carry_item>
+</carry_items>
