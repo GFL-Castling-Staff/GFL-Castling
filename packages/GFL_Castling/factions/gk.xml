@@ -274,7 +274,7 @@
 		<ai filename="eod.ai" />
 		<resources file="gk_sg.resources" />
 	</soldier>
-	<soldier name="default_hvy" spawn_score="0.8" squad_size_xp_cap="0.0" copy_from="default_spawn_ai">
+	<soldier name="default_hvy" spawn_score="0.1" squad_size_xp_cap="0.0" copy_from="default_spawn_ai">
 		<ai filename="eod.ai" />
 		<resources file="gk_hvy_ai.resources" />
 		<attribute_config class="xp">
