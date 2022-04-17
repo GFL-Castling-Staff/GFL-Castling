@@ -10,12 +10,12 @@
         slot="0" 
 		magazine_size="20" 
 		name="9A-91" 
-		projectile_speed="62.77" 
-		retrigger_time="0.086" 
+		projectile_speed="170" 
+        retrigger_time="0.075" 
 		suppressed="1" 
 		sustained_fire_diminish_rate="1.5" 
 		sustained_fire_grow_step="0.2"
-		sight_range_modifier="1" />
+        sight_range_modifier="1.2" />
 		
 
 
@@ -42,7 +42,7 @@
 
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet.projectile">
-        <result class="hit"  kill_probability="1.5" kill_decay_start_time="1.83" kill_decay_end_time="3.051" />
+        <result class="hit" kill_probability="1.65" kill_decay_start_time="1.83" kill_decay_end_time="3.051" />
     </projectile>
     
     <stance state_key="running" accuracy="0.3" />
@@ -64,8 +64,8 @@
         slot="0" 
         magazine_size="20" 
         name="9A-91-[Damage Focus N]" 
-        projectile_speed="62.77" 
-        retrigger_time="0.086" 
+        projectile_speed="180" 
+        retrigger_time="0.075" 
         suppressed="1" 
         sustained_fire_diminish_rate="1.5" 
         sustained_fire_grow_step="0.2"
@@ -96,7 +96,7 @@
 
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet.projectile">
-        <result class="hit"  kill_probability="1.6" kill_decay_start_time="1.83" kill_decay_end_time="3.051" />
+        <result class="hit" kill_probability="1.5" kill_probability_offset_on_successful_hit="1.8" kill_decay_start_time="1.83" kill_decay_end_time="3.051" />
     </projectile>
     
     <stance state_key="running" accuracy="0.75" />
