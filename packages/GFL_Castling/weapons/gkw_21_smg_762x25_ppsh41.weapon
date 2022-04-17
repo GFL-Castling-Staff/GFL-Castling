@@ -4,7 +4,8 @@
   <specification accuracy_factor="0.98" barrel_offset="0.4" class="0" magazine_size="71" name="PPSH41" projectile_speed="125" retrigger_time="0.06" suppressed="0" sustained_fire_diminish_rate="1.6" sustained_fire_grow_step="0.6" />
   <inventory buy_price="5.0" sell_price="5.0" />
   <animation state_key="hold_casual" animation_key="dancing, kazachok" />
-
+	<capacity value="0" source="rank" source_value="0.0" />
+  <capacity value="1" source="rank" source_value="2.364" />
   <sound key="fire" fileref="PPSH_Fire_FromCOD17.wav" pitch_variety="0.05" volume="1.1" />
   <sound key="magazine_out" fileref="PPSH_mgz_out_FromCOD17.wav" volume="0.9" />
   <sound key="magazine_in" fileref="PPSH_mgz_in_FromCOD17.wav" volume="0.9" />
@@ -25,5 +26,5 @@
   <stance state_key="prone_moving" accuracy="0.9" />
   <stance state_key="standing" accuracy="0.96" />
   <stance state_key="prone" accuracy="1" />
-
+  <modifier class="speed" value="-0.1" />
 </weapon>
