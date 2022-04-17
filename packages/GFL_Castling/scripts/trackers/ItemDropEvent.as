@@ -35,7 +35,7 @@ class ItemDropEvent : Tracker {
         "immunity_mp5.carry_item",
         "immunity_g36c.carry_item",
         "immunity_thompson.carry_item"
-    }    
+    };
 
     protected void handlePlayerSpawnEvent(const XmlElement@ event){
         const XmlElement@ player = event.getFirstElementByTagName("player");
