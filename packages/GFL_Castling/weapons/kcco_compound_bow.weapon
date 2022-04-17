@@ -2,10 +2,8 @@
 <weapon file="KCCO.base_weapon" key="compound_bow.weapon">
   <tag name="rifle" />
 
-  <specification retrigger_time="-1.0" accuracy_factor="1.0" sight_range_modifier="1.4" sustained_fire_grow_step="2" sustained_fire_diminish_rate="0.5" magazine_size="1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" suppressed="1" name="Code:Centaurus" class="4" projectile_speed="180.0" barrel_offset="0.55" use_basic_muzzle_smoke_effect="0" />
-  <!-- <next_in_chain key="compound_bow_alt.weapon" share_ammo="1" /> -->
+  <specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="2" sustained_fire_diminish_rate="0.5" magazine_size="1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" suppressed="1" name="Code:Centaurus" class="4" projectile_speed="180.0" barrel_offset="0.55" use_basic_muzzle_smoke_effect="0" />
 
-  <!-- <ballistics curve_height="1.0" near_far_distance="1000.0" speed_estimation_near="80.0" speed_estimation_far="80.0" max_speed="90.0" randomness="0.0" tweak_factor="1.1" /> -->
   <ballistics curve_height="10.0" near_far_distance="10.0" speed_estimation_near="80.0" speed_estimation_far="180.0" max_speed="180.0" randomness="0.0" tweak_factor="1.2" />
 
   <animation state_key="recoil" animation_key="recoil, bow" />
