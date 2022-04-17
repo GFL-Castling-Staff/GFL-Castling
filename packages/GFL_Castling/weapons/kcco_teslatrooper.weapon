@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapon file="KCCO.base_weapon" on_ground_up="0 0 1" key="kcco_teslatrooper.weapon" time_to_live_out_in_the_open="0.0">
     <tag name="antiarmor" />
-	<tag name="mecha" />
-	<tag name="metal_heavy" />
-	<tag name="bazooka"/>
-  <specification 
+    <tag name="mecha" />
+    <tag name="metal_heavy" />
+    <tag name="bazooka"/>
+    <specification 
 	retrigger_time="5.0" 
 	accuracy_factor="0.75" 
 	sustained_fire_grow_step="-2.0" 
@@ -24,65 +24,63 @@
 	projectiles_per_shot="5" 
 	stab_enabled="0"
 	barrel_offset_3d="0.6 1 0.5"/>
-  
-<animation state_key="recoil"	animation_key="recoil, large mecha" />
-<animation key="reload" animation_key="change weapon, large mecha" />
-<animation state_key="cycle" animation_key="still, large mecha" />
-<animation key="still" target_key="still, large mecha" />
-<animation key="still against wall" target_key="still, large mecha" />
-<animation key="still, heavy weapon" target_key="still, large mecha" />
-<animation key="walking" target_key="walking, large mecha" />
-<animation key="walking backwards" target_key="walking, large mecha" />
-<animation key="running" target_key="walking, large mecha" />
-<animation key="crouch still" target_key="crouch2, large mecha" />
-<animation key="crouching forwards" target_key="crouch walking, large mecha" />
-<animation key="crouching backwards" target_key="crouch walking, large mecha" />
-<animation key="prone" target_key="defence, large mecha" />
-<animation key="prone, moving forwards" target_key="ork prone, moving forwards" />
-<animation key="going prone" target_key="going defence, large mecha" />
-<animation key="leaving prone" target_key="defence walking, large mecha" />
-<animation key="dive" target_key="arriving ground, large mecha" />
-<animation key="jumping" target_key="jumping, large mecha" />
-<animation key="lifting up" target_key="jumping, large mecha" />
-<animation key="throwing self over" target_key="jumping, large mecha" />
-<animation key="falling" target_key="arriving ground, large mecha" />
-<animation key="arriving ground" target_key="arriving ground, large mecha" />
-<animation key="climbing ladder, still" target_key="jumping, large mecha" />
-<animation key="climbing ladder" target_key="jumping still, large mecha" />
-<animation key="climbing ladder ending" target_key="arriving ground, large mecha" />
-<animation key="wounded, still, 66" target_key="wounded, large mecha" />
-<animation key="wounded, moving forwards, 67" target_key="defence walking, large mecha" />
-<animation key="stunned" target_key="stun, large mecha" />
-<animation key="surrender" target_key="surrender, large mecha" />
-<animation key="stabbing" target_key="stabbing, large mecha" />
-<animation key="throwing, upside" target_key="throwing, large mecha" />
-<animation key="change weapon out" target_key="change weapon, large mecha" />
-<animation key="change weapon in" target_key="change weapon, large mecha" />
-<animation key="change weapon out, reversed" target_key="change weapon, large mecha" />
-<animation key="change weapon in, reversed" target_key="change weapon, large mecha" />
-<animation key="change weapon in, single hand carry" target_key="change weapon, large mecha" />
-<animation key="celebrating" target_key="jumping, large mecha" />
-<animation key="celebrating, shooting" target_key="jumping, large mecha" />
-           
-<sound key="fire" fileref="Teslatrooper_fire_FromBF5.wav" volume="1.1" />
-<sound key="cycle" fileref="mossberg500_cycle.wav" />
-<sound key="reload_one" fileref="Teslatrooper_reload_FromBF5.wav" volume="0.8" />
-<sound class="impact" fileref="rifle_drop.wav" />
-
-<drop_on_death_result class="spawn" instance_class="carry_item" instance_key="city_gifts.carry_item" min_amount="1.0" max_amount="2.0" offset="0 1.0 0" position_spread="0 0" direction_spread="0 0" />
-
-
-<weak_hand_hold offset="0.2" />
-<projectile file="Doppelsoldner_rocket.projectile" >
-<result class="blast" radius="3.0" damage="2" push="0.2" decal="1" />
-</projectile>
-<ballistics near_far_distance="1000.0" speed_estimation_near="50.0" speed_estimation_far="50.0" max_speed="125.0" randomness="0.0" />
-
-
-     <model  />
-
+    <animation state_key="recoil"	animation_key="recoil, large mecha" />
+    <animation key="reload" animation_key="change weapon, large mecha" />
+    <animation state_key="cycle" animation_key="still, large mecha" />
+    <animation key="still" target_key="still, large mecha" />
+    <animation key="still against wall" target_key="still, large mecha" />
+    <animation key="still, heavy weapon" target_key="still, large mecha" />
+    <animation key="walking" target_key="walking, large mecha" />
+    <animation key="walking backwards" target_key="walking, large mecha" />
+    <animation key="running" target_key="walking, large mecha" />
+    <animation key="crouch still" target_key="crouch2, large mecha" />
+    <animation key="crouching forwards" target_key="crouch walking, large mecha" />
+    <animation key="crouching backwards" target_key="crouch walking, large mecha" />
+    <animation key="prone" target_key="defence, large mecha" />
+    <animation key="prone, moving forwards" target_key="ork prone, moving forwards" />
+    <animation key="going prone" target_key="going defence, large mecha" />
+    <animation key="leaving prone" target_key="defence walking, large mecha" />
+    <animation key="dive" target_key="arriving ground, large mecha" />
+    <animation key="jumping" target_key="jumping, large mecha" />
+    <animation key="lifting up" target_key="jumping, large mecha" />
+    <animation key="throwing self over" target_key="jumping, large mecha" />
+    <animation key="falling" target_key="arriving ground, large mecha" />
+    <animation key="arriving ground" target_key="arriving ground, large mecha" />
+    <animation key="climbing ladder, still" target_key="jumping, large mecha" />
+    <animation key="climbing ladder" target_key="jumping still, large mecha" />
+    <animation key="climbing ladder ending" target_key="arriving ground, large mecha" />
+    <animation key="wounded, still, 66" target_key="wounded, large mecha" />
+    <animation key="wounded, moving forwards, 67" target_key="defence walking, large mecha" />
+    <animation key="stunned" target_key="stun, large mecha" />
+    <animation key="surrender" target_key="surrender, large mecha" />
+    <animation key="stabbing" target_key="stabbing, large mecha" />
+    <animation key="throwing, upside" target_key="throwing, large mecha" />
+    <animation key="change weapon out" target_key="change weapon, large mecha" />
+    <animation key="change weapon in" target_key="change weapon, large mecha" />
+    <animation key="change weapon out, reversed" target_key="change weapon, large mecha" />
+    <animation key="change weapon in, reversed" target_key="change weapon, large mecha" />
+    <animation key="change weapon in, single hand carry" target_key="change weapon, large mecha" />
+    <animation key="celebrating" target_key="jumping, large mecha" />
+    <animation key="celebrating, shooting" target_key="jumping, large mecha" />
+    <sound key="fire" fileref="Teslatrooper_fire_FromBF5.wav" volume="1.1" />
+    <sound key="cycle" fileref="mossberg500_cycle.wav" />
+    <sound key="reload_one" fileref="Teslatrooper_reload_FromBF5.wav" volume="0.8" />
+    <sound class="impact" fileref="rifle_drop.wav" />
+    <drop_on_death_result class="spawn" instance_class="carry_item" instance_key="city_gifts.carry_item" min_amount="1.0" max_amount="2.0" offset="0 1.0 0" position_spread="0 0" direction_spread="0 0" />
+    <weak_hand_hold offset="0.2" />
+    <projectile file="Doppelsoldner_rocket.projectile" >
+        <result class="blast" radius="3.0" damage="2" push="0.2" decal="1" faction_compare="not_equal"/>
+    </projectile>
+    <ballistics near_far_distance="1000.0" speed_estimation_near="50.0" speed_estimation_far="50.0" max_speed="100.0" randomness="0.0" />
+    <model  />
     <hud_icon filename="testing.png" />
     <commonness value="0.00001" can_respawn_with="1" in_stock="1"/>
     <inventory encumbrance="11.0" price="0.0" />
     <modifier class="speed" value="-0.4" />
+	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5" />
+    <target_factors tag="heavy_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0" />
+    <target_factors tag="apc" distance="1.0" direction="0.0" squad_command="1.0" base_score="6.0" />
+    <target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="5.0" />	
+    <target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="5.5" />
+	<target_factors tag="shield" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0" />	
 </weapon>
