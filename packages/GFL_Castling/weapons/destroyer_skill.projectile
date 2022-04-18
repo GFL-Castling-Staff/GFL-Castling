@@ -2,7 +2,7 @@
 <projectile class="grenade" name="30mm" slot="1" pulldown_in_air="8.0" key="destroyer_skill.projectile">
     <tag name="grenade"/>
 	<collision class="sticky" /> 
-    <result class="blast" radius="4.5" damage="3" push="0.4" decal="1" />
+    <result class="blast" radius="4.5" damage="3" push="0.4" decal="1" faction_compare="not_equal" />
 	 <trigger class="time" time_to_live="1.0"> 
 			<collider class="terrain" enabled="1" />  
 			<collider class="static_object" enabled="1" />  

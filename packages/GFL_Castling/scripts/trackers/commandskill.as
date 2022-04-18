@@ -689,24 +689,26 @@ class CommandSkill : Tracker {
             s_dir.m_values[0] = c_pos.m_values[0] + dx/ds*4;
             s_dir.m_values[1] = c_pos.m_values[1] + 2;
             s_dir.m_values[2] = c_pos.m_values[2] + dy/ds*4;
+
+            c_pos.m_values[1] = c_pos.m_values[1] + 16;
             
             //void CreateProjectile(Metagame@ m_metagame,Vector3 startPos,Vector3 endPos,string key,int cId,int fId,float initspeed,float ggg,Orientation@ rotation){
             //void CreateProjectile_H(Metagame@ m_metagame,Vector3 startPos,Vector3 endPos,string key,int cId,int fId,float gspeed,float height){  
 
             //CreateProjectile(m_metagame,c_pos.add(Vector3(0,-8.0,0)),s_dir.add(Vector3(0,-10.0,0)),"destroyer_skill_body.projectile",characterId,factionid,26.0,26.0);
-            CreateProjectile_H(m_metagame,c_pos.add(Vector3(0,-8.0,0)),s_dir.add(Vector3(0,0.0,0)),"destroyer_skill_body.projectile",characterId,factionid,26.0,12);
+            //CreateProjectile_H(m_metagame,c_pos.add(Vector3(0,-8.0,0)),s_dir.add(Vector3(0,0.0,0)),"destroyer_skill_body.projectile",characterId,factionid,26.0,12);
 
             // CreateProjectile(m_metagame,c_pos.add(Vector3(0,-10.0,0)),c_pos,"destroyer_skill_body.projectile",characterId,factionid,80,-0.01);              
-            CreateProjectile(m_metagame,c_pos,s_pos.add(Vector3(4,0,0)),"destroyer_skill.projectile",characterId,factionid,720,0.001);
-            CreateProjectile(m_metagame,c_pos,s_pos.add(Vector3(2,0,0)),"destroyer_skill.projectile",characterId,factionid,720,0.001);
-            CreateProjectile(m_metagame,c_pos,s_pos.add(Vector3(0,0,0)),"destroyer_skill.projectile",characterId,factionid,720,0.001);
-            CreateProjectile(m_metagame,c_pos,s_pos.add(Vector3(-2,0,0)),"destroyer_skill.projectile",characterId,factionid,720,0.001);
-            CreateProjectile(m_metagame,c_pos,s_pos.add(Vector3(-4,0,0)),"destroyer_skill.projectile",characterId,factionid,720,0.001);
-            CreateProjectile(m_metagame,c_pos,s_pos.add(Vector3(0,0,4)),"destroyer_skill.projectile",characterId,factionid,720,0.001);
-            CreateProjectile(m_metagame,c_pos,s_pos.add(Vector3(0,0,2)),"destroyer_skill.projectile",characterId,factionid,720,0.001);
-            CreateProjectile(m_metagame,c_pos,s_pos.add(Vector3(0,0,0)),"destroyer_skill.projectile",characterId,factionid,720,0.001);
-            CreateProjectile(m_metagame,c_pos,s_pos.add(Vector3(0,0,-2)),"destroyer_skill.projectile",characterId,factionid,720,0.001);
-            CreateProjectile(m_metagame,c_pos,s_pos.add(Vector3(0,0,-4)),"destroyer_skill.projectile",characterId,factionid,720,0.001);
+            CreateProjectile(m_metagame,c_pos,s_pos.add(Vector3(4,0,0)),"destroyer_skill.projectile",characterId,factionid,3600,0.001);
+            CreateProjectile(m_metagame,c_pos,s_pos.add(Vector3(2,0,0)),"destroyer_skill.projectile",characterId,factionid,3600,0.001);
+            CreateProjectile(m_metagame,c_pos,s_pos.add(Vector3(0,0,0)),"destroyer_skill.projectile",characterId,factionid,3600,0.001);
+            CreateProjectile(m_metagame,c_pos,s_pos.add(Vector3(-2,0,0)),"destroyer_skill.projectile",characterId,factionid,3600,0.001);
+            CreateProjectile(m_metagame,c_pos,s_pos.add(Vector3(-4,0,0)),"destroyer_skill.projectile",characterId,factionid,3600,0.001);
+            CreateProjectile(m_metagame,c_pos,s_pos.add(Vector3(0,0,4)),"destroyer_skill.projectile",characterId,factionid,3600,0.001);
+            CreateProjectile(m_metagame,c_pos,s_pos.add(Vector3(0,0,2)),"destroyer_skill.projectile",characterId,factionid,3600,0.001);
+            CreateProjectile(m_metagame,c_pos,s_pos.add(Vector3(0,0,0)),"destroyer_skill.projectile",characterId,factionid,3600,0.001);
+            CreateProjectile(m_metagame,c_pos,s_pos.add(Vector3(0,0,-2)),"destroyer_skill.projectile",characterId,factionid,3600,0.001);
+            CreateProjectile(m_metagame,c_pos,s_pos.add(Vector3(0,0,-4)),"destroyer_skill.projectile",characterId,factionid,3600,0.001);
 
             array<string> Voice={
             "Destroyer_buhuo_SKILL02_JP.wav",
@@ -759,16 +761,16 @@ class CommandSkill : Tracker {
             CreateProjectile_H(m_metagame,c_pos.add(Vector3(0,-8.0,0)),s_dir.add(Vector3(0,0.0,0)),"destroyer_skill_body.projectile",characterId,factionid,26.0,12);
 
             // CreateProjectile(m_metagame,c_pos.add(Vector3(0,-10.0,0)),c_pos,"destroyer_skill_body.projectile",characterId,factionid,80,-0.01);              
-            CreateProjectile(m_metagame,c_pos,s_pos.add(Vector3(4,0,0)),"destroyer_skill.projectile",characterId,factionid,720,0.001);
-            CreateProjectile(m_metagame,c_pos,s_pos.add(Vector3(2,0,0)),"destroyer_skill.projectile",characterId,factionid,720,0.001);
-            CreateProjectile(m_metagame,c_pos,s_pos.add(Vector3(0,0,0)),"destroyer_skill.projectile",characterId,factionid,720,0.001);
-            CreateProjectile(m_metagame,c_pos,s_pos.add(Vector3(-2,0,0)),"destroyer_skill.projectile",characterId,factionid,720,0.001);
-            CreateProjectile(m_metagame,c_pos,s_pos.add(Vector3(-4,0,0)),"destroyer_skill.projectile",characterId,factionid,720,0.001);
-            CreateProjectile(m_metagame,c_pos,s_pos.add(Vector3(0,0,4)),"destroyer_skill.projectile",characterId,factionid,720,0.001);
-            CreateProjectile(m_metagame,c_pos,s_pos.add(Vector3(0,0,2)),"destroyer_skill.projectile",characterId,factionid,720,0.001);
-            CreateProjectile(m_metagame,c_pos,s_pos.add(Vector3(0,0,0)),"destroyer_skill.projectile",characterId,factionid,720,0.001);
-            CreateProjectile(m_metagame,c_pos,s_pos.add(Vector3(0,0,-2)),"destroyer_skill.projectile",characterId,factionid,720,0.001);
-            CreateProjectile(m_metagame,c_pos,s_pos.add(Vector3(0,0,-4)),"destroyer_skill.projectile",characterId,factionid,720,0.001);
+            CreateProjectile(m_metagame,c_pos,s_pos.add(Vector3(4,0,0)),"destroyer_skill.projectile",characterId,factionid,1020,0.001);
+            CreateProjectile(m_metagame,c_pos,s_pos.add(Vector3(2,0,0)),"destroyer_skill.projectile",characterId,factionid,1020,0.001);
+            CreateProjectile(m_metagame,c_pos,s_pos.add(Vector3(0,0,0)),"destroyer_skill.projectile",characterId,factionid,1020,0.001);
+            CreateProjectile(m_metagame,c_pos,s_pos.add(Vector3(-2,0,0)),"destroyer_skill.projectile",characterId,factionid,1020,0.001);
+            CreateProjectile(m_metagame,c_pos,s_pos.add(Vector3(-4,0,0)),"destroyer_skill.projectile",characterId,factionid,1020,0.001);
+            CreateProjectile(m_metagame,c_pos,s_pos.add(Vector3(0,0,4)),"destroyer_skill.projectile",characterId,factionid,1020,0.001);
+            CreateProjectile(m_metagame,c_pos,s_pos.add(Vector3(0,0,2)),"destroyer_skill.projectile",characterId,factionid,1020,0.001);
+            CreateProjectile(m_metagame,c_pos,s_pos.add(Vector3(0,0,0)),"destroyer_skill.projectile",characterId,factionid,1020,0.001);
+            CreateProjectile(m_metagame,c_pos,s_pos.add(Vector3(0,0,-2)),"destroyer_skill.projectile",characterId,factionid,1020,0.001);
+            CreateProjectile(m_metagame,c_pos,s_pos.add(Vector3(0,0,-4)),"destroyer_skill.projectile",characterId,factionid,1020,0.001);
 
             array<string> Voice={
             "Destroyer_buhuo_SKILL02_JP.wav",
