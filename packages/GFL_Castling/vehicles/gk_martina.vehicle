@@ -42,6 +42,8 @@
 	friction_offset="0.05"
 	drag_offset="-0.05" /> 
 	
+	<sky_diving chute_offset="0 3.65 0.0" trigger_height="20.0" gravity="-10" mesh_filename="chute_large.mesh" texture_filename="chute.png" />
+	
 	<visual class="chassis" mesh_filename="jeep_base.mesh" texture_filename="jeep.png" />
 	<visual class="chassis" key="broken" mesh_filename="jeep_ruin.mesh" texture_filename="humvee_broken.png" />
 
