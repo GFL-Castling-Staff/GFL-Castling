@@ -192,21 +192,20 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		ScoredResource("gkw_tkb408_6804.weapon", "weapon", 1.0f),
 		ScoredResource("gkw_aps_6808.weapon", "weapon", 1.0f),
 		ScoredResource("gkw_aa12_4401.weapon","weapon", 1.0f),
+		ScoredResource("gkw_mp5_3.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_mp5_1205.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_mp5_1903.weapon", "weapon", 1.0f),
 		ScoredResource("gkw_mp5_3006.weapon", "weapon", 1.0f),
 		ScoredResource("gkw_mp7_6806.weapon", "weapon", 1.0f),
 		ScoredResource("gkw_kolibri_6802.weapon", "weapon", 1.0f),
 		ScoredResource("gkw_hs50_6805.weapon", "weapon", 1.0f),
 		ScoredResource("gkw_m4sopmodii_531.weapon", "weapon", 1.0f),
 		ScoredResource("gkw_m1918_102.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_m1918_806.weapon", "weapon", 1.0f),
 		ScoredResource("gkw_m1918_1606.weapon", "weapon", 1.0f)
 			},
 			{
 		ScoredResource("bp_t5_16lab.carry_item", "carry_item", 1.0f),
-		ScoredResource("arm_exo_mp5.carry_item", "carry_item", 0.2f),
-		ScoredResource("arm_exo_thompson.carry_item", "carry_item", 0.2f),
-		ScoredResource("arm_m16a1.carry_item", "carry_item", 0.2f),
-		ScoredResource("arm_ump.carry_item", "carry_item", 0.2f),
-		ScoredResource("arm_ro635.carry_item", "carry_item", 0.2f),
 		ScoredResource("exo_t5_16lab.carry_item", "carry_item", 1.0f),
 		ScoredResource("cc_t5_16lab.carry_item","carry_item",1.0f)
 			},
@@ -333,8 +332,12 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 				ScoredResource("gkw_an94mod3_blm.weapon","weapon",1.0f),
 				ScoredResource("gkw_m4sopmodiimod3_531.weapon","weapon",1.0f),
 				ScoredResource("gkw_lwmmgmod3_1808.weapon","weapon",1.0f),
+				ScoredResource("gkw_mp5mod3_3.weapon","weapon",1.0f),
+				ScoredResource("gkw_mp5mod3_1205.weapon","weapon",1.0f),
+				ScoredResource("gkw_mp5mod3_1903.weapon","weapon",1.0f),
 				ScoredResource("gkw_mp5mod3_3003.weapon","weapon",1.0f),
 				ScoredResource("gkw_m1918mod3_102.weapon","weapon",1.0f),
+				ScoredResource("gkw_m1918mod3_806.weapon","weapon",1.0f),
 				ScoredResource("gkw_m1918mod3_1606.weapon","weapon",1.0f)
 			},
 			{

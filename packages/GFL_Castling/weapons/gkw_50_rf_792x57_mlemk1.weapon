@@ -50,10 +50,7 @@
     
     <weak_hand_hold offset="0.3" />
     <projectile file="bullet.projectile">
-        <result class="hit" 
-        kill_probability="9.45" 
-        kill_decay_start_time="0.895" 
-        kill_decay_end_time="1.659" />
+        <result class="hit" kill_probability="1.8" kill_probability_offset_on_successful_hit="10.0" kill_decay_start_time="1.895" kill_decay_end_time="3.158" />
     </projectile>
     
     <!--Accuracy, Movement speed-->
