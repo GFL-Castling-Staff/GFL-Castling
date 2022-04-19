@@ -500,7 +500,7 @@
 		<ai filename="sniper.ai" />
 		<resources file="kcco_lonewolf_archer.resources">
 			<weapon key="compound_bow.weapon" enabled="1" />
-			<carry_item key="camouflage_suit.carry_item" />
+			<carry_item key="kcco_ar.carry_item" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="0.5" max="1.8" />
