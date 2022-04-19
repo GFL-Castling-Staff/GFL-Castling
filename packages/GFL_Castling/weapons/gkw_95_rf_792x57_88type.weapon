@@ -40,7 +40,7 @@
     
     <weak_hand_hold offset="0.3" />
     <projectile file="bullet.projectile">
-        <result class="hit" kill_probability="6.45" kill_decay_start_time="5.807" kill_decay_end_time="9.678" />
+        <result class="hit" kill_probability="1.8" kill_probability_offset_on_successful_hit="8.0" kill_decay_start_time="1.895" kill_decay_end_time="3.158" />
     </projectile>
 	<stance state_key="walking" accuracy="0.38" />
     <stance state_key="crouch_moving" accuracy="0.3" />
