@@ -15,7 +15,7 @@
             <modifier class="melee_hit_result" input_character_state="death" output_character_state="wound"/>
     
             <modifier class="speed" value="0.15" />
-            <modifier class="hit_success_probability" value="-0.4" />
+            <modifier class="hit_success_probability" value="-0.6" />
             <modifier class="detectability" value="0.15" />
         </carry_item>
 
@@ -36,7 +36,7 @@
     
     
             <modifier class="speed" value="0.15" />
-            <modifier class="hit_success_probability" value="-0.4" />
+            <modifier class="hit_success_probability" value="-0.6" />
             <modifier class="detectability" value="0.15" />
         </carry_item>
 
@@ -57,7 +57,7 @@
     
     
             <modifier class="speed" value="0.15" />
-            <modifier class="hit_success_probability" value="-0.4" />
+            <modifier class="hit_success_probability" value="-0.6" />
             <modifier class="detectability" value="0.15" />
         </carry_item>
 
@@ -77,7 +77,7 @@
             <modifier class="melee_hit_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
     
             <modifier class="speed" value="0.15" />
-            <modifier class="hit_success_probability" value="-0.4" />
+            <modifier class="hit_success_probability" value="-0.6" />
             <modifier class="detectability" value="0.15" />
         </carry_item>
 </carry_items>
