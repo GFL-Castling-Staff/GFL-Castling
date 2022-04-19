@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- https://iopwiki.com/wiki/Enemy_Index -->
-<faction name="Paradeus" color="1 1 1" firstnames_file="Paradeus_first.name" lastnames_file="Paradeus_last.name" chat_icon_filename="par_chat_soldier.png" chat_icon_commander_filename="par_chat_commander.png" campaign_completion_icon_filename="campaign_win_gk.png" radio_queue_size="3">
+<faction name="Paradeus" color="1 1 1" firstnames_file="Paradeus_first.name" lastnames_file="Paradeus_last.name" chat_icon_filename="par_chat_soldier.png" chat_icon_commander_filename="par_chat_commander.png" chat_icon_filename_supporter="par_chat_soldier_s.png" campaign_completion_icon_filename="campaign_win_gk.png" radio_queue_size="3">
 	<rank xp="0" name="10">
 		<hud_icon filename="lv_000.png" />
 	</rank>
