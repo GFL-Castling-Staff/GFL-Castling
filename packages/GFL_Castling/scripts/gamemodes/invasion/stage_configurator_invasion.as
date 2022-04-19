@@ -785,7 +785,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 	protected Stage@ setupStage7() {
 		Stage@ stage = createStage();
 		stage.m_mapInfo.m_name = "Rattlesnake Crescent";
-		stage.m_mapInfo.m_path = "media/packages/vanilla/maps/map6";
+		stage.m_mapInfo.m_path = "media/packages/vanilla.desert/maps/map6";
 		stage.m_mapInfo.m_id = "map6";
 
 		stage.m_maxSoldiers = 15 * 9;                                             // was 17*7 in 1.65
@@ -897,7 +897,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 	protected Stage@ setupStage9() {
 		Stage@ stage = createStage();
 		stage.m_mapInfo.m_name = "Black Gold Estuary";
-		stage.m_mapInfo.m_path = "media/packages/vanilla/maps/map9";
+		stage.m_mapInfo.m_path = "media/packages/vanilla.desert/maps/map9";
 		stage.m_mapInfo.m_id = "map9";
 
 		stage.m_includeLayers.insertLast("layer1.invasion");
@@ -955,7 +955,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 	protected Stage@ setupStage10() {
 		Stage@ stage = createStage();
 		stage.m_mapInfo.m_name = "Railroad Gap";
-		stage.m_mapInfo.m_path = "media/packages/vanilla/maps/map10";
+		stage.m_mapInfo.m_path = "media/packages/vanilla.desert/maps/map10";
 		stage.m_mapInfo.m_id = "map10";
 
 		stage.m_maxSoldiers = 13 * 12;                                            // 156, was 15*10 in 1.65
@@ -1204,7 +1204,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 	protected Stage@ setupStage14() {
 		Stage@ stage = createStage();
 		stage.m_mapInfo.m_name = "Rattlesnake Crescent (alt)";
-		stage.m_mapInfo.m_path = "media/packages/vanilla/maps/map6";
+		stage.m_mapInfo.m_path = "media/packages/vanilla.desert/maps/map6";
 		stage.m_mapInfo.m_id = "map6_2";
 
 		// we want to exclude some layers here, as the default ones are already used for the other map6
