@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projectile class="grenade" name="30mm" slot="1" pulldown_in_air="8.0" key="excutioner_skill.projectile">
     <tag name="grenade"/>
-    <result class="blast" radius="4.5" damage="3" push="0.4" decal="1" />
+    <result class="blast" radius="4.5" damage="3" push="0.4" decal="1" faction_compare="not_equal"/>
     <trigger class="impact" />
     <rotation class="motion" />
     <model mesh_filename="agl.xml" />
@@ -42,6 +42,5 @@
     <effect class="result" key="vehicle" copy="terrain" />     
     <effect class="result" key="character" copy="terrain" />
 
-    <effect class="activated" ref="Propulsion_gl" />
 
 </projectile>
