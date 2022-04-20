@@ -108,7 +108,10 @@ class CommandSkill : Tracker {
                 }                 
                 if (c_weaponType=="ff_excutioner_2.weapon"){
                     excuteExcutionerskill(cId,senderId);        
-                }                
+                }        
+                if (c_weaponType=="ff_parw_alina.weapon"){
+                    excuteBaibaoziskill(cId,senderId);        
+                }              
             }
         }
     }
@@ -767,26 +770,40 @@ class CommandSkill : Tracker {
                 CreateProjectile(m_metagame,c_pos.add(Vector3(dx*dd*(ix*2-1)+dy*dd*(ix*2-1)/tt,1,dy*dd*(ix*2-1)-dx*dd*(ix*2-1)/tt)),c_pos.add(Vector3(dx*dd*(ix*2-1)+dy*dd*(ix*2-1)/tt,0,dy*dd*(ix*2-1)-dx*dd*(ix*2-1)/tt)),"excutioner_skill.projectile",characterId,factionid,5020,0.001);
             }
 
-            // CreateProjectile(m_metagame,c_pos,c_pos.add(Vector3(dx*dd*2          ,-1,dy*dd*2          )),"excutioner_skill.projectile",characterId,factionid,1020,0.001);
-            // CreateProjectile(m_metagame,c_pos,c_pos.add(Vector3(dx*dd*1+dy*dd*1/2,-1,dy*dd*1-dx*dd*1/2)),"excutioner_skill.projectile",characterId,factionid,1020,0.001);
+            array<string> Voice={
+            "Excutioner_buhuo_SKILL02_JP.wav",
+            "Excutioner_buhuo_SKILL03_JP.wav",
+            };
+            playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+            SkillArray.insertLast(SkillTrigger(characterId,1,"DESTROYER"));
+            
+        }
+    }
+    void excuteBaibaoziskill(int characterId,int playerId){
+        bool ExistQueue = false;
+        int j=-1;
+        for (uint i=0;i<SkillArray.length();i++){
+            if (SkillArray[i].m_character_id==characterId && SkillArray[i].m_weapontype=="ALINA") {
+                ExistQueue=true;
+                j=i;
+            }
+        }
+        if (ExistQueue){
+            dictionary a;
+            a["%time"] = ""+SkillArray[j].m_time;
+            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            return;
+        }
+        const XmlElement@ characterinfo = getCharacterInfo(m_metagame, characterId);
+        const XmlElement@ playerinfo = getPlayerInfo(m_metagame, playerId);
 
-            // CreateProjectile(m_metagame,c_pos,c_pos.add(Vector3(dx*dd*3+dy*dd*2/2,-1,dy*dd*3-dx*dd*2/2)),"excutioner_skill.projectile",characterId,factionid,1020,0.001);
-            // CreateProjectile(m_metagame,c_pos,c_pos.add(Vector3(dx*dd*4          ,-1,dy*dd*4          )),"excutioner_skill.projectile",characterId,factionid,1020,0.001);
-            // CreateProjectile(m_metagame,c_pos,c_pos.add(Vector3(dx*dd*3-dy*dd*2/2,-1,dy*dd*3+dx*dd*2/2)),"excutioner_skill.projectile",characterId,factionid,1020,0.001);
+        if (playerinfo.hasAttribute("aim_target")) {
+            string target = playerinfo.getStringAttribute("aim_target");
+            Vector3 c_pos = stringToVector3(characterinfo.getStringAttribute("position"));
+            Vector3 s_pos = stringToVector3(target);        
+            int factionid = characterinfo.getIntAttribute("faction_id");
 
-            // CreateProjectile(m_metagame,c_pos,c_pos.add(Vector3(dx*dd*5-dy*dd*3/2,-1,dy*dd*5+dx*dd*3/2)),"excutioner_skill.projectile",characterId,factionid,1020,0.001);
-            // CreateProjectile(m_metagame,c_pos,c_pos.add(Vector3(dx*dd*6          ,-1,dy*dd*6          )),"excutioner_skill.projectile",characterId,factionid,1020,0.001);
-            // CreateProjectile(m_metagame,c_pos,c_pos.add(Vector3(dx*dd*5+dy*dd*3/2,-1,dy*dd*5-dx*dd*3/2)),"excutioner_skill.projectile",characterId,factionid,1020,0.001);
-
-            // CreateProjectile(m_metagame,c_pos,c_pos.add(Vector3(dx*dd*7+dy*dd*4/2,-1,dy*dd*7-dx*dd*4/2)),"excutioner_skill.projectile",characterId,factionid,1020,0.001);
-            // CreateProjectile(m_metagame,c_pos,c_pos.add(Vector3(dx*dd*8          ,-1,dy*dd*8          )),"excutioner_skill.projectile",characterId,factionid,1020,0.001);
-            // CreateProjectile(m_metagame,c_pos,c_pos.add(Vector3(dx*dd*7-dy*dd*4/2,-1,dy*dd*7+dx*dd*4/2)),"excutioner_skill.projectile",characterId,factionid,1020,0.001);  
-
-            // CreateProjectile(m_metagame,c_pos,c_pos.add(Vector3(dx*dd*9+dy*dd*5/2,-1,dy*dd*9-dx*dd*5/2)),"excutioner_skill.projectile",characterId,factionid,1020,0.001);
-            // CreateProjectile(m_metagame,c_pos,c_pos.add(Vector3(dx*dd*10         ,-1,dy*dd*10         )),"excutioner_skill.projectile",characterId,factionid,1020,0.001);
-            // CreateProjectile(m_metagame,c_pos,c_pos.add(Vector3(dx*dd*9-dy*dd*5/2,-1,dy*dd*9+dx*dd*5/2)),"excutioner_skill.projectile",characterId,factionid,1020,0.001);           
-
-
+            CreateProjectile(m_metagame,c_pos,s_pos,"baibaozi_skill.projectile",characterId,factionid,5020,8);
 
             array<string> Voice={
             "Excutioner_buhuo_SKILL02_JP.wav",
