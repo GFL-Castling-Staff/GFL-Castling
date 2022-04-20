@@ -1,57 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <carry_items>
-    <carry_item file="exo.base_carry_item" key="dandelion.carry_item" name="[What can I serve you?]" transform_on_consume="dandelion_9">
-        <hud_icon filename="dandelion_9.png" />
+    <carry_item file="exo.base_carry_item" key="dandelion.carry_item" name="[Less than 5% left...Do you want to continue, Commander?]" transform_on_consume="dandelion_9">
+        <hud_icon filename="gk_dandelion_9.png" />
         <commonness value="0" in_stock="0" />
         <inventory price="50" />
         <modifier class="speed" value="0.35" />
         <modifier class="hit_success_probability" value="-1.0" />
         <modifier class="detectability" value="-0.05" />
     </carry_item>
-    <carry_item file="exo.base_carry_item" key="dandelion_9" name="[What can I serve you?]" transform_on_consume="dandelion_8">
-        <hud_icon filename="dandelion_8.png" />
+    <carry_item file="exo.base_carry_item" key="dandelion_9" name="[Less than 5% left...Do you want to continue, Commander?]" transform_on_consume="dandelion_8">
+        <hud_icon filename="gk_dandelion_8.png" />
         <modifier class="speed" value="0.35" />
         <modifier class="hit_success_probability" value="-1.0" />
         <modifier class="detectability" value="-0.05" />
     </carry_item>
-    <carry_item file="exo.base_carry_item" key="dandelion_8" name="[What can I serve you?]" transform_on_consume="dandelion_7">
-        <hud_icon filename="dandelion_7.png" />
+    <carry_item file="exo.base_carry_item" key="dandelion_8" name="[Less than 5% left...Do you want to continue, Commander?]" transform_on_consume="dandelion_7">
+        <hud_icon filename="gk_dandelion_7.png" />
         <modifier class="speed" value="0.35" />
         <modifier class="hit_success_probability" value="-1.0" />
         <modifier class="detectability" value="-0.05" />
     </carry_item>
-    <carry_item file="exo.base_carry_item" key="dandelion_7" name="[What can I serve you?]" transform_on_consume="dandelion_6">
-        <hud_icon filename="dandelion_6.png" />
+    <carry_item file="exo.base_carry_item" key="dandelion_7" name="[Less than 5% left...Do you want to continue, Commander?]" transform_on_consume="dandelion_6">
+        <hud_icon filename="gk_dandelion_6.png" />
         <modifier class="speed" value="0.35" />
         <modifier class="hit_success_probability" value="-1.0" />
         <modifier class="detectability" value="-0.05" />
     </carry_item>
-    <carry_item file="exo.base_carry_item" key="dandelion_6" name="[What can I serve you?]" transform_on_consume="dandelion_5">
-        <hud_icon filename="dandelion_5.png" />
+    <carry_item file="exo.base_carry_item" key="dandelion_6" name="[Less than 5% left...Do you want to continue, Commander?]" transform_on_consume="dandelion_5">
+        <hud_icon filename="gk_dandelion_5.png" />
         <modifier class="speed" value="0.35" />
         <modifier class="hit_success_probability" value="-1.0" />
         <modifier class="detectability" value="-0.05" />
     </carry_item>
-    <carry_item file="exo.base_carry_item" key="dandelion_5" name="[What can I serve you?]" transform_on_consume="dandelion_4">
-        <hud_icon filename="dandelion_4.png" />
+    <carry_item file="exo.base_carry_item" key="dandelion_5" name="[Less than 5% left...Do you want to continue, Commander?]" transform_on_consume="dandelion_4">
+        <hud_icon filename="gk_dandelion_4.png" />
         <modifier class="speed" value="0.35" />
         <modifier class="hit_success_probability" value="-1.0" />
         <modifier class="detectability" value="-0.05" />
     </carry_item>
-    <carry_item file="exo.base_carry_item" key="dandelion_4" name="[What can I serve you?]" transform_on_consume="dandelion_3">
-        <hud_icon filename="dandelion_3.png" />
+    <carry_item file="exo.base_carry_item" key="dandelion_4" name="[Less than 5% left...Do you want to continue, Commander?]" transform_on_consume="dandelion_3">
+        <hud_icon filename="gk_dandelion_3.png" />
         <modifier class="speed" value="0.35" />
         <modifier class="hit_success_probability" value="-1.0" />
         <modifier class="detectability" value="-0.05" />
     </carry_item>
-    <carry_item file="exo.base_carry_item" key="dandelion_3" name="[What can I serve you?]" transform_on_consume="dandelion_2">
-        <hud_icon filename="dandelion_2.png" />
+    <carry_item file="exo.base_carry_item" key="dandelion_3" name="[Less than 5% left...Do you want to continue, Commander?]" transform_on_consume="dandelion_2">
+        <hud_icon filename="gk_dandelion_2.png" />
         <modifier class="speed" value="0.35" />
         <modifier class="hit_success_probability" value="-1.0" />
         <modifier class="detectability" value="-0.05" />
     </carry_item>
-    <carry_item file="wearables.base_carry_item" key="dandelion_2" name="[What can I serve you?]-Overrun!-" transform_on_consume="dandelion_1">
-        <hud_icon filename="dandelion_1.png" />
+    <carry_item file="wearables.base_carry_item" key="dandelion_2" name="[Less than 5% left...Do you want to continue, Commander?]-Overrun!-" transform_on_consume="dandelion_1">
+        <hud_icon filename="gk_dandelion_1.png" />
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="wound"  />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
@@ -63,8 +63,8 @@
         <modifier class="hit_success_probability" value="-0.6" />
         <modifier class="detectability" value="-0.05" />
     </carry_item>
-    <carry_item file="none.base_carry_item" key="dandelion_1" name="[What can I serve you?]-Overrun!-">
-        <hud_icon filename="dandelion_0.png" />
+    <carry_item file="none.base_carry_item" key="dandelion_1" name="[Less than 5% left...Do you want to continue, Commander?]-Overrun!-">
+        <hud_icon filename="gk_dandelion_0.png" />
         <modifier class="speed" value="0.35" />
         <modifier class="hit_success_probability" value="-0.6" />
         <modifier class="detectability" value="-0.05" />

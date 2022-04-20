@@ -6,24 +6,27 @@ class VestRecoverTask : Task {
 	protected float m_time;
     protected int m_num;
     protected int m_character_id;
+	protected float m_timeLeft;
+    protected int m_numLeft;
 
     void start() {
-
+		m_timeLeft=m_time;
+		m_numLeft=1;
 	}
 
     void update(float time) {
-		m_time -= time;
-		_log("time announcer, waiting " + time + ", left " + m_timeLeft, 1);
-
-		if (m_time < 0)
+		m_timeLeft -= time;
+		if (m_timeLeft < 0)
 		{
-			_log("ticker meow");
-            
+			_log("timeplayed:"+ m_numLeft);
+			m_numLeft++;
+			m_timeLeft=m_time;
 		}
+
 	}
 
     bool hasEnded() const {
-		if (m_time < 0.0) {
+		if (m_numLeft >= m_num) {
 			return true;
 		}
 		return false;

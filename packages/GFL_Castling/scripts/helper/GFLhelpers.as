@@ -332,6 +332,16 @@ bool checkFlatRange(const Vector3@ pos1, const Vector3@ pos2, float range) {
 	float length = getFlatPositionDistance(pos1, pos2);
 	return length <= range; 
 }
+
+void playAnimationKey(Metagame@ m_metagame,int characterId,string animekey,bool inter=false,bool hide=false){
+	XmlElement command("command");
+	command.setStringAttribute("class", "update_character");
+	command.setIntAttribute("id", characterId);
+	command.setStringAttribute("animate", animekey);
+	command.setBoolAttribute("interruptable", inter);
+	command.setBoolAttribute("hide_weapon", hide);
+	m_metagame.getComms().send(command);
+}
 //soundtrack function from ww2dlc thanks for coding wheel
 
 
