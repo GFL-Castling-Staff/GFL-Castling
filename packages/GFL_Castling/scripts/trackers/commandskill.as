@@ -285,7 +285,7 @@ class CommandSkill : Tracker {
                         "Vector_SkillC3.wav"
                     };
                     playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
-                    playAnimationKey(m_metagame,characterId,"recoil, ninjato");
+                    playAnimationKey(m_metagame,characterId,"throwing, upside");
                     c_pos=c_pos.add(Vector3(0,1.5,0));
                     if (checkFlatRange(c_pos,stringToVector3(target),18)){
                         CreateProjectile(m_metagame,c_pos,stringToVector3(target),"VVfirenade.projectile",characterId,factionid,50,20.0);
@@ -860,7 +860,7 @@ class CommandSkill : Tracker {
                         "PPsh41_SKILL1_JP.wav"
                     };
                     playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
-                    playAnimationKey(m_metagame,characterId,"recoil, ninjato");
+                    playAnimationKey(m_metagame,characterId,"throwing, upside");
                     c_pos=c_pos.add(Vector3(0,1.5,0));
                     CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"grenade_ppsh41.projectile",characterId,factionid,30.0,5.0);
                 }
