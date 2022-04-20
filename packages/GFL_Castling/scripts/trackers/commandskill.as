@@ -78,37 +78,52 @@ class CommandSkill : Tracker {
                 if (c_weaponType=="") return;
                 if (c_weaponType=="gkw_an94_mod3.weapon" || c_weaponType=="gkw_an94_mod3_skill.weapon" || c_weaponType=="gkw_an94mod3_3303.weapon" || c_weaponType=="gkw_an94mod3_3303_skill.weapon" || c_weaponType=="gkw_an94mod3_blm.weapon" || c_weaponType=="gkw_an94mod3_blm_skill.weapon" ){
                     excuteAN94skill(cId,senderId);
+                    return;
                 }
                 if (c_weaponType=="gkw_vector.weapon"){
                     excuteVVskill(cId,senderId);
+                    return;
                 }
                 if (c_weaponType=="ff_justice.weapon"){
-                    excuteJudgeskill(cId,senderId);                    
+                    excuteJudgeskill(cId,senderId);
+                    return;                    
                 }
                 if (c_weaponType=="gkw_mp5.weapon"||c_weaponType=="gkw_mp5_3.weapon"||c_weaponType=="gkw_mp5_1205.weapon"||c_weaponType=="gkw_mp5_1903.weapon"||c_weaponType=="gkw_mp5_3006.weapon"){
-                    excuteMP5skill(cId,senderId);                    
+                    excuteMP5skill(cId,senderId);
+                    return;                    
                 }
                 if (c_weaponType=="gkw_mp5mod3.weapon"||c_weaponType=="gkw_mp5mod3_3.weapon"||c_weaponType=="gkw_mp5mod3_1205.weapon"||c_weaponType=="gkw_mp5mod3_1903.weapon"||c_weaponType=="gkw_mp5mod3_3006.weapon"){
-                    excuteMP5MOD3skill(cId,senderId);                    
+                    excuteMP5MOD3skill(cId,senderId);
+                    return;                    
                 }
                 if (c_weaponType=="gkw_p22.weapon"){
-                    excuteP22skill(cId,senderId);        
+                    excuteP22skill(cId,senderId);
+                    return;        
                 }
                 if (c_weaponType=="gkw_hs2000.weapon"||c_weaponType=="gkw_hs2000_5304.weapon"){
-                    excuteHS2000skill(cId,senderId);        
+                    excuteHS2000skill(cId,senderId);
+                    return;        
                 }
                 if (c_weaponType=="ff_Intruder.weapon"){
-                    excuteIntruderskill(cId,senderId);        
+                    excuteIntruderskill(cId,senderId);
+                    return;        
                 }
                 if (c_weaponType=="ff_agent.weapon"){
-                    excuteAgentskill(cId,senderId);        
+                    excuteAgentskill(cId,senderId);
+                    return;        
                 }                
                 if (c_weaponType=="ff_destroyer.weapon"){
-                    excuteDestroyerskill(cId,senderId);        
+                    excuteDestroyerskill(cId,senderId);
+                    return;        
                 }                 
                 if (c_weaponType=="ff_excutioner_2.weapon"){
-                    excuteExcutionerskill(cId,senderId);        
-                }                
+                    excuteExcutionerskill(cId,senderId);
+                    return;        
+                }
+                if (c_weaponType=="gkw_ppsh41mod3.weapon"|| c_weaponType=="gkw_ppsh41.weapon"){
+                    excutePPSH41skill(cId,senderId);
+                    return;
+                }
             }
         }
     }
@@ -261,8 +276,10 @@ class CommandSkill : Tracker {
                     Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
                     int factionid = character.getIntAttribute("faction_id");
                     array<string> Voice={
-                        "Vector_SKILL2_JP.wav",
                         "Vector_SKILL1_JP.wav",
+                        "Vector_SKILL2_JP.wav",
+                        "Vector_SkillC1.wav",
+                        "Vector_SkillC2.wav",
                         "Vector_SkillC3.wav"
                     };
                     playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
@@ -797,6 +814,43 @@ class CommandSkill : Tracker {
             SkillArray.insertLast(SkillTrigger(characterId,1,"DESTROYER"));
             
         }
+    }
+
+    void excutePPSH41skill(int characterId,int playerId){
+        bool ExistQueue = false;
+        int j=-1;
+        for (uint i=0;i<SkillArray.length();i++){
+            if (SkillArray[i].m_character_id==characterId && SkillArray[i].m_weapontype=="ppsh41") {
+                ExistQueue=true;
+                j=i;
+            }
+        }
+        if (ExistQueue){
+            dictionary a;
+            a["%time"] = ""+SkillArray[j].m_time;
+            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            _log("skill cooldown" + SkillArray[j].m_time);
+            return;
+        }
+        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+        if (character !is null) {
+            const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+            if (player !is null){
+                if (player.hasAttribute("aim_target")) {
+                    string target = player.getStringAttribute("aim_target");
+                    Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
+                    int factionid = character.getIntAttribute("faction_id");
+                    array<string> Voice={
+                        "PPsh41_SKILL1_JP.wav"
+                    };
+                    playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+                    playAnimationKey(m_metagame,characterId,"recoil, ninjato");
+                    c_pos=c_pos.add(Vector3(0,1.5,0));
+                    CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"grenade_ppsh41.projectile",characterId,factionid,30.0,5.0);
+                }
+            }
+        }
+        SkillArray.insertLast(SkillTrigger(characterId,15,"ppsh41"));
     }
 }
 
