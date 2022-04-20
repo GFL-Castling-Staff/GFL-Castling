@@ -4,7 +4,7 @@ name="Pierre II"
 key="pierre.vehicle" 
 respawn_time="90" 
 time_to_live_unsteerable="95" 
-map_view_atlas_index="26" 
+map_view_atlas_index="47" 
 minimum_fill_requirement="1.0" 
 max_character_collision_speed_on_normal="12"
 max_character_collision_speed="13"
@@ -50,6 +50,7 @@ ai_stop_to_fight="0"
 	friction_offset="0.05"
 	drag_offset="-0.05" /> 
 
+	<sky_diving chute_offset="0 3.05 0.0" trigger_height="20.0" gravity="-10" mesh_filename="chute_large.mesh" texture_filename="chute.png" />
 
 	<turret offset="0 1.88 -0.2" weapon_key="pierre_mg.weapon" weapon_offset="-0.45 0.85 1.18" weapon_recoil="0.0" max_rotation_step="0.0053" />
 	<turret offset="0 1.88 -0.2" weapon_key="pierre_mg_2.weapon" weapon_offset="-0.45 0.85 1.18" weapon_recoil="0.0" max_rotation_step="0.0053" />

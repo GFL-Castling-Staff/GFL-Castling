@@ -113,7 +113,7 @@
 <model filename="gkd_cz75_From_melondove.xml"><requirement class="weapon" slot="0" key="gkw_cz75.weapon"/></model>
 <model filename="gkd_m950a_From_melondove.xml"><requirement class="weapon" slot="0" key="gkw_m950a.weapon"/></model>
 <model filename="gkd_c93_From_melondove.xml"><requirement class="weapon" slot="0" key="gkw_c93.weapon"/></model>
-<model filename="gkd_smg_js9_4702.xml"><requirement class="weapon" slot="0" key="gkw_js9_4702.weapon"/></model>
+<model filename="gkd_smg_js9_4702_from_gua.xml"><requirement class="weapon" slot="0" key="gkw_js9_4702.weapon"/></model>
 <model filename="gkd_rf_4type.xml"><requirement class="weapon" slot="0" key="gkw_cl.weapon"/></model>
 <model filename="gkd_hg_welrod_melondove.xml"><requirement class="weapon" slot="0" key="gkw_welrod.weapon"/></model>
 <model filename="gkd_hg_python_melondove.xml"><requirement class="weapon" slot="0" key="gkw_python.weapon"/></model>
@@ -184,6 +184,12 @@
 <model filename="gkd_mg_negev.xml"><requirement class="weapon" slot="0" key="gkw_negev_skill_1.weapon"/></model>
 <model filename="gkd_mg_negev.xml"><requirement class="weapon" slot="0" key="gkw_negev_skill_2.weapon"/></model>
 <model filename="gkd_mg_negev.xml"><requirement class="weapon" slot="0" key="gkw_negev_skill_3.weapon"/></model>
+<model filename="gkd_akalfa_melondove.xml"><requirement class="weapon" slot="0" key="gkw_akalfa.weapon"/></model>
+<model filename="gkd_akalfa_melondove.xml"><requirement class="weapon" slot="0" key="gkw_akalfa_skill.weapon"/></model>
+<model filename="gkd_sg_usas12.xml"><requirement class="weapon" slot="0" key="gkw_usas12.weapon"/></model>
+<model filename="gkd_sg_usas12.xml"><requirement class="weapon" slot="0" key="gkw_usas12_skill.weapon"/></model>
+<model filename="gkd_rf_tac50.xml"><requirement class="weapon" slot="0" key="gkw_tac50.weapon"/></model>
+<model filename="gkd_ar_qbz191.xml"><requirement class="weapon" slot="0" key="gkw_qbz191.weapon"/></model>
 
 <model filename="gkd_mg_negev_904.xml"><requirement class="weapon" slot="0" key="gkw_negev_904.weapon"/></model>
 <model filename="gkd_mg_negev_904.xml"><requirement class="weapon" slot="0" key="gkw_negev_904_skill_1.weapon"/></model>
@@ -223,7 +229,6 @@
 <model filename="gkd_rf_m14.xml"><requirement class="weapon" slot="0" key="gkw_m14.weapon"/></model>
 <model filename="gkd_rf_m14mod3.xml"><requirement class="weapon" slot="0" key="gkw_m14mod3.weapon"/></model>
 <model filename="gkd_rf_m1903.xml"><requirement class="weapon" slot="0" key="gkw_m1903.weapon"/></model>
-<model filename="gkd_rf_m1903.xml"><requirement class="weapon" slot="0" key="gkw_m1903_only.weapon"/></model>
 <model filename="gkd_rf_m1a1.xml"><requirement class="weapon" slot="0" key="gkw_m1a1.weapon"/></model>
 <model filename="gkd_rf_m200.xml"><requirement class="weapon" slot="0" key="gkw_m200.weapon"/></model>
 <model filename="gkd_rf_m82a1.xml"><requirement class="weapon" slot="0" key="gkw_m82a1.weapon"/></model>

@@ -420,31 +420,34 @@ class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 		array<CallMarkerConfig@> configs = {
 			// CallMarkerConfig("callkey", "call_marker\call_marker_drop", 6, 0.5, 30.0)
 			//CallMarkerConfig(string key, int atlasIndex = 0, float size = 2.0, float range = 1.0, string text = "")
-			CallMarkerConfig("gk_airstrike_fairy.call", "call_marker", 6, 0.5, 20.0),
-			CallMarkerConfig("gk_bombardment_fairy.call", "call_marker", 6, 0.5, 30.0),
-			CallMarkerConfig("gk_rocket_fairy.call", "call_marker", 6, 0.5, 30.0),
+			CallMarkerConfig("gk_airstrike_fairy.call", "call_marker", 9, 0.5, 20.0),
+			CallMarkerConfig("gk_bombardment_fairy.call", "call_marker", 11, 0.5, 30.0),
+			CallMarkerConfig("gk_rocket_fairy.call", "call_marker", 10, 0.5, 30.0),
 			
 			CallMarkerConfig("gk_medic.call", "call_marker_drop", 4, 0.5),
-			CallMarkerConfig("sg1hg1mg2.call", "call_marker_drop", 8, 0.5),
-			CallMarkerConfig("hvy_landing.call", "call_marker_drop", 8, 0.5),
-			CallMarkerConfig("apc.call", "call_marker_drop", 7, 0.5),
-			CallMarkerConfig("tank.call", "call_marker_drop", 7, 0.5),
-			CallMarkerConfig("martina.call", "call_marker_drop", 7, 0.5),
-			CallMarkerConfig("chiara.call", "call_marker_drop", 7, 0.5),
-			CallMarkerConfig("pierre.call", "call_marker_drop", 7, 0.5),			
-			CallMarkerConfig("gk_repair_fairy.call", "call_marker_drop", 7, 0.5),
-			CallMarkerConfig("gk_medic_agl.call", "call_marker", 3, 0.5, 5.0),
-			CallMarkerConfig("kcco_argo_carina.call", "call_marker", 14, 0.5, 30.0),
-			CallMarkerConfig("kcco_argo_puppis.call", "call_marker", 14, 0.5, 30.0),
-			CallMarkerConfig("kcco_argo_vela.call", "call_marker", 14, 0.5, 30.0),
-			CallMarkerConfig("kcco_artillery_1.call", "call_marker", 14, 0.5, 30.0),
-			CallMarkerConfig("kcco_Hephaestus.call", "call_marker", 14, 0.5, 30.0),
+			CallMarkerConfig("sg1hg1mg2.call", "call_marker_drop", 4, 0.5),
+			CallMarkerConfig("hvy_landing.call", "call_marker_drop", 4, 0.5),
+			CallMarkerConfig("martina.call", "call_marker_drop", 8, 0.5),
+			CallMarkerConfig("chiara.call", "call_marker_drop", 8, 0.5),
+			CallMarkerConfig("pierre.call", "call_marker_drop", 8, 0.5),			
+			CallMarkerConfig("manticore.call", "call_marker_drop", 8, 0.5),			
+			CallMarkerConfig("manticore2.call", "call_marker_drop", 8, 0.5),			
+
+			CallMarkerConfig("gk_repair_fairy.call", "call_marker_drop", 12, 0.5),
+			CallMarkerConfig("gk_medic_agl.call", "call_marker", 7, 0.5, 5.0),
+			CallMarkerConfig("target.call", "call_marker_drop", 7, 0.5, 5.0),
+			CallMarkerConfig("gk_rescue_fairy.call", "call_marker", 7, 0.5, 5.0),
+
+			CallMarkerConfig("kcco_argo_carina.call", "call_marker", 6, 0.5, 30.0),
+			CallMarkerConfig("kcco_argo_puppis.call", "call_marker", 6, 0.5, 30.0),
+			CallMarkerConfig("kcco_argo_vela.call", "call_marker", 6, 0.5, 30.0),
+			CallMarkerConfig("kcco_Hephaestus.call", "call_marker", 6, 0.5, 30.0),
 			
-			CallMarkerConfig("sf_destroyer.call", "call_marker", 14, 0.5, 30.0),
-			CallMarkerConfig("sf_jaguar.call", "call_marker", 14, 0.5, 30.0),
-			CallMarkerConfig("sf_jupiter.call", "call_marker", 14, 0.5, 30.0),
+			CallMarkerConfig("sf_destroyer.call", "call_marker", 6, 0.5, 30.0),
+			CallMarkerConfig("sf_jaguar.call", "call_marker", 6, 0.5, 30.0),
+			CallMarkerConfig("sf_jupiter.call", "call_marker", 6, 0.5, 30.0),
 			
-			CallMarkerConfig("pard_zombie.call", "call_marker", 14, 0.5, 30.0)
+			CallMarkerConfig("pard_zombie.call", "call_marker", 2, 0.5, 30.0)
 			};
 
 		addTracker(CallMarkerTracker(this, configs));

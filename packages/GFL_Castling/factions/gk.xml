@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<faction name="G&amp;K PMC" color="0.95 0.59 0.20" firstnames_file="gk_first.name" lastnames_file="gk_last.name" chat_icon_filename="gk_chat_soldier.png" chat_icon_commander_filename="gk_chat_commander.png" campaign_completion_icon_filename="campaign_win_gk.png" radio_queue_size="3">
+<faction name="G&amp;K PMC" color="0.95 0.59 0.20" firstnames_file="gk_first.name" lastnames_file="gk_last.name" chat_icon_filename="gk_chat_soldier.png" chat_icon_commander_filename="gk_chat_commander.png" chat_icon_filename_supporter="gk_chat_soldier_s.png" campaign_completion_icon_filename="campaign_win_gk.png" radio_queue_size="3">
 	<rank xp="0" name="10"><hud_icon filename="lv_000.png" /></rank>
 	<rank xp="0.001" name="30"><hud_icon filename="lv_001.png" /></rank>
 	<rank xp="0.003" name="60"><hud_icon filename="lv_002.png" /></rank>
@@ -1214,7 +1214,7 @@
 			<carry_item key="exo_t4.carry_item" />
 		</resources>
 		<attribute_config class="xp">
-			<attribute weight="0.3" min="0.0" max="1.0" />
+			<attribute weight="0.3" min="0.171" max="1.0" />
 		</attribute_config>
 	</soldier>
 	<soldier name="gk_manticore" firstnames="gk_qwd.name" lastnames_file="gk_qwd_last.name" spawn_score="0.000001">
