@@ -80,6 +80,42 @@ class ServerHelper : Tracker {
                 sendPrivateMessageKey(m_metagame, playerId, "ServerQuickChatAlert002",dictionary());
             }
         }
+
+        if(checkCommand(message,"spt")){
+            string s = message.substr(message.findFirst(" ")+1);
+            const XmlElement@ player = getPlayerInfo(m_metagame,senderId);
+            if (player !is null) {
+                if (player.hasAttribute("aim_target")) {
+                    string target = player.getStringAttribute("aim_target");
+                    if(s=="qwd") spawnSoldier(m_metagame,1,1,target,"sf_manticore");
+                    if(s=="hydra") spawnSoldier(m_metagame,1,1,target,"kcco_Hydra");
+                    if(s=="vespid") spawnSoldier(m_metagame,1,1,target,"sf_vespid");
+                    if(s=="guard") spawnSoldier(m_metagame,1,1,target,"sf_guard");
+                    if(s=="jaeger") spawnSoldier(m_metagame,1,1,target,"sf_jaeger");
+                    if(s=="gangshi") spawnSoldier(m_metagame,1,1,target,"sfw_nemeum");
+                    if(s=="longqi") spawnSoldier(m_metagame,1,1,target,"sfw_dragoon");
+                    if(s=="m16") spawnSoldier(m_metagame,1,1,target,"sfw_M16A1");
+                    if(s=="baka") spawnSoldier(m_metagame,1,1,target,"sfw_Destroyer");
+                    if(s=="diner") spawnSoldier(m_metagame,1,1,target,"sf_dinergate");
+                    if(s=="xfj") spawnSoldier(m_metagame,1,1,target,"sf_scouts");
+                    if(s=="aegis") spawnSoldier(m_metagame,1,1,target,"kcco_aegis");
+                    if(s=="nbl") spawnSoldier(m_metagame,1,1,target,"kcco_cerynitis");
+                    if(s=="archer") spawnSoldier(m_metagame,1,1,target,"kcco_archer");
+                    if(s=="kccodog") spawnSoldier(m_metagame,1,1,target,"kcco_dog");
+                    if(s=="lhh") spawnSoldier(m_metagame,1,1,target,"kcco_teslatrooper");
+                    if(s=="kccoar") spawnSoldier(m_metagame,1,1,target,"kcco_ar");
+                    if(s=="paraar") spawnSoldier(m_metagame,1,1,target,"para_strelet");
+                    if(s=="tiaotiao") spawnSoldier(m_metagame,1,1,target,"para_rodelero");
+                    if(s=="zhs") spawnSoldier(m_metagame,1,1,target,"parw_commander");
+                    if(s=="police") spawnSoldier(m_metagame,1,1,target,"parw_police");
+                    if(s=="paradog") spawnSoldier(m_metagame,1,1,target,"parw_dog");
+                    if(s=="nyto") spawnSoldier(m_metagame,1,1,target,"alina");
+                    if(s=="teal") spawnSoldier(m_metagame,1,1,target,"teal");
+                    if(s=="bgd") spawnSoldier(m_metagame,1,1,target,"Paradeus_doppelsoldner");
+
+                }
+            }
+        }
     }
 
     bool hasEnded() const {

@@ -4,7 +4,7 @@
 	key="martina.vehicle" 
 	respawn_time="60" 
 	time_to_live_unsteerable="120"
-	map_view_atlas_index="8" 
+	map_view_atlas_index="44" 
 	reserves_spawn_point="1" 
 	max_character_collision_speed_on_normal="18"
 	max_character_collision_speed="20"
@@ -17,7 +17,6 @@
 		<tag name="metal_thin" />
 		<tag name="truck" />
 		<tag name="jeep" /> 
-	
 	<tire_set offset="0.96 0 1.7" radius="0.48" />
 	<tire_set offset="0.96 0 -1.7" radius="0.48" />
 
