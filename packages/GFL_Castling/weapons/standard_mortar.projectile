@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projectile class="grenade" name="rocket" slot="2" pulldown_in_air="11" >
     <tag name="rocket"/>
-    <result class="spawn" instance_class="projectile" instance_key="standard_mortar_spread.projectile" min_amount="5" max_amount="5" offset="0 0.0 0" position_spread="0.1 0.1" direction_spread="0.1 0.1" />
+    <result class="spawn" instance_class="projectile" instance_key="standard_mortar_spread.projectile" min_amount="5" max_amount="5" offset="0 0.0 0" position_spread="0.1 0.1" direction_spread="0.1 0.1"  damage_origin_vehicle="0"/>
     <trigger class="time" time_to_live="2.0"/>
     <rotation class="motion" />
     <model mesh_filename="mortar.xml" />

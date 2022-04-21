@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projectile  name="default" slot="1"  pulldown_in_air="4" key="at4_ahead_s.projectile">
-    <result class="blast" damage="0.1" faction_compare="not_equal"/>
+    <result class="blast" damage="0.1" faction_compare="not_equal" damage_origin_vehicle="0"/>
     <trigger class="impact" />
     <rotation class="motion" />
 

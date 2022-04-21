@@ -6,14 +6,14 @@
     accuracy_factor="0.5" 
     sustained_fire_grow_step="1.5" 
     sustained_fire_diminish_rate="0.7" 
-    magazine_size="200" 
+    magazine_size="250" 
     can_shoot_standing="1" 
     can_shoot_crouching="1" 
     can_shoot_prone="0"
     suppressed="0" 
   	name="GK-Striker"
     projectile_speed="120.0"
-    projectiles_per_shot="1" />
+    projectiles_per_shot="2" />
 
 	<inventory
 	encumbrance="40.0"
