@@ -52,14 +52,14 @@ ai_stop_to_fight="0"
 
 	<sky_diving chute_offset="0 3.05 0.0" trigger_height="20.0" gravity="-10" mesh_filename="chute_large.mesh" texture_filename="chute.png" />
 
-	<turret offset="0 1.88 -0.2" weapon_key="pierre_mg.weapon" weapon_offset="-0.45 0.85 1.18" weapon_recoil="0.0" max_rotation_step="0.0053" />
-	<turret offset="0 1.88 -0.2" weapon_key="pierre_mg_2.weapon" weapon_offset="-0.45 0.85 1.18" weapon_recoil="0.0" max_rotation_step="0.0053" />
-	<turret offset="0 1.88 -0.2" weapon_key="pierre_rocket1.weapon" weapon_offset="0.47 1.23 -0.72" weapon_recoil="0.0" max_rotation_step="0.0053" />
-	<turret offset="0 1.88 -0.2" weapon_key="pierre_rocket2.weapon" weapon_offset="0.52 1.17 -0.72" weapon_recoil="0.0" max_rotation_step="0.0053" />
-	<turret offset="0 1.88 -0.2" weapon_key="pierre_rocket3.weapon" weapon_offset="0.47 1.17 -0.72" weapon_recoil="0.0" max_rotation_step="0.0053" />
-	<turret offset="0 1.88 -0.2" weapon_key="pierre_rocket4.weapon" weapon_offset="0.52 1.23 -0.72" weapon_recoil="0.0" max_rotation_step="0.0053" />
-		<visual  offset="0 0 0.28" class="turret" turret_index="0" mesh_filename="Pierre_Turret.mesh" texture_filename="Pierre_Turret.png" />
-		<visual  offset="0 0 0.28" class="turret" turret_index="0" key="broken" mesh_filename="Pierre_Turret.mesh" texture_filename="humvee_broken.png" />
+	<turret offset="0 1.88 -0.02" weapon_key="pierre_mg.weapon" weapon_offset="-0.45 0.85 1.08" weapon_recoil="0.0" max_rotation_step="0.0053" />
+	<turret offset="0 1.88 -0.02" weapon_key="pierre_mg_2.weapon" weapon_offset="-0.45 0.85 1.08" weapon_recoil="0.0" max_rotation_step="0.0053" />
+	<turret offset="0 1.88 -0.02" weapon_key="pierre_rocket3.weapon" weapon_offset="0.47 1.23 -0.82" weapon_recoil="0.0" max_rotation_step="0.0006" rotation="0.6" rotation_range="6.30"/>
+	<turret offset="0 1.88 -0.02" weapon_key="pierre_rocket3.weapon" weapon_offset="0.52 1.17 -0.82" weapon_recoil="0.0" max_rotation_step="0.0006" rotation="-1.2" rotation_range="6.30"/>
+	<turret offset="0 1.88 -0.02" weapon_key="pierre_rocket3.weapon" weapon_offset="0.47 1.17 -0.82" weapon_recoil="0.0" max_rotation_step="0.0006" rotation="1.8" rotation_range="6.30"/>
+	<turret offset="0 1.88 -0.02" weapon_key="pierre_rocket3.weapon" weapon_offset="0.52 1.23 -0.82" weapon_recoil="0.0" max_rotation_step="0.0006" rotation="-2.4" rotation_range="6.30"/>
+		<visual  offset="0 0 0.08" class="turret" turret_index="0" mesh_filename="Pierre_Turret.mesh" texture_filename="Pierre_Turret.png" />
+		<visual  offset="0 0 0.08" class="turret" turret_index="0" key="broken" mesh_filename="Pierre_Turret.mesh" texture_filename="humvee_broken.png" />
 
 
 	<visual class="chassis" mesh_filename="Pierre_Body.mesh" texture_filename="Pierre_Body.png" />
