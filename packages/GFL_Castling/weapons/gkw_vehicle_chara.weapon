@@ -93,7 +93,7 @@
 
     <weak_hand_hold offset="0.4" />
     <projectile file="pierre_rocket.projectile" >
-        <result class="blast"  damage="0.01"  radius="3.0" decal="1" push="0.1" character_state="stun" 	faction_compare="not_equal"/>
+        <result class="blast"  damage="0.01"  radius="6.0" decal="1" push="0.1" character_state="stun" 	faction_compare="not_equal" />
     </projectile>
     
     <ballistics near_far_distance="1000.0" speed_estimation_near="50.0" speed_estimation_far="50.0" max_speed="125.0" randomness="0.0" />
