@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projectile class="grenade" name="30mm" slot="1" pulldown_in_air="26.0" key="agl.projectile">
     <tag name="grenade"/>
-    <result class="blast" radius="4.5" damage="3" push="0.4" decal="1" />
+    <result class="blast" radius="4.5" damage="3" push="0.4" decal="1"  damage_origin_vehicle="0"/>
     <trigger class="impact" />
     <rotation class="motion" />
     <model mesh_filename="agl.xml" />
