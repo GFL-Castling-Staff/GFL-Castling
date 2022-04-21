@@ -5,6 +5,16 @@
 	<sound key="death" fileref="qwd_die.wav" volume="0.8" />
 
 
+	<parameter class="throwing_self_over_initial_bounce" value="0.4" />
+	<parameter class="throwing_self_over_steer_amount" value="0.7" />
+	<parameter class="throwing_self_over_lift_up" value="0" />
+    <parameter class="lifting_up_initial_bounce" value="0.2"/>
+    <parameter class="jumping_up_bounce" value="0.2"/>
+
+	<parameter class="ending_climbing_ladder_initial_bounce" value="0.09" />
+	<parameter class="ending_climbing_up_ladder_steer_amount" value="0.15" />
+	<parameter class="climbing_end_height_offset" value="0.2" />
+	<parameter class="climbing_with_jump_end_height_offset" value="0.2" />
 
 	<animation state_key="hold"  animation_key="still, big zombie" />
 	<animation state_key="hold_one_wall"  animation_key="still, big zombie" />
@@ -16,33 +26,34 @@
 	<animation key="walking backwards" target_key="walking, big zombie" />
 	<animation key="running" target_key="running, big zombie" />
 	<animation key="crouch still" target_key="crouch, big zombie" />
-	<animation key="crouching forwards" target_key="crouch walking, large mecha" />
-	<animation key="crouching backwards" target_key="crouch walking, large mecha" />
+	<animation key="crouching forwards" target_key="crouch walking, big zombie" />
+	<animation key="crouching backwards" target_key="crouch walking, big zombie" />
 	<animation key="prone" target_key="defence, large mecha" />
 	<animation key="prone, moving forwards" target_key="ork prone, moving forwards" />
 	<animation key="going prone" target_key="going defence, large mecha" />
 	<animation key="leaving prone" target_key="defence walking, large mecha" />
-	<animation key="dive" target_key="arive around, big zombie" />
+	<animation key="dive" target_key="falling, big zombie" />
 	<animation key="jumping" target_key="jump, big zombie" />
 	<animation key="lifting up" target_key="jump, big zombie" />
 	<animation key="throwing self over" target_key="jump, big zombie" />
-	<animation key="falling" target_key="arive around, big zombie" />
-	<animation key="arriving ground" target_key="arive around, big zombie" />
-	<animation key="climbing ladder, still" target_key="jumping, large mecha" />
-	<animation key="climbing ladder" target_key="jumping still, large mecha" />
-	<animation key="climbing ladder ending" target_key="arive around, big zombie" />
+	<animation key="falling" target_key="falling, big zombie" />
+	<animation key="arriving ground" target_key="arrive around, big zombie" />
+	<animation key="climbing ladder, still" target_key="climb still, big zombie" />
+	<animation key="climbing ladder" target_key="climb moving, big zombie" />
+	<animation key="climbing ladder ending" target_key="arrive around, big zombie" />
 	<animation key="wounded, still, 66" target_key="wouded, big zombie" />
 	<animation key="wounded, moving forwards, 67" target_key="wounded moving, big zombie" />
 	<animation key="leaving_wounded" target_key="unwound, big zombie" />
 	<animation key="stunned" target_key="stuned, big zombie" />
 	<animation key="surrender" target_key="surrender, large mecha" />
-	<animation key="stabbing" target_key="stabbing2, large mecha" />
 	<animation key="throwing, upside" target_key="throwing, large mecha" />
 	<animation key="change weapon out" target_key="change weapon, large mecha" />
 	<animation key="change weapon in" target_key="change weapon, large mecha" />
 	<animation key="change weapon out, reversed" target_key="change weapon, large mecha" />
 	<animation key="change weapon in, reversed" target_key="change weapon, large mecha" />
 	<animation key="change weapon in, single hand carry" target_key="change weapon, large mecha" />
+	<animation key="swimming still" target_key="swim still, big zombie" />
+	<animation key="swimming forwards" target_key="swimming, big zombie" />
 	<animation key="celebrating" target_key="jump, big zombie" />
 	<animation key="celebrating, shooting" target_key="jump, big zombie" />
 
