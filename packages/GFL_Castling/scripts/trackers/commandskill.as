@@ -285,10 +285,10 @@ class CommandSkill : Tracker {
                         "Vector_SkillC3.wav"
                     };
                     playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
-                    playAnimationKey(m_metagame,characterId,"throwing, upside");
-                    c_pos=c_pos.add(Vector3(0,1.5,0));
-                    if (checkFlatRange(c_pos,stringToVector3(target),18)){
-                        CreateProjectile(m_metagame,c_pos,stringToVector3(target),"VVfirenade.projectile",characterId,factionid,50,20.0);
+                    playAnimationKey(m_metagame,characterId,"throwing, upside",false,true);
+                    c_pos=c_pos.add(Vector3(0,1,0));
+                    if (checkFlatRange(c_pos,stringToVector3(target),13)){
+                        CreateProjectile(m_metagame,c_pos,stringToVector3(target),"VVfirenade.projectile",characterId,factionid,6,20.0);
                     }
                     else{
                         CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"VVfirenade.projectile",characterId,factionid,20.0,4.0);
@@ -318,9 +318,9 @@ class CommandSkill : Tracker {
             string target = playerinfo.getStringAttribute("aim_target");
             Vector3 c_pos = stringToVector3(characterinfo.getStringAttribute("position"));
             int factionid = characterinfo.getIntAttribute("faction_id");
-            c_pos=c_pos.add(Vector3(0,1.5,0));
+            c_pos=c_pos.add(Vector3(0,1,0));
             if (checkFlatRange(c_pos,stringToVector3(target),13)){
-                CreateProjectile(m_metagame,c_pos,stringToVector3(target),"SopmodSk_script.projectile",characterId,factionid,40,26.0);
+                CreateProjectile(m_metagame,c_pos,stringToVector3(target),"SopmodSk_script.projectile",characterId,factionid,10,26.0);
             }
             else{
                 CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"SopmodSk_script.projectile",characterId,factionid,26.0,6.0);
@@ -355,10 +355,10 @@ class CommandSkill : Tracker {
             string target = playerinfo.getStringAttribute("aim_target");
             Vector3 c_pos = stringToVector3(characterinfo.getStringAttribute("position"));
             int factionid = characterinfo.getIntAttribute("faction_id");
-            c_pos=c_pos.add(Vector3(0,1.5,0));
+            c_pos=c_pos.add(Vector3(0,1,0));
             if(pussyskin){
                 if (checkFlatRange(c_pos,stringToVector3(target),13)){
-                    CreateProjectile(m_metagame,c_pos,stringToVector3(target),"40mm_hk416_3401.projectile",characterId,factionid,40,26.0);
+                    CreateProjectile(m_metagame,c_pos,stringToVector3(target),"40mm_hk416_3401.projectile",characterId,factionid,10,26.0);
                 }
                 else{
                     CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"40mm_hk416_3401.projectile",characterId,factionid,26.0,6.0);
@@ -373,7 +373,7 @@ class CommandSkill : Tracker {
             }
             else{
                 if (checkFlatRange(c_pos,stringToVector3(target),13)){
-                    CreateProjectile(m_metagame,c_pos,stringToVector3(target),"40mm_hk416.projectile",characterId,factionid,40,26.0);
+                    CreateProjectile(m_metagame,c_pos,stringToVector3(target),"40mm_hk416.projectile",characterId,factionid,10,26.0);
                 }
                 else{
                     CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"40mm_hk416.projectile",characterId,factionid,26.0,6.0);
@@ -860,8 +860,8 @@ class CommandSkill : Tracker {
                         "PPsh41_SKILL1_JP.wav"
                     };
                     playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
-                    playAnimationKey(m_metagame,characterId,"throwing, upside");
-                    c_pos=c_pos.add(Vector3(0,1.5,0));
+                    playAnimationKey(m_metagame,characterId,"throwing, upside",false,true);
+                    c_pos=c_pos.add(Vector3(0,1,0));
                     CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"grenade_ppsh41.projectile",characterId,factionid,30.0,5.0);
                 }
             }
