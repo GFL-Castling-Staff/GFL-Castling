@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<weapon file="two_hands_smg.animation_base" key="gkw_ro635mod3.weapon">
+<weapon file="two_hands_ar.animation_base" key="gkw_ro635mod3.weapon">
     
     
     <!--Weapon specifications-->
@@ -45,9 +45,10 @@
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet.projectile">
         <result class="hit"  
-        kill_probability="2" 
-        kill_decay_start_time="0.2127" 
-        kill_decay_end_time="0.3546" />
+        kill_probability="1.6" 
+        kill_probability_offset_on_successful_hit="0.9"
+        kill_decay_start_time="0.1" 
+        kill_decay_end_time="0.75" />
     </projectile>
     
     <!--Accuracy, Movement speed-->
@@ -59,5 +60,5 @@
 	<stance state_key="standing" accuracy="0.95" />
     <stance state_key="crouching" accuracy="0.98" />
     <stance state_key="prone" accuracy="1" />  
-    <modifier class="speed" value="0.4" /> 
+    <modifier class="speed" value="0.7" /> 
 </weapon>
