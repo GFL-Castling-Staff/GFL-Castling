@@ -67,7 +67,7 @@
         <model filename="gkw_mg_lwmmg_from_melondove.xml" />
         <hud_icon filename="gkw_lwmmg_1808.png" />
         <projectile file="bullet.projectile">
-            <result class="blast"  damage="1" radius="1.7" decal="1" push="0.3" character_state="death" faction_compare="not_equal" />
+            <result class="blast"  damage="1" radius="1.7" decal="1" push="0.3" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0" />
             <trigger class="impact" />
             <effect class="result" key="terrain" ref="BigBurst" use_surface_color="1" />
             <effect class="result" key="terrain" ref="LowDust"/>

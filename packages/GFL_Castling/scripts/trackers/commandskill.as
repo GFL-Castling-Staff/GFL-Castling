@@ -736,7 +736,7 @@ class CommandSkill : Tracker {
             "Destroyer_buhuo_MEET_JP.wav"
             };
             playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
-            SkillArray.insertLast(SkillTrigger(characterId,1,"DESTROYER"));
+            SkillArray.insertLast(SkillTrigger(characterId,30,"DESTROYER"));
             
         }
     }
@@ -792,7 +792,7 @@ class CommandSkill : Tracker {
             "Excutioner_buhuo_SKILL03_JP.wav",
             };
             playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
-            SkillArray.insertLast(SkillTrigger(characterId,1,"DESTROYER"));
+            SkillArray.insertLast(SkillTrigger(characterId,30,"EXCUTIONER"));
             
         }
     }
@@ -827,7 +827,7 @@ class CommandSkill : Tracker {
             "Excutioner_buhuo_SKILL03_JP.wav",
             };
             playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
-            SkillArray.insertLast(SkillTrigger(characterId,1,"DESTROYER"));
+            SkillArray.insertLast(SkillTrigger(characterId,30,"ALINA"));
             
         }
     }

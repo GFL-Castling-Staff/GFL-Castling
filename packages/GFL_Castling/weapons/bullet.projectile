@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projectile class="bullet" name="default" slot="1" time_to_live="1.0" pulldown_in_air="4">
-    <result class="hit" />
+    <result class="hit" damage_origin_vehicle="0" />
     <trigger class="impact" />
     <rotation class="motion" />
 
