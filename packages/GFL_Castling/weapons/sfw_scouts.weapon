@@ -57,7 +57,7 @@
 
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet_sf.projectile">
-        <result class="hit"  kill_probability="1.6" kill_decay_start_time="0.04" kill_decay_end_time="0.5" />
+        <result class="hit"  kill_probability="1.5" kill_decay_start_time="0.04" kill_decay_end_time="0.5" />
     </projectile>
     
     <stance state_key="running" accuracy="0.4" />
