@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<weapon file="gf_rf.base_weapon" >
+<weapon on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0">
+	<tag name="rifle" />
+	<tag name="antiarmor" />
 
+	<commonness value="0.2" in_stock="1" can_respawn_with="1" />
+	<inventory encumbrance="20.0" buy_price="1.0" sell_price="0.0"/>
+	<capacity value="1" source="rank" source_value="0.0" />
 
 	<specification 
 	stab_enabled="1"
@@ -11,17 +16,28 @@
 	can_shoot_standing="0" 
 	can_shoot_crouching="1"
 	can_shoot_prone="1"
+	slot="0"
 	/>
+
+	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0" />
+	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5" />
+    <target_factors tag="shotgun" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0" />
+    <target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0" />
+    <target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0" />
+    <target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0" />
+
+
+	<stance state_key="running" accuracy="0.1" />
+	<stance state_key="walking" accuracy="0.5" />
+	<stance state_key="crouch_moving" accuracy="0.1" />
+	<stance state_key="standing" accuracy="0.8" />
+	<stance state_key="crouching" accuracy="0.9" />
+	<stance state_key="prone" accuracy="1.0" />
+	<stance state_key="prone_moving" accuracy="0.1" />
+	<stance state_key="over_wall" accuracy="1" />
+	<modifier class="detectability" value="-0.1"/>
+
 	<animation state_key="recoil" animation_key="recoil1, big" />
-	<!-- <animation state_key="recoil" animation_key="recoil, hip fire" /> -->
-	<!-- <animation state_key="recoil" animation_key="recoil2, hip fire" /> -->
-	<!-- <animation state_key="recoil" animation_key="recoil3, hip fire" /> -->
-	<!-- <animation key="recoil" stance_key="over_wall" ref="12" /> -->
-	<!-- <animation key="recoil" stance_key="over_wall" ref="13" /> -->
-	<!-- <animation key="recoil" stance_key="over_wall" ref="14" /> -->
-    <!-- <animation key="recoil" stance_key="crouching" ref="12" /> -->
-    <!-- <animation key="recoil" stance_key="crouching" ref="13" /> -->
-    <!-- <animation key="recoil" stance_key="crouching" ref="14" /> -->
 	<animation key="recoil" stance_key="prone" animation_key="recoil1, big, prone" />
 	
 	<animation key="hold" ref="32" />

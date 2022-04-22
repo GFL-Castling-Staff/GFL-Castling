@@ -211,7 +211,7 @@ class ManualCall : Tracker {
                         " position='" + target.toString() + "' />";
                         ManualCallTask@ FairyRequest = ManualCallTask(characterId,c,3.0,Faction,target,"repair_call");
                         FairyRequest.setIconTypeKey("call_marker_drop");
-                        FairyRequest.setIndex(8);
+                        FairyRequest.setIndex(12);
                         FairyRequest.setSize(0.5);
                         FairyRequest.setDummyId(m_DummyCallID);
                         m_DummyCallID++;                        
@@ -251,7 +251,7 @@ class ManualCall : Tracker {
                         " position='" + target.toString() + "' />";
                         ManualCallTask@ FairyRequest = ManualCallTask(characterId,c,3.0,Faction,target,"rescue_call");
                         FairyRequest.setIconTypeKey("call_marker_drop");
-                        FairyRequest.setIndex(8);
+                        FairyRequest.setIndex(7);
                         FairyRequest.setSize(0.5);
                         FairyRequest.setDummyId(m_DummyCallID);
                         m_DummyCallID++;                        

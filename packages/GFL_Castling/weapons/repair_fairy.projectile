@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projectile class="grenade" name="repair loader" slot="0" radius="0.15" key="repair_fairy.projectile" pulldown_in_air="26.0">
-    <tag name="flashbang" />
     <result class="notify_script" key="repair_fairy"/>
     <trigger class="impact" />
     <rotation class="motion" />

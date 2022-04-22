@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapon file="one_hand_smg.animation_base" key="gkw_idwmod3_2108.weapon">
-    <next_in_chain key="gkw_idwmod3-skill" share_ammo="1" />
     <specification
 retrigger_time="0.042"
 accuracy_factor="1.0"
@@ -26,6 +25,6 @@ spread_range="0.1"/>
     <capacity value="0" source="rank" source_value="0.0" />
     <capacity value="1" source="rank" source_value="4.622" />
     <projectile file="bullet.projectile">
-        <result class="hit" kill_probability="1.65" kill_decay_start_time="0.682" kill_decay_end_time="2.7" />
+        <result class="hit" kill_probability="1.6" kill_probability_offset_on_successful_hit="0.7" kill_decay_start_time="0.05" kill_decay_end_time="1.3" />
     </projectile>
 </weapon>
