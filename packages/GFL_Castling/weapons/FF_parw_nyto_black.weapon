@@ -21,17 +21,13 @@
 	sustained_fire_grow_step="2.0" />
     <next_in_chain key="ff_parw_nyto_black_1.weapon" share_ammo="0" />
 
-    <inventory 
-    encumbrance="27.0" 
-    buy_price="648.0" 
-    sell_price="648.0"/>
 
 	<animation state_key="recoil"	animation_key="recoil, hip fire" />
 	<animation state_key="hold" animation_key="hold, hip fire" />
 	<animation state_key="crouching" animation_key="crouch, hold, hip fire" />
 	<animation state_key="crouch_moving" animation_key="crouching forwards, hip fire" />
     <animation state_key="walking_backwards" animation_key="walking backwards, hip fire" />  
-    <animation state_key="reload" animation_key="reloading, microgun" volume="0.7" />
+    <animation key="reload" animation_key="reloading, magazine rifle 1.8" />
 	<animation state_key="hold_on_wall" animation_key="hold, hip fire" />
     <animation state_key="still_against_wall" 	animation_key="hold, hip fire" />
 	<animation state_key="walking" animation_key="walking, hip fire" />
@@ -94,7 +90,7 @@
 	<animation state_key="crouching" animation_key="crouch, hold, hip fire" />
 	<animation state_key="crouch_moving" animation_key="crouching forwards, hip fire" />
     <animation state_key="walking_backwards" animation_key="walking backwards, hip fire" />  
-    <animation state_key="reload" animation_key="reloading, microgun" volume="0.7" />
+    <animation key="reload" animation_key="reloading, magazine rifle 1.8" />	
 	<animation state_key="hold_on_wall" animation_key="hold, hip fire" />
     <animation state_key="still_against_wall" 	animation_key="hold, hip fire" />
 	<animation state_key="walking" animation_key="walking, hip fire" />

@@ -29,10 +29,7 @@
     <animation state_key="still_against_wall" 	animation_key="hold, hip fire" />
 	<animation state_key="walking" animation_key="walking, hip fire" />
 	<animation state_key="running" animation_key="walking, hip fire" />  
-    <inventory 
-    encumbrance="17.0" 
-    buy_price="648.0" 
-    sell_price="648.0"/>
+
 
     <sound key="fire" fileref="Intruder_fire_FromCOD13.wav" pitch_variety="0.05" volume="2.5" />
     <sound key="magazine_out" fileref="Intruder_mgz_out_FromSAM4.wav" volume="0.8" />

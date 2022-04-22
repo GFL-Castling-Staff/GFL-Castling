@@ -24,10 +24,7 @@
 	projectiles_per_shot="1" />
 
 	<next_in_chain key="ff_dreamer_skill.weapon" share_ammo="0" />
-    <inventory 
-    encumbrance="27.0" 
-    buy_price="648.0" 
-    sell_price="648.0"/>
+
 
 	<animation state_key="recoil"	animation_key="recoil2, dreamer" />
     <animation key="recoil" stance_key="over_wall" animation_key="recoil2, dreamer" />
