@@ -50,7 +50,8 @@
     </projectile>
     
     <!--Accuracy, Movement speed-->
-        
+    <modifier class="speed" value="0.3" />
+
     <stance state_key="running" accuracy="0.88" />
     <stance state_key="walking" accuracy="0.88" />
     <stance state_key="crouch_moving" accuracy="0.9" />
