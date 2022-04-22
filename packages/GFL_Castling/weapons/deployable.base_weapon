@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<weapon file="secondary.base_weapon" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0">
+<weapon time_to_live_out_in_the_open="60.0" drop_count_factor_on_death="0" drop_count_factor_on_player_death="1">
     <tag name="engineer" />
     <specification 
 	magazine_size="1" 
@@ -12,6 +12,15 @@
     sight_range_modifier="1" 
     slot="1"
     deployment="1" />
+
+    <stance state_key="running" accuracy="0.3" />
+    <stance state_key="walking" accuracy="0.675" />
+    <stance state_key="crouch_moving" accuracy="0.75" />
+    <stance state_key="standing" accuracy="0.85" />
+    <stance state_key="crouching" accuracy="0.9" />
+    <stance state_key="prone" accuracy="0.95" /> 
+    <stance state_key="prone_moving" accuracy="0.3" />
+    <stance state_key="over_wall" accuracy="0.95" />  
 
     <animation state_key="running" 		animation_key="running, carrying load" />
     <animation state_key="walking" 		animation_key="walking, carrying load" />
@@ -37,4 +46,3 @@
     <modifier class="speed" value="-0.4" />
 
 </weapon>
-
