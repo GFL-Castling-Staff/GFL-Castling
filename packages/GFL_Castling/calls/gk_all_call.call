@@ -125,13 +125,13 @@
         <round instances="15" instance_class="grenade" instance_key="artillery_rocket_fairies.projectile" instance_spread="14 14 14" common_spread="8 0 8" launch_time="7.0" spawn_time="11.5">
             <sound class="spawn" fileref="woosh1.wav" volume="0.2" />
         </round>
-        <round instances="15" instance_class="grenade" instance_key="artillery_rocket_fairies.projectile" instance_spread="14 14 14" common_spread="8 0 8" launch_time="7.0" spawn_time="12.0">
+        <round instances="15" instance_class="grenade" instance_key="artillery_rocket_fairies.projectile" instance_spread="14 14 14" common_spread="8 0 8" launch_time="7.0" spawn_time="12.0">     
             <sound class="spawn" fileref="woosh1.wav" volume="0.2" />
         </round>
         <hud_icon filename="call_Firesupport_RocketFairy.png" />
         <capacity value="0" source="rank" source_value="0.0" />
         <capacity value="100" source="rank" source_value="1.794" />
-        <inventory encumbrance="0.0" price="600.0" />
+        <inventory encumbrance="0.0" price="750.0" />
     </call>
     <!-- 烟雾搜救妖精 -->
     <call name="UAV medical support" key="gk_rescue_fairy.call" initiation_comment1="Rescue Fairy--Smoke Medical Support" acknowledge_comment="Medical UAV is online and closing in on the target." acknowledge_time="0" launch_comment="Medical support is complete. May everyone survive the mission." notify_metagame="1">
@@ -198,12 +198,12 @@
     </call>
     <!-- 空袭妖精 -->
     <call name="Drone air strikes" key="gk_airstrike_fairy.call" initiation_comment1="Request drone air strikes" acknowledge_comment="Confirmed, UAV is online, situational awareness is complete " acknowledge_time="0" launch_comment="Execution of air strikes" notify_metagame="1">
-        <round instances="35" instance_class="grenade" instance_key="artillery_airstrike_fairies.projectile" instance_spread="10 10 10" common_spread="5 0 5" launch_time="1.0" spawn_time="6.8">
+        <round instances="35" instance_class="grenade" instance_key="artillery_airstrike_fairies.projectile" instance_spread="10 10 10" common_spread="5 0 5" launch_time="1.0" spawn_time="4.0">
             <effect class="launch" ref="gk_ShadowCallFlyby" shadow="1" />
             <sound class="launch" fileref="plane_flyby.wav" volume="6.0" />
             <sound class="spawn" fileref="woosh1.wav" volume="0.3" />
         </round>
-        <round instances="35" instance_class="grenade" instance_key="artillery_airstrike_fairies.projectile" instance_spread="10 10 10" common_spread="5 0 5" launch_time="3.0" spawn_time="7.5">
+        <round instances="35" instance_class="grenade" instance_key="artillery_airstrike_fairies.projectile" instance_spread="10 10 10" common_spread="5 0 5" launch_time="3.0" spawn_time="4.7">
             <sound class="launch" fileref="plane_flyby.wav" volume="0" />
             <sound class="spawn" fileref="woosh1.wav" volume="0.3" />
         </round>
