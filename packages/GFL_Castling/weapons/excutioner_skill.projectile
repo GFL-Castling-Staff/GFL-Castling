@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+<projectiles>
 <projectile class="grenade" name="30mm" slot="1" pulldown_in_air="8.0" key="excutioner_skill.projectile">
     <tag name="grenade"/>
-    <result class="blast" radius="4.5" damage="3" push="0.4" decal="1" faction_compare="not_equal"/>
+    <result class="blast" radius="4.8" damage="5" push="0.5" decal="1" faction_compare="not_equal"/>
     <trigger class="impact" />
-    <rotation class="motion" />
-    <model mesh_filename="agl.xml" />
+    <rotation class="none" />
+    <model mesh_filename="" />
 
     <commonness value="0.0" />
 
@@ -42,5 +43,19 @@
     <effect class="result" key="vehicle" copy="terrain" />     
     <effect class="result" key="character" copy="terrain" />
 
+</projectile>
+
+<projectile class="grenade" name="30mm" slot="1" pulldown_in_air="8.0" key="excutioner_skill_1.projectile">
+    <tag name="grenade"/>
+    <result class="blast" radius="4.5" damage="3" push="0.4" decal="1" faction_compare="not_equal"/>
+    <trigger class="time" time_to_live="0.21"/>
+    <rotation class="none" />
+    <model mesh_filename="excutioner_skill_shell.xml" />
+			<collider class="terrain" enabled="0" />  
+			<collider class="static_object" enabled="0" />  
+			<collider class="vehicle" enabled="0" /> 
+			<collider class="character" enabled="0" />
+    <commonness value="0.0" />
 
 </projectile>
+</projectiles>
