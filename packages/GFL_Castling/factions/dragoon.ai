@@ -64,7 +64,6 @@
 	<parameter class="longer_burst_time_variance" value="0.6" />
 	<parameter class="accuracy_penalty_range" value="0.07" />
 	<parameter class="melee_attack_wait_time" value="1.0" />
-	<parameter class="melee_range" value="0.0" />  
 	<parameter class="shooting_against_vehicle_burst_time" value="0.5" />
 	<parameter class="fighting_favor_helping_probability" value="0.7" />
 	<parameter class="check_need_for_help_range" value="40.0" />
@@ -100,6 +99,6 @@
 	<parameter class="celebrating_comment_probability" value="0.4" /> 
 	<parameter class="celebrating_stab_probability" value="1.0" /> 
 	<parameter class="uses_vehicles" value="0" />
-
+	<parameter class="stab_range" value="0.0" />
 	<parameter class="willingness_to_charge" value="1" />
 </ai>
