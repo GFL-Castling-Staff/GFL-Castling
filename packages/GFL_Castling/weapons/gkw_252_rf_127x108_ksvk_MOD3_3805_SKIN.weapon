@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapons>
+<weapon file="heavy_anti_materiel_rifle.animation_base" key="gkw_ksvkmod3_3805.weapon">
+
+
+    <!--Weapon specifications-->
+    
+    <specification 
+	retrigger_time="2.0" 
+	accuracy_factor="1" 
+	sustained_fire_grow_step="4" 
+	sustained_fire_diminish_rate="0.5" 
+	magazine_size="5" 
+	can_shoot_standing="0" 
+	can_shoot_crouching="1"
+	can_shoot_prone="0"
+	suppressed="0" 
+	name="KSVK(MOD3)-[Darkside Moonwalk]" 
+	class="2"
+	reload_one_at_a_time="0" 
+	sight_range_modifier="4" 
+	projectile_speed="224.47" 
+	barrel_offset="0.4" 
+	projectiles_per_shot="10" />
+    <inventory  buy_price="300.0" sell_price="300.0" />	
+    <next_in_chain key="gkw_ksvkmod3_3805_skill.weapon" share_ammo="0" />
+	<!--Animations-->
+	
+
+  	<animation state_key="hold_casual"			animation_key="dancing, kazachok" />
+    <animation key="cycle" animation_key="Brifle1.8" />
+	<animation key="cycle" stance_key="prone" animation_key="Brifle1.8p" />	
+    <animation key="reload" animation_key="reloading, magazine rifle 2.1" />	
+	
+	<!--Sounds-->
+	
+    <sound key="fire" fileref="ksvk_fire_FromSURVARIUM.wav" volume="1.4" />
+    <sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.6"/>
+    <sound key="magazine_out" fileref="ksvk_mgz_out_FromSURVARIUM.wav" volume="0.5"/>
+    <sound key="magazine_in" fileref="ksvk_mgz_in_FromSURVARIUM.wav" volume="0.5"/>
+    <sound key="cycle_out" fileref="ksvk_cycle_out_FromSURVARIUM.wav" volume="0.1"/>
+    <sound key="cycle_in" fileref="ksvk_cycle_in_FromSURVARIUM.wav" volume="0.5"/>
+    <sound class="impact" fileref="rifle_drop.wav" />
+   
+	<!--Model, Icon, Cost-->
+   
+    <model filename="gkw_rf_ksvk_3805.xml" />
+    <hud_icon filename="gkw_ksvk_3805.png" />
+    <capacity value="0" source="rank" source_value="0.0" />
+    <capacity value="1" source="rank" source_value="6.048" />
+    <commonness value="0" in_stock="0" />
+<!--<inventory  price="4.0" />-->
+	
+	<!--Ballistics-->
+	
+
+    <weak_hand_hold offset="0.3" />
+    <projectile file="ksvk_mod3.projectile" />
+    <!--Accuracy, Movement speed-->
+ 	<stance state_key="running" accuracy="1.0" />   
+	<stance state_key="walking" accuracy="1.0" />
+    <stance state_key="crouch_moving" accuracy="1.0" />
+    <stance state_key="prone_moving" accuracy="1.0" />
+    <stance state_key="standing" accuracy="1.0"/>
+    <stance state_key="crouching" accuracy="1.0" />
+    <stance state_key="prone" accuracy="1.0" />
+    <stance state_key="over_wall" accuracy="1.0" />  
+    <capacity value="0" source="rank" source_value="0.0" />
+    <capacity value="1" source="rank" source_value="4.622" />
+    <modifier class="speed" value="-0.3" /> 
+</weapon>
+<weapon file="heavy_anti_materiel_rifle.animation_base" key="gkw_ksvkmod3_3805_skill.weapon">
+
+
+    <!--Weapon specifications-->
+    
+    <specification 
+	retrigger_time="6"  
+	accuracy_factor="1" 
+	sustained_fire_grow_step="3" 
+	sustained_fire_diminish_rate="0.5" 
+	magazine_size="1" 
+	can_shoot_standing="0" 
+	can_shoot_crouching="1"
+	can_shoot_prone="0"
+	suppressed="0" 
+	name="KSVK(MOD3)-[Darkside Moonwalk]-[Concussive Blast]" 
+	class="2"
+	sight_range_modifier="4" 
+	reload_one_at_a_time="0" 
+	projectile_speed="224.47" 
+	barrel_offset="0.4" 
+	projectiles_per_shot="12" />
+    <inventory  buy_price="300.0" sell_price="300.0" />	
+    <next_in_chain key="gkw_ksvkmod3_3805.weapon" share_ammo="0" />
+	<!--Animations-->
+	
+    <animation key="cycle" animation_key="Brifle1.8" />
+	<animation key="cycle" stance_key="prone" animation_key="Brifle1.8p" />	
+  	<animation state_key="hold_casual"			animation_key="dancing, kazachok" />
+    <animation key="reload" animation_key="magBrifleRntw" />	
+	<animation state_key="next_in_chain_in" animation_key="RFswitch4" />
+	
+	<!--Sounds-->
+	
+     <sound key="fire" fileref="ksvkmod3skill_fire_FromAPEX.wav" volume="1.3" />
+    <sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.6"/>
+    <sound key="magazine_out" fileref="ksvk_mgz_out_FromSURVARIUM.wav" volume="0.5"/>
+    <sound key="magazine_in" fileref="ksvk_mgz_in_FromSURVARIUM.wav" volume="0.5"/>
+    <sound key="cycle_out" fileref="ksvk_cycle_out_FromSURVARIUM.wav" volume="0.1"/>
+    <sound key="cycle_in" fileref="ksvk_cycle_in_FromSURVARIUM.wav" volume="0.5"/>
+    <sound class="impact" fileref="rifle_drop.wav" />
+   
+	<!--Model, Icon, Cost-->
+   
+    <model filename="gkw_rf_ksvk_3805.xml" />
+    <hud_icon filename="gkw_ksvk_3805.png" />
+    <capacity value="0" source="rank" source_value="0.0" />
+    <capacity value="1" source="rank" source_value="6.048" />
+    <commonness value="0" in_stock="0" />
+	<!--Ballistics-->
+	
+
+    <weak_hand_hold offset="0.3" />
+    <projectile file="ksvk_mod3.projectile" >
+        <result class="blast" radius="4" damage="7" push="0.4" decal="0" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0" />
+    </projectile>
+
+    <!--Accuracy, Movement speed-->
+ 	<stance state_key="running" accuracy="1.0" />   
+	<stance state_key="walking" accuracy="1.0" />
+    <stance state_key="crouch_moving" accuracy="1.0" />
+    <stance state_key="prone_moving" accuracy="1.0" />
+    <stance state_key="standing" accuracy="1.0"/>
+    <stance state_key="crouching" accuracy="1.0" />
+    <stance state_key="prone" accuracy="1.0" />
+    <stance state_key="over_wall" accuracy="1.0" />  
+    <capacity value="0" source="rank" source_value="0.0" />
+    <capacity value="1" source="rank" source_value="4.622" />
+    <modifier class="speed" value="-0.5" /> 
+</weapon>
+</weapons>

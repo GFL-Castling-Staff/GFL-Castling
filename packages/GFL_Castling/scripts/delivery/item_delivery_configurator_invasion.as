@@ -202,7 +202,9 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		ScoredResource("gkw_m4sopmodii_531.weapon", "weapon", 1.0f),
 		ScoredResource("gkw_m1918_102.weapon", "weapon", 1.0f),
 		ScoredResource("gkw_m1918_806.weapon", "weapon", 1.0f),
-		ScoredResource("gkw_m1918_1606.weapon", "weapon", 1.0f)
+		ScoredResource("gkw_m1918_1606.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_ksvk_3405.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_ksvk_3805.weapon", "weapon", 1.0f)
 			},
 			{
 		ScoredResource("bp_t5_16lab.carry_item", "carry_item", 1.0f),
@@ -338,7 +340,9 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 				ScoredResource("gkw_mp5mod3_3003.weapon","weapon",1.0f),
 				ScoredResource("gkw_m1918mod3_102.weapon","weapon",1.0f),
 				ScoredResource("gkw_m1918mod3_806.weapon","weapon",1.0f),
-				ScoredResource("gkw_m1918mod3_1606.weapon","weapon",1.0f)
+				ScoredResource("gkw_m1918mod3_1606.weapon","weapon",1.0f),
+				ScoredResource("gkw_ksvkmod3_3405.weapon","weapon",1.0f),
+				ScoredResource("gkw_ksvkmod3_3805.weapon","weapon",1.0f)
 			},
 			{
 				ScoredResource("icecream.projectile", "projectile", 1.0f, 1)         
