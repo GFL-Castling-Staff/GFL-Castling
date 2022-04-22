@@ -20,10 +20,6 @@
 		sustained_fire_diminish_rate="0.8"
 		sustained_fire_grow_step="0.25"/>
 
-    <inventory 
-    encumbrance="27.0" 
-    buy_price="648.0" 
-    sell_price="648.0"/>
       <animation state_key="recoil"	animation_key="recoil,ouroboros" />
       <animation state_key="recoil" stance_key="over_wall" animation_key="recoil,ouroboros" />
       <animation state_key="reload"	animation_key="reloading, weapon dual2" />
