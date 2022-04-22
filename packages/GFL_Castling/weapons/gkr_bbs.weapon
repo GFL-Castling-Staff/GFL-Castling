@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<weapon file="base_secondary.weapon" key="gkr_bbs.weapon" radius="0.45">
+<weapon key="gkr_bbs.weapon" drop_count_factor_on_death="0.0" drop_count_factor_on_player_death="0.0" radius="0.45">
     <tag name="wrench" />
     <specification 
-    retrigger_time="0.5" 
+    retrigger_time="0.25" 
     accuracy_factor="1.0" 
     sustained_fire_grow_step="0.0" 
     sustained_fire_diminish_rate="1.0" 
@@ -12,10 +12,16 @@
     can_shoot_crouching="1" 
     can_shoot_prone="0" 
     slot="0" 
+    consume="0"
     name="PPSH41-Engineering Mecha" 
-    class="0" 
-    projectile_speed="10.0" 
-    barrel_offset_3d="0 0.52 0.0"/>
+    class="5"
+    character_state="unwound" 
+    affect_characters="0"
+    affect_vehicles="1" 
+    damage="-1.0"
+    range="0.1"
+    />
+    
     <animation state_key="recoil" 		animation_key="isc repairing, large mecha" />
     <animation state_key="reload" animation_key="isc reload, large mecha" />
     <animation state_key="hold" 		animation_key="isc still, large mecha" />
@@ -45,15 +51,22 @@
 	<addon_model filename="backpack_propane.xml" />
 
     <drop_on_death_result class="spawn" instance_class="projectile" instance_key="propane.projectile" min_amount="1" max_amount="1" offset="0 1 0" position_spread="0 0" direction_spread="0.01 0.01" />    
-    <projectile file="bbs_r.projectile" />
 
     <model filename=""/>
 
-    <capacity value="4" source="rank" source_value="0.0" />
+    <capacity value="1" source="rank" source_value="0.0" />
 
     <hud_icon filename="gkr_bbs.png" />
     <commonness value="0.0" />
     <inventory encumbrance="20.0" price="80.0" />
     <modifier class="speed" value="-0.35" />    
 
+    <stance state_key="running" accuracy="0.3" />
+    <stance state_key="walking" accuracy="0.675" />
+    <stance state_key="crouch_moving" accuracy="0.75" />
+    <stance state_key="standing" accuracy="0.85" />
+    <stance state_key="crouching" accuracy="0.9" />
+    <stance state_key="prone" accuracy="0.95" /> 
+    <stance state_key="prone_moving" accuracy="0.3" />
+    <stance state_key="over_wall" accuracy="0.95" />  
 </weapon>
