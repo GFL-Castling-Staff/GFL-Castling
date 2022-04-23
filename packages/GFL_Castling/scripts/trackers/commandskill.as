@@ -118,9 +118,11 @@ class CommandSkill : Tracker {
                 }                 
                 if (c_weaponType=="ff_excutioner_2.weapon"){
                     excuteExcutionerskill(cId,senderId);        
+                    return;
                 }        
                 if (c_weaponType=="ff_parw_alina.weapon"){
-                    excuteBaibaoziskill(cId,senderId);        
+                    excuteBaibaoziskill(cId,senderId);
+                    return;
                 }              
                 if (c_weaponType=="gkw_ppsh41mod3.weapon"|| c_weaponType=="gkw_ppsh41.weapon"){
                     excutePPSH41skill(cId,senderId);
@@ -285,14 +287,9 @@ class CommandSkill : Tracker {
                         "Vector_SkillC3.wav"
                     };
                     playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
-                    playAnimationKey(m_metagame,characterId,"throwing, upside",false,true);
+                    playAnimationKey(m_metagame,characterId,"throwing, upside",true,true);
                     c_pos=c_pos.add(Vector3(0,1,0));
-                    if (checkFlatRange(c_pos,stringToVector3(target),13)){
-                        CreateProjectile(m_metagame,c_pos,stringToVector3(target),"VVfirenade.projectile",characterId,factionid,6,20.0);
-                    }
-                    else{
-                        CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"VVfirenade.projectile",characterId,factionid,20.0,4.0);
-                    }
+                    CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"VVfirenade.projectile",characterId,factionid,20.0,4.0);
                 }
             }
         }
@@ -319,7 +316,7 @@ class CommandSkill : Tracker {
             Vector3 c_pos = stringToVector3(characterinfo.getStringAttribute("position"));
             int factionid = characterinfo.getIntAttribute("faction_id");
             c_pos=c_pos.add(Vector3(0,1,0));
-            if (checkFlatRange(c_pos,stringToVector3(target),13)){
+            if (checkFlatRange(c_pos,stringToVector3(target),7)){
                 CreateProjectile(m_metagame,c_pos,stringToVector3(target),"SopmodSk_script.projectile",characterId,factionid,10,26.0);
             }
             else{
@@ -357,7 +354,7 @@ class CommandSkill : Tracker {
             int factionid = characterinfo.getIntAttribute("faction_id");
             c_pos=c_pos.add(Vector3(0,1,0));
             if(pussyskin){
-                if (checkFlatRange(c_pos,stringToVector3(target),13)){
+                if (checkFlatRange(c_pos,stringToVector3(target),7)){
                     CreateProjectile(m_metagame,c_pos,stringToVector3(target),"40mm_hk416_3401.projectile",characterId,factionid,10,26.0);
                 }
                 else{
@@ -372,7 +369,7 @@ class CommandSkill : Tracker {
                 SkillArray.insertLast(SkillTrigger(characterId,16,"HK416MOD3"));
             }
             else{
-                if (checkFlatRange(c_pos,stringToVector3(target),13)){
+                if (checkFlatRange(c_pos,stringToVector3(target),7)){
                     CreateProjectile(m_metagame,c_pos,stringToVector3(target),"40mm_hk416.projectile",characterId,factionid,10,26.0);
                 }
                 else{
@@ -826,11 +823,11 @@ class CommandSkill : Tracker {
 
             CreateProjectile(m_metagame,c_pos,s_pos,"baibaozi_skill.projectile",characterId,factionid,5020,8);
 
-            array<string> Voice={
-            "Excutioner_buhuo_SKILL02_JP.wav",
-            "Excutioner_buhuo_SKILL03_JP.wav",
-            };
-            playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+            // array<string> Voice={
+            // "Excutioner_buhuo_SKILL02_JP.wav",
+            // "Excutioner_buhuo_SKILL03_JP.wav",
+            // };
+            // playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
             SkillArray.insertLast(SkillTrigger(characterId,25,"ALINA"));
             
         }
