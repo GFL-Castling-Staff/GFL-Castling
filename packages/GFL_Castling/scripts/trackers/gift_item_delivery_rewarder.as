@@ -96,13 +96,25 @@ class GiftItemDeliveryRandomRewarder : ItemDeliveryRewarder {
 				a["%player_name"] = playerName;
 				a["%delivered_item_name"] = getResourceName(m_metagame, targetItem.m_key, targetItem.m_type);
 
-				//sendFactionMessageKey(m_metagame, 0, "gift box delivered", a);
 				sendPrivateMessageKey(m_metagame, playerId, "gift box delivered", a);
+
+				for (uint i = 0; i < m_rewardItemPasses.size(); ++i) {
+					array<ScoredResource@>@ rewardItems = @m_rewardItemPasses[i];
+
+					ScoredResource@ r = getRandomScoredResource(rewardItems);
+					for (int k = 0; k < r.m_amount; ++k) {
+						addItemInBackpack(m_metagame, characterId, r);
+					}
+
+					string name = getResourceName(m_metagame, r.m_key, r.m_type);
+					a["%item_name" + formatInt(i+1)] = name;
+				}
+				sendPrivateMessageKey(m_metagame, playerId, "gift box delivery, reward", a);
 			}
 		}
-
-		TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer(); 
-		tasker.add(DelayedCallTask(CallIntInt(CALL_INT_INT(this.doDelayedReward), playerId, characterId), 0.1));
+		// 我不知道为什么这里要写的这么卡，占用大量。
+		// TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer(); 
+		// tasker.add(DelayedCallTask(CallIntInt(CALL_INT_INT(this.doDelayedReward), playerId, characterId), 0.1));
 	}
 
 	// ------------------------------------------------------------------------------------------------
