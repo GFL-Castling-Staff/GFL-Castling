@@ -646,10 +646,15 @@ class BasicCommandHandler : Tracker {
             spawnInstanceNearPlayer(senderId, "kcco_ar", "soldier", 1);
             spawnInstanceNearPlayer(senderId, "kcco_ar", "soldier", 1);
             spawnInstanceNearPlayer(senderId, "kcco_ar", "soldier", 1);      
-		} else if (checkCommand(message,"giveSFWweapon")){
+		} else if (checkCommand(message,"givesfweapon")){
 			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
 			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","ff_agent.weapon");
-			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","ff_alchemist.weapon");          			
+			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","ff_alchemist.weapon");
+		} else if (checkCommand(message,"114514sf")){
+		const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
+			for (int k = 0; k < 500; ++k) {
+				addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"carry_item","gift_box_1.carry_item");            			
+			}
 		} else  if(checkCommand(message, "wound")) {
 			for (int i = 2; i < 100; ++i) {
 				string command =

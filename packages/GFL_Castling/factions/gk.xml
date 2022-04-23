@@ -266,7 +266,7 @@
 		<resources file="gk_rf.resources" />
 	</soldier>
 	<soldier name="default_mg" spawn_score="0.8" squad_size_xp_cap="0.0" copy_from="default_spawn_ai">
-		<ai filename="gk_base.ai" />
+		<ai filename="eod.ai" />
 		<resources file="gk_mg.resources" />
 	</soldier>
 	<soldier name="default_sg" spawn_score="0.8" squad_size_xp_cap="0.0" copy_from="default_spawn_ai">
