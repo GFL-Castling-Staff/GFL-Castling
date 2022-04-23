@@ -27,41 +27,9 @@
     <animation state_key="recoil"	animation_key="recoil, large mecha" />
     <animation key="reload" animation_key="change weapon, large mecha" />
     <animation state_key="cycle" animation_key="still, large mecha" />
-    <animation key="still" target_key="still, large mecha" />
-    <animation key="still against wall" target_key="still, large mecha" />
-    <animation key="still, heavy weapon" target_key="still, large mecha" />
     <animation key="walking" target_key="walking, large mecha" />
-    <animation key="walking backwards" target_key="walking, large mecha" />
     <animation key="running" target_key="walking, large mecha" />
-    <animation key="crouch still" target_key="crouch2, large mecha" />
-    <animation key="crouching forwards" target_key="crouch walking, large mecha" />
-    <animation key="crouching backwards" target_key="crouch walking, large mecha" />
-    <animation key="prone" target_key="defence, large mecha" />
-    <animation key="prone, moving forwards" target_key="ork prone, moving forwards" />
-    <animation key="going prone" target_key="going defence, large mecha" />
-    <animation key="leaving prone" target_key="defence walking, large mecha" />
-    <animation key="dive" target_key="arriving ground, large mecha" />
-    <animation key="jumping" target_key="jumping, large mecha" />
-    <animation key="lifting up" target_key="jumping, large mecha" />
-    <animation key="throwing self over" target_key="jumping, large mecha" />
-    <animation key="falling" target_key="arriving ground, large mecha" />
-    <animation key="arriving ground" target_key="arriving ground, large mecha" />
-    <animation key="climbing ladder, still" target_key="jumping, large mecha" />
-    <animation key="climbing ladder" target_key="jumping still, large mecha" />
-    <animation key="climbing ladder ending" target_key="arriving ground, large mecha" />
-    <animation key="wounded, still, 66" target_key="wounded, large mecha" />
-    <animation key="wounded, moving forwards, 67" target_key="defence walking, large mecha" />
-    <animation key="stunned" target_key="stun, large mecha" />
-    <animation key="surrender" target_key="surrender, large mecha" />
     <animation key="stabbing" target_key="stabbing, large mecha" />
-    <animation key="throwing, upside" target_key="throwing, large mecha" />
-    <animation key="change weapon out" target_key="change weapon, large mecha" />
-    <animation key="change weapon in" target_key="change weapon, large mecha" />
-    <animation key="change weapon out, reversed" target_key="change weapon, large mecha" />
-    <animation key="change weapon in, reversed" target_key="change weapon, large mecha" />
-    <animation key="change weapon in, single hand carry" target_key="change weapon, large mecha" />
-    <animation key="celebrating" target_key="jumping, large mecha" />
-    <animation key="celebrating, shooting" target_key="jumping, large mecha" />
     <sound key="fire" fileref="Teslatrooper_fire_FromBF5.wav" volume="1.1" />
     <sound key="cycle" fileref="mossberg500_cycle.wav" />
     <sound key="reload_one" fileref="Teslatrooper_reload_FromBF5.wav" volume="0.8" />
