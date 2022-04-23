@@ -19,6 +19,8 @@
     projectiles_per_shot="1" />
 
     <inventory  buy_price="110.0" sell_price="110.0" />	
+    <capacity value="0" source="rank" source_value="0.0" />
+    <capacity value="1" source="rank" source_value="6.048" />
 
     <next_in_chain key="gkw_m1891mod3_skill.weapon" share_ammo="0"/>
 
@@ -71,6 +73,8 @@
     projectiles_per_shot="2" />
 
     <inventory  buy_price="110.0" sell_price="110.0" />	
+    <capacity value="0" source="rank" source_value="0.0" />
+    <capacity value="1" source="rank" source_value="6.048" />
 
     <next_in_chain key="gkw_m1891mod3.weapon" share_ammo="0"/>
 
@@ -99,6 +103,7 @@
     <projectile file="bullet.projectile">
         <result class="blast" damage="12" radius="2.5" push="0.2" charater_state="death" faction_compare="not_equal" />
     </projectile>
+	<stance state_key="running" accuracy="1" />
 	<stance state_key="walking" accuracy="1" />
     <stance state_key="crouch_moving" accuracy="1" />
     <stance state_key="prone_moving" accuracy="1" />
