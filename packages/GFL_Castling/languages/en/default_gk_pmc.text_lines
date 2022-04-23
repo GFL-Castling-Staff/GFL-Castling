@@ -764,33 +764,43 @@
     <comment key="Launch Pierre II" text="Launch Pierre II" />
     <comment key="Launch Pierre II and MG T-Doll" text="Launch Pierre II"/>
 
-  <comment key="Shock Zone advance, held by enemy, part 1" text="数据同步完成，已经确认控制铁血工造的本地生产线，各梯队收拢单位，准备打扫战场" />
-  <comment key="Shock Zone advance, held by enemy, part 2" text="作战司令部的人看来是不想弯腰处理这种琐事，但有他们保护我们侧翼也算令人安————受到攻击？什么时候？！" />
-  <comment key="Shock Zone advance, held by enemy, part 3" text="敌我识别明明没有告警……该死！是军方！我们正在被军方———" />
-  <comment key="Shock Zone advance, held by enemy, part 4" text="而且我们……指挥系统受到……大面积攻击……" />
-  <comment key="Shock Zone advance, held by enemy, part 5" text='……推测是受到……升级的"伞"病毒感染！' />
-  <comment key="Shock Zone advance, held by enemy, part 6" text="指挥官，你的梯队都在伞病毒屏蔽范围内……立刻撤退！" />
-  <comment key="Shock Zone start with 1 base, part 1" text="备用信道Bate-Gamma-3725，May……MayDay，MayDay！" />
-  <comment key="Shock Zone start with 1 base, part 2" text="所有接收到这一广播的……单位请注意！所有接收到这一广播的格里芬单位请注意！" />
-  <comment key="Shock Zone start with 1 base, part 3" text="S09区此刻战事不利，区域内出现了重大混乱事件！" />
-  <comment key="Shock Zone start with 1 base, part 4" text="军方不再是友军！立即更换敌我识别配置！S11……的撤离走廊绝不能丢掉……不惜一切代价" />
-  <comment key="Shock Zone start with 1 base, part 5" text="所有S11区格里芬成员，立刻进入战斗状态！清剿剩余的铁血部队，让尽可能多的我方部队撤离！" />
-
-  <comment key="Zone Attack start with 1 base, part 1" text="延迟测试……确认，52ms，数据传输在可接受范围内。" />
-  <comment key="Zone Attack start with 1 base, part 2" text="时间紧急，长话短说，总部给你们的命令是清扫周边铁血，占领或摧毁任务地区的铁血生产线" />
-  <comment key="Zone Attack start with 1 base, part 3" text="军方的特种作战司令部将协助我们行动，他们位于你们的侧翼" />
-  <comment key="Zone Attack start with 1 base, part 4" text="虽说是协助，但身为PMC员工的诸位还是不要去打扰他们为好，克鲁格先生也不希望各位搞出什么麻烦" />
-  <comment key="Zone Attack start with 1 base, part 5" text="S09区将利用铁血兵力被牵制的这一时间，完成与IOP联合执行的主要任务" />
-  <comment key="Zone Attack start with 1 base, part 6" text="时间宝贵，各梯队接受命令后,立刻展开作战队形" />
-  <comment key="Zone Attack advance, held by enemy, part 1" text="数据传输完成，传感器扫描已确认……敌方单位正在退却，恭喜各位，任务完成。" />
-  <comment key="Zone Attack advance, held by enemy, part 2" text="克鲁格先生给各位特批了假期，接下来两天大家都可以带薪放松一下。" />
-  <comment key="Zone Attack advance, held by enemy, part 3" text="嗯？格林娜小姐？你说什么？——嗯，那是当然，下一个行动已经在计划阶段了" />
-  <comment key="Zone Attack advance, held by enemy, part 4" text="但不必担心，新苏联政府终于想起自己的管理义务了，下次行动会有友军辅助我们作战" />
-  <comment key="Zone Attack advance, held by enemy, part 5" text='这也是为什么克鲁格先生会给各位特批假期' />
-  <comment key="Zone Attack advance, held by enemy, part 6" text="打扫战场，调整一下自己的状态。做好最终消灭敌人的准备" />
-
-  <comment key="Map105HandleAll" text="我们已经控制了所有撤离节点，请坚持住……安全局的增援马上就来！"/>
-  <comment key="Map105WIN" text="*震耳欲聋的爆炸声*"/>
-  <comment key="Map105SFdown" text="残余铁血部队已经被击退！全员梯队去占领所有的撤离节点！"/>
+    <comment key="Shock Zone advance, held by enemy, part 1" text="Data sync completed. Already control the S.F. base. Each echelon clean the battlefield." />
+    <comment key="Shock Zone advance, held by enemy, part 2" text="The KCCO guys just help us a little, but with them protecting our flank is also safer------Under attack? When? " />
+    <comment key="Shock Zone advance, held by enemy, part 3" text="Enemy identification didn't alert.....Damn! Its the KCCO! We are undering attack by KCC......" />
+    <comment key="Shock Zone advance, held by enemy, part 4" text="And our command system is down..." />
+    <comment key="Shock Zone advance, held by enemy, part 5" text='Presumably infected by the upgraded "OGAS" virus!' />
+    <comment key="Shock Zone advance, held by enemy, part 6" text="Commander, all your echelons are within parachute virus shielding range. Retreat immediately!" />
+    <comment key="Shock Zone start with 1 base, part 1" text="备用信道Bate-Gamma-3725，May……MayDay，MayDay！" />
+    <comment key="Shock Zone start with 1 base, part 2" text="所有接收到这一广播的……单位请注意！所有接收到这一广播的格里芬单位请注意！" />
+    <comment key="Shock Zone start with 1 base, part 3" text="S09区此刻战事不利，区域内出现了重大混乱事件！" />
+    <comment key="Shock Zone start with 1 base, part 4" text="军方不再是友军！立即更换敌我识别配置！S11……的撤离走廊绝不能丢掉……不惜一切代价" />
+    <comment key="Shock Zone start with 1 base, part 5" text="所有S11区格里芬成员，立刻进入战斗状态！清剿剩余的铁血部队，让尽可能多的我方部队撤离！" />
+  
+    <comment key="Zone Attack start with 1 base, part 1" text="延迟测试……确认，52ms，数据传输在可接受范围内。" />
+    <comment key="Zone Attack start with 1 base, part 2" text="时间紧急，长话短说，总部给你们的命令是清扫周边铁血，占领或摧毁任务地区的铁血生产线" />
+    <comment key="Zone Attack start with 1 base, part 3" text="军方的特种作战司令部将协助我们行动，他们位于你们的侧翼" />
+    <comment key="Zone Attack start with 1 base, part 4" text="虽说是协助，但身为PMC员工的诸位还是不要去打扰他们为好，克鲁格先生也不希望各位搞出什么麻烦" />
+    <comment key="Zone Attack start with 1 base, part 5" text="S09区将利用铁血兵力被牵制的这一时间，完成与IOP联合执行的主要任务" />
+    <comment key="Zone Attack start with 1 base, part 6" text="时间宝贵，各梯队接受命令后,立刻展开作战队形" />
+    <comment key="Zone Attack advance, held by enemy, part 1" text="数据传输完成，传感器扫描已确认……敌方单位正在退却，恭喜各位，任务完成。" />
+    <comment key="Zone Attack advance, held by enemy, part 2" text="克鲁格先生给各位特批了假期，接下来两天大家都可以带薪放松一下。" />
+    <comment key="Zone Attack advance, held by enemy, part 3" text="嗯？格林娜小姐？你说什么？——嗯，那是当然，下一个行动已经在计划阶段了" />
+    <comment key="Zone Attack advance, held by enemy, part 4" text="但不必担心，新苏联政府终于想起自己的管理义务了，下次行动会有友军辅助我们作战" />
+    <comment key="Zone Attack advance, held by enemy, part 5" text='这也是为什么克鲁格先生会给各位特批假期' />
+    <comment key="Zone Attack advance, held by enemy, part 6" text="打扫战场，调整一下自己的状态。做好最终消灭敌人的准备" />
+  
+    <comment key="Awakening start with 1 base, part 1" text="Let’s skip the pleasantries. And for efficiency's sake, just call me Helian" />
+    <comment key="Awakening start with 1 base, part 2" text="As you know, S.F. has recently launched multiple attacks in Area S09 without prior notice" />
+    <comment key="Awakening start with 1 base, part 3" text="This is a huge blow on Griffin's reputation so the higher-ups are taking this very seriously" />
+    <comment key="Awakening start with 1 base, part 4" text="As HQ takes on the Sangvis forces, they've also sent me to investigate the reason behind their sudden riot" />
+    <comment key="Awakening start with 1 base, part 5" text="Words from above, Commander, are that you'll be assisting me in my work till it's done" />
+    <comment key="Awakening start with 1 base, part 6" text="…I know this might be stretching it a bit, but we don’t have time or manpower to spare" />
+    <comment key="Awakening start with 1 base, part 7" text="That is all, Commander. Do your best, and show us what you're worth" />
+  
+  
+  
+    <comment key="Map105HandleAll" text="We have all evacuation nodes under control, please hold on. The Security's reinforcements are on the way!"/>
+    <comment key="Map105WIN" text="*Something blow up loudly*"/>
+    <comment key="Map105SFdown" text="Remaining S.F. troops have been repulsed! All echelon go to capture all evacuation nodes!"/>
 
 </character>

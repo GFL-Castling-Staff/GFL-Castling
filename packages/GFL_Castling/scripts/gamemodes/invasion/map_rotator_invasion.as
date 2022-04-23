@@ -378,6 +378,16 @@ class MapRotatorInvasion : MapRotator {
 						m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 3.0, 0, stage.m_mapInfo.m_name+" start with 1 base, part 5", a));
 						m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 3.0, 0, stage.m_mapInfo.m_name+" start with 1 base, part 6", a));
 					}
+					if (stage.m_mapInfo.m_name == "Awakening") {
+						m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 2.0, 0, stage.m_mapInfo.m_name+" start with 1 base, part 1", a));
+						m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 3.0, 0, stage.m_mapInfo.m_name+" start with 1 base, part 2", a));
+						m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 3.0, 0, stage.m_mapInfo.m_name+" start with 1 base, part 3", a));
+						m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 3.0, 0, stage.m_mapInfo.m_name+" start with 1 base, part 4", a));
+						m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 3.0, 0, stage.m_mapInfo.m_name+" start with 1 base, part 5", a));
+						m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 3.0, 0, stage.m_mapInfo.m_name+" start with 1 base, part 6", a));
+						m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 3.0, 0, stage.m_mapInfo.m_name+" start with 1 base, part 7", a));
+						
+					}
 
 					else{
 						// commander says something
