@@ -17,10 +17,10 @@
     <inventory buy_price="10.0" sell_price="10.0" />
 
 
-    <sound key="fire" fileref="uzi_Fire_FromSAM2.wav" pitch_variety="0.05" volume="0.5" />
-    <sound key="magazine_out" fileref="uzi_mgz_out_FromCOD16.wav" volume="1" />
-    <sound key="magazine_in" fileref="uzi_mgz_in_FromCOD16.wav" volume="1" />
-    <sound key="cycle" fileref="uzi_cycle_FromCOD16.wav" volume="1" />
+    <sound key="fire" fileref="vz61_fire_FromSQUAD.wav" pitch_variety="0.05" volume="0.9" />
+    <sound key="magazine_out" fileref="vz61_mgz_out_FromSQUAD.wav" volume="0.6" />
+    <sound key="magazine_in" fileref="vz61_mgz_in_FromSQUAD.wav" volume="0.6" />
+    <sound key="cycle" fileref="vz61_cycle_FromSQUAD.wav" volume="0.6" />
     <sound class="impact" fileref="rifle_drop.wav" />    
 	
     <model filename=""/>
