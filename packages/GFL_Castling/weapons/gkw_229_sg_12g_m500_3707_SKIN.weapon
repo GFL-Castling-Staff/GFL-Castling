@@ -7,21 +7,21 @@
     <specification 
 	retrigger_time="-1.0" 
 	accuracy_factor="0.9" 
-	sustained_fire_grow_step="0.8" 
+	sustained_fire_grow_step="1.3" 
 	sustained_fire_diminish_rate="2" 
-	magazine_size="6" 
+	magazine_size="9" 
 	can_shoot_standing="1" 
 	suppressed="0" 
 	name="M500-[Daydreaming]" 
 	class="1" 
 	reload_one_at_a_time="1"
 	sight_range_modifier="1" 
-	projectile_speed="85.74" 
+	projectile_speed="120" 
 	barrel_offset="0.4" 
-	projectiles_per_shot="14"
-	spread_range="0.2"
+	projectiles_per_shot="11"
+	spread_range="0.3"
 	 />
-    <inventory  buy_price="20.0" sell_price="10.0" />
+    <inventory  buy_price="50.0" sell_price="50.0" />
     <commonness value="0" in_stock="0" />
 	<!--Animations-->
 	
@@ -41,7 +41,6 @@
    
     <model filename="gkw_sg_m870.xml" />
     <hud_icon filename="gkw_m500_3707.png" />
-<commonness value="0.2" in_stock="1" can_respawn_with="1" />
 
 	
 	<!--Ballistics-->
@@ -50,8 +49,8 @@
     <weak_hand_hold offset="0.3" />
     <projectile file="bullet.projectile">
         <result class="hit" 
-        kill_probability="1.9" 
-        kill_decay_start_time="0.175" 
+        kill_probability="2.0" 
+        kill_decay_start_time="0.03" 
         kill_decay_end_time="0.700" />
     </projectile>
     
