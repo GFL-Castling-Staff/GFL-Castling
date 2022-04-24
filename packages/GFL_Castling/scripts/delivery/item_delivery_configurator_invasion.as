@@ -110,7 +110,6 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		array<array<ScoredResource@>> rewardPasses = {
 			{
 		ScoredResource("gkw_ump45_410.weapon", "weapon", 1.0f),
-		ScoredResource("lottery.carry_item", "carry_item", 0.3f), 
 		ScoredResource("gkw_ump45_535.weapon", "weapon", 1.0f),
 		ScoredResource("gkw_fal_2406.weapon", "weapon", 1.0f),
 		ScoredResource("gkw_fal_308.weapon", "weapon", 1.0f),
