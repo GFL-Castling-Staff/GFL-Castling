@@ -128,6 +128,10 @@ class CommandSkill : Tracker {
                     excutePPSH41skill(cId,senderId);
                     return;
                 }
+                if (c_weaponType=="gkw_ump45mod3.weapon"|| c_weaponType=="gkw_ump45mod3_535.weapon" || c_weaponType=="gkw_ump45mod3_410.weapon"){
+                    excuteUMP45skill(cId,senderId);
+                    return;
+                }                
             }
         }
     }
@@ -864,10 +868,48 @@ class CommandSkill : Tracker {
                     playAnimationKey(m_metagame,characterId,"throwing, upside",true,true);
                     c_pos=c_pos.add(Vector3(0,1,0));
                     CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"grenade_ppsh41.projectile",characterId,factionid,30.0,5.0);
+                    SkillArray.insertLast(SkillTrigger(characterId,15,"ppsh41"));
                 }
             }
         }
-        SkillArray.insertLast(SkillTrigger(characterId,15,"ppsh41"));
+    }
+    void excuteUMP45skill(int characterId,int playerId){
+        bool ExistQueue = false;
+        int j=-1;
+        for (uint i=0;i<SkillArray.length();i++){
+            if (SkillArray[i].m_character_id==characterId && SkillArray[i].m_weapontype=="UMP45") {
+                ExistQueue=true;
+                j=i;
+            }
+        }
+        if (ExistQueue){
+            dictionary a;
+            a["%time"] = ""+SkillArray[j].m_time;
+            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            _log("skill cooldown" + SkillArray[j].m_time);
+            return;
+        }
+        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+        if (character !is null) {
+            const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+            if (player !is null){
+                if (player.hasAttribute("aim_target")) {
+                    string target = player.getStringAttribute("aim_target");
+                    Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
+                    int factionid = character.getIntAttribute("faction_id");
+                    array<string> Voice={
+                        "ump45_skill1.wav",
+                        "ump45_skill2.wav",
+                        "ump45_skill3.wav"
+                    };
+                    playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+                    playAnimationKey(m_metagame,characterId,"throwing, upside",true,true);
+                    c_pos=c_pos.add(Vector3(0,1,0));
+                    CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"smoke_grenade.projectile",characterId,factionid,30.0,5.0);
+                    SkillArray.insertLast(SkillTrigger(characterId,20,"UMP45"));
+                }
+            }
+        }
     }
 }
 
