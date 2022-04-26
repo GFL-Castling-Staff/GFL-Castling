@@ -6,9 +6,9 @@
         barrel_offset_3d="0.0 -0.45 -0.05"
 		class="0"
         slot="0"
-		magazine_size="100"
+		magazine_size="200"
 		name="GK-Agent"
-        projectile_speed="100"
+        projectile_speed="150"
 		retrigger_time="0.075"
 		suppressed="0"
         carry_in_two_hands="0"
@@ -57,7 +57,7 @@
 
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet_sf.projectile">
-        <result class="blast"  damage="0.375" radius="1.5" decal="1" push="0.01" character_state="death" faction_compare="not_equal" damage_as_probability="1" />
+        <result class="blast"  damage="0.375" radius="2.0" decal="1" push="0.01" character_state="death" faction_compare="not_equal" damage_as_probability="1" />
     </projectile>
 
 
