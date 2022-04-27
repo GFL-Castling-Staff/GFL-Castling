@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapons>
+	<weapon file="heavy_mg_standing.animation_base" key="gkw_mg5.weapon">
+		<specification barrel_offset="0.5" retrigger_time="0.085" accuracy_factor="0.8" sustained_fire_grow_step="0.35" sustained_fire_diminish_rate="1.5" magazine_size="200" suppressed="0" name="MG5" class="0" projectile_speed="220" spread_range="0.3" sight_range_modifier="1.5" />
+		<animation key="reload" animation_key="reloading, Machine gun 3" />
+		<inventory buy_price="80.0" sell_price="80.0" />
+		<next_in_chain key="gkw_mg5_skill.weapon" share_ammo="1" />
+		<sound key="fire" fileref="mg5_fire_FromARMA3.wav" pitch_variety="0.05" volume="1" />
+		<sound key="magazine_out" fileref="mg5_mgz_out_FromCOD16.wav" volume="0.8" />
+		<sound key="magazine_in" fileref="mg5_mgz_in_FromCOD16.wav" volume="0.8" />
+		<sound key="cycle" fileref="mg5_cycle_FromCOD16.wav" volume="0.8" />
+		<sound class="impact" fileref="rifle_drop.wav" />
+		<model filename="gkw_mg_mg5.xml" />
+		<hud_icon filename="gkw_mg5.png" />
+		<projectile file="bullet.projectile">
+			<result class="hit" kill_probability="1.8" kill_decay_start_time="1.967" kill_decay_end_time="3.279" />
+		</projectile>
+		<stance state_key="running" accuracy="-1" />
+		<stance state_key="walking" accuracy="-1" />
+		<stance state_key="crouch_moving" accuracy="0.7" />
+		<stance state_key="prone_moving" accuracy="0.8" />
+		<stance state_key="standing" accuracy="0.9" />
+		<stance state_key="crouching" accuracy="1.6" />
+		<stance state_key="prone" accuracy="1.9" />
+		<stance state_key="over_wall" accuracy="1.9" />
+	</weapon>
+	<weapon file="heavy_mg.animation_base" key="gkw_mg5_skill.weapon">
+		<specification barrel_offset="0.5" retrigger_time="0.075" accuracy_factor="1" sustained_fire_grow_step="0.25" sustained_fire_diminish_rate="1.5" magazine_size="200" suppressed="0" name="MG5-[Terminating Barrage]" class="0" projectile_speed="195" spread_range="0.2" sight_range_modifier="2.0" can_shoot_standing="0" can_shoot_crouching="0" can_shoot_prone="1" />
+		<animation key="reload" animation_key="reloading, Machine gun 3" />
+		<inventory buy_price="80.0" sell_price="80.0" />
+		<commonness value="0" in_stock="0" />
+		<next_in_chain key="gkw_mg5.weapon" share_ammo="1" />
+		<sound key="fire" fileref="mg5skill_fire_FromCOD16.wav" pitch_variety="0.05" volume="1" />
+		<sound key="magazine_out" fileref="mg5_mgz_out_FromCOD16.wav" volume="0.8" />
+		<sound key="magazine_in" fileref="mg5_mgz_in_FromCOD16.wav" volume="0.8" />
+		<sound key="cycle" fileref="mg5_cycle_FromCOD16.wav" volume="0.8" />
+		<sound class="impact" fileref="rifle_drop.wav" />
+		<model filename="gkw_mg_mg5.xml" />
+		<hud_icon filename="gkw_mg5_skill.png" />
+		<projectile file="bullet.projectile">
+			<result class="blast" damage="1.1" radius="2.0" decal="1" push="0.3" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0" />
+			<trigger class="impact" />
+			<effect class="result" key="terrain" ref="BigBurst" use_surface_color="1" />
+			<effect class="result" key="terrain" ref="LowDust" />
+			<effect class="result" key="terrain" ref="Shine" lighting="0" />
+			<effect class="result" key="terrain" ref="Godray" lighting="0" />
+			<effect class="result" key="static_object" copy="terrain" />
+			<effect class="result" key="vehicle" copy="terrain" />
+		</projectile>
+		<stance state_key="running" accuracy="0.6" />
+		<stance state_key="crouch_moving" accuracy="0.6" />
+		<stance state_key="prone_moving" accuracy="0.6" />
+		<stance state_key="standing" accuracy="0.6" />
+		<stance state_key="crouching" accuracy="0.8" />
+		<stance state_key="prone" accuracy="1" />
+		<stance state_key="over_wall" accuracy="1" />
+		<modifier class="speed" value="-0.2" />
+	</weapon>
+</weapons>
