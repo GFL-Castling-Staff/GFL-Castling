@@ -17,7 +17,7 @@
 
 
 
-    <inventory  buy_price="9.0" sell_price="9.0" />	
+    <inventory  buy_price="15.0" sell_price="15.0" />	
     <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
 	<animation state_key="stabbing" animation_key="melee, bayonet" />
 
@@ -36,16 +36,16 @@
 
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet.projectile">
-        <result class="hit"  kill_probability="1.3" kill_decay_start_time="0.876" kill_decay_end_time="1.46" />
+        <result class="hit"  kill_probability="1.35" kill_decay_start_time="0.876" kill_decay_end_time="1.46" />
     </projectile>
     
     <stance state_key="running" accuracy="0.5" />
-    <stance state_key="walking" accuracy="0.75" />
+    <stance state_key="walking" accuracy="0.8" />
     <stance state_key="crouch_moving" accuracy="0.9" />
     <stance state_key="prone_moving" accuracy="0.9" />
 
     <stance state_key="standing" accuracy="0.85" />
-    <stance state_key="crouching" accuracy="0.95" />
+    <stance state_key="crouching" accuracy="0.98" />
     <stance state_key="prone" accuracy="1" />
     
 
