@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapons>
-<weapon file="two_hands_sg.animation_base" key="gkw_.weapon">
+<weapon file="two_hands_sg.animation_base" key="gkw_usas12.weapon">
 
 
     <!--Weapon specifications-->
@@ -22,7 +22,7 @@
     projectiles_per_shot="16" 
     spread_range="0.3" />
     <inventory buy_price="45.0" sell_price="45.0" />
-    <next_in_chain key="gkw__skill.weapon" share_ammo="1" />
+    <next_in_chain key="gkw_usas12_skill.weapon" share_ammo="1" />
     <!--Animations-->
 
 
@@ -31,16 +31,16 @@
     <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
     <!--Sounds-->
 
-    <sound key="fire" fileref="_fire_FromWF.wav" pitch_variety="0.05" volume="1.1" />
-    <sound key="magazine_out" fileref="_mgz_out_FromWF.wav" volume="0.6" />
-    <sound key="magazine_in" fileref="_mgz_in_FromWF.wav" volume="0.6" />
-    <sound key="cycle" fileref="_cycle_FromWF.wav" volume="0.6" />
+    <sound key="fire" fileref="usas12_fire_FromWF.wav" pitch_variety="0.05" volume="1.1" />
+    <sound key="magazine_out" fileref="usas12_mgz_out_FromWF.wav" volume="0.8" />
+    <sound key="magazine_in" fileref="usas12_mgz_in_FromWF.wav" volume="0.8" />
+    <sound key="cycle" fileref="usas12_cycle_FromWF.wav" volume="0.8" />
     <sound class="impact" fileref="rifle_drop.wav" />
 
     <!--Model, Icon, Cost-->
 
-    <model filename="gkw_sg_.xml" />
-    <hud_icon filename="gkw_.png" />
+    <model filename="gkw_sg_usas12.xml" />
+    <hud_icon filename="gkw_usas12.png" />
 
 
 
@@ -63,7 +63,7 @@
     <stance state_key="over_wall" accuracy="0.8" />
 
 </weapon>
-<weapon file="two_hands_sg.animation_base" key="gkw__skill.weapon">
+<weapon file="two_hands_sg.animation_base" key="gkw_usas12_skill.weapon">
 
 
     <!--Weapon specifications-->
@@ -85,7 +85,7 @@
     projectiles_per_shot="14" 
     spread_range="0.5" />
     <inventory buy_price="45.0" sell_price="45.0" />
-    <next_in_chain key="gkw_.weapon" share_ammo="1" />
+    <next_in_chain key="gkw_usas12.weapon" share_ammo="1" />
     <!--Animations-->
 
 
@@ -95,16 +95,16 @@
 
     <!--Sounds-->
 
-    <sound key="fire" fileref="_fire_FromWF.wav" pitch_variety="0.05" volume="1.1" />
-    <sound key="magazine_out" fileref="_mgz_out_FromWF.wav" volume="0.6" />
-    <sound key="magazine_in" fileref="_mgz_in_FromWF.wav" volume="0.6" />
-    <sound key="cycle" fileref="_cycle_FromWF.wav" volume="0.6" />
+    <sound key="fire" fileref="usas12_fire_FromWF.wav" pitch_variety="0.05" volume="1.1" />
+    <sound key="magazine_out" fileref="usas12_mgz_out_FromWF.wav" volume="0.8" />
+    <sound key="magazine_in" fileref="usas12_mgz_in_FromWF.wav" volume="0.8" />
+    <sound key="cycle" fileref="usas12_cycle_FromWF.wav" volume="0.8" />
     <sound class="impact" fileref="rifle_drop.wav" />
 
     <!--Model, Icon, Cost-->
     <commonness value="0" in_stock="0" />
-    <model filename="gkw_sg_.xml" />
-    <hud_icon filename="gkw__skill.png" />
+    <model filename="gkw_sg_usas12.xml" />
+    <hud_icon filename="gkw_usas12_skill.png" />
 
 
 
