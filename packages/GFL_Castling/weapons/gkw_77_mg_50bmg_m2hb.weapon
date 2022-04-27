@@ -53,8 +53,6 @@
         name="M2HB-skill-[Terminating Barrage]" 
         projectile_speed="189" 
         retrigger_time="0.109" 
-        burst_shots="3"
-        last_burst_retrigger_time="0.4"
         suppressed="0" 
         sustained_fire_diminish_rate="1.8" 
         sustained_fire_grow_step="0.2"
@@ -76,7 +74,7 @@
         <hud_icon filename="gkw_m2hb_skill.png" />
         <!--Ballistics-->
         <projectile file="bullet.projectile">
-            <result class="blast"  damage="1.9"  radius="3.0" decal="1" push="0" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+            <result class="blast" damage="1.9"  radius="3.0" decal="1" push="0.3" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
             <trail probability="1.0" key="BulletApTrail" />
             <effect class="result" key="terrain" ref="BigBurst" use_surface_color="1" />
             <effect class="result" key="terrain" ref="LowDust"/>
