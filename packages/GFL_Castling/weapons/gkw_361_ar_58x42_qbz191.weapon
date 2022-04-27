@@ -15,10 +15,10 @@
 		sustained_fire_grow_step="0.32" />
     <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
     <inventory  buy_price="70.0" sell_price="70.0" />
-    <sound key="fire" fileref="qbz191_fire_FromWF.wav" pitch_variety="0.05" volume="1" />
-    <sound key="magazine_out" fileref="qbz191_mgz_out_FromWF.wav" volume="1" />
-    <sound key="magazine_in" fileref="qbz191_mgz_in_FromWF.wav" volume="1" />
-    <sound key="cycle" fileref="qbz191_cycle_FromWF.wav" volume="1" />
+    <sound key="fire" fileref="qbz191_fire_FromWF.wav" pitch_variety="0.05" volume="1.1" />
+    <sound key="magazine_out" fileref="qbz191_mgz_out_FromWF.wav" volume="0.6" />
+    <sound key="magazine_in" fileref="qbz191_mgz_in_FromWF.wav" volume="0.6" />
+    <sound key="cycle" fileref="qbz191_cycle_FromWF.wav" volume="0.6" />
     <sound class="impact" fileref="rifle_drop.wav" />
     <model filename="gkw_ar_qbz191.xml" />
     <hud_icon filename="gkw_qbz191.png" />
