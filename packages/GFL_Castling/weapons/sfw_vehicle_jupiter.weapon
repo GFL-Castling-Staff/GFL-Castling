@@ -124,14 +124,15 @@
     suppressed="0" 
     name="Bunker Hornet" 
     class="0" 
-    projectile_speed="2000.0" 
+    projectile_speed="180.0" 
     slot="2" 
-    barrel_offset_3d="0.4 0.1 0.4"
+    barrel_offset_3d="0.0 5.6 8.0"
     projectiles_per_shot="1"
     sight_height_offset="2.0" />
     
-    <model mesh_filename="" 
-    texture_filename="" />
+    <model mesh_filename="Jupiter_cannon_2.mesh" 
+    texture_filename="Jupiter_temp_texture.png" />
+
     <hud_icon filename="hud_hornet.png" />
     <commonness value="0.0" />
 
@@ -139,8 +140,8 @@
 
 	
 	<weak_hand_hold offset="0.2" />
-	<projectile file="bunker_hornet.projectile" >
-	    <result class="blast"  damage="40" radius="24" decal="1" push="3" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+	<projectile file="at4.projectile" radius="0.5">
+	    <result class="blast"  damage="40" radius="24" decal="1" push="4" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
         <trigger class="impact" />
 		<effect class="result" key="terrain" ref="NavalBurstInner" post_processing="1" use_surface_color="1" />
 		<effect class="result" key="terrain" ref="NavalBurstOuter" post_processing="1" use_surface_color="1" />
@@ -178,16 +179,7 @@
 		<effect class="result" key="vehicle" copy="terrain" />
 		<effect class="result" key="character" copy="terrain" />
     </projectile>
-	
-     <ballistics
-     near_far_distance="10000"
-     speed_estimation_near="1705.0"
-     speed_estimation_far="1705.0"
-     max_speed="1720"
-     randomness="0.0"
-     curve_height="0"
-     tweak_factor="2.5"
-    />    
+
 	<!-- Scoring for target priority. Distance is between 0 and 1 based on range; direction is between 0 and 1 based on whether its near the barrel; squad_command is between 0 and on based on how close to the player's command order is, and base_score is a weight.. -->
 	<!-- These all add together and the highest 'score' is the new target, targets are rescanned every 2.5 seconds to see if a new higher-score target is in sight-range. -->
 	<!-- You must define a blank tag at the top of the list to handle all cases where the vehicle is fighting something "undefined", which is what common infantry might best fit under. -->
