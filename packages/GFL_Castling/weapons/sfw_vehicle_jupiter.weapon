@@ -126,7 +126,7 @@
     class="0" 
     projectile_speed="180.0" 
     slot="2" 
-    barrel_offset_3d="0.0 5.6 8.0"
+    barrel_offset_3d="0.0 3.5 5.0"
     projectiles_per_shot="1"
     sight_height_offset="2.0" />
     
@@ -140,7 +140,7 @@
 
 	
 	<weak_hand_hold offset="0.2" />
-	<projectile file="at4.projectile" radius="0.5">
+	<projectile file="artillery_jupiter_420.projectile" radius="0.5">
 	    <result class="blast"  damage="40" radius="24" decal="1" push="4" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
         <trigger class="impact" />
 		<effect class="result" key="terrain" ref="NavalBurstInner" post_processing="1" use_surface_color="1" />
@@ -199,13 +199,12 @@
 
 </weapon>
 
-
-<weapon key="Jupiter_airstrike.weapon">
-    <specification retrigger_time="9.0" 
+<weapon key="Jupiter_airstrike_warning.weapon">
+    <specification retrigger_time="1.0" 
     accuracy_factor="1" 
     sustained_fire_grow_step="1.2" 
     sustained_fire_diminish_rate="0.6" 
-    sight_range_modifier="100.2"
+    sight_range_modifier="2.2"
     ai_sight_range_modifier="100.0" 
     magazine_size="-1" 
     can_shoot_standing="0" 
@@ -227,15 +226,66 @@
 <!--     <ballistics curve_height="12.0" near_far_distance="0.0" speed_estimation_near="0.0" speed_estimation_far="28.0" max_speed="50.0" randomness="0.0" tweak_factor="1.1" /> -->
      <ballistics
      near_far_distance="0"
-     speed_estimation_near="75.0"
-     speed_estimation_far="75.0"
+     speed_estimation_near="200.0"
+     speed_estimation_far="200.0"
      max_speed="200"
      randomness="0.0"
-     curve_height="6"
+     curve_height="10"
      tweak_factor="2.5"
     />
 	<weak_hand_hold offset="0.2" />
-	<projectile file="bunker_hornet.projectile" />
+	<projectile file="jupiter_airstrike_warning_s.projectile" />
+    
+	<!-- Scoring for target priority. Distance is between 0 and 1 based on range; direction is between 0 and 1 based on whether its near the barrel; squad_command is between 0 and on based on how close to the player's command order is, and base_score is a weight.. -->
+	<!-- These all add together and the highest 'score' is the new target, targets are rescanned every 2.5 seconds to see if a new higher-score target is in sight-range. -->
+	<!-- You must define a blank tag at the top of the list to handle all cases where the vehicle is fighting something "undefined", which is what common infantry might best fit under. -->
+    <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5" />
+    <target_factors tag="heavy_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="10.0" />
+    <target_factors tag="apc" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0" />
+    <target_factors tag="light_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="6.0" />	
+    <target_factors tag="defensive_at" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.5" />
+    <target_factors tag="tactical" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0" />  <!-- important non combat player-only vehicles -->  
+    <target_factors tag="bazooka" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0" />      
+
+    <sound key="fire" fileref="hornet_shot.wav" volume="0.5" />
+</weapon>
+
+<weapon key="Jupiter_airstrike.weapon">
+    <specification retrigger_time="1.0" 
+    accuracy_factor="1" 
+    sustained_fire_grow_step="1.2" 
+    sustained_fire_diminish_rate="0.6" 
+    sight_range_modifier="2.2"
+    ai_sight_range_modifier="100.0" 
+    magazine_size="-1" 
+    can_shoot_standing="0" 
+    can_shoot_crouching="0" 
+    suppressed="0" 
+    name="Bunker Hornet" 
+    class="0" 
+    projectile_speed="2000.0" 
+    slot="2" 
+    barrel_offset_3d="0.4 0.1 0.4"
+    projectiles_per_shot="1"
+    sight_height_offset="2.0" />
+    
+    <model mesh_filename="" 
+    texture_filename="" />
+    <hud_icon filename="hud_hornet.png" />
+    <commonness value="0.0" />
+
+<!--     <ballistics curve_height="12.0" near_far_distance="0.0" speed_estimation_near="0.0" speed_estimation_far="28.0" max_speed="50.0" randomness="0.0" tweak_factor="1.1" /> -->
+     <ballistics
+     near_far_distance="0"
+     speed_estimation_near="200.0"
+     speed_estimation_far="200.0"
+     max_speed="200"
+     randomness="0.0"
+     curve_height="20"
+     tweak_factor="2.5"
+    />
+	<weak_hand_hold offset="0.2" />
+	<projectile file="jupiter_airstrike.projectile" />
     
 	<!-- Scoring for target priority. Distance is between 0 and 1 based on range; direction is between 0 and 1 based on whether its near the barrel; squad_command is between 0 and on based on how close to the player's command order is, and base_score is a weight.. -->
 	<!-- These all add together and the highest 'score' is the new target, targets are rescanned every 2.5 seconds to see if a new higher-score target is in sight-range. -->
