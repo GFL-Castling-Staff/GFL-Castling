@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<weapons>
 <weapon file="gk_sf_boss.base_weapon" key="ff_Intruder.weapon">
 
 	<specification 
@@ -18,6 +19,7 @@
 	sustained_fire_diminish_rate="2.1"
 	sustained_fire_grow_step="0.3" />
 
+    <next_in_chain key="ff_Intruder_1.weapon" share_ammo="0" />
 
 	<animation state_key="recoil"	animation_key="recoil, hip fire" />
 	<animation state_key="hold" animation_key="hold, hip fire" />
@@ -58,3 +60,54 @@
     <stance state_key="prone" accuracy="1" />
     <modifier class="speed" value="0.2" />
 </weapon>
+<weapon file="gk_sf_boss.base_weapon" key="ff_Intruder_1.weapon">
+
+	<specification
+    retrigger_time="0.0333" 
+    accuracy_factor="0.5" 
+    sustained_fire_grow_step="1.5" 
+    sustained_fire_diminish_rate="0.7" 
+    magazine_size="200" 
+    can_shoot_standing="1" 
+    can_shoot_crouching="1" 
+    can_shoot_prone="0"
+    suppressed="0" 
+    barrel_offset_3d="0 -0.2 1.2"
+  	name="GK-Intruder-[IA-Machine Gun]"
+    projectile_speed="120.0"
+    projectiles_per_shot="2" />
+
+    <next_in_chain key="ff_Intruder.weapon" share_ammo="0" />
+
+	<animation state_key="recoil"	animation_key="recoil, hip fire" />
+	<animation state_key="hold" animation_key="hold, hip fire" />
+	<animation state_key="crouching" animation_key="crouch, hold, hip fire" />
+	<animation state_key="crouch_moving" animation_key="crouching forwards, hip fire" />
+    <animation state_key="walking_backwards" animation_key="walking backwards, hip fire" />
+    <animation state_key="reload" animation_key="reloading, Machine gun 2.8" volume="0.7" />
+	<animation state_key="hold_on_wall" animation_key="hold, hip fire" />
+    <animation state_key="still_against_wall" 	animation_key="hold, hip fire" />
+	<animation state_key="walking" animation_key="walking, hip fire" />
+	<animation state_key="running" animation_key="walking, hip fire" />
+
+
+    <sound key="fire" fileref="striker_fire_FromCOD11.wav" pitch_variety="0.05" volume="1.6" />
+	<sound key="magazine_out" fileref="ags30_mgz_out_FromBF1.wav" volume="0.8" />
+    <sound key="magazine_in" fileref="ags30_mgz_in_FromBF1.wav" volume="0.8" />
+	<sound key="cycle" fileref="striker_cycle_FromCOD12.wav" volume="0.7" />
+    <sound class="impact" fileref="rifle_drop.wav" />
+
+    <model filename="sfw_Intruder.xml" />
+
+    <hud_icon filename="sfw_intruder_mg.png" />
+
+    <effect class="muzzle" offset="0"/>
+
+    <weak_hand_hold offset="0.4" />
+    <projectile file="bullet_sf.projectile">
+        <result class="hit"  kill_probability="1.4" kill_decay_start_time="0.4" kill_decay_end_time="0.8" />
+    </projectile>
+
+
+    <modifier class="speed" value="-0.35" />
+</weapons>
