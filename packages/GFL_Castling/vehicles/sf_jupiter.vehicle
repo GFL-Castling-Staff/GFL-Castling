@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vehicle name="Jupiter" map_view_atlas_index="42" usable_for_cover="0" protectors="2" owner="faction" allow_owner_to_use_only="1" allow_character_leave_request="0" character_leave_request_mode="friendly" soldier_capacity_offset="1" key="sf_jupiter.vehicle">
+
+	<tag name="target" />
+	<tire_set offset="0.5 0.0 0.5" radius="0.65" />
+	<tire_set offset="0.5 0.0 -0.5" radius="0.65" />
+
+	<modifier class="blast_range" value="-4.0" />
+	
+	<control max_speed="3.0" acceleration="1.0" max_reverse_speed="1.0" max_rotation="0.8" max_water_depth="1.0" />
+
+	<physics 
+		max_health="180.0" 
+		mass="9999.5" 
+		extent="4.2 0.0 2.2" 
+		offset="0 0.0 0" 
+		top_offset="0 2 0" 
+		collision_model_pos="0 0.7 0" 
+		collision_model_extent="1.2 1.4 1.2" 
+		visual_offset="0 0.0 0" 
+		collision_response_factor="0.2" 
+		blast_push_threshold="10.0" 
+		vehicle_collision_damage_factor="2.0" 
+	/>
+	
+	<turret offset="0 0.0 0.0" weapon_key="Jupiter_main_cannon.weapon" weapon_offset="0.0 5.0 0.0" weapon_recoil="3.7" physics_recoil="0.0" max_rotation_step="0.00002" rotation="0" rotation_range=""/>	
+	<turret offset="0 0.0 0.0" weapon_key="Jupiter_mg1.weapon" weapon_offset="0.6 2.2 0.0" weapon_recoil="10.00" physics_recoil="0.0" max_rotation_step="0.0000" rotation="0" rotation_range="0" parent_turret_index="0"/>
+	<turret offset="0 0.0 0.0" weapon_key="Jupiter_mg2.weapon" weapon_offset="-0.6 2.2 0.0" weapon_recoil="0.2" physics_recoil="0.0" max_rotation_step="0.0000" rotation="0" rotation_range="0" parent_turret_index="0"/>
+	<turret offset="0 -0.0 0.0" weapon_key="Jupiter_airstrike.weapon" weapon_offset="0.0 6.0 -2.0" weapon_recoil="0.00" physics_recoil="0.0" max_rotation_step="0.01015" rotation="0" rotation_range="" />
+	
+	<visual class="chassis" mesh_filename="Jupiter_base_2.mesh" texture_filename="Jupiter_temp_texture.png" />
+	
+	<visual offset="0 0.5 0.0" class="turret" turret_index="0" mesh_filename="Jupiter_cannon_2.mesh" texture_filename="Jupiter_temp_texture.png" />
+	<visual offset="0 0.5 0.0" class="turret" key="broken" turret_index="0" mesh_filename="Jupiter_cannon_2.mesh" texture_filename="humvee_broken.png" />
+	
+	<visual offset="0 0.5 0" class="turret" turret_index="1" mesh_filename="Jupiter_turret_2.mesh" texture_filename="Jupiter_temp_texture.png" />
+	<visual offset="0 0.5 0" class="turret" key="broken" turret_index="1" mesh_filename="Jupiter_turret_2.mesh" texture_filename="humvee_broken.png" />	
+	
+	<character_slot type="gunner" seat_position="0.0 5.6 1.0" enter_position="2 0 -4.5" rotation="0" exit_rotation="1.57" hiding="1" animation_key="tank mg still">
+		<turret index="0" />
+		<turret index="1" />  
+		<turret index="2" />  
+	</character_slot>	
+	
+	<character_slot type="gunner" seat_position="0.0 5.6 1.0" enter_position="-2 0 4.5" rotation="0" exit_rotation="-1.57" hiding="1" animation_key="tank mg still">
+		<turret index="3" />
+	</character_slot>
+	
+	<!-- sound handling -->
+	<sound key="slide" filename="slide_noise.wav" />
+	<sound key="squeal" filename="tire_squeal.wav" />
+	<sound key="ignition" filename="truck_ignition.wav" />
+	<sound key="hit" filename="car_hit1.wav" />
+	<sound key="hit" filename="car_hit2.wav" />
+	<sound key="hit" filename="car_hit3.wav" />
+	<effect event_key="destroyed" ref="SmallSmokeVehicle" offset="0.0 0.8 0.0" />
+	
+	<event key="receive_damage_xp_reward">
+		<trigger class="receive_damage" />
+		<result class="reward" xp="0.0100" />
+	</event>
+	
+	<event key="spot_rp_reward">
+		<trigger class="spot" />
+		<result class="reward" rp="200.0" />
+	</event>
+	
+	<event key="destroy_rp_reward">
+		<trigger class="destroy" />
+		<result class="reward" rp="1000.0" />
+	</event>
+	
+	<event>
+		<trigger class="destroy" />
+		<result class="spawn" instance_class="visual_item" instance_key="deployable_mg_tripod.visual_item" min_amount="1" max_amount="1" offset="0 2.0 0" position_spread="0 0" direction_spread="0.03 0.2" />
+	</event>
+	<event>
+		<trigger class="destroy" />
+		<result class="spawn" instance_class="visual_item" instance_key="burning_piece_radartower.visual_item" min_amount="3" max_amount="3" offset="0 2.0 0" position_spread="1.5 1.5" direction_spread="0.05 0.2" />
+	</event>
+	<event>
+		<trigger class="destroy" />
+		<result class="spawn" instance_class="visual_item" instance_key="burning_piece_armor1.visual_item" min_amount="2" max_amount="3" offset="0 2.0 0" position_spread="1.5 1.5" direction_spread="0.1 0.2" />
+	</event>
+	<event>
+		<trigger class="destroy" />
+		<result class="spawn" instance_class="visual_item" instance_key="burning_piece_truck1.visual_item" min_amount="1" max_amount="2" offset="0 2.0 0" position_spread="1.5 1.5" direction_spread="0.1 0.2" />
+	</event>
+	<event>
+		<trigger class="destroy" />
+		<result class="spawn" instance_class="visual_item" instance_key="burning_piece_jeep2.visual_item" min_amount="1" max_amount="1" offset="0 2.0 0" position_spread="1.5 1.5" direction_spread="0.05 0.2" />
+	</event>
+</vehicle>
