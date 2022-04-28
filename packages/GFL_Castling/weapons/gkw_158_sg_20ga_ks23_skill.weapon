@@ -21,10 +21,10 @@
 	projectiles_per_shot="28"
 	spread_range="0.6"
 	 />
-     <inventory  buy_price="100.0" sell_price="100.0" />
+     <inventory  buy_price="150.0" sell_price="100.0" />
 	<!--Animations-->
 	
-    <next_in_chain key="gkw_ks23.weapon" share_ammo="1" />
+    <next_in_chain key="gkw_ks23_frag.weapon" share_ammo="1" />
     <animation state_key="cycle" animation_key="Pshotgun0.5" />
     <animation state_key="cycle" stance_key="prone" animation_key="Pshotgun0.5p" />
     <animation key="reload" animation_key="reloading, oaat" />		
@@ -50,8 +50,8 @@
     <projectile file="bullet.projectile">
         <result class="hit" 
         kill_probability="3.2" 
-        kill_decay_start_time="0.3" 
-        kill_decay_end_time="0.755" />
+        kill_decay_start_time="0.03" 
+        kill_decay_end_time="0.25" />
     </projectile>
     
     <!--Accuracy, Movement speed-->
@@ -63,6 +63,7 @@
     <stance state_key="crouching" accuracy="0.85" />
     <stance state_key="prone" accuracy="0.95" />
     <stance state_key="over_wall" accuracy="0.95" />
-    <modifier class="speed" value="-0.1" /> 
+    <modifier class="speed" value="-0.15" /> 
+    <modifier class="detectability" value="0.25" />
 
 </weapon>
