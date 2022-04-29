@@ -17,12 +17,12 @@
 	last_burst_retrigger_time="0.25"
 	reload_one_at_a_time="1"
 	sight_range_modifier="1.0" 
-	projectile_speed="78" 
+	projectile_speed="100" 
 	barrel_offset="0.4" 
 	projectiles_per_shot="14"
 	spread_range="0.3"
 	burst_shots="1" />
-    <inventory  buy_price="20.0" sell_price="10.0" />
+    <inventory  buy_price="20.0" sell_price="20.0" />
 	<!--Animations-->
 	
 
@@ -51,8 +51,8 @@
     <projectile file="bullet.projectile">
         <result class="hit" 
         kill_probability="1.9" 
-        kill_decay_start_time="0.128" 
-        kill_decay_end_time="0.641" />
+        kill_decay_start_time="0.1" 
+        kill_decay_end_time="0.5" />
     </projectile>
     
     <!--Accuracy, Movement speed-->

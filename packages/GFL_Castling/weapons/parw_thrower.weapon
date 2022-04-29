@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapon file="paradeus.base_weapon" key="parw_thrower.weapon">
 
-	<tag name="autorifle" />
+	<tag name="shotgun" />
 
     <!--Weapon specifications-->
     
@@ -13,20 +13,20 @@
 	magazine_size="6" 
 	can_shoot_standing="1" 
 	suppressed="0" 
-	name="thrower" 
+	name="Thrower" 
 	class="4" 
 	burst_shots="3"
-	last_burst_retrigger_time="0.005"
+	last_burst_retrigger_time="0.8"
 	reload_one_at_a_time="0"
 	sight_range_modifier="0.7" 
-	projectile_speed="175" 
+	projectile_speed="90" 
 	barrel_offset="0.4" 
-	projectiles_per_shot="10"
+	projectiles_per_shot="7"
 	spread_range="0.3"
 	 />
 	
 	<!--Animations-->
-	<inventory encumbrance="23.0" buy_price="0.0" sell_price="10.0" />
+	<inventory encumbrance="23.0" buy_price="0.0" sell_price="0.0" />
 
 	<animation key="recoil" ref="12" />
 	<animation key="recoil" ref="13" />
@@ -62,8 +62,8 @@
     <projectile file="bullet_paradeus.projectile">
         <result class="hit" 
         kill_probability="1.4" 
-		kill_decay_start_time="0.094" 
-        kill_decay_end_time="0.537" />
+		kill_decay_start_time="0.2" 
+        kill_decay_end_time="1.2" />
     </projectile>
     
     <!--Accuracy, Movement speed-->
@@ -75,16 +75,4 @@
     <stance state_key="crouching" accuracy="0.6" />
     <stance state_key="prone" accuracy="0.65" />
     <stance state_key="over_wall" accuracy="0.65" />  
-	<shield offset="-0.55 0.0 0" extent="0.8 0.5 1.0" />
-	<!-- state modifiers for weapons are connected to shield impact events -->
-	<!-- deflects all bullets; death, stun, wound become none, doesn't consume -->
-	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0" />
-	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-	<!-- death and wound blast causes the item to be consumed, stun is ignored -->
-	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0" />
-	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
-	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
-
-
 </weapon>

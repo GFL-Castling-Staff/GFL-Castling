@@ -131,7 +131,11 @@ class CommandSkill : Tracker {
                 if (c_weaponType=="gkw_ump45mod3.weapon"|| c_weaponType=="gkw_ump45mod3_535.weapon" || c_weaponType=="gkw_ump45mod3_410.weapon"){
                     excuteUMP45skill(cId,senderId);
                     return;
-                }                
+                }
+                if (c_weaponType=="gkw_m870.weapon"|| c_weaponType=="gkw_m870_3803.weapon"){
+                    excuteM870skill(cId,senderId);
+                    return;        
+                }
             }
         }
     }
@@ -778,6 +782,11 @@ class CommandSkill : Tracker {
 
             //CreateProjectile(m_metagame,c_pos.add(Vector3(0,-8.0,0)),s_dir.add(Vector3(0,-10.0,0)),"destroyer_skill_body.projectile",characterId,factionid,26.0,26.0);
             //CreateProjectile_H(m_metagame,c_pos.add(Vector3(0,-8.0,0)),s_dir.add(Vector3(0,0.0,0)),"destroyer_skill_body.projectile",characterId,factionid,26.0,12);
+            array<string> Voice={
+            "Excutioner_buhuo_SKILL02_JP.wav",
+            "Excutioner_buhuo_SKILL03_JP.wav",
+            };
+            playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
 
             // CreateProjectile(m_metagame,c_pos.add(Vector3(0,-10.0,0)),c_pos,"destroyer_skill_body.projectile",characterId,factionid,80,-0.01);              
             int ix = 5;
@@ -792,11 +801,7 @@ class CommandSkill : Tracker {
                 CreateProjectile(m_metagame,c_pos.add(Vector3(dx*dd*(ix*2-1)+dy*dd*(ix*2-1)/tt,1,dy*dd*(ix*2-1)-dx*dd*(ix*2-1)/tt)),c_pos.add(Vector3(dx*dd*(ix*2-1)+dy*dd*(ix*2-1)/tt,0,dy*dd*(ix*2-1)-dx*dd*(ix*2-1)/tt)),"excutioner_skill.projectile",characterId,factionid,5020,0.001);
             }
 
-            array<string> Voice={
-            "Excutioner_buhuo_SKILL02_JP.wav",
-            "Excutioner_buhuo_SKILL03_JP.wav",
-            };
-            playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+
             SkillArray.insertLast(SkillTrigger(characterId,25,"EXCUTIONER"));
             
         }
@@ -909,6 +914,42 @@ class CommandSkill : Tracker {
                     SkillArray.insertLast(SkillTrigger(characterId,20,"UMP45"));
                 }
             }
+        }
+    }
+    void excuteM870skill(int characterId,int playerId){
+        bool ExistQueue = false;
+        int j =-1;
+        for (uint i=0;i<SkillArray.length();i++){
+            if (SkillArray[i].m_character_id==characterId && SkillArray[i].m_weapontype=="M870") {
+                ExistQueue=true;
+                j=i;
+            }
+        }
+        if (ExistQueue){
+            dictionary a;
+            a["%time"] = ""+SkillArray[j].m_time;
+            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            _log("skill cooldown" + SkillArray[j].m_time);
+            return;
+        }
+        SkillArray.insertLast(SkillTrigger(characterId,30,"M870"));
+        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+        if (character !is null) {
+            Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
+            int factionid = character.getIntAttribute("faction_id");
+            XmlElement c ("command");
+            c.setStringAttribute("class", "update_inventory");
+            c.setIntAttribute("character_id", characterId); 
+            c.setIntAttribute("untransform_count", 10);
+            m_metagame.getComms().send(c);
+            array<string> Voice={
+                "M870P_ATTACK_JP.wav",
+                "M870P_PHRASE_JP.wav",
+                "M870P_SKILL1_JP.wav",
+                "M870P_SKILL2_JP.wav",
+                "M870P_SKILL3_JP.wav"
+            };
+            playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
         }
     }
 }

@@ -16,7 +16,7 @@
 	name="SF-Scouts"
 	class="0"
 	reload_one_at_a_time="0"
-	projectile_speed="130.0"
+	projectile_speed="100.0"
 	projectiles_per_shot="2"
     barrel_offset="0.0"
 	stab_enabled="0"
@@ -57,7 +57,7 @@
 
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet_sf.projectile">
-        <result class="hit"  kill_probability="1.5" kill_decay_start_time="0.04" kill_decay_end_time="0.5" />
+        <result class="hit"  kill_probability="1.5" kill_decay_start_time="0.0" kill_decay_end_time="0.8" />
     </projectile>
     
     <stance state_key="running" accuracy="0.4" />
@@ -69,5 +69,5 @@
     <stance state_key="crouching" accuracy="1" />
     <stance state_key="prone" accuracy="1" />
     
-    <modifier class="speed" value="1.31" />
+    <modifier class="speed" value="1.145" />
 </weapon>

@@ -5,16 +5,16 @@
 	<sound key="death" fileref="qwd_die.wav" volume="0.8" />
 
 
-	<parameter class="throwing_self_over_initial_bounce" value="0.4" />
-	<parameter class="throwing_self_over_steer_amount" value="0.7" />
-	<parameter class="throwing_self_over_lift_up" value="0" />
+	<parameter class="throwing_self_over_initial_bounce" value="0.05" />
+	<parameter class="throwing_self_over_steer_amount" value="0.15" />
+	<parameter class="throwing_self_over_lift_up" value="0.1" />
     <parameter class="lifting_up_initial_bounce" value="0.2"/>
     <parameter class="jumping_up_bounce" value="0.2"/>
 
-	<parameter class="ending_climbing_ladder_initial_bounce" value="0.09" />
-	<parameter class="ending_climbing_up_ladder_steer_amount" value="0.15" />
-	<parameter class="climbing_end_height_offset" value="0.2" />
-	<parameter class="climbing_with_jump_end_height_offset" value="0.2" />
+	<parameter class="ending_climbing_ladder_initial_bounce" value="0.05" />
+	<parameter class="ending_climbing_up_ladder_steer_amount" value="0.25" />
+	<parameter class="climbing_end_height_offset" value="0.05" />
+	<parameter class="climbing_with_jump_end_height_offset" value="0.05" />
 
 	<animation state_key="hold"  animation_key="still, big zombie" />
 	<animation state_key="hold_one_wall"  animation_key="still, big zombie" />
@@ -35,7 +35,6 @@
 	<animation key="dive" target_key="falling, big zombie" />
 	<animation key="jumping" target_key="jump, big zombie" />
 	<animation key="lifting up" target_key="jump, big zombie" />
-	<animation key="throwing self over" target_key="jump, big zombie" />
 	<animation key="falling" target_key="falling, big zombie" />
 	<animation key="arriving ground" target_key="arrive around, big zombie" />
 	<animation key="climbing ladder, still" target_key="climb still, big zombie" />
@@ -46,7 +45,8 @@
 	<animation key="leaving_wounded" target_key="unwound, big zombie" />
 	<animation key="stunned" target_key="stuned, big zombie" />
 	<animation key="surrender" target_key="surrender, large mecha" />
-	<animation key="throwing, upside" target_key="throwing, large mecha" />
+	<animation key="throwing, upside" target_key="falling, big zombie" />
+	<animation key="throwing self over" target_key="arrive around, big zombie" />
 	<animation key="change weapon out" target_key="change weapon, large mecha" />
 	<animation key="change weapon in" target_key="change weapon, large mecha" />
 	<animation key="change weapon out, reversed" target_key="change weapon, large mecha" />
