@@ -710,7 +710,7 @@ class CommandSkill : Tracker {
             float dx = s_pos.m_values[0]-c_pos.m_values[0];
             float dy = s_pos.m_values[2]-c_pos.m_values[2];
             float ds = sqrt(dx*dx+dy*dy);
-
+            if(ds<=0.000001f) ds=0.000001f;
             s_dir.m_values[0] = c_pos.m_values[0] + dx/ds*4;
             s_dir.m_values[1] = c_pos.m_values[1] + 2;
             s_dir.m_values[2] = c_pos.m_values[2] + dy/ds*4;
