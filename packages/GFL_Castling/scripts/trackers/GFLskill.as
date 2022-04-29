@@ -32,15 +32,14 @@ class GFLskill : Tracker {
 		"manticore.call",
 		"manticore2.call"
 	};
+
     protected array<XM8tracker@> XM8track;
 	protected array<HK416_tracker@> HK416_track;
 	protected array<Vector_tracker@> Vector_track;
-	protected Jupiter_Airstrike_Task@ Jupiter_track;
-	protected TaskSequencer@ Jupiter = m_metagame.getTaskManager().newTaskSequencer();
-
+	TaskSequencer jupiter;
 	// --------------------------------------------
 	protected void handleResultEvent(const XmlElement@ event) {
-	
+		
 		//checking if the event was triggered by a rangefinder notify_script
 		string EventKeyGet = event.getStringAttribute("key");
 		if (EventKeyGet == "aa_spawn"){
@@ -65,7 +64,8 @@ class GFLskill : Tracker {
 		}
 		if (EventKeyGet == "Jupiter_spawn"){
 			const XmlElement@ playerFaction = getFactionInfo(m_metagame,0);
-			Jupiter.add(Jupiter_Airstrike_Task(m_metagame));
+			jupiter = m_metagame.getTaskManager().newTaskSequencer();
+			jupiter.add(Jupiter_Airstrike_Task(m_metagame));
 			if(playerFaction.getStringAttribute("name")=="G&K PMC"){
 				XmlElement command("command");
 				command.setStringAttribute("class", "faction_resources");
@@ -76,7 +76,9 @@ class GFLskill : Tracker {
 		}
 		if (EventKeyGet == "Jupiter_down"){
 			const XmlElement@ playerFaction = getFactionInfo(m_metagame,0);
-			Jupiter.clear();
+			if(jupiter !is null){
+				jupiter.clear();
+			}
 			if(playerFaction.getStringAttribute("name")=="G&K PMC"){
 				XmlElement command("command");
 				command.setStringAttribute("class", "faction_resources");
@@ -513,6 +515,7 @@ class GFLskill : Tracker {
 		// always on
 		return true;
 	}
+
 }
 
 class XM8tracker{

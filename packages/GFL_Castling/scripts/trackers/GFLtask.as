@@ -41,16 +41,16 @@ class VestRecoverTask : Task {
 }
 
 class Jupiter_Airstrike_Task : Task {
-    protected Metagame@ m_metagame;
-	protected const float reload_cycle;
+    protected GameMode@ m_metagame;
+	protected float reload_cycle;
 	protected float reload_time;
     protected int activation;
     protected int m_numLeft;
 
-	Jupiter_Airstrike_Task(Metagame@ metagame){
+	Jupiter_Airstrike_Task(GameMode@ metagame){
 		@m_metagame = @metagame;
-		reload_cycle = 150.0;
-		reload_time = 150.0;
+		reload_cycle = 10.0;
+		reload_time = 10.0;
 		activation = 1;
 		m_numLeft = 0;
 	}
@@ -66,11 +66,15 @@ class Jupiter_Airstrike_Task : Task {
 		// CreateProjectile(Metagame@ m_metagame,Vector3 startPos,Vector3 endPos,string key,int cId,int fId,float initspeed,float ggg){
 		CreateProjectile(m_metagame,c_pos.add(Vector3(0,10,0)),c_pos,"jupiter_airstrike_warning.projectile",-1,1,720,100);
 		CreateProjectile(m_metagame,c_pos.add(Vector3(0,60,0)),c_pos,"artillery_jupiter_420.projectile",-1,1,120,10);
+	}
 
+	void start(){
+		_log("Jupiter_Initialized: "+m_numLeft);
 	}
 
     void update(float time) {
 		reload_time -= time;
+
 		if (reload_time < 0){
 			if(activation > 0){
 				jupiterfire();
@@ -95,6 +99,8 @@ class Jupiter_Airstrike_Task : Task {
 		if (activation>0) {
 			return false;
 		}
+		else {
 		return true;
+		}
 	}
 }
