@@ -773,6 +773,7 @@ class CommandSkill : Tracker {
             float dx = s_pos.m_values[0]-c_pos.m_values[0];
             float dy = s_pos.m_values[2]-c_pos.m_values[2];
             float ds = sqrt(dx*dx+dy*dy);
+            if(ds<=0.000001f) ds=0.000001f;
             dx = dx/ds; dy=dy/ds;
             float dd = 1.2; //同一列相邻弹头的距离
             float tt = 3;   //同一行相邻弹头位置偏移比值
@@ -940,7 +941,7 @@ class CommandSkill : Tracker {
             XmlElement c ("command");
             c.setStringAttribute("class", "update_inventory");
             c.setIntAttribute("character_id", characterId); 
-            c.setIntAttribute("untransform_count", 10);
+            c.setIntAttribute("untransform_count", 5);
             m_metagame.getComms().send(c);
             array<string> Voice={
                 "M870P_ATTACK_JP.wav",

@@ -43,7 +43,7 @@
         <sound key="cycle" fileref="negev_cycle_FromCF.wav" volume="0.7" />
         <sound class="impact" fileref="rifle_drop.wav" />
         <model filename="gkw_mg_negev.xml" />
-        <hud_icon filename="gkw_negev_904.png" />
+        <hud_icon filename="gkw_negev_904_skill1.png" />
         <projectile file="bullet.projectile">
             <result class="hit" kill_probability="1.6" kill_probability_offset_on_successful_hit="1.0" kill_decay_start_time="1.967" kill_decay_end_time="3.279" />
         </projectile>
@@ -70,7 +70,7 @@
         <sound key="cycle" fileref="negev_cycle_FromCF.wav" volume="0.7" />
         <sound class="impact" fileref="rifle_drop.wav" />
         <model filename="gkw_mg_negev.xml" />
-        <hud_icon filename="gkw_negev_904.png" />
+        <hud_icon filename="gkw_negev_904_skill2.png" />
         <projectile file="bullet.projectile">
             <result class="hit" kill_probability="1.8" kill_probability_offset_on_successful_hit="1.0" kill_decay_start_time="1.967" kill_decay_end_time="3.279" />
         </projectile>
@@ -97,7 +97,7 @@
         <sound key="cycle" fileref="negev_cycle_FromCF.wav" volume="0.8" />
         <sound class="impact" fileref="rifle_drop.wav" />
         <model filename="gkw_mg_negev.xml" />
-        <hud_icon filename="gkw_negev_904.png" />
+        <hud_icon filename="gkw_negev_904_skill3.png" />
         <projectile file="bullet.projectile">
             <result class="hit" kill_probability="2.0" kill_probability_offset_on_successful_hit="1.0" kill_decay_start_time="1.967" kill_decay_end_time="3.279" />
         </projectile>
