@@ -36,6 +36,7 @@ class GFLskill : Tracker {
 	protected array<HK416_tracker@> HK416_track;
 	protected array<Vector_tracker@> Vector_track;
 	protected Jupiter_Airstrike_Task@ Jupiter_track;
+	protected TaskSequencer@ Jupiter = m_metagame.getTaskManager().newTaskSequencer();
 
 	// --------------------------------------------
 	protected void handleResultEvent(const XmlElement@ event) {
@@ -64,11 +65,8 @@ class GFLskill : Tracker {
 		}
 		if (EventKeyGet == "Jupiter_spawn"){
 			const XmlElement@ playerFaction = getFactionInfo(m_metagame,0);
+			Jupiter.add(Jupiter_Airstrike_Task(m_metagame));
 			if(playerFaction.getStringAttribute("name")=="G&K PMC"){
-
-				TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
-				tasker.add(Jupiter_track.init(m_metagame));
-
 				XmlElement command("command");
 				command.setStringAttribute("class", "faction_resources");
 				command.setIntAttribute("faction_id", 0);
@@ -78,11 +76,8 @@ class GFLskill : Tracker {
 		}
 		if (EventKeyGet == "Jupiter_down"){
 			const XmlElement@ playerFaction = getFactionInfo(m_metagame,0);
+			Jupiter.clear();
 			if(playerFaction.getStringAttribute("name")=="G&K PMC"){
-				
-				TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
-				tasker.add(Jupiter_track.end());
-
 				XmlElement command("command");
 				command.setStringAttribute("class", "faction_resources");
 				command.setIntAttribute("faction_id", 0);

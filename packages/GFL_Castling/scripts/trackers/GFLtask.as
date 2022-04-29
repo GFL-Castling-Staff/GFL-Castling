@@ -1,6 +1,5 @@
 // internal
 #include "task_sequencer.as"
-
 #include "tracker.as"
 #include "helpers.as"
 #include "admin_manager.as"
@@ -48,7 +47,7 @@ class Jupiter_Airstrike_Task : Task {
     protected int activation;
     protected int m_numLeft;
 
-	void init(Metagame@ metagame){
+	Jupiter_Airstrike_Task(Metagame@ metagame){
 		@m_metagame = @metagame;
 		reload_cycle = 150.0;
 		reload_time = 150.0;
@@ -63,12 +62,10 @@ class Jupiter_Airstrike_Task : Task {
 		const XmlElement@ playerinfo = getPlayerInfo(m_metagame, luckyguyId);
 		int characterId = playerinfo.getIntAttribute("character_id");
 		const XmlElement@ characterinfo = getCharacterInfo(m_metagame, characterId);
-		int factionid = characterinfo.getIntAttribute("faction_id");
-
 		Vector3 c_pos = stringToVector3(characterinfo.getStringAttribute("position"));
 		// CreateProjectile(Metagame@ m_metagame,Vector3 startPos,Vector3 endPos,string key,int cId,int fId,float initspeed,float ggg){
-		CreateProjectile(m_metagame,c_pos.add(Vector3(0,10,0)),c_pos,"jupiter_airstrike_warning.projectile",characterId,factionid,720,100);
-		CreateProjectile(m_metagame,c_pos.add(Vector3(0,60,0)),c_pos,"artillery_jupiter_420.projectile",characterId,factionid,120,10);
+		CreateProjectile(m_metagame,c_pos.add(Vector3(0,10,0)),c_pos,"jupiter_airstrike_warning.projectile",-1,1,720,100);
+		CreateProjectile(m_metagame,c_pos.add(Vector3(0,60,0)),c_pos,"artillery_jupiter_420.projectile",-1,1,120,10);
 
 	}
 
@@ -96,8 +93,8 @@ class Jupiter_Airstrike_Task : Task {
 
     bool hasEnded() const {
 		if (activation>0) {
-			return true;
+			return false;
 		}
-		return false;
+		return true;
 	}
 }
