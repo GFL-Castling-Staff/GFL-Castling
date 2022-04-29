@@ -41,15 +41,17 @@ class VestRecoverTask : Task {
 	}
 }
 
-class Jupiter_Airstrike_Task : JupiterTask {
+class Jupiter_Airstrike_Task : Task {
     protected Metagame@ m_metagame;
-	protected const float reload_cycle = 150;
-	protected float reload_time = 150;
-    protected int activation = 0;
-    protected int m_numLeft = 0;
+	protected const float reload_cycle;
+	protected float reload_time;
+    protected int activation;
+    protected int m_numLeft;
 
-    void start() {
-		reload_time = reload_cycle;
+	void init(Metagame@ metagame){
+		@m_metagame = @metagame;
+		reload_cycle = 150.0;
+		reload_time = 150.0;
 		activation = 1;
 		m_numLeft = 0;
 	}
@@ -59,7 +61,7 @@ class Jupiter_Airstrike_Task : JupiterTask {
 
 		int luckyguyId = rand(1,players.length)-1;
 		const XmlElement@ playerinfo = getPlayerInfo(m_metagame, luckyguyId);
-		int characterid = playerinfo.getIntAttribute("character_id");
+		int characterId = playerinfo.getIntAttribute("character_id");
 		const XmlElement@ characterinfo = getCharacterInfo(m_metagame, characterId);
 		int factionid = characterinfo.getIntAttribute("faction_id");
 

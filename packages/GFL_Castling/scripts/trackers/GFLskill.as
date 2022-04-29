@@ -5,6 +5,8 @@
 #include "query_helpers.as"
 #include "query_helpers2.as"
 #include "GFLhelpers.as"
+#include "GFLtask.as"
+#include "task_sequencer.as"
 
 //Author: NetherCrow
 
@@ -33,6 +35,7 @@ class GFLskill : Tracker {
     protected array<XM8tracker@> XM8track;
 	protected array<HK416_tracker@> HK416_track;
 	protected array<Vector_tracker@> Vector_track;
+	protected Jupiter_Airstrike_Task@ Jupiter_track;
 
 	// --------------------------------------------
 	protected void handleResultEvent(const XmlElement@ event) {
@@ -64,7 +67,7 @@ class GFLskill : Tracker {
 			if(playerFaction.getStringAttribute("name")=="G&K PMC"){
 
 				TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
-				tasker.add(JupiterTask.start());
+				tasker.add(Jupiter_track.init(m_metagame));
 
 				XmlElement command("command");
 				command.setStringAttribute("class", "faction_resources");
@@ -78,7 +81,7 @@ class GFLskill : Tracker {
 			if(playerFaction.getStringAttribute("name")=="G&K PMC"){
 				
 				TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
-				tasker.add(JupiterTask.end());
+				tasker.add(Jupiter_track.end());
 
 				XmlElement command("command");
 				command.setStringAttribute("class", "faction_resources");
