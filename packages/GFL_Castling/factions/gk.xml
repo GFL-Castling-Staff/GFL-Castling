@@ -996,9 +996,15 @@
 		<resources clear_weapons="1" clear_carry_items="1">
 			<weapon key="gkw_ak12_defyAI.weapon" enabled="1" />
 			<carry_item key="exo_AK12_defy.carry_item" enabled="1" />
+			<call key="gk_bombardment_fairy.call" />
+			<call key="gk_airstrike_fairy.call" />
+			<call key="gk_rocket_fairy.call" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="0.100" max="0.101" />
+		</attribute_config>
+		<attribute_config class="rp">
+			<attribute weight="1.0" min="1000" max="10100" />
 		</attribute_config>
 	</soldier>
 	<soldier name="229_m870_sg" spawn_score="0.05" copy_from="default_sg">
@@ -1208,9 +1214,9 @@
 	<soldier name="gk_dinergate" spawn_score="0">
 		<models filename="sf_dinergate.models" />
 		<character filename="sf_dinergate.character" />
-		<ai filename="eod.ai" />
+		<ai filename="hydra.ai" />
 
-		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1">
+		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="ff_dinergate.weapon"/>
 			<carry_item key="exo_t4.carry_item" />
 		</resources>
@@ -1222,7 +1228,7 @@
 		<model filename="gkd_manticore_pink.xml" />
 		<character filename="qwd.character" />
 		<ai filename="hydra.ai" />
-		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1">
+		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="ff_manticore.weapon" />
 			<carry_item key="ff_qwd.carry_item" />
 		</resources>

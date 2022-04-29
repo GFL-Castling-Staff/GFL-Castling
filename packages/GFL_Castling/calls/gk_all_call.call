@@ -21,8 +21,8 @@
     <!-- 嘲讽妖精 -->
     <call name="Targetdrone" key="target.call" radio_view_text="Targetdrone" initiation_comment1="Targetdrone is launching" acknowledge_comment="Unlock" launch_comment="Targetdrone,Unlock!" notify_metagame="1">
         <hud_icon filename="call_Airborne_targetdrone.png" />
-        <capacity value="100" source="rank" source_value="0.0" />
-        <!-- <capacity value="100" source="rank" source_value="0.1" /> -->
+        <capacity value="0" source="rank" source_value="0.0" />
+        <capacity value="100" source="rank" source_value="1.143" />
         <inventory encumbrance="0.0" price="300.0" />
         <round instances="1" instance_class="soldier" instance_key="GK_target" instance_spread="0 0 0" common_spread="0 0 0" launch_time="5.0" spawn_time="5.5" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="-5.0" initial_speed_to_target="0.0">
             <sound class="spawn" fileref="hello.wav" volume="1.0" />
@@ -38,7 +38,7 @@
 		</round>
         <hud_icon filename="call_Airborne_martina.png" />
         <capacity value="0" source="rank" source_value="0.0" />
-        <capacity value="100" source="rank" source_value="10.3" />
+        <capacity value="100" source="rank" source_value="0.486" />
         <inventory encumbrance="0.0" price="324.0" />
     </call>
     <!-- Chiara IV -->
@@ -51,7 +51,7 @@
 		</round>
         <hud_icon filename="call_Airborne_chiara.png" />
         <capacity value="0" source="rank" source_value="0.0" />
-        <capacity value="100" source="rank" source_value="10.3" />
+        <capacity value="100" source="rank" source_value="4.369" />
         <inventory encumbrance="0.0" price="428.0" />
     </call>
     <!-- Pierre II -->
@@ -64,7 +64,7 @@
 		</round>
         <hud_icon filename="call_Airborne_pierre.png" />
         <capacity value="0" source="rank" source_value="0.0" />
-        <capacity value="100" source="rank" source_value="20.88" />
+        <capacity value="100" source="rank" source_value="13.008" />
         <inventory encumbrance="0.0" price="1480.0" />
     </call>
     <!-- 2x蝎甲兽 -->
@@ -130,7 +130,7 @@
         </round>
         <hud_icon filename="call_Firesupport_RocketFairy.png" />
         <capacity value="0" source="rank" source_value="0.0" />
-        <capacity value="100" source="rank" source_value="1.794" />
+        <capacity value="100" source="rank" source_value="2.364" />
         <inventory encumbrance="0.0" price="750.0" />
     </call>
     <!-- 烟雾搜救妖精 -->
@@ -145,6 +145,8 @@
             <sound class="launch" fileref="artillery_barrage_2.wav" volume="1.0" />
             <sound class="spawn" fileref="woosh1.wav" volume="0.2" />
         </round>
+        <capacity value="0" source="rank" source_value="0.0" />
+        <capacity value="100" source="rank" source_value="1.143" />
         <hud_icon filename="call_medic.png" />
         <inventory encumbrance="0.0" price="300.0" />
     </call>
@@ -157,7 +159,7 @@
         </round>
         <hud_icon filename="calll_Barrier_Fairy.png" />
         <capacity value="0" source="rank" source_value="0.0" />
-        <capacity value="100" source="rank" source_value="0.0" />
+        <capacity value="100" source="rank" source_value="1.143" />
         <inventory encumbrance="0.0" price="300.0" />
     </call>
     <!-- 搜救妖精 -->
@@ -209,7 +211,7 @@
         </round>
         <hud_icon filename="call_Firesupport_AirborneFairy.png" />
         <capacity value="0" source="rank" source_value="0.0" />
-        <capacity value="100" source="rank" source_value="13.008" />
+        <capacity value="100" source="rank" source_value="1.143" />
         <inventory encumbrance="0.0" price="500.0" />
     </call>
 </calls>
