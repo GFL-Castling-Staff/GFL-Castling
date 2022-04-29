@@ -4,6 +4,17 @@
 	<parameter class="can_use_vehicles" value="0" /> 
 	<parameter class="speed" value="1.4" />
 
+	<parameter class="throwing_self_over_initial_bounce" value="0.25" />
+	<parameter class="throwing_self_over_steer_amount" value="1" />
+	<parameter class="throwing_self_over_lift_up" value="0.1" />
+    <parameter class="lifting_up_initial_bounce" value="0.05"/>
+    <parameter class="jumping_up_bounce" value="0.05"/>
+
+	<parameter class="ending_climbing_ladder_initial_bounce" value="0.05" />
+	<parameter class="ending_climbing_up_ladder_steer_amount" value="0.2" />
+	<parameter class="climbing_end_height_offset" value="0.25" />
+	<parameter class="climbing_with_jump_end_height_offset" value="0.25" />
+
 	<animation state_key="hold"  animation_key="still, germdog" />
 	<animation state_key="hold_one_wall"  animation_key="still, germdog" />
 	<animation key="still" target_key="still, germdog" />
@@ -21,7 +32,8 @@
 	<animation key="leaving prone" target_key="jumping, germdog" />
 	<animation key="dive" target_key="arrive, germdog" />
 	<animation key="jumping" target_key="jumping, germdog" />
-	<animation key="lifting up" target_key="jumping, germdog" />
+	<animation key="lifting up" target_key="arrive, germdog" />
+	<animation key="throwing, upside" target_key="jumping, germdog" />
 	<animation key="throwing self over" target_key="jumping, germdog" />
 	<animation key="falling" target_key="arrive, germdog" />
 	<animation key="arriving ground" target_key="arrive, germdog" />
@@ -44,7 +56,6 @@
 	<animation key="celebrating, shooting" target_key="reload, germdog" />
 	<animation key="surrender" target_key="wounded, germdog" />
 	<animation key="leaving_wounded" target_key="unwounded, germdog" />
-	<animation key="throwing, upside" target_key="jumping, germdog" />
 	<animation key="climbing ladder, still" target_key="climb, germdog" />
 	<animation key="climbing ladder" target_key="climb moving, germdog" />
 	<animation key="climbing ladder ending" target_key="arrive, germdog" />

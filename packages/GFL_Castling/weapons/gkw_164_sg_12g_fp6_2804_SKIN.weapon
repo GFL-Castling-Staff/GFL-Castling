@@ -33,7 +33,10 @@
 	
     <sound key="fire" fileref="fp6_fire_FromCOD10.wav" pitch_variety="0.05" volume="1" />
     <sound key="cycle" fileref="fp6_cycle_FromCOD10.wav" />
-    <sound key="reload_one" fileref="sg_reload_fromCOD10.wav" volume="0.7" />
+    <sound key="reload_one" fileref="sg1_reload_FromREALLIFE.wav" volume="0.5" />
+    <sound key="reload_one" fileref="sg2_reload_FromREALLIFE.wav" volume="0.5" />
+    <sound key="reload_one" fileref="sg3_reload_FromREALLIFE.wav" volume="0.5" />
+    <sound key="reload_one" fileref="sg4_reload_FromREALLIFE.wav" volume="0.5" />
     <sound class="impact" fileref="rifle_drop.wav" />
    
 	<!--Model, Icon, Cost-->

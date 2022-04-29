@@ -32,10 +32,10 @@
 	
 	<!--Sounds-->
 	
-    <sound key="fire" fileref="m21_fire_FromCOD4R.wav" pitch_variety="0.01" volume="1.15" />
-    <sound key="cycle" fileref="m21_cycle_FromCOD4R.wav"  volume="0.6" />
-    <sound key="magazine_out" fileref="m21_mgz_out_FromCOD4R.wav"  volume="0.6" />
-    <sound key="magazine_in" fileref="m21_mgz_in_FromCOD4R.wav"  volume="0.6" />
+    <sound key="fire" fileref="m21_fire_FromCOD4R.wav" pitch_variety="0.01" volume="1.1" />
+    <sound key="magazine_out" fileref="m14_mgz_out_FromCOD8.wav"  volume="0.5" />
+    <sound key="magazine_in" fileref="m14_mgz_in_FromCOD8.wav"  volume="0.5" />
+	<sound key="cycle" fileref="m14_cycle_FromCOD8.wav"  volume="0.5" />
     <sound class="impact" fileref="rifle_drop.wav" />
    
 	<!--Model, Icon, Cost-->
@@ -103,10 +103,10 @@
 	<animation state_key="next_in_chain_in" animation_key="change weapon in ssass" />
 	<!--Sounds-->
 	
-    <sound key="fire" fileref="m21_fire_FromCOD4R.wav" pitch_variety="0.01" volume="0.7" />
-    <sound key="cycle" fileref="m21_cycle_FromCOD4R.wav"  volume="1" />
-    <sound key="magazine_out" fileref="m21_mgz_out_FromCOD4R.wav"  volume="1" />
-    <sound key="magazine_in" fileref="m21_mgz_in_FromCOD4R.wav"  volume="1" />
+    <sound key="fire" fileref="m21skill_fire_FromTLOU2.wav" pitch_variety="0.01" volume="1.15" />
+    <sound key="magazine_out" fileref="m14_mgz_out_FromCOD8.wav"  volume="0.5" />
+    <sound key="magazine_in" fileref="m14_mgz_in_FromCOD8.wav"  volume="0.5" />
+	<sound key="cycle" fileref="m14_cycle_FromCOD8.wav"  volume="0.5" />
     <sound class="impact" fileref="rifle_drop.wav" />
    
 	<!--Model, Icon, Cost-->

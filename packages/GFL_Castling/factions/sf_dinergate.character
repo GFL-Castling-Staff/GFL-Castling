@@ -25,6 +25,9 @@
 	<!-- 游泳平滑度 -->
 	<parameter class="swimming_steer_amount" value="1.00" />
 
+	<parameter class="climbing_end_height_offset" value="0.25" />
+	<parameter class="climbing_with_jump_end_height_offset" value="0.25" />
+
 	<!-- 动作定义 -->
 	<animation state_key="hold"  animation_key="still, dinergate" />
 	<animation state_key="hold_one_wall"  animation_key="still, dinergate" />
