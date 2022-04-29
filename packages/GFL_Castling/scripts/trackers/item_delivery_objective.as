@@ -281,7 +281,15 @@ class ItemDeliveryObjective : Objective {
 		const Resource@ targetItem = getItemResource(event.getStringAttribute("item_key"));
 		if (targetItem is null) return;
 
-		int acceptedAmount = m_collapseDropAmount;
+		int acceptedAmount = min(m_collapseDropAmount,20);
+		int leftamount=m_collapseDropAmount - acceptedAmount;
+		if (leftamount>0){
+			sendPrivateMessage(m_metagame, playerId, "TOO many!!!!");
+			for (int k = 0; k < leftamount; ++k) {
+				addItemInBackpack(m_metagame,id,targetItem.m_type,targetItem.m_key);            			
+			}
+		}
+
 		if (m_deliveryAmount > 0) {
 			acceptedAmount = min(acceptedAmount, m_deliveryAmount);
 		}
