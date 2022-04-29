@@ -32,6 +32,5 @@
     <effect class="result" key="vehicle" copy="terrain" />     
     <effect class="result" key="character" copy="terrain" />
 
-    <effect class="activated" ref="Propulsion" />
     <trail probability="1.0" key="bullet_new" />
 </projectile>

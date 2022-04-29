@@ -255,7 +255,7 @@
     accuracy_factor="1" 
     sustained_fire_grow_step="1.2" 
     sustained_fire_diminish_rate="0.6" 
-    sight_range_modifier="2.2"
+    sight_range_modifier="20.2"
     ai_sight_range_modifier="100.0" 
     magazine_size="-1" 
     can_shoot_standing="0" 
@@ -281,7 +281,7 @@
      speed_estimation_far="200.0"
      max_speed="200"
      randomness="0.0"
-     curve_height="20"
+     curve_height="30"
      tweak_factor="2.5"
     />
 	<weak_hand_hold offset="0.2" />

@@ -41,10 +41,9 @@
 		<turret index="2" />  
 	</character_slot>	
 	
-	<character_slot type="gunner" seat_position="0.0 10.6 0.0" enter_position="0 0 1.5" rotation="0" exit_rotation="-1.57" hiding="1" >
+	<character_slot type="gunner" seat_position="0.0 20.6 0.0" enter_position="0 0 1.5" rotation="0" exit_rotation="-1.57" hiding="1" >
 		<turret index="3" />
-		<turret index="4" />
-		
+		<turret index="4" />	
 	</character_slot>
 	
 	<!-- sound handling -->
