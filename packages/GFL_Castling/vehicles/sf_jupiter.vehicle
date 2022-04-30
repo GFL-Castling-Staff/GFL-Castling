@@ -40,9 +40,9 @@
 	<!-- <turret offset="0 10.0 0.0" weapon_key="Jupiter_airstrike_warning.weapon" weapon_offset="0.0 6.0 -2.0" weapon_recoil="0.00" physics_recoil="0.0" max_rotation_step="0.01015" rotation="0" rotation_range="" /> -->
 	
 	
-	<visual class="chassis" mesh_filename="Jupiter_base_2.mesh" texture_filename="Jupiter_temp_texture.png" max_tilt="0"/>
+	<visual class="chassis" mesh_filename="Jupiter_base_2.mesh" texture_filename="Jupiter.png" max_tilt="0"/>
 	
-	<visual offset="0 0.24 0" class="turret" turret_index="0" mesh_filename="Jupiter_turret_2.mesh" texture_filename="Jupiter_temp_texture.png" />
+	<visual offset="0 0.24 0" class="turret" turret_index="0" mesh_filename="Jupiter_turret_2.mesh" texture_filename="Jupiter.png" />
 	<visual offset="0 0.24 0" class="turret" key="broken" turret_index="0" mesh_filename="Jupiter_turret_2.mesh" texture_filename="humvee_broken.png" />	
 	
 	<character_slot type="gunner" seat_position="-0.0 2.6 -1.0" enter_position="0 0 -1.5" rotation="0" exit_rotation="1.57" hiding="1" >
