@@ -148,6 +148,8 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 	// ------------------------------------------------------------------------------------------------
 	protected void setupNormalStages() {
+		addStage(setupEggStage());		  // 上坟
+		addStage(setupStage108());		  // xiaoxieshen by diling
 		addStage(setupStage107());		  // chapter1 by diling
 		addStage(setupStage9());          // map9
 		addStage(setupStage7());          // map6
@@ -444,7 +446,100 @@ class StageConfiguratorInvasion : StageConfigurator {
 		setDefaultAttackBreakTimes(stage);
 		return stage;
 	}
+	protected Stage@ setupStage108(){
+		Stage@ stage = createStage();
+		stage.m_mapInfo.m_name = "Kanda jimbocho ";
+		stage.m_mapInfo.m_path = "media/packages/GFLC_Map/maps/mydevilsfrontline";
+		stage.m_mapInfo.m_id = "Tokyo Jimbocho";
+		stage.addTracker(PeacefulLastBase(m_metagame, 0));
+		stage.addTracker(CommsCapacityHandler(m_metagame));
+		stage.m_maxSoldiers = 120;
+		stage.m_playerAiCompensation = 8;                                     
+		stage.m_playerAiReduction = 2;                                         
+		stage.m_minRandomCrates = 2; 
+		stage.m_maxRandomCrates = 6;
+		{
+			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0));
+			stage.m_factions.insertLast(f);
+		}
+		{
+			Faction f(getFactionConfigs()[1], createCommanderAiCommand(1,0.4,0.2));
+			f.m_overCapacity = 40;                                            
+			f.m_capacityOffset = 20;                                           
+			stage.m_factions.insertLast(f); 
+		}
+		{
+			Faction f(getFactionConfigs()[2], createCommanderAiCommand(2,0.3,0.2));
+			f.m_overCapacity = 40;                                            
+			f.m_capacityOffset = 20;                                           
+			stage.m_factions.insertLast(f); 
+		}
+		{
+			XmlElement command("command");
+			command.setStringAttribute("class", "faction_resources");
+			command.setIntAttribute("faction_id", 0);
+			addFactionResourceElements(command, "vehicle", array<string> = {"water_tower.vehicle"}, false);
 
+			stage.m_extraCommands.insertLast(command);
+		}
+		stage.m_primaryObjective = "capture";
+		setDefaultAttackBreakTimes(stage);
+		return stage;
+	}
+	protected Stage@ setupEggStage() {
+		Stage@ stage = createStage();
+		stage.m_mapInfo.m_name = "High Land 33";
+		stage.m_mapInfo.m_path = "media/packages/GFLC_Map/maps/egg001";
+		stage.m_mapInfo.m_id = "Highland33";
+
+		stage.addTracker(Overtime(m_metagame, 0));
+
+		stage.m_maxSoldiers = 130;                                             // was 28*3 in 1.75
+		stage.m_playerAiCompensation = 8;                                         // was 5 (test4)
+		stage.m_playerAiReduction = 2;                                            // was 3 (test4)  
+		stage.m_soldierCapacityModel = "constant";                                // was set to default in 1.65
+		
+		stage.m_minRandomCrates = 1; 
+		stage.m_maxRandomCrates = 3;
+         
+		stage.m_defenseWinTime = 450;     // was 400 in 1.65 old koth mode
+		stage.m_defenseWinTimeMode = "custom";
+		stage.addTracker(PausingKothTimer(m_metagame, stage.m_defenseWinTime));
+	
+		{
+			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0, 0.55, 0.25));     // was 0.1, 0.1 in 1.65
+			stage.m_factions.insertLast(f);
+		}
+		{
+			Faction f(FactionConfig(1, "sf.xml", "S.F.", "0.91 0.11 0.20", "sf.xml"), createCommanderAiCommand(1, 0.20, 0.10));
+            f.m_capacityOffset = 15;                                            
+			stage.m_factions.insertLast(f);                                                                
+		}
+		{
+			Faction f(FactionConfig(2, "kcco.xml", "KCCO", "0.43 0.49 0.18", "kcco.xml"), createCommanderAiCommand(2, 0.20, 0.10));             
+            f.m_capacityOffset = 15;                                            
+			stage.m_factions.insertLast(f);                                    
+		}
+		{
+			Faction f(FactionConfig(3, "paradeus.xml", "Paradeus", "1 1 1", "paradeus.xml"), createCommanderAiCommand(3, 0.20, 0.10));             
+            f.m_capacityOffset = 15;                                            
+			stage.m_factions.insertLast(f);                                    
+		}
+		{
+			XmlElement command("command");
+			command.setStringAttribute("class", "faction_resources");
+			command.setIntAttribute("faction_id", 0);
+			addFactionResourceElements(command, "vehicle", array<string> = {"radio_jammer2.vehicle"}, false);
+
+			stage.m_extraCommands.insertLast(command);
+		}        
+
+		// metadata
+		stage.m_primaryObjective = "koth";
+		stage.m_kothTargetBase = "grave";
+
+		return stage;
+	} 
 	protected Stage@ setupStage1() {
 		Stage@ stage = createStage();
 		stage.m_mapInfo.m_name = "Keepsake Bay";
@@ -586,9 +681,6 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.m_includeLayers.insertLast("layer1.invasion");        
 
 		stage.addTracker(Overtime(m_metagame, 0));
-//		stage.addTracker(Spawner(m_metagame, 1, Vector3(477,0,520)));
-//		stage.addTracker(Spawner(m_metagame, 1, Vector3(455,0,508)));
-//		stage.addTracker(Spawner(m_metagame, 1, Vector3(446,0,539)));
 
 		stage.m_maxSoldiers = 35 * 4;                                             // was 28*3 in 1.75
 		stage.m_playerAiCompensation = 8;                                         // was 5 (test4)
