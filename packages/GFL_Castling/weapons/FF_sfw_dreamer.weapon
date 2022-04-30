@@ -118,7 +118,7 @@
     <weak_hand_hold offset="0.4" />
 
     <projectile file="bullet_sf.projectile">
-		<result class="blast" damage="26.0"   radius="2" decal="1" push="0.1" character_state="death" faction_compare="not_equal"/>
+		<result class="blast" damage="26.0"   radius="2.5" decal="1" push="0.1" character_state="death" faction_compare="not_equal"/>
 		<trail probability="1.0" key="sf_long" />
     </projectile>
 
@@ -142,12 +142,12 @@
 	can_shoot_prone="0"
 	class="4"
 	sight_range_modifier="1.5"
-	burst_shots="60"  
+	burst_shots="90"  
 	slot="0" 
-	magazine_size="60" 
+	magazine_size="90" 
 	name="GK-Dreamer-[Nirvanic Demolition]" 
 	projectile_speed="300" 
-	retrigger_time="0.05" 
+	retrigger_time="0.0333" 
 	last_burst_retrigger_time="3.0"
 	suppressed="0" 
 	sustained_fire_diminish_rate="0.4"
