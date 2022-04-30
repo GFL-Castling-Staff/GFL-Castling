@@ -3,22 +3,22 @@
     
      
     <specification 
-	 retrigger_time="0.4"
-	 last_burst_retrigger_time="3" 
-     magazine_size="40"
-     can_shoot_standing="1" 
-     can_shoot_crouching="0" 
-     can_shoot_prone="0" 
-     carry_in_two_hands="0" 
-     burst_shots="4"
-     name="Alina" 
-     class="4"
-     supperessed="1"
-     projectile_speed="10"
-     use_basic_muzzle_smoke_effect="0"
-     stab_enabled="1"
-     stab_range="6"
-	 sustained_fire_grow_step="0"
+	retrigger_time="-1"
+	last_burst_retrigger_time="0.4" 
+    magazine_size="30"
+    can_shoot_standing="1" 
+    can_shoot_crouching="0" 
+    can_shoot_prone="0" 
+    carry_in_two_hands="0" 
+    burst_shots="1"
+    name="Alina" 
+    class="4"
+    supperessed="1"
+    projectile_speed="100"
+    use_basic_muzzle_smoke_effect="0"
+    stab_enabled="1"
+    stab_range="6"
+	sustained_fire_grow_step="0"
 />
 
     <animation state_key="recoil"   animation_key="melee, nyto whip" />
@@ -67,7 +67,7 @@
 
   
     <modifier class="speed" value="0.7" />
-    <modifier class="hit_success_probability" value="-0.075"/>
+    <modifier class="hit_success_probability" value="-0.15"/>
     <shield offset="-0.60 0.0 0" extent="0.4 1.5 0.3" />
     <!-- state modifiers for weapons are connected to shield impact events -->
     <!-- deflects all bullets; death, stun, wound become none, doesn't consume -->

@@ -2,7 +2,7 @@
 <projectile class="bullet" name="default" slot="1" time_to_live="2.0" pulldown_in_air="4">
      <result class="blast" 
         damage="3" 
-        radius="2" 
+        radius="2.5" 
         decal="1" 
         push="0" 
         character_state="death"
