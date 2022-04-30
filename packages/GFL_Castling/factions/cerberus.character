@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<character filename="default_base.character">
+
+	<parameter class="can_use_vehicles" value="0" /> 
+
+	<animation state_key="hold"  animation_key="relax, cerberus" />
+	<animation state_key="hold"  animation_key="relax2, cerberus" />
+	<animation state_key="hold_one_wall"  animation_key="still, cerberus" />
+	<animation key="still" target_key="still, cerberus" />
+	<animation key="still against wall" target_key="still, cerberus" />
+	<animation key="still, heavy weapon" target_key="still, cerberus" />
+	<animation key="walking" target_key="walking, cerberus" />
+	<animation key="walking backwards" target_key="walking, cerberus" />
+	<animation key="running" target_key="running, cerberus" />
+	<animation key="crouch still" target_key="still, cerberus" />
+	<animation key="crouching forwards" target_key="walking, cerberus" />
+	<animation key="crouching backwards" target_key="walking, cerberus" />
+	<animation key="prone" target_key="still, cerberus" />
+	<animation key="prone, moving forwards" target_key="walking, cerberus" />
+	<animation key="falling" target_key="arive ground, cerberus" />
+	<animation key="arriving ground" target_key="arive ground, cerberus" />
+	<animation key="going prone" target_key="arive ground, cerberus" />
+	<animation key="leaving prone" target_key="jumping, cerberus" />
+	<animation key="dive" target_key="dive, cerberus" />
+	<animation key="jumping" target_key="jumping, cerberus" />
+	<animation key="lifting up" target_key="jumping, cerberus" />
+	<animation key="throwing self over" target_key="jumping, cerberus" />
+	<animation key="stunned" target_key="stuned, cerberus" />
+	<animation key="wounded, still, 66" target_key="wound, cerberus" />
+	<animation key="wounded, moving forwards, 67" target_key="wound moving, cerberus" />
+	<animation key="tank mg still" target_key="still, cerberus" />
+	<animation key="throwing, upside" target_key="stab, cerberus" />
+	<animation key="travelling car, aiming" target_key="still, cerberus" />
+	<animation key="swimming still" target_key="swim still, cerberus" />
+	<animation key="swimming forwards" target_key="swimming, cerberus" />
+	<animation key="surrender" target_key="wound, cerberus" />
+	<animation key="leaving_wounded" target_key="unwound, cerberus" />
+	<animation key="climbing ladder, still" target_key="climb still, cerberus" />
+	<animation key="climbing ladder" target_key="climb moving, cerberus" />
+	<animation key="climbing ladder ending" target_key="arive ground, cerberus" />
+
+</character>
