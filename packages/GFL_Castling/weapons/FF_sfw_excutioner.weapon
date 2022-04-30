@@ -82,8 +82,8 @@
 
   <inventory 
   encumbrance="27.0" 
-  buy_price="328.0" 
-  sell_price="328.0"/>
+  buy_price="648.0" 
+  sell_price="648.0"/>
 	
 	<!--Ballistics-->
 
@@ -151,7 +151,11 @@
     <projectile file="teal.projectile">
         <result class="blast" radius="4" damage="4" decal="0" push="0.0" character_state="death" faction_compare="not_equal" make_vehicle_hit_sound="0" />
     </projectile>
-
+    
+    <inventory 
+    encumbrance="27.0" 
+    buy_price="648.0" 
+    sell_price="648.0"/>
 
   
     <stance state_key="running" accuracy="1" />
@@ -172,7 +176,6 @@
 	can_respawn_with="1" />
 
     <modifier class="speed" value="0.8" />
-    <modifier class="hit_success_probability" value="-0.15"/>
      <shield offset="-0.60 0.0 0" extent="0.4 1.5 0.3" />
 	  <!-- state modifiers for weapons are connected to shield impact events -->
       <!-- deflects all bullets; death, stun, wound become none, doesn't consume -->
