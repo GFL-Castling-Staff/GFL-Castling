@@ -12,15 +12,15 @@
     defense_win_time="500"
 	  base_capture_system="any"> 
 
+    <faction initial_over_capacity="50" ai_accuracy="0.94" />
     <faction initial_over_capacity="0" ai_accuracy="0.94" />
-    <faction initial_over_capacity="30" ai_accuracy="0.94" />
-    <faction initial_over_capacity="30" ai_accuracy="0.94" />    
-    <faction initial_over_capacity="50" ai_accuracy="0.94"/>
+    <faction initial_over_capacity="50" ai_accuracy="0.94" />    
+    <faction initial_over_capacity="20" ai_accuracy="0.94"/>
   </command>
   <command 
 	  class="commander_ai" 
 	  faction="0"
-	  base_defense="0.4"
+	  base_defense="0.5"
 	  border_defense="0.2">
   </command>
   <command 
@@ -38,7 +38,7 @@
   <command 
 	  class="commander_ai" 
 	  faction="3"
-	  base_defense="0.2"
-	  border_defense="0.1">
+	  base_defense="0.25"
+	  border_defense="0.05">
   </command>
 </commands>

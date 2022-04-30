@@ -494,7 +494,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 		stage.addTracker(Overtime(m_metagame, 0));
 
-		stage.m_maxSoldiers = 130;                                             // was 28*3 in 1.75
+		stage.m_maxSoldiers = 150;                                             // was 28*3 in 1.75
 		stage.m_playerAiCompensation = 8;                                         // was 5 (test4)
 		stage.m_playerAiReduction = 2;                                            // was 3 (test4)  
 		stage.m_soldierCapacityModel = "constant";                                // was set to default in 1.65
@@ -512,17 +512,17 @@ class StageConfiguratorInvasion : StageConfigurator {
 		}
 		{
 			Faction f(FactionConfig(1, "sf.xml", "S.F.", "0.91 0.11 0.20", "sf.xml"), createCommanderAiCommand(1, 0.20, 0.10));
-            f.m_capacityOffset = 15;                                            
+            f.m_capacityOffset = 25;                                            
 			stage.m_factions.insertLast(f);                                                                
 		}
 		{
 			Faction f(FactionConfig(2, "kcco.xml", "KCCO", "0.43 0.49 0.18", "kcco.xml"), createCommanderAiCommand(2, 0.20, 0.10));             
-            f.m_capacityOffset = 15;                                            
+            f.m_capacityOffset = 25;                                            
 			stage.m_factions.insertLast(f);                                    
 		}
 		{
 			Faction f(FactionConfig(3, "paradeus.xml", "Paradeus", "1 1 1", "paradeus.xml"), createCommanderAiCommand(3, 0.20, 0.10));             
-            f.m_capacityOffset = 15;                                            
+            f.m_capacityOffset = 5;                                            
 			stage.m_factions.insertLast(f);                                    
 		}
 		{

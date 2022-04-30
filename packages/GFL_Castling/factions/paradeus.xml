@@ -426,7 +426,8 @@
 		<ai filename="eod.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="parw_streletplus.weapon" enabled="1" />
-			<carry_item key="pard_strelet.carry_item" />
+			<weapon key="par_deploy_compass.weapon" enabled="1" />
+			<carry_item key="pard_sg.carry_item" />
 			<call key="pard_zombie.call" />
 		</resources>
 	</soldier>
@@ -455,7 +456,8 @@
 		<ai filename="melee.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="parw_police.weapon" enabled="1" probability="1.0" />
-			<carry_item key="pard_rodelero.carry_item" />
+			<weapon key="par_deploy_compass.weapon" enabled="1" probability="1.0" />
+			<carry_item key="pard_sg.carry_item" />
 			<call file="pard_zombie.call" />
 			<attribute_config class="xp">
 				<attribute weight="1.0" min="1.0" max="5.6" />
@@ -483,7 +485,7 @@
 			<weapon key="parw_thrower.weapon" enabled="1" probability="1.0" />
 			<projectile key="parw_grenade.projectile" enabled="1" probability="1.0" />
 			<weapon key="parw_rocket.weapon" enabled="1" probability="1.0" />
-			<carry_item key="pard_rodelero.carry_item" />
+			<carry_item key="pard_sg.carry_item" />
 			<call file="pard_zombie.call" />
 			<attribute_config class="xp">
 				<attribute weight="1.0" min="1.0" max="13.833" />
