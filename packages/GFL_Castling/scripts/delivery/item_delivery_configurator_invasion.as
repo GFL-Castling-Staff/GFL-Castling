@@ -630,6 +630,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		ScoredResource("light.carry_item", "carry_item", 1.0f),
 		ScoredResource("ange.carry_item", "carry_item", 1.0f),
 		ScoredResource("dandelion.carry_item", "carry_item", 1.0f),
+		ScoredResource("dima.carry_item", "carry_item", 1.0f),
 		ScoredResource("K309.carry_item", "carry_item", 0.7f),
 		ScoredResource("IAQS.carry_item", "carry_item", 0.7f),
 		ScoredResource("NZ75.carry_item", "carry_item", 0.7f),
