@@ -13,7 +13,7 @@
 		suppressed="0" 
 		sustained_fire_diminish_rate="1.9" 
 		sustained_fire_grow_step="0.4"
-		sight_range_modifier="1.0"
+		sight_range_modifier="1.75"
 		spread_range="0.1"
     projectiles_per_shot="2"
 		/>
@@ -21,8 +21,8 @@
 
     <commonness in_stock="0" value="0"/>
   	<animation state_key="hold_casual"			animation_key="dancing, kazachok" />
-    <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
-    <inventory buy_price="13.0" sell_price="13.0" />
+    <animation key="reload" animation_key="reloading, magazine rifle 0.9" />
+    <inventory buy_price="15.0" sell_price="15.0" />
 
 
 
@@ -40,7 +40,7 @@
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet.projectile">
         <result class="hit"
-		kill_probability="1.65"
+		kill_probability="1.45"
 		kill_decay_start_time="1.313"
 		kill_decay_end_time="1.622"  />
     </projectile>
@@ -52,5 +52,5 @@
     <stance state_key="standing" accuracy="0.95" />
     <stance state_key="crouching" accuracy="0.87" />
     <stance state_key="prone" accuracy="1" />
-    <modifier class="speed" value="0.35" /> 
+    <modifier class="speed" value="0.0" /> 
 </weapon>
