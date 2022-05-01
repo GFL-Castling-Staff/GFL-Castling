@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapons>
+<weapon file="two_hands_sg.animation_base" key="gkw_spas12.weapon">
+
+    
+    <!--Weapon specifications-->
+    
+    <specification 
+	retrigger_time="-1.0" 
+	accuracy_factor="0.9" 
+	sustained_fire_grow_step="0.8" 
+	sustained_fire_diminish_rate="2" 
+	magazine_size="8" 
+	can_shoot_standing="1" 
+	suppressed="0" 
+	name="SPAS-12" 
+	class="1" 
+	reload_one_at_a_time="1"
+	sight_range_modifier="1" 
+	projectile_speed="96" 
+	barrel_offset="0.4" 
+	projectiles_per_shot="15"
+	spread_range="0.2"
+	 />
+     <inventory  buy_price="76.0" sell_price="76.0" />
+	<!--Animations-->
+    <next_in_chain key="gkw_spas12_skill.weapon" share_ammo="1" />
+
+    <animation state_key="next_in_chain_in" animation_key="switch fire mode" />
+    <animation state_key="cycle" animation_key="Pshotgun0.5" />
+    <animation state_key="cycle" stance_key="prone" animation_key="Pshotgun0.5p" />
+    <animation key="reload" animation_key="reloading, oaat" />		
+	
+	<!--Sounds-->
+	
+    <sound key="fire" fileref="spas12_fire_FromWF.wav" pitch_variety="0.05" volume="1.5" />
+    <sound key="cycle" fileref="spas12_cycle_FromINS.wav" />
+    <sound key="cycle" fileref="spas12_cycle_FromINS.wav" />
+    <sound key="cycle" fileref="spas12_cycle_FromINS.wav" />
+    <sound key="cycle" fileref="spas12_cycle_FromINS.wav" />
+    <sound key="cycle" fileref="spas12_cycle_FromINS.wav" />
+    <sound key="cycle" fileref="spas12_cycle_FromINS.wav" />
+    <sound key="cycle" fileref="spas12_cycle_FromINS.wav" />
+    <sound key="cycle" fileref="spas12_cycle_FromINS.wav" />
+    <sound key="cycle" fileref="spas12_cycle_FromINS.wav" />
+    <sound key="cycle" fileref="spas12_cycle_FromINS.wav" />
+    <sound key="cycle" fileref="spas12_cycle_FromINS.wav" />
+    <sound key="cycle" fileref="spas12_cycle_FromINS.wav" />
+    <sound key="cycle" fileref="SPAS12_WIN_JP.wav" volume="0.8" pitch_variety="0"/>
+    <sound key="cycle" fileref="spas12_cycle_FromINS.wav" />
+    <sound key="cycle" fileref="spas12_cycle_FromINS.wav" />
+    <sound key="cycle" fileref="spas12_cycle_FromINS.wav" />
+    <sound key="cycle" fileref="SPAS12_DEFENSE_JP.wav" volume="0.8" pitch_variety="0"/>
+    <sound key="cycle" fileref="spas12_cycle_FromINS.wav" />
+    <sound key="cycle" fileref="spas12_cycle_FromINS.wav" />
+    <sound key="cycle" fileref="spas12_cycle_FromINS.wav" />
+    <sound key="cycle" fileref="SPAS12_ATTACK_JP.wav" volume="0.8" pitch_variety="0"/>
+    <sound key="cycle" fileref="spas12_cycle_FromINS.wav" />
+    <sound key="cycle" fileref="spas12_cycle_FromINS.wav" />
+    <sound key="cycle" fileref="spas12_cycle_FromINS.wav" />
+    <sound key="cycle" fileref="spas12_cycle_FromINS.wav" />
+    <sound key="cycle" fileref="spas12_cycle_FromINS.wav" />
+    <sound key="cycle" fileref="spas12_cycle_FromINS.wav" />
+    <sound key="cycle" fileref="spas12_cycle_FromINS.wav" />
+    <sound key="cycle" fileref="spas12_cycle_FromINS.wav" />
+    <sound key="cycle" fileref="spas12_cycle_FromINS.wav" />
+    <sound key="cycle" fileref="spas12_cycle_FromINS.wav" />
+    <sound key="cycle" fileref="spas12_cycle_FromINS.wav" />
+    <sound key="cycle" fileref="spas12_cycle_FromINS.wav" />
+    <sound key="cycle" fileref="SPAS12_MEET_JP.wav" volume="0.8" pitch_variety="0"/>
+    <sound key="cycle" fileref="spas12_cycle_FromINS.wav" />
+    <sound key="cycle" fileref="spas12_cycle_FromINS.wav" />
+    <sound key="cycle" fileref="spas12_cycle_FromINS.wav" />
+    <sound key="cycle" fileref="SPAS12_GOATTACK_JP.wav" volume="0.8" pitch_variety="0"/>
+    <sound key="cycle" fileref="spas12_cycle_FromINS.wav" />
+    <sound key="cycle" fileref="spas12_cycle_FromINS.wav" />
+    <sound key="cycle" fileref="spas12_cycle_FromINS.wav" />
+    <sound key="cycle" fileref="SPAS12_BLACKACTION_JP.wav" volume="0.8" pitch_variety="0"/>
+    <sound key="cycle" fileref="spas12_cycle_FromINS.wav" />
+    <sound key="cycle" fileref="spas12_cycle_FromINS.wav" />
+    <sound key="cycle" fileref="SPAS12_OPERATIONBEGIN_JP.wav" volume="0.8" pitch_variety="0"/>    
+    <sound key="cycle" fileref="spas12_cycle_FromINS.wav" />
+    <sound key="cycle" fileref="spas12_cycle_FromINS.wav" />
+    <sound key="cycle" fileref="SPAS12_FORMATION_JP.wav" volume="0.8" pitch_variety="0"/>    
+    <sound key="cycle" fileref="spas12_cycle_FromINS.wav" />
+    <sound key="cycle" fileref="spas12_cycle_FromINS.wav" />
+    <sound key="cycle" fileref="SPAS12_TIP_JP.wav" volume="0.8" pitch_variety="0"/>
+    <sound key="cycle" fileref="spas12_cycle_FromINS.wav" />
+    <sound key="cycle" fileref="spas12_cycle_FromINS.wav" />
+    <sound key="cycle" fileref="SPAS12_PHRASE_JP.wav" volume="0.8" pitch_variety="0"/>
+    <sound key="reload_one" fileref="spas12_reload_FromINS.wav" volume="1.0" />
+    <sound key="reload_one" fileref="sg1_reload_FromREALLIFE.wav" volume="0.5" />
+    <sound key="reload_one" fileref="sg2_reload_FromREALLIFE.wav" volume="0.5" />
+    <sound key="reload_one" fileref="sg3_reload_FromREALLIFE.wav" volume="0.5" />
+    <sound key="reload_one" fileref="sg4_reload_FromREALLIFE.wav" volume="0.5" />
+    <sound key="reload_one" fileref="spas12_reload_FromINS.wav" volume="1.0" />
+    <sound key="reload_one" fileref="spas12_reload_FromINS.wav" volume="1.0" />
+    <sound key="reload_one" fileref="spas12_reload_FromINS.wav" volume="1.0" />
+    <sound class="impact" fileref="rifle_drop.wav" />
+   
+	<!--Model, Icon, Cost-->
+   
+    <model filename="gkw_sg_spas12.xml" />
+    <hud_icon filename="gkw_spas12.png" />
+
+
+	
+	<!--Ballistics-->
+	
+    
+    <weak_hand_hold offset="0.3" />
+    <projectile file="bullet.projectile">
+        <result class="hit" 
+        kill_probability="1.8" 
+        kill_decay_start_time="0.09" 
+        kill_decay_end_time="0.800" />
+    </projectile>
+    
+    <!--Accuracy, Movement speed-->
+    
+	<stance state_key="walking" accuracy="0.65" />
+    <stance state_key="crouch_moving" accuracy="0.6" />
+    <stance state_key="prone_moving" accuracy="0.6" />
+    <stance state_key="standing" accuracy="0.7"/>
+    <stance state_key="crouching" accuracy="0.75" />
+    <stance state_key="prone" accuracy="0.85" />
+    <stance state_key="over_wall" accuracy="0.85" />  
+
+</weapon>
+
+
+<weapon file="two_hands_sg.animation_base" key="gkw_spas12_skill.weapon">
+
+    
+    <!--Weapon specifications-->
+    
+    <specification 
+	retrigger_time="-1.0" 
+	accuracy_factor="0.9" 
+	sustained_fire_grow_step="1.0" 
+	sustained_fire_diminish_rate="2" 
+	magazine_size="8" 
+	can_shoot_standing="1" 
+	suppressed="0" 
+	name="SPAS-12-[Damage Focus SG]" 
+	class="1" 
+	reload_one_at_a_time="1"
+	sight_range_modifier="0.7" 
+	projectile_speed="96" 
+	barrel_offset="0.4" 
+	projectiles_per_shot="23"
+	spread_range="0.2"
+	 />
+     <inventory  buy_price="76.0" sell_price="76.0" />
+	<!--Animations-->
+    <next_in_chain key="gkw_spas12.weapon" share_ammo="1" />
+
+    <animation state_key="next_in_chain_in" animation_key="switch fire mode" />
+    <animation state_key="cycle" animation_key="Pshotgun0.5" />
+    <animation state_key="cycle" stance_key="prone" animation_key="Pshotgun0.5p" />
+    <animation key="reload" animation_key="reloading, oaat" />		
+	
+	<!--Sounds-->
+	
+    <sound key="fire" fileref="spas12skill_fire_FromCOD13.wav" pitch_variety="0.05" volume="1.5" />
+    <sound key="cycle" fileref="spas12_cycle_FromINS.wav" />
+    <sound key="cycle" fileref="spas12_cycle_FromINS.wav" />
+    <sound key="cycle" fileref="spas12_cycle_FromINS.wav" />
+    <sound key="cycle" fileref="spas12_cycle_FromINS.wav" />
+    <sound key="cycle" fileref="spas12_cycle_FromINS.wav" />
+    <sound key="cycle" fileref="spas12_cycle_FromINS.wav" />
+    <sound key="cycle" fileref="spas12_cycle_FromINS.wav" />
+    <sound key="cycle" fileref="spas12_cycle_FromINS.wav" />
+    <sound key="cycle" fileref="spas12_cycle_FromINS.wav" />
+    <sound key="cycle" fileref="spas12_cycle_FromINS.wav" />
+    <sound key="cycle" fileref="spas12_cycle_FromINS.wav" />
+    <sound key="cycle" fileref="spas12_cycle_FromINS.wav" />
+    <sound key="cycle" fileref="spas12_cycle_FromINS.wav" />
+    <sound key="cycle" fileref="SPAS12_ACCEPT_JP.wav" volume="0.8" pitch_variety="0"/>
+    <sound key="cycle" fileref="SPAS12_APPRECIATE_JP.wav" volume="0.8" pitch_variety="0"/>
+    <sound key="cycle" fileref="spas12_cycle_FromINS.wav" />
+    <sound key="cycle" fileref="spas12_cycle_FromINS.wav" />
+    <sound key="cycle" fileref="spas12_cycle_FromINS.wav" />
+    <sound key="cycle" fileref="spas12_cycle_FromINS.wav" />
+    <sound key="cycle" fileref="spas12_cycle_FromINS.wav" />
+    <sound key="cycle" fileref="spas12_cycle_FromINS.wav" />
+    <sound key="cycle" fileref="spas12_cycle_FromINS.wav" />
+    <sound key="cycle" fileref="spas12_cycle_FromINS.wav" />
+    <sound key="cycle" fileref="spas12_cycle_FromINS.wav" />
+    <sound key="cycle" fileref="spas12_cycle_FromINS.wav" />
+    <sound key="cycle" fileref="spas12_cycle_FromINS.wav" />
+    <sound key="cycle" fileref="spas12_cycle_FromINS.wav" />
+    <sound key="cycle" fileref="SPAS12_SKILL3_JP.wav" volume="0.8" pitch_variety="0"/>
+    <sound key="cycle" fileref="spas12_cycle_FromINS.wav" />
+    <sound key="cycle" fileref="spas12_cycle_FromINS.wav" />
+    <sound key="cycle" fileref="SPAS12_SKILL2_JP.wav" volume="0.8" pitch_variety="0"/>
+    <sound key="cycle" fileref="spas12_cycle_FromINS.wav" />
+    <sound key="cycle" fileref="spas12_cycle_FromINS.wav" />
+    <sound key="cycle" fileref="SPAS12_SKILL1_JP.wav" volume="0.8" pitch_variety="0"/>
+    <sound key="reload_one" fileref="spas12_reload_FromINS.wav" volume="1.0" />
+    <sound key="reload_one" fileref="sg1_reload_FromREALLIFE.wav" volume="0.5" />
+    <sound key="reload_one" fileref="sg2_reload_FromREALLIFE.wav" volume="0.5" />
+    <sound key="reload_one" fileref="sg3_reload_FromREALLIFE.wav" volume="0.5" />
+    <sound key="reload_one" fileref="sg4_reload_FromREALLIFE.wav" volume="0.5" />
+    <sound key="reload_one" fileref="spas12_reload_FromINS.wav" volume="1.0" />
+    <sound key="reload_one" fileref="spas12_reload_FromINS.wav" volume="1.0" />
+    <sound key="reload_one" fileref="spas12_reload_FromINS.wav" volume="1.0" />
+    <sound key="reload_one" fileref="SPAS12_LOADING_JP.wav" volume="0.6"  pitch_variety="0"/>
+    <sound key="reload_one" fileref="spas12_reload_FromINS.wav" volume="1.0" />
+    <sound key="reload_one" fileref="spas12_reload_FromINS.wav" volume="1.0" />
+    <sound key="reload_one" fileref="spas12_reload_FromINS.wav" volume="1.0" />
+    <sound key="reload_one" fileref="spas12_reload_FromINS.wav" volume="1.0" />
+    <sound key="reload_one" fileref="spas12_reload_FromINS.wav" volume="1.0" />
+    <sound key="reload_one" fileref="spas12_reload_FromINS.wav" volume="1.0" />
+    <sound class="impact" fileref="rifle_drop.wav" />
+   
+	<!--Model, Icon, Cost-->
+   
+    <model filename="gkw_sg_spas12.xml" />
+    <hud_icon filename="gkw_spas12_skill.png" />
+
+
+	
+	<!--Ballistics-->
+	
+    
+    <weak_hand_hold offset="0.3" />
+    <projectile file="bullet.projectile">
+        <result class="hit" 
+        kill_probability="1.7" 
+        kill_decay_start_time="0.09" 
+        kill_decay_end_time="0.800" />
+    </projectile>
+    <modifier class="speed" value="-0.4" />  
+    <!--Accuracy, Movement speed-->
+    
+	<stance state_key="walking" accuracy="0.65" />
+    <stance state_key="crouch_moving" accuracy="0.6" />
+    <stance state_key="prone_moving" accuracy="0.6" />
+    <stance state_key="standing" accuracy="0.7"/>
+    <stance state_key="crouching" accuracy="0.75" />
+    <stance state_key="prone" accuracy="0.85" />
+    <stance state_key="over_wall" accuracy="0.85" />  
+
+</weapon>
+
+
+
+
+</weapons>

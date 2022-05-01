@@ -2,13 +2,23 @@
 <weapons>
 	<weapon file="heavy_mg_standing.animation_base" key="gkw_mg5.weapon">
 		<specification barrel_offset="0.5" retrigger_time="0.085" accuracy_factor="0.8" sustained_fire_grow_step="0.35" sustained_fire_diminish_rate="1.5" magazine_size="200" suppressed="0" name="MG5" class="0" projectile_speed="220" spread_range="0.3" sight_range_modifier="1.5" />
-		<animation key="reload" animation_key="reloading, Machine gun 3" />
+		<animation key="reload" animation_key="reloading, Machine gun 2.8" />
 		<inventory buy_price="80.0" sell_price="80.0" />
 		<next_in_chain key="gkw_mg5_skill.weapon" share_ammo="1" />
 		<sound key="fire" fileref="mg5_fire_FromARMA3.wav" pitch_variety="0.05" volume="1" />
 		<sound key="magazine_out" fileref="mg5_mgz_out_FromCOD16.wav" volume="0.8" />
 		<sound key="magazine_in" fileref="mg5_mgz_in_FromCOD16.wav" volume="0.8" />
 		<sound key="cycle" fileref="mg5_cycle_FromCOD16.wav" volume="0.8" />
+		<sound key="cycle" fileref="MG5_PHRASE_JP.wav" volume="0.8" pitch_variety="0"/>
+		<sound key="cycle" fileref="mg5_cycle_FromCOD16.wav" volume="0.8" />
+		<sound key="cycle" fileref="MG5_LOADING_JP.wav" volume="0.8" pitch_variety="0"/>
+		<sound key="cycle" fileref="mg5_cycle_FromCOD16.wav" volume="0.8" />
+		<sound key="cycle" fileref="MG5_BLACKACTION_JP.wav" volume="0.8" pitch_variety="0"/>
+		<sound key="cycle" fileref="MG5_FEED_JP.wav" volume="0.8" pitch_variety="0"/>
+		<sound key="cycle" fileref="MG5_GOATTACK_JP.wav" volume="0.8" pitch_variety="0"/>
+		<sound key="cycle" fileref="mg5_cycle_FromCOD16.wav" volume="0.8" />
+		<sound key="cycle" fileref="MG5_MEET_JP.wav" volume="0.8" pitch_variety="0"/>
+		<sound key="cycle" fileref="MG5_DEFENSE_JP.wav" volume="0.8" pitch_variety="0"/>
 		<sound class="impact" fileref="rifle_drop.wav" />
 		<model filename="gkw_mg_mg5.xml" />
 		<hud_icon filename="gkw_mg5.png" />
@@ -26,7 +36,7 @@
 	</weapon>
 	<weapon file="heavy_mg.animation_base" key="gkw_mg5_skill.weapon">
 		<specification barrel_offset="0.5" retrigger_time="0.075" accuracy_factor="1" sustained_fire_grow_step="0.25" sustained_fire_diminish_rate="1.5" magazine_size="200" suppressed="0" name="MG5-[Terminating Barrage]" class="0" projectile_speed="195" spread_range="0.2" sight_range_modifier="2.0" can_shoot_standing="0" can_shoot_crouching="0" can_shoot_prone="1" />
-		<animation key="reload" animation_key="reloading, Machine gun 3" />
+		<animation key="reload" animation_key="reloading, Machine gun 2.8" />
 		<inventory buy_price="80.0" sell_price="80.0" />
 		<commonness value="0" in_stock="0" />
 		<next_in_chain key="gkw_mg5.weapon" share_ammo="1" />
@@ -34,6 +44,9 @@
 		<sound key="magazine_out" fileref="mg5_mgz_out_FromCOD16.wav" volume="0.8" />
 		<sound key="magazine_in" fileref="mg5_mgz_in_FromCOD16.wav" volume="0.8" />
 		<sound key="cycle" fileref="mg5_cycle_FromCOD16.wav" volume="0.8" />
+		<sound key="cycle" fileref="MG5_SKILL3_JP.wav" volume="0.8" pitch_variety="0"/>
+		<sound key="cycle" fileref="MG5_SKILL2_JP.wav" volume="0.8" pitch_variety="0"/>
+		<sound key="cycle" fileref="MG5_SKILL1_JP.wav" volume="0.8" pitch_variety="0"/>
 		<sound class="impact" fileref="rifle_drop.wav" />
 		<model filename="gkw_mg_mg5.xml" />
 		<hud_icon filename="gkw_mg5_skill.png" />
