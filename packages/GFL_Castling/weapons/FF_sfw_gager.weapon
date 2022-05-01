@@ -108,7 +108,6 @@
     </projectile>
 
     <modifier class="speed" value="1.01" />
-    <modifier class="hit_success_probability" value="-0.1"/>
     <stance state_key="running" accuracy="0.8" />
     <stance state_key="walking" accuracy="0.8" />
     <stance state_key="crouch_moving" accuracy="0.9" />
