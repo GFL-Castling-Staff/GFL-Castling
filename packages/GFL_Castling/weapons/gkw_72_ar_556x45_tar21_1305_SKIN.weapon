@@ -16,6 +16,7 @@
         <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
         <animation state_key="next_in_chain_in" animation_key="switch fire mode" />
         <inventory  buy_price="8.0" sell_price="8.0" />
+        <commonness value="0" in_stock="0" can_respawn_with="1" />
         <next_in_chain key="gkw_tar21_1305_skill.weapon" share_ammo="1" />
         <sound key="fire" fileref="tar21_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.0" />
         <sound key="magazine_out" fileref="tar21_mgz_out_FromINS.wav" volume="1.1" />
@@ -30,7 +31,7 @@
         <sound key="cycle" fileref="TAR21_BLACKACTION_JP.wav" volume="0.8" pitch_variety="0"/>
         <sound class="impact" fileref="rifle_drop.wav" />
         <model filename="gkw_ar_tar21_from_Eisen.xml" />
-        <hud_icon filename="gkw_tar21_skill.png" />
+        <hud_icon filename="gkw_tar21_1305.png" />
         <weak_hand_hold offset="0.2" />
         <projectile file="bullet.projectile">
             <result class="hit"  kill_probability="1.52" kill_decay_start_time="0.8" kill_decay_end_time="1.333" />
@@ -72,7 +73,7 @@
         <sound key="cycle" fileref="TAR21_GOATTACK_JP.wav" volume="0.8" pitch_variety="0"/>
         <sound class="impact" fileref="rifle_drop.wav" />
         <model filename="gkw_ar_tar21_from_Eisen.xml" />
-        <hud_icon filename="gkw_tar21_skill.png" />
+        <hud_icon filename="gkw_tar21_1305.png" />
         <weak_hand_hold offset="0.2" />
         <projectile file="bullet.projectile">
             <result class="hit"  kill_probability="1.4" kill_probability_offset_on_successful_hit="1.5" kill_decay_start_time="0.8" kill_decay_end_time="1.333" />
