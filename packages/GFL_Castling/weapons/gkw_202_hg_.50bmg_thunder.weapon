@@ -3,8 +3,8 @@
 
 
 	<specification 
-    retrigger_time="1.0" 
-    last_burst_retrigger_time="-1" 
+    retrigger_time="-1" 
+    last_burst_retrigger_time="1" 
     accuracy_factor="0.98" 
     sustained_fire_grow_step="0.8" 
     sustained_fire_diminish_rate="1.8" 
@@ -12,7 +12,7 @@
     carry_in_two_hands="0" 
     suppressed="0" 
     name="Thunder" 
-    class="2" 
+    class="1" 
     sight_range_modifier="1.0" 
     projectile_speed="130.0" 
     projectiles_per_shot="1" 
@@ -26,6 +26,8 @@
 	<sound key="magazine_out" fileref="thunder50_mgz_out_FromBF5.wav" volume="0.6" />
 	<sound key="magazine_in" fileref="thunder50_mgz_in_FromBF5.wav" volume="0.6" />
 	<sound key="reload_one" fileref="thunder50_cycle_FromTTF2.wav" volume="0.7" />
+
+	<animation state_key="cycle" animation_key="cycle, revolver" />
 
 	<model filename="gkw_hg_thunder50_from_melondove.xml" />
 
@@ -41,8 +43,6 @@
 	<animation state_key="recoil" stance_key="prone" animation_key="recoil, pistol, prone" />
 	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil, overwall pistol" />
 
-    <animation key="cycle" animation_key="Brifle1" />
-	<animation key="cycle" stance_key="prone" animation_key="Brifle1p" />
 
     <animation state_key="reload"	animation_key="reloading, thunder" />
 	
