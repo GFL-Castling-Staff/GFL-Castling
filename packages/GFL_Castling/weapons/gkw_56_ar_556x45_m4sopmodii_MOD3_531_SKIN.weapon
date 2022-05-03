@@ -45,11 +45,10 @@
     <stance state_key="walking" accuracy="0.8" />
     <stance state_key="crouch_moving" accuracy="0.9" />
     <stance state_key="prone_moving" accuracy="0.9" />
-
     <stance state_key="standing" accuracy="0.8" />
     <stance state_key="crouching" accuracy="0.9" />
     <stance state_key="prone" accuracy="1" />
-    
+    <modifier class="detectability" value="-0.1" />
     <modifier class="speed" value="0.3" />
 
 </weapon>
@@ -103,11 +102,10 @@
     <stance state_key="walking" accuracy="0.8" />
     <stance state_key="crouch_moving" accuracy="0.9" />
     <stance state_key="prone_moving" accuracy="0.9" />
-
     <stance state_key="standing" accuracy="0.8" />
     <stance state_key="crouching" accuracy="0.9" />
     <stance state_key="prone" accuracy="1" />
-    
+    <modifier class="detectability" value="-0.1" />
 
 </weapon>
 </weapons>

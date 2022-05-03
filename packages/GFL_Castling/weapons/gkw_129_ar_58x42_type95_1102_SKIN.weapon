@@ -47,11 +47,10 @@
     <stance state_key="walking" accuracy="0.8" />
     <stance state_key="crouch_moving" accuracy="0.8" />
     <stance state_key="prone_moving" accuracy="0.8" />
-
     <stance state_key="standing" accuracy="0.98" />
     <stance state_key="crouching" accuracy="1" />
     <stance state_key="prone" accuracy="1" />
-    
+    <modifier class="detectability" value="-0.1" />
 
 </weapon>
 <weapon file="two_hands_ar.animation_base" key="gkw_QBZ95_1102_skill.weapon">
@@ -99,11 +98,11 @@
     <stance state_key="walking" accuracy="0.8" />
     <stance state_key="crouch_moving" accuracy="0.8" />
     <stance state_key="prone_moving" accuracy="0.8" />
-
     <stance state_key="standing" accuracy="0.98" />
     <stance state_key="crouching" accuracy="1" />
     <stance state_key="prone" accuracy="1" />
     <modifier class="speed" value="-0.3" />
+    <modifier class="detectability" value="-0.1" />
     <modifier class="hit_success_probability" value="+0.3" />
 
 </weapon>

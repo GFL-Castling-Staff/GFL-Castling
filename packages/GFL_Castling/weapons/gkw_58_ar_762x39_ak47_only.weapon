@@ -49,7 +49,7 @@
     <stance state_key="standing" accuracy="0.85" />
     <stance state_key="crouching" accuracy="0.9" />
     <stance state_key="prone" accuracy="1" />
-    
+    <modifier class="detectability" value="-0.1" />
 
 </weapon>
 <weapon file="two_hands_ar.animation_base" key="gkw_ak47_only_skill.weapon">
@@ -101,7 +101,7 @@
     <stance state_key="standing" accuracy="0.85" />
     <stance state_key="crouching" accuracy="0.9" />
     <stance state_key="prone" accuracy="1" />
-    
+    <modifier class="detectability" value="-0.1" />
 
 </weapon>
 </weapons>

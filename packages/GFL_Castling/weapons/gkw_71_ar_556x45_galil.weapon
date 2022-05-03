@@ -43,11 +43,10 @@
     <stance state_key="walking" accuracy="0.8" />
     <stance state_key="crouch_moving" accuracy="0.9" />
     <stance state_key="prone_moving" accuracy="0.9" />
-
     <stance state_key="standing" accuracy="0.8" />
     <stance state_key="crouching" accuracy="0.9" />
     <stance state_key="prone" accuracy="1" />
-    
+    <modifier class="detectability" value="-0.1" />
 
 </weapon>
 <weapon file="two_hands_ar.animation_base" key="gkw_galil_skill.weapon">
@@ -94,11 +93,11 @@
     <stance state_key="walking" accuracy="1.0" />
     <stance state_key="crouch_moving" accuracy="1.0" />
     <stance state_key="prone_moving" accuracy="1.0" />
-
     <stance state_key="standing" accuracy="1.0" />
     <stance state_key="crouching" accuracy="1.0" />
     <stance state_key="prone" accuracy="1" />
     <modifier class="speed" value="-0.2" />
+    <modifier class="detectability" value="-0.1" />
     <modifier class="hit_success_probability" value="+0.3" />
 
 </weapon>
