@@ -42,4 +42,5 @@
     <projectile file="ump9_stun_grenade_spawner.projectile"/>
     
 	<shield offset="-0.05 0.0 0.05" extent="0.15 0.3 0.4" />
+	<modifier class="hit_success_probability" value="-0.2" />
 </weapon>

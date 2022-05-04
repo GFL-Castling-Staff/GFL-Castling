@@ -62,4 +62,5 @@
     <stance state_key="crouching" accuracy="0.98" />
     <stance state_key="prone" accuracy="1" />  
     <modifier class="speed" value="0.7" /> 
+    <modifier class="hit_success_probability" value="-0.1" />
 </weapon>
