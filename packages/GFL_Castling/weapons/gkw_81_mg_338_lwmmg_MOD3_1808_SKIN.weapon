@@ -17,7 +17,7 @@
         can_shoot_standing="1" 
         />
         <animation key="reload" animation_key="reloading, Machine gun 4" />
-        <animation state_key="next_in_chain_in" animation_key="ARswitch0.5" />
+        
         <inventory  buy_price="250.0" sell_price="250.0" />
         <next_in_chain key="gkw_lwmmgmod3_1808_skill.weapon" share_ammo="1" />
         <sound key="fire" fileref="lwmmg_fire_FromARMA3.wav" pitch_variety="0.05" volume="1.25" />
@@ -65,7 +65,7 @@
         sight_range_modifier="2.5"
         />
         <animation key="reload" animation_key="reloading, Machine gun 4" />
-        <animation state_key="next_in_chain_in" animation_key="ARswitch0.5" />
+        
         <inventory buy_price="250.0" sell_price="250.0" />
         <commonness value="0" in_stock="0" can_spawn_with="1" />
         <next_in_chain key="gkw_lwmmgmod3_1808.weapon" share_ammo="1" />

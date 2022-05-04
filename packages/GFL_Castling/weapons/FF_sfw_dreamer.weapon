@@ -104,7 +104,7 @@
     <animation state_key="crouch_moving" animation_key="walking, dreamer" />
     <animation state_key="crouch_moving_backwards" animation_key="walking backwards, dreamer" />
 	<animation state_key="reload" animation_key="reloading, dreamer1.5" />
-	<animation state_key="next_in_chain_in" animation_key="ARswitch0.5" />
+	
     <sound key="fire" fileref="sf_boss_fire_3.wav" pitch_variety="0.05" volume="0.2" />
     <sound key="magazine_out" fileref="kccoar_mgz_out_FromINS.wav" volume="0.8" />
     <sound key="magazine_in" fileref="kccoar_mgz_in_FromINS.wav" volume="0.8" />
