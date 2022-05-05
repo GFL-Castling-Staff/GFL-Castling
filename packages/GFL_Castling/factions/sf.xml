@@ -459,7 +459,7 @@
 	<soldier name="sf_vespid" spawn_score="1.5" copy_from="default_spawn_ai">
 		<ai filename="elite.ai" />
 		<model filename="sfd_vespid.xml" />
-		<resources clear_calls="1">
+		<resources clear_weapons="1" clear_calls="1">
 			<weapon key="sfw_vespid.weapon" enabled="1"/>
 			<carry_item key="sf_ar.carry_item" enabled="1" />
 		</resources>
@@ -467,7 +467,7 @@
 	<soldier name="sf_vespid_swap" spawn_score="0.75" copy_from="default_spawn_ai">
 		<model filename="sfd_vespid_swap_from_dusk.xml" />
 		<ai filename="elite.ai" />
-		<resources clear_calls="1">
+		<resources clear_weapons="1" clear_calls="1">
 			<weapon key="sfw_vespid_swap.weapon" enabled="1"/>
 			<carry_item key="sf_ar.carry_item" enabled="1" />
 		</resources>
@@ -475,14 +475,14 @@
 	<!-- ripper -->
 	<soldier name="sf_ripper" spawn_score="1.5" copy_from="default_spawn_ai">
 		<model filename="sfd_ripper.xml" />
-		<resources clear_calls="1">
+		<resources clear_weapons="1" clear_calls="1">
 			<weapon key="sfw_ripper.weapon" enabled="1"/>
 			<carry_item key="sf_smg.carry_item" enabled="1" />
 		</resources>
 	</soldier>
 	<soldier name="sf_ripper_swap" spawn_score="0.75" copy_from="default_spawn_ai">
 		<model filename="sfd_ripper_swap_from_dusk.xml" />
-		<resources clear_calls="1">
+		<resources clear_weapons="1" clear_calls="1">
 			<weapon key="sfw_ripper_swap.weapon" enabled="1"/>
 			<carry_item key="sf_ar.carry_item" enabled="1" />
 		</resources>
@@ -490,7 +490,7 @@
 	<!-- guard -->
 	<soldier name="sf_guard" spawn_score="1.5" copy_from="default_spawn_ai">
 		<ai filename="eod.ai" />
-		<resources clear_calls="1">
+		<resources clear_weapons="1" clear_calls="1">
 			<weapon key="sfw_guard.weapon" enabled="1"/>
 			<carry_item key="sf_sh.carry_item" enabled="1" />
 		</resources>
@@ -498,14 +498,14 @@
 	<!-- jaeger -->
 	<soldier name="sf_jaeger" spawn_score="1.5" copy_from="default_spawn_ai">
 		<ai filename="sniper.ai" />
-		<resources clear_calls="1">
+		<resources clear_weapons="1" clear_calls="1">
 			<weapon key="sfw_jaeger.weapon" enabled="1"/>
 			<carry_item key="sf_rf.carry_item" enabled="1" />
 		</resources>
 	</soldier>
 	<soldier name="sf_jaeger_swap" spawn_score="0.75" copy_from="default_spawn_ai">
 		<ai filename="sniper.ai" />
-		<resources clear_calls="1">
+		<resources clear_weapons="1" clear_calls="1">
 			<weapon key="sfw_jaeger_swap.weapon" enabled="1"/>
 			<carry_item key="sf_rf.carry_item" enabled="1" />
 		</resources>
@@ -513,7 +513,7 @@
 	<!-- striker -->
 	<soldier name="sf_striker" spawn_score="1.5" copy_from="default_spawn_ai">
 		<model filename="sfd_striker.xml" />
-		<resources clear_calls="1">
+		<resources clear_weapons="1" clear_calls="1">
 			<weapon key="sfw_striker.weapon" enabled="1"/>
 			<carry_item key="sf_str.carry_item" enabled="1" />
 		</resources>
@@ -521,14 +521,14 @@
 	<soldier name="sf_striker_swap" spawn_score="0.75" copy_from="default_spawn_ai">
 		<ai filename="eod.ai" />
 		<model filename="sfd_striker_swap_from_dusk.xml" />
-		<resources clear_calls="1">
+		<resources clear_weapons="1" clear_calls="1">
 			<weapon key="sfw_striker_swap.weapon" enabled="1"/>
 			<carry_item key="sf_str.carry_item" enabled="1" />
 		</resources>
 	</soldier>
-	<!-- nemeum -->
+	<!-- nemeum 钢狮 -->
 	<soldier name="sfw_nemeum" spawn_score="1.2" copy_from="default_spawn_ai">
-		<ai filename="hydra.ai" />
+		<ai filename="eod_mecha.ai" />
 		<model filename="sfd_sangvisfeaal.xml" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_calls="1">
 			<weapon key="sfw_nemeum.weapon" enabled="1"/>
@@ -539,7 +539,7 @@
 	<soldier name="sfw_aegis" spawn_score="1.5" copy_from="default_spawn_ai">
 		<model filename="sfd_aegis_1.xml" />
 		<ai filename="melee.ai" />
-		<resources clear_calls="1" clear_grenades="1">
+		<resources clear_weapons="1" clear_calls="1" clear_grenades="1">
 			<weapon key="sfw_aegis.weapon" enabled="1"/>
 			<carry_item key="sf_aegis.carry_item" enabled="1" />
 		</resources>

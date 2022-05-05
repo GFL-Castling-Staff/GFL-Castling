@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ai filename="eod.ai">
+  <parameter class="force_as_leader" value="0" />
+  <parameter class="leader_sight_range" value="40.0" />
+  <parameter class="team_member_sight_range" value="35.0" />
+  <parameter class="force_comparison_multiplier_to_call_reinforcements" value="0.3" />
+  <parameter class="burst_time" value="1.6" />
+  <parameter class="burst_time_variance" value="0.5" />
+  <parameter class="longer_burst_time" value="3.0" />
+  <parameter class="longer_burst_time_variance" value="0.6" />
+  <parameter class="choose_enemy_time" value="0.33" />
+
+	<parameter class="willingness_to_guard" value="0.2" />
+
+  <parameter class="shooting_against_vehicle_burst_time" value="1.6" />
+  <parameter class="vehicle_target_aim_time" value="0.33" />
+
+	<parameter class="using_cover_min_time" value="0.0" />
+	<parameter class="using_cover_max_time" value="0.0" />
+
+	<parameter class="uses_vehicles" value="0" />
+	<parameter class="willingness_to_charge" value="1" />
+	<parameter class="stab_range" value="0.0" />
+	<parameter class="uses_ladders" value="0" />
+
+</ai>

@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<weapon file="KCCO.base_weapon" key="kccow_cerynitis.weapon">
+<weapons>
+<weapon on_ground_up="0 0 1" 
+drop_count_factor_on_death="0" 
+drop_count_factor_on_player_death="0"
+time_to_live_out_in_the_open="0"  
+key="kccow_cerynitis.weapon">
+
+    <tag name="sniper" />
     <tag name="antiarmor" />
 	<tag name="mecha" />
+
     <!--Weapon specifications-->
     <specification
 	retrigger_time="0.3" 
@@ -13,11 +21,11 @@
 	can_shoot_crouching="0"
 	can_shoot_prone="0"
 	suppressed="0" 
-	name="Code:Cerynitis" 
+	name="Code:Cerynitis Anti-Armor" 
 	class="0" 
 	reload_one_at_a_time="0"
 	sight_range_modifier="0.8" 
-	projectile_speed="180.0" 
+	projectile_speed="130.0" 
 	carry_in_two_hands="0" 
 	projectiles_per_shot="2" 
 	slot="0" 
@@ -50,20 +58,6 @@
     </projectile>
     <!-- state modifiers for weapons are connected to shield impact events -->
     <!-- <shield offset="0 0 0.2" extent="0.4 1.6 0.6" /> -->
-    <shield offset="-0.2 0 1.0" extent="0.4 1.6 1.0" />
-    <shield offset="-0.2 0 -0.6" extent="0.4 1.6 1.0" />
-    <!-- deflects all bullets; death, stun, wound become none, doesn't consume -->
-    <modifier class="projectile_hit_result" input_character_state="death" output_character_state="death" consumes_item="0" />
-    <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-    <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-    <!-- death and wound blast causes the item to be consumed, stun is ignored -->
-    <modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
-    <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
-    <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-    <modifier class="melee_blast_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
-    <modifier class="melee_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
-    <modifier class="melee_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-    <!--Accuracy, Movement speed-->
     <stance state_key="running" accuracy="0.9" />
     <stance state_key="walking" accuracy="1.0" />
     <stance state_key="crouch_moving" accuracy="0.75" />
@@ -72,6 +66,7 @@
     <stance state_key="crouching" accuracy="0.85" />
     <stance state_key="prone" accuracy="0.94" />
     <modifier class="speed" value="-0.4" />
+
     <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5" />
     <target_factors tag="heavy_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="10.0" />
     <target_factors tag="apc" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0" />
@@ -79,4 +74,83 @@
     <target_factors tag="defensive_at" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.5" />
     <target_factors tag="tactical" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0" />  <!-- important non combat player-only vehicles -->  
     <target_factors tag="bazooka" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0" />     
+
 </weapon>
+
+<weapon on_ground_up="0 0 1" 
+drop_count_factor_on_death="0" 
+drop_count_factor_on_player_death="0"
+time_to_live_out_in_the_open="0"  
+key="kccow_cerynitis_1.weapon">
+
+    <tag name="machine gun" />
+    <tag name="antiarmor" />
+	<tag name="mecha" />
+
+    <!--Weapon specifications-->
+    <specification
+	retrigger_time="0.25" 
+	accuracy_factor="1.0" 
+	sustained_fire_grow_step="0.0" 
+	sustained_fire_diminish_rate="0.0" 
+	magazine_size="8" 
+	can_shoot_standing="1" 
+	can_shoot_crouching="0"
+	can_shoot_prone="0"
+	suppressed="0" 
+	name="Code:Cerynitis Suppressive" 
+	class="0" 
+	reload_one_at_a_time="0"
+	sight_range_modifier="0.8" 
+	projectile_speed="130.0" 
+	carry_in_two_hands="0" 
+	projectiles_per_shot="2" 
+	slot="0" 
+	stab_enabled="0"/>
+    <!--Animations-->
+    <animation state_key="recoil"	animation_key="recoil, pistol dual 1" />
+    <animation state_key="recoil"	animation_key="recoil, pistol dual 2" />
+    <animation state_key="reload"	animation_key="recoil, pistol dual 1" />
+    <animation state_key="hold"	animation_key="still, pistol dual" />
+    <animation state_key="hold_casual"	animation_key="still, pistol dual" />
+    <animation state_key="hold_on_wall"	animation_key="still, pistol dual" />
+    <animation state_key="walking"	animation_key="walking, pistol dual" />
+    <animation state_key="stabbing" animation_key="recoil, pistol dual 1" />
+    <animation state_key="running"	animation_key="walking, pistol dual" />
+    <animation state_key="crouching"	animation_key="still, pistol dual" />
+    <!--Sounds-->
+    <sound key="fire" fileref="cerynitis_fire_FromBF2042.wav" pitch_variety="0.05" volume="1.7" />
+    <sound key="magazine_out" fileref="m1911_mgz_out_FromINS.wav" volume="0.8" />
+    <sound key="magazine_in" fileref="m1911_mgz_in_FromINS.wav" volume="0.8"/>
+    <sound key="cycle" fileref="m1911_cycle_FromINS.wav" volume="0.8" />
+    <!--Model, Icon, Cost-->
+    <model filename="" />
+    <hud_icon filename="kccow_cerynitis.png" />
+
+    <!--Ballistics-->
+    
+    <!-- <weak_hand_hold offset="0.1" /> -->
+    <projectile file="bullet_kcco.projectile">
+        <result class="blast" radius="1.5" damage="1.0" decal="1" push="0.05" character_state="death" faction_compare="not_equal"/>
+    </projectile>
+    <!-- state modifiers for weapons are connected to shield impact events -->
+
+    <stance state_key="running" accuracy="0.9" />
+    <stance state_key="walking" accuracy="1.0" />
+    <stance state_key="crouch_moving" accuracy="0.75" />
+    <stance state_key="prone_moving" accuracy="0.3" />
+    <stance state_key="standing" accuracy="1.2" />
+    <stance state_key="crouching" accuracy="0.85" />
+    <stance state_key="prone" accuracy="0.94" />
+    <modifier class="speed" value="-0.3" />
+
+    <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5" />
+    <target_factors tag="heavy_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="10.0" />
+    <target_factors tag="apc" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0" />
+    <target_factors tag="light_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="6.0" />	
+    <target_factors tag="defensive_at" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.5" />
+    <target_factors tag="tactical" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0" />  <!-- important non combat player-only vehicles -->  
+    <target_factors tag="bazooka" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0" />     
+
+</weapon>
+</weapons>
