@@ -1,16 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources clear_weapons="1">
-	
-	<!-- 武器 -->
-	<!-- <weapon key="gkw_idw.weapon" /> -->
-	<weapon key="medikit.weapon" />
-	
-	<!-- 护甲 -->
-	<!-- <carry_item key="kcco_ar.carry_item" /> -->
-	
-	<!-- 载具 -->
-	<!-- <vehicle key="typhon.vehicle" /> -->
-	<!-- 增援 -->
+    
+    <projectile key="hand_88grenade.projectile" />
+
     <call key="gk_medic.call" />
     <call key="sg1hg1mg2.call" />
     <call key="hvy_landing.call" />

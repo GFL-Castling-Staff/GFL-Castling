@@ -174,14 +174,22 @@
 	<rank xp="2960.833" name="HUALIN"><hud_icon filename="Thank_you_HUALIN.png" /> </rank>
 	<rank xp="3010.833" name="NEKO_CUP"><hud_icon filename="Thank_you_NEKO_CUP.png" /> </rank>
 
+
 	<rank xp="4000" name="Narcissus"><hud_icon filename="commander_narcissus.png" /></rank>
 	<rank xp="4500" name="commander"><hud_icon filename="commander_kudan.png" /></rank>	
 	<rank xp="5000" name="sakura"><hud_icon filename="commander_sakura.png" /></rank>	
-	
+	<rank xp="11000" name="I~D~W~DA~NAY!">
+		<hud_icon filename="IDW_011000.png" />
+	</rank>
+	<rank xp="11451.4" name="NetherCrow"><hud_icon filename="Thank_you_Nether_Crow.png" /></rank>
+	<rank xp="20000" name="LIRIS">
+		<hud_icon filename="commander_Liris.png" />
+	</rank>
+
 	<!-- player group -->
 	<soldier name="default" spawn_score="0.0" firstnames_file="gk_first.name" lastnames_file="gk_last.name">
 		<character filename="default_gk_pmc.text_lines">
-			<parameter class="default_squad_config_index" value="0" />
+			<parameter class="encumbrance" low="20.0" high="80.0" />
 		</character>
 		<ai filename="default.ai" />
 		<model file="gkd_xxv_idwmod.xml" />
@@ -213,7 +221,6 @@
 		<resources file="gk_call.resources" />
 		<resources>
 			<weapon key="gkw_idwmod3.weapon" enabled="1" />
-			<carry_item key="idw-chip.carry_item" />
 		</resources>
 		<item_class_existence_config>
 			<!-- secondaries -->
@@ -230,8 +237,18 @@
 			<attribute weight="1.0" min="700.0" max="1500.0" />
 		</attribute_config>
 	</soldier>
-	<soldier name="default_spawn_ai" spawn_score="0.0" copy_from="default_ai">
+	<soldier name="default_spawn_ai" spawn_score="0.0" firstnames_file="gk_first.name" lastnames_file="gk_last.name">
+		<character filename="default_gk_pmc.text_lines">
+			<parameter class="default_squad_config_index" value="0" />
+		</character>
+		<ai filename="default.ai" />
+		<model file="gkd_xxv_idwmod.xml" />
+		<models file="gk.models" />
+		<models file="gk_2.models" />
+		<models file="gk_arm.models" />
+		<models file="common_bonus.models" />
 		<resources file="common.resources" />
+		<resources file="gk.resources" />		
 		<resources file="gk_call.resources" />
 		<weapon key="gkw_idw.weapon" enabled="1" />
 		<item_class_existence_config>
@@ -243,25 +260,22 @@
 			<item_class_existence class="carry_item" slot="0" probability="0.0" />
 		</item_class_existence_config>
 		<attribute_config class="xp">
-			<attribute weight="1.0" min="0" max="0.21" />
-		</attribute_config>
-	</soldier>
-	<soldier name="default_hg" spawn_score="0.8" squad_size_xp_cap="0.5" copy_from="default_spawn_ai">
-		<ai filename="elite.ai" />
-		<resources file="gk_hg.resources" />
-		<attribute_config class="xp">
 			<attribute weight="1.0" min="19.754" max="102.833" />
 		</attribute_config>
 		<attribute_config class="rp">
 			<attribute weight="1.0" min="7000.0" max="15000.0" />
 		</attribute_config>
 	</soldier>
+	<soldier name="default_hg" spawn_score="0.8" squad_size_xp_cap="0.5" copy_from="default_spawn_ai">
+		<ai filename="elite.ai" />
+		<resources file="gk_hg.resources" />
+	</soldier>
 	<soldier name="default_smg" spawn_score="0.8" squad_size_xp_cap="0.0" copy_from="default_spawn_ai">
-		<ai filename="eod.ai" />
+		<ai filename="elite.ai" />
 		<resources file="gk_smg.resources" />
 	</soldier>
 	<soldier name="default_ar" spawn_score="0.8" squad_size_xp_cap="0.0" copy_from="default_spawn_ai">
-		<ai filename="eod.ai" />
+		<ai filename="elite.ai" />
 		<resources file="gk_ar.resources" />
 	</soldier>
 	<soldier name="default_rf" spawn_score="0.8" squad_size_xp_cap="0.0" copy_from="default_spawn_ai">
@@ -286,22 +300,7 @@
 			<attribute weight="1.0" min="7000.0" max="15000.0" />
 		</attribute_config>
 	</soldier>
-	<soldier name="player_hvy" spawn_score="0" squad_size_xp_cap="0.0" copy_from="default_spawn_ai">
-		<ai filename="grenadier.ai" />
-		<resources file="gk_hvy.resources" />
-		<attribute_config class="xp">
-			<attribute weight="1.0" min="19.754" max="102.833" />
-		</attribute_config>
-		<attribute_config class="rp">
-			<attribute weight="1.0" min="7000.0" max="15000.0" />
-		</attribute_config>
-	</soldier>
-	<rank xp="11000" name="I~D~W~DA~NAY!">
-		<hud_icon filename="IDW_011000.png" />
-	</rank>
-	<rank xp="20000" name="LIRIS">
-		<hud_icon filename="commander_Liris.png" />
-	</rank>
+
 	<soldier name="93_idw_smg" spawn_score="0.05" copy_from="default_smg">
 		<character filename="gk_idw.text_lines">
 			<sound key="death" fileref="IDW_die.wav" pitch_variety="0.05" volume="0.8" />
@@ -1270,25 +1269,7 @@
 			<item_class_existence class="carry_item" slot="0" probability="1.0" />
 		</item_class_existence_config>
 	</soldier>
-	<!--
-	<soldier name="mp5_smg" spawn_score="0.01"  copy_from="default_smg">
-	<character filename="default_gk_pmc.text_lines">
-	<sound key="death" fileref="MP5Mod_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
-	<sound key="throw" fileref="MP5Mod_ATTACK_JP.wav" pitch_variety="0.01" volume="0.8" />
-	<sound key="throw" fileref="MP5Mod_SKILL2_JP.wav" pitch_variety="0.01" volume="0.8" />
-	</character>
-	<resources file="gk_elite.resources"  >
-	<weapon key="gkw_ppsh41.weapon" />
-	<weapon key="medikit.weapon" />
-	<carry_item key="exo_t3.carry_item" />
-	
-	</resources>
-	<attribute_config class="xp">
-	<attribute weight="1.0" min="0.100" max="102.833" />
-	</attribute_config>
-	</soldier>
-	-->
-	<!-- chicken -->
+
 	<soldier name="chicken" spawn_score="0.0" squad_size_xp_cap="0.0" firstnames_file="chicken_firstnames.txt" lastnames_file="chicken_lastnames.txt">
 		<character filename="chicken_base.character" />
 		<ai filename="chicken.ai" />

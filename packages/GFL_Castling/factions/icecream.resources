@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources clear_weapons="1" clear_vehicles="1" clear_calls="1" clear_grenades="1" clear_carry_items="1">
-	<!-- always load common first; it's the one that clears the initial weapon resources -->
 
- <!-- change it to 	<projectile key="icecream.projectile" enabled="1" /> -->
 	<carry_item key='lottery.carry_item' enabled="1" />
 	<carry_item key="ice_theatre.carry_item" />
 

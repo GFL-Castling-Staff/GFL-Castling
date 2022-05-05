@@ -172,16 +172,10 @@
 	<weapon key="gkw_m1918mod3_skill.weapon"/>
 	<weapon key="gkw_m1918_102.weapon" />
 	<weapon key="gkw_m1918_102_skill.weapon" />
-	<weapon key="gkw_m1918mod3_102.weapon" />
-	<weapon key="gkw_m1918mod3_102_skill.weapon" />
 	<weapon key="gkw_m1918_806.weapon" />
 	<weapon key="gkw_m1918_806_skill.weapon" />
-	<weapon key="gkw_m1918mod3_806.weapon" />
-	<weapon key="gkw_m1918mod3_806_skill.weapon" />
 	<weapon key="gkw_m1918_1606.weapon" />
 	<weapon key="gkw_m1918_1606_skill.weapon" />
-	<weapon key="gkw_m1918mod3_1606.weapon" />
-	<weapon key="gkw_m1918mod3_1606_skill.weapon" />
 	<weapon key="gkw_m1919a4.weapon" />
 	<weapon key="gkw_m249saw.weapon" />
 	<weapon key="gkw_m2hb.weapon" />
@@ -233,10 +227,7 @@
 	<weapon key="gkw_ksvk_3805.weapon" />
 	<weapon key="gkw_ksvkmod3.weapon" />
 	<weapon key="gkw_ksvkmod3_skill.weapon" />
-	<weapon key="gkw_ksvkmod3_3405.weapon" />
-	<weapon key="gkw_ksvkmod3_3405_skill.weapon" />
-	<weapon key="gkw_ksvkmod3_3805.weapon" />
-	<weapon key="gkw_ksvkmod3_3805_skill.weapon" />
+
 	<weapon key="gkw_m1.weapon" />
 	<weapon key="gkw_m14.weapon" />
 	<weapon key="gkw_m14_303.weapon" />
@@ -339,7 +330,7 @@
 	<weapon key="gkw_pp19mod3.weapon" />
 	<weapon key="gkw_pps43.weapon" />
 	<weapon key="gkw_ppsh41.weapon" />
-	<weapon key="gkw_ppsh41mod3.weapon"  in_stock="0"/> 
+	<weapon key="gkw_ppsh41mod3.weapon"/> 
 	<weapon key="gkw_ro635.weapon" />
 	<weapon key="gkw_ro635_534.weapon" />
 	<weapon key="gkw_ro635mod3.weapon" />
@@ -490,10 +481,6 @@
 	<weapon key="gkw_aa12_4401.weapon" />
 	<weapon key="gkw_aa12_4401_skill.weapon" />
 	<weapon key="gkw_mp5mod3.weapon"/>
-	<weapon key="gkw_mp5mod3_3.weapon" />
-	<weapon key="gkw_mp5mod3_1205.weapon" />
-	<weapon key="gkw_mp5mod3_1903.weapon" />
-	<weapon key="gkw_mp5mod3_3006.weapon" />
 	<weapon key="gkw_webley.weapon"/>
 	<weapon key="gkw_yurine.weapon"/>
 	<weapon key="gkw_m1908.weapon"/>
@@ -673,7 +660,6 @@
 	<weapon key="ff_parw_nyto_black.weapon" />
 	<weapon key="ff_parw_nyto_black_1.weapon" />
 	<weapon key="ff_manticore.weapon" />
-	<!-- <weapon key="ff_dreamer_skill.weapon"/> -->
 	<carry_item key="ff_qwd.carry_item" />
 	<!-- 工事妖精 -->
 	<weapon key="ogas.weapon" />
@@ -720,4 +706,18 @@
 	<weapon key="gkw_an94mod3_blm_skill.weapon" />
 	<weapon key="gkw_m4sopmodiimod3_531.weapon" />
 	<weapon key="gkw_m4sopmodiimod3_531_skill.weapon" />
+	<weapon key="gkw_mp5mod3_3.weapon" />
+	<weapon key="gkw_mp5mod3_1205.weapon" />
+	<weapon key="gkw_mp5mod3_1903.weapon" />
+	<weapon key="gkw_mp5mod3_3006.weapon" />
+	<weapon key="gkw_ksvkmod3_3405.weapon" />
+	<weapon key="gkw_ksvkmod3_3405_skill.weapon" />
+	<weapon key="gkw_ksvkmod3_3805.weapon" />
+	<weapon key="gkw_ksvkmod3_3805_skill.weapon" />
+	<weapon key="gkw_m1918mod3_102.weapon" />
+	<weapon key="gkw_m1918mod3_102_skill.weapon" />
+	<weapon key="gkw_m1918mod3_806.weapon" />
+	<weapon key="gkw_m1918mod3_806_skill.weapon" />
+	<weapon key="gkw_m1918mod3_1606.weapon" />
+	<weapon key="gkw_m1918mod3_1606_skill.weapon" />
 </resources>

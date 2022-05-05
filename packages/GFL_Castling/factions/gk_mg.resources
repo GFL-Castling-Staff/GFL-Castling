@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources clear_weapons="1" clear_carry_items="1" >
-	<!-- <weapon key="gkw_idw.weapon" /> -->
 	<weapon key="gkw_aat52.weapon" />
 	<weapon key="gkw_aek999.weapon" />
 	<weapon key="gkw_ameli.weapon" />
@@ -36,6 +35,7 @@
 
 	<weapon key="medikit.weapon" />
 	<projectile key="c4.projectile" />
+	<projectile key="hand_88grenade.projectile" />
 
 	<carry_item key="bp_t5_16lab.carry_item"/>
 	<carry_item key="bp_t4.carry_item"/>
