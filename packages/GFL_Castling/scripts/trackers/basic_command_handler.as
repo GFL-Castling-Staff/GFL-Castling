@@ -335,6 +335,56 @@ class BasicCommandHandler : Tracker {
 				sendFactionMessageKeySaidAsCharacter(m_metagame, 0, cId,"quickchat30",dictionary(),0.9);
 			}
 		}
+
+		else if (checkCommand(message, "dance1")) {
+			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
+			if (playerInfo is null) return;
+			int characterId= playerInfo.getIntAttribute("character_id");
+			playAnimationKey(m_metagame,characterId,"dancing, kazachok",true,true);
+		}
+		else if (checkCommand(message, "dance2")) {
+			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
+			if (playerInfo is null) return;
+			int characterId= playerInfo.getIntAttribute("character_id");			
+			playAnimationKey(m_metagame,characterId,"dancing, raise hands",true,true);
+		}
+		else if (checkCommand(message, "dance3")) {
+			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
+			if (playerInfo is null) return;
+			int characterId= playerInfo.getIntAttribute("character_id");			
+			playAnimationKey(m_metagame,characterId,"dancing, beat hands",true,true);
+		}
+		else if (checkCommand(message, "dance4")) {
+			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
+			if (playerInfo is null) return;
+			int characterId= playerInfo.getIntAttribute("character_id");			
+			playAnimationKey(m_metagame,characterId,"dancing, ten years old ass",true,true);
+		}
+		else if (checkCommand(message, "dance5")) {
+			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
+			if (playerInfo is null) return;
+			int characterId= playerInfo.getIntAttribute("character_id");			
+			playAnimationKey(m_metagame,characterId,"dancing, helltaker",true,true);
+		}
+		else if (checkCommand(message, "dance6")) {
+			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
+			if (playerInfo is null) return;
+			int characterId= playerInfo.getIntAttribute("character_id");			
+			playAnimationKey(m_metagame,characterId,"dancing, phut hon",true,true);
+		}
+		else if (checkCommand(message, "action1")) {
+			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
+			if (playerInfo is null) return;
+			int characterId= playerInfo.getIntAttribute("character_id");			
+			playAnimationKey(m_metagame,characterId,"celebrating",true,true);
+		}
+		else if (checkCommand(message, "action2")) {
+			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
+			if (playerInfo is null) return;
+			int characterId= playerInfo.getIntAttribute("character_id");			
+			playAnimationKey(m_metagame,characterId,"celebrating2",true,true);
+		}
+		
 		// admin and moderator only from here on
 		if (!m_metagame.getAdminManager().isAdmin(sender, senderId) && !m_metagame.getModeratorManager().isModerator(sender, senderId)) {
 			return;
