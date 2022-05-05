@@ -23,7 +23,7 @@
         <animation state_key="crouching" animation_key="crouch, hold, hip fire" />
         <animation state_key="crouch_moving" animation_key="crouching forwards, hip fire" />
         <animation state_key="walking_backwards" animation_key="walking backwards, hip fire" />
-        <animation state_key="reload" animation_key="reloading, Machine gun 2.8" volume="0.7" />
+        <animation state_key="reload" animation_key="reloading, Machine gun 4" volume="0.7" />
         <animation state_key="hold_on_wall" animation_key="hold, hip fire" />
         <animation state_key="still_against_wall" 	animation_key="hold, hip fire" />
         <animation state_key="walking" animation_key="walking, hip fire" />
@@ -42,5 +42,6 @@
             <result class="hit"  kill_probability="1.7" kill_decay_start_time="1.933" kill_decay_end_time="3.222" />
         </projectile>
         <modifier class="speed" value="-0.3" />
+        <modifier class="detectability" value="+0.3" />
     </weapon>
 </weapons>
