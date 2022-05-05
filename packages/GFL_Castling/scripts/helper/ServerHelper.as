@@ -81,6 +81,22 @@ class ServerHelper : Tracker {
             }
         }
 
+        if(checkCommand(message,"alertfadan")){
+            const XmlElement@ player = getPlayerByIdOrNameFromCommand(m_metagame, message,false);
+            if (player !is null) {
+                int playerId = player.getIntAttribute("player_id");
+                string playerName = player.getStringAttribute("name");
+                string pos= player.getStringAttribute("position");
+                int faction= player.getIntAttribute("faction_id");
+                dictionary a;
+				a["%name"] = sender;
+                sendPrivateMessageKey(m_metagame, senderId, "Send Alert Success",dictionary());
+                playSoundAtLocation(m_metagame,"objective_priority.wav",faction,pos);
+                sendPrivateMessageKey(m_metagame, playerId, "ServerQuickChatAlert004",a);
+                addItemInBackpack(m_metagame,player.getIntAttribute("character_id"),"carry_item","fadan.carry_item");
+            }
+        }
+
         if(checkCommand(message,"spt")){
             string s = message.substr(message.findFirst(" ")+1);
             const XmlElement@ player = getPlayerInfo(m_metagame,senderId);
