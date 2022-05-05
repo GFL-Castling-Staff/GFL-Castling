@@ -1,6 +1,11 @@
 #include "query_helpers2.as"
 #include "helpers.as"
 
+//别抄了学不会的，有需求请联系 冥府乌鸦NetherCrow 为你解惑，不识趣的不建议来。
+//Credit: NetherCrow & Castling Staff
+//Inspired by Pasik & Unit G17 & RWR ww2 DLC staff
+//Don't copy without gimme a ask and if you has some question about script just contact @NetherCrowCSOLYOO in rwr discord #modding
+
 void playSoundAtLocation(const Metagame@ metagame, string filename, int factionId, const Vector3@ position, float volume=1.0) {
 	XmlElement command("command");
 	command.setStringAttribute("class", "play_sound");
@@ -313,6 +318,25 @@ void CreateProjectile_H(Metagame@ m_metagame,Vector3 startPos,Vector3 endPos,str
 		" character_id='" + cId + "'" +
 		" orientation='" + rotation.output() + "'" +
 		" offset='" + speed.toString() + "' />";
+	m_metagame.getComms().send(c);
+}
+
+void CreateDirectProjectile(Metagame@ m_metagame,Vector3 startPos,Vector3 endPos,string key,int cId,int fId,float initspeed){
+	initspeed=initspeed/60;
+	startPos = startPos.add(Vector3(0,1,0));
+	Vector3 direction = endPos.subtract(startPos);
+	float Vmod = sqrt(pow(direction.get_opIndex(0),2)  + pow(direction.get_opIndex(1),2)) + pow(direction.get_opIndex(2),2));
+	if (Vmod< 0.00001f) Vmod= 0.00001f;
+	direction.set(direction.get_opIndex(0)/Vmod,direction.get_opIndex(1)/Vmod,direction.get_opIndex(2)/Vmod);
+	direction.scale(initspeed);
+	string c = 
+		"<command class='create_instance'" +
+		" faction_id='" + fId + "'" +
+		" instance_class='grenade'" +
+		" instance_key='" + key + "'" +
+		" position='" + startPos.toString() + "'" +
+		" character_id='" + cId + "'" +
+		" offset='" + direction.toString() + "' />";
 	m_metagame.getComms().send(c);
 }
 
