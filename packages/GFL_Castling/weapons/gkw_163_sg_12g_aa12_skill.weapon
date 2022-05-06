@@ -16,10 +16,10 @@
     class="0" 
     reload_one_at_a_time="0" 
     sight_range_modifier="1.0" 
-    projectile_speed="70" 
+    projectile_speed="80" 
     barrel_offset="0.4" 
-    projectiles_per_shot="14" 
-    spread_range="0.5" />
+    projectiles_per_shot="18" 
+    spread_range="0.4" />
     <inventory buy_price="50.0" sell_price="50.0" />
     <next_in_chain key="gkw_aa12.weapon" share_ammo="1" />
     <!--Animations-->
@@ -49,7 +49,7 @@
 
     <weak_hand_hold offset="0.3" />
     <projectile file="bullet.projectile">
-        <result class="hit" kill_probability="1.7" kill_decay_start_time="0.094" kill_decay_end_time="0.537" />
+        <result class="hit" kill_probability="1.8" kill_decay_start_time="0.0625" kill_decay_end_time="0.5" />
     </projectile>
 
     <!--Accuracy, Movement speed-->
@@ -62,4 +62,5 @@
     <stance state_key="prone" accuracy="0.8" />
     <stance state_key="over_wall" accuracy="0.8" />
     <modifier class="speed" value="-0.3" />
+    <modifier class="detectability" value="0.45" />
 </weapon>

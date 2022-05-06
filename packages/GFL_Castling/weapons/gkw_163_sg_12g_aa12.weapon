@@ -16,7 +16,7 @@
     class="0" 
     reload_one_at_a_time="0" 
     sight_range_modifier="1.0" 
-    projectile_speed="74.47" 
+    projectile_speed="80" 
     barrel_offset="0.4" 
     projectiles_per_shot="14" 
     spread_range="0.3" />
@@ -48,17 +48,17 @@
 
     <weak_hand_hold offset="0.3" />
     <projectile file="bullet.projectile">
-        <result class="hit" kill_probability="1.7" kill_decay_start_time="0.094" kill_decay_end_time="0.537" />
+        <result class="hit" kill_probability="1.7" kill_decay_start_time="0.0625" kill_decay_end_time="0.7125" />
     </projectile>
 
     <!--Accuracy, Movement speed-->
 
     <stance state_key="walking" accuracy="0.7" />
-    <stance state_key="crouch_moving" accuracy="0.65" />
-    <stance state_key="prone_moving" accuracy="0.65" />
+    <stance state_key="crouch_moving" accuracy="0.7" />
+    <stance state_key="prone_moving" accuracy="0.7" />
     <stance state_key="standing" accuracy="0.7"/>
     <stance state_key="crouching" accuracy="0.7" />
     <stance state_key="prone" accuracy="0.8" />
     <stance state_key="over_wall" accuracy="0.8" />
-
+    <modifier class="detectability" value="0.45" />
 </weapon>
