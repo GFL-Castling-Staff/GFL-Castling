@@ -1,75 +1,249 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <carry_items>
-	<carry_item file="bp.base_carry_item" key="bp_t5_16lab.carry_item" name="16LAB HFBLS"  transform_on_consume="bp_t5_16lab_1">
-		<hud_icon filename="bp_t5_16lab_12.png" />
-		<inventory price="50" />
-		<commonness value="0.00001" in_stock="0" />
+	<carry_item key="bp_t5_16lab.carry_item" time_to_live_out_in_the_open="15" name="Armor Plate Mk IV" transform_on_consume="bp_t5_16lab_1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="bp_t5_16lab_15.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="3" price="30"/>
+		<model mesh_filename="vestexo.xml"/>
+		<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+		<modifier class="speed" value="0.05" />
+		<modifier class="detectability" value="0.2" />
 		<modifier class="hit_success_probability" value="-1.1" />
-        <modifier class="speed" value="-0.05" />
 	</carry_item>
-	
-	<carry_item file="bp.base_carry_item" key="bp_t5_16lab_1" name="16LAB HFBLS-Slight Damage-"  transform_on_consume="bp_t5_16lab_2">
-		<hud_icon filename="bp_t5_16lab_11.png" />
+	<carry_item key="bp_t5_16lab_1" time_to_live_out_in_the_open="15" name="Armor Plate Mk IV" transform_on_consume="bp_t5_16lab_2" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="bp_t5_16lab_14.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="3" price="30"/>
+		<model mesh_filename="vestexo.xml"/>
+		<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+		<modifier class="speed" value="0.05" />
+		<modifier class="detectability" value="0.2" />
 		<modifier class="hit_success_probability" value="-1.1" />
-        <modifier class="speed" value="-0.05" />
 	</carry_item>
-
-	<carry_item file="bp.base_carry_item" key="bp_t5_16lab_2" name="16LAB HFBLS-Slight Damage-"  transform_on_consume="bp_t5_16lab_3">
-		<hud_icon filename="bp_t5_16lab_10.png" />
+	<carry_item key="bp_t5_16lab_2" time_to_live_out_in_the_open="15" name="Armor Plate Mk IV" transform_on_consume="bp_t5_16lab_3" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="bp_t5_16lab_13.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="3" price="30"/>
+		<model mesh_filename="vestexo.xml"/>
+		<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+		<modifier class="speed" value="0.05" />
+		<modifier class="detectability" value="0.2" />
 		<modifier class="hit_success_probability" value="-1.1" />
-        <modifier class="speed" value="-0.05" />
 	</carry_item>
-
-    <carry_item file="bp.base_carry_item" key="bp_t5_16lab_3" name="16LAB HFBLS-Slight Damage-"  transform_on_consume="bp_t5_16lab_4">
-		<hud_icon filename="bp_t5_16lab_9.png" />
+	<carry_item key="bp_t5_16lab_3" time_to_live_out_in_the_open="15" name="Armor Plate Mk IV" transform_on_consume="bp_t5_16lab_4" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="bp_t5_16lab_12.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="3" price="30"/>
+		<model mesh_filename="vestexo.xml"/>
+		<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+		<modifier class="speed" value="0.05" />
+		<modifier class="detectability" value="0.2" />
 		<modifier class="hit_success_probability" value="-1.1" />
-        <modifier class="speed" value="-0.05" />
 	</carry_item>
-
-	<carry_item file="bp.base_carry_item" key="bp_t5_16lab_4" name="16LAB HFBLS-Moderate Damage-"  transform_on_consume="bp_t5_16lab_5">
-		<hud_icon filename="bp_t5_16lab_8.png" />
+	<carry_item key="bp_t5_16lab_4" time_to_live_out_in_the_open="15" name="Armor Plate Mk IV" transform_on_consume="bp_t5_16lab_5" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="bp_t5_16lab_11.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="3" price="30"/>
+		<model mesh_filename="vestexo.xml"/>
+		<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+		<modifier class="speed" value="0.05" />
+		<modifier class="detectability" value="0.2" />
 		<modifier class="hit_success_probability" value="-1.1" />
-        <modifier class="speed" value="-0.05" />
 	</carry_item>
-
-    <carry_item file="bp.base_carry_item" key="bp_t5_16lab_5" name="16LAB HFBLS-Moderate Damage-"  transform_on_consume="bp_t5_16lab_6">
-		<hud_icon filename="bp_t5_16lab_7.png" />
+	<carry_item key="bp_t5_16lab_5" time_to_live_out_in_the_open="15" name="Armor Plate Mk IV" transform_on_consume="bp_t5_16lab_6" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="bp_t5_16lab_10.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="3" price="30"/>
+		<model mesh_filename="vestexo.xml"/>
+		<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+		<modifier class="speed" value="0.05" />
+		<modifier class="detectability" value="0.2" />
 		<modifier class="hit_success_probability" value="-1.1" />
-        <modifier class="speed" value="-0.05" />
 	</carry_item>
-
-	<carry_item file="bp.base_carry_item" key="bp_t5_16lab_6" name="16LAB HFBLS-Moderate Damage-"  transform_on_consume="bp_t5_16lab_7">
-		<hud_icon filename="bp_t5_16lab_6.png" />
+	<carry_item key="bp_t5_16lab_6" time_to_live_out_in_the_open="15" name="Armor Plate Mk IV" transform_on_consume="bp_t5_16lab_7" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="bp_t5_16lab_9.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="3" price="30"/>
+		<model mesh_filename="vestexo.xml"/>
+		<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+		<modifier class="speed" value="0.05" />
+		<modifier class="detectability" value="0.2" />
 		<modifier class="hit_success_probability" value="-1.1" />
-        <modifier class="speed" value="-0.05" />
 	</carry_item>
-
-	<carry_item file="bp.base_carry_item" key="bp_t5_16lab_7" name="16LAB HFBLS-Severe Damage-"  transform_on_consume="bp_t5_16lab_8">
-		<hud_icon filename="bp_t5_16lab_5.png" />
+	<carry_item key="bp_t5_16lab_7" time_to_live_out_in_the_open="15" name="Armor Plate Mk IV" transform_on_consume="bp_t5_16lab_8" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="bp_t5_16lab_8.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="3" price="30"/>
+		<model mesh_filename="vestexo.xml"/>
+		<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+		<modifier class="speed" value="0.05" />
+		<modifier class="detectability" value="0.2" />
 		<modifier class="hit_success_probability" value="-1.1" />
-        <modifier class="speed" value="-0.05" />
 	</carry_item>
-
-    <carry_item file="bp.base_carry_item" key="bp_t5_16lab_8" name="16LAB HFBLS-Severe Damage-"  transform_on_consume="bp_t5_16lab_9">
-		<hud_icon filename="bp_t5_16lab_4.png" />
+	<carry_item key="bp_t5_16lab_8" time_to_live_out_in_the_open="15" name="Armor Plate Mk IV" transform_on_consume="bp_t5_16lab_9" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="bp_t5_16lab_7.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="3" price="30"/>
+		<model mesh_filename="vestexo.xml"/>
+		<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+		<modifier class="speed" value="0.05" />
+		<modifier class="detectability" value="0.2" />
 		<modifier class="hit_success_probability" value="-1.1" />
-        <modifier class="speed" value="-0.05" />
 	</carry_item>
-
-    <carry_item file="bp.base_carry_item" key="bp_t5_16lab_9" name="16LAB HFBLS-Severe Damage-"  transform_on_consume="bp_t5_16lab_10">
-		<hud_icon filename="bp_t5_16lab_3.png" />
+	<carry_item key="bp_t5_16lab_9" time_to_live_out_in_the_open="15" name="Armor Plate Mk IV" transform_on_consume="bp_t5_16lab_10" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="bp_t5_16lab_6.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="3" price="30"/>
+		<model mesh_filename="vestexo.xml"/>
+		<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+		<modifier class="speed" value="0.05" />
+		<modifier class="detectability" value="0.2" />
 		<modifier class="hit_success_probability" value="-1.1" />
-        <modifier class="speed" value="-0.05" />
 	</carry_item>
-
-	<carry_item file="bp.base_carry_item" key="bp_t5_16lab_10" name="16LAB HFBLS-Severe Damage-"  transform_on_consume="bp_t5_16lab_11">
-		<hud_icon filename="bp_t5_16lab_2.png" />
+	<carry_item key="bp_t5_16lab_10" time_to_live_out_in_the_open="15" name="Armor Plate Mk IV" transform_on_consume="bp_t5_16lab_11" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="bp_t5_16lab_5.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="3" price="30"/>
+		<model mesh_filename="vestexo.xml"/>
+		<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+		<modifier class="speed" value="0.05" />
+		<modifier class="detectability" value="0.2" />
 		<modifier class="hit_success_probability" value="-1.1" />
-        <modifier class="speed" value="-0.05" />
 	</carry_item>
-
-	<carry_item file="wearables.base_carry_item" key="bp_t5_16lab_11" name="16LAB HFBLS-Overrun!-"  transform_on_consume="bp_t5_16lab_12">
-		<hud_icon filename="bp_t5_16lab_1.png" />
+	<carry_item key="bp_t5_16lab_11" time_to_live_out_in_the_open="15" name="Armor Plate Mk IV" transform_on_consume="bp_t5_16lab_12" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="bp_t5_16lab_4.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="3" price="30"/>
+		<model mesh_filename="vestexo.xml"/>
+		<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+		<modifier class="speed" value="0.05" />
+		<modifier class="detectability" value="0.2" />
+		<modifier class="hit_success_probability" value="-1.1" />
+	</carry_item>
+	<carry_item key="bp_t5_16lab_12" time_to_live_out_in_the_open="15" name="Armor Plate Mk IV" transform_on_consume="bp_t5_16lab_13" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="bp_t5_16lab_3.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="3" price="30"/>
+		<model mesh_filename="vestexo.xml"/>
+		<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+		<modifier class="speed" value="0.05" />
+		<modifier class="detectability" value="0.2" />
+		<modifier class="hit_success_probability" value="-1.1" />
+	</carry_item>
+	<carry_item key="bp_t5_16lab_13" time_to_live_out_in_the_open="15" name="Armor Plate Mk IV" transform_on_consume="bp_t5_16lab_14" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="bp_t5_16lab_2.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="3" price="30"/>
+		<model mesh_filename="vestexo.xml"/>
+		<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+		<modifier class="speed" value="0.05" />
+		<modifier class="detectability" value="0.2" />
+		<modifier class="hit_success_probability" value="-1.1" />
+	</carry_item>
+	<carry_item key="bp_t5_16lab_14" time_to_live_out_in_the_open="15" name="Armor Plate Mk IV" transform_on_consume="bp_t5_16lab_15" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="bp_t5_16lab_1.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="3" price="30"/>
+		<model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="wound"  />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
@@ -77,13 +251,30 @@
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="wound" />
-        <modifier class="speed" value="-0.15" />
+        <modifier class="speed" value="0.0" />
+		<modifier class="detectability" value="0.2" />
 		<modifier class="hit_success_probability" value="-1.1" />
-	</carry_item>
-	
-	<carry_item file="none.base_carry_item" key="bp_t5_16lab_12" name="16LAB HFBLS-Overrun!-"  >
-		<hud_icon filename="bp_t5_16lab_0.png" />
+		</carry_item>
+	<carry_item key="bp_t5_16lab_15" time_to_live_out_in_the_open="15" name="Armor Plate Mk IV" transform_on_consume="bp_t5_16lab_16" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="bp_t5_16lab_0.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="3" price="30"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="unwound" output_character_state="unwound" consumes_item="0"/>      
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="unwound" output_character_state="unwound" consumes_item="0"/>      
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
+        <modifier class="melee_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
+        <modifier class="melee_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+        <modifier class="melee_hit_result" input_character_state="unwound" output_character_state="unwound" consumes_item="0"/>      
+		<modifier class="speed" value="0.05" />
+		<modifier class="detectability" value="0.2" />
 		<modifier class="hit_success_probability" value="-1.1" />
-		<modifier class="speed" value="-0.15" />
 	</carry_item>
 </carry_items>
