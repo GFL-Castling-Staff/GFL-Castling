@@ -211,9 +211,6 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		ScoredResource("bp_t5_16lab.carry_item", "carry_item", 1.0f),
 		ScoredResource("exo_t5_16lab.carry_item", "carry_item", 1.0f),
 		ScoredResource("cc_t5_16lab.carry_item","carry_item",1.0f)
-			},
-			{ 
-		ScoredResource("icecream.projectile", "projectile", 1.0f, 1)
 			}
 		};
 		
@@ -344,9 +341,6 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 				ScoredResource("gkw_m1918mod3_1606.weapon","weapon",1.0f),
 				ScoredResource("gkw_ksvkmod3_3405.weapon","weapon",1.0f),
 				ScoredResource("gkw_ksvkmod3_3805.weapon","weapon",1.0f)
-			},
-			{
-				ScoredResource("icecream.projectile", "projectile", 1.0f, 1)         
 			}
 		};   
 			
@@ -612,7 +606,6 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 
 		array<array<ScoredResource@>> rewardPasses = {
 			{
-
       	ScoredResource("double_enjoyment_package.carry_item", "carry_item", 0.00001f),
 		ScoredResource("holy_meat_buns.carry_item", "carry_item", 0.000001f),
 		ScoredResource("sweet_bomb_box.carry_item", "carry_item", 0.00001f),
@@ -637,9 +630,6 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		ScoredResource("gkw_ltlx7000_icecream.weapon", "weapon", 0.5f),
 		ScoredResource("woshieoe.carry_item", "carry_item", 0.7f),
 		ScoredResource("gkw_yurine.weapon","weapon",0.7f)
-			},
-			{ 
-		ScoredResource("icecream.projectile", "projectile", 1.0f, 5)
 			}
 		};
     
