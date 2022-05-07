@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <carry_items>
-    <carry_item file="wearables.base_carry_item" key="kcco_qwd.carry_item" name="Code:Hydra" slot="1" transform_on_consume="kcco_qwd_19" >
-        <hud_icon filename="kcco_ar.png" />
-        
-        <model mesh_filename="vestexo.xml" />
-        
-        
-        <!-- death or wound or stun -> no effect -->
+	<carry_item key="kcco_qwd.carry_item" time_to_live_out_in_the_open="15" name="Code:Hydra" transform_on_consume="kcco_qwd_1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="kcco_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="3" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
@@ -14,18 +13,15 @@
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
-        
-        <modifier class="hit_success_probability" value="-1.2" />
+        <modifier class="hit_success_probability" value="-0.8" />
         <modifier class="detectability" value="0.6" />
-    </carry_item>
-    
-    <carry_item file="wearables.base_carry_item" key="kcco_qwd_19" name="Code:Hydra" slot="1" transform_on_consume="kcco_qwd_18" >
-        <hud_icon filename="kcco_ar.png" />
-        
-        <model mesh_filename="vestexo.xml" />
-        
-        
-        <!-- death or wound or stun -> no effect -->
+	</carry_item>
+	<carry_item key="kcco_qwd_1" time_to_live_out_in_the_open="15" name="Code:Hydra" transform_on_consume="kcco_qwd_2" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="kcco_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="3" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
@@ -33,18 +29,15 @@
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
-        
-        <modifier class="hit_success_probability" value="-1.2" />
+        <modifier class="hit_success_probability" value="-0.8" />
         <modifier class="detectability" value="0.6" />
-    </carry_item>
-    
-    <carry_item file="wearables.base_carry_item" key="kcco_qwd_18" name="Code:Hydra" slot="1" transform_on_consume="kcco_qwd_17" >
-        <hud_icon filename="kcco_ar.png" />
-        
-        <model mesh_filename="vestexo.xml" />
-        
-        
-        <!-- death or wound or stun -> no effect -->
+	</carry_item>
+	<carry_item key="kcco_qwd_2" time_to_live_out_in_the_open="15" name="Code:Hydra" transform_on_consume="kcco_qwd_3" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="kcco_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="3" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
@@ -52,18 +45,15 @@
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
-        
-        <modifier class="hit_success_probability" value="-1.2" />
+        <modifier class="hit_success_probability" value="-0.8" />
         <modifier class="detectability" value="0.6" />
-    </carry_item>
-    
-    <carry_item file="wearables.base_carry_item" key="kcco_qwd_17" name="Code:Hydra" slot="1" transform_on_consume="kcco_qwd_16" >
-        <hud_icon filename="kcco_ar.png" />
-        
-        <model mesh_filename="vestexo.xml" />
-        
-        
-        <!-- death or wound or stun -> no effect -->
+	</carry_item>
+	<carry_item key="kcco_qwd_3" time_to_live_out_in_the_open="15" name="Code:Hydra" transform_on_consume="kcco_qwd_4" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="kcco_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="3" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
@@ -71,18 +61,15 @@
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
-        
-        <modifier class="hit_success_probability" value="-1.2" />
+        <modifier class="hit_success_probability" value="-0.8" />
         <modifier class="detectability" value="0.6" />
-    </carry_item>
-    
-    <carry_item file="wearables.base_carry_item" key="kcco_qwd_16" name="Code:Hydra" slot="1" transform_on_consume="kcco_qwd_15" >
-        <hud_icon filename="kcco_ar.png" />
-        
-        <model mesh_filename="vestexo.xml" />
-        
-        
-        <!-- death or wound or stun -> no effect -->
+	</carry_item>
+	<carry_item key="kcco_qwd_4" time_to_live_out_in_the_open="15" name="Code:Hydra" transform_on_consume="kcco_qwd_5" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="kcco_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="3" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
@@ -90,35 +77,15 @@
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
-        
-        <modifier class="hit_success_probability" value="-1.2" />
+        <modifier class="hit_success_probability" value="-0.8" />
         <modifier class="detectability" value="0.6" />
-    </carry_item>
-    
-    <carry_item file="wearables.base_carry_item" key="kcco_qwd_15" name="Code:Hydra" slot="1" transform_on_consume="kcco_qwd_14" >
-        <hud_icon filename="kcco_ar.png" />
-        
-        <model mesh_filename="vestexo.xml" />
-        
-        
-        <!-- death or wound or stun -> no effect -->
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="stun" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
-        
-        <modifier class="hit_success_probability" value="-1.2" />
-        <modifier class="detectability" value="0.6" />
-    </carry_item>
-    
-    <carry_item file="wearables.base_carry_item" key="kcco_qwd_14" name="Code:Hydra" slot="1" transform_on_consume="kcco_qwd_13" >
-        <hud_icon filename="kcco_ar.png" />
-        
-        <model mesh_filename="vestexo.xml" />
-        
+	</carry_item>
+	<carry_item key="kcco_qwd_5" time_to_live_out_in_the_open="15" name="Code:Hydra" transform_on_consume="kcco_qwd_6" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="kcco_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="3" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
@@ -126,16 +93,15 @@
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
-        
-        <modifier class="hit_success_probability" value="-1.2" />
+        <modifier class="hit_success_probability" value="-0.8" />
         <modifier class="detectability" value="0.6" />
-    </carry_item>
-    
-    <carry_item file="wearables.base_carry_item" key="kcco_qwd_13" name="Code:Hydra" slot="1" transform_on_consume="kcco_qwd_12" >
-        <hud_icon filename="kcco_ar.png" />
-        
-        <model mesh_filename="vestexo.xml" />
-        
+	</carry_item>
+	<carry_item key="kcco_qwd_6" time_to_live_out_in_the_open="15" name="Code:Hydra" transform_on_consume="kcco_qwd_7" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="kcco_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="3" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
@@ -143,16 +109,15 @@
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
-        
-        <modifier class="hit_success_probability" value="-1.2" />
+        <modifier class="hit_success_probability" value="-0.8" />
         <modifier class="detectability" value="0.6" />
-    </carry_item>
-    
-    <carry_item file="wearables.base_carry_item" key="kcco_qwd_12" name="Code:Hydra" slot="1" transform_on_consume="kcco_qwd_11" >
-        <hud_icon filename="kcco_ar.png" />
-        
-        <model mesh_filename="vestexo.xml" />
-        
+	</carry_item>
+	<carry_item key="kcco_qwd_7" time_to_live_out_in_the_open="15" name="Code:Hydra" transform_on_consume="kcco_qwd_8" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="kcco_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="3" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
@@ -160,16 +125,15 @@
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
-        
-        <modifier class="hit_success_probability" value="-1.2" />
+        <modifier class="hit_success_probability" value="-0.8" />
         <modifier class="detectability" value="0.6" />
-    </carry_item>
-    
-    <carry_item file="wearables.base_carry_item" key="kcco_qwd_11" name="Code:Hydra" slot="1" transform_on_consume="kcco_qwd_10" >
-        <hud_icon filename="kcco_ar.png" />
-        
-        <model mesh_filename="vestexo.xml" />
-        
+	</carry_item>
+	<carry_item key="kcco_qwd_8" time_to_live_out_in_the_open="15" name="Code:Hydra" transform_on_consume="kcco_qwd_9" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="kcco_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="3" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
@@ -177,15 +141,15 @@
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
-        
-        <modifier class="hit_success_probability" value="-1.2" />
+        <modifier class="hit_success_probability" value="-0.8" />
         <modifier class="detectability" value="0.6" />
-    </carry_item>
-    
-    <carry_item file="wearables.base_carry_item" key="kcco_qwd_10" name="Code:Hydra" slot="1" transform_on_consume="kcco_qwd_9" >
-        <hud_icon filename="kcco_ar.png" />
-        
-        <model mesh_filename="vestexo.xml" />
+	</carry_item>
+	<carry_item key="kcco_qwd_9" time_to_live_out_in_the_open="15" name="Code:Hydra" transform_on_consume="kcco_qwd_10" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="kcco_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="3" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
@@ -193,16 +157,15 @@
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
-        
-        <modifier class="hit_success_probability" value="-1.1" />
+        <modifier class="hit_success_probability" value="-0.8" />
         <modifier class="detectability" value="0.6" />
-    </carry_item>
-    
-    <carry_item file="wearables.base_carry_item" key="kcco_qwd_9" name="Code:Hydra" slot="1" transform_on_consume="kcco_qwd_8" >
-        <hud_icon filename="kcco_ar.png" />
-        
-        <model mesh_filename="vestexo.xml" />
-        
+	</carry_item>
+	<carry_item key="kcco_qwd_10" time_to_live_out_in_the_open="15" name="Code:Hydra" transform_on_consume="kcco_qwd_11" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="kcco_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="3" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
@@ -210,17 +173,15 @@
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
-        
-        <modifier class="hit_success_probability" value="-1.1" />
+        <modifier class="hit_success_probability" value="-0.8" />
         <modifier class="detectability" value="0.6" />
-    </carry_item>
-    
-    
-    <carry_item file="wearables.base_carry_item" key="kcco_qwd_8" name="Code:Hydra" slot="1" transform_on_consume="kcco_qwd_7" >
-        <hud_icon filename="kcco_ar.png" />
-        
-        <model mesh_filename="vestexo.xml" />
-        
+	</carry_item>
+	<carry_item key="kcco_qwd_11" time_to_live_out_in_the_open="15" name="Code:Hydra" transform_on_consume="kcco_qwd_12" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="kcco_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="3" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
@@ -228,17 +189,15 @@
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
-        
-        <modifier class="hit_success_probability" value="-1.1" />
+        <modifier class="hit_success_probability" value="-0.8" />
         <modifier class="detectability" value="0.6" />
-    </carry_item>
-    
-    
-    <carry_item file="wearables.base_carry_item" key="kcco_qwd_7" name="Code:Hydra" slot="1" transform_on_consume="kcco_qwd_6" >
-        <hud_icon filename="kcco_ar.png" />
-        
-        <model mesh_filename="vestexo.xml" />
-        
+	</carry_item>
+	<carry_item key="kcco_qwd_12" time_to_live_out_in_the_open="15" name="Code:Hydra" transform_on_consume="kcco_qwd_13" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="kcco_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="3" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
@@ -246,33 +205,15 @@
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
-        
-        <modifier class="hit_success_probability" value="-1.1" />
+        <modifier class="hit_success_probability" value="-0.8" />
         <modifier class="detectability" value="0.6" />
-    </carry_item>
-    
-    
-    <carry_item file="wearables.base_carry_item" key="kcco_qwd_6" name="Code:Hydra" slot="1" transform_on_consume="kcco_qwd_5" >
-        <hud_icon filename="kcco_ar.png" />
-        
-        <model mesh_filename="vestexo.xml" />
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="stun" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
-        
-        <modifier class="hit_success_probability" value="-1.1" />
-        <modifier class="detectability" value="0.6" />
-    </carry_item>
-    
-    <carry_item file="wearables.base_carry_item" key="kcco_qwd_5" name="Code:Hydra" slot="1" transform_on_consume="kcco_qwd_4" >
-        <hud_icon filename="kcco_ar.png" />
-        
-        <model mesh_filename="vestexo.xml" />
-        
+	</carry_item>
+	<carry_item key="kcco_qwd_13" time_to_live_out_in_the_open="15" name="Code:Hydra" transform_on_consume="kcco_qwd_14" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="kcco_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="3" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
@@ -280,16 +221,15 @@
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
-        
-        <modifier class="hit_success_probability" value="-1.1" />
+        <modifier class="hit_success_probability" value="-0.8" />
         <modifier class="detectability" value="0.6" />
-    </carry_item>
-    
-    <carry_item file="wearables.base_carry_item" key="kcco_qwd_4" name="Code:Hydra" slot="1" transform_on_consume="kcco_qwd_3" >
-        <hud_icon filename="kcco_ar.png" />
-        
-        <model mesh_filename="vestexo.xml" />
-        
+	</carry_item>
+	<carry_item key="kcco_qwd_14" time_to_live_out_in_the_open="15" name="Code:Hydra" transform_on_consume="kcco_qwd_15" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="kcco_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="3" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
@@ -297,64 +237,167 @@
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
-        
-        <modifier class="speed" value="-0.1" />
-        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="hit_success_probability" value="-0.8" />
         <modifier class="detectability" value="0.6" />
-    </carry_item>
-    
-    <carry_item file="wearables.base_carry_item" key="kcco_qwd_3" name="Code:Hydra-" slot="1" transform_on_consume="kcco_qwd_2" >
-        <hud_icon filename="kcco_ar.png" />
-        
-        <model mesh_filename="vestexo.xml" />
-        
+	</carry_item>
+	<carry_item key="kcco_qwd_15" time_to_live_out_in_the_open="15" name="Code:Hydra" transform_on_consume="kcco_qwd_16" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="kcco_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="3" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="death" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
-        
-        <modifier class="speed" value="-0.1" />
-        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="hit_success_probability" value="-0.8" />
         <modifier class="detectability" value="0.6" />
-    </carry_item>
-    
-    <carry_item file="wearables.base_carry_item" key="kcco_qwd_2" name="Code:Hydra" slot="1" transform_on_consume="kcco_qwd_1" >
-        <hud_icon filename="kcco_ar.png" />
-        
-        <model mesh_filename="vestexo.xml" />
-        
+	</carry_item>
+	<carry_item key="kcco_qwd_16" time_to_live_out_in_the_open="15" name="Code:Hydra" transform_on_consume="kcco_qwd_17" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="kcco_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="3" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="death" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none"  />
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
-        
-        <modifier class="speed" value="-0.2" />
-        <modifier class="hit_success_probability" value="-1.0" />
-        <modifier class="detectability" value="0.6" />
-    </carry_item>
-    
-    <carry_item file="wearables.base_carry_item" key="kcco_qwd_1" name="Code:Hydra" slot="1" transform_on_consume="kcco_qwd_0" >
-        <hud_icon filename="kcco_ar.png" />
-        
-        <model mesh_filename="vestexo.xml" />
-        
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="death" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
-        
-        <modifier class="speed" value="-0.3" />
-        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="hit_success_probability" value="-0.8" />
         <modifier class="detectability" value="0.6" />
-    </carry_item>
-    
+	</carry_item>
+	<carry_item key="kcco_qwd_17" time_to_live_out_in_the_open="15" name="Code:Hydra" transform_on_consume="kcco_qwd_18" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="kcco_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="3" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
+        <modifier class="hit_success_probability" value="-0.8" />
+        <modifier class="detectability" value="0.6" />
+	</carry_item>
+	<carry_item key="kcco_qwd_18" time_to_live_out_in_the_open="15" name="Code:Hydra" transform_on_consume="kcco_qwd_19" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="kcco_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="3" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
+        <modifier class="hit_success_probability" value="-0.8" />
+        <modifier class="detectability" value="0.6" />
+	</carry_item>
+	<carry_item key="kcco_qwd_19" time_to_live_out_in_the_open="15" name="Code:Hydra" transform_on_consume="kcco_qwd_20" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="kcco_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="3" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
+        <modifier class="hit_success_probability" value="-0.8" />
+        <modifier class="detectability" value="0.6" />
+	</carry_item>
+	<carry_item key="kcco_qwd_20" time_to_live_out_in_the_open="15" name="Code:Hydra" transform_on_consume="kcco_qwd_21" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="kcco_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="3" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
+        <modifier class="hit_success_probability" value="-0.8" />
+        <modifier class="detectability" value="0.6" />
+	</carry_item>
+	<carry_item key="kcco_qwd_21" time_to_live_out_in_the_open="15" name="Code:Hydra" transform_on_consume="kcco_qwd_22" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="kcco_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="3" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
+        <modifier class="hit_success_probability" value="-0.8" />
+        <modifier class="detectability" value="0.6" />
+	</carry_item>
+	<carry_item key="kcco_qwd_22" time_to_live_out_in_the_open="15" name="Code:Hydra" transform_on_consume="kcco_qwd_23" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="kcco_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="3" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
+        <modifier class="hit_success_probability" value="-0.8" />
+        <modifier class="detectability" value="0.6" />
+	</carry_item>
+	<carry_item key="kcco_qwd_23" time_to_live_out_in_the_open="15" name="Code:Hydra" transform_on_consume="kcco_qwd_24" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="kcco_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="3" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
+        <modifier class="hit_success_probability" value="-0.8" />
+        <modifier class="detectability" value="0.6" />
+	</carry_item>
+	<carry_item key="kcco_qwd_24" time_to_live_out_in_the_open="15" name="Code:Hydra" transform_on_consume="kcco_qwd_25" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="kcco_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="3" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
+        <modifier class="hit_success_probability" value="-0.8" />
+        <modifier class="detectability" value="0.6" />
+	</carry_item>
 </carry_items>
