@@ -43,7 +43,7 @@
 	
 
   <projectile file="88_HEAT.projectile">
-    <result class="blast"   damage="8.0"  radius="3.5"  decal="1" push="0" character_state="death" 	faction_compare="not_equal"/>
+    <result class="blast" damage="8.0"  radius="3.5"  decal="1" push="0" character_state="death" 	faction_compare="not_equal"/>
   </projectile>
     <weak_hand_hold offset="0.3" />
     <commonness value="0.00001"  />

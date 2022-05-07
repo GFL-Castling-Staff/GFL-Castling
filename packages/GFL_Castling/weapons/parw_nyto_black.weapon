@@ -48,10 +48,9 @@
 
     <weak_hand_hold offset="0.4" />
     <projectile file="bullet_paradeus.projectile">
-        <result class="hit"  kill_probability="3" kill_decay_start_time="1.0" kill_decay_end_time="1.5" />
+        <result class="hit"  kill_probability="2.1" kill_decay_start_time="1.0" kill_decay_end_time="1.5" />
         <trail key="paradeus_long" />
     </projectile>
 
-    
     <modifier class="speed" value="-0.1" />
 </weapon>

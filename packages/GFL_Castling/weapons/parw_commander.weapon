@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapon file="paradeus.base_weapon" key="parw_commander.weapon">
-	<tag name="antirifle" />
+	<tag name="autorifle" />
 	<tag name="commander" />
 
     <specification 
-		retrigger_time="0.025" 
+		retrigger_time="0.08" 
 		accuracy_factor="1.0" 
 		sustained_fire_grow_step="0.2" 
 		sustained_fire_diminish_rate="1.7" 
 		magazine_size="60" 
-		
 		suppressed="1" 
 		name="Commander" 
 		class="0" 
-		projectile_speed="74.88" 
+		projectile_speed="100" 
 		barrel_offset="0.4" 
 	/>
 
@@ -46,12 +45,12 @@
     <hud_icon filename="testing.png" />
 	
 
-	<inventory encumbrance="10.0" buy_price="0.0" sell_price="-1.0"/>
+	<inventory encumbrance="10.0" buy_price="0.0" sell_price="1.0"/>
 
 
 	
     <projectile file="bullet_paradeus.projectile">
-        <result class="hit" kill_probability="1.2" kill_decay_start_time="0.23" kill_decay_end_time="0.38" />
+        <result class="hit" kill_probability="1.6" kill_decay_start_time="0.23" kill_decay_end_time="0.7" />
     </projectile>
 
 </weapon>

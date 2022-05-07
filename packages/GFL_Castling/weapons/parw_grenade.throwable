@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<projectile drop_count_factor_on_death="0.0" drop_count_factor_on_player_death="0.0"  class="grenade" name="Ofanim" key="parw_grenade.projectile" slot="0" radius="0.15">
+<projectile drop_count_factor_on_death="0.0" time_to_live_out_in_the_open="0" drop_count_factor_on_player_death="0.0"  class="grenade" name="Ofanim" key="parw_grenade.projectile" slot="0" radius="0.15">
 
 
     <result class="blast" radius="5.5" damage="3.0" push="0.3" decal="1" character_state="death" />
@@ -10,8 +10,6 @@
     <model mesh_filename="parw_grenade.xml" />
     <hud_icon filename="grenade.png" />
 
-    <!-- <throwable curve_height="5.0" near_far_distance="5.0" speed_estimation_near="9.0" speed_estimation_far="15.0" max_speed="13.0" randomness="0.07" /> -->
-    <!-- <throwable curve_height="6.0" near_far_distance="5.0" speed_estimation_near="20.0" speed_estimation_far="17.0" max_speed="11.0" randomness="0.07" /> -->
     <throwable curve_height="7.0" near_far_distance="5.0" speed_estimation_near="9.0" speed_estimation_far="30.0" max_speed="15.0" randomness="0.07" />
 
     <!-- projectile slot 0 is used for hand grenade items currently -->
@@ -19,8 +17,6 @@
     <commonness value="2.0" />
     <inventory encumbrance="3.0" price="1.0" />
     <capacity value="8" source="rank" source_value="0.0" />
-    <!-- <capacity value="3" source="rank" source_value="0.2" /> -->
-    <!-- <capacity value="4" source="rank" source_value="0.4" /> -->
 
     <sound class="result" key="other" fileref="explosion1.wav" />
     <sound class="result" key="other" fileref="explosion2.wav" />
@@ -40,19 +36,6 @@
     <effect class="result" type="splat_map" surface_tag="" size="3.0" atlas_index="0" layer="1" />
     <effect class="result" type="splat_map" surface_tag="" size="4.0" atlas_index="4" layer="0" />
     <effect class="result" type="splat_map" surface_tag="" size="5.0" atlas_index="0" layer="2" additive="0" /> <!-- remove top snow everywhere -->
-
-<!--    <effect class="result" key="terrain" tag="ice" ref="IceCrackSmall" post_processing="0" /> 
-    <effect class="result" key="terrain" tag="ice" ref="IceCrackRing" post_processing="0" />  
-    <effect class="result" key="terrain" tag="ice" ref="IceBurstSmall" post_processing="1" />          
-    <effect class="result" key="terrain" tag="ice" ref="BigBurst" use_surface_color="1" />       
-    <effect class="result" key="terrain" tag="ice" ref="SmokeTop" post_processing="1" />
-    <effect class="result" key="terrain" tag="ice" ref="Smoke" post_processing="1" />
-    <effect class="result" key="terrain" tag="ice" ref="Shine" lighting="0" />
-    <effect class="result" key="terrain" tag="ice" ref="Godray" lighting="0" />
-    <effect class="result" key="terrain" tag="ice" ref="ShadowSmoke" shadow="1" />  
-    <effect class="result" type="splat_map" surface_tag="ice" size="3.0" atlas_index="0" layer="1" />     
-    <effect class="result" type="splat_map" surface_tag="ice" size="0.0" atlas_index="4" layer="0" />    -->   
-
 
     <effect class="result" key="other" ref="SmokeTop" post_processing="1" />
     <effect class="result" key="other" ref="Smoke" post_processing="1" />

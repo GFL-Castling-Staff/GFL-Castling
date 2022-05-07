@@ -7,7 +7,7 @@
     <capacity value="1" source="rank" source_value="0.0" />
 
     <specification 
-		accuracy_factor="0.93" 
+		accuracy_factor="0.75" 
 		retrigger_time="0.048" 
 		barrel_offset="0.32" 
 		class="0"
@@ -49,7 +49,7 @@
     <effect class="muzzle" ref="MuzzleDual2" /> 
     <effect class="muzzle" ref="MuzzleSmokeDual2" />
 
-    <drop_on_death_result class="spawn" instance_class="carry_item" instance_key="wild_gifts.carry_item" min_amount="1" max_amount="1" offset="0 1.0 0" position_spread="0 0" direction_spread="0 0" />
+    <drop_on_death_result class="spawn" instance_class="carry_item" instance_key="wild_gifts.carry_item" min_amount="3" max_amount="4" offset="0 1.0 0" position_spread="0 0" direction_spread="0 0" />
 
     <sound key="fire" fileref="uzi_Fire_FromSAM2.wav" pitch_variety="0.05" volume="0.5" />
     <sound key="magazine_out" fileref="uzi_mgz_out_FromCOD16.wav" volume="1" />
@@ -61,7 +61,7 @@
 
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet_paradeus.projectile">
-        <result class="hit"  kill_probability="1.85" kill_decay_start_time="0.021" kill_decay_end_time="0.4" />
+        <result class="hit"  kill_probability="1.85" kill_decay_start_time="0" kill_decay_end_time="0.4" />
     </projectile>
     <stance state_key="running" accuracy="0.6" />
     <stance state_key="walking" accuracy="0.675" />
@@ -71,4 +71,6 @@
     <stance state_key="prone" accuracy="0.95" />
     <stance state_key="prone_moving" accuracy="0.3" />
     <stance state_key="over_wall" accuracy="1" />
+    <modifier class="speed" value="0.3" />
+
 </weapon>

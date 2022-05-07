@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<weapon file="paradeus.base_weapon" time_to_live_out_in_the_open="0">
+<weapon on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="metal_heavy" />
 	<tag name="mecha" />
 	<tag name="machine gun" />
 
+	<commonness value="0.0001" in_stock="1" can_respawn_with="1" />
+	<inventory encumbrance="0.0" price="0.0" />
+	<capacity value="1" source="rank" source_value="0.0" />
+
+	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone" />
+	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone" />
+	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone" />
+
     <specification 
 	retrigger_time="0.05" 
-	accuracy_factor="0.9" 
+	accuracy_factor="0.6" 
 	sustained_fire_grow_step="0.40" 
 	sustained_fire_diminish_rate="1.2" 
 	magazine_size="200" 
@@ -69,7 +77,10 @@
     <stance state_key="standing" accuracy="1" />
     <stance state_key="crouching" accuracy="1" />
     <stance state_key="prone" accuracy="1" />
-	
+	<stance state_key="prone_moving" accuracy="1" />
+	<stance state_key="over_wall" accuracy="1" />
+
+
 	<shield offset="0.5 -0.35 0" extent="0.4 0.4 0.4" />
 
 
