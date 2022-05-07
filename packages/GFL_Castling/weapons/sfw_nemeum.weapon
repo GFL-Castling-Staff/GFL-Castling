@@ -19,7 +19,7 @@
     stab_enabled="0"
 	reload_one_at_a_time="0"
 	sight_range_modifier="1.0" 
-	projectile_speed="90.0" 
+	projectile_speed="120.0" 
 	carry_in_two_hands="0" 
 	projectiles_per_shot="1" 
 	slot="0" 
@@ -48,24 +48,9 @@
     
     <!-- <weak_hand_hold offset="0.1" /> -->
     <projectile file="bullet_sf.projectile">
-        <result class="blast" radius="2.0" damage="5.0" decal="1" push="0.05" character_state="death" faction_compare="not_equal"/>
+        <result class="blast" radius="2.0" damage="4.0" decal="1" push="0.05" character_state="death" faction_compare="not_equal"/>
         <trail probability="1.0" key="BulletApTrail" />
     </projectile>
-    <!-- state modifiers for weapons are connected to shield impact events -->
-    <!-- <shield offset="0 0 0.2" extent="0.4 1.6 0.6" /> -->
-    <shield offset="-0.2 0 1.0" extent="0.4 1.6 1.0" />
-    <shield offset="-0.2 0 -0.6" extent="0.4 1.6 1.0" />
-    <!-- deflects all bullets; death, stun, wound become none, doesn't consume -->
-    <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0" />
-    <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-    <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-    <!-- death and wound blast causes the item to be consumed, stun is ignored -->
-    <modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
-    <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
-    <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-    <modifier class="melee_blast_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
-    <modifier class="melee_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
-    <modifier class="melee_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
 	
     <!--Accuracy, Movement speed-->
     <stance state_key="running" accuracy="0.9" />
