@@ -93,7 +93,7 @@ key="kccow_cerynitis_1.weapon">
 	accuracy_factor="1.0" 
 	sustained_fire_grow_step="0.0" 
 	sustained_fire_diminish_rate="0.0" 
-	magazine_size="8" 
+	magazine_size="16" 
 	can_shoot_standing="1" 
 	can_shoot_crouching="0"
 	can_shoot_prone="0"
@@ -104,7 +104,7 @@ key="kccow_cerynitis_1.weapon">
 	sight_range_modifier="0.8" 
 	projectile_speed="130.0" 
 	carry_in_two_hands="0" 
-	projectiles_per_shot="2" 
+	projectiles_per_shot="1" 
 	slot="0" 
 	stab_enabled="0"/>
     <!--Animations-->
@@ -137,11 +137,11 @@ key="kccow_cerynitis_1.weapon">
 
     <stance state_key="running" accuracy="0.9" />
     <stance state_key="walking" accuracy="1.0" />
-    <stance state_key="crouch_moving" accuracy="0.75" />
-    <stance state_key="prone_moving" accuracy="0.3" />
+    <stance state_key="crouch_moving" accuracy="1.0" />
+    <stance state_key="prone_moving" accuracy="1.0" />
     <stance state_key="standing" accuracy="1.2" />
     <stance state_key="crouching" accuracy="0.85" />
-    <stance state_key="prone" accuracy="0.94" />
+    <stance state_key="prone" accuracy="1.0" />
     <modifier class="speed" value="-0.3" />
 
     <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5" />
