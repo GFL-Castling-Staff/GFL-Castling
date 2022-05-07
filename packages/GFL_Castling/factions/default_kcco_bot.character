@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <character filename="kcco.text_lines">
-	<tag name="metal_thin" />
-	<sound key="death" fileref="bot_die1.wav" volume="0.25" />
-	<sound key="death" fileref="bot_die2.wav" volume="0.25" />
-	<sound key="death" fileref="bot_die3.wav" volume="0.25" />
-	<!-- <sound key="death" fileref="die5.wav" volume="0.55" /> -->
-	<!-- <sound key="death" fileref="die6.wav" volume="0.55" /> -->
-	<!-- <sound key="death" fileref="die7.wav" volume="0.55" /> -->
-	<!-- <sound key="footstep" fileref="bot_walk.wav" volume="0.25" /> -->
-
+    <tag name="metal_man" />
+    <sound key="death" fileref="bot_die1.wav" volume="0.25" />
+    <sound key="death" fileref="bot_die2.wav" volume="0.25" />
+    <sound key="death" fileref="bot_die3.wav" volume="0.25" />
 </character>

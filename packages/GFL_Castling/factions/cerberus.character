@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <character filename="default_base.character">
-
+	<tag name="metal_man" />
 	<parameter class="can_use_vehicles" value="0" /> 
-
 	<animation state_key="hold"  animation_key="relax, cerberus" />
 	<animation state_key="hold"  animation_key="relax2, cerberus" />
 	<animation state_key="hold_one_wall"  animation_key="still, cerberus" />

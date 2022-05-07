@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<character filename="kcco.text_lines">
+<character filename="default_infected.character">
+	<tag name="meat_man" />
 
 	<sound key="footstep" fileref="qwd_walk1.wav" volume="0.9" />
 	<sound key="death" fileref="qwd_die.wav" volume="0.8" />

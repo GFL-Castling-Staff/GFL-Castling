@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <character filename="default_base.character">
 <!-- 水里高度 -->
+	<tag name="metal_man" />
+
 	<parameter class="swimming_character_y_position_at_water_height" value="1.1" />
 	<!-- 水里浮起来的速度 -->
 	<parameter class="swimming_y_handling_factor" value="0.0001" />

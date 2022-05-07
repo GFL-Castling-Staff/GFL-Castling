@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <character filename="kcco.text_lines">
+	<tag name="metal_man" />
 
 	<sound key="footstep" fileref="qwd_walk1.wav" volume="0.9" />
 	<sound key="death" fileref="qwd_die.wav" volume="0.8" />
-
-
 
 	<animation state_key="hold"  animation_key="still, large mecha" />
 	<animation state_key="hold_one_wall"  animation_key="still, large mecha" />
