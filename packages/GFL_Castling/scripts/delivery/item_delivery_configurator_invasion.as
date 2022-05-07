@@ -237,7 +237,6 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 	// --------------------------------------------
 	// 替换火神票
 	protected void setupGift2() {
-		_log("adding gift2 config", 1);
 		array<Resource@> deliveryList = {
 			 Resource("gift_box_2.carry_item", "carry_item")
 		};
@@ -246,23 +245,20 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 			{	
 		ScoredResource("ff_agent.weapon", "weapon", 1.0f),
 		ScoredResource("ff_alchemist.weapon", "weapon", 1.0f),
-		ScoredResource("ff_architect.weapon", "weapon", 0.5f),
-		ScoredResource("ff_destroyer.weapon", "weapon", 0.5f),
+		ScoredResource("ff_architect.weapon", "weapon", 1.0f),
+		ScoredResource("ff_destroyer.weapon", "weapon", 1.0f),
 		ScoredResource("ff_gager.weapon", "weapon", 1.0f),
 		ScoredResource("ff_hunter.weapon", "weapon", 1.0f),
-		ScoredResource("ff_excutioner_1.weapon", "weapon", 0.8f),
-		ScoredResource("ff_parw_alina.weapon", "weapon", 0.8f),
+		ScoredResource("ff_excutioner_1.weapon", "weapon", 1.0f),
+		ScoredResource("ff_parw_alina.weapon", "weapon", 1.0f),
 		ScoredResource("ff_Intruder.weapon", "weapon", 1.0f),
 		ScoredResource("ff_parw_nyto_black.weapon", "weapon", 1.0f),
 		ScoredResource("ff_justice.weapon", "weapon", 1.0f),
 		ScoredResource("ff_dreamer.weapon", "weapon", 1.0f),
-		ScoredResource("ff_ripper.weapon", "weapon", 1.8f),
+		ScoredResource("ff_ripper.weapon", "weapon", 2.0f),
 		ScoredResource("ff_scarecrow.weapon", "weapon", 1.0f),
-		ScoredResource("ff_striker.weapon", "weapon", 1.8f),
-		ScoredResource("ff_weaver.weapon", "weapon", 0.5f)
-			},
-			{ 
-		ScoredResource("SOPII_Ant_Doll.carry_item", "carry_item", 1.0f, 1)
+		ScoredResource("ff_striker.weapon", "weapon", 2.0f),
+		ScoredResource("ff_weaver.weapon", "weapon", 1.0f)
 			}
 		};
 
@@ -300,9 +296,6 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		ScoredResource("ff_scarecrow.weapon", "weapon", 0.3f),
 		ScoredResource("ff_striker.weapon", "weapon", 30.0f),
 		ScoredResource("ff_vespid.weapon", "weapon", 30.0f)
-			},
-			{ 
-		ScoredResource("wild_gifts.carry_item", "carry_item", 1.0f, 1)
 			}
 		};
 			
