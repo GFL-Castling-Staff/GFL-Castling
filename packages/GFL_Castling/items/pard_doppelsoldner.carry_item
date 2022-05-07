@@ -1,421 +1,343 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <carry_items>
-    <carry_item file="wearables.base_carry_item"  key="pard_doppelsoldner.carry_item" name="Doppelsoldner" slot="1" transform_on_consume="pard_doppelsoldner_2" >
-        <hud_icon filename="pard_ar.png" />
- 
-        <model mesh_filename="vestexo.xml" />
-                                                                                                                                                                          
- 
-        <!-- death or wound or stun -> no effect -->
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" />
-        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
- 
-        
-        <modifier class="speed" value="0" />
-		<modifier class="hit_success_probability" value="-1.0" />
-	    <modifier class="detectability" value="0.8" />
-    </carry_item>
-
-    <carry_item file="wearables.base_carry_item" key="pard_doppelsoldner_2" name="Doppelsoldner" slot="1" transform_on_consume="pard_doppelsoldner_3" >
-        <hud_icon filename="pard_ar.png" />
- 
-        <model mesh_filename="vestexo.xml" />
-
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" />
-        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-
-        
-        <modifier class="speed" value="0" />
-		<modifier class="hit_success_probability" value="-0.75" />
-	    <modifier class="detectability" value="0.8" />
-    </carry_item>
-
-    <carry_item file="wearables.base_carry_item" key="pard_doppelsoldner_3" name="Doppelsoldner" slot="1" transform_on_consume="pard_doppelsoldner_4" >
-        <hud_icon filename="pard_ar.png" />
- 
-        <model mesh_filename="vestexo.xml" />
-
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" />
-        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-
-        
-        <modifier class="speed" value="0" />
-		<modifier class="hit_success_probability" value="-0.75" />
-	    <modifier class="detectability" value="0.8" />
-    </carry_item>
-
-    <carry_item file="wearables.base_carry_item" key="pard_doppelsoldner_4" name="Doppelsoldner-Slight Damage-" slot="1" transform_on_consume="pard_doppelsoldner_5" >
-        <hud_icon filename="pard_ar.png" />
- 
-        <model mesh_filename="vestexo.xml" />
-
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" />
-        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-
-        
-        <modifier class="speed" value="0" />
-		<modifier class="hit_success_probability" value="-0.75" />
-	    <modifier class="detectability" value="0.8" />
-    </carry_item>
-
-    <carry_item file="wearables.base_carry_item" key="pard_doppelsoldner_5" name="Doppelsoldner-Slight Damage-" slot="1" transform_on_consume="pard_doppelsoldner_6" >
-        <hud_icon filename="pard_ar.png" />
- 
-        <model mesh_filename="vestexo.xml" />
-
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none"  />
-        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" />
-        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-
-        
-        <modifier class="speed" value="0" />
-		<modifier class="hit_success_probability" value="-0.75" />
-	    <modifier class="detectability" value="0.8" />
-    </carry_item>
-
-    <carry_item file="wearables.base_carry_item" key="pard_doppelsoldner_6" name="Doppelsoldner-Slight Damage-" slot="1" transform_on_consume="pard_doppelsoldner_7" >
-        <hud_icon filename="pard_ar.png" />
- 
-        <model mesh_filename="vestexo.xml" />
-
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none"  />
-        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" />
-        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-
-        
-        <modifier class="speed" value="0" />
-		<modifier class="hit_success_probability" value="-0.75" />
-	    <modifier class="detectability" value="0.8" />
-    </carry_item>
-
-    <carry_item file="wearables.base_carry_item" key="pard_doppelsoldner_7" name="Doppelsoldner-Moderate Damage-" slot="1" transform_on_consume="pard_doppelsoldner_8" >
-        <hud_icon filename="pard_ar.png" />
- 
-        <model mesh_filename="vestexo.xml" />
-
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none"  />
-        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" />
-        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-
-        
-        <modifier class="speed" value="0" />
-		<modifier class="hit_success_probability" value="-0.75" />
-	    <modifier class="detectability" value="0.8" />
-    </carry_item>
-
-    
-    <carry_item file="wearables.base_carry_item" key="pard_doppelsoldner_8" name="Doppelsoldner-Moderate Damage-" slot="1" transform_on_consume="pard_doppelsoldner_9" >
-        <hud_icon filename="pard_ar.png" />
- 
-        <model mesh_filename="vestexo.xml" />
-
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none"  />
-        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" />
-        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-
-        
-        <modifier class="speed" value="0" />
-		<modifier class="hit_success_probability" value="-0.75" />
-	    <modifier class="detectability" value="0.8" />
-    </carry_item>
-
-    
-    <carry_item file="wearables.base_carry_item" key="pard_doppelsoldner_9" name="Doppelsoldner-Moderate Damage-" slot="1" transform_on_consume="pard_doppelsoldner_10" >
-        <hud_icon filename="pard_ar.png" />
- 
-        <model mesh_filename="vestexo.xml" />
-
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" />
-        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-
-        
-        <modifier class="speed" value="0" />
-		<modifier class="hit_success_probability" value="-0.75" />
-	    <modifier class="detectability" value="0.8" />
-    </carry_item>
-
-    
-    <carry_item file="wearables.base_carry_item" key="pard_doppelsoldner_10" name="Doppelsoldner-Moderate Damage-" slot="1" transform_on_consume="pard_doppelsoldner_11" >
-        <hud_icon filename="pard_ar.png" />
- 
-        <model mesh_filename="vestexo.xml" />
-
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none"  />
-        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" />
-        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-
-        
-        <modifier class="speed" value="0" />
-		<modifier class="hit_success_probability" value="-0.75" />
-	    <modifier class="detectability" value="0.8" />
-    </carry_item>
-
-    <carry_item file="wearables.base_carry_item" key="pard_doppelsoldner_11" name="Doppelsoldner-Seriously Damaged-" slot="1" transform_on_consume="pard_doppelsoldner_12" >
-        <hud_icon filename="pard_ar.png" />
- 
-        <model mesh_filename="vestexo.xml" />
-
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" />
-        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-
-        <modifier class="speed" value="0" />
-		<modifier class="hit_success_probability" value="-0.75" />
-	    <modifier class="detectability" value="0.8" />
-    </carry_item>
-
-    <carry_item file="wearables.base_carry_item" key="pard_doppelsoldner_12" name="Doppelsoldner-Severe Damage-" slot="1" transform_on_consume="pard_doppelsoldner_13" >
-        <hud_icon filename="pard_ar.png" />
- 
-        <model mesh_filename="vestexo.xml" />
-
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" />
-        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
-
-        <modifier class="speed" value="0" />
-		<modifier class="hit_success_probability" value="-0.751" />
-	    <modifier class="detectability" value="0.8" />
-    </carry_item>
-
-    <carry_item file="wearables.base_carry_item" key="pard_doppelsoldner_13" name="Doppelsoldner-Severe Damage-" slot="1" transform_on_consume="pard_doppelsoldner_14" >
-        <hud_icon filename="pard_ar.png" />
- 
-        <model mesh_filename="vestexo.xml" />
-
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" />
-        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
-
-        <modifier class="speed" value="0" />
-		<modifier class="hit_success_probability" value="-0.75" />
-	    <modifier class="detectability" value="0.8" />
-    </carry_item>
-
-
-    <carry_item file="wearables.base_carry_item" key="pard_doppelsoldner_14" name="Doppelsoldner-Severe Damage-" slot="1" transform_on_consume="pard_doppelsoldner_15" >
-        <hud_icon filename="pard_ar.png" />
- 
-        <model mesh_filename="vestexo.xml" />
-
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" />
-        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
-
-        <modifier class="speed" value="0" />
-		<modifier class="hit_success_probability" value="-0.75" />
-	    <modifier class="detectability" value="0.8" />
-    </carry_item>
-
-
-    <carry_item file="wearables.base_carry_item" key="pard_doppelsoldner_15" name="Doppelsoldner-Severe Damage-" slot="1" transform_on_consume="pard_doppelsoldner_16" >
-        <hud_icon filename="pard_ar.png" />
- 
-        <model mesh_filename="vestexo.xml" />
-
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" />
-        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
-        <modifier class="speed" value="0" />
-		<modifier class="hit_success_probability" value="-0.75" />
-	    <modifier class="detectability" value="0.8" />
-    </carry_item>
-
-
-    <carry_item file="wearables.base_carry_item" key="pard_doppelsoldner_16" name="Doppelsoldner-Severe Damage-" slot="1" transform_on_consume="pard_doppelsoldner_17" >
-        <hud_icon filename="pard_ar.png" />
- 
-        <model mesh_filename="vestexo.xml" />
-
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" />
-        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
-
-        <modifier class="speed" value="-0.2" />
-		<modifier class="hit_success_probability" value="-0.75" />
-	    <modifier class="detectability" value="0.8" />
-    </carry_item>
-
-    
-    <carry_item file="wearables.base_carry_item" key="pard_doppelsoldner_17" name="Doppelsoldner-Severe Damage-" slot="1" transform_on_consume="pard_doppelsoldner_18" >
-        <hud_icon filename="pard_ar.png" />
- 
-        <model mesh_filename="vestexo.xml" />
-
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" />
-        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
-
-        <modifier class="speed" value="-0.2" />
-		<modifier class="hit_success_probability" value="-0.75" />
-	    <modifier class="detectability" value="0.8" />
-    </carry_item>
-
-    
-    <carry_item file="wearables.base_carry_item" key="pard_doppelsoldner_18" name="Doppelsoldner-Severe Damage-" slot="1" transform_on_consume="pard_doppelsoldner_19" >
-        <hud_icon filename="pard_ar.png" />
- 
-        <model mesh_filename="vestexo.xml" />
-
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" />
-        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
-
-        <modifier class="speed" value="-0.2" />
-		<modifier class="hit_success_probability" value="-0.75" />
-	    <modifier class="detectability" value="0.8" />
-    </carry_item>
-
-
-    
-    <carry_item file="wearables.base_carry_item" key="pard_doppelsoldner_19" name="Doppelsoldner-Severe Damage-" slot="1" transform_on_consume="pard_doppelsoldner_20" >
-        <hud_icon filename="pard_ar.png" />
- 
-        <model mesh_filename="vestexo.xml" />
-
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" />
-        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
-
-        <modifier class="speed" value="-0.2" />
-		<modifier class="hit_success_probability" value="-0.75" />
-	    <modifier class="detectability" value="0.8" />
-    </carry_item>
-    
-    <carry_item file="wearables.base_carry_item" key="pard_doppelsoldner_20" name="Doppelsoldner-Severe Damage-" slot="1" transform_on_consume="pard_doppelsoldner_21" >
-        <hud_icon filename="pard_ar.png" />
- 
-        <model mesh_filename="vestexo.xml" />
-
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" />
-        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
-
-        <modifier class="speed" value="-0.2" />
-		<modifier class="hit_success_probability" value="-0.75" />
-	    <modifier class="detectability" value="0.8" />
-    </carry_item>
-    
-    <carry_item file="wearables.base_carry_item" key="pard_doppelsoldner_21" name="Doppelsoldner-Severe Damage-" slot="1" transform_on_consume="pard_doppelsoldner_22" >
-        <hud_icon filename="pard_ar.png" />
- 
-        <model mesh_filename="vestexo.xml" />
-
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" />
-        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
-
-        <modifier class="speed" value="-0.2" />
-		<modifier class="hit_success_probability" value="-0.75" />
-	    <modifier class="detectability" value="0.8" />
-    </carry_item>
-    
-    <carry_item file="wearables.base_carry_item" key="pard_doppelsoldner_22" name="Doppelsoldner-Severe Damage-" slot="1" transform_on_consume="pard_doppelsoldner_23" >
-        <hud_icon filename="pard_ar.png" />
- 
-        <model mesh_filename="vestexo.xml" />
-
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" />
+	<carry_item key="pard_doppelsoldner.carry_item" time_to_live_out_in_the_open="15" name="Doppelsoldner" transform_on_consume="pard_doppelsoldner_1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="3" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"  />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
-        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="death" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
-
-        <modifier class="speed" value="-0.2" />
-		<modifier class="hit_success_probability" value="-0.75" />
-	    <modifier class="detectability" value="0.8" />
-    </carry_item>
-
-
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="0.8" />
+	</carry_item>
+	<carry_item key="pard_doppelsoldner_1" time_to_live_out_in_the_open="15" name="Doppelsoldner" transform_on_consume="pard_doppelsoldner_2" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="3" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"  />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="0.8" />
+	</carry_item>
+	<carry_item key="pard_doppelsoldner_2" time_to_live_out_in_the_open="15" name="Doppelsoldner" transform_on_consume="pard_doppelsoldner_3" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="3" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"  />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="0.8" />
+	</carry_item>
+	<carry_item key="pard_doppelsoldner_3" time_to_live_out_in_the_open="15" name="Doppelsoldner" transform_on_consume="pard_doppelsoldner_4" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="3" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"  />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="0.8" />
+	</carry_item>
+	<carry_item key="pard_doppelsoldner_4" time_to_live_out_in_the_open="15" name="Doppelsoldner" transform_on_consume="pard_doppelsoldner_5" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="3" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"  />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="0.8" />
+	</carry_item>
+	<carry_item key="pard_doppelsoldner_5" time_to_live_out_in_the_open="15" name="Doppelsoldner" transform_on_consume="pard_doppelsoldner_6" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="3" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"  />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-0.75" />
+        <modifier class="detectability" value="0.8" />
+	</carry_item>
+	<carry_item key="pard_doppelsoldner_6" time_to_live_out_in_the_open="15" name="Doppelsoldner" transform_on_consume="pard_doppelsoldner_7" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="3" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"  />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-0.75" />
+        <modifier class="detectability" value="0.8" />
+	</carry_item>
+	<carry_item key="pard_doppelsoldner_7" time_to_live_out_in_the_open="15" name="Doppelsoldner" transform_on_consume="pard_doppelsoldner_8" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="3" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"  />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-0.75" />
+        <modifier class="detectability" value="0.8" />
+	</carry_item>
+	<carry_item key="pard_doppelsoldner_8" time_to_live_out_in_the_open="15" name="Doppelsoldner" transform_on_consume="pard_doppelsoldner_9" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="3" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"  />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-0.75" />
+        <modifier class="detectability" value="0.8" />
+	</carry_item>
+	<carry_item key="pard_doppelsoldner_9" time_to_live_out_in_the_open="15" name="Doppelsoldner" transform_on_consume="pard_doppelsoldner_10" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="3" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"  />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-0.75" />
+        <modifier class="detectability" value="0.8" />
+	</carry_item>
+	<carry_item key="pard_doppelsoldner_10" time_to_live_out_in_the_open="15" name="Doppelsoldner" transform_on_consume="pard_doppelsoldner_11" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="3" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"  />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-0.75" />
+        <modifier class="detectability" value="0.8" />
+	</carry_item>
+	<carry_item key="pard_doppelsoldner_11" time_to_live_out_in_the_open="15" name="Doppelsoldner" transform_on_consume="pard_doppelsoldner_12" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="3" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"  />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-0.75" />
+        <modifier class="detectability" value="0.8" />
+	</carry_item>
+	<carry_item key="pard_doppelsoldner_12" time_to_live_out_in_the_open="15" name="Doppelsoldner" transform_on_consume="pard_doppelsoldner_13" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="3" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"  />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-0.75" />
+        <modifier class="detectability" value="0.8" />
+	</carry_item>
+	<carry_item key="pard_doppelsoldner_13" time_to_live_out_in_the_open="15" name="Doppelsoldner" transform_on_consume="pard_doppelsoldner_14" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="3" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"  />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-0.75" />
+        <modifier class="detectability" value="0.8" />
+	</carry_item>
+	<carry_item key="pard_doppelsoldner_14" time_to_live_out_in_the_open="15" name="Doppelsoldner" transform_on_consume="pard_doppelsoldner_15" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="3" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"  />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-0.75" />
+        <modifier class="detectability" value="0.8" />
+	</carry_item>
+	<carry_item key="pard_doppelsoldner_15" time_to_live_out_in_the_open="15" name="Doppelsoldner" transform_on_consume="pard_doppelsoldner_16" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="3" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"  />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-0.75" />
+        <modifier class="detectability" value="0.8" />
+	</carry_item>
+	<carry_item key="pard_doppelsoldner_16" time_to_live_out_in_the_open="15" name="Doppelsoldner" transform_on_consume="pard_doppelsoldner_17" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="3" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"  />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-0.75" />
+        <modifier class="detectability" value="0.8" />
+	</carry_item>
+	<carry_item key="pard_doppelsoldner_17" time_to_live_out_in_the_open="15" name="Doppelsoldner" transform_on_consume="pard_doppelsoldner_18" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="3" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"  />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-0.75" />
+        <modifier class="detectability" value="0.8" />
+	</carry_item>
+	<carry_item key="pard_doppelsoldner_18" time_to_live_out_in_the_open="15" name="Doppelsoldner" transform_on_consume="pard_doppelsoldner_19" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="3" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"  />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-0.75" />
+        <modifier class="detectability" value="0.8" />
+	</carry_item>
+	<carry_item key="pard_doppelsoldner_19" time_to_live_out_in_the_open="15" name="Doppelsoldner" transform_on_consume="pard_doppelsoldner_20" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="3" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"  />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-0.75" />
+        <modifier class="detectability" value="0.8" />
+	</carry_item>
 </carry_items>
