@@ -30,7 +30,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		setupIcecream();                
 		setupEnemyWeaponUnlocks();
 		setupSFgift();
-		
+		setupArmorCraft();
 	}
 
 	// --------------------------------------------
@@ -98,11 +98,28 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 	}
 
 	// --------------------------------------------
-	
+	protected void setupArmorCraft() {
+		array<Resource@> deliveryList = {
+			 Resource("armor_crafting_card.carry_item", "carry_item")
+		};
+		array<array<ScoredResource@>> rewardPasses = {
+			{
+		ScoredResource("bp_t5_16lab.carry_item", "carry_item", 1.0f),
+		ScoredResource("exo_t5_16lab.carry_item", "carry_item", 1.0f),
+		ScoredResource("cc_t5_16lab.carry_item","carry_item",1.0f)
+			}
+		};
+		processRewardPasses(rewardPasses);
+		
+		GiftItemDeliveryRandomRewarder@ rewarder = GiftItemDeliveryRandomRewarder(m_metagame, rewardPasses);
+
+		m_itemDeliveryOrganizer.addObjective(
+			ItemDeliveryObjective(m_metagame, 0, deliveryList, m_itemDeliveryOrganizer, null, "", "", "", -1 /* loop */, rewarder)
+			);
+	}
+
 	// ScoredResource("key", "class", 00.0f)
-	// 替换采购币
 	protected void setupGift1() {
-		_log("adding gift1 config", 1);
 		array<Resource@> deliveryList = {
 			 Resource("gift_box_1.carry_item", "carry_item")
 		};
@@ -206,11 +223,6 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		ScoredResource("gkw_ksvk_3805.weapon", "weapon", 1.0f),
 		ScoredResource("gkw_tar21_1305.weapon", "weapon", 1.0f),
 		ScoredResource("gkw_m870_3803.weapon", "weapon", 1.0f)
-			},
-			{
-		ScoredResource("bp_t5_16lab.carry_item", "carry_item", 1.0f),
-		ScoredResource("exo_t5_16lab.carry_item", "carry_item", 1.0f),
-		ScoredResource("cc_t5_16lab.carry_item","carry_item",1.0f)
 			}
 		};
 		
