@@ -11,7 +11,7 @@ can_be_detected_by_driver="0"
 time_to_live_out_in_the_open="45.0" 
 >
 <!-- time_to_live="45" -->
-    <result class="blast" radius="9.1" damage="24.0" push="1" decal="1" character_state="death" />
+    <result class="blast" radius="9.1" damage="25.0" push="1" decal="1" character_state="death" />
     <collision class="sticky" />
     <trigger class="remote_detonate" />
 
