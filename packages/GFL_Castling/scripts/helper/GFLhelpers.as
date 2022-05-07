@@ -325,7 +325,7 @@ void CreateDirectProjectile(Metagame@ m_metagame,Vector3 startPos,Vector3 endPos
 	initspeed=initspeed/60;
 	startPos = startPos.add(Vector3(0,1,0));
 	Vector3 direction = endPos.subtract(startPos);
-	float Vmod = sqrt(pow(direction.get_opIndex(0),2)  + pow(direction.get_opIndex(1),2)) + pow(direction.get_opIndex(2),2));
+	float Vmod = sqrt(pow(direction.get_opIndex(0),2)  + pow(direction.get_opIndex(1),2) + pow(direction.get_opIndex(2),2));
 	if (Vmod< 0.00001f) Vmod= 0.00001f;
 	direction.set(direction.get_opIndex(0)/Vmod,direction.get_opIndex(1)/Vmod,direction.get_opIndex(2)/Vmod);
 	direction.scale(initspeed);
