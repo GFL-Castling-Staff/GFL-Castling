@@ -511,6 +511,7 @@
 	<!-- cerynitis-AA牝鹿 -->
 	<soldier name="kcco_cerynitis" spawn_score="0.7" copy_from="default_bot">
 		<model filename="kccod_cerynitis_remake.xml" />
+		<character filename="kcco_mecha.character" />
 		<ai filename="eod_mecha.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="kccow_cerynitis.weapon" enabled="1" />
@@ -524,6 +525,7 @@
 	<soldier name="kcco_cerynitis_alter" spawn_score="0.4" copy_from="default_bot">
 		<model filename="kccod_cerynitis.xml" />
 		<ai filename="eod_mecha.ai" />
+		<character filename="kcco_mecha.character" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="kccow_cerynitis_1.weapon" enabled="1" />
 			<carry_item key="kcco_cet.carry_item" />
