@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<achievements>
+	<achievement name="destroyer" no_level_title="not much of a destroyer" include_in_alltime_stats="0">
+		<level steam_achievement_id="ACH_DESTROYER_LVL1">
+			<notification image="hud_achievement_vehicle_destroyer_bronze.png" sound="achievement1.wav" />
+			<rank title="Rookie destroyer" image="hud_achievement_vehicle_destroyer_bronze_pin.png" />
+		</level>
+		<level steam_achievement_id="ACH_DESTROYER_LVL2">
+			<notification image="hud_achievement_vehicle_destroyer_silver.png" sound="achievement2_1.wav" />
+			<rank title="Master destroyer" image="hud_achievement_vehicle_destroyer_silver_pin.png" />
+		</level>
+		<level steam_achievement_id="ACH_DESTROYER_LVL3">
+			<notification image="hud_achievement_vehicle_destroyer_gold_pin.png" sound="achievement3.wav" />
+			<rank title="Elite destroyer" image="hud_achievement_vehicle_destroyer_gold_pin.png" />
+		</level>
+		<criteria class="vehicle_destroy" owner="enemy" description="* destroy %target_count vehicles">
+			<vehicle tag="apc" />
+			<vehicle tag="jeep" />
+			<vehicle tag="tank" />
+			<vehicle tag="truck" />
+			<vehicle tag="atv" />
+			<level value="10" />
+			<level value="100" />
+			<level value="1000" />
+		</criteria>
+	</achievement>
+
+	<achievement name="saboteur" no_level_title="barely a saboteur" include_in_alltime_stats="0">
+		<level steam_achievement_id="ACH_TARGET_LVL1">
+			<notification image="hud_achievement_target_destroyer_bronze.png" sound="achievement1.wav" />
+			<rank title="Rookie saboteur" image="hud_achievement_target_destroyer_bronze_pin.png" />
+		</level>
+		<level steam_achievement_id="ACH_TARGET_LVL2">
+			<notification image="hud_achievement_target_destroyer_silver.png" sound="achievement2_2.wav" />
+			<rank title="Master saboteur" image="hud_achievement_target_destroyer_silver_pin.png" />
+		</level>
+		<level steam_achievement_id="ACH_TARGET_LVL3">
+			<notification image="hud_achievement_target_destroyer_gold.png" sound="achievement3.wav" />
+			<rank title="Elite saboteur" image="hud_achievement_target_destroyer_gold_pin.png" />
+		</level>
+		<criteria class="vehicle_destroy" owner="enemy" description="* destroy %target_count structures or deployed weapons">
+			<vehicle key="gas_tank.vehicle" />
+			<vehicle key="radar_tower.vehicle" />
+			<vehicle key="radio_jammer.vehicle" />
+			<vehicle key="water_tower.vehicle" />
+			<vehicle key="mortar_ammunition_crates.vehicle" />
+			<vehicle key="aa_emplacement.vehicle" />
+			<vehicle key="deployable_mg.vehicle" />
+			<level value="5" />
+			<level value="10" />
+			<level value="20" />
+		</criteria>
+		<criteria class="vehicle_destroy" owner="enemy" description="* destroy %target_count radio towers">
+			<vehicle key="radar_tower.vehicle" />
+			<level value="1" />
+			<level value="5" />
+			<level value="10" />
+		</criteria>
+	</achievement>
+
+	<achievement name="tracker" no_level_title="wannabe tracker" include_in_alltime_stats="0">
+		<level steam_achievement_id="ACH_TRACKER_LVL1">
+			<notification image="hud_achievement_special_crates_bronze.png" sound="achievement1.wav" />
+			<rank title="Rookie tracker" image="hud_achievement_special_crates_bronze_pin.png" />
+		</level>
+		<level steam_achievement_id="ACH_TRACKER_LVL2">
+			<notification image="hud_achievement_special_crates_silver.png" sound="achievement2_1.wav" />
+			<rank title="Master tracker" image="hud_achievement_special_crates_silver_pin.png" />
+		</level>
+		<level steam_achievement_id="ACH_TRACKER_LVL3">
+			<notification image="hud_achievement_special_crates_gold.png" sound="achievement3.wav" />
+			<rank title="Elite tracker" image="hud_achievement_special_crates_gold_pin.png" />
+		</level>
+		<criteria class="vehicle_destroy" owner="any" description="* locate %target_count secret crates">
+			<vehicle key="gflc_crate1.vehicle" />
+			<vehicle key="gflc_crate2.vehicle" />
+			<vehicle key="gflc_crate3.vehicle" />
+			<vehicle key="gflc_crate4.vehicle" />
+			<vehicle key="gflc_crate5.vehicle" />
+			<vehicle key="gflc_crate6.vehicle" />
+			<vehicle key="gflc_crate7.vehicle" />
+			<vehicle key="gflc_crate8.vehicle" />
+			<vehicle key="gflc_crate9.vehicle" />
+			<level value="2" />
+			<level value="5" />
+			<level value="10" />
+		</criteria>
+	</achievement>
+
+	<achievement name="killer" no_level_title="combat student" include_in_alltime_stats="0">
+		<level steam_achievement_id="ACH_KILLER_LVL1">
+			<notification image="hud_achievement_serial_killer_bronze.png" sound="achievement1.wav" />
+			<rank title="Rookie killer" image="hud_achievement_serial_killer_bronze_pin.png" />
+		</level>
+		<level steam_achievement_id="ACH_KILLER_LVL2">
+			<notification image="hud_achievement_serial_killer_silver.png" sound="achievement2_2.wav"  />
+			<rank title="Master combatant" image="hud_achievement_serial_killer_silver_pin.png" />
+		</level>
+		<level steam_achievement_id="ACH_KILLER_LVL3">
+			<notification image="hud_achievement_serial_killer_gold.png" sound="achievement3.wav"  />
+			<rank title="Elite marksman" image="hud_achievement_serial_killer_gold_pin.png" />
+		</level>
+		<criteria class="kill" description="* kill %target_count enemy soldiers">
+			<level value="100" />
+			<level value="500" />
+			<level value="1000" />
+		</criteria>
+	</achievement>
+
+	<achievement name="stealth" no_level_title="learning stealth" include_in_alltime_stats="0">
+		<level steam_achievement_id="ACH_STEALTH_LVL1">
+			<notification image="hud_achievement_stealth_bronze.png" sound="achievement1.wav" />
+			<rank title="Special Forces Trainee" image="hud_achievement_stealth_bronze_pin.png" />
+		</level>
+		<level steam_achievement_id="ACH_STEALTH_LVL2">
+			<notification image="hud_achievement_stealth_silver.png" sound="achievement2_1.wav"  />
+			<rank title="Spec Ops Expert" image="hud_achievement_stealth_silver_pin.png" />
+		</level>
+		<level steam_achievement_id="ACH_STEALTH_LVL3">
+			<notification image="hud_achievement_stealth_gold.png" sound="achievement3.wav"  />
+			<rank title="Elite Commando" image="hud_achievement_stealth_gold_pin.png" />
+		</level>
+		<criteria class="kill_stab" stealth="1" description="* stab %target_count enemy soldiers, silently">
+			<level value="2" />
+			<level value="5" />
+			<level value="10" />
+		</criteria>
+		<criteria class="kill_shoot" stealth="1" description="* shoot %target_count enemy soldiers, silently">
+			<level value="10" />
+			<level value="20" />
+			<level value="50" />
+		</criteria>
+		<criteria class="vehicle_spot" description="* locate %target_count important enemy targets">
+			<vehicle key="radar_tower.vehicle" />
+			<vehicle key="radio_jammer.vehicle" />
+			<vehicle key="water_tower.vehicle" />
+			<vehicle key="prison_door.vehicle" />
+			<vehicle key="aa_emplacement.vehicle" />
+			<level value="2" />
+			<level value="7" />
+			<level value="15" />
+		</criteria>
+	</achievement>
+
+	<achievement name="journal_deaths_at_start_trigger" no_level_title="">
+		<level journal_key="first_death_at_start" />
+		<level journal_key="a_few_deaths_at_start" />
+		<criteria class="death">
+			<level value="1" />
+			<level value="5" />
+		</criteria>
+	</achievement>
+
+	<achievement name="difficulty_change_trigger" no_level_title="">
+		<level journal_key="difficulty_change" />
+		<criteria class="custom_stat" tag="difficulty_change">
+			<level value="1" />
+		</criteria>
+	</achievement>
+
+	<achievement file="extra_achievements.xml" />
+</achievements>
