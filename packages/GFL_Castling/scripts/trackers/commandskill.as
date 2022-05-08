@@ -43,11 +43,27 @@ class SkillEffectTimer{
     }
 }
 
+class SkillModifer{
+    float m_cdr;
+    float m_cdm;
+    SkillModifer(float cdr,float cdm){
+        m_cdm=cdm;
+        m_cdr=cdr;
+    }
+
+    void setCooldownReduction(float num){
+        m_cdr=num;
+    }
+    void setCooldownMinus(float num){
+        m_cdm=num;
+    }
+}
+
 class CommandSkill : Tracker {
     protected Metagame@ m_metagame;
     
-	protected array<SkillTrigger@> SkillArray;
-    protected array<SkillEffectTimer@> TimerArray;
+	array<SkillTrigger@> SkillArray;
+    array<SkillEffectTimer@> TimerArray;
 	protected bool m_ended;
 
 	// --------------------------------------------
@@ -74,66 +90,84 @@ class CommandSkill : Tracker {
             const XmlElement@ info = getPlayerInfo(m_metagame, senderId);
 			if (info !is null) {
                 int cId = info.getIntAttribute("character_id");
-                string c_weaponType = getPlayerEquipmentKey(m_metagame,cId,0);
+                const XmlElement@ targetCharacter = getCharacterInfo2(metagame,cId);
+                if (targetCharacter is null) return;
+                array<const XmlElement@>@ equipment = targetCharacter.getElementsByTagName("item");
+                if (equipment.size() == 0) return;
+                if (equipment[0].getIntAttribute("amount") == 0) return;
+                string c_weaponType = equipment[0].getStringAttribute("key");
+                string c_armorType = equipment[4].getStringAttribute("key");
+
+                SkillModifer m_modifer=SkillModifer(1.0,0);
+
                 if (c_weaponType=="") return;
+
                 if (c_weaponType=="gkw_an94_mod3.weapon" || c_weaponType=="gkw_an94_mod3_skill.weapon" || c_weaponType=="gkw_an94mod3_3303.weapon" || c_weaponType=="gkw_an94mod3_3303_skill.weapon" || c_weaponType=="gkw_an94mod3_blm.weapon" || c_weaponType=="gkw_an94mod3_blm_skill.weapon" ){
-                    excuteAN94skill(cId,senderId);
+                    excuteAN94skill(cId,senderId,m_modifer);
                     return;
                 }
                 if (c_weaponType=="gkw_vector.weapon"){
-                    excuteVVskill(cId,senderId);
+                    excuteVVskill(cId,senderId,m_modifer);
                     return;
                 }
                 if (c_weaponType=="ff_justice.weapon"){
-                    excuteJudgeskill(cId,senderId);
+                    excuteJudgeskill(cId,senderId,m_modifer);
                     return;                    
                 }
                 if (c_weaponType=="gkw_mp5.weapon"||c_weaponType=="gkw_mp5_3.weapon"||c_weaponType=="gkw_mp5_1205.weapon"||c_weaponType=="gkw_mp5_1903.weapon"||c_weaponType=="gkw_mp5_3006.weapon"){
-                    excuteMP5skill(cId,senderId);
+                    excuteMP5skill(cId,senderId,m_modifer);
                     return;                    
                 }
                 if (c_weaponType=="gkw_mp5mod3.weapon"||c_weaponType=="gkw_mp5mod3_3.weapon"||c_weaponType=="gkw_mp5mod3_1205.weapon"||c_weaponType=="gkw_mp5mod3_1903.weapon"||c_weaponType=="gkw_mp5mod3_3006.weapon"){
-                    excuteMP5MOD3skill(cId,senderId);
+                    excuteMP5MOD3skill(cId,senderId,m_modifer);
                     return;                    
                 }
                 if (c_weaponType=="gkw_p22.weapon"){
-                    excuteP22skill(cId,senderId);
+                    excuteP22skill(cId,senderId,m_modifer);
                     return;        
                 }
                 if (c_weaponType=="gkw_hs2000.weapon"||c_weaponType=="gkw_hs2000_5304.weapon"){
-                    excuteHS2000skill(cId,senderId);
+                    excuteHS2000skill(cId,senderId,m_modifer);
                     return;        
                 }
                 if (c_weaponType=="ff_Intruder.weapon"){
-                    excuteIntruderskill(cId,senderId);
+                    excuteIntruderskill(cId,senderId,m_modifer);
                     return;        
                 }
                 if (c_weaponType=="ff_agent.weapon"){
-                    excuteAgentskill(cId,senderId);
+                    excuteAgentskill(cId,senderId,m_modifer);
                     return;        
                 }                
                 if (c_weaponType=="ff_destroyer.weapon"){
-                    excuteDestroyerskill(cId,senderId);
+                    excuteDestroyerskill(cId,senderId,m_modifer);
                     return;        
                 }                 
                 if (c_weaponType=="ff_excutioner_2.weapon"){
-                    excuteExcutionerskill(cId,senderId);        
+                    excuteExcutionerskill(cId,senderId,m_modifer);        
                     return;
                 }        
                 if (c_weaponType=="ff_parw_alina.weapon"){
-                    excuteBaibaoziskill(cId,senderId);
+                    excuteBaibaoziskill(cId,senderId,m_modifer);
                     return;
                 }              
                 if (c_weaponType=="gkw_ppsh41mod3.weapon"|| c_weaponType=="gkw_ppsh41.weapon"){
-                    excutePPSH41skill(cId,senderId);
+                    excutePPSH41skill(cId,senderId,m_modifer);
                     return;
                 }
                 if (c_weaponType=="gkw_ump45mod3.weapon"|| c_weaponType=="gkw_ump45mod3_535.weapon" || c_weaponType=="gkw_ump45mod3_410.weapon"){
-                    excuteUMP45skill(cId,senderId);
+                    excuteUMP45skill(cId,senderId,m_modifer);
                     return;
                 }
                 if (c_weaponType=="gkw_m870.weapon"|| c_weaponType=="gkw_m870_3803.weapon"){
-                    excuteM870skill(cId,senderId);
+                    excuteM870skill(cId,senderId,m_modifer);
+                    return;        
+                }
+                if (c_weaponType=="gkw_pp19.weapon"){
+                    excutePP19skill(cId,senderId,m_modifer);
+                    return;        
+                }
+                if (c_weaponType=="gkw_pp19_mod3.weapon"){
+                    excutePP19skill(cId,senderId,m_modifer,true);
                     return;        
                 }
             }
@@ -151,7 +185,7 @@ class CommandSkill : Tracker {
 				int playerId = character.getIntAttribute("player_id");
 				const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
                 if (player !is null) {
-                    excuteSopmodskill(characterId,playerId,character,player);
+                    excuteSopmodskill(characterId,playerId,m_modifer,character,player);
                 }
             }
 		}
@@ -163,9 +197,9 @@ class CommandSkill : Tracker {
 				const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
                 if (player !is null) {
                     if(getPlayerEquipmentKey(m_metagame,characterId,0) == "gkw_hk416_3401_mod3_skill.weapon"){
-                        excute416modskill(characterId,playerId,character,player,true);
+                        excute416modskill(characterId,playerId,m_modifer,character,player,true);
                     }
-                    excute416modskill(characterId,playerId,character,player,false);
+                    excute416modskill(characterId,playerId,m_modifer,character,player,false);
                 }
             }
 		}
@@ -206,6 +240,11 @@ class CommandSkill : Tracker {
 		// always on
 		return true;
 	}
+    void addCoolDown(string key,float time,int cId,SkillModifer@ modifer){
+        float cdr=modifer.m_cdr;
+        float cdm=modifer.m_cdm;
+        SkillArray.insertLast(SkillTrigger(cId,(time*cdr-cdm),key);
+    }
 
     void excuteTimerEffect(SkillEffectTimer@ Trigger){
         if (Trigger.m_EffectKey =="MP5MOD3" || Trigger.m_EffectKey =="MP5" ){
@@ -230,7 +269,7 @@ class CommandSkill : Tracker {
             deleteItemInStash(m_metagame,Trigger.m_character_id,"carry_item","immunity_mp5.carry_item");
         }
     }
-    void excuteAN94skill(int characterId,int playerId){
+    void excuteAN94skill(int characterId,int playerId,SkillModifer@ modifer){
         bool ExistQueue = false;
         int j =-1;
         for (uint i=0;i<SkillArray.length();i++){
@@ -263,7 +302,7 @@ class CommandSkill : Tracker {
 
         // _log("summonAK12");
     }
-    void excuteVVskill(int characterId,int playerId){
+    void excuteVVskill(int characterId,int playerId,SkillModifer@ modifer){
         bool ExistQueue = false;
         int j=-1;
         for (uint i=0;i<SkillArray.length();i++){
@@ -303,7 +342,7 @@ class CommandSkill : Tracker {
         }
         SkillArray.insertLast(SkillTrigger(characterId,15,"VECTOR"));
     }
-    void excuteSopmodskill(int characterId,int playerId,const XmlElement@ characterinfo, const XmlElement@ playerinfo){
+    void excuteSopmodskill(int characterId,int playerId,SkillModifer@ modifer,const XmlElement@ characterinfo, const XmlElement@ playerinfo){
         bool ExistQueue = false;
         int j=-1;
         for (uint i=0;i<SkillArray.length();i++){
@@ -340,7 +379,7 @@ class CommandSkill : Tracker {
             SkillArray.insertLast(SkillTrigger(characterId,16,"SOPMOD"));
         }
     }
-    void excute416modskill(int characterId,int playerId,const XmlElement@ characterinfo, const XmlElement@ playerinfo,bool pussyskin){
+    void excute416modskill(int characterId,int playerId,SkillModifer@ modifer,const XmlElement@ characterinfo, const XmlElement@ playerinfo,bool pussyskin){
         bool ExistQueue = false;
         int j=-1;
         for (uint i=0;i<SkillArray.length();i++){
@@ -393,7 +432,7 @@ class CommandSkill : Tracker {
             }
         }
     }
-    void excuteJudgeskill(int characterId,int playerId){
+    void excuteJudgeskill(int characterId,int playerId,SkillModifer@ modifer){
         bool ExistQueue = false;
         int j =-1;
         for (uint i=0;i<SkillArray.length();i++){
@@ -430,7 +469,7 @@ class CommandSkill : Tracker {
             playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
         }
     }
-    void excuteP22skill(int characterId,int playerId){
+    void excuteP22skill(int characterId,int playerId,SkillModifer@ modifer){
         bool ExistQueue = false;
         int j =-1;
         for (uint i=0;i<SkillArray.length();i++){
@@ -468,7 +507,7 @@ class CommandSkill : Tracker {
             playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
         }
     }
-    void excuteHS2000skill(int characterId,int playerId){
+    void excuteHS2000skill(int characterId,int playerId,SkillModifer@ modifer){
         bool ExistQueue = false;
         int j =-1;
         for (uint i=0;i<SkillArray.length();i++){
@@ -506,7 +545,7 @@ class CommandSkill : Tracker {
             playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
         }
     }
-    void excuteMP5skill(int characterId,int playerId){
+    void excuteMP5skill(int characterId,int playerId,SkillModifer@ modifer){
         bool ExistQueue = false;
         int j =-1;
         for (uint i=0;i<SkillArray.length();i++){
@@ -554,7 +593,7 @@ class CommandSkill : Tracker {
             playRandomSoundArray(m_metagame,Voice,0,character.getStringAttribute("position"),1);
         }
     }
-    void excuteMP5MOD3skill(int characterId,int playerId){
+    void excuteMP5MOD3skill(int characterId,int playerId,SkillModifer@ modifer){
         bool ExistQueue = false;
         int j =-1;
         for (uint i=0;i<SkillArray.length();i++){
@@ -601,7 +640,7 @@ class CommandSkill : Tracker {
             playRandomSoundArray(m_metagame,Voice,0,character.getStringAttribute("position"),1);
         }
     }
-    void excuteIntruderskill(int characterId,int playerId){
+    void excuteIntruderskill(int characterId,int playerId,SkillModifer@ modifer){
         bool ExistQueue = false;
         int j =-1;
         for (uint i=0;i<SkillArray.length();i++){
@@ -633,7 +672,7 @@ class CommandSkill : Tracker {
             }
         }
     }
-    void excuteAgentskill(int characterId,int playerId){
+    void excuteAgentskill(int characterId,int playerId,SkillModifer@ modifer){
         bool ExistQueue = false;
         int j =-1;
         for (uint i=0;i<SkillArray.length();i++){
@@ -681,7 +720,7 @@ class CommandSkill : Tracker {
             }
         }
     }
-    void excuteDestroyerskill(int characterId,int playerId){
+    void excuteDestroyerskill(int characterId,int playerId,SkillModifer@ modifer){
         bool ExistQueue = false;
         int j=-1;
         for (uint i=0;i<SkillArray.length();i++){
@@ -745,7 +784,7 @@ class CommandSkill : Tracker {
             
         }
     }
-    void excuteExcutionerskill(int characterId,int playerId){
+    void excuteExcutionerskill(int characterId,int playerId,SkillModifer@ modifer){
         bool ExistQueue = false;
         int j=-1;
         for (uint i=0;i<SkillArray.length();i++){
@@ -807,7 +846,7 @@ class CommandSkill : Tracker {
             
         }
     }
-    void excuteBaibaoziskill(int characterId,int playerId){
+    void excuteBaibaoziskill(int characterId,int playerId,SkillModifer@ modifer){
         bool ExistQueue = false;
         int j=-1;
         for (uint i=0;i<SkillArray.length();i++){
@@ -843,7 +882,7 @@ class CommandSkill : Tracker {
         }
     }
 
-    void excutePPSH41skill(int characterId,int playerId){
+    void excutePPSH41skill(int characterId,int playerId,SkillModifer@ modifer){
         bool ExistQueue = false;
         int j=-1;
         for (uint i=0;i<SkillArray.length();i++){
@@ -879,7 +918,7 @@ class CommandSkill : Tracker {
             }
         }
     }
-    void excuteUMP45skill(int characterId,int playerId){
+    void excuteUMP45skill(int characterId,int playerId,SkillModifer@ modifer){
         bool ExistQueue = false;
         int j=-1;
         for (uint i=0;i<SkillArray.length();i++){
@@ -917,7 +956,7 @@ class CommandSkill : Tracker {
             }
         }
     }
-    void excuteM870skill(int characterId,int playerId){
+    void excuteM870skill(int characterId,int playerId,SkillModifer@ modifer){
         bool ExistQueue = false;
         int j =-1;
         for (uint i=0;i<SkillArray.length();i++){
@@ -951,6 +990,48 @@ class CommandSkill : Tracker {
                 "M870P_SKILL3_JP.wav"
             };
             playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+        }
+    }
+    void excutePP19skill(int characterId,int playerId,SkillModifer@ modifer,bool mod3=false){
+        bool ExistQueue = false;
+        int j=-1;
+        for (uint i=0;i<SkillArray.length();i++){
+            if (SkillArray[i].m_character_id==characterId && SkillArray[i].m_weapontype=="pp19") {
+                ExistQueue=true;
+                j=i;
+            }
+        }
+        if (ExistQueue){
+            dictionary a;
+            a["%time"] = ""+SkillArray[j].m_time;
+            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            _log("skill cooldown" + SkillArray[j].m_time);
+            return;
+        }
+        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+        if (character !is null) {
+            const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+            if (player !is null){
+                if (player.hasAttribute("aim_target")) {
+                    string target = player.getStringAttribute("aim_target");
+                    Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
+                    int factionid = character.getIntAttribute("faction_id");
+                    array<string> Voice={
+                        "PPsh41_SKILL1_JP.wav"
+                    };
+                    playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+                    playAnimationKey(m_metagame,characterId,"throwing, upside",true,true);
+                    c_pos=c_pos.add(Vector3(0,1,0));
+                    if (mod3){
+                        SkillArray.insertLast(SkillTrigger(characterId,15,"pp19"));
+                        CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"grenade_pp19.projectile",characterId,factionid,40.0,6.0);
+                    }
+                    else{
+                        SkillArray.insertLast(SkillTrigger(characterId,40,"pp19"));
+                    }
+
+                }
+            }
         }
     }
 }
