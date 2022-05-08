@@ -67,13 +67,13 @@ key="kccow_cerynitis.weapon">
     <stance state_key="prone" accuracy="0.94" />
     <modifier class="speed" value="-0.4" />
 
-    <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5" />
-    <target_factors tag="heavy_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="10.0" />
-    <target_factors tag="apc" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0" />
-    <target_factors tag="light_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="6.0" />	
-    <target_factors tag="defensive_at" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.5" />
-    <target_factors tag="tactical" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0" />  <!-- important non combat player-only vehicles -->  
-    <target_factors tag="bazooka" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0" />     
+	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0" />
+    <target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0" />
+    <target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0" />
+    <target_factors tag="heavy_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0" />
+    <target_factors tag="light_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="7.0" />
+	<target_factors tag="target" distance="1.0" direction="0.0" squad_command="1.0" base_score="6.0" />
+    <target_factors tag="tactical" distance="1.0" direction="0.0" squad_command="1.0" base_score="5.0" />  
 
 </weapon>
 

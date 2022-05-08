@@ -14,10 +14,12 @@
 	ai_abandon_when_unsteerable="0"
 	ai_stop_to_fight="0" 
 	>
-		<tag name="metal_heavy" />
-		<tag name="guntruck" />
-		<tag name="apc" />
-  
+
+	<tag name="metal_heavy" />
+	<tag name="guntruck" />
+	<tag name="apc" />
+  	<tag name="light_combat" />
+
 	<tire_set offset="0.96 0 1.00" radius="0.48" />
 	<tire_set offset="0.96 0 -1.00" radius="0.48" />
 

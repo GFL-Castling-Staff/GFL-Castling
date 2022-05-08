@@ -535,6 +535,15 @@
 			<carry_item key="sf_sh.carry_item" enabled="1" />
 		</resources>
 	</soldier>
+	<!-- nemeum 钢狮 swap -->
+	<soldier name="sfw_nemeum_swap" spawn_score="0.3" copy_from="default_spawn_ai">
+		<ai filename="eod_mecha.ai" />
+		<model filename="sfd_sangvisfeaal_swap.xml" />
+		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_calls="1">
+			<weapon key="sfw_nemeum.weapon" enabled="1"/>
+			<carry_item key="sf_sh.carry_item" enabled="1" />
+		</resources>
+	</soldier>
 	<!-- 圣盾 -->
 	<soldier name="sfw_aegis" spawn_score="1.5" copy_from="default_spawn_ai">
 		<model filename="sfd_aegis_1.xml" />
