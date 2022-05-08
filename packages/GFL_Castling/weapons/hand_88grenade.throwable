@@ -12,15 +12,15 @@
 
     <!-- <throwable curve_height="5.0" near_far_distance="5.0" speed_estimation_near="9.0" speed_estimation_far="15.0" max_speed="13.0" randomness="0.07" /> -->
     <!-- <throwable curve_height="6.0" near_far_distance="5.0" speed_estimation_near="20.0" speed_estimation_far="17.0" max_speed="11.0" randomness="0.07" /> -->
-    <throwable curve_height="7.0" near_far_distance="5.0" speed_estimation_near="9.0" speed_estimation_far="30.0" max_speed="15.0" randomness="0.07" />
+    <throwable curve_height="5.0" near_far_distance="10.0" speed_estimation_near="12.0" speed_estimation_far="45.0" max_speed="20.0" randomness="0.07" />
 
     <!-- projectile slot 0 is used for hand grenade items currently -->
     <!-- bound to change -->
     <commonness value="0.8" />
-    <inventory encumbrance="3.0" price="5.0" />
+    <inventory encumbrance="1.0" price="5.0" />
     <capacity value="6" source="rank" source_value="0.0" />
-    <!-- <capacity value="3" source="rank" source_value="0.2" /> -->
-    <!-- <capacity value="4" source="rank" source_value="0.4" /> -->
+    <capacity value="8" source="rank" source_value="4.622" />
+    <capacity value="10" source="rank" source_value="34.833" />
 
     <sound class="result" key="other" fileref="explosion_FromRS2V_1.wav" volume="2.8" />
     <sound class="result" key="other" fileref="explosion_FromRS2V_2.wav" volume="2.8" />
