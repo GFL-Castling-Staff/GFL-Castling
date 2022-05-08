@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<vehicle name="Compass" map_view_atlas_index="42" usable_for_cover="0" protectors="2" owner="faction" respawn_time="180" allow_owner_to_use_only="1" allow_character_leave_request="0" character_leave_request_mode="friendly" soldier_capacity_offset="1" key="par_compass.vehicle">
+<vehicle name="Compass" map_view_atlas_index="42" usable_for_cover="1" protectors="2" owner="faction" respawn_time="600" allow_owner_to_use_only="1" allow_character_leave_request="0" character_leave_request_mode="friendly" soldier_capacity_offset="1" key="par_compass.vehicle">
 	<tag name="target" />
 	<tag name="minigun_deploy" />
 	<tag name="compass" />
@@ -10,9 +10,9 @@
 	<physics max_health="20.0" mass="999.5" extent="1.5 1.0 1.5" offset="0 0.0 0" top_offset="0 2 0" collision_model_pos="0 0.7 0" collision_model_extent="1.5 1.4 1.5" visual_offset="0 0.0 0" collision_response_factor="0.2" blast_push_threshold="10.0" vehicle_collision_damage_factor="2.0" />
 	<turret offset="0 -0.0 0.0" weapon_key="Compass_eye.weapon" weapon_offset="0.0 1.2 0.6" weapon_recoil="0.05" physics_recoil="0.0" max_rotation_step="0.01015" rotation="0" rotation_range="" />
 	<turret offset="0 0.0 0.0" weapon_key="Compass_mg.weapon" weapon_offset="0.8 0.9 0.0" weapon_recoil="0.05" physics_recoil="0.0" max_rotation_step="0.0002" rotation="1.6" rotation_range="" />
-	<turret offset="0 0.0 0.0" weapon_key="Compass_mg.weapon" weapon_offset="0.8 1.40 0.0" weapon_recoil="0.05" physics_recoil="0.0" max_rotation_step="0.0002" rotation="1.6" rotation_range="" />
+	<turret offset="0 0.0 0.0" weapon_key="Compass_mg2.weapon" weapon_offset="0.8 1.40 0.0" weapon_recoil="0.05" physics_recoil="0.0" max_rotation_step="0.0002" rotation="1.6" rotation_range="" />
 	<turret offset="0 0.0 0.0" weapon_key="Compass_mg.weapon" weapon_offset="-0.8 0.9 0.0" weapon_recoil="0.05" physics_recoil="0.0" max_rotation_step="0.0002" rotation="-1.6" rotation_range="" />
-	<turret offset="0 0.0 0.0" weapon_key="Compass_mg.weapon" weapon_offset="-0.8 1.40 0.0" weapon_recoil="0.05" physics_recoil="0.0" max_rotation_step="0.0002" rotation="-1.6" rotation_range="" />
+	<turret offset="0 0.0 0.0" weapon_key="Compass_mg2.weapon" weapon_offset="-0.8 1.40 0.0" weapon_recoil="0.05" physics_recoil="0.0" max_rotation_step="0.0002" rotation="-1.6" rotation_range="" />
 	<visual offset="0 0.0 0" class="turret" turret_index="0" mesh_filename="Compass_turret.mesh" texture_filename="Compass_BaseColor.png" />
 	<visual offset="0 3.2 0" class="turret" key="broken" mesh_filename="Compass_turret.mesh" texture_filename="humvee_broken.png" />
 	<visual class="chassis" mesh_filename="Compass_body.mesh" texture_filename="Compass_BaseColor.png" />
@@ -43,7 +43,7 @@
 	</event>
 	<event key="destroy_rp_reward">
 		<trigger class="destroy" />
-		<result class="reward" rp="100.0" />
+		<result class="reward" rp="150.0" />
 	</event>
 
 	<event>
