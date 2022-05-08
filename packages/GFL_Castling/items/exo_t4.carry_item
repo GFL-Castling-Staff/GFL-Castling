@@ -1,87 +1,164 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <carry_items>
-    <carry_item file="exo.base_carry_item" key="exo_t4.carry_item" name="Standard Exo Mk.IV" transform_on_consume="exo_t4_1">
-        <hud_icon filename="exo_t4_9.png" />
-        <inventory price="43" />
-        <modifier class="speed" value="0.3" />
+	<carry_item key="exo_t4.carry_item" time_to_live_out_in_the_open="15" name="Standard Exo Mk.IV" transform_on_consume="exo_t4_1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="exo_t4_9.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="50"/>
+		<model mesh_filename="vestexo.xml"/>
+		<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.45" />
         <modifier class="hit_success_probability" value="-1.1" />
         <modifier class="detectability" value="-0.05" />
-    </carry_item>
-
-    <carry_item file="exo.base_carry_item" key="exo_t4_1" name="Standard Exo Mk.IV" transform_on_consume="exo_t4_2">
-        <hud_icon filename="exo_t4_8.png" />
-        <inventory price="1" />
-        <modifier class="speed" value="0.3" />
+	</carry_item>
+	<carry_item key="exo_t4_1" time_to_live_out_in_the_open="15" name="Standard Exo Mk.IV" transform_on_consume="exo_t4_2" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="exo_t4_8.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="50"/>
+		<model mesh_filename="vestexo.xml"/>
+		<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.45" />
         <modifier class="hit_success_probability" value="-1.1" />
         <modifier class="detectability" value="-0.05" />
-    </carry_item>
-
-    <carry_item file="exo.base_carry_item" key="exo_t4_2" name="Standard Exo Mk.IV" transform_on_consume="exo_t4_3">
-        <hud_icon filename="exo_t4_7.png" />
-        <inventory price="1" />
-        <modifier class="speed" value="0.3" />
+	</carry_item>
+	<carry_item key="exo_t4_2" time_to_live_out_in_the_open="15" name="Standard Exo Mk.IV" transform_on_consume="exo_t4_3" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="exo_t4_7.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="50"/>
+		<model mesh_filename="vestexo.xml"/>
+		<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.45" />
         <modifier class="hit_success_probability" value="-1.1" />
         <modifier class="detectability" value="-0.05" />
-    </carry_item>
-
-    <carry_item file="exo.base_carry_item" key="exo_t4_3" name="Standard Exo Mk.IV" transform_on_consume="exo_t4_4">
-        <hud_icon filename="exo_t4_6.png" />
-        <inventory price="1" />
-        <modifier class="speed" value="0.3" />
+	</carry_item>
+	<carry_item key="exo_t4_3" time_to_live_out_in_the_open="15" name="Standard Exo Mk.IV" transform_on_consume="exo_t4_4" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="exo_t4_6.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="50"/>
+		<model mesh_filename="vestexo.xml"/>
+		<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.45" />
         <modifier class="hit_success_probability" value="-1.1" />
         <modifier class="detectability" value="-0.05" />
-    </carry_item>
-
-    <carry_item file="exo.base_carry_item" key="exo_t4_4" name="Standard Exo Mk.IV" transform_on_consume="exo_t4_5">
-        <hud_icon filename="exo_t4_5.png" />
-        <inventory price="1" />
-        <modifier class="speed" value="0.3" />
+	</carry_item>
+	<carry_item key="exo_t4_4" time_to_live_out_in_the_open="15" name="Standard Exo Mk.IV" transform_on_consume="exo_t4_5" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="exo_t4_5.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="50"/>
+		<model mesh_filename="vestexo.xml"/>
+		<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.45" />
         <modifier class="hit_success_probability" value="-1.1" />
         <modifier class="detectability" value="-0.05" />
-    </carry_item>
-
-    <carry_item file="exo.base_carry_item" key="exo_t4_5" name="Standard Exo Mk.IV" transform_on_consume="exo_t4_6">
-        <hud_icon filename="exo_t4_4.png" />
-        <inventory price="1" />
-        <modifier class="speed" value="0.3" />
+	</carry_item>
+	<carry_item key="exo_t4_5" time_to_live_out_in_the_open="15" name="Standard Exo Mk.IV" transform_on_consume="exo_t4_6" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="exo_t4_4.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="50"/>
+		<model mesh_filename="vestexo.xml"/>
+		<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.45" />
         <modifier class="hit_success_probability" value="-1.1" />
         <modifier class="detectability" value="-0.05" />
-    </carry_item>
-
-    <carry_item file="exo.base_carry_item" key="exo_t4_6" name="Standard Exo Mk.IV" transform_on_consume="exo_t4_7">
-        <hud_icon filename="exo_t4_3.png" />
-        <inventory price="1" />
-        <modifier class="speed" value="0.3" />
+	</carry_item>
+	<carry_item key="exo_t4_6" time_to_live_out_in_the_open="15" name="Standard Exo Mk.IV" transform_on_consume="exo_t4_7" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="exo_t4_3.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="50"/>
+		<model mesh_filename="vestexo.xml"/>
+		<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.45" />
         <modifier class="hit_success_probability" value="-1.1" />
         <modifier class="detectability" value="-0.05" />
-    </carry_item>
-
-    <carry_item file="exo.base_carry_item" key="exo_t4_7" name="Standard Exo Mk.IV" transform_on_consume="exo_t4_8">
-        <hud_icon filename="exo_t4_2.png" />
-        <inventory price="1" />
-        <modifier class="speed" value="0.3" />
+	</carry_item>
+	<carry_item key="exo_t4_7" time_to_live_out_in_the_open="15" name="Standard Exo Mk.IV" transform_on_consume="exo_t4_8" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="exo_t4_2.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="50"/>
+		<model mesh_filename="vestexo.xml"/>
+		<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.45" />
         <modifier class="hit_success_probability" value="-1.1" />
         <modifier class="detectability" value="-0.05" />
-    </carry_item>
-
-    <carry_item file="wearables.base_carry_item" key="exo_t4_8" name="Standard Exo Mk.IV-Overrun!-" transform_on_consume="exo_t4_9">
-        <hud_icon filename="exo_t4_1.png" />
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="wound"  />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="wound" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
-        <modifier class="melee_hit_result" input_character_state="death" output_character_state="wound" />
-        <modifier class="speed" value="0.3" />
+	</carry_item>
+	<carry_item key="exo_t4_8" time_to_live_out_in_the_open="15" name="Standard Exo Mk.IV" transform_on_consume="exo_t4_9" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="exo_t4_1.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="50"/>
+		<model mesh_filename="vestexo.xml"/>
+		<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.45" />
         <modifier class="hit_success_probability" value="-1.1" />
         <modifier class="detectability" value="-0.05" />
-    </carry_item>
-
-    <carry_item file="none.base_carry_item" key="exo_t4_9" name="Standard Exo Mk.IV-Overrun!-">
-        <hud_icon filename="exo_t4_0.png" />
-        <modifier class="speed" value="0.3" />
-        <modifier class="hit_success_probability" value="-1.1" />
-        <modifier class="detectability" value="-0.05" />
-    </carry_item>
+	</carry_item>
+	<carry_item key="exo_t4_9" time_to_live_out_in_the_open="15" name="Standard Exo Mk.IV" transform_on_consume="exo_t4_10" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="exo_t4_0.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="50"/>
+		<model mesh_filename="vestexo.xml"/>
+		<overlay tihuan="2"/>
+	</carry_item>
 </carry_items>

@@ -1,88 +1,164 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <carry_items>
-    <carry_item file="exo.base_carry_item" key="exo_t5_16lab.carry_item" name="16LAB Refined Standard Exo" transform_on_consume="exo_t5_16lab_1">
-        <hud_icon filename="exo_t5_16lab_9.png" />
-        <commonness value="0.00001" in_stock="0" />
-        <inventory price="50" />
-        <modifier class="speed" value="0.35" />
+	<carry_item key="exo_t5_16lab.carry_item" time_to_live_out_in_the_open="15" name="16LAB Refined Standard Exo" transform_on_consume="exo_t5_16lab_1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="exo_t5_16lab_9.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="0" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="30"/>
+		<model mesh_filename="vestexo.xml"/>
+		<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.5" />
         <modifier class="hit_success_probability" value="-1.1" />
         <modifier class="detectability" value="-0.05" />
-    </carry_item>
-
-    <carry_item file="exo.base_carry_item" key="exo_t5_16lab_1" name="16LAB Refined Standard Exo" transform_on_consume="exo_t5_16lab_2">
-        <hud_icon filename="exo_t5_16lab_8.png" />
-        <inventory price="1" />
-        <modifier class="speed" value="0.35" />
+	</carry_item>
+	<carry_item key="exo_t5_16lab_1" time_to_live_out_in_the_open="15" name="16LAB Refined Standard Exo" transform_on_consume="exo_t5_16lab_2" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="exo_t5_16lab_8.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="30"/>
+		<model mesh_filename="vestexo.xml"/>
+		<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.5" />
         <modifier class="hit_success_probability" value="-1.1" />
         <modifier class="detectability" value="-0.05" />
-    </carry_item>
-
-    <carry_item file="exo.base_carry_item" key="exo_t5_16lab_2" name="16LAB Refined Standard Exo" transform_on_consume="exo_t5_16lab_3">
-        <hud_icon filename="exo_t5_16lab_7.png" />
-        <inventory price="1" />
-        <modifier class="speed" value="0.35" />
+	</carry_item>
+	<carry_item key="exo_t5_16lab_2" time_to_live_out_in_the_open="15" name="16LAB Refined Standard Exo" transform_on_consume="exo_t5_16lab_3" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="exo_t5_16lab_7.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="30"/>
+		<model mesh_filename="vestexo.xml"/>
+		<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.5" />
         <modifier class="hit_success_probability" value="-1.1" />
         <modifier class="detectability" value="-0.05" />
-    </carry_item>
-
-    <carry_item file="exo.base_carry_item" key="exo_t5_16lab_3" name="16LAB Refined Standard Exo" transform_on_consume="exo_t5_16lab_4">
-        <hud_icon filename="exo_t5_16lab_6.png" />
-        <inventory price="1" />
-        <modifier class="speed" value="0.35" />
+	</carry_item>
+	<carry_item key="exo_t5_16lab_3" time_to_live_out_in_the_open="15" name="16LAB Refined Standard Exo" transform_on_consume="exo_t5_16lab_4" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="exo_t5_16lab_6.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="30"/>
+		<model mesh_filename="vestexo.xml"/>
+		<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.5" />
         <modifier class="hit_success_probability" value="-1.1" />
         <modifier class="detectability" value="-0.05" />
-    </carry_item>
-
-    <carry_item file="exo.base_carry_item" key="exo_t5_16lab_4" name="16LAB Refined Standard Exo" transform_on_consume="exo_t5_16lab_5">
-        <hud_icon filename="exo_t5_16lab_5.png" />
-        <inventory price="1" />
-        <modifier class="speed" value="0.35" />
+	</carry_item>
+	<carry_item key="exo_t5_16lab_4" time_to_live_out_in_the_open="15" name="16LAB Refined Standard Exo" transform_on_consume="exo_t5_16lab_5" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="exo_t5_16lab_5.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="30"/>
+		<model mesh_filename="vestexo.xml"/>
+		<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.5" />
         <modifier class="hit_success_probability" value="-1.1" />
         <modifier class="detectability" value="-0.05" />
-    </carry_item>
-
-    <carry_item file="exo.base_carry_item" key="exo_t5_16lab_5" name="16LAB Refined Standard Exo" transform_on_consume="exo_t5_16lab_6">
-        <hud_icon filename="exo_t5_16lab_4.png" />
-        <inventory price="1" />
-        <modifier class="speed" value="0.35" />
+	</carry_item>
+	<carry_item key="exo_t5_16lab_5" time_to_live_out_in_the_open="15" name="16LAB Refined Standard Exo" transform_on_consume="exo_t5_16lab_6" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="exo_t5_16lab_4.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="30"/>
+		<model mesh_filename="vestexo.xml"/>
+		<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.5" />
         <modifier class="hit_success_probability" value="-1.1" />
         <modifier class="detectability" value="-0.05" />
-    </carry_item>
-
-    <carry_item file="exo.base_carry_item" key="exo_t5_16lab_6" name="16LAB Refined Standard Exo" transform_on_consume="exo_t5_16lab_7">
-        <hud_icon filename="exo_t5_16lab_3.png" />
-        <inventory price="1" />
-        <modifier class="speed" value="0.35" />
+	</carry_item>
+	<carry_item key="exo_t5_16lab_6" time_to_live_out_in_the_open="15" name="16LAB Refined Standard Exo" transform_on_consume="exo_t5_16lab_7" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="exo_t5_16lab_3.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="30"/>
+		<model mesh_filename="vestexo.xml"/>
+		<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.5" />
         <modifier class="hit_success_probability" value="-1.1" />
         <modifier class="detectability" value="-0.05" />
-    </carry_item>
-
-    <carry_item file="exo.base_carry_item" key="exo_t5_16lab_7" name="16LAB Refined Standard Exo" transform_on_consume="exo_t5_16lab_8">
-        <hud_icon filename="exo_t5_16lab_2.png" />
-        <inventory price="1" />
-        <modifier class="speed" value="0.35" />
+	</carry_item>
+	<carry_item key="exo_t5_16lab_7" time_to_live_out_in_the_open="15" name="16LAB Refined Standard Exo" transform_on_consume="exo_t5_16lab_8" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="exo_t5_16lab_2.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="30"/>
+		<model mesh_filename="vestexo.xml"/>
+		<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.5" />
         <modifier class="hit_success_probability" value="-1.1" />
         <modifier class="detectability" value="-0.05" />
-    </carry_item>
-
-    <carry_item file="wearables.base_carry_item" key="exo_t5_16lab_8" name="16LAB Refined Standard Exo-Overrun!-" transform_on_consume="exo_t5_16lab_9">
-        <hud_icon filename="exo_t5_16lab_1.png" />
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="wound"  />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="wound" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
-        <modifier class="melee_hit_result" input_character_state="death" output_character_state="wound" />
-        <modifier class="speed" value="0.35" />
+	</carry_item>
+	<carry_item key="exo_t5_16lab_8" time_to_live_out_in_the_open="15" name="16LAB Refined Standard Exo" transform_on_consume="exo_t5_16lab_9" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="exo_t5_16lab_1.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="30"/>
+		<model mesh_filename="vestexo.xml"/>
+		<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.5" />
         <modifier class="hit_success_probability" value="-1.1" />
         <modifier class="detectability" value="-0.05" />
-    </carry_item>
-
-    <carry_item file="none.base_carry_item" key="exo_t5_16lab_9" name="16LAB Refined Standard Exo-Overrun!-">
-        <hud_icon filename="exo_t5_16lab_0.png" />
-        <modifier class="speed" value="0.35" />
-        <modifier class="hit_success_probability" value="-1.1" />
-        <modifier class="detectability" value="-0.05" />
-    </carry_item>
+	</carry_item>
+	<carry_item key="exo_t5_16lab_9" time_to_live_out_in_the_open="15" name="16LAB Refined Standard Exo" transform_on_consume="exo_t5_16lab_10" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="exo_t5_16lab_0.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="30"/>
+		<model mesh_filename="vestexo.xml"/>
+		<overlay tihuan="2"/>
+	</carry_item>
 </carry_items>
