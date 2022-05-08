@@ -14,13 +14,9 @@
 	ai_abandon_when_unsteerable="0"
 	ai_stop_to_fight="1" 
 	>
-
-	<tag name="metal_thin" />
-	<tag name="truck" />
-	<tag name="jeep" /> 
-	<tag name="light_combat" />
-
-
+		<tag name="metal_thin" />
+		<tag name="truck" />
+		<tag name="jeep" /> 
 	<tire_set offset="0.96 0 1.7" radius="0.48" />
 	<tire_set offset="0.96 0 -1.7" radius="0.48" />
 
@@ -62,8 +58,8 @@
 	<character_slot type="passenger" position="-0.8 0.48 0.4" seat_position="-0.0 2.00 0.0" rotation="0" exit_rotation="-1.57" rotation_range="6.283" hiding="0" animation_key="passenger, boat" marker_offset="0 0.35 0.2" />
 	<character_slot type="passenger" position="0.8 0.48 -0.8" rotation="1.57" exit_rotation="1.57" hiding="1" animation_id="37" />
 	<character_slot type="passenger" position="-0.8 0.48 -0.8" rotation="-1.57" exit_rotation="-1.57" hiding="1" animation_id="37" />
-	<character_slot type="passenger" position="-0.8 0.48 -1.85" seat_position="-0.64 0.98 -1.85" rotation="-1.75" exit_rotation="-1.57" rotation_range="1.60" hiding="0" animation_key="passenger, boat" marker_offset="0 0.35 0.2" />
-	<character_slot type="passenger" position="0.8 0.48 -1.85" seat_position="0.64 0.98 -1.85" rotation="1.75" exit_rotation="1.57" rotation_range="1.60" hiding="0" animation_key="passenger, boat" marker_offset="0 0.35 0.2"  />
+	<character_slot type="passenger" position="-0.8 0.48 -1.85" seat_position="-0.64 0.98 -2.05" rotation="-1.75" exit_rotation="-1.57" rotation_range="6.60" hiding="0" animation_key="passenger, boat" marker_offset="0 0.35 0.2" />
+	<character_slot type="passenger" position="0.8 0.48 -1.85" seat_position="0.64 0.98 -2.05" rotation="1.75" exit_rotation="1.57" rotation_range="6.60" hiding="0" animation_key="passenger, boat" marker_offset="0 0.35 0.2"  />
 
 	<!-- sound handling -->
 	<rev_sound filename="truck_rev0.wav" low_pitch="1.10" high_pitch="1.3" low_rev="0.0" high_rev="0.4" volume="0.7" />

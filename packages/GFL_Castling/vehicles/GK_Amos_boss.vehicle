@@ -29,7 +29,10 @@ jams_enemy_radio="1">
 	<tire_set offset="2.6 0.05 7.00" radius="0.3" />
 
 	<tire_set offset="2.6 0.05 -7.00" radius="0.3" />
-
+	
+	<modifier class="blast_damage" value="-0.4" />
+	<modifier class="blast_range" value="-1.0" />
+	
 	<control 
 		max_speed="5.0"
 		acceleration="2.5"
@@ -182,10 +185,10 @@ jams_enemy_radio="1">
 		<turret index="6" />	<turret index="7" />  	<turret index="8" />	<turret index="9" />  	<turret index="10" />  	<turret index="11" />	<turret index="12" /> <!-- <turret index="13" /> <!--<turret index="14" /> <turret index="15" /> -->
 	 </character_slot>  
 	
-	<character_slot type="passenger" position="3.0 0.5 -3" seat_position="2.0 5.3 -3.6" rotation="1.05" exit_rotation="1.57" hiding="0" animation_id="37" marker_offset="0 0.0 0" rotation_range="6.40" />
-	<character_slot type="passenger" position="3.0 0.5 -5" seat_position="2.0 5.6 -5.8" rotation="2.55" exit_rotation="1.57" hiding="0" animation_id="37" marker_offset="0 0.0 0" rotation_range="6.40" />
-	<character_slot type="passenger" position="-3.0 0.5 -3" seat_position="-2.0 5.3 -3.6" rotation="-1.05" exit_rotation="-1.57" hiding="0" animation_id="37" marker_offset="0 0.0 0" rotation_range="6.40" />
-	<character_slot type="passenger" position="-3.0 0.5 -5" seat_position="-2.0 5.6 -5.8" rotation="-2.55" exit_rotation="-1.57" hiding="0" animation_id="37" marker_offset="0 0.0 0" rotation_range="6.40" /> 
+	<character_slot type="passenger" position="3.0 0.5 -3" seat_position="2.0 5.5 -3.6" rotation="1.05" exit_rotation="1.57" hiding="0" animation_key="passenger, boat" marker_offset="0 0.0 0" rotation_range="6.40" />
+	<character_slot type="passenger" position="3.0 0.5 -5" seat_position="2.0 5.8 -5.8" rotation="2.55" exit_rotation="1.57" hiding="0" animation_key="passenger, boat" marker_offset="0 0.0 0" rotation_range="6.40" />
+	<character_slot type="passenger" position="-3.0 0.5 -3" seat_position="-2.0 5.5 -3.6" rotation="-1.05" exit_rotation="-1.57" hiding="0" animation_key="passenger, boat" marker_offset="0 0.0 0" rotation_range="6.40" />
+	<character_slot type="passenger" position="-3.0 0.5 -5" seat_position="-2.0 5.8 -5.8" rotation="-2.55" exit_rotation="-1.57" hiding="0" animation_key="passenger, boat" marker_offset="0 0.0 0" rotation_range="6.40" /> 
 
 	<!-- sound handling -->
 	<!--
