@@ -622,7 +622,7 @@
 	<soldier name="Paradeus_doppelsoldner" firstnames="Paradeus-SHIELD HEAVY ARMOR UNIT-" lastnames_file="Paradeus_last.name" spawn_score="0.3">
 		<!-- <models file="kcco_qwd.models" /> -->
 		<model filename="pard_Doppelsoldner.xml" />
-		<character filename="qwd_base.character" />
+		<character filename="pard_mecha.character" />
 		<ai filename="para_mg.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="parw_doppelsoldner_rocket" enabled="1" />
