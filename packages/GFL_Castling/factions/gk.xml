@@ -237,16 +237,12 @@
 			<attribute weight="1.0" min="700.0" max="1500.0" />
 		</attribute_config>
 	</soldier>
-	<soldier name="default_spawn_ai" spawn_score="0.0" firstnames_file="gk_first.name" lastnames_file="gk_last.name">
+	<soldier name="default_spawn_ai" spawn_score="0.0" copy_from="default">
 		<character filename="default_gk_pmc.text_lines">
 			<parameter class="default_squad_config_index" value="0" />
 		</character>
 		<ai filename="default.ai" />
 		<model file="gkd_xxv_idwmod.xml" />
-		<models file="gk.models" />
-		<models file="gk_2.models" />
-		<models file="gk_arm.models" />
-		<models file="common_bonus.models" />
 		<resources file="common.resources" />
 		<resources file="gk.resources" />		
 		<resources file="gk_call.resources" />
