@@ -90,7 +90,7 @@ class CommandSkill : Tracker {
             const XmlElement@ info = getPlayerInfo(m_metagame, senderId);
 			if (info !is null) {
                 int cId = info.getIntAttribute("character_id");
-                const XmlElement@ targetCharacter = getCharacterInfo2(metagame,cId);
+                const XmlElement@ targetCharacter = getCharacterInfo2(m_metagame,cId);
                 if (targetCharacter is null) return;
                 array<const XmlElement@>@ equipment = targetCharacter.getElementsByTagName("item");
                 if (equipment.size() == 0) return;
@@ -178,12 +178,15 @@ class CommandSkill : Tracker {
     }
     protected void handleResultEvent(const XmlElement@ event) {
 		string EventKeyGet = event.getStringAttribute("key");
+        SkillModifer m_modifer=SkillModifer(1.0,0);
+
         if (EventKeyGet == "SOPMOD_lanuch"){
             int characterId = event.getIntAttribute("character_id");
 			const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
 			if (character !is null) {
 				int playerId = character.getIntAttribute("player_id");
 				const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+                //string c_armorType=getPlayerEquipmentKey(m_metagame,characterId,4);
                 if (player !is null) {
                     excuteSopmodskill(characterId,playerId,m_modifer,character,player);
                 }
@@ -194,6 +197,7 @@ class CommandSkill : Tracker {
 			const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
 			if (character !is null) {
 				int playerId = character.getIntAttribute("player_id");
+                //string c_armorType=getPlayerEquipmentKey(m_metagame,characterId,4);
 				const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
                 if (player !is null) {
                     if(getPlayerEquipmentKey(m_metagame,characterId,0) == "gkw_hk416_3401_mod3_skill.weapon"){
@@ -240,10 +244,11 @@ class CommandSkill : Tracker {
 		// always on
 		return true;
 	}
+
     void addCoolDown(string key,float time,int cId,SkillModifer@ modifer){
         float cdr=modifer.m_cdr;
         float cdm=modifer.m_cdm;
-        SkillArray.insertLast(SkillTrigger(cId,(time*cdr-cdm),key);
+        SkillArray.insertLast(SkillTrigger(cId,(time*cdr-cdm),key));
     }
 
     void excuteTimerEffect(SkillEffectTimer@ Trigger){
