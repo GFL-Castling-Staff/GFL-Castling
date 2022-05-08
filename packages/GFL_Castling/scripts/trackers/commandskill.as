@@ -44,12 +44,8 @@ class SkillEffectTimer{
 }
 
 class SkillModifer{
-    float m_cdr;
-    float m_cdm;
-    SkillModifer(float cdr,float cdm){
-        m_cdm=cdm;
-        m_cdr=cdr;
-    }
+    float m_cdr=1.0;
+    float m_cdm=0;
 
     void setCooldownReduction(float num){
         m_cdr=num;
@@ -98,7 +94,7 @@ class CommandSkill : Tracker {
                 string c_weaponType = equipment[0].getStringAttribute("key");
                 string c_armorType = equipment[4].getStringAttribute("key");
 
-                SkillModifer m_modifer=SkillModifer(1.0,0);
+                SkillModifer m_modifer=SkillModifer();
 
                 if (c_weaponType=="") return;
 
@@ -178,7 +174,7 @@ class CommandSkill : Tracker {
     }
     protected void handleResultEvent(const XmlElement@ event) {
 		string EventKeyGet = event.getStringAttribute("key");
-        SkillModifer m_modifer=SkillModifer(1.0,0);
+        SkillModifer m_modifer=SkillModifer();
 
         if (EventKeyGet == "SOPMOD_lanuch"){
             int characterId = event.getIntAttribute("character_id");
