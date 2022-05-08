@@ -4,4 +4,13 @@
   <parameter class="stab_range" value="0.0" />
   <parameter class="check_fellows_for_shield_use_range" value="100.0" />
   <parameter class="max_active_shields_per_fellows" value="100.0" />
+
+  <parameter class="burst_time" value="2.0" />
+	<parameter class="burst_time_variance" value="0.3" />
+	<parameter class="in_vehicle_burst_time" value="2.0" />
+	<parameter class="in_vehicle_burst_time_variance" value="0.3" />
+	<parameter class="longer_burst_time" value="3.0" />
+	<parameter class="longer_burst_time_variance" value="0.5" />
+  <parameter class="wait_time" value="0.5" />
+
 </ai>
