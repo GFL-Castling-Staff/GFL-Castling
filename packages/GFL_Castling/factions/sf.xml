@@ -531,7 +531,7 @@
 		<ai filename="eod_mecha.ai" />
 		<model filename="sfd_sangvisfeaal.xml" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_calls="1">
-			<weapon key="sfw_nemeum.weapon" enabled="1"/>
+			<weapon key="sfw_nemeum_swap.weapon" enabled="1"/>
 			<carry_item key="sf_sh.carry_item" enabled="1" />
 		</resources>
 	</soldier>
