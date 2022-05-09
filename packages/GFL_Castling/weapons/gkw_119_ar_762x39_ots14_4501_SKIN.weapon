@@ -39,8 +39,8 @@
     <next_in_chain key="gkw_ots14_4501_skill.weapon" share_ammo="1" />
 
     <weak_hand_hold offset="0.2" />
-    <projectile file="bullet.projectile">
-      <result class="hit" kill_probability="1.41" kill_decay_start_time="0.5" kill_decay_end_time="0.875" />
+    <projectile file="bullet.projectile" can_be_detected_by_footmen="0">
+      <result class="hit" kill_probability="1.75" kill_decay_start_time="0.5" kill_decay_end_time="0.875" />
     </projectile>
 
     <stance state_key="running" accuracy="0.5" />
@@ -91,9 +91,9 @@
 
     <next_in_chain key="gkw_ots14_4501.weapon" share_ammo="1" />
 
-    <weak_hand_hold offset="0.2" />
+    <weak_hand_hold offset="0.2" can_be_detected_by_footmen="0"/>
     <projectile file="bullet.projectile">
-      <result class="hit" kill_probability="1.7" kill_decay_start_time="0.5" kill_decay_end_time="0.875" />
+      <result class="hit" kill_probability="1.75" kill_probability_offset_on_successful_hit="1" kill_decay_start_time="0.5" kill_decay_end_time="0.875" />
     </projectile>
 
     <stance state_key="running" accuracy="0.8" />
