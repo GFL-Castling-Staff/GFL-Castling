@@ -45,6 +45,11 @@
 		<trigger class="destroy" />
 		<result class="reward" rp="150.0" />
 	</event>
+	
+	<event>
+		<trigger class="create"/>
+		<result class="spawn" instance_class="soldier" instance_key="parw_thrower" min_amount="1" max_amount="1"  position_spread="0 0" direction_spread="0 0"/>
+	</event>
 
 	<event>
 		<trigger class="destroy" />
