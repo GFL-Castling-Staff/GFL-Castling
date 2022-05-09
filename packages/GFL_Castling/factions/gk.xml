@@ -264,27 +264,39 @@
 	</soldier>
 	<soldier name="default_hg" spawn_score="0.8" squad_size_xp_cap="0.5" copy_from="default_spawn_ai">
 		<ai filename="elite.ai" />
-		<resources file="gk_hg.resources" />
+		<resources file="gk_hg.resources" clear_carry_items="1" clear_calls="1">
+			<carry_item key="exo_ai_only.carry_item" />
+		</resources>
 	</soldier>
 	<soldier name="default_smg" spawn_score="0.8" squad_size_xp_cap="0.0" copy_from="default_spawn_ai">
 		<ai filename="elite.ai" />
-		<resources file="gk_smg.resources" />
+		<resources file="gk_smg.resources" clear_carry_items="1" clear_calls="1">
+			<carry_item key="exo_ai_only.carry_item" />
+		</resources>	
 	</soldier>
 	<soldier name="default_ar" spawn_score="0.8" squad_size_xp_cap="0.0" copy_from="default_spawn_ai">
 		<ai filename="elite.ai" />
-		<resources file="gk_ar.resources" />
+		<resources file="gk_ar.resources" clear_carry_items="1" clear_calls="1">
+			<carry_item key="exo_ai_only.carry_item" />
+		</resources>	
 	</soldier>
 	<soldier name="default_rf" spawn_score="0.8" squad_size_xp_cap="0.0" copy_from="default_spawn_ai">
 		<ai filename="sniper.ai" />
-		<resources file="gk_rf.resources" />
+		<resources file="gk_rf.resources" clear_carry_items="1" clear_calls="1">
+			<carry_item key="exo_ai_only.carry_item" />
+		</resources>	
 	</soldier>
 	<soldier name="default_mg" spawn_score="0.8" squad_size_xp_cap="0.0" copy_from="default_spawn_ai">
 		<ai filename="eod.ai" />
-		<resources file="gk_mg.resources" />
+		<resources file="gk_mg.resources" clear_carry_items="1" clear_calls="1">
+			<carry_item key="exo_ai_only.carry_item" />
+		</resources>	
 	</soldier>
 	<soldier name="default_sg" spawn_score="0.8" squad_size_xp_cap="0.0" copy_from="default_spawn_ai">
 		<ai filename="eod.ai" />
-		<resources file="gk_sg.resources" />
+		<resources file="gk_sg.resources" clear_carry_items="1" clear_calls="1">
+			<carry_item key="exo_ai_only.carry_item" />
+		</resources>	
 	</soldier>
 	<soldier name="default_hvy" spawn_score="0.1" squad_size_xp_cap="0.0" copy_from="default_spawn_ai">
 		<ai filename="eod.ai" />
@@ -294,6 +306,31 @@
 		</attribute_config>
 		<attribute_config class="rp">
 			<attribute weight="1.0" min="7000.0" max="15000.0" />
+		</attribute_config>
+	</soldier>
+	<!-- 商店 -->
+	<soldier name="player_hvy" spawn_score="0" squad_size_xp_cap="0.0" copy_from="default_spawn_ai">
+		<resources file="gk_hvy.resources" />
+	</soldier>
+	<!-- 支援 -->
+	<soldier name="Task_Medic" spawn_score="0.05" copy_from="default_spawn_ai">
+		<resources file="gk_ar.resources" clear_carry_items="1">
+			<weapon key="medikit.weapon" />
+			<carry_item key="exo_t4.carry_item" />
+		</resources>
+		<attribute_config class="xp">
+			<attribute weight="1.0" min="7.100" max="10.1" />
+		</attribute_config>
+	</soldier>
+
+	<soldier name="Task_MGSG" spawn_score="0.05" copy_from="default_spawn_ai">
+		<resources file="gk_mg.resources" clear_carry_items="1"/>
+		<resources file="gk_sg.resources" clear_weapons="0" clear_carry_items="1">
+			<carry_item key="bp_t4.carry_item" />
+			<carry_item key="bp_t5_16lab.carry_item" />
+		</resources>
+		<attribute_config class="xp">
+			<attribute weight="1.0" min="7.100" max="10.1" />
 		</attribute_config>
 	</soldier>
 
@@ -1266,35 +1303,6 @@
 		</item_class_existence_config>
 	</soldier>
 
-	<soldier name="chicken" spawn_score="0.0" squad_size_xp_cap="0.0" firstnames_file="chicken_firstnames.txt" lastnames_file="chicken_lastnames.txt">
-		<character filename="chicken_base.character" />
-		<ai filename="chicken.ai" />
-		<models>
-			<model filename="chick_en1.xml" />
-			<model filename="chick_en2.xml" />
-			<model filename="chick_rooster.xml" />
-			<model filename="chick_brown.xml" />
-			<model filename="chick_yellow.xml" />
-			<model filename="chick_glasses.xml" />
-			<model filename="chick_bananchick.xml" />
-		</models>
-		<resources clear_vehicles="1" clear_calls="1" clear_grenades="1">
-		</resources>
-		<item_class_existence_config>
-			<!-- secondaries -->
-			<item_class_existence class="weapon" slot="1" probability="0.0" />
-			<!-- wearables -->
-			<item_class_existence class="carry_item" slot="1" probability="0.0" />
-			<!-- backpack -->
-			<item_class_existence class="carry_item" slot="0" probability="0.0" />
-		</item_class_existence_config>
-		<attribute_config class="rp">
-			<attribute weight="1.0" min="0.0" max="0.0" />
-		</attribute_config>
-		<attribute_config class="xp">
-			<attribute weight="1.0" min="0.0" max="0.0" />
-		</attribute_config>
-	</soldier>
 	<!-- icecream group -->
 	<soldier name="icecream" spawn_score="0.0">
 		<resources file="icecream.resources" />

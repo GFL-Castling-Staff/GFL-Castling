@@ -78,27 +78,7 @@
 	<vehicle name="" key="sg1hg1mg2_airboat_holding" file="airboat_holding.base_vehicle">
 		<event>
 			<trigger class="destroy" />
-			<result class="spawn" instance_class="soldier" instance_key="default_hg" min_amount="1" max_amount="1" offset="0 0.0 0" position_spread="0 0" direction_spread="0 -1" />
-		</event>
-		<!-- <event> -->
-			<!-- <trigger class="destroy" /> -->
-			<!-- <result class="spawn" instance_class="soldier" instance_key="default_smg" min_amount="1" max_amount="1" offset="0 0.0 0" position_spread="0 0" direction_spread="0 -1" /> -->
-		<!-- </event> -->
-		<!-- <event> -->
-			<!-- <trigger class="destroy" /> -->
-			<!-- <result class="spawn" instance_class="soldier" instance_key="default_ar" min_amount="1" max_amount="1" offset="0 0.0 0" position_spread="0 0" direction_spread="0 -1" /> -->
-		<!-- </event> -->
-		<!-- <event> -->
-			<!-- <trigger class="destroy" /> -->
-			<!-- <result class="spawn" instance_class="soldier" instance_key="default_rf" min_amount="1" max_amount="1" offset="0 0.0 0" position_spread="0 0" direction_spread="0 -1" /> -->
-		<!-- </event> -->
-		<event>
-			<trigger class="destroy" />
-			<result class="spawn" instance_class="soldier" instance_key="default_mg" min_amount="3" max_amount="3" offset="0 0.0 0" position_spread="0 0" direction_spread="0 -1" />
-		</event>
-		<event>
-			<trigger class="destroy" />
-			<result class="spawn" instance_class="soldier" instance_key="default_sg" min_amount="1" max_amount="1" offset="0 0.0 0" position_spread="0 0" direction_spread="0 -1" />
+			<result class="spawn" instance_class="soldier" instance_key="Task_MGSG" min_amount="5" max_amount="5" offset="0 0.0 0" position_spread="0 0" direction_spread="0 -1" />
 		</event>
 	</vehicle>
 	
@@ -116,11 +96,7 @@
 		<!-- </event> -->
 		<event>
 			<trigger class="destroy" />
-			<result class="spawn" instance_class="soldier" instance_key="default_smg" min_amount="2" max_amount="2" offset="0 0.0 0" position_spread="0 0" direction_spread="0 -1" />
-		</event>
-		<event>
-			<trigger class="destroy" />
-			<result class="spawn" instance_class="soldier" instance_key="default_ar" min_amount="3" max_amount="3" offset="0 0.0 0" position_spread="0 0" direction_spread="0 -1" />
+			<result class="spawn" instance_class="soldier" instance_key="Task_Medic" min_amount="4" max_amount="4" offset="0 0.0 0" position_spread="0 0" direction_spread="0 -1" />
 		</event>
 		<!-- <event> -->
 			<!-- <trigger class="destroy" /> -->
