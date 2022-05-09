@@ -9,7 +9,7 @@
 	slot="0" 
 	magazine_size="30" 
 	name="XM8" 
-	projectile_speed="145.74" 
+	projectile_speed="185.74" 
 	retrigger_time="0.08" 
 	suppressed="0" 
 	sustained_fire_diminish_rate="1" 
@@ -36,7 +36,7 @@
 
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet.projectile">
-        <result class="hit"  kill_probability="1.35" kill_decay_start_time="0.788" kill_decay_end_time="1.32" />
+        <result class="hit"  kill_probability="1.65" kill_decay_start_time="0.788" kill_decay_end_time="1.32" />
     </projectile>
     
     <stance state_key="running" accuracy="0.45" />
