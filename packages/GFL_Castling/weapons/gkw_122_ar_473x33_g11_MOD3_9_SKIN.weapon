@@ -40,7 +40,7 @@
 
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet.projectile">
-        <result class="hit"  kill_probability="1.6" kill_decay_start_time="1.076" kill_decay_end_time="1.76" />
+        <result class="hit"  kill_probability="1.65" kill_decay_start_time="1.076" kill_decay_end_time="1.76" />
     </projectile>
     
     <stance state_key="running" accuracy="0.3" />
@@ -97,7 +97,7 @@
 
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet.projectile">
-        <result class="hit"  kill_probability="1.9" kill_decay_start_time="0.976" kill_decay_end_time="1.46" />
+        <result class="hit"  kill_probability="1.45" kill_probability_offset_on_successful_hit="1" kill_decay_start_time="0.976" kill_decay_end_time="1.46" />
     </projectile>
     
     <stance state_key="running" accuracy="0.3" />
