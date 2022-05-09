@@ -27,6 +27,18 @@
     <sound key="magazine_out" fileref="m16a1_mgz_out_FromCOD17.wav" volume="0.9" />
     <sound key="magazine_in" fileref="m16a1_mgz_in_FromCOD17.wav" volume="0.9" />
     <sound key="cycle" fileref="m16a1_cycle_FromCOD17.wav" volume="0.9" />
+    <sound key="cycle" fileref="M16A1_SKILL1_JP.wav" volume="0.9" pitch_variety="0"/>
+    <sound key="cycle" fileref="M16A1_SKILL2_JP.wav" volume="0.9" pitch_variety="0"/>
+    <sound key="cycle" fileref="M16A1_SKILL3_JP.wav" volume="0.9" pitch_variety="0"/>
+    <sound key="cycle" fileref="M16A1_DEFENSE_JP.wav" volume="0.9" pitch_variety="0"/>
+    <sound key="cycle" fileref="M16A1_ATTACK_JP.wav" volume="0.9" pitch_variety="0"/>
+    <sound key="cycle" fileref="M16A1_MEET_JP.wav" volume="0.9" pitch_variety="0"/>
+    <sound key="cycle" fileref="M16A1_BLACKACTION_JP.wav" volume="0.9" pitch_variety="0"/>
+    <sound key="cycle" fileref="M16A1_OPERATIONBEGIN_JP.wav" volume="0.9" pitch_variety="0"/>
+    <sound key="cycle" fileref="M16A1_FORMATION_JP.wav" volume="0.9" pitch_variety="0"/>
+    <sound key="cycle" fileref="M16A1_FIX_JP.wav" volume="0.9" pitch_variety="0"/>
+    <sound key="cycle" fileref="M16A1_TIP_JP.wav" volume="0.9" pitch_variety="0"/>
+    <sound key="cycle" fileref="M16A1_PHRASE_JP.wav" volume="0.9" pitch_variety="0"/>
     <sound class="impact" fileref="rifle_drop.wav" />    
     <model filename="gkw_ar_m16a1.xml" />
 
@@ -36,14 +48,13 @@
 
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet.projectile">
-        <result class="hit"  kill_probability="1.35" kill_decay_start_time="1.031" kill_decay_end_time="1.719" />
+        <result class="hit"  kill_probability="1.65" kill_decay_start_time="1.031" kill_decay_end_time="1.719" />
     </projectile>
     
     <stance state_key="running" accuracy="0.3" />
     <stance state_key="walking" accuracy="0.75" />
     <stance state_key="crouch_moving" accuracy="0.9" />
     <stance state_key="prone_moving" accuracy="0.9" />
-
     <stance state_key="standing" accuracy="0.9" />
     <stance state_key="crouching" accuracy="1" />
     <stance state_key="prone" accuracy="1" />
