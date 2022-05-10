@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<weapon file="deployable.base_weapon" key="par_deploy_compass.weapon" radius="0.25" >
+<weapon file="deployable.base_weapon" key="par_deploy_compass.weapon" >
     <specification
     name="Compass"
+	retrigger_time="0.1"
     spawn_instance_class="vehicle" 
-    spawn_instance_key="par_compass.vehicle" 
+    spawn_instance_key="par_compass.vehicle"
+ 
     />
     <inventory  encumbrance="0" price="100.0" />
 	<animation state_key="recoil" 		animation_key="deploy2" />
@@ -12,4 +14,5 @@
     <commonness value="0.2" in_stock="1"  can_respawn_with="0" />
     <model mesh_filename="barrier_item.mesh" texture_filename="none.png" />
     <hud_icon filename="testing.png" />
+	<modifier class="speed" value="0.0" />
 </weapon>
