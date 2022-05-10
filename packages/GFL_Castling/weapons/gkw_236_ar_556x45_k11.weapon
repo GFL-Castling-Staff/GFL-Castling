@@ -8,7 +8,7 @@
         slot="0" 
         magazine_size="30" 
         name="K11 weapon system (AR)" 
-        projectile_speed="160" 
+        projectile_speed="180" 
         retrigger_time="0.09" 
         suppressed="0" 
         sustained_fire_diminish_rate="1.8" 
@@ -30,7 +30,7 @@
 
         <weak_hand_hold offset="0.2" />
         <projectile file="bullet.projectile">
-            <result class="hit" kill_probability="1.35" kill_decay_start_time="1.023" kill_decay_end_time="1.705" />
+            <result class="hit" kill_probability="1.65" kill_decay_start_time="1.023" kill_decay_end_time="1.705" />
         </projectile>
         <stance state_key="running" accuracy="0.3" />
         <stance state_key="walking" accuracy="0.75" />

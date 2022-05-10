@@ -13,7 +13,7 @@
     slot="0" 
 	magazine_size="30" 
 	name="HK416(MOD3)-[Black Cat's Gift]" 
-	projectile_speed="167.66" 
+	projectile_speed="197.66" 
 	retrigger_time="0.067" 
 	suppressed="1" 
     sustained_fire_diminish_rate="1.9"
@@ -46,9 +46,9 @@
 	
     
     <weak_hand_hold offset="0.3" />
-    <projectile file="bullet.projectile">
+    <projectile file="bullet.projectile" can_be_detected_by_footmen="0">
         <result class="hit" 
-        kill_probability="1.65" 
+        kill_probability="1.85" 
         kill_decay_start_time="1.142" 
         kill_decay_end_time="1.904" />
     </projectile>

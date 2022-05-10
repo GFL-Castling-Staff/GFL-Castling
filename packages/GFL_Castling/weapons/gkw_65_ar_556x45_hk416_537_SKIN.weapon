@@ -12,7 +12,7 @@
     slot="0" 
 	magazine_size="30" 
 	name="HK416-[Primrose-Flavored Foil Candy]" 
-	projectile_speed="167.66" 
+	projectile_speed="187.66" 
 	retrigger_time="0.0857" 
 	suppressed="1" 
     sustained_fire_diminish_rate="1.8"
@@ -45,9 +45,9 @@
 	
     
     <weak_hand_hold offset="0.3" />
-    <projectile file="bullet.projectile">
+    <projectile file="bullet.projectile" can_be_detected_by_footmen="0">
         <result class="hit" 
-        kill_probability="1.35" 
+        kill_probability="1.65" 
         kill_decay_start_time="1.142" 
         kill_decay_end_time="1.904" />
     </projectile>

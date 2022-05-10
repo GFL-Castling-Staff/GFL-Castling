@@ -9,7 +9,7 @@
             slot="0"
             magazine_size="30"
             name="ACR"
-            projectile_speed="170.21"
+            projectile_speed="190.21"
             retrigger_time="0.08"
             suppressed="1"
             sustained_fire_diminish_rate="1.8"
@@ -31,8 +31,8 @@
         <hud_icon filename="gkw_acr.png" />
 
         <weak_hand_hold offset="0.2" />
-        <projectile file="bullet.projectile">
-            <result class="hit" kill_probability="1.35" kill_decay_start_time="0.675" kill_decay_end_time="1.125" />
+        <projectile file="bullet.projectile" can_be_detected_by_footmen="0">
+            <result class="hit" kill_probability="1.65" kill_decay_start_time="0.675" kill_decay_end_time="1.125" />
         </projectile>
         <stance state_key="running" accuracy="0.5" />
         <stance state_key="walking" accuracy="0.8" />

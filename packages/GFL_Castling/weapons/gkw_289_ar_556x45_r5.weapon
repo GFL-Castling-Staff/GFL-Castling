@@ -48,16 +48,16 @@
 	
     
     <weak_hand_hold offset="0.3" />
-    <projectile file="bullet.projectile">
+    <projectile file="bullet.projectile" can_be_detected_by_footmen="0">
         <result class="hit" 
-        kill_probability="1.37" 
+        kill_probability="1.65" 
         kill_decay_start_time="1.357" 
         kill_decay_end_time="1.768" />
     </projectile>
     
     <!--Accuracy, Movement speed-->
     
-    <stance state_key="running" accuracy="0.3" />
+    <stance state_key="running" accuracy="0.75" />
     <stance state_key="walking" accuracy="0.75" />
     <stance state_key="crouch_moving" accuracy="0.9" />
     <stance state_key="prone_moving" accuracy="0.9" />
@@ -117,16 +117,17 @@
     
     
     <weak_hand_hold offset="0.3" />
-    <projectile file="bullet.projectile">
+    <projectile file="bullet.projectile" can_be_detected_by_footmen="0">
         <result class="hit" 
-        kill_probability="1.47" 
+        kill_probability="1.65" 
+        kill_probability_offset_on_successful_hit="1.2"
         kill_decay_start_time="1.357" 
         kill_decay_end_time="1.768" />
     </projectile>
     
     <!--Accuracy, Movement speed-->
     
-    <stance state_key="running" accuracy="0.3" />
+    <stance state_key="running" accuracy="0.75" />
     <stance state_key="walking" accuracy="0.75" />
     <stance state_key="crouch_moving" accuracy="0.9" />
     <stance state_key="prone_moving" accuracy="0.9" />
