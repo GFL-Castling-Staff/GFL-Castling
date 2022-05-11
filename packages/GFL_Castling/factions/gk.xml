@@ -244,8 +244,10 @@
 		<ai filename="default.ai" />
 		<model file="gkd_xxv_idwmod.xml" />
 		<resources file="common.resources" />
-		<resources file="gk.resources" />		
-		<resources file="gk_call.resources" />
+		<resources file="gk.resources" >
+			<weapon key="medikit.weapon" enabled="0"/>
+		</resources>		
+		<resources file="gk_call.resources" clear_calls="1" />
 		<weapon key="gkw_idw.weapon" enabled="1" />
 		<item_class_existence_config>
 			<!-- secondaries -->
@@ -323,11 +325,21 @@
 		</attribute_config>
 	</soldier>
 
-	<soldier name="Task_MGSG" spawn_score="0.05" copy_from="default_spawn_ai">
-		<resources file="gk_mg.resources" clear_carry_items="1"/>
+	<soldier name="Task_MG" spawn_score="0.05" copy_from="default_spawn_ai">
 		<resources file="gk_sg.resources" clear_weapons="0" clear_carry_items="1">
 			<carry_item key="bp_t4.carry_item" />
 			<carry_item key="bp_t5_16lab.carry_item" />
+		</resources>
+		<attribute_config class="xp">
+			<attribute weight="1.0" min="7.100" max="10.1" />
+		</attribute_config>
+	</soldier>
+
+	<soldier name="Task_SG" spawn_score="0.05" copy_from="default_spawn_ai">
+		<resources file="gk_mg.resources" clear_weapons="0" clear_carry_items="1">
+			<carry_item key="bp_t4.carry_item" />
+			<carry_item key="bp_t5_16lab.carry_item" />
+			<weapon key="medikit.weapon" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="7.100" max="10.1" />
