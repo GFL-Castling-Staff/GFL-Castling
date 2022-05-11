@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<vehicle name="Ammunition Supply Crate" key="mortar_ammunition_crates.vehicle" map_view_atlas_index="-1" respawn_time="600.0" reserves_spawn_point="1" protectors="3"  soldier_capacity_offset="5" usable_for_cover="0" >
+<vehicle name="Ammunition Supply Crate" key="mortar_ammunition_crates.vehicle"  owner="faction" existence="one_per_spawn_point" map_view_atlas_index="-1" respawn_time="600.0" reserves_spawn_point="1" protectors="3" soldier_capacity_offset="5" usable_for_cover="0" >
 	<tag name="sandbag" />
 	<tag name="target" />
 	<tire_set offset="1.0 0.0 0.5" radius="0.65" />
