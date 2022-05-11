@@ -425,6 +425,14 @@
 		<ai filename="para_streletplus.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="parw_streletplus.weapon" enabled="1" />
+			<carry_item key="pard_sg.carry_item" />
+			<call key="pard_zombie.call" />
+		</resources>
+	</soldier>
+	<soldier name="para_streletplus_richman" spawn_score="0.2" squad_size_xp_cap="0.5" copy_from="default_ai">
+		<ai filename="para_streletplus.ai" />
+		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
+			<weapon key="parw_streletplus.weapon" enabled="1" />
 			<weapon key="par_deploy_compass.weapon" enabled="1" />
 			<carry_item key="pard_sg.carry_item" />
 			<call key="pard_zombie.call" />
@@ -474,7 +482,7 @@
 		<character filename="pard_germdog.character" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="parw_germdog.weapon" enabled="1" probability="1.0"/>
-			<carry_item key="pard_ar.carry_item" />
+			<carry_item key="pard_ar_2" />
 			<attribute_config class="xp">
 				<attribute weight="1.0" min="1.0" max="5.6" />
 			</attribute_config>
@@ -496,7 +504,7 @@
 			</attribute_config>
 		</resources>
 	</soldier>
-	<soldier name="alina" spawn_score="0.11" squad_size_xp_cap="0.5" copy_from="default_ai">
+	<soldier name="alina" spawn_score="0.05" squad_size_xp_cap="0.5" copy_from="default_ai">
 		<ai filename="melee.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="parw_alina.weapon" enabled="1" />
@@ -510,7 +518,7 @@
 			</attribute_config>
 		</resources>
 	</soldier>
-	<soldier name="teal" spawn_score="0.10" squad_size_xp_cap="0.5" copy_from="default_ai">
+	<soldier name="teal" spawn_score="0.05" squad_size_xp_cap="0.5" copy_from="default_ai">
 		<ai filename="melee.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="parw_teal.weapon" enabled="1" />
@@ -525,7 +533,7 @@
 			</attribute_config>
 		</resources>
 	</soldier>
-	<soldier name="eagleyes" spawn_score="0.05" squad_size_xp_cap="0.5" copy_from="default_ai">
+	<soldier name="eagleyes" spawn_score="0.02" squad_size_xp_cap="0.5" copy_from="default_ai">
 		<ai filename="eod.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="parw_eagleyes.weapon" enabled="1" />
@@ -540,7 +548,7 @@
 			</attribute_config>
 		</resources>
 	</soldier>
-	<soldier name="vanguard" spawn_score="0.05" squad_size_xp_cap="0.5" copy_from="default_ai">
+	<soldier name="vanguard" spawn_score="0.02" squad_size_xp_cap="0.5" copy_from="default_ai">
 		<ai filename="eod.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="parw_vanguard.weapon" enabled="1" />
@@ -555,7 +563,7 @@
 			</attribute_config>
 		</resources>
 	</soldier>
-	<soldier name="Nimogen" spawn_score="0.08" squad_size_xp_cap="0.5" copy_from="default_ai">
+	<soldier name="Nimogen" spawn_score="0.05" squad_size_xp_cap="0.5" copy_from="default_ai">
 		<ai filename="elite.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="parw_nimogen.weapon" enabled="1" />
@@ -570,7 +578,7 @@
 			</attribute_config>
 		</resources>
 	</soldier>
-	<soldier name="Narciss" spawn_score="0.12" squad_size_xp_cap="0.5" copy_from="default_ai">
+	<soldier name="Narciss" spawn_score="0.05" squad_size_xp_cap="0.5" copy_from="default_ai">
 		<ai filename="eod.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="parw_narciss.weapon" enabled="1" />
@@ -585,7 +593,7 @@
 			</attribute_config>
 		</resources>
 	</soldier>
-	<soldier name="Adeline" spawn_score="0.12" squad_size_xp_cap="0.5" copy_from="default_ai">
+	<soldier name="Adeline" spawn_score="0.05" squad_size_xp_cap="0.5" copy_from="default_ai">
 		<ai filename="sniper.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="parw_nyto_black.weapon" enabled="1" />
@@ -600,7 +608,7 @@
 			</attribute_config>
 		</resources>
 	</soldier>
-	<soldier name="infected" spawn_score="0.01" squad_size_xp_cap="0.5">
+	<soldier name="infected" spawn_score="0.0" squad_size_xp_cap="0.5">
 		<ai filename="melee.ai" />
 		<model filename="pard_zombie.xml" />
 		<character filename="infected.character" />
