@@ -84,7 +84,7 @@
   <parameter class="night_reaction_time_to_fight_min" value="0.8" />
   <parameter class="night_reaction_time_to_fight_max" value="1.1" />
   <parameter class="willingness_to_guard" value="0.5" />
-  <parameter class="minimum_distance_to_consider_deploying_cover" value="1.0" />
+  <parameter class="minimum_distance_to_consider_deploying_cover" value="24.0" />
   <parameter class="recheck_cover_over_shootability_time" value="3.0" />
   <parameter class="max_objects_per_sqm_to_consider_deployment" value="0.08" />
   <parameter class="shielding_min_distance_to_move" value="4.0" />
@@ -95,7 +95,7 @@
   <parameter class="leaving_cover_separation" value="4.0" />
   <parameter class="guarding_comment_before_proceed_time" value="2.0" />
   <parameter class="choose_enemy_squad_target_score_range" value="10.0" />
-  <parameter class="deployment_area_utilization_factor" value="0.4" />
+  <parameter class="deployment_area_utilization_factor" value="1.0" />
   <parameter class="deployment_max_position_pick_attempts" value="2" />
   <parameter class="deployment_road_avoidance_distance" value="-1.0" />
   <parameter class="fighting_approach_alarm_max_soldiers" value="12" /> 

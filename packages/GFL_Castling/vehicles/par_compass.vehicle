@@ -6,15 +6,12 @@
 	owner="faction" 
 	respawn_time="600" 
 	allow_owner_to_use_only="1" 
-	character_leave_request_mode="friendly" 
+	allow_character_leave_request="0" 
 	soldier_capacity_offset="1" 
-	allow_ai_to_use="1"
-	minimum_fill_requirement="1.0" 
-	ai_driver_turns_to_target="1"
-	ai_force_designated_driver_xp="0.0001"
-	ai_abandon_when_unsteerable="0"
 	key="par_compass.vehicle" 
 	ai_stop_to_fight="0">
+	
+
 	
 	<modifier class="blast_damage" value="0" />
 
