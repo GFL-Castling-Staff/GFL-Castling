@@ -55,11 +55,20 @@ class SkillModifer{
     }
 }
 
+class SpamAvoider{
+    float m_time=0.5;
+    int m_playerid;
+    SpamAvoider(int playerid){
+        m_playerid=playerid;
+    }
+}
+
 class CommandSkill : Tracker {
     protected Metagame@ m_metagame;
     
 	array<SkillTrigger@> SkillArray;
     array<SkillEffectTimer@> TimerArray;
+    array<SpamAvoider@> DontSpamingYourFuckingSkillWhileCoolDownBro;
 	protected bool m_ended;
 
 	// --------------------------------------------
@@ -81,8 +90,12 @@ class CommandSkill : Tracker {
 
         string sender = event.getStringAttribute("player_name");
 		int senderId = event.getIntAttribute("player_id");
-
+        
         if (checkCommand(message,"skill") || message=="/s"){
+            for(uint a=0;a<DontSpamingYourFuckingSkillWhileCoolDownBro.length();a++){
+                if(DontSpamingYourFuckingSkillWhileCoolDownBro[a].m_playerid==senderId) return;
+            }
+            DontSpamingYourFuckingSkillWhileCoolDownBro.insertLast(SpamAvoider(senderId));
             const XmlElement@ info = getPlayerInfo(m_metagame, senderId);
 			if (info !is null) {
                 int cId = info.getIntAttribute("character_id");
@@ -205,6 +218,14 @@ class CommandSkill : Tracker {
 		}
     }
     void update(float time) {
+        if(DontSpamingYourFuckingSkillWhileCoolDownBro.length()>0){
+            for(uint a=0;a<DontSpamingYourFuckingSkillWhileCoolDownBro.length();a++){
+                DontSpamingYourFuckingSkillWhileCoolDownBro[a].m_time-=time;
+                if(DontSpamingYourFuckingSkillWhileCoolDownBro[a].m_time<0){
+                    DontSpamingYourFuckingSkillWhileCoolDownBro.removeAt(a);
+                }
+            }
+        }
         if(SkillArray.length()>0)
 		{
             for (uint a=0;a<SkillArray.length();a++){

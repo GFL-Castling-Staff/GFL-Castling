@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ai>
- <parameter class="vehicle_stuck_short_time" value="10.0" />
+  <parameter class="vehicle_stuck_short_time" value="0.1" />
   <parameter class="in_trenches_fade_off_timer" value="4.0" />
   <parameter class="accuracy_penalty_wear_off_rate" value="0.333" /> 
-  <parameter class="check_vehicles_interval" value="2.0" />
+  <parameter class="check_vehicles_interval" value="0.2" />
   <parameter class="team_member_monitor_enemies_time" value="1.5" />
   <parameter class="monitor_enemies_time" value="0.8" />
   <parameter class="check_supplies_time" value="5.0" />
@@ -15,7 +15,7 @@
   <parameter class="check_need_help_time" value="1.0" />
   <parameter class="fighting_time_fire_not_open" value="2.0" />
   <parameter class="cover_status_recheck_time" value="1.5" />
-  <parameter class="deploy_recheck_time" value="5.0" />
+  <parameter class="deploy_recheck_time" value="3.0" />
   <parameter class="monitor_enemies_to_stab_while_peace" value="2.0" />
   <parameter class="crouching_near_leader_rejoin_range" value="12.0" />
   <parameter class="grenade_monitor_range" value="15.0" />
@@ -23,7 +23,7 @@
   <parameter class="team_member_sight_range" value="30.0" />
   <parameter class="strike_frequency_time" value="60.0" />   <!-- was 90 (1.82) -->
   <parameter class="global_separation_radius_factor" value="1.5" />
-  <parameter class="prefer_roofs_probability" value="0.5" />
+  <parameter class="prefer_roofs_probability" value="0.2" />
   <parameter class="max_leader_authority_willing_to_join_another_squad" value="0.3" />
   <parameter class="defending_authority_offset_to_join_squad" value="0.2" />
   <parameter class="value_increase_required_to_join_defend_squad" value="0.1" />
@@ -111,7 +111,7 @@
   <parameter class="celebrating_stab_probability" value="1.0" /> 
   <parameter class="willingness_to_charge" value="0.0" />
   <parameter class="stab_range" value="3.5" />
-  <parameter class="check_vehicles_while_fire_open_interval" value="10.0" />  
+  <parameter class="check_vehicles_while_fire_open_interval" value="0.5" />  
   
   <parameter class="reaction_time_after_choosing_target" value="-1.0" />
   
