@@ -453,7 +453,8 @@
 	</soldier>
 	<!-- 警备士 -->
 	<soldier name="parw_police" spawn_score="0.8" squad_size_xp_cap="0.5" copy_from="default_ai">
-		<ai filename="melee.ai">
+		<ai filename="melee.ai">/
+		  <parameter class="deployment_area_utilization_factor" value="0.99" />
 		  <parameter class="uses_vehicles" value="100.0" />
 		</ai>
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">

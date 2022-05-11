@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<projectile class="grenade" name="Red Eye" key="red_eye.projectile" slot="0" on_ground_up="0 1 0" can_be_disarmed="0" can_be_detected_by_driver="0" time_to_live_out_in_the_open="0.0" drop_count_factor_on_death="0.0" drop_count_factor_on_player_death="0.0" pulldown_in_air="0.0" >
+<projectile class="grenade" key="red_eye.projectile" slot="0" on_ground_up="0 1 0" can_be_disarmed="0" can_be_detected_by_driver="0" time_to_live_out_in_the_open="0.0" drop_count_factor_on_death="0.0" drop_count_factor_on_player_death="0.0" pulldown_in_air="0.0" >
 
     <result class="hit" kill_probability="0" kill_decay_start_time="0.02" kill_decay_end_time="0.05" />
     <collision class="sticky" />

@@ -78,7 +78,7 @@
 
     <weak_hand_hold offset="0.4" />
     <projectile file="bullet_paradeus.projectile" >
-        <result class="blast"  damage="1.0" radius="1.5" decal="1" push="0.2" character_state="death" faction_compare="not_equal" />
+        <result class="blast"  damage="0.6" radius="1.5" decal="1" push="0.2" character_state="death" faction_compare="not_equal" />
         <trigger class="impact" />
     </projectile>
 </weapon>
