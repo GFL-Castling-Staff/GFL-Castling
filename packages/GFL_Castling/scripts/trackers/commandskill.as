@@ -179,6 +179,10 @@ class CommandSkill : Tracker {
                     excutePP19skill(cId,senderId,m_modifer,true);
                     return;        
                 }
+                 if (c_weaponType=="gkw_welrod.weapon"){
+                    excuteWerlodskill(cId,senderId,m_modifer,true);
+                    return;        
+                }
             }
         }
     }
@@ -903,7 +907,6 @@ class CommandSkill : Tracker {
             
         }
     }
-
     void excutePPSH41skill(int characterId,int playerId,SkillModifer@ modifer){
         bool ExistQueue = false;
         int j=-1;
@@ -1051,6 +1054,47 @@ class CommandSkill : Tracker {
                     else{
                         SkillArray.insertLast(SkillTrigger(characterId,40,"pp19"));
                     }
+
+                }
+            }
+        }
+    }    
+    void excuteWerlodskill(int characterId,int playerId,SkillModifer@ modifer,bool mod3=false){
+        bool ExistQueue = false;
+        int j=-1;
+        for (uint i=0;i<SkillArray.length();i++){
+            if (SkillArray[i].m_character_id==characterId && SkillArray[i].m_weapontype=="pp19") {
+                ExistQueue=true;
+                j=i;
+            }
+        }
+        if (ExistQueue){
+            dictionary a;
+            a["%time"] = ""+SkillArray[j].m_time;
+            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            _log("skill cooldown" + SkillArray[j].m_time);
+            return;
+        }
+        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+        if (character !is null) {
+            const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+            if (player !is null){
+                if (player.hasAttribute("aim_target")) {
+                    string target = player.getStringAttribute("aim_target");
+                    Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
+                    int factionid = character.getIntAttribute("faction_id");
+                    array<string> Voice={
+                        "PPsh41_SKILL1_JP.wav"
+                    };
+                    playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+                    playAnimationKey(m_metagame,characterId,"throwing, upside",true,true);
+                    c_pos = c_pos.add(Vector3(0,1,0));
+
+                    Vector3 u_pos = getAimUnitPosition(m_metagame,c_pos,stringToVector3(target));
+                    float ori4 = getAimOrientation4(m_metagame,c_pos,stringToVector3(target));
+
+                    spawnVehicle(m_metagame,1,0,u_pos,Orientation(0,1,0,ori4),"gk_werlod_shelter.vehicle");		
+                    SkillArray.insertLast(SkillTrigger(characterId,1,"werlod"));
 
                 }
             }
