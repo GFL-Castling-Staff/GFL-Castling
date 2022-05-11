@@ -394,7 +394,7 @@
 	<soldier name="default_ai" spawn_score="0.0" copy_from="default">
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="parw_strelet.weapon" enabled="1" />
-			<carry_item key="pard_strelet.carry_item" />
+			<carry_item key="pard_ar.carry_item" />
 		</resources>
 		<item_class_existence_config>
 			<!-- secondaries -->
@@ -406,7 +406,7 @@
 		</item_class_existence_config>
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="parw_strelet.weapon" enabled="1" />
-			<carry_item key="pard_strelet.carry_item" />
+			<carry_item key="pard_ar.carry_item" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="0.0" max="302.833" />
@@ -418,8 +418,7 @@
 	<soldier name="para_strelet" spawn_score="1.2" squad_size_xp_cap="0.5" copy_from="default_ai">
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="parw_strelet.weapon" enabled="1" />
-			<carry_item key="pard_strelet.carry_item" />
-			<call key="pard_zombie.call" />
+			<carry_item key="pard_ar.carry_item" />
 		</resources>
 	</soldier>
 	<soldier name="para_streletplus" spawn_score="1.0" squad_size_xp_cap="0.5" copy_from="default_ai">
@@ -434,14 +433,14 @@
 	<soldier name="para_rodelero" spawn_score="1.0" squad_size_xp_cap="0.5" copy_from="default_ai">
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="parw_rodelero.weapon" enabled="1" />
-			<carry_item key="pard_rodelero.carry_item" />
+			<carry_item key="pard_ar.carry_item" />
 		</resources>
 	</soldier>
 	<soldier name="parw_commander" spawn_score="0.6" squad_size_xp_cap="0.5" copy_from="default_ai">
 		<ai filename="elite.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="parw_commander.weapon" enabled="1" />
-			<carry_item key="pard_rodelero.carry_item" />
+			<carry_item key="pard_ar.carry_item" />
 			<call file="pard_zombie.call" />
 			<attribute_config class="xp">
 				<attribute weight="1.0" min="20.0" max="25.6" />
@@ -475,7 +474,7 @@
 		<character filename="pard_germdog.character" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="parw_germdog.weapon" enabled="1" probability="1.0"/>
-			<carry_item key="pard_strelet.carry_item" />
+			<carry_item key="pard_ar.carry_item" />
 			<attribute_config class="xp">
 				<attribute weight="1.0" min="1.0" max="5.6" />
 			</attribute_config>
