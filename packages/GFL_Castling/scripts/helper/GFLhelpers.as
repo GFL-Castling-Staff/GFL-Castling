@@ -257,7 +257,7 @@ void CreateProjectile(Metagame@ m_metagame,Vector3 startPos,Vector3 endPos,strin
 	if (barfoo < 0) barfoo=0.1f;
 	barfoo = sqrt(barfoo);
 	direction.set(direction.get_opIndex(0)/barfoo,direction.get_opIndex(1)/barfoo,direction.get_opIndex(2)/barfoo);
-	direction.scale(initspeed);
+	direction = direction.scale(initspeed);
 	string c = 
 		"<command class='create_instance'" +
 		" faction_id='" + fId + "'" +
@@ -307,7 +307,7 @@ void CreateProjectile(Metagame@ m_metagame,Vector3 startPos,Vector3 endPos,strin
 	if (barfoo < 0) barfoo=0.1f;
 	barfoo = sqrt(barfoo);
 	direction.set(direction.get_opIndex(0)/barfoo,direction.get_opIndex(1)/barfoo,direction.get_opIndex(2)/barfoo);
-	direction.scale(initspeed);
+	direction = direction.scale(initspeed);
 	string c = 
 		"<command class='create_instance'" +
 		" faction_id='" + fId + "'" +
@@ -378,7 +378,7 @@ void CreateDirectProjectile(Metagame@ m_metagame,Vector3 startPos,Vector3 endPos
 	float Vmod = sqrt(pow(direction.get_opIndex(0),2)  + pow(direction.get_opIndex(1),2) + pow(direction.get_opIndex(2),2));
 	if (Vmod< 0.00001f) Vmod= 0.00001f;
 	direction.set(direction.get_opIndex(0)/Vmod,direction.get_opIndex(1)/Vmod,direction.get_opIndex(2)/Vmod);
-	direction.scale(initspeed);
+	direction = direction.scale(initspeed);
 	string c = 
 		"<command class='create_instance'" +
 		" faction_id='" + fId + "'" +

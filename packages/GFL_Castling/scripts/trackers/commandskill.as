@@ -394,7 +394,7 @@ class CommandSkill : Tracker {
             int factionid = characterinfo.getIntAttribute("faction_id");
             c_pos=c_pos.add(Vector3(0,1,0));
             if (checkFlatRange(c_pos,stringToVector3(target),7)){
-                CreateProjectile(m_metagame,c_pos,stringToVector3(target),"SopmodSk_script.projectile",characterId,factionid,10,26.0);
+                CreateProjectile(m_metagame,c_pos,stringToVector3(target),"SopmodSk_script.projectile",characterId,factionid,20,26.0);
             }
             else{
                 CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"SopmodSk_script.projectile",characterId,factionid,26.0,6.0);
@@ -432,7 +432,7 @@ class CommandSkill : Tracker {
             c_pos=c_pos.add(Vector3(0,1,0));
             if(pussyskin){
                 if (checkFlatRange(c_pos,stringToVector3(target),7)){
-                    CreateProjectile(m_metagame,c_pos,stringToVector3(target),"40mm_hk416_3401.projectile",characterId,factionid,10,26.0);
+                    CreateProjectile(m_metagame,c_pos,stringToVector3(target),"40mm_hk416_3401.projectile",characterId,factionid,20,26.0);
                 }
                 else{
                     CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"40mm_hk416_3401.projectile",characterId,factionid,26.0,6.0);
@@ -447,7 +447,7 @@ class CommandSkill : Tracker {
             }
             else{
                 if (checkFlatRange(c_pos,stringToVector3(target),7)){
-                    CreateProjectile(m_metagame,c_pos,stringToVector3(target),"40mm_hk416.projectile",characterId,factionid,10,26.0);
+                    CreateProjectile(m_metagame,c_pos,stringToVector3(target),"40mm_hk416.projectile",characterId,factionid,20,26.0);
                 }
                 else{
                     CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"40mm_hk416.projectile",characterId,factionid,26.0,6.0);
@@ -793,16 +793,16 @@ class CommandSkill : Tracker {
             //CreateProjectile_H(m_metagame,c_pos.add(Vector3(0,-8.0,0)),s_dir.add(Vector3(0,0.0,0)),"destroyer_skill_body.projectile",characterId,factionid,26.0,12);
 
             // CreateProjectile(m_metagame,c_pos.add(Vector3(0,-10.0,0)),c_pos,"destroyer_skill_body.projectile",characterId,factionid,80,-0.01);              
-            CreateProjectile(m_metagame,c_pos,s_pos.add(Vector3(4,0,0)),"destroyer_skill.projectile",characterId,factionid,3600,0.001);
-            CreateProjectile(m_metagame,c_pos,s_pos.add(Vector3(2,0,0)),"destroyer_skill.projectile",characterId,factionid,3600,0.001);
-            CreateProjectile(m_metagame,c_pos,s_pos.add(Vector3(0,0,0)),"destroyer_skill.projectile",characterId,factionid,3600,0.001);
-            CreateProjectile(m_metagame,c_pos,s_pos.add(Vector3(-2,0,0)),"destroyer_skill.projectile",characterId,factionid,3600,0.001);
-            CreateProjectile(m_metagame,c_pos,s_pos.add(Vector3(-4,0,0)),"destroyer_skill.projectile",characterId,factionid,3600,0.001);
-            CreateProjectile(m_metagame,c_pos,s_pos.add(Vector3(0,0,4)),"destroyer_skill.projectile",characterId,factionid,3600,0.001);
-            CreateProjectile(m_metagame,c_pos,s_pos.add(Vector3(0,0,2)),"destroyer_skill.projectile",characterId,factionid,3600,0.001);
-            CreateProjectile(m_metagame,c_pos,s_pos.add(Vector3(0,0,0)),"destroyer_skill.projectile",characterId,factionid,3600,0.001);
-            CreateProjectile(m_metagame,c_pos,s_pos.add(Vector3(0,0,-2)),"destroyer_skill.projectile",characterId,factionid,3600,0.001);
-            CreateProjectile(m_metagame,c_pos,s_pos.add(Vector3(0,0,-4)),"destroyer_skill.projectile",characterId,factionid,3600,0.001);
+            CreateProjectile(m_metagame,c_pos,s_pos.add(Vector3(4,0,0)),"destroyer_skill.projectile",characterId,factionid,200,0.001);
+            CreateProjectile(m_metagame,c_pos,s_pos.add(Vector3(2,0,0)),"destroyer_skill.projectile",characterId,factionid,200,0.001);
+            CreateProjectile(m_metagame,c_pos,s_pos.add(Vector3(0,0,0)),"destroyer_skill.projectile",characterId,factionid,200,0.001);
+            CreateProjectile(m_metagame,c_pos,s_pos.add(Vector3(-2,0,0)),"destroyer_skill.projectile",characterId,factionid,200,0.001);
+            CreateProjectile(m_metagame,c_pos,s_pos.add(Vector3(-4,0,0)),"destroyer_skill.projectile",characterId,factionid,200,0.001);
+            CreateProjectile(m_metagame,c_pos,s_pos.add(Vector3(0,0,4)),"destroyer_skill.projectile",characterId,factionid,200,0.001);
+            CreateProjectile(m_metagame,c_pos,s_pos.add(Vector3(0,0,2)),"destroyer_skill.projectile",characterId,factionid,200,0.001);
+            CreateProjectile(m_metagame,c_pos,s_pos.add(Vector3(0,0,0)),"destroyer_skill.projectile",characterId,factionid,200,0.001);
+            CreateProjectile(m_metagame,c_pos,s_pos.add(Vector3(0,0,-2)),"destroyer_skill.projectile",characterId,factionid,200,0.001);
+            CreateProjectile(m_metagame,c_pos,s_pos.add(Vector3(0,0,-4)),"destroyer_skill.projectile",characterId,factionid,200,0.001);
 
             array<string> Voice={
             "Destroyer_buhuo_SKILL02_JP.wav",
@@ -860,15 +860,15 @@ class CommandSkill : Tracker {
 
             // CreateProjectile(m_metagame,c_pos.add(Vector3(0,-10.0,0)),c_pos,"destroyer_skill_body.projectile",characterId,factionid,80,-0.01);              
             int ix = 5;
-            CreateProjectile(m_metagame,c_pos.add(Vector3(dx*dd*3-dy*dd*3/tt,0,dy*dd*3+dx*dd*3/tt)),c_pos.add(Vector3(dx*dd*(ix*2-1)-dy*dd*(ix*2-1)/tt,0,dy*dd*(ix*2-1)+dx*dd*(ix*2-1)/tt)),"excutioner_skill_1.projectile",characterId,factionid,5020,1,Orientation(0,1,3,2.14));
-            CreateProjectile(m_metagame,c_pos.add(Vector3(dx*dd*4           ,0,dy*dd*4           )),c_pos.add(Vector3(dx*dd*(ix*2)                    ,0,dy*dd*(ix*2)                    )),"excutioner_skill_1.projectile",characterId,factionid,5020,1,Orientation(0,1,3,2.14));
-            CreateProjectile(m_metagame,c_pos.add(Vector3(dx*dd*3+dy*dd*3/tt,0,dy*dd*3-dx*dd*3/tt)),c_pos.add(Vector3(dx*dd*(ix*2-1)+dy*dd*(ix*2-1)/tt,0,dy*dd*(ix*2-1)-dx*dd*(ix*2-1)/tt)),"excutioner_skill_1.projectile",characterId,factionid,5020,1,Orientation(0,1,3,2.14));
+            CreateProjectile(m_metagame,c_pos.add(Vector3(dx*dd*3-dy*dd*3/tt,0,dy*dd*3+dx*dd*3/tt)),c_pos.add(Vector3(dx*dd*(ix*2-1)-dy*dd*(ix*2-1)/tt,0,dy*dd*(ix*2-1)+dx*dd*(ix*2-1)/tt)),"excutioner_skill_1.projectile",characterId,factionid,180,1,Orientation(0,1,3,2.14));
+            CreateProjectile(m_metagame,c_pos.add(Vector3(dx*dd*4           ,0,dy*dd*4           )),c_pos.add(Vector3(dx*dd*(ix*2)                    ,0,dy*dd*(ix*2)                    )),"excutioner_skill_1.projectile",characterId,factionid,180,1,Orientation(0,1,3,2.14));
+            CreateProjectile(m_metagame,c_pos.add(Vector3(dx*dd*3+dy*dd*3/tt,0,dy*dd*3-dx*dd*3/tt)),c_pos.add(Vector3(dx*dd*(ix*2-1)+dy*dd*(ix*2-1)/tt,0,dy*dd*(ix*2-1)-dx*dd*(ix*2-1)/tt)),"excutioner_skill_1.projectile",characterId,factionid,180,1,Orientation(0,1,3,2.14));
 
             for(ix=2;ix<=6;ix++)
             {
-                CreateProjectile(m_metagame,c_pos.add(Vector3(dx*dd*(ix*2-1)-dy*dd*(ix*2-1)/tt,1,dy*dd*(ix*2-1)+dx*dd*(ix*2-1)/tt)),c_pos.add(Vector3(dx*dd*(ix*2-1)-dy*dd*(ix*2-1)/tt,0,dy*dd*(ix*2-1)+dx*dd*(ix*2-1)/tt)),"excutioner_skill.projectile",characterId,factionid,5020,0.001);
-                CreateProjectile(m_metagame,c_pos.add(Vector3(dx*dd*(ix*2)                    ,1,dy*dd*(ix*2)                    )),c_pos.add(Vector3(dx*dd*(ix*2)                    ,0,dy*dd*(ix*2)                    )),"excutioner_skill.projectile",characterId,factionid,5020,0.001);
-                CreateProjectile(m_metagame,c_pos.add(Vector3(dx*dd*(ix*2-1)+dy*dd*(ix*2-1)/tt,1,dy*dd*(ix*2-1)-dx*dd*(ix*2-1)/tt)),c_pos.add(Vector3(dx*dd*(ix*2-1)+dy*dd*(ix*2-1)/tt,0,dy*dd*(ix*2-1)-dx*dd*(ix*2-1)/tt)),"excutioner_skill.projectile",characterId,factionid,5020,0.001);
+                CreateProjectile(m_metagame,c_pos.add(Vector3(dx*dd*(ix*2-1)-dy*dd*(ix*2-1)/tt,1,dy*dd*(ix*2-1)+dx*dd*(ix*2-1)/tt)),c_pos.add(Vector3(dx*dd*(ix*2-1)-dy*dd*(ix*2-1)/tt,0,dy*dd*(ix*2-1)+dx*dd*(ix*2-1)/tt)),"excutioner_skill.projectile",characterId,factionid,180,0.001);
+                CreateProjectile(m_metagame,c_pos.add(Vector3(dx*dd*(ix*2)                    ,1,dy*dd*(ix*2)                    )),c_pos.add(Vector3(dx*dd*(ix*2)                    ,0,dy*dd*(ix*2)                    )),"excutioner_skill.projectile",characterId,factionid,180,0.001);
+                CreateProjectile(m_metagame,c_pos.add(Vector3(dx*dd*(ix*2-1)+dy*dd*(ix*2-1)/tt,1,dy*dd*(ix*2-1)-dx*dd*(ix*2-1)/tt)),c_pos.add(Vector3(dx*dd*(ix*2-1)+dy*dd*(ix*2-1)/tt,0,dy*dd*(ix*2-1)-dx*dd*(ix*2-1)/tt)),"excutioner_skill.projectile",characterId,factionid,180,0.001);
             }
 
 
@@ -900,7 +900,7 @@ class CommandSkill : Tracker {
             Vector3 s_pos = stringToVector3(target);        
             int factionid = characterinfo.getIntAttribute("faction_id");
 
-            CreateProjectile(m_metagame,c_pos,s_pos,"baibaozi_skill.projectile",characterId,factionid,5020,8);
+            CreateProjectile(m_metagame,c_pos,s_pos,"baibaozi_skill.projectile",characterId,factionid,200,8);
 
             // array<string> Voice={
             // "Excutioner_buhuo_SKILL02_JP.wav",
@@ -1067,7 +1067,7 @@ class CommandSkill : Tracker {
         bool ExistQueue = false;
         int j=-1;
         for (uint i=0;i<SkillArray.length();i++){
-            if (SkillArray[i].m_character_id==characterId && SkillArray[i].m_weapontype=="pp19") {
+            if (SkillArray[i].m_character_id==characterId && SkillArray[i].m_weapontype=="welrod") {
                 ExistQueue=true;
                 j=i;
             }
@@ -1138,7 +1138,7 @@ class CommandSkill : Tracker {
                     playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
                     playAnimationKey(m_metagame,characterId,"ARswitch0.5",true,true);
                     c_pos=c_pos.add(Vector3(0,1,0));
-                    CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"ak15_mod3.projectile",characterId,factionid,4000.0);  
+                    CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"ak15_mod3.projectile",characterId,factionid,220.0);  
 					int affectedNumber =0;
 					array<int> enemyfaction = {0,1,2,3,4};
 					for(int i =0;i<4;i++){
