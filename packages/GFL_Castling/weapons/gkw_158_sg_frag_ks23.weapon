@@ -16,7 +16,7 @@
 	class="1" 
 	reload_one_at_a_time="1"
 	sight_range_modifier="1.4" 
-	projectile_speed="70" 
+	projectile_speed="110" 
 	barrel_offset="0.4" 
 	spread_range="0.1"
 	 />
@@ -48,7 +48,7 @@
     
     <weak_hand_hold offset="0.3" />
     <projectile file="aa12_only.projectile">
-        <result class="blast" radius="4.5" damage="4" push="0.3" decal="1" faction_compare="not_equal" />
+        <result class="blast" radius="5" damage="8" push="0.3" decal="1" faction_compare="not_equal" />
     </projectile>
     
     <!--Accuracy, Movement speed-->
