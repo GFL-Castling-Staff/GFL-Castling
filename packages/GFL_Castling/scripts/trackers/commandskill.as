@@ -179,6 +179,10 @@ class CommandSkill : Tracker {
                     excutePP19skill(cId,senderId,m_modifer,true);
                     return;        
                 }
+                if (c_weaponType=="gkw_ak15mod3.weapon"|| c_weaponType=="gkw_ak15mod3_skill.weapon"){
+                    excuteAK15MOD3skill(cId,senderId,m_modifer);
+                    return;        
+                }
                  if (c_weaponType=="gkw_welrod.weapon"){
                     excuteWerlodskill(cId,senderId,m_modifer,true);
                     return;        
@@ -273,7 +277,7 @@ class CommandSkill : Tracker {
     }
 
     void excuteTimerEffect(SkillEffectTimer@ Trigger){
-        if (Trigger.m_EffectKey =="MP5MOD3" || Trigger.m_EffectKey =="MP5" ){
+        if (Trigger.m_EffectKey =="MP5MOD3" || Trigger.m_EffectKey =="MP5" || Trigger.m_EffectKey =="AK15MOD3"){
             if(Trigger.m_specialkey1==""){
                 Trigger.m_specialkey1="exo_t4.carry_item";
             }
@@ -1100,6 +1104,85 @@ class CommandSkill : Tracker {
             }
         }
     }
+    void excuteAK15MOD3skill(int characterId,int playerId,SkillModifer@ modifer){
+        bool ExistQueue = false;
+        int j=-1;
+        for (uint i=0;i<SkillArray.length();i++){
+            if (SkillArray[i].m_character_id==characterId && SkillArray[i].m_weapontype=="AK15MOD3") {
+                ExistQueue=true;
+                j=i;
+            }
+        }
+        if (ExistQueue){
+            dictionary a;
+            a["%time"] = ""+SkillArray[j].m_time;
+            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            _log("skill cooldown" + SkillArray[j].m_time);
+            return;
+        }
+        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+        if (character !is null) {
+            const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+            if (player !is null){
+                if (player.hasAttribute("aim_target")) {
+                    string target = player.getStringAttribute("aim_target");
+                    Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
+                    int factionid = character.getIntAttribute("faction_id");
+                    array<string> Voice={
+                        "Vector_SKILL1_JP.wav",
+                        "Vector_SKILL2_JP.wav",
+                        "Vector_SkillC1.wav",
+                        "Vector_SkillC2.wav",
+                        "Vector_SkillC3.wav"
+                    };
+                    playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+                    playAnimationKey(m_metagame,characterId,"ARswitch0.5",true,true);
+                    c_pos=c_pos.add(Vector3(0,1,0));
+                    CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"ak15_mod3.projectile",characterId,factionid,4000.0);  
+					int affectedNumber =0;
+					array<int> enemyfaction = {0,1,2,3,4};
+					for(int i =0;i<4;i++){
+						if (enemyfaction[i] ==factionid){
+							enemyfaction.removeAt(i);
+						}
+					}
+					int n=enemyfaction.length-1;
+					for(int i=0;i<n;i++){
+						array<const XmlElement@> affectedCharacter = getCharactersNearPosition(m_metagame,c_pos,enemyfaction[i],40.0f);
+						affectedNumber += affectedCharacter.length;
+					}
+					if (affectedNumber <= 3){
+                        SkillArray.insertLast(SkillTrigger(characterId,10,"AK15MOD3"));
+					}
+					else if(affectedNumber >= 4 && affectedNumber <= 7){
+                        SkillArray.insertLast(SkillTrigger(characterId,15,"AK15MOD3"));
+					}
+					else {
+                        SkillArray.insertLast(SkillTrigger(characterId,30,"AK15MOD3"));
+                        string vestkey="exo_t4.carry_item";
+                        vestkey = getPlayerEquipmentKey(m_metagame,characterId,4);
+                        if (vestkey=="immunity_mp5.carry_item" || vestkey==""){
+                            vestkey=="exo_t4.carry_item";
+                        }
+                            XmlElement c ("command");
+                            c.setStringAttribute("class", "update_inventory");
+                            c.setIntAttribute("container_type_id", 4);
+                            c.setIntAttribute("character_id", characterId); 
+                        {
+                            XmlElement k("item");
+                            k.setStringAttribute("class", "carry_item");
+                            k.setStringAttribute("key", "immunity_mp5.carry_item");
+                            c.appendChild(k);
+                        }            
+                        m_metagame.getComms().send(c);
+                        SkillEffectTimer@ stimer = SkillEffectTimer(characterId,2,"AK15MOD3");
+                        stimer.setSkey(vestkey);
+                        TimerArray.insertLast(stimer);
+                    }
+                }
+            }
+        }   
+    }  
 }
 
 
