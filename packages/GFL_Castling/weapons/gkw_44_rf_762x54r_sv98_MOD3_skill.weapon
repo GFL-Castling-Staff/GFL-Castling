@@ -50,7 +50,7 @@
 	
 
     <weak_hand_hold offset="0.3" />
-    <projectile file="bullet.projectile">
+    <projectile file="bullet.projectile" can_be_detected_by_footmen="0">
         <result class="blast" 
         damage="11.124"
         radius="3.0"
