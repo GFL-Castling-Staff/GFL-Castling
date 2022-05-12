@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<carry_items>
+	<carry_item key="pard_nyto.carry_item" time_to_live_out_in_the_open="15" name="Eleanor" transform_on_consume="pard_nyto_1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="0.5" />
+	</carry_item>
+	<carry_item key="pard_nyto_1" time_to_live_out_in_the_open="15" name="Eleanor" transform_on_consume="pard_nyto_2" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="0.5" />
+	</carry_item>
+	<carry_item key="pard_nyto_2" time_to_live_out_in_the_open="15" name="Eleanor" transform_on_consume="pard_nyto_3" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="0.5" />
+	</carry_item>
+	<carry_item key="pard_nyto_3" time_to_live_out_in_the_open="15" name="Eleanor" transform_on_consume="pard_nyto_4" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="0.5" />
+	</carry_item>
+	<carry_item key="pard_nyto_4" time_to_live_out_in_the_open="15" name="Eleanor" transform_on_consume="pard_nyto_5" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="0.5" />
+	</carry_item>
+	<carry_item key="pard_nyto_5" time_to_live_out_in_the_open="15" name="Eleanor" transform_on_consume="pard_nyto_6" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="0.5" />
+	</carry_item>
+	<carry_item key="pard_nyto_6" time_to_live_out_in_the_open="15" name="Eleanor" transform_on_consume="pard_nyto_7" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="0.5" />
+	</carry_item>
+	<carry_item key="pard_nyto_7" time_to_live_out_in_the_open="15" name="Eleanor" transform_on_consume="pard_nyto_8" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="0.5" />
+	</carry_item>
+	<carry_item key="pard_nyto_8" time_to_live_out_in_the_open="15" name="Eleanor" transform_on_consume="pard_nyto_9" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="stun" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="0.5" />
+	</carry_item>
+	<carry_item key="pard_nyto_9" time_to_live_out_in_the_open="15" name="Eleanor" transform_on_consume="pard_nyto_10" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="0.5" />
+	</carry_item>
+	<carry_item key="pard_nyto_10" time_to_live_out_in_the_open="15" name="Eleanor" transform_on_consume="pard_nyto_11" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.2" />
+        <modifier class="hit_success_probability" value="-0.6" />
+        <modifier class="detectability" value="0.5" />
+	</carry_item>
+	<carry_item key="pard_nyto_11" time_to_live_out_in_the_open="15" name="Eleanor" transform_on_consume="pard_nyto_12" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.2" />
+        <modifier class="hit_success_probability" value="-0.6" />
+        <modifier class="detectability" value="0.5" />
+	</carry_item>
+	<carry_item key="pard_nyto_12" time_to_live_out_in_the_open="15" name="Eleanor" transform_on_consume="pard_nyto_13" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.2" />
+        <modifier class="hit_success_probability" value="-0.6" />
+        <modifier class="detectability" value="0.5" />
+	</carry_item>
+	<carry_item key="pard_nyto_13" time_to_live_out_in_the_open="15" name="Eleanor" transform_on_consume="pard_nyto_14" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.2" />
+        <modifier class="hit_success_probability" value="-0.6" />
+        <modifier class="detectability" value="0.5" />
+	</carry_item>
+	<carry_item key="pard_nyto_14" time_to_live_out_in_the_open="15" name="Eleanor" transform_on_consume="pard_nyto_15" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.2" />
+        <modifier class="hit_success_probability" value="-0.6" />
+        <modifier class="detectability" value="0.5" />
+	</carry_item>
+	<carry_item key="pard_nyto_15" time_to_live_out_in_the_open="15" name="Eleanor" transform_on_consume="pard_nyto_16" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.2" />
+        <modifier class="hit_success_probability" value="-0.6" />
+        <modifier class="detectability" value="0.5" />
+	</carry_item>
+	<carry_item key="pard_nyto_16" time_to_live_out_in_the_open="15" name="Eleanor" transform_on_consume="pard_nyto_17" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.2" />
+        <modifier class="hit_success_probability" value="-0.6" />
+        <modifier class="detectability" value="0.5" />
+	</carry_item>
+	<carry_item key="pard_nyto_17" time_to_live_out_in_the_open="15" name="Eleanor" transform_on_consume="pard_nyto_18" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.2" />
+        <modifier class="hit_success_probability" value="-0.6" />
+        <modifier class="detectability" value="0.5" />
+	</carry_item>
+	<carry_item key="pard_nyto_18" time_to_live_out_in_the_open="15" name="Eleanor" transform_on_consume="pard_nyto_19" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.2" />
+        <modifier class="hit_success_probability" value="-0.6" />
+        <modifier class="detectability" value="0.5" />
+	</carry_item>
+	<carry_item key="pard_nyto_19" time_to_live_out_in_the_open="15" name="Eleanor" transform_on_consume="pard_nyto_20" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.2" />
+        <modifier class="hit_success_probability" value="-0.6" />
+        <modifier class="detectability" value="0.5" />
+	</carry_item>
+	<carry_item key="pard_nyto_20" time_to_live_out_in_the_open="15" name="Eleanor" transform_on_consume="pard_nyto_21" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.4" />
+        <modifier class="hit_success_probability" value="-0.6" />
+        <modifier class="detectability" value="0.5" />
+	</carry_item>
+	<carry_item key="pard_nyto_21" time_to_live_out_in_the_open="15" name="Eleanor" transform_on_consume="pard_nyto_22" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.4" />
+        <modifier class="hit_success_probability" value="-0.6" />
+        <modifier class="detectability" value="0.5" />
+	</carry_item>
+	<carry_item key="pard_nyto_22" time_to_live_out_in_the_open="15" name="Eleanor" transform_on_consume="pard_nyto_23" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.4" />
+        <modifier class="hit_success_probability" value="-0.6" />
+        <modifier class="detectability" value="0.5" />
+	</carry_item>
+	<carry_item key="pard_nyto_23" time_to_live_out_in_the_open="15" name="Eleanor" transform_on_consume="pard_nyto_24" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.4" />
+        <modifier class="hit_success_probability" value="-0.6" />
+        <modifier class="detectability" value="0.5" />
+	</carry_item>
+	<carry_item key="pard_nyto_24" time_to_live_out_in_the_open="15" name="Eleanor" transform_on_consume="pard_nyto_25" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.4" />
+        <modifier class="hit_success_probability" value="-0.6" />
+        <modifier class="detectability" value="0.5" />
+	</carry_item>
+	<carry_item key="pard_nyto_25" time_to_live_out_in_the_open="15" name="Eleanor" transform_on_consume="pard_nyto_26" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.4" />
+        <modifier class="hit_success_probability" value="-0.6" />
+        <modifier class="detectability" value="0.5" />
+	</carry_item>
+	<carry_item key="pard_nyto_26" time_to_live_out_in_the_open="15" name="Eleanor" transform_on_consume="pard_nyto_27" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.4" />
+        <modifier class="hit_success_probability" value="-0.6" />
+        <modifier class="detectability" value="0.5" />
+	</carry_item>
+	<carry_item key="pard_nyto_27" time_to_live_out_in_the_open="15" name="Eleanor" transform_on_consume="pard_nyto_28" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.4" />
+        <modifier class="hit_success_probability" value="-0.6" />
+        <modifier class="detectability" value="0.5" />
+	</carry_item>
+	<carry_item key="pard_nyto_28" time_to_live_out_in_the_open="15" name="Eleanor" transform_on_consume="pard_nyto_29" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.4" />
+        <modifier class="hit_success_probability" value="-0.6" />
+        <modifier class="detectability" value="0.5" />
+	</carry_item>
+	<carry_item key="pard_nyto_29" time_to_live_out_in_the_open="15" name="Eleanor" transform_on_consume="pard_nyto_30" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="unwound" output_character_state="unwound" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="unwound" output_character_state="unwound" consumes_item="0"/>
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
+        <modifier class="melee_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
+        <modifier class="melee_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+        <modifier class="melee_hit_result" input_character_state="unwound" output_character_state="unwound" consumes_item="0"/>
+        <modifier class="speed" value="0.4" />
+        <modifier class="hit_success_probability" value="-0.6" />
+        <modifier class="detectability" value="0.5" />
+	</carry_item>
+</carry_items>

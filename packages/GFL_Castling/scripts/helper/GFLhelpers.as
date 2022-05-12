@@ -185,6 +185,56 @@ void spawnSoldier(Metagame@ metagame, uint count, uint factionId, string positio
 	}
 }
 
+float getAimOrientation4(Metagame@ metagame, Vector3 s_pos, Vector3 e_pos) {
+	float dx = e_pos.m_values[0]-s_pos.m_values[0];
+	float dy = e_pos.m_values[2]-s_pos.m_values[2];
+    float ds = sqrt(dx*dx+dy*dy);
+    if(ds<=0.000001f) ds=0.000001f;
+	float dir = acos(dx/ds);
+	if(asin(dy/ds)>0) {
+		return (dir*1.0-1.57)*(-1.0);
+	}
+	else {
+		return (dir*(-1.0)-1.57)*(-1.0);
+	}
+}
+
+Vector3 getAimUnitPosition(Metagame@ metagame, Vector3 s_pos, Vector3 e_pos) {
+	float dx = e_pos.m_values[0]-s_pos.m_values[0];
+	float dy = e_pos.m_values[2]-s_pos.m_values[2];
+    float ds = sqrt(dx*dx+dy*dy);
+    if(ds<=0.000001f) ds=0.000001f;
+	return s_pos.add(Vector3(dx/ds,0,dy/ds));
+}
+
+void spawnVehicle(Metagame@ metagame, uint count, uint factionId, Vector3 position, Orientation@ dir, string instanceKey) {
+	for (uint i = 0; i < count; ++i) {
+		metagame.getComms().send(
+		"<command " +
+		" class='create_instance' " + 
+		" faction_id='" + factionId + "' " +
+		" position='" + position.toString() + "' " + 
+		" orientation='" + dir.output() + "' " + 
+		" instance_class='vehicle' " + 
+		" instance_key='" + instanceKey + "'> " + 
+		"</command>");
+	}
+}
+
+void spawnVehicle(Metagame@ metagame, uint count, uint factionId, string position, Orientation@ dir, string instanceKey) {
+	for (uint i = 0; i < count; ++i) {
+		metagame.getComms().send(
+		"<command " +
+		" class='create_instance' " + 
+		" faction_id='" + factionId + "' " +
+		" position='" + position + "' " + 
+		" orientation='" + dir.output() + "' " + 
+		" instance_class='vehicle' " + 
+		" instance_key='" + instanceKey + "'> " + 
+		"</command>");
+	}
+}
+
 void CreateProjectile(Metagame@ m_metagame,Vector3 startPos,Vector3 endPos,string key,int cId,int fId,float initspeed,float ggg){
 	initspeed=initspeed/60;
 	startPos = startPos.add(Vector3(0,1,0));

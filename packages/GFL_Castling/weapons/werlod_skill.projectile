@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<projectile class="grenade" name="" slot="1" pulldown_in_air="99" key="werlod_skill.projectile">
+    <tag name="rocket"/>
+    <trigger class="time" time_to_live="0.1"/>
+    <rotation class="none" />
+    <model  />
+
+    <commonness value="0.0" />
+    
+    <effect class="result" key="other" ref="SmokeBurst" post_processing="1" />
+    <effect class="result" key="other" ref="Shine" lighting="0" />
+    <effect class="result" key="other" ref="HitTankSparks" lighting="0" />     
+
+    <effect class="activated" ref="Propulsion" />
+
+</projectile>
