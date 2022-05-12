@@ -34,15 +34,7 @@
 	<!--Sounds-->
 	
     <sound key="fire" fileref="ksvk_fire_FromSURVARIUM.wav" volume="1.4" />
-    <sound key="cycle" fileref="KSVK_BLACKACTION_JP.wav" volume="0.8" pitch_variety="0"/>
-    <sound key="cycle" fileref="KSVK_FORMATION_JP.wav" volume="0.8" pitch_variety="0"/>
-    <sound key="cycle" fileref="KSVK_HELLO_JP.wav" volume="0.8" pitch_variety="0"/>
-    <sound key="cycle" fileref="KSVK_OPERATIONBEGIN_JP.wav" volume="0.8" pitch_variety="0"/>
-    <sound key="cycle" fileref="KSVK_PHRASE_JP.wav" volume="0.8" pitch_variety="0"/>
-    <sound key="cycle" fileref="KSVK_TIP_JP.wav" volume="0.8" pitch_variety="0"/>
-    <sound key="cycle" fileref="KSVK_ATTACK_JP.wav" volume="0.8" pitch_variety="0"/>
-    <sound key="cycle" fileref="KSVK_DEFENSE_JP.wav" volume="0.8" pitch_variety="0"/>
-    <sound key="cycle" fileref="KSVK_GOATTACK_JP.wav" volume="0.8" pitch_variety="0"/>
+    <sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
     <sound key="magazine_out" fileref="ksvk_mgz_out_FromSURVARIUM.wav" volume="0.5"/>
     <sound key="magazine_in" fileref="ksvk_mgz_in_FromSURVARIUM.wav" volume="0.5"/>
     <sound key="cycle_out" fileref="ksvk_cycle_out_FromSURVARIUM.wav" volume="0.1"/>
@@ -109,13 +101,7 @@
 	<!--Sounds-->
 	
     <sound key="fire" fileref="ksvkmod3skill_fire_FromAPEX.wav" volume="1.3" />
-    <sound key="cycle" fileref="KSVK_ATTACK_JP.wav" volume="0.8" pitch_variety="0"/>
-    <sound key="cycle" fileref="KSVK_DEFENSE_JP.wav" volume="0.8" pitch_variety="0"/>
-    <sound key="cycle" fileref="KSVK_GOATTACK_JP.wav" volume="0.8" pitch_variety="0"/>
-    <sound key="cycle" fileref="KSVKMod_SKILL1_JP.wav" volume="0.8" pitch_variety="0"/>
-    <sound key="cycle" fileref="KSVKMod_SKILL2_JP.wav" volume="0.8" pitch_variety="0"/>
-    <sound key="cycle" fileref="KSVKMod_SKILL3_JP.wav" volume="0.8" pitch_variety="0"/>
-    <sound key="cycle" fileref="KSVKMod_WIN_JP.wav" volume="0.8" pitch_variety="0"/>
+    <sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
     <sound key="magazine_out" fileref="ksvk_mgz_out_FromSURVARIUM.wav" volume="0.5"/>
     <sound key="magazine_in" fileref="ksvk_mgz_in_FromSURVARIUM.wav" volume="0.5"/>
     <sound key="cycle_out" fileref="ksvk_cycle_out_FromSURVARIUM.wav" volume="0.1"/>
