@@ -38,7 +38,7 @@
 
 
 
-    <projectile file="bullet.projectile">
+    <projectile file="bullet.projectile" can_be_detected_by_footmen="0">
         <result class="hit" kill_probability="1.98" kill_decay_start_time="3.273" kill_decay_end_time="5.455" />
     </projectile>
     <stance state_key="running" accuracy="0.45" />
@@ -48,8 +48,7 @@
     <stance state_key="standing" accuracy="1.1" />
     <stance state_key="crouching" accuracy="1.584" />
     <stance state_key="prone" accuracy="1.98" />
-    <stance state_key="over_wall" accuracy="1.98" />  
-    <modifier class="speed" value="-0.2" /> 
+    <stance state_key="over_wall" accuracy="1.98" /> 
 
 </weapon>
 <weapon file="heavy_mg.animation_base" key="gkw_aek999_skill.weapon">
@@ -67,7 +66,7 @@
 	name="AEK-999-[Hunting Impulse N]" 
 	class="0" 
 	projectile_speed="196.4" 
-	spread_range="0.3"
+	spread_range="0.1"
 	sight_range_modifier="2.5"
     can_shoot_crouching="1"
     can_shoot_prone="1"/>
@@ -93,7 +92,7 @@
 
 
 
-    <projectile file="bullet.projectile">
+    <projectile file="bullet.projectile" can_be_detected_by_footmen="0">
         <result class="hit" kill_probability="2.3" kill_decay_start_time="3.273" kill_decay_end_time="5.455" />
     </projectile>
        <stance state_key="running" accuracy="0.6" />
