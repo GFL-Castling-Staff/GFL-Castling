@@ -1094,7 +1094,7 @@ class CommandSkill : Tracker {
                     float ori4 = getAimOrientation4(m_metagame,c_pos,stringToVector3(target));
 
                     spawnVehicle(m_metagame,1,0,u_pos,Orientation(0,1,0,ori4),"gk_werlod_shelter.vehicle");		
-                    SkillArray.insertLast(SkillTrigger(characterId,1,"werlod"));
+                    SkillArray.insertLast(SkillTrigger(characterId,20,"werlod"));
 
                 }
             }
