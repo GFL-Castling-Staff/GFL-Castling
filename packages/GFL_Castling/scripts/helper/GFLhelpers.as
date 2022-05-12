@@ -199,12 +199,12 @@ float getAimOrientation4(Metagame@ metagame, Vector3 s_pos, Vector3 e_pos) {
 	}
 }
 
-Vector3 getAimUnitPosition(Metagame@ metagame, Vector3 s_pos, Vector3 e_pos) {
+Vector3 getAimUnitPosition(Metagame@ metagame, float scale, Vector3 s_pos, Vector3 e_pos) {
 	float dx = e_pos.m_values[0]-s_pos.m_values[0];
 	float dy = e_pos.m_values[2]-s_pos.m_values[2];
     float ds = sqrt(dx*dx+dy*dy);
     if(ds<=0.000001f) ds=0.000001f;
-	return s_pos.add(Vector3(dx/ds,0,dy/ds));
+	return s_pos.add(Vector3(dx*scale/ds,0,dy*scale/ds));
 }
 
 void spawnVehicle(Metagame@ metagame, uint count, uint factionId, Vector3 position, Orientation@ dir, string instanceKey) {
