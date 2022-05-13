@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<projectile class="grenade" name="NTW20" slot="0" key="ak15_mod3.projectile" pulldown_in_air="0">
-    <result class="blast" radius="3" damage="9.01" push="0.2" decal="0" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0" />
+<projectile class="grenade" slot="0" key="ak15_mod3.projectile" pulldown_in_air="2">
+    <result class="blast" radius="3.5" damage="10.0" push="0.2" decal="0" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0" />
     <trigger class="impact" />
     <rotation class="motion" />
-    <throwable max_speed="200.0"/>
     <sound class="result" key="terrain" fileref="ricochet1.wav" />
     <sound class="result" key="terrain" fileref="ricochet2.wav" />
     <sound class="result" key="terrain" fileref="ricochet3.wav" />
@@ -40,10 +39,11 @@
 
     <sound class="result" key="static_object" copy="terrain" />
     
-    <effect class="result" key="terrain" ref="result_ksvk" use_surface_color="1" />
-    <effect class="result" key="vehicle" ref="result_ksvk" use_surface_color="1" />
-    <effect class="result" key="static_object" ref="result_ksvk" use_surface_color="1" />
-    <effect class="result" key="charater" ref="result_ksvk" use_surface_color="1" />
+    <effect class="result" key="terrain" ref="Burst" use_surface_color="1" />
+    <effect class="result" key="terrain" ref="ak15mod3_skill" use_surface_color="1" />
+    <effect class="result" key="vehicle" copy="terrain" />
+    <effect class="result" key="other" copy="terrain" />
+    <effect class="result" key="character" copy="terrain" />
 
     <trail probability="1.0" key="bullet_new"/>
 

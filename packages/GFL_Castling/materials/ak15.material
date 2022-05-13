@@ -1,0 +1,18 @@
+material ak15mod3_wolf
+{
+	receive_shadows off
+    technique
+    {
+        pass
+        {
+			emissive 1 1 1 1
+            lighting on
+            depth_write off
+            scene_blend alpha_blend
+            fog_override false
+            texture_unit{
+                texture ak15_wolf.png
+            }
+        }
+    }
+}
