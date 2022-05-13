@@ -371,7 +371,7 @@
 		<ai filename="elite.ai" />
 		<models file="kcco_human_basic.models" />
 		<models file="common_bonus.models" />
-		<resources file="common.resources" />
+		<!-- <resources file="common.resources" /> -->
 		<resources file="kcco.resources" />
 		<!-- <resources file="kcco_secondaries.resources" /> -->
 		<!-- <resources file="kcco_default.resources" /> -->
@@ -397,7 +397,7 @@
 	<!-- default ai group -->
 	<soldier name="default_ai" spawn_score="0.0" copy_from="default">
 		<!-- <resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1"> -->
-		<resources file="common.resources" />
+		<resources file="kcco.resources" />
 		<resources file="kcco_call.resources" />
 		<resources>
 			<weapon key="gkw_an94.weapon" enabled="1" />
@@ -423,7 +423,7 @@
 	<soldier name="default_bot" spawn_score="0.0" firstnames_file="kcco_first.name" lastnames_file="kcco_last.name">
 		<ai filename="default.ai" />
 		<character filename="default_kcco_bot.character" />
-		<resources file="common.resources" />
+		<resources file="kcco.resources" />
 		<resources file="kcco_call.resources" />
 		<item_class_existence_config>
 			<!-- secondaries -->
@@ -431,7 +431,9 @@
 			<!-- wearables -->
 			<item_class_existence class="carry_item" slot="1" probability="1.0" />
 			<!-- backpack -->
-			<item_class_existence class="carry_item" slot="0" probability="0.0" />
+			<item_class_existence class="carry_item" slot="0" probability="1.0" />
+			<item_class_existence class="grenade" slot="0" probability="1.0" />
+			
 		</item_class_existence_config>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="0.0" max="0.05" />
@@ -447,6 +449,7 @@
 		<resources clear_weapons="1" clear_vehicles="1" clear_calls="1">
 			<weapon key="kcco_ar.weapon" enabled="1" />
 			<carry_item key="kcco_ar.carry_item" enabled="1" />
+			<projectile key="kcco_smartgrenade_1.projectile"/>			
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="0.0" max="1.05" />
@@ -459,6 +462,7 @@
 			<weapon key="gkw_an94.weapon" enabled="1" />
 			<weapon key="kcco_ar.weapon" enabled="1" />
 			<carry_item key="kcco_ar.carry_item" enabled="1" />
+			<projectile key="kcco_smartgrenade_1.projectile"/>
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="0.5" max="3.8" />
@@ -471,7 +475,7 @@
 		<resources clear_calls="1">
 			<weapon key="kcco_ar_g.weapon" enabled="1" />
 			<carry_item key="kcco_ar.carry_item" enabled="1" />
-			<projectile key="hand_grenade.projectile"/>
+			<projectile key="kcco_smartgrenade_1.projectile"/>
 		</resources>
 	</soldier>
 	<!-- sg -->
