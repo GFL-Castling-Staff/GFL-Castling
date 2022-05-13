@@ -1130,6 +1130,7 @@ class CommandSkill : Tracker {
                         ""
                     };
                     playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+                    playSoundAtLocation(m_metagame,"defender_fire_FromTTF2.wav",factionid,c_pos,0.9);
                     playAnimationKey(m_metagame,characterId,"ARswitch0.5",true,true);
                     c_pos=c_pos.add(Vector3(0,1,0));
                     CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"ak15_mod3.projectile",characterId,factionid,220.0);  
@@ -1146,13 +1147,13 @@ class CommandSkill : Tracker {
 						affectedNumber += affectedCharacter.length;
 					}
 					if (affectedNumber <= 3){
-                        addCoolDown("AK15MOD3",10,characterId,modifer);
+                        addCoolDown("AK15MOD3",30,characterId,modifer);
 					}
 					else if(affectedNumber >= 4 && affectedNumber <= 7){
-                        addCoolDown("AK15MOD3",15,characterId,modifer);
+                        addCoolDown("AK15MOD3",20,characterId,modifer);
 					}
 					else {
-                        addCoolDown("AK15MOD3",30,characterId,modifer);
+                        addCoolDown("AK15MOD3",15,characterId,modifer);
                         string vestkey="exo_t4.carry_item";
                         vestkey = getPlayerEquipmentKey(m_metagame,characterId,4);
                         if (vestkey=="immunity_mp5.carry_item" || vestkey==""){

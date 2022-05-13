@@ -38,13 +38,18 @@
     <sound class="result" key="vehicle" tag="metal_dumpster" file="dumpster_bullet_02.wav" pitch_variety="0.4" volume="1.0" />              
 
     <sound class="result" key="static_object" copy="terrain" />
-    
+
+    <effect class="result" key="terrain" ref="SmokeTop" post_processing="1" />
+    <effect class="result" key="terrain" ref="Smoke" post_processing="1" />
+    <effect class="result" key="terrain" ref="Shine" lighting="0" />
+    <effect class="result" key="terrain" ref="Godray" lighting="0" />
+    <effect class="result" key="terrain" ref="ShadowSmoke" shadow="1" />
     <effect class="result" key="terrain" ref="Burst" use_surface_color="1" />
     <effect class="result" key="terrain" ref="ak15mod3_skill" use_surface_color="1" />
     <effect class="result" key="vehicle" copy="terrain" />
     <effect class="result" key="other" copy="terrain" />
     <effect class="result" key="character" copy="terrain" />
 
-    <trail probability="1.0" key="bullet_new"/>
+    <trail probability="1.0" key="BulletApTrail"/>
 
 </projectile>

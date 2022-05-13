@@ -7,9 +7,8 @@ particle_system ak15mod3_skill
 	cull_each false
 	renderer billboard
 	billboard_rotation_type vertex
-	billboard_type perpendicular_common
+	billboard_type oriented_common
 	common_direction 0 1 0
-	common_up_vector 0 0 1
 	
 	emitter Point
 	{
@@ -17,8 +16,8 @@ particle_system ak15mod3_skill
 		colour 1 1 1 1
 		direction 0 1 0
 		emission_rate 5
-		position 0 0.5 0
-		velocity 1.5
+		position 0 1.0 0
+		velocity 2.0
 		time_to_live 1
 		time_to_live_min 1.0
 		time_to_live_max 1.0
