@@ -315,7 +315,7 @@ class CommandSkill : Tracker {
             _log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
-        SkillArray.insertLast(SkillTrigger(characterId,180,"AN94"));
+        addCoolDown("AN94",90,characterId,modifer);
         const XmlElement@ info = getCharacterInfo(m_metagame, characterId);
         int fID = info.getIntAttribute("faction_id");
         string c_pos = info.getStringAttribute("position");
@@ -370,7 +370,7 @@ class CommandSkill : Tracker {
                 }
             }
         }
-        SkillArray.insertLast(SkillTrigger(characterId,15,"VECTOR"));
+        addCoolDown("VECTOR",15,characterId,modifer);
     }
     void excuteSopmodskill(int characterId,int playerId,SkillModifer@ modifer,const XmlElement@ characterinfo, const XmlElement@ playerinfo){
         bool ExistQueue = false;
@@ -406,7 +406,7 @@ class CommandSkill : Tracker {
             "sopmod4.wav"
             };
             playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
-            SkillArray.insertLast(SkillTrigger(characterId,16,"SOPMOD"));
+            addCoolDown("SOPMOD",16,characterId,modifer);
         }
     }
     void excute416modskill(int characterId,int playerId,SkillModifer@ modifer,const XmlElement@ characterinfo, const XmlElement@ playerinfo,bool pussyskin){
@@ -458,7 +458,7 @@ class CommandSkill : Tracker {
                 "HK416_Skill3.wav"
                 };
                 playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
-                SkillArray.insertLast(SkillTrigger(characterId,16,"HK416MOD3"));
+                addCoolDown("HK416MOD3",16,characterId,modifer);
             }
         }
     }
@@ -478,7 +478,7 @@ class CommandSkill : Tracker {
             _log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
-        SkillArray.insertLast(SkillTrigger(characterId,60,"FF_JUDGE"));
+        addCoolDown("FF_JUDGE",60,characterId,modifer);
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         if (character !is null) {
             Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
@@ -515,7 +515,7 @@ class CommandSkill : Tracker {
             _log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
-        SkillArray.insertLast(SkillTrigger(characterId,12,"P22"));
+        addCoolDown("P22",12,characterId,modifer);
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         if (character !is null) {
             Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
@@ -553,7 +553,7 @@ class CommandSkill : Tracker {
             _log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
-        SkillArray.insertLast(SkillTrigger(characterId,15,"HS2000"));
+        addCoolDown("HS2000",12,characterId,modifer);
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         if (character !is null) {
             Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
@@ -591,7 +591,7 @@ class CommandSkill : Tracker {
             _log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
-        SkillArray.insertLast(SkillTrigger(characterId,29,"MP5"));
+        addCoolDown("MP5",29,characterId,modifer);
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         string vestkey="exo_t4.carry_item";
         if (character !is null) {
@@ -639,7 +639,7 @@ class CommandSkill : Tracker {
             _log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
-        SkillArray.insertLast(SkillTrigger(characterId,29,"MP5MOD3"));
+        addCoolDown("MP5MOD3",29,characterId,modifer);
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         string vestkey="exo_t4.carry_item";
         if (character !is null) {
@@ -685,7 +685,7 @@ class CommandSkill : Tracker {
             sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
             return;
         }
-        SkillArray.insertLast(SkillTrigger(characterId,75,"FF_INTRUDER"));
+        addCoolDown("FF_INTRUDER",60,characterId,modifer);
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         if (character !is null) {
             const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
@@ -717,7 +717,7 @@ class CommandSkill : Tracker {
             sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
             return;
         }
-        SkillArray.insertLast(SkillTrigger(characterId,75,"FF_AGENT"));
+        addCoolDown("FF_AGENT",60,characterId,modifer);
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         if (character !is null) {
             const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
@@ -769,6 +769,7 @@ class CommandSkill : Tracker {
         const XmlElement@ playerinfo = getPlayerInfo(m_metagame, playerId);
 
         if (playerinfo.hasAttribute("aim_target")) {
+            addCoolDown("DESTROYER",30,characterId,modifer);
             string target = playerinfo.getStringAttribute("aim_target");
             Vector3 c_pos = stringToVector3(characterinfo.getStringAttribute("position"));
             Vector3 s_pos = stringToVector3(target);
@@ -806,7 +807,7 @@ class CommandSkill : Tracker {
             "Destroyer_buhuo_MEET_JP.wav"
             };
             playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
-            SkillArray.insertLast(SkillTrigger(characterId,1,"DESTROYER"));
+            
             
         }
     }
@@ -868,7 +869,7 @@ class CommandSkill : Tracker {
             }
 
 
-            SkillArray.insertLast(SkillTrigger(characterId,1,"EXCUTIONER"));
+            addCoolDown("EXCUTIONER",30,characterId,modifer);
             
         }
     }
@@ -903,7 +904,7 @@ class CommandSkill : Tracker {
             // "Excutioner_buhuo_SKILL03_JP.wav",
             // };
             // playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
-            SkillArray.insertLast(SkillTrigger(characterId,1,"ALINA"));
+            addCoolDown("ALINA",30,characterId,modifer);
             
         }
     }
@@ -938,7 +939,7 @@ class CommandSkill : Tracker {
                     playAnimationKey(m_metagame,characterId,"throwing, upside",true,true);
                     c_pos=c_pos.add(Vector3(0,1,0));
                     CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"grenade_ppsh41.projectile",characterId,factionid,30.0,5.0);
-                    SkillArray.insertLast(SkillTrigger(characterId,15,"ppsh41"));
+                    addCoolDown("ppsh41",15,characterId,modifer);
                 }
             }
         }
@@ -976,7 +977,7 @@ class CommandSkill : Tracker {
                     playAnimationKey(m_metagame,characterId,"throwing, upside",true,true);
                     c_pos=c_pos.add(Vector3(0,1,0));
                     CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"smoke_grenade.projectile",characterId,factionid,30.0,5.0);
-                    SkillArray.insertLast(SkillTrigger(characterId,20,"UMP45"));
+                    addCoolDown("UMP45",20,characterId,modifer);
                 }
             }
         }
@@ -997,7 +998,7 @@ class CommandSkill : Tracker {
             _log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
-        SkillArray.insertLast(SkillTrigger(characterId,30,"M870"));
+        addCoolDown("M870",30,characterId,modifer);
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         if (character !is null) {
             Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
@@ -1042,17 +1043,18 @@ class CommandSkill : Tracker {
                     Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
                     int factionid = character.getIntAttribute("faction_id");
                     array<string> Voice={
-                        "PPsh41_SKILL1_JP.wav"
+                        ""
                     };
                     playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
                     playAnimationKey(m_metagame,characterId,"throwing, upside",true,true);
                     c_pos=c_pos.add(Vector3(0,1,0));
                     if (mod3){
-                        SkillArray.insertLast(SkillTrigger(characterId,15,"pp19"));
+                        addCoolDown("pp19",15,characterId,modifer);
                         CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"grenade_pp19.projectile",characterId,factionid,40.0,6.0);
                     }
                     else{
-                        SkillArray.insertLast(SkillTrigger(characterId,40,"pp19"));
+                        addCoolDown("pp19",45,characterId,modifer);
+                        CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"grenade_pp19.projectile",characterId,factionid,40.0,6.0);
                     }
 
                 }
@@ -1094,7 +1096,7 @@ class CommandSkill : Tracker {
                     float ori4 = getAimOrientation4(m_metagame,c_pos,stringToVector3(target));
 
                     spawnVehicle(m_metagame,1,0,u_pos,Orientation(0,1,0,ori4),"gk_werlod_shelter.vehicle");		
-                    SkillArray.insertLast(SkillTrigger(characterId,20,"werlod"));
+                    addCoolDown("welrod",20,characterId,modifer);
 
                 }
             }
@@ -1125,11 +1127,7 @@ class CommandSkill : Tracker {
                     Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
                     int factionid = character.getIntAttribute("faction_id");
                     array<string> Voice={
-                        "Vector_SKILL1_JP.wav",
-                        "Vector_SKILL2_JP.wav",
-                        "Vector_SkillC1.wav",
-                        "Vector_SkillC2.wav",
-                        "Vector_SkillC3.wav"
+                        ""
                     };
                     playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
                     playAnimationKey(m_metagame,characterId,"ARswitch0.5",true,true);
@@ -1148,13 +1146,13 @@ class CommandSkill : Tracker {
 						affectedNumber += affectedCharacter.length;
 					}
 					if (affectedNumber <= 3){
-                        SkillArray.insertLast(SkillTrigger(characterId,10,"AK15MOD3"));
+                        addCoolDown("AK15MOD3",10,characterId,modifer);
 					}
 					else if(affectedNumber >= 4 && affectedNumber <= 7){
-                        SkillArray.insertLast(SkillTrigger(characterId,15,"AK15MOD3"));
+                        addCoolDown("AK15MOD3",15,characterId,modifer);
 					}
 					else {
-                        SkillArray.insertLast(SkillTrigger(characterId,30,"AK15MOD3"));
+                        addCoolDown("AK15MOD3",30,characterId,modifer);
                         string vestkey="exo_t4.carry_item";
                         vestkey = getPlayerEquipmentKey(m_metagame,characterId,4);
                         if (vestkey=="immunity_mp5.carry_item" || vestkey==""){
