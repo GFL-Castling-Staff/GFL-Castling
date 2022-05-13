@@ -1,57 +1,147 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <carry_items>
-    <carry_item file="exo.base_carry_item" key="jill.carry_item" name="[What can I serve you?]" transform_on_consume="jill_9">
-        <hud_icon filename="jill_9.png" />
-        <commonness value="0" in_stock="0" />
-        <inventory price="50" />
-        <modifier class="speed" value="0.35" />
+    <carry_item key="jill.carry_item" time_to_live_out_in_the_open="15" name="[What can I serve you?]" transform_on_consume="jill_1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+        <hud_icon filename="jill_9.png"/>
+        <capacity value="1" source="rank" source_value="0"/>
+        <commonness value="0" in_stock="0" can_respawn_with="1"/>
+        <inventory encumbrance="100" price="30"/>
+        <model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.5" />
         <modifier class="hit_success_probability" value="-1.1" />
         <modifier class="detectability" value="-0.05" />
     </carry_item>
-    <carry_item file="exo.base_carry_item" key="jill_9" name="[What can I serve you?]" transform_on_consume="jill_8">
-        <hud_icon filename="jill_8.png" />
-        <modifier class="speed" value="0.35" />
+    <carry_item key="jill_1" time_to_live_out_in_the_open="15" name="[What can I serve you?]" transform_on_consume="jill_2" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+        <hud_icon filename="jill_8.png"/>
+        <capacity value="1" source="rank" source_value="0"/>
+        <commonness value="0" in_stock="1" can_respawn_with="1"/>
+        <inventory encumbrance="100" price="30"/>
+        <model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.5" />
         <modifier class="hit_success_probability" value="-1.1" />
         <modifier class="detectability" value="-0.05" />
     </carry_item>
-    <carry_item file="exo.base_carry_item" key="jill_8" name="[What can I serve you?]" transform_on_consume="jill_7">
-        <hud_icon filename="jill_7.png" />
-        <modifier class="speed" value="0.35" />
+    <carry_item key="jill_2" time_to_live_out_in_the_open="15" name="[What can I serve you?]" transform_on_consume="jill_3" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+        <hud_icon filename="jill_7.png"/>
+        <capacity value="1" source="rank" source_value="0"/>
+        <commonness value="0" in_stock="1" can_respawn_with="1"/>
+        <inventory encumbrance="100" price="30"/>
+        <model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.5" />
         <modifier class="hit_success_probability" value="-1.1" />
         <modifier class="detectability" value="-0.05" />
     </carry_item>
-    <carry_item file="exo.base_carry_item" key="jill_7" name="[What can I serve you?]" transform_on_consume="jill_6">
-        <hud_icon filename="jill_6.png" />
-        <modifier class="speed" value="0.35" />
+    <carry_item key="jill_3" time_to_live_out_in_the_open="15" name="[What can I serve you?]" transform_on_consume="jill_4" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+        <hud_icon filename="jill_6.png"/>
+        <capacity value="1" source="rank" source_value="0"/>
+        <commonness value="0" in_stock="1" can_respawn_with="1"/>
+        <inventory encumbrance="100" price="30"/>
+        <model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.5" />
         <modifier class="hit_success_probability" value="-1.1" />
         <modifier class="detectability" value="-0.05" />
     </carry_item>
-    <carry_item file="exo.base_carry_item" key="jill_6" name="[What can I serve you?]" transform_on_consume="jill_5">
-        <hud_icon filename="jill_5.png" />
-        <modifier class="speed" value="0.35" />
+    <carry_item key="jill_4" time_to_live_out_in_the_open="15" name="[What can I serve you?]" transform_on_consume="jill_5" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+        <hud_icon filename="jill_5.png"/>
+        <capacity value="1" source="rank" source_value="0"/>
+        <commonness value="0" in_stock="1" can_respawn_with="1"/>
+        <inventory encumbrance="100" price="30"/>
+        <model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.5" />
         <modifier class="hit_success_probability" value="-1.1" />
         <modifier class="detectability" value="-0.05" />
     </carry_item>
-    <carry_item file="exo.base_carry_item" key="jill_5" name="[What can I serve you?]" transform_on_consume="jill_4">
-        <hud_icon filename="jill_4.png" />
-        <modifier class="speed" value="0.35" />
+    <carry_item key="jill_5" time_to_live_out_in_the_open="15" name="[What can I serve you?]" transform_on_consume="jill_6" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+        <hud_icon filename="jill_4.png"/>
+        <capacity value="1" source="rank" source_value="0"/>
+        <commonness value="0" in_stock="1" can_respawn_with="1"/>
+        <inventory encumbrance="100" price="30"/>
+        <model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.5" />
         <modifier class="hit_success_probability" value="-1.1" />
         <modifier class="detectability" value="-0.05" />
     </carry_item>
-    <carry_item file="exo.base_carry_item" key="jill_4" name="[What can I serve you?]" transform_on_consume="jill_3">
-        <hud_icon filename="jill_3.png" />
-        <modifier class="speed" value="0.35" />
+    <carry_item key="jill_6" time_to_live_out_in_the_open="15" name="[What can I serve you?]" transform_on_consume="jill_7" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+        <hud_icon filename="jill_3.png"/>
+        <capacity value="1" source="rank" source_value="0"/>
+        <commonness value="0" in_stock="1" can_respawn_with="1"/>
+        <inventory encumbrance="100" price="30"/>
+        <model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.5" />
         <modifier class="hit_success_probability" value="-1.1" />
         <modifier class="detectability" value="-0.05" />
     </carry_item>
-    <carry_item file="exo.base_carry_item" key="jill_3" name="[What can I serve you?]" transform_on_consume="jill_2">
-        <hud_icon filename="jill_2.png" />
-        <modifier class="speed" value="0.35" />
+    <carry_item key="jill_7" time_to_live_out_in_the_open="15" name="[What can I serve you?]" transform_on_consume="jill_8" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+        <hud_icon filename="jill_2.png"/>
+        <capacity value="1" source="rank" source_value="0"/>
+        <commonness value="0" in_stock="1" can_respawn_with="1"/>
+        <inventory encumbrance="100" price="30"/>
+        <model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.5" />
         <modifier class="hit_success_probability" value="-1.1" />
         <modifier class="detectability" value="-0.05" />
     </carry_item>
-    <carry_item file="wearables.base_carry_item" key="jill_2" name="[What can I serve you?]-Overrun!-" transform_on_consume="jill_1">
-        <hud_icon filename="jill_1.png" />
+    <carry_item key="jill_8" time_to_live_out_in_the_open="15" name="[What can I serve you?]-Overrun!-" transform_on_consume="jill_9" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+        <hud_icon filename="jill_1.png"/>
+        <capacity value="1" source="rank" source_value="0"/>
+        <commonness value="0" in_stock="1" can_respawn_with="1"/>
+        <inventory encumbrance="100" price="30"/>
+        <model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="wound"  />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
@@ -59,14 +149,30 @@
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="wound" />
-        <modifier class="speed" value="0.35" />
-        <modifier class="hit_success_probability" value="-0.6" />
+        <modifier class="speed" value="0.5" />
+        <modifier class="hit_success_probability" value="-1.1" />
         <modifier class="detectability" value="-0.05" />
     </carry_item>
-    <carry_item file="none.base_carry_item" key="jill_1" name="[What can I serve you?]-Overrun!-">
-        <hud_icon filename="jill_0.png" />
-        <modifier class="speed" value="0.35" />
-        <modifier class="hit_success_probability" value="-0.6" />
+    <carry_item key="jill_9" time_to_live_out_in_the_open="15" name="[What can I serve you?]-Overrun!-" transform_on_consume="jill_10" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+        <hud_icon filename="jill_0.png"/>
+        <capacity value="1" source="rank" source_value="0"/>
+        <commonness value="0" in_stock="1" can_respawn_with="1"/>
+        <inventory encumbrance="100" price="30"/>
+        <model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="unwound" output_character_state="unwound" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="unwound" output_character_state="unwound" consumes_item="0"/>
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
+        <modifier class="melee_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
+        <modifier class="melee_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+        <modifier class="melee_hit_result" input_character_state="unwound" output_character_state="unwound" consumes_item="0"/>
+        <modifier class="speed" value="0.5" />
+        <modifier class="hit_success_probability" value="-1.1" />
         <modifier class="detectability" value="-0.05" />
     </carry_item>
 </carry_items>
