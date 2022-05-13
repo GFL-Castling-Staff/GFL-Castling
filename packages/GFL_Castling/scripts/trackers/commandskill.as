@@ -1143,7 +1143,7 @@ class CommandSkill : Tracker {
 					}
 					int n=enemyfaction.length-1;
 					for(int i=0;i<n;i++){
-						array<const XmlElement@> affectedCharacter = getCharactersNearPosition(m_metagame,c_pos,enemyfaction[i],25.0f);
+						array<const XmlElement@> affectedCharacter = getCharactersNearPosition(m_metagame,c_pos,enemyfaction[i],40.0f);
 						affectedNumber += affectedCharacter.length;
 					}
 					if (affectedNumber <= 5){
@@ -1152,26 +1152,26 @@ class CommandSkill : Tracker {
 					else if(affectedNumber >= 5 && affectedNumber <= 9){
                         addCoolDown("AK15MOD3",20,characterId,modifer);
                         c_pos=c_pos.add(Vector3(0,1,0));
-                        string c = 
+                        string command = 
                         "<command class='create_instance'" +
                         " faction_id='"+ factionid +"'" +
                         " instance_class='grenade'" +
                         " instance_key='ak15_mod3_roar.projectile'" +
                         " position='" + c_pos.toString() + "'"+
 				        " character_id='" + characterId + "' />";
-                        m_metagame.getComms().send(c);		
+                        m_metagame.getComms().send(command);		
 					}
 					else {
                         addCoolDown("AK15MOD3",15,characterId,modifer);
                         c_pos=c_pos.add(Vector3(0,1,0));
-                        string c = 
+                        string command = 
                         "<command class='create_instance'" +
                         " faction_id='"+ factionid +"'" +
                         " instance_class='grenade'" +
                         " instance_key='ak15_mod3_roar.projectile'" +
                         " position='" + c_pos.toString() + "'"+
 				        " character_id='" + characterId + "' />";
-                        m_metagame.getComms().send(c);		
+                        m_metagame.getComms().send(command);		
                         string vestkey="exo_t4.carry_item";
                         vestkey = getPlayerEquipmentKey(m_metagame,characterId,4);
                         if (vestkey=="immunity_mp5.carry_item" || vestkey==""){
