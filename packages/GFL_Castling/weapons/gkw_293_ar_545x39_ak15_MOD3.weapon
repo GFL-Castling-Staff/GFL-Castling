@@ -124,14 +124,14 @@
 
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet.projectile">
-        <result class="hit"  kill_probability="1.4" kill_probability_offset_on_successful_hit="2.2" kill_decay_start_time="0.1" kill_decay_end_time="0.3" />
+        <result class="hit"  kill_probability="1.3" kill_probability_offset_on_successful_hit="3" kill_decay_start_time="0.03" kill_decay_end_time="0.375" />
     </projectile>
     
-    <stance state_key="running" accuracy="0.5" />
-    <stance state_key="walking" accuracy="0.6" />
-    <stance state_key="crouch_moving" accuracy="0.7" />
-    <stance state_key="prone_moving" accuracy="0.7" />
-    <stance state_key="standing" accuracy="0.80" />
+    <stance state_key="running" accuracy="0.75" />
+    <stance state_key="walking" accuracy="0.75" />
+    <stance state_key="crouch_moving" accuracy="0.85" />
+    <stance state_key="prone_moving" accuracy="0.85" />
+    <stance state_key="standing" accuracy="0.85" />
     <stance state_key="crouching" accuracy="1.45" />
     <stance state_key="prone" accuracy="1.45" />
     <modifier class="detectability" value="0.3" />
