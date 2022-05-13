@@ -211,29 +211,13 @@ class GFLskill : Tracker {
 					//获取技能影响的敌人数量
 					m_fnum= m_metagame.getFactionCount();
 					array<const XmlElement@> affectedCharacter;
-					affectedCharacter = getCharactersNearPosition(m_metagame,Pos_40mm,1,7.0f);
-					if (m_fnum==3){
+					for(uint i=0;i<m_fnum;i++) 
+						if(i!=factionid) {
 						array<const XmlElement@> affectedCharacter2;
-						affectedCharacter2 = getCharactersNearPosition(m_metagame,Pos_40mm,2,7.0f);
+						affectedCharacter2 = getCharactersNearPosition(m_metagame,Pos_40mm,i,7.0f);
 						if (affectedCharacter2 !is null){
 							for(uint x=0;x<affectedCharacter2.length();x++){
 								affectedCharacter.insertLast(affectedCharacter2[x]);
-							}
-						}
-					}
-					if (m_fnum==4){
-						array<const XmlElement@> affectedCharacter2;
-						affectedCharacter2 = getCharactersNearPosition(m_metagame,Pos_40mm,2,7.0f);
-						if (affectedCharacter2 !is null){
-							for(uint x=0;x<affectedCharacter2.length();x++){
-								affectedCharacter.insertLast(affectedCharacter2[x]);
-							}
-						}
-						array<const XmlElement@> affectedCharacter3;
-						affectedCharacter3 = getCharactersNearPosition(m_metagame,Pos_40mm,3,7.0f);
-						if (affectedCharacter3 !is null){
-							for(uint x=0;x<affectedCharacter3.length();x++){
-								affectedCharacter.insertLast(affectedCharacter3[x]);
 							}
 						}
 					}
@@ -251,6 +235,40 @@ class GFLskill : Tracker {
 					m_metagame.getComms().send(c);
 				}
 			}
+		}
+		if (EventKeyGet == "kcco_smartgrenade_scan") {
+			int characterId = event.getIntAttribute("character_id");
+			const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+			if (character !is null) {
+				int factionid = character.getIntAttribute("faction_id");
+				Vector3 pos_smartgrenade = stringToVector3(event.getStringAttribute("position"));
+				//获取技能影响的敌人数量
+				m_fnum = m_metagame.getFactionCount();
+				array<const XmlElement@> affectedCharacter;
+				_log("Scan successful");
+				for(uint i=0;i<m_fnum;i++) 
+					if(i!=factionid) {
+					array<const XmlElement@> affectedCharacter2;
+					affectedCharacter2 = getCharactersNearPosition(m_metagame,pos_smartgrenade,i,9.0f);
+					if (affectedCharacter2 !is null){
+						for(uint x=0;x<affectedCharacter2.length();x++){
+							affectedCharacter.insertLast(affectedCharacter2[x]);
+						}
+					}
+				}
+				if (affectedCharacter.length()>0) {
+					_log("Locate1 successful");
+					uint luckyGuyindex = rand(0,affectedCharacter.length()-1);
+					uint luckyGuyid = affectedCharacter[luckyGuyindex].getIntAttribute("id");
+					const XmlElement@ luckyGuy = getCharacterInfo(m_metagame, luckyGuyid);
+					Vector3 luckyGuyPos = stringToVector3(luckyGuy.getStringAttribute("position"));
+					CreateProjectile(m_metagame,pos_smartgrenade,luckyGuyPos,"kcco_smartgrenade_3.projectile",characterId,factionid,120,0.01);
+				}
+				else {
+					_log("Locate2 successful");
+					CreateProjectile(m_metagame,pos_smartgrenade,pos_smartgrenade.add(Vector3(0,-10,0)),"kcco_smartgrenade_3.projectile",characterId,factionid,120,0.01);
+				}									
+			}			
 		}
 		if (EventKeyGet == "VV_skill"){
 			int characterId = event.getIntAttribute("character_id");
@@ -514,3 +532,4 @@ class Vector_tracker{
 		m_pos= pos;
 	}
 }
+
