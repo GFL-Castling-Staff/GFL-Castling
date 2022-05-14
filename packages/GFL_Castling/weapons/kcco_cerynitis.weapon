@@ -93,7 +93,7 @@ key="kccow_cerynitis_1.weapon">
 	accuracy_factor="1.0" 
 	sustained_fire_grow_step="0.0" 
 	sustained_fire_diminish_rate="0.0" 
-	magazine_size="16" 
+	magazine_size="20" 
 	can_shoot_standing="1" 
 	can_shoot_crouching="0"
 	can_shoot_prone="0"
@@ -104,7 +104,7 @@ key="kccow_cerynitis_1.weapon">
 	sight_range_modifier="0.8" 
 	projectile_speed="90.0" 
 	carry_in_two_hands="0" 
-	projectiles_per_shot="1" 
+	projectiles_per_shot="2" 
 	slot="0" 
 	stab_enabled="0"/>
     <!--Animations-->
@@ -131,9 +131,8 @@ key="kccow_cerynitis_1.weapon">
     
     <!-- <weak_hand_hold offset="0.1" /> -->
     <projectile file="bullet_kcco.projectile">
-        <result class="blast" radius="1.5" damage="1.0" decal="1" push="0.05" character_state="death" faction_compare="not_equal"/>
+        <result class="hit"  kill_probability="2.1" kill_decay_start_time="1.0" kill_decay_end_time="1.2" />
     </projectile>
-    <!-- state modifiers for weapons are connected to shield impact events -->
 
     <stance state_key="running" accuracy="0.9" />
     <stance state_key="walking" accuracy="1.0" />
