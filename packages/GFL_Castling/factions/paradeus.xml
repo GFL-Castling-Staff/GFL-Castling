@@ -402,7 +402,7 @@
 			<!-- wearables -->
 			<item_class_existence class="carry_item" slot="1" probability="1.0" />
 			<!-- backpack -->
-			<item_class_existence class="carry_item" slot="0" probability="0.0" />
+			<item_class_existence class="carry_item" slot="0" probability="0.7" />
 		</item_class_existence_config>
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="parw_strelet.weapon" enabled="1" />
