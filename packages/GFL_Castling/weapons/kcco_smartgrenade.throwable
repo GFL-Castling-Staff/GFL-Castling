@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projectile class="grenade" name="KCCO smart grenade 1" key="kcco_smartgrenade_1.projectile" slot="0" radius="0.15">
 
-    <result class="spawn" instance_class="projectile" instance_key="kcco_smartgrenade_2.projectile" min_amount="1" max_amount="1" offset="0 0 0" position_spread="0 0" direction_spread="0 0" />
+    <result class="spawn" instance_class="projectile" instance_key="kcco_smartgrenade_2.projectile" min_amount="1" max_amount="1" offset="0 1 0" position_spread="0 0" direction_spread="0 0" />
     <trigger class="time" time_to_live="1.5"/>
 
     <rotation class="random" />
@@ -11,7 +11,7 @@
 
     <!-- <throwable curve_height="5.0" near_far_distance="5.0" speed_estimation_near="9.0" speed_estimation_far="15.0" max_speed="13.0" randomness="0.07" /> -->
     <!-- <throwable curve_height="6.0" near_far_distance="5.0" speed_estimation_near="20.0" speed_estimation_far="17.0" max_speed="11.0" randomness="0.07" /> -->
-    <throwable curve_height="4.0" near_far_distance="0.0" speed_estimation_near="12.0" speed_estimation_far="40.0" max_speed="40.0" randomness="0.07" tweak_factor="2.05" />
+    <throwable curve_height="3.6" near_far_distance="0.0" speed_estimation_near="12.0" speed_estimation_far="40.0" max_speed="40.0" randomness="0.07" tweak_factor="2.05" />
 
     <!-- projectile slot 0 is used for hand grenade items currently -->
     <!-- bound to change -->
@@ -21,9 +21,8 @@
     <capacity value="8" source="rank" source_value="4.622" />
     <capacity value="10" source="rank" source_value="34.833" />
 
-    <sound class="result" key="other" fileref="explosion_FromRS2V_1.wav" volume="2.8" />
-    <sound class="result" key="other" fileref="explosion_FromRS2V_2.wav" volume="2.8" />
-    <sound class="result" key="other" fileref="explosion_FromRS2V_3.wav" volume="2.8" />    
+    <sound class="result" key="other" fileref="smartgrenade_locking_FromDIVISION2.wav" volume="2.8" />
+
 
     <sound class="result" key="terrain" copy="other" />
     <sound class="result" key="static_object" copy="other" />

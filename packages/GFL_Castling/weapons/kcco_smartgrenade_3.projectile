@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projectile class="grenade" name="KCCO smart grenade 1" slot="3" pulldown_in_air="0.01" key="kcco_smartgrenade_3.projectile">
     <tag name="grenade"/>
-    <result class="blast" radius="4" damage="5" push="0.8" decal="1"  damage_origin_vehicle="0" faction_compare="not_equal"/>
+    <result class="blast" radius="6" damage="6" push="0.8" decal="1"  damage_origin_vehicle="0" faction_compare="not_equal"/>
     <trigger class="impact" />
     <rotation class="motion" />
     <model mesh_filename="kcco_grenade_3.xml" />
