@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<projectile class="grenade" name="KCCO smart grenade 1" key="kcco_smartgrenade_1.projectile" slot="0" radius="0.15">
+<projectile class="grenade" name="KCCO smart grenade" key="kcco_smartgrenade_1.projectile" slot="0" radius="0.15">
 
     <result class="spawn" instance_class="projectile" instance_key="kcco_smartgrenade_2.projectile" min_amount="1" max_amount="1" offset="0 1 0" position_spread="0 0" direction_spread="0 0" />
     <trigger class="time" time_to_live="1.5"/>
