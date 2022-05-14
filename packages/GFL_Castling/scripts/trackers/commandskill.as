@@ -78,6 +78,7 @@ class CommandSkill : Tracker {
         "gkw_hk416.weapon",
         "gkw_hk416_6505.weapon",
         "gkw_hk416_537.weapon",
+        "gkw_hk416_3401.weapon"
     };
     array<string> targetAAgrenades = {
         "gkw_stg44.weapon",
