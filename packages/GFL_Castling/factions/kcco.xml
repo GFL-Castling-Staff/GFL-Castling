@@ -449,7 +449,7 @@
 		<resources clear_weapons="1" clear_vehicles="1" clear_calls="1" clear_carry_items="1">
 			<weapon key="kcco_ar.weapon" enabled="1" />
 			<carry_item key="kcco_ar.carry_item" enabled="1" />
-			<projectile key="kcco_smartgrenade_1.projectile" enabled="0.2" />			
+			<projectile key="kcco_smartgrenade_1.projectile" enabled="1" />			
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="0.0" max="1.05" />
