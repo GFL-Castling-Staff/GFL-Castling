@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<carry_item file="base_valuable.carry_item" name="briefcase" key="suitcase.carry_item">
+	<tag name="item_unlocker" />
+    <hud_icon filename="hud_suitcase.png" />
+    <inventory encumbrance="0.0" price="200.0" />
+
+    <model mesh_filename="suitcase.mesh" texture_filename="suitcase.png" />
+
+    <commonness value="6.0" in_stock="0" />
+</carry_item>

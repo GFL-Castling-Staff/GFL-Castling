@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<carry_item file="base_valuable.carry_item" name="Holy Koran" key="koran.carry_item">
+    <hud_icon filename="hud_koran.png" />
+    <inventory encumbrance="0.0" price="200.0" />
+
+    <model mesh_filename="bible.mesh" texture_filename="koran.png" />
+
+    <commonness value="1.5" in_stock="0" />
+</carry_item>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<carry_item file="base_valuable.carry_item" name="Teddy Bear" key="teddy.carry_item">
+    <hud_icon filename="hud_teddy.png" />
+    <inventory encumbrance="0.0" price="250.0" />
+
+    <model mesh_filename="teddy.mesh" texture_filename="teddy.png" />
+
+    <commonness value="2.0" in_stock="0" />
+</carry_item>

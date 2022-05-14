@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<carry_item file="base_valuable.carry_item" name="willy boy" key="sheaths.carry_item">
+    <hud_icon filename="hud_sheaths.png" />
+
+    <inventory encumbrance="0.0" price="40.0" />
+
+    <model mesh_filename="sheaths.mesh" texture_filename="sheaths.png" />
+
+    <commonness value="3.0" in_stock="0" />
+</carry_item>

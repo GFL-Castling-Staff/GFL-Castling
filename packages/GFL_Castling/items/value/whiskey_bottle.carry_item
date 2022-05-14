@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<carry_item file="base_valuable.carry_item" name="whiskey bottle" key="whiskey_bottle.carry_item">
+    <hud_icon filename="hud_whiskey_bottle.png" />
+    <inventory encumbrance="0.0" price="50.0" />
+
+    <model mesh_filename="whiskey.mesh" texture_filename="whiskey.png" />
+
+    <commonness value="10.0" in_stock="0" />
+</carry_item>

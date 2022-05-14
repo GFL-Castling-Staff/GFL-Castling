@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<carry_item file="base_valuable.carry_item" name="cigarettes" key="cigarettes.carry_item">
+    <hud_icon filename="hud_cigarettes.png" />
+    <inventory encumbrance="0.0" price="40.0" />
+
+    <model mesh_filename="cigarettes.mesh" texture_filename="cigarettes.png" />
+
+    <commonness value="25.0" in_stock="0" />
+</carry_item>

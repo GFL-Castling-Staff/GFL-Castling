@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<carry_item file="base_valuable.carry_item" name="bizarre rubber bullet...?" key="bizarre_rubber_bullet.carry_item">
+    <hud_icon filename="hud_bizarre_rubber_bullet.png" />
+    <inventory encumbrance="0.0" price="100.0" />
+
+    <model mesh_filename="bizarre_rubber_bullet.mesh" texture_filename="bizarre_rubber_bullet.png" />
+
+    <commonness value="1.0" in_stock="0" />
+</carry_item>

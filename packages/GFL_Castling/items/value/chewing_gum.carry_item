@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<carry_item file="base_valuable.carry_item" name="chewing-gum" key="chewing_gum.carry_item">
+    <hud_icon filename="hud_chewing_gum.png" />
+    <inventory encumbrance="0.0" price="50.0" />
+
+    <model mesh_filename="chewing_gum.mesh" texture_filename="chewing_gum.png" />
+
+    <commonness value="8.0" in_stock="0" />
+</carry_item>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<carry_item file="base_valuable.carry_item" name="lighter" key="lighter.carry_item">
+    <hud_icon filename="hud_lighter.png" />
+    <inventory encumbrance="0.0" price="70.0" />
+
+    <model mesh_filename="lighter.mesh" texture_filename="lighter.png" />
+
+    <commonness value="8.0" in_stock="0" />
+</carry_item>

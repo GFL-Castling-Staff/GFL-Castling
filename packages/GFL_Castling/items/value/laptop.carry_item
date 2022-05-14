@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<carry_item file="base_valuable.carry_item" name="Laptop" key="laptop.carry_item">
+	<tag name="item_unlocker" />
+    <hud_icon filename="hud_laptop.png" />
+    <inventory encumbrance="0.0" price="380.0" />
+
+    <model mesh_filename="cigars.mesh" texture_filename="laptop.png" />
+
+    <commonness value="5.0" in_stock="0" />
+</carry_item>

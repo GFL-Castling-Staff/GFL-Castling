@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<carry_item file="base_valuable.carry_item" name="iPoo green edition" key="ipoo_player_green.carry_item">
+    <hud_icon filename="hud_ipoo_green.png" />
+    <inventory encumbrance="0.0" price="120.0" />
+
+    <model mesh_filename="ipoo.mesh" texture_filename="ipoo_green.png" />
+
+    <commonness value="2.0" in_stock="0" />
+</carry_item>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<carry_item file="base_valuable.carry_item" name="300 dollars" key="dollars_300.carry_item">
+    <hud_icon filename="hud_dollars_300.png" />
+    <inventory encumbrance="0.0" price="300.0" />
+
+    <model mesh_filename="dollars_300.mesh" texture_filename="dollars.png" />
+
+    <commonness value="1.5" in_stock="1" />
+</carry_item>

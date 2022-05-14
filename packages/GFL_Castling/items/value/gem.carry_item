@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<carry_item file="base_valuable.carry_item" name="gem" key="gem.carry_item">
+    <hud_icon filename="hud_gem.png" />
+    <inventory encumbrance="0.0" price="300.0" />
+
+    <model mesh_filename="gem.mesh" texture_filename="gem.png" />
+
+    <commonness value="2.0" in_stock="0" />
+</carry_item>
