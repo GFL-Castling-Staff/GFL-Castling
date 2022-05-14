@@ -394,7 +394,7 @@ class CommandSkill : Tracker {
             int factionid = characterinfo.getIntAttribute("faction_id");
             c_pos=c_pos.add(Vector3(0,1,0));
             if (checkFlatRange(c_pos,stringToVector3(target),7)){
-                CreateProjectile(m_metagame,c_pos,stringToVector3(target),"SopmodSk_script.projectile",characterId,factionid,20,26.0);
+                CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"SopmodSk_script.projectile",characterId,factionid,60);
             }
             else{
                 CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"SopmodSk_script.projectile",characterId,factionid,26.0,6.0);
@@ -432,7 +432,7 @@ class CommandSkill : Tracker {
             c_pos=c_pos.add(Vector3(0,1,0));
             if(pussyskin){
                 if (checkFlatRange(c_pos,stringToVector3(target),7)){
-                    CreateProjectile(m_metagame,c_pos,stringToVector3(target),"40mm_hk416_3401.projectile",characterId,factionid,20,26.0);
+                    CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"40mm_hk416_3401.projectile",characterId,factionid,30);
                 }
                 else{
                     CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"40mm_hk416_3401.projectile",characterId,factionid,26.0,6.0);
@@ -447,7 +447,7 @@ class CommandSkill : Tracker {
             }
             else{
                 if (checkFlatRange(c_pos,stringToVector3(target),7)){
-                    CreateProjectile(m_metagame,c_pos,stringToVector3(target),"40mm_hk416.projectile",characterId,factionid,20,26.0);
+                    CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"40mm_hk416.projectile",characterId,factionid,30);
                 }
                 else{
                     CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"40mm_hk416.projectile",characterId,factionid,26.0,6.0);

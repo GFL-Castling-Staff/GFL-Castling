@@ -472,7 +472,7 @@
 	<soldier name="kcco_ar_g" spawn_score="0.25" copy_from="default_bot">
 		<model filename="kccod_cyclops_remake.xml" />
 		<ai filename="grenadier.ai" />
-		<resources clear_calls="1">
+		<resources clear_weapons="1" clear_calls="1">
 			<weapon key="kcco_ar_g.weapon" enabled="1" />
 			<carry_item key="kcco_ar.carry_item" enabled="1" />
 			<projectile key="kcco_smartgrenade_1.projectile" enabled="1" />
@@ -501,7 +501,7 @@
 	<soldier name="kcco_archer" spawn_score="0.4" squad_size_xp_cap="0.0" copy_from="default_bot">
 		<model filename="kccod_archer.xml" />
 		<ai filename="sniper.ai" />
-		<resources file="kcco_lonewolf_archer.resources">
+		<resources file="kcco_lonewolf_archer.resources" clear_weapons="1">
 			<weapon key="compound_bow.weapon" enabled="1" />
 			<carry_item key="kcco_ar.carry_item" />
 		</resources>
