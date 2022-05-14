@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <character filename="kcco.text_lines">
 	<tag name="metal_man" />
-	<parameter class="can_use_vehicles" value="0" /> 
+    <parameter class="can_use_inventory" value="0" />  
+	<parameter class="can_use_vehicles" value="0" />  
     <sound key="death" fileref="bot_die1.wav" volume="0.25" />
     <sound key="death" fileref="bot_die2.wav" volume="0.25" />
     <sound key="death" fileref="bot_die3.wav" volume="0.25" />

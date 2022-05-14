@@ -24,4 +24,9 @@
 	<parameter class="stab_range" value="0.0" />
 	<parameter class="uses_ladders" value="0" />
 
+	<parameter class="max_leader_authority_willing_to_join_another_squad" value="0.0" />
+	<parameter class="defending_authority_offset_to_join_squad" value="0.0" />
+	<parameter class="value_increase_required_to_join_defend_squad" value="0.0" />
+	<parameter class="favor_joining_player_squad_value_increase" value="0" />
+	<parameter class="favor_staying_in_current_player_squad_value_increase" value="1.0" />
 </ai>
