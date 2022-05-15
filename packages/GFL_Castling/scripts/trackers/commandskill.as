@@ -1408,7 +1408,7 @@ class CommandSkill : Tracker {
                         m_metagame.getComms().send(command);		
 					}
 					else {
-                        addCoolDown("AK15MOD3",15,characterId,modifer);
+                        addCoolDown("AK15MOD3",10,characterId,modifer);
                         c_pos=c_pos.add(Vector3(0,1,0));
                         string command = 
                         "<command class='create_instance'" +
