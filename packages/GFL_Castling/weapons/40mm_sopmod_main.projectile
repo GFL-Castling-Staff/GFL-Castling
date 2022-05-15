@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projectile class="grenade" name="40mm" slot="1" pulldown_in_air="26.0" key="40mm_sopmod_main.projectile">
     <tag name="grenade"/>
-    <result class="blast" radius="10" damage="5.0" push="0.4" decal="1" faction_compare="not_equal"/>
+    <result class="blast" radius="10" damage="8.0" push="0.6" decal="1" faction_compare="not_equal"/>
     <trigger class="time" time_to_live="0.0"/>
     <rotation class="motion" />
     <model mesh_filename="agl.xml" />
