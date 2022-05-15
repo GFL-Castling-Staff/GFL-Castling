@@ -30,7 +30,34 @@
     <sound key="magazine_out" fileref="an94_mgz_out_FromCOD16.wav" volume="0.8" />
     <sound key="magazine_in" fileref="an94_mgz_in_FromCOD16.wav" volume="0.8" />
     <sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.8" />
-    <sound class="impact" fileref="rifle_drop.wav" />    
+    <sound key="cycle" fileref="AN94_BREAK_JP.wav" volume="1.0" pitch_variety="0"/>
+    <sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.8" />
+    <sound key="cycle" fileref="AN94_BUILDOVER_JP.wav" volume="1.0" pitch_variety="0"/>
+    <sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.8" />
+    <sound key="cycle" fileref="AN94_DEFENSE_JP.wav" volume="1.0" pitch_variety="0"/>
+    <sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.8" />
+    <sound key="cycle" fileref="AN94_DIALOGUE2_JP.wav" volume="1.0" pitch_variety="0"/>
+    <sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.8" />
+    <sound key="cycle" fileref="AN94_FEED_JP.wav" volume="1.0" pitch_variety="0"/>
+    <sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.8" />
+    <sound key="cycle" fileref="AN94_FIX_JP.wav" volume="1.0" pitch_variety="0"/>
+    <sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.8" />
+    <sound key="cycle" fileref="AN94_FORMATION_JP.wav" volume="1.0" pitch_variety="0"/>
+    <sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.8" />
+    <sound key="cycle" fileref="AN94_GOATTACK_JP.wav" volume="1.0" pitch_variety="0"/>
+    <sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.8" />
+    <sound key="cycle" fileref="AN94_OPERATIONBEGIN_JP.wav" volume="1.0" pitch_variety="0"/>
+    <sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.8" />
+    <sound key="cycle" fileref="AN94_OPERATIONOVER_JP.wav" volume="1.0" pitch_variety="0"/>
+    <sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.8" />
+    <sound key="cycle" fileref="AN94_PHRASE_JP.wav" volume="1.0" pitch_variety="0"/>
+    <sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.8" />
+    <sound key="cycle" fileref="AN94_RETREAT_JP.wav" volume="1.0" pitch_variety="0"/>
+    <sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.8" />
+    <sound key="cycle" fileref="AN94_TIP_JP.wav" volume="1.0" pitch_variety="0"/>
+    <sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.8" />
+    <sound key="cycle" fileref="AN94_WIN_JP.wav" volume="1.0" pitch_variety="0"/>
+    <sound class="impact" fileref="rifle_drop.wav" />  
     <model filename="gkw_ar_an94.xml" />
     <modifier class="speed" value="0.25" />
 
@@ -82,10 +109,20 @@
     <capacity value="1" source="rank" source_value="6.048" />
 
 
-    <sound key="fire" fileref="AN94_Fire_FromCODOL.wav" pitch_variety="0.02" volume="1" />
-    <sound key="magazine_out" fileref="an94_mgz_out_FromL4D2.wav" volume="1" />
-    <sound key="magazine_in" fileref="an94_mgz_in_FromL4D2.wav" volume="1" />
-    <sound key="cycle" fileref="an94_cycle_FromL4D2.wav" volume="1" />
+    <sound key="fire" fileref="an94mod3skill_fire_FromCOD16.wav" pitch_variety="0.02" volume="1" />
+    <sound key="magazine_out" fileref="an94_mgz_out_FromCOD16.wav" volume="0.8" />
+    <sound key="magazine_in" fileref="an94_mgz_in_FromCOD16.wav" volume="0.8" />
+    <sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.8" />
+    <sound key="cycle" fileref="AN94_ATTACK_JP.wav" volume="1.0" pitch_variety="0"/>
+    <sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.8" />
+    <sound key="cycle" fileref="AN94_BLACKACTION_JP.wav" volume="1.0" pitch_variety="0"/>
+    <sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.8" />
+    <sound key="cycle" fileref="AN94_LOADING_JP.wav" volume="1.0" pitch_variety="0"/>
+    <sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.8" />
+    <sound key="cycle" fileref="AN94_MEET_JP.wav" volume="1.0" pitch_variety="0"/>
+    <sound key="cycle" fileref="AN94_SKILL1_JP.wav" volume="1.0" pitch_variety="0"/>
+    <sound key="cycle" fileref="AN94_SKILL2_JP.wav" volume="1.0" pitch_variety="0"/>
+    <sound key="cycle" fileref="AN94_SKILL3_JP.wav" volume="1.0" pitch_variety="0"/>
     <sound class="impact" fileref="rifle_drop.wav" />    
     <model filename="gkw_ar_an94.xml" />
 
