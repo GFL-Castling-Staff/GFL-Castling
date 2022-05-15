@@ -2,7 +2,7 @@
 <weapon file="sf.base_weapon" on_ground_up="0 0 1" key="sfw_brute.weapon" time_to_live_out_in_the_open="0.0">
     <tag name="melee" />
 
-    <specification magazine_size="1" consume="0" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" carry_in_two_hands="0" name="Brute" class="5" stab_enabled="0" success_probability="2.0" damage="1.5" range="2.5" character_state="death" affect_characters="1" affect_vehicles="1"/>
+    <specification magazine_size="1" consume="0" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" carry_in_two_hands="0" name="SF-Brute" class="5" stab_enabled="0" success_probability="2.0" damage="1.5" range="2.5" character_state="death" affect_characters="1" affect_vehicles="1"/>
 
 
     <animation state_key="recoil" animation_key="stabbing, brute" />

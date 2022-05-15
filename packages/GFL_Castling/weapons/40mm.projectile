@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projectile class="grenade" name="40mmsop" key="40mm.projectile" slot="1" pulldown_in_air="26" >
     <tag name="grenade"/>
-    <result class="spawn" instance_class="projectile" instance_key="40mm_spread.projectile" min_amount="3" max_amount="3" offset="0 0.0 0" position_spread="0.5 0.5 0.5" direction_spread="0.15 0.25" />
+    <result class="spawn" instance_class="projectile" instance_key="40mm_spread.projectile" min_amount="3" max_amount="3" offset="0 0.0 0" position_spread="0.8 0 0.8" direction_spread="0.15 0.25" />
     <trigger class="time" time_to_live="0.0"/>
     <rotation class="motion" />
     <model mesh_filename="agl.xml" />
     <commonness value="0.0" />
-    <!--<effect class="activated" ref="Propulsion" />-->
 
 </projectile>

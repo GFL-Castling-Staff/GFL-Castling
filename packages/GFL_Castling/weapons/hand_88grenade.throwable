@@ -2,7 +2,7 @@
 <projectile class="grenade" name="Cluster grenade" key="hand_88grenade.projectile" slot="0" radius="0.15">
 
 
-    <result class="blast" radius="6.0" damage="12.0" push="1" decal="1" character_state="death" faction_compare="not_equal" />
+    <result class="blast" radius="7.5" damage="10.0" push="1" decal="1" character_state="death" faction_compare="not_equal" />
     <trigger class="impact"/>
 
     <rotation class="random" />
@@ -12,7 +12,7 @@
 
     <!-- <throwable curve_height="5.0" near_far_distance="5.0" speed_estimation_near="9.0" speed_estimation_far="15.0" max_speed="13.0" randomness="0.07" /> -->
     <!-- <throwable curve_height="6.0" near_far_distance="5.0" speed_estimation_near="20.0" speed_estimation_far="17.0" max_speed="11.0" randomness="0.07" /> -->
-    <throwable curve_height="8.0" near_far_distance="10.0" speed_estimation_near="16.0" speed_estimation_far="60.0" max_speed="60.0" randomness="0.07" tweak_factor="1.08"/>
+    <throwable curve_height="8.0" near_far_distance="10.0" speed_estimation_near="30" speed_estimation_far="80.0" max_speed="80.0" randomness="0.07" tweak_factor="1.08"/>
 
     <!-- projectile slot 0 is used for hand grenade items currently -->
     <!-- bound to change -->
@@ -62,6 +62,7 @@
 
     <effect class="result" key="static_object" copy="terrain" />
     <effect class="result" key="character" copy="terrain" /> 
+    <effect class="result" key="vehicle" copy="terrain" /> 
 
 	
 </projectile>
