@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <translation>
-	<!-- MOD内新增翻译 -->
+	<!-- 杂项翻译 -->
 	<text key="Drone air strikes" text="无人机空袭" />
 	<text key="Request drone air strikes" text="空袭妖精" />
 	<text key="Confirmed, UAV is online, situational awareness is complete " text="确认，UAV上线，视野良好" />
@@ -73,9 +73,6 @@
 	<!-- 敌人单位翻译 -->
 	<text key="SF-Manticore" text="强 无敌“蝎甲兽”机甲"/>
 	<text key="GK-Manticore" text="强 无敌“蝎甲兽”机甲"/>
-	<text key="Code:Hydra" text="Code:Hydra “九头蛇”军用机甲"/>
-	<text key="Code:Cerynitis Anti-Armor" text="Code:Cerynitis “牝鹿”式自行反装甲机炮"/>
-	<text key="Code:Cerynitis Suppressive" text="Code:Cerynitis “牝鹿”式自行压制速射机炮"/>
 	<text key="SF-Jaguar" text="SF-Jaguar “劫豹”轻型作战机甲" />
 	<text key="SF-Nemeum" text="SF-Nemeum “钢狮”军用机甲" />
 	<text key="SF-Nemeum SWAP" text="SF-Nemeum SWAP “钢狮SWAP”强化型机甲" />
@@ -110,6 +107,38 @@
 	<text key="SF-Scarecrow" text="SF-Scarecrow “稻草人”"/>
 	<text key="SF-Ouroboros" text="SF-Ouroboros “衔尾蛇”"/>
 
+	<text key="Code:Hydra" text="Code:Hydra “九头蛇”军用机甲"/>
+	<text key="Code:Cerynitis Anti-Armor" text="Code:Cerynitis “牝鹿”式自行反装甲机炮"/>
+	<text key="Code:Cerynitis Suppressive" text="Code:Cerynitis “牝鹿”式自行压制速射机炮"/>
+	<text key="Code:Aegis-GA" text="Code:Aegis-GA “圣盾-GA”特战人形"/>
+	<text key="Code:Cyclops-AR" text="Code:Cyclops-AR “独眼巨人”作战人形"/>
+	<text key="Code:Cyclops-AR-G" text="Code:Cyclops-AR-G “独眼巨人”作战人形"/>
+	<text key="Code:Cyclops-SG" text="Code:Cyclops-SG “独眼巨人”作战人形"/>
+	<text key="Code:Centaurus" text="Code:Centaurus “肯陶罗斯”战术支援人形"/>
+	<text key="Code:Dactyl" text="Code:Dactyl “指灵”自走布雷机"/>
+	<text key="Code:Orthros" text="Code:Orthros “欧特鲁斯”异形作战机甲"/> 
+	<text key="Code:Teslatrooper" text="Code:Teslatrooper “弥诺陶洛斯”巨型机甲"/>
+	<text key="Typhon" text="提丰-Typhon"/>
+	<text key="Coeus" text="奎乌-Coeus"/>
+
+	<text key="Pard-Commander" text="Commander 指挥士"/>
+	<text key="Doppelsoldner-Rocket" text="Doppelsoldner “巨剑士”作战机甲"/>
+	<text key="Germ" text="Germ “加尔姆”犬型合成单位"/>
+	<text key="Infected" text="Infected “受洗者”"/>
+	<text key="Narciss" text="Narciss 娜希斯"/>
+	<text key="Nimogen" text="Nimogen 尼莫金"/>
+	<text key="Adeline" text="Adeline 黑涅托"/>
+	<text key="Nyto-Eagleyes" text="Nyto-Eagleyes 涅托-鹰眼"/>
+	<text key="Nyto-Vanguard" text="Nyto-Vanguard 涅托-巡卫"/>
+	<text key="Police" text="Police 警备士"/>
+	<text key="Rodelero" text="Rodelero 剑盾士"/>
+	<text key="Alina" text="Alina 白涅托"/>
+	<text key="Strelet" text="Strelet 射击士"/>
+	<text key="Strelet Plus" text="Strelet Plus 重炮士"/>
+	<text key="Teal" text="Teal 缇"/>
+	<text key="Thrower" text="Thrower 掷弹士"/>
+	<text key="Uhlan" text="枪骑兵-Uhlan"/>
+	<text key="Pyxis" text="指南针-Pyxis"/>
 
  	<text key="To Hematite, request artillery support" text="呼叫赤铁矿行动小组，请求对该区域进行饱和式火力覆盖"/>
 	<text key="Hematite Saturation Artillery" text="赤铁矿-饱和式火力支援"/>
@@ -124,9 +153,9 @@
 	<text key="U R Warnned" text="罚单——你因为违规行为被惩罚了！
 	若对此有疑问请与服务器管理员交谈"/>
 	<text key="Equipment Contract" text="装备制造契约" />
-	<text key="Pyxis" text="指南针-Pyxis"/>
 	<text key="KCCO Scanning Grenade" text="特战部智能追踪手雷"/>
 	<text key="Ofanim's Might" text="座天使之威能"/>
+	<text key="Seraph's Blaze" text="炽天使之怒火"/>
 
 	<!-- 护甲新增翻译 -->
 	<text key="[...See you in the new world]" text="[……我们新世界再见吧]" />
@@ -425,32 +454,10 @@
 	<text key="M870-[Pumpkin Fortification]" text="M870-[南瓜堡垒]"/>
 	<!-- 文本Key翻译 -->
 	<!-- 以下为原版翻译汇编 -->
-	<text key="APC HMG" text="步战车机枪" />
-	<text key="M24-A2" text="M24-A2狙击步枪" />
 	<text key="default" text="默认" />
-	<text key="riot shield" text="防暴盾" />
-	<text key="riot shield 100&#37;" text="防暴盾100&#37;" />
-	<text key="riot shield 50&#37;" text="防暴盾50&#37;" />
-	<text key="M72 LAW" text="M72轻型反装甲火箭筒" />
 	<text key="rocket" text="火箭弹" />
-	<text key="M240" text="M240轻机枪" />
-	<text key="Mossberg 500" text="莫斯伯格500霰弹枪" />
-	<text key="MP5SD" text="MP5微声冲锋枪" />
-	<text key="M16A4" text="M16A4突击步枪" />
-	<text key="Benelli M4" text="伯奈利M4霰弹枪" />
-	<text key="Benelli M4 suppressed" text="伯奈利M4消音霰弹枪" />
-	<text key="pepperdust" text="Pepperdust晕眩霰弹枪" />
-	<text key="Tank cannon" text="坦克主炮" />
-	<text key="Tank MG" text="坦克机枪" />
-	<text key="AKS-74U" text="AKS-74U卡宾枪" />
 	<text key="P90" text="P90冲锋枪" />
 	<text key="Medikit" text="医疗包" />
-	<text key="TOW" text="“陶”式反坦克导弹" />
-	<text key="VSS Vintorez" text="VSS微声狙击步枪 " />
-	<text key="Neostead 2000" text="Neostead 2000霰弹枪" />
-	<text key="Cover deploy" text="掩体部署包" />
-	<text key="Humvee MG" text="悍马机枪" />
-	<text key="Stoner LMG" text="斯通纳轻机枪" />
 	<text key="m79 grenade launcher" text="M79榴弹发射器" />
 	<text key="M79" text="M79" />
 	<text key="MG deploy" text="重机枪部署包" />
@@ -459,11 +466,8 @@
 	<text key="PS Mortar" text="巡逻艇迫击炮" />
 	<text key="PB" text="PB 6P9微声手枪" />
 	<text key="Glock 17" text="Glock 17手枪" />
-	<text key="Beretta M9" text="伯莱塔M9手枪（消音器）" />
 	<text key="Desert Eagle" text="沙漠之鹰" />
-	<text key="Desert Eagle GOLD" text="黄金沙漠之鹰" />
 	<text key="AA-12" text="AA-12全自动霰弹枪" />
-	<text key="MGL Flasher" text="MGL闪光弹发射器" />
 	<text key="grenade" text="榴弹" />
 	<text key="hand grenade" text="手榴弹" />
 	<text key="mortar shell" text="迫击炮弹" />
@@ -509,6 +513,7 @@
 	<text key="iPoo green edition" text="绿色的电子产品" />
 	<text key="iPoo pink limited edition" text="似乎挺贵重的电子产品" />
 	<text key="poker cards" text="受潮的扑克牌" />
+	<text key="Oscar statue" text="锈蚀的“金”制奖杯" />
 
 	<text key="Spawn truck" text="重生车" />
 	<text key="Comms truck" text="通讯车" />
