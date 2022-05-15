@@ -24,7 +24,6 @@
 	<projectile file="ump9_stun_grenade.projectile" />
 	<projectile file="ump9_skill_soldier_spawner.projectile"/>
     <projectile file="stun_grenade.projectile"/>
-	<projectile file="40mm_sopmod_main.projectile"/>
 	<projectile file="VVfirenade.projectile"/>
 	<projectile file="ntw.projectile"/>
 	
@@ -36,7 +35,7 @@
 	<projectile file="kcco_smartgrenade_2.projectile"/>
 	<projectile file="kcco_smartgrenade_3.projectile"/>
 	
-	<projectile file="standard_aa_grenade.projectile"/> 穿甲榴弹
-	<projectile file="standard_ap_grenade.projectile"/>	杀伤榴弹
+	<projectile file="standard_aa_grenade.projectile"/> <!--杀伤榴弹-->
+	<projectile file="standard_ap_grenade.projectile"/>	<!--爆破榴弹-->
 	
 </projectiles>

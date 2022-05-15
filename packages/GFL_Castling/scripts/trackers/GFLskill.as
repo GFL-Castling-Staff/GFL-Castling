@@ -101,7 +101,7 @@ class GFLskill : Tracker {
                         "<command class='create_instance'" +
                         " faction_id='"+ player.getIntAttribute("faction_id") +"'" +
                         " instance_class='grenade'" +
-                        " instance_key='40mm_sopmod_main.projectile'" +
+                        " instance_key='std_aa_grenade.projectile'" +
                         " position='" + Pos_40mm.toString() + "'"+
 				        " character_id='" + characterId + "' />";
                     m_metagame.getComms().send(c1);
@@ -191,7 +191,7 @@ class GFLskill : Tracker {
                         "<command class='create_instance'" +
                         " faction_id='"+ factionid +"'" +
                         " instance_class='grenade'" +
-                        " instance_key='40mm_xm8mod3.projectile'" +
+                        " instance_key='std_aa_grenade.projectile'" +
                         " position='" + Pos_40mm.toString() + "'"+
 				        " character_id='" + characterId + "' />";
 					m_metagame.getComms().send(c);
@@ -229,7 +229,7 @@ class GFLskill : Tracker {
                         "<command class='create_instance'" +
                         " faction_id='"+ factionid +"'" +
                         " instance_class='grenade'" +
-                        " instance_key='40mm_hk416_main.projectile'" +
+                        " instance_key='std_aa_grenade.projectile'" +
                         " position='" + Pos_40mm.toString() + "'"+
 				        " character_id='" + characterId + "' />";
 					m_metagame.getComms().send(c);
