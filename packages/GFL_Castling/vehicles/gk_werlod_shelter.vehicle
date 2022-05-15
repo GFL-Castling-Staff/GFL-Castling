@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<vehicle name="shelter" key="gk_werlod_shelter.vehicle" map_view_atlas_index="-1" respawn_time="36000.0" usable_for_cover="1" >
+<vehicle name="shelter" key="gk_werlod_shelter.vehicle" map_view_atlas_index="-1" time_to_live="120" respawn_time="36000.0" usable_for_cover="1" >
     <tag name="sandbag" />
     <tire_set offset="1.0 0.0 0.5" radius="0.65" />
     <tire_set offset="1.0 0.0 -0.5" radius="0.65" />
