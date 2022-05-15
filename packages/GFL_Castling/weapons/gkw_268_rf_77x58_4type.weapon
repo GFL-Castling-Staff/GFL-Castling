@@ -17,7 +17,7 @@
 	reload_one_at_a_time="1" 
 	projectile_speed="228.72" 
 	barrel_offset="0.6" 
-	projectiles_per_shot="1"
+	projectiles_per_shot="10"
 	/>
 
 
@@ -49,12 +49,12 @@
         kill_decay_start_time="1.448" 
         kill_decay_end_time="2.414" />
 	</projectile>
-	<stance state_key="running" accuracy="0.5" />
-    <stance state_key="walking" accuracy="0.6" />
-    <stance state_key="crouch_moving" accuracy="0.8" />
-    <stance state_key="prone_moving" accuracy="0.8" />
-    <stance state_key="standing" accuracy="0.9" />
-    <stance state_key="crouching" accuracy="0.95" />
-    <stance state_key="prone" accuracy="1" />
-	
+	<stance state_key="running" accuracy="1.2" />
+	<stance state_key="walking" accuracy="1.2" />
+    <stance state_key="crouch_moving" accuracy="1.2" />
+    <stance state_key="prone_moving" accuracy="1.2" />
+    <stance state_key="standing" accuracy="1.2" />
+    <stance state_key="crouching" accuracy="1.2" />
+    <stance state_key="prone" accuracy="1.5" />
+    <stance state_key="over_wall" accuracy="1.5" />
 </weapon>

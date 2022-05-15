@@ -18,7 +18,7 @@
 	sight_range_modifier="2.5" 
 	projectile_speed="239.66" 
 	barrel_offset="0.4" 
-	projectiles_per_shot="1" />
+	projectiles_per_shot="7" />
     <inventory  buy_price="8.0" sell_price="8.0" />
 	<!--Animations-->
 	
@@ -51,21 +51,19 @@
     <weak_hand_hold offset="0.3" />
     <projectile file="bullet.projectile">
         <result class="hit" 
-        kill_probability="1.6"
-        kill_probability_offset_on_successful_hit="9.0"
+        kill_probability="2.5"
+        kill_probability_offset_on_successful_hit="2.5"
         kill_decay_start_time="0.895" 
         kill_decay_end_time="1.659" />
     </projectile>
     
     <!--Accuracy, Movement speed-->
-    
-	<stance state_key="walking" accuracy="0.4" />
-    <stance state_key="crouch_moving" accuracy="0.6" />
-    <stance state_key="prone_moving" accuracy="0.6" />
-    <stance state_key="standing" accuracy="0.9"/>
-    <stance state_key="crouching" accuracy="0.95" />
-    <stance state_key="prone" accuracy="1" />
-    <stance state_key="over_wall" accuracy="1" /> 
-	
-
+    <stance state_key="running" accuracy="1.2" />
+	<stance state_key="walking" accuracy="1.2" />
+    <stance state_key="crouch_moving" accuracy="1.2" />
+    <stance state_key="prone_moving" accuracy="1.2" />
+    <stance state_key="standing" accuracy="1.2" />
+    <stance state_key="crouching" accuracy="1.2" />
+    <stance state_key="prone" accuracy="1.5" />
+    <stance state_key="over_wall" accuracy="1.5" />
 </weapon>
