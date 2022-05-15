@@ -7,7 +7,7 @@
 #include "GFLhelpers.as"
 #include "GFLtask.as"
 #include "task_sequencer.as"
-
+#include "TheJuptier.as"
 //Author: NetherCrow
 
 	// --------------------------------------------
@@ -36,10 +36,9 @@ class GFLskill : Tracker {
     protected array<XM8tracker@> XM8track;
 	protected array<HK416_tracker@> HK416_track;
 	protected array<Vector_tracker@> Vector_track;
-	TaskSequencer jupiter;
+
 	// --------------------------------------------
 	protected void handleResultEvent(const XmlElement@ event) {
-		
 		//checking if the event was triggered by a rangefinder notify_script
 		string EventKeyGet = event.getStringAttribute("key");
 		if (EventKeyGet == "aa_spawn"){
@@ -64,8 +63,6 @@ class GFLskill : Tracker {
 		}
 		if (EventKeyGet == "Jupiter_spawn"){
 			const XmlElement@ playerFaction = getFactionInfo(m_metagame,0);
-			jupiter = m_metagame.getTaskManager().newTaskSequencer();
-			jupiter.add(Jupiter_Airstrike_Task(m_metagame));
 			if(playerFaction.getStringAttribute("name")=="G&K PMC"){
 				XmlElement command("command");
 				command.setStringAttribute("class", "faction_resources");
@@ -76,9 +73,6 @@ class GFLskill : Tracker {
 		}
 		if (EventKeyGet == "Jupiter_down"){
 			const XmlElement@ playerFaction = getFactionInfo(m_metagame,0);
-			if(jupiter !is null){
-				jupiter.clear();
-			}
 			if(playerFaction.getStringAttribute("name")=="G&K PMC"){
 				XmlElement command("command");
 				command.setStringAttribute("class", "faction_resources");
@@ -239,7 +233,7 @@ class GFLskill : Tracker {
 					//获取技能影响的敌人数量
 					m_fnum= m_metagame.getFactionCount();
 					array<const XmlElement@> affectedCharacter;
-					for(uint i=0;i<m_fnum;i++) 
+					for(int i=0;i<m_fnum;i++) 
 						if(i!=factionid) {
 						array<const XmlElement@> affectedCharacter2;
 						affectedCharacter2 = getCharactersNearPosition(m_metagame,Pos_40mm,i,7.0f);
@@ -274,7 +268,7 @@ class GFLskill : Tracker {
 				m_fnum = m_metagame.getFactionCount();
 				array<const XmlElement@> affectedCharacter;
 				_log("Scan successful");
-				for(uint i=0;i<m_fnum;i++) 
+				for(int i=0;i<m_fnum;i++) 
 					if(i!=factionid) {
 					array<const XmlElement@> affectedCharacter2;
 					affectedCharacter2 = getCharactersNearPosition(m_metagame,pos_smartgrenade,i,10.0f);
@@ -505,6 +499,8 @@ class GFLskill : Tracker {
             }
         }
 	}
+
+
 	bool hasEnded() const {
 		// always on
 		return false;
