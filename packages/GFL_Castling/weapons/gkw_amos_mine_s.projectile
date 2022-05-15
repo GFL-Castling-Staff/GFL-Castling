@@ -23,8 +23,7 @@ time_to_live="60">
     
     <rotation class="random" />
 
-
-    <model filename="sf_mine.xml" />
+    <model mesh_filename="at_mine.mesh" texture_filename="at_mine.png" />
     <hud_icon filename="hud_at_mine.png" />
 
 <!--    <throwable curve_height="0.0" near_far_distance="0.0" speed_estimation_near="2.0" speed_estimation_far="2.0" max_speed="2.0" randomness="0.01" /> -->

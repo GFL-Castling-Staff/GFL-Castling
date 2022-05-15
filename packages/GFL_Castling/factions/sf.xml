@@ -462,6 +462,7 @@
 		<resources clear_weapons="1" clear_calls="1">
 			<weapon key="sfw_vespid.weapon" enabled="1"/>
 			<carry_item key="sf_ar.carry_item" enabled="1" />
+			<projectile key="sf_ap_mine.projectile" enabled="1.0" />
 		</resources>
 	</soldier>
 	<soldier name="sf_vespid_swap" spawn_score="0.75" copy_from="default_spawn_ai">
@@ -470,6 +471,7 @@
 		<resources clear_weapons="1" clear_calls="1">
 			<weapon key="sfw_vespid_swap.weapon" enabled="1"/>
 			<carry_item key="sf_ar.carry_item" enabled="1" />
+			<projectile key="sf_ap_mine.projectile" enabled="1.0" />
 		</resources>
 	</soldier>
 	<!-- ripper -->
@@ -478,6 +480,7 @@
 		<resources clear_weapons="1" clear_calls="1">
 			<weapon key="sfw_ripper.weapon" enabled="1"/>
 			<carry_item key="sf_smg.carry_item" enabled="1" />
+			<projectile key="sf_ap_mine.projectile" enabled="1.0" />
 		</resources>
 	</soldier>
 	<soldier name="sf_ripper_swap" spawn_score="0.75" copy_from="default_spawn_ai">
@@ -485,6 +488,7 @@
 		<resources clear_weapons="1" clear_calls="1">
 			<weapon key="sfw_ripper_swap.weapon" enabled="1"/>
 			<carry_item key="sf_ar.carry_item" enabled="1" />
+			<projectile key="sf_ap_mine.projectile" enabled="1.0" />
 		</resources>
 	</soldier>
 	<!-- guard -->
@@ -501,6 +505,7 @@
 		<resources clear_weapons="1" clear_calls="1">
 			<weapon key="sfw_jaeger.weapon" enabled="1"/>
 			<carry_item key="sf_rf.carry_item" enabled="1" />
+			<projectile key="sf_ap_mine.projectile" enabled="1.0" />
 		</resources>
 	</soldier>
 	<soldier name="sf_jaeger_swap" spawn_score="0.75" copy_from="default_spawn_ai">
@@ -508,6 +513,7 @@
 		<resources clear_weapons="1" clear_calls="1">
 			<weapon key="sfw_jaeger_swap.weapon" enabled="1"/>
 			<carry_item key="sf_rf.carry_item" enabled="1" />
+			<projectile key="sf_ap_mine.projectile" enabled="1.0" />
 		</resources>
 	</soldier>
 	<!-- striker -->
@@ -516,6 +522,7 @@
 		<resources clear_weapons="1" clear_calls="1">
 			<weapon key="sfw_striker.weapon" enabled="1"/>
 			<carry_item key="sf_str.carry_item" enabled="1" />
+			<projectile key="sf_ap_mine.projectile" enabled="1.0" />
 		</resources>
 	</soldier>
 	<soldier name="sf_striker_swap" spawn_score="0.75" copy_from="default_spawn_ai">
@@ -524,6 +531,7 @@
 		<resources clear_weapons="1" clear_calls="1">
 			<weapon key="sfw_striker_swap.weapon" enabled="1"/>
 			<carry_item key="sf_str.carry_item" enabled="1" />
+			<projectile key="sf_ap_mine.projectile" enabled="1.0" />
 		</resources>
 	</soldier>
 	<!-- nemeum 钢狮 -->
