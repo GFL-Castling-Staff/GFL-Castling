@@ -1405,7 +1405,8 @@ class CommandSkill : Tracker {
                         " instance_key='ak15_mod3_roar.projectile'" +
                         " position='" + c_pos.toString() + "'"+
 				        " character_id='" + characterId + "' />";
-                        m_metagame.getComms().send(command);		
+                        m_metagame.getComms().send(command);
+                        playSoundAtLocation(m_metagame,"ak15mod3_skill_FromELDENRING.wav",factionid,c_pos,0.9);		
 					}
 					else {
                         addCoolDown("AK15MOD3",10,characterId,modifer);
