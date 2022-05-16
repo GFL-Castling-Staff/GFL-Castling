@@ -23,11 +23,6 @@
 	<inventory  buy_price="100.0" sell_price="100.0" />
 	<!--Animations-->
     
-    
-    
-    
-    
-	
 	<!--Sounds-->
 		
 	<sound key="fire" fileref="ppk_fire_FromRE2RE.wav" pitch_variety="0.05" volume="1" />
@@ -37,8 +32,8 @@
 
    
 	<!--Model, Icon, Cost-->
-    <model filename="" />
-    <hud_icon filename="" />
+    <model filename="gkw_hg_mk23.xml" />
+    <hud_icon filename="gkw_ppkmod3.png" />
 
     <!-- <inventory  price="3.0" /> -->
 	

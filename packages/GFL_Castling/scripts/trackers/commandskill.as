@@ -206,7 +206,7 @@ class CommandSkill : Tracker {
                     excuteStg44MOD3skill(cId,senderId,m_modifer);
                     return;        
                 }
-                if (c_weaponType=="gkw_werlodmod3.weapon"){
+                if (c_weaponType=="gkw_welrodmod3.weapon"){
                     excuteWerlodskill(cId,senderId,m_modifer,true);
                     return;        
                 }
