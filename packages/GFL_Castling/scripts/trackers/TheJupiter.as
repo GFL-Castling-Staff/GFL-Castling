@@ -14,7 +14,7 @@ class jupiter: Tracker {
 	protected bool m_started;
 	protected int m_numLeft=0;
 	protected int m_faction=1;
-	protected int m_striketime=5;
+	protected int m_striketime=2;
 	protected float m_delaytime=0;
 	protected bool m_strike=false;
 	protected Vector3 m_pos;
@@ -34,7 +34,7 @@ class jupiter: Tracker {
 		const XmlElement@ characterinfo = getCharacterInfo(m_metagame, characterId);
         if (characterinfo is null) return;
 		Vector3 c_pos = stringToVector3(characterinfo.getStringAttribute("position"));
-		CreateProjectile(m_metagame,c_pos.add(Vector3(0,10,0)),c_pos,"jupiter_airstrike_warning.projectile",-1,m_faction,120,100);
+		CreateProjectile(m_metagame,c_pos.add(Vector3(0,10,0)),c_pos,"jupiter_airstrike_warning_s.projectile",-1,m_faction,120,100);
 		m_delaytime=8.0;
 		m_strike=true;
 		m_pos=c_pos;
