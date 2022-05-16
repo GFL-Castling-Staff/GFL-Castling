@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<projectile class="grenade" name="Grenade" key="grenade_ppsh41.projectile" slot="0" radius="0.15" pulldown_in_air="40">
+<projectile class="grenade" name="Grenade" key="grenade_pp19.projectile" slot="0" radius="0.15" pulldown_in_air="40">
 
     <result class="blast" radius="4.5" damage="8.0" push="0.8" decal="1" character_state="death" faction_compare="not_equal" />
     <trigger class="impact">
@@ -8,7 +8,7 @@
     <rotation class="random" />
 	<trail probability="0.0" key="BulletApTrail" />
     <model mesh_filename="grenade.xml" />
-    <hud_icon filename="88r.png" />
+    <hud_icon filename="" />
 
     <commonness value="0.8" />
     <inventory encumbrance="3.0" price="5.0" />

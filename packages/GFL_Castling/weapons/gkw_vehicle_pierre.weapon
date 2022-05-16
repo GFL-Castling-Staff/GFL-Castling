@@ -38,9 +38,9 @@
     <hud_icon filename="gkw_v_LM5.png" />
     <commonness value="0.0" />
 
-    <!-- <effect class="muzzle" ref="muzzle_yellow" /> -->
+    <effect class="muzzle" ref="muzzle_yellow" />
     <effect class="muzzle" ref="side_muzzle" />
-	<!-- <effect class="muzzle" ref="BigMuzzle" /> -->
+	<effect class="muzzle" ref="BigMuzzle" />
 	
     <weak_hand_hold offset="0.4" />
     <projectile file="bullet.projectile" radius="1.0" >
