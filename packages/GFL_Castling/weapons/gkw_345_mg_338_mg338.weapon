@@ -26,6 +26,7 @@
     <sound class="impact" fileref="rifle_drop.wav" />
     <model filename="gkw_mg_mg338.xml" />
     <hud_icon filename="gkw_mg338.png" />
+    <effect class="muzzle" ref="muzzle_yellow" />
     <projectile file="bullet.projectile">
         <result class="hit" kill_probability="1.9" kill_decay_start_time="2.135" kill_decay_end_time="4.245" />
     </projectile>
@@ -40,7 +41,7 @@
 </weapon>
 <weapon file="heavy_mg.animation_base" key="gkw_mg338_skill.weapon">
     <specification 
-    barrel_offset="0.5" 
+    barrel_offset="0.6" 
     retrigger_time="0.12" 
     accuracy_factor="0.99" 
     sustained_fire_grow_step="0.35" 
@@ -65,7 +66,7 @@
     <sound class="impact" fileref="rifle_drop.wav" />
     <model filename="gkw_mg_mg338.xml" />
     <hud_icon filename="gkw_mg338_skill.png" />
-    <effect class="muzzle" ref="muzzle_yellow" />
+    <effect class="muzzle" ref="fire_newtest_muzzle"/>
     <projectile file="bullet.projectile">
         <result class="hit" kill_probability="1.8" kill_decay_start_time="2.135" kill_decay_end_time="4.245" />
     </projectile>
