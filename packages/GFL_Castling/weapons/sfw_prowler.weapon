@@ -24,7 +24,7 @@
 
 		
     <animation state_key="recoil" animation_key="still, target" />
-    <animation state_key="reload"	animation_key="reloading, pistol dual0.9" />
+    <animation state_key="reload"	animation_key="still, target" />
     <animation state_key="hold"	animation_key="still, target" />
     <animation state_key="hold_casual"	animation_key="still, target" />
     <animation state_key="hold_on_wall"	animation_key="still, target" />
@@ -32,7 +32,7 @@
     <animation state_key="running" animation_key="still, target" />
     <animation state_key="walking"	animation_key="still, target" />
     <animation state_key="walking_backwards" animation_key="still, target" />
-    <animation state_key="changing_weapon_in" 	animation_key="change weapon in, single hand carry" />
+    <animation state_key="changing_weapon_in" 	animation_key="still, target" />
     <animation state_key="crouching"	animation_key="still, target" />
     <animation state_key="crouch_moving"	animation_key="still, target" />
 
