@@ -13,7 +13,7 @@
     magazine_size="6" 
     name="SF-Jaguar" 
     projectile_speed="90" 
-    retrigger_time="0.5"
+    retrigger_time="0.25"
     burst_shots="3"
     last_burst_retrigger_time="4.0" 
     suppressed="0" 
@@ -60,12 +60,12 @@
 
     <weak_hand_hold offset="0.2" />
 
-    <projectile file="standard_agl.projectile" pulldown_in_air="23">
+    <projectile file="standard_agl.projectile" pulldown_in_air="22">
         <result class="blast" damage="3.0" radius="3.0" decal="1" push="1" character_state="death" faction_compare="not_equal"/>
         <trail probability="1.0" key="FlamethrowerTrail" />
     </projectile>
 
-    <ballistics curve_height="60.0" near_far_distance="5.0" speed_estimation_near="15.0" speed_estimation_far="20.0" max_speed="80.0" randomness="0.0" tweak_factor="1.12" />
+    <ballistics curve_height="60.0" near_far_distance="5.0" speed_estimation_near="15.0" speed_estimation_far="20.0" max_speed="80.0" randomness="0.0" tweak_factor="1.0" />
 
 	<stance state_key="running" accuracy="1.0" />
 	<stance state_key="walking" accuracy="1.0" />

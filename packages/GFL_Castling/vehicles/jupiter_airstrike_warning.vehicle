@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<vehicle key="jupiter_airstrike_warning.vehicle" map_view_atlas_index="-1" allow_ai_to_use="0" should_be_destroyed="0" usable_for_cover="0" >
+<vehicle key="jupiter_airstrike_warning.vehicle" map_view_atlas_index="-1" allow_ai_to_use="0" should_be_destroyed="0" usable_for_cover="0"  time_to_live="8">
 	<tire_set offset="0.1 0.0 0.1" radius="0.1" />
 	<tire_set offset="0.1 0.0 -0.1" radius="0.1" />
 
