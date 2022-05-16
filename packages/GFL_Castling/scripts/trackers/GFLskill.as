@@ -270,7 +270,7 @@ class GFLskill : Tracker {
 				for(int i=0;i<m_fnum;i++) 
 					if(i!=factionid) {
 					array<const XmlElement@> affectedCharacter2;
-					affectedCharacter2 = getCharactersNearPosition(m_metagame,pos_smartgrenade,i,10.0f);
+					affectedCharacter2 = getCharactersNearPosition(m_metagame,pos_smartgrenade,i,20.0f);
 					if (affectedCharacter2 !is null){
 						for(uint x=0;x<affectedCharacter2.length();x++){
 							affectedCharacter.insertLast(affectedCharacter2[x]);
