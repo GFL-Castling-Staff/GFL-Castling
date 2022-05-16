@@ -182,7 +182,7 @@ class CommandSkill : Tracker {
                     excuteUMP45skill(cId,senderId,m_modifer);
                     return;
                 }
-                if (c_weaponType=="gkw_m870.weapon"|| c_weaponType=="gkw_m870_3803.weapon"){
+                if (c_weaponType=="gkw_m870.weapon"|| c_weaponType=="gkw_m870_3803.weapon" || c_weaponType=="gkw_m870_3803_skill.weapon"){
                     excuteM870skill(cId,senderId,m_modifer);
                     return;        
                 }
