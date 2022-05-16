@@ -29,7 +29,6 @@
 	<carry_item file="ipoo_player_pink.valuable" />   
 	<carry_item file="playing_cards.valuable" />  
 	<carry_item file="suitcase.valuable" />
-	<carry_item file="lottery.carry_item" />    
     <carry_item file="underpants.valuable" /> 
     <carry_item file="kamasutra.valuable" /> 
     <carry_item file="cd.valuable" /> 
@@ -42,7 +41,6 @@
 	<carry_item file="rwr_handbook.valuable" />
 	<carry_item file="oscar_statue.valuable" />
 	<carry_item file="laptop.valuable" />  
-	<carry_item file="caigoubi.valuable" />  
 	<carry_item file="city_gifts.valuable" />
 	<carry_item file="forest_gifts.valuable" />
 	<carry_item file="wild_gifts.valuable" />
@@ -56,10 +54,14 @@
 	<carry_item file="double_enjoyment_package.valuable" />  
 	<carry_item file="holy_meat_buns.valuable" />  
 	<carry_item file="ice_theatre.valuable" />  
-	<carry_item file="cgb_mod3.carry_item" />  
-	<carry_item file="sf_box.carry_item"/>
+
 	
 	<carry_item file="gift_box_community_2.carry_item" />
 
 	<!-- 垃圾全是垃圾 -->
+	<carry_item file="lottery.carry_item" />    
+	<carry_item file="caigoubi.valuable" />  
+	<carry_item file="cgb_mod3.carry_item" />  
+	<carry_item file="sf_box.carry_item"/>
+	<carry_item file="armor_crafting_card.carry_item"/>
 </carry_items>

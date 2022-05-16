@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<carry_item name="Equipment Contract" key="armor_crafting_card.carry_item" time_to_live_out_in_the_open="30" drop_count_factor_on_death="0.0" drop_count_factor_on_player_death="0.0">
+<carry_item name="Equipment Contract" key="armor_crafting_card.carry_item" time_to_live_out_in_the_open="30" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="1.0">
 	<capacity value="1" source="rank" source_value="0.0" />
-	<hud_icon filename="Item_city_gifts.png" />
-	<inventory encumbrance="-1.0" buy_price="500" sell_price="0" />
-	<model mesh_filename="city gifts.xml" texture_filename="" />
-	<commonness value="1.0" in_stock="1" />
+	<hud_icon filename="equip_crafting.png" />
+	<inventory encumbrance="-1.0" buy_price="1000" sell_price="0" />
+	<model mesh_filename="magazine.mesh" texture_filename="gkdummy.png" />
+	<commonness value="0.0" in_stock="1" />
 </carry_item>
