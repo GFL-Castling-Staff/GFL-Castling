@@ -44,7 +44,7 @@ class jupiter: Tracker {
 		int offsetY=0;
 		for(int i=0;i<m_striketime;i++){
 			int offsetX = rand(1,21)-11;
-			int offsetX = rand(1,21)-11;
+			int offsetZ = rand(1,21)-11;
 			Vector3 pos_a= pos.add(Vector3(offsetX,0,offsetZ));
 			CreateProjectile(m_metagame,pos_a.add(Vector3(0,60+offsetY,0)),pos_a,"artillery_jupiter_420.projectile",-1,m_faction,120,10);
 			offsetY+=60;
