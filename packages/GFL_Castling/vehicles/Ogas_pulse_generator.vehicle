@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<vehicle name="Ogas Pulse Generator" key="ogas_pulse_generator.vehicle" map_view_atlas_index="3" jams_enemy_radio="1" existence="one_per_faction" reserves_spawn_point="1" usable_for_cover="0" time_to_live="300">
+<vehicle name="Ogas Pulse Generator" key="ogas_pulse_generator.vehicle" map_view_atlas_index="3" jams_enemy_radio="1" existence="one_per_faction" reserves_spawn_point="1" usable_for_cover="0" time_to_live="10">
 	<tag name="target" />
 	<tire_set offset="1.0 0.0 1.0" radius="0.65" />
 	<tire_set offset="1.0 0.0 -1.0" radius="0.65" />

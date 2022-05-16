@@ -64,7 +64,7 @@ class Jupiter_Airstrike_Task : Task {
 		const XmlElement@ characterinfo = getCharacterInfo(m_metagame, characterId);
 		Vector3 c_pos = stringToVector3(characterinfo.getStringAttribute("position"));
 		// CreateProjectile(Metagame@ m_metagame,Vector3 startPos,Vector3 endPos,string key,int cId,int fId,float initspeed,float ggg){
-		CreateProjectile(m_metagame,c_pos.add(Vector3(0,10,0)),c_pos,"jupiter_airstrike_warning.projectile",-1,1,720,100);
+		CreateProjectile(m_metagame,c_pos.add(Vector3(0,10,0)),c_pos,"jupiter_airstrike_warning_s.projectile",-1,1,720,100);
 		CreateProjectile(m_metagame,c_pos.add(Vector3(0,60,0)),c_pos,"artillery_jupiter_420.projectile",-1,1,120,10);
 	}
 
