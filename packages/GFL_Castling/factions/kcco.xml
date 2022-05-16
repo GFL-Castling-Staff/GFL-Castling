@@ -423,7 +423,9 @@
 	<soldier name="default_bot" spawn_score="0.0" firstnames_file="kcco_first.name" lastnames_file="kcco_last.name">
 		<ai filename="default.ai" />
 		<character filename="default_kcco_bot.character" />
-		<resources file="kcco.resources" />
+		<resources file="kcco.resources" >
+			<projectile key="kcco_smartgrenade_1.projectile" enabled="0" />			
+		</resources>
 		<resources file="kcco_call.resources" />
 		<item_class_existence_config>
 			<!-- secondaries -->
