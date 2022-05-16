@@ -4,8 +4,8 @@
     <specification 
   retrigger_time="-1.0" 
   accuracy_factor="1.0" 
-  sustained_fire_grow_step="2" 
-  sustained_fire_diminish_rate="0.8" 
+  sustained_fire_grow_step="0" 
+  sustained_fire_diminish_rate="0" 
   magazine_size="5" 
   can_shoot_standing="1" 
   suppressed="0" 
