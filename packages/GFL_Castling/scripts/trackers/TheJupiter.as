@@ -14,7 +14,7 @@ class jupiter: Tracker {
 	protected bool m_started;
 	protected int m_numLeft=0;
 	protected int m_faction=1;
-	protected int m_striketime=12;
+	protected int m_striketime=5;
 	protected float m_delaytime=0;
 	protected bool m_strike=false;
 	protected Vector3 m_pos;
@@ -41,11 +41,13 @@ class jupiter: Tracker {
 	}
 
 	void jupiterfire(Vector3 pos){
+		int offsetY=0;
 		for(int i=0;i<m_striketime;i++){
-			int offsetX = rand(1,9)-5;
-			int offsetZ = rand(1,9)-5;
+			int offsetX = rand(1,21)-11;
+			int offsetX = rand(1,21)-11;
 			Vector3 pos_a= pos.add(Vector3(offsetX,0,offsetZ));
-			CreateProjectile(m_metagame,pos_a.add(Vector3(0,rand(1,20)+60,0)),pos_a,"artillery_jupiter_420.projectile",-1,m_faction,120,10);
+			CreateProjectile(m_metagame,pos_a.add(Vector3(0,60+offsetY,0)),pos_a,"artillery_jupiter_420.projectile",-1,m_faction,120,10);
+			offsetY+=60;
 		}
 	}
 
