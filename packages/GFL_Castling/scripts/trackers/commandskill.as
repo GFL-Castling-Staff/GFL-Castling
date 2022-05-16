@@ -190,7 +190,7 @@ class CommandSkill : Tracker {
                     excutePP19skill(cId,senderId,m_modifer);
                     return;        
                 }
-                if (c_weaponType=="gkw_pp19_mod3.weapon"){
+                if (c_weaponType=="gkw_pp19mod3.weapon"){
                     excutePP19skill(cId,senderId,m_modifer,true);
                     return;        
                 }
@@ -1295,11 +1295,17 @@ class CommandSkill : Tracker {
                     playAnimationKey(m_metagame,characterId,"throwing, upside",true,true);
                     c_pos=c_pos.add(Vector3(0,1,0));
                     if (mod3){
-                        addCoolDown("pp19",15,characterId,modifer);
+                        addCoolDown("pp19",45,characterId,modifer);
                         CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"grenade_pp19.projectile",characterId,factionid,40.0,6.0);
+                        Vector3 c_pos1 = c_pos.add(Vector3(3,0,3));
+                        Vector3 c_pos2 = c_pos.add(Vector3(-3,0,-3));
+                        spawnSoldier(m_metagame,1,factionid,c_pos1,"136_pp19_smg");
+                        spawnSoldier(m_metagame,1,factionid,c_pos2,"136_pp19_smg");
+                        CreateProjectile_H(m_metagame,c_pos1,stringToVector3(target),"grenade_pp19.projectile",characterId,factionid,40.0,6.0);
+                        CreateProjectile_H(m_metagame,c_pos2,stringToVector3(target),"grenade_pp19.projectile",characterId,factionid,40.0,6.0);
                     }
                     else{
-                        addCoolDown("pp19",45,characterId,modifer);
+                        addCoolDown("pp19",15,characterId,modifer);
                         CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"grenade_pp19.projectile",characterId,factionid,40.0,6.0);
                     }
 

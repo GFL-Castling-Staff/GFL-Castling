@@ -923,6 +923,19 @@
 			<attribute weight="1.0" min="6.622" max="7.833" />
 		</attribute_config>
 	</soldier>
+	<soldier name="136_pp19_smg" spawn_score="0.05" copy_from="default_smg">
+		<character filename="default_gk_pmc.text_lines">
+		</character>
+		<resources file="gk_elite.resources">
+			<weapon key="gkw_pp19.weapon" />
+			<weapon key="gkw_pp19mod3.weapon" />
+			<weapon key="medikit.weapon" />
+			<carry_item key="exo_t4.carry_item" />
+		</resources>
+		<attribute_config class="xp">
+			<attribute weight="1.0" min="0.100" max="102.833" />
+		</attribute_config>
+	</soldier>
 	<soldier name="142_fn57_hg" spawn_score="0.05" copy_from="default_hg">
 		<character filename="default_gk_pmc.text_lines">
 			<sound key="death" fileref="FN57_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
