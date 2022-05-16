@@ -10,6 +10,7 @@
 #include "attack_defense_handler_map16.as"
 #include "attack_defense_handler_map1_2.as"
 #include "run_at_start.as"
+#include "TheJupiter.as"
 
 // ------------------------------------------------------------------------------------------------
 class StageConfiguratorInvasion : StageConfigurator {
@@ -548,7 +549,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		
 		stage.m_includeLayers.insertLast("layer1.invasion"); 
 
-
+		stage.addTracker(jupiter(m_metagame));
 		stage.addTracker(PeacefulLastBase(m_metagame, 0));
 		stage.addTracker(CommsCapacityHandler(m_metagame));
 		stage.m_maxSoldiers = 12 * 10;                                             // was 12*7 in 1.65, 1 base added

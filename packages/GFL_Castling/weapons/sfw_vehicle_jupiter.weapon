@@ -1,304 +1,168 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapons>
-<weapon key="Jupiter_mg1.weapon">
-
-  <specification 
-  barrel_offset="0.5" 
-  retrigger_time="0.076" 
-  accuracy_factor="0.50" 
-  sustained_fire_grow_step="0.35" 
-  sustained_fire_diminish_rate="1.5" 
-  magazine_size="-1" 
-  suppressed="0" 
-  name="Bunker MG2" 
-  class="0" 
-  projectile_speed="180" 
-  spread_range="0.25"
-  sight_range_modifier="10.6"
-  ai_sight_range_modifier="10.05"
-  can_shoot_standing="0" 
-	can_shoot_crouching="0"
-	can_shoot_prone="1"
-  />
-
-    <animation key="recoil" ref="12" />
-    <animation key="recoil" ref="13" />
-    <animation key="recoil" ref="14" />
-    <animation key="reload" ref="33" />
-    <animation key="hold" ref="32" />
-    <animation key="hold_on_wall" ref="1" />
-    <animation key="walking" ref="31" />
-    <sound key="fire" fileref="minigun_From_payday2.wav" pitch_variety="0.05" volume="0.1" />
-    <sound key="magazine_out" fileref="mg_clip_out.wav" />
-    <sound key="magazine_in" fileref="mg_clip_in.wav" />
-    <sound key="cycle" fileref="rifle_chamber.wav" />
-    <sound class="impact" fileref="rifle_drop.wav" />
-    <model filename="" />
-
-    <hud_icon filename="gkw_v_LM5.png" />
-    <commonness value="0.0" />
-
-    <projectile file="bullet.projectile">
-        <result class="blast"  damage="0.3" radius="2.4" decal="1" push="0.25" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
-        <trigger class="impact" />
-        <effect class="result" key="terrain" ref="BigBurst" use_surface_color="1" />
-        <effect class="result" key="terrain" ref="SmokeTop" post_processing="1" />
-        <effect class="result" key="terrain" ref="Smoke" post_processing="1" />
-        <effect class="result" key="terrain" ref="Shine" lighting="0" />
-        <effect class="result" key="terrain" ref="Godray" lighting="0" />
-        <effect class="result" key="terrain" ref="ShadowSmoke" shadow="1" />
-    </projectile>
-       <stance state_key="running" accuracy="0.6" />
-
-    <stance state_key="crouch_moving" accuracy="0.6" />
-    <stance state_key="prone_moving" accuracy="0.6" />
-    <stance state_key="standing" accuracy="0.6" />
-    <stance state_key="crouching" accuracy="0.8" />
-    <stance state_key="prone" accuracy="1" />
-    <stance state_key="over_wall" accuracy="1" />  
-    <modifier class="speed" value="-0.3" /> 
-
-</weapon>
-<weapon key="Jupiter_mg2.weapon">
-
-  <specification 
-  barrel_offset="0.5" 
-  retrigger_time="0.076" 
-  accuracy_factor="0.50" 
-  sustained_fire_grow_step="0.35" 
-  sustained_fire_diminish_rate="1.5" 
-  magazine_size="-1" 
-  suppressed="0" 
-  name="Bunker MG2" 
-  class="0" 
-  projectile_speed="180" 
-  spread_range="0.25"
-  sight_range_modifier="10.6"
-  ai_sight_range_modifier="10.05"
-  can_shoot_standing="0" 
-	can_shoot_crouching="0"
-	can_shoot_prone="1"
-  />
-
-    <animation key="recoil" ref="12" />
-    <animation key="recoil" ref="13" />
-    <animation key="recoil" ref="14" />
-    <animation key="reload" ref="33" />
-    <animation key="hold" ref="32" />
-    <animation key="hold_on_wall" ref="1" />
-    <animation key="walking" ref="31" />
-    <sound key="fire" fileref="minigun_From_payday2.wav" pitch_variety="0.05" volume="0.1" />
-    <sound key="magazine_out" fileref="mg_clip_out.wav" />
-    <sound key="magazine_in" fileref="mg_clip_in.wav" />
-    <sound key="cycle" fileref="rifle_chamber.wav" />
-    <sound class="impact" fileref="rifle_drop.wav" />
-    <model filename="" />
-
-    <hud_icon filename="gkw_v_LM5.png" />
-    <commonness value="0.0" />
-
-    <projectile file="bullet.projectile">
-        <result class="hit"  kill_probability="1.75" kill_decay_start_time="2.00" kill_decay_end_time="3.60" />
-    </projectile>
-       <stance state_key="running" accuracy="0.6" />
-
-    <stance state_key="crouch_moving" accuracy="0.6" />
-    <stance state_key="prone_moving" accuracy="0.6" />
-    <stance state_key="standing" accuracy="0.6" />
-    <stance state_key="crouching" accuracy="0.8" />
-    <stance state_key="prone" accuracy="1" />
-    <stance state_key="over_wall" accuracy="1" />  
-    <modifier class="speed" value="-0.3" /> 
-
-</weapon>
-<weapon key="Jupiter_main_cannon.weapon">
-     <specification retrigger_time="9.6" 
-    accuracy_factor="1" 
-    sustained_fire_grow_step="1.2" 
-    sustained_fire_diminish_rate="0.6" 
-    sight_range_modifier="10.2"
-    ai_sight_range_modifier="10.0" 
-    magazine_size="-1" 
-    can_shoot_standing="0" 
-    can_shoot_crouching="0" 
-    suppressed="0" 
-    name="Bunker Hornet" 
-    class="0" 
-    projectile_speed="180.0" 
-    slot="2" 
-    barrel_offset_3d="0.0 3.5 5.0"
-    projectiles_per_shot="1"
-    sight_height_offset="2.0" />
-    
-    <model mesh_filename="Jupiter_cannon_2.mesh" 
-    texture_filename="Jupiter.png" />
-
-    <hud_icon filename="hud_hornet.png" />
-    <commonness value="0.0" />
-
-<!--     <ballistics curve_height="12.0" near_far_distance="0.0" speed_estimation_near="0.0" speed_estimation_far="28.0" max_speed="50.0" randomness="0.0" tweak_factor="1.1" /> -->
-
-	
-	<weak_hand_hold offset="0.2" />
-	<projectile file="artillery_jupiter_420.projectile" radius="0.5">
-	    <result class="blast"  damage="40" radius="24" decal="1" push="4" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
-        <trigger class="impact" />
-		<effect class="result" key="terrain" ref="NavalBurstInner" post_processing="1" use_surface_color="1" />
-		<effect class="result" key="terrain" ref="NavalBurstOuter" post_processing="1" use_surface_color="1" />
-		<effect class="result" key="terrain" ref="NavalBurstUp" post_processing="1" use_surface_color="1" />
-		<effect class="result" key="terrain" ref="NavalSmokeUp1" post_processing="1" />
-		<effect class="result" key="terrain" ref="NavalSmokeUp2" post_processing="1" />
-		<effect class="result" key="terrain" ref="NavalSmokeTop1" post_processing="1" />
-		<effect class="result" key="terrain" ref="NavalSmokeTop2" post_processing="1" />
-		<effect class="result" key="terrain" ref="NavalSmokeTop3" post_processing="1" />
-		<effect class="result" key="terrain" ref="NavalSmoke1" post_processing="1" />
-		<effect class="result" key="terrain" ref="NavalSmoke2" post_processing="1" />
-		<effect class="result" key="terrain" ref="NavalSmoke3" post_processing="1" />
-		<effect class="result" key="terrain" ref="NavalGodray" lighting="0" />
-		<effect class="result" key="terrain" ref="woosh_big1" lighting="0" />
-		<effect class="result" key="terrain" ref="ShadowSmoke" shadow="1" />
-		<effect class="result" type="splat_map" surface_tag="" size="10.0" atlas_index="0" layer="1" />
-		<effect class="result" type="splat_map" surface_tag="" size="16.0" atlas_index="4" layer="0" />
-		<effect class="result" type="splat_map" surface_tag="" size="18.0" atlas_index="0" layer="2" additive="0" /> <!-- remove top snow everywhere -->
-		
-		<effect class="result" key="other" ref="NavalBurstInner" post_processing="1" />
-		<effect class="result" key="other" ref="NavalBurstOuter" post_processing="1" />
-		<effect class="result" key="other" ref="NavalSmokeUp1" post_processing="1" />
-		<effect class="result" key="other" ref="NavalSmokeUp2" post_processing="1" />
-		<effect class="result" key="other" ref="NavalSmokeTop1" post_processing="1" />
-		<effect class="result" key="other" ref="NavalSmokeTop2" post_processing="1" />
-		<effect class="result" key="other" ref="NavalSmokeTop3" post_processing="1" />
-		<effect class="result" key="other" ref="NavalSmoke1" post_processing="1" />
-		<effect class="result" key="other" ref="NavalSmoke2" post_processing="1" />
-		<effect class="result" key="other" ref="NavalSmoke3" post_processing="1" />
-		<effect class="result" key="other" ref="NavalGodray" lighting="0" />
-		<effect class="result" key="other" ref="woosh_big1" lighting="0" />
-		<effect class="result" key="other" ref="ShadowSmoke" shadow="1" />
-		
-		<effect class="result" key="static_object" copy="terrain" />
-		<effect class="result" key="vehicle" copy="terrain" />
-		<effect class="result" key="character" copy="terrain" />
-    </projectile>
-
-	<!-- Scoring for target priority. Distance is between 0 and 1 based on range; direction is between 0 and 1 based on whether its near the barrel; squad_command is between 0 and on based on how close to the player's command order is, and base_score is a weight.. -->
-	<!-- These all add together and the highest 'score' is the new target, targets are rescanned every 2.5 seconds to see if a new higher-score target is in sight-range. -->
-	<!-- You must define a blank tag at the top of the list to handle all cases where the vehicle is fighting something "undefined", which is what common infantry might best fit under. -->
-    <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5" />
-    <target_factors tag="heavy_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="10.0" />
-    <target_factors tag="apc" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0" />
-    <target_factors tag="light_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="6.0" />	
-    <target_factors tag="defensive_at" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.5" />
-    <target_factors tag="tactical" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0" />  <!-- important non combat player-only vehicles -->  
-    <target_factors tag="bazooka" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0" />      
-
-    <effect class="muzzle" ref="LawMuzzle" />
-    <effect class="muzzle" ref="UpDust" />
-
-    <sound key="fire" fileref="hornet_shot.wav" volume="0.5" />
-
-
-</weapon>
-
-<weapon key="Jupiter_airstrike_warning.weapon">
-    <specification retrigger_time="1.0" 
-    accuracy_factor="1" 
-    sustained_fire_grow_step="1.2" 
-    sustained_fire_diminish_rate="0.6" 
-    sight_range_modifier="2.2"
-    ai_sight_range_modifier="100.0" 
-    magazine_size="-1" 
-    can_shoot_standing="0" 
-    can_shoot_crouching="0" 
-    suppressed="0" 
-    name="Bunker Hornet" 
-    class="0" 
-    projectile_speed="2000.0" 
-    slot="2" 
-    barrel_offset_3d="0.4 0.1 0.4"
-    projectiles_per_shot="1"
-    sight_height_offset="2.0" />
-    
-    <model mesh_filename="" 
-    texture_filename="" />
-    <hud_icon filename="hud_hornet.png" />
-    <commonness value="0.0" />
-
-<!--     <ballistics curve_height="12.0" near_far_distance="0.0" speed_estimation_near="0.0" speed_estimation_far="28.0" max_speed="50.0" randomness="0.0" tweak_factor="1.1" /> -->
-     <ballistics
-     near_far_distance="0"
-     speed_estimation_near="200.0"
-     speed_estimation_far="200.0"
-     max_speed="200"
-     randomness="0.0"
-     curve_height="10"
-     tweak_factor="2.5"
-    />
-	<weak_hand_hold offset="0.2" />
-	<projectile file="jupiter_airstrike_warning_s.projectile" />
-    
-	<!-- Scoring for target priority. Distance is between 0 and 1 based on range; direction is between 0 and 1 based on whether its near the barrel; squad_command is between 0 and on based on how close to the player's command order is, and base_score is a weight.. -->
-	<!-- These all add together and the highest 'score' is the new target, targets are rescanned every 2.5 seconds to see if a new higher-score target is in sight-range. -->
-	<!-- You must define a blank tag at the top of the list to handle all cases where the vehicle is fighting something "undefined", which is what common infantry might best fit under. -->
-    <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5" />
-    <target_factors tag="heavy_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="10.0" />
-    <target_factors tag="apc" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0" />
-    <target_factors tag="light_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="6.0" />	
-    <target_factors tag="defensive_at" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.5" />
-    <target_factors tag="tactical" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0" />  <!-- important non combat player-only vehicles -->  
-    <target_factors tag="bazooka" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0" />      
-
-    <sound key="fire" fileref="hornet_shot.wav" volume="0.5" />
-</weapon>
-
-<weapon key="Jupiter_airstrike.weapon">
-    <specification retrigger_time="1.0" 
-    accuracy_factor="1" 
-    sustained_fire_grow_step="1.2" 
-    sustained_fire_diminish_rate="0.6" 
-    sight_range_modifier="20.2"
-    ai_sight_range_modifier="100.0" 
-    magazine_size="-1" 
-    can_shoot_standing="0" 
-    can_shoot_crouching="0" 
-    suppressed="0" 
-    name="Bunker Hornet" 
-    class="0" 
-    projectile_speed="2000.0" 
-    slot="2" 
-    barrel_offset_3d="0.4 0.1 0.4"
-    projectiles_per_shot="1"
-    sight_height_offset="2.0" />
-    
-    <model mesh_filename="" 
-    texture_filename="" />
-    <hud_icon filename="hud_hornet.png" />
-    <commonness value="0.0" />
-
-<!--     <ballistics curve_height="12.0" near_far_distance="0.0" speed_estimation_near="0.0" speed_estimation_far="28.0" max_speed="50.0" randomness="0.0" tweak_factor="1.1" /> -->
-     <ballistics
-     near_far_distance="0"
-     speed_estimation_near="200.0"
-     speed_estimation_far="200.0"
-     max_speed="200"
-     randomness="0.0"
-     curve_height="30"
-     tweak_factor="2.5"
-    />
-	<weak_hand_hold offset="0.2" />
-	<projectile file="jupiter_airstrike.projectile" />
-    
-	<!-- Scoring for target priority. Distance is between 0 and 1 based on range; direction is between 0 and 1 based on whether its near the barrel; squad_command is between 0 and on based on how close to the player's command order is, and base_score is a weight.. -->
-	<!-- These all add together and the highest 'score' is the new target, targets are rescanned every 2.5 seconds to see if a new higher-score target is in sight-range. -->
-	<!-- You must define a blank tag at the top of the list to handle all cases where the vehicle is fighting something "undefined", which is what common infantry might best fit under. -->
-    <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5" />
-    <target_factors tag="heavy_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="10.0" />
-    <target_factors tag="apc" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0" />
-    <target_factors tag="light_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="6.0" />	
-    <target_factors tag="defensive_at" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.5" />
-    <target_factors tag="tactical" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0" />  <!-- important non combat player-only vehicles -->  
-    <target_factors tag="bazooka" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0" />      
-
-    <sound key="fire" fileref="hornet_shot.wav" volume="0.5" />
-</weapon>
-
+	<weapon key="Jupiter_mg1.weapon">
+		<specification barrel_offset="0.5" retrigger_time="0.076" accuracy_factor="0.50" sustained_fire_grow_step="0.35" sustained_fire_diminish_rate="1.5" magazine_size="-1" suppressed="0" name="Bunker MG2" class="0" projectile_speed="180" spread_range="0.25" sight_range_modifier="10.6" ai_sight_range_modifier="10.05" can_shoot_standing="0" can_shoot_crouching="0" can_shoot_prone="1" />
+		<animation key="recoil" ref="12" />
+		<animation key="recoil" ref="13" />
+		<animation key="recoil" ref="14" />
+		<animation key="reload" ref="33" />
+		<animation key="hold" ref="32" />
+		<animation key="hold_on_wall" ref="1" />
+		<animation key="walking" ref="31" />
+		<sound key="fire" fileref="minigun_From_payday2.wav" pitch_variety="0.05" volume="0.1" />
+		<sound key="magazine_out" fileref="mg_clip_out.wav" />
+		<sound key="magazine_in" fileref="mg_clip_in.wav" />
+		<sound key="cycle" fileref="rifle_chamber.wav" />
+		<sound class="impact" fileref="rifle_drop.wav" />
+		<model filename="" />
+		<hud_icon filename="gkw_v_LM5.png" />
+		<commonness value="0.0" />
+		<projectile file="bullet_sf.projectile">
+			<result class="blast" damage="0.3" radius="2.4" decal="1" push="0.25" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0" />
+			<trigger class="impact" />
+			<effect class="result" key="terrain" ref="BigBurst" use_surface_color="1" />
+			<effect class="result" key="terrain" ref="SmokeTop" post_processing="1" />
+			<effect class="result" key="terrain" ref="Smoke" post_processing="1" />
+			<effect class="result" key="terrain" ref="Shine" lighting="0" />
+			<effect class="result" key="terrain" ref="Godray" lighting="0" />
+			<effect class="result" key="terrain" ref="ShadowSmoke" shadow="1" />
+		</projectile>
+		<stance state_key="running" accuracy="0.6" />
+		<stance state_key="crouch_moving" accuracy="0.6" />
+		<stance state_key="prone_moving" accuracy="0.6" />
+		<stance state_key="standing" accuracy="0.6" />
+		<stance state_key="crouching" accuracy="0.8" />
+		<stance state_key="prone" accuracy="1" />
+		<stance state_key="over_wall" accuracy="1" />
+		<modifier class="speed" value="-0.3" />
+	</weapon>
+	<weapon key="Jupiter_mg2.weapon">
+		<specification barrel_offset="0.5" retrigger_time="0.076" accuracy_factor="0.50" sustained_fire_grow_step="0.35" sustained_fire_diminish_rate="1.5" magazine_size="-1" suppressed="0" name="Bunker MG2" class="0" projectile_speed="180" spread_range="0.25" sight_range_modifier="10.6" ai_sight_range_modifier="10.05" can_shoot_standing="0" can_shoot_crouching="0" can_shoot_prone="1" />
+		<animation key="recoil" ref="12" />
+		<animation key="recoil" ref="13" />
+		<animation key="recoil" ref="14" />
+		<animation key="reload" ref="33" />
+		<animation key="hold" ref="32" />
+		<animation key="hold_on_wall" ref="1" />
+		<animation key="walking" ref="31" />
+		<sound key="fire" fileref="minigun_From_payday2.wav" pitch_variety="0.05" volume="0.1" />
+		<sound key="magazine_out" fileref="mg_clip_out.wav" />
+		<sound key="magazine_in" fileref="mg_clip_in.wav" />
+		<sound key="cycle" fileref="rifle_chamber.wav" />
+		<sound class="impact" fileref="rifle_drop.wav" />
+		<model filename="" />
+		<hud_icon filename="gkw_v_LM5.png" />
+		<commonness value="0.0" />
+		<projectile file="bullet_sf.projectile">
+			<result class="hit" kill_probability="1.75" kill_decay_start_time="2.00" kill_decay_end_time="3.60" />
+		</projectile>
+		<stance state_key="running" accuracy="0.6" />
+		<stance state_key="crouch_moving" accuracy="0.6" />
+		<stance state_key="prone_moving" accuracy="0.6" />
+		<stance state_key="standing" accuracy="0.6" />
+		<stance state_key="crouching" accuracy="0.8" />
+		<stance state_key="prone" accuracy="1" />
+		<stance state_key="over_wall" accuracy="1" />
+		<modifier class="speed" value="-0.3" />
+	</weapon>
+	<weapon key="Jupiter_main_cannon.weapon">
+		<specification retrigger_time="9.6" accuracy_factor="1" sustained_fire_grow_step="1.2" sustained_fire_diminish_rate="0.6" sight_range_modifier="10.2" ai_sight_range_modifier="10.0" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="0" suppressed="0" name="Bunker Hornet" class="0" projectile_speed="180.0" slot="2" barrel_offset_3d="0.0 3.5 5.0" projectiles_per_shot="1" sight_height_offset="2.0" />
+		<model mesh_filename="Jupiter_cannon_2.mesh" texture_filename="Jupiter.png" />
+		<hud_icon filename="hud_hornet.png" />
+		<commonness value="0.0" />
+		<!-- <ballistics curve_height="12.0" near_far_distance="0.0" speed_estimation_near="0.0" speed_estimation_far="28.0" max_speed="50.0" randomness="0.0" tweak_factor="1.1" /> -->
+		<weak_hand_hold offset="0.2" />
+		<projectile file="artillery_jupiter_420.projectile" radius="0.5">
+			<result class="blast" damage="40" radius="24" decal="1" push="4" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0" />
+			<trigger class="impact" />
+			<effect class="result" key="terrain" ref="NavalBurstInner" post_processing="1" use_surface_color="1" />
+			<effect class="result" key="terrain" ref="NavalBurstOuter" post_processing="1" use_surface_color="1" />
+			<effect class="result" key="terrain" ref="NavalBurstUp" post_processing="1" use_surface_color="1" />
+			<effect class="result" key="terrain" ref="NavalSmokeUp1" post_processing="1" />
+			<effect class="result" key="terrain" ref="NavalSmokeUp2" post_processing="1" />
+			<effect class="result" key="terrain" ref="NavalSmokeTop1" post_processing="1" />
+			<effect class="result" key="terrain" ref="NavalSmokeTop2" post_processing="1" />
+			<effect class="result" key="terrain" ref="NavalSmokeTop3" post_processing="1" />
+			<effect class="result" key="terrain" ref="NavalSmoke1" post_processing="1" />
+			<effect class="result" key="terrain" ref="NavalSmoke2" post_processing="1" />
+			<effect class="result" key="terrain" ref="NavalSmoke3" post_processing="1" />
+			<effect class="result" key="terrain" ref="NavalGodray" lighting="0" />
+			<effect class="result" key="terrain" ref="woosh_big1" lighting="0" />
+			<effect class="result" key="terrain" ref="ShadowSmoke" shadow="1" />
+			<effect class="result" type="splat_map" surface_tag="" size="10.0" atlas_index="0" layer="1" />
+			<effect class="result" type="splat_map" surface_tag="" size="16.0" atlas_index="4" layer="0" />
+			<effect class="result" type="splat_map" surface_tag="" size="18.0" atlas_index="0" layer="2" additive="0" />
+			<!-- remove top snow everywhere -->
+			<effect class="result" key="other" ref="NavalBurstInner" post_processing="1" />
+			<effect class="result" key="other" ref="NavalBurstOuter" post_processing="1" />
+			<effect class="result" key="other" ref="NavalSmokeUp1" post_processing="1" />
+			<effect class="result" key="other" ref="NavalSmokeUp2" post_processing="1" />
+			<effect class="result" key="other" ref="NavalSmokeTop1" post_processing="1" />
+			<effect class="result" key="other" ref="NavalSmokeTop2" post_processing="1" />
+			<effect class="result" key="other" ref="NavalSmokeTop3" post_processing="1" />
+			<effect class="result" key="other" ref="NavalSmoke1" post_processing="1" />
+			<effect class="result" key="other" ref="NavalSmoke2" post_processing="1" />
+			<effect class="result" key="other" ref="NavalSmoke3" post_processing="1" />
+			<effect class="result" key="other" ref="NavalGodray" lighting="0" />
+			<effect class="result" key="other" ref="woosh_big1" lighting="0" />
+			<effect class="result" key="other" ref="ShadowSmoke" shadow="1" />
+			<effect class="result" key="static_object" copy="terrain" />
+			<effect class="result" key="vehicle" copy="terrain" />
+			<effect class="result" key="character" copy="terrain" />
+		</projectile>
+		<!-- Scoring for target priority. Distance is between 0 and 1 based on range; direction is between 0 and 1 based on whether its near the barrel; squad_command is between 0 and on based on how close to the player's command order is, and base_score is a weight.. -->
+		<!-- These all add together and the highest 'score' is the new target, targets are rescanned every 2.5 seconds to see if a new higher-score target is in sight-range. -->
+		<!-- You must define a blank tag at the top of the list to handle all cases where the vehicle is fighting something "undefined", which is what common infantry might best fit under. -->
+		<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5" />
+		<target_factors tag="heavy_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="10.0" />
+		<target_factors tag="apc" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0" />
+		<target_factors tag="light_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="6.0" />
+		<target_factors tag="defensive_at" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.5" />
+		<target_factors tag="tactical" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0" />
+		<!-- important non combat player-only vehicles -->
+		<target_factors tag="bazooka" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0" />
+		<effect class="muzzle" ref="LawMuzzle" />
+		<effect class="muzzle" ref="UpDust" />
+		<sound key="fire" fileref="hornet_shot.wav" volume="0.5" />
+	</weapon>
+	<weapon key="Jupiter_airstrike_warning.weapon">
+		<specification retrigger_time="1.0" accuracy_factor="1" sustained_fire_grow_step="1.2" sustained_fire_diminish_rate="0.6" sight_range_modifier="2.2" ai_sight_range_modifier="100.0" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="0" suppressed="0" name="Bunker Hornet" class="0" projectile_speed="2000.0" slot="2" barrel_offset_3d="0.4 0.1 0.4" projectiles_per_shot="1" sight_height_offset="2.0" />
+		<model mesh_filename="" texture_filename="" />
+		<hud_icon filename="hud_hornet.png" />
+		<commonness value="0.0" />
+		<ballistics near_far_distance="0" speed_estimation_near="200.0" speed_estimation_far="200.0" max_speed="200" randomness="0.0" curve_height="10" tweak_factor="2.5" />
+		<weak_hand_hold offset="0.2" />
+		<projectile file="jupiter_airstrike_warning_s.projectile" />
+		<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5" />
+		<target_factors tag="heavy_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="10.0" />
+		<target_factors tag="apc" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0" />
+		<target_factors tag="light_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="6.0" />
+		<target_factors tag="defensive_at" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.5" />
+		<target_factors tag="tactical" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0" />
+		<!-- important non combat player-only vehicles -->
+		<target_factors tag="bazooka" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0" />
+		<sound key="fire" fileref="hornet_shot.wav" volume="0.5" />
+	</weapon>
+	<weapon key="Jupiter_airstrike.weapon">
+		<specification retrigger_time="1.0" accuracy_factor="1" sustained_fire_grow_step="1.2" sustained_fire_diminish_rate="0.6" sight_range_modifier="20.2" ai_sight_range_modifier="100.0" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="0" suppressed="0" name="Bunker Hornet" class="0" projectile_speed="2000.0" slot="2" barrel_offset_3d="0.4 0.1 0.4" projectiles_per_shot="1" sight_height_offset="2.0" />
+		<model mesh_filename="" texture_filename="" />
+		<hud_icon filename="hud_hornet.png" />
+		<commonness value="0.0" />
+		<!-- <ballistics curve_height="12.0" near_far_distance="0.0" speed_estimation_near="0.0" speed_estimation_far="28.0" max_speed="50.0" randomness="0.0" tweak_factor="1.1" /> -->
+		<ballistics near_far_distance="0" speed_estimation_near="200.0" speed_estimation_far="200.0" max_speed="200" randomness="0.0" curve_height="30" tweak_factor="2.5" />
+		<weak_hand_hold offset="0.2" />
+		<projectile file="jupiter_airstrike.projectile" />
+		<!-- Scoring for target priority. Distance is between 0 and 1 based on range; direction is between 0 and 1 based on whether its near the barrel; squad_command is between 0 and on based on how close to the player's command order is, and base_score is a weight.. -->
+		<!-- These all add together and the highest 'score' is the new target, targets are rescanned every 2.5 seconds to see if a new higher-score target is in sight-range. -->
+		<!-- You must define a blank tag at the top of the list to handle all cases where the vehicle is fighting something "undefined", which is what common infantry might best fit under. -->
+		<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5" />
+		<target_factors tag="heavy_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="10.0" />
+		<target_factors tag="apc" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0" />
+		<target_factors tag="light_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="6.0" />
+		<target_factors tag="defensive_at" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.5" />
+		<target_factors tag="tactical" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0" />
+		<!-- important non combat player-only vehicles -->
+		<target_factors tag="bazooka" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0" />
+		<sound key="fire" fileref="hornet_shot.wav" volume="0.5" />
+	</weapon>
 </weapons>

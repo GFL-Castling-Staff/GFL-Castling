@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vehicle key="jupiter_airstrike_warning.vehicle" map_view_atlas_index="-1" allow_ai_to_use="0" should_be_destroyed="0" usable_for_cover="0" >
+	<tire_set offset="0.1 0.0 0.1" radius="0.1" />
+	<tire_set offset="0.1 0.0 -0.1" radius="0.1" />
+
+	<control max_speed="20.0" acceleration="6.0" max_reverse_speed="5.0" max_rotation="0.8" max_water_depth="0.2" steer_smoothening="0.1" />
+
+	<physics max_health="10000" mass="70.0" extent="0.2 0.0 0.2" offset="0 0.0 0" top_offset="0 0.5 0" collision_model_pos="0 0.2 0" collision_model_extent="0.6 0.2 0.6" visual_offset="0 0.0 0" /> 
+
+	<visual class="chassis" mesh_filename="flare_stick.mesh" texture_filename="flare_stick.png" />
+
+	<effect event_key="idle_chassis" ref="FlareSparkle" post_processing="0" offset="0 0.1 0.3"/>
+	<effect event_key="idle_chassis" ref="FlareSmoke" post_processing="0" offset="0 0.4 0.3"/>  
+	<effect event_key="idle_chassis" ref="FlareFlash" post_processing="0" offset="0 0.1 0.3"/> 
+
+</vehicle>

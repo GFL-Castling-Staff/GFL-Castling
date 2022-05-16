@@ -4,8 +4,8 @@
     <tag name="rocket"/>
 	
 	<result class="spawn" 
-	instance_class="projectile" 
-	instance_key="jupiter_airstrike_warning.projectile" 
+	instance_class="vehicle" 
+	instance_key="jupiter_airstrike_warning.vehicle" 
 	min_amount="1" max_amount="1" offset="0 0.0 0" 
 	position_spread="0 0" direction_spread="0 0" />
 	

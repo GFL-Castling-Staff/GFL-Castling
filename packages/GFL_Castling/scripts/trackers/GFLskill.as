@@ -7,7 +7,6 @@
 #include "GFLhelpers.as"
 #include "GFLtask.as"
 #include "task_sequencer.as"
-#include "TheJuptier.as"
 //Author: NetherCrow
 
 	// --------------------------------------------
@@ -61,26 +60,26 @@ class GFLskill : Tracker {
 				m_metagame.getComms().send(command);
 			}
 		}
-		if (EventKeyGet == "Jupiter_spawn"){
-			const XmlElement@ playerFaction = getFactionInfo(m_metagame,0);
-			if(playerFaction.getStringAttribute("name")=="G&K PMC"){
-				XmlElement command("command");
-				command.setStringAttribute("class", "faction_resources");
-				command.setIntAttribute("faction_id", 0);
-				addFactionResourceElements(command, "call", GKcallList, false);
-				m_metagame.getComms().send(command);
-			}
-		}
-		if (EventKeyGet == "Jupiter_down"){
-			const XmlElement@ playerFaction = getFactionInfo(m_metagame,0);
-			if(playerFaction.getStringAttribute("name")=="G&K PMC"){
-				XmlElement command("command");
-				command.setStringAttribute("class", "faction_resources");
-				command.setIntAttribute("faction_id", 0);
-				addFactionResourceElements(command, "call", GKcallList, true);
-				m_metagame.getComms().send(command);
-			}
-		}
+		// if (EventKeyGet == "Jupiter_spawn"){
+		// 	const XmlElement@ playerFaction = getFactionInfo(m_metagame,0);
+		// 	if(playerFaction.getStringAttribute("name")=="G&K PMC"){
+		// 		XmlElement command("command");
+		// 		command.setStringAttribute("class", "faction_resources");
+		// 		command.setIntAttribute("faction_id", 0);
+		// 		addFactionResourceElements(command, "call", GKcallList, false);
+		// 		m_metagame.getComms().send(command);
+		// 	}
+		// }
+		// if (EventKeyGet == "Jupiter_down"){
+		// 	const XmlElement@ playerFaction = getFactionInfo(m_metagame,0);
+		// 	if(playerFaction.getStringAttribute("name")=="G&K PMC"){
+		// 		XmlElement command("command");
+		// 		command.setStringAttribute("class", "faction_resources");
+		// 		command.setIntAttribute("faction_id", 0);
+		// 		addFactionResourceElements(command, "call", GKcallList, true);
+		// 		m_metagame.getComms().send(command);
+		// 	}
+		// }
 		if (EventKeyGet == "RO635_skill") {
 			int characterId = event.getIntAttribute("character_id");
 			const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
