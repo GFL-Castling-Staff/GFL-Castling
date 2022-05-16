@@ -632,6 +632,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		ScoredResource("K309.carry_item", "carry_item", 0.7f),
 		ScoredResource("IAQS.carry_item", "carry_item", 0.7f),
 		ScoredResource("NZ75.carry_item", "carry_item", 0.7f),
+		ScoredResource("bakery_jefuty.carry_item", "carry_item", 0.7f),
 		ScoredResource("gkw_ltlx7000_icecream.weapon", "weapon", 0.5f),
 		ScoredResource("woshieoe.carry_item", "carry_item", 0.7f),
 		ScoredResource("gkw_yurine.weapon","weapon",0.7f)
