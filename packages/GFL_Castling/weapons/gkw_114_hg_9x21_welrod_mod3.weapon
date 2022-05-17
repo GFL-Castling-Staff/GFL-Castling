@@ -12,7 +12,7 @@
 	name="Welrod MK.II (MOD3)"
 	class="1"
 	reload_one_at_a_time="0"
-	sight_range_modifier="1.0"
+	sight_range_modifier="1.5"
 	projectile_speed="140"
 	projectiles_per_shot="1"
 	burst_shots="1"
@@ -38,8 +38,10 @@
     <animation state_key="stabbing" 			animation_key="pistol whip" />
     <animation state_key="stabbing" 			animation_key="pistol whip 3" />
     <!--Animations-->
-    <inventory buy_price="8.0" sell_price="8.0" />
+    <inventory buy_price="125.0" sell_price="125.0" />
     <commonness in_stock="1" />
+    <capacity value="0" source="rank" source_value="0.0" />
+    <capacity value="1" source="rank" source_value="4.622" />
     <!--Sounds-->
     <sound key="fire" fileref="welrod_fire_FromBF5.wav" pitch_variety="0.05" volume="1.2" />
     <sound key="magazine_out" fileref="welrod_mgz_out_FromBF5.wav" volume="0.5" />
@@ -72,7 +74,7 @@
     <target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0" />
     <target_factors tag="commander" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0" />
 
-    <modifier class="detectability" value="-0.1" />
-    <modifier class="speed" value="1.0" />
+    <modifier class="detectability" value="-0.2" />
+    <modifier class="speed" value="1.1" />
 
 </weapon>
