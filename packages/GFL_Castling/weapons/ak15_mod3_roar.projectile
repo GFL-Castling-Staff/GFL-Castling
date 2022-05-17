@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projectile class="grenade" slot="1" pulldown_in_air="100" key="ak15_mod3_roar.projectile">
     <tag name="grenade"/>
-    <result class="blast" character_state="death" radius="12" damage="3.0" push="0.4" decal="1" faction_compare="not_equal"/>
+    <result class="blast" character_state="stun" radius="12" damage="3.0" push="0.4" decal="1" faction_compare="not_equal"/>
     <trigger class="time" time_to_live="0.0"/>
     <rotation class="none" />
     <model mesh_filename="" />
