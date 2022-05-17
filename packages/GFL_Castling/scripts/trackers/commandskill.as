@@ -74,8 +74,8 @@ class SpamAvoider{
 class CommandSkill : Tracker {
     protected Metagame@ m_metagame;
     
-	public array<SkillTrigger@> SkillArray;
-    public array<SkillEffectTimer@> TimerArray;
+	array<SkillTrigger@> SkillArray;
+    array<SkillEffectTimer@> TimerArray;
     array<SpamAvoider@> DontSpamingYourFuckingSkillWhileCoolDownBro;
     array<string> targetAPgrenades = {
         "gkw_arx160.weapon",
@@ -1491,12 +1491,12 @@ class CommandSkill : Tracker {
                     else{
                         CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"std_aa_grenade.projectile",characterId,factionid,26.0,5.0);
                     }
-                    
+
                     if(ExistQueue){
                         return;
                     }
                     else{
-                        addCoolDown(weaponname,30,characterId,modifer);
+                        addCoolDown("fnfal",30,characterId,modifer);
                     }
                 }
             }

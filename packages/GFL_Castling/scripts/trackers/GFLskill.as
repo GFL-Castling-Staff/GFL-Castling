@@ -232,7 +232,7 @@ class GFLskill : Tracker {
 					//获取技能影响的敌人数量
 					m_fnum= m_metagame.getFactionCount();
 					array<const XmlElement@> affectedCharacter;
-					for(int i=0;i<m_fnum;i++) 
+					for(uint i=0;i<m_fnum;i++) 
 						if(i!=factionid) {
 						array<const XmlElement@> affectedCharacter2;
 						affectedCharacter2 = getCharactersNearPosition(m_metagame,Pos_40mm,i,7.0f);
@@ -267,7 +267,7 @@ class GFLskill : Tracker {
 				m_fnum = m_metagame.getFactionCount();
 				array<const XmlElement@> affectedCharacter;
 				_log("Scan successful");
-				for(int i=0;i<m_fnum;i++) 
+				for(uint i=0;i<m_fnum;i++) 
 					if(i!=factionid) {
 					array<const XmlElement@> affectedCharacter2;
 					affectedCharacter2 = getCharactersNearPosition(m_metagame,pos_smartgrenade,i,10.0f);
