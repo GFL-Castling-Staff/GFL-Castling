@@ -16,10 +16,18 @@ class SkillTrigger{
     int m_character_id;
     float m_time;
     string m_weapontype;
+    int m_charge=1;
     SkillTrigger(int characterId, float time,string weapontype){
         m_character_id=characterId;
         m_time=time;
         m_weapontype=weapontype;
+    }
+
+    void setCharge(int num){
+        m_charge=num;
+    }
+    void addCharge(){
+        m_charge++;
     }
 }
 
@@ -66,8 +74,8 @@ class SpamAvoider{
 class CommandSkill : Tracker {
     protected Metagame@ m_metagame;
     
-	array<SkillTrigger@> SkillArray;
-    array<SkillEffectTimer@> TimerArray;
+	public array<SkillTrigger@> SkillArray;
+    public array<SkillEffectTimer@> TimerArray;
     array<SpamAvoider@> DontSpamingYourFuckingSkillWhileCoolDownBro;
     array<string> targetAPgrenades = {
         "gkw_arx160.weapon",
@@ -1449,6 +1457,51 @@ class CommandSkill : Tracker {
             }
         }   
     }  
+
+    void excuteFnFalskill(int characterId,int playerId,SkillModifer@ modifer){
+        bool ExistQueue = false;
+        int j=-1;
+        for (uint i=0;i<SkillArray.length();i++){
+            if (SkillArray[i].m_character_id==characterId && SkillArray[i].m_weapontype=="fnfal") {
+                ExistQueue=true;
+                j=i;
+                SkillArray[j].addCharge();
+            }
+        }
+        if (ExistQueue && SkillArray[j].m_charge>3 ){
+            dictionary a;
+            a["%time"] = ""+SkillArray[j].m_time;
+            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            _log("skill cooldown" + SkillArray[j].m_time);
+            return;
+        }
+        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+        if (character !is null) {
+            const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+            if (player !is null){
+                if (player.hasAttribute("aim_target")) {
+                    string target = player.getStringAttribute("aim_target");
+                    Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
+                    int factionid = character.getIntAttribute("faction_id");
+                    playAnimationKey(m_metagame,characterId,"recoil1, big",true,false);
+                    c_pos=c_pos.add(Vector3(0,1,0));
+                    if (checkFlatRange(c_pos,stringToVector3(target),15)){
+                        CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"std_aa_grenade.projectile",characterId,factionid,60);
+                    }
+                    else{
+                        CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"std_aa_grenade.projectile",characterId,factionid,26.0,5.0);
+                    }
+                    
+                    if(ExistQueue){
+                        return;
+                    }
+                    else{
+                        addCoolDown(weaponname,30,characterId,modifer);
+                    }
+                }
+            }
+        }
+    }
 }
 
 

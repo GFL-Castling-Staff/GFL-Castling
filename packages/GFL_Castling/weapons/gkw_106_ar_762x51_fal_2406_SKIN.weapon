@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapon file="two_hands_ar.animation_base" key="gkw_fal_2406.weapon">
-
     <specification 
-		accuracy_factor="0.98" 
+		accuracy_factor="1.0" 
 		barrel_offset="0.8" 
-		 
 		class="0"
         slot="0" 
 		magazine_size="20" 
@@ -12,43 +10,29 @@
 		projectile_speed="200" 
 		retrigger_time="0.0857" 
 		suppressed="0" 
-		sustained_fire_diminish_rate="1.8" 
-		sustained_fire_grow_step="0.8" 
+		sustained_fire_diminish_rate="5.0" 
+		sustained_fire_grow_step="1.0" 
 		sight_range_modifier="1.3"/>
-
-
-
-
     <animation key="reload" animation_key="reloading, magazine rifle 0.9" />
-
-    <inventory  buy_price="8.0" sell_price="8.0" />
+    <inventory  buy_price="6.0" sell_price="6.0" />
     <commonness value="0" in_stock="0" can_respawn_with="1" />
-
-
     <sound key="fire" fileref="fal_fire_FromCOD16.wav" pitch_variety="0.05" volume="1" />
     <sound key="magazine_out" fileref="fal_mgz_out_FromSQUAD.wav" volume="0.7" />
     <sound key="magazine_in" fileref="fal_mgz_in_FromSQUAD.wav" volume="0.7" />
     <sound key="cycle" fileref="fal_cycle_FromSQUAD.wav" volume="0.7" />
-    <sound class="impact" fileref="rifle_drop.wav" volume="1"/>   
-	
-    <model filename="gkw_ar_fnfal.xml" />
-
+    <sound class="impact" fileref="rifle_drop.wav" volume="1"/>
+    <model filename="gkw_ar_fnfal_2406.xml" />
     <hud_icon filename="gkw_fnfal_2406.png" />
-
-
-
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet.projectile">
-        <result class="hit"  kill_probability="1.75" kill_decay_start_time="1.286" kill_decay_end_time="2.143" />
+        <result class="hit"  kill_probability="1.75" kill_probability_offset_on_successful_hit="1.0" kill_decay_start_time="1.286" kill_decay_end_time="2.143" />
     </projectile>
-    
-    <stance state_key="running" accuracy="0.5" />
-    <stance state_key="walking" accuracy="0.7" />
-    <stance state_key="crouch_moving" accuracy="0.5" />
-    <stance state_key="prone_moving" accuracy="0.5" />
-    <stance state_key="standing" accuracy="0.85" />
-    <stance state_key="crouching" accuracy="0.95" />
+    <stance state_key="running" accuracy="0.3" />
+    <stance state_key="walking" accuracy="0.5" />
+    <stance state_key="crouch_moving" accuracy="1.0" />
+    <stance state_key="prone_moving" accuracy="0.75" />
+    <stance state_key="standing" accuracy="0.75" />
+    <stance state_key="crouching" accuracy="1.2" />
     <stance state_key="prone" accuracy="1" />
     <modifier class="detectability" value="-0.1" />
-
 </weapon>
