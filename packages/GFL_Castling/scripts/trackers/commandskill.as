@@ -71,27 +71,28 @@ class SpamAvoider{
     }
 }
 
+array<string> targetAPgrenades = {
+    "gkw_arx160.weapon",
+    "gkw_xm8.weapon",
+    "gkw_g3.weapon",
+    "gkw_m4sopmodii_531.weapon",
+    "gkw_m4sopmodii.weapon",
+    "gkw_hk416.weapon",
+    "gkw_hk416_6505.weapon",
+    "gkw_hk416_537.weapon",
+    "gkw_hk416_3401.weapon"
+};
+array<string> targetAAgrenades = {
+    "gkw_stg44.weapon",
+    "gkw_famas.weapon"
+};
+
 class CommandSkill : Tracker {
     protected Metagame@ m_metagame;
     
 	array<SkillTrigger@> SkillArray;
     array<SkillEffectTimer@> TimerArray;
     array<SpamAvoider@> DontSpamingYourFuckingSkillWhileCoolDownBro;
-    array<string> targetAPgrenades = {
-        "gkw_arx160.weapon",
-        "gkw_xm8.weapon",
-        "gkw_g3.weapon",
-        "gkw_m4sopmodii_531.weapon",
-        "gkw_m4sopmodii.weapon",
-        "gkw_hk416.weapon",
-        "gkw_hk416_6505.weapon",
-        "gkw_hk416_537.weapon",
-        "gkw_hk416_3401.weapon"
-    };
-    array<string> targetAAgrenades = {
-        "gkw_stg44.weapon",
-        "gkw_famas.weapon"
-    };
 	protected bool m_ended;
 
 	// --------------------------------------------
@@ -225,6 +226,9 @@ class CommandSkill : Tracker {
                 if (targetAAgrenades.find(c_weaponType)> -1){
                     excuteAntiArmorskill(cId,senderId,m_modifer,c_weaponType);
                     return;        
+                }
+                if (c_weaponType=="gkw_fal.weapon"||c_weaponType=="gkw_fal_2406.weapon" || c_weaponType=="gkw_fal_308.weapon"){
+                    excuteFnFalskill(cId,senderId,m_modifer);
                 }
             }
         }
