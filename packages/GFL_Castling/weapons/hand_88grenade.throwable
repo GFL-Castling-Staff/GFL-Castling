@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<projectile class="grenade" name="Cluster grenade" key="hand_88grenade.projectile" slot="0" radius="0.15">
+<projectile class="grenade" name="88type Cluster grenade" key="hand_88grenade.projectile" slot="0" radius="0.15">
 
 
-    <result class="blast" radius="7.5" damage="10.0" push="1" decal="1" character_state="death" faction_compare="not_equal" />
+    <result class="blast" radius="5.0" damage="10.0" push="1" decal="1" character_state="death" faction_compare="not_equal" />
     <trigger class="impact"/>
 
     <rotation class="random" />
@@ -12,11 +12,11 @@
 
     <!-- <throwable curve_height="5.0" near_far_distance="5.0" speed_estimation_near="9.0" speed_estimation_far="15.0" max_speed="13.0" randomness="0.07" /> -->
     <!-- <throwable curve_height="6.0" near_far_distance="5.0" speed_estimation_near="20.0" speed_estimation_far="17.0" max_speed="11.0" randomness="0.07" /> -->
-    <throwable curve_height="8.0" near_far_distance="10.0" speed_estimation_near="30" speed_estimation_far="80.0" max_speed="80.0" randomness="0.07" tweak_factor="1.08"/>
+    <throwable curve_height="8.0" near_far_distance="10.0" speed_estimation_near="80" speed_estimation_far="60.0" max_speed="80.0" randomness="0.07" tweak_factor="1.0"/>
 
     <!-- projectile slot 0 is used for hand grenade items currently -->
     <!-- bound to change -->
-    <commonness value="0.8" />
+    <commonness value="2.0" />
     <inventory encumbrance="1.0" price="5.0" />
     <capacity value="6" source="rank" source_value="0.0" />
     <capacity value="8" source="rank" source_value="4.622" />
@@ -39,20 +39,7 @@
     <effect class="result" key="terrain" ref="ShadowSmoke" shadow="1" />
     <effect class="result" type="splat_map" surface_tag="" size="3.0" atlas_index="0" layer="1" />
     <effect class="result" type="splat_map" surface_tag="" size="4.0" atlas_index="4" layer="0" />
-    <effect class="result" type="splat_map" surface_tag="" size="5.0" atlas_index="0" layer="2" additive="0" /> <!-- remove top snow everywhere -->
-
-<!--    <effect class="result" key="terrain" tag="ice" ref="IceCrackSmall" post_processing="0" /> 
-    <effect class="result" key="terrain" tag="ice" ref="IceCrackRing" post_processing="0" />  
-    <effect class="result" key="terrain" tag="ice" ref="IceBurstSmall" post_processing="1" />          
-    <effect class="result" key="terrain" tag="ice" ref="BigBurst" use_surface_color="1" />       
-    <effect class="result" key="terrain" tag="ice" ref="SmokeTop" post_processing="1" />
-    <effect class="result" key="terrain" tag="ice" ref="Smoke" post_processing="1" />
-    <effect class="result" key="terrain" tag="ice" ref="Shine" lighting="0" />
-    <effect class="result" key="terrain" tag="ice" ref="Godray" lighting="0" />
-    <effect class="result" key="terrain" tag="ice" ref="ShadowSmoke" shadow="1" />  
-    <effect class="result" type="splat_map" surface_tag="ice" size="3.0" atlas_index="0" layer="1" />     
-    <effect class="result" type="splat_map" surface_tag="ice" size="0.0" atlas_index="4" layer="0" />    -->   
-
+    <effect class="result" type="splat_map" surface_tag="" size="5.0" atlas_index="0" layer="2" additive="0" />
 
     <effect class="result" key="other" ref="SmokeTop" post_processing="1" />
     <effect class="result" key="other" ref="Smoke" post_processing="1" />
