@@ -130,34 +130,33 @@
 
 <weapon file="two_hands_sg.animation_base" key="gkw_spas12_skill.weapon">
 
-    
     <!--Weapon specifications-->
     
     <specification 
 	retrigger_time="-1.0" 
 	accuracy_factor="0.9" 
-	sustained_fire_grow_step="1.0" 
-	sustained_fire_diminish_rate="2" 
+	sustained_fire_grow_step="2.0" 
+	sustained_fire_diminish_rate="2.0" 
 	magazine_size="8" 
 	can_shoot_standing="1" 
 	suppressed="0" 
 	name="SPAS-12-[Damage Focus SG]" 
-	class="1" 
+	class="4" 
 	reload_one_at_a_time="1"
 	sight_range_modifier="0.7" 
-	projectile_speed="96" 
+	projectile_speed="100" 
 	barrel_offset="0.4" 
-	projectiles_per_shot="23"
+	projectiles_per_shot="15"
 	spread_range="0.2"
+    last_burst_retrigger_time="0.2"
 	 />
+
      <inventory  buy_price="76.0" sell_price="76.0" />
 	<!--Animations-->
     <next_in_chain key="gkw_spas12.weapon" share_ammo="1" />
     
     <commonness value="0" in_stock="0" can_respawn_with="1" />
 
-    <animation state_key="cycle" animation_key="Pshotgun0.5" />
-    <animation state_key="cycle" stance_key="prone" animation_key="Pshotgun0.5p" />
     <animation key="reload" animation_key="reloading, oaat" />		
 	
 	<!--Sounds-->
@@ -219,7 +218,6 @@
     <model filename="gkw_sg_spas12.xml" />
     <hud_icon filename="gkw_spas12_skill.png" />
 
-
 	
 	<!--Ballistics-->
 	
@@ -228,10 +226,14 @@
     <projectile file="bullet.projectile">
         <result class="hit" 
         kill_probability="1.7" 
+        kill_probability_offset_on_successful_hit="0.15"
         kill_decay_start_time="0.09" 
         kill_decay_end_time="0.800" />
     </projectile>
-    <modifier class="speed" value="-0.4" />  
+
+    <modifier class="speed" value="-0.3" />  
+    <modifier class="detectability" value="+0.3" />
+
     <!--Accuracy, Movement speed-->
     
 	<stance state_key="walking" accuracy="0.65" />
@@ -243,8 +245,4 @@
     <stance state_key="over_wall" accuracy="0.85" />  
 
 </weapon>
-
-
-
-
 </weapons>
