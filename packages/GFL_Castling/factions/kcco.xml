@@ -384,7 +384,7 @@
 			<!-- wearables -->
 			<item_class_existence class="carry_item" slot="1" probability="1" />
 			<!-- backpack -->
-			<item_class_existence class="carry_item" slot="0" probability="2" />
+			<item_class_existence class="carry_item" slot="0" probability="0" />
 		</item_class_existence_config>
 		<attribute_config class="rp">
 			<attribute weight="0.3" min="80.0" max="300.0" />
@@ -433,7 +433,7 @@
 			<!-- wearables -->
 			<item_class_existence class="carry_item" slot="1" probability="1.0" />
 			<!-- backpack -->
-			<item_class_existence class="carry_item" slot="0" probability="0.7" />
+			<item_class_existence class="carry_item" slot="0" probability="0.3" />
 			<item_class_existence class="grenade" slot="0" probability="1.0" />
 			
 		</item_class_existence_config>
@@ -575,8 +575,8 @@
 		<item_class_existence_config>
 			<!-- wearables -->
 			<item_class_existence class="carry_item" slot="1" probability="1" />
-			<!-- note, always bp items -->
-			<item_class_existence class="carry_item" slot="0" probability="2" />
+			<!-- note, always backpack items -->
+			<item_class_existence class="carry_item" slot="0" probability="1.0" />
 		</item_class_existence_config>
 		<attribute_config class="xp">
 			<attribute weight="0.3" min="1.0" max="10.0" />
@@ -595,10 +595,17 @@
 			<call file="kcco_argo_vela.call" />
 			<carry_item key="kcco_qwd.carry_item" />
 		</resources>
+		<item_class_existence_config>
+			<item_class_existence class="carry_item" slot="1" probability="1" />
+			<!-- note, always backpack items -->
+			<item_class_existence class="carry_item" slot="0" probability="1.0" />
+		</item_class_existence_config>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="10.5" max="20.8" />
 		</attribute_config>
 	</soldier>
+
+
 	<!-- store -->
 	<soldier name="default_hg" spawn_score="0.0">
 		<resources file="gk_hg.resources" />
