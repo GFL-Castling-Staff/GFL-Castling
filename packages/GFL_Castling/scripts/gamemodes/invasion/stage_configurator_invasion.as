@@ -149,8 +149,8 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 	// ------------------------------------------------------------------------------------------------
 	protected void setupNormalStages() {
-		addStage(setupEggStage());		  // 上坟
-		addStage(setupStage108());		  // xiaoxieshen by diling
+		// addStage(setupEggStage());		  // 上坟
+		addStage(setupStage3());
 		addStage(setupStage107());		  // chapter1 by diling
 		addStage(setupStage9());          // map9
 		addStage(setupStage7());          // map6
@@ -162,7 +162,6 @@ class StageConfiguratorInvasion : StageConfigurator {
 		addStage(setupStage103()); 		  // map103 Palo Island by diling
 		addStage(setupStage17());         // map17    
 		addStage(setupStage18());         // map13_2
-		addStage(setupStage3());          // map3
 		addStage(setupStage13());         // map16    
 		addStage(setupFinalStage1());     // map11
 		addStage(setupStage104()); 		  // map105_1 zoneAttack by diling
@@ -175,6 +174,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		addStage(setupStage19());		  // map19
 		addStage(setupStage6());          // map5
 		addStage(setupFinalStage2());     // map12
+		addStage(setupStage108());		  // xiaoxieshen by diling
 		addStage(setupStage11());         // map13
 		addStage(setupStage16());         // map8_2
 	}
@@ -449,7 +449,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 	}
 	protected Stage@ setupStage108(){
 		Stage@ stage = createStage();
-		stage.m_mapInfo.m_name = "Kanda jimbocho ";
+		stage.m_mapInfo.m_name = "Kanda jimbocho";
 		stage.m_mapInfo.m_path = "media/packages/GFLC_Map/maps/mydevilsfrontline";
 		stage.m_mapInfo.m_id = "Tokyo Jimbocho";
 		stage.addTracker(PeacefulLastBase(m_metagame, 0));
@@ -634,14 +634,12 @@ class StageConfiguratorInvasion : StageConfigurator {
 	protected Stage@ setupStage3() {
 		Stage@ stage = createStage();
 		stage.m_mapInfo.m_name = "Old Fort Creek";
-		stage.m_mapInfo.m_path = "media/packages/vanilla/maps/map3";
+		stage.m_mapInfo.m_path = "media/packages/GFLC_Map/maps/map3_c";
 		stage.m_mapInfo.m_id = "map3";
-
-		stage.m_includeLayers.insertLast("layer1.invasion");
 
 		stage.addTracker(PeacefulLastBase(m_metagame, 0));
 		stage.addTracker(CommsCapacityHandler(m_metagame));
-		stage.m_maxSoldiers = 14 * 8;
+		stage.m_maxSoldiers = 14 * 11;
 		stage.m_playerAiCompensation = 6;                                         // was 6 (test4)
 		stage.m_playerAiReduction = 2;                                              // was 2.5 (test4)   
 
@@ -659,8 +657,8 @@ class StageConfiguratorInvasion : StageConfigurator {
 		}
 		{
 			Faction f(getFactionConfigs()[2], createCommanderAiCommand(1));
-			f.m_overCapacity = 40;                                              // was 30 (test2)
-			f.m_capacityOffset = 5;                                                 // was 0 in 1.65 
+			f.m_overCapacity = 40;
+			f.m_capacityOffset = 10;
 			stage.m_factions.insertLast(f); 
 		}
         
