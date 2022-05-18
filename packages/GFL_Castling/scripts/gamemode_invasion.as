@@ -255,7 +255,6 @@ class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 			m_specialCargoVehicleManager.applyAvailability();
 		}
 
-		setupMinibosses();
 	}
 
 	// --------------------------------------------
@@ -402,7 +401,8 @@ class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 				"radio_jammer2.vehicle",
 				"prison_bus.vehicle",
 				"prison_door.vehicle",
-				"aa_emplacement.vehicle"
+				"aa_emplacement.vehicle",
+				"sf_jupiter.vehicle"
 				};
 			addTracker(GenericDestroyObjectiveInstructor(this, vehicles));
 		}
@@ -461,7 +461,7 @@ class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 			if (faction.isNeutral()) continue;
 			
 			// interpolate players 1 -> 32, spawn time 3.0 -> 1.0
-			addTracker(SpawnTimeHandler(this, i, 1, 32, 3.0, getUserSettings().m_spawnTimeAtMaxPlayers));
+			addTracker(SpawnTimeHandler(this, i, 1, 20, 4.0, 2.0));
 		}
 	}
 	

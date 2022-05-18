@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <vehicle name="Anti-Air" key="aa_emplacement.vehicle" map_view_atlas_index="21" respawn_time="86400" existence="one_per_faction" reserves_spawn_point="1" protectors="3" soldier_capacity_offset="3">
-<!--  <tag name="metal heavy" /> -->
+
 	<tag name="target" />
+	<tag name="only_aa" />
+
 	<tire_set offset="1.0 0.0 1.0" radius="0.65" />
 	<tire_set offset="1.0 0.0 -1.0" radius="0.65" />
 
