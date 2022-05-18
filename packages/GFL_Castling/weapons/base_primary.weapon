@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon on_ground_up="0 0 1" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="1.0" drop_count_limit_in_range="2">
+    <specification />
+
+	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone" />
+	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone" />
+	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone" />	
+<!--	<animation key="reload" stance_key="prone" animation_key="reloading, ar1, prone" />  --> <!-- needs to be commented out -->
+    
+    <stance state_key="running" accuracy="0.3" />
+    <stance state_key="walking" accuracy="0.675" />
+    <stance state_key="crouch_moving" accuracy="0.75" />
+    <stance state_key="standing" accuracy="0.85" />
+    <stance state_key="crouching" accuracy="0.9" />
+    <stance state_key="prone" accuracy="0.95" /> 
+    <stance state_key="prone_moving" accuracy="0.3" />
+    <stance state_key="over_wall" accuracy="0.92" />     
+    
+</weapon>

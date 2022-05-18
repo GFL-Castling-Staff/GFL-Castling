@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon on_ground_up="0 0 1" drop_count_factor_on_death="1.0" ai_max_distance_to_shoot="45.0" drop_count_limit_in_range="2">
+    <specification />
+
+    <stance state_key="running" accuracy="0.1" />
+    <stance state_key="walking" accuracy="0.5" />
+    <stance state_key="crouch_moving" accuracy="0.1" />
+    <stance state_key="standing" accuracy="0.8" />
+    <stance state_key="crouching" accuracy="0.9" />
+    <stance state_key="prone" accuracy="1.0" /> 
+    <stance state_key="prone_moving" accuracy="0.1" />
+    <stance state_key="over_wall" accuracy="0.95" /> 
+   
+</weapon>
