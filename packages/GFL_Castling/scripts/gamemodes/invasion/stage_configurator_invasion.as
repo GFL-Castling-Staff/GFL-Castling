@@ -633,7 +633,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 	// ------------------------------------------------------------------------------------------------
 	protected Stage@ setupStage3() {
 		Stage@ stage = createStage();
-		stage.m_mapInfo.m_name = "Old Fort Creek";
+		stage.m_mapInfo.m_name = "Older Fort Creek";
 		stage.m_mapInfo.m_path = "media/packages/GFLC_Map/maps/map3_c";
 		stage.m_mapInfo.m_id = "map3";
 
@@ -645,8 +645,8 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 		stage.m_soldierCapacityVariance = 0.4;                                   // was 0.31 in 1.65
 
-		stage.m_minRandomCrates = 2; 
-		stage.m_maxRandomCrates = 3;    
+		stage.m_minRandomCrates = 3; 
+		stage.m_maxRandomCrates = 6;    
 
 		{
 			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0));
@@ -656,12 +656,17 @@ class StageConfiguratorInvasion : StageConfigurator {
 			stage.m_factions.insertLast(f);
 		}
 		{
-			Faction f(getFactionConfigs()[2], createCommanderAiCommand(1));
-			f.m_overCapacity = 40;
+			Faction f(getFactionConfigs()[1], createCommanderAiCommand(1));
+			f.m_overCapacity = 20;
 			f.m_capacityOffset = 10;
 			stage.m_factions.insertLast(f); 
 		}
-        
+		{
+			Faction f(getFactionConfigs()[2], createCommanderAiCommand(2));
+			f.m_overCapacity = 20;
+			f.m_capacityOffset = 10;
+			stage.m_factions.insertLast(f); 
+		}
 
 		// metadata
 		stage.m_primaryObjective = "capture";
