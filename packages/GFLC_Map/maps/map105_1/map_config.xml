@@ -8,4 +8,9 @@
 	<carry_item file="all_carry_items.xml" />
 	<vehicle file="all_vehicles.xml" />
 	<include_layer name="layer1.default" />
+
+  <scene>
+    <fog offset="0.0" range="250.0" />
+  </scene>	
+
 </map_config>
