@@ -18,7 +18,7 @@
 	sight_range_modifier="3" 
 	projectile_speed="284.04" 
 	barrel_offset="0.4" 
-	projectiles_per_shot="3" />
+	projectiles_per_shot="4" />
 	
 	<!--Animations-->
 	
@@ -51,8 +51,8 @@
     <weak_hand_hold offset="0.3" />
     <projectile file="bullet.projectile">
         <result class="hit" 
-        kill_probability="2.0"
-        kill_probability_offset_on_successful_hit="3.0" 
+        kill_probability="2.2"
+        kill_probability_offset_on_successful_hit="3.5" 
         kill_decay_start_time="1.448" 
         kill_decay_end_time="2.414" />
     </projectile>
