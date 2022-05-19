@@ -170,7 +170,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		addStage(setupStage14());         // map6_2
 		addStage(setupStage2());          // map4
 		addStage(setupStage106());		  // map106 E30 Route by diling
-		addStage(setupStage5());          // map1
+		// addStage(setupStage5());          // map1
 		addStage(setupStage19());		  // map19
 		addStage(setupStage6());          // map5
 		addStage(setupFinalStage2());     // map12
