@@ -1674,7 +1674,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 	protected Stage@ setupStage19() {
 		Stage@ stage = createStage();
 		stage.m_mapInfo.m_name = "Warsalt Legacy";
-		stage.m_mapInfo.m_path = "media/packages/vanilla/maps/map18";
+		stage.m_mapInfo.m_path = "media/packages/GFLC_Map/maps/map18";
 		stage.m_mapInfo.m_id = "map18";
 		
 		stage.m_includeLayers.insertLast("layer1.invasion");		

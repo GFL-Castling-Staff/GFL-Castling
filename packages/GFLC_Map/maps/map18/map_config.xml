@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map_config min_factions="2" max_factions="2" add_neutral_last="1">
+	<faction file="green.xml" />
+	<faction file="grey.xml" />
+
+	<vehicle file="all_vehicles.xml" />
+	<weapon file="all_weapons.xml" />
+<!--	<vehicle file="invasion_all_vehicles.xml" />
+	<weapon file="invasion_all_weapons.xml" /> -->
+	<projectile file="all_throwables.xml" />
+	<call file="all_calls.xml" />
+	<carry_item file="all_carry_items.xml" />
+
+	<include_layer name="bases.default" />
+	<include_layer name="layer1.default" />
+	
+  <scene>
+    <fog offset="30.0" range="70.0" />
+  </scene>	
+	
+</map_config>
