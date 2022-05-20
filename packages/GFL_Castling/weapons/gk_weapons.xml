@@ -255,14 +255,15 @@
 <weapon file="gkw_hvy_m2_ai.weapon" />
 <weapon file="gkw_hvypdw_m2.weapon" />
 <weapon file="gkw_type100_banzai.weapon" />
-<weapon file="gkw_88rocket.weapon" />
 <weapon file="gkw_hvy_at4.weapon" />
 <weapon file="gkw_hvypdw_at4.weapon" />
 <!--<weapon file="gkw_hvy_ags30.weapon" />-->
 <!-- skill -->
 
-<!-- <weapon file="gk_weapons_skill.xml" /> -->
-<!-- <weapon file="gk_weapons_mod3_skill.xml" /> -->
+<!-- 战术道具 -->
+<weapon file="gkw_consume_88rocket.weapon" />
+<weapon file="gkw_consume_at4.weapon" />
+
 <!-- skin\mod3 -->
 <weapon file="gk_weapons_skin_mod3.xml" />
 <weapon file="gk_weapons_only.xml" />
