@@ -3,7 +3,7 @@
     <result class="blast" radius="8.0" damage="7" push="1" decal="1" faction_compare="not_equal"/>
     <trigger class="impact" />
     <rotation class="motion" />
-    <model mesh_filename="mortar_shell.xml" />
+    <model mesh_filename="kcco_artillery_shell.xml" />
     <commonness value="0.0" />
 
     <sound class="result" key="other" fileref="explosion_FromFC5_1.wav" volume="1.8" />
@@ -54,6 +54,6 @@
     <effect class="result" key="character" copy="terrain" />
     
     <effect class="activated" ref="Propulsion_rocket" />
-
+	<trail probability="1.0" key="FlamethrowerTrail" />
 
 </projectile>

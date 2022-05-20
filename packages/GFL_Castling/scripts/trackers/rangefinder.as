@@ -37,7 +37,7 @@ class RangeFinder : Tracker {
 						string distance = getPositionDistance(target, origin);
 						
 						string intelKey = "rangefinder binoculars";
-						string aim_x = character.getStringAttribute("position");
+						string aim_x = player.getStringAttribute("aim_target");
 						dictionary a = {
 							{"%range", distance},{"%aim_target", aim_x}
 						};
