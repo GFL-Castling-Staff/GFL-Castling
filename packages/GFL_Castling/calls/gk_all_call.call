@@ -200,12 +200,12 @@
     </call>
     <!-- 空袭妖精 -->
     <call name="Drone air strikes" key="gk_airstrike_fairy.call" initiation_comment1="Request drone air strikes" acknowledge_comment="Confirmed, UAV is online, situational awareness is complete " acknowledge_time="0" launch_comment="Execution of air strikes" notify_metagame="1">
-        <round instances="35" instance_class="grenade" instance_key="artillery_airstrike_fairies.projectile" instance_spread="10 10 10" common_spread="5 0 5" launch_time="1.0" spawn_time="3.0">
+        <round instances="1" instance_class="grenade" instance_key="artillery_airstrike_fairies.projectile" instance_spread="0 0 0" common_spread="0 0 0" launch_time="1.0" spawn_time="3.0" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="48.0" initial_speed_to_target="20.0">
             <effect class="launch" ref="gk_ShadowCallFlyby" shadow="1" />
             <sound class="launch" fileref="plane_flyby.wav" volume="6.0" />
             <sound class="spawn" fileref="woosh1.wav" volume="0.3" />
         </round>
-        <round instances="35" instance_class="grenade" instance_key="artillery_airstrike_fairies.projectile" instance_spread="10 10 10" common_spread="5 0 5" launch_time="1.0" spawn_time="5.5">
+        <round instances="1" instance_class="grenade" instance_key="artillery_airstrike_fairies.projectile" instance_spread="0 0 0" common_spread="0 0 0" launch_time="1.0" spawn_time="3.0" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="48.0" initial_speed_to_target="20.0">
             <sound class="launch" fileref="plane_flyby.wav" volume="0" />
             <sound class="spawn" fileref="woosh1.wav" volume="0.3" />
         </round>

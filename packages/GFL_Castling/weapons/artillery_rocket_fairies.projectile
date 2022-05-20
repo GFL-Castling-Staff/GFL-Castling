@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<projectile class="grenade" name="artillery shell" slot="2" key="artillery_rocket_fairies.projectile" >
+<projectile class="grenade" name="artillery shell" slot="2" pulldown_in_air="100" key="artillery_rocket_fairies.projectile" >
     <result class="blast" radius="8.0" damage="5" push="0.4" decal="1" faction_compare="not_equal"/>
     <trigger class="impact" />
     <rotation class="motion" />
