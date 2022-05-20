@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<weapon key="gkw_thunder.weapon" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0">
+<weapon key="gkw_thunder_2206.weapon" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0">
 
 
 	<specification 
@@ -10,14 +10,14 @@
     magazine_size="1" 
     carry_in_two_hands="0" 
     suppressed="0" 
-    name="Thunder.50 BMG" 
+    name="Thunder.50 BMG-[Renoirs Crow]" 
     class="1" 
     sight_range_modifier="1.0" 
     projectile_speed="130.0" 
     projectiles_per_shot="1" 
     burst_shots="1" />
 
-	<commonness value="0.2" in_stock="1" can_respawn_with="1" />
+	<commonness value="0.0" in_stock="0" can_respawn_with="1" />
 	<inventory encumbrance="2.0" buy_price="5.0" sell_price="5.0"/>
 	<capacity value="1" source="rank" source_value="0.0" />
 
@@ -63,7 +63,7 @@
 	
     <animation state_key="stabbing" 			animation_key="pistol whip" />
     <animation state_key="stabbing" 			animation_key="pistol whip 3" />
-	<hud_icon filename="gkw_thunder50.png" />
+	<hud_icon filename="gkw_thunder50_2206.png" />
 
 	<modifier class="speed" value="+0.7" />
 
