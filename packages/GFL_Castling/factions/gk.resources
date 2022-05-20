@@ -284,6 +284,7 @@
 	<weapon key="gkw_sat8_1802_s.weapon" />
 	<weapon key="gkw_supershorty.weapon" />
 	<weapon key="gkw_usas12.weapon" />
+	<weapon key="gkw_usas12_skill.weapon"/>
 	<weapon key="gkw_usas12_2704.weapon" />
 	<weapon key="gkw_vpm5.weapon" />
 	<weapon key="gkw_79type.weapon" />
@@ -493,12 +494,11 @@
 	<weapon key="gkw_m21_skill.weapon"/>
 	<weapon key="gkw_akalfa.weapon"/>
 	<weapon key="gkw_akalfa_skill.weapon"/>
-	<weapon key="gkw_usas12.weapon"/>
-	<weapon key="gkw_usas12_skill.weapon"/>
 	<weapon key="gkw_tac50.weapon"/>
 	<weapon key="gkw_qbz191.weapon"/>
 	<weapon key="gkw_vz61.weapon" />
 	<weapon key="gkw_thunder.weapon"/>
+	<weapon key="gkw_thunder_2206.weapon"/>
 	<weapon key="gkw_tar21.weapon"/>
 	<weapon key="gkw_tar21_skill.weapon"/>
 	<weapon key="gkw_tar21_1305_skill.weapon"/>
@@ -624,6 +624,8 @@
 	<carry_item key="woshieoe.carry_item" />
 	<!-- 二号位 -->
 	<weapon key="gkw_88rocker.weapon" />
+	<weapon key="gkw_consume_at4.weapon" />
+
 	<!-- 维修机甲 -->
 	<weapon key="gkr_bbs.weapon" />
 	<!-- HG医疗榴弹 -->
@@ -717,4 +719,7 @@
 	<weapon key="gkw_m1918mod3_806_skill.weapon" />
 	<weapon key="gkw_m1918mod3_1606.weapon" />
 	<weapon key="gkw_m1918mod3_1606_skill.weapon" />
+	<weapon key="gkw_m1895mod3_5309.weapon"/>
+	<weapon key="gkw_m1895mod3_5309_skill.weapon"/>
+
 </resources>

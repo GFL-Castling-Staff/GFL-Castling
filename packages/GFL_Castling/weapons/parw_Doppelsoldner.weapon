@@ -5,7 +5,7 @@
 		<tag name="mecha" />
 		<tag name="bazooka" />
 
-		<specification retrigger_time="0.3" accuracy_factor="0.75" sustained_fire_grow_step="-2.0" sustained_fire_diminish_rate="0.9" magazine_size="20" can_shoot_standing="1" can_shoot_crouching="0" can_shoot_prone="0" suppressed="0" name="Doppelsoldner-Rocket" class="4" reload_one_at_a_time="0" sight_range_modifier="1.1" ai_sight_range_modifier="1.1" projectile_speed="86.0" carry_in_two_hands="0" projectiles_per_shot="3" burst_shot="2" last_burst_retrigger_time="2.0" stab_enabled="1" barrel_offset_3d="0.6 1 0.5"/>
+		<specification retrigger_time="0.3" accuracy_factor="0.75" sustained_fire_grow_step="-2.0" sustained_fire_diminish_rate="0.9" magazine_size="20" can_shoot_standing="1" can_shoot_crouching="0" can_shoot_prone="0" suppressed="0" name="Doppelsoldner-Rocket" class="4" reload_one_at_a_time="0" sight_range_modifier="1.1" ai_sight_range_modifier="1.1" projectile_speed="86.0" carry_in_two_hands="0" projectiles_per_shot="3" burst_shot="2" last_burst_retrigger_time="3.0" stab_enabled="1" barrel_offset_3d="0.6 1 0.5"/>
 
 		<animation state_key="recoil" animation_key="still, pistol dual" />
 		<animation state_key="reload" animation_key="still, pistol dual" />
