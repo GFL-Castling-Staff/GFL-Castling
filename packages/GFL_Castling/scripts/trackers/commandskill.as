@@ -1301,7 +1301,14 @@ class CommandSkill : Tracker {
                     Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
                     int factionid = character.getIntAttribute("faction_id");
                     array<string> Voice={
-                        ""
+                        "PP19_skill1.wav",
+                        "PP19_skill2.wav",
+                        "PP19_skill3.wav",
+                        "PP19_skill4.wav",
+                        "PP19_skill5.wav",
+                        "PP19_skill6.wav",
+                        "PP19_skill7.wav",
+                        "PP19_skill8.wav"
                     };
                     playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
                     playAnimationKey(m_metagame,characterId,"throwing, upside",true,true);
@@ -1311,10 +1318,17 @@ class CommandSkill : Tracker {
                         CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"grenade_pp19.projectile",characterId,factionid,40.0,6.0);
                         Vector3 c_pos1 = c_pos.add(Vector3(3,0,3));
                         Vector3 c_pos2 = c_pos.add(Vector3(-3,0,-3));
+                        Vector3 c_pos3 = c_pos.add(Vector3(-3,0,3));
+                        Vector3 c_pos4 = c_pos.add(Vector3(3,0,-3));                        
                         spawnSoldier(m_metagame,1,factionid,c_pos1,"136_pp19_smg");
                         spawnSoldier(m_metagame,1,factionid,c_pos2,"136_pp19_smg");
-                        CreateProjectile_H(m_metagame,c_pos1,stringToVector3(target),"grenade_pp19.projectile",characterId,factionid,40.0,6.0);
-                        CreateProjectile_H(m_metagame,c_pos2,stringToVector3(target),"grenade_pp19.projectile",characterId,factionid,40.0,6.0);
+                        spawnSoldier(m_metagame,1,factionid,c_pos3,"136_pp19_smg");
+                        spawnSoldier(m_metagame,1,factionid,c_pos4,"136_pp19_smg");
+                        playSoundAtLocation(m_metagame,"grenade_throw1.wav",factionid,c_pos,0.9);
+                        CreateProjectile_H(m_metagame,c_pos1,stringToVector3(target),"grenade_pp19_sub.projectile",characterId,factionid,40.0,6.0);
+                        CreateProjectile_H(m_metagame,c_pos2,stringToVector3(target),"grenade_pp19_sub.projectile",characterId,factionid,40.0,6.0);
+                        CreateProjectile_H(m_metagame,c_pos3,stringToVector3(target),"grenade_pp19_sub.projectile",characterId,factionid,40.0,6.0);
+                        CreateProjectile_H(m_metagame,c_pos4,stringToVector3(target),"grenade_pp19_sub.projectile",characterId,factionid,40.0,6.0);
                     }
                     else{
                         addCoolDown("pp19",15,characterId,modifer);
