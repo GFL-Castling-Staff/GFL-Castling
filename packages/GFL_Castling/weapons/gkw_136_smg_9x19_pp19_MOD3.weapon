@@ -16,7 +16,7 @@
 	
 
   	<animation state_key="hold_casual"			animation_key="dancing, kazachok" />    
-    <inventory  buy_price="190.0" sell_price="60.0" />
+    <inventory  buy_price="190.0" sell_price="190.0" />
     <capacity value="0" source="rank" source_value="0.0" />
     <capacity value="1" source="rank" source_value="4.622" />
     <sound key="fire" fileref="pp19_fire_FromWF.wav" pitch_variety="0.05" volume="1.2" />
@@ -32,7 +32,7 @@
 
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet.projectile">
-      <result class="hit" kill_probability="1.7" kill_probability_offset_on_successful_hit="0.9" kill_decay_start_time="0.005" kill_decay_end_time="0.75" />
+      <result class="hit" kill_probability="1.7" kill_probability_offset_on_successful_hit="1.25" kill_decay_start_time="0.005" kill_decay_end_time="0.6" />
     </projectile>
     
     <stance state_key="running" accuracy="0.8" />
