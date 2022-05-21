@@ -42,6 +42,7 @@
 
     <effect class="result" key="static_object" copy="terrain" />
     <effect class="result" key="character" copy="terrain" /> 
+    <effect class="result" key="vehicle" copy="terrain" /> 
 </projectile>
 <projectile class="grenade" name="Grenade" key="grenade_pp19_sub.projectile" slot="0" radius="0.15" pulldown_in_air="40">
 
@@ -85,5 +86,6 @@
 
     <effect class="result" key="static_object" copy="terrain" />
     <effect class="result" key="character" copy="terrain" /> 
+    <effect class="result" key="vehicle" copy="terrain" /> 
 </projectile>
 </projectiles>
