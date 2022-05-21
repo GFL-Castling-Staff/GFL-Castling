@@ -521,7 +521,7 @@
 		<model filename="sfd_striker.xml" />
 		<resources clear_weapons="1" clear_calls="1">
 			<weapon key="sfw_striker.weapon" enabled="1"/>
-			<carry_item key="sf_str.carry_item" enabled="1" />
+			<carry_item key="sf_ar.carry_item" enabled="1" />
 			<projectile key="sf_ap_mine.projectile" enabled="1.0" />
 		</resources>
 	</soldier>
@@ -530,7 +530,7 @@
 		<model filename="sfd_striker_swap_from_dusk.xml" />
 		<resources clear_weapons="1" clear_calls="1">
 			<weapon key="sfw_striker_swap.weapon" enabled="1"/>
-			<carry_item key="sf_str.carry_item" enabled="1" />
+			<carry_item key="sf_swap.carry_item" enabled="1" />
 			<projectile key="sf_ap_mine.projectile" enabled="1.0" />
 		</resources>
 	</soldier>
