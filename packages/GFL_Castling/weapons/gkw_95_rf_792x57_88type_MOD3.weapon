@@ -23,8 +23,8 @@
 
 	<next_in_chain key="gkw_88typemod3_skill.weapon" share_ammo="0" />
 	<inventory  price="300.0" />
-    <animation key="cycle" animation_key="Brifle1.3" />
-	<animation key="cycle" stance_key="prone" animation_key="Brifle1.3p" />	
+    <animation key="cycle" animation_key="Brifle0.8" />
+	<animation key="cycle" stance_key="prone" animation_key="Brifle0.8p" />	
     <animation key="reload" animation_key="reloading, oaat" />		
 	<animation state_key="stabbing" animation_key="melee, bayonet" />
 	<animation state_key="hold" animation_key="still, 88typemod3" />
@@ -60,11 +60,11 @@
     <weak_hand_hold offset="0.3" />
     <projectile file="88type_laser.projectile">
 		<trail probability="1.0" key="laser_hyz" />
-		 <result class="blast"  damage="9.5"  radius="3.5" decal="1" push="0" character_state="death" 	faction_compare="not_equal" />
+		 <result class="blast"  damage="11.5"  radius="4.5" decal="1" push="0" character_state="death" 	faction_compare="not_equal" />
     </projectile>
-	<stance state_key="walking" accuracy="0.5" />
-	<stance state_key="crouch_moving" accuracy="0.4" />
-	<stance state_key="prone_moving" accuracy="0.4" />
+	<stance state_key="walking" accuracy="0.8" />
+	<stance state_key="crouch_moving" accuracy="0.8" />
+	<stance state_key="prone_moving" accuracy="0.8" />
 	<stance state_key="standing" accuracy="0.9"/>
 	<stance state_key="crouching" accuracy="0.98" />
 	<stance state_key="prone" accuracy="1" />
