@@ -19,16 +19,16 @@ notify_metagame="1">
 
 	<round 
 			instances="6" 
-			instance_class="soldier" 
-			instance_key="sf_manticore" 
-			instance_spread="10 0 10" 
+			instance_class="grenade" 
+			instance_key="sfw_manticore_droppod.projectile" 
+			instance_spread="10 10 10" 
 			common_spread="5 0 5" 
 			launch_time="5.0" 
 			spawn_time="5.5" 
 			horizontal_offset_at_spawn="0.0" 
-			vertical_offset_at_spawn="-5.0" 
-			initial_speed_to_target="0.0">
-			<sound class="spawn" fileref="qwd_walk1.wav" volume="1.3" />
+			vertical_offset_at_spawn="60.0" 
+			initial_speed_to_target="10.0">
+			<sound class="spawn" fileref="woosh1.wav" volume="0.3" />
 		</round>
 
 
