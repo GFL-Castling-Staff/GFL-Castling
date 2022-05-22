@@ -18,7 +18,7 @@
         <next_in_chain key="gkw_m4a1_530_skill.weapon" share_ammo="1" />
 
 
-        <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
+        <animation key="reload" animation_key="reloading, magazine rifle 0.8" />
         
         <inventory  buy_price="7.0" sell_price="7.0" />	
         <commonness in_stock="0" value="0"/>
@@ -33,7 +33,7 @@
 
         <weak_hand_hold offset="0.2" />
         <projectile file="bullet.projectile" can_be_detected_by_footmen="0">
-            <result class="hit" kill_probability="1.65" kill_decay_start_time="1.023" kill_decay_end_time="1.705" />
+            <result class="hit" kill_probability="1.65" kill_probability_offset_on_successful_hit="0.4" kill_decay_start_time="1.023" kill_decay_end_time="1.705" />
         </projectile>
         <stance state_key="running" accuracy="0.3" />
         <stance state_key="walking" accuracy="0.75" />
@@ -62,7 +62,7 @@
         <next_in_chain key="gkw_m4a1_530.weapon" share_ammo="1" />
 
 
-        <animation key="reload" animation_key="reloading, magazine rifle 1.5" />
+        <animation key="reload" animation_key="reloading, magazine rifle 0.8" />
         
         <inventory  buy_price="7.0" sell_price="7.0" />	
         <commonness in_stock="0" value="0"/>
@@ -77,7 +77,7 @@
 
         <weak_hand_hold offset="0.2" />
         <projectile file="bullet.projectile" can_be_detected_by_footmen="0">
-            <result class="hit" kill_probability="1.65" kill_probability_offset_on_successful_hit="1" kill_decay_start_time="1.023" kill_decay_end_time="1.705" />
+            <result class="hit" kill_probability="1.65" kill_probability_offset_on_successful_hit="1.4" kill_decay_start_time="1.023" kill_decay_end_time="1.705" />
         </projectile>
         <stance state_key="running" accuracy="0.3" />
         <stance state_key="walking" accuracy="0.75" />
