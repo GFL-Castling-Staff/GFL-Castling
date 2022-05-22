@@ -44,6 +44,7 @@
 #include "ServerHelper.as"
 #include "commandskill.as"
 #include "ItemDropEvent.as"
+#include "vehicle_spawn_handler.as"
 
 // --------------------------------------------
 class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
@@ -324,10 +325,7 @@ class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 	// --------------------------------------------
 	protected void setupExperimentalFeatures() {
 		addTracker(GpsLaptop(this));
-		addTracker(EmpGrenade(this));
 		addTracker(RepairCrane(this));
-		addTracker(A10GunRun(this));
-		addTracker(AC130GunRun(this));        
 		addTracker(SquadEquipmentKit(this)); 
 		addTracker(RangeFinder(this)); 
 		addTracker(GFLskill(this));
@@ -337,6 +335,7 @@ class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 		addTracker(BanManager(this,true));
 		addTracker(CommandSkill(this));
 		addTracker(ItemDropEvent(this));
+		addTracker(vehicle_spawn(this));
 	}
 
 	// --------------------------------------------
