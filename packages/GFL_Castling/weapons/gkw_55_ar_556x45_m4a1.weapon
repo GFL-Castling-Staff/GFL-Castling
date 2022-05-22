@@ -7,7 +7,7 @@
             
             class="0"
             slot="0"
-            magazine_size="30"
+            magazine_size="20"
             name="M4A1"
             projectile_speed="187.23"
             retrigger_time="0.086"
@@ -19,7 +19,7 @@
 
 
 
-        <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
+        <animation key="reload" animation_key="reloading, magazine rifle 0.8" />
         
 
         <sound key="fire" fileref="m4a1_fire_FromDIVISION2.wav" pitch_variety="0.05" volume="1.2" />
@@ -32,7 +32,7 @@
 
         <weak_hand_hold offset="0.2" />
         <projectile file="bullet.projectile" can_be_detected_by_footmen="0">
-            <result class="hit" kill_probability="1.65" kill_decay_start_time="1.023" kill_decay_end_time="1.705" />
+            <result class="hit" kill_probability="1.65" kill_probability_offset_on_successful_hit="0.4" kill_decay_start_time="1.023" kill_decay_end_time="1.705" />
         </projectile>
         <stance state_key="running" accuracy="0.3" />
         <stance state_key="walking" accuracy="0.75" />
@@ -50,7 +50,7 @@
             
             class="0"
             slot="0"
-            magazine_size="30"
+            magazine_size="20"
             name="M4A1-[Damage Focus T]"
             sight_range_modifier="1.25"
             projectile_speed="187.23"
@@ -65,7 +65,7 @@
 
 
 
-        <animation key="reload" animation_key="reloading, magazine rifle 1.5" />
+        <animation key="reload" animation_key="reloading, magazine rifle 0.8" />
         
 
 
@@ -79,7 +79,7 @@
 
         <weak_hand_hold offset="0.2" />
         <projectile file="bullet.projectile" can_be_detected_by_footmen="0">
-            <result class="hit" kill_probability="1.65" kill_probability_offset_on_successful_hit="1" kill_decay_start_time="1.023" kill_decay_end_time="1.705" />
+            <result class="hit" kill_probability="1.65" kill_probability_offset_on_successful_hit="1.4" kill_decay_start_time="1.023" kill_decay_end_time="1.705" />
         </projectile>
         <stance state_key="running" accuracy="0.8" />
         <stance state_key="walking" accuracy="0.8" />
