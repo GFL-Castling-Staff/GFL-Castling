@@ -2,8 +2,8 @@
 <projectile class="grenade" name="Manticore Droppod" slot="1" pulldown_in_air="200.0" key="sfw_manticore_droppod.projectile">
     <tag name="grenade"/>
 	<result class="spawn" instance_class="soldier" instance_key="sf_manticore" min_amount="1" max_amount="1" offset="0 0 0" position_spread="0 0" direction_spread="0 0"/>
-    <trigger class="impact">
-		<collider class="character" enabled="1" faction_compare="not_equal"/>
+    <trigger class="time" time_to_live="1.0">
+		<collision class="sticky" />
 	</trigger>
     <rotation class="motion" />
     <model filename="sfd_manticore_droppod.xml" />
