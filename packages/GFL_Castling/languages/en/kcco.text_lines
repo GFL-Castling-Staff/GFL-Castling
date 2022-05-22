@@ -1,288 +1,287 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <character filename="default_base.character">
-  <!-- defined in default.character for differentiation, see maps/lobby/default.character too -->
-<!--  <comment key="Hmm, no signal" text="Blayt! no single"/> -->
-<comment key="Driver, abandon vehicle" text="Comrades, Bailout!" />
-  <comment key="Driver, abandon vehicle" text="Danger detected!, Get out the vehicle!" />
-  <comment key="Gunner, abandon vehicle" text="Gunner, abandon vehicle!" />
-  <comment key="Gunner, abandon vehicle" text="Watch out!!" />
-  <comment key="Squad, abandon vehicle" text="Everyone, abandon vehicle!" />
-  <comment key="Squad, get out" text="Comrades its time to go!" />
-  <comment key="Squad, get in" text=" Get inside the vehicle!" />
-  <comment key="Squad, get in" text="Execute Armor combat procedures" />
-  <comment key="Squad, get in" text="Comrades, occupy that vehicle" />
-  <comment key="Squad, follow the vehicle" text="Squad, follow the vehicle" />
-  <comment key="Squad, follow the vehicle" text="Catch up that Vehicle!" />
-  <comment key="Squad, follow the vehicle" text="Support that frendly vehicle!" />
-  <comment key="Squad, follow me" text="Squad, I'll lead!" />
-  <comment key="Squad, follow me" text="For General Carter!" />
-  <comment key="Squad, follow me" text="Together! Comrades!" />
-  <comment key="Squad, follow me" text="For the General!" />
-  <comment key="Squad, follow me" text="Urrah!!!" />
-  <comment key="Squad, follow me" text="Squad, follow me" />
-  <comment key="Driver, stop the vehicle" text="Parking" />
-  <comment key="Driver, stop the vehicle" text="Comrade, slow down" />
-  <comment key="Driver, stop the vehicle" text="Stop, comrade" />
-  <comment key="Driver, stop the vehicle" text="Brake!" />
-  <comment key="Gunner, fire at will" text="Open Fire!" />
-  <comment key="Gunner, fire at will" text="Fire at will!" />
-  <comment key="Driver, stop the vehicle" text="Driver, stop the vehicle" />
-  <comment key="Driver, stop the vehicle" text="Driver, hold!" />
-  <comment key="Driver, stay close" text="We need to Support the infantry!" />
-  <comment key="Driver, stay close" text="Keep the distance!" />
-  <comment key="Driver, stay close" text="get closer!" />
-  <comment key="Squad, move over there" text="Squad, move over there" />
-  <comment key="Squad, move over there" text="Squad! go there" />
-  <comment key="Squad, move over there" text="Occupy that area" />
-  <comment key="Squad, move over there" text="Forward!" />
-  <comment key="Squad, change position" text="Leap Forward!" />
-  <comment key="Squad, change position" text="Sweep them from the feild!" />
-  <comment key="Squad, change position" text="Shift position!!!" />
-  <comment key="Driver, take us there" text="Comrade, take us there" />
-  <comment key="Driver, over there" text="To that location" />
-  <comment key="Gunner, there" text="Gunner, there" />
-  <comment key="Gunner, there" text="Gunner, over there!" />
-  <comment key="Gunner, there" text="Contact! Hostile!" />
-  <comment key="Gunner, there" text="We spotted an enemy!" />
-  <comment key="We surrender!" text="System shutting down" />
-  <comment key="We surrender!" text="Data link interrupted" />
-  <comment key="We surrender!" text="We surrender" />
-  <comment key="We surrender!" text="Don't shoot! We surrender!" />
-  <comment key="We surrender!" text="Signal lose" />
-  <comment key="Medic!" text="Medic! I need help!" />
-  <comment key="Medic!" text="War wounded unit!" />
-  <comment key="Medic!" text="The Core has been damaged!" />
-  <comment key="Medic!" text="Suka! I got shot!" />
-  <comment key="Medic!" text="Assistance! please!" />
-  <comment key="Medic!" text="Assistance Required!" />
-  <comment key="I feel good!" text="I feel good!" />
-  <comment key="I feel good!" text="System Restart!" />
-  <comment key="I feel good!" text="I can still fight!" />
-  <comment key="I feel good!" text="Don't stop me, the combat objective has not been completed yet!" />
-  <comment key="I feel good!" text="Cnacn6o! Komandir" />
-  <comment key="Reloading" text="Reloading" />
-  <comment key="Reloading" text="Cover me!" />
-  <comment key="Reloading" text="Swamping Mags" />
-  <comment key="Reloading" text="Tatical Reloading!" />
-  <comment key="cancel radio call" text="completed" />
-  <comment key="cancel radio call" text="End call" />
-  <comment key="initiate radio call" text="Argo, Do you read me." />
-  <comment key="commander radio response" text="This is Argo, Loud and Clear" />
-  <comment key="commander radio full" text="This is Argo, the support system is currently overloaded, Please Stand by!"/>
-  <comment key="no radio equipment" text="I dont have such thing yet" />
-  <comment key="no radio equipment" text="&#37;rank_names does not have permission to use the support module" />
-  <comment key="no radio equipment" text="No support module authentication" />
-  <comment key="squad chat, not in squad" text="Currently not in the underlying combat system" />
-  <comment key="Hey, wait up" text="Wait a minute!" />
-  <comment key="Hey, wait up" text="Wait up!" />
-  <comment key="Hey, wait up" text="Requesting a vehicle!" />
-  <comment key="Hey, wait up" text="Hold up!" />
-  <comment key="Quickly!" text="Forward!" />
-  <comment key="Quickly!" text="Move quickly!" /> 
-  <comment key="Buzz off" text="Get out!" />
-  <comment key="Buzz off" text="Buzz off!" />
-  <comment key="Step out, kid" text="Step out, comrade! Let me do the job" />
-  <comment key="hostile vehicle takeover" text="?!" />
-  <comment key="hostile vehicle takeover" text="contact! Unknown Forces" />
-  <comment key="hostile vehicle takeover" text="Who the heck are you?! " />
-  <comment key="hostile vehicle takeover" text="1001110002" />
-  <comment key="hostile vehicle takeover" text="Who the heck are you?! " />
-  <comment key="hostile vehicle takeover" text="Failed to identify" />
-  <comment key="Can't respawn-the last base is under attack" text="Can't respawn-the last base is under attack" />
-  <comment key="Can't respawn-spawning is locked" text="Can't respawn-no redeployment permission" />
-  <comment key="Hmm.. not enough room here" text="Not enough room here" />
-  <comment key="I'm outta here" text="Get out of here" />
-  <comment key="I'm outta here" text="Leave here" />
-  <comment key="Good job, soldiers" text="Well done! Comrades" />
-  <comment key="Good job, soldiers" text="Good job, soldiers" />
-  <comment key="Good job, soldiers" text="A waiting for further commands" />
-  <comment key="Good job, soldiers" text="Mission Complete" />
-  <comment key="Open fire" text="Open fire!" />
-  <comment key="Open fire" text="We have contact with the emeny!" />
-  <comment key="Open fire" text="enemy unit! Spotted" />
-  <comment key="Lone leader, open fire"  text="Contact with hostile actions! Requesting for support!" />
-  <comment key="fire opened, weapon tag = sniper" text="Sniper detected!" />
-  <comment key="fire opened, weapon tag = sniper" text="Enemy Sniper!" />
-  <comment key="fire opened, weapon tag = sniper" text="Sniper!" />
-  <comment key="fire opened, weapon tag = sniper" text="Contact! Sniper!" />
-  <comment key="fire opened, weapon tag = sniper" text="Sniper! Take cover" />
-  <comment key="fire opened, weapon tag = sniper" text="There's a Sniper!" />
-  <comment key="grenade alert, grenade tag = grenade" text="Grenade!" />
-  <comment key="grenade alert, grenade tag = grenade" text="Oh F*** thats a Grenade!" />
-  <comment key="grenade alert, grenade tag = grenade" text="Incoming Explosive!" />
-  <comment key="grenade alert, grenade tag = flashbang" text="Flash Bag!" />
-  <comment key="grenade alert, grenade tag = flashbang" text="Incomeing Flash Bag!" />
-  <comment key="grenade alert, grenade tag = rocket" text="rocketes!" />
-  <comment key="grenade alert, grenade tag = rocket" text="incoming unguided Flying Object!" />
-  <comment key="grenade alert, grenade tag = rocket" text="RPG!" />
-  <comment key="enemy not seen, area alerted" text="Stay Alert, comrades" />
-  <comment key="enemy not seen, area alert" text="Pay attention!" />
-  <comment key="Lone leader, enemy not seen, area alerted" text="concealing action" />
-  <comment key="leader, enemy not seen, taking suppressed fire" text="incoming suppressive fire" />
-  <comment key="leader, enemy not seen, taking suppressed fire" text="We're pinned!" />
-  <comment key="Lone leader, enemy not seen, taking suppressed fire" text="Under attack!" />
-  <comment key="Lone leader, enemy not seen, taking suppressed fire" text="F***ing MG!!" />
-  <comment key="Lone leader, enemy not seen, taking suppressed fire" text="Searching for Attackers!" />
-  <comment key="Lone leader, enemy not seen, taking suppressed fire" text="I've been spotted!" />
-  <comment key="Lone leader, enemy not seen, taking suppressed fire" text="!" />
-  <comment key="Lone leader, enemy not seen, taking suppressed fire" text="S*** B****!" />
-  <comment key="Lone leader, enemy not seen, taking suppressed fire" text="Don't let me found you! I promise I will toture you!" />
-  <comment key="enemy seen"  text="enemy unit!" />
-  <comment key="enemy seen"  text="Is them!!" />
-  <comment key="enemy seen"  text="Hositle Action spotted!" />
-  <comment key="enemy seen" text="Contact! Enemy!!" />
-  <comment key="enemy seen" text="enemy unit! location uploading!" /> 
-  <comment key="enemy seen, vehicle tag = tank" text="Oh S*** Tank!!" />
-  <comment key="enemy seen, vehicle tag = tank" text="Execute anti-tank operations!" />
-  <comment key="enemy seen, vehicle tag = tank" text="Armor Alert!" />
-  <comment key="enemy seen, vehicle tag = tank" text="Large vehicle!" />
-  <comment key="enemy seen, vehicle tag = tank" text="Contact with enemy Tank!!" />
-  <comment key="enemy seen, vehicle tag = tank" text="WE Found an enemy tank!" />
-  <comment key="enemy seen, vehicle tag = tank" text="Ready the AT weapons!" />
-  <comment key="enemy seen, vehicle tag = apc" text="Chariot!" />
-  <comment key="enemy seen, vehicle tag = apc" text="Destroy that chariot, Comrades!" />
-  <comment key="enemy seen, vehicle tag = apc" text="Infantry vehicle detected!" />
-  <comment key="enemy seen, vehicle tag = apc" text="Enemy infantry vehicle! Location Uploading" />
-  <comment key="enemy seen, vehicle tag = apc" text="Prepare for anti-armor combat!" />
-  <comment key="enemy seen, vehicle tag = apc" text="APC!" />
-  <comment key="enemy seen, vehicle tag = truck" text="Found a transportation vehicle!" />
-  <comment key="enemy seen, vehicle tag = truck" text="Found an enemy transportation vehicle!" />
-  <comment key="enemy seen, vehicle tag = truck" text="Transport vehicle spotted" />
-  <comment key="enemy seen, vehicle tag = truck" text="Alert! Transport vehicle!" />
-  <comment key="enemy not seen, taking suppressed fire" text="Receiving enemy MG Fire!" />
-  <comment key="enemy not seen, taking suppressed fire" text="We're pinned!" />
-  <comment key="enemy not seen, taking suppressed fire" text="MG scouping on us!" />
-  <comment key="enemy not seen, taking suppressed fire" text="Contact with enemy MG squad!" />
-  <comment key="Waiting for reinforcements" text="Waiting for reinforcements"/>
-  <comment key="Waiting for reinforcements" text="Waiting for comrades" />
-  <comment key="Hold on!" text="Hold on!" />
-  <comment key="Hold on!" text="Hold tight" />
-  <comment key="Hold on!" text="I will be here soon!" />
-  <comment key="Hold on!" text="Coming!" />
-  <comment key="Move out" text="Let's go" />
-  <comment key="Move out" text="Move out" />
-  <comment key="Move out" text="Follow me" />
-  <comment key="Move out" text="Let us move" />
-  <comment key="All quiet here" text="No response from the radar" />
-  <comment key="All quiet here" text="Filtering sensor clutter" />
-  <comment key="All quiet here" text="*High frequency motor sound*" />
-  <comment key="All quiet here" text="Pay attention to the surrounding area" />
-  <comment key="All quiet here" text="*Servo motor sound*" />
-  <comment key="All quiet here" text="Its The calm before the storm..." />
-  <comment key="All quiet here" text="Scanning for enemy Special Forces" />
-  <comment key="All quiet here" text="Stay Alert!" />
-  <comment key="Yes sir" text="Yes sir" />
-  <comment key="Yes sir" text="A course has been set" />
-  <comment key="Yes sir" text="Da! Comrade" />
-  <comment key="Yes sir" text="On the way" />
-  <comment key="Yes sir" text="Understood" />
-  <comment key="Yes sir" text="Received" />
-  <comment key="Yes sir" text="Da Da" /> 
-  <comment key="Uh, I can't drive this thing" text="Vehicle data adapting...Failed!..System Restarting" />
-  <comment key="Uh, I can't drive this thing" text="The vehicle driving module has no response" />
-  <comment key="Uh, I can't drive this thing" text="000011100001110000101111" />
-  <comment key="Uh, I can't drive this thing" text="An error occurred in vehicle matching" />
-  <comment key="Uh, I can't drive this thing" text="Interface version is inconsistent" />
-  <comment key="Uh, I can't drive this thing" text="Engine cracked" />
-  <comment key="Uh, I can't drive this thing" text="The steering wheel is locked and is being repaired" />
-  <comment key="Uh, I can't drive this thing" text="Mechanized module failure" />
-  <comment key="Uh, I can't drive this thing" text="Uh, I can't drive this thing" />
- <comment key="Uh, I can't drive this thing" text="Comrade, I Don't know how to drive this thing" />
-  <comment key="Uh, I can't drive this thing" text="Order 751 : locked" />
-  <comment key="Uh, I can't drive this thing" text="Note: Illegal operation" />
-  <comment key="Uh, I can't drive this thing" text="Error" />
-  <comment key="Uh, I can't drive this thing" text="Requesting to change driver" />
-  <comment key="Uh, I can't drive this thing" text="The driving system version is not certified" />
-  <comment key="Uh, I can't drive this thing" text="The central bearing screw is loose" />
-  <comment key="Uh, I can't drive this thing" text="Data transmission error" />
-  <comment key="Waiting for squad" text="Wait for other comrades" />
-  <comment key="Waiting for squad" text="Report in! Team" />
-  <comment key="Shield up" text="Vertical shield" />
-  <comment key="Shield up" text="Shield up" />
-  <comment key="overencumbered" text="The load is too high!" />
-  <comment key="overencumbered" text="shooting system load" />
-  <comment key="overencumbered" text="The load needs to be released" />
-  <comment key="Where to, chief?" text="Where to, comrade?" />
-  <comment key="Where to, chief?" text="Waiting for route instructions" />
-  <comment key="Where to, chief?" text="Waiting for combat order" />
-  <comment key="Where to, chief?" text="a waiting next command" />
-  <comment key="Press SPACE to continue!"  text="Press SPACE to continue" />
-  <comment key="celebrating" text="We won!" />
-  <comment key="celebrating" text="Well done" />
-  <comment key="celebrating" text="The battle is over" />
-  <comment key="celebrating" text="Oorah" />
-  <comment key="celebrating" text="GG" />
-  <comment key="celebrating" text="Objective complete" />
-  <comment key="celebrating" text="Victory" />
-  <comment key="celebrating" text="Reporting to Argo we have complete the Mission" />
-  <comment key="celebrating" text="The battle is over! Reporting to Captain Yegor" />
-  <comment key="celebrating" text="Glory to the Union!" />
-  <comment key="celebrating" text="Cleaning up Area" />
-  <comment key="celebrating" text="Ready for next operations" />
-  <comment key="celebrating" text="Data collation in progress" /> 
-  <comment key="about to drive over a friendly" text="Watch out!!" />
-  <comment key="about to drive over a friendly" text="Attention!" />
-  <comment key="this is as close as i can get" text="route planning error" />
-  <comment key="this is as close as i can get" text="this is as close as i can get" />
-  <comment key="enemy vehicle spotted, near base" text="&#37;enemy_name &#37;vehicle_name spotted near &#37;base_name " />
-  <comment key="enemy vehicle spotted, not near base" text=" &#37;enemy_name &#37;vehicle_name spotted in the feild!" />
-  <comment key="comms have been restored" text="The comm line havs been restored" />
-  <comment key="enemy comms have been restored"  text="Eenmy comm line have been restored" />
-  <comment key="comms have been destroyed" text="Our comm line have been Shutten down! Prepare for enemy invasions" />
-  <comment key="enemy comms have been destroyed, by us" text="Well done, the communication system of &#37;enemy_name has been destroyed! Use This!" /> 
-  <dialogue key="defense dialogue 2 men">
-    <comment text="" />
-    <comment text="" />
-  </dialogue>
-  <dialogue key="defense dialogue 2 men">
-    <comment text="" />
-    <comment text="" />
-  </dialogue>
-  <comment key="player promotion" text="Well done Comrade! As your Outstanding Performances, you have been access to Additional options." />
-  <comment key="we captured a base" text="&#37;base_name is now under our rules!" />
-  <comment key="we captured a base" text="We have captured the&#37;base_name" />
-  <comment key="enemy captured a base" text="&#37;base_name is now controlled by &#37;faction_name, Stop their Advance!" />
-  <comment key="enemy captured a base" text="&#37;faction_name captured &#37;base_name, Push them back and secure the area!" />
-  <comment key="neutral captured a base" text="" />
-  <comment key="new attack orders" text="New Assult order! Begin the Assult from &#37;direction to&#37;base_name" />
-  <comment key="we have lost our last base" text="All stations! We've been pushed back! Fallback and Regroup!" />
-  <comment key="enemy has lost their last base" text="&#37;faction_name has been defeated!" />
-  <comment key="our assault ran out of time" text="We suffered heavy casualties! Mission Canceled! All stations Fall back!" />
-  <comment key="enemy assault ran out of time" text="&#37;faction_name has been defeated!" />
-  <comment key="we won by map conquer" text="Objective complete! The entire map is now under our control!" />
-  <comment key="we won by defense timer" text="Mission complete Well done! Comrades!" />
-  <comment key="our base is under attack" text="&#37;base_name is being Assulted by the enemy!" />
-  <comment key="we are attacking a base" text="Our troops are attacking&#37;base_name" />
-  <comment key="fighting near a base" text="Contact near a base_name" />
-  <comment key="fighting near a base" text="Need support near &#37;base_name" />
-  <comment key="fighting near a base" text="Combat reported near base_name" />
-  <comment key="defense timer started" text="&#37;faction_name has &#37;time_left seconds left to defend them!" />
-  <comment key="defense timer to go" text="&#37;time_left seconds left!" />
-
-  <comment key="map start with 1 base, part 1" text="Communication check!" />
-  <comment key="map start with 1 base, part 2" text="Comrades and Red Army soldiers!"/>
-  <comment key="map start with 1 base, part 3" text="At the pre-war meeting, the instructor has already introduced the details to the comrades"/>
-  <comment key="map start with 1 base, part 4" text="The civilians in the area have been evacuated, and the local map data obtained by UAV has also been uploaded to the combat data link. "/>
-  <comment key="map start with 1 base, part 5" text="Sergeant Well’s checking unit arrived on the battlefield earlier today and set up a forward base near &#37;base_name" />
-  <comment key="map start with 1 base, part 6" text=" B company cooperates with Sergeant Well, the main goal is to control the &#37;map_name area" />
-  <comment key="map start with 1 base, capture" text=" B Company cooperates with the inspection unit that arrived earlier, the main goal is to control the &#37;map_name area" />
-  <comment key="map start with 1 base, koth" t="2 company, control &#37;target_base_name and perform defensive operations" />
-  <comment key="side objectives" text="All commanders and fighters, destroy the enemy's actions in any possible way" />
-  <comment key="loot objective" text="Enemy loot and cargo trucks can be sent to the armory for data collection" />
-  <comment key="radio tower or truck objective" text="watch the radio tower or radar car behind the enemy's front" />
-  <comment key="aa objective" text="The enemy's anti-aircraft weapons will hinder drone support-locate and destroy them" />
-  <comment key="map start, ending" text="Martyrs are with us, Red Army soldiers, go forward!" />
-  <comment key="map start, ending" text="The martyrs are with us, for the motherland!" />
-  <comment key="map start with more bases, part 1" text="Confirm our reinforcement signal" />
-  <comment key="map start with more bases, part 2" text="We have managed to defend our position, and currently there are &#37;number_of_bases in our hands in this area" />
-  <comment key="map start with completed map" text="Welcome back, comrade" />
-  <comment key="map advance, held by enemy" text="Reconnaissance unit report &#37;map_name is being controlled by &#37;faction_name" />
-  <comment key="map advance, another enemy present" text="We also found traces of &#37;faction_name activities" />
-  <comment key="map advance, new map" text="The combat unit is trying to build a bridgehead but still needs support" />
-  <comment key="map advance, been there before" text="We still control &#37;number_of_bases" />
-  <comment key="map advance, friendly map" text="&#37;map_name has been occupied by &#37;faction_name" /> 
-  <!-- boss maps -->
-  <!--
+    <!-- defined in default.character for differentiation, see maps/lobby/default.character too -->
+    <!--  <comment key="Hmm, no signal" text="Blayt! no single"/> -->
+    <comment key="Driver, abandon vehicle" text="Comrades, Bailout!" />
+    <comment key="Driver, abandon vehicle" text="Danger detected!, Get out the vehicle!" />
+    <comment key="Gunner, abandon vehicle" text="Gunner, abandon vehicle!" />
+    <comment key="Gunner, abandon vehicle" text="Watch out!!" />
+    <comment key="Squad, abandon vehicle" text="Everyone, abandon vehicle!" />
+    <comment key="Squad, get out" text="Comrades its time to go!" />
+    <comment key="Squad, get in" text=" Get inside the vehicle!" />
+    <comment key="Squad, get in" text="Execute Armor combat procedures" />
+    <comment key="Squad, get in" text="Comrades, occupy that vehicle" />
+    <comment key="Squad, follow the vehicle" text="Squad, follow the vehicle" />
+    <comment key="Squad, follow the vehicle" text="Catch up that Vehicle!" />
+    <comment key="Squad, follow the vehicle" text="Support that frendly vehicle!" />
+    <comment key="Squad, follow me" text="Squad, I'll lead!" />
+    <comment key="Squad, follow me" text="For General Carter!" />
+    <comment key="Squad, follow me" text="Together! Comrades!" />
+    <comment key="Squad, follow me" text="For the General!" />
+    <comment key="Squad, follow me" text="Urrah!!!" />
+    <comment key="Squad, follow me" text="Squad, follow me" />
+    <comment key="Driver, stop the vehicle" text="Parking" />
+    <comment key="Driver, stop the vehicle" text="Comrade, slow down" />
+    <comment key="Driver, stop the vehicle" text="Stop, comrade" />
+    <comment key="Driver, stop the vehicle" text="Brake!" />
+    <comment key="Gunner, fire at will" text="Open Fire!" />
+    <comment key="Gunner, fire at will" text="Fire at will!" />
+    <comment key="Driver, stop the vehicle" text="Driver, stop the vehicle" />
+    <comment key="Driver, stop the vehicle" text="Driver, hold!" />
+    <comment key="Driver, stay close" text="We need to Support the infantry!" />
+    <comment key="Driver, stay close" text="Keep the distance!" />
+    <comment key="Driver, stay close" text="get closer!" />
+    <comment key="Squad, move over there" text="Squad, move over there" />
+    <comment key="Squad, move over there" text="Squad! go there" />
+    <comment key="Squad, move over there" text="Occupy that area" />
+    <comment key="Squad, move over there" text="Forward!" />
+    <comment key="Squad, change position" text="Leap Forward!" />
+    <comment key="Squad, change position" text="Sweep them from the feild!" />
+    <comment key="Squad, change position" text="Shift position!!!" />
+    <comment key="Driver, take us there" text="Comrade, take us there" />
+    <comment key="Driver, over there" text="To that location" />
+    <comment key="Gunner, there" text="Gunner, there" />
+    <comment key="Gunner, there" text="Gunner, over there!" />
+    <comment key="Gunner, there" text="Contact! Hostile!" />
+    <comment key="Gunner, there" text="We spotted an enemy!" />
+    <comment key="We surrender!" text="System shutting down" />
+    <comment key="We surrender!" text="Data link interrupted" />
+    <comment key="We surrender!" text="We surrender" />
+    <comment key="We surrender!" text="Don't shoot! We surrender!" />
+    <comment key="We surrender!" text="Signal lose" />
+    <comment key="Medic!" text="Medic! I need help!" />
+    <comment key="Medic!" text="War wounded unit!" />
+    <comment key="Medic!" text="The Core has been damaged!" />
+    <comment key="Medic!" text="Suka! I got shot!" />
+    <comment key="Medic!" text="Assistance! please!" />
+    <comment key="Medic!" text="Assistance Required!" />
+    <comment key="I feel good!" text="I feel good!" />
+    <comment key="I feel good!" text="System Restart!" />
+    <comment key="I feel good!" text="I can still fight!" />
+    <comment key="I feel good!" text="Don't stop me, the combat objective has not been completed yet!" />
+    <comment key="I feel good!" text="Cnacn6o! Komandir" />
+    <comment key="Reloading" text="Reloading" />
+    <comment key="Reloading" text="Cover me!" />
+    <comment key="Reloading" text="Swamping Mags" />
+    <comment key="Reloading" text="Tatical Reloading!" />
+    <comment key="cancel radio call" text="completed" />
+    <comment key="cancel radio call" text="End call" />
+    <comment key="initiate radio call" text="Argo, Do you read me." />
+    <comment key="commander radio response" text="This is Argo, Loud and Clear" />
+    <comment key="commander radio full" text="This is Argo, the support system is currently overloaded, Please Stand by!"/>
+    <comment key="no radio equipment" text="I dont have such thing yet" />
+    <comment key="no radio equipment" text="&#37;rank_names does not have permission to use the support module" />
+    <comment key="no radio equipment" text="No support module authentication" />
+    <comment key="squad chat, not in squad" text="Currently not in the underlying combat system" />
+    <comment key="Hey, wait up" text="Wait a minute!" />
+    <comment key="Hey, wait up" text="Wait up!" />
+    <comment key="Hey, wait up" text="Requesting a vehicle!" />
+    <comment key="Hey, wait up" text="Hold up!" />
+    <comment key="Quickly!" text="Forward!" />
+    <comment key="Quickly!" text="Move quickly!" />
+    <comment key="Buzz off" text="Get out!" />
+    <comment key="Buzz off" text="Buzz off!" />
+    <comment key="Step out, kid" text="Step out, comrade! Let me do the job" />
+    <comment key="hostile vehicle takeover" text="?!" />
+    <comment key="hostile vehicle takeover" text="contact! Unknown Forces" />
+    <comment key="hostile vehicle takeover" text="Who the heck are you?! " />
+    <comment key="hostile vehicle takeover" text="1001110002" />
+    <comment key="hostile vehicle takeover" text="Who the heck are you?! " />
+    <comment key="hostile vehicle takeover" text="Failed to identify" />
+    <comment key="Can't respawn-the last base is under attack" text="Can't respawn-the last base is under attack" />
+    <comment key="Can't respawn-spawning is locked" text="Can't respawn-no redeployment permission" />
+    <comment key="Hmm.. not enough room here" text="Not enough room here" />
+    <comment key="I'm outta here" text="Get out of here" />
+    <comment key="I'm outta here" text="Leave here" />
+    <comment key="Good job, soldiers" text="Well done! Comrades" />
+    <comment key="Good job, soldiers" text="Good job, soldiers" />
+    <comment key="Good job, soldiers" text="A waiting for further commands" />
+    <comment key="Good job, soldiers" text="Mission Complete" />
+    <comment key="Open fire" text="Open fire!" />
+    <comment key="Open fire" text="We have contact with the emeny!" />
+    <comment key="Open fire" text="enemy unit! Spotted" />
+    <comment key="Lone leader, open fire"  text="Contact with hostile actions! Requesting for support!" />
+    <comment key="fire opened, weapon tag = sniper" text="Sniper detected!" />
+    <comment key="fire opened, weapon tag = sniper" text="Enemy Sniper!" />
+    <comment key="fire opened, weapon tag = sniper" text="Sniper!" />
+    <comment key="fire opened, weapon tag = sniper" text="Contact! Sniper!" />
+    <comment key="fire opened, weapon tag = sniper" text="Sniper! Take cover" />
+    <comment key="fire opened, weapon tag = sniper" text="There's a Sniper!" />
+    <comment key="grenade alert, grenade tag = grenade" text="Grenade!" />
+    <comment key="grenade alert, grenade tag = grenade" text="Oh F*** thats a Grenade!" />
+    <comment key="grenade alert, grenade tag = grenade" text="Incoming Explosive!" />
+    <comment key="grenade alert, grenade tag = flashbang" text="Flash Bag!" />
+    <comment key="grenade alert, grenade tag = flashbang" text="Incomeing Flash Bag!" />
+    <comment key="grenade alert, grenade tag = rocket" text="rocketes!" />
+    <comment key="grenade alert, grenade tag = rocket" text="incoming unguided Flying Object!" />
+    <comment key="grenade alert, grenade tag = rocket" text="RPG!" />
+    <comment key="enemy not seen, area alerted" text="Stay Alert, comrades" />
+    <comment key="enemy not seen, area alert" text="Pay attention!" />
+    <comment key="Lone leader, enemy not seen, area alerted" text="concealing action" />
+    <comment key="leader, enemy not seen, taking suppressed fire" text="incoming suppressive fire" />
+    <comment key="leader, enemy not seen, taking suppressed fire" text="We're pinned!" />
+    <comment key="Lone leader, enemy not seen, taking suppressed fire" text="Under attack!" />
+    <comment key="Lone leader, enemy not seen, taking suppressed fire" text="F***ing MG!!" />
+    <comment key="Lone leader, enemy not seen, taking suppressed fire" text="Searching for Attackers!" />
+    <comment key="Lone leader, enemy not seen, taking suppressed fire" text="I've been spotted!" />
+    <comment key="Lone leader, enemy not seen, taking suppressed fire" text="!" />
+    <comment key="Lone leader, enemy not seen, taking suppressed fire" text="S*** B****!" />
+    <comment key="Lone leader, enemy not seen, taking suppressed fire" text="Don't let me found you! I promise I will toture you!" />
+    <comment key="enemy seen"  text="enemy unit!" />
+    <comment key="enemy seen"  text="Is them!!" />
+    <comment key="enemy seen"  text="Hositle Action spotted!" />
+    <comment key="enemy seen" text="Contact! Enemy!!" />
+    <comment key="enemy seen" text="enemy unit! location uploading!" />
+    <comment key="enemy seen, vehicle tag = tank" text="Oh S*** Tank!!" />
+    <comment key="enemy seen, vehicle tag = tank" text="Execute anti-tank operations!" />
+    <comment key="enemy seen, vehicle tag = tank" text="Armor Alert!" />
+    <comment key="enemy seen, vehicle tag = tank" text="Large vehicle!" />
+    <comment key="enemy seen, vehicle tag = tank" text="Contact with enemy Tank!!" />
+    <comment key="enemy seen, vehicle tag = tank" text="WE Found an enemy tank!" />
+    <comment key="enemy seen, vehicle tag = tank" text="Ready the AT weapons!" />
+    <comment key="enemy seen, vehicle tag = apc" text="Chariot!" />
+    <comment key="enemy seen, vehicle tag = apc" text="Destroy that chariot, Comrades!" />
+    <comment key="enemy seen, vehicle tag = apc" text="Infantry vehicle detected!" />
+    <comment key="enemy seen, vehicle tag = apc" text="Enemy infantry vehicle! Location Uploading" />
+    <comment key="enemy seen, vehicle tag = apc" text="Prepare for anti-armor combat!" />
+    <comment key="enemy seen, vehicle tag = apc" text="APC!" />
+    <comment key="enemy seen, vehicle tag = truck" text="Found a transportation vehicle!" />
+    <comment key="enemy seen, vehicle tag = truck" text="Found an enemy transportation vehicle!" />
+    <comment key="enemy seen, vehicle tag = truck" text="Transport vehicle spotted" />
+    <comment key="enemy seen, vehicle tag = truck" text="Alert! Transport vehicle!" />
+    <comment key="enemy not seen, taking suppressed fire" text="Receiving enemy MG Fire!" />
+    <comment key="enemy not seen, taking suppressed fire" text="We're pinned!" />
+    <comment key="enemy not seen, taking suppressed fire" text="MG scouping on us!" />
+    <comment key="enemy not seen, taking suppressed fire" text="Contact with enemy MG squad!" />
+    <comment key="Waiting for reinforcements" text="Waiting for reinforcements"/>
+    <comment key="Waiting for reinforcements" text="Waiting for comrades" />
+    <comment key="Hold on!" text="Hold on!" />
+    <comment key="Hold on!" text="Hold tight" />
+    <comment key="Hold on!" text="I will be here soon!" />
+    <comment key="Hold on!" text="Coming!" />
+    <comment key="Move out" text="Let's go" />
+    <comment key="Move out" text="Move out" />
+    <comment key="Move out" text="Follow me" />
+    <comment key="Move out" text="Let us move" />
+    <comment key="All quiet here" text="No response from the radar" />
+    <comment key="All quiet here" text="Filtering sensor clutter" />
+    <comment key="All quiet here" text="*High frequency motor sound*" />
+    <comment key="All quiet here" text="Pay attention to the surrounding area" />
+    <comment key="All quiet here" text="*Servo motor sound*" />
+    <comment key="All quiet here" text="Its The calm before the storm..." />
+    <comment key="All quiet here" text="Scanning for enemy Special Forces" />
+    <comment key="All quiet here" text="Stay Alert!" />
+    <comment key="Yes sir" text="Yes sir" />
+    <comment key="Yes sir" text="A course has been set" />
+    <comment key="Yes sir" text="Da! Comrade" />
+    <comment key="Yes sir" text="On the way" />
+    <comment key="Yes sir" text="Understood" />
+    <comment key="Yes sir" text="Received" />
+    <comment key="Yes sir" text="Da Da" />
+    <comment key="Uh, I can't drive this thing" text="Vehicle data adapting...Failed!..System Restarting" />
+    <comment key="Uh, I can't drive this thing" text="The vehicle driving module has no response" />
+    <comment key="Uh, I can't drive this thing" text="000011100001110000101111" />
+    <comment key="Uh, I can't drive this thing" text="An error occurred in vehicle matching" />
+    <comment key="Uh, I can't drive this thing" text="Interface version is inconsistent" />
+    <comment key="Uh, I can't drive this thing" text="Engine cracked" />
+    <comment key="Uh, I can't drive this thing" text="The steering wheel is locked and is being repaired" />
+    <comment key="Uh, I can't drive this thing" text="Mechanized module failure" />
+    <comment key="Uh, I can't drive this thing" text="Uh, I can't drive this thing" />
+    <comment key="Uh, I can't drive this thing" text="Comrade, I Don't know how to drive this thing" />
+    <comment key="Uh, I can't drive this thing" text="Order 751 : locked" />
+    <comment key="Uh, I can't drive this thing" text="Note: Illegal operation" />
+    <comment key="Uh, I can't drive this thing" text="Error" />
+    <comment key="Uh, I can't drive this thing" text="Requesting to change driver" />
+    <comment key="Uh, I can't drive this thing" text="The driving system version is not certified" />
+    <comment key="Uh, I can't drive this thing" text="The central bearing screw is loose" />
+    <comment key="Uh, I can't drive this thing" text="Data transmission error" />
+    <comment key="Waiting for squad" text="Wait for other comrades" />
+    <comment key="Waiting for squad" text="Report in! Team" />
+    <comment key="Shield up" text="Vertical shield" />
+    <comment key="Shield up" text="Shield up" />
+    <comment key="overencumbered" text="The load is too high!" />
+    <comment key="overencumbered" text="shooting system load" />
+    <comment key="overencumbered" text="The load needs to be released" />
+    <comment key="Where to, chief?" text="Where to, comrade?" />
+    <comment key="Where to, chief?" text="Waiting for route instructions" />
+    <comment key="Where to, chief?" text="Waiting for combat order" />
+    <comment key="Where to, chief?" text="a waiting next command" />
+    <comment key="Press SPACE to continue!"  text="Press SPACE to continue" />
+    <comment key="celebrating" text="We won!" />
+    <comment key="celebrating" text="Well done" />
+    <comment key="celebrating" text="The battle is over" />
+    <comment key="celebrating" text="Oorah" />
+    <comment key="celebrating" text="GG" />
+    <comment key="celebrating" text="Objective complete" />
+    <comment key="celebrating" text="Victory" />
+    <comment key="celebrating" text="Reporting to Argo we have complete the Mission" />
+    <comment key="celebrating" text="The battle is over! Reporting to Captain Yegor" />
+    <comment key="celebrating" text="Glory to the Union!" />
+    <comment key="celebrating" text="Cleaning up Area" />
+    <comment key="celebrating" text="Ready for next operations" />
+    <comment key="celebrating" text="Data collation in progress" />
+    <comment key="about to drive over a friendly" text="Watch out!!" />
+    <comment key="about to drive over a friendly" text="Attention!" />
+    <comment key="this is as close as i can get" text="route planning error" />
+    <comment key="this is as close as i can get" text="this is as close as i can get" />
+    <comment key="enemy vehicle spotted, near base" text="&#37;enemy_name &#37;vehicle_name spotted near &#37;base_name " />
+    <comment key="enemy vehicle spotted, not near base" text=" &#37;enemy_name &#37;vehicle_name spotted in the feild!" />
+    <comment key="comms have been restored" text="The comm line havs been restored" />
+    <comment key="enemy comms have been restored"  text="Eenmy comm line have been restored" />
+    <comment key="comms have been destroyed" text="Our comm line have been Shutten down! Prepare for enemy invasions" />
+    <comment key="enemy comms have been destroyed, by us" text="Well done, the communication system of &#37;enemy_name has been destroyed! Use This!" />
+    <dialogue key="defense dialogue 2 men">
+        <comment text="" />
+        <comment text="" />
+    </dialogue>
+    <dialogue key="defense dialogue 2 men">
+        <comment text="" />
+        <comment text="" />
+    </dialogue>
+    <comment key="player promotion" text="Well done Comrade! As your Outstanding Performances, you have been access to Additional options." />
+    <comment key="we captured a base" text="&#37;base_name is now under our rules!" />
+    <comment key="we captured a base" text="We have captured the&#37;base_name" />
+    <comment key="enemy captured a base" text="&#37;base_name is now controlled by &#37;faction_name, Stop their Advance!" />
+    <comment key="enemy captured a base" text="&#37;faction_name captured &#37;base_name, Push them back and secure the area!" />
+    <comment key="neutral captured a base" text="" />
+    <comment key="new attack orders" text="New Assult order! Begin the Assult from &#37;direction to&#37;base_name" />
+    <comment key="we have lost our last base" text="All stations! We've been pushed back! Fallback and Regroup!" />
+    <comment key="enemy has lost their last base" text="&#37;faction_name has been defeated!" />
+    <comment key="our assault ran out of time" text="We suffered heavy casualties! Mission Canceled! All stations Fall back!" />
+    <comment key="enemy assault ran out of time" text="&#37;faction_name has been defeated!" />
+    <comment key="we won by map conquer" text="Objective complete! The entire map is now under our control!" />
+    <comment key="we won by defense timer" text="Mission complete Well done! Comrades!" />
+    <comment key="our base is under attack" text="&#37;base_name is being Assulted by the enemy!" />
+    <comment key="we are attacking a base" text="Our troops are attacking&#37;base_name" />
+    <comment key="fighting near a base" text="Contact near a base_name" />
+    <comment key="fighting near a base" text="Need support near &#37;base_name" />
+    <comment key="fighting near a base" text="Combat reported near base_name" />
+    <comment key="defense timer started" text="&#37;faction_name has &#37;time_left seconds left to defend them!" />
+    <comment key="defense timer to go" text="&#37;time_left seconds left!" />
+    <comment key="map start with 1 base, part 1" text="Communication check!" />
+    <comment key="map start with 1 base, part 2" text="Comrades and Red Army soldiers!"/>
+    <comment key="map start with 1 base, part 3" text="At the pre-war meeting, the instructor has already introduced the details to the comrades"/>
+    <comment key="map start with 1 base, part 4" text="The civilians in the area have been evacuated, and the local map data obtained by UAV has also been uploaded to the combat data link. "/>
+    <comment key="map start with 1 base, part 5" text="Sergeant Well’s checking unit arrived on the battlefield earlier today and set up a forward base near &#37;base_name" />
+    <comment key="map start with 1 base, part 6" text=" B company cooperates with Sergeant Well, the main goal is to control the &#37;map_name area" />
+    <comment key="map start with 1 base, capture" text=" B Company cooperates with the inspection unit that arrived earlier, the main goal is to control the &#37;map_name area" />
+    <comment key="map start with 1 base, koth" t="2 company, control &#37;target_base_name and perform defensive operations" />
+    <comment key="side objectives" text="All commanders and fighters, destroy the enemy's actions in any possible way" />
+    <comment key="loot objective" text="Enemy loot and cargo trucks can be sent to the armory for data collection" />
+    <comment key="radio tower or truck objective" text="watch the radio tower or radar car behind the enemy's front" />
+    <comment key="aa objective" text="The enemy's anti-aircraft weapons will hinder drone support-locate and destroy them" />
+    <comment key="map start, ending" text="Martyrs are with us, Red Army soldiers, go forward!" />
+    <comment key="map start, ending" text="The martyrs are with us, for the motherland!" />
+    <comment key="map start with more bases, part 1" text="Confirm our reinforcement signal" />
+    <comment key="map start with more bases, part 2" text="We have managed to defend our position, and currently there are &#37;number_of_bases in our hands in this area" />
+    <comment key="map start with completed map" text="Welcome back, comrade" />
+    <comment key="map advance, held by enemy" text="Reconnaissance unit report &#37;map_name is being controlled by &#37;faction_name" />
+    <comment key="map advance, another enemy present" text="We also found traces of &#37;faction_name activities" />
+    <comment key="map advance, new map" text="The combat unit is trying to build a bridgehead but still needs support" />
+    <comment key="map advance, been there before" text="We still control &#37;number_of_bases" />
+    <comment key="map advance, friendly map" text="&#37;map_name has been occupied by &#37;faction_name" />
+    <!-- boss maps -->
+    <!--
   <comment key="final map advance, held by enemy, part 1" text="剩余的&#37;faction_name军队被阻挡在&#37;map_name" />
   <comment key="final map advance, held by enemy, part 2" text="预计会遭到强烈抵抗！" />
 
@@ -290,150 +289,131 @@
   <comment key="final map start with 1 base, part 2" text="最后的敌军部队要终结于&#37;map_name，就这样" />
   <comment key="final map start with 1 base, part 3" text="了结他们！" />
   -->
-  <comment key="Final mission I advance, held by enemy, part 1" text="Good job! Comrades! &#37;faction_name has been successfully repelled" />
-  <comment key="Final mission I advance, held by enemy, part 2" text="According to intelligence, we found a high-traffic data activity in an abandoned village within the range of the main sensor" />
-  <comment key="Final mission I advance, held by enemy, part 3" text="It is basically certain that it is an important communication center for the enemy, and their commander may also be in this area." />
-  <comment key="Final mission I advance, held by enemy, part 4" text="Lieutenant Leonov, organize a strike squad, use the captured vehicles to sneak into that area --- Lieutenant Ilyich is in charge of combat command "/>
-  <comment key="Final mission I advance, held by enemy, part 5" text="Check the equipment and set off in 10 minutes" />
-  <comment key="Final mission I start with 1 base, part 1" text="They updated the identification of friend or foe, and the captured vehicles cannot access their data link. The strike just now cost us most of the combat units" />
-  <comment key="Final mission I start with 1 base, part 2" text="They are aware of our existence and support observation is disturbed" />
-  <comment key="Final mission I start with 1 base, part 3" text="The artillery comrades have not yet moved to the predetermined position-artillery support cannot be covered either" />
-  <comment key="Final mission I start with 1 base, part 4" text="It's time to test you, find and destroy the communication devices scattered in this area, and then destroy the enemy" />
-  <comment key="Final mission II advance, held by enemy, part 1" text="Well done, comrade! &#37;faction_name has been successfully repelled" />
-  <comment key="Final mission II advance, held by enemy, part 2" text="One of our platoons tracked &#37;faction_name's remaining forces concentrated in the canyon near the 2782 Heights" />
-  <comment key="Final mission II advance, held by enemy, part 3" text="Their position has been exposed and they are in a hard fight" />
-  <comment key="Final mission II advance, held by enemy, part 4" text="Qinbao 2 company set off to go there immediately, the battalion artillery will cooperate with you to move the position" />
-  <comment key="Final mission II advance, held by enemy, part 5" text="Be prepared for combat in severe weather" />
-  <comment key="Final mission II start with 1 base, part 1" text="Reinforcements have arrived, Ulla!" />
-  <comment key="Final mission II start with 1 base, part 2" text="6 rows defended this base, and the sacrificed Corporal Mikhail and Corporal Sergey can look at it" />
-  <comment key="Final mission II start with 1 base, part 3" text="The reconnaissance unit shows that the enemy is organizing the next round of offensive. There is no time for silence. Comrades, we must defend this position!" />
-  <comment key="Final mission II start with 1 base, part 4" text="Be ready for battle!" />
-  <comment key="Final mission II, phase 2, part 1" text="The enemy seems to see that the offense will only amplify their losses" />
-  <comment key="Final mission II, phase 2, part 2" text="They seem to be organizing defense now" />
-  <comment key="Final mission II, phase 2, part 3" text="Red Army soldiers, it is our turn!" />
-  <comment key="Final mission II, phase 2, part 4" text="The enemy air defense system has interfered with our air support, creating opportunities for drones to enter the field" />
-  <comment key="Final mission II, phase 2, part 5" text="An enemy high-traffic communication device was found in the ruins of the fort, destroy it!" />
-  <comment key="Final mission II, phase 2, part 6" text="Vengeance for the sacrificed comrades, go forward!" />
-  <comment key="Final mission II, phase 3, part 1" text="It looks like the enemy has withdrawn to the next defensive facility" />
-  <comment key="Final mission II, phase 3, part 2" text="They blocked the entrance. Although it can be exploded, the data unit detected strong interference, and the human figures of our army cannot move in that environment." />
-  <comment key="Final mission II, phase 3, part 3" text="The communication tower in the south seems to be a node of interference" />
-  <comment key="Final mission II, phase 3, part 4" text="Go ahead and destroy it!" />
-  <comment key="Final mission II, phase 4, part 1" text="The interference has disappeared-the engineer has destroyed the entrance" />
-  <comment key="Final mission II, phase 4, part 2" text="The time has come, the soldiers of the Red Army! For the Soviets! Ulla!!!" />
-  <!-- vehicle delivery objective -->
-  <comment key="vehicle delivered" text=" &#37;vehicle_name delivered, well done, comrade!" />
-  <comment key="vehicle objective cancelled, vehicle destroyed" text="vehicle objective cancelled, vehicle destroyed" />
-  <comment key="vehicle objective instruction" text="Found &#37;faction_name &#37;vehicle_name in &#37;location, occupy that vehicle" />
-  <comment key="resource out of stock" text="Logistics unit report, we no longer have &#37;resource_name" />
-  <comment key="resource added in stock" text="Logistics unit report, they got a batch of &#37;resource_name" />
-  <comment key="overtime, we are winning" text="Hold on, comrades, the enemy is already in decline" />
-  <comment key="overtime, we are losing" text="This may be our last chance, there are not many local combat units" /> 
-  <!-- item delivery objective; briefcases -->
-  <comment key="item delivered" text="Complete the goal" />
-  <comment key="item objective instruction" text="" />
-  <comment key="item objective map text" text="" />
-  <comment key="item objective thanks" text="The data unit will study this thing" />
-  <!-- enemy item delivery objective; weapons -->
-  <comment key="enemy item objective instruction" text="" />
-  <comment key="enemy item objective map text" text="" />
-  <comment key="enemy item objective thanks incomplete" text="Logistics unit also needs &#37;number_of_items_left pieces for temporary production!" />
-  <comment key="enemy item objective thanks" text="Yes, the logistics unit has started mass production" />
-  <comment key="extraction point available" text="The deployment point to &#37;map_name map has been activated" />
-  <comment key="several extraction points available" text="Several extraction points available" />
-  <comment key="standby for extraction" text="Deployment point on standby" />
-  <!-- teddy bear hunt session, for fun -->
-  <comment key="flag dropped in container 0" text="&#37;player_name dropped in &#37;item_name" />
-  <comment key="flag dropped in container 1" text="&#37;player_name just brought an &#37;item_name to the armory" />
-  <comment key="flag dropped in container 2" text="&#37;player_name put a &#37;item_name in the backpack"/>
-  <comment key="flag dropped in container 3" text="&#37;player_name stored a &#37;item_name" />
-  <comment key="tutorial end 1" text="Well done comrade, now you are ready to join the battle!" />
-  <comment key="tutorial end 2" text="Pack your bags, comrades, let's go!" />
-  
-  <comment key="gift box delivered" text="Let's see what data is available in &#37;delivered_item_name, &#37;player_name" />
-  <comment key="gift box delivery, reward" text="&#37;player_name, your rewards are &#37;item_name1 and &#37;item_name2!" />
-
-
-  <!-- v1.7 -->
-  <comment key="cargo_truck.vehicle spotted, instructions" text="Intercept the cargo truck and escort it to the armory!" />
-  <comment key="radar_tower.vehicle spotted, instructions" text="Destroy the signal node!" />
-  <comment key="radar_truck.vehicle spotted, instructions" text="Destroy the radar car!" />
-  <comment key="radio_jammer.vehicle spotted, instructions" text="Destroy the interference generator!" />
-  <comment key="radio_jammer.vehicle destroyed" text="Radio interference generator has been destroyed!" />
-  <comment key="radio_jammer2.vehicle spotted, instructions" text="Interference generator! Destroy it!" />
-  <comment key="radio_jammer2.vehicle destroyed" text="Radio interference generator has been destroyed!" />
-  <!-- radar truck/vehicle destroy also triggers "enemy comms have been destroyed, by us" -->
-  <comment key="prison_bus.vehicle spotted, instructions" text="Destroy the prison truck!" />
-  <comment key="prison_bus.vehicle destroyed" text="The previously lost combat node has returned to the combat sequence" />
-  <comment key="prison_door.vehicle spotted, instructions" text="Blow up the prison door!" />
-  <comment key="prison_door.vehicle destroyed" text="Well done, comrade, the missing node has returned to the combat sequence" /> 
-
-  <comment key="aa_emplacement.vehicle spotted, instructions" text="Destroy air defense facilities to allow drones to enter the site!" />
-  <comment key="aa_emplacement.vehicle destroyed" text="The anti-aircraft gun has been destroyed, the drone can enter the field!" />
-
-  <comment key="intel radio reminder" text="The drone and battalion artillery are on standby, waiting for order" />
-
-  <comment key="report very weak defense" text="Unit report, &#37;base_name area is hardly fortified" />
-  <comment key="respond very weak defense" text="Occupy the base!" />
-  <comment key="report weak defense" text="Unit report, &#37;base_name area defense force is weak, only &#37;enemy_range enemy forces activities" />
-  <comment key="respond weak defense" text="Control this base, comrade!" />
-  <comment key="report medium defense" text="Unit report, &#37;base_name area has a strong defense force, and there are &#37;enemy_range enemy activities" />
-  <comment key="respond medium defense" text="Be careful, comrade, call for support when necessary!" />
-  <comment key="report heavy defense" text="Unit report, &#37;base_name area is the enemy's main defense area, and a large number of signs of combat unit activity are found" />
-  <comment key="respond heavy defense" text="I will remember your name, warrior" />
-
-  <comment key="base captured, clear victory, attack break" text="Assemble troops and fortify around the base, waiting for further instructions" />
-  <comment key="base captured, defend it" text="Protect the base, defend it in place!" />
-  <comment key="sidebase captured, hold it" text="Protect the base, defend against all possible counterattacks, act quickly, comrade!" />
-  <comment key="sidebase captured, reinforcements" text="The reinforcements are on the way" />
-  
-  <comment key="Occupy that vehicle!" text="Comrade, use &#37;vehicle_name!" />
-  <comment key="Leave the vehicle!" text="Comrade, leave &#37;vehicle_name!" />
-
-  <comment key="intel objectives" text="The enemy base that needs to be investigated has been marked on the map, and each investigation unit has clearly defined its own mission." /> 
-
-
-<!-- 1.71 -->
-<comment key="icecream truck exists" text="Look, ice cream truck!" />
-
-  <comment key="gps_laptop, targets ok" text="marking the target" />
-  <comment key="gps_laptop, targets not ok" text="No target was found" />
-
-  <!-- old
+    <comment key="Final mission I advance, held by enemy, part 1" text="Good job! Comrades! &#37;faction_name has been successfully repelled" />
+    <comment key="Final mission I advance, held by enemy, part 2" text="According to intelligence, we found a high-traffic data activity in an abandoned village within the range of the main sensor" />
+    <comment key="Final mission I advance, held by enemy, part 3" text="It is basically certain that it is an important communication center for the enemy, and their commander may also be in this area." />
+    <comment key="Final mission I advance, held by enemy, part 4" text="Lieutenant Leonov, organize a strike squad, use the captured vehicles to sneak into that area --- Lieutenant Ilyich is in charge of combat command "/>
+    <comment key="Final mission I advance, held by enemy, part 5" text="Check the equipment and set off in 10 minutes" />
+    <comment key="Final mission I start with 1 base, part 1" text="They updated the identification of friend or foe, and the captured vehicles cannot access their data link. The strike just now cost us most of the combat units" />
+    <comment key="Final mission I start with 1 base, part 2" text="They are aware of our existence and support observation is disturbed" />
+    <comment key="Final mission I start with 1 base, part 3" text="The artillery comrades have not yet moved to the predetermined position-artillery support cannot be covered either" />
+    <comment key="Final mission I start with 1 base, part 4" text="It's time to test you, find and destroy the communication devices scattered in this area, and then destroy the enemy" />
+    <comment key="Final mission II advance, held by enemy, part 1" text="Well done, comrade! &#37;faction_name has been successfully repelled" />
+    <comment key="Final mission II advance, held by enemy, part 2" text="One of our platoons tracked &#37;faction_name's remaining forces concentrated in the canyon near the 2782 Heights" />
+    <comment key="Final mission II advance, held by enemy, part 3" text="Their position has been exposed and they are in a hard fight" />
+    <comment key="Final mission II advance, held by enemy, part 4" text="Qinbao 2 company set off to go there immediately, the battalion artillery will cooperate with you to move the position" />
+    <comment key="Final mission II advance, held by enemy, part 5" text="Be prepared for combat in severe weather" />
+    <comment key="Final mission II start with 1 base, part 1" text="Reinforcements have arrived, Ulla!" />
+    <comment key="Final mission II start with 1 base, part 2" text="6 rows defended this base, and the sacrificed Corporal Mikhail and Corporal Sergey can look at it" />
+    <comment key="Final mission II start with 1 base, part 3" text="The reconnaissance unit shows that the enemy is organizing the next round of offensive. There is no time for silence. Comrades, we must defend this position!" />
+    <comment key="Final mission II start with 1 base, part 4" text="Be ready for battle!" />
+    <comment key="Final mission II, phase 2, part 1" text="The enemy seems to see that the offense will only amplify their losses" />
+    <comment key="Final mission II, phase 2, part 2" text="They seem to be organizing defense now" />
+    <comment key="Final mission II, phase 2, part 3" text="Red Army soldiers, it is our turn!" />
+    <comment key="Final mission II, phase 2, part 4" text="The enemy air defense system has interfered with our air support, creating opportunities for drones to enter the field" />
+    <comment key="Final mission II, phase 2, part 5" text="An enemy high-traffic communication device was found in the ruins of the fort, destroy it!" />
+    <comment key="Final mission II, phase 2, part 6" text="Vengeance for the sacrificed comrades, go forward!" />
+    <comment key="Final mission II, phase 3, part 1" text="It looks like the enemy has withdrawn to the next defensive facility" />
+    <comment key="Final mission II, phase 3, part 2" text="They blocked the entrance. Although it can be exploded, the data unit detected strong interference, and the human figures of our army cannot move in that environment." />
+    <comment key="Final mission II, phase 3, part 3" text="The communication tower in the south seems to be a node of interference" />
+    <comment key="Final mission II, phase 3, part 4" text="Go ahead and destroy it!" />
+    <comment key="Final mission II, phase 4, part 1" text="The interference has disappeared-the engineer has destroyed the entrance" />
+    <comment key="Final mission II, phase 4, part 2" text="The time has come, the soldiers of the Red Army! For the Soviets! Ulla!!!" />
+    <!-- vehicle delivery objective -->
+    <comment key="vehicle delivered" text=" &#37;vehicle_name delivered, well done, comrade!" />
+    <comment key="vehicle objective cancelled, vehicle destroyed" text="vehicle objective cancelled, vehicle destroyed" />
+    <comment key="vehicle objective instruction" text="Found &#37;faction_name &#37;vehicle_name in &#37;location, occupy that vehicle" />
+    <comment key="resource out of stock" text="Logistics unit report, we no longer have &#37;resource_name" />
+    <comment key="resource added in stock" text="Logistics unit report, they got a batch of &#37;resource_name" />
+    <comment key="overtime, we are winning" text="Hold on, comrades, the enemy is already in decline" />
+    <comment key="overtime, we are losing" text="This may be our last chance, there are not many local combat units" />
+    <!-- item delivery objective; briefcases -->
+    <comment key="item delivered" text="Complete the goal" />
+    <comment key="item objective instruction" text="" />
+    <comment key="item objective map text" text="" />
+    <comment key="item objective thanks" text="The data unit will study this thing" />
+    <!-- enemy item delivery objective; weapons -->
+    <comment key="enemy item objective instruction" text="" />
+    <comment key="enemy item objective map text" text="" />
+    <comment key="enemy item objective thanks incomplete" text="Logistics unit also needs &#37;number_of_items_left pieces for temporary production!" />
+    <comment key="enemy item objective thanks" text="Yes, the logistics unit has started mass production" />
+    <comment key="extraction point available" text="The deployment point to &#37;map_name map has been activated" />
+    <comment key="several extraction points available" text="Several extraction points available" />
+    <comment key="standby for extraction" text="Deployment point on standby" />
+    <!-- teddy bear hunt session, for fun -->
+    <comment key="flag dropped in container 0" text="&#37;player_name dropped in &#37;item_name" />
+    <comment key="flag dropped in container 1" text="&#37;player_name just brought an &#37;item_name to the armory" />
+    <comment key="flag dropped in container 2" text="&#37;player_name put a &#37;item_name in the backpack"/>
+    <comment key="flag dropped in container 3" text="&#37;player_name stored a &#37;item_name" />
+    <comment key="tutorial end 1" text="Well done comrade, now you are ready to join the battle!" />
+    <comment key="tutorial end 2" text="Pack your bags, comrades, let's go!" />
+    <comment key="gift box delivered" text="Let's see what data is available in &#37;delivered_item_name, &#37;player_name" />
+    <comment key="gift box delivery, reward" text="&#37;player_name, your rewards are &#37;item_name1 and &#37;item_name2!" />
+    <!-- v1.7 -->
+    <comment key="cargo_truck.vehicle spotted, instructions" text="Intercept the cargo truck and escort it to the armory!" />
+    <comment key="radar_tower.vehicle spotted, instructions" text="Destroy the signal node!" />
+    <comment key="radar_truck.vehicle spotted, instructions" text="Destroy the radar car!" />
+    <comment key="radio_jammer.vehicle spotted, instructions" text="Destroy the interference generator!" />
+    <comment key="radio_jammer.vehicle destroyed" text="Radio interference generator has been destroyed!" />
+    <comment key="radio_jammer2.vehicle spotted, instructions" text="Interference generator! Destroy it!" />
+    <comment key="radio_jammer2.vehicle destroyed" text="Radio interference generator has been destroyed!" />
+    <!-- radar truck/vehicle destroy also triggers "enemy comms have been destroyed, by us" -->
+    <comment key="prison_bus.vehicle spotted, instructions" text="Destroy the prison truck!" />
+    <comment key="prison_bus.vehicle destroyed" text="The previously lost combat node has returned to the combat sequence" />
+    <comment key="prison_door.vehicle spotted, instructions" text="Blow up the prison door!" />
+    <comment key="prison_door.vehicle destroyed" text="Well done, comrade, the missing node has returned to the combat sequence" />
+    <comment key="aa_emplacement.vehicle spotted, instructions" text="Destroy air defense facilities to allow drones to enter the site!" />
+    <comment key="aa_emplacement.vehicle destroyed" text="The anti-aircraft gun has been destroyed, the drone can enter the field!" />
+    <comment key="intel radio reminder" text="The drone and battalion artillery are on standby, waiting for order" />
+    <comment key="report very weak defense" text="Unit report, &#37;base_name area is hardly fortified" />
+    <comment key="respond very weak defense" text="Occupy the base!" />
+    <comment key="report weak defense" text="Unit report, &#37;base_name area defense force is weak, only &#37;enemy_range enemy forces activities" />
+    <comment key="respond weak defense" text="Control this base, comrade!" />
+    <comment key="report medium defense" text="Unit report, &#37;base_name area has a strong defense force, and there are &#37;enemy_range enemy activities" />
+    <comment key="respond medium defense" text="Be careful, comrade, call for support when necessary!" />
+    <comment key="report heavy defense" text="Unit report, &#37;base_name area is the enemy's main defense area, and a large number of signs of combat unit activity are found" />
+    <comment key="respond heavy defense" text="I will remember your name, warrior" />
+    <comment key="base captured, clear victory, attack break" text="Assemble troops and fortify around the base, waiting for further instructions" />
+    <comment key="base captured, defend it" text="Protect the base, defend it in place!" />
+    <comment key="sidebase captured, hold it" text="Protect the base, defend against all possible counterattacks, act quickly, comrade!" />
+    <comment key="sidebase captured, reinforcements" text="The reinforcements are on the way" />
+    <comment key="Occupy that vehicle!" text="Comrade, use &#37;vehicle_name!" />
+    <comment key="Leave the vehicle!" text="Comrade, leave &#37;vehicle_name!" />
+    <comment key="intel objectives" text="The enemy base that needs to be investigated has been marked on the map, and each investigation unit has clearly defined its own mission." />
+    <!-- 1.71 -->
+    <comment key="icecream truck exists" text="Look, ice cream truck!" />
+    <comment key="gps_laptop, targets ok" text="marking the target" />
+    <comment key="gps_laptop, targets not ok" text="No target was found" />
+    <!-- old
   <comment key="resource out of stock" text="&#37;resource_name is out of stock" />
   <comment key="resource added in stock" text="&#37;resource_name arrived in stock" />
   -->
-  <comment key="resource out of stock, default" text="Logistics unit report, we just used up the last &#37;resource_name" />
-  <comment key="resource out of stock, supply" text="Logistics unit report, &#37;resource_name's stock is exhausted" />
-  <comment key="resource added in stock, default" text="The logistics unit got a batch of &#37;resource_name" />
-  <comment key="resource added in stock, supply" text="&#37;resource_name can be purchased from the supply car" />
-
-  <!-- note, happens after "awesome, let's see what what we can come up with this" -->
-  <comment key="no more resources to unlock" text="Thank you very much, but we have got the data in it" />
-  
-  <comment key="aircraft coming" text="Attack aircraft coming in, &#37;direction o'clock!" />
-
-<!-- 1.84 -->
-  
-<comment key="rangefinder binoculars" text="Distance target: &#37;range m." />
-
-  <comment key="squad_equipment_kit, equip" text="I can use this to equip nearby comrades with armor!" />
-  <comment key="squad_equipment_kit, done" text="The armor is distributed!" />
-
-<comment key="ServerQuickChatAlert001" text="&#37;name Send a alert to you--Dont grab other's loot"/>
-<comment key="ServerQuickChatAlert002" text="If you were alerted too much times, you will be punished"/>
-<comment key="ServerQuickChatAlert003" text="&#37;name Send a alert to you--Dont Team Kill too much"/>
-<comment key="ServerQuickChatAlert004" text="&#37;name Send a alert to you--Dont be a griefer in game"/>
-<comment key="skillcooldownhint" text="Skill Cooldown has &#37;time seconds left"/>
-<comment key="Request trauma team support!" text="Request trauma team support!" />
-<comment key="Receive, transport aircraft is maneuvering" text="Receive, transport aircraft is maneuvering" />
-<comment key="Request MG-SG echelon support!" text="Request MG-SG echelon support!" />
-<comment key="Request HVY echelon support!" text="Request HVY echelon support!" />
-<comment key="Echelon enter the battlefield" text="Echelon enter the battlefield" />	
-<comment key="Fairy Command System is overload, please try again later." text="Fairy Command System is overload, please try again later." />
-<comment key="Targetdrone" text="Targetdrone" />
-<comment key="Manticore x2" text="2 Manticore is loading" />
-<comment key="Manticore x5" text="5 Manticore is loading" />
-<comment key="Humvee[MINIGUN]" text="Humvee[MINIGUN]" />
-<comment key="Launch Pierre II" text="Launch Pierre II" />
-<comment key="Launch Pierre II and MG T-Doll" text="Launch Pierre II"/>
-</character> 
+    <comment key="resource out of stock, default" text="Logistics unit report, we just used up the last &#37;resource_name" />
+    <comment key="resource out of stock, supply" text="Logistics unit report, &#37;resource_name's stock is exhausted" />
+    <comment key="resource added in stock, default" text="The logistics unit got a batch of &#37;resource_name" />
+    <comment key="resource added in stock, supply" text="&#37;resource_name can be purchased from the supply car" />
+    <!-- note, happens after "awesome, let's see what what we can come up with this" -->
+    <comment key="no more resources to unlock" text="Thank you very much, but we have got the data in it" />
+    <comment key="aircraft coming" text="Attack aircraft coming in, &#37;direction o'clock!" />
+    <!-- 1.84 -->
+    <comment key="rangefinder binoculars" text="Distance target: &#37;range m." />
+    <comment key="squad_equipment_kit, equip" text="I can use this to equip nearby comrades with armor!" />
+    <comment key="squad_equipment_kit, done" text="The armor is distributed!" />
+    <comment key="ServerQuickChatAlert001" text="&#37;name Send a alert to you--Dont grab other's loot"/>
+    <comment key="ServerQuickChatAlert002" text="If you were alerted too much times, you will be punished"/>
+    <comment key="ServerQuickChatAlert003" text="&#37;name Send a alert to you--Dont Team Kill too much"/>
+    <comment key="ServerQuickChatAlert004" text="&#37;name Send a alert to you--Dont be a griefer in game"/>
+    <comment key="skillcooldownhint" text="Skill Cooldown has &#37;time seconds left"/>
+    <comment key="Request trauma team support!" text="Request trauma team support!" />
+    <comment key="Receive, transport aircraft is maneuvering" text="Receive, transport aircraft is maneuvering" />
+    <comment key="Request MG-SG echelon support!" text="Request MG-SG echelon support!" />
+    <comment key="Request HVY echelon support!" text="Request HVY echelon support!" />
+    <comment key="Echelon enter the battlefield" text="Echelon enter the battlefield" />
+    <comment key="Fairy Command System is overload, please try again later." text="Fairy Command System is overload, please try again later." />
+    <comment key="Targetdrone" text="Targetdrone" />
+    <comment key="Manticore x2" text="2 Manticore is loading" />
+    <comment key="Manticore x5" text="5 Manticore is loading" />
+    <comment key="Humvee[MINIGUN]" text="Humvee[MINIGUN]" />
+    <comment key="Launch Pierre II" text="Launch Pierre II" />
+    <comment key="Launch Pierre II and MG T-Doll" text="Launch Pierre II"/>
+</character>

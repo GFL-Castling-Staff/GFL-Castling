@@ -368,9 +368,7 @@
 	<!-- player group -->
 
 	<soldier name="default" spawn_score="0.0">
-		<character filename="default_sf.text_lines">
-			<parameter class="default_squad_config_index" value="0" />
-		</character>
+		<character filename="default_sf.text_lines"/>
 		<ai filename="default.ai" />
 
 		<model file="sfd_vespid.xml" />
@@ -536,6 +534,7 @@
 	</soldier>
 	<!-- nemeum 钢狮 -->
 	<soldier name="sfw_nemeum" spawn_score="1.2" copy_from="default_spawn_ai">
+		<character filename="default_mecha.character"/>
 		<ai filename="eod_mecha.ai" />
 		<model filename="sfd_sangvisfeaal.xml" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_calls="1">
@@ -545,6 +544,7 @@
 	</soldier>
 	<!-- nemeum 钢狮 swap -->
 	<soldier name="sfw_nemeum_swap" spawn_score="0.3" copy_from="default_spawn_ai">
+		<character filename="default_mecha.character"/>
 		<ai filename="eod_mecha.ai" />
 		<model filename="sfd_sangvisfeaal_swap.xml" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_calls="1">
