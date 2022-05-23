@@ -143,10 +143,10 @@ class CommandSkill : Tracker {
                     excuteVVskill(cId,senderId,m_modifer);
                     return;
                 }
-                if (c_weaponType=="ff_justice.weapon"){
-                    excuteJudgeskill(cId,senderId,m_modifer);
-                    return;                    
-                }
+                // if (c_weaponType=="ff_justice.weapon"){
+                //     excuteJudgeskill(cId,senderId,m_modifer);
+                //     return;                    
+                // }
                 if (c_weaponType=="gkw_mp5.weapon"||c_weaponType=="gkw_mp5_3.weapon"||c_weaponType=="gkw_mp5_1205.weapon"||c_weaponType=="gkw_mp5_1903.weapon"||c_weaponType=="gkw_mp5_3006.weapon"){
                     excuteMP5skill(cId,senderId,m_modifer);
                     return;                    
@@ -230,6 +230,9 @@ class CommandSkill : Tracker {
                 if (c_weaponType=="gkw_fal.weapon"||c_weaponType=="gkw_fal_2406.weapon" || c_weaponType=="gkw_fal_308.weapon"){
                     excuteFnFalskill(cId,senderId,m_modifer);
                 }
+                if (c_weaponType=="ff_justice.weapon"){
+                    excuteJusticeskill(cId,senderId,m_modifer);
+                }                
             }
         }
     }
@@ -320,6 +323,8 @@ class CommandSkill : Tracker {
     }
 
     void excuteTimerEffect(SkillEffectTimer@ Trigger){
+
+        // MP5无敌甲
         if (Trigger.m_EffectKey =="MP5MOD3" || Trigger.m_EffectKey =="MP5" || Trigger.m_EffectKey =="AK15MOD3"){
             if(Trigger.m_specialkey1==""){
                 Trigger.m_specialkey1="exo_t4.carry_item";
@@ -341,6 +346,8 @@ class CommandSkill : Tracker {
             deleteItemInBackpack(m_metagame,Trigger.m_character_id,"carry_item","immunity_mp5.carry_item");
             deleteItemInStash(m_metagame,Trigger.m_character_id,"carry_item","immunity_mp5.carry_item");
         }
+
+        //破坏者，法官，
     }
     void excuteAN94skill(int characterId,int playerId,SkillModifer@ modifer){
         bool ExistQueue = false;
@@ -1519,6 +1526,48 @@ class CommandSkill : Tracker {
                 }
             }
         }
+    }
+    void excuteJusticeskill(int characterId,int playerId,SkillModifer@ modifer){
+        bool ExistQueue = false;
+        int j=-1;
+        for (uint i=0;i<SkillArray.length();i++){
+            if (SkillArray[i].m_character_id==characterId && SkillArray[i].m_weapontype=="justice") {
+                ExistQueue=true;
+                j=i;
+            }
+        }
+        if (ExistQueue){
+            dictionary a;
+            a["%time"] = ""+SkillArray[j].m_time;
+            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            _log("skill cooldown" + SkillArray[j].m_time);
+            return;
+        }
+        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+        if (character !is null) {
+            const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+            if (player !is null){
+                if (player.hasAttribute("aim_target")) {
+                    string target = player.getStringAttribute("aim_target");
+                    Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
+                    int factionid = character.getIntAttribute("faction_id");
+                    array<string> Voice={
+                        "judge_skill_1.wav",
+                        "judge_skill_2.wav"
+                    };
+                    playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+
+                    CreateProjectile_H(m_metagame,c_pos.add(Vector3(0,2,0)),c_pos.add(Vector3(0,12,0)),'ff_justice_riderkick_1.projectile',characterId,factionid,30,12);
+                    
+                    c_pos = c_pos.add(Vector3(0,12,0));
+                    Vector3 e_pos = stringToVector3(target);
+
+                    CreateDirectProjectile(m_metagame,c_pos,e_pos,'ff_justice_riderkick_2.projectile',characterId,factionid,120);
+                
+                    addCoolDown("justice",1,characterId,modifer);
+                }
+            }
+        }   
     }
 }
 
