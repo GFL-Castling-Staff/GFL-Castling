@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<projectile class="grenade" key="roarer_main2.projectile" name="" slot="2" time_to_live="0.10" pulldown_in_air="-60">
+    
+    <result class="blast" radius="10" damage="3" decal="0" push="1.5" character_state="death" faction_compare="not_equal" />
+    <trigger class="time" time_to_live="0.01">
+        <collider class="terrain" enabled="1" />     
+        <collider class="static_object" enabled="1" /> 
+        <collider class="vehicle" enabled="1" /> 
+        <collider class="character" enabled="1" faction_compare="not_equal" />
+    </trigger>
+    <rotation class="motion" />
+
+    <model />
+
+    <effect class="activated" ref="Propulsion_gl" />
+    <effect class="result" key="static_object" copy="terrain" />
+    <effect class="result" key="vehicle" copy="terrain" />     
+    <effect class="result" key="character" copy="terrain" />
+    <effect class="result" type="splat_map" surface_tag="" size="3.0" atlas_index="0" layer="1" />
+    <effect class="result" type="splat_map" surface_tag="" size="5.0" atlas_index="4" layer="0" />
+    <effect class="result" type="splat_map" surface_tag="" size="6.0" atlas_index="0" layer="2" additive="0" />
+    <effect class="result" key="terrain" ref="NavalSmokeUp1" post_processing="1" />
+    <effect class="result" key="terrain" ref="NavalSmoke1" post_processing="1" />
+    <effect class="result" key="terrain" ref="NavalSmokeTop1" post_processing="1" />
+    <effect class="result" key="terrain" ref="ShadowSmoke" shadow="1" />
+    <effect class="result" key="terrain" ref="NavalGodray" lighting="0" />
+
+    <sound class="result" key="other" fileref="explosion1.wav" />
+    <sound class="result" key="other" fileref="explosion2.wav" />
+    <sound class="result" key="vehicle" copy="other" />    
+    <sound class="result" key="vehicle" tag="metal_heavy" fileref="blast_metal_hit_01.wav" pitch_variety="0.2" volume="0.8" />
+    <sound class="result" key="vehicle" tag="metal_heavy" fileref="blast_metal_hit_02.wav" pitch_variety="0.2" volume="0.8" /> 
+    <sound class="result" key="vehicle" tag="metal_heavy" fileref="blast_metal_hit_03.wav" pitch_variety="0.2" volume="0.8" />           
+    <sound class="result" key="terrain" copy="other" />
+    <sound class="result" key="static_object" copy="other" />
+    <sound class="result" key="character" copy="other" />
+
+    <trail probability="0.0" />
+
+</projectile>

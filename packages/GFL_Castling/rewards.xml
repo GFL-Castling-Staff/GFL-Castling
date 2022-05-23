@@ -1,37 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <reward_config>
 	<reward class="enemy_shot" 							base="+0.001" 	bonus="0.000"  type="xp" />
-	<reward class="enemy_shot" 							base="+12" 		bonus="0.0"  type="rp" />
+	<reward class="enemy_shot" 							base="+5" 		bonus="0.0"  type="rp" />
 	<reward class="enemy_killed_in_explosion" 			base="+0.001" 	bonus="0.000"  type="xp" />
-	<reward class="enemy_killed_in_explosion" 			base="+12" 		bonus="0.0"  type="rp" />
-	
+	<reward class="enemy_killed_in_explosion" 			base="+5" 		bonus="0.0"  type="rp" />
+	<reward class="enemy_kill_combo" 					base="+0.0005" bonus="0.000"  type="xp" />
+	<reward class="enemy_kill_combo" 					base="+3" bonus="0.000"  type="rp" />
+
 	<reward class="enemy_stabbed" 						base="+0.003" 	bonus="0.000"  type="xp" />
-	<reward class="enemy_stabbed" 						base="+15" 		bonus="0.0"  type="rp" />   
-	
-	<reward class="enemy_kill_combo" 					base="+0.002"	type="xp" />
-	<reward class="enemy_kill_combo" 					base="+2"		type="rp" />
+	<reward class="enemy_stabbed" 						base="+30" 		bonus="0.0"  type="rp" />   
 
 	<reward class="self_killed" 						base="-0.000"	type="xp" />
 	<reward class="self_killed" 						base="+10" 		type="rp" />
 
-	<reward class="fellow_killed_in_explosion" 			base="-0.001" 	type="xp" />
+	<reward class="fellow_killed_in_explosion" 			base="-0.005" 	type="xp" />
 	<reward class="fellow_killed_in_explosion" 			base="-200.0" 	type="rp" />
 
 	<reward class="fellow_unwound" 						base="+0.005"	type="xp" />  
-	<reward class="fellow_unwound" 						base="+25" 		type="rp" />  
+	<reward class="fellow_unwound" 						base="+50" 		type="rp" />  
 
 	<reward class="staying_alive" 						base="0" 		type="rp" />
 	
-	<reward class="base_capture" 						base="+0.050" 	type="xp" />
-	<reward class="base_capture" 						base="1000" 		type="rp" />
+	<reward class="base_capture" 						base="+0.075" 	type="xp" />
+	<reward class="base_capture" 						base="1000" 	type="rp" />
 
 	<reward class="side_base_capture" 					base="+0.050" 	type="xp" />
-	<reward class="side_base_capture" 					base="600" 		type="rp" />
+	<reward class="side_base_capture" 					base="1000" 	type="rp" />
 
 	<reward class="spotting" 							base="100" 		type="rp" />
 	<reward class="spotting" 							base="+0.010"	type="xp" />
 	
-	<reward class="promotion" 							base="100" 		type="rp" />
+	<reward class="promotion" 							base="233" 		type="rp" />
 
 	<reward class="enemy_player_shot" 					base="+0.010" 	type="xp" />
 	<reward class="enemy_player_shot" 					base="10" 		type="rp" />

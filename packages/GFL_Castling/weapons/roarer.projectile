@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<projectile class="grenade" name="" slot="1" pulldown_in_air="-60">
+    <result class="notify_script" key="roarer"/>
+    <trigger class="time" time_to_live="0.8">
+        <collider class="terrain" enabled="1" />
+        <collider class="static_object" enabled="1" />
+        <collider class="vehicle" enabled="1" />
+        <collider class="character" enabled="1" faction_compare="not_equal" />
+    </trigger>
+    <rotation class="motion" />
+    <model />
+    <trail probability="0.0" />
+
+</projectile>

@@ -427,6 +427,18 @@ class BasicCommandHandler : Tracker {
 		if (!m_metagame.getAdminManager().isAdmin(sender, senderId)) {
 			return;
 		}
+		else if (checkCommand(message, "testa1")) {
+			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
+			if (playerInfo is null) return;
+			int characterId= playerInfo.getIntAttribute("character_id");			
+			playAnimationKey(m_metagame,characterId,"stabbing_roarer",true,true);
+		}
+		else if (checkCommand(message, "testa2")) {
+			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
+			if (playerInfo is null) return;
+			int characterId= playerInfo.getIntAttribute("character_id");			
+			playAnimationKey(m_metagame,characterId,"throwing, large mecha",true,true);
+		}
 		// it's a silent server command, check which one
 		if (checkCommand(message, "test2")) {
 			string command = "<command class='set_marker' faction_id='0' position='512 0 512' color='0 0 1' atlas_index='0' text='hello!' />";
@@ -576,8 +588,8 @@ class BasicCommandHandler : Tracker {
             spawnInstanceNearPlayer(senderId, "default", "soldier", 1);
             spawnInstanceNearPlayer(senderId, "default", "soldier", 1);
             spawnInstanceNearPlayer(senderId, "default", "soldier", 1);                 
-		} else if (checkCommand(message, "grenadier")) {
-			spawnInstanceNearPlayer(senderId, "grenadier", "soldier", 0);            
+		} else if (checkCommand(message, "spawnbhh")) {
+			spawnInstanceNearPlayer(senderId, "Paradeus_roarer", "soldier", 0);            
 		} else if (checkCommand(message, "foe")) {
 			spawnInstanceNearPlayer(senderId, "default", "soldier", 1);
 		} else if (checkCommand(message, "eod")) {

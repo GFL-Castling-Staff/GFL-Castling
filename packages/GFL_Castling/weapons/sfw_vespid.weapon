@@ -39,7 +39,7 @@
     
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet_sf.projectile">
-        <result class="hit"  kill_probability="1.6" kill_decay_start_time="0.333" kill_decay_end_time="1.5" />
+        <result class="hit"  kill_probability="1.6" kill_decay_start_time="0.1" kill_decay_end_time="0.9" />
     </projectile>
     
     <stance state_key="running" accuracy="0.5" />
@@ -51,5 +51,5 @@
     <stance state_key="crouching" accuracy="1.1" />
     <stance state_key="prone" accuracy="1.2" />
     
-    <modifier class="speed" value="0" />
+    <modifier class="speed" value="-0.1" />
 </weapon>

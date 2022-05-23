@@ -14,7 +14,7 @@
 	  suppressed="0" 
 	  name="SF-Dragoon" 
 	  class="0" 
-	  sight_range_modifier="1.0" 
+	  ai_sight_range_modifier="2.0" 
 	  projectile_speed="150.0" 
 	  carry_in_two_hands="0" 
 	  stab_enabled="0"/>
@@ -48,7 +48,7 @@
 
     <weak_hand_hold offset="0.2" />
 	<projectile file="bullet_sf.projectile">
-        <result class="hit"  kill_probability="1.4" kill_decay_start_time="0.2" kill_decay_end_time="0.3" />
+        <result class="hit"  kill_probability="1.5" kill_decay_start_time="0.15" kill_decay_end_time="0.15" />
     </projectile>
     
     <stance state_key="running" accuracy="0.3" />
@@ -61,4 +61,9 @@
     <stance state_key="prone" accuracy="0.94" />
 
     <modifier class="speed" value="0.3" />    
+
+    <target_factors tag="shotgun" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.1" />
+	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0" />
+    <target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="6.0" />
+    <target_factors tag="bazooka" distance="1.0" direction="0.0" squad_command="1.0" base_score="12.0" />
 </weapon>

@@ -145,7 +145,6 @@ class kill_event : Tracker {
                 HealOnBladeKill_track[a].m_time-=time;
                 if(HealOnBladeKill_track[a].m_time<0){	
 					if (HealOnBladeKill_track[a].m_numtime>=0){
-                        
                         int vestrestore = 0;
                         while(HealOnBladeKill_track[a].current_kills>HealOnBladeKill_track[a].m_killstoheal){
                             vestrestore++;
@@ -187,7 +186,7 @@ class kill_event : Tracker {
 class HealOnBladeKill_tracker{
     int m_characterId;
 	float m_time=0.2;
-	int m_numtime=0;
+	float m_numtime=0;
 	int m_factionid;
     int m_killstoheal;
     int current_kills=0;
@@ -197,6 +196,6 @@ class HealOnBladeKill_tracker{
 		m_factionid= factionid;
 		m_killstoheal= killstoheal;
         current_kills++;
-        m_numtime= timeaddafterkill/m_time;
+        m_numtime= timeaddafterkill;
 	}
 }

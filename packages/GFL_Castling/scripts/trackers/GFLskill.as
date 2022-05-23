@@ -374,6 +374,36 @@ class GFLskill : Tracker {
 				}
 			}
 		}
+		if (EventKeyGet == "roarer"){
+			int characterId = event.getIntAttribute("character_id");
+			const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+			if (character !is null) {
+				string Pos_40mm = character.getStringAttribute("position");
+				string c = 
+					"<command class='create_instance'" +
+					" faction_id='"+ character.getIntAttribute("faction_id") +"'" +
+					" instance_class='grenade'" +
+					" instance_key= 'roarer_main.projectile'" +
+					" position='" + Pos_40mm + "'"+
+					" character_id='" + characterId + "' />";
+				m_metagame.getComms().send(c);
+			}
+		}
+		if(EventKeyGet == "roarer_skill" ){
+			int characterId = event.getIntAttribute("character_id");
+			const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+			if (character !is null) {
+				Vector3 Pos_40mm = stringToVector3(event.getStringAttribute("position"));
+				string c = 
+					"<command class='create_instance'" +
+					" faction_id='"+ character.getIntAttribute("faction_id") +"'" +
+					" instance_class='grenade'" +
+					" instance_key= 'roarer_main2.projectile'" +
+					" position='" + Pos_40mm.toString() + "'"+
+					" character_id='" + characterId + "' />";
+				m_metagame.getComms().send(c);
+			}
+		}
 	}
 
 	void update(float time) {
