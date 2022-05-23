@@ -498,7 +498,7 @@
 		</resources>
 	</soldier>
 	<!-- jaeger -->
-	<soldier name="sf_jaeger" spawn_score="1.5" copy_from="default_spawn_ai">
+	<soldier name="sf_jaeger" spawn_score="1.0" copy_from="default_spawn_ai">
 		<ai filename="sniper.ai" />
 		<resources clear_weapons="1" clear_calls="1">
 			<weapon key="sfw_jaeger.weapon" enabled="1"/>
@@ -506,7 +506,7 @@
 			<projectile key="sf_ap_mine.projectile" enabled="1.0" />
 		</resources>
 	</soldier>
-	<soldier name="sf_jaeger_swap" spawn_score="0.75" copy_from="default_spawn_ai">
+	<soldier name="sf_jaeger_swap" spawn_score="0.5" copy_from="default_spawn_ai">
 		<ai filename="sniper.ai" />
 		<resources clear_weapons="1" clear_calls="1">
 			<weapon key="sfw_jaeger_swap.weapon" enabled="1"/>
@@ -533,7 +533,7 @@
 		</resources>
 	</soldier>
 	<!-- nemeum 钢狮 -->
-	<soldier name="sfw_nemeum" spawn_score="1.2" copy_from="default_spawn_ai">
+	<soldier name="sfw_nemeum" spawn_score="0.6" copy_from="default_spawn_ai">
 		<character filename="default_mecha.character"/>
 		<ai filename="eod_mecha.ai" />
 		<model filename="sfd_sangvisfeaal.xml" />
@@ -543,7 +543,7 @@
 		</resources>
 	</soldier>
 	<!-- nemeum 钢狮 swap -->
-	<soldier name="sfw_nemeum_swap" spawn_score="0.3" copy_from="default_spawn_ai">
+	<soldier name="sfw_nemeum_swap" spawn_score="0.15" copy_from="default_spawn_ai">
 		<character filename="default_mecha.character"/>
 		<ai filename="eod_mecha.ai" />
 		<model filename="sfd_sangvisfeaal_swap.xml" />
@@ -553,7 +553,7 @@
 		</resources>
 	</soldier>
 	<!-- 劫豹 -->
-	<soldier name="sfw_jaguar" spawn_score="0.5" copy_from="default_spawn_ai">
+	<soldier name="sfw_jaguar" spawn_score="0.8" copy_from="default_spawn_ai">
 		<ai filename="grenadier.ai" />
 		<model filename="sfd_sangvisfeaal_swap.xml" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_calls="1">
@@ -562,7 +562,7 @@
 		</resources>
 	</soldier>
 	<!-- 巡游者 -->
-	<soldier name="sfw_prowler" spawn_score="0.8" copy_from="default_spawn_ai">
+	<soldier name="sfw_prowler" spawn_score="1.5" copy_from="default_spawn_ai">
 		<ai filename="eod_mecha.ai" />
 		<model filename="sfd_prowler_from_melondove.xml" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_calls="1">
