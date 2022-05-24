@@ -176,7 +176,14 @@ dictionary commandSkillIndex = {
         // FAL
         {"gkw_fal.weapon",22},
         {"gkw_fal_2406.weapon",22},
-        {"gkw_fal_308.weapon",22}
+        {"gkw_fal_308.weapon",22},
+
+        // M4SOPMODIIMOD3
+        {"gkw_m4sopmodiimod3.weapon",23},
+        {"gkw_m4sopmodiimod3_531.weapon",23},
+
+        // 下面这行是用来占位的，在这之上添加新的枪和index即可
+        {"666",-1}
 };
 
 class CommandSkill : Tracker {
@@ -262,6 +269,7 @@ class CommandSkill : Tracker {
                     case 20:{excuteStg44MOD3skill(cId,senderId,m_modifer);break;}
                     case 21:{excuteWerlodskill(cId,senderId,m_modifer,true);break;}
                     case 22:{excuteFnFalskill(cId,senderId,m_modifer);break;}
+                    case 23:{excuteM4SOPMODIIMOD3skill(cId,senderId,m_modifer);break;}
                     
                     default:
                         break;
@@ -489,7 +497,7 @@ class CommandSkill : Tracker {
             "sopmod4.wav"
             };
             playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
-            addCoolDown("SOPMOD",16,characterId,modifer);
+            addCoolDown("SOPMOD",15,characterId,modifer);
         }
     }
     void excute416modskill(int characterId,int playerId,SkillModifer@ modifer,const XmlElement@ characterinfo, const XmlElement@ playerinfo,bool pussyskin){
@@ -1601,6 +1609,47 @@ class CommandSkill : Tracker {
                 }
             }
         }   
+    }
+    void excuteM4SOPMODIIMOD3skill(int characterId,int playerId,SkillModifer@ modifer){
+        bool ExistQueue = false;
+        int j=-1;
+        for (uint i=0;i<SkillArray.length();i++){
+            if (SkillArray[i].m_character_id==characterId && SkillArray[i].m_weapontype=="m4sopmodiimod3") {
+                ExistQueue=true;
+                j=i;
+            }
+        }
+        if (ExistQueue){
+            dictionary a;
+            a["%time"] = ""+SkillArray[j].m_time;
+            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            _log("skill cooldown" + SkillArray[j].m_time);
+            return;
+        }
+        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+        if (character !is null) {
+            const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+            if (player !is null){
+                if (player.hasAttribute("aim_target")) {
+                    string target = player.getStringAttribute("aim_target");
+                    Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
+                    int factionid = character.getIntAttribute("faction_id");
+                    array<string> Voice={
+                        "M4_SOPMOD_II_SKILL2_JP.wav"                   
+                    };
+                    playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+                    playAnimationKey(m_metagame,characterId,"recoil1, big",true,false);
+                    c_pos=c_pos.add(Vector3(0,1,0));
+                    if (checkFlatRange(c_pos,stringToVector3(target),10)){
+                        CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"SopmodSk_script.projectile",characterId,factionid,60);
+                    }
+                    else{
+                        CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"SopmodSk_script.projectile",characterId,factionid,26.0,6.0);
+                    }
+                    addCoolDown("m4sopmodiimod3",15,characterId,modifer);
+                }
+            }
+        }
     }
 }
 
