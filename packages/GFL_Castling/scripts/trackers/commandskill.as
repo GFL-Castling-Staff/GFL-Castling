@@ -86,6 +86,98 @@ array<string> targetAAgrenades = {
     "gkw_stg44.weapon",
     "gkw_famas.weapon"
 };
+// 列举枪对应的脚本技能编号。注意字典的值为了配合后面的只能用uint，不可用string，float等    
+dictionary commandSkillIndex = {
+
+        // 空武器
+        {"",0},
+
+        // AN94MOD3
+        {"gkw_an94_mod3.weapon",1},
+        {"gkw_an94_mod3_skill.weapon",1},
+        {"gkw_an94mod3_3303.weapon",1},
+        {"gkw_an94mod3_3303_skill.weapon",1},
+        {"gkw_an94mod3_blm.weapon",1},
+        {"gkw_an94mod3_blm_skill.weapon",1},
+
+        // VECTOR
+        {"gkw_vector.weapon",2},
+
+        // FF_JUSTICE
+        {"ff_justice.weapon",3},
+
+        // MP5
+        {"gkw_mp5.weapon",4},
+        {"gkw_mp5_3.weapon",4},
+        {"gkw_mp5_1205.weapon",4},
+        {"gkw_mp5_1903.weapon",4},
+        {"gkw_mp5_3006.weapon",4},
+
+        // MP5MOD3
+        {"gkw_mp5mod3.weapon",5},
+        {"gkw_mp5mod3_3.weapon",5},
+        {"gkw_mp5mod3_1205.weapon",5},
+        {"gkw_mp5mod3_1903.weapon",5},
+        {"gkw_mp5mod3_3006.weapon",5},
+
+        // P22
+        {"gkw_p22.weapon",6},
+
+        // HS2000
+        {"gkw_hs2000.weapon",7},
+        {"gkw_hs2000_5304.weapon",7},
+
+        // FF_INTRUDER
+        {"ff_Intruder.weapon",8},
+
+        // FF_AGENT
+        {"ff_agent.weapon",9},
+
+        // FF_DESTROYER
+        {"ff_destroyer.weapon",10},
+
+        // FF_EXCUTIONER
+        {"ff_excutioner_2.weapon",11},
+
+        // FF_BAIBAOZI
+        {"ff_parw_alina.weapon",12},
+
+        // PPSH41, PPSH41MOD3
+        {"gkw_ppsh41.weapon",13},
+        {"gkw_ppsh41mod3.weapon",13},
+
+        // UMP45MOD3
+        {"gkw_ump45mod3.weapon",14},
+        {"gkw_ump45mod3_535.weapon",14},
+
+        // M870
+        {"gkw_m870.weapon",15},
+        {"gkw_m870_3803.weapon",15},
+
+        // PP19
+        {"gkw_pp19.weapon",16},
+
+        // PP19MOD3
+        {"gkw_pp19mod3.weapon",17},
+
+        // AK15MOD3
+        {"gkw_ak15mod3.weapon",18},
+        {"gkw_ak15mod3_skill.weapon",18},
+
+        // XM8MOD3
+        {"gkw_xm8_mod3.weapon",19},
+
+        // STG44MOD3
+        {"gkw_stg44mod3.weapon",20},
+
+        // WERLODMOD3
+        {"gkw_welrodmod3.weapon",21},
+
+        // FAL
+        {"gkw_fal.weapon",22},
+        {"gkw_fal_2406.weapon",22},
+        {"gkw_fal_308.weapon",22}
+};
 
 class CommandSkill : Tracker {
     protected Metagame@ m_metagame;
@@ -93,6 +185,8 @@ class CommandSkill : Tracker {
 	array<SkillTrigger@> SkillArray;
     array<SkillEffectTimer@> TimerArray;
     array<SpamAvoider@> DontSpamingYourFuckingSkillWhileCoolDownBro;
+
+
 	protected bool m_ended;
 
 	// --------------------------------------------
@@ -133,92 +227,7 @@ class CommandSkill : Tracker {
 
                 SkillModifer m_modifer=SkillModifer();
 
-                if (c_weaponType=="") return;
-
-                if (c_weaponType=="gkw_an94_mod3.weapon" || c_weaponType=="gkw_an94_mod3_skill.weapon" || c_weaponType=="gkw_an94mod3_3303.weapon" || c_weaponType=="gkw_an94mod3_3303_skill.weapon" || c_weaponType=="gkw_an94mod3_blm.weapon" || c_weaponType=="gkw_an94mod3_blm_skill.weapon" ){
-                    excuteAN94skill(cId,senderId,m_modifer);
-                    return;
-                }
-                if (c_weaponType=="gkw_vector.weapon"){
-                    excuteVVskill(cId,senderId,m_modifer);
-                    return;
-                }
-                // if (c_weaponType=="ff_justice.weapon"){
-                //     excuteJudgeskill(cId,senderId,m_modifer);
-                //     return;                    
-                // }
-                if (c_weaponType=="gkw_mp5.weapon"||c_weaponType=="gkw_mp5_3.weapon"||c_weaponType=="gkw_mp5_1205.weapon"||c_weaponType=="gkw_mp5_1903.weapon"||c_weaponType=="gkw_mp5_3006.weapon"){
-                    excuteMP5skill(cId,senderId,m_modifer);
-                    return;                    
-                }
-                if (c_weaponType=="gkw_mp5mod3.weapon"||c_weaponType=="gkw_mp5mod3_3.weapon"||c_weaponType=="gkw_mp5mod3_1205.weapon"||c_weaponType=="gkw_mp5mod3_1903.weapon"||c_weaponType=="gkw_mp5mod3_3006.weapon"){
-                    excuteMP5MOD3skill(cId,senderId,m_modifer);
-                    return;                    
-                }
-                if (c_weaponType=="gkw_p22.weapon"){
-                    excuteP22skill(cId,senderId,m_modifer);
-                    return;        
-                }
-                if (c_weaponType=="gkw_hs2000.weapon"||c_weaponType=="gkw_hs2000_5304.weapon"){
-                    excuteHS2000skill(cId,senderId,m_modifer);
-                    return;        
-                }
-                if (c_weaponType=="ff_Intruder.weapon"){
-                    excuteIntruderskill(cId,senderId,m_modifer);
-                    return;        
-                }
-                if (c_weaponType=="ff_agent.weapon"){
-                    excuteAgentskill(cId,senderId,m_modifer);
-                    return;        
-                }                
-                if (c_weaponType=="ff_destroyer.weapon"){
-                    excuteDestroyerskill(cId,senderId,m_modifer);
-                    return;        
-                }                 
-                if (c_weaponType=="ff_excutioner_2.weapon"){
-                    excuteExcutionerskill(cId,senderId,m_modifer);        
-                    return;
-                }        
-                if (c_weaponType=="ff_parw_alina.weapon"){
-                    excuteBaibaoziskill(cId,senderId,m_modifer);
-                    return;
-                }              
-                if (c_weaponType=="gkw_ppsh41mod3.weapon"|| c_weaponType=="gkw_ppsh41.weapon"){
-                    excutePPSH41skill(cId,senderId,m_modifer);
-                    return;
-                }
-                if (c_weaponType=="gkw_ump45mod3.weapon"|| c_weaponType=="gkw_ump45mod3_535.weapon" || c_weaponType=="gkw_ump45mod3_410.weapon"){
-                    excuteUMP45skill(cId,senderId,m_modifer);
-                    return;
-                }
-                if (c_weaponType=="gkw_m870.weapon"|| c_weaponType=="gkw_m870_3803.weapon" || c_weaponType=="gkw_m870_3803_skill.weapon"){
-                    excuteM870skill(cId,senderId,m_modifer);
-                    return;        
-                }
-                if (c_weaponType=="gkw_pp19.weapon"){
-                    excutePP19skill(cId,senderId,m_modifer);
-                    return;        
-                }
-                if (c_weaponType=="gkw_pp19mod3.weapon"){
-                    excutePP19skill(cId,senderId,m_modifer,true);
-                    return;        
-                }
-                if (c_weaponType=="gkw_ak15mod3.weapon"|| c_weaponType=="gkw_ak15mod3_skill.weapon"){
-                    excuteAK15MOD3skill(cId,senderId,m_modifer);
-                    return;        
-                }
-                if (c_weaponType=="gkw_xm8_mod3.weapon"){
-                    excuteXM8MOD3skill(cId,senderId,m_modifer);
-                    return;        
-                }
-                if (c_weaponType=="gkw_stg44mod3.weapon"){
-                    excuteStg44MOD3skill(cId,senderId,m_modifer);
-                    return;        
-                }
-                if (c_weaponType=="gkw_welrodmod3.weapon"){
-                    excuteWerlodskill(cId,senderId,m_modifer,true);
-                    return;        
-                }
+               
                 if (targetAPgrenades.find(c_weaponType)> -1){
                     excuteAntiPersonalskill(cId,senderId,m_modifer,c_weaponType);
                     return;        
@@ -227,12 +236,36 @@ class CommandSkill : Tracker {
                     excuteAntiArmorskill(cId,senderId,m_modifer,c_weaponType);
                     return;        
                 }
-                if (c_weaponType=="gkw_fal.weapon"||c_weaponType=="gkw_fal_2406.weapon" || c_weaponType=="gkw_fal_308.weapon"){
-                    excuteFnFalskill(cId,senderId,m_modifer);
+
+                switch(int(commandSkillIndex[c_weaponType]))
+                {
+                    case 0:{break;}
+                    case 1:{excuteAN94skill(cId,senderId,m_modifer);break;}
+                    case 2:{excuteVVskill(cId,senderId,m_modifer);break;}
+                    case 3:{excuteJusticeskill(cId,senderId,m_modifer);break;}
+                    case 4:{excuteMP5skill(cId,senderId,m_modifer);break;}
+                    case 5:{excuteMP5MOD3skill(cId,senderId,m_modifer);break;}
+                    case 6:{excuteP22skill(cId,senderId,m_modifer);break;}
+                    case 7:{excuteHS2000skill(cId,senderId,m_modifer);break;}
+                    case 8:{excuteIntruderskill(cId,senderId,m_modifer);break;}
+                    case 9:{excuteAgentskill(cId,senderId,m_modifer);break;}
+                    case 10:{excuteDestroyerskill(cId,senderId,m_modifer);break;}
+                    case 11:{excuteExcutionerskill(cId,senderId,m_modifer);break;}
+                    case 12:{excuteBaibaoziskill(cId,senderId,m_modifer);break;}
+                    case 13:{excutePPSH41skill(cId,senderId,m_modifer);break;}
+                    case 14:{excuteUMP45skill(cId,senderId,m_modifer);break;}
+                    case 15:{excuteM870skill(cId,senderId,m_modifer);break;}
+                    case 16:{excutePP19skill(cId,senderId,m_modifer);break;}
+                    case 17:{excutePP19skill(cId,senderId,m_modifer,true);break;}
+                    case 18:{excuteAK15MOD3skill(cId,senderId,m_modifer);break;}
+                    case 19:{excuteXM8MOD3skill(cId,senderId,m_modifer);break;}
+                    case 20:{excuteStg44MOD3skill(cId,senderId,m_modifer);break;}
+                    case 21:{excuteWerlodskill(cId,senderId,m_modifer,true);break;}
+                    case 22:{excuteFnFalskill(cId,senderId,m_modifer);break;}
+                    
+                    default:
+                        break;
                 }
-                if (c_weaponType=="ff_justice.weapon"){
-                    excuteJusticeskill(cId,senderId,m_modifer);
-                }                
             }
         }
     }
