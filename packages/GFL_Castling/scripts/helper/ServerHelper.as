@@ -29,6 +29,16 @@ class ServerHelper : Tracker {
         string sender = event.getStringAttribute("player_name");
 		int senderId = event.getIntAttribute("player_id");
 
+        if(checkCommand(message,"resetxp")){
+            if(lv120dict.exists(sender)){
+                const XmlElement@ info = getPlayerInfo(m_metagame, senderId);
+                if (info !is null) {
+                    int cId = info.getIntAttribute("character_id");
+                    setXPcharacter(m_metagame,cId,float(lv120dict[sender]));
+                }
+            }
+        }
+
         if (!m_metagame.getAdminManager().isAdmin(sender, senderId) && !m_metagame.getModeratorManager().isModerator(sender, senderId)) {
 			return;
 		}
@@ -147,3 +157,58 @@ class ServerHelper : Tracker {
 		return true;
 	}
 }
+
+dictionary lv120dict={
+    {"DUSK",361.0},
+    {"M14MOD3",431.0},
+    {"MOQIAN",561.0},
+    {"PENGLAISI",621.0},
+    {"WOSHIEOE1999",661.0},
+    {"VIVI",710.0},
+    {"MELONDOVE",761.0},
+    {"LAPPLAND",811.0},
+    {"AK12",811.0},
+    {"HUIR",861.0},
+    {"ALIEN",911.0},
+    {"SAIWA",961.0},
+    {"ASANONANA",1011.0},
+    {"IAQS",1111.0},
+    {"WHITE",1161.0},
+    {"MAPPLE",1261.0},
+    {"TEST310",1311.0},
+    {"TONYZSZ",1361.0},
+    {"MAJOR_KAI",1411.0},
+    {"AMEMLIKY",1461.0},
+    {"AACCBB",1511.0},
+    {"HOW",1561.0},
+    {"CHADOFCHANS",1611.0},
+    {"AURORA_ZERO",1661.0},
+    {"ANGELICA",1711.0},
+    {"D_GAODIAO",1761.0},
+    {"DD",1811.0},
+    {"HASUMI",1861.0},
+    {"KUAT",1911.0},
+    {"MYA",1961.0},
+    {"HOSIAYA",2011.0},
+    {"ATID",2061.0},
+    {"FUYU",2111.0},
+    {"FNF",2161.0},
+    {"SALTFISHFIELD",2211.0},
+    {"STALINA",2261.0},
+    {"SUIGETSU",2311.0},
+    {"TMP.1",2361.0},
+    {"YORIKO",2411.0},
+    {"YOUYUE",2461.0},
+    {"CAP.DAHUA",2511.0},
+    {"GANDURO",2561.0},
+    {"DILING",2611.0},
+    {"O_OLONICERA",2711.0},
+    {"JLK941",2761.0},
+    {"ROYI",2811.0},
+    {"MIRRORWAVE",2861.0},
+    {"PIG744",2911.0},
+    {"CAT HEAD",2961.0},
+    {"HUALIN",3011.0},
+    {"NEKO_CUP",3061.0},
+    {"NETHER_CROW",11452.0}
+};

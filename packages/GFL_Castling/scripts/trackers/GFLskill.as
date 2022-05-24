@@ -228,7 +228,7 @@ class GFLskill : Tracker {
 				const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
 				if (player !is null) {
 					Vector3 Pos_40mm = stringToVector3(event.getStringAttribute("position"));
-					int factionid = player.getIntAttribute("faction_id");
+					uint factionid = player.getIntAttribute("faction_id");
 					//获取技能影响的敌人数量
 					m_fnum= m_metagame.getFactionCount();
 					array<const XmlElement@> affectedCharacter;
@@ -261,7 +261,7 @@ class GFLskill : Tracker {
 			int characterId = event.getIntAttribute("character_id");
 			const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
 			if (character !is null) {
-				int factionid = character.getIntAttribute("faction_id");
+				uint factionid = character.getIntAttribute("faction_id");
 				Vector3 pos_smartgrenade = stringToVector3(event.getStringAttribute("position"));
 				//获取技能影响的敌人数量
 				m_fnum = m_metagame.getFactionCount();

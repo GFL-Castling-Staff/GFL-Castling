@@ -96,9 +96,18 @@ void GiveRP(const Metagame@ metagame,int character_id,int rp){
     metagame.getComms().send(c);
 }
 
-void GiveXP(const Metagame@ metagame,int character_id,float rp){
-	string c = "<command class='xp_reward' character_id='" + character_id + "' reward='" + rp + "' />";
+void GiveXP(const Metagame@ metagame,int character_id,float xp){
+	string c = "<command class='xp_reward' character_id='" + character_id + "' reward='" + xp + "' />";
     metagame.getComms().send(c);
+}
+
+void setXPcharacter(const Metagame@ metagame,int cId,float xp){
+	const XmlElement@ Characterinfo= getCharacterInfo(metagame,cId);
+	if (Characterinfo !is null){
+		float now_xp=Characterinfo.getFloatAttribute("xp");
+		float add_xp=xp-now_xp;
+		GiveXP(metagame,cId,add_xp);
+	}
 }
 
 void deleteItemInBackpack(Metagame@ metagame, int characterId, string ItemType, string ItemKey){
