@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapons>
+    <weapon file="lmg_mg.animation_base" key="gkw_pk.weapon">
+        <specification 
+        barrel_offset="0.5" 
+        retrigger_time="0.0923" 
+        accuracy_factor="0.98" 
+        sustained_fire_grow_step="0.8" 
+        sustained_fire_diminish_rate="1.0"
+        magazine_size="100" 
+        suppressed="0" 
+        stance_accuracy_rate="0.5"
+        name="PK" 
+        class="0" 
+        projectile_speed="206" 
+        sight_range_modifier="1.5"
+        slot="0"
+        can_shoot_standing="1" 
+        can_shoot_crouching="1"
+        can_shoot_prone="1"
+        carry_in_two_hands="1"
+        stab_enabled="1"
+        />
+
+
+        <animation state_key="hold_casual" animation_key="dancing, kazachok" />
+        <animation key="reload" animation_key="reloading, Machine gun 1.6" />
+        <animation state_key="next_in_chain_in" animation_key="switch fire mode" />
+
+        <inventory buy_price="45.0" sell_price="45.0" />
+        <next_in_chain key="gkw_pk_skill.weapon" share_ammo="1" />
+
+        <sound key="fire" fileref="pkp_fire_FromINS.wav" pitch_variety="0.05" volume="1" />
+        <sound key="magazine_out" fileref="pkp_mgz_out_FromINS.wav" volume="0.8" />
+        <sound key="magazine_in" fileref="pkp_mgz_in_FromINS.wav" volume="0.8" />
+        <sound key="cycle" fileref="pkp_cycle_FromINS.wav" volume="0.8" />
+        <sound class="impact" fileref="rifle_drop.wav" />
+        <model filename="gkw_mg_pk_from_Eisen.xml" />
+        <commonness value="0.2" in_stock="1" can_respawn_with="1" />
+
+        <hud_icon filename="gkw_pk.png" />
+
+        <projectile file="bullet.projectile">
+            <result class="hit" kill_probability="2.0" kill_decay_start_time="1.5" kill_decay_end_time="1.6" />
+        </projectile>
+
+        <stance state_key="running" accuracy="0.5" />
+        <stance state_key="walking" accuracy="0.55" />
+        <stance state_key="crouch_moving" accuracy="0.65" />
+        <stance state_key="standing" accuracy="0.6" />
+        <stance state_key="crouching" accuracy="0.8" />
+        <stance state_key="prone" accuracy="1.2" /> 
+        <stance state_key="prone_moving" accuracy="0.5" />
+        <stance state_key="over_wall" accuracy="1.2" /> 	
+
+    </weapon>
+    <weapon key="gkw_pk_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0">
+        
+        <tag name="machine gun" />
+
+        <specification 
+        barrel_offset="0.5" 
+        retrigger_time="0.0923" 
+        accuracy_factor="0.98" 
+        sustained_fire_grow_step="0" 
+        sustained_fire_diminish_rate="1.0"
+        magazine_size="100" 
+        stance_accuracy_rate="0.5"
+        suppressed="0" 
+        name="PK-[Terminating Barrage]" 
+        class="0" 
+        projectile_speed="220" 
+        sight_range_modifier="2.75"
+        slot="0"
+        can_shoot_standing="0" 
+        can_shoot_crouching="1"
+        can_shoot_prone="1"
+        carry_in_two_hands="1"
+        stab_enabled="0"
+        />
+
+        <animation state_key="hold_casual" animation_key="crouch still, low mg" />
+        <animation state_key="recoil" animation_key="recoil, hip fire" />
+        <animation state_key="recoil" animation_key="recoil2, hip fire" />
+        <animation state_key="recoil" animation_key="recoil3, hip fire" />
+        <animation key="recoil" stance_key="over_wall" ref="12" />
+        <animation key="recoil" stance_key="over_wall" ref="13" />
+        <animation key="recoil" stance_key="over_wall" ref="14" />
+        <animation state_key="hold" animation_key="crouch still, low mg" />
+        <animation state_key="hold_on_wall" animation_key="crouch still, low mg" />
+        <animation state_key="running" animation_key="crouch still, low mg" />
+        <animation state_key="walking" animation_key="crouch still, low mg" />
+        <animation state_key="walking_backwards" animation_key="crouch still, low mg" />
+        <animation state_key="crouching" animation_key="crouch still, low mg" />
+        <animation state_key="crouch_moving"		animation_key="crouch still, low mg" />
+        <animation state_key="crouch_moving_backwards"	animation_key="crouch still, low mg" />
+        <animation state_key="prone" animation_key="crouch still, low mg" />
+        <animation state_key="prone, moving forwards" animation_key="crouch still, low mg" />
+        <animation state_key="stabbing" animation_key="crouch still, low mg" />
+        <animation state_key="next_in_chain_in" animation_key="switch fire mode" />
+
+        <animation key="reload" animation_key="reloading, Machine gun 1.6" />
+        <inventory buy_price="45.0" sell_price="45.0" />
+        <next_in_chain key="gkw_pk.weapon" share_ammo="1" />
+
+        <sound key="fire" fileref="pkp_fire_FromINS.wav" pitch_variety="0.05" volume="1" />
+        <sound key="magazine_out" fileref="pkp_mgz_out_FromINS.wav" volume="0.8" />
+        <sound key="magazine_in" fileref="pkp_mgz_in_FromINS.wav" volume="0.8" />
+        <sound key="cycle" fileref="pkp_cycle_FromINS.wav" volume="0.8" />
+        <sound class="impact" fileref="rifle_drop.wav" />
+        <model filename="gkw_mg_pk_skill.xml" />
+        <commonness value="0" in_stock="0" can_respawn_with="1" />
+        <capacity value="1" source="rank" source_value="0.0" />
+
+        <hud_icon filename="gkw_pk_skill.png" />
+
+        <projectile file="bullet.projectile">
+            <result class="blast" damage="2.0" radius="2.5" decal="1" push="0.2" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+            <trail probability="1.0" key="BulletApTrail" />
+            <effect class="result" key="terrain" ref="BigBurst" use_surface_color="1" />
+            <effect class="result" key="terrain" ref="LowDust"/>
+            <effect class="result" key="terrain" ref="Shine" lighting="0" />
+            <effect class="result" key="terrain" ref="Godray" lighting="0" />
+            <effect class="result" key="static_object" copy="terrain"/>
+            <effect class="result" key="vehicle" copy="terrain"/>
+        </projectile>
+
+        <shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+
+        <stance state_key="running" accuracy="1.0" />
+        <stance state_key="walking" accuracy="1.0" />
+        <stance state_key="crouch_moving" accuracy="1.0" />
+        <stance state_key="standing" accuracy="1.0" />
+        <stance state_key="crouching" accuracy="1.0" />
+        <stance state_key="prone" accuracy="1.2" /> 
+        <stance state_key="prone_moving" accuracy="1.0" />
+        <stance state_key="over_wall" accuracy="1.2" /> 	
+        <modifier class="speed" value="-6.0" />
+
+    </weapon>
+</weapons>
