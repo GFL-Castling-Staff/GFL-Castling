@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<projectile class="grenade" name="Javelin rocket 1" slot="2" pulldown_in_air="1" key="javelin_rocket_1.projectile">
+    <tag name="rocket"/>
+    <result class="notify_script" key="javelin_uprise" />
+    <trigger class="time" time_to_live="0.8"/>
+    <rotation class="motion" />
+    <model filename="gkw_javelin_rocket.xml" />
+	
+	<sound class="result" key="other" fileref="javelin_shot.wav" volume="0.6" />
+	<sound class="result" key="terrain" copy="other" />
+    <sound class="result" key="static_object" copy="other" />
+    <sound class="result" key="character" copy="other" />
+    <sound class="result" key="vehicle" copy="other" />
+	
+	<effect class="result" key="vehicle" tag="metal_heavy" ref="HitTank" lighting="1" />
+   	<effect class="result" key="vehicle" tag="metal_heavy" ref="HitTankSparks" />
+    <effect class="result" key="vehicle" tag="metal_heavy" ref="SmokeBurst" post_processing="1" />  
+    <effect class="result" key="vehicle" tag="metal_heavy" ref="BurstShine" lighting="0" />
+    <effect class="result" key="vehicle" tag="metal_heavy" ref="Godray" lighting="0" />
+
+    <effect class="result" key="terrain" ref="BigBurst" use_surface_color="1" />
+    <effect class="result" key="terrain" ref="Shine" lighting="0" />
+    <effect class="result" key="terrain" ref="Godray" lighting="0" />
+    <effect class="result" type="splat_map" surface_tag="" size="3.0" atlas_index="0" layer="1" />
+    <effect class="result" type="splat_map" surface_tag="" size="5.0" atlas_index="4" layer="0" />
+    <effect class="result" type="splat_map" surface_tag="" size="6.0" atlas_index="0" layer="2" additive="0" /> <!-- remove top snow everywhere -->
+
+    <effect class="result" key="other" ref="Shine" lighting="0" />
+    <effect class="result" key="other" ref="Godray" lighting="0" />
+
+    <effect class="result" key="static_object" copy="terrain" />
+    <effect class="result" key="vehicle" copy="terrain" />     
+    <effect class="result" key="character" copy="terrain" />
+
+    <!-- <effect class="activated" ref="Propulsion_gl" /> -->
+	<!-- <trail probability="1.0" key="BulletApTrail"/> -->
+
+    <commonness value="0.0" />
+</projectile>

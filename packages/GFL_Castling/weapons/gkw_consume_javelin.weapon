@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon file="base_secondary.weapon" key="gkw_consume_javelin.weapon" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" >
+    <tag name="bazooka" />
+    <specification 
+  retrigger_time="-1.0" 
+  accuracy_factor="1.0" 
+  sustained_fire_grow_step="0.4" 
+  sustained_fire_diminish_rate="0.1" 
+  magazine_size="-1" 
+  can_shoot_standing="1" 
+  can_shoot_crouching="1" 
+  suppressed="0" 
+  name="Javelin" 
+  class="3" 
+  reload_one_at_a_time="1"  
+  sight_range_modifier="1.25" 
+  projectile_speed="400.0" 
+  slot="1" 
+  projectiles_per_shot="1" 
+  barrel_offset_3d="0 10.2 1.1" />
+    <animation key="recoil" ref="40" />
+    <animation key="cycle" ref="30" />
+    <animation key="reload" ref="35" />
+    <animation key="hold" ref="39" />
+    <animation key="hold_on_wall" ref="39" />
+    <sound key="cycle" fileref="sniper_cycle.wav" />
+    <sound key="magazine_out" fileref="sniper_clip_out.wav" />
+    <sound key="magazine_in" fileref="sniper_clip_in.wav" />
+    <sound key="cycle_out" fileref="sniper_cycle_out.wav" />
+    <sound key="cycle_in" fileref="sniper_cycle_in.wav" />
+    <sound class="impact" fileref="rifle_drop.wav" />
+    <model filename="gkw_javelin_2.xml" />
+
+<!--        <ballistics curve_height="10.0" near_far_distance="10.0" speed_estimation_near="80.0" speed_estimation_far="100.0" max_speed="100.0" randomness="0.0" tweak_factor="1.1" /> -->
+<!-- M79    <ballistics curve_height="6.0" near_far_distance="0.0" speed_estimation_near="9.0" speed_estimation_far="17.0" max_speed="30.0" randomness="0.0" tweak_factor="1.1" />   -->
+6
+    <projectile file="javelin_locater_1.projectile" />
+    <weak_hand_hold offset="0.0" />
+
+    <capacity value="0" source="rank" source_value="0.0" />
+    <capacity value="1" source="rank" source_value="0.15" />
+    <capacity value="2" source="rank" source_value="0.25" />
+    <capacity value="3" source="rank" source_value="0.5" />        
+
+    <hud_icon filename="hud_javelin.png" />
+    <commonness value="0.02" can_respawn_with="0" in_stock="1" />
+    <inventory encumbrance="6.0" price="10.0" />
+
+
+    <stance state_key="running" accuracy="0.5" />
+    <stance state_key="walking" accuracy="1.0" />
+    <stance state_key="crouch_moving" accuracy="1.0" />
+    <stance state_key="prone_moving" accuracy="1.0" />
+
+    <stance state_key="standing" accuracy="0.9" />
+    <stance state_key="crouching" accuracy="1.0" />
+    <stance state_key="prone" accuracy="1.0" />
+    <modifier class="speed" value="-0.2" />
+</weapon>

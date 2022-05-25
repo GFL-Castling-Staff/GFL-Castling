@@ -35,6 +35,7 @@ class GFLskill : Tracker {
     protected array<XM8tracker@> XM8track;
 	protected array<HK416_tracker@> HK416_track;
 	protected array<Vector_tracker@> Vector_track;
+	protected array<Javelin_lister@> Javelin_list;
 
 	// --------------------------------------------
 	protected void handleResultEvent(const XmlElement@ event) {
@@ -291,6 +292,83 @@ class GFLskill : Tracker {
 				}									
 			}			
 		}
+
+		//标枪导弹，由初始定位弹头，最终定位弹头，标枪一阶段弹头，标枪二阶段弹头四个脚本弹头联合完成。最终打击由标枪三阶段弹头完成。
+		//发射过程如下：
+		//0.标枪发射器将首先射出初始定位弹头
+		//1.初始定位弹头爆炸后在所在位置与发射者处分别射出最终定位弹头与标枪一阶段弹头
+		//2.标枪一阶段弹头爆炸后将在所在位置生成二阶段弹头
+		//3.在此期间最终弹头需要在二阶段弹头爆炸前引爆并得到最终目标载具坐标
+		//4.标枪二阶段弹头爆炸后将生成三阶段弹头并射向目标。
+
+		if (EventKeyGet == "javelin_launch") {//激发弹头为贴在目标载具上的初始定位弹头
+			_log("javelin_launch");
+			int characterId = event.getIntAttribute("character_id");
+			const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+			if (character !is null) {
+				int factionid = character.getIntAttribute("faction_id");
+				Vector3 target_pos = stringToVector3(event.getStringAttribute("position"));//标枪发射器发射时的载具位置
+				Vector3 aimer_pos = stringToVector3(character.getStringAttribute("position"));
+				Vector3 pos1 = getAimUnitPosition(m_metagame,0.6,aimer_pos,target_pos);
+				Vector3 pos2 = getAimUnitPosition(m_metagame,8.0,aimer_pos,target_pos);
+				pos1 = pos1.add(Vector3(0,1,0));				
+				pos2 = pos2.add(Vector3(0,3,0));
+				CreateProjectile(m_metagame,pos1,      pos2,      					  "javelin_rocket_1.projectile",characterId,factionid,1,1);	
+				CreateProjectile(m_metagame,target_pos,target_pos.add(Vector3(0,0,0)),"javelin_locater_2.projectile",characterId,factionid,0,8);	
+				Javelin_list.insertLast(Javelin_lister(characterId,factionid,target_pos,0));//存储初始定位弹头的位置							
+			}			
+		}
+		if (EventKeyGet == "javelin_uprise") {//激发弹头为标枪导弹一阶段弹头
+			_log("javelin_uprise");
+			int characterId = event.getIntAttribute("character_id");
+			const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+			if (character !is null) {
+				int factionid = character.getIntAttribute("faction_id");
+				Vector3 aimer_pos = stringToVector3(event.getStringAttribute("position"));//标枪导弹一阶段弹头位置
+				if(Javelin_list.length()>0){
+					for (uint a=0;a<Javelin_list.length();a++){
+						if((Javelin_list[a].m_characterId==characterId)&&(Javelin_list[a].m_factionid==factionid)&&(Javelin_list[a].m_state==0)){//在序列中如果能找到
+							_log("javelin_uprise success");
+							Vector3 target_pos = Javelin_list[a].m_pos;
+							CreateProjectile(m_metagame,aimer_pos,target_pos,"javelin_rocket_2.projectile",characterId,factionid,10,-20);	
+							Javelin_list.removeAt(a);
+							break;
+						}
+					}
+				}
+			}		
+		}		
+		if (EventKeyGet == "javelin_locate"){//激发弹头为最终定位弹头
+			_log("javelin_locate");
+			int characterId = event.getIntAttribute("character_id");
+			const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+			if (character !is null) {
+				Vector3 target_pos = stringToVector3(event.getStringAttribute("position"));
+				int factionid = character.getIntAttribute("faction_id");
+				Javelin_list.insertLast(Javelin_lister(characterId,factionid,target_pos,1));			
+			}
+		}		
+		if (EventKeyGet == "javelin_strike") {//激发弹头为标枪导弹二阶段弹头
+			_log("javelin_strike");
+			int characterId = event.getIntAttribute("character_id");
+			const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+			if (character !is null) {
+				int factionid = character.getIntAttribute("faction_id");
+				Vector3 aimer_pos = stringToVector3(event.getStringAttribute("position"));//标枪导弹二阶段弹头位置
+				if(Javelin_list.length()>0){
+					for (uint a=0;a<Javelin_list.length();a++){
+						if((Javelin_list[a].m_characterId==characterId)&&(Javelin_list[a].m_factionid==factionid)&&(Javelin_list[a].m_state==1)){//在序列中如果能找到
+							_log("javelin_strike success");
+							Vector3 target_pos = Javelin_list[a].m_pos;
+							CreateDirectProjectile(m_metagame,aimer_pos,target_pos,"javelin_rocket_3.projectile",characterId,factionid,180);
+							Javelin_list.removeAt(a);
+							break;
+						}
+					}
+				}
+			}		
+		}			
+
 		if (EventKeyGet == "VV_skill"){
 			int characterId = event.getIntAttribute("character_id");
 			const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
@@ -527,6 +605,18 @@ class GFLskill : Tracker {
                 }
             }
         }
+        if(Javelin_list.length()>0){
+            for (uint a=0;a<Javelin_list.length();a++){
+                Javelin_list[a].m_time-=time;
+                if(Javelin_list[a].m_time<0){				
+                    Javelin_list[a].m_numtime--;
+					Javelin_list[a].m_time=1;
+					if (Javelin_list[a].m_numtime<1){
+						Javelin_list.removeAt(a);
+					}
+                }
+            }
+        }		
 	}
 
 
@@ -587,3 +677,18 @@ class Vector_tracker{
 	}
 }
 
+class Javelin_lister{
+    int m_characterId;
+	float m_time=5;
+	int m_numtime=1;
+	int m_factionid;
+	int m_state;
+	Vector3 m_pos;
+	Javelin_lister(int characterId,int factionid,Vector3 pos,int state)
+	{
+		m_characterId = characterId;
+		m_factionid= factionid;
+		m_pos=pos;
+		m_state=state;
+	}
+}
