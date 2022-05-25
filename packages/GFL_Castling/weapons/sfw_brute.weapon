@@ -13,16 +13,9 @@
     <animation state_key="crouching" animation_key="crouch still, brute" />
     <animation state_key="running" animation_key="running2, ninja" />
     <animation state_key="walking" animation_key="walking, brute" />
+    <animation state_key="stabbing" animation_key="stabbing, brute" />
 
-    <animation state_key="stabbing" animation_key="stabbing, zombie" />
-
     <sound key="effect" fileref="" pitch_variety="0.03" volume="0.7" />
-    <sound key="effect" fileref="" pitch_variety="0.03" volume="0.7" />
-    <sound key="effect" fileref="" pitch_variety="0.03" volume="0.7" />
-    <sound key="effect" fileref="" pitch_variety="0.03" volume="0.7" />
-    <sound key="effect" fileref="" pitch_variety="0.03" volume="0.7" />
-    <sound key="effect" fileref="" pitch_variety="0.03" volume="0.7" />
-
 
     <projectile file="teal.projectile">
         <result class="blast" damage="3.0" radius="2.5" decal="1" push="0" character_state="death" faction_compare="not_equal"/>
