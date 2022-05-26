@@ -5,7 +5,7 @@
     <trigger class="time" time_to_live="1.0">
 		<collision class="sticky" />
 	</trigger>
-    <rotation class="motion" />
+    <rotation class="none" />
     <model filename="sfd_manticore_droppod.xml" />
 
     <commonness value="0.0" />
