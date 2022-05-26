@@ -13,6 +13,12 @@
 		<sound key="magazine_out" fileref="star15_mgz_out_FromCOD17.wav" volume="0.7" />
 		<sound key="magazine_in" fileref="star15_mgz_in_FromCOD17.wav" volume="0.7" />
 		<sound key="cycle" fileref="star15_cycle_FromCOD17.wav" volume="0.7" />
+		<sound key="cycle" fileref="AR15Mod_BUILDOVER_JP.wav" volume="0.7" pitch_variety="0"/>
+		<sound key="cycle" fileref="AR15Mod_FEED_JP.wav" volume="0.7" pitch_variety="0"/>
+		<sound key="cycle" fileref="AR15Mod_FIX_JP.wav" volume="0.7" pitch_variety="0"/>
+		<sound key="cycle" fileref="AR15Mod_LOADING_JP.wav" volume="0.7" pitch_variety="0"/>
+		<sound key="cycle" fileref="AR15Mod_PHRASE_JP.wav" volume="0.7" pitch_variety="0"/>
+		<sound key="cycle" fileref="AR15Mod_TIP_JP.wav" volume="0.7" pitch_variety="0"/>
 		<sound class="impact" fileref="rifle_drop.wav" />
 		<model filename="gkw_ar_ar15mod3.xml" />
 		<hud_icon filename="gkw_ar15mod3.png" />
@@ -76,6 +82,11 @@
 		<sound key="magazine_out" fileref="star15_mgz_out_FromCOD17.wav" volume="0.7" />
 		<sound key="magazine_in" fileref="star15_mgz_in_FromCOD17.wav" volume="0.7" />
 		<sound key="cycle" fileref="star15_cycle_FromCOD17.wav" volume="0.7" />
+		<sound key="cycle" fileref="AR15Mod_ATTACK_JP.wav" volume="0.7" pitch_variety="0"/>
+		<sound key="cycle" fileref="AR15Mod_DEFENSE_JP.wav" volume="0.7" pitch_variety="0"/>
+		<sound key="cycle" fileref="AR15Mod_SKILL1_JP.wav" volume="0.7" pitch_variety="0"/>
+		<sound key="cycle" fileref="AR15Mod_SKILL2_JP.wav" volume="0.7" pitch_variety="0"/>
+		<sound key="cycle" fileref="AR15Mod_SKILL3_JP.wav" volume="0.7" pitch_variety="0"/>
 		<commonness value="0" in_stock="0" can_respawn_with="1" />
 
 		<capacity value="0" source="rank" source_value="0.0" />

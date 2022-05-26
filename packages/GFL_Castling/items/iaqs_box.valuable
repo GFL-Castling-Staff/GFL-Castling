@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<carry_item file="base_valuable.carry_item" name="IAQS box" key="iaqs_box.carry_item">
+    <hud_icon filename="IAQS_walletBox.png" />
+    <inventory encumbrance="-1.0" buy_price="20000" sell_price="20000" />
+
+    <model mesh_filename="box_iaqs_8x3x14.xml" texture_filename="" />
+
+    <commonness value="0.01" in_stock="0" />
+</carry_item>
