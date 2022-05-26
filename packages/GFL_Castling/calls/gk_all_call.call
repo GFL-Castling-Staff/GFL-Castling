@@ -135,12 +135,12 @@
     </call>
     <!-- 烟雾搜救妖精 -->
     <call name="UAV medical support" key="gk_rescue_fairy.call" initiation_comment1="Rescue Fairy--Smoke Medical Support" acknowledge_comment="Medical UAV is online and closing in on the target." acknowledge_time="0" launch_comment="Medical support is complete. May everyone survive the mission." notify_metagame="1">
-        <round instances="1" instance_class="grenade" instance_key="smoke_grenade.projectile" instance_spread="0 0 0" common_spread="0 0 0" launch_time="1.5" spawn_time="1.5">
+        <round instances="1" instance_class="grenade" instance_key="smoke_grenade.projectile" instance_spread="0 0 0" common_spread="0 0 0" launch_time="1.5" spawn_time="1.5" horizontal_offset_at_spawn="0.0">
             <sound class="launch" fileref="artillery_barrage_1.wav" volume="1.0" />
             <sound class="launch" fileref="artillery_barrage_2.wav" volume="1.0" />
             <sound class="spawn" fileref="woosh1.wav" volume="0.2" />
         </round>
-        <round instances="8" instance_class="grenade" instance_key="medical_agl_call.projectile" instance_spread="3 6 3" common_spread="0 0 0" launch_time="4.5" spawn_time="4.5">
+        <round instances="8" instance_class="grenade" instance_key="medical_agl_call.projectile" instance_spread="3 6 3" common_spread="0 0 0" launch_time="4.5" spawn_time="4.5" horizontal_offset_at_spawn="0.0">
             <sound class="launch" fileref="artillery_barrage_1.wav" volume="1.0" />
             <sound class="launch" fileref="artillery_barrage_2.wav" volume="1.0" />
             <sound class="spawn" fileref="woosh1.wav" volume="0.2" />
@@ -152,7 +152,7 @@
     </call>
     <!-- 立盾妖精 -->
     <call name="repair_fairy" key="gk_repair_fairy.call" initiation_comment1="Request Barrier Fairy" acknowledge_comment="Confirm, data reception is normal" acknowledge_time="0" launch_comment="Armor Fortification in progress." notify_metagame="1">
-        <round instances="1" instance_class="grenade" instance_key="repair_fairy.projectile" instance_spread="0 0 0" common_spread="0 0 0" launch_time="2.0" spawn_time="3.0">
+        <round instances="1" instance_class="grenade" instance_key="repair_fairy.projectile" instance_spread="0 0 0" common_spread="0 0 0" launch_time="2.0" spawn_time="3.0" horizontal_offset_at_spawn="0.0">
             <sound class="launch" fileref="artillery_barrage_1.wav" volume="1.0" />
             <sound class="launch" fileref="artillery_barrage_2.wav" volume="1.0" />
             <sound class="spawn" fileref="woosh1.wav" volume="0.2" />
@@ -164,7 +164,7 @@
     </call>
     <!-- 搜救妖精 -->
     <call name="repair_capsules" key="gk_medic_agl.call" initiation_comment1="Rescue Fairy--Nano Repair Capsules" acknowledge_comment="Confirm, data reception is normal" acknowledge_time="0" launch_comment="Nano repair capsules in progress." notify_metagame="1">
-        <round instances="8" instance_class="grenade" instance_key="medical_agl_call.projectile" instance_spread="3 6 3" common_spread="0 0 0" launch_time="2.0" spawn_time="3.0">
+        <round instances="8" instance_class="grenade" instance_key="medical_agl_call.projectile" instance_spread="3 6 3" common_spread="0 0 0" launch_time="2.0" spawn_time="3.0" horizontal_offset_at_spawn="0.0">
             <sound class="launch" fileref="artillery_barrage_1.wav" volume="1.0" />
             <sound class="launch" fileref="artillery_barrage_2.wav" volume="1.0" />
             <sound class="spawn" fileref="woosh1.wav" volume="0.2" />

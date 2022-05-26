@@ -1419,7 +1419,7 @@ class CommandSkill : Tracker {
                     c_pos = c_pos.add(Vector3(0,1,0));
 
                     Vector3 u_pos = getAimUnitPosition(m_metagame,1.2,c_pos,stringToVector3(target));
-                    float ori4 = getAimOrientation4(m_metagame,c_pos,stringToVector3(target));
+                    float ori4 = getAimOrientation4(c_pos,stringToVector3(target));
 
                     spawnVehicle(m_metagame,1,0,u_pos,Orientation(0,1,0,ori4),"gk_werlod_shelter.vehicle");		
                     addCoolDown("welrod",20,characterId,modifer);
