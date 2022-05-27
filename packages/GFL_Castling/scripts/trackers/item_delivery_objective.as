@@ -12,7 +12,7 @@
 // ------------------------------------------------------------------------------------------------
 interface ItemDeliveryRewarder {
 	void rewardPiece(int playerId, int characterId, int acceptedAmount, const Resource@ targetItem);
-	void rewardCompletion(int playerId, int characterId, const Resource@ targetItem);
+	void rewardCompletion(int playerId, int characterId, const Resource@ targetItem,uint acceptednum=1);
 }
 
 // ------------------------------------------------------------------------------------------------
@@ -37,7 +37,7 @@ class FixedItemDeliveryRewarder : ItemDeliveryRewarder {
 	}
 
 	// ------------------------------------------------------------------------------------------------
-	void rewardCompletion(int playerId, int characterId, const Resource@ targetItem) {
+	void rewardCompletion(int playerId, int characterId, const Resource@ targetItem,uint acceptednum=1) {
 		if (m_rewardForCompletion > 0.0) {
 			string c = "<command class='rp_reward' character_id='" + characterId + "' reward='" + m_rewardForCompletion + "' />";
 			m_metagame.getComms().send(c);
@@ -338,12 +338,10 @@ class ItemDeliveryObjective : Objective {
 			if (m_thanks != "") {
 				sendPrivateMessageKey(m_metagame, playerId, m_thanks);
 			}
-
+			if (m_rewarder !is null) {
+				m_rewarder.rewardCompletion(playerId, id, targetItem,acceptedAmount);
+			}
 			for (int i = 0; i < acceptedAmount; ++i) {
-				if (m_rewarder !is null) {
-					m_rewarder.rewardCompletion(playerId, id, targetItem);
-				}
-
 				// delivery amount is negative or 0, means it doesn't end ever
 				// each piece delivery can unlock something
 				if (m_unlocker !is null) {
