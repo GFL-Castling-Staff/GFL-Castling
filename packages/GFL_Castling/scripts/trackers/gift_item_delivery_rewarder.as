@@ -102,9 +102,11 @@ class GiftItemDeliveryRandomRewarder : ItemDeliveryRewarder {
 					array<ScoredResource@>@ rewardItems = @m_rewardItemPasses[i];
 
 					ScoredResource@ r = getRandomScoredResource(rewardItems);
-					for (int k = 0; k < r.m_amount; ++k) {
-						addItemInBackpack(m_metagame, characterId, r);
-					}
+					// for (int k = 0; k < r.m_amount; ++k) {
+					// 	addItemInBackpack(m_metagame, characterId, r);
+					// }
+
+					addMutilItemInBackpack(m_metagame,characterId,r,r.m_amount);
 
 					string name = getResourceName(m_metagame, r.m_key, r.m_type);
 					a["%item_name" + formatInt(i+1)] = name;
@@ -130,9 +132,10 @@ class GiftItemDeliveryRandomRewarder : ItemDeliveryRewarder {
 					array<ScoredResource@>@ rewardItems = @m_rewardItemPasses[i];
 
 					ScoredResource@ r = getRandomScoredResource(rewardItems);
-					for (int k = 0; k < r.m_amount; ++k) {
-						addItemInBackpack(m_metagame, characterId, r);
-					}
+					// for (int k = 0; k < r.m_amount; ++k) {
+					// 	addItemInBackpack(m_metagame, characterId, r);
+					// }
+					addMutilItemInBackpack(m_metagame,characterId,r,r.m_amount);
 
 					string name = getResourceName(m_metagame, r.m_key, r.m_type);
 					a["%item_name" + formatInt(i+1)] = name;

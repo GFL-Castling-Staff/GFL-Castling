@@ -285,9 +285,10 @@ class ItemDeliveryObjective : Objective {
 		int leftamount=m_collapseDropAmount - acceptedAmount;
 		if (leftamount>0){
 			sendPrivateMessage(m_metagame, playerId, "TOO many!!!!");
-			for (int k = 0; k < leftamount; ++k) {
-				addItemInBackpack(m_metagame,id,targetItem.m_type,targetItem.m_key);            			
-			}
+			// for (int k = 0; k < leftamount; ++k) {
+			// 	addItemInBackpack(m_metagame,id,targetItem.m_type,targetItem.m_key);            			
+			// }
+			addMutilItemInBackpack(m_metagame,id,targetItem.m_type,targetItem.m_key,leftamount);
 		}
 
 		if (m_deliveryAmount > 0) {

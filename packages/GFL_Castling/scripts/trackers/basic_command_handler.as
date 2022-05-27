@@ -611,11 +611,11 @@ class BasicCommandHandler : Tracker {
             spawnInstanceNearPlayer(senderId, "gift_box_community_1.carry_item", "carry_item", 0);
             spawnInstanceNearPlayer(senderId, "gift_box_community_1.carry_item", "carry_item", 0);
 		} else if (checkCommand(message, "cb2")) {
-			spawnInstanceNearPlayer(senderId, "gift_box_community_2.carry_item", "carry_item", 0);
-            spawnInstanceNearPlayer(senderId, "gift_box_community_2.carry_item", "carry_item", 0);
-            spawnInstanceNearPlayer(senderId, "gift_box_community_2.carry_item", "carry_item", 0);
-            spawnInstanceNearPlayer(senderId, "gift_box_community_2.carry_item", "carry_item", 0);
-            spawnInstanceNearPlayer(senderId, "gift_box_community_2.carry_item", "carry_item", 0);                      
+			spawnInstanceNearPlayer(senderId, "sf_box.carry_item", "carry_item", 0);
+            spawnInstanceNearPlayer(senderId, "sf_box.carry_item", "carry_item", 0);
+            spawnInstanceNearPlayer(senderId, "sf_box.carry_item", "carry_item", 0);
+            spawnInstanceNearPlayer(senderId, "sf_box.carry_item", "carry_item", 0);
+            spawnInstanceNearPlayer(senderId, "sf_box.carry_item", "carry_item", 0);                      
         } else if (checkCommand(message, "cb3")) {
 			spawnInstanceNearPlayer(senderId, "gift_box_community_3.carry_item", "carry_item", 0);
             spawnInstanceNearPlayer(senderId, "gift_box_community_3.carry_item", "carry_item", 0);
@@ -717,10 +717,8 @@ class BasicCommandHandler : Tracker {
 			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","ff_agent.weapon");
 			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","ff_alchemist.weapon");
 		} else if (checkCommand(message,"114514sf")){
-		const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
-			for (int k = 0; k < 500; ++k) {
-				addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"carry_item","gift_box_1.carry_item");            			
-			}
+			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
+			addMutilItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"carry_item","gift_box_1.carry_item",400);            			
 		} else  if(checkCommand(message, "wound")) {
 			for (int i = 2; i < 100; ++i) {
 				string command =

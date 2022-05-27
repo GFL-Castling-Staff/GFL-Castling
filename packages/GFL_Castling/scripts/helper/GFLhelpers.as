@@ -425,6 +425,35 @@ void playAnimationKey(Metagame@ m_metagame,int characterId,string animekey,bool 
 	command.setBoolAttribute("hide_weapon", hide);
 	m_metagame.getComms().send(command);
 }
+
+void addMutilItemInBackpack(Metagame@ metagame, int characterId, const Resource@ r,uint num) {
+	XmlElement command("command");
+	command.setStringAttribute("class", "update_inventory");
+	command.setIntAttribute("character_id", characterId);
+	command.setStringAttribute("container_type_class", "backpack");
+	XmlElement k("item");
+	k.setStringAttribute("class", r.m_type);
+	k.setStringAttribute("key", r.m_key);
+	for(uint i=0;i<num;i++){
+		command.appendChild(k);
+	}
+	metagame.getComms().send(command);
+}
+
+void addMutilItemInBackpack(Metagame@ metagame, int characterId, string ItemType, string ItemKey,uint num) {
+	XmlElement command("command");
+	command.setStringAttribute("class", "update_inventory");
+	command.setIntAttribute("character_id", characterId);
+	command.setStringAttribute("container_type_class", "backpack");
+	XmlElement k("item");
+	k.setStringAttribute("class", ItemType);
+	k.setStringAttribute("key", ItemKey);
+	for(uint i=0;i<num;i++){
+		command.appendChild(k);
+	}
+	metagame.getComms().send(command);
+}
+
 //soundtrack function from ww2dlc thanks for coding wheel
 
 
