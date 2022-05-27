@@ -644,7 +644,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 
     array<array<ScoredResource@>> rewardPasses = {
         {
-    ScoredResource("gu_card.carry_item", "carry_item", 1.0f),
+    ScoredResource("gu_card.carry_item", "carry_item", 1.0f)
         }
     };
     processRewardPasses(rewardPasses);
