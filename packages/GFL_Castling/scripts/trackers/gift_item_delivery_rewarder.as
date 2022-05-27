@@ -13,7 +13,7 @@ class GiftItemDeliveryRewarder : ItemDeliveryRewarder {
 	}
 
 	// ------------------------------------------------------------------------------------------------
-	void rewardCompletion(int playerId, int characterId, const Resource@ targetItem) {
+	void rewardCompletion(int playerId, int characterId, const Resource@ targetItem,uint acceptednum=1) {
 		for (uint i = 0; i < m_rewardItems.size(); ++i) {
 			Resource@ r = m_rewardItems[i];
 			addItemInBackpack(m_metagame, characterId, r);
@@ -85,7 +85,7 @@ class GiftItemDeliveryRandomRewarder : ItemDeliveryRewarder {
 	}
 
 	// ------------------------------------------------------------------------------------------------
-	void rewardCompletion(int playerId, int characterId, const Resource@ targetItem) {
+	void rewardCompletion(int playerId, int characterId, const Resource@ targetItem,uint acceptednum=1) {
 		if (playerId >= 0) {
 			string playerName = "";
 			const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
@@ -95,21 +95,30 @@ class GiftItemDeliveryRandomRewarder : ItemDeliveryRewarder {
 				dictionary a;
 				a["%player_name"] = playerName;
 				a["%delivered_item_name"] = getResourceName(m_metagame, targetItem.m_key, targetItem.m_type);
-
 				sendPrivateMessageKey(m_metagame, playerId, "gift box delivered", a);
 
-				for (uint i = 0; i < m_rewardItemPasses.size(); ++i) {
-					array<ScoredResource@>@ rewardItems = @m_rewardItemPasses[i];
+				XmlElement command("command");
+				command.setStringAttribute("class", "update_inventory");
+				command.setIntAttribute("character_id", characterId);
+				command.setStringAttribute("container_type_class", "backpack");
 
-					ScoredResource@ r = getRandomScoredResource(rewardItems);
-					for (int k = 0; k < r.m_amount; ++k) {
-						addItemInBackpack(m_metagame, characterId, r);
+				for (uint j =0;j<acceptednum;j++){
+					for (uint i = 0; i < m_rewardItemPasses.size(); ++i) {
+						array<ScoredResource@>@ rewardItems = @m_rewardItemPasses[i];
+
+						ScoredResource@ r = getRandomScoredResource(rewardItems);
+						XmlElement k("item");
+						k.setStringAttribute("class", r.m_type);
+						k.setStringAttribute("key", r.m_key);
+						for(int i1=0;i1<r.m_amount;i1++){
+							command.appendChild(k);
+						}
+						string name = getResourceName(m_metagame, r.m_key, r.m_type);
+						a["%item_name" + formatInt(i+1)] = name;
+						sendPrivateMessageKey(m_metagame, playerId, "gift box delivery, reward", a);
 					}
-
-					string name = getResourceName(m_metagame, r.m_key, r.m_type);
-					a["%item_name" + formatInt(i+1)] = name;
 				}
-				sendPrivateMessageKey(m_metagame, playerId, "gift box delivery, reward", a);
+				m_metagame.getComms().send(command);
 			}
 		}
 		// 我不知道为什么这里要写的这么卡，占用大量。
@@ -130,9 +139,10 @@ class GiftItemDeliveryRandomRewarder : ItemDeliveryRewarder {
 					array<ScoredResource@>@ rewardItems = @m_rewardItemPasses[i];
 
 					ScoredResource@ r = getRandomScoredResource(rewardItems);
-					for (int k = 0; k < r.m_amount; ++k) {
-						addItemInBackpack(m_metagame, characterId, r);
-					}
+					// for (int k = 0; k < r.m_amount; ++k) {
+					// 	addItemInBackpack(m_metagame, characterId, r);
+					// }
+					addMutilItemInBackpack(m_metagame,characterId,r,r.m_amount);
 
 					string name = getResourceName(m_metagame, r.m_key, r.m_type);
 					a["%item_name" + formatInt(i+1)] = name;
