@@ -31,6 +31,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		setupEnemyWeaponUnlocks();
 		setupSFgift();
 		setupArmorCraft();
+		setupGucard();
 	}
 
 	// --------------------------------------------
@@ -635,6 +636,25 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 			ItemDeliveryObjective(m_metagame, 0, deliveryList, m_itemDeliveryOrganizer, null, "", "", "", -1 /* loop */, rewarder)
 			);
 	}
+
+	protected void setupGucard() {
+    array<Resource@> deliveryList = {
+         Resource("kudan_box.carry_item", "carry_item")
+    };
+
+    array<array<ScoredResource@>> rewardPasses = {
+        {
+    ScoredResource("gu_card.carry_item", "carry_item", 1.0f),
+        }
+    };
+    processRewardPasses(rewardPasses);
+
+    GiftItemDeliveryRandomRewarder@ rewarder = GiftItemDeliveryRandomRewarder(m_metagame, rewardPasses);
+
+    m_itemDeliveryOrganizer.addObjective(
+        ItemDeliveryObjective(m_metagame, 0, deliveryList, m_itemDeliveryOrganizer, null, "", "", "", -1 /* loop */, rewarder)
+        );
+}
 
 	// ----------------------------------------------------  
 	protected void setupEnemyWeaponUnlocks() {
