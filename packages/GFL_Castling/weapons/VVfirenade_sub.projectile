@@ -4,8 +4,8 @@
 
 
     <!-- <event> -->
-    <trigger class="impact" />
-    <result class="spawn" instance_class="grenade" instance_key="firenade_sub.projectile" min_amount="6" max_amount="6" offset="0 6.0 0" position_spread="1 -6" direction_spread="0.0 0.0" />   
+    <trigger class="time" time_to_live="0.0" />
+    <result class="spawn" instance_class="grenade" instance_key="firenade_sub.projectile" min_amount="6" max_amount="6" offset="0 4.0 0" position_spread="2 -4" direction_spread="0.0 0.0" />   
 
     
 
