@@ -224,7 +224,7 @@ int getNearByEnemyVehicle(Metagame@ metagame, uint factionid, Vector3 judgePos, 
 				if(getAimUnitDistance(1.0,judgePos,vehiclePos)<=radius){
 					int vehicleid = vehicles[i].getIntAttribute("id");
 					const XmlElement@ vehicleInfo = getVehicleInfo(metagame, vehicleid);
-					if( vehicleInfo !is null){
+					if((vehicleInfo !is null)&&(vehicleInfo.getIntAttribute("health")!=0)){
 						_log("Get vehicle id successful.");
 						return vehicleid;
 					}
