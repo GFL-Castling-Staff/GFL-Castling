@@ -6,6 +6,14 @@
     <rotation class="motion" />
     <model filename="gkw_javelin_rocket.xml" />
 	
+    <sound class="result" key="other" fileref="explosion_Large_FromSQUAD_1.wav" volume="2.9" />
+    <sound class="result" key="other" fileref="explosion_Large_FromSQUAD_2.wav" volume="2.9" />
+
+    <sound class="result" key="terrain" copy="other" />
+    <sound class="result" key="static_object" copy="other" />
+    <sound class="result" key="vehicle" copy="other" />
+    <sound class="result" key="character" copy="other" />
+	
 	<effect class="result" key="vehicle" tag="metal_heavy" ref="HitTank" lighting="1" />
    	<effect class="result" key="vehicle" tag="metal_heavy" ref="HitTankSparks" />
     <effect class="result" key="vehicle" tag="metal_heavy" ref="SmokeBurst" post_processing="1" />  

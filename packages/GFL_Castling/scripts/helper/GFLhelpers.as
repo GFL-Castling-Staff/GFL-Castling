@@ -194,7 +194,7 @@ void spawnSoldier(Metagame@ metagame, uint count, uint factionId, string positio
 	}
 }
 
-float getAimOrientation4(Metagame@ metagame, Vector3 s_pos, Vector3 e_pos) {
+float getAimOrientation4(Vector3 s_pos, Vector3 e_pos) {
 	float dx = e_pos.m_values[0]-s_pos.m_values[0];
 	float dy = e_pos.m_values[2]-s_pos.m_values[2];
     float ds = sqrt(dx*dx+dy*dy);
@@ -206,6 +206,42 @@ float getAimOrientation4(Metagame@ metagame, Vector3 s_pos, Vector3 e_pos) {
 	else {
 		return (dir*(-1.0)-1.57)*(-1.0);
 	}
+}
+
+float getAimUnitDistance(float scale, Vector3 s_pos, Vector3 e_pos) {
+	float dx = e_pos.m_values[0]-s_pos.m_values[0];
+	float dy = e_pos.m_values[2]-s_pos.m_values[2];
+    float ds = sqrt(dx*dx+dy*dy);
+	return scale*ds;
+}
+
+int getNearByEnemyVehicle(Metagame@ metagame, uint factionid, Vector3 judgePos, float radius) {
+	for(uint f=0;f<4;f++){
+		if(f<10){
+			array<const XmlElement@>@ vehicles = getAllVehicles(metagame, f);
+			for(uint i=0;i<vehicles.length();i++){
+				Vector3 vehiclePos = stringToVector3(vehicles[i].getStringAttribute("position"));
+				if(getAimUnitDistance(1.0,judgePos,vehiclePos)<=radius){
+					int vehicleid = vehicles[i].getIntAttribute("id");
+					const XmlElement@ vehicleInfo = getVehicleInfo(metagame, vehicleid);
+					if( vehicleInfo !is null){
+						_log("Get vehicle id successful.");
+						return vehicleid;
+					}
+					else return -1;
+				}
+			}
+		}		
+	}
+	return -1;
+}
+
+Vector3 getAimUnitVector(Metagame@ metagame, float scale, Vector3 s_pos, Vector3 e_pos) {
+	float dx = e_pos.m_values[0]-s_pos.m_values[0];
+	float dy = e_pos.m_values[2]-s_pos.m_values[2];
+    float ds = sqrt(dx*dx+dy*dy);
+    if(ds<=0.000001f) ds=0.000001f;
+	return Vector3(dx*scale/ds,0,dy*scale/ds);
 }
 
 Vector3 getAimUnitPosition(Metagame@ metagame, float scale, Vector3 s_pos, Vector3 e_pos) {
