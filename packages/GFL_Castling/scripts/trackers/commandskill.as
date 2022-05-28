@@ -1175,9 +1175,6 @@ class CommandSkill : Tracker {
                             "HK416_Skill1.wav",
                             "HK416_Skill2.wav",
                             "HK416_Skill3.wav",
-                            "HK416_Skill4.wav",
-                            "HK416_Skill5.wav",
-                            "HK416_Skill6.wav",
                             "HK416_SKILL2_JP.wav"
                         };
                         playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);                        

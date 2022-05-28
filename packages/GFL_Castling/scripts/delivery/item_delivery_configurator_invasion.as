@@ -46,6 +46,8 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		setupNether();
 		setupK309();
 		setupSaiwa();
+		setupZhuZhu();
+		setupIDW();
 	}
 
 
@@ -791,6 +793,25 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 			);
 	}
 
+	protected void setupIDW() {
+		array<Resource@> deliveryList = {
+			Resource("idw_box.carry_item", "carry_item")
+		};
+
+		array<array<ScoredResource@>> rewardPasses = {
+			{
+		ScoredResource("gkw_idw.carry_item", "weapon", 1.0f,100)
+			}
+		};
+		processRewardPasses(rewardPasses);
+
+		GiftItemDeliveryRandomRewarder@ rewarder = GiftItemDeliveryRandomRewarder(m_metagame, rewardPasses);
+
+		m_itemDeliveryOrganizer.addObjective(
+			ItemDeliveryObjective(m_metagame, 0, deliveryList, m_itemDeliveryOrganizer, null, "", "", "", -1 /* loop */, rewarder)
+			);
+	}
+	
 	protected void setupSaiwa() {
 		array<Resource@> deliveryList = {
 			Resource("saiwa_box.carry_item", "carry_item")

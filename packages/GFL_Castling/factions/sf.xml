@@ -455,7 +455,7 @@
 
 	<!-- vespid -->
 	<soldier name="sf_vespid" spawn_score="1.5" copy_from="default_spawn_ai">
-		<ai filename="elite.ai" />
+		<ai filename="default.ai" />
 		<model filename="sfd_vespid.xml" />
 		<resources clear_weapons="1" clear_calls="1">
 			<weapon key="sfw_vespid.weapon" enabled="1"/>
@@ -475,6 +475,7 @@
 	<!-- ripper -->
 	<soldier name="sf_ripper" spawn_score="1.5" copy_from="default_spawn_ai">
 		<model filename="sfd_ripper.xml" />
+		<ai filename="default.ai" />
 		<resources clear_weapons="1" clear_calls="1">
 			<weapon key="sfw_ripper.weapon" enabled="1"/>
 			<carry_item key="sf_smg.carry_item" enabled="1" />
@@ -483,6 +484,7 @@
 	</soldier>
 	<soldier name="sf_ripper_swap" spawn_score="0.75" copy_from="default_spawn_ai">
 		<model filename="sfd_ripper_swap_from_dusk.xml" />
+		<ai filename="elite.ai" />
 		<resources clear_weapons="1" clear_calls="1">
 			<weapon key="sfw_ripper_swap.weapon" enabled="1"/>
 			<carry_item key="sf_ar.carry_item" enabled="1" />
@@ -491,7 +493,7 @@
 	</soldier>
 	<!-- guard -->
 	<soldier name="sf_guard" spawn_score="1.5" copy_from="default_spawn_ai">
-		<ai filename="eod.ai" />
+		<ai filename="shield.ai" />
 		<resources clear_weapons="1" clear_calls="1">
 			<weapon key="sfw_guard.weapon" enabled="1"/>
 			<carry_item key="sf_sh.carry_item" enabled="1" />
@@ -517,6 +519,7 @@
 	<!-- striker -->
 	<soldier name="sf_striker" spawn_score="1.5" copy_from="default_spawn_ai">
 		<model filename="sfd_striker.xml" />
+		<ai filename="elite.ai" />
 		<resources clear_weapons="1" clear_calls="1">
 			<weapon key="sfw_striker.weapon" enabled="1"/>
 			<carry_item key="sf_ar.carry_item" enabled="1" />
@@ -554,7 +557,7 @@
 	</soldier>
 	<!-- 劫豹 -->
 	<soldier name="sfw_jaguar" spawn_score="0.8" copy_from="default_spawn_ai">
-		<ai filename="grenadier.ai" />
+		<ai filename="sniper.ai" />
 		<model filename="sfd_sangvisfeaal_swap.xml" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_calls="1">
 			<weapon key="sfw_jaguar.weapon" enabled="1"/>
@@ -658,7 +661,7 @@
 			<sound key="throw" fileref="BossArchitect_buhuo_SKILL02_JP.wav" pitch_variety="0.001" volume="0.8" />
 		</character>
 		<model filename="sfd_boss_architect.xml" />
-		<ai filename="grenadier.ai" />
+		<ai filename="sniper.ai" />
 		<resources clear_vehicles="1" clear_weapons="1">
 			<call key="sf_destroyer.call" />
 			<weapon key="sfw_architect.weapon" enabled="1"/>
@@ -681,7 +684,7 @@
 			<sound key="throw" fileref="Intruder_buhuo_SKILL03_JP.wav" pitch_variety="0.001" volume="0.8" />
 		</character>
 		<model filename="sfd_intruder.xml" />
-		<ai filename="eod.ai" />
+		<ai filename="sniper.ai" />
 		<resources clear_vehicles="1" clear_weapons="1">
 			<call key="sf_jaguar.call" />
 			<weapon key="sfw_Intruder.weapon" enabled="1"/>
@@ -750,7 +753,7 @@
 			<sound key="throw" fileref="BossGager_buhuo_SKILL03_JP.wav" pitch_variety="0.001" volume="0.8" />
 		</character>
 		<model filename="sfd_gager.xml" />
-		<ai filename="eod.ai" />
+		<ai filename="elite.ai" />
 		<resources clear_vehicles="1" clear_weapons="1">
 			<call key="sf_jaguar.call" />
 			<call key="sf_destroyer.call" />
@@ -774,7 +777,7 @@
 			<sound key="throw" fileref="Excutioner_buhuo_SKILL03_JP.wav" pitch_variety="0.001" volume="0.8" />
 		</character>
 		<model filename="sfd_excutioner.xml" />
-		<ai filename="melee.ai" />
+		<ai filename="eod.ai" />
 		<resources clear_vehicles="1" clear_weapons="1">
 			<call key="sf_jaguar.call" />
 			<weapon key="sfw_excutioner_1.weapon" enabled="1"/>
@@ -797,7 +800,7 @@
 			<sound key="throw" fileref="Excutioner_buhuo_SKILL03_JP.wav" pitch_variety="0.001" volume="0.8" />
 		</character>
 		<model filename="sfd_excutioner.xml" />
-		<ai filename="eod.ai" />
+		<ai filename="melee.ai" />
 		<resources clear_vehicles="1" clear_weapons="1">
 			<call key="sf_jaguar.call" />
 			<weapon key="sfw_excutioner_2.weapon" enabled="1"/>
@@ -874,7 +877,7 @@
 			<sound key="throw" fileref="Destroyer_buhuo_SKILL01_JP.wav" pitch_variety="0.001" volume="0.8" />
 		</character>
 		<model filename="sfd_destroyer.xml" />
-		<ai filename="sniper.ai" />
+		<ai filename="eod.ai" />
 		<resources clear_vehicles="1" clear_weapons="1">
 			<weapon key="sfw_destroyer.weapon" enabled="1"/>
 			<projectile key="hand_grenade.projectile"/>
@@ -901,7 +904,7 @@
 			<sound key="throw" fileref="Weaver_buhuo_WIN_JP.wav" pitch_variety="0.001" volume="0.8" />
 		</character>
 		<model filename="sfd_ouroboros.xml" />
-		<ai filename="elite.ai" />
+		<ai filename="sniper.ai" />
 		<resources clear_vehicles="1" clear_weapons="1">
 			<weapon key="sfw_weaver.weapon" enabled="1"/>
 			<projectile key="hand_grenade.projectile"/>
@@ -959,7 +962,7 @@
 			<sound key="throw" fileref="Scarecrow_buhuo_GOATTACK_JP.wav" pitch_variety="0.001" volume="0.8" />
 		</character>
 		<model filename="sfd_scarecrow.xml" />
-		<ai filename="eod.ai" />
+		<ai filename="elite.ai" />
 		<resources clear_vehicles="1" clear_weapons="1">
 			<weapon key="sfw_scarecrow.weapon" enabled="1"/>
 			<projectile key="hand_grenade.projectile"/>
@@ -1033,7 +1036,7 @@
 	<!-- scouts侦查者 -->
 	<soldier name="sf_scouts" spawn_score="0.50">
 		<model filename="sfd_scout.xml" />
-		<ai filename="eod.ai" />
+		<ai filename="eod_mecha.ai" />
 		<character filename="default_sf_bot.character" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1">
 			<weapon key="sfw_scouts.weapon"/>
