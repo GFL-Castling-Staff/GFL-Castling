@@ -370,9 +370,16 @@ class GFLskill : Tracker {
 							if(target_id!=-1){
 								_log("aimming 2 success.");
 								const XmlElement@ target_info = getVehicleInfo(m_metagame, target_id);
+								
 								Vector3 target_pos1 = stringToVector3(target_info.getStringAttribute("position"));
-								DelayProjectileSet(metagame,0.1); 
+								_log("Position 1 = "+target_pos1.toString());
+
+								TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+								tasker.add(DelayProjectileSet(m_metagame,0.8,characterId,factionid,"bullet.projectile",target_pos1));
+								
 								Vector3 target_pos2 = stringToVector3(target_info.getStringAttribute("position"));
+								_log("Position 2 = "+target_pos2.toString());
+
 								target_fin_pos = target_pos2.add(getAimUnitVector(m_metagame,5.0,target_pos1,target_pos2));//标枪导弹目标位置
 							}
 							else{
@@ -475,7 +482,7 @@ class GFLskill : Tracker {
 			const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
 			if (character !is null) {
 				playAnimationKey(m_metagame,characterId,"stabbing_roarer",false);
-				string pos = event.getStringAttribute("position");
+				Vector3 pos = stringToVector3(event.getStringAttribute("position"));
 				TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
 				tasker.add(DelayProjectileSet(m_metagame,0.8,characterId,character.getIntAttribute("faction_id"),"roarer_main.projectile",pos));
 			}

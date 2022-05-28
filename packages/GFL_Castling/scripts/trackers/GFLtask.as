@@ -47,15 +47,15 @@ class DelayProjectileSet :Task{
     protected int m_faction_id;
     protected string m_key;
 	protected float m_timeLeft;
-	protected string m_pos;
+	protected Vector3 m_pos;
 
-	DelayProjectileSet(Metagame@ metagame, float time) {
+	DelayProjectileSet(Metagame@ metagame, float time, int cId,int fId,string key,Vector3 pos) {
 		@m_metagame = metagame;
 		m_time = time;
-		m_character_id = 0;
-		m_faction_id = 0;
-		m_key="bullet.projectile";
-		m_pos="10 10 10";
+		m_character_id = cId;
+		m_faction_id =fId;
+		m_key=key;
+		m_pos=pos;
 	}
 
 	void start() {
@@ -71,7 +71,7 @@ class DelayProjectileSet :Task{
 				" faction_id='"+ m_faction_id +"'" +
 				" instance_class='grenade'" +
 				" instance_key='" + m_key +"'" +
-				" position='" + m_pos + "'"+
+				" position='" + m_pos.toString() + "'"+
 				" character_id='" + m_character_id + "' />";
 			m_metagame.getComms().send(c);
 		}
