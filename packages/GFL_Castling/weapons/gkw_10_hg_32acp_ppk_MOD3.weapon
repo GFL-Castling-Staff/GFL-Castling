@@ -43,8 +43,8 @@
     <weak_hand_hold offset="0.1" />
     <projectile file="bullet.projectile" can_be_detected_by_footmen="0">
         <result class="hit"
-		kill_probability="1.35"
-        kill_probability_offset_on_successful_hit="3"
+		kill_probability="1.55"
+        kill_probability_offset_on_successful_hit="8"
 		kill_decay_start_time="0.162"
 		kill_decay_end_time="0.375"  />
     </projectile>
@@ -59,5 +59,5 @@
     <stance state_key="crouching" accuracy="0.95" />
     <stance state_key="prone" accuracy="1" />
     <modifier class="detectability" value="-0.1" />
-    <modifier class="speed" value="0.25" />
+    <modifier class="speed" value="0.65" />
 </weapon>
