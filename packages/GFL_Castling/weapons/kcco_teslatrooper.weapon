@@ -9,7 +9,7 @@
 	accuracy_factor="0.75" 
 	sustained_fire_grow_step="-2.0" 
 	sustained_fire_diminish_rate="0.9" 
-	magazine_size="12" 
+	magazine_size="3" 
 	can_shoot_standing="1" 
 	can_shoot_crouching="0"
 	can_shoot_prone="0"
@@ -17,8 +17,7 @@
 	name="Code:Teslatrooper" 
 	class="4" 
 	reload_one_at_a_time="0"
-	sight_range_modifier="1.0" 
-	ai_sight_range_modifier="1.1"
+	sight_range_modifier="0.75" 
 	projectile_speed="76.0" 
 	carry_in_two_hands="0" 
 	projectiles_per_shot="5" 
@@ -26,10 +25,9 @@
 	barrel_offset_3d="0.6 1 0.5"/>
     <animation state_key="recoil"	animation_key="recoil, large mecha" />
     <animation key="reload" animation_key="change weapon, large mecha" />
-    <animation state_key="cycle" animation_key="still, large mecha" />
-    <animation key="walking" target_key="walking, large mecha" />
-    <animation key="running" target_key="walking, large mecha" />
-    <animation key="stabbing" target_key="stabbing, large mecha" />
+    <animation state_key="cycle" animation_key="still_big_unit" />
+    <animation key="walking" target_key="walking_big_unit" />
+    <animation key="running" target_key="running_big_unit" />
     <sound key="fire" fileref="Teslatrooper_fire_FromBF5.wav" volume="1.1" />
     <sound key="cycle" fileref="mossberg500_cycle.wav" />
     <sound key="reload_one" fileref="Teslatrooper_reload_FromBF5.wav" volume="0.8" />
