@@ -49,6 +49,17 @@
 
     <hud_icon filename="sfw_manticore.png" />
 
+	<shield offset="2.7 3.0 1.5" extent="0.3 5.0 4.0" />
+	<!-- state modifiers for weapons are connected to shield impact events -->
+	<!-- deflects all bullets; death, stun, wound become none, doesn't consume -->
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="death" consumes_item="0" />
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+	<!-- death and wound blast causes the item to be consumed, stun is ignored -->
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0" />
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+
 	<drop_on_death_result class="spawn" instance_class="carry_item" instance_key="city_gifts.carry_item" min_amount="1.0" max_amount="1.0" offset="0 1.0 0" position_spread="0 0" direction_spread="0 0" />
 
     <capacity value="1" source="rank" source_value="0.0" />
