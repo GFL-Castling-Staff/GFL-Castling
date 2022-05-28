@@ -808,7 +808,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 			},
 			{
 		ScoredResource("cc_t5_16lab.carry_item", "carry_item", 1.0f)
-			}
+			},
 			{
 		ScoredResource("saiwa_juggernaut.carry_item", "carry_item", 1.0f)
 			}
