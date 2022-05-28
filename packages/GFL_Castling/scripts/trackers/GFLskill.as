@@ -473,15 +473,10 @@ class GFLskill : Tracker {
 			int characterId = event.getIntAttribute("character_id");
 			const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
 			if (character !is null) {
-				string Pos_40mm = character.getStringAttribute("position");
-				string c = 
-					"<command class='create_instance'" +
-					" faction_id='"+ character.getIntAttribute("faction_id") +"'" +
-					" instance_class='grenade'" +
-					" instance_key= 'roarer_main.projectile'" +
-					" position='" + Pos_40mm + "'"+
-					" character_id='" + characterId + "' />";
-				m_metagame.getComms().send(c);
+				playAnimationKey(m_metagame,characterId,"stabbing_roarer",false);
+				string pos = event.getStringAttribute("position");
+				TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+				tasker.add(DelayProjectileSet(m_metagame,0.8,characterId,character.getIntAttribute("faction_id"),"roarer_main.projectile",pos));
 			}
 		}
 		if(EventKeyGet == "roarer_skill" ){

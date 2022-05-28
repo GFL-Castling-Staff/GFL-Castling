@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projectile class="grenade" name="" slot="1" pulldown_in_air="-60">
     <result class="notify_script" key="roarer"/>
-    <trigger class="time" time_to_live="0.8">
+    <trigger class="time" time_to_live="0.0">
         <collider class="terrain" enabled="1" />
         <collider class="static_object" enabled="1" />
         <collider class="vehicle" enabled="1" />
