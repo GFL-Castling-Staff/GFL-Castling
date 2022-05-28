@@ -85,6 +85,56 @@ class DelayProjectileSet :Task{
 	}
 }
 
+class DelayMovingProjectileSet :Task{
+	protected Metagame@ m_metagame;
+	protected float m_time;
+    protected int m_character_id;
+    protected int m_faction_id;
+    protected string m_key;
+	protected float m_timeLeft;
+	protected Vector3 m_offset;
+
+	DelayMovingProjectileSet(Metagame@ metagame, float time, int cId,int fId,string key,Vector3 pos) {
+		@m_metagame = metagame;
+		m_time = time;
+		m_character_id = cId;
+		m_faction_id =fId;
+		m_key=key;
+		m_offset=pos;
+	}
+
+	void start() {
+		m_timeLeft=m_time;
+	}
+
+	void update(float time) {
+		m_timeLeft -= time;
+		if (m_timeLeft < 0)
+		{
+			const XmlElement@ character = getCharacterInfo(m_metagame, m_character_id);
+			if (character !is null) {
+				Vector3 now_pos = stringToVector3(character.getStringAttribute("position"));
+				now_pos=now_pos.add(m_offset);
+				string c = 
+					"<command class='create_instance'" +
+					" faction_id='"+ m_faction_id +"'" +
+					" instance_class='grenade'" +
+					" instance_key='" + m_key +"'" +
+					" position='" + now_pos.toString() + "'"+
+					" character_id='" + m_character_id + "' />";
+				m_metagame.getComms().send(c);
+			}
+		}
+	}
+
+    bool hasEnded() const {
+		if (m_timeLeft < 0) {
+			return true;
+		}
+		return false;
+	}
+}
+
 class Jupiter_Airstrike_Task : Task {
     protected GameMode@ m_metagame;
 	protected float reload_cycle;
