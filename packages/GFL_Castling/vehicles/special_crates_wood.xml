@@ -1,0 +1,15 @@
+<vehicles>
+    <!-- if you add something here, remember to add it in common.resources too! -->
+    <vehicle filename="special_crate_wood_base.vehicle" key="special_crate_wood1.vehicle">
+		<event>
+			<trigger class="destroy" />
+			<result class="spawn" instance_class="weapon" instance_key="gkw_consume_javelin.weapon" min_amount="2" max_amount="3" offset="0 1.0 0" position_spread="0 0" direction_spread="0.04 0.2" />
+		</event>
+    </vehicle>
+    <vehicle filename="special_crate_wood_base.vehicle" key="special_crate_wood2.vehicle">
+		<event>
+			<trigger class="destroy" />
+			<result class="spawn" instance_class="weapon" instance_key="vest_repair_quick.weapon" min_amount="3" max_amount="3" offset="0 1.0 0" position_spread="0 0" direction_spread="0.04 0.2" />
+		</event>
+    </vehicle>
+</vehicles>

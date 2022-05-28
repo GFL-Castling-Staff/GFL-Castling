@@ -40,6 +40,7 @@
 6
     <projectile file="javelin_locater_1.projectile" />
     <weak_hand_hold offset="0.0" />
+    <commonness value="0" in_stock="0" can_respawn_with="0" />
 
     <capacity value="0" source="rank" source_value="0.0" />
     <capacity value="1" source="rank" source_value="0.15" />
@@ -47,8 +48,7 @@
     <capacity value="3" source="rank" source_value="0.5" />        
 
     <hud_icon filename="hud_javelin.png" />
-    <commonness value="0" can_respawn_with="0" in_stock="1" />
-    <inventory encumbrance="6.0" price="10.0" />
+    <inventory encumbrance="30.0" price="1000.0" />
 
 
     <stance state_key="running" accuracy="0.5" />

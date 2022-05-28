@@ -1,5 +1,4 @@
 <vehicles>
-
 	<vehicle filename="special_crate_base.vehicle" key="gflc_crate1.vehicle">
 		<event>
 			<trigger class="destroy" />
@@ -9,19 +8,19 @@
 	<vehicle filename="special_crate_base.vehicle" key="gflc_crate2.vehicle">
 		<event>
 			<trigger class="destroy" />
-			<result class="spawn" instance_class="carry_item" instance_key="city_gifts.carry_item" min_amount="3" max_amount="5" offset="0 1.0 0" position_spread="0 0" direction_spread="0.04 0.2" />
+			<result class="spawn" instance_class="carry_item" instance_key="city_gifts.carry_item" min_amount="10" max_amount="10" offset="0 1.0 0" position_spread="0 0" direction_spread="0.04 0.2" />
 		</event>
 	</vehicle>
 	<vehicle filename="special_crate_base.vehicle" key="gflc_crate3.vehicle">
 		<event>
 			<trigger class="destroy" />
-			<result class="spawn" instance_class="carry_item" instance_key="snow_gifts.carry_item" min_amount="3" max_amount="5" offset="0 1.0 0" position_spread="0 0" direction_spread="0.04 0.2" />
+			<result class="spawn" instance_class="carry_item" instance_key="snow_gifts.carry_item" min_amount="10" max_amount="10" offset="0 1.0 0" position_spread="0 0" direction_spread="0.04 0.2" />
 		</event>
 	</vehicle>
 	<vehicle filename="special_crate_base.vehicle" key="gflc_crate4.vehicle">
 		<event>
 			<trigger class="destroy" />
-			<result class="spawn" instance_class="carry_item" instance_key="gold_bar.carry_item" min_amount="1" max_amount="2" offset="0 1.0 0" position_spread="0 0" direction_spread="0.04 0.2" />
+			<result class="spawn" instance_class="carry_item" instance_key="gold_bar.carry_item" min_amount="2" max_amount="2" offset="0 1.0 0" position_spread="0 0" direction_spread="0.04 0.2" />
 		</event>
 	</vehicle>
 	<vehicle filename="special_crate_base.vehicle" key="gflc_crate5.vehicle">
@@ -45,13 +44,19 @@
 	<vehicle filename="special_crate_base.vehicle" key="gflc_crate8.vehicle">
 		<event>
 			<trigger class="destroy" />
-			<result class="spawn" instance_class="carry_item" instance_key="chocolate.carry_item" min_amount="10" max_amount="30" offset="0 1.0 0" position_spread="0 0" direction_spread="0.04 0.2" />
+			<result class="spawn" instance_class="carry_item" instance_key="chocolate.carry_item" min_amount="30" max_amount="30" offset="0 1.0 0" position_spread="0 0" direction_spread="0.04 0.2" />
 		</event>
 	</vehicle>
 	<vehicle filename="special_crate_base.vehicle" key="gflc_crate9.vehicle">
 		<event>
 			<trigger class="destroy" />
 			<result class="spawn" instance_class="carry_item" instance_key="RO365_Ant_Doll.carry_item" min_amount="1" max_amount="1" offset="0 1.0 0" position_spread="0 0" direction_spread="0.04 0.2" />
+		</event>
+	</vehicle>
+	<vehicle filename="special_crate_base.vehicle" key="gflc_crate10.vehicle">
+		<event>
+			<trigger class="destroy" />
+			<result class="spawn" instance_class="weapon" instance_key="gkw_consume_javelin.weapon" min_amount="3" max_amount="5" offset="0 1.0 0" position_spread="0 0" direction_spread="0.04 0.2" />
 		</event>
 	</vehicle>
 </vehicles>

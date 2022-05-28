@@ -162,15 +162,6 @@ class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 		array<string> trackedCrates;
 		trackedCrates.push_back("special_crate_wood1.vehicle");
 		trackedCrates.push_back("special_crate_wood2.vehicle");
-		trackedCrates.push_back("special_crate_wood3.vehicle");
-		trackedCrates.push_back("special_crate_wood4.vehicle");
-		trackedCrates.push_back("special_crate_wood5.vehicle");
-		trackedCrates.push_back("special_crate_wood6.vehicle");
-		trackedCrates.push_back("special_crate_wood7.vehicle");
-		trackedCrates.push_back("special_crate_wood8.vehicle");
-		trackedCrates.push_back("special_crate_wood9.vehicle");
-		trackedCrates.push_back("special_crate_wood10.vehicle");
-
 		@m_specialCrateManager = SpecialVehicleManager(this, "special_crate_manager", trackedCrates);
 	}
 
