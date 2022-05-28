@@ -269,8 +269,10 @@ class MapRotatorInvasion : MapRotator {
 				break;
 			}
 		}
-	
+
 		commitToMapChange(index);
+		addCustomStatToAllPlayers(m_metagame, "stage_completed");
+
 	}
 
 	// --------------------------------------------
