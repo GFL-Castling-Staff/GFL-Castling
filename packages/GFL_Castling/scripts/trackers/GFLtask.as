@@ -49,13 +49,13 @@ class DelayProjectileSet :Task{
 	protected float m_timeLeft;
 	protected string m_pos;
 
-	DelayProjectileSet(Metagame@ metagame, float time, int cId,int fId,string key,string pos) {
+	DelayProjectileSet(Metagame@ metagame, float time) {
 		@m_metagame = metagame;
 		m_time = time;
-		m_character_id = cId;
-		m_faction_id =fId;
-		m_key=key;
-		m_pos=pos;
+		m_character_id = 0;
+		m_faction_id = 0;
+		m_key="bullet.projectile";
+		m_pos="10 10 10";
 	}
 
 	void start() {

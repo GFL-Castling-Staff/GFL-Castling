@@ -208,6 +208,13 @@ float getAimOrientation4(Vector3 s_pos, Vector3 e_pos) {
 	}
 }
 
+Vector3 getVehicleSpeedVector(Vector3 s_pos, Vector3 scale) {
+	float x = s_pos.m_values[0]*scale.m_values[0];
+	float y = s_pos.m_values[2]*scale.m_values[1];
+	float z = s_pos.m_values[1]*scale.m_values[2];
+	return Vector3(x,y,z);
+}
+
 float getAimUnitDistance(float scale, Vector3 s_pos, Vector3 e_pos) {
 	float dx = e_pos.m_values[0]-s_pos.m_values[0];
 	float dy = e_pos.m_values[2]-s_pos.m_values[2];
@@ -215,7 +222,49 @@ float getAimUnitDistance(float scale, Vector3 s_pos, Vector3 e_pos) {
 	return scale*ds;
 }
 
-int getNearByEnemyVehicle(Metagame@ metagame, uint factionid, Vector3 judgePos, float radius) {
+array<string> unlockable_vehicles = {
+	"deco_car1_brown.vehicle",
+	"deco_car1_blue.vehicle",
+	"deco_car1_yellow.vehicle",
+	"deco_car1_black.vehicle",
+	"deco_car1_white.vehicle",
+	"deco_car1_red.vehicle",
+	"deco_car1_pink.vehicle",
+	"deco_car1_green.vehicle",
+
+	"deco_car2_red.vehicle",
+	"deco_car2_green.vehicle",
+	"deco_car2_yellow.vehicle",
+	"deco_car2_white.vehicle",
+	"deco_car2_silver.vehicle",
+	"deco_car2_grey.vehicle",
+	"deco_car2_brown.vehicle",
+	"deco_car2_blue.vehicle",
+	"deco_car2_black.vehicle",
+
+	"deco_car3_sky.vehicle",
+	"deco_car3_green.vehicle",
+	"deco_car3_blue.vehicle",
+	"deco_car3_red.vehicle",
+	"deco_car3_yellow.vehicle",
+	"deco_car3_black.vehicle",
+
+	"deco_van_blue.vehicle",
+	"deco_van_khaki.vehicle",
+	"deco_van_sky.vehicle",
+	"deco_van_brown.vehicle",
+	"deco_van_yellow.vehicle",
+	"deco_van_red.vehicle",
+	"deco_van_green.vehicle",
+
+	"deco_pickup_red.vehicle",
+	"deco_pickup_yellow.vehicle",
+	"deco_pickup_blue.vehicle",
+	"deco_pickup_green.vehicle",
+	"deco_pickup_khaki.vehicle"
+};
+
+int getNearByEnemyVehicle(Metagame@ metagame, uint ownerid, Vector3 judgePos, float radius) {
 	for(uint f=0;f<4;f++){
 		if(f<10){
 			array<const XmlElement@>@ vehicles = getAllVehicles(metagame, f);
@@ -224,7 +273,10 @@ int getNearByEnemyVehicle(Metagame@ metagame, uint factionid, Vector3 judgePos, 
 				if(getAimUnitDistance(1.0,judgePos,vehiclePos)<=radius){
 					int vehicleid = vehicles[i].getIntAttribute("id");
 					const XmlElement@ vehicleInfo = getVehicleInfo(metagame, vehicleid);
-					if((vehicleInfo !is null)&&(vehicleInfo.getIntAttribute("health")!=0)){
+					if((vehicleInfo !is null)  //载具存在
+						&&(vehicleInfo.getIntAttribute("health")!=0)  //载具未被击毁
+						//&&(vehicleInfo.getIntAttribute("owner_id")!=ownerid)   //载具正在被我方阵营使用
+						&&(unlockable_vehicles.find(vehicleInfo.getStringAttribute("TagName"))==-1)){  //载具不是中立地图物件
 						_log("Get vehicle id successful.");
 						return vehicleid;
 					}

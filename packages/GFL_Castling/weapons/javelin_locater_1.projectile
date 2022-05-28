@@ -3,7 +3,7 @@
 
     <result class="notify_script" key="javelin_launch" />
     <collision class="sticky" />
-    <trigger class="time" time_to_live="0.3"/>
+    <trigger class="impact"/>
     <rotation class="motion" />
     
     <model mesh_filename="" />
