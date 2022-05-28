@@ -27,10 +27,10 @@
 
 
 
-        <sound key="fire" fileref="ots14_fire_FromFC6.wav" pitch_variety="0.05" volume="1" />
-        <sound key="magazine_out" fileref="ots14_mgz_out_FromCOD17.wav" volume="0.8" />
-        <sound key="magazine_in" fileref="ots14_mgz_in_FromCOD17.wav" volume="0.8" />
-        <sound key="cycle" fileref="ots14_cycle_FromCOD17.wav" volume="0.8" />
+    <sound key="fire" fileref="ots14_fire_FromFC6.wav" pitch_variety="0.05" volume="1" />
+    <sound key="magazine_out" fileref="ots14_mgz_out_FromCOD17.wav" volume="0.8" />
+    <sound key="magazine_in" fileref="ots14_mgz_in_FromCOD17.wav" volume="0.8" />
+    <sound key="cycle" fileref="ots14_cycle_FromCOD17.wav" volume="0.8" />
     <sound class="impact" fileref="rifle_drop.wav" />
     <model filename="gkw_ar_ots14.xml" />
 
@@ -40,7 +40,7 @@
 
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet.projectile" can_be_detected_by_footmen="0">
-      <result class="hit" kill_probability="1.75" kill_decay_start_time="0.5" kill_decay_end_time="0.875" />
+      <result class="hit" kill_probability="1.8" kill_probability_offset_on_successful_hit="0.5" kill_decay_start_time="0.5" kill_decay_end_time="0.875" />
     </projectile>
 
     <stance state_key="running" accuracy="0.5" />
@@ -80,10 +80,10 @@
 
 
 
-        <sound key="fire" fileref="ots14skill_fire_FromBF4.wav" pitch_variety="0.05" volume="1" />
-        <sound key="magazine_out" fileref="ots14_mgz_out_FromCOD17.wav" volume="0.8" />
-        <sound key="magazine_in" fileref="ots14_mgz_in_FromCOD17.wav" volume="0.8" />
-        <sound key="cycle" fileref="ots14_cycle_FromCOD17.wav" volume="0.8" />
+    <sound key="fire" fileref="ots14skill_fire_FromBF4.wav" pitch_variety="0.05" volume="1" />
+    <sound key="magazine_out" fileref="ots14_mgz_out_FromCOD17.wav" volume="0.8" />
+    <sound key="magazine_in" fileref="ots14_mgz_in_FromCOD17.wav" volume="0.8" />
+    <sound key="cycle" fileref="ots14_cycle_FromCOD17.wav" volume="0.8" />
     <sound class="impact" fileref="rifle_drop.wav" />
     <model filename="gkw_ar_ots14.xml" />
 
@@ -93,7 +93,7 @@
 
     <weak_hand_hold offset="0.2" can_be_detected_by_footmen="0"/>
     <projectile file="bullet.projectile">
-      <result class="hit" kill_probability="1.75" kill_probability_offset_on_successful_hit="1" kill_decay_start_time="0.5" kill_decay_end_time="0.875" />
+      <result class="hit" kill_probability="1.8" kill_probability_offset_on_successful_hit="1.5" kill_decay_start_time="0.5" kill_decay_end_time="0.875" />
     </projectile>
 
     <stance state_key="running" accuracy="0.8" />

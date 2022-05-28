@@ -988,8 +988,7 @@ class CommandSkill : Tracker {
             Vector3 s_pos = stringToVector3(target);        
             int factionid = characterinfo.getIntAttribute("faction_id");
 
-            CreateProjectile(m_metagame,c_pos,s_pos,"baibaozi_skill.projectile",characterId,factionid,120,12);
-
+            CreateDirectProjectile(m_metagame,c_pos,s_pos,'baibaozi_skill.projectile',characterId,factionid,120);
             // array<string> Voice={
             // "Excutioner_buhuo_SKILL02_JP.wav",
             // "Excutioner_buhuo_SKILL03_JP.wav",
@@ -1598,14 +1597,14 @@ class CommandSkill : Tracker {
                     };
                     playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
 
-                    CreateProjectile_H(m_metagame,c_pos.add(Vector3(0,2,0)),c_pos.add(Vector3(0,12,0)),'ff_justice_riderkick_1.projectile',characterId,factionid,30,12);
+                    //CreateProjectile_H(m_metagame,c_pos.add(Vector3(0,2,0)),c_pos.add(Vector3(0,12,0)),'ff_justice_riderkick_1.projectile',characterId,factionid,30,12);
                     
                     c_pos = c_pos.add(Vector3(0,12,0));
                     Vector3 e_pos = stringToVector3(target);
 
                     CreateDirectProjectile(m_metagame,c_pos,e_pos,'ff_justice_riderkick_2.projectile',characterId,factionid,120);
                 
-                    addCoolDown("justice",1,characterId,modifer);
+                    addCoolDown("justice",15,characterId,modifer);
                 }
             }
         }   
