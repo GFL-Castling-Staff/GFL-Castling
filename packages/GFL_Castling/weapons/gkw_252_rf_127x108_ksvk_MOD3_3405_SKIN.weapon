@@ -8,8 +8,8 @@
     <specification 
 	retrigger_time="2.0" 
 	accuracy_factor="1" 
-	sustained_fire_grow_step="4" 
-	sustained_fire_diminish_rate="0.5" 
+	sustained_fire_grow_step="3" 
+	sustained_fire_diminish_rate="1" 
 	magazine_size="5" 
 	can_shoot_standing="0" 
 	can_shoot_crouching="1"
@@ -121,7 +121,7 @@
 
     <weak_hand_hold offset="0.3" />
     <projectile file="ksvk_mod3.projectile" >
-        <result class="blast" radius="4" damage="7" push="0.4" decal="0" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0" />
+        <result class="blast" radius="5" damage="7" push="0.4" decal="0" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0" />
     </projectile>
 
     <!--Accuracy, Movement speed-->

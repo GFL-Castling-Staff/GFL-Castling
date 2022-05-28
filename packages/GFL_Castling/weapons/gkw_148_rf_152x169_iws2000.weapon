@@ -7,7 +7,7 @@
     <specification 
     affect_vehicles="1"
 	retrigger_time="1.5" 
-	accuracy_factor="1" 
+	accuracy_factor="0.9" 
 	sustained_fire_grow_step="1.5" 
 	sustained_fire_diminish_rate="1" 
 	magazine_size="5" 
@@ -56,7 +56,7 @@
     <projectile file="iwsAPFSDS.projectile">
         <result class="blast" 
         damage="4" 
-        radius="2" 
+        radius="3.5" 
         decal="1" 
         push="0" 
         character_state="death"
