@@ -35,6 +35,10 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		setupMusksocks();
 		setupRegingFlamebox();
 		setupAk12();
+		setupSv98();
+		setupNether();
+		setupK309();
+		setupSaiwa();
 	}
 
 	// --------------------------------------------
@@ -692,10 +696,11 @@ protected void setupRegingFlamebox() {
     ScoredResource("gkw_type100_banzai.weapon", "weapon", 1.0f)
         },
         {
-    ScoredResource("hand_88grenade.projectile", "weapon", 1.0f),
-    ScoredResource("zas_paint.carry_item", "weapon", 1.0f),
-    ScoredResource("gkw_88rocker.weapon", "weapon", 1.0f),
-    ScoredResource("c4.projectile", "weapon", 1.0f)
+	ScoredResource("gkw_88rocker.weapon", "weapon", 1.0f, 40),
+    ScoredResource("hand_88grenade.projectile", "projectile", 1.0f, 40),
+	ScoredResource("kcco_smartgrenade_1.projectile", "projectile", 1.0f, 40),
+    ScoredResource("c4.projectile", "projectile", 1.0f, 40),
+	ScoredResource("parw_grenade.projectile", "projectile", 1.0f, 40)
         }
     };
     processRewardPasses(rewardPasses);
@@ -725,6 +730,95 @@ protected void setupAk12() {
         ItemDeliveryObjective(m_metagame, 0, deliveryList, m_itemDeliveryOrganizer, null, "", "", "", -1 /* loop */, rewarder)
         );
 }
+
+protected void setupSv98() {
+    array<Resource@> deliveryList = {
+         Resource("sv98_box.carry_item", "carry_item")
+    };
+
+    array<array<ScoredResource@>> rewardPasses = {
+        {
+    ScoredResource("fadan.carry_item", "carry_item", 1.0f),
+    ScoredResource("fadan.carry_item", "carry_item", 0.02f)
+        }
+    };
+    processRewardPasses(rewardPasses);
+
+    GiftItemDeliveryRandomRewarder@ rewarder = GiftItemDeliveryRandomRewarder(m_metagame, rewardPasses);
+
+    m_itemDeliveryOrganizer.addObjective(
+        ItemDeliveryObjective(m_metagame, 0, deliveryList, m_itemDeliveryOrganizer, null, "", "", "", -1 /* loop */, rewarder)
+        );
+}
+
+protected void setupNether() {
+    array<Resource@> deliveryList = {
+         Resource("nether_crow_box.carry_item", "carry_item")
+    };
+
+    array<array<ScoredResource@>> rewardPasses = {
+        {
+    ScoredResource("SOPII_Ant_Doll.carry_item", "carry_item", 1.0f, 2)
+        }
+    };
+    processRewardPasses(rewardPasses);
+
+    GiftItemDeliveryRandomRewarder@ rewarder = GiftItemDeliveryRandomRewarder(m_metagame, rewardPasses);
+
+    m_itemDeliveryOrganizer.addObjective(
+        ItemDeliveryObjective(m_metagame, 0, deliveryList, m_itemDeliveryOrganizer, null, "", "", "", -1 /* loop */, rewarder)
+        );
+}
+
+protected void setupK309() {
+    array<Resource@> deliveryList = {
+         Resource("k309_box.carry_item", "carry_item")
+    };
+
+    array<array<ScoredResource@>> rewardPasses = {
+        {
+    ScoredResource("k309_dowry.carry_item", "carry_item", 1.0f)
+        }
+    };
+    processRewardPasses(rewardPasses);
+
+    GiftItemDeliveryRandomRewarder@ rewarder = GiftItemDeliveryRandomRewarder(m_metagame, rewardPasses);
+
+    m_itemDeliveryOrganizer.addObjective(
+        ItemDeliveryObjective(m_metagame, 0, deliveryList, m_itemDeliveryOrganizer, null, "", "", "", -1 /* loop */, rewarder)
+        );
+}
+
+protected void setupSaiwa() {
+    array<Resource@> deliveryList = {
+         Resource("saiwa_box.carry_item", "carry_item")
+    };
+
+    array<array<ScoredResource@>> rewardPasses = {
+        {
+    ScoredResource("gkw_m14mod3.weapon", "weapon", 1.0f)
+        },
+        {
+    ScoredResource("gkw_consume_javelin.weapon", "weapon", 1.0f, 2)
+        },
+        {
+    ScoredResource("kcco_smartgrenade_1.projectile", "projectile", 1.0f, 4)
+        },
+		{
+    ScoredResource("cc_t5_16lab.carry_item", "carry_item", 1.0f)
+        }
+        {
+    ScoredResource("saiwa_juggernaut.carry_item", "carry_item", 1.0f)
+        }
+    };
+    processRewardPasses(rewardPasses);
+
+    GiftItemDeliveryRandomRewarder@ rewarder = GiftItemDeliveryRandomRewarder(m_metagame, rewardPasses);
+
+    m_itemDeliveryOrganizer.addObjective(
+        ItemDeliveryObjective(m_metagame, 0, deliveryList, m_itemDeliveryOrganizer, null, "", "", "", -1 /* loop */, rewarder)
+        );
+}
 	// ----------------------------------------------------  
 	protected void setupEnemyWeaponUnlocks() {
 		array<ItemDeliveryObjective@> objectives = createEnemyWeaponDeliveryObjectives();
@@ -733,6 +827,7 @@ protected void setupAk12() {
 			m_itemDeliveryOrganizer.addObjective(objectives[i]);
 		}
 	}
+
 
 	// ----------------------------------------------------
 	protected array<Resource@>@ getEnemyWeaponDeliverables() const {
@@ -777,7 +872,6 @@ protected void setupAk12() {
 
 		return results;
 	}
-
 	// ----------------------------------------------------
 	protected array<ItemDeliveryObjective@>@ createEnemyWeaponDeliveryObjectives() const {
 		_log("createEnemyWeaponDeliveryObjectives", 1);

@@ -1,44 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapon file="two_hands_ar.animation_base" key="gkw_g3_1303.weapon">
-
     <specification 
 		accuracy_factor="1.0" 
 		barrel_offset="0.4" 
-		 
 		class="0"
         slot="0" 
 		magazine_size="30" 
 		name="G3-[Parsty Cook on Battlefield]" 
-		projectile_speed="170.21" 
-		retrigger_time="0.075" 
+		projectile_speed="200.0" 
+		retrigger_time="0.1" 
 		suppressed="0" 
-		sustained_fire_diminish_rate="0.8" 
-		sustained_fire_grow_step="1.0" />
-
-
-
-
+		sustained_fire_diminish_rate="1.7" 
+		sustained_fire_grow_step="0.5" />
     <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
-    <inventory  buy_price="7.0" sell_price="7.0" />	
+    <inventory  buy_price="7.0" sell_price="7.0" />
     <commonness value="0" in_stock="0" />
-
-
     <sound key="fire" fileref="g3_fire_FromBF2.wav" pitch_variety="0.05" volume="1" />
     <sound key="magazine_out" fileref="g3_mgz_out_FromCOD4R.wav" volume="0.9" />
     <sound key="magazine_in" fileref="g3_mgz_in_FromCOD4R.wav" volume="0.9" />
     <sound key="cycle" fileref="g3_cycle_FromCOD4R.wav" volume="0.9" />
-    <sound class="impact" fileref="rifle_drop.wav" />    
+    <sound class="impact" fileref="rifle_drop.wav" />
     <model filename="gkw_ar_g3.xml" />
-
     <hud_icon filename="gkw_g3_1303.png" />
-
-
-
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet.projectile">
-        <result class="hit"  kill_probability="1.75" kill_decay_start_time="1.125" kill_decay_end_time="1.875" />
+        <result class="hit"  kill_probability="1.85" kill_decay_start_time="1.125" kill_decay_end_time="1.875" />
     </projectile>
-    
     <stance state_key="running" accuracy="0.3" />
     <stance state_key="walking" accuracy="0.8" />
     <stance state_key="crouch_moving" accuracy="0.9" />
@@ -47,5 +34,4 @@
     <stance state_key="crouching" accuracy="0.9" />
     <stance state_key="prone" accuracy="1" />
     <modifier class="detectability" value="-0.1" />
-
 </weapon>

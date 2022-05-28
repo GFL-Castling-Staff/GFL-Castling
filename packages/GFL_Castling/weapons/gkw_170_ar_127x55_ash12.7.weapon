@@ -5,7 +5,6 @@
     <specification 
 	accuracy_factor="1.0" 
 	barrel_offset="0.4" 
-	 
 	class="0"
 	slot="0" 
 	magazine_size="20" 
@@ -18,7 +17,7 @@
 
 
 
-  	<animation state_key="hold_casual"			animation_key="dancing, kazachok" />
+  	<animation state_key="hold_casual" animation_key="dancing, kazachok" />
     <animation state_key="reload" animation_key="reloading, magazine rifle 0.9" />
     
     <inventory  buy_price="10.0" sell_price="10.0" />
