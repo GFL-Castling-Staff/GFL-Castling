@@ -13,8 +13,7 @@
 		<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
 		<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
 		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.2" />
-        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="hit_success_probability" value="-0.8" />
 	</carry_item>
 	<carry_item key="exo_ai_only_1" time_to_live_out_in_the_open="0" name="G&amp;K Dummy Battle Exo" transform_on_consume="exo_ai_only_2" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="gk_chat_commander.png"/>
@@ -29,8 +28,7 @@
 		<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
 		<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
 		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.2" />
-        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="hit_success_probability" value="-0.8" />
 	</carry_item>
 	<carry_item key="exo_ai_only_2" time_to_live_out_in_the_open="0" name="G&amp;K Dummy Battle Exo" transform_on_consume="exo_ai_only_3" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="gk_chat_commander.png"/>
@@ -45,8 +43,7 @@
 		<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
 		<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
 		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.2" />
-        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="hit_success_probability" value="-0.8" />
 	</carry_item>
 	<carry_item key="exo_ai_only_3" time_to_live_out_in_the_open="0" name="G&amp;K Dummy Battle Exo" transform_on_consume="exo_ai_only_4" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="gk_chat_commander.png"/>
@@ -61,8 +58,7 @@
 		<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
 		<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
 		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.2" />
-        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="hit_success_probability" value="-0.8" />
 	</carry_item>
 	<carry_item key="exo_ai_only_4" time_to_live_out_in_the_open="0" name="G&amp;K Dummy Battle Exo" transform_on_consume="exo_ai_only_5" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="gk_chat_commander.png"/>
@@ -77,8 +73,7 @@
 		<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
 		<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
 		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.2" />
-        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="hit_success_probability" value="-0.8" />
 	</carry_item>
 	<carry_item key="exo_ai_only_5" time_to_live_out_in_the_open="0" name="G&amp;K Dummy Battle Exo" transform_on_consume="exo_ai_only_6" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="gk_chat_commander.png"/>
@@ -93,8 +88,7 @@
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="wound" />
-        <modifier class="speed" value="0.2" />
-        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="hit_success_probability" value="-0.8" />
 	</carry_item>
 	<carry_item key="exo_ai_only_6" time_to_live_out_in_the_open="0" name="G&amp;K Dummy Battle Exo" transform_on_consume="exo_ai_only_7" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="gk_chat_commander.png"/>
@@ -114,7 +108,6 @@
         <modifier class="melee_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
         <modifier class="melee_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
         <modifier class="melee_hit_result" input_character_state="unwound" output_character_state="unwound" consumes_item="0"/>   
-        <modifier class="speed" value="0.2" />
-        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="hit_success_probability" value="-0.8" />
 	</carry_item>
 </carry_items>
