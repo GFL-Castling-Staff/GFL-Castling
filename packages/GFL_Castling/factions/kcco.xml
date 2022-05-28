@@ -474,7 +474,7 @@
 	<!-- 独眼巨人ar——g -->
 	<soldier name="kcco_ar_g" spawn_score="0.25" copy_from="default_bot">
 		<model filename="kccod_cyclops_remake.xml" />
-		<ai filename="grenadier.ai" />
+		<ai filename="kcco_bot.ai" />
 		<resources clear_weapons="1" clear_calls="1" clear_carry_items="1">
 			<weapon key="kcco_ar_g.weapon" enabled="1" />
 			<carry_item key="kcco_ar.carry_item" enabled="1" />
