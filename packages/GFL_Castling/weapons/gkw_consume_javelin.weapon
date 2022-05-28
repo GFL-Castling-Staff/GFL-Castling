@@ -24,6 +24,7 @@
     <animation key="recoil" ref="40" />
     <animation key="cycle" ref="30" />
     <animation key="reload" ref="35" />
+    <animation key="reload" stance_key="prone" animation_key="reloading, sniper1, prone" />
     <animation key="hold" ref="39" />
     <animation key="hold_on_wall" ref="39" />
     <sound key="cycle" fileref="sniper_cycle.wav" />
