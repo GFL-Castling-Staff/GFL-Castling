@@ -1604,7 +1604,7 @@ class CommandSkill : Tracker {
 
                     CreateDirectProjectile(m_metagame,c_pos,e_pos,'ff_justice_riderkick_2.projectile',characterId,factionid,120);
                 
-                    addCoolDown("justice",15,characterId,modifer);
+                    addCoolDown("justice",20,characterId,modifer);
                 }
             }
         }   
