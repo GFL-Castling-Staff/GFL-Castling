@@ -75956,7 +75956,7 @@
 			<position x="14.500000" y="0.500000" z="-1.500000" />
 		</frame>
 	</animation>
-	<animation loop="0" end="1.500000" speed="1.000000" comment="running_big_unit">
+	<animation loop="1" end="1.500000" speed="1.000000" comment="running_big_unit">
 		<frame time="0.000000">
 			<position x="-1.677434" y="114.430565" z="20.594364" />
 			<position x="-0.404269" y="101.981956" z="17.071409" />
@@ -76077,7 +76077,7 @@
 			<position x="11.414641" y="-0.100000" z="27.541603" />
 		</frame>
 	</animation>
-	<animation loop="0" end="1.500000" speed="1.000000" comment="running, hannibal">
+	<animation loop="1" end="1.500000" speed="1.000000" comment="running, hannibal">
 		<frame time="0.000000">
 			<position x="-1.677434" y="114.430565" z="20.594364" />
 			<position x="-0.404269" y="101.981956" z="17.071409" />
@@ -77225,7 +77225,7 @@
 			<position x="12.606747" y="1.863423" z="-18.154430" />
 		</frame>
 	</animation>
-	<animation loop="0" end="0.800000" speed="1.000000" comment="hit ground_big_unit">
+	<animation loop="0" end="0.800000" speed="1.500000" comment="hit ground_big_unit">
 		<frame time="0.000000">
 			<position x="1.160929" y="123.166252" z="-12.380672" />
 			<position x="0.350006" y="110.403946" z="-10.042730" />

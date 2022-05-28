@@ -591,7 +591,7 @@
 	<soldier name="kcco_teslatrooper" spawn_score="0.2" copy_from="default_bot">
 		<model filename="kcco_teslatrooper.xml" />
 		<character filename="teslatrooper.character" />
-		<ai filename="hydra.ai" />
+		<ai filename="teslatrooper.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="kcco_teslatrooper.weapon" enabled="1" />
 			<call file="kcco_argo_vela.call" />

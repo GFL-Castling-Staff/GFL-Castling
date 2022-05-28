@@ -5,23 +5,24 @@
     <tag name="metal_heavy" />
     <tag name="bazooka"/>
     <specification 
-	retrigger_time="4.0" 
+	retrigger_time="3.0" 
 	accuracy_factor="0.75" 
 	sustained_fire_grow_step="-2.0" 
 	sustained_fire_diminish_rate="0.9" 
-	magazine_size="3" 
+	magazine_size="4" 
 	can_shoot_standing="1" 
-	can_shoot_crouching="0"
+	can_shoot_crouching="1"
 	can_shoot_prone="0"
 	suppressed="0" 
 	name="Code:Teslatrooper" 
-	class="4" 
+	class="0" 
 	reload_one_at_a_time="0"
 	sight_range_modifier="0.75" 
 	projectile_speed="76.0" 
 	carry_in_two_hands="0" 
 	projectiles_per_shot="5" 
 	stab_enabled="0"
+    stab_range="3"
 	barrel_offset_3d="0.6 1 0.5"/>
     <animation state_key="recoil"	animation_key="recoil, large mecha" />
     <animation key="reload" animation_key="change weapon, large mecha" />
@@ -42,10 +43,9 @@
     <hud_icon filename="kccow_teslatooper.png" />
     <commonness value="0.00001" can_respawn_with="1" in_stock="1"/>
     <inventory encumbrance="11.0" price="0.0" />
-    <modifier class="speed" value="-0.4" />
+    <modifier class="speed" value="-0.5" />
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5" />
     <target_factors tag="heavy_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0" />
-    <target_factors tag="apc" distance="1.0" direction="0.0" squad_command="1.0" base_score="6.0" />
     <target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="5.0" />	
     <target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="5.5" />
 	<target_factors tag="shield" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0" />	
