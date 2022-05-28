@@ -36,7 +36,7 @@ void main(dictionary@ inputData) {
 
         settings.m_startServerCommand = """
 <command class='start_server'
-	server_name='[Castling][Insane-4 250%]'
+	server_name='[Castling][Insane-5 250%]'
 	server_port='1234'
 	comment='50% Friend AI, Read server rules in our discord: discord.gg/wwUM3kYmRC, QQ Group: 706234535'
 	url='https://castling.fandom.com/wiki/Castling_Wiki'

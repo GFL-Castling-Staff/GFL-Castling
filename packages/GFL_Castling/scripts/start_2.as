@@ -36,7 +36,7 @@ void main(dictionary@ inputData) {
 
         settings.m_startServerCommand = """
 <command class='start_server'
-	server_name='[Castling][150%] Official Server 2'
+	server_name='[Castling][Normal-2 150%]'
 	server_port='1234'
 	comment='Read server rules in our discord: discord.gg/wwUM3kYmRC, QQ Group: 706234535'
 	url='https://castling.fandom.com/wiki/Castling_Wiki'
