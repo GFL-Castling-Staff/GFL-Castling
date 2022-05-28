@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<carry_item file="base_valuable.carry_item" name="Musksocks box" key="musksocks_box.carry_item">
+    <hud_icon filename="Musksocks_box.png" />
+    <inventory encumbrance="-1.0" buy_price="0" sell_price="21" />
+
+    <model mesh_filename="box_musksocks_12x12x13.xml" texture_filename="" />
+
+    <commonness value="0.02" in_stock="0" />
+</carry_item>

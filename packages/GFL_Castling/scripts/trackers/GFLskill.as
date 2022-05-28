@@ -312,15 +312,15 @@ class GFLskill : Tracker {
 
 				int factionid = character.getIntAttribute("faction_id");
 				Vector3 target_pos = stringToVector3(event.getStringAttribute("position"));//标枪发射器发射时的载具位置
-				int vehicleid = getNearByEnemyVehicle(m_metagame,factionid,target_pos,6);
+				int vehicleid = getNearByEnemyVehicle(m_metagame,factionid,target_pos,7);
 
 				Vector3 aimer_pos = stringToVector3(character.getStringAttribute("position"));
 
 				Vector3 pos1 = getAimUnitPosition(m_metagame,1,aimer_pos,target_pos);
 				Vector3 pos2 = getAimUnitPosition(m_metagame,8.0,aimer_pos,target_pos);
-				pos1 = pos1.add(Vector3(0,1,0));				
+				pos1 = pos1.add(Vector3(0,0.8,0));				
 				pos2 = pos2.add(Vector3(0,8,0));
-				CreateProjectile(m_metagame,pos1,pos2,"javelin_rocket_1.projectile",characterId,factionid,5,1);	
+				CreateProjectile(m_metagame,pos1,pos2,"javelin_rocket_1.projectile",characterId,factionid,5,6);	
 				//CreateProjectile(m_metagame,target_pos,target_pos.add(Vector3(0,0,0)),"javelin_locater_2.projectile",characterId,factionid,0,8);	
 				//CreateProjectile(m_metagame,target_pos,target_pos.add(Vector3(0,0,0)),"javelin_locater_3.projectile",characterId,factionid,0,8);
 				Javelin_list.insertLast(Javelin_lister(characterId,factionid,vehicleid,target_pos));//存储初始定位弹头锁定的载具id							
@@ -370,9 +370,17 @@ class GFLskill : Tracker {
 							if(target_id!=-1){
 								_log("aimming 2 success.");
 								const XmlElement@ target_info = getVehicleInfo(m_metagame, target_id);
+								
 								Vector3 target_pos1 = stringToVector3(target_info.getStringAttribute("position"));
+								_log("Position 1 = "+target_pos1.toString());
+
+								TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+								tasker.add(DelayProjectileSet(m_metagame,0.8,characterId,factionid,"bullet.projectile",target_pos1));
+								
 								Vector3 target_pos2 = stringToVector3(target_info.getStringAttribute("position"));
-								target_fin_pos = target_pos2.add(getAimUnitVector(m_metagame,3.0,target_pos1,target_pos2));//标枪导弹目标位置
+								_log("Position 2 = "+target_pos2.toString());
+
+								target_fin_pos = target_pos2.add(getAimUnitVector(m_metagame,5.0,target_pos1,target_pos2));//标枪导弹目标位置
 							}
 							else{
 								target_fin_pos = Javelin_list[a].m_pos;
@@ -474,7 +482,7 @@ class GFLskill : Tracker {
 			const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
 			if (character !is null) {
 				playAnimationKey(m_metagame,characterId,"stabbing_roarer",false);
-				string pos = event.getStringAttribute("position");
+				Vector3 pos = stringToVector3(event.getStringAttribute("position"));
 				TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
 				tasker.add(DelayProjectileSet(m_metagame,0.8,characterId,character.getIntAttribute("faction_id"),"roarer_main.projectile",pos));
 			}
