@@ -15,7 +15,7 @@
 	<!-- min_amount="1" max_amount="1" offset="0 0.0 0"  -->
 	<!-- position_spread="0 0" direction_spread="0 -1" /> -->
 	    
-    <trigger class="time" time_to_live="0.77"/>
+    <trigger class="impact"/>
     <rotation class="motion" />
     <model  />
 

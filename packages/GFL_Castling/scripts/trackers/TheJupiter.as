@@ -14,10 +14,11 @@ class jupiter: Tracker {
 	protected bool m_started;
 	protected int m_numLeft=0;
 	protected int m_faction=1;
-	protected int m_striketime=2;
+	protected int m_striketime=3; //木星炮弹头数量
 	protected float m_delaytime=0;
 	protected bool m_strike=false;
 	protected Vector3 m_pos;
+	protected int radd = 12; //木星炮随机半径
 
 	jupiter(Metagame@ metagame,float cycle=60.0) {
 		@m_metagame = @metagame;
@@ -34,8 +35,28 @@ class jupiter: Tracker {
 		const XmlElement@ characterinfo = getCharacterInfo(m_metagame, characterId);
         if (characterinfo is null) return;
 		Vector3 c_pos = stringToVector3(characterinfo.getStringAttribute("position"));
-		CreateProjectile(m_metagame,c_pos.add(Vector3(0,10,0)),c_pos,"jupiter_airstrike_warning_s.projectile",-1,m_faction,120,100);
-		m_delaytime=3.0;
+		
+		//艾莫号特别保护措施
+		float jud_amos = 40.0;
+		int vehicleid = getNearByEnemyVehicle(m_metagame,0,c_pos,jud_amos);
+		if(vehicleid!=-1) {
+			_log("Vehicle detected");
+			const XmlElement@ target_info = getVehicleInfo(m_metagame, vehicleid);
+			if(target_info.getStringAttribute("key") == "armored_truck.vehicle") {
+				_log("Amos detected");
+				c_pos = c_pos.add(Vector3(jud_amos*sin(rand(0,20)/20*6.28),0,jud_amos*cos(rand(0,20)/20*6.28)));
+			}
+
+		}
+		int circle = 8;	//警示烟雾数量
+
+		for(uint i=0;i<circle;i++){
+				
+			CreateProjectile(m_metagame,c_pos.add(Vector3(radd*sin(i*3.14/circle*2),6,radd*cos(i*3.14/circle*2))),c_pos.add(Vector3(radd*sin(i*3.14/circle*2),0,radd*cos(i*3.14/circle*2))),"jupiter_airstrike_warning_s.projectile",-1,m_faction,120,100);
+		}
+		
+		playSoundAtLocation(m_metagame,"Jupiter_warning_form_aigei_com.wav",0,c_pos,1.0);
+		m_delaytime=6.0;
 		m_strike=true;
 		m_pos=c_pos;
 	}
@@ -43,8 +64,8 @@ class jupiter: Tracker {
 	void jupiterfire(Vector3 pos){
 		int offsetY=0;
 		for(int i=0;i<m_striketime;i++){
-			int offsetX = rand(1,21)-11;
-			int offsetZ = rand(1,21)-11;
+			int offsetX = rand(0,2*radd-8)-radd+4;
+			int offsetZ = rand(0,2*radd-8)-radd+4;
 			Vector3 pos_a= pos.add(Vector3(offsetX,0,offsetZ));
 			CreateProjectile(m_metagame,pos_a.add(Vector3(0,60+offsetY,0)),pos_a,"artillery_jupiter_420.projectile",-1,m_faction,120,10);
 			offsetY+=60;
