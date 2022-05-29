@@ -285,6 +285,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 		stage.addTracker(PeacefulLastBase(m_metagame, 0));
 		stage.addTracker(CommsCapacityHandler(m_metagame));
+		stage.addTracker(jupiter(m_metagame,30));
 		stage.m_maxSoldiers = 14*17;                                             // was 12*7 in 1.65, 1 base added
 
 		stage.m_soldierCapacityVariance = 0.4;
@@ -600,7 +601,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 	protected Stage@ setupStage2() {
 		Stage@ stage = createStage();
 		stage.m_mapInfo.m_name = "Fridge Valley";
-		stage.m_mapInfo.m_path = "media/packages/vanilla.winter/maps/map4";
+		stage.m_mapInfo.m_path = "media/packages/GFLC_Map/maps/map4_c";
 		stage.m_mapInfo.m_id = "map4";
 
 		stage.m_fogOffset = 20.0;    
@@ -608,6 +609,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 		stage.addTracker(PeacefulLastBase(m_metagame, 0));
 		stage.addTracker(CommsCapacityHandler(m_metagame));
+		stage.addTracker(jupiter(m_metagame,45));
 		stage.m_maxSoldiers = 17 * 7;
 		stage.m_playerAiCompensation = 8;                                         // was 5 (test4)
 		stage.m_playerAiReduction = 2;                                            // was 2 (test3)

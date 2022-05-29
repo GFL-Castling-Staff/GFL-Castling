@@ -35,7 +35,7 @@ class jupiter: Tracker {
         if (characterinfo is null) return;
 		Vector3 c_pos = stringToVector3(characterinfo.getStringAttribute("position"));
 		CreateProjectile(m_metagame,c_pos.add(Vector3(0,10,0)),c_pos,"jupiter_airstrike_warning_s.projectile",-1,m_faction,120,100);
-		m_delaytime=8.0;
+		m_delaytime=3.0;
 		m_strike=true;
 		m_pos=c_pos;
 	}
