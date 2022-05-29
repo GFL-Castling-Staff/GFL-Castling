@@ -661,10 +661,10 @@ class BasicCommandHandler : Tracker {
 		} else  if(checkCommand(message, "icecream")) {
 			int randIndex=rand(1,4);
 			switch (randIndex){
-				case 1: spawnInstanceNearPlayer(senderId, "icecream.vehicle", "vehicle", 0);        
-				case 2: spawnInstanceNearPlayer(senderId, "icecream_Solar_Sea.vehicle", "vehicle", 0);
-				case 3: spawnInstanceNearPlayer(senderId, "icecream_akino.vehicle", "vehicle", 0);
-				case 4: spawnInstanceNearPlayer(senderId, "icecream_connexion.vehicle", "vehicle", 0);
+				case 1: spawnInstanceNearPlayer(senderId, "icecream.vehicle", "vehicle", 0);break;      
+				case 2: spawnInstanceNearPlayer(senderId, "icecream_Solar_Sea.vehicle", "vehicle", 0);break;
+				case 3: spawnInstanceNearPlayer(senderId, "icecream_akino.vehicle", "vehicle", 0);break;
+				case 4: spawnInstanceNearPlayer(senderId, "icecream_connexion.vehicle", "vehicle", 0);break;
 			}
 		} else  if(checkCommand(message, "rj")) {
 			spawnInstanceNearPlayer(senderId, "radio_jammer.vehicle", "vehicle", 1);        
