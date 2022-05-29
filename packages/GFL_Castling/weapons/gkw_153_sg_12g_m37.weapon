@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon file="two_hands_sg.animation_base" key="gkw_m37.weapon">
+
+    
+    <!--Weapon specifications-->
+    
+    <specification 
+	retrigger_time="-1.0" 
+	accuracy_factor="0.9" 
+	sustained_fire_grow_step="0.7" 
+	sustained_fire_diminish_rate="2.2" 
+	magazine_size="8" 
+	can_shoot_standing="1" 
+	suppressed="0" 
+	name="M37" 
+	class="1" 
+	reload_one_at_a_time="1"
+	sight_range_modifier="1" 
+	projectile_speed="105" 
+	barrel_offset="0.4" 
+	projectiles_per_shot="18"
+	spread_range="0.25"
+	 />
+     <inventory  buy_price="70.0" sell_price="70.0" />
+	<!--Animations-->
+	
+
+    <animation state_key="cycle" animation_key="Pshotgun0.5" />
+    <animation state_key="cycle" stance_key="prone" animation_key="Pshotgun0.5p" />
+    <animation key="reload" animation_key="reloading, oaat" />		
+	
+	<!--Sounds-->
+	
+    <sound key="fire" fileref="m870_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.7" />
+    <sound key="cycle" fileref="m870_cycle_FromTTF2.wav" />
+    <sound key="reload_one" fileref="sg1_reload_FromREALLIFE.wav" volume="0.5" />
+    <sound key="reload_one" fileref="sg2_reload_FromREALLIFE.wav" volume="0.5" />
+    <sound key="reload_one" fileref="sg3_reload_FromREALLIFE.wav" volume="0.5" />
+    <sound key="reload_one" fileref="sg4_reload_FromREALLIFE.wav" volume="0.5" />
+    <sound class="impact" fileref="rifle_drop.wav" />
+   
+	<!--Model, Icon, Cost-->
+   
+    <model filename="gkw_sg_m37.xml" />
+    <hud_icon filename="gkw_m37.png" />
+
+
+	
+	<!--Ballistics-->
+	
+    
+    <weak_hand_hold offset="0.3" />
+    <projectile file="bullet.projectile">
+        <result class="hit" 
+        kill_probability="1.85" 
+        kill_decay_start_time="0.1" 
+        kill_decay_end_time="0.765" />
+    </projectile>
+    
+    <!--Accuracy, Movement speed-->
+    
+	<stance state_key="walking" accuracy="0.65" />
+    <stance state_key="crouch_moving" accuracy="0.6" />
+    <stance state_key="prone_moving" accuracy="0.6" />
+    <stance state_key="standing" accuracy="0.7"/>
+    <stance state_key="crouching" accuracy="0.75" />
+    <stance state_key="prone" accuracy="0.85" />
+    <stance state_key="over_wall" accuracy="0.85" />  
+
+</weapon>
