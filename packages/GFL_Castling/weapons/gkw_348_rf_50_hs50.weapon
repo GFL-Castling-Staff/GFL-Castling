@@ -58,9 +58,9 @@
     <projectile file="ntw.projectile">
         <result class="blast" 
         damage="5" 
-        radius="2.5" 
+        radius="3.5" 
         decal="1" 
-        push="2" 
+        push="0.5" 
         character_state="death"
         faction_compare="not_equal"
 		/>
@@ -68,7 +68,7 @@
     </projectile>
     
     <!--Accuracy, Movement speed-->
-	<stance state_key="running" accuracy="0.9" />
+	<stance state_key="running" accuracy="1" />
 	<stance state_key="walking" accuracy="1" />
     <stance state_key="crouch_moving" accuracy="1" />
     <stance state_key="prone_moving" accuracy="1" />
@@ -76,7 +76,7 @@
     <stance state_key="crouching" accuracy="1" />
     <stance state_key="prone" accuracy="1" />
     <stance state_key="over_wall" accuracy="1" />
-    <modifier class="speed" value="-0.1" /> 
+    <modifier class="speed" value="0.2" /> 
 
 
 

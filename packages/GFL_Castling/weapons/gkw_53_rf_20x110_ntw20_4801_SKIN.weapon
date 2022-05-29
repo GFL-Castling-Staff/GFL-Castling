@@ -53,7 +53,7 @@
 
     <weak_hand_hold offset="0.3" />
     <projectile file="ntw.projectile" >
-       <result class="blast" damage="4.5" radius="2.5" decal="1" push="2" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0" />
+       <result class="blast" damage="4.5" radius="4" decal="1" push="2" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0" />
     </projectile>
 
     <!--Accuracy, Movement speed-->
