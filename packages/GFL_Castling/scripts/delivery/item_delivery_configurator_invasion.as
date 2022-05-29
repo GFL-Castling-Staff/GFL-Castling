@@ -823,7 +823,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 
 		array<array<ScoredResource@>> rewardPasses = {
 			{
-		ScoredResource("gkw_idw.carry_item", "weapon", 1.0f,100)
+		ScoredResource("gkw_idw.weapon", "weapon", 1.0f,100)
 			}
 		};
 		processRewardPasses(rewardPasses);
