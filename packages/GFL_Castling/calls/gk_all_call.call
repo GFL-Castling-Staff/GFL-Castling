@@ -19,7 +19,7 @@
         <inventory encumbrance="0.0" price="328.0" />
     </call>
     <!-- 嘲讽妖精 -->
-    <call name="Targetdrone" key="target.call" radio_view_text="Targetdrone" initiation_comment1="Targetdrone is launching" acknowledge_comment="Unlock" launch_comment="Targetdrone,Unlock!" notify_metagame="1">
+    <call name="Targetdrone" key="target.call" radio_view_text="Request Targetdrone" initiation_comment1="Targetdrone is launching" acknowledge_comment="Unlock" launch_comment="Targetdrone,Unlock!" notify_metagame="1">
         <hud_icon filename="call_Airborne_targetdrone.png" />
         <capacity value="0" source="rank" source_value="0.0" />
         <capacity value="100" source="rank" source_value="1.143" />
