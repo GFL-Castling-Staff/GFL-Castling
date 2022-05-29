@@ -48,6 +48,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		setupSaiwa();
 		setupZhuZhu();
 		setupIDW();
+		setupPPSH41();
 	}
 
 
@@ -678,6 +679,25 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		array<array<ScoredResource@>> rewardPasses = {
 			{
 		ScoredResource("zas_paint.carry_item", "carry_item", 1.0f)
+			}
+		};
+		processRewardPasses(rewardPasses);
+
+		GiftItemDeliveryRandomRewarder@ rewarder = GiftItemDeliveryRandomRewarder(m_metagame, rewardPasses);
+
+		m_itemDeliveryOrganizer.addObjective(
+			ItemDeliveryObjective(m_metagame, 0, deliveryList, m_itemDeliveryOrganizer, null, "", "", "", -1 /* loop */, rewarder)
+			);
+	}
+
+	protected void setupPPSH41() {
+		array<Resource@> deliveryList = {
+			Resource("ppsh_box.carry_item", "carry_item")
+		};
+
+		array<array<ScoredResource@>> rewardPasses = {
+			{
+		ScoredResource("shasha.carry_item", "carry_item", 1.0f)
 			}
 		};
 		processRewardPasses(rewardPasses);
