@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projectile class="bullet" name="default" slot="1" time_to_live="1.0" pulldown_in_air="4">
     <result class="hit" damage_origin_vehicle="0" />
-    <trigger class="impact" />
+    <trigger class="impact" >
+        <collider class="terrain" enabled="1" />  
+        <collider class="static_object" enabled="1" />  
+        <collider class="vehicle" enabled="1" /> 
+        <collider class="character" enabled="1" />
+        <collider class="shield" enabled="1" />
+    </trigger>
     <rotation class="motion" />
 
     <sound class="result" key="terrain" fileref="ricochet1.wav" />

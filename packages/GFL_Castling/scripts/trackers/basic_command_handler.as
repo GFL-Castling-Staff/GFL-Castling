@@ -659,6 +659,7 @@ class BasicCommandHandler : Tracker {
 		} else if (checkCommand(message, "enable_gps")) {
 			m_metagame.getComms().send("<command class='faction_resources' faction_id='0'><call key='gps.call' /></command>");
 		} else  if(checkCommand(message, "icecream")) {
+			int randIndex=rand(1,3);
 			spawnInstanceNearPlayer(senderId, "icecream.vehicle", "vehicle", 0);        
 		} else  if(checkCommand(message, "rj")) {
 			spawnInstanceNearPlayer(senderId, "radio_jammer.vehicle", "vehicle", 1);        
