@@ -40,7 +40,7 @@
     <sound class="impact" fileref="rifle_drop.wav" />
    
 	<!--Model, Icon, Cost-->
-    <commonness  value="0" in_stock="0" can_spawn_with="1" />
+    <commonness  value="0" in_stock="0" can_respawn_with="1" />
     <model filename="gkw_ks-23_from_melondove.xml" />
     <hud_icon filename="gkw_ks23.png" />
 

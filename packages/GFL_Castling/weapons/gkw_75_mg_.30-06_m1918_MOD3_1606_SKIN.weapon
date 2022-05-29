@@ -18,7 +18,7 @@
 
         <animation key="reload" animation_key="reloading, Machine gun 0.6" />
         <inventory buy_price="120.0" sell_price="120.0" />
-        <commonness value="0" in_stock="0" can_spawn_with="1" />
+        <commonness value="0" in_stock="0" can_respawn_with="1" />
         <next_in_chain key="gkw_m1918mod3_1606_skill.weapon" share_ammo="1" />
 
 	    <sound key="fire" fileref="m1918_fire_FromWF.wav" pitch_variety="0.05" volume="2.1" />
@@ -63,7 +63,7 @@
 
         <animation key="reload" animation_key="reloading, Machine gun 0.6" />
         <inventory buy_price="120.0" sell_price="120.0" />
-        <commonness value="0" in_stock="0" can_spawn_with="1" />
+        <commonness value="0" in_stock="0" can_respawn_with="1" />
         <next_in_chain key="gkw_m1918mod3_1606.weapon" share_ammo="1" />
 
 	    <sound key="fire" fileref="m1918_fire_FromRS2V.wav" pitch_variety="0.05" volume="1.2" />

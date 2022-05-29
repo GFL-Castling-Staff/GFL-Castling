@@ -57,7 +57,7 @@
     />
     <animation key="reload" animation_key="reloading, Machine gun 4" />
     <inventory  buy_price="30.0" sell_price="30.0" />
-    <commonness  value="0" in_stock="0" can_spawn_with="1" />
+    <commonness  value="0" in_stock="0" can_respawn_with="1" />
     <next_in_chain key="gkw_mg338.weapon" share_ammo="0" />
     <sound key="fire" fileref="lwmmgskill_fire_FromBORDERLAND3.wav" pitch_variety="0.05" volume="1.1" />
     <sound key="magazine_out" fileref="mg338_mgz_out_FromCOD16.wav" volume="1.0" />

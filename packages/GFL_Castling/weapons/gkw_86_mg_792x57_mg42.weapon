@@ -55,7 +55,7 @@
         can_shoot_crouching="0"/>
         <animation key="reload" animation_key="reloading, Machine gun 1.6" />
         <inventory  buy_price="20.0" sell_price="20.0" />
-        <commonness  value="0" in_stock="0" can_spawn_with="1" />
+        <commonness  value="0" in_stock="0" can_respawn_with="1" />
         <next_in_chain key="gkw_mg42.weapon" share_ammo="1" />
         <sound key="fire" fileref="mg42skill_fire_FromFC5.wav" pitch_variety="0.05" volume="1.2" />
         <sound key="magazine_out" fileref="mg42_mgz_out_FromHELLLETLOOSE.wav" volume="1" />

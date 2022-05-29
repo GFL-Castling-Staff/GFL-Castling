@@ -60,7 +60,7 @@
         sight_range_modifier="2.0" />
         <!--Animations-->
         <inventory  buy_price="60.0" sell_price="60.0" />
-        <commonness  value="0" in_stock="0" can_spawn_with="1" />
+        <commonness  value="0" in_stock="0" can_respawn_with="1" />
         <animation key="reload" animation_key="reloading, Machine gun 4" />
         <next_in_chain key="gkw_m2hb.weapon" share_ammo="1" />
         <!--Sounds-->

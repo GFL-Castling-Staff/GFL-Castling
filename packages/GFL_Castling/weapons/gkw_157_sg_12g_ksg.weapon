@@ -85,7 +85,7 @@
 	spread_range="0.3" />
     <inventory  buy_price="20.0" sell_price="10.0" />
     <next_in_chain key="gkw_ksg.weapon" share_ammo="0" />
-    <commonness  in_stock="0" can_spawn_with="1" />
+    <commonness  in_stock="0" can_respawn_with="1" />
 	<!--Animations-->
     <animation state_key="cycle" animation_key="Pshotgun0.5" />
     <animation state_key="cycle" stance_key="prone" animation_key="Pshotgun0.5p" />
