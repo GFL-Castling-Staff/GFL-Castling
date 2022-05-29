@@ -5,7 +5,7 @@
     <tag name="metal_thin"/>
     <tag name="mecha"/>
 
-    <specification retrigger_time="3.0" magazine_size="1000" can_shoot_standing="1" can_shoot_crouching="0" can_shoot_prone="0" carry_in_two_hands="0" name="Roarer" class="0" supperessed="0" use_basic_muzzle_smoke_effect="0" stab_enabled="0" stab_range="3.0" 	barrel_offset="0.5"/>
+    <specification retrigger_time="3.0" magazine_size="1000" can_shoot_standing="1" can_shoot_crouching="0" can_shoot_prone="0" carry_in_two_hands="0" name="Roarer" class="0" supperessed="0" use_basic_muzzle_smoke_effect="0" stab_enabled="1" stab_range="3.0" 	barrel_offset="0.5"/>
 
     <animation state_key="recoil" animation_key="still, large mecha" />
     <animation state_key="hold" animation_key="still, large mecha" />
@@ -15,6 +15,7 @@
     <animation state_key="changing_weapon_in" animation_key="change weapon, large mecha" />
     <animation state_key="changing_weapon_out" animation_key="change weapon, large mecha" />
     <animation state_key="reload" animation_key="still, large mecha" />
+    <animation state_key="stabbing" animation_key="hit ground_big_unit" />
     <model filename="" />
 
 
