@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projectile class="grenade" name="" slot="1" pulldown_in_air="60" key="ff_weaver_rocket_sub.projectile">
     <tag name="rocket"/>
-    <result class="blast" radius="5" damage="4" push="0.2" decal="1" faction_compare="not_equal"/>
+    <result class="blast" radius="5" damage="3" push="0.2" decal="1" faction_compare="not_equal"/>
     <trigger class="impact" />
     <rotation class="motion" />
     <model mesh_filename="m202_rocket.xml"/>
