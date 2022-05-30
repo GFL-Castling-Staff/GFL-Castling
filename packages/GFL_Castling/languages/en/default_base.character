@@ -67,9 +67,9 @@
 
 	<parameter class="warn_about_overencumbered_time" value="4.0" />
 
-	<parameter class="detectability_prone" value="0.6" />
+	<parameter class="detectability_prone" value="0.75" />
 	<parameter class="detectability_wounded" value="0.6" />
-	<parameter class="detectability_crouching" value="0.72" />
+	<parameter class="detectability_crouching" value="0.75" />
 	<parameter class="detectability_crouch_moving" value="0.8" />
 	<parameter class="detectability_walking" value="0.95" />
 	<parameter class="detectability_still" value="0.88" />
@@ -92,11 +92,11 @@
 	<parameter class="player_fov_max_dot_range" value="1.9" />
 	<parameter class="player_fov_min_dot_range_offset" value="1.125" />
 
-	<parameter class="encumbrance" low="9.9" high="50.0" />
+	<parameter class="encumbrance" low="20" high="50.0" />
 	<parameter class="speed" value="1.0" />
-	<parameter class="speed_encumbered" low="0.9" high="0.4" />
+	<parameter class="speed_encumbered" low="0.9" high="0.2" />
 	<parameter class="accuracy" value="1.0" />
-	<parameter class="accuracy_encumbered" low="1.0" high="0.94" />
+	<parameter class="accuracy_encumbered" low="1.0" high="1.0" />
 	<parameter class="use_walk_animation_instead_of_run_speed_threshold" value="0.5" />
 	
 	<parameter class="spawn_y_offset" value="0.0" />
