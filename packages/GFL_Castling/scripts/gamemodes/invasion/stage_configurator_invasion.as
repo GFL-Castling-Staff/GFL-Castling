@@ -631,7 +631,14 @@ class StageConfiguratorInvasion : StageConfigurator {
 			f.m_capacityOffset = 5;                                                // was 0 in 1.65
 			stage.m_factions.insertLast(f); 
 		}
+		{
+			XmlElement command("command");
+			command.setStringAttribute("class", "faction_resources");
+			command.setIntAttribute("faction_id", 0);
+			addFactionResourceElements(command, "vehicle", array<string> = {"armored_truck.vehicle"}, false);
 
+			stage.m_extraCommands.insertLast(command);
+		}        
 		// metadata
 		stage.m_primaryObjective = "capture";
 
