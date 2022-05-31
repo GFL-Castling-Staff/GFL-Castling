@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<weapons>
 <weapon file="two_hands_sg.animation_base" key="gkw_fo12.weapon">
 
     
@@ -23,7 +24,7 @@
 	 />
      <inventory  buy_price="180.0" sell_price="60.0" />
 	<!--Animations-->
-	
+	<next_in_chain key="gkw_fo12_skill.weapon" share_ammo="0" />
 
     <animation key="reload" animation_key="reloading, magazine rifle 1.2" />	
 	
@@ -52,7 +53,7 @@
         <result class="hit" 
         kill_probability="1.8" 
         kill_decay_start_time="0.1" 
-        kill_decay_end_time="0.655" />
+        kill_decay_end_time="0.7" />
     </projectile>
     
     <!--Accuracy, Movement speed-->
@@ -66,3 +67,69 @@
     <stance state_key="over_wall" accuracy="0.85" />  
 
 </weapon>
+<weapon file="two_hands_sg.animation_base" key="gkw_fo12_skill.weapon">
+
+    
+    <!--Weapon specifications-->
+    
+    <specification 
+	retrigger_time="0.08" 
+	accuracy_factor="0.9" 
+	sustained_fire_grow_step="1.2" 
+	sustained_fire_diminish_rate="2" 
+	magazine_size="20" 
+	can_shoot_standing="1" 
+	suppressed="1" 
+	name="FO12-[Critical starburst]" 
+	class="0" 
+	sight_range_modifier="1" 
+	projectile_speed="90" 
+	barrel_offset="0.4" 
+	projectiles_per_shot="18"
+	spread_range="0.25"
+	 />
+     <inventory  buy_price="180.0" sell_price="60.0" />
+	<!--Animations-->
+	<next_in_chain key="gkw_fo12.weapon" share_ammo="0" />
+
+    <animation key="reload" animation_key="reloading, magazine rifle 1.8" />	
+	
+	<!--Sounds-->
+	
+    <sound key="fire" fileref="sat8sd_fire_FromWF.WAV" pitch_variety="0.05" volume="1.7" />
+    <sound key="cycle" fileref="m870_cycle_FromTTF2.wav" />
+    <sound key="reload_one" fileref="sg1_reload_FromREALLIFE.wav" volume="0.5" />
+    <sound key="reload_one" fileref="sg2_reload_FromREALLIFE.wav" volume="0.5" />
+    <sound key="reload_one" fileref="sg3_reload_FromREALLIFE.wav" volume="0.5" />
+    <sound key="reload_one" fileref="sg4_reload_FromREALLIFE.wav" volume="0.5" />
+    <sound class="impact" fileref="rifle_drop.wav" />
+   
+	<!--Model, Icon, Cost-->
+   
+    <model filename="gkw_sg_fo-12.xml" />
+    <hud_icon filename="gkw_fo-12_skill.png" />
+
+
+	
+	<!--Ballistics-->
+	
+    
+    <weak_hand_hold offset="0.3" />
+    <projectile file="bullet.projectile" can_be_detected_by_footmen="0">
+        <result class="hit" 
+        kill_probability="2.2" 
+        kill_decay_start_time="0.01" 
+        kill_decay_end_time="0.575" />
+    </projectile>
+    
+    <!--Accuracy, Movement speed-->
+    
+	<stance state_key="walking" accuracy="0.65" />
+    <stance state_key="crouch_moving" accuracy="0.6" />
+    <stance state_key="prone_moving" accuracy="0.6" />
+    <stance state_key="standing" accuracy="0.7"/>
+    <stance state_key="crouching" accuracy="0.75" />
+    <stance state_key="prone" accuracy="0.85" />
+    <stance state_key="over_wall" accuracy="0.85" />  
+</weapon>
+</weapons>
