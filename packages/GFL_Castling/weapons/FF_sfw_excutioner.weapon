@@ -2,7 +2,7 @@
 <weapons>
 	<weapon file="gk_sf_boss.base_weapon" key="ff_excutioner_1.weapon">
 		<!-- Weapon specifications -->
-		<specification retrigger_time="-1" last_burst_retrigger_time="0.2" accuracy_factor="0.95" sustained_fire_grow_step="0.8" sustained_fire_diminish_rate="1.0" magazine_size="8" can_shoot_standing="1" carry_in_two_hands="0" suppressed="0" name="Excutioner-Wind rose" class="4" reload_one_at_a_time="0" burst_shots="1" sight_range_modifier="0.8" projectile_speed="100" slot="0" stab_enabled="1" />
+		<specification retrigger_time="-1" last_burst_retrigger_time="0.2" accuracy_factor="0.95" sustained_fire_grow_step="0.8" sustained_fire_diminish_rate="1.0" magazine_size="8" can_shoot_standing="1" carry_in_two_hands="0" suppressed="0" name="Excutioner-Wind rose" class="4" reload_one_at_a_time="0" burst_shots="1" projectiles_per_shot="4" sight_range_modifier="0.8" projectile_speed="100" slot="0" stab_enabled="1" />
 		<!-- Animations -->
 		<next_in_chain key="ff_excutioner_2.weapon" share_ammo="0" />
 		<commonness value="0.0000001" in_stock="0" can_respawn_with="1" />
@@ -43,7 +43,7 @@
 		<!-- Ballistics -->
 		<weak_hand_hold offset="0.1" />
 		<projectile file="bullet_sf.projectile">
-			<result class="hit" kill_probability="4.2" kill_decay_start_time="0.5" kill_decay_end_time="0.5" />
+			<result class="hit" kill_probability="2.0" kill_probability_offset_on_successful_hit="1.0" kill_decay_start_time="0.5" kill_decay_end_time="0.5" />
 		</projectile>
 		<!-- Accuracy, Movement speed -->
 		<stance state_key="running" accuracy="0.7" />
@@ -78,7 +78,7 @@
 		<model filename="sfw_excutioner1.xml" />
 		<next_in_chain key="ff_excutioner_1.weapon" share_ammo="0" />
 		<projectile file="teal.projectile">
-			<result class="blast" radius="4" damage="4" decal="0" push="0.0" character_state="death" faction_compare="not_equal" make_vehicle_hit_sound="0" />
+			<result class="blast" radius="3" damage="5" decal="0" push="0.0" character_state="death" faction_compare="not_equal" make_vehicle_hit_sound="0" />
 		</projectile>
 		<inventory encumbrance="27.0" buy_price="648.0" sell_price="648.0" />
 		<stance state_key="running" accuracy="1" />
@@ -93,16 +93,6 @@
 		<effect class="muzzle" ref="sawsnone" />
 		<commonness value="0.0000001" in_stock="0" can_respawn_with="1" />
 		<modifier class="speed" value="0.8" />
-		<shield offset="-0.60 0.0 0" extent="0.4 1.5 0.3" />
-		<!-- state modifiers for weapons are connected to shield impact events -->
-		<!-- deflects all bullets; death, stun, wound become none, doesn't consume -->
-		<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0" />
-		<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-		<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-		<!-- death and wound blast causes the item to be consumed, stun is ignored -->
-		<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" consumes_item="0" />
-		<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-		<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
 		<modifier class="hit_success_probability" value="-0.15" />
         <modifier class="detectability" value="0.45" />
 	</weapon>

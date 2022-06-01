@@ -17,9 +17,9 @@
     projectile_speed="100"
     use_basic_muzzle_smoke_effect="0"
     stab_enabled="1"
-    stab_range="6"
+    stab_range="5"
 	sustained_fire_grow_step="0"
-/>
+    />
 
     <animation state_key="recoil"   animation_key="melee, nyto whip" />
     <animation state_key="stabbing" animation_key="melee, nyto whip" />
@@ -46,7 +46,7 @@
   sell_price="328.0"/>
      
     <projectile file="teal.projectile">
-        <result class="blast" radius="5" damage="8" decal="0" push="0.0" character_state="death" faction_compare="not_equal" make_vehicle_hit_sound="0" />
+        <result class="blast" radius="3" damage="5" decal="0" push="0.0" character_state="death" faction_compare="not_equal" make_vehicle_hit_sound="0" />
     </projectile>
 
   
