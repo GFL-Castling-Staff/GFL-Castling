@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<weapon file="heavy_mg_standing.animation_base" key="gkw_dp28.weapon">
+<weapon file="lmg_mg.animation_base" key="gkw_dp28.weapon">
     <specification 
     barrel_offset="0.5" 
 	retrigger_time="0.1" 
@@ -10,10 +10,10 @@
 	suppressed="0" 
 	name="DP-28" 
 	class="0" 
-	projectile_speed="178.72" 
+	projectile_speed="220" 
 	spread_range="0.1"
-	sight_range_modifier="1.5"/>
-    <animation state_key="hold_casual"			animation_key="dancing, kazachok" />
+	sight_range_modifier="2.0"/>
+    <animation state_key="hold_casual" animation_key="dancing, kazachok" />
     <animation key="reload" animation_key="reloading, Machine gun 1.2" />
     <inventory  buy_price="8.0" sell_price="8.0" />
     <sound key="fire" fileref="dp28_fire_FromRS2V.wav" pitch_variety="0.05" volume="1" />
@@ -24,7 +24,7 @@
     <model filename="gkw_mg_dp28.xml" />
     <hud_icon filename="gkw_dp28.png" />
     <projectile file="bullet.projectile">
-        <result class="hit" kill_probability="1.9" kill_decay_start_time="1.714" kill_decay_end_time="2.857" />
+        <result class="hit" kill_probability="2.2" kill_decay_start_time="1.714" kill_decay_end_time="2.857" />
     </projectile>
     <stance state_key="running" accuracy="0.6" />
     <stance state_key="crouch_moving" accuracy="0.6" />
