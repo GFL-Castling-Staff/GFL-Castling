@@ -19,14 +19,32 @@ class jupiter: Tracker {
 	protected bool m_strike=false;
 	protected Vector3 m_pos;
 	protected int radd = 12; //木星炮随机半径
+	protected int currentplayers = 1;//目前在线玩家数量
+	protected int awaitingstrikes = 1;//同时射击的木星炮数
 
 	jupiter(Metagame@ metagame,float cycle=60.0) {
 		@m_metagame = @metagame;
 		reload_cycle =cycle;
     }
 
+	float getJupiterReloadTime(int currentplayers){
+		if(currentplayers<=1)return 75.0;
+		else if(currentplayers<=2)return 45.0;
+		else if(currentplayers<=3)return 36.0;
+		else if(currentplayers<=5)return 30.0;
+		else if(currentplayers<=20)return 25.0;
+		else return 20.0;
+	}
+
+	int getJupiterStrikeNum(int currentplayers){
+		if(currentplayers<=10)return 1;
+		else if(currentplayers<=25)return 2;
+		else return 3;
+	}
+
 	void jupiterfireReady() {
 		array<const XmlElement@> players = getPlayers(m_metagame);
+		currentplayers = players.length;
         if(players is null) return;
 		int luckyguyId = rand(1,players.length)-1;
 		const XmlElement@ playerinfo = getPlayerInfo(m_metagame, luckyguyId);
@@ -46,12 +64,10 @@ class jupiter: Tracker {
 				_log("Amos detected");
 				c_pos = c_pos.add(Vector3(jud_amos*sin(rand(0,20)/20*6.28),0,jud_amos*cos(rand(0,20)/20*6.28)));
 			}
-
 		}
 		int circle = 8;	//警示烟雾数量
 
 		for(uint i=0;i<circle;i++){
-				
 			CreateProjectile(m_metagame,c_pos.add(Vector3(radd*sin(i*3.14/circle*2),6,radd*cos(i*3.14/circle*2))),c_pos.add(Vector3(radd*sin(i*3.14/circle*2),0,radd*cos(i*3.14/circle*2))),"jupiter_airstrike_warning_s.projectile",-1,m_faction,120,100);
 		}
 		
@@ -83,7 +99,14 @@ class jupiter: Tracker {
 			jupiterfireReady();
 			_log("Jupiter_Fired:"+ m_numLeft);
 			m_numLeft++;
-			reload_time = reload_cycle;			
+			if(m_numLeft<awaitingstrikes){
+				reload_time = -1;	
+			}
+			else{
+				awaitingstrikes = getJupiterStrikeNum(currentplayers);
+				reload_time = getJupiterReloadTime(currentplayers);		
+				m_numLeft = 0;		
+			}
 		}
 		if(m_strike){
 			m_delaytime-=time;
