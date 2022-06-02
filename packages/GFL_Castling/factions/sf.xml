@@ -735,7 +735,7 @@
 			<call key="sf_destroyer.call" />
 			<weapon key="sfw_alchemist.weapon" enabled="1"/>
 			<projectile key="hand_grenade.projectile"/>
-			<carry_item key="sf_boss_blast_none.carry_item" enabled="1" />
+			<carry_item key="sf_alchemist.carry_item" enabled="1" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="310.0" max="400.05" />
@@ -805,7 +805,7 @@
 			<call key="sf_jaguar.call" />
 			<weapon key="sfw_excutioner_2.weapon" enabled="1"/>
 			<projectile key="hand_grenade.projectile"/>
-			<carry_item key="sf_boss_blast_none.carry_item" enabled="1" />
+			<carry_item key="sf_excutioner_qm.carry_item" enabled="1" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="300.0" max="300.05" />
