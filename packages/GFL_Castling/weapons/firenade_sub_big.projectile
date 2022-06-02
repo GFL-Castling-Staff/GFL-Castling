@@ -5,7 +5,7 @@
 
     <!-- <event> -->
     <trigger class="impact" />
-    <result class="blast" radius="6" damage="0.5" push="0.0" decal="1" make_vehicle_hit_sound="0" faction_compare="not_equal" damage_as_probability="1"/>
+    <result class="blast" radius="4" damage="0.4" push="0.0" decal="1" make_vehicle_hit_sound="0" faction_compare="not_equal" damage_as_probability="1"/>
 
     <commonness value="0.0"/>
 
@@ -44,11 +44,11 @@
 
     <effect class="result" key="other" ref="SmokePropulsion" />
     <effect class="result" key="other" ref="FlamePropulsion" lighting="0" />
-    <effect class="result" key="other" ref="FlameSparkle" lighting="0" />
+    <effect class="result" key="other" ref="FlameSparkle_Big" lighting="0" />
 
     <effect class="result" key="other" ref="SmokePropulsionEnd" />
-    <effect class="result" key="other" ref="FlamePropulsionEnd" lighting="0" />
-    <effect class="result" key="other" ref="FlameSparkleEnd" lighting="0" />
+    <effect class="result" key="other" ref="FlamePropulsion" lighting="0" />
+    <effect class="result" key="other" ref="FlameSparkle_Big_End" lighting="0" />
 
     <effect class="result" key="terrain" copy="other" />
     <effect class="result" key="static_object" copy="other" />
