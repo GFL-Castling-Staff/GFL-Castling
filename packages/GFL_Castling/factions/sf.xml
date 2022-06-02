@@ -557,7 +557,7 @@
 	</soldier>
 	<!-- 劫豹 -->
 	<soldier name="sfw_jaguar" spawn_score="0.8" copy_from="default_spawn_ai">
-		<ai filename="sniper.ai" />
+		<ai filename="rocket_mecha.ai" />
 		<model filename="sfd_sangvisfeaal_swap.xml" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_calls="1">
 			<weapon key="sfw_jaguar.weapon" enabled="1"/>
@@ -570,7 +570,7 @@
 		<model filename="sfd_prowler_from_melondove.xml" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_calls="1">
 			<weapon key="sfw_prowler.weapon" enabled="1"/>
-			<carry_item key="sf_ar.carry_item" enabled="1" />
+			<carry_item key="sf_sh.carry_item" enabled="1" />
 		</resources>
 	</soldier>
 	<!-- 圣盾 -->
