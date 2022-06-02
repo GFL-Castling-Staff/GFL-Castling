@@ -18,11 +18,11 @@
 
     <effect class="result" key="terrain" ref="BurnOut" post_processing="1" />
     <effect class="result" key="other" ref="SmokePropulsion" />
-    <effect class="result" key="other" ref="FlamePropulsion_Big" lighting="0" />
+    <effect class="result" key="other" ref="FlamePropulsion" lighting="0" />
     <effect class="result" key="other" ref="FlameSparkle" lighting="0" />
     
     <effect class="result" key="other" ref="SmokePropulsionEnd" />
-    <effect class="result" key="other" ref="FlamePropulsion_Big_End" lighting="0" />
+    <effect class="result" key="other" ref="FlamePropulsion" lighting="0" />
     <effect class="result" key="other" ref="FlameSparkleEnd" lighting="0" />
     <effect class="result" key="terrain" copy="other" />
     <effect class="result" key="static_object" copy="other" />

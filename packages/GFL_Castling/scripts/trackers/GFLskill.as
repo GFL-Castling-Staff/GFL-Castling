@@ -400,7 +400,15 @@ class GFLskill : Tracker {
 			if (character !is null) {
 				Vector3 grenade_pos = stringToVector3(event.getStringAttribute("position"));
 				int factionid = character.getIntAttribute("faction_id");
-				Vector_track.insertLast(Vector_tracker(characterId,factionid,grenade_pos));			
+				string c = 
+					"<command class='create_instance'" +
+					" faction_id='"+ factionid +"'" +
+					" instance_class='grenade'" +
+					" instance_key='firenade_Vector_blast.projectile'" +
+					" position='" + grenade_pos.toString() + "'"+
+					" character_id='" + characterId + "' />";
+				m_metagame.getComms().send(c);
+				Vector_track.insertLast(Vector_tracker(characterId,factionid,grenade_pos));
 			}
 		}
 		if (EventKeyGet == "stg44_skill") {

@@ -1,8 +1,8 @@
 particle_system FlamePropulsion_Big {
 	quota	500
 	material FlamePropulsion
-	particle_width	1.5
-	particle_height	1.5
+	particle_width	0.8
+	particle_height	0.8
 	cull_each	false
 	renderer	billboard
 	billboard_type	point
@@ -24,8 +24,8 @@ particle_system FlamePropulsion_Big {
 	}
 
 	affector Rotator {
-		rotation_speed_range_start	-30
-		rotation_speed_range_end	30
+		rotation_speed_range_start	-60
+		rotation_speed_range_end	60
 		rotation_range_start	0
 		rotation_range_end	360
 	}
@@ -39,8 +39,8 @@ particle_system FlamePropulsion_Big {
 particle_system FlamePropulsion_Big_End {
 	quota	500
 	material FlamePropulsion
-	particle_width	1.5
-	particle_height	1.5
+	particle_width	0.8
+	particle_height	0.8
 	cull_each	false
 	renderer	billboard
 	billboard_type	point
@@ -62,8 +62,8 @@ particle_system FlamePropulsion_Big_End {
 	}
 
 	affector Rotator {
-		rotation_speed_range_start	-30
-		rotation_speed_range_end	30
+		rotation_speed_range_start	-60
+		rotation_speed_range_end	60
 		rotation_range_start	0
 		rotation_range_end	360
 	}
@@ -74,4 +74,78 @@ particle_system FlamePropulsion_Big_End {
 	}
 }
 
+particle_system FlameSparkle_Big {
+	quota	500
+	material FlamePropulsion2
+	particle_width	0.1
+	particle_height	0.1
+	cull_each	false
+	renderer	billboard
+	billboard_type	point
 
+	emitter Point {
+		angle	40
+		colour	1.0 1.0 1.0 1.0
+		direction	0 1 0
+		emission_rate	10
+		position	0 0 0
+		velocity_min	1
+		velocity_max	3
+		time_to_live	0.8
+		duration	1.0
+	}
+
+	affector Scaler {
+		rate	0.1
+	}
+
+	affector Rotator {
+		rotation_speed_range_start	-60
+		rotation_speed_range_end	60
+		rotation_range_start	0
+		rotation_range_end	360
+	}
+
+	affector LinearForce {
+		force_vector 0 5 0
+		force_application add
+	}
+}
+
+particle_system FlameSparkle_Big_End {
+	quota	500
+	material FlamePropulsion2
+	particle_width	0.1
+	particle_height	0.1
+	cull_each	false
+	renderer	billboard
+	billboard_type	point
+
+	emitter Point {
+		angle	40
+		colour	1.0 1.0 1.0 1.0
+		direction	0 1 0
+		emission_rate	10
+		position	0 0 0
+		velocity_min	1
+		velocity_max	3
+		time_to_live	0.8
+		duration	0.3
+	}
+
+	affector Scaler {
+		rate	0.11
+	}
+
+	affector Rotator {
+		rotation_speed_range_start	-60
+		rotation_speed_range_end	60
+		rotation_range_start	0
+		rotation_range_end	360
+	}
+
+	affector LinearForce {
+		force_vector 0 5 0
+		force_application add
+	}
+}
