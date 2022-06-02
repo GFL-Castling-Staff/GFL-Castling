@@ -21,9 +21,9 @@ void main(dictionary@ inputData) {
         settings.m_fellowCapacityFactor = 0.5;
         settings.m_fellowAiAccuracyFactor = 0.93;
         settings.m_enemyCapacityFactor = 2.5;
-        settings.m_enemyAiAccuracyFactor = 0.88;
+        settings.m_enemyAiAccuracyFactor = 0.93;
         settings.m_initialRp = 1000.0;
-		
+		settings.m_fov=true;
 		settings.m_xpFactor = 1;
 		settings.m_rpFactor = 2.0;
 
@@ -36,7 +36,7 @@ void main(dictionary@ inputData) {
 
         settings.m_startServerCommand = """
 <command class='start_server'
-	server_name='[Castling][Insane-5 250%]'
+	server_name='[Castling][Lunatic-5 FOV]'
 	server_port='1234'
 	comment='50% Friend AI, Read server rules in our discord: discord.gg/wwUM3kYmRC, QQ Group: 706234535'
 	url='https://castling.fandom.com/wiki/Castling_Wiki'
