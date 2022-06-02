@@ -11,7 +11,8 @@ class jupiter: Tracker {
 	protected Metagame@ m_metagame;
 	protected float reload_cycle;
 	protected float reload_time=15.0;
-	protected bool m_started;
+	protected bool m_started=false;
+	protected bool tracker_started;
 	protected int m_numLeft=0;
 	protected int m_faction=1;
 	protected int m_striketime=3; //木星炮弹头数量
@@ -90,6 +91,8 @@ class jupiter: Tracker {
 
 	void start(){
 		_log("Jupiter_Initialized: "+m_numLeft);
+		reload_time=15.0;
+		tracker_started=true;
 	}
 
     void update(float time) {
@@ -126,9 +129,17 @@ class jupiter: Tracker {
 
 	// --------------------------------------------
 	bool hasStarted() const {
-		return true;
+		return tracker_started;
 	}
 
+	void gameContinuePreStart() {
+		tracker_started = true;
+	}
+
+	// --------------------------------------------
+	void onRemove() {
+		tracker_started = false;
+	}
 	
 	protected void handleVehicleSpawnEvent(const XmlElement@ event) {
 		string key = event.getStringAttribute("vehicle_key");
