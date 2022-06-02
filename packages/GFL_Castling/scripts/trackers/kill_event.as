@@ -64,7 +64,6 @@ class kill_event : Tracker {
 	};
 
 	protected void handleCharacterKillEvent(const XmlElement@ event){
-        _log("114514testinglog");
 		const XmlElement@ killer = event.getFirstElementByTagName("killer");
         if (killer is null) return;
         const XmlElement@ target = event.getFirstElementByTagName("target");
@@ -77,7 +76,7 @@ class kill_event : Tracker {
             string KillerWeaponKey = getDeadPlayerEquipmentKey(m_metagame,characterId,0);
 
             if((KillerWeaponKey!="") && (killerVestKey.find(KillerWeaponKey)> -1)){
-                _log("Kill_detected.");
+                // _log("Kill_detected.");
                 if(KillerWeaponKey=="ff_excutioner_2.weapon"){
                     uint jud=0;
                     for(uint a=0;a<HealOnBladeKill_track.length();a++)
@@ -87,7 +86,7 @@ class kill_event : Tracker {
                             break;
                         }
                     if(jud==0)HealOnBladeKill_track.insertLast(HealOnBladeKill_tracker(characterId,0,3,10));
-                    _log("Excutioner_Kill_detected.");             
+                    // _log("Excutioner_Kill_detected.");
                 }
                 if(KillerWeaponKey=="ff_parw_alina.weapon"){
                     uint jud=0;
@@ -158,8 +157,8 @@ class kill_event : Tracker {
 							" untransform_count='"+ vestrestore +"'" +
 							" character_id='" + HealOnBladeKill_track[a].m_characterId + "' />";
 						m_metagame.getComms().send(c);
-                        if(vestrestore>0)   _log("Heal successful.");  
-                        else    _log("Heal failed.");  
+                        // if(vestrestore>0)   _log("Heal successful.");  
+                        // else    _log("Heal failed.");  
 					}
 					HealOnBladeKill_track[a].m_numtime--;
 					HealOnBladeKill_track[a].m_time=0.2;
