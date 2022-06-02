@@ -1,389 +1,428 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <carry_items>
-    <carry_item file="wearables.base_carry_item"  key="sf_hunter.carry_item" name="Hunter" slot="1" transform_on_consume="sf_hun_2" >
-        <hud_icon filename="sfd_ar.png" />
- 
-        <model mesh_filename="vestexo.xml" />
-                                                                                                                                                                          
- 
-        <!-- death or wound or stun -> no effect -->
+	<carry_item key="sf_hunter.carry_item" time_to_live_out_in_the_open="15" name="Hunter" transform_on_consume="hunter_1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="sfd_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
- 
-        
-        <modifier class="speed" value="0.1" />
-		<modifier class="hit_success_probability" value="-0.4" />
-	    <modifier class="detectability" value="0.6" />
-    </carry_item>
-
-    <carry_item file="wearables.base_carry_item" key="sf_hun_2" name="Hunter" slot="1" transform_on_consume="sf_hun_3" >
-        <hud_icon filename="sfd_ar.png" />
- 
-        <model mesh_filename="vestexo.xml" />
-
+        <modifier class="speed" value="0.2" />
+        <modifier class="hit_success_probability" value="-1.5" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
+	<carry_item key="hunter_1" time_to_live_out_in_the_open="15" name="Hunter" transform_on_consume="hunter_2" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="sfd_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-
-        
-        <modifier class="speed" value="0.1" />
-		<modifier class="hit_success_probability" value="-0.4" />
-	    <modifier class="detectability" value="0.6" />
-    </carry_item>
-
-    <carry_item file="wearables.base_carry_item" key="sf_hun_3" name="Hunter" slot="1" transform_on_consume="sf_hun_4" >
-        <hud_icon filename="sfd_ar.png" />
- 
-        <model mesh_filename="vestexo.xml" />
-
+        <modifier class="speed" value="0.2" />
+        <modifier class="hit_success_probability" value="-1.5" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
+	<carry_item key="hunter_2" time_to_live_out_in_the_open="15" name="Hunter" transform_on_consume="hunter_3" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="sfd_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-
-        
-        <modifier class="speed" value="0.1" />
-		<modifier class="hit_success_probability" value="-0.4" />
-	    <modifier class="detectability" value="0.6" />
-    </carry_item>
-
-    <carry_item file="wearables.base_carry_item" key="sf_hun_4" name="Hunter-Slight Damage-" slot="1" transform_on_consume="sf_hun_5" >
-        <hud_icon filename="sfd_ar.png" />
- 
-        <model mesh_filename="vestexo.xml" />
-
+        <modifier class="speed" value="0.2" />
+        <modifier class="hit_success_probability" value="-1.5" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
+	<carry_item key="hunter_3" time_to_live_out_in_the_open="15" name="Hunter" transform_on_consume="hunter_4" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="sfd_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-
-        
-        <modifier class="speed" value="0.1" />
-		<modifier class="hit_success_probability" value="-0.4" />
-	    <modifier class="detectability" value="0.6" />
-    </carry_item>
-
-    <carry_item file="wearables.base_carry_item" key="sf_hun_5" name="Hunter-Slight Damage-" slot="1" transform_on_consume="sf_hun_6" >
-        <hud_icon filename="sfd_ar.png" />
- 
-        <model mesh_filename="vestexo.xml" />
-
+        <modifier class="speed" value="0.2" />
+        <modifier class="hit_success_probability" value="-1.5" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
+	<carry_item key="hunter_4" time_to_live_out_in_the_open="15" name="Hunter" transform_on_consume="hunter_5" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="sfd_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-
-        
-        <modifier class="speed" value="0.1" />
-		<modifier class="hit_success_probability" value="-0.5" />
-	    <modifier class="detectability" value="0.6" />
-    </carry_item>
-
-    <carry_item file="wearables.base_carry_item" key="sf_hun_6" name="Hunter-Slight Damage-" slot="1" transform_on_consume="sf_hun_7" >
-        <hud_icon filename="sfd_ar.png" />
- 
-        <model mesh_filename="vestexo.xml" />
-
+        <modifier class="speed" value="0.2" />
+        <modifier class="hit_success_probability" value="-1.5" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
+	<carry_item key="hunter_5" time_to_live_out_in_the_open="15" name="Hunter" transform_on_consume="hunter_6" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="sfd_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-
-        
-        <modifier class="speed" value="0.1" />
-		<modifier class="hit_success_probability" value="-0.5" />
-	    <modifier class="detectability" value="0.6" />
-    </carry_item>
-
-    <carry_item file="wearables.base_carry_item" key="sf_hun_7" name="Hunter-Moderate Damage-" slot="1" transform_on_consume="sf_hun_8" >
-        <hud_icon filename="sfd_ar.png" />
- 
-        <model mesh_filename="vestexo.xml" />
-
+        <modifier class="speed" value="0.2" />
+        <modifier class="hit_success_probability" value="-1.5" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
+	<carry_item key="hunter_6" time_to_live_out_in_the_open="15" name="Hunter" transform_on_consume="hunter_7" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="sfd_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-
-        
-        <modifier class="speed" value="0.1" />
-		<modifier class="hit_success_probability" value="-0.5" />
-	    <modifier class="detectability" value="0.6" />
-    </carry_item>
-
-    
-    <carry_item file="wearables.base_carry_item" key="sf_hun_8" name="Hunter-Moderate Damage-" slot="1" transform_on_consume="sf_hun_9" >
-        <hud_icon filename="sfd_ar.png" />
- 
-        <model mesh_filename="vestexo.xml" />
-
+        <modifier class="speed" value="0.2" />
+        <modifier class="hit_success_probability" value="-1.5" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
+	<carry_item key="hunter_7" time_to_live_out_in_the_open="15" name="Hunter" transform_on_consume="hunter_8" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="sfd_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-
-        
-        <modifier class="speed" value="0.1" />
-		<modifier class="hit_success_probability" value="-0.5" />
-	    <modifier class="detectability" value="0.6" />
-    </carry_item>
-
-    
-    <carry_item file="wearables.base_carry_item" key="sf_hun_9" name="Hunter-Moderate Damage-" slot="1" transform_on_consume="sf_hun_10" >
-        <hud_icon filename="sfd_ar.png" />
- 
-        <model mesh_filename="vestexo.xml" />
-
+        <modifier class="speed" value="0.2" />
+        <modifier class="hit_success_probability" value="-1.5" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
+	<carry_item key="hunter_8" time_to_live_out_in_the_open="15" name="Hunter" transform_on_consume="hunter_9" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="sfd_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.2" />
+        <modifier class="hit_success_probability" value="-1.5" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
+	<carry_item key="hunter_9" time_to_live_out_in_the_open="15" name="Hunter" transform_on_consume="hunter_10" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="sfd_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.2" />
+        <modifier class="hit_success_probability" value="-1.5" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
+	<carry_item key="hunter_10" time_to_live_out_in_the_open="15" name="Hunter" transform_on_consume="hunter_11" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="sfd_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-
-        
-        <modifier class="speed" value="0.1" />
-		<modifier class="hit_success_probability" value="-0.5" />
-	    <modifier class="detectability" value="0.6" />
-    </carry_item>
-
-    
-    <carry_item file="wearables.base_carry_item" key="sf_hun_10" name="Hunter-Moderate Damage-" slot="1" transform_on_consume="sf_hun_11" >
-        <hud_icon filename="sfd_ar.png" />
- 
-        <model mesh_filename="vestexo.xml" />
-
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="stun" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
+	<carry_item key="hunter_11" time_to_live_out_in_the_open="15" name="Hunter" transform_on_consume="hunter_12" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="sfd_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-
-        
-        <modifier class="speed" value="0.1" />
-		<modifier class="hit_success_probability" value="-0.5" />
-	    <modifier class="detectability" value="0.6" />
-    </carry_item>
-
-    <carry_item file="wearables.base_carry_item" key="sf_hun_11" name="Hunter-Seriously Damaged-" slot="1" transform_on_consume="sf_hun_12" >
-        <hud_icon filename="sfd_ar.png" />
- 
-        <model mesh_filename="vestexo.xml" />
-
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="stun" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
+	<carry_item key="hunter_12" time_to_live_out_in_the_open="15" name="Hunter" transform_on_consume="hunter_13" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="sfd_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-
-        <modifier class="speed" value="0.1" />
-		<modifier class="hit_success_probability" value="-0.5" />
-	    <modifier class="detectability" value="0.6" />
-    </carry_item>
-
-    <carry_item file="wearables.base_carry_item" key="sf_hun_12" name="Hunter-Severe Damage-" slot="1" transform_on_consume="sf_hun_13" >
-        <hud_icon filename="sfd_ar.png" />
- 
-        <model mesh_filename="vestexo.xml" />
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="stun" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
+	<carry_item key="hunter_13" time_to_live_out_in_the_open="15" name="Hunter" transform_on_consume="hunter_14" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="sfd_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-
-        <modifier class="speed" value="0.1" />
-		<modifier class="hit_success_probability" value="-0.5" />
-	    <modifier class="detectability" value="0.6" />
-    </carry_item>
-
-    <carry_item file="wearables.base_carry_item" key="sf_hun_13" name="Hunter-Severe Damage-" slot="1" transform_on_consume="sf_hun_14" >
-        <hud_icon filename="sfd_ar.png" />
- 
-        <model mesh_filename="vestexo.xml" />
-
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="stun" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
+	<carry_item key="hunter_14" time_to_live_out_in_the_open="15" name="Hunter" transform_on_consume="hunter_15" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="sfd_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-
-
-        <modifier class="speed" value="0.1" />
-		<modifier class="hit_success_probability" value="-0.5" />
-	    <modifier class="detectability" value="0.6" />
-    </carry_item>
-
-
-    <carry_item file="wearables.base_carry_item" key="sf_hun_14" name="Hunter-Severe Damage-" slot="1" transform_on_consume="sf_hun_15" >
-        <hud_icon filename="sfd_ar.png" />
- 
-        <model mesh_filename="vestexo.xml" />
-
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="stun" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
+	<carry_item key="hunter_15" time_to_live_out_in_the_open="15" name="Hunter" transform_on_consume="hunter_16" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="sfd_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-
-        <modifier class="speed" value="0.1" />
-		<modifier class="hit_success_probability" value="-0.5" />
-	    <modifier class="detectability" value="0.6" />
-    </carry_item>
-
-
-    <carry_item file="wearables.base_carry_item" key="sf_hun_15" name="Hunter-Severe Damage-" slot="1" transform_on_consume="sf_hun_16" >
-        <hud_icon filename="sfd_ar.png" />
- 
-        <model mesh_filename="vestexo.xml" />
-
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="stun" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
+	<carry_item key="hunter_16" time_to_live_out_in_the_open="15" name="Hunter" transform_on_consume="hunter_17" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="sfd_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-
-
-        <modifier class="speed" value="0.1" />
-		<modifier class="hit_success_probability" value="-0.5" />
-	    <modifier class="detectability" value="0.6" />
-    </carry_item>
-
-    <carry_item file="wearables.base_carry_item" key="sf_hun_16" name="Hunter-Severe Damage-" slot="1" transform_on_consume="sf_hun_17" >
-        <hud_icon filename="sfd_ar.png" />
- 
-        <model mesh_filename="vestexo.xml" />
-
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="stun" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
+	<carry_item key="hunter_17" time_to_live_out_in_the_open="15" name="Hunter" transform_on_consume="hunter_18" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="sfd_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-
-
-        <modifier class="speed" value="0.1" />
-		<modifier class="hit_success_probability" value="-0.5" />
-	    <modifier class="detectability" value="0.6" />
-    </carry_item>
-
-
-    <carry_item file="wearables.base_carry_item" key="sf_hun_17" name="Hunter-Severe Damage-" slot="1" transform_on_consume="sf_hun_18" >
-        <hud_icon filename="sfd_ar.png" />
- 
-        <model mesh_filename="vestexo.xml" />
-
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="stun" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
+	<carry_item key="hunter_18" time_to_live_out_in_the_open="15" name="Hunter" transform_on_consume="hunter_19" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="sfd_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-
-
-        <modifier class="speed" value="0.1" />
-		<modifier class="hit_success_probability" value="-0.5" />
-	    <modifier class="detectability" value="0.6" />
-    </carry_item>
-
-
-    <carry_item file="wearables.base_carry_item" key="sf_hun_18" name="Hunter-Severe Damage-" slot="1" transform_on_consume="sf_hun_19" >
-        <hud_icon filename="sfd_ar.png" />
- 
-        <model mesh_filename="vestexo.xml" />
-
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="stun" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
+	<carry_item key="hunter_19" time_to_live_out_in_the_open="15" name="Hunter" transform_on_consume="hunter_20" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="sfd_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-
-
-        <modifier class="speed" value="0.1" />
-		<modifier class="hit_success_probability" value="-0.5" />
-	    <modifier class="detectability" value="0.6" />
-    </carry_item>
-
-
-    <carry_item file="wearables.base_carry_item" key="sf_hun_19" name="Hunter-Severe Damage-" slot="1" transform_on_consume="sf_hun_20" >
-        <hud_icon filename="sfd_ar.png" />
- 
-        <model mesh_filename="vestexo.xml" />
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="stun" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
+	<carry_item key="hunter_20" time_to_live_out_in_the_open="15" name="Hunter" transform_on_consume="hunter_21" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="sfd_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-
-        <modifier class="speed" value="0.1" />
-		<modifier class="hit_success_probability" value="-0.5" />
-	    <modifier class="detectability" value="0.6" />
-    </carry_item>
-
-
-    <carry_item file="wearables.base_carry_item" key="sf_hun_21" name="Hunter-Severe Damage-" slot="1" transform_on_consume="sf_hun_22" >
-        <hud_icon filename="sfd_ar.png" />
- 
-        <model mesh_filename="vestexo.xml" />
-
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="death" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
+	<carry_item key="hunter_21" time_to_live_out_in_the_open="15" name="Hunter" transform_on_consume="hunter_22" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="sfd_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-
-        <modifier class="speed" value="0.1" />
-		<modifier class="hit_success_probability" value="-0.5" />
-	    <modifier class="detectability" value="0.6" />
-    </carry_item>
-
-
-
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
+	<carry_item key="hunter_22" time_to_live_out_in_the_open="15" name="Hunter" transform_on_consume="hunter_23" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="sfd_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
+	<carry_item key="hunter_23" time_to_live_out_in_the_open="15" name="Hunter" transform_on_consume="hunter_24" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="sfd_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
+	<carry_item key="hunter_24" time_to_live_out_in_the_open="15" name="Hunter" transform_on_consume="hunter_25" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="sfd_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
 </carry_items>
