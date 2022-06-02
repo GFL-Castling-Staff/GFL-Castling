@@ -13,7 +13,7 @@
 // --------------------------------------------
 class kill_event : Tracker {
 	protected Metagame@ m_metagame;
-    protected array<HealOnBladeKill_tracker@> HealOnBladeKill_track;
+    protected array<HealOnKill_tracker@> HealOnKill_track;
 
 	// --------------------------------------------
 	kill_event(Metagame@ metagame) {
@@ -21,10 +21,6 @@ class kill_event : Tracker {
         //rpScale = rp_multiplier;
 		m_metagame.getComms().send("<command class='set_metagame_event' name='character_kill' enabled='1' />");
 	}
-	array<string> killerVestKey = {
-        "ff_excutioner_2.weapon",
-        "ff_parw_alina.weapon"
-	};
 
 	array<string> targetVestKey = {
 		"sfw_manticore.weapon",
@@ -63,42 +59,132 @@ class kill_event : Tracker {
         "sfw_nemeum.weapon"
 	};
 
+    dictionary healOnKillWeaponList = {
+
+        // 空武器，后面杀几个人回一次甲就写几
+        {"",0},
+
+
+        // 近战武器
+        {"ff_excutioner_2.weapon",3},
+        {"ff_parw_alina.weapon",2},
+
+        // AK15MOD3
+        {"gkw_ak15mod3.weapon",3},
+
+        // SMG——2kills
+        {"gkw_ump40.weapon",2},
+        {"gkw_ump9.weapon",2},
+        {"gkw_ump45.weapon",2},
+        {"gkw_ump9mod3.weapon",2},
+        {"gkw_ump45mod3.weapon",2},
+        {"gkw_ump45_410.weapon",2},
+        {"gkw_ump45_535.weapon",2},
+        {"gkw_ump45mod3_410.weapon",2},
+        {"gkw_ump45mod3_535.weapon",2},
+        {"gkw_pps43.weapon",2},
+        {"gkw_m3.weapon",2},
+        {"gkw_type100.weapon",2},
+        {"gkw_type100_1.weapon",2},
+        {"gkw_type100_skill.weapon",2},
+        {"gkw_sp9.weapon",2},
+        {"gkw_vector.weapon",2},
+        {"gkw_pm06.weapon",2},
+        {"gkw_pp90.weapon",2},
+        {"gkw_js9.weapon",2},
+        {"gkw_js9_4702.weapon",2},
+        {"gkw_thompson.weapon",2},
+        {"gkw_uzi.weapon",2},
+        {"gkw_uzimod3.weapon",2},
+        {"gkw_vz61.weapon",2},
+        {"gkw_pp19.weapon",2},
+        {"gkw_pp19mod3.weapon",2},
+        {"gkw_klin.weapon",2},
+        {"gkw_mp40.weapon",2},
+        {"gkw_mp5.weapon",2},
+        {"gkw_mp5mod3.weapon",2},
+        {"gkw_mp5_3.weapon",2},
+        {"gkw_mp5_1205.weapon",2},
+        {"gkw_mp5_1903.weapon",2},
+        {"gkw_mp5_3006.weapon",2},
+        {"gkw_mp5mod3_3.weapon",2},
+        {"gkw_mp5mod3_1205.weapon",2},
+        {"gkw_mp5mod3_1903.weapon",2},
+        {"gkw_mp5mod3_3006.weapon",2},
+        
+        // SMG——3kills
+        {"gkw_ppsh41.weapon",3},
+        {"gkw_ppsh41mod3.weapon",3},
+        {"gkw_mp7.weapon",3},
+        {"gkw_mp7_6806.weapon",3},
+        {"gkw_mab38.weapon",3},
+        {"gkw_mab38mod3.weapon",3},
+        {"gkw_ak74u.weapon",3},
+        {"gkw_ak74u_3002.weapon",3},
+        {"gkw_idw.weapon",3},
+        {"gkw_idw_2108.weapon",3},
+        {"gkw_idw_3205.weapon",3},
+        {"gkw_idw_4908.weapon",3},
+        {"gkw_idwmod3.weapon",3},
+        {"gkw_idwmod3_2108.weapon",3},
+        {"gkw_idwmod3_3205.weapon",3},
+        {"gkw_idwmod3_4908.weapon",3},
+        {"gkw_64type.weapon",3},
+        {"gkw_g36c.weapon",3},
+        {"gkw_g36c_mod3.weapon",3},
+        {"gkw_g36c_mod3_skill.weapon",3},
+        {"gkw_kp31.weapon",3},
+        {"gkw_type79.weapon",3},
+        {"gkw_ro635.weapon",3},
+        {"gkw_ro635mod3.weapon",3},
+        {"gkw_pdw.weapon",3},
+        {"gkw_pdw_4005.weapon",3},
+        {"gkw_p90.weapon",3},
+        {"gkw_p90_2802.weapon",3},
+        {"gkw_x95.weapon",3},
+        {"gkw_augpara.weapon",3},
+        {"gkw_augpara_5503.weapon",3},
+        {"gkw_ar57.weapon",3},
+        {"gkw_vp1915.weapon",3}
+    };
+
+    protected void updateHealByKillEvent(int characterid,int factionid,int killstoheal,int timeaddafterkill){
+        uint jud=0;
+        for(uint a=0;a<HealOnKill_track.length();a++)
+            if(HealOnKill_track[a].m_characterId==characterid){
+                HealOnKill_track[a].current_kills++;
+                HealOnKill_track[a].m_numtime = timeaddafterkill;
+                jud = 1;
+                break;
+            }
+        if(jud==0)HealOnKill_track.insertLast(HealOnKill_tracker(characterid,factionid,killstoheal,timeaddafterkill)); 
+    }
+
 	protected void handleCharacterKillEvent(const XmlElement@ event){
 		const XmlElement@ killer = event.getFirstElementByTagName("killer");
         if (killer is null) return;
         const XmlElement@ target = event.getFirstElementByTagName("target");
         if (target is null) return;
+        
         if (killer.getIntAttribute("player_id") == -1) return;
         if ((killer.getIntAttribute("faction_id")) != (target.getIntAttribute("faction_id"))){
             int targetId = target.getIntAttribute("id");
+            int factionId = killer.getIntAttribute("faction_id");
             int characterId = killer.getIntAttribute("id");
             string VestKey = getDeadPlayerEquipmentKey(m_metagame,targetId,0);
             string KillerWeaponKey = getDeadPlayerEquipmentKey(m_metagame,characterId,0);
 
-            if((KillerWeaponKey!="") && (killerVestKey.find(KillerWeaponKey)> -1)){
-                // _log("Kill_detected.");
-                if(KillerWeaponKey=="ff_excutioner_2.weapon"){
-                    uint jud=0;
-                    for(uint a=0;a<HealOnBladeKill_track.length();a++)
-                        if(HealOnBladeKill_track[a].m_characterId==characterId){
-                            HealOnBladeKill_track[a].current_kills++;
-                            jud = 1;
-                            break;
-                        }
-                    if(jud==0)HealOnBladeKill_track.insertLast(HealOnBladeKill_tracker(characterId,0,3,10));
-                    // _log("Excutioner_Kill_detected.");
-                }
-                if(KillerWeaponKey=="ff_parw_alina.weapon"){
-                    uint jud=0;
-                    for(uint a=0;a<HealOnBladeKill_track.length();a++)
-                        if(HealOnBladeKill_track[a].m_characterId==characterId){
-                            HealOnBladeKill_track[a].current_kills++;
-                            jud = 1;
-                            break;
-                        }
-                   if(jud==0)HealOnBladeKill_track.insertLast(HealOnBladeKill_tracker(characterId,0,2,10));
-                }                
-            }      
+            switch(int(healOnKillWeaponList[KillerWeaponKey]))
+            {
+                case 0:{break;}
+                case 1:{updateHealByKillEvent(characterId,factionId,1,10);break;}
+                case 2:{updateHealByKillEvent(characterId,factionId,2,10);_log("Excutioner_Kill_detected.");break;}
+                case 3:{updateHealByKillEvent(characterId,factionId,3,10);_log("Excutioner_Kill_detected.");break;}
+
+                default:
+                    break;
+            }
+ 
 
             if (VestKey=="") return;
             if(targetVestKey.find(VestKey)> -1){
@@ -139,31 +225,31 @@ class kill_event : Tracker {
 	}
 
     void update(float time){
-        if(HealOnBladeKill_track.length()>0){
-            for (uint a=0;a<HealOnBladeKill_track.length();a++){
-                HealOnBladeKill_track[a].m_time-=time;
-                if(HealOnBladeKill_track[a].m_time<0){	
-					if (HealOnBladeKill_track[a].m_numtime>=0){
+        if(HealOnKill_track.length()>0){
+            for (uint a=0;a<HealOnKill_track.length();a++){
+                HealOnKill_track[a].m_time-=time;
+                if(HealOnKill_track[a].m_time<0){	
+					if (HealOnKill_track[a].m_numtime>=0){
                         int vestrestore = 0;
-                        while(HealOnBladeKill_track[a].current_kills>HealOnBladeKill_track[a].m_killstoheal){
+                        while(HealOnKill_track[a].current_kills>HealOnKill_track[a].m_killstoheal){
                             vestrestore++;
-                            HealOnBladeKill_track[a].current_kills -= HealOnBladeKill_track[a].m_killstoheal;                            
+                            HealOnKill_track[a].current_kills -= HealOnKill_track[a].m_killstoheal;                            
                         }
-                        if(HealOnBladeKill_track[a].current_kills<0){
-                            HealOnBladeKill_track[a].current_kills = 0;
+                        if(HealOnKill_track[a].current_kills<0){
+                            HealOnKill_track[a].current_kills = 0;
                         }
 						string c = 
 							"<command class='update_inventory'" +
 							" untransform_count='"+ vestrestore +"'" +
-							" character_id='" + HealOnBladeKill_track[a].m_characterId + "' />";
+							" character_id='" + HealOnKill_track[a].m_characterId + "' />";
 						m_metagame.getComms().send(c);
                         // if(vestrestore>0)   _log("Heal successful.");  
                         // else    _log("Heal failed.");  
 					}
-					HealOnBladeKill_track[a].m_numtime--;
-					HealOnBladeKill_track[a].m_time=0.2;
-					if (HealOnBladeKill_track[a].m_numtime<0){
-						HealOnBladeKill_track.removeAt(a);
+					HealOnKill_track[a].m_numtime--;
+					HealOnKill_track[a].m_time=0.2;
+					if (HealOnKill_track[a].m_numtime<0){
+						HealOnKill_track.removeAt(a);
 					}
 				}			
 			}
@@ -182,19 +268,19 @@ class kill_event : Tracker {
 	}
 }
 
-class HealOnBladeKill_tracker{
+class HealOnKill_tracker{
     int m_characterId;
 	float m_time=0.2;
 	float m_numtime=0;
 	int m_factionid;
     int m_killstoheal;
     int current_kills=0;
-	HealOnBladeKill_tracker(int characterId,int factionid,int killstoheal,float timeaddafterkill)
+	HealOnKill_tracker(int characterId,int factionid,int killstoheal,int timeaddafterkill)
 	{
 		m_characterId = characterId;
 		m_factionid= factionid;
 		m_killstoheal= killstoheal;
         current_kills++;
-        m_numtime= timeaddafterkill;
+        m_numtime= timeaddafterkill/m_time;
 	}
 }
