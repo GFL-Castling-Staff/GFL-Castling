@@ -557,7 +557,7 @@
 	</soldier>
 	<!-- 劫豹 -->
 	<soldier name="sfw_jaguar" spawn_score="0.8" copy_from="default_spawn_ai">
-		<ai filename="sniper.ai" />
+		<ai filename="rocket_mecha.ai" />
 		<model filename="sfd_sangvisfeaal_swap.xml" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_calls="1">
 			<weapon key="sfw_jaguar.weapon" enabled="1"/>
@@ -570,7 +570,7 @@
 		<model filename="sfd_prowler_from_melondove.xml" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_calls="1">
 			<weapon key="sfw_prowler.weapon" enabled="1"/>
-			<carry_item key="sf_ar.carry_item" enabled="1" />
+			<carry_item key="sf_sh.carry_item" enabled="1" />
 		</resources>
 	</soldier>
 	<!-- 圣盾 -->
@@ -735,7 +735,7 @@
 			<call key="sf_destroyer.call" />
 			<weapon key="sfw_alchemist.weapon" enabled="1"/>
 			<projectile key="hand_grenade.projectile"/>
-			<carry_item key="sf_boss_blast_none.carry_item" enabled="1" />
+			<carry_item key="sf_alchemist.carry_item" enabled="1" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="310.0" max="400.05" />
@@ -805,7 +805,7 @@
 			<call key="sf_jaguar.call" />
 			<weapon key="sfw_excutioner_2.weapon" enabled="1"/>
 			<projectile key="hand_grenade.projectile"/>
-			<carry_item key="sf_boss_blast_none.carry_item" enabled="1" />
+			<carry_item key="sf_excutioner_qm.carry_item" enabled="1" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="300.0" max="300.05" />

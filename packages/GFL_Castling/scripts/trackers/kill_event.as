@@ -161,7 +161,6 @@ class kill_event : Tracker {
     }
 
 	protected void handleCharacterKillEvent(const XmlElement@ event){
-        _log("114514testinglog");
 		const XmlElement@ killer = event.getFirstElementByTagName("killer");
         if (killer is null) return;
         const XmlElement@ target = event.getFirstElementByTagName("target");
@@ -244,8 +243,8 @@ class kill_event : Tracker {
 							" untransform_count='"+ vestrestore +"'" +
 							" character_id='" + HealOnKill_track[a].m_characterId + "' />";
 						m_metagame.getComms().send(c);
-                        if(vestrestore>0)   _log("Heal successful.");  
-                        else    _log("Heal failed.");  
+                        // if(vestrestore>0)   _log("Heal successful.");  
+                        // else    _log("Heal failed.");  
 					}
 					HealOnKill_track[a].m_numtime--;
 					HealOnKill_track[a].m_time=0.2;

@@ -1,0 +1,77 @@
+particle_system FlamePropulsion_Big {
+	quota	500
+	material FlamePropulsion
+	particle_width	1.5
+	particle_height	1.5
+	cull_each	false
+	renderer	billboard
+	billboard_type	point
+
+	emitter Point {
+		angle	40
+		colour	0.4 0.4 0.4 1.0
+		direction	0 1 0
+		emission_rate	40
+		position	0 0.1 0
+		velocity_min	2.0
+		velocity_max	3.5
+		time_to_live	0.15
+		duration	1.0
+	}
+
+	affector Scaler {
+		rate	0.8
+	}
+
+	affector Rotator {
+		rotation_speed_range_start	-30
+		rotation_speed_range_end	30
+		rotation_range_start	0
+		rotation_range_end	360
+	}
+
+	affector LinearForce {
+		force_vector 0 1 0
+		force_application add
+	}
+}
+
+particle_system FlamePropulsion_Big_End {
+	quota	500
+	material FlamePropulsion
+	particle_width	1.5
+	particle_height	1.5
+	cull_each	false
+	renderer	billboard
+	billboard_type	point
+
+	emitter Point {
+		angle	40
+		colour	0.4 0.4 0.4 1.0
+		direction	0 1 0
+		emission_rate	40
+		position	0 0.1 0
+		velocity_min	2.0
+		velocity_max	3.5
+		time_to_live	0.15
+		duration	0.2
+	}
+
+	affector Scaler {
+		rate	0.8
+	}
+
+	affector Rotator {
+		rotation_speed_range_start	-30
+		rotation_speed_range_end	30
+		rotation_range_start	0
+		rotation_range_end	360
+	}
+
+	affector LinearForce {
+		force_vector 0 1 0
+		force_application add
+	}
+}
+
+
