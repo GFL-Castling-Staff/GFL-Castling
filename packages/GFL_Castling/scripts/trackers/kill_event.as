@@ -47,6 +47,7 @@ class kill_event : Tracker {
         "parw_eagleyes.weapon",
         "parw_doppelsoldner_mg.weapon",
         "parw_doppelsoldner_rocket",
+        "parw_roarer.weapon",
         "parw_nimogen.weapon",
         "parw_narciss.weapon",
         "sfw_ripper_swap.weapon",
@@ -163,10 +164,9 @@ class kill_event : Tracker {
 	protected void handleCharacterKillEvent(const XmlElement@ event){
 		const XmlElement@ killer = event.getFirstElementByTagName("killer");
         if (killer is null) return;
+        if (killer.getIntAttribute("player_id") == -1) return;
         const XmlElement@ target = event.getFirstElementByTagName("target");
         if (target is null) return;
-        
-        if (killer.getIntAttribute("player_id") == -1) return;
         if ((killer.getIntAttribute("faction_id")) != (target.getIntAttribute("faction_id"))){
             int targetId = target.getIntAttribute("id");
             int factionId = killer.getIntAttribute("faction_id");
@@ -178,8 +178,8 @@ class kill_event : Tracker {
             {
                 case 0:{break;}
                 case 1:{updateHealByKillEvent(characterId,factionId,1,10);break;}
-                case 2:{updateHealByKillEvent(characterId,factionId,2,10);_log("Excutioner_Kill_detected.");break;}
-                case 3:{updateHealByKillEvent(characterId,factionId,3,10);_log("Excutioner_Kill_detected.");break;}
+                case 2:{updateHealByKillEvent(characterId,factionId,2,10);break;}
+                case 3:{updateHealByKillEvent(characterId,factionId,3,10);break;}
 
                 default:
                     break;
