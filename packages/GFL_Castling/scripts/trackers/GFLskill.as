@@ -525,7 +525,7 @@ class GFLskill : Tracker {
                         " instance_key='damage_40mm_g3.projectile'" +
                         " position='" + Pos_40mm.toString() + "'"+
 				        " character_id='" + characterId + "' />";
-					Pos_40mm=Pos_40mm.add(0,2,0);
+					Pos_40mm=Pos_40mm.add(Vector3(0,2,0));
 				    string c1 = 
                         "<command class='create_instance'" +
                         " faction_id='"+ player.getIntAttribute("faction_id") +"'" +

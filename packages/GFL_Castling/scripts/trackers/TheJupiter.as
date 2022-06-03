@@ -68,7 +68,7 @@ class jupiter: Tracker {
 		}
 		int circle = 8;	//警示烟雾数量
 
-		for(uint i=0;i<circle;i++){
+		for(int i=0;i<circle;i++){
 			CreateProjectile(m_metagame,c_pos.add(Vector3(radd*sin(i*3.14/circle*2),6,radd*cos(i*3.14/circle*2))),c_pos.add(Vector3(radd*sin(i*3.14/circle*2),0,radd*cos(i*3.14/circle*2))),"jupiter_airstrike_warning_s.projectile",-1,m_faction,120,100);
 		}
 		
