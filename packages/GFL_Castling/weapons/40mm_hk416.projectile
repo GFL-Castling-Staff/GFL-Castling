@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<projectile class="grenade" name="40mm" slot="2" pulldown_in_air="26.0" key="40mm_hk416.projectile">
+<projectile class="grenade" name="40mm" slot="2" pulldown_in_air="45.0" key="40mm_hk416.projectile">
     <tag name="grenade"/>
     <result class="notify_script" key="416_skill" />
     <trigger class="impact">
