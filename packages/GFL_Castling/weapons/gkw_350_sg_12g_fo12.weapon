@@ -13,7 +13,7 @@
 	magazine_size="10" 
 	can_shoot_standing="1" 
 	suppressed="1" 
-	name="FO12" 
+	name="FO-12" 
 	class="4" 
 	reload_one_at_a_time="0.15"
 	sight_range_modifier="1" 
@@ -75,24 +75,24 @@
     <specification 
 	retrigger_time="0.08" 
 	accuracy_factor="0.9" 
-	sustained_fire_grow_step="1.2" 
-	sustained_fire_diminish_rate="2" 
+	sustained_fire_grow_step="1.5" 
+	sustained_fire_diminish_rate="0.5" 
 	magazine_size="20" 
 	can_shoot_standing="1" 
 	suppressed="1" 
-	name="FO12-[Critical starburst]" 
+	name="FO-12-[Critical starburst]" 
 	class="0" 
 	sight_range_modifier="1" 
 	projectile_speed="90" 
 	barrel_offset="0.4" 
 	projectiles_per_shot="18"
-	spread_range="0.25"
+	spread_range="0.3"
 	 />
      <inventory  buy_price="180.0" sell_price="60.0" />
 	<!--Animations-->
 	<next_in_chain key="gkw_fo12.weapon" share_ammo="0" />
 
-    <animation key="reload" animation_key="reloading, magazine rifle 1.8" />	
+    <animation key="reload" animation_key="reloading, magazine rifle 2.1" />	
 	
 	<!--Sounds-->
 	
@@ -131,5 +131,7 @@
     <stance state_key="crouching" accuracy="0.75" />
     <stance state_key="prone" accuracy="0.85" />
     <stance state_key="over_wall" accuracy="0.85" />  
+    <modifier class="speed" value="-0.3" />
+    <modifier class="detectability" value="0.45" />
 </weapon>
 </weapons>

@@ -636,9 +636,8 @@ class StageConfiguratorInvasion : StageConfigurator {
 			command.setStringAttribute("class", "faction_resources");
 			command.setIntAttribute("faction_id", 0);
 			addFactionResourceElements(command, "vehicle", array<string> = {"armored_truck.vehicle"}, false);
-
 			stage.m_extraCommands.insertLast(command);
-		}        
+		}
 		// metadata
 		stage.m_primaryObjective = "capture";
 
@@ -649,7 +648,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 	// ------------------------------------------------------------------------------------------------
 	protected Stage@ setupStage3() {
 		Stage@ stage = createStage();
-		stage.m_mapInfo.m_name = "Older Fort Creek";
+		stage.m_mapInfo.m_name = "Raining Fort Creek";
 		stage.m_mapInfo.m_path = "media/packages/GFLC_Map/maps/map3_c";
 		stage.m_mapInfo.m_id = "map3";
 
