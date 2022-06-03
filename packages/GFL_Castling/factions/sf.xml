@@ -666,7 +666,7 @@
 			<call key="sf_destroyer.call" />
 			<weapon key="sfw_architect.weapon" enabled="1"/>
 			<projectile key="hand_grenade.projectile"/>
-			<carry_item key="sf_hunter.carry_item" enabled="1" />
+			<carry_item key="sf_architect.carry_item" enabled="1" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="150.0" max="300.05" />
@@ -800,7 +800,7 @@
 			<sound key="throw" fileref="Excutioner_buhuo_SKILL03_JP.wav" pitch_variety="0.001" volume="0.8" />
 		</character>
 		<model filename="sfd_excutioner.xml" />
-		<ai filename="melee.ai" />
+		<ai filename="excutioner.ai" />
 		<resources clear_vehicles="1" clear_weapons="1">
 			<call key="sf_jaguar.call" />
 			<weapon key="sfw_excutioner_2.weapon" enabled="1"/>
@@ -852,11 +852,11 @@
 			<sound key="throw" fileref="Agent_buhuo_MEET_JP.wav" pitch_variety="0.001" volume="0.8" />
 		</character>
 		<model filename="sfd_agent.xml" />
-		<ai filename="eod.ai" />
+		<ai filename="agent.ai" />
 		<resources clear_vehicles="1" clear_weapons="1">
 			<weapon key="sfw_agent.weapon" enabled="1"/>
 			<projectile key="hand_grenade.projectile"/>
-			<carry_item key="sf_m16a1.carry_item" enabled="1" />
+			<carry_item key="sf_agent.carry_item" enabled="1" />
 			<call file="sf_m16a1.call" />
 		</resources>
 		<attribute_config class="xp">
