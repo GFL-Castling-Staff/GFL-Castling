@@ -6,7 +6,7 @@
 	<!--Weapon specifications-->
 	
     <specification
-	retrigger_time="0.08"
+	retrigger_time="0.12"
 	accuracy_factor="0.75"
 	sustained_fire_grow_step="2.0"
 	sustained_fire_diminish_rate="0.5"
@@ -20,7 +20,7 @@
 	class="0"
 	reload_one_at_a_time="0"
 	sight_range_modifier="0.8"
-	projectile_speed="80"
+	projectile_speed="85"
 	projectiles_per_shot="1"
 	burst_shots="1"
     slot="0" 
@@ -73,7 +73,7 @@
     
     <weak_hand_hold offset="0.1" />
     <projectile file="bullet_sf.projectile">
-		<result class="blast"  damage="3"  radius="1.5" decal="1" push="0" character_state="death" 	faction_compare="not_equal"/>
+		<result class="blast"  damage="4"  radius="1.5" decal="1" push="0" character_state="death" 	faction_compare="not_equal"/>
     </projectile>
     
     <!--Accuracy, Movement speed-->

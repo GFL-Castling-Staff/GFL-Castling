@@ -48,7 +48,7 @@
     <weak_hand_hold offset="0.4" />
 	<projectile file="mk153_HEAT.projectile">
 		<trail probability="1.0" key="laser_dreamer" />
-		<result class="blast" radius="5" damage="4.9" decal="1" push="0.25" character_state="death" faction_compare="not_equal"/>
+		<result class="blast" radius="5" damage="5" decal="1" push="0.25" character_state="death" faction_compare="not_equal"/>
     </projectile>
 
     

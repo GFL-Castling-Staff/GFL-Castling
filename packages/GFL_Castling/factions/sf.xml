@@ -689,7 +689,7 @@
 			<call key="sf_jaguar.call" />
 			<weapon key="sfw_Intruder.weapon" enabled="1"/>
 			<projectile key="hand_grenade.projectile"/>
-			<carry_item key="sf_boss_blast_none.carry_item" enabled="1" />
+			<carry_item key="sf_intruder.carry_item" enabled="1" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="300.0" max="300.05" />
@@ -712,7 +712,7 @@
 			<call key="sf_jupiter.call" />
 			<weapon key="sfw_dreamer.weapon" enabled="1"/>
 			<projectile key="hand_grenade.projectile"/>
-			<carry_item key="sf_boss_blast_none.carry_item" enabled="1" />
+			<carry_item key="sf_dreamer.carry_item" enabled="1" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="310.0" max="400.05" />
@@ -759,7 +759,7 @@
 			<call key="sf_destroyer.call" />
 			<weapon key="sfw_gager.weapon" enabled="1"/>
 			<projectile key="hand_grenade.projectile"/>
-			<carry_item key="sf_hunter.carry_item" enabled="1" />
+			<carry_item key="sf_gager.carry_item" enabled="1" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="300.0" max="300.05" />
@@ -782,7 +782,7 @@
 			<call key="sf_jaguar.call" />
 			<weapon key="sfw_excutioner_1.weapon" enabled="1"/>
 			<projectile key="hand_grenade.projectile"/>
-			<carry_item key="sf_boss_blast_none.carry_item" enabled="1" />
+			<carry_item key="sf_excutioner_qm.carry_item" enabled="1" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="300.0" max="300.05" />
@@ -830,7 +830,7 @@
 		<resources clear_vehicles="1" clear_weapons="1">
 			<weapon key="sfw_m16a1.weapon" enabled="1"/>
 			<projectile key="stun_grenade.projectile"/>
-			<carry_item key="sf_boss_blast_none.carry_item" enabled="1" />
+			<carry_item key="sf_m16a1.carry_item" enabled="1" />
 			<call file="sf_m16a1.call" />
 		</resources>
 		<attribute_config class="xp">
@@ -856,7 +856,7 @@
 		<resources clear_vehicles="1" clear_weapons="1">
 			<weapon key="sfw_agent.weapon" enabled="1"/>
 			<projectile key="hand_grenade.projectile"/>
-			<carry_item key="sf_boss_blast_none.carry_item" enabled="1" />
+			<carry_item key="sf_m16a1.carry_item" enabled="1" />
 			<call file="sf_m16a1.call" />
 		</resources>
 		<attribute_config class="xp">
@@ -881,7 +881,7 @@
 		<resources clear_vehicles="1" clear_weapons="1">
 			<weapon key="sfw_destroyer.weapon" enabled="1"/>
 			<projectile key="hand_grenade.projectile"/>
-			<carry_item key="sf_hunter.carry_item" enabled="1" />
+			<carry_item key="sf_m16a1.carry_item" enabled="1" />
 			<call key="sf_destroyer.call" />
 		</resources>
 		<attribute_config class="xp">
@@ -908,7 +908,7 @@
 		<resources clear_vehicles="1" clear_weapons="1">
 			<weapon key="sfw_weaver.weapon" enabled="1"/>
 			<projectile key="hand_grenade.projectile"/>
-			<carry_item key="sf_hunter.carry_item" enabled="1" />
+			<carry_item key="sf_m16a1.carry_item" enabled="1" />
 			<call key="sf_destroyer.call" />
 			<call key="sf_jaguar.call" />
 		</resources>
@@ -936,7 +936,7 @@
 		<resources clear_vehicles="1" clear_weapons="1">
 			<weapon key="sfw_justice.weapon" enabled="1"/>
 			<projectile key="hand_grenade.projectile"/>
-			<carry_item key="sf_hunter.carry_item" enabled="1" />
+			<carry_item key="sf_m16a1.carry_item" enabled="1" />
 			<call key="sf_destroyer.call" />
 			<call key="sf_jaguar.call" />
 		</resources>
