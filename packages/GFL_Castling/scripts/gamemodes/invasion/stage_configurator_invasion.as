@@ -636,9 +636,8 @@ class StageConfiguratorInvasion : StageConfigurator {
 			command.setStringAttribute("class", "faction_resources");
 			command.setIntAttribute("faction_id", 0);
 			addFactionResourceElements(command, "vehicle", array<string> = {"armored_truck.vehicle"}, false);
-
 			stage.m_extraCommands.insertLast(command);
-		}        
+		}
 		// metadata
 		stage.m_primaryObjective = "capture";
 
