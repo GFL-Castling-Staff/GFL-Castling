@@ -121,6 +121,8 @@
 		<target_factors tag="tactical" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0" />
 		<!-- important non combat player-only vehicles -->
 		<target_factors tag="bazooka" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0" />
+		<target_factors tag="punchme" distance="1.0" direction="0.0" squad_command="1.0" base_score="30.0" />
+
 		<effect class="muzzle" ref="LawMuzzle" />
 		<effect class="muzzle" ref="UpDust" />
 		<sound key="fire" fileref="hornet_shot.wav" volume="0.5" />
