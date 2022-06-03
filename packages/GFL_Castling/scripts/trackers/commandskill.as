@@ -462,9 +462,44 @@ class CommandSkill : Tracker {
                             "Vector_SkillC2.wav",
                             "Vector_SkillC3.wav"
                         };
-                        playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);                        
+                        playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
                     }
+                    if(weaponname=="gkw_vz61.weapon") {
+                        array<string> Voice={
+                            "VZ61_SKILL1_JP.wav",
+                            "VZ61_SKILL2_JP.wav",
+                            "VZ61_SKILL3_JP.wav"                            
+                        };
+                        playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+                    }
+                    if(weaponname=="gkw_mp40.weapon") {
+                        array<string> Voice={
+                            "MP40_SKILL1_JP.wav",
+                            "MP40_SKILL2_JP.wav",
+                            "MP40_PHRASE_JP.wav"                            
+                        };
+                        playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+                    }
+                    if(weaponname=="gkw_uzi.weapon") {
+                        array<string> Voice={
+                            "MicroUZI_SKILL1_JP.wav",
+                            "MicroUZI_SKILL2_JP.wav",
+                            "MicroUZIMod_SKILL1_JP.wav",
+                            "MicroUZIMod_SKILL2_JP.wav",
+                            "MicroUZIMod_SKILL3_JP.wav"
+                        };
+                        playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+                    }
+                    if(weaponname=="gkw_klin.weapon") {
+                        array<string> Voice={
+                            "KLIN_SKILL1_JP.wav",
+                            "KLIN_SKILL2_JP.wav",
+                            "KLIN_SKILL3_JP.wav"
+                        };
+                        playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+                    }                    
                     playAnimationKey(m_metagame,characterId,"throwing, upside",true,true);
+                    playSoundAtLocation(m_metagame,"grenade_throw1.wav",factionid,c_pos,1.0);
                     c_pos=c_pos.add(Vector3(0,1,0));
                     if (checkFlatRange(c_pos,stringToVector3(target),16)){
                         CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"firenade_Vector.projectile",characterId,factionid,50);
@@ -508,7 +543,8 @@ class CommandSkill : Tracker {
             "sopmod1.wav",
             "sopmod2.wav",
             "sopmod3.wav",
-            "sopmod4.wav"
+            "sopmod4.wav",
+            "sopmod5.wav"
             };
             playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
             addCoolDown("SOPMOD",15,characterId,modifer);
@@ -1177,44 +1213,54 @@ class CommandSkill : Tracker {
                     string target = player.getStringAttribute("aim_target");
                     Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
                     int factionid = character.getIntAttribute("faction_id");
-
+                    
                     if(weaponname=="gkw_arx160.weapon") {
                         array<string> Voice={
                             ""
                         };
-                        playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);                        
+                        playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+                        playSoundAtLocation(m_metagame,"416mod3skill_Fire_FromL4D2.wav",factionid,c_pos,1.0);                      
                     }
                     if(weaponname=="gkw_xm8.weapon") {
                         array<string> Voice={
                             "XM8_ATTACK_JP.wav" 
                         };
-                        playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);                        
+                        playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+                        playSoundAtLocation(m_metagame,"416mod3skill_Fire_FromL4D2.wav",factionid,c_pos,1.0);                        
                     }
                     if(weaponname=="gkw_g3.weapon") {
                         array<string> Voice={
                             ""
                         };
-                        playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);                        
+                        playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+                        playSoundAtLocation(m_metagame,"416mod3skill_Fire_FromL4D2.wav",factionid,c_pos,1.0);                        
                     }
                     if(weaponname=="gkw_m4sopmodii.weapon"|| weaponname=="gkw_m4sopmodii_531.weapon") {
                         array<string> Voice={
-                            "M4_SOPMOD_II_SKILL2_JP.wav",
                             "sopmod1.wav",
                             "sopmod2.wav",
                             "sopmod3.wav",
-                            "sopmod4.wav"
+                            "sopmod4.wav",
+                            "sopmod5.wav"
                         };
                         playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);                        
                     }
-                    if(weaponname=="gkw_hk416.weapon"|| weaponname=="gkw_hk416_6505.weapon"|| weaponname=="gkw_hk416_537.weapon"|| weaponname=="gkw_hk416_3401.weapon") {
+                    if(weaponname=="gkw_hk416.weapon"|| weaponname=="gkw_hk416_6505.weapon"|| weaponname=="gkw_hk416_537.weapon") {
                         array<string> Voice={
                             "HK416_Skill1.wav",
                             "HK416_Skill2.wav",
-                            "HK416_Skill3.wav",
-                            "HK416_SKILL2_JP.wav"
+                            "HK416_Skill3.wav"
                         };
                         playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);                        
                     }
+                    if(weaponname=="gkw_hk416_3401.weapon") {
+                        array<string> Voice={
+                            "HK416_Skill4.wav",
+                            "HK416_Skill5.wav",
+                            "HK416_Skill6.wav"
+                        };
+                        playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);                        
+                    }                    
                     playAnimationKey(m_metagame,characterId,"recoil1, big",true,false);
                     c_pos=c_pos.add(Vector3(0,1,0));
                     if (checkFlatRange(c_pos,stringToVector3(target),15)){
@@ -1258,6 +1304,7 @@ class CommandSkill : Tracker {
                         array<string> Voice={
                             "STG44_ATTACK_JP.wav"
                         };
+                        playSoundAtLocation(m_metagame,"gp25_fire_FromSQUAD.wav",factionid,c_pos,1.0);
                         playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);                        
                     }
                     if(weaponname=="gkw_famas.weapon") {
@@ -1265,6 +1312,7 @@ class CommandSkill : Tracker {
                             "FAMAS_ATTACK_JP.wav",
                             "FAMAS_SKILL2_JP.wav"
                         };
+                        playSoundAtLocation(m_metagame,"gp25_fire_FromSQUAD.wav",factionid,c_pos,1.0);
                         playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);                        
                     }
                     
@@ -1412,6 +1460,7 @@ class CommandSkill : Tracker {
                     }
                     else{
                         addCoolDown("pp19",15,characterId,modifer);
+                        playSoundAtLocation(m_metagame,"grenade_throw1.wav",factionid,c_pos,0.9);
                         CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"grenade_pp19.projectile",characterId,factionid,40.0,6.0);
                     }
 
@@ -1589,12 +1638,19 @@ class CommandSkill : Tracker {
                     else{
                         CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"std_aa_grenade.projectile",characterId,factionid,45.0,6.0);
                     }
-
+                    playSoundAtLocation(m_metagame,"416mod3skill_Fire_FromL4D2.wav",factionid,c_pos,1.0);
                     if(ExistQueue){
                         return;
                     }
                     else{
                         addCoolDown("fnfal",30,characterId,modifer);
+                        array<string> Voice={
+                        "FNFAL_SKILL1_JP.wav",
+                        "FNFAL_SKILL2_JP.wav",
+                        "FNFAL_SKILL3_JP.wav",
+                        "FNFAL_RETREAT_JP.wav"
+                        };
+                        playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
                     }
                 }
             }
@@ -1667,7 +1723,11 @@ class CommandSkill : Tracker {
                     Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
                     int factionid = character.getIntAttribute("faction_id");
                     array<string> Voice={
-                        "M4_SOPMOD_II_SKILL2_JP.wav"                   
+                        "sopmod1.wav",
+                        "sopmod2.wav",
+                        "sopmod3.wav",
+                        "sopmod4.wav",
+                        "sopmod5.wav"
                     };
                     playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
                     playAnimationKey(m_metagame,characterId,"recoil1, big",true,false);
