@@ -146,6 +146,9 @@ dictionary commandSkillIndex = {
         // FF_BAIBAOZI
         {"ff_parw_alina.weapon",12},
 
+        // G3 Mod3
+        {"gkw_g3mod3.weapon",13},
+
         // UMP45MOD3
         {"gkw_ump45mod3.weapon",14},
         {"gkw_ump45mod3_535.weapon",14},
@@ -264,7 +267,7 @@ class CommandSkill : Tracker {
                     case 10:{excuteDestroyerskill(cId,senderId,m_modifer);break;}
                     case 11:{excuteExcutionerskill(cId,senderId,m_modifer);break;}
                     case 12:{excuteBaibaoziskill(cId,senderId,m_modifer);break;}
-
+                    case 13:{excuteG3mod3skill(cId,senderId,m_modifer);break;}
                     case 14:{excuteUMP45skill(cId,senderId,m_modifer);break;}
                     case 15:{excuteM870skill(cId,senderId,m_modifer);break;}
                     case 16:{excutePP19skill(cId,senderId,m_modifer);break;}
@@ -1743,6 +1746,50 @@ class CommandSkill : Tracker {
             }
         }
     }
+    void excuteG3mod3skill(int characterId,int playerId,SkillModifer@ modifer){
+        bool ExistQueue = false;
+        int j=-1;
+        for (uint i=0;i<SkillArray.length();i++){
+            if (SkillArray[i].m_character_id==characterId && SkillArray[i].m_weapontype=="G3MOD3") {
+                ExistQueue=true;
+                j=i;
+            }
+        }
+        if (ExistQueue){
+            dictionary a;
+            a["%time"] = ""+SkillArray[j].m_time;
+            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            _log("skill cooldown" + SkillArray[j].m_time);
+            return;
+        }
+        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+        if (character !is null) {
+            const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+            if (player !is null){
+                if (player.hasAttribute("aim_target")) {
+                    string target = player.getStringAttribute("aim_target");
+                    Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
+                    int factionid = character.getIntAttribute("faction_id");
+                    array<string> Voice={
+                        "G3Mod_SKILL1_JP.wav",
+                        "G3Mod_SKILL2_JP.wav",
+                        "G3Mod_SKILL3_JP.wav",
+                        "G3Mod_ATTACK_JP.wav"
+                    };
+                    playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+                    playAnimationKey(m_metagame,characterId,"recoil1, big",true,false);
+                    c_pos=c_pos.add(Vector3(0,1,0));
+                    if (checkFlatRange(c_pos,stringToVector3(target),15)){
+                        CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"40mm_g3mod3.projectile",characterId,factionid,60);
+                    }
+                    else{
+                        CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"40mm_g3mod3.projectile",characterId,factionid,45.0,6.0);
+                    }
+                    addCoolDown("G3MOD3",20,characterId,modifer);
+                }
+            }
+        }
+    }    
 }
 
 
