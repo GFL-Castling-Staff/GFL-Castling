@@ -8,7 +8,7 @@
 	barrel_offset="0.5" 
 	class="4"
     slot="0" 
-	magazine_size="150" 
+	magazine_size="350" 
 	name="SF-Agent" 
     projectile_speed="140" 
 	retrigger_time="0.08" 
@@ -17,6 +17,7 @@
     carry_in_two_hands="0"  
     can_shoot_crouching="0"
     can_shoot_prone="0"
+    projectiles_per_shot="4"
 	sustained_fire_diminish_rate="1.0"
 	sustained_fire_grow_step="0.5" />
 
@@ -49,7 +50,7 @@
 
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet_sf.projectile">
-        <result class="blast"  damage="1"  radius="1.5" decal="1" push="0" character_state="death" faction_compare="not_equal"/> 
+        <result class="blast"  damage="0.2"  radius="1.5" decal="1" push="0" character_state="death" faction_compare="not_equal" damage_as_probability="0.2"/> 
      </projectile>
      
     <stance state_key="running" accuracy="0.5" />
