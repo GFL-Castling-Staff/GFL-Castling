@@ -147,6 +147,7 @@
     <target_factors tag="light_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="7.0" />
 	<target_factors tag="target" distance="1.0" direction="0.0" squad_command="1.0" base_score="6.0" />
     <target_factors tag="tactical" distance="1.0" direction="0.0" squad_command="1.0" base_score="5.0" />  
+    <target_factors tag="punchme" distance="1.0" direction="0.0" squad_command="1.0" base_score="30.0" />
 
 </weapon>
 </weapons>

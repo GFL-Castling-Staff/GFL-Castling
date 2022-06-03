@@ -55,6 +55,8 @@
 		<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="5.0" />	
 		<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="5.5" />
 		<target_factors tag="shield" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0" />	
+		<target_factors tag="punchme" distance="1.0" direction="0.0" squad_command="1.0" base_score="30.0" />
+
 	</weapon>
 
 </weapons>
