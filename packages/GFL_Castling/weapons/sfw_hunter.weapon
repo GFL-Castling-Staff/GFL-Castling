@@ -70,7 +70,7 @@
     
     <weak_hand_hold offset="0.1" />
     <projectile file="bullet_sf.projectile">
-        <result class="hit"  kill_probability="2.2" kill_decay_start_time="1.0" kill_decay_end_time="1.5" />
+        <result class="hit"  kill_probability="2.4" kill_decay_start_time="1.0" kill_decay_end_time="1.5" />
     </projectile>
     
     <!--Accuracy, Movement speed-->
