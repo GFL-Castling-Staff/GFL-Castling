@@ -1648,7 +1648,7 @@ class CommandSkill : Tracker {
                         "FNFAL_SKILL1_JP.wav",
                         "FNFAL_SKILL2_JP.wav",
                         "FNFAL_SKILL3_JP.wav",
-                        "FNFAL_RETREAT_JP.wav"
+                        "FNFAL_PHRASE_JP.wav"
                         };
                         playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
                     }

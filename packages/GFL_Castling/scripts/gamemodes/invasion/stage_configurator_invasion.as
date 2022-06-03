@@ -648,7 +648,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 	// ------------------------------------------------------------------------------------------------
 	protected Stage@ setupStage3() {
 		Stage@ stage = createStage();
-		stage.m_mapInfo.m_name = "Older Fort Creek";
+		stage.m_mapInfo.m_name = "Raining Fort Creek";
 		stage.m_mapInfo.m_path = "media/packages/GFLC_Map/maps/map3_c";
 		stage.m_mapInfo.m_id = "map3";
 
