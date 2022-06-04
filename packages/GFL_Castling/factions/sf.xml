@@ -642,7 +642,7 @@
 		<resources clear_vehicles="1" clear_weapons="1">
 			<weapon key="sfw_hunter.weapon" enabled="1"/>
 			<call key="sf_destroyer.call" />
-			<projectile key="hand_grenade.projectile"/>
+			<projectile key="sf_emp_mine.projectile"/>
 			<carry_item key="sf_hunter.carry_item" enabled="1" />
 		</resources>
 		<attribute_config class="xp">
@@ -753,7 +753,7 @@
 			<sound key="throw" fileref="BossGager_buhuo_SKILL03_JP.wav" pitch_variety="0.001" volume="0.8" />
 		</character>
 		<model filename="sfd_gager.xml" />
-		<ai filename="elite.ai" />
+		<ai filename="gager.ai" />
 		<resources clear_vehicles="1" clear_weapons="1">
 			<call key="sf_jaguar.call" />
 			<call key="sf_destroyer.call" />
@@ -881,7 +881,7 @@
 		<resources clear_vehicles="1" clear_weapons="1">
 			<weapon key="sfw_destroyer.weapon" enabled="1"/>
 			<projectile key="hand_grenade.projectile"/>
-			<carry_item key="sf_m16a1.carry_item" enabled="1" />
+			<carry_item key="sf_destroyer.carry_item" enabled="1" />
 			<call key="sf_destroyer.call" />
 		</resources>
 		<attribute_config class="xp">
@@ -908,7 +908,7 @@
 		<resources clear_vehicles="1" clear_weapons="1">
 			<weapon key="sfw_weaver.weapon" enabled="1"/>
 			<projectile key="hand_grenade.projectile"/>
-			<carry_item key="sf_m16a1.carry_item" enabled="1" />
+			<carry_item key="sf_weaver.carry_item" enabled="1" />
 			<call key="sf_destroyer.call" />
 			<call key="sf_jaguar.call" />
 		</resources>
@@ -936,7 +936,7 @@
 		<resources clear_vehicles="1" clear_weapons="1">
 			<weapon key="sfw_justice.weapon" enabled="1"/>
 			<projectile key="hand_grenade.projectile"/>
-			<carry_item key="sf_m16a1.carry_item" enabled="1" />
+			<carry_item key="sf_justice.carry_item" enabled="1" />
 			<call key="sf_destroyer.call" />
 			<call key="sf_jaguar.call" />
 		</resources>
@@ -962,11 +962,11 @@
 			<sound key="throw" fileref="Scarecrow_buhuo_GOATTACK_JP.wav" pitch_variety="0.001" volume="0.8" />
 		</character>
 		<model filename="sfd_scarecrow.xml" />
-		<ai filename="elite.ai" />
+		<ai filename="lonewolf.ai" />
 		<resources clear_vehicles="1" clear_weapons="1">
 			<weapon key="sfw_scarecrow.weapon" enabled="1"/>
 			<projectile key="hand_grenade.projectile"/>
-			<carry_item key="sf_hunter.carry_item" enabled="1" />
+			<carry_item key="sf_scarecrow.carry_item" enabled="1" />
 			<call key="sf_destroyer.call" />
 			<call key="sf_jaguar.call" />
 		</resources>

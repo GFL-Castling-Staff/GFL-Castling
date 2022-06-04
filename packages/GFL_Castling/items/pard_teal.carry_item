@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <carry_items>
-	<carry_item key="sf_justice.carry_item" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
+	<carry_item key="pard_teal.carry_item" time_to_live_out_in_the_open="15" name="Teal" transform_on_consume="teal_1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
@@ -13,12 +13,12 @@
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.3" />
+        <modifier class="speed" value="0.0" />
         <modifier class="hit_success_probability" value="-1.6" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="justice_1" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_2" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
+	<carry_item key="teal_1" time_to_live_out_in_the_open="15" name="Teal" transform_on_consume="teal_2" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
@@ -30,12 +30,12 @@
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.3" />
+        <modifier class="speed" value="0.0" />
         <modifier class="hit_success_probability" value="-1.6" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="justice_2" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_3" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
+	<carry_item key="teal_2" time_to_live_out_in_the_open="15" name="Teal" transform_on_consume="teal_3" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
@@ -47,12 +47,12 @@
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.3" />
+        <modifier class="speed" value="0.0" />
         <modifier class="hit_success_probability" value="-1.6" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="justice_3" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_4" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
+	<carry_item key="teal_3" time_to_live_out_in_the_open="15" name="Teal" transform_on_consume="teal_4" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
@@ -64,12 +64,12 @@
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.3" />
+        <modifier class="speed" value="0.0" />
         <modifier class="hit_success_probability" value="-1.6" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="justice_4" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_5" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
+	<carry_item key="teal_4" time_to_live_out_in_the_open="15" name="Teal" transform_on_consume="teal_5" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
@@ -81,12 +81,12 @@
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.3" />
+        <modifier class="speed" value="0.0" />
         <modifier class="hit_success_probability" value="-1.6" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="justice_5" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_6" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
+	<carry_item key="teal_5" time_to_live_out_in_the_open="15" name="Teal" transform_on_consume="teal_6" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
@@ -98,12 +98,12 @@
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.3" />
+        <modifier class="speed" value="0.0" />
         <modifier class="hit_success_probability" value="-1.6" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="justice_6" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_7" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
+	<carry_item key="teal_6" time_to_live_out_in_the_open="15" name="Teal" transform_on_consume="teal_7" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
@@ -115,12 +115,12 @@
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.3" />
+        <modifier class="speed" value="0.0" />
         <modifier class="hit_success_probability" value="-1.6" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="justice_7" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_8" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
+	<carry_item key="teal_7" time_to_live_out_in_the_open="15" name="Teal" transform_on_consume="teal_8" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
@@ -132,12 +132,12 @@
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.3" />
+        <modifier class="speed" value="0.0" />
         <modifier class="hit_success_probability" value="-1.6" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="justice_8" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_9" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
+	<carry_item key="teal_8" time_to_live_out_in_the_open="15" name="Teal" transform_on_consume="teal_9" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
@@ -149,12 +149,12 @@
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.3" />
+        <modifier class="speed" value="0.0" />
         <modifier class="hit_success_probability" value="-1.6" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="justice_9" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_10" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
+	<carry_item key="teal_9" time_to_live_out_in_the_open="15" name="Teal" transform_on_consume="teal_10" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
@@ -166,12 +166,12 @@
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.3" />
+        <modifier class="speed" value="0.0" />
         <modifier class="hit_success_probability" value="-1.6" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="justice_10" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_11" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
+	<carry_item key="teal_10" time_to_live_out_in_the_open="15" name="Teal" transform_on_consume="teal_11" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
@@ -183,12 +183,12 @@
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.3" />
+        <modifier class="speed" value="0.0" />
         <modifier class="hit_success_probability" value="-1.6" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="justice_11" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_12" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
+	<carry_item key="teal_11" time_to_live_out_in_the_open="15" name="Teal" transform_on_consume="teal_12" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
@@ -200,12 +200,12 @@
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.3" />
+        <modifier class="speed" value="0.0" />
         <modifier class="hit_success_probability" value="-1.6" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="justice_12" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_13" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
+	<carry_item key="teal_12" time_to_live_out_in_the_open="15" name="Teal" transform_on_consume="teal_13" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
@@ -217,12 +217,12 @@
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.3" />
+        <modifier class="speed" value="0.0" />
         <modifier class="hit_success_probability" value="-1.6" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="justice_13" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_14" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
+	<carry_item key="teal_13" time_to_live_out_in_the_open="15" name="Teal" transform_on_consume="teal_14" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
@@ -234,12 +234,12 @@
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.3" />
+        <modifier class="speed" value="0.0" />
         <modifier class="hit_success_probability" value="-1.6" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="justice_14" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_15" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
+	<carry_item key="teal_14" time_to_live_out_in_the_open="15" name="Teal" transform_on_consume="teal_15" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
@@ -251,29 +251,29 @@
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.3" />
+        <modifier class="speed" value="0.0" />
         <modifier class="hit_success_probability" value="-1.6" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="justice_15" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_16" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
+	<carry_item key="teal_15" time_to_live_out_in_the_open="15" name="Teal" transform_on_consume="teal_16" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
 		<model mesh_filename="vestexo.xml"/>
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="stun" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.6" />
+        <modifier class="speed" value="0.2" />
         <modifier class="hit_success_probability" value="-1.4" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="justice_16" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_17" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
+	<carry_item key="teal_16" time_to_live_out_in_the_open="15" name="Teal" transform_on_consume="teal_17" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
@@ -285,12 +285,12 @@
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.6" />
+        <modifier class="speed" value="0.2" />
         <modifier class="hit_success_probability" value="-1.4" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="justice_17" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_18" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
+	<carry_item key="teal_17" time_to_live_out_in_the_open="15" name="Teal" transform_on_consume="teal_18" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
@@ -302,12 +302,12 @@
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.6" />
+        <modifier class="speed" value="0.2" />
         <modifier class="hit_success_probability" value="-1.4" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="justice_18" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_19" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
+	<carry_item key="teal_18" time_to_live_out_in_the_open="15" name="Teal" transform_on_consume="teal_19" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
@@ -319,12 +319,12 @@
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.6" />
+        <modifier class="speed" value="0.2" />
         <modifier class="hit_success_probability" value="-1.4" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="justice_19" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_20" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
+	<carry_item key="teal_19" time_to_live_out_in_the_open="15" name="Teal" transform_on_consume="teal_20" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
@@ -336,12 +336,12 @@
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.6" />
+        <modifier class="speed" value="0.2" />
         <modifier class="hit_success_probability" value="-1.4" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="justice_20" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_21" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
+	<carry_item key="teal_20" time_to_live_out_in_the_open="15" name="Teal" transform_on_consume="teal_21" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
@@ -353,12 +353,12 @@
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.6" />
+        <modifier class="speed" value="0.2" />
         <modifier class="hit_success_probability" value="-1.4" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="justice_21" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_22" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
+	<carry_item key="teal_21" time_to_live_out_in_the_open="15" name="Teal" transform_on_consume="teal_22" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
@@ -370,12 +370,12 @@
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.6" />
+        <modifier class="speed" value="0.2" />
         <modifier class="hit_success_probability" value="-1.4" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="justice_22" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_23" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
+	<carry_item key="teal_22" time_to_live_out_in_the_open="15" name="Teal" transform_on_consume="teal_23" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
@@ -387,12 +387,12 @@
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.6" />
+        <modifier class="speed" value="0.2" />
         <modifier class="hit_success_probability" value="-1.4" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="justice_23" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_24" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
+	<carry_item key="teal_23" time_to_live_out_in_the_open="15" name="Teal" transform_on_consume="teal_24" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
@@ -404,12 +404,12 @@
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.6" />
+        <modifier class="speed" value="0.2" />
         <modifier class="hit_success_probability" value="-1.4" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="justice_24" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_25" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
+	<carry_item key="teal_24" time_to_live_out_in_the_open="15" name="Teal" transform_on_consume="teal_25" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
@@ -421,12 +421,12 @@
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.6" />
+        <modifier class="speed" value="0.2" />
         <modifier class="hit_success_probability" value="-1.4" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="justice_25" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_26" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
+	<carry_item key="teal_25" time_to_live_out_in_the_open="15" name="Teal" transform_on_consume="teal_26" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
@@ -438,12 +438,12 @@
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.6" />
+        <modifier class="speed" value="0.2" />
         <modifier class="hit_success_probability" value="-1.4" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="justice_26" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_27" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
+	<carry_item key="teal_26" time_to_live_out_in_the_open="15" name="Teal" transform_on_consume="teal_27" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
@@ -455,12 +455,12 @@
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.6" />
+        <modifier class="speed" value="0.2" />
         <modifier class="hit_success_probability" value="-1.4" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="justice_27" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_28" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
+	<carry_item key="teal_27" time_to_live_out_in_the_open="15" name="Teal" transform_on_consume="teal_28" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
@@ -472,12 +472,12 @@
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.6" />
+        <modifier class="speed" value="0.2" />
         <modifier class="hit_success_probability" value="-1.4" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="justice_28" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_29" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
+	<carry_item key="teal_28" time_to_live_out_in_the_open="15" name="Teal" transform_on_consume="teal_29" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
@@ -489,12 +489,12 @@
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.6" />
+        <modifier class="speed" value="0.2" />
         <modifier class="hit_success_probability" value="-1.4" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="justice_29" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_30" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
+	<carry_item key="teal_29" time_to_live_out_in_the_open="15" name="Teal" transform_on_consume="teal_30" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
@@ -506,29 +506,29 @@
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.6" />
+        <modifier class="speed" value="0.2" />
         <modifier class="hit_success_probability" value="-1.4" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="justice_30" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_31" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
+	<carry_item key="teal_30" time_to_live_out_in_the_open="15" name="Teal" transform_on_consume="teal_31" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
 		<model mesh_filename="vestexo.xml"/>
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="stun" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.8" />
+        <modifier class="speed" value="0.4" />
         <modifier class="hit_success_probability" value="-1.2" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="justice_31" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_32" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
+	<carry_item key="teal_31" time_to_live_out_in_the_open="15" name="Teal" transform_on_consume="teal_32" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
@@ -540,12 +540,12 @@
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.8" />
+        <modifier class="speed" value="0.4" />
         <modifier class="hit_success_probability" value="-1.2" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="justice_32" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_33" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
+	<carry_item key="teal_32" time_to_live_out_in_the_open="15" name="Teal" transform_on_consume="teal_33" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
@@ -557,12 +557,12 @@
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.8" />
+        <modifier class="speed" value="0.4" />
         <modifier class="hit_success_probability" value="-1.2" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="justice_33" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_34" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
+	<carry_item key="teal_33" time_to_live_out_in_the_open="15" name="Teal" transform_on_consume="teal_34" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
@@ -574,12 +574,12 @@
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.8" />
+        <modifier class="speed" value="0.4" />
         <modifier class="hit_success_probability" value="-1.2" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="justice_34" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_35" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
+	<carry_item key="teal_34" time_to_live_out_in_the_open="15" name="Teal" transform_on_consume="teal_35" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
@@ -591,12 +591,12 @@
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.8" />
+        <modifier class="speed" value="0.4" />
         <modifier class="hit_success_probability" value="-1.2" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="justice_35" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_36" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
+	<carry_item key="teal_35" time_to_live_out_in_the_open="15" name="Teal" transform_on_consume="teal_36" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
@@ -608,12 +608,12 @@
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.8" />
+        <modifier class="speed" value="0.4" />
         <modifier class="hit_success_probability" value="-1.2" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="justice_36" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_37" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
+	<carry_item key="teal_36" time_to_live_out_in_the_open="15" name="Teal" transform_on_consume="teal_37" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
@@ -625,12 +625,12 @@
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.8" />
+        <modifier class="speed" value="0.4" />
         <modifier class="hit_success_probability" value="-1.2" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="justice_37" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_38" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
+	<carry_item key="teal_37" time_to_live_out_in_the_open="15" name="Teal" transform_on_consume="teal_38" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
@@ -642,12 +642,12 @@
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.8" />
+        <modifier class="speed" value="0.4" />
         <modifier class="hit_success_probability" value="-1.2" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="justice_38" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_39" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
+	<carry_item key="teal_38" time_to_live_out_in_the_open="15" name="Teal" transform_on_consume="teal_39" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
@@ -659,12 +659,12 @@
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.8" />
+        <modifier class="speed" value="0.4" />
         <modifier class="hit_success_probability" value="-1.2" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="justice_39" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_40" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
+	<carry_item key="teal_39" time_to_live_out_in_the_open="15" name="Teal" transform_on_consume="teal_40" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
@@ -676,12 +676,12 @@
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.8" />
+        <modifier class="speed" value="0.4" />
         <modifier class="hit_success_probability" value="-1.2" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="justice_40" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_41" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
+	<carry_item key="teal_40" time_to_live_out_in_the_open="15" name="Teal" transform_on_consume="teal_41" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
@@ -693,12 +693,12 @@
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.8" />
+        <modifier class="speed" value="0.4" />
         <modifier class="hit_success_probability" value="-1.2" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="justice_41" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_42" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
+	<carry_item key="teal_41" time_to_live_out_in_the_open="15" name="Teal" transform_on_consume="teal_42" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
@@ -710,12 +710,12 @@
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.8" />
+        <modifier class="speed" value="0.4" />
         <modifier class="hit_success_probability" value="-1.2" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="justice_42" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_43" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
+	<carry_item key="teal_42" time_to_live_out_in_the_open="15" name="Teal" transform_on_consume="teal_43" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
@@ -727,12 +727,12 @@
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.8" />
+        <modifier class="speed" value="0.4" />
         <modifier class="hit_success_probability" value="-1.2" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="justice_43" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_44" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
+	<carry_item key="teal_43" time_to_live_out_in_the_open="15" name="Teal" transform_on_consume="teal_44" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
@@ -744,12 +744,12 @@
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.8" />
+        <modifier class="speed" value="0.4" />
         <modifier class="hit_success_probability" value="-1.2" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="justice_44" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_45" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
+	<carry_item key="teal_44" time_to_live_out_in_the_open="15" name="Teal" transform_on_consume="teal_45" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
@@ -761,12 +761,12 @@
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.8" />
+        <modifier class="speed" value="0.4" />
         <modifier class="hit_success_probability" value="-1.2" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="justice_45" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_46" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
+	<carry_item key="teal_45" time_to_live_out_in_the_open="15" name="Teal" transform_on_consume="teal_46" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
@@ -778,12 +778,12 @@
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.8" />
+        <modifier class="speed" value="0.4" />
         <modifier class="hit_success_probability" value="-1.2" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="justice_46" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_47" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
+	<carry_item key="teal_46" time_to_live_out_in_the_open="15" name="Teal" transform_on_consume="teal_47" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
@@ -795,12 +795,12 @@
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.8" />
+        <modifier class="speed" value="0.4" />
         <modifier class="hit_success_probability" value="-1.2" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="justice_47" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_48" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
+	<carry_item key="teal_47" time_to_live_out_in_the_open="15" name="Teal" transform_on_consume="teal_48" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
@@ -812,12 +812,12 @@
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.8" />
+        <modifier class="speed" value="0.4" />
         <modifier class="hit_success_probability" value="-1.2" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="justice_48" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_49" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
+	<carry_item key="teal_48" time_to_live_out_in_the_open="15" name="Teal" transform_on_consume="teal_49" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
@@ -829,12 +829,12 @@
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.8" />
+        <modifier class="speed" value="0.4" />
         <modifier class="hit_success_probability" value="-1.2" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="justice_49" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_50" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
+	<carry_item key="teal_49" time_to_live_out_in_the_open="15" name="Teal" transform_on_consume="teal_50" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
@@ -846,7 +846,7 @@
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.8" />
+        <modifier class="speed" value="0.4" />
         <modifier class="hit_success_probability" value="-1.2" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>

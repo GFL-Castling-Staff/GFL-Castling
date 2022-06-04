@@ -1,6 +1,346 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <carry_items>
-	<carry_item key="sf_justice.carry_item" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="sf_weaver.carry_item" time_to_live_out_in_the_open="15" name="Weaver" transform_on_consume="weaver_1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="sfd_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.1" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
+	<carry_item key="weaver_1" time_to_live_out_in_the_open="15" name="Weaver" transform_on_consume="weaver_2" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="sfd_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.1" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
+	<carry_item key="weaver_2" time_to_live_out_in_the_open="15" name="Weaver" transform_on_consume="weaver_3" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="sfd_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.1" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
+	<carry_item key="weaver_3" time_to_live_out_in_the_open="15" name="Weaver" transform_on_consume="weaver_4" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="sfd_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.1" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
+	<carry_item key="weaver_4" time_to_live_out_in_the_open="15" name="Weaver" transform_on_consume="weaver_5" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="sfd_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.1" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
+	<carry_item key="weaver_5" time_to_live_out_in_the_open="15" name="Weaver" transform_on_consume="weaver_6" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="sfd_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.1" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
+	<carry_item key="weaver_6" time_to_live_out_in_the_open="15" name="Weaver" transform_on_consume="weaver_7" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="sfd_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.1" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
+	<carry_item key="weaver_7" time_to_live_out_in_the_open="15" name="Weaver" transform_on_consume="weaver_8" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="sfd_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.1" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
+	<carry_item key="weaver_8" time_to_live_out_in_the_open="15" name="Weaver" transform_on_consume="weaver_9" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="sfd_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.1" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
+	<carry_item key="weaver_9" time_to_live_out_in_the_open="15" name="Weaver" transform_on_consume="weaver_10" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="sfd_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.1" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
+	<carry_item key="weaver_10" time_to_live_out_in_the_open="15" name="Weaver" transform_on_consume="weaver_11" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="sfd_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.2" />
+        <modifier class="hit_success_probability" value="-0.8" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
+	<carry_item key="weaver_11" time_to_live_out_in_the_open="15" name="Weaver" transform_on_consume="weaver_12" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="sfd_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.2" />
+        <modifier class="hit_success_probability" value="-0.8" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
+	<carry_item key="weaver_12" time_to_live_out_in_the_open="15" name="Weaver" transform_on_consume="weaver_13" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="sfd_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.2" />
+        <modifier class="hit_success_probability" value="-0.8" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
+	<carry_item key="weaver_13" time_to_live_out_in_the_open="15" name="Weaver" transform_on_consume="weaver_14" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="sfd_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.2" />
+        <modifier class="hit_success_probability" value="-0.8" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
+	<carry_item key="weaver_14" time_to_live_out_in_the_open="15" name="Weaver" transform_on_consume="weaver_15" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="sfd_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.2" />
+        <modifier class="hit_success_probability" value="-0.8" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
+	<carry_item key="weaver_15" time_to_live_out_in_the_open="15" name="Weaver" transform_on_consume="weaver_16" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="sfd_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.2" />
+        <modifier class="hit_success_probability" value="-0.8" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
+	<carry_item key="weaver_16" time_to_live_out_in_the_open="15" name="Weaver" transform_on_consume="weaver_17" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="sfd_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.2" />
+        <modifier class="hit_success_probability" value="-0.8" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
+	<carry_item key="weaver_17" time_to_live_out_in_the_open="15" name="Weaver" transform_on_consume="weaver_18" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="sfd_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.2" />
+        <modifier class="hit_success_probability" value="-0.8" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
+	<carry_item key="weaver_18" time_to_live_out_in_the_open="15" name="Weaver" transform_on_consume="weaver_19" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="sfd_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.2" />
+        <modifier class="hit_success_probability" value="-0.8" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
+	<carry_item key="weaver_19" time_to_live_out_in_the_open="15" name="Weaver" transform_on_consume="weaver_20" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="sfd_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.2" />
+        <modifier class="hit_success_probability" value="-0.8" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
+	<carry_item key="weaver_20" time_to_live_out_in_the_open="15" name="Weaver" transform_on_consume="weaver_21" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="sfd_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -14,10 +354,10 @@
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
         <modifier class="speed" value="0.3" />
-        <modifier class="hit_success_probability" value="-1.6" />
+        <modifier class="hit_success_probability" value="-0.6" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="justice_1" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_2" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="weaver_21" time_to_live_out_in_the_open="15" name="Weaver" transform_on_consume="weaver_22" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="sfd_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -31,10 +371,10 @@
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
         <modifier class="speed" value="0.3" />
-        <modifier class="hit_success_probability" value="-1.6" />
+        <modifier class="hit_success_probability" value="-0.6" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="justice_2" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_3" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="weaver_22" time_to_live_out_in_the_open="15" name="Weaver" transform_on_consume="weaver_23" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="sfd_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -48,10 +388,10 @@
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
         <modifier class="speed" value="0.3" />
-        <modifier class="hit_success_probability" value="-1.6" />
+        <modifier class="hit_success_probability" value="-0.6" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="justice_3" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_4" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="weaver_23" time_to_live_out_in_the_open="15" name="Weaver" transform_on_consume="weaver_24" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="sfd_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -65,10 +405,10 @@
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
         <modifier class="speed" value="0.3" />
-        <modifier class="hit_success_probability" value="-1.6" />
+        <modifier class="hit_success_probability" value="-0.6" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="justice_4" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_5" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="weaver_24" time_to_live_out_in_the_open="15" name="Weaver" transform_on_consume="weaver_25" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="sfd_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -82,10 +422,10 @@
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
         <modifier class="speed" value="0.3" />
-        <modifier class="hit_success_probability" value="-1.6" />
+        <modifier class="hit_success_probability" value="-0.6" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="justice_5" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_6" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="weaver_25" time_to_live_out_in_the_open="15" name="Weaver" transform_on_consume="weaver_26" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="sfd_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -99,10 +439,10 @@
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
         <modifier class="speed" value="0.3" />
-        <modifier class="hit_success_probability" value="-1.6" />
+        <modifier class="hit_success_probability" value="-0.6" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="justice_6" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_7" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="weaver_26" time_to_live_out_in_the_open="15" name="Weaver" transform_on_consume="weaver_27" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="sfd_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -116,10 +456,10 @@
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
         <modifier class="speed" value="0.3" />
-        <modifier class="hit_success_probability" value="-1.6" />
+        <modifier class="hit_success_probability" value="-0.6" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="justice_7" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_8" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="weaver_27" time_to_live_out_in_the_open="15" name="Weaver" transform_on_consume="weaver_28" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="sfd_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -133,10 +473,10 @@
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
         <modifier class="speed" value="0.3" />
-        <modifier class="hit_success_probability" value="-1.6" />
+        <modifier class="hit_success_probability" value="-0.6" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="justice_8" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_9" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="weaver_28" time_to_live_out_in_the_open="15" name="Weaver" transform_on_consume="weaver_29" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="sfd_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -150,10 +490,10 @@
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
         <modifier class="speed" value="0.3" />
-        <modifier class="hit_success_probability" value="-1.6" />
+        <modifier class="hit_success_probability" value="-0.6" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="justice_9" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_10" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="weaver_29" time_to_live_out_in_the_open="15" name="Weaver" transform_on_consume="weaver_30" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="sfd_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -167,10 +507,10 @@
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
         <modifier class="speed" value="0.3" />
-        <modifier class="hit_success_probability" value="-1.6" />
+        <modifier class="hit_success_probability" value="-0.6" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="justice_10" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_11" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="weaver_30" time_to_live_out_in_the_open="15" name="Weaver" transform_on_consume="weaver_31" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="sfd_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -184,10 +524,10 @@
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
         <modifier class="speed" value="0.3" />
-        <modifier class="hit_success_probability" value="-1.6" />
+        <modifier class="hit_success_probability" value="-0.6" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="justice_11" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_12" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="weaver_31" time_to_live_out_in_the_open="15" name="Weaver" transform_on_consume="weaver_32" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="sfd_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -201,10 +541,10 @@
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
         <modifier class="speed" value="0.3" />
-        <modifier class="hit_success_probability" value="-1.6" />
+        <modifier class="hit_success_probability" value="-0.6" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="justice_12" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_13" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="weaver_32" time_to_live_out_in_the_open="15" name="Weaver" transform_on_consume="weaver_33" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="sfd_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -218,10 +558,10 @@
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
         <modifier class="speed" value="0.3" />
-        <modifier class="hit_success_probability" value="-1.6" />
+        <modifier class="hit_success_probability" value="-0.6" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="justice_13" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_14" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="weaver_33" time_to_live_out_in_the_open="15" name="Weaver" transform_on_consume="weaver_34" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="sfd_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -235,10 +575,10 @@
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
         <modifier class="speed" value="0.3" />
-        <modifier class="hit_success_probability" value="-1.6" />
+        <modifier class="hit_success_probability" value="-0.6" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="justice_14" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_15" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="weaver_34" time_to_live_out_in_the_open="15" name="Weaver" transform_on_consume="weaver_35" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="sfd_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -252,602 +592,7 @@
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
         <modifier class="speed" value="0.3" />
-        <modifier class="hit_success_probability" value="-1.6" />
-        <modifier class="detectability" value="0.0" />
-	</carry_item>
-	<carry_item key="justice_15" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_16" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
-		<capacity value="1" source="rank" source_value="0"/>
-		<commonness value="1" in_stock="1" can_respawn_with="1"/>
-		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.6" />
-        <modifier class="hit_success_probability" value="-1.4" />
-        <modifier class="detectability" value="0.0" />
-	</carry_item>
-	<carry_item key="justice_16" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_17" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
-		<capacity value="1" source="rank" source_value="0"/>
-		<commonness value="1" in_stock="1" can_respawn_with="1"/>
-		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.6" />
-        <modifier class="hit_success_probability" value="-1.4" />
-        <modifier class="detectability" value="0.0" />
-	</carry_item>
-	<carry_item key="justice_17" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_18" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
-		<capacity value="1" source="rank" source_value="0"/>
-		<commonness value="1" in_stock="1" can_respawn_with="1"/>
-		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.6" />
-        <modifier class="hit_success_probability" value="-1.4" />
-        <modifier class="detectability" value="0.0" />
-	</carry_item>
-	<carry_item key="justice_18" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_19" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
-		<capacity value="1" source="rank" source_value="0"/>
-		<commonness value="1" in_stock="1" can_respawn_with="1"/>
-		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.6" />
-        <modifier class="hit_success_probability" value="-1.4" />
-        <modifier class="detectability" value="0.0" />
-	</carry_item>
-	<carry_item key="justice_19" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_20" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
-		<capacity value="1" source="rank" source_value="0"/>
-		<commonness value="1" in_stock="1" can_respawn_with="1"/>
-		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.6" />
-        <modifier class="hit_success_probability" value="-1.4" />
-        <modifier class="detectability" value="0.0" />
-	</carry_item>
-	<carry_item key="justice_20" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_21" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
-		<capacity value="1" source="rank" source_value="0"/>
-		<commonness value="1" in_stock="1" can_respawn_with="1"/>
-		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.6" />
-        <modifier class="hit_success_probability" value="-1.4" />
-        <modifier class="detectability" value="0.0" />
-	</carry_item>
-	<carry_item key="justice_21" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_22" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
-		<capacity value="1" source="rank" source_value="0"/>
-		<commonness value="1" in_stock="1" can_respawn_with="1"/>
-		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.6" />
-        <modifier class="hit_success_probability" value="-1.4" />
-        <modifier class="detectability" value="0.0" />
-	</carry_item>
-	<carry_item key="justice_22" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_23" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
-		<capacity value="1" source="rank" source_value="0"/>
-		<commonness value="1" in_stock="1" can_respawn_with="1"/>
-		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.6" />
-        <modifier class="hit_success_probability" value="-1.4" />
-        <modifier class="detectability" value="0.0" />
-	</carry_item>
-	<carry_item key="justice_23" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_24" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
-		<capacity value="1" source="rank" source_value="0"/>
-		<commonness value="1" in_stock="1" can_respawn_with="1"/>
-		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.6" />
-        <modifier class="hit_success_probability" value="-1.4" />
-        <modifier class="detectability" value="0.0" />
-	</carry_item>
-	<carry_item key="justice_24" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_25" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
-		<capacity value="1" source="rank" source_value="0"/>
-		<commonness value="1" in_stock="1" can_respawn_with="1"/>
-		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.6" />
-        <modifier class="hit_success_probability" value="-1.4" />
-        <modifier class="detectability" value="0.0" />
-	</carry_item>
-	<carry_item key="justice_25" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_26" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
-		<capacity value="1" source="rank" source_value="0"/>
-		<commonness value="1" in_stock="1" can_respawn_with="1"/>
-		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.6" />
-        <modifier class="hit_success_probability" value="-1.4" />
-        <modifier class="detectability" value="0.0" />
-	</carry_item>
-	<carry_item key="justice_26" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_27" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
-		<capacity value="1" source="rank" source_value="0"/>
-		<commonness value="1" in_stock="1" can_respawn_with="1"/>
-		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.6" />
-        <modifier class="hit_success_probability" value="-1.4" />
-        <modifier class="detectability" value="0.0" />
-	</carry_item>
-	<carry_item key="justice_27" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_28" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
-		<capacity value="1" source="rank" source_value="0"/>
-		<commonness value="1" in_stock="1" can_respawn_with="1"/>
-		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.6" />
-        <modifier class="hit_success_probability" value="-1.4" />
-        <modifier class="detectability" value="0.0" />
-	</carry_item>
-	<carry_item key="justice_28" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_29" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
-		<capacity value="1" source="rank" source_value="0"/>
-		<commonness value="1" in_stock="1" can_respawn_with="1"/>
-		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.6" />
-        <modifier class="hit_success_probability" value="-1.4" />
-        <modifier class="detectability" value="0.0" />
-	</carry_item>
-	<carry_item key="justice_29" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_30" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
-		<capacity value="1" source="rank" source_value="0"/>
-		<commonness value="1" in_stock="1" can_respawn_with="1"/>
-		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.6" />
-        <modifier class="hit_success_probability" value="-1.4" />
-        <modifier class="detectability" value="0.0" />
-	</carry_item>
-	<carry_item key="justice_30" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_31" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
-		<capacity value="1" source="rank" source_value="0"/>
-		<commonness value="1" in_stock="1" can_respawn_with="1"/>
-		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.8" />
-        <modifier class="hit_success_probability" value="-1.2" />
-        <modifier class="detectability" value="0.0" />
-	</carry_item>
-	<carry_item key="justice_31" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_32" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
-		<capacity value="1" source="rank" source_value="0"/>
-		<commonness value="1" in_stock="1" can_respawn_with="1"/>
-		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.8" />
-        <modifier class="hit_success_probability" value="-1.2" />
-        <modifier class="detectability" value="0.0" />
-	</carry_item>
-	<carry_item key="justice_32" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_33" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
-		<capacity value="1" source="rank" source_value="0"/>
-		<commonness value="1" in_stock="1" can_respawn_with="1"/>
-		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.8" />
-        <modifier class="hit_success_probability" value="-1.2" />
-        <modifier class="detectability" value="0.0" />
-	</carry_item>
-	<carry_item key="justice_33" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_34" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
-		<capacity value="1" source="rank" source_value="0"/>
-		<commonness value="1" in_stock="1" can_respawn_with="1"/>
-		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.8" />
-        <modifier class="hit_success_probability" value="-1.2" />
-        <modifier class="detectability" value="0.0" />
-	</carry_item>
-	<carry_item key="justice_34" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_35" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
-		<capacity value="1" source="rank" source_value="0"/>
-		<commonness value="1" in_stock="1" can_respawn_with="1"/>
-		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.8" />
-        <modifier class="hit_success_probability" value="-1.2" />
-        <modifier class="detectability" value="0.0" />
-	</carry_item>
-	<carry_item key="justice_35" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_36" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
-		<capacity value="1" source="rank" source_value="0"/>
-		<commonness value="1" in_stock="1" can_respawn_with="1"/>
-		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.8" />
-        <modifier class="hit_success_probability" value="-1.2" />
-        <modifier class="detectability" value="0.0" />
-	</carry_item>
-	<carry_item key="justice_36" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_37" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
-		<capacity value="1" source="rank" source_value="0"/>
-		<commonness value="1" in_stock="1" can_respawn_with="1"/>
-		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.8" />
-        <modifier class="hit_success_probability" value="-1.2" />
-        <modifier class="detectability" value="0.0" />
-	</carry_item>
-	<carry_item key="justice_37" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_38" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
-		<capacity value="1" source="rank" source_value="0"/>
-		<commonness value="1" in_stock="1" can_respawn_with="1"/>
-		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.8" />
-        <modifier class="hit_success_probability" value="-1.2" />
-        <modifier class="detectability" value="0.0" />
-	</carry_item>
-	<carry_item key="justice_38" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_39" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
-		<capacity value="1" source="rank" source_value="0"/>
-		<commonness value="1" in_stock="1" can_respawn_with="1"/>
-		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.8" />
-        <modifier class="hit_success_probability" value="-1.2" />
-        <modifier class="detectability" value="0.0" />
-	</carry_item>
-	<carry_item key="justice_39" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_40" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
-		<capacity value="1" source="rank" source_value="0"/>
-		<commonness value="1" in_stock="1" can_respawn_with="1"/>
-		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.8" />
-        <modifier class="hit_success_probability" value="-1.2" />
-        <modifier class="detectability" value="0.0" />
-	</carry_item>
-	<carry_item key="justice_40" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_41" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
-		<capacity value="1" source="rank" source_value="0"/>
-		<commonness value="1" in_stock="1" can_respawn_with="1"/>
-		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.8" />
-        <modifier class="hit_success_probability" value="-1.2" />
-        <modifier class="detectability" value="0.0" />
-	</carry_item>
-	<carry_item key="justice_41" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_42" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
-		<capacity value="1" source="rank" source_value="0"/>
-		<commonness value="1" in_stock="1" can_respawn_with="1"/>
-		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.8" />
-        <modifier class="hit_success_probability" value="-1.2" />
-        <modifier class="detectability" value="0.0" />
-	</carry_item>
-	<carry_item key="justice_42" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_43" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
-		<capacity value="1" source="rank" source_value="0"/>
-		<commonness value="1" in_stock="1" can_respawn_with="1"/>
-		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.8" />
-        <modifier class="hit_success_probability" value="-1.2" />
-        <modifier class="detectability" value="0.0" />
-	</carry_item>
-	<carry_item key="justice_43" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_44" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
-		<capacity value="1" source="rank" source_value="0"/>
-		<commonness value="1" in_stock="1" can_respawn_with="1"/>
-		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.8" />
-        <modifier class="hit_success_probability" value="-1.2" />
-        <modifier class="detectability" value="0.0" />
-	</carry_item>
-	<carry_item key="justice_44" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_45" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
-		<capacity value="1" source="rank" source_value="0"/>
-		<commonness value="1" in_stock="1" can_respawn_with="1"/>
-		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.8" />
-        <modifier class="hit_success_probability" value="-1.2" />
-        <modifier class="detectability" value="0.0" />
-	</carry_item>
-	<carry_item key="justice_45" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_46" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
-		<capacity value="1" source="rank" source_value="0"/>
-		<commonness value="1" in_stock="1" can_respawn_with="1"/>
-		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.8" />
-        <modifier class="hit_success_probability" value="-1.2" />
-        <modifier class="detectability" value="0.0" />
-	</carry_item>
-	<carry_item key="justice_46" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_47" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
-		<capacity value="1" source="rank" source_value="0"/>
-		<commonness value="1" in_stock="1" can_respawn_with="1"/>
-		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.8" />
-        <modifier class="hit_success_probability" value="-1.2" />
-        <modifier class="detectability" value="0.0" />
-	</carry_item>
-	<carry_item key="justice_47" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_48" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
-		<capacity value="1" source="rank" source_value="0"/>
-		<commonness value="1" in_stock="1" can_respawn_with="1"/>
-		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.8" />
-        <modifier class="hit_success_probability" value="-1.2" />
-        <modifier class="detectability" value="0.0" />
-	</carry_item>
-	<carry_item key="justice_48" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_49" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
-		<capacity value="1" source="rank" source_value="0"/>
-		<commonness value="1" in_stock="1" can_respawn_with="1"/>
-		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.8" />
-        <modifier class="hit_success_probability" value="-1.2" />
-        <modifier class="detectability" value="0.0" />
-	</carry_item>
-	<carry_item key="justice_49" time_to_live_out_in_the_open="15" name="Justice" transform_on_consume="justice_50" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="sfd_ar.png"/>
-		<capacity value="1" source="rank" source_value="0"/>
-		<commonness value="1" in_stock="1" can_respawn_with="1"/>
-		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.8" />
-        <modifier class="hit_success_probability" value="-1.2" />
+        <modifier class="hit_success_probability" value="-0.6" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
 </carry_items>
