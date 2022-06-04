@@ -642,7 +642,7 @@
 		<resources clear_vehicles="1" clear_weapons="1">
 			<weapon key="sfw_hunter.weapon" enabled="1"/>
 			<call key="sf_destroyer.call" />
-			<projectile key="hand_grenade.projectile"/>
+			<projectile key="sf_emp_mine.projectile"/>
 			<carry_item key="sf_hunter.carry_item" enabled="1" />
 		</resources>
 		<attribute_config class="xp">
