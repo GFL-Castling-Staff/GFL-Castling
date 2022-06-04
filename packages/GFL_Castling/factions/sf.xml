@@ -753,7 +753,7 @@
 			<sound key="throw" fileref="BossGager_buhuo_SKILL03_JP.wav" pitch_variety="0.001" volume="0.8" />
 		</character>
 		<model filename="sfd_gager.xml" />
-		<ai filename="elite.ai" />
+		<ai filename="gager.ai" />
 		<resources clear_vehicles="1" clear_weapons="1">
 			<call key="sf_jaguar.call" />
 			<call key="sf_destroyer.call" />
@@ -962,7 +962,7 @@
 			<sound key="throw" fileref="Scarecrow_buhuo_GOATTACK_JP.wav" pitch_variety="0.001" volume="0.8" />
 		</character>
 		<model filename="sfd_scarecrow.xml" />
-		<ai filename="elite.ai" />
+		<ai filename="lonewolf.ai" />
 		<resources clear_vehicles="1" clear_weapons="1">
 			<weapon key="sfw_scarecrow.weapon" enabled="1"/>
 			<projectile key="hand_grenade.projectile"/>
