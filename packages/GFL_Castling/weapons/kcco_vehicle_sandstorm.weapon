@@ -72,9 +72,9 @@
     <animation state_key="crouch_moving"		animation_key="walking,jaguar" />
     <animation state_key="crouch_moving_backwards"	animation_key="walking,jaguar" />
 
-	<sound key="fire" fileref="Teslatrooper_fire_FromBF5.wav" volume="1.1" />
+	<sound key="fire" fileref="Teslatrooper_fire_FromBF5.wav" volume="2.1" />
     <sound key="cycle" fileref="mossberg500_cycle.wav" />
-    <sound key="reload_one" fileref="Teslatrooper_reload_FromBF5.wav" volume="0.8" />
+    <sound key="reload_one" fileref="Teslatrooper_reload_FromBF5.wav" volume="1.8" />
     <sound class="impact" fileref="rifle_drop.wav" />
 
     <model filename="" />
@@ -88,7 +88,7 @@
 		<trail probability="1.0" key="FlamethrowerTrail" />
     </projectile>
 	
-	<ballistics curve_height="3.0" near_far_distance="0.0" speed_estimation_near="10.0" speed_estimation_far="16.0" max_speed="60.0" randomness="0.0" tweak_factor="1.35" />
+	<ballistics curve_height="3.0" near_far_distance="0.0" speed_estimation_near="10.0" speed_estimation_far="16.0" max_speed="60.0" randomness="0.0" tweak_factor="1.45" />
 
 	<stance state_key="running" accuracy="1.0" />
 	<stance state_key="walking" accuracy="1.0" />
