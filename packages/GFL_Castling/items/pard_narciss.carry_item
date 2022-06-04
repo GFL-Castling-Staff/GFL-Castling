@@ -1,0 +1,598 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<carry_items>
+	<carry_item key="pard_narciss.carry_item" time_to_live_out_in_the_open="15" name="narciss" transform_on_consume="narciss_1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.1" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
+	<carry_item key="narciss_1" time_to_live_out_in_the_open="15" name="narciss" transform_on_consume="narciss_2" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.1" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
+	<carry_item key="narciss_2" time_to_live_out_in_the_open="15" name="narciss" transform_on_consume="narciss_3" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.1" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
+	<carry_item key="narciss_3" time_to_live_out_in_the_open="15" name="narciss" transform_on_consume="narciss_4" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.1" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
+	<carry_item key="narciss_4" time_to_live_out_in_the_open="15" name="narciss" transform_on_consume="narciss_5" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.1" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
+	<carry_item key="narciss_5" time_to_live_out_in_the_open="15" name="narciss" transform_on_consume="narciss_6" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.1" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
+	<carry_item key="narciss_6" time_to_live_out_in_the_open="15" name="narciss" transform_on_consume="narciss_7" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.1" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
+	<carry_item key="narciss_7" time_to_live_out_in_the_open="15" name="narciss" transform_on_consume="narciss_8" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.1" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
+	<carry_item key="narciss_8" time_to_live_out_in_the_open="15" name="narciss" transform_on_consume="narciss_9" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.1" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
+	<carry_item key="narciss_9" time_to_live_out_in_the_open="15" name="narciss" transform_on_consume="narciss_10" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.1" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
+	<carry_item key="narciss_10" time_to_live_out_in_the_open="15" name="narciss" transform_on_consume="narciss_11" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="stun" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.2" />
+        <modifier class="hit_success_probability" value="-0.8" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
+	<carry_item key="narciss_11" time_to_live_out_in_the_open="15" name="narciss" transform_on_consume="narciss_12" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.2" />
+        <modifier class="hit_success_probability" value="-0.8" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
+	<carry_item key="narciss_12" time_to_live_out_in_the_open="15" name="narciss" transform_on_consume="narciss_13" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.2" />
+        <modifier class="hit_success_probability" value="-0.8" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
+	<carry_item key="narciss_13" time_to_live_out_in_the_open="15" name="narciss" transform_on_consume="narciss_14" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.2" />
+        <modifier class="hit_success_probability" value="-0.8" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
+	<carry_item key="narciss_14" time_to_live_out_in_the_open="15" name="narciss" transform_on_consume="narciss_15" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.2" />
+        <modifier class="hit_success_probability" value="-0.8" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
+	<carry_item key="narciss_15" time_to_live_out_in_the_open="15" name="narciss" transform_on_consume="narciss_16" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.2" />
+        <modifier class="hit_success_probability" value="-0.8" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
+	<carry_item key="narciss_16" time_to_live_out_in_the_open="15" name="narciss" transform_on_consume="narciss_17" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.2" />
+        <modifier class="hit_success_probability" value="-0.8" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
+	<carry_item key="narciss_17" time_to_live_out_in_the_open="15" name="narciss" transform_on_consume="narciss_18" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.2" />
+        <modifier class="hit_success_probability" value="-0.8" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
+	<carry_item key="narciss_18" time_to_live_out_in_the_open="15" name="narciss" transform_on_consume="narciss_19" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.2" />
+        <modifier class="hit_success_probability" value="-0.8" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
+	<carry_item key="narciss_19" time_to_live_out_in_the_open="15" name="narciss" transform_on_consume="narciss_20" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.2" />
+        <modifier class="hit_success_probability" value="-0.8" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
+	<carry_item key="narciss_20" time_to_live_out_in_the_open="15" name="narciss" transform_on_consume="narciss_21" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="stun" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.3" />
+        <modifier class="hit_success_probability" value="-0.6" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
+	<carry_item key="narciss_21" time_to_live_out_in_the_open="15" name="narciss" transform_on_consume="narciss_22" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.3" />
+        <modifier class="hit_success_probability" value="-0.6" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
+	<carry_item key="narciss_22" time_to_live_out_in_the_open="15" name="narciss" transform_on_consume="narciss_23" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.3" />
+        <modifier class="hit_success_probability" value="-0.6" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
+	<carry_item key="narciss_23" time_to_live_out_in_the_open="15" name="narciss" transform_on_consume="narciss_24" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.3" />
+        <modifier class="hit_success_probability" value="-0.6" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
+	<carry_item key="narciss_24" time_to_live_out_in_the_open="15" name="narciss" transform_on_consume="narciss_25" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.3" />
+        <modifier class="hit_success_probability" value="-0.6" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
+	<carry_item key="narciss_25" time_to_live_out_in_the_open="15" name="narciss" transform_on_consume="narciss_26" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.3" />
+        <modifier class="hit_success_probability" value="-0.6" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
+	<carry_item key="narciss_26" time_to_live_out_in_the_open="15" name="narciss" transform_on_consume="narciss_27" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.3" />
+        <modifier class="hit_success_probability" value="-0.6" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
+	<carry_item key="narciss_27" time_to_live_out_in_the_open="15" name="narciss" transform_on_consume="narciss_28" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.3" />
+        <modifier class="hit_success_probability" value="-0.6" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
+	<carry_item key="narciss_28" time_to_live_out_in_the_open="15" name="narciss" transform_on_consume="narciss_29" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.3" />
+        <modifier class="hit_success_probability" value="-0.6" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
+	<carry_item key="narciss_29" time_to_live_out_in_the_open="15" name="narciss" transform_on_consume="narciss_30" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.3" />
+        <modifier class="hit_success_probability" value="-0.6" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
+	<carry_item key="narciss_30" time_to_live_out_in_the_open="15" name="narciss" transform_on_consume="narciss_31" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.3" />
+        <modifier class="hit_success_probability" value="-0.6" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
+	<carry_item key="narciss_31" time_to_live_out_in_the_open="15" name="narciss" transform_on_consume="narciss_32" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.3" />
+        <modifier class="hit_success_probability" value="-0.6" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
+	<carry_item key="narciss_32" time_to_live_out_in_the_open="15" name="narciss" transform_on_consume="narciss_33" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.3" />
+        <modifier class="hit_success_probability" value="-0.6" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
+	<carry_item key="narciss_33" time_to_live_out_in_the_open="15" name="narciss" transform_on_consume="narciss_34" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.3" />
+        <modifier class="hit_success_probability" value="-0.6" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
+	<carry_item key="narciss_34" time_to_live_out_in_the_open="15" name="narciss" transform_on_consume="narciss_35" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.3" />
+        <modifier class="hit_success_probability" value="-0.6" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
+</carry_items>

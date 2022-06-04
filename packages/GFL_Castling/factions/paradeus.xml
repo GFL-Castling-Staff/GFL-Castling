@@ -507,10 +507,10 @@
 		</resources>
 	</soldier>
 	<soldier name="alina" spawn_score="0.05" squad_size_xp_cap="0.5" copy_from="default_ai">
-		<ai filename="melee.ai" />
+		<ai filename="excutioner.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="parw_alina.weapon" enabled="1" />
-			<carry_item key="pard_nyto.carry_item" />
+			<carry_item key="pard_alina.carry_item" />
 			<call file="pard_zombie.call" />
 			<attribute_config class="xp">
 				<attribute weight="1.0" min="330.0" max="350.833" />
@@ -521,11 +521,11 @@
 		</resources>
 	</soldier>
 	<soldier name="teal" spawn_score="0.05" squad_size_xp_cap="0.5" copy_from="default_ai">
-		<ai filename="melee.ai" />
+		<ai filename="excutioner.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="parw_teal.weapon" enabled="1" />
 			<model filename="pard_teal.xml" />
-			<carry_item key="pard_nyto.carry_item" />
+			<carry_item key="pard_teal.carry_item" />
 			<call file="pard_zombie.call" />
 			<attribute_config class="xp">
 				<attribute weight="1.0" min="350.0" max="450.833" />
@@ -585,7 +585,7 @@
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="parw_narciss.weapon" enabled="1" />
 			<model filename="pard_narciss.xml" />
-			<carry_item key="pard_nyto.carry_item" />
+			<carry_item key="pard_narciss.carry_item" />
 			<call file="pard_zombie.call" />
 			<attribute_config class="xp">
 				<attribute weight="1.0" min="350.0" max="450.833" />
