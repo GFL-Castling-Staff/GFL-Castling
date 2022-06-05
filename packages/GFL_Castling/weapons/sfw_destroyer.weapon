@@ -6,9 +6,9 @@
     <specification 
 		accuracy_factor="0.95" 
 		barrel_offset="0.5" 
-		class="4"
+		class="0"
     slot="0" 
-		magazine_size="50" 
+		magazine_size="100" 
 		name="SF-Destroyer" 
     projectile_speed="75" 
 		retrigger_time="0.1" 
@@ -52,7 +52,7 @@
 
     <weak_hand_hold offset="0.2" />
     <projectile file="standard_agl.projectile">
-        <result class="blast"  damage="2.9"  radius="2.5" decal="1" push="0" character_state="death" faction_compare="not_equal"/> 
+        <result class="blast"  damage="1.9"  radius="2.5" decal="1" push="0" character_state="death" faction_compare="not_equal"/> 
      </projectile>
      
     <stance state_key="running" accuracy="0.5" />
