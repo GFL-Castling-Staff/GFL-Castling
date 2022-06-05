@@ -44,12 +44,12 @@
 	<modifier class="blast_range" value="+2.0" />
 
 0	<turret offset="-0.0 1.8 -0.7" weapon_key="sandstorm_none.weapon" weapon_offset="0.0 0.0 0.0" weapon_recoil="0.0" physics_recoil="0.0" max_rotation_step="0.0004" rotation_range="2" />	
-1	<turret offset="-0.84 2.15 0" weapon_key="kcco_vehicle_sandstorm.weapon" weapon_offset="0.0 0.0 0.0" weapon_recoil="0.0" physics_recoil="0.08" max_rotation_step="0.000005" rotation="0.08" rotation_range="0.4" parent_turret_index="0"/>
-2	<turret offset="+0.84 2.15 0" weapon_key="kcco_vehicle_sandstorm.weapon" weapon_offset="0.0 0.0 0.0" weapon_recoil="0.0" physics_recoil="0.08" max_rotation_step="0.000005" rotation="-0.1" rotation_range="0.4" parent_turret_index="0"/>
-3	<turret offset="-1.12 2.0 0" weapon_key="kcco_vehicle_sandstorm.weapon" weapon_offset="0.0 0.0 0.0" weapon_recoil="0.0" physics_recoil="0.08" max_rotation_step="0.000005" rotation="0.12" rotation_range="0.4" parent_turret_index="0"/>
-4	<turret offset="+1.12 2.0 0" weapon_key="kcco_vehicle_sandstorm.weapon" weapon_offset="0.0 0.0 0.0" weapon_recoil="0.0" physics_recoil="0.08" max_rotation_step="0.000005" rotation="-0.14" rotation_range="0.4" parent_turret_index="0"/>
-5	<turret offset="-1.40 1.85 0" weapon_key="kcco_vehicle_sandstorm.weapon" weapon_offset="0.0 0.0 0.0" weapon_recoil="0.0" physics_recoil="0.08" max_rotation_step="0.000005" rotation="0.16" rotation_range="0.4" parent_turret_index="0"/>
-6	<turret offset="+1.40 1.85 0" weapon_key="kcco_vehicle_sandstorm.weapon" weapon_offset="0.0 0.0 0.0" weapon_recoil="0.0" physics_recoil="0.08" max_rotation_step="0.000005" rotation="-0.18" rotation_range="0.4" parent_turret_index="0"/>
+1	<turret offset="-0.84 2.15 0.2" weapon_key="kcco_vehicle_sandstorm.weapon" weapon_offset="0.0 0.0 0.0" weapon_recoil="0.0" physics_recoil="0.08" max_rotation_step="0.000005" rotation="0.08" rotation_range="0.4" parent_turret_index="0"/>
+2	<turret offset="+0.84 2.15 0.2" weapon_key="kcco_vehicle_sandstorm.weapon" weapon_offset="0.0 0.0 0.0" weapon_recoil="0.0" physics_recoil="0.08" max_rotation_step="0.000005" rotation="-0.1" rotation_range="0.4" parent_turret_index="0"/>
+3	<turret offset="-1.12 2.0 0.2" weapon_key="kcco_vehicle_sandstorm.weapon" weapon_offset="0.0 0.0 0.0" weapon_recoil="0.0" physics_recoil="0.08" max_rotation_step="0.000005" rotation="0.12" rotation_range="0.4" parent_turret_index="0"/>
+4	<turret offset="+1.12 2.0 0.2" weapon_key="kcco_vehicle_sandstorm.weapon" weapon_offset="0.0 0.0 0.0" weapon_recoil="0.0" physics_recoil="0.08" max_rotation_step="0.000005" rotation="-0.14" rotation_range="0.4" parent_turret_index="0"/>
+5	<turret offset="-1.40 1.85 0.2" weapon_key="kcco_vehicle_sandstorm.weapon" weapon_offset="0.0 0.0 0.0" weapon_recoil="0.0" physics_recoil="0.08" max_rotation_step="0.000005" rotation="0.16" rotation_range="0.4" parent_turret_index="0"/>
+6	<turret offset="+1.40 1.85 0.2" weapon_key="kcco_vehicle_sandstorm.weapon" weapon_offset="0.0 0.0 0.0" weapon_recoil="0.0" physics_recoil="0.08" max_rotation_step="0.000005" rotation="-0.18" rotation_range="0.4" parent_turret_index="0"/>
 
 	<visual class="chassis" mesh_filename="sandstorm_base.mesh" texture_filename="sandstorm_texture.png" offset="0.0 -0.8 0.0" max_tilt="-0.08" />
 	<visual class="chassis" key="broken" mesh_filename="sandstorm_base.mesh" texture_filename="tank_2_broken.png" offset="0.0 -2.8 0.0"/>

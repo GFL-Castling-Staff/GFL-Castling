@@ -34,7 +34,7 @@
 
     <specification 
     accuracy_factor="0.98"
-	spread_range="2.4" 
+	spread_range="2.8" 
     barrel_offset="0.5" 
     slot="2" 
     magazine_size="-1" 
@@ -90,7 +90,7 @@
 		<trail probability="1.0" key="FlamethrowerTrail" />
     </projectile>
 	
-	<ballistics curve_height="10" near_far_distance="20" speed_estimation_near="80.0" speed_estimation_far="80.0" max_speed="50.0" tweak_factor="1.8" randomness="0.0" />
+	<ballistics curve_height="10" near_far_distance="20" speed_estimation_near="40.0" speed_estimation_far="80.0" max_speed="60.0" tweak_factor="1.8" randomness="0.0" />
 
 	<stance state_key="running" accuracy="1.5" />
 	<stance state_key="walking" accuracy="1.5" />
