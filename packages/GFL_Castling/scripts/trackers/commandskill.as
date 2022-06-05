@@ -300,9 +300,9 @@ class CommandSkill : Tracker {
                     case 24:{excutePPSH41skill(cId,senderId,m_modifer);break;}
                     case 25:{excutePPSH41skill(cId,senderId,m_modifer,true);break;}
                     case 26:{excuteFO12skill(cId,senderId,m_modifer);break;}
-                    case 27:{excuteFlashbangskill(cId,senderId,m_modifer);break;}
+                    case 27:{excuteFlashbangskill(cId,senderId,m_modifer,c_weaponType);break;}
                     case 28:{excuteUMP9skill(cId,senderId,m_modifer);break;}
-                    case 29:{excuteFlashbangskill(cId,senderId,m_modifer);break;}
+                    // case 29:{excuteFlashbangskill(cId,senderId,m_modifer);break;}
 
                     default:
                         break;
@@ -1844,7 +1844,7 @@ class CommandSkill : Tracker {
             m_metagame.getComms().send(command);    
         // playSoundAtLocation(m_metagame,"AN94mod3_skill.wav",fID,c_pos,0.9);
     }
-    void excuteFlashbangskill(int characterId,int playerId,SkillModifer@ modifer){
+    void excuteFlashbangskill(int characterId,int playerId,SkillModifer@ modifer,string weaponname){
         bool ExistQueue = false;
         int j=-1;
         for (uint i=0;i<SkillArray.length();i++){
