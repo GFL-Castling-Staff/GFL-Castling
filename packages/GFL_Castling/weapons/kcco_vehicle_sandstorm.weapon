@@ -34,16 +34,16 @@
 
     <specification 
     accuracy_factor="0.98"
-	spread_range="2.8" 
+	spread_range="3.6" 
     barrel_offset="0.5" 
     slot="2" 
     magazine_size="-1" 
     name="Sandstorm-Rocket" 
     projectile_speed="60" 
-    retrigger_time="2.35"
+    retrigger_time="3.0"
     suppressed="0" 
     stab_enabled="0"
-    projectiles_per_shot="1"
+    projectiles_per_shot="2"
     carry_in_two_hands="0"  
     can_shoot_standing="1" 
     can_shoot_crouching="0"
@@ -85,12 +85,12 @@
 
     <weak_hand_hold offset="0.2" />
 
-    <projectile file="Doppelsoldner_rocket.projectile" >
+    <projectile file="Doppelsoldner_rocket.projectile" pulldown_in_air="20.0">
         <result class="blast" radius="5.0" damage="4" push="0.2" decal="1" faction_compare="not_equal" damage_origin_vehicle="0"/>
 		<trail probability="1.0" key="FlamethrowerTrail" />
     </projectile>
 	
-	<ballistics curve_height="8.0" near_far_distance="16.0" speed_estimation_near="20.0" speed_estimation_far="16.0" max_speed="60.0" randomness="0.0" tweak_factor="1.48" />
+	<ballistics curve_height="15.0" near_far_distance="16.0" speed_estimation_near="20.0" speed_estimation_far="16.0" max_speed="60.0" randomness="0.0" tweak_factor="1.05" />
 
 
 	<stance state_key="running" accuracy="1.0" />
