@@ -639,7 +639,7 @@
 		</character>
 		<model filename="sfd_boss_hunter.xml" />
 		<ai filename="eod.ai" />
-		<resources clear_vehicles="1" clear_weapons="1">
+		<resources clear_vehicles="1" clear_weapons="1" clear_calls="1" clear_carry_items="1">
 			<weapon key="sfw_hunter.weapon" enabled="1"/>
 			<call key="sf_destroyer.call" />
 			<projectile key="sf_emp_mine.projectile"/>
@@ -662,7 +662,7 @@
 		</character>
 		<model filename="sfd_boss_architect.xml" />
 		<ai filename="sniper.ai" />
-		<resources clear_vehicles="1" clear_weapons="1">
+		<resources clear_vehicles="1" clear_weapons="1" clear_calls="1" clear_carry_items="1">
 			<call key="sf_destroyer.call" />
 			<weapon key="sfw_architect.weapon" enabled="1"/>
 			<projectile key="hand_grenade.projectile"/>
@@ -685,7 +685,7 @@
 		</character>
 		<model filename="sfd_intruder.xml" />
 		<ai filename="sniper.ai" />
-		<resources clear_vehicles="1" clear_weapons="1">
+		<resources clear_vehicles="1" clear_weapons="1" clear_calls="1" clear_carry_items="1">
 			<call key="sf_jaguar.call" />
 			<weapon key="sfw_Intruder.weapon" enabled="1"/>
 			<projectile key="hand_grenade.projectile"/>
@@ -708,7 +708,7 @@
 		</character>
 		<model filename="sfd_dreamer.xml" />
 		<ai filename="sniper.ai" />
-		<resources clear_vehicles="1" clear_weapons="1">
+		<resources clear_vehicles="1" clear_weapons="1" clear_calls="1" clear_carry_items="1">
 			<call key="sf_jupiter.call" />
 			<weapon key="sfw_dreamer.weapon" enabled="1"/>
 			<projectile key="hand_grenade.projectile"/>
@@ -731,7 +731,7 @@
 		</character>
 		<model filename="sfd_alchemist.xml" />
 		<ai filename="eod.ai" />
-		<resources clear_vehicles="1" clear_weapons="1">
+		<resources clear_vehicles="1" clear_weapons="1" clear_calls="1" clear_carry_items="1">
 			<call key="sf_destroyer.call" />
 			<weapon key="sfw_alchemist.weapon" enabled="1"/>
 			<projectile key="hand_grenade.projectile"/>
@@ -754,11 +754,10 @@
 		</character>
 		<model filename="sfd_gager.xml" />
 		<ai filename="gager.ai" />
-		<resources clear_vehicles="1" clear_weapons="1">
+		<resources clear_vehicles="1" clear_weapons="1" clear_calls="1" clear_carry_items="1">
 			<call key="sf_jaguar.call" />
 			<call key="sf_destroyer.call" />
 			<weapon key="sfw_gager.weapon" enabled="1"/>
-			<projectile key="hand_grenade.projectile"/>
 			<carry_item key="sf_gager.carry_item" enabled="1" />
 		</resources>
 		<attribute_config class="xp">
@@ -778,10 +777,9 @@
 		</character>
 		<model filename="sfd_excutioner.xml" />
 		<ai filename="eod.ai" />
-		<resources clear_vehicles="1" clear_weapons="1">
+		<resources clear_vehicles="1" clear_weapons="1" clear_calls="1" clear_carry_items="1">
 			<call key="sf_jaguar.call" />
 			<weapon key="sfw_excutioner_1.weapon" enabled="1"/>
-			<projectile key="hand_grenade.projectile"/>
 			<carry_item key="sf_excutioner_qm.carry_item" enabled="1" />
 		</resources>
 		<attribute_config class="xp">
@@ -801,10 +799,9 @@
 		</character>
 		<model filename="sfd_excutioner.xml" />
 		<ai filename="excutioner.ai" />
-		<resources clear_vehicles="1" clear_weapons="1">
+		<resources clear_vehicles="1" clear_weapons="1" clear_calls="1" clear_carry_items="1">
 			<call key="sf_jaguar.call" />
 			<weapon key="sfw_excutioner_2.weapon" enabled="1"/>
-			<projectile key="hand_grenade.projectile"/>
 			<carry_item key="sf_excutioner_qm.carry_item" enabled="1" />
 		</resources>
 		<attribute_config class="xp">
@@ -822,12 +819,8 @@
 			<sound key="throw" fileref="" pitch_variety="0.001" volume="0.8" />
 		</character>
 		<model filename="sfd_m16a1.xml" />
-		<ai filename="elite.ai" >
-			<parameter class="throw_grenade_time_interval_max" value="15.0" />
-			<parameter class="throw_grenade_time_interval_min" value="15.0" />
-			<parameter class="min_number_of_enemies_to_throw_grenade" value="1.0" />
-		</ai>
-		<resources clear_vehicles="1" clear_weapons="1">
+		<ai filename="sfm16a1.ai" />
+		<resources clear_vehicles="1" clear_weapons="1" clear_calls="1" clear_carry_items="1">
 			<weapon key="sfw_m16a1.weapon" enabled="1"/>
 			<projectile key="stun_grenade.projectile"/>
 			<carry_item key="sf_m16a1.carry_item" enabled="1" />
@@ -838,7 +831,7 @@
 		</attribute_config>
 
 		<attribute_config class="rp">
-			<attribute weight="1.0" min="2000.0" max="4000.0" />
+			<attribute weight="1.0" min="4000.0" max="8000.0" />
 		</attribute_config>
 	</soldier>
 
@@ -853,9 +846,8 @@
 		</character>
 		<model filename="sfd_agent.xml" />
 		<ai filename="agent.ai" />
-		<resources clear_vehicles="1" clear_weapons="1">
+		<resources clear_vehicles="1" clear_weapons="1" clear_calls="1" clear_carry_items="1">
 			<weapon key="sfw_agent.weapon" enabled="1"/>
-			<projectile key="hand_grenade.projectile"/>
 			<carry_item key="sf_agent.carry_item" enabled="1" />
 			<call file="sf_m16a1.call" />
 		</resources>
@@ -864,7 +856,7 @@
 		</attribute_config>
 
 		<attribute_config class="rp">
-			<attribute weight="1.0" min="2000.0" max="4000.0" />
+			<attribute weight="1.0" min="4000.0" max="4000.0" />
 		</attribute_config>
 	</soldier>
 
@@ -878,7 +870,7 @@
 		</character>
 		<model filename="sfd_destroyer.xml" />
 		<ai filename="destroyer.ai" />
-		<resources clear_vehicles="1" clear_weapons="1">
+		<resources clear_vehicles="1" clear_weapons="1" clear_calls="1" clear_carry_items="1">
 			<weapon key="sfw_destroyer.weapon" enabled="1"/>
 			<projectile key="hand_grenade.projectile"/>
 			<carry_item key="sf_destroyer.carry_item" enabled="1" />
@@ -905,7 +897,7 @@
 		</character>
 		<model filename="sfd_ouroboros.xml" />
 		<ai filename="sniper.ai" />
-		<resources clear_vehicles="1" clear_weapons="1">
+		<resources clear_vehicles="1" clear_weapons="1" clear_calls="1" clear_carry_items="1">
 			<weapon key="sfw_weaver.weapon" enabled="1"/>
 			<projectile key="hand_grenade.projectile"/>
 			<carry_item key="sf_weaver.carry_item" enabled="1" />
@@ -933,7 +925,7 @@
 		</character>
 		<model filename="sfd_justice.xml" />
 		<ai filename="eod.ai" />
-		<resources clear_vehicles="1" clear_weapons="1">
+		<resources clear_vehicles="1" clear_weapons="1" clear_calls="1" clear_carry_items="1">
 			<weapon key="sfw_justice.weapon" enabled="1"/>
 			<projectile key="hand_grenade.projectile"/>
 			<carry_item key="sf_justice.carry_item" enabled="1" />
@@ -963,7 +955,7 @@
 		</character>
 		<model filename="sfd_scarecrow.xml" />
 		<ai filename="lonewolf.ai" />
-		<resources clear_vehicles="1" clear_weapons="1">
+		<resources clear_vehicles="1" clear_weapons="1" clear_calls="1" clear_carry_items="1">
 			<weapon key="sfw_scarecrow.weapon" enabled="1"/>
 			<projectile key="hand_grenade.projectile"/>
 			<carry_item key="sf_scarecrow.carry_item" enabled="1" />
