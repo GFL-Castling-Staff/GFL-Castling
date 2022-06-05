@@ -542,6 +542,13 @@ void addMutilItemInBackpack(Metagame@ metagame, int characterId, string ItemType
 	metagame.getComms().send(command);
 }
 
+void playPrivateSound(const Metagame@ metagame, string filename, int playerId) {
+	XmlElement command("command");
+	command.setStringAttribute("class", "play_sound");
+	command.setStringAttribute("filename", filename);
+	command.setIntAttribute("player_id", playerId);
+	metagame.getComms().send(command);
+}
 //soundtrack function from ww2dlc thanks for coding wheel
 
 

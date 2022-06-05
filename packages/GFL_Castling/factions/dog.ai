@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ai filename="default.ai">
+  <parameter class="leader_sight_range" value="30.0" />
+  <parameter class="team_member_sight_range" value="30.0" />
+  <parameter class="sight_range_muzzle_factor" value="30.0" />
+  <parameter class="max_sight_range_with_muzzle" value="50.0" />
+  
+  <parameter class="prefer_roofs_probability" value="0.0" />
+  <parameter class="active_guarding_probability" value="0.0" />
+  <parameter class="willingness_to_guard" value="1.0" />
+  <parameter class="guard_wait_time_min" value="10.0" />
+  <parameter class="guard_wait_time_max" value="60.0" />
+  <parameter class="fire_open_min_time" value="3000.0" /> <!-- squad member combat mode time -->
+  <parameter class="vehicle_stuck_short_time" value="999999999999.0" /> <!-- don't use vehicles -->
+  <parameter class="check_vehicles_interval" value="0.0" />
+  <parameter class="check_vehicles_while_fire_open_interval" value="0.0" />  
+  
+  <parameter class="day_reaction_time_to_fight_min" value="0.0" />
+  <parameter class="day_reaction_time_to_fight_max" value="0.1" />
+  <parameter class="night_reaction_time_to_fight_min" value="0.0" />
+  <parameter class="night_reaction_time_to_fight_max" value="0.1" />
+  <parameter class="choose_enemy_time" value="0.1" />
+  <parameter class="team_member_monitor_enemies_time" value="0.5" />
+  <parameter class="monitor_enemies_time" value="0.5" />
+  <parameter class="monitor_enemies_max_dot_range" value="3.0" />
+  <parameter class="reaction_time_after_choosing_target" value="-1.0" />
+  <parameter class="fighting_time_fire_not_open" value="0.0" />
+  
+  <parameter class="fighting_favor_helping_probability" value="0.5" />
+  <parameter class="uses_vehicles" value="0" />
+  
+   <!-- new parameters start -->
+  <parameter class="following_target_range" value="1.0" />
+  <parameter class="following_target_slowdown_range" value="8.0" />
+  <parameter class="following_separation_range" value="1.0" />
+  <parameter class="squad_join_range" value="40.0" />
+  <parameter class="max_leader_authority_willing_to_join_another_squad" value="0.0" />
+  <parameter class="favor_joining_player_squad_value_increase" value="100.0" />
+  <parameter class="value_increase_required_to_join_defend_squad" value="100.0" />
+   <!-- new parameters end -->
+  <parameter class="run_limit_margin" value="1.0" />
+  <parameter class="run_limit" value="3.0" />
+  <parameter class="crouching_near_leader_rejoin_range" value="1.0" />
+  <parameter class="global_separation_radius_factor" value="1.0" />
+  <parameter class="default_fighting_separation" value="1.0" />
+  <parameter class="boosted_fighting_separation" value="1.0" />
+  <parameter class="leading_inspect_alarm_spread_out_distance" value="1.0" />
+  <parameter class="leading_inspect_alarm_min_distance" value="1.0" />
+  <parameter class="fighting_approach_alarm_spread_max_range" value="1.0" />
+  <parameter class="fighting_approach_alarm_max_soldiers" value="1" />
+  <parameter class="willingness_to_charge" value="1.0" />
+  <parameter class="melee_attack_wait_time" value="0.0" />
+  <parameter class="grenade_monitor_range" value="30.0" />
+  <parameter class="dive_from_grenade_probability" value="1.0" />
+  <parameter class="fighting_against_vehicle_separation" value="20.0" />
+  
+  <parameter class="maximum_distance_to_consider_for_heal" value="10.0" />
+  
+   <!-- leaping -->
+  <parameter class="max_distance_to_throw_grenade" value="25.0" />
+  <parameter class="min_distance_to_throw_grenade" value="3.0" />
+  <parameter class="min_number_of_enemies_to_throw_grenade" value="1" />
+  <parameter class="throw_grenade_time_interval_max" value="2.0" />
+  <parameter class="throw_grenade_time_interval_min" value="0.0" />
+  
+  <parameter class="using_cover_min_time" value="0.0" />
+  <parameter class="using_cover_max_time" value="0.1" />
+  <parameter class="fighting_melee_move_radius" value="1.0" />
+  <parameter class="fighting_regular_move_radius" value="1.0" />
+  
+  <parameter class="stab_range" value="4.24" />
+  <parameter class="uses_ladders" value="0.0" />
+
+
+</ai>
