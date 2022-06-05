@@ -70,8 +70,13 @@ class kill_event : Tracker {
         {"ff_excutioner_2.weapon",3},
         {"ff_parw_alina.weapon",2},
 
-        // AK15MOD3
+        // 近战定位AR
+        {"gkw_ak12_skill.weapon",3},
+        {"gkw_ak12_blm_skill.weapon",3},
+        {"gkw_ak12_2402_skill.weapon",3},
         {"gkw_ak15mod3_skill.weapon",3},
+        {"gkw_ar15mod3_skill.weapon",3},
+        {"gkw_ar15mod3_532_skill.weapon",3},
 
         // SMG——2kills
         {"gkw_ump40.weapon",2},
@@ -97,6 +102,7 @@ class kill_event : Tracker {
         {"gkw_thompson.weapon",2},
         {"gkw_uzi.weapon",2},
         {"gkw_uzimod3.weapon",2},
+        {"gkw_uzimod3_skill.weapon",2},
         {"gkw_vz61.weapon",2},
         {"gkw_pp19.weapon",2},
         {"gkw_pp19mod3.weapon",2},
