@@ -4,12 +4,12 @@
 	
 	<specification
 	retrigger_time="0.05"
-	projectiles_per_shot="1"
+	projectiles_per_shot="2"
 	spread_range="0.025"
 	accuracy_factor="1.5"
 	sustained_fire_grow_step="0.1"
 	sustained_fire_diminish_rate="1.0"
-	magazine_size="300"
+	magazine_size="60"
 	suppressed="1"
 	can_shoot_prone="0"
 	name="Code:Flamethrower"
@@ -21,7 +21,7 @@
     last_burst_retrigger_time="2.0" 
 	/>
 
-    <drop_on_death_result class="spawn" instance_class="projectile" instance_key="firenade_Vector.projectile" min_amount="1.0" max_amount="1.0" offset="0 1.0 0" position_spread="0 0" direction_spread="0 0" />
+    <drop_on_death_result class="spawn" instance_class="projectile" instance_key="firenade_kcco_flamethrower.projectile" min_amount="1.0" max_amount="1.0" offset="0 1.0 0" position_spread="0 0" direction_spread="0 0" />
 	<commonness value="1.5" in_stock="1" />
 	<addon_model filename="backpack_fuel.xml" />
 	
@@ -39,7 +39,7 @@
 	<hud_icon filename="hud_flamethrower.png" />
 	
 	<commonness value="0.0" can_respawn_with="0" in_stock="0" />
-	<inventory encumbrance="10.0" price="400.0" />
+	<inventory encumbrance="10.0" price="100.0" />
 	
 	<capacity value="1" source="rank" source_value="0.0" />
 	
