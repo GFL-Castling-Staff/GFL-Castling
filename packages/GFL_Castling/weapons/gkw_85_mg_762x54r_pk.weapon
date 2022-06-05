@@ -27,7 +27,7 @@
         <animation key="reload" animation_key="reloading, Machine gun 2.0" />
 
         <inventory buy_price="45.0" sell_price="45.0" />
-        <next_in_chain key="gkw_pk_skill.weapon" share_ammo="1" />
+        <next_in_chain key="gkw_pk_skill.weapon" share_ammo="0" />
 
         <sound key="fire" fileref="pkp_fire_FromINS.wav" pitch_variety="0.05" volume="1" />
         <sound key="magazine_out" fileref="pkp_mgz_out_FromINS.wav" volume="0.8" />
@@ -94,7 +94,7 @@
         <animation state_key="stabbing" animation_key="crouch, pistol dual" />
         <animation key="reload" animation_key="reloadingPK" />
         <inventory buy_price="45.0" sell_price="45.0" />
-        <next_in_chain key="gkw_pk.weapon" share_ammo="1" />
+        <next_in_chain key="gkw_pk.weapon" share_ammo="0" />
 
         <sound key="fire" fileref="pkp_fire_FromINS.wav" pitch_variety="0.05" volume="1" />
         <sound key="magazine_out" fileref="pkp_mgz_out_FromINS.wav" volume="0.8" />

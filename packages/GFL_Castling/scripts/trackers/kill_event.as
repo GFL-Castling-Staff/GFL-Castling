@@ -71,7 +71,7 @@ class kill_event : Tracker {
         {"ff_parw_alina.weapon",2},
 
         // AK15MOD3
-        {"gkw_ak15mod3.weapon",3},
+        {"gkw_ak15mod3_skill.weapon",3},
 
         // SMG——2kills
         {"gkw_ump40.weapon",2},

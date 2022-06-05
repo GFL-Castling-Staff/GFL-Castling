@@ -91,17 +91,17 @@
     </call>
     <!-- 火箭妖精 -->
     <call name="Rocket Fairy" key="gk_rocket_fairy.call" initiation_comment1="Request rocket strike" acknowledge_comment="Confirm, upload the coordinates" acknowledge_time="0" launch_comment="Start rocket strike" notify_metagame="1">
-        <round instances="15" instance_class="grenade" instance_key="artillery_rocket_fairies.projectile" instance_spread="14 14 14" common_spread="8 0 8" launch_time="3.0" spawn_time="6.0">
+        <round instances="18" instance_class="grenade" instance_key="artillery_rocket_fairies.projectile" instance_spread="14 14 14" common_spread="8 0 8" launch_time="3.0" spawn_time="6.0" horizontal_offset_at_spawn="0.0">
             <sound class="launch" fileref="Fairy_multirocket_FromCOD16.wav" volume="0.8" />
             <sound class="spawn" fileref="woosh1.wav" volume="0.2" />
         </round>
-        <round instances="15" instance_class="grenade" instance_key="artillery_rocket_fairies_emp.projectile" instance_spread="14 14 14" common_spread="8 0 8" launch_time="4.0" spawn_time="7.0">
+        <round instances="18" instance_class="grenade" instance_key="artillery_rocket_fairies_emp.projectile" instance_spread="14 14 14" common_spread="8 0 8" launch_time="4.0" spawn_time="7.0" horizontal_offset_at_spawn="0.0">
             <sound class="spawn" fileref="woosh1.wav" volume="0.2" />
         </round>
-        <round instances="15" instance_class="grenade" instance_key="artillery_rocket_fairies.projectile" instance_spread="14 14 14" common_spread="8 0 8" launch_time="5.0" spawn_time="8.0">
+        <round instances="18" instance_class="grenade" instance_key="artillery_rocket_fairies.projectile" instance_spread="14 14 14" common_spread="8 0 8" launch_time="5.0" spawn_time="8.0" horizontal_offset_at_spawn="0.0">
             <sound class="spawn" fileref="woosh1.wav" volume="0.2" />
         </round>
-        <round instances="15" instance_class="grenade" instance_key="artillery_rocket_fairies_emp.projectile" instance_spread="14 14 14" common_spread="8 0 8" launch_time="6.0" spawn_time="9.0">
+        <round instances="18" instance_class="grenade" instance_key="artillery_rocket_fairies_emp.projectile" instance_spread="14 14 14" common_spread="8 0 8" launch_time="6.0" spawn_time="9.0" horizontal_offset_at_spawn="0.0">
             <sound class="spawn" fileref="woosh1.wav" volume="0.2" />
         </round>
 
