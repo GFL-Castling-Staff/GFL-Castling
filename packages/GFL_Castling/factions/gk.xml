@@ -1324,6 +1324,15 @@
 		</item_class_existence_config>
 	</soldier>
 
+	<soldier name="FO12_Dog" spawn_score="0" firstnames_file="fo12dog.name">
+		<character filename="pard_germdog.character" />
+		<model filename="gkd_dogjack.xml"/>
+		<ai filename="dog.ai" />
+		<resources clear_weapons="1" clear_vehicles="1" clear_calls="1" clear_grenades="1">
+			<weapon key='fo12_dog.weapon'/>
+			<carry_item key='exo_t5_16lab.carry_item' />
+		</resources>
+	</soldier>
 	<!-- icecream group -->
 	<soldier name="icecream" spawn_score="0.0">
 		<resources file="icecream.resources" />

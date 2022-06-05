@@ -190,6 +190,10 @@ dictionary commandSkillIndex = {
         {"gkw_ppsh41.weapon",24},
         {"gkw_ppsh41mod3.weapon",25},
 
+        // fo-12
+        {"gkw_fo12.weapon",26},
+        {"gkw_fo12_skill.weapon",26},
+
         // 下面这行是用来占位的，在这之上添加新的枪和index即可
         {"666",-1}
 };
@@ -1790,6 +1794,35 @@ class CommandSkill : Tracker {
             }
         }
     }    
+    void excuteFO12skill(int characterId,int playerId,SkillModifer@ modifer){
+        bool ExistQueue = false;
+        int j =-1;
+        for (uint i=0;i<SkillArray.length();i++){
+            if (SkillArray[i].m_character_id==characterId && SkillArray[i].m_weapontype=="FO12") {
+                ExistQueue=true;
+                j=i;
+            }
+        }
+        if (ExistQueue){
+            dictionary a;
+            a["%time"] = ""+SkillArray[j].m_time;
+            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            _log("skill cooldown" + SkillArray[j].m_time);
+            return;
+        }
+        addCoolDown("FO12",1,characterId,modifer);
+        const XmlElement@ info = getCharacterInfo(m_metagame, characterId);
+        int fID = info.getIntAttribute("faction_id");
+        string c_pos = info.getStringAttribute("position");
+            XmlElement command("command");
+            command.setStringAttribute("class", "create_instance");
+            command.setIntAttribute("faction_id",fID);
+            command.setStringAttribute("instance_class", "character");
+            command.setStringAttribute("instance_key","FO12_Dog");
+            command.setStringAttribute("position",c_pos);
+            m_metagame.getComms().send(command);    
+        // playSoundAtLocation(m_metagame,"AN94mod3_skill.wav",fID,c_pos,0.9);
+    }
 }
 
 
