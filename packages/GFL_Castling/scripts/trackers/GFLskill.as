@@ -649,7 +649,7 @@ class GFLskill : Tracker {
 						"<command class='create_instance'" +
 						" faction_id='"+ Vector_track[a].m_factionid +"'" +
 						" instance_class='grenade'" +
-						" instance_key='firenade_Vector_sub.projectile.projectile'" +
+						" instance_key='firenade_Vector_sub.projectile'" +
 						" position='" + Vector_track[a].m_pos.toString() + "'"+
 						" character_id='" + Vector_track[a].m_characterId + "' />";
 					m_metagame.getComms().send(c);		

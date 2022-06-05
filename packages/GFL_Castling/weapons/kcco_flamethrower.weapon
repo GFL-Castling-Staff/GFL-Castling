@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapon file="KCCO.base_weapon" key="kcco_flamethrower.weapon">
-	<tag name="cqb" />
 	
 	<specification
 	retrigger_time="0.05"
@@ -44,6 +43,7 @@
 	<capacity value="1" source="rank" source_value="0.0" />
 	
 	<ballistics
+	curve_height="4.0"
 	near_far_distance="100.0"
 	speed_estimation_near="25.0"
 	speed_estimation_far="25.0"
@@ -53,7 +53,7 @@
 	<!-- speed 30 is too much range, 20 is not enough, 25 should be fine -->
 	<projectile file="flamethrower_flame.projectile">
 		<trigger class="impact" />
-		<result class="blast" radius="2" damage="0.25" push="0" character_state="wound" faction_compare="not_equal" damage_as_probability="1"/>
+		<result class="blast" radius="2" damage="0.25" push="0" character_state="death" faction_compare="not_equal" damage_as_probability="1"/>
 	</projectile>
 	
 	<stance state_key="running" accuracy="1.0" />
