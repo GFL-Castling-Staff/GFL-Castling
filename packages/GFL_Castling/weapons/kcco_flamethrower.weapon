@@ -9,7 +9,7 @@
 	accuracy_factor="1.5"
 	sustained_fire_grow_step="0.1"
 	sustained_fire_diminish_rate="1.0"
-	magazine_size="60"
+	magazine_size="300"
 	suppressed="1"
 	can_shoot_prone="0"
 	name="Code:Flamethrower"
@@ -53,7 +53,7 @@
 	<!-- speed 30 is too much range, 20 is not enough, 25 should be fine -->
 	<projectile file="flamethrower_flame.projectile">
 		<trigger class="impact" />
-		<result class="blast" radius="2" damage="0.4" push="0" character_state="death" faction_compare="not_equal" />
+		<result class="blast" radius="2" damage="0.25" push="0" character_state="wound" faction_compare="not_equal" damage_as_probability="1"/>
 	</projectile>
 	
 	<stance state_key="running" accuracy="1.0" />
