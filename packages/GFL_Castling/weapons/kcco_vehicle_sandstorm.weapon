@@ -34,7 +34,7 @@
 
     <specification 
     accuracy_factor="0.98"
-	spread_range="3.6" 
+	spread_range="3.0" 
     barrel_offset="0.5" 
     slot="2" 
     magazine_size="-1" 
@@ -93,14 +93,14 @@
 	<ballistics curve_height="15.0" near_far_distance="16.0" speed_estimation_near="20.0" speed_estimation_far="16.0" max_speed="60.0" randomness="0.0" tweak_factor="1.05" />
 
 
-	<stance state_key="running" accuracy="1.0" />
-	<stance state_key="walking" accuracy="1.0" />
-	<stance state_key="crouch_moving" accuracy="1.0" />
-	<stance state_key="standing" accuracy="1.0" />
-	<stance state_key="crouching" accuracy="1.0" />
-	<stance state_key="prone" accuracy="1.0" />
-	<stance state_key="prone_moving" accuracy="1.0" />
-	<stance state_key="over_wall" accuracy="1" />
+	<stance state_key="running" accuracy="1.5" />
+	<stance state_key="walking" accuracy="1.5" />
+	<stance state_key="crouch_moving" accuracy="1.5" />
+	<stance state_key="standing" accuracy="1.5" />
+	<stance state_key="crouching" accuracy="1.5" />
+	<stance state_key="prone" accuracy="1.5" />
+	<stance state_key="prone_moving" accuracy="1.5" />
+	<stance state_key="over_wall" accuracy="1.5" />
 
     <modifier class="speed" value="0.2" />
 </weapon>
