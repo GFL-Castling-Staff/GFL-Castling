@@ -71,7 +71,7 @@ class kill_event : Tracker {
         {"ff_parw_alina.weapon",2},
 
         // AK15MOD3
-        {"gkw_ak15mod3.weapon",3},
+        {"gkw_ak15mod3_skill.weapon",3},
 
         // SMG——2kills
         {"gkw_ump40.weapon",2},
@@ -231,7 +231,7 @@ class kill_event : Tracker {
                 if(HealOnKill_track[a].m_time<0){	
 					if (HealOnKill_track[a].m_numtime>=0){
                         int vestrestore = 0;
-                        while(HealOnKill_track[a].current_kills>HealOnKill_track[a].m_killstoheal){
+                        while(HealOnKill_track[a].current_kills>=HealOnKill_track[a].m_killstoheal){
                             vestrestore++;
                             HealOnKill_track[a].current_kills -= HealOnKill_track[a].m_killstoheal;                            
                         }

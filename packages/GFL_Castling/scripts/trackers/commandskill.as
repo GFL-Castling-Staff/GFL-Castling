@@ -284,7 +284,7 @@ class CommandSkill : Tracker {
                     case 23:{excuteM4SOPMODIIMOD3skill(cId,senderId,m_modifer);break;}
                     case 24:{excutePPSH41skill(cId,senderId,m_modifer);break;}
                     case 25:{excutePPSH41skill(cId,senderId,m_modifer,true);break;}
-
+                    case 26:{excuteFO12skill(cId,senderId,m_modifer);break;}
                     default:
                         break;
                 }
@@ -340,7 +340,9 @@ class CommandSkill : Tracker {
             for (uint a=0;a<SkillArray.length();a++){
                 SkillArray[a].m_time-=time;
                 if(SkillArray[a].m_time<0){
+                    sendFactionMessageKeySaidAsCharacter(m_metagame,0,SkillArray[a].m_character_id,"skillcooldowndone");
                     SkillArray.removeAt(a);
+                    // playPrivateSound(m_metagame,"",);
                 }
             }
         }

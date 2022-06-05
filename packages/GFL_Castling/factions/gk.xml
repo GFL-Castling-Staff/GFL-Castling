@@ -1332,6 +1332,9 @@
 			<weapon key='fo12_dog.weapon'/>
 			<carry_item key='exo_t5_16lab.carry_item' />
 		</resources>
+		<attribute_config class="rp">
+			<attribute weight="1.0" min="300" max="600" />
+		</attribute_config>
 	</soldier>
 	<!-- icecream group -->
 	<soldier name="icecream" spawn_score="0.0">
