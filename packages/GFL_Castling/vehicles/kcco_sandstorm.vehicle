@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<vehicle file="vehicle_base.vehicle" name="Sandstorm" key="sandstorm.vehicle" respawn_time="100" time_to_live_unsteerable="95" map_view_atlas_index="46" minimum_fill_requirement="1.0" max_character_collision_speed_on_normal="8.0" max_character_collision_speed="8" character_leave_request_mode="friendly" allow_ai_to_use="1" allow_player_to_use="1" ai_driver_turns_to_target="1" ai_abandon_when_unsteerable="0" ai_stop_to_fight="1" >
+<vehicle file="vehicle_base.vehicle" name="Sandstorm" key="sandstorm.vehicle" respawn_time="60" time_to_live_unsteerable="95" map_view_atlas_index="46" minimum_fill_requirement="1.0" max_character_collision_speed_on_normal="8.0" max_character_collision_speed="8" character_leave_request_mode="friendly" allow_ai_to_use="1" allow_player_to_use="1" ai_driver_turns_to_target="1" ai_abandon_when_unsteerable="0" ai_stop_to_fight="1" >
 	<tag name="metal_thin" />
 	<tag name="jeep" />
 	
@@ -85,9 +85,9 @@
 	<effect event_key="health" value="10" ref="BrokenSparkle" post_processing="0" offset="1.0 1.8 1.0" />
 	<effect event_key="destroyed" ref="SmallSmokeVehicle" offset="0.0 1.8 -1.8" />
 	<effect event_key="destroyed" ref="SmallSmokeVehicle" offset="-0.8 1.8 -1.8" />
-	<effect event_key="destroyed" ref="MediumSmokeVehicle" offset="0.0 2.9 0.6" />
-	<effect event_key="destroyed" ref="MediumSmokeVehicle" offset="-0.6 2.7 -0.2" />
-	<effect event_key="destroyed" ref="SmallFireRepeat" offset="0.0 1.8 -3.8" />
+	<effect event_key="destroyed" ref="MediumSmokeVehicle" offset="0.0 1.9 0.6" />
+	<effect event_key="destroyed" ref="MediumSmokeVehicle" offset="-0.6 1.7 -0.2" />
+	<effect event_key="destroyed" ref="SmallFireRepeat" offset="0.0 1.8 -1.8" />
 	<effect event_key="destroy" key="other" ref="woosh" post_processing="0" shadow="0" />
 	<effect event_key="cleanup" key="other" ref="woosh" post_processing="0" shadow="0" />
 	
