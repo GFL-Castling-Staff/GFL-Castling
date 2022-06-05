@@ -231,7 +231,7 @@ class kill_event : Tracker {
                 if(HealOnKill_track[a].m_time<0){	
 					if (HealOnKill_track[a].m_numtime>=0){
                         int vestrestore = 0;
-                        while(HealOnKill_track[a].current_kills>HealOnKill_track[a].m_killstoheal){
+                        while(HealOnKill_track[a].current_kills>=HealOnKill_track[a].m_killstoheal){
                             vestrestore++;
                             HealOnKill_track[a].current_kills -= HealOnKill_track[a].m_killstoheal;                            
                         }
