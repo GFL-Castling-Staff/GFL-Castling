@@ -3,7 +3,9 @@
     <tag name="flashbang" />
 
     <result class="blast" radius="15.0" damage="0.0" decal="0" character_state="stun" faction_compare="not_equal" />
-    <trigger class="impact" />
+    <trigger class="impact">
+        <collider class="character" enabled="1" faction_compare="not_equal"/>
+    </trigger>
     <rotation class="motion" />
     <model mesh_filename="stun_grenade.xml" />
     <hud_icon filename="hud_stun_grenade.png" />

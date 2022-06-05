@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<projectile class="grenade" name="UMP9_Q3Q" slot="0" radius="0.15" key="ump9_stun_grenade_spawner.projectile" pulldown_in_air="26.0">
+<projectile class="grenade" name="UMP9_Q3Q" slot="0" radius="0.15" key="ump9_stun_grenade_spawner.projectile" pulldown_in_air="60.0">
     <tag name="flashbang" />
 
     <result class="notify_script" key="ump9_skill" />
-    <trigger class="time" time_to_live="1.5" />
-    <rotation class="random" />
+    <trigger class="impact">
+        <collider class="character" enabled="1" faction_compare="not_equal"/>
+    </trigger>
+    <rotation class="motion" />
 
     <model mesh_filename="stun_grenade.xml" />
     <hud_icon filename="hud_stun_grenade.png" />
