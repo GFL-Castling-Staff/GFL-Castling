@@ -496,7 +496,7 @@
 		<ai filename="eod.ai" />
 		<resources clear_weapons="1" clear_calls="1" clear_carry_items="1">
 			<weapon key="kcco_flamethrower.weapon" enabled="1" />
-			<carry_item key="kcco_sg.carry_item" enabled="1" />
+			<carry_item key="kcco_flamethrower.carry_item" enabled="1" />
 		</resources>
 	</soldier>	<!-- 欧特鲁斯 -->
 	<soldier name="kcco_dog" spawn_score="0.4" copy_from="default_bot">
