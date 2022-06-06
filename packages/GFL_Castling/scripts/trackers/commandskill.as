@@ -302,7 +302,7 @@ class CommandSkill : Tracker {
                     case 26:{excuteFO12skill(cId,senderId,m_modifer);break;}
                     case 27:{excuteFlashbangskill(cId,senderId,m_modifer,c_weaponType);break;}
                     case 28:{excuteUMP9skill(cId,senderId,m_modifer);break;}
-                    // case 29:{excuteFlashbangskill(cId,senderId,m_modifer);break;}
+                    case 29:{excuteMab38skill(cId,senderId,m_modifer);break;}
 
                     default:
                         break;
@@ -1991,7 +1991,55 @@ class CommandSkill : Tracker {
                 }
             }
         }
-    }    
+    }
+    void excuteMab38skill(int characterId,int playerId,SkillModifer@ modifer){
+        bool ExistQueue = false;
+        int j=-1;
+        for (uint i=0;i<SkillArray.length();i++){
+            if (SkillArray[i].m_character_id==characterId && SkillArray[i].m_weapontype=="MAB38") {
+                ExistQueue=true;
+                j=i;
+            }
+        }
+        if (ExistQueue){
+            dictionary a;
+            a["%time"] = ""+SkillArray[j].m_time;
+            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            _log("skill cooldown" + SkillArray[j].m_time);
+            return;
+        }
+        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+        if (character !is null) {
+            const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+            if (player !is null){
+                if (player.hasAttribute("aim_target")) {
+                    string target = player.getStringAttribute("aim_target");
+                    Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
+                    int factionid = character.getIntAttribute("faction_id");
+                    array<string> Voice={
+                        "mab38mod3_skilll1.wav",
+                        "mab38mod3_skilll2.wav",
+                        "mab38mod3_skilll3.wav",
+                        "mab38mod3_skilll4.wav",
+                        "mab38mod3_skilll5.wav"                        
+                    };
+                    playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+                    playAnimationKey(m_metagame,characterId,"throwing, upside",true,true);
+                    playSoundAtLocation(m_metagame,"grenade_throw1.wav",factionid,c_pos,1.0);
+                    c_pos=c_pos.add(Vector3(0,1,0));
+                    if (checkFlatRange(c_pos,stringToVector3(target),10)){
+                        CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"skill_flashbang.projectile",characterId,factionid,60);
+                        CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"firenade_Vector.projectile",characterId,factionid,60);
+                    }
+                    else{
+                        CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"skill_flashbang.projectile",characterId,factionid,60.0,6.0);
+                        CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"firenade_Vector.projectile",characterId,factionid,26.0,6.0);
+                    }                    
+                    addCoolDown("MAB38",16,characterId,modifer);
+                }
+            }
+        }
+    }        
 }
 
 
