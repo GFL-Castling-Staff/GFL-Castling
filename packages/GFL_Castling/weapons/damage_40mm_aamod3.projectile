@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<projectile class="grenade" name="Anti Armor Grenade" slot="1" pulldown_in_air="45.0" key="damage_40mm_aamod3.projectile">
+    <tag name="grenade"/>
+    <result class="blast" damage="16" radius="6.5" decal="1" push="0.6" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+    <trigger class="time" time_to_live="0.0"/>
+    <rotation class="motion" />
+    <model/>
+    <commonness value="0.0" />
+</projectile>

@@ -213,7 +213,7 @@ class GFLskill : Tracker {
                         "<command class='create_instance'" +
                         " faction_id='"+ factionid +"'" +
                         " instance_class='grenade'" +
-                        " instance_key='std_aa_grenade.projectile'" +
+                        " instance_key='damage_40mm_aamod3.projectile'" +
                         " position='" + Pos_40mm.toString() + "'"+
 				        " character_id='" + characterId + "' />";
 					m_metagame.getComms().send(c);
@@ -246,12 +246,11 @@ class GFLskill : Tracker {
 					if (affectedCharacter.length()>0){
 						HK416_track.insertLast(HK416_tracker(characterId,factionid,Pos_40mm,affectedCharacter));
 					}
-
                     string c = 
                         "<command class='create_instance'" +
                         " faction_id='"+ factionid +"'" +
                         " instance_class='grenade'" +
-                        " instance_key='std_aa_grenade.projectile'" +
+                        " instance_key='damage_40mm_aamod3.projectile'" +
                         " position='" + Pos_40mm.toString() + "'"+
 				        " character_id='" + characterId + "' />";
 					m_metagame.getComms().send(c);
@@ -706,8 +705,8 @@ class XM8tracker{
 
 class HK416_tracker{
     int m_characterId;
-	float m_time=0.33;
-	int m_numtime=12;
+	float m_time=0.25;
+	int m_numtime=16;
 	int m_factionid;
 	array<const XmlElement@> m_affected;
 	Vector3 m_pos;
