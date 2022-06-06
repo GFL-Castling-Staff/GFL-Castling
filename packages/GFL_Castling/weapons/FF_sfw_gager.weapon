@@ -105,7 +105,7 @@
   
     <weak_hand_hold offset="0.4" />
     <projectile file="teal.projectile">
-        <result class="blast" radius="3.8" damage="6" decal="0" push="0.001" character_state="death" faction_compare="not_equal" make_vehicle_hit_sound="0" />
+        <result class="blast" radius="3.8" damage="4.1" decal="0" push="0.001" character_state="death" faction_compare="not_equal" make_vehicle_hit_sound="0" />
     </projectile>
 
     <modifier class="speed" value="1.01" />
