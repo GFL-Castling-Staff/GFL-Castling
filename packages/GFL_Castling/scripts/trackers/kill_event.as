@@ -69,6 +69,7 @@ class kill_event : Tracker {
         // 近战武器
         {"ff_excutioner_2.weapon",3},
         {"ff_parw_alina.weapon",2},
+        {"ff_gager_1.weapon",3},
 
         // 近战定位AR
         {"gkw_ak12_skill.weapon",3},
