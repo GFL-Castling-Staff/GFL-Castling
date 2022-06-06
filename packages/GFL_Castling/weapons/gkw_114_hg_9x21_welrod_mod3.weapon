@@ -38,10 +38,10 @@
     <animation state_key="stabbing" 			animation_key="pistol whip" />
     <animation state_key="stabbing" 			animation_key="pistol whip 3" />
     <!--Animations-->
-    <inventory buy_price="125.0" sell_price="125.0" />
+    <inventory buy_price="250.0" sell_price="250.0" />
     <commonness in_stock="1" />
-    <capacity value="0" source="rank" source_value="0.0" />
-    <capacity value="1" source="rank" source_value="4.622" />
+	<capacity value="0" source="rank" source_value="0.0" />
+    <capacity value="1" source="rank" source_value="6.048" />
     <!--Sounds-->
     <sound key="fire" fileref="welrod_fire_FromBF5.wav" pitch_variety="0.05" volume="1.2" />
     <sound key="magazine_out" fileref="welrod_mgz_out_FromBF5.wav" volume="0.5" />

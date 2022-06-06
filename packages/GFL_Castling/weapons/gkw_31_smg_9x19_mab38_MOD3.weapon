@@ -15,7 +15,8 @@
 		sustained_fire_grow_step="0.25" />
    
     <inventory  buy_price="120.0" sell_price="120.0" />
-
+    <capacity value="0" source="rank" source_value="0.0" />
+    <capacity value="1" source="rank" source_value="4.622" />
   	<animation state_key="hold_casual" />
 	
     <sound key="fire" fileref="mab38_fire_FromBF5.wav" pitch_variety="0.05" volume="2.1" />
