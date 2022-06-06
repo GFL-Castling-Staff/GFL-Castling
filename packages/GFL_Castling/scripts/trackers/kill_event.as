@@ -291,6 +291,6 @@ class HealOnKill_tracker{
 		m_factionid= factionid;
 		m_killstoheal= killstoheal;
         current_kills++;
-        m_numtime= timeaddafterkill/m_time;
+        m_numtime= timeaddafterkill/0.2;
 	}
 }
