@@ -25,7 +25,7 @@
     <animation state_key="recoil" stance_key="over_wall" animation_key="recoil, overwall pistol" />
     <animation state_key="cycle"	animation_key="cycle, revolver" />
     <animation state_key="cycle" stance_key="prone" animation_key="cycle, revolver, prone" />
-    <animation state_key="reload" animation_key="RevolverReload" />
+    <animation state_key="reload" animation_key="NagantFastReload" />
     <animation state_key="hold"					animation_key="hold, pistol" />
     <animation state_key="hold_casual"			animation_key="dancing, kazachok" />
     <animation state_key="hold_on_wall"			animation_key="hold, overwall pistol" />
@@ -56,7 +56,7 @@
     <weak_hand_hold offset="0.1" />
     <projectile file="bullet.projectile">
         <result class="hit" 
-        kill_probability="1.6"
+        kill_probability="1.7"
         kill_probability_offset_on_successful_hit="3.5" 
         kill_decay_start_time="0.06" 
         kill_decay_end_time="0.6" />
@@ -132,7 +132,7 @@
     <weak_hand_hold offset="0.1" />
     <projectile file="bullet.projectile">
         <result class="hit" 
-        kill_probability="1.6"
+        kill_probability="1.7"
         kill_probability_offset_on_successful_hit="5.5" 
         kill_decay_start_time="0.1" 
         kill_decay_end_time="0.7" />
@@ -145,7 +145,7 @@
     <stance state_key="standing" accuracy="1.0" />
     <stance state_key="crouching" accuracy="1.0" />
     <stance state_key="prone" accuracy="1.0" />
-    <modifier class="speed" value="0.3"/>
-    <modifier class="detectability" value="-0.2" />
+    <modifier class="speed" value="0.5"/>
+    <modifier class="detectability" value="-0.3" />
 </weapon>
 </weapons>
