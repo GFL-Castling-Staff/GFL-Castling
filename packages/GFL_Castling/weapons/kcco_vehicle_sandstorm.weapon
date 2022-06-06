@@ -7,11 +7,11 @@
 	accuracy_factor="0.5" 
 	sustained_fire_grow_step="0.25" 
 	sustained_fire_diminish_rate="2.0" 
-	sight_range_modifier="2.80"
-    ai_sight_range_modifier="1.0"
+	sight_range_modifier="3.0"
+    ai_sight_range_modifier="0.5"
     magazine_size="0" 
     suppressed="0" 
-    name="Amos MG" 
+    name="Sandstorm" 
     class="0" 
     projectile_speed="195" 
 	barrel_offset_3d="0 15 0"/>
@@ -49,8 +49,8 @@
     can_shoot_crouching="0"
     can_shoot_prone="0"
 	sight_height_offset="4.0"
-    sight_range_modifier="2.8"
-    ai_sight_range_modifier="1.0"	
+    sight_range_modifier="3.0"
+    ai_sight_range_modifier="1.5"	
     sustained_fire_diminish_rate="1.0"
     sustained_fire_grow_step="0.5" />
 

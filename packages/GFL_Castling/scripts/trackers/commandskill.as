@@ -194,6 +194,21 @@ dictionary commandSkillIndex = {
         {"gkw_fo12.weapon",26},
         {"gkw_fo12_skill.weapon",26},
 
+        // Flashbang
+        {"gkw_79type.weapon",27},
+        {"gkw_ump9.weapon",27},
+        {"gkw_ump9_409.weapon",27},
+        {"gkw_ump9_536.weapon",27},
+        {"gkw_mab38.weapon",27},
+        {"gkw_64type.weapon",27},
+        {"gkw_m16a1.weapon",27},
+        {"gkw_m16a1_533.weapon",27},
+        {"gkw_m9.weapon",27},
+
+        {"gkw_ump9mod3.weapon",28},
+
+        {"gkw_mab38mod3.weapon",29},
+
         // 下面这行是用来占位的，在这之上添加新的枪和index即可
         {"666",-1}
 };
@@ -285,6 +300,10 @@ class CommandSkill : Tracker {
                     case 24:{excutePPSH41skill(cId,senderId,m_modifer);break;}
                     case 25:{excutePPSH41skill(cId,senderId,m_modifer,true);break;}
                     case 26:{excuteFO12skill(cId,senderId,m_modifer);break;}
+                    case 27:{excuteFlashbangskill(cId,senderId,m_modifer,c_weaponType);break;}
+                    case 28:{excuteUMP9skill(cId,senderId,m_modifer);break;}
+                    // case 29:{excuteFlashbangskill(cId,senderId,m_modifer);break;}
+
                     default:
                         break;
                 }
@@ -1825,6 +1844,154 @@ class CommandSkill : Tracker {
             m_metagame.getComms().send(command);    
         // playSoundAtLocation(m_metagame,"AN94mod3_skill.wav",fID,c_pos,0.9);
     }
+    void excuteFlashbangskill(int characterId,int playerId,SkillModifer@ modifer,string weaponname){
+        bool ExistQueue = false;
+        int j=-1;
+        for (uint i=0;i<SkillArray.length();i++){
+            if (SkillArray[i].m_character_id==characterId && SkillArray[i].m_weapontype=="Flashbang") {
+                ExistQueue=true;
+                j=i;
+            }
+        }
+        if (ExistQueue){
+            dictionary a;
+            a["%time"] = ""+SkillArray[j].m_time;
+            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            _log("skill cooldown" + SkillArray[j].m_time);
+            return;
+        }
+        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+        if (character !is null) {
+            const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+            if (player !is null){
+                if (player.hasAttribute("aim_target")) {
+                    string target = player.getStringAttribute("aim_target");
+                    Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
+                    int factionid = character.getIntAttribute("faction_id");
+
+                    if(weaponname=="gkw_m9.weapon") {
+                        array<string> Voice={
+                            "M9_SKILL1_JP.wav",
+                            "M9_SKILL2_JP.wav",
+                            "M9_SKILL3_JP.wav"
+                        };
+                        playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+                        playSoundAtLocation(m_metagame,"grenade_throw1.wav",factionid,c_pos,1.0);
+                        addCoolDown("Flashbang",12,characterId,modifer);
+                    }
+                    if(weaponname=="gkw_m16a1.weapon" || weaponname=="gkw_m16a1_533.weapon") {
+                        array<string> Voice={
+                            "m16a1_skill1.wav",
+                            "m16a1_skill2.wav",
+                            "m16a1_skill3.wav",
+                            "m16a1_skill4.wav",
+                            "m16a1_skill5.wav"                            
+                        };
+                        playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+                        playSoundAtLocation(m_metagame,"grenade_throw1.wav",factionid,c_pos,1.0);
+                        addCoolDown("Flashbang",16,characterId,modifer);
+                    }
+                    if(weaponname=="gkw_ump9.weapon" || weaponname=="gkw_ump9_409.weapon" || weaponname=="gkw_ump9_536.weapon") {
+                        array<string> Voice={
+                            "UMP9_skill1.wav",
+                            "UMP9_skill2.wav",
+                            "UMP9_skill3.wav",
+                            "UMP9_skill4.wav",
+                            "UMP9_skill5.wav"                            
+                        };
+                        playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+                        addCoolDown("Flashbang",16,characterId,modifer);
+                    }
+                    if(weaponname=="gkw_mab38.weapon") {
+                        array<string> Voice={
+                            "mab38_skilll1.wav",
+                            "mab38_skilll2.wav",
+                            "mab38_skilll3.wav",
+                            "mab38_skilll4.wav",
+                            "mab38_skilll5.wav"                            
+                        };
+                        playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+                        playSoundAtLocation(m_metagame,"grenade_throw1.wav",factionid,c_pos,1.0);
+                        addCoolDown("Flashbang",16,characterId,modifer);
+                    }
+                    if(weaponname=="gkw_64type.weapon") {
+                        array<string> Voice={
+                            "64type_SKILL1_JP.wav",
+                            "64type_SKILL2_JP.wav",
+                            "64type_SKILL3_JP.wav"                          
+                        };
+                        playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+                        playSoundAtLocation(m_metagame,"grenade_throw1.wav",factionid,c_pos,1.0);
+                        addCoolDown("Flashbang",16,characterId,modifer);
+                    }
+                    if(weaponname=="gkw_79type.weapon") {
+                        array<string> Voice={
+                            "79type_skilll1.wav",
+                            "79type_skilll2.wav",
+                            "79type_skilll3.wav",
+                            "79type_skilll4.wav"
+                        };
+                        playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+                        playSoundAtLocation(m_metagame,"grenade_throw1.wav",factionid,c_pos,1.0);
+                        addCoolDown("Flashbang",16,characterId,modifer);
+                    }
+                    playAnimationKey(m_metagame,characterId,"throwing, upside",true,true);
+                    c_pos=c_pos.add(Vector3(0,1,0));
+                    if (checkFlatRange(c_pos,stringToVector3(target),10)){
+                        CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"skill_flashbang.projectile",characterId,factionid,60);
+                    }
+                    else{
+                        CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"skill_flashbang.projectile",characterId,factionid,60.0,6.0);
+                    }
+                }
+            }
+        }
+    }    
+    void excuteUMP9skill(int characterId,int playerId,SkillModifer@ modifer){
+        bool ExistQueue = false;
+        int j=-1;
+        for (uint i=0;i<SkillArray.length();i++){
+            if (SkillArray[i].m_character_id==characterId && SkillArray[i].m_weapontype=="UMP9") {
+                ExistQueue=true;
+                j=i;
+            }
+        }
+        if (ExistQueue){
+            dictionary a;
+            a["%time"] = ""+SkillArray[j].m_time;
+            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            _log("skill cooldown" + SkillArray[j].m_time);
+            return;
+        }
+        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+        if (character !is null) {
+            const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+            if (player !is null){
+                if (player.hasAttribute("aim_target")) {
+                    string target = player.getStringAttribute("aim_target");
+                    Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
+                    int factionid = character.getIntAttribute("faction_id");
+                    array<string> Voice={
+                        "UMP9_skill1.wav",
+                        "UMP9_skill2.wav",
+                        "UMP9_skill3.wav",
+                        "UMP9_skill4.wav",
+                        "UMP9_skill5.wav"                        
+                    };
+                    playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+                    playAnimationKey(m_metagame,characterId,"throwing, upside",true,true);
+                    c_pos=c_pos.add(Vector3(0,1,0));
+                    if (checkFlatRange(c_pos,stringToVector3(target),10)){
+                        CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"ump9_stun_grenade_spawner.projectile",characterId,factionid,60);
+                    }
+                    else{
+                        CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"ump9_stun_grenade_spawner.projectile",characterId,factionid,60.0,6.0);
+                    }                    
+                    addCoolDown("UMP9",16,characterId,modifer);
+                }
+            }
+        }
+    }    
 }
 
 

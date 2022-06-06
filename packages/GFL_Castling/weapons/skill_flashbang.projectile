@@ -1,20 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<projectile class="grenade" name="UMP9_Q3Q" slot="0" radius="0.15" key="ump9_stun_grenade_spawner.projectile" pulldown_in_air="60.0">
+<projectile class="grenade" name="Flashbang" pulldown_in_air="60.0" slot="0" radius="0.15" key="skill_flashbang.projectile">
     <tag name="flashbang" />
 
-    <result class="notify_script" key="ump9_skill" />
+    <result class="blast" radius="15.0" damage="0.0" decal="0" character_state="stun" faction_compare="not_equal" />
     <trigger class="impact">
         <collider class="character" enabled="1" faction_compare="not_equal"/>
     </trigger>
     <rotation class="motion" />
-
     <model mesh_filename="stun_grenade.xml" />
     <hud_icon filename="hud_stun_grenade.png" />
-
-    <!-- projectile slot 0 is used for hand grenade items currently -->
-    <!-- bound to change -->
-    <commonness value="0.01" />
-
+    <commonness value="0.00" />
+    
     <sound class="result" key="other" fileref="stun_grenade1.wav" />
 
     <sound class="result" key="terrain" copy="other" />
@@ -32,5 +28,4 @@
     <effect class="result" key="static_object" copy="terrain" />
     <effect class="result" key="vehicle" copy="terrain" />
     <effect class="result" key="character" copy="terrain" />
-
 </projectile>
