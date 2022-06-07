@@ -306,7 +306,7 @@
 		</attribute_config>
 	</soldier>
 	<soldier name="special_forces_404" spawn_score="0.01" squad_size_xp_cap="0.0" copy_from="default_spawn_ai">
-		<ai filename="eod.ai" />
+		<ai filename="elite.ai" />
 		<resources file="gk_404.resources" />
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="20" max="20.833" />
