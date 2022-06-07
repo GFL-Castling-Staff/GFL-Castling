@@ -3,7 +3,7 @@
 	<carry_item key="gk_jack_dog.carry_item" time_to_live_out_in_the_open="15" name="Jack dog" transform_on_consume="jack_dog_1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="kcco_doe.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
-		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<commonness value="0.001" in_stock="0" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
 		<model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
@@ -20,7 +20,7 @@
 	<carry_item key="jack_dog_1" time_to_live_out_in_the_open="15" name="Jack dog" transform_on_consume="jack_dog_2" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="kcco_doe.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
-		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<commonness value="0.001" in_stock="0" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
 		<model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
@@ -37,7 +37,7 @@
 	<carry_item key="jack_dog_2" time_to_live_out_in_the_open="15" name="Jack dog" transform_on_consume="jack_dog_3" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="kcco_doe.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
-		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<commonness value="0.001" in_stock="0" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
 		<model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
@@ -54,7 +54,7 @@
 	<carry_item key="jack_dog_3" time_to_live_out_in_the_open="15" name="Jack dog" transform_on_consume="jack_dog_4" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="kcco_doe.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
-		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<commonness value="0.001" in_stock="0" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
 		<model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
@@ -71,7 +71,7 @@
 	<carry_item key="jack_dog_4" time_to_live_out_in_the_open="15" name="Jack dog" transform_on_consume="jack_dog_5" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="kcco_doe.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
-		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<commonness value="0.001" in_stock="0" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
 		<model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
@@ -88,7 +88,7 @@
 	<carry_item key="jack_dog_5" time_to_live_out_in_the_open="15" name="Jack dog" transform_on_consume="jack_dog_6" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="kcco_doe.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
-		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<commonness value="0.001" in_stock="0" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
 		<model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
@@ -105,7 +105,7 @@
 	<carry_item key="jack_dog_6" time_to_live_out_in_the_open="15" name="Jack dog" transform_on_consume="jack_dog_7" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="kcco_doe.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
-		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<commonness value="0.001" in_stock="0" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
 		<model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
@@ -122,7 +122,7 @@
 	<carry_item key="jack_dog_7" time_to_live_out_in_the_open="15" name="Jack dog" transform_on_consume="jack_dog_8" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="kcco_doe.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
-		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<commonness value="0.001" in_stock="0" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
 		<model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
@@ -139,7 +139,7 @@
 	<carry_item key="jack_dog_8" time_to_live_out_in_the_open="15" name="Jack dog" transform_on_consume="jack_dog_9" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="kcco_doe.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
-		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<commonness value="0.001" in_stock="0" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
 		<model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
@@ -156,7 +156,7 @@
 	<carry_item key="jack_dog_9" time_to_live_out_in_the_open="15" name="Jack dog" transform_on_consume="jack_dog_10" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="kcco_doe.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
-		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<commonness value="0.001" in_stock="0" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
 		<model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
