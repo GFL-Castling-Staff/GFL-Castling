@@ -25,7 +25,7 @@ void main(dictionary@ inputData) {
         settings.m_initialRp = 1000.0;
 		
 		settings.m_xpFactor = 1;
-		settings.m_rpFactor = 1.0;
+		settings.m_rpFactor = 2.0;
 
         array<string> overlays = {
 			"media/packages/invasion",
