@@ -54,7 +54,7 @@
     <model filename="gkw_hg_m1895mod.xml" />
     <hud_icon filename="gkw_m1895_5309_mod3.png" />
     <weak_hand_hold offset="0.1" />
-    <projectile file="bullet.projectile">
+    <projectile file="bullet.projectile" can_be_detected_by_footmen="0">
         <result class="hit" 
         kill_probability="1.7"
         kill_probability_offset_on_successful_hit="3.5" 
@@ -130,7 +130,7 @@
     <model filename="gkw_hg_m1895mod.xml" />
     <hud_icon filename="gkw_m1895_5309_mod3.png" />
     <weak_hand_hold offset="0.1" />
-    <projectile file="bullet.projectile">
+    <projectile file="bullet.projectile" can_be_detected_by_footmen="0">
         <result class="hit" 
         kill_probability="1.7"
         kill_probability_offset_on_successful_hit="5.5" 

@@ -1847,7 +1847,7 @@ class CommandSkill : Tracker {
             _log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
-        addCoolDown("FO12",1,characterId,modifer);
+        addCoolDown("FO12",60,characterId,modifer);
         const XmlElement@ info = getCharacterInfo(m_metagame, characterId);
         int fID = info.getIntAttribute("faction_id");
         string c_pos = info.getStringAttribute("position");
