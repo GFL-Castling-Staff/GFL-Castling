@@ -1274,7 +1274,9 @@ class CommandSkill : Tracker {
                     }
                     if(weaponname=="gkw_g3.weapon") {
                         array<string> Voice={
-                            ""
+                            "G3_SKILL1_JP.wav",
+                            "G3_SKILL2_JP.wav",
+                            "G3_SKILL3_JP.wav"
                         };
                         playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
                         playSoundAtLocation(m_metagame,"416mod3skill_Fire_FromL4D2.wav",factionid,c_pos,1.0);                        
