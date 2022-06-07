@@ -45,6 +45,7 @@
     <effect class="muzzle" ref="UpDust" />
     <modifier class="speed" value="-0.1" />
 
+	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5" />
     <target_factors tag="smg" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0" />
 	<target_factors tag="autorifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0" />
     <target_factors tag="machine gun" distance="1.0" direction="0.0" squad_command="1.0" base_score="6.0" />

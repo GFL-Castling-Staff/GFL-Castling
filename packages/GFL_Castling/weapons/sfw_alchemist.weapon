@@ -87,6 +87,7 @@
     <stance state_key="prone" accuracy="1" />
     <modifier class="speed" value="0.6" /> 
 
+	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5" />
 	<target_factors tag="jeep" distance="1.0" direction="0.0" squad_command="1.0" base_score="10.0" />
     <target_factors tag="tank" distance="1.0" direction="0.0" squad_command="1.0" base_score="15.0" />
     <target_factors tag="apc" distance="1.0" direction="0.0" squad_command="1.0" base_score="12.0" />
