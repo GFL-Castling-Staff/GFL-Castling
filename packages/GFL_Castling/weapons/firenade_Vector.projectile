@@ -13,7 +13,7 @@
     <!-- bound to change -->
     <commonness value="0.0" in_stock="0" />
     <capacity value="4" source="rank" source_value="0.0" />
-    <sound class="result" key="other" fileref="flamethrower.wav" volume="3"  />
+    <sound class="result" key="other" fileref="molotov_boom_FromRS2V.wav" volume="1.0"/>
     <sound class="result" key="vehicle" copy="other" />
     <sound class="result" key="vehicle" tag="metal_heavy" fileref="blast_metal_hit_01.wav" pitch_variety="0.2" volume="0.6" />
     <sound class="result" key="vehicle" tag="metal_heavy" fileref="blast_metal_hit_02.wav" pitch_variety="0.2" volume="0.6" />
