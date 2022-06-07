@@ -1270,7 +1270,7 @@ class CommandSkill : Tracker {
                             "XM8_ATTACK_JP.wav" 
                         };
                         playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
-                        playSoundAtLocation(m_metagame,"416mod3skill_Fire_FromL4D2.wav",factionid,c_pos,1.0);                        
+                        playSoundAtLocation(m_metagame,"416mod3skill_Fire_FromL4D2.wav",factionid,c_pos,1.0);
                     }
                     if(weaponname=="gkw_g3.weapon") {
                         array<string> Voice={
@@ -1819,6 +1819,7 @@ class CommandSkill : Tracker {
                         "G3Mod_SKILL3_JP.wav",
                         "G3Mod_ATTACK_JP.wav"
                     };
+                    playSoundAtLocation(m_metagame,"416mod3skill_Fire_FromL4D2.wav",factionid,c_pos,1.0);
                     playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
                     playAnimationKey(m_metagame,characterId,"recoil1, big",true,false);
                     c_pos=c_pos.add(Vector3(0,1,0));
