@@ -105,7 +105,10 @@ dictionary commandSkillIndex = {
         {"gkw_vz61.weapon",2},
         {"gkw_klin.weapon",2},
         {"gkw_uzi.weapon",2},
+        {"gkw_uzimod3.weapon",2},
+        {"gkw_uzimod3_skill.weapon",2},
         {"gkw_mp40.weapon",2},
+        {"gkw_kp31mod3.weapon",2},
 
         // FF_JUSTICE
         {"ff_justice.weapon",3},
@@ -508,7 +511,7 @@ class CommandSkill : Tracker {
                         };
                         playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
                     }
-                    if(weaponname=="gkw_uzi.weapon") {
+                    if(weaponname=="gkw_uzi.weapon" || weaponname=="gkw_uzimod3.weapon" || weaponname=="gkw_uzimod3_skill.weapon") {
                         array<string> Voice={
                             "MicroUZI_SKILL1_JP.wav",
                             "MicroUZI_SKILL2_JP.wav",
@@ -525,6 +528,14 @@ class CommandSkill : Tracker {
                             "KLIN_SKILL3_JP.wav"
                         };
                         playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+                    }
+                    if(weaponname=="gkw_kp31mod3.weapon") {
+                        array<string> Voice={
+                            "KP31_SKILL1_JP.wav",
+                            "KP31_SKILL2_JP.wav",
+                            "KP31_SKILL3_JP.wav"
+                        };
+                        playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
                     }                    
                     playAnimationKey(m_metagame,characterId,"throwing, upside",true,true);
                     playSoundAtLocation(m_metagame,"grenade_throw1.wav",factionid,c_pos,1.0);
@@ -538,7 +549,12 @@ class CommandSkill : Tracker {
                 }
             }
         }
-        addCoolDown("FIRENADE",15,characterId,modifer);
+        if(weaponname=="gkw_kp31mod3.weapon"){
+            addCoolDown("FIRENADE",12,characterId,modifer);
+        }
+        else{
+            addCoolDown("FIRENADE",15,characterId,modifer);
+        }
     }
     void excuteSopmodskill(int characterId,int playerId,SkillModifer@ modifer,const XmlElement@ characterinfo, const XmlElement@ playerinfo){
         bool ExistQueue = false;

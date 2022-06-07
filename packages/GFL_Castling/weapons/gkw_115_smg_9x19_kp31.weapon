@@ -5,8 +5,8 @@
 		accuracy_factor="1" 
 		barrel_offset="0.4" 
 		class="0"
-		magazine_size="72" 
-		name="KP31" 
+		magazine_size="71" 
+		name="KP31 Suomi" 
 		projectile_speed="125" 
 		retrigger_time="0.07" 
 		suppressed="0" 
@@ -38,6 +38,6 @@
     <stance state_key="prone_moving" accuracy="0.9" />
     <stance state_key="standing" accuracy="0.96" />
     <stance state_key="prone" accuracy="1" />
-  	<modifier class="speed" value="+0.25s" />
+  	<modifier class="speed" value="+0.25" />
     <modifier class="hit_success_probability" value="-0.2" />
 </weapon>
