@@ -27,7 +27,7 @@ void playSoundAtLocation(const Metagame@ metagame, string filename, int factionI
 }
 
 void playRandomSoundArray(const Metagame@ metagame, array<string> arrays, int factionId, string position, float volume=1.0){
-	int soundrnd= rand(1,arrays.length)-1;
+	int soundrnd= rand(0,arrays.length-1);
 	playSoundAtLocation(metagame,arrays[soundrnd],factionId,position,volume);
 }
 

@@ -47,7 +47,7 @@ class jupiter: Tracker {
 		array<const XmlElement@> players = getPlayers(m_metagame);
 		currentplayers = players.length;
         if(players is null) return;
-		int luckyguyId = rand(1,players.length)-1;
+		int luckyguyId = rand(0,players.length-1);
 		const XmlElement@ playerinfo = getPlayerInfo(m_metagame, luckyguyId);
         if (playerinfo is null) return;
 		int characterId = playerinfo.getIntAttribute("character_id");
