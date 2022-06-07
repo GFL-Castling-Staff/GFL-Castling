@@ -244,7 +244,6 @@
 			<weapon key="medikit.weapon" enabled="0"/>
 		</resources>		
 		<resources file="gk_call.resources" clear_calls="1" />
-		<weapon key="gkw_idw.weapon" enabled="1" />
 		<item_class_existence_config>
 			<!-- secondaries -->
 			<item_class_existence class="weapon" slot="1" probability="1.0" />
@@ -306,11 +305,11 @@
 			<attribute weight="1.0" min="7000.0" max="15000.0" />
 		</attribute_config>
 	</soldier>
-	<soldier name="special_forces_404" spawn_score="0" squad_size_xp_cap="0.0" copy_from="default_spawn_ai">
+	<soldier name="special_forces_404" spawn_score="0.01" squad_size_xp_cap="0.0" copy_from="default_spawn_ai">
 		<ai filename="eod.ai" />
 		<resources file="gk_404.resources" />
 		<attribute_config class="xp">
-			<attribute weight="1.0" min="19.754" max="102.833" />
+			<attribute weight="1.0" min="20" max="20.833" />
 		</attribute_config>
 		<attribute_config class="rp">
 			<attribute weight="1.0" min="7000.0" max="15000.0" />
@@ -1354,7 +1353,7 @@
 			<sound key="throw" fileref="UMP45_SKILL2_JP.wav" pitch_variety="0.01" volume="0.8" />
 			<sound key="throw" fileref="UMP45_SKILL3_JP.wav" pitch_variety="0.01" volume="0.8" />
 		</character>
-		<resources file="gk_404.resources">
+		<resources clear_weapons="1" clear_vehicles="1" clear_calls="1" clear_grenades="1">
 			<weapon key="gkw_ump45mod3.weapon" />
 			<carry_item key="exo_t5_ai_16lab.carry_item" />
 		</resources>
@@ -1369,7 +1368,7 @@
 			<sound key="throw" fileref="HK416_MEET_JP.wav" pitch_variety="0.01" volume="0.8" />
 			<sound key="throw" fileref="HK416_SKILL2_JP.wav" pitch_variety="0.01" volume="0.8" />
 		</character>
-		<resources file="gk_404.resources">
+		<resources clear_weapons="1" clear_vehicles="1" clear_calls="1" clear_grenades="1">
 			<weapon key="gkw_hk416mod3.weapon" />
 			<carry_item key="exo_t5_ai_16lab.carry_item" />
 		</resources>
@@ -1384,7 +1383,7 @@
 			<sound key="throw" fileref="G11_SKILL1_JP.wav" pitch_variety="0.01" volume="0.8" />
 			<sound key="throw" fileref="G11_SKILL3_JP.wav" pitch_variety="0.01" volume="0.8" />
 		</character>
-		<resources file="gk_404.resources">
+		<resources clear_weapons="1" clear_vehicles="1" clear_calls="1" clear_grenades="1">
 			<weapon key="gkw_g11mod3.weapon" />
 			<carry_item key="exo_t5_ai_16lab.carry_item" />
 		</resources>
