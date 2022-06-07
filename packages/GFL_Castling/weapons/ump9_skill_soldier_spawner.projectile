@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projectile class="grenade" name="UMP9" key="ump9_skill_soldier_spawner.projectile" slot="0" radius="0.15" time_to_live_out_in_the_open="0.0" drop_count_factor_on_death="0.0">
 
-    <result class="spawn" instance_class="soldier" instance_key="defult_smg" min_amount="3" max_amount="3" offset="0 0 0" position_spread="0.5 0.5" direction_spread="0.5 0"/>
+    <result class="spawn" instance_class="soldier" instance_key="special_forces_404" min_amount="3" max_amount="3" offset="0 0 0" position_spread="0.5 0.5" direction_spread="0.5 0"/>
     <trigger class="time" time_to_live="0.1"/>
 
     <rotation class="random" />
