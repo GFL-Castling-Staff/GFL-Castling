@@ -101,7 +101,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 			ScoredResource("gflc_crate7.vehicle", "vehicle", 2.0f),           // 火神
 			ScoredResource("gflc_crate8.vehicle", "vehicle", 15.0f),           // fnc的零食盒子
 			ScoredResource("gflc_crate9.vehicle", "vehicle", 5.0f),           // 我自杀算了
-			ScoredResource("gflc_crate10.vehicle", "vehicle", 50.0f)           // 标枪
+			ScoredResource("gflc_crate10.vehicle", "vehicle", 100.0f)           // 标枪
 
 		};
 		int count = rand(minCount, maxCount);
@@ -120,7 +120,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 			ScoredResource("gflc_crate7.vehicle", "vehicle", 2.0f),           // 火神
 			ScoredResource("gflc_crate8.vehicle", "vehicle", 15.0f),           // fnc的零食盒子
 			ScoredResource("gflc_crate9.vehicle", "vehicle", 5.0f),           // 我自杀算了
-			ScoredResource("gflc_crate10.vehicle", "vehicle", 50.0f)           // 标枪
+			ScoredResource("gflc_crate10.vehicle", "vehicle", 100.0f)           // 标枪
 
 		};
 		stage.addTracker(SpawnAtNode(m_metagame, resources, "fixed_crate", 0, 1000));
