@@ -89,42 +89,82 @@ material laser_tiaotiao {
 
 material laser_tifeng
 {
-receive_shadows off
-technique
-{
-  pass
+  receive_shadows off
+  technique
   {
-// drawn when hidden behind something
-	depth_write off
-	depth_check on
-depth_func greater
+    pass
+    {
+    // drawn when hidden behind something
+      depth_write off
+      depth_check on
+      depth_func greater
 
-	lighting on
-	ambient 0.5 0.5 0.5 0.5
-	diffuse 0.5 0.5 0.5 0.5
-	scene_blend alpha_blend
+      lighting on
+      ambient 0.5 0.5 0.5 0.5
+      diffuse 0.5 0.5 0.5 0.5
+      scene_blend alpha_blend
 
-// fog_override true
-//alpha_rejection greater 128
-	
-	texture_unit {
-	  texture laser_tifeng.png
-	}
-  } 
+    // fog_override true
+    //alpha_rejection greater 128
+    
+      texture_unit {
+        texture laser_tifeng.png
+      }
+    } 
 
-  pass
-  {
-	lighting off
-	ambient vertexcolour
-	diffuse vertexcolour
-	depth_write off
-	scene_blend alpha_blend
+    pass
+    {
+      lighting off
+      ambient vertexcolour
+      diffuse vertexcolour
+      depth_write off
+      scene_blend alpha_blend
 
-texture_unit {
-	  texture laser_tifeng.png
-	}
-  } 
+    texture_unit {
+        texture laser_tifeng.png
+      }
+    } 
+  }
 }
+
+material laser_tifeng_min
+{
+  receive_shadows off
+  technique
+  {
+    pass
+    {
+    // drawn when hidden behind something
+      depth_write off
+      depth_check on
+      depth_func greater
+
+      lighting on
+      ambient 0.5 0.5 0.5 0.5
+      diffuse 0.5 0.5 0.5 0.5
+      scene_blend alpha_blend
+
+    // fog_override true
+    //alpha_rejection greater 128
+    
+      texture_unit {
+        texture laser_tifeng_min.png
+      }
+    } 
+
+    pass
+    {
+      lighting off
+      ambient vertexcolour
+      diffuse vertexcolour
+      depth_write off
+      scene_blend alpha_blend
+
+    texture_unit {
+        texture laser_tifeng_min.png
+      }
+    } 
+  }
 }
 
 material laser_thor {
