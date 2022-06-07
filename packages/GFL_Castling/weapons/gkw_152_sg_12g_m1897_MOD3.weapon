@@ -120,9 +120,9 @@
 	
     
     <weak_hand_hold offset="0.3" />
-    <projectile file="bullet.projectile" time_to_live="0.15">
+    <projectile file="bullet.projectile" time_to_live="1.2">
         <result class="hit" 
-        kill_probability="1.1" 
+        kill_probability="1.0" 
         kill_decay_start_time="1.0" 
         kill_decay_end_time="1.2" />
     </projectile>
