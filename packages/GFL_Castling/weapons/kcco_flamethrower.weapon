@@ -22,7 +22,7 @@
     last_burst_retrigger_time="2.0" 
 	/>
 
-    <drop_on_death_result class="spawn" instance_class="projectile" instance_key="firenade_kcco_flamethrower.projectile" min_amount="1.0" max_amount="1.0" offset="0 1.0 0" position_spread="0 0" direction_spread="0 0" />
+    <!-- <drop_on_death_result class="spawn" instance_class="projectile" instance_key="firenade_kcco_flamethrower.projectile" min_amount="1.0" max_amount="1.0" offset="0 1.0 0" position_spread="0 0" direction_spread="0 0" /> -->
 	<commonness value="1.5" in_stock="1" />
 	<addon_model filename="backpack_fuel.xml" />
 	
