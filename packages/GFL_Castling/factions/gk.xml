@@ -315,16 +315,6 @@
 			<attribute weight="1.0" min="7000.0" max="15000.0" />
 		</attribute_config>
 	</soldier>
-	<soldier name="special_forces_defy" spawn_score="0.01" squad_size_xp_cap="0.0" copy_from="default_spawn_ai">
-		<ai filename="elite.ai" />
-		<resources file="gk_defy.resources" />
-		<attribute_config class="xp">
-			<attribute weight="1.0" min="20" max="20.833" />
-		</attribute_config>
-		<attribute_config class="rp">
-			<attribute weight="1.0" min="7000.0" max="15000.0" />
-		</attribute_config>
-	</soldier>
 	
 	<!-- 商店 -->
 	<soldier name="player_hvy" spawn_score="0" squad_size_xp_cap="0.0" copy_from="default_spawn_ai">
@@ -1067,6 +1057,21 @@
 			<attribute weight="1.0" min="0.100" max="102.833" />
 		</attribute_config>
 	</soldier>
+	<soldier name="206_ak12_ar_defyAI" spawn_score="0.0" copy_from="206_ak12_ar">
+		<resources clear_weapons="1" clear_carry_items="1">
+			<weapon key="gkw_ak12_defyAI.weapon" enabled="1" />
+			<carry_item key="exo_AK12_defy.carry_item" enabled="1" />
+			<call key="gk_bombardment_fairy.call" />
+			<call key="gk_airstrike_fairy.call" />
+			<call key="gk_rocket_fairy.call" />
+		</resources>
+		<attribute_config class="xp">
+			<attribute weight="1.0" min="0.100" max="0.101" />
+		</attribute_config>
+		<attribute_config class="rp">
+			<attribute weight="1.0" min="1000" max="10100" />
+		</attribute_config>
+	</soldier>
 	<soldier name="229_m870_sg" spawn_score="0.05" copy_from="default_sg">
 		<character filename="default_gk_pmc.text_lines">
 			<sound key="death" fileref="M870P_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
@@ -1384,23 +1389,6 @@
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="100.100" max="102.833" />
-		</attribute_config>
-	</soldier>
-	<soldier name="206_ak12_ar_defyAI" spawn_score="0.05" copy_from="special_forces_defy">
-	    <character filename="gk_ak12.text_lines">
-			<sound key="death" fileref="AK12_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
-			<sound key="throw" fileref="AK12_MEET_JP.wav" pitch_variety="0.01" volume="0.8" />
-			<sound key="throw" fileref="AK12_SKILL3_JP.wav" pitch_variety="0.01" volume="0.8" />
-		</character>
-		<resources clear_weapons="1" clear_carry_items="1" clear_vehicles="1" clear_calls="1" clear_grenades="1">
-			<weapon key="gkw_ak12_defyAI.weapon"/>
-			<carry_item key="exo_t5_ai_16lab.carry_item"/>
-			<call key="gk_bombardment_fairy.call" />
-			<call key="gk_airstrike_fairy.call" />
-			<call key="gk_rocket_fairy.call" />
-		</resources>
-		<attribute_config class="xp">
-			<attribute weight="1.0" min="0.100" max="0.101" />
 		</attribute_config>
 	</soldier>
 	<!-- icecream group -->
