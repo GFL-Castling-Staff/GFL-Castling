@@ -6,11 +6,4 @@
     <rotation class="random" />
     <model mesh_filename="" />
     <hud_icon filename="" />
-    <sound class="result" key="other" fileref="burn.wav" volume ="0.5"/>
-    <sound class="result" key="terrain" copy="other" />
-    <sound class="result" key="static_object" copy="other" />
-    <sound class="result" key="vehicle" copy="other" />
-    <sound class="result" key="character" copy="other" />
-
-   
 </projectile>

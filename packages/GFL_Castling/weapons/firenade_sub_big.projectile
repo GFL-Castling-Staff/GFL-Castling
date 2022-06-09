@@ -18,16 +18,6 @@
     <hud_icon filename="" />
     <throwable curve_height="6.0" near_far_distance="7.0" speed_estimation_near="9.0" speed_estimation_far="17.0" max_speed="13.0" randomness="0.07" />
 
-    
-
-    
-
-    <sound class="result" key="other" fileref="burn.wav" volume ="0.5"/>
-    <sound class="result" key="terrain" copy="other" />
-    <sound class="result" key="static_object" copy="other" />
-    <sound class="result" key="vehicle" copy="other" />
-    <sound class="result" key="character" copy="other" />
-
 
 
 </projectile>
