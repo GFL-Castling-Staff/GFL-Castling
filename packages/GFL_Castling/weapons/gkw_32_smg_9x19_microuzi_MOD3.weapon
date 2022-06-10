@@ -15,7 +15,7 @@
 		sustained_fire_grow_step="0.5" 	/>
         <inventory buy_price="170.0" sell_price="170.0" />
         <next_in_chain key="gkw_uzimod3_skill.weapon" share_ammo="0" />
-        <sound key="fire" fileref="uzi_Fire_FromSAM2.wav" pitch_variety="0.05" volume="0.5" />
+        <sound key="fire" fileref="uzimod3_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.1" />
         <sound key="magazine_out" fileref="uzi_mgz_out_FromCOD16.wav" volume="1" />
         <sound key="magazine_in" fileref="uzi_mgz_in_FromCOD16.wav" volume="1" />
         <sound key="cycle" fileref="uzi_cycle_FromCOD16.wav" volume="1" />
