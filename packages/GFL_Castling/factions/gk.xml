@@ -307,7 +307,7 @@
 	</soldier>
 	<soldier name="special_forces_404" spawn_score="0.01" squad_size_xp_cap="0.0" copy_from="default_spawn_ai">
 		<ai filename="elite.ai" />
-		<resources file="gk.resources" clear_weapons="1" clear_carry_items="1"/>
+		<resources file="gk.resources" clear_weapons="1" clear_carry_items="1">
 		    <weapon key="gkw_404_g11mod3.weapon" />
 			<weapon key="gkw_404_hk416mod3.weapon" />
 			<weapon key="gkw_404_ump45mod3.weapon" />
@@ -322,7 +322,7 @@
 	</soldier>
 	<soldier name="task_forces_defy" spawn_score="0.01" squad_size_xp_cap="0.0" copy_from="default_spawn_ai">
 		<ai filename="elite.ai" />
-		<resources file="gk.resources" clear_weapons="1" clear_carry_items="1"/>
+		<resources file="gk.resources" clear_weapons="1" clear_carry_items="1">
 		    <weapon key="gkw_ak12_defyAI.weapon" />
 			<weapon key="gkw_ak15_defyAI.weapon" />
 			<weapon key="gkw_rpk16_defyAI.weapon" />
