@@ -307,7 +307,12 @@
 	</soldier>
 	<soldier name="special_forces_404" spawn_score="0.01" squad_size_xp_cap="0.0" copy_from="default_spawn_ai">
 		<ai filename="elite.ai" />
-		<resources file="gk_404.resources" />
+		<resources file="gk.resources" clear_weapons="1" clear_carry_items="1"/>
+		    <weapon key="gkw_404_g11mod3.weapon" />
+			<weapon key="gkw_404_hk416mod3.weapon" />
+			<weapon key="gkw_404_ump45mod3.weapon" />
+			<carry_item key="exo_t5_ai_16lab.carry_item" />
+		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="20" max="20.833" />
 		</attribute_config>
@@ -315,7 +320,21 @@
 			<attribute weight="1.0" min="7000.0" max="15000.0" />
 		</attribute_config>
 	</soldier>
-	
+	<soldier name="task_forces_defy" spawn_score="0.01" squad_size_xp_cap="0.0" copy_from="default_spawn_ai">
+		<ai filename="elite.ai" />
+		<resources file="gk.resources" clear_weapons="1" clear_carry_items="1"/>
+		    <weapon key="gkw_ak12_defyAI.weapon" />
+			<weapon key="gkw_ak15_defyAI.weapon" />
+			<weapon key="gkw_rpk16_defyAI.weapon" />
+			<carry_item key="exo_t5_ai_16lab.carry_item" />
+		</resources>
+		<attribute_config class="xp">
+			<attribute weight="1.0" min="20" max="20.833" />
+		</attribute_config>
+		<attribute_config class="rp">
+			<attribute weight="1.0" min="7000.0" max="15000.0" />
+		</attribute_config>
+	</soldier>
 	<!-- 商店 -->
 	<soldier name="player_hvy" spawn_score="0" squad_size_xp_cap="0.0" copy_from="default_spawn_ai">
 		<resources file="gk_hvy.resources" />
@@ -1354,7 +1373,7 @@
 			<sound key="throw" fileref="UMP45_SKILL3_JP.wav" pitch_variety="0.01" volume="0.8" />
 		</character>
 		<resources clear_weapons="1" clear_vehicles="1" clear_calls="1" clear_grenades="1">
-			<weapon key="gkw_ump45mod3.weapon" />
+			<weapon key="gkw_404_ump45mod3.weapon" />
 			<carry_item key="exo_t5_ai_16lab.carry_item" />
 		</resources>
 		<attribute_config class="xp">
@@ -1369,7 +1388,7 @@
 			<sound key="throw" fileref="HK416_SKILL2_JP.wav" pitch_variety="0.01" volume="0.8" />
 		</character>
 		<resources clear_weapons="1" clear_vehicles="1" clear_calls="1" clear_grenades="1">
-			<weapon key="gkw_hk416mod3.weapon" />
+			<weapon key="gkw_404_hk416mod3.weapon" />
 			<carry_item key="exo_t5_ai_16lab.carry_item" />
 		</resources>
 		<attribute_config class="xp">

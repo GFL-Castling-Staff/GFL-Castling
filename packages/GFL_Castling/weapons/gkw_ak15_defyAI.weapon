@@ -9,7 +9,7 @@
 	class="0"
     slot="0" 
 	magazine_size="30" 
-	name="AK-15(DEFY)" 
+	name="AK-15(TF:DEFY)" 
 	projectile_speed="200" 
 	retrigger_time="0.066" 
     suppressed="0" 
@@ -54,7 +54,7 @@
 
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet.projectile">
-        <result class="hit"  kill_probability="1.65" kill_probability_offset_on_successful_hit="3" kill_decay_start_time="0.1" kill_decay_end_time="0.375" />
+        <result class="hit"  kill_probability="1.65" kill_probability_offset_on_successful_hit="3" kill_decay_start_time="0.1" kill_decay_end_time="0.475" />
     </projectile>
     
     <stance state_key="running" accuracy="0.75" />
@@ -66,10 +66,4 @@
     <stance state_key="prone" accuracy="1.45" />
     <modifier class="hit_success_probability" value="-0.25" />
     <modifier class="speed" value="0.5" />
-    <target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0" />
-	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0" />
-    <target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0" />
-    <target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0" />
-    <target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0" />
-	<target_factors tag="commander" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0" />
 </weapon>

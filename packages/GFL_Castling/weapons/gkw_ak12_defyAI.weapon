@@ -7,26 +7,51 @@
 		class="0"
         slot="0" 
 		magazine_size="30" 
-		name="AK-12(DEFY)" 
+		name="AK-12(TF:DEFY)" 
 		projectile_speed="204.13" 
         retrigger_time="0.06" 
-		suppressed="1" 
+		suppressed="0" 
         sight_range_modifier="1.0"
         ai_sight_range_modifier="2.0"  
 		sustained_fire_diminish_rate="1.8" 
 		sustained_fire_grow_step="0.3"/>
 
   	<animation state_key="hold_casual"			animation_key="dancing, kazachok" />
-    <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
+    <animation key="reload" animation_key="reloading, Machine gun 0.6" />
     <inventory  buy_price="8.0" sell_price="8.0" />
-    <commonness value="0.01" in_stock="1"/>
+    <commonness value="0.01" in_stock="0"/>
 
 
 
-    <sound key="fire" fileref="ak12_fire_FromWF.wav" pitch_variety="0.02" volume="0.9" />
-    <sound key="magazine_out" fileref="ak12_mgz_out_FromKF2.wav" volume="0.8" />
-    <sound key="magazine_in" fileref="ak12_mgz_in_FromKF2.wav" volume="0.8" />
-    <sound key="cycle" fileref="ak12_cycle_FromKF2.wav" volume="0.8" />
+    <sound key="fire" fileref="ak12_fire_FromWF.wav" pitch_variety="0.02" volume="1.2" />
+    <sound key="magazine_out" fileref="ak12_mgz_out_FromKF2.wav" volume="0.7" />
+    <sound key="magazine_in" fileref="ak12_mgz_in_FromKF2.wav" volume="0.7" />
+    <sound key="cycle" fileref="ak12_cycle_FromKF2.wav" volume="0.7" />
+    <sound key="cycle" fileref="AK12_LOADING_JP.wav" volume="0.9" pitch_variety="0"/>
+    <sound key="cycle" fileref="ak12_cycle_FromKF2.wav" volume="0.7" />
+    <sound key="cycle" fileref="AK12_TIP_JP.wav" volume="0.9" pitch_variety="0"/>
+    <sound key="cycle" fileref="ak12_cycle_FromKF2.wav" volume="0.7" />
+    <sound key="cycle" fileref="AK12_FEED_JP.wav" volume="0.9" pitch_variety="0"/>
+    <sound key="cycle" fileref="ak12_cycle_FromKF2.wav" volume="0.7" />
+    <sound key="cycle" fileref="AK12_FIX_JP.wav" volume="0.9" pitch_variety="0"/>
+    <sound key="cycle" fileref="ak12_cycle_FromKF2.wav" volume="0.7" />
+    <sound key="cycle" fileref="AK12_OPERATIONBEGIN_JP.wav" volume="0.9" pitch_variety="0"/>
+    <sound key="cycle" fileref="ak12_cycle_FromKF2.wav" volume="0.7" />
+    <sound key="cycle" fileref="AK12_BLACKACTION_JP.wav" volume="0.9" pitch_variety="0"/>
+    <sound key="cycle" fileref="ak12_cycle_FromKF2.wav" volume="0.7" />
+    <sound key="cycle" fileref="AK12_GOATTACK_JP.wav" volume="0.9" pitch_variety="0"/>
+    <sound key="cycle" fileref="ak12_cycle_FromKF2.wav" volume="0.7" />
+    <sound key="cycle" fileref="AK12_MEET_JP.wav" volume="0.9" pitch_variety="0"/>
+    <sound key="cycle" fileref="ak12_cycle_FromKF2.wav" volume="0.7" />
+    <sound key="cycle" fileref="AK12_WIN_JP.wav" volume="0.9" pitch_variety="0"/>
+    <sound key="cycle" fileref="ak12_cycle_FromKF2.wav" volume="0.7" />
+    <sound key="cycle" fileref="AK12_GOATTACK_JP.wav" volume="0.9" pitch_variety="0"/>
+    <sound key="cycle" fileref="ak12_cycle_FromKF2.wav" volume="0.7" />
+    <sound key="cycle" fileref="AK12_SKILL1_JP.wav" volume="0.9" pitch_variety="0"/>
+    <sound key="cycle" fileref="ak12_cycle_FromKF2.wav" volume="0.7" />
+    <sound key="cycle" fileref="AK12_SKILL2_JP.wav" volume="0.9" pitch_variety="0"/>
+    <sound key="cycle" fileref="ak12_cycle_FromKF2.wav" volume="0.7" />
+    <sound key="cycle" fileref="AK12_SKILL3_JP.wav" volume="0.9" pitch_variety="0"/>
     <sound class="impact" fileref="rifle_drop.wav" />    
     <model filename="gkw_ar_ak12.xml" />
 
@@ -36,9 +61,9 @@
 
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet.projectile">
-        <result class="hit"  kill_probability="2.2" kill_probability_offset_on_successful_hit="0.8" kill_decay_start_time="0.8" kill_decay_end_time="1.333" />
+        <result class="hit"  kill_probability="2.2" kill_probability_offset_on_successful_hit="1.2" kill_decay_start_time="0.8" kill_decay_end_time="1.333" />
     </projectile>
-    
+    <effect class="muzzle" ref="muzzle_ak12"/>
     <stance state_key="running" accuracy="1" />
     <stance state_key="walking" accuracy="1" />
     <stance state_key="crouch_moving" accuracy="1" />
