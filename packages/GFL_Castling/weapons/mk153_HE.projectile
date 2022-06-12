@@ -2,7 +2,7 @@
 <projectile class="grenade" name="HE" slot="2" pulldown_in_air="0.5" key="mk153_HE.projectile" >
     <tag name="rocket"/>
 	
-    <result class="blast"  damage="6"  radius="9.5" decal="1" push="0.2" character_state="death"  faction_compare="not_equal" damage_origin_vehicle="0"/>
+    <result class="blast"  damage="8"  radius="9.5" decal="1" push="0.2" character_state="death"  faction_compare="not_equal" damage_origin_vehicle="0"/>
     <trigger class="impact" />
     <rotation class="motion" />
     <model mesh_filename="mk153HEAT.xml" />
