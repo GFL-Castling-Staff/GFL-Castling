@@ -437,7 +437,7 @@ class BasicCommandHandler : Tracker {
 			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
 			if (playerInfo is null) return;
 			int characterId= playerInfo.getIntAttribute("character_id");			
-			playAnimationKey(m_metagame,characterId,"stabbing_roarer",true,true);
+			getMyItem(m_metagame,characterId);
 		}
 		else if (checkCommand(message, "testa2")) {
 			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
@@ -519,7 +519,7 @@ class BasicCommandHandler : Tracker {
 				string command =
 					"<command class='xp_reward'" +
 					"	character_id='" + id + "'" +
-					"	reward='4.0'>" + // multiplier affected..
+					"	reward='10.0'>" + // multiplier affected..
 					"</command>";
 				m_metagame.getComms().send(command);
 			} else {
