@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<weapon file="designated_marksman_rifle.animation_base" key="gkw_m200.weapon">
+<weapon file="designated_marksman_rifle.animation_base" key="gkw_m200_560.weapon">
 
 
     <!--Weapon specifications-->
@@ -12,7 +12,7 @@
 	magazine_size="7" 
 	can_shoot_standing="1" 
 	suppressed="0" 
-	name="Cheytac M200" 
+	name="Cheytac M200-[Solemn March]" 
 	class="2" 
 	reload_one_at_a_time="0" 
 	sight_range_modifier="3" 
@@ -41,9 +41,9 @@
 	<!--Model, Icon, Cost-->
    
     <model filename="gkw_rf_m200.xml" />
-    <hud_icon filename="gkw_m200.png" />
+    <hud_icon filename="gkw_m200_560.png" />
+    <commonness value="0" in_stock="0" />
 
-    <!-- <inventory  price="4.0" /> -->
 	
 	<!--Ballistics-->
 	
