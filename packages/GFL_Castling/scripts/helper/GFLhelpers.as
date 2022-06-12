@@ -80,6 +80,10 @@ string getDeadPlayerEquipmentKey(const Metagame@ metagame, int characterId, uint
 	return ItemKey;
 }
 
+void getMyItem(const Metagame@ metagame, int characterId){
+	const XmlElement@ targetCharacter = getCharacterInfo2(metagame,characterId);
+}
+
 int getPlayerEquipmentAmount(const Metagame@ metagame, int characterId, uint slot){
 	if (slot <0) return -1;
 	if (slot >5) return -1;
