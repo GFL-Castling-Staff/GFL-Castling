@@ -482,20 +482,13 @@ class CommandSkill : Tracker {
             _log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
-        addCoolDown("AK12SE",35,characterId,modifer);
+        addCoolDown("AK12SE",90,characterId,modifer);
         const XmlElement@ info = getCharacterInfo(m_metagame, characterId);
         int fID = info.getIntAttribute("faction_id");
         string c_pos = info.getStringAttribute("position");
-        string soldierClass = info.getStringAttribute("soldier_group_name");
-            spawnSoldier(m_metagame,1,fID,c_pos,"defy_aegis_shield");
-            spawnSoldier(m_metagame,1,fID,c_pos,"defy_aegis_shield");
-            spawnSoldier(m_metagame,1,fID,c_pos,"defy_aegis_shield");
-            spawnSoldier(m_metagame,1,fID,c_pos,"defy_aegis_shield");
-            spawnSoldier(m_metagame,1,fID,c_pos,"defy_cyclops_sg");
-            spawnSoldier(m_metagame,1,fID,c_pos,"defy_cyclops_sg");
-            spawnSoldier(m_metagame,1,fID,c_pos,"defy_cyclops_sghe");
-            spawnSoldier(m_metagame,1,fID,c_pos,"defy_cyclops_sghe");
-        sendPrivateMessage(m_metagame,playerId,"Defy AK-12 summoned");
+        spawnSoldier(m_metagame,4,fID,c_pos,"defy_aegis_shield");
+        spawnSoldier(m_metagame,2,fID,c_pos,"defy_cyclops_sg");
+        spawnSoldier(m_metagame,2,fID,c_pos,"defy_cyclops_sghe");
         playSoundAtLocation(m_metagame,"AK12_ATTACK_JP.wav",fID,c_pos,0.9);
 
         // _log("summonAK12");
