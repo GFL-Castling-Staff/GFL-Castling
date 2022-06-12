@@ -1415,6 +1415,7 @@
 	</soldier>
 	<!-- 忤逆精英小队 -->
 	<soldier name="defy_ak12_ar" spawn_score="0.05" copy_from="task_forces_defy">
+	    <ai filename="defy_ak12.ai" />
 		<character filename="gk_ak12.text_lines">
 			<sound key="death" fileref="AK12_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
 			<sound key="throw" fileref="AK12_MEET_JP.wav" pitch_variety="0.01" volume="0.8" />
@@ -1431,6 +1432,7 @@
 		</attribute_config>
 	</soldier>
 	<soldier name="defy_ak15_ar" spawn_score="0.05" copy_from="task_forces_defy">
+	    <ai filename="defy_ak15.ai" />
 		<character filename="default_gk_pmc.text_lines">
 			<sound key="death" fileref="AK15_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
 			<sound key="throw" fileref="AK15_MEET_JP.wav" pitch_variety="0.01" volume="0.8" />
@@ -1447,6 +1449,7 @@
 		</attribute_config>
 	</soldier>
 	<soldier name="defy_rpk16_mg" spawn_score="0.05" copy_from="task_forces_defy">
+	    <ai filename="defy_rpk16.ai" />
 		<character filename="default_gk_pmc.text_lines">
 			<sound key="death" fileref="RPK16_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
 			<sound key="throw" fileref="RPK16_MEET_JP.wav" pitch_variety="0.01" volume="0.8" />
@@ -1473,16 +1476,24 @@
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="50.100" max="52.833" />
 		</attribute_config>
+		<attribute_config class="rp">
+			<attribute weight="1.0" min="7000.0" max="15000.0" />
+		</attribute_config>
 	</soldier>
 	<soldier name="defy_cyclops_sg" spawn_score="0.05" copy_from="default_spawn_ai">
 		<model filename="kccod_cyclops_sg_remake.xml" />
 		<ai filename="eod.ai" />
 		<resources clear_calls="1" clear_grenades="1" clear_carry_items="1" clear_weapons="1" clear_vehicles="1">
 			<weapon key="gkw_sg.weapon"/>
+			<weapon key="gkw_defy_rocker.weapon" />
+			<projectile key="hand_88grenade.projectile" />
 			<carry_item key="exo_defy.carry_item"/>
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="50.100" max="52.833" />
+		</attribute_config>
+		<attribute_config class="rp">
+			<attribute weight="1.0" min="7000.0" max="15000.0" />
 		</attribute_config>
 	</soldier>
 	<soldier name="defy_cyclops_sghe" spawn_score="0.05" copy_from="default_spawn_ai">
@@ -1490,10 +1501,15 @@
 		<ai filename="eod.ai" />
 		<resources clear_calls="1" clear_grenades="1" clear_carry_items="1" clear_weapons="1" clear_vehicles="1">
 			<weapon key="gkw_sg_he.weapon"/>
+			<weapon key="gkw_defy_rocker.weapon" />
+			<projectile key="hand_88grenade.projectile" />
 			<carry_item key="exo_defy.carry_item"/>
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="50.100" max="52.833" />
+		</attribute_config>
+		<attribute_config class="rp">
+			<attribute weight="1.0" min="7000.0" max="15000.0" />
 		</attribute_config>
 	</soldier>
 	<!-- icecream group -->

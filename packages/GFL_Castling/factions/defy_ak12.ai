@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ai filename="default.ai">
+  <parameter class="accuracy_offset" value="0.03" /> 
+  <parameter class="accuracy_offset_in_player_squad" value="0.01" />
+  <parameter class="force_comparison_multiplier_to_call_reinforcements" value="0.3" />
+  <parameter class="burst_time" value="1.5" />
+  <parameter class="burst_time_variance" value="0.2" />
+  <parameter class="longer_burst_time" value="3.5" />
+  <parameter class="longer_burst_time_variance" value="0.6" />
+  <parameter class="in_vehicle_burst_time" value="2.5" />
+  <parameter class="in_vehicle_burst_time_variance" value="0.3" />
+  <parameter class="melee_attack_wait_time" value="0.1" />
+  <parameter class="choose_enemy_time" value="0.1" />
+  <parameter class="grenade_monitor_range" value="35.0" />
+  <parameter class="max_sight_range_with_muzzle" value="40.0" />
+  <parameter class="leader_sight_range" value="35.0" />
+  <parameter class="vehicle_target_aim_time" value="0.1" />
+  <parameter class="day_reaction_time_to_fight_min" value="0.6" />
+  <parameter class="day_reaction_time_to_fight_max" value="0.8" />
+  <parameter class="night_reaction_time_to_fight_min" value="0.3" />
+  <parameter class="night_reaction_time_to_fight_max" value="0.4" />
+
+  <parameter class="throw_grenade_time_interval_max" value="45.0" />
+  <parameter class="throw_grenade_time_interval_min" value="5.0" />
+  <parameter class="max_distance_to_throw_grenade" value="45.0" />
+  <parameter class="min_number_of_enemies_to_throw_grenade" value="2" />
+
+</ai>
