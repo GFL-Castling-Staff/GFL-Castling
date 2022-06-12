@@ -444,7 +444,7 @@ class CommandSkill : Tracker {
             _log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
-        addCoolDown("AN94",90,characterId,modifer);
+        addCoolDown("AN94",35,characterId,modifer);
         const XmlElement@ info = getCharacterInfo(m_metagame, characterId);
         int fID = info.getIntAttribute("faction_id");
         string c_pos = info.getStringAttribute("position");
@@ -453,9 +453,10 @@ class CommandSkill : Tracker {
             command.setStringAttribute("class", "create_instance");
             command.setIntAttribute("faction_id",fID);
             command.setStringAttribute("instance_class", "character");
-            command.setStringAttribute("instance_key","206_ak12_ar_defyAI");
-            command.setStringAttribute("position",c_pos);
-            m_metagame.getComms().send(command);    
+            spawnSoldier(m_metagame,1,fID,c_pos,"defy_ak12_ar");
+            spawnSoldier(m_metagame,1,fID,c_pos,"defy_ak15_ar");
+            spawnSoldier(m_metagame,1,fID,c_pos,"defy_rpk16_mg");
+            command.setStringAttribute("position",c_pos); 
         sendPrivateMessage(m_metagame,playerId,"Defy AK-12 summoned");
         playSoundAtLocation(m_metagame,"AN94mod3_skill.wav",fID,c_pos,0.9);
 
