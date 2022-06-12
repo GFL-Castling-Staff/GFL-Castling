@@ -29,7 +29,7 @@
     <animation state_key="hold_on_wall" ref="1" />
     <animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
     <animation state_key="stabbing"   animation_key="ak15_stab" />
-  	<animation state_key="hold_casual" animation_key="dancing, kazachok" />
+  	<animation state_key="hold_casual"/>
     <animation key="reload" animation_key="reloading, Machine gun 0.6" />
     <inventory encumbrance="10.0" buy_price="10.0" sell_price="10.0" />
     <capacity value="1" source="rank" source_value="0" />

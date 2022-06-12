@@ -321,12 +321,12 @@
 		</attribute_config>
 	</soldier>
 	<soldier name="task_forces_defy" spawn_score="0.01" squad_size_xp_cap="0.0" copy_from="default_spawn_ai">
-		<ai filename="elite.ai" />
+		<ai filename="defy.ai" />
 		<resources file="gk.resources" clear_weapons="1" clear_carry_items="1">
 		    <weapon key="gkw_ak12_defyAI.weapon" />
 			<weapon key="gkw_ak15_defyAI.weapon" />
 			<weapon key="gkw_rpk16_defyAI.weapon" />
-			<carry_item key="exo_t5_ai_16lab.carry_item" />
+			<carry_item key="exo_defy.carry_item" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="20" max="20.833" />
@@ -1405,6 +1405,54 @@
 		<resources clear_weapons="1" clear_vehicles="1" clear_calls="1" clear_grenades="1">
 			<weapon key="gkw_404_g11mod3.weapon" />
 			<carry_item key="exo_t5_ai_16lab.carry_item" />
+		</resources>
+		<attribute_config class="xp">
+			<attribute weight="1.0" min="100.100" max="102.833" />
+		</attribute_config>
+	</soldier>
+	<soldier name="defy_ak12_ar" spawn_score="0.05" copy_from="task_forces_defy">
+		<character filename="gk_ak12.text_lines">
+			<sound key="death" fileref="AK12_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
+			<sound key="throw" fileref="AK12_MEET_JP.wav" pitch_variety="0.01" volume="0.8" />
+			<sound key="throw" fileref="AK12_SKILL3_JP.wav" pitch_variety="0.01" volume="0.8" />
+		</character>
+		<resources clear_weapons="1" clear_vehicles="1" clear_calls="1" clear_grenades="1">
+			<weapon key="gkw_ak12_defyAI.weapon" />
+			<weapon key="gkw_defy_rocker.weapon" />
+			<projectile key="hand_88grenade.projectile" />
+			<carry_item key="exo_defy.carry_item" />
+		</resources>
+		<attribute_config class="xp">
+			<attribute weight="1.0" min="100.100" max="102.833" />
+		</attribute_config>
+	</soldier>
+	<soldier name="defy_ak15_ar" spawn_score="0.05" copy_from="task_forces_defy">
+		<character filename="default_gk_pmc.text_lines">
+			<sound key="death" fileref="AK15_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
+			<sound key="throw" fileref="AK15_MEET_JP.wav" pitch_variety="0.01" volume="0.8" />
+			<sound key="throw" fileref="AK15_SKILL3_JP.wav" pitch_variety="0.01" volume="0.8" />
+		</character>
+		<resources clear_weapons="1" clear_vehicles="1" clear_calls="1" clear_grenades="1">
+			<weapon key="gkw_ak15_defyAI.weapon" />
+			<weapon key="gkw_defy_rocker.weapon" />
+			<projectile key="hand_88grenade.projectile" />
+			<carry_item key="exo_defy.carry_item" />
+		</resources>
+		<attribute_config class="xp">
+			<attribute weight="1.0" min="100.100" max="102.833" />
+		</attribute_config>
+	</soldier>
+	<soldier name="defy_rpk16_mg" spawn_score="0.05" copy_from="task_forces_defy">
+		<character filename="default_gk_pmc.text_lines">
+			<sound key="death" fileref="RPK16_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
+			<sound key="throw" fileref="RPK16_MEET_JP.wav" pitch_variety="0.01" volume="0.8" />
+			<sound key="throw" fileref="RPK16_SKILL1_JP.wav" pitch_variety="0.01" volume="0.8" />
+		</character>
+		<resources clear_weapons="1" clear_vehicles="1" clear_calls="1" clear_grenades="1">
+			<weapon key="gkw_rpk16_defyAI.weapon" />
+			<weapon key="gkw_defy_rocker.weapon" />
+			<projectile key="hand_88grenade.projectile" />
+			<carry_item key="exo_defy.carry_item" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="100.100" max="102.833" />
