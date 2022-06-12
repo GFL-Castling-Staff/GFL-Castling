@@ -1466,7 +1466,7 @@
 		<ai filename="shield.ai" />
 		<resources clear_calls="1" clear_grenades="1" clear_carry_items="1" clear_weapons="1" clear_vehicles="1">
 			<weapon key="gkw_aegis.weapon"/>
-			<carry_item key="exo_defy.carry_item"/>
+			<carry_item key="bp_t4.carry_item"/>
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="50.100" max="52.833" />
@@ -1481,7 +1481,7 @@
 			<weapon key="gkw_sg.weapon"/>
 			<weapon key="gkw_defy_rocker.weapon" />
 			<projectile key="hand_88grenade.projectile" />
-			<carry_item key="exo_defy.carry_item"/>
+			<carry_item key="bp_t4.carry_item"/>
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="50.100" max="52.833" />
@@ -1496,7 +1496,7 @@
 			<weapon key="gkw_sg_he.weapon"/>
 			<weapon key="gkw_defy_rocker.weapon" />
 			<projectile key="hand_88grenade.projectile" />
-			<carry_item key="exo_defy.carry_item"/>
+			<carry_item key="bp_t4.carry_item"/>
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="50.100" max="52.833" />
