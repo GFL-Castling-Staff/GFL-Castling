@@ -13,15 +13,15 @@ void main(dictionary@ inputData) {
 
         settings.m_factionChoice = 0;                  // 0 (greenbelts), 1 (graycollars), 2 (brownpants)
         settings.m_playerAiCompensationFactor = 1.0;   // was 1.1  (1.75)
-        settings.m_teamKillPenaltyEnabled = false;
+        settings.m_teamKillPenaltyEnabled = true;
         settings.m_completionVarianceEnabled = false;
         settings.m_journalEnabled = true;
 		settings.m_fellowDisableEnemySpawnpointsSoldierCountOffset = 1;
 		
         settings.m_fellowCapacityFactor = 1.0;
         settings.m_fellowAiAccuracyFactor = 0.90;
-        settings.m_enemyCapacityFactor = 1.5;
-        settings.m_enemyAiAccuracyFactor = 0.88;
+        settings.m_enemyCapacityFactor = 2.5;
+        settings.m_enemyAiAccuracyFactor = 0.93;
         settings.m_initialRp = 1000.0;
 		
 		settings.m_xpFactor = 1;
@@ -36,7 +36,7 @@ void main(dictionary@ inputData) {
 
         settings.m_startServerCommand = """
 <command class='start_server'
-	server_name='[Castling][Normal-2 150%]'
+	server_name='[Castling][Hard-2 250%]'
 	server_port='1234'
 	comment='Read server rules in our discord: discord.gg/wwUM3kYmRC, QQ Group: 706234535'
 	url='https://castling.fandom.com/wiki/Castling_Wiki'
