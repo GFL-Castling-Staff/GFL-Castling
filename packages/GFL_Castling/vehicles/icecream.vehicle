@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Vehicles>
+<vehicles>
     <vehicle name="Mobile store" key="icecream.vehicle" map_view_atlas_index="20" respawn_time="10000.0" allow_ai_to_use="0">
         <tag name="metal_light" />
         <tire_set offset="0.86 0.0 1.141" radius="0.7" />
@@ -173,4 +173,4 @@
         <sound key="destroy" filename="vehicle_explosion_1.wav" />
         <sound key="cleanup" filename="vehicle_explosion_1.wav" />
     </vehicle>
-</Vehicles>
+</vehicles>
