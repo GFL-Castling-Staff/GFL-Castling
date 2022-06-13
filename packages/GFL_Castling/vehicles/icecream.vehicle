@@ -54,7 +54,7 @@
         <character_slot type="passenger" position="0.288 0.44 -4.0" rotation="0" exit_rotation="3.14" hiding="1" />
         <character_slot type="passenger" position="0.3784 0.44 -4.0" rotation="0" exit_rotation="3.14" hiding="1" />
         <item_container class="armory" offset="1.0 0.45 0.0" soldier_group="icecream" />
-        <rev_sound filename="Solar Sea.wav" low_pitch="1.0" high_pitch="1.0" low_rev="0.0" high_rev="0.0" volume="1.0" />
+        <rev_sound filename="Solar Sea.wav" low_pitch="1.0" high_pitch="1.0" low_rev="0.0" high_rev="0.0" volume="0.75" />
         <effect event_key="slide" type="splat_map" surface_tag="road" size="2.0" atlas_index="5" layer="0" />
         <effect event_key="slide_hard" type="splat_map" surface_tag="road" size="2.0" atlas_index="5" layer="0" />
         <effect event_key="slide" type="splat_map" surface_tag="dirt" size="1.0" atlas_index="2" layer="1" />
