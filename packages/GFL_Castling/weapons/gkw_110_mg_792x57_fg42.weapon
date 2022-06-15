@@ -15,6 +15,7 @@
 		<projectile file="bullet.projectile">
 			<result class="hit" kill_probability="1.95" kill_decay_start_time="2.432" kill_decay_end_time="4.054" />
 		</projectile>
+		<commonness value="0.2" in_stock="1" can_respawn_with="1" />
 		<stance state_key="running" accuracy="0.4" />
 		<stance state_key="crouch_moving" accuracy="0.4" />
 		<stance state_key="prone_moving" accuracy="0.4" />

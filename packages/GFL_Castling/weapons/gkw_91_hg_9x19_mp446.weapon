@@ -55,7 +55,8 @@
 	
 	<!--Ballistics-->
 	
-    
+	<commonness value="0.2" in_stock="1" can_respawn_with="1" />
+
     <weak_hand_hold offset="0.1" />
     <projectile file="bullet.projectile">
         <result class="hit"
