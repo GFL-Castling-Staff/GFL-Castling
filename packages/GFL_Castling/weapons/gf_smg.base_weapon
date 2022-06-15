@@ -5,7 +5,7 @@
 
 	<specification slot="0" />
 	<!-- 常见 军械库 重生自带 -->
-	<commonness value="0.5" in_stock="1" can_respawn_with="1" />
+	<commonness value="0.5" in_stock="0" can_respawn_with="1" />
 	<!-- 重量 游戏内x2 价格 -->
 	<inventory encumbrance="6.0" buy_price="1.0" sell_price="0.0"/>
 	<!-- 可携带数 需求 需求数 -->	<!-- rank=狗官 0.001=3xp -->

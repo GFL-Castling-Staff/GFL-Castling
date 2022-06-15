@@ -20,7 +20,7 @@
     <carry_item key="dima_1" time_to_live_out_in_the_open="15" name="[Please do not tell anyone]" transform_on_consume="dima_2" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
         <hud_icon filename="gkd_dima_8.png"/>
         <capacity value="1" source="rank" source_value="0"/>
-        <commonness value="0" in_stock="1" can_respawn_with="1"/>
+        <commonness value="0" in_stock="0" can_respawn_with="1"/>
         <inventory encumbrance="100" price="30"/>
         <model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
@@ -37,7 +37,7 @@
     <carry_item key="dima_2" time_to_live_out_in_the_open="15" name="[Please do not tell anyone]" transform_on_consume="dima_3" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
         <hud_icon filename="gkd_dima_7.png"/>
         <capacity value="1" source="rank" source_value="0"/>
-        <commonness value="0" in_stock="1" can_respawn_with="1"/>
+        <commonness value="0" in_stock="0" can_respawn_with="1"/>
         <inventory encumbrance="100" price="30"/>
         <model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
@@ -54,7 +54,7 @@
     <carry_item key="dima_3" time_to_live_out_in_the_open="15" name="[Please do not tell anyone]" transform_on_consume="dima_4" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
         <hud_icon filename="gkd_dima_6.png"/>
         <capacity value="1" source="rank" source_value="0"/>
-        <commonness value="0" in_stock="1" can_respawn_with="1"/>
+        <commonness value="0" in_stock="0" can_respawn_with="1"/>
         <inventory encumbrance="100" price="30"/>
         <model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
@@ -71,7 +71,7 @@
     <carry_item key="dima_4" time_to_live_out_in_the_open="15" name="[Please do not tell anyone]" transform_on_consume="dima_5" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
         <hud_icon filename="gkd_dima_5.png"/>
         <capacity value="1" source="rank" source_value="0"/>
-        <commonness value="0" in_stock="1" can_respawn_with="1"/>
+        <commonness value="0" in_stock="0" can_respawn_with="1"/>
         <inventory encumbrance="100" price="30"/>
         <model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
@@ -88,7 +88,7 @@
     <carry_item key="dima_5" time_to_live_out_in_the_open="15" name="[Please do not tell anyone]" transform_on_consume="dima_6" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
         <hud_icon filename="gkd_dima_4.png"/>
         <capacity value="1" source="rank" source_value="0"/>
-        <commonness value="0" in_stock="1" can_respawn_with="1"/>
+        <commonness value="0" in_stock="0" can_respawn_with="1"/>
         <inventory encumbrance="100" price="30"/>
         <model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
@@ -105,7 +105,7 @@
     <carry_item key="dima_6" time_to_live_out_in_the_open="15" name="[Please do not tell anyone]" transform_on_consume="dima_7" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
         <hud_icon filename="gkd_dima_3.png"/>
         <capacity value="1" source="rank" source_value="0"/>
-        <commonness value="0" in_stock="1" can_respawn_with="1"/>
+        <commonness value="0" in_stock="0" can_respawn_with="1"/>
         <inventory encumbrance="100" price="30"/>
         <model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
@@ -122,7 +122,7 @@
     <carry_item key="dima_7" time_to_live_out_in_the_open="15" name="[Please do not tell anyone]" transform_on_consume="dima_8" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
         <hud_icon filename="gkd_dima_2.png"/>
         <capacity value="1" source="rank" source_value="0"/>
-        <commonness value="0" in_stock="1" can_respawn_with="1"/>
+        <commonness value="0" in_stock="0" can_respawn_with="1"/>
         <inventory encumbrance="100" price="30"/>
         <model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
@@ -139,7 +139,7 @@
     <carry_item key="dima_8" time_to_live_out_in_the_open="15" name="[Please do not tell anyone]-Overrun!-" transform_on_consume="dima_9" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
         <hud_icon filename="gkd_dima_1.png"/>
         <capacity value="1" source="rank" source_value="0"/>
-        <commonness value="0" in_stock="1" can_respawn_with="1"/>
+        <commonness value="0" in_stock="0" can_respawn_with="1"/>
         <inventory encumbrance="100" price="30"/>
         <model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="wound"  />
@@ -156,7 +156,7 @@
     <carry_item key="dima_9" time_to_live_out_in_the_open="15" name="[Please do not tell anyone]-Overrun!-" transform_on_consume="dima_10" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
         <hud_icon filename="gkd_dima_0.png"/>
         <capacity value="1" source="rank" source_value="0"/>
-        <commonness value="0" in_stock="1" can_respawn_with="1"/>
+        <commonness value="0" in_stock="0" can_respawn_with="1"/>
         <inventory encumbrance="100" price="30"/>
         <model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
