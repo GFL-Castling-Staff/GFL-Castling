@@ -46,9 +46,9 @@
 	
 	<ballistics
 	near_far_distance="100.0"
-	speed_estimation_near="25.0"
-	speed_estimation_far="25.0"
-	max_speed="25.0" 
+	speed_estimation_near="20.0"
+	speed_estimation_far="20.0"
+	max_speed="20.0" 
 	randomness="0.05"
 	/> 
 	<projectile file="flamethrower_flame.projectile">
