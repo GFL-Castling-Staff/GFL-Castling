@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<carry_item time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="1.0" name="T-Doll Contract" key="dollcraft.carry_item">
+	<capacity value="100" source="rank" source_value="0.0" />
+	<hud_icon filename="hud_dollcraft.png" />
+    <inventory encumbrance="-1.0" buy_price="328" sell_price="0" />
+	<model mesh_filename="magazine.mesh" texture_filename="comic.png" />
+	<commonness value="1.0" in_stock="1" />
+</carry_item>
