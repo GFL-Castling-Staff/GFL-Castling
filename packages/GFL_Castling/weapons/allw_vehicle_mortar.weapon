@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapons>
+
+<weapon key="Motar_aiming.weapon">
+    <specification 
+    slot="2" 
+	retrigger_time="0.08" 
+	accuracy_factor="1.4" 
+	sustained_fire_grow_step="0.0" 
+	sustained_fire_diminish_rate="2.0" 
+    sight_range_modifier="2.5"
+    ai_sight_range_modifier="1.05"
+    magazine_size="-1" 
+    can_shoot_standing="0" 
+    can_shoot_crouching="0" 
+    suppressed="1" 
+    name="Compass MG" 
+    class="0" 
+    projectile_speed="0.0" />
+    
+    <animation key="recoil" ref="12" />
+    <animation key="recoil" ref="13" />
+    <animation key="recoil" ref="14" />
+    <animation key="reload" ref="33" />
+    <animation key="hold" ref="32" />
+    <animation key="hold_on_wall" ref="1" />
+    <animation key="walking" ref="31" />
+    <sound key="fire" fileref="minigun_From_payday2.wav" pitch_variety="0.05" volume="0.1" />
+    <sound key="magazine_out" fileref="mg_clip_out.wav" />
+    <sound key="magazine_in" fileref="mg_clip_in.wav" />
+    <sound key="cycle" fileref="rifle_chamber.wav" />
+    <sound class="impact" fileref="rifle_drop.wav" />
+    <model filename="" />
+
+    <hud_icon filename="gkw_v_LM5.png" />
+    <commonness value="0.0" />
+
+    <weak_hand_hold offset="0.4" />
+    <projectile file="red_eye.projectile" pulldown_in_air="0.0" time_to_live_out_in_the_open="0.0">
+    </projectile>
+    
+</weapon>
+
+<weapon key="Motar_cannon.weapon">
+	<tag name="bazooka" />
+	
+    <specification 
+	 retrigger_time="6.0" 
+	 accuracy_factor="0.85" 
+	 sight_range_modifier="2.35"
+     ai_sight_range_modifier="1.05"
+     sight_height_offset="45"   
+	 sustained_fire_grow_step="1.0" 
+	 sustained_fire_diminish_rate="0.3" 
+	 magazine_size="-1" 
+	 can_shoot_standing="0" 
+	 can_shoot_crouching="1" 
+	 can_shoot_prone="0" 
+	 suppressed="0" 
+	 name="M2 Mortar" 
+	 class="0" 
+     projectile_speed="100.0"  
+     barrel_offset="0.6"  
+	 projectiles_per_shot="1"
+     spread_range="0.2"
+	/> 
+
+    <sound key="fire" fileref="m2_fire_FromREALLIFE.wav" pitch_variety="0.1" volume="1.2" />
+	<sound key="magazine_out" fileref="portable_mortar_reload.wav" volume="0.7" />
+	<sound key="magazine_in" fileref="dry_fire.wav" volume="0.7"/>
+	<sound key="cycle" fileref="portable_mortar_reload.wav" volume="0.7"/>
+	<sound class="impact" fileref="rifle_drop.wav" />
+	
+	<inventory  buy_price="420.0" sell_price="10.0" />
+	<commonness value="0.00001"  />
+
+	<hud_icon filename="gkw_m2.png" />
+	
+    <capacity value="0" source="rank" source_value="0.0" />
+    <capacity value="1" source="rank" source_value="3.457" />
+
+
+	<weak_hand_hold offset="0.3" />
+	<projectile file="portable_mortar.projectile">
+		<result class="blast" radius="7.2" damage="5.0" push="1.0" decal="1" faction_compare="not_equal" damage_origin_vehicle="0" />
+
+		<effect class="result" type="splat_map" surface_tag="" size="3.0" atlas_index="0" layer="1" />
+		<effect class="result" type="splat_map" surface_tag="" size="5.0" atlas_index="4" layer="0" />
+		<effect class="result" type="splat_map" surface_tag="" size="6.0" atlas_index="0" layer="2" additive="0" /> <!-- remove top snow everywhere -->
+		   
+		<effect class="result" key="static_object" copy="terrain" />
+		<effect class="result" key="vehicle" copy="terrain" />     
+		<effect class="result" key="character" copy="terrain" />
+		<effect class="result" type="splat_map" surface_tag="" size="3.0" atlas_index="0" layer="1" />
+		<effect class="result" type="splat_map" surface_tag="" size="5.0" atlas_index="4" layer="0" />
+		<effect class="result" type="splat_map" surface_tag="" size="6.0" atlas_index="0" layer="2" additive="0" />
+		<effect class="result" key="terrain" ref="NavalSmokeTop1" post_processing="1" />
+
+		<effect class="result" key="terrain" ref="ShadowSmoke" shadow="1" />
+
+		<effect class="result" key="other" ref="Shine" lighting="0" />
+
+		<effect class="result" key="static_object" copy="terrain" />
+		<effect class="result" key="vehicle" copy="terrain" />     
+		<effect class="result" key="character" copy="terrain" />
+
+		<effect class="activated" ref="Propulsion_gl" /> 
+		<trail probability="1.0" key="FlamethrowerTrail" />
+	</projectile>
+
+  <ballistics
+	 near_far_distance="1.0"
+	 speed_estimation_near="10.0"
+	 speed_estimation_far="35.0"
+	 max_speed="800.0"
+	 randomness="0.05"
+	/>
+
+	
+	<effect class="muzzle" ref="MusketMuzzle" />
+	<effect class="muzzle" ref="UpDust" />
+	
+	<stance state_key="running" accuracy="0.3" />
+	<stance state_key="walking" accuracy="0.4" />
+	<stance state_key="crouch_moving" accuracy="0.3" />
+	<stance state_key="prone_moving" accuracy="0.1" />
+	
+	<stance state_key="standing" accuracy="0.5" />
+	<stance state_key="crouching" accuracy="1.0" />
+	<stance state_key="prone" accuracy="1.0" />
+
+	<modifier class="speed" value="-3.0" />
+</weapon>
+</weapons>
