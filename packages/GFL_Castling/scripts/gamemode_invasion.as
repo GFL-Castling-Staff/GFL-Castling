@@ -45,6 +45,7 @@
 #include "commandskill.as"
 #include "ItemDropEvent.as"
 #include "vehicle_spawn_handler.as"
+#include "MatchCompleteReward.as"
 
 // --------------------------------------------
 class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
@@ -327,6 +328,7 @@ class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 		addTracker(CommandSkill(this));
 		addTracker(ItemDropEvent(this));
 		addTracker(vehicle_spawn(this));
+		addTracker(MatchCompleteReward(this));
 	}
 
 	// --------------------------------------------
