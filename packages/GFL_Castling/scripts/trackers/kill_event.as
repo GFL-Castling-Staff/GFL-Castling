@@ -71,6 +71,9 @@ class kill_event : Tracker {
         {"ff_parw_alina.weapon",2},
         {"ff_gager_1.weapon",3},
 
+        // 近战定位HG
+        {"gkw_m1911_mod3.weapon",2},
+
         // 近战定位AR
         {"gkw_ak12_skill.weapon",3},
         {"gkw_ak12_blm_skill.weapon",3},
@@ -107,6 +110,8 @@ class kill_event : Tracker {
         {"gkw_vz61.weapon",2},
         {"gkw_pp19.weapon",2},
         {"gkw_pp19mod3.weapon",2},
+        {"gkw_mab38.weapon",2},
+        {"gkw_mab38mod3.weapon",2},
         {"gkw_klin.weapon",2},
         {"gkw_mp40.weapon",2},
         {"gkw_mp5.weapon",2},
@@ -125,8 +130,6 @@ class kill_event : Tracker {
         {"gkw_ppsh41mod3.weapon",3},
         {"gkw_mp7.weapon",3},
         {"gkw_mp7_6806.weapon",3},
-        {"gkw_mab38.weapon",3},
-        {"gkw_mab38mod3.weapon",3},
         {"gkw_ak74u.weapon",3},
         {"gkw_ak74u_3002.weapon",3},
         {"gkw_idw.weapon",3},
