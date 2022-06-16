@@ -26,7 +26,6 @@ class MatchCompleteReward : Tracker {
                     if (characterId >= 0) {
                         GiveRP(m_metagame,characterId,500);
                         GiveXP(m_metagame,characterId,0.05);
-                        m_metagame.getComms().send(c);
                     }                    
                 }
             }

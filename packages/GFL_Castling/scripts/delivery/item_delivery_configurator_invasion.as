@@ -1075,7 +1075,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 				ScoredResource("gkw_qsb91.weapon", "weapon", 0.6f),
 				ScoredResource("gkw_rpd.weapon", "weapon", 0.6f),
 				ScoredResource("gkw_supersass.weapon", "weapon", 0.6f),
-				ScoredResource("gkw_t-cms.weapon", "weapon", 0.6f),
+				// ScoredResource("gkw_t-cms.weapon", "weapon", 0.6f),
 
 
 				ScoredResource("gkw_m1908.weapon", "weapon", 0.3f),
