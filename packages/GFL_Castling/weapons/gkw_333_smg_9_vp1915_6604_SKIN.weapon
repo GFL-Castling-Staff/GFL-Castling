@@ -42,7 +42,7 @@
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet.projectile">
       <result class="hit"
-      kill_probability="1.45"
+      kill_probability="1.65"
       kill_decay_start_time="1.313"
       kill_decay_end_time="1.622"  />
   </projectile>
@@ -55,7 +55,7 @@
     <stance state_key="prone" accuracy="1" />
     <stance state_key="prone_moving" accuracy="0.95" />
     <stance state_key="over_wall" accuracy="1" />
-    <modifier class="speed" value="0.1" />
+    <modifier class="speed" value="0.3" />
 	  <target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0" />
 	  <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0" />
     <target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0" />
