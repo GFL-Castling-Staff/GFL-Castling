@@ -93,12 +93,12 @@ dictionary commandSkillIndex = {
         {"",0},
 
         // AN94MOD3
-        {"gkw_an94_mod3.weapon",1},
-        {"gkw_an94_mod3_skill.weapon",1},
-        {"gkw_an94mod3_3303.weapon",1},
-        {"gkw_an94mod3_3303_skill.weapon",1},
-        {"gkw_an94mod3_blm.weapon",1},
-        {"gkw_an94mod3_blm_skill.weapon",1},
+        // {"gkw_an94_mod3.weapon",1},
+        // {"gkw_an94_mod3_skill.weapon",1},
+        // {"gkw_an94mod3_3303.weapon",1},
+        // {"gkw_an94mod3_3303_skill.weapon",1},
+        // {"gkw_an94mod3_blm.weapon",1},
+        // {"gkw_an94mod3_blm_skill.weapon",1},
 
         // SMG燃烧弹
         {"gkw_vector.weapon",2},
@@ -212,8 +212,8 @@ dictionary commandSkillIndex = {
 
         {"gkw_mab38mod3.weapon",29},
         // AK12冰沙时代
-        {"gkw_ak12_2402.weapon",30},
-        {"gkw_ak12_2402_skill.weapon",30},
+        // {"gkw_ak12_2402.weapon",30},
+        // {"gkw_ak12_2402_skill.weapon",30},
 
         // 下面这行是用来占位的，在这之上添加新的枪和index即可
         {"666",-1}
@@ -280,7 +280,7 @@ class CommandSkill : Tracker {
                 switch(int(commandSkillIndex[c_weaponType]))
                 {
                     case 0:{break;}
-                    case 1:{excuteAN94skill(cId,senderId,m_modifer);break;}
+                    // case 1:{excuteAN94skill(cId,senderId,m_modifer);break;}
                     case 2:{excuteFirenadeskill(cId,senderId,m_modifer,c_weaponType);break;}
                     case 3:{excuteJusticeskill(cId,senderId,m_modifer);break;}
                     case 4:{excuteMP5skill(cId,senderId,m_modifer);break;}
@@ -309,7 +309,7 @@ class CommandSkill : Tracker {
                     case 27:{excuteFlashbangskill(cId,senderId,m_modifer,c_weaponType);break;}
                     case 28:{excuteUMP9skill(cId,senderId,m_modifer);break;}
                     case 29:{excuteMab38skill(cId,senderId,m_modifer);break;}
-                    case 30:{excuteAK12SEskill(cId,senderId,m_modifer);break;}
+                    // case 30:{excuteAK12SEskill(cId,senderId,m_modifer);break;}
 
                     default:
                         break;
@@ -432,67 +432,67 @@ class CommandSkill : Tracker {
 
         //破坏者，法官，
     }
-    void excuteAN94skill(int characterId,int playerId,SkillModifer@ modifer){
-        bool ExistQueue = false;
-        int j =-1;
-        for (uint i=0;i<SkillArray.length();i++){
-            if (SkillArray[i].m_character_id==characterId && SkillArray[i].m_weapontype=="AN94") {
-                ExistQueue=true;
-                j=i;
-            }
-        }
-        if (ExistQueue){
-            dictionary a;
-            a["%time"] = ""+SkillArray[j].m_time;
-            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
-            _log("skill cooldown" + SkillArray[j].m_time);
-            return;
-        }
-        addCoolDown("AN94",35,characterId,modifer);
-        const XmlElement@ info = getCharacterInfo(m_metagame, characterId);
-        int fID = info.getIntAttribute("faction_id");
-        string c_pos = info.getStringAttribute("position");
-        string soldierClass = info.getStringAttribute("soldier_group_name");
-            XmlElement command("command");
-            command.setStringAttribute("class", "create_instance");
-            command.setIntAttribute("faction_id",fID);
-            command.setStringAttribute("instance_class", "character");
-            spawnSoldier(m_metagame,1,fID,c_pos,"defy_ak12_ar");
-            spawnSoldier(m_metagame,1,fID,c_pos,"defy_ak15_ar");
-            spawnSoldier(m_metagame,1,fID,c_pos,"defy_rpk16_mg");
-            command.setStringAttribute("position",c_pos); 
-        sendPrivateMessage(m_metagame,playerId,"Defy AK-12 summoned");
-        playSoundAtLocation(m_metagame,"AN94mod3_skill.wav",fID,c_pos,0.9);
+    // void excuteAN94skill(int characterId,int playerId,SkillModifer@ modifer){
+    //     bool ExistQueue = false;
+    //     int j =-1;
+    //     for (uint i=0;i<SkillArray.length();i++){
+    //         if (SkillArray[i].m_character_id==characterId && SkillArray[i].m_weapontype=="AN94") {
+    //             ExistQueue=true;
+    //             j=i;
+    //         }
+    //     }
+    //     if (ExistQueue){
+    //         dictionary a;
+    //         a["%time"] = ""+SkillArray[j].m_time;
+    //         sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+    //         _log("skill cooldown" + SkillArray[j].m_time);
+    //         return;
+    //     }
+    //     addCoolDown("AN94",35,characterId,modifer);
+    //     const XmlElement@ info = getCharacterInfo(m_metagame, characterId);
+    //     int fID = info.getIntAttribute("faction_id");
+    //     string c_pos = info.getStringAttribute("position");
+    //     string soldierClass = info.getStringAttribute("soldier_group_name");
+    //         XmlElement command("command");
+    //         command.setStringAttribute("class", "create_instance");
+    //         command.setIntAttribute("faction_id",fID);
+    //         command.setStringAttribute("instance_class", "character");
+    //         spawnSoldier(m_metagame,1,fID,c_pos,"defy_ak12_ar");
+    //         spawnSoldier(m_metagame,1,fID,c_pos,"defy_ak15_ar");
+    //         spawnSoldier(m_metagame,1,fID,c_pos,"defy_rpk16_mg");
+    //         command.setStringAttribute("position",c_pos); 
+    //     sendPrivateMessage(m_metagame,playerId,"Defy AK-12 summoned");
+    //     playSoundAtLocation(m_metagame,"AN94mod3_skill.wav",fID,c_pos,0.9);
 
-        // _log("summonAK12");
-    }
-    void excuteAK12SEskill(int characterId,int playerId,SkillModifer@ modifer){
-        bool ExistQueue = false;
-        int j =-1;
-        for (uint i=0;i<SkillArray.length();i++){
-            if (SkillArray[i].m_character_id==characterId && SkillArray[i].m_weapontype=="AK12SE") {
-                ExistQueue=true;
-                j=i;
-            }
-        }
-        if (ExistQueue){
-            dictionary a;
-            a["%time"] = ""+SkillArray[j].m_time;
-            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
-            _log("skill cooldown" + SkillArray[j].m_time);
-            return;
-        }
-        addCoolDown("AK12SE",60,characterId,modifer);
-        const XmlElement@ info = getCharacterInfo(m_metagame, characterId);
-        int fID = info.getIntAttribute("faction_id");
-        string c_pos = info.getStringAttribute("position");
-        spawnSoldier(m_metagame,4,fID,c_pos,"defy_aegis_shield");
-        spawnSoldier(m_metagame,2,fID,c_pos,"defy_cyclops_sg");
-        spawnSoldier(m_metagame,2,fID,c_pos,"defy_cyclops_sghe");
-        playSoundAtLocation(m_metagame,"AK12_ATTACK_JP.wav",fID,c_pos,0.9);
+    //     // _log("summonAK12");
+    // }
+    // void excuteAK12SEskill(int characterId,int playerId,SkillModifer@ modifer){
+    //     bool ExistQueue = false;
+    //     int j =-1;
+    //     for (uint i=0;i<SkillArray.length();i++){
+    //         if (SkillArray[i].m_character_id==characterId && SkillArray[i].m_weapontype=="AK12SE") {
+    //             ExistQueue=true;
+    //             j=i;
+    //         }
+    //     }
+    //     if (ExistQueue){
+    //         dictionary a;
+    //         a["%time"] = ""+SkillArray[j].m_time;
+    //         sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+    //         _log("skill cooldown" + SkillArray[j].m_time);
+    //         return;
+    //     }
+    //     addCoolDown("AK12SE",60,characterId,modifer);
+    //     const XmlElement@ info = getCharacterInfo(m_metagame, characterId);
+    //     int fID = info.getIntAttribute("faction_id");
+    //     string c_pos = info.getStringAttribute("position");
+    //     spawnSoldier(m_metagame,4,fID,c_pos,"defy_aegis_shield");
+    //     spawnSoldier(m_metagame,2,fID,c_pos,"defy_cyclops_sg");
+    //     spawnSoldier(m_metagame,2,fID,c_pos,"defy_cyclops_sghe");
+    //     playSoundAtLocation(m_metagame,"AK12_ATTACK_JP.wav",fID,c_pos,0.9);
 
-        // _log("summonAK12");
-    }
+    //     // _log("summonAK12");
+    // }
     void excuteFirenadeskill(int characterId,int playerId,SkillModifer@ modifer,string weaponname){
         bool ExistQueue = false;
         int j=-1;
@@ -934,7 +934,7 @@ class CommandSkill : Tracker {
             sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
             return;
         }
-        addCoolDown("FF_AGENT",60,characterId,modifer);
+        addCoolDown("FF_AGENT",90,characterId,modifer);
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         if (character !is null) {
             const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
@@ -2038,7 +2038,7 @@ class CommandSkill : Tracker {
                     else{
                         CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"ump9_stun_grenade_spawner.projectile",characterId,factionid,60.0,6.0);
                     }                    
-                    addCoolDown("UMP9",16,characterId,modifer);
+                    addCoolDown("UMP9",90,characterId,modifer);
                 }
             }
         }

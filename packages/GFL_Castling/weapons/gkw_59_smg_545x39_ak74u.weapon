@@ -1,23 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapons>
-<weapon file="two_hands_ar.animation_base" key="gkw_ak74u.weapon">
-
+<weapon key="gkw_ak74u.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0">
+<tag name="smg" />
     <specification 
 		accuracy_factor="0.98" 
 		barrel_offset="0.2" 
 		class="0"
+        slot="0"
 		magazine_size="30" 
 		name="AK-74U" 
+        carry_in_two_hands="1"
 		projectile_speed="175" 
 		retrigger_time="0.082" 
 		suppressed="0" 
 		sustained_fire_diminish_rate="1.6" 
-		sustained_fire_grow_step="0.2" />
+		sustained_fire_grow_step="0.2"
+        burst_shots="1"
+        stab_enabled="1" />
 
 
     <next_in_chain key="gkw_ak74u_skill.weapon" share_ammo="1" />
-    <inventory  buy_price="8.0" sell_price="8.0" />
+    <commonness value="0.2" in_stock="1" can_respawn_with="1" />
+    <inventory encumbrance="10.0" buy_price="8.0" sell_price="8.0" />
     <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
+    <animation key="recoil" ref="12" />
+    <animation key="recoil" ref="13" />
+    <animation key="recoil" ref="14" />
+    <animation key="recoil" stance_key="prone" animation_key="recoil1, prone" />
+    <animation key="recoil" stance_key="prone" animation_key="recoil2, prone" />
+    <animation key="recoil" stance_key="prone" animation_key="recoil3, prone" />
+    <animation state_key="hold_on_wall" ref="1" />
+    <animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
+    <animation state_key="stabbing" animation_key="melee, quick knife" />
+    <animation state_key="stabbing" animation_key="pistol whip 3" />
     <sound key="fire" fileref="ak74u_fire_FromSQUAD.wav" pitch_variety="0.05" volume="1" />
     <sound key="magazine_out" fileref="ak74u_mgz_out_FromSQUAD.wav" volume="0.9" />
     <sound key="magazine_in" fileref="ak74u_mgz_in_FromSQUAD.wav" volume="0.9" />
@@ -40,31 +55,52 @@
     <stance state_key="prone_moving" accuracy="0.9" />
     <stance state_key="standing" accuracy="1" />
 	<stance state_key="crouching" accuracy="1.1" />
+    <stance state_key="over_wall" accuracy="1.1" />
     <stance state_key="prone" accuracy="1.1" />
     <modifier class="speed" value="0.3" /> 
     <modifier class="hit_success_probability" value="-0.1" />
+    <target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0" />
+	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0" />
+    <target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0" />
+    <target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0" />
+    <target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0" />
+	<target_factors tag="commander" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0" />
 </weapon>
-<weapon file="two_hands_ar.animation_base" key="gkw_ak74u_skill.weapon">
-
+<weapon key="gkw_ak74u_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0">
+<tag name="smg" />
     <specification 
 		accuracy_factor="0.85" 
 		barrel_offset="0.4" 
 		class="0"
         slot="0" 
 		magazine_size="30" 
-		name="AK-74U-[Repulsive Response]" 
+		name="AK-74U-[Repulsive Response]"
+        carry_in_two_hands="1" 
 		projectile_speed="219.04" 
 		retrigger_time="0.07" 
 		suppressed="0" 
 		sustained_fire_diminish_rate="1.8" 
 		sustained_fire_grow_step="0.45"
-        spread_range="0.25"/>
+        burst_shots="1"
+        spread_range="0.25"
+        stab_enabled="1"/>
 
 
 
     <next_in_chain key="gkw_ak74u.weapon" share_ammo="1" />
-    <inventory  buy_price="8.0" sell_price="8.0" />
+    <commonness value="0" in_stock="0" can_respawn_with="1" />
+    <inventory encumbrance="10.0" buy_price="8.0" sell_price="8.0" />
     <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
+    <animation key="recoil" ref="12" />
+    <animation key="recoil" ref="13" />
+    <animation key="recoil" ref="14" />
+    <animation key="recoil" stance_key="prone" animation_key="recoil1, prone" />
+    <animation key="recoil" stance_key="prone" animation_key="recoil2, prone" />
+    <animation key="recoil" stance_key="prone" animation_key="recoil3, prone" />
+    <animation state_key="hold_on_wall" ref="1" />
+    <animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
+    <animation state_key="stabbing" animation_key="melee, quick knife" />
+    <animation state_key="stabbing" animation_key="pistol whip 3" />
     <sound key="fire" fileref="ak74uskill_fire_FromINSMIC.wav" pitch_variety="0.05" volume="0.9" />
     <sound key="magazine_out" fileref="ak74u_mgz_out_FromSQUAD.wav" volume="0.9" />
     <sound key="magazine_in" fileref="ak74u_mgz_in_FromSQUAD.wav" volume="0.9" />
@@ -73,7 +109,6 @@
     <model filename="gkw_smg_ak74u.xml" />
 
     <hud_icon filename="gkw_ak74u_skill.png" />
-    <commonness value="0" in_stock="0" can_respawn_with="1" />
 
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet.projectile">
@@ -87,6 +122,14 @@
     <stance state_key="standing" accuracy="0.65" />
     <stance state_key="crouching" accuracy="0.85" />
     <stance state_key="prone" accuracy="1" />
+    <stance state_key="over_wall" accuracy="1.1" />
     <modifier class="hit_success_probability" value="-0.15" />
+    <modifier class="speed" value="0.1" /> 
+    <target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0" />
+	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0" />
+    <target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0" />
+    <target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0" />
+    <target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0" />
+	<target_factors tag="commander" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0" />
 </weapon>
 </weapons>

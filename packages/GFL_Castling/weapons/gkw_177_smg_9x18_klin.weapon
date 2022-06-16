@@ -1,22 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<weapon file="dual_smg.animation_base" key="gkw_klin.weapon">
-
+<weapon key="gkw_klin.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0">
+<tag name="smg" />
     <specification 
 		accuracy_factor="0.975" 
 		retrigger_time="0.056" 
 		barrel_offset="0.32" 
 		class="0"
+        slot="0"
 		magazine_size="30" 
+        carry_in_two_hands="0"
+        use_basic_muzzle_smoke_effect="0"
 		name="PP-19 Klin" 
 		projectile_speed="102.38" 
 		suppressed="0" 
+        burst_shots="1"
 		projectiles_per_shot="2"
 		sustained_fire_diminish_rate="1.7" 
-		sustained_fire_grow_step="0.18" 	/>
+		sustained_fire_grow_step="0.18" 
+        stab_enabled="1"/>
+    <commonness value="0.2" in_stock="1" can_respawn_with="1" />
+    <inventory encumbrance="6.0" buy_price="10.0" sell_price="10.0" />
+    <capacity value="1" source="rank" source_value="0.0" />
 
-    <inventory buy_price="10.0" sell_price="10.0" />
+	<animation state_key="recoil"	animation_key="recoil, pistol dual 1" />
+  	<animation state_key="recoil"	animation_key="recoil, pistol dual 2" />
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil, overwall dual" />
+	<!-- reload -->
+    <animation state_key="reload"	animation_key="reloading, A DG 1.0" />
+    <animation state_key="reload"	animation_key="reloading2, A DG 1.0" />
 
-
+  	<animation state_key="hold"	animation_key="still, pistol dual" />
+  	<animation state_key="hold_casual"	animation_key="hold_casual, pistol 2" />
+  	<animation state_key="hold_on_wall"	animation_key="hold, overwall dual" />
+  	<animation state_key="still_against_wall"	animation_key="hold_casual, pistol dual" />
+	<animation state_key="running" animation_key="running, no weapon, 60" />
+  	<animation state_key="walking"	animation_key="walking, pistol dual" />
+    <animation state_key="walking_backwards" animation_key="walking backwards, pistol dual" />
+  	<animation state_key="crouching"	animation_key="crouch, pistol dual" />
+	<animation state_key="crouch_moving"	animation_key="crouching, pistol 2" />
+	<animation state_key="crouch_moving_backwards"	animation_key="crouching backwards, pistol 2" />
+    <animation state_key="prone_still" animation_key="prone_still, pistol dual" />
+    <animation state_key="changing_weapon_in" 	animation_key="change weapon in, single hand carry" />
+    <animation state_key="stabbing" animation_key="pistol whip" />
+    <animation state_key="stabbing" animation_key="pistol whip 2" />
+    <animation state_key="stabbing" animation_key="pistol whip 3" />
     <sound key="fire" fileref="klin_fire_FromEFT.wav" pitch_variety="0.05" volume="1" />
     <sound key="magazine_out" fileref="klin_mgz_out_FromEFT.wav" volume="0.7" />
     <sound key="magazine_in" fileref="klin_mgz_in_FromEFT.wav" volume="0.7" />
@@ -26,7 +53,10 @@
     <model filename=""/>
     <hud_icon filename="gkw_klin.png"/>
 
-
+	<effect class="muzzle" ref="MuzzleDual1" />
+    <effect class="muzzle" ref="MuzzleSmokeDual1" />
+    <effect class="muzzle" ref="MuzzleDual2" /> 
+    <effect class="muzzle" ref="MuzzleSmokeDual2" />
 
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet.projectile">
@@ -40,5 +70,13 @@
     <stance state_key="standing" accuracy="0.8" />
 	<stance state_key="crouching" accuracy="0.9" />
     <stance state_key="prone" accuracy="0.9" />
+	<stance state_key="over_wall" accuracy="1" />
     <modifier class="hit_success_probability" value="-0.2" />
+	<modifier class="speed" value="0.4" />
+	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0" />
+	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0" />
+    <target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0" />
+    <target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0" />
+    <target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0" />
+	<target_factors tag="commander" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0" />
 </weapon>
