@@ -934,7 +934,7 @@ class CommandSkill : Tracker {
             sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
             return;
         }
-        addCoolDown("FF_AGENT",60,characterId,modifer);
+        addCoolDown("FF_AGENT",90,characterId,modifer);
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         if (character !is null) {
             const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
@@ -2038,7 +2038,7 @@ class CommandSkill : Tracker {
                     else{
                         CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"ump9_stun_grenade_spawner.projectile",characterId,factionid,60.0,6.0);
                     }                    
-                    addCoolDown("UMP9",16,characterId,modifer);
+                    addCoolDown("UMP9",90,characterId,modifer);
                 }
             }
         }
