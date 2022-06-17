@@ -164,7 +164,7 @@ class GFLskill : Tracker {
                         " position='" + grenade_pos.toString() + "'"+
 				        " character_id='" + characterId + "' />";
                     m_metagame.getComms().send(c);					
-					if (affectedNumber >= 3){
+					if (affectedNumber >= 6){
 						Vector3 UMP9_pos = stringToVector3(character.getStringAttribute("position"));
 						string c1 = 
 							"<command class='create_instance'" +
