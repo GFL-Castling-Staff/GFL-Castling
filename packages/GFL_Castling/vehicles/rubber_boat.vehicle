@@ -32,6 +32,7 @@
 	drag_offset="-0.05" /> 
 
 
+	<modifier class="blast_damage" value="-0.75" />
 
 	<visual  offset="0 0 0.24" class="turret" turret_index="0" mesh_filename="Crusher_turret.mesh" texture_filename="Crasher_Base_color.png" />
 	<visual  offset="0 0 0.24" class="turret" turret_index="0" key="broken" mesh_filename="Crusher_turret.mesh" texture_filename="humvee_broken.png" />
