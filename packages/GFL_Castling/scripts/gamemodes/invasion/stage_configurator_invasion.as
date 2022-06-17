@@ -241,10 +241,10 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 		stage.addTracker(PeacefulLastBase(m_metagame, 0));
 		stage.addTracker(CommsCapacityHandler(m_metagame));
-		stage.m_maxSoldiers = 180;                                             // was 12*7 in 1.65, 1 base added
+		stage.m_maxSoldiers = 160;                                             // was 12*7 in 1.65, 1 base added
 
 		stage.m_soldierCapacityVariance = 0.4;
-		stage.m_playerAiCompensation = 5;                                         // was 4 (1.82)
+		stage.m_playerAiCompensation = 8;                                         // was 4 (1.82)
         stage.m_playerAiReduction = 0;                                          // was 2 (test3)    
 
 		stage.m_finalBattle = true;
@@ -260,7 +260,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		}
 		{
 			Faction f(getFactionConfigs()[1], createCommanderAiCommand(1,0.3,0.1));
-			f.m_overCapacity = 50;                                               
+			f.m_overCapacity = 30;                                               
 			f.m_capacityOffset = 15;
 			f.m_capacityMultiplier = 1.0;                                                 
 			stage.m_factions.insertLast(f);                                         
@@ -289,10 +289,10 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.addTracker(PeacefulLastBase(m_metagame, 0));
 		stage.addTracker(CommsCapacityHandler(m_metagame));
 		stage.addTracker(jupiter(m_metagame,30));
-		stage.m_maxSoldiers = 14*17;                                             // was 12*7 in 1.65, 1 base added
+		stage.m_maxSoldiers = 160;                                             // was 12*7 in 1.65, 1 base added
 
 		stage.m_soldierCapacityVariance = 0.4;
-		stage.m_playerAiCompensation = 6;                                         // was 4 (1.82)
+		stage.m_playerAiCompensation = 10;                                         // was 4 (1.82)
         stage.m_playerAiReduction = 0;                                          // was 2 (test3)    
 
 		stage.m_minRandomCrates = 1; 
@@ -327,7 +327,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.m_mapInfo.m_id = "map105_2";
 
 		stage.addTracker(Overtime(m_metagame, 0));
-		stage.m_maxSoldiers = 14 * 16;                                          // was 11*10
+		stage.m_maxSoldiers = 200;                                          // was 11*10
 		stage.m_soldierCapacityModel = "constant";     
 		stage.m_playerAiCompensation = 8;                                       // was 4
         stage.m_playerAiReduction = 0;                                        // was 2    
@@ -349,8 +349,9 @@ class StageConfiguratorInvasion : StageConfigurator {
 		}
 
 		{
-			Faction f(FactionConfig(1, "sf.xml", "S.F.", "0.91 0.11 0.20", "sf.xml"), createCommanderAiCommand(1, 0.80, 0.20));
-			f.m_capacityMultiplier = 0.35;       
+			Faction f(FactionConfig(1, "sf.xml", "S.F.", "0.91 0.11 0.20", "sf.xml"), createCommanderAiCommand(1, 0.50, 0.50));
+			f.m_capacityMultiplier = 0.2;
+			f.m_capacityOffset = 10;
 			stage.m_factions.insertLast(f);                                                                
 		}
 		{
@@ -382,10 +383,10 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 		stage.addTracker(Overtime(m_metagame, 0));
 		stage.m_soldierCapacityModel = "constant";     
-		stage.m_maxSoldiers = 10 * 15;                                             // was 12*7 in 1.65, 1 base added
+		stage.m_maxSoldiers = 160;                                             // was 12*7 in 1.65, 1 base added
 
 		stage.m_soldierCapacityVariance = 0.3;
-		stage.m_playerAiCompensation = 4;                                         // was 4 (1.82)
+		stage.m_playerAiCompensation = 8;                                         // was 4 (1.82)
         stage.m_playerAiReduction = 0;                                          // was 2 (test3)    
 
 		stage.m_minRandomCrates = 2; 
@@ -421,6 +422,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.m_kothTargetBase = "All Center Base";
 		return stage;		
 	}
+
 	protected Stage@ setupStage107(){
 		Stage@ stage = createStage();
 		stage.m_mapInfo.m_name = "Awakening";
@@ -447,7 +449,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 			XmlElement command("command");
 			command.setStringAttribute("class", "faction_resources");
 			command.setIntAttribute("faction_id", 0);
-			addFactionResourceElements(command, "vehicle", array<string> = {"water_tower.vehicle"}, false);
+			addFactionResourceElements(command, "vehicle", array<string> = {"water_tower.vehicle","radar_tower.vehicle"}, false);
 
 			stage.m_extraCommands.insertLast(command);
 		}
