@@ -1937,16 +1937,6 @@ class StageConfiguratorInvasion : StageConfigurator {
 	array<XmlElement@>@ getFactionResourceConfigChangeCommands(float completionPercentage, Stage@ stage) {
 		array<XmlElement@>@ commands = getFactionResourceChangeCommands(stage.m_factions.size());
 
-		_log("completion percentage: " + completionPercentage);
-
-		const UserSettings@ settings = m_metagame.getUserSettings();
-		_log(" variance enabled: " + settings.m_completionVarianceEnabled);
-		if (settings.m_completionVarianceEnabled) {
-			array<XmlElement@>@ varianceCommands = getCompletionVarianceCommands(stage, completionPercentage);
-			// append with command already gathered
-			merge(commands, varianceCommands);
-		}
-
 		merge(commands, stage.m_extraCommands);
 
 		return commands;

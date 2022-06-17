@@ -30,7 +30,8 @@
 	<vehicle key="typhon.vehicle" />
 	<vehicle key="sandstorm.vehicle" />
 	<vehicle key="coeus.vehicle" />
-	<vehicle key="aa_emplacement.vehicle"/>
+	<vehicle key="aa_emplacement.vehicle" enabled="1"/>
+	
 	<!-- 增援 -->
 	<call key="kcco_argo_puppis.call" />
 	<call key="kcco_argo_vela.call" />
