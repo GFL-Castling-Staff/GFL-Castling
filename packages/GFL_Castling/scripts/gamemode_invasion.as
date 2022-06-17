@@ -412,7 +412,7 @@ class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 			//CallMarkerConfig(string key, int atlasIndex = 0, float size = 2.0, float range = 1.0, string text = "")
 			CallMarkerConfig("gk_airstrike_fairy.call", "call_marker", 9, 0.5, 20.0),
 			CallMarkerConfig("gk_bombardment_fairy.call", "call_marker", 11, 0.5, 30.0),
-			CallMarkerConfig("gk_rocket_fairy.call", "call_marker", 10, 0.5, 30.0),
+			CallMarkerConfig("gk_rocket_fairy.call", "call_marker", 10, 0.5, 45.0),
 			
 			CallMarkerConfig("gk_medic.call", "call_marker_drop", 4, 0.5),
 			CallMarkerConfig("sg1hg1mg2.call", "call_marker_drop", 4, 0.5),
