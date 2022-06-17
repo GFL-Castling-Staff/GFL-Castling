@@ -71,10 +71,6 @@
 	<sound key="cycle" fileref="portable_mortar_reload.wav" volume="0.7"/>
 	<sound class="impact" fileref="rifle_drop.wav" />
 	
-	<inventory  buy_price="420.0" sell_price="10.0" />
-	<commonness value="0.00001"  />
-
-	<hud_icon filename="gkw_m2.png" />
 	
     <capacity value="0" source="rank" source_value="0.0" />
     <capacity value="1" source="rank" source_value="3.457" />
