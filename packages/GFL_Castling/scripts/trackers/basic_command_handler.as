@@ -609,7 +609,9 @@ class BasicCommandHandler : Tracker {
 		} else if (checkCommand(message, "gb2")) {
 			spawnInstanceNearPlayer(senderId, "gift_box_2.carry_item", "carry_item", 0);
 		} else if (checkCommand(message, "gb3")) {
-			spawnInstanceNearPlayer(senderId, "gift_box_3.carry_item", "carry_item", 0);        
+			spawnInstanceNearPlayer(senderId, "firecontrol.carry_item", "carry_item", 0);        
+			spawnInstanceNearPlayer(senderId, "firecontrol.carry_item", "carry_item", 0);        
+			spawnInstanceNearPlayer(senderId, "firecontrol.carry_item", "carry_item", 0);        
 		} else if (checkCommand(message, "cb1")) {
 			spawnInstanceNearPlayer(senderId, "gift_box_community_1.carry_item", "carry_item", 0); 
             spawnInstanceNearPlayer(senderId, "gift_box_community_1.carry_item", "carry_item", 0);
