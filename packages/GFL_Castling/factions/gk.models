@@ -314,7 +314,7 @@
 <model filename="gkd_smg_ump9.xml"><requirement class="weapon" slot="0" key="gkw_ump9.weapon"/></model>
 <model filename="gkd_smg_ump9_mod3_from_m1903.xml"><requirement class="weapon" slot="0" key="gkw_ump9mod3.weapon"/></model>
 <model filename="gkd_smg_uzi.xml"><requirement class="weapon" slot="0" key="gkw_uzi.weapon"/></model>
-<model filename="gkd_smg_uzi.xml"><requirement class="weapon" slot="0" key="gkw_uzimod3.weapon"/></model>
+<model filename="gkd_smg_uzimod3_weapon.xml"><requirement class="weapon" slot="0" key="gkw_uzimod3.weapon"/></model>
 <model filename="gkd_smg_uzimod3.xml"><requirement class="weapon" slot="0" key="gkw_uzimod3_skill.weapon"/></model>
 <model filename="gkd_smg_vector.xml"><requirement class="weapon" slot="0" key="gkw_vector.weapon"/></model>
 <model filename="gkd_svch_melondove.xml"><requirement class="weapon" slot="0" key="gkw_svch.weapon"/></model>
@@ -455,6 +455,9 @@
 <model filename="kccod_aegis.xml"><requirement class="weapon" slot="0" key="gkw_aegis.weapon"/></model>
 <model filename="kccod_cyclops_sg_remake.xml"><requirement class="weapon" slot="0" key="gkw_sg.weapon"/></model>
 <model filename="kccod_cyclops_sg_remake.xml"><requirement class="weapon" slot="0" key="gkw_sg_he.weapon"/></model>
+
+<model filename="gkd_smg_sr-3mp.xml"><requirement class="weapon" slot="0" key="gkw_sr3mp.weapon"/></model>
+<model filename="gkd_smg_sr-3mp.xml"><requirement class="weapon" slot="0" key="gkw_sr3mp_skill.weapon"/></model>
 
 <!-- <model filename="gkd_m950a_mod3_from_melondove.xml"><requirement class="weapon" slot="0" key="gkw_m950amod3.weapon"/></model> -->
 
