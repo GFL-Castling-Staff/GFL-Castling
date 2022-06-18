@@ -70,6 +70,15 @@
 	<sound key="magazine_in" fileref="dry_fire.wav" volume="0.7"/>
 	<sound key="cycle" fileref="portable_mortar_reload.wav" volume="0.7"/>
 	<sound class="impact" fileref="rifle_drop.wav" />
+	
+	<inventory  buy_price="420.0" sell_price="10.0" />
+	<commonness value="0.00001"  />
+
+	<hud_icon filename="gkw_m2.png" />
+	
+    <capacity value="0" source="rank" source_value="0.0" />
+    <capacity value="1" source="rank" source_value="3.457" />
+
 
 	<weak_hand_hold offset="0.3" />
 	<projectile file="portable_mortar.projectile">
@@ -99,15 +108,14 @@
 		<trail probability="1.0" key="FlamethrowerTrail" />
 	</projectile>
 
+  <ballistics
+	 near_far_distance="1.0"
+	 speed_estimation_near="10.0"
+	 speed_estimation_far="35.0"
+	 max_speed="800.0"
+	 randomness="0.05"
+	/>
 
-	<ballistics
-	near_far_distance="1.0"
-	speed_estimation_near="20.0"
-	speed_estimation_far="40.0"
-	max_speed="800.0"
-	randomness="0.05"
-	curve_height="20"
-   />
 	
 	<effect class="muzzle" ref="MusketMuzzle" />
 	<effect class="muzzle" ref="UpDust" />

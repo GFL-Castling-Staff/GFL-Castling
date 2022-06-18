@@ -3,19 +3,16 @@
 <vehicle name="Combat Mortar" 
 	map_view_atlas_index="42" 
 	usable_for_cover="0" 
-	protectors="5" 
-	owner="faction" 
-	respawn_time="3600" 
-	allow_owner_to_use_only="1" 
-	allow_character_leave_request="0" 
-	soldier_capacity_offset="3" 
-	key="combat_mortar.vehicle" 
+	protectors="1" 
+	soldier_capacity_offset="1"
+	respawn_time="600" 
+	key="mortar.vehicle" 
 	ai_stop_to_fight="0">
 	
 	<modifier class="blast_damage" value="-0.5" />
 
 	<tag name="target" />
-	<tag name="mortar_deploy" />
+	<tag name="mortar" />
 
 	<tire_set offset="1.0 0.0 0.5" radius="0.65" />
 	<tire_set offset="1.0 0.0 -0.5" radius="0.65" />
