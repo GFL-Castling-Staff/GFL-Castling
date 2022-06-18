@@ -6,13 +6,17 @@
 	protectors="1" 
 	soldier_capacity_offset="1"
 	respawn_time="600" 
-	key="mortar.vehicle" 
-	ai_stop_to_fight="0">
+	character_leave_request_mode="friendly" 
+	allow_ai_to_use="1"
+	key="mortar.vehicle" >
 	
 	<modifier class="blast_damage" value="-0.5" />
+	<modifier class="blast_range" value="-1.0" />
 
 	<tag name="target" />
-	<tag name="mortar" />
+	<tag name="metal_heavy" />
+	<tag name="combat_mortar" />
+	<tag name="heavy_combat" />
 
 	<tire_set offset="1.0 0.0 0.5" radius="0.65" />
 	<tire_set offset="1.0 0.0 -0.5" radius="0.65" />
@@ -30,7 +34,7 @@
 	<visual class="chassis" mesh_filename="mortar_base.mesh" texture_filename="Mortar_Texture.png" />
 	<visual class="chassis" key="broken" mesh_filename="mortar_base.mesh" texture_filename="humvee_broken.png" />
 
-	<character_slot type="gunner" attached_on_turret="0" seat_position="0.0 0.1 -0.0" enter_position="0 0 -1.5" rotation="0" exit_rotation="-1.57" hiding="1" animation_key="tank mg still">
+	<character_slot type="gunner" attached_on_turret="0" seat_position="0.0 0.0 -1.0" enter_position="0 0 -2.0" rotation="0" exit_rotation="-1.57" hiding="1" animation_key="tank mg still">
 		<turret index="0" />
 		<turret index="1" />
 		<turret index="2" />	
