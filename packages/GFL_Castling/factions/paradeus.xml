@@ -415,7 +415,7 @@
 			<attribute weight="1.0" min="700.0" max="1500.0" />
 		</attribute_config>
 	</soldier>
-	<soldier name="para_strelet" spawn_score="1.2" squad_size_xp_cap="0.5" copy_from="default_ai">
+	<soldier name="para_strelet" spawn_score="3.0" squad_size_xp_cap="0.5" copy_from="default_ai">
 		<ai filename="default.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="parw_strelet.weapon" enabled="1" />
@@ -439,14 +439,14 @@
 			<call key="pard_zombie.call" />
 		</resources>
 	</soldier>
-	<soldier name="para_rodelero" spawn_score="1.0" squad_size_xp_cap="0.5" copy_from="default_ai">
+	<soldier name="para_rodelero" spawn_score="2.0" squad_size_xp_cap="0.5" copy_from="default_ai">
 		<ai filename="default.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="parw_rodelero.weapon" enabled="1" />
 			<carry_item key="pard_ar.carry_item" />
 		</resources>
 	</soldier>
-	<soldier name="parw_commander" spawn_score="0.6" squad_size_xp_cap="0.5" copy_from="default_ai">
+	<soldier name="parw_commander" spawn_score="1.5" squad_size_xp_cap="0.5" copy_from="default_ai">
 		<ai filename="elite.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="parw_commander.weapon" enabled="1" />
@@ -461,7 +461,7 @@
 		</resources>
 	</soldier>
 	<!-- 警备士 -->
-	<soldier name="parw_police" spawn_score="0.8" squad_size_xp_cap="0.5" copy_from="default_ai">
+	<soldier name="parw_police" spawn_score="1.2" squad_size_xp_cap="0.5" copy_from="default_ai">
 		<ai filename="melee.ai">/
 		  <parameter class="deployment_area_utilization_factor" value="0.99" />
 		  <parameter class="uses_vehicles" value="100.0" />
@@ -478,7 +478,7 @@
 			</attribute_config>
 		</resources>
 	</soldier>
-	<soldier name="parw_dog" spawn_score="0.6" copy_from="default_ai">
+	<soldier name="parw_dog" spawn_score="1.0" copy_from="default_ai">
 		<ai filename="melee_nb.ai"/>
 		<model filename="pard_germdog.xml" />
 		<character filename="pard_germdog.character" />
@@ -490,7 +490,7 @@
 			</attribute_config>
 		</resources>
 	</soldier>
-	<soldier name="parw_thrower" spawn_score="1.0" squad_size_xp_cap="0.5" copy_from="default_ai">
+	<soldier name="parw_thrower" spawn_score="2.0" squad_size_xp_cap="0.5" copy_from="default_ai">
 		<ai filename="eod.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="parw_thrower.weapon" enabled="1" probability="1.0" />
@@ -535,7 +535,7 @@
 			</attribute_config>
 		</resources>
 	</soldier>
-	<soldier name="eagleyes" spawn_score="0.02" squad_size_xp_cap="0.5" copy_from="default_ai">
+	<soldier name="eagleyes" spawn_score="0.03" squad_size_xp_cap="0.5" copy_from="default_ai">
 		<ai filename="elite.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="parw_eagleyes.weapon" enabled="1" />
@@ -550,7 +550,7 @@
 			</attribute_config>
 		</resources>
 	</soldier>
-	<soldier name="vanguard" spawn_score="0.02" squad_size_xp_cap="0.5" copy_from="default_ai">
+	<soldier name="vanguard" spawn_score="0.03" squad_size_xp_cap="0.5" copy_from="default_ai">
 		<ai filename="eod.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="parw_vanguard.weapon" enabled="1" />
@@ -629,7 +629,7 @@
 		</item_class_existence_config>
 	</soldier>
 	<!-- Paradeus强无敌doppelsoldner -->
-	<soldier name="Paradeus_doppelsoldner" firstnames="Paradeus-SHIELD HEAVY ARMOR UNIT-" lastnames_file="Paradeus_last.name" spawn_score="0.2">
+	<soldier name="Paradeus_doppelsoldner" firstnames="Paradeus-SHIELD HEAVY ARMOR UNIT-" lastnames_file="Paradeus_last.name" spawn_score="0.4">
 		<!-- <models file="kcco_qwd.models" /> -->
 		<model filename="pard_Doppelsoldner.xml" />
 		<character filename="pard_mecha.character" />
@@ -653,7 +653,7 @@
 			<attribute weight="1.0" min="30.0" max="60.0" />
 		</attribute_config>
 	</soldier>
-	<soldier name="Paradeus_roarer" firstnames="Paradeus-SHIELD HEAVY ARMOR UNIT-" lastnames_file="Paradeus_last.name" spawn_score="0.2">
+	<soldier name="Paradeus_roarer" firstnames="Paradeus-SHIELD HEAVY ARMOR UNIT-" lastnames_file="Paradeus_last.name" spawn_score="0.5">
 		<model filename="pard_roarer_from_sv-98.xml" />
 		<character filename="roarer.character" />
 		<ai filename="roarer.ai" />
