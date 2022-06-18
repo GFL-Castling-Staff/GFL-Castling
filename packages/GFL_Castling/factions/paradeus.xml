@@ -628,6 +628,25 @@
 			<item_class_existence class="carry_item" slot="1" probability="0.5" />
 		</item_class_existence_config>
 	</soldier>
+	<soldier name="smasher" spawn_score="0.1" squad_size_xp_cap="0.5">
+		<ai filename="melee.ai" />
+		<model filename="pard_big_zombie.xml" />
+		<character filename="smasher.character" />
+		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
+			<weapon key="eild_smasher.weapon" enabled="1" />
+			<projectile key="skill_trigger_smasher.throwable" enabled="1" probability="1.0" />
+			<carry_item key="pard_nyto.carry_item" />
+		</resources>
+		<attribute_config class="xp">
+			<attribute weight="1.0" min="0.0" max="0.033" />
+		</attribute_config>
+		<attribute_config class="rp">
+			<attribute weight="1.0" min="10.0" max="100.0" />
+		</attribute_config>
+		<item_class_existence_config>
+			<item_class_existence class="carry_item" slot="1" probability="1.0" />
+		</item_class_existence_config>
+	</soldier>	
 	<!-- Paradeus强无敌doppelsoldner -->
 	<soldier name="Paradeus_doppelsoldner" firstnames="Paradeus-SHIELD HEAVY ARMOR UNIT-" lastnames_file="Paradeus_last.name" spawn_score="0.4">
 		<!-- <models file="kcco_qwd.models" /> -->
