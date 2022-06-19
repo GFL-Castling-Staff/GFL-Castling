@@ -1,0 +1,50 @@
+material FlareSparkle {
+	receive_shadows off
+	technique {
+		pass {
+			lighting off
+			fog_override true
+
+			depth_write off
+			scene_blend add
+
+			texture_unit {
+				texture sparkle.png
+			}
+		}
+	}
+}
+
+material FlareSmoke {
+        receive_shadows off
+	technique 	{
+		pass {
+			lighting off
+			alpha_rejection greater 16
+			depth_write off
+			scene_blend alpha_blend      
+			texture_unit
+			{
+				texture smoke.png
+				tex_address_mode clamp
+			}
+		}
+	}
+}
+
+material FlareFlash {
+	receive_shadows off
+	technique {
+		pass {
+			lighting off
+			fog_override true
+
+			depth_write off
+			scene_blend add
+
+			texture_unit {
+				texture flare.png
+			}
+		}
+	}
+}

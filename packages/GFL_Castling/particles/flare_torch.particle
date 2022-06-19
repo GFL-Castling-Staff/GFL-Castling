@@ -1,0 +1,84 @@
+particle_system FlareSparkleTorch
+{
+	quota	10
+	material	FlareSparkle
+	particle_width	0.2
+	particle_height	0.15
+	cull_each	false
+	renderer	billboard
+	billboard_type	point
+
+	emitter Box
+	{
+		angle	180
+		colour	1 1 1 1
+		colour_range_start	1 1 1 1
+		colour_range_end	1 1 1 1
+		direction	0 0 0
+		emission_rate	50
+		position	0.0 0 0.0
+		velocity	10
+		velocity_min	4
+		velocity_max	10
+		time_to_live	0.3
+		time_to_live_min	0.05
+		time_to_live_max	0.15
+		duration	0.18
+		width	0.2
+		height	0.0
+		depth	0.2
+	}
+
+	affector Scaler
+	{
+		rate	-0.8
+	}
+
+	affector ColourFader
+	{
+		red	1
+		green	0
+		blue	0
+		alpha	0
+	}
+}
+
+
+particle_system FlareFlashTorch
+{
+	quota	10
+	material	FlareFlash
+	particle_width	1.8
+	particle_height	1.4
+	cull_each	false
+	renderer	billboard
+	billboard_type	point
+
+	emitter Ellipsoid
+	{
+		angle	180
+		colour	0.5 0.5 1 1
+		colour_range_start	0.5 0.5 1 1
+		colour_range_end	0.5 0.5 1 0.8
+		direction	0 1 0
+		emission_rate	10
+		position	0 0 0
+		velocity	0
+		velocity_min	0
+		velocity_max	0
+		time_to_live	0.2
+		time_to_live_min	0.2
+		time_to_live_max	0.2
+		duration 0.2
+		width	.1
+		height	0
+		depth	.1
+	}
+
+
+
+	affector Scaler
+	{
+		rate	0.2
+	}
+}

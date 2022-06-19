@@ -464,8 +464,12 @@
 		<models file="kcco_human_basic.models" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_carry_items="1">
 			<weapon key="kcco_ar_2.weapon" enabled="1" />
+			<!-- <weapon key="kcco_tracer_dart_ranged.weapon" enabled="1" />  -->
+			<!-- <weapon key="kcco_tracer_dart_accurate.weapon" enabled="1" />  -->
 			<carry_item key="kcco_ar.carry_item" enabled="1" />
 			<projectile key="kcco_smartgrenade_1.projectile" enabled="1.0" />
+			<projectile key="kcco_tracer_dart_r.projectile" enabled="1.0" />
+			<projectile key="kcco_tracer_dart_a.projectile" enabled="1.0" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="0.5" max="3.8" />
