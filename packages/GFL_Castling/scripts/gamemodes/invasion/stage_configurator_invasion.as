@@ -156,6 +156,8 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 	// ------------------------------------------------------------------------------------------------
 	protected void setupNormalStages() {
+				addStage(setupStage104()); 		  // map105_1 zoneAttack by diling
+		addStage(setupStage105()); 		  // map105_2 shockzone by diling
 		addStage(setupStage2());          // map4
 		// addStage(setupEggStage());		  // 上坟
 		addStage(setupStage3());
@@ -172,8 +174,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		addStage(setupStage18());         // map13_2
 		addStage(setupStage13());         // map16    
 		addStage(setupFinalStage1());     // map11
-		addStage(setupStage104()); 		  // map105_1 zoneAttack by diling
-		addStage(setupStage105()); 		  // map105_2 shockzone by diling
+
 		addStage(setupStage8());          // map8
 		addStage(setupStage14());         // map6_2
 		addStage(setupStage106());		  // map106 E30 Route by diling
@@ -303,13 +304,25 @@ class StageConfiguratorInvasion : StageConfigurator {
 			f.m_capacityOffset = 20; 
 			f.m_capacityMultiplier = 1.0;
 			stage.m_factions.insertLast(f);
+			if(getFactionConfigs()[0].m_name=="GK"){
+				_log("gotGKguys114514");
+				XmlElement command("command");
+				command.setStringAttribute("class", "faction");
+				command.setIntAttribute("faction_id", 0);
+				command.setStringAttribute("soldier_group_name", "kcco_f_aegis");
+				command.setFloatAttribute("spawn_score", 1.0f);
+				stage.m_extraCommands.insertLast(command);
+				XmlElement command2 = command;
+				command2.setStringAttribute("soldier_group_name", "kcco_f_cyclops_sg");
+				command2.setFloatAttribute("spawn_score", 1.5f);			
+				stage.m_extraCommands.insertLast(command2);
+			}
 		}
 		{
 			Faction f(FactionConfig(1, "sf.xml", "S.F.", "0.91 0.11 0.20", "sf.xml"), createCommanderAiCommand(1,0.3,0.2));
 			f.m_capacityMultiplier = 0.8;                                                 
 			stage.m_factions.insertLast(f);                                         
 		}
-
 		
 		// metadata
 		stage.m_primaryObjective = "capture";

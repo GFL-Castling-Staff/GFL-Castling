@@ -140,7 +140,11 @@ class jupiter: Tracker {
 	void onRemove() {
 		tracker_started = false;
 	}
-	
+
+	protected void handleMatchEndEvent(const XmlElement@ event) {
+        m_started= false;
+    }
+
 	protected void handleVehicleSpawnEvent(const XmlElement@ event) {
 		string key = event.getStringAttribute("vehicle_key");
 		if (key == "sf_jupiter.vehicle") {
