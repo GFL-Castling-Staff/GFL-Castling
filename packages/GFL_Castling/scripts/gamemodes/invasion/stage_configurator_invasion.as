@@ -156,12 +156,11 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 	// ------------------------------------------------------------------------------------------------
 	protected void setupNormalStages() {
-		addStage(setupStage8());          // map8
-
-		addStage(setupStage2());          // map4
-		// addStage(setupEggStage());		  // 上坟
-		addStage(setupStage3());
 		addStage(setupStage107());		  // chapter1 by diling
+		addStage(setupStage8());          // map8
+		addStage(setupStage2());          // map4 c
+		// addStage(setupEggStage());		  // 上坟
+		addStage(setupStage3());		  // map3 c
 		addStage(setupStage9());          // map9
 		addStage(setupStage7());          // map6
 		addStage(setupStage1());          // map2

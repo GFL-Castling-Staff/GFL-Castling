@@ -1004,19 +1004,18 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 	array<Resource@>@ getUnlockWeaponList() const {
 		array<Resource@> list;
 
-		list.push_back(Resource("l85a2.weapon", "weapon"));
-		list.push_back(Resource("famasg1.weapon", "weapon"));
-		list.push_back(Resource("sg552.weapon", "weapon"));
-		list.push_back(Resource("m79.weapon", "weapon"));
-		list.push_back(Resource("gl06.weapon", "weapon"));
-		list.push_back(Resource("rgm40.weapon", "weapon"));                
-		list.push_back(Resource("minig_resource.weapon", "weapon"));
-		list.push_back(Resource("desert_eagle.weapon", "weapon"));
-		list.push_back(Resource("tow_resource.weapon", "weapon"));   
-		list.push_back(Resource("eodvest.carry_item", "carry_item")); 
-		list.push_back(Resource("gl_resource.weapon", "weapon"));
-		list.push_back(Resource("smaw.weapon", "weapon"));
-		list.push_back(Resource("hornet_resource.weapon", "weapon"));        
+		list.push_back(Resource("gkw_m2hb.weapon", "weapon"));
+		list.push_back(Resource("gkw_spas12.weapon", "weapon"));
+		list.push_back(Resource("gkw_mg42.weapon", "weapon"));
+		list.push_back(Resource("gkw_uzi.weapon", "weapon"));
+		list.push_back(Resource("gkw_supersass.weapon", "weapon"));
+		list.push_back(Resource("gkw_mp5.weapon", "weapon"));
+		list.push_back(Resource("gkw_m1897.carry_item", "carry_item")); 
+		list.push_back(Resource("gkw_m1014.weapon", "weapon"));
+		list.push_back(Resource("gkw_svd.weapon", "weapon"));
+		list.push_back(Resource("gkw_fal.weapon", "weapon"));        
+		list.push_back(Resource("gkw_desert_eagle.weapon", "weapon"));        
+		list.push_back(Resource("gkw_mk23.weapon", "weapon"));        
 
 		return list;
 	}
@@ -1075,6 +1074,8 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 				ScoredResource("gkw_pps43.weapon", "weapon", 0.6f),
 				ScoredResource("gkw_qsb91.weapon", "weapon", 0.6f),
 				ScoredResource("gkw_rpd.weapon", "weapon", 0.6f),
+				ScoredResource("gkw_m2hb.weapon", "weapon", 0.6f),
+				ScoredResource("gkw_uzi.weapon", "weapon", 0.6f),
 				ScoredResource("gkw_supersass.weapon", "weapon", 0.6f),
 				// ScoredResource("gkw_t-cms.weapon", "weapon", 0.6f),
 
@@ -1104,7 +1105,6 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 				ScoredResource("gkw_m1903.weapon", "weapon", 0.3f),
 				ScoredResource("gkw_m60.weapon", "weapon", 0.3f),
 				// ScoredResource("gkw_mg3.weapon", "weapon", 0.3f),
-				ScoredResource("gkw_uzi.weapon", "weapon", 0.3f),
 				ScoredResource("gkw_mk23.weapon", "weapon", 0.3f),
 				ScoredResource("gkw_mk46.weapon", "weapon", 0.3f),
 				ScoredResource("gkw_mk48.weapon", "weapon", 0.3f),
@@ -1127,6 +1127,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 				ScoredResource("gkw_usas12.weapon", "weapon", 0.3f),
 				ScoredResource("gkw_xm3.weapon", "weapon", 0.3f),
 				ScoredResource("gkw_xm8.weapon", "weapon", 0.3f),
+				ScoredResource("gkw_spas12.weapon", "weapon", 0.3f),
 
 
 				ScoredResource("gkw_type89.weapon", "weapon", 0.2f),
@@ -1182,7 +1183,6 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 				ScoredResource("gkw_p90.weapon", "weapon", 0.2f),
 				ScoredResource("gkw_pa15.weapon", "weapon", 0.2f),
 				ScoredResource("gkw_pm06.weapon", "weapon", 0.2f),
-				ScoredResource("gkw_pp19.weapon", "weapon", 0.2f),
 				ScoredResource("gkw_qbz191.weapon", "weapon", 0.2f),
 				ScoredResource("gkw_qjy88.weapon", "weapon", 0.2f),
 				ScoredResource("gkw_r5.weapon", "weapon", 0.2f),

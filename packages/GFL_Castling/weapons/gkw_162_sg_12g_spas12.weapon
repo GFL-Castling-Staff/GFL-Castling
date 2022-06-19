@@ -77,7 +77,7 @@
 		<!-- Model, Icon, Cost -->
 		<model filename="gkw_sg_spas12.xml" />
 		<hud_icon filename="gkw_spas12.png" />
-		<commonness value="0.2" in_stock="1" can_respawn_with="1" />
+		<commonness value="0.2" in_stock="0" can_respawn_with="1" />
 		<!-- Ballistics -->
 		<weak_hand_hold offset="0.3" />
 		<projectile file="bullet.projectile">
