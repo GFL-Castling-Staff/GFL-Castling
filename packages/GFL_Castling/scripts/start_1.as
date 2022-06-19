@@ -20,7 +20,7 @@ void main(dictionary@ inputData) {
 		
         settings.m_fellowCapacityFactor = 1.0;
         settings.m_fellowAiAccuracyFactor = 0.90;
-        settings.m_enemyCapacityFactor = 1.;
+        settings.m_enemyCapacityFactor = 1.0;
         settings.m_enemyAiAccuracyFactor = 0.88;
         settings.m_initialRp = 1000.0;
 		

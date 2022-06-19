@@ -156,8 +156,8 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 	// ------------------------------------------------------------------------------------------------
 	protected void setupNormalStages() {
-				addStage(setupStage104()); 		  // map105_1 zoneAttack by diling
-		addStage(setupStage105()); 		  // map105_2 shockzone by diling
+		addStage(setupStage8());          // map8
+
 		addStage(setupStage2());          // map4
 		// addStage(setupEggStage());		  // 上坟
 		addStage(setupStage3());
@@ -174,13 +174,13 @@ class StageConfiguratorInvasion : StageConfigurator {
 		addStage(setupStage18());         // map13_2
 		addStage(setupStage13());         // map16    
 		addStage(setupFinalStage1());     // map11
-
-		addStage(setupStage8());          // map8
+		addStage(setupStage104()); 		  // map105_1 zoneAttack by diling
+		addStage(setupStage105()); 		  // map105_2 shockzone by diling
+		addStage(setupStage6());          // map5
 		addStage(setupStage14());         // map6_2
 		addStage(setupStage106());		  // map106 E30 Route by diling
 		// addStage(setupStage5());          // map1
 		addStage(setupStage19());		  // map19
-		addStage(setupStage6());          // map5
 		addStage(setupFinalStage2());     // map12
 		addStage(setupStage108());		  // xiaoxieshen by diling
 		addStage(setupStage11());         // map13
@@ -301,7 +301,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 		{
 			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0));                                                  
-			f.m_capacityOffset = 20; 
+			f.m_capacityOffset = 35; 
 			f.m_capacityMultiplier = 1.0;
 			stage.m_factions.insertLast(f);
 			if(getFactionConfigs()[0].m_name=="GK"){
@@ -312,9 +312,11 @@ class StageConfiguratorInvasion : StageConfigurator {
 				command.setStringAttribute("soldier_group_name", "kcco_f_aegis");
 				command.setFloatAttribute("spawn_score", 1.0f);
 				stage.m_extraCommands.insertLast(command);
-				XmlElement command2 = command;
-				command2.setStringAttribute("soldier_group_name", "kcco_f_cyclops_sg");
-				command2.setFloatAttribute("spawn_score", 1.5f);			
+				XmlElement command2("command");
+				command.setStringAttribute("class", "faction");
+				command.setIntAttribute("faction_id", 0);
+				command.setStringAttribute("soldier_group_name", "kcco_f_cyclops_sg");
+				command.setFloatAttribute("spawn_score", 2.0f);
 				stage.m_extraCommands.insertLast(command2);
 			}
 		}
@@ -963,14 +965,12 @@ class StageConfiguratorInvasion : StageConfigurator {
 	protected Stage@ setupStage8() {
 		Stage@ stage = createStage();
 		stage.m_mapInfo.m_name = "Vigil Island";
-		stage.m_mapInfo.m_path = "media/packages/vanilla/maps/map8";
+		stage.m_mapInfo.m_path = "media/packages/GFLC_Map/maps/map8";
 		stage.m_mapInfo.m_id = "map8";
 
-		stage.m_includeLayers.insertLast("layer1.invasion"); 
+		stage.m_includeLayers.insertLast("layer1.campaign");
 
 		stage.addTracker(Overtime(m_metagame, 0));
-		stage.addTracker(Spawner(m_metagame, 1, Vector3(255,0,344),20, "default_ai"));          // added 15 in 1.65, less over_capacity to compensate
-
 
 		stage.m_maxSoldiers = 21 * 6;     // was 33 * 3 in 1.65
 		stage.m_playerAiCompensation = 8;                                         // was 4 (1.81)
@@ -1006,7 +1006,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 			XmlElement command("command");
 			command.setStringAttribute("class", "faction_resources");
 			command.setIntAttribute("faction_id", 0);
-			addFactionResourceElements(command, "vehicle", array<string> = {"radio_jammer.vehicle"}, false);
+			addFactionResourceElements(command, "vehicle", array<string> = {"radio_jammer.vehicle","armored_truck.vehicle"}, false);
 
 			stage.m_extraCommands.insertLast(command);
 		}

@@ -20,7 +20,7 @@ void main(dictionary@ inputData) {
 		
         settings.m_fellowCapacityFactor = 1.0;
         settings.m_fellowAiAccuracyFactor = 0.90;
-        settings.m_enemyCapacityFactor = 2.0;
+        settings.m_enemyCapacityFactor = 1.5;
         settings.m_enemyAiAccuracyFactor = 0.93;
         settings.m_initialRp = 1000.0;
 		
@@ -36,7 +36,7 @@ void main(dictionary@ inputData) {
 
         settings.m_startServerCommand = """
 <command class='start_server'
-	server_name='[Castling][Hard-2 200%]'
+	server_name='[Castling][Normal-2 150%]'
 	server_port='1234'
 	comment='Read server rules in our discord: discord.gg/wwUM3kYmRC, QQ Group: 706234535'
 	url='https://castling.fandom.com/wiki/Castling_Wiki'
