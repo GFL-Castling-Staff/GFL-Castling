@@ -6,9 +6,11 @@
 	protectors="1" 
 	soldier_capacity_offset="1"
 	respawn_time="600" 
-	character_leave_request_mode="friendly" 
-	allow_ai_to_use="1"
-	key="mortar.vehicle" >
+	allow_owner_to_use_only="1" 
+	allow_character_leave_request="0" 
+	soldier_capacity_offset="1" 
+	key="mortar.vehicle" 
+	ai_stop_to_fight="0">
 	
 	<modifier class="blast_damage" value="-0.5" />
 	<modifier class="blast_range" value="-1.0" />

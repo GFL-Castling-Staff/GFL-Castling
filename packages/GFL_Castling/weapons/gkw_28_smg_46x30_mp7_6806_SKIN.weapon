@@ -1,20 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<weapon file="one_hand_smg.animation_base" key="gkw_mp7_6806.weapon">
-
+<weapon key="gkw_mp7_6806.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0">
+<tag name="smg" />
     <specification 
 		accuracy_factor="0.98" 
 		retrigger_time="0.06" 
 		barrel_offset="0.4" 
 		class="0"
+        slot="0"
 		magazine_size="30" 
+        carry_in_two_hands="0"
 		name="MP7-[Fall of the Stars]" 
 		projectile_speed="172.62" 
 		suppressed="1" 
+        burst_shots="1"
 		sustained_fire_diminish_rate="2.4" 
-		sustained_fire_grow_step="0.3" 	/>
+		sustained_fire_grow_step="0.3"
+        stab_enabled="1"/>
 
-    <inventory buy_price="10.0" sell_price="10.0" />
-    <commonness value="0" in_stock="0" can_respawn_with="1" />
+    <commonness value="0.2" in_stock="0" can_respawn_with="1" />
+	<inventory encumbrance="2.0" buy_price="10.0" sell_price="10.0"/>
+	<capacity value="1" source="rank" source_value="0.0" />
+
+	<animation state_key="recoil" animation_key="recoil, pistol 2" />
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil, smg1, prone" />
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil, overwall pistol" />	
+	<animation state_key="hold"					animation_key="still, pistol 2" />
+  	<animation state_key="hold_casual"			animation_key="hold_casual, pistol 2" />
+	<animation state_key="hold_on_wall"			animation_key="hold, overwall pistol" />
+  	<animation state_key="still_against_wall"	animation_key="hold_casual, pistol 4" />
+	<animation state_key="running"				animation_key="running, pistol 2" />
+	<animation state_key="walking"				animation_key="walking, pistol 2" />
+    <animation state_key="walking_backwards" 	animation_key="walking backwards, pistol" />
+	<animation state_key="crouching"			animation_key="crouch, pistol 2" />
+	<animation state_key="crouch_moving"		animation_key="crouching forwards, single hand carry" />
+	<animation state_key="crouch_moving_backwards"	animation_key="crouching backwards, pistol 2" />
+    <animation state_key="prone_still" 			animation_key="prone_still, pistol" />
+    <animation state_key="changing_weapon_in" 	animation_key="change weapon in, single hand carry" />
+    <animation state_key="stabbing" 			animation_key="pistol whip 2" />
+    <animation state_key="reload"	animation_key="reloading, A OHG 0.75" />
+    <animation state_key="reload"	animation_key="reloading2, A OHG 0.75" />
 
     <sound key="fire" fileref="mp7_fire_FromFC6.wav" pitch_variety="0.05" volume="1.1" />
     <sound key="magazine_out" fileref="mp7_mgz_out_FromDIVISION2.wav" volume="0.6" />
@@ -40,4 +64,12 @@
 	<stance state_key="crouching" accuracy="1" />
     <stance state_key="prone" accuracy="1" />
     <modifier class="hit_success_probability" value="-0.15" />
+	<stance state_key="over_wall" accuracy="1" />
+	<modifier class="speed" value="+0.4" />
+	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0" />
+	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0" />
+    <target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0" />
+    <target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0" />
+    <target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0" />
+	<target_factors tag="commander" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0" />
 </weapon>
