@@ -304,13 +304,25 @@ class StageConfiguratorInvasion : StageConfigurator {
 			f.m_capacityOffset = 20; 
 			f.m_capacityMultiplier = 1.0;
 			stage.m_factions.insertLast(f);
+			if(getFactionConfigs()[0].m_name=="GK"){
+				_log("gotGKguys114514");
+				XmlElement command("command");
+				command.setStringAttribute("class", "faction");
+				command.setIntAttribute("faction_id", 0);
+				command.setStringAttribute("soldier_group_name", "kcco_f_aegis");
+				command.setFloatAttribute("spawn_score", 1.0f);
+				stage.m_extraCommands.insertLast(command);
+				XmlElement command2 = command;
+				command2.setStringAttribute("soldier_group_name", "kcco_f_cyclops_sg");
+				command2.setFloatAttribute("spawn_score", 1.5f);			
+				stage.m_extraCommands.insertLast(command2);
+			}
 		}
 		{
 			Faction f(FactionConfig(1, "sf.xml", "S.F.", "0.91 0.11 0.20", "sf.xml"), createCommanderAiCommand(1,0.3,0.2));
 			f.m_capacityMultiplier = 0.8;                                                 
 			stage.m_factions.insertLast(f);                                         
 		}
-
 		
 		// metadata
 		stage.m_primaryObjective = "capture";
