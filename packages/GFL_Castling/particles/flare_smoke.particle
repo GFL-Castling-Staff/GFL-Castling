@@ -1,0 +1,779 @@
+particle_system FlareSmoke
+{
+	quota	500
+	//material	Dust4
+	material	FlareSmoke
+	particle_width	0.7
+	particle_height	0.7
+	cull_each	false
+	renderer	billboard
+	billboard_type	point
+
+	emitter Box
+	{
+		angle	2
+		colour_range_start	1.0 0.2 0.2 0.5
+		colour_range_end	1.0 0.3 0.3 1
+		direction	0 1 0.2
+		emission_rate	50
+		position	0 0.3 0
+    width 0.1
+    height 0.0
+    depth 0.1
+
+		velocity_min	1.0
+		velocity_max	2.4
+
+		time_to_live_min	6
+		time_to_live_max	10
+		duration	0.0
+	}
+
+	affector Scaler
+	{
+		rate	0.75
+	}
+
+	affector Rotator
+	{
+		rotation_speed_range_start	-45
+		rotation_speed_range_end	45
+		rotation_range_start	0
+		rotation_range_end	360
+	}
+
+	affector ColourFader
+	{
+		red	1
+		green	0
+		blue	0
+		alpha	-0.3
+	}
+
+	affector LinearForce
+	{
+		force_vector 1 1 0
+		force_application add
+	}
+
+}
+
+particle_system FlareSmokeBig
+{
+	quota	500
+	//material	Dust4
+	material	FlareSmoke
+	particle_width	1.2
+	particle_height	1.2
+	cull_each	false
+	renderer	billboard
+	billboard_type	point
+
+	emitter Box
+	{
+		angle	2
+		colour_range_start	1.0 0.6 0.2 0.5
+		colour_range_end	1.0 0.7 0.3 1
+		direction	0 1 0.2
+		emission_rate	50
+		position	0 0.3 0
+    width 0.1
+    height 0.0
+    depth 0.1
+
+		velocity_min	1.0
+		velocity_max	2.4
+
+		time_to_live_min	6
+		time_to_live_max	10
+		duration	0.0
+	}
+
+	affector Scaler
+	{
+		rate	0.75
+	}
+
+	affector Rotator
+	{
+		rotation_speed_range_start	-45
+		rotation_speed_range_end	45
+		rotation_range_start	0
+		rotation_range_end	360
+	}
+
+	affector ColourFader
+	{
+		red	1
+		green	0.5
+		blue	0
+		alpha	-0.2
+	}
+
+	affector LinearForce
+	{
+		force_vector 1 1 0
+		force_application add
+	}
+
+}
+
+particle_system FlareSmokeBlue
+{
+	quota	500
+	//material	Dust4
+	material	FlareSmoke
+	particle_width	0.7
+	particle_height	0.7
+	cull_each	false
+	renderer	billboard
+	billboard_type	point
+
+	emitter Box
+	{
+		angle	2
+		colour_range_start	0.2 0.2 1.0 0.5
+		colour_range_end	0.3 0.3 1.0 1
+		direction	0 1 0.2
+		emission_rate	50
+		position	0 0.3 0
+    width 0.1
+    height 0.0
+    depth 0.1
+
+		velocity_min	1.0
+		velocity_max	2.4
+
+		time_to_live_min	6
+		time_to_live_max	10
+		duration	0.0
+	}
+
+	affector Scaler
+	{
+		rate	0.75
+	}
+
+	affector Rotator
+	{
+		rotation_speed_range_start	-45
+		rotation_speed_range_end	45
+		rotation_range_start	0
+		rotation_range_end	360
+	}
+
+	affector ColourFader
+	{
+		red	0.2
+		green	0
+		blue	1
+		alpha	-0.3
+	}
+
+	affector LinearForce
+	{
+		force_vector 1 1 0
+		force_application add
+	}
+
+}
+
+particle_system FlareSmokeCyan
+{
+	quota	500
+	//material	Dust4
+	material	FlareSmoke
+	particle_width	0.7
+	particle_height	0.7
+	cull_each	false
+	renderer	billboard
+	billboard_type	point
+
+	emitter Box
+	{
+		angle	2
+		colour_range_start	0.2 1.0 1.0 0.5
+		colour_range_end	0.3 1.0 1.0 1
+		direction	0 1 0.2
+		emission_rate	50
+		position	0 0.3 0
+    width 0.1
+    height 0.0
+    depth 0.1
+
+		velocity_min	1.0
+		velocity_max	2.4
+
+		time_to_live_min	6
+		time_to_live_max	10
+		duration	0.0
+	}
+
+	affector Scaler
+	{
+		rate	0.75
+	}
+
+	affector Rotator
+	{
+		rotation_speed_range_start	-45
+		rotation_speed_range_end	45
+		rotation_range_start	0
+		rotation_range_end	360
+	}
+
+	affector ColourFader
+	{
+		red	0
+		green	1
+		blue	1
+		alpha	-0.3
+	}
+
+	affector LinearForce
+	{
+		force_vector 1 1 0
+		force_application add
+	}
+
+}
+
+particle_system FlareSmokeYellow
+{
+	quota	500
+	//material	Dust4
+	material	FlareSmoke
+	particle_width	0.7
+	particle_height	0.7
+	cull_each	false
+	renderer	billboard
+	billboard_type	point
+
+	emitter Box
+	{
+		angle	2
+		colour_range_start	1.0 1.0 0 0.5
+		colour_range_end 1.0 1.0 0.1 1
+		direction	0 1 0.2
+		emission_rate	50
+		position	0 0.3 0
+    width 0.1
+    height 0.0
+    depth 0.1
+
+		velocity_min	1.0
+		velocity_max	2.4
+
+		time_to_live_min	6
+		time_to_live_max	10
+		duration	0.0
+	}
+
+	affector Scaler
+	{
+		rate	0.75
+	}
+
+	affector Rotator
+	{
+		rotation_speed_range_start	-45
+		rotation_speed_range_end	45
+		rotation_range_start	0
+		rotation_range_end	360
+	}
+
+	affector ColourFader
+	{
+		red	1
+		green	1
+		blue	0
+		alpha	-0.3
+	}
+
+	affector LinearForce
+	{
+		force_vector 1 1 0
+		force_application add
+	}
+
+}
+
+particle_system FlareSmokeGreen
+{
+	quota	500
+	//material	Dust4
+	material	FlareSmoke
+	particle_width	0.7
+	particle_height	0.7
+	cull_each	false
+	renderer	billboard
+	billboard_type	point
+
+	emitter Box
+	{
+		angle	2
+		colour_range_start	0 0.8 0 0.5
+		colour_range_end	0 0.8 0 1
+		direction	0 1 0.2
+		emission_rate	50
+		position	0 0.3 0
+    width 0.1
+    height 0.0
+    depth 0.1
+
+		velocity_min	1.0
+		velocity_max	2.4
+
+		time_to_live_min	6
+		time_to_live_max	10
+		duration	0.0
+	}
+
+	affector Scaler
+	{
+		rate	0.75
+	}
+
+	affector Rotator
+	{
+		rotation_speed_range_start	-45
+		rotation_speed_range_end	45
+		rotation_range_start	0
+		rotation_range_end	360
+	}
+
+	affector ColourFader
+	{
+		red	0.2
+		green	1
+		blue	0
+		alpha	-0.3
+	}
+
+	affector LinearForce
+	{
+		force_vector 1 1 0
+		force_application add
+	}
+
+}
+
+particle_system FlareSmokeOrange
+{
+	quota	500
+	//material	Dust4
+	material	FlareSmoke
+	particle_width	0.7
+	particle_height	0.7
+	cull_each	false
+	renderer	billboard
+	billboard_type	point
+
+	emitter Box
+	{
+		angle	2
+		colour_range_start	1.0 0.6 0.2 0.5
+		colour_range_end	1.0 0.7 0.3 1
+		direction	0 1 0.2
+		emission_rate	50
+		position	0 0.3 0
+    width 0.1
+    height 0.0
+    depth 0.1
+
+		velocity_min	1.0
+		velocity_max	2.4
+
+		time_to_live_min	6
+		time_to_live_max	10
+		duration	0.0
+	}
+
+	affector Scaler
+	{
+		rate	0.75
+	}
+
+	affector Rotator
+	{
+		rotation_speed_range_start	-45
+		rotation_speed_range_end	45
+		rotation_range_start	0
+		rotation_range_end	360
+	}
+
+	affector ColourFader
+	{
+		red	1
+		green	0.5
+		blue	0
+		alpha	-0.3
+	}
+
+	affector LinearForce
+	{
+		force_vector 1 1 0
+		force_application add
+	}
+
+}
+
+particle_system FlareSmokeIvy
+{
+	quota	500
+	//material	Dust4
+	material	FlareSmoke
+	particle_width	0.7
+	particle_height	0.7
+	cull_each	false
+	renderer	billboard
+	billboard_type	point
+
+	emitter Box
+	{
+		angle	2
+		colour_range_start	0.0 0.4 0.3 0.5
+		colour_range_end	0.1 0.5 0.4 1
+		direction	0 1 0.2
+		emission_rate	50
+		position	0 0.3 0
+    width 0.1
+    height 0.0
+    depth 0.1
+
+		velocity_min	1.0
+		velocity_max	2.4
+
+		time_to_live_min	6
+		time_to_live_max	10
+		duration	0.0
+	}
+
+	affector Scaler
+	{
+		rate	0.75
+	}
+
+	affector Rotator
+	{
+		rotation_speed_range_start	-45
+		rotation_speed_range_end	45
+		rotation_range_start	0
+		rotation_range_end	360
+	}
+
+	affector ColourFader
+	{
+		red		0
+		green	0.4
+		blue	0.3
+		alpha	-0.3
+	}
+
+	affector LinearForce
+	{
+		force_vector 1 1 0
+		force_application add
+	}
+
+}
+
+particle_system FlareSmokeMagenta
+{
+	quota	500
+	//material	Dust4
+	material	FlareSmoke
+	particle_width	0.7
+	particle_height	0.7
+	cull_each	false
+	renderer	billboard
+	billboard_type	point
+
+	emitter Box
+	{
+		angle	2
+		colour_range_start	0.7 0.0 0.7 0.5
+		colour_range_end	0.7 0.0 0.8 1
+		direction	0 1 0.2
+		emission_rate	50
+		position	0 0.3 0
+    width 0.1
+    height 0.0
+    depth 0.1
+
+		velocity_min	1.0
+		velocity_max	2.4
+
+		time_to_live_min	6
+		time_to_live_max	10
+		duration	0.0
+	}
+
+	affector Scaler
+	{
+		rate	0.75
+	}
+
+	affector Rotator
+	{
+		rotation_speed_range_start	-45
+		rotation_speed_range_end	45
+		rotation_range_start	0
+		rotation_range_end	360
+	}
+
+	affector ColourFader
+	{
+		red	0.7
+		green	0.0
+		blue	0.7
+		alpha	-0.3
+	}
+
+	affector LinearForce
+	{
+		force_vector 1 1 0
+		force_application add
+	}
+
+}
+
+particle_system FlareSmokePurple
+{
+	quota	500
+	//material	Dust4
+	material	FlareSmoke
+	particle_width	0.7
+	particle_height	0.7
+	cull_each	false
+	renderer	billboard
+	billboard_type	point
+
+	emitter Box
+	{
+		angle	2
+		colour_range_start	0.5 0.0 1.0 0.5
+		colour_range_end	0.6 0.0 1.0 1
+		direction	0 1 0.2
+		emission_rate	50
+		position	0 0.3 0
+    width 0.1
+    height 0.0
+    depth 0.1
+
+		velocity_min	1.0
+		velocity_max	2.4
+
+		time_to_live_min	6
+		time_to_live_max	10
+		duration	0.0
+	}
+
+	affector Scaler
+	{
+		rate	0.75
+	}
+
+	affector Rotator
+	{
+		rotation_speed_range_start	-45
+		rotation_speed_range_end	45
+		rotation_range_start	0
+		rotation_range_end	360
+	}
+
+	affector ColourFader
+	{
+		red	0.5
+		green	0
+		blue	1
+		alpha	-0.3
+	}
+
+	affector LinearForce
+	{
+		force_vector 1 1 0
+		force_application add
+	}
+
+}
+
+particle_system FlareSmokeKhaki
+{
+	quota	500
+	//material	Dust4
+	material	FlareSmoke
+	particle_width	0.7
+	particle_height	0.7
+	cull_each	false
+	renderer	billboard
+	billboard_type	point
+
+	emitter Box
+	{
+		angle	2
+		colour_range_start	0.6 0.5 0.3 0.5
+		colour_range_end	0.7 0.6 0.3 1
+		direction	0 1 0.2
+		emission_rate	50
+		position	0 0.3 0
+    width 0.1
+    height 0.0
+    depth 0.1
+
+		velocity_min	1.0
+		velocity_max	2.4
+
+		time_to_live_min	6
+		time_to_live_max	10
+		duration	0.0
+	}
+
+	affector Scaler
+	{
+		rate	0.75
+	}
+
+	affector Rotator
+	{
+		rotation_speed_range_start	-45
+		rotation_speed_range_end	45
+		rotation_range_start	0
+		rotation_range_end	360
+	}
+
+	affector ColourFader
+	{
+		red	0.6
+		green	0.6
+		blue	0.3
+		alpha	-0.3
+	}
+
+	affector LinearForce
+	{
+		force_vector 1 1 0
+		force_application add
+	}
+
+}
+
+particle_system FlareSmokeGrey
+{
+	quota	500
+	//material	Dust4
+	material	FlareSmoke
+	particle_width	0.7
+	particle_height	0.7
+	cull_each	false
+	renderer	billboard
+	billboard_type	point
+
+	emitter Box
+	{
+		angle	2
+		colour_range_start	0.5 0.5 0.5 0.5
+		colour_range_end	0.6 0.6 0.6 1
+		direction	0 1 0.2
+		emission_rate	50
+		position	0 0.3 0
+    width 0.1
+    height 0.0
+    depth 0.1
+
+		velocity_min	1.0
+		velocity_max	2.4
+
+		time_to_live_min	6
+		time_to_live_max	10
+		duration	0.0
+	}
+
+	affector Scaler
+	{
+		rate	0.75
+	}
+
+	affector Rotator
+	{
+		rotation_speed_range_start	-45
+		rotation_speed_range_end	45
+		rotation_range_start	0
+		rotation_range_end	360
+	}
+
+	affector ColourFader
+	{
+		red	0.5
+		green	0.5
+		blue	0.5
+		alpha	-0.3
+	}
+
+	affector LinearForce
+	{
+		force_vector 1 1 0
+		force_application add
+	}
+
+}
+
+particle_system FlareSmokeMulti
+{
+	quota	500
+	//material	Dust4
+	material	FlareSmoke
+	particle_width	0.7
+	particle_height	0.7
+	cull_each	false
+	renderer	billboard
+	billboard_type	point
+
+	emitter Box
+	{
+		angle	2
+		colour_range_start	0 0 0 1
+		colour_range_end	1 1 1 1
+		direction	0 1 0.2
+		emission_rate	50
+		position	0 0.3 0
+    width 0.1
+    height 0.0
+    depth 0.1
+
+		velocity_min	1.0
+		velocity_max	2.4
+
+		time_to_live_min	6
+		time_to_live_max	10
+		duration	0.0
+	}
+
+	affector Scaler
+	{
+		rate	0.75
+	}
+
+	affector Rotator
+	{
+		rotation_speed_range_start	-45
+		rotation_speed_range_end	45
+		rotation_range_start	0
+		rotation_range_end	360
+	}
+
+	affector ColourFader
+	{
+		red	0.2
+		green	0.2
+		blue	0.2
+		alpha	-0.25
+	}
+
+	affector LinearForce
+	{
+		force_vector 1 1 0
+		force_application add
+	}
+
+}

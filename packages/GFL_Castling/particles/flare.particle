@@ -1,0 +1,681 @@
+particle_system FlareSparkle
+{
+	quota	500
+	material	FlareSparkle
+	particle_width	0.2
+	particle_height	0.15
+	cull_each	false
+	renderer	billboard
+	billboard_type	point
+
+	emitter Box
+	{
+		angle	180
+		colour	1 1 1 1
+		colour_range_start	1 1 1 1
+		colour_range_end	1 1 1 1
+		direction	0 0 0
+		emission_rate	50
+		position	0.0 0 0.0
+		velocity	10
+		velocity_min	4
+		velocity_max	10
+		time_to_live	0.3
+		time_to_live_min	0.05
+		time_to_live_max	0.15
+		duration	0
+		duration_min	0
+		duration_max	0
+		repeat_delay	0
+		repeat_delay_min	0
+		repeat_delay_max	0
+		width	0.2
+		height	0.0
+		depth	0.2
+	}
+
+	affector Scaler
+	{
+		rate	-0.8
+	}
+
+	affector ColourFader
+	{
+		red	1
+		green	0
+		blue	0
+		alpha	0
+	}
+}
+
+
+particle_system FlareFlash
+{
+	quota	1000
+	material	FlareFlash
+	particle_width	1.8
+	particle_height	1.4
+	cull_each	false
+	renderer	billboard
+	billboard_type	point
+
+	emitter Ellipsoid
+	{
+		angle	180
+		colour	1 0.8 0.8 1
+		colour_range_start	1 1 1 1
+		colour_range_end	1 0.6 0.6 0.8
+		direction	0 1 0
+		emission_rate	10
+		position	0 0 0
+		velocity	0
+		velocity_min	0
+		velocity_max	0
+		time_to_live	4
+		time_to_live_min	4
+		time_to_live_max	5
+		duration 0
+/*		duration_min	10.05
+		duration_max	10.05
+
+		repeat_delay	2
+		repeat_delay_min	2
+		repeat_delay_max	2
+*/
+		width	.1
+		height	0
+		depth	.1
+	}
+
+	affector ColourFader
+	{
+		red	-1.3
+		green	-1.3
+		blue	-1.3
+		alpha	-1.3
+	}
+
+	affector Scaler
+	{
+		rate	0.2
+	}
+}
+
+particle_system FlareFlashBig
+{
+	quota	1000
+	material	FlareFlash
+	particle_width	3.4
+	particle_height	2.6
+	cull_each	false
+	renderer	billboard
+	billboard_type	point
+
+	emitter Ellipsoid
+	{
+		angle	180
+		colour	0.8 1 1 1
+		colour_range_start	1 1 1 1
+		colour_range_end	1 0.8 0.6 0.8
+		direction	0 1 0
+		emission_rate	10
+		position	0 0 0
+		velocity	0
+		velocity_min	0
+		velocity_max	0
+		time_to_live	4
+		time_to_live_min	4
+		time_to_live_max	5
+		duration 0
+/*		duration_min	10.05
+		duration_max	10.05
+
+		repeat_delay	2
+		repeat_delay_min	2
+		repeat_delay_max	2
+*/
+		width	.1
+		height	0
+		depth	.1
+	}
+
+	affector ColourFader
+	{
+		red	-1.3
+		green	-1.3
+		blue	-1.3
+		alpha	-1.3
+	}
+
+	affector Scaler
+	{
+		rate	0.2
+	}
+} 
+
+ 
+
+particle_system FlareFlashBlue
+{
+	quota	1000
+	material	FlareFlash
+	particle_width	1.8
+	particle_height	1.4
+	cull_each	false
+	renderer	billboard
+	billboard_type	point
+
+	emitter Ellipsoid
+	{
+		angle	180
+		colour	1 0.8 0.8 1
+		colour_range_start	1 1 1 1
+		colour_range_end	0.6 0.6 1 0.8
+		direction	0 1 0
+		emission_rate	10
+		position	0 0 0
+		velocity	0
+		velocity_min	0
+		velocity_max	0
+		time_to_live	4
+		time_to_live_min	4
+		time_to_live_max	5
+		duration 0
+/*		duration_min	10.05
+		duration_max	10.05
+
+		repeat_delay	2
+		repeat_delay_min	2
+		repeat_delay_max	2
+*/
+		width	.1
+		height	0
+		depth	.1
+	}
+
+	affector ColourFader
+	{
+		red	-1.3
+		green	-1.3
+		blue	-1.3
+		alpha	-1.3
+	}
+
+	affector Scaler
+	{
+		rate	0.2
+	}
+}
+
+
+particle_system FlareFlashCyan
+{
+	quota	1000
+	material	FlareFlash
+	particle_width	1.8
+	particle_height	1.4
+	cull_each	false
+	renderer	billboard
+	billboard_type	point
+
+	emitter Ellipsoid
+	{
+		angle	180
+		colour	0.8 1 1 1
+		colour_range_start	1 1 1 1
+		colour_range_end	0.6 1 1 0.8
+		direction	0 1 0
+		emission_rate	10
+		position	0 0 0
+		velocity	0
+		velocity_min	0
+		velocity_max	0
+		time_to_live	4
+		time_to_live_min	4
+		time_to_live_max	5
+		duration 0
+/*		duration_min	10.05
+		duration_max	10.05
+
+		repeat_delay	2
+		repeat_delay_min	2
+		repeat_delay_max	2
+*/
+		width	.1
+		height	0
+		depth	.1
+	}
+
+	affector ColourFader
+	{
+		red	-1.3
+		green	-1.3
+		blue	-1.3
+		alpha	-1.3
+	}
+
+	affector Scaler
+	{
+		rate	0.2
+	}
+} 
+
+
+particle_system FlareFlashYellow
+{
+	quota	1000
+	material	FlareFlash
+	particle_width	1.8
+	particle_height	1.4
+	cull_each	false
+	renderer	billboard
+	billboard_type	point
+
+	emitter Ellipsoid
+	{
+		angle	180
+		colour	0.8 1 1 1
+		colour_range_start	1 1 1 1
+		colour_range_end	0.9 0.9 0 0.8
+		direction	0 1 0
+		emission_rate	10
+		position	0 0 0
+		velocity	0
+		velocity_min	0
+		velocity_max	0
+		time_to_live	4
+		time_to_live_min	4
+		time_to_live_max	5
+		duration 0
+/*		duration_min	10.05
+		duration_max	10.05
+
+		repeat_delay	2
+		repeat_delay_min	2
+		repeat_delay_max	2
+*/
+		width	.1
+		height	0
+		depth	.1
+	}
+
+	affector ColourFader
+	{
+		red	-1.3
+		green	-1.3
+		blue	-1.3
+		alpha	-1.3
+	}
+
+	affector Scaler
+	{
+		rate	0.2
+	}
+} 
+
+particle_system FlareFlashGreen
+{
+	quota	1000
+	material	FlareFlash
+	particle_width	1.8
+	particle_height	1.4
+	cull_each	false
+	renderer	billboard
+	billboard_type	point
+
+	emitter Ellipsoid
+	{
+		angle	180
+		colour	0.8 1 1 1
+		colour_range_start	1 1 1 1
+		colour_range_end	0.4 0.7 0.2 0.8
+		direction	0 1 0
+		emission_rate	10
+		position	0 0 0
+		velocity	0
+		velocity_min	0
+		velocity_max	0
+		time_to_live	4
+		time_to_live_min	4
+		time_to_live_max	5
+		duration 0
+/*		duration_min	10.05
+		duration_max	10.05
+
+		repeat_delay	2
+		repeat_delay_min	2
+		repeat_delay_max	2
+*/
+		width	.1
+		height	0
+		depth	.1
+	}
+
+	affector ColourFader
+	{
+		red	-1.3
+		green	-1.3
+		blue	-1.3
+		alpha	-1.3
+	}
+
+	affector Scaler
+	{
+		rate	0.2
+	}
+} 
+
+particle_system FlareFlashOrange
+{
+	quota	1000
+	material	FlareFlash
+	particle_width	1.8
+	particle_height	1.4
+	cull_each	false
+	renderer	billboard
+	billboard_type	point
+
+	emitter Ellipsoid
+	{
+		angle	180
+		colour	0.8 1 1 1
+		colour_range_start	1 1 1 1
+		colour_range_end	1 0.8 0.6 0.8
+		direction	0 1 0
+		emission_rate	10
+		position	0 0 0
+		velocity	0
+		velocity_min	0
+		velocity_max	0
+		time_to_live	4
+		time_to_live_min	4
+		time_to_live_max	5
+		duration 0
+/*		duration_min	10.05
+		duration_max	10.05
+
+		repeat_delay	2
+		repeat_delay_min	2
+		repeat_delay_max	2
+*/
+		width	.1
+		height	0
+		depth	.1
+	}
+
+	affector ColourFader
+	{
+		red	-1.3
+		green	-1.3
+		blue	-1.3
+		alpha	-1.3
+	}
+
+	affector Scaler
+	{
+		rate	0.2
+	}
+} 
+
+particle_system FlareFlashIvy
+{
+	quota	1000
+	material	FlareFlash
+	particle_width	1.8
+	particle_height	1.4
+	cull_each	false
+	renderer	billboard
+	billboard_type	point
+
+	emitter Ellipsoid
+	{
+		angle	180
+		colour	0.8 1 1 1
+		colour_range_start	1 1 1 1
+		colour_range_end	0.1 0.4 0.3 0.8
+		direction	0 1 0
+		emission_rate	10
+		position	0 0 0
+		velocity	0
+		velocity_min	0
+		velocity_max	0
+		time_to_live	4
+		time_to_live_min	4
+		time_to_live_max	5
+		duration 0
+/*		duration_min	10.05
+		duration_max	10.05
+
+		repeat_delay	2
+		repeat_delay_min	2
+		repeat_delay_max	2
+*/
+		width	.1
+		height	0
+		depth	.1
+	}
+
+	affector ColourFader
+	{
+		red	-1.3
+		green	-1.3
+		blue	-1.3
+		alpha	-1.3
+	}
+
+	affector Scaler
+	{
+		rate	0.2
+	}
+} 
+
+particle_system FlareFlashMagenta
+{
+	quota	1000
+	material	FlareFlash
+	particle_width	1.8
+	particle_height	1.4
+	cull_each	false
+	renderer	billboard
+	billboard_type	point
+
+	emitter Ellipsoid
+	{
+		angle	180
+		colour	0.8 1 1 1
+		colour_range_start	1 1 1 1
+		colour_range_end	0.7 0 0.7 0.8
+		direction	0 1 0
+		emission_rate	10
+		position	0 0 0
+		velocity	0
+		velocity_min	0
+		velocity_max	0
+		time_to_live	4
+		time_to_live_min	4
+		time_to_live_max	5
+		duration 0
+/*		duration_min	10.05
+		duration_max	10.05
+
+		repeat_delay	2
+		repeat_delay_min	2
+		repeat_delay_max	2
+*/
+		width	.1
+		height	0
+		depth	.1
+	}
+
+	affector ColourFader
+	{
+		red	-1.3
+		green	-1.3
+		blue	-1.3
+		alpha	-1.3
+	}
+
+	affector Scaler
+	{
+		rate	0.2
+	}
+} 
+
+
+particle_system FlareFlashPurple
+{
+	quota	1000
+	material	FlareFlash
+	particle_width	1.8
+	particle_height	1.4
+	cull_each	false
+	renderer	billboard
+	billboard_type	point
+
+	emitter Ellipsoid
+	{
+		angle	180
+		colour	1 0.8 0.8 1
+		colour_range_start	1 1 1 1
+		colour_range_end	0.5 0.2 0.8 0.8
+		direction	0 1 0
+		emission_rate	10
+		position	0 0 0
+		velocity	0
+		velocity_min	0
+		velocity_max	0
+		time_to_live	4
+		time_to_live_min	4
+		time_to_live_max	5
+		duration 0
+/*		duration_min	10.05
+		duration_max	10.05
+
+		repeat_delay	2
+		repeat_delay_min	2
+		repeat_delay_max	2
+*/
+		width	.1
+		height	0
+		depth	.1
+	}
+
+	affector ColourFader
+	{
+		red	-1.3
+		green	-1.3
+		blue	-1.3
+		alpha	-1.3
+	}
+
+	affector Scaler
+	{
+		rate	0.2
+	}
+}
+
+
+particle_system FlareFlashKhaki
+{
+	quota	1000
+	material	FlareFlash
+	particle_width	1.8
+	particle_height	1.4
+	cull_each	false
+	renderer	billboard
+	billboard_type	point
+
+	emitter Ellipsoid
+	{
+		angle	180
+		colour	1 0.8 0.8 1
+		colour_range_start	1 1 1 1
+		colour_range_end	0.6 0.6 0.3 0.8
+		direction	0 1 0
+		emission_rate	10
+		position	0 0 0
+		velocity	0
+		velocity_min	0
+		velocity_max	0
+		time_to_live	4
+		time_to_live_min	4
+		time_to_live_max	5
+		duration 0
+/*		duration_min	10.05
+		duration_max	10.05
+
+		repeat_delay	2
+		repeat_delay_min	2
+		repeat_delay_max	2
+*/
+		width	.1
+		height	0
+		depth	.1
+	}
+
+	affector ColourFader
+	{
+		red	-1.3
+		green	-1.3
+		blue	-1.3
+		alpha	-1.3
+	}
+
+	affector Scaler
+	{
+		rate	0.2
+	}
+}
+
+
+particle_system FlareFlashGrey
+{
+	quota	1000
+	material	FlareFlash
+	particle_width	1.8
+	particle_height	1.4
+	cull_each	false
+	renderer	billboard
+	billboard_type	point
+
+	emitter Ellipsoid
+	{
+		angle	180
+		colour	1 0.8 0.8 1
+		colour_range_start	1 1 1 1
+		colour_range_end	0.5 0.5 0.5 0.8
+		direction	0 1 0
+		emission_rate	10
+		position	0 0 0
+		velocity	0
+		velocity_min	0
+		velocity_max	0
+		time_to_live	4
+		time_to_live_min	4
+		time_to_live_max	5
+		duration 0
+/*		duration_min	10.05
+		duration_max	10.05
+
+		repeat_delay	2
+		repeat_delay_min	2
+		repeat_delay_max	2
+*/
+		width	.1
+		height	0
+		depth	.1
+	}
+
+	affector ColourFader
+	{
+		red	-1.3
+		green	-1.3
+		blue	-1.3
+		alpha	-1.3
+	}
+
+	affector Scaler
+	{
+		rate	0.2
+	}
+}
