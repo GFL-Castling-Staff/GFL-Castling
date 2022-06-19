@@ -464,8 +464,12 @@
 		<models file="kcco_human_basic.models" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_carry_items="1">
 			<weapon key="kcco_ar_2.weapon" enabled="1" />
+			<!-- <weapon key="kcco_tracer_dart_ranged.weapon" enabled="1" />  -->
+			<!-- <weapon key="kcco_tracer_dart_accurate.weapon" enabled="1" />  -->
 			<carry_item key="kcco_ar.carry_item" enabled="1" />
 			<projectile key="kcco_smartgrenade_1.projectile" enabled="1.0" />
+			<projectile key="kcco_tracer_dart_r.projectile" enabled="1.0" />
+			<projectile key="kcco_tracer_dart_a.projectile" enabled="1.0" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="0.5" max="3.8" />
@@ -491,13 +495,19 @@
 		</resources>
 	</soldier>
 	<!-- 喷火兵 -->
-	<soldier name="kcco_flamethrower" spawn_score="0.5" copy_from="default_bot">
+	<soldier name="kcco_flamethrower" spawn_score="0.2" copy_from="default_bot">
 		<model filename="kccod_cyclops_remake.xml" />
 		<ai filename="eod.ai" />
 		<resources clear_weapons="1" clear_calls="1" clear_carry_items="1">
 			<weapon key="kcco_flamethrower.weapon" enabled="1" />
 			<carry_item key="kcco_flamethrower.carry_item" enabled="1" />
 		</resources>
+		<item_class_existence_config>
+			<!-- wearables -->
+			<item_class_existence class="carry_item" slot="1" probability="1" />
+			<!-- note, always backpack items -->
+			<item_class_existence class="carry_item" slot="0" probability="1.0" />
+		</item_class_existence_config>
 	</soldier>	<!-- 欧特鲁斯 -->
 	<soldier name="kcco_dog" spawn_score="0.4" copy_from="default_bot">
 		<model filename="kccod_othrusdog.xml" />

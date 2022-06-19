@@ -171,7 +171,8 @@
 	<rank xp="2960.833" name="CAT HEAD"><hud_icon filename="Thank_you_CAT_HEAD.png" /> </rank>
 	<rank xp="3010.833" name="HUALIN"><hud_icon filename="Thank_you_HUALIN.png" /> </rank>
 	<rank xp="3060.833" name="NEKO_CUP"><hud_icon filename="Thank_you_NEKO_CUP.png" /> </rank>
-	
+	<rank xp="3110.833" name="EISEN"><hud_icon filename="Thank_you_EISEN.png" /> </rank>
+
 
 
 	<rank xp="4000" name="Narcissus"><hud_icon filename="commander_narcissus.png" /></rank>
@@ -1075,21 +1076,6 @@
 			<attribute weight="1.0" min="0.100" max="102.833" />
 		</attribute_config>
 	</soldier>
-	<soldier name="206_ak12_ar_defyAI" spawn_score="0.0" copy_from="206_ak12_ar">
-		<resources clear_weapons="1" clear_carry_items="1">
-			<weapon key="gkw_ak12_defyAI.weapon" enabled="1" />
-			<carry_item key="exo_AK12_defy.carry_item" enabled="1" />
-			<call key="gk_bombardment_fairy.call" />
-			<call key="gk_airstrike_fairy.call" />
-			<call key="gk_rocket_fairy.call" />
-		</resources>
-		<attribute_config class="xp">
-			<attribute weight="1.0" min="0.100" max="0.101" />
-		</attribute_config>
-		<attribute_config class="rp">
-			<attribute weight="1.0" min="1000" max="10100" />
-		</attribute_config>
-	</soldier>
 	<soldier name="229_m870_sg" spawn_score="0.05" copy_from="default_sg">
 		<character filename="default_gk_pmc.text_lines">
 			<sound key="death" fileref="M870P_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
@@ -1410,7 +1396,7 @@
 		</attribute_config>
 	</soldier>
 	<!-- 忤逆精英小队 -->
-	<!-- <soldier name="defy_ak12_ar" spawn_score="0.05" copy_from="task_forces_defy">
+	<soldier name="defy_ak12_ar" spawn_score="0.0001" copy_from="206_ak12_ar">
 	    <ai filename="defy_ak12.ai" />
 		<character filename="gk_ak12.text_lines">
 			<sound key="death" fileref="AK12_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
@@ -1421,13 +1407,13 @@
 			<weapon key="gkw_ak12_defyAI.weapon" />
 			<weapon key="gkw_defy_rocker.weapon" />
 			<projectile key="hand_88grenade.projectile" />
-			<carry_item key="exo_defy.carry_item" />
+			<carry_item key="exo_t5_ai_16lab.carry_item" />
 		</resources>
 		<attribute_config class="xp">
-			<attribute weight="1.0" min="100.100" max="102.833" />
+			<attribute weight="1.0" min="10" max="20.833" />
 		</attribute_config>
 	</soldier>
-	<soldier name="defy_ak15_ar" spawn_score="0.05" copy_from="task_forces_defy">
+	<!-- <soldier name="defy_ak15_ar" spawn_score="0.05" copy_from="task_forces_defy">
 	    <ai filename="defy_ak15.ai" />
 		<character filename="default_gk_pmc.text_lines">
 			<sound key="death" fileref="AK15_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
@@ -1462,10 +1448,12 @@
 		</attribute_config>
 	</soldier> -->
 	<!-- 忤逆精英电战接入军方小队 -->
-	<!-- <soldier name="defy_aegis_shield" spawn_score="0.0" copy_from="task_forces_defy">
+	<soldier name="kcco_f_aegis" spawn_score="0.0" copy_from="default">
+		<character filename="default_kcco_human.character"/>
 		<ai filename="shield.ai" />
+		<model filename="kccod_aegis.xml" />
 		<resources clear_calls="1" clear_grenades="1" clear_carry_items="1" clear_weapons="1" clear_vehicles="1">
-			<weapon key="gkw_aegis.weapon"/>
+			<weapon key="kcco_aegis.weapon"/>
 			<carry_item key="bp_t4.carry_item"/>
 		</resources>
 		<attribute_config class="xp">
@@ -1475,12 +1463,12 @@
 			<attribute weight="1.0" min="7000.0" max="15000.0" />
 		</attribute_config>
 	</soldier>
-	<soldier name="defy_cyclops_sg" spawn_score="0.0" copy_from="task_forces_defy">
+	<soldier name="kcco_f_cyclops_sg" spawn_score="0.0" copy_from="default">
+		<character filename="default_kcco_human.character"/>
 		<ai filename="eod.ai" />
+		<model filename="kccod_cyclops_sg_remake.xml" />
 		<resources clear_calls="1" clear_grenades="1" clear_carry_items="1" clear_weapons="1" clear_vehicles="1">
-			<weapon key="gkw_sg.weapon"/>
-			<weapon key="gkw_defy_rocker.weapon" />
-			<projectile key="hand_88grenade.projectile" />
+			<weapon key="kcco_sg.weapon"/>
 			<carry_item key="bp_t4.carry_item"/>
 		</resources>
 		<attribute_config class="xp">
@@ -1490,7 +1478,7 @@
 			<attribute weight="1.0" min="7000.0" max="15000.0" />
 		</attribute_config>
 	</soldier>
-	<soldier name="defy_cyclops_sghe" spawn_score="0.0" copy_from="task_forces_defy">
+	<!-- <soldier name="defy_cyclops_sghe" spawn_score="0.0" copy_from="task_forces_defy">
 		<ai filename="eod.ai" />
 		<resources clear_calls="1" clear_grenades="1" clear_carry_items="1" clear_weapons="1" clear_vehicles="1">
 			<weapon key="gkw_sg_he.weapon"/>

@@ -257,7 +257,6 @@
 	<weapon key="gkw_ssg69.weapon" />
 	<weapon key="gkw_supersass_1407.weapon" />
 	<weapon key="gkw_supersass.weapon" />
-	<weapon key="gkw_supersass_1407.weapon" />
 	<weapon key="gkw_supersassmod3.weapon" />
 	<weapon key="gkw_sv98mod3.weapon" />
 	<weapon key="gkw_sv98.weapon" />
@@ -330,7 +329,6 @@
 	<weapon key="gkw_p90_2802.weapon" />
 	<weapon key="gkw_honeybadger.weapon" />
 	<weapon key="gkw_honeybadger_4005.weapon" />
-	<weapon key="gkw_pm-06.weapon" />
 	<weapon key="gkw_pm06.weapon" />
 	<weapon key="gkw_pp19.weapon" />
 	<weapon key="gkw_pp19mod3.weapon" />
@@ -341,7 +339,9 @@
 	<weapon key="gkw_ro635_534.weapon" />
 	<weapon key="gkw_ro635mod3.weapon" />
 	<weapon key="gkw_sr3mp.weapon" />
+	<weapon key="gkw_sr3mp_skill.weapon"/>
 	<weapon key="gkw_sr3mp_807.weapon" />
+	<weapon key="gkw_sr3mp_807_skill.weapon" />
 	<weapon key="gkw_tmp.weapon" />
 	<weapon key="gkw_type100.weapon" />
 	<weapon key="gkw_type100_1.weapon" />
@@ -357,9 +357,9 @@
 	<weapon key="gkw_ump9_409.weapon" />
 	<weapon key="gkw_ump9_536.weapon" />
 	<weapon key="gkw_uzi.weapon" />
-	<weapon key="gkw_uzi_s.weapon" />
-	<weapon key="gkw_uzimod3.weapon" />
-	<weapon key="gkw_vector.weapon" in_stock="0"/>
+	<weapon key="gkw_uzimod3.weapon"/>
+	<weapon key="gkw_uzimod3_skill.weapon"/>
+	<weapon key="gkw_vector.weapon"/>
 	<weapon key="gkw_vector_agent.weapon" />
 	<weapon key="gkw_vector_fire.weapon" />
 	<weapon key="gkw_gsh18mod3_medikit.weapon" />
@@ -369,7 +369,6 @@
 	<weapon key="gkw_ak15mod3_skill.weapon"/>
 	<weapon key="gkw_fal_2406.weapon" />
 	<weapon key="gkw_fal_308.weapon" />
-	<weapon key="gkw_pp19mod3.weapon" />
 	<weapon key="gkw_x95.weapon" />
 	<weapon key="gkw_c14.weapon" />
 	<weapon key="gkw_sigmcx.weapon" />
@@ -379,7 +378,6 @@
 	<weapon key="gkw_fx05.weapon" />
 	<weapon key="gkw_apc556.weapon" />
 	<weapon key="gkw_cz100.weapon" />
-	<weapon key="gkw_m14mod3.weapon" />
 	<weapon key="gkw_dp12.weapon" />
 	<weapon key="gkw_4type.weapon" />
 	<weapon key="gkw_carcano1891.weapon" />
@@ -416,6 +414,8 @@
 	<weapon key="gkw_hp35.weapon" />
 	<weapon key="gkw_m950a.weapon" />
 	<weapon key="gkw_m950a_702.weapon" />
+	<weapon key="gkw_m950amod3.weapon" />
+	<weapon key="gkw_m950amod3_702.weapon" />
 	<weapon key="gkw_cz75.weapon" />
 	<weapon key="gkw_c93.weapon" />
 	<weapon key="gkw_welrod.weapon" />
@@ -581,6 +581,7 @@
 
 	<!--箱子-->
 	<carry_item key="armor_crafting_card.carry_item"/>
+	<carry_item key="dollcraft.carry_item"/>
 
 	<!-- 载具 -->
 	<vehicle key="martina.vehicle" />
@@ -728,7 +729,6 @@
 	<weapon key="gkw_an94mod3_blm.weapon" />
 	<weapon key="gkw_an94mod3_blm_skill.weapon" />
 	<weapon key="gkw_m4sopmodiimod3_531.weapon" />
-	<weapon key="gkw_m4sopmodiimod3_531_skill.weapon" />
 	<weapon key="gkw_mp5mod3_3.weapon" />
 	<weapon key="gkw_mp5mod3_1205.weapon" />
 	<weapon key="gkw_mp5mod3_1903.weapon" />
@@ -746,8 +746,7 @@
 	<weapon key="gkw_m1895mod3_5309.weapon"/>
 	<weapon key="gkw_m1895mod3_5309_skill.weapon"/>
 
-	<weapon key="gkw_uzimod3.weapon"/>
-	<weapon key="gkw_uzimod3_skill.weapon"/>
+
 	<weapon key="gkw_m1897mod3.weapon"/>
 	<weapon key="gkw_m1897mod3_skill.weapon"/>
 	<weapon key="gkw_mab38mod3.weapon"/>

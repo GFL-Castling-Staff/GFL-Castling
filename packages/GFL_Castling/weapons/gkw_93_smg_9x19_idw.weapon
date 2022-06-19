@@ -14,6 +14,7 @@
 		barrel_offset="0.4" 
 		spread_range="0.1"
 	/>
+    <commonness value="0.2" in_stock="1" can_respawn_with="1" />
     <sound key="fire" fileref="idwsd_fire_FromEFT.wav" pitch_variety="0" volume="1" />
     <sound key="magazine_out" fileref="klin_mgz_out_FromEFT.wav" volume="0.7" />
     <sound key="magazine_in" fileref="klin_mgz_in_FromEFT.wav" volume="0.7" />

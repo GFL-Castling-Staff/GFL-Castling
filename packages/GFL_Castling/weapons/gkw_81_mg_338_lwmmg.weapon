@@ -17,7 +17,8 @@
     can_shoot_standing="1" 
     />
     <animation key="reload" animation_key="reloading, Machine gun 4" />
-    <inventory  buy_price="20.0" sell_price="20.0" />
+    <inventory buy_price="20.0" sell_price="20.0" />
+    <commonness value="0.2" in_stock="1" can_respawn_with="1" />
     <next_in_chain key="gkw_lwmmg_skill.weapon" share_ammo="1" />
     <sound key="fire" fileref="lwmmg_fire_FromARMA3.wav" pitch_variety="0.05" volume="1.25" />
     <sound key="magazine_out" fileref="lwmmg_mgz_out_FromCOD16.wav" volume="0.6" />
@@ -56,7 +57,7 @@
     />
     <animation key="reload" animation_key="reloading, Machine gun 4" />
     <inventory  buy_price="20.0" sell_price="20.0" />
-    <commonness  value="0" in_stock="0" can_respawn_with="1" />
+    <commonness value="0" in_stock="0" can_respawn_with="1" />
     <next_in_chain key="gkw_lwmmg.weapon" share_ammo="1" />
     <sound key="fire" fileref="lwmmgskill_fire_FromBFBC2.wav" pitch_variety="0.05" volume="1.1" />
     <sound key="magazine_out" fileref="lwmmg_mgz_out_FromCOD16.wav" volume="0.6" />

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<static_object key="crate.static_object" destroy_on_blast="1" destroy_on_drive_over="1" destroy_on_stab="1" undestroy_on_block_activate="1">
+
+	<sound key="destroy" filename="crate_smash1.wav" volume="0.3" />
+	<sound key="destroy" filename="crate_smash2.wav" volume="0.3" />
+	<sound key="destroy" filename="crate_smash3.wav" volume="0.3" />
+
+	<effect event_key="destroy" key="other" ref="SmokeMinor" post_processing="1" />
+	<effect event_key="destroy" key="other" ref="ShadowSmokeMinor" shadow="1" />
+
+	<effect event_key="destroy" key="other" ref="SmokeMinor" post_processing="1" />
+	<effect event_key="destroy" key="other" ref="ShadowSmokeMinor" shadow="1" />
+
+	<effect event_key="destroy" key="other" ref="SmokeMinor" post_processing="1" />
+	<effect event_key="destroy" key="other" ref="ShadowSmokeMinor" shadow="1" />
+
+	<effect event_key="destroy" key="other" ref="SmokeMinor" post_processing="1" />
+	<effect event_key="destroy" key="other" ref="ShadowSmokeMinor" shadow="1" />
+
+	<effect event_key="destroy" key="other" ref="SmokeMinor" post_processing="1" />
+	<effect event_key="destroy" key="other" ref="ShadowSmokeMinor" shadow="1" />
+
+	<event>
+		<trigger class="destroy" />
+		<result class="spawn" instance_class="carry_item" instance_key="dollcraft.carry_item" min_amount="0" max_amount="1" offset="0 1.0 0" position_spread="0 0" direction_spread="0.04 0.2" />
+	</event>
+
+	<event>
+		<trigger class="destroy" />
+  		<result class="spawn" instance_class="visual_item" instance_key="crate_debris.visual_item" min_amount="5" max_amount="15" offset="0 0.2 0" position_spread="1.0 0.0" direction_spread="0.05 0.1" />
+	</event>  
+
+</static_object>

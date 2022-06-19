@@ -17,12 +17,13 @@
   		<result class="notify_script" key="aa_destroy"/>
 	</event> 
 
-	<modifier class="blast_range" value="-4.0" />
-	
+	<modifier class="blast_range" value="-3.0" />
+	<modifier class="blast_damage" value="-1.0" />
+
 	<control max_speed="3.0" acceleration="1.0" max_reverse_speed="1.0" max_rotation="0.8" max_water_depth="1.0" />
 
 	<physics 
-		max_health="180.0" 
+		max_health="100.0" 
 		mass="9999.5" 
 		extent="2.2 0.0 4.2" 
 		offset="0 0.0 0" 
@@ -38,9 +39,7 @@
 	<turret offset="0 0.0 0.0" weapon_key="Jupiter_main_cannon.weapon" weapon_offset="0.0 0.0 0.0" weapon_recoil="3.2" physics_recoil="0.0" max_rotation_step="0.00002" />	
 	<turret offset="0 0.0 0.0" weapon_key="Jupiter_mg1.weapon" weapon_offset="0.5 1.8 0.6" weapon_recoil="0.00" physics_recoil="0.0" max_rotation_step="0.0000" rotation="0" rotation_range="0" parent_turret_index="0"/>
 	<turret offset="0 0.0 0.0" weapon_key="Jupiter_mg2.weapon" weapon_offset="-0.5 1.8 0.6" weapon_recoil="0.00" physics_recoil="0.0" max_rotation_step="0.0000" rotation="0" rotation_range="0" parent_turret_index="0"/>
-	<!-- <turret offset="0 10.0 0.0" weapon_key="Jupiter_airstrike.weapon" weapon_offset="0.0 6.0 -2.0" weapon_recoil="0.00" physics_recoil="0.0" max_rotation_step="0.01015" rotation="0" rotation_range="" /> -->
-	<!-- <turret offset="0 10.0 0.0" weapon_key="Jupiter_airstrike_warning.weapon" weapon_offset="0.0 6.0 -2.0" weapon_recoil="0.00" physics_recoil="0.0" max_rotation_step="0.01015" rotation="0" rotation_range="" /> -->
-	
+
 	
 	<visual class="chassis" mesh_filename="Jupiter_base_2.mesh" texture_filename="Jupiter.png" max_tilt="0"/>
 	
@@ -52,11 +51,6 @@
 		<turret index="1" />  
 		<turret index="2" />  
 	</character_slot>	
-	
-	<!-- <character_slot type="gunner" seat_position="0.0 20.6 0.0" enter_position="0 0 1.5" rotation="0" exit_rotation="-1.57" hiding="1" > -->
-		<!-- <turret index="3" /> -->
-		<!-- <turret index="4" />	 -->
-	<!-- </character_slot> -->
 	
 	<!-- sound handling -->
 	<sound key="slide" filename="slide_noise.wav" />

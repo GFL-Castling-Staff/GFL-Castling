@@ -16,6 +16,7 @@
     <animation state_key="hold_casual" animation_key="dancing, kazachok" />
     <animation key="reload" animation_key="reloading, Machine gun 1.2" />
     <inventory  buy_price="8.0" sell_price="8.0" />
+    <commonness value="0.2" in_stock="1" can_respawn_with="1" />
     <sound key="fire" fileref="dp28_fire_FromRS2V.wav" pitch_variety="0.05" volume="1" />
     <sound key="magazine_out" fileref="dp28_mgz_out_FromRS2V.wav" volume="0.8" />
     <sound key="magazine_in" fileref="dp28_mgz_in_FromRS2V.wav" volume="0.8" />

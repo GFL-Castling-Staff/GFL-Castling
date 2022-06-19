@@ -41,7 +41,7 @@
 
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet.projectile">
-        <result class="hit"  kill_probability="1.6" kill_decay_start_time="1.031" kill_decay_end_time="1.719" />
+        <result class="hit" kill_probability="1.6" kill_decay_start_time="1.031" kill_decay_end_time="1.719" />
     </projectile>
 
     <drop_on_death_result class="spawn" instance_class="carry_item" instance_key="whiskey_bottle.carry_item" min_amount="6" max_amount="12" offset="0 1.0 0" position_spread="0 0" direction_spread="0 0" />

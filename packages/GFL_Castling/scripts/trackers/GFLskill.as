@@ -164,7 +164,7 @@ class GFLskill : Tracker {
                         " position='" + grenade_pos.toString() + "'"+
 				        " character_id='" + characterId + "' />";
                     m_metagame.getComms().send(c);					
-					if (affectedNumber >= 3){
+					if (affectedNumber >= 6){
 						Vector3 UMP9_pos = stringToVector3(character.getStringAttribute("position"));
 						string c1 = 
 							"<command class='create_instance'" +
@@ -536,6 +536,37 @@ class GFLskill : Tracker {
 					m_metagame.getComms().send(c);
 				}
 			}			
+		}
+		if(EventKeyGet == "smasher_skill" ){
+			int characterId = event.getIntAttribute("character_id");
+			const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+			if (character !is null) {
+
+				Vector3 pos = stringToVector3(character.getStringAttribute("position"));
+				int randomeffect = rand(0,1);
+				switch(randomeffect){
+					case 0:{
+						int factionid = character.getIntAttribute("faction_id");
+						playAnimationKey(m_metagame,characterId,"warcry, elid boss",false);
+						spawnSoldier(m_metagame,10,factionid,pos,"infected");
+						break;
+					}
+					case 1:{
+						playAnimationKey(m_metagame,characterId,"warcry_big_unit",false);
+						string c = 
+							"<command class='create_instance'" +
+							" faction_id='"+ character.getIntAttribute("faction_id") +"'" +
+							" instance_class='grenade'" +
+							" instance_key= 'roarer_main2.projectile'" +
+							" position='" + pos.toString() + "'"+
+							" character_id='" + characterId + "' />";
+						m_metagame.getComms().send(c);
+						break;
+					}
+                    default:
+                        break;					
+				}
+			}
 		}
 	}
 

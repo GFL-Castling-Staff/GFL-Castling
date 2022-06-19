@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<projectile class="grenade" name="Accurate Missile" slot="2" key="kcco_accurate_missile.projectile" pulldown_in_air="150.0">
+    <result class="blast" radius="9.0" damage="30" push="4" decal="1" faction_compare="not_equal"/>
+    <trigger class="impact" />
+    <rotation class="motion" />
+    <model mesh_filename="kcco_artillery_shell.xml" />
+    <commonness value="0.0" />
+
+    <sound class="result" key="other" fileref="explosion_FromFC5_1.wav" volume="1.8" />
+    <sound class="result" key="other" fileref="explosion_FromFC5_2.wav" volume="1.8" />
+    <sound class="result" key="other" fileref="explosion_FromFC5_3.wav" volume="1.8" />
+    <sound class="result" key="other" fileref="explosion_FromFC5_4.wav" volume="1.8" />
+
+    <sound class="result" key="terrain" copy="other" />
+    <sound class="result" key="static_object" copy="other" />
+    <sound class="result" key="vehicle" copy="other" />
+    <sound class="result" key="character" copy="other" />
+
+
+    <effect class="result" key="terrain" ref="NavalBurstInner" post_processing="1" use_surface_color="1" />
+    <effect class="result" key="terrain" ref="NavalBurstOuter" post_processing="1" use_surface_color="1" />
+    <effect class="result" key="terrain" ref="NavalBurstUp" post_processing="1" use_surface_color="1" />
+    <effect class="result" key="terrain" ref="NavalSmokeUp1" post_processing="1" />
+    <effect class="result" key="terrain" ref="NavalSmokeUp2" post_processing="1" />
+    <effect class="result" key="terrain" ref="NavalSmokeTop1" post_processing="1" />
+    <effect class="result" key="terrain" ref="NavalSmokeTop2" post_processing="1" />
+    <effect class="result" key="terrain" ref="NavalSmokeTop3" post_processing="1" />
+    <effect class="result" key="terrain" ref="NavalSmoke1" post_processing="1" />
+    <effect class="result" key="terrain" ref="NavalSmoke2" post_processing="1" />
+    <effect class="result" key="terrain" ref="NavalSmoke3" post_processing="1" />
+    <effect class="result" key="terrain" ref="NavalGodray" lighting="0" />
+    <effect class="result" key="terrain" ref="woosh_big1" lighting="0" />
+    <effect class="result" key="terrain" ref="ShadowSmoke" shadow="1" />
+    <effect class="result" type="splat_map" surface_tag="" size="10.0" atlas_index="0" layer="1" />
+    <effect class="result" type="splat_map" surface_tag="" size="16.0" atlas_index="4" layer="0" />
+    <effect class="result" type="splat_map" surface_tag="" size="18.0" atlas_index="0" layer="2" additive="0" /> <!-- remove top snow everywhere -->
+    
+    <effect class="result" key="other" ref="NavalBurstInner" post_processing="1" />
+    <effect class="result" key="other" ref="NavalBurstOuter" post_processing="1" />
+    <effect class="result" key="other" ref="NavalSmokeUp1" post_processing="1" />
+    <effect class="result" key="other" ref="NavalSmokeUp2" post_processing="1" />
+    <effect class="result" key="other" ref="NavalSmokeTop1" post_processing="1" />
+    <effect class="result" key="other" ref="NavalSmokeTop2" post_processing="1" />
+    <effect class="result" key="other" ref="NavalSmokeTop3" post_processing="1" />
+    <effect class="result" key="other" ref="NavalSmoke1" post_processing="1" />
+    <effect class="result" key="other" ref="NavalSmoke2" post_processing="1" />
+    <effect class="result" key="other" ref="NavalSmoke3" post_processing="1" />
+    <effect class="result" key="other" ref="NavalGodray" lighting="0" />
+    <effect class="result" key="other" ref="woosh_big1" lighting="0" />
+    <effect class="result" key="other" ref="ShadowSmoke" shadow="1" />
+    
+    <effect class="result" key="static_object" copy="terrain" />
+    <effect class="result" key="vehicle" copy="terrain" />
+    <effect class="result" key="character" copy="terrain" />
+    
+    <effect class="activated" ref="Propulsion_rocket" />
+	<trail probability="1.0" key="FlamethrowerTrail" />
+
+</projectile>

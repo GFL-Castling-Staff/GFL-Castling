@@ -23,5 +23,5 @@
   <projectile file="bullet_paradeus.projectile">
     <result class="hit" kill_probability="1.5" kill_decay_start_time="0.3" kill_decay_end_time="0.6" />
   </projectile>
-  <modifier class="speed" value="0.1" />
+  <modifier class="speed" value="-0.1" />
 </weapon>

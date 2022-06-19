@@ -22,7 +22,8 @@
 	projectiles_per_shot="1" />
     <inventory  buy_price="8.0" sell_price="8.0" />	
 	<!--Animations-->
-	
+    <commonness value="0.2" in_stock="1" can_respawn_with="1" />
+
 
 
 	<animation state_key="reload" animation_key="reloading, magazine rifle 1.2" />

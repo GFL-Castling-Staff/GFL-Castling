@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<static_object key="destructible_wall.static_object" destroy_on_blast="0" destroy_on_drive_over="1" destroy_on_stab="0" undestroy_on_block_activate="0">
+
+	<effect event_key="destroy" key="other" ref="SmokeMinor" post_processing="1" />
+	<effect event_key="destroy" key="other" ref="ShadowSmokeMinor" shadow="1" />
+
+	<event>
+		<trigger class="destroy" />
+  	<result class="spawn" instance_class="visual_item" instance_key="burning_piece_mortar_ammunition_crates1.visual_item" min_amount="1" max_amount="4" offset="0 0.0 0" position_spread="1.5 1.5" direction_spread="0.1 0.2" />
+	</event>
+  
+	<event>
+		<trigger class="destroy" />
+  	<result class="spawn" instance_class="visual_item" instance_key="burning_piece_mortar_ammunition_crates2.visual_item" min_amount="3" max_amount="5" offset="0 0.0 0" position_spread="1.5 1.5" direction_spread="0.1 0.2" />
+	</event>
+  
+	<event>
+		<trigger class="destroy" />
+  	<result class="spawn" instance_class="visual_item" instance_key="burning_piece_mortar_ammunition_crates3.visual_item" min_amount="4" max_amount="8" offset="0 0.0 0" position_spread="1.5 1.5" direction_spread="0.1 0.2" />
+	</event>
+  
+	<event>
+		<trigger class="destroy" />
+  	<result class="spawn" instance_class="visual_item" instance_key="burning_piece_mortar_ammunition_crates4.visual_item" min_amount="6" max_amount="10" offset="0 0.0 0" position_spread="1.5 1.5" direction_spread="0.1 0.2" />
+	</event>
+  
+	<event>
+		<trigger class="destroy" />
+  	<result class="spawn" instance_class="visual_item" instance_key="burning_piece_mortar_ammunition_crates5.visual_item" min_amount="3" max_amount="7" offset="0 0.0 0" position_spread="1.5 1.5" direction_spread="0.1 0.2" />
+	</event>        
+
+</static_object>

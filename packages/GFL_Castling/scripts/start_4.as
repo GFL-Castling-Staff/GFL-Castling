@@ -18,9 +18,9 @@ void main(dictionary@ inputData) {
         settings.m_journalEnabled = true;
 		settings.m_fellowDisableEnemySpawnpointsSoldierCountOffset = 1;
 		
-        settings.m_fellowCapacityFactor = 0.5;
-        settings.m_fellowAiAccuracyFactor = 0.93;
-        settings.m_enemyCapacityFactor = 2.5;
+        settings.m_fellowCapacityFactor = 0.7;
+        settings.m_fellowAiAccuracyFactor = 0.90;
+        settings.m_enemyCapacityFactor = 2.0;
         settings.m_enemyAiAccuracyFactor = 0.93;
         settings.m_initialRp = 1000.0;
 		
@@ -36,7 +36,7 @@ void main(dictionary@ inputData) {
 
         settings.m_startServerCommand = """
 <command class='start_server'
-	server_name='[Castling][Insane-4 250%]'
+	server_name='[Castling][Insane-4 200%]'
 	server_port='1234'
 	comment='50% Friend AI, Read server rules in our discord: discord.gg/wwUM3kYmRC, QQ Group: 706234535'
 	url='https://castling.fandom.com/wiki/Castling_Wiki'
