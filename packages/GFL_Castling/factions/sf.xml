@@ -631,14 +631,14 @@
 	</soldier>
 
 	<!-- BOSS-hunter -->
-	<soldier name="sf_hunter" spawn_score="0.10" copy_from="default_spawn_ai">
+	<soldier name="sf_hunter" spawn_score="10.10" copy_from="default_spawn_ai">
 		<character filename="default_sf.text_lines">
 			<sound key="death" fileref="Hunter_buhuo_RETREAT_JP.wav" pitch_variety="0.001" volume="0.8" />
 			<sound key="throw" fileref="Hunter_buhuo_SKILL01_JP.wav" pitch_variety="0.001" volume="0.8" />
 			<sound key="throw" fileref="Hunter_buhuo_SKILL03_JP.wav" pitch_variety="0.001" volume="0.8" />
 		</character>
 		<model filename="sfd_boss_hunter.xml" />
-		<ai filename="eod.ai" />
+		<ai filename="sf_hunter.ai" />
 		<resources clear_vehicles="1" clear_weapons="1" clear_calls="1" clear_carry_items="1">
 			<weapon key="sfw_hunter.weapon" enabled="1"/>
 			<call key="sf_destroyer.call" />
