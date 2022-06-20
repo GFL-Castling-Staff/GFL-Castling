@@ -54,7 +54,8 @@
 <weapon file="two_hands_sg.animation_base" key="gkw_saiga12_skill.weapon">
     <!--Weapon specifications-->
     <specification 
-	retrigger_time="0.2" 
+	retrigger_time="0.1" 
+    last_burst_retrigger_time="0.3"
 	accuracy_factor="0.9" 
 	sustained_fire_grow_step="1.0" 
 	sustained_fire_diminish_rate="1.0" 
