@@ -4,8 +4,8 @@
     <specification 
 	  retrigger_time="-1.0" 
 	  accuracy_factor="1.0" 
-	  sustained_fire_grow_step="2.0" 
-	  sustained_fire_diminish_rate="0.7" 
+	  sustained_fire_grow_step="0" 
+	  sustained_fire_diminish_rate="1.0" 
 	  magazine_size="5" 
 	  can_shoot_standing="1" 
 	  suppressed="0" 
@@ -15,7 +15,7 @@
 	  sight_range_modifier="2.5" 
 	  projectile_speed="250" 
 	  barrel_offset="0.65" 
-	  projectiles_per_shot="1" 
+	  projectiles_per_shot="2" 
       burst_shots="1"
       stab_enabled="1"
       stab_range="4.0" />
@@ -52,21 +52,16 @@
     <capacity value="0" source="rank" source_value="0.0" />
     <capacity value="1" source="rank" source_value="4.622" />
 
-
-
-
-
-
     <weak_hand_hold offset="0.3" />
     <projectile file="88type_laser.projectile">
 		<trail probability="1.0" key="laser_hyz" />
-		 <result class="blast"  damage="11.5"  radius="4.5" decal="1" push="0" character_state="death" 	faction_compare="not_equal" />
+		 <result class="blast" damage="6.5"  radius="4.5" decal="1" push="0" character_state="death" 	faction_compare="not_equal" />
     </projectile>
-	<stance state_key="walking" accuracy="0.8" />
-	<stance state_key="crouch_moving" accuracy="0.8" />
-	<stance state_key="prone_moving" accuracy="0.8" />
-	<stance state_key="standing" accuracy="0.9"/>
-	<stance state_key="crouching" accuracy="0.98" />
+	<stance state_key="walking" accuracy="1" />
+	<stance state_key="crouch_moving" accuracy="1" />
+	<stance state_key="prone_moving" accuracy="1" />
+	<stance state_key="standing" accuracy="1"/>
+	<stance state_key="crouching" accuracy="1" />
 	<stance state_key="prone" accuracy="1" />
 	<stance state_key="over_wall" accuracy="1" />  
 	<modifier class="speed" value="0.4" />
