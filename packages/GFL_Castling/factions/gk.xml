@@ -296,6 +296,12 @@
 			<carry_item key="exo_ai_only.carry_item" />
 		</resources>	
 	</soldier>
+	<soldier name="default_store" spawn_score="0.0">
+		<resources file="gk_store.resources" />
+		<attribute_config class="xp">
+			<attribute weight="1.0" min="0.0" max="0.05" />
+		</attribute_config>
+	</soldier>
 	<soldier name="default_hvy" spawn_score="0.1" squad_size_xp_cap="0.0" copy_from="default_spawn_ai">
 		<ai filename="eod.ai" />
 		<resources file="gk_hvy_ai.resources" />

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources clear_weapons="1" clear_carry_items="1" clear_grenades="1" clear_calls="1" clear_vehicles="1" >
+    
+	<weapon key="medikit.weapon" />
+	<weapon key="gkw_88rocker.weapon" />
+	<weapon key="gkw_consume_at4.weapon" />
+	<weapon key="gkw_consume_javelin.weapon" />
+    
+    <carry_item key="dollcraft.carry_item"/>
+	<carry_item key="dollcraft_ar.carry_item"/>
+	<carry_item key="dollcraft_sg.carry_item"/>
+	<carry_item key="dollcraft_smg.carry_item"/>
+	<carry_item key="dollcraft_rf.carry_item"/>
+	<carry_item key="dollcraft_hg.carry_item"/>
+	<carry_item key="dollcraft_mg.carry_item"/>
+	<carry_item key="armor_crafting_card.carry_item"/>
+
+    <weapon key="reinforcement_fairy_medic.weapon" />
+	<weapon key="reinforcement_fairy_mgsg.weapon" />
+	<weapon key="reinforcement_fairy_hvy.weapon" />
+	<weapon key="repair_fairy.weapon" />
+	<weapon key="rescue_fairy.weapon" />
+	<weapon key="target_fairy.weapon" />
+
+    <projectile key="hand_grenade.projectile"/>
+	<projectile key="hand_88grenade.projectile" />
+	<projectile key="gkw_cz75_axe.projectile" />
+	<projectile key="hand_golyat.throwable"/>
+</resources>
