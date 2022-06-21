@@ -454,7 +454,7 @@
 	</soldier>
 
 	<!-- vespid -->
-	<soldier name="sf_vespid" spawn_score="1.5" copy_from="default_spawn_ai">
+	<soldier name="sf_vespid" spawn_score="2.0" copy_from="default_spawn_ai">
 		<ai filename="default.ai" />
 		<model filename="sfd_vespid.xml" />
 		<resources clear_weapons="1" clear_calls="1">
@@ -463,7 +463,7 @@
 			<projectile key="sf_ap_mine.projectile" enabled="1.0" />
 		</resources>
 	</soldier>
-	<soldier name="sf_vespid_swap" spawn_score="0.75" copy_from="default_spawn_ai">
+	<soldier name="sf_vespid_swap" spawn_score="1.0" copy_from="default_spawn_ai">
 		<model filename="sfd_vespid_swap_from_dusk.xml" />
 		<ai filename="elite.ai" />
 		<resources clear_weapons="1" clear_calls="1">
@@ -473,7 +473,7 @@
 		</resources>
 	</soldier>
 	<!-- ripper -->
-	<soldier name="sf_ripper" spawn_score="1.5" copy_from="default_spawn_ai">
+	<soldier name="sf_ripper" spawn_score="2.0" copy_from="default_spawn_ai">
 		<model filename="sfd_ripper.xml" />
 		<ai filename="default.ai" />
 		<resources clear_weapons="1" clear_calls="1">
@@ -482,7 +482,7 @@
 			<projectile key="sf_ap_mine.projectile" enabled="1.0" />
 		</resources>
 	</soldier>
-	<soldier name="sf_ripper_swap" spawn_score="0.75" copy_from="default_spawn_ai">
+	<soldier name="sf_ripper_swap" spawn_score="1.0" copy_from="default_spawn_ai">
 		<model filename="sfd_ripper_swap_from_dusk.xml" />
 		<ai filename="elite.ai" />
 		<resources clear_weapons="1" clear_calls="1">
@@ -517,7 +517,7 @@
 		</resources>
 	</soldier>
 	<!-- striker -->
-	<soldier name="sf_striker" spawn_score="1.5" copy_from="default_spawn_ai">
+	<soldier name="sf_striker" spawn_score="2.0" copy_from="default_spawn_ai">
 		<model filename="sfd_striker.xml" />
 		<ai filename="elite.ai" />
 		<resources clear_weapons="1" clear_calls="1">
@@ -526,7 +526,7 @@
 			<projectile key="sf_ap_mine.projectile" enabled="1.0" />
 		</resources>
 	</soldier>
-	<soldier name="sf_striker_swap" spawn_score="0.75" copy_from="default_spawn_ai">
+	<soldier name="sf_striker_swap" spawn_score="1.0" copy_from="default_spawn_ai">
 		<ai filename="eod.ai" />
 		<model filename="sfd_striker_swap_from_dusk.xml" />
 		<resources clear_weapons="1" clear_calls="1">
@@ -536,7 +536,7 @@
 		</resources>
 	</soldier>
 	<!-- nemeum 钢狮 -->
-	<soldier name="sfw_nemeum" spawn_score="0.6" copy_from="default_spawn_ai">
+	<soldier name="sfw_nemeum" spawn_score="0.8" copy_from="default_spawn_ai">
 		<character filename="default_mecha.character"/>
 		<ai filename="eod_mecha.ai" />
 		<model filename="sfd_sangvisfeaal.xml" />
@@ -546,7 +546,7 @@
 		</resources>
 	</soldier>
 	<!-- nemeum 钢狮 swap -->
-	<soldier name="sfw_nemeum_swap" spawn_score="0.15" copy_from="default_spawn_ai">
+	<soldier name="sfw_nemeum_swap" spawn_score="0.3" copy_from="default_spawn_ai">
 		<character filename="default_mecha.character"/>
 		<ai filename="eod_mecha.ai" />
 		<model filename="sfd_sangvisfeaal_swap.xml" />
@@ -556,7 +556,7 @@
 		</resources>
 	</soldier>
 	<!-- 劫豹 -->
-	<soldier name="sfw_jaguar" spawn_score="0.8" copy_from="default_spawn_ai">
+	<soldier name="sfw_jaguar" spawn_score="0.4" copy_from="default_spawn_ai">
 		<ai filename="rocket_mecha.ai" />
 		<model filename="sfd_sangvisfeaal_swap.xml" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_calls="1">
@@ -565,7 +565,7 @@
 		</resources>
 	</soldier>
 	<!-- 巡游者 -->
-	<soldier name="sfw_prowler" spawn_score="1.5" copy_from="default_spawn_ai">
+	<soldier name="sfw_prowler" spawn_score="2.4" copy_from="default_spawn_ai">
 		<ai filename="eod_mecha.ai" />
 		<model filename="sfd_prowler_from_melondove.xml" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_calls="1">
@@ -574,7 +574,7 @@
 		</resources>
 	</soldier>
 	<!-- 圣盾 -->
-	<soldier name="sfw_aegis" spawn_score="0.75" copy_from="default_spawn_ai">
+	<soldier name="sfw_aegis" spawn_score="1.0" copy_from="default_spawn_ai">
 		<model filename="sfd_aegis_1.xml" />
 		<ai filename="shield.ai" />
 		<resources clear_weapons="1" clear_calls="1" clear_grenades="1">
@@ -583,7 +583,7 @@
 		</resources>
 	</soldier>
 	<!--龙骑兵-->
-	<soldier name="sfw_dragoon" firstnames="sf_first.name" lastnames_file="sf_last.name" spawn_score="0.8" copy_from="default_spawn_ai">
+	<soldier name="sfw_dragoon" firstnames="sf_first.name" lastnames_file="sf_last.name" spawn_score="1.0" copy_from="default_spawn_ai">
 		<models filename="sfd_dragoon_SAIWA.models" />
 		<character filename="dragoon.character" />
 		<ai filename="dragoon.ai" />
@@ -599,7 +599,7 @@
 		</item_class_existence_config>
 	</soldier>
 
-	<soldier name="sfw_dragoon_swap" firstnames="sf_first.name" lastnames_file="sf_last.name" spawn_score="0.4" copy_from="default_spawn_ai">
+	<soldier name="sfw_dragoon_swap" firstnames="sf_first.name" lastnames_file="sf_last.name" spawn_score="0.5" copy_from="default_spawn_ai">
 		<models filename="sfd_dragoon_swap__from_(SAIWA)dusk.models" />
 		<character filename="dragoon.character" />
 		<ai filename="dragoon.ai" />
@@ -615,7 +615,7 @@
 		</item_class_existence_config>
 	</soldier>
 
-	<soldier name="Brute" spawn_score="1.3" squad_size_xp_cap="0.5" copy_from="default_spawn_ai">
+	<soldier name="Brute" spawn_score="1.5" squad_size_xp_cap="0.5" copy_from="default_spawn_ai">
 		<ai filename="melee_nb.ai" />
 		<model filename="sfd_Brute_gua.xml" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
@@ -966,7 +966,7 @@
 
 
 	<!-- 强无敌 -->
-	<soldier name="sf_manticore" firstnames="sf_first.name" lastnames_file="sf_last.name" spawn_score="0.25">
+	<soldier name="sf_manticore" firstnames="sf_first.name" lastnames_file="sf_last.name" spawn_score="0.4">
 		<models filename="sf_qwd.models" />
 		<character filename="qwd.character" />
 		<ai filename="hydra.ai" />
@@ -988,7 +988,7 @@
 
 
 	<!-- dinergate兵蚁 -->
-	<soldier name="sf_dinergate" spawn_score="0.5">
+	<soldier name="sf_dinergate" spawn_score="1.0">
 		<models filename="sf_dinergate.models" />
 		<character filename="sf_dinergate.character" />
 		<ai filename="eod.ai" />
@@ -1003,7 +1003,7 @@
 	</soldier>
 
 	<!-- tarantula狼蛛 -->
-	<soldier name="sf_tarantula" spawn_score="0.30">
+	<soldier name="sf_tarantula" spawn_score="0.80">
 		<models filename="sf_tarantula.models" />
 		<character filename="sf_dinergate.character" />
 		<ai filename="melee_nb.ai" />
@@ -1018,7 +1018,7 @@
 	</soldier>
 
 	<!-- scouts侦查者 -->
-	<soldier name="sf_scouts" spawn_score="0.50">
+	<soldier name="sf_scouts" spawn_score="1.50">
 		<model filename="sfd_scout.xml" />
 		<ai filename="eod_mecha.ai" />
 		<character filename="default_sf_bot.character" />

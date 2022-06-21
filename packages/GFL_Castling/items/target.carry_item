@@ -3,7 +3,7 @@
 	<carry_item key="target.carry_item" time_to_live_out_in_the_open="0" name="Punch it！" transform_on_consume="target_1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="testing.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
-		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<commonness value="1" in_stock="0" can_respawn_with="1"/>
 		<inventory encumbrance="3" price="1"/>
 		<model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"  />
@@ -20,7 +20,7 @@
 	<carry_item key="target_1" time_to_live_out_in_the_open="0" name="Punch it！" transform_on_consume="target_2" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="testing.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
-		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<commonness value="1" in_stock="0" can_respawn_with="1"/>
 		<inventory encumbrance="3" price="1"/>
 		<model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"  />
@@ -37,7 +37,7 @@
 	<carry_item key="target_2" time_to_live_out_in_the_open="0" name="Punch it！" transform_on_consume="target_3" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="testing.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
-		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<commonness value="1" in_stock="0" can_respawn_with="1"/>
 		<inventory encumbrance="3" price="1"/>
 		<model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"  />
@@ -54,7 +54,7 @@
 	<carry_item key="target_3" time_to_live_out_in_the_open="0" name="Punch it！" transform_on_consume="target_4" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="testing.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
-		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<commonness value="1" in_stock="0" can_respawn_with="1"/>
 		<inventory encumbrance="3" price="1"/>
 		<model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"  />
@@ -71,7 +71,7 @@
 	<carry_item key="target_4" time_to_live_out_in_the_open="0" name="Punch it！" transform_on_consume="target_5" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="testing.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
-		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<commonness value="1" in_stock="0" can_respawn_with="1"/>
 		<inventory encumbrance="3" price="1"/>
 		<model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"  />
@@ -88,7 +88,7 @@
 	<carry_item key="target_5" time_to_live_out_in_the_open="0" name="Punch it！" transform_on_consume="target_6" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="testing.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
-		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<commonness value="1" in_stock="0" can_respawn_with="1"/>
 		<inventory encumbrance="3" price="1"/>
 		<model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"  />
@@ -105,7 +105,7 @@
 	<carry_item key="target_6" time_to_live_out_in_the_open="0" name="Punch it！" transform_on_consume="target_7" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="testing.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
-		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<commonness value="1" in_stock="0" can_respawn_with="1"/>
 		<inventory encumbrance="3" price="1"/>
 		<model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"  />
@@ -122,7 +122,7 @@
 	<carry_item key="target_7" time_to_live_out_in_the_open="0" name="Punch it！" transform_on_consume="target_8" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="testing.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
-		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<commonness value="1" in_stock="0" can_respawn_with="1"/>
 		<inventory encumbrance="3" price="1"/>
 		<model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"  />
@@ -139,7 +139,7 @@
 	<carry_item key="target_8" time_to_live_out_in_the_open="0" name="Punch it！" transform_on_consume="target_9" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="testing.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
-		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<commonness value="1" in_stock="0" can_respawn_with="1"/>
 		<inventory encumbrance="3" price="1"/>
 		<model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"  />
@@ -156,7 +156,7 @@
 	<carry_item key="target_9" time_to_live_out_in_the_open="0" name="Punch it！" transform_on_consume="target_10" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="testing.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
-		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<commonness value="1" in_stock="0" can_respawn_with="1"/>
 		<inventory encumbrance="3" price="1"/>
 		<model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"  />
@@ -173,7 +173,7 @@
 	<carry_item key="target_10" time_to_live_out_in_the_open="0" name="Punch it！" transform_on_consume="target_11" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="testing.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
-		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<commonness value="1" in_stock="0" can_respawn_with="1"/>
 		<inventory encumbrance="3" price="1"/>
 		<model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"  />
@@ -190,7 +190,7 @@
 	<carry_item key="target_11" time_to_live_out_in_the_open="0" name="Punch it！" transform_on_consume="target_12" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="testing.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
-		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<commonness value="1" in_stock="0" can_respawn_with="1"/>
 		<inventory encumbrance="3" price="1"/>
 		<model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"  />
@@ -207,7 +207,7 @@
 	<carry_item key="target_12" time_to_live_out_in_the_open="0" name="Punch it！" transform_on_consume="target_13" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="testing.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
-		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<commonness value="1" in_stock="0" can_respawn_with="1"/>
 		<inventory encumbrance="3" price="1"/>
 		<model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"  />
@@ -224,7 +224,7 @@
 	<carry_item key="target_13" time_to_live_out_in_the_open="0" name="Punch it！" transform_on_consume="target_14" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="testing.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
-		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<commonness value="1" in_stock="0" can_respawn_with="1"/>
 		<inventory encumbrance="3" price="1"/>
 		<model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"  />
@@ -241,7 +241,7 @@
 	<carry_item key="target_14" time_to_live_out_in_the_open="0" name="Punch it！" transform_on_consume="target_15" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="testing.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
-		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<commonness value="1" in_stock="0" can_respawn_with="1"/>
 		<inventory encumbrance="3" price="1"/>
 		<model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"  />
@@ -258,7 +258,7 @@
 	<carry_item key="target_15" time_to_live_out_in_the_open="0" name="Punch it！" transform_on_consume="target_16" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="testing.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
-		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<commonness value="1" in_stock="0" can_respawn_with="1"/>
 		<inventory encumbrance="3" price="1"/>
 		<model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"  />
@@ -275,7 +275,7 @@
 	<carry_item key="target_16" time_to_live_out_in_the_open="0" name="Punch it！" transform_on_consume="target_17" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="testing.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
-		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<commonness value="1" in_stock="0" can_respawn_with="1"/>
 		<inventory encumbrance="3" price="1"/>
 		<model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"  />
@@ -292,7 +292,7 @@
 	<carry_item key="target_17" time_to_live_out_in_the_open="0" name="Punch it！" transform_on_consume="target_18" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="testing.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
-		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<commonness value="1" in_stock="0" can_respawn_with="1"/>
 		<inventory encumbrance="3" price="1"/>
 		<model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"  />
@@ -309,7 +309,7 @@
 	<carry_item key="target_18" time_to_live_out_in_the_open="0" name="Punch it！" transform_on_consume="target_19" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="testing.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
-		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<commonness value="1" in_stock="0" can_respawn_with="1"/>
 		<inventory encumbrance="3" price="1"/>
 		<model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"  />
@@ -326,7 +326,7 @@
 	<carry_item key="target_19" time_to_live_out_in_the_open="0" name="Punch it！" transform_on_consume="target_20" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="testing.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
-		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<commonness value="1" in_stock="0" can_respawn_with="1"/>
 		<inventory encumbrance="3" price="1"/>
 		<model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"  />

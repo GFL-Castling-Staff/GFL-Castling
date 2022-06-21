@@ -44,6 +44,7 @@
     <sound key="cycle" fileref="MP40_cycle_FromBFV.wav" volume="0.7" />
     <sound class="impact" fileref="rifle_drop.wav" />    
     <model filename="gkw_smg_mp40.xml"/>
+    <commonness value="0.2" in_stock="1" can_respawn_with="1" />
 
     <hud_icon filename="gkw_mp40.png"/>
 

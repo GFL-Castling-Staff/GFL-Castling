@@ -210,5 +210,6 @@ dictionary lv120dict={
     {"CAT HEAD",2961.0},
     {"HUALIN",3011.0},
     {"NEKO_CUP",3061.0},
+    {"EISEN",3110.0},
     {"NETHER_CROW",11452.0}
 };

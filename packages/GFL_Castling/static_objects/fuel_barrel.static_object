@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<static_object key="fuel_barrel.static_object" destroy_on_blast="1" destroy_on_drive_over="1" destroy_on_stab="0" undestroy_on_block_activate="0">
+	
+	<sound key="destroy" filename="fuel_barrel_explosion1.wav" volume="1.1" />
+	<sound key="destroy" filename="fuel_barrel_explosion2.wav" volume="1.1" />  
+	
+
+  <effect event_key="destroy" key="other" ref="woosh" post_processing="0" shadow="0" />  
+	<effect event_key="destroy" key="other" ref="SmokeMinor" post_processing="1" />
+	<effect event_key="destroy" key="other" ref="ShadowSmokeMinor" shadow="1" />  
+
+  
+	<event>
+		<trigger class="destroy" />
+		<result class="spawn" instance_class="visual_item" instance_key="burning_piece_barrel_top.visual_item" min_amount="1" max_amount="1" offset="0 0.5 0" position_spread="0 0" direction_spread="0.05 0.4" />
+	</event>  
+  
+	<event>
+		<trigger class="destroy" />
+		<result class="spawn" instance_class="visual_item" instance_key="burning_piece_barrel_bottom.visual_item" min_amount="1" max_amount="1" offset="0 0.2 0" position_spread="0 0" direction_spread="0.0 0.05" />
+	</event>    
+	
+	<!--
+	<event>
+		<trigger class="destroy" />  	
+		<result class="spawn" instance_class="visual_item" instance_key="burning_piece_gas_tank2.visual_item" min_amount="3" max_amount="4" offset="0 1.0 0" position_spread="0.5 0.5" direction_spread="0.1 0.1" />
+	</event>
+	-->
+	
+ 	<event>
+		<trigger class="destroy" />
+		<result class="spawn" instance_class="projectile" instance_key="debri_stun" min_amount="1" max_amount="1" offset="0 2.0 0" position_spread="0.0 0.0" direction_spread="0.0 0.0" />
+	</event>   
+
+ 	<event>
+		<trigger class="destroy" />
+		<result class="spawn" instance_class="projectile" instance_key="debri_destroy_small" min_amount="1" max_amount="1" offset="0 2.0 0" position_spread="0.0 0.0" direction_spread="0.0 0.0" />
+	</event>     
+ 
+		
+</static_object>

@@ -17,6 +17,7 @@
         <animation key="reload" animation_key="reloading, Machine gun 1.6" />
         <inventory  buy_price="16.0" sell_price="16.0" />
         <next_in_chain key="gkw_mg34_skill.weapon" share_ammo="1" />
+        <commonness value="0.2" in_stock="1" can_respawn_with="1" />
         <sound key="fire" fileref="mg34_fire_FromBF5.wav" pitch_variety="0.05" volume="1" />
         <sound key="magazine_out" fileref="mg34_mgz_out_FromBF5.wav" volume="0.7" />
         <sound key="magazine_in" fileref="mg34_mgz_in_FromBF5.wav" volume="0.7" />

@@ -54,6 +54,7 @@
 	
     <model filename=""/>
     <hud_icon filename="gkw_microuzi.png"/>
+    <commonness value="0.2" in_stock="1" can_respawn_with="1" />
 
 	<effect class="muzzle" ref="MuzzleDual1" />
     <effect class="muzzle" ref="MuzzleSmokeDual1" />

@@ -44,7 +44,8 @@
     <sound key="magazine_in" fileref="mab38_mgz_in_FromBF5.wav" volume="1.9" />
     <sound key="cycle" fileref="mab38_cycle_FromBF5.wav" volume="1.9" />
     <sound class="impact" fileref="rifle_drop.wav" volume="1"/>    
-	
+    <commonness value="0.2" in_stock="1" can_respawn_with="1" />
+
     <model filename="gkw_smg_mab38_mod3_from_gua.xml" />
     <hud_icon filename="gkw_mab38.png" />
 

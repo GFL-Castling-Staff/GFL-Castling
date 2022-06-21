@@ -2,7 +2,7 @@
 <weapon on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0">
 
 	<tag name="shotgun" />
-	<commonness value="0.2" in_stock="1" can_respawn_with="1" />
+	<commonness value="0.2" in_stock="0" can_respawn_with="1" />
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0" />
 	<specification 

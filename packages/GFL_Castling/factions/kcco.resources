@@ -13,6 +13,10 @@
 	<weapon key="kcco_teslatrooper.weapon" />
 	<weapon key="kcco_aegis.weapon"/>
 
+	<!-- 副手武器 -->
+	<weapon key="kcco_tracer_dart_accurate.weapon"/>
+	<weapon key="kcco_tracer_dart_ranged.weapon"/>
+
 	<!-- 护甲 -->
 	<carry_item key="kcco_ar.carry_item" />
 	<carry_item key="kcco_cet.carry_item" />
@@ -23,14 +27,18 @@
 	<carry_item key="kcco_boom.carry_item"/>
 	<carry_item key="kcco_flamethrower.carry_item"/>
 	
-	<!-- 智能雷 -->
+	<!-- 手雷位 -->
 	<projectile key="kcco_smartgrenade_1.projectile" />
+	<projectile key="kcco_tracer_dart_r.projectile" />
+	<projectile key="kcco_tracer_dart_a.projectile" />
 
 	<!-- 载具 -->
 	<vehicle key="typhon.vehicle" />
 	<vehicle key="sandstorm.vehicle" />
 	<vehicle key="coeus.vehicle" />
-	<vehicle key="aa_emplacement.vehicle"/>
+	<vehicle key="aa_emplacement.vehicle" enabled="1"/>
+	<vehicle key="atv_base_kcco.vehicle"/>
+
 	<!-- 增援 -->
 	<call key="kcco_argo_puppis.call" />
 	<call key="kcco_argo_vela.call" />

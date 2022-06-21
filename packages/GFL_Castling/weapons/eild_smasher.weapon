@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon key="eild_smasher.weapon" on_ground_up="0 0 1" time_to_live_out_in_the_open="0.0" drop_count_factor_on_death="0.0" player_death_drop_owner_lock_time="0">
+    <tag name="melee" />
+    <tag name="elite" />
+    <specification 
+     retrigger_time="1.5"
+     magazine_size="1000"
+     can_shoot_standing="1" 
+     can_shoot_crouching="1" 
+     can_shoot_prone="0" 
+     carry_in_two_hands="0" 
+     name="E.I.L.D. Smasher" 
+     class="0"
+     supperessed="0"
+     use_basic_muzzle_smoke_effect="0"
+     stab_enabled="1"
+     stab_range="5"
+    />
+    <animation state_key="recoil"   animation_key="Ola Ola Ola_big_unit" />
+    <animation state_key="changing_weapon_in"   animation_key="still_big_unit" />
+    <animation state_key="changing_weapon_out"  animation_key="still_big_unit" />
+    <animation state_key="reload"   animation_key="still_big_unit" />
+    <animation state_key="stabbing"   animation_key="hit ground_big_unit" />
+    <model />
+    <projectile file="teal.projectile">
+        <result class="blast" radius="3" damage="5" decal="0" push="0.0" character_state="death" faction_compare="not_equal" make_vehicle_hit_sound="0" />
+        <effect class="result" key="other" ref="SmokeTop" post_processing="1" />
+        <effect class="result" key="other" ref="Smoke" post_processing="1" />
+        <effect class="result" key="other" ref="Shine" lighting="0" />
+        <effect class="result" key="other" ref="Godray" lighting="0" />
+        <effect class="result" key="other" ref="ShadowSmoke" shadow="1" />
+        <effect class="result" key="static_object" copy="other" />
+        <effect class="result" key="vehicle" copy="other" />     
+        <effect class="result" key="character" copy="other" />
+        <effect class="result" key="terrain" copy="other" />
+    </projectile> 
+    <capacity value="1" source="rank" source_value="0" />
+    <stance state_key="running" accuracy="1" />
+    <stance state_key="walking" accuracy="1" />
+    <stance state_key="crouch_moving" accuracy="1" />
+    <stance state_key="standing" accuracy="1" />
+    <stance state_key="crouching" accuracy="1" />
+    <stance state_key="prone" accuracy="1" />
+    <stance state_key="prone_moving" accuracy="1" />
+    <stance state_key="over_wall" accuracy="1" />
+    <hud_icon filename="testing.png" />
+    <drop_on_death_result class="spawn" instance_class="carry_item" instance_key="wild_gifts.carry_item" min_amount="1" max_amount="2" offset="0 1.0 0" position_spread="0 0" direction_spread="0 0" />
+    <effect class="muzzle" ref="sawsnone" />
+    <commonness value="0.00001" can_respawn_with="1" in_stock="1" />
+    <modifier class="detectability" value="0.6"/>
+    <modifier class="speed" value="0.4" />
+    <modifier class="hit_success_probability" value="-0.2" />
+</weapon>

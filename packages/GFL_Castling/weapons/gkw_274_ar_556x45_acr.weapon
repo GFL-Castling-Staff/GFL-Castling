@@ -4,32 +4,24 @@
         <specification
             accuracy_factor="0.99"
             barrel_offset="0.4"
-            
             class="0"
             slot="0"
             magazine_size="30"
-            name="ACR"
-            projectile_speed="190.21"
-            retrigger_time="0.08"
+            name="Bushmaster ACR"
+            projectile_speed="250.21"
+            retrigger_time="0.0857"
             suppressed="1"
             sustained_fire_diminish_rate="1.8"
             sustained_fire_grow_step="0.3" />
-        
-        <inventory encumbrance="10.0" buy_price="7.0" sell_price="7.0" />	
-
-
-
-    <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
-
+        <inventory encumbrance="10.0" buy_price="15.0" sell_price="15.0" />
+        <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
         <sound key="fire" fileref="acr_fire_FromDIVISION2.wav" pitch_variety="0.05" volume="1" />
         <sound key="magazine_out" fileref="acr_mgz_out_FromDIVISION2.wav" volume="1" />
         <sound key="magazine_in" fileref="acr_mgz_in_FromDIVISION2.wav" volume="1" />
         <sound key="cycle" fileref="acr_cycle_FromDIVISION2.wav" volume="1" />
         <sound class="impact" fileref="rifle_drop.wav" />
-       
         <model filename="gkw_ar_acr.xml" />
         <hud_icon filename="gkw_acr.png" />
-
         <weak_hand_hold offset="0.2" />
         <projectile file="bullet.projectile" can_be_detected_by_footmen="0">
             <result class="hit" kill_probability="1.75" kill_probability_offset_on_successful_hit="0.3" kill_decay_start_time="0.675" kill_decay_end_time="1.125" />
