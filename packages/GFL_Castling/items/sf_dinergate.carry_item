@@ -1,30 +1,76 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <carry_items>
-    <carry_item file="wearables.base_carry_item" key="sf_dinergate.carry_item" name="Dinergate 1/1" slot="1" transform_on_consume="sf_dinergate_2" >
-        <hud_icon filename="sfd_ar.png" />
- 
-        <model mesh_filename="vestexo.xml" />
-                                                                                                                                                                          
-            <!-- death or wound or stun -> no effect -->
-            <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"  />
-            <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
-            <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
-            <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-            <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
-            <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
-            <modifier class="melee_hit_result" input_character_state="death" output_character_state="wound"/>
-    
-            <modifier class="hit_success_probability" value="-0.6" />
-            <modifier class="detectability" value="-0.15" />
-        </carry_item>
-
-      
-        <carry_item file="none.base_carry_item" key="sf_dinergate_2" name="Dinergate 0/1" slot="1" >
-            <hud_icon filename="sfd_ar.png" />
-     
-            <model mesh_filename="vestexo.xml" />                                                                                                                                                               
-    
-            <modifier class="speed" value="0.0" />
-            <modifier class="detectability" value="-0.15" />
-        </carry_item>
+	<carry_item key="sf_dinergate.carry_item" time_to_live_out_in_the_open="15" name="dinergate" transform_on_consume="sf_dinergate_1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="sfd_smg.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="3" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"  />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+        <modifier class="speed" value="0" />
+        <modifier class="hit_success_probability" value="-0.6" />
+        <modifier class="detectability" value="0" />
+	</carry_item>
+	<carry_item key="sf_dinergate_1" time_to_live_out_in_the_open="15" name="dinergate" transform_on_consume="sf_dinergate_2" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="sfd_smg.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="3" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"  />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+        <modifier class="speed" value="0" />
+        <modifier class="hit_success_probability" value="-0.6" />
+        <modifier class="detectability" value="0" />
+	</carry_item>
+	<carry_item key="sf_dinergate_2" time_to_live_out_in_the_open="15" name="dinergate" transform_on_consume="sf_dinergate_3" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="sfd_smg.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="3" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"  />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+        <modifier class="speed" value="0" />
+        <modifier class="hit_success_probability" value="-0.6" />
+        <modifier class="detectability" value="0" />
+	</carry_item>
+	<carry_item key="sf_dinergate_3" time_to_live_out_in_the_open="15" name="dinergate" transform_on_consume="sf_dinergate_4" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="sfd_smg.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="3" price="1"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="unwound" output_character_state="unwound" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="unwound" output_character_state="unwound" consumes_item="0"/>
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
+        <modifier class="melee_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
+        <modifier class="melee_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+        <modifier class="melee_hit_result" input_character_state="unwound" output_character_state="unwound" consumes_item="0"/>
+        <modifier class="speed" value="0" />
+        <modifier class="hit_success_probability" value="-0.6" />
+        <modifier class="detectability" value="0" />
+	</carry_item>
 </carry_items>
