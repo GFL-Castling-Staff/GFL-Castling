@@ -22,7 +22,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		setupDollCrafting_SMG();
 		setupDollCrafting_RF();
 		setupDollCrafting_MG();
-		setupDollCrafting_SG();
+		setupDollCrafting_HG();
 		setupBriefcaseUnlocks();
 		setupGift1();
 		setupGift2();
@@ -1104,7 +1104,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 				ScoredResource("gkw_fx05.weapon", "weapon", 0.3f),
 				ScoredResource("gkw_g28.weapon", "weapon", 0.3f),
 				ScoredResource("gkw_g36.weapon", "weapon", 0.3f),
-				ScoredResource("gkw_pdw.weapon", "weapon", 0.3f),
+				ScoredResource("gkw_honeybadger.weapon", "weapon", 0.3f),
 				ScoredResource("gkw_k31.weapon", "weapon", 0.3f),
 				ScoredResource("gkw_klin.weapon", "weapon", 0.3f),
 				ScoredResource("gkw_ksvk.weapon", "weapon", 0.3f),
@@ -1301,7 +1301,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 				ScoredResource("gkw_uzi.weapon", "weapon", 0.6f),
 				// ScoredResource("gkw_t-cms.weapon", "weapon", 0.6f),
 
-				ScoredResource("gkw_pdw.weapon", "weapon", 0.3f),
+				ScoredResource("gkw_honeybadger.weapon", "weapon", 0.3f),
 				ScoredResource("gkw_klin.weapon", "weapon", 0.3f),
 				ScoredResource("gkw_mp5.weapon", "weapon", 0.3f),
 				ScoredResource("gkw_pp19.weapon", "weapon", 0.3f),
@@ -1498,7 +1498,6 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 
 		array<array<ScoredResource@>> rewardPasses = {
 			{	
-				ScoredResource("gkw_hk.weapon", "weapon", 0.6f),
 				ScoredResource("gkw_m249saw.weapon", "weapon", 0.6f),
 				ScoredResource("gkw_mg42.weapon", "weapon", 0.6f),
 				ScoredResource("gkw_rpd.weapon", "weapon", 0.6f),
