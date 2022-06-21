@@ -516,6 +516,7 @@
 		<resources file="gk_elite.resources">
 			<weapon key="gkw_m16a1.weapon" />
 			<weapon key="medikit.weapon" />
+			<weapon key="gkw_consume_at4.weapon" />
 			<carry_item key="exo_t4.carry_item" />
 		</resources>
 		<attribute_config class="xp">
@@ -531,6 +532,7 @@
 		<resources file="gk_elite.resources">
 			<weapon key="gkw_m4a1.weapon" />
 			<weapon key="medikit.weapon" />
+			<weapon key="gkw_consume_at4.weapon" />
 			<carry_item key="exo_t4.carry_item" />
 		</resources>
 		<attribute_config class="xp">
@@ -545,6 +547,7 @@
 		</character>
 		<resources file="gk_elite.resources">
 			<weapon key="gkw_m4a1mod3.weapon" />
+			<weapon key="gkw_consume_at4.weapon" />
 			<carry_item key="exo_t4.carry_item" />
 		</resources>
 		<attribute_config class="xp">
@@ -559,6 +562,7 @@
 		</character>
 		<resources file="gk_elite.resources">
 			<weapon key="gkw_m4sopmodiimod3.weapon" />
+			<weapon key="gkw_consume_at4.weapon" />
 			<weapon key="medikit.weapon" />
 			<carry_item key="exo_t4.carry_item" />
 		</resources>
@@ -574,6 +578,7 @@
 		</character>
 		<resources file="gk_elite.resources">
 			<weapon key="gkw_ar15.weapon" />
+			<weapon key="gkw_consume_at4.weapon" />
 			<weapon key="medikit.weapon" />
 			<carry_item key="cc_t4.carry_item" />
 		</resources>
@@ -1405,7 +1410,7 @@
 		</character>
 		<resources clear_weapons="1" clear_vehicles="1" clear_calls="1" clear_grenades="1">
 			<weapon key="gkw_ak12_defyAI.weapon" />
-			<weapon key="gkw_defy_rocker.weapon" />
+			<weapon key="gkw_consume_at4.weapon" />
 			<projectile key="hand_88grenade.projectile" />
 			<carry_item key="exo_t5_ai_16lab.carry_item" />
 		</resources>
