@@ -589,7 +589,7 @@
 		<ai filename="dragoon.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="sfw_dragoon.weapon" enabled="1"/>
-			<carry_item key="sf_dg.carry_item" enabled="1"/>
+			<carry_item key="sf_dragoon.carry_item" enabled="1"/>
 		</resources>
 		<item_class_existence_config>
 			<!-- wearables -->
@@ -605,7 +605,7 @@
 		<ai filename="dragoon.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="sfw_dragoon_swap.weapon" enabled="1"/>
-			<carry_item key="sf_dgswap.carry_item" enabled="1"/>
+			<carry_item key="sf_dragoon.carry_item" enabled="1"/>
 		</resources>
 		<item_class_existence_config>
 			<!-- wearables -->
