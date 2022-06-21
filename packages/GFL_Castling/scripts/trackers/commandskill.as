@@ -244,6 +244,8 @@ dictionary commandSkillIndex = {
         // {"gkw_ak12_2402.weapon",30},
         // {"gkw_ak12_2402_skill.weapon",30},
 
+        {"gkw_ppkmod3.weapon",31},
+
         // 下面这行是用来占位的，在这之上添加新的枪和index即可
         {"666",-1}
 };
@@ -339,6 +341,7 @@ class CommandSkill : Tracker {
                     case 28:{excuteUMP9skill(cId,senderId,m_modifer);break;}
                     case 29:{excuteMab38skill(cId,senderId,m_modifer);break;}
                     // case 30:{excuteAK12SEskill(cId,senderId,m_modifer);break;}
+                    case 31:{excutePPKMOD3skill(cId,senderId,m_modifer);break;}
 
                     default:
                         break;
@@ -2114,6 +2117,48 @@ class CommandSkill : Tracker {
                         CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"firenade_Vector.projectile",characterId,factionid,26.0,6.0);
                     }                    
                     addCoolDown("MAB38",16,characterId,modifer);
+                }
+            }
+        }
+    }        
+    void excutePPKMOD3skill(int characterId,int playerId,SkillModifer@ modifer){
+        bool ExistQueue = false;
+        int j=-1;
+        for (uint i=0;i<SkillArray.length();i++){
+            if (SkillArray[i].m_character_id==characterId && SkillArray[i].m_weapontype=="PPKMOD3") {
+                ExistQueue=true;
+                j=i;
+            }
+        }
+        if (ExistQueue){
+            dictionary a;
+            a["%time"] = ""+SkillArray[j].m_time;
+            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            _log("skill cooldown" + SkillArray[j].m_time);
+            return;
+        }
+        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+        if (character !is null) {
+            const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+            if (player !is null){
+                if (player.hasAttribute("aim_target")) {
+                    string target = player.getStringAttribute("aim_target");
+                    Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
+                    int factionid = character.getIntAttribute("faction_id");
+                    array<string> Voice={
+                        "PPK_WIN_JP.wav",
+                        "PPK_ATTACK_JP.wav",
+                        "PPK_SKILL1_JP.wav",
+                        "PPK_SKILL2_JP.wav",
+                        "PPK_SKILL3_JP.wav"
+                    };
+                    playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+                    playAnimationKey(m_metagame,characterId,"recoil, pistol",true,true);
+                    playSoundAtLocation(m_metagame,"dart_shot.wav",factionid,c_pos,1.0);
+                    c_pos=c_pos.add(Vector3(0,1,0));
+                    CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"ppk_tracer_dart_1.projectile",characterId,factionid,60);
+            
+                    addCoolDown("PPKMOD3",60,characterId,modifer);
                 }
             }
         }
