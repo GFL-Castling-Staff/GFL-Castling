@@ -1032,42 +1032,13 @@
 	</soldier>
 
 	<!-- store -->
-	<soldier name="default_hg" spawn_score="0.0">
-		<resources file="gk_hg.resources" />
+	<soldier name="default_store" spawn_score="0.0">
+		<resources file="gk_store.resources" />
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="0.0" max="0.05" />
 		</attribute_config>
 	</soldier>
-	<soldier name="default_sg" spawn_score="0.0">
-		<resources file="gk_sg.resources" />
-		<attribute_config class="xp">
-			<attribute weight="1.0" min="0.0" max="0.05" />
-		</attribute_config>
-	</soldier>
-	<soldier name="default_smg" spawn_score="0.0">
-		<resources file="gk_smg.resources" />
-		<attribute_config class="xp">
-			<attribute weight="1.0" min="0.0" max="0.05" />
-		</attribute_config>
-	</soldier>
-	<soldier name="default_ar" spawn_score="0.0">
-		<resources file="gk_ar.resources" />
-		<attribute_config class="xp">
-			<attribute weight="1.0" min="0.0" max="0.05" />
-		</attribute_config>
-	</soldier>
-	<soldier name="default_rf" spawn_score="0.0">
-		<resources file="gk_rf.resources" />
-		<attribute_config class="xp">
-			<attribute weight="1.0" min="0.0" max="0.05" />
-		</attribute_config>
-	</soldier>
-	<soldier name="default_mg" spawn_score="0.0">
-		<resources file="gk_mg.resources" />
-		<attribute_config class="xp">
-			<attribute weight="1.0" min="0.0" max="0.05" />
-		</attribute_config>
-	</soldier>
+
 	<!-- chicken -->
 	<soldier name="chicken" spawn_score="0.0" squad_size_xp_cap="0.0" firstnames_file="chicken_firstnames.txt" lastnames_file="chicken_lastnames.txt">
 		<character filename="chicken_base.character" />
