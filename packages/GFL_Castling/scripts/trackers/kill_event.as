@@ -188,11 +188,21 @@ class kill_event : Tracker {
             int characterId = killer.getIntAttribute("id");
             string VestKey = getDeadPlayerEquipmentKey(m_metagame,targetId,0);
             string KillerWeaponKey = getDeadPlayerEquipmentKey(m_metagame,characterId,0);
-
+            string killway= event.getStringAttribute("method_hint");
             if(KillerWeaponKey=="gkw_ppkmod3.weapon"){
-                for (uint i=0;i<SkillArray.length();i++){
-                    if (SkillArray[i].m_character_id==characterId && SkillArray[i].m_weapontype=="PPKMOD3") {
-                        SkillArray[i].m_time-=2.0;
+                // _log("PPK skill " + killway);
+                int i = findSkillIndex(characterId,"PPKMOD3");
+                if(i >=0){
+                    SkillArray[i].m_time-=2.0;
+                    if (killway=="hit"){
+                        int j = findKillCountIndex(characterId);
+                        if(j>=0){
+                            KillCountArray[j].add();
+                            _log("PPK kill " + KillCountArray[j].m_killnum);
+                        }
+                        else{
+                            KillCountArray.insertLast(kill_count(characterId,1));
+                        }
                     }
                 }
             }
@@ -312,9 +322,31 @@ class HealOnKill_tracker{
 
 class kill_count{
     int m_characterId;
-    int m_killnum;
+    int m_killnum=0;
     kill_count(int a,int b){
         m_characterId=a;
         m_killnum=b;
     }
+
+    void add(){
+        m_killnum++;
+    }
+}
+
+int findSkillIndex(int cId,string key){
+    for (uint i=0;i<SkillArray.length();i++){
+        if (SkillArray[i].m_character_id==cId && SkillArray[i].m_weapontype==key) {
+            return i;
+        }
+    }
+    return -1;
+}
+
+int findKillCountIndex(int cId){
+    for (uint i=0;i<KillCountArray.length();i++){
+        if (KillCountArray[i].m_characterId==cId) {
+            return i;
+        }
+    }
+    return -1;
 }
