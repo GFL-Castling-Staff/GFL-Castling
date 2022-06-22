@@ -13,7 +13,7 @@
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-		<modifier class="hit_success_probability" value="-1.0" />
+		<modifier class="hit_success_probability" value="-0.8" />
 	    <modifier class="detectability" value="0" />
 	</carry_item>
 	<carry_item key="kcco_cet_1" time_to_live_out_in_the_open="15" name="Cerynitis Defend System" transform_on_consume="kcco_cet_2" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
@@ -29,7 +29,7 @@
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-		<modifier class="hit_success_probability" value="-1.0" />
+		<modifier class="hit_success_probability" value="-0.8" />
 	    <modifier class="detectability" value="0" />
 	</carry_item>
 	<carry_item key="kcco_cet_2" time_to_live_out_in_the_open="15" name="Cerynitis Defend System" transform_on_consume="kcco_cet_3" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
@@ -45,7 +45,7 @@
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-		<modifier class="hit_success_probability" value="-1.0" />
+		<modifier class="hit_success_probability" value="-0.6" />
 	    <modifier class="detectability" value="0" />
 	</carry_item>
 	<carry_item key="kcco_cet_3" time_to_live_out_in_the_open="15" name="Cerynitis Defend System" transform_on_consume="kcco_cet_4" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
@@ -61,7 +61,7 @@
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-		<modifier class="hit_success_probability" value="-1.0" />
+		<modifier class="hit_success_probability" value="-0.6" />
 	    <modifier class="detectability" value="0" />
 	</carry_item>
 	<carry_item key="kcco_cet_4" time_to_live_out_in_the_open="15" name="Cerynitis Defend System" transform_on_consume="kcco_cet_5" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
@@ -77,7 +77,7 @@
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-		<modifier class="hit_success_probability" value="-1.0" />
+		<modifier class="hit_success_probability" value="-0.6" />
 	    <modifier class="detectability" value="0" />
 	</carry_item>
 	<carry_item key="kcco_cet_5" time_to_live_out_in_the_open="15" name="Cerynitis Defend System" transform_on_consume="kcco_cet_6" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
@@ -93,7 +93,7 @@
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-		<modifier class="hit_success_probability" value="-1.0" />
+		<modifier class="hit_success_probability" value="-0.6" />
 	    <modifier class="detectability" value="0" />
 	</carry_item>
 	<carry_item key="kcco_cet_6" time_to_live_out_in_the_open="15" name="Cerynitis Defend System" transform_on_consume="kcco_cet_7" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
@@ -109,7 +109,7 @@
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-		<modifier class="hit_success_probability" value="-1.0" />
+		<modifier class="hit_success_probability" value="-0.6" />
 	    <modifier class="detectability" value="0" />
 	</carry_item>
 	<carry_item key="kcco_cet_7" time_to_live_out_in_the_open="15" name="Cerynitis Defend System" transform_on_consume="kcco_cet_8" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
@@ -125,7 +125,7 @@
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-		<modifier class="hit_success_probability" value="-1.0" />
+		<modifier class="hit_success_probability" value="-0.6" />
 	    <modifier class="detectability" value="0" />
 	</carry_item>
 	<carry_item key="kcco_cet_8" time_to_live_out_in_the_open="15" name="Cerynitis Defend System" transform_on_consume="kcco_cet_9" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
@@ -141,7 +141,7 @@
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-		<modifier class="hit_success_probability" value="-1.0" />
+		<modifier class="hit_success_probability" value="-0.6" />
 	    <modifier class="detectability" value="0" />
 	</carry_item>
 	<carry_item key="kcco_cet_9" time_to_live_out_in_the_open="15" name="Cerynitis Defend System" transform_on_consume="kcco_cet_10" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
@@ -157,7 +157,7 @@
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-		<modifier class="hit_success_probability" value="-1.0" />
+		<modifier class="hit_success_probability" value="-0.6" />
 	    <modifier class="detectability" value="0" />
 	</carry_item>
 </carry_items>
