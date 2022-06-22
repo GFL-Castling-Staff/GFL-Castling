@@ -461,7 +461,11 @@
 
 <model filename="gkd_smg_vector_agent.xml"><requirement class="weapon" slot="0" key="gkw_vector_agent.weapon"/></model>
 <model filename="gkd_smg_vector_agent.xml"><requirement class="weapon" slot="0" key="gkw_vector_agent_hpi.weapon"/></model>
-<model filename="gkd_smg_vector_agent.xml"><requirement class="weapon" slot="0" key="gkw_vector_agent_impact.weapon"/></model>
+<model filename="gkd_smg_vector_agent.xml"><requirement class="weapon" slot="0" key="gkw_vector_agent_sticky.weapon"/></model>
+
+<model filename="gkd_ar_hk416_agent_546.xml"><requirement class="weapon" slot="0" key="gkw_hk416_agent.weapon"/></model>
+<model filename="gkd_ar_hk416_agent_546.xml"><requirement class="weapon" slot="0" key="gkw_hk416_agent_he.weapon"/></model>
+<model filename="gkd_ar_hk416_agent_546.xml"><requirement class="weapon" slot="0" key="gkw_hk416_agent_sticky.weapon"/></model>
 
 <!-- <model filename="gkd_m950a_mod3_from_melondove.xml"><requirement class="weapon" slot="0" key="gkw_m950amod3.weapon"/></model> -->
 
