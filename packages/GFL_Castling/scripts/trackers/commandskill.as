@@ -8,7 +8,10 @@
 #include "generic_call_task.as"
 #include "task_sequencer.as"
 #include "GFLhelpers.as"
+#include "kill_event.as"
 
+array<SkillTrigger@> SkillArray;
+array<kill_count@> KillCountArray;
 
 //02:29:23: SCRIPT:  received: TagName=chat_event channel=global global=1 message=/promote player_id=0 player_name=NETHER_CROW 
 //02:29:23: SCRIPT:  received: TagName=query_result query_id=18     TagName=player aim_target=154.627 19.7851 688.99 character_id=174 color=0.68 0.85 0 1 faction_id=0 name=NETHER_CROW player_id=0 profile_hash=ID3580998501 sid=ID0 
@@ -253,7 +256,6 @@ dictionary commandSkillIndex = {
 class CommandSkill : Tracker {
     protected Metagame@ m_metagame;
     
-	array<SkillTrigger@> SkillArray;
     array<SkillEffectTimer@> TimerArray;
     array<SpamAvoider@> DontSpamingYourFuckingSkillWhileCoolDownBro;
 
@@ -429,9 +431,9 @@ class CommandSkill : Tracker {
         SkillArray.insertLast(cooldown);
     }
 
-    bool InCooldown(int cId, SkillModifer@ modifer,SkillTrigger@ queue,bool RemoveOnDeath=false){
+    bool InCooldown(int cId, SkillModifer@ modifer,SkillTrigger@ queue,bool NoRemoveOnDeath=false){
         if(queue.m_character_id==cId) return true;
-        if(RemoveOnDeath){
+        if(NoRemoveOnDeath){
             if(queue.m_skillInfo.m_playername==modifer.m_playername) return true;
             if(queue.m_skillInfo.m_player_id==modifer.m_player_id) return true;
         }
@@ -480,7 +482,7 @@ class CommandSkill : Tracker {
             _log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
-        addCoolDown("AN94",35,characterId,modifer);
+        addCoolDown("AN94",120,characterId,modifer);
         const XmlElement@ info = getCharacterInfo(m_metagame, characterId);
         int fID = info.getIntAttribute("faction_id");
         string c_pos = info.getStringAttribute("position");
@@ -500,7 +502,7 @@ class CommandSkill : Tracker {
         bool ExistQueue = false;
         int j =-1;
         for (uint i=0;i<SkillArray.length();i++){
-            if (InCooldown(characterId,modifer,SkillArray[i]) && SkillArray[i].m_weapontype=="AK12SE") {
+            if (InCooldown(characterId,modifer,SkillArray[i],true) && SkillArray[i].m_weapontype=="AK12SE") {
                 ExistQueue=true;
                 j=i;
             }
@@ -512,7 +514,7 @@ class CommandSkill : Tracker {
             _log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
-        addCoolDown("AK12SE",60,characterId,modifer);
+        addCoolDown("AK12SE",120,characterId,modifer);
         const XmlElement@ info = getCharacterInfo(m_metagame, characterId);
         int fID = info.getIntAttribute("faction_id");
         string c_pos = info.getStringAttribute("position");
@@ -921,7 +923,7 @@ class CommandSkill : Tracker {
         bool ExistQueue = false;
         int j =-1;
         for (uint i=0;i<SkillArray.length();i++){
-            if (InCooldown(characterId,modifer,SkillArray[i]) && SkillArray[i].m_weapontype=="FF_INTRUDER") {
+            if (InCooldown(characterId,modifer,SkillArray[i],true) && SkillArray[i].m_weapontype=="FF_INTRUDER") {
                 ExistQueue=true;
                 j=i;
             }
@@ -932,7 +934,7 @@ class CommandSkill : Tracker {
             sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
             return;
         }
-        addCoolDown("FF_INTRUDER",60,characterId,modifer);
+        addCoolDown("FF_INTRUDER",45,characterId,modifer);
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         if (character !is null) {
             const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
@@ -953,7 +955,7 @@ class CommandSkill : Tracker {
         bool ExistQueue = false;
         int j =-1;
         for (uint i=0;i<SkillArray.length();i++){
-            if (InCooldown(characterId,modifer,SkillArray[i]) && SkillArray[i].m_weapontype=="FF_AGENT") {
+            if (InCooldown(characterId,modifer,SkillArray[i],true) && SkillArray[i].m_weapontype=="FF_AGENT") {
                 ExistQueue=true;
                 j=i;
             }
@@ -1516,7 +1518,7 @@ class CommandSkill : Tracker {
         bool ExistQueue = false;
         int j=-1;
         for (uint i=0;i<SkillArray.length();i++){
-            if (InCooldown(characterId,modifer,SkillArray[i]) && SkillArray[i].m_weapontype=="pp19") {
+            if (InCooldown(characterId,modifer,SkillArray[i],mod3) && SkillArray[i].m_weapontype=="pp19") {
                 ExistQueue=true;
                 j=i;
             }
@@ -2125,7 +2127,7 @@ class CommandSkill : Tracker {
         bool ExistQueue = false;
         int j=-1;
         for (uint i=0;i<SkillArray.length();i++){
-            if (SkillArray[i].m_character_id==characterId && SkillArray[i].m_weapontype=="PPKMOD3") {
+            if (InCooldown(characterId,modifer,SkillArray[i]) && SkillArray[i].m_weapontype=="PPKMOD3") {
                 ExistQueue=true;
                 j=i;
             }

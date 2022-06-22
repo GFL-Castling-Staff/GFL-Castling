@@ -6,6 +6,7 @@
 #include "query_helpers2.as"
 #include "gamemode.as"
 #include "GFLhelpers.as"
+#include "commandskill.as"
 //Originally created by NetherCrow
 //11:39:11: SCRIPT:  received: TagName=character_kill key= method_hint=stab     
 //TagName=killer block=12 14 dead=0 faction_id=0 id=11 leader=1 name=Nikita Sokol player_id=0 position=428.551 4.3014 499.254 rp=60 soldier_group_name=default squad_size=0 wounded=0 xp=0   
@@ -188,6 +189,16 @@ class kill_event : Tracker {
             string VestKey = getDeadPlayerEquipmentKey(m_metagame,targetId,0);
             string KillerWeaponKey = getDeadPlayerEquipmentKey(m_metagame,characterId,0);
 
+            if(KillerWeaponKey=="gkw_ppkmod3.weapon"){
+                for (uint i=0;i<SkillArray.length();i++){
+                    if (SkillArray[i].m_character_id==characterId && SkillArray[i].m_weapontype=="PPKMOD3") {
+                        SkillArray[i].m_time-=2.0;
+                    }
+                }
+            }
+        
+            
+
             switch(int(healOnKillWeaponList[KillerWeaponKey]))
             {
                 case 0:{break;}
@@ -297,4 +308,13 @@ class HealOnKill_tracker{
         current_kills++;
         m_numtime= timeaddafterkill/0.2;
 	}
+}
+
+class kill_count{
+    int m_characterId;
+    int m_killnum;
+    kill_count(int a,int b){
+        m_characterId=a;
+        m_killnum=b;
+    }
 }
