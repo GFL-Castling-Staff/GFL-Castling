@@ -692,7 +692,7 @@ class CommandSkill : Tracker {
                 "HK416_Skill6.wav"
                 };
                 playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
-                SkillArray.insertLast(SkillTrigger(characterId,16,"HK416MOD3"));
+                addCoolDown("HK416MOD3",16,characterId,modifer);
             }
             else{
                 if (checkFlatRange(c_pos,stringToVector3(target),15)){

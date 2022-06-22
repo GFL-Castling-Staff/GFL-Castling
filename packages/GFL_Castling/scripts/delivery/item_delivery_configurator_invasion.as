@@ -34,6 +34,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		setupSFgift();
 		setupArmorCraft();
 		setupStuffEasterEgg();
+		setupSupplyBox();
 	}
 
 	// --------------------------------------------
@@ -56,7 +57,10 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		setupIDW();
 		setupPPSH41();
 	}
-
+	protected void setupSupplyBox(){
+		setupDreambox();
+		_log("adding supply reward box", 1);
+	}
 
 	// ----------------------------------------------------
 	protected void setupLaptopUnlocks() {
@@ -454,39 +458,28 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 			);
 	}
 
-	// ----------------------------------------------------
-	protected void setupCommunity3() {
-		_log("adding community box 3 config", 1);
+	protected void setupDreambox() {
 		array<Resource@> deliveryList = {
-			 Resource("gift_box_community_3.carry_item", "carry_item")
+			Resource("complete_box.carry_item", "carry_item")
 		};
 
 		array<array<ScoredResource@>> rewardPasses = {
 			{
-		 ScoredResource("ump40.weapon", "weapon", 12.0f), 
-         ScoredResource("mx4_storm.weapon", "weapon", 12.0f),
-         ScoredResource("bizon.weapon", "weapon", 12.0f),
-		 ScoredResource("dragons_breath.weapon", "weapon", 7.0f), 
-         ScoredResource("enforcer.weapon", "weapon", 8.0f),
-         ScoredResource("squall.weapon", "weapon", 8.0f),
-         ScoredResource("chainsaw.weapon", "weapon", 10.0f),
-         ScoredResource("emp_grenade.projectile", "projectile", 16.0f, 10),
-         ScoredResource("kunai.projectile", "projectile", 15.0f, 20)
-			},
-            {
-         ScoredResource("gps_laptop.weapon", "weapon", 17.0f, 5),
-	     ScoredResource("hornet_resource.weapon", "weapon", 15.0f, 2), 
-         ScoredResource("repair_crane_resource.weapon", "weapon", 15.0f, 2),
-         ScoredResource("squall.weapon", "weapon", 8.0f),
-         ScoredResource("costume_butcher.carry_item", "carry_item", 12.0f),        
-         ScoredResource("vest_repair.weapon", "weapon", 15.0f, 10), 
-         ScoredResource("guntruck_flare.projectile", "projectile", 10.0f, 2),
-         ScoredResource("vulcan_acav_flare.projectile", "projectile", 8.0f, 2)
-			} 
-		};   
-
+		ScoredResource("RO365_Ant_Doll.carry_item", "carry_item", 15.0f),
+		ScoredResource("city_gifts.carry_item", "carry_item", 10.0f, 10),
+		ScoredResource("wild_gifts.carry_item", "carry_item", 10.0f, 10),
+		ScoredResource("snow_gifts.carry_item", "carry_item", 10.0f, 10),
+		ScoredResource("forest_gifts.carry_item", "carry_item", 10.0f, 10),	
+		ScoredResource("gift_box_1.carry_item", "carry_item", 30.0f,3),
+		ScoredResource("firecontrol.carry_item", "carry_item", 10.0f,1),
+		ScoredResource("gift_box_2.carry_item", "carry_item", 15.0f,1),
+		ScoredResource("lottery.carry_item", "carry_item", 20.0f,3),
+		ScoredResource("core_mask.carry_item", "carry_item", 5.0f,1),
+		ScoredResource("dollcraft.carry_item", "carry_item", 40.0f,5)
+			}
+		};
 		processRewardPasses(rewardPasses);
-    
+
 		GiftItemDeliveryRandomRewarder@ rewarder = GiftItemDeliveryRandomRewarder(m_metagame, rewardPasses);
 
 		m_itemDeliveryOrganizer.addObjective(
@@ -494,128 +487,6 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 			);
 	}
 
-	// ----------------------------------------------------
-	protected void setupCommunity4() {
-		_log("adding community box 4 config", 1);
-		array<Resource@> deliveryList = {
-			 Resource("gift_box_community_4.carry_item", "carry_item")
-		};
-
-		array<array<ScoredResource@>> rewardPasses = {
-			{
-         ScoredResource("lottery.carry_item", "carry_item", 30.0f), 
-         ScoredResource("tkb059.weapon", "weapon", 5.0f),
-         ScoredResource("compound_bow.weapon", "weapon", 10.0f),
-         ScoredResource("blowgun.weapon", "weapon", 12.0f),
-         ScoredResource("g11.weapon", "weapon", 20.0f),
-         ScoredResource("pf98.weapon", "weapon", 8.0f),                  
-         ScoredResource("icecream.projectile", "projectile", 20.0f, 1)
-			},
-            {
-         ScoredResource("gepard_m6_lynx.weapon", "weapon", 8.0f),
-	     ScoredResource("golden_ak47.weapon", "weapon", 8.0f), 
-         ScoredResource("zjx19_flare.projectile", "projectile", 15.0f, 2),
-	     ScoredResource("portable_mortar.weapon", "weapon", 10.0f),
-	     ScoredResource("rgm40.weapon", "weapon", 18.0f), 
-	     ScoredResource("gl06.weapon", "weapon", 18.0f),
-		 ScoredResource("gift_box_community_3.carry_item", "carry_item", 7.0f),
-		 ScoredResource("gift_box_community_1.carry_item", "carry_item", 9.0f),
-         ScoredResource("gift_box_community_2.carry_item", "carry_item", 8.0f),
-		 ScoredResource("gift_box_community_5.carry_item", "carry_item", 5.0f)                                            
-			} 
-		};   
-
-		processRewardPasses(rewardPasses);
-    
-		GiftItemDeliveryRandomRewarder@ rewarder = GiftItemDeliveryRandomRewarder(m_metagame, rewardPasses);
-
-		m_itemDeliveryOrganizer.addObjective(
-			ItemDeliveryObjective(m_metagame, 0, deliveryList, m_itemDeliveryOrganizer, null, "", "", "", -1 /* loop */, rewarder)
-			);
-	}
-
-	// ----------------------------------------------------
-	protected void setupCommunity5() {
-		_log("adding community box 5 config", 1);
-		array<Resource@> deliveryList = {
-			 Resource("gift_box_community_5.carry_item", "carry_item")
-		};
-
-		array<array<ScoredResource@>> rewardPasses = {
-			{
-         ScoredResource("balloon.carry_item", "carry_item", 20.0f, 10),
-         ScoredResource("vest_exo.carry_item", "carry_item", 30.0f, 5),          
-         ScoredResource("suomi.weapon", "weapon", 10.0f),
-         ScoredResource("ninjato.weapon", "weapon", 20.0f),
-         ScoredResource("noxe_flare.projectile", "projectile", 15.0f, 2),
-         ScoredResource("m528_flare.projectile", "projectile", 15.0f, 2),         
-         ScoredResource("m320.weapon", "weapon", 15.0f),
-         ScoredResource("p416.weapon", "weapon", 10.0f)            
-
-			},
-            {
-	     ScoredResource("stim.projectile", "projectile", 30.0f, 10), 
-         ScoredResource("flamer_tank_flare.projectile", "projectile", 15.0f, 2),
-         ScoredResource("sev90_flare.projectile", "projectile", 15.0f, 2),                           
-	     ScoredResource("chicken_carrier.weapon", "weapon", 10.0f, 5),
-         ScoredResource("squad_equipment_kit.weapon", "weapon", 15.0f, 10),         
-		 ScoredResource("gift_box_community_4.carry_item", "carry_item", 3.0f),         
-		 ScoredResource("gift_box_community_3.carry_item", "carry_item", 4.0f),
-		 ScoredResource("gift_box_community_1.carry_item", "carry_item", 6.0f),
-         ScoredResource("gift_box_community_2.carry_item", "carry_item", 5.0f)                                   
-			} 
-		};   
-
-		processRewardPasses(rewardPasses);
-    
-		GiftItemDeliveryRandomRewarder@ rewarder = GiftItemDeliveryRandomRewarder(m_metagame, rewardPasses);
-
-		m_itemDeliveryOrganizer.addObjective(
-			ItemDeliveryObjective(m_metagame, 0, deliveryList, m_itemDeliveryOrganizer, null, "", "", "", -1 /* loop */, rewarder)
-			);
-	}
-
-	// ----------------------------------------------------
-	protected void setupCommunity6() {
-		_log("adding community box 6 config", 1);
-		array<Resource@> deliveryList = {
-			 Resource("gift_box_community_6.carry_item", "carry_item")
-		};
-
-		array<array<ScoredResource@>> rewardPasses = {
-			{
-         
-         ScoredResource("kulakov.weapon", "weapon", 10.0f),
-         ScoredResource("rpd.weapon", "weapon", 15.0f),
-         ScoredResource("ak47_w_gp25.weapon", "weapon", 15.0f),
-         ScoredResource("g36_w_ag36.weapon", "weapon", 15.0f),
-         ScoredResource("m16a4_w_m203.weapon", "weapon", 15.0f),			 
-         ScoredResource("mac10.weapon", "weapon", 20.0f),
-         ScoredResource("ash12.weapon", "weapon", 10.0f)            
-
-			},
-            {
-         ScoredResource("ultimax.weapon", "weapon", 10.0f),
-         ScoredResource("zweihander.weapon", "weapon", 20.0f), 
-         ScoredResource("sabre.weapon", "weapon", 20.0f),
-         ScoredResource("doublebarrel.weapon", "weapon", 20.0f),
-         ScoredResource("golden_mp5sd.weapon", "weapon", 12.0f),		 
-		 ScoredResource("gift_box_community_4.carry_item", "carry_item", 3.0f),         
-		 ScoredResource("gift_box_community_3.carry_item", "carry_item", 4.0f),
-		 ScoredResource("gift_box_community_5.carry_item", "carry_item", 6.0f),
-         ScoredResource("gift_box_community_2.carry_item", "carry_item", 5.0f)                                   
-			} 
-		};   
-
-		processRewardPasses(rewardPasses);
-    
-		GiftItemDeliveryRandomRewarder@ rewarder = GiftItemDeliveryRandomRewarder(m_metagame, rewardPasses);
-
-		m_itemDeliveryOrganizer.addObjective(
-			ItemDeliveryObjective(m_metagame, 0, deliveryList, m_itemDeliveryOrganizer, null, "", "", "", -1 /* loop */, rewarder)
-			);
-	}	
-	
 	// 替换彩票----------------------------------------------------
 	protected void setupIcecream() {
 		_log("adding icecream van config", 1);
@@ -1234,6 +1105,10 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 				ScoredResource("gkw_sl8.weapon", "weapon", 0.2f),
 				ScoredResource("gkw_negev.weapon", "weapon", 0.2f)
 
+			},
+			{
+				ScoredResource("core_mask.carry_item", "carry_item", 1.0f),
+				ScoredResource("", "carry_item", 99.0f)
 			}
 		};
 
