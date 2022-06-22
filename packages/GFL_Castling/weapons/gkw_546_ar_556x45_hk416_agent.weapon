@@ -13,7 +13,7 @@
     barrel_offset_3d="2.0 0.0 0.0"
 	magazine_size="30" 
     carry_in_two_hands="1"
-	name="HK416 Agent" 
+	name="HK416-Agent" 
     sight_range_modifier="1.75" 
 	projectile_speed="227.66" 
 	retrigger_time="0.067" 
@@ -97,7 +97,7 @@
     slot="0" 
 	magazine_size="30" 
     carry_in_two_hands="1"
-	name="HK416 Agent (HE)" 
+	name="HK416-Agent-[HE]" 
     sight_range_modifier="1.75" 
 	projectile_speed="227.66" 
 	retrigger_time="0.067" 
@@ -180,7 +180,7 @@
     class="0" 
     slot="0" 
     magazine_size="3" 
-    name="HK416 Agent (sticky bomb)" 
+    name="HK416-Agent:StickyBomb[HE]" 
     projectile_speed="180" 
     suppressed="1" 
     sight_range_modifier="1.75" 
@@ -227,7 +227,7 @@
 
     <!--Ballistics-->
     <projectile file="agent_sticky_bomb.projectile">
-        <result class="blast" radius="8.5" damage="4" push="0.2" decal="1" faction_compare="not_equal"/>
+        <result class="blast" radius="10" damage="5" push="0.2" decal="1" faction_compare="not_equal"/>
     </projectile>
 
     <ballistics near_far_distance="1000.0" speed_estimation_near="140.0" speed_estimation_far="140.0" max_speed="180.0" randomness="0.0" tweak_factor="0.95" />
