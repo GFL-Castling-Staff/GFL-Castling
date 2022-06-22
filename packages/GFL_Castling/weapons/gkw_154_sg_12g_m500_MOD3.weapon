@@ -29,8 +29,8 @@
     <animation state_key="cycle" animation_key="Pshotgun0.5" />
     <animation state_key="cycle" stance_key="prone" animation_key="Pshotgun0.5p" />
     <animation key="reload" animation_key="reloading, oaat" />		
-    <capacity value="0" source="rank" source_value="0.0" />
-    <capacity value="1" source="rank" source_value="10.0" />
+    <capacity value="1" source="rank" source_value="0.0" />
+    
 	<!--Sounds-->
 	
     <sound key="fire" fileref="m500_fire_FromSAM4.wav" pitch_variety="0.05" volume="1" />

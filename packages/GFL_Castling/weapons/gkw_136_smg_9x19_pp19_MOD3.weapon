@@ -17,8 +17,8 @@
 
   	<animation state_key="hold_casual"			animation_key="dancing, kazachok" />    
     <inventory  buy_price="190.0" sell_price="190.0" />
-    <capacity value="0" source="rank" source_value="0.0" />
-    <capacity value="1" source="rank" source_value="4.622" />
+    <capacity value="1" source="rank" source_value="0.0" />
+    
     <sound key="fire" fileref="pp19_fire_FromWF.wav" pitch_variety="0.05" volume="1.2" />
     <sound key="magazine_out" fileref="PP19_mgz_out_FromCOD16.wav" volume="1.1" />
     <sound key="magazine_in" fileref="PP19_mgz_in_FromCOD16.wav" volume="1.1" />
