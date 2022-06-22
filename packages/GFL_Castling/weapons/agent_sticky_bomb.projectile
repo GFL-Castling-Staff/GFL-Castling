@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<projectile class="grenade" name="agent impact bomb" slot="1" pulldown_in_air="8.0" key="agent_impact_bomb.projectile">
+<projectile class="grenade" name="agent sticky bomb" slot="1" pulldown_in_air="8.0" key="agent_sticky_bomb.projectile">
     <tag name="grenade"/>
     <result class="blast" radius="8.5" damage="10" push="0.2" decal="1" faction_compare="not_equal"/>
     <rotation class="motion" />
     <collision class="sticky" />
     <trigger class="remote_detonate" />
-    <model mesh_filename="gk_impact_bomb.xml" />
+    <model mesh_filename="gk_agent_sticky_bomb.xml" />
 
     <commonness value="0.0" />
 
