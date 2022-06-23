@@ -263,6 +263,9 @@ class CommandSkill : Tracker {
     array<SkillEffectTimer@> TimerArray;
     array<SpamAvoider@> DontSpamingYourFuckingSkillWhileCoolDownBro;
 
+    //给空袭as提供id的
+    uint max_id_num = 2000;//id上限，到达后从1开始给(反正rwr几乎不可能同时支持2000个角色同时干什么事hhhhh)
+    uint cur_id_num = 1;
 
 	protected bool m_ended;
 
@@ -2164,21 +2167,10 @@ class CommandSkill : Tracker {
                     playAnimationKey(m_metagame,characterId,"recoil, pistol",true,true);
                     playSoundAtLocation(m_metagame,"dart_shot.wav",factionid,c_pos,1.0);
                     c_pos=c_pos.add(Vector3(0,1,0));
-                    CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"ppk_tracer_dart_1.projectile",characterId,factionid,60);
+                    // CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"ppk_tracer_dart_1.projectile",characterId,factionid,60);
 
-                        _log("A10 gun strafe activate successful");	
-
-                        float rand_x = cos(float(rand(0,628))/100)-0.5;
-                        float rand_y = sin(float(rand(0,628))/100)-0.5;
-                        Vector3 luckyGuyPos = c_pos.add(Vector3(rand_x,0,rand_y)); //若周围没有敌人又必须要扫射，则直接默认以任意朝向扫一轮
-
-                        int luckyGuyid = getNearbyRandomLuckyGuyId(m_metagame,factionid,c_pos,30.0f);
-                        if(luckyGuyid!=-1){
-                            const XmlElement@ luckyGuy = getCharacterInfo(m_metagame, luckyGuyid);
-                            luckyGuyPos = stringToVector3(luckyGuy.getStringAttribute("position"));                        
-                        }
-                        Airstrike_strafe.insertLast(Airstrike_strafer(characterId,factionid,0,c_pos,luckyGuyPos));   
-                    addCoolDown("PPKMOD3",60,characterId,modifer);
+                    addA10Airstrike(characterId,factionid,c_pos,stringToVector3(target)); //初始化的时候数字部分必须填成-1,0,-1,0
+                    addCoolDown("PPKMOD3",0,characterId,modifer);
                 }
             }
         }
@@ -2216,7 +2208,49 @@ class CommandSkill : Tracker {
                 addCoolDown("RBLL",30,characterId,modifer);
             }
         }
-    }    
+    }  
+    void addA10Airstrike(int characterId,int factionid,Vector3 start_pos,Vector3 next_pos){
+        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+
+        Vector3 pos_a10_gun_strafe = next_pos;
+
+        _log("A10 gun strafe activate successful");	
+
+        float rand_x = rand(-1,1);
+        float rand_y = rand(-1,1);
+        Vector3 luckyGuyPos = pos_a10_gun_strafe.add(Vector3(rand_x,0,rand_y)); //若周围没有敌人又必须要扫射，则直接默认以任意朝向扫一轮
+
+        int luckyGuyid = getNearbyRandomLuckyGuyId(m_metagame,factionid,pos_a10_gun_strafe,20.0f);
+        if(luckyGuyid!=-1){
+            const XmlElement@ luckyGuy = getCharacterInfo(m_metagame, luckyGuyid);
+            luckyGuyPos = stringToVector3(luckyGuy.getStringAttribute("position"));                        
+        }
+        luckyGuyid = getNearbyRandomLuckyGuyId(m_metagame,factionid,pos_a10_gun_strafe,20.0f);
+        if(luckyGuyid!=-1){
+            const XmlElement@ luckyGuy = getCharacterInfo(m_metagame, luckyGuyid);
+            pos_a10_gun_strafe = stringToVector3(luckyGuy.getStringAttribute("position"));                        
+        }
+
+        rand_x = rand(-1,1);
+        rand_y = rand(-1,1);
+        luckyGuyPos = luckyGuyPos.add(Vector3(rand_x,0,rand_y)); //若周围没有敌人又必须要扫射，则直接默认以任意朝向扫一轮
+
+        //扫射位置偏移单位向量 与 单次扫射位置偏移单位距离
+        Vector3 strike_vector = getAimUnitVector(1,pos_a10_gun_strafe,luckyGuyPos); 
+        float strike_didis = 5.0;
+
+        //扫射终点的起点,终点（就生成弹头的终点的起始位置与终止位置）与下一个扫射位置
+        Vector3 c_pos = pos_a10_gun_strafe.add(getMultiplicationVector(strike_vector,Vector3(-20,0,-20)));
+        Vector3 s_pos = luckyGuyPos.add(getMultiplicationVector(strike_vector,Vector3(10,0,10)));
+        Vector3 c_next_pos = c_pos.add(getMultiplicationVector(strike_vector,Vector3(strike_didis,0,strike_didis)));
+        //依据扫射位置偏移单位距离而设置的扫射次数
+        int strike_time = int(getAimUnitDistance(1,c_pos,s_pos)/strike_didis);
+        //弹头起始扫射位置与终止扫射位置                
+        Airstrike_strafe.insertLast(Airstrike_strafer(characterId,factionid,c_pos,c_next_pos,0,cur_id_num,strike_time));
+        
+        cur_id_num+=1;
+        if(cur_id_num>max_id_num)cur_id_num=1;        	
+    }          
 }
 
 
