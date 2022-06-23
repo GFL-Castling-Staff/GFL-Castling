@@ -1,64 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapons>
-<weapon file="two_hands_ar.animation_base" key="gkw_m4a1mod3.weapon">
-
-    <specification 
+    <weapon file="two_hands_ar.animation_base" key="gkw_m4a1mod3.weapon">
+        <specification 
 		accuracy_factor="0.98" 
 		barrel_offset="0.4" 
-		 
 		class="0"
         slot="0" 
 		magazine_size="30" 
 		name="M4A1(MOD3)" 
-		projectile_speed="187.23" 
+		projectile_speed="240" 
 		retrigger_time="0.070" 
 		suppressed="1" 
-		sustained_fire_diminish_rate="1.8" 
+        sight_range_modifier="1.8"
+		sustained_fire_diminish_rate="2.4" 
 		sustained_fire_grow_step="0.3"/>
-
-    <next_in_chain key="gkw_m4a1mod3_skill.weapon" share_ammo="0" />
-    <inventory buy_price="270.0" sell_price="270.0" />	
-
-
-
-    <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
-	
-
-
-
-    <sound key="fire" fileref="m4a1_fire_FromDIVISION2.wav" pitch_variety="0.05" volume="1.2" />
-    <sound key="magazine_out" fileref="m4a1_mgz_out_FromCSGO.wav" volume="0.7" />
-    <sound key="magazine_in" fileref="m4a1_mgz_in_FromCSGO.wav" volume="0.7" />
-    <sound key="cycle" fileref="m4a1_cycle_FromCSGO.wav" volume="0.7" />
-    <sound class="impact" fileref="rifle_drop.wav" />    
-    <model filename="gkw_ar_m4a1mod3.xml" />
-
-    <hud_icon filename="gkw_m4a1mod3.png" />
-    <commonness value="1.0" can_respawn_with="1" />
-    <capacity value="1" source="rank" source_value="0.0" />
-    
-
-
-
-    <weak_hand_hold offset="0.2" />
-    <projectile file="bullet.projectile" can_be_detected_by_footmen="0">
-        <result class="hit"  kill_probability="1.8" kill_probability_offset_on_successful_hit="1" kill_decay_start_time="1.023" kill_decay_end_time="1.705" />
-    </projectile>
-    
-    <stance state_key="running" accuracy="0.3" />
-    <stance state_key="walking" accuracy="0.75" />
-    <stance state_key="crouch_moving" accuracy="0.9" />
-    <stance state_key="prone_moving" accuracy="0.9" />
-
-    <stance state_key="standing" accuracy="0.85" />
-    <stance state_key="crouching" accuracy="0.95" />
-    <stance state_key="prone" accuracy="1" />
-    <modifier class="detectability" value="-0.1" />
-
-</weapon>
-<weapon file="gf_ar.base_weapon" key="gkw_m4a1mod3_skill.weapon">
-
-    <specification 
+        <next_in_chain key="gkw_m4a1mod3_skill.weapon" share_ammo="0" />
+        <inventory buy_price="270.0" sell_price="270.0" />
+        <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
+        <sound key="fire" fileref="m4a1_fire_FromDIVISION2.wav" pitch_variety="0.05" volume="1.2" />
+        <sound key="magazine_out" fileref="m4a1_mgz_out_FromCSGO.wav" volume="0.7" />
+        <sound key="magazine_in" fileref="m4a1_mgz_in_FromCSGO.wav" volume="0.7" />
+        <sound key="cycle" fileref="m4a1_cycle_FromCSGO.wav" volume="0.7" />
+        <sound class="impact" fileref="rifle_drop.wav" />
+        <model filename="gkw_ar_m4a1mod3.xml" />
+        <hud_icon filename="gkw_m4a1mod3.png" />
+        <commonness value="0.2" can_respawn_with="1" />
+        <capacity value="1" source="rank" source_value="0.0" />
+        <weak_hand_hold offset="0.2" />
+        <projectile file="bullet.projectile" can_be_detected_by_footmen="0">
+            <result class="hit"  kill_probability="1.8" kill_probability_offset_on_successful_hit="1" kill_decay_start_time="1.023" kill_decay_end_time="1.705" />
+        </projectile>
+        <stance state_key="running" accuracy="0.75" />
+        <stance state_key="walking" accuracy="0.8" />
+        <stance state_key="crouch_moving" accuracy="0.9" />
+        <stance state_key="prone_moving" accuracy="0.9" />
+        <stance state_key="standing" accuracy="0.9" />
+        <stance state_key="crouching" accuracy="1" />
+        <stance state_key="prone" accuracy="1" />
+        <modifier class="speed" value="0.1" />
+        <modifier class="detectability" value="-0.1" />
+        <modifier class="hit_success_probability" value="-0.1" />
+    </weapon>
+    <weapon file="gf_ar.base_weapon" key="gkw_m4a1mod3_skill.weapon">
+        <specification 
 		accuracy_factor="1" 
 		barrel_offset="0.4" 
 		can_shoot_standing="1"
@@ -71,16 +55,13 @@
 		magazine_size="6" 
 		name="M4A1(MOD3)-[Mark of the avenger]" 
 		projectile_speed="2000.0" 
-        sight_range_modifier="1.2"
-		retrigger_time="1" 
+        sight_range_modifier="1.5"
+		retrigger_time="0.5" 
 		suppressed="0" 
 		sustained_fire_diminish_rate="1.8" 
 		sustained_fire_grow_step="0.3"
         projectiles_per_shot="1"/>
-
-
- <next_in_chain key="gkw_m4a1mod3.weapon" share_ammo="0" />
-
+        <next_in_chain key="gkw_m4a1mod3.weapon" share_ammo="0" />
         <animation state_key="recoil" animation_key="recoil, pistol dual 1" />
         <animation state_key="recoil" animation_key="recoil, pistol dual 2" />
         <animation state_key="recoil" stance_key="over_wall" animation_key="recoil, overwall dual" />
@@ -100,43 +81,36 @@
         <animation state_key="stabbing" animation_key="pistol whip" />
         <animation state_key="stabbing" animation_key="pistol whip 2" />
         <animation state_key="stabbing" animation_key="pistol whip 3" />
-	
-
-    <animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
-
-    <sound key="fire" fileref="m4mod_fire_FromBF5.wav" pitch_variety="0.05" volume="2" />
-    <sound key="magazine_out" fileref="m4mod_mgz_out_FromBORDERLAND3.wav" volume="0.8" />
-    <sound key="magazine_in" fileref="m4mod_mgz_in_FromBORDERLAND3.wav" volume="0.8" />
-    <sound key="cycle" fileref="m4mod_cycle_FromBORDERLAND3.wav" volume="0.8" />
-    <sound class="impact" fileref="rifle_drop.wav" />    
-    <model filename="none.xml" />
-
-    <hud_icon filename="gkw_m4a1mod3only_skill.png" />
-    <commonness value="0" in_stock="0" can_respawn_with="1" />
-    <inventory buy_price="270.0" sell_price="270.0" />	
-
-    <capacity value="1" source="rank" source_value="0.0" />
-          <ballistics
-     near_far_distance="0"
-     speed_estimation_near="75.0"
-     speed_estimation_far="75.0"
-     max_speed="200"
-     randomness="0.0"
-     curve_height="6"
-     tweak_factor="2.5"
-    />
-    <weak_hand_hold offset="0.2" />
-    <projectile file="m4a1mod3_skill.projectile" can_be_detected_by_footmen="0"/>
-
-    <stance state_key="running" accuracy="0.3" />
-    <stance state_key="walking" accuracy="0.8" />
-    <stance state_key="crouch_moving" accuracy="0.9" />
-    <stance state_key="prone_moving" accuracy="0.9" />
-
-    <stance state_key="standing" accuracy="1" />
-    <stance state_key="crouching" accuracy="1" />
-    <stance state_key="prone" accuracy="1" />
-    <modifier class="speed" value="-0.5" />
-    <modifier class="detectability" value="-0.1" />
-</weapon>
+        <animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
+        <sound key="fire" fileref="m4mod_fire_FromBF5.wav" pitch_variety="0.05" volume="2" />
+        <sound key="magazine_out" fileref="m4mod_mgz_out_FromBORDERLAND3.wav" volume="0.8" />
+        <sound key="magazine_in" fileref="m4mod_mgz_in_FromBORDERLAND3.wav" volume="0.8" />
+        <sound key="cycle" fileref="m4mod_cycle_FromBORDERLAND3.wav" volume="0.8" />
+        <sound class="impact" fileref="rifle_drop.wav" />
+        <model filename="none.xml" />
+        <hud_icon filename="gkw_m4a1mod3only_skill.png" />
+        <commonness value="0" in_stock="0" can_respawn_with="1" />
+        <inventory buy_price="270.0" sell_price="270.0" />
+        <capacity value="1" source="rank" source_value="0.0" />
+        <ballistics
+        near_far_distance="0"
+        speed_estimation_near="75.0"
+        speed_estimation_far="75.0"
+        max_speed="200"
+        randomness="0.0"
+        curve_height="6"
+        tweak_factor="2.5"
+        />
+        <weak_hand_hold offset="0.2" />
+        <projectile file="m4a1mod3_skill.projectile" can_be_detected_by_footmen="0"/>
+        <stance state_key="running" accuracy="0.3" />
+        <stance state_key="walking" accuracy="0.8" />
+        <stance state_key="crouch_moving" accuracy="0.9" />
+        <stance state_key="prone_moving" accuracy="0.9" />
+        <stance state_key="standing" accuracy="1" />
+        <stance state_key="crouching" accuracy="1" />
+        <stance state_key="prone" accuracy="1" />
+        <modifier class="speed" value="-0.5" />
+        <modifier class="detectability" value="-0.1" />
+    </weapon>
 </weapons>
