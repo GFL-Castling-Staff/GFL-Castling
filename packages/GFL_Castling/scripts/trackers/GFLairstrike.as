@@ -21,6 +21,7 @@
 // 抽象下来大概就是 characterid, factionid, event_key, cur_pos, aim_pos 这几个就行。
 
 // 在tracker里面整理空袭队列，update才射出弹头。
+array<Airstrike_strafer@> Airstrike_strafe;
 
 	// --------------------------------------------
 class GFLairstrike : Tracker {
@@ -33,7 +34,6 @@ class GFLairstrike : Tracker {
 		@m_metagame = @metagame;
 	}
 
-    protected array<Airstrike_strafer@> Airstrike_strafe;
 
 	// --------------------------------------------
 	protected void handleResultEvent(const XmlElement@ event) {

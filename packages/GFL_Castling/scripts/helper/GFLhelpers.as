@@ -554,11 +554,11 @@ void playPrivateSound(const Metagame@ metagame, string filename, int playerId) {
 	metagame.getComms().send(command);
 }
 
-int getNearbyRandomLuckyGuyId(GameMode@ metagame, uint factionid, Vector3 pos, float range){
+int getNearbyRandomLuckyGuyId(GameMode@ metagame, int factionid, Vector3 pos, float range){
 	uint cur_factionid_num = metagame.getFactionCount();
     array<const XmlElement@> affectedCharacter;
 	for(uint i=0;i<cur_factionid_num;i++) 
-		if(i!=factionid) {
+		if(int(i)!=factionid) {
 			array<const XmlElement@> possible_affectedCharacter;
 			possible_affectedCharacter = getCharactersNearPosition(metagame,pos,i,range);
 			if (possible_affectedCharacter !is null){
