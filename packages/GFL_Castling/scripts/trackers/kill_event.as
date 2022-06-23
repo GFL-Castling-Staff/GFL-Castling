@@ -342,6 +342,15 @@ int findSkillIndex(int cId,string key){
     return -1;
 }
 
+int findSkillIndex(int cId){
+    for (uint i=0;i<SkillArray.length();i++){
+        if (SkillArray[i].m_character_id==cId) {
+            return i;
+        }
+    }
+    return -1;
+}
+
 int findKillCountIndex(int cId){
     for (uint i=0;i<KillCountArray.length();i++){
         if (KillCountArray[i].m_characterId==cId) {

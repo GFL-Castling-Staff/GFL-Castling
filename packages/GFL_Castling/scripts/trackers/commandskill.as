@@ -249,6 +249,10 @@ dictionary commandSkillIndex = {
 
         {"gkw_ppkmod3.weapon",31},
 
+        //利贝罗勒
+        {"gkw_ribeyrollesmod3.weapon",32},
+        {"gkw_ribeyrollesmod3_skill.weapon",32},
+
         // 下面这行是用来占位的，在这之上添加新的枪和index即可
         {"666",-1}
 };
@@ -344,6 +348,8 @@ class CommandSkill : Tracker {
                     case 29:{excuteMab38skill(cId,senderId,m_modifer);break;}
                     // case 30:{excuteAK12SEskill(cId,senderId,m_modifer);break;}
                     case 31:{excutePPKMOD3skill(cId,senderId,m_modifer);break;}
+                    case 32:{excuteMLEskill(cId,senderId,m_modifer);break;}
+
 
                     default:
                         break;
@@ -2165,6 +2171,40 @@ class CommandSkill : Tracker {
             }
         }
     }        
+    void excuteMLEskill(int characterId,int playerId,SkillModifer@ modifer){
+        bool ExistQueue = false;
+        int j=-1;
+        for (uint i=0;i<SkillArray.length();i++){
+            if (InCooldown(characterId,modifer,SkillArray[i],true) && SkillArray[i].m_weapontype=="RBLL") {
+                ExistQueue=true;
+                j=i;
+            }
+        }
+        if (ExistQueue){
+            dictionary a;
+            a["%time"] = ""+SkillArray[j].m_time;
+            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            _log("skill cooldown" + SkillArray[j].m_time);
+            return;
+        }
+        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+        if (character !is null) {
+            const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+            if (player !is null){
+                Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
+                int factionid = character.getIntAttribute("faction_id");
+                array<const XmlElement@>@ characters = getCharactersNearPosition(m_metagame, c_pos, factionid, 20.0f);
+                for (uint i = 0; i < characters.length; i++) {   
+                    int soldierId = characters[i].getIntAttribute("id");
+                    int index = findSkillIndex(soldierId);
+                    if(index != -1 && soldierId != characterId ){
+                        SkillArray[index].m_time-=10.0;
+                    }
+                }
+                addCoolDown("RBLL",30,characterId,modifer);
+            }
+        }
+    }    
 }
 
 
