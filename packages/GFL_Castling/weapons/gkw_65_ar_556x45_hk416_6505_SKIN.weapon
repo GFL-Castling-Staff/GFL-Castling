@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapon file="two_hands_ar.animation_base" key="gkw_hk416_6505.weapon">
-    
-    
     <!--Weapon specifications-->
-    
     <specification 
 	accuracy_factor="0.98" 
 	barrel_offset="0.4" 
@@ -16,33 +13,20 @@
 	suppressed="1" 
     sustained_fire_diminish_rate="1.8"
     sustained_fire_grow_step="0.3"/>
-	
-	<!--Animations-->
-    <inventory  buy_price="8.0" sell_price="8.0" />	
-
-
-
+    <!--Animations-->
+    <inventory  buy_price="7.0" sell_price="7.0" />
+    <commonness value="0" in_stock="0" />
     <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
-
-	
-	<!--Sounds-->
-	
-	<sound key="fire" fileref="hk416_fire_FromBFH.wav" pitch_variety="0.05" volume="0.8" />
+    <!--Sounds-->
+    <sound key="fire" fileref="hk416_fire_FromBFH.wav" pitch_variety="0.05" volume="0.8" />
     <sound key="magazine_out" fileref="hk416_mgz_out_FromEFT.wav" volume="0.7" />
     <sound key="magazine_in" fileref="hk416_mgz_in_FromEFT.wav" volume="0.7" />
     <sound key="cycle" fileref="hk416_cycle_FromEFT.wav" volume="0.7" />
     <sound class="impact" fileref="rifle_drop.wav" />
-   
-	<!--Model, Icon, Cost-->
-   
-	<model filename="gkw_ar_hk416_6505_from_melondove.xml" />
+    <!--Model, Icon, Cost-->
+    <model filename="gkw_ar_hk416_6505_from_melondove.xml" />
     <hud_icon filename="gkw_hk416_6505.png" />
-    <commonness value="0" in_stock="0" />
-
-	
-	<!--Ballistics-->
-	
-    
+    <!--Ballistics-->
     <weak_hand_hold offset="0.3" />
     <projectile file="bullet.projectile" can_be_detected_by_footmen="0">
         <result class="hit" 
@@ -51,9 +35,7 @@
         kill_decay_start_time="1.142" 
         kill_decay_end_time="1.904" />
     </projectile>
-    
     <!--Accuracy, Movement speed-->
-    
     <stance state_key="running" accuracy="0.3" />
     <stance state_key="walking" accuracy="0.75" />
     <stance state_key="crouch_moving" accuracy="0.9" />
