@@ -44,6 +44,18 @@
     <sound key="magazine_out" fileref="vector_agent_mgz_out_FromINS.wav" volume="0.6" />
     <sound key="magazine_in" fileref="vector_agent_mgz_in_FromINS.wav" volume="0.6" />
     <sound key="cycle" fileref="vector_agent_cycle_FromINS.wav" volume="0.7" />
+    <sound key="cycle" fileref="Vector_ATTACK_JP.wav" pitch_variety="0.05" volume="1" />
+    <sound key="cycle" fileref="Vector_BLACKACTION_JP.wav" pitch_variety="0.05" volume="1" />
+    <sound key="cycle" fileref="Vector_COMBINE_JP.wav" pitch_variety="0.05" volume="1" />
+    <sound key="cycle" fileref="Vector_DEFENSE_JP.wav" pitch_variety="0.05" volume="1" />
+    <sound key="cycle" fileref="Vector_FIX_JP.wav" pitch_variety="0.05" volume="1" />
+    <sound key="cycle" fileref="Vector_FORMATION_JP.wav" pitch_variety="0.05" volume="1" />
+    <sound key="cycle" fileref="Vector_LOADING_JP.wav" pitch_variety="0.05" volume="1" />
+    <sound key="cycle" fileref="Vector_OPERATIONBEGIN_JP.wav" pitch_variety="0.05" volume="1" />
+    <sound key="cycle" fileref="Vector_OPERATIONOVER_JP.wav" pitch_variety="0.05" volume="1" />
+    <sound key="cycle" fileref="Vector_PHRASE_JP.wav" pitch_variety="0.05" volume="1" />
+    <sound key="cycle" fileref="Vector_TIP_JP.wav" pitch_variety="0.05" volume="1" />
+    <sound key="cycle" fileref="RogueAgentNearby.wav" pitch_variety="0.05" volume="1" />
     <sound class="impact" fileref="rifle_drop.wav" />
 
     <model filename="gkw_smg_vector_agent.xml" />
@@ -116,6 +128,18 @@
     <sound key="magazine_out" fileref="vector_agent_mgz_out_FromINS.wav" volume="0.6" />
     <sound key="magazine_in" fileref="vector_agent_mgz_in_FromINS.wav" volume="0.6" />
     <sound key="cycle" fileref="vector_agent_cycle_FromINS.wav" volume="0.7" />
+    <sound key="cycle" fileref="Vector_ATTACK_JP.wav" pitch_variety="0.05" volume="1" />
+    <sound key="cycle" fileref="Vector_BLACKACTION_JP.wav" pitch_variety="0.05" volume="1" />
+    <sound key="cycle" fileref="Vector_COMBINE_JP.wav" pitch_variety="0.05" volume="1" />
+    <sound key="cycle" fileref="Vector_DEFENSE_JP.wav" pitch_variety="0.05" volume="1" />
+    <sound key="cycle" fileref="Vector_FIX_JP.wav" pitch_variety="0.05" volume="1" />
+    <sound key="cycle" fileref="Vector_FORMATION_JP.wav" pitch_variety="0.05" volume="1" />
+    <sound key="cycle" fileref="Vector_LOADING_JP.wav" pitch_variety="0.05" volume="1" />
+    <sound key="cycle" fileref="Vector_OPERATIONBEGIN_JP.wav" pitch_variety="0.05" volume="1" />
+    <sound key="cycle" fileref="Vector_OPERATIONOVER_JP.wav" pitch_variety="0.05" volume="1" />
+    <sound key="cycle" fileref="Vector_PHRASE_JP.wav" pitch_variety="0.05" volume="1" />
+    <sound key="cycle" fileref="Vector_TIP_JP.wav" pitch_variety="0.05" volume="1" />
+    <sound key="cycle" fileref="RogueAgentNearby.wav" pitch_variety="0.05" volume="1" />
     <sound class="impact" fileref="rifle_drop.wav" />
 
     <model filename="gkw_smg_vector_agent.xml" />
@@ -197,7 +221,19 @@
     <sound key="fire" fileref="hk416_agent_skill_fire_FromDIVISION2.wav" pitch_variety="0.05" volume="1.3" />
     <sound key="magazine_out" fileref="js05_mgz_out_FromCOD17.wav" volume="0.7" />
     <sound key="magazine_in" fileref="js05_mgz_in_FromCOD17.wav" volume="0.7" />
-	<sound key="cycle" fileref="js05_cycle_FromCOD17.wav" volume="0.6" />
+	<sound key="cycle" fileref="vector_agent_cycle_FromINS.wav" volume="0.7" />
+    <sound key="cycle" fileref="Vector_ATTACK_JP.wav" pitch_variety="0.05" volume="1" />
+    <sound key="cycle" fileref="Vector_BLACKACTION_JP.wav" pitch_variety="0.05" volume="1" />
+    <sound key="cycle" fileref="Vector_COMBINE_JP.wav" pitch_variety="0.05" volume="1" />
+    <sound key="cycle" fileref="Vector_DEFENSE_JP.wav" pitch_variety="0.05" volume="1" />
+    <sound key="cycle" fileref="Vector_FIX_JP.wav" pitch_variety="0.05" volume="1" />
+    <sound key="cycle" fileref="Vector_FORMATION_JP.wav" pitch_variety="0.05" volume="1" />
+    <sound key="cycle" fileref="Vector_LOADING_JP.wav" pitch_variety="0.05" volume="1" />
+    <sound key="cycle" fileref="Vector_OPERATIONBEGIN_JP.wav" pitch_variety="0.05" volume="1" />
+    <sound key="cycle" fileref="Vector_OPERATIONOVER_JP.wav" pitch_variety="0.05" volume="1" />
+    <sound key="cycle" fileref="Vector_PHRASE_JP.wav" pitch_variety="0.05" volume="1" />
+    <sound key="cycle" fileref="Vector_TIP_JP.wav" pitch_variety="0.05" volume="1" />
+    <sound key="cycle" fileref="RogueAgentNearby.wav" pitch_variety="0.05" volume="1" />
     <sound class="impact" fileref="rifle_drop.wav" />
 
     <!--Model, Icon, Cost-->
