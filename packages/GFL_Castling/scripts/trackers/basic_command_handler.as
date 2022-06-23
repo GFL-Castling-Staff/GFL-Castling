@@ -605,7 +605,12 @@ class BasicCommandHandler : Tracker {
 		} else if (checkCommand(message, "dog")) {
 			spawnInstanceNearPlayer(senderId, "dog", "soldier", 0);    	
 		} else if (checkCommand(message, "gb1")) {
-			spawnInstanceNearPlayer(senderId, "gift_box_1.carry_item", "carry_item", 0);
+			spawnInstanceNearPlayer(senderId, "complete_box.carry_item", "carry_item", 0);
+			spawnInstanceNearPlayer(senderId, "complete_box.carry_item", "carry_item", 0);
+			spawnInstanceNearPlayer(senderId, "complete_box.carry_item", "carry_item", 0);
+			spawnInstanceNearPlayer(senderId, "complete_box.carry_item", "carry_item", 0);
+			spawnInstanceNearPlayer(senderId, "complete_box.carry_item", "carry_item", 0);
+			spawnInstanceNearPlayer(senderId, "complete_box_singularity.carry_item","carry_item",0);
 		} else if (checkCommand(message, "gb2")) {
 			spawnInstanceNearPlayer(senderId, "gift_box_2.carry_item", "carry_item", 0);
 		} else if (checkCommand(message, "gb3")) {
@@ -732,7 +737,10 @@ class BasicCommandHandler : Tracker {
 			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","ff_alchemist.weapon");
 		} else if (checkCommand(message,"114514sf")){
 			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
-			addMutilItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"carry_item","gift_box_1.carry_item",400);            			
+			addMutilItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"carry_item","gift_box_1.carry_item",400);
+		} else if (checkCommand(message,"1919test")){
+			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
+			addMutilItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"carry_item","complete_box.carry_item",20);  			            			
 		} else  if(checkCommand(message, "wound")) {
 			for (int i = 2; i < 100; ++i) {
 				string command =

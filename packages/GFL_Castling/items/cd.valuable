@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<carry_item file="base_valuable.carry_item" name="unreleased Justin Beerbar CD" key="cd.carry_item">
+<carry_item file="base_valuable.carry_item" name="Suomi's Rocking CD" key="cd.carry_item">
     <hud_icon filename="hud_cd.png" />
     <inventory encumbrance="0.0" price="2000.0" />
 
-    <model mesh_filename="cd.mesh" texture_filename="cd.png" />
+    <model mesh_filename="cd.mesh" texture_filename="hud_kp31cd.png" />
 
     <commonness value="0.2" in_stock="0" />
 </carry_item>

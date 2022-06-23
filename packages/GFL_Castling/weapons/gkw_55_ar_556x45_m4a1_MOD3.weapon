@@ -35,9 +35,8 @@
 
     <hud_icon filename="gkw_m4a1mod3.png" />
     <commonness value="1.0" can_respawn_with="1" />
-    <capacity value="0" source="rank" source_value="0.0" />
-    <capacity value="1" source="rank" source_value="6.048" />
-
+    <capacity value="1" source="rank" source_value="0.0" />
+    
 
 
 
@@ -116,9 +115,8 @@
     <commonness value="0" in_stock="0" can_respawn_with="1" />
     <inventory buy_price="270.0" sell_price="270.0" />	
 
-    <capacity value="0" source="rank" source_value="0.0" />
-    <capacity value="1" source="rank" source_value="6.048" />
-      <ballistics
+    <capacity value="1" source="rank" source_value="0.0" />
+          <ballistics
      near_far_distance="0"
      speed_estimation_near="75.0"
      speed_estimation_far="75.0"

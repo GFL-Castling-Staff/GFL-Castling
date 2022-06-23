@@ -48,7 +48,7 @@
     <capacity value="3" source="rank" source_value="0.5" />        
 
     <hud_icon filename="hud_javelin.png" />
-    <inventory encumbrance="30.0" price="1000.0" />
+    <inventory encumbrance="30.0" buy_price="1000.0" sell_price="100.0" />
 
 
     <stance state_key="running" accuracy="0.5" />

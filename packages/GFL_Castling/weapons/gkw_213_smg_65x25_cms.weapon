@@ -26,10 +26,10 @@
 		<animation state_key="stabbing" 			animation_key="pistol whip 2" />
 		<animation state_key="reload"	animation_key="reloading, A OHG 0.75" />
 		<animation state_key="reload"	animation_key="reloading2, A OHG 0.75" />
-		<sound key="fire" fileref="uzi_fire_FromSAM2.wav" pitch_variety="0.05" volume="2.1" />
-		<sound key="magazine_out" fileref="uzi_mgz_out_FromINS.wav" volume="1.9" />
-		<sound key="magazine_in" fileref="uzi_mgz_in_FromINS.wav" volume="1.9" />
-		<sound key="cycle" fileref="uzi_cycle_FromINS.wav" volume="1.9" />
+		<sound key="fire" fileref="cbjms_fire_normal_FromBF4.wav" pitch_variety="0.05" volume="1.2" />
+		<sound key="magazine_out" fileref="cbjms_mgz_out_FromCOD11.wav" volume="0.8" />
+		<sound key="magazine_in" fileref="cbjms_mgz_in_FromBF4.wav" volume="0.8" />
+		<sound key="cycle" fileref="cbjms_cycle_FromBF4.wav" volume="0.8" />
 		<sound class="impact" fileref="rifle_drop.wav" volume="1" />
 		<model filename="gkw_smg_cms.xml" />
 		<hud_icon filename="gkw_cms.png" />
@@ -54,6 +54,8 @@
 		<target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0" />
 		<target_factors tag="commander" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0" />
 	</weapon>
+
+
 	<weapon key="gkw_cms_aps.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0">
 	<tag name="smg" />
 		<specification accuracy_factor="0.98" barrel_offset="0.4" class="0" slot="0"  magazine_size="30" name="C-MS(CBJ-APS)" carry_in_two_hands="0" projectile_speed="130" retrigger_time="0.085" sight_range_modifier="1.8" suppressed="1" burst_shots="1" sustained_fire_diminish_rate="1.8" sustained_fire_grow_step="0.3" stab_enabled="1"/>
@@ -80,10 +82,10 @@
 		<animation state_key="stabbing" 			animation_key="pistol whip 2" />
 		<animation state_key="reload"	animation_key="reloading, A OHG 0.75" />
 		<animation state_key="reload"	animation_key="reloading2, A OHG 0.75" />
-		<sound key="fire" fileref="mp7_fire_FromFC6.wav" pitch_variety="0.05" volume="2.1" />
-		<sound key="magazine_out" fileref="uzi_mgz_out_FromINS.wav" volume="1.9" />
-		<sound key="magazine_in" fileref="uzi_mgz_in_FromINS.wav" volume="1.9" />
-		<sound key="cycle" fileref="uzi_cycle_FromINS.wav" volume="1.9" />
+		<sound key="fire" fileref="cbjms_fire_subsonic_FromCOD11.wav" pitch_variety="0.05" volume="1.2" />
+		<sound key="magazine_out" fileref="cbjms_mgz_out_FromCOD11.wav" volume="0.8" />
+		<sound key="magazine_in" fileref="cbjms_mgz_in_FromBF4.wav" volume="0.8" />
+		<sound key="cycle" fileref="cbjms_cycle_FromBF4.wav" volume="0.8" />
 		<sound class="impact" fileref="rifle_drop.wav" volume="1" />
 		<model filename="gkw_smg_cms.xml" />
 		<hud_icon filename="gkw_cms.png" />
@@ -108,6 +110,8 @@
 		<target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0" />
 		<target_factors tag="commander" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0" />
 	</weapon>
+
+
 	<weapon key="gkw_cms_st.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0">
 	<tag name="smg" />
 		<specification accuracy_factor="0.98" barrel_offset="0.32" class="0" slot="0" magazine_size="30" name="C-MS(CBJ-ST)" carry_in_two_hands="0" projectile_speed="198" retrigger_time="0.085" sight_range_modifier="1" suppressed="0" burst_shots="1" sustained_fire_diminish_rate="1.8" sustained_fire_grow_step="0.3" stab_enabled="1"/>
@@ -134,10 +138,10 @@
 		<animation state_key="stabbing" 			animation_key="pistol whip 2" />
 		<animation state_key="reload"	animation_key="reloading, A OHG 0.75" />
 		<animation state_key="reload"	animation_key="reloading2, A OHG 0.75" />
-		<sound key="fire" fileref="uzi_fire_FromSAM2.wav" pitch_variety="0.05" volume="2.1" />
-		<sound key="magazine_out" fileref="uzi_mgz_out_FromINS.wav" volume="1.9" />
-		<sound key="magazine_in" fileref="uzi_mgz_in_FromINS.wav" volume="1.9" />
-		<sound key="cycle" fileref="uzi_cycle_FromINS.wav" volume="1.9" />
+		<sound key="fire" fileref="cbjms_fire_jhp_FromCOD10.wav" pitch_variety="0.05" volume="1.2" />
+		<sound key="magazine_out" fileref="cbjms_mgz_out_FromCOD11.wav" volume="0.8" />
+		<sound key="magazine_in" fileref="cbjms_mgz_in_FromBF4.wav" volume="0.8" />
+		<sound key="cycle" fileref="cbjms_cycle_FromBF4.wav" volume="0.8" />
 		<sound class="impact" fileref="rifle_drop.wav" volume="1" />
 		<model filename="gkw_smg_cms.xml" />
 		<hud_icon filename="gkw_cms.png" />

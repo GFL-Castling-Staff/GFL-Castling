@@ -22,7 +22,7 @@
         <next_in_chain key="gkw_m4a1mod3_530_skill.weapon" share_ammo="0" />
         <inventory buy_price="270.0" sell_price="270.0" />	
         <commonness in_stock="0" value="0"/>
-        <capacity value="0" source="rank" source_value="0.0" />
+        <capacity value="1" source="rank" source_value="0.0" />
         <capacity value="1" source="rank" source_value="6.048" />   
         <sound key="fire" fileref="m4a1_fire_FromDIVISION2.wav" pitch_variety="0.05" volume="1.2" />
         <sound key="magazine_out" fileref="m4a1_mgz_out_FromCSGO.wav" volume="0.7" />
@@ -100,7 +100,7 @@
         <commonness value="0" in_stock="0" can_respawn_with="1" />
         <inventory  buy_price="270.0" sell_price="270.0"  />
 
-        <capacity value="0" source="rank" source_value="0.0" />
+        <capacity value="1" source="rank" source_value="0.0" />
         <capacity value="1" source="rank" source_value="6.048" />  
         <ballistics
         near_far_distance="0"

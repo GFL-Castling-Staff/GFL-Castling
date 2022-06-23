@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<carry_items>
+
+<carry_item name="True Core Mask" key="core_mask.carry_item" time_to_live_out_in_the_open="90.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="1.0">
+	<capacity value="100" source="rank" source_value="0.0" />
+	<inventory buy_price="0" sell_price="0" encumbrance="-0.5" />
+	<commonness value="0.0" in_stock="0" can_respawn_with="0" />
+	<model mesh_filename="reward_box.xml"/>
+	<hud_icon filename="hud_coremask.png" />
+</carry_item>
+
+</carry_items>

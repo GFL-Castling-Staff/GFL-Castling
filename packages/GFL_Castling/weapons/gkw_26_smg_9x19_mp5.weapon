@@ -44,7 +44,7 @@
     <sound key="cycle" fileref="mp5_cycle_FromCOD16.wav" volume="0.5" />
     <sound class="impact" fileref="rifle_drop.wav" />    
     <model filename="gkw_smg_mp5.xml"/>
-    <commonness value="0.2" in_stock="1" can_respawn_with="1" />
+    <commonness value="0.2" in_stock="0" can_respawn_with="1" />
 
     <hud_icon filename="gkw_mp5.png"/>
 

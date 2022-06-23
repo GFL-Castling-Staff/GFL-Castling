@@ -22,9 +22,8 @@
     <animation key="reload" animation_key="reloading, magazine rifle 1.5" />
     
     <inventory  buy_price="270.0" sell_price="270.0" />
-    <capacity value="0" source="rank" source_value="0.0" />
-    <capacity value="1" source="rank" source_value="6.048" />
-    <commonness value="0" in_stock="0" can_respawn_with="1" />
+    <capacity value="1" source="rank" source_value="0.0" />
+        <commonness value="0" in_stock="0" can_respawn_with="1" />
 
     <sound key="fire" fileref="an94mod3_fire_FromCOD16.wav" pitch_variety="0.02" volume="1.1" />
     <sound key="magazine_out" fileref="an94_mgz_out_FromCOD16.wav" volume="0.8" />
@@ -105,9 +104,8 @@
     <animation key="reload" animation_key="reloading, magazine rifle 1.8" />
     
     <inventory  buy_price="270.0" sell_price="270.0" />
-    <capacity value="0" source="rank" source_value="0.0" />
-    <capacity value="1" source="rank" source_value="6.048" />
-
+    <capacity value="1" source="rank" source_value="0.0" />
+    
 
     <sound key="fire" fileref="an94mod3skill_fire_FromCOD16.wav" pitch_variety="0.02" volume="1" />
     <sound key="magazine_out" fileref="an94_mgz_out_FromCOD16.wav" volume="0.8" />

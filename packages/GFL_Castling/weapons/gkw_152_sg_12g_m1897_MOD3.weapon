@@ -30,8 +30,8 @@
     <animation state_key="cycle" animation_key="Pshotgun0.5" />
     <animation state_key="cycle" stance_key="prone" animation_key="Pshotgun0.5p" />
     <animation key="reload" animation_key="reloading, oaat" />			
-    <capacity value="0" source="rank" source_value="0.0" />
-    <capacity value="1" source="rank" source_value="4.622" />
+    <capacity value="1" source="rank" source_value="0.0" />
+    
 	<!--Sounds-->
 	
     <sound key="fire" fileref="m1897_fire_FromCOD5.wav" pitch_variety="0.05" volume="1" />
@@ -100,8 +100,8 @@
     <animation state_key="cycle" animation_key="Pshotgun0.5" />
     <animation state_key="cycle" stance_key="prone" animation_key="Pshotgun0.5p" />
     <animation key="reload" animation_key="reloading, oaat" />		
-    <capacity value="0" source="rank" source_value="0.0" />
-    <capacity value="1" source="rank" source_value="4.622" />
+    <capacity value="1" source="rank" source_value="0.0" />
+    
 	<!--Sounds-->
 	
     <sound key="fire" fileref="m1897skill_fire_FromKF2.wav" pitch_variety="0.05" volume="1.6" />

@@ -40,8 +40,7 @@
     <animation state_key="changing_weapon_in" 	animation_key="change weapon in, single hand carry" />
     <animation state_key="stabbing" 			animation_key="pistol whip" />
     <animation state_key="stabbing" 			animation_key="pistol whip 3" />
-    <capacity value="0" source="rank" source_value="0.0" />
-    <capacity value="1" source="rank" source_value="4.622" />
+    <capacity value="1" source="rank" source_value="0" />
     <inventory  buy_price="100.0" sell_price="100.0" />
     <commonness value="1.0" can_respawn_with="1" in_stock="0" />
     <sound key="fire" fileref="m1895_fire_FromHUNT.wav" pitch_variety="0.05" volume="1.2" />
@@ -99,8 +98,7 @@
     <!-- 你家纳甘真有钱拿弹仓换的，驳回，而且写的真垃圾！ -->
     <!-- <animation state_key="reload"	animation_key="reloading, SA OHG 0.5" />
     <animation state_key="reload"	animation_key="reloading2, SA OHG 0.5" /> -->
-    <capacity value="0" source="rank" source_value="0.0" />
-    <capacity value="1" source="rank" source_value="4.622" />
+    <capacity value="1" source="rank" source_value="0.0" />
     <animation state_key="reload" animation_key="RevolverReload" />
     <animation state_key="hold"					animation_key="hold, pistol" />
     <animation state_key="hold_casual"			animation_key="dancing, kazachok" />
