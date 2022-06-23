@@ -214,8 +214,8 @@ float getAimOrientation4(Vector3 s_pos, Vector3 e_pos) {
 
 Vector3 getMultiplicationVector(Vector3 s_pos, Vector3 scale) {
 	float x = s_pos.m_values[0]*scale.m_values[0];
-	float y = s_pos.m_values[2]*scale.m_values[1];
-	float z = s_pos.m_values[1]*scale.m_values[2];
+	float y = s_pos.m_values[1]*scale.m_values[1];
+	float z = s_pos.m_values[2]*scale.m_values[2];
 	return Vector3(x,y,z);
 }
 

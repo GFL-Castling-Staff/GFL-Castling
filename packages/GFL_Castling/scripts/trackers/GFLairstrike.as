@@ -28,6 +28,7 @@ class GFLairstrike : Tracker {
 	protected GameMode@ m_metagame;
 	uint m_fnum;
     uint max_airstrike_per_frame = 10;
+    uint airstrike_per_frame = 0;
 
 	// --------------------------------------------
 	GFLairstrike(GameMode@ metagame) {
@@ -63,7 +64,7 @@ class GFLairstrike : Tracker {
 	}
 
 	void update(float time) {
-        uint airstrike_per_frame = 0;
+        airstrike_per_frame = 0;
         if(Airstrike_strafe.length()>0){
             for (uint a=0;a<Airstrike_strafe.length();a++){
                 //如果超过单帧空袭个数上限，立刻结束，在下一次update的时候再循环
@@ -101,7 +102,7 @@ class GFLairstrike : Tracker {
                             //垂直偏移，先快后慢
                             startPos = startPos.add(Vector3(0,-20*(sqrt(float(1/strike_time)*i)),0));
                             //每单轮扫射生成12次对点扫射
-                            for(int j=1;i<=12;j++)
+                            for(int j=1;j<=12;j++)
                             {
                                 float rand_x = strike_rand*float(rand(1,100)/100)-strike_rand/2;
                                 float rand_y = strike_rand*float(rand(1,100)/100)-strike_rand/2;
