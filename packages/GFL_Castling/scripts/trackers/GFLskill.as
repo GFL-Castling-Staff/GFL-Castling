@@ -379,7 +379,7 @@ class GFLskill : Tracker {
 								Vector3 target_pos2 = stringToVector3(target_info.getStringAttribute("position"));
 								_log("Position 2 = "+target_pos2.toString());
 
-								target_fin_pos = target_pos2.add(getAimUnitVector(m_metagame,5.0,target_pos1,target_pos2));//标枪导弹目标位置
+								target_fin_pos = target_pos2.add(getAimUnitVector(5.0,target_pos1,target_pos2));//标枪导弹目标位置
 							}
 							else{
 								target_fin_pos = Javelin_list[a].m_pos;
