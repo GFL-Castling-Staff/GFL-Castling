@@ -212,7 +212,7 @@ float getAimOrientation4(Vector3 s_pos, Vector3 e_pos) {
 	}
 }
 
-Vector3 getVehicleSpeedVector(Vector3 s_pos, Vector3 scale) {
+Vector3 getMultiplicationVector(Vector3 s_pos, Vector3 scale) {
 	float x = s_pos.m_values[0]*scale.m_values[0];
 	float y = s_pos.m_values[2]*scale.m_values[1];
 	float z = s_pos.m_values[1]*scale.m_values[2];
@@ -292,7 +292,7 @@ int getNearByEnemyVehicle(Metagame@ metagame, uint ownerid, Vector3 judgePos, fl
 	return -1;
 }
 
-Vector3 getAimUnitVector(Metagame@ metagame, float scale, Vector3 s_pos, Vector3 e_pos) {
+Vector3 getAimUnitVector(float scale, Vector3 s_pos, Vector3 e_pos) {
 	float dx = e_pos.m_values[0]-s_pos.m_values[0];
 	float dy = e_pos.m_values[2]-s_pos.m_values[2];
     float ds = sqrt(dx*dx+dy*dy);
@@ -553,6 +553,33 @@ void playPrivateSound(const Metagame@ metagame, string filename, int playerId) {
 	command.setIntAttribute("player_id", playerId);
 	metagame.getComms().send(command);
 }
+
+int getNearbyRandomLuckyGuyId(GameMode@ metagame, uint factionid, Vector3 pos, float range){
+	uint cur_factionid_num = metagame.getFactionCount();
+    array<const XmlElement@> affectedCharacter;
+	for(uint i=0;i<cur_factionid_num;i++) 
+		if(i!=factionid) {
+			array<const XmlElement@> possible_affectedCharacter;
+			possible_affectedCharacter = getCharactersNearPosition(metagame,pos,i,range);
+			if (possible_affectedCharacter !is null){
+				for(uint x=0;x<possible_affectedCharacter.length();x++){
+					affectedCharacter.insertLast(possible_affectedCharacter[x]);
+				}
+			}
+		}
+                
+    if (affectedCharacter.length()>0) {
+        _log("Luckyguy locate successful");
+        uint luckyGuyindex = rand(0,affectedCharacter.length()-1);
+        uint luckyGuyid = affectedCharacter[luckyGuyindex].getIntAttribute("id");
+        return luckyGuyid;
+    }         
+	else {
+		_log("Luckyguy locate failed");
+		return -1;
+	}
+}
+
 //soundtrack function from ww2dlc thanks for coding wheel
 
 
