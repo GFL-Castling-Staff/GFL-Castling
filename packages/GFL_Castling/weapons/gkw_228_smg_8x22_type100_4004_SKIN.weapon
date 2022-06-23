@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapons>
-<weapon key="gkw_type100.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0">
+<weapon key="gkw_type100_4004.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0">
     <tag name="smg"/>
     <specification 
 		accuracy_factor="1.0" 
@@ -9,7 +9,7 @@
         slot="0"
 		magazine_size="30" 
         carry_in_two_hands="1"
-		name="Type 100" 
+		name="Type 100-[Treasure Buried Deep Within]" 
 		projectile_speed="100" 
 		retrigger_time="0.075" 
 		suppressed="0" 
@@ -21,7 +21,7 @@
     <commonness value="0.2" in_stock="0" can_respawn_with="1" />
     <inventory encumbrance="2.0" buy_price="30.0" sell_price="30.0" />
     <capacity value="1" source="rank" source_value="0.0" />
-    <next_in_chain key="gkw_type100_skill.weapon" share_ammo="1" />
+    <next_in_chain key="gkw_type100_4004_skill.weapon" share_ammo="1" />
     <animation key="recoil" ref="12" />
     <animation key="recoil" ref="13" />
     <animation key="recoil" ref="14" />
@@ -44,7 +44,7 @@
     <sound key="cycle" fileref="type100_cycle_FromBFBC2.wav" volume="0.6" />
     <sound key="stab" fileref="grenade_throw1.wav" pitch_variety="0.05" volume="0.8"/>
     <sound class="impact" fileref="rifle_drop.wav" volume="1"/>
-    <model filename="gkw_smg_type100.xml" />
+    <model filename="gkw_smg_type100_4004.xml" />
     <hud_icon filename="gkw_type100.png" />
     <animation state_key="reload" animation_key="reloading, magazine rifle 0.9" />
     <weak_hand_hold offset="0.2" />
@@ -68,7 +68,7 @@
     <target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0" />
     <target_factors tag="commander" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0" />
 </weapon>
-<weapon key="gkw_type100_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0">
+<weapon key="gkw_type100_4004_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0">
     <tag name="smg"/>
     <specification 
 		accuracy_factor="1.0" 
@@ -77,7 +77,7 @@
         slot="0"
 		magazine_size="30" 
         carry_in_two_hands="1"
-		name="Type 100-[Cherry Blossom's Reflection]" 
+		name="Type 100-[Treasure Buried Deep Within]-[Cherry Blossom's Reflection]" 
 		projectile_speed="100" 
 		retrigger_time="0.075" 
 		suppressed="0" 
@@ -92,7 +92,7 @@
     <commonness value="0.2" in_stock="0" can_respawn_with="1" />
     <inventory encumbrance="2.0" buy_price="30.0" sell_price="30.0" />
     <capacity value="1" source="rank" source_value="0.0" />
-    <next_in_chain key="gkw_type100.weapon" share_ammo="1" />
+    <next_in_chain key="gkw_type100_4004.weapon" share_ammo="1" />
     <animation key="recoil" ref="12" />
     <animation key="recoil" ref="13" />
     <animation key="recoil" ref="14" />
@@ -115,7 +115,7 @@
     <sound key="cycle" fileref="type100_cycle_FromBFBC2.wav" volume="0.6" />
     <sound key="stab" fileref="grenade_throw1.wav" pitch_variety="0.05" volume="0.8"/>
     <sound class="impact" fileref="rifle_drop.wav" volume="1"/>
-    <model filename="gkw_smg_type100.xml" />
+    <model filename="gkw_smg_type100_4004.xml" />
     <hud_icon filename="gkw_type100.png" />
     <animation state_key="reload" animation_key="reloading, magazine rifle 0.9" />
     <weak_hand_hold offset="0.2" />
