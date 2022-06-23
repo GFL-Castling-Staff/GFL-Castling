@@ -81,9 +81,9 @@ class GFLairstrike : Tracker {
 
                         //扫射位置偏移单位向量 与 扫射位置偏移单位距离
                         Vector3 strike_vector = getAimUnitVector(1,start_pos,end_pos); 
-                        float strike_didis = 2.0;
+                        float strike_didis = 5.0;
                         //扫射起点 从弹头终点指向弹头起点的位置基础偏移 
-                        Vector3 pos_offset = strike_vector.add(getMultiplicationVector(strike_vector,Vector3(-20,0,-20)));  
+                        Vector3 pos_offset = strike_vector.add(getMultiplicationVector(strike_vector,Vector3(-40,0,-40)));  
                         pos_offset = pos_offset.add(Vector3(0,40,0));
                         //扫射终点的起点与终点（就生成弹头的终点的起始位置与终止位置）
                         Vector3 c_pos = start_pos.add(getMultiplicationVector(strike_vector,Vector3(-10,0,-10)));
@@ -102,10 +102,10 @@ class GFLairstrike : Tracker {
                             //垂直偏移，先快后慢
                             startPos = startPos.add(Vector3(0,-20*(sqrt(float(1/strike_time)*i)),0));
                             //每单轮扫射生成12次对点扫射
-                            for(int j=1;j<=12;j++)
+                            for(int j=1;j<=6;j++)
                             {
-                                float rand_x = strike_rand*float(rand(1,100)/100)-strike_rand/2;
-                                float rand_y = strike_rand*float(rand(1,100)/100)-strike_rand/2;
+                                float rand_x = rand(-strike_rand,strike_rand);
+                                float rand_y = rand(-strike_rand,strike_rand);
                                 
                                 CreateDirectProjectile(m_metagame,startPos,endPos.add(Vector3(rand_x,0,rand_y)),"ASW_A10_strafe.projectile",cid,fid,180);           
                             }

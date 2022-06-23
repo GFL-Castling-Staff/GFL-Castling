@@ -2164,21 +2164,27 @@ class CommandSkill : Tracker {
                     playAnimationKey(m_metagame,characterId,"recoil, pistol",true,true);
                     playSoundAtLocation(m_metagame,"dart_shot.wav",factionid,c_pos,1.0);
                     c_pos=c_pos.add(Vector3(0,1,0));
-                    CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"ppk_tracer_dart_1.projectile",characterId,factionid,60);
+                    // CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"ppk_tracer_dart_1.projectile",characterId,factionid,60);
 
                         _log("A10 gun strafe activate successful");	
 
-                        float rand_x = cos(float(rand(0,628))/100)-0.5;
-                        float rand_y = sin(float(rand(0,628))/100)-0.5;
-                        Vector3 luckyGuyPos = c_pos.add(Vector3(rand_x,0,rand_y)); //若周围没有敌人又必须要扫射，则直接默认以任意朝向扫一轮
+                        float rand_x = rand(-1,1);
+                        float rand_y = rand(-1,1);
+                        Vector3 luckyGuyPos = stringToVector3(target).add(Vector3(rand_x,0,rand_y)); //若周围没有敌人又必须要扫射，则直接默认以任意朝向扫一轮
+                        Vector3 luckyGuyPos2 = luckyGuyPos.add(Vector3(rand(-1,1),0,rand(-1,1)));
 
-                        int luckyGuyid = getNearbyRandomLuckyGuyId(m_metagame,factionid,c_pos,30.0f);
+                        int luckyGuyid = getNearbyRandomLuckyGuyId(m_metagame,factionid,luckyGuyPos,24.0f);
                         if(luckyGuyid!=-1){
                             const XmlElement@ luckyGuy = getCharacterInfo(m_metagame, luckyGuyid);
                             luckyGuyPos = stringToVector3(luckyGuy.getStringAttribute("position"));                        
                         }
-                        Airstrike_strafe.insertLast(Airstrike_strafer(characterId,factionid,0,c_pos,luckyGuyPos));   
-                    addCoolDown("PPKMOD3",60,characterId,modifer);
+                        luckyGuyid = getNearbyRandomLuckyGuyId(m_metagame,factionid,luckyGuyPos,24.0f);
+                        if(luckyGuyid!=-1){
+                            const XmlElement@ luckyGuy = getCharacterInfo(m_metagame, luckyGuyid);
+                            luckyGuyPos2 = stringToVector3(luckyGuy.getStringAttribute("position"));                        
+                        }
+                        Airstrike_strafe.insertLast(Airstrike_strafer(characterId,factionid,0,luckyGuyPos,luckyGuyPos2));   
+                    addCoolDown("PPKMOD3",0,characterId,modifer);
                 }
             }
         }
