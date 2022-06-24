@@ -1,107 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapons>
-<weapon file="heavy_mg_standing.animation_base" key="gkw_mk46.weapon">
-
-  <specification 
-  barrel_offset="0.5" 
-  retrigger_time="0.09" 
-  accuracy_factor="0.5" 
-  sustained_fire_grow_step="0.35" 
-  sustained_fire_diminish_rate="1.8" 
-  magazine_size="200" 
-  suppressed="0" 
-  name="MK46" 
-  class="0" 
-  projectile_speed="225" 
-  spread_range="0.3"
-  sight_range_modifier="1.5"/>
-
-
-
-    <animation key="reload" animation_key="reloading, Machine gun 2.8" />
-    <inventory  buy_price="16.0" sell_price="16.0" />	
-    <next_in_chain key="gkw_mk46_skill.weapon" share_ammo="1" />
-
-
-
-    <sound key="fire" fileref="mk46_fire_FromDIVISION2.wav" pitch_variety="0.05" volume="1" />
-    <sound key="magazine_out" fileref="mk48_mgz_out_FromCOD9.wav" volume="0.8" />
-    <sound key="magazine_in" fileref="mk48_mgz_in_FromCOD9.wav" volume="0.8" />
-    <sound key="cycle" fileref="mk48_cycle_FromCOD9.wav" volume="0.8" />
-    <sound class="impact" fileref="rifle_drop.wav" />
-    <model filename="gkw_mg_mk46.xml" />
-
-    <hud_icon filename="gkw_mk46.png" />
-
-
-
-
-    <projectile file="bullet.projectile">
-        <result class="hit" kill_probability="1.92" kill_decay_start_time="1.967" kill_decay_end_time="3.279" />
-    </projectile>
-    <stance state_key="running" accuracy="0.1" />
-    <stance state_key="walking" accuracy="0.1" />
-    <stance state_key="crouch_moving" accuracy="1" />
-    <stance state_key="prone_moving" accuracy="1.2" />
-    <stance state_key="standing" accuracy="0.7" />
-    <stance state_key="crouching" accuracy="1.45" />
-    <stance state_key="prone" accuracy="1.8" />
-    <stance state_key="over_wall" accuracy="1.8" />  
-    <modifier class="speed" value="-0.2" /> 
-
-</weapon>
-<weapon file="heavy_mg.animation_base" key="gkw_mk46_skill.weapon">
-
-    <specification 
-  barrel_offset="0.5" 
-  retrigger_time="0.09" 
-  accuracy_factor="0.98" 
-  sustained_fire_grow_step="0.35" 
-  sustained_fire_diminish_rate="1.8" 
-  magazine_size="200" 
-  suppressed="0" 
-  name="MK46-[Raid Focus MG]" 
-  class="0" 
-  projectile_speed="225" 
-  spread_range="0.18"
-  sight_range_modifier="1.5"
-  can_shoot_standing="0" 
-  can_shoot_crouching="0"
-  can_shoot_prone="1"/>
-
-
-
-    <animation key="reload" animation_key="reloading, Machine gun 2.8" />
-    <inventory  buy_price="16.0" sell_price="16.0" />	
-    <next_in_chain key="gkw_mk46.weapon" share_ammo="1" />
-    <commonness  value="0" in_stock="0" can_respawn_with="1" />
-
-
-
-    <sound key="fire" fileref="mk46skill_fire_FromCOD8.wav" pitch_variety="0.05" volume="1" />
-    <sound key="magazine_out" fileref="mk48_cycle_FromCOD9.wav" volume="0.8" />
-    <sound key="magazine_in" fileref="mk48_mgz_in_FromCOD9.wav" volume="0.8" />
-    <sound key="cycle" fileref="mk48_mgz_out_FromCOD9.wav" volume="0.8" />
-    <sound class="impact" fileref="rifle_drop.wav" />
-    <model filename="gkw_mg_mk46.xml" />
-
-    <hud_icon filename="gkw_mk46_skill.png" />
-
-
-
-
-    <projectile file="bullet.projectile">
-        <result class="hit" kill_probability="2.0" kill_decay_start_time="1.967" kill_decay_end_time="3.279" />
-    </projectile>
-       <stance state_key="running" accuracy="0.6" />
-
-    <stance state_key="crouch_moving" accuracy="0.6" />
-    <stance state_key="prone_moving" accuracy="0.6" />
-    <stance state_key="standing" accuracy="0.6" />
-    <stance state_key="crouching" accuracy="0.8" />
-    <stance state_key="prone" accuracy="1" />
-    <stance state_key="over_wall" accuracy="1" />  
-    <modifier class="speed" value="-0.2" /> 
-
-</weapon>
+    <weapon file="heavy_mg_standing.animation_base" key="gkw_mk46.weapon">
+        <specification 
+        barrel_offset="0.5" 
+        retrigger_time="0.06" 
+        accuracy_factor="1.0" 
+        sustained_fire_grow_step="0.75" 
+        sustained_fire_diminish_rate="1.5" 
+        magazine_size="200" 
+        suppressed="0" 
+        name="Mk 46" 
+        class="0" 
+        projectile_speed="250" 
+        stance_accuracy_rate="0.5"
+        can_shoot_standing="1" 
+        can_shoot_crouching="1"
+        can_shoot_prone="1"
+        carry_in_two_hands="1"
+        stab_enabled="1"            
+        sight_range_modifier="1.5"/>
+        <animation key="reload" animation_key="reloading, Machine gun 2.8" />
+        <inventory buy_price="46.0" sell_price="46.0" />	
+        <next_in_chain key="gkw_mk46_skill.weapon" share_ammo="1" />
+        <sound key="fire" fileref="mk46_fire_FromDIVISION2.wav" pitch_variety="0.05" volume="1" />
+        <sound key="magazine_out" fileref="mk48_mgz_out_FromCOD9.wav" volume="0.8" />
+        <sound key="magazine_in" fileref="mk48_mgz_in_FromCOD9.wav" volume="0.8" />
+        <sound key="cycle" fileref="mk48_cycle_FromCOD9.wav" volume="0.8" />
+        <sound class="impact" fileref="rifle_drop.wav" />
+        <model filename="gkw_mg_mk46.xml" />
+        <hud_icon filename="gkw_mk46.png" />
+        <projectile file="bullet.projectile">
+            <result class="hit" kill_probability="1.85" kill_decay_start_time="1.967" kill_decay_end_time="3.279" />
+        </projectile>
+        <stance state_key="running" accuracy="0.4" />
+        <stance state_key="walking" accuracy="0.45" />
+        <stance state_key="crouch_moving" accuracy="0.55" />
+        <stance state_key="standing" accuracy="0.5" />
+        <stance state_key="crouching" accuracy="0.7" />
+        <stance state_key="prone" accuracy="1.2" /> 
+        <stance state_key="prone_moving" accuracy="0.5" />
+        <stance state_key="over_wall" accuracy="1.2" /> 
+    </weapon>
+    <weapon file="heavy_mg.animation_base" key="gkw_mk46_skill.weapon">
+        <specification 
+        barrel_offset="0.5" 
+        retrigger_time="0.06" 
+        accuracy_factor="1.0" 
+        sustained_fire_grow_step="0.1" 
+        sustained_fire_diminish_rate="1.8" 
+        magazine_size="200" 
+        suppressed="0" 
+        name="Mk 46-[Raid Focus MG]" 
+        class="0" 
+        projectile_speed="250" 
+        sight_range_modifier="2.0"
+        can_shoot_standing="0" 
+        can_shoot_crouching="0"
+        can_shoot_prone="1"/>
+        <animation key="reload" animation_key="reloading, Machine gun 2.8" />
+        <inventory buy_price="46.0" sell_price="46.0" />	
+        <next_in_chain key="gkw_mk46.weapon" share_ammo="1" />
+        <commonness  value="0" in_stock="0" can_respawn_with="1" />
+        <sound key="fire" fileref="mk46skill_fire_FromCOD8.wav" pitch_variety="0.05" volume="1" />
+        <sound key="magazine_out" fileref="mk48_cycle_FromCOD9.wav" volume="0.8" />
+        <sound key="magazine_in" fileref="mk48_mgz_in_FromCOD9.wav" volume="0.8" />
+        <sound key="cycle" fileref="mk48_mgz_out_FromCOD9.wav" volume="0.8" />
+        <sound class="impact" fileref="rifle_drop.wav" />
+        <model filename="gkw_mg_mk46.xml" />
+        <hud_icon filename="gkw_mk46_skill.png" />
+        <projectile file="bullet.projectile">
+          <result class="hit" kill_probability="2.0" kill_probability_offset_on_successful_hit="1.75" kill_decay_start_time="1.967" kill_decay_end_time="3.279" />
+        </projectile>
+        <stance state_key="running" accuracy="0.6" />
+        <stance state_key="crouch_moving" accuracy="0.6" />
+        <stance state_key="standing" accuracy="0.6" />
+        <stance state_key="crouching" accuracy="0.8" />
+        <stance state_key="prone" accuracy="1" />
+        <stance state_key="over_wall" accuracy="1" />
+        <modifier class="speed" value="-0.3" />
+    </weapon>
 </weapons>

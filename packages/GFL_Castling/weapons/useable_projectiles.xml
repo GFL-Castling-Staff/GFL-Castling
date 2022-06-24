@@ -37,6 +37,7 @@
 	
 	<projectile file="standard_aa_grenade.projectile"/> <!--杀伤榴弹-->
 	<projectile file="standard_ap_grenade.projectile"/>	<!--爆破榴弹-->
+	<projectile file="agent_sticky_bomb.projectile"/>
 	
 	<projectile file="jupiter_airstrike.projectile"/>
 	<projectile file="jupiter_airstrike_warning.projectile"/>		
@@ -62,4 +63,12 @@
 	<projectile file="kcco_ranged_artillery.projectile"/>	
 	<projectile file="kcco_tracer_dart_a.projectile"/>	
 	<projectile file="kcco_tracer_dart_r.projectile"/>	
+	
+	<projectile file="ppk_tracer_dart_1.projectile"/>	
+	<projectile file="ppk_tracer_dart_2.projectile"/>	
+	<projectile file="ppk_artillery.projectile"/>	
+	
+	<projectile file="ASW_A10_strafe.projectile"/>
+	<projectile file="a10_warthog_shadow.projectile"/>
+
 </projectiles>

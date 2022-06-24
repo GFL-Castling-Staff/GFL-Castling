@@ -2,12 +2,8 @@
 <resources clear_weapons="1" clear_carry_items="1" >
     
     <projectile key="hand_88grenade.projectile" />
+    <weapon key="gkw_consume_at4.weapon" />
 
-    <call key="gk_medic.call" />
-    <call key="sg1hg1mg2.call" />
-    <call key="hvy_landing.call" />
-	
-	<call key="gk_bombardment_fairy.call" />
 	<call key="gk_rocket_fairy.call" />
 	<call key="gk_airstrike_fairy.call" />
 </resources>

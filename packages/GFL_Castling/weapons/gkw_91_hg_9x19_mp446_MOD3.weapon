@@ -28,9 +28,8 @@
     <!--Model, Icon, Cost-->
     <model filename="gkw_hg_mp446mod3.xml" />
     <hud_icon filename="gkw_mp446mod3.png" />
-    <capacity value="0" source="rank" source_value="0.0" />
-    <capacity value="1" source="rank" source_value="6.048" />
-    <!--Ballistics-->
+    <capacity value="1" source="rank" source_value="0.0" />
+        <!--Ballistics-->
     <weak_hand_hold offset="0.1" />
     <projectile file="bullet.projectile">
         <result class="hit"

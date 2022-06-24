@@ -22,9 +22,8 @@
     <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
     <inventory  buy_price="200.0" sell_price="200.0" />
     <commonness value="0" in_stock="0" can_respawn_with="1" />
-	<capacity value="0" source="rank" source_value="0.0" />
-    <capacity value="1" source="rank" source_value="6.048" />
-    <next_in_chain key="gkw_g36mod3_1507_skill.weapon" share_ammo="1" />
+	<capacity value="1" source="rank" source_value="0.0" />
+        <next_in_chain key="gkw_g36mod3_1507_skill.weapon" share_ammo="1" />
 
 
 
@@ -73,8 +72,8 @@
     <animation key="reload" animation_key="reloading, magazine rifle 1.5" />
     <inventory  buy_price="200.0" sell_price="200.0" />
     <commonness value="0" in_stock="0" can_respawn_with="1" />
-	<capacity value="0" source="rank" source_value="0.0" />
-    <capacity value="1" source="rank" source_value="4.622" />
+	<capacity value="1" source="rank" source_value="0.0" />
+    
     <next_in_chain key="gkw_g36mod3_1507.weapon" share_ammo="1" />
 
 

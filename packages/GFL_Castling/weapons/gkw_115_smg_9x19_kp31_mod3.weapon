@@ -19,9 +19,8 @@
     stab_enabled="1"/>
     <commonness value="0.01" in_stock="0" can_respawn_with="1" />
     <inventory encumbrance="2.0" buy_price="200.0" sell_price="200.0" />
-    <capacity value="0" source="rank" source_value="0.0" />
-    <capacity value="1" source="rank" source_value="6.048" />
-
+    <capacity value="1" source="rank" source_value="0.0" />
+    
 	  <animation key="recoil" ref="12" />
 	  <animation key="recoil" ref="13" />
 	  <animation key="recoil" ref="14" />

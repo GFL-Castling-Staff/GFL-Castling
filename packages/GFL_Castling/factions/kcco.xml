@@ -425,6 +425,8 @@
 		<character filename="default_kcco_bot.character" />
 		<resources file="kcco.resources" >
 			<projectile key="kcco_smartgrenade_1.projectile" enabled="0" />			
+			<projectile key="kcco_tracer_dart_r.projectile" enabled="0" />
+			<projectile key="kcco_tracer_dart_a.projectile" enabled="0" />		
 		</resources>
 		<resources file="kcco_call.resources" />
 		<item_class_existence_config>
@@ -450,7 +452,7 @@
 		<model filename="kccod_cyclops_remake.xml" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_calls="1" clear_carry_items="1">
 			<weapon key="kcco_ar.weapon" enabled="1" />
-			<carry_item key="kcco_ar.carry_item" enabled="1" />
+			<carry_item key="kcco_sg.carry_item" enabled="1" />
 			<projectile key="kcco_smartgrenade_1.projectile" enabled="1" />			
 		</resources>
 		<attribute_config class="xp">
@@ -468,20 +470,35 @@
 			<!-- <weapon key="kcco_tracer_dart_accurate.weapon" enabled="1" />  -->
 			<carry_item key="kcco_ar.carry_item" enabled="1" />
 			<projectile key="kcco_smartgrenade_1.projectile" enabled="1.0" />
-			<projectile key="kcco_tracer_dart_r.projectile" enabled="1.0" />
-			<projectile key="kcco_tracer_dart_a.projectile" enabled="1.0" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="0.5" max="3.8" />
 		</attribute_config>
 	</soldier>
+	<!--人类通讯兵-->
+	<soldier name="kcco_ar_human_tel" spawn_score="0.4" copy_from="default_bot">
+		<ai filename="kcco_human_tel.ai" />
+		<character filename="default_kcco_human.character" />
+		<model filename="kccod_human_3.xml" />
+		<resources clear_weapons="1" clear_vehicles="1" clear_carry_items="1">
+			<weapon key="kcco_ar_2.weapon" enabled="1" />
+			<!-- <weapon key="kcco_tracer_dart_ranged.weapon" enabled="1" />  -->
+			<weapon key="kcco_tracer_dart_accurate.weapon" enabled="1" /> 
+			<carry_item key="kcco_ar.carry_item" enabled="1" />
+			<projectile key="kcco_tracer_dart_r.projectile" enabled="1.0" />
+			<!-- <projectile key="kcco_tracer_dart_a.projectile" enabled="1.0" /> -->
+		</resources>
+		<attribute_config class="xp">
+			<attribute weight="1.0" min="0.5" max="3.8" />
+		</attribute_config>
+	</soldier>	
 	<!-- 独眼巨人ar——g -->
 	<soldier name="kcco_ar_g" spawn_score="0.25" copy_from="default_bot">
 		<model filename="kccod_cyclops_remake.xml" />
 		<ai filename="kcco_bot.ai" />
-		<resources clear_weapons="1" clear_calls="1" clear_carry_items="1">
+		<resources clear_weapons="1" clear_grenades="1" clear_calls="1" clear_carry_items="1">
 			<weapon key="kcco_ar_g.weapon" enabled="1" />
-			<carry_item key="kcco_ar.carry_item" enabled="1" />
+			<carry_item key="kcco_sg.carry_item" enabled="1" />
 			<projectile key="kcco_smartgrenade_1.projectile" enabled="1" />
 		</resources>
 	</soldier>
@@ -489,7 +506,7 @@
 	<soldier name="kcco_sg" spawn_score="1.0" copy_from="default_bot">
 		<model filename="kccod_cyclops_sg_remake.xml" />
 		<ai filename="eod.ai" />
-		<resources clear_weapons="1" clear_calls="1" clear_carry_items="1">
+		<resources clear_weapons="1" clear_grenades="1" clear_calls="1" clear_carry_items="1">
 			<weapon key="kcco_sg.weapon" enabled="1" />
 			<carry_item key="kcco_sg.carry_item" enabled="1" />
 		</resources>
@@ -498,7 +515,7 @@
 	<soldier name="kcco_flamethrower" spawn_score="0.2" copy_from="default_bot">
 		<model filename="kccod_cyclops_remake.xml" />
 		<ai filename="eod.ai" />
-		<resources clear_weapons="1" clear_calls="1" clear_carry_items="1">
+		<resources clear_weapons="1" clear_grenades="1" clear_calls="1" clear_carry_items="1">
 			<weapon key="kcco_flamethrower.weapon" enabled="1" />
 			<carry_item key="kcco_flamethrower.carry_item" enabled="1" />
 		</resources>
@@ -508,12 +525,13 @@
 			<!-- note, always backpack items -->
 			<item_class_existence class="carry_item" slot="0" probability="1.0" />
 		</item_class_existence_config>
-	</soldier>	<!-- 欧特鲁斯 -->
+	</soldier>	
+	<!-- 欧特鲁斯 -->
 	<soldier name="kcco_dog" spawn_score="0.4" copy_from="default_bot">
 		<model filename="kccod_othrusdog.xml" />
 		<character filename="kcco_othrusdog.character" />
 		<ai filename="melee_nb.ai" />
-		<resources clear_weapons="1" clear_vehicles="1" clear_calls="1" clear_carry_items="1">
+		<resources clear_weapons="1" clear_grenades="1" clear_vehicles="1" clear_calls="1" clear_carry_items="1">
 			<weapon key="kcco_othrusdog.weapon" enabled="1" />
 			<carry_item key="kcco_dog.carry_item" enabled="1" />
 		</resources>
@@ -577,7 +595,7 @@
 		<ai filename="hydra.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="kccow_dactyl.weapon" enabled="1" />
-			<carry_item key="kcco_boom.carry_item" />
+			<carry_item key="kcco_ar.carry_item" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="0.5" max="0.8" />

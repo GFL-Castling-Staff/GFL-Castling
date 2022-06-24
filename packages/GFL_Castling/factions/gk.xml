@@ -296,6 +296,12 @@
 			<carry_item key="exo_ai_only.carry_item" />
 		</resources>	
 	</soldier>
+	<soldier name="default_store" spawn_score="0.0">
+		<resources file="gk_store.resources" />
+		<attribute_config class="xp">
+			<attribute weight="1.0" min="0.0" max="0.05" />
+		</attribute_config>
+	</soldier>
 	<soldier name="default_hvy" spawn_score="0.1" squad_size_xp_cap="0.0" copy_from="default_spawn_ai">
 		<ai filename="eod.ai" />
 		<resources file="gk_hvy_ai.resources" />
@@ -516,6 +522,7 @@
 		<resources file="gk_elite.resources">
 			<weapon key="gkw_m16a1.weapon" />
 			<weapon key="medikit.weapon" />
+			<weapon key="gkw_consume_at4.weapon" />
 			<carry_item key="exo_t4.carry_item" />
 		</resources>
 		<attribute_config class="xp">
@@ -531,6 +538,7 @@
 		<resources file="gk_elite.resources">
 			<weapon key="gkw_m4a1.weapon" />
 			<weapon key="medikit.weapon" />
+			<weapon key="gkw_consume_at4.weapon" />
 			<carry_item key="exo_t4.carry_item" />
 		</resources>
 		<attribute_config class="xp">
@@ -545,6 +553,7 @@
 		</character>
 		<resources file="gk_elite.resources">
 			<weapon key="gkw_m4a1mod3.weapon" />
+			<weapon key="gkw_consume_at4.weapon" />
 			<carry_item key="exo_t4.carry_item" />
 		</resources>
 		<attribute_config class="xp">
@@ -559,6 +568,7 @@
 		</character>
 		<resources file="gk_elite.resources">
 			<weapon key="gkw_m4sopmodiimod3.weapon" />
+			<weapon key="gkw_consume_at4.weapon" />
 			<weapon key="medikit.weapon" />
 			<carry_item key="exo_t4.carry_item" />
 		</resources>
@@ -574,6 +584,7 @@
 		</character>
 		<resources file="gk_elite.resources">
 			<weapon key="gkw_ar15.weapon" />
+			<weapon key="gkw_consume_at4.weapon" />
 			<weapon key="medikit.weapon" />
 			<carry_item key="cc_t4.carry_item" />
 		</resources>
@@ -618,6 +629,7 @@
 		</character>
 		<resources file="gk_elite.resources">
 			<weapon key="gkw_asval.weapon" />
+			<weapon key="gkw_asvalmod3.weapon" />
 			<weapon key="medikit.weapon" />
 			<carry_item key="exo_t4.carry_item" />
 		</resources>
@@ -1344,11 +1356,17 @@
 		<ai filename="dog.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_calls="1" clear_grenades="1">
 			<weapon key='fo12_dog.weapon'/>
-			<carry_item key='gk_jack_dog.carry_item' />
+			<carry_item key="gk_jack_dog.carry_item"/>
 		</resources>
 		<attribute_config class="rp">
 			<attribute weight="1.0" min="300" max="600" />
 		</attribute_config>
+		<item_class_existence_config>
+			<!-- wearables -->
+			<item_class_existence class="carry_item" slot="1" probability="1.0" />
+			<!-- backpack -->
+			<item_class_existence class="carry_item" slot="0" probability="0" />
+		</item_class_existence_config>
 	</soldier>
 	<!-- 404精英小队 -->
 	<soldier name="404_ump45_smg" spawn_score="0.05" copy_from="special_forces_404">
@@ -1405,7 +1423,7 @@
 		</character>
 		<resources clear_weapons="1" clear_vehicles="1" clear_calls="1" clear_grenades="1">
 			<weapon key="gkw_ak12_defyAI.weapon" />
-			<weapon key="gkw_defy_rocker.weapon" />
+			<weapon key="gkw_consume_at4.weapon" />
 			<projectile key="hand_88grenade.projectile" />
 			<carry_item key="exo_t5_ai_16lab.carry_item" />
 		</resources>
@@ -1447,7 +1465,7 @@
 			<attribute weight="1.0" min="100.100" max="102.833" />
 		</attribute_config>
 	</soldier> -->
-	<!-- 忤逆精英电战接入军方小队 -->
+	<!-- 第三方 -->
 	<soldier name="kcco_f_aegis" spawn_score="0.0" copy_from="default">
 		<character filename="default_kcco_human.character"/>
 		<ai filename="shield.ai" />

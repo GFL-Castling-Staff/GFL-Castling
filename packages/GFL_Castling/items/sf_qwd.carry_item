@@ -7,13 +7,13 @@
 		<inventory encumbrance="100" price="0"/>
 		<model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="hit_success_probability" value="-0.75" />
+        <modifier class="hit_success_probability" value="-2.75" />
 	</carry_item>
 	<carry_item key="sf_qwd_1" time_to_live_out_in_the_open="15" name="Manticore Armor" transform_on_consume="sf_qwd_2" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="sfd_ar.png"/>
@@ -22,13 +22,13 @@
 		<inventory encumbrance="100" price="0"/>
 		<model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="hit_success_probability" value="-0.75" />
+        <modifier class="hit_success_probability" value="-2.75" />
 	</carry_item>
 	<carry_item key="sf_qwd_2" time_to_live_out_in_the_open="15" name="Manticore Armor" transform_on_consume="sf_qwd_3" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="sfd_ar.png"/>
@@ -37,13 +37,13 @@
 		<inventory encumbrance="100" price="0"/>
 		<model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="hit_success_probability" value="-0.75" />
+        <modifier class="hit_success_probability" value="-2.75" />
 	</carry_item>
 	<carry_item key="sf_qwd_3" time_to_live_out_in_the_open="15" name="Manticore Armor" transform_on_consume="sf_qwd_4" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="sfd_ar.png"/>
@@ -52,13 +52,13 @@
 		<inventory encumbrance="100" price="0"/>
 		<model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="hit_success_probability" value="-0.75" />
+        <modifier class="hit_success_probability" value="-2.75" />
 	</carry_item>
 	<carry_item key="sf_qwd_4" time_to_live_out_in_the_open="15" name="Manticore Armor" transform_on_consume="sf_qwd_5" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="sfd_ar.png"/>
@@ -67,13 +67,13 @@
 		<inventory encumbrance="100" price="0"/>
 		<model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="hit_success_probability" value="-0.75" />
+        <modifier class="hit_success_probability" value="-2.75" />
 	</carry_item>
 	<carry_item key="sf_qwd_5" time_to_live_out_in_the_open="15" name="Manticore Armor" transform_on_consume="sf_qwd_6" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="sfd_ar.png"/>
@@ -82,13 +82,13 @@
 		<inventory encumbrance="100" price="0"/>
 		<model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="hit_success_probability" value="-0.75" />
+        <modifier class="hit_success_probability" value="-2.75" />
 	</carry_item>
 	<carry_item key="sf_qwd_6" time_to_live_out_in_the_open="15" name="Manticore Armor" transform_on_consume="sf_qwd_7" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="sfd_ar.png"/>
@@ -97,13 +97,13 @@
 		<inventory encumbrance="100" price="0"/>
 		<model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="hit_success_probability" value="-0.75" />
+        <modifier class="hit_success_probability" value="-0.9" />
 	</carry_item>
 	<carry_item key="sf_qwd_7" time_to_live_out_in_the_open="15" name="Manticore Armor" transform_on_consume="sf_qwd_8" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="sfd_ar.png"/>
@@ -112,13 +112,13 @@
 		<inventory encumbrance="100" price="0"/>
 		<model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="hit_success_probability" value="-0.75" />
+        <modifier class="hit_success_probability" value="-0.9" />
 	</carry_item>
 	<carry_item key="sf_qwd_8" time_to_live_out_in_the_open="15" name="Manticore Armor" transform_on_consume="sf_qwd_9" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="sfd_ar.png"/>
@@ -127,13 +127,13 @@
 		<inventory encumbrance="100" price="0"/>
 		<model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="hit_success_probability" value="-0.75" />
+        <modifier class="hit_success_probability" value="-0.9" />
 	</carry_item>
 	<carry_item key="sf_qwd_9" time_to_live_out_in_the_open="15" name="Manticore Armor" transform_on_consume="sf_qwd_10" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="sfd_ar.png"/>
@@ -142,13 +142,13 @@
 		<inventory encumbrance="100" price="0"/>
 		<model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="death" output_character_state="stun" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="hit_success_probability" value="-0.75" />
+        <modifier class="hit_success_probability" value="-0.9" />
 	</carry_item>
 	<carry_item key="sf_qwd_10" time_to_live_out_in_the_open="15" name="Manticore Armor" transform_on_consume="sf_qwd_11" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="sfd_ar.png"/>
@@ -157,13 +157,13 @@
 		<inventory encumbrance="100" price="0"/>
 		<model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="hit_success_probability" value="-0.75" />
+        <modifier class="hit_success_probability" value="-0.9" />
 	</carry_item>
 	<carry_item key="sf_qwd_11" time_to_live_out_in_the_open="15" name="Manticore Armor" transform_on_consume="sf_qwd_12" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="sfd_ar.png"/>
@@ -172,13 +172,13 @@
 		<inventory encumbrance="100" price="0"/>
 		<model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="hit_success_probability" value="-0.75" />
+        <modifier class="hit_success_probability" value="-0.9" />
 	</carry_item>
 	<carry_item key="sf_qwd_12" time_to_live_out_in_the_open="15" name="Manticore Armor" transform_on_consume="sf_qwd_13" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="sfd_ar.png"/>
@@ -187,13 +187,13 @@
 		<inventory encumbrance="100" price="0"/>
 		<model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="hit_success_probability" value="-0.75" />
+        <modifier class="hit_success_probability" value="-0.9" />
 	</carry_item>
 	<carry_item key="sf_qwd_13" time_to_live_out_in_the_open="15" name="Manticore Armor" transform_on_consume="sf_qwd_14" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="sfd_ar.png"/>
@@ -202,13 +202,13 @@
 		<inventory encumbrance="100" price="0"/>
 		<model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="hit_success_probability" value="-0.75" />
+        <modifier class="hit_success_probability" value="-0.9" />
 	</carry_item>
 	<carry_item key="sf_qwd_14" time_to_live_out_in_the_open="15" name="Manticore Armor" transform_on_consume="sf_qwd_15" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="sfd_ar.png"/>
@@ -217,13 +217,13 @@
 		<inventory encumbrance="100" price="0"/>
 		<model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="hit_success_probability" value="-0.75" />
+        <modifier class="hit_success_probability" value="-0.9" />
 	</carry_item>
 	<carry_item key="sf_qwd_15" time_to_live_out_in_the_open="15" name="Manticore Armor" transform_on_consume="sf_qwd_16" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="sfd_ar.png"/>
@@ -232,13 +232,13 @@
 		<inventory encumbrance="100" price="0"/>
 		<model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="hit_success_probability" value="-0.75" />
+        <modifier class="hit_success_probability" value="-0.9" />
 	</carry_item>
 	<carry_item key="sf_qwd_16" time_to_live_out_in_the_open="15" name="Manticore Armor" transform_on_consume="sf_qwd_17" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="sfd_ar.png"/>
@@ -247,13 +247,13 @@
 		<inventory encumbrance="100" price="0"/>
 		<model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="hit_success_probability" value="-0.75" />
+        <modifier class="hit_success_probability" value="-0.9" />
 	</carry_item>
 	<carry_item key="sf_qwd_17" time_to_live_out_in_the_open="15" name="Manticore Armor" transform_on_consume="sf_qwd_18" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="sfd_ar.png"/>
@@ -262,13 +262,13 @@
 		<inventory encumbrance="100" price="0"/>
 		<model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="hit_success_probability" value="-0.75" />
+        <modifier class="hit_success_probability" value="-0.9" />
 	</carry_item>
 	<carry_item key="sf_qwd_18" time_to_live_out_in_the_open="15" name="Manticore Armor" transform_on_consume="sf_qwd_19" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="sfd_ar.png"/>
@@ -277,13 +277,13 @@
 		<inventory encumbrance="100" price="0"/>
 		<model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="hit_success_probability" value="-0.75" />
+        <modifier class="hit_success_probability" value="-0.9" />
 	</carry_item>
 	<carry_item key="sf_qwd_19" time_to_live_out_in_the_open="15" name="Manticore Armor" transform_on_consume="sf_qwd_20" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="sfd_ar.png"/>
@@ -292,12 +292,12 @@
 		<inventory encumbrance="100" price="0"/>
 		<model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="hit_success_probability" value="-0.75" />
+        <modifier class="hit_success_probability" value="-0.9" />
 	</carry_item>
 </carry_items>

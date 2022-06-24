@@ -39,6 +39,9 @@
 <model filename="gkd_smg_type100.xml"><requirement class="weapon" slot="0" key="gkw_type100_skill.weapon"/></model>
 <model filename="gkd_smg_type100.xml"><requirement class="weapon" slot="0" key="gkw_type100_banzai.weapon"/><requirement class="rank" range="0 1000000" /></model>
 <model filename="gkd_smg_type100.xml"><requirement class="weapon" slot="0" key="gkw_type100_1.weapon"/><requirement class="rank" range="0 1000000" /></model>
+<model filename="gkd_smg_type100_4004.xml"><requirement class="weapon" slot="0" key="gkw_type100_4004.weapon"/></model>
+<model filename="gkd_smg_type100_4004.xml"><requirement class="weapon" slot="0" key="gkw_type100_4004_skill.weapon"/></model>
+
 <model filename="gkd_ar_fnc_6608_from_gua.xml"><requirement class="weapon" slot="0" key="gkw_fnc_6608.weapon"/></model>
 <model filename="gkd_smg_kp31.xml"><requirement class="weapon" slot="0" key="gkw_kp31.weapon"/></model>
 <model filename="gkd_smg_kp31mod3_byame.xml"><requirement class="weapon" slot="0" key="gkw_kp31mod3.weapon"/></model>
@@ -94,6 +97,8 @@
 <model filename="gkd_ar_xm8_mod3_from_melondove.xml"><requirement class="weapon" slot="0" key="gkw_xm8_mod3.weapon"/></model>
 <model filename="gkd_ar_xm8_mod3_from_melondove.xml"><requirement class="weapon" slot="0" key="gkw_xm8_mod3_skill.weapon"/></model>
 <model filename="gkd_hg_spp1_4207_from_melondove.xml"><requirement class="weapon" slot="0" key="gkw_spp1_4207.weapon"/></model>
+<model filename="gkd_smg_ak74u.xml"><requirement class="weapon" slot="0" key="gkw_ak74u.weapon"/></model>
+<model filename="gkd_smg_ak74u.xml"><requirement class="weapon" slot="0" key="gkw_ak74u_skill.weapon"/></model>
 <model filename="gkd_smg_ak74u_3002_from_melondove.xml"><requirement class="weapon" slot="0" key="gkw_ak74u_3002.weapon"/></model>
 <model filename="gkd_smg_ak74u_3002_from_melondove.xml"><requirement class="weapon" slot="0" key="gkw_ak74u_3002_skill.weapon"/></model>
 <model filename="gkd_smg_mp5_3006_from_melondove.xml"><requirement class="weapon" slot="0" key="gkw_mp5_3006.weapon"/></model>
@@ -122,6 +127,8 @@
 <model filename="gkd_ar_ribeyrolles_mod3_from_melondove.xml"><requirement class="weapon" slot="0" key="gkw_ribeyrollesmod3_skill.weapon"/></model>
 <model filename="gkd_hg_webley.xml"><requirement class="weapon" slot="0" key="gkw_webley.weapon"/></model>
 <model filename="gkd_mg_yurine_from_Dusk.xml"><requirement class="weapon" slot="0" key="gkw_yurine.weapon"/></model>
+<model filename="gkd_mg_yurine_from_Dusk.xml"><requirement class="weapon" slot="0" key="gkw_yurine_1.weapon"/></model>
+
 <model filename="gkd_rf_m1908.xml"><requirement class="weapon" slot="0" key="gkw_m1908.weapon"/></model>
 <model filename="gkd_rf_m1908.xml"><requirement class="weapon" slot="0" key="gkw_m1908_skill.weapon"/></model>
 <model filename="gkd_smg_mp7.xml"><requirement class="weapon" slot="0" key="gkw_mp7.weapon"/></model>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <carry_items>
-	<carry_item key="sfw_intruder.carry_item" time_to_live_out_in_the_open="15" name="Intruder" transform_on_consume="intruder_1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="sf_intruder.carry_item" time_to_live_out_in_the_open="15" name="Intruder" transform_on_consume="intruder_1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="sfd_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>

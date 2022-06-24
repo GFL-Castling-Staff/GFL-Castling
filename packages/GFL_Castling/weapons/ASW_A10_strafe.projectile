@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<projectile key="ASW_A10_strafe.projectile" slot="2" pulldown_in_air="0.0">
+    <result class="blast" damage="4.0"  radius="4.0" decal="1" push="0.3" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+    <trail probability="1.0" key="BulletApTrail" />
+    <effect class="result" key="terrain" ref="BigBurst" use_surface_color="1" />
+    <effect class="result" key="terrain" ref="LowDust"/>
+    <effect class="result" key="terrain" ref="Shine" lighting="0" />
+    <effect class="result" key="terrain" ref="Godray" lighting="0" />
+    <effect class="result" key="static_object" copy="terrain"/>
+    <effect class="result" key="terrain" ref="SmokeTop" post_processing="1" />
+    <effect class="result" key="terrain" ref="Smoke" post_processing="1" />
+    <effect class="result" key="terrain" ref="ShadowSmoke" shadow="1" />    
+	<effect class="result" key="vehicle" copy="terrain"/>
+
+    <effect class="result" type="splat_map" surface_tag="" size="3.0" atlas_index="0" layer="1" />
+    <effect class="result" type="splat_map" surface_tag="" size="5.0" atlas_index="4" layer="0" />
+    <effect class="result" type="splat_map" surface_tag="" size="6.0" atlas_index="0" layer="2" additive="0" /> <!-- remove top snow everywhere -->
+    <model mesh_filename="40mm.mesh" texture_filename="40mm.png" />
+    <trigger class="impact" />
+    <rotation class="motion" />
+</projectile>

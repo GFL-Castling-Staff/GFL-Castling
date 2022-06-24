@@ -26,6 +26,7 @@ class MatchCompleteReward : Tracker {
                     if (characterId >= 0) {
                         GiveRP(m_metagame,characterId,2000);
                         GiveXP(m_metagame,characterId,0.1);
+                        addItemInBackpack(m_metagame,characterId,"carry_item","complete_box.carry_item");
                     }                    
                 }
             }

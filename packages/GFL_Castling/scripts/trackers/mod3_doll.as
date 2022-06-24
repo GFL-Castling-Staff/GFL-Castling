@@ -21,7 +21,6 @@ dictionary MOD3craftList = {
     {"gkw_stg44.weapon","gkw_stg44mod3.weapon"},
     {"gkw_gsh18.weapon","gkw_gsh18mod3.weapon"},
     {"gkw_gsh18_523.weapon","gkw_gsh18mod3_523.weapon"},
-    {"gkw_gsh18_609.weapon","gkw_gsh18mod3_609.weapon"},
     {"gkw_m1911.weapon","gkw_m1911_mod3.weapon"},
     {"gkw_m1895.weapon","gkw_m1895mod3.weapon"},
     {"gkw_m1895_5309.weapon","gkw_m1895mod3_5309.weapon"},
@@ -59,6 +58,8 @@ dictionary MOD3craftList = {
     {"gkw_pp19.weapon","gkw_pp19mod3.weapon"},
     {"gkw_ppsh41.weapon","gkw_ppsh41mod3.weapon"},
     {"gkw_ro635.weapon","gkw_ro635mod3.weapon"},
+
+    {"gkw_ump9.weapon","gkw_ump9mod3.weapon"},
 
     {"gkw_ump45.weapon","gkw_ump45mod3.weapon"},
     {"gkw_ump45_410.weapon","gkw_ump45mod3_410.weapon"},

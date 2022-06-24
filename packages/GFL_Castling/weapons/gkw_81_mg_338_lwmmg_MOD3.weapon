@@ -27,8 +27,8 @@
         <sound class="impact" fileref="rifle_drop.wav" />
         <model filename="gkw_mg_lwmmg_mod3_from_melondove.xml" />
         <hud_icon filename="gkw_lwmmgmod3.png" />
-        <capacity value="0" source="rank" source_value="0.0" />
-        <capacity value="1" source="rank" source_value="4.622" />
+        <capacity value="1" source="rank" source_value="0.0" />
+        
         <projectile file="bullet.projectile">
             <result class="hit" kill_probability="1.3" kill_probability_offset_on_successful_hit="1.5" kill_decay_start_time="1.0" kill_decay_end_time="2.0" />
         </projectile>
@@ -75,8 +75,8 @@
         <sound class="impact" fileref="rifle_drop.wav" />
         <model filename="gkw_mg_lwmmg_mod3_from_melondove.xml" />
         <hud_icon filename="gkw_lwmmgmod3.png" />
-        <capacity value="0" source="rank" source_value="0.0" />
-        <capacity value="1" source="rank" source_value="4.622" />
+        <capacity value="1" source="rank" source_value="0.0" />
+        
         <projectile file="bullet.projectile">
             <result class="blast" damage="2.1"  radius="2.5" decal="1" push="0" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
             <trail probability="1.0" key="BulletApTrail" />

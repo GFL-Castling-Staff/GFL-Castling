@@ -35,9 +35,8 @@
     <!--Model, Icon, Cost-->
     <model filename="gkw_rf_sv-98_mod3 98.xml" />
     <hud_icon filename="gkw_sv98mod3.png" />
-    <capacity value="0" source="rank" source_value="0.0" />
-    <capacity value="1" source="rank" source_value="6.048" />
-    <commonness in_stock="0" can_respawn_with="1" />
+    <capacity value="1" source="rank" source_value="0.0" />
+        <commonness in_stock="0" can_respawn_with="1" />
     <!--Ballistics-->
     <weak_hand_hold offset="0.3" />
     <projectile file="bullet.projectile" can_be_detected_by_footmen="0">
@@ -90,9 +89,8 @@
     <!--Model, Icon, Cost-->
     <model filename="gkw_rf_sv-98_mod3 98.xml" />
     <hud_icon filename="gkw_sv98mod3_skill.png" />
-    <capacity value="0" source="rank" source_value="0.0" />
-    <capacity value="1" source="rank" source_value="6.048" />
-    <commonness value="0" in_stock="0" can_respawn_with="1" />
+    <capacity value="1" source="rank" source_value="0.0" />
+        <commonness value="0" in_stock="0" can_respawn_with="1" />
     <!--Ballistics-->
     <weak_hand_hold offset="0.3" />
     <projectile file="bullet.projectile" can_be_detected_by_footmen="0">

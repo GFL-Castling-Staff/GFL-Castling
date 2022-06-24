@@ -25,7 +25,7 @@
 		<model filename="gkw_mg_qjy88_n.xml" />
 		<hud_icon filename="gkw_type88.png" />
 		<projectile file="bullet.projectile">
-			<result class="hit" kill_probability="1.9" kill_decay_start_time="1.967" kill_decay_end_time="3.279" />
+			<result class="hit" kill_probability="2.0" kill_decay_start_time="1.967" kill_decay_end_time="3.279" />
 		</projectile>
 		<stance state_key="running" accuracy="-1" />
 		<stance state_key="walking" accuracy="-1" />
@@ -63,11 +63,18 @@
 		<sound class="impact" fileref="rifle_drop.wav" />
 		<model filename="gkw_mg_qjy88.xml" />
 		<hud_icon filename="gkw_type88_skill.png" />
+		<shield offset="-0.60 0.0 -0.2" extent="1.2 1.5 2.4" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
 		<projectile file="bullet.projectile">
-			<result class="hit" kill_probability="1.75" kill_probability_offset_on_successful_hit="1.0" kill_decay_start_time="1.967" kill_decay_end_time="3.279" />
+			<result class="hit" kill_probability="2.5" kill_probability_offset_on_successful_hit="0.45" kill_decay_start_time="1.967" kill_decay_end_time="3.279" />
 		</projectile>
 		<stance state_key="prone" accuracy="1" />
 		<stance state_key="over_wall" accuracy="1" />
-		<modifier class="speed" value="-1.5" />
+		<modifier class="speed" value="-3.0" />
 	</weapon>
 </weapons>

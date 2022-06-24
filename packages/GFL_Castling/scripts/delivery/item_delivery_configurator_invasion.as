@@ -17,6 +17,12 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 	void setup(ItemDeliveryOrganizer@ organizer) {
 		@m_itemDeliveryOrganizer = @organizer;
 		setupDollCrafting();
+		setupDollCrafting_AR();
+		setupDollCrafting_SG();
+		setupDollCrafting_SMG();
+		setupDollCrafting_RF();
+		setupDollCrafting_MG();
+		setupDollCrafting_HG();
 		setupBriefcaseUnlocks();
 		setupGift1();
 		setupGift2();
@@ -28,6 +34,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		setupSFgift();
 		setupArmorCraft();
 		setupStuffEasterEgg();
+		setupSupplyBox();
 	}
 
 	// --------------------------------------------
@@ -50,7 +57,11 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		setupIDW();
 		setupPPSH41();
 	}
-
+	protected void setupSupplyBox(){
+		setupDreambox();
+		setupSingularity();
+		_log("adding supply reward box", 1);
+	}
 
 	// ----------------------------------------------------
 	protected void setupLaptopUnlocks() {
@@ -167,7 +178,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		ScoredResource("gkw_sat8_1802.weapon", "weapon", 1.0f),
 		ScoredResource("gkw_honeybadger_4005.weapon", "weapon", 1.0f),
 		ScoredResource("gkw_p90_2802.weapon", "weapon", 1.0f),
-		ScoredResource("gkw_an94_3303.weapon", "weapon", 0.8f),
+		ScoredResource("gkw_an94_3303.weapon", "weapon", 1.0f),
 		ScoredResource("gkw_an94_blm.weapon", "weapon", 0.8f),
 		ScoredResource("gkw_ak12_blm.weapon", "weapon", 0.8f),
 		ScoredResource("gkw_rpk16_blm.weapon", "weapon", 0.8f),
@@ -206,9 +217,9 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		ScoredResource("m1903.carry_item", "carry_item", 0.5f),
 		ScoredResource("jill.carry_item", "carry_item", 0.5f),
 		ScoredResource("light.carry_item", "carry_item", 0.5f),
-		ScoredResource("gkw_idw_2108.weapon", "weapon", 2.0f),
-		ScoredResource("gkw_idw_3205.weapon", "weapon", 0.9f),
-		ScoredResource("gkw_idw_4908.weapon", "weapon", 2.0f),
+		ScoredResource("gkw_idw_2108.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_idw_3205.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_idw_4908.weapon", "weapon", 1.0f),
 		ScoredResource("gkw_ak74u_3002.weapon", "weapon", 1.0f),
 		ScoredResource("gkw_t91_4206.weapon", "weapon", 1.0f),
 		ScoredResource("gkw_mk23_1805.weapon", "weapon", 1.0f),
@@ -240,6 +251,8 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		ScoredResource("gkw_spas12_3203.weapon", "weapon", 1.0f),
 		ScoredResource("gkw_g41_2401.weapon", "weapon", 1.0f),
 		ScoredResource("gkw_m950a_702.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_m37_1105.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_type100_4004.weapon","weapon",1.0f),
 		ScoredResource("gkw_m870_3803.weapon", "weapon", 1.0f)
 			}
 		};
@@ -446,39 +459,63 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 			);
 	}
 
-	// ----------------------------------------------------
-	protected void setupCommunity3() {
-		_log("adding community box 3 config", 1);
+	protected void setupDreambox() {
 		array<Resource@> deliveryList = {
-			 Resource("gift_box_community_3.carry_item", "carry_item")
+			Resource("complete_box.carry_item", "carry_item")
 		};
 
 		array<array<ScoredResource@>> rewardPasses = {
 			{
-		 ScoredResource("ump40.weapon", "weapon", 12.0f), 
-         ScoredResource("mx4_storm.weapon", "weapon", 12.0f),
-         ScoredResource("bizon.weapon", "weapon", 12.0f),
-		 ScoredResource("dragons_breath.weapon", "weapon", 7.0f), 
-         ScoredResource("enforcer.weapon", "weapon", 8.0f),
-         ScoredResource("squall.weapon", "weapon", 8.0f),
-         ScoredResource("chainsaw.weapon", "weapon", 10.0f),
-         ScoredResource("emp_grenade.projectile", "projectile", 16.0f, 10),
-         ScoredResource("kunai.projectile", "projectile", 15.0f, 20)
-			},
-            {
-         ScoredResource("gps_laptop.weapon", "weapon", 17.0f, 5),
-	     ScoredResource("hornet_resource.weapon", "weapon", 15.0f, 2), 
-         ScoredResource("repair_crane_resource.weapon", "weapon", 15.0f, 2),
-         ScoredResource("squall.weapon", "weapon", 8.0f),
-         ScoredResource("costume_butcher.carry_item", "carry_item", 12.0f),        
-         ScoredResource("vest_repair.weapon", "weapon", 15.0f, 10), 
-         ScoredResource("guntruck_flare.projectile", "projectile", 10.0f, 2),
-         ScoredResource("vulcan_acav_flare.projectile", "projectile", 8.0f, 2)
-			} 
-		};   
-
+		ScoredResource("RO365_Ant_Doll.carry_item", "carry_item", 15.0f),
+		ScoredResource("city_gifts.carry_item", "carry_item", 10.0f, 10),
+		ScoredResource("wild_gifts.carry_item", "carry_item", 10.0f, 10),
+		ScoredResource("snow_gifts.carry_item", "carry_item", 10.0f, 10),
+		ScoredResource("forest_gifts.carry_item", "carry_item", 10.0f, 10),	
+		ScoredResource("gift_box_1.carry_item", "carry_item", 30.0f,3),
+		ScoredResource("firecontrol.carry_item", "carry_item", 10.0f,1),
+		ScoredResource("gift_box_2.carry_item", "carry_item", 15.0f,1),
+		ScoredResource("lottery.carry_item", "carry_item", 20.0f,3),
+		ScoredResource("core_mask.carry_item", "carry_item", 5.0f,1),
+		ScoredResource("dollcraft.carry_item", "carry_item", 40.0f,5)
+			}
+		};
 		processRewardPasses(rewardPasses);
-    
+
+		GiftItemDeliveryRandomRewarder@ rewarder = GiftItemDeliveryRandomRewarder(m_metagame, rewardPasses);
+
+		m_itemDeliveryOrganizer.addObjective(
+			ItemDeliveryObjective(m_metagame, 0, deliveryList, m_itemDeliveryOrganizer, null, "", "", "", -1 /* loop */, rewarder)
+			);
+	}
+	protected void setupSingularity() {
+		array<Resource@> deliveryList = {
+			Resource("complete_box_singularity.carry_item", "carry_item")
+		};
+
+		array<array<ScoredResource@>> rewardPasses = {
+			{
+		ScoredResource("RO365_Ant_Doll.carry_item", "carry_item", 15.0f),
+		ScoredResource("wild_gifts.carry_item", "carry_item", 10.0f, 10),
+		ScoredResource("snow_gifts.carry_item", "carry_item", 10.0f, 10),
+		ScoredResource("gift_box_1.carry_item", "carry_item", 30.0f,3),
+		ScoredResource("firecontrol.carry_item", "carry_item", 15.0f,1),
+		ScoredResource("gift_box_2.carry_item", "carry_item", 15.0f,1),
+		ScoredResource("lottery.carry_item", "carry_item", 20.0f,3),
+		ScoredResource("core_mask.carry_item", "carry_item", 5.0f,1),
+		ScoredResource("dollcraft.carry_item", "carry_item", 40.0f,5)
+			},
+			{
+		// ScoredResource("gkw_hk21.weapon", "weapon", 0.5f),
+		ScoredResource("gkw_mp7.weapon", "weapon", 0.5f),
+		ScoredResource("gkw_ballista.weapon", "weapon", 0.5f),
+		// ScoredResource("gkw_cz2000.weapon", "weapon", 0.5f),
+		ScoredResource("gkw_honeybadger.weapon", "weapon", 0.5f),
+		ScoredResource("gkw_thunder.weapon", "weapon", 0.5f),
+		ScoredResource("wild_gifts.carry_item", "carry_item", 3.0f,5)
+			}
+		};
+		processRewardPasses(rewardPasses);
+
 		GiftItemDeliveryRandomRewarder@ rewarder = GiftItemDeliveryRandomRewarder(m_metagame, rewardPasses);
 
 		m_itemDeliveryOrganizer.addObjective(
@@ -486,128 +523,6 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 			);
 	}
 
-	// ----------------------------------------------------
-	protected void setupCommunity4() {
-		_log("adding community box 4 config", 1);
-		array<Resource@> deliveryList = {
-			 Resource("gift_box_community_4.carry_item", "carry_item")
-		};
-
-		array<array<ScoredResource@>> rewardPasses = {
-			{
-         ScoredResource("lottery.carry_item", "carry_item", 30.0f), 
-         ScoredResource("tkb059.weapon", "weapon", 5.0f),
-         ScoredResource("compound_bow.weapon", "weapon", 10.0f),
-         ScoredResource("blowgun.weapon", "weapon", 12.0f),
-         ScoredResource("g11.weapon", "weapon", 20.0f),
-         ScoredResource("pf98.weapon", "weapon", 8.0f),                  
-         ScoredResource("icecream.projectile", "projectile", 20.0f, 1)
-			},
-            {
-         ScoredResource("gepard_m6_lynx.weapon", "weapon", 8.0f),
-	     ScoredResource("golden_ak47.weapon", "weapon", 8.0f), 
-         ScoredResource("zjx19_flare.projectile", "projectile", 15.0f, 2),
-	     ScoredResource("portable_mortar.weapon", "weapon", 10.0f),
-	     ScoredResource("rgm40.weapon", "weapon", 18.0f), 
-	     ScoredResource("gl06.weapon", "weapon", 18.0f),
-		 ScoredResource("gift_box_community_3.carry_item", "carry_item", 7.0f),
-		 ScoredResource("gift_box_community_1.carry_item", "carry_item", 9.0f),
-         ScoredResource("gift_box_community_2.carry_item", "carry_item", 8.0f),
-		 ScoredResource("gift_box_community_5.carry_item", "carry_item", 5.0f)                                            
-			} 
-		};   
-
-		processRewardPasses(rewardPasses);
-    
-		GiftItemDeliveryRandomRewarder@ rewarder = GiftItemDeliveryRandomRewarder(m_metagame, rewardPasses);
-
-		m_itemDeliveryOrganizer.addObjective(
-			ItemDeliveryObjective(m_metagame, 0, deliveryList, m_itemDeliveryOrganizer, null, "", "", "", -1 /* loop */, rewarder)
-			);
-	}
-
-	// ----------------------------------------------------
-	protected void setupCommunity5() {
-		_log("adding community box 5 config", 1);
-		array<Resource@> deliveryList = {
-			 Resource("gift_box_community_5.carry_item", "carry_item")
-		};
-
-		array<array<ScoredResource@>> rewardPasses = {
-			{
-         ScoredResource("balloon.carry_item", "carry_item", 20.0f, 10),
-         ScoredResource("vest_exo.carry_item", "carry_item", 30.0f, 5),          
-         ScoredResource("suomi.weapon", "weapon", 10.0f),
-         ScoredResource("ninjato.weapon", "weapon", 20.0f),
-         ScoredResource("noxe_flare.projectile", "projectile", 15.0f, 2),
-         ScoredResource("m528_flare.projectile", "projectile", 15.0f, 2),         
-         ScoredResource("m320.weapon", "weapon", 15.0f),
-         ScoredResource("p416.weapon", "weapon", 10.0f)            
-
-			},
-            {
-	     ScoredResource("stim.projectile", "projectile", 30.0f, 10), 
-         ScoredResource("flamer_tank_flare.projectile", "projectile", 15.0f, 2),
-         ScoredResource("sev90_flare.projectile", "projectile", 15.0f, 2),                           
-	     ScoredResource("chicken_carrier.weapon", "weapon", 10.0f, 5),
-         ScoredResource("squad_equipment_kit.weapon", "weapon", 15.0f, 10),         
-		 ScoredResource("gift_box_community_4.carry_item", "carry_item", 3.0f),         
-		 ScoredResource("gift_box_community_3.carry_item", "carry_item", 4.0f),
-		 ScoredResource("gift_box_community_1.carry_item", "carry_item", 6.0f),
-         ScoredResource("gift_box_community_2.carry_item", "carry_item", 5.0f)                                   
-			} 
-		};   
-
-		processRewardPasses(rewardPasses);
-    
-		GiftItemDeliveryRandomRewarder@ rewarder = GiftItemDeliveryRandomRewarder(m_metagame, rewardPasses);
-
-		m_itemDeliveryOrganizer.addObjective(
-			ItemDeliveryObjective(m_metagame, 0, deliveryList, m_itemDeliveryOrganizer, null, "", "", "", -1 /* loop */, rewarder)
-			);
-	}
-
-	// ----------------------------------------------------
-	protected void setupCommunity6() {
-		_log("adding community box 6 config", 1);
-		array<Resource@> deliveryList = {
-			 Resource("gift_box_community_6.carry_item", "carry_item")
-		};
-
-		array<array<ScoredResource@>> rewardPasses = {
-			{
-         
-         ScoredResource("kulakov.weapon", "weapon", 10.0f),
-         ScoredResource("rpd.weapon", "weapon", 15.0f),
-         ScoredResource("ak47_w_gp25.weapon", "weapon", 15.0f),
-         ScoredResource("g36_w_ag36.weapon", "weapon", 15.0f),
-         ScoredResource("m16a4_w_m203.weapon", "weapon", 15.0f),			 
-         ScoredResource("mac10.weapon", "weapon", 20.0f),
-         ScoredResource("ash12.weapon", "weapon", 10.0f)            
-
-			},
-            {
-         ScoredResource("ultimax.weapon", "weapon", 10.0f),
-         ScoredResource("zweihander.weapon", "weapon", 20.0f), 
-         ScoredResource("sabre.weapon", "weapon", 20.0f),
-         ScoredResource("doublebarrel.weapon", "weapon", 20.0f),
-         ScoredResource("golden_mp5sd.weapon", "weapon", 12.0f),		 
-		 ScoredResource("gift_box_community_4.carry_item", "carry_item", 3.0f),         
-		 ScoredResource("gift_box_community_3.carry_item", "carry_item", 4.0f),
-		 ScoredResource("gift_box_community_5.carry_item", "carry_item", 6.0f),
-         ScoredResource("gift_box_community_2.carry_item", "carry_item", 5.0f)                                   
-			} 
-		};   
-
-		processRewardPasses(rewardPasses);
-    
-		GiftItemDeliveryRandomRewarder@ rewarder = GiftItemDeliveryRandomRewarder(m_metagame, rewardPasses);
-
-		m_itemDeliveryOrganizer.addObjective(
-			ItemDeliveryObjective(m_metagame, 0, deliveryList, m_itemDeliveryOrganizer, null, "", "", "", -1 /* loop */, rewarder)
-			);
-	}	
-	
 	// 替换彩票----------------------------------------------------
 	protected void setupIcecream() {
 		_log("adding icecream van config", 1);
@@ -1004,19 +919,18 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 	array<Resource@>@ getUnlockWeaponList() const {
 		array<Resource@> list;
 
-		list.push_back(Resource("l85a2.weapon", "weapon"));
-		list.push_back(Resource("famasg1.weapon", "weapon"));
-		list.push_back(Resource("sg552.weapon", "weapon"));
-		list.push_back(Resource("m79.weapon", "weapon"));
-		list.push_back(Resource("gl06.weapon", "weapon"));
-		list.push_back(Resource("rgm40.weapon", "weapon"));                
-		list.push_back(Resource("minig_resource.weapon", "weapon"));
-		list.push_back(Resource("desert_eagle.weapon", "weapon"));
-		list.push_back(Resource("tow_resource.weapon", "weapon"));   
-		list.push_back(Resource("eodvest.carry_item", "carry_item")); 
-		list.push_back(Resource("gl_resource.weapon", "weapon"));
-		list.push_back(Resource("smaw.weapon", "weapon"));
-		list.push_back(Resource("hornet_resource.weapon", "weapon"));        
+		list.push_back(Resource("gkw_m2hb.weapon", "weapon"));
+		list.push_back(Resource("gkw_spas12.weapon", "weapon"));
+		list.push_back(Resource("gkw_mg42.weapon", "weapon"));
+		list.push_back(Resource("gkw_uzi.weapon", "weapon"));
+		list.push_back(Resource("gkw_supersass.weapon", "weapon"));
+		list.push_back(Resource("gkw_mp5.weapon", "weapon"));
+		list.push_back(Resource("gkw_m1897.carry_item", "carry_item")); 
+		list.push_back(Resource("gkw_m1014.weapon", "weapon"));
+		list.push_back(Resource("gkw_svd.weapon", "weapon"));
+		list.push_back(Resource("gkw_fal.weapon", "weapon"));        
+		list.push_back(Resource("gkw_desert_eagle.weapon", "weapon"));        
+		list.push_back(Resource("gkw_mk23.weapon", "weapon"));        
 
 		return list;
 	}
@@ -1064,7 +978,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 				ScoredResource("gkw_c96.weapon", "weapon", 0.6f),
 				ScoredResource("gkw_gm6.weapon", "weapon", 0.6f),
 				ScoredResource("gkw_gsh18.weapon", "weapon", 0.6f),
-				ScoredResource("gkw_hk23.weapon", "weapon", 0.6f),
+				// ScoredResource("gkw_hk21.weapon", "weapon", 0.6f),
 				ScoredResource("gkw_m1.weapon", "weapon", 0.6f),
 				ScoredResource("gkw_m1a1.weapon", "weapon", 0.6f),
 				ScoredResource("gkw_m21.weapon", "weapon", 0.6f),
@@ -1075,8 +989,11 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 				ScoredResource("gkw_pps43.weapon", "weapon", 0.6f),
 				ScoredResource("gkw_qsb91.weapon", "weapon", 0.6f),
 				ScoredResource("gkw_rpd.weapon", "weapon", 0.6f),
+				ScoredResource("gkw_m2hb.weapon", "weapon", 0.6f),
+				ScoredResource("gkw_uzi.weapon", "weapon", 0.6f),
 				ScoredResource("gkw_supersass.weapon", "weapon", 0.6f),
 				// ScoredResource("gkw_t-cms.weapon", "weapon", 0.6f),
+				ScoredResource("gkw_ks23.weapon", "weapon", 0.6f),
 
 
 				ScoredResource("gkw_m1908.weapon", "weapon", 0.3f),
@@ -1094,7 +1011,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 				ScoredResource("gkw_fx05.weapon", "weapon", 0.3f),
 				ScoredResource("gkw_g28.weapon", "weapon", 0.3f),
 				ScoredResource("gkw_g36.weapon", "weapon", 0.3f),
-				ScoredResource("gkw_pdw.weapon", "weapon", 0.3f),
+				ScoredResource("gkw_honeybadger.weapon", "weapon", 0.3f),
 				ScoredResource("gkw_k31.weapon", "weapon", 0.3f),
 				ScoredResource("gkw_klin.weapon", "weapon", 0.3f),
 				ScoredResource("gkw_ksvk.weapon", "weapon", 0.3f),
@@ -1104,7 +1021,6 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 				ScoredResource("gkw_m1903.weapon", "weapon", 0.3f),
 				ScoredResource("gkw_m60.weapon", "weapon", 0.3f),
 				// ScoredResource("gkw_mg3.weapon", "weapon", 0.3f),
-				ScoredResource("gkw_uzi.weapon", "weapon", 0.3f),
 				ScoredResource("gkw_mk23.weapon", "weapon", 0.3f),
 				ScoredResource("gkw_mk46.weapon", "weapon", 0.3f),
 				ScoredResource("gkw_mk48.weapon", "weapon", 0.3f),
@@ -1115,9 +1031,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 				ScoredResource("gkw_pp90.weapon", "weapon", 0.3f),
 				ScoredResource("gkw_psg1.weapon", "weapon", 0.3f),
 				ScoredResource("gkw_ribeyrolles.weapon", "weapon", 0.3f),
-				ScoredResource("gkw_supersass.weapon", "weapon", 0.3f),
 				ScoredResource("gkw_supershorty.weapon", "weapon", 0.3f),
-				ScoredResource("gkw_sv98.weapon", "weapon", 0.3f),
 				ScoredResource("gkw_svd.weapon", "weapon", 0.3f),
 				ScoredResource("gkw_tar21.weapon", "weapon", 0.3f),
 				ScoredResource("gkw_thunder.weapon", "weapon", 0.3f),
@@ -1127,91 +1041,154 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 				ScoredResource("gkw_usas12.weapon", "weapon", 0.3f),
 				ScoredResource("gkw_xm3.weapon", "weapon", 0.3f),
 				ScoredResource("gkw_xm8.weapon", "weapon", 0.3f),
+				ScoredResource("gkw_spas12.weapon", "weapon", 0.3f),
+				ScoredResource("gkw_pk.weapon", "weapon", 0.3f),
+				ScoredResource("gkw_m37.weapon", "weapon", 0.3f),
 
 
-				ScoredResource("gkw_type89.weapon", "weapon", 0.1f),
-				ScoredResource("gkw_QBZ95.weapon", "weapon", 0.1f),
-				ScoredResource("gkw_QBZ97.weapon", "weapon", 0.1f),
-				ScoredResource("gkw_aa12.weapon", "weapon", 0.1f),
-				ScoredResource("gkw_acr.weapon", "weapon", 0.1f),
-				ScoredResource("gkw_ak12.weapon", "weapon", 0.1f),
-				ScoredResource("gkw_ak15.weapon", "weapon", 0.1f),
-				ScoredResource("gkw_ak74u.weapon", "weapon", 0.1f),
-				ScoredResource("gkw_akalfa.weapon", "weapon", 0.1f),
-				ScoredResource("gkw_art556.weapon", "weapon", 0.1f),
-				ScoredResource("gkw_c93.weapon", "weapon", 0.1f),
-				ScoredResource("gkw_caws.weapon", "weapon", 0.1f),
-				ScoredResource("gkw_python.weapon", "weapon", 0.1f),
-				ScoredResource("gkw_contender.weapon", "weapon", 0.1f),
-				ScoredResource("gkw_cz75.weapon", "weapon", 0.1f),
-				ScoredResource("gkw_desert_eagle.weapon", "weapon", 0.1f),
-				ScoredResource("gkw_dp12.weapon", "weapon", 0.1f),
-				ScoredResource("gkw_dsr50.weapon", "weapon", 0.1f),
-				ScoredResource("gkw_fal.weapon", "weapon", 0.1f),
-				ScoredResource("gkw_g11.weapon", "weapon", 0.1f),
-				ScoredResource("gkw_g36c.weapon", "weapon", 0.1f),
-				ScoredResource("gkw_g41.weapon", "weapon", 0.1f),
-				ScoredResource("gkw_grizzly.weapon", "weapon", 0.1f),
-				ScoredResource("gkw_hk416.weapon", "weapon", 0.1f),
-				ScoredResource("gkw_hp35.weapon", "weapon", 0.1f),
-				ScoredResource("gkw_hs2000.weapon", "weapon", 0.1f),
-				ScoredResource("gkw_hs50.weapon", "weapon", 0.1f),
-				ScoredResource("gkw_iws2000.weapon", "weapon", 0.1f),
-				ScoredResource("gkw_js05.weapon", "weapon", 0.1f),
-				ScoredResource("gkw_js9.weapon", "weapon", 0.1f),
-				ScoredResource("gkw_98k.weapon", "weapon", 0.1f),
-				ScoredResource("gkw_kolibri.weapon", "weapon", 0.1f),
-				ScoredResource("gkw_kord.weapon", "weapon", 0.1f),
-				ScoredResource("gkw_kp31.weapon", "weapon", 0.1f),
-				ScoredResource("gkw_ksg.weapon", "weapon", 0.1f),
-				ScoredResource("gkw_mlemk1.weapon", "weapon", 0.1f),
-				ScoredResource("gkw_lewis.weapon", "weapon", 0.1f),
-				ScoredResource("gkw_carcano1891.weapon", "weapon", 0.1f),
-				ScoredResource("gkw_m200.weapon", "weapon", 0.1f),
-				ScoredResource("gkw_m82a1.weapon", "weapon", 0.1f),
-				ScoredResource("gkw_m870.weapon", "weapon", 0.1f),
-				ScoredResource("gkw_carcano1938.weapon", "weapon", 0.1f),
-				ScoredResource("gkw_m950a.weapon", "weapon", 0.1f),
-				ScoredResource("gkw_m99.weapon", "weapon", 0.1f),
-				ScoredResource("gkw_mdr.weapon", "weapon", 0.1f),
-				ScoredResource("gkw_mg5.weapon", "weapon", 0.1f),
-				ScoredResource("gkw_mp7.weapon", "weapon", 0.1f),
-				ScoredResource("gkw_ntw20.weapon", "weapon", 0.1f),
-				ScoredResource("gkw_ots14.weapon", "weapon", 0.1f),
-				ScoredResource("gkw_p22.weapon", "weapon", 0.1f),
-				ScoredResource("gkw_p90.weapon", "weapon", 0.1f),
-				ScoredResource("gkw_pa15.weapon", "weapon", 0.1f),
-				ScoredResource("gkw_pm06.weapon", "weapon", 0.1f),
-				ScoredResource("gkw_pp19.weapon", "weapon", 0.1f),
-				ScoredResource("gkw_qbz191.weapon", "weapon", 0.1f),
-				ScoredResource("gkw_qjy88.weapon", "weapon", 0.1f),
-				ScoredResource("gkw_r5.weapon", "weapon", 0.1f),
-				ScoredResource("gkw_r93.weapon", "weapon", 0.1f),
-				ScoredResource("gkw_rfb.weapon", "weapon", 0.1f),
-				ScoredResource("gkw_ribeyrolles.weapon", "weapon", 0.1f),
-				ScoredResource("gkw_rpk16.weapon", "weapon", 0.1f),
-				ScoredResource("gkw_sat8.weapon", "weapon", 0.1f),
-				ScoredResource("gkw_sacr.weapon", "weapon", 0.1f),
-				ScoredResource("gkw_sigmcx.weapon", "weapon", 0.1f),
-				ScoredResource("gkw_sig556.weapon", "weapon", 0.1f),
-				ScoredResource("gkw_sp9.weapon", "weapon", 0.1f),
-				ScoredResource("gkw_srs.weapon", "weapon", 0.1f),
-				ScoredResource("gkw_svch.weapon", "weapon", 0.1f),
-				ScoredResource("gkw_t91.weapon", "weapon", 0.1f),
-				ScoredResource("gkw_tac50.weapon", "weapon", 0.1f),
-				ScoredResource("gkw_thompson.weapon", "weapon", 0.1f),
-				ScoredResource("gkw_tkb408.weapon", "weapon", 0.1f),
-				ScoredResource("gkw_type100.weapon", "weapon", 0.1f),
-				ScoredResource("gkw_vector.weapon", "weapon", 0.1f),
-				ScoredResource("gkw_vhs.weapon", "weapon", 0.1f),
-				ScoredResource("gkw_vsk94.weapon", "weapon", 0.1f),
-				ScoredResource("gkw_wa2000.weapon", "weapon", 0.1f),
-				ScoredResource("gkw_webley.weapon", "weapon", 0.1f),
-				ScoredResource("gkw_welrod.weapon", "weapon", 0.1f),
-				ScoredResource("gkw_x95.weapon", "weapon", 0.1f),
-				ScoredResource("gkw_xm3.weapon", "weapon", 0.1f),
-				ScoredResource("gkw_sr3mp.weapon", "weapon", 0.1f),
-				ScoredResource("gkw_negev.weapon", "weapon", 0.1f)
+				ScoredResource("gkw_type89.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_QBZ95.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_QBZ97.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_aa12.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_acr.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_ak12.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_ak15.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_ak74u.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_akalfa.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_art556.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_c93.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_caws.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_python.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_contender.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_cz75.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_nz75.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_desert_eagle.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_dp12.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_dsr50.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_fal.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_g11.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_g36c.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_g41.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_grizzly.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_hk416.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_hp35.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_hs2000.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_hs50.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_iws2000.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_js05.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_js9.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_98k.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_kolibri.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_kord.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_kp31.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_ksg.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_mlemk1.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_lewis.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_carcano1891.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_m200.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_m82a1.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_m870.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_carcano1938.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_m950a.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_m99.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_mdr.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_mg5.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_mp7.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_ntw20.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_ots14.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_p22.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_p90.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_pa15.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_pm06.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_qbz191.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_qjy88.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_r5.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_zasm21.weapon","weapon",0.2f),
+				ScoredResource("gkw_r93.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_rfb.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_rpk16.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_sat8.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_sacr.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_sigmcx.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_sig556.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_sp9.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_srs.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_svch.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_t91.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_tac50.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_thompson.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_tkb408.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_type100.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_vector.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_vhs.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_vsk94.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_wa2000.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_webley.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_welrod.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_x95.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_sr3mp.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_pkp.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_ballista.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_ltlx7000.weapon","weapon",0.2f),
+				ScoredResource("gkw_mg4.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_rpk203.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_mg338.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_saiga12.weapon","weapon",0.2f),
+				ScoredResource("gkw_fo12.weapon","weapon",0.2f),
+				ScoredResource("gkw_vp1915.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_fp6.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_cms.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_sl8.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_negev.weapon", "weapon", 0.2f)
+
+			},
+			{
+				ScoredResource("core_mask.carry_item", "carry_item", 1.0f),
+				ScoredResource("", "carry_item", 99.0f)
+			}
+		};
+
+		processRewardPasses(rewardPasses);
+
+		GiftItemDeliveryRandomRewarder@ rewarder = GiftItemDeliveryRandomRewarder(m_metagame, rewardPasses);
+
+		m_itemDeliveryOrganizer.addObjective(
+			ItemDeliveryObjective(m_metagame, 0, deliveryList, m_itemDeliveryOrganizer, null, "", "", "", -1 /* loop */, rewarder)
+		);
+	}
+	protected void setupDollCrafting_HG() {
+		array<Resource@> deliveryList = {
+			 Resource("dollcraft_hg.carry_item", "carry_item")
+		};
+
+		array<array<ScoredResource@>> rewardPasses = {
+			{	
+				ScoredResource("gkw_c96.weapon", "weapon", 0.6f),
+				ScoredResource("gkw_gsh18.weapon", "weapon", 0.6f),
+				ScoredResource("gkw_m9.weapon", "weapon", 0.6f),
+				ScoredResource("gkw_p226.weapon", "weapon", 0.6f),
+
+				ScoredResource("gkw_cz100.weapon", "weapon", 0.3f),
+				ScoredResource("gkw_mk23.weapon", "weapon", 0.3f),
+				ScoredResource("gkw_mp446.weapon", "weapon", 0.3f),
+				ScoredResource("gkw_p7.weapon", "weapon", 0.3f),
+				ScoredResource("gkw_thunder.weapon", "weapon", 0.3f),
+
+				ScoredResource("gkw_c93.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_python.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_contender.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_cz75.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_nz75.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_desert_eagle.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_grizzly.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_hp35.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_hs2000.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_kolibri.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_m950a.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_p22.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_pa15.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_webley.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_welrod.weapon", "weapon", 0.2f)
 
 			}
 		};
@@ -1224,5 +1201,248 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 			ItemDeliveryObjective(m_metagame, 0, deliveryList, m_itemDeliveryOrganizer, null, "", "", "", -1 /* loop */, rewarder)
 		);
 	}
-	
+	protected void setupDollCrafting_SMG() {
+		array<Resource@> deliveryList = {
+			 Resource("dollcraft_smg.carry_item", "carry_item")
+		};
+
+		array<array<ScoredResource@>> rewardPasses = {
+			{	
+				ScoredResource("gkw_pps43.weapon", "weapon", 0.6f),
+				ScoredResource("gkw_uzi.weapon", "weapon", 0.6f),
+				// ScoredResource("gkw_t-cms.weapon", "weapon", 0.6f),
+
+				ScoredResource("gkw_honeybadger.weapon", "weapon", 0.3f),
+				ScoredResource("gkw_klin.weapon", "weapon", 0.3f),
+				ScoredResource("gkw_mp5.weapon", "weapon", 0.3f),
+				ScoredResource("gkw_pp19.weapon", "weapon", 0.3f),
+				ScoredResource("gkw_pp90.weapon", "weapon", 0.3f),
+				ScoredResource("gkw_ump40.weapon", "weapon", 0.3f),
+				ScoredResource("gkw_ump45.weapon", "weapon", 0.3f),
+				ScoredResource("gkw_ump9.weapon", "weapon", 0.3f),
+
+				ScoredResource("gkw_g36c.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_ak74u.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_js9.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_kp31.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_mp7.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_p90.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_vp1915.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_pm06.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_sp9.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_thompson.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_type100.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_vector.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_x95.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_cms.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_sr3mp.weapon", "weapon", 0.2f)
+
+			}
+		};
+
+		processRewardPasses(rewardPasses);
+
+		GiftItemDeliveryRandomRewarder@ rewarder = GiftItemDeliveryRandomRewarder(m_metagame, rewardPasses);
+
+		m_itemDeliveryOrganizer.addObjective(
+			ItemDeliveryObjective(m_metagame, 0, deliveryList, m_itemDeliveryOrganizer, null, "", "", "", -1 /* loop */, rewarder)
+		);
+	}	
+	protected void setupDollCrafting_AR() {
+		array<Resource@> deliveryList = {
+			 Resource("dollcraft_ar.carry_item", "carry_item")
+		};
+
+		array<array<ScoredResource@>> rewardPasses = {
+			{	
+				ScoredResource("gkw_arx160.weapon", "weapon", 0.6f),
+				ScoredResource("gkw_ash127.weapon", "weapon", 0.6f),
+
+				ScoredResource("gkw_9a91.weapon", "weapon", 0.3f),
+				ScoredResource("gkw_ak74m.weapon", "weapon", 0.3f),
+				ScoredResource("gkw_apc556.weapon", "weapon", 0.3f),
+				ScoredResource("gkw_asval.weapon", "weapon", 0.3f),
+				ScoredResource("gkw_famas.weapon", "weapon", 0.3f),
+				ScoredResource("gkw_fara83.weapon", "weapon", 0.3f),
+				ScoredResource("gkw_fx05.weapon", "weapon", 0.3f),
+				ScoredResource("gkw_g36.weapon", "weapon", 0.3f),
+				ScoredResource("gkw_ribeyrolles.weapon", "weapon", 0.3f),
+				ScoredResource("gkw_tar21.weapon", "weapon", 0.3f),
+				ScoredResource("gkw_xm8.weapon", "weapon", 0.3f),
+
+				ScoredResource("gkw_type89.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_QBZ95.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_QBZ97.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_acr.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_ak12.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_ak15.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_akalfa.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_art556.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_fal.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_g11.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_g41.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_hk416.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_mdr.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_ots14.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_qbz191.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_r5.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_rfb.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_sacr.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_sigmcx.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_sig556.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_t91.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_tkb408.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_vhs.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_zasm21.weapon","weapon",0.2f)
+
+			}
+		};
+
+		processRewardPasses(rewardPasses);
+
+		GiftItemDeliveryRandomRewarder@ rewarder = GiftItemDeliveryRandomRewarder(m_metagame, rewardPasses);
+
+		m_itemDeliveryOrganizer.addObjective(
+			ItemDeliveryObjective(m_metagame, 0, deliveryList, m_itemDeliveryOrganizer, null, "", "", "", -1 /* loop */, rewarder)
+		);
+	}
+	protected void setupDollCrafting_RF() {
+		array<Resource@> deliveryList = {
+			 Resource("dollcraft_rf.carry_item", "carry_item")
+		};
+
+		array<array<ScoredResource@>> rewardPasses = {
+			{	
+				ScoredResource("gkw_c14.weapon", "weapon", 0.6f),
+				ScoredResource("gkw_gm6.weapon", "weapon", 0.6f),
+				ScoredResource("gkw_m1.weapon", "weapon", 0.6f),
+				ScoredResource("gkw_m1a1.weapon", "weapon", 0.6f),
+				ScoredResource("gkw_m21.weapon", "weapon", 0.6f),
+				ScoredResource("gkw_supersass.weapon", "weapon", 0.6f),
+
+				ScoredResource("gkw_m1908.weapon", "weapon", 0.3f),
+				ScoredResource("gkw_4type.weapon", "weapon", 0.3f),
+				ScoredResource("gkw_g28.weapon", "weapon", 0.3f),
+				ScoredResource("gkw_g36.weapon", "weapon", 0.3f),
+				ScoredResource("gkw_k31.weapon", "weapon", 0.3f),
+				ScoredResource("gkw_ksvk.weapon", "weapon", 0.3f),
+				ScoredResource("gkw_m1903.weapon", "weapon", 0.3f),
+				ScoredResource("gkw_psg1.weapon", "weapon", 0.3f),
+				ScoredResource("gkw_svd.weapon", "weapon", 0.3f),
+				ScoredResource("gkw_xm3.weapon", "weapon", 0.3f),
+
+				ScoredResource("gkw_dsr50.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_hs50.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_iws2000.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_js05.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_98k.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_mlemk1.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_carcano1891.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_m200.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_m82a1.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_carcano1938.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_m99.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_ntw20.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_r93.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_srs.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_svch.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_tac50.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_vsk94.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_wa2000.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_sl8.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_ballista.weapon", "weapon", 0.2f)
+
+			}
+		};
+
+		processRewardPasses(rewardPasses);
+
+		GiftItemDeliveryRandomRewarder@ rewarder = GiftItemDeliveryRandomRewarder(m_metagame, rewardPasses);
+
+		m_itemDeliveryOrganizer.addObjective(
+			ItemDeliveryObjective(m_metagame, 0, deliveryList, m_itemDeliveryOrganizer, null, "", "", "", -1 /* loop */, rewarder)
+		);
+	}
+	protected void setupDollCrafting_SG() {
+		array<Resource@> deliveryList = {
+			 Resource("dollcraft_sg.carry_item", "carry_item")
+		};
+
+		array<array<ScoredResource@>> rewardPasses = {
+			{	
+				ScoredResource("gkw_ks23.weapon", "weapon", 0.6f),
+
+				ScoredResource("gkw_liberator.weapon", "weapon", 0.3f),
+				ScoredResource("gkw_m1014.weapon", "weapon", 0.3f),
+				ScoredResource("gkw_m1897.weapon", "weapon", 0.3f),
+				ScoredResource("gkw_supershorty.weapon", "weapon", 0.3f),
+				ScoredResource("gkw_usas12.weapon", "weapon", 0.3f),
+				ScoredResource("gkw_spas12.weapon", "weapon", 0.3f),
+				ScoredResource("gkw_m37.weapon", "weapon", 0.3f),
+
+				ScoredResource("gkw_aa12.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_caws.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_dp12.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_ksg.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_m870.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_saiga12.weapon","weapon",0.2f),
+				ScoredResource("gkw_fo12.weapon","weapon",0.2f),
+				ScoredResource("gkw_sat8.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_fp6.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_ltlx7000.weapon","weapon",0.2f)
+
+			}
+		};
+
+		processRewardPasses(rewardPasses);
+
+		GiftItemDeliveryRandomRewarder@ rewarder = GiftItemDeliveryRandomRewarder(m_metagame, rewardPasses);
+
+		m_itemDeliveryOrganizer.addObjective(
+			ItemDeliveryObjective(m_metagame, 0, deliveryList, m_itemDeliveryOrganizer, null, "", "", "", -1 /* loop */, rewarder)
+		);
+	}
+	protected void setupDollCrafting_MG() {
+		array<Resource@> deliveryList = {
+			 Resource("dollcraft_mg.carry_item", "carry_item")
+		};
+
+		array<array<ScoredResource@>> rewardPasses = {
+			{	
+				ScoredResource("gkw_m249saw.weapon", "weapon", 0.6f),
+				ScoredResource("gkw_mg42.weapon", "weapon", 0.6f),
+				ScoredResource("gkw_rpd.weapon", "weapon", 0.6f),
+				ScoredResource("gkw_m2hb.weapon", "weapon", 0.6f),
+				// ScoredResource("gkw_hk21.weapon", "weapon", 0.6f),
+
+				ScoredResource("gkw_aek999.weapon", "weapon", 0.3f),
+				ScoredResource("gkw_ameli.weapon", "weapon", 0.3f),
+				ScoredResource("gkw_m60.weapon", "weapon", 0.3f),
+				// ScoredResource("gkw_mg3.weapon", "weapon", 0.3f),
+				ScoredResource("gkw_mk46.weapon", "weapon", 0.3f),
+				ScoredResource("gkw_mk48.weapon", "weapon", 0.3f),
+				ScoredResource("gkw_pk.weapon", "weapon", 0.3f),
+
+				ScoredResource("gkw_kord.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_lewis.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_mg5.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_qjy88.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_rpk16.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_pkp.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_mg4.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_mg338.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_rpk203.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_negev.weapon", "weapon", 0.2f)
+
+			}
+		};
+
+		processRewardPasses(rewardPasses);
+
+		GiftItemDeliveryRandomRewarder@ rewarder = GiftItemDeliveryRandomRewarder(m_metagame, rewardPasses);
+
+		m_itemDeliveryOrganizer.addObjective(
+			ItemDeliveryObjective(m_metagame, 0, deliveryList, m_itemDeliveryOrganizer, null, "", "", "", -1 /* loop */, rewarder)
+		);
+	}	
 }

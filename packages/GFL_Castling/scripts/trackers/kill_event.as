@@ -6,6 +6,7 @@
 #include "query_helpers2.as"
 #include "gamemode.as"
 #include "GFLhelpers.as"
+#include "commandskill.as"
 //Originally created by NetherCrow
 //11:39:11: SCRIPT:  received: TagName=character_kill key= method_hint=stab     
 //TagName=killer block=12 14 dead=0 faction_id=0 id=11 leader=1 name=Nikita Sokol player_id=0 position=428.551 4.3014 499.254 rp=60 soldier_group_name=default squad_size=0 wounded=0 xp=0   
@@ -70,6 +71,8 @@ class kill_event : Tracker {
         {"ff_excutioner_2.weapon",3},
         {"ff_parw_alina.weapon",2},
         {"ff_gager_1.weapon",3},
+        {"gkw_type100_skill.weapon",3},
+        {"gkw_type100_4004_skill.weapon",3},
 
         // 近战定位HG
         {"gkw_m1911_mod3.weapon",2},
@@ -96,7 +99,7 @@ class kill_event : Tracker {
         {"gkw_m3.weapon",2},
         {"gkw_type100.weapon",2},
         {"gkw_type100_1.weapon",2},
-        {"gkw_type100_skill.weapon",2},
+        {"gkw_type100_4004.weapon",2},
         {"gkw_sp9.weapon",2},
         {"gkw_vector.weapon",2},
         {"gkw_pm06.weapon",2},
@@ -149,8 +152,8 @@ class kill_event : Tracker {
         {"gkw_type79.weapon",3},
         {"gkw_ro635.weapon",3},
         {"gkw_ro635mod3.weapon",3},
-        {"gkw_pdw.weapon",3},
-        {"gkw_pdw_4005.weapon",3},
+        {"gkw_honeybadger.weapon",3},
+        {"gkw_honeybadger_4005.weapon",3},
         {"gkw_p90.weapon",3},
         {"gkw_p90_2802.weapon",3},
         {"gkw_x95.weapon",3},
@@ -187,6 +190,26 @@ class kill_event : Tracker {
             int characterId = killer.getIntAttribute("id");
             string VestKey = getDeadPlayerEquipmentKey(m_metagame,targetId,0);
             string KillerWeaponKey = getDeadPlayerEquipmentKey(m_metagame,characterId,0);
+            string killway= event.getStringAttribute("method_hint");
+            if(KillerWeaponKey=="gkw_ppkmod3.weapon"){
+                // _log("PPK skill " + killway);
+                int i = findSkillIndex(characterId,"PPKMOD3");
+                if(i >=0){
+                    SkillArray[i].m_time-=2.0;
+                    if (killway=="hit"){
+                        int j = findKillCountIndex(characterId);
+                        if(j>=0){
+                            KillCountArray[j].add();
+                            _log("PPK kill " + KillCountArray[j].m_killnum);
+                        }
+                        else{
+                            KillCountArray.insertLast(kill_count(characterId,1));
+                        }
+                    }
+                }
+            }
+        
+            
 
             switch(int(healOnKillWeaponList[KillerWeaponKey]))
             {
@@ -297,4 +320,44 @@ class HealOnKill_tracker{
         current_kills++;
         m_numtime= timeaddafterkill/0.2;
 	}
+}
+
+class kill_count{
+    int m_characterId;
+    int m_killnum=0;
+    kill_count(int a,int b){
+        m_characterId=a;
+        m_killnum=b;
+    }
+
+    void add(){
+        m_killnum++;
+    }
+}
+
+int findSkillIndex(int cId,string key){
+    for (uint i=0;i<SkillArray.length();i++){
+        if (SkillArray[i].m_character_id==cId && SkillArray[i].m_weapontype==key) {
+            return i;
+        }
+    }
+    return -1;
+}
+
+int findSkillIndex(int cId){
+    for (uint i=0;i<SkillArray.length();i++){
+        if (SkillArray[i].m_character_id==cId) {
+            return i;
+        }
+    }
+    return -1;
+}
+
+int findKillCountIndex(int cId){
+    for (uint i=0;i<KillCountArray.length();i++){
+        if (KillCountArray[i].m_characterId==cId) {
+            return i;
+        }
+    }
+    return -1;
 }

@@ -2,57 +2,12 @@
 <weapons>
 <weapon file="deployable.base_weapon" key="deployable_hg_store.weapon" radius="0.25" >
     <specification
-	name="IOP Supply-HG T-Doll"
+	name="IOP Supply Chesk Deploy"
     spawn_instance_class="vehicle" 
-    spawn_instance_key="hg_store" 
+    spawn_instance_key="gk_store" 
 	/>
     <model mesh_filename="barrier_item.mesh" texture_filename="hg_store.png" />
     <hud_icon filename="HG.png" />
-</weapon>
-<weapon file="deployable.base_weapon" key="deployable_smg_store.weapon" radius="0.25" >
-    <specification
-	name="IOP Supply-SMG T-Doll"
-    spawn_instance_class="vehicle" 
-    spawn_instance_key="smg_store" 
-	/>
-    <model mesh_filename="barrier_item.mesh" texture_filename="smg_store.png" />
-    <hud_icon filename="SMG.png" />
-</weapon>
-<weapon file="deployable.base_weapon" key="deployable_ar_store.weapon" radius="0.25" >
-    <specification
-	name="IOP Supply-AR T-Doll"
-    spawn_instance_class="vehicle" 
-    spawn_instance_key="ar_store" 
-	/>
-    <model mesh_filename="barrier_item.mesh" texture_filename="ar_store.png" />
-    <hud_icon filename="AR.png" />
-</weapon>
-<weapon file="deployable.base_weapon" key="deployable_rf_store.weapon" radius="0.25" >
-    <specification
-	name="IOP Supply-RF T-Doll"
-    spawn_instance_class="vehicle" 
-    spawn_instance_key="rf_store" 
-	/>
-    <model mesh_filename="barrier_item.mesh" texture_filename="rf_store.png" />
-    <hud_icon filename="RF.png" />
-</weapon>
-<weapon file="deployable.base_weapon" key="deployable_mg_store.weapon" radius="0.25" >
-    <specification
-	name="IOP Supply-MG T-Doll"
-    spawn_instance_class="vehicle" 
-    spawn_instance_key="mg_store" 
-	/>
-    <model mesh_filename="barrier_item.mesh" texture_filename="mg_store.png" />
-    <hud_icon filename="MG.png" />
-</weapon>
-<weapon file="deployable.base_weapon" key="deployable_sg_store.weapon" radius="0.25" >
-    <specification
-	name="IOP Supply-SG T-Doll"
-    spawn_instance_class="vehicle" 
-    spawn_instance_key="sg_store" 
-	/>
-    <model mesh_filename="barrier_item.mesh" texture_filename="sg_store.png" />
-    <hud_icon filename="SG.png" />
 </weapon>
 <weapon file="deployable.base_weapon" key="deployable_hvy_store.weapon" radius="0.25" >
     <specification
