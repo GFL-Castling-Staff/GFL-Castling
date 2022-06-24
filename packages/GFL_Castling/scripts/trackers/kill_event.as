@@ -71,6 +71,8 @@ class kill_event : Tracker {
         {"ff_excutioner_2.weapon",3},
         {"ff_parw_alina.weapon",2},
         {"ff_gager_1.weapon",3},
+        {"gkw_type100_skill.weapon",3},
+        {"gkw_type100_4004_skill.weapon",3},
 
         // 近战定位HG
         {"gkw_m1911_mod3.weapon",2},
@@ -97,7 +99,7 @@ class kill_event : Tracker {
         {"gkw_m3.weapon",2},
         {"gkw_type100.weapon",2},
         {"gkw_type100_1.weapon",2},
-        {"gkw_type100_skill.weapon",2},
+        {"gkw_type100_4004.weapon",2},
         {"gkw_sp9.weapon",2},
         {"gkw_vector.weapon",2},
         {"gkw_pm06.weapon",2},

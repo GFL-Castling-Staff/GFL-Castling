@@ -18,7 +18,7 @@
 		sustained_fire_grow_step="0.2" 
         stab_enabled="1"
         stab_range="3.0" />
-    <commonness value="0.2" in_stock="0" can_respawn_with="1" />
+    <commonness value="0" in_stock="0" can_respawn_with="1" />
     <inventory encumbrance="2.0" buy_price="30.0" sell_price="30.0" />
     <capacity value="1" source="rank" source_value="0.0" />
     <next_in_chain key="gkw_type100_4004_skill.weapon" share_ammo="1" />
@@ -45,7 +45,7 @@
     <sound key="stab" fileref="grenade_throw1.wav" pitch_variety="0.05" volume="0.8"/>
     <sound class="impact" fileref="rifle_drop.wav" volume="1"/>
     <model filename="gkw_smg_type100_4004.xml" />
-    <hud_icon filename="gkw_type100.png" />
+    <hud_icon filename="gkw_type100_4004.png" />
     <animation state_key="reload" animation_key="reloading, magazine rifle 0.9" />
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet.projectile">
@@ -116,7 +116,7 @@
     <sound key="stab" fileref="grenade_throw1.wav" pitch_variety="0.05" volume="0.8"/>
     <sound class="impact" fileref="rifle_drop.wav" volume="1"/>
     <model filename="gkw_smg_type100_4004.xml" />
-    <hud_icon filename="gkw_type100.png" />
+    <hud_icon filename="gkw_type100_4004.png" />
     <animation state_key="reload" animation_key="reloading, magazine rifle 0.9" />
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet.projectile">
