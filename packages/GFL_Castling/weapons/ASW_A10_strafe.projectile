@@ -7,7 +7,14 @@
     <effect class="result" key="terrain" ref="Shine" lighting="0" />
     <effect class="result" key="terrain" ref="Godray" lighting="0" />
     <effect class="result" key="static_object" copy="terrain"/>
-    <effect class="result" key="vehicle" copy="terrain"/>
+    <effect class="result" key="terrain" ref="SmokeTop" post_processing="1" />
+    <effect class="result" key="terrain" ref="Smoke" post_processing="1" />
+    <effect class="result" key="terrain" ref="ShadowSmoke" shadow="1" />    
+	<effect class="result" key="vehicle" copy="terrain"/>
+
+    <effect class="result" type="splat_map" surface_tag="" size="3.0" atlas_index="0" layer="1" />
+    <effect class="result" type="splat_map" surface_tag="" size="5.0" atlas_index="4" layer="0" />
+    <effect class="result" type="splat_map" surface_tag="" size="6.0" atlas_index="0" layer="2" additive="0" /> <!-- remove top snow everywhere -->
     <model mesh_filename="40mm.mesh" texture_filename="40mm.png" />
     <trigger class="impact" />
     <rotation class="motion" />

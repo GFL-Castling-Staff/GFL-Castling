@@ -86,7 +86,7 @@ class GFLairstrike : Tracker {
                         Vector3 pos_offset = strike_vector.add(getMultiplicationVector(strike_vector,Vector3(-40,0,-40)));  
                         pos_offset = pos_offset.add(Vector3(0,40,0));
                         //扫射终点的起点与终点（就生成弹头的终点的起始位置与终止位置）
-                        Vector3 c_pos = start_pos.add(getMultiplicationVector(strike_vector,Vector3(-10,0,-10)));
+                        Vector3 c_pos = start_pos.add(getMultiplicationVector(strike_vector,Vector3(-15,0,-15)));
                         Vector3 s_pos = end_pos.add(getMultiplicationVector(strike_vector,Vector3(10,0,10)));
                         //依据扫射位置偏移单位距离而设置的扫射次数
                         int strike_time = int(getAimUnitDistance(1,c_pos,s_pos)/strike_didis);
