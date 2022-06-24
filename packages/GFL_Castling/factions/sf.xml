@@ -815,10 +815,10 @@
 			<sound key="throw" fileref="" pitch_variety="0.001" volume="0.8" />
 		</character>
 		<model filename="sfd_m16a1.xml" />
-		<ai filename="sfm16a1.ai" />
+		<ai filename="sf_m16a1.ai" />
 		<resources clear_vehicles="1" clear_weapons="1" clear_calls="1" clear_carry_items="1">
 			<weapon key="sfw_m16a1.weapon" enabled="1"/>
-			<projectile key="stun_grenade.projectile"/>
+			<projectile key="hand_m16a1_call.projectile"/>
 			<carry_item key="sf_m16a1.carry_item" enabled="1" />
 			<call file="sf_m16a1.call" />
 		</resources>
@@ -827,7 +827,7 @@
 		</attribute_config>
 
 		<attribute_config class="rp">
-			<attribute weight="1.0" min="4000.0" max="8000.0" />
+			<attribute weight="1.0" min="40000.0" max="80000.0" />
 		</attribute_config>
 	</soldier>
 
