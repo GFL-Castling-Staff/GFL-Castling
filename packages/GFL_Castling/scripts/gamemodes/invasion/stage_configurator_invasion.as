@@ -156,6 +156,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 	// ------------------------------------------------------------------------------------------------
 	protected void setupNormalStages() {
+		addStage(setupStage109());		  // chapter2 by diling
 		addStage(setupStage107());		  // chapter1 by diling
 		addStage(setupStage8());          // map8
 		addStage(setupStage2());          // map4 c
@@ -455,7 +456,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		}
 		{
 			Faction f(getFactionConfigs()[1], createCommanderAiCommand(1,0.4,0.2));
-			f.m_overCapacity = 80;                                            
+			f.m_overCapacity = 50;                                            
 			f.m_capacityOffset = 20;                                           
 			stage.m_factions.insertLast(f); 
 		}
@@ -565,6 +566,40 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 		return stage;
 	} 
+	protected Stage@ setupStage109(){
+		Stage@ stage = createStage();
+		stage.m_mapInfo.m_name = "Echo";
+		stage.m_mapInfo.m_path = "media/packages/GFLC_Map/maps/Chapter02";
+		stage.m_mapInfo.m_id = "chapter02";
+		stage.addTracker(PeacefulLastBase(m_metagame, 0));
+		stage.addTracker(CommsCapacityHandler(m_metagame));
+		stage.m_maxSoldiers = 180;
+		stage.m_playerAiCompensation = 8;                                     
+		stage.m_playerAiReduction = 2;                                         
+		stage.m_minRandomCrates = 2; 
+		stage.m_maxRandomCrates = 6;
+		{
+			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0));
+			stage.m_factions.insertLast(f);
+		}
+		{
+			Faction f(getFactionConfigs()[1], createCommanderAiCommand(1,0.4,0.2));
+			f.m_overCapacity = 50;                                            
+			f.m_capacityOffset = 20;                                           
+			stage.m_factions.insertLast(f); 
+		}
+		{
+			XmlElement command("command");
+			command.setStringAttribute("class", "faction_resources");
+			command.setIntAttribute("faction_id", 0);
+			addFactionResourceElements(command, "vehicle", array<string> = {"water_tower.vehicle","radar_tower.vehicle"}, false);
+
+			stage.m_extraCommands.insertLast(command);
+		}
+		stage.m_primaryObjective = "capture";
+		setDefaultAttackBreakTimes(stage);
+		return stage;
+	}	
 	protected Stage@ setupStage1() {
 		Stage@ stage = createStage();
 		stage.m_mapInfo.m_name = "Keepsake Bay";
