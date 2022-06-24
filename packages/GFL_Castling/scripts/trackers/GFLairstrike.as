@@ -84,7 +84,7 @@ class GFLairstrike : Tracker {
                         float strike_didis = 5.0;
                         //扫射起点 从弹头终点指向弹头起点的位置基础偏移 
                         Vector3 pos_offset = strike_vector.add(getMultiplicationVector(strike_vector,Vector3(-40,0,-40)));  
-                        pos_offset = pos_offset.add(Vector3(0,40,0));
+                        pos_offset = pos_offset.add(Vector3(0,30,0));
                         //扫射终点的起点与终点（就生成弹头的终点的起始位置与终止位置）
                         Vector3 c_pos = start_pos.add(getMultiplicationVector(strike_vector,Vector3(-15,0,-15)));
                         Vector3 s_pos = end_pos.add(getMultiplicationVector(strike_vector,Vector3(10,0,10)));
@@ -95,6 +95,10 @@ class GFLairstrike : Tracker {
                         Vector3 endPos = c_pos;
                         //最终弹头随机程度
                         float strike_rand = 3.0;
+
+                        CreateDirectProjectile(m_metagame,startPos.add(getMultiplicationVector(strike_vector,Vector3(-40,0,-40))),s_pos.add(Vector3(0,20,0)),"a10_warthog_shadow.projectile",cid,fid,70);                                         
+                        startPos = startPos.add(getMultiplicationVector(strike_vector,Vector3(-30,0,-30)));
+                                                
                         for(int i=0;i<=strike_time;i++){
                             //水平偏移
                             startPos = startPos.add(getMultiplicationVector(strike_vector,Vector3(strike_didis,0,strike_didis)));
@@ -109,7 +113,16 @@ class GFLairstrike : Tracker {
                                 
                                 CreateDirectProjectile(m_metagame,startPos,endPos.add(Vector3(rand_x,0,rand_y)),"ASW_A10_strafe.projectile",cid,fid,180);           
                             }
-                        }                      
+                        }                               
+                        // array<string> Voice={
+                        //     "mab38mod3_skilll1.wav",
+                        //     "mab38mod3_skilll2.wav",
+                        //     "mab38mod3_skilll3.wav",
+                        //     "mab38mod3_skilll4.wav",
+                        //     "mab38mod3_skilll5.wav"                        
+                        // };
+                        // playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);           
+                        //CreateDirectProjectile(m_metagame,c_pos.add(Vector3(0,30,0)),s_pos.add(Vector3(0,30,0)),"a10_warthog_shadow.projectile",cid,fid,100);  
                         Airstrike_strafe.removeAt(a);
                         break;
                     }
