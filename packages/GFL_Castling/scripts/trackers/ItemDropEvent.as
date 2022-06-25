@@ -174,11 +174,11 @@ class ItemDropEvent : Tracker {
                     int cId=player.getIntAttribute("character_id");
                     if(m_craftQueue[a].m_typekey=="mod3"){
                         addItemInBackpack(m_metagame,cId,"carry_item","firecontrol.carry_item");
-                        playPrivateSound(m_metagame,"sfx_returnback.wav",senderId);
+                        playPrivateSound(m_metagame,"sfx_returnback.wav",pId);
                     }
                     if(m_craftQueue[a].m_typekey=="truecore"){
                         addItemInBackpack(m_metagame,cId,"carry_item","core_mask.carry_item");
-                        playPrivateSound(m_metagame,"sfx_returnback.wav",senderId);
+                        playPrivateSound(m_metagame,"sfx_returnback.wav",pId);
                     }                    
                     m_craftQueue.removeAt(a);
                 }
