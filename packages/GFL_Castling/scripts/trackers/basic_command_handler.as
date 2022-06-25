@@ -612,7 +612,7 @@ class BasicCommandHandler : Tracker {
 			spawnInstanceNearPlayer(senderId, "complete_box.carry_item", "carry_item", 0);
 			spawnInstanceNearPlayer(senderId, "complete_box_singularity.carry_item","carry_item",0);
 		} else if (checkCommand(message, "gb2")) {
-			spawnInstanceNearPlayer(senderId, "gift_box_2.carry_item", "carry_item", 0);
+			spawnInstanceNearPlayer(senderId, "core_mask.carry_item", "carry_item", 0);
 		} else if (checkCommand(message, "gb3")) {
 			spawnInstanceNearPlayer(senderId, "firecontrol.carry_item", "carry_item", 0);        
 			spawnInstanceNearPlayer(senderId, "firecontrol.carry_item", "carry_item", 0);        

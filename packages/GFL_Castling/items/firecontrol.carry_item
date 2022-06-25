@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <carry_item file="base_valuable.carry_item" name="Fire Control Component" key="firecontrol.carry_item">
     <hud_icon filename="hud_firecontrol.png" />
-    <inventory encumbrance="0.0" buy_price="500000" sell_price="0"/>
+    <inventory encumbrance="0.0" buy_price="500000" sell_price="-1000.0"/>
 
     <model mesh_filename="fire_control.xml"/>
 

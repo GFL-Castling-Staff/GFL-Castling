@@ -124,6 +124,16 @@
 	<comment key="ServerQuickChatAlert004" text="&#37;name向您发出警告--请不要恶意扰乱游戏秩序"/>
 	<comment key="skillcooldownhint" text="技能冷却还有&#37;time秒"/>
 	<comment key="skillcooldowndone" text="技能已就绪"/>
+	<comment key="onlyonequeue" text="您最多只能同时进行一个人形的心智升级--多余的火控核心已退还"/>
+	<comment key="digimindupdate" text="请将您需要心智升级的人形放入军械库，IOP将会处理后续的升级与改装"/>
+	<comment key="digimindupdatefailed" text="您提交的物品并不能进行心智升级，已将其与火控核心均退还给您"/>
+	<comment key="digimindupdatesuccess" text="已完成人形&#37;doll_name的心智升级进程，为了更新世界的锋芒！"/>
+	<comment key="onlyonequeue_mask" text="您最多只能同时进行一项真核面具的兑换--多余的物品已退还"/>
+	<comment key="truemask" text="请输入(/mask 人形图鉴编号)，IOP会将对应人形发送到您的背包中"/>
+	<comment key="truemask_failed" text="兑换失败，IOP未能找到对应编号的人形，已退回您的真核面具"/>
+	<comment key="truemask_success" text="真核面具兑换成功，战术人形&#37;doll_name向您报道！"/>
+	<comment key="quest_timeout" text="您的请求响应超时，IOP已将物品退回给您，请重新提交您的订单"/>
+
 	<!-- 快捷喊话——警告用语 -->
 	<comment key="quickchat1" text="谢谢！"/>
 	<comment key="quickchat1d" text="&#37;name>> 谢谢！"/>
