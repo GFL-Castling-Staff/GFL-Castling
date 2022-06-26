@@ -98,6 +98,10 @@ class GFLairstrike : Tracker {
 
                         CreateDirectProjectile(m_metagame,startPos.add(getMultiplicationVector(strike_vector,Vector3(-40,0,-40))),s_pos.add(Vector3(0,20,0)),"a10_warthog_shadow.projectile",cid,fid,70);                                         
                         startPos = startPos.add(getMultiplicationVector(strike_vector,Vector3(-30,0,-30)));
+
+                        array<string> Voice={
+                        "a10_fire_FromWARTHUNDER.wav",
+                        };
                                                 
                         for(int i=0;i<=strike_time;i++){
                             //水平偏移
@@ -113,6 +117,8 @@ class GFLairstrike : Tracker {
                                 
                                 CreateDirectProjectile(m_metagame,startPos,endPos.add(Vector3(rand_x,0,rand_y)),"ASW_A10_strafe.projectile",cid,fid,180);           
                             }
+                            // playRandomSoundArray(m_metagame,Voice,fid,endPos.toString(),2);
+                            
                         }                               
                         // array<string> Voice={
                         //     "mab38mod3_skilll1.wav",

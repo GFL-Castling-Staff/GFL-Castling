@@ -34,7 +34,7 @@
         <sound key="magazine_in" fileref="mg_clip_in.wav" />
         <sound key="cycle" fileref="rifle_chamber.wav" />
         <sound class="impact" fileref="rifle_drop.wav" />
-        <model filename="gkw_cb_Yurine_Hanazono_from_dusk.xml" />
+        <model filename="gkw_cb_yurine_hanazono_from_dusk.xml" />
         <hud_icon filename="gkw_yurine.png" />
         <commonness value="0" can_respawn_with="1" in_stock="0" />
         <inventory price="200.0"/>
@@ -48,7 +48,7 @@
     <weapon key="gkw_yurine_1.weapon" on_ground_up="0 0 1" time_to_live_out_in_the_open="60.0" drop_count_factor_on_death="0.0" >
         <tag name="melee" />
         <specification 
-        retrigger_time="0.07"
+        retrigger_time="0.1"
         magazine_size="-1"
         accuracy_factor="0.95"
         sustained_fire_grow_step="0.0"
@@ -67,8 +67,13 @@
         stab_range="2.5"
         use_basic_muzzle_smoke_effect="0"/>
         <next_in_chain key="gkw_yurine.weapon" share_ammo="0" />
+		    
+		<animation state_key="recoil" 		animation_key="zweihander slash 1" />
+		<animation state_key="recoil" 		animation_key="zweihander slash 2" />
+		<animation state_key="recoil" 		animation_key="zweihander slash 3" /> 
 
-        <animation state_key="recoil" 	animation_key="chainsaw cut" />
+		<animation state_key="recoil"	animation_key="melee, saber" />
+		<!-- <animation state_key="recoil" stance_key="prone" animation_key="melee, prone saber" /> -->
         <animation state_key="hold" animation_key="hold, hip fire" />
         <animation state_key="crouching" animation_key="crouch still calm" />
         <animation state_key="crouch_moving" animation_key="crouching forwards, hip fire" />
@@ -82,6 +87,7 @@
         <animation state_key="running" animation_key="running, chainsaw" />
         <animation state_key="prone_still" animation_key="prone, without weapon, 63" />
         <animation state_key="stabbing" animation_key="stabbing, bat" />
+		
         <model filename="chainsaw.xml" />
         <sound key="stab" fileref="chainsaw_wave.wav" pitch_variety="0.05" volume="0.3" />
         <sound key="stab_hit" fileref="flesh1.wav" pitch_variety="0.3" volume="2.0" />

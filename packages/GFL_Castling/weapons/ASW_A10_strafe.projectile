@@ -18,4 +18,9 @@
     <model mesh_filename="40mm.mesh" texture_filename="40mm.png" />
     <trigger class="impact" />
     <rotation class="motion" />
+    <sound class="result" key="other" fileref="a10_fire_FromWARTHUNDER.wav" volume="3.6" />
+    <sound class="result" key="terrain" copy="other" />
+    <sound class="result" key="static_object" copy="other" />
+    <sound class="result" key="vehicle" copy="other" />
+    <sound class="result" key="character" copy="other" />
 </projectile>
