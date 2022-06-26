@@ -200,7 +200,7 @@ class kill_event : Tracker {
                         int j = findKillCountIndex(characterId);
                         if(j>=0){
                             KillCountArray[j].add();
-                            _log("PPK kill " + KillCountArray[j].m_killnum);
+                            // _log("PPK kill " + KillCountArray[j].m_killnum);
                         }
                         else{
                             KillCountArray.insertLast(kill_count(characterId,1));
