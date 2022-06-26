@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projectile class="grenade" name="" slot="1" pulldown_in_air="100" key="m4a1mod3_skill_s.projectile">
     <tag name="rocket"/>
-    <result class="blast" radius="5.5" damage="8.5" push="0.2" decal="1" faction_compare="not_equal"/>
+    <result class="blast" radius="5.5" damage="8.5" push="0.4" decal="1" faction_compare="not_equal"/>
     <trigger class="impact" />
     <rotation class="motion" />
     <model  />
@@ -48,6 +48,6 @@
     <effect class="result" key="vehicle" copy="terrain" />     
     <effect class="result" key="character" copy="terrain" />
 
-    <effect class="activated" ref="Propulsion" />
-    <trail probability="1.0" key="bullet_new" />
+    <effect class="activated" ref="Propulsion_rocket" />
+    <trail probability="1.0" key="laser_jupiter"/>
 </projectile>

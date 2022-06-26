@@ -1279,10 +1279,7 @@ class CommandSkill : Tracker {
                     playAnimationKey(m_metagame,characterId,"throwing, upside",true,true);
                     c_pos=c_pos.add(Vector3(0,1,0));
                     if(mod3){
-                        if(ExistQueue){
-                            return;
-                        }
-                        else{
+                        if(!ExistQueue){
                             array<string> Voice={
                                 "PPsh41Mod_SKILL1_JP.wav",
                                 "PPsh41Mod_SKILL2_JP.wav",
@@ -1308,7 +1305,7 @@ class CommandSkill : Tracker {
                     }
                     else{
                         CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"grenade_ppsh41.projectile",characterId,factionid,50.0,5.0);
-                    }                    
+                    }
                 }
             }
         }
