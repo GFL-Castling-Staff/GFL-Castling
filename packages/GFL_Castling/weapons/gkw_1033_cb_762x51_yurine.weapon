@@ -48,7 +48,7 @@
     <weapon key="gkw_yurine_1.weapon" on_ground_up="0 0 1" time_to_live_out_in_the_open="60.0" drop_count_factor_on_death="0.0" >
         <tag name="melee" />
         <specification 
-        retrigger_time="0.1"
+        retrigger_time="0.25"
         magazine_size="-1"
         accuracy_factor="0.95"
         sustained_fire_grow_step="0.0"
@@ -62,17 +62,17 @@
         suppressed="0"
         barrel_offset_3d="1 -0.4 0"
         projectile_speed="8.0"
-        projectiles_per_shot="2"
+        projectiles_per_shot="1"
+		
+		success_probability="2.2"
         stab_enabled="1"	
-        stab_range="2.5"
+        stab_range="4"
         use_basic_muzzle_smoke_effect="0"/>
         <next_in_chain key="gkw_yurine.weapon" share_ammo="0" />
 		    
 		<animation state_key="recoil" 		animation_key="zweihander slash 1" />
 		<animation state_key="recoil" 		animation_key="zweihander slash 2" />
 		<animation state_key="recoil" 		animation_key="zweihander slash 3" /> 
-
-		<animation state_key="recoil"	animation_key="melee, saber" />
 		<!-- <animation state_key="recoil" stance_key="prone" animation_key="melee, prone saber" /> -->
         <animation state_key="hold" animation_key="hold, hip fire" />
         <animation state_key="crouching" animation_key="crouch still calm" />
@@ -94,7 +94,7 @@
         <sound key="fire" fileref="chainsaw.wav" pitch_variety="0.03" volume="0.3" />
         <sound class="impact" fileref="rifle_drop.wav" />
 		<projectile file="teal.projectile">
-			<result class="blast" radius="3" damage="5" decal="0" push="0.0" character_state="death" faction_compare="not_equal" make_vehicle_hit_sound="0" />
+			<result class="blast" radius="3.6" damage="3" decal="0" push="0.0" character_state="death" faction_compare="not_equal" make_vehicle_hit_sound="0" />
 		</projectile>
         <capacity value="1" source="rank" source_value="0.0" />
         <stance state_key="running" accuracy="1" />
