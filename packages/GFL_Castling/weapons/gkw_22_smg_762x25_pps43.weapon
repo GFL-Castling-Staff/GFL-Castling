@@ -7,15 +7,15 @@
 		class="0"
 		magazine_size="35" 
 		name="PPS-43" 
-		projectile_speed="125" 
+		projectile_speed="145" 
 		retrigger_time="0.086" 
 		suppressed="0" 
 		sustained_fire_diminish_rate="1.6" 
 		sustained_fire_grow_step="0.3" />
    
-    <inventory  buy_price="5.0" sell_price="1.0" />
+    <inventory  buy_price="10.0" sell_price="10.0" />
 
-  	<animation state_key="hold_casual"			animation_key="dancing, kazachok" />
+  	<animation state_key="hold_casual" animation_key="dancing, kazachok" />
 	
     <sound key="fire" fileref="pps43_fire_FromRO2.wav" pitch_variety="0.05" volume="2.1" />
     <sound key="magazine_out" fileref="pps43_mgz_out_FromRO2.wav" volume="1.9" />
@@ -28,7 +28,7 @@
 
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet.projectile">
-      <result class="hit" kill_probability="1.6" kill_probability_offset_on_successful_hit="1.0" kill_decay_start_time="0.005" kill_decay_end_time="0.75" />
+      <result class="hit" kill_probability="1.6" kill_probability_offset_on_successful_hit="1.0" kill_decay_start_time="0.005" kill_decay_end_time="0.5" />
     </projectile>
     
     <stance state_key="running" accuracy="0.85" />
@@ -39,5 +39,5 @@
 	  <stance state_key="crouching" accuracy="0.95" />
     <stance state_key="prone" accuracy="1" />
     <modifier class="hit_success_probability" value="-0.2" />
-
+    <modifier class="speed" value="0.4" />
 </weapon>

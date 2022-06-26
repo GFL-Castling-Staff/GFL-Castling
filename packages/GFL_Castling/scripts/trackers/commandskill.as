@@ -1276,29 +1276,39 @@ class CommandSkill : Tracker {
                     string target = player.getStringAttribute("aim_target");
                     Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
                     int factionid = character.getIntAttribute("faction_id");
-                    array<string> Voice={
-                        "PPsh41_SKILL1_JP.wav"
-                    };
-                    playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
                     playAnimationKey(m_metagame,characterId,"throwing, upside",true,true);
                     c_pos=c_pos.add(Vector3(0,1,0));
-                    if (checkFlatRange(c_pos,stringToVector3(target),15)){
-                        CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"grenade_ppsh41.projectile",characterId,factionid,60);
-                    }
-                    else{
-                        CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"grenade_ppsh41.projectile",characterId,factionid,50.0,5.0);
-                    }
                     if(mod3){
                         if(ExistQueue){
                             return;
                         }
                         else{
+                            array<string> Voice={
+                                "PPsh41Mod_SKILL1_JP.wav",
+                                "PPsh41Mod_SKILL2_JP.wav",
+                                "PPsh41Mod_SKILL3_JP.wav",
+                                "PPsh41Mod_ATTACK_JP.wav",
+                                "PPsh41Mod_MEET_JP.wav",
+                                "PPsh41Mod_DEFENSE_JP.wav"
+                            };                        
+                            playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
                             addCoolDown("ppsh41",20,characterId,modifer);
                         }
                     }
                     else{
+                        array<string> Voice={
+                            "PPsh41_SKILL1_JP.wav"
+                        };
+                        playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);                        
                         addCoolDown("ppsh41",15,characterId,modifer);
                     }
+
+                    if (checkFlatRange(c_pos,stringToVector3(target),15)){
+                        CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"grenade_ppsh41.projectile",characterId,factionid,60);
+                    }
+                    else{
+                        CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"grenade_ppsh41.projectile",characterId,factionid,50.0,5.0);
+                    }                    
                 }
             }
         }
@@ -2202,6 +2212,54 @@ class CommandSkill : Tracker {
                     }
                 }
                 addCoolDown("RBLL",30,characterId,modifer);
+            }
+        }
+    }    
+
+    void excuteGrenadeSkill(int characterId,int playerId,SkillModifer@ modifer,string weaponname){
+        bool ExistQueue = false;
+        int j=-1;
+        for (uint i=0;i<SkillArray.length();i++){
+            if (InCooldown(characterId,modifer,SkillArray[i]) && SkillArray[i].m_weapontype=="Grenade") {
+                ExistQueue=true;
+                j=i;
+            }
+        }
+        if (ExistQueue){
+            dictionary a;
+            a["%time"] = ""+SkillArray[j].m_time;
+            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            _log("skill cooldown" + SkillArray[j].m_time);
+            return;
+        }
+        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+        if (character !is null) {
+            const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+            if (player !is null){
+                if (player.hasAttribute("aim_target")) {
+                    string target = player.getStringAttribute("aim_target");
+                    Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
+                    int factionid = character.getIntAttribute("faction_id");
+
+                    if(weaponname=="gkw_m9.weapon") {
+                        array<string> Voice={
+                            "M9_SKILL1_JP.wav",
+                            "M9_SKILL2_JP.wav",
+                            "M9_SKILL3_JP.wav"
+                        };
+                        playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+                        playSoundAtLocation(m_metagame,"grenade_throw1.wav",factionid,c_pos,1.0);
+                        addCoolDown("Grenade",15,characterId,modifer);
+                    }
+                    playAnimationKey(m_metagame,characterId,"throwing, upside",true,true);
+                    c_pos=c_pos.add(Vector3(0,1,0));
+                    if (checkFlatRange(c_pos,stringToVector3(target),10)){
+                        CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"skill_flashbang.projectile",characterId,factionid,60);
+                    }
+                    else{
+                        CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"skill_flashbang.projectile",characterId,factionid,60.0,6.0);
+                    }
+                }
             }
         }
     }    
