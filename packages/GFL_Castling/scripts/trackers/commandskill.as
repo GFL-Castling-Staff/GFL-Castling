@@ -2171,9 +2171,23 @@ class CommandSkill : Tracker {
                     playAnimationKey(m_metagame,characterId,"recoil, pistol",true,true);
                     playSoundAtLocation(m_metagame,"dart_shot.wav",factionid,c_pos,1.0);
                     c_pos=c_pos.add(Vector3(0,1,0));
-                    // CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"ppk_tracer_dart_1.projectile",characterId,factionid,60);
-                    insertA10Airstrike(characterId,factionid,stringToVector3(target));
-                    addCoolDown("PPKMOD3",0,characterId,modifer);
+                    CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"ppk_tracer_dart_1.projectile",characterId,factionid,60);
+
+                    int index = findKillCountIndex(characterId);
+                    if (index>=0){
+                        int kill_count=KillCountArray[index].m_killnum;
+                        if (kill_count>=7){
+                            CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"ppk_tracer_dart_3.projectile",characterId,factionid,60);
+                        }
+                        if (kill_count>=15){
+                            insertA10Airstrike(m_metagame,characterId,factionid,stringToVector3(target));
+                        }
+                        if (kill_count>=30){
+                            TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                            tasker.add(DelayA10Request(m_metagame,5.0,characterId,factionid,stringToVector3(target)));
+                        }                        
+                    }
+                    addCoolDown("PPKMOD3",90,characterId,modifer);
                 }
             }
         }
@@ -2261,27 +2275,7 @@ class CommandSkill : Tracker {
         }
     }    
 
-    //这下面写空袭插入函数，与上面的脚本技能函数做区别。
-    void insertA10Airstrike(int characterId,int factionid,Vector3 pos){
-        _log("A10 gun strafe activate successful");	
 
-        float rand_x = rand(-1,1);
-        float rand_y = rand(-1,1);
-        Vector3 luckyGuyPos = pos.add(Vector3(rand_x,0,rand_y)); //若周围没有敌人又必须要扫射，则直接默认以任意朝向扫一轮
-        Vector3 luckyGuyPos2 = luckyGuyPos.add(Vector3(rand(-1,1),0,rand(-1,1)));
-
-        int luckyGuyid = getNearbyRandomLuckyGuyId(m_metagame,factionid,luckyGuyPos,8.0f);
-        if(luckyGuyid!=-1){
-            const XmlElement@ luckyGuy = getCharacterInfo(m_metagame, luckyGuyid);
-            luckyGuyPos = stringToVector3(luckyGuy.getStringAttribute("position"));                        
-        }
-        luckyGuyid = getNearbyRandomLuckyGuyId(m_metagame,factionid,luckyGuyPos,32.0f);
-        if(luckyGuyid!=-1){
-            const XmlElement@ luckyGuy = getCharacterInfo(m_metagame, luckyGuyid);
-            luckyGuyPos2 = stringToVector3(luckyGuy.getStringAttribute("position"));                        
-        }
-        Airstrike_strafe.insertLast(Airstrike_strafer(characterId,factionid,0,luckyGuyPos,luckyGuyPos2));           
-    }
 }
 
 

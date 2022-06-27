@@ -4,7 +4,7 @@
     description="Shining beacon of a brave new world!"
     image="Castling_preview.png"
     show_in_campaigns="1"
-    show_in_quick_match_mods="1"
+    show_in_quick_match_mods="0"
     campaign_entry_script="start_campaign.as">
 <!-- =w= -->
 	
@@ -21,16 +21,6 @@
 		allow_change_settings="1"
 		require_journal_key_to_change_settings="difficulty_change">
 
-<!--		<preset text="Let's play" help="Help:Let's play" id="headstart"
-			friendly_capacity="1.20"
-			friendly_accuracy="0.94"
-			enemy_capacity="1.0"
-			enemy_accuracy="0.93"
-			xp_multiplier="0.45"
-			rp_multiplier="1.10"
-			player_damage_modifier="-0.3"
-			/>
--->
 		<!-- NoO0B! -->
 		<preset text="Easy" help="Help:Easy" id="easy"
 			friendly_capacity="1.25"
@@ -83,4 +73,3 @@
 			/>
 	</campaign_options>
 </package>
-<!-- ../-../.--//.--/.-/...//...././.-././/// -->

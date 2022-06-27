@@ -189,7 +189,7 @@ class kill_event : Tracker {
             int factionId = killer.getIntAttribute("faction_id");
             int characterId = killer.getIntAttribute("id");
             string VestKey = getDeadPlayerEquipmentKey(m_metagame,targetId,0);
-            string KillerWeaponKey = getDeadPlayerEquipmentKey(m_metagame,characterId,0);
+            string KillerWeaponKey = event.getStringAttribute("key");
             string killway= event.getStringAttribute("method_hint");
             if(KillerWeaponKey=="gkw_ppkmod3.weapon"){
                 // _log("PPK skill " + killway);
@@ -200,7 +200,7 @@ class kill_event : Tracker {
                         int j = findKillCountIndex(characterId);
                         if(j>=0){
                             KillCountArray[j].add();
-                            // _log("PPK kill " + KillCountArray[j].m_killnum);
+                            _log("PPK kill " + KillCountArray[j].m_killnum);
                         }
                         else{
                             KillCountArray.insertLast(kill_count(characterId,1));
@@ -260,7 +260,14 @@ class kill_event : Tracker {
             }     
         }
 	}
-
+    protected void handlePlayerDieEvent(const XmlElement@ event){
+        if(KillCountArray.size()<=0) return;
+        int cId= event.getIntAttribute("character_id");
+        if(cId==-1) return;
+        int index=findKillCountIndex(cId);
+        if(index==-1) return;
+        KillCountArray.removeAt(index);
+    }
     void update(float time){
         if(HealOnKill_track.length()>0){
             for (uint a=0;a<HealOnKill_track.length();a++){

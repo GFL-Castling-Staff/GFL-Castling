@@ -199,3 +199,39 @@ class Jupiter_Airstrike_Task : Task {
 		}
 	}
 }
+
+class DelayA10Request :Task{
+	protected GameMode@ m_metagame;
+	protected float m_time;
+    protected int m_character_id;
+    protected int m_faction_id;
+	protected float m_timeLeft;
+	protected Vector3 m_pos;
+
+	DelayA10Request(GameMode@ metagame, float time, int cId,int fId,Vector3 pos) {
+		@m_metagame = metagame;
+		m_time = time;
+		m_character_id = cId;
+		m_faction_id =fId;
+		m_pos=pos;
+	}
+
+	void start() {
+		m_timeLeft=m_time;
+	}
+
+	void update(float time) {
+		m_timeLeft -= time;
+		if (m_timeLeft < 0)
+		{
+			insertA10Airstrike(m_metagame,m_character_id,m_faction_id,m_pos);
+		}
+	}
+
+    bool hasEnded() const {
+		if (m_timeLeft < 0) {
+			return true;
+		}
+		return false;
+	}
+}

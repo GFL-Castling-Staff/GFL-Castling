@@ -74,7 +74,7 @@
         <capacity value="100" source="rank" source_value="57.433" />
         <!-- <capacity value="100" source="rank" source_value="0.1" /> -->
         <inventory encumbrance="0.0" price="2680.0" />
-        <round instances="2" instance_class="soldier" instance_key="gk_manticore" instance_spread="2 2 2" common_spread="2 2 2" launch_time="5.0" spawn_time="5.5" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="-5.0" initial_speed_to_target="0.0">
+        <round instances="2" instance_class="soldier" instance_key="gk_manticore" instance_spread="2 2 2" common_spread="2 2 2" launch_time="5.0" spawn_time="5.5" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="15.0" initial_speed_to_target="0.0">
             <!-- <sound class="spawn" fileref="hello.wav" volume="1.0" /> -->
         </round>
     </call>
@@ -85,32 +85,32 @@
         <capacity value="100" source="rank" source_value="57.433" />
         <!-- <capacity value="100" source="rank" source_value="0.1" /> -->
         <inventory encumbrance="0.0" price="6280.0" />
-        <round instances="5" instance_class="soldier" instance_key="gk_manticore" instance_spread="5 5 5" common_spread="5 5 5" launch_time="5.0" spawn_time="5.5" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="-5.0" initial_speed_to_target="0.0">
+        <round instances="5" instance_class="soldier" instance_key="gk_manticore" instance_spread="5 2 5" common_spread="5 2 5" launch_time="5.0" spawn_time="5.5" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="15.0" initial_speed_to_target="0.0">
             <!-- <sound class="spawn" fileref="hello.wav" volume="1.0" /> -->
         </round>
     </call>
     <!-- 火箭妖精 -->
     <call name="Rocket Fairy" key="gk_rocket_fairy.call" initiation_comment1="Request rocket strike" acknowledge_comment="Confirm, upload the coordinates" acknowledge_time="0" launch_comment="Start rocket strike" notify_metagame="1">
-        <round instances="24" instance_class="grenade" instance_key="artillery_rocket_fairies.projectile" instance_spread="22.5 22.5 22.5" common_spread="10 0 10" launch_time="3.0" spawn_time="6.0" horizontal_offset_at_spawn="0.0">
+        <round instances="20" instance_class="grenade" instance_key="artillery_rocket_fairies.projectile" instance_spread="35 15 35" common_spread="10 0 10" launch_time="3.0" spawn_time="6.0" horizontal_offset_at_spawn="0.0">
             <sound class="launch" fileref="Fairy_multirocket_FromCOD16.wav" volume="0.8" />
             <sound class="spawn" fileref="woosh1.wav" volume="0.2" />
         </round>
-        <round instances="28" instance_class="grenade" instance_key="artillery_rocket_fairies_emp.projectile" instance_spread="22.5 22.5 22.5" common_spread="12 0 12" launch_time="4.0" spawn_time="7.0" horizontal_offset_at_spawn="0.0">
+        <round instances="20" instance_class="grenade" instance_key="artillery_rocket_fairies.projectile" instance_spread="35 15 35" common_spread="12 0 12" launch_time="4.0" spawn_time="7.0" horizontal_offset_at_spawn="0.0">
             <sound class="spawn" fileref="woosh1.wav" volume="0.2" />
         </round>
-        <round instances="28" instance_class="grenade" instance_key="artillery_rocket_fairies.projectile" instance_spread="22.5 22.5 22.5" common_spread="12 0 12" launch_time="5.0" spawn_time="8.0" horizontal_offset_at_spawn="0.0">
+        <round instances="20" instance_class="grenade" instance_key="artillery_rocket_fairies.projectile" instance_spread="35 15 35" common_spread="12 0 12" launch_time="5.0" spawn_time="8.0" horizontal_offset_at_spawn="0.0">
             <sound class="spawn" fileref="woosh1.wav" volume="0.2" />
         </round>
-        <round instances="36" instance_class="grenade" instance_key="artillery_rocket_fairies_emp.projectile" instance_spread="22.5 22.5 22.5" common_spread="13.5 0 13.5" launch_time="6.0" spawn_time="9.0" horizontal_offset_at_spawn="0.0">
+        <round instances="20" instance_class="grenade" instance_key="artillery_rocket_fairies.projectile" instance_spread="35 15 35" common_spread="13.5 0 13.5" launch_time="6.0" spawn_time="9.0" horizontal_offset_at_spawn="0.0">
             <sound class="spawn" fileref="woosh1.wav" volume="0.2" />
         </round>
-        <round instances="36" instance_class="grenade" instance_key="artillery_rocket_fairies.projectile" instance_spread="22.5 22.5 22.5" common_spread="13.5 0 13.5" launch_time="7.0" spawn_time="10.0" horizontal_offset_at_spawn="0.0">
+        <round instances="20" instance_class="grenade" instance_key="artillery_rocket_fairies.projectile" instance_spread="35 15 35" common_spread="13.5 0 13.5" launch_time="7.0" spawn_time="10.0" horizontal_offset_at_spawn="0.0">
             <sound class="spawn" fileref="woosh1.wav" volume="0.2" />
         </round>
         <hud_icon filename="call_Firesupport_RocketFairy.png" />
         <capacity value="0" source="rank" source_value="0.0" />
         <capacity value="100" source="rank" source_value="2.364" />
-        <inventory encumbrance="0.0" price="1250.0" />
+        <inventory encumbrance="0.0" price="5000.0" />
     </call>
     <!-- 烟雾搜救妖精 -->
     <call name="UAV medical support" key="gk_rescue_fairy.call" initiation_comment1="Rescue Fairy--Smoke Medical Support" acknowledge_comment="Medical UAV is online and closing in on the target." acknowledge_time="0" launch_comment="Medical support is complete. May everyone survive the mission." notify_metagame="1">
