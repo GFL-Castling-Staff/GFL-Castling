@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapons>
+    <weapon file="heavy_anti_materiel_rifle.animation_base" key="gkw_iws2000_1403.weapon">
+        <!--Weapon specifications-->
+        <specification 
+        affect_vehicles="1"
+        retrigger_time="1.0" 
+        accuracy_factor="1.0" 
+        sustained_fire_grow_step="0.0" 
+        sustained_fire_diminish_rate="2.0" 
+        magazine_size="5" 
+        can_shoot_standing="0" 
+        can_shoot_crouching="1"
+        can_shoot_prone="1"
+        suppressed="0" 
+        name="IWS 2000-[The Seventh Banisher]" 
+        class="4" 
+        reload_one_at_a_time="0" 
+        sight_range_modifier="4.5" 
+        projectile_speed="300" 
+        barrel_offset="0.4" 
+        projectiles_per_shot="4"
+        last_burst_retrigger_time="1"
+        burst_shots="1" />
+        <next_in_chain key="gkw_iws2000_1403_skill.weapon" share_ammo="0" />
+        <!--Animations-->
+        <inventory  buy_price="120.0" sell_price="120.0" />
+        <animation key="reload" animation_key="reloading, magazine rifle 2.1" />
+        <!--Sounds-->
+        <sound key="fire" fileref="iws2000_fire_FromSAMTSE.wav" pitch_variety="0.05" volume="1.4" />
+        <sound key="cycle" fileref="iws2000_cycle_FromDIVISION2.wav" volume="0.7" />
+        <sound key="magazine_out" fileref="iws2000_mgz_out_FromCOD17.wav" volume="0.7" />
+        <sound key="magazine_in" fileref="iws2000_mgz_in_FromCOD17.wav" volume="0.7" />
+        <sound key="cycle_out" fileref="iws2000_cycle_out_FromDIVISION2.wav" volume="0.7" />
+        <sound key="cycle_in" fileref="iws2000_cycle_in_FromDIVISION2.wav" volume="0.7" />
+        <sound class="impact" fileref="rifle_drop.wav" />
+        <!--Model, Icon, Cost-->
+        <model filename="gkw_rf_iws2000_1403_2.xml" />
+        <hud_icon filename="gkw_iws2000_1403.png" />
+        <!--Ballistics-->
+        <weak_hand_hold offset="0.3" />
+        <projectile file="iwsAPFSDS.projectile">
+            <result class="blast" 
+        damage="4" 
+        radius="3.5" 
+        decal="1" 
+        push="0" 
+        character_state="death"
+        faction_compare="not_equal"
+		/>
+        </projectile>
+        <commonness value="0.0" can_respawn_with="1" in_stock="0" />
+
+        <!--Accuracy, Movement speed-->
+        <stance state_key="walking" accuracy="1" />
+        <stance state_key="crouch_moving" accuracy="1" />
+        <stance state_key="prone_moving" accuracy="1" />
+        <stance state_key="standing" accuracy="1"/>
+        <stance state_key="crouching" accuracy="1" />
+        <stance state_key="prone" accuracy="1" />
+        <stance state_key="over_wall" accuracy="1" />
+    </weapon>
+    <weapon key="gkw_iws2000_1403_skill.weapon" on_ground_up="0 0 1" time_to_live_out_in_the_open="0.0" drop_count_factor_on_death="0.0" player_death_drop_owner_lock_time="0">
+    
+        <tag name="melee" />
+        <specification 
+        retrigger_time="-1"
+        last_burst_retrigger_time="0.6" 
+        magazine_size="30"
+        can_shoot_standing="1" 
+        can_shoot_crouching="0" 
+        can_shoot_prone="0" 
+        carry_in_two_hands="0" 
+        burst_shots="1"
+        name="IWS 2000-[The Seventh Banisher]-[Reaper]" 
+        class="4"
+        supperessed="1"
+        projectile_speed="100"
+        use_basic_muzzle_smoke_effect="0"
+        stab_enabled="1"
+        stab_range="5"
+        sustained_fire_grow_step="0"
+        />
+        <next_in_chain key="gkw_iws2000_1403.weapon" share_ammo="0" />
+
+        <animation state_key="recoil"   animation_key="melee, nyto whip" />
+        <animation state_key="stabbing" animation_key="melee, nyto whip" />
+        <animation state_key="hold" animation_key="still, ninjato" />
+        <animation state_key="hold_on_wall" animation_key="still overwall, ninjato" />
+        <animation state_key="still_against_wall"   animation_key="still against wall, ninjato" />
+        <animation state_key="hold_casual"  animation_key="relaxed, ninjato" />
+        <animation state_key="running"  animation_key="running, ninjato" />
+        <animation state_key="walking"  animation_key="walking, ninjato" />
+        <animation state_key="crouching"    animation_key="crouch, ninjato" />
+        <animation state_key="crouch_moving"    animation_key="crouching forwards, ninjato" />
+        <animation state_key="crouch_moving_backwards"  animation_key="crouching backwards, ninjato" />
+        <animation state_key="prone_still" animation_key="prone still, ninjato" />
+        <animation state_key="prone_moving" animation_key="prone moving, ninjato" />
+        <animation state_key="walking_backwards" animation_key="walking backwards, ninjato" />
+        <animation state_key="changing_weapon_in"   animation_key="change weapon in, sword" />
+        <animation state_key="changing_weapon_out"  animation_key="change weapon out, sword" />
+        <animation state_key="reload"   animation_key="still, ninjato" />
+        
+        <model filename="gkw_rf_iws2000_1403.xml" />
+    
+        <inventory  buy_price="120.0" sell_price="120.0" />
+         
+        <projectile file="teal.projectile">
+            <result class="blast" radius="5.5" damage="3" decal="0" push="0.0" character_state="death" faction_compare="not_equal" make_vehicle_hit_sound="0" />
+        </projectile>
+    
+      
+        <stance state_key="running" accuracy="1" />
+        <stance state_key="walking" accuracy="1" />
+        <stance state_key="crouch_moving" accuracy="1" />
+        <stance state_key="standing" accuracy="1" />
+        <stance state_key="crouching" accuracy="1" />
+        <stance state_key="prone" accuracy="1" /> 
+        <stance state_key="prone_moving" accuracy="1" />
+        <stance state_key="over_wall" accuracy="1" /> 
+    
+        <hud_icon filename="gkw_iws2000_1403.png" />
+    
+        <effect class="muzzle" ref="sawsnone" />
+         
+        <commonness value="0.0" can_respawn_with="1" in_stock="0" />
+        <modifier class="speed" value="0.7" />
+        <modifier class="hit_success_probability" value="-0.2" />
+        <modifier class="detectability" value="0.45" />
+    </weapon>
+</weapons>

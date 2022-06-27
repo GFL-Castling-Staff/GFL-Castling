@@ -27,7 +27,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		setupGift1();
 		setupGift2();
 		setupGift3();
-		setupCommunity1();    
+		// setupCommunity1();    
 		setupCommunity2();
 		setupIcecream();                
 		setupEnemyWeaponUnlocks();
@@ -253,6 +253,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		ScoredResource("gkw_m950a_702.weapon", "weapon", 1.0f),
 		ScoredResource("gkw_m37_1105.weapon", "weapon", 1.0f),
 		ScoredResource("gkw_type100_4004.weapon","weapon",1.0f),
+		ScoredResource("gkw_iws2000_1403.weapon","weapon",1.0f),
 		ScoredResource("gkw_m870_3803.weapon", "weapon", 1.0f)
 			}
 		};
