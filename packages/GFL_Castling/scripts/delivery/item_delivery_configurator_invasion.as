@@ -1044,6 +1044,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 				ScoredResource("gkw_spas12.weapon", "weapon", 0.3f),
 				ScoredResource("gkw_pk.weapon", "weapon", 0.3f),
 				ScoredResource("gkw_m37.weapon", "weapon", 0.3f),
+				ScoredResource("gkw_Jericho.weapon", "weapon", 0.3f),
 
 
 				ScoredResource("gkw_type89.weapon", "weapon", 0.2f),
@@ -1174,6 +1175,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 				ScoredResource("gkw_mp446.weapon", "weapon", 0.3f),
 				ScoredResource("gkw_p7.weapon", "weapon", 0.3f),
 				ScoredResource("gkw_thunder.weapon", "weapon", 0.3f),
+				ScoredResource("gkw_Jericho.weapon", "weapon", 0.3f),
 
 				ScoredResource("gkw_c93.weapon", "weapon", 0.2f),
 				ScoredResource("gkw_python.weapon", "weapon", 0.2f),
