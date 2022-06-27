@@ -579,7 +579,7 @@
 		<ai filename="shield.ai" />
 		<resources clear_weapons="1" clear_calls="1" clear_grenades="1">
 			<weapon key="sfw_aegis.weapon" enabled="1"/>
-			<carry_item key="kcco_ga_2" enabled="1" />
+			<carry_item key="kcco_ga.carry_item" enabled="1" />
 		</resources>
 	</soldier>
 	<!--龙骑兵-->
@@ -687,7 +687,7 @@
 		<resources clear_vehicles="1" clear_weapons="1" clear_calls="1" clear_carry_items="1">
 			<call key="sf_jaguar.call" />
 			<weapon key="sfw_Intruder.weapon" enabled="1"/>
-			<carry_item key="sf_intruder.carry_item" enabled="1" />
+			<carry_item key="sf_dreamer.carry_item" enabled="1" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="300.0" max="300.05" />
@@ -776,7 +776,7 @@
 		<resources clear_vehicles="1" clear_weapons="1" clear_calls="1" clear_carry_items="1">
 			<call key="sf_jaguar.call" />
 			<weapon key="sfw_excutioner_1.weapon" enabled="1"/>
-			<carry_item key="sf_excutioner_qm.carry_item" enabled="1" />
+			<carry_item key="sf_excutioner.carry_item" enabled="1" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="300.0" max="300.05" />
@@ -798,7 +798,7 @@
 		<resources clear_vehicles="1" clear_weapons="1" clear_calls="1" clear_carry_items="1">
 			<call key="sf_jaguar.call" />
 			<weapon key="sfw_excutioner_2.weapon" enabled="1"/>
-			<carry_item key="sf_excutioner_qm.carry_item" enabled="1" />
+			<carry_item key="sf_excutioner.carry_item" enabled="1" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="300.0" max="300.05" />
@@ -894,7 +894,7 @@
 		<ai filename="sniper.ai" />
 		<resources clear_vehicles="1" clear_weapons="1" clear_calls="1" clear_carry_items="1">
 			<weapon key="sfw_weaver.weapon" enabled="1"/>
-			<carry_item key="sf_weaver.carry_item" enabled="1" />
+			<carry_item key="sf_architect.carry_item" enabled="1" />
 			<call key="sf_destroyer.call" />
 			<call key="sf_jaguar.call" />
 		</resources>
