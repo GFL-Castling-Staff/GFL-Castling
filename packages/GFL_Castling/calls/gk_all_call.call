@@ -95,16 +95,16 @@
             <sound class="launch" fileref="Fairy_multirocket_FromCOD16.wav" volume="0.8" />
             <sound class="spawn" fileref="woosh1.wav" volume="0.2" />
         </round>
-        <round instances="20" instance_class="grenade" instance_key="artillery_rocket_fairies.projectile" instance_spread="35 15 35" common_spread="12 0 12" launch_time="4.0" spawn_time="7.0" horizontal_offset_at_spawn="0.0">
+        <round instances="24" instance_class="grenade" instance_key="artillery_rocket_fairies.projectile" instance_spread="35 15 35" common_spread="12 0 12" launch_time="4.0" spawn_time="7.0" horizontal_offset_at_spawn="0.0">
             <sound class="spawn" fileref="woosh1.wav" volume="0.2" />
         </round>
-        <round instances="20" instance_class="grenade" instance_key="artillery_rocket_fairies.projectile" instance_spread="35 15 35" common_spread="12 0 12" launch_time="5.0" spawn_time="8.0" horizontal_offset_at_spawn="0.0">
+        <round instances="28" instance_class="grenade" instance_key="artillery_rocket_fairies.projectile" instance_spread="35 15 35" common_spread="12 0 12" launch_time="5.0" spawn_time="8.0" horizontal_offset_at_spawn="0.0">
             <sound class="spawn" fileref="woosh1.wav" volume="0.2" />
         </round>
-        <round instances="20" instance_class="grenade" instance_key="artillery_rocket_fairies.projectile" instance_spread="35 15 35" common_spread="13.5 0 13.5" launch_time="6.0" spawn_time="9.0" horizontal_offset_at_spawn="0.0">
+        <round instances="32" instance_class="grenade" instance_key="artillery_rocket_fairies.projectile" instance_spread="35 15 35" common_spread="13.5 0 13.5" launch_time="6.0" spawn_time="9.0" horizontal_offset_at_spawn="0.0">
             <sound class="spawn" fileref="woosh1.wav" volume="0.2" />
         </round>
-        <round instances="20" instance_class="grenade" instance_key="artillery_rocket_fairies.projectile" instance_spread="35 15 35" common_spread="13.5 0 13.5" launch_time="7.0" spawn_time="10.0" horizontal_offset_at_spawn="0.0">
+        <round instances="40" instance_class="grenade" instance_key="artillery_rocket_fairies.projectile" instance_spread="35 15 35" common_spread="13.5 0 13.5" launch_time="9.0" spawn_time="12.0" horizontal_offset_at_spawn="0.0">
             <sound class="spawn" fileref="woosh1.wav" volume="0.2" />
         </round>
         <hud_icon filename="call_Firesupport_RocketFairy.png" />

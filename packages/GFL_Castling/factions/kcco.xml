@@ -476,7 +476,7 @@
 		</attribute_config>
 	</soldier>
 	<!--人类通讯兵-->
-	<soldier name="kcco_ar_human_tel" spawn_score="0.4" copy_from="default_bot">
+	<soldier name="kcco_ar_human_tel" spawn_score="0.3" copy_from="default_bot">
 		<ai filename="kcco_human_tel.ai" />
 		<character filename="default_kcco_human.character" />
 		<model filename="kccod_human_3.xml" />

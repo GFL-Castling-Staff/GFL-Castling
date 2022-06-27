@@ -7,6 +7,8 @@
 #include "gamemode.as"
 #include "GFLhelpers.as"
 #include "commandskill.as"
+#include "enemy_reward.as"
+
 //Originally created by NetherCrow
 //11:39:11: SCRIPT:  received: TagName=character_kill key= method_hint=stab     
 //TagName=killer block=12 14 dead=0 faction_id=0 id=11 leader=1 name=Nikita Sokol player_id=0 position=428.551 4.3014 499.254 rp=60 soldier_group_name=default squad_size=0 wounded=0 xp=0   
@@ -60,7 +62,6 @@ class kill_event : Tracker {
         "kccow_cerynitis.weapon",
         "sfw_nemeum.weapon"
 	};
-
     dictionary healOnKillWeaponList = {
 
         // 空武器，后面杀几个人回一次甲就写几
@@ -188,7 +189,7 @@ class kill_event : Tracker {
             int targetId = target.getIntAttribute("id");
             int factionId = killer.getIntAttribute("faction_id");
             int characterId = killer.getIntAttribute("id");
-            string VestKey = getDeadPlayerEquipmentKey(m_metagame,targetId,0);
+            string Solider_Name = target.getStringAttribute("soldier_group_name");
             string KillerWeaponKey = event.getStringAttribute("key");
             string killway= event.getStringAttribute("method_hint");
             if(KillerWeaponKey=="gkw_ppkmod3.weapon"){
@@ -200,7 +201,7 @@ class kill_event : Tracker {
                         int j = findKillCountIndex(characterId);
                         if(j>=0){
                             KillCountArray[j].add();
-                            _log("PPK kill " + KillCountArray[j].m_killnum);
+                            //_log("PPK kill " + KillCountArray[j].m_killnum);
                         }
                         else{
                             KillCountArray.insertLast(kill_count(characterId,1));
@@ -223,41 +224,12 @@ class kill_event : Tracker {
             }
  
 
-            if (VestKey=="") return;
-            if(targetVestKey.find(VestKey)> -1){
-                if(VestKey=="parw_teal.weapon" || VestKey=="sfw_agent.weapon" || VestKey=="sfw_m16a1.weapon"){
-                    GiveRP(m_metagame,characterId,150);
-                    GiveXP(m_metagame,characterId,0.025);
-                    return;
-                }
-                
-                if(VestKey=="sfw_manticore.weapon" || VestKey=="kccow_hydra.weapon" || VestKey=="kcco_teslatrooper.weapon"){
-                    GiveRP(m_metagame,characterId,80);
-                    GiveXP(m_metagame,characterId,0.005);
-                    //_log("giveitmoney");
-                    return;
-                }
-                if(VestKey=="parw_doppelsoldner_rocket.weapon"){
-                    GiveRP(m_metagame,characterId,70);
-                    GiveXP(m_metagame,characterId,0.004);
-                    return;
-                }
-                if(VestKey=="sfw_ripper_swap.weapon" || VestKey=="sfw_striker_swap.weapon" || VestKey=="sfw_jaeger_swap.weapon" || VestKey=="sfw_vespid_swap.weapon"){
-                    GiveRP(m_metagame,characterId,18);
-                    GiveXP(m_metagame,characterId,0.001);
-                    return;
-                }
-                if(VestKey=="sfw_dragoon.weapon" || VestKey=="kccow_cerynitis.weapon" || VestKey=="sfw_nemeum.weapon"){
-                    GiveRP(m_metagame,characterId,30);
-                    GiveXP(m_metagame,characterId,0.002);
-                    return;
-                }
-                else{
-                    GiveRP(m_metagame,characterId,50);
-                    GiveXP(m_metagame,characterId,0.003);
-                    return;
-                }
-            }     
+            if (Solider_Name=="") return;
+
+            int GivenRP = getRPKillReward(Solider_Name);
+            float GivenXP = getXPKillReward(Solider_Name);
+            GiveRP(m_metagame,characterId,GivenRP);
+            GiveXP(m_metagame,characterId,GivenXP);
         }
 	}
     protected void handlePlayerDieEvent(const XmlElement@ event){
