@@ -5,7 +5,7 @@
 
     <!-- <event> -->
     <trigger class="time" time_to_live="0.0" />
-    <result class="spawn" instance_class="grenade" instance_key="firenade_sub.projectile" min_amount="10" max_amount="10" offset="0 4.0 0" position_spread="2 -4" direction_spread="0.0 0.0" />   
+    <result class="spawn" instance_class="grenade" instance_key="firenade_sub.projectile" min_amount="5" max_amount="5" offset="0 4.0 0" position_spread="2 -4" direction_spread="0.0 0.0" />   
 
     
 

@@ -423,6 +423,7 @@
 		</resources>
 	</soldier>
 	<soldier name="para_streletplus" spawn_score="1.0" squad_size_xp_cap="0.5" copy_from="default_ai">
+		<model filename="pard_stretletplus_neo.xml" />
 		<ai filename="para_streletplus.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="parw_streletplus.weapon" enabled="1" />
