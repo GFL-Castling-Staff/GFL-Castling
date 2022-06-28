@@ -1,0 +1,147 @@
+particle_system ejection_9mm
+{
+    quota 30
+    material bullet_shell_9mm
+    particle_width 0.2
+	particle_height 0.2
+	cull_each false
+	renderer billboard
+	billboard_type point
+
+    emitter Point
+    {
+        colour 1 1 1 1
+        angle 30
+        emission_rate 10
+        position 0.05 0 0
+        direction 0.7 0.3 -0.7
+		velocity -10
+        time_to_live 0.5
+        duration 0.1
+    }
+
+	affector Rotator
+	{
+		rotation_speed_range_start 0
+		rotation_speed_range_end 720
+		rotation_range_start 0
+		rotation_range_end 360
+	}    
+
+    affector LinearForce
+    {
+        force_vector 15 -30 0
+        force_application add
+    }    
+}
+
+particle_system ejection_556
+{
+    quota 30
+    material bullet_shell_556
+    particle_width 0.15
+	particle_height 0.15
+	cull_each false
+	renderer billboard
+	billboard_type point
+
+    emitter Point
+    {
+        colour 1 1 1 1
+        angle 30
+        emission_rate 10
+        position 0.05 0 0
+        direction 0.7 0.3 -0.7
+		velocity -10
+        time_to_live 0.5
+        duration 0.1
+    }
+
+	affector Rotator
+	{
+		rotation_speed_range_start 0
+		rotation_speed_range_end 720
+		rotation_range_start 0
+		rotation_range_end 360
+	}    
+
+    affector LinearForce
+    {
+        force_vector 15 -30 0
+        force_application add
+    }    
+}
+
+particle_system ejection_76251
+{
+    quota 30
+    material bullet_shell_76251
+    particle_width 0.2
+	particle_height 0.2
+	cull_each false
+	renderer billboard
+	billboard_type point
+
+    emitter Point
+    {
+        colour 1 1 1 1
+        angle 15
+        emission_rate 10
+        position 0.05 0 0
+        direction 0.7 0.3 -0.7
+		velocity -10
+        time_to_live 0.5
+        duration 0.1
+    }
+
+	affector Rotator
+	{
+		rotation_speed_range_start 0
+		rotation_speed_range_end 720
+		rotation_range_start 0
+		rotation_range_end 360
+	}    
+
+    affector LinearForce
+    {
+        force_vector 15 -30 0
+        force_application add
+    }    
+}
+
+particle_system ejection_special_rf
+{
+    quota 1
+    material bullet_shell_76251
+    particle_width 0.2
+	particle_height 0.2
+	cull_each false
+	renderer billboard
+	billboard_type point
+
+    emitter Point
+    {
+        colour 1 1 1 1
+        angle 15
+        emission_rate 10
+        position 0.05 0 0
+        direction 0.7 0.3 -0.7
+		velocity -10
+        time_to_live 0.5
+        duration 0.1
+    }
+
+	affector Rotator
+	{
+		rotation_speed_range_start 0
+		rotation_speed_range_end 720
+		rotation_range_start 0
+		rotation_range_end 360
+	}    
+
+    affector LinearForce
+    {
+        force_vector 15 -30 0
+        force_application add
+    }    
+}

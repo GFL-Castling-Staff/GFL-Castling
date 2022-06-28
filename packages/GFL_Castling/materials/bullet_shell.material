@@ -1,0 +1,84 @@
+material bullet_shell_556
+{
+	receive_shadows off
+    technique
+    {
+        pass
+        {
+			emissive 1 1 1 1
+            scene_blend alpha_blend
+            fog_override false
+            texture_unit{
+                texture gkw_b_556.png
+            }
+        }
+    }
+}
+
+material bullet_shell_76239
+{
+	receive_shadows off
+    technique
+    {
+        pass
+        {
+			emissive 1 1 1 1
+            scene_blend alpha_blend
+            fog_override false
+            texture_unit{
+                texture gkw_b_76239.png
+            }
+        }
+    }
+}
+
+material bullet_shell_76251
+{
+	receive_shadows off
+    technique
+    {
+        pass
+        {
+			emissive 1 1 1 1
+            scene_blend alpha_blend
+            fog_override false
+            texture_unit{
+                texture gkw_b_76251.png
+            }
+        }
+    }
+}
+
+material bullet_shell_9mm
+{
+	receive_shadows off
+    technique
+    {
+        pass
+        {
+			emissive 1 1 1 1
+            scene_blend alpha_blend
+            fog_override false
+            texture_unit{
+                texture gkw_b_9mm.png
+            }
+        }
+    }
+}
+
+material bullet_shell_12g
+{
+	receive_shadows off
+    technique
+    {
+        pass
+        {
+			emissive 1 1 1 1
+            scene_blend alpha_blend
+            fog_override false
+            texture_unit{
+                texture gkw_b_12g.png
+            }
+        }
+    }
+}

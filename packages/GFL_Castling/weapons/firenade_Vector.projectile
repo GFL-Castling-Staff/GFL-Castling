@@ -5,7 +5,7 @@
         <collider class="character" enabled="1" faction_compare="not_equal"/>
     </trigger>
     <result class="notify_script" key="VV_skill" />
-    <rotation class="motion" />
+    <rotation class="random" />
     <model mesh_filename="molotov.xml"/>
     <hud_icon filename="hud_c4.png" />
     <throwable curve_height="7.0" near_far_distance="10.0" speed_estimation_near="7.0" speed_estimation_far="10.0" max_speed="20.0" randomness="0.07" />

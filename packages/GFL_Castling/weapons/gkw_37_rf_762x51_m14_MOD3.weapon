@@ -28,7 +28,8 @@
 	<capacity value="1" source="rank" source_value="0.0" />
     <next_in_chain key="gkw_m14mod3_skill.weapon" share_ammo="1" />
     <animation key="reload" animation_key="reloading, magazine rifle 1.8" />	
-    
+    <effect class="muzzle" ref="ejection_76251" />
+
 	<!--Sounds-->
 	
     <sound key="fire" fileref="m14_fire_FromDAYSGONE.wav" pitch_variety="0.01" volume="1.1" />

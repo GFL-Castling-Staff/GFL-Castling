@@ -38,6 +38,8 @@
     <animation state_key="reload" animation_key="reloading, magazine rifle 0.9" />
 	  <animation state_key="stabbing" animation_key="melee, quick knife" />
 	  <animation state_key="stabbing" animation_key="pistol whip 3" />
+    <effect class="muzzle" ref="ejection_9mm" />
+
     <sound key="fire" fileref="mab38_fire_FromBF5.wav" pitch_variety="0.05" volume="2.1" />
     <sound key="magazine_out" fileref="mab38_mgz_out_FromBF5.wav" volume="1.9" />
     <sound key="magazine_in" fileref="mab38_mgz_in_FromBF5.wav" volume="1.9" />
