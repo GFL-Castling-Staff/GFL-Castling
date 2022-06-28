@@ -995,6 +995,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 				ScoredResource("gkw_supersass.weapon", "weapon", 0.6f),
 				// ScoredResource("gkw_t-cms.weapon", "weapon", 0.6f),
 				ScoredResource("gkw_ks23.weapon", "weapon", 0.6f),
+				ScoredResource("gkw_m500.weapon", "weapon", 0.6f),
 
 
 				ScoredResource("gkw_m1908.weapon", "weapon", 0.3f),
@@ -1046,6 +1047,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 				ScoredResource("gkw_pk.weapon", "weapon", 0.3f),
 				ScoredResource("gkw_m37.weapon", "weapon", 0.3f),
 				ScoredResource("gkw_Jericho.weapon", "weapon", 0.3f),
+				ScoredResource("gkw_m590.weapon", "weapon", 0.3f),
 
 
 				ScoredResource("gkw_type89.weapon", "weapon", 0.2f),
@@ -1376,6 +1378,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		array<array<ScoredResource@>> rewardPasses = {
 			{	
 				ScoredResource("gkw_ks23.weapon", "weapon", 0.6f),
+				ScoredResource("gkw_m500.weapon", "weapon", 0.6f),
 
 				ScoredResource("gkw_liberator.weapon", "weapon", 0.3f),
 				ScoredResource("gkw_m1014.weapon", "weapon", 0.3f),
@@ -1384,6 +1387,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 				ScoredResource("gkw_usas12.weapon", "weapon", 0.3f),
 				ScoredResource("gkw_spas12.weapon", "weapon", 0.3f),
 				ScoredResource("gkw_m37.weapon", "weapon", 0.3f),
+				ScoredResource("gkw_m590.weapon", "weapon", 0.3f),
 
 				ScoredResource("gkw_aa12.weapon", "weapon", 0.2f),
 				ScoredResource("gkw_caws.weapon", "weapon", 0.2f),

@@ -32,8 +32,8 @@
 	
 	<!--Sounds-->
 	
-    <sound key="fire" fileref="m500_fire_FromSAM4.wav" pitch_variety="0.05" volume="1" />
-    <sound key="cycle" fileref="m500_cycle_FromKF2.wav" />
+    <sound key="fire" fileref="m590_fire_FromKF2.wav" pitch_variety="0.05" volume="1" />
+    <sound key="cycle" fileref="m590_cycle_FromREALLIFE.wav" />
     <sound key="reload_one" fileref="sg1_reload_FromREALLIFE.wav" volume="0.5" />
     <sound key="reload_one" fileref="sg2_reload_FromREALLIFE.wav" volume="0.5" />
     <sound key="reload_one" fileref="sg3_reload_FromREALLIFE.wav" volume="0.5" />
@@ -42,7 +42,7 @@
    
 	<!--Model, Icon, Cost-->
    
-    <model filename="gkw_sg_m870.xml" />
+    <model filename="gkw_sg_m590.xml" />
     <hud_icon filename="gkw_m590.png" />
 
 	
