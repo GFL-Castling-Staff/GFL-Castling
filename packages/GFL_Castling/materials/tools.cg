@@ -12,7 +12,7 @@ float4 lighting(
     float3 lightDir = normalize(
         lightPosition.xyz - (worldPos.xyz * lightPosition.w));
 
-        lightColour+=float4(0.2,0.2,0.2,lightColour.a);
+        lightColour+=float4(0.1,0.1,0.1,lightColour.a);
     
     return lightColour * max(dot(lightDir, worldNorm), 0.0);
 }
