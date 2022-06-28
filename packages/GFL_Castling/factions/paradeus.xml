@@ -508,6 +508,7 @@
 		</resources>
 	</soldier>
 	<soldier name="alina" spawn_score="0.05" squad_size_xp_cap="0.5" copy_from="default_ai">
+		<character filename="paradeus_nyto.text_lines"/>
 		<ai filename="excutioner.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="parw_alina.weapon" enabled="1" />
@@ -522,6 +523,7 @@
 		</resources>
 	</soldier>
 	<soldier name="teal" spawn_score="0.05" squad_size_xp_cap="0.5" copy_from="default_ai">
+		<character filename="paradeus_nyto.text_lines"/>
 		<ai filename="excutioner.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="parw_teal.weapon" enabled="1" />
@@ -537,6 +539,7 @@
 		</resources>
 	</soldier>
 	<soldier name="eagleyes" spawn_score="0.03" squad_size_xp_cap="0.5" copy_from="default_ai">
+		<character filename="paradeus_nyto.text_lines"/>
 		<ai filename="elite.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="parw_eagleyes.weapon" enabled="1" />
@@ -552,6 +555,7 @@
 		</resources>
 	</soldier>
 	<soldier name="vanguard" spawn_score="0.03" squad_size_xp_cap="0.5" copy_from="default_ai">
+		<character filename="paradeus_nyto.text_lines"/>
 		<ai filename="eod.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="parw_vanguard.weapon" enabled="1" />
@@ -567,6 +571,7 @@
 		</resources>
 	</soldier>
 	<soldier name="Nimogen" spawn_score="0.05" squad_size_xp_cap="0.5" copy_from="default_ai">
+		<character filename="paradeus_nyto.text_lines"/>
 		<ai filename="sniper.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="parw_nimogen.weapon" enabled="1" />
@@ -582,6 +587,7 @@
 		</resources>
 	</soldier>
 	<soldier name="Narciss" spawn_score="0.05" squad_size_xp_cap="0.5" copy_from="default_ai">
+		<character filename="paradeus_nyto.text_lines"/>
 		<ai filename="eod.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="parw_narciss.weapon" enabled="1" />
@@ -597,6 +603,7 @@
 		</resources>
 	</soldier>
 	<soldier name="Adeline" spawn_score="0.05" squad_size_xp_cap="0.5" copy_from="default_ai">
+		<character filename="paradeus_nyto.text_lines"/>
 		<ai filename="sniper.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="parw_nyto_black.weapon" enabled="1" />
