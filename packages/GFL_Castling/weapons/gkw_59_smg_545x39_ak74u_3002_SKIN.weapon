@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapons>
-<weapon key="gkw_ak74u_3002.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0">
+<weapon key="gkw_ak74u_3002.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 
     <specification 
 		accuracy_factor="0.98" 
@@ -66,7 +66,7 @@
     <target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0" />
 	<target_factors tag="commander" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0" />
 </weapon>
-<weapon key="gkw_ak74u_3002_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0">
+<weapon key="gkw_ak74u_3002_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 
     <specification 
 		accuracy_factor="0.85" 

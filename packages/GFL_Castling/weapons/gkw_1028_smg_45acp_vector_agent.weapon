@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapons>
-<weapon file="two_hands_smg.animation_base" key="gkw_vector_agent.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0">
+<weapon file="two_hands_smg.animation_base" key="gkw_vector_agent.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 <tag name="smg" />
     <specification 
 		accuracy_factor="0.98" 
@@ -90,7 +90,7 @@
 	<target_factors tag="commander" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0" />
 </weapon>
 
-<weapon file="two_hands_smg.animation_base" key="gkw_vector_agent_hpi.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0">
+<weapon file="two_hands_smg.animation_base" key="gkw_vector_agent_hpi.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 <tag name="smg" />
     <specification 
 		accuracy_factor="0.98" 
@@ -179,7 +179,7 @@
 	<target_factors tag="commander" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0" />
     </weapon>
 
-    <weapon key="gkw_vector_agent_sticky.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0">
+    <weapon key="gkw_vector_agent_sticky.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 
     <!--Weapon specifications-->
 

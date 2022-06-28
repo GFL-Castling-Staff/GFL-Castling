@@ -53,7 +53,7 @@
         <stance state_key="over_wall" accuracy="1.2" /> 	
 
     </weapon>
-    <weapon key="gkw_pk_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0">
+    <weapon key="gkw_pk_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
         
         <tag name="machine gun" />
 

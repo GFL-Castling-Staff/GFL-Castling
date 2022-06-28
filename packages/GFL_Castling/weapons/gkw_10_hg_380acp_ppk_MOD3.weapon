@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<weapon key="gkw_ppkmod3.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0">
+<weapon key="gkw_ppkmod3.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol" />
 	
 	<!--Weapon specifications-->
@@ -51,7 +51,7 @@
 
 	<!--Sounds-->
 		
-	<sound key="fire" fileref="ppk_fire_FromRE2RE.wav" pitch_variety="0.05" volume="1" />
+	<sound key="fire" fileref="ppksd_fire_FromBF5.wav" pitch_variety="0.05" volume="1" />
     <sound key="magazine_out" fileref="ppk_mgz_out_FromBF5.wav" volume="0.8" />
     <sound key="magazine_in" fileref="ppk_mgz_in_FromBF5.wav" volume="0.8"/>    
     <sound key="cycle" fileref="ppk_cycle_FromBF5.wav" volume="0.8" />
