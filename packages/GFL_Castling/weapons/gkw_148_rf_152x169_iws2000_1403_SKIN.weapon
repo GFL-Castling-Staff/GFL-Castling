@@ -64,8 +64,7 @@
     
         <tag name="melee" />
         <specification 
-        retrigger_time="-1"
-        last_burst_retrigger_time="0.6" 
+        retrigger_time="0.6"
         magazine_size="30"
         can_shoot_standing="1" 
         can_shoot_crouching="0" 
@@ -88,7 +87,7 @@
 
         <animation state_key="hold" animation_key="walking, 88typemod3_melee" />
         <animation state_key="hold_on_wall" animation_key="still overwall, 88typemod3_melee" />
-        <animation state_key="reload"   animation_key="walking, 88typemod3_melee" />
+        <animation state_key="reload"   animation_key="reload, 88typemod3_melee" />
         <animation state_key="still_against_wall"   animation_key="still against wall, 88typemod3_melee" />
         <animation state_key="prone_still" animation_key="walking, 88typemod3_melee" />
         <animation state_key="prone_moving" animation_key="walking, 88typemod3_melee" />
