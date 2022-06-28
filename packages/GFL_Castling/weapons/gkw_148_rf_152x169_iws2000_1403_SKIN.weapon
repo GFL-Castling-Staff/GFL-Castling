@@ -24,7 +24,7 @@
         burst_shots="1" />
         <next_in_chain key="gkw_iws2000_1403_skill.weapon" share_ammo="0" />
         <!--Animations-->
-        <inventory  buy_price="120.0" sell_price="120.0" />
+        <inventory  buy_price="240.0" sell_price="240.0" />
         <animation key="reload" animation_key="reloading, magazine rifle 2.1" />
         <!--Sounds-->
         <sound key="fire" fileref="iws2000_fire_FromSAMTSE.wav" pitch_variety="0.05" volume="1.4" />
@@ -39,7 +39,7 @@
         <hud_icon filename="gkw_iws2000_1403.png" />
         <!--Ballistics-->
         <weak_hand_hold offset="0.3" />
-        <projectile file="iwsAPFSDS.projectile">
+        <projectile file="bullet_iwsAPFSDS.projectile">
             <result class="blast" 
         damage="4" 
         radius="3.5" 
@@ -73,37 +73,35 @@
         carry_in_two_hands="0" 
         burst_shots="1"
         name="IWS 2000-[The Seventh Banisher]-[Reaper]" 
-        class="4"
+        class="0"
         supperessed="1"
         projectile_speed="100"
         use_basic_muzzle_smoke_effect="0"
         stab_enabled="1"
-        stab_range="5"
+        stab_range="5.5"
         sustained_fire_grow_step="0"
         />
         <next_in_chain key="gkw_iws2000_1403.weapon" share_ammo="0" />
 
-        <animation state_key="recoil"   animation_key="melee, nyto whip" />
-        <animation state_key="stabbing" animation_key="melee, nyto whip" />
-        <animation state_key="hold" animation_key="still, ninjato" />
-        <animation state_key="hold_on_wall" animation_key="still overwall, ninjato" />
-        <animation state_key="still_against_wall"   animation_key="still against wall, ninjato" />
-        <animation state_key="hold_casual"  animation_key="relaxed, ninjato" />
-        <animation state_key="running"  animation_key="running, ninjato" />
-        <animation state_key="walking"  animation_key="walking, ninjato" />
-        <animation state_key="crouching"    animation_key="crouch, ninjato" />
-        <animation state_key="crouch_moving"    animation_key="crouching forwards, ninjato" />
-        <animation state_key="crouch_moving_backwards"  animation_key="crouching backwards, ninjato" />
-        <animation state_key="prone_still" animation_key="prone still, ninjato" />
-        <animation state_key="prone_moving" animation_key="prone moving, ninjato" />
-        <animation state_key="walking_backwards" animation_key="walking backwards, ninjato" />
-        <animation state_key="changing_weapon_in"   animation_key="change weapon in, sword" />
-        <animation state_key="changing_weapon_out"  animation_key="change weapon out, sword" />
-        <animation state_key="reload"   animation_key="still, ninjato" />
-        
+        <animation state_key="recoil"   animation_key="stabbing1, 88typemod3_melee" />
+        <animation state_key="stabbing" animation_key="stabbing1, 88typemod3_melee" />
+
+        <animation state_key="hold" animation_key="walking, 88typemod3_melee" />
+        <animation state_key="hold_on_wall" animation_key="still overwall, 88typemod3_melee" />
+        <animation state_key="reload"   animation_key="walking, 88typemod3_melee" />
+        <animation state_key="still_against_wall"   animation_key="still against wall, 88typemod3_melee" />
+        <animation state_key="prone_still" animation_key="walking, 88typemod3_melee" />
+        <animation state_key="prone_moving" animation_key="walking, 88typemod3_melee" />
+        <animation state_key="walking_backwards" animation_key="walking backwards, 88typemod3_melee" />
+        <animation state_key="hold_casual"  animation_key="walking, 88typemod3_melee" />
+        <animation state_key="running"  animation_key="running, 88typemod3_melee" />
+        <animation state_key="walking"  animation_key="walking, 88typemod3_melee" />
+        <animation state_key="crouching"    animation_key="walking, 88typemod3_melee" />
+        <animation state_key="crouch_moving"    animation_key="walking, 88typemod3_melee" />
+        <animation state_key="crouch_moving_backwards"  animation_key="walking backwards, 88typemod3_melee" />
         <model filename="gkw_rf_iws2000_1403.xml" />
     
-        <inventory  buy_price="120.0" sell_price="120.0" />
+        <inventory  buy_price="240.0" sell_price="240.0" />
          
         <projectile file="teal.projectile">
             <result class="blast" radius="5.5" damage="3" decal="0" push="0.0" character_state="death" faction_compare="not_equal" make_vehicle_hit_sound="0" />

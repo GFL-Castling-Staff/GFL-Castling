@@ -39,7 +39,7 @@
         <hud_icon filename="gkw_iws2000.png" />
         <!--Ballistics-->
         <weak_hand_hold offset="0.3" />
-        <projectile file="iwsAPFSDS.projectile">
+        <projectile file="bullet_iwsAPFSDS.projectile">
             <result class="blast" 
         damage="4" 
         radius="3.5" 
@@ -97,7 +97,7 @@
         <hud_icon filename="gkw_iws2000_skill.png" />
         <!--Ballistics-->
         <weak_hand_hold offset="0.3" />
-        <projectile file="iwsAPFSDS.projectile">
+        <projectile file="bullet_iwsAPFSDS.projectile">
             <result class="blast" 
             damage="10" 
             radius="4.0" 
