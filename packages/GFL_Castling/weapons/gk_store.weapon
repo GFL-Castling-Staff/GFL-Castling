@@ -6,7 +6,7 @@
     spawn_instance_class="vehicle" 
     spawn_instance_key="gk_store" 
 	/>
-    <model mesh_filename="barrier_item.mesh" texture_filename="hg_store.png" />
+    <model mesh_filename="deploy_boxi.mesh" texture_filename="box.png" />
     <hud_icon filename="HG.png" />
 </weapon>
 <weapon file="deployable.base_weapon" key="deployable_hvy_store.weapon" radius="0.25" >
@@ -15,7 +15,7 @@
     spawn_instance_class="vehicle" 
     spawn_instance_key="hvy_store" 
 	/>
-    <model mesh_filename="barrier_item.mesh" texture_filename="sg_store.png" />
+    <model mesh_filename="deploy_boxi.mesh" texture_filename="box2.png" />
     <hud_icon filename="HVY.png" />
 </weapon>
 <weapon file="deployable.base_weapon" key="ogas.weapon" radius="0.25" >

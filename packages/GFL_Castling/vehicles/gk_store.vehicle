@@ -2,10 +2,10 @@
 <vehicles>
 	<vehicle name="IOP Supply Chest" key="gk_store" file="store.base_vehicle">
 		<item_container class="armory" offset="0 0 0.0" soldier_group="default_store"/>
-		<visual class="chassis" mesh_filename="hesco_barrier.mesh" texture_filename="hg_store.png" />
+		<visual class="chassis" mesh_filename="deploy_box.mesh" texture_filename="box.png" />
 	</vehicle>
 	<vehicle name="IOP Supply Chest" key="hvy_store" file="store.base_vehicle">
 		<item_container class="armory" offset="0 0 0.0" soldier_group="player_hvy"/>
-		<visual class="chassis" mesh_filename="hesco_barrier.mesh" texture_filename="hvy_store.png" />
+		<visual class="chassis" mesh_filename="deploy_box.mesh" texture_filename="box2.png" />
 	</vehicle>
 </vehicles>
