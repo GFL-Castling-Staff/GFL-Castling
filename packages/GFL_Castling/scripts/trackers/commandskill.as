@@ -2177,7 +2177,7 @@ class CommandSkill : Tracker {
                     if (index>=0){
                         int kill_count=KillCountArray[index].m_killnum;
                         if (kill_count>=7){
-                            CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"ppk_tracer_dart_3.projectile",characterId,factionid,60);
+                            CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"ppk_tracer_dart_3.projectile",characterId,factionid,260);
                         }
                         if (kill_count>=15){
                             insertA10Airstrike(m_metagame,characterId,factionid,stringToVector3(target));

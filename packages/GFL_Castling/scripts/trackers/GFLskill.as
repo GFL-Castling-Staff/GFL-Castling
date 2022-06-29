@@ -303,7 +303,11 @@ class GFLskill : Tracker {
 		//在得知查询车辆id需要时间并不久后以上说法当放屁处理
 		//单次提取到vehicleid后后续一直跟踪id车辆位置即可。
 
-		if (EventKeyGet == "javelin_launch") {//激发弹头为贴在目标载具上的初始定位弹头
+		//给玩家用的标枪以上0过程当放屁，直接读取玩家瞄准位置的坐标然后锁定周围的载具
+		//ai由于无法直接读取瞄准位置所以寄，照样，不过目前也没有用标枪的ai
+
+
+		if (EventKeyGet == "javelin_launch_for_sb_ai") {//激发弹头为贴在目标载具上的初始定位弹头
 			_log("javelin_launch");
 			int characterId = event.getIntAttribute("character_id");
 			const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
@@ -313,6 +317,38 @@ class GFLskill : Tracker {
 				Vector3 target_pos = stringToVector3(event.getStringAttribute("position"));//标枪发射器发射时的载具位置
 				int vehicleid = getNearByEnemyVehicle(m_metagame,factionid,target_pos,7);
 
+				Vector3 aimer_pos = stringToVector3(character.getStringAttribute("position"));
+
+				Vector3 pos1 = getAimUnitPosition(m_metagame,1,aimer_pos,target_pos);
+				Vector3 pos2 = getAimUnitPosition(m_metagame,8.0,aimer_pos,target_pos);
+				pos1 = pos1.add(Vector3(0,0.8,0));				
+				pos2 = pos2.add(Vector3(0,8,0));
+				CreateProjectile(m_metagame,pos1,pos2,"javelin_rocket_1.projectile",characterId,factionid,5,6);	
+				//CreateProjectile(m_metagame,target_pos,target_pos.add(Vector3(0,0,0)),"javelin_locater_2.projectile",characterId,factionid,0,8);	
+				//CreateProjectile(m_metagame,target_pos,target_pos.add(Vector3(0,0,0)),"javelin_locater_3.projectile",characterId,factionid,0,8);
+				Javelin_list.insertLast(Javelin_lister(characterId,factionid,vehicleid,target_pos));//存储初始定位弹头锁定的载具id							
+			}			
+		}
+		if (EventKeyGet == "javelin_launch") {//激发弹头为贴在目标载具上的初始定位弹头
+			_log("javelin_launch");
+			int characterId = event.getIntAttribute("character_id");
+			int playerId = event.getIntAttribute("player_id");
+			const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+			if (character !is null) {
+				const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+				Vector3 target_pos;
+				int factionid = character.getIntAttribute("faction_id");
+
+				if (player !is null){
+					if (player.hasAttribute("aim_target")) {
+                		target_pos = stringToVector3(player.getStringAttribute("aim_target"));		
+					}
+				}
+				else{
+					target_pos = stringToVector3(event.getStringAttribute("position"));//标枪发射器发射时的载具位置
+				}
+
+				int vehicleid = getNearByEnemyVehicle(m_metagame,factionid,target_pos,7);
 				Vector3 aimer_pos = stringToVector3(character.getStringAttribute("position"));
 
 				Vector3 pos1 = getAimUnitPosition(m_metagame,1,aimer_pos,target_pos);
