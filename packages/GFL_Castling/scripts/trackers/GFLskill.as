@@ -405,17 +405,20 @@ class GFLskill : Tracker {
 							if(target_id!=-1){
 								_log("aimming 2 success.");
 								const XmlElement@ target_info = getVehicleInfo(m_metagame, target_id);
-								
-								Vector3 target_pos1 = stringToVector3(target_info.getStringAttribute("position"));
-								_log("Position 1 = "+target_pos1.toString());
 
-								TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
-								tasker.add(DelayProjectileSet(m_metagame,0.8,characterId,factionid,"bullet.projectile",target_pos1));
-								
-								Vector3 target_pos2 = stringToVector3(target_info.getStringAttribute("position"));
-								_log("Position 2 = "+target_pos2.toString());
+								//有病								
+								// Vector3 target_pos1 = stringToVector3(target_info.getStringAttribute("position"));
+								// _log("Position 1 = "+target_pos1.toString());
 
-								target_fin_pos = target_pos2.add(getAimUnitVector(5.0,target_pos1,target_pos2));//标枪导弹目标位置
+								// TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+								// tasker.add(DelayProjectileSet(m_metagame,0.8,characterId,factionid,"bullet.projectile",target_pos1));
+								
+								// Vector3 target_pos2 = stringToVector3(target_info.getStringAttribute("position"));
+								// _log("Position 2 = "+target_pos2.toString());
+
+								// target_fin_pos = target_pos2.add(getAimUnitVector(5.0,target_pos1,target_pos2));//标枪导弹目标位置
+								target_fin_pos = stringToVector3(target_info.getStringAttribute("position"));//标枪导弹目标位置
+
 							}
 							else{
 								target_fin_pos = Javelin_list[a].m_pos;
