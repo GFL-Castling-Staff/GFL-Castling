@@ -26,6 +26,7 @@
     <sound key="magazine_out" fileref="m1911_mgz_out_FromFC5.wav" volume="0.4" />
     <sound key="magazine_in" fileref="m1911_mgz_in_FromFC5.wav" volume="0.4"/>    
     <sound key="cycle" fileref="m1911_cycle_FromFC5.wav" volume="0.4" />
+    <effect class="muzzle" ref="ejection_9mm"/>
 
 	<!--Model, Icon, Cost-->
     <model filename="" />

@@ -26,6 +26,7 @@
         <projectile file="bullet.projectile">
             <result class="hit" kill_probability="1.9" kill_decay_start_time="2.321" kill_decay_end_time="3.869" />
         </projectile>
+        <effect class="muzzle" ref="ejection_76251" />
         <stance state_key="running" accuracy="0.1" />
         <stance state_key="walking" accuracy="0.1" />
         <stance state_key="crouch_moving" accuracy="1" />
@@ -65,6 +66,7 @@
         <projectile file="bullet.projectile">
             <result class="hit" kill_probability="1.2" kill_probability_offset_on_successful_hit="1.5" kill_decay_start_time="2.321" kill_decay_end_time="3.869" />
         </projectile>
+        <effect class="muzzle" ref="ejection_76251" />
         <stance state_key="running" accuracy="0.6" />
         <stance state_key="crouch_moving" accuracy="0.6" />
         <stance state_key="prone_moving" accuracy="0.6" />

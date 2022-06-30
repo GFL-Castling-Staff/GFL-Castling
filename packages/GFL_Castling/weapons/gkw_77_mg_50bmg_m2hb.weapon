@@ -34,6 +34,7 @@
         <projectile file="bullet.projectile">
             <result class="hit" kill_probability="2.2" kill_probability_offset_on_successful_hit="1.5" kill_decay_start_time="1.0" kill_decay_end_time="2.0"  damage_origin_vehicle="0"/>
         </projectile>
+        <effect class="muzzle" ref="ejection_76251" />
         <!--Accuracy, Movement speed-->
         <stance state_key="running" accuracy="-1" />
         <stance state_key="walking" accuracy="-1" />
@@ -84,6 +85,7 @@
             <effect class="result" key="static_object" copy="terrain"/>
             <effect class="result" key="vehicle" copy="terrain"/>
         </projectile>
+        <effect class="muzzle" ref="ejection_76251" />
         <!--Accuracy, Movement speed-->
         <stance state_key="running" accuracy="0.3" />
         <stance state_key="crouch_moving" accuracy="0.3" />

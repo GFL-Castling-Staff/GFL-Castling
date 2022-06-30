@@ -69,6 +69,7 @@
     <projectile file="bullet.projectile" can_be_detected_by_footmen="0">
         <result class="hit"  kill_probability="1.75" kill_probability_offset_on_successful_hit="1" kill_decay_start_time="0.476" kill_decay_end_time="0.7943" />
     </projectile>
+    <effect class="muzzle" ref="ejection_556" />
     
     <stance state_key="running" accuracy="0.5" />
     <stance state_key="walking" accuracy="0.65" />
@@ -133,6 +134,7 @@
     <projectile file="bullet.projectile" can_be_detected_by_footmen="0">
         <result class="hit"  kill_probability="1.75" kill_probability_offset_on_successful_hit="2.4" kill_decay_start_time="2.8" kill_decay_end_time="3.333" />
     </projectile>
+    <effect class="muzzle" ref="ejection_556" />
     
     <stance state_key="running" accuracy="0.4" />
     <stance state_key="walking" accuracy="0.55" />

@@ -42,7 +42,7 @@
         <projectile file="bullet.projectile">
             <result class="hit" kill_probability="2.0" kill_decay_start_time="1.5" kill_decay_end_time="1.6" />
         </projectile>
-
+        <effect class="muzzle" ref="ejection_76251" />
         <stance state_key="running" accuracy="0.5" />
         <stance state_key="walking" accuracy="0.55" />
         <stance state_key="crouch_moving" accuracy="0.65" />
@@ -117,7 +117,7 @@
             <effect class="result" key="static_object" copy="terrain"/>
             <effect class="result" key="vehicle" copy="terrain"/>
         </projectile>
-
+        <effect class="muzzle" ref="ejection_76251" />
         <shield offset="-0.60 0.0 -0.2" extent="0.8 1.5 2.4" />
         <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />

@@ -30,16 +30,13 @@
   <sound key="cycle" fileref="PPSH_cycle_FromCOD17.wav" volume="0.9" />
   <sound class="impact" fileref="rifle_drop.wav" volume="1"/>
   <model filename="gkw_smg_ppsh41.xml" />
-
-  <effect class="muzzle" ref="ejection_556" />
-
   <hud_icon filename="gkw_ppsh41.png" />
 
   <weak_hand_hold offset="0.2" />
   <projectile file="bullet.projectile">
     <result class="hit" kill_probability="1.6" kill_probability_offset_on_successful_hit="1.25" kill_decay_start_time="0.005" kill_decay_end_time="0.75" />
   </projectile>
-
+  <effect class="muzzle" ref="ejection_9mm"/>
   <stance state_key="running" accuracy="0.85" />
   <stance state_key="walking" accuracy="0.9" />
   <stance state_key="crouch_moving" accuracy="0.9" />

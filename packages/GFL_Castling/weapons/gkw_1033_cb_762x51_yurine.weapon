@@ -42,6 +42,7 @@
         <projectile file="bullet.projectile">
             <result class="hit"  kill_probability="1.7" kill_decay_start_time="1.933" kill_decay_end_time="3.222" />
         </projectile>
+    <effect class="muzzle" ref="ejection_76251" />
         <modifier class="speed" value="-0.3" />
         <modifier class="detectability" value="+0.3" />
     </weapon>
@@ -95,6 +96,7 @@
 		<projectile file="teal.projectile">
 			<result class="blast" radius="3.6" damage="1.0" decal="0" push="0.0" character_state="death" faction_compare="not_equal" make_vehicle_hit_sound="0" />
 		</projectile>
+    <effect class="muzzle" ref="ejection_76251" />
         <capacity value="1" source="rank" source_value="0.0" />
         <stance state_key="running" accuracy="1" />
         <stance state_key="walking" accuracy="1" />

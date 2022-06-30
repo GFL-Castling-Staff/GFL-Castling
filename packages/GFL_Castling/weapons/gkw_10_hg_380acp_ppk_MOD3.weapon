@@ -72,7 +72,7 @@
 		kill_decay_start_time="0.18"
 		kill_decay_end_time="0.48"  />
 	</projectile>
-    
+	<effect class="muzzle" ref="ejection_9mm"/>
     <!--Accuracy, Movement speed-->
         
     <stance state_key="running" accuracy="1.0" />

@@ -34,6 +34,7 @@
         <projectile file="bullet.projectile" can_be_detected_by_footmen="0">
             <result class="hit" kill_probability="1.9" kill_probability_offset_on_successful_hit="0.75" kill_decay_start_time="1.292" kill_decay_end_time="2.154" />
         </projectile>
+        <effect class="muzzle" ref="ejection_556" />
         <stance state_key="running" accuracy="0.3" />
         <stance state_key="walking" accuracy="0.65" />
         <stance state_key="crouch_moving" accuracy="0.9" />

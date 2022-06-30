@@ -40,6 +40,7 @@
     <projectile file="bullet.projectile">
         <result class="hit"  kill_probability="2.4" kill_decay_start_time="0.8" kill_decay_end_time="1.333" />
     </projectile>
+    <effect class="muzzle" ref="ejection_556" />
     
     <stance state_key="running" accuracy="1" />
     <stance state_key="walking" accuracy="1" />
