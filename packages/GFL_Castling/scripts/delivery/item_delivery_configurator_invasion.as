@@ -505,7 +505,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		ScoredResource("gift_box_2.carry_item", "carry_item", 15.0f,1),
 		ScoredResource("lottery.carry_item", "carry_item", 20.0f,3),
 		ScoredResource("core_mask.carry_item", "carry_item", 5.0f,1),
-		ScoredResource("dollcraft.carry_item", "carry_item", 40.0f,5)
+		ScoredResource("dollcraft.carry_item", "carry_item", 30.0f,5)
 			},
 			{
 		// ScoredResource("gkw_hk21.weapon", "weapon", 0.5f),
@@ -1198,7 +1198,11 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 				ScoredResource("gkw_webley.weapon", "weapon", 0.2f),
 				ScoredResource("gkw_welrod.weapon", "weapon", 0.2f)
 
-			}
+			},
+			{
+				ScoredResource("core_mask.carry_item", "carry_item", 1.0f),
+				ScoredResource("", "carry_item", 99.0f)
+			}			
 		};
 
 		processRewardPasses(rewardPasses);
@@ -1246,7 +1250,11 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 				ScoredResource("gkw_sterling.weapon", "weapon", 0.2f),
 				ScoredResource("gkw_sr3mp.weapon", "weapon", 0.2f)
 
-			}
+			},
+			{
+				ScoredResource("core_mask.carry_item", "carry_item", 1.0f),
+				ScoredResource("", "carry_item", 99.0f)
+			}			
 		};
 
 		processRewardPasses(rewardPasses);
@@ -1304,7 +1312,11 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 				ScoredResource("gkw_vhs.weapon", "weapon", 0.2f),
 				ScoredResource("gkw_zasm21.weapon","weapon",0.2f)
 
-			}
+			},
+			{
+				ScoredResource("core_mask.carry_item", "carry_item", 1.0f),
+				ScoredResource("", "carry_item", 99.0f)
+			}			
 		};
 
 		processRewardPasses(rewardPasses);
@@ -1361,7 +1373,11 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 				ScoredResource("gkw_sl8.weapon", "weapon", 0.2f),
 				ScoredResource("gkw_ballista.weapon", "weapon", 0.2f)
 
-			}
+			},
+			{
+				ScoredResource("core_mask.carry_item", "carry_item", 1.0f),
+				ScoredResource("", "carry_item", 99.0f)
+			}			
 		};
 
 		processRewardPasses(rewardPasses);
@@ -1402,7 +1418,11 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 				ScoredResource("gkw_fp6.weapon", "weapon", 0.2f),
 				ScoredResource("gkw_ltlx7000.weapon","weapon",0.2f)
 
-			}
+			},
+			{
+				ScoredResource("core_mask.carry_item", "carry_item", 1.0f),
+				ScoredResource("", "carry_item", 99.0f)
+			}			
 		};
 
 		processRewardPasses(rewardPasses);
@@ -1445,7 +1465,11 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 				ScoredResource("gkw_rpk203.weapon", "weapon", 0.2f),
 				ScoredResource("gkw_negev.weapon", "weapon", 0.2f)
 
-			}
+			},
+			{
+				ScoredResource("core_mask.carry_item", "carry_item", 1.0f),
+				ScoredResource("", "carry_item", 99.0f)
+			}			
 		};
 
 		processRewardPasses(rewardPasses);
