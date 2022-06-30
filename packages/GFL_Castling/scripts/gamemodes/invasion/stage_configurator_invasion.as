@@ -156,6 +156,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 	// ------------------------------------------------------------------------------------------------
 	protected void setupNormalStages() {
+		addStage(setupStage7());          // map6
 		addStage(setupStage107());		  // chapter1 by diling
 		// addStage(setupStage109());		  // chapter2 by diling
 		addStage(setupStage8());          // map8
@@ -163,7 +164,6 @@ class StageConfiguratorInvasion : StageConfigurator {
 		// addStage(setupEggStage());		  // 上坟
 		addStage(setupStage3());		  // map3 c
 		addStage(setupStage9());          // map9
-		addStage(setupStage7());          // map6
 		addStage(setupStage1());          // map2
 		addStage(setupStage4());          // map7
 		addStage(setupStage15());         // map1_2
@@ -177,7 +177,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		addStage(setupStage104()); 		  // map105_1 zoneAttack by diling
 		addStage(setupStage105()); 		  // map105_2 shockzone by diling
 		addStage(setupStage6());          // map5
-		addStage(setupStage14());         // map6_2
+		// addStage(setupStage14());         // map6_2
 		addStage(setupStage106());		  // map106 E30 Route by diling
 		// addStage(setupStage5());          // map1
 		addStage(setupStage19());		  // map19
@@ -947,34 +947,31 @@ class StageConfiguratorInvasion : StageConfigurator {
 	protected Stage@ setupStage7() {
 		Stage@ stage = createStage();
 		stage.m_mapInfo.m_name = "Rattlesnake Crescent";
-		stage.m_mapInfo.m_path = "media/packages/vanilla.desert/maps/map6";
+		stage.m_mapInfo.m_path = "media/packages/GFLC_Map/maps/map6_c";
 		stage.m_mapInfo.m_id = "map6";
 
 		stage.m_maxSoldiers = 15 * 9;                                             // was 17*7 in 1.65
 		stage.m_playerAiCompensation = 8;                                         // was 7 (test4)
         stage.m_playerAiReduction = 2;                                            // was 3 (test2)
-    
-		stage.addTracker(Spawner(m_metagame, 1, Vector3(485,5,705), 10, "default_ai"));        // outpost filler (1.70)
-
+    	stage.addTracker(jupiter(m_metagame,30));
 		stage.addTracker(PeacefulLastBase(m_metagame, 0));
 		stage.addTracker(CommsCapacityHandler(m_metagame));
 
-		stage.m_minRandomCrates = 2; 
-		stage.m_maxRandomCrates = 3;
+		stage.m_minRandomCrates = 4; 
+		stage.m_maxRandomCrates = 8;
 
 		{
-			// greens will push a bit harder here
-			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0, 0.4, 0.15));   // was 0.3, 0.12 in 1.65
+			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0, 0.4, 0.15)); 
 			f.m_overCapacity = 0;
 			f.m_capacityOffset = 0; 
-			f.m_capacityMultiplier = 1.0;                                          // was 0.9 in 1.65
+			f.m_capacityMultiplier = 1.0;
 			f.m_bases = 1;
 			stage.m_factions.insertLast(f);
 		}
 		{
-			Faction f(getFactionConfigs()[2], createCommanderAiCommand(1, 0.45, 0.2));        // was not set (default) in 1.65
-			f.m_overCapacity = 80;                                              // was 60 (test2) 
-			f.m_capacityOffset = 15;                                               // was 10 in 1.65
+			Faction f(getFactionConfigs()[2], createCommanderAiCommand(1, 0.45, 0.2)); 
+			f.m_overCapacity = 80;                                              
+			f.m_capacityOffset = 15;                                            
 			stage.m_factions.insertLast(f);
 		}
 
@@ -988,7 +985,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 			command.setIntAttribute("faction_id", 1);
 			addFactionResourceElements(command, "vehicle", array<string> = {"aa_emplacement.vehicle"}, true);
 
-			stage.m_extraCommands.insertLast(command);
+			stage.m_extraCommands.insertLast(command); 
 		}
 
 		setDefaultAttackBreakTimes(stage);
@@ -1741,7 +1738,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.m_mapInfo.m_name = "Warsalt Legacy";
 		stage.m_mapInfo.m_path = "media/packages/GFLC_Map/maps/map18";
 		stage.m_mapInfo.m_id = "map18";
-		
+		stage.addTracker(jupiter(m_metagame,30));
 		stage.m_includeLayers.insertLast("layer1.invasion");		
 
 		stage.m_maxSoldiers = 16 * 15;
