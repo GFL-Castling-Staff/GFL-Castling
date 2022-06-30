@@ -350,6 +350,8 @@ class GFLskill : Tracker {
 
 				int vehicleid = getNearByEnemyVehicle(m_metagame,factionid,target_pos,7);
 				Vector3 aimer_pos = stringToVector3(character.getStringAttribute("position"));
+				if(vehicleid!=-1)playSoundAtLocation(m_metagame,"javelin_locked.wav",factionid,aimer_pos,1.0);//锁定载具成功
+				else	playSoundAtLocation(m_metagame,"javelin_lock_fail.wav",factionid,aimer_pos,1.0);//未锁定载具
 
 				Vector3 pos1 = getAimUnitPosition(m_metagame,1,aimer_pos,target_pos);
 				Vector3 pos2 = getAimUnitPosition(m_metagame,8.0,aimer_pos,target_pos);
