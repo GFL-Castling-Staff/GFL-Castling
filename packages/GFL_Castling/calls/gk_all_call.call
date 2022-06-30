@@ -141,6 +141,16 @@
         <capacity value="100" source="rank" source_value="1.143" />
         <inventory encumbrance="0.0" price="300.0" />
     </call>
+    <call name="vehicle supply" key="gk_airdrop_supply.call" initiation_comment1="Request IOP Supply" acknowledge_comment="Confirm, data reception is normal" acknowledge_time="0" launch_comment="droping in" notify_metagame="1">
+        <round instances="1" instance_class="vehicle" instance_key="gk_store" instance_spread="0 0 0" common_spread="0 0 0" launch_time="2.0" spawn_time="3.0" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="50.0" initial_speed_to_target="0.0">
+            <effect class="launch" ref="ShadowAirplaneFlyby" shadow="1" />
+            <sound class="launch" fileref="plane_flyby.wav" />
+        </round>
+        <hud_icon filename="call_Airborne_armory.png" />
+        <capacity value="0" source="rank" source_value="0.0" />
+        <capacity value="100" source="rank" source_value="1.143" />
+        <inventory encumbrance="0.0" price="150.0" />
+    </call>    
     <!-- 搜救妖精 -->
     <call name="repair_capsules" key="gk_medic_agl.call" initiation_comment1="Rescue Fairy--Nano Repair Capsules" acknowledge_comment="Confirm, data reception is normal" acknowledge_time="0" launch_comment="Nano repair capsules in progress." notify_metagame="1">
         <round instances="8" instance_class="grenade" instance_key="medical_agl_call.projectile" instance_spread="3 6 3" common_spread="0 0 0" launch_time="2.0" spawn_time="3.0" horizontal_offset_at_spawn="0.0">
