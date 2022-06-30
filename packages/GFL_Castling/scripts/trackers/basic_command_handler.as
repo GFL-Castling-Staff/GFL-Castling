@@ -661,6 +661,8 @@ class BasicCommandHandler : Tracker {
 			destroyAllEnemyVehicles("radio_jammer.vehicle");
 		} else  if(checkCommand(message, "mustela")) {
 			spawnInstanceNearPlayer(senderId, "wiesel_tow.vehicle", "vehicle", 0);        
+		} else  if(checkCommand(message, "mortar")) {
+			spawnInstanceNearPlayer(senderId, "mortar_resource.weapon", "weapon", 0);        
 		} else  if(checkCommand(message, "javelin")) {
 			spawnInstanceNearPlayer(senderId, "gkw_consume_javelin.weapon", "weapon", 0);        
 		} else  if(checkCommand(message, "humvee")) {
