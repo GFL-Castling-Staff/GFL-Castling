@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<projectile class="grenade" name="Golyat" key="hand_golyat.throwable" slot="0" radius="0.3" drop_count_factor_on_death="1" drop_count_factor_on_player_death="1" >
+<projectile class="grenade" name="Golyat" key="hand_golyat.throwable" slot="0" radius="0.3" drop_count_factor_on_death="1" drop_count_factor_on_player_death="1" pulldown_in_air="25.0" >
 
 
     <result class="blast" radius="20.0" damage="30.0" push="1.0" decal="1" character_state="death" faction_compare="not_equal" />
@@ -10,7 +10,13 @@
     <model mesh_filename="golyatplg.xml" />
     <hud_icon filename="hud_glorianade.png" />
 
-    <throwable curve_height="8.0" near_far_distance="5.0" speed_estimation_near="60.0" speed_estimation_far="60.0" max_speed="60.0" randomness="0.07" />
+    <throwable 	
+	near_far_distance="100.0"
+	speed_estimation_near="20.0"
+	speed_estimation_far="20.0"
+	max_speed="20.0" 
+	randomness="0.05" 
+	/>
 
     <!-- projectile slot 0 is used for hand grenade items currently -->
     <!-- bound to change -->
