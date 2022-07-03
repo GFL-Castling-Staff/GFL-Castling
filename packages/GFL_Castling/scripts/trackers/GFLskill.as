@@ -268,7 +268,7 @@ class GFLskill : Tracker {
 				array<const XmlElement@> affectedCharacter;
 				_log("Scan successful");
 				for(uint i=0;i<m_fnum;i++) 
-					if(i!=factionid) {
+					if(i==0) {
 					array<const XmlElement@> affectedCharacter2;
 					affectedCharacter2 = getCharactersNearPosition(m_metagame,pos_smartgrenade,i,10.0f);
 					if (affectedCharacter2 !is null){
@@ -283,7 +283,12 @@ class GFLskill : Tracker {
 					uint luckyGuyid = affectedCharacter[luckyGuyindex].getIntAttribute("id");
 					const XmlElement@ luckyGuy = getCharacterInfo(m_metagame, luckyGuyid);
 					Vector3 luckyGuyPos = stringToVector3(luckyGuy.getStringAttribute("position"));
-					CreateProjectile(m_metagame,pos_smartgrenade,luckyGuyPos,"kcco_smartgrenade_3.projectile",characterId,factionid,120,0.01);
+					//智能雷对披风的减伤
+					string vestkey = getPlayerEquipmentKey(m_metagame,luckyGuyid,4);
+                    if (vestkey=="cc_t4.carry_item" || vestkey=="cc_t5_16lab.carry_item" )
+						CreateProjectile(m_metagame,pos_smartgrenade,luckyGuyPos,"kcco_smartgrenade_3_1.projectile",characterId,factionid,120,0.01);
+					else
+						CreateProjectile(m_metagame,pos_smartgrenade,luckyGuyPos,"kcco_smartgrenade_3.projectile",characterId,factionid,120,0.01);
 				}
 				else {
 					_log("Locate2 successful");

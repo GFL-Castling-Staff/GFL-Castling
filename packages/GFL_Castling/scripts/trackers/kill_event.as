@@ -192,25 +192,24 @@ class kill_event : Tracker {
             string Solider_Name = target.getStringAttribute("soldier_group_name");
             string KillerWeaponKey = event.getStringAttribute("key");
             string killway= event.getStringAttribute("method_hint");
+
             if(KillerWeaponKey=="gkw_ppkmod3.weapon"){
-                // _log("PPK skill " + killway);
+                // 乌鸦是猪，望周知
                 int i = findSkillIndex(characterId,"PPKMOD3");
                 if(i >=0){
                     SkillArray[i].m_time-=2.0;
-                    if (killway=="hit"){
-                        int j = findKillCountIndex(characterId);
-                        if(j>=0){
-                            KillCountArray[j].add();
-                            //_log("PPK kill " + KillCountArray[j].m_killnum);
-                        }
-                        else{
-                            KillCountArray.insertLast(kill_count(characterId,1));
-                        }
+                }    
+                if (killway=="hit"){
+                    int j = findKillCountIndex(characterId);
+                    if(j>=0){
+                        KillCountArray[j].add();
+                        //_log("PPK kill " + KillCountArray[j].m_killnum);
                     }
-                }
+                    else{
+                        KillCountArray.insertLast(kill_count(characterId,1));
+                    }
+                }    
             }
-        
-            
 
             switch(int(healOnKillWeaponList[KillerWeaponKey]))
             {
