@@ -23,6 +23,16 @@
 // 在tracker里面整理空袭队列，update才射出弹头。
 array<Airstrike_strafer@> Airstrike_strafe;
 
+// 列空袭对应的脚本技能编号。注意字典的值为了配合后面的只能用uint，不可用string，float等    
+dictionary airstrikeIndex = {
+
+        // 空武器
+        {"",-1},
+
+
+        {"a10_strafe",0},
+        {"ioncannon_strafe",1}
+};
 	// --------------------------------------------
 class GFLairstrike : Tracker {
 	protected GameMode@ m_metagame;
@@ -33,34 +43,6 @@ class GFLairstrike : Tracker {
 	// --------------------------------------------
 	GFLairstrike(GameMode@ metagame) {
 		@m_metagame = @metagame;
-	}
-
-
-	// --------------------------------------------
-	protected void handleResultEvent(const XmlElement@ event) {
-		//checking if the event was triggered by a rangefinder notify_script
-        string EventKeyGet = event.getStringAttribute("key");
-		if (EventKeyGet == "a10_gun_strafe"){
-            int characterId = event.getIntAttribute("character_id");
-            const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
-            if (character !is null) {
-                uint factionid = character.getIntAttribute("faction_id");
-                Vector3 pos_a10_gun_strafe = stringToVector3(event.getStringAttribute("position"));
-
-                _log("A10 gun strafe activate successful");	
-
-                float rand_x = cos(float(rand(0,628))/100)-0.5;
-                float rand_y = sin(float(rand(0,628))/100)-0.5;
-                Vector3 luckyGuyPos = pos_a10_gun_strafe.add(Vector3(rand_x,0,rand_y)); //若周围没有敌人又必须要扫射，则直接默认以任意朝向扫一轮
-
-                int luckyGuyid = getNearbyRandomLuckyGuyId(m_metagame,factionid,pos_a10_gun_strafe,30.0f);
-                if(luckyGuyid!=-1){
-                    const XmlElement@ luckyGuy = getCharacterInfo(m_metagame, luckyGuyid);
-                    luckyGuyPos = stringToVector3(luckyGuy.getStringAttribute("position"));                        
-                }
-                Airstrike_strafe.insertLast(Airstrike_strafer(characterId,factionid,0,pos_a10_gun_strafe,luckyGuyPos));          						
-            }		
-        }	    
 	}
 
 	void update(float time) {
@@ -116,19 +98,38 @@ class GFLairstrike : Tracker {
                                 float rand_y = rand(-strike_rand,strike_rand);
                                 
                                 CreateDirectProjectile(m_metagame,startPos,endPos.add(Vector3(rand_x,0,rand_y)),"ASW_A10_strafe.projectile",cid,fid,180);           
-                            }
-                            // playRandomSoundArray(m_metagame,Voice,fid,endPos.toString(),2);
-                            
+                            } 
                         }                               
-                        // array<string> Voice={
-                        //     "mab38mod3_skilll1.wav",
-                        //     "mab38mod3_skilll2.wav",
-                        //     "mab38mod3_skilll3.wav",
-                        //     "mab38mod3_skilll4.wav",
-                        //     "mab38mod3_skilll5.wav"                        
-                        // };
-                        // playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);           
-                        //CreateDirectProjectile(m_metagame,c_pos.add(Vector3(0,30,0)),s_pos.add(Vector3(0,30,0)),"a10_warthog_shadow.projectile",cid,fid,100);  
+                        Airstrike_strafe.removeAt(a);
+                        break;
+                    }
+                    case 1:{//离子炮 单次 锁人扫射
+                        //扫射位置偏移单位向量 与 扫射位置偏移单位距离
+                        Vector3 strike_vector = getAimUnitVector(1,start_pos,end_pos); 
+                        float strike_didis = 0.5;
+                        //扫射起点 从弹头终点指向弹头起点的位置 
+                        Vector3 pos_offset = Vector3(0,60,0);
+                        //扫射终点的起点与终点（就生成弹头的终点的起始位置与终止位置）
+                        Vector3 c_pos = start_pos.add(getMultiplicationVector(strike_vector,Vector3(-8,0,-8)));
+                        Vector3 s_pos = end_pos.add(getMultiplicationVector(strike_vector,Vector3(8,0,8)));
+                        //依据扫射位置偏移单位距离而设置的扫射次数
+                        int strike_time = int(getAimUnitDistance(1,c_pos,s_pos)/strike_didis);
+                        //弹头起始扫射位置与终止扫射位置
+                        Vector3 startPos = c_pos.add(pos_offset);
+                        Vector3 endPos = c_pos;
+
+                        array<string> Voice={
+                        "a10_fire_FromWARTHUNDER.wav",
+                        };   
+
+                        for(int i=0;i<=strike_time;i++){
+                            //水平偏移
+                            startPos = startPos.add(getMultiplicationVector(strike_vector,Vector3(strike_didis,0,strike_didis)));
+                            endPos = endPos.add(getMultiplicationVector(strike_vector,Vector3(strike_didis,0,strike_didis)));
+                            //每单轮扫射生成1次对点扫射
+                            CreateDirectProjectile(m_metagame,startPos,endPos,"ASW_IonCannon_strafe.projectile",cid,fid,480);           
+
+                        }                               
                         Airstrike_strafe.removeAt(a);
                         break;
                     }
@@ -169,9 +170,33 @@ class Airstrike_strafer{
 	}
 }
 
-
-
 //这下面写空袭插入函数，与上面的脚本技能函数做区别。
+void insertLockOnStrafeAirstrike(GameMode@ metagame,string airstrikekey,int characterId,int factionid,Vector3 pos){
+    _log("strafe insert successful");	
+
+    float rand_x = rand(-1,1);
+    float rand_y = rand(-1,1);
+    Vector3 luckyGuyPos = pos.add(Vector3(rand_x,0,rand_y)); //若周围没有敌人又必须要扫射，则直接默认以任意朝向扫一轮
+    Vector3 luckyGuyPos2 = luckyGuyPos.add(Vector3(rand(-1,1),0,rand(-1,1)));
+
+    int luckyGuyid = getNearbyRandomLuckyGuyId(metagame,factionid,luckyGuyPos,8.0f);
+    if(luckyGuyid!=-1){
+        const XmlElement@ luckyGuy = getCharacterInfo(metagame, luckyGuyid);
+        luckyGuyPos = stringToVector3(luckyGuy.getStringAttribute("position"));                        
+    }
+    int airstrikeid = int(airstrikeIndex[airstrikekey]);
+    switch(airstrikeid){
+        case 0:{luckyGuyid = getNearbyRandomLuckyGuyId(metagame,factionid,luckyGuyPos,32.0f);break;}
+        case 1:{luckyGuyid = getNearbyRandomLuckyGuyId(metagame,factionid,luckyGuyPos,20.0f);break;}
+        default:{luckyGuyid = getNearbyRandomLuckyGuyId(metagame,factionid,luckyGuyPos,10.0f);break;}
+    }
+    if(luckyGuyid!=-1){
+        const XmlElement@ luckyGuy = getCharacterInfo(metagame, luckyGuyid);
+        luckyGuyPos2 = stringToVector3(luckyGuy.getStringAttribute("position"));                        
+    }
+    Airstrike_strafe.insertLast(Airstrike_strafer(characterId,factionid,airstrikeid,luckyGuyPos,luckyGuyPos2));           
+}
+
 void insertA10Airstrike(GameMode@ metagame,int characterId,int factionid,Vector3 pos){
     _log("A10 gun strafe activate successful");	
 
@@ -190,5 +215,6 @@ void insertA10Airstrike(GameMode@ metagame,int characterId,int factionid,Vector3
         const XmlElement@ luckyGuy = getCharacterInfo(metagame, luckyGuyid);
         luckyGuyPos2 = stringToVector3(luckyGuy.getStringAttribute("position"));                        
     }
+
     Airstrike_strafe.insertLast(Airstrike_strafer(characterId,factionid,0,luckyGuyPos,luckyGuyPos2));           
 }
