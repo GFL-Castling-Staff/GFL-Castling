@@ -32,7 +32,7 @@
 		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
 		<modifier class="speed" value="0.2" />
 		<modifier class="detectability" value="0.3" />
-		<modifier class="hit_success_probability" value="-0.75" />
+		<modifier class="hit_success_probability" value="-1.0" />
 	</carry_item>
 	<carry_item key="kcco_dog_2" time_to_live_out_in_the_open="15" name="Code:Orthrus" transform_on_consume="kcco_dog_3" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="kcco_doe.png"/>
@@ -49,7 +49,7 @@
 		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
 		<modifier class="speed" value="0.2" />
 		<modifier class="detectability" value="0.3" />
-		<modifier class="hit_success_probability" value="-0.75" />
+		<modifier class="hit_success_probability" value="-1.0" />
 	</carry_item>
 	<carry_item key="kcco_dog_3" time_to_live_out_in_the_open="15" name="Code:Orthrus" transform_on_consume="kcco_dog_4" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="kcco_doe.png"/>
@@ -66,7 +66,7 @@
 		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
 		<modifier class="speed" value="0.2" />
 		<modifier class="detectability" value="0.3" />
-		<modifier class="hit_success_probability" value="-0.75" />
+		<modifier class="hit_success_probability" value="-1.0" />
 	</carry_item>
 	<carry_item key="kcco_dog_4" time_to_live_out_in_the_open="15" name="Code:Orthrus" transform_on_consume="kcco_dog_5" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="kcco_doe.png"/>
@@ -83,7 +83,7 @@
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="stun"/>
 		<modifier class="speed" value="0.2" />
 		<modifier class="detectability" value="0.3" />
-		<modifier class="hit_success_probability" value="-0.75" />
+		<modifier class="hit_success_probability" value="-1.0" />
 	</carry_item>
 	<carry_item key="kcco_dog_5" time_to_live_out_in_the_open="15" name="Code:Orthrus" transform_on_consume="kcco_dog_6" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="kcco_doe.png"/>
@@ -100,7 +100,7 @@
 		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
 		<modifier class="speed" value="0.2" />
 		<modifier class="detectability" value="0.3" />
-		<modifier class="hit_success_probability" value="-0.75" />
+		<modifier class="hit_success_probability" value="-1.0" />
 	</carry_item>
 	<carry_item key="kcco_dog_6" time_to_live_out_in_the_open="15" name="Code:Orthrus" transform_on_consume="kcco_dog_7" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="kcco_doe.png"/>
@@ -117,7 +117,7 @@
 		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
 		<modifier class="speed" value="0.2" />
 		<modifier class="detectability" value="0.3" />
-		<modifier class="hit_success_probability" value="-0.75" />
+		<modifier class="hit_success_probability" value="-1.0" />
 	</carry_item>
 	<carry_item key="kcco_dog_7" time_to_live_out_in_the_open="15" name="Code:Orthrus" transform_on_consume="kcco_dog_8" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="kcco_doe.png"/>
@@ -134,7 +134,7 @@
 		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
 		<modifier class="speed" value="0.2" />
 		<modifier class="detectability" value="0.3" />
-		<modifier class="hit_success_probability" value="-0.6" />
+		<modifier class="hit_success_probability" value="-1.0" />
 	</carry_item>
 	<carry_item key="kcco_dog_8" time_to_live_out_in_the_open="15" name="Code:Orthrus" transform_on_consume="kcco_dog_9" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="kcco_doe.png"/>
@@ -151,7 +151,7 @@
 		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
 		<modifier class="speed" value="0.2" />
 		<modifier class="detectability" value="0.3" />
-		<modifier class="hit_success_probability" value="-0.6" />
+		<modifier class="hit_success_probability" value="-1.0" />
 	</carry_item>
 	<carry_item key="kcco_dog_9" time_to_live_out_in_the_open="15" name="Code:Orthrus" transform_on_consume="kcco_dog_10" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="kcco_doe.png"/>
@@ -168,7 +168,7 @@
 		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
 		<modifier class="speed" value="0.2" />
 		<modifier class="detectability" value="0.3" />
-		<modifier class="hit_success_probability" value="-0.6" />
+		<modifier class="hit_success_probability" value="-1.0" />
 	</carry_item>
 	<carry_item key="kcco_dog_10" time_to_live_out_in_the_open="15" name="Code:Orthrus" transform_on_consume="kcco_dog_11" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="kcco_doe.png"/>
@@ -185,7 +185,7 @@
 		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
 		<modifier class="speed" value="0.2" />
 		<modifier class="detectability" value="0.3" />
-		<modifier class="hit_success_probability" value="-0.6" />
+		<modifier class="hit_success_probability" value="-1.0" />
 	</carry_item>
 	<carry_item key="kcco_dog_11" time_to_live_out_in_the_open="15" name="Code:Orthrus" transform_on_consume="kcco_dog_12" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="kcco_doe.png"/>
@@ -202,6 +202,6 @@
 		<modifier class="melee_hit_result" input_character_state="death" output_character_state="death" consumes_item="0" />
 		<modifier class="speed" value="0.2" />
 		<modifier class="detectability" value="0.3" />
-		<modifier class="hit_success_probability" value="-0.6" />
+		<modifier class="hit_success_probability" value="-1.0" />
 	</carry_item>
 </carry_items>

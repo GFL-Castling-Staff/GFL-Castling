@@ -556,7 +556,7 @@
 		</resources>
 	</soldier>
 	<!-- 劫豹 -->
-	<soldier name="sfw_jaguar" spawn_score="0.4" copy_from="default_spawn_ai">
+	<soldier name="sfw_jaguar" spawn_score="0.4" squad_size_xp_cap="0.0" copy_from="default_spawn_ai">
 		<ai filename="rocket_mecha.ai" />
 		<model filename="sfd_sangvisfeaal_swap.xml" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_calls="1">
@@ -583,7 +583,7 @@
 		</resources>
 	</soldier>
 	<!--龙骑兵-->
-	<soldier name="sfw_dragoon" firstnames="sf_first.name" lastnames_file="sf_last.name" spawn_score="1.0" copy_from="default_spawn_ai">
+	<soldier name="sfw_dragoon" firstnames="sf_first.name" lastnames_file="sf_last.name" spawn_score="1.0" squad_size_xp_cap="0.0" copy_from="default_spawn_ai">
 		<models filename="sfd_dragoon_SAIWA.models" />
 		<character filename="dragoon.character" />
 		<ai filename="dragoon.ai" />
@@ -599,7 +599,7 @@
 		</item_class_existence_config>
 	</soldier>
 
-	<soldier name="sfw_dragoon_swap" firstnames="sf_first.name" lastnames_file="sf_last.name" spawn_score="0.5" copy_from="default_spawn_ai">
+	<soldier name="sfw_dragoon_swap" firstnames="sf_first.name" lastnames_file="sf_last.name" spawn_score="0.5" squad_size_xp_cap="0.0" copy_from="default_spawn_ai">
 		<models filename="sfd_dragoon_swap__from_(SAIWA)dusk.models" />
 		<character filename="dragoon.character" />
 		<ai filename="dragoon.ai" />
@@ -966,7 +966,7 @@
 
 
 	<!-- 强无敌 -->
-	<soldier name="sf_manticore" firstnames="sf_first.name" lastnames_file="sf_last.name" spawn_score="0.4">
+	<soldier name="sf_manticore" firstnames="sf_first.name" lastnames_file="sf_last.name" squad_size_xp_cap="0.0" spawn_score="0.4">
 		<models filename="sf_qwd.models" />
 		<character filename="qwd.character" />
 		<ai filename="hydra.ai" />

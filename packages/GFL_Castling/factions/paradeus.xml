@@ -447,7 +447,7 @@
 			<carry_item key="pard_ar.carry_item" />
 		</resources>
 	</soldier>
-	<soldier name="parw_commander" spawn_score="1.5" squad_size_xp_cap="0.5" copy_from="default_ai">
+	<soldier name="parw_commander" spawn_score="0.5" squad_size_xp_cap="0.5" copy_from="default_ai">
 		<ai filename="elite.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="parw_commander.weapon" enabled="1" />

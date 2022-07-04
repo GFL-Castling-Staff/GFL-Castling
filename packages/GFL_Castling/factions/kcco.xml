@@ -552,7 +552,7 @@
 		</attribute_config>
 	</soldier>
 	<!-- cerynitis-AA牝鹿 -->
-	<soldier name="kcco_cerynitis" spawn_score="0.3" copy_from="default_bot">
+	<soldier name="kcco_cerynitis" spawn_score="0.3" squad_size_xp_cap="0.0" copy_from="default_bot">
 		<model filename="kccod_cerynitis_remake.xml" />
 		<character filename="kcco_mecha.character" />
 		<ai filename="eod_mecha.ai" />
@@ -565,7 +565,7 @@
 		</attribute_config>
 	</soldier>
 	<!-- cerynitis-机炮牝鹿 -->
-	<soldier name="kcco_cerynitis_alter" spawn_score="0.3" copy_from="default_bot">
+	<soldier name="kcco_cerynitis_alter" spawn_score="0.3" squad_size_xp_cap="0.0" copy_from="default_bot">
 		<model filename="kccod_cerynitis.xml" />
 		<ai filename="eod_mecha.ai" />
 		<character filename="kcco_mecha.character" />
@@ -602,7 +602,7 @@
 		</attribute_config>
 	</soldier>
 	<!-- KCCO强无敌Hydra -->
-	<soldier name="kcco_Hydra" firstnames="KCCO-LIGHT ARMORED UNIT-" lastnames_file="qwd_last.name" spawn_score="0.2">
+	<soldier name="kcco_Hydra" firstnames="KCCO-LIGHT ARMORED UNIT-" lastnames_file="qwd_last.name" squad_size_xp_cap="0.0" spawn_score="0.2">
 		<models file="kcco_qwd.models" />
 		<character filename="qwd.character" />
 		<ai filename="hydra.ai" />

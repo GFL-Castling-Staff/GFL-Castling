@@ -35,11 +35,9 @@
     
     <hud_icon filename="sfw_vespid.png" />
     
-    
-    
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet_sf.projectile">
-        <result class="hit"  kill_probability="1.8" kill_decay_start_time="0.1" kill_decay_end_time="0.9" />
+        <result class="hit"  kill_probability="1.8" kill_probability_offset_on_successful_hit="0.5" kill_decay_start_time="0.1" kill_decay_end_time="0.9" />
     </projectile>
     
     <stance state_key="running" accuracy="0.5" />
