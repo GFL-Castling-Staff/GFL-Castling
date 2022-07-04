@@ -24,44 +24,7 @@ class kill_event : Tracker {
         //rpScale = rp_multiplier;
 		m_metagame.getComms().send("<command class='set_metagame_event' name='character_kill' enabled='1' />");
 	}
-
-	array<string> targetVestKey = {
-		"sfw_manticore.weapon",
-		"sfw_architect.weapon",
-		"sfw_hunter.weapon",
-		"sfw_Intruder.weapon",
-		"sfw_dreamer.weapon",
-		"sfw_alchemist.weapon",
-        "sfw_gager.weapon",
-        "sfw_m16a1.weapon",
-        "sfw_excutioner_1.weapon",
-        "sfw_excutioner_2.weapon",
-        "sfw_agent.weapon",
-        "sfw_justice.weapon",
-        "sfw_scarecrow.weapon",
-        "sfw_destroyer.weapon",
-        "sfw_weaver.weapon",
-        "kccow_hydra.weapon",
-        "kcco_teslatrooper.weapon",
-        "parw_alina.weapon",
-        "parw_teal.weapon",
-        "parw_nyto_black.weapon",
-        "parw_vanguard.weapon",
-        "parw_eagleyes.weapon",
-        "parw_doppelsoldner_mg.weapon",
-        "parw_doppelsoldner_rocket",
-        "parw_roarer.weapon",
-        "parw_nimogen.weapon",
-        "parw_narciss.weapon",
-        "sfw_ripper_swap.weapon",
-        "sfw_striker_swap.weapon",
-        "sfw_jaeger_swap.weapon",
-        "sfw_vespid_swap.weapon",
-        "sfw_dragoon.weapon",
-        "sfw_dragoon_swap.weapon",
-        "kccow_cerynitis.weapon",
-        "sfw_nemeum.weapon"
-	};
+    
     dictionary healOnKillWeaponList = {
 
         // 空武器，后面杀几个人回一次甲就写几
