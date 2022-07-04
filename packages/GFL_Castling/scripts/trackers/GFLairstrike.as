@@ -127,7 +127,7 @@ class GFLairstrike : Tracker {
                             startPos = startPos.add(getMultiplicationVector(strike_vector,Vector3(strike_didis,0,strike_didis)));
                             endPos = endPos.add(getMultiplicationVector(strike_vector,Vector3(strike_didis,0,strike_didis)));
                             //每单轮扫射生成1次对点扫射
-                            CreateDirectProjectile(m_metagame,startPos,endPos,"ASW_IonCannon_strafe.projectile",cid,fid,480);           
+                            CreateDirectProjectile(m_metagame,startPos,endPos,"ASW_IonCannon_strafe.projectile",cid,fid,280);           
 
                         }                               
                         Airstrike_strafe.removeAt(a);
