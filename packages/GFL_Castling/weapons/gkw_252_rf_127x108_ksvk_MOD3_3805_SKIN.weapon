@@ -8,7 +8,7 @@
     <specification 
 	retrigger_time="2.0" 
 	accuracy_factor="1" 
-	sustained_fire_grow_step="3" 
+	sustained_fire_grow_step="0" 
 	sustained_fire_diminish_rate="1" 
 	magazine_size="5" 
 	can_shoot_standing="0" 
@@ -65,7 +65,6 @@
     <stance state_key="over_wall" accuracy="1.0" />  
     <capacity value="1" source="rank" source_value="0.0" />
     
-    <modifier class="speed" value="-0.3" /> 
 </weapon>
 <weapon file="heavy_anti_materiel_rifle.animation_base" key="gkw_ksvkmod3_3805_skill.weapon">
 
@@ -75,7 +74,7 @@
     <specification 
 	retrigger_time="6"  
 	accuracy_factor="1" 
-	sustained_fire_grow_step="3" 
+	sustained_fire_grow_step="0" 
 	sustained_fire_diminish_rate="0.5" 
 	magazine_size="1" 
 	can_shoot_standing="0" 
