@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projectile class="grenade" name="Golyat" key="hand_golyat.throwable" slot="0" radius="0.3" drop_count_factor_on_death="1" drop_count_factor_on_player_death="1" pulldown_in_air="25.0" >
 
-
     <result class="blast" radius="20.0" damage="30.0" push="1.0" decal="1" character_state="death" faction_compare="not_equal" />
     <trigger class="time" time_to_live="5.0"/>
     <collision class="bounce"/>
