@@ -156,6 +156,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 	// ------------------------------------------------------------------------------------------------
 	protected void setupNormalStages() {
+		addStage(setupStage18());         // map13_2
 		addStage(setupStage107());		  // chapter1 by diling
 		// addStage(setupStage109());		  // chapter2 by diling
 		addStage(setupStage8());          // map8
@@ -1632,37 +1633,23 @@ class StageConfiguratorInvasion : StageConfigurator {
 	// ------------------------------------------------------------------------------------------------
 	protected Stage@ setupStage18() {
 		Stage@ stage = createStage();
-		stage.m_mapInfo.m_name = "Dry Enclave";
-		stage.m_mapInfo.m_path = "media/packages/vanilla/maps/map13_2";
+		stage.m_mapInfo.m_name = "Holy Enclave";
+		stage.m_mapInfo.m_path = "media/packages/GFLC_Map/maps/map13_2";
 		stage.m_mapInfo.m_id = "map13_2";
 		stage.m_includeLayers.insertLast("layer1.invasion");        
 		stage.addTracker(Overtime(m_metagame, 0));
-		stage.m_maxSoldiers = 10 * 10;
+		stage.m_maxSoldiers = 10 * 5;
 		stage.m_playerAiCompensation = 6;
 		stage.m_playerAiReduction = 0;
 		stage.m_soldierCapacityModel = "constant";       		
 		stage.m_minRandomCrates = 0; 
 		stage.m_maxRandomCrates = 1;
-		stage.m_defenseWinTime = 480; 
+		stage.m_defenseWinTime = 600; 
 		stage.m_defenseWinTimeMode = "custom";
 		stage.addTracker(PausingKothTimer(m_metagame, stage.m_defenseWinTime));
 		
 		{
-        XmlElement command("command");
-        command.setStringAttribute("class", "change_game_settings");
-        for (uint i = 0; i < m_metagame.getFactionCount(); ++i) {
-            XmlElement faction("faction");
-            if (int(i) == 3) {
-                faction.setFloatAttribute("capacity_multiplier", 0.00001);
-                faction.setBoolAttribute("lose_without_bases", false);
-            }
-            command.appendChild(faction);
-            }
-        m_metagame.getComms().send(command);
-        stage.addTracker(RunAtStart(m_metagame, command));
-        }
-		{
-			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0, 0.35, 0.1));     
+			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0, 0.5, 0.3));     
 			f.m_capacityMultiplier = 0.4;                                               
 			stage.m_factions.insertLast(f);
 		}
@@ -1679,12 +1666,11 @@ class StageConfiguratorInvasion : StageConfigurator {
 			stage.m_factions.insertLast(f);
 		}
 		{
-			// neutral
-			Faction f(getFactionConfigs()[3], createCommanderAiCommand(3));
-			f.m_capacityMultiplier = 0;
+			Faction f(getFactionConfigs()[3], createCommanderAiCommand(3, 0.32, 0.05));          // was 0.38 0.1 (1.82)  
+            f.m_overCapacity = 50;                                              
+			f.m_capacityOffset = 30;                                                             
 			stage.m_factions.insertLast(f);
-		}
-
+		}		
 
 		// metadata
 		stage.m_primaryObjective = "koth";
