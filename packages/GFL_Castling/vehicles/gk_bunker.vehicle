@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<vehicle name="Bunker" key="gk_bunker.vehicle" respawn_time="30"  map_view_atlas_index="43" usable_for_cover="0" protectors="2" soldier_capacity_offset="2" allow_owner_to_use_only="1" allow_character_leave_request="0" ai_stop_to_fight="0" >
+<vehicle name="Bunker" key="gk_bunker.vehicle" respawn_time="30"  map_view_atlas_index="43" usable_for_cover="0" protectors="2" soldier_capacity_offset="2" allow_owner_to_use_only="1"  should_be_destroyed="1" allow_character_leave_request="0" ai_stop_to_fight="0" >
 	<tag name="target" />
 	<tire_set offset="0.5 0.0 0.5" radius="0.65" />
 	<tire_set offset="0.5 0.0 -0.5" radius="0.65" />
@@ -25,6 +25,8 @@
 	<turret offset="0 0 0" weapon_key="bunker_rocket5.weapon" weapon_offset="-1.1 2.8 -0.1" weapon_recoil="0.02" physics_recoil="0.0" max_rotation_step="0.005" rotation="0" /> -->
 	<turret offset="0 0 0" weapon_key="bunker_hornet1.weapon" 	weapon_offset="1.0 2.4 0.0" weapon_recoil="0.02" physics_recoil="0.0" max_rotation_step="0.005" rotation="0" />
 	<turret offset="0 0 0" weapon_key="bunker_hornet2.weapon" 	weapon_offset="1.0 2.6 0.0" weapon_recoil="0.02" physics_recoil="0.0" max_rotation_step="0.005" rotation="0" />	
+	<turret offset="0 0 0" weapon_key="bunker_self_destruct.weapon" 	weapon_offset="0.0 -1.0 0.0" weapon_recoil="0.00" physics_recoil="0.0" max_rotation_step="0.005" rotation="0" />	
+	
 	
 	<visual offset="0 -0.4 0" class="turret" turret_index="0" mesh_filename="fin_bunker_turret.mesh" texture_filename="deployable_mg.png" />
 	<!-- <visual offset="0.1 0.76 0" class="turret" turret_index="1" mesh_filename="deployable_mg1.mesh" texture_filename="deployable_mg.png" /> -->
@@ -41,7 +43,7 @@
 		<turret index="3" />		
 		<turret index="4" />
 		<turret index="5" />
-		<!-- <turret index="6" /> -->
+		<turret index="6" /> 
 		<!-- <turret index="7" /> -->
 		<!-- <turret index="8" /> -->
 		<!-- <turret index="9" /> -->
