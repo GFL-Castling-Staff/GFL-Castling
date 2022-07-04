@@ -1635,22 +1635,14 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.m_mapInfo.m_name = "Dry Enclave";
 		stage.m_mapInfo.m_path = "media/packages/vanilla/maps/map13_2";
 		stage.m_mapInfo.m_id = "map13_2";
-
 		stage.m_includeLayers.insertLast("layer1.invasion");        
-
 		stage.addTracker(Overtime(m_metagame, 0));
-
-		stage.m_maxSoldiers = 10 * 20;                                             
-		stage.m_playerAiCompensation = 6;                                         
-		stage.m_playerAiReduction = 0;                                              
-		stage.m_soldierCapacityModel = "constant";       
-
-		stage.addTracker(Spawner(m_metagame, 3, Vector3(506,0,465), 50, "default"));
-		
-		
+		stage.m_maxSoldiers = 10 * 10;
+		stage.m_playerAiCompensation = 6;
+		stage.m_playerAiReduction = 0;
+		stage.m_soldierCapacityModel = "constant";       		
 		stage.m_minRandomCrates = 0; 
 		stage.m_maxRandomCrates = 1;
-         
 		stage.m_defenseWinTime = 480; 
 		stage.m_defenseWinTimeMode = "custom";
 		stage.addTracker(PausingKothTimer(m_metagame, stage.m_defenseWinTime));
@@ -1677,47 +1669,15 @@ class StageConfiguratorInvasion : StageConfigurator {
 		{
 			Faction f(getFactionConfigs()[2], createCommanderAiCommand(2, 0.32, 0.05));          // was 0.38 0.1 (1.82)  
 			f.m_overCapacity = 50;                                              
-			f.m_capacityOffset = 15;                                                             
+			f.m_capacityOffset = 30;                                                             
 			stage.m_factions.insertLast(f);
 		}
 		{
 			Faction f(getFactionConfigs()[1], createCommanderAiCommand(1, 0.32, 0.05));          // was 0.38 0.1 (1.82)  
             f.m_overCapacity = 50;                                              
-			f.m_capacityOffset = 15;                                                             
+			f.m_capacityOffset = 30;                                                             
 			stage.m_factions.insertLast(f);
 		}
-		{
-			XmlElement command("command");
-			command.setStringAttribute("class", "faction_resources");
-			command.setIntAttribute("faction_id", 0);
-			addFactionResourceElements(command, "vehicle", array<string> = {"technical.vehicle", "radio_jammer2.vehicle", "radar_tank2.vehicle"}, false);
-
-			stage.m_extraCommands.insertLast(command);
-		} 
-		{
-			XmlElement command("command");
-			command.setStringAttribute("class", "faction_resources");
-			command.setIntAttribute("faction_id", 1);
-			addFactionResourceElements(command, "vehicle", array<string> = {"technical.vehicle", "radio_jammer2.vehicle", "radar_tank2.vehicle"}, false);
-
-			stage.m_extraCommands.insertLast(command);
-		}        
-		{
-			XmlElement command("command");
-			command.setStringAttribute("class", "faction_resources");
-			command.setIntAttribute("faction_id", 2);
-			addFactionResourceElements(command, "vehicle", array<string> = {"technical.vehicle", "radio_jammer2.vehicle", "radar_tank2.vehicle"}, false);
-
-			stage.m_extraCommands.insertLast(command);
-		}  
-		{
-			XmlElement command("command");
-			command.setStringAttribute("class", "faction_resources");
-			command.setIntAttribute("faction_id", 3);
-			addFactionResourceElements(command, "vehicle", array<string> = {"technical.vehicle", "radio_jammer2.vehicle", "radar_tank2.vehicle"}, true);
-
-			stage.m_extraCommands.insertLast(command);
-		}  		
 		{
 			// neutral
 			Faction f(getFactionConfigs()[3], createCommanderAiCommand(3));
