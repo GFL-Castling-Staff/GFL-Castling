@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapon file="two_hands_sg.animation_base" key="gkw_m870.weapon">
-
-    
     <!--Weapon specifications-->
-    
     <specification 
 	retrigger_time="-1.0" 
 	accuracy_factor="0.9" 
@@ -20,17 +17,13 @@
 	barrel_offset="0.4" 
 	projectiles_per_shot="15"
 	spread_range="0.2"
-	 />
-     <inventory  buy_price="66.0" sell_price="66.0" />
-	<!--Animations-->
-	
-
+	/>
+    <inventory  buy_price="66.0" sell_price="66.0" />
+    <!--Animations-->
     <animation state_key="cycle" animation_key="Pshotgun0.5" />
     <animation state_key="cycle" stance_key="prone" animation_key="Pshotgun0.5p" />
-    <animation key="reload" animation_key="reloading, oaat" />		
-	
-	<!--Sounds-->
-	
+    <animation key="reload" animation_key="reloading, oaat" />
+    <!--Sounds-->
     <sound key="fire" fileref="m870_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.7" />
     <sound key="cycle" fileref="m870_cycle_FromTTF2.wav" />
     <sound key="reload_one" fileref="sg1_reload_FromREALLIFE.wav" volume="0.5" />
@@ -38,17 +31,10 @@
     <sound key="reload_one" fileref="sg3_reload_FromREALLIFE.wav" volume="0.5" />
     <sound key="reload_one" fileref="sg4_reload_FromREALLIFE.wav" volume="0.5" />
     <sound class="impact" fileref="rifle_drop.wav" />
-   
-	<!--Model, Icon, Cost-->
-   
+    <!--Model, Icon, Cost-->
     <model filename="gkw_sg_m870.xml" />
     <hud_icon filename="gkw_m870.png" />
-
-
-	
-	<!--Ballistics-->
-	
-    
+    <!--Ballistics-->
     <weak_hand_hold offset="0.3" />
     <projectile file="bullet.projectile">
         <result class="hit" 
@@ -56,15 +42,12 @@
         kill_decay_start_time="0.09" 
         kill_decay_end_time="0.800" />
     </projectile>
-    
     <!--Accuracy, Movement speed-->
-    
-	<stance state_key="walking" accuracy="0.65" />
+    <stance state_key="walking" accuracy="0.65" />
     <stance state_key="crouch_moving" accuracy="0.6" />
     <stance state_key="prone_moving" accuracy="0.6" />
     <stance state_key="standing" accuracy="0.7"/>
     <stance state_key="crouching" accuracy="0.75" />
     <stance state_key="prone" accuracy="0.85" />
-    <stance state_key="over_wall" accuracy="0.85" />  
-
+    <stance state_key="over_wall" accuracy="0.85" />
 </weapon>
