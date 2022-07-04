@@ -74,6 +74,7 @@ class kill_event : Tracker {
         {"ff_gager_1.weapon",3},
         {"gkw_type100_skill.weapon",3},
         {"gkw_type100_4004_skill.weapon",3},
+        {"gkw_88typemod3_skill.weapon",4},
 
         // 近战定位HG
         {"gkw_m1911_mod3.weapon",2},
@@ -209,6 +210,10 @@ class kill_event : Tracker {
                         KillCountArray.insertLast(kill_count(characterId,1));
                     }
                 }    
+            }
+
+            if(killway=="stab"){
+                KillerWeaponKey = getDeadPlayerEquipmentKey(m_metagame,characterId,0);
             }
 
             switch(int(healOnKillWeaponList[KillerWeaponKey]))
