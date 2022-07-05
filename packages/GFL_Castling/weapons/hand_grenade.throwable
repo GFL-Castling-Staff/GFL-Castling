@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projectiles>
     <projectile class="grenade" name="RGD-5 Offensive grenade" key="hand_grenade.projectile" slot="0" radius="0.15" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" >
-        <result class="spawn" instance_class="projectile" instance_key="hand_grenade_rgd5.projectile" min_amount="8" max_amount="12" offset="0 1.5 0" position_spread="0.3 0.3" direction_spread="0.0 0.0" />
+        <result class="spawn" instance_class="projectile" instance_key="hand_grenade_rgd5.projectile" min_amount="8" max_amount="12" offset="0 0 0" position_spread="0.0 0.0" direction_spread="0.0 0.0" />
         <trigger class="time" time_to_live="2.0"/>
         <rotation class="random" />
         <trail probability="0.0" key="BulletApTrail" />
