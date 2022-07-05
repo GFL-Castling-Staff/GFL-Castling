@@ -1,38 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<weapon file="two_hands_ar.animation_base" key="gkw_g3_1303.weapon">
+<weapon file="two_hands_ar.animation_base" key="gkw_g3mod3_1303.weapon">
     <specification 
 		accuracy_factor="1.0" 
 		barrel_offset="0.4" 
 		class="0"
         slot="0" 
 		magazine_size="20" 
-		name="G3-[Parsty Cook on Battlefield]" 
-		projectile_speed="200.0" 
+		name="G3(MOD3)-[Parsty Cook on Battlefield]" 
+		projectile_speed="210.0" 
 		retrigger_time="0.1" 
 		suppressed="0" 
-		sustained_fire_diminish_rate="1.7" 
-		sustained_fire_grow_step="0.5" />
+		sustained_fire_diminish_rate="2.5" 
+		sustained_fire_grow_step="0.45" />
     <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
-    <inventory  buy_price="7.0" sell_price="7.0" />
-    <commonness value="0" in_stock="0" />
+    <inventory buy_price="150.0" sell_price="150.0" />
     <sound key="fire" fileref="g3_fire_FromBF2.wav" pitch_variety="0.05" volume="1" />
     <sound key="magazine_out" fileref="g3_mgz_out_FromCOD4R.wav" volume="0.9" />
     <sound key="magazine_in" fileref="g3_mgz_in_FromCOD4R.wav" volume="0.9" />
     <sound key="cycle" fileref="g3_cycle_FromCOD4R.wav" volume="0.9" />
     <sound class="impact" fileref="rifle_drop.wav" />
     <model filename="gkw_ar_g3.xml" />
-    <hud_icon filename="gkw_g3_1303.png" />
+    <hud_icon filename="gkw_g3mod3_1303.png" />
+    <capacity value="1" source="rank" source_value="0.0" />
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet.projectile">
-        <result class="hit"  kill_probability="1.9" kill_probability_offset_on_successful_hit="2.2" kill_decay_start_time="1.125" kill_decay_end_time="1.875" />
+        <result class="hit"  kill_probability="2.1" kill_probability_offset_on_successful_hit="3.0" kill_decay_start_time="1.125" kill_decay_end_time="1.875" />
     </projectile>
     <effect class="muzzle" ref="ejection_76251" />
-    <stance state_key="running" accuracy="0.3" />
-    <stance state_key="walking" accuracy="0.6" />
-    <stance state_key="crouch_moving" accuracy="0.8" />
-    <stance state_key="prone_moving" accuracy="0.8" />
-    <stance state_key="standing" accuracy="0.75" />
-    <stance state_key="crouching" accuracy="0.8" />
+    <stance state_key="running" accuracy="0.8" />
+    <stance state_key="walking" accuracy="0.8" />
+    <stance state_key="crouch_moving" accuracy="0.9" />
+    <stance state_key="prone_moving" accuracy="0.9" />
+    <stance state_key="standing" accuracy="0.9" />
+    <stance state_key="crouching" accuracy="0.95" />
     <stance state_key="prone" accuracy="1" />
     <modifier class="detectability" value="-0.1" />
+    <modifier class="speed" value="0.1"/>
 </weapon>
