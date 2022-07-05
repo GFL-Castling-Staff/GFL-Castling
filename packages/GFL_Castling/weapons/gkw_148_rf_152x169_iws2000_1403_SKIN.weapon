@@ -52,6 +52,7 @@
         <commonness value="0.0" can_respawn_with="1" in_stock="0" />
 
         <!--Accuracy, Movement speed-->
+        <stance state_key="running" accuracy="1" />
         <stance state_key="walking" accuracy="1" />
         <stance state_key="crouch_moving" accuracy="1" />
         <stance state_key="prone_moving" accuracy="1" />
