@@ -33,10 +33,10 @@
         <weak_hand_hold offset="0.3" />
         <projectile file="bullet.projectile" can_be_detected_by_footmen="0">
             <result class="hit" 
-        kill_probability="1.85" 
-        kill_probability_offset_on_successful_hit="0.5"
-        kill_decay_start_time="1.142" 
-        kill_decay_end_time="1.904" />
+            kill_probability="1.85" 
+            kill_probability_offset_on_successful_hit="1.85"
+            kill_decay_start_time="1.142" 
+            kill_decay_end_time="1.904" />
         </projectile>
         <effect class="muzzle" ref="ejection_556" />
         <!--Accuracy, Movement speed-->
