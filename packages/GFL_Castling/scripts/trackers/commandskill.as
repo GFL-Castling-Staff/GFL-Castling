@@ -2179,16 +2179,13 @@ class CommandSkill : Tracker {
                         int kill_count=KillCountArray[index].m_killnum;
                         if (kill_count>=7){
                             CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"ppk_tracer_dart_3.projectile",characterId,factionid,260);
-                            KillCountArray[index].m_killnum -= 7;
                         }
                         if (kill_count>=15){
                             insertLockOnStrafeAirstrike(m_metagame,"ioncannon_strafe",characterId,factionid,stringToVector3(target));
-                            KillCountArray[index].m_killnum -= 8;
                         }
                         if (kill_count>=30){
                             TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
                             tasker.add(DelayAirstrikeRequest(m_metagame,5.0,characterId,factionid,stringToVector3(target),"ioncannon_strafe"));
-                            KillCountArray[index].m_killnum -= 15;
                         }                        
                     }
                     addCoolDown("PPKMOD3",90,characterId,modifer);
