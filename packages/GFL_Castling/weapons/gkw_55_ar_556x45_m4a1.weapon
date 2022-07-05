@@ -27,7 +27,7 @@
         <weak_hand_hold offset="0.2" />
         <commonness value="0.2" in_stock="1" can_respawn_with="1" />
         <projectile file="bullet.projectile" can_be_detected_by_footmen="0">
-            <result class="hit" kill_probability="1.75" kill_probability_offset_on_successful_hit="0.4" kill_decay_start_time="1.023" kill_decay_end_time="1.705" />
+            <result class="hit" kill_probability="1.85" kill_probability_offset_on_successful_hit="1.25" kill_decay_start_time="1.023" kill_decay_end_time="1.705" />
         </projectile>
         <effect class="muzzle" ref="ejection_556" />
         <stance state_key="running" accuracy="0.3" />
@@ -66,7 +66,7 @@
         <hud_icon filename="gkw_m4a1_skill.png" />
         <weak_hand_hold offset="0.2" />
         <projectile file="bullet.projectile" can_be_detected_by_footmen="0">
-            <result class="hit" kill_probability="1.8" kill_probability_offset_on_successful_hit="1.5" kill_decay_start_time="1.023" kill_decay_end_time="1.705" />
+            <result class="hit" kill_probability="2.0" kill_probability_offset_on_successful_hit="2.0" kill_decay_start_time="1.023" kill_decay_end_time="1.705" />
         </projectile>
         <effect class="muzzle" ref="ejection_556" />
         <stance state_key="running" accuracy="0.8" />

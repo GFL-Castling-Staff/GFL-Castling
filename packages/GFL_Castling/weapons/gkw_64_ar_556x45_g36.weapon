@@ -25,7 +25,7 @@
         <hud_icon filename="gkw_g36.png" />
         <weak_hand_hold offset="0.2" />
         <projectile file="bullet.projectile">
-            <result class="hit"  kill_probability="1.75" kill_probability_offset_on_successful_hit="0.3" kill_decay_start_time="1.565" kill_decay_end_time="2.609" />
+            <result class="hit"  kill_probability="1.85" kill_probability_offset_on_successful_hit="0.3" kill_decay_start_time="1.565" kill_decay_end_time="2.609" />
         </projectile>
         <effect class="muzzle" ref="ejection_556" />
         <stance state_key="running" accuracy="0.5" />
@@ -65,7 +65,7 @@
         <hud_icon filename="gkw_g36_skill.png" />
         <weak_hand_hold offset="0.2" />
         <projectile file="bullet.projectile">
-            <result class="hit"  kill_probability="1.75" kill_probability_offset_on_successful_hit="1.25" kill_decay_start_time="1.565" kill_decay_end_time="2.609" />
+            <result class="hit"  kill_probability="1.85" kill_probability_offset_on_successful_hit="1.25" kill_decay_start_time="1.565" kill_decay_end_time="2.609" />
         </projectile>
         <effect class="muzzle" ref="ejection_556" />
         <stance state_key="running" accuracy="0.5" />
