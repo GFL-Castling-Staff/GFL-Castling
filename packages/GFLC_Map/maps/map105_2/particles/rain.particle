@@ -1,6 +1,6 @@
 particle_system Rain
 {
-	quota	50000
+	quota	500
 	material	Rain
 	particle_width	0.15
 	particle_height	1.2
@@ -16,7 +16,7 @@ particle_system Rain
 		colour_range_start	0.5 0.5 0.6 0.2
 		colour_range_end	0.5 0.5 0.6 0.6
 		direction	0 -1 0
-		emission_rate	1000
+		emission_rate	100
 		position	0 0 0
 		velocity	0
 		velocity_min	12.0
