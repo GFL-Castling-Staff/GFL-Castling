@@ -75,7 +75,7 @@ dictionary tdoll_index = {
     {"69","gkw_famas.weapon"},
     {"70",""},
     {"71","gkw_galil.weapon"},
-    {"72",""},
+    {"72","gkw_tar21.weapon"},
     {"73",""},
     {"74",""},
     {"75","gkw_m1918.weapon"},
