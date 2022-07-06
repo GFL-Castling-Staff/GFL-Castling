@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapons>
-    <weapon file="two_hands_ar.animation_base" key="gkw_rfb_1601.weapon">
+    <weapon file="two_hands_ar.animation_base" key="gkw_rfb.weapon">
         <specification 
 		retrigger_time="-1.0" 
 		accuracy_factor="1" 
 		barrel_offset="0.8" 
         slot="0" 
 		magazine_size="20" 
-		name="RFB-[RFB Steal Christmas]" 
+		name="RFB" 
 		projectile_speed="187.23" 
 		class="4" 
 		burst_shots="1"
@@ -15,64 +15,63 @@
 		suppressed="0" 
 		sustained_fire_diminish_rate="1.9" 
 		sustained_fire_grow_step="0.45" 
-		sight_range_modifier="1"/>
+		sight_range_modifier="1.25"/>
         <animation state_key="hold_casual" animation_key="dancing, zoufang" />
         <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
         <inventory  buy_price="8.0" sell_price="8.0" />
-        <commonness value="0" in_stock="0" />
+        <next_in_chain key="gkw_rfb_skill.weapon" share_ammo="1" />
         <sound key="fire" fileref="rfb_fire_FromEFT.wav" pitch_variety="0.05" volume="1.2" />
         <sound key="magazine_out" fileref="rfb_mgz_out_FromEFT.wav" volume="0.8" />
         <sound key="magazine_in" fileref="rfb_mgz_in_FromEFT.wav" volume="0.8" />
         <sound key="cycle" fileref="rfb_cycle_FromEFT.wav" volume="0.8" />
         <sound class="impact" fileref="rifle_drop.wav" volume="1"/>
-        <model filename="gkw_ar_rfb_1601.xml" />
-        <hud_icon filename="gkw_rfb_1601.png" />
-        <next_in_chain key="gkw_rfb_1601_skill.weapon" share_ammo="1" />
+        <model filename="gkw_ar_rfb.xml" />
+        <hud_icon filename="gkw_rfb.png" />
         <weak_hand_hold offset="0.2" />
         <projectile file="bullet.projectile">
-            <result class="hit"  kill_probability="1.85" kill_decay_start_time="1.286" kill_decay_end_time="2.143" />
+            <result class="hit"  kill_probability="1.9" kill_probability_offset_on_successful_hit="2.1" kill_decay_start_time="1.286" kill_decay_end_time="2.143" />
         </projectile>
         <effect class="muzzle" ref="ejection_556" />
         <stance state_key="running" accuracy="0.5" />
-        <stance state_key="walking" accuracy="0.7" />
+        <stance state_key="walking" accuracy="0.6" />
         <stance state_key="crouch_moving" accuracy="0.5" />
         <stance state_key="prone_moving" accuracy="0.5" />
-        <stance state_key="standing" accuracy="0.85" />
+        <stance state_key="standing" accuracy="0.9" />
         <stance state_key="crouching" accuracy="0.95" />
         <stance state_key="prone" accuracy="1" />
         <modifier class="detectability" value="-0.1" />
     </weapon>
-    <weapon file="two_hands_ar.animation_base" key="gkw_rfb_1601_skill.weapon">
+    <weapon file="two_hands_ar.animation_base" key="gkw_rfb_skill.weapon">
         <specification 
-		retrigger_time="-1.0" 
-		accuracy_factor="1" 
-		barrel_offset="0.8" 
+        retrigger_time="-1.0" 
+        accuracy_factor="1" 
+        barrel_offset="0.8" 
         slot="0" 
-		magazine_size="20" 
-		name="RFB-[RFB Steal Christmas]-[Ammo Supremacy]" 
-		projectile_speed="187.23" 
-		class="4" 
-		burst_shots="1"
-		last_burst_retrigger_time="0.1"
-		suppressed="0" 
-		sustained_fire_diminish_rate="1.9" 
-		sustained_fire_grow_step="0.45" 
-		sight_range_modifier="1.75"/>
+        magazine_size="20" 
+        name="RFB-[Ammo Supremacy]" 
+        projectile_speed="187.23" 
+        class="4" 
+        burst_shots="1"
+        last_burst_retrigger_time="0.1"
+        suppressed="0" 
+        sustained_fire_diminish_rate="1.9" 
+        sustained_fire_grow_step="0.45" 
+        sight_range_modifier="2.25"/>
         <animation state_key="hold_casual" animation_key="dancing, zoufang" />
         <animation key="reload" animation_key="reloading, magazine rifle 1.5" />
         <inventory  buy_price="8.0" sell_price="8.0" />
-        <commonness value="0" in_stock="0" />
+        <next_in_chain key="gkw_rfb.weapon" share_ammo="1" />
+        <commonness value="0" in_stock="0" can_respawn_with="1" />
         <sound key="fire" fileref="rfb_fire_FromBF4.wav" pitch_variety="0.05" volume="1.2" />
         <sound key="magazine_out" fileref="rfb_mgz_out_FromEFT.wav" volume="0.8" />
         <sound key="magazine_in" fileref="rfb_mgz_in_FromEFT.wav" volume="0.8" />
         <sound key="cycle" fileref="rfb_cycle_FromEFT.wav" volume="0.8" />
         <sound class="impact" fileref="rifle_drop.wav" volume="1"/>
-        <model filename="gkw_ar_rfb_1601.xml" />
-        <hud_icon filename="gkw_rfb_1601.png" />
-        <next_in_chain key="gkw_rfb_1601.weapon" share_ammo="1" />
+        <model filename="gkw_ar_rfb.xml" />
+        <hud_icon filename="gkw_rfb_skill.png" />
         <weak_hand_hold offset="0.2" />
         <projectile file="bullet.projectile">
-            <result class="hit"  kill_probability="1.85" kill_probability_offset_on_successful_hit="1.6" kill_decay_start_time="1.227" kill_decay_end_time="2.046" />
+            <result class="hit"  kill_probability="2.1" kill_probability_offset_on_successful_hit="4" kill_decay_start_time="1.286" kill_decay_end_time="2.143" />
         </projectile>
         <effect class="muzzle" ref="ejection_556" />
         <stance state_key="running" accuracy="1.0" />
@@ -82,8 +81,8 @@
         <stance state_key="standing" accuracy="1.0" />
         <stance state_key="crouching" accuracy="1.0" />
         <stance state_key="prone" accuracy="1" />
-        <modifier class="speed" value="-0.5" />
-        <modifier class="hit_success_probability" value="+0.4" />
+        <modifier class="speed" value="-0.3" />
         <modifier class="detectability" value="-0.1" />
+        <modifier class="hit_success_probability" value="+0.3" />
     </weapon>
 </weapons>
