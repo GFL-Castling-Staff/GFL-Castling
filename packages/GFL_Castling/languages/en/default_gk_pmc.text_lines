@@ -2,7 +2,7 @@
 <character filename="default_base.character">
   <!-- defined in default.character for differentiation, see maps/lobby/default.character too -->
   <!--  <comment key="Hmm, no signal" text="Hmm, no signal?"/> -->
-  <parameter class="walking_steer_amount" value="0.63" />
+  <parameter class="walking_steer_amount" value="0.45" />
 	<parameter class="running_steer_amount" value="0.63" />
   <comment key="Driver, abandon vehicle" text="This vehicle is Toast" />
   <comment key="Driver, abandon vehicle" text="This thing is gonna blow!" />
