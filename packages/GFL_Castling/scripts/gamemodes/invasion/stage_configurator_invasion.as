@@ -156,13 +156,12 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 	// ------------------------------------------------------------------------------------------------
 	protected void setupNormalStages() {
-		addStage(setupStage18());         // map13_2
+		addStage(setupStage3());		  // map3 c
 		addStage(setupStage107());		  // chapter1 by diling
 		// addStage(setupStage109());		  // chapter2 by diling
 		addStage(setupStage8());          // map8
 		addStage(setupStage2());          // map4 c
 		// addStage(setupEggStage());		  // 上坟
-		addStage(setupStage3());		  // map3 c
 		addStage(setupStage9());          // map9
 		addStage(setupStage1());          // map2
 		addStage(setupStage7());          // map6
@@ -604,7 +603,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 	protected Stage@ setupStage1() {
 		Stage@ stage = createStage();
 		stage.m_mapInfo.m_name = "Keepsake Bay";
-		stage.m_mapInfo.m_path = "media/packages/vanilla/maps/map2";
+		stage.m_mapInfo.m_path = "media/packages/GFLC_Map/maps/map2";
 		stage.m_mapInfo.m_id = "map2";
 		
 		stage.m_includeLayers.insertLast("layer1.invasion"); 
