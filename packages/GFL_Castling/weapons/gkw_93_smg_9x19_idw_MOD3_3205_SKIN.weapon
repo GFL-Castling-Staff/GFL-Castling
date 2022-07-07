@@ -46,7 +46,7 @@
     <sound key="cycle" fileref="IDW_cycle_FromPD2.wav" />
     <sound class="impact" fileref="rifle_drop.wav" />
     <model filename="gkw_smg_idwmod3.xml" />
-    <hud_icon filename="gkw_idw_MOD3_3205_SKIN.png" />
+    <hud_icon filename="gkw_idw_3205.png" />
     
     <projectile file="bullet.projectile" can_be_detected_by_footmen="0">
         <result class="hit" kill_probability="1.75" kill_probability_offset_on_successful_hit="1.5" kill_decay_start_time="0.05" kill_decay_end_time="1.3" />

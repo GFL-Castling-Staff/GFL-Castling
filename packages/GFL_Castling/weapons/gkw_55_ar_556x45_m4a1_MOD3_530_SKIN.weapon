@@ -25,7 +25,7 @@
         <sound key="cycle" fileref="m4a1_cycle_FromCSGO.wav" volume="0.7" />
         <sound class="impact" fileref="rifle_drop.wav" />
         <model filename="gkw_ar_m4a1_530.xml" />
-        <hud_icon filename="gkw_m4a1_MOD3_530.png" />
+        <hud_icon filename="gkw_m4a1_530.png" />
         <weak_hand_hold offset="0.2" />
         <projectile file="bullet.projectile" can_be_detected_by_footmen="0">
             <result class="hit" kill_probability="1.85" kill_probability_offset_on_successful_hit="2.25" kill_decay_start_time="1.023" kill_decay_end_time="1.705" />
@@ -89,7 +89,7 @@
         <sound key="cycle" fileref="m4mod_cycle_FromBORDERLAND3.wav" volume="0.8" />
         <sound class="impact" fileref="rifle_drop.wav" />
         <model filename="none.xml" />
-        <hud_icon filename="gkw_m4a1_MOD3_530_skill.png" />
+        <hud_icon filename="gkw_m4a1_530.png" />
         <commonness value="0" in_stock="0" can_respawn_with="1" />
         <inventory  buy_price="270.0" sell_price="270.0"  />
         <capacity value="1" source="rank" source_value="0.0" />
