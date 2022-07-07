@@ -11,7 +11,7 @@
         suppressed="0" 
         name="M1918(MOD3)-[Tender Nocturne]" 
         class="0" 
-        projectile_speed="204.76" 
+        projectile_speed="244.76" 
         spread_range="0.2" 
         sight_range_modifier="1.8"/>
 
@@ -32,7 +32,7 @@
         <hud_icon filename="gkw_m1918_806.png" />
 
         <projectile file="bullet.projectile">
-            <result class="hit" kill_probability="1.3" kill_probability_offset_on_successful_hit="1.5" kill_decay_start_time="1.147" kill_decay_end_time="1.912" />
+            <result class="hit" kill_probability="2.2" kill_probability_offset_on_successful_hit="1.3" kill_decay_start_time="1.147" kill_decay_end_time="1.912" />
         </projectile>
         <effect class="muzzle" ref="ejection_76251" />
         <stance state_key="running" accuracy="0.6" />
@@ -57,7 +57,7 @@
         suppressed="0" 
         name="M1918(MOD3)-[Tender Nocturne]-[Battlefield Magic]" 
         class="0" 
-        projectile_speed="204.76"
+        projectile_speed="244.76"
         spread_range="0.2" 
         sight_range_modifier="2.25"/>
 
@@ -78,7 +78,7 @@
         <hud_icon filename="gkw_m1918_806.png" />
 
         <projectile file="bullet.projectile">
-            <result class="hit" kill_probability="1.6" kill_probability_offset_on_successful_hit="2.4" kill_decay_start_time="1.147" kill_decay_end_time="1.912" />
+            <result class="hit" kill_probability="2.4" kill_probability_offset_on_successful_hit="2.0" kill_decay_start_time="1.147" kill_decay_end_time="1.912" />
         </projectile>
         <effect class="muzzle" ref="ejection_76251" />
         <stance state_key="running" accuracy="0.85" />
