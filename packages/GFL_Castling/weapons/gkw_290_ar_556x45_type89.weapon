@@ -7,7 +7,7 @@
         slot="0" 
 		magazine_size="30" 
 		name="HOWA Type 89" 
-		projectile_speed="185.11" 
+		projectile_speed="230.11" 
 		retrigger_time="0.07" 
 		suppressed="0" 
 		sustained_fire_diminish_rate="1.8" 
@@ -23,7 +23,7 @@
     <hud_icon filename="gkw_howatype89.png" />
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet.projectile">
-        <result class="hit"  kill_probability="1.85" kill_probability_offset_on_successful_hit="0.3" kill_decay_start_time="0.621" kill_decay_end_time="1.035" />
+        <result class="hit"  kill_probability="1.85" kill_probability_offset_on_successful_hit="1.3" kill_decay_start_time="0.621" kill_decay_end_time="1.035" />
     </projectile>
         <effect class="muzzle" ref="ejection_556" />
     <stance state_key="running" accuracy="0.3" />
