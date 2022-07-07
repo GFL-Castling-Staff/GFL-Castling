@@ -30,7 +30,7 @@
         <capacity value="1" source="rank" source_value="0.0" />
         
         <projectile file="bullet.projectile">
-            <result class="hit" kill_probability="1.3" kill_probability_offset_on_successful_hit="1.5" kill_decay_start_time="1.0" kill_decay_end_time="2.0" />
+            <result class="hit" kill_probability="2.2" kill_probability_offset_on_successful_hit="1.0" kill_decay_start_time="1.0" kill_decay_end_time="2.0" />
         </projectile>
         <effect class="muzzle" ref="ejection_76251" />
         <stance state_key="running" accuracy="-1" />
