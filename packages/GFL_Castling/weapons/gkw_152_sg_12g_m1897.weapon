@@ -118,7 +118,7 @@
     
     <weak_hand_hold offset="0.3" />
     <projectile file="bullet.projectile" time_to_live="0.15">
-        <result class="blast" radius="1.5" damage="0.1" push="1.5" decal="1" character_state="death"  faction_compare="not_equal"/>
+        <result class="blast" radius="1.5" damage="0.1" push="1.0" decal="1" character_state="death"  faction_compare="not_equal"/>
     </projectile>
     
     <!--Accuracy, Movement speed-->

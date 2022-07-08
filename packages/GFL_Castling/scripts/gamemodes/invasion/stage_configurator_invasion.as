@@ -158,7 +158,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 	protected void setupNormalStages() {
 		addStage(setupStage3());		  // map3 c
 		addStage(setupStage107());		  // chapter1 by diling
-		// addStage(setupStage109());		  // chapter2 by diling
+		addStage(setupStage109());		  // chapter2 by diling
 		addStage(setupStage8());          // map8
 		addStage(setupStage2());          // map4 c
 		// addStage(setupEggStage());		  // 上坟
@@ -180,10 +180,10 @@ class StageConfiguratorInvasion : StageConfigurator {
 		// addStage(setupStage14());         // map6_2
 		addStage(setupStage106());		  // map106 E30 Route by diling
 		// addStage(setupStage5());          // map1
-		addStage(setupStage19());		  // map19
+		addStage(setupStage19());		  // map18
 		addStage(setupFinalStage2());     // map12
 		addStage(setupStage108());		  // xiaoxieshen by diling
-		addStage(setupStage11());         // map13
+		// addStage(setupStage11());         // map13
 		addStage(setupStage16());         // map8_2
 	}
 
@@ -1365,14 +1365,14 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.m_mapInfo.m_id = "map6_2";
 
 		// we want to exclude some layers here, as the default ones are already used for the other map6
-    int index = stage.m_includeLayers.find("layer1.default");
-    if (index >= 0) {
-    stage.m_includeLayers.removeAt(index);
-    }
-    index = stage.m_includeLayers.find("bases.default");
-    if (index >= 0) {
-    stage.m_includeLayers.removeAt(index);
-    }
+		int index = stage.m_includeLayers.find("layer1.default");
+		if (index >= 0) {
+		stage.m_includeLayers.removeAt(index);
+		}
+		index = stage.m_includeLayers.find("bases.default");
+		if (index >= 0) {
+		stage.m_includeLayers.removeAt(index);
+		}
 
 
 		stage.m_includeLayers.insertLast("layer1_2.default"); 
@@ -1464,8 +1464,8 @@ class StageConfiguratorInvasion : StageConfigurator {
         stage.addTracker(AttackDefenseHandlerMap1_2(m_metagame, 0));   // we use this instead of peacefullastbase for map1_2
 		stage.addTracker(CommsCapacityHandler(m_metagame));
 
-    stage.m_minRandomCrates = 2; 
-    stage.m_maxRandomCrates = 3;
+		stage.m_minRandomCrates = 4; 
+		stage.m_maxRandomCrates = 6;
 
 		{
 			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0, 0.5, 0.15));   
@@ -1686,7 +1686,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.addTracker(jupiter(m_metagame,30));
 		stage.m_includeLayers.insertLast("layer1.invasion");		
 
-		stage.m_maxSoldiers = 16 * 15;
+		stage.m_maxSoldiers = 16 * 5;
 		stage.m_playerAiCompensation = 8;                                       
         stage.m_playerAiReduction = 1;                                            
 

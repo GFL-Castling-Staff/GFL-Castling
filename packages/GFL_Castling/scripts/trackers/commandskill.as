@@ -116,7 +116,9 @@ array<string> targetAAgrenades = {
 };
 array<string> targetAPgrenades = {
     "gkw_stg44.weapon",
-    "gkw_famas.weapon"
+    "gkw_famas.weapon",
+    "gkw_k11_ar.weapon",
+    "gkw_k11_20mm_impact.weapon"
 };
 // 列举枪对应的脚本技能编号。注意字典的值为了配合后面的只能用uint，不可用string，float等    
 dictionary commandSkillIndex = {
@@ -1438,7 +1440,15 @@ class CommandSkill : Tracker {
                         playSoundAtLocation(m_metagame,"gp25_fire_FromSQUAD.wav",factionid,c_pos,1.0);
                         playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);                        
                     }
-                    
+                    if(weaponname=="gkw_k11_20mm_impact.weapon" || weaponname=="gkw_k11_ar.weapon") {
+                        array<string> Voice={
+                            "K11_SKILL1_JP.wav",
+                            "K11_SKILL2_JP.wav",
+                            "K11_SKILL3_JP.wav"
+                        };
+                        playSoundAtLocation(m_metagame,"gp25_fire_FromSQUAD.wav",factionid,c_pos,1.0);
+                        playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);                        
+                    }                    
                     playAnimationKey(m_metagame,characterId,"recoil1, big",true,false);
                     c_pos=c_pos.add(Vector3(0,1,0));
                     if (checkFlatRange(c_pos,stringToVector3(target),15)){

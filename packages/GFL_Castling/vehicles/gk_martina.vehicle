@@ -73,9 +73,9 @@
 	<effect event_key="slide" type="splat_map" surface_tag="dirt" size="1.0" atlas_index="2" layer="1" />
 	<effect event_key="slide" type="particle" key="terrain" surface_tag="dirt" ref="Burst" use_surface_color="1" />
 
-	<effect event_key="health" value="2.05" ref="SmallSmokeVehicle" offset="-0.32 1.28 +2.16" />
-	<effect event_key="health" value="1.21" ref="SmallSmokeVehicle" offset="-0.32 1.28 +2.16" />
-	<effect event_key="health" value="1.21" ref="BrokenSparkle" post_processing="0" offset="-0.32 0.8 +2.16" />
+	<effect event_key="health" value="14." ref="SmallSmokeVehicle" offset="-0.32 1.28 +2.16" />
+	<effect event_key="health" value="7.0" ref="SmallSmokeVehicle" offset="-0.32 1.28 +2.16" />
+	<effect event_key="health" value="7.0" ref="BrokenSparkle" post_processing="0" offset="-0.32 0.8 +2.16" />
 	<effect event_key="destroyed" ref="SmallSmokeVehicle" offset="0.0 1.68 -0.24" />
 	<effect event_key="destroyed" ref="SmallSmokeVehicle" offset="-0.32 1.28 +2.0" />  
 	<effect event_key="destroyed" ref="SmallFireRepeat" offset="0.0 1.76 -0.24" /> 

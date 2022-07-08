@@ -23,7 +23,7 @@
   <parameter class="prefer_roofs_probability" value="0.2" />
   <parameter class="max_leader_authority_willing_to_join_another_squad" value="0.0" />
   <parameter class="defending_authority_offset_to_join_squad" value="10.0" />
-  <parameter class="value_increase_required_to_join_defend_squad" value="1.0" />
+  <parameter class="value_increase_required_to_join_defend_squad" value="500.0" />
   <parameter class="favor_joining_player_squad_value_increase" value="0.1" />
   <parameter class="favor_staying_in_current_player_squad_value_increase" value="0.5" />
   <parameter class="authority_margin" value="0.07" /> 
@@ -86,15 +86,15 @@
   <parameter class="celebrating_stab_probability" value="1.0" /> 
 
   <parameter class="vehicle_stuck_short_time" value="100000.0" />
-  <parameter class="force_as_leader" value="0" />
+  <parameter class="force_as_leader" value="1" />
   <parameter class="leader_sight_range" value="40.0" />
   <parameter class="team_member_sight_range" value="35.0" />
   <parameter class="force_comparison_multiplier_to_call_reinforcements" value="0.3" />
-  <parameter class="burst_time" value="1.6" />
-  <parameter class="burst_time_variance" value="0.5" />
+  <parameter class="burst_time" value="2.0" />
+  <parameter class="burst_time_variance" value="0" />
   <parameter class="longer_burst_time" value="3.0" />
   <parameter class="longer_burst_time_variance" value="0.6" />
-  <parameter class="choose_enemy_time" value="0.33" />
+  <parameter class="choose_enemy_time" value="1.0" />
 
 	<parameter class="willingness_to_guard" value="0.2" />
 
