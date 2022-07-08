@@ -12,11 +12,11 @@ key="kccow_cerynitis.weapon">
 
     <!--Weapon specifications-->
     <specification
-	retrigger_time="0.3" 
+	retrigger_time="0.5" 
 	accuracy_factor="1.0" 
 	sustained_fire_grow_step="2.0" 
 	sustained_fire_diminish_rate="0.5" 
-	magazine_size="3" 
+	magazine_size="20" 
 	can_shoot_standing="1" 
 	can_shoot_crouching="0"
 	can_shoot_prone="0"
@@ -24,8 +24,8 @@ key="kccow_cerynitis.weapon">
 	name="Code:Cerynitis Anti-Armor" 
 	class="0" 
 	reload_one_at_a_time="0"
-	sight_range_modifier="0.8" 
-	projectile_speed="130.0" 
+	sight_range_modifier="0.75" 
+	projectile_speed="100.0" 
 	carry_in_two_hands="0" 
 	projectiles_per_shot="2" 
 	slot="0" 
@@ -70,10 +70,13 @@ key="kccow_cerynitis.weapon">
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0" />
     <target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0" />
     <target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0" />
+    <target_factors tag="apc" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0" />
+    <target_factors tag="tank" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0" />
     <target_factors tag="heavy_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0" />
     <target_factors tag="light_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="7.0" />
 	<target_factors tag="target" distance="1.0" direction="0.0" squad_command="1.0" base_score="6.0" />
     <target_factors tag="tactical" distance="1.0" direction="0.0" squad_command="1.0" base_score="5.0" />  
+    <target_factors tag="punchme" distance="1.0" direction="0.0" squad_command="1.0" base_score="30.0" />
 
 </weapon>
 
@@ -89,7 +92,7 @@ key="kccow_cerynitis_1.weapon">
 
     <!--Weapon specifications-->
     <specification
-	retrigger_time="0.25" 
+	retrigger_time="0.2" 
 	accuracy_factor="1.0" 
 	sustained_fire_grow_step="0.0" 
 	sustained_fire_diminish_rate="0.0" 
@@ -99,12 +102,14 @@ key="kccow_cerynitis_1.weapon">
 	can_shoot_prone="0"
 	suppressed="0" 
 	name="Code:Cerynitis Suppressive" 
-	class="0" 
+	class="4"
+    burst_shots="5" 
 	reload_one_at_a_time="0"
-	sight_range_modifier="0.8" 
+	sight_range_modifier="0.7" 
 	projectile_speed="90.0" 
 	carry_in_two_hands="0" 
 	projectiles_per_shot="2" 
+    last_burst_retrigger_time="3.0"
 	slot="0" 
 	stab_enabled="0"/>
     <!--Animations-->
@@ -134,7 +139,7 @@ key="kccow_cerynitis_1.weapon">
         <result class="hit"  kill_probability="2.1" kill_decay_start_time="1.0" kill_decay_end_time="1.2" />
     </projectile>
 
-    <stance state_key="running" accuracy="0.9" />
+    <stance state_key="running" accuracy="1.0" />
     <stance state_key="walking" accuracy="1.0" />
     <stance state_key="crouch_moving" accuracy="1.0" />
     <stance state_key="prone_moving" accuracy="1.0" />
@@ -146,9 +151,10 @@ key="kccow_cerynitis_1.weapon">
     <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5" />
     <target_factors tag="heavy_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="10.0" />
     <target_factors tag="apc" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0" />
+    <target_factors tag="tank" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0" />
     <target_factors tag="light_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="6.0" />	
     <target_factors tag="defensive_at" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.5" />
-    <target_factors tag="tactical" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0" />  <!-- important non combat player-only vehicles -->  
+    <target_factors tag="tactical" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0" /> 
     <target_factors tag="bazooka" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0" />     
     <target_factors tag="punchme" distance="1.0" direction="0.0" squad_command="1.0" base_score="30.0" />
 
