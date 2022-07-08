@@ -24,7 +24,8 @@ array<string> BadAssMapList = {
 	"Holy Enclave",
 	"Warsalt Legacy",
 	"Route E30",
-	"Kanda jimbocho"
+	"Kanda jimbocho",
+	"Palo Island"
 };
 
 // --------------------------------------------
