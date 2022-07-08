@@ -446,6 +446,7 @@
 <model filename="sfd_excutioner.xml"><requirement class="weapon" slot="0" key="ff_excutioner_2.weapon"/></model>
 <model filename="sfd_agent.xml"><requirement class="weapon" slot="0" key="ff_agent.weapon"/></model>
 <model filename="sfd_scarecrow.xml"><requirement class="weapon" slot="0" key="ff_scarecrow.weapon"/></model>
+<model filename="sfd_scarecrow.xml"><requirement class="weapon" slot="0" key="ff_scarecrow_skill.weapon"/></model>
 <model filename="sfd_destroyer.xml"><requirement class="weapon" slot="0" key="ff_destroyer.weapon"/></model>
 <model filename="sfd_ouroboros.xml"><requirement class="weapon" slot="0" key="ff_weaver.weapon"/></model>
 <model filename="sfd_ouroboros.xml"><requirement class="weapon" slot="0" key="ff_weaver_1.weapon"/></model>
@@ -487,5 +488,7 @@
 <model filename="gkd_ar_hk416_agent.xml"><requirement class="weapon" slot="0" key="gkw_hk416_agent_sticky.weapon"/></model>
 
 <model filename="gkd_smg_sterling.xml"><requirement class="weapon" slot="0" key="gkw_sterling.weapon"/></model>
+<model filename="gkd_liu_melondove.xml"><requirement class="weapon" slot="0" key="gkw_liu.weapon"/></model>
+<model filename="gkd_liu_melondove.xml"><requirement class="weapon" slot="0" key="gkw_liu_skill.weapon"/></model>
 
 </models>

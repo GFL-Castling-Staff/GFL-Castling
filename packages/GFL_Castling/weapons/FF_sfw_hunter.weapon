@@ -17,8 +17,8 @@
 	class="0"
 	reload_one_at_a_time="0"
 	sight_range_modifier="0.8"
-	projectile_speed="100"
-	projectiles_per_shot="2"
+	projectile_speed="125"
+	projectiles_per_shot="4"
 	burst_shots="1"
     slot="0" 
 	stab_enabled="1"/>
@@ -70,9 +70,13 @@
 
     
     <weak_hand_hold offset="0.1" />
-    <projectile file="bullet_sf.projectile">
-		<result class="blast" radius="1.5" damage="1.5" push="0" decal="1" faction_compare="not_equal" />
-    </projectile>
+    <projectile file="bullet.projectile">
+            <result class="hit" 
+        kill_probability="2.5" 
+        kill_probability_offset_on_successful_hit="1.4"
+        kill_decay_start_time="0.25" 
+        kill_decay_end_time="0.95" />
+        </projectile>
     
     <!--Accuracy, Movement speed-->
         
@@ -83,7 +87,7 @@
     <stance state_key="standing" accuracy="0.9" />
     <stance state_key="crouching" accuracy="0.95" />
     <stance state_key="prone" accuracy="1" />
-    <modifier class="speed" value="+0.3" /> 
+    <modifier class="speed" value="+0.45" /> 
 
 </weapon>
 <weapon file="gk_sf_boss.base_weapon" key="ff_hunter_skill.weapon">
@@ -103,7 +107,7 @@
 	name="GK-Hunter-[Exterminating Blood Shot]"
 	class="4"
 	sight_range_modifier="0.8"
-	projectile_speed="100"
+	projectile_speed="125"
 	projectiles_per_shot="4"
 	burst_shots="20"
     slot="0" 
