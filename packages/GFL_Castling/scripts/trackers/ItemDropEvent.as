@@ -171,17 +171,19 @@ class ItemDropEvent : Tracker {
                 if(m_craftQueue[a].m_time<0){
                     int pId=m_craftQueue[a].m_playerId;
                     const XmlElement@ player = getPlayerInfo(m_metagame, pId);
-                    int cId=player.getIntAttribute("character_id");
-                    if(m_craftQueue[a].m_typekey=="mod3"){
-                        addItemInBackpack(m_metagame,cId,"carry_item","firecontrol.carry_item");
-                        playPrivateSound(m_metagame,"sfx_returnback.wav",pId);
-                        sendPrivateMessageKey(m_metagame, pId, "quest_timeout");
+                    if(player !is null){
+                        int cId=player.getIntAttribute("character_id");
+                        if(m_craftQueue[a].m_typekey=="mod3"){
+                            addItemInBackpack(m_metagame,cId,"carry_item","firecontrol.carry_item");
+                            playPrivateSound(m_metagame,"sfx_returnback.wav",pId);
+                            sendPrivateMessageKey(m_metagame, pId, "quest_timeout");
+                        }
+                        if(m_craftQueue[a].m_typekey=="truecore"){
+                            addItemInBackpack(m_metagame,cId,"carry_item","core_mask.carry_item");
+                            playPrivateSound(m_metagame,"sfx_returnback.wav",pId);
+                            sendPrivateMessageKey(m_metagame, pId, "quest_timeout");
+                        }                    
                     }
-                    if(m_craftQueue[a].m_typekey=="truecore"){
-                        addItemInBackpack(m_metagame,cId,"carry_item","core_mask.carry_item");
-                        playPrivateSound(m_metagame,"sfx_returnback.wav",pId);
-                        sendPrivateMessageKey(m_metagame, pId, "quest_timeout");
-                    }                    
                     m_craftQueue.removeAt(a);
                 }
             }
