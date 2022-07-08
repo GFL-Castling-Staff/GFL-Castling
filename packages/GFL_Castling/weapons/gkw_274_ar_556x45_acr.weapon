@@ -11,20 +11,22 @@
             projectile_speed="250"
             retrigger_time="0.08"
             suppressed="1"
+            sight_range_modifier="1.25"
             sustained_fire_diminish_rate="1.8"
             sustained_fire_grow_step="0.3" />
-        <inventory encumbrance="10.0" buy_price="15.0" sell_price="15.0" />
+        <inventory encumbrance="5.0" buy_price="50.0" sell_price="50.0" />
         <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
         <sound key="fire" fileref="acr_fire_FromDIVISION2.wav" pitch_variety="0.05" volume="1" />
         <sound key="magazine_out" fileref="acr_mgz_out_FromDIVISION2.wav" volume="1" />
         <sound key="magazine_in" fileref="acr_mgz_in_FromDIVISION2.wav" volume="1" />
         <sound key="cycle" fileref="acr_cycle_FromDIVISION2.wav" volume="1" />
         <sound class="impact" fileref="rifle_drop.wav" />
+        <next_in_chain key="gkw_acr_skill.weapon" share_ammo="1" />
         <model filename="gkw_ar_acr.xml" />
         <hud_icon filename="gkw_acr.png" />
         <weak_hand_hold offset="0.2" />
         <projectile file="bullet.projectile" can_be_detected_by_footmen="0">
-            <result class="hit" kill_probability="1.85" kill_probability_offset_on_successful_hit="1.25" kill_decay_start_time="0.675" kill_decay_end_time="1.125" />
+            <result class="hit" kill_probability="1.85" kill_probability_offset_on_successful_hit="1.2" kill_decay_start_time="0.675" kill_decay_end_time="1.125" />
         </projectile>
         <effect class="muzzle" ref="ejection_556" />
         <stance state_key="running" accuracy="0.5" />
@@ -36,5 +38,46 @@
         <stance state_key="prone" accuracy="1" />
         <modifier class="detectability" value="-0.1" />
     </weapon>
-    
+    <weapon file="two_hands_ar.animation_base" key="gkw_acr_skill.weapon">
+        <specification
+            accuracy_factor="0.99"
+            barrel_offset="0.4"
+            class="0"
+            slot="0"
+            magazine_size="30"
+            can_shoot_standing="0"
+            can_shoot_crouching="1"
+            can_shoot_prone="1"
+            name="Bushmaster ACR-[Shadow Strangling Tune]"
+            projectile_speed="250"
+            retrigger_time="0.0545"
+            suppressed="1"
+            sight_range_modifier="1.75"
+            sustained_fire_diminish_rate="1.8"
+            sustained_fire_grow_step="0.1" />
+        <inventory encumbrance="5.0" buy_price="50.0" sell_price="50.0" />
+        <animation key="reload" animation_key="reloading, magazine rifle 0.8" />
+        <sound key="fire" fileref="acr_fire_FromDIVISION2.wav" pitch_variety="0.05" volume="1" />
+        <sound key="magazine_out" fileref="acr_mgz_out_FromDIVISION2.wav" volume="1" />
+        <sound key="magazine_in" fileref="acr_mgz_in_FromDIVISION2.wav" volume="1" />
+        <sound key="cycle" fileref="acr_cycle_FromDIVISION2.wav" volume="1" />
+        <sound class="impact" fileref="rifle_drop.wav" />
+        <next_in_chain key="gkw_acr.weapon" share_ammo="1" />
+        <model filename="gkw_ar_acr.xml" />
+        <hud_icon filename="gkw_acr_skill.png" />
+        <weak_hand_hold offset="0.2" />
+        <projectile file="bullet.projectile" can_be_detected_by_footmen="0">
+            <result class="hit" kill_probability="1.85" kill_probability_offset_on_successful_hit="1.75" kill_decay_start_time="0.675" kill_decay_end_time="1.125" />
+        </projectile>
+        <effect class="muzzle" ref="ejection_556" />
+        <stance state_key="running" accuracy="0.5" />
+        <stance state_key="walking" accuracy="0.75" />
+        <stance state_key="crouch_moving" accuracy="0.8" />
+        <stance state_key="prone_moving" accuracy="0.8" />
+        <stance state_key="standing" accuracy="0.8" />
+        <stance state_key="crouching" accuracy="0.85" />
+        <stance state_key="prone" accuracy="0.9" />
+        <modifier class="speed" value="-0.4" />
+        <modifier class="hit_success_probability" value="-0.2" />
+    </weapon>
 </weapons>
