@@ -19,6 +19,14 @@
 #include "faction_config.as"
 #include "stage_configurator.as"
 
+array<string> BadAssMapList = {
+    "Moorland Apocalypse",
+	"Holy Enclave",
+	"Warsalt Legacy",
+	"Route E30",
+	"Kanda jimbocho"
+};
+
 // --------------------------------------------
 class MapRotatorInvasion : MapRotator {
 	protected GameModeInvasion@ m_metagame;
@@ -219,7 +227,16 @@ class MapRotatorInvasion : MapRotator {
                     }                    
                 }				
 			}
-			
+			if (BadAssMapList.find(map_name)>-1){
+                array<const XmlElement@> players = getPlayers(m_metagame);
+                if(players is null || players.size()<=0) return;
+                for (uint i = 0; i < players.size(); ++i) {
+                    int characterId = players[i].getIntAttribute("character_id");
+                    if (characterId >= 0) {
+                        addItemInBackpack(m_metagame,characterId,"carry_item","complete_box_hardcore.carry_item");
+                    }                    
+                }
+			}
 			if (m_world !is null) {
 				// now, update world view, declare the area ours
 				m_world.refresh(m_stages, m_stagesCompleted, m_currentStageIndex);

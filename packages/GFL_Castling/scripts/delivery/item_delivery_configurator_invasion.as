@@ -60,6 +60,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 	protected void setupSupplyBox(){
 		setupDreambox();
 		setupSingularity();
+		setupBadAss();
 		_log("adding supply reward box", 1);
 	}
 
@@ -474,12 +475,12 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		ScoredResource("wild_gifts.carry_item", "carry_item", 10.0f, 10),
 		ScoredResource("snow_gifts.carry_item", "carry_item", 10.0f, 10),
 		ScoredResource("forest_gifts.carry_item", "carry_item", 10.0f, 10),	
-		ScoredResource("gift_box_1.carry_item", "carry_item", 30.0f,3),
+		ScoredResource("gift_box_1.carry_item", "carry_item", 30.0f,5),
 		ScoredResource("firecontrol.carry_item", "carry_item", 10.0f,1),
 		ScoredResource("gift_box_2.carry_item", "carry_item", 15.0f,1),
 		ScoredResource("lottery.carry_item", "carry_item", 20.0f,3),
 		ScoredResource("core_mask.carry_item", "carry_item", 5.0f,1),
-		ScoredResource("dollcraft.carry_item", "carry_item", 40.0f,5)
+		ScoredResource("gift_box_1.carry_item", "carry_item", 40.0f,3)
 			}
 		};
 		processRewardPasses(rewardPasses);
@@ -498,14 +499,14 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		array<array<ScoredResource@>> rewardPasses = {
 			{
 		ScoredResource("RO365_Ant_Doll.carry_item", "carry_item", 15.0f),
-		ScoredResource("wild_gifts.carry_item", "carry_item", 10.0f, 10),
-		ScoredResource("snow_gifts.carry_item", "carry_item", 10.0f, 10),
+		ScoredResource("wild_gifts.carry_item", "carry_item", 10.0f, 20),
+		ScoredResource("snow_gifts.carry_item", "carry_item", 10.0f, 20),
 		ScoredResource("gift_box_1.carry_item", "carry_item", 30.0f,3),
 		ScoredResource("firecontrol.carry_item", "carry_item", 15.0f,1),
 		ScoredResource("gift_box_2.carry_item", "carry_item", 15.0f,1),
 		ScoredResource("lottery.carry_item", "carry_item", 20.0f,3),
 		ScoredResource("core_mask.carry_item", "carry_item", 5.0f,1),
-		ScoredResource("dollcraft.carry_item", "carry_item", 30.0f,5)
+		ScoredResource("gift_box_1.carry_item", "carry_item", 30.0f,5)
 			},
 			{
 		// ScoredResource("gkw_hk21.weapon", "weapon", 0.5f),
@@ -526,6 +527,32 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 			);
 	}
 
+	protected void setupBadAss() {
+		array<Resource@> deliveryList = {
+			Resource("complete_box_hardcore.carry_item", "carry_item")
+		};
+
+		array<array<ScoredResource@>> rewardPasses = {
+			{
+		ScoredResource("RO365_Ant_Doll.carry_item", "carry_item", 15.0f),
+		ScoredResource("wild_gifts.carry_item", "carry_item", 10.0f, 20),
+		ScoredResource("snow_gifts.carry_item", "carry_item", 10.0f, 20),
+		ScoredResource("gift_box_1.carry_item", "carry_item", 30.0f,3),
+		ScoredResource("firecontrol.carry_item", "carry_item", 15.0f,1),
+		ScoredResource("gift_box_2.carry_item", "carry_item", 15.0f,1),
+		ScoredResource("lottery.carry_item", "carry_item", 20.0f,3),
+		ScoredResource("core_mask.carry_item", "carry_item", 5.0f,1),
+		ScoredResource("gift_box_1.carry_item", "carry_item", 30.0f,5)
+			}
+		};
+		processRewardPasses(rewardPasses);
+
+		GiftItemDeliveryRandomRewarder@ rewarder = GiftItemDeliveryRandomRewarder(m_metagame, rewardPasses);
+
+		m_itemDeliveryOrganizer.addObjective(
+			ItemDeliveryObjective(m_metagame, 0, deliveryList, m_itemDeliveryOrganizer, null, "", "", "", -1 /* loop */, rewarder)
+			);
+	}
 	// 替换彩票----------------------------------------------------
 	protected void setupIcecream() {
 		_log("adding icecream van config", 1);
