@@ -31,7 +31,6 @@ class MatchCompleteReward : Tracker {
                 }
             }
 		} 
-        m_metagame.save();
     }
 
 }
