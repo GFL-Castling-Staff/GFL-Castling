@@ -13,7 +13,7 @@ blast_damage_threshold="50"
 use_time_to_live="1" 
 time_to_live="360">
 
-    <result class="blast" radius="7.5" damage="5" push="1.5" decal="1" character_state="death" />
+    <result class="blast" radius="7.5" damage="5" push="1.0" decal="1" character_state="death" />
     <trigger class="impact"> 
      <collider class="terrain" enabled="0" /> 
      <collider class="static_object" enabled="0" /> 

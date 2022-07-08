@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projectile class="grenade" key="roarer_main2.projectile" name="" slot="2" time_to_live="0.10" pulldown_in_air="-60">
     
-    <result class="blast" radius="10" damage="3" decal="0" push="1.5" character_state="death" faction_compare="not_equal" />
+    <result class="blast" radius="10" damage="3" decal="0" push="1.0" character_state="death" faction_compare="not_equal" />
     <trigger class="time" time_to_live="0.01">
         <collider class="terrain" enabled="1" />     
         <collider class="static_object" enabled="1" /> 

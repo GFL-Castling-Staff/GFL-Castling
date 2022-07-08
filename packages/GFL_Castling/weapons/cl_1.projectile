@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projectile class="grenade" name="" slot="1" pulldown_in_air="-60" key="cl_1.projectile">
-    <result class="blast" radius="10" damage="1" decal="0" push="2" character_state="stun" make_vehicle_hit_sound="0" faction_compare="equal" />
+    <result class="blast" radius="10" damage="1" decal="0" push="1" character_state="stun" make_vehicle_hit_sound="0" faction_compare="equal" />
     <trigger class="time" time_to_live="0.0" />
     <rotation class="motion" />
     <sound class="result" key="other" fileref="Type100_APPRECIATE_JP.wav" />
