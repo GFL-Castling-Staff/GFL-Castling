@@ -42,7 +42,7 @@
 	offset="0 0.0 0" 
 	top_offset="0 4.0 0" 
 	collision_model_pos="0 0.8 -0.12" 
-	collision_model_extent="2.56 2.4 4.0" 
+	collision_model_extent="2.56 2.0 4.0" 
 	visual_offset="0 0.12 0.0" 
 	friction_offset="0.05"
 	drag_offset="-0.05" /> 
@@ -51,8 +51,10 @@
 
 	<sky_diving chute_offset="0 2.75 0.0" trigger_height="20.0" gravity="-10" mesh_filename="chute_large.mesh" texture_filename="chute.png" />
 
-	<turret offset="0 1.88 -0.2" weapon_key="chara_mg.weapon" weapon_offset="0.45 0.85 0.0" weapon_recoil="0.0" max_rotation_step="0.0053" />
-	<turret offset="0 1.88 -0.2" weapon_key="chara_rocket.weapon" weapon_offset="-0.45 0.85 0.0" weapon_recoil="0.0" max_rotation_step="0.0053" />
+	<turret offset="0 1.88 -0.2" weapon_key="chara_mg.weapon" weapon_offset="0.45 0.85 0.0" weapon_recoil="-1.0" max_rotation_step="0.0053" />
+	<turret offset="0 1.88 -0.2" weapon_key="chiara_breath.weapon" weapon_offset="-0.45 0.85 -1.0" weapon_recoil="-1.0" rotation="0.6"  max_rotation_step="0.0053"  rotation_range="6.30"/>
+	<turret offset="0 1.88 -0.2" weapon_key="chiara_breath.weapon" weapon_offset="-0.45 0.85 -1.0" weapon_recoil="-1.0" rotation="-1.2" max_rotation_step="0.0053"  rotation_range="6.30"/>
+	<turret offset="0 1.88 -0.2" weapon_key="chiara_breath.weapon" weapon_offset="-0.45 0.85 -1.0" weapon_recoil="-1.0" rotation="1.8"  max_rotation_step="0.0053"  rotation_range="6.30"/>
 		<visual  offset="0 -2.0 0.0" class="turret" turret_index="0" mesh_filename="chara_turret.mesh" texture_filename="chara.png" />
 		<!-- <visual  offset="0 0 0.28" class="turret" turret_index="0" key="broken" mesh_filename="chara_turret.mesh" texture_filename="humvee_broken.png" /> -->
 
@@ -75,23 +77,25 @@
 
 
 	<!-- sound handling -->
-	<rev_sound filename="tank_rev0.wav" low_pitch="0.5" high_pitch="0.7" low_rev="0.0" high_rev="1.0" volume="0.9" />
-	<rev_sound filename="tank_rev0_b.wav" low_pitch="0.6" high_pitch="0.8" low_rev="0.0" high_rev="1.0" volume="0.8" /> 
-	<rev_sound filename="tank_rev1.wav" low_pitch="0.2" high_pitch="0.5" low_rev="0.4" high_rev="0.7" volume="1.0" />
-	<rev_sound filename="jeep2_rev3.wav" low_pitch="0.4" high_pitch="0.7" low_rev="0.1" high_rev="1.0" volume="0.9" />  
-	<rev_sound filename="tank_rev2.wav" low_pitch="0.3" high_pitch="0.5" low_rev="0.9" high_rev="1.0" volume="0.9" />
+	<!--
+	<rev_sound filename="jeep_rev0.wav" low_pitch="0.8" high_pitch="1.0" low_rev="0.0" high_rev="0.2" volume="0.8" />
+	<rev_sound filename="jeep_rev1.wav" low_pitch="0.5" high_pitch="1.1" low_rev="0.1" high_rev="1.0" volume="1.0" />
+	-->
+	<rev_sound filename="jeep2_rev0.wav" low_pitch="0.8" high_pitch="1.0" low_rev="0.0" high_rev="0.3" volume="0.8" />
+	<rev_sound filename="jeep2_rev2.wav" low_pitch="0.6" high_pitch="1.0" low_rev="0.1" high_rev="0.7" volume="0.65" />
+	<rev_sound filename="jeep2_rev3.wav" low_pitch="0.8" high_pitch="1.0" low_rev="0.5" high_rev="1.0" volume="0.8" />
 	
 	<effect event_key="slide" type="splat_map" surface_tag="road" size="2.0" atlas_index="5" layer="0" />
 	<effect event_key="slide_hard" type="splat_map" surface_tag="road" size="2.0" atlas_index="5" layer="0" />
 	<effect event_key="slide" type="splat_map" surface_tag="dirt" size="1.0" atlas_index="2" layer="1" />
 	<effect event_key="slide" type="particle" key="terrain" surface_tag="dirt" ref="Burst" use_surface_color="1" />
 
-	<effect event_key="health" value="3.05" ref="SmallSmokeVehicle" offset="-0.32 1.28 +2.16" />
-	<effect event_key="health" value="1.21" ref="SmallSmokeVehicle" offset="-0.32 1.28 +2.16" />
-	<effect event_key="health" value="1.21" ref="BrokenSparkle" post_processing="0" offset="-0.32 0.8 +2.16" />
-	<effect event_key="destroyed" ref="SmallSmokeVehicle" offset="0.0 1.68 -0.24" />
-	<effect event_key="destroyed" ref="SmallSmokeVehicle" offset="-0.32 1.28 +2.0" />  
-	<effect event_key="destroyed" ref="SmallFireRepeat" offset="0.0 1.76 -0.24" /> 
+	<effect event_key="health" value="12.0" ref="SmallSmokeVehicle" offset="0 1.28 0" />
+	<effect event_key="health" value="6.0" ref="SmallSmokeVehicle" offset="0 1.28 0" />
+	<effect event_key="health" value="6.0" ref="BrokenSparkle" post_processing="0" offset="0 0.8 0" />
+	<effect event_key="destroyed" ref="SmallSmokeVehicle" offset="0.0 1.68 0" />
+	<effect event_key="destroyed" ref="SmallSmokeVehicle" offset="0 1.28 0" />  
+	<effect event_key="destroyed" ref="SmallFireRepeat" offset="0 1.76 0" /> 
 	<effect event_key="destroy" key="other" ref="woosh" post_processing="0" shadow="0" />   
 	<effect event_key="cleanup" key="other" ref="woosh" post_processing="0" shadow="0" />   
 
