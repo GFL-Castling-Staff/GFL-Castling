@@ -515,6 +515,10 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		// ScoredResource("gkw_cz2000.weapon", "weapon", 0.5f),
 		ScoredResource("gkw_honeybadger.weapon", "weapon", 0.5f),
 		ScoredResource("gkw_thunder.weapon", "weapon", 0.5f),
+		ScoredResource("gkw_contender.weapon", "weapon", 0.5f),
+		ScoredResource("gkw_iws2000.weapon", "weapon", 0.5f),
+		ScoredResource("gkw_sat8.weapon", "weapon", 0.5f),
+		ScoredResource("gkw_rfb.weapon", "weapon", 0.5f),
 		ScoredResource("wild_gifts.carry_item", "carry_item", 3.0f,5)
 			}
 		};

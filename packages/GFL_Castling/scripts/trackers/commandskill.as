@@ -1404,7 +1404,7 @@ class CommandSkill : Tracker {
         int j=-1;
         _log("AA grenade ar detected");
         for (uint i=0;i<SkillArray.length();i++){
-            if (InCooldown(characterId,modifer,SkillArray[i]) && SkillArray[i].m_weapontype==weaponname) {
+            if (InCooldown(characterId,modifer,SkillArray[i]) && SkillArray[i].m_weapontype=="APgrenade") {
                 ExistQueue=true;
                 j=i;
             }
@@ -1457,7 +1457,7 @@ class CommandSkill : Tracker {
                     else{
                         CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"std_aa_grenade.projectile",characterId,factionid,45.0,6.0);
                     }
-                    addCoolDown(weaponname,15,characterId,modifer);
+                    addCoolDown("APgrenade",15,characterId,modifer);
                 }
             }
         }
