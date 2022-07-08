@@ -4,7 +4,6 @@
     <specification 
 		accuracy_factor="0.99" 
 		barrel_offset="0.4" 
-		 
 		class="0"
         slot="0" 
 		magazine_size="30" 
@@ -36,7 +35,7 @@
 
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet.projectile">
-        <result class="hit"  kill_probability="1.85" kill_probability_offset_on_successful_hit="0.6" kill_decay_start_time="0.881" kill_decay_end_time="1.469" />
+        <result class="hit"  kill_probability="1.85" kill_probability_offset_on_successful_hit="1.5" kill_decay_start_time="0.881" kill_decay_end_time="1.469" />
     </projectile>
     <effect class="muzzle" ref="ejection_556" />
     
@@ -44,7 +43,6 @@
     <stance state_key="walking" accuracy="0.7" />
     <stance state_key="crouch_moving" accuracy="0.8" />
     <stance state_key="prone_moving" accuracy="0.8" />
-
     <stance state_key="standing" accuracy="0.85" />
     <stance state_key="crouching" accuracy="0.9" />
     <stance state_key="prone" accuracy="1" />
