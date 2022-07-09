@@ -101,7 +101,7 @@
 
     <weak_hand_hold offset="0.2" />
     <projectile file="dragons_breath.projectile" >
-		<result class="blast" radius="2" damage="0.4" push="0.05" decal="1" faction_compare="not_equal" damage_origin_vehicle="0" damage_as_probability="1"/>
+		<result class="blast" radius="2" damage="0.5" push="0.05" decal="1" faction_compare="not_equal" damage_origin_vehicle="0" damage_as_probability="1"/>
 	</projectile>
     
     <modifier class="speed" value="-0.02" />
