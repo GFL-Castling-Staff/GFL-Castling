@@ -57,6 +57,7 @@
 		<trail probability="1.0" key="laser_hyz" />
 		 <result class="blast" damage="6.5"  radius="4.5" decal="1" push="0" character_state="death" 	faction_compare="not_equal" />
     </projectile>
+    <stance state_key="running" accuracy="1" />
 	<stance state_key="walking" accuracy="1" />
 	<stance state_key="crouch_moving" accuracy="1" />
 	<stance state_key="prone_moving" accuracy="1" />
