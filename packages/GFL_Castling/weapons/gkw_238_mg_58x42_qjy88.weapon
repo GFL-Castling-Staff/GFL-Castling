@@ -18,8 +18,8 @@
 		<inventory buy_price="50.0" sell_price="50.0" />
 		<next_in_chain key="gkw_qjy88_skill.weapon" share_ammo="1" />
 		<sound key="fire" fileref="type88_fire_FromBFBC1.wav" pitch_variety="0.05" volume="1" />
-		<sound key="magazine_out" fileref="type88_cycle_out_FromBF3.wav" volume="0.8" />
-		<sound key="magazine_in" fileref="type88_cycle_in_FromBF3.wav" volume="0.8" />
+		<sound key="magazine_out" fileref="type88_mgz_out_FromBF3.wav" volume="0.8" />
+		<sound key="magazine_in" fileref="type88_mgz_in_FromBF3.wav" volume="0.8" />
 		<sound key="cycle" fileref="type88_cycle_FromBF3.wav" volume="0.8" />
 		<sound class="impact" fileref="rifle_drop.wav" />
 		<model filename="gkw_mg_qjy88_n.xml" />
@@ -57,8 +57,8 @@
 		<commonness value="0" in_stock="0" />
 		<next_in_chain key="gkw_qjy88.weapon" share_ammo="1" />
 		<sound key="fire" fileref="type88skill_fire_FromHALOINFINTE.wav" pitch_variety="0.05" volume="1" />
-		<sound key="magazine_out" fileref="type88_cycle_out_FromBF3.wav" volume="0.8" />
-		<sound key="magazine_in" fileref="type88_cycle_in_FromBF3.wav" volume="0.8" />
+		<sound key="magazine_out" fileref="type88_mgz_out_FromBF3.wav" volume="0.8" />
+		<sound key="magazine_in" fileref="type88_mgz_in_FromBF3.wav" volume="0.8" />
 		<sound key="cycle" fileref="type88_cycle_FromBF3.wav" volume="0.8" />
 		<sound class="impact" fileref="rifle_drop.wav" />
 		<model filename="gkw_mg_qjy88.xml" />
