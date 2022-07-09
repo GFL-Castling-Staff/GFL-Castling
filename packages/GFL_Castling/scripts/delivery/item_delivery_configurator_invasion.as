@@ -61,6 +61,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		setupDreambox();
 		setupSingularity();
 		setupBadAss();
+		setupXiangBing();
 		_log("adding supply reward box", 1);
 	}
 
@@ -557,6 +558,36 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 			ItemDeliveryObjective(m_metagame, 0, deliveryList, m_itemDeliveryOrganizer, null, "", "", "", -1 /* loop */, rewarder)
 			);
 	}
+	protected void setupXiangBing() {
+		array<Resource@> deliveryList = {
+			Resource("complete_box_xb.carry_item", "carry_item")
+		};
+
+		array<array<ScoredResource@>> rewardPasses = {
+			{
+		ScoredResource("gift_box_1.carry_item", "carry_item", 35.0f),
+		ScoredResource("gift_box_1.carry_item", "carry_item", 20.0f, 2),
+		ScoredResource("gift_box_1.carry_item", "carry_item", 10.0f, 3),
+		ScoredResource("firecontrol.carry_item", "carry_item", 15.0f,1),
+		ScoredResource("lottery.carry_item", "carry_item", 15.0f,3),
+		ScoredResource("lottery.carry_item", "carry_item", 20.0f,2),
+		ScoredResource("core_mask.carry_item", "carry_item", 5.0f,1),
+		ScoredResource("lottery.carry_item", "carry_item", 30.0f,1)
+			},
+			{
+		ScoredResource("beer_can.carry_item", "carry_item", 10.0f,20),
+		ScoredResource("energy_drink.carry_item", "carry_item", 10.0f, 20),
+		ScoredResource("whiskey_bottle.carry_item", "carry_item", 10.0f, 20)
+			}
+		};
+		processRewardPasses(rewardPasses);
+
+		GiftItemDeliveryRandomRewarder@ rewarder = GiftItemDeliveryRandomRewarder(m_metagame, rewardPasses);
+
+		m_itemDeliveryOrganizer.addObjective(
+			ItemDeliveryObjective(m_metagame, 0, deliveryList, m_itemDeliveryOrganizer, null, "", "", "", -1 /* loop */, rewarder)
+			);
+	}	
 	// 替换彩票----------------------------------------------------
 	protected void setupIcecream() {
 		_log("adding icecream van config", 1);
