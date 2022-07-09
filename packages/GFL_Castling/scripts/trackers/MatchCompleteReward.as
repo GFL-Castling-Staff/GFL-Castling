@@ -29,6 +29,16 @@ class MatchCompleteReward : Tracker {
                         addItemInBackpack(m_metagame,characterId,"carry_item","complete_box.carry_item");
                     }                    
                 }
+
+                if(rand(1,5)==1){
+                    sendFactionMessageKey(m_metagame, 0,"celebrateXB");
+                    for (uint i = 0; i < players.size(); ++i) {
+                        int characterId = players[i].getIntAttribute("character_id");
+                        if (characterId >= 0) {
+                            addItemInBackpack(m_metagame,characterId,"carry_item","complete_box_xb.carry_item");
+                        }
+                    }
+                }
             }
 		} 
     }
