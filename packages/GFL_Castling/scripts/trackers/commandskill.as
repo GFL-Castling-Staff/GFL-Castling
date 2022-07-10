@@ -255,6 +255,10 @@ dictionary commandSkillIndex = {
         {"gkw_ribeyrollesmod3.weapon",32},
         {"gkw_ribeyrollesmod3_skill.weapon",32},
 
+        //MG4
+        {"gkw_mg4mod3.weapon",33},
+        {"gkw_mg4mod3_skill.weapon",33},
+
         // 下面这行是用来占位的，在这之上添加新的枪和index即可
         {"666",-1}
 };
@@ -351,7 +355,7 @@ class CommandSkill : Tracker {
                     // case 30:{excuteAK12SEskill(cId,senderId,m_modifer);break;}
                     case 31:{excutePPKMOD3skill(cId,senderId,m_modifer);break;}
                     case 32:{excuteMLEskill(cId,senderId,m_modifer);break;}
-
+                    case 33:{excuteMG4MOD3skill(cId,senderId,m_modifer);break;}
 
                     default:
                         break;
@@ -2286,7 +2290,51 @@ class CommandSkill : Tracker {
         }
     }    
 
+    void excuteMG4MOD3skill(int characterId,int playerId,SkillModifer@ modifer){
+        bool ExistQueue = false;
+        int j=-1;
+        for (uint i=0;i<SkillArray.length();i++){
+            if (InCooldown(characterId,modifer,SkillArray[i]) && SkillArray[i].m_weapontype=="MG4MOD3") {
+                ExistQueue=true;
+                j=i;
+            }
+        }
+        if (ExistQueue){
+            dictionary a;
+            a["%time"] = ""+SkillArray[j].m_time;
+            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            _log("skill cooldown" + SkillArray[j].m_time);
+            return;
+        }
+        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+        if (character !is null) {
+            const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+            if (player !is null){
+                if (player.hasAttribute("aim_target")) {
+                    string target = player.getStringAttribute("aim_target");
+                    Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
+                    int factionid = character.getIntAttribute("faction_id");
+                    array<string> Voice={
+                        "A-10_1.wav",
+                        "A-10_2.wav",
+                        "A-10_3.wav"
+                    };
+                    playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+                    playAnimationKey(m_metagame,characterId,"recoil, pistol",true,true);
+                    playSoundAtLocation(m_metagame,"dart_shot.wav",factionid,c_pos,1.0);
+                    c_pos=c_pos.add(Vector3(0,1,0));
 
+                    //insertLockOnStrafeAirstrike(m_metagame,"ioncannon_strafe",characterId,factionid,stringToVector3(target));
+
+                    TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                    tasker.add(DelayAirstrikeRequest(m_metagame,2.0,characterId,factionid,stringToVector3(target),"a10_strafe"));
+                                
+
+                    addCoolDown("MG4MOD3",120,characterId,modifer);
+                }
+            }
+        }
+    }        
 }
 
 

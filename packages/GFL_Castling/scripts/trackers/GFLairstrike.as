@@ -60,6 +60,7 @@ class GFLairstrike : Tracker {
 
                 switch(Airstrike_strafe[a].m_straferkey){
                     case 0:{//A10 单次 锁人扫射
+                        _log("A10 strafe activated");
 
                         //扫射位置偏移单位向量 与 扫射位置偏移单位距离
                         Vector3 strike_vector = getAimUnitVector(1,start_pos,end_pos); 
