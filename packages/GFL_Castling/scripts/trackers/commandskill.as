@@ -186,7 +186,10 @@ dictionary commandSkillIndex = {
         // G3 Mod3
         {"gkw_g3mod3.weapon",13},
 
-        // UMP45MOD3
+        // UMP45
+        {"gkw_ump45.weapon",14},
+        {"gkw_ump45_535.weapon",14},
+        {"gkw_ump45_410.weapon",14},      
         {"gkw_ump45mod3.weapon",14},
         {"gkw_ump45mod3_535.weapon",14},
         {"gkw_ump45mod3_410.weapon",14},
@@ -2327,10 +2330,11 @@ class CommandSkill : Tracker {
                     //insertLockOnStrafeAirstrike(m_metagame,"ioncannon_strafe",characterId,factionid,stringToVector3(target));
 
                     TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
-                    tasker.add(DelayAirstrikeRequest(m_metagame,2.0,characterId,factionid,stringToVector3(target),"a10_strafe"));
-                                
+                    tasker.add(DelayAirstrikeRequest(m_metagame,3.0,characterId,factionid,stringToVector3(target),"a10_strafe"));
+                    tasker.add(DelayAirstrikeRequest(m_metagame,3.0,characterId,factionid,stringToVector3(target),"a10_strafe"));
+                    tasker.add(DelayAirstrikeRequest(m_metagame,3.0,characterId,factionid,stringToVector3(target),"a10_strafe"));
 
-                    addCoolDown("MG4MOD3",120,characterId,modifer);
+                    addCoolDown("MG4MOD3",90,characterId,modifer);
                 }
             }
         }
