@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapon file="two_hands_sg.animation_base" key="gkw_ltlx7000_icecream.weapon">
-
-    
     <!--Weapon specifications-->
-    
     <specification 
 	retrigger_time="-1.0" 
 	accuracy_factor="1.5" 
@@ -22,43 +19,29 @@
 	projectiles_per_shot="1"
 	spread_range="0.3"
 	burst_shots="1" />
-    <inventory  buy_price="80.0" sell_price="80.0" />
-	<!--Animations-->
-	
+    <inventory buy_price="80.0" sell_price="80.0" />
+    <!--Animations-->
     <commonness value="0" in_stock="0" />
-    <animation key="reload" animation_key="reloading, oaat" />		
-	
-	<!--Sounds-->
-	
+    <animation key="reload" animation_key="reloading, oaat" />
+    <!--Sounds-->
     <sound key="fire" fileref="ltlx7000_fire_FromCOD16.wav" volume="1.3" />
     <sound key="reload_one" fileref="sg1_reload_FromREALLIFE.wav" volume="0.5" />
     <sound key="reload_one" fileref="sg2_reload_FromREALLIFE.wav" volume="0.5" />
     <sound key="reload_one" fileref="sg3_reload_FromREALLIFE.wav" volume="0.5" />
     <sound key="reload_one" fileref="sg4_reload_FromREALLIFE.wav" volume="0.5" />
     <sound class="impact" fileref="rifle_drop.wav" />
-   
-	<!--Model, Icon, Cost-->
-   
+    <!--Model, Icon, Cost-->
     <model filename="gkw_ltlx7000_melondove.xml" />
-    <hud_icon filename="testing.png" />
-
-
-	
-	<!--Ballistics-->
-	
-    
+    <hud_icon filename="gkw_ltlx7000_icecream.png" />
+    <!--Ballistics-->
     <weak_hand_hold offset="0.3" />
     <projectile file="icecream.projectile"/>
-
-    
     <!--Accuracy, Movement speed-->
-    
-	<stance state_key="walking" accuracy="0.6" />
+    <stance state_key="walking" accuracy="0.6" />
     <stance state_key="crouch_moving" accuracy="0.5" />
     <stance state_key="prone_moving" accuracy="0.5" />
     <stance state_key="standing" accuracy="0.65"/>
     <stance state_key="crouching" accuracy="0.7" />
     <stance state_key="prone" accuracy="0.8" />
-    <stance state_key="over_wall" accuracy="0.8" />  
-
+    <stance state_key="over_wall" accuracy="0.8" />
 </weapon>

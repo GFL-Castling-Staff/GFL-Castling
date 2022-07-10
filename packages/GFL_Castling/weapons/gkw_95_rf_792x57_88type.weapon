@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapon key="gkw_88type.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-
     <specification 
 	  retrigger_time="-1.0" 
 	  accuracy_factor="1.0" 
@@ -20,38 +19,32 @@
 	  projectiles_per_shot="4" 
       burst_shots="1"
       stab_enabled="1" />
-
-	<commonness value="0.2" in_stock="1" can_respawn_with="1" />
-	<inventory encumbrance="20.0" buy_price="1.0" sell_price="0.0"/>
-	<capacity value="1" source="rank" source_value="0.0" />
-
+    <commonness value="0.2" in_stock="0" can_respawn_with="1" />
+    <inventory encumbrance="20.0" buy_price="10.0" sell_price="10.0"/>
+    <capacity value="1" source="rank" source_value="0.0" />
     <animation key="cycle" animation_key="Brifle1" />
-	<animation key="cycle" stance_key="prone" animation_key="Brifle1p" />
-    <animation key="reload" animation_key="reloading, oaat" />		
-	<animation key="recoil"  ref="12" />
+    <animation key="cycle" stance_key="prone" animation_key="Brifle1p" />
+    <animation key="reload" animation_key="reloading, oaat" />
+    <animation key="recoil"  ref="12" />
     <animation key="recoil"  ref="13" />
     <animation key="recoil"  ref="14" />
-	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone" />
-	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone" />
-	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone" />
-	<animation state_key="walking" animation_key="walking, hip fire" />
+    <animation key="recoil" stance_key="prone" animation_key="recoil1, prone" />
+    <animation key="recoil" stance_key="prone" animation_key="recoil2, prone" />
+    <animation key="recoil" stance_key="prone" animation_key="recoil3, prone" />
+    <animation state_key="walking" animation_key="walking, hip fire" />
     <animation state_key="walking_backwards" animation_key="walking backwards, hip fire" />
     <animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
-	<animation state_key="stabbing" animation_key="melee, quick knife" />
-	<animation state_key="stabbing" animation_key="pistol whip 3" />
-   
+    <animation state_key="stabbing" animation_key="melee, quick knife" />
+    <animation state_key="stabbing" animation_key="pistol whip 3" />
     <sound key="fire" fileref="m1903only_fire_FromRODH.wav" pitch_variety="0.05" volume="1.2" />
     <sound key="cycle" fileref="m1903_cycle_FromFC6.wav" volume="0.6"/>
     <sound key="reload_one" fileref="m1903_reload_FromCOD16.wav" volume="0.4" />
     <sound key="cycle_out" fileref="m1903_cycle_out_FromFC6.wav"  volume="0.6"/>
-    <sound key="cycle_in" fileref="m1903_cycle_in_FromFC6.wav"  volume="0.6"/> 
+    <sound key="cycle_in" fileref="m1903_cycle_in_FromFC6.wav"  volume="0.6"/>
     <sound class="impact" fileref="rifle_drop.wav" volume="1"/>
     <model filename="gkw_rf_88type.xml" />
-
     <hud_icon filename="gkw_88type.png" />
     <capacity value="1" source="rank" source_value="0.0" />
-    
-
     <weak_hand_hold offset="0.3" />
     <projectile file="bullet.projectile">
         <result class="hit" 
@@ -61,15 +54,15 @@
         kill_decay_end_time="2.414" />
     </projectile>
     <stance state_key="running" accuracy="1" />
-	<stance state_key="walking" accuracy="1" />
-	<stance state_key="crouch_moving" accuracy="1" />
-	<stance state_key="prone_moving" accuracy="1" />
-	<stance state_key="standing" accuracy="1"/>
-	<stance state_key="crouching" accuracy="1" />
-	<stance state_key="prone" accuracy="1" />
-	<stance state_key="over_wall" accuracy="1" />  
+    <stance state_key="walking" accuracy="1" />
+    <stance state_key="crouch_moving" accuracy="1" />
+    <stance state_key="prone_moving" accuracy="1" />
+    <stance state_key="standing" accuracy="1"/>
+    <stance state_key="crouching" accuracy="1" />
+    <stance state_key="prone" accuracy="1" />
+    <stance state_key="over_wall" accuracy="1" />
     <target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0" />
-	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5" />
+    <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5" />
     <target_factors tag="shotgun" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0" />
     <target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0" />
     <target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0" />

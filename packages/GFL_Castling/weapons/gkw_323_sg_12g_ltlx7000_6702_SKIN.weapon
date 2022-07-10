@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapons>
-<weapon file="two_hands_sg.animation_base" key="gkw_ltlx7000.weapon">
+<weapon file="two_hands_sg.animation_base" key="gkw_ltlx7000_6702.weapon">
     <!--Weapon specifications-->
     <specification 
 	retrigger_time="-1.0" 
@@ -10,7 +10,7 @@
 	magazine_size="7" 
 	can_shoot_standing="1" 
 	suppressed="0" 
-	name="Beretta LTLX 7000" 
+	name="Beretta LTLX 7000-[Dancing Shrine Maiden]" 
 	class="2" 
 	reload_one_at_a_time="1"
 	sight_range_modifier="1.0" 
@@ -20,7 +20,7 @@
 	spread_range="0.2" />
 
     <inventory buy_price="50.0" sell_price="50.0" />
-    <next_in_chain key="gkw_ltlx7000_skill.weapon" share_ammo="1" />
+    <next_in_chain key="gkw_ltlx7000_6702_skill.weapon" share_ammo="1" />
     <!--Animations-->
     <animation state_key="cycle" animation_key="Pshotgun0.5" />
     <animation state_key="cycle" stance_key="prone" animation_key="Pshotgun0.5p" />
@@ -34,8 +34,8 @@
     <sound key="reload_one" fileref="sg4_reload_FromREALLIFE.wav" volume="0.5" />
     <sound class="impact" fileref="rifle_drop.wav" />
     <!--Model, Icon, Cost-->
-    <model filename="gkw_ltlx7000_melondove.xml" />
-    <hud_icon filename="gkw_ltlx7000.png" />
+    <model filename="gkw_sg_ltlx7000_6702.xml" />
+    <hud_icon filename="gkw_ltlx7000_6702.png" />
     <!--Ballistics-->
     <weak_hand_hold offset="0.3" />
     <projectile file="bullet.projectile">
@@ -54,7 +54,7 @@
     <stance state_key="over_wall" accuracy="0.8" />
     <modifier class="hit_success_probability" value="-0.5" />
 </weapon>
-<weapon file="two_hands_sg.animation_base" key="gkw_ltlx7000_skill.weapon">
+<weapon file="two_hands_sg.animation_base" key="gkw_ltlx7000_6702_skill.weapon">
     <!--Weapon specifications-->
     <specification 
 	retrigger_time="-1.0" 
@@ -64,7 +64,7 @@
 	magazine_size="7" 
 	can_shoot_standing="1" 
 	suppressed="0" 
-	name="Beretta LTLX 7000-[Opposites Repel]" 
+	name="Beretta LTLX 7000-[Dancing Shrine Maiden]-[Opposites Repel]" 
 	class="2" 
 	reload_one_at_a_time="1"
 	sight_range_modifier="1.0" 
@@ -74,7 +74,7 @@
 	spread_range="0.2" />
 
     <inventory buy_price="50.0" sell_price="50.0" />
-    <next_in_chain key="gkw_ltlx7000.weapon" share_ammo="1" />
+    <next_in_chain key="gkw_ltlx7000_6702.weapon" share_ammo="1" />
     <!--Animations-->
     <animation state_key="cycle" animation_key="Pshotgun0.5" />
     <animation state_key="cycle" stance_key="prone" animation_key="Pshotgun0.5p" />
@@ -88,12 +88,12 @@
     <sound key="reload_one" fileref="sg4_reload_FromREALLIFE.wav" volume="0.5" />
     <sound class="impact" fileref="rifle_drop.wav" />
     <!--Model, Icon, Cost-->
-    <model filename="gkw_ltlx7000_melondove.xml" />
-    <hud_icon filename="gkw_ltlx7000_skill.png" />
+    <model filename="gkw_sg_ltlx7000_6702.xml" />
+    <hud_icon filename="gkw_ltlx7000_6702.png" />
     <!--Ballistics-->
     <weak_hand_hold offset="0.3" />
     <projectile file="bullet.projectile">
-        <result class="blast"  radius="3.0" damage="0.0" push="0.0" decal="0" character_state="wound" faction_compare="not_equal"/> 
+        <result class="blast" radius="3.0" damage="0.0" push="0.0" decal="0" character_state="wound" faction_compare="not_equal"/> 
     </projectile>
     <!--Accuracy, Movement speed-->
     <stance state_key="walking" accuracy="0.5" />

@@ -2323,12 +2323,8 @@ class CommandSkill : Tracker {
                         "A-10_3.wav"
                     };
                     playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
-                    playAnimationKey(m_metagame,characterId,"recoil, pistol",true,true);
+                    playAnimationKey(m_metagame,characterId,"air thrust",false,true);
                     playSoundAtLocation(m_metagame,"dart_shot.wav",factionid,c_pos,1.0);
-                    c_pos=c_pos.add(Vector3(0,1,0));
-
-                    //insertLockOnStrafeAirstrike(m_metagame,"ioncannon_strafe",characterId,factionid,stringToVector3(target));
-
                     TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
                     tasker.add(DelayAirstrikeRequest(m_metagame,3.0,characterId,factionid,stringToVector3(target),"a10_strafe"));
                     tasker.add(DelayAirstrikeRequest(m_metagame,3.0,characterId,factionid,stringToVector3(target),"a10_strafe"));
