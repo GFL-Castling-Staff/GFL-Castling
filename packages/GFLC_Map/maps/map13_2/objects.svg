@@ -17264,7 +17264,7 @@ flip = 1;</desc>
        id="rect9344-6-8-0-17"
        style="display:inline;fill:#e7eeed;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:5;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;enable-background:new">
       <desc
-         id="desc7300">index = 0; texture = dirt.png; scale = 0.01 0.01; auto_decoration_texture = ground_decoration.png; auto_decoration_texture_atlas_cell = 0 1 2 2; auto_decoration_texture_atlas_cell = 1 1 2 2; auto_decoration_multiplier = 0; auto_decoration_size = 0.25; auto_decoration_density = 0.05;</desc>
+         id="desc7300">index = 0; texture = dirt.png; scale = 0.01 0.01;</desc>
     </rect>
     <rect
        inkscape:label="#terrain_layer"
@@ -17290,12 +17290,6 @@ flip = 1;</desc>
 texture = grass.png; 
 alpha = terrain5_alpha_grass.png; 
 scale = 0.01 0.01; 
-auto_decoration_texture = ground_decoration.png; 
-auto_decoration_texture_atlas_cell = 0 0 2 2; 
-auto_decoration_texture_atlas_cell = 1 0 2 2; 
-auto_decoration_multiplier = 0; 
-auto_decoration_size = 0.3; 
-auto_decoration_density = 1.0; 
 outline = 1; 
 outline_color = fill;</desc>
     </rect>
