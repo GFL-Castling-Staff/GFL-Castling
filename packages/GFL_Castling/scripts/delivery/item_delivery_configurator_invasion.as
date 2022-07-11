@@ -259,6 +259,8 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		ScoredResource("gkw_m590_1806.weapon","weapon",1.0f),
 		ScoredResource("gkw_m200_560.weapon","weapon",1.0f),
 		ScoredResource("gkw_ltlx7000_6702.weapon","weapon",1.0f),
+		ScoredResource("gkw_dsr50_1801.weapon","weapon",1.0f),
+		ScoredResource("gkw_dsr50_2101.weapon","weapon",1.0f),
 		ScoredResource("gkw_m870_3803.weapon", "weapon", 1.0f)
 			}
 		};
@@ -472,17 +474,23 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 
 		array<array<ScoredResource@>> rewardPasses = {
 			{
-		ScoredResource("RO365_Ant_Doll.carry_item", "carry_item", 15.0f),
+		ScoredResource("RO365_Ant_Doll.carry_item", "carry_item", 5.0f,2),
+		ScoredResource("RO365_Ant_Doll.carry_item", "carry_item", 25.0f),
 		ScoredResource("city_gifts.carry_item", "carry_item", 10.0f, 10),
 		ScoredResource("wild_gifts.carry_item", "carry_item", 10.0f, 10),
 		ScoredResource("snow_gifts.carry_item", "carry_item", 10.0f, 10),
 		ScoredResource("forest_gifts.carry_item", "carry_item", 10.0f, 10),	
-		ScoredResource("gift_box_1.carry_item", "carry_item", 30.0f,5),
+		ScoredResource("city_gifts.carry_item", "carry_item", 10.0f, 20),
+		ScoredResource("wild_gifts.carry_item", "carry_item", 10.0f, 20),
+		ScoredResource("snow_gifts.carry_item", "carry_item", 10.0f, 20),
+		ScoredResource("forest_gifts.carry_item", "carry_item", 10.0f, 20),	
+		ScoredResource("gift_box_1.carry_item", "carry_item", 5.0f,5),
 		ScoredResource("firecontrol.carry_item", "carry_item", 10.0f,1),
 		ScoredResource("gift_box_2.carry_item", "carry_item", 15.0f,1),
-		ScoredResource("lottery.carry_item", "carry_item", 20.0f,3),
+		ScoredResource("lottery.carry_item", "carry_item", 15.0f,3),
+		ScoredResource("gift_box_community_2.carry_item", "carry_item", 5.0f),
 		ScoredResource("core_mask.carry_item", "carry_item", 5.0f,1),
-		ScoredResource("gift_box_1.carry_item", "carry_item", 40.0f,3)
+		ScoredResource("gift_box_1.carry_item", "carry_item", 10.0f,3)
 			}
 		};
 		processRewardPasses(rewardPasses);

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<weapon file="designated_marksman_rifle.animation_base" key="gkw_dsr50.weapon">
+<weapon file="designated_marksman_rifle.animation_base" key="gkw_dsr50_1801.weapon">
     <!--Weapon specifications-->
     <specification 
 	retrigger_time="-1.0" 
@@ -11,7 +11,7 @@
 	can_shoot_crouching="1"
 	can_shoot_prone="1"
 	suppressed="1" 
-	name="DSR-50" 
+	name="DSR-50-[Pantone Peony]" 
 	class="2"
 	reload_one_at_a_time="0" 
 	sight_range_modifier="3.2" 
@@ -33,7 +33,7 @@
     <sound class="impact" fileref="rifle_drop.wav" />
     <!--Model, Icon, Cost-->
     <model filename="gkw_rf_dsr50.xml" />
-    <hud_icon filename="gkw_dsr50.png" />
+    <hud_icon filename="gkw_dsr50_1801.png" />
     <!--Ballistics-->
     <weak_hand_hold offset="0.3" />
     <projectile file="ntw.projectile" can_be_detected_by_footmen="0">
