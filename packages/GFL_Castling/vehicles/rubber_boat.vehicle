@@ -2,7 +2,9 @@
 <vehicle name="Degeyter I" 
 	key="rubber_boat.vehicle" 
 	map_view_atlas_index="4"
-	character_leave_request_mode="friendly" >
+	respawn_time="60" 
+	time_to_live_unsteerable="495" 
+	character_leave_request_mode="friendly"  >
 	
 	<tag name="vehicle" />
 	<tire_set offset="0.5 0.0 1.55" radius="0.4" />
@@ -12,10 +14,10 @@
 	<control 
 	max_speed="40.0" 
 	acceleration="10.0" 
-	max_reverse_speed="7.0" 
+	max_reverse_speed="35.0" 
 	min_health_to_steer="0" 
 	max_rotation="1.0" 
-	max_water_depth="3.3" 
+	max_water_depth="6.3" 
 	steer_smoothening="0.8" />
 
 	<physics 
@@ -24,12 +26,13 @@
 	gravity="-28" 
 	extent="1.87 0.0 3.41" 
 	offset="0 0.2 0" 
-	collision_model_pos="0 1.5 0" 
+	collision_model_pos="0 1.0 0" 
 	collision_model_extent="2.8 2.0 6.0" 
 	visual_offset="0 0.7 0" 
 	top_offset="0 3.0 0" 	
 	friction_offset="0.05"
-	drag_offset="-0.05" /> 
+	drag_offset="-0.05"
+	destroy_on_top_hit="0"	/> 
 
 
 	<modifier class="blast_damage" value="-0.75" />

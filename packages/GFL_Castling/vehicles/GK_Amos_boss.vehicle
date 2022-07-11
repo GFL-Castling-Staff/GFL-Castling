@@ -1,26 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <vehicle 
-file="vehicle_base.vehicle" 
-name="Amos" 
-key="armored_truck.vehicle" 
-time_to_live_unsteerable="360" 
-respawn_time="480" 
-map_view_atlas_index="2" 
-max_character_collision_speed="-1" 
-max_character_collision_speed_on_normal="2.0" 
-allow_ai_to_use="0"
-allow_character_leave_request="1" 
-allow_owner_to_use_only="1" 
-existence="one_per_faction" 
-owner="faction" 
-usable_for_cover="0" 
-soldier_capacity_offset="20"
-protectors="8" 
-designated_squad_as_driver_only="0" 
-minimum_fill_requirement="0.0" 
-ai_force_designated_driver_xp="10.0"
-ai_navigation_offset="0.0"
-jams_enemy_radio="1">
+	file="vehicle_base.vehicle" 
+	name="Amos" 
+	key="armored_truck.vehicle" 
+	time_to_live_unsteerable="360" 
+	respawn_time="480" 
+	map_view_atlas_index="2" 
+	max_character_collision_speed="-1" 
+	max_character_collision_speed_on_normal="2.0" 
+	reserves_spawn_point="1" 
+	allow_ai_to_use="0"
+	allow_character_leave_request="1" 
+	allow_owner_to_use_only="1" 
+	existence="one_per_faction" 
+	owner="faction" 
+	usable_for_cover="0" 
+	soldier_capacity_offset="20"
+	protectors="8" 
+	designated_squad_as_driver_only="0" 
+	minimum_fill_requirement="0.0" 
+	ai_force_designated_driver_xp="10.0"
+	ai_navigation_offset="0.0"
+	jams_enemy_radio="1">
+	
     <tag name="Amos" />
     <tag name="metal_heavy" />
     <tag name="heavy_combat" />
@@ -29,7 +31,7 @@ jams_enemy_radio="1">
     <modifier class="blast_damage" value="-0.8" />
     <modifier class="blast_range" value="-2.0" />
     <control 
-		max_speed="5.0"
+		max_speed="6.0"
 		acceleration="2.5"
 		max_reverse_speed="8.0"
 		max_limiter_speed="2.0"
