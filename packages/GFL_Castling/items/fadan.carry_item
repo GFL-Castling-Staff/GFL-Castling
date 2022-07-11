@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<carry_item file="base_valuable.carry_item" name="U R Warnned" key="fadan.carry_item">
+<carry_item file="base_valuable.carry_item" name="U R NOT Warnned" key="fadan.carry_item">
     <hud_icon filename="fadan.png" />
-    <inventory encumbrance="100.0" buy_price="0.0" sell_price="-10000.0" />
+    <inventory encumbrance="100.0" buy_price="0.0" sell_price="-1.0" />
 
     <model mesh_filename="memory_fragment.xml" texture_filename="" />
 
