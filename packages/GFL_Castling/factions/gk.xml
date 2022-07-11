@@ -1116,6 +1116,18 @@
 			<attribute weight="1.0" min="0.100" max="102.833" />
 		</attribute_config>
 	</soldier>
+	<soldier name="316_liu_rf" spawn_score="0.05" copy_from="default_rf">
+		<character filename="default_gk_pmc.text_lines">
+			<sound key="death" fileref="GeneralLiu_BREAK_JP.wav" pitch_variety="0.05" volume="0.8" />
+		</character>
+		<resources file="gk_elite.resources">
+			<weapon key="gkw_liu.weapon" />
+			<carry_item key="exo_x_t4.carry_item" />
+		</resources>
+		<attribute_config class="xp">
+			<attribute weight="1.0" min="0.100" max="6.833" />
+		</attribute_config>
+	</soldier>
 	<soldier name="216_xm8_ar" spawn_score="0.05" copy_from="default_ar">
 		<character filename="default_gk_pmc.text_lines">
 			<sound key="death" fileref="XM8_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
