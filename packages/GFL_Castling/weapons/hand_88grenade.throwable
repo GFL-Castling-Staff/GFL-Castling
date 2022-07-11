@@ -43,7 +43,7 @@
         <effect class="result" key="vehicle" copy="terrain" />
     </projectile>
     <projectile class="grenade" name="88type Cluster grenade" key="hand_88grenade_sub.projectile" slot="0" radius="0.15">
-        <result class="blast" radius="6.5" damage="2.0" push="0.3" decal="1" character_state="death" faction_compare="not_equal" />
+        <result class="blast" radius="6.5" damage="2.1" push="0.3" decal="1" character_state="death" faction_compare="not_equal" />
         <trigger class="time" time_to_live="0.0"/>
         <rotation class="random" />
         <model mesh_filename="" />
