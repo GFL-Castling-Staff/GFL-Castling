@@ -285,8 +285,12 @@ class GFLskill : Tracker {
 					Vector3 luckyGuyPos = stringToVector3(luckyGuy.getStringAttribute("position"));
 					//智能雷对披风的减伤
 					string vestkey = getPlayerEquipmentKey(m_metagame,luckyGuyid,4);
-                    if (vestkey=="cc_t4.carry_item" || vestkey=="cc_t5_16lab.carry_item" )
+                    if (startsWith(vestkey,'cc_t4') || startsWith(vestkey,'cc_t5_16lab') || startsWith(vestkey,'woshieoe')){
 						CreateProjectile(m_metagame,pos_smartgrenade,luckyGuyPos,"kcco_smartgrenade_3_1.projectile",characterId,factionid,120,0.01);
+					}
+					else if(startsWith(vestkey,'bp_t4') || startsWith(vestkey,'bp_t5_16lab') || startsWith(vestkey,'K309')){
+						CreateProjectile(m_metagame,pos_smartgrenade,luckyGuyPos,"kcco_smartgrenade_3_2.projectile",characterId,factionid,120,0.01);
+					}
 					else
 						CreateProjectile(m_metagame,pos_smartgrenade,luckyGuyPos,"kcco_smartgrenade_3.projectile",characterId,factionid,120,0.01);
 				}
