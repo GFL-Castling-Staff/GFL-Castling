@@ -43,7 +43,7 @@ void main(dictionary@ inputData) {
 	register_in_serverlist='1'
 	mode='Castling'
 	persistency='forever'
-	max_players='10'
+	max_players='15'
 	friendly_fire="1">
 	<client_faction id='0' />
 </command>

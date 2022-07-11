@@ -17128,7 +17128,7 @@ separator_depth = 0.7;</desc>
        transform="matrix(0.00521698,0.99998639,-0.99998639,0.00521698,0,0)">
       <desc
          id="desc152873-6-7">type = vehicle;
-key = aa_emplacement.vehicle;</desc>
+tag = only_aa;</desc>
     </rect>
     <flowRoot
        xml:space="preserve"
@@ -33122,7 +33122,7 @@ capturable =0;</desc>
          y="-49.779133"
          inkscape:label="#rect4003">
         <desc
-           id="desc6099-8">height=3;</desc>
+           id="desc6099-8">height=30;</desc>
       </rect>
       <rect
          transform="matrix(0.0034427,0.999994,-0.999994,0.0034427,0,1024)"
@@ -33134,7 +33134,7 @@ capturable =0;</desc>
          y="-2363.9407"
          inkscape:label="#rect4003">
         <desc
-           id="desc6099-8-7">height=3;</desc>
+           id="desc6099-8-7">height=30;</desc>
       </rect>
       <rect
          transform="matrix(1,7.50447e-4,-7.50447e-4,1,0,1024)"
@@ -33146,7 +33146,7 @@ capturable =0;</desc>
          y="-1230.3689"
          inkscape:label="#rect4003">
         <desc
-           id="desc6099-8-7-4">height=3;</desc>
+           id="desc6099-8-7-4">height=30;</desc>
       </rect>
       <rect
          transform="matrix(1,7.49917e-4,-7.49917e-4,1,0,1024)"
@@ -33158,7 +33158,7 @@ capturable =0;</desc>
          y="963.58429"
          inkscape:label="#rect4003">
         <desc
-           id="desc6099-8-7-4-4">height=3;</desc>
+           id="desc6099-8-7-4-4">height=30;</desc>
       </rect>
     </g>
     <g
@@ -49688,7 +49688,7 @@ tag = apc;</desc>
          transform="matrix(0.0015356,0.99999882,-0.99999882,0.0015356,0,0)">
         <desc
            id="desc152873">type = vehicle;
-key = aa_emplacement.vehicle;</desc>
+tag = only_aa;</desc>
       </rect>
       <rect
          transform="matrix(-0.99987391,-0.01587999,0.01587999,-0.99987391,0,0)"
@@ -49950,7 +49950,7 @@ key = radio_jammer.vehicle;
          style="fill:#786721;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:12.00000153, 12.00000153;stroke-dashoffset:4.6000005;display:inline;enable-background:new">
         <desc
            id="desc7082-7-0-4">type = vehicle; 
-key = atv_base.vehicle;</desc>
+tag = atv;</desc>
       </rect>
       <rect
          transform="matrix(-0.00521698,-0.99998639,0.99998639,-0.00521698,0,0)"
@@ -51685,7 +51685,7 @@ tag = apc;</desc>
          transform="matrix(0.0015356,0.99999882,-0.99999882,0.0015356,0,0)">
         <desc
            id="desc152873-6">type = vehicle;
-key = aa_emplacement.vehicle;</desc>
+tag = only_aa;</desc>
       </rect>
       <rect
          transform="matrix(-0.99987391,-0.01587999,0.01587999,-0.99987391,0,0)"
@@ -54394,7 +54394,7 @@ tag = tank;</desc>
          style="fill:#786721;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:12.00000162, 12.00000162;stroke-dashoffset:4.60000054;display:inline;enable-background:new">
         <desc
            id="desc7082-7-0-4-2">type = vehicle; 
-key = atv_base.vehicle;</desc>
+tag = atv;</desc>
       </rect>
       <rect
          style="fill:#008000;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:12.00000154, 12.00000154;stroke-dashoffset:4.6000008;display:inline;enable-background:new"
