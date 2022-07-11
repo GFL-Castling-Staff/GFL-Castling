@@ -29,7 +29,6 @@ class GFLskill : Tracker {
 		"gk_repair_fairy.call",
 		"target.call",
 		"manticore.call",
-		"manticore2.call"
 	};
 
     protected array<XM8tracker@> XM8track;

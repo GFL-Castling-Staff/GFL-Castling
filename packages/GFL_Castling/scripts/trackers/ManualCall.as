@@ -298,7 +298,7 @@ class ManualCall : Tracker {
                         CallTaskArray.insertLast(FairyRequest);
                         addCastlnigMarker(FairyRequest);
                         _log("QueueLegeth:"+CallTaskArray.length());
-                        sendFactionMessageKey(m_metagame,Faction,"Request Targetdrone!");
+                        sendFactionMessageKey(m_metagame,Faction,"Provocation Fairy");
                         sendFactionMessageKey(m_metagame,Faction,"Targetdrone,Unlock!");
                     }
                 }

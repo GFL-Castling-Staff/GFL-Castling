@@ -19,7 +19,7 @@
         <inventory encumbrance="0.0" price="328.0" />
     </call>
     <!-- 嘲讽妖精 -->
-    <call name="Targetdrone" key="target.call" radio_view_text="Request Targetdrone" initiation_comment1="Targetdrone is launching" acknowledge_comment="Unlock" launch_comment="Targetdrone,Unlock!" notify_metagame="1">
+    <call name="Targetdrone" key="target.call" radio_view_text="Provocation Fairy" initiation_comment1="Targetdrone is launching" acknowledge_comment="Unlock" launch_comment="Targetdrone,Unlock!" notify_metagame="1">
         <hud_icon filename="call_Airborne_targetdrone.png" />
         <capacity value="0" source="rank" source_value="0.0" />
         <capacity value="100" source="rank" source_value="1.143" />
@@ -90,7 +90,7 @@
         </round>
     </call>
     <!-- 火箭妖精 -->
-    <call name="Rocket Fairy" key="gk_rocket_fairy.call" initiation_comment1="Request rocket strike" acknowledge_comment="Confirm, upload the coordinates" acknowledge_time="0" launch_comment="Start rocket strike" notify_metagame="1">
+    <call name="Rocket Fairy" key="gk_rocket_fairy.call" initiation_comment1="Rocket Fairy" acknowledge_comment="Confirm, upload the coordinates" acknowledge_time="0" launch_comment="Start rocket strike" notify_metagame="1">
         <round instances="20" instance_class="grenade" instance_key="artillery_rocket_fairies.projectile" instance_spread="35 15 35" common_spread="10 0 10" launch_time="3.0" spawn_time="6.0" horizontal_offset_at_spawn="0.0">
             <sound class="launch" fileref="Fairy_multirocket_FromCOD16.wav" volume="0.8" />
             <sound class="spawn" fileref="woosh1.wav" volume="0.2" />
@@ -130,7 +130,7 @@
         <inventory encumbrance="0.0" price="300.0" />
     </call>
     <!-- 立盾妖精 -->
-    <call name="repair_fairy" key="gk_repair_fairy.call" initiation_comment1="Request Barrier Fairy" acknowledge_comment="Confirm, data reception is normal" acknowledge_time="0" launch_comment="Armor Fortification in progress." notify_metagame="1">
+    <call name="repair_fairy" key="gk_repair_fairy.call" initiation_comment1="Barrier Fairy" acknowledge_comment="Confirm, data reception is normal" acknowledge_time="0" launch_comment="Armor Fortification in progress." notify_metagame="1">
         <round instances="1" instance_class="grenade" instance_key="repair_fairy.projectile" instance_spread="0 0 0" common_spread="0 0 0" launch_time="2.0" spawn_time="3.0" horizontal_offset_at_spawn="0.0">
             <sound class="launch" fileref="artillery_barrage_1.wav" volume="1.0" />
             <sound class="launch" fileref="artillery_barrage_2.wav" volume="1.0" />
@@ -142,7 +142,7 @@
         <inventory encumbrance="0.0" price="300.0" />
     </call>
     <call name="vehicle supply" key="gk_airdrop_supply.call" initiation_comment1="Request IOP Supply" acknowledge_comment="Confirm, data reception is normal" acknowledge_time="0" launch_comment="droping in" notify_metagame="1">
-        <round instances="1" instance_class="vehicle" instance_key="gk_store" instance_spread="0 0 0" common_spread="0 0 0" launch_time="2.0" spawn_time="3.0" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="50.0" initial_speed_to_target="0.0">
+        <round instances="1" instance_class="vehicle" instance_key="gk_stash" instance_spread="0 0 0" common_spread="0 0 0" launch_time="2.0" spawn_time="3.0" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="50.0" initial_speed_to_target="0.0">
             <effect class="launch" ref="ShadowAirplaneFlyby" shadow="1" />
             <sound class="launch" fileref="plane_flyby.wav" />
         </round>
@@ -164,7 +164,7 @@
         <inventory encumbrance="0.0" price="108.0" />
     </call>
     <!-- 炮击妖精 -->
-    <call name="UAV shelling" key="gk_bombardment_fairy.call" initiation_comment1="Request fire guidance to the bombardment point!" acknowledge_comment="Confirm, data reception is normal" acknowledge_time="0" launch_comment="Artillery strikes in progress." notify_metagame="1">
+    <call name="Bombardment Fairy" key="gk_bombardment_fairy.call" initiation_comment1="Bombardment Fairy" acknowledge_comment="Confirm, data reception is normal" acknowledge_time="0" launch_comment="Artillery strikes in progress." notify_metagame="1">
         <round instances="3" instance_class="grenade" instance_key="artillery_shell_fairies.projectile" instance_spread="4 4 4" common_spread="2 0 2" launch_time="1.5" spawn_time="3.0">
             <sound class="launch" fileref="Fairy_artillery_FromRA3.wav" volume="2.5" />
             <sound class="spawn" fileref="woosh1.wav" volume="0.2" />
@@ -188,7 +188,7 @@
         <inventory encumbrance="0.0" price="200.0" />
     </call>
     <!-- 空袭妖精 -->
-    <call name="Drone air strikes" key="gk_airstrike_fairy.call" initiation_comment1="Request drone air strikes" acknowledge_comment="Confirmed, UAV is online, situational awareness is complete " acknowledge_time="0" launch_comment="Execution of air strikes" notify_metagame="1">
+    <call name="Airstrike Fairy" key="gk_airstrike_fairy.call" initiation_comment1="Airstrike Fairy" acknowledge_comment="Confirmed, UAV is online, situational awareness is complete" acknowledge_time="0" launch_comment="Execution of air strikes" notify_metagame="1">
         <round instances="1" instance_class="grenade" instance_key="artillery_airstrike_fairies.projectile" instance_spread="0 0 0" common_spread="0 0 0" launch_time="1.0" spawn_time="3.0" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="45.0" initial_speed_to_target="20.0">
             <effect class="launch" ref="gk_ShadowCallFlyby" shadow="1" />
             <sound class="launch" fileref="plane_flyby.wav" volume="6.0" />
