@@ -1,7 +1,7 @@
 
 particle_system muzzle_blue
 {
-	quota	1000
+	quota	50
 	material	flame_blue
 	particle_width	2.0
 	particle_height	2.0
@@ -17,7 +17,7 @@ particle_system muzzle_blue
 		colour_range_start	1 1 1 1
 		colour_range_end	1 1 1 1
 		direction	0 1 0
-		emission_rate	150
+		emission_rate	50
 		position	0 0 0
 		velocity	0
 		velocity_min	1
