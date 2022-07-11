@@ -605,3 +605,20 @@ int getNearbyRandomLuckyGuyId(GameMode@ metagame, int factionid, Vector3 pos, fl
 		// TagName=item amount=1 index=3 key=hand_grenade.projectile slot=2
 		// TagName=item amount=0 index=-1 key= slot=4
 		// TagName=item amount=1 index=3 key=kevlar_plus_helmet.carry_item slot=5
+
+
+void ProfileSave(Metagame@ m_metagame) {
+	XmlElement root("playerdata");
+	root.setStringAttribute("username", "testing");
+	root.setStringAttribute("hashid", "114514");
+	string FILENAME =  "114514.xml";
+
+	XmlElement command("command");
+	command.setStringAttribute("class", "save_data");
+	command.setStringAttribute("filename", FILENAME);
+	command.setStringAttribute("location", "app_data/CTprofile");
+	command.appendChild(root);
+
+	m_metagame.getComms().send(command);
+
+}

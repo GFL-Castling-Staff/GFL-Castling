@@ -434,10 +434,7 @@ class BasicCommandHandler : Tracker {
 			return;
 		}
 		else if (checkCommand(message, "testa1")) {
-			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
-			if (playerInfo is null) return;
-			int characterId= playerInfo.getIntAttribute("character_id");			
-			getMyItem(m_metagame,characterId);
+			ProfileSave(m_metagame);
 		}
 		else if (checkCommand(message, "testa2")) {
 			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
