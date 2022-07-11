@@ -18,7 +18,7 @@
         <sound class="impact" fileref="rifle_drop.wav" />
         <model filename="gkw_ar_ar15mod3.xml" />
         <hud_icon filename="gkw_ar15mod3.png" />
-        <commonness value="1.0" can_respawn_with="1" />
+        <commonness value="0.01" in_stock="0" can_respawn_with="1" />
         <capacity value="1" source="rank" source_value="0.0" />
         <effect class="muzzle" ref="fire_newtest_muzzle"/>
         <weak_hand_hold offset="0.2" />

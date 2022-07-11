@@ -19,6 +19,7 @@
         <inventory  buy_price="150.0" sell_price="120.0" />
         <next_in_chain key="gkw_ribeyrollesmod3_skill.weapon" share_ammo="1" />
         <capacity value="1" source="rank" source_value="0.0" />
+        <commonness value="0.01" in_stock="0" can_respawn_with="1" />
         <animation key="reload" animation_key="reloading, magazine rifle 0.9" />
         <sound key="fire" fileref="ribeyrolles_fire_FromBF5.wav" pitch_variety="0.01" volume="1"/>
         <sound key="magazine_out" fileref="ribeyrolles_mgz_out_FromBF1.wav" volume="0.7" />

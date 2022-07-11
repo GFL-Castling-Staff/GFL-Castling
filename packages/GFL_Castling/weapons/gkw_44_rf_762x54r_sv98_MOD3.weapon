@@ -18,6 +18,7 @@
 	barrel_offset="0.4" 
 	projectiles_per_shot="6" />
     <inventory  buy_price="198.0" sell_price="98.0" />
+    <commonness value="0.01" in_stock="0" can_respawn_with="1" />
     <!--Animations-->
     <next_in_chain key="gkw_sv98mod3_skill.weapon" share_ammo="0"/>
     <animation state_key="hold_casual"			animation_key="dancing, kazachok" />
@@ -90,7 +91,7 @@
     <model filename="gkw_rf_sv-98_mod3 98.xml" />
     <hud_icon filename="gkw_sv98mod3_skill.png" />
     <capacity value="1" source="rank" source_value="0.0" />
-        <commonness value="0" in_stock="0" can_respawn_with="1" />
+    <commonness value="0" in_stock="0" can_respawn_with="1" />
     <!--Ballistics-->
     <weak_hand_hold offset="0.3" />
     <projectile file="bullet.projectile" can_be_detected_by_footmen="0">

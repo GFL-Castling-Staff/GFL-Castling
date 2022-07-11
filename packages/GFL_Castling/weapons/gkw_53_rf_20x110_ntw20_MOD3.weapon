@@ -21,6 +21,7 @@
 	barrel_offset="0.6" 
 	projectiles_per_shot="8" />
     <inventory  buy_price="150.0" sell_price="45.0" />	
+    <commonness value="0.01" in_stock="0" can_respawn_with="1" />
 	<!--Animations-->
 	
     <next_in_chain key="gkw_ntw20mod3_skill.weapon" share_ammo="0"/>

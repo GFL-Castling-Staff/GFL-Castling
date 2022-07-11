@@ -19,6 +19,7 @@
         <animation key="reload" animation_key="reloading, Machine gun 4" />
         
         <inventory  buy_price="250.0" sell_price="250.0" />
+        <commonness value="0.01" in_stock="0" can_respawn_with="1" />
         <next_in_chain key="gkw_lwmmgmod3_skill.weapon" share_ammo="1" />
         <sound key="fire" fileref="lwmmg_fire_FromARMA3.wav" pitch_variety="0.05" volume="1.25" />
         <sound key="magazine_out" fileref="lwmmg_mgz_out_FromCOD16.wav" volume="0.6" />
