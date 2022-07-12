@@ -77,7 +77,7 @@
 <weapon key="ff_scarecrow_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 <tag name="elite" />
     <specification 
-    last_burst_retrigger_time="0.325"
+    last_burst_retrigger_time="0.525"
     retrigger_time="-1.0" 
 		accuracy_factor="0.95" 
 		barrel_offset="0.5" 
@@ -136,7 +136,7 @@
 
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet_sf.projectile">
-        <result class="hit"  kill_probability="1.55"  kill_decay_start_time="2.97" kill_decay_end_time="4.6" />
+        <result class="hit"  kill_probability="1.75"  kill_decay_start_time="2.97" kill_decay_end_time="4.6" />
      </projectile>
      
     <stance state_key="running" accuracy="0.5" />
@@ -148,11 +148,12 @@
     <stance state_key="prone" accuracy="1.2" />
     <modifier class="detectability" value="0.25" />
     <modifier class="speed" value="-0.8" />
-    <shield offset="-1.2 0.0 0" extent="0.4 1.5 2.0" />
-    <!-- state modifiers for weapons are connected to shield impact events -->
-    <!-- deflects all bullets; death, stun, wound become none, doesn't consume -->
+    <shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" />
     <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0" />
     <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
     <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+    <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" consumes_item="0" />
+    <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+    <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
 </weapon>
 </weapons>
