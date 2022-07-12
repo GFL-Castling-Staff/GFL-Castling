@@ -145,9 +145,9 @@ class GFLairstrike : Tracker {
 
                         //扫射位置偏移单位向量 与 扫射横向偏移向量 与 扫射位置偏移单位距离
                         Vector3 strike_vector = getAimUnitVector(1,start_pos,end_pos); 
-                        Vector3 offset_vector = getRotateUnitVector(1.57,start_pos,end_pos);
+                        Vector3 offset_vector = getVerticalUnitVector(strike_vector);
                         offset_vector = getMultiplicationVector(offset_vector,Vector3(10,0,10));
-                        float strike_didis = 5.0;
+                        float strike_didis = 6.0;
                         //扫射起点 从弹头终点指向弹头起点的位置基础偏移 
                         Vector3 pos_offset = strike_vector.add(getMultiplicationVector(strike_vector,Vector3(-40,0,-40)));  
                         pos_offset = pos_offset.add(Vector3(0,30,0));
@@ -166,8 +166,8 @@ class GFLairstrike : Tracker {
                         Vector3 a10_end_pos = s_pos.add(Vector3(0,20,0));
 
                         CreateDirectProjectile(m_metagame,a10_start_pos,a10_end_pos,"a10_warthog_shadow.projectile",cid,fid,70);   
-                        CreateDirectProjectile(m_metagame,a10_start_pos.add(getMultiplicationVector(offset_vector,Vector3(1,0,1))),a10_end_pos,"a10_warthog_shadow.projectile",cid,fid,70);   
-                        CreateDirectProjectile(m_metagame,a10_start_pos.add(getMultiplicationVector(offset_vector,Vector3(-1,0,-1))),a10_end_pos,"a10_warthog_shadow.projectile",cid,fid,70);   
+                        CreateDirectProjectile(m_metagame,a10_start_pos.add(getMultiplicationVector(offset_vector,Vector3(1,0,1))),a10_end_pos.add(getMultiplicationVector(offset_vector,Vector3(1,0,1))),"a10_warthog_shadow.projectile",cid,fid,70);   
+                        CreateDirectProjectile(m_metagame,a10_start_pos.add(getMultiplicationVector(offset_vector,Vector3(-1,0,-1))),a10_end_pos.add(getMultiplicationVector(offset_vector,Vector3(-1,0,-1))),"a10_warthog_shadow.projectile",cid,fid,70);   
                                                               
                         startPos = startPos.add(getMultiplicationVector(strike_vector,Vector3(-30,0,-30)));
 
@@ -176,15 +176,22 @@ class GFLairstrike : Tracker {
                         };
 
                         for(int i1=1;i1<=3;i1++){
-                            Vector3 fin_end_pos = endPos;
-                            if(i1==2) fin_end_pos = endPos.add(getMultiplicationVector(offset_vector,Vector3(1,0,1)));
-                            else if(i1==3) fin_end_pos = endPos.add(getMultiplicationVector(offset_vector,Vector3(-1,0,-1)));
+                            Vector3 fin_end_pos = end_pos;
+                            Vector3 fin_start_pos = startPos;
+                            if(i1==2) {
+                                fin_end_pos = end_pos.add(getMultiplicationVector(offset_vector,Vector3(1,0,1)));
+                                fin_start_pos = fin_start_pos.add(getMultiplicationVector(offset_vector,Vector3(1,0,1)));
+                            }
+                            else if(i1==3) {
+                                fin_end_pos = end_pos.add(getMultiplicationVector(offset_vector,Vector3(-1,0,-1)));
+                                fin_start_pos = fin_start_pos.add(getMultiplicationVector(offset_vector,Vector3(-1,0,-1)));
+                            }
 
                             for(int i=1;i<=8;i++){
-                                float rand_x = rand(-20,20);
-                                float rand_y = rand(-20,20);
+                                float rand_x = rand(-15,15);
+                                float rand_y = rand(-15,15);
                                 
-                                CreateDirectProjectile(m_metagame,startPos,fin_end_pos.add(Vector3(rand_x,0,rand_y)),"pierre_rocket.projectile",cid,fid,240);                              
+                                CreateDirectProjectile(m_metagame,fin_start_pos,fin_end_pos.add(Vector3(rand_x,0,rand_y)),"pierre_rocket.projectile",cid,fid,180);                              
                             }                            
                         }
 
@@ -199,7 +206,7 @@ class GFLairstrike : Tracker {
                                 Vector3 fin_end_pos = endPos;
                                 if(i1==2) fin_end_pos = endPos.add(getMultiplicationVector(offset_vector,Vector3(1,0,1)));
                                 else if(i1==3) fin_end_pos = endPos.add(getMultiplicationVector(offset_vector,Vector3(-1,0,-1)));
-                                for(int j=1;j<=6;j++)
+                                for(int j=1;j<=3;j++)
                                 {
                                     float rand_x = rand(-strike_rand,strike_rand);
                                     float rand_y = rand(-strike_rand,strike_rand);
@@ -252,10 +259,14 @@ class Airstrike_strafer{
 void insertLockOnStrafeAirstrike(GameMode@ metagame,string airstrikekey,int characterId,int factionid,Vector3 pos){
     _log("strafe insert successful");	
 
-    float rand_x = rand(-1,1);
-    float rand_y = rand(-1,1);
+    float rand_angle = rand(-3.14,3.14);
+    float rand_x = 2*cos(rand_angle);
+    float rand_y = 2*sin(rand_angle);
     Vector3 luckyGuyPos = pos.add(Vector3(rand_x,0,rand_y)); //若周围没有敌人又必须要扫射，则直接默认以任意朝向扫一轮
-    Vector3 luckyGuyPos2 = luckyGuyPos.add(Vector3(rand(-1,1),0,rand(-1,1)));
+    rand_angle = rand(-3.14,3.14);
+    rand_x = cos(rand_angle);
+    rand_y = sin(rand_angle);   
+    Vector3 luckyGuyPos2 = luckyGuyPos.add(Vector3(rand_x,0,rand_y));
 
     int luckyGuyid = getNearbyRandomLuckyGuyId(metagame,factionid,luckyGuyPos,8.0f);
     if(luckyGuyid!=-1){
@@ -279,8 +290,9 @@ void insertLockOnStrafeAirstrike(GameMode@ metagame,string airstrikekey,int char
 void insertA10Airstrike(GameMode@ metagame,int characterId,int factionid,Vector3 pos){
     _log("A10 gun strafe activate successful");	
 
-    float rand_x = rand(-1,1);
-    float rand_y = rand(-1,1);
+    float rand_angle = rand(-3.14,3.14);
+    float rand_x = cos(rand_angle);
+    float rand_y = sin(rand_angle);
     Vector3 luckyGuyPos = pos.add(Vector3(rand_x,0,rand_y)); //若周围没有敌人又必须要扫射，则直接默认以任意朝向扫一轮
     Vector3 luckyGuyPos2 = luckyGuyPos.add(Vector3(rand(-1,1),0,rand(-1,1)));
 
