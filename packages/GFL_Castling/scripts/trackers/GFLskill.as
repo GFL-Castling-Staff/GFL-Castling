@@ -327,8 +327,8 @@ class GFLskill : Tracker {
 
 				Vector3 aimer_pos = stringToVector3(character.getStringAttribute("position"));
 
-				Vector3 pos1 = getAimUnitPosition(m_metagame,1,aimer_pos,target_pos);
-				Vector3 pos2 = getAimUnitPosition(m_metagame,8.0,aimer_pos,target_pos);
+				Vector3 pos1 = getAimUnitPosition(aimer_pos,target_pos,1);
+				Vector3 pos2 = getAimUnitPosition(aimer_pos,target_pos,8.0);
 				pos1 = pos1.add(Vector3(0,0.8,0));				
 				pos2 = pos2.add(Vector3(0,8,0));
 				CreateProjectile(m_metagame,pos1,pos2,"javelin_rocket_1.projectile",characterId,factionid,5,6);	
@@ -361,8 +361,8 @@ class GFLskill : Tracker {
 				if(vehicleid!=-1)playSoundAtLocation(m_metagame,"javelin_locked.wav",factionid,aimer_pos,1.0);//锁定载具成功
 				else	playSoundAtLocation(m_metagame,"javelin_lock_fail.wav",factionid,aimer_pos,1.0);//未锁定载具
 
-				Vector3 pos1 = getAimUnitPosition(m_metagame,1,aimer_pos,target_pos);
-				Vector3 pos2 = getAimUnitPosition(m_metagame,8.0,aimer_pos,target_pos);
+				Vector3 pos1 = getAimUnitPosition(aimer_pos,target_pos,1);
+				Vector3 pos2 = getAimUnitPosition(aimer_pos,target_pos,8.0);
 				pos1 = pos1.add(Vector3(0,0.8,0));				
 				pos2 = pos2.add(Vector3(0,8,0));
 				CreateProjectile(m_metagame,pos1,pos2,"javelin_rocket_1.projectile",characterId,factionid,5,6);	
