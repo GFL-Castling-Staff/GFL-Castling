@@ -262,6 +262,9 @@ dictionary commandSkillIndex = {
         {"gkw_mg4mod3.weapon",33},
         {"gkw_mg4mod3_skill.weapon",33},
 
+        //Liu RF
+        {"gkw_liu.weapon",34},
+        {"gkw_liu_skill.weapon",34},
         // 下面这行是用来占位的，在这之上添加新的枪和index即可
         {"666",-1}
 };
@@ -359,6 +362,7 @@ class CommandSkill : Tracker {
                     case 31:{excutePPKMOD3skill(cId,senderId,m_modifer);break;}
                     case 32:{excuteMLEskill(cId,senderId,m_modifer);break;}
                     case 33:{excuteMG4MOD3skill(cId,senderId,m_modifer);break;}
+                    case 34:{excuteLiuRFskill(cId,senderId,m_modifer);break;}
 
                     default:
                         break;
@@ -2334,7 +2338,32 @@ class CommandSkill : Tracker {
                 }
             }
         }
-    }        
+    }
+
+    void excuteLiuRFskill(int characterId,int playerId,SkillModifer@ modifer){
+        bool ExistQueue = false;
+        int j =-1;
+        for (uint i=0;i<SkillArray.length();i++){
+            if (InCooldown(characterId,modifer,SkillArray[i],true) && SkillArray[i].m_weapontype=="Liushi") {
+                ExistQueue=true;
+                j=i;
+            }
+        }
+        if (ExistQueue){
+            dictionary a;
+            a["%time"] = ""+SkillArray[j].m_time;
+            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            _log("skill cooldown" + SkillArray[j].m_time);
+            return;
+        }
+        addCoolDown("Liushi",300,characterId,modifer);
+        const XmlElement@ info = getCharacterInfo(m_metagame, characterId);
+        int fID = info.getIntAttribute("faction_id");
+        string c_pos = info.getStringAttribute("position");
+        spawnSoldier(m_metagame,5,fID,c_pos,"316_liu_rf");
+        playSoundAtLocation(m_metagame,"GeneralLiu_skill.wav",fID,c_pos,1.2);
+
+    }
 }
 
 

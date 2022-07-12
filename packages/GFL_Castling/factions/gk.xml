@@ -1121,7 +1121,7 @@
 			<sound key="death" fileref="GeneralLiu_BREAK_JP.wav" pitch_variety="0.05" volume="0.8" />
 		</character>
 		<resources file="gk_elite.resources">
-			<weapon key="gkw_liu.weapon" />
+			<weapon key="gkw_liu_ai.weapon" />
 			<carry_item key="exo_x_t4.carry_item" />
 		</resources>
 		<attribute_config class="xp">
