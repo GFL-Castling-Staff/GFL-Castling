@@ -23,6 +23,29 @@
         <sound key="magazine_out" fileref="m4a1_mgz_out_FromCSGO.wav" volume="0.7" />
         <sound key="magazine_in" fileref="m4a1_mgz_in_FromCSGO.wav" volume="0.7" />
         <sound key="cycle" fileref="m4a1_cycle_FromCSGO.wav" volume="0.7" />
+        <sound key="cycle" fileref="m4a1_cycle_FromCSGO.wav" volume="0.7" />
+        <sound key="cycle" fileref="M4A1Mod_PHRASE_JP.wav" volume="0.8" pitch_variety="0" />
+        <sound key="cycle" fileref="m4a1_cycle_FromCSGO.wav" volume="0.7" />
+        <sound key="cycle" fileref="m4a1_cycle_FromCSGO.wav" volume="0.7" />
+        <sound key="cycle" fileref="M4A1Mod_LOADING_JP.wav" volume="0.8" pitch_variety="0" />
+        <sound key="cycle" fileref="m4a1_cycle_FromCSGO.wav" volume="0.7" />
+        <sound key="cycle" fileref="m4a1_cycle_FromCSGO.wav" volume="0.7" />
+        <sound key="cycle" fileref="M4A1Mod_FORMATION_JP.wav" volume="0.8" pitch_variety="0" />
+        <sound key="cycle" fileref="m4a1_cycle_FromCSGO.wav" volume="0.7" />
+        <sound key="cycle" fileref="m4a1_cycle_FromCSGO.wav" volume="0.7" />
+        <sound key="cycle" fileref="M4A1Mod_BLACKACTION_JP.wav" volume="0.8" pitch_variety="0" />
+        <sound key="cycle" fileref="m4a1_cycle_FromCSGO.wav" volume="0.7" />
+        <sound key="cycle" fileref="m4a1_cycle_FromCSGO.wav" volume="0.7" />
+        <sound key="cycle" fileref="M4A1Mod_GOATTACK_JP.wav" volume="0.8" pitch_variety="0" />
+        <sound key="cycle" fileref="m4a1_cycle_FromCSGO.wav" volume="0.7" />
+        <sound key="cycle" fileref="m4a1_cycle_FromCSGO.wav" volume="0.7" />
+        <sound key="cycle" fileref="M4A1Mod_MEET_JP.wav" volume="0.8" pitch_variety="0" />
+        <sound key="cycle" fileref="m4a1_cycle_FromCSGO.wav" volume="0.7" />
+        <sound key="cycle" fileref="m4a1_cycle_FromCSGO.wav" volume="0.7" />
+        <sound key="cycle" fileref="M4A1Mod_ATTACK_JP.wav" volume="0.8" pitch_variety="0" />
+        <sound key="cycle" fileref="m4a1_cycle_FromCSGO.wav" volume="0.7" />
+        <sound key="cycle" fileref="m4a1_cycle_FromCSGO.wav" volume="0.7" />
+        <sound key="cycle" fileref="M4A1Mod_DEFENSE_JP.wav" volume="0.8" pitch_variety="0" />
         <sound class="impact" fileref="rifle_drop.wav" />
         <model filename="gkw_ar_m4a1_530.xml" />
         <hud_icon filename="gkw_m4a1_530.png" />
@@ -84,9 +107,26 @@
         <animation state_key="stabbing" animation_key="pistol whip 3" />
         <animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
         <sound key="fire" fileref="m4mod_fire_FromBF5.wav" pitch_variety="0.05" volume="2" />
-        <sound key="magazine_out" fileref="m4mod_mgz_out_FromBORDERLAND3.wav" volume="0.8" />
-        <sound key="magazine_in" fileref="m4mod_mgz_in_FromBORDERLAND3.wav" volume="0.8" />
-        <sound key="cycle" fileref="m4mod_cycle_FromBORDERLAND3.wav" volume="0.8" />
+        <sound key="magazine_out" fileref="m4mod_mgz_out_FromBORDERLAND3.wav" volume="0.8" pitch_variety="0" />
+        <sound key="magazine_in" fileref="m4mod_mgz_in_FromBORDERLAND3.wav" volume="0.8" pitch_variety="0" />
+        <sound key="cycle" fileref="m4mod_cycle_FromBORDERLAND3.wav" volume="0.8" pitch_variety="0" />
+        <sound key="cycle" fileref="m4mod_cycle_FromBORDERLAND3.wav" volume="0.8" pitch_variety="0" />
+        <sound key="cycle" fileref="m4mod_cycle_FromBORDERLAND3.wav" volume="0.8" pitch_variety="0" />
+        <sound key="cycle" fileref="M4A1Mod_ATTACK_JP.wav" volume="0.8" pitch_variety="0" />
+        <sound key="cycle" fileref="m4mod_cycle_FromBORDERLAND3.wav" volume="0.8" pitch_variety="0" />
+        <sound key="cycle" fileref="m4mod_cycle_FromBORDERLAND3.wav" volume="0.8" pitch_variety="0" />
+        <sound key="cycle" fileref="M4A1Mod_LOADING_JP.wav" volume="0.8" pitch_variety="0" />
+        <sound key="cycle" fileref="m4mod_cycle_FromBORDERLAND3.wav" volume="0.8" pitch_variety="0" />
+        <sound key="cycle" fileref="m4mod_cycle_FromBORDERLAND3.wav" volume="0.8" pitch_variety="0" />
+        <sound key="cycle" fileref="M4A1Mod_SKILL1_JP.wav" volume="0.8" pitch_variety="0" />
+        <sound key="cycle" fileref="m4mod_cycle_FromBORDERLAND3.wav" volume="0.8" pitch_variety="0" />
+        <sound key="cycle" fileref="m4mod_cycle_FromBORDERLAND3.wav" volume="0.8" pitch_variety="0" />
+        <sound key="cycle" fileref="M4A1Mod_SKILL2_JP.wav" volume="0.8" pitch_variety="0" />
+        <sound key="cycle" fileref="m4mod_cycle_FromBORDERLAND3.wav" volume="0.8" pitch_variety="0" />
+        <sound key="cycle" fileref="m4mod_cycle_FromBORDERLAND3.wav" volume="0.8" pitch_variety="0" />
+        <sound key="cycle" fileref="M4A1Mod_SKILL3_JP.wav" volume="0.8" pitch_variety="0" />
+        <sound key="cycle" fileref="m4mod_cycle_FromBORDERLAND3.wav" volume="0.8" pitch_variety="0" />
+        <sound key="cycle" fileref="m4mod_cycle_FromBORDERLAND3.wav" volume="0.8" pitch_variety="0" />
         <sound class="impact" fileref="rifle_drop.wav" />
         <model filename="none.xml" />
         <hud_icon filename="gkw_m4a1_530.png" />
