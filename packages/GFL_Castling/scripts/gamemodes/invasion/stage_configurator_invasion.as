@@ -156,7 +156,6 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 	// ------------------------------------------------------------------------------------------------
 	protected void setupNormalStages() {
-				addStage(setupStage1_rust());          // map2_?
 		addStage(setupStage107());		  // chapter1 by diling
 		addStage(setupStage109());		  // chapter2 by diling
 		addStage(setupStage8());          // map8
@@ -167,7 +166,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		addStage(setupStage9());          // map9
 		addStage(setupStage18());         // map13_2
 		addStage(setupStage1());          // map2
-		addStage(setupStage1_rust());          // map2_?
+		// addStage(setupStage1_rust());          // map2_?
 		addStage(setupStage7());          // map6
 		addStage(setupStage4());          // map7
 		addStage(setupStage15());         // map1_2
@@ -575,10 +574,10 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.m_mapInfo.m_id = "chapter02";
 		stage.addTracker(PeacefulLastBase(m_metagame, 0));
 		stage.addTracker(CommsCapacityHandler(m_metagame));
-		stage.m_maxSoldiers = 180;
-		stage.m_playerAiCompensation = 8;                                     
-		stage.m_playerAiReduction = 2;                                         
-		stage.m_minRandomCrates = 2; 
+		stage.m_maxSoldiers = 100;
+		stage.m_playerAiCompensation = 4;                                     
+		stage.m_playerAiReduction = 0;                                         
+		stage.m_minRandomCrates = 5; 
 		stage.m_maxRandomCrates = 6;
 		{
 			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0));
@@ -586,7 +585,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		}
 		{
 			Faction f(getFactionConfigs()[1], createCommanderAiCommand(1,0.4,0.2));
-			f.m_overCapacity = 50;                                            
+			f.m_overCapacity = 80;                                            
 			f.m_capacityOffset = 20;                                           
 			stage.m_factions.insertLast(f); 
 		}
