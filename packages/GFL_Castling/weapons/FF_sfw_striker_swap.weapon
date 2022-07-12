@@ -48,7 +48,7 @@
 
     <weak_hand_hold offset="0.4" />
     <projectile file="bullet_sf.projectile">
-        <result class="hit"  kill_probability="2.2" kill_probability_offset_on_successful_hit="0.4" kill_decay_start_time="0.2" kill_decay_end_time="0.6" />
+        <result class="hit"  kill_probability="1.85" kill_probability_offset_on_successful_hit="0.4" kill_decay_start_time="0.2" kill_decay_end_time="0.6" />
     </projectile>
     <shield offset="-0.60 0.0 0" extent="0.4 0.5 1.5" />
     <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0" />
