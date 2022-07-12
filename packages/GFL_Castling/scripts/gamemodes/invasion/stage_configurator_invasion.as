@@ -156,6 +156,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 	// ------------------------------------------------------------------------------------------------
 	protected void setupNormalStages() {
+				addStage(setupStage1_rust());          // map2_?
 		addStage(setupStage107());		  // chapter1 by diling
 		addStage(setupStage109());		  // chapter2 by diling
 		addStage(setupStage8());          // map8
@@ -166,6 +167,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		addStage(setupStage9());          // map9
 		addStage(setupStage18());         // map13_2
 		addStage(setupStage1());          // map2
+		addStage(setupStage1_rust());          // map2_?
 		addStage(setupStage7());          // map6
 		addStage(setupStage4());          // map7
 		addStage(setupStage15());         // map1_2
@@ -651,6 +653,46 @@ class StageConfiguratorInvasion : StageConfigurator {
 		return stage;
 	}
 
+	protected Stage@ setupStage1_rust() {
+		Stage@ stage = createStage();
+		stage.m_mapInfo.m_name = "Casake Bay";
+		stage.m_mapInfo.m_path = "media/packages/GFLC_Map/maps/map2_c";
+		stage.m_mapInfo.m_id = "map2_?";
+		
+		stage.m_includeLayers.insertLast("layer1.invasion"); 
+
+		stage.addTracker(jupiter(m_metagame));
+		stage.addTracker(PeacefulLastBase(m_metagame, 0));
+		stage.addTracker(CommsCapacityHandler(m_metagame));
+		stage.m_maxSoldiers = 12 * 13;                                             // was 12*7 in 1.65, 1 base added
+
+		stage.m_soldierCapacityVariance = 0.3;
+		stage.m_playerAiCompensation = 6;                                         // was 4 (1.82)
+        stage.m_playerAiReduction = 2;                                          // was 2 (test3)    
+
+		stage.m_minRandomCrates = 5; 
+		stage.m_maxRandomCrates = 8;
+
+		{
+			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0));                                                  
+			f.m_capacityOffset = 0; 
+			f.m_capacityMultiplier = 1.0;
+			f.m_bases = 1;
+			stage.m_factions.insertLast(f);
+		}
+		{
+			Faction f(getFactionConfigs()[1], createCommanderAiCommand(1));
+			f.m_overCapacity = 50;                                               // was 30 (test2)
+			f.m_capacityOffset = 20;                                                 // was 5 (1.81)
+			stage.m_factions.insertLast(f);                                         // was 0 in 1.65
+		}
+		
+		// metadata
+		stage.m_primaryObjective = "capture";
+		setDefaultAttackBreakTimes(stage);
+		// setReduceDefenseForFinalAttack(stage, 0.1); // use this for final attack boost if needed for friendlies
+		return stage;
+	}
 	// ------------------------------------------------------------------------------------------------
 	protected Stage@ setupStage2() {
 		Stage@ stage = createStage();
