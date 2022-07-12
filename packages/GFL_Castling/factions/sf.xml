@@ -818,8 +818,10 @@
 		<ai filename="sf_m16a1.ai" />
 		<resources clear_vehicles="1" clear_weapons="1" clear_calls="1" clear_carry_items="1" clear_grenades="1">
 			<weapon key="sfw_m16a1.weapon" enabled="1"/>
-			<projectile key="hand_m16a1_call.projectile"/>
+			<!-- <projectile key="hand_m16a1_call.projectile"/> -->
 			<carry_item key="sf_m16a1.carry_item" enabled="1" />
+			<call key="sf_m16a1.call" />
+
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="600.0" max="800.05" />
@@ -844,7 +846,6 @@
 		<resources clear_vehicles="1" clear_weapons="1" clear_calls="1" clear_carry_items="1">
 			<weapon key="sfw_agent.weapon" enabled="1"/>
 			<carry_item key="sf_agent.carry_item" enabled="1" />
-			<call file="sf_m16a1.call" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="600.0" max="800.05" />
