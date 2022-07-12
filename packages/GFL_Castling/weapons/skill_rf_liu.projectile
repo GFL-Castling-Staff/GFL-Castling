@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<projectile class="grenade" name="" key="skill_rf_liu.projectile" slot="2" pulldown_in_air="4">
+    <result class="notify_script" key="rf_liu" />
+    <trigger class="time" time_to_live="0.0"/>
+    <rotation class="motion" />
+    <model mesh_filename="" />
+
+    <commonness value="0.0" />
+
+</projectile>

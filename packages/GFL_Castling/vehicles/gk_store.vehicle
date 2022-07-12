@@ -7,7 +7,7 @@
 	</vehicle>
 	<vehicle name="IOP Stash Chest" key="gk_stash" file="store.base_vehicle">
 		<item_container class="stash" offset="0 0 0.0"/>
-		<visual class="chassis" mesh_filename="deploy_box.mesh" texture_filename="box.png" />
+		<visual class="chassis" mesh_filename="deploy_box.mesh" texture_filename="box2.png" />
 		<sky_diving chute_offset="0 2.75 0.0" trigger_height="20.0" gravity="-10" mesh_filename="chute_medium.mesh" texture_filename="chute.png" />
 	</vehicle>
 	<vehicle name="IOP Supply Chest" key="hvy_store" file="store.base_vehicle">

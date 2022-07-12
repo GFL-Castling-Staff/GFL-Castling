@@ -42,6 +42,7 @@
         <result class="blast" damage="4.5" radius="4" decal="1" push="1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0" />
     </projectile>
     <!--Accuracy, Movement speed-->
+    <stance state_key="running" accuracy="1.0" />
     <stance state_key="walking" accuracy="1.0" />
     <stance state_key="crouch_moving" accuracy="1.0" />
     <stance state_key="prone_moving" accuracy="1.0" />

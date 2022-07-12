@@ -617,6 +617,32 @@ class GFLskill : Tracker {
 				}
 			}
 		}
+		if(EventKeyGet == "rf_liu"){
+			int characterId = event.getIntAttribute("character_id");
+			const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+			if (character !is null) {
+				int playerId = character.getIntAttribute("player_id");
+				const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+				string c_pos = character.getStringAttribute("position");
+				if (player !is null){
+					if (player.hasAttribute("aim_target")) {
+						int fId = player.getIntAttribute("faction_id");
+						string target_pos = player.getStringAttribute("aim_target");
+						array<const XmlElement@> affectedCharacter = getCharactersNearPosition(m_metagame,stringToVector3(c_pos),fId,20.0f);
+						for (uint i=0;i<affectedCharacter.length();i++){
+							int RF_cId = affectedCharacter[i].getIntAttribute("id");
+							const XmlElement@ RFcharacter = getCharacterInfo(m_metagame, RF_cId);
+							if (RFcharacter !is null){
+								if(RFcharacter.getStringAttribute("soldier_group_name")=="316_liu_rf"){
+									string start_pos = RFcharacter.getStringAttribute("position");
+									CreateDirectProjectile(m_metagame,stringToVector3(start_pos).add(Vector3(0,1,0)),stringToVector3(target_pos),"liu.projectile",characterId,fId,220.0);  
+								}
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 
 	void update(float time) {

@@ -828,11 +828,12 @@ void addCustomStatToAllPlayers(Metagame@ metagame, string tag) {
 }
 
 // -------------------------------------------------------
-void playSound(const Metagame@ metagame, string filename, int factionId) {
+void playSound(const Metagame@ metagame, string filename, int factionId,float volume=1.0) {
 	XmlElement command("command");
 	command.setStringAttribute("class", "play_sound");
 	command.setStringAttribute("filename", filename);
 	command.setIntAttribute("faction_id", factionId);
+	command.setFloatAttribute("volume", volume);
 	// TODO: can also do private sounds with player_id, extend
 	metagame.getComms().send(command);
 }
