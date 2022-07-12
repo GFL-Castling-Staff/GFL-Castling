@@ -1643,7 +1643,7 @@ class CommandSkill : Tracker {
                     playAnimationKey(m_metagame,characterId,"throwing, upside",true,true);
                     c_pos = c_pos.add(Vector3(0,1,0));
 
-                    Vector3 u_pos = getAimUnitPosition(m_metagame,1.2,c_pos,stringToVector3(target));
+                    Vector3 u_pos = getAimUnitPosition(c_pos,stringToVector3(target),1.2);
                     float ori4 = getAimOrientation4(c_pos,stringToVector3(target));
 
                     spawnVehicle(m_metagame,1,0,u_pos,Orientation(0,1,0,ori4),"gk_werlod_shelter.vehicle");		
@@ -2193,7 +2193,7 @@ class CommandSkill : Tracker {
                     playSoundAtLocation(m_metagame,"dart_shot.wav",factionid,c_pos,1.0);
                     c_pos=c_pos.add(Vector3(0,1,0));
                     CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"ppk_tracer_dart_1.projectile",characterId,factionid,60);
-                    //insertLockOnStrafeAirstrike(m_metagame,"ioncannon_strafe",characterId,factionid,stringToVector3(target));
+                    insertLockOnStrafeAirstrike(m_metagame,"a10_call_strafe",characterId,factionid,stringToVector3(target));
 
                     int index = findKillCountIndex(characterId);
                     if (index>=0){
@@ -2209,7 +2209,7 @@ class CommandSkill : Tracker {
                             tasker.add(DelayAirstrikeRequest(m_metagame,5.0,characterId,factionid,stringToVector3(target),"ioncannon_strafe"));
                         }                        
                     }
-                    addCoolDown("PPKMOD3",90,characterId,modifer);
+                    addCoolDown("PPKMOD3",0,characterId,modifer);
                 }
             }
         }

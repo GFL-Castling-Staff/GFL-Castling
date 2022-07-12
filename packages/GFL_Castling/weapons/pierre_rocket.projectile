@@ -4,7 +4,8 @@
     <trigger class="impact" />
     <rotation class="motion" />
     <model mesh_filename="m202_rocket.xml"/>
-
+    <result class="blast" radius="3.6" damage="4.5" push="0.2" decal="1" faction_compare="not_equal" damage_origin_vehicle="0"/>
+	<trigger class="impact"/>
     <commonness value="0.0" />
 
     <sound class="result" key="other" fileref="explosion_RPG_FromSQUAD_1.wav" volume="1.5" />
