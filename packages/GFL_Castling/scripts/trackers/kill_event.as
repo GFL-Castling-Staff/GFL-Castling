@@ -130,6 +130,8 @@ class kill_event : Tracker {
         {"gkw_cms.weapon",3},
         {"gkw_cms_aps.weapon",3},
         {"gkw_cms_st.weapon",3},
+        {"gkw_sr3mp.weapon",3},
+        {"gkw_sr3mp_skill.weapon",3},
         {"gkw_vp1915.weapon",3}
     };
 
