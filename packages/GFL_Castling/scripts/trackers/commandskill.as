@@ -2193,7 +2193,7 @@ class CommandSkill : Tracker {
                     playSoundAtLocation(m_metagame,"dart_shot.wav",factionid,c_pos,1.0);
                     c_pos=c_pos.add(Vector3(0,1,0));
                     CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"ppk_tracer_dart_1.projectile",characterId,factionid,60);
-                    insertLockOnStrafeAirstrike(m_metagame,"a10_call_strafe",characterId,factionid,stringToVector3(target));
+                    //insertLockOnStrafeAirstrike(m_metagame,"a10_call_strafe",characterId,factionid,stringToVector3(target));
 
                     int index = findKillCountIndex(characterId);
                     if (index>=0){
@@ -2209,7 +2209,7 @@ class CommandSkill : Tracker {
                             tasker.add(DelayAirstrikeRequest(m_metagame,5.0,characterId,factionid,stringToVector3(target),"ioncannon_strafe"));
                         }                        
                     }
-                    addCoolDown("PPKMOD3",0,characterId,modifer);
+                    addCoolDown("PPKMOD3",90,characterId,modifer);
                 }
             }
         }
