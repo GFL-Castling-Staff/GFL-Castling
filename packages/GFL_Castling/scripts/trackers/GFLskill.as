@@ -617,6 +617,19 @@ class GFLskill : Tracker {
 				}
 			}
 		}
+		if(EventKeyGet == "rf_liu"){
+			int characterId = event.getIntAttribute("character_id");
+			const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+			if (character !is null) {
+				const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+				if (player !is null){
+					if (player.hasAttribute("aim_target")) {
+						int fId = player.getIntAttribute("faction_id");
+						array<const XmlElement@> affectedCharacter = getCharactersNearPosition(m_metagame,grenade_pos,fId,15.0f);
+					}
+				}
+			}
+		}
 	}
 
 	void update(float time) {
