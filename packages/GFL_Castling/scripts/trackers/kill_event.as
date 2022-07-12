@@ -40,7 +40,7 @@ class kill_event : Tracker {
         {"gkw_88typemod3_skill.weapon",4},
 
         // 近战定位HG
-        {"gkw_m1911_mod3.weapon",2},
+        {"gkw_m1911mod3.weapon",2},
 
         // 近战定位AR
         {"gkw_ak12_skill.weapon",3},
