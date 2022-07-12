@@ -53,6 +53,7 @@
 		<stance state_key="standing" accuracy="0.9" />
 		<stance state_key="crouching" accuracy="0.95" />
 		<stance state_key="prone" accuracy="1" />
+		<modifier class="detectability" value="-0.25" />
 		<modifier class="speed" value="0.8" />
 	</weapon>
 	<weapon file="gk_sf_boss.base_weapon" key="ff_excutioner_2.weapon" on_ground_up="0 0 1" time_to_live_out_in_the_open="0.0" drop_count_factor_on_death="0.0" player_death_drop_owner_lock_time="0">
@@ -95,5 +96,12 @@
 		<modifier class="speed" value="0.8" />
 		<modifier class="hit_success_probability" value="-0.15" />
         <modifier class="detectability" value="0.45" />
+		<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" />
+		<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+		<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" consumes_item="0" />
+		<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+		<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
 	</weapon>
 </weapons>
