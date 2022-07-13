@@ -94,6 +94,7 @@ class kill_event : Tracker {
         {"gkw_mp5mod3_3006.weapon",2},
         {"ff_ripper.weapon",2},
         {"ff_ripper_swap.weapon",2},
+        {"gkw_sterling.weapon",2},
         
         // SMG——3kills
         {"gkw_ppsh41.weapon",3},
