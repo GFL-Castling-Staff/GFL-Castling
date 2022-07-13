@@ -574,7 +574,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.m_mapInfo.m_id = "chapter02";
 		stage.addTracker(PeacefulLastBase(m_metagame, 0));
 		stage.addTracker(CommsCapacityHandler(m_metagame));
-		stage.m_maxSoldiers = 100;
+		stage.m_maxSoldiers = 80;
 		stage.m_playerAiCompensation = 4;                                     
 		stage.m_playerAiReduction = 0;                                         
 		stage.m_minRandomCrates = 5; 
@@ -585,7 +585,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		}
 		{
 			Faction f(getFactionConfigs()[1], createCommanderAiCommand(1,0.5,0.2));
-			f.m_overCapacity = 80;                                            
+			f.m_overCapacity = 60;                                            
 			f.m_capacityOffset = 20;                                           
 			stage.m_factions.insertLast(f); 
 		}
