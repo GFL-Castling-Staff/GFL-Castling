@@ -8,6 +8,8 @@
 #include "GFLtask.as"
 #include "task_sequencer.as"
 //Author: NetherCrow
+//Author: Saiwa
+
 
 	// --------------------------------------------
 class GFLskill : Tracker {
