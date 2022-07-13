@@ -10,7 +10,7 @@
 class jupiter: Tracker {
 	protected Metagame@ m_metagame;
 	protected float reload_cycle;
-	protected float reload_time=15.0;
+	protected float reload_time=60.0;
 	protected bool m_started=false;
 	protected bool tracker_started;
 	protected int m_numLeft=0;
