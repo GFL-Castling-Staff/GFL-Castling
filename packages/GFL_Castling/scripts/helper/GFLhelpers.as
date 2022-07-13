@@ -268,6 +268,25 @@ array<string> unlockable_vehicles = {
 	"deco_pickup_khaki.vehicle"
 };
 
+int getAmosPosition(Metagame@ metagame, uint ownerid, Vector3 judgePos, float radius) {
+	for(uint f=0;f<4;f++){
+		if(f<10){
+			array<const XmlElement@>@ vehicles = getAllVehicles(metagame, f);
+			for(uint i=0;i<vehicles.length();i++){
+				Vector3 vehiclePos = stringToVector3(vehicles[i].getStringAttribute("position"));
+				if(getAimUnitDistance(1.0,judgePos,vehiclePos)<=radius){
+					int vehicleid = vehicles[i].getIntAttribute("id");
+					const XmlElement@ vehicleInfo = getVehicleInfo(metagame, vehicleid);
+					if(vehicleInfo !is null)  //AMOS存在
+						if(vehicleInfo.getStringAttribute("key") == "armored_truck.vehicle")
+							return vehicleid;
+				}
+			}
+		}		
+	}
+	return -1;	
+}
+
 int getNearByEnemyVehicle(Metagame@ metagame, uint ownerid, Vector3 judgePos, float radius) {
 	for(uint f=0;f<4;f++){
 		if(f<10){
@@ -284,7 +303,6 @@ int getNearByEnemyVehicle(Metagame@ metagame, uint ownerid, Vector3 judgePos, fl
 						_log("Get vehicle id successful.");
 						return vehicleid;
 					}
-					else return -1;
 				}
 			}
 		}		

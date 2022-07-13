@@ -57,7 +57,7 @@ class jupiter: Tracker {
 		
 		//艾莫号特别保护措施
 		float jud_amos = 40.0;
-		int vehicleid = getNearByEnemyVehicle(m_metagame,0,c_pos,jud_amos);
+		int vehicleid = getAmosPosition(m_metagame,0,c_pos,jud_amos);
 		if(vehicleid!=-1) {
 			_log("Vehicle detected");
 			const XmlElement@ target_info = getVehicleInfo(m_metagame, vehicleid);
