@@ -13,7 +13,7 @@ void main(dictionary@ inputData) {
 
         settings.m_factionChoice = 0;                  // 0 (greenbelts), 1 (graycollars), 2 (brownpants)
         settings.m_playerAiCompensationFactor = 1.0;   // was 1.1  (1.75)
-        settings.m_teamKillPenaltyEnabled = false;
+        settings.m_teamKillPenaltyEnabled = true;
         settings.m_completionVarianceEnabled = false;
         settings.m_journalEnabled = true;
 		settings.m_fellowDisableEnemySpawnpointsSoldierCountOffset = 1;
@@ -43,7 +43,7 @@ void main(dictionary@ inputData) {
 	register_in_serverlist='1'
 	mode='Castling'
 	persistency='forever'
-	max_players='20'
+	max_players='10'
 	friendly_fire="1">
 	<client_faction id='0' />
 </command>

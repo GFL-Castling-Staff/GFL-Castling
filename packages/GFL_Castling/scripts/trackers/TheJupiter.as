@@ -56,12 +56,12 @@ class jupiter: Tracker {
 		Vector3 c_pos = stringToVector3(characterinfo.getStringAttribute("position"));
 		
 		//艾莫号特别保护措施
-		float jud_amos = 40.0;
+		float jud_amos = 80.0;
 		int vehicleid = getAmosPosition(m_metagame,0,c_pos,jud_amos);
 		if(vehicleid!=-1) {
 			_log("Vehicle detected");
 			const XmlElement@ target_info = getVehicleInfo(m_metagame, vehicleid);
-			if(target_info.getStringAttribute("key") == "armored_truck.vehicle") {
+			if(target_info.getStringAttribute("key") == "armored_truck.vehicle" || target_info.getStringAttribute("key") == "ogas_pulse_generator.vehicle") {
 				_log("Amos detected");
 				c_pos = c_pos.add(Vector3(jud_amos*sin(rand(0,20)/20*6.28),0,jud_amos*cos(rand(0,20)/20*6.28)));
 			}
