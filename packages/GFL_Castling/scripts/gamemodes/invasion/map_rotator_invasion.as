@@ -25,6 +25,7 @@ array<string> BadAssMapList = {
 	"Warsalt Legacy",
 	"Route E30",
 	"Kanda jimbocho",
+	"Echo",
 	"Palo Island"
 };
 
