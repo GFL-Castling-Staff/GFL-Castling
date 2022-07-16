@@ -116,8 +116,8 @@ class GiftItemDeliveryRandomRewarder : ItemDeliveryRewarder {
 						}
 						string name = getResourceName(m_metagame, r.m_key, r.m_type);
 						a["%item_name" + formatInt(i+1)] = name;
-						sendPrivateMessageKey(m_metagame, playerId, "gift box delivery, reward", a);
 					}
+					sendPrivateMessageKey(m_metagame, playerId, "gift box delivery, reward", a);
 				}
 				m_metagame.getComms().send(command);
 			}
