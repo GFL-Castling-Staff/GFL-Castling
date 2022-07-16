@@ -2,7 +2,6 @@
 <ai>
   <parameter class="in_trenches_fade_off_timer" value="4.0" />
   <parameter class="accuracy_penalty_wear_off_rate" value="0.333" /> 
-  <parameter class="check_vehicles_interval" value="2.0" />
   <parameter class="team_member_monitor_enemies_time" value="1.5" />
   <parameter class="monitor_enemies_time" value="0.8" />
   <parameter class="check_supplies_time" value="5.0" />
@@ -85,8 +84,10 @@
   <parameter class="celebrating_comment_probability" value="0.4" /> 
   <parameter class="celebrating_stab_probability" value="1.0" /> 
 
-  <parameter class="vehicle_stuck_short_time" value="100000.0" />
-  <parameter class="force_as_leader" value="1" />
+	<parameter class="force_as_leader" value="1" />
+  <parameter class="vehicle_stuck_short_time" value="999.0" />
+  <parameter class="check_vehicles_interval" value="0.0" />
+  <parameter class="check_vehicles_while_fire_open_interval" value="0.0" />
   <parameter class="leader_sight_range" value="40.0" />
   <parameter class="team_member_sight_range" value="35.0" />
   <parameter class="force_comparison_multiplier_to_call_reinforcements" value="0.3" />

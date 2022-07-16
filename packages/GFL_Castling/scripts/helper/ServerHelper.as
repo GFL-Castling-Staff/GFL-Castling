@@ -140,7 +140,8 @@ class ServerHelper : Tracker {
                     if(s=="bgd") spawnSoldier(m_metagame,1,1,target,"Paradeus_doppelsoldner");
                     if(s=="mgnmsl") spawnSoldier(m_metagame,1,0,target,"default_mg");
                     if(s=="nbl2") spawnSoldier(m_metagame,1,0,target,"kcco_cerynitis_alter");
-
+                    if(s=="daoniang") spawnSoldier(m_metagame,1,0,target,"Brute");
+                    if(s=="daoniang_s") spawnSoldier(m_metagame,1,0,target,"Brute_swap");
                 }
             }
         }

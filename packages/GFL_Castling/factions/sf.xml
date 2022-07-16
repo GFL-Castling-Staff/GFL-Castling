@@ -546,7 +546,7 @@
 		</resources>
 	</soldier>
 	<!-- nemeum 钢狮 swap -->
-	<soldier name="sfw_nemeum_swap" spawn_score="0.3" copy_from="default_spawn_ai">
+	<soldier name="sfw_nemeum_swap" spawn_score="0.4" copy_from="default_spawn_ai">
 		<character filename="default_mecha.character"/>
 		<ai filename="eod_mecha.ai" />
 		<model filename="sfd_sangvisfeaal_swap.xml" />
@@ -625,9 +625,18 @@
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="0.0" max="0.033" />
 		</attribute_config>
-		<item_class_existence_config>
-			<item_class_existence class="carry_item" slot="1" probability="0.5" />
-		</item_class_existence_config>
+	</soldier>
+
+	<soldier name="Brute_swap" spawn_score="0.75" squad_size_xp_cap="0.5" copy_from="default_spawn_ai">
+		<ai filename="melee_nb.ai" />
+		<model filename="sfd_BruteSwap_gua_dusk.xml" />
+		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
+			<weapon key="sfw_brute_swap.weapon" enabled="1" />
+			<carry_item key="sf_ar.carry_item" />
+		</resources>
+		<attribute_config class="xp">
+			<attribute weight="1.0" min="0.0" max="0.033" />
+		</attribute_config>
 	</soldier>
 
 	<!-- BOSS-hunter -->
@@ -820,8 +829,6 @@
 			<weapon key="sfw_m16a1.weapon" enabled="1"/>
 			<!-- <projectile key="hand_m16a1_call.projectile"/> -->
 			<carry_item key="sf_m16a1.carry_item" enabled="1" />
-			<call key="sf_m16a1.call" />
-
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="600.0" max="800.05" />
