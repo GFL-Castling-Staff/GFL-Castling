@@ -22,7 +22,7 @@
     <inventory buy_price="300.0" sell_price="300.0" />
     <animation key="reload" animation_key="reloading, magazine rifle 1.8" />
     <animation key="cycle" animation_key="Brifle0.4" />
-    <animation key="cycle" stance_key="prone" animation_key="Brifle0.4p" />
+    <animation key="cycle" stance_key="prone" animation_key="Brifle0.8p" />
     <!--Sounds-->
     <sound key="fire" fileref="k11skill_fire_FromBF2042.wav" pitch_variety="0.05" volume="1.3" />
     <sound key="magazine_out" fileref="js05_mgz_out_FromCOD17.wav" volume="0.7" />

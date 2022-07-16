@@ -167,7 +167,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		addStage(setupStage18());         // map13_2
 		addStage(setupStage1());          // map2
 		// addStage(setupStage1_rust());          // map2_?
-		addStage(setupStage7());          // map6
+		addStage(setupStage7());          // map6c by diling
 		addStage(setupStage4());          // map7
 		addStage(setupStage15());         // map1_2
 		addStage(setupStage12());         // map14
@@ -574,19 +574,19 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.m_mapInfo.m_id = "chapter02";
 		stage.addTracker(PeacefulLastBase(m_metagame, 0));
 		stage.addTracker(CommsCapacityHandler(m_metagame));
-		stage.m_maxSoldiers = 80;
-		stage.m_playerAiCompensation = 4;                                     
+		stage.m_maxSoldiers = 100;
+		stage.m_playerAiCompensation = 8;                                     
 		stage.m_playerAiReduction = 0;                                         
 		stage.m_minRandomCrates = 5; 
 		stage.m_maxRandomCrates = 6;
 		{
-			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0));
+			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0, 0.6, 0.15));
 			stage.m_factions.insertLast(f);
 		}
 		{
 			Faction f(getFactionConfigs()[1], createCommanderAiCommand(1,0.5,0.2));
-			f.m_overCapacity = 60;                                            
-			f.m_capacityOffset = 20;                                           
+			f.m_overCapacity = 120;                                            
+			f.m_capacityOffset = 30;                                           
 			stage.m_factions.insertLast(f); 
 		}
 		{
@@ -991,7 +991,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.m_mapInfo.m_path = "media/packages/GFLC_Map/maps/map6_c";
 		stage.m_mapInfo.m_id = "map6";
 
-		stage.m_maxSoldiers = 15 * 9;                                             // was 17*7 in 1.65
+		stage.m_maxSoldiers = 15 * 11;                                             // was 17*7 in 1.65
 		stage.m_playerAiCompensation = 8;                                         // was 7 (test4)
         stage.m_playerAiReduction = 2;                                            // was 3 (test2)
     	stage.addTracker(jupiter(m_metagame,30));
@@ -1010,9 +1010,9 @@ class StageConfiguratorInvasion : StageConfigurator {
 			stage.m_factions.insertLast(f);
 		}
 		{
-			Faction f(getFactionConfigs()[2], createCommanderAiCommand(1, 0.45, 0.2)); 
+			Faction f(getFactionConfigs()[2], createCommanderAiCommand(1, 0.65, 0.2)); 
 			f.m_overCapacity = 80;                                              
-			f.m_capacityOffset = 15;                                            
+			f.m_capacityOffset = 30;                                            
 			stage.m_factions.insertLast(f);
 		}
 
