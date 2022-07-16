@@ -265,6 +265,10 @@ dictionary commandSkillIndex = {
         //Liu RF
         {"gkw_liu.weapon",34},
         {"gkw_liu_skill.weapon",34},
+
+        //sat8
+        {"gkw_sat8.weapon",35},
+        {"gkw_sat8_1802.weapon",35},
         // 下面这行是用来占位的，在这之上添加新的枪和index即可
         {"666",-1}
 };
@@ -363,6 +367,7 @@ class CommandSkill : Tracker {
                     case 32:{excuteMLEskill(cId,senderId,m_modifer);break;}
                     case 33:{excuteMG4MOD3skill(cId,senderId,m_modifer);break;}
                     case 34:{excuteLiuRFskill(cId,senderId,m_modifer);break;}
+                    case 35:{excuteSAT8skill(cId,senderId,m_modifer);break;}
 
                     default:
                         break;
@@ -2364,6 +2369,41 @@ class CommandSkill : Tracker {
         playSoundAtLocation(m_metagame,"GeneralLiu_skill.wav",fID,c_pos,1.2);
 
     }
+
+    void excuteSAT8skill(int characterId,int playerId,SkillModifer@ modifer){
+        bool ExistQueue = false;
+        int j =-1;
+        for (uint i=0;i<SkillArray.length();i++){
+            if (InCooldown(characterId,modifer,SkillArray[i]) && SkillArray[i].m_weapontype=="SAT8") {
+                ExistQueue=true;
+                j=i;
+            }
+        }
+        if (ExistQueue){
+            dictionary a;
+            a["%time"] = ""+SkillArray[j].m_time;
+            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            _log("skill cooldown" + SkillArray[j].m_time);
+            return;
+        }
+        addCoolDown("SAT8",30,characterId,modifer);
+        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+        if (character !is null) {
+            Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
+            int factionid = character.getIntAttribute("faction_id");
+            XmlElement c ("command");
+            c.setStringAttribute("class", "update_inventory");
+            c.setIntAttribute("character_id", characterId); 
+            c.setIntAttribute("untransform_count", 4);
+            m_metagame.getComms().send(c);
+            array<string> Voice={
+                "SAT8_SKILL1_JP.wav",
+                "SAT8_SKILL2_JP.wav",
+                "SAT8_SKILL3_JP.wav"
+            };
+            playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+        }
+    }    
 }
 
 

@@ -33,7 +33,7 @@ class MatchCompleteReward : Tracker {
 
                 if(rand(1,5)==1){
                     sendFactionMessageKey(m_metagame, 0,"celebrateXB");
-                    playSound(m_metagame, "winwin.wav", 0,1.5);
+                    playSound(m_metagame, "winwin.wav", 0,1.0);
                     for (uint i = 0; i < players.size(); ++i) {
                         int characterId = players[i].getIntAttribute("character_id");
                         if (characterId >= 0) {
