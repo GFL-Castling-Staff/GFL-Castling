@@ -161,7 +161,7 @@
 	15
     <turret offset="0 0 0" weapon_key="amos_drone_mg2.weapon" weapon_offset="0 0 0" parent_turret_index="13" rotation_range="0" />
     <!-- 驾驶 -->
-    <character_slot type="driver" position="3.5 0.5 1" rotation="0" exit_rotation="1.57" hiding="1" animation_id="36" />
+    <character_slot type="driver" position="3.5 0.5 1" seat_position="0.0 2.8 0.5" rotation="0" exit_rotation="1.57" hiding="1" animation_id="36" />
     <!-- emp -->
     <character_slot type="gunner"  position="3.5 0.5 5" rotation="0" exit_rotation="1.57" hiding="1" animation_id="37">
         <turret index="1" />

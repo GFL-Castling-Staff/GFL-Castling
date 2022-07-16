@@ -74,7 +74,7 @@
 	<!-- <model filename="l30p.xml" /> -->
     <hud_icon filename="typhoon_main_cannon.png" />
     <commonness value="0.0" />
-    <sound key="fire" fileref="Typhon_MainGun_FromHALO4.wav" pitch_variety="0.05" volume="3.25" />
+    <sound key="fire" fileref="Typhon_charging_FromHALO4.wav" pitch_variety="0.05" volume="3.5" />
     <projectile file="bullet.projectile">
 	    <model filename="" />
 
@@ -126,7 +126,7 @@
 	<!-- <model filename="l30p.xml" /> -->
     <hud_icon filename="typhoon_main_cannon.png" />
     <commonness value="0.0" />
-    <sound key="fire" fileref="typhon_fire_FromHALO4.wav" pitch_variety="0.05" volume="0.75" />
+    <sound key="fire" fileref="typhon_fire_FromHALO4.wav" pitch_variety="0.05" volume="3.5" />
     <projectile file="typhoon_laser.projectile" pulldown_in_air="0.5" >
         <result class="blast"  damage="30.5"  radius="8" decal="1" push="1.0" character_state="death" damage_origin_vehicle="0"	faction_compare="not_equal"/>
 		<trail probability="1.0" key="laser_tifeng" />
@@ -206,7 +206,7 @@
 	<!-- <model filename="l30p.xml" /> -->
     <hud_icon filename="typhoon_main_cannon.png" />
     <commonness value="0.0" />
-    <sound key="fire" fileref="typhon_fire_FromHALO4.wav" pitch_variety="0.05" volume="0.75" />
+    <sound key="fire" fileref="typhon_fire_FromHALO4.wav" pitch_variety="0.05" volume="3.5" />
     <projectile file="typhoon_laser.projectile" pulldown_in_air="1.0" >
         <result class="blast"  damage="30.5"  radius="8" decal="1" push="1.0" character_state="death" damage_origin_vehicle="0"	faction_compare="not_equal"/>
 		<trail probability="1.0" key="laser_tifeng" />
@@ -286,7 +286,7 @@
 	<!-- <model filename="l30p.xml" /> -->
     <hud_icon filename="typhoon_main_cannon.png" />
     <commonness value="0.0" />
-    <sound key="fire" fileref="typhon_fire_FromHALO4.wav" pitch_variety="0.05" volume="0.75" />
+    <sound key="fire" fileref="typhon_fire_FromHALO4.wav" pitch_variety="0.05" volume="3.5" />
     <projectile file="typhoon_laser.projectile" pulldown_in_air="2.0" >
         <result class="blast"  damage="30.5"  radius="8" decal="1" push="1.0" character_state="death" damage_origin_vehicle="0"	faction_compare="not_equal"/>
 		<trail probability="1.0" key="laser_tifeng" />
