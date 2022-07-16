@@ -225,7 +225,7 @@ class MapRotatorInvasion : MapRotator {
                 for (uint i = 0; i < players.size(); ++i) {
                     int characterId = players[i].getIntAttribute("character_id");
                     if (characterId >= 0) {
-                        addItemInBackpack(m_metagame,characterId,"carry_item","complete_box_singularity.carry_item");
+                        addItemInStash(m_metagame,characterId,"carry_item","complete_box_singularity.carry_item");
                     }                    
                 }				
 			}
@@ -235,7 +235,7 @@ class MapRotatorInvasion : MapRotator {
                 for (uint i = 0; i < players.size(); ++i) {
                     int characterId = players[i].getIntAttribute("character_id");
                     if (characterId >= 0) {
-                        addItemInBackpack(m_metagame,characterId,"carry_item","complete_box_hardcore.carry_item");
+                        addItemInStash(m_metagame,characterId,"carry_item","complete_box_hardcore.carry_item");
                     }                    
                 }
 			}

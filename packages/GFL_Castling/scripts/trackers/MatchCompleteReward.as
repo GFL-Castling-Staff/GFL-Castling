@@ -26,7 +26,7 @@ class MatchCompleteReward : Tracker {
                     if (characterId >= 0) {
                         GiveRP(m_metagame,characterId,2000);
                         GiveXP(m_metagame,characterId,0.1);
-                        addItemInBackpack(m_metagame,characterId,"carry_item","complete_box.carry_item");
+                        addItemInStash(m_metagame,characterId,"carry_item","complete_box.carry_item");
                     }                    
                 }
 
@@ -36,7 +36,7 @@ class MatchCompleteReward : Tracker {
                     for (uint i = 0; i < players.size(); ++i) {
                         int characterId = players[i].getIntAttribute("character_id");
                         if (characterId >= 0) {
-                            addItemInBackpack(m_metagame,characterId,"carry_item","complete_box_xb.carry_item");
+                            addItemInStash(m_metagame,characterId,"carry_item","complete_box_xb.carry_item");
                         }
                     }
                 }
