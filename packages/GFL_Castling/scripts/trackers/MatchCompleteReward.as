@@ -6,6 +6,7 @@
 #include "query_helpers2.as"
 #include "gamemode.as"
 #include "GFLhelpers.as"
+//Originally created by NetherCrow
 
 class MatchCompleteReward : Tracker {
 	protected Metagame@ m_metagame;

@@ -13,6 +13,8 @@
 // 2 Backpack
 // 3 Stash
 
+//Author: NetherCrow
+
 class CraftQueue
 {
     int m_playerId;

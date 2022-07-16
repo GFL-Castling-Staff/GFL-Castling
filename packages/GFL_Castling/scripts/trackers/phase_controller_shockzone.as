@@ -11,6 +11,7 @@
 
 #include "gamemode_invasion.as"
 #include "GFLhelpers.as"
+//Author: NetherCrow
 
 class map105_Phase : Tracker {
 	protected GameModeInvasion@ m_metagame;

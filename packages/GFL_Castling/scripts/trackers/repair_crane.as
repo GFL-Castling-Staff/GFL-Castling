@@ -7,6 +7,7 @@
 
 //Author: Unit G17
 //Originally created for stationary cranes only. Expanded for repair tanks and blowtorches.
+//Adapted by Castling Staff
 
 	// --------------------------------------------
 class RepairCrane : Tracker {

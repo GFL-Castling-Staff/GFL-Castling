@@ -37,6 +37,7 @@ dictionary RP_enemy_index = {
     {"sf_ripper_swap",20},
     {"sf_jaeger_swap",20},
     {"sf_striker_swap",20},
+    {"Brute_swap",20},
     {"sfw_dragoon",30},
     {"sfw_dragoon",60},
 
@@ -99,6 +100,7 @@ dictionary XP_enemy_index = {
     {"sf_striker_swap",0.002},
     {"sfw_dragoon",0.003},
     {"sfw_dragoon_swap",0.006},
+    {"Brute_swap",0.002},
 
     {"sf_hunter",0.02},
     {"sf_architect",0.02},

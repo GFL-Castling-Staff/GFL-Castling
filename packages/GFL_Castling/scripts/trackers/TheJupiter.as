@@ -6,6 +6,8 @@
 #include "query_helpers2.as"
 #include "gamemode.as"
 #include "GFLhelpers.as"
+//Author: NetherCrow
+//Author: Saiwa
 
 class jupiter: Tracker {
 	protected Metagame@ m_metagame;

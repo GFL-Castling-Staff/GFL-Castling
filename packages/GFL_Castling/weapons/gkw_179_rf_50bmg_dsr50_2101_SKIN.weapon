@@ -34,6 +34,8 @@
     <!--Model, Icon, Cost-->
     <model filename="gkw_rf_dsr50.xml" />
     <hud_icon filename="gkw_dsr50_2101.png" />
+    <commonness value="0" in_stock="0" />
+
     <!--Ballistics-->
     <weak_hand_hold offset="0.3" />
     <projectile file="ntw.projectile" can_be_detected_by_footmen="0">

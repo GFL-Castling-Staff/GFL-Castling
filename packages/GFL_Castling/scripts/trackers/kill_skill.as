@@ -7,6 +7,8 @@
 #include "gamemode.as"
 #include "GFLhelpers.as"
 //Originally created by NetherCrow
+
+
 //11:39:11: SCRIPT:  received: TagName=character_kill key= method_hint=stab     
 //TagName=killer block=12 14 dead=0 faction_id=0 id=11 leader=1 name=Nikita Sokol player_id=0 position=428.551 4.3014 499.254 rp=60 soldier_group_name=default squad_size=0 wounded=0 xp=0   
 //TagName=target block=12 14 dead=0 faction_id=1 id=9 leader=1 name=Uwe Neururer player_id=-1 position=428.102 4.30089 498.737 rp=0 soldier_group_name=default_ai squad_size=2 wounded=0 xp=0 

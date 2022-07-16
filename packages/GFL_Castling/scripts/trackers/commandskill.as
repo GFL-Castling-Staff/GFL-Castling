@@ -9,12 +9,12 @@
 #include "task_sequencer.as"
 #include "GFLhelpers.as"
 #include "kill_event.as"
+//Interface Author: NetherCrow
+//Contributor: Saiwa K309 Lappland
 
 array<SkillTrigger@> SkillArray;
 array<kill_count@> KillCountArray;
 
-//02:29:23: SCRIPT:  received: TagName=chat_event channel=global global=1 message=/promote player_id=0 player_name=NETHER_CROW 
-//02:29:23: SCRIPT:  received: TagName=query_result query_id=18     TagName=player aim_target=154.627 19.7851 688.99 character_id=174 color=0.68 0.85 0 1 faction_id=0 name=NETHER_CROW player_id=0 profile_hash=ID3580998501 sid=ID0 
 class SkillTrigger{
     int m_character_id;
     float m_time;

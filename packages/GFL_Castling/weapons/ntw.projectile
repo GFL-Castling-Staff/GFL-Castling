@@ -2,9 +2,7 @@
 <projectile class="bullet" key="ntw.projectile" name="NTW20" slot="1" pulldown_in_air="4">
     <result class="blast" radius="3.0" damage="3" push="0.03" decal="0" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0" />
     <rotation class="motion" />
-    <trigger class="impact">
-		<collider class="character" enabled="1" faction_compare="not_equal"/>
-	</trigger>
+    <trigger class="impact"/>
     <sound class="result" key="terrain" fileref="ricochet1.wav" />
     <sound class="result" key="terrain" fileref="ricochet2.wav" />
     <sound class="result" key="terrain" fileref="ricochet3.wav" />

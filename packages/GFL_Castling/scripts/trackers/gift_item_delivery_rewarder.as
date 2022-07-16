@@ -1,5 +1,6 @@
 #include "item_delivery_objective.as"
 #include "query_helpers.as"
+//Adapted and optimizated by NetherCrow
 
 // ------------------------------------------------------------------------------------------------
 class GiftItemDeliveryRewarder : ItemDeliveryRewarder {

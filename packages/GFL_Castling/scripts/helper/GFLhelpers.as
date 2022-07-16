@@ -3,6 +3,7 @@
 
 //别抄了学不会的，有需求请联系 冥府乌鸦NetherCrow 为你解惑，不识趣的不建议来。
 //Credit: NetherCrow & Castling Staff
+//Contributor: Saiwa
 //Inspired by Pasik & Unit G17 & RWR ww2 DLC staff
 //Don't copy without gimme a ask and if you has some question about script just contact @NetherCrowCSOLYOO in rwr discord #modding
 

@@ -6,6 +6,7 @@
 #include "query_helpers2.as"
 #include "GFLhelpers.as"
 #include "call_marker_tracker.as"
+//Author: NetherCrow
 
 class ManualCallTask{
     int m_characterId;
