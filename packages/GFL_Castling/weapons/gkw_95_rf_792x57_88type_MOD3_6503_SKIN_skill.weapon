@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<weapon file="gk_sf_boss.base_weapon" key="gkw_88typemod3_skill.weapon" on_ground_up="0 0 1" time_to_live_out_in_the_open="0.0" drop_count_factor_on_death="0.0" player_death_drop_owner_lock_time="0">
+<weapon file="gk_sf_boss.base_weapon" key="gkw_88typemod3_6503_skill.weapon" on_ground_up="0 0 1" time_to_live_out_in_the_open="0.0" drop_count_factor_on_death="0.0" player_death_drop_owner_lock_time="0">
     <specification 
      retrigger_time="0.5"
      magazine_size="20"
@@ -15,7 +15,7 @@
      stab_range="5" 
      barrel_offset="-0.05" 
 />
-    <next_in_chain key="gkw_88typemod3.weapon" share_ammo="0" />
+    <next_in_chain key="gkw_88typemod3_6503.weapon" share_ammo="0" />
     <inventory price="300.0" />
     <animation state_key="recoil"   animation_key="stabbing1, 88typemod3_melee" speed="0.600000"/>
     <animation state_key="recoil"   animation_key="stabbing2, 88typemod3_melee" speed="0.600000"/>
@@ -48,7 +48,7 @@
     <stance state_key="prone" accuracy="1" />
     <stance state_key="prone_moving" accuracy="1" />
     <stance state_key="over_wall" accuracy="1" />
-    <hud_icon filename="gkw_88typemod3_skill.png" />
+    <hud_icon filename="gkw_88type_6503_mod3.png" />
     <effect class="muzzle" ref="sawsnone" />
     <capacity value="1" source="rank" source_value="0.0" />
     <commonness 
