@@ -12,7 +12,6 @@
         name="RPD" 
         class="0" 
         projectile_speed="156" 
-        spread_range="0.28"
         sight_range_modifier="1.5"/>
         <animation state_key="hold_casual"			animation_key="dancing, kazachok" />
         <animation key="reload" animation_key="reloading, Machine gun 1.6" />
@@ -51,7 +50,6 @@
         name="RPD-[Damage Focus MG]" 
         class="0" 
         projectile_speed="156" 
-        spread_range="0.28"
         sight_range_modifier="1.5"
         can_shoot_crouching="0"
         can_shoot_prone="1"/>
