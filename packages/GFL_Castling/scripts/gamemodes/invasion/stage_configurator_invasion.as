@@ -357,9 +357,9 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.addTracker(PausingKothTimer(m_metagame, stage.m_defenseWinTime));
 
 		{
-			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0, 0.6, 0.14));                                            
+			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0, 0.6, 0.2));                                            
 			f.m_capacityOffset = 0; 
-			f.m_capacityMultiplier = 1.0;
+			f.m_capacityMultiplier = 0.75;
 			f.m_bases = 1;
 			stage.m_factions.insertLast(f);
 		}
@@ -373,7 +373,8 @@ class StageConfiguratorInvasion : StageConfigurator {
 		{
 			Faction f(FactionConfig(2, "kcco.xml", "KCCO", "0.43 0.49 0.18", "kcco.xml"), createCommanderAiCommand(2, 0.10, 0.10));             
 			f.m_overCapacity = 80;                                             
-            f.m_capacityOffset = 10;                                            
+            f.m_capacityOffset = 40;
+			f.m_capacityMultiplier = 1.3;
 			stage.m_factions.insertLast(f);                                    
 		}
 		{
