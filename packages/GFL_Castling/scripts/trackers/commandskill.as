@@ -22,7 +22,7 @@ class SkillTrigger{
     int m_charge=1;
     // int m_player_id=-1;
     // string m_playername="";
-    SkillModifer@ m_skillInfo;
+    SkillModifer m_skillInfo;
 
     SkillTrigger(int characterId, float time,string weapontype){
         m_character_id=characterId;
@@ -459,7 +459,6 @@ class CommandSkill : Tracker {
         if(queue.m_character_id==cId) return true;
         if(NoRemoveOnDeath){
             if(queue.m_skillInfo.m_playername==modifer.m_playername) return true;
-            if(queue.m_skillInfo.m_player_id==modifer.m_player_id) return true;
         }
         return false;
     }
