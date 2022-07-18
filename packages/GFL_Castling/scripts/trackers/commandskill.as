@@ -22,7 +22,7 @@ class SkillTrigger{
     int m_charge=1;
     // int m_player_id=-1;
     // string m_playername="";
-    SkillModifer m_skillInfo;
+    SkillModifer@ m_skillInfo;
 
     SkillTrigger(int characterId, float time,string weapontype){
         m_character_id=characterId;
