@@ -9,4 +9,27 @@
 	<hud_icon filename="hud_coremask.png" />
 </carry_item>
 
+<carry_item name="Special Equipment Contract" key="armor_crafting_master.carry_item" time_to_live_out_in_the_open="90.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="1.0" player_death_drop_owner_lock_time="90.0">
+	<capacity value="1" source="rank" source_value="0.0" />
+	<inventory buy_price="0" sell_price="0" encumbrance="-0.5" />
+	<commonness value="0.0" in_stock="1" can_respawn_with="0" />
+	<model mesh_filename="equipment_contract.xml"/>
+	<hud_icon filename="hud_special_ticket.png" />
+</carry_item>
+
+<carry_item name="Equipment Contract" key="armor_crafting_card.carry_item" time_to_live_out_in_the_open="30" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="1.0">
+	<capacity value="1" source="rank" source_value="0.0" />
+	<hud_icon filename="equip_crafting.png" />
+	<inventory encumbrance="-1.0" buy_price="1000" sell_price="0" />
+	<model mesh_filename="equipment_contract.xml" />
+	<commonness value="0.0" in_stock="1" />
+</carry_item>
+
+<carry_item name="Black Card" key="black_card.carry_item" time_to_live_out_in_the_open="90" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="1.0" player_death_drop_owner_lock_time="90.0">
+	<capacity value="1" source="rank" source_value="0.0" />
+	<hud_icon filename="hud_blackcard.png" />
+	<inventory encumbrance="-1.0" buy_price="0" sell_price="0" />
+	<model mesh_filename="magazine.mesh" texture_filename="tdollcraft.png" />
+	<commonness value="0.0" in_stock="0" can_respawn_with="0" />
+</carry_item>
 </carry_items>
