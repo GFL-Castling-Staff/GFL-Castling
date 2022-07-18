@@ -578,8 +578,10 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.m_maxSoldiers = 100;
 		stage.m_playerAiCompensation = 8;                                     
 		stage.m_playerAiReduction = 0;                                         
-		stage.m_minRandomCrates = 5; 
-		stage.m_maxRandomCrates = 6;
+		stage.m_minRandomCrates = 3; 
+		stage.m_maxRandomCrates = 4;
+		stage.m_fogOffset = 24.0;
+		stage.m_fogRange = 24.5;
 		{
 			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0, 0.6, 0.15));
 			stage.m_factions.insertLast(f);
