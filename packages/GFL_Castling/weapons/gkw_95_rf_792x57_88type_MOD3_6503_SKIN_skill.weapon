@@ -17,27 +17,23 @@
 />
     <next_in_chain key="gkw_88typemod3_6503.weapon" share_ammo="0" />
     <inventory price="300.0" />
-    <animation state_key="recoil"   animation_key="stabbing1, 88typemod3_melee" speed="0.600000"/>
-    <animation state_key="recoil"   animation_key="stabbing2, 88typemod3_melee" speed="0.600000"/>
-    <animation state_key="recoil"   animation_key="stabbing3, 88typemod3_melee" speed="0.600000"/>
-    <animation state_key="stabbing" animation_key="stabbing1, 88typemod3_melee" />
-    <animation state_key="stabbing" animation_key="stabbing2, 88typemod3_melee" />
-    <animation state_key="stabbing" animation_key="stabbing3, 88typemod3_melee" />
-    <animation state_key="hold" animation_key="still, 88typemod3_melee" />
-    <animation state_key="hold_on_wall" animation_key="still overwall, 88typemod3_melee" />
-    <animation state_key="still_against_wall"   animation_key="still against wall, 88typemod3_melee" />
-    <animation state_key="hold_casual"  animation_key="relaxed, 88typemod3_melee" />
-    <animation state_key="running"  animation_key="running, 88typemod3_melee" />
-    <animation state_key="walking"  animation_key="walking, 88typemod3_melee" />
-    <animation state_key="crouching"    animation_key="still, 88typemod3_melee" />
-    <animation state_key="crouch_moving"    animation_key="walking, 88typemod3_melee" />
-    <animation state_key="crouch_moving_backwards"  animation_key="walking backwards, 88typemod3_melee" />
-    <animation state_key="prone_still" animation_key="still, 88typemod3_melee" />
-    <animation state_key="prone_moving" animation_key="walking, 88typemod3_melee" />
-    <animation state_key="walking_backwards" animation_key="walking backwards, 88typemod3_melee" />
-    <animation state_key="changing_weapon_in"   animation_key="change weapon in, sword" />
-    <animation state_key="changing_weapon_out"  animation_key="change weapon out, sword" />
-    <animation state_key="reload"   animation_key="reload, 88typemod3_melee" />
+    <animation state_key="recoil"   animation_key="stab, gunda melee" />
+    <animation state_key="stabbing" animation_key="stab, gunda melee" />
+    <animation state_key="hold" animation_key="still, gunda melee" />
+    <animation state_key="hold_on_wall" animation_key="still, gunda melee" />
+    <animation state_key="still_against_wall"   animation_key="still, gunda melee" />
+    <animation state_key="hold_casual"  animation_key="still, gunda melee" />
+    <animation state_key="running"  animation_key="running, gunda melee" />
+    <animation state_key="walking"  animation_key="walking, gunda melee" />
+    <animation state_key="crouching"    animation_key="still, gunda melee" />
+    <animation state_key="crouch_moving"    animation_key="walking, gunda melee" />
+    <animation state_key="crouch_moving_backwards"  animation_key="walking, gunda melee" />
+    <animation state_key="prone_still" animation_key="still, gunda melee" />
+    <animation state_key="prone_moving" animation_key="walking, gunda melee" />
+    <animation state_key="walking_backwards" animation_key="walking, gunda melee" />
+    <animation state_key="changing_weapon_in"   animation_key="change weapon to melee, gunda" />
+    <animation state_key="changing_weapon_out"  animation_key="change weapon to melee, gunda" />
+    <animation state_key="reload"   animation_key="reload, gunda melee" />
     <model filename="gkw_88typemod3_melee.xml" />
     <projectile file="teal.projectile"/>
     <stance state_key="running" accuracy="1" />
