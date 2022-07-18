@@ -618,6 +618,7 @@
 	<soldier name="Brute" spawn_score="1.5" squad_size_xp_cap="0.5" copy_from="default_spawn_ai">
 		<ai filename="melee_nb.ai" />
 		<model filename="sfd_Brute_gua.xml" />
+		<character filename="brute.character" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="sfw_brute.weapon" enabled="1" />
 			<carry_item key="sf_ar.carry_item" />
@@ -630,6 +631,7 @@
 	<soldier name="Brute_swap" spawn_score="0.75" squad_size_xp_cap="0.5" copy_from="default_spawn_ai">
 		<ai filename="melee_nb.ai" />
 		<model filename="sfd_BruteSwap_gua_dusk.xml" />
+		<character filename="brute.character" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="sfw_brute_swap.weapon" enabled="1" />
 			<carry_item key="sf_ar.carry_item" />
