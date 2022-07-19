@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapons>
-<weapon key="typhoon_main_cannon">
-    <specification 
+    <weapon key="typhoon_main_cannon">
+        <specification 
 	retrigger_time="0.002" 
     accuracy_factor="2.0" 
     sustained_fire_grow_step="0.0" 
@@ -20,37 +20,33 @@
     projectiles_per_shot="1" 
 	spread_range="0.0"
 	use_basic_muzzle_smoke_effect="0"/>
-    <model mesh_filename="Typhoon_turret.mesh" texture_filename="Typhoon_Turret_Color.png" />
-    <!-- <model mesh_filename="balloon.mesh" texture_filename="balloon.png" /> -->
-	<!-- <model filename="l30p.xml" /> -->
-    <hud_icon filename="typhoon_main_cannon.png" />
-    <commonness value="0.0" />
-    <sound key="fire" fileref="typhon_fire_FromHALO4.wav" pitch_variety="0.05" volume="0.05" />
-    <projectile file="typhoon_laser.projectile">
-        <result class="blast"  damage="0.5"  radius="1.8" decal="1" push="0.0" character_state="death" 	faction_compare="not_equal"/>
-    </projectile>
-    
-	<!-- Scoring for target priority. Distance is between 0 and 1 based on range; direction is between 0 and 1 based on whether its near the barrel; squad_command is between 0 and on based on how close to the player's command order is, and base_score is a weight.. -->
-	<!-- These all add together and the highest 'score' is the new target, targets are rescanned every 2.5 seconds to see if a new higher-score target is in sight-range. -->
-	<!-- You must define a blank tag at the top of the list to handle all cases where the vehicle is fighting something "undefined", which is what common infantry might best fit under. -->
-    <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5" />
-    <target_factors tag="heavy_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0" />
-    <target_factors tag="apc" distance="1.0" direction="0.0" squad_command="1.0" base_score="6.0" />
-    <target_factors tag="light_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="5.0" />	
-    <target_factors tag="defensive_at" distance="1.0" direction="0.0" squad_command="1.0" base_score="5.5" />
-    <target_factors tag="tactical" distance="1.0" direction="0.0" squad_command="1.0" base_score="7.0" />  <!-- important non combat player-only vehicles -->  
-    <target_factors tag="bazooka" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.5" />
-    <target_factors tag="punchme" distance="1.0" direction="0.0" squad_command="1.0" base_score="30.0" />
-
-
-    <!-- <effect class="muzzle" ref="CannonSmokeBigSphere" />        -->
-    <!-- <effect class="muzzle" ref="BigMuzzle" /> -->
-
-    <!-- <sound class="operation" key="fire" fileref="apc_shot_1.wav" /> -->
-
-</weapon>
-<weapon key="typhoon_main_cannon_sound">
-    <specification 
+        <model mesh_filename="Typhoon_turret.mesh" texture_filename="Typhoon_Turret_Color.png" />
+        <!-- <model mesh_filename="balloon.mesh" texture_filename="balloon.png" /> -->
+        <!-- <model filename="l30p.xml" /> -->
+        <hud_icon filename="typhoon_main_cannon.png" />
+        <commonness value="0.0" />
+        <sound key="fire" fileref="typhon_fire_FromHALO4.wav" pitch_variety="0.05" volume="0.05" />
+        <projectile file="typhoon_laser.projectile">
+            <result class="blast"  damage="0.4" damage_as_probability="1" radius="1.8" decal="1" push="0.0" character_state="death" 	faction_compare="not_equal"/>
+        </projectile>
+        <!-- Scoring for target priority. Distance is between 0 and 1 based on range; direction is between 0 and 1 based on whether its near the barrel; squad_command is between 0 and on based on how close to the player's command order is, and base_score is a weight.. -->
+        <!-- These all add together and the highest 'score' is the new target, targets are rescanned every 2.5 seconds to see if a new higher-score target is in sight-range. -->
+        <!-- You must define a blank tag at the top of the list to handle all cases where the vehicle is fighting something "undefined", which is what common infantry might best fit under. -->
+        <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5" />
+        <target_factors tag="heavy_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0" />
+        <target_factors tag="apc" distance="1.0" direction="0.0" squad_command="1.0" base_score="6.0" />
+        <target_factors tag="light_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="5.0" />
+        <target_factors tag="defensive_at" distance="1.0" direction="0.0" squad_command="1.0" base_score="5.5" />
+        <target_factors tag="tactical" distance="1.0" direction="0.0" squad_command="1.0" base_score="7.0" />
+        <!-- important non combat player-only vehicles -->
+        <target_factors tag="bazooka" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.5" />
+        <target_factors tag="punchme" distance="1.0" direction="0.0" squad_command="1.0" base_score="30.0" />
+        <!-- <effect class="muzzle" ref="CannonSmokeBigSphere" />        -->
+        <!-- <effect class="muzzle" ref="BigMuzzle" /> -->
+        <!-- <sound class="operation" key="fire" fileref="apc_shot_1.wav" /> -->
+    </weapon>
+    <weapon key="typhoon_main_cannon_sound">
+        <specification 
 	retrigger_time="6" 
     accuracy_factor="2.0" 
     sustained_fire_grow_step="0.0" 
@@ -69,39 +65,34 @@
     projectiles_per_shot="1" 
 	spread_range="0.0"
 	use_basic_muzzle_smoke_effect="0"/>
-    <model filename="" />
-    <!-- <model mesh_filename="balloon.mesh" texture_filename="balloon.png" /> -->
-	<!-- <model filename="l30p.xml" /> -->
-    <hud_icon filename="typhoon_main_cannon.png" />
-    <commonness value="0.0" />
-    <sound key="fire" fileref="Typhon_charging_FromHALO4.wav" pitch_variety="0.05" volume="3.5" />
-    <projectile file="bullet.projectile">
-	    <model filename="" />
-
-        <result class="blast"  damage="0"  radius="2.5" decal="1" push="0.0" character_state="death" 	faction_compare="not_equal"/>
-    </projectile>
-    
-	<!-- Scoring for target priority. Distance is between 0 and 1 based on range; direction is between 0 and 1 based on whether its near the barrel; squad_command is between 0 and on based on how close to the player's command order is, and base_score is a weight.. -->
-	<!-- These all add together and the highest 'score' is the new target, targets are rescanned every 2.5 seconds to see if a new higher-score target is in sight-range. -->
-	<!-- You must define a blank tag at the top of the list to handle all cases where the vehicle is fighting something "undefined", which is what common infantry might best fit under. -->
-    <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5" />
-    <target_factors tag="heavy_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0" />
-    <target_factors tag="apc" distance="1.0" direction="0.0" squad_command="1.0" base_score="6.0" />
-    <target_factors tag="light_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="5.0" />	
-    <target_factors tag="defensive_at" distance="1.0" direction="0.0" squad_command="1.0" base_score="5.5" />
-    <target_factors tag="tactical" distance="1.0" direction="0.0" squad_command="1.0" base_score="7.0" />  <!-- important non combat player-only vehicles -->  
-    <target_factors tag="bazooka" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.5" />
-    <target_factors tag="punchme" distance="1.0" direction="0.0" squad_command="1.0" base_score="30.0" />
-
-
-    <!-- <effect class="muzzle" ref="CannonSmokeBigSphere" />        -->
-    <!-- <effect class="muzzle" ref="BigMuzzle" /> -->
-
-    <!-- <sound class="operation" key="fire" fileref="apc_shot_1.wav" /> -->
-
-</weapon>
-<weapon key="typhoon_charged_laser1">
-    <specification 
+        <model filename="" />
+        <!-- <model mesh_filename="balloon.mesh" texture_filename="balloon.png" /> -->
+        <!-- <model filename="l30p.xml" /> -->
+        <hud_icon filename="typhoon_main_cannon.png" />
+        <commonness value="0.0" />
+        <sound key="fire" fileref="Typhon_charging_FromHALO4.wav" pitch_variety="0.05" volume="3.5" />
+        <projectile file="bullet.projectile">
+            <model filename="" />
+            <result class="blast"  damage="0"  radius="2.5" decal="1" push="0.0" character_state="death" 	faction_compare="not_equal"/>
+        </projectile>
+        <!-- Scoring for target priority. Distance is between 0 and 1 based on range; direction is between 0 and 1 based on whether its near the barrel; squad_command is between 0 and on based on how close to the player's command order is, and base_score is a weight.. -->
+        <!-- These all add together and the highest 'score' is the new target, targets are rescanned every 2.5 seconds to see if a new higher-score target is in sight-range. -->
+        <!-- You must define a blank tag at the top of the list to handle all cases where the vehicle is fighting something "undefined", which is what common infantry might best fit under. -->
+        <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5" />
+        <target_factors tag="heavy_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0" />
+        <target_factors tag="apc" distance="1.0" direction="0.0" squad_command="1.0" base_score="6.0" />
+        <target_factors tag="light_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="5.0" />
+        <target_factors tag="defensive_at" distance="1.0" direction="0.0" squad_command="1.0" base_score="5.5" />
+        <target_factors tag="tactical" distance="1.0" direction="0.0" squad_command="1.0" base_score="7.0" />
+        <!-- important non combat player-only vehicles -->
+        <target_factors tag="bazooka" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.5" />
+        <target_factors tag="punchme" distance="1.0" direction="0.0" squad_command="1.0" base_score="30.0" />
+        <!-- <effect class="muzzle" ref="CannonSmokeBigSphere" />        -->
+        <!-- <effect class="muzzle" ref="BigMuzzle" /> -->
+        <!-- <sound class="operation" key="fire" fileref="apc_shot_1.wav" /> -->
+    </weapon>
+    <weapon key="typhoon_charged_laser1">
+        <specification 
 	retrigger_time="6" 
     accuracy_factor="2.0" 
     sustained_fire_grow_step="0.0" 
@@ -120,68 +111,60 @@
     projectiles_per_shot="1" 
 	spread_range="0.0"
 	use_basic_muzzle_smoke_effect="0"/>
-    <model filename="" />
-
-    <!-- <model mesh_filename="balloon.mesh" texture_filename="balloon.png" /> -->
-	<!-- <model filename="l30p.xml" /> -->
-    <hud_icon filename="typhoon_main_cannon.png" />
-    <commonness value="0.0" />
-    <sound key="fire" fileref="typhon_fire_FromHALO4.wav" pitch_variety="0.05" volume="3.5" />
-    <projectile file="typhoon_laser.projectile" pulldown_in_air="0.5" >
-        <result class="blast"  damage="30.5"  radius="8" decal="1" push="1.0" character_state="death" damage_origin_vehicle="0"	faction_compare="not_equal"/>
-		<trail probability="1.0" key="laser_tifeng" />
-		<sound class="result" key="other" fileref="explosion_Large_FromSQUAD_1.wav" volume="2.9" />
-		<sound class="result" key="other" fileref="explosion_Large_FromSQUAD_2.wav" volume="2.9" />
-
-		<sound class="result" key="terrain" copy="other" />
-		<sound class="result" key="static_object" copy="other" />
-		<sound class="result" key="vehicle" copy="other" />
-		<sound class="result" key="character" copy="other" />
-
-		<effect class="result" key="vehicle" tag="metal_heavy" ref="HitTank" lighting="1" />
-		<effect class="result" key="vehicle" tag="metal_heavy" ref="HitTankSparks" />
-		<effect class="result" key="vehicle" tag="metal_heavy" ref="SmokeBurst" post_processing="1" />
-		<effect class="result" key="vehicle" tag="metal_heavy" ref="BurstShine" lighting="0" />
-		<effect class="result" key="vehicle" tag="metal_heavy" ref="Godray" lighting="0" />
-		<effect class="result" key="terrain" ref="BigBurst" use_surface_color="1" />
-		<effect class="result" key="terrain" ref="SmokeTop" post_processing="1" />
-		<effect class="result" key="terrain" ref="Smoke" post_processing="1" />
-		<effect class="result" key="terrain" ref="Shine" lighting="0" />
-		<effect class="result" key="terrain" ref="Godray" lighting="0" />
-		<effect class="result" key="terrain" ref="ShadowSmoke" shadow="1" />
-		<effect class="result" key="terrain" ref="woosh" post_processing="0" shadow="0" />
-		<effect class="result" type="splat_map" surface_tag="" size="3.0" atlas_index="0" layer="1" />
-		<effect class="result" type="splat_map" surface_tag="" size="5.0" atlas_index="4" layer="0" />
-		<effect class="result" type="splat_map" surface_tag="" size="6.0" atlas_index="0" layer="2" additive="0" />
-		<!-- remove top snow everywhere -->
-		<effect class="result" key="static_object" copy="terrain" />
-		<effect class="result" key="vehicle" copy="terrain" />
-		<effect class="result" key="character" copy="terrain" />
-		<effect class="result" key="other" copy="terrain" />
-		
-    </projectile>
-    
-	<!-- Scoring for target priority. Distance is between 0 and 1 based on range; direction is between 0 and 1 based on whether its near the barrel; squad_command is between 0 and on based on how close to the player's command order is, and base_score is a weight.. -->
-	<!-- These all add together and the highest 'score' is the new target, targets are rescanned every 2.5 seconds to see if a new higher-score target is in sight-range. -->
-	<!-- You must define a blank tag at the top of the list to handle all cases where the vehicle is fighting something "undefined", which is what common infantry might best fit under. -->
-    <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5" />
-    <target_factors tag="heavy_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0" />
-    <target_factors tag="apc" distance="1.0" direction="0.0" squad_command="1.0" base_score="6.0" />
-    <target_factors tag="light_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="5.0" />	
-    <target_factors tag="defensive_at" distance="1.0" direction="0.0" squad_command="1.0" base_score="5.5" />
-    <target_factors tag="tactical" distance="1.0" direction="0.0" squad_command="1.0" base_score="7.0" />  <!-- important non combat player-only vehicles -->  
-    <target_factors tag="bazooka" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.5" />
-    <target_factors tag="punchme" distance="1.0" direction="0.0" squad_command="1.0" base_score="30.0" />
-
-
-    <!-- <effect class="muzzle" ref="CannonSmokeBigSphere" />        -->
-    <!-- <effect class="muzzle" ref="BigMuzzle" /> -->
-
-    <!-- <sound class="operation" key="fire" fileref="apc_shot_1.wav" /> -->
-
-</weapon>
-<weapon key="typhoon_charged_laser2">
-    <specification 
+        <model filename="" />
+        <!-- <model mesh_filename="balloon.mesh" texture_filename="balloon.png" /> -->
+        <!-- <model filename="l30p.xml" /> -->
+        <hud_icon filename="typhoon_main_cannon.png" />
+        <commonness value="0.0" />
+        <sound key="fire" fileref="typhon_fire_FromHALO4.wav" pitch_variety="0.05" volume="3.5" />
+        <projectile file="typhoon_laser.projectile" pulldown_in_air="0.5" >
+            <result class="blast"  damage="30.5"  radius="8" decal="1" push="1.0" character_state="death" damage_origin_vehicle="0"	faction_compare="not_equal"/>
+            <trail probability="1.0" key="laser_tifeng" />
+            <sound class="result" key="other" fileref="explosion_Large_FromSQUAD_1.wav" volume="2.9" />
+            <sound class="result" key="other" fileref="explosion_Large_FromSQUAD_2.wav" volume="2.9" />
+            <sound class="result" key="terrain" copy="other" />
+            <sound class="result" key="static_object" copy="other" />
+            <sound class="result" key="vehicle" copy="other" />
+            <sound class="result" key="character" copy="other" />
+            <effect class="result" key="vehicle" tag="metal_heavy" ref="HitTank" lighting="1" />
+            <effect class="result" key="vehicle" tag="metal_heavy" ref="HitTankSparks" />
+            <effect class="result" key="vehicle" tag="metal_heavy" ref="SmokeBurst" post_processing="1" />
+            <effect class="result" key="vehicle" tag="metal_heavy" ref="BurstShine" lighting="0" />
+            <effect class="result" key="vehicle" tag="metal_heavy" ref="Godray" lighting="0" />
+            <effect class="result" key="terrain" ref="BigBurst" use_surface_color="1" />
+            <effect class="result" key="terrain" ref="SmokeTop" post_processing="1" />
+            <effect class="result" key="terrain" ref="Smoke" post_processing="1" />
+            <effect class="result" key="terrain" ref="Shine" lighting="0" />
+            <effect class="result" key="terrain" ref="Godray" lighting="0" />
+            <effect class="result" key="terrain" ref="ShadowSmoke" shadow="1" />
+            <effect class="result" key="terrain" ref="woosh" post_processing="0" shadow="0" />
+            <effect class="result" type="splat_map" surface_tag="" size="3.0" atlas_index="0" layer="1" />
+            <effect class="result" type="splat_map" surface_tag="" size="5.0" atlas_index="4" layer="0" />
+            <effect class="result" type="splat_map" surface_tag="" size="6.0" atlas_index="0" layer="2" additive="0" />
+            <!-- remove top snow everywhere -->
+            <effect class="result" key="static_object" copy="terrain" />
+            <effect class="result" key="vehicle" copy="terrain" />
+            <effect class="result" key="character" copy="terrain" />
+            <effect class="result" key="other" copy="terrain" />
+        </projectile>
+        <!-- Scoring for target priority. Distance is between 0 and 1 based on range; direction is between 0 and 1 based on whether its near the barrel; squad_command is between 0 and on based on how close to the player's command order is, and base_score is a weight.. -->
+        <!-- These all add together and the highest 'score' is the new target, targets are rescanned every 2.5 seconds to see if a new higher-score target is in sight-range. -->
+        <!-- You must define a blank tag at the top of the list to handle all cases where the vehicle is fighting something "undefined", which is what common infantry might best fit under. -->
+        <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5" />
+        <target_factors tag="heavy_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0" />
+        <target_factors tag="apc" distance="1.0" direction="0.0" squad_command="1.0" base_score="6.0" />
+        <target_factors tag="light_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="5.0" />
+        <target_factors tag="defensive_at" distance="1.0" direction="0.0" squad_command="1.0" base_score="5.5" />
+        <target_factors tag="tactical" distance="1.0" direction="0.0" squad_command="1.0" base_score="7.0" />
+        <!-- important non combat player-only vehicles -->
+        <target_factors tag="bazooka" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.5" />
+        <target_factors tag="punchme" distance="1.0" direction="0.0" squad_command="1.0" base_score="30.0" />
+        <!-- <effect class="muzzle" ref="CannonSmokeBigSphere" />        -->
+        <!-- <effect class="muzzle" ref="BigMuzzle" /> -->
+        <!-- <sound class="operation" key="fire" fileref="apc_shot_1.wav" /> -->
+    </weapon>
+    <weapon key="typhoon_charged_laser2">
+        <specification 
 	retrigger_time="6" 
     accuracy_factor="2.0" 
     sustained_fire_grow_step="0.0" 
@@ -200,68 +183,60 @@
     projectiles_per_shot="1" 
 	spread_range="0.0"
 	use_basic_muzzle_smoke_effect="0"/>
-    <model filename="" />
-
-    <!-- <model mesh_filename="balloon.mesh" texture_filename="balloon.png" /> -->
-	<!-- <model filename="l30p.xml" /> -->
-    <hud_icon filename="typhoon_main_cannon.png" />
-    <commonness value="0.0" />
-    <sound key="fire" fileref="typhon_fire_FromHALO4.wav" pitch_variety="0.05" volume="3.5" />
-    <projectile file="typhoon_laser.projectile" pulldown_in_air="1.0" >
-        <result class="blast"  damage="30.5"  radius="8" decal="1" push="1.0" character_state="death" damage_origin_vehicle="0"	faction_compare="not_equal"/>
-		<trail probability="1.0" key="laser_tifeng" />
-		<sound class="result" key="other" fileref="explosion_Large_FromSQUAD_1.wav" volume="2.9" />
-		<sound class="result" key="other" fileref="explosion_Large_FromSQUAD_2.wav" volume="2.9" />
-
-		<sound class="result" key="terrain" copy="other" />
-		<sound class="result" key="static_object" copy="other" />
-		<sound class="result" key="vehicle" copy="other" />
-		<sound class="result" key="character" copy="other" />
-
-		<effect class="result" key="vehicle" tag="metal_heavy" ref="HitTank" lighting="1" />
-		<effect class="result" key="vehicle" tag="metal_heavy" ref="HitTankSparks" />
-		<effect class="result" key="vehicle" tag="metal_heavy" ref="SmokeBurst" post_processing="1" />
-		<effect class="result" key="vehicle" tag="metal_heavy" ref="BurstShine" lighting="0" />
-		<effect class="result" key="vehicle" tag="metal_heavy" ref="Godray" lighting="0" />
-		<effect class="result" key="terrain" ref="BigBurst" use_surface_color="1" />
-		<effect class="result" key="terrain" ref="SmokeTop" post_processing="1" />
-		<effect class="result" key="terrain" ref="Smoke" post_processing="1" />
-		<effect class="result" key="terrain" ref="Shine" lighting="0" />
-		<effect class="result" key="terrain" ref="Godray" lighting="0" />
-		<effect class="result" key="terrain" ref="ShadowSmoke" shadow="1" />
-		<effect class="result" key="terrain" ref="woosh" post_processing="0" shadow="0" />
-		<effect class="result" type="splat_map" surface_tag="" size="3.0" atlas_index="0" layer="1" />
-		<effect class="result" type="splat_map" surface_tag="" size="5.0" atlas_index="4" layer="0" />
-		<effect class="result" type="splat_map" surface_tag="" size="6.0" atlas_index="0" layer="2" additive="0" />
-		<!-- remove top snow everywhere -->
-		<effect class="result" key="static_object" copy="terrain" />
-		<effect class="result" key="vehicle" copy="terrain" />
-		<effect class="result" key="character" copy="terrain" />
-		<effect class="result" key="other" copy="terrain" />
-	
-    </projectile>
-    
-	<!-- Scoring for target priority. Distance is between 0 and 1 based on range; direction is between 0 and 1 based on whether its near the barrel; squad_command is between 0 and on based on how close to the player's command order is, and base_score is a weight.. -->
-	<!-- These all add together and the highest 'score' is the new target, targets are rescanned every 2.5 seconds to see if a new higher-score target is in sight-range. -->
-	<!-- You must define a blank tag at the top of the list to handle all cases where the vehicle is fighting something "undefined", which is what common infantry might best fit under. -->
-    <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5" />
-    <target_factors tag="heavy_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0" />
-    <target_factors tag="apc" distance="1.0" direction="0.0" squad_command="1.0" base_score="6.0" />
-    <target_factors tag="light_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="5.0" />	
-    <target_factors tag="defensive_at" distance="1.0" direction="0.0" squad_command="1.0" base_score="5.5" />
-    <target_factors tag="tactical" distance="1.0" direction="0.0" squad_command="1.0" base_score="7.0" />  <!-- important non combat player-only vehicles -->  
-    <target_factors tag="bazooka" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.5" />
-    <target_factors tag="punchme" distance="1.0" direction="0.0" squad_command="1.0" base_score="30.0" />
-
-
-    <!-- <effect class="muzzle" ref="CannonSmokeBigSphere" />        -->
-    <!-- <effect class="muzzle" ref="BigMuzzle" /> -->
-
-    <!-- <sound class="operation" key="fire" fileref="apc_shot_1.wav" /> -->
-
-</weapon>
-<weapon key="typhoon_charged_laser3">
-    <specification 
+        <model filename="" />
+        <!-- <model mesh_filename="balloon.mesh" texture_filename="balloon.png" /> -->
+        <!-- <model filename="l30p.xml" /> -->
+        <hud_icon filename="typhoon_main_cannon.png" />
+        <commonness value="0.0" />
+        <sound key="fire" fileref="typhon_fire_FromHALO4.wav" pitch_variety="0.05" volume="3.5" />
+        <projectile file="typhoon_laser.projectile" pulldown_in_air="1.0" >
+            <result class="blast"  damage="30.5"  radius="8" decal="1" push="1.0" character_state="death" damage_origin_vehicle="0"	faction_compare="not_equal"/>
+            <trail probability="1.0" key="laser_tifeng" />
+            <sound class="result" key="other" fileref="explosion_Large_FromSQUAD_1.wav" volume="2.9" />
+            <sound class="result" key="other" fileref="explosion_Large_FromSQUAD_2.wav" volume="2.9" />
+            <sound class="result" key="terrain" copy="other" />
+            <sound class="result" key="static_object" copy="other" />
+            <sound class="result" key="vehicle" copy="other" />
+            <sound class="result" key="character" copy="other" />
+            <effect class="result" key="vehicle" tag="metal_heavy" ref="HitTank" lighting="1" />
+            <effect class="result" key="vehicle" tag="metal_heavy" ref="HitTankSparks" />
+            <effect class="result" key="vehicle" tag="metal_heavy" ref="SmokeBurst" post_processing="1" />
+            <effect class="result" key="vehicle" tag="metal_heavy" ref="BurstShine" lighting="0" />
+            <effect class="result" key="vehicle" tag="metal_heavy" ref="Godray" lighting="0" />
+            <effect class="result" key="terrain" ref="BigBurst" use_surface_color="1" />
+            <effect class="result" key="terrain" ref="SmokeTop" post_processing="1" />
+            <effect class="result" key="terrain" ref="Smoke" post_processing="1" />
+            <effect class="result" key="terrain" ref="Shine" lighting="0" />
+            <effect class="result" key="terrain" ref="Godray" lighting="0" />
+            <effect class="result" key="terrain" ref="ShadowSmoke" shadow="1" />
+            <effect class="result" key="terrain" ref="woosh" post_processing="0" shadow="0" />
+            <effect class="result" type="splat_map" surface_tag="" size="3.0" atlas_index="0" layer="1" />
+            <effect class="result" type="splat_map" surface_tag="" size="5.0" atlas_index="4" layer="0" />
+            <effect class="result" type="splat_map" surface_tag="" size="6.0" atlas_index="0" layer="2" additive="0" />
+            <!-- remove top snow everywhere -->
+            <effect class="result" key="static_object" copy="terrain" />
+            <effect class="result" key="vehicle" copy="terrain" />
+            <effect class="result" key="character" copy="terrain" />
+            <effect class="result" key="other" copy="terrain" />
+        </projectile>
+        <!-- Scoring for target priority. Distance is between 0 and 1 based on range; direction is between 0 and 1 based on whether its near the barrel; squad_command is between 0 and on based on how close to the player's command order is, and base_score is a weight.. -->
+        <!-- These all add together and the highest 'score' is the new target, targets are rescanned every 2.5 seconds to see if a new higher-score target is in sight-range. -->
+        <!-- You must define a blank tag at the top of the list to handle all cases where the vehicle is fighting something "undefined", which is what common infantry might best fit under. -->
+        <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5" />
+        <target_factors tag="heavy_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0" />
+        <target_factors tag="apc" distance="1.0" direction="0.0" squad_command="1.0" base_score="6.0" />
+        <target_factors tag="light_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="5.0" />
+        <target_factors tag="defensive_at" distance="1.0" direction="0.0" squad_command="1.0" base_score="5.5" />
+        <target_factors tag="tactical" distance="1.0" direction="0.0" squad_command="1.0" base_score="7.0" />
+        <!-- important non combat player-only vehicles -->
+        <target_factors tag="bazooka" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.5" />
+        <target_factors tag="punchme" distance="1.0" direction="0.0" squad_command="1.0" base_score="30.0" />
+        <!-- <effect class="muzzle" ref="CannonSmokeBigSphere" />        -->
+        <!-- <effect class="muzzle" ref="BigMuzzle" /> -->
+        <!-- <sound class="operation" key="fire" fileref="apc_shot_1.wav" /> -->
+    </weapon>
+    <weapon key="typhoon_charged_laser3">
+        <specification 
 	retrigger_time="6" 
     accuracy_factor="2.0" 
     sustained_fire_grow_step="0.0" 
@@ -280,63 +255,56 @@
     projectiles_per_shot="1" 
 	spread_range="0.0"
 	use_basic_muzzle_smoke_effect="0"/>
-    <model filename="" />
-
-    <!-- <model mesh_filename="balloon.mesh" texture_filename="balloon.png" /> -->
-	<!-- <model filename="l30p.xml" /> -->
-    <hud_icon filename="typhoon_main_cannon.png" />
-    <commonness value="0.0" />
-    <sound key="fire" fileref="typhon_fire_FromHALO4.wav" pitch_variety="0.05" volume="3.5" />
-    <projectile file="typhoon_laser.projectile" pulldown_in_air="2.0" >
-        <result class="blast"  damage="30.5"  radius="8" decal="1" push="1.0" character_state="death" damage_origin_vehicle="0"	faction_compare="not_equal"/>
-		<trail probability="1.0" key="laser_tifeng" />
-		<sound class="result" key="other" fileref="explosion_Large_FromSQUAD_1.wav" volume="2.9" />
-		<sound class="result" key="other" fileref="explosion_Large_FromSQUAD_2.wav" volume="2.9" />
-
-		<sound class="result" key="terrain" copy="other" />
-		<sound class="result" key="static_object" copy="other" />
-		<sound class="result" key="vehicle" copy="other" />
-		<sound class="result" key="character" copy="other" />
-
-		<effect class="result" key="vehicle" tag="metal_heavy" ref="HitTank" lighting="1" />
-		<effect class="result" key="vehicle" tag="metal_heavy" ref="HitTankSparks" />
-		<effect class="result" key="vehicle" tag="metal_heavy" ref="SmokeBurst" post_processing="1" />
-		<effect class="result" key="vehicle" tag="metal_heavy" ref="BurstShine" lighting="0" />
-		<effect class="result" key="vehicle" tag="metal_heavy" ref="Godray" lighting="0" />
-		<effect class="result" key="terrain" ref="BigBurst" use_surface_color="1" />
-		<effect class="result" key="terrain" ref="SmokeTop" post_processing="1" />
-		<effect class="result" key="terrain" ref="Smoke" post_processing="1" />
-		<effect class="result" key="terrain" ref="Shine" lighting="0" />
-		<effect class="result" key="terrain" ref="Godray" lighting="0" />
-		<effect class="result" key="terrain" ref="ShadowSmoke" shadow="1" />
-		<effect class="result" key="terrain" ref="woosh" post_processing="0" shadow="0" />
-		<effect class="result" type="splat_map" surface_tag="" size="3.0" atlas_index="0" layer="1" />
-		<effect class="result" type="splat_map" surface_tag="" size="5.0" atlas_index="4" layer="0" />
-		<effect class="result" type="splat_map" surface_tag="" size="6.0" atlas_index="0" layer="2" additive="0" />
-		<!-- remove top snow everywhere -->
-		<effect class="result" key="static_object" copy="terrain" />
-		<effect class="result" key="vehicle" copy="terrain" />
-		<effect class="result" key="character" copy="terrain" />
-		<effect class="result" key="other" copy="terrain" />
-    </projectile>
-    
-	<!-- Scoring for target priority. Distance is between 0 and 1 based on range; direction is between 0 and 1 based on whether its near the barrel; squad_command is between 0 and on based on how close to the player's command order is, and base_score is a weight.. -->
-	<!-- These all add together and the highest 'score' is the new target, targets are rescanned every 2.5 seconds to see if a new higher-score target is in sight-range. -->
-	<!-- You must define a blank tag at the top of the list to handle all cases where the vehicle is fighting something "undefined", which is what common infantry might best fit under. -->
-    <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5" />
-    <target_factors tag="heavy_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0" />
-    <target_factors tag="apc" distance="1.0" direction="0.0" squad_command="1.0" base_score="6.0" />
-    <target_factors tag="light_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="5.0" />	
-    <target_factors tag="defensive_at" distance="1.0" direction="0.0" squad_command="1.0" base_score="5.5" />
-    <target_factors tag="tactical" distance="1.0" direction="0.0" squad_command="1.0" base_score="7.0" />  <!-- important non combat player-only vehicles -->  
-    <target_factors tag="bazooka" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.5" />
-    <target_factors tag="punchme" distance="1.0" direction="0.0" squad_command="1.0" base_score="30.0" />
-
-
-    <!-- <effect class="muzzle" ref="CannonSmokeBigSphere" />        -->
-    <!-- <effect class="muzzle" ref="BigMuzzle" /> -->
-
-    <!-- <sound class="operation" key="fire" fileref="apc_shot_1.wav" /> -->
-
-</weapon>
+        <model filename="" />
+        <!-- <model mesh_filename="balloon.mesh" texture_filename="balloon.png" /> -->
+        <!-- <model filename="l30p.xml" /> -->
+        <hud_icon filename="typhoon_main_cannon.png" />
+        <commonness value="0.0" />
+        <sound key="fire" fileref="typhon_fire_FromHALO4.wav" pitch_variety="0.05" volume="3.5" />
+        <projectile file="typhoon_laser.projectile" pulldown_in_air="2.0" >
+            <result class="blast"  damage="30.5"  radius="8" decal="1" push="1.0" character_state="death" damage_origin_vehicle="0"	faction_compare="not_equal"/>
+            <trail probability="1.0" key="laser_tifeng" />
+            <sound class="result" key="other" fileref="explosion_Large_FromSQUAD_1.wav" volume="2.9" />
+            <sound class="result" key="other" fileref="explosion_Large_FromSQUAD_2.wav" volume="2.9" />
+            <sound class="result" key="terrain" copy="other" />
+            <sound class="result" key="static_object" copy="other" />
+            <sound class="result" key="vehicle" copy="other" />
+            <sound class="result" key="character" copy="other" />
+            <effect class="result" key="vehicle" tag="metal_heavy" ref="HitTank" lighting="1" />
+            <effect class="result" key="vehicle" tag="metal_heavy" ref="HitTankSparks" />
+            <effect class="result" key="vehicle" tag="metal_heavy" ref="SmokeBurst" post_processing="1" />
+            <effect class="result" key="vehicle" tag="metal_heavy" ref="BurstShine" lighting="0" />
+            <effect class="result" key="vehicle" tag="metal_heavy" ref="Godray" lighting="0" />
+            <effect class="result" key="terrain" ref="BigBurst" use_surface_color="1" />
+            <effect class="result" key="terrain" ref="SmokeTop" post_processing="1" />
+            <effect class="result" key="terrain" ref="Smoke" post_processing="1" />
+            <effect class="result" key="terrain" ref="Shine" lighting="0" />
+            <effect class="result" key="terrain" ref="Godray" lighting="0" />
+            <effect class="result" key="terrain" ref="ShadowSmoke" shadow="1" />
+            <effect class="result" key="terrain" ref="woosh" post_processing="0" shadow="0" />
+            <effect class="result" type="splat_map" surface_tag="" size="3.0" atlas_index="0" layer="1" />
+            <effect class="result" type="splat_map" surface_tag="" size="5.0" atlas_index="4" layer="0" />
+            <effect class="result" type="splat_map" surface_tag="" size="6.0" atlas_index="0" layer="2" additive="0" />
+            <!-- remove top snow everywhere -->
+            <effect class="result" key="static_object" copy="terrain" />
+            <effect class="result" key="vehicle" copy="terrain" />
+            <effect class="result" key="character" copy="terrain" />
+            <effect class="result" key="other" copy="terrain" />
+        </projectile>
+        <!-- Scoring for target priority. Distance is between 0 and 1 based on range; direction is between 0 and 1 based on whether its near the barrel; squad_command is between 0 and on based on how close to the player's command order is, and base_score is a weight.. -->
+        <!-- These all add together and the highest 'score' is the new target, targets are rescanned every 2.5 seconds to see if a new higher-score target is in sight-range. -->
+        <!-- You must define a blank tag at the top of the list to handle all cases where the vehicle is fighting something "undefined", which is what common infantry might best fit under. -->
+        <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5" />
+        <target_factors tag="heavy_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0" />
+        <target_factors tag="apc" distance="1.0" direction="0.0" squad_command="1.0" base_score="6.0" />
+        <target_factors tag="light_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="5.0" />
+        <target_factors tag="defensive_at" distance="1.0" direction="0.0" squad_command="1.0" base_score="5.5" />
+        <target_factors tag="tactical" distance="1.0" direction="0.0" squad_command="1.0" base_score="7.0" />
+        <!-- important non combat player-only vehicles -->
+        <target_factors tag="bazooka" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.5" />
+        <target_factors tag="punchme" distance="1.0" direction="0.0" squad_command="1.0" base_score="30.0" />
+        <!-- <effect class="muzzle" ref="CannonSmokeBigSphere" />        -->
+        <!-- <effect class="muzzle" ref="BigMuzzle" /> -->
+        <!-- <sound class="operation" key="fire" fileref="apc_shot_1.wav" /> -->
+    </weapon>
 </weapons>
