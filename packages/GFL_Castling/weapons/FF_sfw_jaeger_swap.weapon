@@ -2,28 +2,29 @@
 <weapon file="gk_sf_boss.base_weapon" key="ff_jaeger_swap.weapon">
 	<tag name="rifle"/>
 	<specification 
-	retrigger_time="2.0" 
+	retrigger_time="-1" 
 	accuracy_factor="1.0" 
 	sustained_fire_grow_step="3.0" 
 	sustained_fire_diminish_rate="0.55" 
-	magazine_size="4" 
+	magazine_size="10" 
 	can_shoot_standing="0" 
 	suppressed="0" 
 	name="GK-Jaeger SWAP" 
-	class="4" 
+	class="2" 
 	reload_one_at_a_time="0" 
-	sight_range_modifier="1.0" 
+	sight_range_modifier="3.0" 
 	projectile_speed="300.0" 
 	barrel_offset="0.65" 
 	projectiles_per_shot="1" 
 	burst_shots="1"/>
 	  
-    <animation key="recoil" ref="27" />
+    <animation key="recoil" animation_key="recoil1, big" />
 	<animation key="recoil" stance_key="prone" animation_key="recoil1, big, prone" />
-    <animation key="cycle" ref="30" />
-	<animation key="cycle" stance_key="prone" animation_key="bolt cycle, prone" />	
+    <animation key="cycle" animation_key="Brifle1" />
+	<animation key="cycle" stance_key="prone" animation_key="Brifle1p" />	
     <animation state_key="reload" animation_key="reloading, dragunov_svd" />
 	<animation key="reload" stance_key="prone" animation_key="reloading, sniper1, prone" />
+	<inventory buy_price="500.0" sell_price="500.0" />	
 
     <sound key="fire" fileref="Gauss_fire_FromBORDERLAND3.wav" pitch_variety="0.03" volume="2.5" />
     <sound key="cycle" fileref="sniper_cycle.wav" />
@@ -34,15 +35,13 @@
     <sound class="impact" fileref="rifle_drop.wav" />
 
     <model filename="sfw_jaeger_swap_from_dusk.xml" />
-    <hud_icon filename="sfw_jaeger.png" />
+    <hud_icon filename="sfw_jaeger_swap.png" />
 	<capacity value="0" source="rank" source_value="0.0" />
-    <capacity value="1" source="rank" source_value="3.058" />
-
-
+    <capacity value="1" source="rank" source_value="6.48" />
 
     <weak_hand_hold offset="0.3" />
     <projectile file="bullet_sf.projectile">
-        <result class="hit"  kill_probability="2.5" kill_probability_offset_on_successful_hit="3.0" kill_decay_start_time="0.8" kill_decay_end_time="0.9" />
+		<result class="blast" radius="4" damage="8.0" decal="1" push="0.25" character_state="death" faction_compare="not_equal"/>
 		<trail probability="1.0" key="sf_long" />
     </projectile>
  
