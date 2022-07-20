@@ -2,19 +2,19 @@
 <weapon file="heavy_mg.animation_base" key="gkw_m249saw.weapon">
     <specification 
     barrel_offset="0.5" 
-    retrigger_time="0.0667" 
+    retrigger_time="0.06" 
     accuracy_factor="0.98" 
-    sustained_fire_grow_step="0.35" 
+    sustained_fire_grow_step="0.2" 
     sustained_fire_diminish_rate="1.5" 
-    magazine_size="200" 
+    magazine_size="500" 
     suppressed="0" 
     name="M249 SAW" 
     class="0" 
-    projectile_speed="195" 
+    projectile_speed="260" 
     sight_range_modifier="1.5"/>
-    <animation key="reload" animation_key="reloading, Machine gun 2.8" />
-    <inventory  buy_price="16.0" sell_price="16.0" />
-    <sound key="fire" fileref="m249_fire_FromCOD16.wav" pitch_variety="0.05" volume="0.9" />
+    <animation key="reload" animation_key="reloading, Machine gun 4" />
+    <inventory buy_price="49.0" sell_price="49.0" />
+    <sound key="fire" fileref="m249_fire_FromCOD16.wav" pitch_variety="0.05" volume="0.8" />
     <sound key="magazine_out" fileref="m249_mgz_out_FromSQUAD.wav" volume="0.8" />
     <sound key="magazine_in" fileref="m249_mgz_in_FromSQUAD.wav" volume="0.8" />
     <sound key="cycle" fileref="m249_cycle_FromSQUAD.wav" volume="0.8" />
@@ -22,14 +22,15 @@
     <model filename="gkw_mg_m249.xml" />
     <hud_icon filename="gkw_m249.png" />
     <projectile file="bullet.projectile">
-        <result class="hit" kill_probability="1.5" kill_decay_start_time="1.967" kill_decay_end_time="3.279" />
+        <result class="hit" kill_probability="2.1" kill_decay_start_time="1.967" kill_decay_end_time="3.279" />
     </projectile>
     <effect class="muzzle" ref="ejection_76251" />
     <stance state_key="running" accuracy="0.6" />
-    <stance state_key="crouch_moving" accuracy="0.6" />
-    <stance state_key="prone_moving" accuracy="0.6" />
-    <stance state_key="standing" accuracy="0.6" />
-    <stance state_key="crouching" accuracy="0.8" />
+    <stance state_key="walking" accuracy="0.75" />
+    <stance state_key="crouch_moving" accuracy="0.8" />
+    <stance state_key="prone_moving" accuracy="0.8" />
+    <stance state_key="standing" accuracy="0.8" />
+    <stance state_key="crouching" accuracy="0.95" />
     <stance state_key="prone" accuracy="1" />
     <stance state_key="over_wall" accuracy="1" />
 </weapon>
