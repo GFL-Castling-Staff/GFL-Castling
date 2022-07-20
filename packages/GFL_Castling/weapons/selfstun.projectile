@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projectile class="grenade" name="selfstun_trigger" key="selfstun.projectile" slot="0" radius="0.15" time_to_live_out_in_the_open="0.0" drop_count_factor_on_death="0.0" can_be_detected_by_driver="0" can_be_detected_by_footmen="0">
-    <result class="blast" radius="1.0" damage="0.0" decal="0" push="0.0" character_state="stun" make_vehicle_hit_sound="0" />
-    <trigger class="time" time_to_live="0.01"/>
+    <result class="blast" radius="2.0" damage="0.0" decal="0" push="0.0" character_state="stun" make_vehicle_hit_sound="0" />
+    <trigger class="time" time_to_live="0.0"/>
     <rotation class="random" />
     <model />
     <hud_icon filename="testing.png" />
-    <throwable near_far_distance="100.0" speed_estimation_near="10.0" speed_estimation_far="10.0" max_speed="10.0" randomness="0.0" />
+    <throwable near_far_distance="10.0" speed_estimation_near="10.0" speed_estimation_far="10.0" max_speed="10.0" randomness="0.0" />
     <commonness value="10.0" />
-    <capacity value="100" source="rank" source_value="0.0" />
+    <capacity value="1000" source="rank" source_value="0.0" />
     <inventory encumbrance="0.0" price="0.0" />
 </projectile>

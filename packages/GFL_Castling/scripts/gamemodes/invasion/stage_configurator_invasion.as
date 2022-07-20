@@ -249,8 +249,6 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.m_playerAiCompensation = 8;                                         // was 4 (1.82)
         stage.m_playerAiReduction = 0;                                          // was 2 (test3)    
 
-		stage.m_finalBattle = true;
-
 		stage.m_minRandomCrates = 1; 
 		stage.m_maxRandomCrates = 3;
 

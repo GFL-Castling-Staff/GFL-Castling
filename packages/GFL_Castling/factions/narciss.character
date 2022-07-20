@@ -1,4 +1,8 @@
 <character filename="paradeus_nyto.text_lines">
-    <parameter class="being_stunned_steer_amount" value="-0.6" />
+    <parameter class="being_stunned_steer_amount" value="-0.75" />
 	<animation key="stunned" target_key="rush, stun leap" />
+    <parameter class="can_use_vehicles" value="0" /> 
+	<parameter class="walking_steer_amount" value="0.63" />
+	<parameter class="running_steer_amount" value="0.63" />
+    <animation key="throwing, upside" target_key="leaping_throw_ninja" />
 </character>
