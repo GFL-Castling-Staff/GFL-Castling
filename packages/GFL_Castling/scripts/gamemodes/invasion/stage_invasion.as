@@ -124,7 +124,7 @@ class Stage {
 		m_kothTargetBase = "center base";
 		m_radioObjectivePresent = true;
 		m_allowChangeCapacityOnTheFly = true;
-		m_showMapAtStartIfDead = true;
+		m_showMapAtStartIfDead = false;
 
 		m_includeLayers.insertLast("bases.default");
 		m_includeLayers.insertLast("layer1.default");
