@@ -64,7 +64,5 @@
 	<animation key="celebrating, shooting" target_key="jump_big_unit" />
 	<animation key="swimming still" target_key="swim still_big_unit" />
 	<animation key="swimming forwards" target_key="swimming_big_unit" />
-	
-    <effect class="blood" ref="BloodSplat" />
-    <effect class="blood" type="splat_map" size="2.0" atlas_index="3" layer="3" additive="1" apply_gore_factor="1" />
+
 </character>
