@@ -48,8 +48,10 @@
 	<parameter class="run_limit_margin" value="2.0" />
 	<parameter class="run_limit" value="6.0" />
 	<parameter class="throw_grenade_time_interval_max" value="30.0" />
-	<parameter class="throw_grenade_time_interval_min" value="5.0" />
-	<parameter class="max_distance_to_throw_grenade" value="35.0" />
+	<parameter class="throw_grenade_time_interval_min" value="20.0" />
+	<parameter class="max_distance_to_throw_grenade" value="10.0" />
+	<parameter class="min_distance_to_throw_grenade" value="0.0" />
+	<parameter class="min_number_of_enemies_to_throw_grenade" value="1.0" />
 	<parameter class="vehicle_target_aim_time" value="1.0" />
 	<parameter class="guard_range_from_leader_margin" value="15.0" />
 	<parameter class="guard_range_from_leader_step" value="30.0" />
@@ -91,7 +93,7 @@
 	<parameter class="deployment_max_position_pick_attempts" value="2" />
 	<parameter class="fighting_approach_alarm_max_soldiers" value="12" /> 
 	<parameter class="accuracy_offset" value="-0.05" /> 
-	<parameter class="grenade_throw_hold_time" value="0.5" />
+	<parameter class="grenade_throw_hold_time" value="0.0" />
 	<parameter class="using_cover_min_time" value="0.0" />
 	<parameter class="using_cover_max_time" value="0.0" />
 	<parameter class="fire_open_min_time" value="8.0" />
@@ -102,5 +104,4 @@
 	<parameter class="uses_vehicles" value="0" />
 	<parameter class="stab_range" value="0.0" />
 	<parameter class="willingness_to_charge" value="1" />
-
 </ai>

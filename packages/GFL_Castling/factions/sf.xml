@@ -598,6 +598,7 @@
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="sfw_dragoon.weapon" enabled="1"/>
 			<carry_item key="sf_dragoon.carry_item" enabled="1"/>
+			<projectile key="selfstun.projectile" enabled="1" probability="1.0" />
 		</resources>
 		<item_class_existence_config>
 			<!-- wearables -->
@@ -614,6 +615,7 @@
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="sfw_dragoon_swap.weapon" enabled="1"/>
 			<carry_item key="sf_dragoon.carry_item" enabled="1"/>
+			<projectile key="selfstun.projectile" enabled="1" probability="1.0" />
 		</resources>
 		<item_class_existence_config>
 			<!-- wearables -->
