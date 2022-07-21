@@ -10,7 +10,7 @@
 #include "GFLhelpers.as"
 #include "kill_event.as"
 //Interface Author: NetherCrow
-//Contributor: Saiwa K309 Lappland
+//Contributor: SAIWA K309 Lappland
 
 array<SkillTrigger@> SkillArray;
 array<kill_count@> KillCountArray;

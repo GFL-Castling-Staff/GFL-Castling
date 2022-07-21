@@ -288,7 +288,7 @@ int getAmosPosition(Metagame@ metagame, uint ownerid, Vector3 judgePos, float ra
 					int vehicleid = vehicles[i].getIntAttribute("id");
 					const XmlElement@ vehicleInfo = getVehicleInfo(metagame, vehicleid);
 					if(vehicleInfo !is null)  //AMOS存在
-						if(vehicleInfo.getStringAttribute("key") == "armored_truck.vehicle")
+						if(vehicleInfo.getStringAttribute("key") == "armored_truck.vehicle" || vehicleInfo.getStringAttribute("key") == "ogas_pulse_generator.vehicle")
 							return vehicleid;
 				}
 			}
