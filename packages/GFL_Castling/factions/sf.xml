@@ -519,7 +519,7 @@
 	<!-- striker -->
 	<soldier name="sf_striker" spawn_score="2.0" copy_from="default_spawn_ai">
 		<model filename="sfd_striker.xml" />
-		<ai filename="elite.ai" />
+		<ai filename="eod_mg.ai" />
 		<resources clear_weapons="1" clear_calls="1">
 			<weapon key="sfw_striker.weapon" enabled="1"/>
 			<carry_item key="sf_ar.carry_item" enabled="1" />
@@ -527,7 +527,7 @@
 		</resources>
 	</soldier>
 	<soldier name="sf_striker_swap" spawn_score="1.0" copy_from="default_spawn_ai">
-		<ai filename="eod.ai" />
+		<ai filename="eod_mg.ai" />
 		<model filename="sfd_striker_swap_from_dusk.xml" />
 		<resources clear_weapons="1" clear_calls="1">
 			<weapon key="sfw_striker_swap.weapon" enabled="1"/>

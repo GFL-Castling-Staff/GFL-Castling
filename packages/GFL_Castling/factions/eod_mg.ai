@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ai filename="eod.ai">
+  <parameter class="burst_time" value="4.0" />
+  <parameter class="burst_time_variance" value="0.5" />
+  <parameter class="longer_burst_time" value="4.0" />
+  <parameter class="longer_burst_time_variance" value="0.5" />
+  <parameter class="choose_enemy_time" value="0.5" />
+
+	<parameter class="fighting_melee_move_radius" value="3.0" />
+	<parameter class="fighting_regular_move_radius" value="30.0" />
+</ai>
