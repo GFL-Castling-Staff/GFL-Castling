@@ -15,7 +15,7 @@
 	  name="SF-Dragoon SWAP" 
 	  class="0" 
 	  sight_range_modifier="1.0" 
-	  projectile_speed="150.0" 
+	  projectile_speed="75.0" 
 	  carry_in_two_hands="0" 
 	  stab_enabled="0"/>
 
@@ -48,7 +48,7 @@
 
     <weak_hand_hold offset="0.2" />
 	<projectile file="bullet_sf.projectile">
-        <result class="hit"  kill_probability="1.6" kill_decay_start_time="0.15" kill_decay_end_time="0.15" />
+        <result class="hit"  kill_probability="1.6" kill_decay_start_time="0.3" kill_decay_end_time="0.3" />
     </projectile>
     
     <stance state_key="running" accuracy="0.6" />

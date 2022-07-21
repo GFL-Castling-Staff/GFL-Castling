@@ -12,7 +12,7 @@ material bullet_new
       ambient 1 1 1 1
       diffuse 1 1 1 1
       emissive 0.7 0.7 0 1
-      scene_blend add
+      scene_blend alpha_blend
 
       texture_unit {
         texture bullet_new_trail.png
