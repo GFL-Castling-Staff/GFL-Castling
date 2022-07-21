@@ -1,42 +1,25 @@
 material bullet_new
+{
+  receive_shadows off
+  technique
   {
-    receive_shadows off
-    technique
+    pass
     {
-      pass
-      {
-	// drawn when hidden behind something
-        depth_write off
-        depth_check on
-	depth_func greater
+      fog_override false
+      depth_write off
 
-        lighting on
-        ambient 0.5 0.5 0.5 0.5
-        diffuse 0.5 0.5 0.5 0.5
-        scene_blend alpha_blend
+      lighting on
+      ambient 1 1 1 1
+      diffuse 1 1 1 1
+      emissive 0.7 0.7 0 1
+      scene_blend add
 
-	// fog_override true
-	//alpha_rejection greater 128
-        
-        texture_unit {
-          texture bullet_new_trail.png
-        }
-      } 
-  
-      pass
-      {
-        lighting off
-        ambient vertexcolour
-        diffuse vertexcolour
-        depth_write off
-        scene_blend alpha_blend
-
-	texture_unit {
-          texture bullet_new_trail.png
-        }
-      } 
-    }
+      texture_unit {
+        texture bullet_new_trail.png
+      }
+    } 
   }
+}
   
 material laser_hyz {
 	receive_shadows off
@@ -184,45 +167,26 @@ material laser_thor {
 	}
 }
 
-material red
+material red{
+  receive_shadows off
+  technique
   {
-    receive_shadows off
-    technique
+    pass
     {
-      pass
-      {
-	// drawn when hidden behind something
-        depth_write off
-        depth_check on
-	depth_func greater
+      fog_override false
+      depth_write off
 
-        lighting on
-        ambient 0.5 0.5 0.5 0.5
-        diffuse 0.5 0.5 0.5 0.5
-        scene_blend alpha_blend
-
-	// fog_override true
-	//alpha_rejection greater 128
-        
-        texture_unit {
-          texture bullet_red.png
-        }
-      } 
-  
-      pass
-      {
-        lighting off
-        ambient vertexcolour
-        diffuse vertexcolour
-        depth_write off
-        scene_blend alpha_blend
-
-	texture_unit {
-          texture bullet_red.png
-        }
-      } 
+      lighting off
+      scene_blend add
+      ambient 0.5 0.5 0.5 0.5
+      diffuse 0.5 0.5 0.5 0.5
+      texture_unit {
+        texture bullet_red.png
+      }
     }
-  }
+  } 
+}
+
   material green
   {
     receive_shadows off
