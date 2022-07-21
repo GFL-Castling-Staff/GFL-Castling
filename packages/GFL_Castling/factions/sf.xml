@@ -574,11 +574,19 @@
 		</resources>
 	</soldier>
 	<!-- 圣盾 -->
-	<soldier name="sfw_aegis" spawn_score="1.0" copy_from="default_spawn_ai">
+	<soldier name="sfw_aegis" spawn_score="0.6" copy_from="default_spawn_ai">
 		<model filename="sfd_aegis_1.xml" />
 		<ai filename="shield.ai" />
 		<resources clear_weapons="1" clear_calls="1" clear_grenades="1">
 			<weapon key="sfw_aegis.weapon" enabled="1"/>
+			<carry_item key="kcco_ga.carry_item" enabled="1" />
+		</resources>
+	</soldier>
+	<soldier name="sfw_aegis_swap" spawn_score="0.3" copy_from="default_spawn_ai">
+		<model filename="sfd_aegis_swap.xml" />
+		<ai filename="shield.ai" />
+		<resources clear_weapons="1" clear_calls="1" clear_grenades="1">
+			<weapon key="sfw_aegis_swap.weapon" enabled="1"/>
 			<carry_item key="kcco_ga.carry_item" enabled="1" />
 		</resources>
 	</soldier>
