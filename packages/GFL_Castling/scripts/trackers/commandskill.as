@@ -269,6 +269,17 @@ dictionary commandSkillIndex = {
         //sat8
         {"gkw_sat8.weapon",35},
         {"gkw_sat8_1802.weapon",35},
+
+        // HK416MOD3
+        {"gkw_hk416mod3.weapon",36},
+        {"gkw_hk416mod3_skill.weapon",36},
+        {"gkw_hk416_537_mod3.weapon",36},
+        {"gkw_hk416_537_mod3_skill.weapon",36},
+        {"gkw_hk416_3401_mod3.weapon",37},
+        {"gkw_hk416_3401_mod3_skill.weapon",37},
+        {"gkw_hk416_6505_mod3.weapon",36},
+        {"gkw_hk416_6505_mod3_skill.weapon",36},
+
         // 下面这行是用来占位的，在这之上添加新的枪和index即可
         {"666",-1}
 };
@@ -368,6 +379,8 @@ class CommandSkill : Tracker {
                     case 33:{excuteMG4MOD3skill(cId,senderId,m_modifer);break;}
                     case 34:{excuteLiuRFskill(cId,senderId,m_modifer);break;}
                     case 35:{excuteSAT8skill(cId,senderId,m_modifer);break;}
+                    case 36:{excuteHK416mod3skill(cId,senderId,m_modifer);break;}
+                    case 37:{excuteHK416mod3skill(cId,senderId,m_modifer,true);break;}
 
                     default:
                         break;
@@ -1887,6 +1900,64 @@ class CommandSkill : Tracker {
                         CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"SopmodSk_script.projectile",characterId,factionid,45.0,6.0);
                     }
                     addCoolDown("m4sopmodiimod3",15,characterId,modifer);
+                }
+            }
+        }
+    }
+    void excuteHK416mod3skill(int characterId,int playerId,SkillModifer@ modifer,bool pussyskin = false){
+        bool ExistQueue = false;
+        int j=-1;
+        for (uint i=0;i<SkillArray.length();i++){
+            if (InCooldown(characterId,modifer,SkillArray[i]) && SkillArray[i].m_weapontype=="HK416MOD3") {
+                ExistQueue=true;
+                j=i;
+            }
+        }
+        if (ExistQueue){
+            dictionary a;
+            a["%time"] = ""+SkillArray[j].m_time;
+            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            _log("skill cooldown" + SkillArray[j].m_time);
+            return;
+        }
+        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+        if (character !is null) {
+            const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+            if (player !is null){
+                if (player.hasAttribute("aim_target")) {
+                    string target = player.getStringAttribute("aim_target");
+                    Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
+                    int factionid = character.getIntAttribute("faction_id");
+                    c_pos=c_pos.add(Vector3(0,1,0));
+                    if(pussyskin){
+                        if (checkFlatRange(c_pos,stringToVector3(target),15)){
+                            CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"40mm_hk416_3401.projectile",characterId,factionid,30);
+                        }
+                        else{
+                            CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"40mm_hk416_3401.projectile",characterId,factionid,45.0,6.0);
+                        }
+                        array<string> Voice={
+                        "HK416_Skill4.wav",
+                        "HK416_Skill5.wav",
+                        "HK416_Skill6.wav"
+                        };
+                        playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+                    }
+                    else{
+                        if (checkFlatRange(c_pos,stringToVector3(target),15)){
+                            CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"40mm_hk416.projectile",characterId,factionid,30);
+                        }
+                        else{
+                            CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"40mm_hk416.projectile",characterId,factionid,45.0,6.0);
+                        }
+                        array<string> Voice={
+                        "HK416_Skill1.wav",
+                        "HK416_Skill2.wav",
+                        "HK416_Skill3.wav"
+                        };
+                        playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+                    }
+                    addCoolDown("HK416MOD3",16,characterId,modifer);
                 }
             }
         }
