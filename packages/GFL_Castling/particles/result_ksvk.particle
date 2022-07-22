@@ -49,7 +49,7 @@ particle_system result_ksvk
 	}
 }
 material ksvk {
-        receive_shadows off
+    receive_shadows off
 	technique {
 		pass {
 			lighting off
