@@ -1,0 +1,106 @@
+
+
+material common_shine
+{
+    receive_shadows off
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend add
+
+			depth_write off
+			fog_override true
+
+			texture_unit 
+			{
+				texture ct_light.png
+			}
+		}
+	}
+}
+
+
+material common_smoke
+{
+    receive_shadows off
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+
+			depth_write off
+			fog_override false
+
+			texture_unit 
+			{
+				texture ct_common_smoke.png
+			}
+		}
+	}
+}
+
+material common_smoke2
+{
+    receive_shadows off
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+
+			depth_write off
+			fog_override false
+
+			texture_unit 
+			{
+				texture ct_common_smoke2.png
+			}
+		}
+	}
+}
+
+material common_smoke3
+{
+    receive_shadows off
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend alpha_blend
+
+			depth_write off
+			fog_override false
+
+			texture_unit 
+			{
+				texture ct_common_smoke3.png
+			}
+		}
+	}
+}
+
+material common_point_sprite
+{
+    receive_shadows off
+    technique
+    {
+        pass
+        {
+            lighting off
+            scene_blend alpha_blend
+            depth_write off
+            fog_override false
+            
+            texture_unit
+            {
+                texture ct_common_point.png
+            }
+        }
+    }
+}

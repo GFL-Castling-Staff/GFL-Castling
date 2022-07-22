@@ -75,7 +75,7 @@ material hit
 
 particle_system hitMetal
 {
-	quota 50
+	quota 100
 	material FlareSparkle
 	particle_width 0.15
 	particle_height 0.15
@@ -86,7 +86,7 @@ particle_system hitMetal
 	{
 		angle 45
 		position 0.0 0.0 0.0
-		colour 0.976 0.529 0 4
+		colour 0.976 0.529 0 1
 		direction	0 0 0
 		emission_rate	500
 		velocity_min	5
@@ -114,7 +114,7 @@ particle_system hitMetal
 
 particle_system hitMetal_1
 {
-	quota 50
+	quota 100
 	material FlareSparkle
 	particle_width 0.15
 	particle_height 0.15
