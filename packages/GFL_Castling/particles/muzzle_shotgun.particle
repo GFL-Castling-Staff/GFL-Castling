@@ -1,0 +1,49 @@
+
+particle_system muzzle_sg
+{
+	quota	100
+	material	flame_sg
+	particle_width	2.0
+	particle_height	3.0
+	cull_each	false
+	renderer	billboard
+	billboard_type	oriented_self
+	common_direction	0 -1 0
+
+	emitter Box
+	{
+		angle	1
+		colour	1 1 1 1
+		colour_range_start	1 1 1 1
+		colour_range_end	1 1 1 1
+		direction	0 1 0
+		emission_rate	40
+		position	0 0 0
+		velocity	0
+		velocity_min	1
+		velocity_max	1
+		time_to_live	0.1
+		duration	0.05
+		width	0.25
+		height	0.25
+		depth	0.2
+	}
+
+
+}
+material flame_sg {
+    receive_shadows off
+	technique {
+		pass {
+			lighting off
+			depth_write off
+			scene_blend add
+			fog_override true
+
+			texture_unit {
+				texture ct_shotgun.png
+			}
+		}
+	}
+}
+
