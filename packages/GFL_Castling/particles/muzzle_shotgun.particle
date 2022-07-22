@@ -3,8 +3,8 @@ particle_system muzzle_sg
 {
 	quota	100
 	material	flame_sg
-	particle_width	2.0
-	particle_height	3.0
+	particle_width	0.5
+	particle_height	1.0
 	cull_each	false
 	renderer	billboard
 	billboard_type	oriented_self
@@ -17,7 +17,7 @@ particle_system muzzle_sg
 		colour_range_start	1 1 1 1
 		colour_range_end	1 1 1 1
 		direction	0 1 0
-		emission_rate	40
+		emission_rate	20
 		position	0 0 0
 		velocity	0
 		velocity_min	1

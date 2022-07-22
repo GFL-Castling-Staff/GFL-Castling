@@ -152,7 +152,7 @@ particle_system hitMetal_1
 
 particle_system hitGround
 {
-	quota 50
+	quota 1000
 	material Piece
 	particle_width 0.1
 	particle_height 0.11

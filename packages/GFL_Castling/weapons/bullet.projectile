@@ -62,10 +62,19 @@
     <sound class="result" key="static_object" copy="terrain" />
     
     <effect class="result" key="terrain" ref="hitGround" use_surface_color="1" />
+    <effect class="result" key="terrain" ref="BulletImpactDust1" />
+    <effect class="result" key="terrain" ref="BulletImpactDust2" />
+    <effect class="result" key="terrain" ref="BulletImpactDust3" />
 
     <effect class="result" key="vehicle" ref="Burst" use_surface_color="1" />
     <effect class="result" key="vehicle" ref="hitMetal" />
     <effect class="result" key="vehicle" ref="hitMetal_1" />
+
+    <effect class="result" key="other" ref="BulletImpact" />
+    <effect class="result" key="vehicle" ref="BulletImpact" />
+    <effect class="result" key="terrain" ref="BulletImpact" />
+    <effect class="result" key="character" ref="BulletImpact" />
+    <effect class="result" key="shield" ref="BulletImpact" />
 
     <effect class="result" key="static_object" copy="terrain" />
 
