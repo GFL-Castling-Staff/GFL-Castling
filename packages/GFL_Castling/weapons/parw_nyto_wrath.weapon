@@ -40,7 +40,7 @@
     <stance state_key="prone_moving" accuracy="1" />
     <stance state_key="over_wall" accuracy="1" />
 
-    <hud_icon filename="parw_nyto_white.png" />
+    <hud_icon filename="parw_nytoblackhammer.png" />
     <drop_on_death_result class="spawn" instance_class="carry_item" instance_key="wild_gifts.carry_item" min_amount="1" max_amount="2" offset="0 1.0 0" position_spread="0 0" direction_spread="0 0" />
     <effect class="muzzle" ref="sawsnone" />
 
