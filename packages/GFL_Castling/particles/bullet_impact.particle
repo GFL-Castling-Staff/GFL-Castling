@@ -180,8 +180,8 @@ particle_system Bullet_Burnout
 {
     quota 400
     material Piece
-    particle_width 0.1
-    particle_height	0.1
+    particle_width 0.2
+    particle_height	0.2
     renderer billboard
 	billboard_rotation_type vertex
     billboard_type perpendicular_self
@@ -200,7 +200,7 @@ particle_system Bullet_Burnout
     }
 
     affector ColourImage{
-        image color_blank.png
+        image bullet_burnout.png
     }
     
 	affector ColourFader

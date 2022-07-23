@@ -67,14 +67,17 @@
     <effect class="result" key="vehicle" ref="Laser_ImpactBeam_Blue" />
 
     <effect class="result" key="terrain" ref="Laser_Burnout"/>
-    <effect class="result" key="static_object" ref="Laser_Burnout"/>
+    <effect class="result" key="static_object" ref="Laser_Burnout_on_staticobject"/>
     <effect class="result" key="terrain" ref="Laser_ImpackSmoke"/>
     <effect class="result" key="static_object" ref="Laser_ImpackSmoke"/>
 
     <effect class="result" key="terrain" ref="Laser_ImpackShine"/>
     <effect class="result" key="static_object" ref="Laser_ImpackShine"/>
 
-
+    <effect class="result" key="other" ref="LaserImpact_Blue" />
+    <effect class="result" key="terrain" ref="LaserImpact_Blue" />
+    <effect class="result" key="character" ref="LaserImpact_Blue" />
+    <effect class="result" key="static_object" ref="LaserImpact_Blue"/>
 
     <trail probability="1.0" key="bluepara" />
 

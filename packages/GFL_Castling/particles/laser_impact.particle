@@ -82,6 +82,46 @@ particle_system Laser_Burnout
     }      
 }
 
+particle_system Laser_Burnout_on_staticobject
+{
+    quota 400
+    material LaserBurnOut
+    particle_width 0.2
+    particle_height	0.2
+    renderer billboard
+	billboard_type	point
+	common_direction 0 -1 0
+
+    emitter Point
+    {
+        angle 0
+        position 0 0.2 0
+        direction 0 1 0
+        velocity 0.01
+        time_to_live 5.0
+        duration 0.05
+        emission_rate 21
+    }
+
+    affector ColourImage{
+        image color_blank.png
+    }
+    
+	affector ColourFader
+	{
+		red 	0
+		green	0
+		blue	0
+		alpha	-0.6
+	}
+
+    affector Rotator
+    {
+        rotation_range_start 0
+        rotation_range_end 360
+    }        
+}
+
 particle_system Laser_ImpackShine
 {
 	quota 400
@@ -111,7 +151,6 @@ particle_system Laser_ImpackShine
 		blue	0
 		alpha	-2
 	}
-
 }
 
 particle_system Laser_ImpackSmoke
@@ -296,4 +335,84 @@ particle_system Laser_ImpackShine_Blue
 		alpha	-2
 	}
 
+}
+
+particle_system LaserImpact_Blue
+{
+	quota	500
+	material	impactShine_Blue
+	particle_width	0.5
+	particle_height	0.5
+	cull_each	false
+	renderer	billboard
+	billboard_type	point
+	common_direction 0 -1 0
+
+    emitter Point
+    {
+        angle 0
+        colour 1 1 1 0.5
+        direction 0 1 0
+        emission_rate 100
+        position 0 0.15 0
+        time_to_live 0.1
+        velocity 0
+        duration 0.01
+    }
+}
+
+particle_system LaserImpact_Red
+{
+	quota	500
+	material	impactShine_Red
+	particle_width	0.5
+	particle_height	0.5
+	cull_each	false
+	renderer	billboard
+	billboard_type	point
+	common_direction 0 -1 0
+
+    emitter Point
+    {
+        angle 0
+        colour 1 1 1 0.5
+        direction 0 1 0
+        emission_rate 100
+        position 0 0.15 0
+        time_to_live 0.1
+        velocity 0
+        duration 0.01
+    }
+}
+
+material impactShine_Blue {
+    receive_shadows off
+    technique{
+        pass{
+            lighting off
+            depth_write off
+            fog_override true
+            scene_blend add
+
+            texture_unit{
+                texture ct_laserimpact_blue.png
+            }
+        }
+    }
+}
+
+material impactShine_Red {
+    receive_shadows off
+    technique{
+        pass{
+            lighting off
+            depth_write off
+            fog_override true
+            scene_blend add
+
+            texture_unit{
+                texture ct_laserimpact_red.png
+            }
+        }
+    }
 }
