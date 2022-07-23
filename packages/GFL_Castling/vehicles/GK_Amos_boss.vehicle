@@ -107,7 +107,7 @@
     <!-- 炮台位置和模型 -->
     <!-- 地雷发射器架子 -->
 	0
-    <turret offset="0 8.2 0.46" weapon_key="amos_mine_sight.weapon" weapon_offset="0.0 0.0 0.0" rotation_range="7.28"/>
+    <turret offset="0 8.2 0.46" weapon_key="amos_mine_sight.weapon" weapon_offset="0.0 0.0 0.0" rotation_range="6.29"/>
     <visual class="turret" turret_index="0" mesh_filename="Amos_turret_mine.mesh" texture_filename="AMOS_base.png" offset="0 0 -0.2"/>
     <!-- 前emp枪塔 -->
 	1
@@ -115,11 +115,11 @@
     <visual class="turret" turret_index="1" mesh_filename="Amos_turret_emp.mesh" texture_filename="AMOS_base.png" offset="0 -1.0 1.1"/>
     <!-- 左机枪塔 -->
 	2
-    <turret offset="2.8 6.95 -1.15" weapon_key="amos_mg.weapon" weapon_offset="0.0 -0.4 1.0" rotation="1.57" max_rotation_step="0.00020" rotation_range="2.8"/>
+    <turret offset="2.8 6.75 -1.15" weapon_key="amos_mg.weapon" weapon_offset="0.0 -0.4 1.0" rotation="1.57" max_rotation_step="0.00020" rotation_range="2.8"/>
     <visual class="turret" turret_index="2" mesh_filename="Amos_turret_mg.mesh" texture_filename="AMOS_base.png" offset="0 -1.0 0.6"/>
     <!-- 右机枪塔 -->
 	3
-    <turret offset="-2.8 6.95 -1.15" weapon_key="amos_mg.weapon" weapon_offset="0.0 -0.4 1.0" rotation="-1.57" max_rotation_step="0.00020" rotation_range="2.8"/>
+    <turret offset="-2.8 6.75 -1.15" weapon_key="amos_mg.weapon" weapon_offset="0.0 -0.4 1.0" rotation="-1.57" max_rotation_step="0.00020" rotation_range="2.8"/>
     <visual class="turret" turret_index="3" mesh_filename="Amos_turret_mg.mesh" texture_filename="AMOS_base.png" offset="0 -1.0 0.6"/>
     <!-- mine地雷发射器实体 -->
 	4

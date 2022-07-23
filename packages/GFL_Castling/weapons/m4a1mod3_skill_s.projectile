@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projectile class="grenade" name="" slot="1" pulldown_in_air="100" key="m4a1mod3_skill_s.projectile">
     <tag name="rocket"/>
-    <result class="blast" radius="5.5" damage="8.5" push="0.4" decal="1" faction_compare="not_equal"/>
+    <result class="blast" radius="5.5" damage="8.5" push="0.4" decal="1" faction_compare="not_equal" damage_origin_vehicle="0"/>
     <trigger class="impact" />
     <rotation class="motion" />
     <model  />
