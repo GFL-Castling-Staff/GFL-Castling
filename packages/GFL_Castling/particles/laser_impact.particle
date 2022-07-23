@@ -46,19 +46,18 @@ particle_system Laser_Burnout
     material LaserBurnOut
     particle_width 0.35
     particle_height	0.35
-    cull_each false
     renderer billboard
-    billboard_type perpendicular_common
-    common_direction 0 1 0
+	billboard_rotation_type vertex
+    billboard_type perpendicular_self
+	common_direction 0 1 0
     common_up_vector 0 0 1
-    billboard_origin center
 
     emitter Point
     {
         angle 0
         position 0 0.2 0
         direction 0 1 0
-        velocity 0
+        velocity 0.01
         time_to_live 5.0
         duration 0.05
         emission_rate 21

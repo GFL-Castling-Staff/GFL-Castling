@@ -155,25 +155,22 @@ particle_system hitGround
 	quota 1000
 	material Piece
 	particle_width 0.1
-	particle_height 0.11
+	particle_height 0.1
 	cull_each false
 	renderer billboard
 	billboard_type point
-	emitter Box
+	emitter Point
 	{
 		angle 30
 		position 0.0 0.0 0.0
         colour 0.7 0.7 0.7 1
 		direction	0 0 0
-		emission_rate	300
+		emission_rate	200
 		velocity_min 10
 		velocity_max 15
 		time_to_live_min	0.4
 		time_to_live_max	0.6
         duration 0.15
-		width	0.2
-		height	0.0
-		depth	0.2
 	}
     affector LinearForce
     {
