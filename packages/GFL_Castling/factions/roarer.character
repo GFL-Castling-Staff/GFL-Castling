@@ -35,7 +35,7 @@
 	<animation key="crouching forwards" target_key="crouch walking, large mecha" />
 	<animation key="crouching backwards" target_key="crouch walking, large mecha" />
 	<animation key="prone" target_key="defence, large mecha" />
-	<animation key="prone, moving forwards" target_key="ork prone, moving forwards" />
+	<animation key="prone, moving forwards" target_key="crouch walking, large mecha" />
 	<animation key="going prone" target_key="going defence, large mecha" />
 	<animation key="leaving prone" target_key="defence walking, large mecha" />
 	<animation key="dive" target_key="arrive_ground_big_unit" />
