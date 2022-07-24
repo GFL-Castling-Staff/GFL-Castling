@@ -17,22 +17,6 @@
         <modifier class="hit_success_probability" value="-1.0" />
 	</carry_item>
 	<carry_item key="chip_b_t6_1" time_to_live_out_in_the_open="0" name="Tactical Chip Beta" transform_on_consume="chip_b_t6_2" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="chip_b_t6_8.png"/>
-		<capacity value="1" source="rank" source_value="6.48"/>
-		<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
-		<inventory encumbrance="100" price="200"/>
-		<model mesh_filename="vestexo.xml"/>
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
-        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.4" />
-        <modifier class="hit_success_probability" value="-1.0" />
-	</carry_item>
-	<carry_item key="chip_b_t6_2" time_to_live_out_in_the_open="0" name="Tactical Chip Beta" transform_on_consume="chip_b_t6_3" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="chip_b_t6_7.png"/>
 		<capacity value="1" source="rank" source_value="6.48"/>
 		<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
@@ -48,7 +32,7 @@
         <modifier class="speed" value="0.4" />
         <modifier class="hit_success_probability" value="-1.0" />
 	</carry_item>
-	<carry_item key="chip_b_t6_3" time_to_live_out_in_the_open="0" name="Tactical Chip Beta" transform_on_consume="chip_b_t6_4" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="chip_b_t6_2" time_to_live_out_in_the_open="0" name="Tactical Chip Beta" transform_on_consume="chip_b_t6_3" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="chip_b_t6_6.png"/>
 		<capacity value="1" source="rank" source_value="6.48"/>
 		<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
@@ -64,7 +48,7 @@
         <modifier class="speed" value="0.4" />
         <modifier class="hit_success_probability" value="-1.0" />
 	</carry_item>
-	<carry_item key="chip_b_t6_4" time_to_live_out_in_the_open="0" name="Tactical Chip Beta" transform_on_consume="chip_b_t6_5" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="chip_b_t6_3" time_to_live_out_in_the_open="0" name="Tactical Chip Beta" transform_on_consume="chip_b_t6_4" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="chip_b_t6_5.png"/>
 		<capacity value="1" source="rank" source_value="6.48"/>
 		<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
@@ -80,7 +64,7 @@
         <modifier class="speed" value="0.4" />
         <modifier class="hit_success_probability" value="-1.0" />
 	</carry_item>
-	<carry_item key="chip_b_t6_5" time_to_live_out_in_the_open="0" name="Tactical Chip Beta" transform_on_consume="chip_b_t6_6" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="chip_b_t6_4" time_to_live_out_in_the_open="0" name="Tactical Chip Beta" transform_on_consume="chip_b_t6_5" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="chip_b_t6_4.png"/>
 		<capacity value="1" source="rank" source_value="6.48"/>
 		<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
@@ -96,7 +80,7 @@
         <modifier class="speed" value="0.4" />
         <modifier class="hit_success_probability" value="-1.0" />
 	</carry_item>
-	<carry_item key="chip_b_t6_6" time_to_live_out_in_the_open="0" name="Tactical Chip Beta" transform_on_consume="chip_b_t6_7" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="chip_b_t6_5" time_to_live_out_in_the_open="0" name="Tactical Chip Beta" transform_on_consume="chip_b_t6_6" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="chip_b_t6_3.png"/>
 		<capacity value="1" source="rank" source_value="6.48"/>
 		<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
@@ -112,7 +96,7 @@
         <modifier class="speed" value="0.4" />
         <modifier class="hit_success_probability" value="-1.0" />
 	</carry_item>
-	<carry_item key="chip_b_t6_7" time_to_live_out_in_the_open="0" name="Tactical Chip Beta" transform_on_consume="chip_b_t6_8" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="chip_b_t6_6" time_to_live_out_in_the_open="0" name="Tactical Chip Beta" transform_on_consume="chip_b_t6_7" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="chip_b_t6_2.png"/>
 		<capacity value="1" source="rank" source_value="6.48"/>
 		<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
@@ -128,35 +112,40 @@
         <modifier class="speed" value="0.4" />
         <modifier class="hit_success_probability" value="-1.0" />
 	</carry_item>
-	<carry_item key="chip_b_t6_8" time_to_live_out_in_the_open="0" name="Tactical Chip Beta" transform_on_consume="chip_b_t6_9" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="chip_b_t6_7" time_to_live_out_in_the_open="0" name="Tactical Chip Beta" transform_on_consume="chip_b_t6_8" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="chip_b_t6_1.png"/>
 		<capacity value="1" source="rank" source_value="6.48"/>
 		<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="200"/>
 		<model mesh_filename="vestexo.xml"/>
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="wound" />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="wound" />
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
-        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="wound" />
         <modifier class="speed" value="0.4" />
         <modifier class="hit_success_probability" value="-1.0" />
 	</carry_item>
-	<carry_item key="chip_b_t6_9" time_to_live_out_in_the_open="0" name="Tactical Chip Beta" transform_on_consume="chip_b_t6_10" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="chip_b_t6_8" time_to_live_out_in_the_open="0" name="Tactical Chip Beta" transform_on_consume="chip_b_t6_9" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="chip_b_t6_0.png"/>
 		<capacity value="1" source="rank" source_value="6.48"/>
 		<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="200"/>
 		<model mesh_filename="vestexo.xml"/>
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
-        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="unwound" output_character_state="unwound" consumes_item="0"/>      
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="unwound" output_character_state="unwound" consumes_item="0"/>      
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
+        <modifier class="melee_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
+        <modifier class="melee_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+        <modifier class="melee_hit_result" input_character_state="unwound" output_character_state="unwound" consumes_item="0"/>      
         <modifier class="speed" value="0.4" />
         <modifier class="hit_success_probability" value="-1.0" />
 	</carry_item>

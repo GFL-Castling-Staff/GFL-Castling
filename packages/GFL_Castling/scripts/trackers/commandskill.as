@@ -332,6 +332,14 @@ class CommandSkill : Tracker {
 
                 SkillModifer@ m_modifer=SkillModifer(senderId,pname);
                
+                if (startsWith(c_armorType,'chip_b_t6')){
+                    m_modifer.setCooldownMinus(5.0);
+                }
+
+                if (startsWith(c_armorType,'chip_a_t6')){
+                    m_modifer.setCooldownReduction(0.75);
+                }
+
                 if (targetAAgrenades.find(c_weaponType)> -1){
                     excuteAntiArmorskill(cId,senderId,m_modifer,c_weaponType);
                     return;        
@@ -463,7 +471,7 @@ class CommandSkill : Tracker {
     void addCoolDown(string key,float time,int cId,SkillModifer@ modifer){
         float cdr=modifer.m_cdr;
         float cdm=modifer.m_cdm;
-        SkillTrigger@ cooldown = SkillTrigger(cId,(time*cdr-cdm),key);
+        SkillTrigger@ cooldown = SkillTrigger(cId,max((time*cdr-cdm),0.0),key);
         cooldown.setSkillInfo(modifer);
         SkillArray.insertLast(cooldown);
     }
@@ -1344,7 +1352,7 @@ class CommandSkill : Tracker {
         bool ExistQueue = false;
         int j=-1;
         for (uint i=0;i<SkillArray.length();i++){
-            if (InCooldown(characterId,modifer,SkillArray[i]) && SkillArray[i].m_weapontype==weaponname) {
+            if (InCooldown(characterId,modifer,SkillArray[i]) && SkillArray[i].m_weapontype=="AAgrenade") {
                 ExistQueue=true;
                 j=i;
             }
@@ -1422,7 +1430,7 @@ class CommandSkill : Tracker {
                     else{
                         CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"std_ap_grenade.projectile",characterId,factionid,45.0,6.0);
                     }
-                    addCoolDown(weaponname,15,characterId,modifer);
+                    addCoolDown("AAgrenade",15,characterId,modifer);
                 }
             }
         }
