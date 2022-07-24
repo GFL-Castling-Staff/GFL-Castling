@@ -33,6 +33,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		setupEnemyWeaponUnlocks();
 		setupSFgift();
 		setupArmorCraft();
+		setupArmorCraftMaster();
 		setupStuffEasterEgg();
 		setupSupplyBox();
 	}
@@ -144,6 +145,26 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 			);
 	}
 
+	protected void setupArmorCraftMaster() {
+		array<Resource@> deliveryList = {
+			 Resource("armor_crafting_master.carry_item", "carry_item")
+		};
+		array<array<ScoredResource@>> rewardPasses = {
+			{
+		ScoredResource("exo_t6.carry_item", "carry_item", 1.0f),
+		ScoredResource("chip_a_t6.carry_item", "carry_item", 1.0f),
+		ScoredResource("chip_b_t6.carry_item", "carry_item", 1.0f),
+		ScoredResource("acbp_t6.carry_item", "carry_item", 1.0f)
+			}
+		};
+		processRewardPasses(rewardPasses);
+		
+		GiftItemDeliveryRandomRewarder@ rewarder = GiftItemDeliveryRandomRewarder(m_metagame, rewardPasses);
+
+		m_itemDeliveryOrganizer.addObjective(
+			ItemDeliveryObjective(m_metagame, 0, deliveryList, m_itemDeliveryOrganizer, null, "", "", "", -1 /* loop */, rewarder)
+			);
+	}
 	// ScoredResource("key", "class", 00.0f)
 	protected void setupGift1() {
 		array<Resource@> deliveryList = {

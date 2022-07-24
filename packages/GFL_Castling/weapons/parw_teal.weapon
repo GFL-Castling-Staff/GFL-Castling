@@ -16,9 +16,9 @@
      use_basic_muzzle_smoke_effect="0"
      stab_enabled="1"
      stab_range="5"
-/>
+    />
 
-<animation state_key="recoil"   animation_key="melee, ninjato whip" />
+    <animation state_key="recoil"   animation_key="melee, ninjato whip" />
     <animation state_key="stabbing" animation_key="melee, ninjato whip" />
     <animation state_key="hold" animation_key="still, ninjato" />
     <animation state_key="hold_on_wall" animation_key="still overwall, ninjato" />
