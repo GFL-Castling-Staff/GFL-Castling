@@ -244,11 +244,11 @@ class GFLairstrike : Tracker {
                         float strike_rand = 3.0;
 
                         CreateDirectProjectile(m_metagame,startPos.add(getMultiplicationVector(strike_vector,Vector3(-50,0,-50))),s_pos.add(Vector3(0,20,0)),"a10_warthog_shadow.projectile",cid,fid,70);                                         
-                        for(int i=1;i<=16;i++){
-                            float rand_x = rand(-10,10);
-                            float rand_y = rand(-10,10);
+                        for(int i=1;i<=12;i++){
+                            float rand_x = rand(-12,12);
+                            float rand_y = rand(-12,12);
                             
-                            CreateDirectProjectile(m_metagame,startPos,start_pos.add(Vector3(rand_x,0,rand_y)),"pierre_rocket.projectile",cid,fid,180);                              
+                            CreateDirectProjectile(m_metagame,startPos,start_pos.add(Vector3(rand_x,0,rand_y)),"ASW_A10_rocket.projectile",cid,fid,240);                              
                         }                            
                         
                         startPos = startPos.add(getMultiplicationVector(strike_vector,Vector3(-30,0,-30)));
