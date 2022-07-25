@@ -207,7 +207,8 @@ dictionary commandSkillIndex = {
         // AK15MOD3
         {"gkw_ak15mod3.weapon",18},
         {"gkw_ak15mod3_skill.weapon",18},
-
+        {"gkw_ak15mod3_blm.weapon",18},
+        {"gkw_ak15mod3_blm_skill.weapon",18},
         // XM8MOD3
         {"gkw_xm8_mod3.weapon",19},
 
