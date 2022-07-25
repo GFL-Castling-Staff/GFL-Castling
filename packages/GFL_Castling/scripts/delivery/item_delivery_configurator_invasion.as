@@ -152,8 +152,12 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		array<array<ScoredResource@>> rewardPasses = {
 			{
 		ScoredResource("exo_t6.carry_item", "carry_item", 1.0f),
+		ScoredResource("exo_x_t6.carry_item", "carry_item", 1.0f),
+		ScoredResource("bp_t6.carry_item", "carry_item", 1.0f),
 		ScoredResource("chip_a_t6.carry_item", "carry_item", 1.0f),
 		ScoredResource("chip_b_t6.carry_item", "carry_item", 1.0f),
+		ScoredResource("cc_t6.carry_item", "carry_item", 1.0f),
+		ScoredResource("ultra_bp_t6.carry_item", "carry_item", 1.0f),
 		ScoredResource("acbp_t6.carry_item", "carry_item", 1.0f)
 			}
 		};
