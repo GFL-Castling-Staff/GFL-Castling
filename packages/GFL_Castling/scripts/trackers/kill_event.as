@@ -206,19 +206,7 @@ class kill_event : Tracker {
                 KillerWeaponKey = getDeadPlayerEquipmentKey(m_metagame,characterId,0);
             }
 
-            switch(int(healOnKillWeaponList[KillerWeaponKey]))
-            {
-                case 0:{break;}
-                case 1:{updateHealByKillEvent(characterId,factionId,1,15);break;}
-                case 2:{updateHealByKillEvent(characterId,factionId,2,15);break;}
-                case 3:{updateHealByKillEvent(characterId,factionId,3,15);break;}
-                case 4:{updateHealByKillEvent(characterId,factionId,4,15);break;}
-                case 5:{updateHealByKillEvent(characterId,factionId,5,15);break;}
-
-                default:
-                    break;
-            }
- 
+            updateHealByKillEvent(characterId,factionId,int(healOnKillWeaponList[KillerWeaponKey]),15);
 
             if (Solider_Name=="") return;
 
