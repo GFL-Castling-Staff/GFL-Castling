@@ -43,97 +43,103 @@ class kill_event : Tracker {
         {"gkw_m1911mod3.weapon",2},
 
         // 近战定位AR
-        {"gkw_ak12_skill.weapon",3},
-        {"gkw_ak12_blm_skill.weapon",3},
-        {"gkw_ak12_2402_skill.weapon",3},
-        {"gkw_ak15mod3_skill.weapon",3},
-        {"gkw_ar15mod3_skill.weapon",3},
-        {"gkw_ar15mod3_532_skill.weapon",3},
+        {"gkw_ak12_skill.weapon",4},
+        {"gkw_ak12_blm_skill.weapon",4},
+        {"gkw_ak12_2402_skill.weapon",4},
+        {"gkw_ak15mod3_skill.weapon",4},
+        {"gkw_ar15mod3_skill.weapon",4},
+        {"gkw_ar15mod3_532_skill.weapon",4},
 
-        // SMG——2kills
-        {"gkw_ump40.weapon",2},
-        {"gkw_ump9.weapon",2},
-        {"gkw_ump45.weapon",2},
-        {"gkw_ump9mod3.weapon",2},
-        {"gkw_ump45mod3.weapon",2},
-        {"gkw_ump45_410.weapon",2},
-        {"gkw_ump45_535.weapon",2},
-        {"gkw_ump45mod3_410.weapon",2},
-        {"gkw_ump45mod3_535.weapon",2},
-        {"gkw_pps43.weapon",2},
-        {"gkw_m3.weapon",2},
-        {"gkw_type100.weapon",2},
-        {"gkw_type100_1.weapon",2},
-        {"gkw_type100_4004.weapon",2},
-        {"gkw_sp9.weapon",2},
-        {"gkw_vector.weapon",2},
-        {"gkw_pm06.weapon",2},
-        {"gkw_pp90.weapon",2},
-        {"gkw_js9.weapon",2},
-        {"gkw_js9_4702.weapon",2},
-        {"gkw_thompson.weapon",2},
-        {"gkw_uzi.weapon",2},
-        {"gkw_uzimod3.weapon",2},
-        {"gkw_uzimod3_skill.weapon",2},
-        {"gkw_vz61.weapon",2},
-        {"gkw_pp19.weapon",2},
-        {"gkw_pp19mod3.weapon",2},
-        {"gkw_mab38.weapon",2},
-        {"gkw_mab38mod3.weapon",2},
-        {"gkw_klin.weapon",2},
-        {"gkw_mp40.weapon",2},
-        {"gkw_mp5.weapon",2},
-        {"gkw_mp5mod3.weapon",2},
-        {"gkw_mp5_3.weapon",2},
-        {"gkw_mp5_1205.weapon",2},
-        {"gkw_mp5_1903.weapon",2},
-        {"gkw_mp5_3006.weapon",2},
-        {"gkw_mp5mod3_3.weapon",2},
-        {"gkw_mp5mod3_1205.weapon",2},
-        {"gkw_mp5mod3_1903.weapon",2},
-        {"gkw_mp5mod3_3006.weapon",2},
-        {"ff_ripper.weapon",2},
-        {"ff_ripper_swap.weapon",2},
-        {"gkw_sterling.weapon",2},
-        
         // SMG——3kills
-        {"gkw_ppsh41.weapon",3},
-        {"gkw_ppsh41mod3.weapon",3},
-        {"gkw_mp7.weapon",3},
-        {"gkw_mp7_6806.weapon",3},
-        {"gkw_ak74u.weapon",3},
-        {"gkw_ak74u_3002.weapon",3},
-        {"gkw_idw.weapon",3},
-        {"gkw_idw_2108.weapon",3},
-        {"gkw_idw_3205.weapon",3},
-        {"gkw_idw_4908.weapon",3},
-        {"gkw_idwmod3.weapon",3},
-        {"gkw_idwmod3_2108.weapon",3},
-        {"gkw_idwmod3_3205.weapon",3},
-        {"gkw_idwmod3_4908.weapon",3},
-        {"gkw_64type.weapon",3},
-        {"gkw_g36c.weapon",3},
-        {"gkw_g36c_mod3.weapon",3},
-        {"gkw_g36c_mod3_skill.weapon",3},
-        {"gkw_kp31.weapon",3},
-        {"gkw_kp31mod3.weapon",3},
-        {"gkw_type79.weapon",3},
-        {"gkw_ro635.weapon",3},
-        {"gkw_ro635mod3.weapon",3},
-        {"gkw_honeybadger.weapon",3},
-        {"gkw_honeybadger_4005.weapon",3},
-        {"gkw_p90.weapon",3},
-        {"gkw_p90_2802.weapon",3},
-        {"gkw_x95.weapon",3},
-        {"gkw_augpara.weapon",3},
-        {"gkw_augpara_5503.weapon",3},
-        {"gkw_ar57.weapon",3},
-        {"gkw_cms.weapon",3},
-        {"gkw_cms_aps.weapon",3},
-        {"gkw_cms_st.weapon",3},
-        {"gkw_sr3mp.weapon",3},
-        {"gkw_sr3mp_skill.weapon",3},
-        {"gkw_vp1915.weapon",3}
+        {"gkw_ump40.weapon",3},
+        {"gkw_ump9.weapon",3},
+        {"gkw_ump45.weapon",3},
+        {"gkw_ump9mod3.weapon",3},
+        {"gkw_ump45mod3.weapon",3},
+        {"gkw_ump45_410.weapon",3},
+        {"gkw_ump45_535.weapon",3},
+        {"gkw_ump45mod3_410.weapon",3},
+        {"gkw_ump45mod3_535.weapon",3},
+        {"gkw_pps43.weapon",3},
+        {"gkw_m3.weapon",3},
+        {"gkw_type100.weapon",3},
+        {"gkw_type100_1.weapon",3},
+        {"gkw_type100_4004.weapon",3},
+        {"gkw_sp9.weapon",3},
+        {"gkw_vector.weapon",3},
+        {"gkw_pm06.weapon",3},
+        {"gkw_pp90.weapon",3},
+        {"gkw_js9.weapon",3},
+        {"gkw_js9_4702.weapon",3},
+        {"gkw_thompson.weapon",3},
+        {"gkw_uzi.weapon",3},
+        {"gkw_uzimod3.weapon",3},
+        {"gkw_uzimod3_skill.weapon",3},
+        {"gkw_vz61.weapon",3},
+        {"gkw_pp19.weapon",3},
+        {"gkw_pp19mod3.weapon",3},
+        {"gkw_mab38.weapon",3},
+        {"gkw_mab38mod3.weapon",3},
+        {"gkw_klin.weapon",3},
+        {"gkw_mp40.weapon",3},
+        {"gkw_mp5.weapon",3},
+        {"gkw_mp5mod3.weapon",3},
+        {"gkw_mp5_3.weapon",3},
+        {"gkw_mp5_1205.weapon",3},
+        {"gkw_mp5_1903.weapon",3},
+        {"gkw_mp5_3006.weapon",3},
+        {"gkw_mp5mod3_3.weapon",3},
+        {"gkw_mp5mod3_1205.weapon",3},
+        {"gkw_mp5mod3_1903.weapon",3},
+        {"gkw_mp5mod3_3006.weapon",3},
+        {"ff_ripper.weapon",3},
+        {"ff_ripper_swap.weapon",3},
+        {"gkw_sterling.weapon",3},
+        
+        // SMG——4kills
+        {"gkw_ppsh41.weapon",4},
+        {"gkw_ppsh41mod3.weapon",4},
+        {"gkw_mp7.weapon",4},
+        {"gkw_mp7_6806.weapon",4},
+        {"gkw_idw.weapon",4},
+        {"gkw_idw_2108.weapon",4},
+        {"gkw_idw_3205.weapon",4},
+        {"gkw_idw_4908.weapon",4},
+        {"gkw_idwmod3.weapon",4},
+        {"gkw_idwmod3_2108.weapon",4},
+        {"gkw_idwmod3_3205.weapon",4},
+        {"gkw_idwmod3_4908.weapon",4},
+        {"gkw_64type.weapon",4},
+        {"gkw_kp31.weapon",4},
+        {"gkw_kp31mod3.weapon",4},
+        {"gkw_type79.weapon",4},
+        {"gkw_p90.weapon",4},
+        {"gkw_p90_2802.weapon",4},
+        {"gkw_x95.weapon",4},
+        {"gkw_augpara.weapon",4},
+        {"gkw_augpara_5503.weapon",4},
+        {"gkw_ar57.weapon",4},
+        {"gkw_cms.weapon",4},
+        {"gkw_cms_aps.weapon",4},
+        {"gkw_cms_st.weapon",4},
+        {"gkw_vp1915.weapon",4},
+
+        //短突 5kill
+        {"gkw_ak74u.weapon",5},
+        {"gkw_ak74u_3002.weapon",5},
+        {"gkw_ak74u_skill.weapon",5},
+        {"gkw_ak74u_3002_skill.weapon",5},
+        {"gkw_sr3mp.weapon",5},
+        {"gkw_sr3mp_skill.weapon",5},
+        {"gkw_ro635.weapon",5},
+        {"gkw_ro635mod3.weapon",4},
+        {"gkw_honeybadger.weapon",5},
+        {"gkw_honeybadger_4005.weapon",5},
+        {"gkw_g36c.weapon",5},
+        {"gkw_g36c_mod3.weapon",5},
+        {"gkw_g36c_mod3_skill.weapon",5},
+
+        {"666",-1}
     };
 
     protected void updateHealByKillEvent(int characterid,int factionid,int killstoheal,int timeaddafterkill){
@@ -161,18 +167,34 @@ class kill_event : Tracker {
             string Solider_Name = target.getStringAttribute("soldier_group_name");
             string KillerWeaponKey = event.getStringAttribute("key");
             string killway= event.getStringAttribute("method_hint");
+            //只查询我方杀敌
+            if (factionId==0 && characterId > 0){
+                const XmlElement@ killerCharacter = getCharacterInfo2(m_metagame,characterId);
+                if (killerCharacter is null) return;
+                array<const XmlElement@>@ equipment = killerCharacter.getElementsByTagName("item");
+                string c_weaponType = equipment[0].getStringAttribute("key");
+                string c_armorType = equipment[4].getStringAttribute("key");
+                if(c_weaponType=="gkw_ppkmod3.weapon"){
+                    int i = findSkillIndex(characterId,"PPKMOD3");
+                    if(i >=0){
+                        SkillArray[i].m_time-=2.0;
+                    }    
+                }
+                if(startsWith(c_armorType,'acbp_t6')){
+                    int i = findSkillIndex(characterId);
+                    if(i >=0){
+                        SkillArray[i].m_time-=1.0;
+                    }    
+                }                
+            }
+
 
             if(KillerWeaponKey=="gkw_ppkmod3.weapon"){
                 // 乌鸦是猪，望周知
-                int i = findSkillIndex(characterId,"PPKMOD3");
-                if(i >=0){
-                    SkillArray[i].m_time-=2.0;
-                }    
                 if (killway=="hit"){
                     int j = findKillCountIndex(characterId);
                     if(j>=0){
                         KillCountArray[j].add();
-                        //_log("PPK kill " + KillCountArray[j].m_killnum);
                     }
                     else{
                         KillCountArray.insertLast(kill_count(characterId,1));
@@ -187,9 +209,11 @@ class kill_event : Tracker {
             switch(int(healOnKillWeaponList[KillerWeaponKey]))
             {
                 case 0:{break;}
-                case 1:{updateHealByKillEvent(characterId,factionId,1,10);break;}
-                case 2:{updateHealByKillEvent(characterId,factionId,2,10);break;}
-                case 3:{updateHealByKillEvent(characterId,factionId,3,10);break;}
+                case 1:{updateHealByKillEvent(characterId,factionId,1,15);break;}
+                case 2:{updateHealByKillEvent(characterId,factionId,2,15);break;}
+                case 3:{updateHealByKillEvent(characterId,factionId,3,15);break;}
+                case 4:{updateHealByKillEvent(characterId,factionId,4,15);break;}
+                case 5:{updateHealByKillEvent(characterId,factionId,5,15);break;}
 
                 default:
                     break;

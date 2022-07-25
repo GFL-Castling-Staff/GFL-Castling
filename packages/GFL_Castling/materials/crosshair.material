@@ -1,0 +1,121 @@
+material Crosshair {
+	receive_shadows off
+	technique {
+		pass {
+			lighting off
+			fog_override true none
+			scene_blend alpha_blend		
+			texture_unit {
+				texture crosshair.png
+			}
+		} 
+	}
+}
+  
+
+material CrosshairGood {
+	receive_shadows off
+	technique {
+		pass {
+			lighting off
+			fog_override true none
+			scene_blend alpha_blend		
+			texture_unit {
+				texture crosshair_good.png
+			}
+		} 
+	}
+}
+
+material CrosshairPoor {
+	receive_shadows off
+	technique {
+		pass {
+			lighting off
+			fog_override true none
+			scene_blend alpha_blend		
+			texture_unit {
+				texture crosshair_poor.png
+			}
+		} 
+	}
+}
+  
+material CrosshairTimer {
+	receive_shadows off
+	technique {
+		pass {
+			lighting off
+			fog_override true none
+			scene_blend alpha_blend		
+			texture_unit {
+				texture crosshair_timer.png
+			}
+		}
+		pass {
+			lighting off
+			fog_override true none
+			scene_blend alpha_blend		
+			texture_unit {
+				texture crosshair_timer_pointer.png
+				rotate_anim 1.0
+				tex_address_mode clamp
+			}
+		} 
+	}
+}
+
+
+material AimHelper {
+	receive_shadows off
+	technique {
+		pass {
+			lighting off
+			fog_override true none
+			scene_blend alpha_blend		
+			texture_unit {
+				texture aim_helper.png
+			}
+		} 
+	}
+}
+
+material DynamicCrosshair {
+	receive_shadows off
+	technique {
+		pass {
+			lighting off
+			fog_override true none
+			cull_software none
+			cull_hardware none
+			depth_check off
+
+			scene_blend alpha_blend		
+			texture_unit {
+				texture dynamic_crosshair.png
+			}
+		} 
+	}
+}
+
+material LineOfSight {
+	receive_shadows off
+		technique {
+			pass {
+				depth_write off
+				depth_check off
+
+				lighting off
+				ambient vertexcolour
+				diffuse vertexcolour
+				scene_blend alpha_blend
+
+				texture_unit {
+					texture los.png
+					tex_address_mode clamp
+				}
+			} 
+  
+		} 
+	}
+}
