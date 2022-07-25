@@ -29,12 +29,17 @@ dictionary airstrikeIndex = {
         // 空武器
         {"",-1},
 
-
+        // 初版a10模板
         {"a10_strafe",0},
+
+        // 激光射线模板
         {"ioncannon_strafe",1},
 
         // 暴怒妖精
         {"a10_call_strafe",2},
+
+        // 带火箭弹的a10
+        {"a10_rockcet_strafe",3},
 
         // 下面这行是用来占位的，在这之上添加新的即可
         {"666",-1}
@@ -218,6 +223,58 @@ class GFLairstrike : Tracker {
                         Airstrike_strafe.removeAt(a);
                         break;
                     }
+                    case 3:{//A10 单次 带火箭弹 锁人扫射
+                        _log("A10 strafe activated");
+
+                        //扫射位置偏移单位向量 与 扫射位置偏移单位距离
+                        Vector3 strike_vector = getAimUnitVector(1,start_pos,end_pos); 
+                        float strike_didis = 5.0;
+                        //扫射起点 从弹头终点指向弹头起点的位置基础偏移 
+                        Vector3 pos_offset = strike_vector.add(getMultiplicationVector(strike_vector,Vector3(-40,0,-40)));  
+                        pos_offset = pos_offset.add(Vector3(0,30,0));
+                        //扫射终点的起点与终点（就生成弹头的终点的起始位置与终止位置）
+                        Vector3 c_pos = start_pos.add(getMultiplicationVector(strike_vector,Vector3(-15,0,-15)));
+                        Vector3 s_pos = end_pos.add(getMultiplicationVector(strike_vector,Vector3(10,0,10)));
+                        //依据扫射位置偏移单位距离而设置的扫射次数
+                        int strike_time = int(getAimUnitDistance(1,c_pos,s_pos)/strike_didis);
+                        //弹头起始扫射位置与终止扫射位置
+                        Vector3 startPos = c_pos.add(pos_offset);
+                        Vector3 endPos = c_pos;
+                        //最终弹头随机程度
+                        float strike_rand = 3.0;
+
+                        CreateDirectProjectile(m_metagame,startPos.add(getMultiplicationVector(strike_vector,Vector3(-50,0,-50))),s_pos.add(Vector3(0,20,0)),"a10_warthog_shadow.projectile",cid,fid,70);                                         
+                        for(int i=1;i<=16;i++){
+                            float rand_x = rand(-10,10);
+                            float rand_y = rand(-10,10);
+                            
+                            CreateDirectProjectile(m_metagame,startPos,start_pos.add(Vector3(rand_x,0,rand_y)),"pierre_rocket.projectile",cid,fid,180);                              
+                        }                            
+                        
+                        startPos = startPos.add(getMultiplicationVector(strike_vector,Vector3(-30,0,-30)));
+
+                        array<string> Voice={
+                        "a10_fire_FromWARTHUNDER.wav",
+                        };
+                                                
+                        for(int i=0;i<=strike_time;i++){
+                            //水平偏移
+                            startPos = startPos.add(getMultiplicationVector(strike_vector,Vector3(strike_didis,0,strike_didis)));
+                            endPos = endPos.add(getMultiplicationVector(strike_vector,Vector3(strike_didis,0,strike_didis)));
+                            //垂直偏移，先快后慢
+                            startPos = startPos.add(Vector3(0,-20*(sqrt(float(1/strike_time)*i)),0));
+                            //每单轮扫射生成12次对点扫射
+                            for(int j=1;j<=6;j++)
+                            {
+                                float rand_x = rand(-strike_rand,strike_rand);
+                                float rand_y = rand(-strike_rand,strike_rand);
+                                
+                                CreateDirectProjectile(m_metagame,startPos,endPos.add(Vector3(rand_x,0,rand_y)),"ASW_A10_strafe.projectile",cid,fid,180);           
+                            } 
+                        }                               
+                        Airstrike_strafe.removeAt(a);
+                        break;
+                    }
                     default:
                         break;
                 }
@@ -278,6 +335,7 @@ void insertLockOnStrafeAirstrike(GameMode@ metagame,string airstrikekey,int char
         case 0:{luckyGuyid = getNearbyRandomLuckyGuyId(metagame,factionid,luckyGuyPos,32.0f);break;}
         case 1:{luckyGuyid = getNearbyRandomLuckyGuyId(metagame,factionid,luckyGuyPos,20.0f);break;}
         case 2:{luckyGuyid = getNearbyRandomLuckyGuyId(metagame,factionid,luckyGuyPos,30.0f);break;}
+        case 3:{luckyGuyid = getNearbyRandomLuckyGuyId(metagame,factionid,luckyGuyPos,30.0f);break;}
         default:{luckyGuyid = getNearbyRandomLuckyGuyId(metagame,factionid,luckyGuyPos,10.0f);break;}
     }
     if(luckyGuyid!=-1){
