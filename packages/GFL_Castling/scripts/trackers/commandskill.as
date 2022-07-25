@@ -2416,7 +2416,7 @@ class CommandSkill : Tracker {
                     tasker.add(DelayAirstrikeRequest(m_metagame,2.0,characterId,factionid,stringToVector3(target),"a10_rockcet_strafe"));
                     tasker.add(DelayAirstrikeRequest(m_metagame,3.0,characterId,factionid,stringToVector3(target),"a10_strafe"));
 
-                    addCoolDown("MG4MOD3",0,characterId,modifer);
+                    addCoolDown("MG4MOD3",60,characterId,modifer);
                 }
             }
         }
