@@ -168,7 +168,7 @@ class kill_event : Tracker {
             string KillerWeaponKey = event.getStringAttribute("key");
             string killway= event.getStringAttribute("method_hint");
             //只查询我方杀敌
-            if (faction_id==0 && characterId > 0){
+            if (factionId==0 && characterId > 0){
                 const XmlElement@ killerCharacter = getCharacterInfo2(m_metagame,characterId);
                 if (killerCharacter is null) return;
                 array<const XmlElement@>@ equipment = killerCharacter.getElementsByTagName("item");
