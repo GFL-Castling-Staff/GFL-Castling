@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <carry_items>
-	<carry_item key="woshieoe.carry_item" time_to_live_out_in_the_open="15" name="Commander-S02" transform_on_consume="woshieoe_1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="commander_e.png"/>
-		<capacity value="1" source="rank" source_value="0"/>
-		<commonness value="0" in_stock="0" can_respawn_with="1"/>
-		<inventory encumbrance="100" price="30"/>
+	<carry_item key="cc_t6.carry_item" time_to_live_out_in_the_open="0" name="16LAB Advance Reinforced cloak" transform_on_consume="cc_t6_1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="cc_t6.png"/>
+		<capacity value="1" source="rank" source_value="6.48"/>
+		<commonness value="0.001" in_stock="0" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="150"/>
 		<model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
@@ -15,13 +15,14 @@
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
         <modifier class="hit_success_probability" value="-1.0" />
         <modifier class="detectability" value="-0.45" />
+        <modifier class="night_detectability" value="-0.1" />
         <modifier class="speed" value="0.15" />
 	</carry_item>
-	<carry_item key="woshieoe_1" time_to_live_out_in_the_open="15" name="Commander-S02" transform_on_consume="woshieoe_2" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="commander_e_4.png"/>
-		<capacity value="1" source="rank" source_value="0"/>
-		<commonness value="0" in_stock="0" can_respawn_with="1"/>
-		<inventory encumbrance="100" price="30"/>
+	<carry_item key="cc_t6_1" time_to_live_out_in_the_open="0" name="16LAB Advance Reinforced cloak" transform_on_consume="cc_t6_2" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="cc_t6_5.png"/>
+		<capacity value="1" source="rank" source_value="6.48"/>
+		<commonness value="0.001" in_stock="0" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="150"/>
 		<model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
@@ -32,13 +33,14 @@
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
         <modifier class="hit_success_probability" value="-1.0" />
         <modifier class="detectability" value="-0.45" />
+        <modifier class="night_detectability" value="-0.1" />
         <modifier class="speed" value="0.15" />
 	</carry_item>
-	<carry_item key="woshieoe_2" time_to_live_out_in_the_open="15" name="Commander-S02" transform_on_consume="woshieoe_3" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="commander_e_3.png"/>
-		<capacity value="1" source="rank" source_value="0"/>
-		<commonness value="0" in_stock="0" can_respawn_with="1"/>
-		<inventory encumbrance="100" price="30"/>
+	<carry_item key="cc_t6_2" time_to_live_out_in_the_open="0" name="16LAB Advance Reinforced cloak" transform_on_consume="cc_t6_3" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="cc_t6_4.png"/>
+		<capacity value="1" source="rank" source_value="6.48"/>
+		<commonness value="0.001" in_stock="0" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="150"/>
 		<model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
@@ -49,13 +51,14 @@
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
         <modifier class="hit_success_probability" value="-1.0" />
         <modifier class="detectability" value="-0.45" />
+        <modifier class="night_detectability" value="-0.1" />
         <modifier class="speed" value="0.15" />
 	</carry_item>
-	<carry_item key="woshieoe_3" time_to_live_out_in_the_open="15" name="Commander-S02" transform_on_consume="woshieoe_4" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="commander_e_2.png"/>
-		<capacity value="1" source="rank" source_value="0"/>
-		<commonness value="0" in_stock="0" can_respawn_with="1"/>
-		<inventory encumbrance="100" price="30"/>
+	<carry_item key="cc_t6_3" time_to_live_out_in_the_open="0" name="16LAB Advance Reinforced cloak" transform_on_consume="cc_t6_4" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="cc_t6_3.png"/>
+		<capacity value="1" source="rank" source_value="6.48"/>
+		<commonness value="0.001" in_stock="0" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="150"/>
 		<model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
@@ -66,13 +69,32 @@
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
         <modifier class="hit_success_probability" value="-1.0" />
         <modifier class="detectability" value="-0.45" />
+        <modifier class="night_detectability" value="-0.1" />
         <modifier class="speed" value="0.15" />
 	</carry_item>
-	<carry_item key="woshieoe_4" time_to_live_out_in_the_open="15" name="Commander-S02-Overrun!-" transform_on_consume="woshieoe_5" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="commander_e_1.png"/>
-		<capacity value="1" source="rank" source_value="0"/>
-		<commonness value="0" in_stock="0" can_respawn_with="1"/>
-		<inventory encumbrance="100" price="30"/>
+	<carry_item key="cc_t6_4" time_to_live_out_in_the_open="0" name="16LAB Advance Reinforced cloak" transform_on_consume="cc_t6_5" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="cc_t6_2.png"/>
+		<capacity value="1" source="rank" source_value="6.48"/>
+		<commonness value="0.001" in_stock="0" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="150"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="-0.45" />
+        <modifier class="night_detectability" value="-0.1" />
+        <modifier class="speed" value="0.15" />
+	</carry_item>    
+	<carry_item key="cc_t6_5" time_to_live_out_in_the_open="0" name="16LAB Advance Reinforced cloak" transform_on_consume="cc_t6_6" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="cc_t6_1.png"/>
+		<capacity value="1" source="rank" source_value="6.48"/>
+		<commonness value="0.001" in_stock="0" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="150"/>
 		<model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="wound"  />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
@@ -83,13 +105,14 @@
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="wound" />
         <modifier class="hit_success_probability" value="-1.0" />
         <modifier class="detectability" value="-0.45" />
+        <modifier class="night_detectability" value="-0.1" />
         <modifier class="speed" value="0.15" />
 	</carry_item>
-	<carry_item key="woshieoe_5" time_to_live_out_in_the_open="15" name="Commander-S02-Overrun!-" transform_on_consume="woshieoe_6" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="commander_e_0.png"/>
-		<capacity value="1" source="rank" source_value="0"/>
-		<commonness value="0" in_stock="0" can_respawn_with="1"/>
-		<inventory encumbrance="100" price="30"/>
+	<carry_item key="cc_t6_6" time_to_live_out_in_the_open="0" name="16LAB Advance Reinforced cloak" transform_on_consume="cc_t6_7" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="cc_t6_0.png"/>
+		<capacity value="1" source="rank" source_value="6.48"/>
+		<commonness value="0.001" in_stock="0" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="150"/>
 		<model mesh_filename="vestexo.xml"/>
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
@@ -105,6 +128,7 @@
         <modifier class="melee_hit_result" input_character_state="unwound" output_character_state="unwound" consumes_item="0"/>
         <modifier class="hit_success_probability" value="-1.0" />
         <modifier class="detectability" value="-0.45" />
+        <modifier class="night_detectability" value="-0.1" />
         <modifier class="speed" value="0.15" />
 	</carry_item>
 </carry_items>

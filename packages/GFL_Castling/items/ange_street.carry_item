@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <carry_items>
-    <carry_item key="ange_street.carry_item" time_to_live_out_in_the_open="15" name="[What can I serve you?]" transform_on_consume="ange_street_1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+    <carry_item key="ange_street.carry_item" time_to_live_out_in_the_open="15" name="[You could save him...]" transform_on_consume="ange_street_1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
         <hud_icon filename="ange_street_9.png"/>
         <capacity value="1" source="rank" source_value="0"/>
         <commonness value="0" in_stock="0" can_respawn_with="1"/>
@@ -17,7 +17,7 @@
         <modifier class="hit_success_probability" value="-1.1" />
         <modifier class="detectability" value="-0.05" />
     </carry_item>
-    <carry_item key="ange_street_1" time_to_live_out_in_the_open="15" name="[What can I serve you?]" transform_on_consume="ange_street_2" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+    <carry_item key="ange_street_1" time_to_live_out_in_the_open="15" name="[You could save him...]" transform_on_consume="ange_street_2" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
         <hud_icon filename="ange_street_8.png"/>
         <capacity value="1" source="rank" source_value="0"/>
         <commonness value="0" in_stock="0" can_respawn_with="1"/>
@@ -34,7 +34,7 @@
         <modifier class="hit_success_probability" value="-1.1" />
         <modifier class="detectability" value="-0.05" />
     </carry_item>
-    <carry_item key="ange_street_2" time_to_live_out_in_the_open="15" name="[What can I serve you?]" transform_on_consume="ange_street_3" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+    <carry_item key="ange_street_2" time_to_live_out_in_the_open="15" name="[You could save him...]" transform_on_consume="ange_street_3" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
         <hud_icon filename="ange_street_7.png"/>
         <capacity value="1" source="rank" source_value="0"/>
         <commonness value="0" in_stock="0" can_respawn_with="1"/>
@@ -51,7 +51,7 @@
         <modifier class="hit_success_probability" value="-1.1" />
         <modifier class="detectability" value="-0.05" />
     </carry_item>
-    <carry_item key="ange_street_3" time_to_live_out_in_the_open="15" name="[What can I serve you?]" transform_on_consume="ange_street_4" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+    <carry_item key="ange_street_3" time_to_live_out_in_the_open="15" name="[You could save him...]" transform_on_consume="ange_street_4" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
         <hud_icon filename="ange_street_6.png"/>
         <capacity value="1" source="rank" source_value="0"/>
         <commonness value="0" in_stock="0" can_respawn_with="1"/>
@@ -68,7 +68,7 @@
         <modifier class="hit_success_probability" value="-1.1" />
         <modifier class="detectability" value="-0.05" />
     </carry_item>
-    <carry_item key="ange_street_4" time_to_live_out_in_the_open="15" name="[What can I serve you?]" transform_on_consume="ange_street_5" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+    <carry_item key="ange_street_4" time_to_live_out_in_the_open="15" name="[You could save him...]" transform_on_consume="ange_street_5" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
         <hud_icon filename="ange_street_5.png"/>
         <capacity value="1" source="rank" source_value="0"/>
         <commonness value="0" in_stock="0" can_respawn_with="1"/>
@@ -85,7 +85,7 @@
         <modifier class="hit_success_probability" value="-1.1" />
         <modifier class="detectability" value="-0.05" />
     </carry_item>
-    <carry_item key="ange_street_5" time_to_live_out_in_the_open="15" name="[What can I serve you?]" transform_on_consume="ange_street_6" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+    <carry_item key="ange_street_5" time_to_live_out_in_the_open="15" name="[You could save him...]" transform_on_consume="ange_street_6" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
         <hud_icon filename="ange_street_4.png"/>
         <capacity value="1" source="rank" source_value="0"/>
         <commonness value="0" in_stock="0" can_respawn_with="1"/>
@@ -102,7 +102,7 @@
         <modifier class="hit_success_probability" value="-1.1" />
         <modifier class="detectability" value="-0.05" />
     </carry_item>
-    <carry_item key="ange_street_6" time_to_live_out_in_the_open="15" name="[What can I serve you?]" transform_on_consume="ange_street_7" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+    <carry_item key="ange_street_6" time_to_live_out_in_the_open="15" name="[You could save him...]" transform_on_consume="ange_street_7" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
         <hud_icon filename="ange_street_3.png"/>
         <capacity value="1" source="rank" source_value="0"/>
         <commonness value="0" in_stock="0" can_respawn_with="1"/>
@@ -119,7 +119,7 @@
         <modifier class="hit_success_probability" value="-1.1" />
         <modifier class="detectability" value="-0.05" />
     </carry_item>
-    <carry_item key="ange_street_7" time_to_live_out_in_the_open="15" name="[What can I serve you?]" transform_on_consume="ange_street_8" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+    <carry_item key="ange_street_7" time_to_live_out_in_the_open="15" name="[You could save him...]" transform_on_consume="ange_street_8" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
         <hud_icon filename="ange_street_2.png"/>
         <capacity value="1" source="rank" source_value="0"/>
         <commonness value="0" in_stock="0" can_respawn_with="1"/>
@@ -136,7 +136,7 @@
         <modifier class="hit_success_probability" value="-1.1" />
         <modifier class="detectability" value="-0.05" />
     </carry_item>
-    <carry_item key="ange_street_8" time_to_live_out_in_the_open="15" name="[What can I serve you?]-Overrun!-" transform_on_consume="ange_street_9" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+    <carry_item key="ange_street_8" time_to_live_out_in_the_open="15" name="[You could save him...]" transform_on_consume="ange_street_9" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
         <hud_icon filename="ange_street_1.png"/>
         <capacity value="1" source="rank" source_value="0"/>
         <commonness value="0" in_stock="0" can_respawn_with="1"/>
@@ -153,7 +153,7 @@
         <modifier class="hit_success_probability" value="-1.1" />
         <modifier class="detectability" value="-0.05" />
     </carry_item>
-    <carry_item key="ange_street_9" time_to_live_out_in_the_open="15" name="[What can I serve you?]-Overrun!-" transform_on_consume="ange_street_10" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+    <carry_item key="ange_street_9" time_to_live_out_in_the_open="15" name="[Only you can save him.]" transform_on_consume="ange_street_10" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
         <hud_icon filename="ange_street_0.png"/>
         <capacity value="1" source="rank" source_value="0"/>
         <commonness value="0" in_stock="0" can_respawn_with="1"/>
