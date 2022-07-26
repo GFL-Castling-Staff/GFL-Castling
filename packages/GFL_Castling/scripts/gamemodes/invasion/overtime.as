@@ -13,13 +13,16 @@ class Overtime : Tracker {
 	protected int m_matchWinner;
 	protected bool m_matchWinTimerPaused;
 	protected float m_timer;
+	protected float m_risk_timer;
 	protected float REFRESH_TIME = 10.0;
 	protected float THRESHOLD1 = 150.0;
 	protected float THRESHOLD2 = 90.0;
 	protected int m_lastMode;
+	protected int m_risklevel;
+	protected int m_risklevel_cap;
 
 	// --------------------------------------------
-	Overtime(GameModeInvasion@ metagame, int factionId) {
+	Overtime(GameModeInvasion@ metagame, int factionId, int cap=20) {
 		@m_metagame = @metagame;
 		m_factionId = factionId;
 		m_started = false;
@@ -27,7 +30,10 @@ class Overtime : Tracker {
 		m_matchWinner = -1;
 		m_matchWinTimerPaused = false;
 		m_timer = 0.0;
+		m_risk_timer= 0.0;
 		m_lastMode = -1;
+		m_risklevel = 0;
+		m_risklevel_cap = cap;
 	}
 
 	// --------------------------------------------
@@ -46,9 +52,16 @@ class Overtime : Tracker {
 	void update(float time) {
 		// recheck every 10 seconds
 		m_timer -= time;
+		m_risk_timer -= time;
 		if (m_timer < 0.0) {
 			refresh();
 		}
+		if (m_risk_timer < 0.0) {
+			if (m_risklevel < m_risklevel_cap){
+				m_risklevel++;
+			}
+			m_risk_timer = 60.0;
+		}		
 	}
 
 	// ----------------------------------------------------
@@ -151,7 +164,7 @@ class Overtime : Tracker {
 				"    		  capacity_offset='" + offset + "' " + "/>";
 			} else {
 				// if capacity multiplier was 0 (neutral), it will continue to be
-				float capacity = min(multiplier, 0.05);
+				float capacity = min(multiplier, 0.3);
 				offset = 0.0;
 				command +=
 				"    <faction capacity_multiplier='" + capacity + "' " +
@@ -196,6 +209,8 @@ class Overtime : Tracker {
 			Faction@ f = m_metagame.getFactions()[i];
 			float multiplier = m_metagame.determineFinalFactionCapacityMultiplier(f, i);
 			float offset = f.m_capacityOffset;
+			offset += m_risklevel * 5;
+			multiplier += m_risklevel * 0.02;
 
 			command +=
 			"    <faction capacity_multiplier='" + multiplier + "' " +
