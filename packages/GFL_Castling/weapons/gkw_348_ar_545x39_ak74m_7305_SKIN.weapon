@@ -22,7 +22,7 @@
     <sound key="cycle" fileref="ak74m_cycle_FromBF3.wav" volume="0.8" />
     <sound class="impact" fileref="rifle_drop.wav" />
     <model filename="gkw_ak74m_From_melondove.xml" />
-    <hud_icon filename="gkw_ak74m.png" />
+    <hud_icon filename="gkw_ak74m_7305.png" />
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet.projectile">
         <result class="hit"  kill_probability="1.85" kill_probability_offset_on_successful_hit="1.5" kill_decay_start_time="0.881" kill_decay_end_time="1.469" />
