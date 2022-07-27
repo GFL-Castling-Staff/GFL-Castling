@@ -143,6 +143,7 @@ class kill_event : Tracker {
     };
 
     protected void updateHealByKillEvent(int characterid,int factionid,int killstoheal,int timeaddafterkill,string type="weapon"){
+        if (killstoheal<=0) return;
         uint jud=0;
         for(uint a=0;a<HealOnKill_track.length();a++)
             if(HealOnKill_track[a].m_characterId==characterid && HealOnKill_track[a].m_type == type ){
@@ -183,7 +184,12 @@ class kill_event : Tracker {
                 if(startsWith(c_armorType,'acbp_t6')){
                     int i = findSkillIndex(characterId);
                     if(i >=0){
-                        SkillArray[i].m_time-=1.0;
+                        if(SkillArray[i].m_time >=30.0){
+                            SkillArray[i].m_time-=1.0;
+                        }
+                        else{
+                            SkillArray[i].m_time-=0.5;
+                        }
                     }    
                 }
                 if(startsWith(c_armorType,"srexo_t6")){
@@ -215,8 +221,12 @@ class kill_event : Tracker {
 
             int GivenRP = getRPKillReward(Solider_Name);
             float GivenXP = getXPKillReward(Solider_Name);
-            GiveRP(m_metagame,characterId,GivenRP);
-            GiveXP(m_metagame,characterId,GivenXP);
+            if(GivenRP>0){
+                GiveRP(m_metagame,characterId,GivenRP);
+            }
+            if(GivenXP>0){
+                GiveXP(m_metagame,characterId,GivenXP);
+            }            
         }
 	}
     protected void handlePlayerDieEvent(const XmlElement@ event){
@@ -241,11 +251,13 @@ class kill_event : Tracker {
                         if(HealOnKill_track[a].current_kills<0){
                             HealOnKill_track[a].current_kills = 0;
                         }
-						string c = 
-							"<command class='update_inventory'" +
-							" untransform_count='"+ vestrestore +"'" +
-							" character_id='" + HealOnKill_track[a].m_characterId + "' />";
-						m_metagame.getComms().send(c);
+                        if(vestrestore>0){
+                            string c = 
+                                "<command class='update_inventory'" +
+                                " untransform_count='"+ vestrestore +"'" +
+                                " character_id='" + HealOnKill_track[a].m_characterId + "' />";
+                            m_metagame.getComms().send(c);
+                        }
                         // if(vestrestore>0)   _log("Heal successful.");  
                         // else    _log("Heal failed.");  
 					}
