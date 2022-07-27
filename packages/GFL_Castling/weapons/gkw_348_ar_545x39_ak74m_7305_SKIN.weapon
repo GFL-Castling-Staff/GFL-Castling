@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<weapon file="two_hands_ar.animation_base" key="gkw_ak74m.weapon">
+<weapon file="two_hands_ar.animation_base" key="gkw_ak74m_7305.weapon">
     <specification 
 		accuracy_factor="0.99" 
 		barrel_offset="0.4" 
@@ -21,9 +21,10 @@
     <sound key="magazine_in" fileref="ak74m_mgz_in_FromBF3.wav" volume="0.8" />
     <sound key="cycle" fileref="ak74m_cycle_FromBF3.wav" volume="0.8" />
     <sound class="impact" fileref="rifle_drop.wav" />
-    <model filename="gkw_ak74m_From_melondove.xml" />
+    <model filename="gkd_ar_ak74m_7305.xml" />
     <hud_icon filename="gkw_ak74m_7305.png" />
     <weak_hand_hold offset="0.2" />
+    <commonness value="0" in_stock="0" can_respawn_with="1"/>
     <projectile file="bullet.projectile">
         <result class="hit"  kill_probability="1.85" kill_probability_offset_on_successful_hit="1.5" kill_decay_start_time="0.881" kill_decay_end_time="1.469" />
     </projectile>
