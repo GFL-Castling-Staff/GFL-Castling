@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<weapon on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0" key="gkw_m1.weapon">
+<weapon on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0" key="gkw_m1_1106.weapon">
 	<tag name="rifle" />
     <specification 
 	retrigger_time="-1" 
 	last_burst_retrigger_time = "0.125"
-	accuracy_factor="1" 
+    accuracy_factor="1" 
 	sustained_fire_grow_step="0.4" 
 	sustained_fire_diminish_rate="1.8"
 	magazine_size="8" 
 	can_shoot_standing="1" 
 	suppressed="0" 
-	name="M1 Garand" 
+	name="M1 Garand-[Beach Princess]" 
 	class="4" 
 	burst_shots="1"
 	reload_one_at_a_time="0" 
@@ -32,7 +32,7 @@
 	<animation key="recoil" animation_key="recoil2" />
 	<animation key="recoil" animation_key="recoil3" />
 	<animation state_key="stabbing"	animation_key="melee, bayonet" />
-	<commonness value="0.2" in_stock="0" can_respawn_with="1" />
+	<commonness value="0" in_stock="0" can_respawn_with="1" />
     <weak_hand_hold offset="0.3" />
     <sound key="fire" fileref="m1_fire_FromSE4.wav" pitch_variety="0.05" volume="3"/>
     <sound key="cycle" fileref="pistol2_chamber.wav" />
@@ -40,7 +40,7 @@
     <sound key="magazine_in" fileref="rifle_clip_in.wav" />
     <sound key="last_ammo" fileref="rifle_02_m1_garand_ping.wav" />
     <model filename="gkw_rf_m1_bt.xml" />
-    <hud_icon filename="gkw_m1.png" />
+    <hud_icon filename="gkw_m1_1106.png" />
     <inventory encumbrance="10.0" price="5.0" />
     <capacity value="1" source="rank" source_value="0.0" />
     <projectile file="bullet.projectile">
