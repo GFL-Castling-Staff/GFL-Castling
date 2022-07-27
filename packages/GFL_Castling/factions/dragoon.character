@@ -3,7 +3,7 @@
 	<tag name="metal_man" />
 	<sound key="death" fileref="qwd_die.wav" volume="0.8" />
 	<parameter class="being_stunned_steer_amount" value="0.8" />
-	<animation key="stunned" target_key="dragoon, stun leap" />
+	<animation key="stunned" target_key="rush jump" />
     <parameter class="can_use_vehicles" value="0" /> 
 	<parameter class="walking_steer_amount" value="0.63" />
 	<parameter class="running_steer_amount" value="0.63" />
