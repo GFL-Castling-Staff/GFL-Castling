@@ -82,7 +82,7 @@ dictionary tdoll_index = {
     {"77","gkw_m2hb.weapon"},
     {"78","gkw_m60.weapon"},
     {"79","gkw_m249saw.weapon"},
-    {"80",""},
+    {"80","gkw_m1919a4.weapon"},
     {"81","gkw_lwmmg.weapon"},
     {"82","gkw_dp28.weapon"},
     {"84","gkw_rpd.weapon"},
