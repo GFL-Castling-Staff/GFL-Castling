@@ -338,7 +338,12 @@ class CommandSkill : Tracker {
                 }
 
                 if (startsWith(c_armorType,'chip_a_t6')){
-                    m_modifer.setCooldownReduction(0.75);
+                    m_modifer.setCooldownReduction(0.8);
+                }
+
+                if (startsWith(c_armorType,'gk_persica')){
+                    m_modifer.setCooldownReduction(0.9);
+                    m_modifer.setCooldownMinus(2.0);
                 }
 
                 if (targetAAgrenades.find(c_weaponType)> -1){

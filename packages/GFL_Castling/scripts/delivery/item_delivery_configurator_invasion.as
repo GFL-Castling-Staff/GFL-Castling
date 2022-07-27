@@ -161,6 +161,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		ScoredResource("tms_t6.carry_item", "carry_item", 1.0f),
 		ScoredResource("srexo_t6.carry_item", "carry_item", 1.0f),
 		ScoredResource("ultra_bp_t6.carry_item", "carry_item", 1.0f),
+		ScoredResource("gk_persica.carry_item", "carry_item", 0.2f),
 		ScoredResource("acbp_t6.carry_item", "carry_item", 1.0f)
 			}
 		};
@@ -658,6 +659,9 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		ScoredResource("jill.carry_item", "carry_item", 1.0f),
 		ScoredResource("light.carry_item", "carry_item", 1.0f),
 		ScoredResource("ange.carry_item", "carry_item", 1.0f),
+		ScoredResource("ange_street.carry_item", "carry_item", 1.0f),
+		ScoredResource("gk_persica.carry_item", "carry_item", 0.1f),
+
 		ScoredResource("dandelion.carry_item", "carry_item", 1.0f),
 		ScoredResource("dima.carry_item", "carry_item", 1.0f),
 		ScoredResource("K309.carry_item", "carry_item", 0.7f),
