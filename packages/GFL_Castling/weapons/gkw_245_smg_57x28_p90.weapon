@@ -21,9 +21,9 @@
 	  <inventory encumbrance="2.0" buy_price="9.0" sell_price="9.0"/>
 	  <capacity value="1" source="rank" source_value="0.0" />
 
-	  <animation key="recoil" ref="12" />
-	  <animation key="recoil" ref="13" />
-	  <animation key="recoil" ref="14" />
+	  <animation key="recoil" animation_key="recoil1" />
+	  <animation key="recoil" animation_key="recoil2" />
+	  <animation key="recoil" animation_key="recoil3" />
 	  <animation key="recoil" stance_key="over_wall" ref="12" />
 	  <animation key="recoil" stance_key="over_wall" ref="13" />
 	  <animation key="recoil" stance_key="over_wall" ref="14" />

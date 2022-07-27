@@ -11,22 +11,18 @@
 	magazine_size="8" 
 	can_shoot_standing="1" 
 	suppressed="0" 
-	name="M1" 
+	name="M1 Garand" 
 	class="4" 
 	burst_shots="1"
 	reload_one_at_a_time="0" 
-	sight_range_modifier="2" 
-	projectile_speed="231.49" 
+	sight_range_modifier="2.5" 
+	projectile_speed="245" 
 	barrel_offset="0.6" 
 	projectiles_per_shot="1"
 	/>
-	<!--recoil recovery was 1.5-->
-	<!--kill probability was 0.75-->
-
-
 	<effect class="muzzle" ref="ejection_76251" />
-	<animation key="recoil" ref="27" />
-	<animation key="cycle" ref="30" />
+	<animation key="recoil" animation_key="recoil1, big" />
+	<animation key="cycle" animation_key="Brifle1" />
 	<animation state_key="reload" animation_key="reloading, m1 garand" />
 	
 	<weak_hand_hold offset="0.3" />

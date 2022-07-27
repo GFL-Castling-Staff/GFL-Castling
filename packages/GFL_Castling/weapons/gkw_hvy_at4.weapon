@@ -21,7 +21,7 @@
     <capacity value="0" source="rank" source_value="0.0" />
     <capacity value="1" source="rank" source_value="3.457" />
     <animation key="recoil" ref="40" />
-    <animation key="cycle" ref="30" />
+    <animation key="cycle" animation_key="Brifle1" />
     <animation key="reload" animation_key="AT4Reload" />
     <animation key="hold" ref="39" />
     <animation key="hold_on_wall" ref="39" />

@@ -23,7 +23,7 @@
 
 	
 	<animation key="recoil" ref="27" />
-	<animation key="cycle" ref="30" />
+	<animation key="cycle" animation_key="Brifle1" />
     <animation key="reload" animation_key="reloading, m1908" />
 	
 	<weak_hand_hold offset="0.3" />
