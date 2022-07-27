@@ -41,13 +41,15 @@
         <result class="blast" damage="2.5" radius="4" decal="0" push="0.3" character_state="death" faction_compare="not_equal"/>
     </projectile>
     
-    <stance state_key="running" accuracy="0.5" />
+    <stance state_key="running" accuracy="0.8" />
     <stance state_key="walking" accuracy="0.85" />
     <stance state_key="crouch_moving" accuracy="0.8" />
     <stance state_key="prone_moving" accuracy="0.8" />
     <stance state_key="standing" accuracy="0.9" />
     <stance state_key="crouching" accuracy="0.95" />
     <stance state_key="prone" accuracy="1" />
+	<stance state_key="over_wall" accuracy="1" />
+	<modifier class="speed" value="1.0" />
 
 
 </weapon>

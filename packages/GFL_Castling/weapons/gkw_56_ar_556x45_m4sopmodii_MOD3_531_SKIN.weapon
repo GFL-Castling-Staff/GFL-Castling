@@ -40,46 +40,4 @@
         <modifier class="detectability" value="-0.1" />
         <modifier class="speed" value="0.3" />
     </weapon>
-    <!-- <weapon file="two_hands_ar.animation_base" key="gkw_m4sopmodiimod3_531_skill.weapon"> -->
-    <!-- <specification  -->
-    <!-- accuracy_factor="1.0"  -->
-    <!-- barrel_offset="0.4"  -->
-    <!-- can_shoot_standing="1"  -->
-    <!-- can_shoot_crouching="0" -->
-    <!-- can_shoot_prone="0" -->
-    <!-- class="0" -->
-    <!-- slot="0"  -->
-    <!-- magazine_size="-1"  -->
-    <!-- name="M4 SOPMODII(MOD3)-[The Guarded Beloved]-[Frenzy Circus]" -->
-    <!-- projectile_speed="120"  -->
-    <!-- retrigger_time="1.0"  -->
-    <!-- suppressed="0"  -->
-    <!-- sustained_fire_diminish_rate="2.1"  -->
-    <!-- sustained_fire_grow_step="0.3" /> -->
-    <!-- <next_in_chain key="gkw_m4sopmodiimod3_531.weapon" share_ammo="0" /> -->
-    <!-- <animation state_key="reload" animation_key="ARreloadsop" /> -->
-    <!-- <animation key="reload" stance_key="prone" animation_key="ARreloadp416" /> -->
-    <!-- <animation state_key="next_in_chain_in" animation_key="change weapon in 416" speed="0.6"/> -->
-    <!-- <inventory  buy_price="200.0" sell_price="200.0" />	 -->
-    <!-- <commonness value="0" in_stock="0" /> -->
-    <!-- <ballistics curve_height="3.0" near_far_distance="16.0" speed_estimation_near="10.0" speed_estimation_far="16.0" max_speed="47.0" randomness="0.0" tweak_factor="1.55" />  -->
-    <!-- <sound key="magazine_out" fileref="m203_mgz_out_FromEFT.wav" volume="1" /> -->
-    <!-- <sound key="magazine_in" fileref="m203_mgz_in_FromEFT.wav" volume="1" /> -->
-    <!-- <sound key="cycle" fileref="m203_cycle_FromEFT.wav" volume="1" /> -->
-    <!-- <sound class="impact" fileref="rifle_drop.wav" />     -->
-    <!-- <model filename="gkw_ar_m4sopmodiimod3.xml" /> -->
-    <!-- <hud_icon filename="gkw_m4sopmodII_531.png" /> -->
-    <!-- <capacity value="1" source="rank" source_value="0.0" /> -->
-    <!-- <capacity value="1" source="rank" source_value="6.048" /> -->
-    <!-- <weak_hand_hold offset="0.2" /> -->
-    <!-- <projectile file="SopmodSk_script_0.projectile" />       -->
-    <!-- <stance state_key="running" accuracy="0.7" /> -->
-    <!-- <stance state_key="walking" accuracy="0.8" /> -->
-    <!-- <stance state_key="crouch_moving" accuracy="0.9" /> -->
-    <!-- <stance state_key="prone_moving" accuracy="0.9" /> -->
-    <!-- <stance state_key="standing" accuracy="0.8" /> -->
-    <!-- <stance state_key="crouching" accuracy="0.9" /> -->
-    <!-- <stance state_key="prone" accuracy="1" /> -->
-    <!-- <modifier class="detectability" value="-0.1" /> -->
-    <!-- </weapon> -->
 </weapons>
