@@ -71,7 +71,7 @@ class ItemDropEvent : Tracker {
                     sendPrivateMessageKey(m_metagame, pId, "truemask");
                     playPrivateSound(m_metagame,"sfx_equip.wav",pId);
                 }
-            }               
+            }
             else if (checkQueue(pId,"mod3")){
                 string outputItem = string(MOD3craftList[itemKey]);
                 if (outputItem != ""){

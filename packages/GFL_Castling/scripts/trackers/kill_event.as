@@ -142,16 +142,16 @@ class kill_event : Tracker {
         {"666",-1}
     };
 
-    protected void updateHealByKillEvent(int characterid,int factionid,int killstoheal,int timeaddafterkill){
+    protected void updateHealByKillEvent(int characterid,int factionid,int killstoheal,int timeaddafterkill,string type="weapon"){
         uint jud=0;
         for(uint a=0;a<HealOnKill_track.length();a++)
-            if(HealOnKill_track[a].m_characterId==characterid){
+            if(HealOnKill_track[a].m_characterId==characterid && HealOnKill_track[a].m_type == type ){
                 HealOnKill_track[a].current_kills++;
                 HealOnKill_track[a].m_numtime = timeaddafterkill;
                 jud = 1;
                 break;
             }
-        if(jud==0)HealOnKill_track.insertLast(HealOnKill_tracker(characterid,factionid,killstoheal,timeaddafterkill)); 
+        if(jud==0)HealOnKill_track.insertLast(HealOnKill_tracker(characterid,factionid,killstoheal,timeaddafterkill,type)); 
     }
 
 	protected void handleCharacterKillEvent(const XmlElement@ event){
@@ -185,7 +185,10 @@ class kill_event : Tracker {
                     if(i >=0){
                         SkillArray[i].m_time-=1.0;
                     }    
-                }                
+                }
+                if(startsWith(c_armorType,"srexo_t6")){
+                    updateHealByKillEvent(characterId,factionId,5,15,"vest");
+                }
             }
 
 
@@ -275,13 +278,15 @@ class HealOnKill_tracker{
 	int m_factionid;
     int m_killstoheal;
     int current_kills=0;
-	HealOnKill_tracker(int characterId,int factionid,int killstoheal,int timeaddafterkill)
+    string m_type;
+	HealOnKill_tracker(int characterId,int factionid,int killstoheal,int timeaddafterkill,string type)
 	{
 		m_characterId = characterId;
 		m_factionid= factionid;
 		m_killstoheal= killstoheal;
         current_kills++;
         m_numtime= timeaddafterkill/0.2;
+        m_type = type;
 	}
 }
 
