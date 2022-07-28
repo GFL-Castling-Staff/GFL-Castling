@@ -41,10 +41,14 @@ dictionary MOD3craftList = {
 
     {"gkw_88type.weapon","gkw_88typemod3.weapon"},
     {"gkw_mg4.weapon","gkw_mg4mod3.weapon"},
+    {"gkw_mg4_703.weapon","gkw_mg4mod3_703.weapon"},
 
     {"gkw_ksvk.weapon","gkw_ksvkmod3.weapon"},
     {"gkw_ksvk_3405.weapon","gkw_ksvkmod3_3405.weapon"},
     {"gkw_ksvk_3805.weapon","gkw_ksvkmod3_3805.weapon"},
+    {"gkw_ksvk_4509.weapon","gkw_ksvkmod3_4509.weapon"},
+    {"gkw_ksvk_5504.weapon","gkw_ksvkmod3_5504.weapon"},
+
     {"gkw_m14.weapon","gkw_m14mod3.weapon"},
     {"gkw_m1891.weapon","gkw_m1891mod3.weapon"},
     {"gkw_ntw20.weapon","gkw_ntw20mod3.weapon"},

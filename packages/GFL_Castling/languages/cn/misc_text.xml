@@ -453,7 +453,6 @@
 	<text key="AN-94-['Antiya']" text="AN-94-['安提娅']" />
 	<text key="AN-94-['Antiya']-[Doll Trigger]" text="AN-94-['安提娅']-[人偶扳机]" />
 	<text key="RPK-16-['Renate']" text="RPK-16-['蕾娜特']" />
-	<text key="AK-15-['Alvin']" text="AK-15-['埃尔文']" />
 	<text key="Zastava M21-[Queen of the White Pieces]" text="Zastava M21-[白棋王后]" />
 	<text key="Zastava M21-[Queen of the White Pieces]-[Howl of the Nightingale]" text="Zastava M21-[白棋王后]-[夜枭轰鸣]" />
 	<text key="JS9-[Orca's Journey]" text="JS9-[逆戟之行]" />
@@ -505,6 +504,8 @@
 	<text key="M1918-[The Christmas You Wished For]-[Damage Focus MG]" text="M1918-[如你所愿的圣诞]-[火力专注MG]"/>
 	<text key="KSVK-[Angel's Brush]" text="KSVK-[天使的画笔]"/>
 	<text key="KSVK-[Darkside Moonwalk]" text="KSVK-[月暗面漫步]"/>
+	<text key="KSVK-[The Truman Traveller]" text="KSVK-[楚门的旅行者]"/>
+	<text key="KSVK-[WanYuHuan]" text="KSVK-[挽玉环]"/>
 	<text key="TAR-21 [Night at the Bar]" text="TAR-21 [酒吧之夜]"/>
 	<text key="TAR-21 [Night at the Bar]-[Charge Focus]" text="TAR-21 [酒吧之夜]-[冲锋专注]"/>
 	<text key="Thunder.50 BMG-[Renoirs Crow]" text="Thunder.50 BMG-[莉诺尔的乌鸦]"/>
@@ -532,8 +533,10 @@
 	<text key="Colt Defender-[Lily's Reverie]" text="柯尔特“防卫者”霰弹枪-[梦倒仙]"/> 
 	<text key="Walther P38-[High Sorceress Apprentice]" text="瓦尔特P38手枪-[魔女高徒]"/>
 	<text key="AK-74M-[Sashimi Chef with Harpoon]" text="AK-74M-[戟与鱼脍师]"/>
-	<text key="M1 Garand-[Beach Princess]" text="M1 Garand-[沙滩公主]"/>
-
+	<text key="M1 Garand-[Beach Princess]" text="M1加兰德半自动步枪-[沙滩公主]"/>
+	<text key="MG4-[Survival Club Member]" text="MG4-[生存社员]"/>
+	<text key="AK-15-['Alvin']" text="AK-15-['艾尔文']"/>
+	<text key="AK-15(MOD3)-[Eye of the White Mastiff]" text="AK-15(MOD3)-[白獒之瞳]"/>
 
     <!--MOD3皮肤枪翻译-->
 	<text key="HK416(MOD3)-[Primrose-Flavored Foil Candy]" text="HK416(MOD3)-[千宵草味的锡纸糖]" />
@@ -594,9 +597,11 @@
 	<text key="Nagant M1895 revolver(MOD3)-[Blushing Snow Princess]" text="纳甘左轮M1895(MOD3)-[胭雪公主]" />
 	<text key="M950A(MOD3)-[Ace on Duty]" text="M950A(MOD3)-[王牌值日生]"/>
 	<text key="G3(MOD3)-[Parsty Cook on Battlefield]" text="G3(MOD3)-[战地糕点师]"/>
+	<text key="MG4(MOD3)-[Survival Club Member]" text="MG4(MOD3)-[生存社员]"/>
+	<text key="MG4(MOD3)-[Survival Club Member]-[Haunted House Hammer]" text="MG4(MOD3)-[生存社员]-[鬼屋之锤]"/>
+	<text key="AK-15(MOD3)-['Alvin']" text="AK-15(MOD3)-['艾尔文']"/>
+	<text key="AK-15(MOD3)-['Alvin']-[Eye of the White Mastiff]" text="AK-15(MOD3)-['艾尔文']-[白獒之瞳]"/>
 
-
-	
 	<!-- 制作组盒子翻译 -->
 	<text key="Diling box" text="“零号病患”"/><!-- 迪泠怪梗，我没get到，貌似是WARFRAME里的？ --> <!--迪泠指定有点大病（褒义）-->
 	<text key="Zhuzhu box" text="KCCO太强了，我们来削弱格里芬吧！"/><!-- 猪猪你的狂暴数值，确实hhhh -->
@@ -619,6 +624,7 @@
 	<text key="Sv98 box" text="机油佬的STC"/><!-- 谁知道里面有什么鬼东西，小心姬魂不悦 -->
 	<text key="Saiwa box" text="Saiwa的补给包"/><!-- . -->
 	<text key="Saiwa juggernaut" text="Juggernaut-辛搭乘机模型"/><!-- . -->
+	
 	<!-- 文本Key翻译 -->
 	<!-- 以下为原版翻译汇编 -->
 	<text key="default" text="默认" />
