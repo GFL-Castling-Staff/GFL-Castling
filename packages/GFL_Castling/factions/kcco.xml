@@ -642,8 +642,40 @@
 			<attribute weight="1.0" min="10.5" max="20.8" />
 		</attribute_config>
 	</soldier>
-
-
+	<!-- KCCO人类狙击手 -->
+	<soldier name="kcco_human_sniper" spawn_score="0.05" copy_from="default_bot">
+		<model filename="kccod_sniper_melondove_saiwa.xml" />
+		<ai filename="kcco_human_sniper_lonewolf.ai" />
+		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
+			<weapon key="kccow_tactical_sniper_rf.weapon" enabled="1" />
+			<carry_item key="kcco_ar.carry_item" />
+		</resources>
+		<item_class_existence_config>
+			<item_class_existence class="carry_item" slot="1" probability="1" />
+			<!-- note, always backpack items -->
+			<item_class_existence class="carry_item" slot="0" probability="1.0" />
+		</item_class_existence_config>
+		<attribute_config class="xp">
+			<attribute weight="1.0" min="0.01" max="0.01" />
+		</attribute_config>
+	</soldier>
+	<!-- KCCO人类狙击手 -->
+	<soldier name="kcco_human_sniper" spawn_score="0.1" copy_from="default_bot">
+		<model filename="kccod_sniper_melondove_saiwa.xml" />
+		<ai filename="kcco_human_sniper.ai" />
+		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
+			<weapon key="kccow_tactical_sniper_rf.weapon" enabled="1" />
+			<carry_item key="kcco_ar.carry_item" />
+		</resources>
+		<item_class_existence_config>
+			<item_class_existence class="carry_item" slot="1" probability="1" />
+			<!-- note, always backpack items -->
+			<item_class_existence class="carry_item" slot="0" probability="1.0" />
+		</item_class_existence_config>
+		<attribute_config class="xp">
+			<attribute weight="1.0" min="0.01" max="0.01" />
+		</attribute_config>
+	</soldier>
 	<!-- store -->
 	<soldier name="default_hg" spawn_score="0.0">
 		<resources file="gk_hg.resources" />

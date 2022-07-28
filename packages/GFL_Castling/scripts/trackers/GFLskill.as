@@ -789,6 +789,7 @@ class GFLskill : Tracker {
 					//25以上：call大伊万
 					uint num_jud = affectedCharacter.length();
 					Vector3 sniperPos = stringToVector3(character.getStringAttribute("position"));
+					sniperPos = sniperPos.add(Vector3(0,0.5,0));
 					if (num_jud>0){
 						if (num_jud<=5) {
 							_log("Mode 1");
