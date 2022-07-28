@@ -263,8 +263,8 @@ dictionary commandSkillIndex = {
         //MG4
         {"gkw_mg4mod3.weapon",33},
         {"gkw_mg4mod3_skill.weapon",33},
-        {"gkw_mg4mod3_702.weapon",33},
-        {"gkw_mg4mod3_702_skill.weapon",33},
+        {"gkw_mg4mod3_703.weapon",33},
+        {"gkw_mg4mod3_703_skill.weapon",33},
 
         //Liu RF
         {"gkw_liu.weapon",34},
