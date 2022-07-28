@@ -10,19 +10,19 @@
     class="3" 
     sight_range_modifier="1.0" 
     slot="1" />
-    <animation key="hold" animation_key="still, riot shield, reversed" />
-    <animation key="hold_on_wall" animation_key="still, riot shield, reversed" />
-    <animation key="hold_casual" animation_key="still, riot shield, reversed" />
-    <animation key="still_against_wall" animation_key="still, riot shield, reversed" />
-    <animation key="recoil" animation_key="still, riot shield, reversed" />
-    <animation key="crouching" animation_key="crouching still, riot shield, reversed" />
-    <animation key="running" animation_key="running, riot shield, reversed" />
-    <animation key="walking" animation_key="walking, riot shield, reversed" />
-    <animation key="walking_backwards" animation_key="walking backwards, riot shield, reversed, 59" />
-    <animation state_key="crouch_moving" animation_key="crouching forwards, riot shield, reversed" />
-    <animation state_key="crouch_moving_backwards" 	animation_key="crouching backwards, shield, reversed" />
-    <animation key="changing_weapon_out" animation_key="change weapon out, reversed" />
-    <animation key="changing_weapon_in" animation_key="change weapon in, reversed" />
+    <animation key="hold" animation_key="still, riot shield,aegissergeantGA" />
+    <animation key="hold_on_wall" animation_key="still, riot shield,aegissergeantGA" />
+    <animation key="hold_casual" animation_key="still, riot shield,aegissergeantGA" />
+    <animation key="still_against_wall" animation_key="still, riot shield,aegissergeantGA" />
+    <animation key="recoil" animation_key="still, riot shield,aegissergeantGA" />
+    <animation key="crouching" animation_key="crouching still, riot shield,aegissergeantGA" />
+    <animation key="running" animation_key="running, riot shield,aegissergeantGA" />
+    <animation key="walking" animation_key="walking, riot shield, aegissergeantGA" />
+    <animation key="walking_backwards" animation_key="walking, riot shield, aegissergeantGA" />
+    <animation state_key="crouch_moving" animation_key="crouching forwards, riot shield, aegissergeantGA" />
+    <animation state_key="crouch_moving_backwards" 	animation_key="crouching forwards, riot shield, aegissergeantGA" />
+    <animation key="changing_weapon_out" animation_key="change weapon out" />
+    <animation key="changing_weapon_in" animation_key="change weapon in" />
     <animation key="reload" animation_key="reload" />
 
     <sound class="impact" fileref="shield_drop.wav" />    
