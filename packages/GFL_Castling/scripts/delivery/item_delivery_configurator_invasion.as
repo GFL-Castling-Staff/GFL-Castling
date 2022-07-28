@@ -649,6 +649,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		array<array<ScoredResource@>> rewardPasses = {
 			{
       	ScoredResource("double_enjoyment_package.carry_item", "carry_item", 0.00001f),
+		ScoredResource("firecontrol.carry_item", "carry_item", 0.0000114514f), //不可能抽到哒 木大木大
 		ScoredResource("holy_meat_buns.carry_item", "carry_item", 0.000001f),
 		ScoredResource("sweet_bomb_box.carry_item", "carry_item", 0.00001f),
 		ScoredResource("ice_theatre.carry_item", "carry_item", 0.0001f),
@@ -666,6 +667,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		ScoredResource("ange.carry_item", "carry_item", 1.0f),
 		ScoredResource("ange_street.carry_item", "carry_item", 1.0f),
 		ScoredResource("gk_persica.carry_item", "carry_item", 0.1f),
+		ScoredResource("gkw_kccoar.weapon","weapon",0.7f),
 
 		ScoredResource("dandelion.carry_item", "carry_item", 1.0f),
 		ScoredResource("dima.carry_item", "carry_item", 1.0f),
