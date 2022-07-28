@@ -78,6 +78,9 @@ dictionary gameSkillIndex = {
         // 刘氏步枪协同攻击
         {"rf_liu",21},
 
+        // KCCO狙击手脚本弹头
+        {"kcco_sniper_scan",22},
+
         // 下面这行是用来占位的，在这之上添加新的技能key和index即可
         {"666",-1}
 };
@@ -358,7 +361,7 @@ class GFLskill : Tracker {
 					array<const XmlElement@> affectedCharacter;
 					_log("Scan successful");
 					for(uint i=0;i<m_fnum;i++) 
-						if(i==0) {
+						if(i!=factionid) {
 						array<const XmlElement@> affectedCharacter2;
 						affectedCharacter2 = getCharactersNearPosition(m_metagame,pos_smartgrenade,i,10.0f);
 						if (affectedCharacter2 !is null){
@@ -757,6 +760,65 @@ class GFLskill : Tracker {
 					}
 				}
 				break;			
+			}
+
+			case 22: {// KCCO狙击手脚本榴弹
+				int characterId = event.getIntAttribute("character_id");
+				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+				if (character !is null) {
+					uint factionid = character.getIntAttribute("faction_id");
+					Vector3 pos_smartbullet = stringToVector3(event.getStringAttribute("position"));
+					//获取技能影响的敌人数量
+					m_fnum = m_metagame.getFactionCount();
+					array<const XmlElement@> affectedCharacter;
+					_log("Kcco Sniper Scan successful");
+					for(uint i=0;i<m_fnum;i++) 
+						if(i!=factionid) {
+							array<const XmlElement@> affectedCharacter2;
+							affectedCharacter2 = getCharactersNearPosition(m_metagame,pos_smartbullet,i,24.0f);
+							if (affectedCharacter2 !is null){
+								for(uint x=0;x<affectedCharacter2.length();x++){
+									affectedCharacter.insertLast(affectedCharacter2[x]);
+								}
+							}
+						}
+					//根据区域内敌人数量执行不同的脚本弹头：
+					//0~5：精准狙击
+					//6~15：精准炮击
+					//15~25：中等范围迫击炮打击
+					//25以上：call大伊万
+					uint num_jud = affectedCharacter.length();
+					Vector3 sniperPos = stringToVector3(character.getStringAttribute("position"));
+					if (num_jud>0){
+						if (num_jud<=5) {
+							_log("Mode 1");
+							uint luckyGuyindex = rand(0,affectedCharacter.length()-1);
+							uint luckyGuyid = affectedCharacter[luckyGuyindex].getIntAttribute("id");
+							const XmlElement@ luckyGuy = getCharacterInfo(m_metagame, luckyGuyid);
+							Vector3 luckyGuyPos = stringToVector3(luckyGuy.getStringAttribute("position"));
+
+							CreateProjectile(m_metagame,sniperPos,luckyGuyPos,"kcco_smartbullet_1.projectile",characterId,factionid,280,0.01);
+							break;
+						}			
+						else if (num_jud<=15) {
+							_log("Mode 2");
+							CreateProjectile(m_metagame,pos_smartbullet,pos_smartbullet,"kcco_smartbullet_2.projectile",characterId,factionid,280,0.01);
+							break;						
+						}			
+						else if (num_jud<=25) {
+							_log("Mode 3");
+							CreateProjectile(m_metagame,pos_smartbullet,pos_smartbullet,"kcco_smartbullet_3.projectile",characterId,factionid,280,0.01);
+							break;						
+						}			
+						else  {
+							_log("Mode 4");
+							CreateProjectile(m_metagame,pos_smartbullet,pos_smartbullet,"kcco_smartbullet_4.projectile",characterId,factionid,280,0.01);
+							break;						
+						}	
+					}		
+					_log("Mode 0");			
+				}			
+				break;
 			}
 
             default:
