@@ -365,14 +365,14 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 		{
 			Faction f(FactionConfig(1, "sf.xml", "S.F.", "0.91 0.11 0.20", "sf.xml"), createCommanderAiCommand(1, 0.50, 0.50));
-			f.m_capacityMultiplier = 0.2;
+			f.m_capacityMultiplier = 0.5;
 			f.m_capacityOffset = 10;
 			stage.m_factions.insertLast(f);                                                                
 		}
 		{
 			Faction f(FactionConfig(2, "kcco.xml", "KCCO", "0.43 0.49 0.18", "kcco.xml"), createCommanderAiCommand(2, 0.10, 0.10));             
 			f.m_overCapacity = 80;                                             
-            f.m_capacityOffset = 40;
+            f.m_capacityOffset = 60;
 			f.m_capacityMultiplier = 1.3;
 			stage.m_factions.insertLast(f);                                    
 		}
