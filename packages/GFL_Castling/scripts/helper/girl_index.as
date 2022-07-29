@@ -177,7 +177,7 @@ dictionary tdoll_index = {
     {"173","gkw_pkp.weapon"},
     {"174",""},
     {"175","gkw_art556.weapon"},
-    {"176",""},
+    {"176","gkw_tmp.weapon"},
     {"177","gkw_klin.weapon"},
     {"178",""},
     {"179","gkw_dsr50.weapon"},
