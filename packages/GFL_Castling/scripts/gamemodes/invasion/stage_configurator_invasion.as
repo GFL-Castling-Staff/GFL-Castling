@@ -1738,9 +1738,9 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 		{ 				
 			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0, 0.4, 0.1));   // was 0.3 0.1  
-			f.m_overCapacity = 0;
-			f.m_capacityOffset = 0;      // was 5                                       
-			f.m_capacityMultiplier = 1;                                               
+			f.m_overCapacity = 50;
+			f.m_capacityOffset = 50;      // was 5                                       
+			f.m_capacityMultiplier = 1.3;                                               
 			f.m_bases = 1;
 			stage.m_factions.insertLast(f);
 		}
