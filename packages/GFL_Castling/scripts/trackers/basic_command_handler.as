@@ -603,8 +603,8 @@ class BasicCommandHandler : Tracker {
 		} else if (checkCommand(message, "dog")) {
 			spawnInstanceNearPlayer(senderId, "dog", "soldier", 0);    	
 		} else if (checkCommand(message, "gb1")) {
-			spawnInstanceNearPlayer(senderId, "complete_box.carry_item", "carry_item", 0);
-			spawnInstanceNearPlayer(senderId, "complete_box.carry_item", "carry_item", 0);
+			spawnInstanceNearPlayer(senderId, "upgrade_aa12.carry_item", "carry_item", 0);
+			spawnInstanceNearPlayer(senderId, "upgrade_type88.carry_item", "carry_item", 0);
 			spawnInstanceNearPlayer(senderId, "complete_box.carry_item", "carry_item", 0);
 			spawnInstanceNearPlayer(senderId, "complete_box.carry_item", "carry_item", 0);
 			spawnInstanceNearPlayer(senderId, "complete_box.carry_item", "carry_item", 0);

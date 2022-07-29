@@ -32,4 +32,21 @@
 	<model mesh_filename="magazine.mesh" texture_filename="tdollcraft.png" />
 	<commonness value="0.0" in_stock="0" can_respawn_with="0" />
 </carry_item>
+
+<carry_item name="Acceleration Coil" key="upgrade_type88.carry_item" time_to_live_out_in_the_open="90" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="1.0" player_death_drop_owner_lock_time="90.0">
+	<capacity value="1" source="rank" source_value="0.0" />
+	<hud_icon filename="hud_88type_upgrade.png" />
+	<inventory encumbrance="-1.0" buy_price="100000" sell_price="0" />
+	<model mesh_filename="vestexo.xml" />
+	<commonness value="0.0" in_stock="1" can_respawn_with="0" />
+</carry_item>
+
+<carry_item name="AA-12 HE Slug Ammo" key="upgrade_aa12.carry_item" time_to_live_out_in_the_open="90" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="1.0" player_death_drop_owner_lock_time="90.0">
+	<capacity value="1" source="rank" source_value="0.0" />
+	<hud_icon filename="hud_aa12_upgrade.png" />
+	<inventory encumbrance="-1.0" buy_price="15000" sell_price="0" />
+	<model mesh_filename="vestexo.xml" />
+	<commonness value="0.0" in_stock="1" can_respawn_with="0" />
+</carry_item>
+
 </carry_items>

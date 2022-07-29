@@ -78003,6 +78003,7 @@
             <position x="13.500000" y="38.500000" z="0.500000" />
             <position x="-12.038498" y="11.477385" z="-1.372352" />
             <position x="13.500000" y="0.500000" z="0.500000" />
+			<control key="effect" value="1" />
         </frame>
         <frame time="0.200000">
             <position x="1.388039" y="119.993210" z="-4.249358" />
@@ -78021,7 +78022,7 @@
             <position x="-12.038498" y="11.477385" z="-1.372352" />
             <position x="13.500000" y="0.500000" z="0.500000" />
         </frame>
-        <frame time="0.250000">
+        <frame time="0.30000">
             <position x="-0.949900" y="117.729279" z="14.856819" />
             <position x="-0.790002" y="114.204361" z="12.972837" />
             <position x="-12.654520" y="111.253822" z="3.888368" />
@@ -78037,6 +78038,12 @@
             <position x="17.376734" y="41.423374" z="-11.629779" />
             <position x="-3.067258" y="17.819223" z="-22.815737" />
             <position x="22.464006" y="7.081373" z="-27.081209" />
+			<control key="action" value="1" />
+			<control key="action" value="1" />
+			<control key="action" value="1" />
+			<control key="action" value="1" />
+			<control key="action" value="1" />
+			<control key="action" value="1" />
         </frame>
     </animation>
     <animation loop="0" end="1.500000" speed="1.000000" comment="change weapon to melee, gunda">
@@ -78319,6 +78326,8 @@
             <position x="10.744980" y="54.041779" z="28.762646" />
             <position x="-13.588634" y="8.292483" z="-32.721317" />
             <position x="14.709148" y="21.629860" z="9.326781" />
+			<control key="action" value="1" />
+			<control key="effect" value="1" />
         </frame>
         <frame time="0.05000000">
             <position x="0.735401" y="120.456779" z="4.463308" />
@@ -78336,6 +78345,7 @@
             <position x="10.744980" y="54.041779" z="28.762646" />
             <position x="-13.588634" y="8.292483" z="-32.721317" />
             <position x="14.709148" y="21.629860" z="9.326781" />
+			<control key="action" value="1" />
         </frame>
         <frame time="0.1000000">
             <position x="0.735401" y="120.456779" z="4.463308" />
@@ -78353,6 +78363,7 @@
             <position x="10.744980" y="54.041779" z="28.762646" />
             <position x="-13.588634" y="8.292483" z="-32.721317" />
             <position x="14.709148" y="21.629860" z="9.326781" />
+			<control key="action" value="1" />
         </frame>
         <frame time="0.2000000">
             <position x="0.735401" y="120.456779" z="4.463308" />
@@ -78370,6 +78381,7 @@
             <position x="10.744980" y="54.041779" z="28.762646" />
             <position x="-13.588634" y="8.292483" z="-32.721317" />
             <position x="14.709148" y="21.629860" z="9.326781" />
+			<control key="action" value="1" />
         </frame>
         <frame time="0.35000000">
             <position x="0.735401" y="120.456779" z="4.463308" />
@@ -78387,6 +78399,7 @@
             <position x="10.744980" y="54.041779" z="28.762646" />
             <position x="-13.588634" y="8.292483" z="-32.721317" />
             <position x="14.709148" y="21.629860" z="9.326781" />
+			<control key="action" value="1" />
         </frame>
         <frame time="0.5000000">
             <position x="0.735401" y="120.456779" z="4.463308" />
@@ -78404,6 +78417,7 @@
             <position x="10.744980" y="54.041779" z="28.762646" />
             <position x="-13.588634" y="8.292483" z="-32.721317" />
             <position x="14.709148" y="21.629860" z="9.326781" />
+			<control key="action" value="1" />
         </frame>
     </animation>
     <animation loop="0" end="1.950000" speed="1.000000" comment="reload, gunda melee">
