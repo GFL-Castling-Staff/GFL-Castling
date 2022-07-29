@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <weapon on_ground_up="0 0 1" 
 drop_count_factor_on_death="0" 
 drop_count_factor_on_player_death="0"
 time_to_live_out_in_the_open="0"  
 key="kccow_tactical_sniper_rf.weapon">
-
     <tag name="sniper" />
     <tag name="antiarmor" />
-	<tag name="mecha" />
-
+    <tag name="mecha" />
     <!--Weapon specifications-->
     <specification
-	retrigger_time="5" 
+	retrigger_time="10" 
 	accuracy_factor="3.0" 
 	sustained_fire_grow_step="0" 
 	sustained_fire_diminish_rate="0.5" 
@@ -21,7 +18,7 @@ key="kccow_tactical_sniper_rf.weapon">
 	can_shoot_crouching="1"
 	can_shoot_prone="1"
 	suppressed="1" 
-	name="Code:Kcco Elite Sniper" 
+	name="KCCO Elite Sniper" 
 	class="0" 
 	reload_one_at_a_time="0"
 	sight_range_modifier="3.0" 
@@ -33,8 +30,6 @@ key="kccow_tactical_sniper_rf.weapon">
 	stab_enabled="1"
 	barrel_offset="0.8" />
     <!--Animations-->
-	
-	
     <animation key="recoil" animation_key="recoil1" />
     <animation key="recoil" animation_key="recoil2" />
     <animation key="recoil" animation_key="recoil3" />
@@ -46,9 +41,7 @@ key="kccow_tactical_sniper_rf.weapon">
     <animation state_key="walking" animation_key="walking, hip fire" />
     <animation state_key="walking_backwards" animation_key="walking backwards, hip fire" />
     <animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
-
-	<animation state_key="stabbing" animation_key="melee, bayonet" />
-	
+    <animation state_key="stabbing" animation_key="melee, bayonet" />
     <!--Sounds-->
     <sound key="fire" fileref="cerynitis_fire_FromBF2042.wav" pitch_variety="0.05" volume="1.7" />
     <sound key="magazine_out" fileref="m1911_mgz_out_FromINS.wav" volume="0.8" />
@@ -57,13 +50,10 @@ key="kccow_tactical_sniper_rf.weapon">
     <!--Model, Icon, Cost-->
     <model filename="kccow_tactical_sniper_rf.xml" />
     <hud_icon filename="kccow_cerynitis.png" />
-
     <!--Ballistics-->
-	<ballistics near_far_distance="0.0" speed_estimation_near="240.0" speed_estimation_far="240.0" max_speed="3200.0" randomness="0.0" curve_height="4.5" tweak_factor="4.8"/>
-
+    <ballistics near_far_distance="0.0" speed_estimation_near="240.0" speed_estimation_far="240.0" max_speed="3200.0" randomness="0.0" curve_height="4.5" tweak_factor="4.8"/>
     <!-- <weak_hand_hold offset="0.1" /> -->
     <projectile file="kcco_smartbullet.projectile" />
-
     <!-- state modifiers for weapons are connected to shield impact events -->
     <!-- <shield offset="0 0 0.2" extent="0.4 1.6 0.6" /> -->
     <stance state_key="running" accuracy="1.1" />
@@ -74,21 +64,18 @@ key="kccow_tactical_sniper_rf.weapon">
     <stance state_key="crouching" accuracy="1.1" />
     <stance state_key="prone" accuracy="1.1" />
     <modifier class="speed" value="-0.1" />
-
-	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0" />
+    <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0" />
     <target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0" />
     <target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0" />
     <target_factors tag="apc" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0" />
     <target_factors tag="tank" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0" />
     <target_factors tag="heavy_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0" />
     <target_factors tag="light_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="7.0" />
-	<target_factors tag="target" distance="1.0" direction="0.0" squad_command="1.0" base_score="6.0" />
-    <target_factors tag="tactical" distance="1.0" direction="0.0" squad_command="1.0" base_score="5.0" />  
+    <target_factors tag="target" distance="1.0" direction="0.0" squad_command="1.0" base_score="6.0" />
+    <target_factors tag="tactical" distance="1.0" direction="0.0" squad_command="1.0" base_score="5.0" />
     <target_factors tag="punchme" distance="1.0" direction="0.0" squad_command="1.0" base_score="10.0" />
-	
     <modifier class="detectability" value="-0.6" />
     <inventory buy_price="0.0" sell_price="0.0" />
     <commonness in_stock="0" />
-	<capacity value="1" source="rank" source_value="0.0" />    
-	
+    <capacity value="1" source="rank" source_value="0.0" />
 </weapon>
