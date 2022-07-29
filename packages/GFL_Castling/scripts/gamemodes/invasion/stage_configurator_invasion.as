@@ -1164,9 +1164,6 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.m_playerAiCompensation = 6;                                     // was 5 (test4)
 		stage.m_playerAiReduction = 0;                                            // was 1.5 (test3)
 
-		stage.addTracker(Spawner(m_metagame, 1, Vector3(309,15,524), 10, "default_ai"));        // 1st tow slot filler
-		stage.addTracker(Spawner(m_metagame, 1, Vector3(658,10,374), 10, "default_ai"));        // vulcan slot filler
-
 		stage.addTracker(PeacefulLastBase(m_metagame, 0));
 		stage.addTracker(CommsCapacityHandler(m_metagame));
 
