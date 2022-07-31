@@ -132,10 +132,10 @@ class StageConfiguratorInvasion : StageConfigurator {
 			// for testing: 0 score no spawn -> 100% chance for icecream
 			//ScoredResource("", "", 0.0f),          
 			ScoredResource("", "", 70.0f),
-			ScoredResource("icecream.vehicle", "vehicle", 30.0f),
-			ScoredResource("icecream_Solar_Sea.vehicle", "vehicle", 30.0f),
-			ScoredResource("icecream_akino.vehicle", "vehicle", 30.0f),
-			ScoredResource("icecream_connexion.vehicle", "vehicle", 30.0f)
+			ScoredResource("icecream.vehicle", "vehicle", 100.0f)
+			// ScoredResource("icecream_Solar_Sea.vehicle", "vehicle", 30.0f),
+			// ScoredResource("icecream_akino.vehicle", "vehicle", 30.0f),
+			// ScoredResource("icecream_connexion.vehicle", "vehicle", 30.0f)
 		};
 		stage.addTracker(SpawnAtNode(m_metagame, resources, "icecream", 0, 1));
 	}
