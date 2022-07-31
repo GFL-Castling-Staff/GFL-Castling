@@ -27,7 +27,7 @@
         <commonness value="0.0" />
         <sound key="fire" fileref="typhon_fire_FromHALO4.wav" pitch_variety="0.05" volume="0.05" />
         <projectile file="typhoon_laser.projectile">
-            <result class="blast"  damage="0.4" damage_as_probability="1" radius="1.8" decal="1" push="0.0" character_state="death" 	faction_compare="not_equal"/>
+            <result class="blast"  damage="0.04" damage_as_probability="1" radius="1.0" decal="1" push="0.0" character_state="death" 	faction_compare="not_equal"/>
         </projectile>
         <!-- Scoring for target priority. Distance is between 0 and 1 based on range; direction is between 0 and 1 based on whether its near the barrel; squad_command is between 0 and on based on how close to the player's command order is, and base_score is a weight.. -->
         <!-- These all add together and the highest 'score' is the new target, targets are rescanned every 2.5 seconds to see if a new higher-score target is in sight-range. -->
