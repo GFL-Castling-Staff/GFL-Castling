@@ -173,6 +173,7 @@ class kill_event : Tracker {
                 const XmlElement@ killerCharacter = getCharacterInfo2(m_metagame,characterId);
                 if (killerCharacter is null) return;
                 array<const XmlElement@>@ equipment = killerCharacter.getElementsByTagName("item");
+                if (equipment.size() == 0) return;
                 string c_weaponType = equipment[0].getStringAttribute("key");
                 string c_armorType = equipment[4].getStringAttribute("key");
                 if(c_weaponType=="gkw_ppkmod3.weapon"){
