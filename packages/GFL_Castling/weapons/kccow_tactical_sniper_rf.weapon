@@ -9,7 +9,7 @@ key="kccow_tactical_sniper_rf.weapon">
     <tag name="mecha" />
     <!--Weapon specifications-->
     <specification
-	retrigger_time="10" 
+	retrigger_time="12" 
 	accuracy_factor="3.0" 
 	sustained_fire_grow_step="0" 
 	sustained_fire_diminish_rate="0.5" 
@@ -76,6 +76,6 @@ key="kccow_tactical_sniper_rf.weapon">
     <target_factors tag="punchme" distance="1.0" direction="0.0" squad_command="1.0" base_score="10.0" />
     <modifier class="detectability" value="-0.6" />
     <inventory buy_price="0.0" sell_price="0.0" />
-    <commonness in_stock="0" />
+    <commonness in_stock="1" />
     <capacity value="1" source="rank" source_value="0.0" />
 </weapon>

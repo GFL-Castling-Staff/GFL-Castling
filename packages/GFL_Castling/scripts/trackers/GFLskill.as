@@ -798,22 +798,22 @@ class GFLskill : Tracker {
 							const XmlElement@ luckyGuy = getCharacterInfo(m_metagame, luckyGuyid);
 							Vector3 luckyGuyPos = stringToVector3(luckyGuy.getStringAttribute("position"));
 
-							CreateProjectile(m_metagame,sniperPos,luckyGuyPos,"kcco_smartbullet_1.projectile",characterId,factionid,280,0.01);
+							CreateProjectile(m_metagame,sniperPos,luckyGuyPos,"kcco_smartbullet_1.projectile",characterId,factionid,240,0.01);
 							break;
 						}			
 						else if (num_jud<=15) {
 							_log("Mode 2");
-							CreateProjectile(m_metagame,pos_smartbullet,pos_smartbullet,"kcco_smartbullet_2.projectile",characterId,factionid,280,0.01);
+							CreateProjectile(m_metagame,pos_smartbullet,pos_smartbullet,"kcco_smartbullet_2.projectile",characterId,factionid,240,0.01);
 							break;						
 						}			
 						else if (num_jud<=25) {
 							_log("Mode 3");
-							CreateProjectile(m_metagame,pos_smartbullet,pos_smartbullet,"kcco_smartbullet_3.projectile",characterId,factionid,280,0.01);
+							CreateProjectile(m_metagame,pos_smartbullet,pos_smartbullet,"kcco_smartbullet_3.projectile",characterId,factionid,240,0.01);
 							break;						
 						}			
 						else  {
 							_log("Mode 4");
-							CreateProjectile(m_metagame,pos_smartbullet,pos_smartbullet,"kcco_smartbullet_4.projectile",characterId,factionid,280,0.01);
+							CreateProjectile(m_metagame,pos_smartbullet,pos_smartbullet,"kcco_smartbullet_4.projectile",characterId,factionid,240,0.01);
 							break;						
 						}	
 					}		
