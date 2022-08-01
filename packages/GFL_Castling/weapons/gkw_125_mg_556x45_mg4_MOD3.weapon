@@ -43,16 +43,16 @@
         barrel_offset="0.5" 
         retrigger_time="0.075" 
         accuracy_factor="1" 
-        sustained_fire_grow_step="0.2" 
-        sustained_fire_diminish_rate="1.5" 
+        sustained_fire_grow_step="0.25" 
+        sustained_fire_diminish_rate="2.25" 
         magazine_size="200" 
         suppressed="0" 
         name="MG4(MOD3)-[Haunted House Hammer]" 
         class="0" 
         projectile_speed="240" 
         sight_range_modifier="2.75"
-        can_shoot_standing="0" 
-        can_shoot_crouching="0"
+        can_shoot_standing="0"
+        can_shoot_crouching="1"
         can_shoot_prone="1"
         />
         <animation key="reload" animation_key="reloading, Machine gun 5" />
@@ -68,7 +68,7 @@
         <model filename="gkw_mg_mg4.xml" />
         <hud_icon filename="gkw_mg4mod3_skill.png" />
         <projectile file="bullet.projectile">
-            <result class="blast"  damage="2.0" radius="2.8" decal="1" push="0.3" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0" />
+            <result class="blast"  damage="1.1" radius="2.5" decal="1" push="0.3" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0" />
             <trigger class="impact" />
             <effect class="result" key="terrain" ref="BigBurst" use_surface_color="1" />
             <effect class="result" key="terrain" ref="LowDust"/>
@@ -81,7 +81,7 @@
         <stance state_key="running" accuracy="0.6" />
         <stance state_key="crouch_moving" accuracy="0.6" />
         <stance state_key="prone_moving" accuracy="0.6" />
-        <stance state_key="standing" accuracy="0.6" />
+        <stance state_key="standing" accuracy="0.75" />
         <stance state_key="crouching" accuracy="0.8" />
         <stance state_key="prone" accuracy="1" />
         <stance state_key="over_wall" accuracy="1" />
