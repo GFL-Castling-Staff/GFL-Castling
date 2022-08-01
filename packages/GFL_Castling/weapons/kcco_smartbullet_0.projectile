@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<projectile class="grenade" name="KCCO Scanning bullet" key="kcco_smartbullet_0.projectile" slot="3"  pulldown_in_air="4"  radius="0.1" drop_count_factor_on_death="0.25" drop_count_factor_on_player_death="1"  time_to_live_out_in_the_open="15">
+<projectile class="grenade" name="KCCO Scanning bullet" key="kcco_smartbullet_0.projectile" slot="3"  pulldown_in_air="20"  radius="0.1" drop_count_factor_on_death="0.25" drop_count_factor_on_player_death="1"  time_to_live_out_in_the_open="15">
 
     <result class="notify_script" key="kcco_sniper_scan" />
-    <trigger class="time" time_to_live="2"/>
+    <trigger class="time" time_to_live="3.2"/>
 
     <rotation class="random" />
 
@@ -15,6 +15,7 @@
     <sound class="result" key="static_object" copy="other" />
     <sound class="result" key="vehicle" copy="other" />
     <sound class="result" key="character" copy="other" />
+    <effect class="activated" ref="TracerFlash" lighting="0" />
     <effect class="activated" ref="TracerFlash" lighting="0" />
     <effect class="activated" ref="TracerFlash" lighting="0" />
 </projectile>
