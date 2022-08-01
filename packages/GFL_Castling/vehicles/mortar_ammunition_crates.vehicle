@@ -7,7 +7,7 @@
 
 	<control max_speed="20.0" acceleration="6.7" max_reverse_speed="6.0" max_rotation="0.8" max_water_depth="1.9" />
 
-	<physics max_health="15" mass="1000.0" extent="3.0 0.0 3.0" offset="0 0.0 0" top_offset="0 2 0" collision_model_pos="0 0.2 0" collision_model_extent="3.0 0.8 3.0" visual_offset="0 0.4 0" /> 
+	<physics max_health="75" mass="1000.0" extent="3.0 0.0 3.0" offset="0 0.0 0" top_offset="0 2 0" collision_model_pos="0 0.2 0" collision_model_extent="3.0 0.8 3.0" visual_offset="0 0.4 0" /> 
   
 	<visual class="chassis" mesh_filename="mortar_ammunition_crates.mesh" texture_filename="mortar_ammunition_crates.png" />
 
