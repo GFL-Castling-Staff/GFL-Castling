@@ -47,7 +47,7 @@
         <sound class="impact" fileref="rifle_drop.wav" />
         <model filename="gkw_ar_m4a1mod3.xml" />
         <hud_icon filename="gkw_m4a1mod3.png" />
-        <commonness value="0.01" can_respawn_with="1" />
+        <commonness value="0.01" in_stock="0"/>
         <capacity value="1" source="rank" source_value="0.0" />
         <weak_hand_hold offset="0.2" />
         <projectile file="bullet.projectile" can_be_detected_by_footmen="0">

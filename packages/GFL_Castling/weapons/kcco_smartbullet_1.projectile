@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projectile class="grenade" name="tracer dart" key="kcco_smartbullet_1.projectile" slot="0" on_ground_up="0 1 0" can_be_disarmed="0" can_be_detected_by_driver="0" time_to_live_out_in_the_open="0.0" drop_count_factor_on_death="0.0" drop_count_factor_on_player_death="0.0" pulldown_in_air="4" radius="0.5">
 
-    <result class="blast" radius="4" damage="10.0" decal="1" push="3" character_state="death" faction_compare="not_equal"/>
+    <result class="blast" radius="4" damage="10.0" decal="1" push="0.5" character_state="death" faction_compare="not_equal"/>
 
     <trigger class="impact"/>
     <rotation class="motion" />
