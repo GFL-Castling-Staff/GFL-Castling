@@ -2,7 +2,7 @@
 <projectile class="grenade" name="qwd impact grenade" key="qwd.projectile" slot="2" radius="0.15">
 
 
-    <result class="blast" radius="4.5" damage="3.0" push="0.8" decal="1" character_state="death" faction_compare="not_equal"/>
+    <result class="blast" radius="4.5" damage="2.0" push="0.8" decal="1" character_state="death" faction_compare="not_equal"/>
     <trigger class="impact" />
     <rotation class="random" />
 
