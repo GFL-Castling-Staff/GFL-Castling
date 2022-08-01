@@ -2,7 +2,7 @@
 <weapons>
 	<weapon file="KCCO.base_weapon" key="kcco_ar.weapon">
 		<tag name="autorifle" />
-		<specification accuracy_factor="0.98" barrel_offset="0.5" class="4" slot="0" magazine_size="60" name="Code:Cyclops-AR" projectile_speed="150" retrigger_time="0.06" suppressed="0" sustained_fire_diminish_rate="0.8" sustained_fire_grow_step="0.6" stab_enabled="1" burst_shots="3" last_burst_retrigger_time="1.0"/>
+		<specification accuracy_factor="0.98" barrel_offset="0.5" class="4" slot="0" magazine_size="60" name="Code:Cyclops-AR" projectile_speed="120" retrigger_time="0.06" suppressed="0" sustained_fire_diminish_rate="0.8" sustained_fire_grow_step="0.6" stab_enabled="1" burst_shots="3" last_burst_retrigger_time="1.0"/>
 
 		<commonness value="2.0" in_stock="1" />
 		<animation state_key="recoil" animation_key="recoil, hip fire" />
