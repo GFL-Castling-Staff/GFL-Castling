@@ -456,7 +456,7 @@ class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 			if (faction.isNeutral()) continue;
 			
 			// interpolate players 1 -> 32, spawn time 3.0 -> 1.0
-			addTracker(SpawnTimeHandler(this, i, 1, 20, 4.0, 2.0));
+			addTracker(SpawnTimeHandler(this, i, 1, 20, 5.0, 1.0));
 		}
 	}
 	
@@ -471,7 +471,7 @@ class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 			addTracker(SideBaseAttackHandler(this, i, 
 				1, 24, 
 				0.05, 0.0,    // side base attack probability
-				0.005, 0.0)); // lonewolf spawn score
+				0.0, 0.0)); // lonewolf spawn score
 		}
 	}
 	
