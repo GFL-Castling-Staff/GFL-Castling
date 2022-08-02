@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapon file="gf_hg.base_weapon" key="gkw_spp1_4207.weapon">
-
-	
-	<!--Weapon specifications-->
-	
+    <!--Weapon specifications-->
     <specification
 	retrigger_time="-1"
 	last_burst_retrigger_time="-1"
 	accuracy_factor="0.95"
-	sustained_fire_grow_step="0.6"
+	sustained_fire_grow_step="0.2"
 	sustained_fire_diminish_rate="1.6"
 	magazine_size="4"
-	
 	suppressed="0"
 	name="SPP-1-[Blue Lotus Night]"
 	class="4"
@@ -21,73 +17,45 @@
 	projectiles_per_shot="1"
 	burst_shots="1"
      />
-	
-	<!--Animations-->
-	
-	
-	
-	
-    
-	
-	
-	
-	
-	<inventory  buy_price="7.0" sell_price="7.0" />	
-	<animation state_key="recoil" animation_key="recoil, pistol" />
-	<animation state_key="recoil" stance_key="prone" animation_key="recoil, pistol, prone" />
-	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil, overwall pistol" />	
-	
-	<animation state_key="cycle"	animation_key="cycle, revolver" />
-	<animation state_key="cycle" stance_key="prone" animation_key="cycle, revolver, prone" />
-	
-	<!-- 狗策划的换弹速度 -->
-	<animation state_key="reload"	animation_key="RevolverReload" />
-	<!-- <animation state_key="reload"	animation_key="reloading, swing out revolver" /> -->
+    <!--Animations-->
+    <inventory  buy_price="7.0" sell_price="7.0" />
+    <animation state_key="recoil" animation_key="recoil, pistol" />
+    <animation state_key="recoil" stance_key="prone" animation_key="recoil, pistol, prone" />
+    <animation state_key="recoil" stance_key="over_wall" animation_key="recoil, overwall pistol" />
+    <animation state_key="cycle"	animation_key="cycle, revolver" />
+    <animation state_key="cycle" stance_key="prone" animation_key="cycle, revolver, prone" />
+    <!-- 狗策划的换弹速度 -->
+    <animation state_key="reload"	animation_key="RevolverReload" />
+    <!-- <animation state_key="reload"	animation_key="reloading, swing out revolver" /> -->
     <!-- <animation state_key="reload"	animation_key="reloading, pistol" /> -->
-	<!-- <animation key="reload" stance_key="prone" animation_key="reloading, pistol, prone" />	 -->
-	
-	<animation state_key="hold"					animation_key="hold, pistol" />
-  	<animation state_key="hold_casual"			animation_key="dancing, kazachok" />
-	<animation state_key="hold_on_wall"			animation_key="hold, overwall pistol" />
-  	<animation state_key="still_against_wall"	animation_key="hold_casual, pistol 4" />
-	<animation state_key="running"				animation_key="running, pistol" />
-	<animation state_key="walking"				animation_key="walking, pistol" />
+    <!-- <animation key="reload" stance_key="prone" animation_key="reloading, pistol, prone" />	 -->
+    <animation state_key="hold"					animation_key="hold, pistol" />
+    <animation state_key="hold_casual"			animation_key="dancing, kazachok" />
+    <animation state_key="hold_on_wall"			animation_key="hold, overwall pistol" />
+    <animation state_key="still_against_wall"	animation_key="hold_casual, pistol 4" />
+    <animation state_key="running"				animation_key="running, pistol" />
+    <animation state_key="walking"				animation_key="walking, pistol" />
     <animation state_key="walking_backwards" 	animation_key="walking backwards, pistol" />
-	
-	<animation state_key="crouching"			animation_key="crouch, pistol" />
-	<animation state_key="crouch_moving"		animation_key="crouching forwards, single hand carry" />
-	<animation state_key="crouch_moving_backwards"	animation_key="crouching backwards, single hand carry" />
-	
+    <animation state_key="crouching"			animation_key="crouch, pistol" />
+    <animation state_key="crouch_moving"		animation_key="crouching forwards, single hand carry" />
+    <animation state_key="crouch_moving_backwards"	animation_key="crouching backwards, single hand carry" />
     <animation state_key="prone_still" 			animation_key="prone_still, pistol" />
-	
     <animation state_key="changing_weapon_in" 	animation_key="change weapon in, single hand carry" />
-	
     <animation state_key="stabbing" 			animation_key="pistol whip" />
     <animation state_key="stabbing" 			animation_key="pistol whip 3" />
-	
-    
-    
-    
-	
-	<!--Sounds-->
-		
+    <!--Sounds-->
     <sound key="fire" fileref="spp1_fire_FromSQUAD.wav" pitch_variety="0.05" volume="1" />
     <sound key="magazine_out" fileref="revolver_magazine_out.wav" volume="1" />
     <sound key="magazine_in" fileref="revolver_magazine_in.wav" volume="1" />
     <sound key="cycle_out" fileref="revolver_cycle_out.wav" volume="1" />
     <sound key="cycle_in" fileref="revolver_cycle_in.wav" volume="1" />
     <sound key="cycle" fileref="revolver_cycle.wav" volume="1" />
-	<sound key="reload_one" fileref="revolver_magazine_in.wav" />
-   
-	<!--Model, Icon, Cost-->
+    <sound key="reload_one" fileref="revolver_magazine_in.wav" />
+    <!--Model, Icon, Cost-->
     <model filename="gkw_hg_spp1_from_melondove.xml" />
     <hud_icon filename="gkw_spp1_4207.png" />
     <commonness value="0" in_stock="0" can_respawn_with="1" />
-
-	
-	<!--Ballistics-->
-	
-    
+    <!--Ballistics-->
     <weak_hand_hold offset="0.1" />
     <projectile file="bullet.projectile">
         <result class="hit"
@@ -95,9 +63,7 @@
 		kill_decay_start_time="0.129"
 		kill_decay_end_time="0.2144"  />
     </projectile>
-    
     <!--Accuracy, Movement speed-->
-        
     <stance state_key="running" accuracy="0.8" />
     <stance state_key="walking" accuracy="0.85" />
     <stance state_key="crouch_moving" accuracy="0.8" />
@@ -105,6 +71,4 @@
     <stance state_key="standing" accuracy="0.9" />
     <stance state_key="crouching" accuracy="0.95" />
     <stance state_key="prone" accuracy="1" />
-
-
 </weapon>
