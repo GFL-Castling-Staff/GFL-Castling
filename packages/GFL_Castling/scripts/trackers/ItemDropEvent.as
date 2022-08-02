@@ -12,7 +12,7 @@
 // 1 armory
 // 2 Backpack
 // 3 Stash
-
+// 4 Equiped
 //Author: NetherCrow
 
 class CraftQueue
