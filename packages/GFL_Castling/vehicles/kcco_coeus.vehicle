@@ -31,14 +31,17 @@
 	<sound key="destroy" filename="gas_tank_explosion_1.wav" />
 	<sound key="turret_rotation" filename="turret_rotation1.wav" volume="0.8" />
 	<sound key="turret_rotation" filename="turret_rotation2.wav" volume="0.8" />
-	<effect event_key="health" value="3.5" ref="SmallSmokeVehicle" offset="0.0 1.8 -4.0" />
-	<effect event_key="health" value="2.7" ref="SmallSmokeVehicle" offset="0.0 1.8 -4.0" />
-	<effect event_key="health" value="2.7" ref="BrokenSparkle" post_processing="0" offset="0.0 2.0 -4.0" />
-	<effect event_key="destroyed" ref="SmallSmokeVehicle" offset="0.0 1.8 -3.8" />
-	<effect event_key="destroyed" ref="SmallSmokeVehicle" offset="-0.8 1.8 -3.8" />
+	<effect event_key="health" value="48" ref="SmallSmokeVehicle" offset="0.0 1.8 -2.0" />
+	<effect event_key="health" value="16" ref="SmallSmokeVehicle" offset="0.0 1.8 -2.0" />
+	<effect event_key="health" value="16" ref="BrokenSparkle" post_processing="0" offset="0.0 2.0 -2.0" />
+	<effect event_key="health" value="8" ref="SmallSmokeVehicle" offset="0.0 1.8 -2.0" />
+	<effect event_key="health" value="8" ref="SmallSmokeVehicle" post_processing="0" offset="0.0 2.0 -2.0" />
+	<effect event_key="health" value="8" ref="BrokenSparkle" post_processing="0" offset="0.0 2.0 -2.0" />
+	<effect event_key="destroyed" ref="SmallSmokeVehicle" offset="0.0 1.8 -1.8" />
+	<effect event_key="destroyed" ref="SmallSmokeVehicle" offset="-0.8 1.8 -1.8" />
 	<effect event_key="destroyed" ref="MediumSmokeVehicle" offset="0.0 2.9 0.6" />
 	<effect event_key="destroyed" ref="MediumSmokeVehicle" offset="-0.6 2.7 -0.2" />
-	<effect event_key="destroyed" ref="SmallFireRepeat" offset="0.0 1.8 -3.8" />
+	<effect event_key="destroyed" ref="SmallFireRepeat" offset="0.0 2.4 -1.8" />
 	<effect event_key="destroy" key="other" ref="woosh" post_processing="0" shadow="0" />
 	<effect event_key="cleanup" key="other" ref="woosh" post_processing="0" shadow="0" />
 	<event key="receive_damage_xp_reward">
