@@ -341,7 +341,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.m_mapInfo.m_path = "media/packages/GFLC_Map/maps/map105_2";
 		stage.m_mapInfo.m_id = "map105_2";
 
-		stage.m_maxSoldiers = 200;                                          // was 11*10
+		stage.m_maxSoldiers = 160;                                          // was 11*10
 		stage.m_soldierCapacityModel = "constant";     
 		stage.m_playerAiCompensation = 8;                                       // was 4
         stage.m_playerAiReduction = 0;                                        // was 2    
@@ -371,8 +371,8 @@ class StageConfiguratorInvasion : StageConfigurator {
 		}
 		{
 			Faction f(FactionConfig(2, "kcco.xml", "KCCO", "0.43 0.49 0.18", "kcco.xml"), createCommanderAiCommand(2, 0.10, 0.10));             
-			f.m_overCapacity = 80;                                             
-            f.m_capacityOffset = 60;
+			f.m_overCapacity = 60;                                             
+            f.m_capacityOffset = 40;
 			f.m_capacityMultiplier = 1.3;
 			stage.m_factions.insertLast(f);                                    
 		}
