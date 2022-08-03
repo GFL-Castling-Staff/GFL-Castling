@@ -1097,7 +1097,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 	protected Stage@ setupStage9() {
 		Stage@ stage = createStage();
 		stage.m_mapInfo.m_name = "Black Gold Estuary";
-		stage.m_mapInfo.m_path = "media/packages/vanilla.desert/maps/map9";
+		stage.m_mapInfo.m_path = "media/packages/GFLC_Map/maps/map9";
 		stage.m_mapInfo.m_id = "map9";
 
 		stage.m_includeLayers.insertLast("layer1.invasion");
