@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-	<vehicle 
+<vehicle 
 	file="vehicle_base.vehicle" 
 	name="Uhlan" 
 	key="paradeus_uhlan.vehicle" 
@@ -15,30 +15,24 @@
 	ai_abandon_when_unsteerable="0"
 	ai_stop_to_fight="0" 
 	>
-	
-	
-	<tag name="metal_heavy" />
-	<tag name="tank" />
-	<tag name="heavy_combat" />
-
-
-	<tire_set offset="1.5 -0.0 +3.0" radius="0.5" />
-	<tire_set offset="0.5 -0.0 -0.0" radius="0.5" />
-	<tire_set offset="1.5 -0.0 -3.0" radius="0.5" />
-
-	<control 
+    <tag name="metal_heavy" />
+    <tag name="tank" />
+    <tag name="heavy_combat" />
+    <tire_set offset="1.5 -0.0 +3.0" radius="0.5" />
+    <tire_set offset="0.5 -0.0 -0.0" radius="0.5" />
+    <tire_set offset="1.5 -0.0 -3.0" radius="0.5" />
+    <control 
 	max_speed="30.0" 
 	acceleration="65.0" 
-	max_reverse_speed="20.0" 
+	max_reverse_speed="30.0" 
 	min_health_to_steer="5.0" 
 	max_rotation="0.0" 
 	max_water_depth="9.4" 
 	tracked="1" 
 	gears="1" />
-
-	<physics 
-	max_health="75.00" 
-	blast_damage_threshold="0.9" 
+    <physics 
+	max_health="60.0" 
+	blast_damage_threshold="8.0" 
 	mass="150.0" 
 	broken_mass="100"
     remove_collision_threshold="50.0"	
@@ -47,115 +41,98 @@
 	top_offset="0 1.8 -1.5" 
 	collision_model_pos="0 0.6 0.1" 
 	collision_model_extent="4.0 2.8 6.5" 
-	visual_offset="0 0.2 0.0" /> 
-	<modifier class="blast_damage" value="-1.0" />
-
-	<!-- one weapon per turret so that only one soldier controls the turret orientation -->
-	<!-- similarly, a controllable turret can only exist if it has a weapon -->
-	<!-- turrets may have sub-turrets, which may have more weapons, in the future -->
-	<turret offset="0 2.5 -1.5" weapon_key="uhlan_main_cannon" weapon_offset="0.0 0.45 4.0" weapon_recoil="0.0" physics_recoil="0.0" max_rotation_step="0.00065" />
-	<turret offset="0 2.5 -1.5" weapon_key="uhlan_main_cannon_2" weapon_offset="0.0 0.45 4.0" weapon_recoil="0.0" physics_recoil="0.0" max_rotation_step="0.00065" />
-	<turret offset="0 2.5 -1.5" weapon_key="uhlan_rocket" weapon_offset="0.3 1.50 0.0" weapon_recoil="0.0" physics_recoil="0.0" max_rotation_step="0.00065" />
-
-	<visual class="chassis" mesh_filename="Uhlan_body.mesh" texture_filename="Uhlan_Body_Color.png" max_tilt="0.06" />
-	<visual class="turret" turret_index="0" mesh_filename="Uhlan_turret.mesh" texture_filename="Uhlan_Turret_Color.png" offset="-0.00 -2.5 1.0" max_tilt="0.00"/>
-	
-	<visual class="track" mesh_filename="Uhlan_track_left.mesh" offset="-0.0 -0.0 0.0">
-		<part texture_filename="Uhlan_Track_Color.png" texture_animation="rotate" tire_binding="0" />
-		<part texture_filename="Uhlan_Track_Color.png" />
-		<part texture_filename="Uhlan_Track_Color.png" texture_animation="translate" tire_binding="0" />
-	</visual>
-
-	<visual class="track" mesh_filename="Uhlan_track_right.mesh" offset="0.0 -0.0 0.0">
-		<part texture_filename="Uhlan_Track_Color.png" texture_animation="rotate" tire_binding="1" />
-		<part texture_filename="Uhlan_Track_Color.png" />
-		<part texture_filename="Uhlan_Track_Color.png" texture_animation="translate" tire_binding="1" />
-	</visual>
-	<!-- broken -->
-	<!-- class="track" dont work -->
-	<visual class="chassis" mesh_filename="Uhlan_body.mesh" texture_filename="none_black.png" key="broken" />
-	<visual class="turret" turret_index="0" mesh_filename="Uhlan_turret.mesh" texture_filename="none_black.png" key="broken"/>
-
-	<character_slot type="driver" position="1.1 0.5 -2.3" rotation="0" exit_rotation="-3.14" hiding="1" animation_id="36" />
-	<character_slot type="gunner" position="-1.1 0.5 -2.3" seat_position="0 1.5 -2" rotation="0" exit_rotation="-3.14" hiding="1" animation_id="37">
-		<turret index="0" />  <turret index="1" /> <turret index="2" />
-	</character_slot>
-
-	<!-- sound handling -->
-	<rev_sound filename="tank_rev0.wav" low_pitch="0.5" high_pitch="0.7" low_rev="0.0" high_rev="1.0" volume="0.7" />
-	<rev_sound filename="tank_rev0_b.wav" low_pitch="0.6" high_pitch="0.8" low_rev="0.0" high_rev="1.0" volume="0.6" /> 
-	<rev_sound filename="tank_rev1.wav" low_pitch="0.2" high_pitch="0.5" low_rev="0.4" high_rev="0.7" volume="0.6" />
-	<rev_sound filename="tank_tracks.wav" low_pitch="0.4" high_pitch="0.7" low_rev="0.1" high_rev="1.0" volume="0.7" />  
-	<rev_sound filename="tank_rev2.wav" low_pitch="0.3" high_pitch="0.5" low_rev="0.9" high_rev="1.0" volume="0.7" />
-
-	<sound key="squeal" filename="tire_squeal.wav" />
-	<sound key="ignition" filename="jeep2_ignition.wav" />
-	<sound key="hit" filename="car_hit1.wav" />
-	<sound key="hit" filename="car_hit2.wav" />
-	<sound key="destroy" filename="vehicle_explosion_1.wav" />   
-	<sound key="cleanup" filename="vehicle_explosion_1.wav" />    
-
-	<sound key="turret_rotation" filename="turret_rotation1.wav" volume="0.8" />
-	<sound key="turret_rotation" filename="turret_rotation2.wav" volume="0.8"/>
-  
-	<effect event_key="drive" type="splat_map" surface_tag="dirt" size="1.0" atlas_index="2" layer="1" />
-	<effect event_key="drive" type="particle" key="terrain" surface_tag="dirt" ref="Burst" use_surface_color="1" />
-  
-	<effect event_key="health" value="3.15" ref="SmallSmokeVehicle" offset="-0.7 2.4 -4.2" />
-	<effect event_key="health" value="3.15" ref="SmallSmokeVehicle" offset="+0.7 2.4 -4.2" />  
-	<effect event_key="health" value="0.62" ref="SmallSmokeVehicle" offset="-0.7 2.4 -4.2" />
-	<effect event_key="health" value="0.62" ref="SmallSmokeVehicle" offset="+0.7 2.4 -4.2" />  
-	<effect event_key="health" value="0.62" ref="BrokenSparkle" post_processing="0" offset="-0.7 1.8 -4.2" />
-	<effect event_key="health" value="0.62" ref="BrokenSparkle" post_processing="0" offset="+0.7 1.8 -4.2" />  
-	<effect event_key="destroyed" ref="SmallSmokeVehicle" offset="0.0 2.4 -3.1" />
-	<effect event_key="destroyed" ref="SmallSmokeVehicle" offset="-0.8 2.5 -3.1" />  
-	<effect event_key="destroyed" ref="MediumSmokeVehicle" offset="0.0 3.2 0.5" />  
-	<effect event_key="destroyed" ref="MediumSmokeVehicle" offset="-0.6 3.0 -0.2" />    
-	<effect event_key="destroyed" ref="SmallFireRepeat" offset="0.0 2.4 -3.1" />
-	<effect event_key="destroy" key="other" ref="woosh" post_processing="0" shadow="0" />   
-	<effect event_key="cleanup" key="other" ref="woosh" post_processing="0" shadow="0" />   
-   
-
-	<event key="receive_damage_xp_reward">
-		<trigger class="receive_damage" />
-		<result class="reward" xp="0.0100" />
-	</event>
-
-	<event key="spot_rp_reward">
-		<trigger class="spot" />
-		<result class="reward" rp="150.0" />
-	</event>
-
-	<event key="destroy_rp_reward">
-		<trigger class="destroy" />
-		<result class="reward" rp="800.0" />
-	</event>
-    
-	<event>
-		<trigger class="destroy" />
-  	<result class="spawn" instance_class="visual_item" instance_key="burning_piece_armor1.visual_item" min_amount="1" max_amount="3" offset="0 3.0 0" position_spread="1.5 1.5" direction_spread="0.15 0.3" />
-	</event>
-	<event>
-		<trigger class="destroy" />  	
-    <result class="spawn" instance_class="visual_item" instance_key="burning_piece_armor2.visual_item" min_amount="0" max_amount="1" offset="0 3.0 0" position_spread="1.5 1.5" direction_spread="0.10 0.15" />
-	</event>
-  <event>
-		<trigger class="destroy" />		
-    <result class="spawn" instance_class="visual_item" instance_key="burning_piece_armor3.visual_item" min_amount="1" max_amount="2" offset="0 3.0 0" position_spread="1.5 1.5" direction_spread="0.12 0.20" />
-	</event>
-  <event>
-		<trigger class="destroy" />		
-    <result class="spawn" instance_class="visual_item" instance_key="burning_piece_armor4.visual_item" min_amount="1" max_amount="2" offset="0 3.0 0" position_spread="1.5 1.5" direction_spread="0.1 0.25" />
-	</event>    
-
-  <event>
-		<trigger class="cleanup" />		
-    <result class="spawn" instance_class="visual_item" instance_key="burning_piece_cleanup.visual_item" min_amount="20" max_amount="30" offset="0 2.0 0" position_spread="1.5 1.5" direction_spread="0.1 0.1" /> 
-  </event>    
- 	<event>
-		<trigger class="cleanup" />
-    <result class="spawn" instance_class="projectile" instance_key="debri_stun" min_amount="1" max_amount="1" offset="0 3.0 0" position_spread="0.0 0.0" direction_spread="0.0 0.0" />
-  </event>
-
-  
+	visual_offset="0 0.2 0.0" />
+    <!-- one weapon per turret so that only one soldier controls the turret orientation -->
+    <!-- similarly, a controllable turret can only exist if it has a weapon -->
+    <!-- turrets may have sub-turrets, which may have more weapons, in the future -->
+    <turret offset="0 2.5 -1.5" weapon_key="uhlan_main_cannon" weapon_offset="0.0 0.45 4.0" weapon_recoil="0.0" physics_recoil="0.0" max_rotation_step="0.00065" />
+    <turret offset="0 2.5 -1.5" weapon_key="uhlan_main_cannon_2" weapon_offset="0.0 0.45 4.0" weapon_recoil="0.0" physics_recoil="0.0" max_rotation_step="0.00065" />
+    <turret offset="0 2.5 -1.5" weapon_key="uhlan_rocket" weapon_offset="0.3 1.50 0.0" weapon_recoil="0.0" physics_recoil="0.0" max_rotation_step="0.00065" />
+    <visual class="chassis" mesh_filename="Uhlan_body.mesh" texture_filename="Uhlan_Body_Color.png" max_tilt="0.06" />
+    <visual class="turret" turret_index="0" mesh_filename="Uhlan_turret.mesh" texture_filename="Uhlan_Turret_Color.png" offset="-0.00 -2.5 1.0" max_tilt="0.00"/>
+    <visual class="track" mesh_filename="Uhlan_track_left.mesh" offset="-0.0 -0.0 0.0">
+        <part texture_filename="Uhlan_Track_Color.png" texture_animation="rotate" tire_binding="0" />
+        <part texture_filename="Uhlan_Track_Color.png" />
+        <part texture_filename="Uhlan_Track_Color.png" texture_animation="translate" tire_binding="0" />
+    </visual>
+    <visual class="track" mesh_filename="Uhlan_track_right.mesh" offset="0.0 -0.0 0.0">
+        <part texture_filename="Uhlan_Track_Color.png" texture_animation="rotate" tire_binding="1" />
+        <part texture_filename="Uhlan_Track_Color.png" />
+        <part texture_filename="Uhlan_Track_Color.png" texture_animation="translate" tire_binding="1" />
+    </visual>
+    <!-- broken -->
+    <!-- class="track" dont work -->
+    <visual class="chassis" mesh_filename="Uhlan_body.mesh" texture_filename="none_black.png" key="broken" />
+    <visual class="turret" turret_index="0" mesh_filename="Uhlan_turret.mesh" texture_filename="none_black.png" key="broken"/>
+    <character_slot type="driver" position="1.1 0.5 -2.3" rotation="0" exit_rotation="-3.14" hiding="1" animation_id="36" />
+    <character_slot type="gunner" position="-1.1 0.5 -2.3" seat_position="0 1.5 -2" rotation="0" exit_rotation="-3.14" hiding="1" animation_id="37">
+        <turret index="0" />
+        <turret index="1" />
+        <turret index="2" />
+    </character_slot>
+    <!-- sound handling -->
+    <rev_sound filename="tank_rev0.wav" low_pitch="0.5" high_pitch="0.7" low_rev="0.0" high_rev="1.0" volume="0.7" />
+    <rev_sound filename="tank_rev0_b.wav" low_pitch="0.6" high_pitch="0.8" low_rev="0.0" high_rev="1.0" volume="0.6" />
+    <rev_sound filename="tank_rev1.wav" low_pitch="0.2" high_pitch="0.5" low_rev="0.4" high_rev="0.7" volume="0.6" />
+    <rev_sound filename="tank_tracks.wav" low_pitch="0.4" high_pitch="0.7" low_rev="0.1" high_rev="1.0" volume="0.7" />
+    <rev_sound filename="tank_rev2.wav" low_pitch="0.3" high_pitch="0.5" low_rev="0.9" high_rev="1.0" volume="0.7" />
+    <sound key="squeal" filename="tire_squeal.wav" />
+    <sound key="ignition" filename="jeep2_ignition.wav" />
+    <sound key="hit" filename="car_hit1.wav" />
+    <sound key="hit" filename="car_hit2.wav" />
+    <sound key="destroy" filename="vehicle_explosion_1.wav" />
+    <sound key="cleanup" filename="vehicle_explosion_1.wav" />
+    <sound key="turret_rotation" filename="turret_rotation1.wav" volume="0.8" />
+    <sound key="turret_rotation" filename="turret_rotation2.wav" volume="0.8"/>
+    <effect event_key="drive" type="splat_map" surface_tag="dirt" size="1.0" atlas_index="2" layer="1" />
+    <effect event_key="drive" type="particle" key="terrain" surface_tag="dirt" ref="Burst" use_surface_color="1" />
+    <effect event_key="health" value="3.15" ref="SmallSmokeVehicle" offset="-0.7 2.4 -4.2" />
+    <effect event_key="health" value="3.15" ref="SmallSmokeVehicle" offset="+0.7 2.4 -4.2" />
+    <effect event_key="health" value="0.62" ref="SmallSmokeVehicle" offset="-0.7 2.4 -4.2" />
+    <effect event_key="health" value="0.62" ref="SmallSmokeVehicle" offset="+0.7 2.4 -4.2" />
+    <effect event_key="health" value="0.62" ref="BrokenSparkle" post_processing="0" offset="-0.7 1.8 -4.2" />
+    <effect event_key="health" value="0.62" ref="BrokenSparkle" post_processing="0" offset="+0.7 1.8 -4.2" />
+    <effect event_key="destroyed" ref="SmallSmokeVehicle" offset="0.0 2.4 -3.1" />
+    <effect event_key="destroyed" ref="SmallSmokeVehicle" offset="-0.8 2.5 -3.1" />
+    <effect event_key="destroyed" ref="MediumSmokeVehicle" offset="0.0 3.2 0.5" />
+    <effect event_key="destroyed" ref="MediumSmokeVehicle" offset="-0.6 3.0 -0.2" />
+    <effect event_key="destroyed" ref="SmallFireRepeat" offset="0.0 2.4 -3.1" />
+    <effect event_key="destroy" key="other" ref="woosh" post_processing="0" shadow="0" />
+    <effect event_key="cleanup" key="other" ref="woosh" post_processing="0" shadow="0" />
+    <event key="receive_damage_xp_reward">
+        <trigger class="receive_damage" />
+        <result class="reward" xp="0.0100" />
+    </event>
+    <event key="spot_rp_reward">
+        <trigger class="spot" />
+        <result class="reward" rp="150.0" />
+    </event>
+    <event key="destroy_rp_reward">
+        <trigger class="destroy" />
+        <result class="reward" rp="800.0" />
+    </event>
+    <event>
+        <trigger class="destroy" />
+        <result class="spawn" instance_class="visual_item" instance_key="burning_piece_armor1.visual_item" min_amount="1" max_amount="3" offset="0 3.0 0" position_spread="1.5 1.5" direction_spread="0.15 0.3" />
+    </event>
+    <event>
+        <trigger class="destroy" />
+        <result class="spawn" instance_class="visual_item" instance_key="burning_piece_armor2.visual_item" min_amount="0" max_amount="1" offset="0 3.0 0" position_spread="1.5 1.5" direction_spread="0.10 0.15" />
+    </event>
+    <event>
+        <trigger class="destroy" />
+        <result class="spawn" instance_class="visual_item" instance_key="burning_piece_armor3.visual_item" min_amount="1" max_amount="2" offset="0 3.0 0" position_spread="1.5 1.5" direction_spread="0.12 0.20" />
+    </event>
+    <event>
+        <trigger class="destroy" />
+        <result class="spawn" instance_class="visual_item" instance_key="burning_piece_armor4.visual_item" min_amount="1" max_amount="2" offset="0 3.0 0" position_spread="1.5 1.5" direction_spread="0.1 0.25" />
+    </event>
+    <event>
+        <trigger class="cleanup" />
+        <result class="spawn" instance_class="visual_item" instance_key="burning_piece_cleanup.visual_item" min_amount="20" max_amount="30" offset="0 2.0 0" position_spread="1.5 1.5" direction_spread="0.1 0.1" />
+    </event>
+    <event>
+        <trigger class="cleanup" />
+        <result class="spawn" instance_class="projectile" instance_key="debri_stun" min_amount="1" max_amount="1" offset="0 3.0 0" position_spread="0.0 0.0" direction_spread="0.0 0.0" />
+    </event>
 </vehicle>

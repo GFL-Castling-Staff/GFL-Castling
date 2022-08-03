@@ -17,12 +17,12 @@
   		<result class="notify_script" key="aa_destroy"/>
 	</event> 
 
-	<modifier class="blast_range" value="-1.0" />
-	<modifier class="blast_damage" value="-2.0" />
+	<modifier class="blast_range" value="+1.0" />
 
 	<control max_speed="3.0" acceleration="1.0" max_reverse_speed="1.0" max_rotation="0.8" max_water_depth="1.0" />
 
 	<physics 
+		blast_damage_threshold="4.0" 
 		max_health="100.0" 
 		mass="9999.5" 
 		extent="2.2 4.0 4.2" 
