@@ -21,7 +21,7 @@
   <parameter class="grenade_monitor_range" value="15.0" />
   <parameter class="leader_sight_range" value="35.0" />
   <parameter class="team_member_sight_range" value="30.0" />
-  <parameter class="strike_frequency_time" value="60.0" />   <!-- was 90 (1.82) -->
+  <parameter class="strike_frequency_time" value="45.0" />   <!-- was 90 (1.82) -->
   <parameter class="global_separation_radius_factor" value="1.5" />
   <parameter class="prefer_roofs_probability" value="0.5" />
   <parameter class="max_leader_authority_willing_to_join_another_squad" value="0.3" />
@@ -45,8 +45,8 @@
   <parameter class="leading_inspect_alarm_min_distance" value="45.0" />
   <parameter class="maximum_distance_to_consider_for_heal" value="40.0" />
   <parameter class="consider_someone_already_healing_wounded_distance" value="10.0" />
-  <parameter class="force_comparison_multiplier_to_call_reinforcements" value="0.45" />
-  <parameter class="call_reinforcements_max_distance" value="40.0" />
+  <parameter class="force_comparison_multiplier_to_call_reinforcements" value="0.30" />
+  <parameter class="call_reinforcements_max_distance" value="50.0" />
   <parameter class="fighting_approach_alarm_spread_max_range" value="30.0" />
   <parameter class="default_fighting_separation" value="7.0" />
   <parameter class="boosted_fighting_separation" value="3.0" />
