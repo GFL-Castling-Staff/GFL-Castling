@@ -27,7 +27,7 @@ void main(dictionary@ inputData) {
 		settings.m_rpFactor = 1.0;
 
         array<string> overlays = {
-			"media/packages/invasion",
+			
             "media/packages/GFLC_Map",
 			"media/packages/GFL_Castling"
         };
