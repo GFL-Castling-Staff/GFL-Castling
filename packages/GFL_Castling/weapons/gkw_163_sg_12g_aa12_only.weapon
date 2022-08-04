@@ -37,7 +37,7 @@
     <sound class="impact" fileref="rifle_drop.wav" />
    
 	<!--Model, Icon, Cost-->
-	<commonness value="0"  />
+    <commonness value="0" in_stock="0" />
 	<inventory  buy_price="20.0" sell_price="10.0" />
     <model filename="gkw_sg_aa12.xml" />
     <hud_icon filename="gkw_aa12only_skill.png" />

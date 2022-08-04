@@ -26,7 +26,7 @@
 		<!-- Model, Icon, Cost -->
 		<model filename="gkw_ar_r5.xml" />
 		<hud_icon filename="gkw_r5.png" />
-		<commonness value="0.2" />
+		<commonness value="0.2" in_stock="0" />
 		<!-- Ballistics -->
 		<weak_hand_hold offset="0.3" />
 		<projectile file="bullet.projectile" can_be_detected_by_footmen="0">
@@ -64,7 +64,7 @@
 		<!-- Model, Icon, Cost -->
 		<model filename="gkw_ar_r5.xml" />
 		<hud_icon filename="gkw_r5_skill.png" />
-		<commonness value="0.2" />
+		<commonness value="0" in_stock="0" />
 		<!-- Ballistics -->
 		<weak_hand_hold offset="0.3" />
 		<projectile file="bullet.projectile" can_be_detected_by_footmen="0">
