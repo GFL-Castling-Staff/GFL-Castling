@@ -195,13 +195,13 @@ class GFLskill : Tracker {
 					const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
 					if (player !is null) {
 						Vector3 Pos_40mm = stringToVector3(event.getStringAttribute("position"));
-						string c = 
-							"<command class='create_instance'" +
-							" faction_id='"+ player.getIntAttribute("faction_id") +"'" +
-							" instance_class='grenade'" +
-							" instance_key='40mm.projectile'" +
-							" position='" + Pos_40mm.toString() + "'"+
-							" character_id='" + characterId + "' />";
+						// string c = 
+						// 	"<command class='create_instance'" +
+						// 	" faction_id='"+ player.getIntAttribute("faction_id") +"'" +
+						// 	" instance_class='grenade'" +
+						// 	" instance_key='40mm.projectile'" +
+						// 	" position='" + Pos_40mm.toString() + "'"+
+						// 	" character_id='" + characterId + "' />";
 						string c1 = 
 							"<command class='create_instance'" +
 							" faction_id='"+ player.getIntAttribute("faction_id") +"'" +
@@ -210,7 +210,9 @@ class GFLskill : Tracker {
 							" position='" + Pos_40mm.toString() + "'"+
 							" character_id='" + characterId + "' />";
 						m_metagame.getComms().send(c1);
-						m_metagame.getComms().send(c);
+						CreateProjectile_H(m_metagame,Pos_40mm,Pos_40mm.add(Vector3(0,0,4)),"40mm_spread.projectile",characterId,player.getIntAttribute("faction_id"),45.0,4.0);
+						CreateProjectile_H(m_metagame,Pos_40mm,Pos_40mm.add(Vector3(3,0,-3)),"40mm_spread.projectile",characterId,player.getIntAttribute("faction_id"),45.0,4.0);
+						CreateProjectile_H(m_metagame,Pos_40mm,Pos_40mm.add(Vector3(-3,0,-3)),"40mm_spread.projectile",characterId,player.getIntAttribute("faction_id"),45.0,4.0);												
 					}
 				}
 				break;

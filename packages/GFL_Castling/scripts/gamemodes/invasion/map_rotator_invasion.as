@@ -303,7 +303,6 @@ class MapRotatorInvasion : MapRotator {
 		}
 
 		commitToMapChange(index);
-		addCustomStatToAllPlayers(m_metagame, "stage_completed");
 
 	}
 
@@ -981,8 +980,20 @@ class MapRotatorInvasion : MapRotator {
 				m_metagame.getTaskSequencer().clear();
 				commitToMapChange(index);
 			}
+
 		}
-		
+		if (checkCommand(message, "skipwarp")) {
+			array<string> parameters = parseParameters(message, "skipwarp");
+			if (parameters.size() > 0) {
+				int index = parseInt(parameters[0]);
+				for (x1=0;x1<(index-1);x++){
+					setStageCompleted(x1);
+				}
+				sendFactionMessage(m_metagame, 0, "warping to " + index);
+				m_metagame.getTaskSequencer().clear();
+				commitToMapChange(index);
+			}
+		}
 		// only admins allowed from here on
 		if (!m_metagame.getAdminManager().isAdmin(sender, senderId)) {
 			return;
