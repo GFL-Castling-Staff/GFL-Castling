@@ -37,16 +37,16 @@ class kill_event : Tracker {
         {"ff_gager_1.weapon",3},
         {"gkw_type100_skill.weapon",3},
         {"gkw_type100_4004_skill.weapon",3},
-        {"gkw_88typemod3_skill.weapon",4},
 
         // 近战定位HG
-        {"gkw_m1911mod3.weapon",2},
+        {"gkw_m1911_mod3.weapon",3},
 
         // 近战定位AR
         {"gkw_ak12_skill.weapon",4},
         {"gkw_ak12_blm_skill.weapon",4},
         {"gkw_ak12_2402_skill.weapon",4},
         {"gkw_ak15mod3_skill.weapon",4},
+        {"gkw_ak15mod3_blm_skill.weapon",4},
         {"gkw_ar15mod3_skill.weapon",4},
         {"gkw_ar15mod3_532_skill.weapon",4},
 
@@ -95,7 +95,8 @@ class kill_event : Tracker {
         {"ff_ripper.weapon",3},
         {"ff_ripper_swap.weapon",3},
         {"gkw_sterling.weapon",3},
-        
+        {"gkw_tmp.weapon",3},
+
         // SMG——4kills
         {"gkw_ppsh41.weapon",4},
         {"gkw_ppsh41mod3.weapon",4},
@@ -115,7 +116,6 @@ class kill_event : Tracker {
         {"gkw_type79.weapon",4},
         {"gkw_p90.weapon",4},
         {"gkw_p90_2802.weapon",4},
-        {"gkw_x95.weapon",4},
         {"gkw_augpara.weapon",4},
         {"gkw_augpara_5503.weapon",4},
         {"gkw_ar57.weapon",4},
@@ -123,6 +123,7 @@ class kill_event : Tracker {
         {"gkw_cms_aps.weapon",4},
         {"gkw_cms_st.weapon",4},
         {"gkw_vp1915.weapon",4},
+        {"gkw_vp1915_6604.weapon",4},
 
         //短突 5kill
         {"gkw_ak74u.weapon",5},
@@ -138,6 +139,7 @@ class kill_event : Tracker {
         {"gkw_g36c.weapon",5},
         {"gkw_g36c_mod3.weapon",5},
         {"gkw_g36c_mod3_skill.weapon",5},
+        {"gkw_x95.weapon",5},
 
         {"666",-1}
     };
