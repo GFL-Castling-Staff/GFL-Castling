@@ -986,7 +986,7 @@ class MapRotatorInvasion : MapRotator {
 			array<string> parameters = parseParameters(message, "skipwarp");
 			if (parameters.size() > 0) {
 				int index = parseInt(parameters[0]);
-				for (int x1=0;x1<(index-1);x1++){
+				for (int x1=0;x1<(index);x1++){
 					setStageCompleted(x1);
 				}
 				sendFactionMessage(m_metagame, 0, "warping to " + index);
