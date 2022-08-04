@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projectile 
-file="grenade_base.projectile" 
 class="grenade" 
 name="C4" 
 key="c4.projectile" 
@@ -10,8 +9,7 @@ can_be_disarmed="1"
 can_be_detected_by_driver="0" 
 time_to_live_out_in_the_open="45.0" 
 >
-<!-- time_to_live="45" -->
-    <result class="blast" radius="9.1" damage="25.1" push="0.75" decal="1" character_state="death" />
+    <result class="blast" radius="9.1" damage="30" push="0.75" decal="1" character_state="death" />
     <collision class="sticky" />
     <trigger class="remote_detonate" />
 
@@ -25,10 +23,7 @@ time_to_live_out_in_the_open="45.0"
     <commonness value="0.0" can_respawn_with="1" />
     <inventory encumbrance="4.0" price="5.0" />
 
-    <capacity value="5" source="rank" source_value="0.0" />
-    <!-- <capacity value="1" source="rank" source_value="0.1" /> -->
-    <!-- <capacity value="2" source="rank" source_value="0.2" /> -->
-    <!-- <capacity value="3" source="rank" source_value="0.3" /> -->
+    <capacity value="8" source="rank" source_value="0.0" />
 
     <sound class="result" key="other" fileref="explosion_FromFC5_1.wav" volume="3" />
     <sound class="result" key="other" fileref="explosion_FromFC5_2.wav" volume="3" />
@@ -59,5 +54,6 @@ time_to_live_out_in_the_open="45.0"
     <effect class="result" key="static_object" copy="terrain" />
     <effect class="result" key="vehicle" copy="terrain" />
     <effect class="result" key="character" copy="terrain" />
+    <effect class="result" key="shield" copy="terrain" />
 
 </projectile>
