@@ -159,33 +159,33 @@ class StageConfiguratorInvasion : StageConfigurator {
 		addStage(setupStage107());		  // chapter1 by diling
 		addStage(setupStage109());		  // chapter2 by diling
 		addStage(setupStage8());          // map8
-		addStage(setupStage103()); 		  // map103 Palo Island by diling
 		addStage(setupStage2());          // map4 c
 		addStage(setupStage3());		  // map3 c
+		addStage(setupStage103()); 		  // map103 Palo Island by diling
 		// addStage(setupEggStage());		  // 上坟
 		addStage(setupStage9());          // map9
 		addStage(setupStage18());         // map13_2
 		addStage(setupStage1());          // map2
 		// addStage(setupStage1_rust());          // map2_?
 		addStage(setupStage7());          // map6c by diling
-		addStage(setupStage4());          // map7
 		addStage(setupStage15());         // map1_2
 		addStage(setupStage12());         // map14
 		addStage(setupStage10());         // map10
+		addStage(setupStage106());		  // map106 E30 Route by diling
 		addStage(setupStage17());         // map17
 		addStage(setupStage13());         // map16
-		addStage(setupStage19());		  // map18    
 		addStage(setupFinalStage1());     // map11
 		addStage(setupStage104()); 		  // map105_1 zoneAttack by diling
 		addStage(setupStage105()); 		  // map105_2 shockzone by diling
 		addStage(setupStage6());          // map5
 		// addStage(setupStage14());         // map6_2
-		addStage(setupStage106());		  // map106 E30 Route by diling
 		// addStage(setupStage5());          // map1
 		addStage(setupFinalStage2());     // map12
 		addStage(setupStage108());		  // xiaoxieshen by diling
 		// addStage(setupStage11());         // map13
 		addStage(setupStage16());         // map8_2
+		addStage(setupStage19());		  // map18    
+		addStage(setupStage4());          // map7
 	}
 
 	// --------------------------------------------
