@@ -27,13 +27,13 @@
     <!-- <animation state_key="walking" animation_key="running, bayonet" />
     <animation state_key="running" animation_key="running" /> -->
 
-	<stance state_key="running" accuracy="0.3" />
+	<stance state_key="running" accuracy="0.6" />
 	<stance state_key="walking" accuracy="0.675" />
 	<stance state_key="crouch_moving" accuracy="0.75" />
 	<stance state_key="standing" accuracy="0.85" />
 	<stance state_key="crouching" accuracy="0.9" />
 	<stance state_key="prone" accuracy="0.95" />
-	<stance state_key="prone_moving" accuracy="0.3" />
+	<stance state_key="prone_moving" accuracy="0.85" />
 	<stance state_key="over_wall" accuracy="1" />
 	
 	<modifier class="speed" value="0.1" />
