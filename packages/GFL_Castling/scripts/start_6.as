@@ -1,6 +1,6 @@
 #include "path://media/packages/vanilla/scripts"
 #include "path://media/packages/GFL_Castling/scripts"
-#include "path://media/packages/GFLC_Map/scripts"
+
 #include "gamemode_invasion.as"
 
 // --------------------------------------------
@@ -27,11 +27,9 @@ void main(dictionary@ inputData) {
 		settings.m_rpFactor = 1.0;
 
         array<string> overlays = {
-			
-            "media/packages/GFLC_Map",
 			"media/packages/GFL_Castling"
         };
-        settings.m_overlayPaths = overlays;
+        // settings.m_overlayPaths = overlays;
 
         settings.m_startServerCommand = """
 <command class='start_server'
