@@ -11,6 +11,6 @@
     </event>
     <event>
         <trigger class="destroy" />
-        <result class="spawn" instance_class="visual_item" instance_key="burning_piece_barrier.visual_item" min_amount="10" max_amount="20" offset="0 2.0 0" position_spread="1.5 1.5" direction_spread="0.1 0.1" />
+        <result class="spawn" instance_class="visual_item" instance_key="burning_piece_barrier.visual_item" min_amount="4" max_amount="8" offset="0 2.0 0" position_spread="1.5 1.5" direction_spread="0.1 0.1" />
     </event>
 </static_object>
