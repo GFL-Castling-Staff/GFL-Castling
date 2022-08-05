@@ -156,8 +156,8 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 	// ------------------------------------------------------------------------------------------------
 	protected void setupNormalStages() {
-		addStage(setupStage107());		  // chapter1 by diling
-		addStage(setupStage109());		  // chapter2 by diling
+		addStage(setupStage1());          // map2
+		addStage(setupStage7());          // map6c by diling
 		addStage(setupStage8());          // map8
 		addStage(setupStage2());          // map4 c
 		addStage(setupStage3());		  // map3 c
@@ -165,15 +165,15 @@ class StageConfiguratorInvasion : StageConfigurator {
 		// addStage(setupEggStage());		  // 上坟
 		addStage(setupStage9());          // map9
 		addStage(setupStage18());         // map13_2
-		addStage(setupStage1());          // map2
+		addStage(setupStage107());		  // chapter1 by diling
+		addStage(setupStage109());		  // chapter2 by diling
 		// addStage(setupStage1_rust());          // map2_?
-		addStage(setupStage7());          // map6c by diling
-		addStage(setupStage15());         // map1_2
 		addStage(setupStage12());         // map14
 		addStage(setupStage10());         // map10
 		addStage(setupStage106());		  // map106 E30 Route by diling
 		addStage(setupStage17());         // map17
 		addStage(setupStage13());         // map16
+		addStage(setupStage15());         // map1_2
 		addStage(setupFinalStage1());     // map11
 		addStage(setupStage104()); 		  // map105_1 zoneAttack by diling
 		addStage(setupStage105()); 		  // map105_2 shockzone by diling
@@ -1472,7 +1472,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 	protected Stage@ setupStage15() {
 		Stage@ stage = createStage();
 		stage.m_mapInfo.m_name = "Moorland Apocalypse";
-		stage.m_mapInfo.m_path = "media/packages/vanilla/maps/map1_2";
+		stage.m_mapInfo.m_path = "media/packages/GFL_Castling/maps/map1_2";
 		stage.m_mapInfo.m_id = "map1_2";
         
 		stage.m_includeLayers.insertLast("layer1.invasion");        
