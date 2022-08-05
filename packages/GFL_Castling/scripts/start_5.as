@@ -1,6 +1,6 @@
 #include "path://media/packages/vanilla/scripts"
 #include "path://media/packages/GFL_Castling/scripts"
-#include "path://media/packages/GFLC_Map/scripts"
+
 #include "gamemode_invasion.as"
 
 // --------------------------------------------

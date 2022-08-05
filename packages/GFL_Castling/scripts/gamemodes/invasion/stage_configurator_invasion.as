@@ -238,7 +238,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 	protected Stage@ setupStage103() {
 		Stage@ stage = createStage();
 		stage.m_mapInfo.m_name = "Palo Island";
-		stage.m_mapInfo.m_path = "media/packages/GFLC_Map/maps/map103";
+		stage.m_mapInfo.m_path = "media/packages/GFL_Castling/maps/map103";
 		stage.m_mapInfo.m_id = "map103";
 
 		stage.addTracker(PeacefulLastBase(m_metagame, 0));
@@ -283,7 +283,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 	protected Stage@ setupStage104() {
 		Stage@ stage = createStage();
 		stage.m_mapInfo.m_name = "Zone Attack";
-		stage.m_mapInfo.m_path = "media/packages/GFLC_Map/maps/map105_1";
+		stage.m_mapInfo.m_path = "media/packages/GFL_Castling/maps/map105_1";
 		stage.m_mapInfo.m_id = "map105_1";
 
 		stage.addTracker(PeacefulLastBase(m_metagame, 0));
@@ -338,7 +338,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		PhasedStage@ stage = createPhasedStage();
 		stage.setPhaseController(PhaseControllerMap105(m_metagame));
 		stage.m_mapInfo.m_name = "Shock Zone";
-		stage.m_mapInfo.m_path = "media/packages/GFLC_Map/maps/map105_2";
+		stage.m_mapInfo.m_path = "media/packages/GFL_Castling/maps/map105_2";
 		stage.m_mapInfo.m_id = "map105_2";
 
 		stage.m_maxSoldiers = 160;                                          // was 11*10
@@ -394,7 +394,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 	protected Stage@ setupStage106(){
 		Stage@ stage = createStage();
 		stage.m_mapInfo.m_name = "Route E30";
-		stage.m_mapInfo.m_path = "media/packages/GFLC_Map/maps/map106";
+		stage.m_mapInfo.m_path = "media/packages/GFL_Castling/maps/map106";
 		stage.m_mapInfo.m_id = "map106";
 
 		stage.addTracker(Overtime(m_metagame, 0,10));
@@ -442,7 +442,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 	protected Stage@ setupStage107(){
 		Stage@ stage = createStage();
 		stage.m_mapInfo.m_name = "Awakening";
-		stage.m_mapInfo.m_path = "media/packages/GFLC_Map/maps/Chapter01";
+		stage.m_mapInfo.m_path = "media/packages/GFL_Castling/maps/Chapter01";
 		stage.m_mapInfo.m_id = "chapter01";
 		stage.addTracker(PeacefulLastBase(m_metagame, 0));
 		stage.addTracker(CommsCapacityHandler(m_metagame));
@@ -476,7 +476,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 	protected Stage@ setupStage108(){
 		Stage@ stage = createStage();
 		stage.m_mapInfo.m_name = "Kanda jimbocho";
-		stage.m_mapInfo.m_path = "media/packages/GFLC_Map/maps/mydevilsfrontline";
+		stage.m_mapInfo.m_path = "media/packages/GFL_Castling/maps/mydevilsfrontline";
 		stage.m_mapInfo.m_id = "Tokyo Jimbocho";
 		stage.addTracker(PeacefulLastBase(m_metagame, 0));
 		stage.addTracker(CommsCapacityHandler(m_metagame));
@@ -516,7 +516,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 	protected Stage@ setupEggStage() {
 		Stage@ stage = createStage();
 		stage.m_mapInfo.m_name = "High Land 33";
-		stage.m_mapInfo.m_path = "media/packages/GFLC_Map/maps/egg001";
+		stage.m_mapInfo.m_path = "media/packages/GFL_Castling/maps/egg001";
 		stage.m_mapInfo.m_id = "Highland33";
 
 		stage.addTracker(Overtime(m_metagame, 0));
@@ -570,7 +570,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 	protected Stage@ setupStage109(){
 		Stage@ stage = createStage();
 		stage.m_mapInfo.m_name = "Echo";
-		stage.m_mapInfo.m_path = "media/packages/GFLC_Map/maps/Chapter02";
+		stage.m_mapInfo.m_path = "media/packages/GFL_Castling/maps/Chapter02";
 		stage.m_mapInfo.m_id = "chapter02";
 		stage.addTracker(PeacefulLastBase(m_metagame, 0));
 		stage.addTracker(CommsCapacityHandler(m_metagame));
@@ -606,7 +606,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 	protected Stage@ setupStage1() {
 		Stage@ stage = createStage();
 		stage.m_mapInfo.m_name = "Keepsake Bay";
-		stage.m_mapInfo.m_path = "media/packages/GFLC_Map/maps/map2";
+		stage.m_mapInfo.m_path = "media/packages/GFL_Castling/maps/map2";
 		stage.m_mapInfo.m_id = "map2";
 		
 		stage.m_includeLayers.insertLast("layer1.invasion"); 
@@ -657,7 +657,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 	protected Stage@ setupStage1_rust() {
 		Stage@ stage = createStage();
 		stage.m_mapInfo.m_name = "Casake Bay";
-		stage.m_mapInfo.m_path = "media/packages/GFLC_Map/maps/map2_c";
+		stage.m_mapInfo.m_path = "media/packages/GFL_Castling/maps/map2_c";
 		stage.m_mapInfo.m_id = "map2_?";
 		
 		stage.m_includeLayers.insertLast("layer1.invasion"); 
@@ -698,7 +698,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 	protected Stage@ setupStage2() {
 		Stage@ stage = createStage();
 		stage.m_mapInfo.m_name = "Fridge Valley";
-		stage.m_mapInfo.m_path = "media/packages/GFLC_Map/maps/map4_c";
+		stage.m_mapInfo.m_path = "media/packages/GFL_Castling/maps/map4_c";
 		stage.m_mapInfo.m_id = "map4";
 
 		stage.m_fogOffset = 20.0;    
@@ -743,7 +743,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 	protected Stage@ setupStage3() {
 		Stage@ stage = createStage();
 		stage.m_mapInfo.m_name = "Raining Fort Creek";
-		stage.m_mapInfo.m_path = "media/packages/GFLC_Map/maps/map3_c";
+		stage.m_mapInfo.m_path = "media/packages/GFL_Castling/maps/map3_c";
 		stage.m_mapInfo.m_id = "map3";
 
 		stage.addTracker(PeacefulLastBase(m_metagame, 0));
@@ -904,7 +904,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 	protected Stage@ setupStage102() {
 		Stage@ stage = createStage();
 		stage.m_mapInfo.m_name = "M16A1's Farm 0-2";
-		stage.m_mapInfo.m_path = "media/packages/GFLC_Map/maps/map102";
+		stage.m_mapInfo.m_path = "media/packages/GFL_Castling/maps/map102";
 		stage.m_mapInfo.m_id = "map102";
 
 		stage.m_maxSoldiers = 14 * 14;
@@ -990,7 +990,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 	protected Stage@ setupStage7() {
 		Stage@ stage = createStage();
 		stage.m_mapInfo.m_name = "Rattlesnake Crescent";
-		stage.m_mapInfo.m_path = "media/packages/GFLC_Map/maps/map6_c";
+		stage.m_mapInfo.m_path = "media/packages/GFL_Castling/maps/map6_c";
 		stage.m_mapInfo.m_id = "map6";
 
 		stage.m_maxSoldiers = 15 * 11;                                             // was 17*7 in 1.65
@@ -1039,7 +1039,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 	protected Stage@ setupStage8() {
 		Stage@ stage = createStage();
 		stage.m_mapInfo.m_name = "Vigil Island";
-		stage.m_mapInfo.m_path = "media/packages/GFLC_Map/maps/map8";
+		stage.m_mapInfo.m_path = "media/packages/GFL_Castling/maps/map8";
 		stage.m_mapInfo.m_id = "map8";
 
 		stage.m_includeLayers.insertLast("layer1.campaign");
@@ -1097,7 +1097,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 	protected Stage@ setupStage9() {
 		Stage@ stage = createStage();
 		stage.m_mapInfo.m_name = "Black Gold Estuary";
-		stage.m_mapInfo.m_path = "media/packages/GFLC_Map/maps/map9";
+		stage.m_mapInfo.m_path = "media/packages/GFL_Castling/maps/map9";
 		stage.m_mapInfo.m_id = "map9";
 
 		stage.m_includeLayers.insertLast("layer1.invasion");
@@ -1673,7 +1673,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 	protected Stage@ setupStage18() {
 		Stage@ stage = createStage();
 		stage.m_mapInfo.m_name = "Holy Enclave";
-		stage.m_mapInfo.m_path = "media/packages/GFLC_Map/maps/map13_2";
+		stage.m_mapInfo.m_path = "media/packages/GFL_Castling/maps/map13_2";
 		stage.m_mapInfo.m_id = "map13_2";
 		stage.m_includeLayers.insertLast("layer1.invasion");        
 		stage.addTracker(Overtime(m_metagame, 0));
@@ -1721,7 +1721,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 	protected Stage@ setupStage19() {
 		Stage@ stage = createStage();
 		stage.m_mapInfo.m_name = "Warsalt Legacy";
-		stage.m_mapInfo.m_path = "media/packages/GFLC_Map/maps/map18";
+		stage.m_mapInfo.m_path = "media/packages/GFL_Castling/maps/map18";
 		stage.m_mapInfo.m_id = "map18";
 		stage.addTracker(jupiter(m_metagame,30));
 		stage.m_includeLayers.insertLast("layer1.invasion");		
