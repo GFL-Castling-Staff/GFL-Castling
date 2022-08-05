@@ -1155,7 +1155,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 	protected Stage@ setupStage10() {
 		Stage@ stage = createStage();
 		stage.m_mapInfo.m_name = "Railroad Gap";
-		stage.m_mapInfo.m_path = "media/packages/vanilla.desert/maps/map10";
+		stage.m_mapInfo.m_path = "media/packages/GFL_Castling/maps/map10";
 		stage.m_mapInfo.m_id = "map10";
 
 		stage.m_maxSoldiers = 13 * 12;                                            // 156, was 15*10 in 1.65
@@ -1270,7 +1270,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 	protected Stage@ setupStage12() {
 		Stage@ stage = createStage();
 		stage.m_mapInfo.m_name = "Misty Heights";
-		stage.m_mapInfo.m_path = "media/packages/vanilla/maps/map14";
+		stage.m_mapInfo.m_path = "media/packages/GFL_Castling/maps/map14";
 		stage.m_mapInfo.m_id = "map14";
 
 		stage.m_fogOffset = 20.0;    
