@@ -1,0 +1,164 @@
+<commands>
+  <!-- start_game command: new game menu picks up defaults from here and allows user to override certain settings -->
+  <command 
+	  class="start_game" 
+	  vehicles="1" 
+	  max_soldiers="143" 
+	  player_bot_compensation="2" 
+	  xp_multiplier="1.0"
+	  rp_multiplier="1.0"
+	  friendly_fire="0" 
+	  base_capture_system="any"
+    soldier_capacity_variance="0.4">
+
+    <faction initial_over_capacity="0" ai_accuracy="0.94" capacity_multiplier="0.75" />
+    <faction initial_over_capacity="50" ai_accuracy="0.94" capacity_offset="20" />
+  </command>
+  <command 
+	  class="commander_ai" 
+	  faction="0"
+	  base_defense="0.1"
+	  border_defense="0.1">
+  </command>
+  <command 
+	  class="commander_ai" 
+	  faction="1"
+	  base_defense="0.6"
+	  border_defense="0.3">
+  </command>
+  <command
+	  class="faction_resources"
+	  faction_id="1">
+    <vehicle key="patrol_ship.vehicle" enabled="0"/>
+  </command>
+<!--  <command
+	  class="faction_resources"
+	  faction_id="1">
+    <vehicle key="mobile_armory.vehicle" enabled="0"/>
+  </command>
+-->
+  <command
+	  class="faction_resources"
+	  faction_id="1">
+    <vehicle key="aa_emplacement.vehicle" enabled="1"/>
+  </command>
+  <command
+	  class="faction_resources"
+	  faction_id="0">
+    <vehicle key="radio_jammer.vehicle" enabled="0"/>
+  </command>  
+  <command
+	  class="faction_resources"
+	  faction_id="0">
+    <vehicle key="radio_jammer2.vehicle" enabled="0"/>
+  </command>
+  <command
+	  class="faction_resources"
+	  faction_id="0">
+    <vehicle key="prison_bus.vehicle" enabled="0"/>
+  </command>  
+  
+  
+<!--
+  
+<command 
+	class="create_instance" 
+	faction_id="1"
+	position="592 0 474"
+	offset="0 0 0"
+	instance_class="vehicle"
+	instance_key="radio_jammer.vehicle" >
+</command>    
+
+<command 
+	class="create_instance" 
+	faction_id="1"
+	position="563 0 404"
+	offset="0 0 0"
+	instance_class="vehicle"
+	instance_key="radio_jammer.vehicle" >
+</command> 
+  
+ 
+<command 
+	class="create_instance" 
+	faction_id="1"
+	position="618 8 385"
+	offset="0 0 0"
+	character_id="0" 
+	instance_class="projectile"
+	instance_key="claymore.projectile" >
+</command> 
+
+<command 
+	class="create_instance" 
+	faction_id="1"
+	position="620 8 385"
+	offset="0 0 0"
+	character_id="0" 
+	instance_class="projectile"
+	instance_key="claymore.projectile" >
+</command> 
+
+<command 
+	class="create_instance" 
+	faction_id="1"
+	position="585 15 505"
+	offset="0 0 0"
+	character_id="0" 
+	instance_class="projectile"
+	instance_key="claymore.projectile" >
+</command> 
+
+<command 
+	class="create_instance" 
+	faction_id="1"
+	position="589 8 503"
+	offset="0 0 0"
+	character_id="0" 
+	instance_class="projectile"
+	instance_key="claymore.projectile" >
+</command>
+
+<command 
+	class="create_instance" 
+	faction_id="1"
+	position="597 15 503"
+	offset="0 0 0"
+	character_id="0" 
+	instance_class="projectile"
+	instance_key="claymore.projectile" >
+</command>    
+
+<command 
+	class="create_instance" 
+	faction_id="1"
+	position="579 15 508"
+	offset="0 0 0"
+	character_id="0" 
+	instance_class="projectile"
+	instance_key="claymore.projectile" >
+</command>  
+
+<command 
+	class="create_instance" 
+	faction_id="1"
+	position="619 8 524 "
+	offset="0 0 0"
+	character_id="0" 
+	instance_class="projectile"
+	instance_key="at_mine.projectile" >
+</command> 
+
+<command 
+	class="create_instance" 
+	faction_id="1"
+	position="615 8 531"
+	offset="0 0 0"
+	character_id="0" 
+	instance_class="projectile"
+	instance_key="at_mine.projectile" >
+</command>  
+-->
+  
+</commands>
