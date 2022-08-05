@@ -17683,9 +17683,8 @@ key = mortar_ammunition_crates.vehicle;</desc>
          id="desc9346-4-7-4-8">day_color = fill; 
 night_color = stroke; 
 flip = 1;
-ambience_day_sound = ambient_daytime_blizzard.wav;
-ambience_night_sound =
-ambient_daytime_blizzard.wav;
+ambience_day_sound = ambient_daytime.wav;
+ambience_alert_day_sound = ambient_alert_daytime.wav;
 global_effect = SnowFlakesHeavy;
 name = Tropical Blizzard;
 description = 12 bases;
