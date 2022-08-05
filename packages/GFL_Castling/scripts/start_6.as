@@ -29,7 +29,7 @@ void main(dictionary@ inputData) {
         array<string> overlays = {
 			"media/packages/GFL_Castling"
         };
-        settings.m_overlayPaths = overlays;
+        // settings.m_overlayPaths = overlays;
 
         settings.m_startServerCommand = """
 <command class='start_server'
