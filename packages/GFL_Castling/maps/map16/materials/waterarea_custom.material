@@ -1,0 +1,31 @@
+import WaterAreaHighBase from "waterarea_base.material"
+import WaterAreaLowBase from "waterarea_base.material"
+
+material WaterAreaHigh : WaterAreaHighBase {
+	technique ShadersShadows {
+		pass Basic {
+			fragment_program_ref WaterAreaFP {
+				param_named intensity float 0.9
+			}
+
+		        ambient 0.36 0.4 0.35
+		        diffuse 0.46 0.5 0.45
+		}
+	}
+
+	technique NoShaders {	
+		pass Basic {	
+		        ambient 0.36 0.4 0.35
+		        diffuse 0.46 0.5 0.45
+		}
+	}
+}
+
+material WaterAreaLow : WaterAreaLowBase {
+	technique NoShaders {	
+		pass Basic {	
+		        ambient 0.36 0.4 0.35
+		        diffuse 0.46 0.5 0.45
+		}
+	}
+}

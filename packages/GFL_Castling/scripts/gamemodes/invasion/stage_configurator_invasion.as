@@ -944,7 +944,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 	protected Stage@ setupStage6() {
 		Stage@ stage = createStage();
 		stage.m_mapInfo.m_name = "Bootleg Islands";
-		stage.m_mapInfo.m_path = "media/packages/vanilla/maps/map5";
+		stage.m_mapInfo.m_path = "media/packages/GFL_Castling/maps/map5";
 		stage.m_mapInfo.m_id = "map5";
 
 		stage.m_maxSoldiers = 11 * 12;
@@ -1337,7 +1337,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 	protected Stage@ setupStage13() {
 		Stage@ stage = createStage();
 		stage.m_mapInfo.m_name = "Green Coast";
-		stage.m_mapInfo.m_path = "media/packages/vanilla/maps/map16";
+		stage.m_mapInfo.m_path = "media/packages/GFL_Castling/maps/map16";
 		stage.m_mapInfo.m_id = "map16";
 
 		stage.m_maxSoldiers = 18 * 13;
@@ -1559,7 +1559,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 	protected Stage@ setupStage16() {
 		Stage@ stage = createStage();
 		stage.m_mapInfo.m_name = "Tropical Blizzard";
-		stage.m_mapInfo.m_path = "media/packages/vanilla.winter/maps/map8_2";
+		stage.m_mapInfo.m_path = "media/packages/GFL_Castling/maps/map8_2";
 		stage.m_mapInfo.m_id = "map8_2";
 
 
@@ -1617,7 +1617,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 	protected Stage@ setupStage17() {
 		Stage@ stage = createStage();
 		stage.m_mapInfo.m_name = "Gotcha Island";
-		stage.m_mapInfo.m_path = "media/packages/vanilla/maps/map17";
+		stage.m_mapInfo.m_path = "media/packages/GFL_Castling/maps/map17";
 		stage.m_mapInfo.m_id = "map17";
 
 		stage.addTracker(PeacefulLastBase(m_metagame, 0));
@@ -1897,7 +1897,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		PhasedStage@ stage = createPhasedStage();
 		stage.setPhaseController(PhaseControllerMap12(m_metagame));
 		stage.m_mapInfo.m_name = "Final mission II"; // warning, default.character has reference to this name, careful if it needs to be changed
-		stage.m_mapInfo.m_path = "media/packages/vanilla.winter/maps/map12";
+		stage.m_mapInfo.m_path = "media/packages/GFL_Castling/maps/map12";
 		stage.m_mapInfo.m_id = "map12";
 
 		stage.m_fogOffset = 20.0;    
