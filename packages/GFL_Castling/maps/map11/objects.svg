@@ -5396,12 +5396,6 @@ penetrability = 1.0;</desc>
          id="desc7300">index = 0;
 texture = dirt.png;
 scale = 0.01 0.01;
-auto_decoration_texture = ground_decoration.png;
-auto_decoration_texture_atlas_cell = 0 1 2 2;
-auto_decoration_texture_atlas_cell = 1 1 2 2;
-auto_decoration_multiplier = 4;
-auto_decoration_size = 0.25;
-auto_decoration_density = 0.05;
 </desc>
     </rect>
     <flowRoot
@@ -5432,9 +5426,9 @@ scale = 0.01 0.01;
 auto_decoration_texture = ground_decoration_wheat.png;
 auto_decoration_texture_atlas_cell = 0 0 2 2;
 auto_decoration_texture_atlas_cell = 1 0 2 2;
-auto_decoration_multiplier = 4;
+auto_decoration_multiplier = 1;
 auto_decoration_size = 0.9;
-auto_decoration_density = 0.55;
+auto_decoration_density = 0.35;
 outline = 1; 
 outline_color = fill;</desc>
     </rect>
@@ -5451,12 +5445,6 @@ outline_color = fill;</desc>
 texture = grass.png;
 alpha = terrain5_alpha_grass.png;
 scale = 0.01 0.01;
-auto_decoration_texture = ground_decoration.png;
-auto_decoration_texture_atlas_cell = 0 0 2 2;
-auto_decoration_texture_atlas_cell = 1 0 2 2;
-auto_decoration_multiplier = 4;
-auto_decoration_size = 0.8;
-auto_decoration_density = 0.6;
 outline = 1; 
 outline_color = fill;</desc>
     </rect>
