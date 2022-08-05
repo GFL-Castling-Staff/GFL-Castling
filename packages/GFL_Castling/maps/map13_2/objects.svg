@@ -14178,7 +14178,7 @@ flip = 1;</desc>
        id="mesh_template9-14"
        style="display:inline;fill:#855e00;fill-opacity:1;stroke:none;enable-background:new">
       <desc
-         id="desc7569-7-1-1-0-37-49-0-3">name = hedgehog; mesh_name = hedgehog.mesh; texture0 = world_atlas1.png; texture0_atlas_cell = 7 0 64 64; collision_model_type = 1; collision_model_size = 1.2 1.2 1.2; penetrability = 0.4; see_through = 1;</desc>
+         id="desc7569-7-1-1-0-37-49-0-3">name = hedgehog; mesh_name = hedgehog.mesh; texture0 = world_atlas1.png; texture0_atlas_cell = 7 0 64 64; collision_model_type = 1; collision_model_size = 1.2 1.2 1.2; penetrability = 0.4; see_through = 1;static_object_type_key=hedgehog.static_object;</desc>
     </rect>
     <rect
        transform="matrix(0.99995156,0.00984301,-0.00984301,0.99995156,0,0)"

@@ -19843,7 +19843,8 @@ texture0_atlas_cell = 7 0 64 64;
 collision_model_type = 1; 
 collision_model_size = 1.2 1.2 1.2; 
 penetrability = 0.4; 
-see_through = 1;</desc>
+see_through = 1;
+static_object_type_key=hedgehog.static_object;</desc>
     </rect>
     <rect
        inkscape:label=""
@@ -20367,25 +20368,6 @@ randomize_faction_index = 0;
 show_base_names_in_map_view = 1;
 global_effect = DynFog;
 </desc>
-    </rect>
-    <rect
-       style="display:inline;fill:#855e00;fill-opacity:1;stroke:none;enable-background:new"
-       id="mesh_template9-14-5"
-       width="4.961926"
-       height="4.9513102"
-       x="2704.9827"
-       y="1031.5273"
-       inkscape:label="#mesh_template"
-       transform="matrix(0.99995156,0.00984301,-0.00984301,0.99995156,0,0)">
-      <desc
-         id="desc7569-7-1-1-0-37-49-0-3-5">name = hedgehog; 
-mesh_name = hedgehog.mesh;
-texture0 = world_atlas1.png; 
-texture0_atlas_cell = 7 0 64 64; 
-collision_model_type = 1; 
-collision_model_size = 1.2 1.2 1.2; 
-penetrability = 0.4; 
-see_through = 1;</desc>
     </rect>
     <rect
        style="display:inline;fill:#855e00;fill-opacity:1;stroke:none;enable-background:new"

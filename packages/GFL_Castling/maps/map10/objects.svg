@@ -16949,7 +16949,8 @@ texture0_atlas_cell = 7 0 64 64;
 collision_model_type = 1; 
 collision_model_size = 1.2 1.2 1.2; 
 penetrability = 0.4; 
-see_through = 1;</desc>
+see_through = 1;
+static_object_type_key=hedgehog.static_object;</desc>
     </rect>
     <rect
        inkscape:label=""
