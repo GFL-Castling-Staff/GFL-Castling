@@ -788,7 +788,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 	protected Stage@ setupStage4() {
 		Stage@ stage = createStage();
 		stage.m_mapInfo.m_name = "Power Junction";
-		stage.m_mapInfo.m_path = "media/packages/vanilla/maps/map7";
+		stage.m_mapInfo.m_path = "media/packages/GFL_Castling/maps/map7";
 		stage.m_mapInfo.m_id = "map7";
 
 		stage.m_includeLayers.insertLast("layer1.invasion");        
