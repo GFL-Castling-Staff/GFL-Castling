@@ -180,7 +180,6 @@ class StageConfiguratorInvasion : StageConfigurator {
 		addStage(setupStage6());          // map5
 		// addStage(setupStage14());         // map6_2
 		// addStage(setupStage5());          // map1
-		addStage(setupFinalStage2());     // map12
 		addStage(setupStage108());		  // xiaoxieshen by diling
 		// addStage(setupStage11());         // map13
 		addStage(setupStage16());         // map8_2
