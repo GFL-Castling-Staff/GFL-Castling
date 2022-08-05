@@ -1786,7 +1786,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 	protected Stage@ setupFinalStage1() {
 		Stage@ stage = createStage();
 		stage.m_mapInfo.m_name = "Final mission I"; // warning, default.character has reference to this name, careful if it needs to be changed
-		stage.m_mapInfo.m_path = "media/packages/vanilla/maps/map11";
+		stage.m_mapInfo.m_path = "media/packages/GFL_Castling/maps/map11";
 		stage.m_mapInfo.m_id = "map11";
         
 		stage.m_includeLayers.insertLast("layer1.invasion");        
