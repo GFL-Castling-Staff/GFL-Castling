@@ -1148,14 +1148,14 @@
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<stance state_key="running" accuracy="0.6"/>
-	<stance state_key="walking" accuracy="0.85"/>
-	<stance state_key="crouch_moving" accuracy="0.6"/>
+	<stance state_key="running" accuracy="0.7"/>
+	<stance state_key="walking" accuracy="0.8"/>
+	<stance state_key="crouch_moving" accuracy="0.85"/>
+	<stance state_key="prone_moving" accuracy="0.85"/>
 	<stance state_key="standing" accuracy="0.85"/>
-	<stance state_key="crouching" accuracy="0.85"/>
-	<stance state_key="prone" accuracy="0.85"/>
-	<stance state_key="prone_moving" accuracy="0.3"/>
-	<stance state_key="over_wall" accuracy="1"/>
+	<stance state_key="crouching" accuracy="0.9"/>
+	<stance state_key="prone" accuracy="1.0"/>
+	<stance state_key="over_wall" accuracy="1.0"/>
 	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -1217,14 +1217,14 @@
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<stance state_key="running" accuracy="0.6"/>
-	<stance state_key="walking" accuracy="0.85"/>
-	<stance state_key="crouch_moving" accuracy="0.6"/>
+	<stance state_key="running" accuracy="0.7"/>
+	<stance state_key="walking" accuracy="0.8"/>
+	<stance state_key="crouch_moving" accuracy="0.85"/>
+	<stance state_key="prone_moving" accuracy="0.85"/>
 	<stance state_key="standing" accuracy="0.85"/>
-	<stance state_key="crouching" accuracy="0.85"/>
-	<stance state_key="prone" accuracy="0.85"/>
-	<stance state_key="prone_moving" accuracy="0.3"/>
-	<stance state_key="over_wall" accuracy="1"/>
+	<stance state_key="crouching" accuracy="0.9"/>
+	<stance state_key="prone" accuracy="1.0"/>
+	<stance state_key="over_wall" accuracy="1.0"/>
 	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -1255,7 +1255,7 @@
 </weapon>
 
 <weapon key="gkw_aa12.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="0.167" accuracy_factor="0.9" sustained_fire_grow_step="1.7" sustained_fire_diminish_rate="0.7" magazine_size="20" can_shoot_standing="1" suppressed="0" name="AA-12" class="0" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="80" barrel_offset="0.4" projectiles_per_shot="14" spread_range="0.3" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0" use_basic_muzzle_smoke_effect="0"/>
+	<specification retrigger_time="0.167" accuracy_factor="1.0" sustained_fire_grow_step="2.1" sustained_fire_diminish_rate="0.45" magazine_size="20" can_shoot_standing="1" suppressed="0" name="AA-12" class="0" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="100" barrel_offset="0.4" projectiles_per_shot="14" spread_range="0.2" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0" use_basic_muzzle_smoke_effect="0"/>
 	<inventory buy_price="50.0" sell_price="50.0"/>
 	<next_in_chain key="gkw_aa12_skill.weapon" share_ammo="1"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.8"/>
@@ -1268,28 +1268,29 @@
 	<hud_icon filename="gkw_aa12.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="1.7" kill_decay_start_time="0.0625" kill_decay_end_time="0.7125"/>
+	<result class="hit" kill_probability="2.0" kill_decay_start_time="0.05" kill_decay_end_time="0.7"/>
 	</projectile>
-	<stance state_key="walking" accuracy="0.7"/>
-	<stance state_key="crouch_moving" accuracy="0.7"/>
-	<stance state_key="prone_moving" accuracy="0.7"/>
-	<stance state_key="standing" accuracy="0.7"/>
-	<stance state_key="crouching" accuracy="0.7"/>
-	<stance state_key="prone" accuracy="0.8"/>
-	<stance state_key="over_wall" accuracy="0.8"/>
+	<stance state_key="running" accuracy="0.7"/>
+	<stance state_key="walking" accuracy="0.8"/>
+	<stance state_key="crouch_moving" accuracy="0.85"/>
+	<stance state_key="prone_moving" accuracy="0.85"/>
+	<stance state_key="standing" accuracy="0.85"/>
+	<stance state_key="crouching" accuracy="0.9"/>
+	<stance state_key="prone" accuracy="1.0"/>
+	<stance state_key="over_wall" accuracy="1.0"/>
 	<modifier class="detectability" value="0.45"/>
 	<tag name="shotgun"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<stance state_key="running" accuracy="0.6"/>
-	<stance state_key="walking" accuracy="0.85"/>
-	<stance state_key="crouch_moving" accuracy="0.6"/>
+	<stance state_key="running" accuracy="0.7"/>
+	<stance state_key="walking" accuracy="0.8"/>
+	<stance state_key="crouch_moving" accuracy="0.85"/>
+	<stance state_key="prone_moving" accuracy="0.85"/>
 	<stance state_key="standing" accuracy="0.85"/>
-	<stance state_key="crouching" accuracy="0.85"/>
-	<stance state_key="prone" accuracy="0.85"/>
-	<stance state_key="prone_moving" accuracy="0.3"/>
-	<stance state_key="over_wall" accuracy="1"/>
+	<stance state_key="crouching" accuracy="0.9"/>
+	<stance state_key="prone" accuracy="1.0"/>
+	<stance state_key="over_wall" accuracy="1.0"/>
 	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -1320,7 +1321,7 @@
 </weapon>
 
 <weapon key="gkw_aa12_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="0.12" accuracy_factor="0.9" sustained_fire_grow_step="1.7" sustained_fire_diminish_rate="0.7" magazine_size="20" can_shoot_standing="1" suppressed="0" name="AA-12-[Ketonemia]" class="0" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="80" barrel_offset="0.4" projectiles_per_shot="18" spread_range="0.4" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0" use_basic_muzzle_smoke_effect="0"/>
+	<specification retrigger_time="0.12" accuracy_factor="1.0" sustained_fire_grow_step="2.1" sustained_fire_diminish_rate="0.52" magazine_size="20" can_shoot_standing="1" suppressed="0" name="AA-12-[Ketonemia]" class="0" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="100" barrel_offset="0.4" projectiles_per_shot="18" spread_range="0.4" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0" use_basic_muzzle_smoke_effect="0"/>
 	<inventory buy_price="50.0" sell_price="50.0"/>
 	<next_in_chain key="gkw_aa12.weapon" share_ammo="1"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.8"/>
@@ -1334,29 +1335,30 @@
 	<hud_icon filename="gkw_aa12_skill.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="1.8" kill_decay_start_time="0.0625" kill_decay_end_time="0.5"/>
+	<result class="hit" kill_probability="2.0" kill_probability_offset_on_successful_hit="0.5" kill_decay_start_time="0.05" kill_decay_end_time="0.7"/>
 	</projectile>
-	<stance state_key="walking" accuracy="0.7"/>
-	<stance state_key="crouch_moving" accuracy="0.65"/>
-	<stance state_key="prone_moving" accuracy="0.65"/>
-	<stance state_key="standing" accuracy="0.7"/>
-	<stance state_key="crouching" accuracy="0.7"/>
-	<stance state_key="prone" accuracy="0.8"/>
-	<stance state_key="over_wall" accuracy="0.8"/>
-	<modifier class="speed" value="-0.3"/>
+	<stance state_key="running" accuracy="0.7"/>
+	<stance state_key="walking" accuracy="0.8"/>
+	<stance state_key="crouch_moving" accuracy="0.85"/>
+	<stance state_key="prone_moving" accuracy="0.85"/>
+	<stance state_key="standing" accuracy="0.85"/>
+	<stance state_key="crouching" accuracy="0.9"/>
+	<stance state_key="prone" accuracy="1.0"/>
+	<stance state_key="over_wall" accuracy="1.0"/>
+	<modifier class="speed" value="-0.45"/>
 	<modifier class="detectability" value="0.45"/>
 	<tag name="shotgun"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<stance state_key="running" accuracy="0.6"/>
-	<stance state_key="walking" accuracy="0.85"/>
-	<stance state_key="crouch_moving" accuracy="0.6"/>
+	<stance state_key="running" accuracy="0.7"/>
+	<stance state_key="walking" accuracy="0.8"/>
+	<stance state_key="crouch_moving" accuracy="0.85"/>
+	<stance state_key="prone_moving" accuracy="0.85"/>
 	<stance state_key="standing" accuracy="0.85"/>
-	<stance state_key="crouching" accuracy="0.85"/>
-	<stance state_key="prone" accuracy="0.85"/>
-	<stance state_key="prone_moving" accuracy="0.3"/>
-	<stance state_key="over_wall" accuracy="1"/>
+	<stance state_key="crouching" accuracy="0.9"/>
+	<stance state_key="prone" accuracy="1.0"/>
+	<stance state_key="over_wall" accuracy="1.0"/>
 	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -1414,14 +1416,14 @@
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<stance state_key="running" accuracy="0.6"/>
-	<stance state_key="walking" accuracy="0.85"/>
-	<stance state_key="crouch_moving" accuracy="0.6"/>
+	<stance state_key="running" accuracy="0.7"/>
+	<stance state_key="walking" accuracy="0.8"/>
+	<stance state_key="crouch_moving" accuracy="0.85"/>
+	<stance state_key="prone_moving" accuracy="0.85"/>
 	<stance state_key="standing" accuracy="0.85"/>
-	<stance state_key="crouching" accuracy="0.85"/>
-	<stance state_key="prone" accuracy="0.85"/>
-	<stance state_key="prone_moving" accuracy="0.3"/>
-	<stance state_key="over_wall" accuracy="1"/>
+	<stance state_key="crouching" accuracy="0.9"/>
+	<stance state_key="prone" accuracy="1.0"/>
+	<stance state_key="over_wall" accuracy="1.0"/>
 	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -2056,14 +2058,14 @@
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<stance state_key="running" accuracy="0.6"/>
-	<stance state_key="walking" accuracy="0.85"/>
-	<stance state_key="crouch_moving" accuracy="0.6"/>
+	<stance state_key="running" accuracy="0.7"/>
+	<stance state_key="walking" accuracy="0.8"/>
+	<stance state_key="crouch_moving" accuracy="0.85"/>
+	<stance state_key="prone_moving" accuracy="0.85"/>
 	<stance state_key="standing" accuracy="0.85"/>
-	<stance state_key="crouching" accuracy="0.85"/>
-	<stance state_key="prone" accuracy="0.85"/>
-	<stance state_key="prone_moving" accuracy="0.3"/>
-	<stance state_key="over_wall" accuracy="1"/>
+	<stance state_key="crouching" accuracy="0.9"/>
+	<stance state_key="prone" accuracy="1.0"/>
+	<stance state_key="over_wall" accuracy="1.0"/>
 	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -2644,14 +2646,14 @@
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<stance state_key="running" accuracy="0.6"/>
-	<stance state_key="walking" accuracy="0.85"/>
-	<stance state_key="crouch_moving" accuracy="0.6"/>
+	<stance state_key="running" accuracy="0.7"/>
+	<stance state_key="walking" accuracy="0.8"/>
+	<stance state_key="crouch_moving" accuracy="0.85"/>
+	<stance state_key="prone_moving" accuracy="0.85"/>
 	<stance state_key="standing" accuracy="0.85"/>
-	<stance state_key="crouching" accuracy="0.85"/>
-	<stance state_key="prone" accuracy="0.85"/>
-	<stance state_key="prone_moving" accuracy="0.3"/>
-	<stance state_key="over_wall" accuracy="1"/>
+	<stance state_key="crouching" accuracy="0.9"/>
+	<stance state_key="prone" accuracy="1.0"/>
+	<stance state_key="over_wall" accuracy="1.0"/>
 	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -6039,19 +6041,10 @@
 <weapon key="gkw_m99.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="rifle"/>
 	<tag name="antiarmor"/>
-	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="1.4" sustained_fire_diminish_rate="1.5" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="M99" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="3" projectile_speed="224.21" barrel_offset="0.4" projectiles_per_shot="1" last_burst_retrigger_time="0.333" burst_shots="1" stab_enabled="1" carry_in_two_hands="1"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="0" sustained_fire_diminish_rate="1.5" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="M99" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="3" projectile_speed="224.21" barrel_offset="0.4" projectiles_per_shot="4" last_burst_retrigger_time="0.5" burst_shots="1" stab_enabled="1" carry_in_two_hands="1"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
-	<inventory encumbrance="20.0" buy_price="80.0" sell_price="60.0"/>
+	<inventory encumbrance="20.0" buy_price="80.0" sell_price="80.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<stance state_key="running" accuracy="0.1"/>
-	<stance state_key="walking" accuracy="0.5"/>
-	<stance state_key="crouch_moving" accuracy="0.1"/>
-	<stance state_key="standing" accuracy="0.8"/>
-	<stance state_key="crouching" accuracy="0.9"/>
-	<stance state_key="prone" accuracy="1.0"/>
-	<stance state_key="prone_moving" accuracy="0.1"/>
-	<stance state_key="over_wall" accuracy="1"/>
-	<modifier class="detectability" value="-0.1"/>
 	<animation state_key="recoil" animation_key="recoil1, big"/>
 	<animation key="recoil" stance_key="prone" animation_key="recoil1, big, prone"/>
 	<animation key="hold" ref="32"/>
@@ -6070,17 +6063,17 @@
 	<model filename="gkw_rf_m99.xml"/>
 	<hud_icon filename="gkw_m99.png"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="bullet.projectile">
-	<result class="blast" damage="9.4" radius="3.5" decal="1" push="0" character_state="death" faction_compare="not_equal"/>
+	<projectile file="ntw.projectile">
+	<result class="blast" damage="5.0" radius="3.5" decal="1" push="0" character_state="death" faction_compare="not_equal"/>
 	</projectile>
-	<stance state_key="running" accuracy="0.7"/>
-	<stance state_key="walking" accuracy="0.7"/>
-	<stance state_key="crouch_moving" accuracy="0.85"/>
-	<stance state_key="standing" accuracy="0.85"/>
-	<stance state_key="crouching" accuracy="0.9"/>
+	<stance state_key="running" accuracy="1.0"/>
+	<stance state_key="walking" accuracy="1.0"/>
+	<stance state_key="crouch_moving" accuracy="1.0"/>
+	<stance state_key="standing" accuracy="1.0"/>
+	<stance state_key="crouching" accuracy="1.0"/>
 	<stance state_key="prone" accuracy="1.0"/>
-	<stance state_key="prone_moving" accuracy="1"/>
-	<stance state_key="over_wall" accuracy="1"/>
+	<stance state_key="prone_moving" accuracy="1.0"/>
+	<stance state_key="over_wall" accuracy="1.0"/>
 	<modifier class="detectability" value="-0.1"/>
 	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
@@ -6463,14 +6456,14 @@
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<stance state_key="running" accuracy="0.6"/>
-	<stance state_key="walking" accuracy="0.85"/>
-	<stance state_key="crouch_moving" accuracy="0.6"/>
+	<stance state_key="running" accuracy="0.7"/>
+	<stance state_key="walking" accuracy="0.8"/>
+	<stance state_key="crouch_moving" accuracy="0.85"/>
+	<stance state_key="prone_moving" accuracy="0.85"/>
 	<stance state_key="standing" accuracy="0.85"/>
-	<stance state_key="crouching" accuracy="0.85"/>
-	<stance state_key="prone" accuracy="0.85"/>
-	<stance state_key="prone_moving" accuracy="0.3"/>
-	<stance state_key="over_wall" accuracy="1"/>
+	<stance state_key="crouching" accuracy="0.9"/>
+	<stance state_key="prone" accuracy="1.0"/>
+	<stance state_key="over_wall" accuracy="1.0"/>
 	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -7263,7 +7256,7 @@
 </weapon>
 
 <weapon key="gkw_ro635.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification accuracy_factor="0.98" barrel_offset="-0.1" can_shoot_standing="1" class="0" slot="0" magazine_size="32" name="RO635" projectile_speed="115" retrigger_time="0.06" suppressed="0" sustained_fire_diminish_rate="1.8" sustained_fire_grow_step="0.3" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1"/>
+	<specification accuracy_factor="0.98" barrel_offset="-0.1" can_shoot_standing="1" class="0" slot="0" magazine_size="32" name="RO635" projectile_speed="115" retrigger_time="0.06" suppressed="0" sustained_fire_diminish_rate="2.0" sustained_fire_grow_step="0.25" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
 	<commonness value="0.2" in_stock="1" can_respawn_with="1"/>
 	<sound key="fire" fileref="ro635_fire_FromCOD16.wav" pitch_variety="0.05" volume="1"/>
@@ -7277,7 +7270,7 @@
 	<inventory buy_price="7.0" sell_price="7.0"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="1.6" kill_probability_offset_on_successful_hit="1.0" kill_decay_start_time="0.15" kill_decay_end_time="0.5"/>
+	<result class="hit" kill_probability="1.6" kill_probability_offset_on_successful_hit="1.35" kill_decay_start_time="0.2" kill_decay_end_time="0.6"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_9mm"/>
 	<stance state_key="running" accuracy="0.85"/>
@@ -7288,7 +7281,7 @@
 	<stance state_key="crouching" accuracy="0.95"/>
 	<stance state_key="prone" accuracy="1"/>
 	<modifier class="speed" value="0.4"/>
-	<modifier class="hit_success_probability" value="-0.1"/>
+	<modifier class="hit_success_probability" value="-0.2"/>
 	<tag name="smg"/>
 	<commonness value="0.5" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="2.0" buy_price="1.0" sell_price="0.0"/>
@@ -7437,7 +7430,7 @@
 </weapon>
 
 <weapon key="gkw_brenten.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1" last_burst_retrigger_time="0.1" accuracy_factor="1.0" sustained_fire_grow_step="0.35" sustained_fire_diminish_rate="1.3" magazine_size="11" suppressed="0" name="Brenten" class="4" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="97.28" projectiles_per_shot="1" burst_shots="1" stab_enabled="1" carry_in_two_hands="0" slot="0"/>
+	<specification retrigger_time="-1" last_burst_retrigger_time="0.1" accuracy_factor="1.0" sustained_fire_grow_step="0.35" sustained_fire_diminish_rate="1.3" magazine_size="11" suppressed="0" name="Brenten" class="4" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="120" projectiles_per_shot="1" burst_shots="1" stab_enabled="1" carry_in_two_hands="0" slot="0"/>
 	<inventory buy_price="5.0" sell_price="5.0"/>
 	<sound key="fire" fileref="brenten_fire_FromTTF2.wav" pitch_variety="0.05" volume="1"/>
 	<sound key="magazine_out" fileref="brenten_mgz_out_FromTTF2.wav" volume="0.7"/>
@@ -7448,7 +7441,7 @@
 	<hud_icon filename="gkw_brenten.png"/>
 	<weak_hand_hold offset="0.1"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="1.2" kill_decay_start_time="0.197" kill_decay_end_time="0.328"/>
+	<result class="hit" kill_probability="1.8" kill_probability_offset_on_successful_hit="2.5" kill_decay_start_time="0.3" kill_decay_end_time="0.35"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.8"/>
 	<stance state_key="walking" accuracy="0.85"/>
@@ -7457,6 +7450,7 @@
 	<stance state_key="standing" accuracy="0.9"/>
 	<stance state_key="crouching" accuracy="0.95"/>
 	<stance state_key="prone" accuracy="1"/>
+	<stance state_key="overwall" accuracy="1"/>
 	<tag name="pistol"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="2.0" buy_price="1.0" sell_price="0.0"/>
@@ -9020,7 +9014,6 @@
 
 <weapon key="gkw_psg1.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<specification accuracy_factor="1" barrel_offset="0.8" class="4" burst_shots="1" slot="0" magazine_size="20" name="PSG-1" projectile_speed="234.83" retrigger_time="-1" last_burst_retrigger_time="0.25" suppressed="0" sight_range_modifier="2.8" sustained_fire_diminish_rate="1.5" sustained_fire_grow_step="0.3" stab_enabled="1" carry_in_two_hands="1"/>
-	&gt;>
 	<inventory buy_price="10.0" sell_price="10.0"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.8"/>
 	<sound key="fire" fileref="psg1_fire_FromCOD7.wav" pitch_variety="0.01" volume="1.2"/>
@@ -9032,7 +9025,7 @@
 	<hud_icon filename="gkw_psg1.png"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="1.8" kill_probability_offset_on_successful_hit="2.0" kill_decay_start_time="1.895" kill_decay_end_time="3.158"/>
+	<result class="hit" kill_probability="2.2" kill_probability_offset_on_successful_hit="2.0" kill_decay_start_time="1.895" kill_decay_end_time="3.158"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_76251"/>
 	<stance state_key="running" accuracy="0.85"/>
@@ -9042,6 +9035,7 @@
 	<stance state_key="standing" accuracy="0.95"/>
 	<stance state_key="crouching" accuracy="1"/>
 	<stance state_key="prone" accuracy="1.1"/>
+	<stance state_key="overwall" accuracy="1.1"/>
 	<tag name="autorifle"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
@@ -11229,14 +11223,14 @@
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<stance state_key="running" accuracy="0.6"/>
-	<stance state_key="walking" accuracy="0.85"/>
-	<stance state_key="crouch_moving" accuracy="0.6"/>
+	<stance state_key="running" accuracy="0.7"/>
+	<stance state_key="walking" accuracy="0.8"/>
+	<stance state_key="crouch_moving" accuracy="0.85"/>
+	<stance state_key="prone_moving" accuracy="0.85"/>
 	<stance state_key="standing" accuracy="0.85"/>
-	<stance state_key="crouching" accuracy="0.85"/>
-	<stance state_key="prone" accuracy="0.85"/>
-	<stance state_key="prone_moving" accuracy="0.3"/>
-	<stance state_key="over_wall" accuracy="1"/>
+	<stance state_key="crouching" accuracy="0.9"/>
+	<stance state_key="prone" accuracy="1.0"/>
+	<stance state_key="over_wall" accuracy="1.0"/>
 	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -11298,14 +11292,14 @@
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<stance state_key="running" accuracy="0.6"/>
-	<stance state_key="walking" accuracy="0.85"/>
-	<stance state_key="crouch_moving" accuracy="0.6"/>
+	<stance state_key="running" accuracy="0.7"/>
+	<stance state_key="walking" accuracy="0.8"/>
+	<stance state_key="crouch_moving" accuracy="0.85"/>
+	<stance state_key="prone_moving" accuracy="0.85"/>
 	<stance state_key="standing" accuracy="0.85"/>
-	<stance state_key="crouching" accuracy="0.85"/>
-	<stance state_key="prone" accuracy="0.85"/>
-	<stance state_key="prone_moving" accuracy="0.3"/>
-	<stance state_key="over_wall" accuracy="1"/>
+	<stance state_key="crouching" accuracy="0.9"/>
+	<stance state_key="prone" accuracy="1.0"/>
+	<stance state_key="over_wall" accuracy="1.0"/>
 	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -11531,14 +11525,14 @@
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<stance state_key="running" accuracy="0.6"/>
-	<stance state_key="walking" accuracy="0.85"/>
-	<stance state_key="crouch_moving" accuracy="0.6"/>
+	<stance state_key="running" accuracy="0.7"/>
+	<stance state_key="walking" accuracy="0.8"/>
+	<stance state_key="crouch_moving" accuracy="0.85"/>
+	<stance state_key="prone_moving" accuracy="0.85"/>
 	<stance state_key="standing" accuracy="0.85"/>
-	<stance state_key="crouching" accuracy="0.85"/>
-	<stance state_key="prone" accuracy="0.85"/>
-	<stance state_key="prone_moving" accuracy="0.3"/>
-	<stance state_key="over_wall" accuracy="1"/>
+	<stance state_key="crouching" accuracy="0.9"/>
+	<stance state_key="prone" accuracy="1.0"/>
+	<stance state_key="over_wall" accuracy="1.0"/>
 	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -11598,14 +11592,14 @@
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<stance state_key="running" accuracy="0.6"/>
-	<stance state_key="walking" accuracy="0.85"/>
-	<stance state_key="crouch_moving" accuracy="0.6"/>
+	<stance state_key="running" accuracy="0.7"/>
+	<stance state_key="walking" accuracy="0.8"/>
+	<stance state_key="crouch_moving" accuracy="0.85"/>
+	<stance state_key="prone_moving" accuracy="0.85"/>
 	<stance state_key="standing" accuracy="0.85"/>
-	<stance state_key="crouching" accuracy="0.85"/>
-	<stance state_key="prone" accuracy="0.85"/>
-	<stance state_key="prone_moving" accuracy="0.3"/>
-	<stance state_key="over_wall" accuracy="1"/>
+	<stance state_key="crouching" accuracy="0.9"/>
+	<stance state_key="prone" accuracy="1.0"/>
+	<stance state_key="over_wall" accuracy="1.0"/>
 	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -11832,14 +11826,14 @@
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<stance state_key="running" accuracy="0.6"/>
-	<stance state_key="walking" accuracy="0.85"/>
-	<stance state_key="crouch_moving" accuracy="0.6"/>
+	<stance state_key="running" accuracy="0.7"/>
+	<stance state_key="walking" accuracy="0.8"/>
+	<stance state_key="crouch_moving" accuracy="0.85"/>
+	<stance state_key="prone_moving" accuracy="0.85"/>
 	<stance state_key="standing" accuracy="0.85"/>
-	<stance state_key="crouching" accuracy="0.85"/>
-	<stance state_key="prone" accuracy="0.85"/>
-	<stance state_key="prone_moving" accuracy="0.3"/>
-	<stance state_key="over_wall" accuracy="1"/>
+	<stance state_key="crouching" accuracy="0.9"/>
+	<stance state_key="prone" accuracy="1.0"/>
+	<stance state_key="over_wall" accuracy="1.0"/>
 	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -11901,14 +11895,14 @@
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<stance state_key="running" accuracy="0.6"/>
-	<stance state_key="walking" accuracy="0.85"/>
-	<stance state_key="crouch_moving" accuracy="0.6"/>
+	<stance state_key="running" accuracy="0.7"/>
+	<stance state_key="walking" accuracy="0.8"/>
+	<stance state_key="crouch_moving" accuracy="0.85"/>
+	<stance state_key="prone_moving" accuracy="0.85"/>
 	<stance state_key="standing" accuracy="0.85"/>
-	<stance state_key="crouching" accuracy="0.85"/>
-	<stance state_key="prone" accuracy="0.85"/>
-	<stance state_key="prone_moving" accuracy="0.3"/>
-	<stance state_key="over_wall" accuracy="1"/>
+	<stance state_key="crouching" accuracy="0.9"/>
+	<stance state_key="prone" accuracy="1.0"/>
+	<stance state_key="over_wall" accuracy="1.0"/>
 	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -12283,7 +12277,7 @@
 
 <weapon key="gkw_kp31.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="smg"/>
-	<specification accuracy_factor="1" barrel_offset="0.4" class="0" slot="0" magazine_size="71" carry_in_two_hands="1" name="KP31 Suomi" projectile_speed="125" retrigger_time="0.07" suppressed="0" sustained_fire_diminish_rate="1.6" sustained_fire_grow_step="0.22" burst_shots="1" stab_enabled="1"/>
+	<specification accuracy_factor="1" barrel_offset="0.4" class="0" slot="0" magazine_size="71" carry_in_two_hands="1" name="KP-31 Suomi" projectile_speed="125" retrigger_time="0.07" suppressed="0" sustained_fire_diminish_rate="1.6" sustained_fire_grow_step="0.22" burst_shots="1" stab_enabled="1"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="2.0" buy_price="10.0" sell_price="10.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -12873,14 +12867,14 @@
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<stance state_key="running" accuracy="0.6"/>
-	<stance state_key="walking" accuracy="0.85"/>
-	<stance state_key="crouch_moving" accuracy="0.6"/>
+	<stance state_key="running" accuracy="0.7"/>
+	<stance state_key="walking" accuracy="0.8"/>
+	<stance state_key="crouch_moving" accuracy="0.85"/>
+	<stance state_key="prone_moving" accuracy="0.85"/>
 	<stance state_key="standing" accuracy="0.85"/>
-	<stance state_key="crouching" accuracy="0.85"/>
-	<stance state_key="prone" accuracy="0.85"/>
-	<stance state_key="prone_moving" accuracy="0.3"/>
-	<stance state_key="over_wall" accuracy="1"/>
+	<stance state_key="crouching" accuracy="0.9"/>
+	<stance state_key="prone" accuracy="1.0"/>
+	<stance state_key="over_wall" accuracy="1.0"/>
 	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -12941,14 +12935,14 @@
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<stance state_key="running" accuracy="0.6"/>
-	<stance state_key="walking" accuracy="0.85"/>
-	<stance state_key="crouch_moving" accuracy="0.6"/>
+	<stance state_key="running" accuracy="0.7"/>
+	<stance state_key="walking" accuracy="0.8"/>
+	<stance state_key="crouch_moving" accuracy="0.85"/>
+	<stance state_key="prone_moving" accuracy="0.85"/>
 	<stance state_key="standing" accuracy="0.85"/>
-	<stance state_key="crouching" accuracy="0.85"/>
-	<stance state_key="prone" accuracy="0.85"/>
-	<stance state_key="prone_moving" accuracy="0.3"/>
-	<stance state_key="over_wall" accuracy="1"/>
+	<stance state_key="crouching" accuracy="0.9"/>
+	<stance state_key="prone" accuracy="1.0"/>
+	<stance state_key="over_wall" accuracy="1.0"/>
 	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -13336,14 +13330,14 @@
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<stance state_key="running" accuracy="0.6"/>
-	<stance state_key="walking" accuracy="0.85"/>
-	<stance state_key="crouch_moving" accuracy="0.6"/>
+	<stance state_key="running" accuracy="0.7"/>
+	<stance state_key="walking" accuracy="0.8"/>
+	<stance state_key="crouch_moving" accuracy="0.85"/>
+	<stance state_key="prone_moving" accuracy="0.85"/>
 	<stance state_key="standing" accuracy="0.85"/>
-	<stance state_key="crouching" accuracy="0.85"/>
-	<stance state_key="prone" accuracy="0.85"/>
-	<stance state_key="prone_moving" accuracy="0.3"/>
-	<stance state_key="over_wall" accuracy="1"/>
+	<stance state_key="crouching" accuracy="0.9"/>
+	<stance state_key="prone" accuracy="1.0"/>
+	<stance state_key="over_wall" accuracy="1.0"/>
 	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -13403,14 +13397,14 @@
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<stance state_key="running" accuracy="0.6"/>
-	<stance state_key="walking" accuracy="0.85"/>
-	<stance state_key="crouch_moving" accuracy="0.6"/>
+	<stance state_key="running" accuracy="0.7"/>
+	<stance state_key="walking" accuracy="0.8"/>
+	<stance state_key="crouch_moving" accuracy="0.85"/>
+	<stance state_key="prone_moving" accuracy="0.85"/>
 	<stance state_key="standing" accuracy="0.85"/>
-	<stance state_key="crouching" accuracy="0.85"/>
-	<stance state_key="prone" accuracy="0.85"/>
-	<stance state_key="prone_moving" accuracy="0.3"/>
-	<stance state_key="over_wall" accuracy="1"/>
+	<stance state_key="crouching" accuracy="0.9"/>
+	<stance state_key="prone" accuracy="1.0"/>
+	<stance state_key="over_wall" accuracy="1.0"/>
 	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -14108,14 +14102,14 @@
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<stance state_key="running" accuracy="0.6"/>
-	<stance state_key="walking" accuracy="0.85"/>
-	<stance state_key="crouch_moving" accuracy="0.6"/>
+	<stance state_key="running" accuracy="0.7"/>
+	<stance state_key="walking" accuracy="0.8"/>
+	<stance state_key="crouch_moving" accuracy="0.85"/>
+	<stance state_key="prone_moving" accuracy="0.85"/>
 	<stance state_key="standing" accuracy="0.85"/>
-	<stance state_key="crouching" accuracy="0.85"/>
-	<stance state_key="prone" accuracy="0.85"/>
-	<stance state_key="prone_moving" accuracy="0.3"/>
-	<stance state_key="over_wall" accuracy="1"/>
+	<stance state_key="crouching" accuracy="0.9"/>
+	<stance state_key="prone" accuracy="1.0"/>
+	<stance state_key="over_wall" accuracy="1.0"/>
 	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -14234,14 +14228,14 @@
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<stance state_key="running" accuracy="0.6"/>
-	<stance state_key="walking" accuracy="0.85"/>
-	<stance state_key="crouch_moving" accuracy="0.6"/>
+	<stance state_key="running" accuracy="0.7"/>
+	<stance state_key="walking" accuracy="0.8"/>
+	<stance state_key="crouch_moving" accuracy="0.85"/>
+	<stance state_key="prone_moving" accuracy="0.85"/>
 	<stance state_key="standing" accuracy="0.85"/>
-	<stance state_key="crouching" accuracy="0.85"/>
-	<stance state_key="prone" accuracy="0.85"/>
-	<stance state_key="prone_moving" accuracy="0.3"/>
-	<stance state_key="over_wall" accuracy="1"/>
+	<stance state_key="crouching" accuracy="0.9"/>
+	<stance state_key="prone" accuracy="1.0"/>
+	<stance state_key="over_wall" accuracy="1.0"/>
 	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -14347,14 +14341,14 @@
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<stance state_key="running" accuracy="0.6"/>
-	<stance state_key="walking" accuracy="0.85"/>
-	<stance state_key="crouch_moving" accuracy="0.6"/>
+	<stance state_key="running" accuracy="0.7"/>
+	<stance state_key="walking" accuracy="0.8"/>
+	<stance state_key="crouch_moving" accuracy="0.85"/>
+	<stance state_key="prone_moving" accuracy="0.85"/>
 	<stance state_key="standing" accuracy="0.85"/>
-	<stance state_key="crouching" accuracy="0.85"/>
-	<stance state_key="prone" accuracy="0.85"/>
-	<stance state_key="prone_moving" accuracy="0.3"/>
-	<stance state_key="over_wall" accuracy="1"/>
+	<stance state_key="crouching" accuracy="0.9"/>
+	<stance state_key="prone" accuracy="1.0"/>
+	<stance state_key="over_wall" accuracy="1.0"/>
 	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -14385,7 +14379,7 @@
 </weapon>
 
 <weapon key="gkw_pp19.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification accuracy_factor="0.98" barrel_offset="0.32" class="0" magazine_size="53" name="PP-19" projectile_speed="110" retrigger_time="0.08" suppressed="0" sustained_fire_diminish_rate="1.8" sustained_fire_grow_step="0.3" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
+	<specification accuracy_factor="0.98" barrel_offset="0.32" class="0" magazine_size="64" name="PP-19 Bizon" projectile_speed="110" retrigger_time="0.08" suppressed="0" sustained_fire_diminish_rate="1.8" sustained_fire_grow_step="0.3" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
 	<animation state_key="hold_casual" animation_key="dancing, kazachok"/>
 	<inventory buy_price="15.0" sell_price="15.0"/>
 	<sound key="fire" fileref="pp19_fire_FromWF.wav" pitch_variety="0.05" volume="1.2"/>
@@ -14397,7 +14391,7 @@
 	<hud_icon filename="gkw_pp19.png"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="1.6" kill_probability_offset_on_successful_hit="0.7" kill_decay_start_time="0.005" kill_decay_end_time="0.75"/>
+	<result class="hit" kill_probability="1.6" kill_probability_offset_on_successful_hit="1.25" kill_decay_start_time="0.165" kill_decay_end_time="0.6"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_9mm"/>
 	<stance state_key="running" accuracy="0.8"/>
@@ -14407,6 +14401,7 @@
 	<stance state_key="standing" accuracy="0.9"/>
 	<stance state_key="crouching" accuracy="0.95"/>
 	<stance state_key="prone" accuracy="1"/>
+	<stance state_key="overwall" accuracy="1"/>
 	<modifier class="hit_success_probability" value="-0.2"/>
 	<tag name="smg"/>
 	<commonness value="0.5" in_stock="0" can_respawn_with="1"/>
@@ -15185,14 +15180,14 @@
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<stance state_key="running" accuracy="0.6"/>
-	<stance state_key="walking" accuracy="0.85"/>
-	<stance state_key="crouch_moving" accuracy="0.6"/>
+	<stance state_key="running" accuracy="0.7"/>
+	<stance state_key="walking" accuracy="0.8"/>
+	<stance state_key="crouch_moving" accuracy="0.85"/>
+	<stance state_key="prone_moving" accuracy="0.85"/>
 	<stance state_key="standing" accuracy="0.85"/>
-	<stance state_key="crouching" accuracy="0.85"/>
-	<stance state_key="prone" accuracy="0.85"/>
-	<stance state_key="prone_moving" accuracy="0.3"/>
-	<stance state_key="over_wall" accuracy="1"/>
+	<stance state_key="crouching" accuracy="0.9"/>
+	<stance state_key="prone" accuracy="1.0"/>
+	<stance state_key="over_wall" accuracy="1.0"/>
 	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -15254,14 +15249,14 @@
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<stance state_key="running" accuracy="0.6"/>
-	<stance state_key="walking" accuracy="0.85"/>
-	<stance state_key="crouch_moving" accuracy="0.6"/>
+	<stance state_key="running" accuracy="0.7"/>
+	<stance state_key="walking" accuracy="0.8"/>
+	<stance state_key="crouch_moving" accuracy="0.85"/>
+	<stance state_key="prone_moving" accuracy="0.85"/>
 	<stance state_key="standing" accuracy="0.85"/>
-	<stance state_key="crouching" accuracy="0.85"/>
-	<stance state_key="prone" accuracy="0.85"/>
-	<stance state_key="prone_moving" accuracy="0.3"/>
-	<stance state_key="over_wall" accuracy="1"/>
+	<stance state_key="crouching" accuracy="0.9"/>
+	<stance state_key="prone" accuracy="1.0"/>
+	<stance state_key="over_wall" accuracy="1.0"/>
 	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -15321,14 +15316,14 @@
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<stance state_key="running" accuracy="0.6"/>
-	<stance state_key="walking" accuracy="0.85"/>
-	<stance state_key="crouch_moving" accuracy="0.6"/>
+	<stance state_key="running" accuracy="0.7"/>
+	<stance state_key="walking" accuracy="0.8"/>
+	<stance state_key="crouch_moving" accuracy="0.85"/>
+	<stance state_key="prone_moving" accuracy="0.85"/>
 	<stance state_key="standing" accuracy="0.85"/>
-	<stance state_key="crouching" accuracy="0.85"/>
-	<stance state_key="prone" accuracy="0.85"/>
-	<stance state_key="prone_moving" accuracy="0.3"/>
-	<stance state_key="over_wall" accuracy="1"/>
+	<stance state_key="crouching" accuracy="0.9"/>
+	<stance state_key="prone" accuracy="1.0"/>
+	<stance state_key="over_wall" accuracy="1.0"/>
 	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -15359,7 +15354,7 @@
 </weapon>
 
 <weapon key="gkw_fp6.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="0.9" sustained_fire_grow_step="0.8" sustained_fire_diminish_rate="2" magazine_size="7" can_shoot_standing="1" suppressed="0" name="FABARM FP6" class="1" reload_one_at_a_time="1" sight_range_modifier="1" projectile_speed="100" barrel_offset="0.4" projectiles_per_shot="18" spread_range="0.2" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0" use_basic_muzzle_smoke_effect="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="0.9" sustained_fire_grow_step="0.8" sustained_fire_diminish_rate="2" magazine_size="7" can_shoot_standing="1" suppressed="0" name="FABARM FP-6" class="1" reload_one_at_a_time="1" sight_range_modifier="1" projectile_speed="100" barrel_offset="0.4" projectiles_per_shot="18" spread_range="0.2" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0" use_basic_muzzle_smoke_effect="0"/>
 	<inventory buy_price="20.0" sell_price="20.0"/>
 	<commonness value="0.2" can_respawn_with="1" in_stock="0"/>
 	<animation state_key="cycle" animation_key="Pshotgun0.5"/>
@@ -15389,14 +15384,14 @@
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<stance state_key="running" accuracy="0.6"/>
-	<stance state_key="walking" accuracy="0.85"/>
-	<stance state_key="crouch_moving" accuracy="0.6"/>
+	<stance state_key="running" accuracy="0.7"/>
+	<stance state_key="walking" accuracy="0.8"/>
+	<stance state_key="crouch_moving" accuracy="0.85"/>
+	<stance state_key="prone_moving" accuracy="0.85"/>
 	<stance state_key="standing" accuracy="0.85"/>
-	<stance state_key="crouching" accuracy="0.85"/>
-	<stance state_key="prone" accuracy="0.85"/>
-	<stance state_key="prone_moving" accuracy="0.3"/>
-	<stance state_key="over_wall" accuracy="1"/>
+	<stance state_key="crouching" accuracy="0.9"/>
+	<stance state_key="prone" accuracy="1.0"/>
+	<stance state_key="over_wall" accuracy="1.0"/>
 	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -15575,14 +15570,14 @@
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<stance state_key="running" accuracy="0.6"/>
-	<stance state_key="walking" accuracy="0.85"/>
-	<stance state_key="crouch_moving" accuracy="0.6"/>
+	<stance state_key="running" accuracy="0.7"/>
+	<stance state_key="walking" accuracy="0.8"/>
+	<stance state_key="crouch_moving" accuracy="0.85"/>
+	<stance state_key="prone_moving" accuracy="0.85"/>
 	<stance state_key="standing" accuracy="0.85"/>
-	<stance state_key="crouching" accuracy="0.85"/>
-	<stance state_key="prone" accuracy="0.85"/>
-	<stance state_key="prone_moving" accuracy="0.3"/>
-	<stance state_key="over_wall" accuracy="1"/>
+	<stance state_key="crouching" accuracy="0.9"/>
+	<stance state_key="prone" accuracy="1.0"/>
+	<stance state_key="over_wall" accuracy="1.0"/>
 	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -15644,14 +15639,14 @@
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<stance state_key="running" accuracy="0.6"/>
-	<stance state_key="walking" accuracy="0.85"/>
-	<stance state_key="crouch_moving" accuracy="0.6"/>
+	<stance state_key="running" accuracy="0.7"/>
+	<stance state_key="walking" accuracy="0.8"/>
+	<stance state_key="crouch_moving" accuracy="0.85"/>
+	<stance state_key="prone_moving" accuracy="0.85"/>
 	<stance state_key="standing" accuracy="0.85"/>
-	<stance state_key="crouching" accuracy="0.85"/>
-	<stance state_key="prone" accuracy="0.85"/>
-	<stance state_key="prone_moving" accuracy="0.3"/>
-	<stance state_key="over_wall" accuracy="1"/>
+	<stance state_key="crouching" accuracy="0.9"/>
+	<stance state_key="prone" accuracy="1.0"/>
+	<stance state_key="over_wall" accuracy="1.0"/>
 	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -15824,14 +15819,14 @@
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<stance state_key="running" accuracy="0.6"/>
-	<stance state_key="walking" accuracy="0.85"/>
-	<stance state_key="crouch_moving" accuracy="0.6"/>
+	<stance state_key="running" accuracy="0.7"/>
+	<stance state_key="walking" accuracy="0.8"/>
+	<stance state_key="crouch_moving" accuracy="0.85"/>
+	<stance state_key="prone_moving" accuracy="0.85"/>
 	<stance state_key="standing" accuracy="0.85"/>
-	<stance state_key="crouching" accuracy="0.85"/>
-	<stance state_key="prone" accuracy="0.85"/>
-	<stance state_key="prone_moving" accuracy="0.3"/>
-	<stance state_key="over_wall" accuracy="1"/>
+	<stance state_key="crouching" accuracy="0.9"/>
+	<stance state_key="prone" accuracy="1.0"/>
+	<stance state_key="over_wall" accuracy="1.0"/>
 	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -16486,14 +16481,14 @@
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<stance state_key="running" accuracy="0.6"/>
-	<stance state_key="walking" accuracy="0.85"/>
-	<stance state_key="crouch_moving" accuracy="0.6"/>
+	<stance state_key="running" accuracy="0.7"/>
+	<stance state_key="walking" accuracy="0.8"/>
+	<stance state_key="crouch_moving" accuracy="0.85"/>
+	<stance state_key="prone_moving" accuracy="0.85"/>
 	<stance state_key="standing" accuracy="0.85"/>
-	<stance state_key="crouching" accuracy="0.85"/>
-	<stance state_key="prone" accuracy="0.85"/>
-	<stance state_key="prone_moving" accuracy="0.3"/>
-	<stance state_key="over_wall" accuracy="1"/>
+	<stance state_key="crouching" accuracy="0.9"/>
+	<stance state_key="prone" accuracy="1.0"/>
+	<stance state_key="over_wall" accuracy="1.0"/>
 	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -16556,14 +16551,14 @@
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<stance state_key="running" accuracy="0.6"/>
-	<stance state_key="walking" accuracy="0.85"/>
-	<stance state_key="crouch_moving" accuracy="0.6"/>
+	<stance state_key="running" accuracy="0.7"/>
+	<stance state_key="walking" accuracy="0.8"/>
+	<stance state_key="crouch_moving" accuracy="0.85"/>
+	<stance state_key="prone_moving" accuracy="0.85"/>
 	<stance state_key="standing" accuracy="0.85"/>
-	<stance state_key="crouching" accuracy="0.85"/>
-	<stance state_key="prone" accuracy="0.85"/>
-	<stance state_key="prone_moving" accuracy="0.3"/>
-	<stance state_key="over_wall" accuracy="1"/>
+	<stance state_key="crouching" accuracy="0.9"/>
+	<stance state_key="prone" accuracy="1.0"/>
+	<stance state_key="over_wall" accuracy="1.0"/>
 	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -16883,7 +16878,7 @@
 </weapon>
 
 <weapon key="gkw_m1891.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="2.0" sustained_fire_grow_step="0.1" sustained_fire_diminish_rate="2.0" magazine_size="5" can_shoot_standing="1" suppressed="0" name="Mosin-Nagant" class="2" reload_one_at_a_time="1" sight_range_modifier="3" projectile_speed="205.95" barrel_offset="0.4" projectiles_per_shot="4" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="2.0" sustained_fire_grow_step="0.1" sustained_fire_diminish_rate="2.0" magazine_size="5" can_shoot_standing="1" suppressed="0" name="Mosin-Nagant M1891" class="2" reload_one_at_a_time="1" sight_range_modifier="3" projectile_speed="205.95" barrel_offset="0.4" projectiles_per_shot="4" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
 	<inventory buy_price="8.0" sell_price="8.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
@@ -20019,7 +20014,7 @@
 </weapon>
 
 <weapon key="gkw_pp19mod3.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification accuracy_factor="0.99" barrel_offset="0.32" class="0" magazine_size="53" name="PP-19(MOD3)" projectile_speed="125" retrigger_time="0.08" suppressed="0" sustained_fire_diminish_rate="1.9" sustained_fire_grow_step="0.3" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
+	<specification accuracy_factor="1.0" barrel_offset="0.32" class="0" magazine_size="64" name="PP-19 Bizon(MOD3)" projectile_speed="125" retrigger_time="0.08" suppressed="0" sustained_fire_diminish_rate="1.9" sustained_fire_grow_step="0.2" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
 	<animation state_key="hold_casual" animation_key="dancing, kazachok"/>
 	<inventory buy_price="190.0" sell_price="190.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -20032,16 +20027,17 @@
 	<hud_icon filename="gkw_pp19mod3.png"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="1.7" kill_probability_offset_on_successful_hit="1.25" kill_decay_start_time="0.005" kill_decay_end_time="0.6"/>
+	<result class="hit" kill_probability="1.7" kill_probability_offset_on_successful_hit="2.1" kill_decay_start_time="0.15" kill_decay_end_time="0.6"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_9mm"/>
-	<stance state_key="running" accuracy="0.8"/>
-	<stance state_key="walking" accuracy="0.85"/>
-	<stance state_key="crouch_moving" accuracy="0.9"/>
-	<stance state_key="prone_moving" accuracy="0.9"/>
-	<stance state_key="standing" accuracy="0.9"/>
-	<stance state_key="crouching" accuracy="0.95"/>
+	<stance state_key="running" accuracy="0.85"/>
+	<stance state_key="walking" accuracy="0.9"/>
+	<stance state_key="crouch_moving" accuracy="0.95"/>
+	<stance state_key="prone_moving" accuracy="0.95"/>
+	<stance state_key="standing" accuracy="0.95"/>
+	<stance state_key="crouching" accuracy="0.98"/>
 	<stance state_key="prone" accuracy="1"/>
+	<stance state_key="overwall" accuracy="1"/>
 	<modifier class="speed" value="+0.5"/>
 	<modifier class="hit_success_probability" value="-0.2"/>
 	<tag name="smg"/>
@@ -20197,7 +20193,7 @@
 
 <weapon key="gkw_ro635mod3.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="smg"/>
-	<specification accuracy_factor="0.98" barrel_offset="-0.1" can_shoot_standing="1" class="0" slot="0" carry_in_two_hands="1" magazine_size="32" name="RO635(MOD3)" projectile_speed="130" retrigger_time="0.06" suppressed="0" sustained_fire_diminish_rate="2.4" sustained_fire_grow_step="0.2" stab_enabled="1"/>
+	<specification accuracy_factor="0.98" barrel_offset="-0.1" can_shoot_standing="1" class="0" slot="0" carry_in_two_hands="1" magazine_size="32" name="RO635(MOD3)" projectile_speed="130" retrigger_time="0.06" suppressed="0" sustained_fire_diminish_rate="2.4" sustained_fire_grow_step="0.15" stab_enabled="1"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
 	<animation key="recoil" animation_key="recoil1"/>
 	<animation key="recoil" animation_key="recoil2"/>
@@ -20242,11 +20238,11 @@
 	<model filename="gkw_smg_ro635_mod3.xml"/>
 	<hud_icon filename="gkw_ro635mod3.png"/>
 	<commonness value="0.01" in_stock="0" can_respawn_with="1"/>
-	<inventory encumbrance="2.0" buy_price="120.0" sell_price="120.0"/>
+	<inventory encumbrance="2.0" buy_price="180.0" sell_price="180.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="1.75" kill_probability_offset_on_successful_hit="2.0" kill_decay_start_time="0.1" kill_decay_end_time="0.45"/>
+	<result class="hit" kill_probability="1.75" kill_probability_offset_on_successful_hit="2.35" kill_decay_start_time="0.15" kill_decay_end_time="0.6"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_9mm"/>
 	<stance state_key="running" accuracy="0.88"/>
@@ -20258,7 +20254,7 @@
 	<stance state_key="prone" accuracy="1"/>
 	<stance state_key="over_wall" accuracy="1"/>
 	<modifier class="speed" value="0.7"/>
-	<modifier class="hit_success_probability" value="-0.1"/>
+	<modifier class="hit_success_probability" value="-0.25"/>
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
 	<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
@@ -21625,7 +21621,7 @@
 </weapon>
 
 <weapon key="gkw_m1891mod3.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="2.0" sustained_fire_grow_step="0.1" sustained_fire_diminish_rate="2.0" magazine_size="5" can_shoot_standing="1" suppressed="0" name="Mosin-Nagant(MOD3)" class="2" reload_one_at_a_time="1" sight_range_modifier="3" projectile_speed="205.95" barrel_offset="0.4" projectiles_per_shot="5" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="2.0" sustained_fire_grow_step="0.1" sustained_fire_diminish_rate="2.0" magazine_size="5" can_shoot_standing="1" suppressed="0" name="Mosin-Nagant M1891(MOD3)" class="2" reload_one_at_a_time="1" sight_range_modifier="3" projectile_speed="205.95" barrel_offset="0.4" projectiles_per_shot="5" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
 	<inventory buy_price="110.0" sell_price="110.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<commonness value="0.01" in_stock="0" can_respawn_with="1"/>
@@ -21685,7 +21681,7 @@
 </weapon>
 
 <weapon key="gkw_m1891mod3_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="2" sustained_fire_diminish_rate="1.2" magazine_size="1" can_shoot_standing="1" suppressed="0" name="Mosin-Nagant(MOD3)-[Pure White Reaper]" class="2" reload_one_at_a_time="0" sight_range_modifier="3" projectile_speed="205.95" barrel_offset="0.4" projectiles_per_shot="2" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="2" sustained_fire_diminish_rate="1.2" magazine_size="1" can_shoot_standing="1" suppressed="0" name="Mosin-Nagant M1891(MOD3)-[Pure White Reaper]" class="2" reload_one_at_a_time="0" sight_range_modifier="3" projectile_speed="205.95" barrel_offset="0.4" projectiles_per_shot="2" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
 	<inventory buy_price="110.0" sell_price="110.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<next_in_chain key="gkw_m1891mod3.weapon" share_ammo="0"/>
@@ -21923,7 +21919,7 @@
 
 <weapon key="gkw_kp31mod3.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="smg"/>
-	<specification accuracy_factor="1" barrel_offset="0.4" class="0" slot="0" carry_in_two_hands="1" magazine_size="71" name="KP31 Suomi(MOD3)" projectile_speed="125" retrigger_time="0.0666" suppressed="0" sight_range_modifier="1.5" sustained_fire_diminish_rate="1.8" sustained_fire_grow_step="0.2" burst_shots="1" stab_enabled="1"/>
+	<specification accuracy_factor="1" barrel_offset="0.4" class="0" slot="0" carry_in_two_hands="1" magazine_size="71" name="KP-31 Suomi(MOD3)" projectile_speed="125" retrigger_time="0.0666" suppressed="0" sight_range_modifier="1.5" sustained_fire_diminish_rate="1.8" sustained_fire_grow_step="0.2" burst_shots="1" stab_enabled="1"/>
 	<commonness value="0.01" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="2.0" buy_price="200.0" sell_price="200.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -22919,14 +22915,14 @@
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<stance state_key="running" accuracy="0.6"/>
-	<stance state_key="walking" accuracy="0.85"/>
-	<stance state_key="crouch_moving" accuracy="0.6"/>
+	<stance state_key="running" accuracy="0.7"/>
+	<stance state_key="walking" accuracy="0.8"/>
+	<stance state_key="crouch_moving" accuracy="0.85"/>
+	<stance state_key="prone_moving" accuracy="0.85"/>
 	<stance state_key="standing" accuracy="0.85"/>
-	<stance state_key="crouching" accuracy="0.85"/>
-	<stance state_key="prone" accuracy="0.85"/>
-	<stance state_key="prone_moving" accuracy="0.3"/>
-	<stance state_key="over_wall" accuracy="1"/>
+	<stance state_key="crouching" accuracy="0.9"/>
+	<stance state_key="prone" accuracy="1.0"/>
+	<stance state_key="over_wall" accuracy="1.0"/>
 	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -23052,14 +23048,14 @@
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<stance state_key="running" accuracy="0.6"/>
-	<stance state_key="walking" accuracy="0.85"/>
-	<stance state_key="crouch_moving" accuracy="0.6"/>
+	<stance state_key="running" accuracy="0.7"/>
+	<stance state_key="walking" accuracy="0.8"/>
+	<stance state_key="crouch_moving" accuracy="0.85"/>
+	<stance state_key="prone_moving" accuracy="0.85"/>
 	<stance state_key="standing" accuracy="0.85"/>
-	<stance state_key="crouching" accuracy="0.85"/>
-	<stance state_key="prone" accuracy="0.85"/>
-	<stance state_key="prone_moving" accuracy="0.3"/>
-	<stance state_key="over_wall" accuracy="1"/>
+	<stance state_key="crouching" accuracy="0.9"/>
+	<stance state_key="prone" accuracy="1.0"/>
+	<stance state_key="over_wall" accuracy="1.0"/>
 	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -24398,19 +24394,10 @@
 <weapon key="gkw_m99_404.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="rifle"/>
 	<tag name="antiarmor"/>
-	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="1.4" sustained_fire_diminish_rate="1.5" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="M99-[Cyclamen]" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="3" projectile_speed="224.21" barrel_offset="0.4" projectiles_per_shot="1" last_burst_retrigger_time="0.333" burst_shots="1" stab_enabled="1" carry_in_two_hands="1"/>
-	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
-	<inventory encumbrance="20.0" buy_price="80.0" sell_price="60.0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="0" sustained_fire_diminish_rate="1.5" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="M99-[Cyclamen]" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="3" projectile_speed="224.21" barrel_offset="0.4" projectiles_per_shot="4" last_burst_retrigger_time="0.5" burst_shots="1" stab_enabled="1" carry_in_two_hands="1"/>
+	<commonness value="0" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="20.0" buy_price="80.0" sell_price="80.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<stance state_key="running" accuracy="0.1"/>
-	<stance state_key="walking" accuracy="0.5"/>
-	<stance state_key="crouch_moving" accuracy="0.1"/>
-	<stance state_key="standing" accuracy="0.8"/>
-	<stance state_key="crouching" accuracy="0.9"/>
-	<stance state_key="prone" accuracy="1.0"/>
-	<stance state_key="prone_moving" accuracy="0.1"/>
-	<stance state_key="over_wall" accuracy="1"/>
-	<modifier class="detectability" value="-0.1"/>
 	<animation state_key="recoil" animation_key="recoil1, big"/>
 	<animation key="recoil" stance_key="prone" animation_key="recoil1, big, prone"/>
 	<animation key="hold" ref="32"/>
@@ -24429,17 +24416,17 @@
 	<model filename="gkw_rf_m99_404.xml"/>
 	<hud_icon filename="gkw_m99_404.png"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="bullet.projectile">
-	<result class="blast" damage="9.4" radius="3.5" decal="1" push="0" character_state="death" faction_compare="not_equal"/>
+	<projectile file="ntw.projectile">
+	<result class="blast" damage="5.0" radius="3.5" decal="1" push="0" character_state="death" faction_compare="not_equal"/>
 	</projectile>
-	<stance state_key="running" accuracy="0.7"/>
-	<stance state_key="walking" accuracy="0.7"/>
-	<stance state_key="crouch_moving" accuracy="0.85"/>
-	<stance state_key="standing" accuracy="0.85"/>
-	<stance state_key="crouching" accuracy="0.9"/>
+	<stance state_key="running" accuracy="1.0"/>
+	<stance state_key="walking" accuracy="1.0"/>
+	<stance state_key="crouch_moving" accuracy="1.0"/>
+	<stance state_key="standing" accuracy="1.0"/>
+	<stance state_key="crouching" accuracy="1.0"/>
 	<stance state_key="prone" accuracy="1.0"/>
-	<stance state_key="prone_moving" accuracy="1"/>
-	<stance state_key="over_wall" accuracy="1"/>
+	<stance state_key="prone_moving" accuracy="1.0"/>
+	<stance state_key="over_wall" accuracy="1.0"/>
 	<modifier class="detectability" value="-0.1"/>
 	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
@@ -24452,19 +24439,10 @@
 <weapon key="gkw_m99_1701.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="rifle"/>
 	<tag name="antiarmor"/>
-	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="1.4" sustained_fire_diminish_rate="1.5" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="M99-[Rabbit Squad]" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="3" projectile_speed="224.21" barrel_offset="0.4" projectiles_per_shot="1" last_burst_retrigger_time="0.333" burst_shots="1" stab_enabled="1" carry_in_two_hands="1"/>
-	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
-	<inventory encumbrance="20.0" buy_price="80.0" sell_price="60.0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="0" sustained_fire_diminish_rate="1.5" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="M99-[Rabbit Squad]" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="3" projectile_speed="224.21" barrel_offset="0.4" projectiles_per_shot="4" last_burst_retrigger_time="0.5" burst_shots="1" stab_enabled="1" carry_in_two_hands="1"/>
+	<commonness value="0" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="20.0" buy_price="80.0" sell_price="80.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<stance state_key="running" accuracy="0.1"/>
-	<stance state_key="walking" accuracy="0.5"/>
-	<stance state_key="crouch_moving" accuracy="0.1"/>
-	<stance state_key="standing" accuracy="0.8"/>
-	<stance state_key="crouching" accuracy="0.9"/>
-	<stance state_key="prone" accuracy="1.0"/>
-	<stance state_key="prone_moving" accuracy="0.1"/>
-	<stance state_key="over_wall" accuracy="1"/>
-	<modifier class="detectability" value="-0.1"/>
 	<animation state_key="recoil" animation_key="recoil1, big"/>
 	<animation key="recoil" stance_key="prone" animation_key="recoil1, big, prone"/>
 	<animation key="hold" ref="32"/>
@@ -24483,17 +24461,17 @@
 	<model filename="gkw_rf_m99_1701.xml"/>
 	<hud_icon filename="gkw_m99_1701.png"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="bullet.projectile">
-	<result class="blast" damage="9.4" radius="3.5" decal="1" push="0" character_state="death" faction_compare="not_equal"/>
+	<projectile file="ntw.projectile">
+	<result class="blast" damage="5.0" radius="3.5" decal="1" push="0" character_state="death" faction_compare="not_equal"/>
 	</projectile>
-	<stance state_key="running" accuracy="0.7"/>
-	<stance state_key="walking" accuracy="0.7"/>
-	<stance state_key="crouch_moving" accuracy="0.85"/>
-	<stance state_key="standing" accuracy="0.85"/>
-	<stance state_key="crouching" accuracy="0.9"/>
+	<stance state_key="running" accuracy="1.0"/>
+	<stance state_key="walking" accuracy="1.0"/>
+	<stance state_key="crouch_moving" accuracy="1.0"/>
+	<stance state_key="standing" accuracy="1.0"/>
+	<stance state_key="crouching" accuracy="1.0"/>
 	<stance state_key="prone" accuracy="1.0"/>
-	<stance state_key="prone_moving" accuracy="1"/>
-	<stance state_key="over_wall" accuracy="1"/>
+	<stance state_key="prone_moving" accuracy="1.0"/>
+	<stance state_key="over_wall" accuracy="1.0"/>
 	<modifier class="detectability" value="-0.1"/>
 	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
@@ -24506,19 +24484,10 @@
 <weapon key="gkw_m99_3304.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="rifle"/>
 	<tag name="antiarmor"/>
-	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="1.4" sustained_fire_diminish_rate="1.5" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="M99-[White Rabbit's Summer Party]" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="3" projectile_speed="224.21" barrel_offset="0.4" projectiles_per_shot="1" last_burst_retrigger_time="0.333" burst_shots="1" stab_enabled="1" carry_in_two_hands="1"/>
-	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
-	<inventory encumbrance="20.0" buy_price="80.0" sell_price="60.0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="0" sustained_fire_diminish_rate="1.5" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="M99-[White Rabbit's Summer Party]" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="3" projectile_speed="224.21" barrel_offset="0.4" projectiles_per_shot="4" last_burst_retrigger_time="0.5" burst_shots="1" stab_enabled="1" carry_in_two_hands="1"/>
+	<commonness value="0" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="20.0" buy_price="80.0" sell_price="80.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<stance state_key="running" accuracy="0.1"/>
-	<stance state_key="walking" accuracy="0.5"/>
-	<stance state_key="crouch_moving" accuracy="0.1"/>
-	<stance state_key="standing" accuracy="0.8"/>
-	<stance state_key="crouching" accuracy="0.9"/>
-	<stance state_key="prone" accuracy="1.0"/>
-	<stance state_key="prone_moving" accuracy="0.1"/>
-	<stance state_key="over_wall" accuracy="1"/>
-	<modifier class="detectability" value="-0.1"/>
 	<animation state_key="recoil" animation_key="recoil1, big"/>
 	<animation key="recoil" stance_key="prone" animation_key="recoil1, big, prone"/>
 	<animation key="hold" ref="32"/>
@@ -24537,17 +24506,17 @@
 	<model filename="gkw_rf_m99_3304.xml"/>
 	<hud_icon filename="gkw_m99_3304.png"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="bullet.projectile">
-	<result class="blast" damage="9.4" radius="3.5" decal="1" push="0" character_state="death" faction_compare="not_equal"/>
+	<projectile file="ntw.projectile">
+	<result class="blast" damage="5.0" radius="3.5" decal="1" push="0" character_state="death" faction_compare="not_equal"/>
 	</projectile>
-	<stance state_key="running" accuracy="0.7"/>
-	<stance state_key="walking" accuracy="0.7"/>
-	<stance state_key="crouch_moving" accuracy="0.85"/>
-	<stance state_key="standing" accuracy="0.85"/>
-	<stance state_key="crouching" accuracy="0.9"/>
+	<stance state_key="running" accuracy="1.0"/>
+	<stance state_key="walking" accuracy="1.0"/>
+	<stance state_key="crouch_moving" accuracy="1.0"/>
+	<stance state_key="standing" accuracy="1.0"/>
+	<stance state_key="crouching" accuracy="1.0"/>
 	<stance state_key="prone" accuracy="1.0"/>
-	<stance state_key="prone_moving" accuracy="1"/>
-	<stance state_key="over_wall" accuracy="1"/>
+	<stance state_key="prone_moving" accuracy="1.0"/>
+	<stance state_key="over_wall" accuracy="1.0"/>
 	<modifier class="detectability" value="-0.1"/>
 	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
@@ -27657,7 +27626,7 @@
 </weapon>
 
 <weapon key="gkw_fp6_2804.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="0.9" sustained_fire_grow_step="0.8" sustained_fire_diminish_rate="2" magazine_size="7" can_shoot_standing="1" suppressed="0" name="FABARM FP6-[Satellite of Love]" class="1" reload_one_at_a_time="1" sight_range_modifier="1" projectile_speed="100" barrel_offset="0.4" projectiles_per_shot="18" spread_range="0.2" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0" use_basic_muzzle_smoke_effect="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="0.9" sustained_fire_grow_step="0.8" sustained_fire_diminish_rate="2" magazine_size="7" can_shoot_standing="1" suppressed="0" name="FABARM FP-6-[Satellite of Love]" class="1" reload_one_at_a_time="1" sight_range_modifier="1" projectile_speed="100" barrel_offset="0.4" projectiles_per_shot="18" spread_range="0.2" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0" use_basic_muzzle_smoke_effect="0"/>
 	<inventory buy_price="20.0" sell_price="20.0"/>
 	<commonness in_stock="0" value="0"/>
 	<animation state_key="cycle" animation_key="Pshotgun0.5"/>
@@ -27687,14 +27656,14 @@
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<stance state_key="running" accuracy="0.6"/>
-	<stance state_key="walking" accuracy="0.85"/>
-	<stance state_key="crouch_moving" accuracy="0.6"/>
+	<stance state_key="running" accuracy="0.7"/>
+	<stance state_key="walking" accuracy="0.8"/>
+	<stance state_key="crouch_moving" accuracy="0.85"/>
+	<stance state_key="prone_moving" accuracy="0.85"/>
 	<stance state_key="standing" accuracy="0.85"/>
-	<stance state_key="crouching" accuracy="0.85"/>
-	<stance state_key="prone" accuracy="0.85"/>
-	<stance state_key="prone_moving" accuracy="0.3"/>
-	<stance state_key="over_wall" accuracy="1"/>
+	<stance state_key="crouching" accuracy="0.9"/>
+	<stance state_key="prone" accuracy="1.0"/>
+	<stance state_key="over_wall" accuracy="1.0"/>
 	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -28106,14 +28075,14 @@
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<stance state_key="running" accuracy="0.6"/>
-	<stance state_key="walking" accuracy="0.85"/>
-	<stance state_key="crouch_moving" accuracy="0.6"/>
+	<stance state_key="running" accuracy="0.7"/>
+	<stance state_key="walking" accuracy="0.8"/>
+	<stance state_key="crouch_moving" accuracy="0.85"/>
+	<stance state_key="prone_moving" accuracy="0.85"/>
 	<stance state_key="standing" accuracy="0.85"/>
-	<stance state_key="crouching" accuracy="0.85"/>
-	<stance state_key="prone" accuracy="0.85"/>
-	<stance state_key="prone_moving" accuracy="0.3"/>
-	<stance state_key="over_wall" accuracy="1"/>
+	<stance state_key="crouching" accuracy="0.9"/>
+	<stance state_key="prone" accuracy="1.0"/>
+	<stance state_key="over_wall" accuracy="1.0"/>
 	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -28264,7 +28233,7 @@
 </weapon>
 
 <weapon key="gkw_aa12_4401.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="0.167" accuracy_factor="0.9" sustained_fire_grow_step="1.7" sustained_fire_diminish_rate="0.7" magazine_size="20" can_shoot_standing="1" suppressed="0" name="AA-12-[Smokeless Lollipop]" class="0" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="74.47" barrel_offset="0.4" projectiles_per_shot="14" spread_range="0.3" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0" use_basic_muzzle_smoke_effect="0"/>
+	<specification retrigger_time="0.167" accuracy_factor="1.0" sustained_fire_grow_step="2.1" sustained_fire_diminish_rate="0.45" magazine_size="20" can_shoot_standing="1" suppressed="0" name="AA-12-[Smokeless Lollipop]" class="0" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="100" barrel_offset="0.4" projectiles_per_shot="14" spread_range="0.2" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0" use_basic_muzzle_smoke_effect="0"/>
 	<inventory buy_price="50.0" sell_price="50.0"/>
 	<next_in_chain key="gkw_aa12_4401_skill.weapon" share_ammo="1"/>
 	<commonness value="0" in_stock="0"/>
@@ -28278,27 +28247,29 @@
 	<hud_icon filename="gkw_aa12_4401.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="1.7" kill_decay_start_time="0.094" kill_decay_end_time="0.537"/>
+	<result class="hit" kill_probability="2.0" kill_decay_start_time="0.05" kill_decay_end_time="0.7"/>
 	</projectile>
-	<stance state_key="walking" accuracy="0.7"/>
-	<stance state_key="crouch_moving" accuracy="0.65"/>
-	<stance state_key="prone_moving" accuracy="0.65"/>
-	<stance state_key="standing" accuracy="0.7"/>
-	<stance state_key="crouching" accuracy="0.7"/>
-	<stance state_key="prone" accuracy="0.8"/>
-	<stance state_key="over_wall" accuracy="0.8"/>
+	<stance state_key="running" accuracy="0.7"/>
+	<stance state_key="walking" accuracy="0.8"/>
+	<stance state_key="crouch_moving" accuracy="0.85"/>
+	<stance state_key="prone_moving" accuracy="0.85"/>
+	<stance state_key="standing" accuracy="0.85"/>
+	<stance state_key="crouching" accuracy="0.9"/>
+	<stance state_key="prone" accuracy="1.0"/>
+	<stance state_key="over_wall" accuracy="1.0"/>
+	<modifier class="detectability" value="0.45"/>
 	<tag name="shotgun"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<stance state_key="running" accuracy="0.6"/>
-	<stance state_key="walking" accuracy="0.85"/>
-	<stance state_key="crouch_moving" accuracy="0.6"/>
+	<stance state_key="running" accuracy="0.7"/>
+	<stance state_key="walking" accuracy="0.8"/>
+	<stance state_key="crouch_moving" accuracy="0.85"/>
+	<stance state_key="prone_moving" accuracy="0.85"/>
 	<stance state_key="standing" accuracy="0.85"/>
-	<stance state_key="crouching" accuracy="0.85"/>
-	<stance state_key="prone" accuracy="0.85"/>
-	<stance state_key="prone_moving" accuracy="0.3"/>
-	<stance state_key="over_wall" accuracy="1"/>
+	<stance state_key="crouching" accuracy="0.9"/>
+	<stance state_key="prone" accuracy="1.0"/>
+	<stance state_key="over_wall" accuracy="1.0"/>
 	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -28329,7 +28300,7 @@
 </weapon>
 
 <weapon key="gkw_aa12_4401_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="0.12" accuracy_factor="0.9" sustained_fire_grow_step="1.7" sustained_fire_diminish_rate="0.7" magazine_size="20" can_shoot_standing="1" suppressed="0" name="AA-12-[Smokeless Lollipop]-[Ketonemia]" class="0" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="70" barrel_offset="0.4" projectiles_per_shot="14" spread_range="0.5" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0" use_basic_muzzle_smoke_effect="0"/>
+	<specification retrigger_time="0.12" accuracy_factor="1.0" sustained_fire_grow_step="2.1" sustained_fire_diminish_rate="0.52" magazine_size="20" can_shoot_standing="1" suppressed="0" name="AA-12-[Smokeless Lollipop]-[Ketonemia]" class="0" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="100" barrel_offset="0.4" projectiles_per_shot="18" spread_range="0.4" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0" use_basic_muzzle_smoke_effect="0"/>
 	<inventory buy_price="50.0" sell_price="50.0"/>
 	<next_in_chain key="gkw_aa12_4401.weapon" share_ammo="1"/>
 	<commonness value="0" in_stock="0"/>
@@ -28343,28 +28314,30 @@
 	<hud_icon filename="gkw_aa12_4401.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="1.7" kill_decay_start_time="0.094" kill_decay_end_time="0.537"/>
+	<result class="hit" kill_probability="2.0" kill_probability_offset_on_successful_hit="0.5" kill_decay_start_time="0.05" kill_decay_end_time="0.7"/>
 	</projectile>
-	<stance state_key="walking" accuracy="0.7"/>
-	<stance state_key="crouch_moving" accuracy="0.65"/>
-	<stance state_key="prone_moving" accuracy="0.65"/>
-	<stance state_key="standing" accuracy="0.7"/>
-	<stance state_key="crouching" accuracy="0.7"/>
-	<stance state_key="prone" accuracy="0.8"/>
-	<stance state_key="over_wall" accuracy="0.8"/>
-	<modifier class="speed" value="-0.3"/>
+	<stance state_key="running" accuracy="0.7"/>
+	<stance state_key="walking" accuracy="0.8"/>
+	<stance state_key="crouch_moving" accuracy="0.85"/>
+	<stance state_key="prone_moving" accuracy="0.85"/>
+	<stance state_key="standing" accuracy="0.85"/>
+	<stance state_key="crouching" accuracy="0.9"/>
+	<stance state_key="prone" accuracy="1.0"/>
+	<stance state_key="over_wall" accuracy="1.0"/>
+	<modifier class="speed" value="-0.45"/>
+	<modifier class="detectability" value="0.45"/>
 	<tag name="shotgun"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<stance state_key="running" accuracy="0.6"/>
-	<stance state_key="walking" accuracy="0.85"/>
-	<stance state_key="crouch_moving" accuracy="0.6"/>
+	<stance state_key="running" accuracy="0.7"/>
+	<stance state_key="walking" accuracy="0.8"/>
+	<stance state_key="crouch_moving" accuracy="0.85"/>
+	<stance state_key="prone_moving" accuracy="0.85"/>
 	<stance state_key="standing" accuracy="0.85"/>
-	<stance state_key="crouching" accuracy="0.85"/>
-	<stance state_key="prone" accuracy="0.85"/>
-	<stance state_key="prone_moving" accuracy="0.3"/>
-	<stance state_key="over_wall" accuracy="1"/>
+	<stance state_key="crouching" accuracy="0.9"/>
+	<stance state_key="prone" accuracy="1.0"/>
+	<stance state_key="over_wall" accuracy="1.0"/>
 	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -29879,14 +29852,14 @@
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<stance state_key="running" accuracy="0.6"/>
-	<stance state_key="walking" accuracy="0.85"/>
-	<stance state_key="crouch_moving" accuracy="0.6"/>
+	<stance state_key="running" accuracy="0.7"/>
+	<stance state_key="walking" accuracy="0.8"/>
+	<stance state_key="crouch_moving" accuracy="0.85"/>
+	<stance state_key="prone_moving" accuracy="0.85"/>
 	<stance state_key="standing" accuracy="0.85"/>
-	<stance state_key="crouching" accuracy="0.85"/>
-	<stance state_key="prone" accuracy="0.85"/>
-	<stance state_key="prone_moving" accuracy="0.3"/>
-	<stance state_key="over_wall" accuracy="1"/>
+	<stance state_key="crouching" accuracy="0.9"/>
+	<stance state_key="prone" accuracy="1.0"/>
+	<stance state_key="over_wall" accuracy="1.0"/>
 	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -29992,14 +29965,14 @@
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<stance state_key="running" accuracy="0.6"/>
-	<stance state_key="walking" accuracy="0.85"/>
-	<stance state_key="crouch_moving" accuracy="0.6"/>
+	<stance state_key="running" accuracy="0.7"/>
+	<stance state_key="walking" accuracy="0.8"/>
+	<stance state_key="crouch_moving" accuracy="0.85"/>
+	<stance state_key="prone_moving" accuracy="0.85"/>
 	<stance state_key="standing" accuracy="0.85"/>
-	<stance state_key="crouching" accuracy="0.85"/>
-	<stance state_key="prone" accuracy="0.85"/>
-	<stance state_key="prone_moving" accuracy="0.3"/>
-	<stance state_key="over_wall" accuracy="1"/>
+	<stance state_key="crouching" accuracy="0.9"/>
+	<stance state_key="prone" accuracy="1.0"/>
+	<stance state_key="over_wall" accuracy="1.0"/>
 	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -30385,14 +30358,14 @@
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<stance state_key="running" accuracy="0.6"/>
-	<stance state_key="walking" accuracy="0.85"/>
-	<stance state_key="crouch_moving" accuracy="0.6"/>
+	<stance state_key="running" accuracy="0.7"/>
+	<stance state_key="walking" accuracy="0.8"/>
+	<stance state_key="crouch_moving" accuracy="0.85"/>
+	<stance state_key="prone_moving" accuracy="0.85"/>
 	<stance state_key="standing" accuracy="0.85"/>
-	<stance state_key="crouching" accuracy="0.85"/>
-	<stance state_key="prone" accuracy="0.85"/>
-	<stance state_key="prone_moving" accuracy="0.3"/>
-	<stance state_key="over_wall" accuracy="1"/>
+	<stance state_key="crouching" accuracy="0.9"/>
+	<stance state_key="prone" accuracy="1.0"/>
+	<stance state_key="over_wall" accuracy="1.0"/>
 	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -30667,14 +30640,14 @@
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<stance state_key="running" accuracy="0.6"/>
-	<stance state_key="walking" accuracy="0.85"/>
-	<stance state_key="crouch_moving" accuracy="0.6"/>
+	<stance state_key="running" accuracy="0.7"/>
+	<stance state_key="walking" accuracy="0.8"/>
+	<stance state_key="crouch_moving" accuracy="0.85"/>
+	<stance state_key="prone_moving" accuracy="0.85"/>
 	<stance state_key="standing" accuracy="0.85"/>
-	<stance state_key="crouching" accuracy="0.85"/>
-	<stance state_key="prone" accuracy="0.85"/>
-	<stance state_key="prone_moving" accuracy="0.3"/>
-	<stance state_key="over_wall" accuracy="1"/>
+	<stance state_key="crouching" accuracy="0.9"/>
+	<stance state_key="prone" accuracy="1.0"/>
+	<stance state_key="over_wall" accuracy="1.0"/>
 	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -30795,14 +30768,14 @@
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<stance state_key="running" accuracy="0.6"/>
-	<stance state_key="walking" accuracy="0.85"/>
-	<stance state_key="crouch_moving" accuracy="0.6"/>
+	<stance state_key="running" accuracy="0.7"/>
+	<stance state_key="walking" accuracy="0.8"/>
+	<stance state_key="crouch_moving" accuracy="0.85"/>
+	<stance state_key="prone_moving" accuracy="0.85"/>
 	<stance state_key="standing" accuracy="0.85"/>
-	<stance state_key="crouching" accuracy="0.85"/>
-	<stance state_key="prone" accuracy="0.85"/>
-	<stance state_key="prone_moving" accuracy="0.3"/>
-	<stance state_key="over_wall" accuracy="1"/>
+	<stance state_key="crouching" accuracy="0.9"/>
+	<stance state_key="prone" accuracy="1.0"/>
+	<stance state_key="over_wall" accuracy="1.0"/>
 	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -30864,14 +30837,14 @@
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<stance state_key="running" accuracy="0.6"/>
-	<stance state_key="walking" accuracy="0.85"/>
-	<stance state_key="crouch_moving" accuracy="0.6"/>
+	<stance state_key="running" accuracy="0.7"/>
+	<stance state_key="walking" accuracy="0.8"/>
+	<stance state_key="crouch_moving" accuracy="0.85"/>
+	<stance state_key="prone_moving" accuracy="0.85"/>
 	<stance state_key="standing" accuracy="0.85"/>
-	<stance state_key="crouching" accuracy="0.85"/>
-	<stance state_key="prone" accuracy="0.85"/>
-	<stance state_key="prone_moving" accuracy="0.3"/>
-	<stance state_key="over_wall" accuracy="1"/>
+	<stance state_key="crouching" accuracy="0.9"/>
+	<stance state_key="prone" accuracy="1.0"/>
+	<stance state_key="over_wall" accuracy="1.0"/>
 	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -36116,7 +36089,7 @@
 </weapon>
 
 <weapon key="gkw_aa12_only.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="0.167" accuracy_factor="0.98" sustained_fire_grow_step="0.6" sustained_fire_diminish_rate="1.9" magazine_size="20" can_shoot_standing="1" suppressed="0" name="AA-12 with Frag-12 HE Rounds" class="0" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="74.47" barrel_offset="0.4" projectiles_per_shot="1" spread_range="0.15" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0" use_basic_muzzle_smoke_effect="0"/>
+	<specification retrigger_time="0.167" accuracy_factor="1.0" sustained_fire_grow_step="2.1" sustained_fire_diminish_rate="0.45" magazine_size="20" can_shoot_standing="1" suppressed="0" name="AA-12-[Frag-12 HE Round]" class="0" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="100" barrel_offset="0.4" projectiles_per_shot="1" spread_range="0.1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0" use_basic_muzzle_smoke_effect="0"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.8"/>
 	<sound key="fire" fileref="aa12_fire_FromROUGECOMPANY.wav" pitch_variety="0.05" volume="1"/>
 	<sound key="magazine_out" fileref="AA12_mgz_out_FromCOD16.wav" volume="1"/>
@@ -36124,32 +36097,34 @@
 	<sound key="cycle" fileref="AA12_cycle_FromCOD16.wav" volume="1"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<commonness value="0" in_stock="0"/>
-	<inventory buy_price="20.0" sell_price="10.0"/>
+	<inventory buy_price="75.0" sell_price="75.0"/>
 	<model filename="gkw_sg_aa12.xml"/>
 	<hud_icon filename="gkw_aa12only_skill.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="aa12_only.projectile">
-	<result class="blast" radius="3" damage="1.5" push="0" decal="1" faction_compare="not_equal"/>
+	<result class="blast" radius="3" damage="2.1" push="0.3" decal="1" faction_compare="not_equal"/>
 	</projectile>
-	<stance state_key="walking" accuracy="0.7"/>
-	<stance state_key="crouch_moving" accuracy="0.65"/>
-	<stance state_key="prone_moving" accuracy="0.65"/>
-	<stance state_key="standing" accuracy="0.9"/>
-	<stance state_key="crouching" accuracy="0.95"/>
-	<stance state_key="prone" accuracy="0.95"/>
-	<stance state_key="over_wall" accuracy="1"/>
+	<stance state_key="running" accuracy="0.7"/>
+	<stance state_key="walking" accuracy="0.8"/>
+	<stance state_key="crouch_moving" accuracy="0.85"/>
+	<stance state_key="prone_moving" accuracy="0.85"/>
+	<stance state_key="standing" accuracy="0.85"/>
+	<stance state_key="crouching" accuracy="0.9"/>
+	<stance state_key="prone" accuracy="1.0"/>
+	<stance state_key="over_wall" accuracy="1.0"/>
+	<modifier class="detectability" value="0.45"/>
 	<tag name="shotgun"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<stance state_key="running" accuracy="0.6"/>
-	<stance state_key="walking" accuracy="0.85"/>
-	<stance state_key="crouch_moving" accuracy="0.6"/>
+	<stance state_key="running" accuracy="0.7"/>
+	<stance state_key="walking" accuracy="0.8"/>
+	<stance state_key="crouch_moving" accuracy="0.85"/>
+	<stance state_key="prone_moving" accuracy="0.85"/>
 	<stance state_key="standing" accuracy="0.85"/>
-	<stance state_key="crouching" accuracy="0.85"/>
-	<stance state_key="prone" accuracy="0.85"/>
-	<stance state_key="prone_moving" accuracy="0.3"/>
-	<stance state_key="over_wall" accuracy="1"/>
+	<stance state_key="crouching" accuracy="0.9"/>
+	<stance state_key="prone" accuracy="1.0"/>
+	<stance state_key="over_wall" accuracy="1.0"/>
 	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -42774,14 +42749,14 @@
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<stance state_key="running" accuracy="0.6"/>
-	<stance state_key="walking" accuracy="0.85"/>
-	<stance state_key="crouch_moving" accuracy="0.6"/>
+	<stance state_key="running" accuracy="0.7"/>
+	<stance state_key="walking" accuracy="0.8"/>
+	<stance state_key="crouch_moving" accuracy="0.85"/>
+	<stance state_key="prone_moving" accuracy="0.85"/>
 	<stance state_key="standing" accuracy="0.85"/>
-	<stance state_key="crouching" accuracy="0.85"/>
-	<stance state_key="prone" accuracy="0.85"/>
-	<stance state_key="prone_moving" accuracy="0.3"/>
-	<stance state_key="over_wall" accuracy="1"/>
+	<stance state_key="crouching" accuracy="0.9"/>
+	<stance state_key="prone" accuracy="1.0"/>
+	<stance state_key="over_wall" accuracy="1.0"/>
 	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
