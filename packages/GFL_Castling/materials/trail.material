@@ -150,22 +150,6 @@ material laser_tifeng_min
   }
 }
 
-material laser_thor {
-	receive_shadows off
-	technique {
-		pass {
-			lighting off
-			fog_override true
-
-			depth_write off
-			scene_blend add
-
-			texture_unit {
-				texture laser_dandely.png
-			}
-		}
-	}
-}
 
 material red{
   receive_shadows off

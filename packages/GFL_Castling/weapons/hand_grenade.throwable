@@ -5,7 +5,7 @@
         <trigger class="time" time_to_live="4.0"/>
         <rotation class="random" />
         <trail probability="0.0" key="BulletApTrail" />
-        <model mesh_filename="grenade.xml" />
+        <model mesh_filename="grenade_rgd_5.mesh" texture_filename="grenade_rgd_5.png" />
         <hud_icon filename="hud_grenade_old.png" />
         <throwable curve_height="8.0" near_far_distance="5.0" speed_estimation_near="60.0" speed_estimation_far="60.0" max_speed="60.0" randomness="0.07" />
         <commonness value="1.0" />
