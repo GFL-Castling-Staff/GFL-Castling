@@ -284,6 +284,8 @@ dictionary commandSkillIndex = {
         {"gkw_hk416_6505_mod3.weapon",36},
         {"gkw_hk416_6505_mod3_skill.weapon",36},
 
+        {"gkw_m3.weapon",38},
+
         // 下面这行是用来占位的，在这之上添加新的枪和index即可
         {"666",-1}
 };
@@ -398,6 +400,7 @@ class CommandSkill : Tracker {
                     case 35:{excuteSAT8skill(cId,senderId,m_modifer);break;}
                     case 36:{excuteHK416mod3skill(cId,senderId,m_modifer);break;}
                     case 37:{excuteHK416mod3skill(cId,senderId,m_modifer,true);break;}
+                    case 38:{excuteGrenadeSkill(cId,senderId,m_modifer);break;}
 
                     default:
                         break;
@@ -2366,7 +2369,7 @@ class CommandSkill : Tracker {
                     Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
                     int factionid = character.getIntAttribute("faction_id");
 
-                    if(weaponname=="gkw_m9.weapon") {
+                    if(weaponname=="gkw_m3.weapon") {
                         array<string> Voice={
                             "M9_SKILL1_JP.wav",
                             "M9_SKILL2_JP.wav",
@@ -2379,10 +2382,10 @@ class CommandSkill : Tracker {
                     playAnimationKey(m_metagame,characterId,"throwing, upside",true,true);
                     c_pos=c_pos.add(Vector3(0,1,0));
                     if (checkFlatRange(c_pos,stringToVector3(target),10)){
-                        CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"skill_flashbang.projectile",characterId,factionid,60);
+                        CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"grenade_m67_s.projectile",characterId,factionid,60);
                     }
                     else{
-                        CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"skill_flashbang.projectile",characterId,factionid,60.0,6.0);
+                        CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"grenade_m67_s.projectile",characterId,factionid,30.0,3.0);
                     }
                 }
             }
