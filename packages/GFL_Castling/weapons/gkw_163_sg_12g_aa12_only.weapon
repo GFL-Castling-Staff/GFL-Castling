@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapon file="two_hands_sg.animation_base" key="gkw_aa12_only.weapon">
-
-    
-    <!--Weapon specifications-->
-    
-    <specification 
+	<!--Weapon specifications-->
+	<specification 
 	retrigger_time="0.167" 
 	accuracy_factor="0.98" 
 	sustained_fire_grow_step="0.6" 
@@ -22,45 +19,29 @@
 	spread_range="0.15"
 	 />
 	<!--Animations-->
-	
-
-
-
-    <animation key="reload" animation_key="reloading, magazine rifle 1.8" />
-	
+	<animation key="reload" animation_key="reloading, magazine rifle 1.8" />
 	<!--Sounds-->
-	
 	<sound key="fire" fileref="aa12_fire_FromROUGECOMPANY.wav" pitch_variety="0.05" volume="1" />
-    <sound key="magazine_out" fileref="AA12_mgz_out_FromCOD16.wav" volume="1" />
-    <sound key="magazine_in" fileref="AA12_mgz_in_FromCOD16.wav" volume="1" />
-    <sound key="cycle" fileref="AA12_cycle_FromCOD16.wav" volume="1" />
-    <sound class="impact" fileref="rifle_drop.wav" />
-   
+	<sound key="magazine_out" fileref="AA12_mgz_out_FromCOD16.wav" volume="1" />
+	<sound key="magazine_in" fileref="AA12_mgz_in_FromCOD16.wav" volume="1" />
+	<sound key="cycle" fileref="AA12_cycle_FromCOD16.wav" volume="1" />
+	<sound class="impact" fileref="rifle_drop.wav" />
 	<!--Model, Icon, Cost-->
-    <commonness value="0" in_stock="0" />
+	<commonness value="0" in_stock="0" />
 	<inventory  buy_price="20.0" sell_price="10.0" />
-    <model filename="gkw_sg_aa12.xml" />
-    <hud_icon filename="gkw_aa12only_skill.png" />
-
-
-	
+	<model filename="gkw_sg_aa12.xml" />
+	<hud_icon filename="gkw_aa12only_skill.png" />
 	<!--Ballistics-->
-	
-    
-    <weak_hand_hold offset="0.3" />
-    <projectile file="aa12_only.projectile">
-	
-    <result class="blast" radius="3" damage="1.5" push="0" decal="1" faction_compare="not_equal" />
+	<weak_hand_hold offset="0.3" />
+	<projectile file="aa12_only.projectile">
+		<result class="blast" radius="3" damage="1.5" push="0" decal="1" faction_compare="not_equal" />
 	</projectile>
-    
-    <!--Accuracy, Movement speed-->
-    
+	<!--Accuracy, Movement speed-->
 	<stance state_key="walking" accuracy="0.7" />
-    <stance state_key="crouch_moving" accuracy="0.65" />
-    <stance state_key="prone_moving" accuracy="0.65" />
-    <stance state_key="standing" accuracy="0.9"/>
-    <stance state_key="crouching" accuracy="0.95" />
-    <stance state_key="prone" accuracy="0.95" />
-    <stance state_key="over_wall" accuracy="1" />  
-
+	<stance state_key="crouch_moving" accuracy="0.65" />
+	<stance state_key="prone_moving" accuracy="0.65" />
+	<stance state_key="standing" accuracy="0.9"/>
+	<stance state_key="crouching" accuracy="0.95" />
+	<stance state_key="prone" accuracy="0.95" />
+	<stance state_key="over_wall" accuracy="1" />
 </weapon>
