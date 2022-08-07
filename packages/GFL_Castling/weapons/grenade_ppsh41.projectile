@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<projectile class="grenade" name="Grenade" key="grenade_ppsh41.projectile" slot="0" radius="0.15" pulldown_in_air="50">
+<projectile class="grenade" name="Grenade" key="grenade_ppsh41.projectile" slot="0" radius="0.25" pulldown_in_air="50">
 
-    <result class="blast" radius="10.0" damage="8.0" push="0.8" decal="1" character_state="death" faction_compare="not_equal" />
+    <result class="blast" radius="8.0" damage="10.0" push="0.8" decal="1" character_state="death" faction_compare="not_equal" />
     <trigger class="impact">
         <collider class="character" enabled="1" faction_compare="not_equal"/>
     </trigger>
     <rotation class="random" />
 	<!-- <trail probability="1.0" key="BulletApTrail" /> -->
-    <model mesh_filename="grenade.xml" />
+    <model mesh_filename="grenade_rgd_33.mesh" texture_filename="grenade_rgd_33.png" />
     <hud_icon filename="88r.png" />
 
     <commonness value="0.8" />
