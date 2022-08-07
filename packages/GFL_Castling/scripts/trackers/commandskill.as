@@ -400,7 +400,7 @@ class CommandSkill : Tracker {
                     case 35:{excuteSAT8skill(cId,senderId,m_modifer);break;}
                     case 36:{excuteHK416mod3skill(cId,senderId,m_modifer);break;}
                     case 37:{excuteHK416mod3skill(cId,senderId,m_modifer,true);break;}
-                    case 38:{excuteGrenadeSkill(cId,senderId,m_modifer);break;}
+                    case 38:{excuteGrenadeSkill(cId,senderId,m_modifer,c_weaponType);break;}
 
                     default:
                         break;
