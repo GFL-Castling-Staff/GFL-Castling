@@ -15,14 +15,14 @@
 	use_basic_muzzle_smoke_effect="0"
 	/>
 
-	<stance state_key="running" accuracy="0.6" />
-	<stance state_key="walking" accuracy="0.85" />
-	<stance state_key="crouch_moving" accuracy="0.6" />
-	<stance state_key="standing" accuracy="0.85" />
-	<stance state_key="crouching" accuracy="0.85" />
-	<stance state_key="prone" accuracy="0.85" />
-	<stance state_key="prone_moving" accuracy="0.3" />
-	<stance state_key="over_wall" accuracy="1" />
+    <stance state_key="running" accuracy="0.7" />
+    <stance state_key="walking" accuracy="0.8" />
+    <stance state_key="crouch_moving" accuracy="0.85" />
+    <stance state_key="prone_moving" accuracy="0.85" />
+    <stance state_key="standing" accuracy="0.85"/>
+    <stance state_key="crouching" accuracy="0.9" />
+    <stance state_key="prone" accuracy="1.0" />
+    <stance state_key="over_wall" accuracy="1.0" />
 
 	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" />
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0" />
