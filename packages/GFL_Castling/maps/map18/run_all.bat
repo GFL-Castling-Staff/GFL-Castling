@@ -1,3 +1,0 @@
-call process_map18.bat
-call process_post_map18.bat
-call process_map_view_map18.bat
