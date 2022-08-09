@@ -39936,7 +39936,7 @@ offset = 0 -0.3 0;</desc>
          id="spawn6969-3"
          style="fill:#00ff00;fill-opacity:1;fill-rule:nonzero;stroke:#800000;stroke-width:1.79999995;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;display:inline;enable-background:new">
         <desc
-           id="desc26444-4">type = vehicle; key = tow.vehicle;</desc>
+           id="desc26444-4">type = vehicle; tag = tow;</desc>
       </rect>
       <rect
          transform="matrix(0.78220765,-0.6230178,0.6230178,0.78220765,0,0)"
@@ -39948,7 +39948,7 @@ offset = 0 -0.3 0;</desc>
          id="spawn6969-3-2"
          style="fill:#00ff00;fill-opacity:1;fill-rule:nonzero;stroke:#800000;stroke-width:1.79999995;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;display:inline;enable-background:new">
         <desc
-           id="desc26444-4-4">type = vehicle; key = tow.vehicle;</desc>
+           id="desc26444-4-4">type = vehicle; tag = tow;</desc>
       </rect>
     </g>
   </g>
@@ -40767,7 +40767,7 @@ collision_model_size = 1 3 1;</desc>
          id="spawn6969-9-5"
          style="display:inline;fill:#00ff00;fill-opacity:1;fill-rule:nonzero;stroke:#800000;stroke-width:1.79999995;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;enable-background:new">
         <desc
-           id="desc26444-3-6">type = vehicle; key = tow_2.vehicle;</desc>
+           id="desc26444-3-6">type = vehicle; tag = tow;</desc>
       </rect>
       <rect
          transform="matrix(0.03010819,0.99954665,-0.99954665,0.03010819,0,0)"
@@ -40779,7 +40779,7 @@ collision_model_size = 1 3 1;</desc>
          id="spawn6969-30-6-3"
          style="display:inline;fill:#00ff00;fill-opacity:1;fill-rule:nonzero;stroke:#800000;stroke-width:1.79999995;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;enable-background:new">
         <desc
-           id="desc26444-1-6-2">type = vehicle; key = tow_2.vehicle;</desc>
+           id="desc26444-1-6-2">type = vehicle; tag = tow;</desc>
       </rect>
       <rect
          transform="matrix(-0.83874323,0.54452713,-0.54452713,-0.83874323,0,0)"
@@ -40872,7 +40872,7 @@ key = patrol_ship.vehicle;</desc>
          id="spawn6868-2-9-5-3-5"
          style="fill:#00ff00;fill-opacity:1;fill-rule:nonzero;stroke:#800000;stroke-width:1.79999995;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;display:inline;enable-background:new">
         <desc
-           id="desc26444-3-1-9-7-3-3">type = vehicle; key = deployable_minig_2.vehicle;</desc>
+           id="desc26444-3-1-9-7-3-3">type = vehicle; tag = minigun_deploy;</desc>
       </rect>
       <rect
          transform="matrix(-0.73909748,0.67359848,-0.67359848,-0.73909748,0,0)"
@@ -40884,7 +40884,7 @@ key = patrol_ship.vehicle;</desc>
          id="spawn6868-2-9-5-3-0-6"
          style="fill:#00ff00;fill-opacity:1;fill-rule:nonzero;stroke:#800000;stroke-width:1.79999995;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;display:inline;enable-background:new">
         <desc
-           id="desc26444-3-1-9-7-3-0-5">type = vehicle; key = deployable_minig_2.vehicle;</desc>
+           id="desc26444-3-1-9-7-3-0-5">type = vehicle; tag = minigun_deploy;</desc>
       </rect>
       <rect
          style="display:inline;fill:#00ff00;fill-opacity:1;fill-rule:nonzero;stroke:#800000;stroke-width:1.79999995;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;enable-background:new"
@@ -40896,7 +40896,7 @@ key = patrol_ship.vehicle;</desc>
          inkscape:label=""
          transform="matrix(-9.0319031e-4,-0.99999959,0.99999959,-9.0319031e-4,0,0)">
         <desc
-           id="desc10780-6">type = vehicle; key = tow_2.vehicle;</desc>
+           id="desc10780-6">type = vehicle; tag = tow;</desc>
       </rect>
       <rect
          style="display:inline;fill:#00ff00;fill-opacity:1;fill-rule:nonzero;stroke:#800000;stroke-width:1.79999995;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;enable-background:new"
@@ -40908,7 +40908,7 @@ key = patrol_ship.vehicle;</desc>
          inkscape:label=""
          transform="matrix(0.78220766,-0.6230178,0.6230178,0.78220766,0,0)">
         <desc
-           id="desc10784-4">type = vehicle; key = tow_2.vehicle;</desc>
+           id="desc10784-4">type = vehicle; tag = tow;</desc>
       </rect>
       <rect
          transform="matrix(0.74356266,0.66866627,-0.66866627,0.74356266,0,0)"
@@ -40972,7 +40972,7 @@ tag = truck;</desc>
          id="spawn6969-9-5-2"
          style="display:inline;fill:#00ff00;fill-opacity:1;fill-rule:nonzero;stroke:#800000;stroke-width:1.79999995;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;enable-background:new">
         <desc
-           id="desc26444-3-6-4">type = vehicle; key = hornet_2.vehicle;</desc>
+           id="desc26444-3-6-4">type = vehicle; tag = hornet_deploy;</desc>
       </rect>
       <rect
          transform="matrix(0.9953634,-0.09618581,0.09618581,0.9953634,0,0)"
@@ -40984,7 +40984,7 @@ tag = truck;</desc>
          id="spawn6969-30-6-3-1"
          style="display:inline;fill:#00ff00;fill-opacity:1;fill-rule:nonzero;stroke:#800000;stroke-width:1.79999995;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;enable-background:new">
         <desc
-           id="desc26444-1-6-2-7">type = vehicle; key = hornet_2.vehicle;</desc>
+           id="desc26444-1-6-2-7">type = vehicle; tag = hornet_deploy;</desc>
       </rect>
       <rect
          transform="matrix(0.99996731,0.00808618,-0.00808618,0.99996731,0,0)"
@@ -40996,7 +40996,7 @@ tag = truck;</desc>
          id="spawn6969-3-2-4-1-7"
          style="display:inline;fill:#00ff00;fill-opacity:1;fill-rule:nonzero;stroke:#800000;stroke-width:1.79999995;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;enable-background:new">
         <desc
-           id="desc26444-4-4-0-7-8">type = vehicle; key = deployable_minig_2.vehicle;</desc>
+           id="desc26444-4-4-0-7-8">type = vehicle; tag = minigun_deploy;</desc>
       </rect>
       <rect
          transform="matrix(0.00808618,-0.99996731,0.99996731,0.00808618,0,0)"
@@ -41008,7 +41008,7 @@ tag = truck;</desc>
          id="spawn6969-3-2-4-1-4-0"
          style="display:inline;fill:#00ff00;fill-opacity:1;fill-rule:nonzero;stroke:#800000;stroke-width:1.79999995;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;enable-background:new">
         <desc
-           id="desc26444-4-4-0-7-0-2">type = vehicle; key = deployable_minig_2.vehicle;</desc>
+           id="desc26444-4-4-0-7-0-2">type = vehicle; tag = minigun_deploy;</desc>
       </rect>
       <rect
          transform="matrix(-0.88247272,-0.47036359,0.47036359,-0.88247272,0,0)"
@@ -41020,7 +41020,7 @@ tag = truck;</desc>
          id="spawn6969-3-2-4-1-4-0-8"
          style="display:inline;fill:#00ff00;fill-opacity:1;fill-rule:nonzero;stroke:#800000;stroke-width:1.79999995;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;enable-background:new">
         <desc
-           id="desc26444-4-4-0-7-0-2-5">type = vehicle; key = deployable_minig_2.vehicle;</desc>
+           id="desc26444-4-4-0-7-0-2-5">type = vehicle; tag = minigun_deploy;</desc>
       </rect>
       <rect
          transform="matrix(0.99996731,0.00808618,-0.00808618,0.99996731,0,0)"
@@ -41032,7 +41032,7 @@ tag = truck;</desc>
          id="spawn6969-3-2-4-1-7-6"
          style="display:inline;fill:#00ff00;fill-opacity:1;fill-rule:nonzero;stroke:#800000;stroke-width:1.79999995;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;enable-background:new">
         <desc
-           id="desc26444-4-4-0-7-8-6">type = vehicle; key = deployable_minig_2.vehicle;</desc>
+           id="desc26444-4-4-0-7-8-6">type = vehicle; tag = minigun_deploy;</desc>
       </rect>
       <rect
          transform="matrix(0.00279397,0.9999961,-0.9999961,0.00279397,0,0)"
@@ -41044,7 +41044,7 @@ tag = truck;</desc>
          id="spawn6969-3-2-4-1-7-5"
          style="display:inline;fill:#00ff00;fill-opacity:1;fill-rule:nonzero;stroke:#800000;stroke-width:1.79999995;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;enable-background:new">
         <desc
-           id="desc26444-4-4-0-7-8-3">type = vehicle; key = hornet_2.vehicle;</desc>
+           id="desc26444-4-4-0-7-8-3">type = vehicle; tag = hornet_deploy;</desc>
       </rect>
       <rect
          transform="matrix(-0.52787057,0.84932483,-0.84932483,-0.52787057,0,0)"
@@ -41068,7 +41068,7 @@ tag = truck;</desc>
          id="spawn6969-3-2-4-1-4-0-8-9"
          style="display:inline;fill:#00ff00;fill-opacity:1;fill-rule:nonzero;stroke:#800000;stroke-width:1.79999995;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;enable-background:new">
         <desc
-           id="desc26444-4-4-0-7-0-2-5-8">type = vehicle; key = hornet_2.vehicle;</desc>
+           id="desc26444-4-4-0-7-0-2-5-8">type = vehicle; tag = hornet_deploy;</desc>
       </rect>
       <rect
          transform="matrix(0.71239153,-0.70178224,0.70178224,0.71239153,0,0)"
@@ -41080,7 +41080,7 @@ tag = truck;</desc>
          id="spawn6969-3-2-4-1-7-6-1"
          style="display:inline;fill:#00ff00;fill-opacity:1;fill-rule:nonzero;stroke:#800000;stroke-width:1.79999995;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;enable-background:new">
         <desc
-           id="desc26444-4-4-0-7-8-6-9">type = vehicle; key = hornet_2.vehicle;</desc>
+           id="desc26444-4-4-0-7-8-6-9">type = vehicle; tag = hornet_deploy;</desc>
       </rect>
       <rect
          transform="matrix(0.03096442,-0.99952049,0.99952049,0.03096442,0,0)"
@@ -41223,7 +41223,7 @@ key = cover1.vehicle;</desc>
          style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#ffff00;stroke-width:1.79999995;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;display:inline;filter:url(#filter73854-03-9);enable-background:new">
         <desc
            id="desc26444-1-9-9-3-8">type = vehicle; 
-key = deployable_minig_2.vehicle;</desc>
+tag = minigun_deploy;</desc>
       </rect>
       <rect
          style="fill:#ff6600;fill-opacity:1;stroke:none;display:inline;enable-background:new"
@@ -41695,7 +41695,7 @@ key = deployable_mg_2.vehicle;</desc>
          style="color:#000000;fill:#007cff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:11.99999817, 11.99999817;stroke-dashoffset:4.59999899;visibility:visible;display:inline;overflow:visible;enable-background:new">
         <desc
            id="desc7082-9-7-0-4-4-3-3-9-2-1-8-0">type = vehicle; 
-key = armored_truck.vehicle;</desc>
+tag = trans_truck;</desc>
       </rect>
       <rect
          style="fill:#008000;stroke:#ffff00;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;display:inline;enable-background:new"

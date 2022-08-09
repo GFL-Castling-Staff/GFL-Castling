@@ -14840,7 +14840,7 @@ tag = jeep;</desc>
        style="fill:#008000;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:11.99999945, 11.99999945;stroke-dashoffset:4.5999999;display:inline;enable-background:new">
       <desc
          id="desc7082-9-7-0-4-7-4">type = vehicle;
-key = armored_truck.vehicle;</desc>
+tag = trans_truck;</desc>
     </rect>
     <flowRoot
        xml:space="preserve"
@@ -14887,7 +14887,7 @@ tag = apc;</desc>
        inkscape:label=""
        transform="matrix(0.99999791,0.00204503,-0.00204503,0.99999791,0,0)">
       <desc
-         id="desc9788-45-3-6-1-6-7-2-09-4-7-2-82-2-4-2-6-4-0-7-0-5-4-5">type = vehicle; key = rubber_boat.vehicle;</desc>
+         id="desc9788-45-3-6-1-6-7-2-09-4-7-2-82-2-4-2-6-4-0-7-0-5-4-5">type = vehicle; tag = boat;</desc>
     </rect>
     <text
        xml:space="preserve"
@@ -15017,7 +15017,7 @@ key = patrol_ship.vehicle;</desc>
        inkscape:label=""
        transform="matrix(0.99999999,-1.4879119e-4,1.4879119e-4,0.99999999,0,0)">
       <desc
-         id="desc26444-1">type = vehicle; key = tow_2.vehicle;</desc>
+         id="desc26444-1">type = vehicle; tag = tow;</desc>
     </rect>
     <text
        xml:space="preserve"
@@ -43069,7 +43069,7 @@ key = mobile_armory.vehicle;</desc>
          inkscape:label=""
          transform="matrix(-0.17264467,0.98498417,-0.98498417,-0.17264467,0,0)">
         <desc
-           id="desc7082-9-7-0-4-7-4-0-4">type = vehicle; key = armored_truck.vehicle;</desc>
+           id="desc7082-9-7-0-4-7-4-0-4">type = vehicle; tag = trans_truck;</desc>
       </rect>
       <rect
          style="fill:#00ff00;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:11.9999991, 11.9999991;stroke-dashoffset:4.59999954;display:inline;enable-background:new"
@@ -43119,7 +43119,7 @@ tag = jeep;</desc>
          id="spawn6969-30-0-1"
          style="fill:#00ff00;fill-opacity:1;fill-rule:nonzero;stroke:#800000;stroke-width:1.79999995;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;display:inline;enable-background:new">
         <desc
-           id="desc26444-1-9-5">type = vehicle; key = tow_2.vehicle;</desc>
+           id="desc26444-1-9-5">type = vehicle; tag = tow;</desc>
       </rect>
       <rect
          transform="matrix(0.02868758,-0.99958843,0.99958843,0.02868758,0,0)"
@@ -43167,7 +43167,7 @@ tag = jeep;</desc>
          id="spawn6969-30-4-9-6-9-5-1"
          style="fill:#ff00ff;fill-opacity:1;fill-rule:nonzero;stroke:#800000;stroke-width:1.79999995;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;display:inline;enable-background:new">
         <desc
-           id="desc26444-1-2-5-6-2-5-7">type = vehicle; key = deployable_minig_2.vehicle;</desc>
+           id="desc26444-1-2-5-6-2-5-7">type = vehicle; tag = minigun_deploy;</desc>
       </rect>
       <rect
          transform="matrix(-0.3945581,-0.918871,0.918871,-0.3945581,0,0)"
@@ -43179,7 +43179,7 @@ tag = jeep;</desc>
          id="spawn6969-30-4-9-6-9-5-11"
          style="fill:#ff00ff;fill-opacity:1;fill-rule:nonzero;stroke:#800000;stroke-width:1.79999995;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;display:inline;enable-background:new">
         <desc
-           id="desc26444-1-2-5-6-2-5-5">type = vehicle; key = deployable_minig_2.vehicle;</desc>
+           id="desc26444-1-2-5-6-2-5-5">type = vehicle; tag = minigun_deploy;</desc>
       </rect>
       <rect
          transform="matrix(-0.05214753,-0.99863939,0.99863939,-0.05214753,0,0)"
@@ -43203,7 +43203,7 @@ tag = jeep;</desc>
          id="spawn6969-30-0-1-2"
          style="fill:#00ff00;fill-opacity:1;fill-rule:nonzero;stroke:#800000;stroke-width:1.79999995;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;display:inline;enable-background:new">
         <desc
-           id="desc26444-1-9-5-3">type = vehicle; key = tow_2.vehicle;</desc>
+           id="desc26444-1-9-5-3">type = vehicle; tag = tow;</desc>
       </rect>
       <rect
          style="fill:#6c5353;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:2.00000002, 4.00000042;stroke-dashoffset:6.99999958;display:inline;enable-background:new"
@@ -43405,7 +43405,7 @@ tag = only_aa;</desc>
          style="fill:#786721;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:12.00000163, 12.00000163;stroke-dashoffset:4.60000054;display:inline;enable-background:new">
         <desc
            id="desc7082-7-0-4">type = vehicle; 
-key = atv_base.vehicle;</desc>
+tag = atv;</desc>
       </rect>
       <rect
          transform="matrix(-0.03632084,-0.99934018,0.99934018,-0.03632084,0,0)"
@@ -43417,7 +43417,7 @@ key = atv_base.vehicle;</desc>
          id="spawn6969-30-0-1-2-4"
          style="fill:#00ff00;fill-opacity:1;fill-rule:nonzero;stroke:#800000;stroke-width:1.79999995;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;display:inline;enable-background:new">
         <desc
-           id="desc26444-1-9-5-3-8">type = vehicle; key = tow_2.vehicle;</desc>
+           id="desc26444-1-9-5-3-8">type = vehicle; tag = tow;</desc>
       </rect>
       <rect
          style="fill:#ffff00;fill-opacity:1;fill-rule:nonzero;stroke:#0000ff;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:7;display:inline;enable-background:new"
@@ -43552,7 +43552,7 @@ key = prison_bus.vehicle;</desc>
          id="spawn6969-30-0-1-8"
          style="fill:#00ff00;fill-opacity:1;fill-rule:nonzero;stroke:#800000;stroke-width:1.79999995;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;display:inline;enable-background:new">
         <desc
-           id="desc26444-1-9-5-8">type = vehicle; key = tow_2.vehicle;</desc>
+           id="desc26444-1-9-5-8">type = vehicle; tag = tow;</desc>
       </rect>
       <rect
          transform="matrix(-0.04435494,0.99901584,-0.99901584,-0.04435494,0,0)"
@@ -43628,7 +43628,7 @@ key = radar_tower.vehicle;
          id="spawn6969-30-0-1-1"
          style="fill:#00ff00;fill-opacity:1;fill-rule:nonzero;stroke:#800000;stroke-width:1;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;display:inline;enable-background:new">
         <desc
-           id="desc26444-1-9-5-1">type = vehicle; key = tow_2.vehicle;</desc>
+           id="desc26444-1-9-5-1">type = vehicle; tag = tow;</desc>
       </rect>
       <rect
          transform="matrix(0.08550639,0.99633762,-0.99633762,0.08550639,0,0)"
@@ -43640,7 +43640,7 @@ key = radar_tower.vehicle;
          id="spawn1-70-3-4"
          style="fill:#ffff00;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1.99999989, 4.00000023;stroke-dashoffset:6.99999952;display:inline;enable-background:new">
         <desc
-           id="desc9788-45-3-6-1-6-7-2-09-4-7-2-82-2-4-2-6-4-0-7-0-5-9">type = vehicle; key = rubber_boat.vehicle;</desc>
+           id="desc9788-45-3-6-1-6-7-2-09-4-7-2-82-2-4-2-6-4-0-7-0-5-9">type = vehicle; tag = boat;</desc>
       </rect>
       <rect
          transform="matrix(0.08550639,0.99633762,-0.99633762,0.08550639,0,0)"
@@ -43652,7 +43652,7 @@ key = radar_tower.vehicle;
          id="spawn1-70-3-4-1"
          style="fill:#ffff00;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1.99999989, 4.00000019;stroke-dashoffset:6.99999952;display:inline;enable-background:new">
         <desc
-           id="desc9788-45-3-6-1-6-7-2-09-4-7-2-82-2-4-2-6-4-0-7-0-5-9-2">type = vehicle; key = rubber_boat.vehicle;</desc>
+           id="desc9788-45-3-6-1-6-7-2-09-4-7-2-82-2-4-2-6-4-0-7-0-5-9-2">type = vehicle; tag = boat;</desc>
       </rect>
       <rect
          transform="matrix(0.08550639,0.99633762,-0.99633762,0.08550639,0,0)"
@@ -43664,7 +43664,7 @@ key = radar_tower.vehicle;
          id="spawn1-70-3-4-0"
          style="fill:#ffff00;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1.99999989, 4.00000019;stroke-dashoffset:6.99999952;display:inline;enable-background:new">
         <desc
-           id="desc9788-45-3-6-1-6-7-2-09-4-7-2-82-2-4-2-6-4-0-7-0-5-9-1">type = vehicle; key = rubber_boat.vehicle;</desc>
+           id="desc9788-45-3-6-1-6-7-2-09-4-7-2-82-2-4-2-6-4-0-7-0-5-9-1">type = vehicle; tag = boat;</desc>
       </rect>
       <rect
          transform="matrix(0.28503374,0.95851748,-0.95851748,0.28503374,0,0)"
@@ -43676,7 +43676,7 @@ key = radar_tower.vehicle;
          id="spawn1-70-3-4-6"
          style="fill:#ffff00;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1.99999988, 4.00000016;stroke-dashoffset:6.99999905;display:inline;enable-background:new">
         <desc
-           id="desc9788-45-3-6-1-6-7-2-09-4-7-2-82-2-4-2-6-4-0-7-0-5-9-4">type = vehicle; key = rubber_boat.vehicle;</desc>
+           id="desc9788-45-3-6-1-6-7-2-09-4-7-2-82-2-4-2-6-4-0-7-0-5-9-4">type = vehicle; tag = boat;</desc>
       </rect>
       <rect
          transform="matrix(0.28503374,0.95851748,-0.95851748,0.28503374,0,0)"
@@ -43688,7 +43688,7 @@ key = radar_tower.vehicle;
          id="spawn1-70-3-4-6-0"
          style="fill:#ffff00;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1.99999983, 4.00000006;stroke-dashoffset:6.99999905;display:inline;enable-background:new">
         <desc
-           id="desc9788-45-3-6-1-6-7-2-09-4-7-2-82-2-4-2-6-4-0-7-0-5-9-4-6">type = vehicle; key = rubber_boat.vehicle;</desc>
+           id="desc9788-45-3-6-1-6-7-2-09-4-7-2-82-2-4-2-6-4-0-7-0-5-9-4-6">type = vehicle; tag = boat;</desc>
       </rect>
       <rect
          transform="matrix(0.28503374,0.95851748,-0.95851748,0.28503374,0,0)"
@@ -43700,7 +43700,7 @@ key = radar_tower.vehicle;
          id="spawn1-70-3-4-6-1"
          style="fill:#ffff00;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1.99999983, 4.00000006;stroke-dashoffset:6.99999905;display:inline;enable-background:new">
         <desc
-           id="desc9788-45-3-6-1-6-7-2-09-4-7-2-82-2-4-2-6-4-0-7-0-5-9-4-8">type = vehicle; key = rubber_boat.vehicle;</desc>
+           id="desc9788-45-3-6-1-6-7-2-09-4-7-2-82-2-4-2-6-4-0-7-0-5-9-4-8">type = vehicle; tag = boat;</desc>
       </rect>
       <rect
          transform="matrix(0.67351155,0.7391767,-0.7391767,0.67351155,0,0)"
@@ -43712,7 +43712,7 @@ key = radar_tower.vehicle;
          id="spawn1-70-3-4-6-9"
          style="fill:#ffff00;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1.99999983, 4.00000006;stroke-dashoffset:6.99999905;display:inline;enable-background:new">
         <desc
-           id="desc9788-45-3-6-1-6-7-2-09-4-7-2-82-2-4-2-6-4-0-7-0-5-9-4-84">type = vehicle; key = rubber_boat.vehicle;</desc>
+           id="desc9788-45-3-6-1-6-7-2-09-4-7-2-82-2-4-2-6-4-0-7-0-5-9-4-84">type = vehicle; tag = boat;</desc>
       </rect>
       <rect
          transform="matrix(0.67351155,0.7391767,-0.7391767,0.67351155,0,0)"
@@ -43724,7 +43724,7 @@ key = radar_tower.vehicle;
          id="spawn1-70-3-4-6-9-1"
          style="fill:#ffff00;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1.99999983, 4.00000006;stroke-dashoffset:6.99999905;display:inline;enable-background:new">
         <desc
-           id="desc9788-45-3-6-1-6-7-2-09-4-7-2-82-2-4-2-6-4-0-7-0-5-9-4-84-4">type = vehicle; key = rubber_boat.vehicle;</desc>
+           id="desc9788-45-3-6-1-6-7-2-09-4-7-2-82-2-4-2-6-4-0-7-0-5-9-4-84-4">type = vehicle; tag = boat;</desc>
       </rect>
       <rect
          transform="matrix(0.67351155,0.7391767,-0.7391767,0.67351155,0,0)"
@@ -43736,7 +43736,7 @@ key = radar_tower.vehicle;
          id="spawn1-70-3-4-6-9-3"
          style="fill:#ffff00;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1.99999983, 4.00000006;stroke-dashoffset:6.99999905;display:inline;enable-background:new">
         <desc
-           id="desc9788-45-3-6-1-6-7-2-09-4-7-2-82-2-4-2-6-4-0-7-0-5-9-4-84-9">type = vehicle; key = rubber_boat.vehicle;</desc>
+           id="desc9788-45-3-6-1-6-7-2-09-4-7-2-82-2-4-2-6-4-0-7-0-5-9-4-84-9">type = vehicle; tag = boat;</desc>
       </rect>
       <rect
          transform="matrix(0.67351155,0.7391767,-0.7391767,0.67351155,0,0)"
@@ -43748,7 +43748,7 @@ key = radar_tower.vehicle;
          id="spawn1-70-3-4-6-9-8"
          style="fill:#ffff00;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1.99999983, 4.00000006;stroke-dashoffset:6.99999905;display:inline;enable-background:new">
         <desc
-           id="desc9788-45-3-6-1-6-7-2-09-4-7-2-82-2-4-2-6-4-0-7-0-5-9-4-84-8">type = vehicle; key = rubber_boat.vehicle;</desc>
+           id="desc9788-45-3-6-1-6-7-2-09-4-7-2-82-2-4-2-6-4-0-7-0-5-9-4-84-8">type = vehicle; tag = boat;</desc>
       </rect>
       <rect
          transform="matrix(0.08550639,0.99633762,-0.99633762,0.08550639,0,0)"
@@ -43760,7 +43760,7 @@ key = radar_tower.vehicle;
          id="spawn1-70-3-4-0-0"
          style="fill:#ffff00;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1.99999989, 4.00000015;stroke-dashoffset:6.99999905;display:inline;enable-background:new">
         <desc
-           id="desc9788-45-3-6-1-6-7-2-09-4-7-2-82-2-4-2-6-4-0-7-0-5-9-1-8">type = vehicle; key = rubber_boat.vehicle;</desc>
+           id="desc9788-45-3-6-1-6-7-2-09-4-7-2-82-2-4-2-6-4-0-7-0-5-9-1-8">type = vehicle; tag = boat;</desc>
       </rect>
       <rect
          transform="matrix(0.34856447,0.93728481,-0.93728481,0.34856447,0,0)"
@@ -43772,7 +43772,7 @@ key = radar_tower.vehicle;
          id="spawn1-70-3-4-0-7"
          style="fill:#ffff00;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1.99999988, 4.00000012;stroke-dashoffset:6.99999905;display:inline;enable-background:new">
         <desc
-           id="desc9788-45-3-6-1-6-7-2-09-4-7-2-82-2-4-2-6-4-0-7-0-5-9-1-7">type = vehicle; key = rubber_boat.vehicle;</desc>
+           id="desc9788-45-3-6-1-6-7-2-09-4-7-2-82-2-4-2-6-4-0-7-0-5-9-1-7">type = vehicle; tag = boat;</desc>
       </rect>
       <rect
          transform="matrix(0.95175071,-0.30687227,0.30687227,0.95175071,0,0)"
@@ -45442,7 +45442,7 @@ tag = jeep;</desc>
          style="fill:#786721;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:12.00000174, 12.00000174;stroke-dashoffset:4.60000058;display:inline;enable-background:new">
         <desc
            id="desc7082-7-0-4-9">type = vehicle; 
-key = atv_base.vehicle;</desc>
+tag = atv;</desc>
       </rect>
       <rect
          transform="matrix(0.99997127,-0.00758009,0.00758009,0.99997127,0,0)"
@@ -45455,7 +45455,7 @@ key = atv_base.vehicle;</desc>
          style="fill:#786721;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:12.00000168, 12.00000168;stroke-dashoffset:4.60000058;display:inline;enable-background:new">
         <desc
            id="desc7082-7-0-4-9-7">type = vehicle; 
-key = atv_base.vehicle;</desc>
+tag = atv;</desc>
       </rect>
       <rect
          transform="matrix(0.74863558,-0.66298172,0.66298172,0.74863558,0,0)"
@@ -46347,7 +46347,7 @@ tag = jeep;</desc>
          transform="matrix(0.99997127,-0.00758009,0.00758009,0.99997127,0,0)">
         <desc
            id="desc39666">type = vehicle; 
-key = atv_base.vehicle;</desc>
+tag = atv;</desc>
       </rect>
       <rect
          style="fill:#4d4d4d;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:12.00000081, 12.00000081;stroke-dashoffset:4.60000029;display:inline;enable-background:new"
@@ -46373,7 +46373,7 @@ tag = tank;</desc>
          transform="matrix(-0.01709163,0.99985393,-0.99985393,-0.01709163,0,0)">
         <desc
            id="desc39666-4">type = vehicle; 
-key = atv_base.vehicle;</desc>
+tag = atv;</desc>
       </rect>
       <rect
          transform="matrix(-0.11320256,-0.99357193,0.99357193,-0.11320256,0,0)"
@@ -46399,7 +46399,7 @@ key = mobile_armory.vehicle;</desc>
          style="fill:#008000;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:11.99999922, 11.99999922;stroke-dashoffset:4.59999981;display:inline;enable-background:new">
         <desc
            id="desc7082-9-7-0-4-7-4-1">type = vehicle;
-key = armored_truck.vehicle;</desc>
+tag = trans_truck;</desc>
       </rect>
       <rect
          transform="matrix(-0.75876779,-0.65136122,0.65136122,-0.75876779,0,0)"
@@ -46412,7 +46412,7 @@ key = armored_truck.vehicle;</desc>
          style="fill:#008000;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:11.99999936, 11.99999936;stroke-dashoffset:4.59999988;display:inline;enable-background:new">
         <desc
            id="desc7082-9-7-0-4-7-4-1-2">type = vehicle;
-key = armored_truck.vehicle;</desc>
+tag = trans_truck;</desc>
       </rect>
       <rect
          style="fill:#00ff00;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:11.99999895, 11.99999895;stroke-dashoffset:4.5999995;display:inline;enable-background:new"
