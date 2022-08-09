@@ -27,11 +27,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="3.2942094"
-     inkscape:cx="1085.8153"
-     inkscape:cy="983.01133"
+     inkscape:zoom="1.1646789"
+     inkscape:cx="1154.585"
+     inkscape:cy="1046.4767"
      inkscape:document-units="px"
-     inkscape:current-layer="layer39"
+     inkscape:current-layer="layer53"
      showgrid="true"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
@@ -22087,7 +22087,7 @@ walkable = 0;</desc>
        inkscape:label="#path10590-0" />
   </g>
   <g
-     style="display:none"
+     style="display:inline"
      inkscape:label="library"
      id="layer11"
      inkscape:groupmode="layer">
@@ -22161,13 +22161,97 @@ walkable = 0;</desc>
     <rect
        style="display:inline;fill:#ffff00;fill-opacity:0.50196078;stroke:none;enable-background:new"
        id="rect4874-8-3-0-7-2-9-0"
-       width="230.46916"
-       height="128.25275"
+       width="225.74678"
+       height="183.63287"
        x="933.32861"
        y="1324.4337"
        inkscape:label="#rect11324_base">
       <desc
          id="desc4876-3-4-66-6-5-1-1">name=Rail Station; faction_index=1; capturable = 0;</desc>
+    </rect>
+    <rect
+       style="display:inline;fill:#008000;stroke:#ffff00;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;enable-background:new"
+       id="spawn66-9-1"
+       width="7"
+       height="7"
+       x="1721.6382"
+       y="-981.48065"
+       inkscape:label=""
+       transform="matrix(0.00521697,0.99998639,-0.99998639,0.00521697,0,0)">
+      <desc
+         id="desc14265-04-2">type = vehicle; key = mortar_ammunition_crates.vehicle;</desc>
+    </rect>
+    <rect
+       style="display:inline;fill:#008000;stroke:#ffff00;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;enable-background:new"
+       id="spawn66-9-17"
+       width="7"
+       height="7"
+       x="1699.3147"
+       y="-981.59711"
+       inkscape:label=""
+       transform="matrix(0.00521697,0.99998639,-0.99998639,0.00521697,0,0)">
+      <desc
+         id="desc14265-04-5">type = vehicle; key = mortar_ammunition_crates.vehicle;</desc>
+    </rect>
+    <rect
+       style="display:inline;fill:#008000;stroke:#ffff00;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;enable-background:new"
+       id="spawn66-9-17-8"
+       width="7"
+       height="7"
+       x="1186.4583"
+       y="-1918.8778"
+       inkscape:label=""
+       transform="matrix(0.00521697,0.99998639,-0.99998639,0.00521697,0,0)">
+      <desc
+         id="desc14265-04-5-7">type = vehicle; key = mortar_ammunition_crates.vehicle;</desc>
+    </rect>
+    <rect
+       style="display:inline;fill:#008000;stroke:#ffff00;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;enable-background:new"
+       id="spawn66-9-17-1"
+       width="7"
+       height="7"
+       x="1138.377"
+       y="-1919.1285"
+       inkscape:label=""
+       transform="matrix(0.00521697,0.99998639,-0.99998639,0.00521697,0,0)">
+      <desc
+         id="desc14265-04-5-0">type = vehicle; key = mortar_ammunition_crates.vehicle;</desc>
+    </rect>
+    <rect
+       style="display:inline;fill:#008000;stroke:#ffff00;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;enable-background:new"
+       id="spawn66-9-17-10"
+       width="7"
+       height="7"
+       x="1076.9808"
+       y="-1918.161"
+       inkscape:label=""
+       transform="matrix(0.00521697,0.99998639,-0.99998639,0.00521697,0,0)">
+      <desc
+         id="desc14265-04-5-5">type = vehicle; key = mortar_ammunition_crates.vehicle;</desc>
+    </rect>
+    <rect
+       style="display:inline;fill:#008000;stroke:#ffff00;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;enable-background:new"
+       id="spawn66-9-17-8-5"
+       width="7"
+       height="7"
+       x="656.33319"
+       y="-1767.9509"
+       inkscape:label=""
+       transform="matrix(0.00521697,0.99998639,-0.99998639,0.00521697,0,0)">
+      <desc
+         id="desc14265-04-5-7-1">type = vehicle; key = mortar_ammunition_crates.vehicle;</desc>
+    </rect>
+    <rect
+       style="display:inline;fill:#008000;stroke:#ffff00;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;enable-background:new"
+       id="spawn66-9-17-8-54"
+       width="7"
+       height="7"
+       x="593.9079"
+       y="-417.67136"
+       inkscape:label=""
+       transform="matrix(0.00521697,0.99998639,-0.99998639,0.00521697,0,0)">
+      <desc
+         id="desc14265-04-5-7-2">type = vehicle; key = mortar_ammunition_crates.vehicle;</desc>
     </rect>
   </g>
   <g
@@ -25877,7 +25961,7 @@ collision_model_size = 1.8 1.2 6.2;</desc>
     </g>
     <g
        transform="translate(0,1024)"
-       style="display:none"
+       style="display:inline"
        id="layer1"
        inkscape:groupmode="layer"
        inkscape:label="objects">
@@ -27854,21 +27938,6 @@ offset = 0 -0.9 0;</desc>
            id="desc6462-7-9-9-15-3-2-78-7-3">height=2; material = BuildingWhite1;</desc>
       </rect>
       <rect
-         rx="6"
-         ry="6"
-         style="display:inline;fill:#cccccc;fill-opacity:1;enable-background:new"
-         id="rect5366-304-48-2-78-7-961-7-96-0"
-         width="6"
-         height="6"
-         x="957.76239"
-         y="450.07263"
-         inkscape:label="#rock4477">
-        <desc
-           id="desc5368-5440-352-9-0-2-14-7-98-8">rock</desc>
-        <title
-           id="title5370-21-59-98-20-60-7-83-255-77">rock</title>
-      </rect>
-      <rect
          ry="0"
          transform="matrix(0.86528312,-0.50128347,0.50128347,0.86528312,0,-1024)"
          inkscape:label="#rect6406"
@@ -27898,7 +27967,7 @@ offset = 0 -0.3 0;</desc>
       </rect>
     </g>
     <g
-       style="display:none"
+       style="display:inline"
        inkscape:label="ladder"
        id="layer46"
        inkscape:groupmode="layer">
@@ -28498,7 +28567,7 @@ offset = 0 -0.3 0;</desc>
          transform="matrix(-0.61309555,-0.79000876,0.79000876,-0.61309555,0,0)" />
     </g>
     <g
-       style="display:none"
+       style="display:inline"
        inkscape:label="walls"
        id="layer8"
        inkscape:groupmode="layer">
@@ -32633,7 +32702,7 @@ offset = 0 -0.3 0;</desc>
        inkscape:groupmode="layer"
        id="layer60"
        inkscape:label="stones"
-       style="display:none">
+       style="display:inline">
       <rect
          inkscape:label="#mesh"
          y="844.05927"
@@ -41192,12 +41261,12 @@ offset = 0 -0.3 0;</desc>
       </rect>
     </g>
     <g
-       style="display:none"
+       style="display:inline"
        inkscape:label="avoid"
        id="layer22"
        inkscape:groupmode="layer" />
     <g
-       style="display:none"
+       style="display:inline"
        inkscape:label="crate"
        id="layer33"
        inkscape:groupmode="layer">
@@ -41458,8 +41527,8 @@ offset = 0 -0.3 0;</desc>
          id="rect4878-8-6-42-7-1-8-6-62-7-4-9-4-5-4-3-66"
          width="9.2423716"
          height="8.3179493"
-         x="957.82178"
-         y="1480.4467"
+         x="956.10461"
+         y="1452.9712"
          inkscape:label="#spawnrect10748" />
       <rect
          style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new"
@@ -41957,6 +42026,182 @@ offset = 0 -0.3 0;</desc>
          x="1011.1094"
          y="835.35339"
          inkscape:label="#spawnrect10748" />
+      <rect
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new"
+         id="rect4878-8-6-42-7-1-8-6-62-7-4-9-4-5-4-3-168-1-39-8"
+         width="9.2423716"
+         height="8.3179493"
+         x="679.2583"
+         y="937.09821"
+         inkscape:label="#spawnrect10748" />
+      <rect
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new"
+         id="rect4878-8-6-42-7-1-8-6-62-7-4-9-4-5-4-3-168-1-39-1"
+         width="9.2423716"
+         height="8.3179493"
+         x="680.97552"
+         y="884.72327"
+         inkscape:label="#spawnrect10748" />
+      <rect
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new"
+         id="rect4878-8-6-42-7-1-8-6-62-7-4-9-4-5-4-3-168-1-39-7"
+         width="9.2423716"
+         height="8.3179493"
+         x="680.97552"
+         y="824.62085"
+         inkscape:label="#spawnrect10748" />
+      <rect
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new"
+         id="rect4878-8-6-42-7-1-8-6-62-7-4-9-4-5-4-3-168-1-39-86"
+         width="9.2423716"
+         height="8.3179493"
+         x="753.09839"
+         y="738.76031"
+         inkscape:label="#spawnrect10748" />
+      <rect
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new"
+         id="rect4878-8-6-42-7-1-8-6-62-7-4-9-4-5-4-3-168-1-39-5"
+         width="9.2423716"
+         height="8.3179493"
+         x="705.01648"
+         y="756.79102"
+         inkscape:label="#spawnrect10748" />
+      <rect
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new"
+         id="rect4878-8-6-42-7-1-8-6-62-7-4-9-4-5-4-3-168-1-39-3"
+         width="9.2423716"
+         height="8.3179493"
+         x="652.64154"
+         y="774.82172"
+         inkscape:label="#spawnrect10748" />
+      <rect
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new"
+         id="rect4878-8-6-42-7-1-8-6-62-7-4-9-4-5-4-3-168-1-03-9-3-4-2"
+         width="9.2423716"
+         height="8.3179493"
+         x="1088.3839"
+         y="494.05765"
+         inkscape:label="#spawnrect10748" />
+      <rect
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new"
+         id="rect4878-8-6-42-7-1-8-6-62-7-4-9-4-5-4-3-168-1-03-9-3-4-0"
+         width="9.2423716"
+         height="8.3179493"
+         x="1169.0929"
+         y="626.28296"
+         inkscape:label="#spawnrect10748" />
+      <rect
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new"
+         id="rect4878-8-6-42-7-1-8-6-62-7-4-9-4-5-4-3-168-1-03-9-3-4-9"
+         width="9.2423716"
+         height="8.3179493"
+         x="874.59113"
+         y="1179.225"
+         inkscape:label="#spawnrect10748" />
+      <rect
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new"
+         id="rect4878-8-6-42-7-1-8-6-62-7-4-9-4-5-4-3-168-1-03-9-3-4-8"
+         width="9.2423716"
+         height="8.3179493"
+         x="974.18939"
+         y="1179.225"
+         inkscape:label="#spawnrect10748" />
+      <rect
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new"
+         id="rect4878-8-6-42-7-1-8-6-62-7-4-9-4-5-4-3-168-1-03-9-3-4-6"
+         width="9.2423716"
+         height="8.3179493"
+         x="922.67303"
+         y="1179.2251"
+         inkscape:label="#spawnrect10748" />
+      <rect
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new"
+         id="rect4878-8-6-42-7-1-8-6-62-7-4-9-4-5-4-3-168-1-03-9-3-4-87"
+         width="9.2423716"
+         height="8.3179493"
+         x="781.86169"
+         y="1139.7291"
+         inkscape:label="#spawnrect10748" />
+      <rect
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new"
+         id="rect4878-8-6-42-7-1-8-6-62-7-4-9-4-5-4-3-168-1-03-9-3-4-23"
+         width="9.2423716"
+         height="8.3179493"
+         x="787.87195"
+         y="1191.2455"
+         inkscape:label="#spawnrect10748" />
+      <rect
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new"
+         id="rect4878-8-6-42-7-1-8-6-62-7-4-9-4-5-4-3-168-1-03-9-3-4-5"
+         width="9.2423716"
+         height="8.3179493"
+         x="1220.6093"
+         y="1266.8029"
+         inkscape:label="#spawnrect10748" />
+      <rect
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new"
+         id="rect4878-8-6-42-7-1-8-6-62-7-4-9-4-5-4-3-168-1-03-9-3-4-86"
+         width="9.2423716"
+         height="8.3179493"
+         x="1100.4044"
+         y="1350.0875"
+         inkscape:label="#spawnrect10748" />
+      <rect
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new"
+         id="rect4878-8-6-42-7-1-8-6-62-7-4-9-4-5-4-3-168-1-03-9-3-4-99"
+         width="9.2423716"
+         height="8.3179493"
+         x="1782.1373"
+         y="795.42828"
+         inkscape:label="#spawnrect10748" />
+      <rect
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new"
+         id="rect4878-8-6-42-7-1-8-6-62-7-4-9-4-5-4-3-168-1-03-9-3-4-238"
+         width="9.2423716"
+         height="8.3179493"
+         x="1795.0165"
+         y="717.29517"
+         inkscape:label="#spawnrect10748" />
+      <rect
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new"
+         id="rect4878-8-6-42-7-1-8-6-62-7-4-9-4-5-4-3-168-1-03-9-3-4-7"
+         width="9.2423716"
+         height="8.3179493"
+         x="935.55212"
+         y="290.56808"
+         inkscape:label="#spawnrect10748" />
+      <rect
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new"
+         id="rect4878-8-6-42-7-1-8-6-62-7-4-9-4-5-4-3-168-1-03-9-3-4-3"
+         width="9.2423716"
+         height="8.3179493"
+         x="1019.6955"
+         y="290.56808"
+         inkscape:label="#spawnrect10748" />
+      <rect
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new"
+         id="rect4878-8-6-42-7-1-8-6-62-7-4-9-4-5-4-3-168-1-03-9-3-4-78"
+         width="9.2423716"
+         height="8.3179493"
+         x="1035.1504"
+         y="657.19275"
+         inkscape:label="#spawnrect10748" />
+      <rect
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new"
+         id="rect4878-8-6-42-7-1-8-6-62-7-4-9-4-5-4-3-168-1-03-9-3-4-29"
+         width="9.2423716"
+         height="8.3179493"
+         x="1037.7262"
+         y="707.85046"
+         inkscape:label="#spawnrect10748" />
+      <rect
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new"
+         id="rect4878-8-6-42-7-1-8-6-62-7-4-9-4-5-4-3-168-1-03-9-3-4-06"
+         width="9.2423716"
+         height="8.3179493"
+         x="1043.7365"
+         y="762.80127"
+         inkscape:label="#spawnrect10748" />
     </g>
     <g
        inkscape:groupmode="layer"
@@ -42077,18 +42322,6 @@ offset = 0 -0.3 0;</desc>
        id="layer54"
        inkscape:label="vehicles"
        style="display:inline">
-      <rect
-         style="display:inline;fill:#008000;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:12, 12;stroke-dashoffset:4.5999999;stroke-opacity:1;enable-background:new"
-         id="spawn1-70-1-4-9-1-9-0-5"
-         width="3.982286"
-         height="7.3961515"
-         x="-338.29291"
-         y="-1616.7991"
-         inkscape:label=""
-         transform="matrix(-0.9116684,0.41092667,-0.41092667,-0.9116684,0,0)">
-        <desc
-           id="desc7082-9-7-0-4-7-4-0-4">type = vehicle; key = armored_truck.vehicle;</desc>
-      </rect>
       <rect
          transform="matrix(-0.00976398,0.99995233,-0.99995233,-0.00976398,0,0)"
          rx="4.1992183"
@@ -42297,7 +42530,7 @@ offset = 0 -0.3 0;</desc>
          id="spawn1-70-6-0-5-9-7-3"
          style="display:inline;fill:#d3bc5f;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:12, 12;stroke-dashoffset:4.5999999;stroke-opacity:1;enable-background:new">
         <desc
-           id="desc7082-9-8-9-8-4-8-5">type = vehicle; key = humvee.vehicle;</desc>
+           id="desc7082-9-8-9-8-4-8-5">type = vehicle; tag = tank;</desc>
       </rect>
       <rect
          style="display:inline;fill:#ffd5d5;fill-opacity:1;stroke:#ff00ff;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:12, 12;stroke-dashoffset:4.5999999;stroke-opacity:1;enable-background:new"
@@ -42321,7 +42554,7 @@ offset = 0 -0.3 0;</desc>
          inkscape:label=""
          transform="matrix(-0.09451257,0.99552367,-0.99552367,-0.09451257,0,0)">
         <desc
-           id="desc7082-9-7-0-4-4-3-3-9-2-1-9-0-51">type = vehicle; key = mobile_armory.vehicle;</desc>
+           id="desc7082-9-7-0-4-4-3-3-9-2-1-9-0-51">type = vehicle; tag = atv;</desc>
       </rect>
       <rect
          style="display:inline;fill:#ffd5d5;fill-opacity:1;stroke:#ff00ff;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:12, 12;stroke-dashoffset:4.5999999;stroke-opacity:1;enable-background:new"
@@ -42333,7 +42566,7 @@ offset = 0 -0.3 0;</desc>
          inkscape:label=""
          transform="matrix(-0.99959363,0.02850557,-0.02850557,-0.99959363,0,0)">
         <desc
-           id="desc7082-9-7-0-4-4-3-3-9-2-1-9-0-3">type = vehicle; key = mobile_armory.vehicle;</desc>
+           id="desc7082-9-7-0-4-4-3-3-9-2-1-9-0-3">type = vehicle; tag = tank;</desc>
       </rect>
       <rect
          transform="matrix(-0.56439184,-0.82550703,0.82550703,-0.56439184,0,0)"
@@ -42491,8 +42724,7 @@ offset = 0 -0.3 0;</desc>
          id="spawn1-1-4-9"
          style="display:inline;fill:#786721;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:12, 12;stroke-dashoffset:4.5999999;stroke-opacity:1;enable-background:new">
         <desc
-           id="desc7082-7-0-4">type = vehicle; 
-tag = atv;</desc>
+           id="desc7082-7-0-4">type = vehicle; tag = atv;</desc>
       </rect>
       <rect
          transform="matrix(-0.11777142,-0.99304073,0.99304073,-0.11777142,0,0)"
@@ -42722,8 +42954,7 @@ tag = atv;</desc>
          id="spawn1-3-9-9-98"
          style="display:inline;fill:#800080;fill-opacity:1;stroke:#008000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:12, 12;stroke-dashoffset:4.5999999;stroke-opacity:1;enable-background:new">
         <desc
-           id="desc7082-7-1-9-14">type = vehicle; 
-key = legion.vehicle;</desc>
+           id="desc7082-7-1-9-14">type = vehicle; tag = jeep;</desc>
       </rect>
       <rect
          transform="matrix(0.99987668,0.01570426,-0.01570426,0.99987668,0,0)"
@@ -42735,8 +42966,7 @@ key = legion.vehicle;</desc>
          id="spawn1-3-9-9-98-7"
          style="display:inline;fill:#800080;fill-opacity:1;stroke:#008000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:12, 12;stroke-dashoffset:4.5999999;stroke-opacity:1;enable-background:new">
         <desc
-           id="desc7082-7-1-9-14-2">type = vehicle; 
-key = m528.vehicle;</desc>
+           id="desc7082-7-1-9-14-2">type = vehicle; tag = apc;</desc>
       </rect>
       <rect
          transform="matrix(-0.99933263,0.03652807,-0.03652807,-0.99933263,0,0)"
@@ -42748,8 +42978,7 @@ key = m528.vehicle;</desc>
          id="spawn1-3-9-9-98-1"
          style="display:inline;fill:#800080;fill-opacity:1;stroke:#008000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:12, 12;stroke-dashoffset:4.5999999;stroke-opacity:1;enable-background:new">
         <desc
-           id="desc7082-7-1-9-14-6">type = vehicle; 
-key = noxe.vehicle;</desc>
+           id="desc7082-7-1-9-14-6">type = vehicle; tag = apc;</desc>
       </rect>
       <rect
          transform="matrix(-0.00976398,0.99995233,-0.99995233,-0.00976398,0,0)"
@@ -42799,7 +43028,7 @@ key = noxe.vehicle;</desc>
          inkscape:label=""
          transform="matrix(-0.12909585,0.99163212,-0.99163212,-0.12909585,0,0)">
         <desc
-           id="desc7082-9-7-0-4-7-4-0-4-3-2">type = vehicle; key = armored_truck.vehicle;</desc>
+           id="desc7082-9-7-0-4-7-4-0-4-3-2">type = vehicle; tag = atv;</desc>
       </rect>
       <rect
          style="display:inline;fill:#008000;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:12, 12;stroke-dashoffset:4.5999999;stroke-opacity:1;enable-background:new"
@@ -42811,7 +43040,7 @@ key = noxe.vehicle;</desc>
          inkscape:label=""
          transform="matrix(-0.12909585,0.99163212,-0.99163212,-0.12909585,0,0)">
         <desc
-           id="desc7082-9-7-0-4-7-4-0-4-3-2-2">type = vehicle; key = armored_truck.vehicle;</desc>
+           id="desc7082-9-7-0-4-7-4-0-4-3-2-2">type = vehicle; tag = atv;</desc>
       </rect>
       <rect
          style="display:inline;fill:#008000;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:12, 12;stroke-dashoffset:4.5999999;stroke-opacity:1;enable-background:new"
@@ -42828,14 +43057,14 @@ key = noxe.vehicle;</desc>
       <rect
          transform="matrix(0.99929667,-0.03749882,0.03749882,0.99929667,0,0)"
          inkscape:label=""
-         y="809.74707"
-         x="1836.1892"
+         y="808.28125"
+         x="1762.7817"
          height="7.3961515"
          width="3.982286"
          id="spawn1-70-6-0-5-9-7-9"
          style="display:inline;fill:#00ffff;fill-opacity:1;stroke:#008000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:12, 12;stroke-dashoffset:4.5999999;stroke-opacity:1;enable-background:new">
         <desc
-           id="desc7082-9-8-9-8-4-8-1">type = vehicle; key = buggy.vehicle;</desc>
+           id="desc7082-9-8-9-8-4-8-1">type = vehicle; tag = atv;</desc>
       </rect>
       <rect
          transform="matrix(-0.91303718,0.40787635,-0.40787635,-0.91303718,0,0)"
@@ -42847,7 +43076,7 @@ key = noxe.vehicle;</desc>
          id="spawn1-70-6-0-5-9-7-98"
          style="display:inline;fill:#88aa00;fill-opacity:1;stroke:#d4ff2a;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:12, 12;stroke-dashoffset:4.5999999;stroke-opacity:1;enable-background:new">
         <desc
-           id="desc7082-9-8-9-8-4-8-4">type = vehicle; key = humvee_gl.vehicle;</desc>
+           id="desc7082-9-8-9-8-4-8-4">type = vehicle; tag = tank;</desc>
       </rect>
       <rect
          transform="matrix(0.00971988,0.99995276,-0.99995276,0.00971988,0,0)"
@@ -42962,14 +43191,146 @@ key = noxe.vehicle;</desc>
       <rect
          transform="matrix(0.99999242,-0.00389299,0.00389299,0.99999242,0,0)"
          inkscape:label=""
-         y="780.53766"
-         x="1002.0605"
+         y="776.52203"
+         x="998.07611"
          height="7.3961515"
          width="3.982286"
          id="spawn1-1-4-2-1-0-9-7"
          style="display:inline;fill:#4d4d4d;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:12, 12;stroke-dashoffset:4.5999999;stroke-opacity:1;enable-background:new">
         <desc
            id="desc7082-7-0-45-7-94-8-9">type = vehicle; tag = mortar_deploy;</desc>
+      </rect>
+      <rect
+         transform="matrix(0.00521697,0.99998639,-0.99998639,0.00521697,0,0)"
+         inkscape:label=""
+         y="-1352.2598"
+         x="705.5351"
+         height="7"
+         width="7"
+         id="spawn44-3-6-9-0"
+         style="display:inline;fill:#0000ff;stroke:#ffff00;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;enable-background:new">
+        <desc
+           id="desc14261-1-6-2-8">type = vehicle; key = water_tower.vehicle;</desc>
+      </rect>
+      <rect
+         transform="matrix(0.00521697,0.99998639,-0.99998639,0.00521697,0,0)"
+         inkscape:label=""
+         y="-1881.0779"
+         x="642.47339"
+         height="7"
+         width="7"
+         id="spawn44-3-6-9-0-4"
+         style="display:inline;fill:#0000ff;stroke:#ffff00;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;enable-background:new">
+        <desc
+           id="desc14261-1-6-2-8-0">type = vehicle; key = water_tower.vehicle;</desc>
+      </rect>
+      <rect
+         transform="matrix(0.00521697,0.99998639,-0.99998639,0.00521697,0,0)"
+         inkscape:label=""
+         y="-958.54541"
+         x="1481.545"
+         height="7"
+         width="7"
+         id="spawn44-3-1-4"
+         style="display:inline;fill:#0000ff;stroke:#ffff00;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;enable-background:new">
+        <desc
+           id="desc14261-1-7-9">type = vehicle; key = water_tower.vehicle;</desc>
+      </rect>
+      <rect
+         transform="matrix(0.00521697,0.99998639,-0.99998639,0.00521697,0,0)"
+         inkscape:label=""
+         y="-1108.9229"
+         x="1815.8923"
+         height="7"
+         width="7"
+         id="spawn44-3-1-4-9"
+         style="display:inline;fill:#0000ff;stroke:#ffff00;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;enable-background:new">
+        <desc
+           id="desc14261-1-7-9-4">type = vehicle; key = water_tower.vehicle;</desc>
+      </rect>
+      <rect
+         transform="matrix(0.00521697,0.99998639,-0.99998639,0.00521697,0,0)"
+         inkscape:label=""
+         y="-986.99579"
+         x="1816.5442"
+         height="7"
+         width="7"
+         id="spawn44-3-1-4-6"
+         style="display:inline;fill:#0000ff;stroke:#ffff00;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;enable-background:new">
+        <desc
+           id="desc14261-1-7-9-7">type = vehicle; key = water_tower.vehicle;</desc>
+      </rect>
+      <rect
+         transform="matrix(0.00521697,0.99998639,-0.99998639,0.00521697,0,0)"
+         inkscape:label=""
+         y="-161.27452"
+         x="1271.3074"
+         height="7"
+         width="7"
+         id="spawn44-3-1-4-9-7"
+         style="display:inline;fill:#0000ff;stroke:#ffff00;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;enable-background:new">
+        <desc
+           id="desc14261-1-7-9-4-3">type = vehicle; key = water_tower.vehicle;</desc>
+      </rect>
+      <rect
+         transform="matrix(0.00521697,0.99998639,-0.99998639,0.00521697,0,0)"
+         inkscape:label=""
+         y="-268.57837"
+         x="535.1734"
+         height="7"
+         width="7"
+         id="spawn44-3-1-4-9-6"
+         style="display:inline;fill:#0000ff;stroke:#ffff00;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;enable-background:new">
+        <desc
+           id="desc14261-1-7-9-4-9">type = vehicle; key = water_tower.vehicle;</desc>
+      </rect>
+      <rect
+         transform="matrix(0.00521697,0.99998639,-0.99998639,0.00521697,0,0)"
+         inkscape:label=""
+         y="-269.19861"
+         x="552.77832"
+         height="7"
+         width="7"
+         id="spawn44-3-1-4-9-1"
+         style="display:inline;fill:#0000ff;stroke:#ffff00;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;enable-background:new">
+        <desc
+           id="desc14261-1-7-9-4-2">type = vehicle; key = water_tower.vehicle;</desc>
+      </rect>
+      <rect
+         transform="matrix(-0.6736234,-0.73907477,0.73907477,-0.6736234,0,0)"
+         inkscape:label=""
+         y="517.02948"
+         x="-828.91302"
+         height="7.3961515"
+         width="3.982286"
+         id="generic_node2-1-0-1-5-2-6-3-7-4-4-4-1-3-2"
+         style="display:inline;fill:#ccff00;fill-opacity:1;stroke:#ff00ff;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:12, 12;stroke-dashoffset:4.5999999;stroke-opacity:1;enable-background:new">
+        <desc
+           id="desc7082-7-0-45-7-94-7-1-7-1-22-61-3-1-2-7-2-9">tag = icecream;</desc>
+      </rect>
+      <rect
+         transform="matrix(-0.6736234,-0.73907477,0.73907477,-0.6736234,0,0)"
+         inkscape:label=""
+         y="631.13483"
+         x="-687.78821"
+         height="7.3961515"
+         width="3.982286"
+         id="generic_node2-1-0-1-5-2-6-3-7-4-4-4-1-3-4"
+         style="display:inline;fill:#ccff00;fill-opacity:1;stroke:#ff00ff;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:12, 12;stroke-dashoffset:4.5999999;stroke-opacity:1;enable-background:new">
+        <desc
+           id="desc7082-7-0-45-7-94-7-1-7-1-22-61-3-1-2-7-2-8">tag = icecream;</desc>
+      </rect>
+      <rect
+         transform="matrix(0.99929667,-0.03749882,0.03749882,0.99929667,0,0)"
+         inkscape:label=""
+         y="833.43781"
+         x="1763.2247"
+         height="7.3961515"
+         width="3.982286"
+         id="spawn1-70-6-0-5-9-7-9-2"
+         style="display:inline;fill:#00ffff;fill-opacity:1;stroke:#008000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:12, 12;stroke-dashoffset:4.5999999;stroke-opacity:1;enable-background:new">
+        <desc
+           id="desc7082-9-8-9-8-4-8-1-1">type = vehicle; tag = atv;</desc>
       </rect>
     </g>
     <g
@@ -43777,7 +44138,7 @@ key = cover1.vehicle;</desc>
        inkscape:groupmode="layer"
        id="layer58"
        inkscape:label="walls"
-       style="display:none">
+       style="display:inline">
       <path
          style="display:inline;fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;enable-background:new"
          d="m 1467.9568,673.27 -5.4969,-14.91508 -5.497,-14.91508 -18.4972,-5.33611 -18.4973,-5.33612 -18.7522,9.9137"
@@ -43804,13 +44165,12 @@ key = cover1.vehicle;</desc>
      inkscape:groupmode="layer"
      id="layer49"
      inkscape:label="layer1.dominance"
-     style="display:none"
-     sodipodi:insensitive="true">
+     style="display:inline">
     <g
        inkscape:groupmode="layer"
        id="layer50"
        inkscape:label="spawpoints"
-       style="display:none">
+       style="display:inline">
       <rect
          style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new"
          id="rect4878-8-6-42-7-1-8-6-62-7-4-9-4-2-9-1-1"
@@ -44161,8 +44521,8 @@ key = cover1.vehicle;</desc>
          id="rect4878-8-6-42-7-1-8-6-62-7-4-9-4-5-4-3-66-2"
          width="9.2423716"
          height="8.3179493"
-         x="962.04187"
-         y="1480.9991"
+         x="978.77441"
+         y="1514.0554"
          inkscape:label="#spawnrect10748" />
       <rect
          style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new"
@@ -44474,7 +44834,7 @@ key = cover1.vehicle;</desc>
        inkscape:groupmode="layer"
        id="layer51"
        inkscape:label="vehicles"
-       style="display:none">
+       style="display:inline">
       <rect
          style="display:inline;fill:#ffd5d5;fill-opacity:1;stroke:#ff00ff;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:12, 12;stroke-dashoffset:4.5999999;stroke-opacity:1;enable-background:new"
          id="spawn1-70-1-4-9-17-2-25-2-6-1-1-14-4"
@@ -44486,18 +44846,6 @@ key = cover1.vehicle;</desc>
          transform="matrix(0.88537519,0.46487715,-0.46487715,0.88537519,0,0)">
         <desc
            id="desc7082-9-7-0-4-4-3-3-9-2-1-9-030-1">type = vehicle; key = mobile_armory.vehicle;</desc>
-      </rect>
-      <rect
-         style="display:inline;fill:#008000;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:12, 12;stroke-dashoffset:4.5999999;stroke-opacity:1;enable-background:new"
-         id="spawn1-70-1-4-9-1-9-7-2"
-         width="3.982286"
-         height="7.3961515"
-         x="480.33902"
-         y="1454.9346"
-         inkscape:label=""
-         transform="matrix(0.67662234,-0.73633023,0.73633023,0.67662234,0,0)">
-        <desc
-           id="desc7082-9-7-0-4-7-4-5-0">type = vehicle; key = armored_truck.vehicle;</desc>
       </rect>
       <rect
          style="display:inline;fill:#ff7f2a;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:12, 12;stroke-dashoffset:4.5999999;stroke-opacity:1;enable-background:new"
@@ -44522,42 +44870,6 @@ key = cover1.vehicle;</desc>
          style="display:inline;fill:#007cff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:12, 12;stroke-dashoffset:4.5999999;stroke-opacity:1;enable-background:new">
         <desc
            id="desc7082-7-1-9-7-8-6">type = vehicle; tag = jeep;</desc>
-      </rect>
-      <rect
-         style="display:inline;fill:#ffd5d5;fill-opacity:1;stroke:#ff00ff;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:12, 12;stroke-dashoffset:4.5999999;stroke-opacity:1;enable-background:new"
-         id="spawn1-70-1-4-9-17-2-25-2-6-1-1-14-4-7"
-         width="3.982286"
-         height="7.3961515"
-         x="-941.32532"
-         y="-1356.097"
-         inkscape:label=""
-         transform="matrix(-0.99975153,0.02229072,-0.02229072,-0.99975153,0,0)">
-        <desc
-           id="desc7082-9-7-0-4-4-3-3-9-2-1-9-030-1-7">type = vehicle; key = mobile_armory.vehicle;</desc>
-      </rect>
-      <rect
-         style="display:inline;fill:#008000;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:12, 12;stroke-dashoffset:4.5999999;stroke-opacity:1;enable-background:new"
-         id="spawn1-70-1-4-9-1-9-7-2-7"
-         width="3.982286"
-         height="7.3961515"
-         x="-1036.1914"
-         y="-1351.198"
-         inkscape:label=""
-         transform="matrix(-0.99962082,0.02753555,-0.02753555,-0.99962082,0,0)">
-        <desc
-           id="desc7082-9-7-0-4-7-4-5-0-7">type = vehicle; key = armored_truck.vehicle;</desc>
-      </rect>
-      <rect
-         style="display:inline;fill:#ff7f2a;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:12, 12;stroke-dashoffset:4.5999999;stroke-opacity:1;enable-background:new"
-         id="spawn1-1-1-1-8-0-0-3"
-         width="3.982286"
-         height="7.3961515"
-         x="-361.09933"
-         y="-1707.199"
-         inkscape:label=""
-         transform="matrix(-0.92784673,0.37296171,-0.37296171,-0.92784673,0,0)">
-        <desc
-           id="desc7082-740-7-7-8-7-1-3">type = vehicle; tag = apc;</desc>
       </rect>
       <rect
          transform="matrix(-0.76737312,-0.64120082,0.64120082,-0.76737312,0,0)"
@@ -50113,20 +50425,6 @@ offset = 0 0.2 0;</desc>
            id="desc7569-86-7-48-2-0">template = pipe;</desc>
       </rect>
       <rect
-         ry="5"
-         rx="5"
-         transform="matrix(-0.0365579,-0.99933154,0.99933154,-0.0365579,0,0)"
-         inkscape:label="#mesh"
-         y="969.1969"
-         x="-813.32947"
-         height="3.6170273"
-         width="3.5137539"
-         id="rect1000000-61-6-1-54-9"
-         style="display:inline;fill:#333333;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1;enable-background:new">
-        <desc
-           id="desc7569-86-7-48-2-9">template = pipe;</desc>
-      </rect>
-      <rect
          style="display:inline;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1;enable-background:new"
          id="buildingrect6406-7-4-1-3-8-0-0-8-1-5z-3-3-4-5"
          width="13.560485"
@@ -50388,7 +50686,7 @@ offset = 0 -0.5 0;</desc>
       </rect>
     </g>
     <g
-       style="display:none"
+       style="display:inline"
        inkscape:label="woods"
        id="layer43"
        inkscape:groupmode="layer">
@@ -50611,16 +50909,6 @@ offset = 0 -0.5 0;</desc>
          style="display:inline;fill:#00f500;fill-opacity:1;enable-background:new">
         <desc
            id="desc37584-9-87-53">material=TreeBirch;</desc>
-      </rect>
-      <rect
-         y="703.28363"
-         x="1351.3187"
-         height="11.561051"
-         width="13.006183"
-         id="rect5814-8-9-64-8-02-96-33-91"
-         style="display:inline;fill:#00f500;fill-opacity:1;enable-background:new">
-        <desc
-           id="desc37584-9-87-28">material=TreeBirch;</desc>
       </rect>
       <rect
          y="711.76892"
@@ -51525,7 +51813,7 @@ offset = 0 -0.5 0;</desc>
       </rect>
     </g>
     <g
-       style="display:none"
+       style="display:inline"
        inkscape:label="foliage"
        id="layer17"
        inkscape:groupmode="layer">
@@ -55841,7 +56129,7 @@ alpha_blend = 1;</desc>
       </rect>
     </g>
     <g
-       style="display:none"
+       style="display:inline"
        inkscape:label="ladder"
        id="layer47"
        inkscape:groupmode="layer">
@@ -56457,7 +56745,7 @@ height = 0.1;</desc>
       </path>
     </g>
     <g
-       style="display:none"
+       style="display:inline"
        inkscape:label="signs"
        id="layer34"
        inkscape:groupmode="layer">
@@ -56575,7 +56863,7 @@ height = 0.1;</desc>
       </rect>
     </g>
     <g
-       style="display:none"
+       style="display:inline"
        inkscape:label="crate"
        id="layer36"
        inkscape:groupmode="layer">
@@ -57630,7 +57918,7 @@ height = 0.1;</desc>
      id="layer19"
      inkscape:groupmode="layer">
     <g
-       style="display:none"
+       style="display:inline"
        inkscape:label="objects"
        id="layer20"
        inkscape:groupmode="layer">
@@ -59022,12 +59310,12 @@ height = 0.1;</desc>
     </g>
   </g>
   <g
-     style="display:none"
+     style="display:inline"
      inkscape:label="layer4"
      id="layer31"
      inkscape:groupmode="layer">
     <g
-       style="display:none"
+       style="display:inline"
        inkscape:label="other"
        id="layer42"
        inkscape:groupmode="layer">
@@ -59147,12 +59435,30 @@ height = 0.1;</desc>
         <desc
            id="desc7082-740-7-7-2-8-2-5-6-4-7-1-60">type = vehicle; key = special_crate_wood8.vehicle;</desc>
       </rect>
+      <rect
+         transform="matrix(-0.99976152,-0.02183827,0.02183827,-0.99976152,0,0)"
+         inkscape:label="#ladder"
+         y="-746.32922"
+         x="-1021.4533"
+         height="2.25"
+         width="6"
+         id="rect7651-13-5-8-6-4-4-09-23-8-7-0-9-2"
+         style="display:inline;opacity:0.79775295;fill:#2cffe7;fill-opacity:1;fill-rule:nonzero;stroke:none;enable-background:new" />
+      <rect
+         transform="matrix(-0.99976152,-0.02183827,0.02183827,-0.99976152,0,0)"
+         inkscape:label="#ladder"
+         y="-918.70685"
+         x="-1136.6528"
+         height="2.25"
+         width="6"
+         id="rect7651-13-5-8-6-4-4-09-23-8-7-0-9-2-1"
+         style="display:inline;opacity:0.79775295;fill:#2cffe7;fill-opacity:1;fill-rule:nonzero;stroke:none;enable-background:new" />
     </g>
     <g
        inkscape:groupmode="layer"
        id="layer48"
        inkscape:label="objects"
-       style="display:none">
+       style="display:inline">
       <rect
          style="display:inline;fill:#ffff00;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-opacity:1;enable-background:new"
          id="buildingrect6406-7-4-1-3-8-0-12-2-311-1-5-0-61-7-4-4-7-34-85-77-"

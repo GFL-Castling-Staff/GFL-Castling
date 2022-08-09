@@ -1674,7 +1674,8 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.m_mapInfo.m_name = "Holy Enclave";
 		stage.m_mapInfo.m_path = "media/packages/GFL_Castling/maps/map13_2";
 		stage.m_mapInfo.m_id = "map13_2";
-		stage.m_includeLayers.insertLast("layer1.invasion");        
+		stage.m_includeLayers.insertLast("layer1.invasion");
+		stage.m_includeLayers.insertLast("layer1.dominance");        
 		stage.addTracker(Overtime(m_metagame, 0));
 		stage.m_maxSoldiers = 10 * 5;
 		stage.m_playerAiCompensation = 6;
