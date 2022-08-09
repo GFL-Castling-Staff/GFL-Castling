@@ -11198,7 +11198,7 @@ roof_texture_scale = 8.0 8.0;</desc>
        id="rect9344-6-8-0-17"
        style="fill:#e7eeed;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:5;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;display:inline;enable-background:new">
       <desc
-         id="desc7300">index = 0; texture = dirt.png; scale = 0.015 0.015; auto_decoration_texture = ground_decoration.png; auto_decoration_texture_atlas_cell = 0 1 2 2; auto_decoration_texture_atlas_cell = 1 1 2 2; auto_decoration_multiplier = 4; auto_decoration_size = 0.15; auto_decoration_density = 0.05;</desc>
+         id="desc7300">index = 0; texture = dirt.png; scale = 0.015 0.015;</desc>
     </rect>
     <flowRoot
        inkscape:label="#flowRoot9399-4-1-5"
@@ -11243,12 +11243,6 @@ outline_color = fill;</desc>
 texture = grass.png; 
 alpha = terrain5_alpha_grass.png; 
 scale = 0.01 0.01; 
-auto_decoration_texture = ground_decoration.png; 
-auto_decoration_texture_atlas_cell = 0 0 2 2; 
-auto_decoration_texture_atlas_cell = 1 0 2 2; 
-auto_decoration_multiplier = 4; 
-auto_decoration_size = 0.5; 
-auto_decoration_density = 0.6; 
 outline = 1; 
 outline_color = fill;</desc>
     </rect>
@@ -11791,7 +11785,8 @@ texture0_atlas_cell = 7 0 64 64;
 collision_model_type = 1; 
 collision_model_size = 1.2 1.2 1.2; 
 penetrability = 0.4; 
-see_through = 1;</desc>
+see_through = 1;
+static_object_type_key=hedgehog.static_object;</desc>
     </rect>
     <rect
        style="fill:#855e00;fill-opacity:1;stroke:none;display:inline;enable-background:new"
@@ -16198,7 +16193,7 @@ backline = 1;</desc>
        style="fill:#00ffff;stroke:#ffff00;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;display:inline;enable-background:new">
       <desc
          id="desc152873-6-7">type = vehicle;
-key = aa_emplacement.vehicle;</desc>
+tag = only_aa;</desc>
     </rect>
     <flowRoot
        transform="translate(40.181754,-1186.4409)"
@@ -43373,7 +43368,7 @@ key = radar_tower.vehicle;
          transform="matrix(0.70590268,-0.70830884,0.70830884,0.70590268,0,0)">
         <desc
            id="desc152873-6-7-4-7">type = vehicle;
-key = aa_emplacement.vehicle;</desc>
+tag = only_aa;</desc>
       </rect>
       <rect
          transform="matrix(-0.3945581,-0.918871,0.918871,-0.3945581,0,0)"
