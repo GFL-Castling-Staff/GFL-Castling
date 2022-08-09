@@ -29,11 +29,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.6272885"
-     inkscape:cx="2581.0879"
-     inkscape:cy="1072.1324"
+     inkscape:zoom="3.254577"
+     inkscape:cx="874.11764"
+     inkscape:cy="1651.6767"
      inkscape:document-units="px"
-     inkscape:current-layer="layer11"
+     inkscape:current-layer="layer49"
      showgrid="true"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
@@ -15732,16 +15732,6 @@
          mode="multiply"
          in2="BackgroundImage"
          id="feBlend11086-40-6-2-0" />
-    </filter>
-    <filter
-       inkscape:collect="always"
-       id="filter11084-17-2-3-5"
-       color-interpolation-filters="sRGB">
-      <feBlend
-         inkscape:collect="always"
-         mode="multiply"
-         in2="BackgroundImage"
-         id="feBlend11086-40-7-1-7" />
     </filter>
     <filter
        inkscape:collect="always"
@@ -35681,7 +35671,7 @@ capturable =0;</desc>
      inkscape:groupmode="layer"
      id="layer53"
      inkscape:label="bases.dominance"
-     style="display:none"
+     style="display:inline"
      sodipodi:insensitive="true">
     <rect
        inkscape:transform-center-y="-206.88313"
@@ -35693,7 +35683,7 @@ capturable =0;</desc>
        height="182.26843"
        width="223.50327"
        id="rect31313"
-       style="opacity:0.72566373;fill:#ffff00;fill-opacity:1;stroke:none;display:inline;enable-background:new"
+       style="display:inline;opacity:0.72566373;fill:#ffff00;fill-opacity:1;stroke:none;enable-background:new"
        transform="matrix(-0.99999766,0.00216453,-0.00216453,-0.99999766,0,0)">
       <desc
          id="desc31315">name=Hotel; faction_index=0;</desc>
@@ -35708,7 +35698,7 @@ capturable =0;</desc>
        height="158.79114"
        width="231.58971"
        id="rect31317"
-       style="opacity:0.72566373;fill:#ffff00;fill-opacity:1;stroke:none;display:inline;enable-background:new"
+       style="display:inline;opacity:0.72566373;fill:#ffff00;fill-opacity:1;stroke:none;enable-background:new"
        transform="matrix(-0.99999766,0.00216453,-0.00216453,-0.99999766,0,0)">
       <desc
          id="desc31319">name=Village; faction_index=3;</desc>
@@ -35723,7 +35713,7 @@ capturable =0;</desc>
        height="204.27748"
        width="217.16823"
        id="rect31321"
-       style="opacity:0.72566373;fill:#ffff00;fill-opacity:1;stroke:none;display:inline;enable-background:new"
+       style="display:inline;opacity:0.72566373;fill:#ffff00;fill-opacity:1;stroke:none;enable-background:new"
        transform="matrix(-0.99999766,0.00216453,-0.00216453,-0.99999766,0,0)">
       <desc
          id="desc31323">name=Construction Site; faction_index=1;</desc>
@@ -35738,7 +35728,7 @@ capturable =0;</desc>
        height="182.26843"
        width="223.50327"
        id="rect31313-3"
-       style="opacity:0.72566373;fill:#ffff00;fill-opacity:1;stroke:none;display:inline;enable-background:new"
+       style="display:inline;opacity:0.72566373;fill:#ffff00;fill-opacity:1;stroke:none;enable-background:new"
        transform="matrix(-0.99999766,0.00216453,-0.00216453,-0.99999766,0,0)">
       <desc
          id="desc31315-0">name=Seaside; faction_index=0;</desc>
@@ -35753,7 +35743,7 @@ capturable =0;</desc>
        height="176.20706"
        width="135.49409"
        id="rect31321-0"
-       style="opacity:0.72566373;fill:#ffff00;fill-opacity:1;stroke:none;display:inline;enable-background:new"
+       style="display:inline;opacity:0.72566373;fill:#ffff00;fill-opacity:1;stroke:none;enable-background:new"
        transform="matrix(-0.99999766,0.00216453,-0.00216453,-0.99999766,0,0)">
       <desc
          id="desc31323-7">name=Ocean Institute; faction_index=1;</desc>
@@ -63685,20 +63675,6 @@ no_collision_side2;
          x="1425.5931"
          height="8.0654364"
          width="7.6234946"
-         id="rect5174-0-0-1-9-2-0-9"
-         style="opacity:0.5;fill:#3fb43f;fill-opacity:1;stroke:none;display:inline;filter:url(#filter11084-17-2-3-5);enable-background:new"
-         transform="matrix(0.55607759,-1.0633803,1.0633803,0.55607759,3360.094,3553.2203)">
-        <desc
-           id="desc5400-9-7-8-6-6-08">template = palmtree_2;</desc>
-        <title
-           id="title5176-1-48-4-4-4-1-5">palmtree</title>
-      </rect>
-      <rect
-         inkscape:label="#mesh"
-         y="-3105.6135"
-         x="1425.5931"
-         height="8.0654364"
-         width="7.6234946"
          id="rect5174-0-0-1-9-3-3-4-8"
          style="opacity:0.5;fill:#3fb43f;fill-opacity:1;stroke:none;display:inline;filter:url(#filter11084-17-7-5-92-6);enable-background:new"
          transform="matrix(1.042687,0.59397284,-0.59397284,1.042687,-2390.9452,2706.3276)">
@@ -69330,7 +69306,7 @@ no_collision_side2;
          inkscape:transform-center-x="619.8511"
          inkscape:transform-center-y="648.90798">
         <desc
-           id="desc7082-9-7-0-4-4-3-3-9-2-1">type = vehicle; key = mobile_armory.vehicle;</desc>
+           id="desc7082-9-7-0-4-4-3-3-9-2-1">type = vehicle; tag = apc;</desc>
       </rect>
       <rect
          transform="matrix(0.31019259,-0.95067374,0.95067374,0.31019259,0,0)"
@@ -69585,20 +69561,6 @@ no_collision_side2;
            id="desc7082-7-0-45-7-45">type = vehicle; key = cargo_truck.vehicle;</desc>
       </rect>
       <rect
-         transform="matrix(0.052855,0.9986022,-0.9986022,0.052855,0,0)"
-         inkscape:label=""
-         y="-1392.0052"
-         x="1773.291"
-         height="7.3961515"
-         width="3.982286"
-         id="spawn1-1-4-2-1-2-7"
-         style="display:inline;fill:#b3b3b3;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:12.00000112, 12.00000112;stroke-dashoffset:4.60000038;stroke-opacity:1;enable-background:new"
-         inkscape:transform-center-x="-440.99054"
-         inkscape:transform-center-y="676.94391">
-        <desc
-           id="desc7082-7-0-45-7-45-1">type = vehicle; tag=apc;</desc>
-      </rect>
-      <rect
          transform="matrix(-0.94546593,-0.325721,0.325721,-0.94546593,0,0)"
          inkscape:label=""
          y="-1459.9672"
@@ -69794,7 +69756,7 @@ no_collision_side2;
          inkscape:transform-center-x="-435.50785"
          inkscape:transform-center-y="-211.59697">
         <desc
-           id="desc7204-7-7-2-6-8-5-4">type = vehicle; key = radar_tower.vehicle;</desc>
+           id="desc7204-7-7-2-6-8-5-4">type = vehicle; key = radio_jammer.vehicle;</desc>
       </rect>
       <rect
          transform="matrix(-0.51497976,0.85720234,-0.85720234,-0.51497976,0,0)"
@@ -69810,7 +69772,7 @@ no_collision_side2;
          inkscape:transform-center-x="-803.11691"
          inkscape:transform-center-y="-95.578038">
         <desc
-           id="desc7204-7-7-2-6-8-5-4-7">type = vehicle; key = radar_tower.vehicle;</desc>
+           id="desc7204-7-7-2-6-8-5-4-7">type = vehicle; key = radio_jammer.vehicle;</desc>
       </rect>
       <rect
          transform="matrix(-0.81599795,-0.5780548,0.5780548,-0.81599795,0,0)"
@@ -69952,7 +69914,7 @@ no_collision_side2;
          inkscape:transform-center-x="158.52938"
          inkscape:transform-center-y="387.79844">
         <desc
-           id="desc7204-7-7-2-6-8-5-0">type = vehicle; key = radar_tower.vehicle;</desc>
+           id="desc7204-7-7-2-6-8-5-0">type = vehicle; key = radio_jammer.vehicle;</desc>
       </rect>
       <rect
          transform="matrix(-0.00837686,0.99996491,-0.99996491,-0.00837686,0,0)"
@@ -72028,6 +71990,28 @@ key = mortar_2.vehicle;
          inkscape:transform-center-x="-573.69252"
          inkscape:transform-center-y="679.92947"
          transform="scale(-1,-1)" />
+      <rect
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new"
+         id="rect4878-8-6-42-9-4-80-86-8"
+         width="2.2977724"
+         height="2.0679491"
+         x="-466.03265"
+         y="-1669.5684"
+         inkscape:label="#spawnrect10748"
+         inkscape:transform-center-x="795.35475"
+         inkscape:transform-center-y="602.07986"
+         transform="scale(-1,-1)" />
+      <rect
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new"
+         id="rect4878-8-6-42-9-4-80-86-2"
+         width="2.2977724"
+         height="2.0679491"
+         x="-516.73047"
+         y="-1725.4896"
+         inkscape:label="#spawnrect10748"
+         inkscape:transform-center-x="795.35475"
+         inkscape:transform-center-y="602.07986"
+         transform="scale(-1,-1)" />
     </g>
   </g>
   <g
@@ -72039,7 +72023,7 @@ key = mortar_2.vehicle;
        inkscape:groupmode="layer"
        id="layer67"
        inkscape:label="vehicles"
-       style="display:none">
+       style="display:inline">
       <rect
          transform="matrix(0.966896,0.25517076,-0.25517076,0.966896,0,0)"
          inkscape:label=""
@@ -72050,19 +72034,7 @@ key = mortar_2.vehicle;
          id="spawn1-1-1-1-9-9-2-1"
          style="display:inline;fill:#000080;fill-opacity:1;stroke:#ffff00;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:12.00000054, 12.00000054;stroke-dashoffset:4.60000038;stroke-opacity:1;enable-background:new">
         <desc
-           id="desc7082-740-7-7-2-7-4-1">type = vehicle; key = sev90.vehicle;</desc>
-      </rect>
-      <rect
-         style="display:inline;fill:#ff00ff;fill-opacity:1;stroke:#ff00ff;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:12.00000068, 12.00000068;stroke-dashoffset:4.5999999;stroke-opacity:1;enable-background:new"
-         id="generic_node121905-2-1"
-         width="3.982286"
-         height="7.3961515"
-         x="-511.92453"
-         y="-1649.7563"
-         inkscape:label=""
-         transform="matrix(-0.98717663,-0.15963179,0.15963179,-0.98717663,0,0)">
-        <desc
-           id="desc21907-5-8">tag = darkcat;</desc>
+           id="desc7082-740-7-7-2-7-4-1">type = vehicle; tag=tank;</desc>
       </rect>
       <rect
          style="display:inline;fill:#ff00ff;fill-opacity:1;stroke:#ff00ff;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:12.00000076, 12.00000076;stroke-dashoffset:4.60000038;stroke-opacity:1;enable-background:new"
@@ -72103,7 +72075,7 @@ key = mortar_2.vehicle;
     </g>
   </g>
   <g
-     style="display:none"
+     style="display:inline"
      inkscape:label="layer1.manvsworld"
      id="g15679"
      inkscape:groupmode="layer">
@@ -72120,7 +72092,7 @@ key = mortar_2.vehicle;
          height="7.3961515"
          width="3.982286"
          id="spawn1-1-1-1-9-3-2-8-7-1"
-         style="fill:#007cff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:12.00000192, 12.00000192;stroke-dashoffset:4.60000088;display:inline;enable-background:new"
+         style="display:inline;fill:#007cff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:12.00000192, 12.00000192;stroke-dashoffset:4.60000086;stroke-opacity:1;enable-background:new"
          inkscape:transform-center-x="-161.10791"
          inkscape:transform-center-y="-404.94845">
         <desc
@@ -72134,7 +72106,7 @@ key = mortar_2.vehicle;
          height="7.3961515"
          width="3.982286"
          id="spawn1-1-1-1-9-3-2-8-7-9-4"
-         style="fill:#007cff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:12.00000185, 12.00000185;stroke-dashoffset:4.60000089;display:inline;enable-background:new"
+         style="display:inline;fill:#007cff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:12.00000185, 12.00000185;stroke-dashoffset:4.60000086;stroke-opacity:1;enable-background:new"
          inkscape:transform-center-x="-464.49772"
          inkscape:transform-center-y="-172.09153">
         <desc
@@ -72148,7 +72120,7 @@ key = mortar_2.vehicle;
          height="7.3961515"
          width="3.982286"
          id="spawn1-1-1-1-9-3-2-8-7-5-9"
-         style="fill:#007cff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:12.00000181, 12.00000181;stroke-dashoffset:4.60000092;display:inline;enable-background:new"
+         style="display:inline;fill:#007cff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:12.00000181, 12.00000181;stroke-dashoffset:4.60000086;stroke-opacity:1;enable-background:new"
          inkscape:transform-center-x="795.05619"
          inkscape:transform-center-y="663.29317">
         <desc
@@ -72162,7 +72134,7 @@ key = mortar_2.vehicle;
          height="7.3961515"
          width="3.982286"
          id="spawn1-1-1-1-9-3-2-8-3-9-8"
-         style="fill:#008000;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:12.00000188, 12.00000188;stroke-dashoffset:4.60000082;display:inline;enable-background:new"
+         style="display:inline;fill:#008000;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:12.00000188, 12.00000188;stroke-dashoffset:4.60000086;stroke-opacity:1;enable-background:new"
          inkscape:transform-center-x="-801.77492"
          inkscape:transform-center-y="160.44059">
         <desc
@@ -72176,7 +72148,7 @@ key = mortar_2.vehicle;
          height="7.3961515"
          width="3.982286"
          id="spawn1-1-1-1-9-3-2-8-3-9-9-5"
-         style="fill:#008000;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:12.00000226, 12.00000226;stroke-dashoffset:4.60000086;display:inline;enable-background:new"
+         style="display:inline;fill:#008000;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:12.00000226, 12.00000226;stroke-dashoffset:4.60000086;stroke-opacity:1;enable-background:new"
          inkscape:transform-center-x="732.47164"
          inkscape:transform-center-y="662.03102">
         <desc
@@ -72190,7 +72162,7 @@ key = mortar_2.vehicle;
          height="7.3961515"
          width="3.982286"
          id="spawn1-1-1-1-9-3-2-8-3-9-3-1"
-         style="fill:#000080;fill-opacity:1;stroke:#ffff00;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:12.00000231, 12.00000231;stroke-dashoffset:4.60000086;display:inline;enable-background:new"
+         style="display:inline;fill:#000080;fill-opacity:1;stroke:#ffff00;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:12.00000231, 12.00000231;stroke-dashoffset:4.60000086;stroke-opacity:1;enable-background:new"
          inkscape:transform-center-x="711.6796"
          inkscape:transform-center-y="-130.29029">
         <desc
@@ -72204,7 +72176,7 @@ key = mortar_2.vehicle;
          height="7.3961515"
          width="3.982286"
          id="spawn1-1-1-1-9-3-2-8-3-9-6-1"
-         style="fill:#007cff;fill-opacity:1;stroke:#008000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:12.00000243, 12.00000243;stroke-dashoffset:4.60000088;display:inline;enable-background:new"
+         style="display:inline;fill:#007cff;fill-opacity:1;stroke:#008000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:12.00000243, 12.00000243;stroke-dashoffset:4.60000086;stroke-opacity:1;enable-background:new"
          inkscape:transform-center-x="115.20957"
          inkscape:transform-center-y="-672.73093">
         <desc
@@ -72218,7 +72190,7 @@ key = mortar_2.vehicle;
          height="7.3961515"
          width="3.982286"
          id="spawn1-1-1-1-9-3-2-8-7-9-6-2"
-         style="fill:#007cff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:12.00000159, 12.00000159;stroke-dashoffset:4.60000084;display:inline;enable-background:new"
+         style="display:inline;fill:#007cff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:12.00000159, 12.00000159;stroke-dashoffset:4.60000086;stroke-opacity:1;enable-background:new"
          inkscape:transform-center-x="-728.24998"
          inkscape:transform-center-y="213.2486">
         <desc
@@ -72232,7 +72204,7 @@ key = mortar_2.vehicle;
          height="7.3961515"
          width="3.982286"
          id="spawn1-70-1-4-9-17-2-25-2-6-1-4"
-         style="fill:#ffd5d5;fill-opacity:1;stroke:#ff00ff;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:11.99999964, 11.99999964;stroke-dashoffset:4.59999984;display:inline;enable-background:new"
+         style="display:inline;fill:#ffd5d5;fill-opacity:1;stroke:#ff00ff;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:11.99999964, 11.99999964;stroke-dashoffset:4.5999999;stroke-opacity:1;enable-background:new"
          inkscape:transform-center-x="619.8511"
          inkscape:transform-center-y="648.90798">
         <desc
@@ -72246,7 +72218,7 @@ key = mortar_2.vehicle;
          height="6.6684999"
          width="5.7888808"
          id="spawn1-70-3-9-3"
-         style="fill:#ffff00;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1.99999991, 3.99999982;stroke-dashoffset:6.99999859;display:inline;enable-background:new"
+         style="display:inline;fill:#ffff00;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.99999991, 3.99999982;stroke-dashoffset:6.99999857;stroke-opacity:1;enable-background:new"
          inkscape:transform-center-x="-941.0396"
          inkscape:transform-center-y="-13.697329">
         <desc
@@ -72260,7 +72232,7 @@ key = mortar_2.vehicle;
          height="6.6684999"
          width="5.7888808"
          id="spawn1-70-3-9-5-2"
-         style="fill:#ffff00;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:2, 3.99999983;stroke-dashoffset:6.99999861;display:inline;enable-background:new"
+         style="display:inline;fill:#ffff00;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 3.99999983;stroke-dashoffset:6.99999857;stroke-opacity:1;enable-background:new"
          inkscape:transform-center-x="-948.75334"
          inkscape:transform-center-y="-32.334142">
         <desc
@@ -72274,7 +72246,7 @@ key = mortar_2.vehicle;
          height="6.6684999"
          width="5.7888808"
          id="spawn1-70-3-9-9-68"
-         style="fill:#ffff00;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1.99999991, 3.9999997;stroke-dashoffset:6.99999855;display:inline;enable-background:new"
+         style="display:inline;fill:#ffff00;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.99999991, 3.9999997;stroke-dashoffset:6.99999857;stroke-opacity:1;enable-background:new"
          inkscape:transform-center-x="-872.97858"
          inkscape:transform-center-y="193.49162">
         <desc
@@ -72288,7 +72260,7 @@ key = mortar_2.vehicle;
          height="6.6684999"
          width="5.7888808"
          id="spawn1-70-3-9-9-1-7"
-         style="fill:#ffff00;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1.99999991, 3.99999968;stroke-dashoffset:6.99999855;display:inline;enable-background:new"
+         style="display:inline;fill:#ffff00;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.99999991, 3.99999968;stroke-dashoffset:6.99999857;stroke-opacity:1;enable-background:new"
          inkscape:transform-center-x="-847.62202"
          inkscape:transform-center-y="215.86518">
         <desc
@@ -72302,7 +72274,7 @@ key = mortar_2.vehicle;
          height="6.6684999"
          width="5.7888808"
          id="spawn1-70-3-9-9-2-1"
-         style="fill:#ffff00;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1.99999991, 3.99999968;stroke-dashoffset:6.99999855;display:inline;enable-background:new"
+         style="display:inline;fill:#ffff00;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.99999991, 3.99999968;stroke-dashoffset:6.99999857;stroke-opacity:1;enable-background:new"
          inkscape:transform-center-x="32.776549"
          inkscape:transform-center-y="-779.38411">
         <desc
@@ -72316,7 +72288,7 @@ key = mortar_2.vehicle;
          height="6.6684999"
          width="5.7888808"
          id="spawn1-70-3-9-9-6-9"
-         style="fill:#ffff00;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1.99999991, 3.99999968;stroke-dashoffset:6.99999855;display:inline;enable-background:new"
+         style="display:inline;fill:#ffff00;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.99999991, 3.99999968;stroke-dashoffset:6.99999857;stroke-opacity:1;enable-background:new"
          inkscape:transform-center-x="59.62475"
          inkscape:transform-center-y="-793.55402">
         <desc
@@ -72330,7 +72302,7 @@ key = mortar_2.vehicle;
          height="6.6684999"
          width="5.7888808"
          id="spawn1-70-3-1-1-3-7"
-         style="fill:#6c5353;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:2.00000002, 4.00000041;stroke-dashoffset:6.99999956;display:inline;enable-background:new"
+         style="display:inline;fill:#6c5353;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2.00000002, 4.00000041;stroke-dashoffset:6.99999952;stroke-opacity:1;enable-background:new"
          inkscape:transform-center-x="-727.28374"
          inkscape:transform-center-y="-85.642016">
         <desc
@@ -72344,7 +72316,7 @@ key = mortar_2.vehicle;
          height="7.3961515"
          width="3.982286"
          id="spawn1-1-1-1-9-3-2-8-7-5-8-5"
-         style="fill:#007cff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:12.00000141, 12.00000141;stroke-dashoffset:4.60000088;display:inline;enable-background:new"
+         style="display:inline;fill:#007cff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:12.00000141, 12.00000141;stroke-dashoffset:4.60000086;stroke-opacity:1;enable-background:new"
          inkscape:transform-center-x="189.95074"
          inkscape:transform-center-y="801.11954">
         <desc
@@ -72358,14 +72330,14 @@ key = mortar_2.vehicle;
          height="7.3961515"
          width="3.982286"
          id="spawn1-1-1-1-9-3-2-8-7-5-6-3"
-         style="fill:#007cff;fill-opacity:1;stroke:#008000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:12.00000162, 12.00000162;stroke-dashoffset:4.60000088;display:inline;enable-background:new"
+         style="display:inline;fill:#007cff;fill-opacity:1;stroke:#008000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:12.00000162, 12.00000162;stroke-dashoffset:4.60000086;stroke-opacity:1;enable-background:new"
          inkscape:transform-center-x="281.32848"
          inkscape:transform-center-y="778.81372">
         <desc
            id="desc7082-740-7-7-2-8-2-5-6-4-8-1">type = vehicle; tag = truck;</desc>
       </rect>
       <rect
-         style="fill:#00ff00;fill-opacity:1;fill-rule:nonzero;stroke:#800000;stroke-width:1.79999995;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;display:inline;enable-background:new"
+         style="display:inline;fill:#00ff00;fill-opacity:1;fill-rule:nonzero;stroke:#800000;stroke-width:1.79999995;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;enable-background:new"
          id="spawn7131-3-2"
          width="2.7343748"
          height="2.7343748"
@@ -72386,7 +72358,7 @@ key = mortar_2.vehicle;
          height="2.7343748"
          width="2.7343748"
          id="spawn6969-3-1"
-         style="fill:#00ff00;fill-opacity:1;fill-rule:nonzero;stroke:#800000;stroke-width:1.79999995;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;display:inline;enable-background:new"
+         style="display:inline;fill:#00ff00;fill-opacity:1;fill-rule:nonzero;stroke:#800000;stroke-width:1.79999995;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;enable-background:new"
          inkscape:transform-center-x="-768.47283"
          inkscape:transform-center-y="132.47031">
         <desc
@@ -72400,7 +72372,7 @@ key = mortar_2.vehicle;
          height="2.7343748"
          width="2.7343748"
          id="spawn6969-3-2-3"
-         style="fill:#00ff00;fill-opacity:1;fill-rule:nonzero;stroke:#800000;stroke-width:1.79999995;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;display:inline;enable-background:new"
+         style="display:inline;fill:#00ff00;fill-opacity:1;fill-rule:nonzero;stroke:#800000;stroke-width:1.79999995;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;enable-background:new"
          inkscape:transform-center-x="-762.85466"
          inkscape:transform-center-y="104.57378">
         <desc
@@ -72414,7 +72386,7 @@ key = mortar_2.vehicle;
          height="7.3961515"
          width="3.982286"
          id="spawn1-1-4-2-1-1-7"
-         style="fill:#b3b3b3;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:12.00000139, 12.00000139;stroke-dashoffset:4.60000044;display:inline;enable-background:new"
+         style="display:inline;fill:#b3b3b3;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:12.00000139, 12.00000139;stroke-dashoffset:4.60000038;stroke-opacity:1;enable-background:new"
          inkscape:transform-center-x="-136.75014"
          inkscape:transform-center-y="-434.50137">
         <desc
@@ -72428,7 +72400,7 @@ key = mortar_2.vehicle;
          height="7.3961515"
          width="3.982286"
          id="spawn1-1-4-2-1-4-2"
-         style="fill:#b3b3b3;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:12.00000092, 12.00000092;stroke-dashoffset:4.60000034;display:inline;enable-background:new"
+         style="display:inline;fill:#b3b3b3;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:12.00000092, 12.00000092;stroke-dashoffset:4.60000038;stroke-opacity:1;enable-background:new"
          inkscape:transform-center-x="171.49984"
          inkscape:transform-center-y="-672.0012">
         <desc
@@ -72442,7 +72414,7 @@ key = mortar_2.vehicle;
          height="7.3961515"
          width="3.982286"
          id="spawn1-1-4-2-1-9-7"
-         style="fill:#b3b3b3;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:12.00000088, 12.00000088;stroke-dashoffset:4.60000036;display:inline;enable-background:new"
+         style="display:inline;fill:#b3b3b3;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:12.00000088, 12.00000088;stroke-dashoffset:4.60000038;stroke-opacity:1;enable-background:new"
          inkscape:transform-center-x="673.00001"
          inkscape:transform-center-y="-802.00149">
         <desc
@@ -72456,7 +72428,7 @@ key = mortar_2.vehicle;
          height="7.3961515"
          width="3.982286"
          id="spawn1-1-4-2-1-8-3"
-         style="fill:#b3b3b3;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:12.00000119, 12.00000119;stroke-dashoffset:4.6000004;display:inline;enable-background:new"
+         style="display:inline;fill:#b3b3b3;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:12.00000119, 12.00000119;stroke-dashoffset:4.60000038;stroke-opacity:1;enable-background:new"
          inkscape:transform-center-x="854.25733"
          inkscape:transform-center-y="-188.25981">
         <desc
@@ -72470,7 +72442,7 @@ key = mortar_2.vehicle;
          height="7.3961515"
          width="3.982286"
          id="spawn1-1-4-2-1-2-9"
-         style="fill:#b3b3b3;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:12.00000098, 12.00000098;stroke-dashoffset:4.60000034;display:inline;enable-background:new"
+         style="display:inline;fill:#b3b3b3;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:12.00000098, 12.00000098;stroke-dashoffset:4.60000038;stroke-opacity:1;enable-background:new"
          inkscape:transform-center-x="217.32581"
          inkscape:transform-center-y="246.49255">
         <desc
@@ -72484,7 +72456,7 @@ key = mortar_2.vehicle;
          height="7.3961515"
          width="3.982286"
          id="spawn1-1-4-2-1-2-7-6"
-         style="fill:#b3b3b3;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:12.00000121, 12.00000121;stroke-dashoffset:4.60000041;display:inline;enable-background:new"
+         style="display:inline;fill:#b3b3b3;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:12.00000121, 12.00000121;stroke-dashoffset:4.60000038;stroke-opacity:1;enable-background:new"
          inkscape:transform-center-x="-440.99054"
          inkscape:transform-center-y="676.94391">
         <desc
@@ -72498,7 +72470,7 @@ key = mortar_2.vehicle;
          height="7.3961515"
          width="3.982286"
          id="spawn1-1-4-2-1-2-1-0"
-         style="fill:#b3b3b3;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:12.00000092, 12.00000092;stroke-dashoffset:4.60000036;display:inline;enable-background:new"
+         style="display:inline;fill:#b3b3b3;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:12.00000092, 12.00000092;stroke-dashoffset:4.60000038;stroke-opacity:1;enable-background:new"
          inkscape:transform-center-x="235.24996"
          inkscape:transform-center-y="787.99853">
         <desc
@@ -72512,7 +72484,7 @@ key = mortar_2.vehicle;
          height="7.3961515"
          width="3.982286"
          id="spawn1-1-4-2-1-2-1-6-8"
-         style="fill:#b3b3b3;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:12.00000102, 12.00000102;stroke-dashoffset:4.60000038;display:inline;enable-background:new"
+         style="display:inline;fill:#b3b3b3;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:12.00000102, 12.00000102;stroke-dashoffset:4.60000038;stroke-opacity:1;enable-background:new"
          inkscape:transform-center-x="700.74991"
          inkscape:transform-center-y="671.24858">
         <desc
@@ -72526,7 +72498,7 @@ key = mortar_2.vehicle;
          height="7.3961515"
          width="3.982286"
          id="spawn1-1-1-1-9-3-2-8-1-0"
-         style="fill:#007cff;fill-opacity:1;stroke:#008000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:12.00000158, 12.00000158;stroke-dashoffset:4.60000086;display:inline;enable-background:new"
+         style="display:inline;fill:#007cff;fill-opacity:1;stroke:#008000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:12.00000158, 12.00000158;stroke-dashoffset:4.60000086;stroke-opacity:1;enable-background:new"
          inkscape:transform-center-x="687.90283"
          inkscape:transform-center-y="-755.93618">
         <desc
@@ -72540,7 +72512,7 @@ key = mortar_2.vehicle;
          height="7.3961515"
          width="3.982286"
          id="spawn1-1-1-1-9-9-2-8-48"
-         style="fill:#007cff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:12.00000009, 12.00000009;stroke-dashoffset:4.60000034;display:inline;enable-background:new"
+         style="display:inline;fill:#007cff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:12.00000009, 12.00000009;stroke-dashoffset:4.60000038;stroke-opacity:1;enable-background:new"
          inkscape:transform-center-x="711.4499"
          inkscape:transform-center-y="-213.59068">
         <desc
@@ -72554,7 +72526,7 @@ key = mortar_2.vehicle;
          height="7.3961515"
          width="3.982286"
          id="spawn1-1-1-1-9-9-2-8-4-5"
-         style="fill:#a05a2c;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:12.00000011, 12.00000011;stroke-dashoffset:4.60000036;display:inline;enable-background:new"
+         style="display:inline;fill:#a05a2c;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:12.00000011, 12.00000011;stroke-dashoffset:4.60000038;stroke-opacity:1;enable-background:new"
          inkscape:transform-center-x="185.33003"
          inkscape:transform-center-y="419.55211">
         <desc
@@ -72568,7 +72540,7 @@ key = mortar_2.vehicle;
          height="2.7343748"
          width="2.7343748"
          id="spawn6868-2-9-5-3-9"
-         style="fill:#00ff00;fill-opacity:1;fill-rule:nonzero;stroke:#800000;stroke-width:1.79999995;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;display:inline;enable-background:new"
+         style="display:inline;fill:#00ff00;fill-opacity:1;fill-rule:nonzero;stroke:#800000;stroke-width:1.79999995;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;enable-background:new"
          inkscape:transform-center-x="-780.80864"
          inkscape:transform-center-y="-91.352631">
         <desc
@@ -72582,7 +72554,7 @@ key = mortar_2.vehicle;
          height="2.7343748"
          width="2.7343748"
          id="spawn6868-2-9-5-3-1-4"
-         style="fill:#00ff00;fill-opacity:1;fill-rule:nonzero;stroke:#800000;stroke-width:1.79999995;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;display:inline;enable-background:new"
+         style="display:inline;fill:#00ff00;fill-opacity:1;fill-rule:nonzero;stroke:#800000;stroke-width:1.79999995;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;enable-background:new"
          inkscape:transform-center-x="-820.26002"
          inkscape:transform-center-y="-71.173652">
         <desc
@@ -72596,7 +72568,7 @@ key = mortar_2.vehicle;
          height="7.3961515"
          width="3.982286"
          id="spawn1-1-4-2-1-0"
-         style="fill:#b3b3b3;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:12.00000116, 12.00000116;stroke-dashoffset:4.60000038;display:inline;enable-background:new"
+         style="display:inline;fill:#b3b3b3;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:12.00000116, 12.00000116;stroke-dashoffset:4.60000038;stroke-opacity:1;enable-background:new"
          inkscape:transform-center-x="-251.48591"
          inkscape:transform-center-y="-31.577079">
         <desc
@@ -72610,7 +72582,7 @@ key = mortar_2.vehicle;
          height="7.3961515"
          width="3.982286"
          id="spawn1-70-1-4-9-17-2-25-2-6-1-3-4-6"
-         style="fill:#ffd5d5;fill-opacity:1;stroke:#ff00ff;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:12.00000023, 12.00000023;stroke-dashoffset:4.59999988;display:inline;enable-background:new"
+         style="display:inline;fill:#ffd5d5;fill-opacity:1;stroke:#ff00ff;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:12.00000023, 12.00000023;stroke-dashoffset:4.5999999;stroke-opacity:1;enable-background:new"
          inkscape:transform-center-x="-295.00008"
          inkscape:transform-center-y="-65.501493">
         <desc
@@ -72624,14 +72596,14 @@ key = mortar_2.vehicle;
          height="7.3961515"
          width="3.982286"
          id="spawn1-1-1-1-9-9-2-3"
-         style="fill:#000080;fill-opacity:1;stroke:#ffff00;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:12.00000037, 12.00000037;stroke-dashoffset:4.6000004;display:inline;enable-background:new"
+         style="display:inline;fill:#000080;fill-opacity:1;stroke:#ffff00;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:12.00000037, 12.00000037;stroke-dashoffset:4.60000038;stroke-opacity:1;enable-background:new"
          inkscape:transform-center-x="676.45717"
          inkscape:transform-center-y="-749.48402">
         <desc
            id="desc7082-740-7-7-2-7-4-7">type = vehicle; tag = tank;</desc>
       </rect>
       <rect
-         style="fill:#008000;stroke:#ffff00;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;display:inline;enable-background:new"
+         style="display:inline;fill:#008000;stroke:#ffff00;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;enable-background:new"
          id="spawn66-1-4-8"
          width="7"
          height="7"
@@ -72645,7 +72617,7 @@ key = mortar_2.vehicle;
            id="desc14265-3-6-8">type = vehicle; key = mortar_ammunition_crates.vehicle;</desc>
       </rect>
       <rect
-         style="fill:#008000;stroke:#ffff00;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;display:inline;enable-background:new"
+         style="display:inline;fill:#008000;stroke:#ffff00;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;enable-background:new"
          id="spawn66-1-2"
          width="7"
          height="7"
@@ -72666,14 +72638,14 @@ key = mortar_2.vehicle;
          height="7"
          width="7"
          id="spawn44-9-1"
-         style="fill:#0000ff;stroke:#ffff00;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;display:inline;enable-background:new"
+         style="display:inline;fill:#0000ff;stroke:#ffff00;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;enable-background:new"
          inkscape:transform-center-x="823.84675"
          inkscape:transform-center-y="-220.37463">
         <desc
            id="desc14261-6-3">type = vehicle; key = water_tower.vehicle;</desc>
       </rect>
       <rect
-         style="fill:#008000;stroke:#ffff00;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;display:inline;enable-background:new"
+         style="display:inline;fill:#008000;stroke:#ffff00;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;enable-background:new"
          id="spawn66-0-4"
          width="7"
          height="7"
@@ -72687,7 +72659,7 @@ key = mortar_2.vehicle;
            id="desc14265-06-0">type = vehicle; key = mortar_ammunition_crates.vehicle;</desc>
       </rect>
       <rect
-         style="fill:#008000;stroke:#ffff00;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;display:inline;enable-background:new"
+         style="display:inline;fill:#008000;stroke:#ffff00;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;enable-background:new"
          id="spawn66-8-7"
          width="7"
          height="7"
@@ -72708,14 +72680,14 @@ key = mortar_2.vehicle;
          height="7"
          width="7"
          id="spawn44-8-3"
-         style="fill:#0000ff;stroke:#ffff00;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;display:inline;enable-background:new"
+         style="display:inline;fill:#0000ff;stroke:#ffff00;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;enable-background:new"
          inkscape:transform-center-x="264.05566"
          inkscape:transform-center-y="378.00204">
         <desc
            id="desc14261-4-6">type = vehicle; key = water_tower.vehicle;</desc>
       </rect>
       <rect
-         style="fill:#008000;stroke:#ffff00;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;display:inline;enable-background:new"
+         style="display:inline;fill:#008000;stroke:#ffff00;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;enable-background:new"
          id="spawn66-8-5-1"
          width="7"
          height="7"
@@ -72736,14 +72708,14 @@ key = mortar_2.vehicle;
          height="7.3961515"
          width="3.982286"
          id="spawn1-70-1-4-9-17-2-25-2-6-1-3-0"
-         style="fill:#ffd5d5;fill-opacity:1;stroke:#ff00ff;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:12.00000027, 12.00000027;stroke-dashoffset:4.59999986;display:inline;enable-background:new"
+         style="display:inline;fill:#ffd5d5;fill-opacity:1;stroke:#ff00ff;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:12.00000027, 12.00000027;stroke-dashoffset:4.5999999;stroke-opacity:1;enable-background:new"
          inkscape:transform-center-x="77.289371"
          inkscape:transform-center-y="299.52938">
         <desc
            id="desc7082-9-7-0-4-4-3-3-9-2-1-5-9">type = vehicle; key = mobile_armory.vehicle;</desc>
       </rect>
       <rect
-         style="fill:#008000;stroke:#ffff00;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;display:inline;enable-background:new"
+         style="display:inline;fill:#008000;stroke:#ffff00;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;enable-background:new"
          id="spawn66-6-7"
          width="7"
          height="7"
@@ -72764,7 +72736,7 @@ key = mortar_2.vehicle;
          height="2.7343748"
          width="2.7343748"
          id="spawn6868-2-9-58-4-6-5"
-         style="fill:#00ff00;fill-opacity:1;fill-rule:nonzero;stroke:#800000;stroke-width:1.79999995;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;display:inline;enable-background:new"
+         style="display:inline;fill:#00ff00;fill-opacity:1;fill-rule:nonzero;stroke:#800000;stroke-width:1.79999995;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;enable-background:new"
          inkscape:transform-center-x="42.995708"
          inkscape:transform-center-y="758.35013">
         <desc
@@ -72778,14 +72750,14 @@ key = mortar_2.vehicle;
          height="7.3961515"
          width="3.982286"
          id="spawn1-70-1-4-9-17-2-25-2-6-1-7-1-1"
-         style="opacity:0.52083333;fill:#ffff00;fill-opacity:1;stroke:#ff00ff;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:12.00000042, 12.00000042;stroke-dashoffset:4.59999992;display:inline;enable-background:new"
+         style="display:inline;opacity:0.52083333;fill:#ffff00;fill-opacity:1;stroke:#ff00ff;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:12.00000042, 12.00000042;stroke-dashoffset:4.5999999;stroke-opacity:1;enable-background:new"
          inkscape:transform-center-x="910.29041"
          inkscape:transform-center-y="197.172">
         <desc
            id="desc7082-9-7-0-4-4-3-3-9-2-1-4-7-2">type = vehicle; key = special_cargo_vehicle1.vehicle;</desc>
       </rect>
       <rect
-         style="fill:#008000;stroke:#ffff00;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;display:inline;enable-background:new"
+         style="display:inline;fill:#008000;stroke:#ffff00;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;enable-background:new"
          id="spawn66-2-0"
          width="7"
          height="7"
@@ -72806,7 +72778,7 @@ key = mortar_2.vehicle;
          height="7"
          width="7"
          id="spawn44-6-1"
-         style="fill:#0000ff;stroke:#ffff00;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;display:inline;enable-background:new"
+         style="display:inline;fill:#0000ff;stroke:#ffff00;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;enable-background:new"
          inkscape:transform-center-x="149.95326"
          inkscape:transform-center-y="-223.73851">
         <desc
@@ -72828,7 +72800,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect15947"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="-233.45609"
@@ -72839,7 +72811,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect15949"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="-147.54257"
@@ -72850,7 +72822,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect15951"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="-186.50143"
@@ -72861,7 +72833,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect15953"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="-186.50143"
@@ -72872,7 +72844,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect15955"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="70.09317"
@@ -72883,7 +72855,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect15957"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="64.235863"
@@ -72894,7 +72866,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect15959"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="23.223659"
@@ -72905,7 +72877,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect15961"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="107.36942"
@@ -72916,7 +72888,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect15963"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="258.24661"
@@ -72927,7 +72899,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect15965"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="244.70316"
@@ -72938,7 +72910,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect15967"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="226.16336"
@@ -72949,7 +72921,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect15969"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="480.72183"
@@ -72960,7 +72932,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect15971"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="410.01114"
@@ -72971,7 +72943,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect15973"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="368.29177"
@@ -72982,7 +72954,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect15975"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="422.18362"
@@ -72993,7 +72965,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect15977"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="764.65933"
@@ -73004,7 +72976,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect15979"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="851.24576"
@@ -73015,7 +72987,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect15981"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="806.3212"
@@ -73026,7 +72998,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect15983"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="617.84292"
@@ -73037,7 +73009,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect15985"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="687.90408"
@@ -73048,7 +73020,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect15987"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="662.44827"
@@ -73059,7 +73031,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect15989"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="685.78274"
@@ -73070,7 +73042,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect15991"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="344.99857"
@@ -73081,7 +73053,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect15993"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="-168.83189"
@@ -73092,7 +73064,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect15995"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="494.23697"
@@ -73103,7 +73075,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect15997"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="375.31973"
@@ -73114,7 +73086,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect15999"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="344.46976"
@@ -73125,7 +73097,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect16001"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="761.07559"
@@ -73136,7 +73108,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect16003"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="796.93545"
@@ -73147,7 +73119,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect16005"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="602.07986"
@@ -73158,7 +73130,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect16007"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="353.96207"
@@ -73169,7 +73141,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect16009"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="-318.06955"
@@ -73180,7 +73152,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect16011"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="-239.04215"
@@ -73191,7 +73163,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect16013"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="-284.7991"
@@ -73202,7 +73174,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect16015"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="-177.34225"
@@ -73213,7 +73185,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect16017"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="-122.11313"
@@ -73224,7 +73196,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect16019"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="723.63381"
@@ -73235,7 +73207,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect16021"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="749.47391"
@@ -73246,7 +73218,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect16023"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          inkscape:transform-center-y="733.60113"
          inkscape:transform-center-x="443.43467"
@@ -73257,7 +73229,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect16025"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="900.2958"
@@ -73268,7 +73240,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect16027"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="873.92837"
@@ -73279,7 +73251,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect16029"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="348.24185"
@@ -73290,7 +73262,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect16031"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="-287.16653"
@@ -73301,7 +73273,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect16033"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="463.46548"
@@ -73312,7 +73284,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect16035"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="70.423124"
@@ -73323,7 +73295,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect16037"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          inkscape:transform-center-y="745.8266"
          inkscape:transform-center-x="471.22955"
@@ -73334,7 +73306,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect16039"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="235.70925"
@@ -73345,7 +73317,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect16041"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="415.31435"
@@ -73356,7 +73328,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect16043"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="427.68874"
@@ -73367,7 +73339,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect16045"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="-139.70853"
@@ -73378,7 +73350,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect16051"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="-247.73075"
@@ -73389,7 +73361,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect16053"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="-177.27139"
@@ -73400,7 +73372,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect16055"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="-381.09323"
@@ -73411,7 +73383,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect16057"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="-481.95084"
@@ -73422,7 +73394,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect16059"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="-386.44205"
@@ -73433,7 +73405,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect16061"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="-722.31174"
@@ -73444,7 +73416,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect16063"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="-651.35618"
@@ -73455,7 +73427,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect16065"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="-647.11353"
@@ -73466,7 +73438,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect16067"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="539.07352"
@@ -73477,7 +73449,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect16069"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="-735.80505"
@@ -73488,7 +73460,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect16071"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="-674.22849"
@@ -73499,7 +73471,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect16073"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="-477.34141"
@@ -73510,7 +73482,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect16075"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="-434.08597"
@@ -73521,7 +73493,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect16077"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="-247.4227"
@@ -73532,7 +73504,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect16079"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="-193.1976"
@@ -73543,7 +73515,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect16081"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="-250.43417"
@@ -73554,7 +73526,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect16083"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="117.35525"
@@ -73565,7 +73537,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect16089"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="682.87344"
@@ -73576,7 +73548,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect16099"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="679.92947"
@@ -73587,7 +73559,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect16101"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="742.81667"
@@ -73598,7 +73570,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect16103"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="631.4025"
@@ -73609,7 +73581,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect16105"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="-447.26285"
@@ -73620,7 +73592,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect16107"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="632.52126"
@@ -73631,7 +73603,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect16111"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="781.54263"
@@ -73642,7 +73614,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect16113"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="782.28835"
@@ -73653,7 +73625,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect16115"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="-112.28123"
@@ -73664,7 +73636,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect16117"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="830.76431"
@@ -73675,7 +73647,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect16119"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="832.62882"
@@ -73686,7 +73658,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect16121"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="599.31522"
@@ -73697,7 +73669,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect16123"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="552.5867"
@@ -73708,7 +73680,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect16125"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="-49.160803"
@@ -73719,7 +73691,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect16127"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="-831.75145"
@@ -73730,7 +73702,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect16129"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="-807.25145"
@@ -73741,7 +73713,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect16131"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="-728.25146"
@@ -73752,7 +73724,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect16133"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="-765.50146"
@@ -73763,7 +73735,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect16135"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="-771.00145"
@@ -73774,7 +73746,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect16137"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="-55.001434"
@@ -73785,7 +73757,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect16139"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="13.248566"
@@ -73796,7 +73768,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect16141"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="-693.50146"
@@ -73807,7 +73779,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect16145"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          transform="scale(-1,-1)"
          inkscape:transform-center-y="475.41848"
@@ -73818,7 +73790,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect16147"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
       <rect
          inkscape:transform-center-y="667.27871"
          inkscape:transform-center-x="-310.04667"
@@ -73829,7 +73801,7 @@ key = mortar_2.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect16153"
-         style="fill:#0000ff;fill-opacity:1;stroke:none;display:inline;enable-background:new" />
+         style="display:inline;fill:#0000ff;fill-opacity:1;stroke:none;enable-background:new" />
     </g>
     <g
        inkscape:label="objects"
@@ -73849,7 +73821,7 @@ key = mortar_2.vehicle;
          height="12.153398"
          width="12.982038"
          id="mesh3-9-9-5-4-6-2-55-1-4-5-93-8-2-2-1-0-3-94-8-4-7"
-         style="fill:#ffff00;fill-opacity:1;stroke:none;display:inline;enable-background:new"
+         style="display:inline;fill:#ffff00;fill-opacity:1;stroke:none;enable-background:new"
          inkscape:transform-center-x="-769.04337"
          inkscape:transform-center-y="212.27045">
         <title
@@ -73863,7 +73835,7 @@ key = mortar_2.vehicle;
          inkscape:connector-curvature="0"
          id="wall37832-1-7-0-43-24-9-2-9"
          d="m 1799.0476,1234.255 0.7642,5.8119 -10.0457,1.5595 -0.8047,-6.0065"
-         style="fill:#008000;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;enable-background:new"
+         style="display:inline;fill:#008000;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;enable-background:new"
          inkscape:transform-center-x="-769.68727"
          inkscape:transform-center-y="214.34902">
         <desc
@@ -73871,7 +73843,7 @@ key = mortar_2.vehicle;
       </path>
       <rect
          transform="matrix(-0.99060773,0.13673453,-0.13673453,-0.99060773,0,0)"
-         style="fill:#de8787;fill-opacity:1;display:inline;enable-background:new"
+         style="display:inline;fill:#de8787;fill-opacity:1;enable-background:new"
          id="item_supply2-2-4-8-388-7-0-3-2-0-51-9-1-8"
          width="4"
          height="4"
@@ -73941,8 +73913,7 @@ key = mortar_2.vehicle;
          id="spawn1-1-1-1-9-3-2-8-3-9-3-3-6"
          style="fill:#007cff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:12.00000018, 12.00000018;stroke-dashoffset:4.5999999;display:inline;enable-background:new">
         <desc
-           id="desc7082-740-7-7-2-8-2-5-0-89-8-7-1">type = vehicle;
-key = armored_truck.vehicle;</desc>
+           id="desc7082-740-7-7-2-8-2-5-0-89-8-7-1">type = vehicle; tag = truck;</desc>
       </rect>
       <rect
          transform="matrix(0.99972084,0.02362699,-0.02362699,0.99972084,0,0)"
@@ -73965,7 +73936,7 @@ key = armored_truck.vehicle;</desc>
          height="7.3961515"
          width="3.982286"
          id="spawn1-1-1-1-9-3-2-8-3-9-2-9"
-         style="fill:#008000;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:12.0000023, 12.0000023;stroke-dashoffset:4.6000008;display:inline;enable-background:new">
+         style="display:inline;fill:#008000;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:12.0000023, 12.0000023;stroke-dashoffset:4.60000086;stroke-opacity:1;enable-background:new">
         <desc
            id="desc7082-740-7-7-2-8-2-5-0-89-0-3">type = vehicle; tag = apc;</desc>
       </rect>
@@ -74053,7 +74024,7 @@ key = armored_truck.vehicle;</desc>
          id="spawn7200-1-1-2-7-4-4-8-3"
          style="fill:#ffff00;fill-opacity:1;fill-rule:nonzero;stroke:#1a1a1a;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:7;display:inline;enable-background:new">
         <desc
-           id="desc7204-7-7-2-6-8-5-9-9">type = vehicle; key = radar_tower.vehicle;</desc>
+           id="desc7204-7-7-2-6-8-5-9-9">type = vehicle; key = radio_jammer.vehicle;</desc>
       </rect>
       <rect
          transform="matrix(-0.97482988,0.22295001,-0.22295001,-0.97482988,0,0)"
@@ -74212,6 +74183,42 @@ key = armored_truck.vehicle;</desc>
          style="fill:#ffd5d5;fill-opacity:1;stroke:#ff00ff;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:12.00000022, 12.00000022;stroke-dashoffset:4.59999984;display:inline;enable-background:new">
         <desc
            id="desc7082-9-7-0-4-4-3-3-9-2-1-5-3-7-5">type = vehicle; key = mobile_armory.vehicle;</desc>
+      </rect>
+      <rect
+         transform="matrix(0.36001448,-0.93294672,0.93294672,0.36001448,0,0)"
+         inkscape:label=""
+         y="903.44843"
+         x="-1414.9681"
+         height="7"
+         width="7"
+         id="spawn44-8-1-2"
+         style="display:inline;fill:#0000ff;stroke:#ffff00;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;enable-background:new">
+        <desc
+           id="desc14261-4-3-8">type = vehicle; key = water_tower.vehicle;</desc>
+      </rect>
+      <rect
+         transform="matrix(-0.00521698,-0.99998639,0.99998639,-0.00521698,0,0)"
+         inkscape:label=""
+         y="372.78391"
+         x="-849.93878"
+         height="7"
+         width="7"
+         id="spawn44-8-1-0"
+         style="display:inline;fill:#0000ff;stroke:#ffff00;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;enable-background:new">
+        <desc
+           id="desc14261-4-3-7">type = vehicle; key = water_tower.vehicle;</desc>
+      </rect>
+      <rect
+         transform="matrix(-0.00521698,-0.99998639,0.99998639,-0.00521698,0,0)"
+         inkscape:label=""
+         y="850.59631"
+         x="-315.48529"
+         height="7"
+         width="7"
+         id="spawn44-8-1-8"
+         style="display:inline;fill:#0000ff;stroke:#ffff00;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;enable-background:new">
+        <desc
+           id="desc14261-4-3-5">type = vehicle; key = water_tower.vehicle;</desc>
       </rect>
     </g>
     <g

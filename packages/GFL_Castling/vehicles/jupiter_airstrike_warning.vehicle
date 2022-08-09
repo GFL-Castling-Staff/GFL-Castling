@@ -5,7 +5,7 @@
 
 	<control max_speed="20.0" acceleration="6.0" max_reverse_speed="5.0" max_rotation="0.8" max_water_depth="0.2" steer_smoothening="0.1" />
 
-	<physics max_health="10000" mass="70.0" extent="0.2 0.0 0.2" offset="0 0.0 0" top_offset="0 0.5 0" collision_model_pos="0 0.2 0" collision_model_extent="0.6 0.2 0.6" visual_offset="0 0.0 0" /> 
+	<physics max_health="10000" mass="7000.0" extent="0.0 0.0 0.0" offset="0 0.0 0" top_offset="0 0.5 0" collision_model_pos="0 0.0 0" collision_model_extent="0.2 0.2 0.2" visual_offset="0 0.0 0" /> 
 
 	<effect event_key="idle_chassis" ref="FlareSparkle" post_processing="0" offset="0 0.1 0.3"/>
 	<effect event_key="idle_chassis" ref="FlareSmoke" post_processing="0" offset="0 0.4 0.3"/>  
