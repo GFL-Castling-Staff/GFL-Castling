@@ -5,12 +5,12 @@
     <tire_set offset="1.0 0.0 -0.5" radius="0.65" />
     <control max_speed="1" acceleration="1" max_reverse_speed="1.0" max_rotation="0.8" max_water_depth="1.9" />
 	
-	<modifier class="blast_damage" value="-0.1" />
-	<modifier class="blast_range" value="-0.5" />
+    <modifier class="blast_damage" value="-3.0" />
+	<modifier class="blast_range" value="-1.0" />
 	
 	<physics 
-	max_health="5" 
-	mass="10" 
+	max_health="10" 
+	mass="30" 
 	extent="1.8 2.4 0.8" 
 	offset="0 0 0" 
 	top_offset="0 2.4 0" 
@@ -20,7 +20,6 @@
 	collision_response_factor="0.2" 
 	blast_push_threshold="0.2" 
 	vehicle_collision_damage_factor="2.0" />     
-    <modifier class="blast_damage" value="-1.0" />
     <sound key="hit" filename="barrier_impact1.wav" />
     <sound key="hit" filename="barrier_impact2.wav" />
     <effect event_key="destroy" key="other" ref="SmokeMinor" post_processing="1" />
@@ -34,5 +33,5 @@
 		<result class="spawn" instance_class="visual_item" instance_key="burning_piece_jeep2.visual_item" min_amount="2" max_amount="4" offset="0 1.0 0" position_spread="1.5 1.5" direction_spread="0.05 0.2" />
 	</event>
 	
-    <visual class="chassis" mesh_filename="werlod_shelter.mesh" texture_filename="werlod_shelter_temp.png" />
+    <visual class="chassis" mesh_filename="werlod_shelter.mesh" texture_filename="werlod_shelter_Texture.png" />
 </vehicle>
