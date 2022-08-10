@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapon file="designated_marksman_rifle.animation_base" key="gkw_g28.weapon">
-
-
     <!--Weapon specifications-->
-    
     <specification 
 	retrigger_time="-1.0" 
 	accuracy_factor="1" 
@@ -21,31 +18,19 @@
 	projectile_speed="225" 
 	barrel_offset="0.4" 
 	projectiles_per_shot="1" />
-
-	<!--Animations-->
+    <!--Animations-->
     <inventory  buy_price="12.0" sell_price="12.0" />
-
-
-    <animation key="reload" animation_key="reloading, magazine rifle 1.8" />		
-	
-	<!--Sounds-->
-	
+    <animation key="reload" animation_key="reloading, magazine rifle 1.8" />
+    <!--Sounds-->
     <sound key="fire" fileref="g28_fire_FromEFT.wav" pitch_variety="0.01" volume="1" />
     <sound key="magazine_out" fileref="g28_mgz_out_FromBF2PR.wav"  volume="0.8" />
     <sound key="magazine_in" fileref="g28_mgz_in_FromBF2PR.wav"  volume="0.8" />
-	<sound key="cycle" fileref="g28_cycle_FromEFT.wav"  volume="0.8" />
+    <sound key="cycle" fileref="g28_cycle_FromEFT.wav"  volume="0.8" />
     <sound class="impact" fileref="rifle_drop.wav" />
-   
-	<!--Model, Icon, Cost-->
-   
+    <!--Model, Icon, Cost-->
     <model filename="gkw_rf_g28.xml" />
     <hud_icon filename="gkw_g28.png" />
-
-
-	
-	<!--Ballistics-->
-	
-    
+    <!--Ballistics-->
     <weak_hand_hold offset="0.3" />
     <projectile file="bullet.projectile">
         <result class="hit" 
@@ -55,15 +40,13 @@
         kill_decay_end_time="2.414" />
     </projectile>
     <effect class="muzzle" ref="ejection_76251" />
-    
     <!--Accuracy, Movement speed-->
     <stance state_key="running" accuracy="0.9" />
-	<stance state_key="walking" accuracy="0.9" />
+    <stance state_key="walking" accuracy="0.9" />
     <stance state_key="crouch_moving" accuracy="0.9" />
     <stance state_key="prone_moving" accuracy="0.9" />
     <stance state_key="standing" accuracy="0.9"/>
     <stance state_key="crouching" accuracy="0.98" />
     <stance state_key="prone" accuracy="1.1" />
-    <stance state_key="over_wall" accuracy="1.1" />  
-
+    <stance state_key="over_wall" accuracy="1.1" />
 </weapon>
