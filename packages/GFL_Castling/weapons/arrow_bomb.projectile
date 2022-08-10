@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<projectile class="grenade" name="" key="arrow_bomb.projectile" slot="2" pulldown_in_air="26">
+<projectile class="grenade" name="" key="arrow_bomb.projectile" slot="2" pulldown_in_air="30">
     <result class="spawn" instance_class="grenade" instance_key="firenade_sub.projectile" min_amount="8" max_amount="16" offset="0 6.0 0" position_spread="4 -6" direction_spread="0.0 0.0" />   
     <trigger class="time" time_to_live="3.0"/>
 	<collision class="sticky" />

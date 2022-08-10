@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<projectile class="grenade" name="" key="arrow_bomb_blast.projectile" slot="2" pulldown_in_air="26">
+<projectile class="grenade" name="" key="arrow_bomb_blast.projectile" slot="2" pulldown_in_air="30">
     <result class="blast" damage="3.1" radius="4.0" decal="1" push="0.3" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
     <trigger class="time" time_to_live="3.0"/>
 	<collision class="sticky" />

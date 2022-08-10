@@ -17,7 +17,7 @@
   projectile_speed="180.0"
   barrel_offset="0.55"
   use_basic_muzzle_smoke_effect="0" />
-  <ballistics curve_height="10.0" near_far_distance="10.0" speed_estimation_near="80.0" speed_estimation_far="180.0" max_speed="180.0" randomness="0.0" tweak_factor="1.2" />
+	<ballistics curve_height="30.0" near_far_distance="10.0" speed_estimation_near="180.0" speed_estimation_far="300.0" max_speed="300.0" randomness="0.0"/>
   <animation state_key="recoil" animation_key="recoil, bow" />
   <animation state_key="hold" animation_key="still, bow" />
   <animation state_key="crouching" animation_key="crouch still, bow" />

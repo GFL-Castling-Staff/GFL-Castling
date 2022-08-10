@@ -16267,7 +16267,7 @@
 </weapon>
 
 <weapon key="gkw_ballista.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="0.0" sustained_fire_diminish_rate="1.5" magazine_size="15" can_shoot_standing="1" suppressed="0" name="FN Ballista" class="2" reload_one_at_a_time="0" sight_range_modifier="3.5" projectile_speed="200" barrel_offset="0.4" stance_accuracy_rate="1.0" projectiles_per_shot="4" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="0.0" sustained_fire_diminish_rate="1.5" magazine_size="15" can_shoot_standing="1" suppressed="0" name="FN Ballista" class="2" reload_one_at_a_time="0" sight_range_modifier="3.5" projectile_speed="200" barrel_offset="0.65" stance_accuracy_rate="1.0" projectiles_per_shot="4" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
 	<inventory buy_price="204.0" sell_price="204.0"/>
 	<next_in_chain key="gkw_ballista_skill.weapon" share_ammo="0"/>
 	<animation key="cycle" animation_key="Brifle0.8"/>
@@ -16325,7 +16325,7 @@
 </weapon>
 
 <weapon key="gkw_ballista_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="0.1" burst_shots="2" last_burst_retrigger_time="1.8" accuracy_factor="1" sustained_fire_grow_step="0.0" sustained_fire_diminish_rate="1.5" magazine_size="16" can_shoot_standing="0" suppressed="0" name="FN Ballista-[Falcon Strike]" class="4" reload_one_at_a_time="0" sight_range_modifier="3.5" projectile_speed="250" barrel_offset="0.4" stance_accuracy_rate="1.0" projectiles_per_shot="4" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<specification retrigger_time="0.1" burst_shots="2" last_burst_retrigger_time="1.8" accuracy_factor="1" sustained_fire_grow_step="0.0" sustained_fire_diminish_rate="1.5" magazine_size="16" can_shoot_standing="0" suppressed="0" name="FN Ballista-[Falcon Strike]" class="4" reload_one_at_a_time="0" sight_range_modifier="3.5" projectile_speed="250" barrel_offset="0.65" stance_accuracy_rate="1.0" projectiles_per_shot="4" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<inventory buy_price="204.0" sell_price="204.0"/>
 	<next_in_chain key="gkw_ballista.weapon" share_ammo="0"/>
 	<animation key="cycle" animation_key="Brifle1.8"/>
@@ -40216,7 +40216,7 @@
 <weapon key="compound_bow.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="rifle"/>
 	<specification retrigger_time="5.0" accuracy_factor="1.0" sustained_fire_grow_step="2" sustained_fire_diminish_rate="0.5" magazine_size="100" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" sight_range_modifier="1.2" suppressed="1" name="Code:Centaurus" class="0" projectile_speed="180.0" barrel_offset="0.55" use_basic_muzzle_smoke_effect="0"/>
-	<ballistics curve_height="10.0" near_far_distance="10.0" speed_estimation_near="80.0" speed_estimation_far="180.0" max_speed="180.0" randomness="0.0" tweak_factor="1.2"/>
+	<ballistics curve_height="30.0" near_far_distance="10.0" speed_estimation_near="180.0" speed_estimation_far="300.0" max_speed="300.0" randomness="0.0"/>
 	<animation state_key="recoil" animation_key="recoil, bow"/>
 	<animation state_key="hold" animation_key="still, bow"/>
 	<animation state_key="crouching" animation_key="crouch still, bow"/>
@@ -40262,7 +40262,7 @@
 <weapon key="compound_bow_2.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="rifle"/>
 	<specification retrigger_time="5.0" accuracy_factor="1.0" sustained_fire_grow_step="2" sustained_fire_diminish_rate="0.5" magazine_size="100" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" sight_range_modifier="1.2" suppressed="1" name="Code:Centaurus" class="0" projectile_speed="180.0" barrel_offset="0.55" use_basic_muzzle_smoke_effect="0"/>
-	<ballistics curve_height="10.0" near_far_distance="10.0" speed_estimation_near="80.0" speed_estimation_far="180.0" max_speed="180.0" randomness="0.0" tweak_factor="1.2"/>
+	<ballistics curve_height="30.0" near_far_distance="10.0" speed_estimation_near="180.0" speed_estimation_far="300.0" max_speed="300.0" randomness="0.0"/>
 	<animation state_key="recoil" animation_key="recoil, bow"/>
 	<animation state_key="hold" animation_key="still, bow"/>
 	<animation state_key="crouching" animation_key="crouch still, bow"/>
@@ -43983,4 +43983,3 @@
 </weapon>
 
 </weapons>
-

@@ -15,7 +15,7 @@
 	reload_one_at_a_time="0" 
 	sight_range_modifier="3.5" 
 	projectile_speed="200" 
-	barrel_offset="0.4" 
+	barrel_offset="0.65" 
     stance_accuracy_rate="1.0"
 	projectiles_per_shot="4" />
     <inventory buy_price="204.0" sell_price="204.0" />
@@ -45,6 +45,7 @@
         kill_decay_end_time="1.919810" />
     </projectile>
     <!--Accuracy, Movement speed-->
+    <effect class="muzzle" ref="ejection_76251" />
     <stance state_key="running" accuracy="1.0" />
     <stance state_key="walking" accuracy="1.0" />
     <stance state_key="crouch_moving" accuracy="1.0"/>
@@ -71,7 +72,7 @@
 	reload_one_at_a_time="0" 
 	sight_range_modifier="3.5" 
 	projectile_speed="250" 
-	barrel_offset="0.4" 
+	barrel_offset="0.65" 
     stance_accuracy_rate="1.0"
 	projectiles_per_shot="4" />
     <inventory buy_price="204.0" sell_price="204.0" />
@@ -103,6 +104,7 @@
     </projectile>
     <!--Accuracy, Movement speed-->
     <commonness value="0" in_stock="0" can_respawn_with="1" />
+    <effect class="muzzle" ref="ejection_76251" />
     <stance state_key="running" accuracy="1.0" />
     <stance state_key="walking" accuracy="1.0" />
     <stance state_key="crouch_moving" accuracy="1.0"/>
