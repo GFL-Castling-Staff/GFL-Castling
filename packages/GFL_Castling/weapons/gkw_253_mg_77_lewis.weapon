@@ -15,6 +15,7 @@
 	spread_range="0.1"
 	sight_range_modifier="1.5"/>
     <next_in_chain key="gkw_lewis_skill.weapon" share_ammo="1" />
+    <commonness value="0.2" in_stock="0" can_respawn_with="1" />
     <animation key="reload" animation_key="reloading, Machine gun 1.2" />
     <animation key="recoil" animation_key="recoil1" />
     <animation key="recoil" animation_key="recoil2" />
@@ -63,6 +64,7 @@
 	projectile_speed="213.42" 
 	sight_range_modifier="2.5"/>
     <next_in_chain key="gkw_lewis.weapon" share_ammo="1" />
+    <commonness value="0" in_stock="0" can_respawn_with="1" />
     <animation key="reload" animation_key="reloading, Machine gun 0.6" />
     <animation key="recoil" animation_key="recoil1" />
     <animation key="recoil" animation_key="recoil2" />
