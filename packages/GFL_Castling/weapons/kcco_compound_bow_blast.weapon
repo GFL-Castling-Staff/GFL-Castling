@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<weapon file="KCCO.base_weapon" key="compound_bow.weapon">
+<weapon file="KCCO.base_weapon" key="compound_bow_2.weapon">
   <tag name="rifle" />
   <specification 
   retrigger_time="5.0" 
@@ -35,7 +35,7 @@
   <model filename="compound_bow.xml" />
   <hud_icon filename="kccow_archer.png" />
   <weak_hand_hold offset="0.55" />
-  <projectile file="arrow_bomb.projectile">
+  <projectile file="arrow_bomb_blast.projectile">
     <collision class="sticky" />
   </projectile>
   <stance state_key="running" accuracy="0.85" />

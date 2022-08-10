@@ -1017,7 +1017,7 @@
 </weapon>
 
 <weapon key="gkw_aek999.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.5" retrigger_time="0.0923" accuracy_factor="1" sustained_fire_grow_step="0.3" sustained_fire_diminish_rate="1.8" magazine_size="200" suppressed="1" name="AEK-999 Barsuk" class="0" projectile_speed="230" sight_range_modifier="1.5" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" slot="0"/>
+	<specification barrel_offset="0.5" retrigger_time="0.0923" accuracy_factor="1" sustained_fire_grow_step="0.3" sustained_fire_diminish_rate="1.8" magazine_size="200" suppressed="1" name="AEK-999 Barsuk" class="0" projectile_speed="180" sight_range_modifier="1.5" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" slot="0"/>
 	<animation state_key="hold_casual" animation_key="dancing, kazachok"/>
 	<animation key="reload" animation_key="reloading, Machine gun 1.6"/>
 	<inventory buy_price="45.0" sell_price="45.0"/>
@@ -1068,7 +1068,7 @@
 </weapon>
 
 <weapon key="gkw_aek999_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.5" retrigger_time="0.0923" accuracy_factor="1" sustained_fire_grow_step="0.1" sustained_fire_diminish_rate="1.8" magazine_size="200" suppressed="1" name="AEK-999 Barsuk-[Hunting Impulse N]" class="0" projectile_speed="230" sight_range_modifier="2.5" can_shoot_crouching="1" can_shoot_prone="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_standing="0" slot="0"/>
+	<specification barrel_offset="0.5" retrigger_time="0.0923" accuracy_factor="1" sustained_fire_grow_step="0.1" sustained_fire_diminish_rate="1.8" magazine_size="200" suppressed="1" name="AEK-999 Barsuk-[Hunting Impulse N]" class="0" projectile_speed="180" sight_range_modifier="2.5" can_shoot_crouching="1" can_shoot_prone="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_standing="0" slot="0"/>
 	<animation state_key="hold_casual" animation_key="dancing, kazachok"/>
 	<animation key="reload" animation_key="reloading, Machine gun 2.0"/>
 	<inventory buy_price="45.0" sell_price="45.0"/>
@@ -13089,6 +13089,7 @@
 <weapon key="gkw_lewis.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<specification barrel_offset="0.5" retrigger_time="0.1" accuracy_factor="1.0" sustained_fire_grow_step="0.2" sustained_fire_diminish_rate="1.7" magazine_size="97" suppressed="0" name="Lewis Gun" class="0" projectile_speed="213.42" spread_range="0.1" sight_range_modifier="1.5"/>
 	<next_in_chain key="gkw_lewis_skill.weapon" share_ammo="1"/>
+	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<animation key="reload" animation_key="reloading, Machine gun 1.2"/>
 	<animation key="recoil" animation_key="recoil1"/>
 	<animation key="recoil" animation_key="recoil2"/>
@@ -13125,6 +13126,7 @@
 <weapon key="gkw_lewis_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<specification barrel_offset="0.5" retrigger_time="0.075" accuracy_factor="1.0" sustained_fire_grow_step="0.1" sustained_fire_diminish_rate="1.7" magazine_size="97" suppressed="0" name="Lewis Gun-[Angel of Strength]" class="0" can_shoot_crouching="0" can_shoot_standing="0" projectile_speed="213.42" sight_range_modifier="2.5"/>
 	<next_in_chain key="gkw_lewis.weapon" share_ammo="1"/>
+	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<animation key="reload" animation_key="reloading, Machine gun 0.6"/>
 	<animation key="recoil" animation_key="recoil1"/>
 	<animation key="recoil" animation_key="recoil2"/>
@@ -27294,6 +27296,7 @@
 <weapon key="gkw_lewis_4001.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<specification barrel_offset="0.5" retrigger_time="0.1" accuracy_factor="1.0" sustained_fire_grow_step="0.2" sustained_fire_diminish_rate="1.7" magazine_size="97" suppressed="0" name="Lewis Gun-[Holy Night Promise]" class="0" projectile_speed="213.42" spread_range="0.1" sight_range_modifier="1.5"/>
 	<next_in_chain key="gkw_lewis_4001_skill.weapon" share_ammo="1"/>
+	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<animation key="reload" animation_key="reloading, Machine gun 1.2"/>
 	<animation key="recoil" animation_key="recoil1"/>
 	<animation key="recoil" animation_key="recoil2"/>
@@ -27330,6 +27333,7 @@
 <weapon key="gkw_lewis_4001_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<specification barrel_offset="0.5" retrigger_time="0.075" accuracy_factor="1.0" sustained_fire_grow_step="0.1" sustained_fire_diminish_rate="1.7" magazine_size="97" suppressed="0" name="Lewis Gun-[Holy Night Promise]-[Angel of Strength]" class="0" can_shoot_crouching="0" can_shoot_standing="0" projectile_speed="213.42" sight_range_modifier="2.5"/>
 	<next_in_chain key="gkw_lewis_4001.weapon" share_ammo="1"/>
+	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<animation key="reload" animation_key="reloading, Machine gun 0.6"/>
 	<animation key="recoil" animation_key="recoil1"/>
 	<animation key="recoil" animation_key="recoil2"/>
@@ -40211,7 +40215,7 @@
 
 <weapon key="compound_bow.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="rifle"/>
-	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="2" sustained_fire_diminish_rate="0.5" magazine_size="1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" suppressed="1" name="Code:Centaurus" class="4" projectile_speed="180.0" barrel_offset="0.55" use_basic_muzzle_smoke_effect="0"/>
+	<specification retrigger_time="5.0" accuracy_factor="1.0" sustained_fire_grow_step="2" sustained_fire_diminish_rate="0.5" magazine_size="100" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" sight_range_modifier="1.2" suppressed="1" name="Code:Centaurus" class="0" projectile_speed="180.0" barrel_offset="0.55" use_basic_muzzle_smoke_effect="0"/>
 	<ballistics curve_height="10.0" near_far_distance="10.0" speed_estimation_near="80.0" speed_estimation_far="180.0" max_speed="180.0" randomness="0.0" tweak_factor="1.2"/>
 	<animation state_key="recoil" animation_key="recoil, bow"/>
 	<animation state_key="hold" animation_key="still, bow"/>
@@ -40233,13 +40237,61 @@
 	<projectile file="arrow_bomb.projectile">
 	<collision class="sticky"/>
 	</projectile>
-	<stance state_key="running" accuracy="0.1"/>
-	<stance state_key="walking" accuracy="0.2"/>
-	<stance state_key="crouch_moving" accuracy="0.6"/>
+	<stance state_key="running" accuracy="0.85"/>
+	<stance state_key="walking" accuracy="0.9"/>
+	<stance state_key="crouch_moving" accuracy="0.9"/>
+	<stance state_key="prone_moving" accuracy="0.9"/>
 	<stance state_key="standing" accuracy="1.0"/>
-	<stance state_key="crouching" accuracy="0.9"/>
+	<stance state_key="crouching" accuracy="1.0"/>
+	<stance state_key="prone" accuracy="1.0"/>
 	<stance state_key="over_wall" accuracy="1.0"/>
-	<modifier class="speed" value="0"/>
+	<modifier class="speed" value="0.25"/>
+	<commonness value="0.0001" in_stock="1" can_respawn_with="1"/>
+	<inventory encumbrance="0.0" price="0.0"/>
+	<capacity value="1" source="rank" source_value="0.0"/>
+	<stance state_key="running" accuracy="0.3"/>
+	<stance state_key="walking" accuracy="0.675"/>
+	<stance state_key="crouch_moving" accuracy="0.75"/>
+	<stance state_key="standing" accuracy="0.85"/>
+	<stance state_key="crouching" accuracy="0.9"/>
+	<stance state_key="prone" accuracy="0.95"/>
+	<stance state_key="prone_moving" accuracy="0.3"/>
+	<stance state_key="over_wall" accuracy="1"/>
+</weapon>
+
+<weapon key="compound_bow_2.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+	<tag name="rifle"/>
+	<specification retrigger_time="5.0" accuracy_factor="1.0" sustained_fire_grow_step="2" sustained_fire_diminish_rate="0.5" magazine_size="100" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" sight_range_modifier="1.2" suppressed="1" name="Code:Centaurus" class="0" projectile_speed="180.0" barrel_offset="0.55" use_basic_muzzle_smoke_effect="0"/>
+	<ballistics curve_height="10.0" near_far_distance="10.0" speed_estimation_near="80.0" speed_estimation_far="180.0" max_speed="180.0" randomness="0.0" tweak_factor="1.2"/>
+	<animation state_key="recoil" animation_key="recoil, bow"/>
+	<animation state_key="hold" animation_key="still, bow"/>
+	<animation state_key="crouching" animation_key="crouch still, bow"/>
+	<animation state_key="crouch_moving" animation_key="crouching forwards, bow"/>
+	<animation state_key="crouch_moving_backwards" animation_key="crouching backwards, bow"/>
+	<animation state_key="walking_backwards" animation_key="walking backwards, bow"/>
+	<animation state_key="reload" animation_key="reload, bow" volume="0.7"/>
+	<animation state_key="hold_on_wall" animation_key="still, bow"/>
+	<animation state_key="still_against_wall" animation_key="still, bow"/>
+	<animation state_key="walking" animation_key="walking, bow"/>
+	<animation state_key="running" animation_key="running, bow"/>
+	<animation state_key="hold_casual" animation_key="casual, bow"/>
+	<sound key="fire" fileref="Archer_fire_FromCOD12.wav" pitch_variety="0.1" volume="1.2"/>
+	<sound class="impact" fileref="rifle_drop.wav"/>
+	<model filename="compound_bow.xml"/>
+	<hud_icon filename="kccow_archer.png"/>
+	<weak_hand_hold offset="0.55"/>
+	<projectile file="arrow_bomb_blast.projectile">
+	<collision class="sticky"/>
+	</projectile>
+	<stance state_key="running" accuracy="0.85"/>
+	<stance state_key="walking" accuracy="0.9"/>
+	<stance state_key="crouch_moving" accuracy="0.9"/>
+	<stance state_key="prone_moving" accuracy="0.9"/>
+	<stance state_key="standing" accuracy="1.0"/>
+	<stance state_key="crouching" accuracy="1.0"/>
+	<stance state_key="prone" accuracy="1.0"/>
+	<stance state_key="over_wall" accuracy="1.0"/>
+	<modifier class="speed" value="0.25"/>
 	<commonness value="0.0001" in_stock="1" can_respawn_with="1"/>
 	<inventory encumbrance="0.0" price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
