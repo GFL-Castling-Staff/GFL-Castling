@@ -50,4 +50,5 @@
     <stance state_key="crouching" accuracy="1.0" />
     <stance state_key="prone" accuracy="1.0" />
     <stance state_key="overwall" accuracy="1.3" />
+    <modifier class="detectability" value="-0.25" />
 </weapon>
