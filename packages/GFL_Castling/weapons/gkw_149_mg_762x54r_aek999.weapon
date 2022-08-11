@@ -35,6 +35,7 @@
         <stance state_key="crouching" accuracy="0.8" />
         <stance state_key="prone" accuracy="1.8" />
         <stance state_key="over_wall" accuracy="1.8" />
+        <modifier class="detectability" value="-0.1" />
     </weapon>
     <weapon file="heavy_mg.animation_base" key="gkw_aek999_skill.weapon">
         <specification 
@@ -75,6 +76,7 @@
         <stance state_key="crouching" accuracy="0.9" />
         <stance state_key="prone" accuracy="1.8" />
         <stance state_key="over_wall" accuracy="1.8" />
+        <modifier class="detectability" value="-0.15" />
         <modifier class="speed" value="-0.2" />
     </weapon>
 </weapons>
