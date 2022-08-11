@@ -16267,6 +16267,9 @@ flip = 1;
 name = Vigil Island;
 description = 2-faction king of the hill;
 show_base_names_in_map_view = 0;
+ambience_day_sound = static.wav;
+ambience_alert_day_sound = static.wav;
+ambience_night_sound = static.wav;
 randomize_faction_index = 0;</desc>
     </rect>
     <rect
