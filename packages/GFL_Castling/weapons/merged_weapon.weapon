@@ -1017,7 +1017,7 @@
 </weapon>
 
 <weapon key="gkw_aek999.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.5" retrigger_time="0.0923" accuracy_factor="1" sustained_fire_grow_step="0.3" sustained_fire_diminish_rate="1.8" magazine_size="200" suppressed="1" name="AEK-999 Barsuk" class="0" projectile_speed="180" sight_range_modifier="1.5" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" slot="0"/>
+	<specification barrel_offset="0.5" retrigger_time="0.0923" accuracy_factor="1" sustained_fire_grow_step="0.3" sustained_fire_diminish_rate="1.8" magazine_size="200" suppressed="1" name="AEK-999 Barsuk" class="0" projectile_speed="210" sight_range_modifier="1.5" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" slot="0"/>
 	<animation state_key="hold_casual" animation_key="dancing, kazachok"/>
 	<animation key="reload" animation_key="reloading, Machine gun 1.6"/>
 	<inventory buy_price="45.0" sell_price="45.0"/>
@@ -1068,7 +1068,7 @@
 </weapon>
 
 <weapon key="gkw_aek999_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.5" retrigger_time="0.0923" accuracy_factor="1" sustained_fire_grow_step="0.1" sustained_fire_diminish_rate="1.8" magazine_size="200" suppressed="1" name="AEK-999 Barsuk-[Hunting Impulse N]" class="0" projectile_speed="180" sight_range_modifier="2.5" can_shoot_crouching="1" can_shoot_prone="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_standing="0" slot="0"/>
+	<specification barrel_offset="0.5" retrigger_time="0.0923" accuracy_factor="1" sustained_fire_grow_step="0.1" sustained_fire_diminish_rate="1.8" magazine_size="210" suppressed="1" name="AEK-999 Barsuk-[Hunting Impulse N]" class="0" projectile_speed="180" sight_range_modifier="2.5" can_shoot_crouching="1" can_shoot_prone="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_standing="0" slot="0"/>
 	<animation state_key="hold_casual" animation_key="dancing, kazachok"/>
 	<animation key="reload" animation_key="reloading, Machine gun 2.0"/>
 	<inventory buy_price="45.0" sell_price="45.0"/>
@@ -16286,6 +16286,7 @@
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="2.0" kill_probability_offset_on_successful_hit="4.0" kill_decay_start_time="1.14514" kill_decay_end_time="1.919810"/>
 	</projectile>
+	<effect class="muzzle" ref="ejection_76251"/>
 	<stance state_key="running" accuracy="1.0"/>
 	<stance state_key="walking" accuracy="1.0"/>
 	<stance state_key="crouch_moving" accuracy="1.0"/>
@@ -16346,6 +16347,7 @@
 	<trail probability="1.0" key="BulletApTrail"/>
 	</projectile>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
+	<effect class="muzzle" ref="ejection_76251"/>
 	<stance state_key="running" accuracy="1.0"/>
 	<stance state_key="walking" accuracy="1.0"/>
 	<stance state_key="crouch_moving" accuracy="1.0"/>
@@ -20165,7 +20167,7 @@
 
 <weapon key="gkw_m1911_mod3.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
-	<specification retrigger_time="0.125" last_burst_retrigger_time="0.125" accuracy_factor="0.98" sustained_fire_grow_step="0.45" sustained_fire_diminish_rate="1.6" magazine_size="14" carry_in_two_hands="0" suppressed="0" name="M1911 (MOD3)" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="85" burst_shots="1" projectiles_per_shot="12" use_basic_muzzle_smoke_effect="0" stab_enabled="1"/>
+	<specification retrigger_time="0.125" last_burst_retrigger_time="0.125" accuracy_factor="0.98" sustained_fire_grow_step="0.45" sustained_fire_diminish_rate="1.6" magazine_size="14" carry_in_two_hands="0" suppressed="0" name="M1911 (MOD3)" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="110" burst_shots="1" projectiles_per_shot="12" use_basic_muzzle_smoke_effect="0" stab_enabled="1"/>
 	<commonness value="0.01" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="6.0" buy_price="50.0" sell_price="50.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -20202,7 +20204,7 @@
 	<hud_icon filename="gkw_m1911mod3_skill.png"/>
 	<weak_hand_hold offset="0.1"/>
 	<projectile file="bullet.projectile" time_to_live="0.3">
-	<result class="blast" radius="2.5" damage="0.2" push="0.2" decal="1" faction_compare="not_equal" damage_as_probability="1"/>
+	<result class="blast" radius="2.5" damage="0.4" push="0.2" decal="1" faction_compare="not_equal" damage_as_probability="1"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.85"/>
 	<stance state_key="walking" accuracy="0.85"/>
@@ -40902,6 +40904,46 @@
 	<capacity value="1" source="rank" source_value="0.0"/>
 </weapon>
 
+<weapon key="kcco_gatling.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+	<tag name="machine gun"/>
+	<tag name="elite"/>
+	<specification accuracy_factor="0.75" barrel_offset="0.5" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" class="0" slot="0" magazine_size="200" name="SF-Striker" projectile_speed="130" spread_range="0.3" retrigger_time="0.03" suppressed="0" sustained_fire_diminish_rate="1.0" sustained_fire_grow_step="2.0"/>
+	<animation key="recoil" animation_key="recoil, hip gatling"/>
+	<animation key="recoil" stance_key="crouching" animation_key="recoil, crouch gatling"/>
+	<animation state_key="hold_casual" animation_key="casual, blowgun"/>
+	<animation state_key="hold_casual" animation_key="still, single hand carry"/>
+	<animation state_key="hold" animation_key="hold, hip gatling"/>
+	<animation state_key="crouching" animation_key="crouch, hip gatling"/>
+	<animation state_key="crouch_moving" animation_key="crouching forwards, single hand carry"/>
+	<animation state_key="reload" animation_key="hold, hip gatling"/>
+	<animation state_key="walking" animation_key="walking, pistol"/>
+	<animation state_key="walking_backwards" animation_key="walking backwards, pistol"/>
+	<animation state_key="running" animation_key="running, single hand carry"/>
+	<sound key="fire" fileref="Doppelsoldner_mg_fire_FromTTF2.wav" pitch_variety="0.05" volume="1.3"/>
+	<sound key="magazine_out" fileref="ags30_mgz_out_FromBF1.wav" volume="0.8"/>
+	<sound key="magazine_in" fileref="ags30_mgz_in_FromBF1.wav" volume="0.8"/>
+	<sound key="cycle" fileref="striker_cycle_FromCOD12.wav" volume="0.7"/>
+	<sound class="impact" fileref="rifle_drop.wav"/>
+	<model/>
+	<hud_icon filename="testing.png"/>
+	<weak_hand_hold offset="0.4"/>
+	<projectile file="bullet_kcco.projectile">
+	<result class="hit" kill_probability="1.8" kill_decay_start_time="1.0" kill_decay_end_time="1.5"/>
+	</projectile>
+	<modifier class="speed" value="-0.4"/>
+	<commonness value="0.000001" in_stock="1" can_respawn_with="1"/>
+	<inventory encumbrance="0.0" buy_price="1.0" sell_price="0.0"/>
+	<capacity value="1" source="rank" source_value="0.0"/>
+	<stance state_key="running" accuracy="1.0"/>
+	<stance state_key="walking" accuracy="1.0"/>
+	<stance state_key="crouch_moving" accuracy="1.0"/>
+	<stance state_key="standing" accuracy="1.0"/>
+	<stance state_key="crouching" accuracy="1.0"/>
+	<stance state_key="prone" accuracy="1.0"/>
+	<stance state_key="prone_moving" accuracy="1.0"/>
+	<stance state_key="over_wall" accuracy="1.0"/>
+</weapon>
+
 <weapon key="parw_streletplus.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="autorifle"/>
 	<specification retrigger_time="0.2" accuracy_factor="1.0" sustained_fire_grow_step="1.5" sustained_fire_diminish_rate="0.7" magazine_size="10" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" suppressed="0" name="Strelet Plus" class="0" barrel_offset="0.6" barrel_offset_3d="0 -0.1 0.6" projectile_speed="120.0" projectiles_per_shot="1" sight_range_modifier="1.1" ai_sight_range_modifier="1.0"/>
@@ -43983,3 +44025,4 @@
 </weapon>
 
 </weapons>
+
