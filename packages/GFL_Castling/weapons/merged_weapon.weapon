@@ -40907,8 +40907,8 @@
 <weapon key="kcco_gatling.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="machine gun"/>
 	<tag name="elite"/>
-	<specification accuracy_factor="0.75" barrel_offset="0.5" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" class="0" slot="0" magazine_size="200" name="SF-Striker" projectile_speed="130" spread_range="0.3" retrigger_time="0.03" suppressed="0" sustained_fire_diminish_rate="1.0" sustained_fire_grow_step="2.0"/>
-	<animation key="recoil" animation_key="recoil, hip gatling"/>
+	<specification accuracy_factor="1.0" barrel_offset="0.6" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" class="0" slot="0" magazine_size="200" name="SF-Striker" projectile_speed="130" spread_range="0.2" retrigger_time="0.03" suppressed="0" sustained_fire_diminish_rate="1.0" sustained_fire_grow_step="2.0"/>
+	<animation state_key="recoil" animation_key="recoil, hip gatling"/>
 	<animation key="recoil" stance_key="crouching" animation_key="recoil, crouch gatling"/>
 	<animation state_key="hold_casual" animation_key="casual, blowgun"/>
 	<animation state_key="hold_casual" animation_key="still, single hand carry"/>
@@ -40926,7 +40926,7 @@
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model/>
 	<hud_icon filename="testing.png"/>
-	<weak_hand_hold offset="0.4"/>
+	<weak_hand_hold offset="0.3"/>
 	<projectile file="bullet_kcco.projectile">
 	<result class="hit" kill_probability="1.8" kill_decay_start_time="1.0" kill_decay_end_time="1.5"/>
 	</projectile>
