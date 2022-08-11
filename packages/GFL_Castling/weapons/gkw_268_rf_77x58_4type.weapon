@@ -1,60 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<weapon file="gf_rf.base_weapon" key="gkw_4type.weapon">
-
-	<tag name="has_bayonet" />
-	
-	<specification 
-	retrigger_time="0.125" 
-	accuracy_factor="0.99" 
-	sustained_fire_grow_step="0.0" 
-	sustained_fire_diminish_rate="1.7"
-	magazine_size="10" 
-	can_shoot_standing="1" 
-	suppressed="0" 
-	name="4 Type" 
-	class="4" 
-	burst_shots="1"
-	reload_one_at_a_time="1" 
-	projectile_speed="228.72" 
-	barrel_offset="0.6" 
-	projectiles_per_shot="1"
-	/>
-
-
-	
-	<animation key="recoil" ref="27" />
-	<animation key="cycle" animation_key="Brifle1" />
-    <animation key="reload" animation_key="reloading, m1908" />
-	
-	<weak_hand_hold offset="0.3" />
-	
+<weapon key="gkw_4type.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+	<tag name="has_bayonet"/>
+	<tag name="rifle"/>
+	<specification retrigger_time="0.125" accuracy_factor="0.99" sustained_fire_grow_step="0.0" sustained_fire_diminish_rate="1.7" magazine_size="10" can_shoot_standing="1" suppressed="0" name="4 Type" class="4" burst_shots="1" reload_one_at_a_time="1" projectile_speed="228.72" barrel_offset="0.6" projectiles_per_shot="1" slot="0"/>
+	<animation key="cycle" animation_key="Brifle1"/>
+	<animation key="reload" animation_key="reloading, m1908"/>
+	<weak_hand_hold offset="0.3"/>
 	<sound key="fire" fileref="4type_fire_FromBFBC2.wav" pitch_variety="0.05" volume="2.6"/>
-	<sound key="cycle" fileref="4type_cycle_FromBFBC2.wav" volume="1" />
-	<sound key="magazine_out" fileref="4type_mgz_out_FromBFBC2.wav" volume="1" />
-	<sound key="magazine_in" fileref="4type_mgz_in_FromBFBC2.wav" volume="1" />
-	
-	<model filename="gkw_rf_4type.xml" />
-	<hud_icon filename="gkw_4type.png" />
-	
-	<commonness value="0.2" can_respawn_with="1"/>
-	<inventory encumbrance="10.0" price="5.0" />
-	
-	<capacity value="1" source="rank" source_value="0.0" />
-	<capacity value="1" source="rank" source_value="0.0" />
-	
+	<sound key="cycle" fileref="4type_cycle_FromBFBC2.wav" volume="1"/>
+	<sound key="magazine_out" fileref="4type_mgz_out_FromBFBC2.wav" volume="1"/>
+	<sound key="magazine_in" fileref="4type_mgz_in_FromBFBC2.wav" volume="1"/>
+	<model filename="gkw_rf_4type.xml"/>
+	<hud_icon filename="gkw_4type.png"/>
+	<inventory encumbrance="10.0" price="5.0"/>
 	<projectile file="bullet.projectile">
-        <result class="hit" 
-        kill_probability="1.6"
-        kill_probability_offset_on_successful_hit="2.7" 
-        kill_decay_start_time="1.448" 
-        kill_decay_end_time="2.414" />
+		<result class="hit" kill_probability="2.2" kill_probability_offset_on_successful_hit="3.5" kill_decay_start_time="1.448" kill_decay_end_time="2.414"/>
 	</projectile>
-	<stance state_key="running" accuracy="1.2" />
-	<stance state_key="walking" accuracy="1.2" />
-    <stance state_key="crouch_moving" accuracy="1.2" />
-    <stance state_key="prone_moving" accuracy="1.2" />
-    <stance state_key="standing" accuracy="1.2" />
-    <stance state_key="crouching" accuracy="1.2" />
-    <stance state_key="prone" accuracy="1.5" />
-    <stance state_key="over_wall" accuracy="1.5" />
+	<effect class="muzzle" ref="ejection_76251" />
+
+    <stance state_key="running" accuracy="0.9" />
+    <stance state_key="walking" accuracy="0.9" />
+    <stance state_key="crouch_moving" accuracy="0.9" />
+    <stance state_key="prone_moving" accuracy="0.9" />
+    <stance state_key="standing" accuracy="0.95" />
+    <stance state_key="crouching" accuracy="0.98" />
+    <stance state_key="prone" accuracy="1" />
+    <stance state_key="overwall" accuracy="1" />
+	<modifier class="detectability" value="-0.1"/>
+
+	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="20.0" buy_price="1.0" sell_price="0.0"/>
+	<capacity value="1" source="rank" source_value="0.0"/>
+	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
+	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
+	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
+	<animation key="recoil" animation_key="recoil1"/>
+	<animation key="recoil" animation_key="recoil2"/>
+	<animation key="recoil" animation_key="recoil3"/>
+	<animation state_key="stabbing"	animation_key="melee, bayonet" />
+	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
+	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
+	<target_factors tag="shotgun" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
+	<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
+	<target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
+	<target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
 </weapon>
