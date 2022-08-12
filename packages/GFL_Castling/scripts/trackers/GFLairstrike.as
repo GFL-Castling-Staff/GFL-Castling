@@ -280,7 +280,9 @@ class GFLairstrike : Tracker {
                     }
                     case 4:{
                         // _log("Sniper Fairy activated");
-                        CreateDirectProjectile(m_metagame,start_pos.add(Vector3(0,50,0)),end_pos,"ntw.projectile",cid,fid,300);
+                        CreateDirectProjectile(m_metagame,start_pos.add(Vector3(0,50,0)),end_pos,"mk153_HE.projectile",cid,fid,150);
+                        Airstrike_strafe.removeAt(a);
+                        break;                        
                     }
                     default:
                         break;
