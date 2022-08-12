@@ -7243,10 +7243,10 @@
 	<commonness value="1" in_stock="1" can_respawn_with="1"/>
 	<inventory encumbrance="3" price="1"/>
 	<model/>
-	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="wound"/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
 	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
 	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
-	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="wound"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
@@ -7256,6 +7256,24 @@
 </carry_item>
 
 <carry_item key="kcco_ar_5" time_to_live_out_in_the_open="15" name="Standard Neo-SU Battle Suit" transform_on_consume="kcco_ar_6" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="kcco_ar.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="1" in_stock="1" can_respawn_with="1"/>
+	<inventory encumbrance="3" price="1"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="wound"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="wound"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="wound"/>
+	<modifier class="speed" value="0.0"/>
+	<modifier class="hit_success_probability" value="-0.6"/>
+	<modifier class="detectability" value="0"/>
+</carry_item>
+
+<carry_item key="kcco_ar_6" time_to_live_out_in_the_open="15" name="Standard Neo-SU Battle Suit" transform_on_consume="kcco_ar_7" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 	<hud_icon filename="kcco_ar.png"/>
 	<capacity value="1" source="rank" source_value="0"/>
 	<commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -8788,10 +8806,10 @@
 	<commonness value="1" in_stock="1" can_respawn_with="1"/>
 	<inventory encumbrance="3" price="1"/>
 	<model/>
-	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="wound"/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
 	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
 	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
-	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="wound"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
@@ -8801,6 +8819,24 @@
 </carry_item>
 
 <carry_item key="sf_ar_4" time_to_live_out_in_the_open="15" name="Standard SF Assualt Exo" transform_on_consume="sf_ar_5" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="sfd_ar.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="1" in_stock="1" can_respawn_with="1"/>
+	<inventory encumbrance="3" price="1"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="wound"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="wound"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="wound"/>
+	<modifier class="speed" value="0.0"/>
+	<modifier class="hit_success_probability" value="-0.6"/>
+	<modifier class="detectability" value="0"/>
+</carry_item>
+
+<carry_item key="sf_ar_5" time_to_live_out_in_the_open="15" name="Standard SF Assualt Exo" transform_on_consume="sf_ar_6" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 	<hud_icon filename="sfd_ar.png"/>
 	<capacity value="1" source="rank" source_value="0"/>
 	<commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -16574,7 +16610,7 @@
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
 	<modifier class="speed" value="0.0"/>
-	<modifier class="hit_success_probability" value="-0.6"/>
+	<modifier class="hit_success_probability" value="-0.75"/>
 	<modifier class="detectability" value="0"/>
 </carry_item>
 
@@ -16592,11 +16628,29 @@
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
 	<modifier class="speed" value="0.0"/>
-	<modifier class="hit_success_probability" value="-0.6"/>
+	<modifier class="hit_success_probability" value="-0.75"/>
 	<modifier class="detectability" value="0"/>
 </carry_item>
 
 <carry_item key="sf_swap_6" time_to_live_out_in_the_open="15" name="SWAP SF Assualt Exo" transform_on_consume="sf_swap_7" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="sfd_ar.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="1" in_stock="1" can_respawn_with="1"/>
+	<inventory encumbrance="3" price="1"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="speed" value="0.0"/>
+	<modifier class="hit_success_probability" value="-0.75"/>
+	<modifier class="detectability" value="0"/>
+</carry_item>
+
+<carry_item key="sf_swap_7" time_to_live_out_in_the_open="15" name="SWAP SF Assualt Exo" transform_on_consume="sf_swap_8" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 	<hud_icon filename="sfd_ar.png"/>
 	<capacity value="1" source="rank" source_value="0"/>
 	<commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -16608,13 +16662,13 @@
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="wound"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
-	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="wound"/>
 	<modifier class="speed" value="0.0"/>
-	<modifier class="hit_success_probability" value="-0.6"/>
+	<modifier class="hit_success_probability" value="-0.75"/>
 	<modifier class="detectability" value="0"/>
 </carry_item>
 
-<carry_item key="sf_swap_7" time_to_live_out_in_the_open="15" name="SWAP SF Assualt Exo" transform_on_consume="sf_swap_8" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+<carry_item key="sf_swap_8" time_to_live_out_in_the_open="15" name="SWAP SF Assualt Exo" transform_on_consume="sf_swap_9" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 	<hud_icon filename="sfd_ar.png"/>
 	<capacity value="1" source="rank" source_value="0"/>
 	<commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -16633,7 +16687,7 @@
 	<modifier class="melee_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="unwound" output_character_state="unwound" consumes_item="0"/>
 	<modifier class="speed" value="0.0"/>
-	<modifier class="hit_success_probability" value="-0.6"/>
+	<modifier class="hit_success_probability" value="-0.75"/>
 	<modifier class="detectability" value="0"/>
 </carry_item>
 
