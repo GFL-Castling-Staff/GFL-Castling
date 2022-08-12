@@ -7,6 +7,8 @@
 #include "generic_call_task.as"
 #include "task_sequencer.as"
 #include "GFLhelpers.as"
+#include "event_system.as"
+
 //Adapted and optimizated by Castling Staff
 
 // --------------------------------------------
@@ -446,14 +448,13 @@ class BasicCommandHandler : Tracker {
 		if (!m_metagame.getAdminManager().isAdmin(sender, senderId)) {
 			return;
 		}
-		else if (checkCommand(message, "testa1")) {
-			ProfileSave(m_metagame);
-		}
 		else if (checkCommand(message, "testa2")) {
 			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
 			if (playerInfo is null) return;
-			int characterId= playerInfo.getIntAttribute("character_id");			
-			playAnimationKey(m_metagame,characterId,"throwing, large mecha",true,true);
+			int characterId= playerInfo.getIntAttribute("character_id");
+			int factionId= playerInfo.getIntAttribute("faction_id");
+			string target = playerInfo.getStringAttribute("aim_target");			
+			GFL_event_array.insertLast(GFL_event(characterId,factionId,1,stringToVector3(target),1.0));
 		}
 		// it's a silent server command, check which one
 		if (checkCommand(message, "test2")) {

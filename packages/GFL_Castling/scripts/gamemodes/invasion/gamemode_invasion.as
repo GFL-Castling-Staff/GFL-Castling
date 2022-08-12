@@ -331,6 +331,7 @@ class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 		addTracker(vehicle_spawn(this));
 		addTracker(MatchCompleteReward(this));
 		addTracker(GFLairstrike(this));
+		addTracker(GFL_event_system(this));
 	}
 
 	// --------------------------------------------

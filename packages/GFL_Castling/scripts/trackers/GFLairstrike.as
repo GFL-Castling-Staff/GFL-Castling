@@ -41,6 +41,9 @@ dictionary airstrikeIndex = {
         // 带火箭弹的a10
         {"a10_rockcet_strafe",3},
 
+        // 狙击妖精
+        {"sniper_fairy",4},
+
         // 下面这行是用来占位的，在这之上添加新的即可
         {"666",-1}
 };
@@ -275,6 +278,10 @@ class GFLairstrike : Tracker {
                         Airstrike_strafe.removeAt(a);
                         break;
                     }
+                    case 4:{
+                        // _log("Sniper Fairy activated");
+                        CreateDirectProjectile(m_metagame,start_pos.add(Vector3(0,50,0)),end_pos,"ntw.projectile",cid,fid,300);
+                    }
                     default:
                         break;
                 }
@@ -366,4 +373,8 @@ void insertA10Airstrike(GameMode@ metagame,int characterId,int factionid,Vector3
     }
 
     Airstrike_strafe.insertLast(Airstrike_strafer(characterId,factionid,0,luckyGuyPos,luckyGuyPos2));           
+}
+
+void insertCommonStrike(int characterId,int factionid,int straferkey,Vector3 c_pos,Vector3 s_pos){
+    Airstrike_strafe.insertLast(Airstrike_strafer(characterId,factionid,straferkey,c_pos,s_pos));
 }
