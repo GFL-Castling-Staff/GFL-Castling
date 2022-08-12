@@ -41,8 +41,8 @@ dictionary airstrikeIndex = {
         // 带火箭弹的a10
         {"a10_rockcet_strafe",3},
 
-        // 狙击妖精
-        {"sniper_fairy",4},
+        // M200狙击
+        {"m200_snipe",4},
 
         // 下面这行是用来占位的，在这之上添加新的即可
         {"666",-1}
@@ -280,7 +280,8 @@ class GFLairstrike : Tracker {
                     }
                     case 4:{
                         // _log("Sniper Fairy activated");
-                        CreateDirectProjectile(m_metagame,start_pos.add(Vector3(0,50,0)),end_pos,"mk153_HE.projectile",cid,fid,150);
+                        CreateDirectProjectile(m_metagame,start_pos.add(Vector3(0,50,0)),end_pos,"m200_snipe.projectile",cid,fid,240);
+                        playSoundAtLocation(m_metagame,"m200_fire_snipe.wav",fid,end_pos);
                         Airstrike_strafe.removeAt(a);
                         break;                        
                     }

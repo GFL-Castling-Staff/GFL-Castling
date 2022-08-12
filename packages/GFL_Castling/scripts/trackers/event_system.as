@@ -95,7 +95,7 @@ void excuteSniperFairy(GameMode@ metagame,GFL_event@ eventinfo){
     if(luckyGuyid!=-1){
         const XmlElement@ luckyGuy = getCharacterInfo(metagame, luckyGuyid);
         Vector3 luckyGuyPos = stringToVector3(luckyGuy.getStringAttribute("position"));
-        insertCommonStrike(eventinfo.m_characterId,eventinfo.m_factionid,4,eventinfo.m_pos,luckyGuyPos);                        
+        insertCommonStrike(eventinfo.m_characterId,eventinfo.m_factionid,4,getRandomOffsetVector(eventinfo.m_pos,70.0),luckyGuyPos);                        
     }
     eventinfo.m_phase++;
     if(eventinfo.m_phase>=8){

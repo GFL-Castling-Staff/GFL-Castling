@@ -340,6 +340,12 @@ Vector3 getAimUnitPosition(Vector3 s_pos, Vector3 e_pos, float scale) {
 	return s_pos.add(Vector3(dx*scale/ds,0,dy*scale/ds));
 }
 
+Vector3 getRandomOffsetVector(Vector3 pos,float strike_rand){
+	float rand_x = rand(-strike_rand,strike_rand);
+	float rand_z = rand(-strike_rand,strike_rand);
+	return pos.add(Vector3(rand_x,0,rand_z));
+}
+
 void spawnVehicle(Metagame@ metagame, uint count, uint factionId, Vector3 position, Orientation@ dir, string instanceKey) {
 	for (uint i = 0; i < count; ++i) {
 		metagame.getComms().send(
