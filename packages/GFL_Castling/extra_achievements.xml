@@ -1,3 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
 <achievements>
+    <achievement name="KCCO_Hatred" no_level_title="Stroke Dead-Center" include_in_alltime_stats="0">
+		<level>
+			<notification image="hud_achievement_kcco_ping.png" sound="achievement1.wav" />
+			<rank title="Stroke Dead-Center" image="hud_achievement_kcco.png" />
+		</level>        
+		<level>
+			<notification image="hud_achievement_kcco_ping.png" sound="achievement1.wav" />
+			<rank title="Compression Initiates" image="hud_achievement_kcco.png" />
+		</level>
+		<level>
+			<notification image="hud_achievement_kcco_ping.png" sound="achievement2_1.wav" />
+			<rank title="Re-Ignition" image="hud_achievement_kcco.png" />
+		</level>
+		<level>
+			<notification image="hud_achievement_kcco_ping.png" sound="achievement3.wav" />
+			<rank title="Hornet's Nest" image="hud_achievement_kcco.png" />
+		</level>
+		<level>
+			<notification image="hud_achievement_kcco_ping.png" sound="achievement3.wav" />
+			<rank title="W.A.V.E. ERROR" image="hud_achievement_kcco.png" />
+		</level>        
+		<criteria class="vehicle_destroy" owner="any" description="* destroy %target_count Typhon">
+			<vehicle key="typhon.vehicle" />
+			<level value="5" />
+			<level value="10" />
+			<level value="50" />
+			<level value="100" />
+			<level value="1145141919"/>
+		</criteria>
+		<criteria class="vehicle_destroy" owner="any" description="* destroy %target_count Coeus">
+			<vehicle key="coeus.vehicle" />
+			<level value="5" />
+			<level value="10" />
+			<level value="50" />
+			<level value="100" />
+			<level value="1145141919"/>
+		</criteria>
+		<criteria class="vehicle_destroy" owner="any" description="* destroy %target_count Crius">
+			<vehicle key="sandstorm.vehicle" />
+			<level value="5" />
+			<level value="10" />
+			<level value="50" />
+			<level value="100" />
+			<level value="1145141919"/>
+		</criteria>                
+	</achievement>
+
+    <achievement name="test1" no_level_title="Stroke Dead-Center" include_in_alltime_stats="0">
+		<level>
+			<notification image="hud_achievement_vehicle_destroyer_bronze.png" sound="achievement1.wav" />
+			<rank title="Stroke Dead-Center" image="hud_achievement_vehicle_destroyer_bronze_pin.png" />
+		</level>          
+		<criteria class="vehicle_destroy" owner="enemy" description="* destroy %target_count Typhon">
+			<vehicle key="typhon.vehicle" />
+			<level value="5" />
+		</criteria>
+		<criteria class="vehicle_destroy" owner="enemy" description="* destroy %target_count Coeus">
+			<vehicle key="coeus.vehicle" />
+			<level value="5" />
+		</criteria>
+		<criteria class="vehicle_destroy" owner="enemy" description="* destroy %target_count Crius">
+			<vehicle key="sandstorm.vehicle" />
+			<level value="5" />
+		</criteria>                
+	</achievement>            
 </achievements>

@@ -19,9 +19,9 @@
 	class="2"
 	reload_one_at_a_time="0" 
 	sight_range_modifier="4" 
-	projectile_speed="224.47" 
+	projectile_speed="242.47" 
 	barrel_offset="0.4" 
-	projectiles_per_shot="5" />
+	projectiles_per_shot="4" />
     <inventory  buy_price="45.0" sell_price="9.0" />	
 	<!--Animations-->
 	
@@ -95,7 +95,7 @@
 
     <weak_hand_hold offset="0.3" />
     <projectile file="bullet.projectile" >
-        <result class="blast" damage="3.2" radius="3.5" decal="1" push="0.5" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0" />
+        <result class="blast" damage="10.0" radius="3.5" decal="1" push="0.5" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0" />
     </projectile>
     <!--Accuracy, Movement speed-->
     

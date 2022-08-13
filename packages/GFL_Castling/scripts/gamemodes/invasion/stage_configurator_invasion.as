@@ -1688,24 +1688,24 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.addTracker(PausingKothTimer(m_metagame, stage.m_defenseWinTime));
 		
 		{
-			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0, 0.5, 0.3));     
+			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0, 0.6, 0.3));     
 			f.m_capacityMultiplier = 0.4;                                               
 			stage.m_factions.insertLast(f);
 		}
 		{
-			Faction f(getFactionConfigs()[2], createCommanderAiCommand(2, 0.32, 0.05));          // was 0.38 0.1 (1.82)  
+			Faction f(getFactionConfigs()[2], createCommanderAiCommand(2, 0.2, 0.05));          // was 0.38 0.1 (1.82)  
 			f.m_overCapacity = 50;                                              
 			f.m_capacityOffset = 30;                                                             
 			stage.m_factions.insertLast(f);
 		}
 		{
-			Faction f(getFactionConfigs()[1], createCommanderAiCommand(1, 0.32, 0.05));          // was 0.38 0.1 (1.82)  
+			Faction f(getFactionConfigs()[1], createCommanderAiCommand(1, 0.2, 0.05));          // was 0.38 0.1 (1.82)  
             f.m_overCapacity = 50;                                              
 			f.m_capacityOffset = 30;                                                             
 			stage.m_factions.insertLast(f);
 		}
 		{
-			Faction f(getFactionConfigs()[3], createCommanderAiCommand(3, 0.32, 0.05));          // was 0.38 0.1 (1.82)  
+			Faction f(getFactionConfigs()[3], createCommanderAiCommand(3, 0.2, 0.05));          // was 0.38 0.1 (1.82)  
             f.m_overCapacity = 50;                                              
 			f.m_capacityOffset = 30;                                                             
 			stage.m_factions.insertLast(f);
