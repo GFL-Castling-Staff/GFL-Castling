@@ -21,7 +21,7 @@
 	sight_range_modifier="3.0" 
 	projectile_speed="300" 
 	barrel_offset="0.4" 
-	projectiles_per_shot="6"
+	projectiles_per_shot="4"
 	last_burst_retrigger_time="1"
 	burst_shots="1" />
 
@@ -57,8 +57,8 @@
    <weak_hand_hold offset="0.3" />
     <projectile file="ntw.projectile">
         <result class="blast" 
-        damage="5" 
-        radius="3.5" 
+        damage="8" 
+        radius="4" 
         decal="1" 
         push="0.5" 
         character_state="death"
