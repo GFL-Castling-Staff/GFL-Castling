@@ -10,6 +10,7 @@
 	
 	<physics 
 	max_health="10" 
+	blast_damage_threshold="1.0"
 	mass="30" 
 	extent="1.8 2.4 0.8" 
 	offset="0 0 0" 
@@ -18,10 +19,11 @@
 	collision_model_extent="1.8 2.4 0.8" 
 	visual_offset="0 0 0" 
 	collision_response_factor="0.2" 
-	blast_push_threshold="0.2" 
+	blast_push_threshold="0.6" 
 	vehicle_collision_damage_factor="2.0" />     
-    <sound key="hit" filename="barrier_impact1.wav" />
-    <sound key="hit" filename="barrier_impact2.wav" />
+    <sound key="hit" filename="metal_hit_1.wav" />
+    <sound key="hit" filename="metal_hit_2.wav" />
+    <sound key="hit" filename="metal_hit_6.wav" />
     <effect event_key="destroy" key="other" ref="SmokeMinor" post_processing="1" />
     <effect event_key="destroy" key="other" ref="ShadowSmokeMinor" shadow="1" />
 	<event>
