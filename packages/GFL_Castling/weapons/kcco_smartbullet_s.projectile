@@ -10,7 +10,7 @@
     <hud_icon filename="88r.png" />
 
     <commonness value="0.0" />
-
+    <sound class="result" key="other" fileref="kcco_tracerdart.wav" />
     <sound class="result" key="terrain" copy="other" />
     <sound class="result" key="static_object" copy="other" />
     <sound class="result" key="vehicle" copy="other" />
