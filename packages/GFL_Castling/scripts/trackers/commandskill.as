@@ -279,12 +279,17 @@ dictionary commandSkillIndex = {
         {"gkw_hk416mod3_skill.weapon",36},
         {"gkw_hk416_537_mod3.weapon",36},
         {"gkw_hk416_537_mod3_skill.weapon",36},
-        {"gkw_hk416_3401_mod3.weapon",37},
-        {"gkw_hk416_3401_mod3_skill.weapon",37},
         {"gkw_hk416_6505_mod3.weapon",36},
         {"gkw_hk416_6505_mod3_skill.weapon",36},
 
+        {"gkw_hk416_3401_mod3.weapon",37},
+        {"gkw_hk416_3401_mod3_skill.weapon",37},
+
+        // M3
         {"gkw_m3.weapon",38},
+
+        // 炼金术师 大限
+        {"ff_alchemist.weapon",39},
 
         // 下面这行是用来占位的，在这之上添加新的枪和index即可
         {"666",-1}
@@ -401,6 +406,7 @@ class CommandSkill : Tracker {
                     case 36:{excuteHK416mod3skill(cId,senderId,m_modifer);break;}
                     case 37:{excuteHK416mod3skill(cId,senderId,m_modifer,true);break;}
                     case 38:{excuteGrenadeSkill(cId,senderId,m_modifer,c_weaponType);break;}
+                    case 39:{excuteAlchemistskill(cId,senderId,m_modifer);break;}
 
                     default:
                         break;
@@ -2493,6 +2499,33 @@ class CommandSkill : Tracker {
             playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
         }
     }    
+    void excuteAlchemistskill(int characterId,int playerId,SkillModifer@ modifer){
+        bool ExistQueue = false;
+        int j=-1;
+        for (uint i=0;i<SkillArray.length();i++){
+            if (InCooldown(characterId,modifer,SkillArray[i]) && SkillArray[i].m_weapontype=="ALCHEMIST") {
+                ExistQueue=true;
+                j=i;
+            }
+        }
+        if (ExistQueue){
+            dictionary a;
+            a["%time"] = ""+SkillArray[j].m_time;
+            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            _log("skill cooldown" + SkillArray[j].m_time);
+            return;
+        }
+        addCoolDown("ALCHEMIST",30,characterId,modifer);
+        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+        Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
+        int factionid = character.getIntAttribute("faction_id");
+        //array<string> Voice={
+        //    ""
+        //};
+        //playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+        c_pos = c_pos.add(Vector3(0,1,0));
+        CreateDirectProjectile(m_metagame,c_pos,c_pos.add(Vector3(0,-1,0)),"ff_alchemist_skill_scan.projectile",characterId,factionid,60);	   
+    }  
 }
 
 

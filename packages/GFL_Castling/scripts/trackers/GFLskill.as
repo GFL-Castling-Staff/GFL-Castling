@@ -81,6 +81,9 @@ dictionary gameSkillIndex = {
         // KCCO狙击手脚本弹头
         {"kcco_sniper_scan",22},
 
+        // 玩家炼金术师脚本弹头
+        {"ff_alchemist_skill_scan",23},
+
         // 下面这行是用来占位的，在这之上添加新的技能key和index即可
         {"666",-1}
 };
@@ -820,6 +823,58 @@ class GFLskill : Tracker {
 						}	
 					}		
 					_log("Mode 0");			
+				}			
+				break;
+			}
+
+			case 23: {// 玩家炼金术师脚本榴弹
+				int characterId = event.getIntAttribute("character_id");
+				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+				if (character !is null) {
+					uint factionid = character.getIntAttribute("faction_id");
+					Vector3 pos_smartbullet = stringToVector3(event.getStringAttribute("position"));
+					//获取技能影响的敌人数量
+					m_fnum = m_metagame.getFactionCount();
+					array<const XmlElement@> affectedCharacter;
+					_log("ff_alchemist Scan start successful");
+
+					uint num_jud = 0;
+					uint num_max_character = 10; //最多锁定目标数
+					uint num_max_kill = 20;	//最多斩击次数，目标数不为0则对剩余目标继续用完斩杀次数
+
+					affectedCharacter.insertLast(character);
+
+					for(uint i=0;i<m_fnum;i++) {
+						if(i!=factionid) {
+							array<const XmlElement@> affectedCharacter2;
+							affectedCharacter2 = getCharactersNearPosition(m_metagame,pos_smartbullet,i,25.0f);
+							if (affectedCharacter2 !is null){
+								for(uint x=0;x<affectedCharacter2.length();x++){
+									affectedCharacter.insertLast(affectedCharacter2[x]);
+									num_jud += 1;
+									if(num_jud>num_max_character)break;
+								}
+							}
+						}
+					}
+
+					for (uint i0=1;i0<=num_max_kill;){
+						for (uint i1=0;i1<affectedCharacter.length();i1++)	{
+							i0+=1;
+							int luckyoneid = affectedCharacter[i1].getIntAttribute("id");
+							const XmlElement@ luckyoneC = getCharacterInfo(m_metagame, luckyoneid);
+							if ((luckyoneC.getIntAttribute("id")!=-1)&&(luckyoneid!=characterId)){
+								string luckyonepos = luckyoneC.getStringAttribute("position");
+								Vector3 luckyoneposV = stringToVector3(luckyonepos);
+								CreateDirectProjectile(m_metagame,luckyoneposV.add(Vector3(0,1,0)),luckyoneposV,"ff_alchemist_skill_kill.projectile",characterId,factionid,60);	
+								_log("ff_alchemist kill successful");
+								
+							}				
+						}
+					}
+
+							
+					_log("ff_alchemist skill over.");			
 				}			
 				break;
 			}
