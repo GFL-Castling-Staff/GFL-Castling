@@ -143,7 +143,12 @@ class kill_event : Tracker {
 
         {"666",-1}
     };
-
+    dictionary meleeWeaponList ={
+        {"ff_excutioner_2.weapon",4},
+        {"ff_parw_alina.weapon",4},
+        {"ff_gager_1.weapon",4},
+        {"666",-1}
+    };
     protected void updateHealByKillEvent(int characterid,int factionid,int killstoheal,int timeaddafterkill,string type="weapon"){
         if (killstoheal<=0) return;
         uint jud=0;

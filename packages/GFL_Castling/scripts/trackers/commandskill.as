@@ -237,7 +237,7 @@ dictionary commandSkillIndex = {
         {"gkw_fo12_skill.weapon",26},
 
         // Flashbang
-        {"gkw_79type.weapon",27},
+        {"gkw_type79.weapon",27},
         {"gkw_ump9.weapon",27},
         {"gkw_ump9_409.weapon",27},
         {"gkw_ump9_536.weapon",27},
@@ -2136,7 +2136,7 @@ class CommandSkill : Tracker {
                         playSoundAtLocation(m_metagame,"grenade_throw1.wav",factionid,c_pos,1.0);
                         addCoolDown("Flashbang",16,characterId,modifer);
                     }
-                    if(weaponname=="gkw_79type.weapon") {
+                    if(weaponname=="gkw_type79.weapon") {
                         array<string> Voice={
                             "79type_skilll1.wav",
                             "79type_skilll2.wav",
