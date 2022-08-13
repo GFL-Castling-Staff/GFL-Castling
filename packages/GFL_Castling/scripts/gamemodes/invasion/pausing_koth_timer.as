@@ -21,7 +21,6 @@ class PausingKothTimer : Tracker {
 	void start() {
 		_log("starting PausingKothTimer", 1);
 		m_started = true;
-		playSoundtrack(m_metagame,"soundtrack_koth.wav");
 		m_metagame.getComms().send("<command class='set_game_timer' faction_id='0' pause='1' time='" + m_time + "' />");
 		refresh();
 	}
@@ -43,7 +42,8 @@ class PausingKothTimer : Tracker {
 	protected void refresh() {
         // query about bases
 		array<const XmlElement@> baseList = getBases(m_metagame);
-		
+		playSoundtrack(m_metagame,"soundtrack_koth.wav");
+
 		int winner = -1;
 		bool pause = false;
 		for (uint i = 0; i < baseList.size(); ++i) {
