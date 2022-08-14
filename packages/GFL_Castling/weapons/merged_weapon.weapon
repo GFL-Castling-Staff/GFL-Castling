@@ -18611,7 +18611,7 @@
 
 <weapon key="gkw_consume_javelin.weapon" time_to_live_out_in_the_open="90.0" drop_count_factor_on_death="0.5" drop_count_factor_on_player_death="1.0" on_ground_up="0 0 1" drop_count_limit_in_range="2">
 	<tag name="bazooka"/>
-	<specification retrigger_time="-1" accuracy_factor="1.0" sustained_fire_grow_step="0.4" sustained_fire_diminish_rate="0.1" magazine_size="1" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="1" name="Javelin" class="3" consume="1" reload_one_at_a_time="1" sight_range_modifier="1.75" ai_sight_range_modifier="1.05" projectile_speed="400.0" slot="1" projectiles_per_shot="1" barrel_offset_3d="0 45.2 1.1"/>
+	<specification retrigger_time="-1" accuracy_factor="1.0" sustained_fire_grow_step="0.4" sustained_fire_diminish_rate="0.1" magazine_size="1" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="1" name="Javelin" class="3" reload_one_at_a_time="1" sight_range_modifier="3.0" ai_sight_range_modifier="1.05" projectile_speed="400.0" slot="1" projectiles_per_shot="1" barrel_offset_3d="0 45.2 1.1"/>
 	<animation key="recoil" ref="40"/>
 	<animation key="cycle" animation_key="Brifle1"/>
 	<animation key="reload" ref="35"/>
@@ -43053,7 +43053,7 @@
 	<weak_hand_hold offset="0.4"/>
 	<projectile file="bullet.projectile" radius="1.0">
 	<model filename="agl.xml"/>
-	<result class="blast" radius="3.2" damage="1.5" push="0.1" decal="1" faction_compare="not_equal" damage_origin_vehicle="0"/>
+	<result class="blast" radius="4" damage="2.5" push="0.1" decal="1" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	<effect class="result" key="terrain" ref="SmokeBurst" post_processing="1"/>
 	<effect class="result" key="terrain" ref="Shine" lighting="0"/>
 	<effect class="result" key="terrain" ref="HitTankSparks" lighting="0"/>
@@ -43075,7 +43075,7 @@
 </weapon>
 
 <weapon key="pierre_mg_2.weapon">
-	<specification slot="2" burst_shots="2" retrigger_time="0.33" accuracy_factor="1.0" sustained_fire_grow_step="0.1" sustained_fire_diminish_rate="2.1" sight_range_modifier="2.15" ai_sight_range_modifier="1.05" barrel_offset_3d="10 0 0.62" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="0" suppressed="0" name="Pierre II MG" class="0" projectile_speed="280.0"/>
+	<specification slot="2" burst_shots="2" retrigger_time="0.33" accuracy_factor="1.0" sustained_fire_grow_step="0.1" sustained_fire_diminish_rate="2.1" sight_range_modifier="2.15" ai_sight_range_modifier="1.05" barrel_offset_3d="10 0 0.62" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="0" suppressed="0" name="Pierre II MG" class="0" projectile_speed="320.0"/>
 	<animation key="recoil" animation_key="recoil1"/>
 	<animation key="recoil" animation_key="recoil2"/>
 	<animation key="recoil" animation_key="recoil3"/>
@@ -43092,64 +43092,14 @@
 	<hud_icon filename="gkw_v_LM5.png"/>
 	<commonness value="0.0"/>
 	<weak_hand_hold offset="0.4"/>
-	<projectile file="bullet.projectile" radius="2.8">
-	<result class="hit" kill_probability="2.0" kill_decay_start_time="2.121" kill_decay_end_time="4.422"/>
+	<projectile file="bullet.projectile" radius="2.0">
+	<result class="hit" kill_probability="2.5" kill_decay_start_time="2.121" kill_decay_end_time="4.422"/>
 	<trail probability="0.0"/>
 	</projectile>
 </weapon>
 
-<weapon key="pierre_rocket1.weapon">
-	<specification slot="1" retrigger_time="4.0" accuracy_factor="0.9" sustained_fire_grow_step="-2.0" sustained_fire_diminish_rate="0.9" sight_range_modifier="1.0" ai_sight_range_modifier="1.15" barrel_offset_3d="10 0 0.8" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="0" suppressed="0" name="Pierre II ROCKET" class="0" projectile_speed="82.0"/>
-	<animation key="recoil" animation_key="recoil1"/>
-	<animation key="recoil" animation_key="recoil2"/>
-	<animation key="recoil" animation_key="recoil3"/>
-	<animation key="reload" ref="33"/>
-	<animation key="hold" ref="32"/>
-	<animation key="hold_on_wall" ref="1"/>
-	<animation key="walking" ref="31"/>
-	<sound key="fire" fileref="rocket_fire_FromSAM4.wav" pitch_variety="0.05"/>
-	<sound key="magazine_out" fileref="mg_clip_out.wav"/>
-	<sound key="magazine_in" fileref="mg_clip_in.wav"/>
-	<sound key="cycle" fileref="rifle_chamber.wav"/>
-	<sound class="impact" fileref="rifle_drop.wav"/>
-	<model filename=""/>
-	<hud_icon filename="gkw_v_LM5.png"/>
-	<commonness value="0.0"/>
-	<weak_hand_hold offset="0.4"/>
-	<projectile file="pierre_rocket.projectile">
-	<result class="blast" radius="3.0" damage="2.5" push="0.2" decal="1" faction_compare="not_equal" damage_origin_vehicle="0"/>
-	<trigger class="impact"/>
-	</projectile>
-	<ballistics near_far_distance="1000.0" speed_estimation_near="50.0" speed_estimation_far="50.0" max_speed="125.0" randomness="0.0"/>
-</weapon>
-
-<weapon key="pierre_rocket2.weapon">
-	<specification slot="1" retrigger_time="4.2" accuracy_factor="0.9" sustained_fire_grow_step="-2.0" sustained_fire_diminish_rate="0.9" sight_range_modifier="1.0" ai_sight_range_modifier="1.15" barrel_offset_3d="10 0 0.8" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="0" suppressed="0" name="Pierre II ROCKET" class="0" projectile_speed="82.0"/>
-	<animation key="recoil" animation_key="recoil1"/>
-	<animation key="recoil" animation_key="recoil2"/>
-	<animation key="recoil" animation_key="recoil3"/>
-	<animation key="reload" ref="33"/>
-	<animation key="hold" ref="32"/>
-	<animation key="hold_on_wall" ref="1"/>
-	<animation key="walking" ref="31"/>
-	<sound key="fire" fileref="rocket_fire_FromSAM4.wav" pitch_variety="0.05"/>
-	<sound key="magazine_out" fileref="mg_clip_out.wav"/>
-	<sound key="magazine_in" fileref="mg_clip_in.wav"/>
-	<sound key="cycle" fileref="rifle_chamber.wav"/>
-	<sound class="impact" fileref="rifle_drop.wav"/>
-	<model filename=""/>
-	<hud_icon filename="gkw_v_LM5.png"/>
-	<commonness value="0.0"/>
-	<weak_hand_hold offset="0.4"/>
-	<projectile file="pierre_rocket.projectile">
-	<result class="blast" radius="3.0" damage="2.5" push="0.2" decal="1" faction_compare="not_equal" damage_origin_vehicle="0"/>
-	<trigger class="impact"/>
-	</projectile>
-	<ballistics near_far_distance="1000.0" speed_estimation_near="50.0" speed_estimation_far="50.0" max_speed="125.0" randomness="0.0"/>
-</weapon>
-
 <weapon key="pierre_rocket3.weapon">
-	<specification slot="1" retrigger_time="4.4" accuracy_factor="0.9" sustained_fire_grow_step="-2.0" sustained_fire_diminish_rate="0.9" sight_range_modifier="1.0" ai_sight_range_modifier="1.15" barrel_offset_3d="10 0 0.8" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="0" suppressed="0" name="Pierre II ROCKET" class="0" projectile_speed="82.0"/>
+	<specification slot="1" retrigger_time="5" accuracy_factor="0.9" sustained_fire_grow_step="-2.0" sustained_fire_diminish_rate="0.9" sight_range_modifier="2.0" ai_sight_range_modifier="1.15" barrel_offset_3d="10 0 0.8" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="0" suppressed="0" name="Pierre II ROCKET" class="0" projectile_speed="82.0"/>
 	<animation key="recoil" animation_key="recoil1"/>
 	<animation key="recoil" animation_key="recoil2"/>
 	<animation key="recoil" animation_key="recoil3"/>
@@ -43167,35 +43117,10 @@
 	<commonness value="0.0"/>
 	<weak_hand_hold offset="0.4"/>
 	<projectile file="pierre_rocket.projectile">
-	<result class="blast" radius="3.6" damage="4.5" push="0.2" decal="1" faction_compare="not_equal" damage_origin_vehicle="0"/>
+	<result class="blast" radius="6" damage="5" push="0.2" decal="1" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	<trigger class="impact"/>
 	</projectile>
-	<ballistics near_far_distance="1000.0" speed_estimation_near="50.0" speed_estimation_far="50.0" max_speed="125.0" randomness="0.0"/>
-</weapon>
-
-<weapon key="pierre_rocket4.weapon">
-	<specification slot="1" retrigger_time="4.6" accuracy_factor="0.9" sustained_fire_grow_step="-2.0" sustained_fire_diminish_rate="0.9" sight_range_modifier="1.0" ai_sight_range_modifier="1.15" barrel_offset_3d="10 0 0.8" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="0" suppressed="0" name="Pierre II ROCKET" class="0" projectile_speed="82.0"/>
-	<animation key="recoil" animation_key="recoil1"/>
-	<animation key="recoil" animation_key="recoil2"/>
-	<animation key="recoil" animation_key="recoil3"/>
-	<animation key="reload" ref="33"/>
-	<animation key="hold" ref="32"/>
-	<animation key="hold_on_wall" ref="1"/>
-	<animation key="walking" ref="31"/>
-	<sound key="fire" fileref="rocket_fire_FromSAM4.wav" pitch_variety="0.05"/>
-	<sound key="magazine_out" fileref="mg_clip_out.wav"/>
-	<sound key="magazine_in" fileref="mg_clip_in.wav"/>
-	<sound key="cycle" fileref="rifle_chamber.wav"/>
-	<sound class="impact" fileref="rifle_drop.wav"/>
-	<model filename=""/>
-	<hud_icon filename="gkw_v_LM5.png"/>
-	<commonness value="0.0"/>
-	<weak_hand_hold offset="0.4"/>
-	<projectile file="pierre_rocket.projectile">
-	<result class="blast" radius="3.0" damage="2.5" push="0.2" decal="1" faction_compare="not_equal" damage_origin_vehicle="0"/>
-	<trigger class="impact"/>
-	</projectile>
-	<ballistics near_far_distance="1000.0" speed_estimation_near="50.0" speed_estimation_far="50.0" max_speed="125.0" randomness="0.0"/>
+	<ballistics near_far_distance="1000.0" speed_estimation_near="100.0" speed_estimation_far="100.0" max_speed="160.0" randomness="0.0"/>
 </weapon>
 
 <weapon key="amos_none.weapon">

@@ -2515,14 +2515,15 @@ class CommandSkill : Tracker {
             _log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
-        addCoolDown("ALCHEMIST",30,characterId,modifer);
+        addCoolDown("ALCHEMIST",1,characterId,modifer);
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
         int factionid = character.getIntAttribute("faction_id");
-        //array<string> Voice={
-        //    ""
-        //};
-        //playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+        array<string> Voice={
+            "Alchemist_buhuo_SKILL01_JP.wav",
+            "Alchemist_buhuo_SKILL02_JP.wav"
+        };
+        playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
         c_pos = c_pos.add(Vector3(0,1,0));
         CreateDirectProjectile(m_metagame,c_pos,c_pos.add(Vector3(0,-1,0)),"ff_alchemist_skill_scan.projectile",characterId,factionid,60);	   
     }  
