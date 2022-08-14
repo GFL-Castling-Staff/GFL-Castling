@@ -49,5 +49,5 @@
     <effect class="result" key="character" copy="terrain" />
 
     <effect class="activated" ref="Propulsion" />
-
+	<trail probability="1.0" key="FlamethrowerTrail" />
 </projectile>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projectile class="grenade" name="30mm" slot="1" pulldown_in_air="8.0" key="baibaozi_skill.projectile">
     <tag name="grenade"/>
-    <result class="blast" radius="7" damage="25" push="1.2" decal="1" faction_compare="not_equal" />
+    <result class="blast" radius="7" damage="45" push="1.2" decal="1" faction_compare="not_equal" />
 	 <trigger class="impact"> 
 			<collider class="terrain" enabled="1" />  
 			<collider class="static_object" enabled="1" />  
