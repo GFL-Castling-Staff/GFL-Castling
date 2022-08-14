@@ -90,8 +90,7 @@
     <model filename="gkw_rf_ksvk_mod3.xml" />
     <hud_icon filename="gkw_ksvk_3405.png" />
     <capacity value="1" source="rank" source_value="0.0" />
-        <commonness value="0" in_stock="0" />
-<!--<inventory  price="4.0" />-->
+    <commonness value="0" in_stock="0" />
 	
 	<!--Ballistics-->
 	
@@ -116,11 +115,11 @@
     <!--Weapon specifications-->
     
     <specification 
-	retrigger_time="6"  
+	retrigger_time="-1"  
 	accuracy_factor="1" 
-	sustained_fire_grow_step="0" 
-	sustained_fire_diminish_rate="0.5" 
-	magazine_size="1" 
+	sustained_fire_grow_step="3.0" 
+	sustained_fire_diminish_rate="1.0" 
+	magazine_size="5" 
 	can_shoot_standing="0" 
 	can_shoot_crouching="1"
 	suppressed="0" 
@@ -130,15 +129,15 @@
 	reload_one_at_a_time="0" 
 	projectile_speed="255" 
 	barrel_offset="0.4" 
-	projectiles_per_shot="15" />
+	projectiles_per_shot="1" />
     <inventory  buy_price="300.0" sell_price="300.0" />	
     <next_in_chain key="gkw_ksvkmod3_3405.weapon" share_ammo="0" />
 	<!--Animations-->
 	
     <animation key="cycle" animation_key="Brifle1.8" />
 	<animation key="cycle" stance_key="prone" animation_key="Brifle1.8p" />	
-  	<animation state_key="hold_casual"			animation_key="dancing, kazachok" />
-    <animation key="reload" animation_key="magBrifleRntw" />	
+  	<animation state_key="hold_casual" animation_key="dancing, kazachok" />
+    <animation key="reload" animation_key="reloading, magazine rifle 2.1" />	
 	
 	
 	<!--Sounds-->
@@ -156,13 +155,13 @@
     <model filename="gkw_rf_ksvk_mod3.xml" />
     <hud_icon filename="gkw_ksvk_3405.png" />
     <capacity value="1" source="rank" source_value="0.0" />
-        <commonness value="0" in_stock="0" />
+    <commonness value="0" in_stock="0" />
 	<!--Ballistics-->
 	
 
     <weak_hand_hold offset="0.3" />
     <projectile file="ksvk_mod3.projectile" >
-        <result class="blast" radius="6.5" damage="5" push="0.4" decal="0" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0" />
+        <result class="spawn" instance_class="projectile" instance_key="blast_shard_ksvk_skill.projectile" min_amount="15" max_amount="15" offset="0 1 0" position_spread="0.2 0.2" direction_spread="0.0 0.0" />
     </projectile>
 
     <!--Accuracy, Movement speed-->

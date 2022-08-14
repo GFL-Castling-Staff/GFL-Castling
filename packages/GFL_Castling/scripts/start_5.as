@@ -23,7 +23,7 @@ void main(dictionary@ inputData) {
         settings.m_enemyCapacityFactor = 2.0;
         settings.m_enemyAiAccuracyFactor = 0.88;
         settings.m_initialRp = 1000.0;
-		settings.m_fov=true;
+		settings.m_fov=false;
 		settings.m_xpFactor = 1.1;
 		settings.m_rpFactor = 1.0;
 
