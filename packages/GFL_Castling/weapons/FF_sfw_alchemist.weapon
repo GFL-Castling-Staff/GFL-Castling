@@ -19,7 +19,7 @@
 	name="GK-Alchemist"
 	class="4"
 	sight_range_modifier="0.8"
-	projectile_speed="200"
+	projectile_speed="220"
 	projectiles_per_shot="2"
 	burst_shots="1"
     slot="0" 
@@ -71,7 +71,11 @@
     
     <weak_hand_hold offset="0.1" />
     <projectile file="bullet_sf.projectile">
-		<result class="blast" radius="2.5" damage="2.0" push="0.1" decal="1" faction_compare="not_equal" />
+		<result class="hit" 
+        kill_probability="2.6" 
+        kill_probability_offset_on_successful_hit="2.5"
+        kill_decay_start_time="0.75" 
+        kill_decay_end_time="1.95" />
     </projectile>
     
     <!--Accuracy, Movement speed-->
