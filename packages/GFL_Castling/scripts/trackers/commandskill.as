@@ -799,7 +799,7 @@ class CommandSkill : Tracker {
             _log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
-        addCoolDown("FF_JUDGE",60,characterId,modifer);
+        addCoolDown("FF_JUDGE",40,characterId,modifer);
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         if (character !is null) {
             Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
@@ -1075,7 +1075,7 @@ class CommandSkill : Tracker {
         bool ExistQueue = false;
         int j=-1;
         for (uint i=0;i<SkillArray.length();i++){
-            if (InCooldown(characterId,modifer,SkillArray[i]) && SkillArray[i].m_weapontype=="DESTROYER") {
+            if (InCooldown(characterId,modifer,SkillArray[i]) && SkillArray[i].m_weapontype=="FF_DESTROYER") {
                 ExistQueue=true;
                 j=i;
             }
@@ -1090,7 +1090,7 @@ class CommandSkill : Tracker {
         const XmlElement@ playerinfo = getPlayerInfo(m_metagame, playerId);
 
         if (playerinfo.hasAttribute("aim_target")) {
-            addCoolDown("DESTROYER",30,characterId,modifer);
+            addCoolDown("FF_DESTROYER",25,characterId,modifer);
             string target = playerinfo.getStringAttribute("aim_target");
             Vector3 c_pos = stringToVector3(characterinfo.getStringAttribute("position"));
             Vector3 s_pos = stringToVector3(target);
@@ -1136,7 +1136,7 @@ class CommandSkill : Tracker {
         bool ExistQueue = false;
         int j=-1;
         for (uint i=0;i<SkillArray.length();i++){
-            if (InCooldown(characterId,modifer,SkillArray[i]) && SkillArray[i].m_weapontype=="EXCUTIONER") {
+            if (InCooldown(characterId,modifer,SkillArray[i]) && SkillArray[i].m_weapontype=="FF_EXCUTIONER") {
                 ExistQueue=true;
                 j=i;
             }
@@ -1190,7 +1190,7 @@ class CommandSkill : Tracker {
             }
 
 
-            addCoolDown("EXCUTIONER",30,characterId,modifer);
+            addCoolDown("FF_EXCUTIONER",25,characterId,modifer);
             
         }
     }
@@ -1198,7 +1198,7 @@ class CommandSkill : Tracker {
         bool ExistQueue = false;
         int j=-1;
         for (uint i=0;i<SkillArray.length();i++){
-            if (InCooldown(characterId,modifer,SkillArray[i]) && SkillArray[i].m_weapontype=="ALINA") {
+            if (InCooldown(characterId,modifer,SkillArray[i]) && SkillArray[i].m_weapontype=="FF_ALINA") {
                 ExistQueue=true;
                 j=i;
             }
@@ -1224,7 +1224,7 @@ class CommandSkill : Tracker {
             // "Excutioner_buhuo_SKILL03_JP.wav",
             // };
             // playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
-            addCoolDown("ALINA",30,characterId,modifer);
+            addCoolDown("FF_ALINA",25,characterId,modifer);
             
         }
     }
@@ -2513,7 +2513,7 @@ class CommandSkill : Tracker {
         bool ExistQueue = false;
         int j=-1;
         for (uint i=0;i<SkillArray.length();i++){
-            if (InCooldown(characterId,modifer,SkillArray[i]) && SkillArray[i].m_weapontype=="ALCHEMIST") {
+            if (InCooldown(characterId,modifer,SkillArray[i]) && SkillArray[i].m_weapontype=="FF_ALCHEMIST") {
                 ExistQueue=true;
                 j=i;
             }
@@ -2525,7 +2525,7 @@ class CommandSkill : Tracker {
             _log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
-        addCoolDown("ALCHEMIST",1,characterId,modifer);
+        addCoolDown("FF_ALCHEMIST",25,characterId,modifer);
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
         int factionid = character.getIntAttribute("faction_id");
@@ -2627,20 +2627,25 @@ class CommandSkill : Tracker {
                         "88typeMod_SKILL2_JP.wav",
                         "88typeMod_MEET_JP.wav"
                     };
-                    playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);                    
-                  
-                    playAnimationKey(m_metagame,characterId,"recoil1, big",true,false);
-                    c_pos=c_pos.add(Vector3(0,1,0));
-                    if (checkFlatRange(c_pos,stringToVector3(target),20)){
-                        CreateDirectProjectile(m_metagame,c_pos.add(Vector3(0,2,1)),stringToVector3(target),"88typeGUNDAM_rocket.projectile",characterId,factionid,100);
-                        CreateDirectProjectile(m_metagame,c_pos.add(Vector3(0,2,-1)),stringToVector3(target),"88typeGUNDAM_rocket.projectile",characterId,factionid,100);
+                    playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);     
+
+                    Vector3 v3d_offset = getAimUnitVector(-1.0,c_pos,stringToVector3(target));         
+                    v3d_offset=v3d_offset.add(Vector3(0,2,0));
+                    Vector3 v1 = getVerticalUnitVector(v3d_offset);
+                    Vector3 v2 = getMultiplicationVector(v1,Vector3(-1,1,-1));
+                    v1 = v1.add(v3d_offset);
+                    v2 = v2.add(v3d_offset);
+                    
+                    if (checkFlatRange(c_pos,stringToVector3(target),15)){
+                        CreateDirectProjectile(m_metagame,c_pos.add(v1),stringToVector3(target),"88typeGUNDAM_rocket.projectile",characterId,factionid,100);
+                        CreateDirectProjectile(m_metagame,c_pos.add(v2),stringToVector3(target),"88typeGUNDAM_rocket.projectile",characterId,factionid,100);
                     }
                     else{
-                        CreateProjectile_H(m_metagame,c_pos.add(Vector3(0,2,1)),stringToVector3(target),"88typeGUNDAM_rocket.projectile",characterId,factionid,150.0,15.0);
-                        CreateProjectile_H(m_metagame,c_pos.add(Vector3(0,2,-1)),stringToVector3(target),"88typeGUNDAM_rocket.projectile",characterId,factionid,150.0,15.0);
+                        CreateProjectile_H(m_metagame,c_pos.add(v1),stringToVector3(target),"88typeGUNDAM_rocket.projectile",characterId,factionid,150.0,15.0);
+                        CreateProjectile_H(m_metagame,c_pos.add(v2),stringToVector3(target),"88typeGUNDAM_rocket.projectile",characterId,factionid,150.0,15.0);
                         
                     }
-                    addCoolDown("88typeGUNDAM",1,characterId,modifer);
+                    addCoolDown("88typeGUNDAM",40,characterId,modifer);
                 }
             }
         }
