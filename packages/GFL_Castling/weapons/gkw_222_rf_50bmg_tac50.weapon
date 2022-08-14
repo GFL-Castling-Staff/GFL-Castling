@@ -20,7 +20,7 @@
 	sight_range_modifier="3.2" 
 	projectile_speed="230.85" 
 	barrel_offset="0.57" 
-	projectiles_per_shot="6" />
+	projectiles_per_shot="4" />
     
     <inventory  buy_price="60.0" sell_price="9.0" />	
 	<!--Animations-->
@@ -54,10 +54,10 @@
     <weak_hand_hold offset="0.3" />
     <projectile file="ntw.projectile">
         <result class="blast" 
-        damage="4.3" 
+        damage="8" 
         radius="3.5" 
         decal="1" 
-        push="0" 
+        push="0.2" 
         character_state="death"
         faction_compare="not_equal"
 		/>
