@@ -3,19 +3,19 @@
 <weapon key="chara_mg.weapon">
     <specification 
     slot="2" 
-    retrigger_time="0.02"
+    retrigger_time="0.08"
 	accuracy_factor="0.9" 
-	sustained_fire_grow_step="0.5" 
+	sustained_fire_grow_step="0.3" 
 	sustained_fire_diminish_rate="2.0" 
-    sight_range_modifier="2.0"
-    ai_sight_range_modifier="1.05"
+    sight_range_modifier="1.75"
+    ai_sight_range_modifier="1.00"
     magazine_size="-1" 
     can_shoot_standing="0" 
     can_shoot_crouching="0" 
     suppressed="0" 
     name="Chiara MG" 
     class="0" 
-    projectile_speed="120.0" />
+    projectile_speed="180.0" />
     
     <animation key="recoil" animation_key="recoil1" />
     <animation key="recoil" animation_key="recoil2" />
@@ -37,7 +37,7 @@
 
     <weak_hand_hold offset="0.4" />
     <projectile file="bullet.projectile">
-        <result class="hit"  kill_probability="2.0" kill_decay_start_time="1.933" kill_decay_end_time="3.222" />
+        <result class="hit"  kill_probability="2.0" kill_probability_offset_on_successful_hit="0.4" kill_decay_start_time="1.933" kill_decay_end_time="3.222" />
     </projectile>
     
 <!-- front plate-mid -->    
