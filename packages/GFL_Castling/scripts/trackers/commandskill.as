@@ -291,6 +291,13 @@ dictionary commandSkillIndex = {
         // 炼金术师 大限
         {"ff_alchemist.weapon",39},
 
+        // 汉阳造88式，88雷(普通一颗雷，mod3三颗充能雷)
+        {"gkw_88type.weapon",40},
+        {"gkw_88typemod3.weapon",41},
+
+        // 汉阳造高达，攻顶火箭
+        {"gkw_88typemod3_6503.weapon",42},        
+
         // 下面这行是用来占位的，在这之上添加新的枪和index即可
         {"666",-1}
 };
@@ -407,6 +414,9 @@ class CommandSkill : Tracker {
                     case 37:{excuteHK416mod3skill(cId,senderId,m_modifer,true);break;}
                     case 38:{excuteGrenadeSkill(cId,senderId,m_modifer,c_weaponType);break;}
                     case 39:{excuteAlchemistskill(cId,senderId,m_modifer);break;}
+                    case 40:{excute88typeskill(cId,senderId,m_modifer);break;}
+                    case 41:{excute88typeskill(cId,senderId,m_modifer,true);break;}
+                    case 42:{excute88typeGUNDAMskill(cId,senderId,m_modifer);break;}
 
                     default:
                         break;
@@ -2527,6 +2537,112 @@ class CommandSkill : Tracker {
         c_pos = c_pos.add(Vector3(0,1,0));
         CreateDirectProjectile(m_metagame,c_pos,c_pos.add(Vector3(0,-1,0)),"ff_alchemist_skill_scan.projectile",characterId,factionid,60);	   
     }  
+    void excute88typeskill(int characterId,int playerId,SkillModifer@ modifer,bool mod3=false){
+        bool ExistQueue = false;
+        int j=-1;
+        for (uint i=0;i<SkillArray.length();i++){
+            if (InCooldown(characterId,modifer,SkillArray[i]) && SkillArray[i].m_weapontype=="88type") {
+                ExistQueue=true;
+                j=i;
+                SkillArray[j].addCharge();
+            }
+        }
+        if (ExistQueue && mod3==false){
+            dictionary a;
+            a["%time"] = ""+SkillArray[j].m_time;
+            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            _log("skill cooldown" + SkillArray[j].m_time);
+            return;
+        }
+        if (ExistQueue && mod3 && SkillArray[j].m_charge>3){
+            dictionary a;
+            a["%time"] = ""+SkillArray[j].m_time;
+            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            _log("skill cooldown" + SkillArray[j].m_time);
+            return;
+        }
+        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+        if (character !is null) {
+            const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+            if (player !is null){
+                if (player.hasAttribute("aim_target")) {
+                    string target = player.getStringAttribute("aim_target");
+                    Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
+                    int factionid = character.getIntAttribute("faction_id");
+                    playAnimationKey(m_metagame,characterId,"throwing, upside",true,true);
+                    c_pos=c_pos.add(Vector3(0,1,0));
+                    if(mod3){
+                        if(!ExistQueue){
+                            array<string> Voice={
+                                "88typeMod_SKILL2_JP.wav",
+                            };                        
+                            playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+                            addCoolDown("88type",20,characterId,modifer);
+                        }
+                    }
+                    else{
+                        array<string> Voice={
+                            "88typeMod_MEET_JP.wav"
+                        };
+                        playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);                        
+                        addCoolDown("88type",15,characterId,modifer);
+                    }
+
+                    if (checkFlatRange(c_pos,stringToVector3(target),15)){
+                        CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"hand_88grenade.projectile",characterId,factionid,60);
+                    }
+                    else{
+                        CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"hand_88grenade.projectile",characterId,factionid,30.0,5.0);
+                    }
+                }
+            }
+        }
+    }
+    void excute88typeGUNDAMskill(int characterId,int playerId,SkillModifer@ modifer){
+        bool ExistQueue = false;
+        int j=-1;
+        for (uint i=0;i<SkillArray.length();i++){
+            if (InCooldown(characterId,modifer,SkillArray[i]) && SkillArray[i].m_weapontype=="88typeGUNDAM") {
+                ExistQueue=true;
+                j=i;
+            }
+        }
+        if (ExistQueue){
+            dictionary a;
+            a["%time"] = ""+SkillArray[j].m_time;
+            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            _log("skill cooldown" + SkillArray[j].m_time);
+            return;
+        }
+        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+        if (character !is null) {
+            const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+            if (player !is null){
+                if (player.hasAttribute("aim_target")) {
+                    string target = player.getStringAttribute("aim_target");
+                    Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
+                    int factionid = character.getIntAttribute("faction_id");
+                    
+                    array<string> Voice={
+                        "88typeMod_SKILL2_JP.wav",
+                        "88typeMod_MEET_JP.wav"
+                    };
+                    playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);                    
+                  
+                    playAnimationKey(m_metagame,characterId,"recoil1, big",true,false);
+                    c_pos=c_pos.add(Vector3(0,1,0));
+                    if (checkFlatRange(c_pos,stringToVector3(target),20)){
+                        CreateDirectProjectile(m_metagame,c_pos.add(Vector3(0,2,1)),stringToVector3(target),"88typeGUNDAM_rocket.projectile",characterId,factionid,100);
+                        CreateDirectProjectile(m_metagame,c_pos.add(Vector3(0,2,-1)),stringToVector3(target),"88typeGUNDAM_rocket.projectile",characterId,factionid,100);
+                    }
+                    else{
+                        CreateProjectile_H(m_metagame,c_pos.add(Vector3(0,2,1)),stringToVector3(target),"88typeGUNDAM_rocket.projectile",characterId,factionid,150.0,15.0);
+                        CreateProjectile_H(m_metagame,c_pos.add(Vector3(0,2,-1)),stringToVector3(target),"88typeGUNDAM_rocket.projectile",characterId,factionid,150.0,15.0);
+                        
+                    }
+                    addCoolDown("88typeGUNDAM",1,characterId,modifer);
+                }
+            }
+        }
+    }
 }
-
-
