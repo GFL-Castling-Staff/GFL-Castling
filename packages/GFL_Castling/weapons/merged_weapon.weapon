@@ -43228,7 +43228,7 @@
 </weapon>
 
 <weapon key="chara_mg.weapon">
-	<specification slot="2" retrigger_time="0.08" accuracy_factor="0.9" sustained_fire_grow_step="0.3" sustained_fire_diminish_rate="2.0" sight_range_modifier="1.75" ai_sight_range_modifier="1.00" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="0" suppressed="0" name="Chiara MG" class="0" projectile_speed="180.0"/>
+	<specification slot="2" retrigger_time="0.04" accuracy_factor="0.9" sustained_fire_grow_step="0.3" sustained_fire_diminish_rate="2.0" sight_range_modifier="1.75" ai_sight_range_modifier="1.00" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="0" suppressed="0" name="Chiara MG" class="0" projectile_speed="180.0"/>
 	<sound key="fire" fileref="minigun_From_payday2.wav" pitch_variety="0.05" volume="0.15"/>
 	<sound key="magazine_out" fileref="mg_clip_out.wav"/>
 	<sound key="magazine_in" fileref="mg_clip_in.wav"/>
@@ -43367,8 +43367,8 @@
 </weapon>
 
 <weapon key="pierre_mg.weapon">
-	<specification slot="2" retrigger_time="0.50" accuracy_factor="1.0" sustained_fire_grow_step="0.1" sustained_fire_diminish_rate="2.1" sight_range_modifier="2.15" ai_sight_range_modifier="1.05" barrel_offset_3d="10 0 0.62" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="0" suppressed="0" name="Pierre II MG" class="0" projectile_speed="280.0"/>
-	<ballistics near_far_distance="30.0" speed_estimation_near="360.0" speed_estimation_far="360.0" max_speed="450.0" randomness="0.0" curve_height="1.5" tweak_factor="4.8"/>
+	<specification slot="2" retrigger_time="0.33" accuracy_factor="1.0" sustained_fire_grow_step="0.1" sustained_fire_diminish_rate="2.1" sight_range_modifier="2.15" ai_sight_range_modifier="1.05" barrel_offset_3d="10 0 0.62" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="0" suppressed="0" name="Pierre II MG" class="0" projectile_speed="280.0"/>
+	<ballistics near_far_distance="30.0" speed_estimation_near="240.0" speed_estimation_far="240.0" max_speed="360.0" randomness="0.0" curve_height="1.5" tweak_factor="4.8"/>
 	<animation key="recoil" animation_key="recoil1"/>
 	<animation key="recoil" animation_key="recoil2"/>
 	<animation key="recoil" animation_key="recoil3"/>
@@ -43390,7 +43390,7 @@
 	<weak_hand_hold offset="0.4"/>
 	<projectile file="bullet.projectile" radius="1.0">
 	<model filename="agl.xml"/>
-	<result class="blast" radius="3.2" damage="2.5" push="0.1" decal="1" faction_compare="not_equal" damage_origin_vehicle="0"/>
+	<result class="blast" radius="4" damage="2.5" push="0.1" decal="1" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	<effect class="result" key="terrain" ref="SmokeBurst" post_processing="1"/>
 	<effect class="result" key="terrain" ref="Shine" lighting="0"/>
 	<effect class="result" key="terrain" ref="HitTankSparks" lighting="0"/>
@@ -43412,7 +43412,7 @@
 </weapon>
 
 <weapon key="pierre_mg_2.weapon">
-	<specification slot="2" burst_shots="2" retrigger_time="0.50" accuracy_factor="1.0" sustained_fire_grow_step="0.1" sustained_fire_diminish_rate="2.1" sight_range_modifier="2.15" ai_sight_range_modifier="1.05" barrel_offset_3d="10 0 0.62" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="0" suppressed="0" name="Pierre II MG" class="0" projectile_speed="360.0"/>
+	<specification slot="2" burst_shots="2" retrigger_time="0.33" accuracy_factor="1.0" sustained_fire_grow_step="0.1" sustained_fire_diminish_rate="2.1" sight_range_modifier="2.15" ai_sight_range_modifier="1.05" barrel_offset_3d="10 0 0.62" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="0" suppressed="0" name="Pierre II MG" class="0" projectile_speed="240.0"/>
 	<animation key="recoil" animation_key="recoil1"/>
 	<animation key="recoil" animation_key="recoil2"/>
 	<animation key="recoil" animation_key="recoil3"/>
@@ -43430,13 +43430,13 @@
 	<commonness value="0.0"/>
 	<weak_hand_hold offset="0.4"/>
 	<projectile file="bullet.projectile" radius="2.0">
-	<result class="hit" kill_probability="4.0" kill_decay_start_time="2.121" kill_decay_end_time="4.422"/>
+	<result class="hit" kill_probability="3.0" kill_decay_start_time="2.121" kill_decay_end_time="4.422"/>
 	<trail probability="0.0"/>
 	</projectile>
 </weapon>
 
 <weapon key="pierre_rocket3.weapon">
-	<specification slot="1" retrigger_time="4.4" accuracy_factor="0.9" sustained_fire_grow_step="-2.0" sustained_fire_diminish_rate="0.9" sight_range_modifier="1.0" ai_sight_range_modifier="1.15" barrel_offset_3d="10 0 0.8" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="0" suppressed="0" name="Pierre II ROCKET" class="0" projectile_speed="82.0"/>
+	<specification slot="1" retrigger_time="4.4" accuracy_factor="0.9" sustained_fire_grow_step="-2.0" sustained_fire_diminish_rate="0.9" sight_range_modifier="2.1" ai_sight_range_modifier="1.05" barrel_offset_3d="10 0 0.8" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="0" suppressed="0" name="Pierre II ROCKET" class="0" projectile_speed="82.0"/>
 	<animation key="recoil" animation_key="recoil1"/>
 	<animation key="recoil" animation_key="recoil2"/>
 	<animation key="recoil" animation_key="recoil3"/>
@@ -43524,7 +43524,7 @@
 	<projectile file="pierre_rocket.projectile">
 	<result class="blast" radius="5.6" damage="9.0" push="0.2" decal="1" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	</projectile>
-	<ballistics near_far_distance="1000.0" speed_estimation_near="50.0" speed_estimation_far="50.0" max_speed="125.0" randomness="0.0"/>
+	<ballistics near_far_distance="1000.0" speed_estimation_near="80.0" speed_estimation_far="80.0" max_speed="150.0" randomness="0.0"/>
 </weapon>
 
 <weapon key="amos_emp.weapon">
@@ -44389,7 +44389,7 @@
 	<model mesh_filename="tow_cannon.mesh" texture_filename="tow.png"/>
 	<hud_icon filename="hud_tow.png"/>
 	<commonness value="0.0"/>
-	<projectile file="bunker_rocket.projectile">
+	<projectile file="bunker_rocket.projectile" pulldown_in_air="8" >
 	<result class="blast" radius="3.0" damage="20.0" push="0.5" decal="1" faction_compare="not_equal"/>
 	</projectile>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
@@ -44403,6 +44403,7 @@
 	<effect class="muzzle" ref="CannonSmokeBigSphere"/>
 	<sound class="operation" key="fire" fileref="tow_shot.wav"/>
 	<shield offset="0.3 -0.55 0" extent="0.2 0.8 0.3"/>
+    <ballistics near_far_distance="1000.0" speed_estimation_near="50.0" speed_estimation_far="50.0" max_speed="125.0" randomness="0.0"/>
 </weapon>
 
 </weapons>

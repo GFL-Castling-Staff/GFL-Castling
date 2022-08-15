@@ -3,7 +3,7 @@
 <weapon key="pierre_mg.weapon">
     <specification 
     slot="2" 
-    retrigger_time="0.50"
+    retrigger_time="0.33"
 	accuracy_factor="1.0" 
 	sustained_fire_grow_step="0.1" 
 	sustained_fire_diminish_rate="2.1" 
@@ -71,7 +71,7 @@
     <specification 
     slot="2" 
 	burst_shots="2"
-    retrigger_time="0.50"
+    retrigger_time="0.33"
 	accuracy_factor="1.0" 
 	sustained_fire_grow_step="0.1" 
 	sustained_fire_diminish_rate="2.1" 
