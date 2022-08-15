@@ -479,8 +479,7 @@
 		<ai filename="default.ai" />
 		<resources clear_weapons="1" clear_calls="1">
 			<weapon key="sfw_ripper.weapon" enabled="1"/>
-			<carry_item key="sf_ar.carry_item" enabled="1" />
-			<projectile key="sf_ap_mine.projectile" enabled="1.0" />
+			<carry_item key="sf_ar_1" enabled="1" />
 		</resources>
 	</soldier>
 	<soldier name="sf_ripper_swap" spawn_score="1.0" copy_from="default_spawn_ai">
@@ -488,8 +487,7 @@
 		<ai filename="elite.ai" />
 		<resources clear_weapons="1" clear_calls="1">
 			<weapon key="sfw_ripper_swap.weapon" enabled="1"/>
-			<carry_item key="sf_swap.carry_item" enabled="1" />
-			<projectile key="sf_ap_mine.projectile" enabled="1.0" />
+			<carry_item key="sf_swap_2" enabled="1" />
 		</resources>
 	</soldier>
 	<!-- guard -->
@@ -506,7 +504,6 @@
 		<resources clear_weapons="1" clear_calls="1">
 			<weapon key="sfw_jaeger.weapon" enabled="1"/>
 			<carry_item key="sf_ar.carry_item" enabled="1" />
-			<projectile key="sf_ap_mine.projectile" enabled="1.0" />
 		</resources>
 	</soldier>
 	<soldier name="sf_jaeger_swap" spawn_score="0.5" copy_from="default_spawn_ai">
@@ -514,7 +511,6 @@
 		<resources clear_weapons="1" clear_calls="1">
 			<weapon key="sfw_jaeger_swap.weapon" enabled="1"/>
 			<carry_item key="sf_swap.carry_item" enabled="1" />
-			<projectile key="sf_ap_mine.projectile" enabled="1.0" />
 		</resources>
 	</soldier>
 	<!-- striker -->
@@ -558,6 +554,7 @@
 	</soldier>
 	<!-- 劫豹 -->
 	<soldier name="sfw_jaguar" spawn_score="0.4" squad_size_xp_cap="0.0" copy_from="default_spawn_ai">
+		<character filename="sf_lightmecha.character"/>
 		<ai filename="rocket_mecha.ai" />
 		<model filename="sfd_sangvisfeaal_swap.xml" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_calls="1">
@@ -566,11 +563,37 @@
 		</resources>
 	</soldier>
 	<!-- 巡游者 -->
-	<soldier name="sfw_prowler" spawn_score="2.4" copy_from="default_spawn_ai">
-		<ai filename="eod_mecha.ai" />
+	<soldier name="sfw_prowler" spawn_score="1.6" copy_from="default_spawn_ai">
+		<character filename="sf_lightmecha.character"/>
+		<ai filename="eod_mecha.ai" >
+			<parameter class="burst_time" value="0.6" />
+			<parameter class="burst_time_variance" value="0" />
+			<parameter class="longer_burst_time" value="0.6" />
+			<parameter class="longer_burst_time_variance" value="0" />
+			<parameter class="wait_time" value="0.4" />
+			<parameter class="wait_time_variance" value="0.2" />
+			<parameter class="fighting_regular_move_radius" value="15.0" />
+		</ai>
 		<model filename="sfd_prowler_from_melondove.xml" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_calls="1">
 			<weapon key="sfw_prowler.weapon" enabled="1"/>
+			<carry_item key="sf_lightmecha.carry_item" enabled="1" />
+		</resources>
+	</soldier>
+	<soldier name="sfw_prowler_sweap" spawn_score="0.8" copy_from="default_spawn_ai">
+		<character filename="sf_lightmecha.character"/>
+		<ai filename="eod_mecha.ai" >
+			<parameter class="burst_time" value="0.5" />
+			<parameter class="burst_time_variance" value="0" />
+			<parameter class="longer_burst_time" value="0.5" />
+			<parameter class="longer_burst_time_variance" value="0" />
+			<parameter class="wait_time" value="0.3" />
+			<parameter class="wait_time_variance" value="0.2" />
+			<parameter class="fighting_regular_move_radius" value="18.0" />
+		</ai>
+		<model filename="sfd_prowler_swap_from_gua.xml" />
+		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_calls="1">
+			<weapon key="sfw_prowler_swap.weapon" enabled="1"/>
 			<carry_item key="sf_lightmecha.carry_item" enabled="1" />
 		</resources>
 	</soldier>

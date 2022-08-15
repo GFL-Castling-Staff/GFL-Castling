@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<character filename="default_base.character">
+	<parameter class="can_use_inventory" value="0" />  
+	<parameter class="can_use_vehicles" value="0" />  
+	<animation key="still" target_key="still,jaguar" />
+	<animation key="still against wall" target_key="still,jaguar" />
+	<animation key="still, heavy weapon" target_key="still,jaguar" />
+    <animation key="prone, moving forwards" target_key="still,jaguar" />
+	
+	<animation key="going prone" target_key="still,jaguar" />
+	<animation key="leaving prone" target_key="still,jaguar" />
+    <animation key="dive" target_key="still,jaguar" />
+	<animation key="jumping" target_key="still,jaguar" />
+	<animation key="lifting up" target_key="still,jaguar" />
+	<animation key="throwing self over" target_key="still,jaguar" />
+	<animation key="falling" target_key="still,jaguar" />
+    <animation key="swimming still" target_key="still,jaguar" />
+	<animation key="swimming forwards" target_key="still,jaguar" />
+    <animation key="climbing ladder, still" target_key="still,jaguar" />
+	<animation key="climbing ladder" target_key="still,jaguar" />
+	<animation key="climbing ladder ending" target_key="still,jaguar" />
+    <animation key="celebrating" target_key="still,jaguar" />
+	<animation key="celebrating, shooting" target_key="still,jaguar" />
+	<animation key="surrender" target_key="still,jaguar" />
+</character>
