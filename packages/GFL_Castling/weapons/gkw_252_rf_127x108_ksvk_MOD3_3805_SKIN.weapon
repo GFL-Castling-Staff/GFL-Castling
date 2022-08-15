@@ -152,9 +152,8 @@
 	
 
     <weak_hand_hold offset="0.3" />
-    <projectile file="ksvk_mod3.projectile" >
-        <result class="spawn" instance_class="projectile" instance_key="blast_shard_ksvk_skill.projectile" min_amount="15" max_amount="15" offset="0 1 0" position_spread="0.2 0.2" direction_spread="0.0 0.0" />
-    </projectile>
+    <projectile file="ksvk_mod3_skill.projectile" />
+
 
     <!--Accuracy, Movement speed-->
  	<stance state_key="running" accuracy="1.0" />   

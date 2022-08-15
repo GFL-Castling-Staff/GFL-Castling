@@ -32,7 +32,7 @@
     </projectile>
     <projectile class="grenade" name="" key="blast_shard_ksvk_skill.projectile" slot="2" radius="0.15">
         <result class="blast" radius="6.5" damage="3.1" push="0" decal="1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0" />
-        <trigger class="time" time_to_live="0.0"/>
+        <trigger class="time" time_to_live="0.1"/>
         <rotation class="random" />
         <model mesh_filename="" />
         <hud_icon filename="88r.png" />

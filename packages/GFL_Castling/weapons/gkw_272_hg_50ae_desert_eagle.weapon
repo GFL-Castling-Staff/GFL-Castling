@@ -26,6 +26,12 @@
     <weak_hand_hold offset="0.1" />
     <projectile file="bullet.projectile" time_to_live="0.25">
         <result class="blast" damage="3.1" radius="4" decal="0" push="0.3" character_state="death" faction_compare="not_equal"/>
+        <effect class="result" key="terrain" ref="Ct_Shine_50AE"/>
+		<effect class="result" key="other" ref="Ct_Shine_50AE"/>
+		<effect class="result" key="vehicle" ref="Ct_Shine_50AE"/>
+		<effect class="result" key="character" ref="Ct_Shine_50AE"/>
+		<effect class="result" key="shield" ref="Ct_Shine_50AE"/>
+        <effect class="result" key="static_object" ref="Ct_Shine_50AE"/>
     </projectile>
     <stance state_key="running" accuracy="0.8" />
     <stance state_key="walking" accuracy="0.85" />

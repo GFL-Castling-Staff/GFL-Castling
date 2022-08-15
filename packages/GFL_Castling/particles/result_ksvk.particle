@@ -16,17 +16,11 @@ particle_system result_ksvk
 		colour_range_start	1 1 1 1
 		colour_range_end	1 1 1 1
 		direction	0 1 0
-		emission_rate	150
+		emission_rate	41
 		position	0 0 0
-		velocity	0
-		velocity_min	1
-		velocity_max	8
-		time_to_live	0.08
-		time_to_live_min	0.08
-		time_to_live_max	0.08
+		velocity	0.1
+		time_to_live	0.2
 		duration	0.05
-		duration_min	0.05
-		duration_max	0.05
 		width	0.25
 		height	0.25
 		depth	0.2

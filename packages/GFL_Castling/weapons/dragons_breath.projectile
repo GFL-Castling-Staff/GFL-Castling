@@ -74,25 +74,21 @@
 
 
 
-	<!-- <effect class="activated" ref="SmokePropulsion" /> -->
 	<effect class="activated" ref="DragonPropulsion" lighting="0" />   
 	<effect class="activated" ref="FlameSparkle" lighting="0" /> 
 
-	<!-- <effect class="result" ref="SmokePropulsionEnd" /> -->
 	<effect class="result" key="terrain" ref="FlamePropulsionEnd" lighting="0" /> 
 	<effect class="result" key="terrain" ref="FlameSparkleEnd" lighting="0" />
 	<effect class="result" key="terrain" ref="DragonSparkle" lighting="0" />
 	<effect class="result" key="terrain" ref="DragonFlame2" lighting="0" />    
    
 
-	<!-- <effect class="result" type="splat_map" surface_tag="" size="3.0" atlas_index="0" layer="1" /> -->
 	<effect class="result" type="splat_map" surface_tag="" size="2.0" atlas_index="4" layer="0" />
 
-    
     <effect class="result" key="other" copy="terrain" />
     <effect class="result" key="vehicle" copy="terrain" />
     <effect class="result" key="static_object" copy="terrain" />    
-    
+    <effect class="result" key="character" ref="ShieldBurst" />   
     <effect class="result" key="shield" ref="ShieldBurst" />   
 
 
