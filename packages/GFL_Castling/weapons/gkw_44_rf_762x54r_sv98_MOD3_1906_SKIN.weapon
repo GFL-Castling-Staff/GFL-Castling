@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapons>
     <weapon key="gkw_sv98mod3_1906.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-        <specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="1.5" sustained_fire_diminish_rate="2" magazine_size="10" can_shoot_standing="1" suppressed="1" name="SV-98 (MOD3)-[Piercing the Heart]" class="2" reload_one_at_a_time="0" sight_range_modifier="3.5" projectile_speed="230" barrel_offset="0.4" projectiles_per_shot="6" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
+        <specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="1.5" sustained_fire_diminish_rate="2" magazine_size="10" can_shoot_standing="1" suppressed="1" name="SV-98 (MOD3)-[Piercing the Heart]" class="2" reload_one_at_a_time="0" sight_range_modifier="3.5" projectile_speed="230" barrel_offset="0.7" projectiles_per_shot="6" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
         <inventory buy_price="198.0" sell_price="98.0"/>
         <next_in_chain key="gkw_sv98mod3_1906_skill.weapon" share_ammo="0"/>
         <animation state_key="hold_casual" animation_key="dancing, kazachok"/>
@@ -52,7 +52,7 @@
     </weapon>
     
     <weapon key="gkw_sv98mod3_1906_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-        <specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="2.0" magazine_size="10" suppressed="1" name="SV-98 (MOD3)-[Piercing the Heart]-[Shadowy Savior]" class="2" sight_range_modifier="3" projectile_speed="220" barrel_offset="0.4" projectiles_per_shot="8" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
+        <specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="2.0" magazine_size="10" suppressed="1" name="SV-98 (MOD3)-[Piercing the Heart]-[Shadowy Savior]" class="2" sight_range_modifier="3" projectile_speed="220" barrel_offset="0.7" projectiles_per_shot="8" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
         <next_in_chain key="gkw_sv98mod3_1906.weapon" share_ammo="0"/>
         <animation state_key="hold_casual" animation_key="dancing, kazachok"/>
         <animation key="cycle" animation_key="Brifle1"/>
