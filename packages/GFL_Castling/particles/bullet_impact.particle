@@ -215,3 +215,181 @@ particle_system Bullet_Burnout
         rotation_range_end 360
     }      
 }
+
+particle_system BulletImpactDust4
+{
+	quota	1000
+	material Dust3
+	particle_width 0.2
+	particle_height	0.2
+	cull_each	false
+	renderer	billboard
+	billboard_type	point
+	common_direction 0 -1 0
+
+    emitter Point
+    {
+        angle 135
+        colour 1 1 1 0.5
+        direction 0 0 0
+        emission_rate 500
+        position 0 0.05 0
+        time_to_live 3.0
+        velocity_min 1.0
+        velocity_max 3.0
+        duration 0.1
+    }
+
+	affector Scaler
+	{
+		rate 1.0
+	}    
+
+    affector ColourFader
+    {
+        red 0
+        green 0
+        blue 0
+        alpha -1
+    }
+
+    affector Rotator
+    {
+        rotation_range_start 0
+		rotation_range_end 360
+        rotation_speed_range_start -90
+        rotation_speed_range_end 90
+    }
+}
+
+particle_system BulletImpactDust5
+{
+	quota	1000
+	material Dust3
+	particle_width 0.2
+	particle_height	0.2
+	cull_each	false
+	renderer	billboard
+	billboard_type	point
+	common_direction 0 -1 0
+
+    emitter Point
+    {
+        angle 75
+        colour 1 1 1 0.5
+        direction 0 0 0
+        emission_rate 500
+        position 0 0.05 0
+        time_to_live 2.0
+        velocity_min 1.5
+        velocity_max 4.5
+        duration 0.1
+    }
+
+	affector Scaler
+	{
+		rate 0.75
+	}    
+
+    affector ColourFader
+    {
+        red 0
+        green 0
+        blue 0
+        alpha -1
+    }
+
+    affector Rotator
+    {
+        rotation_range_start 0
+		rotation_range_end 360
+        rotation_speed_range_start -90
+        rotation_speed_range_end 90
+    }
+}
+
+particle_system BulletImpactDust6
+{
+	quota	1000
+	material Dust3
+	particle_width 0.2
+	particle_height	0.2
+	cull_each	false
+	renderer	billboard
+	billboard_type	point
+	common_direction 0 -1 0
+
+    emitter Point
+    {
+        angle 45
+        colour 1 1 1 0.5
+        direction 0 0 0
+        emission_rate 500
+        position 0 0.05 0
+        time_to_live 1.0
+        velocity_min 2.5
+        velocity_max 7.5
+        duration 0.1
+    }
+
+	affector Scaler
+	{
+		rate 0.5
+	}    
+
+    affector ColourFader
+    {
+        red 0
+        green 0
+        blue 0
+        alpha -1
+    }
+
+    affector Rotator
+    {
+        rotation_range_start 0
+		rotation_range_end 360
+        rotation_speed_range_start -90
+        rotation_speed_range_end 90
+    }
+}
+
+particle_system Bullet_Burnout_20mm
+{
+    quota 20
+    material common_burnout
+    particle_width 1.3
+    particle_height	1.3
+    renderer billboard
+	billboard_type	point
+	common_direction 0 -1 0
+
+    emitter Point
+    {
+        angle 0
+        position 0 0.1 0
+        direction 0 1 0
+        velocity 0.01
+        time_to_live 5.0
+        duration 0.05
+        emission_rate 21
+    }
+
+    affector ColourImage{
+        image bullet_burnout.png
+    }
+    
+	affector ColourFader
+	{
+		red 	0
+		green	0
+		blue	0
+		alpha	-0.1
+	}
+
+    affector Rotator
+    {
+        rotation_range_start 0
+        rotation_range_end 360
+    }      
+}

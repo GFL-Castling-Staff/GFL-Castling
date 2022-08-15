@@ -7,7 +7,7 @@ material common_shine
 	{
 		pass
 		{
-			lighting on
+			lighting off
 			scene_blend add
 
 			depth_write off
@@ -99,6 +99,27 @@ material common_point_sprite
             texture_unit
             {
                 texture ct_common_point.png
+            }
+        }
+    }
+}
+
+material common_burnout
+{
+    receive_shadows off
+    technique
+    {
+        pass
+        {
+            lighting off
+            scene_blend add
+            depth_write off
+            fog_override true
+            
+            texture_unit
+            {
+                texture ct_burnout.png
+				tex_address_mode clamp
             }
         }
     }

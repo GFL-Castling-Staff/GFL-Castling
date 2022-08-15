@@ -51,18 +51,18 @@
 
     <sound class="result" key="static_object" copy="terrain" />
     
-    <effect class="result" key="terrain" ref="hitGround" use_surface_color="1" />
-    <effect class="result" key="terrain" ref="BulletImpactDust1" />
-    <effect class="result" key="terrain" ref="BulletImpactDust2" />
-    <effect class="result" key="terrain" ref="BulletImpactDust3" />
-    <effect class="result" key="terrain" ref="Shine" lighting="0" />
+    <effect class="result" key="terrain" ref="hitGround_20mm" use_surface_color="1" />
+    <effect class="result" key="terrain" ref="BulletImpactDust4" />
+    <effect class="result" key="terrain" ref="BulletImpactDust5" />
+    <effect class="result" key="terrain" ref="BulletImpactDust6" />
+    <effect class="result" key="terrain" ref="Ct_Shine" lighting="0" />
     <effect class="result" key="terrain" ref="Godray" lighting="0" />
     <effect class="result" key="terrain" ref="LowDust"/>
 
     <effect class="result" key="vehicle" ref="Burst" use_surface_color="1" />
     <effect class="result" key="vehicle" ref="hitMetal" />
     <effect class="result" key="vehicle" ref="hitMetal_1" />
-    <effect class="result" key="vehicle" ref="Shine" lighting="0" />
+    <effect class="result" key="vehicle" ref="Ct_Shine" lighting="0" />
     <effect class="result" key="vehicle" ref="Godray" lighting="0" />
 
     <effect class="result" key="other" ref="BulletImpact" />
@@ -71,12 +71,12 @@
     <effect class="result" key="character" ref="BulletImpact" />
     <effect class="result" key="shield" ref="BulletImpact" />
 
-    <effect class="result" key="terrain" ref="Bullet_Burnout"/>
+    <effect class="result" key="terrain" ref="Bullet_Burnout_20mm"/>
     <effect class="result" key="static_object" copy="terrain" />
 
     <effect class="result" key="shield" ref="hitMetal" />
     <effect class="result" key="shield" ref="hitMetal_1" />
-    <effect class="result" key="shield" ref="Shine" lighting="0" />
+    <effect class="result" key="shield" ref="Ct_Shine" lighting="0" />
     <effect class="result" key="shield" ref="Godray" lighting="0" />
 
     <effect class="result" type="splat_map" surface_tag="" size="3.0" atlas_index="0" layer="1" />
