@@ -7,29 +7,8 @@ material common_shine
 	{
 		pass
 		{
-			lighting off
+			lighting on
 			scene_blend add
-
-			depth_write off
-			fog_override true
-
-			texture_unit 
-			{
-				texture ct_light.png
-			}
-		}
-	}
-}
-
-material common_shine2
-{
-    receive_shadows off
-	technique
-	{
-		pass
-		{
-			lighting off
-			scene_blend alpha_blend
 
 			depth_write off
 			fog_override true
