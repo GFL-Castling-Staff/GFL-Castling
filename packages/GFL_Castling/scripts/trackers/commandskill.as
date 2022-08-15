@@ -297,6 +297,7 @@ dictionary commandSkillIndex = {
 
         // 汉阳造高达，攻顶火箭
         {"gkw_88typemod3_6503.weapon",42},        
+        {"gkw_88typemod3_6503_skill.weapon",42},        
 
         // 下面这行是用来占位的，在这之上添加新的枪和index即可
         {"666",-1}
