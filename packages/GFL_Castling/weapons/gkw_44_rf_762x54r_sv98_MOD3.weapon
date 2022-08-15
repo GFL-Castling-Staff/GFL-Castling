@@ -5,8 +5,8 @@
     <specification 
 	retrigger_time="-1.0" 
 	accuracy_factor="1.0" 
-	sustained_fire_grow_step="0" 
-	sustained_fire_diminish_rate="1.3" 
+	sustained_fire_grow_step="1.5" 
+	sustained_fire_diminish_rate="2" 
 	magazine_size="10" 
 	can_shoot_standing="1" 
 	suppressed="1" 
@@ -21,7 +21,7 @@
     <commonness value="0.01" in_stock="0" can_respawn_with="1" />
     <!--Animations-->
     <next_in_chain key="gkw_sv98mod3_skill.weapon" share_ammo="0"/>
-    <animation state_key="hold_casual"			animation_key="dancing, kazachok" />
+    <animation state_key="hold_casual" animation_key="dancing, kazachok" />
     <animation key="cycle" animation_key="Brifle1" />
     <animation key="cycle" stance_key="prone" animation_key="Brifle1p" />
     <animation key="reload" animation_key="reloading, magazine rifle 1.5" />
@@ -37,7 +37,6 @@
     <model filename="gkw_rf_sv-98_mod3 98.xml" />
     <hud_icon filename="gkw_sv98mod3.png" />
     <capacity value="1" source="rank" source_value="0.0" />
-        <commonness in_stock="0" can_respawn_with="1" />
     <!--Ballistics-->
     <weak_hand_hold offset="0.3" />
     <projectile file="bullet.projectile" can_be_detected_by_footmen="0">
@@ -46,6 +45,7 @@
         kill_probability_offset_on_successful_hit="2.0"
         kill_decay_start_time="2.195" 
         kill_decay_end_time="3.659" />
+        <trail probability="1.0" key="BulletApTrail"/>
     </projectile>
     <!--Accuracy, Movement speed-->
     <stance state_key="running" accuracy="1.1" />
@@ -63,11 +63,11 @@
     <specification 
 	retrigger_time="-1.0" 
 	accuracy_factor="1.0" 
-	sustained_fire_grow_step="5.0" 
+	sustained_fire_grow_step="2.0" 
 	sustained_fire_diminish_rate="2.0" 
 	magazine_size="10" 
 	suppressed="1" 
-	name="SV-98(MOD3)-[Shadowy Savior]" 
+	name="SV-98 (MOD3)-[Shadowy Savior]" 
 	class="2" 
 	sight_range_modifier="3" 
 	projectile_speed="220" 
@@ -75,9 +75,9 @@
     projectiles_per_shot="8" />
     <!--Animations-->
     <next_in_chain key="gkw_sv98mod3.weapon" share_ammo="0"/>
-    <animation state_key="hold_casual"			animation_key="dancing, kazachok" />
-    <animation key="cycle" animation_key="Brifle0.8" />
-    <animation key="cycle" stance_key="prone" animation_key="Brifle0.8p" />
+    <animation state_key="hold_casual" animation_key="dancing, kazachok" />
+    <animation key="cycle" animation_key="Brifle1" />
+    <animation key="cycle" stance_key="prone" animation_key="Brifle1p" />
     <animation key="reload" animation_key="reloading, magazine rifle 2.1" />
     <animation state_key="next_in_chain_in" animation_key="change weapon in ssass" />
     <!--Sounds-->
@@ -99,10 +99,11 @@
     <projectile file="bullet.projectile" can_be_detected_by_footmen="0">
         <result class="blast" 
         damage="0.1"
-        radius="3.0"
+        radius="1.5"
         push="0.2"
         charater_state="death"
         faction_compare="not_equal" />
+        <trail probability="1.0" key="BulletApTrail"/>
     </projectile>
     <!--Accuracy, Movement speed-->
     <stance state_key="running" accuracy="1.1" />
@@ -113,7 +114,6 @@
     <stance state_key="crouching" accuracy="1.1" />
     <stance state_key="prone" accuracy="1.1" />
     <stance state_key="over_wall" accuracy="1.1" />
-    <modifier class="speed" value="-0.4" />
     <modifier class="detectability" value="-0.2" />
 </weapon>
 </weapons>
