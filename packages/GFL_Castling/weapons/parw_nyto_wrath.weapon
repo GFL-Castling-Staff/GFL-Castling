@@ -41,7 +41,6 @@
     <stance state_key="over_wall" accuracy="1" />
 
     <hud_icon filename="parw_nytoblackhammer.png" />
-	<drop_on_death_result class="spawn" instance_class="grenade" instance_key="wild_gifts.drop_reward" min_amount="1.0" max_amount="1.0" offset="0 1.0 0" position_spread="0 0" direction_spread="0 0" />
     <effect class="muzzle" ref="sawsnone" />
 
     <commonness value="0.00001" can_respawn_with="1" in_stock="1" />

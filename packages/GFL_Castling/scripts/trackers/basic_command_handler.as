@@ -555,7 +555,21 @@ class BasicCommandHandler : Tracker {
 		} else if (checkCommand(message, "jeep")) {
 			spawnInstanceNearPlayer(senderId, "jeep.vehicle", "vehicle");      
 		} else  if(checkCommand(message, "c4")) {
-			spawnInstanceNearPlayer(senderId, "c4.projectile", "projectile");      
+			spawnInstanceNearPlayer(senderId, "c4.projectile", "projectile");
+		} else  if(checkCommand(message, "rewardtest")) {
+			spawnInstanceNearPlayer(senderId, "city_gifts.drop_reward", "projectile");
+			spawnInstanceNearPlayer(senderId, "city_gifts.drop_reward", "grenade");
+			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
+			const XmlElement@ characterInfo = getCharacterInfo(m_metagame, playerInfo.getIntAttribute("character_id"));
+			Vector3 pos = stringToVector3(characterInfo.getStringAttribute("position"));					
+			string c = 
+				"<command class='create_instance'" +
+				" faction_id='" + 0 + "'" +
+				" instance_class='grenade'" +
+				" instance_key='" + "city_gifts.drop_reward" + "'" +
+				" position='" + pos.toString() + "'" +
+				" character_id='" + playerInfo.getIntAttribute("character_id") + "'/>";
+			m_metagame.getComms().send(c);				      
 		} else if (checkCommand(message, "dc")) {
 			spawnInstanceNearPlayer(senderId, "cover_resource.weapon", "weapon");
 		} else if (checkCommand(message, "dgl")) {

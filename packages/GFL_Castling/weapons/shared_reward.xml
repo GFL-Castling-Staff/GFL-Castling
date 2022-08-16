@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projectiles>
-    <projectile class="grenade" name="City Gifts" key="city_gifts.drop_reward" slot="0" on_ground_up="0 0 0" radius="0.75" can_be_disarmed="0" time_to_live_out_in_the_open="0.0" use_time_to_live="1" time_to_live="60" can_be_detected_by_driver="1" can_be_detected_by_footmen="1" >
+    <projectile class="grenade" name="City Gifts" key="city_gifts.drop_reward" slot="0" on_ground_up="0 1 0" radius="0.15" can_be_disarmed="0" time_to_live_out_in_the_open="0.0" use_time_to_live="1" time_to_live="60" can_be_detected_by_driver="1" can_be_detected_by_footmen="1" >
         
         <trigger class="impact">
             <collider class="terrain" enabled="0" />
             <collider class="static_object" enabled="0" />
             <collider class="vehicle" enabled="0" />
-            <collider class="character" enabled="1" faction_compare="not_equal"/>
+            <collider class="character" enabled="1" faction_compare="equal"/>
         </trigger>
         <result class="notify_script" key="share_reward_1" />
 
@@ -18,19 +18,19 @@
 
         <capacity value="1" source="rank" source_value="0.0" />
 
-        <sound class="result" key="other" fileref="holy_suck.wav" volume="1.8" />
+        <sound class="result" key="other" fileref="holy_suck.wav" volume="2.5" />
         <sound class="result" key="terrain" copy="other" />
         <sound class="result" key="static_object" copy="other" />
         <sound class="result" key="vehicle" copy="other" />
         <sound class="result" key="character" copy="other" />
     </projectile>
-    <projectile class="grenade" name="Wild Gifts" key="wild_gifts.drop_reward" slot="0" on_ground_up="0 0 0" radius="0.75" can_be_disarmed="0" time_to_live_out_in_the_open="0.0" use_time_to_live="1" time_to_live="60" can_be_detected_by_driver="1" can_be_detected_by_footmen="1" >
+    <projectile class="grenade" name="Wild Gifts" key="wild_gifts.drop_reward" slot="0" on_ground_up="0 1 0" radius="0.15" can_be_disarmed="0" time_to_live_out_in_the_open="0.0" use_time_to_live="1" time_to_live="60" can_be_detected_by_driver="1" can_be_detected_by_footmen="1" >
         
         <trigger class="impact">
             <collider class="terrain" enabled="0" />
             <collider class="static_object" enabled="0" />
             <collider class="vehicle" enabled="0" />
-            <collider class="character" enabled="1" faction_compare="not_equal"/>
+            <collider class="character" enabled="1" faction_compare="equal"/>
         </trigger>
         <result class="notify_script" key="share_reward_2" />
 
@@ -42,19 +42,19 @@
 
         <capacity value="1" source="rank" source_value="0.0" />
 
-        <sound class="result" key="other" fileref="holy_suck.wav" volume="1.8" />
+        <sound class="result" key="other" fileref="holy_suck.wav" volume="2.5" />
         <sound class="result" key="terrain" copy="other" />
         <sound class="result" key="static_object" copy="other" />
         <sound class="result" key="vehicle" copy="other" />
         <sound class="result" key="character" copy="other" />
     </projectile>    
-    <projectile class="grenade" name="Snow Gifts" key="snow_gifts.drop_reward" slot="0" on_ground_up="0 0 0" radius="0.75" can_be_disarmed="0" time_to_live_out_in_the_open="0.0" use_time_to_live="1" time_to_live="60" can_be_detected_by_driver="1" can_be_detected_by_footmen="1" >
+    <projectile class="grenade" name="Snow Gifts" key="snow_gifts.drop_reward" slot="0" on_ground_up="0 1 0" radius="0.15" can_be_disarmed="0" time_to_live_out_in_the_open="0.0" use_time_to_live="1" time_to_live="60" can_be_detected_by_driver="1" can_be_detected_by_footmen="1" >
         
         <trigger class="impact">
             <collider class="terrain" enabled="0" />
             <collider class="static_object" enabled="0" />
             <collider class="vehicle" enabled="0" />
-            <collider class="character" enabled="1" faction_compare="not_equal"/>
+            <collider class="character" enabled="1" faction_compare="equal"/>
         </trigger>
         <result class="notify_script" key="share_reward_3" />
 
@@ -66,19 +66,19 @@
 
         <capacity value="1" source="rank" source_value="0.0" />
 
-        <sound class="result" key="other" fileref="holy_suck.wav" volume="1.8" />
+        <sound class="result" key="other" fileref="holy_suck.wav" volume="2.5" />
         <sound class="result" key="terrain" copy="other" />
         <sound class="result" key="static_object" copy="other" />
         <sound class="result" key="vehicle" copy="other" />
         <sound class="result" key="character" copy="other" />
     </projectile>    
-    <projectile class="grenade" name="Forest Gifts" key="forest_gifts.drop_reward" slot="0" on_ground_up="0 0 0" radius="0.75" can_be_disarmed="0" time_to_live_out_in_the_open="0.0" use_time_to_live="1" time_to_live="60" can_be_detected_by_driver="1" can_be_detected_by_footmen="1" >
+    <projectile class="grenade" name="Forest Gifts" key="forest_gifts.drop_reward" slot="0" on_ground_up="0 1 0" radius="0.15" can_be_disarmed="0" time_to_live_out_in_the_open="0.0" use_time_to_live="1" time_to_live="60" can_be_detected_by_driver="1" can_be_detected_by_footmen="1" >
         
         <trigger class="impact">
             <collider class="terrain" enabled="0" />
             <collider class="static_object" enabled="0" />
             <collider class="vehicle" enabled="0" />
-            <collider class="character" enabled="1" faction_compare="not_equal"/>
+            <collider class="character" enabled="1" faction_compare="equal"/>
         </trigger>
         <result class="notify_script" key="share_reward_4" />
 
@@ -90,7 +90,7 @@
 
         <capacity value="1" source="rank" source_value="0.0" />
 
-        <sound class="result" key="other" fileref="holy_suck.wav" volume="1.8" />
+        <sound class="result" key="other" fileref="holy_suck.wav" volume="2.5" />
         <sound class="result" key="terrain" copy="other" />
         <sound class="result" key="static_object" copy="other" />
         <sound class="result" key="vehicle" copy="other" />
