@@ -44,26 +44,12 @@
     <effect class="result" key="terrain" ref="BulletImpactDust4" />
     <effect class="result" key="terrain" ref="BulletImpactDust5" />
     <effect class="result" key="terrain" ref="BulletImpactDust6" />
-    <effect class="result" key="terrain" ref="ground_break" />
+    <effect class="result" key="terrain" ref="hitMetal" />
+    <effect class="result" key="terrain" ref="hitMetal_1" />
+    <effect class="result" key="terrain" ref="result_ksvk"  />
 
     <effect class="result" key="other" copy="terrain" />
     <effect class="result" key="static_object" copy="terrain" />
-
-    <effect class="result" key="vehicle" ref="Burst" use_surface_color="1" />
-    <effect class="result" key="vehicle" ref="hitMetal" />
-    <effect class="result" key="vehicle" ref="hitMetal_1" />
-
-    <effect class="result" key="shield" ref="hitMetal" />
-    <effect class="result" key="shield" ref="hitMetal_1" />
-
-    <effect class="result" key="terrain" ref="result_ksvk"  />
-    <effect class="result" key="vehicle" ref="result_ksvk"  />
-    <effect class="result" key="static_object" ref="result_ksvk" />
-    <effect class="result" key="charater" ref="result_ksvk" />
-    <effect class="result" key="shield" ref="result_ksvk"  />
-    <effect class="result" key="vehicle" ref="result_ksvk" />
-    <effect class="result" key="other" ref="result_ksvk" />
-
 
     <effect class="result" type="splat_map" surface_tag="" size="2.5" atlas_index="0" layer="1" />
     <effect class="result" type="splat_map" surface_tag="" size="3.0" atlas_index="4" layer="0" />

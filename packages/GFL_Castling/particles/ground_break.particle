@@ -17,25 +17,24 @@ particle_system ground_break
         position 0 0.2 0
         direction 0 1 0
         velocity 0.01
-        time_to_live 8
+        time_to_live 15
         duration 0.05
         emission_rate 21
+		colour	
     }    
 
-    affector ColourImage{
-        image color_blank.png
-    }
 	
-	affector ColourFader2{
-		red1 0
-		green1 0
-		blue1 0
-		alpha1 0
-		red2 0 
-		green2 0
-		blue2 0
-		alpha2 -0.33
-		state_change 3.0
+	affector ColourInterpolator{
+		time0 0
+		colour0 0.5 0.5 0.3 1
+		time1 0.133
+		colour1 0.51 0.2 0.09 1
+		time2 0.33
+		colour2 0 0 0 1
+		time3 0.667
+		colour3 0 0 0 1
+		time4 1
+		colour4 0 0 0 0		
 	}
 
 
@@ -54,7 +53,7 @@ material ground_break_1
 	{
 		pass
 		{
-			lighting on
+			lighting off
 			ambient vertexcolour
 			diffuse vertexcolour
 			scene_blend alpha_blend

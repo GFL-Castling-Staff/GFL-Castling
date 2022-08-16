@@ -2112,7 +2112,7 @@
 	<model filename="gkw_rf_m82a1.xml"/>
 	<hud_icon filename="gkw_m82a1.png"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="bullet.projectile">
+	<projectile file="ntw.projectile">
 	<result class="blast" damage="8" radius="3.5" decal="1" push="0" character_state="death" faction_compare="not_equal"/>
 	</projectile>
 	<stance state_key="walking" accuracy="0.7"/>
@@ -2168,7 +2168,7 @@
 	<hud_icon filename="gkw_m82a1.png"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="bullet.projectile">
+	<projectile file="ntw.projectile">
 	<result class="blast" damage="6" radius="2.5" decal="1" push="0" character_state="death" faction_compare="not_equal"/>
 	</projectile>
 	<stance state_key="walking" accuracy="0.7"/>
@@ -2871,7 +2871,7 @@
 	<model filename="gkw_rf_gm6.xml"/>
 	<hud_icon filename="gkw_gm6lynx.png"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="bullet.projectile">
+	<projectile file="ntw.projectile">
 	<result class="blast" damage="8" radius="3.5" decal="1" push="0" character_state="death" faction_compare="not_equal"/>
 	</projectile>
 	<stance state_key="walking" accuracy="0.65"/>
@@ -5148,7 +5148,7 @@
 </weapon>
 
 <weapon key="gkw_ksvk.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="2.0" accuracy_factor="1" sustained_fire_grow_step="4" sustained_fire_diminish_rate="0.5" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="KSVK" class="2" reload_one_at_a_time="0" sight_range_modifier="4" projectile_speed="242.47" barrel_offset="0.4" projectiles_per_shot="4" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
+	<specification retrigger_time="2.0" accuracy_factor="1" sustained_fire_grow_step="4" sustained_fire_diminish_rate="2.0" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="KSVK" class="2" reload_one_at_a_time="0" sight_range_modifier="4" projectile_speed="242.47" barrel_offset="0.6" projectiles_per_shot="4" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
 	<inventory buy_price="45.0" sell_price="9.0"/>
 	<animation state_key="hold_casual" animation_key="dancing, kazachok"/>
 	<animation key="cycle" animation_key="Brifle1.8"/>
@@ -5213,9 +5213,10 @@
 	<model filename="gkw_rf_ksvk.xml"/>
 	<hud_icon filename="gkw_ksvk.png"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="bullet.projectile">
+	<projectile file="ksvk_mod3.projectile">
 	<result class="blast" damage="10.0" radius="3.5" decal="1" push="0.5" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	</projectile>
+	<stance state_key="running" accuracy="1.0"/>
 	<stance state_key="walking" accuracy="1.0"/>
 	<stance state_key="crouch_moving" accuracy="1.0"/>
 	<stance state_key="prone_moving" accuracy="1.0"/>
@@ -7675,7 +7676,7 @@
 </weapon>
 
 <weapon key="gkw_ameli.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.5" retrigger_time="0.06" accuracy_factor="0.98" sustained_fire_grow_step="0.35" sustained_fire_diminish_rate="1.8" magazine_size="200" suppressed="0" name="Ameli" class="0" projectile_speed="216.17" sight_range_modifier="1.5" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" slot="0"/>
+	<specification barrel_offset="0.5" retrigger_time="0.06" accuracy_factor="0.98" sustained_fire_grow_step="0.35" sustained_fire_diminish_rate="1.8" magazine_size="200" suppressed="0" name="Ameli" class="0" projectile_speed="236.17" sight_range_modifier="1.75" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" slot="0"/>
 	<animation key="reload" animation_key="reloading, Machine gun 2.8"/>
 	<inventory buy_price="20.0" sell_price="20.0"/>
 	<sound key="fire" fileref="ameli_fire_FromCOD11.wav" pitch_variety="0.05" volume="1.1"/>
@@ -7686,7 +7687,7 @@
 	<model filename="gkw_mg_ameli.xml"/>
 	<hud_icon filename="gkw_ameli.png"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="1.85" kill_decay_start_time="3.394" kill_decay_end_time="5.657"/>
+	<result class="hit" kill_probability="2.25" kill_probability_offset_on_successful_hit="1.5" kill_decay_start_time="3.394" kill_decay_end_time="5.657"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_556"/>
 	<stance state_key="running" accuracy="0.6"/>
@@ -7696,7 +7697,6 @@
 	<stance state_key="crouching" accuracy="0.75"/>
 	<stance state_key="prone" accuracy="1.1"/>
 	<stance state_key="over_wall" accuracy="1.1"/>
-	<modifier class="speed" value="-0.3"/>
 	<tag name="machine gun"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="30.0" buy_price="1.0" sell_price="0.0"/>
@@ -13627,7 +13627,7 @@
 	<hud_icon filename="gkw_thunder50.png"/>
 	<modifier class="speed" value="+0.7"/>
 	<weak_hand_hold offset="0.1"/>
-	<projectile file="bullet.projectile">
+	<projectile file="ntw.projectile">
 	<result class="blast" damage="8.1" radius="4.5" decal="1" push="0.5" character_state="death" faction_compare="not_equal"/>
 	<trail probability="1.0" key="BulletApTrail"/>
 	<effect class="result" key="terrain" ref="BigBurst" use_surface_color="1"/>
@@ -19926,7 +19926,7 @@
 </weapon>
 
 <weapon key="gkw_ksvkmod3.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="2.0" accuracy_factor="1" sustained_fire_grow_step="0" sustained_fire_diminish_rate="1.0" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" suppressed="0" name="KSVK(MOD3)" class="2" reload_one_at_a_time="0" sight_range_modifier="4" projectile_speed="255" barrel_offset="0.4" projectiles_per_shot="4" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_prone="1" slot="0"/>
+	<specification retrigger_time="2.0" accuracy_factor="1" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="2.0" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" suppressed="0" name="KSVK(MOD3)" class="2" reload_one_at_a_time="0" sight_range_modifier="4" projectile_speed="255" barrel_offset="0.6" projectiles_per_shot="4" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_prone="1" slot="0"/>
 	<inventory buy_price="300.0" sell_price="300.0"/>
 	<commonness value="0.01" in_stock="0" can_respawn_with="1"/>
 	<next_in_chain key="gkw_ksvkmod3_skill.weapon" share_ammo="0"/>
@@ -20022,7 +20022,7 @@
 </weapon>
 
 <weapon key="gkw_ksvkmod3_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1" accuracy_factor="1" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="1.0" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" suppressed="0" name="KSVK(MOD3)-[Concussive Blast]" class="2" sight_range_modifier="4" reload_one_at_a_time="0" projectile_speed="255" barrel_offset="0.4" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_prone="1" slot="0"/>
+	<specification retrigger_time="-1" accuracy_factor="1" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="2.0" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" suppressed="0" name="KSVK(MOD3)-[Concussive Blast]" class="2" sight_range_modifier="4" reload_one_at_a_time="0" projectile_speed="200" barrel_offset="0.6" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_prone="1" slot="0"/>
 	<inventory buy_price="300.0" sell_price="300.0"/>
 	<next_in_chain key="gkw_ksvkmod3.weapon" share_ammo="0"/>
 	<animation key="cycle" animation_key="Brifle1.8"/>
@@ -22071,7 +22071,7 @@
 </weapon>
 
 <weapon key="gkw_ameli_1605.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.5" retrigger_time="0.06" accuracy_factor="0.98" sustained_fire_grow_step="0.35" sustained_fire_diminish_rate="1.8" magazine_size="200" suppressed="0" name="Ameli-[Gift-selling Christmas Tree]" class="0" projectile_speed="216.17" sight_range_modifier="1.5" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" slot="0"/>
+	<specification barrel_offset="0.5" retrigger_time="0.06" accuracy_factor="0.98" sustained_fire_grow_step="0.35" sustained_fire_diminish_rate="1.8" magazine_size="200" suppressed="0" name="Ameli-[Gift-selling Christmas Tree]" class="0" projectile_speed="236.17" sight_range_modifier="1.75" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" slot="0"/>
 	<animation key="reload" animation_key="reloading, Machine gun 2.8"/>
 	<inventory buy_price="20.0" sell_price="20.0"/>
 	<commonness value="0" in_stock="0"/>
@@ -22083,7 +22083,7 @@
 	<model filename="gkw_mg_ameli.xml"/>
 	<hud_icon filename="gkw_ameli_1605.png"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="1.85" kill_decay_start_time="3.394" kill_decay_end_time="5.657"/>
+	<result class="hit" kill_probability="2.25" kill_probability_offset_on_successful_hit="1.5" kill_decay_start_time="3.394" kill_decay_end_time="5.657"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_556"/>
 	<stance state_key="running" accuracy="0.6"/>
@@ -22093,7 +22093,6 @@
 	<stance state_key="crouching" accuracy="0.75"/>
 	<stance state_key="prone" accuracy="1.1"/>
 	<stance state_key="over_wall" accuracy="1.1"/>
-	<modifier class="speed" value="-0.3"/>
 	<tag name="machine gun"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="30.0" buy_price="1.0" sell_price="0.0"/>
@@ -22123,7 +22122,7 @@
 </weapon>
 
 <weapon key="gkw_ameli_2409.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.5" retrigger_time="0.06" accuracy_factor="0.98" sustained_fire_grow_step="0.35" sustained_fire_diminish_rate="1.8" magazine_size="200" suppressed="0" name="Ameli-[Ameli`s Catching Ball]" class="0" projectile_speed="216.17" sight_range_modifier="1.5" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" slot="0"/>
+	<specification barrel_offset="0.5" retrigger_time="0.06" accuracy_factor="0.98" sustained_fire_grow_step="0.35" sustained_fire_diminish_rate="1.8" magazine_size="200" suppressed="0" name="Ameli-[Ameli`s Catching Ball]" class="0" projectile_speed="236.17" sight_range_modifier="1.75" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" slot="0"/>
 	<animation key="reload" animation_key="reloading, Machine gun 2.8"/>
 	<inventory buy_price="20.0" sell_price="20.0"/>
 	<commonness value="0" in_stock="0"/>
@@ -22135,7 +22134,7 @@
 	<model filename="gkw_mg_ameli_2409.xml"/>
 	<hud_icon filename="gkw_ameli_2409.png"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="1.85" kill_decay_start_time="3.394" kill_decay_end_time="5.657"/>
+	<result class="hit" kill_probability="2.25" kill_probability_offset_on_successful_hit="1.5" kill_decay_start_time="3.394" kill_decay_end_time="5.657"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_556"/>
 	<stance state_key="running" accuracy="0.6"/>
@@ -22145,7 +22144,6 @@
 	<stance state_key="crouching" accuracy="0.75"/>
 	<stance state_key="prone" accuracy="1.1"/>
 	<stance state_key="over_wall" accuracy="1.1"/>
-	<modifier class="speed" value="-0.3"/>
 	<tag name="machine gun"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="30.0" buy_price="1.0" sell_price="0.0"/>
@@ -29190,7 +29188,7 @@
 </weapon>
 
 <weapon key="gkw_ksvk_3405.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="2.0" accuracy_factor="1" sustained_fire_grow_step="4" sustained_fire_diminish_rate="0.5" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="KSVK-[Angel's Brush]" class="2" reload_one_at_a_time="0" sight_range_modifier="4" projectile_speed="242.47" barrel_offset="0.4" projectiles_per_shot="4" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
+	<specification retrigger_time="2.0" accuracy_factor="1" sustained_fire_grow_step="4" sustained_fire_diminish_rate="2.0" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="KSVK-[Angel's Brush]" class="2" reload_one_at_a_time="0" sight_range_modifier="4" projectile_speed="242.47" barrel_offset="0.6" projectiles_per_shot="4" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
 	<inventory buy_price="45.0" sell_price="9.0"/>
 	<animation state_key="hold_casual" animation_key="dancing, kazachok"/>
 	<animation key="cycle" animation_key="Brifle1.8"/>
@@ -29249,9 +29247,10 @@
 	<hud_icon filename="gkw_ksvk_3405.png"/>
 	<commonness value="0" in_stock="0"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="bullet.projectile">
+	<projectile file="ksvk_mod3.projectile">
 	<result class="blast" damage="10.0" radius="3.5" decal="1" push="0.5" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	</projectile>
+	<stance state_key="running" accuracy="1.0"/>
 	<stance state_key="walking" accuracy="1.0"/>
 	<stance state_key="crouch_moving" accuracy="1.0"/>
 	<stance state_key="prone_moving" accuracy="1.0"/>
@@ -29291,7 +29290,7 @@
 </weapon>
 
 <weapon key="gkw_ksvk_3805.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="2.0" accuracy_factor="1" sustained_fire_grow_step="4" sustained_fire_diminish_rate="0.5" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="KSVK-[Darkside Moonwalk]" class="2" reload_one_at_a_time="0" sight_range_modifier="4" projectile_speed="242.47" barrel_offset="0.4" projectiles_per_shot="4" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
+	<specification retrigger_time="2.0" accuracy_factor="1" sustained_fire_grow_step="4" sustained_fire_diminish_rate="2.0" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="KSVK-[Darkside Moonwalk]" class="2" reload_one_at_a_time="0" sight_range_modifier="4" projectile_speed="242.47" barrel_offset="0.6" projectiles_per_shot="4" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
 	<inventory buy_price="45.0" sell_price="9.0"/>
 	<animation state_key="hold_casual" animation_key="dancing, kazachok"/>
 	<animation key="cycle" animation_key="Brifle1.8"/>
@@ -29356,9 +29355,10 @@
 	<hud_icon filename="gkw_ksvk_3805.png"/>
 	<commonness value="0" in_stock="0"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="bullet.projectile">
+	<projectile file="ksvk_mod3.projectile">
 	<result class="blast" damage="10.0" radius="3.5" decal="1" push="0.5" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	</projectile>
+	<stance state_key="running" accuracy="1.0"/>
 	<stance state_key="walking" accuracy="1.0"/>
 	<stance state_key="crouch_moving" accuracy="1.0"/>
 	<stance state_key="prone_moving" accuracy="1.0"/>
@@ -29398,7 +29398,7 @@
 </weapon>
 
 <weapon key="gkw_ksvk_4509.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="2.0" accuracy_factor="1" sustained_fire_grow_step="4" sustained_fire_diminish_rate="0.5" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="KSVK-[The Truman Traveller]" class="2" reload_one_at_a_time="0" sight_range_modifier="4" projectile_speed="242.47" barrel_offset="0.4" projectiles_per_shot="4" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
+	<specification retrigger_time="2.0" accuracy_factor="1" sustained_fire_grow_step="4" sustained_fire_diminish_rate="2.0" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="KSVK-[The Truman Traveller]" class="2" reload_one_at_a_time="0" sight_range_modifier="4" projectile_speed="242.47" barrel_offset="0.6" projectiles_per_shot="4" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
 	<inventory buy_price="45.0" sell_price="9.0"/>
 	<animation state_key="hold_casual" animation_key="dancing, kazachok"/>
 	<animation key="cycle" animation_key="Brifle1.8"/>
@@ -29457,9 +29457,10 @@
 	<hud_icon filename="gkw_ksvk_4509.png"/>
 	<commonness value="0" in_stock="0"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="bullet.projectile">
+	<projectile file="ksvk_mod3.projectile">
 	<result class="blast" damage="10.0" radius="3.5" decal="1" push="0.5" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	</projectile>
+	<stance state_key="running" accuracy="1.0"/>
 	<stance state_key="walking" accuracy="1.0"/>
 	<stance state_key="crouch_moving" accuracy="1.0"/>
 	<stance state_key="prone_moving" accuracy="1.0"/>
@@ -29499,7 +29500,7 @@
 </weapon>
 
 <weapon key="gkw_ksvk_5504.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="2.0" accuracy_factor="1" sustained_fire_grow_step="4" sustained_fire_diminish_rate="0.5" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="KSVK-[WanYuHuan]" class="2" reload_one_at_a_time="0" sight_range_modifier="4" projectile_speed="242.47" barrel_offset="0.4" projectiles_per_shot="4" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
+	<specification retrigger_time="2.0" accuracy_factor="1" sustained_fire_grow_step="4" sustained_fire_diminish_rate="2.0" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="KSVK-[WanYuHuan]" class="2" reload_one_at_a_time="0" sight_range_modifier="4" projectile_speed="242.47" barrel_offset="0.6" projectiles_per_shot="4" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
 	<inventory buy_price="45.0" sell_price="9.0"/>
 	<animation state_key="hold_casual" animation_key="dancing, kazachok"/>
 	<animation key="cycle" animation_key="Brifle1.8"/>
@@ -29564,9 +29565,10 @@
 	<hud_icon filename="gkw_ksvk_5504.png"/>
 	<commonness value="0" in_stock="0"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="bullet.projectile">
+	<projectile file="ksvk_mod3.projectile">
 	<result class="blast" damage="10.0" radius="3.5" decal="1" push="0.5" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	</projectile>
+	<stance state_key="running" accuracy="1.0"/>
 	<stance state_key="walking" accuracy="1.0"/>
 	<stance state_key="crouch_moving" accuracy="1.0"/>
 	<stance state_key="prone_moving" accuracy="1.0"/>
@@ -29890,7 +29892,7 @@
 	<hud_icon filename="gkw_thunder50_2206.png"/>
 	<modifier class="speed" value="+0.7"/>
 	<weak_hand_hold offset="0.1"/>
-	<projectile file="bullet.projectile">
+	<projectile file="ntw.projectile">
 	<result class="blast" damage="8.1" radius="4.5" decal="1" push="0.5" character_state="death" faction_compare="not_equal"/>
 	<trail probability="1.0" key="BulletApTrail"/>
 	<effect class="result" key="terrain" ref="BigBurst" use_surface_color="1"/>
@@ -35251,7 +35253,7 @@
 </weapon>
 
 <weapon key="gkw_ksvkmod3_3405.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="2.0" accuracy_factor="1" sustained_fire_grow_step="0" sustained_fire_diminish_rate="1" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" suppressed="0" name="KSVK(MOD3)-[Angel's Brush]" class="2" reload_one_at_a_time="0" sight_range_modifier="4" projectile_speed="255" barrel_offset="0.4" projectiles_per_shot="4" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_prone="1" slot="0"/>
+	<specification retrigger_time="2.0" accuracy_factor="1" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="2.0" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" suppressed="0" name="KSVK(MOD3)-[Angel's Brush]" class="2" reload_one_at_a_time="0" sight_range_modifier="4" projectile_speed="255" barrel_offset="0.6" projectiles_per_shot="4" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_prone="1" slot="0"/>
 	<inventory buy_price="300.0" sell_price="300.0"/>
 	<next_in_chain key="gkw_ksvkmod3_3405_skill.weapon" share_ammo="0"/>
 	<animation state_key="hold_casual" animation_key="dancing, kazachok"/>
@@ -35354,7 +35356,7 @@
 </weapon>
 
 <weapon key="gkw_ksvkmod3_3405_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1" accuracy_factor="1" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="1.0" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" suppressed="0" name="KSVK(MOD3)-[Angel's Brush]-[Concussive Blast]" class="2" sight_range_modifier="4" reload_one_at_a_time="0" projectile_speed="255" barrel_offset="0.4" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_prone="1" slot="0"/>
+	<specification retrigger_time="-1" accuracy_factor="1" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="2.0" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" suppressed="0" name="KSVK(MOD3)-[Angel's Brush]-[Concussive Blast]" class="2" sight_range_modifier="4" reload_one_at_a_time="0" projectile_speed="200" barrel_offset="0.6" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_prone="1" slot="0"/>
 	<inventory buy_price="300.0" sell_price="300.0"/>
 	<next_in_chain key="gkw_ksvkmod3_3405.weapon" share_ammo="0"/>
 	<animation key="cycle" animation_key="Brifle1.8"/>
@@ -35416,7 +35418,7 @@
 </weapon>
 
 <weapon key="gkw_ksvkmod3_3805.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="2.0" accuracy_factor="1" sustained_fire_grow_step="0" sustained_fire_diminish_rate="1" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" suppressed="0" name="KSVK(MOD3)-[Darkside Moonwalk]" class="2" reload_one_at_a_time="0" sight_range_modifier="4" projectile_speed="255" barrel_offset="0.4" projectiles_per_shot="4" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_prone="1" slot="0"/>
+	<specification retrigger_time="2.0" accuracy_factor="1" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="2.0" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" suppressed="0" name="KSVK(MOD3)-[Darkside Moonwalk]" class="2" reload_one_at_a_time="0" sight_range_modifier="4" projectile_speed="255" barrel_offset="0.6" projectiles_per_shot="4" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_prone="1" slot="0"/>
 	<inventory buy_price="300.0" sell_price="300.0"/>
 	<next_in_chain key="gkw_ksvkmod3_3805_skill.weapon" share_ammo="0"/>
 	<animation state_key="hold_casual" animation_key="dancing, kazachok"/>
@@ -35512,7 +35514,7 @@
 </weapon>
 
 <weapon key="gkw_ksvkmod3_3805_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1" accuracy_factor="1" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="1.0" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" suppressed="0" name="KSVK(MOD3)-[Darkside Moonwalk]-[Concussive Blast]" class="2" sight_range_modifier="4" reload_one_at_a_time="0" projectile_speed="255" barrel_offset="0.4" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_prone="1" slot="0"/>
+	<specification retrigger_time="-1" accuracy_factor="1" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="2.0" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" suppressed="0" name="KSVK(MOD3)-[Darkside Moonwalk]-[Concussive Blast]" class="2" sight_range_modifier="4" reload_one_at_a_time="0" projectile_speed="200" barrel_offset="0.6" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_prone="1" slot="0"/>
 	<inventory buy_price="300.0" sell_price="300.0"/>
 	<next_in_chain key="gkw_ksvkmod3_3805.weapon" share_ammo="0"/>
 	<animation key="cycle" animation_key="Brifle1.8"/>
@@ -35574,7 +35576,7 @@
 </weapon>
 
 <weapon key="gkw_ksvkmod3_4509.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="2.0" accuracy_factor="1" sustained_fire_grow_step="0" sustained_fire_diminish_rate="1" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" suppressed="0" name="KSVK(MOD3)-[The Truman Traveller]" class="2" reload_one_at_a_time="0" sight_range_modifier="4" projectile_speed="255" barrel_offset="0.4" projectiles_per_shot="4" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_prone="1" slot="0"/>
+	<specification retrigger_time="2.0" accuracy_factor="1" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="2.0" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" suppressed="0" name="KSVK(MOD3)-[The Truman Traveller]" class="2" reload_one_at_a_time="0" sight_range_modifier="4" projectile_speed="255" barrel_offset="0.6" projectiles_per_shot="4" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_prone="1" slot="0"/>
 	<inventory buy_price="300.0" sell_price="300.0"/>
 	<next_in_chain key="gkw_ksvkmod3_4509_skill.weapon" share_ammo="0"/>
 	<animation state_key="hold_casual" animation_key="dancing, kazachok"/>
@@ -35677,7 +35679,7 @@
 </weapon>
 
 <weapon key="gkw_ksvkmod3_4509_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1" accuracy_factor="1" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="1.0" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" suppressed="0" name="KSVK(MOD3)-[The Truman Traveller]-[Concussive Blast]" class="2" sight_range_modifier="4" reload_one_at_a_time="0" projectile_speed="255" barrel_offset="0.4" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_prone="1" slot="0"/>
+	<specification retrigger_time="-1" accuracy_factor="1" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="2.0" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" suppressed="0" name="KSVK(MOD3)-[The Truman Traveller]-[Concussive Blast]" class="2" sight_range_modifier="4" reload_one_at_a_time="0" projectile_speed="200" barrel_offset="0.6" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_prone="1" slot="0"/>
 	<inventory buy_price="300.0" sell_price="300.0"/>
 	<next_in_chain key="gkw_ksvkmod3_4509.weapon" share_ammo="0"/>
 	<animation key="cycle" animation_key="Brifle1.8"/>
@@ -35739,7 +35741,7 @@
 </weapon>
 
 <weapon key="gkw_ksvkmod3_5504.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="2.0" accuracy_factor="1" sustained_fire_grow_step="0" sustained_fire_diminish_rate="1" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" suppressed="0" name="KSVK(MOD3)-[WanYuHuan]" class="2" reload_one_at_a_time="0" sight_range_modifier="4" projectile_speed="255" barrel_offset="0.4" projectiles_per_shot="4" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_prone="1" slot="0"/>
+	<specification retrigger_time="2.0" accuracy_factor="1" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="2.0" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" suppressed="0" name="KSVK(MOD3)-[WanYuHuan]" class="2" reload_one_at_a_time="0" sight_range_modifier="4" projectile_speed="255" barrel_offset="0.6" projectiles_per_shot="4" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_prone="1" slot="0"/>
 	<inventory buy_price="300.0" sell_price="300.0"/>
 	<next_in_chain key="gkw_ksvkmod3_5504_skill.weapon" share_ammo="0"/>
 	<animation state_key="hold_casual" animation_key="dancing, kazachok"/>
@@ -35835,7 +35837,7 @@
 </weapon>
 
 <weapon key="gkw_ksvkmod3_5504_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1" accuracy_factor="1" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="1.0" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" suppressed="0" name="KSVK(MOD3)-[WanYuHuan]-[Concussive Blast]" class="2" sight_range_modifier="4" reload_one_at_a_time="0" projectile_speed="255" barrel_offset="0.4" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_prone="1" slot="0"/>
+	<specification retrigger_time="-1" accuracy_factor="1" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="2.0" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" suppressed="0" name="KSVK(MOD3)-[WanYuHuan]-[Concussive Blast]" class="2" sight_range_modifier="4" reload_one_at_a_time="0" projectile_speed="200" barrel_offset="0.6" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_prone="1" slot="0"/>
 	<inventory buy_price="300.0" sell_price="300.0"/>
 	<next_in_chain key="gkw_ksvkmod3_5504.weapon" share_ammo="0"/>
 	<animation key="cycle" animation_key="Brifle1.8"/>
@@ -40433,7 +40435,7 @@
 
 <weapon key="sfw_prowler.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="smg"/>
-	<specification retrigger_time="0.2" accuracy_factor="1.0" sustained_fire_grow_step="0.5" sustained_fire_diminish_rate="3.0" magazine_size="100" can_shoot_standing="1" suppressed="0" carry_in_two_hands="0" name="SF-Prowler" class="0" spread_range="0.15" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="100.0" projectiles_per_shot="1" barrel_offset="0.0" stab_enabled="0" use_basic_muzzle_smoke_effect="0" slot="0"/>
+	<specification retrigger_time="0.2" accuracy_factor="1.0" sustained_fire_grow_step="0.5" sustained_fire_diminish_rate="3.0" magazine_size="100" can_shoot_standing="1" suppressed="0" carry_in_two_hands="0" name="SF-Prowler" class="0" spread_range="0.15" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="100.0" projectiles_per_shot="1" barrel_offset_3d="-0.35 0.0 0.0" stab_enabled="0" use_basic_muzzle_smoke_effect="0" slot="0"/>
 	<animation state_key="recoil" animation_key="still,jaguar"/>
 	<animation state_key="reload" animation_key="still,jaguar"/>
 	<animation state_key="hold" animation_key="still,jaguar"/>
@@ -40476,7 +40478,7 @@
 
 <weapon key="sfw_prowler_swap.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="smg"/>
-	<specification retrigger_time="0.1" accuracy_factor="1.0" sustained_fire_grow_step="0.3" sustained_fire_diminish_rate="3.0" magazine_size="100" can_shoot_standing="1" suppressed="0" carry_in_two_hands="0" name="SF-Prowler SWAP" class="0" spread_range="0.05" reload_one_at_a_time="0" sight_range_modifier="1.25" projectile_speed="100.0" projectiles_per_shot="1" barrel_offset="0.0" stab_enabled="0" use_basic_muzzle_smoke_effect="0" slot="0"/>
+	<specification retrigger_time="0.1" accuracy_factor="1.0" sustained_fire_grow_step="0.3" sustained_fire_diminish_rate="3.0" magazine_size="100" can_shoot_standing="1" suppressed="0" carry_in_two_hands="0" name="SF-Prowler SWAP" class="0" spread_range="0.05" reload_one_at_a_time="0" sight_range_modifier="1.25" projectile_speed="100.0" projectiles_per_shot="1" barrel_offset_3d="-0.35 0.0 0.0" stab_enabled="0" use_basic_muzzle_smoke_effect="0" slot="0"/>
 	<animation state_key="recoil" animation_key="still,jaguar"/>
 	<animation state_key="reload" animation_key="still,jaguar"/>
 	<animation state_key="hold" animation_key="still,jaguar"/>
@@ -41341,7 +41343,7 @@
 <weapon key="kcco_gatling.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="machine gun"/>
 	<tag name="elite"/>
-	<specification accuracy_factor="1.0" barrel_offset_3d="0 0.2 0.6" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" class="0" slot="0" magazine_size="200" name="Code:Cyclops-MG" carry_in_two_hands="0" projectile_speed="130" spread_range="0.2" retrigger_time="0.06" suppressed="0" sustained_fire_diminish_rate="1.0" sight_range_modifier="1.45" sustained_fire_grow_step="2.0"/>
+	<specification accuracy_factor="1.0" barrel_offset_3d="0 0.2 0.6" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" class="0" slot="0" magazine_size="200" name="Code:Cyclops-MG" carry_in_two_hands="0" projectile_speed="100" spread_range="0.2" retrigger_time="0.06" suppressed="0" sustained_fire_diminish_rate="1.0" sight_range_modifier="1.45" sustained_fire_grow_step="2.0"/>
 	<animation state_key="recoil" animation_key="recoil, hip gatling"/>
 	<animation key="recoil" stance_key="crouching" animation_key="recoil, crouch gatling"/>
 	<animation state_key="hold_casual" animation_key="casual, blowgun"/>
@@ -41362,7 +41364,7 @@
 	<hud_icon filename="testing.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="bullet_kcco.projectile">
-	<result class="hit" kill_probability="1.8" kill_decay_start_time="0.08" kill_decay_end_time="1.2"/>
+	<result class="hit" kill_probability="1.8" kill_decay_start_time="0.1" kill_decay_end_time="1.0"/>
 	</projectile>
 	<modifier class="speed" value="-0.1"/>
 	<modifier class="hit_success_probability" value="-0.2"/>
@@ -43789,7 +43791,7 @@
 	<commonness value="0.0"/>
 	<sound key="fire" fileref="typhon_fire_FromHALO4.wav" pitch_variety="0.05" volume="3.5"/>
 	<projectile file="typhoon_laser.projectile" pulldown_in_air="0.5">
-	<result class="blast" damage="50.5" radius="8" decal="1" push="1.0" character_state="death" damage_origin_vehicle="0" faction_compare="not_equal"/>
+	<result class="blast" damage="30.5" radius="8" decal="1" push="1.0" character_state="death" damage_origin_vehicle="0" faction_compare="not_equal"/>
 	<trail probability="1.0" key="laser_tifeng"/>
 	<sound class="result" key="other" fileref="explosion_Large_FromSQUAD_1.wav" volume="2.9"/>
 	<sound class="result" key="other" fileref="explosion_Large_FromSQUAD_2.wav" volume="2.9"/>
