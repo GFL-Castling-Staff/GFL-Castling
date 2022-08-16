@@ -37891,7 +37891,6 @@
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
 	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
 	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
-	<drop_on_death_result class="spawn" instance_class="carry_item" instance_key="city_gifts.carry_item" min_amount="1.0" max_amount="1.0" offset="0 1.0 0" position_spread="0 0" direction_spread="0 0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<projectile file="qwd.projectile">
 	</projectile>
@@ -38849,7 +38848,7 @@
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
 	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
 	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
-	<drop_on_death_result class="spawn" instance_class="carry_item" instance_key="city_gifts.carry_item" min_amount="1.0" max_amount="1.0" offset="0 1.0 0" position_spread="0 0" direction_spread="0 0"/>
+	<drop_on_death_result class="spawn" instance_class="grenade" instance_key="city_gifts.drop_reward" min_amount="0.0" max_amount="1.0" offset="0 1.0 0" position_spread="0 0" direction_spread="0 0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<projectile file="qwd.projectile">
 	</projectile>
@@ -39002,7 +39001,7 @@
 	<model filename="sfw_Intruder.xml"/>
 	<effect class="muzzle" ref="cygnus_red"/>
 	<hud_icon filename="sfw_intruder.png"/>
-	<drop_on_death_result class="spawn" instance_class="carry_item" instance_key="snow_gifts.carry_item" min_amount="1.0" max_amount="2.0" offset="0 1.0 0" position_spread="0 0" direction_spread="0 0"/>
+	<drop_on_death_result class="spawn" instance_class="grenade" instance_key="forest_gifts.drop_reward" min_amount="1.0" max_amount="2.0" offset="0 1.0 0" position_spread="0 0" direction_spread="0 0"/>
 	<weak_hand_hold offset="0.4"/>
 	<projectile file="bullet_sf.projectile">
 	<result class="hit" kill_probability="2" kill_probability_offset_on_successful_hit="3" kill_decay_start_time="1.0" kill_decay_end_time="1.5"/>
@@ -39218,7 +39217,7 @@
 	<sound key="cycle" fileref="alchemist_cycle_FromCOD11.wav" volume="0.65"/>
 	<model filename=""/>
 	<hud_icon filename="sfw_alchemist.png"/>
-	<drop_on_death_result class="spawn" instance_class="carry_item" instance_key="wild_gifts.carry_item" min_amount="2.0" max_amount="3.0" offset="0 1.0 0" position_spread="0 0" direction_spread="0 0"/>
+	<drop_on_death_result class="spawn" instance_class="grenade" instance_key="snow_gifts.drop_reward" min_amount="0.0" max_amount="1.0" offset="0 1.0 0" position_spread="0 0" direction_spread="0 0"/>
 	<weak_hand_hold offset="0.1"/>
 	<projectile file="bullet_sf.projectile">
 	<result class="blast" damage="4" radius="1.5" decal="1" push="0" character_state="death" faction_compare="not_equal"/>
@@ -39273,7 +39272,7 @@
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="sfw_gager.xml"/>
 	<hud_icon filename="sfw_gager.png"/>
-	<drop_on_death_result class="spawn" instance_class="carry_item" instance_key="city_gifts.carry_item" min_amount="1.0" max_amount="2.0" offset="0 1.0 0" position_spread="0 0" direction_spread="0 0"/>
+	<drop_on_death_result class="spawn" instance_class="grenade" instance_key="forest_gifts.drop_reward" min_amount="1.0" max_amount="2.0" offset="0 1.0 0" position_spread="0 0" direction_spread="0 0"/>
 	<weak_hand_hold offset="0.4"/>
 	<projectile file="bullet_sf.projectile">
 	<result class="hit" kill_probability="1.7" kill_decay_start_time="1.0" kill_decay_end_time="1.5"/>
@@ -39322,6 +39321,7 @@
 	<result class="hit" kill_probability="1.6" kill_decay_start_time="1.031" kill_decay_end_time="1.719"/>
 	</projectile>
 	<drop_on_death_result class="spawn" instance_class="carry_item" instance_key="whiskey_bottle.carry_item" min_amount="6" max_amount="12" offset="0 1.0 0" position_spread="0 0" direction_spread="0 0"/>
+	<drop_on_death_result class="spawn" instance_class="grenade" instance_key="forest_gifts.drop_reward" min_amount="1.0" max_amount="2.0" offset="0 1.0 0" position_spread="0 0" direction_spread="0 0"/>
 	<stance state_key="running" accuracy="0.3"/>
 	<stance state_key="walking" accuracy="0.75"/>
 	<stance state_key="crouch_moving" accuracy="0.9"/>
@@ -39392,7 +39392,7 @@
 	<sound key="cycle" fileref="DE_cycle_FromCOD4R.wav" volume="0.7"/>
 	<model filename="sfw_excutioner2.xml"/>
 	<hud_icon filename="sfw_excutioner.png"/>
-	<drop_on_death_result class="spawn" instance_class="carry_item" instance_key="forest_gifts.carry_item" min_amount="1.0" max_amount="2.0" offset="0 1.0 0" position_spread="0 0" direction_spread="0 0"/>
+	<drop_on_death_result class="spawn" instance_class="grenade" instance_key="forest_gifts.drop_reward" min_amount="1.0" max_amount="2.0" offset="0 1.0 0" position_spread="0 0" direction_spread="0 0"/>
 	<weak_hand_hold offset="0.1"/>
 	<projectile file="bullet_sf.projectile">
 	<result class="blast" damage="2.0" radius="1.0" decal="1" push="0" character_state="death" faction_compare="not_equal"/>
@@ -39456,7 +39456,7 @@
 	<stance state_key="prone_moving" accuracy="1"/>
 	<stance state_key="over_wall" accuracy="1"/>
 	<hud_icon filename="sfw_excutioner1.png"/>
-	<drop_on_death_result class="spawn" instance_class="carry_item" instance_key="forest_gifts.carry_item" min_amount="1.0" max_amount="2.0" offset="0 1.0 0" position_spread="0 0" direction_spread="0 0"/>
+	<drop_on_death_result class="spawn" instance_class="grenade" instance_key="forest_gifts.drop_reward" min_amount="1.0" max_amount="2.0" offset="0 1.0 0" position_spread="0 0" direction_spread="0 0"/>
 	<effect class="muzzle" ref="sawsnone"/>
 	<commonness value="0.00001" can_respawn_with="1" in_stock="1"/>
 	<modifier class="speed" value="0.6"/>
@@ -40596,7 +40596,7 @@
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename=""/>
 	<hud_icon filename="kccow_qwd.png"/>
-	<drop_on_death_result class="spawn" instance_class="carry_item" instance_key="city_gifts.carry_item" min_amount="1.0" max_amount="1.0" offset="0 1.0 0" position_spread="0 0" direction_spread="0 0"/>
+	<drop_on_death_result class="spawn" instance_class="grenade" instance_key="city_gifts.drop_reward" min_amount="0.0" max_amount="2.0" offset="0 1.0 0" position_spread="0 0" direction_spread="0 0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<projectile file="qwd.projectile">
 	</projectile>
@@ -41007,7 +41007,7 @@
 	<sound key="cycle" fileref="mossberg500_cycle.wav"/>
 	<sound key="reload_one" fileref="Teslatrooper_reload_FromBF5.wav" volume="0.8"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
-	<drop_on_death_result class="spawn" instance_class="carry_item" instance_key="city_gifts.carry_item" min_amount="1.0" max_amount="2.0" offset="0 1.0 0" position_spread="0 0" direction_spread="0 0"/>
+	<drop_on_death_result class="spawn" instance_class="grenade" instance_key="city_gifts.drop_reward" min_amount="0.0" max_amount="2.0" offset="0 1.0 0" position_spread="0 0" direction_spread="0 0"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile file="Doppelsoldner_rocket.projectile">
 	<result class="blast" radius="3.0" damage="2" push="0.2" decal="1" faction_compare="not_equal"/>
@@ -41492,7 +41492,7 @@
 	<stance state_key="prone_moving" accuracy="1"/>
 	<stance state_key="over_wall" accuracy="1"/>
 	<hud_icon filename="parw_nyto_white.png"/>
-	<drop_on_death_result class="spawn" instance_class="carry_item" instance_key="wild_gifts.carry_item" min_amount="1" max_amount="2" offset="0 1.0 0" position_spread="0 0" direction_spread="0 0"/>
+	<drop_on_death_result class="spawn" instance_class="grenade" instance_key="wild_gifts.drop_reward" min_amount="1.0" max_amount="1.0" offset="0 1.0 0" position_spread="0 0" direction_spread="0 0"/>
 	<effect class="muzzle" ref="sawsnone"/>
 	<commonness value="0.00001" can_respawn_with="1" in_stock="1"/>
 	<modifier class="detectability" value="0.6"/>
@@ -41765,7 +41765,7 @@
 	<stance state_key="prone_moving" accuracy="1"/>
 	<stance state_key="over_wall" accuracy="1"/>
 	<hud_icon filename="parw_teal.png"/>
-	<drop_on_death_result class="spawn" instance_class="carry_item" instance_key="wild_gifts.carry_item" min_amount="1" max_amount="2" offset="0 1.0 0" position_spread="0 0" direction_spread="0 0"/>
+	<drop_on_death_result class="spawn" instance_class="grenade" instance_key="wild_gifts.drop_reward" min_amount="1.0" max_amount="3.0" offset="0 1.0 0" position_spread="0 0" direction_spread="0 0"/>
 	<effect class="muzzle" ref="sawsnone"/>
 	<commonness value="0.00001" can_respawn_with="1" in_stock="1"/>
 	<modifier class="detectability" value="0.6"/>
@@ -41858,7 +41858,7 @@
 	<sound key="cycle" fileref="adeline_cycle_FromDOOMETERNAL.wav" volume="0.9"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="parw_nyto_black.xml"/>
-	<drop_on_death_result class="spawn" instance_class="carry_item" instance_key="wild_gifts.carry_item" min_amount="1" max_amount="2" offset="0 1.0 0" position_spread="0 0" direction_spread="0 0"/>
+	<drop_on_death_result class="spawn" instance_class="grenade" instance_key="wild_gifts.drop_reward" min_amount="1.0" max_amount="1.0" offset="0 1.0 0" position_spread="0 0" direction_spread="0 0"/>
 	<hud_icon filename="parw_nyto_black.png"/>
 	<effect class="muzzle" ref="cygnus_blue"/>
 	<weak_hand_hold offset="0.4"/>
@@ -41915,7 +41915,7 @@
 	<sound key="cycle" fileref="m1911_cycle_FromINS.wav" volume="0.8"/>
 	<model filename=""/>
 	<hud_icon filename="parw_nimogen.png"/>
-	<drop_on_death_result class="spawn" instance_class="carry_item" instance_key="wild_gifts.carry_item" min_amount="1" max_amount="2" offset="0 1.0 0" position_spread="0 0" direction_spread="0 0"/>
+	<drop_on_death_result class="spawn" instance_class="grenade" instance_key="wild_gifts.drop_reward" min_amount="1.0" max_amount="3.0" offset="0 1.0 0" position_spread="0 0" direction_spread="0 0"/>
 	<weak_hand_hold offset="0.1"/>
 	<projectile file="mk153_HEAT.projectile">
 	<result class="blast" damage="8" radius="5" decal="1" push="0.3" character_state="death" faction_compare="not_equal"/>
@@ -41983,7 +41983,7 @@
 	<sound key="effect" fileref="dagger_swing3_fromFO4.wav" pitch_variety="0.01" volume="0.7"/>
 	<model filename=""/>
 	<hud_icon filename="parw_narciss.png"/>
-	<drop_on_death_result class="spawn" instance_class="carry_item" instance_key="wild_gifts.carry_item" min_amount="2" max_amount="3.0" offset="0 1.0 0" position_spread="0 0" direction_spread="0 0"/>
+	<drop_on_death_result class="spawn" instance_class="grenade" instance_key="wild_gifts.drop_reward" min_amount="1.0" max_amount="3.0" offset="0 1.0 0" position_spread="0 0" direction_spread="0 0"/>
 	<weak_hand_hold offset="0.1"/>
 	<projectile file="narciss.projectile">
 	<result class="blast" damage="2" radius="3" decal="1" push="0.3" character_state="death" faction_compare="not_equal"/>
@@ -42367,7 +42367,7 @@
 	<sound key="cycle" fileref="adeline_cycle_FromDOOMETERNAL.wav" volume="0.9"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="parw_nyto_black.xml"/>
-	<drop_on_death_result class="spawn" instance_class="carry_item" instance_key="wild_gifts.carry_item" min_amount="3" max_amount="4" offset="0 1.0 0" position_spread="0 0" direction_spread="0 0"/>
+	<drop_on_death_result class="spawn" instance_class="grenade" instance_key="wild_gifts.drop_reward" min_amount="1.0" max_amount="1.0" offset="0 1.0 0" position_spread="0 0" direction_spread="0 0"/>
 	<effect class="muzzle" ref="cygnus_blue"/>
 	<weak_hand_hold offset="0.4"/>
 	<projectile file="bullet_paradeus.projectile">
@@ -42417,7 +42417,7 @@
 	<effect class="muzzle" ref="MuzzleSmokeDual1"/>
 	<effect class="muzzle" ref="MuzzleDual2"/>
 	<effect class="muzzle" ref="MuzzleSmokeDual2"/>
-	<drop_on_death_result class="spawn" instance_class="carry_item" instance_key="wild_gifts.carry_item" min_amount="3" max_amount="4" offset="0 1.0 0" position_spread="0 0" direction_spread="0 0"/>
+	<drop_on_death_result class="spawn" instance_class="grenade" instance_key="wild_gifts.drop_reward" min_amount="1.0" max_amount="1.0" offset="0 1.0 0" position_spread="0 0" direction_spread="0 0"/>
 	<sound key="fire" fileref="uzi_Fire_FromSAM2.wav" pitch_variety="0.05" volume="0.5"/>
 	<sound key="magazine_out" fileref="uzi_mgz_out_FromCOD16.wav" volume="1"/>
 	<sound key="magazine_in" fileref="uzi_mgz_in_FromCOD16.wav" volume="1"/>
@@ -42467,7 +42467,7 @@
 	<stance state_key="prone_moving" accuracy="1"/>
 	<stance state_key="over_wall" accuracy="1"/>
 	<hud_icon filename="parw_roarer_new.png"/>
-	<drop_on_death_result class="spawn" instance_class="carry_item" instance_key="wild_gifts.carry_item" min_amount="1" max_amount="2" offset="0 1.0 0" position_spread="0 0" direction_spread="0 0"/>
+	<drop_on_death_result class="spawn" instance_class="grenade" instance_key="wild_gifts.drop_reward" min_amount="0.0" max_amount="1.0" offset="0 1.0 0" position_spread="0 0" direction_spread="0 0"/>
 	<commonness value="0.00001" can_respawn_with="1" in_stock="1"/>
 	<modifier class="hit_success_probability" value="-0.2"/>
 	<modifier class="detectability" value="0.9"/>
@@ -42506,7 +42506,7 @@
 	<stance state_key="prone_moving" accuracy="1"/>
 	<stance state_key="over_wall" accuracy="1"/>
 	<hud_icon filename="testing.png"/>
-	<drop_on_death_result class="spawn" instance_class="carry_item" instance_key="wild_gifts.carry_item" min_amount="1" max_amount="2" offset="0 1.0 0" position_spread="0 0" direction_spread="0 0"/>
+	<drop_on_death_result class="spawn" instance_class="grenade" instance_key="wild_gifts.drop_reward" min_amount="1.0" max_amount="1.0" offset="0 1.0 0" position_spread="0 0" direction_spread="0 0"/>
 	<effect class="muzzle" ref="sawsnone"/>
 	<commonness value="0.00001" can_respawn_with="1" in_stock="1"/>
 	<modifier class="detectability" value="0.6"/>

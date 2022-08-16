@@ -52,7 +52,7 @@
     <hud_icon filename="kccow_qwd.png" />
 
 
-	<drop_on_death_result class="spawn" instance_class="carry_item" instance_key="city_gifts.carry_item" min_amount="1.0" max_amount="1.0" offset="0 1.0 0" position_spread="0 0" direction_spread="0 0" />
+	<drop_on_death_result class="spawn" instance_class="grenade" instance_key="city_gifts.drop_reward" min_amount="0.0" max_amount="2.0" offset="0 1.0 0" position_spread="0 0" direction_spread="0 0" />
 
     <capacity value="1" source="rank" source_value="0.0" />
 

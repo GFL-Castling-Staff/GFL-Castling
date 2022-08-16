@@ -157,6 +157,14 @@ void addItemInStash(Metagame@ metagame, int characterId, string ItemType, string
 	metagame.getComms().send(c);
 }
 
+void addRangeItemInBackpack(Metagame@ metagame, int factionId, string ItemType, string ItemKey,Vector3 pos,float range){
+	array<const XmlElement@> affectedCharacter = getCharactersNearPosition(metagame,pos,factionId,range);
+	if (affectedCharacter !is null){
+		for(uint i=0;i<affectedCharacter.length();i++){
+			addItemInBackpack(metagame,affectedCharacter[i].getIntAttribute("id"),ItemType,ItemKey);
+		}
+	}
+}
 
 bool checkCommandAlter(string message, string target, string target1) {
     return startsWith(message.toLowerCase(), "/" + target) || endsWith(message.toLowerCase(),"/"+ target1);

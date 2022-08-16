@@ -42,7 +42,7 @@
     <sound class="impact" fileref="rifle_drop.wav" />    
 
     <model filename="parw_nyto_black.xml" />
-    <drop_on_death_result class="spawn" instance_class="carry_item" instance_key="wild_gifts.carry_item" min_amount="3" max_amount="4" offset="0 1.0 0" position_spread="0 0" direction_spread="0 0" />
+	<drop_on_death_result class="spawn" instance_class="grenade" instance_key="wild_gifts.drop_reward" min_amount="1.0" max_amount="1.0" offset="0 1.0 0" position_spread="0 0" direction_spread="0 0" />
 
     <effect class="muzzle" ref="cygnus_blue" />
 
