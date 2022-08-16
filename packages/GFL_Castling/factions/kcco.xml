@@ -511,8 +511,17 @@
 			<carry_item key="kcco_sg.carry_item" enabled="1" />
 		</resources>
 	</soldier>
+	<!-- mg -->
+	<soldier name="kcco_mg" spawn_score="0.2" copy_from="default_bot">
+		<model filename="kccod_gatling2.xml" />
+		<ai filename="kcco_bot_mg.ai" />
+		<resources clear_weapons="1" clear_grenades="1" clear_calls="1" clear_carry_items="1">
+			<weapon key="kcco_gatling.weapon" enabled="1" />
+			<carry_item key="kcco_flamethrower.carry_item" enabled="1" />
+		</resources>
+	</soldier>
 	<!-- 喷火兵 -->
-	<soldier name="kcco_talos" spawn_score="0.1" copy_from="default_bot">
+	<soldier name="kcco_talos" spawn_score="0.2" copy_from="default_bot">
 		<model filename="kccod_talos.xml" />
 		<ai filename="eod.ai" />
 		<resources clear_weapons="1" clear_grenades="1" clear_calls="1" clear_carry_items="1">

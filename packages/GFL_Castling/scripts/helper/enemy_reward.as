@@ -10,7 +10,8 @@ int getRPKillReward(string name) {
 
 dictionary RP_enemy_index = {
     {"kcco_ar_human_tel",30},
-    {"kcco_flamethrower",20},
+    {"kcco_talos",75},
+    {"kcco_mg",75},
     {"kcco_cerynitis",30},
     {"kcco_cerynitis_alter",30},
     {"kcco_Hydra",100},
@@ -38,8 +39,11 @@ dictionary RP_enemy_index = {
     {"sf_jaeger_swap",20},
     {"sf_striker_swap",20},
     {"Brute_swap",20},
-    {"sfw_dragoon",30},
-    {"sfw_dragoon",60},
+    {"sfw_dragoon",40},
+    {"sfw_dragoon_swap",80},
+    {"sfw_prowler_sweap",20},
+
+    
 
     {"sf_hunter",150},
     {"sf_architect",150},
@@ -71,7 +75,8 @@ float getXPKillReward(string name) {
 
 dictionary XP_enemy_index = {
     {"kcco_ar_human_tel",0.003},
-    {"kcco_flamethrower",0.002},
+    {"kcco_talos",0.002},
+    {"kcco_mg",0.002},
     {"kcco_cerynitis",0.003},
     {"kcco_cerynitis_alter",0.003},
     {"kcco_Hydra",0.01},
@@ -101,6 +106,7 @@ dictionary XP_enemy_index = {
     {"sfw_dragoon",0.003},
     {"sfw_dragoon_swap",0.006},
     {"Brute_swap",0.002},
+    {"sfw_prowler_sweap",0.002},
 
     {"sf_hunter",0.02},
     {"sf_architect",0.02},

@@ -1,70 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<weapon file="sf.base_weapon" key="sfw_dragoon.weapon" time_to_live_out_in_the_open="0">
-	<tag name="smg" />
-    <specification 
-	  retrigger_time="0.087" 
-	  barrel_offset="0.13" 
-	  accuracy_factor="0.98" 
-	  sustained_fire_diminish_rate="1.2"
-	  sustained_fire_grow_step="0" 
-	  magazine_size="50" 
-	  can_shoot_standing="1" 
-	  can_shoot_crouching="0"
-	  can_shoot_prone="0"
-	  suppressed="0" 
-	  name="SF-Dragoon" 
-	  class="0" 
-	  sight_range_modifier="1.0" 
-	  projectile_speed="75.0" 
-	  carry_in_two_hands="0" 
-	  stab_enabled="0"/>
-
-    <animation state_key="recoil"	animation_key="recoil, pistol dual 1" />
-  	<animation state_key="recoil"	animation_key="recoil, pistol dual 2" />
-    <animation state_key="reload"	animation_key="recoil, pistol dual 1" />
-  	<animation state_key="hold"		animation_key="still, pistol dual" />
-  	<animation state_key="hold_casual"	animation_key="still, pistol dual" />
-  	<animation state_key="hold_on_wall"	animation_key="still, pistol dual" />
-  	<animation state_key="walking"	animation_key="walking, pistol dual" />
-	<animation state_key="stabbing" animation_key="recoil, pistol dual 1" />
-	
-	<animation state_key="crouching"	animation_key="still, pistol dual" />
-	<animation state_key="running" animation_key="walking, pistol dual" />
-	
-	<commonness value="0.0001" in_stock="1" can_respawn_with="1" />
-
-    <sound key="fire" fileref="dragoon_fire_FromCOD13.wav" pitch_variety="0.05" volume="1.2" />
-    <sound key="magazine_out" fileref="" volume="0.8" />
-    <sound key="magazine_in" fileref="sf_boss_re.wav" volume="0.7" />
-    <sound key="cycle" fileref="" volume="0.8" />
-    <sound class="impact" fileref="rifle_drop.wav" />    
-    <model filename="" />
-
-    <hud_icon filename="testing.png" />
-
-
-	
-    <capacity value="1" source="rank" source_value="0.0" />
-
-    <weak_hand_hold offset="0.2" />
+<weapon key="sfw_dragoon.weapon" time_to_live_out_in_the_open="0" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0">
+	<tag name="smg"/>
+	<specification retrigger_time="0.087" barrel_offset="0.13" accuracy_factor="0.98" sustained_fire_diminish_rate="1.2" sustained_fire_grow_step="2.0" magazine_size="50" can_shoot_standing="1" can_shoot_crouching="0" can_shoot_prone="0" suppressed="0" name="SF-Dragoon" class="0" sight_range_modifier="1.0" projectile_speed="75.0" carry_in_two_hands="0" stab_enabled="0"/>
+	<animation state_key="recoil" animation_key="recoil, pistol dual 1"/>
+	<animation state_key="recoil" animation_key="recoil, pistol dual 2"/>
+	<animation state_key="reload" animation_key="recoil, pistol dual 1"/>
+	<animation state_key="hold" animation_key="still, pistol dual"/>
+	<animation state_key="hold_casual" animation_key="still, pistol dual"/>
+	<animation state_key="hold_on_wall" animation_key="still, pistol dual"/>
+	<animation state_key="walking" animation_key="walking, pistol dual"/>
+	<animation state_key="stabbing" animation_key="recoil, pistol dual 1"/>
+	<animation state_key="crouching" animation_key="still, pistol dual"/>
+	<animation state_key="running" animation_key="walking, pistol dual"/>
+	<commonness value="0.0001" in_stock="1" can_respawn_with="1"/>
+	<sound key="fire" fileref="dragoon_fire_FromCOD13.wav" pitch_variety="0.05" volume="1.2"/>
+	<sound key="magazine_out" fileref="" volume="0.8"/>
+	<sound key="magazine_in" fileref="sf_boss_re.wav" volume="0.7"/>
+	<sound key="cycle" fileref="" volume="0.8"/>
+	<sound class="impact" fileref="rifle_drop.wav"/>
+	<model filename=""/>
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0.0"/>
+	<weak_hand_hold offset="0.2"/>
 	<projectile file="bullet_sf.projectile">
-        <result class="hit"  kill_probability="1.5" kill_decay_start_time="0.3" kill_decay_end_time="0.3" />
-    </projectile>
-    
-    <stance state_key="running" accuracy="0.6" />
-    <stance state_key="walking" accuracy="0.675" />
-    <stance state_key="crouch_moving" accuracy="0.75" />
-    <stance state_key="prone_moving" accuracy="0.6" />
-    <stance state_key="standing" accuracy="0.8" />
-    <stance state_key="crouching" accuracy="0.85" />
-    <stance state_key="prone" accuracy="0.94" />
-
-    <modifier class="speed" value="0.3" />    
-
-    <target_factors tag="shotgun" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.1" />
-	<target_factors tag="" distance="0.5" direction="0.0" squad_command="1.0" base_score="1.0" />
-    <target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0" />
-    <target_factors tag="bazooka" distance="1.0" direction="0.0" squad_command="1.0" base_score="12.0" />
-	<target_factors tag="punchme" distance="1.0" direction="0.0" squad_command="1.0" base_score="30.0" />
-
+	<result class="hit" kill_probability="1.5" kill_decay_start_time="0.3" kill_decay_end_time="0.3"/>
+	</projectile>
+	<stance state_key="running" accuracy="0.75"/>
+	<stance state_key="walking" accuracy="0.75"/>
+	<stance state_key="crouch_moving" accuracy="0.75"/>
+	<stance state_key="standing" accuracy="0.85"/>
+	<stance state_key="crouching" accuracy="0.9"/>
+	<stance state_key="prone" accuracy="0.95"/>
+	<stance state_key="prone_moving" accuracy="1"/>
+	<stance state_key="over_wall" accuracy="1"/>
+	<modifier class="speed" value="0.3"/>
+	<target_factors tag="shotgun" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.1"/>
+	<target_factors tag="" distance="0.5" direction="0.0" squad_command="1.0" base_score="1.0"/>
+	<target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
+	<target_factors tag="bazooka" distance="1.0" direction="0.0" squad_command="1.0" base_score="12.0"/>
+	<target_factors tag="punchme" distance="1.0" direction="0.0" squad_command="1.0" base_score="30.0"/>
+	<commonness value="0.000001" in_stock="1" can_respawn_with="1"/>
+	<inventory encumbrance="0.0" buy_price="1.0" sell_price="0.0"/>
+	<capacity value="1" source="rank" source_value="0.0"/>
+	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
+	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
+	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
+	<stance state_key="running" accuracy="0.3"/>
+	<stance state_key="walking" accuracy="0.675"/>
+	<stance state_key="crouch_moving" accuracy="0.75"/>
+	<stance state_key="standing" accuracy="0.85"/>
+	<stance state_key="crouching" accuracy="0.9"/>
+	<stance state_key="prone" accuracy="0.95"/>
+	<stance state_key="prone_moving" accuracy="0.3"/>
+	<stance state_key="over_wall" accuracy="1"/>
 </weapon>

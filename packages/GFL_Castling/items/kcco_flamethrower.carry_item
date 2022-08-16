@@ -7,10 +7,10 @@
 		<inventory encumbrance="3" price="1"/>
 		<model />
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"  />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
         <modifier class="speed" value="0.0" />
@@ -24,10 +24,10 @@
 		<inventory encumbrance="3" price="1"/>
 		<model />
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"  />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
         <modifier class="speed" value="0.0" />
@@ -41,10 +41,10 @@
 		<inventory encumbrance="3" price="1"/>
 		<model />
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"  />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
         <modifier class="speed" value="0.0" />
@@ -58,14 +58,14 @@
 		<inventory encumbrance="3" price="1"/>
 		<model />
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"  />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
         <modifier class="speed" value="0.0" />
-        <modifier class="hit_success_probability" value="-0.8" />
+        <modifier class="hit_success_probability" value="-1.0" />
         <modifier class="detectability" value="0.8" />
 	</carry_item>
 	<carry_item key="kcco_flame_4" time_to_live_out_in_the_open="15" name="Code:Cyclops-Sterops" transform_on_consume="kcco_flame_5" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
@@ -75,14 +75,14 @@
 		<inventory encumbrance="3" price="1"/>
 		<model />
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"  />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
         <modifier class="speed" value="0.0" />
-        <modifier class="hit_success_probability" value="-0.8" />
+        <modifier class="hit_success_probability" value="-1.0" />
         <modifier class="detectability" value="0.8" />
 	</carry_item>
 	<carry_item key="kcco_flame_5" time_to_live_out_in_the_open="15" name="Code:Cyclops-Sterops" transform_on_consume="kcco_flame_6" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
@@ -92,14 +92,14 @@
 		<inventory encumbrance="3" price="1"/>
 		<model />
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="stun"  />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
         <modifier class="speed" value="0.0" />
-        <modifier class="hit_success_probability" value="-0.8" />
+        <modifier class="hit_success_probability" value="-1.0" />
         <modifier class="detectability" value="0.8" />
 	</carry_item>
 	<carry_item key="kcco_flame_6" time_to_live_out_in_the_open="15" name="Code:Cyclops-Sterops" transform_on_consume="kcco_flame_7" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
@@ -109,14 +109,14 @@
 		<inventory encumbrance="3" price="1"/>
 		<model />
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"  />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
         <modifier class="speed" value="0.0" />
-        <modifier class="hit_success_probability" value="-0.8" />
+        <modifier class="hit_success_probability" value="-1.0" />
         <modifier class="detectability" value="0.8" />
 	</carry_item>
 	<carry_item key="kcco_flame_7" time_to_live_out_in_the_open="15" name="Code:Cyclops-Sterops" transform_on_consume="kcco_flame_8" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
@@ -126,14 +126,14 @@
 		<inventory encumbrance="3" price="1"/>
 		<model />
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"  />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
-        <modifier class="melee_hit_result" input_character_state="death" output_character_state="death" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
         <modifier class="speed" value="0.0" />
-        <modifier class="hit_success_probability" value="-0.8" />
+        <modifier class="hit_success_probability" value="-1.0" />
         <modifier class="detectability" value="0.8" />
 	</carry_item>
 	<carry_item key="kcco_flame_8" time_to_live_out_in_the_open="15" name="Code:Cyclops-Sterops" transform_on_consume="kcco_flame_9" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
@@ -143,14 +143,14 @@
 		<inventory encumbrance="3" price="1"/>
 		<model />
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="stun"  />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
-        <modifier class="melee_hit_result" input_character_state="death" output_character_state="death" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
         <modifier class="speed" value="0.0" />
-        <modifier class="hit_success_probability" value="-0.8" />
+        <modifier class="hit_success_probability" value="-1.0" />
         <modifier class="detectability" value="0.8" />
 	</carry_item>
 	<carry_item key="kcco_flame_9" time_to_live_out_in_the_open="15" name="Code:Cyclops-Sterops" transform_on_consume="kcco_flame_10" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
@@ -160,14 +160,14 @@
 		<inventory encumbrance="3" price="1"/>
 		<model />
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"  />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
-        <modifier class="melee_hit_result" input_character_state="death" output_character_state="death" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
         <modifier class="speed" value="0.0" />
-        <modifier class="hit_success_probability" value="-0.8" />
+        <modifier class="hit_success_probability" value="-1.0" />
         <modifier class="detectability" value="0.8" />
 	</carry_item>
 	<carry_item key="kcco_flame_10" time_to_live_out_in_the_open="15" name="Code:Cyclops-Sterops" transform_on_consume="kcco_flame_11" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
@@ -176,15 +176,32 @@
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="3" price="1"/>
 		<model />
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"  consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="0.8" />
+	</carry_item>
+	<carry_item key="kcco_flame_11" time_to_live_out_in_the_open="15" name="Code:Cyclops-Sterops" transform_on_consume="kcco_flame_12" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="kcco_sg.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="3" price="1"/>
+		<model />
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="death"  consumes_item="0"/>
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="death" />
         <modifier class="speed" value="0.0" />
-        <modifier class="hit_success_probability" value="-0.8" />
+        <modifier class="hit_success_probability" value="-1.0" />
         <modifier class="detectability" value="0.8" />
 	</carry_item>
 </carry_items>
