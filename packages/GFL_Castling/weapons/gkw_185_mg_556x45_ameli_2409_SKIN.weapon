@@ -10,8 +10,8 @@
     suppressed="0" 
     name="Ameli-[Ameli`s Catching Ball]" 
     class="0" 
-    projectile_speed="216.17" 
-    sight_range_modifier="1.5"/>
+    projectile_speed="236.17" 
+    sight_range_modifier="1.75"/>
     <animation key="reload" animation_key="reloading, Machine gun 2.8" />
     <inventory  buy_price="20.0" sell_price="20.0" />
     <commonness value="0" in_stock="0" />
@@ -23,7 +23,7 @@
     <model filename="gkw_mg_ameli_2409.xml" />
     <hud_icon filename="gkw_ameli_2409.png" />
     <projectile file="bullet.projectile">
-        <result class="hit" kill_probability="1.85" kill_decay_start_time="3.394" kill_decay_end_time="5.657" />
+        <result class="hit" kill_probability="2.25" kill_probability_offset_on_successful_hit="1.5" kill_decay_start_time="3.394" kill_decay_end_time="5.657" />
     </projectile>
     <effect class="muzzle" ref="ejection_556" />
     <stance state_key="running" accuracy="0.6" />
@@ -33,5 +33,4 @@
     <stance state_key="crouching" accuracy="0.75" />
     <stance state_key="prone" accuracy="1.1" />
     <stance state_key="over_wall" accuracy="1.1" />
-    <modifier class="speed" value="-0.3" />
 </weapon>
