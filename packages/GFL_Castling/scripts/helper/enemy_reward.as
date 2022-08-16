@@ -1,3 +1,5 @@
+#include "gift_item_delivery_rewarder.as"
+
 int getRPKillReward(string name) {
     if(RP_enemy_index.exists(name)) {
         int key = int(RP_enemy_index[name]);
@@ -42,7 +44,7 @@ dictionary RP_enemy_index = {
     {"Brute_swap",20},
     {"sfw_dragoon",40},
     {"sfw_dragoon_swap",80},
-    {"sfw_prowler_sweap",20},
+    {"sfw_prowler_swap",20},
 
     
 
@@ -127,3 +129,69 @@ dictionary XP_enemy_index = {
 
     {"",0}
 };
+
+string getRewardPool(string name) {
+    if(reward_pool_list.exists(name)) {
+        string key = string(reward_pool_list[name]);
+        return key;
+    }
+    else{
+        return "common";
+    }
+}
+
+dictionary reward_pool_list= {
+    {"sf_hunter","boss"},
+    {"sf_architect","boss"},
+    {"sfw_Intruder","boss"},
+    {"sfw_Dreamer","boss"},
+    {"sfw_Alchemist","boss"},
+    {"sfw_Gager","boss"},
+    {"sfw_Excutioner-Wind_rose","boss"},
+    {"sfw_Excutioner-Queen_of_the_Moon","boss"},
+    {"sfw_M16A1","boss"},
+    {"sfw_Agent","boss"},
+    {"sfw_Destroyer","boss"},
+    {"sfw_Weaver","boss"},
+    {"sfw_Justice","boss"},
+    {"sfw_Scarecrow","boss"},
+    {"teal","boss"},
+    {"Nimogen","boss"},
+    {"Narciss","boss"},
+
+    {"alina","elite"},
+    {"vanguard","elite"},
+    {"eagleyes","elite"},
+    {"Adeline","elite"},
+    {"smasher","elite"},
+
+    {"sf_manticore","rare"},
+    {"Paradeus_doppelsoldner","rare"},
+    {"Paradeus_roarer","rare"},
+    {"kcco_Hydra","rare"},
+    {"kcco_teslatrooper","rare"},
+
+    {"sfw_nemeum","uncommon"},
+    {"sfw_nemeum_swap","uncommon"},
+    {"sf_vespid_swap","uncommon"},
+    {"sf_ripper_swap","uncommon"},
+    {"sf_jaeger_swap","uncommon"},
+    {"sf_striker_swap","uncommon"},
+    {"Brute_swap","uncommon"},
+    {"sfw_dragoon","uncommon"},
+    {"sfw_dragoon_swap","uncommon"},
+    {"sfw_prowler_swap","uncommon"},
+    {"kcco_talos","uncommon"},
+    {"kcco_mg","uncommon"},
+    
+    {"","common"}
+};
+
+array<ScoredResource@>@ reward_pool_common ={
+    ScoredResource("city_gifts.drop_reward", "grenade", 50.0f),
+    ScoredResource("wild_gifts.drop_reward", "grenade", 50.0f), 
+    ScoredResource("snow_gifts.drop_reward", "grenade", 50.0f), 
+    ScoredResource("forest_gifts.drop_reward", "grenade", 50.0f), 
+    ScoredResource("foobar", "grenade", 50.0f)
+};
+

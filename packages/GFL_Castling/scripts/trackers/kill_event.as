@@ -165,7 +165,6 @@ class kill_event : Tracker {
 	protected void handleCharacterKillEvent(const XmlElement@ event){
 		const XmlElement@ killer = event.getFirstElementByTagName("killer");
         if (killer is null) return;
-        if (killer.getIntAttribute("player_id") == -1) return;
         const XmlElement@ target = event.getFirstElementByTagName("target");
         if (target is null) return;
         if ((killer.getIntAttribute("faction_id")) != (target.getIntAttribute("faction_id"))){
@@ -173,8 +172,28 @@ class kill_event : Tracker {
             int factionId = killer.getIntAttribute("faction_id");
             int characterId = killer.getIntAttribute("id");
             string Solider_Name = target.getStringAttribute("soldier_group_name");
+            string dead_pos = target.getStringAttribute("position");
+            string reward_pool_key = getRewardPool(Solider_Name);
             string KillerWeaponKey = event.getStringAttribute("key");
             string killway= event.getStringAttribute("method_hint");
+
+            if(reward_pool_key != "" && factionId==0){
+                if(reward_pool_key=="common"){
+                    if(rand(0.0f,1.0f) <= 0.85f){
+						ScoredResource@ r = getRandomScoredResource(reward_pool_common);
+                        string c = 
+                            "<command class='create_instance'" +
+                            " faction_id='" + 0 + "'" +
+                            " instance_class='" + r.m_type + "'" +
+                            " instance_key='" + r.m_key + "'" +
+                            " position='" + dead_pos + "'" +
+                            " character_id='" + characterId + "'/>";
+                        m_metagame.getComms().send(c);
+                    }
+                }
+            }
+            
+            if (killer.getIntAttribute("player_id") == -1) return;
             //只查询我方杀敌
             if (factionId==0 && characterId > 0){
                 const XmlElement@ killerCharacter = getCharacterInfo2(m_metagame,characterId);
@@ -234,7 +253,10 @@ class kill_event : Tracker {
             }
             if(GivenXP>0){
                 GiveXP(m_metagame,characterId,GivenXP);
-            }            
+            }
+            
+
+
         }
 	}
     protected void handlePlayerDieEvent(const XmlElement@ event){

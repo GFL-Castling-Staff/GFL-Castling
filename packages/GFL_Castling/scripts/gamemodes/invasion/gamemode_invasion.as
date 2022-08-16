@@ -48,6 +48,7 @@
 #include "MatchCompleteReward.as"
 #include "GFLairstrike.as"
 #include "shared_reward.as"
+#include "enemy_reward.as"
 
 // --------------------------------------------
 class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
@@ -314,6 +315,7 @@ class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 		
 		setupSpawnTimeHandler();
 		setupSideBaseAttackHandler();
+		setupDropTable();
 	}
 
 	// --------------------------------------------
@@ -488,6 +490,10 @@ class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 	protected void trackerCompleted(Tracker@ tracker) {
 	}
 
+	protected void setupDropTable() {
+		normalizeScoredResources(reward_pool_common);
+		_log("loot reward pool inited");
+	}
 	// --------------------------------------------
 	// map rotator is the one that actually defines which factions are in the game and which default values are used,
 	// it will feed us the faction data
