@@ -32,19 +32,19 @@ class SharedReward : Tracker {
 
 	protected void handleResultEvent(const XmlElement@ event) {
         string EventKeyGet = event.getStringAttribute("key");
-        if(int(SharedRewardList[EventKeyGet]<=0)) return;
+        if(int(SharedRewardList[EventKeyGet])<=0) return;
         Vector3 m_pos= stringToVector3(event.getStringAttribute("position"));
         switch(int(SharedRewardList[EventKeyGet]))
         {
             case 0: {break;}
             
-            case 1: {addRangeItemInBackpack(m_metagame,0,"carry_item","city_gifts.carry_item",m_pos,30.0);break;}
-            case 2: {addRangeItemInBackpack(m_metagame,0,"carry_item","wild_gifts.carry_item",m_pos,30.0);break;}
-            case 3: {addRangeItemInBackpack(m_metagame,0,"carry_item","snow_gifts.carry_item",m_pos,30.0);break;}
-            case 4: {addRangeItemInBackpack(m_metagame,0,"carry_item","forest_gifts.carry_item",m_pos,30.0);break;}
-            case 5: {addRangeItemInBackpack(m_metagame,0,"carry_item","city_gifts.carry_item",m_pos,30.0);break;}
-            case 6: {addRangeItemInBackpack(m_metagame,0,"carry_item","city_gifts.carry_item",m_pos,30.0);break;}
-            case 7: {addRangeItemInBackpack(m_metagame,0,"carry_item","city_gifts.carry_item",m_pos,30.0);break;}
+            case 1: {addRangeItemInBackpack(m_metagame,0,"carry_item","city_gifts.carry_item",m_pos,40.0);break;}
+            case 2: {addRangeItemInBackpack(m_metagame,0,"carry_item","wild_gifts.carry_item",m_pos,40.0);break;}
+            case 3: {addRangeItemInBackpack(m_metagame,0,"carry_item","snow_gifts.carry_item",m_pos,40.0);break;}
+            case 4: {addRangeItemInBackpack(m_metagame,0,"carry_item","forest_gifts.carry_item",m_pos,40.0);break;}
+            case 5: {addRangeItemInBackpack(m_metagame,0,"carry_item","city_gifts.carry_item",m_pos,40.0);break;}
+            case 6: {addRangeItemInBackpack(m_metagame,0,"carry_item","city_gifts.carry_item",m_pos,40.0);break;}
+            case 7: {addRangeItemInBackpack(m_metagame,0,"carry_item","city_gifts.carry_item",m_pos,40.0);break;}
 
             
             default:

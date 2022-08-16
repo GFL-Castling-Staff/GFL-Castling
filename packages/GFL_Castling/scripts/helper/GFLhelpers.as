@@ -158,12 +158,23 @@ void addItemInStash(Metagame@ metagame, int characterId, string ItemType, string
 }
 
 void addRangeItemInBackpack(Metagame@ metagame, int factionId, string ItemType, string ItemKey,Vector3 pos,float range){
-	array<const XmlElement@> affectedCharacter = getCharactersNearPosition(metagame,pos,factionId,range);
-	if (affectedCharacter !is null){
-		for(uint i=0;i<affectedCharacter.length();i++){
-			addItemInBackpack(metagame,affectedCharacter[i].getIntAttribute("id"),ItemType,ItemKey);
+	array<const XmlElement@> nowPlayers = getPlayers(metagame);
+	array<int> player_cId;
+	if (nowPlayers !is null){
+		for(uint i=0;i<nowPlayers.length();i++){
+			player_cId.insertLast(nowPlayers[i].getIntAttribute("character_id"));
+		}
+		array<const XmlElement@> affectedCharacter = getCharactersNearPosition(metagame,pos,factionId,range);
+		if (affectedCharacter !is null){
+			for(uint i=0;i<affectedCharacter.length();i++){
+				int cId = affectedCharacter[i].getIntAttribute("id");
+				if(player_cId.find(cId)>=0){
+					addItemInBackpack(metagame,cId,ItemType,ItemKey);
+				}
+			}
 		}
 	}
+
 }
 
 bool checkCommandAlter(string message, string target, string target1) {

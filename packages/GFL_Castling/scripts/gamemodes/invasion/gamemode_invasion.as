@@ -47,6 +47,7 @@
 #include "vehicle_spawn_handler.as"
 #include "MatchCompleteReward.as"
 #include "GFLairstrike.as"
+#include "shared_reward.as"
 
 // --------------------------------------------
 class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
@@ -332,6 +333,7 @@ class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 		addTracker(MatchCompleteReward(this));
 		addTracker(GFLairstrike(this));
 		addTracker(GFL_event_system(this));
+		addTracker(SharedReward(this));
 	}
 
 	// --------------------------------------------
