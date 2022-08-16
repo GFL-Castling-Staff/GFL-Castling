@@ -16,6 +16,7 @@ dictionary RP_enemy_index = {
     {"kcco_cerynitis_alter",30},
     {"kcco_Hydra",100},
     {"kcco_teslatrooper",100},
+    {"kcco_human_sniper",200},
 
     {"para_streletplus",20},
     {"para_streletplus_richman",20},
@@ -81,6 +82,7 @@ dictionary XP_enemy_index = {
     {"kcco_cerynitis_alter",0.003},
     {"kcco_Hydra",0.01},
     {"kcco_teslatrooper",0.01},
+    {"kcco_human_sniper",0.01},
 
     {"para_streletplus",0.002},
     {"para_streletplus_richman",0.002},
