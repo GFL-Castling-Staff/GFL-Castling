@@ -11,8 +11,8 @@
     <turret offset="-0.0 3.5 -1.6" weapon_key="typhoon_main_cannon" weapon_offset="0.0 0.0 0.0" weapon_recoil="0.0" physics_recoil="0.0" max_rotation_step="0.00016" rotation_range="1.05" />
     <modifier class="blast_damage" value="-0.8" />
     <turret offset="-0.0 0.0 0.0" weapon_key="typhoon_main_cannon_sound" weapon_offset="0.0 0.0 0.0" weapon_recoil="0.0" physics_recoil="0.0" max_rotation_step="0.00016" rotation_range="1.05" parent_turret_index="0"/>
-    <turret offset="-0.0 0.0 0.0" weapon_key="typhoon_charged_laser3" weapon_offset="0.0 0.0 0.0" weapon_recoil="0.0" physics_recoil="0.0" max_rotation_step="0.00008" rotation_range="6.25" rotation="1.84" parent_turret_index="0"/>
-    <turret offset="-0.0 0.0 0.0" weapon_key="typhoon_charged_laser2" weapon_offset="0.0 0.0 0.0" weapon_recoil="0.0" physics_recoil="0.0" max_rotation_step="0.00008" rotation_range="6.25" rotation="1.96" parent_turret_index="0"/>
+    <!-- <turret offset="-0.0 0.0 0.0" weapon_key="typhoon_charged_laser3" weapon_offset="0.0 0.0 0.0" weapon_recoil="0.0" physics_recoil="0.0" max_rotation_step="0.00008" rotation_range="6.25" rotation="1.84" parent_turret_index="0"/> -->
+    <!-- /<turret offset="-0.0 0.0 0.0" weapon_key="typhoon_charged_laser2" weapon_offset="0.0 0.0 0.0" weapon_recoil="0.0" physics_recoil="0.0" max_rotation_step="0.00008" rotation_range="6.25" rotation="1.96" parent_turret_index="0"/> -->
     <turret offset="-0.0 0.0 0.0" weapon_key="typhoon_charged_laser1" weapon_offset="0.0 0.0 0.0" weapon_recoil="0.0" physics_recoil="0.0" max_rotation_step="0.00008" rotation_range="6.25" rotation="2.08" parent_turret_index="0"/>
     <visual class="chassis" mesh_filename="Typhoon_body.mesh" texture_filename="Typhoon_Body_Color.png" offset="0.0 -0.8 0.0" max_tilt="-0.05" />
     <visual class="chassis" key="broken" mesh_filename="Typhoon_body.mesh" texture_filename="tank_2_broken.png" />
