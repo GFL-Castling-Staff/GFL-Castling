@@ -40,7 +40,7 @@
 	<commonness value="1.0" in_stock="0" can_respawn_with="0"/>
 </carry_item>
 
-<carry_item name="Teddy Bear" key="teddy.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+<carry_item name="AS Val's bear" key="teddy.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
 	<hud_icon filename="hud_teddy.png"/>
 	<inventory encumbrance="0.0" price="250.0"/>
 	<model mesh_filename="teddy.mesh" texture_filename="teddy.png"/>
@@ -60,7 +60,7 @@
 	<commonness value="1.0" in_stock="0" can_respawn_with="0"/>
 </carry_item>
 
-<carry_item name="Holy Bible" key="bible.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+<carry_item name="Hardcover Scripture" key="bible.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
 	<hud_icon filename="hud_bible.png"/>
 	<inventory encumbrance="0.0" price="200.0"/>
 	<model mesh_filename="bible.mesh" texture_filename="bible.png"/>
@@ -70,7 +70,7 @@
 	<commonness value="1.0" in_stock="0" can_respawn_with="0"/>
 </carry_item>
 
-<carry_item name="Holy Koran" key="koran.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+<carry_item name="Hardcover Scripture" key="koran.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
 	<hud_icon filename="hud_koran.png"/>
 	<inventory encumbrance="0.0" price="200.0"/>
 	<model mesh_filename="bible.mesh" texture_filename="koran.png"/>
@@ -160,7 +160,7 @@
 	<commonness value="1.0" in_stock="0" can_respawn_with="0"/>
 </carry_item>
 
-<carry_item name="willy boy" key="sheaths.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+<carry_item name="Weird Rubber Crafts" key="sheaths.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
 	<hud_icon filename="hud_sheaths.png"/>
 	<inventory encumbrance="0.0" price="40.0"/>
 	<model mesh_filename="sheaths.mesh" texture_filename="sheaths.png"/>
@@ -170,7 +170,7 @@
 	<commonness value="1.0" in_stock="0" can_respawn_with="0"/>
 </carry_item>
 
-<carry_item name="King-size willy boy" key="sheaths_xxl.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+<carry_item name="Bigger Weird Rubber Crafts" key="sheaths_xxl.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
 	<hud_icon filename="hud_sheaths_xxl.png"/>
 	<inventory encumbrance="0.0" price="60.0"/>
 	<model mesh_filename="sheaths.mesh" texture_filename="sheaths_xxl.png"/>
@@ -820,4 +820,3 @@
 </carry_item>
 
 </carry_items>
-

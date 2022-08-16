@@ -179,7 +179,7 @@ class kill_event : Tracker {
 
             if(reward_pool_key != "" && factionId==0){
                 if(reward_pool_key=="common"){
-                    if(rand(0.0f,1.0f) <= 0.85f){
+                    if(rand(0.0f,1.0f) <= 0.3f){
 						ScoredResource@ r = getRandomScoredResource(reward_pool_common);
                         string c = 
                             "<command class='create_instance'" +
@@ -191,6 +191,54 @@ class kill_event : Tracker {
                         m_metagame.getComms().send(c);
                     }
                 }
+                else if(reward_pool_key=="uncommon"){
+                    if(rand(0.0f,1.0f) <= 0.35f){
+						ScoredResource@ r = getRandomScoredResource(reward_pool_uncommon);
+                        string c = 
+                            "<command class='create_instance'" +
+                            " faction_id='" + 0 + "'" +
+                            " instance_class='" + r.m_type + "'" +
+                            " instance_key='" + r.m_key + "'" +
+                            " position='" + dead_pos + "'" +
+                            " character_id='" + characterId + "'/>";
+                        m_metagame.getComms().send(c);
+                    }
+                }
+                else if(reward_pool_key=="rare"){
+                    if(rand(0.0f,1.0f) <= 0.4f){
+						ScoredResource@ r = getRandomScoredResource(reward_pool_rare);
+                        string c = 
+                            "<command class='create_instance'" +
+                            " faction_id='" + 0 + "'" +
+                            " instance_class='" + r.m_type + "'" +
+                            " instance_key='" + r.m_key + "'" +
+                            " position='" + dead_pos + "'" +
+                            " character_id='" + characterId + "'/>";
+                        m_metagame.getComms().send(c);
+                    }
+                }
+                else if(reward_pool_key=="elite"){
+                    ScoredResource@ r = getRandomScoredResource(reward_pool_elite);
+                    string c = 
+                        "<command class='create_instance'" +
+                        " faction_id='" + 0 + "'" +
+                        " instance_class='" + r.m_type + "'" +
+                        " instance_key='" + r.m_key + "'" +
+                        " position='" + dead_pos + "'" +
+                        " character_id='" + characterId + "'/>";
+                    m_metagame.getComms().send(c);
+                }
+                else if(reward_pool_key=="boss"){
+                    ScoredResource@ r = getRandomScoredResource(reward_pool_boss);
+                    string c = 
+                        "<command class='create_instance'" +
+                        " faction_id='" + 0 + "'" +
+                        " instance_class='" + r.m_type + "'" +
+                        " instance_key='" + r.m_key + "'" +
+                        " position='" + dead_pos + "'" +
+                        " character_id='" + characterId + "'/>";
+                    m_metagame.getComms().send(c);
+                }                
             }
             
             if (killer.getIntAttribute("player_id") == -1) return;

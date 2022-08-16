@@ -492,6 +492,11 @@ class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 
 	protected void setupDropTable() {
 		normalizeScoredResources(reward_pool_common);
+		normalizeScoredResources(reward_pool_uncommon);
+		normalizeScoredResources(reward_pool_rare);
+		normalizeScoredResources(reward_pool_elite);
+		normalizeScoredResources(reward_pool_boss);
+
 		_log("loot reward pool inited");
 	}
 	// --------------------------------------------

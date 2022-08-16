@@ -20708,109 +20708,6 @@
 	<modifier class="detectability" value="0.3"/>
 </carry_item>
 
-<carry_item name="Christmas coin" key="gift_box_community_2.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
-	<hud_icon filename="Christmas_coin.png"/>
-	<inventory encumbrance="0.0" price="1.0"/>
-	<model mesh_filename="christmas_coin.xml" texture_filename=""/>
-	<commonness value="0.4" in_stock="0"/>
-	<capacity value="100" source="rank" source_value="0.0"/>
-	<inventory encumbrance="-0.5"/>
-	<commonness value="1.0" in_stock="0" can_respawn_with="0"/>
-</carry_item>
-
-<carry_item name="But I only want ice cream" key="lottery.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
-	<hud_icon filename="Memory_Fragment.png"/>
-	<inventory encumbrance="1.0" buy_price="5280.0" sell_price="0.0"/>
-	<model mesh_filename="memory_fragment.xml" texture_filename=""/>
-	<commonness value="0.0001" in_stock="1"/>
-	<capacity value="100" source="rank" source_value="0.0"/>
-	<inventory encumbrance="-0.5"/>
-	<commonness value="1.0" in_stock="0" can_respawn_with="0"/>
-</carry_item>
-
-<carry_item name="Purchase coins[MOD3]" key="gift_box_community_1.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
-	<hud_icon filename="gk_cgb_mod3.png"/>
-	<inventory encumbrance="-1.0" buy_price="2380.0" sell_price="2380.0"/>
-	<model mesh_filename="caigoubi.mesh" texture_filename="none.png"/>
-	<commonness value="0" in_stock="0"/>
-	<capacity value="100" source="rank" source_value="0.0"/>
-	<inventory encumbrance="-0.5"/>
-	<commonness value="1.0" in_stock="0" can_respawn_with="0"/>
-</carry_item>
-
-<carry_item name="New Year Giftbox" key="sf_box.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
-	<hud_icon filename="SfBox.png"/>
-	<inventory encumbrance="-1.0" buy_price="8888.0" sell_price="1.0"/>
-	<model mesh_filename="sf_box.xml" texture_filename=""/>
-	<commonness value="0" in_stock="1"/>
-	<capacity value="100" source="rank" source_value="0.0"/>
-	<inventory encumbrance="-0.5"/>
-	<commonness value="1.0" in_stock="0" can_respawn_with="0"/>
-</carry_item>
-
-<carry_item time_to_live_out_in_the_open="90.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="1.0" name="T-Doll Contract" key="dollcraft.carry_item">
-	<capacity value="100" source="rank" source_value="0.0"/>
-	<hud_icon filename="hud_dollcraft.png"/>
-	<inventory encumbrance="-1.0" buy_price="328" sell_price="0"/>
-	<model mesh_filename="magazine.mesh" texture_filename="tdollcraft.png"/>
-	<commonness value="1.0" in_stock="1"/>
-</carry_item>
-
-<carry_item time_to_live_out_in_the_open="90.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="1.0" name="T-Doll Contract [AR Formula]" key="dollcraft_ar.carry_item">
-	<capacity value="100" source="rank" source_value="0.0"/>
-	<hud_icon filename="hud_doll_ar.png"/>
-	<inventory encumbrance="-1.0" buy_price="648" sell_price="0"/>
-	<model mesh_filename="magazine.mesh" texture_filename="tdollcraft.png"/>
-	<commonness value="0.0" in_stock="1"/>
-</carry_item>
-
-<carry_item time_to_live_out_in_the_open="90.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="1.0" name="T-Doll Contract [SMG Formula]" key="dollcraft_smg.carry_item">
-	<capacity value="100" source="rank" source_value="0.0"/>
-	<hud_icon filename="hud_doll_smg.png"/>
-	<inventory encumbrance="-1.0" buy_price="648" sell_price="0"/>
-	<model mesh_filename="magazine.mesh" texture_filename="tdollcraft.png"/>
-	<commonness value="0.0" in_stock="1"/>
-</carry_item>
-
-<carry_item time_to_live_out_in_the_open="90.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="1.0" name="T-Doll Contract [RF Formula]" key="dollcraft_rf.carry_item">
-	<capacity value="100" source="rank" source_value="0.0"/>
-	<hud_icon filename="hud_doll_rf.png"/>
-	<inventory encumbrance="-1.0" buy_price="648" sell_price="0"/>
-	<model mesh_filename="magazine.mesh" texture_filename="tdollcraft.png"/>
-	<commonness value="0.0" in_stock="1"/>
-</carry_item>
-
-<carry_item time_to_live_out_in_the_open="90.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="1.0" name="T-Doll Contract [MG Formula]" key="dollcraft_mg.carry_item">
-	<capacity value="100" source="rank" source_value="0.0"/>
-	<hud_icon filename="hud_doll_mg.png"/>
-	<inventory encumbrance="-1.0" buy_price="648" sell_price="0"/>
-	<model mesh_filename="magazine.mesh" texture_filename="tdollcraft.png"/>
-	<commonness value="0.0" in_stock="1"/>
-</carry_item>
-
-<carry_item time_to_live_out_in_the_open="90.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="1.0" name="T-Doll Contract [SG Formula]" key="dollcraft_sg.carry_item">
-	<capacity value="100" source="rank" source_value="0.0"/>
-	<hud_icon filename="hud_doll_sg.png"/>
-	<inventory encumbrance="-1.0" buy_price="988" sell_price="0"/>
-	<model mesh_filename="magazine.mesh" texture_filename="tdollcraft.png"/>
-	<commonness value="0.0" in_stock="1"/>
-</carry_item>
-
-<carry_item time_to_live_out_in_the_open="90.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="1.0" name="T-Doll Contract [HG Formula]" key="dollcraft_hg.carry_item">
-	<capacity value="100" source="rank" source_value="0.0"/>
-	<hud_icon filename="hud_doll_hg.png"/>
-	<inventory encumbrance="-1.0" buy_price="648" sell_price="0"/>
-	<model mesh_filename="magazine.mesh" texture_filename="tdollcraft.png"/>
-	<commonness value="0.0" in_stock="1"/>
-</carry_item>
-
-<carry_item time_to_live_out_in_the_open="90.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="1.0" player_death_drop_owner_lock_time="90.0" name="Fire Control Component" key="firecontrol.carry_item">
-	<hud_icon filename="hud_firecontrol.png"/>
-	<inventory encumbrance="0.0" buy_price="500000" sell_price="-1000.0"/>
-	<model mesh_filename="fire_control.xml"/>
-	<commonness value="0" in_stock="0"/>
-</carry_item>
-
 <carry_item name="Decrypt Dream Box" key="complete_box.carry_item" time_to_live_out_in_the_open="90.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="1.0" player_death_drop_owner_lock_time="90.0">
 	<capacity value="100" source="rank" source_value="0.0"/>
 	<inventory buy_price="0" sell_price="0" encumbrance="-0.5"/>
@@ -20889,6 +20786,62 @@
 	<inventory encumbrance="-1.0" buy_price="15000" sell_price="0"/>
 	<model mesh_filename="vestexo.xml"/>
 	<commonness value="0.0" in_stock="1" can_respawn_with="0"/>
+</carry_item>
+
+<carry_item time_to_live_out_in_the_open="90.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="1.0" name="T-Doll Contract" key="dollcraft.carry_item">
+	<capacity value="100" source="rank" source_value="0.0"/>
+	<hud_icon filename="hud_dollcraft.png"/>
+	<inventory encumbrance="-1.0" buy_price="328" sell_price="0"/>
+	<model mesh_filename="magazine.mesh" texture_filename="tdollcraft.png"/>
+	<commonness value="1.0" in_stock="1"/>
+</carry_item>
+
+<carry_item time_to_live_out_in_the_open="90.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="1.0" name="T-Doll Contract [AR Formula]" key="dollcraft_ar.carry_item">
+	<capacity value="100" source="rank" source_value="0.0"/>
+	<hud_icon filename="hud_doll_ar.png"/>
+	<inventory encumbrance="-1.0" buy_price="648" sell_price="0"/>
+	<model mesh_filename="magazine.mesh" texture_filename="tdollcraft.png"/>
+	<commonness value="0.0" in_stock="1"/>
+</carry_item>
+
+<carry_item time_to_live_out_in_the_open="90.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="1.0" name="T-Doll Contract [SMG Formula]" key="dollcraft_smg.carry_item">
+	<capacity value="100" source="rank" source_value="0.0"/>
+	<hud_icon filename="hud_doll_smg.png"/>
+	<inventory encumbrance="-1.0" buy_price="648" sell_price="0"/>
+	<model mesh_filename="magazine.mesh" texture_filename="tdollcraft.png"/>
+	<commonness value="0.0" in_stock="1"/>
+</carry_item>
+
+<carry_item time_to_live_out_in_the_open="90.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="1.0" name="T-Doll Contract [RF Formula]" key="dollcraft_rf.carry_item">
+	<capacity value="100" source="rank" source_value="0.0"/>
+	<hud_icon filename="hud_doll_rf.png"/>
+	<inventory encumbrance="-1.0" buy_price="648" sell_price="0"/>
+	<model mesh_filename="magazine.mesh" texture_filename="tdollcraft.png"/>
+	<commonness value="0.0" in_stock="1"/>
+</carry_item>
+
+<carry_item time_to_live_out_in_the_open="90.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="1.0" name="T-Doll Contract [MG Formula]" key="dollcraft_mg.carry_item">
+	<capacity value="100" source="rank" source_value="0.0"/>
+	<hud_icon filename="hud_doll_mg.png"/>
+	<inventory encumbrance="-1.0" buy_price="648" sell_price="0"/>
+	<model mesh_filename="magazine.mesh" texture_filename="tdollcraft.png"/>
+	<commonness value="0.0" in_stock="1"/>
+</carry_item>
+
+<carry_item time_to_live_out_in_the_open="90.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="1.0" name="T-Doll Contract [SG Formula]" key="dollcraft_sg.carry_item">
+	<capacity value="100" source="rank" source_value="0.0"/>
+	<hud_icon filename="hud_doll_sg.png"/>
+	<inventory encumbrance="-1.0" buy_price="988" sell_price="0"/>
+	<model mesh_filename="magazine.mesh" texture_filename="tdollcraft.png"/>
+	<commonness value="0.0" in_stock="1"/>
+</carry_item>
+
+<carry_item time_to_live_out_in_the_open="90.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="1.0" name="T-Doll Contract [HG Formula]" key="dollcraft_hg.carry_item">
+	<capacity value="100" source="rank" source_value="0.0"/>
+	<hud_icon filename="hud_doll_hg.png"/>
+	<inventory encumbrance="-1.0" buy_price="648" sell_price="0"/>
+	<model mesh_filename="magazine.mesh" texture_filename="tdollcraft.png"/>
+	<commonness value="0.0" in_stock="1"/>
 </carry_item>
 
 <carry_item key="costume_santa.carry_item" name="costume, santa" slot="1" transform_on_consume="costume_santa_1" time_to_live_out_in_the_open="60.0">

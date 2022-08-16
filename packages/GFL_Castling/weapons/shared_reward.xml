@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projectiles>
-    <projectile class="grenade" name="City Gifts" key="city_gifts.drop_reward" slot="0" on_ground_up="0 1 0" radius="0.15" can_be_disarmed="0" time_to_live_out_in_the_open="0.0" use_time_to_live="1" time_to_live="60" can_be_detected_by_driver="1" can_be_detected_by_footmen="1" >
-        
+    <projectile class="grenade" name="City Gifts" key="city_gifts.drop_reward" slot="0" on_ground_up="0 1 0" radius="0.25" can_be_disarmed="0" time_to_live_out_in_the_open="0.0" use_time_to_live="1" time_to_live="60" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" >
         <trigger class="impact">
             <collider class="terrain" enabled="0" />
             <collider class="static_object" enabled="0" />
@@ -9,23 +8,18 @@
             <collider class="character" enabled="1" faction_compare="equal"/>
         </trigger>
         <result class="notify_script" key="share_reward_1" />
-
         <model mesh_filename="city gifts.xml" texture_filename="" />
         <hud_icon filename="testing.png" />
-
         <commonness value="1" in_stock="1" can_respawn_with="1" />
         <inventory encumbrance="4.0" price="5.0" />
-
         <capacity value="1" source="rank" source_value="0.0" />
-
-        <sound class="result" key="other" fileref="holy_suck.wav" volume="2.5" />
+        <sound class="result" key="other" fileref="holy_suck.wav" volume="2.9" />
         <sound class="result" key="terrain" copy="other" />
         <sound class="result" key="static_object" copy="other" />
         <sound class="result" key="vehicle" copy="other" />
         <sound class="result" key="character" copy="other" />
     </projectile>
-    <projectile class="grenade" name="Wild Gifts" key="wild_gifts.drop_reward" slot="0" on_ground_up="0 1 0" radius="0.15" can_be_disarmed="0" time_to_live_out_in_the_open="0.0" use_time_to_live="1" time_to_live="60" can_be_detected_by_driver="1" can_be_detected_by_footmen="1" >
-        
+    <projectile class="grenade" name="Wild Gifts" key="wild_gifts.drop_reward" slot="0" on_ground_up="0 1 0" radius="0.25" can_be_disarmed="0" time_to_live_out_in_the_open="0.0" use_time_to_live="1" time_to_live="60" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" >
         <trigger class="impact">
             <collider class="terrain" enabled="0" />
             <collider class="static_object" enabled="0" />
@@ -33,23 +27,18 @@
             <collider class="character" enabled="1" faction_compare="equal"/>
         </trigger>
         <result class="notify_script" key="share_reward_2" />
-
         <model mesh_filename="wild gifts.xml" texture_filename="" />
         <hud_icon filename="testing.png" />
-
         <commonness value="1" in_stock="1" can_respawn_with="1" />
         <inventory encumbrance="4.0" price="5.0" />
-
         <capacity value="1" source="rank" source_value="0.0" />
-
-        <sound class="result" key="other" fileref="holy_suck.wav" volume="2.5" />
+        <sound class="result" key="other" fileref="holy_suck.wav" volume="2.9" />
         <sound class="result" key="terrain" copy="other" />
         <sound class="result" key="static_object" copy="other" />
         <sound class="result" key="vehicle" copy="other" />
         <sound class="result" key="character" copy="other" />
-    </projectile>    
-    <projectile class="grenade" name="Snow Gifts" key="snow_gifts.drop_reward" slot="0" on_ground_up="0 1 0" radius="0.15" can_be_disarmed="0" time_to_live_out_in_the_open="0.0" use_time_to_live="1" time_to_live="60" can_be_detected_by_driver="1" can_be_detected_by_footmen="1" >
-        
+    </projectile>
+    <projectile class="grenade" name="Snow Gifts" key="snow_gifts.drop_reward" slot="0" on_ground_up="0 1 0" radius="0.25" can_be_disarmed="0" time_to_live_out_in_the_open="0.0" use_time_to_live="1" time_to_live="60" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" >
         <trigger class="impact">
             <collider class="terrain" enabled="0" />
             <collider class="static_object" enabled="0" />
@@ -57,23 +46,18 @@
             <collider class="character" enabled="1" faction_compare="equal"/>
         </trigger>
         <result class="notify_script" key="share_reward_3" />
-
         <model mesh_filename="snowfield gifts.xml" texture_filename="" />
         <hud_icon filename="testing.png" />
-
         <commonness value="1" in_stock="1" can_respawn_with="1" />
         <inventory encumbrance="4.0" price="5.0" />
-
         <capacity value="1" source="rank" source_value="0.0" />
-
-        <sound class="result" key="other" fileref="holy_suck.wav" volume="2.5" />
+        <sound class="result" key="other" fileref="holy_suck.wav" volume="2.9" />
         <sound class="result" key="terrain" copy="other" />
         <sound class="result" key="static_object" copy="other" />
         <sound class="result" key="vehicle" copy="other" />
         <sound class="result" key="character" copy="other" />
-    </projectile>    
-    <projectile class="grenade" name="Forest Gifts" key="forest_gifts.drop_reward" slot="0" on_ground_up="0 1 0" radius="0.15" can_be_disarmed="0" time_to_live_out_in_the_open="0.0" use_time_to_live="1" time_to_live="60" can_be_detected_by_driver="1" can_be_detected_by_footmen="1" >
-        
+    </projectile>
+    <projectile class="grenade" name="Forest Gifts" key="forest_gifts.drop_reward" slot="0" on_ground_up="0 1 0" radius="0.25" can_be_disarmed="0" time_to_live_out_in_the_open="0.0" use_time_to_live="1" time_to_live="60" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" >
         <trigger class="impact">
             <collider class="terrain" enabled="0" />
             <collider class="static_object" enabled="0" />
@@ -81,19 +65,851 @@
             <collider class="character" enabled="1" faction_compare="equal"/>
         </trigger>
         <result class="notify_script" key="share_reward_4" />
-
         <model mesh_filename="forest gifts.xml" texture_filename="" />
         <hud_icon filename="testing.png" />
-
         <commonness value="1" in_stock="1" can_respawn_with="1" />
         <inventory encumbrance="4.0" price="5.0" />
-
         <capacity value="1" source="rank" source_value="0.0" />
-
-        <sound class="result" key="other" fileref="holy_suck.wav" volume="2.5" />
+        <sound class="result" key="other" fileref="holy_suck.wav" volume="2.9" />
         <sound class="result" key="terrain" copy="other" />
         <sound class="result" key="static_object" copy="other" />
         <sound class="result" key="vehicle" copy="other" />
         <sound class="result" key="character" copy="other" />
     </projectile>
+    <projectile class="grenade" name="cigars" key="cigars.drop_reward" slot="0" on_ground_up="0 1 0" radius="0.25" can_be_disarmed="0" time_to_live_out_in_the_open="0.0" use_time_to_live="1" time_to_live="30" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" >
+        <trigger class="impact">
+            <collider class="terrain" enabled="0" />
+            <collider class="static_object" enabled="0" />
+            <collider class="vehicle" enabled="0" />
+            <collider class="character" enabled="1" faction_compare="equal"/>
+        </trigger>
+        <result class="notify_script" key="share_reward_5" />
+        <model mesh_filename="cigars.mesh" texture_filename="cigars.png"/>
+        <hud_icon filename="testing.png" />
+        <commonness value="1" in_stock="1" can_respawn_with="1" />
+        <inventory encumbrance="4.0" price="5.0" />
+        <capacity value="1" source="rank" source_value="0.0" />
+        <sound class="result" key="other" fileref="holy_suck.wav" volume="2.9" />
+        <sound class="result" key="terrain" copy="other" />
+        <sound class="result" key="static_object" copy="other" />
+        <sound class="result" key="vehicle" copy="other" />
+        <sound class="result" key="character" copy="other" />
+    </projectile>
+    <projectile class="grenade" name="Cheap Beer" key="beer_can.drop_reward" slot="0" on_ground_up="0 1 0" radius="0.25" can_be_disarmed="0" time_to_live_out_in_the_open="0.0" use_time_to_live="1" time_to_live="30" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" >
+        <trigger class="impact">
+            <collider class="terrain" enabled="0" />
+            <collider class="static_object" enabled="0" />
+            <collider class="vehicle" enabled="0" />
+            <collider class="character" enabled="1" faction_compare="equal"/>
+        </trigger>
+        <result class="notify_script" key="share_reward_6" />
+        <model mesh_filename="beer_can.mesh" texture_filename="beer_can.png"/>
+        <hud_icon filename="testing.png" />
+        <commonness value="1" in_stock="1" can_respawn_with="1" />
+        <inventory encumbrance="4.0" price="5.0" />
+        <capacity value="1" source="rank" source_value="0.0" />
+        <sound class="result" key="other" fileref="holy_suck.wav" volume="2.9" />
+        <sound class="result" key="terrain" copy="other" />
+        <sound class="result" key="static_object" copy="other" />
+        <sound class="result" key="vehicle" copy="other" />
+        <sound class="result" key="character" copy="other" />
+    </projectile>
+    <projectile class="grenade" name="lighter" key="lighter.drop_reward" slot="0" on_ground_up="0 1 0" radius="0.25" can_be_disarmed="0" time_to_live_out_in_the_open="0.0" use_time_to_live="1" time_to_live="30" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" >
+        <trigger class="impact">
+            <collider class="terrain" enabled="0" />
+            <collider class="static_object" enabled="0" />
+            <collider class="vehicle" enabled="0" />
+            <collider class="character" enabled="1" faction_compare="equal"/>
+        </trigger>
+        <result class="notify_script" key="share_reward_7" />
+        <model mesh_filename="lighter.mesh" texture_filename="lighter.png"/>
+        <hud_icon filename="testing.png" />
+        <commonness value="1" in_stock="1" can_respawn_with="1" />
+        <inventory encumbrance="4.0" price="5.0" />
+        <capacity value="1" source="rank" source_value="0.0" />
+        <sound class="result" key="other" fileref="holy_suck.wav" volume="2.9" />
+        <sound class="result" key="terrain" copy="other" />
+        <sound class="result" key="static_object" copy="other" />
+        <sound class="result" key="vehicle" copy="other" />
+        <sound class="result" key="character" copy="other" />
+    </projectile>
+    <projectile class="grenade" name="steroids" key="steroids.drop_reward" slot="0" on_ground_up="0 1 0" radius="0.25" can_be_disarmed="0" time_to_live_out_in_the_open="0.0" use_time_to_live="1" time_to_live="60" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" >
+        <trigger class="impact">
+            <collider class="terrain" enabled="0" />
+            <collider class="static_object" enabled="0" />
+            <collider class="vehicle" enabled="0" />
+            <collider class="character" enabled="1" faction_compare="equal"/>
+        </trigger>
+        <result class="notify_script" key="share_reward_8" />
+        <model mesh_filename="steroids.mesh" texture_filename="steroids.png"/>
+        <hud_icon filename="testing.png" />
+        <commonness value="1" in_stock="1" can_respawn_with="1" />
+        <inventory encumbrance="4.0" price="5.0" />
+        <capacity value="1" source="rank" source_value="0.0" />
+        <sound class="result" key="other" fileref="holy_suck.wav" volume="2.9" />
+        <sound class="result" key="terrain" copy="other" />
+        <sound class="result" key="static_object" copy="other" />
+        <sound class="result" key="vehicle" copy="other" />
+        <sound class="result" key="character" copy="other" />
+    </projectile>
+    <projectile class="grenade" name="AS Val's bear" key="teddy.drop_reward" slot="0" on_ground_up="0 1 0" radius="0.25" can_be_disarmed="0" time_to_live_out_in_the_open="0.0" use_time_to_live="1" time_to_live="60" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" >
+        <trigger class="impact">
+            <collider class="terrain" enabled="0" />
+            <collider class="static_object" enabled="0" />
+            <collider class="vehicle" enabled="0" />
+            <collider class="character" enabled="1" faction_compare="equal"/>
+        </trigger>
+        <result class="notify_script" key="share_reward_9" />
+        <model mesh_filename="teddy.mesh" texture_filename="teddy.png"/>
+        <hud_icon filename="testing.png" />
+        <commonness value="1" in_stock="1" can_respawn_with="1" />
+        <inventory encumbrance="4.0" price="5.0" />
+        <capacity value="1" source="rank" source_value="0.0" />
+        <sound class="result" key="other" fileref="holy_suck.wav" volume="2.9" />
+        <sound class="result" key="terrain" copy="other" />
+        <sound class="result" key="static_object" copy="other" />
+        <sound class="result" key="vehicle" copy="other" />
+        <sound class="result" key="character" copy="other" />
+    </projectile>
+    <projectile class="grenade" name="gold bar" key="gold_bar.drop_reward" slot="0" on_ground_up="0 1 0" radius="0.25" can_be_disarmed="0" time_to_live_out_in_the_open="0.0" use_time_to_live="1" time_to_live="90" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" >
+        <trigger class="impact">
+            <collider class="terrain" enabled="0" />
+            <collider class="static_object" enabled="0" />
+            <collider class="vehicle" enabled="0" />
+            <collider class="character" enabled="1" faction_compare="equal"/>
+        </trigger>
+        <result class="notify_script" key="share_reward_10" />
+        <model mesh_filename="lighter.mesh" texture_filename="lighter.png"/>
+        <hud_icon filename="testing.png" />
+        <commonness value="1" in_stock="1" can_respawn_with="1" />
+        <inventory encumbrance="4.0" price="5.0" />
+        <capacity value="1" source="rank" source_value="0.0" />
+        <sound class="result" key="other" fileref="holy_suck.wav" volume="2.9" />
+        <sound class="result" key="terrain" copy="other" />
+        <sound class="result" key="static_object" copy="other" />
+        <sound class="result" key="vehicle" copy="other" />
+        <sound class="result" key="character" copy="other" />
+    </projectile>
+    <projectile class="grenade" name="Hardcover Scripture" key="bible.drop_reward" slot="0" on_ground_up="0 1 0" radius="0.25" can_be_disarmed="0" time_to_live_out_in_the_open="0.0" use_time_to_live="1" time_to_live="60" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" >
+        <trigger class="impact">
+            <collider class="terrain" enabled="0" />
+            <collider class="static_object" enabled="0" />
+            <collider class="vehicle" enabled="0" />
+            <collider class="character" enabled="1" faction_compare="equal"/>
+        </trigger>
+        <result class="notify_script" key="share_reward_11" />
+        <model mesh_filename="bible.mesh" texture_filename="bible.png"/>
+        <hud_icon filename="testing.png" />
+        <commonness value="1" in_stock="1" can_respawn_with="1" />
+        <inventory encumbrance="4.0" price="5.0" />
+        <capacity value="1" source="rank" source_value="0.0" />
+        <sound class="result" key="other" fileref="holy_suck.wav" volume="2.9" />
+        <sound class="result" key="terrain" copy="other" />
+        <sound class="result" key="static_object" copy="other" />
+        <sound class="result" key="vehicle" copy="other" />
+        <sound class="result" key="character" copy="other" />
+    </projectile>
+    <projectile class="grenade" name="Hardcover Scripture" key="koran.drop_reward" slot="0" on_ground_up="0 1 0" radius="0.25" can_be_disarmed="0" time_to_live_out_in_the_open="0.0" use_time_to_live="1" time_to_live="60" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" >
+        <trigger class="impact">
+            <collider class="terrain" enabled="0" />
+            <collider class="static_object" enabled="0" />
+            <collider class="vehicle" enabled="0" />
+            <collider class="character" enabled="1" faction_compare="equal"/>
+        </trigger>
+        <result class="notify_script" key="share_reward_12" />
+        <model mesh_filename="bible.mesh" texture_filename="koran.png"/>
+        <hud_icon filename="testing.png" />
+        <commonness value="1" in_stock="1" can_respawn_with="1" />
+        <inventory encumbrance="4.0" price="5.0" />
+        <capacity value="1" source="rank" source_value="0.0" />
+        <sound class="result" key="other" fileref="holy_suck.wav" volume="2.9" />
+        <sound class="result" key="terrain" copy="other" />
+        <sound class="result" key="static_object" copy="other" />
+        <sound class="result" key="vehicle" copy="other" />
+        <sound class="result" key="character" copy="other" />
+    </projectile>
+    <projectile class="grenade" name="chewing-gum" key="chewing_gum.drop_reward" slot="0" on_ground_up="0 1 0" radius="0.25" can_be_disarmed="0" time_to_live_out_in_the_open="0.0" use_time_to_live="1" time_to_live="30" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" >
+        <trigger class="impact">
+            <collider class="terrain" enabled="0" />
+            <collider class="static_object" enabled="0" />
+            <collider class="vehicle" enabled="0" />
+            <collider class="character" enabled="1" faction_compare="equal"/>
+        </trigger>
+        <result class="notify_script" key="share_reward_13" />
+        <model mesh_filename="chewing_gum.mesh" texture_filename="chewing_gum.png"/>
+        <hud_icon filename="testing.png" />
+        <commonness value="1" in_stock="1" can_respawn_with="1" />
+        <inventory encumbrance="4.0" price="5.0" />
+        <capacity value="1" source="rank" source_value="0.0" />
+        <sound class="result" key="other" fileref="holy_suck.wav" volume="2.9" />
+        <sound class="result" key="terrain" copy="other" />
+        <sound class="result" key="static_object" copy="other" />
+        <sound class="result" key="vehicle" copy="other" />
+        <sound class="result" key="character" copy="other" />
+    </projectile>
+    <projectile class="grenade" name="bizarre rubber bullet...?" key="bizarre_rubber_bullet.drop_reward" slot="0" on_ground_up="0 1 0" radius="0.25" can_be_disarmed="0" time_to_live_out_in_the_open="0.0" use_time_to_live="1" time_to_live="30" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" >
+        <trigger class="impact">
+            <collider class="terrain" enabled="0" />
+            <collider class="static_object" enabled="0" />
+            <collider class="vehicle" enabled="0" />
+            <collider class="character" enabled="1" faction_compare="equal"/>
+        </trigger>
+        <result class="notify_script" key="share_reward_14" />
+        <model mesh_filename="bizarre_rubber_bullet.mesh" texture_filename="bizarre_rubber_bullet.png"/>
+        <hud_icon filename="testing.png" />
+        <commonness value="1" in_stock="1" can_respawn_with="1" />
+        <inventory encumbrance="4.0" price="5.0" />
+        <capacity value="1" source="rank" source_value="0.0" />
+        <sound class="result" key="other" fileref="holy_suck.wav" volume="2.9" />
+        <sound class="result" key="terrain" copy="other" />
+        <sound class="result" key="static_object" copy="other" />
+        <sound class="result" key="vehicle" copy="other" />
+        <sound class="result" key="character" copy="other" />
+    </projectile>
+    <projectile class="grenade" name="Fnc's favourite" key="chocolate.drop_reward" slot="0" on_ground_up="0 1 0" radius="0.25" can_be_disarmed="0" time_to_live_out_in_the_open="0.0" use_time_to_live="1" time_to_live="30" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" >
+        <trigger class="impact">
+            <collider class="terrain" enabled="0" />
+            <collider class="static_object" enabled="0" />
+            <collider class="vehicle" enabled="0" />
+            <collider class="character" enabled="1" faction_compare="equal"/>
+        </trigger>
+        <result class="notify_script" key="share_reward_15" />
+        <model mesh_filename="chocolate.mesh" texture_filename="chocolate.png"/>
+        <hud_icon filename="testing.png" />
+        <commonness value="1" in_stock="1" can_respawn_with="1" />
+        <inventory encumbrance="4.0" price="5.0" />
+        <capacity value="1" source="rank" source_value="0.0" />
+        <sound class="result" key="other" fileref="holy_suck.wav" volume="2.9" />
+        <sound class="result" key="terrain" copy="other" />
+        <sound class="result" key="static_object" copy="other" />
+        <sound class="result" key="vehicle" copy="other" />
+        <sound class="result" key="character" copy="other" />
+    </projectile>
+    <projectile class="grenade" name="300 dollars" key="dollars_300.drop_reward" slot="0" on_ground_up="0 1 0" radius="0.25" can_be_disarmed="0" time_to_live_out_in_the_open="0.0" use_time_to_live="1" time_to_live="30" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" >
+        <trigger class="impact">
+            <collider class="terrain" enabled="0" />
+            <collider class="static_object" enabled="0" />
+            <collider class="vehicle" enabled="0" />
+            <collider class="character" enabled="1" faction_compare="equal"/>
+        </trigger>
+        <result class="notify_script" key="share_reward_16" />
+        <model mesh_filename="dollars_300.mesh" texture_filename="dollars.png"/>
+        <hud_icon filename="testing.png" />
+        <commonness value="1" in_stock="1" can_respawn_with="1" />
+        <inventory encumbrance="4.0" price="5.0" />
+        <capacity value="1" source="rank" source_value="0.0" />
+        <sound class="result" key="other" fileref="holy_suck.wav" volume="2.9" />
+        <sound class="result" key="terrain" copy="other" />
+        <sound class="result" key="static_object" copy="other" />
+        <sound class="result" key="vehicle" copy="other" />
+        <sound class="result" key="character" copy="other" />
+    </projectile>
+    <projectile class="grenade" name="energy drink" key="energy_drink.drop_reward" slot="0" on_ground_up="0 1 0" radius="0.25" can_be_disarmed="0" time_to_live_out_in_the_open="0.0" use_time_to_live="1" time_to_live="30" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" >
+        <trigger class="impact">
+            <collider class="terrain" enabled="0" />
+            <collider class="static_object" enabled="0" />
+            <collider class="vehicle" enabled="0" />
+            <collider class="character" enabled="1" faction_compare="equal"/>
+        </trigger>
+        <result class="notify_script" key="share_reward_17" />
+        <model mesh_filename="energy_drink.mesh" texture_filename="energy_drink.png"/>
+        <hud_icon filename="testing.png" />
+        <commonness value="1" in_stock="1" can_respawn_with="1" />
+        <inventory encumbrance="4.0" price="5.0" />
+        <capacity value="1" source="rank" source_value="0.0" />
+        <sound class="result" key="other" fileref="holy_suck.wav" volume="2.9" />
+        <sound class="result" key="terrain" copy="other" />
+        <sound class="result" key="static_object" copy="other" />
+        <sound class="result" key="vehicle" copy="other" />
+        <sound class="result" key="character" copy="other" />
+    </projectile>
+    <projectile class="grenade" name="Tompson's Sunglasses" key="fancy_sunglasses.drop_reward" slot="0" on_ground_up="0 1 0" radius="0.25" can_be_disarmed="0" time_to_live_out_in_the_open="0.0" use_time_to_live="1" time_to_live="45" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" >
+        <trigger class="impact">
+            <collider class="terrain" enabled="0" />
+            <collider class="static_object" enabled="0" />
+            <collider class="vehicle" enabled="0" />
+            <collider class="character" enabled="1" faction_compare="equal"/>
+        </trigger>
+        <result class="notify_script" key="share_reward_18" />
+        <model mesh_filename="sunglasses.mesh" texture_filename="fancy_sunglasses.png"/>
+        <hud_icon filename="testing.png" />
+        <commonness value="1" in_stock="1" can_respawn_with="1" />
+        <inventory encumbrance="4.0" price="5.0" />
+        <capacity value="1" source="rank" source_value="0.0" />
+        <sound class="result" key="other" fileref="holy_suck.wav" volume="2.9" />
+        <sound class="result" key="terrain" copy="other" />
+        <sound class="result" key="static_object" copy="other" />
+        <sound class="result" key="vehicle" copy="other" />
+        <sound class="result" key="character" copy="other" />
+    </projectile>
+    <projectile class="grenade" name="Suomi's Heavy-Metal Speaker" key="radio.drop_reward" slot="0" on_ground_up="0 1 0" radius="0.25" can_be_disarmed="0" time_to_live_out_in_the_open="0.0" use_time_to_live="1" time_to_live="60" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" >
+        <trigger class="impact">
+            <collider class="terrain" enabled="0" />
+            <collider class="static_object" enabled="0" />
+            <collider class="vehicle" enabled="0" />
+            <collider class="character" enabled="1" faction_compare="equal"/>
+        </trigger>
+        <result class="notify_script" key="share_reward_19" />
+        <model mesh_filename="radio.mesh" texture_filename="radio.png"/>
+        <hud_icon filename="testing.png" />
+        <commonness value="1" in_stock="1" can_respawn_with="1" />
+        <inventory encumbrance="4.0" price="5.0" />
+        <capacity value="1" source="rank" source_value="0.0" />
+        <sound class="result" key="other" fileref="holy_suck.wav" volume="2.9" />
+        <sound class="result" key="terrain" copy="other" />
+        <sound class="result" key="static_object" copy="other" />
+        <sound class="result" key="vehicle" copy="other" />
+        <sound class="result" key="character" copy="other" />
+    </projectile>
+    <projectile class="grenade" name="razor" key="razor.drop_reward" slot="0" on_ground_up="0 1 0" radius="0.25" can_be_disarmed="0" time_to_live_out_in_the_open="0.0" use_time_to_live="1" time_to_live="30" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" >
+        <trigger class="impact">
+            <collider class="terrain" enabled="0" />
+            <collider class="static_object" enabled="0" />
+            <collider class="vehicle" enabled="0" />
+            <collider class="character" enabled="1" faction_compare="equal"/>
+        </trigger>
+        <result class="notify_script" key="share_reward_20" />
+        <model mesh_filename="razor.mesh" texture_filename="radio.png"/>
+        <hud_icon filename="testing.png" />
+        <commonness value="1" in_stock="1" can_respawn_with="1" />
+        <inventory encumbrance="4.0" price="5.0" />
+        <capacity value="1" source="rank" source_value="0.0" />
+        <sound class="result" key="other" fileref="holy_suck.wav" volume="2.9" />
+        <sound class="result" key="terrain" copy="other" />
+        <sound class="result" key="static_object" copy="other" />
+        <sound class="result" key="vehicle" copy="other" />
+        <sound class="result" key="character" copy="other" />
+    </projectile>
+    <projectile class="grenade" name="Weird Rubber Crafts" key="sheaths.drop_reward" slot="0" on_ground_up="0 1 0" radius="0.25" can_be_disarmed="0" time_to_live_out_in_the_open="0.0" use_time_to_live="1" time_to_live="30" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" >
+        <trigger class="impact">
+            <collider class="terrain" enabled="0" />
+            <collider class="static_object" enabled="0" />
+            <collider class="vehicle" enabled="0" />
+            <collider class="character" enabled="1" faction_compare="equal"/>
+        </trigger>
+        <result class="notify_script" key="share_reward_21" />
+        <model mesh_filename="sheaths.mesh" texture_filename="sheaths.png"/>
+        <hud_icon filename="testing.png" />
+        <commonness value="1" in_stock="1" can_respawn_with="1" />
+        <inventory encumbrance="4.0" price="5.0" />
+        <capacity value="1" source="rank" source_value="0.0" />
+        <sound class="result" key="other" fileref="holy_suck.wav" volume="2.9" />
+        <sound class="result" key="terrain" copy="other" />
+        <sound class="result" key="static_object" copy="other" />
+        <sound class="result" key="vehicle" copy="other" />
+        <sound class="result" key="character" copy="other" />
+    </projectile>
+    <projectile class="grenade" name="Bigger Weird Rubber Crafts" key="sheaths_xxl.drop_reward" slot="0" on_ground_up="0 1 0" radius="0.25" can_be_disarmed="0" time_to_live_out_in_the_open="0.0" use_time_to_live="1" time_to_live="30" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" >
+        <trigger class="impact">
+            <collider class="terrain" enabled="0" />
+            <collider class="static_object" enabled="0" />
+            <collider class="vehicle" enabled="0" />
+            <collider class="character" enabled="1" faction_compare="equal"/>
+        </trigger>
+        <result class="notify_script" key="share_reward_22" />
+        <model mesh_filename="sheaths.mesh" texture_filename="sheaths_xxl.png"/>
+        <hud_icon filename="testing.png" />
+        <commonness value="1" in_stock="1" can_respawn_with="1" />
+        <inventory encumbrance="4.0" price="5.0" />
+        <capacity value="1" source="rank" source_value="0.0" />
+        <sound class="result" key="other" fileref="holy_suck.wav" volume="2.9" />
+        <sound class="result" key="terrain" copy="other" />
+        <sound class="result" key="static_object" copy="other" />
+        <sound class="result" key="vehicle" copy="other" />
+        <sound class="result" key="character" copy="other" />
+    </projectile>
+    <projectile class="grenade" name="sunglasses" key="sunglasses.drop_reward" slot="0" on_ground_up="0 1 0" radius="0.25" can_be_disarmed="0" time_to_live_out_in_the_open="0.0" use_time_to_live="1" time_to_live="30" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" >
+        <trigger class="impact">
+            <collider class="terrain" enabled="0" />
+            <collider class="static_object" enabled="0" />
+            <collider class="vehicle" enabled="0" />
+            <collider class="character" enabled="1" faction_compare="equal"/>
+        </trigger>
+        <result class="notify_script" key="share_reward_23" />
+        <model mesh_filename="sunglasses.mesh" texture_filename="sunglasses.png"/>
+        <hud_icon filename="testing.png" />
+        <commonness value="1" in_stock="1" can_respawn_with="1" />
+        <inventory encumbrance="4.0" price="5.0" />
+        <capacity value="1" source="rank" source_value="0.0" />
+        <sound class="result" key="other" fileref="holy_suck.wav" volume="2.9" />
+        <sound class="result" key="terrain" copy="other" />
+        <sound class="result" key="static_object" copy="other" />
+        <sound class="result" key="vehicle" copy="other" />
+        <sound class="result" key="character" copy="other" />
+    </projectile>
+    <projectile class="grenade" name="iPoo blue edition" key="ipoo_player_blue.drop_reward" slot="0" on_ground_up="0 1 0" radius="0.25" can_be_disarmed="0" time_to_live_out_in_the_open="0.0" use_time_to_live="1" time_to_live="60" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" >
+        <trigger class="impact">
+            <collider class="terrain" enabled="0" />
+            <collider class="static_object" enabled="0" />
+            <collider class="vehicle" enabled="0" />
+            <collider class="character" enabled="1" faction_compare="equal"/>
+        </trigger>
+        <result class="notify_script" key="share_reward_24" />
+        <model mesh_filename="ipoo.mesh" texture_filename="ipoo_blue.png"/>
+        <hud_icon filename="testing.png" />
+        <commonness value="1" in_stock="1" can_respawn_with="1" />
+        <inventory encumbrance="4.0" price="5.0" />
+        <capacity value="1" source="rank" source_value="0.0" />
+        <sound class="result" key="other" fileref="holy_suck.wav" volume="2.9" />
+        <sound class="result" key="terrain" copy="other" />
+        <sound class="result" key="static_object" copy="other" />
+        <sound class="result" key="vehicle" copy="other" />
+        <sound class="result" key="character" copy="other" />
+    </projectile>
+    <projectile class="grenade" name="iPoo red edition" key="ipoo_player_red.drop_reward" slot="0" on_ground_up="0 1 0" radius="0.25" can_be_disarmed="0" time_to_live_out_in_the_open="0.0" use_time_to_live="1" time_to_live="60" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" >
+        <trigger class="impact">
+            <collider class="terrain" enabled="0" />
+            <collider class="static_object" enabled="0" />
+            <collider class="vehicle" enabled="0" />
+            <collider class="character" enabled="1" faction_compare="equal"/>
+        </trigger>
+        <result class="notify_script" key="share_reward_25" />
+        <model mesh_filename="ipoo.mesh" texture_filename="ipoo_red.png"/>
+        <hud_icon filename="testing.png" />
+        <commonness value="1" in_stock="1" can_respawn_with="1" />
+        <inventory encumbrance="4.0" price="5.0" />
+        <capacity value="1" source="rank" source_value="0.0" />
+        <sound class="result" key="other" fileref="holy_suck.wav" volume="2.9" />
+        <sound class="result" key="terrain" copy="other" />
+        <sound class="result" key="static_object" copy="other" />
+        <sound class="result" key="vehicle" copy="other" />
+        <sound class="result" key="character" copy="other" />
+    </projectile>
+    <projectile class="grenade" name="iPoo white edition" key="ipoo_player_white.drop_reward" slot="0" on_ground_up="0 1 0" radius="0.25" can_be_disarmed="0" time_to_live_out_in_the_open="0.0" use_time_to_live="1" time_to_live="60" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" >
+        <trigger class="impact">
+            <collider class="terrain" enabled="0" />
+            <collider class="static_object" enabled="0" />
+            <collider class="vehicle" enabled="0" />
+            <collider class="character" enabled="1" faction_compare="equal"/>
+        </trigger>
+        <result class="notify_script" key="share_reward_26" />
+        <model mesh_filename="ipoo.mesh" texture_filename="ipoo_white.png"/>
+        <hud_icon filename="testing.png" />
+        <commonness value="1" in_stock="1" can_respawn_with="1" />
+        <inventory encumbrance="4.0" price="5.0" />
+        <capacity value="1" source="rank" source_value="0.0" />
+        <sound class="result" key="other" fileref="holy_suck.wav" volume="2.9" />
+        <sound class="result" key="terrain" copy="other" />
+        <sound class="result" key="static_object" copy="other" />
+        <sound class="result" key="vehicle" copy="other" />
+        <sound class="result" key="character" copy="other" />
+    </projectile>
+    <projectile class="grenade" name="iPoo silver edition" key="ipoo_player_silver.drop_reward" slot="0" on_ground_up="0 1 0" radius="0.25" can_be_disarmed="0" time_to_live_out_in_the_open="0.0" use_time_to_live="1" time_to_live="60" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" >
+        <trigger class="impact">
+            <collider class="terrain" enabled="0" />
+            <collider class="static_object" enabled="0" />
+            <collider class="vehicle" enabled="0" />
+            <collider class="character" enabled="1" faction_compare="equal"/>
+        </trigger>
+        <result class="notify_script" key="share_reward_27" />
+        <model mesh_filename="ipoo.mesh" texture_filename="ipoo_silver.png"/>
+        <hud_icon filename="testing.png" />
+        <commonness value="1" in_stock="1" can_respawn_with="1" />
+        <inventory encumbrance="4.0" price="5.0" />
+        <capacity value="1" source="rank" source_value="0.0" />
+        <sound class="result" key="other" fileref="holy_suck.wav" volume="2.9" />
+        <sound class="result" key="terrain" copy="other" />
+        <sound class="result" key="static_object" copy="other" />
+        <sound class="result" key="vehicle" copy="other" />
+        <sound class="result" key="character" copy="other" />
+    </projectile>
+    <projectile class="grenade" name="iPoo yellow edition" key="ipoo_player_yellow.drop_reward" slot="0" on_ground_up="0 1 0" radius="0.25" can_be_disarmed="0" time_to_live_out_in_the_open="0.0" use_time_to_live="1" time_to_live="60" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" >
+        <trigger class="impact">
+            <collider class="terrain" enabled="0" />
+            <collider class="static_object" enabled="0" />
+            <collider class="vehicle" enabled="0" />
+            <collider class="character" enabled="1" faction_compare="equal"/>
+        </trigger>
+        <result class="notify_script" key="share_reward_28" />
+        <model mesh_filename="ipoo.mesh" texture_filename="ipoo_yellow.png"/>
+        <hud_icon filename="testing.png" />
+        <commonness value="1" in_stock="1" can_respawn_with="1" />
+        <inventory encumbrance="4.0" price="5.0" />
+        <capacity value="1" source="rank" source_value="0.0" />
+        <sound class="result" key="other" fileref="holy_suck.wav" volume="2.9" />
+        <sound class="result" key="terrain" copy="other" />
+        <sound class="result" key="static_object" copy="other" />
+        <sound class="result" key="vehicle" copy="other" />
+        <sound class="result" key="character" copy="other" />
+    </projectile>       
+    <projectile class="grenade" name="iPoo green edition" key="ipoo_player_green.drop_reward" slot="0" on_ground_up="0 1 0" radius="0.25" can_be_disarmed="0" time_to_live_out_in_the_open="0.0" use_time_to_live="1" time_to_live="60" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" >
+        <trigger class="impact">
+            <collider class="terrain" enabled="0" />
+            <collider class="static_object" enabled="0" />
+            <collider class="vehicle" enabled="0" />
+            <collider class="character" enabled="1" faction_compare="equal"/>
+        </trigger>
+        <result class="notify_script" key="share_reward_29" />
+        <model mesh_filename="ipoo.mesh" texture_filename="ipoo_green.png"/>
+        <hud_icon filename="testing.png" />
+        <commonness value="1" in_stock="1" can_respawn_with="1" />
+        <inventory encumbrance="4.0" price="5.0" />
+        <capacity value="1" source="rank" source_value="0.0" />
+        <sound class="result" key="other" fileref="holy_suck.wav" volume="2.9" />
+        <sound class="result" key="terrain" copy="other" />
+        <sound class="result" key="static_object" copy="other" />
+        <sound class="result" key="vehicle" copy="other" />
+        <sound class="result" key="character" copy="other" />
+    </projectile>       
+    <projectile class="grenade" name="iPoo pink limited edition" key="ipoo_player_pink.drop_reward" slot="0" on_ground_up="0 1 0" radius="0.25" can_be_disarmed="0" time_to_live_out_in_the_open="0.0" use_time_to_live="1" time_to_live="60" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" >
+        <trigger class="impact">
+            <collider class="terrain" enabled="0" />
+            <collider class="static_object" enabled="0" />
+            <collider class="vehicle" enabled="0" />
+            <collider class="character" enabled="1" faction_compare="equal"/>
+        </trigger>
+        <result class="notify_script" key="share_reward_30" />
+        <model mesh_filename="ipoo.mesh" texture_filename="ipoo_pink.png"/>
+        <hud_icon filename="testing.png" />
+        <commonness value="1" in_stock="1" can_respawn_with="1" />
+        <inventory encumbrance="4.0" price="5.0" />
+        <capacity value="1" source="rank" source_value="0.0" />
+        <sound class="result" key="other" fileref="holy_suck.wav" volume="2.9" />
+        <sound class="result" key="terrain" copy="other" />
+        <sound class="result" key="static_object" copy="other" />
+        <sound class="result" key="vehicle" copy="other" />
+        <sound class="result" key="character" copy="other" />
+    </projectile>       
+    <projectile class="grenade" name="poker cards" key="playing_cards.drop_reward" slot="0" on_ground_up="0 1 0" radius="0.25" can_be_disarmed="0" time_to_live_out_in_the_open="0.0" use_time_to_live="1" time_to_live="30" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" >
+        <trigger class="impact">
+            <collider class="terrain" enabled="0" />
+            <collider class="static_object" enabled="0" />
+            <collider class="vehicle" enabled="0" />
+            <collider class="character" enabled="1" faction_compare="equal"/>
+        </trigger>
+        <result class="notify_script" key="share_reward_31" />
+		<model mesh_filename="playing_cards.mesh" texture_filename="playing_cards.png"/>
+        <hud_icon filename="testing.png" />
+        <commonness value="1" in_stock="1" can_respawn_with="1" />
+        <inventory encumbrance="4.0" price="5.0" />
+        <capacity value="1" source="rank" source_value="0.0" />
+        <sound class="result" key="other" fileref="holy_suck.wav" volume="2.9" />
+        <sound class="result" key="terrain" copy="other" />
+        <sound class="result" key="static_object" copy="other" />
+        <sound class="result" key="vehicle" copy="other" />
+        <sound class="result" key="character" copy="other" />
+    </projectile>       
+    <projectile class="grenade" name="Stasi Briefcase" key="suitcase.drop_reward" slot="0" on_ground_up="0 1 0" radius="0.25" can_be_disarmed="0" time_to_live_out_in_the_open="0.0" use_time_to_live="1" time_to_live="60" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" >
+        <trigger class="impact">
+            <collider class="terrain" enabled="0" />
+            <collider class="static_object" enabled="0" />
+            <collider class="vehicle" enabled="0" />
+            <collider class="character" enabled="1" faction_compare="equal"/>
+        </trigger>
+        <result class="notify_script" key="share_reward_32" />
+		<model mesh_filename="suitcase.mesh" texture_filename="suitcase.png"/>
+        <hud_icon filename="testing.png" />
+        <commonness value="1" in_stock="1" can_respawn_with="1" />
+        <inventory encumbrance="4.0" price="5.0" />
+        <capacity value="1" source="rank" source_value="0.0" />
+        <sound class="result" key="other" fileref="holy_suck.wav" volume="2.9" />
+        <sound class="result" key="terrain" copy="other" />
+        <sound class="result" key="static_object" copy="other" />
+        <sound class="result" key="vehicle" copy="other" />
+        <sound class="result" key="character" copy="other" />
+    </projectile>
+    <projectile class="grenade" name="girls underpants" key="underpants.drop_reward" slot="0" on_ground_up="0 1 0" radius="0.25" can_be_disarmed="0" time_to_live_out_in_the_open="0.0" use_time_to_live="1" time_to_live="45" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" >
+        <trigger class="impact">
+            <collider class="terrain" enabled="0" />
+            <collider class="static_object" enabled="0" />
+            <collider class="vehicle" enabled="0" />
+            <collider class="character" enabled="1" faction_compare="equal"/>
+        </trigger>
+        <result class="notify_script" key="share_reward_33" />
+		<model mesh_filename="underpants.mesh" texture_filename="underpants.png"/>
+        <hud_icon filename="testing.png" />
+        <commonness value="1" in_stock="1" can_respawn_with="1" />
+        <inventory encumbrance="4.0" price="5.0" />
+        <capacity value="1" source="rank" source_value="0.0" />
+        <sound class="result" key="other" fileref="holy_suck.wav" volume="2.9" />
+        <sound class="result" key="terrain" copy="other" />
+        <sound class="result" key="static_object" copy="other" />
+        <sound class="result" key="vehicle" copy="other" />
+        <sound class="result" key="character" copy="other" />
+    </projectile>              
+    <projectile class="grenade" name="Dirty Book" key="kamasutra.drop_reward" slot="0" on_ground_up="0 1 0" radius="0.25" can_be_disarmed="0" time_to_live_out_in_the_open="0.0" use_time_to_live="1" time_to_live="30" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" >
+        <trigger class="impact">
+            <collider class="terrain" enabled="0" />
+            <collider class="static_object" enabled="0" />
+            <collider class="vehicle" enabled="0" />
+            <collider class="character" enabled="1" faction_compare="equal"/>
+        </trigger>
+        <result class="notify_script" key="share_reward_34" />
+		<model mesh_filename="magazine.mesh" texture_filename="kamasutra.png"/>
+        <hud_icon filename="testing.png" />
+        <commonness value="1" in_stock="1" can_respawn_with="1" />
+        <inventory encumbrance="4.0" price="5.0" />
+        <capacity value="1" source="rank" source_value="0.0" />
+        <sound class="result" key="other" fileref="holy_suck.wav" volume="2.9" />
+        <sound class="result" key="terrain" copy="other" />
+        <sound class="result" key="static_object" copy="other" />
+        <sound class="result" key="vehicle" copy="other" />
+        <sound class="result" key="character" copy="other" />
+    </projectile>              
+    <projectile class="grenade" name="Suomi's Rocking CD" key="cd.drop_reward" slot="0" on_ground_up="0 1 0" radius="0.25" can_be_disarmed="0" time_to_live_out_in_the_open="0.0" use_time_to_live="1" time_to_live="90" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" >
+        <trigger class="impact">
+            <collider class="terrain" enabled="0" />
+            <collider class="static_object" enabled="0" />
+            <collider class="vehicle" enabled="0" />
+            <collider class="character" enabled="1" faction_compare="equal"/>
+        </trigger>
+        <result class="notify_script" key="share_reward_35" />
+		<model mesh_filename="cd.mesh" texture_filename="cd.png"/>
+        <hud_icon filename="testing.png" />
+        <commonness value="1" in_stock="1" can_respawn_with="1" />
+        <inventory encumbrance="4.0" price="5.0" />
+        <capacity value="1" source="rank" source_value="0.0" />
+        <sound class="result" key="other" fileref="holy_suck.wav" volume="2.9" />
+        <sound class="result" key="terrain" copy="other" />
+        <sound class="result" key="static_object" copy="other" />
+        <sound class="result" key="vehicle" copy="other" />
+        <sound class="result" key="character" copy="other" />
+    </projectile>              
+    <projectile class="grenade" name="Jack Daniels" key="whiskey_bottle.drop_reward" slot="0" on_ground_up="0 1 0" radius="0.25" can_be_disarmed="0" time_to_live_out_in_the_open="0.0" use_time_to_live="1" time_to_live="30" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" >
+        <trigger class="impact">
+            <collider class="terrain" enabled="0" />
+            <collider class="static_object" enabled="0" />
+            <collider class="vehicle" enabled="0" />
+            <collider class="character" enabled="1" faction_compare="equal"/>
+        </trigger>
+        <result class="notify_script" key="share_reward_36" />
+		<model mesh_filename="whiskey.mesh" texture_filename="whiskey.png"/>
+        <hud_icon filename="testing.png" />
+        <commonness value="1" in_stock="1" can_respawn_with="1" />
+        <inventory encumbrance="4.0" price="5.0" />
+        <capacity value="1" source="rank" source_value="0.0" />
+        <sound class="result" key="other" fileref="holy_suck.wav" volume="2.9" />
+        <sound class="result" key="terrain" copy="other" />
+        <sound class="result" key="static_object" copy="other" />
+        <sound class="result" key="vehicle" copy="other" />
+        <sound class="result" key="character" copy="other" />
+    </projectile>              
+    <projectile class="grenade" name="cigarettes" key="cigarettes.drop_reward" slot="0" on_ground_up="0 1 0" radius="0.25" can_be_disarmed="0" time_to_live_out_in_the_open="0.0" use_time_to_live="1" time_to_live="30" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" >
+        <trigger class="impact">
+            <collider class="terrain" enabled="0" />
+            <collider class="static_object" enabled="0" />
+            <collider class="vehicle" enabled="0" />
+            <collider class="character" enabled="1" faction_compare="equal"/>
+        </trigger>
+        <result class="notify_script" key="share_reward_37" />
+		<model mesh_filename="cigarettes.mesh" texture_filename="cigarettes.png"/>
+        <hud_icon filename="testing.png" />
+        <commonness value="1" in_stock="1" can_respawn_with="1" />
+        <inventory encumbrance="4.0" price="5.0" />
+        <capacity value="1" source="rank" source_value="0.0" />
+        <sound class="result" key="other" fileref="holy_suck.wav" volume="2.9" />
+        <sound class="result" key="terrain" copy="other" />
+        <sound class="result" key="static_object" copy="other" />
+        <sound class="result" key="vehicle" copy="other" />
+        <sound class="result" key="character" copy="other" />
+    </projectile>              
+    <projectile class="grenade" name="100 dollars" key="dollars.drop_reward" slot="0" on_ground_up="0 1 0" radius="0.25" can_be_disarmed="0" time_to_live_out_in_the_open="0.0" use_time_to_live="1" time_to_live="30" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" >
+        <trigger class="impact">
+            <collider class="terrain" enabled="0" />
+            <collider class="static_object" enabled="0" />
+            <collider class="vehicle" enabled="0" />
+            <collider class="character" enabled="1" faction_compare="equal"/>
+        </trigger>
+        <result class="notify_script" key="share_reward_38" />
+		<model mesh_filename="dollars_100.mesh" texture_filename="dollars.png"/>
+        <hud_icon filename="testing.png" />
+        <commonness value="1" in_stock="1" can_respawn_with="1" />
+        <inventory encumbrance="4.0" price="5.0" />
+        <capacity value="1" source="rank" source_value="0.0" />
+        <sound class="result" key="other" fileref="holy_suck.wav" volume="2.9" />
+        <sound class="result" key="terrain" copy="other" />
+        <sound class="result" key="static_object" copy="other" />
+        <sound class="result" key="vehicle" copy="other" />
+        <sound class="result" key="character" copy="other" />
+    </projectile>
+    <projectile class="grenade" name="RFB's gameboy" key="gamingdevice.drop_reward" slot="0" on_ground_up="0 1 0" radius="0.25" can_be_disarmed="0" time_to_live_out_in_the_open="0.0" use_time_to_live="1" time_to_live="45" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" >
+        <trigger class="impact">
+            <collider class="terrain" enabled="0" />
+            <collider class="static_object" enabled="0" />
+            <collider class="vehicle" enabled="0" />
+            <collider class="character" enabled="1" faction_compare="equal"/>
+        </trigger>
+        <result class="notify_script" key="share_reward_39" />
+		<model mesh_filename="gamingdevice.mesh" texture_filename="gamingdevice.png"/>
+        <hud_icon filename="testing.png" />
+        <commonness value="1" in_stock="1" can_respawn_with="1" />
+        <inventory encumbrance="4.0" price="5.0" />
+        <capacity value="1" source="rank" source_value="0.0" />
+        <sound class="result" key="other" fileref="holy_suck.wav" volume="2.9" />
+        <sound class="result" key="terrain" copy="other" />
+        <sound class="result" key="static_object" copy="other" />
+        <sound class="result" key="vehicle" copy="other" />
+        <sound class="result" key="character" copy="other" />
+    </projectile>  
+    <projectile class="grenade" name="Gem" key="gem.drop_reward" slot="0" on_ground_up="0 1 0" radius="0.25" can_be_disarmed="0" time_to_live_out_in_the_open="0.0" use_time_to_live="1" time_to_live="75" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" >
+        <trigger class="impact">
+            <collider class="terrain" enabled="0" />
+            <collider class="static_object" enabled="0" />
+            <collider class="vehicle" enabled="0" />
+            <collider class="character" enabled="1" faction_compare="equal"/>
+        </trigger>
+        <result class="notify_script" key="share_reward_40" />
+		<model mesh_filename="gem.mesh" texture_filename="gem.png"/>
+        <hud_icon filename="testing.png" />
+        <commonness value="1" in_stock="1" can_respawn_with="1" />
+        <inventory encumbrance="4.0" price="5.0" />
+        <capacity value="1" source="rank" source_value="0.0" />
+        <sound class="result" key="other" fileref="holy_suck.wav" volume="2.9" />
+        <sound class="result" key="terrain" copy="other" />
+        <sound class="result" key="static_object" copy="other" />
+        <sound class="result" key="vehicle" copy="other" />
+        <sound class="result" key="character" copy="other" />
+    </projectile>  
+    <projectile class="grenade" name="Comic book" key="comic_book.drop_reward" slot="0" on_ground_up="0 1 0" radius="0.25" can_be_disarmed="0" time_to_live_out_in_the_open="0.0" use_time_to_live="1" time_to_live="75" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" >
+        <trigger class="impact">
+            <collider class="terrain" enabled="0" />
+            <collider class="static_object" enabled="0" />
+            <collider class="vehicle" enabled="0" />
+            <collider class="character" enabled="1" faction_compare="equal"/>
+        </trigger>
+        <result class="notify_script" key="share_reward_41" />
+		<model mesh_filename="magazine.mesh" texture_filename="comic.png"/>
+        <hud_icon filename="testing.png" />
+        <commonness value="1" in_stock="1" can_respawn_with="1" />
+        <inventory encumbrance="4.0" price="5.0" />
+        <capacity value="1" source="rank" source_value="0.0" />
+        <sound class="result" key="other" fileref="holy_suck.wav" volume="2.9" />
+        <sound class="result" key="terrain" copy="other" />
+        <sound class="result" key="static_object" copy="other" />
+        <sound class="result" key="vehicle" copy="other" />
+        <sound class="result" key="character" copy="other" />
+    </projectile>  
+    <projectile class="grenade" name="RWR handbook" key="rwr_handbook.drop_reward" slot="0" on_ground_up="0 1 0" radius="0.25" can_be_disarmed="0" time_to_live_out_in_the_open="0.0" use_time_to_live="1" time_to_live="30" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" >
+        <trigger class="impact">
+            <collider class="terrain" enabled="0" />
+            <collider class="static_object" enabled="0" />
+            <collider class="vehicle" enabled="0" />
+            <collider class="character" enabled="1" faction_compare="equal"/>
+        </trigger>
+        <result class="notify_script" key="share_reward_42" />
+		<model mesh_filename="magazine.mesh" texture_filename="rwr_handbook.png"/>
+        <hud_icon filename="testing.png" />
+        <commonness value="1" in_stock="1" can_respawn_with="1" />
+        <inventory encumbrance="4.0" price="5.0" />
+        <capacity value="1" source="rank" source_value="0.0" />
+        <sound class="result" key="other" fileref="holy_suck.wav" volume="2.9" />
+        <sound class="result" key="terrain" copy="other" />
+        <sound class="result" key="static_object" copy="other" />
+        <sound class="result" key="vehicle" copy="other" />
+        <sound class="result" key="character" copy="other" />
+    </projectile>  
+    <projectile class="grenade" name="Rusted 'Golden' Trophy" key="oscar_statue.drop_reward" slot="0" on_ground_up="0 1 0" radius="0.25" can_be_disarmed="0" time_to_live_out_in_the_open="0.0" use_time_to_live="1" time_to_live="60" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" >
+        <trigger class="impact">
+            <collider class="terrain" enabled="0" />
+            <collider class="static_object" enabled="0" />
+            <collider class="vehicle" enabled="0" />
+            <collider class="character" enabled="1" faction_compare="equal"/>
+        </trigger>
+        <result class="notify_script" key="share_reward_43" />
+		<model mesh_filename="oscar_statue.mesh" texture_filename="oscar_statue.png"/>
+        <hud_icon filename="testing.png" />
+        <commonness value="1" in_stock="1" can_respawn_with="1" />
+        <inventory encumbrance="4.0" price="5.0" />
+        <capacity value="1" source="rank" source_value="0.0" />
+        <sound class="result" key="other" fileref="holy_suck.wav" volume="2.9" />
+        <sound class="result" key="terrain" copy="other" />
+        <sound class="result" key="static_object" copy="other" />
+        <sound class="result" key="vehicle" copy="other" />
+        <sound class="result" key="character" copy="other" />
+    </projectile>  
+    <projectile class="grenade" name="Laptop" key="laptop.drop_reward" slot="0" on_ground_up="0 1 0" radius="0.25" can_be_disarmed="0" time_to_live_out_in_the_open="0.0" use_time_to_live="1" time_to_live="60" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" >
+        <trigger class="impact">
+            <collider class="terrain" enabled="0" />
+            <collider class="static_object" enabled="0" />
+            <collider class="vehicle" enabled="0" />
+            <collider class="character" enabled="1" faction_compare="equal"/>
+        </trigger>
+        <result class="notify_script" key="share_reward_44" />
+		<model mesh_filename="cigars.mesh" texture_filename="laptop.png"/>
+        <hud_icon filename="testing.png" />
+        <commonness value="1" in_stock="1" can_respawn_with="1" />
+        <inventory encumbrance="4.0" price="5.0" />
+        <capacity value="1" source="rank" source_value="0.0" />
+        <sound class="result" key="other" fileref="holy_suck.wav" volume="2.9" />
+        <sound class="result" key="terrain" copy="other" />
+        <sound class="result" key="static_object" copy="other" />
+        <sound class="result" key="vehicle" copy="other" />
+        <sound class="result" key="character" copy="other" />
+    </projectile>
+    <projectile class="grenade" name="Egor Lebedev" key="painting.drop_reward" slot="0" on_ground_up="0 1 0" radius="0.25" can_be_disarmed="0" time_to_live_out_in_the_open="0.0" use_time_to_live="1" time_to_live="90" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" >
+        <trigger class="impact">
+            <collider class="terrain" enabled="0" />
+            <collider class="static_object" enabled="0" />
+            <collider class="vehicle" enabled="0" />
+            <collider class="character" enabled="1" faction_compare="equal"/>
+        </trigger>
+        <result class="notify_script" key="share_reward_45" />
+		<model mesh_filename="painting.mesh" texture_filename="painting.png"/>
+        <hud_icon filename="testing.png" />
+        <commonness value="1" in_stock="1" can_respawn_with="1" />
+        <inventory encumbrance="4.0" price="5.0" />
+        <capacity value="1" source="rank" source_value="0.0" />
+        <sound class="result" key="other" fileref="holy_suck.wav" volume="2.9" />
+        <sound class="result" key="terrain" copy="other" />
+        <sound class="result" key="static_object" copy="other" />
+        <sound class="result" key="vehicle" copy="other" />
+        <sound class="result" key="character" copy="other" />
+    </projectile>                                                                                    
+    <projectile class="grenade" name="Christmas coin" key="gift_box_community_2.drop_reward" slot="0" on_ground_up="0 1 0" radius="0.25" can_be_disarmed="0" time_to_live_out_in_the_open="0.0" use_time_to_live="1" time_to_live="90" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" >
+        <trigger class="impact">
+            <collider class="terrain" enabled="0" />
+            <collider class="static_object" enabled="0" />
+            <collider class="vehicle" enabled="0" />
+            <collider class="character" enabled="1" faction_compare="equal"/>
+        </trigger>
+        <result class="notify_script" key="share_reward_46" />
+		<model mesh_filename="christmas_coin.xml" texture_filename=""/>
+        <hud_icon filename="testing.png" />
+        <commonness value="1" in_stock="1" can_respawn_with="1" />
+        <inventory encumbrance="4.0" price="5.0" />
+        <capacity value="1" source="rank" source_value="0.0" />
+        <sound class="result" key="other" fileref="holy_suck.wav" volume="2.9" />
+        <sound class="result" key="terrain" copy="other" />
+        <sound class="result" key="static_object" copy="other" />
+        <sound class="result" key="vehicle" copy="other" />
+        <sound class="result" key="character" copy="other" />
+    </projectile> 
+    <projectile class="grenade" name="Purchase coins" key="gift_box_1.drop_reward" slot="0" on_ground_up="0 1 0" radius="0.25" can_be_disarmed="0" time_to_live_out_in_the_open="0.0" use_time_to_live="1" time_to_live="90" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" >
+        <trigger class="impact">
+            <collider class="terrain" enabled="0" />
+            <collider class="static_object" enabled="0" />
+            <collider class="vehicle" enabled="0" />
+            <collider class="character" enabled="1" faction_compare="equal"/>
+        </trigger>
+        <result class="notify_script" key="share_reward_47" />
+		<model mesh_filename="caigoubi.mesh" texture_filename="none.png"/>
+        <hud_icon filename="testing.png" />
+        <commonness value="1" in_stock="1" can_respawn_with="1" />
+        <inventory encumbrance="4.0" price="5.0" />
+        <capacity value="1" source="rank" source_value="0.0" />
+        <sound class="result" key="other" fileref="holy_suck.wav" volume="2.9" />
+        <sound class="result" key="terrain" copy="other" />
+        <sound class="result" key="static_object" copy="other" />
+        <sound class="result" key="vehicle" copy="other" />
+        <sound class="result" key="character" copy="other" />
+    </projectile> 
+    <projectile class="grenade" name="Egg Box" key="eggbox.drop_reward" slot="0" on_ground_up="0 1 0" radius="0.25" can_be_disarmed="0" time_to_live_out_in_the_open="0.0" use_time_to_live="1" time_to_live="120" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" >
+        <trigger class="impact">
+            <collider class="terrain" enabled="0" />
+            <collider class="static_object" enabled="0" />
+            <collider class="vehicle" enabled="0" />
+            <collider class="character" enabled="1" faction_compare="equal"/>
+        </trigger>
+        <result class="notify_script" key="share_reward_48" />
+        <model mesh_filename="gift_box_com.mesh" texture_filename="gift_box_community_1.png" />
+        <hud_icon filename="testing.png" />
+        <commonness value="1" in_stock="1" can_respawn_with="1" />
+        <inventory encumbrance="4.0" price="5.0" />
+        <capacity value="1" source="rank" source_value="0.0" />
+        <sound class="result" key="other" fileref="holy_suck.wav" volume="2.9" />
+        <sound class="result" key="terrain" copy="other" />
+        <sound class="result" key="static_object" copy="other" />
+        <sound class="result" key="vehicle" copy="other" />
+        <sound class="result" key="character" copy="other" />
+    </projectile> 
 </projectiles>

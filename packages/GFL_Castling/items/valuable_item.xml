@@ -1,95 +1,659 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" ?>
 <carry_items>
-	<!-- 垃圾全是垃圾 -->
-	<carry_item file="cigars.valuable" />
-	<carry_item file="beer_can.valuable" />
-	<carry_item file="lighter.valuable" />   
-	<carry_item file="steroids.valuable" />  
-	<carry_item file="teddy.valuable" />    
-    <carry_item file="gold_bar.valuable" />
-	<carry_item file="bible.valuable" /> 
-	<carry_item file="koran.valuable" /> 
-	<carry_item file="chewing_gum.valuable" />
-	<carry_item file="bizarre_rubber_bullet.valuable" />
-	<carry_item file="chocolate.valuable" />
-	<carry_item file="dollars_300.valuable" /> 
-	<carry_item file="energy_drink.valuable" />
-	<carry_item file="fancy_sunglasses.valuable" />
-	<carry_item file="radio.valuable" />
-	<carry_item file="razor.valuable" />   
-	<carry_item file="sheaths.valuable" />
-	<carry_item file="sheaths_xxl.valuable" />  
-	<carry_item file="sunglasses.valuable" /> 
-	<carry_item file="ipoo_player_blue.valuable" /> 
-	<carry_item file="ipoo_player_red.valuable" />
-	<carry_item file="ipoo_player_white.valuable" />     
-	<carry_item file="ipoo_player_silver.valuable" />
-	<carry_item file="ipoo_player_yellow.valuable" />
-	<carry_item file="ipoo_player_green.valuable" />
-	<carry_item file="ipoo_player_pink.valuable" />   
-	<carry_item file="playing_cards.valuable" />  
-	<carry_item file="suitcase.valuable" />
-    <carry_item file="underpants.valuable" /> 
-    <carry_item file="kamasutra.valuable" /> 
-    <carry_item file="cd.valuable" /> 
-	<carry_item file="whiskey_bottle.valuable" />
-	<carry_item file="cigarettes.valuable" />
-	<carry_item file="dollars.valuable" />
-	<carry_item file="gamingdevice.valuable" />
-	<carry_item file="gem.valuable" />
-	<carry_item file="comic_book.valuable" />
-	<carry_item file="rwr_handbook.valuable" />
-	<carry_item file="oscar_statue.valuable" />
-	<carry_item file="laptop.valuable" />  
-	<carry_item file="city_gifts.valuable" />
-	<carry_item file="forest_gifts.valuable" />
-	<carry_item file="wild_gifts.valuable" />
-	<carry_item file="snow_gifts.valuable" />
-	<carry_item file="painting.valuable" />
-	<carry_item file="SOPII_Ant_Doll.valuable" />
-	<carry_item file="RO365_Ant_Doll.valuable" />
-	<carry_item file="svarog.valuable" />  
-	<carry_item file="impules.valuable" />  
-	<carry_item file="sweet_bomb_box.valuable" />  
-	<carry_item file="double_enjoyment_package.valuable" />  
-	<carry_item file="holy_meat_buns.valuable" />  
-	<carry_item file="ice_theatre.valuable" />  
-
-	
-	<carry_item file="gift_box_community_2.carry_item" />
-
-	<!-- 垃圾全是垃圾 -->
-	<carry_item file="lottery.carry_item" />    
-	<carry_item file="caigoubi.valuable" />  
-	<carry_item file="cgb_mod3.carry_item" />  
-	<carry_item file="sf_box.carry_item"/>
-	<carry_item file="dollcraft.carry_item"/>
-	<carry_item file="firecontrol.carry_item"/>
-	<carry_item file="complete_reward_box.carry_item"/>
-	<carry_item file="exchange.carry_item"/>
-	
-	<!-- 制作组盒子 -->
-	<carry_item file="diling_box.valuable" />
-	<carry_item file="ak12_box.valuable" />
-	<carry_item file="zhuzhu_box.valuable" />
-	<carry_item file="ftggrg_box.valuable" />
-	<carry_item file="iaqs_box.valuable" />
-	<carry_item file="nether_crow_box.valuable" />
-	<carry_item file="narcissus_box.valuable" />
-	<carry_item file="kudan_box.valuable" />
-	<carry_item file="idw_box.valuable" />
-	<carry_item file="musksocks_box.valuable" />
-	<carry_item file="zas_paint.valuable" />
-	<carry_item file="gu_card.valuable" />
-	<carry_item file="liris_box.valuable" />
-	<carry_item file="melondove_box.valuable" />
-	<carry_item file="regingflame_box.valuable" />
-	<carry_item file="redtides.valuable" />
-	<carry_item file="sv98_box.valuable" />
-	<carry_item file="ppsh_box.valuable" />
-	<carry_item file="shasha.valuable" />
-	<carry_item file="k309_box.valuable" />
-	<carry_item file="k309_dowry.valuable" />
-	<carry_item file="saiwa_box.valuable" />
-	<carry_item file="saiwa_juggernaut.valuable" />
+	<carry_item name="cigars" key="cigars.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+		<hud_icon filename="hud_cigars.png"/>
+		<inventory encumbrance="0.0" price="80.0"/>
+		<model mesh_filename="cigars.mesh" texture_filename="cigars.png"/>
+		<capacity value="100" source="rank" source_value="0.0"/>
+		<inventory encumbrance="-0.5"/>
+		<commonness value="0.0" in_stock="0" can_respawn_with="0"/>
+	</carry_item>
+	<carry_item name="Cheap Beer" key="beer_can.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+		<hud_icon filename="hud_beer_can.png"/>
+		<inventory encumbrance="0.0" price="30.0"/>
+		<model mesh_filename="beer_can.mesh" texture_filename="beer_can.png"/>
+		<capacity value="100" source="rank" source_value="0.0"/>
+		<inventory encumbrance="-0.5"/>
+		<commonness value="0.0" in_stock="0" can_respawn_with="0"/>
+	</carry_item>
+	<carry_item name="lighter" key="lighter.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+		<hud_icon filename="hud_lighter.png"/>
+		<inventory encumbrance="0.0" price="70.0"/>
+		<model mesh_filename="lighter.mesh" texture_filename="lighter.png"/>
+		<capacity value="100" source="rank" source_value="0.0"/>
+		<inventory encumbrance="-0.5"/>
+		<commonness value="0.0" in_stock="0" can_respawn_with="0"/>
+	</carry_item>
+	<carry_item name="steroids" key="steroids.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+		<hud_icon filename="hud_steroids.png"/>
+		<inventory encumbrance="0.0" price="150.0"/>
+		<model mesh_filename="steroids.mesh" texture_filename="steroids.png"/>
+		<capacity value="100" source="rank" source_value="0.0"/>
+		<inventory encumbrance="-0.5"/>
+		<commonness value="0.0" in_stock="0" can_respawn_with="0"/>
+	</carry_item>
+	<carry_item name="AS Val's bear" key="teddy.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+		<hud_icon filename="hud_teddy.png"/>
+		<inventory encumbrance="0.0" price="250.0"/>
+		<model mesh_filename="teddy.mesh" texture_filename="teddy.png"/>
+		<capacity value="100" source="rank" source_value="0.0"/>
+		<inventory encumbrance="-0.5"/>
+		<commonness value="0.0" in_stock="0" can_respawn_with="0"/>
+	</carry_item>
+	<carry_item name="gold bar" key="gold_bar.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+		<hud_icon filename="hud_goldbar.png"/>
+		<inventory encumbrance="0.0" price="1000.0"/>
+		<model mesh_filename="gold_bar.mesh" texture_filename="gold_bar.png"/>
+		<capacity value="100" source="rank" source_value="0.0"/>
+		<inventory encumbrance="-0.5"/>
+		<commonness value="0.0" in_stock="0" can_respawn_with="0"/>
+	</carry_item>
+	<carry_item name="Hardcover Scripture" key="bible.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+		<hud_icon filename="hud_bible.png"/>
+		<inventory encumbrance="0.0" price="200.0"/>
+		<model mesh_filename="bible.mesh" texture_filename="bible.png"/>
+		<capacity value="100" source="rank" source_value="0.0"/>
+		<inventory encumbrance="-0.5"/>
+		<commonness value="0.0" in_stock="0" can_respawn_with="0"/>
+	</carry_item>
+	<carry_item name="Hardcover Scripture" key="koran.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+		<hud_icon filename="hud_koran.png"/>
+		<inventory encumbrance="0.0" price="200.0"/>
+		<model mesh_filename="bible.mesh" texture_filename="koran.png"/>
+		<capacity value="100" source="rank" source_value="0.0"/>
+		<inventory encumbrance="-0.5"/>
+		<commonness value="0.0" in_stock="0" can_respawn_with="0"/>
+	</carry_item>
+	<carry_item name="chewing-gum" key="chewing_gum.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+		<hud_icon filename="hud_chewing_gum.png"/>
+		<inventory encumbrance="0.0" price="50.0"/>
+		<model mesh_filename="chewing_gum.mesh" texture_filename="chewing_gum.png"/>
+		<capacity value="100" source="rank" source_value="0.0"/>
+		<inventory encumbrance="-0.5"/>
+		<commonness value="0.0" in_stock="0" can_respawn_with="0"/>
+	</carry_item>
+	<carry_item name="bizarre rubber bullet...?" key="bizarre_rubber_bullet.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+		<hud_icon filename="hud_bizarre_rubber_bullet.png"/>
+		<inventory encumbrance="0.0" price="100.0"/>
+		<model mesh_filename="bizarre_rubber_bullet.mesh" texture_filename="bizarre_rubber_bullet.png"/>
+		<capacity value="100" source="rank" source_value="0.0"/>
+		<inventory encumbrance="-0.5"/>
+		<commonness value="0.0" in_stock="0" can_respawn_with="0"/>
+	</carry_item>
+	<carry_item name="Fnc's favourite" key="chocolate.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+		<hud_icon filename="hud_chocolate.png"/>
+		<inventory encumbrance="0.0" price="60.0"/>
+		<model mesh_filename="chocolate.mesh" texture_filename="chocolate.png"/>
+		<capacity value="100" source="rank" source_value="0.0"/>
+		<inventory encumbrance="-0.5"/>
+		<commonness value="0.0" in_stock="0" can_respawn_with="0"/>
+	</carry_item>
+	<carry_item name="300 dollars" key="dollars_300.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+		<hud_icon filename="hud_dollars_300.png"/>
+		<inventory encumbrance="0.0" price="300.0"/>
+		<model mesh_filename="dollars_300.mesh" texture_filename="dollars.png"/>
+		<capacity value="100" source="rank" source_value="0.0"/>
+		<inventory encumbrance="-0.5"/>
+		<commonness value="0.0" in_stock="0" can_respawn_with="0"/>
+	</carry_item>
+	<carry_item name="energy drink" key="energy_drink.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+		<hud_icon filename="hud_energy_drink.png"/>
+		<inventory encumbrance="0.0" price="50.0"/>
+		<model mesh_filename="energy_drink.mesh" texture_filename="energy_drink.png"/>
+		<capacity value="100" source="rank" source_value="0.0"/>
+		<inventory encumbrance="-0.5"/>
+		<commonness value="0.0" in_stock="0" can_respawn_with="0"/>
+	</carry_item>
+	<carry_item name="Tompson's Sunglasses" key="fancy_sunglasses.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+		<hud_icon filename="hud_fancy_sunglasses.png"/>
+		<inventory encumbrance="0.0" price="200.0"/>
+		<model mesh_filename="sunglasses.mesh" texture_filename="fancy_sunglasses.png"/>
+		<capacity value="100" source="rank" source_value="0.0"/>
+		<inventory encumbrance="-0.5"/>
+		<commonness value="0.0" in_stock="0" can_respawn_with="0"/>
+	</carry_item>
+	<carry_item name="Suomi's Heavy-Metal Speaker" key="radio.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+		<hud_icon filename="hud_radio.png"/>
+		<inventory encumbrance="0.0" price="250.0"/>
+		<model mesh_filename="radio.mesh" texture_filename="radio.png"/>
+		<capacity value="100" source="rank" source_value="0.0"/>
+		<inventory encumbrance="-0.5"/>
+		<commonness value="0.0" in_stock="0" can_respawn_with="0"/>
+	</carry_item>
+	<carry_item name="razor" key="razor.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+		<hud_icon filename="hud_razor.png"/>
+		<inventory encumbrance="0.0" price="50.0"/>
+		<model mesh_filename="razor.mesh" texture_filename="radio.png"/>
+		<capacity value="100" source="rank" source_value="0.0"/>
+		<inventory encumbrance="-0.5"/>
+		<commonness value="0.0" in_stock="0" can_respawn_with="0"/>
+	</carry_item>
+	<carry_item name="Weird Rubber Crafts" key="sheaths.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+		<hud_icon filename="hud_sheaths.png"/>
+		<inventory encumbrance="0.0" price="40.0"/>
+		<model mesh_filename="sheaths.mesh" texture_filename="sheaths.png"/>
+		<capacity value="100" source="rank" source_value="0.0"/>
+		<inventory encumbrance="-0.5"/>
+		<commonness value="0.0" in_stock="0" can_respawn_with="0"/>
+	</carry_item>
+	<carry_item name="Bigger Weird Rubber Crafts" key="sheaths_xxl.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+		<hud_icon filename="hud_sheaths_xxl.png"/>
+		<inventory encumbrance="0.0" price="60.0"/>
+		<model mesh_filename="sheaths.mesh" texture_filename="sheaths_xxl.png"/>
+		<capacity value="100" source="rank" source_value="0.0"/>
+		<inventory encumbrance="-0.5"/>
+		<commonness value="0.0" in_stock="0" can_respawn_with="0"/>
+	</carry_item>
+	<carry_item name="sunglasses" key="sunglasses.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+		<hud_icon filename="hud_sunglasses.png"/>
+		<inventory encumbrance="0.0" price="80.0"/>
+		<model mesh_filename="sunglasses.mesh" texture_filename="sunglasses.png"/>
+		<capacity value="100" source="rank" source_value="0.0"/>
+		<inventory encumbrance="-0.5"/>
+		<commonness value="0.0" in_stock="0" can_respawn_with="0"/>
+	</carry_item>
+	<carry_item name="iPoo blue edition" key="ipoo_player_blue.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+		<hud_icon filename="hud_ipoo_blue.png"/>
+		<inventory encumbrance="0.0" price="110.0"/>
+		<model mesh_filename="ipoo.mesh" texture_filename="ipoo_blue.png"/>
+		<capacity value="100" source="rank" source_value="0.0"/>
+		<inventory encumbrance="-0.5"/>
+		<commonness value="0.0" in_stock="0" can_respawn_with="0"/>
+	</carry_item>
+	<carry_item name="iPoo red edition" key="ipoo_player_red.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+		<hud_icon filename="hud_ipoo_red.png"/>
+		<inventory encumbrance="0.0" price="110.0"/>
+		<model mesh_filename="ipoo.mesh" texture_filename="ipoo_red.png"/>
+		<capacity value="100" source="rank" source_value="0.0"/>
+		<inventory encumbrance="-0.5"/>
+		<commonness value="0.0" in_stock="0" can_respawn_with="0"/>
+	</carry_item>
+	<carry_item name="iPoo white edition" key="ipoo_player_white.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+		<hud_icon filename="hud_ipoo_white.png"/>
+		<inventory encumbrance="0.0" price="100.0"/>
+		<model mesh_filename="ipoo.mesh" texture_filename="ipoo_white.png"/>
+		<capacity value="100" source="rank" source_value="0.0"/>
+		<inventory encumbrance="-0.5"/>
+		<commonness value="0.0" in_stock="0" can_respawn_with="0"/>
+	</carry_item>
+	<carry_item name="iPoo silver edition" key="ipoo_player_silver.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+		<hud_icon filename="hud_ipoo_silver.png"/>
+		<inventory encumbrance="0.0" price="140.0"/>
+		<model mesh_filename="ipoo.mesh" texture_filename="ipoo_silver.png"/>
+		<capacity value="100" source="rank" source_value="0.0"/>
+		<inventory encumbrance="-0.5"/>
+		<commonness value="0.0" in_stock="0" can_respawn_with="0"/>
+	</carry_item>
+	<carry_item name="iPoo yellow edition" key="ipoo_player_yellow.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+		<hud_icon filename="hud_ipoo_yellow.png"/>
+		<inventory encumbrance="0.0" price="110.0"/>
+		<model mesh_filename="ipoo.mesh" texture_filename="ipoo_yellow.png"/>
+		<capacity value="100" source="rank" source_value="0.0"/>
+		<inventory encumbrance="-0.5"/>
+		<commonness value="0.0" in_stock="0" can_respawn_with="0"/>
+	</carry_item>
+	<carry_item name="iPoo green edition" key="ipoo_player_green.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+		<hud_icon filename="hud_ipoo_green.png"/>
+		<inventory encumbrance="0.0" price="120.0"/>
+		<model mesh_filename="ipoo.mesh" texture_filename="ipoo_green.png"/>
+		<capacity value="100" source="rank" source_value="0.0"/>
+		<inventory encumbrance="-0.5"/>
+		<commonness value="0.0" in_stock="0" can_respawn_with="0"/>
+	</carry_item>
+	<carry_item name="iPoo pink limited edition" key="ipoo_player_pink.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+		<hud_icon filename="hud_ipoo_pink.png"/>
+		<inventory encumbrance="0.0" price="300.0"/>
+		<model mesh_filename="ipoo.mesh" texture_filename="ipoo_pink.png"/>
+		<capacity value="100" source="rank" source_value="0.0"/>
+		<inventory encumbrance="-0.5"/>
+		<commonness value="0.0" in_stock="0" can_respawn_with="0"/>
+	</carry_item>
+	<carry_item name="poker cards" key="playing_cards.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+		<hud_icon filename="hud_playing_cards.png"/>
+		<inventory encumbrance="0.0" price="60.0"/>
+		<model mesh_filename="playing_cards.mesh" texture_filename="playing_cards.png"/>
+		<capacity value="100" source="rank" source_value="0.0"/>
+		<inventory encumbrance="-0.5"/>
+		<commonness value="0.0" in_stock="0" can_respawn_with="0"/>
+	</carry_item>
+	<carry_item name="Stasi Briefcase" key="suitcase.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+		<tag name="item_unlocker"/>
+		<hud_icon filename="hud_suitcase.png"/>
+		<inventory encumbrance="0.0" price="200.0"/>
+		<model mesh_filename="suitcase.mesh" texture_filename="suitcase.png"/>
+		<commonness value="6.0" in_stock="0"/>
+		<capacity value="100" source="rank" source_value="0.0"/>
+		<inventory encumbrance="-0.5"/>
+	</carry_item>
+	<carry_item name="girls underpants" key="underpants.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+		<hud_icon filename="hud_worn_underpants.png"/>
+		<inventory encumbrance="0.0" price="666.0"/>
+		<model mesh_filename="underpants.mesh" texture_filename="underpants.png"/>
+		<capacity value="100" source="rank" source_value="0.0"/>
+		<inventory encumbrance="-0.5"/>
+		<commonness value="0.0" in_stock="0" can_respawn_with="0"/>
+	</carry_item>
+	<carry_item name="Dirty Book" key="kamasutra.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+		<hud_icon filename="hud_kamasutra.png"/>
+		<inventory encumbrance="0.0" price="69.0"/>
+		<model mesh_filename="magazine.mesh" texture_filename="kamasutra.png"/>
+		<capacity value="100" source="rank" source_value="0.0"/>
+		<inventory encumbrance="-0.5"/>
+		<commonness value="0.0" in_stock="0" can_respawn_with="0"/>
+	</carry_item>
+	<carry_item name="Suomi's Rocking CD" key="cd.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+		<hud_icon filename="hud_kp31cd.png"/>
+		<inventory encumbrance="0.0" price="2000.0"/>
+		<model mesh_filename="cd.mesh" texture_filename="cd.png"/>
+		<capacity value="100" source="rank" source_value="0.0"/>
+		<inventory encumbrance="-0.5"/>
+		<commonness value="0.0" in_stock="0" can_respawn_with="0"/>
+	</carry_item>
+	<carry_item name="Jack Daniels" key="whiskey_bottle.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+		<hud_icon filename="hud_whiskey_bottle.png"/>
+		<inventory encumbrance="0.0" price="50.0"/>
+		<model mesh_filename="whiskey.mesh" texture_filename="whiskey.png"/>
+		<capacity value="100" source="rank" source_value="0.0"/>
+		<inventory encumbrance="-0.5"/>
+		<commonness value="0.0" in_stock="0" can_respawn_with="0"/>
+	</carry_item>
+	<carry_item name="cigarettes" key="cigarettes.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+		<hud_icon filename="hud_cigarettes.png"/>
+		<inventory encumbrance="0.0" price="40.0"/>
+		<model mesh_filename="cigarettes.mesh" texture_filename="cigarettes.png"/>
+		<capacity value="100" source="rank" source_value="0.0"/>
+		<inventory encumbrance="-0.5"/>
+		<commonness value="0.0" in_stock="0" can_respawn_with="0"/>
+	</carry_item>
+	<carry_item name="100 dollars" key="dollars.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+		<hud_icon filename="hud_dollars_100.png"/>
+		<inventory encumbrance="0.0" price="100.0"/>
+		<model mesh_filename="dollars_100.mesh" texture_filename="dollars.png"/>
+		<capacity value="100" source="rank" source_value="0.0"/>
+		<inventory encumbrance="-0.5"/>
+		<commonness value="0.0" in_stock="0" can_respawn_with="0"/>
+	</carry_item>
+	<carry_item name="RFB's gameboy" key="gamingdevice.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+		<hud_icon filename="hud_gamingdevice.png"/>
+		<inventory encumbrance="0.0" price="100.0"/>
+		<model mesh_filename="gamingdevice.mesh" texture_filename="gamingdevice.png"/>
+		<capacity value="100" source="rank" source_value="0.0"/>
+		<inventory encumbrance="-0.5"/>
+		<commonness value="0.0" in_stock="0" can_respawn_with="0"/>
+	</carry_item>
+	<carry_item name="Gem" key="gem.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+		<hud_icon filename="hud_gem.png"/>
+		<inventory encumbrance="0.0" price="300.0"/>
+		<model mesh_filename="gem.mesh" texture_filename="gem.png"/>
+		<capacity value="100" source="rank" source_value="0.0"/>
+		<inventory encumbrance="-0.5"/>
+		<commonness value="0.0" in_stock="0" can_respawn_with="0"/>
+	</carry_item>
+	<carry_item name="Comic book" key="comic_book.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+		<hud_icon filename="hud_comic.png"/>
+		<inventory encumbrance="0.0" price="328.0"/>
+		<model mesh_filename="magazine.mesh" texture_filename="comic.png"/>
+		<capacity value="100" source="rank" source_value="0.0"/>
+		<inventory encumbrance="-0.5"/>
+		<commonness value="0.0" in_stock="0" can_respawn_with="0"/>
+	</carry_item>
+	<carry_item name="RWR handbook" key="rwr_handbook.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+		<hud_icon filename="hud_rwr_handbook.png"/>
+		<inventory encumbrance="0.0" price="50.0"/>
+		<model mesh_filename="magazine.mesh" texture_filename="rwr_handbook.png"/>
+		<capacity value="100" source="rank" source_value="0.0"/>
+		<inventory encumbrance="-0.5"/>
+		<commonness value="0.0" in_stock="0" can_respawn_with="0"/>
+	</carry_item>
+	<carry_item name="Rusted 'Golden' Trophy" key="oscar_statue.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+		<hud_icon filename="hud_oscar_statue.png"/>
+		<inventory encumbrance="0.0" price="80.0"/>
+		<model mesh_filename="oscar_statue.mesh" texture_filename="oscar_statue.png"/>
+		<capacity value="100" source="rank" source_value="0.0"/>
+		<inventory encumbrance="-0.5"/>
+		<commonness value="0.0" in_stock="0" can_respawn_with="0"/>
+	</carry_item>
+	<carry_item name="Laptop" key="laptop.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+		<tag name="item_unlocker"/>
+		<hud_icon filename="hud_laptop.png"/>
+		<inventory encumbrance="0.0" price="380.0"/>
+		<model mesh_filename="cigars.mesh" texture_filename="laptop.png"/>
+		<capacity value="100" source="rank" source_value="0.0"/>
+		<inventory encumbrance="-0.5"/>
+		<commonness value="0.0" in_stock="0" can_respawn_with="0"/>
+	</carry_item>
+	<carry_item name="City Gifts" key="city_gifts.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+		<hud_icon filename="Item_city_gifts.png"/>
+		<inventory encumbrance="-1.0" buy_price="150" sell_price="150"/>
+		<model mesh_filename="city gifts.xml" texture_filename=""/>
+		<capacity value="100" source="rank" source_value="0.0"/>
+		<inventory encumbrance="-0.5"/>
+		<commonness value="0.0" in_stock="0" can_respawn_with="0"/>
+	</carry_item>
+	<carry_item name="Forest Gifts" key="forest_gifts.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+		<hud_icon filename="Item_forest_gifts.png"/>
+		<inventory encumbrance="-1.0" buy_price="150" sell_price="150"/>
+		<model mesh_filename="forest gifts.xml" texture_filename=""/>
+		<capacity value="100" source="rank" source_value="0.0"/>
+		<inventory encumbrance="-0.5"/>
+		<commonness value="0.0" in_stock="0" can_respawn_with="0"/>
+	</carry_item>
+	<carry_item name="Wild Gifts" key="wild_gifts.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+		<hud_icon filename="Item_wild_gifts.png"/>
+		<inventory encumbrance="-1.0" buy_price="150" sell_price="150"/>
+		<model mesh_filename="wild gifts.xml" texture_filename=""/>
+		<commonness value="1.0" in_stock="0"/>
+		<capacity value="100" source="rank" source_value="0.0"/>
+		<inventory encumbrance="-0.5"/>
+	</carry_item>
+	<carry_item name="Snow Gifts" key="snow_gifts.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+		<hud_icon filename="Item_snow_gifts.png"/>
+		<inventory encumbrance="-1.0" buy_price="150" sell_price="150"/>
+		<model mesh_filename="snowfield gifts.xml" texture_filename=""/>
+		<commonness value="1.0" in_stock="0"/>
+		<capacity value="100" source="rank" source_value="0.0"/>
+		<inventory encumbrance="-0.5"/>
+	</carry_item>
+	<carry_item name="Egor Lebedev" key="painting.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+		<hud_icon filename="hud_painting.png"/>
+		<inventory encumbrance="0.0" price="800.0"/>
+		<model mesh_filename="painting.mesh" texture_filename="painting.png"/>
+		<capacity value="100" source="rank" source_value="0.0"/>
+		<inventory encumbrance="-0.5"/>
+		<commonness value="0.0" in_stock="0" can_respawn_with="0"/>
+	</carry_item>
+	<carry_item name="M4SOPMODIIJR" key="SOPII_Ant_Doll.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+		<hud_icon filename="jr.png"/>
+		<inventory encumbrance="-1.0" buy_price="10000" sell_price="10000"/>
+		<model mesh_filename="M4SOPMODIIJR.xml" texture_filename=""/>
+		<capacity value="100" source="rank" source_value="0.0"/>
+		<inventory encumbrance="-0.5"/>
+		<commonness value="0.0" in_stock="1" can_respawn_with="0"/>
+	</carry_item>
+	<carry_item name="'I'm going to commit suicide'" key="RO365_Ant_Doll.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+		<hud_icon filename="ro.png"/>
+		<inventory encumbrance="-1.0" buy_price="5000" sell_price="5000"/>
+		<model mesh_filename="RO365_Ant_Doll.xml" texture_filename=""/>
+		<capacity value="100" source="rank" source_value="0.0"/>
+		<inventory encumbrance="-0.5"/>
+		<commonness value="0.0" in_stock="1" can_respawn_with="0"/>
+	</carry_item>
+	<carry_item name="Aid Commission" key="gift_box_2.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+		<hud_icon filename="svarog.png"/>
+		<inventory encumbrance="-1.0" buy_price="100000.0" sell_price="0.0"/>
+		<model mesh_filename="aid_commision.xml"/>
+		<capacity value="100" source="rank" source_value="0.0"/>
+		<inventory encumbrance="-0.5"/>
+		<commonness value="0.0" in_stock="1" can_respawn_with="0"/>
+	</carry_item>
+	<carry_item name="Extra Impulse" key="gift_box_3.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+		<hud_icon filename="impulse.png"/>
+		<inventory encumbrance="-1.0" buy_price="6480.0" sell_price="0.0"/>
+		<model mesh_filename="caigoubi.mesh" texture_filename="none.png"/>
+		<capacity value="100" source="rank" source_value="0.0"/>
+		<inventory encumbrance="-0.5"/>
+		<commonness value="0.0" in_stock="1" can_respawn_with="0"/>
+	</carry_item>
+	<carry_item name="Sweet Bomb Box" key="sweet_bomb_box.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+		<hud_icon filename="Item_sweet_bomb_box.png"/>
+		<inventory encumbrance="-1.0" buy_price="100000" sell_price="100000"/>
+		<model mesh_filename="sweet_bomb_box.xml" texture_filename=""/>
+		<capacity value="100" source="rank" source_value="0.0"/>
+		<inventory encumbrance="-0.5"/>
+		<commonness value="0.0" in_stock="1" can_respawn_with="0"/>
+	</carry_item>
+	<carry_item name="Double Enjoyment Package" key="double_enjoyment_package.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+		<hud_icon filename="Item_double_enjoyment_package.png"/>
+		<inventory encumbrance="-1.0" buy_price="1000000" sell_price="1000000"/>
+		<model mesh_filename="double_enjoyment_package.xml" texture_filename=""/>
+		<commonness value="0.0" in_stock="1" can_respawn_with="0"/>
+		<capacity value="100" source="rank" source_value="0.0"/>
+		<inventory encumbrance="-0.5"/>
+	</carry_item>
+	<carry_item name="Holy Meat Buns" key="holy_meat_buns.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+		<hud_icon filename="Item_holy_meat_buns.png"/>
+		<inventory encumbrance="-1.0" buy_price="500000" sell_price="500000"/>
+		<model mesh_filename="holy_meat_buns.xml" texture_filename=""/>
+		<commonness value="0.0" in_stock="1" can_respawn_with="0"/>
+		<capacity value="100" source="rank" source_value="0.0"/>
+		<inventory encumbrance="-0.5"/>
+	</carry_item>
+	<carry_item name="Ice Theatre" key="ice_theatre.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+		<hud_icon filename="Item_ice_theatre.png"/>
+		<inventory encumbrance="-1.0" buy_price="200000" sell_price="200000"/>
+		<model mesh_filename="ice_theatre.xml" texture_filename=""/>
+		<commonness value="0.0" in_stock="1" can_respawn_with="0"/>
+		<capacity value="100" source="rank" source_value="0.0"/>
+		<inventory encumbrance="-0.5"/>
+	</carry_item>
+	<carry_item name="Christmas coin" key="gift_box_community_2.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+		<hud_icon filename="Christmas_coin.png"/>
+		<inventory encumbrance="0.0" price="1.0"/>
+		<model mesh_filename="christmas_coin.xml" texture_filename=""/>
+		<commonness value="0.0" in_stock="0" can_respawn_with="0"/>
+		<capacity value="100" source="rank" source_value="0.0"/>
+		<inventory encumbrance="-0.5"/>
+	</carry_item>
+	<carry_item name="But I only want ice cream" key="lottery.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+		<hud_icon filename="Memory_Fragment.png"/>
+		<inventory encumbrance="1.0" buy_price="5280.0" sell_price="0.0"/>
+		<model mesh_filename="memory_fragment.xml" texture_filename=""/>
+		<commonness value="0.0" in_stock="1" can_respawn_with="0"/>
+		<capacity value="100" source="rank" source_value="0.0"/>
+		<inventory encumbrance="-0.5"/>
+	</carry_item>
+	<carry_item name="Purchase coins" key="gift_box_1.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+		<hud_icon filename="gk_cgb.png"/>
+		<inventory encumbrance="-1.0" buy_price="2380.0" sell_price="0.0"/>
+		<model mesh_filename="caigoubi.mesh" texture_filename="none.png"/>
+		<commonness value="0.0" in_stock="1" can_respawn_with="0"/>
+		<capacity value="100" source="rank" source_value="0.0"/>
+		<inventory encumbrance="-0.5"/>
+	</carry_item>
+	<carry_item name="Purchase coins[MOD3]" key="gift_box_community_1.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+		<hud_icon filename="gk_cgb_mod3.png"/>
+		<inventory encumbrance="-1.0" buy_price="2380.0" sell_price="2380.0"/>
+		<model mesh_filename="caigoubi.mesh" texture_filename="none.png"/>
+		<commonness value="0" in_stock="0"/>
+		<capacity value="100" source="rank" source_value="0.0"/>
+		<inventory encumbrance="-0.5"/>
+	</carry_item>
+	<carry_item name="New Year Giftbox" key="sf_box.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+		<hud_icon filename="SfBox.png"/>
+		<inventory encumbrance="-1.0" buy_price="8888.0" sell_price="1.0"/>
+		<model mesh_filename="sf_box.xml" texture_filename=""/>
+		<commonness value="0.0" in_stock="1" can_respawn_with="0"/>
+		<capacity value="100" source="rank" source_value="0.0"/>
+		<inventory encumbrance="-0.5"/>
+	</carry_item>
+	<carry_item time_to_live_out_in_the_open="90.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="1.0" player_death_drop_owner_lock_time="90.0" name="Fire Control Component" key="firecontrol.carry_item">
+		<hud_icon filename="hud_firecontrol.png"/>
+		<inventory encumbrance="0.0" buy_price="500000" sell_price="-1000.0"/>
+		<model mesh_filename="fire_control.xml"/>
+		<commonness value="0" in_stock="0"/>
+	</carry_item>
+	<carry_item name="Diling box" key="diling_box.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+		<hud_icon filename="Diling_box.png"/>
+		<inventory encumbrance="-1.0" buy_price="7777" sell_price="7777"/>
+		<model mesh_filename="box_diling_12x12x12.xml" texture_filename=""/>
+		<commonness value="0.05" in_stock="0"/>
+		<capacity value="100" source="rank" source_value="0.0"/>
+		<inventory encumbrance="-0.5"/>
+	</carry_item>
+	<carry_item name="Ak12 box" key="ak12_box.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+		<hud_icon filename="ak12_box.png"/>
+		<inventory encumbrance="-1.0" buy_price="1294" sell_price="1294"/>
+		<model mesh_filename="box_ak12_12x12x12.xml" texture_filename=""/>
+		<commonness value="0.005" in_stock="0"/>
+		<capacity value="100" source="rank" source_value="0.0"/>
+		<inventory encumbrance="-0.5"/>
+	</carry_item>
+	<carry_item name="Zhuzhu box" key="Zhuzhu_box.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+		<hud_icon filename="Zhuzhu_box.png"/>
+		<inventory encumbrance="-1.0" buy_price="0" sell_price="5000"/>
+		<model mesh_filename="box_zhuzhu_12x12x12.xml" texture_filename=""/>
+		<commonness value="0.05" in_stock="0"/>
+		<capacity value="100" source="rank" source_value="0.0"/>
+		<inventory encumbrance="-0.5"/>
+	</carry_item>
+	<carry_item name="Ftggrg box" key="ftggrg_box.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+		<hud_icon filename="Ftggrg_box.png"/>
+		<inventory encumbrance="-1.0" buy_price="5000" sell_price="5000"/>
+		<model mesh_filename="box_ftggrg_12x12x12.xml" texture_filename=""/>
+		<commonness value="0.05" in_stock="0"/>
+		<capacity value="100" source="rank" source_value="0.0"/>
+		<inventory encumbrance="-0.5"/>
+	</carry_item>
+	<carry_item name="IAQS box" key="iaqs_box.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+		<hud_icon filename="IAQS_walletBox.png"/>
+		<inventory encumbrance="-1.0" buy_price="0" sell_price="20000"/>
+		<model mesh_filename="box_iaqs_8x3x14.xml" texture_filename=""/>
+		<commonness value="0.02" in_stock="0"/>
+		<capacity value="100" source="rank" source_value="0.0"/>
+		<inventory encumbrance="-0.5"/>
+	</carry_item>
+	<carry_item name="Nether_Crow box" key="nether_crow_box.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+		<hud_icon filename="Nether_Crow_box.png"/>
+		<inventory encumbrance="-1.0" buy_price="0" sell_price="0"/>
+		<model mesh_filename="box_nethercrow_12x12x12.xml" texture_filename=""/>
+		<commonness value="0.05" in_stock="0"/>
+		<capacity value="100" source="rank" source_value="0.0"/>
+		<inventory encumbrance="-0.5"/>
+	</carry_item>
+	<carry_item name="Narcissus box" key="narcissus_box.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+		<hud_icon filename="Narcissus_iceBox.png"/>
+		<inventory encumbrance="-1.0" buy_price="0" sell_price="414"/>
+		<model mesh_filename="box_narcissus_ice_23x12x10.xml" texture_filename=""/>
+		<commonness value="0.05" in_stock="0"/>
+		<capacity value="100" source="rank" source_value="0.0"/>
+		<inventory encumbrance="-0.5"/>
+	</carry_item>
+	<carry_item name="Kudan box" key="kudan_box.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+		<hud_icon filename="Kudan_box.png"/>
+		<inventory encumbrance="-1.0" buy_price="0" sell_price="414"/>
+		<model mesh_filename="box_kudan_23x12x14.xml" texture_filename=""/>
+		<commonness value="0.05" in_stock="0"/>
+		<capacity value="100" source="rank" source_value="0.0"/>
+		<inventory encumbrance="-0.5"/>
+	</carry_item>
+	<carry_item name="Idw box" key="idw_box.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+		<hud_icon filename="Idw_box.png"/>
+		<inventory encumbrance="-1.0" buy_price="0" sell_price="5000"/>
+		<model mesh_filename="box_idw_12x12x12.xml" texture_filename=""/>
+		<commonness value="0.05" in_stock="0"/>
+		<capacity value="100" source="rank" source_value="0.0"/>
+		<inventory encumbrance="-0.5"/>
+	</carry_item>
+	<carry_item name="Musksocks box" key="musksocks_box.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+		<hud_icon filename="Musksocks_box.png"/>
+		<inventory encumbrance="-1.0" buy_price="0" sell_price="21"/>
+		<model mesh_filename="box_musksocks_12x12x13.xml" texture_filename=""/>
+		<commonness value="0.05" in_stock="0"/>
+		<capacity value="100" source="rank" source_value="0.0"/>
+		<inventory encumbrance="-0.5"/>
+	</carry_item>
+	<carry_item name="Zas paint" key="zas_paint.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+		<hud_icon filename="zas_paint_hud.png"/>
+		<inventory encumbrance="-1.0" buy_price="0" sell_price="2121"/>
+		<model mesh_filename="magazine.mesh" texture_filename="zas_paint.png"/>
+		<commonness value="0" in_stock="0"/>
+		<capacity value="100" source="rank" source_value="0.0"/>
+		<inventory encumbrance="-0.5"/>
+	</carry_item>
+	<carry_item name="Gu card" key="gu_card.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+		<hud_icon filename="kudan_pig.png"/>
+		<inventory encumbrance="-1.0" buy_price="0" sell_price="4500"/>
+		<model mesh_filename="magazine.mesh" texture_filename="kudan_pig.png"/>
+		<commonness value="0" in_stock="0"/>
+		<capacity value="100" source="rank" source_value="0.0"/>
+		<inventory encumbrance="-0.5"/>
+	</carry_item>
+	<carry_item name="Liris box" key="liris_box.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+		<hud_icon filename="Liris_box.png"/>
+		<inventory encumbrance="-1.0" buy_price="0" sell_price="5000"/>
+		<model mesh_filename="box_liris_12x13x16.xml" texture_filename=""/>
+		<commonness value="0.05" in_stock="0"/>
+		<capacity value="100" source="rank" source_value="0.0"/>
+		<inventory encumbrance="-0.5"/>
+	</carry_item>
+	<carry_item name="MelonDove box" key="melondove_box.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+		<hud_icon filename="MelonDove_box.png"/>
+		<inventory encumbrance="-1.0" buy_price="0" sell_price="5000"/>
+		<model mesh_filename="box_melondove_12x12x12.xml" texture_filename=""/>
+		<commonness value="0.05" in_stock="0"/>
+		<capacity value="100" source="rank" source_value="0.0"/>
+		<inventory encumbrance="-0.5"/>
+	</carry_item>
+	<carry_item name="RegingFlame box" key="regingflame_box.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+		<hud_icon filename="RegingFlame_box.png"/>
+		<inventory encumbrance="-1.0" buy_price="0" sell_price="5000"/>
+		<model mesh_filename="box_regingflame_12x12x12.xml" texture_filename=""/>
+		<commonness value="0.05" in_stock="0"/>
+		<capacity value="100" source="rank" source_value="0.0"/>
+		<inventory encumbrance="-0.5"/>
+	</carry_item>
+	<carry_item name="Red tides" key="red_tides.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+		<hud_icon filename="redtides.png"/>
+		<inventory encumbrance="-1.0" buy_price="0" sell_price="191711"/>
+		<model mesh_filename="magazine.mesh" texture_filename="redtides.png"/>
+		<commonness value="0.00000000000001" in_stock="0"/>
+		<capacity value="100" source="rank" source_value="0.0"/>
+		<inventory encumbrance="-0.5"/>
+	</carry_item>
+	<carry_item name="Sv98 box" key="sv98_box.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+		<hud_icon filename="Sv98_box.png"/>
+		<inventory encumbrance="-1.0" buy_price="0" sell_price="98"/>
+		<model mesh_filename="box_sv98_12x12x12.xml" texture_filename=""/>
+		<commonness value="0.05" in_stock="0"/>
+		<capacity value="100" source="rank" source_value="0.0"/>
+		<inventory encumbrance="-0.5"/>
+	</carry_item>
+	<carry_item name="GK-PPSH41 box" key="ppsh_box.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+		<hud_icon filename="PPSH_box.png"/>
+		<inventory encumbrance="-1.0" buy_price="7777" sell_price="7777"/>
+		<model mesh_filename="box_ppsh_12x12x12.xml"/>
+		<commonness value="0.05" in_stock="0"/>
+		<capacity value="100" source="rank" source_value="0.0"/>
+		<inventory encumbrance="-0.5"/>
+	</carry_item>
+	<carry_item name="GuGuShark" key="shasha.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+		<hud_icon filename="shasha.png"/>
+		<inventory encumbrance="-1.0" buy_price="0" sell_price="1234"/>
+		<model mesh_filename="bobosha.xml"/>
+		<commonness value="0" in_stock="0"/>
+		<capacity value="100" source="rank" source_value="0.0"/>
+		<inventory encumbrance="-0.5"/>
+	</carry_item>
+	<carry_item name="K309 box" key="k309_box.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+		<hud_icon filename="K309_box.png"/>
+		<inventory encumbrance="-1.0" buy_price="0" sell_price="0"/>
+		<model mesh_filename="box_k309_12x12x12.xml" texture_filename=""/>
+		<commonness value="0.05" in_stock="0"/>
+		<capacity value="100" source="rank" source_value="0.0"/>
+		<inventory encumbrance="-0.5"/>
+	</carry_item>
+	<carry_item name="K309 dowry" key="k309_dowry.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+		<hud_icon filename="kccow_dactyl.png"/>
+		<inventory encumbrance="-1.0" buy_price="0" sell_price="3090"/>
+		<model mesh_filename="kcco_mine.xml" texture_filename=""/>
+		<commonness value="0" in_stock="0"/>
+		<capacity value="100" source="rank" source_value="0.0"/>
+		<inventory encumbrance="-0.5"/>
+	</carry_item>
+	<carry_item name="Saiwa box" key="saiwa_box.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+		<hud_icon filename="SAIWA_box.png"/>
+		<inventory encumbrance="-1.0" buy_price="0" sell_price="6480"/>
+		<model mesh_filename="box_saiwa_12x12x12.xml" texture_filename=""/>
+		<commonness value="0.05" in_stock="0"/>
+		<capacity value="100" source="rank" source_value="0.0"/>
+		<inventory encumbrance="-0.5"/>
+	</carry_item>
+	<carry_item name="Saiwa juggernaut" key="saiwa_juggernaut.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+		<hud_icon filename="SAIWA_box.png"/>
+		<inventory encumbrance="-1.0" buy_price="0" sell_price="866"/>
+		<model mesh_filename="saiwa_juggernaut.xml" texture_filename=""/>
+		<commonness value="0" in_stock="0"/>
+		<capacity value="100" source="rank" source_value="0.0"/>
+		<inventory encumbrance="-0.5"/>
+	</carry_item>
 </carry_items>

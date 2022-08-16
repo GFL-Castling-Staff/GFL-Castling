@@ -390,7 +390,7 @@
 			<!-- wearables -->
 			<item_class_existence class="carry_item" slot="1" probability="1" />
 			<!-- backpack -->
-			<item_class_existence class="carry_item" slot="0" probability="1" />
+			<item_class_existence class="carry_item" slot="0" probability="0.005" />
 		</item_class_existence_config>
 
 		<attribute_config class="rp">
@@ -421,7 +421,7 @@
 			<!-- wearables -->
 			<item_class_existence class="carry_item" slot="1" probability="1.0" />
 			<!-- backpack -->
-			<item_class_existence class="carry_item" slot="0" probability="0.3" />
+			<item_class_existence class="carry_item" slot="0" probability="0.005" />
 		</item_class_existence_config>
 
 		<attribute_config class="xp">
@@ -442,7 +442,7 @@
 			<!-- wearables -->
 			<item_class_existence class="carry_item" slot="1" probability="1.0" />
 			<!-- backpack -->
-			<item_class_existence class="carry_item" slot="0" probability="0.3" />
+			<item_class_existence class="carry_item" slot="0" probability="0.005" />
 			<item_class_existence class="grenade" slot="0" probability="1.0" />
 		</item_class_existence_config>
 		<attribute_config class="xp">
@@ -628,7 +628,7 @@
 			<!-- wearables -->
 			<item_class_existence class="carry_item" slot="1" probability="1.0" />
 			<!-- backpack -->
-			<item_class_existence class="carry_item" slot="0" probability="1.0" />
+			<item_class_existence class="carry_item" slot="0" probability="0.005" />
 		</item_class_existence_config>
 	</soldier>
 
@@ -645,7 +645,7 @@
 			<!-- wearables -->
 			<item_class_existence class="carry_item" slot="1" probability="1.0" />
 			<!-- backpack -->
-			<item_class_existence class="carry_item" slot="0" probability="1.0" />
+			<item_class_existence class="carry_item" slot="0" probability="0.005" />
 		</item_class_existence_config>
 	</soldier>
 
@@ -1042,7 +1042,7 @@
 			<!-- wearables -->
 			<item_class_existence class="carry_item" slot="1" probability="1.0" />
 			<!-- backpack -->
-			<item_class_existence class="carry_item" slot="0" probability="1.0" />
+			<item_class_existence class="carry_item" slot="0" probability="0.005" />
 		</item_class_existence_config>
 	</soldier>
 
