@@ -39031,9 +39031,9 @@
 	<animation state_key="recoil" animation_key="recoil, pistol dual 1"/>
 	<animation state_key="recoil" animation_key="recoil, pistol dual 2"/>
 	<animation state_key="reload" animation_key="recoil, pistol dual 1"/>
-	<animation state_key="hold" animation_key="still, pistol dual"/>
-	<animation state_key="hold_casual" animation_key="still, pistol dual"/>
-	<animation state_key="hold_on_wall" animation_key="still, pistol dual"/>
+	<animation state_key="hold" animation_key="hold_casual, pistol dual"/>
+	<animation state_key="hold_casual" animation_key="hold_casual, pistol dual"/>
+	<animation state_key="hold_on_wall" animation_key="hold_casual, pistol dual"/>
 	<animation state_key="walking" animation_key="walking, pistol dual"/>
 	<animation state_key="stabbing" animation_key="recoil, pistol dual 1"/>
 	<animation state_key="running" animation_key="walking, pistol dual"/>
@@ -39080,9 +39080,9 @@
 	<animation state_key="recoil" animation_key="recoil, pistol dual 1"/>
 	<animation state_key="recoil" animation_key="recoil, pistol dual 2"/>
 	<animation state_key="reload" animation_key="recoil, pistol dual 1"/>
-	<animation state_key="hold" animation_key="still, pistol dual"/>
-	<animation state_key="hold_casual" animation_key="still, pistol dual"/>
-	<animation state_key="hold_on_wall" animation_key="still, pistol dual"/>
+	<animation state_key="hold" animation_key="hold_casual, pistol dual"/>
+	<animation state_key="hold_casual" animation_key="hold_casual, pistol dual"/>
+	<animation state_key="hold_on_wall" animation_key="hold_casual, pistol dual"/>
 	<animation state_key="walking" animation_key="walking, pistol dual"/>
 	<animation state_key="stabbing" animation_key="recoil, pistol dual 1"/>
 	<animation state_key="running" animation_key="walking, pistol dual"/>
@@ -39706,7 +39706,7 @@
 
 <weapon key="sfw_dragoon.weapon" time_to_live_out_in_the_open="0" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0">
 	<tag name="smg"/>
-	<specification retrigger_time="0.087" barrel_offset="0.13" accuracy_factor="0.98" sustained_fire_diminish_rate="1.2" sustained_fire_grow_step="0" magazine_size="50" can_shoot_standing="1" can_shoot_crouching="0" can_shoot_prone="0" suppressed="0" name="SF-Dragoon" class="0" sight_range_modifier="1.0" projectile_speed="75.0" carry_in_two_hands="0" stab_enabled="0"/>
+	<specification retrigger_time="0.087" barrel_offset="0.13" accuracy_factor="0.98" sustained_fire_diminish_rate="1.2" sustained_fire_grow_step="2.0" magazine_size="50" can_shoot_standing="1" can_shoot_crouching="0" can_shoot_prone="0" suppressed="0" name="SF-Dragoon" class="0" sight_range_modifier="1.0" projectile_speed="75.0" carry_in_two_hands="0" stab_enabled="0"/>
 	<animation state_key="recoil" animation_key="recoil, pistol dual 1"/>
 	<animation state_key="recoil" animation_key="recoil, pistol dual 2"/>
 	<animation state_key="reload" animation_key="recoil, pistol dual 1"/>
@@ -39730,13 +39730,14 @@
 	<projectile file="bullet_sf.projectile">
 	<result class="hit" kill_probability="1.5" kill_decay_start_time="0.3" kill_decay_end_time="0.3"/>
 	</projectile>
-	<stance state_key="running" accuracy="0.6"/>
-	<stance state_key="walking" accuracy="0.675"/>
+	<stance state_key="running" accuracy="0.75"/>
+	<stance state_key="walking" accuracy="0.75"/>
 	<stance state_key="crouch_moving" accuracy="0.75"/>
-	<stance state_key="prone_moving" accuracy="0.6"/>
-	<stance state_key="standing" accuracy="0.8"/>
-	<stance state_key="crouching" accuracy="0.85"/>
-	<stance state_key="prone" accuracy="0.94"/>
+	<stance state_key="standing" accuracy="0.85"/>
+	<stance state_key="crouching" accuracy="0.9"/>
+	<stance state_key="prone" accuracy="0.95"/>
+	<stance state_key="prone_moving" accuracy="1"/>
+	<stance state_key="over_wall" accuracy="1"/>
 	<modifier class="speed" value="0.3"/>
 	<target_factors tag="shotgun" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.1"/>
 	<target_factors tag="" distance="0.5" direction="0.0" squad_command="1.0" base_score="1.0"/>
@@ -39761,7 +39762,7 @@
 
 <weapon key="sfw_dragoon_swap.weapon" time_to_live_out_in_the_open="0" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0">
 	<tag name="smg"/>
-	<specification retrigger_time="0.087" barrel_offset="0.13" accuracy_factor="0.98" sustained_fire_diminish_rate="1.2" sustained_fire_grow_step="0" magazine_size="100" can_shoot_standing="1" can_shoot_crouching="0" can_shoot_prone="0" suppressed="0" name="SF-Dragoon SWAP" class="0" sight_range_modifier="1.0" projectile_speed="75.0" carry_in_two_hands="0" stab_enabled="0"/>
+	<specification retrigger_time="0.087" barrel_offset="0.13" accuracy_factor="0.98" sustained_fire_diminish_rate="1.2" sustained_fire_grow_step="2.0" magazine_size="100" can_shoot_standing="1" can_shoot_crouching="0" can_shoot_prone="0" suppressed="0" name="SF-Dragoon SWAP" class="0" sight_range_modifier="1.0" projectile_speed="75.0" carry_in_two_hands="0" stab_enabled="0"/>
 	<animation state_key="recoil" animation_key="recoil, pistol dual 1"/>
 	<animation state_key="recoil" animation_key="recoil, pistol dual 2"/>
 	<animation state_key="reload" animation_key="recoil, pistol dual 1"/>
@@ -39780,18 +39781,18 @@
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename=""/>
 	<hud_icon filename="testing.png"/>
-	<capacity value="1" source="rank" source_value="0.0"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile file="bullet_sf.projectile">
 	<result class="hit" kill_probability="1.6" kill_decay_start_time="0.3" kill_decay_end_time="0.3"/>
 	</projectile>
-	<stance state_key="running" accuracy="0.6"/>
-	<stance state_key="walking" accuracy="0.675"/>
+	<stance state_key="running" accuracy="0.75"/>
+	<stance state_key="walking" accuracy="0.75"/>
 	<stance state_key="crouch_moving" accuracy="0.75"/>
-	<stance state_key="prone_moving" accuracy="0.6"/>
-	<stance state_key="standing" accuracy="0.8"/>
-	<stance state_key="crouching" accuracy="0.85"/>
-	<stance state_key="prone" accuracy="0.94"/>
+	<stance state_key="standing" accuracy="0.85"/>
+	<stance state_key="crouching" accuracy="0.9"/>
+	<stance state_key="prone" accuracy="0.95"/>
+	<stance state_key="prone_moving" accuracy="1"/>
+	<stance state_key="over_wall" accuracy="1"/>
 	<modifier class="speed" value="0.45"/>
 	<modifier class="hit_success_probability" value="-0.4"/>
 	<target_factors tag="shotgun" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.1"/>
@@ -39799,20 +39800,11 @@
 	<target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
 	<target_factors tag="bazooka" distance="1.0" direction="0.0" squad_command="1.0" base_score="12.0"/>
 	<target_factors tag="punchme" distance="1.0" direction="0.0" squad_command="1.0" base_score="30.0"/>
-	<commonness value="0.000001" in_stock="1" can_respawn_with="1"/>
 	<inventory encumbrance="0.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
 	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
 	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
-	<stance state_key="running" accuracy="0.3"/>
-	<stance state_key="walking" accuracy="0.675"/>
-	<stance state_key="crouch_moving" accuracy="0.75"/>
-	<stance state_key="standing" accuracy="0.85"/>
-	<stance state_key="crouching" accuracy="0.9"/>
-	<stance state_key="prone" accuracy="0.95"/>
-	<stance state_key="prone_moving" accuracy="0.3"/>
-	<stance state_key="over_wall" accuracy="1"/>
 </weapon>
 
 <weapon key="sfw_aegis.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
@@ -40484,7 +40476,7 @@
 
 <weapon key="sfw_prowler_swap.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="smg"/>
-	<specification retrigger_time="0.1" accuracy_factor="1.0" sustained_fire_grow_step="0.3" sustained_fire_diminish_rate="3.0" magazine_size="100" can_shoot_standing="1" suppressed="0" carry_in_two_hands="0" name="SF-Prowler" class="0" spread_range="0.05" reload_one_at_a_time="0" sight_range_modifier="1.25" projectile_speed="100.0" projectiles_per_shot="1" barrel_offset="0.0" stab_enabled="0" use_basic_muzzle_smoke_effect="0" slot="0"/>
+	<specification retrigger_time="0.1" accuracy_factor="1.0" sustained_fire_grow_step="0.3" sustained_fire_diminish_rate="3.0" magazine_size="100" can_shoot_standing="1" suppressed="0" carry_in_two_hands="0" name="SF-Prowler SWAP" class="0" spread_range="0.05" reload_one_at_a_time="0" sight_range_modifier="1.25" projectile_speed="100.0" projectiles_per_shot="1" barrel_offset="0.0" stab_enabled="0" use_basic_muzzle_smoke_effect="0" slot="0"/>
 	<animation state_key="recoil" animation_key="still,jaguar"/>
 	<animation state_key="reload" animation_key="still,jaguar"/>
 	<animation state_key="hold" animation_key="still,jaguar"/>
@@ -41349,7 +41341,7 @@
 <weapon key="kcco_gatling.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="machine gun"/>
 	<tag name="elite"/>
-	<specification accuracy_factor="1.0" barrel_offset="0.6" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" class="0" slot="0" magazine_size="200" name="Code:Cyclops-MG" carry_in_two_hands="0" projectile_speed="130" spread_range="0.2" retrigger_time="0.03" suppressed="0" sustained_fire_diminish_rate="1.0" sustained_fire_grow_step="2.0"/>
+	<specification accuracy_factor="1.0" barrel_offset_3d="0 0.2 0.6" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" class="0" slot="0" magazine_size="200" name="Code:Cyclops-MG" carry_in_two_hands="0" projectile_speed="130" spread_range="0.2" retrigger_time="0.06" suppressed="0" sustained_fire_diminish_rate="1.0" sight_range_modifier="1.45" sustained_fire_grow_step="2.0"/>
 	<animation state_key="recoil" animation_key="recoil, hip gatling"/>
 	<animation key="recoil" stance_key="crouching" animation_key="recoil, crouch gatling"/>
 	<animation state_key="hold_casual" animation_key="casual, blowgun"/>
@@ -41370,9 +41362,10 @@
 	<hud_icon filename="testing.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="bullet_kcco.projectile">
-	<result class="hit" kill_probability="1.8" kill_decay_start_time="1.0" kill_decay_end_time="1.5"/>
+	<result class="hit" kill_probability="1.8" kill_decay_start_time="0.08" kill_decay_end_time="1.2"/>
 	</projectile>
-	<modifier class="speed" value="-0.4"/>
+	<modifier class="speed" value="-0.1"/>
+	<modifier class="hit_success_probability" value="-0.2"/>
 	<commonness value="0.000001" in_stock="1" can_respawn_with="1"/>
 	<inventory encumbrance="0.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -43228,7 +43221,7 @@
 </weapon>
 
 <weapon key="chara_mg.weapon">
-	<specification slot="2" retrigger_time="0.04" accuracy_factor="0.9" sustained_fire_grow_step="0.3" sustained_fire_diminish_rate="2.0" sight_range_modifier="1.75" ai_sight_range_modifier="1.00" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="0" suppressed="0" name="Chiara MG" class="0" projectile_speed="180.0"/>
+	<specification slot="2" retrigger_time="0.08" accuracy_factor="0.9" sustained_fire_grow_step="0.3" sustained_fire_diminish_rate="2.0" sight_range_modifier="1.75" ai_sight_range_modifier="1.00" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="0" suppressed="0" name="Chiara MG" class="0" projectile_speed="180.0"/>
 	<sound key="fire" fileref="minigun_From_payday2.wav" pitch_variety="0.05" volume="0.15"/>
 	<sound key="magazine_out" fileref="mg_clip_out.wav"/>
 	<sound key="magazine_in" fileref="mg_clip_in.wav"/>
@@ -43368,7 +43361,7 @@
 
 <weapon key="pierre_mg.weapon">
 	<specification slot="2" retrigger_time="0.33" accuracy_factor="1.0" sustained_fire_grow_step="0.1" sustained_fire_diminish_rate="2.1" sight_range_modifier="2.15" ai_sight_range_modifier="1.05" barrel_offset_3d="10 0 0.62" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="0" suppressed="0" name="Pierre II MG" class="0" projectile_speed="280.0"/>
-	<ballistics near_far_distance="30.0" speed_estimation_near="240.0" speed_estimation_far="240.0" max_speed="360.0" randomness="0.0" curve_height="1.5" tweak_factor="4.8"/>
+	<ballistics near_far_distance="30.0" speed_estimation_near="360.0" speed_estimation_far="360.0" max_speed="450.0" randomness="0.0" curve_height="1.5" tweak_factor="4.8"/>
 	<animation key="recoil" animation_key="recoil1"/>
 	<animation key="recoil" animation_key="recoil2"/>
 	<animation key="recoil" animation_key="recoil3"/>
@@ -43390,7 +43383,7 @@
 	<weak_hand_hold offset="0.4"/>
 	<projectile file="bullet.projectile" radius="1.0">
 	<model filename="agl.xml"/>
-	<result class="blast" radius="4" damage="2.5" push="0.1" decal="1" faction_compare="not_equal" damage_origin_vehicle="0"/>
+	<result class="blast" radius="3.2" damage="2.5" push="0.1" decal="1" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	<effect class="result" key="terrain" ref="SmokeBurst" post_processing="1"/>
 	<effect class="result" key="terrain" ref="Shine" lighting="0"/>
 	<effect class="result" key="terrain" ref="HitTankSparks" lighting="0"/>
@@ -43412,7 +43405,7 @@
 </weapon>
 
 <weapon key="pierre_mg_2.weapon">
-	<specification slot="2" burst_shots="2" retrigger_time="0.33" accuracy_factor="1.0" sustained_fire_grow_step="0.1" sustained_fire_diminish_rate="2.1" sight_range_modifier="2.15" ai_sight_range_modifier="1.05" barrel_offset_3d="10 0 0.62" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="0" suppressed="0" name="Pierre II MG" class="0" projectile_speed="240.0"/>
+	<specification slot="2" burst_shots="2" retrigger_time="0.33" accuracy_factor="1.0" sustained_fire_grow_step="0.1" sustained_fire_diminish_rate="2.1" sight_range_modifier="2.15" ai_sight_range_modifier="1.05" barrel_offset_3d="10 0 0.62" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="0" suppressed="0" name="Pierre II MG" class="0" projectile_speed="360.0"/>
 	<animation key="recoil" animation_key="recoil1"/>
 	<animation key="recoil" animation_key="recoil2"/>
 	<animation key="recoil" animation_key="recoil3"/>
@@ -43430,13 +43423,13 @@
 	<commonness value="0.0"/>
 	<weak_hand_hold offset="0.4"/>
 	<projectile file="bullet.projectile" radius="2.0">
-	<result class="hit" kill_probability="3.0" kill_decay_start_time="2.121" kill_decay_end_time="4.422"/>
+	<result class="hit" kill_probability="4.0" kill_decay_start_time="2.121" kill_decay_end_time="4.422"/>
 	<trail probability="0.0"/>
 	</projectile>
 </weapon>
 
 <weapon key="pierre_rocket3.weapon">
-	<specification slot="1" retrigger_time="4.8" accuracy_factor="0.9" sustained_fire_grow_step="-2.0" sustained_fire_diminish_rate="0.9" sight_range_modifier="2.1" ai_sight_range_modifier="1.05" barrel_offset_3d="10 0 0.8" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="0" suppressed="0" name="Pierre II ROCKET" class="0" projectile_speed="90.0"/>
+	<specification slot="1" retrigger_time="4.4" accuracy_factor="0.9" sustained_fire_grow_step="-2.0" sustained_fire_diminish_rate="0.9" sight_range_modifier="1.0" ai_sight_range_modifier="1.15" barrel_offset_3d="10 0 0.8" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="0" suppressed="0" name="Pierre II ROCKET" class="0" projectile_speed="82.0"/>
 	<animation key="recoil" animation_key="recoil1"/>
 	<animation key="recoil" animation_key="recoil2"/>
 	<animation key="recoil" animation_key="recoil3"/>
@@ -43454,10 +43447,10 @@
 	<commonness value="0.0"/>
 	<weak_hand_hold offset="0.4"/>
 	<projectile file="pierre_rocket.projectile">
-	<result class="blast" radius="5.4" damage="5" push="0.2" decal="1" faction_compare="not_equal" damage_origin_vehicle="0"/>
+	<result class="blast" radius="3.6" damage="4.5" push="0.2" decal="1" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	<trigger class="impact"/>
 	</projectile>
-	<!-- <ballistics near_far_distance="1000.0" speed_estimation_near="90.0" speed_estimation_far="90.0" max_speed="150.0" randomness="0.0"/> -->
+	<ballistics near_far_distance="1000.0" speed_estimation_near="50.0" speed_estimation_far="50.0" max_speed="125.0" randomness="0.0"/>
 </weapon>
 
 <weapon key="amos_none.weapon">
@@ -43524,7 +43517,7 @@
 	<projectile file="pierre_rocket.projectile">
 	<result class="blast" radius="5.6" damage="9.0" push="0.2" decal="1" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	</projectile>
-	<ballistics near_far_distance="1000.0" speed_estimation_near="80.0" speed_estimation_far="80.0" max_speed="150.0" randomness="0.0"/>
+	<ballistics near_far_distance="1000.0" speed_estimation_near="50.0" speed_estimation_far="50.0" max_speed="125.0" randomness="0.0"/>
 </weapon>
 
 <weapon key="amos_emp.weapon">
@@ -44389,7 +44382,7 @@
 	<model mesh_filename="tow_cannon.mesh" texture_filename="tow.png"/>
 	<hud_icon filename="hud_tow.png"/>
 	<commonness value="0.0"/>
-	<projectile file="bunker_rocket.projectile" pulldown_in_air="8" >
+	<projectile file="bunker_rocket.projectile" pulldown_in_air="8">
 	<result class="blast" radius="3.0" damage="20.0" push="0.5" decal="1" faction_compare="not_equal"/>
 	</projectile>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
@@ -44397,13 +44390,13 @@
 	<target_factors tag="light_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="6.0"/>
 	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="5.0"/>
 	<target_factors tag="shield" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
+	<ballistics near_far_distance="1000.0" speed_estimation_near="50.0" speed_estimation_far="50.0" max_speed="125.0" randomness="0.0"/>
 	<target_factors tag="bazooka" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
 	<effect class="muzzle" ref="BiggerMuzzle"/>
 	<effect class="muzzle" ref="CannonSmokeBig"/>
 	<effect class="muzzle" ref="CannonSmokeBigSphere"/>
 	<sound class="operation" key="fire" fileref="tow_shot.wav"/>
 	<shield offset="0.3 -0.55 0" extent="0.2 0.8 0.3"/>
-    <ballistics near_far_distance="1000.0" speed_estimation_near="50.0" speed_estimation_far="50.0" max_speed="125.0" randomness="0.0"/>
 </weapon>
 
 </weapons>

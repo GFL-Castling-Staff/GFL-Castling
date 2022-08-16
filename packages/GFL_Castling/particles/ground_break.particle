@@ -1,9 +1,9 @@
 particle_system ground_break
 {
-	quota	50
+	quota	100
 	material	ground_break_1
-	particle_width	1.5
-	particle_height	1.5
+	particle_width	2.4
+	particle_height	2.4
 	cull_each	false
 	renderer billboard
 	billboard_rotation_type vertex
@@ -17,7 +17,7 @@ particle_system ground_break
         position 0 0.2 0
         direction 0 1 0
         velocity 0.01
-        time_to_live 6.0
+        time_to_live 8
         duration 0.05
         emission_rate 21
     }    
@@ -25,6 +25,19 @@ particle_system ground_break
     affector ColourImage{
         image color_blank.png
     }
+	
+	affector ColourFader2{
+		red1 0
+		green1 0
+		blue1 0
+		alpha1 0
+		red2 0 
+		green2 0
+		blue2 0
+		alpha2 -0.33
+		state_change 3.0
+	}
+
 
 	affector Rotator
     {
