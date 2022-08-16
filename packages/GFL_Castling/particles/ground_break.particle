@@ -2,8 +2,8 @@ particle_system ground_break
 {
 	quota	50
 	material	ground_break_1
-	particle_width	1.2
-	particle_height	1.2
+	particle_width	1.5
+	particle_height	1.5
 	cull_each	false
 	renderer billboard
 	billboard_rotation_type vertex
@@ -41,11 +41,12 @@ material ground_break_1
 	{
 		pass
 		{
-			lighting off
-			fog_override true
-			scene_blend add
+			lighting on
+			ambient vertexcolour
+			diffuse vertexcolour
+			scene_blend alpha_blend
 			depth_write off
-			depth_check off
+			diffuse vertexcolour
 
 			texture_unit
 			{
