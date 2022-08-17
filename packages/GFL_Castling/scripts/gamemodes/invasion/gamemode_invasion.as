@@ -307,7 +307,8 @@ class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 		setupDisableRadioAtMatchOver();
 		addTracker(AutoSaver(this));
 		addTracker(BasicCommandHandler(this));
-		
+		addTracker(IdlerKicker(this));
+
 		setupExperimentalFeatures();
 		setupIcecreamReport();
 		
