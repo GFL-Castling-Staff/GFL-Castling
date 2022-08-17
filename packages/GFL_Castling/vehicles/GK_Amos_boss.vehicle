@@ -28,8 +28,8 @@
     <tag name="heavy_combat" />
     <tire_set offset="2.6 0.05 7.00" radius="0.3" />
     <tire_set offset="2.6 0.05 -7.00" radius="0.3" />
-    <modifier class="blast_damage" value="-0.8" />
-    <modifier class="blast_range" value="-2.0" />
+    <modifier class="blast_damage" value="-3.0" />
+    <modifier class="blast_range" value="-1.0" />
     <control 
 		max_speed="6.0"
 		acceleration="2.5"
@@ -48,6 +48,7 @@
 		gravity="-90"
 		broken_mass="2000"
 		remove_collision_threshold="0.2"
+    	blast_damage_threshold="3.0"
 		extent="7.2 0.0 15.3"
 		offset="0 0.0 0"
 		top_offset="0 5.4 0"

@@ -41,7 +41,7 @@
     <model filename="gkw_hvy_at4.xml" />
     <ballistics near_far_distance="1000.0" speed_estimation_near="120.0" speed_estimation_far="120.0" max_speed="125.0" randomness="0.0" />
     <projectile file="at4.projectile">
-        <result class="blast" damage="30" radius="3.0" decal="1" push="0.75" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+        <result class="blast" damage="40" radius="2.0" decal="1" push="0.75" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
     </projectile>
     <weak_hand_hold offset="0.3" />
     <hud_icon filename="gkw_at4.png" />

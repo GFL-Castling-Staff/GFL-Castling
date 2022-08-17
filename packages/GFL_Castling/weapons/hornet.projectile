@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<projectile class="grenade" name="HEAT" slot="2" pulldown_in_air="0.5" key="mk153_HEAT.projectile" >
+<projectile class="grenade" name="rocket" slot="1" pulldown_in_air="17.0" key="hornet.projectile">
     <tag name="rocket"/>
-    <result class="blast" damage="25.0" radius="5.5" decal="1" push="1.0" character_state="death"  faction_compare="not_equal" damage_origin_vehicle="0"/>
+    <result class="blast" 
+    radius="6.0" 
+    damage="3.9" 
+    push="1.3" 
+    decal="1"
+    damage_origin_vehicle="0"
+    />
     <trigger class="impact" />
     <rotation class="motion" />
-    <model mesh_filename="mk153HEAT.xml" />
+    <model mesh_filename="hornet_missile.xml" />
     <commonness value="0.0" />
-    <sound class="result" key="other" fileref="explosion_RPG_FromSQUAD_1.wav" volume="1.5" />
-    <sound class="result" key="other" fileref="explosion_RPG_FromSQUAD_2.wav" volume="1.5" />
+    <sound class="result" key="other" fileref="explosion1.wav" />
+    <sound class="result" key="other" fileref="explosion2.wav" />
     <sound class="result" key="vehicle" copy="other" />
     <sound class="result" key="vehicle" tag="metal_heavy" fileref="blast_metal_hit_01.wav" pitch_variety="0.2" volume="0.8" />
     <sound class="result" key="vehicle" tag="metal_heavy" fileref="blast_metal_hit_02.wav" pitch_variety="0.2" volume="0.8" />
