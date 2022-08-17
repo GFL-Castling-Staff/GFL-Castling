@@ -16,9 +16,9 @@
         class="2" 
         reload_one_at_a_time="0" 
         sight_range_modifier="4"  
-        projectile_speed="230" 
+        projectile_speed="255.75" 
         barrel_offset="0.6" 
-        projectiles_per_shot="8" />
+        projectiles_per_shot="3" />
         <inventory buy_price="150.0" sell_price="150.0" />
         <commonness value="0.01" in_stock="0" can_respawn_with="1" />
         <!--Animations-->
@@ -73,7 +73,7 @@
         <!--Ballistics-->
         <weak_hand_hold offset="0.3" />
         <projectile file="ntw.projectile" >
-            <result class="blast" damage="6.0" radius="4" decal="1" push="1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0" />
+            <result class="blast" damage="18.0" radius="4.5" decal="1" push="1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0" />
         </projectile>
         <!--Accuracy, Movement speed-->
         <stance state_key="walking" accuracy="1.0" />
@@ -103,9 +103,9 @@
         last_burst_retrigger_time="1.8"
         reload_one_at_a_time="0" 
         sight_range_modifier="4" 
-        projectile_speed="250" 
+        projectile_speed="255.75" 
         barrel_offset="0.6" 
-        projectiles_per_shot="10" />
+        projectiles_per_shot="6" />
         <inventory buy_price="150.0" sell_price="150.0" />
         <!--Animations-->
         <next_in_chain key="gkw_ntw20mod3.weapon" share_ammo="0"/>
@@ -142,7 +142,7 @@
         <!--Ballistics-->
         <weak_hand_hold offset="0.3" />
         <projectile file="ntw.projectile" >
-            <result class="blast" damage="5" radius="5" decal="1" push="1.0" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0" />
+            <result class="blast" damage="22" radius="5" decal="1" push="1.0" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0" />
         </projectile>
         <!--Accuracy, Movement speed-->
         <stance state_key="running" accuracy="1.0" />
