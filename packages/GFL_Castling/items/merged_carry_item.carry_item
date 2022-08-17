@@ -20956,7 +20956,7 @@
 	<hud_icon filename="hud_suitcase.png"/>
 	<inventory encumbrance="0.0" price="200.0"/>
 	<model mesh_filename="suitcase.mesh" texture_filename="suitcase.png"/>
-	<commonness value="6.0" in_stock="0"/>
+	<commonness value="0.0" in_stock="0" can_respawn_with="0"/>
 	<capacity value="100" source="rank" source_value="0.0"/>
 	<inventory encumbrance="-0.5"/>
 </carry_item>
@@ -21092,7 +21092,7 @@
 	<hud_icon filename="Item_wild_gifts.png"/>
 	<inventory encumbrance="-1.0" buy_price="150" sell_price="150"/>
 	<model mesh_filename="wild gifts.xml" texture_filename=""/>
-	<commonness value="1.0" in_stock="0"/>
+	<commonness value="0.0" in_stock="0" can_respawn_with="0"/>
 	<capacity value="100" source="rank" source_value="0.0"/>
 	<inventory encumbrance="-0.5"/>
 </carry_item>
@@ -21101,7 +21101,7 @@
 	<hud_icon filename="Item_snow_gifts.png"/>
 	<inventory encumbrance="-1.0" buy_price="150" sell_price="150"/>
 	<model mesh_filename="snowfield gifts.xml" texture_filename=""/>
-	<commonness value="1.0" in_stock="0"/>
+	<commonness value="0.0" in_stock="0" can_respawn_with="0"/>
 	<capacity value="100" source="rank" source_value="0.0"/>
 	<inventory encumbrance="-0.5"/>
 </carry_item>

@@ -384,7 +384,7 @@
 			<!-- wearables -->
 			<item_class_existence class="carry_item" slot="1" probability="1" />
 			<!-- backpack -->
-			<item_class_existence class="carry_item" slot="0" probability="0.005" />
+			<item_class_existence class="carry_item" slot="0" probability="0" />
 		</item_class_existence_config>
 		<attribute_config class="rp">
 			<attribute weight="0.3" min="80.0" max="300.0" />
@@ -411,7 +411,7 @@
 			<!-- wearables -->
 			<item_class_existence class="carry_item" slot="1" probability="1.0" />
 			<!-- backpack -->
-			<item_class_existence class="carry_item" slot="0" probability="0.005" />
+			<item_class_existence class="carry_item" slot="0" probability="0.001" />
 		</item_class_existence_config>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="0.0" max="0.05" />
@@ -435,7 +435,7 @@
 			<!-- wearables -->
 			<item_class_existence class="carry_item" slot="1" probability="1.0" />
 			<!-- backpack -->
-			<item_class_existence class="carry_item" slot="0" probability="0.005" />
+			<item_class_existence class="carry_item" slot="0" probability="0.001" />
 			<item_class_existence class="grenade" slot="0" probability="1.0" />
 			
 		</item_class_existence_config>
@@ -532,7 +532,7 @@
 			<!-- wearables -->
 			<item_class_existence class="carry_item" slot="1" probability="1" />
 			<!-- note, always backpack items -->
-			<item_class_existence class="carry_item" slot="0" probability="0.005" />
+			<item_class_existence class="carry_item" slot="0" probability="0.001" />
 		</item_class_existence_config>
 	</soldier>	
 	<!-- 欧特鲁斯 -->
@@ -624,7 +624,7 @@
 			<!-- wearables -->
 			<item_class_existence class="carry_item" slot="1" probability="1" />
 			<!-- note, always backpack items -->
-			<item_class_existence class="carry_item" slot="0" probability="0.005" />
+			<item_class_existence class="carry_item" slot="0" probability="0.001" />
 		</item_class_existence_config>
 		<attribute_config class="xp">
 			<attribute weight="0.3" min="1.0" max="10.0" />
@@ -646,7 +646,7 @@
 		<item_class_existence_config>
 			<item_class_existence class="carry_item" slot="1" probability="1" />
 			<!-- note, always backpack items -->
-			<item_class_existence class="carry_item" slot="0" probability="0.005" />
+			<item_class_existence class="carry_item" slot="0" probability="0.001" />
 		</item_class_existence_config>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="10.5" max="20.8" />
@@ -663,7 +663,7 @@
 		<item_class_existence_config>
 			<item_class_existence class="carry_item" slot="1" probability="1" />
 			<!-- note, always backpack items -->
-			<item_class_existence class="carry_item" slot="0" probability="0.005" />
+			<item_class_existence class="carry_item" slot="0" probability="0.001" />
 		</item_class_existence_config>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="0.01" max="0.01" />

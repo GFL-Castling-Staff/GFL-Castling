@@ -179,7 +179,7 @@
             <collider class="character" enabled="1" faction_compare="equal"/>
         </trigger>
         <result class="notify_script" key="share_reward_10" />
-        <model mesh_filename="lighter.mesh" texture_filename="lighter.png"/>
+		<model mesh_filename="gold_bar.mesh" texture_filename="gold_bar.png"/>
         <hud_icon filename="testing.png" />
         <commonness value="1" in_stock="1" can_respawn_with="1" />
         <inventory encumbrance="4.0" price="5.0" />

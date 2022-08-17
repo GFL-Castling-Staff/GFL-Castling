@@ -179,7 +179,7 @@ class kill_event : Tracker {
 
             if(reward_pool_key != "" && factionId==0){
                 if(reward_pool_key=="common"){
-                    if(rand(0.0f,1.0f) <= 0.3f){
+                    if(rand(0.0f,1.0f) <= 0.15f){
 						ScoredResource@ r = getRandomScoredResource(reward_pool_common);
                         string c = 
                             "<command class='create_instance'" +
@@ -192,7 +192,7 @@ class kill_event : Tracker {
                     }
                 }
                 else if(reward_pool_key=="uncommon"){
-                    if(rand(0.0f,1.0f) <= 0.35f){
+                    if(rand(0.0f,1.0f) <= 0.15f){
 						ScoredResource@ r = getRandomScoredResource(reward_pool_uncommon);
                         string c = 
                             "<command class='create_instance'" +
@@ -205,7 +205,7 @@ class kill_event : Tracker {
                     }
                 }
                 else if(reward_pool_key=="rare"){
-                    if(rand(0.0f,1.0f) <= 0.4f){
+                    if(rand(0.0f,1.0f) <= 0.2f){
 						ScoredResource@ r = getRandomScoredResource(reward_pool_rare);
                         string c = 
                             "<command class='create_instance'" +
