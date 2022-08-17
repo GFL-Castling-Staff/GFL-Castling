@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<vehicle name="Radar Tower" key="radar_tower.vehicle" map_view_atlas_index="9" jams_enemy_radio="1" existence="one_per_faction" reserves_spawn_point="1" protectors="10"  soldier_capacity_offset="10" respawn_time="180.0" usable_for_cover="0">
+<vehicle name="Radar Tower" key="radar_tower.vehicle" map_view_atlas_index="9" jams_enemy_radio="1" owner="faction" 
+existence="one_per_faction" reserves_spawn_point="1" protectors="10"  soldier_capacity_offset="10" respawn_time="180.0" usable_for_cover="0">
 	<tag name="target" />
 	<tire_set offset="1.0 0.0 1.0" radius="0.65" />
 	<tire_set offset="1.0 0.0 -1.0" radius="0.65" />

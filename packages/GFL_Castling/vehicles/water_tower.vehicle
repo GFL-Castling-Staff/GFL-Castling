@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<vehicle name="Water Tower" key="water_tower.vehicle" map_view_atlas_index="-1" reserves_spawn_point="1" protectors="3" soldier_capacity_offset="10" respawn_time="3600.0" usable_for_cover="0" >    
+<vehicle name="Water Tower" key="water_tower.vehicle" map_view_atlas_index="-1"  owner="faction" reserves_spawn_point="1" protectors="3" soldier_capacity_offset="10" respawn_time="3600.0" usable_for_cover="0" >    
 	<tag name="target" />
 	<tire_set offset="1.0 0.0 1.0" radius="0.65" />
 	<tire_set offset="1.0 0.0 -1.0" radius="0.65" />
