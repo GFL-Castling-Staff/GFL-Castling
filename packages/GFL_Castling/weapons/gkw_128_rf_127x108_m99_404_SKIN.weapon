@@ -19,7 +19,7 @@
 	class="4" 
 	slot="0"
 	reload_one_at_a_time="0" 
-	sight_range_modifier="3" 
+	sight_range_modifier="3.5" 
 	projectile_speed="224.21" 
 	barrel_offset="0.4" 
 	projectiles_per_shot="4"
@@ -64,7 +64,7 @@
 
     <weak_hand_hold offset="0.3" />
     <projectile file="ntw.projectile">
-        <result class="blast" damage="5.0" radius="3.5" decal="1" push="0" character_state="death" 	faction_compare="not_equal"/>
+        <result class="blast" damage="10.0" radius="3.5" decal="1" push="0" character_state="death" 	faction_compare="not_equal"/>
     </projectile>
     
     <!--Accuracy, Movement speed-->
