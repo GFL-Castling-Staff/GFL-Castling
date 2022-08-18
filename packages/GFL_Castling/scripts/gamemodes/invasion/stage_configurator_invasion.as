@@ -375,14 +375,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 			f.m_capacityMultiplier = 1.3;
 			stage.m_factions.insertLast(f);                                    
 		}
-		{
-			XmlElement command("command");
-			command.setStringAttribute("class", "faction_resources");
-			command.setIntAttribute("faction_id", 2);
-			addFactionResourceElements(command, "vehicle", array<string> = {"aa_emplacement.vehicle"}, true);
 
-			stage.m_extraCommands.insertLast(command);
-		}
 		// metadata
 		stage.m_primaryObjective = "koth";
 		stage.m_kothTargetBase = "All SF Base";
@@ -884,14 +877,6 @@ class StageConfiguratorInvasion : StageConfigurator {
 		// aa emplacements work right only if one enemy faction has them
 		// - all factions have it disabled by default
 		// - manually enable it for faction #1 in map1 
-		{
-			XmlElement command("command");
-			command.setStringAttribute("class", "faction_resources");
-			command.setIntAttribute("faction_id", 1);
-			addFactionResourceElements(command, "vehicle", array<string> = {"aa_emplacement.vehicle"}, true);
-
-			stage.m_extraCommands.insertLast(command);
-		}
 
 		// metadata
 		stage.m_primaryObjective = "capture";
@@ -1021,15 +1006,6 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.m_primaryObjective = "capture";
 		stage.m_radioObjectivePresent = false;
 
-		{
-			XmlElement command("command");
-			command.setStringAttribute("class", "faction_resources");
-			command.setIntAttribute("faction_id", 1);
-			addFactionResourceElements(command, "vehicle", array<string> = {"aa_emplacement.vehicle"}, true);
-
-			stage.m_extraCommands.insertLast(command); 
-		}
-
 		setDefaultAttackBreakTimes(stage);
 		return stage;
 	} 
@@ -1129,22 +1105,6 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.m_primaryObjective = "capture";
 		stage.m_radioObjectivePresent = true;
 
-		{
-			XmlElement command("command");
-			command.setStringAttribute("class", "faction_resources");
-			command.setIntAttribute("faction_id", 1);
-			addFactionResourceElements(command, "vehicle", array<string> = {"aa_emplacement.vehicle"}, true);
-
-			stage.m_extraCommands.insertLast(command);
-		}
-		{
-			XmlElement command("command");
-			command.setStringAttribute("class", "faction_resources");
-			command.setIntAttribute("faction_id", 0);
-			addFactionResourceElements(command, "vehicle", array<string> = {"sev90.vehicle"}, false);
-
-			stage.m_extraCommands.insertLast(command);
-		}         
 
 		setDefaultAttackBreakTimes(stage);
 		return stage;
@@ -1188,14 +1148,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.m_primaryObjective = "capture";
 		stage.m_radioObjectivePresent = false;
 
-		{
-			XmlElement command("command");
-			command.setStringAttribute("class", "faction_resources");
-			command.setIntAttribute("faction_id", 1);
-			addFactionResourceElements(command, "vehicle", array<string> = {"aa_emplacement.vehicle"}, true);
 
-			stage.m_extraCommands.insertLast(command);
-		}
 
 		setDefaultAttackBreakTimes(stage);
 		return stage;
@@ -1249,14 +1202,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 			stage.m_factions.insertLast(f);
 		}
 
-		{
-			XmlElement command("command");
-			command.setStringAttribute("class", "faction_resources");
-			command.setIntAttribute("faction_id", 1);
-			addFactionResourceElements(command, "vehicle", array<string> = {"aa_emplacement.vehicle"}, true);
 
-			stage.m_extraCommands.insertLast(command);
-		}
 
 		// metadata
 		stage.m_primaryObjective = "capture";
@@ -1312,14 +1258,6 @@ class StageConfiguratorInvasion : StageConfigurator {
 		{
 			XmlElement command("command");
 			command.setStringAttribute("class", "faction_resources");
-			command.setIntAttribute("faction_id", 1);
-			addFactionResourceElements(command, "vehicle", array<string> = {"aa_emplacement.vehicle"}, true);
-
-			stage.m_extraCommands.insertLast(command);
-		}
-		{
-			XmlElement command("command");
-			command.setStringAttribute("class", "faction_resources");
 			command.setIntAttribute("faction_id", 0);
 			addFactionResourceElements(command, "vehicle", array<string> = {"radio_jammer.vehicle", "radio_jammer2.vehicle", "radar_tower.vehicle"}, false);
 
@@ -1372,14 +1310,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 			f.m_capacityMultiplier = 1.0; 
 			stage.m_factions.insertLast(f);
 		}
-		{
-			XmlElement command("command");
-			command.setStringAttribute("class", "faction_resources");
-			command.setIntAttribute("faction_id", 1);
-			addFactionResourceElements(command, "vehicle", array<string> = {"aa_emplacement.vehicle"}, true);
 
-			stage.m_extraCommands.insertLast(command);
-		}
 		{
 			XmlElement command("command");
 			command.setStringAttribute("class", "faction_resources");
@@ -1446,14 +1377,6 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.m_primaryObjective = "capture";
 		stage.m_radioObjectivePresent = false;
 
-		{
-			XmlElement command("command");
-			command.setStringAttribute("class", "faction_resources");
-			command.setIntAttribute("faction_id", 1);
-			addFactionResourceElements(command, "vehicle", array<string> = {"aa_emplacement.vehicle"}, true);
-
-			stage.m_extraCommands.insertLast(command);
-		}
 		{
 			XmlElement command("command");
 			command.setStringAttribute("class", "faction_resources");
@@ -1536,14 +1459,6 @@ class StageConfiguratorInvasion : StageConfigurator {
 		{
 			XmlElement command("command");
 			command.setStringAttribute("class", "faction_resources");
-			command.setIntAttribute("faction_id", 1);
-			addFactionResourceElements(command, "vehicle", array<string> = {"aa_emplacement.vehicle"}, true);
-
-			stage.m_extraCommands.insertLast(command);
-		}
-		{
-			XmlElement command("command");
-			command.setStringAttribute("class", "faction_resources");
 			command.setIntAttribute("faction_id", 0);
 			addFactionResourceElements(command, "vehicle", array<string> = {"vulcan_tank.vehicle", "radar_tank2.vehicle", "radio_jammer2.vehicle", "apc.vehicle", "apc_1.vehicle", "apc_2.vehicle", "guntruck.vehicle"}, false);
 
@@ -1592,14 +1507,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.m_primaryObjective = "capture";
 		stage.m_radioObjectivePresent = false;
 
-		{
-			XmlElement command("command");
-			command.setStringAttribute("class", "faction_resources");
-			command.setIntAttribute("faction_id", 1);
-			addFactionResourceElements(command, "vehicle", array<string> = {"aa_emplacement.vehicle"}, true);
 
-			stage.m_extraCommands.insertLast(command);
-		}
 		{
 			XmlElement command("command");
 			command.setStringAttribute("class", "faction_resources");
@@ -1643,14 +1551,7 @@ class StageConfiguratorInvasion : StageConfigurator {
             f.m_capacityOffset = 15;                                            // was 5
 			stage.m_factions.insertLast(f);                                    
 		}
-		{
-			XmlElement command("command");
-			command.setStringAttribute("class", "faction_resources");
-			command.setIntAttribute("faction_id", 1);
-			addFactionResourceElements(command, "vehicle", array<string> = {"aa_emplacement.vehicle"}, true);
 
-			stage.m_extraCommands.insertLast(command);
-		}
 		{
 			XmlElement command("command");
 			command.setStringAttribute("class", "faction_resources");
@@ -1740,7 +1641,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0, 0.4, 0.1));   // was 0.3 0.1  
 			f.m_overCapacity = 50;
 			f.m_capacityOffset = 50;      // was 5                                       
-			f.m_capacityMultiplier = 1.3;                                               
+			f.m_capacityMultiplier = 1.0;                                               
 			f.m_bases = 1;
 			stage.m_factions.insertLast(f);
 		}
@@ -1755,14 +1656,6 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.m_primaryObjective = "capture";
 		stage.m_radioObjectivePresent = false;
 
-		{
-			XmlElement command("command");
-			command.setStringAttribute("class", "faction_resources");
-			command.setIntAttribute("faction_id", 1);
-			addFactionResourceElements(command, "vehicle", array<string> = {"aa_emplacement.vehicle"}, true);
-
-			stage.m_extraCommands.insertLast(command);
-		}
 		{
 			XmlElement command("command");
 			command.setStringAttribute("class", "faction_resources");
@@ -1943,13 +1836,6 @@ class StageConfiguratorInvasion : StageConfigurator {
 			stage.m_extraCommands.insertLast(command);
 		}
 
-		{
-			XmlElement command("command");
-			command.setStringAttribute("class", "faction_resources");
-			command.setIntAttribute("faction_id", 1);
-			addFactionResourceElements(command, "vehicle", array<string> = {"aa_emplacement.vehicle"}, true);
-			stage.m_extraCommands.insertLast(command);
-		}
 		
 		stage.m_allowChangeCapacityOnTheFly = false;
 

@@ -27,6 +27,7 @@
 #include "local_ban_manager.as"
 #include "testing_tools_tracker.as"
 #include "call_marker_tracker.as"
+#include "idler_kicker.as"
 
 // community trackers
 #include "gps_laptop.as"

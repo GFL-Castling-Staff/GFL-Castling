@@ -28,7 +28,7 @@
       stab_range="6.0" />
         <next_in_chain key="gkw_88typemod3_6503_skill.weapon" share_ammo="0" />
         <commonness value="0" in_stock="0" can_respawn_with="1" />
-        <inventory encumbrance="20.0" buy_price="998.0" sell_price="998.0"/>
+        <inventory encumbrance="20.0" buy_price="1895.0" sell_price="1500.0"/>
         <capacity value="1" source="rank" source_value="0.0" />
         <animation key="reload" animation_key="reload, gunda" />
         <animation state_key="hold" animation_key="still, gunda" />
@@ -59,7 +59,7 @@
         <weak_hand_hold offset="0.3" />
         <projectile file="88type_laser.projectile">
             <trail probability="1.0" key="laser_hyz" />
-            <result class="blast" damage="6.5"  radius="4.5" decal="1" push="0" character_state="death" faction_compare="not_equal" />
+            <result class="blast" damage="6.5"  radius="4.5" decal="1" push="0.2" character_state="death" faction_compare="not_equal" />
         </projectile>
         <stance state_key="running" accuracy="1" />
         <stance state_key="walking" accuracy="1" />
@@ -97,7 +97,7 @@
         barrel_offset="-0.05"/>
         <next_in_chain key="gkw_88typemod3_6503.weapon" share_ammo="0" />
         <commonness value="0" in_stock="0" can_respawn_with="1" />
-        <inventory encumbrance="20.0" buy_price="998.0" sell_price="998.0"/>
+        <inventory encumbrance="20.0" buy_price="1895.0" sell_price="1500.0"/>
         <capacity value="1" source="rank" source_value="0.0" />
         <animation state_key="recoil"   animation_key="stab, gunda melee" />
         <animation state_key="stabbing" animation_key="stab, gunda melee" />
@@ -119,7 +119,7 @@
         <animation state_key="next_in_chain_in" animation_key="change weapon to melee, gunda" />
         <model filename="gkw_88type_gudan_melee.xml" />
         <projectile file="teal.projectile">
-            <result class="blast" radius="6" damage="5" decal="0" push="0.0" character_state="death" faction_compare="not_equal" make_vehicle_hit_sound="0" />
+            <result class="blast" radius="6" damage="5" decal="0" push="0.2" character_state="death" faction_compare="not_equal" make_vehicle_hit_sound="0" />
         </projectile>
         <stance state_key="running" accuracy="1" />
         <stance state_key="walking" accuracy="1" />

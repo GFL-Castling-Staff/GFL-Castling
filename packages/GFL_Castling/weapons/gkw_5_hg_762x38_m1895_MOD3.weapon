@@ -21,7 +21,7 @@
 	burst_shots="1" />
 
     <capacity value="1" source="rank" source_value="0.0" />
-    <inventory  buy_price="100.0" sell_price="100.0" />
+    <inventory  buy_price="100.0" sell_price="80.0" />
     <commonness value="0.00001" can_respawn_with="1" in_stock="0" />
 
     <next_in_chain key="gkw_m1895mod3_skill.weapon" share_ammo="1" />
@@ -104,7 +104,7 @@
 	burst_shots="1" />
     <!-- 化身大名鼎鼎的布拉米特（WWII苏军特种、侦察部队与内务部使用的抑制器型纳甘左轮） -->
     <capacity value="1" source="rank" source_value="0.0" />
-    <inventory  buy_price="100.0" sell_price="100.0" />
+    <inventory  buy_price="100.0" sell_price="80.0" />
     <commonness value="0.00001" can_respawn_with="1" in_stock="0" />
 
     <next_in_chain key="gkw_m1895mod3.weapon" share_ammo="1" />
@@ -164,7 +164,7 @@
     <stance state_key="crouching" accuracy="1.0" />
     <stance state_key="prone" accuracy="1.0" />
     <stance state_key="over_wall" accuracy="1.0" />
-    <modifier class="speed" value="0.5"/>
+    <modifier class="speed" value="0.8"/>
     <modifier class="detectability" value="-0.25" />
     <target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0" />
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0" />
