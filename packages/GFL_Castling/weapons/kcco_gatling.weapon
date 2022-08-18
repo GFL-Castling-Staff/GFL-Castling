@@ -25,6 +25,7 @@
 	<projectile file="bullet_kcco.projectile">
 		<result class="hit" kill_probability="1.8" kill_decay_start_time="0.1" kill_decay_end_time="1.0"/>
 	</projectile>
+	<addon_model filename="kcco_ammopack.xml"/>
 	<modifier class="speed" value="-0.1"/>
 	<modifier class="hit_success_probability" value="-0.2" />
 	<commonness value="0.000001" in_stock="1" can_respawn_with="1"/>
