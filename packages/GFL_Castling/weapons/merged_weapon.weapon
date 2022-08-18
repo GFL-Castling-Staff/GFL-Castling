@@ -1906,7 +1906,6 @@
 	<stance state_key="crouching" accuracy="0.96"/>
 	<stance state_key="over_wall" accuracy="1"/>
 	<stance state_key="prone" accuracy="1"/>
-	<modifier class="speed" value="0.15"/>
 	<modifier class="hit_success_probability" value="-0.2"/>
 	<modifier class="speed" value="+0.2"/>
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
@@ -3310,7 +3309,7 @@
 </weapon>
 
 <weapon key="gkw_ntw20.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="2.0" accuracy_factor="1" sustained_fire_grow_step="0" sustained_fire_diminish_rate="0.5" magazine_size="3" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="NTW-20" class="2" reload_one_at_a_time="0" sight_range_modifier="4" projectile_speed="200" barrel_offset="0.6" projectiles_per_shot="8" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
+	<specification retrigger_time="2.0" accuracy_factor="1" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="1.5" magazine_size="3" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="NTW-20" class="2" reload_one_at_a_time="0" sight_range_modifier="4" projectile_speed="225" barrel_offset="0.6" projectiles_per_shot="3" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
 	<inventory buy_price="20.0" sell_price="20.0"/>
 	<animation key="cycle" animation_key="Brifle1.8"/>
 	<animation key="cycle" stance_key="prone" animation_key="Brifle1.8p"/>
@@ -3357,16 +3356,8 @@
 	<hud_icon filename="gkw_ntw20.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="ntw.projectile">
-	<result class="blast" damage="4.5" radius="4" decal="1" push="1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+	<result class="blast" damage="16" radius="4" decal="1" push="1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	</projectile>
-	<stance state_key="running" accuracy="1.0"/>
-	<stance state_key="walking" accuracy="1.0"/>
-	<stance state_key="crouch_moving" accuracy="1.0"/>
-	<stance state_key="prone_moving" accuracy="1.0"/>
-	<stance state_key="standing" accuracy="1.0"/>
-	<stance state_key="crouching" accuracy="1.0"/>
-	<stance state_key="prone" accuracy="1.0"/>
-	<stance state_key="over_wall" accuracy="1.0"/>
 	<tag name="rifle"/>
 	<tag name="antiarmor"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
@@ -6053,7 +6044,7 @@
 <weapon key="gkw_m99.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="rifle"/>
 	<tag name="antiarmor"/>
-	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="0" sustained_fire_diminish_rate="1.5" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="M99" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="3" projectile_speed="224.21" barrel_offset="0.4" projectiles_per_shot="4" last_burst_retrigger_time="0.5" burst_shots="1" stab_enabled="1" carry_in_two_hands="1"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="0" sustained_fire_diminish_rate="1.5" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="M99" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="3.5" projectile_speed="224.21" barrel_offset="0.4" projectiles_per_shot="4" last_burst_retrigger_time="0.5" burst_shots="1" stab_enabled="1" carry_in_two_hands="1"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="20.0" buy_price="80.0" sell_price="80.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -6076,7 +6067,7 @@
 	<hud_icon filename="gkw_m99.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="ntw.projectile">
-	<result class="blast" damage="5.0" radius="3.5" decal="1" push="0" character_state="death" faction_compare="not_equal"/>
+	<result class="blast" damage="10.0" radius="3.5" decal="1" push="0" character_state="death" faction_compare="not_equal"/>
 	</projectile>
 	<stance state_key="running" accuracy="1.0"/>
 	<stance state_key="walking" accuracy="1.0"/>
@@ -11506,7 +11497,7 @@
 </weapon>
 
 <weapon key="gkw_saiga12.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="0.9" sustained_fire_grow_step="1.5" sustained_fire_diminish_rate="0.75" magazine_size="10" can_shoot_standing="1" suppressed="0" name="Saiga-12" class="4" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="100" barrel_offset="0.4" projectiles_per_shot="8" burst_shots="1" last_burst_retrigger_time="0.2" spread_range="0.3" stab_enabled="1" carry_in_two_hands="1" slot="0" use_basic_muzzle_smoke_effect="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="0.9" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="0.75" magazine_size="10" can_shoot_standing="1" suppressed="0" name="Saiga-12" class="4" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="100" barrel_offset="0.4" projectiles_per_shot="8" burst_shots="1" last_burst_retrigger_time="0.2" spread_range="0.15" stab_enabled="1" carry_in_two_hands="1" slot="0" use_basic_muzzle_smoke_effect="0"/>
 	<inventory buy_price="60.0" sell_price="60.0"/>
 	<next_in_chain key="gkw_saiga12_skill.weapon" share_ammo="1"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
@@ -11521,6 +11512,7 @@
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="2.4" kill_decay_start_time="0.05" kill_decay_end_time="0.6"/>
 	</projectile>
+	<stance state_key="running" accuracy="0.6"/>
 	<stance state_key="walking" accuracy="0.75"/>
 	<stance state_key="crouch_moving" accuracy="0.75"/>
 	<stance state_key="prone_moving" accuracy="0.75"/>
@@ -11570,7 +11562,7 @@
 </weapon>
 
 <weapon key="gkw_saiga12_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="0.1" last_burst_retrigger_time="0.3" accuracy_factor="0.9" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="1.0" magazine_size="10" can_shoot_standing="1" suppressed="0" name="Saiga-12-[Big Antelopes Horn]" class="4" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="100" barrel_offset="0.4" projectiles_per_shot="8" burst_shots="3" spread_range="0.35" stab_enabled="1" carry_in_two_hands="1" slot="0" use_basic_muzzle_smoke_effect="0"/>
+	<specification retrigger_time="0.1" last_burst_retrigger_time="0.3" accuracy_factor="0.9" sustained_fire_grow_step="1.25" sustained_fire_diminish_rate="0.75" magazine_size="10" can_shoot_standing="1" suppressed="0" name="Saiga-12-[Big Antelopes Horn]" class="4" reload_one_at_a_time="0" sight_range_modifier="0.85" projectile_speed="100" barrel_offset="0.4" projectiles_per_shot="6" burst_shots="3" spread_range="0.35" stab_enabled="1" carry_in_two_hands="1" slot="0" use_basic_muzzle_smoke_effect="0"/>
 	<inventory buy_price="60.0" sell_price="60.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<next_in_chain key="gkw_saiga12.weapon" share_ammo="1"/>
@@ -11583,18 +11575,19 @@
 	<model filename="gkw_sg_saiga12.xml"/>
 	<hud_icon filename="gkw_saiga12_skill.png"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="2.4" kill_probability_offset_on_successful_hit="0.6" kill_decay_start_time="0.05" kill_decay_end_time="0.6"/>
+	<projectile file="bullet.projectile" time_to_live="0.3">
+	<result class="blast" radius="0.8" damage="0.1" push="0.5" decal="1" faction_compare="not_equal"/>
 	</projectile>
-	<modifier class="speed" value="-0.15"/>
+	<modifier class="speed" value="-0.3"/>
 	<modifier class="detectability" value="0.35"/>
-	<stance state_key="walking" accuracy="0.7"/>
-	<stance state_key="crouch_moving" accuracy="0.65"/>
-	<stance state_key="prone_moving" accuracy="0.65"/>
-	<stance state_key="standing" accuracy="0.7"/>
-	<stance state_key="crouching" accuracy="0.7"/>
+	<stance state_key="running" accuracy="0.6"/>
+	<stance state_key="walking" accuracy="0.75"/>
+	<stance state_key="crouch_moving" accuracy="0.75"/>
+	<stance state_key="prone_moving" accuracy="0.75"/>
+	<stance state_key="standing" accuracy="0.8"/>
+	<stance state_key="crouching" accuracy="0.9"/>
 	<stance state_key="prone" accuracy="0.8"/>
-	<stance state_key="over_wall" accuracy="0.8"/>
+	<stance state_key="over_wall" accuracy="1.0"/>
 	<tag name="shotgun"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
@@ -18396,7 +18389,7 @@
 	<model filename="gkw_hvy_at4.xml"/>
 	<ballistics near_far_distance="1000.0" speed_estimation_near="100.0" speed_estimation_far="100.0" max_speed="125.0" randomness="0.0"/>
 	<projectile file="at4.projectile">
-	<result class="blast" damage="30" radius="3.0" decal="1" push="0.75" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+	<result class="blast" damage="40" radius="2.0" decal="1" push="0.75" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	</projectile>
 	<weak_hand_hold offset="0.3"/>
 	<commonness value="0.00001"/>
@@ -18605,7 +18598,7 @@
 	<model filename="gkw_hvy_at4.xml"/>
 	<ballistics near_far_distance="1000.0" speed_estimation_near="120.0" speed_estimation_far="120.0" max_speed="125.0" randomness="0.0"/>
 	<projectile file="at4.projectile">
-	<result class="blast" damage="30" radius="3.0" decal="1" push="0.75" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+	<result class="blast" damage="40" radius="2.0" decal="1" push="0.75" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	</projectile>
 	<weak_hand_hold offset="0.3"/>
 	<hud_icon filename="gkw_at4.png"/>
@@ -19758,7 +19751,7 @@
 </weapon>
 
 <weapon key="gkw_ntw20mod3.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1" accuracy_factor="1" sustained_fire_grow_step="0" sustained_fire_diminish_rate="0.5" magazine_size="3" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="NTW-20(MOD3)" class="2" reload_one_at_a_time="0" sight_range_modifier="4" projectile_speed="230" barrel_offset="0.6" projectiles_per_shot="8" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
+	<specification retrigger_time="-1" accuracy_factor="1" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="1.5" magazine_size="3" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="NTW-20(MOD3)" class="2" reload_one_at_a_time="0" sight_range_modifier="4" projectile_speed="255.75" barrel_offset="0.6" projectiles_per_shot="3" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
 	<inventory buy_price="150.0" sell_price="150.0"/>
 	<commonness value="0.01" in_stock="0" can_respawn_with="1"/>
 	<next_in_chain key="gkw_ntw20mod3_skill.weapon" share_ammo="0"/>
@@ -19809,15 +19802,8 @@
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="ntw.projectile">
-	<result class="blast" damage="6.0" radius="4" decal="1" push="1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+	<result class="blast" damage="18.0" radius="4.5" decal="1" push="1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	</projectile>
-	<stance state_key="walking" accuracy="1.0"/>
-	<stance state_key="crouch_moving" accuracy="1.0"/>
-	<stance state_key="prone_moving" accuracy="1.0"/>
-	<stance state_key="standing" accuracy="1.0"/>
-	<stance state_key="crouching" accuracy="1.0"/>
-	<stance state_key="prone" accuracy="1.0"/>
-	<stance state_key="over_wall" accuracy="1.0"/>
 	<modifier class="speed" value="0.1"/>
 	<tag name="rifle"/>
 	<tag name="antiarmor"/>
@@ -19851,7 +19837,7 @@
 </weapon>
 
 <weapon key="gkw_ntw20mod3_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="0.01" burst_shots="3" accuracy_factor="1.0" sustained_fire_grow_step="0" sustained_fire_diminish_rate="1.2" magazine_size="3" can_shoot_standing="0" can_shoot_crouching="0" can_shoot_prone="1" suppressed="0" name="NTW-20(MOD3)-[Hunter's Mania]" class="4" last_burst_retrigger_time="1.8" reload_one_at_a_time="0" sight_range_modifier="4" projectile_speed="250" barrel_offset="0.6" projectiles_per_shot="10" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<specification retrigger_time="0.01" burst_shots="3" accuracy_factor="1.0" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="1.2" magazine_size="3" can_shoot_standing="0" can_shoot_crouching="0" can_shoot_prone="1" suppressed="0" name="NTW-20(MOD3)-[Hunter's Mania]" class="4" last_burst_retrigger_time="1.8" reload_one_at_a_time="0" sight_range_modifier="4" projectile_speed="255.75" barrel_offset="0.6" projectiles_per_shot="6" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<inventory buy_price="150.0" sell_price="150.0"/>
 	<next_in_chain key="gkw_ntw20mod3.weapon" share_ammo="0"/>
 	<animation key="reload" animation_key="magBrifleRntw"/>
@@ -19883,16 +19869,8 @@
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="ntw.projectile">
-	<result class="blast" damage="5" radius="5" decal="1" push="1.0" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+	<result class="blast" damage="22" radius="5" decal="1" push="1.0" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	</projectile>
-	<stance state_key="running" accuracy="1.0"/>
-	<stance state_key="walking" accuracy="1.0"/>
-	<stance state_key="crouch_moving" accuracy="1.0"/>
-	<stance state_key="prone_moving" accuracy="1.0"/>
-	<stance state_key="standing" accuracy="1.0"/>
-	<stance state_key="crouching" accuracy="1.0"/>
-	<stance state_key="prone" accuracy="1.0"/>
-	<stance state_key="over_wall" accuracy="1.0"/>
 	<modifier class="speed" value="-0.3"/>
 	<tag name="rifle"/>
 	<tag name="antiarmor"/>
@@ -20437,7 +20415,7 @@
 </weapon>
 
 <weapon key="gkw_ump9mod3.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification accuracy_factor="1" barrel_offset="0.4" sight_range_modifier="1.3" class="0" magazine_size="30" name="UMP9(MOD3)" projectile_speed="100" retrigger_time="0.085" suppressed="1" sustained_fire_diminish_rate="1.75" sustained_fire_grow_step="0.2" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
+	<specification accuracy_factor="1" barrel_offset="0.4" sight_range_modifier="1.3" class="0" magazine_size="30" name="UMP9(MOD3)" projectile_speed="120" retrigger_time="0.085" suppressed="1" sustained_fire_diminish_rate="1.75" sustained_fire_grow_step="0.2" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
 	<inventory buy_price="150.0" sell_price="150.0"/>
 	<sound key="fire" fileref="ump9_fire_FromGRBP.wav" pitch_variety="0.05" volume="2"/>
 	<sound key="magazine_out" fileref="ump9_mgz_out_FromCOD6R.wav" volume="1.5"/>
@@ -20450,7 +20428,7 @@
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile file="bullet.projectile" can_be_detected_by_footmen="0">
-	<result class="hit" kill_probability="1.6" kill_probability_offset_on_successful_hit="2.2" kill_decay_start_time="0.2" kill_decay_end_time="0.6"/>
+	<result class="hit" kill_probability="1.65" kill_probability_offset_on_successful_hit="2.2" kill_decay_start_time="0.18" kill_decay_end_time="0.55"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_9mm"/>
 	<stance state_key="running" accuracy="0.9"/>
@@ -24462,7 +24440,7 @@
 <weapon key="gkw_m99_404.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="rifle"/>
 	<tag name="antiarmor"/>
-	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="0" sustained_fire_diminish_rate="1.5" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="M99-[Cyclamen]" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="3" projectile_speed="224.21" barrel_offset="0.4" projectiles_per_shot="4" last_burst_retrigger_time="0.5" burst_shots="1" stab_enabled="1" carry_in_two_hands="1"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="0" sustained_fire_diminish_rate="1.5" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="M99-[Cyclamen]" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="3.5" projectile_speed="224.21" barrel_offset="0.4" projectiles_per_shot="4" last_burst_retrigger_time="0.5" burst_shots="1" stab_enabled="1" carry_in_two_hands="1"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="20.0" buy_price="80.0" sell_price="80.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -24485,7 +24463,7 @@
 	<hud_icon filename="gkw_m99_404.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="ntw.projectile">
-	<result class="blast" damage="5.0" radius="3.5" decal="1" push="0" character_state="death" faction_compare="not_equal"/>
+	<result class="blast" damage="10.0" radius="3.5" decal="1" push="0" character_state="death" faction_compare="not_equal"/>
 	</projectile>
 	<stance state_key="running" accuracy="1.0"/>
 	<stance state_key="walking" accuracy="1.0"/>
@@ -24507,7 +24485,7 @@
 <weapon key="gkw_m99_1701.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="rifle"/>
 	<tag name="antiarmor"/>
-	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="0" sustained_fire_diminish_rate="1.5" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="M99-[Rabbit Squad]" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="3" projectile_speed="224.21" barrel_offset="0.4" projectiles_per_shot="4" last_burst_retrigger_time="0.5" burst_shots="1" stab_enabled="1" carry_in_two_hands="1"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="0" sustained_fire_diminish_rate="1.5" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="M99-[Rabbit Squad]" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="3.5" projectile_speed="224.21" barrel_offset="0.4" projectiles_per_shot="4" last_burst_retrigger_time="0.5" burst_shots="1" stab_enabled="1" carry_in_two_hands="1"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="20.0" buy_price="80.0" sell_price="80.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -24530,7 +24508,7 @@
 	<hud_icon filename="gkw_m99_1701.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="ntw.projectile">
-	<result class="blast" damage="5.0" radius="3.5" decal="1" push="0" character_state="death" faction_compare="not_equal"/>
+	<result class="blast" damage="10.0" radius="3.5" decal="1" push="0" character_state="death" faction_compare="not_equal"/>
 	</projectile>
 	<stance state_key="running" accuracy="1.0"/>
 	<stance state_key="walking" accuracy="1.0"/>
@@ -24552,7 +24530,7 @@
 <weapon key="gkw_m99_3304.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="rifle"/>
 	<tag name="antiarmor"/>
-	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="0" sustained_fire_diminish_rate="1.5" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="M99-[White Rabbit's Summer Party]" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="3" projectile_speed="224.21" barrel_offset="0.4" projectiles_per_shot="4" last_burst_retrigger_time="0.5" burst_shots="1" stab_enabled="1" carry_in_two_hands="1"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="0" sustained_fire_diminish_rate="1.5" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="M99-[White Rabbit's Summer Party]" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="3.5" projectile_speed="224.21" barrel_offset="0.4" projectiles_per_shot="4" last_burst_retrigger_time="0.5" burst_shots="1" stab_enabled="1" carry_in_two_hands="1"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="20.0" buy_price="80.0" sell_price="80.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -24575,7 +24553,7 @@
 	<hud_icon filename="gkw_m99_3304.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="ntw.projectile">
-	<result class="blast" damage="5.0" radius="3.5" decal="1" push="0" character_state="death" faction_compare="not_equal"/>
+	<result class="blast" damage="10.0" radius="3.5" decal="1" push="0" character_state="death" faction_compare="not_equal"/>
 	</projectile>
 	<stance state_key="running" accuracy="1.0"/>
 	<stance state_key="walking" accuracy="1.0"/>
@@ -25554,7 +25532,7 @@
 </weapon>
 
 <weapon key="gkw_ntw20_307.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="2.0" accuracy_factor="1" sustained_fire_grow_step="0" sustained_fire_diminish_rate="0.5" magazine_size="3" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="NTW-20-[Christmas elk]" class="2" reload_one_at_a_time="0" sight_range_modifier="4" projectile_speed="200" barrel_offset="0.6" projectiles_per_shot="8" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
+	<specification retrigger_time="2.0" accuracy_factor="1" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="1.5" magazine_size="3" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="NTW-20-[Christmas elk]" class="2" reload_one_at_a_time="0" sight_range_modifier="4" projectile_speed="225" barrel_offset="0.6" projectiles_per_shot="3" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
 	<inventory buy_price="20.0" sell_price="20.0"/>
 	<commonness in_stock="0" value="0"/>
 	<animation key="cycle" animation_key="Brifle1.8"/>
@@ -25603,16 +25581,8 @@
 	<hud_icon filename="gkw_ntw20_307.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="ntw.projectile">
-	<result class="blast" damage="4.5" radius="4" decal="1" push="1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+	<result class="blast" damage="16" radius="4" decal="1" push="1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	</projectile>
-	<stance state_key="running" accuracy="1.0"/>
-	<stance state_key="walking" accuracy="1.0"/>
-	<stance state_key="crouch_moving" accuracy="1.0"/>
-	<stance state_key="prone_moving" accuracy="1.0"/>
-	<stance state_key="standing" accuracy="1.0"/>
-	<stance state_key="crouching" accuracy="1.0"/>
-	<stance state_key="prone" accuracy="1.0"/>
-	<stance state_key="over_wall" accuracy="1.0"/>
 	<tag name="rifle"/>
 	<tag name="antiarmor"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
@@ -25645,7 +25615,7 @@
 </weapon>
 
 <weapon key="gkw_ntw20_4801.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="2.0" accuracy_factor="1" sustained_fire_grow_step="0" sustained_fire_diminish_rate="0.5" magazine_size="3" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="NTW-20-[Black Iron Heart]" class="2" reload_one_at_a_time="0" sight_range_modifier="4" projectile_speed="200" barrel_offset="0.6" projectiles_per_shot="8" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
+	<specification retrigger_time="2.0" accuracy_factor="1" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="1.5" magazine_size="3" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="NTW-20-[Black Iron Heart]" class="2" reload_one_at_a_time="0" sight_range_modifier="4" projectile_speed="225" barrel_offset="0.6" projectiles_per_shot="3" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
 	<inventory buy_price="20.0" sell_price="20.0"/>
 	<commonness in_stock="0" value="0"/>
 	<animation key="cycle" animation_key="Brifle1.8"/>
@@ -25694,16 +25664,8 @@
 	<hud_icon filename="gkw_ntw20_4801.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="ntw.projectile">
-	<result class="blast" damage="4.5" radius="4" decal="1" push="1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+	<result class="blast" damage="16" radius="4" decal="1" push="1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	</projectile>
-	<stance state_key="running" accuracy="1.0"/>
-	<stance state_key="walking" accuracy="1.0"/>
-	<stance state_key="crouch_moving" accuracy="1.0"/>
-	<stance state_key="prone_moving" accuracy="1.0"/>
-	<stance state_key="standing" accuracy="1.0"/>
-	<stance state_key="crouching" accuracy="1.0"/>
-	<stance state_key="prone" accuracy="1.0"/>
-	<stance state_key="over_wall" accuracy="1.0"/>
 	<tag name="rifle"/>
 	<tag name="antiarmor"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
@@ -32853,7 +32815,7 @@
 </weapon>
 
 <weapon key="gkw_ntw20mod3_307.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1" accuracy_factor="1" sustained_fire_grow_step="0" sustained_fire_diminish_rate="0.5" magazine_size="3" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="NTW-20(MOD3)-[Christmas elk]" class="2" reload_one_at_a_time="0" sight_range_modifier="4" projectile_speed="230" barrel_offset="0.6" projectiles_per_shot="8" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
+	<specification retrigger_time="-1" accuracy_factor="1" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="1.5" magazine_size="3" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="NTW-20(MOD3)-[Christmas elk]" class="2" reload_one_at_a_time="0" sight_range_modifier="4" projectile_speed="255.75" barrel_offset="0.6" projectiles_per_shot="3" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
 	<inventory buy_price="150.0" sell_price="150.0"/>
 	<commonness value="0.0" in_stock="0" can_respawn_with="1"/>
 	<next_in_chain key="gkw_ntw20mod3_307_skill.weapon" share_ammo="0"/>
@@ -32904,16 +32866,8 @@
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="ntw.projectile">
-	<result class="blast" damage="6.0" radius="4" decal="1" push="1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+	<result class="blast" damage="18.0" radius="4" decal="1" push="1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	</projectile>
-	<stance state_key="running" accuracy="1.0"/>
-	<stance state_key="walking" accuracy="1.0"/>
-	<stance state_key="crouch_moving" accuracy="1.0"/>
-	<stance state_key="prone_moving" accuracy="1.0"/>
-	<stance state_key="standing" accuracy="1.0"/>
-	<stance state_key="crouching" accuracy="1.0"/>
-	<stance state_key="prone" accuracy="1.0"/>
-	<stance state_key="over_wall" accuracy="1.0"/>
 	<modifier class="speed" value="0.1"/>
 	<tag name="rifle"/>
 	<tag name="antiarmor"/>
@@ -32947,7 +32901,7 @@
 </weapon>
 
 <weapon key="gkw_ntw20mod3_307_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="0.01" burst_shots="3" accuracy_factor="1.0" sustained_fire_grow_step="0" sustained_fire_diminish_rate="1.2" magazine_size="3" can_shoot_standing="0" can_shoot_crouching="0" can_shoot_prone="1" suppressed="0" name="NTW-20(MOD3)-[Christmas elk]-[Hunter's Mania]" class="4" last_burst_retrigger_time="1.8" reload_one_at_a_time="0" sight_range_modifier="4" projectile_speed="250" barrel_offset="0.6" projectiles_per_shot="10" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<specification retrigger_time="0.01" burst_shots="3" accuracy_factor="1.0" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="1.2" magazine_size="3" can_shoot_standing="0" can_shoot_crouching="0" can_shoot_prone="1" suppressed="0" name="NTW-20(MOD3)-[Christmas elk]-[Hunter's Mania]" class="4" last_burst_retrigger_time="1.8" reload_one_at_a_time="0" sight_range_modifier="4" projectile_speed="255.75" barrel_offset="0.6" projectiles_per_shot="6" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<inventory buy_price="150.0" sell_price="150.0"/>
 	<next_in_chain key="gkw_ntw20mod3_307.weapon" share_ammo="0"/>
 	<animation key="reload" animation_key="magBrifleRntw"/>
@@ -32978,16 +32932,8 @@
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="ntw.projectile">
-	<result class="blast" damage="5" radius="5" decal="1" push="1.0" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+	<result class="blast" damage="22" radius="5" decal="1" push="1.0" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	</projectile>
-	<stance state_key="running" accuracy="1.0"/>
-	<stance state_key="walking" accuracy="1.0"/>
-	<stance state_key="crouch_moving" accuracy="1.0"/>
-	<stance state_key="prone_moving" accuracy="1.0"/>
-	<stance state_key="standing" accuracy="1.0"/>
-	<stance state_key="crouching" accuracy="1.0"/>
-	<stance state_key="prone" accuracy="1.0"/>
-	<stance state_key="over_wall" accuracy="1.0"/>
 	<modifier class="speed" value="-0.3"/>
 	<tag name="rifle"/>
 	<tag name="antiarmor"/>
@@ -33021,7 +32967,7 @@
 </weapon>
 
 <weapon key="gkw_ntw20mod3_4801.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1" accuracy_factor="1" sustained_fire_grow_step="0" sustained_fire_diminish_rate="0.5" magazine_size="3" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="NTW-20(MOD3)-[Black Iron Heart]" class="2" reload_one_at_a_time="0" sight_range_modifier="4" projectile_speed="230" barrel_offset="0.6" projectiles_per_shot="8" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
+	<specification retrigger_time="-1" accuracy_factor="1" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="1.5" magazine_size="3" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="NTW-20(MOD3)-[Black Iron Heart]" class="2" reload_one_at_a_time="0" sight_range_modifier="4" projectile_speed="255.75" barrel_offset="0.6" projectiles_per_shot="3" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
 	<inventory buy_price="150.0" sell_price="150.0"/>
 	<commonness value="0.0" in_stock="0" can_respawn_with="1"/>
 	<next_in_chain key="gkw_ntw20mod3_4801_skill.weapon" share_ammo="0"/>
@@ -33072,16 +33018,8 @@
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="ntw.projectile">
-	<result class="blast" damage="6.0" radius="4" decal="1" push="1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+	<result class="blast" damage="18.0" radius="4" decal="1" push="1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	</projectile>
-	<stance state_key="running" accuracy="1.0"/>
-	<stance state_key="walking" accuracy="1.0"/>
-	<stance state_key="crouch_moving" accuracy="1.0"/>
-	<stance state_key="prone_moving" accuracy="1.0"/>
-	<stance state_key="standing" accuracy="1.0"/>
-	<stance state_key="crouching" accuracy="1.0"/>
-	<stance state_key="prone" accuracy="1.0"/>
-	<stance state_key="over_wall" accuracy="1.0"/>
 	<modifier class="speed" value="0.1"/>
 	<tag name="rifle"/>
 	<tag name="antiarmor"/>
@@ -33115,7 +33053,7 @@
 </weapon>
 
 <weapon key="gkw_ntw20mod3_4801_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="0.01" burst_shots="3" accuracy_factor="1.0" sustained_fire_grow_step="0" sustained_fire_diminish_rate="1.2" magazine_size="3" can_shoot_standing="0" can_shoot_crouching="0" can_shoot_prone="1" suppressed="0" name="NTW-20(MOD3)-[Black Iron Heart]-[Hunter's Mania]" class="4" last_burst_retrigger_time="1.8" reload_one_at_a_time="0" sight_range_modifier="4" projectile_speed="250" barrel_offset="0.6" projectiles_per_shot="10" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<specification retrigger_time="0.01" burst_shots="3" accuracy_factor="1.0" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="1.2" magazine_size="3" can_shoot_standing="0" can_shoot_crouching="0" can_shoot_prone="1" suppressed="0" name="NTW-20(MOD3)-[Black Iron Heart]-[Hunter's Mania]" class="4" last_burst_retrigger_time="1.8" reload_one_at_a_time="0" sight_range_modifier="4" projectile_speed="255.75" barrel_offset="0.6" projectiles_per_shot="6" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<inventory buy_price="150.0" sell_price="150.0"/>
 	<next_in_chain key="gkw_ntw20mod3_4801.weapon" share_ammo="0"/>
 	<animation key="reload" animation_key="magBrifleRntw"/>
@@ -33147,16 +33085,8 @@
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="ntw.projectile">
-	<result class="blast" damage="5" radius="5" decal="1" push="1.0" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+	<result class="blast" damage="22" radius="5" decal="1" push="1.0" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	</projectile>
-	<stance state_key="running" accuracy="1.0"/>
-	<stance state_key="walking" accuracy="1.0"/>
-	<stance state_key="crouch_moving" accuracy="1.0"/>
-	<stance state_key="prone_moving" accuracy="1.0"/>
-	<stance state_key="standing" accuracy="1.0"/>
-	<stance state_key="crouching" accuracy="1.0"/>
-	<stance state_key="prone" accuracy="1.0"/>
-	<stance state_key="over_wall" accuracy="1.0"/>
 	<modifier class="speed" value="-0.3"/>
 	<tag name="rifle"/>
 	<tag name="antiarmor"/>
@@ -41354,6 +41284,7 @@
 	<projectile file="bullet_kcco.projectile">
 	<result class="hit" kill_probability="1.8" kill_decay_start_time="0.1" kill_decay_end_time="1.0"/>
 	</projectile>
+	<addon_model filename="kcco_ammopack.xml"/>
 	<modifier class="speed" value="-0.1"/>
 	<modifier class="hit_success_probability" value="-0.2"/>
 	<commonness value="0.000001" in_stock="1" can_respawn_with="1"/>
@@ -42016,7 +41947,7 @@
 	<model filename="parw_rocket.xml"/>
 	<ballistics near_far_distance="1000.0" speed_estimation_near="50.0" speed_estimation_far="50.0" max_speed="125.0" randomness="0.0"/>
 	<projectile file="at4.projectile">
-	<result class="blast" damage="8.0" radius="4.5" decal="1" push="0.75" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+	<result class="blast" damage="12.0" radius="4.5" decal="1" push="0.75" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	</projectile>
 	<weak_hand_hold offset="0.3"/>
 	<hud_icon filename="rocket.png"/>
@@ -42426,7 +42357,7 @@
 	<tag name="melee"/>
 	<tag name="metal_thin"/>
 	<tag name="mecha"/>
-	<specification retrigger_time="3.0" magazine_size="1000" can_shoot_standing="1" can_shoot_crouching="0" can_shoot_prone="0" carry_in_two_hands="0" name="Roarer" class="0" supperessed="0" use_basic_muzzle_smoke_effect="0" stab_enabled="1" stab_range="3.0" barrel_offset="0.5"/>
+	<specification retrigger_time="3.0" magazine_size="1000" can_shoot_standing="1" can_shoot_crouching="0" can_shoot_prone="0" carry_in_two_hands="0" name="Roarer" class="0" supperessed="0" use_basic_muzzle_smoke_effect="0" barrel_offset_3d="0 -0.6 0" stab_enabled="1" stab_range="3.0" barrel_offset="0.5"/>
 	<animation state_key="stabbing" animation_key="hit ground_big_unit"/>
 	<animation state_key="recoil" animation_key="still, large mecha"/>
 	<animation state_key="hold" animation_key="still, large mecha"/>
@@ -43860,7 +43791,7 @@
 	<commonness value="0.0"/>
 	<sound key="fire" fileref="typhon_fire_FromHALO4.wav" pitch_variety="0.05" volume="3.5"/>
 	<projectile file="typhoon_laser.projectile" pulldown_in_air="2.0">
-	<result class="blast" damage="30.5" radius="8" decal="1" push="1.0" character_state="death" damage_origin_vehicle="0" faction_compare="not_equal"/>
+	<result class="blast" damage="50.0" radius="8" decal="1" push="1.0" character_state="death" damage_origin_vehicle="0" faction_compare="not_equal"/>
 	<trail probability="1.0" key="laser_tifeng"/>
 	<sound class="result" key="other" fileref="explosion_Large_FromSQUAD_1.wav" volume="2.9"/>
 	<sound class="result" key="other" fileref="explosion_Large_FromSQUAD_2.wav" volume="2.9"/>
@@ -44047,7 +43978,7 @@
 	<hud_icon filename="uhlan_main_cannon.png"/>
 	<commonness value="0.0"/>
 	<projectile file="bullet_paradeus.projectile">
-	<result class="blast" damage="3.5" radius="2.2" decal="1" push="0.5" character_state="death" faction_compare="not_equal"/>
+	<result class="blast" damage="4" radius="2.2" decal="1" push="0.5" character_state="death" faction_compare="not_equal"/>
 	</projectile>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
 	<target_factors tag="heavy_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0"/>
@@ -44067,7 +43998,7 @@
 	<hud_icon filename="uhlan_main_cannon.png"/>
 	<commonness value="0.0"/>
 	<projectile file="bullet_paradeus.projectile">
-	<result class="hit" kill_probability="1.5" kill_decay_start_time="2.682" kill_decay_end_time="5.7"/>
+	<result class="hit" kill_probability="2.0" kill_decay_start_time="2.682" kill_decay_end_time="5.7"/>
 	</projectile>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
 	<target_factors tag="heavy_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0"/>
@@ -44087,7 +44018,9 @@
 	<hud_icon filename="hud_hornet.png"/>
 	<commonness value="0.0"/>
 	<ballistics curve_height="10.0" near_far_distance="0.0" speed_estimation_near="0.0" speed_estimation_far="58.0" max_speed="42.0" randomness="0.0" tweak_factor="1.2"/>
-	<projectile file="hornet.projectile"/>
+	<projectile file="hornet.projectile">
+	<result class="blast" radius="4.5" damage="10.0" push="1.0" decal="1" damage_origin_vehicle="0"/>
+	</projectile>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
 	<target_factors tag="heavy_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="10.0"/>
 	<target_factors tag="apc" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0"/>
