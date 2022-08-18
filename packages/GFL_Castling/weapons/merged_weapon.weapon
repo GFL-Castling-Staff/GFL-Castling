@@ -2871,7 +2871,7 @@
 	<hud_icon filename="gkw_gm6lynx.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="ntw.projectile">
-	<result class="blast" damage="8" radius="3.5" decal="1" push="0" character_state="death" faction_compare="not_equal"/>
+	<result class="blast" damage="8" radius="3.5" decal="1" push="0.2" character_state="death" faction_compare="not_equal"/>
 	</projectile>
 	<stance state_key="walking" accuracy="0.65"/>
 	<stance state_key="crouch_moving" accuracy="0.8"/>
