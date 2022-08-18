@@ -31149,7 +31149,7 @@
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="88type_laser.projectile">
 	<trail probability="1.0" key="laser_hyz"/>
-	<result class="blast" damage="6.5" radius="4.5" decal="1" push="0" character_state="death" faction_compare="not_equal"/>
+	<result class="blast" damage="6.5" radius="4.5" decal="1" push="0.2" character_state="death" faction_compare="not_equal"/>
 	</projectile>
 	<stance state_key="running" accuracy="1"/>
 	<stance state_key="walking" accuracy="1"/>
@@ -31197,7 +31197,7 @@
 	<animation state_key="next_in_chain_in" animation_key="change weapon to melee, gunda"/>
 	<model filename="gkw_88type_gudan_melee.xml"/>
 	<projectile file="teal.projectile">
-	<result class="blast" radius="6" damage="5" decal="0" push="0.0" character_state="death" faction_compare="not_equal" make_vehicle_hit_sound="0"/>
+	<result class="blast" radius="6" damage="5" decal="0" push="0.2" character_state="death" faction_compare="not_equal" make_vehicle_hit_sound="0"/>
 	</projectile>
 	<stance state_key="running" accuracy="1"/>
 	<stance state_key="walking" accuracy="1"/>
