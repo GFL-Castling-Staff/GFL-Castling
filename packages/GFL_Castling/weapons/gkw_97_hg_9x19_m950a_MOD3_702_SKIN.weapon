@@ -24,7 +24,7 @@
     <!--base-->
     <commonness value="0.01" in_stock="0" can_respawn_with="1" />
 	<capacity value="1" source="rank" source_value="0.0" />
-    <inventory encumbrance="2.0" buy_price="100.0" sell_price="100.0" />
+    <inventory encumbrance="2.0" buy_price="100.0" sell_price="80.0" />
     <modifier class="speed" value="+1.0" />
     <modifier class="detectability" value="-0.05" />
 
@@ -84,4 +84,5 @@
     <stance state_key="crouching" accuracy="0.95" />
     <stance state_key="prone" accuracy="1" />
     <stance state_key="over_wall" accuracy="1" />
+    <modifier class="speed" value="0.8" />
 </weapon>
