@@ -290,6 +290,7 @@ dictionary commandSkillIndex = {
 
         // 炼金术师 大限
         {"ff_alchemist.weapon",39},
+        {"ff_alchemist_skill.weapon",39},
 
         // 汉阳造88式，88雷(普通一颗雷，mod3三颗充能雷)
         {"gkw_88type.weapon",40},
