@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projectiles>
     <projectile class="grenade" name="" key="blast_shard_rad3.projectile" slot="2" radius="0.15">
-        <result class="blast" radius="3" damage="0.1" push="0" decal="1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+        <result class="blast" radius="3" damage="0.1" push="0.4" decal="1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
         <trigger class="time" time_to_live="0.0"/>
         <rotation class="random" />
         <model mesh_filename="" />
@@ -11,7 +11,7 @@
         <capacity value="1" source="rank" source_value="0.0" />
     </projectile>
     <projectile class="grenade" name="" key="blast_shard_rad4.projectile" slot="2" radius="0.15">
-        <result class="blast" radius="4" damage="0.1" push="0" decal="1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0" />
+        <result class="blast" radius="4" damage="0.1" push="0.4" decal="1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0" />
         <trigger class="time" time_to_live="0.0"/>
         <rotation class="random" />
         <model mesh_filename="" />
@@ -21,7 +21,7 @@
         <capacity value="1" source="rank" source_value="0.0" />
     </projectile>
     <projectile class="grenade" name="" key="blast_shard_rad5.projectile" slot="2" radius="0.15">
-        <result class="blast" radius="5" damage="0.1" push="0" decal="1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0" />
+        <result class="blast" radius="5" damage="0.1" push="0.4" decal="1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0" />
         <trigger class="time" time_to_live="0.0"/>
         <rotation class="random" />
         <model mesh_filename="" />
@@ -31,7 +31,7 @@
         <capacity value="1" source="rank" source_value="0.0" />
     </projectile>
     <projectile class="grenade" name="" key="blast_shard_ksvk_skill.projectile" slot="2" radius="0.15">
-        <result class="blast" radius="4.5" damage="3.1" push="0" decal="1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0" />
+        <result class="blast" radius="4.5" damage="3.1" push="0.4" decal="1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0" />
         <trigger class="time" time_to_live="0.1"/>
         <rotation class="random" />
         <model mesh_filename="" />
