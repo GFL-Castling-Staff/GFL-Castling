@@ -60,7 +60,7 @@
 
     <weak_hand_hold offset="0.2" />
     <projectile file="standard_agl.projectile">
-        <result class="blast"  damage="3.0"  radius="3.5" decal="1" push="0" character_state="death" faction_compare="not_equal"/> 
+        <result class="blast"  damage="3.0"  radius="3.5" decal="1" push="0.4" character_state="death" faction_compare="not_equal"/> 
      </projectile>
      
     <stance state_key="running" accuracy="0.5" />

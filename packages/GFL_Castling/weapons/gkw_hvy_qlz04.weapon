@@ -58,7 +58,7 @@
     
     <weak_hand_hold offset="0.3" />
     <projectile file="standard_agl.projectile">
-       <result class="blast"  damage="4.5"  radius="5" decal="1" push="0.3" character_state="death" faction_compare="not_equal"/> 
+       <result class="blast"  damage="4.5"  radius="5" decal="1" push="0.4" character_state="death" faction_compare="not_equal"/> 
     </projectile>
     <ballistics curve_height="18.0" near_far_distance="45.0" speed_estimation_near="10.0" speed_estimation_far="16.0" max_speed="150.0" randomness="0.0" tweak_factor="1.55" /> 
     <!--Accuracy, Movement speed-->
