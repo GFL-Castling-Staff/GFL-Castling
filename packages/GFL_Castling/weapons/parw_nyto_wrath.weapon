@@ -4,44 +4,55 @@
     <tag name="melee" />
 
     <specification 
-    retrigger_time="0.35" 
+    retrigger_time="1.0" 
     magazine_size="1000" 
     can_shoot_standing="1" 
-    can_shoot_crouching="0" 
+    can_shoot_crouching="1" 
     can_shoot_prone="0" 
     carry_in_two_hands="0" 
-    name="Alina" 
+    name="Nyto-Wrath" 
+    barrel_offset_3d="0 0 0.7"
     class="0" 
+    accuracy_factor="1.0" 
+    sustained_fire_grow_step="0" 
+    sustained_fire_diminish_rate="0"
     supperessed="0" 
+	projectile_speed="8" 
     use_basic_muzzle_smoke_effect="0" 
     stab_enabled="1" 
-    stab_range="5" />
+    stab_range="4" />
 
-    <animation state_key="recoil" animation_key="melee, ninjato whip" />
-    <animation state_key="stabbing" animation_key="melee, ninjato whip" />
+    <animation state_key="recoil" animation_key="melee, saber" />
+    <animation state_key="recoil" animation_key="melee, saber whip" />
+    <animation state_key="recoil" animation_key="melee, saber slash" />
+
+    <animation state_key="stabbing" animation_key="melee, saber" />
+    <animation state_key="stabbing" animation_key="melee, saber whip" />
+    <animation state_key="stabbing" animation_key="melee, saber slash" />
+
     <animation state_key="hold" animation_key="still, ninjato" />
-    <animation state_key="hold_on_wall" animation_key="still overwall, ninjato" />
-    <animation state_key="still_against_wall" animation_key="still against wall, ninjato" />
-    <animation state_key="hold_casual" animation_key="relaxed, ninjato" />
-    <animation state_key="running" animation_key="running, ninjato" />
-    <animation state_key="walking" animation_key="walking, ninjato" />
-    <animation state_key="crouching" animation_key="crouch, ninjato" />
-    <animation state_key="crouch_moving" animation_key="crouching forwards, ninjato" />
-    <animation state_key="crouch_moving_backwards" animation_key="crouching backwards, ninjato" />
-    <animation state_key="prone_still" animation_key="prone still, ninjato" />
+    <animation state_key="hold_casual"      animation_key="still, ninjato" />
+    <animation state_key="hold_on_wall"     animation_key="hold on wall, saber" />
+    <animation state_key="still_against_wall"   animation_key="still against wall, saber" />
+    <animation state_key="running"  animation_key="running, ninjato" />
+    <animation state_key="walking"  animation_key="walking, single hand carry" />
+    <animation state_key="crouching"    animation_key="crouch, knife" />
+    <animation state_key="crouch_moving"    animation_key="crouching forwards, ninjato" />
+    <animation state_key="crouch_moving_backwards"  animation_key="crouching backwards, ninjato" />
+    <animation state_key="changing_weapon_in"   animation_key="change weapon in, ninjato" />
+    <animation state_key="changing_weapon_out"  animation_key="change weapon out, ninjato" />
+    <animation state_key="prone_still" animation_key="prone still, sword" />
     <animation state_key="prone_moving" animation_key="prone moving, ninjato" />
-    <animation state_key="walking_backwards" animation_key="walking backwards, ninjato" />
-    <animation state_key="changing_weapon_in" animation_key="change weapon in, sword" />
-    <animation state_key="changing_weapon_out" animation_key="change weapon out, sword" />
-    <animation state_key="reload" animation_key="still, ninjato" />
-    <model filename="parw_alina.xml" />
+    <animation state_key="walking_backwards" animation_key="walking backwards, single hand carry" />
 
+    <sound key="fire" fileref="wrath_hammer_1.wav" pitch_variety="0.03" volume="1.0" />
+    <sound key="fire" fileref="wrath_hammer_2.wav" pitch_variety="0.03" volume="1.0" />
 
+    <model filename="parw_wrath.xml" />
 
-    <projectile file="teal.projectile"/>
+    <projectile file="wrath.projectile"/>
 
-    <capacity value="0" source="rank" source_value="0.0" />
-    <capacity value="1" source="rank" source_value="0.3" />
+    <capacity value="1" source="rank" source_value="0.0" />
 
     <stance state_key="running" accuracy="1" />
     <stance state_key="walking" accuracy="1" />
@@ -58,5 +69,5 @@
     <commonness value="0.00001" can_respawn_with="1" in_stock="1" />
 
     <modifier class="detectability" value="0.6"/>
-    <modifier class="speed" value="0.4" />
+    <modifier class="speed" value="0.2" />
 </weapon>
