@@ -117,7 +117,7 @@
 		<modifier class="hit_success_probability" value="-0.4"/>
 	</weapon>
 	<weapon key="gkw_spas12_2408_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-		<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="2.0" magazine_size="8" can_shoot_standing="1" suppressed="0" name="SPAS-12-[The Fruits of Summer]-[Damage Focus SG]" class="4" reload_one_at_a_time="1" sight_range_modifier="0.7" projectile_speed="100" barrel_offset="0.4" projectiles_per_shot="8" spread_range="0.1" last_burst_retrigger_time="0.2" />
+		<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="2.0" magazine_size="8" can_shoot_standing="1" suppressed="0" name="SPAS-12-[The Fruits of Summer]-[Damage Focus SG]" class="4" reload_one_at_a_time="1" sight_range_modifier="0.7" burst_shots="1" projectile_speed="100" barrel_offset="0.4" projectiles_per_shot="8" spread_range="0.1" last_burst_retrigger_time="0.2" />
 		<inventory buy_price="76.0" sell_price="76.0" />
 		<next_in_chain key="gkw_spas12_2408.weapon" share_ammo="1"/>
 		<commonness value="0" in_stock="0" can_respawn_with="1"/>
@@ -177,7 +177,7 @@
 		<hud_icon filename="gkw_spas12_2408.png"/>
 		<weak_hand_hold offset="0.3"/>
 		<projectile file="bullet.projectile">
-			<result class="blast" radius="0.8" damage="0.1" push="0.10" decal="1" faction_compare="not_equal"/>
+			<result class="blast" radius="1.5" damage="0.1" push="0.2" decal="1" faction_compare="not_equal"/>
 		</projectile>
 		<modifier class="speed" value="-0.2"/>
 		<modifier class="detectability" value="+0.5"/>

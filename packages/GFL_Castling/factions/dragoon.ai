@@ -42,11 +42,10 @@
 	<parameter class="consider_someone_already_healing_wounded_distance" value="10.0" />
 	<parameter class="force_comparison_multiplier_to_call_reinforcements" value="0.8" />
 	<parameter class="call_reinforcements_max_distance" value="40.0" />
-	<parameter class="fighting_approach_alarm_spread_max_range" value="40.0" />
 	<parameter class="default_fighting_separation" value="7.0" />
 	<parameter class="boosted_fighting_separation" value="3.0" />
-	<parameter class="run_limit_margin" value="3.0" />
-	<parameter class="run_limit" value="8.0" />
+	<parameter class="run_limit_margin" value="2.0" />
+	<parameter class="run_limit" value="12.0" />
 	<parameter class="throw_grenade_time_interval_max" value="5.0" />
 	<parameter class="throw_grenade_time_interval_min" value="1.0" />
 	<parameter class="max_distance_to_throw_grenade" value="12.0" />
@@ -91,7 +90,6 @@
 	<parameter class="choose_enemy_squad_target_score_range" value="10.0" />
 	<parameter class="deployment_area_utilization_factor" value="0.4" />
 	<parameter class="deployment_max_position_pick_attempts" value="2" />
-	<parameter class="fighting_approach_alarm_max_soldiers" value="12" /> 
 	<parameter class="accuracy_offset" value="0.0" /> 
 	<parameter class="grenade_throw_hold_time" value="0.0" />
 	<parameter class="using_cover_min_time" value="0.0" />
@@ -106,5 +104,9 @@
 	<parameter class="willingness_to_charge" value="1" />
 	<parameter class="fighting_melee_move_radius" value="1.0" />
 	<parameter class="fighting_regular_move_radius" value="20.0" />
-	
+
+	<parameter class="fighting_approach_alarm_spread_max_range" value="3.0" />
+	<parameter class="fighting_approach_alarm_max_soldiers" value="1" /> 
+	<parameter class="leading_inspect_alarm_spread_out_distance" value="1.0" />
+	<parameter class="leading_inspect_alarm_min_distance" value="1.0" />
 </ai>
