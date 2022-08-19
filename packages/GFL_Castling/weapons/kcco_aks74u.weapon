@@ -8,7 +8,7 @@
 		class="0"
         slot="0"
 		magazine_size="96" 
-		name="AKS-74U" 
+		name="KCCO Quartz Assaulter" 
         carry_in_two_hands="1"
 		projectile_speed="145" 
 		retrigger_time="0.067" 
@@ -39,7 +39,8 @@
         <hud_icon filename="kcco_aks74u.png" />
         <weak_hand_hold offset="0.2" />
         <projectile file="bullet_kcco.projectile">
-            <result class="hit"  kill_probability="1.85" kill_probability_offset_on_successful_hit="0.4" kill_decay_start_time="0.069" kill_decay_end_time="0.410" />
+            <result class="hit"  kill_probability="1.85" kill_probability_offset_on_successful_hit="0.4" kill_decay_start_time="0.069" kill_decay_end_time="0.
+            6" />
         </projectile>
         <effect class="muzzle" ref="ejection_556" />
         <stance state_key="running" accuracy="0.65" />
