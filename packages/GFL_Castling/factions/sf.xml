@@ -846,6 +846,10 @@
 			<sound key="death" fileref="Excutioner_buhuo_DEAD01_JP.wav" pitch_variety="0.001" volume="0.8" />
 			<sound key="throw" fileref="Excutioner_buhuo_SKILL02_JP.wav" pitch_variety="0.001" volume="0.8" />
 			<sound key="throw" fileref="Excutioner_buhuo_SKILL03_JP.wav" pitch_variety="0.001" volume="0.8" />
+			<parameter class="can_use_vehicles" value="0" /> 
+			<parameter class="walking_steer_amount" value="0.63" />
+			<parameter class="running_steer_amount" value="0.63" />
+			<parameter class="stopping_velocity_threshold" value="0.05" />
 		</character>
 		<model filename="sfd_excutioner.xml" />
 		<ai filename="excutioner.ai" />

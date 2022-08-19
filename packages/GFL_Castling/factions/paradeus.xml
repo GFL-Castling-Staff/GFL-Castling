@@ -508,7 +508,12 @@
 		</resources>
 	</soldier>
 	<soldier name="alina" spawn_score="0.05" squad_size_xp_cap="0.5" copy_from="default_ai">
-		<character filename="paradeus_nyto.text_lines"/>
+		<character filename="paradeus_nyto.text_lines">
+			<parameter class="can_use_vehicles" value="0" /> 
+			<parameter class="walking_steer_amount" value="0.63" />
+			<parameter class="running_steer_amount" value="0.63" />
+			<parameter class="stopping_velocity_threshold" value="0.05" />
+		</character>
 		<ai filename="excutioner.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="parw_alina.weapon" enabled="1" />
@@ -523,7 +528,12 @@
 		</resources>
 	</soldier>
 	<soldier name="teal" spawn_score="0.05" squad_size_xp_cap="0.5" copy_from="default_ai">
-		<character filename="paradeus_nyto.text_lines"/>
+		<character filename="paradeus_nyto.text_lines">
+			<parameter class="can_use_vehicles" value="0" /> 
+			<parameter class="walking_steer_amount" value="0.63" />
+			<parameter class="running_steer_amount" value="0.63" />
+			<parameter class="stopping_velocity_threshold" value="0.05" />
+		</character>
 		<ai filename="excutioner.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="parw_teal.weapon" enabled="1" />

@@ -19,6 +19,7 @@ dictionary RP_enemy_index = {
     {"kcco_Hydra",100},
     {"kcco_teslatrooper",100},
     {"kcco_human_sniper",200},
+    {"kcco_quartz_ranger",250},
 
     {"para_streletplus",20},
     {"para_streletplus_richman",20},
@@ -85,6 +86,7 @@ dictionary XP_enemy_index = {
     {"kcco_Hydra",0.01},
     {"kcco_teslatrooper",0.01},
     {"kcco_human_sniper",0.01},
+    {"kcco_quartz_ranger",0.015},
 
     {"para_streletplus",0.002},
     {"para_streletplus_richman",0.002},
@@ -164,12 +166,14 @@ dictionary reward_pool_list= {
     {"eagleyes","elite"},
     {"Adeline","elite"},
     {"smasher","elite"},
+    {"kcco_quartz_ranger","elite"},
 
     {"sf_manticore","rare"},
     {"Paradeus_doppelsoldner","rare"},
     {"Paradeus_roarer","rare"},
     {"kcco_Hydra","rare"},
     {"kcco_teslatrooper","rare"},
+    {"kcco_human_sniper","rare"},
 
     {"sfw_nemeum","uncommon"},
     {"sfw_nemeum_swap","uncommon"},
@@ -183,6 +187,7 @@ dictionary reward_pool_list= {
     {"sfw_prowler_swap","uncommon"},
     {"kcco_talos","uncommon"},
     {"kcco_mg","uncommon"},
+    {"parw_commander","uncommon"},
     
     {"","common"}
 };
