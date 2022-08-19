@@ -118,7 +118,6 @@ class kill_event : Tracker {
         {"gkw_p90_2802.weapon",4},
         {"gkw_augpara.weapon",4},
         {"gkw_augpara_5503.weapon",4},
-        {"gkw_ar57.weapon",4},
         {"gkw_cms.weapon",4},
         {"gkw_cms_aps.weapon",4},
         {"gkw_cms_st.weapon",4},
@@ -140,6 +139,7 @@ class kill_event : Tracker {
         {"gkw_g36c_mod3.weapon",5},
         {"gkw_g36c_mod3_skill.weapon",5},
         {"gkw_x95.weapon",5},
+        {"gkw_ar57.weapon",5},
 
         {"666",-1}
     };
