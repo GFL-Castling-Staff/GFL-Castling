@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<weapon key="gkw_m4sopmodii_531.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+<weapon key="gkw_m4sopmodii_551.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
     <specification
     accuracy_factor="0.98"
     barrel_offset="0.4"
     class="0"
     slot="0"
     magazine_size="30"
-    name="M4 SOPMOD II-[The Guarded Beloved]"
+    name="M4 SOPMOD II-[Birdsong in the Woods]"
     projectile_speed="187.23"
     retrigger_time="0.086"
     suppressed="0"
@@ -24,7 +24,7 @@
     <sound key="cycle" fileref="m4sopmodii_cycle_FromSAM3.wav" volume="2"/>
     <sound class="impact" fileref="rifle_drop.wav"/>
     <model filename="gkw_ar_m4sopmodii.xml"/>
-    <hud_icon filename="gkw_m4sopmodII_531.png"/>
+    <hud_icon filename="gkw_sopmod2_551.png"/>
     <commonness value="0" in_stock="0"/>
     <weak_hand_hold offset="0.2"/>
     <projectile file="bullet.projectile">

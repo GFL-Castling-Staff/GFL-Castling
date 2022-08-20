@@ -108,6 +108,7 @@ array<string> targetAAgrenades = {
     "gkw_xm8.weapon",
     "gkw_g3.weapon",
     "gkw_m4sopmodii_531.weapon",
+    "gkw_m4sopmodii_551.weapon",
     "gkw_m4sopmodii.weapon",
     "gkw_hk416.weapon",
     "gkw_hk416_6505.weapon",
@@ -227,6 +228,7 @@ dictionary commandSkillIndex = {
         // M4SOPMODIIMOD3
         {"gkw_m4sopmodiimod3.weapon",23},
         {"gkw_m4sopmodiimod3_531.weapon",23},
+        {"gkw_m4sopmodiimod3_551.weapon",23},
 
         // PPSH41, PPSH41MOD3
         {"gkw_ppsh41.weapon",24},
@@ -1426,7 +1428,7 @@ class CommandSkill : Tracker {
                         playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
                         playSoundAtLocation(m_metagame,"416mod3skill_Fire_FromL4D2.wav",factionid,c_pos,1.0);                        
                     }
-                    if(weaponname=="gkw_m4sopmodii.weapon"|| weaponname=="gkw_m4sopmodii_531.weapon") {
+                    if(weaponname=="gkw_m4sopmodii.weapon"|| weaponname=="gkw_m4sopmodii_531.weapon" || weaponname=="gkw_m4sopmodii_551.weapon" ) {
                         array<string> Voice={
                             "sopmod1.wav",
                             "sopmod2.wav",
