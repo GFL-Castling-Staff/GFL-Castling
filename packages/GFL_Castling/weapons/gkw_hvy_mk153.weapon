@@ -1,53 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<weapon file="gf_hvy.base_weapon" key="gkw_hvy_mk153.weapon">
+<weapon key="gkw_hvy_mk153.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
     <specification 
-    retrigger_time="-1.0" 
-    accuracy_factor="1.0" 
-    sustained_fire_grow_step="0.4" 
-    sustained_fire_diminish_rate="1.5" 
-    magazine_size="1" 
-    sight_range_modifier="2.5" 
-    can_shoot_standing="1" 
-    can_shoot_crouching="1" 
+    retrigger_time="-1.0"
+    accuracy_factor="1.0"
+    sustained_fire_grow_step="2.0"
+    sustained_fire_diminish_rate="1.5"
+    magazine_size="1"
+    sight_range_modifier="3.0"
+    can_shoot_standing="1"
+    can_shoot_crouching="1"
     can_shoot_prone="0"
-    suppressed="0" 
-    name="Mk153" 
-    class="0" 
-    projectile_speed="80" 
-    slot="0" 
-    projectiles_per_shot="1" />
-    <inventory buy_price="80.0" sell_price="80.0" />
-    <next_in_chain key="gkw_hvy_mk153_he.weapon" share_ammo="0" />
-    <animation key="recoil" ref="40" />
-    <animation key="cycle" animation_key="Brifle1" />
-    <animation key="reload" ref="35" />
-    <animation key="reload" stance_key="prone" animation_key="reloading, sniper1, prone" />
-    <animation key="hold" ref="39" />
-    <animation key="hold_on_wall" ref="39" />
+    suppressed="0"
+    name="SMAW MK153"
+    class="0"
+    projectile_speed="80"
+    slot="0"
+    projectiles_per_shot="1"/>
+    <inventory encumbrance="50.0" buy_price="153.0" sell_price="153.0"/>
+    <next_in_chain key="gkw_hvy_mk153_he.weapon" share_ammo="0"/>
+    <animation key="recoil" ref="40"/>
+    <animation key="cycle" animation_key="Brifle1"/>
+    <animation key="reload" ref="35"/>
+    <animation key="reload" stance_key="prone" animation_key="reloading, sniper1, prone"/>
+    <animation key="hold" ref="39"/>
+    <animation key="hold_on_wall" ref="39"/>
     <sound key="fire" fileref="mk153_fire_FromBFH.wav" volume="1.5"/>
-    <sound key="cycle" fileref="" />
-    <sound key="magazine_out" fileref="mk153_mgz_out_FromSQUAD.wav" />
-    <sound key="magazine_in" fileref="mk153_mgz_in_FromSQUAD.wav" />
-    <sound key="cycle_out" fileref="" />
-    <sound key="cycle_in" fileref="" />
-    <sound class="impact" fileref="rifle_drop.wav" />
-    <model filename="gkw_hvy_mk153.xml" />
-    <ballistics near_far_distance="1000.0" speed_estimation_near="100.0" speed_estimation_far="100.0" max_speed="125.0" randomness="0.0" />
-    <projectile file="mk153_HEAT.projectile" />
-    <weak_hand_hold offset="0.3" />
-    <commonness value="0.00001"  />
-    <hud_icon filename="gkw_mk153.png" />
-    <capacity value="0" source="rank" source_value="0.0" />
-    <capacity value="1" source="rank" source_value="3.457" />
-    <effect class="muzzle" ref="LawMuzzle" />
-    <effect class="muzzle" ref="UpDust" />
-    <stance state_key="running" accuracy="0.9" />
-    <stance state_key="walking" accuracy="0.9" />
-    <stance state_key="crouch_moving" accuracy="0.9" />
-    <stance state_key="standing" accuracy="1" />
-    <stance state_key="crouching" accuracy="1" />
-    <stance state_key="prone" accuracy="1" />
-    <stance state_key="prone_moving" accuracy="0.9" />
-    <stance state_key="over_wall" accuracy="1" />
-    <modifier class="speed" value="0" />
+    <sound key="cycle" fileref=""/>
+    <sound key="magazine_out" fileref="mk153_mgz_out_FromSQUAD.wav"/>
+    <sound key="magazine_in" fileref="mk153_mgz_in_FromSQUAD.wav"/>
+    <sound key="cycle_out" fileref=""/>
+    <sound key="cycle_in" fileref=""/>
+    <sound class="impact" fileref="rifle_drop.wav"/>
+    <model filename="gkw_hvy_mk153.xml"/>
+    <ballistics near_far_distance="1000.0" speed_estimation_near="100.0" speed_estimation_far="100.0" max_speed="125.0" randomness="0.0"/>
+    <projectile file="mk153_HEAT.projectile"/>
+    <weak_hand_hold offset="0.3"/>
+    <hud_icon filename="gkw_mk153.png"/>
+    <capacity value="0" source="rank" source_value="0.0"/>
+    <capacity value="1" source="rank" source_value="3.457"/>
+    <effect class="muzzle" ref="LawMuzzle"/>
+    <effect class="muzzle" ref="UpDust"/>
+    <stance state_key="running" accuracy="1.0"/>
+    <stance state_key="walking" accuracy="1.0"/>
+    <stance state_key="crouch_moving" accuracy="1.0"/>
+    <stance state_key="standing" accuracy="1"/>
+    <stance state_key="crouching" accuracy="1"/>
+    <stance state_key="prone" accuracy="1"/>
+    <stance state_key="prone_moving" accuracy="1.0"/>
+    <stance state_key="over_wall" accuracy="1"/>
+    <modifier class="speed" value="0"/>
+    <tag name="bazooka"/>
+    <commonness value="0.2" in_stock="1" can_respawn_with="1"/>
+    <animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
+    <animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
+    <animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
+    <animation key="recoil" animation_key="recoil1"/>
+    <animation key="recoil" animation_key="recoil2"/>
+    <animation key="recoil" animation_key="recoil3"/>
+
+    <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
+    <target_factors tag="heavy_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0"/>
+    <target_factors tag="light_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="6.0"/>
+    <target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="5.0"/>
+    <target_factors tag="shield" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
 </weapon>
