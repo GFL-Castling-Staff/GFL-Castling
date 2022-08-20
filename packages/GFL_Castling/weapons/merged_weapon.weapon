@@ -8897,7 +8897,7 @@
 </weapon>
 
 <weapon key="gkw_m1a1.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification accuracy_factor="1" barrel_offset="0.8" class="4" burst_shots="1" slot="0" magazine_size="15" name="M1A1" projectile_speed="177.66" retrigger_time="-1" last_burst_retrigger_time="0.1" suppressed="0" sustained_fire_diminish_rate="1.6" sustained_fire_grow_step="0.35" sight_range_modifier="2" stab_enabled="1" carry_in_two_hands="1"/>
+	<specification accuracy_factor="1" barrel_offset="0.8" class="4" burst_shots="1" slot="0" magazine_size="15" name="M1A1" projectile_speed="220.66" retrigger_time="-1" last_burst_retrigger_time="0.1" suppressed="0" sustained_fire_diminish_rate="1.6" sustained_fire_grow_step="0.35" sight_range_modifier="2" stab_enabled="1" carry_in_two_hands="1"/>
 	<inventory buy_price="7.0" sell_price="7.0"/>
 	<effect class="muzzle" ref="ejection_76251"/>
 	<animation state_key="reload" animation_key="reloading, magazine rifle 1.8"/>
@@ -18222,7 +18222,7 @@
 </weapon>
 
 <weapon key="gkw_m2_m1a1.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification accuracy_factor="0.85" barrel_offset="0.8" class="4" burst_shots="1" slot="0" magazine_size="15" name="M1A1(m2)" projectile_speed="127.66" retrigger_time="-1" last_burst_retrigger_time="0.15" suppressed="0" sustained_fire_diminish_rate="1.6" sustained_fire_grow_step="0.6" sight_range_modifier="0.8" stab_enabled="1" carry_in_two_hands="1"/>
+	<specification accuracy_factor="0.85" barrel_offset="0.8" class="4" burst_shots="1" slot="0" magazine_size="15" name="M1A1(m2)" projectile_speed="200.66" retrigger_time="-1" last_burst_retrigger_time="0.15" suppressed="0" sustained_fire_diminish_rate="1.6" sustained_fire_grow_step="0.6" sight_range_modifier="0.8" stab_enabled="1" carry_in_two_hands="1"/>
 	<next_in_chain key="gkw_hvy_m2.weapon" share_ammo="0"/>
 	<inventory buy_price="420.0" sell_price="10.0"/>
 	<commonness in_stock="0" can_respawn_with="1"/>
@@ -18236,7 +18236,7 @@
 	<hud_icon filename="gkw_m1a1.png"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="1.5" kill_decay_start_time="0.825" kill_decay_end_time="1.375"/>
+	<result class="hit" kill_probability="2.2" kill_probability_offset_on_successful_hit="2.4" kill_decay_start_time="0.825" kill_decay_end_time="1.375"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.3"/>
 	<stance state_key="walking" accuracy="0.7"/>
