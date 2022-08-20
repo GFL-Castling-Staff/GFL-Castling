@@ -50,7 +50,7 @@
     <stance state_key="over_wall" accuracy="1"/>
     <modifier class="speed" value="0"/>
     <tag name="bazooka"/>
-    <commonness value="0.2" in_stock="1" can_respawn_with="1"/>
+	<commonness value="0" in_stock="0" can_respawn_with="1"/>
     <animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
     <animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
     <animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
