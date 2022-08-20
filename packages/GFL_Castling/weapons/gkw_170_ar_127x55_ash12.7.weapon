@@ -28,6 +28,7 @@
         <projectile file="bullet.projectile">
             <result class="hit"  kill_probability="2.2" kill_probability_offset_on_successful_hit="4.5" kill_decay_start_time="0.08" kill_decay_end_time="0.6" />
         </projectile>
+        <effect class="muzzle" ref="ejection_76251"/>
         <stance state_key="running" accuracy="0.45" />
         <stance state_key="walking" accuracy="0.75" />
         <stance state_key="crouch_moving" accuracy="0.9" />
@@ -67,6 +68,7 @@
         <projectile file="bullet.projectile">
             <result class="blast" radius="2.5" damage="2.5" push="0.1" decal="1" faction_compare="not_equal" />
         </projectile>
+        <effect class="muzzle" ref="ejection_76251"/>
         <stance state_key="running" accuracy="0.45" />
         <stance state_key="walking" accuracy="0.75" />
         <stance state_key="crouch_moving" accuracy="0.9" />

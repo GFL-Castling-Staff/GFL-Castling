@@ -47,7 +47,8 @@
         kill_decay_start_time="1.3" 
         kill_decay_end_time="1.6235" />
     </projectile>
-    
+    <effect class="muzzle" ref="ejection_556" />
+
     <!--Accuracy, Movement speed-->
     <modifier class="speed" value="0.3" />
 

@@ -51,7 +51,7 @@
     <projectile file="ntw.projectile">
         <result class="blast" damage="8"   radius="3.5" decal="1" push="0.2" character_state="death" faction_compare="not_equal"/>
     </projectile>
-    
+    <effect class="muzzle" ref="ejection_50BMG" />
     <!--Accuracy, Movement speed-->
 
 	<stance state_key="walking" accuracy="0.65" />

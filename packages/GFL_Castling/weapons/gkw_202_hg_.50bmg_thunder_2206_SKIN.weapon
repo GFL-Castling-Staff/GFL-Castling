@@ -88,7 +88,7 @@
     <effect class="muzzle" ref="coeus" />
     <effect class="muzzle" ref="coeusphere" />
     <effect class="muzzle" ref="coeusmuzzle" lighting="0" />
-
+    <effect class="muzzle" ref="ejection_50BMG" />
 	<stance state_key="running" accuracy="0.5" />
 	<stance state_key="walking" accuracy="0.85" />
 	<stance state_key="crouch_moving" accuracy="0.8" />

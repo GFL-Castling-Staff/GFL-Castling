@@ -38,6 +38,7 @@
         <effect class="result" key="static_object" copy="terrain"/>
         <effect class="result" key="vehicle" copy="terrain"/>
     </projectile>
+    <effect class="muzzle" ref="ejection_50BMG" />
     <!--Accuracy, Movement speed-->
     <stance state_key="running" accuracy="0.3" />
     <stance state_key="crouch_moving" accuracy="0.3" />
@@ -89,6 +90,7 @@
         <effect class="result" key="static_object" copy="terrain"/>
         <effect class="result" key="vehicle" copy="terrain"/>
     </projectile>
+    <effect class="muzzle" ref="ejection_50BMG" />
     <!--Accuracy, Movement speed-->
     <stance state_key="running" accuracy="0.3" />
     <stance state_key="crouch_moving" accuracy="0.6" />
