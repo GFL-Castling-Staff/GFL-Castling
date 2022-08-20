@@ -34,7 +34,6 @@
     <effect class="result" key="terrain" ref="Godray" lighting="0" />
     <effect class="result" key="terrain" ref="ShadowSmoke" shadow="1" />
 	<effect class="result" key="terrain" ref="woosh" post_processing="0" shadow="0" />  
-	<effect class="result" key="terrain" ref="woosh" post_processing="0" shadow="0" />  
     <effect class="result" type="splat_map" surface_tag="" size="5.0" atlas_index="0" layer="1" />
     <effect class="result" type="splat_map" surface_tag="" size="6.5" atlas_index="4" layer="0" />
     <effect class="result" type="splat_map" surface_tag="" size="8.0" atlas_index="0" layer="2" additive="0" /> <!-- remove top snow everywhere -->
