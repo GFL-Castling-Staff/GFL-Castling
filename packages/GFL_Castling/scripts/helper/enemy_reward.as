@@ -192,7 +192,7 @@ dictionary reward_pool_list= {
     {"","common"}
 };
 
-array<ScoredResource@>@ reward_pool_common ={
+array<ScoredResource@> reward_pool_common ={
     ScoredResource("city_gifts.drop_reward", "grenade", 1.0f),
     ScoredResource("wild_gifts.drop_reward", "grenade", 1.0f), 
     ScoredResource("snow_gifts.drop_reward", "grenade", 1.0f), 
@@ -242,7 +242,7 @@ array<ScoredResource@>@ reward_pool_common ={
     ScoredResource("gift_box_1.drop_reward", "grenade", 1.0f)
 };
 
-array<ScoredResource@>@ reward_pool_uncommon ={
+array<ScoredResource@> reward_pool_uncommon ={
     ScoredResource("city_gifts.drop_reward", "grenade", 1.0f),
     ScoredResource("wild_gifts.drop_reward", "grenade", 1.0f), 
     ScoredResource("snow_gifts.drop_reward", "grenade", 1.0f), 
@@ -284,7 +284,7 @@ array<ScoredResource@>@ reward_pool_uncommon ={
     ScoredResource("gift_box_1.drop_reward", "grenade", 1.0f)
 };
 
-array<ScoredResource@>@ reward_pool_rare ={
+array<ScoredResource@> reward_pool_rare ={
     ScoredResource("city_gifts.drop_reward", "grenade", 1.0f),
     ScoredResource("wild_gifts.drop_reward", "grenade", 1.0f), 
     ScoredResource("snow_gifts.drop_reward", "grenade", 1.0f), 
@@ -312,7 +312,7 @@ array<ScoredResource@>@ reward_pool_rare ={
     ScoredResource("gift_box_1.drop_reward", "grenade", 1.0f)
 };
 
-array<ScoredResource@>@ reward_pool_elite ={
+array<ScoredResource@> reward_pool_elite ={
     ScoredResource("city_gifts.drop_reward", "grenade", 2.0f),
     ScoredResource("wild_gifts.drop_reward", "grenade", 2.0f), 
     ScoredResource("snow_gifts.drop_reward", "grenade", 2.0f), 
@@ -322,7 +322,7 @@ array<ScoredResource@>@ reward_pool_elite ={
     ScoredResource("painting.drop_reward", "grenade", 0.1f)
 };
 
-array<ScoredResource@>@ reward_pool_boss ={
+array<ScoredResource@> reward_pool_boss ={
     ScoredResource("city_gifts.drop_reward", "grenade", 2.0f),
     ScoredResource("wild_gifts.drop_reward", "grenade", 2.0f), 
     ScoredResource("snow_gifts.drop_reward", "grenade", 2.0f), 
@@ -332,4 +332,21 @@ array<ScoredResource@>@ reward_pool_boss ={
     ScoredResource("painting.drop_reward", "grenade", 0.2f),
     ScoredResource("gift_box_community_2.drop_reward", "grenade", 0.05f),
     ScoredResource("gift_box_1.drop_reward", "grenade", 0.4f)    
+};
+
+array<string> SFbossList ={
+    "sf_hunter",
+    "sf_architect",
+    "sfw_Intruder",
+    "sfw_Dreamer",
+    "sfw_Alchemist",
+    "sfw_Gager",
+    "sfw_Excutioner-Wind_rose",
+    "sfw_Excutioner-Queen_of_the_Moon",
+    "sfw_M16A1",
+    "sfw_Agent",
+    "sfw_Destroyer",
+    "sfw_Weaver",
+    "sfw_Justice",
+    "sfw_Scarecrow"
 };

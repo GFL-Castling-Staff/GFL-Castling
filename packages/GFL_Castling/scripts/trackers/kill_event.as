@@ -273,6 +273,9 @@ class kill_event : Tracker {
                 }
             }
 
+            if(SFbossList.find(Solider_Name)>-1 && characterId > 0){
+                addCustomStatToCharacter(m_metagame,"sfboss_kill",characterId);
+            }
 
             if(KillerWeaponKey=="gkw_ppkmod3.weapon"){
                 // 乌鸦是猪，望周知
