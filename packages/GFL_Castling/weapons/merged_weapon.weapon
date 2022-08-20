@@ -2307,6 +2307,7 @@
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="2.0" kill_probability_offset_on_successful_hit="1.15" kill_decay_start_time="0.03" kill_decay_end_time="0.7"/>
 	</projectile>
+	<effect class="muzzle" ref="ejection_556"/>
 	<stance state_key="running" accuracy="0.85"/>
 	<stance state_key="walking" accuracy="0.85"/>
 	<stance state_key="crouch_moving" accuracy="0.9"/>
@@ -2534,6 +2535,7 @@
 	<effect class="result" key="static_object" copy="terrain"/>
 	<effect class="result" key="vehicle" copy="terrain"/>
 	</projectile>
+	<effect class="muzzle" ref="ejection_50BMG"/>
 	<stance state_key="running" accuracy="0.3"/>
 	<stance state_key="crouch_moving" accuracy="0.3"/>
 	<stance state_key="prone_moving" accuracy="0.5"/>
@@ -2594,6 +2596,7 @@
 	<effect class="result" key="static_object" copy="terrain"/>
 	<effect class="result" key="vehicle" copy="terrain"/>
 	</projectile>
+	<effect class="muzzle" ref="ejection_50BMG"/>
 	<stance state_key="running" accuracy="0.3"/>
 	<stance state_key="crouch_moving" accuracy="0.6"/>
 	<stance state_key="prone_moving" accuracy="0.9"/>
@@ -2706,8 +2709,9 @@
 	<hud_icon filename="gkw_sl8.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="1.6" kill_probability_offset_on_successful_hit="3.4" kill_decay_start_time="1.448" kill_decay_end_time="2.414"/>
+	<result class="hit" kill_probability="2.0" kill_probability_offset_on_successful_hit="3.4" kill_decay_start_time="1.448" kill_decay_end_time="2.414"/>
 	</projectile>
+	<effect class="muzzle" ref="ejection_556"/>
 	<stance state_key="walking" accuracy="0.5"/>
 	<stance state_key="crouch_moving" accuracy="0.4"/>
 	<stance state_key="prone_moving" accuracy="0.4"/>
@@ -2874,6 +2878,7 @@
 	<projectile file="ntw.projectile">
 	<result class="blast" damage="8" radius="3.5" decal="1" push="0.2" character_state="death" faction_compare="not_equal"/>
 	</projectile>
+	<effect class="muzzle" ref="ejection_50BMG"/>
 	<stance state_key="walking" accuracy="0.65"/>
 	<stance state_key="crouch_moving" accuracy="0.8"/>
 	<stance state_key="prone_moving" accuracy="0.8"/>
@@ -4310,7 +4315,7 @@
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="2.6" kill_probability_offset_on_successful_hit="2.0" kill_decay_start_time="1.0" kill_decay_end_time="2.0"/>
 	</projectile>
-	<effect class="muzzle" ref="ejection_76251"/>
+	<effect class="muzzle" ref="ejection_50BMG"/>
 	<stance state_key="running" accuracy="0.6"/>
 	<stance state_key="walking" accuracy="0.6"/>
 	<stance state_key="crouch_moving" accuracy="0.6"/>
@@ -4369,7 +4374,7 @@
 	<effect class="result" key="static_object" copy="terrain"/>
 	<effect class="result" key="vehicle" copy="terrain"/>
 	</projectile>
-	<effect class="muzzle" ref="ejection_76251"/>
+	<effect class="muzzle" ref="ejection_50BMG"/>
 	<stance state_key="running" accuracy="0.3"/>
 	<stance state_key="crouch_moving" accuracy="0.3"/>
 	<stance state_key="prone_moving" accuracy="0.5"/>
@@ -5718,6 +5723,7 @@
 	<projectile file="bullet.projectile" can_be_detected_by_footmen="0">
 	<result class="hit" kill_probability="1.85" kill_probability_offset_on_successful_hit="1.45" kill_decay_start_time="1.3" kill_decay_end_time="1.6235"/>
 	</projectile>
+	<effect class="muzzle" ref="ejection_556"/>
 	<modifier class="speed" value="0.3"/>
 	<stance state_key="running" accuracy="0.88"/>
 	<stance state_key="walking" accuracy="0.88"/>
@@ -6656,6 +6662,7 @@
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="2.2" kill_probability_offset_on_successful_hit="4.5" kill_decay_start_time="0.08" kill_decay_end_time="0.6"/>
 	</projectile>
+	<effect class="muzzle" ref="ejection_76251"/>
 	<stance state_key="running" accuracy="0.45"/>
 	<stance state_key="walking" accuracy="0.75"/>
 	<stance state_key="crouch_moving" accuracy="0.9"/>
@@ -6713,6 +6720,7 @@
 	<projectile file="bullet.projectile">
 	<result class="blast" radius="2.5" damage="2.5" push="0.1" decal="1" faction_compare="not_equal"/>
 	</projectile>
+	<effect class="muzzle" ref="ejection_76251"/>
 	<stance state_key="running" accuracy="0.45"/>
 	<stance state_key="walking" accuracy="0.75"/>
 	<stance state_key="crouch_moving" accuracy="0.9"/>
@@ -9053,9 +9061,9 @@
 </weapon>
 
 <weapon key="gkw_ar57.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification accuracy_factor="0.98" barrel_offset="0.4" class="0" magazine_size="50" name="AR57" projectile_speed="215" retrigger_time="0.12" suppressed="0" sight_range_modifier="1.75" sustained_fire_diminish_rate="1.5" sustained_fire_grow_step="0.3"/>
+	<specification accuracy_factor="0.98" barrel_offset="0.4" class="0" magazine_size="50" name="AR57" projectile_speed="215" retrigger_time="0.12" suppressed="0" sight_range_modifier="1.75" sustained_fire_diminish_rate="3.0" sustained_fire_grow_step="0.15"/>
 	<inventory encumbrance="10.0" buy_price="57.0" sell_price="57.0"/>
-	<animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
+	<animation key="reload" animation_key="reloading, magazine rifle 1.5"/>
 	<next_in_chain key="gkw_ar57_skill.weapon" share_ammo="1"/>
 	<sound key="fire" fileref="ar57_fire_FromIRONSIGHT.wav" pitch_variety="0.05" volume="1"/>
 	<sound key="magazine_out" fileref="ar57_mgz_out_FromKF2.wav" volume="1.1"/>
@@ -9068,6 +9076,7 @@
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="1.8" kill_probability_offset_on_successful_hit="1.5" kill_decay_start_time="2.0" kill_decay_end_time="2.0"/>
 	</projectile>
+	<effect class="muzzle" ref="ejection_556"/>
 	<tag name="autorifle"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<animation key="recoil" animation_key="recoil1"/>
@@ -9080,7 +9089,7 @@
 	<animation state_key="celebrate_shoot" animation_key="celebrating, shooting"/>
 	<animation state_key="stabbing" animation_key="melee, quick knife"/>
 	<animation state_key="stabbing" animation_key="pistol whip 3"/>
-	<stance state_key="running" accuracy="0.65"/>
+	<stance state_key="running" accuracy="0.75"/>
 	<stance state_key="walking" accuracy="0.75"/>
 	<stance state_key="crouch_moving" accuracy="0.75"/>
 	<stance state_key="standing" accuracy="0.85"/>
@@ -9101,7 +9110,7 @@
 <weapon key="gkw_ar57_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<specification accuracy_factor="0.98" barrel_offset="0.4" class="0" magazine_size="50" name="AR57-[Complex Modification]" projectile_speed="200" retrigger_time="0.075" suppressed="0" sight_range_modifier="1.0" sustained_fire_diminish_rate="1.5" sustained_fire_grow_step="0.15"/>
 	<inventory encumbrance="10.0" buy_price="57.0" sell_price="57.0"/>
-	<animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
+	<animation key="reload" animation_key="reloading, magazine rifle 0.9"/>
 	<next_in_chain key="gkw_ar57.weapon" share_ammo="1"/>
 	<sound key="fire" fileref="ar57_fire_FromIRONSIGHT.wav" pitch_variety="0.05" volume="1"/>
 	<sound key="magazine_out" fileref="ar57_mgz_out_FromKF2.wav" volume="1.1"/>
@@ -9114,8 +9123,9 @@
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="2.1" kill_probability_offset_on_successful_hit="1.15" kill_decay_start_time="0" kill_decay_end_time="0.3"/>
 	</projectile>
+	<effect class="muzzle" ref="ejection_556"/>
 	<tag name="smg"/>
-	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
+	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<animation key="recoil" animation_key="recoil1"/>
 	<animation key="recoil" animation_key="recoil2"/>
 	<animation key="recoil" animation_key="recoil3"/>
@@ -9126,8 +9136,8 @@
 	<animation state_key="celebrate_shoot" animation_key="celebrating, shooting"/>
 	<animation state_key="stabbing" animation_key="melee, quick knife"/>
 	<animation state_key="stabbing" animation_key="pistol whip 3"/>
-	<stance state_key="running" accuracy="0.75"/>
-	<stance state_key="walking" accuracy="0.75"/>
+	<stance state_key="running" accuracy="0.65"/>
+	<stance state_key="walking" accuracy="0.7"/>
 	<stance state_key="crouch_moving" accuracy="0.75"/>
 	<stance state_key="standing" accuracy="0.85"/>
 	<stance state_key="crouching" accuracy="0.9"/>
@@ -9908,6 +9918,7 @@
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="1.25" kill_decay_start_time="0.138" kill_decay_end_time="0.231"/>
 	</projectile>
+	<effect class="muzzle" ref="ejection_9mm"/>
 	<stance state_key="running" accuracy="0.8"/>
 	<stance state_key="walking" accuracy="0.85"/>
 	<stance state_key="crouch_moving" accuracy="0.8"/>
@@ -11699,6 +11710,7 @@
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="1.3" kill_probability_offset_on_successful_hit="2.5" kill_decay_start_time="0.1" kill_decay_end_time="0.6"/>
 	</projectile>
+	<effect class="muzzle" ref="ejection_9mm"/>
 	<stance state_key="running" accuracy="0.85"/>
 	<stance state_key="walking" accuracy="0.9"/>
 	<stance state_key="crouch_moving" accuracy="0.9"/>
@@ -11753,6 +11765,7 @@
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="1.3" kill_probability_offset_on_successful_hit="2.5" kill_decay_start_time="0.1" kill_decay_end_time="0.6"/>
 	</projectile>
+	<effect class="muzzle" ref="ejection_9mm"/>
 	<stance state_key="running" accuracy="0.85"/>
 	<stance state_key="walking" accuracy="0.9"/>
 	<stance state_key="crouch_moving" accuracy="0.9"/>
@@ -11814,6 +11827,7 @@
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="1.3" kill_probability_offset_on_successful_hit="2.5" kill_decay_start_time="0.1" kill_decay_end_time="0.6"/>
 	</projectile>
+	<effect class="muzzle" ref="ejection_9mm"/>
 	<stance state_key="running" accuracy="0.85"/>
 	<stance state_key="walking" accuracy="0.9"/>
 	<stance state_key="crouch_moving" accuracy="0.9"/>
@@ -13673,6 +13687,7 @@
 	<effect class="muzzle" ref="coeus"/>
 	<effect class="muzzle" ref="coeusphere"/>
 	<effect class="muzzle" ref="coeusmuzzle" lighting="0"/>
+	<effect class="muzzle" ref="ejection_50BMG"/>
 	<stance state_key="running" accuracy="0.5"/>
 	<stance state_key="walking" accuracy="0.85"/>
 	<stance state_key="crouch_moving" accuracy="0.8"/>
@@ -17586,7 +17601,7 @@
 </weapon>
 
 <weapon key="gkw_spas15_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1" accuracy_factor="1.0" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="1.7" magazine_size="8" can_shoot_standing="1" suppressed="0" name="SPAS-15-[Sonic Resonance]" class="4" reload_one_at_a_time="0" sight_range_modifier="0.75" projectile_speed="100" barrel_offset="0.4" projectiles_per_shot="10" spread_range="0.10" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="0.25" slot="0" use_basic_muzzle_smoke_effect="0"/>
+	<specification retrigger_time="-1" accuracy_factor="1.0" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="1.7" magazine_size="8" can_shoot_standing="1" suppressed="0" name="SPAS-15-[Sonic Resonance]" class="4" reload_one_at_a_time="0" sight_range_modifier="0.6" projectile_speed="100" barrel_offset="0.4" projectiles_per_shot="10" spread_range="0.2" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="0.25" slot="0" use_basic_muzzle_smoke_effect="0"/>
 	<inventory encumbrance="10.0" buy_price="86" sell_price="86"/>
 	<next_in_chain key="gkw_spas15.weapon" share_ammo="1"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.8"/>
@@ -17602,7 +17617,7 @@
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="2.4" kill_probability_offset_on_successful_hit="1.5" kill_decay_start_time="0" kill_decay_end_time="0.6"/>
 	</projectile>
-	<modifier class="speed" value="-0.3"/>
+	<modifier class="speed" value="-0.35"/>
 	<modifier class="detectability" value="0.45"/>
 	<tag name="shotgun"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -17640,7 +17655,7 @@
 	<animation state_key="walking_backwards" animation_key="walking backwards, hip fire"/>
 	<animation state_key="celebrate_shoot" animation_key="celebrating, shooting"/>
 	<animation state_key="stabbing" animation_key="melee, bayonet"/>
-	<modifier class="hit_success_probability" value="-0.4"/>
+	<modifier class="hit_success_probability" value="-0.3"/>
 </weapon>
 
 <weapon key="target.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
@@ -18215,8 +18230,8 @@
 	<sound key="magazine_in" fileref="dry_fire.wav" volume="0.7"/>
 	<sound key="cycle" fileref="portable_mortar_reload.wav" volume="0.7"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
-	<inventory buy_price="420.0" sell_price="10.0"/>
-	<commonness value="0.00001"/>
+	<inventory encumbrance="50.0" buy_price="420.0" sell_price="420.0"/>
+	<commonness value="0.2" in_stock="1" can_respawn_with="1"/>
 	<model filename="gkw_hvy_m2mortar.xml"/>
 	<hud_icon filename="gkw_m2.png"/>
 	<capacity value="0" source="rank" source_value="0.0"/>
@@ -18233,52 +18248,36 @@
 	<stance state_key="standing" accuracy="0.5"/>
 	<stance state_key="crouching" accuracy="1.0"/>
 	<stance state_key="prone" accuracy="1.0"/>
+	<stance state_key="over_wall" accuracy="1"/>
 	<modifier class="speed" value="-3.0"/>
 	<tag name="bazooka"/>
-	<commonness value="0.2" in_stock="1" can_respawn_with="1"/>
-	<inventory encumbrance="50.0" buy_price="1.0" sell_price="0.0"/>
-	<capacity value="1" source="rank" source_value="0.0"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
-	<animation key="recoil" animation_key="recoil1"/>
-	<animation key="recoil" animation_key="recoil2"/>
-	<animation key="recoil" animation_key="recoil3"/>
-	<stance state_key="running" accuracy="0.3"/>
-	<stance state_key="walking" accuracy="0.675"/>
-	<stance state_key="crouch_moving" accuracy="0.75"/>
-	<stance state_key="standing" accuracy="0.85"/>
-	<stance state_key="crouching" accuracy="0.9"/>
-	<stance state_key="prone" accuracy="0.95"/>
-	<stance state_key="prone_moving" accuracy="0.3"/>
-	<stance state_key="over_wall" accuracy="1"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
 	<target_factors tag="heavy_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0"/>
 	<target_factors tag="light_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="6.0"/>
 	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="5.0"/>
 	<target_factors tag="shield" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
-	<modifier class="speed" value="-0.4"/>
 </weapon>
 
 <weapon key="gkw_hvy_m2_ai.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<specification retrigger_time="-1" accuracy_factor="0.85" sight_range_modifier="5" sight_height_offset="4.9" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="0.3" magazine_size="1" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="0" suppressed="0" name="M2 Mortar" class="0" projectile_speed="100.0" barrel_offset="0.6" projectiles_per_shot="1" spread_range="0.05" slot="0"/>
+	<next_in_chain key="gkw_m2_m1a1.weapon" share_ammo="0"/>
 	<animation state_key="recoil" animation_key="recoil, portable mortar"/>
 	<animation state_key="crouching" animation_key="crouch, still, portable mortar"/>
 	<animation state_key="reload" animation_key="reloading, portable mortar"/>
-	<animation state_key="hold" animation_key="still, angled"/>
-	<animation state_key="hold_on_wall" animation_key="still, angled"/>
-	<animation state_key="still_against_wall" animation_key="still, angled"/>
-	<animation state_key="hold_casual" animation_key="still, angled"/>
-	<animation state_key="running" animation_key="walking, angled"/>
-	<animation state_key="walking" animation_key="walking, angled"/>
-	<animation state_key="walking_backwards" animation_key="walking backwards, angled"/>
-	<sound key="fire" fileref="GeneralPurposeMortar_fire_FromSQUAD.wav" pitch_variety="0.1"/>
+	<animation state_key="hold" animation_key="crouch, still, portable mortar"/>
+	<animation state_key="hold_on_wall" animation_key="crouch, still, portable mortar"/>
+	<animation state_key="still_against_wall" animation_key="crouch, still, portable mortar"/>
+	<animation state_key="hold_casual" animation_key="crouch, still, portable mortar"/>
+	<animation state_key="running" animation_key="crouch, still, portable mortar"/>
+	<animation state_key="walking" animation_key="crouch, still, portable mortar"/>
+	<animation state_key="walking_backwards" animation_key="crouch, still, portable mortar"/>
+	<sound key="fire" fileref="m2_mortar_fire.wav" pitch_variety="0.1" volume="1.2"/>
 	<sound key="magazine_out" fileref="portable_mortar_reload.wav" volume="0.7"/>
 	<sound key="magazine_in" fileref="dry_fire.wav" volume="0.7"/>
 	<sound key="cycle" fileref="portable_mortar_reload.wav" volume="0.7"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
-	<inventory buy_price="420.0" sell_price="10.0"/>
-	<commonness value="0.0000001" in_stock="0" can_respawn_with="0"/>
+	<inventory encumbrance="50.0" buy_price="420.0" sell_price="420.0"/>
+	<commonness value="0.2" in_stock="1" can_respawn_with="1"/>
 	<model filename="gkw_hvy_m2mortar.xml"/>
 	<hud_icon filename="gkw_m2.png"/>
 	<capacity value="0" source="rank" source_value="0.0"/>
@@ -18295,31 +18294,13 @@
 	<stance state_key="standing" accuracy="0.5"/>
 	<stance state_key="crouching" accuracy="1.0"/>
 	<stance state_key="prone" accuracy="1.0"/>
-	<modifier class="speed" value="-0.5"/>
-	<tag name="bazooka"/>
-	<commonness value="0.2" in_stock="1" can_respawn_with="1"/>
-	<inventory encumbrance="50.0" buy_price="1.0" sell_price="0.0"/>
-	<capacity value="1" source="rank" source_value="0.0"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
-	<animation key="recoil" animation_key="recoil1"/>
-	<animation key="recoil" animation_key="recoil2"/>
-	<animation key="recoil" animation_key="recoil3"/>
-	<stance state_key="running" accuracy="0.3"/>
-	<stance state_key="walking" accuracy="0.675"/>
-	<stance state_key="crouch_moving" accuracy="0.75"/>
-	<stance state_key="standing" accuracy="0.85"/>
-	<stance state_key="crouching" accuracy="0.9"/>
-	<stance state_key="prone" accuracy="0.95"/>
-	<stance state_key="prone_moving" accuracy="0.3"/>
 	<stance state_key="over_wall" accuracy="1"/>
+	<tag name="bazooka"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
 	<target_factors tag="heavy_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0"/>
 	<target_factors tag="light_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="6.0"/>
 	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="5.0"/>
 	<target_factors tag="shield" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
-	<modifier class="speed" value="-0.4"/>
 </weapon>
 
 <weapon key="gkw_m2_m1a1.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
@@ -22631,6 +22612,7 @@
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="2.1" kill_probability_offset_on_successful_hit="0.75" kill_decay_start_time="0.75" kill_decay_end_time="1.333"/>
 	</projectile>
+	<effect class="muzzle" ref="ejection_556"/>
 	<stance state_key="running" accuracy="0.5"/>
 	<stance state_key="walking" accuracy="0.8"/>
 	<stance state_key="crouch_moving" accuracy="0.8"/>
@@ -22686,6 +22668,7 @@
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="2.4" kill_probability_offset_on_successful_hit="1.75" kill_decay_start_time="0.75" kill_decay_end_time="1.333"/>
 	</projectile>
+	<effect class="muzzle" ref="ejection_556"/>
 	<stance state_key="running" accuracy="0.8"/>
 	<stance state_key="walking" accuracy="0.8"/>
 	<stance state_key="crouch_moving" accuracy="0.8"/>
@@ -22743,6 +22726,7 @@
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="2.1" kill_probability_offset_on_successful_hit="0.75" kill_decay_start_time="0.75" kill_decay_end_time="1.333"/>
 	</projectile>
+	<effect class="muzzle" ref="ejection_556"/>
 	<stance state_key="running" accuracy="0.5"/>
 	<stance state_key="walking" accuracy="0.8"/>
 	<stance state_key="crouch_moving" accuracy="0.8"/>
@@ -22798,6 +22782,7 @@
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="2.4" kill_probability_offset_on_successful_hit="1.75" kill_decay_start_time="0.75" kill_decay_end_time="1.333"/>
 	</projectile>
+	<effect class="muzzle" ref="ejection_556"/>
 	<stance state_key="running" accuracy="0.8"/>
 	<stance state_key="walking" accuracy="0.8"/>
 	<stance state_key="crouch_moving" accuracy="0.8"/>
@@ -22855,6 +22840,7 @@
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="2.1" kill_probability_offset_on_successful_hit="0.75" kill_decay_start_time="0.75" kill_decay_end_time="1.333"/>
 	</projectile>
+	<effect class="muzzle" ref="ejection_556"/>
 	<stance state_key="running" accuracy="0.5"/>
 	<stance state_key="walking" accuracy="0.8"/>
 	<stance state_key="crouch_moving" accuracy="0.8"/>
@@ -22910,6 +22896,7 @@
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="2.4" kill_probability_offset_on_successful_hit="1.75" kill_decay_start_time="0.75" kill_decay_end_time="1.333"/>
 	</projectile>
+	<effect class="muzzle" ref="ejection_556"/>
 	<stance state_key="running" accuracy="0.8"/>
 	<stance state_key="walking" accuracy="0.8"/>
 	<stance state_key="crouch_moving" accuracy="0.8"/>
@@ -25537,6 +25524,7 @@
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="2.0" kill_probability_offset_on_successful_hit="1.15" kill_decay_start_time="0.03" kill_decay_end_time="0.7"/>
 	</projectile>
+	<effect class="muzzle" ref="ejection_556"/>
 	<stance state_key="running" accuracy="0.85"/>
 	<stance state_key="walking" accuracy="0.85"/>
 	<stance state_key="crouch_moving" accuracy="0.9"/>
@@ -27221,6 +27209,7 @@
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="1.65" kill_decay_start_time="1.313" kill_decay_end_time="1.622"/>
 	</projectile>
+	<effect class="muzzle" ref="ejection_9mm"/>
 	<stance state_key="running" accuracy="0.5"/>
 	<stance state_key="walking" accuracy="0.65"/>
 	<stance state_key="crouch_moving" accuracy="0.8"/>
@@ -29943,6 +29932,7 @@
 	<effect class="muzzle" ref="coeus"/>
 	<effect class="muzzle" ref="coeusphere"/>
 	<effect class="muzzle" ref="coeusmuzzle" lighting="0"/>
+	<effect class="muzzle" ref="ejection_50BMG"/>
 	<stance state_key="running" accuracy="0.5"/>
 	<stance state_key="walking" accuracy="0.85"/>
 	<stance state_key="crouch_moving" accuracy="0.8"/>
@@ -30603,6 +30593,7 @@
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="1.3" kill_probability_offset_on_successful_hit="2.5" kill_decay_start_time="0.1" kill_decay_end_time="0.6"/>
 	</projectile>
+	<effect class="muzzle" ref="ejection_9mm"/>
 	<stance state_key="running" accuracy="0.85"/>
 	<stance state_key="walking" accuracy="0.9"/>
 	<stance state_key="crouch_moving" accuracy="0.9"/>
@@ -30657,6 +30648,7 @@
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="1.3" kill_probability_offset_on_successful_hit="2.5" kill_decay_start_time="0.1" kill_decay_end_time="0.6"/>
 	</projectile>
+	<effect class="muzzle" ref="ejection_9mm"/>
 	<stance state_key="running" accuracy="0.85"/>
 	<stance state_key="walking" accuracy="0.9"/>
 	<stance state_key="crouch_moving" accuracy="0.9"/>
@@ -41547,7 +41539,7 @@
 	<animation state_key="walking" animation_key="walking, hip fire"/>
 	<animation state_key="running" animation_key="walking, hip fire"/>
 	<animation state_key="celebrate_shoot" animation_key="celebrating, shooting"/>
-	<sound key="fire" fileref="streletplus_fire_FromTTF2.wav" pitch_variety="0.05" volume="1.4"/>
+	<sound key="fire" fileref="streletplus_fire_FromTTF2.wav" pitch_variety="0.05" volume="1.0"/>
 	<sound key="magazine_out" fileref="streletplus_mgz_out_FromTTF2.wav" volume="0.7"/>
 	<sound key="magazine_in" fileref="streletplus_mgz_in_FromTTF2.wav" volume="0.7"/>
 	<sound key="cycle" fileref="streletplus_cycle_FromTTF2.wav" volume="0.7"/>
@@ -41582,7 +41574,7 @@
 	<animation key="recoil" animation_key="recoil3"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.5"/>
 	<animation state_key="celebrate_shoot" animation_key="celebrating, shooting"/>
-	<sound key="fire" fileref="Strelet_fire_FromRE6.wav" pitch_variety="0.06" volume="1"/>
+	<sound key="fire" fileref="Strelet_fire_FromRE6.wav" pitch_variety="0.06" volume="0.75"/>
 	<sound key="magazine_out" fileref="Strelet_mgz_out_FromRE6.wav" volume="0.8"/>
 	<sound key="magazine_in" fileref="Strelet_mgz_in_FromRE6.wav" volume="0.8"/>
 	<sound key="cycle" fileref="Strelet_cycle_FromRE6.wav" volume="0.8"/>
@@ -41810,8 +41802,8 @@
 	<animation state_key="walking" animation_key="walking, hip fire"/>
 	<animation state_key="walking_backwards" animation_key="walking backwards, hip fire"/>
 	<animation state_key="celebrate_shoot" animation_key="celebrating, shooting"/>
-	<sound key="fire" fileref="thrower_fire_FromSAM4_1.wav" volume="1"/>
-	<sound key="fire" fileref="thrower_fire_FromSAM4_2.wav" volume="1"/>
+	<sound key="fire" fileref="thrower_fire_FromSAM4_1.wav" volume="0.85"/>
+	<sound key="fire" fileref="thrower_fire_FromSAM4_2.wav" volume="0.85"/>
 	<sound key="reload_one" fileref="Liberator_reload_FromCODOLRanger.wav" volume="0.7"/>
 	<sound key="cycle" fileref="Liberator_reload_FromCODOLRanger.wav"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
@@ -41945,7 +41937,7 @@
 	<animation state_key="crouch_moving" animation_key="crouch walking, large mecha"/>
 	<animation state_key="crouch_moving_backwards" animation_key="crouch walking, large mecha"/>
 	<animation state_key="running" animation_key="walking, doppelsoldner"/>
-	<sound key="fire" fileref="Doppelsoldner_fire_FromCOD13.wav" volume="1.2"/>
+	<sound key="fire" fileref="Doppelsoldner_fire_FromCOD13.wav" volume="1.0"/>
 	<sound key="cycle" fileref="mossberg500_cycle.wav"/>
 	<sound key="reload_one" fileref="Doppelsoldner_reload_FromCOD13.wav" volume="0.7"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
@@ -42002,7 +41994,7 @@
 	<animation state_key="still_against_wall" animation_key="hold, hip fire"/>
 	<animation state_key="walking" animation_key="walking, hip fire"/>
 	<animation state_key="running" animation_key="walking, hip fire"/>
-	<sound key="fire" fileref="adeline_fire_FromDOOMETRNAL.wav" pitch_variety="0.05" volume="1.3"/>
+	<sound key="fire" fileref="adeline_fire_FromDOOMETRNAL.wav" pitch_variety="0.05" volume="1.45"/>
 	<sound key="magazine_out" fileref="adeline_mgz_out_FromDOOMETERNAL.wav" volume="0.9"/>
 	<sound key="magazine_in" fileref="" volume="0.8"/>
 	<sound key="cycle" fileref="adeline_cycle_FromDOOMETERNAL.wav" volume="0.9"/>
