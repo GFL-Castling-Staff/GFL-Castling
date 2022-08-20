@@ -654,7 +654,7 @@ class GFLskill : Tracker {
 					playAnimationKey(m_metagame,characterId,"stabbing_roarer",false);
 					Vector3 pos = stringToVector3(event.getStringAttribute("position"));
 					TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
-					tasker.add(DelayProjectileSet(m_metagame,0.7,characterId,character.getIntAttribute("faction_id"),"roarer_main.projectile",pos));
+					tasker.add(DelayProjectileSet(m_metagame,0.6,characterId,character.getIntAttribute("faction_id"),"roarer_main.projectile",pos));
 				}
 				break;			
 			}

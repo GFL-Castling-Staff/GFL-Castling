@@ -97,11 +97,11 @@
         name="SPAS-15-[Sonic Resonance]"
         class="4"
         reload_one_at_a_time="0"
-        sight_range_modifier="0.75"
+        sight_range_modifier="0.6"
         projectile_speed="100"
         barrel_offset="0.4"
         projectiles_per_shot="10"
-        spread_range="0.10"
+        spread_range="0.2"
         stab_enabled="1"
         carry_in_two_hands="1"
         burst_shots="1"
@@ -126,7 +126,7 @@
         <projectile file="bullet.projectile">
             <result class="hit" kill_probability="2.4" kill_probability_offset_on_successful_hit="1.5" kill_decay_start_time="0" kill_decay_end_time="0.6"/>
         </projectile>
-        <modifier class="speed" value="-0.3"/>
+        <modifier class="speed" value="-0.35"/>
         <modifier class="detectability" value="0.45"/>
         <tag name="shotgun"/>
         <capacity value="1" source="rank" source_value="0.0"/>
@@ -164,6 +164,6 @@
         <animation state_key="walking_backwards" animation_key="walking backwards, hip fire"/>
         <animation state_key="celebrate_shoot" animation_key="celebrating, shooting"/>
         <animation state_key="stabbing" animation_key="melee, bayonet"/>
-        <modifier class="hit_success_probability" value="-0.4"/>
+        <modifier class="hit_success_probability" value="-0.3"/>
     </weapon>
 </weapons>

@@ -43,8 +43,8 @@
 	
 	<!--Sounds-->
 	
-    <sound key="fire" fileref="thrower_fire_FromSAM4_1.wav" volume="1" />
-	<sound key="fire" fileref="thrower_fire_FromSAM4_2.wav" volume="1" />
+    <sound key="fire" fileref="thrower_fire_FromSAM4_1.wav" volume="0.85" />
+	<sound key="fire" fileref="thrower_fire_FromSAM4_2.wav" volume="0.85" />
     <sound key="reload_one" fileref="Liberator_reload_FromCODOLRanger.wav" volume="0.7"  />
 	<sound key="cycle" fileref="Liberator_reload_FromCODOLRanger.wav" />
     <sound class="impact" fileref="rifle_drop.wav" />
