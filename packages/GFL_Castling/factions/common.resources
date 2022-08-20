@@ -4,115 +4,19 @@
 	<!-- 副武器类 -->
 	
 
-	<weapon key="deployable_vehicle.weapon" />
-	<weapon key="deployable_weapon.weapon" />
-	<weapon key="deployable_carry_item.weapon" />
-	<weapon key="deployable_rubber_boat.weapon" />
+
 	<weapon key="vest_repair.weapon" />
 	<weapon key="binoculars.weapon" />
-
-	<!-- <weapon key="vest_repair_quick.weapon"/> -->
-	<!-- <weapon key="riot_shield.weapon" />
-	<weapon key="cover_resource.weapon" />
-	<weapon key="mg_resource.weapon" />
-	<weapon key="tank_trap_resource.weapon" />
-	<weapon key="chicken_carrier.weapon" /> -->
-	
-	<weapon key="minig_resource.weapon" />
-	<weapon key="mortar_resource.weapon" />
-	<weapon key="tow_resource.weapon" />
-	<weapon key="gl_resource.weapon" />
-	<weapon key="humvee_gl.weapon" />
 	<weapon key="gkw_ltlx7000_icecream.weapon" />
+
 	<!-- 手雷类 -->
+
 	<!-- <projectile key="hand_grenade.projectile"/> -->
 	<!-- <projectile key="claymore.projectile" /> -->
 	<projectile key="flare.projectile" />
 	<projectile key="icecream.projectile" enabled="1" />
 	<projectile key="c4.projectile" />
 	
-	<!--	<weapon key="m79.weapon" /> -->
-	<!-- <weapon key="javelin.weapon" /> -->
-	<!-- <weapon key="m712.weapon" /> -->
-	<!-- <weapon key="model_29.weapon" /> -->
-	<!-- <weapon key="sawnoff.weapon" /> -->
-	<!-- <weapon key="beretta_93r.weapon" /> -->
-	<!-- <weapon key="claymore_resource.weapon" /> -->
-	<!-- <weapon key="wrench.weapon" enabled="0" /> -->
-	<!-- <weapon key="wrench_small.weapon" enabled="1" /> -->
-	<!-- <weapon key="mp7.weapon" /> -->
-	<!-- <weapon key="honey_badger.weapon" /> -->
-	<!-- <weapon key="m60e4.weapon" /> -->
-	<!-- <weapon key="mk23.weapon" enabled="0" /> -->
-	<!-- <weapon key="smaw.weapon" enabled="0" /> -->
-	<!-- <weapon key="ares_shrike.weapon" /> -->
-	<!-- <weapon key="tracer_dart.weapon" /> -->
-	<!-- <weapon key="taser.weapon" /> -->
-	<!-- <weapon key="flamethrower.weapon" /> -->
-	<!-- <weapon key="aa12_frag.weapon" /> -->
-	<!--  <weapon key="bandage.weapon" /> -->
-
-	<!-- <weapon key="dartgun.weapon" /> -->
-	<!-- <weapon key="fal_bayonet.weapon" /> -->
-	<!-- <weapon key="golden_knife.weapon" /> -->
-	<!-- <weapon key="javelin_ap.weapon" /> -->
-	<!-- <weapon key="l30p.weapon" /> -->
-	<!-- <weapon key="m16a4_support.weapon" /> -->
-	<!-- <weapon key="tti.weapon" /> -->
-
-	<!-- <weapon key="chainsaw.weapon" /> -->
-	<!-- <weapon key="ump40.weapon" /> -->
-	<!-- <weapon key="mx4_storm.weapon" /> -->
-	<!-- <weapon key="bizon.weapon" /> -->
-	<!-- <weapon key="dragons_breath.weapon" /> -->
-	<!-- <weapon key="enforcer.weapon" /> -->
-	<!-- <weapon key="gps_laptop.weapon" /> -->
-	<!-- <weapon key="hornet_resource.weapon" /> -->
-	<!-- <weapon key="repair_crane_resource.weapon" /> -->
-	<!-- <weapon key="squall.weapon" /> -->
-	<!-- <weapon key="vest_repair.weapon" /> -->
-
-
-	<!-- <weapon key="compound_bow.weapon" /> -->
-	<!-- <weapon key="blowgun.weapon" /> -->
-	<!-- <weapon key="g11.weapon" /> -->
-	<!-- <weapon key="pf98.weapon" /> -->
-	<!-- <weapon key="gepard_m6_lynx.weapon" /> -->
-	<!-- <weapon key="portable_mortar.weapon" /> -->
-	<!-- <weapon key="tkb059.weapon" /> -->
-	<!-- <weapon key="golden_ak47.weapon" /> -->
-
-
-	<!-- <weapon key="suomi.weapon" /> -->
-	<!-- <weapon key="p416.weapon" /> -->
-	<!-- <weapon key="ninjato.weapon" /> -->
-	<!-- <weapon key="squad_equipment_kit.weapon" /> -->
-
-	<!-- note, we have faction specific bazookas, therefore not included here -->
-
-	<!-- <carry_item key="vest3.carry_item" enabled="0" /> -->
-	<!-- <carry_item key="eodvest.carry_item" enabled="0" />  -->
-	<!-- <carry_item key="eodvest_ai.carry_item" enabled="0" />   -->
-
-	<!-- <carry_item key="camouflage_suit.carry_item" enabled="0" /> -->
-
-	<!-- <carry_item key="costume_were.carry_item" /> -->
-	<!-- <carry_item key="costume_clown.carry_item" /> -->
-	<!-- <carry_item key="costume_santa.carry_item" /> -->
-	<!-- <carry_item key="costume_lizard.carry_item" /> -->
-	<!-- <carry_item key="costume_underpants.carry_item" /> -->
-	<!-- <carry_item key="vest_blackops.carry_item" enabled="0" /> -->
-
-	<!-- <carry_item key="costume_banana.carry_item" /> -->
-	<!-- <carry_item key="camo_vest.carry_item" /> -->
-
-	<!-- <carry_item key="vest_exo.carry_item" /> -->
-
-	<!-- common vehicles -->
-
-	<!-- <vehicle key="humvee.vehicle" /> -->
-	<!-- <vehicle key="humvee_gl.vehicle" /> -->
-
 	<vehicle key="armored_truck.vehicle" />
 	<vehicle key="radar_truck.vehicle" />
 	<vehicle key="mobile_armory.vehicle" />
@@ -127,14 +31,7 @@
 	<vehicle key="cover1.vehicle" />
 	<vehicle key="cover2.vehicle" />
 
-	<vehicle key="deployable_mg.vehicle" />
-	<vehicle key="deployable_mg_2.vehicle" />
-	<vehicle key="deployable_minig.vehicle" />
-	<vehicle key="deployable_minig_2.vehicle" />
-	<vehicle key="mortar.vehicle" />
-	<vehicle key="mortar_2.vehicle" />
-	<vehicle key="deployable_gl.vehicle" />
-	<vehicle key="deployable_gl_2.vehicle" />
+
 
 	<vehicle key="radar_tower.vehicle" />
 	<vehicle key="gas_tank.vehicle" />
