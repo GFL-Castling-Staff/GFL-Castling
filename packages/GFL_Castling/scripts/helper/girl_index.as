@@ -47,7 +47,7 @@ dictionary tdoll_index = {
     {"39","gkw_m1891.weapon"},
     {"40",""},
     {"41",""},
-    {"42",""},
+    {"42","gkw_ptrd.weapon"},
     {"43","gkw_svd.weapon"},
     {"44","gkw_sv98.weapon"},
     {"46","gkw_98k.weapon"},
