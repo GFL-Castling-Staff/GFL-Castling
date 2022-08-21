@@ -118,20 +118,20 @@
     <modifier class="hit_success_probability" value="-0.15" />
     <modifier class="detectability" value="0.45" />
 
-    <sound key="stab" fileref="melee_swing_nothing1_fromFO4.wav" pitch_variety="0.05" volume="1.0" />
-    <sound key="stab" fileref="melee_swing_nothing2_fromFO4.wav" pitch_variety="0.05" volume="1.0" />
-    <sound key="stab" fileref="melee_swing_nothing3_fromFO4.wav" pitch_variety="0.05" volume="1.0" />
-    <sound key="stab" fileref="melee_swing_nothing4_fromFO4.wav" pitch_variety="0.05" volume="1.0" />
-    <sound key="fire" fileref="melee_swing_nothing1_fromFO4.wav" pitch_variety="0.05" volume="1.0" />
-    <sound key="fire" fileref="melee_swing_nothing2_fromFO4.wav" pitch_variety="0.05" volume="1.0" />
-    <sound key="fire" fileref="melee_swing_nothing3_fromFO4.wav" pitch_variety="0.05" volume="1.0" />
-    <sound key="fire" fileref="melee_swing_nothing4_fromFO4.wav" pitch_variety="0.05" volume="1.0" />
-	<sound key="stab_hit" fileref="melee_impact_flesh1_fromFO4.wav" pitch_variety="0.05" volume="1.0" />
-	<sound key="stab_hit" fileref="melee_impact_flesh2_fromFO4.wav" pitch_variety="0.05" volume="1.0" />
-	<sound key="stab_hit" fileref="melee_impact_flesh3_fromFO4.wav" pitch_variety="0.05" volume="1.0" />
+    <sound key="stab" fileref="melee_swing_nothing1_fromFO4.wav" pitch_variety="0.05" volume="2.0" />
+    <sound key="stab" fileref="melee_swing_nothing2_fromFO4.wav" pitch_variety="0.05" volume="2.0" />
+    <sound key="stab" fileref="melee_swing_nothing3_fromFO4.wav" pitch_variety="0.05" volume="2.0" />
+    <sound key="stab" fileref="melee_swing_nothing4_fromFO4.wav" pitch_variety="0.05" volume="2.0" />
+    <sound key="fire" fileref="melee_swing_nothing1_fromFO4.wav" pitch_variety="0.05" volume="2.0" />
+    <sound key="fire" fileref="melee_swing_nothing2_fromFO4.wav" pitch_variety="0.05" volume="2.0" />
+    <sound key="fire" fileref="melee_swing_nothing3_fromFO4.wav" pitch_variety="0.05" volume="2.0" />
+    <sound key="fire" fileref="melee_swing_nothing4_fromFO4.wav" pitch_variety="0.05" volume="2.0" />
+	<sound key="stab_hit" fileref="melee_impact_flesh1_fromFO4.wav" pitch_variety="0.05" volume="2.0" />
+	<sound key="stab_hit" fileref="melee_impact_flesh2_fromFO4.wav" pitch_variety="0.05" volume="2.0" />
+	<sound key="stab_hit" fileref="melee_impact_flesh3_fromFO4.wav" pitch_variety="0.05" volume="2.0" />
 
-	<sound key="stab_hit_any" fileref="melee_impact_flesh1_fromFO4.wav" pitch_variety="0.05" volume="0.8" />
-	<sound key="stab_hit_any" fileref="melee_impact_flesh2_fromFO4.wav" pitch_variety="0.05" volume="0.8" />
-	<sound key="stab_hit_any" fileref="melee_impact_flesh3_fromFO4.wav" pitch_variety="0.05" volume="0.8" />
+	<sound key="stab_hit_any" fileref="melee_impact_flesh1_fromFO4.wav" pitch_variety="0.05" volume="1.6" />
+	<sound key="stab_hit_any" fileref="melee_impact_flesh2_fromFO4.wav" pitch_variety="0.05" volume="1.6" />
+	<sound key="stab_hit_any" fileref="melee_impact_flesh3_fromFO4.wav" pitch_variety="0.05" volume="1.6" />
 </weapon>
 </weapons>
