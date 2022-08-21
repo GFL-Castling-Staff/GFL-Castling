@@ -10,4 +10,18 @@
     <rotation class="motion" />
     <model />
 
+    <sound class="result" key="character" fileref="melee_impact_flesh1_fromFO4.wav" volume="1.9" />
+    <sound class="result" key="character" fileref="melee_impact_flesh2_fromFO4.wav" volume="1.9" />
+    <sound class="result" key="character" fileref="melee_impact_flesh3_fromFO4.wav" volume="1.9" />
+
+    <sound class="result" key="vehicle" fileref="melee_hit_metal 1.wav" volume="2.5" />
+    <sound class="result" key="vehicle" fileref="melee_hit_metal 2.wav" volume="2.5" />
+    <sound class="result" key="vehicle" fileref="melee_hit_metal 3.wav" volume="2.5" />
+    <sound class="result" key="vehicle" fileref="melee_hit_metal 4.wav" volume="2.5" />
+
+    <sound class="result" key="shield" fileref="melee_hit_metal 1.wav" volume="2.5" />
+    <sound class="result" key="shield" fileref="melee_hit_metal 2.wav" volume="2.5" />
+    <sound class="result" key="shield" fileref="melee_hit_metal 3.wav" volume="2.5" />
+    <sound class="result" key="shield" fileref="melee_hit_metal 4.wav" volume="2.5" />
+
 </projectile>

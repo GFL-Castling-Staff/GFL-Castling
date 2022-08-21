@@ -18,4 +18,10 @@
 	<parameter class="guard_wait_time_max" value="2.0" />
 	<parameter class="active_guarding_probability" value="0.85" />
 
+	<parameter class="shielding_min_distance_to_move" value="2.0" />
+	<parameter class="shielding_max_distance_to_move" value="4.0" />
+	<parameter class="shielding_min_distance_to_sidestep" value="2.0" />
+	<parameter class="shielding_max_distance_to_sidestep" value="3.0" />
+	<parameter class="shielding_min_distance_to_keep" value="3.0" />
+
 </ai>
