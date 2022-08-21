@@ -42614,7 +42614,24 @@
 <weapon key="parw_wrath.weapon" on_ground_up="0 0 1" time_to_live_out_in_the_open="0.0" drop_count_factor_on_death="0.0" player_death_drop_owner_lock_time="0">
 	<tag name="elite"/>
 	<tag name="melee"/>
-	<specification retrigger_time="1.0" magazine_size="1000" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" carry_in_two_hands="0" name="Nyto-Wrath" barrel_offset_3d="0 0 1.4" class="0" accuracy_factor="1.0" sustained_fire_grow_step="0" sustained_fire_diminish_rate="0" supperessed="0" projectile_speed="1" use_basic_muzzle_smoke_effect="0" stab_enabled="1" stab_range="4"/>
+    <specification 
+    retrigger_time="1.0" 
+    magazine_size="1000" 
+    can_shoot_standing="1" 
+    can_shoot_crouching="1" 
+    can_shoot_prone="0" 
+    carry_in_two_hands="0" 
+    name="Nyto-Wrath" 
+    barrel_offset_3d="0 0 0"
+    class="0" 
+    accuracy_factor="1.0" 
+    sustained_fire_grow_step="0" 
+    sustained_fire_diminish_rate="0"
+    supperessed="0" 
+	projectile_speed="15" 
+    use_basic_muzzle_smoke_effect="0" 
+    stab_enabled="1" 
+    stab_range="4" />
 	<animation state_key="recoil" animation_key="melee, saber"/>
 	<animation state_key="recoil" animation_key="melee, saber whip"/>
 	<animation state_key="recoil" animation_key="melee, saber slash"/>

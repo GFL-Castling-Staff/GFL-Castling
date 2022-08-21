@@ -16,7 +16,7 @@ particle_system ground_break
         angle 0
         position 0 0.2 0
         direction 0 1 0
-        velocity 0.01
+        velocity 0.0001
         time_to_live 15
         duration 0.05
         emission_rate 21
@@ -62,9 +62,9 @@ particle_system ground_break_small
 	emitter Point
 	{
         angle 0
-        position 0 0.2 0
+        position 0 0.1 0
         direction 0 1 0
-        velocity 0.01
+        velocity 0.0001
         time_to_live 10
         duration 0.05
         emission_rate 21

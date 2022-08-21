@@ -2,8 +2,8 @@ particle_system ct_woosh_small
 {
     quota 50
     material woosh
-    particle_width 1.5
-    particle_height 1.5
+    particle_width 4
+    particle_height 4
     renderer billboard 
     billboard_type oriented_common
     common_up_vector 0 0 1 
