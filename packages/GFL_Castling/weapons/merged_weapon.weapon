@@ -42037,7 +42037,7 @@
 	<stance state_key="crouching" accuracy="1"/>
 	<stance state_key="prone" accuracy="1"/>
 	<stance state_key="over_wall" accuracy="1"/>
-	<shield offset="0.5 -0.35 0" extent="0.4 0.4 0.4" usable_for_cover="0"/>
+	<shield offset="0.07 0.02 0.07" extent="0.35 0.35 0.35" usable_for_cover="0"/>
 	<modifier class="projectile_blast_result" input_character_state="none" output_character_state="none" consumes_item="1"/>
 	<modifier class="speed" value="-0.6"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
@@ -42091,7 +42091,7 @@
 	<stance state_key="prone" accuracy="1"/>
 	<stance state_key="prone_moving" accuracy="1"/>
 	<stance state_key="over_wall" accuracy="1"/>
-	<shield offset="0.5 -0.35 0" extent="0.4 0.4 0.4" usable_for_cover="0"/>
+	<shield offset="0.07 0.02 0.07" extent="0.35 0.35 0.35" usable_for_cover="0"/>
 	<modifier class="projectile_blast_result" input_character_state="none" output_character_state="none" consumes_item="1"/>
 	<modifier class="speed" value="-0.6"/>
 </weapon>
@@ -42133,7 +42133,7 @@
 	<stance state_key="crouching" accuracy="1"/>
 	<stance state_key="prone" accuracy="1"/>
 	<stance state_key="over_wall" accuracy="1"/>
-	<shield offset="0.5 -0.35 0" extent="0.4 0.4 0.4" usable_for_cover="0"/>
+	<shield offset="0.07 0.02 0.07" extent="0.35 0.35 0.35" usable_for_cover="0"/>
 	<modifier class="projectile_blast_result" input_character_state="none" output_character_state="none" consumes_item="1"/>
 	<modifier class="speed" value="-0.6"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
@@ -44622,4 +44622,3 @@
 </weapon>
 
 </weapons>
-
