@@ -15,6 +15,30 @@
 // 4 Equiped
 //Author: NetherCrow
 
+dictionary itemDropFileIndex = {
+    // 空
+    {"",0},
+
+    {"firecontrol.carry_item",1},       // 火控核心
+    {"core_mask.carry_item",2},         // 真核面具  
+    {"upgrade_type88.carry_item",3},    // 汉阳造加速线圈
+    {"upgrade_aa12.carry_item",4},      // AA12独头弹
+
+    {"666",0}
+};
+
+dictionary itemDropKeyIndex = {
+    // 空
+    {"",0},
+
+    {"mod3",1},                         // 火控核心
+    {"truecore",2},                     // 真核面具  
+    {"type88",3},                       // 汉阳造加速线圈
+    {"aa12",4},                         // AA12独头弹
+
+    {"666",0}
+};
+
 class CraftQueue
 {
     int m_playerId;
@@ -47,83 +71,94 @@ class ItemDropEvent : Tracker {
         if (event.getIntAttribute("target_container_type_id") == 1){
             string itemKey = event.getStringAttribute("item_key");
             int cId = event.getIntAttribute("character_id");
-            int pId = event.getIntAttribute("player_id");            
-            if(itemKey=="firecontrol.carry_item"){
-                if(checkQueue(pId,"mod3")){
-                    addItemInBackpack(m_metagame,cId,"carry_item","firecontrol.carry_item");
-                    sendPrivateMessageKey(m_metagame, pId, "onlyonequeue");
-                    playPrivateSound(m_metagame,"sfx_failed.wav",pId);
+            int pId = event.getIntAttribute("player_id");     
+            int jud_num =  int(itemDropFileIndex[itemKey]);
+            switch(jud_num)
+            {
+                case 1:{
+                    if(checkQueue(pId,"mod3")){
+                        addItemInBackpack(m_metagame,cId,"carry_item","firecontrol.carry_item");
+                        sendPrivateMessageKey(m_metagame, pId, "onlyonequeue");
+                        playPrivateSound(m_metagame,"sfx_failed.wav",pId);
+                    }
+                    else{
+                        startQueue(pId,"mod3");
+                        sendPrivateMessageKey(m_metagame, pId, "digimindupdate");
+                        playPrivateSound(m_metagame,"digimind_sfx1.wav",pId);
+                    } 
+                    break;
                 }
-                else{
-                    startQueue(pId,"mod3");
-                    sendPrivateMessageKey(m_metagame, pId, "digimindupdate");
-                    playPrivateSound(m_metagame,"digimind_sfx1.wav",pId);
+                case 2:{
+                    if(checkQueue(pId,"truecore")){
+                        addItemInBackpack(m_metagame,cId,"carry_item","core_mask.carry_item");
+                        sendPrivateMessageKey(m_metagame, pId, "onlyonequeue_mask");
+                        playPrivateSound(m_metagame,"sfx_failed.wav",pId);
+                    }
+                    else{
+                        startQueue(pId,"truecore");
+                        sendPrivateMessageKey(m_metagame, pId, "truemask");
+                        playPrivateSound(m_metagame,"sfx_equip.wav",pId);
+                    }
+                    break;
+                }
+                case 3:{
+                    if(checkQueue(pId,"type88")){          
+                        addItemInBackpack(m_metagame,cId,"carry_item","upgrade_type88.carry_item");
+                        sendPrivateMessageKey(m_metagame, pId, "onlyonequeue_common");
+                        playPrivateSound(m_metagame,"sfx_failed.wav",pId);
+                    }
+                    else{
+                        startQueue(pId,"type88");
+                        sendPrivateMessageKey(m_metagame, pId, "upgrade_88type");
+                        playPrivateSound(m_metagame,"sfx_equip.wav",pId);
+                    }
+                    break;
+                }
+                case 4:{
+                    if(checkQueue(pId,"aa12")){
+                        addItemInBackpack(m_metagame,cId,"carry_item","upgrade_aa12.carry_item");
+                        sendPrivateMessageKey(m_metagame, pId, "onlyonequeue_common");
+                        playPrivateSound(m_metagame,"sfx_failed.wav",pId);
+                    }
+                    else{
+                        startQueue(pId,"aa12");
+                        sendPrivateMessageKey(m_metagame, pId, "upgrade_aa12");
+                        playPrivateSound(m_metagame,"sfx_equip.wav",pId);
+                    }
+                    break;
+                }
+                default:{
+                    if (checkQueue(pId,"mod3")){
+                        string outputItem = string(MOD3craftList[itemKey]);
+                        if (outputItem != ""){
+                            addItemInBackpack(m_metagame,cId,"weapon",outputItem);
+                            m_craftQueue.removeAt(findQueueIndex(pId,"mod3"));
+                            dictionary a;
+                            a["%doll_name"] = getResourceName(m_metagame, itemKey, "weapon");
+                            sendPrivateMessageKey(m_metagame, pId, "digimindupdatesuccess",a);
+                            playPrivateSound(m_metagame,"digimind_sfx2.wav",pId);
+                        }
+                        else{
+                            addItemInBackpack(m_metagame,cId,"carry_item","firecontrol.carry_item");
+                            addItemInBackpack(m_metagame,cId,"weapon",itemKey);
+                            m_craftQueue.removeAt(findQueueIndex(pId,"mod3"));
+                            sendPrivateMessageKey(m_metagame, pId, "digimindupdatefailed");
+                            playPrivateSound(m_metagame,"sfx_failed.wav",pId);
+                        }
+                    }
+                    else if (checkQueue(pId,"type88") && (itemKey=="gkw_88typemod3.weapon" || itemKey=="gkw_88typemod3_skill.weapon")){
+                        addItemInBackpack(m_metagame,cId,"weapon","gkw_88typemod3_6503.weapon");
+                        m_craftQueue.removeAt(findQueueIndex(pId,"type88"));
+                        playPrivateSound(m_metagame,"digimind_sfx2.wav",pId);
+                    }
+                    else if (checkQueue(pId,"aa12") && (itemKey=="gkw_aa12.weapon" || itemKey=="gkw_aa12_skill.weapon")){
+                        addItemInBackpack(m_metagame,cId,"weapon","gkw_aa12_only.weapon");
+                        m_craftQueue.removeAt(findQueueIndex(pId,"aa12"));
+                        playPrivateSound(m_metagame,"digimind_sfx2.wav",pId);
+                    }  
+                    break;
                 }
             }
-            else if (itemKey=="core_mask.carry_item"){
-                if(checkQueue(pId,"truecore")){
-                    addItemInBackpack(m_metagame,cId,"carry_item","core_mask.carry_item");
-                    sendPrivateMessageKey(m_metagame, pId, "onlyonequeue_mask");
-                    playPrivateSound(m_metagame,"sfx_failed.wav",pId);
-                }
-                else{
-                    startQueue(pId,"truecore");
-                    sendPrivateMessageKey(m_metagame, pId, "truemask");
-                    playPrivateSound(m_metagame,"sfx_equip.wav",pId);
-                }
-            }
-            else if (itemKey=="upgrade_type88.carry_item"){
-                if(checkQueue(pId,"type88")){
-                    addItemInBackpack(m_metagame,cId,"carry_item","upgrade_type88.carry_item");
-                    sendPrivateMessageKey(m_metagame, pId, "onlyonequeue_common");
-                    playPrivateSound(m_metagame,"sfx_failed.wav",pId);
-                }
-                else{
-                    startQueue(pId,"type88");
-                    sendPrivateMessageKey(m_metagame, pId, "upgrade_88type");
-                    playPrivateSound(m_metagame,"sfx_equip.wav",pId);
-                }
-            }
-            else if (itemKey=="upgrade_aa12.carry_item"){
-                if(checkQueue(pId,"aa12")){
-                    addItemInBackpack(m_metagame,cId,"carry_item","upgrade_aa12.carry_item");
-                    sendPrivateMessageKey(m_metagame, pId, "onlyonequeue_common");
-                    playPrivateSound(m_metagame,"sfx_failed.wav",pId);
-                }
-                else{
-                    startQueue(pId,"aa12");
-                    sendPrivateMessageKey(m_metagame, pId, "upgrade_aa12");
-                    playPrivateSound(m_metagame,"sfx_equip.wav",pId);
-                }
-            }            
-            else if (checkQueue(pId,"mod3")){
-                string outputItem = string(MOD3craftList[itemKey]);
-                if (outputItem != ""){
-                    addItemInBackpack(m_metagame,cId,"weapon",outputItem);
-                    m_craftQueue.removeAt(findQueueIndex(pId,"mod3"));
-                    dictionary a;
-                    a["%doll_name"] = getResourceName(m_metagame, itemKey, "weapon");
-                    sendPrivateMessageKey(m_metagame, pId, "digimindupdatesuccess",a);
-                    playPrivateSound(m_metagame,"digimind_sfx2.wav",pId);
-                }
-                else{
-                    addItemInBackpack(m_metagame,cId,"carry_item","firecontrol.carry_item");
-                    addItemInBackpack(m_metagame,cId,"weapon",itemKey);
-                    m_craftQueue.removeAt(findQueueIndex(pId,"mod3"));
-                    sendPrivateMessageKey(m_metagame, pId, "digimindupdatefailed");
-                    playPrivateSound(m_metagame,"sfx_failed.wav",pId);
-                }
-            }
-            else if (checkQueue(pId,"type88") && (itemKey=="gkw_88typemod3.weapon" || itemKey=="gkw_88typemod3_skill.weapon")){
-                addItemInBackpack(m_metagame,cId,"weapon","gkw_88typemod3_6503.weapon");
-                m_craftQueue.removeAt(findQueueIndex(pId,"type88"));
-                playPrivateSound(m_metagame,"digimind_sfx2.wav",pId);
-            }
-            else if (checkQueue(pId,"aa12") && (itemKey=="gkw_aa12.weapon" || itemKey=="gkw_aa12_skill.weapon")){
-                addItemInBackpack(m_metagame,cId,"weapon","gkw_aa12_only.weapon");
-                m_craftQueue.removeAt(findQueueIndex(pId,"aa12"));
-                playPrivateSound(m_metagame,"digimind_sfx2.wav",pId);
-            }            
         }
     }
 
@@ -209,26 +244,36 @@ class ItemDropEvent : Tracker {
                     const XmlElement@ player = getPlayerInfo(m_metagame, pId);
                     if(player !is null){
                         int cId=player.getIntAttribute("character_id");
-                        if(m_craftQueue[a].m_typekey=="mod3"){
-                            addItemInBackpack(m_metagame,cId,"carry_item","firecontrol.carry_item");
-                            playPrivateSound(m_metagame,"sfx_returnback.wav",pId);
-                            sendPrivateMessageKey(m_metagame, pId, "quest_timeout");
-                        }
-                        if(m_craftQueue[a].m_typekey=="truecore"){
-                            addItemInBackpack(m_metagame,cId,"carry_item","core_mask.carry_item");
-                            playPrivateSound(m_metagame,"sfx_returnback.wav",pId);
-                            sendPrivateMessageKey(m_metagame, pId, "quest_timeout");
-                        }
-                        if(m_craftQueue[a].m_typekey=="type88"){
-                            addItemInBackpack(m_metagame,cId,"carry_item","upgrade_type88.carry_item");
-                            playPrivateSound(m_metagame,"sfx_returnback.wav",pId);
-                            sendPrivateMessageKey(m_metagame, pId, "quest_timeout");
-                        }
-                        if(m_craftQueue[a].m_typekey=="aa12"){
-                            addItemInBackpack(m_metagame,cId,"carry_item","upgrade_aa12.carry_item");
-                            playPrivateSound(m_metagame,"sfx_returnback.wav",pId);
-                            sendPrivateMessageKey(m_metagame, pId, "quest_timeout");
-                        }                                              
+                        int jud_num = int(itemDropKeyIndex[m_craftQueue[a].m_typekey]);
+                        switch(jud_num) // 此处是判断是否超过时限，从而返还玩家物品
+                        {
+                            case 1:{ // mod3
+                                addItemInBackpack(m_metagame,cId,"carry_item","firecontrol.carry_item");
+                                playPrivateSound(m_metagame,"sfx_returnback.wav",pId);
+                                sendPrivateMessageKey(m_metagame, pId, "quest_timeout");
+                                break;
+                            }
+                            case 2:{ // truecore
+                                addItemInBackpack(m_metagame,cId,"carry_item","core_mask.carry_item");
+                                playPrivateSound(m_metagame,"sfx_returnback.wav",pId);
+                                sendPrivateMessageKey(m_metagame, pId, "quest_timeout");
+                                break;
+                            }
+                            case 3:{ // type88
+                                addItemInBackpack(m_metagame,cId,"carry_item","upgrade_type88.carry_item");
+                                playPrivateSound(m_metagame,"sfx_returnback.wav",pId);
+                                sendPrivateMessageKey(m_metagame, pId, "quest_timeout");
+                                break;
+                            }
+                            case 4:{ // aa12
+                                addItemInBackpack(m_metagame,cId,"carry_item","upgrade_aa12.carry_item");
+                                playPrivateSound(m_metagame,"sfx_returnback.wav",pId);
+                                sendPrivateMessageKey(m_metagame, pId, "quest_timeout");
+                                break;
+                            }
+                            default:
+                                break;
+                        }                                      
                     }
                     m_craftQueue.removeAt(a);
                 }
