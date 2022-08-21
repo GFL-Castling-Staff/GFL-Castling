@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapon key="parw_teal.weapon" on_ground_up="0 0 1" time_to_live_out_in_the_open="0.0" drop_count_factor_on_death="0.0" player_death_drop_owner_lock_time="0">
-    
     <tag name="melee" />
     <tag name="elite" />
     <specification 
@@ -17,7 +16,6 @@
      stab_enabled="1"
      stab_range="5"
     />
-
     <animation state_key="recoil"   animation_key="melee, ninjato whip" />
     <animation state_key="stabbing" animation_key="melee, ninjato whip" />
     <animation state_key="hold" animation_key="still, ninjato" />
@@ -36,40 +34,44 @@
     <animation state_key="changing_weapon_out"  animation_key="change weapon out, sword" />
     <animation state_key="reload"   animation_key="still, ninjato" />
     <model filename="parw_teal.xml" />
-
-
-     
     <projectile file="teal.projectile"/>
-
-     <capacity value="0" source="rank" source_value="0.0" />
-     <capacity value="1" source="rank" source_value="0.3" /> 
-  
+    <capacity value="1" source="rank" source_value="0.0" />
     <stance state_key="running" accuracy="1" />
     <stance state_key="walking" accuracy="1" />
     <stance state_key="crouch_moving" accuracy="1" />
     <stance state_key="standing" accuracy="1" />
     <stance state_key="crouching" accuracy="1" />
-    <stance state_key="prone" accuracy="1" /> 
+    <stance state_key="prone" accuracy="1" />
     <stance state_key="prone_moving" accuracy="1" />
-    <stance state_key="over_wall" accuracy="1" /> 
-
+    <stance state_key="over_wall" accuracy="1" />
     <hud_icon filename="parw_teal.png" />
     <effect class="muzzle" ref="sawsnone" />
-     
-     <commonness value="0.00001" can_respawn_with="1" in_stock="1" />
+    <commonness value="0.00001" can_respawn_with="1" in_stock="1" />
+    <modifier class="detectability" value="0.6"/>
+    <modifier class="speed" value="0.6" />
+    <shield offset="-0.55 0.0 0" extent="0.8 0.5 1.0" />
+    <!-- state modifiers for weapons are connected to shield impact events -->
+    <!-- deflects all bullets; death, stun, wound become none, doesn't consume -->
+    <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0" />
+    <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+    <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+    <!-- death and wound blast causes the item to be consumed, stun is ignored -->
+    <modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0" />
+    <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+    <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+    <sound key="stab" fileref="melee_swing_nothing1_fromFO4.wav" pitch_variety="0.05" volume="1.0" />
+    <sound key="stab" fileref="melee_swing_nothing2_fromFO4.wav" pitch_variety="0.05" volume="1.0" />
+    <sound key="stab" fileref="melee_swing_nothing3_fromFO4.wav" pitch_variety="0.05" volume="1.0" />
+    <sound key="stab" fileref="melee_swing_nothing4_fromFO4.wav" pitch_variety="0.05" volume="1.0" />
+    <sound key="fire" fileref="melee_swing_nothing1_fromFO4.wav" pitch_variety="0.05" volume="1.0" />
+    <sound key="fire" fileref="melee_swing_nothing2_fromFO4.wav" pitch_variety="0.05" volume="1.0" />
+    <sound key="fire" fileref="melee_swing_nothing3_fromFO4.wav" pitch_variety="0.05" volume="1.0" />
+    <sound key="fire" fileref="melee_swing_nothing4_fromFO4.wav" pitch_variety="0.05" volume="1.0" />
+	<sound key="stab_hit" fileref="melee_impact_flesh1_fromFO4.wav" pitch_variety="0.05" volume="1.0" />
+	<sound key="stab_hit" fileref="melee_impact_flesh2_fromFO4.wav" pitch_variety="0.05" volume="1.0" />
+	<sound key="stab_hit" fileref="melee_impact_flesh3_fromFO4.wav" pitch_variety="0.05" volume="1.0" />
 
-     <modifier class="detectability" value="0.6"/>
-     <modifier class="speed" value="0.6" />
-     <shield offset="-0.55 0.0 0" extent="0.8 0.5 1.0" />
-     <!-- state modifiers for weapons are connected to shield impact events -->
-     <!-- deflects all bullets; death, stun, wound become none, doesn't consume -->
-     <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0" />
-     <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-     <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-     <!-- death and wound blast causes the item to be consumed, stun is ignored -->
-     <modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0" />
-     <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
-     <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
- 
-     
+	<sound key="stab_hit_any" fileref="melee_impact_flesh1_fromFO4.wav" pitch_variety="0.05" volume="0.8" />
+	<sound key="stab_hit_any" fileref="melee_impact_flesh2_fromFO4.wav" pitch_variety="0.05" volume="0.8" />
+	<sound key="stab_hit_any" fileref="melee_impact_flesh3_fromFO4.wav" pitch_variety="0.05" volume="0.8" />
 </weapon>
