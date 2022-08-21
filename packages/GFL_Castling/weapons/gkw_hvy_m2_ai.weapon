@@ -21,14 +21,14 @@
 	slot="0"/>
 	<animation state_key="recoil" animation_key="recoil, portable mortar"/>
 	<animation state_key="crouching" animation_key="crouch, still, portable mortar"/>
-	<animation state_key="reload" animation_key="reloading, portable mortar"/>
-	<animation state_key="hold" animation_key="crouch, still, portable mortar"/>
-	<animation state_key="hold_on_wall" animation_key="crouch, still, portable mortar"/>
-	<animation state_key="still_against_wall" animation_key="crouch, still, portable mortar"/>
-	<animation state_key="hold_casual" animation_key="crouch, still, portable mortar"/>
-	<animation state_key="running" animation_key="crouch, still, portable mortar"/>
-	<animation state_key="walking" animation_key="crouch, still, portable mortar"/>
-	<animation state_key="walking_backwards" animation_key="crouch, still, portable mortar"/>
+	<animation state_key="reload" animation_key="reloading, portable mortar" />
+    <animation state_key="hold" animation_key="still, angled" />
+    <animation state_key="hold_on_wall" animation_key="still, angled" />
+    <animation state_key="still_against_wall" animation_key="still, angled" />
+    <animation state_key="hold_casual" animation_key="still, angled" />
+	<animation state_key="running" animation_key="walking, angled" />  
+    <animation state_key="walking" animation_key="walking, angled" />
+    <animation state_key="walking_backwards" animation_key="walking backwards, angled" /> 
 	<sound key="fire" fileref="m2_mortar_fire.wav" pitch_variety="0.1" volume="1.2"/>
 	<sound key="magazine_out" fileref="portable_mortar_reload.wav" volume="0.7"/>
 	<sound key="magazine_in" fileref="dry_fire.wav" volume="0.7"/>
