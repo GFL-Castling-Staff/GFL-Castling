@@ -663,6 +663,7 @@
 		</attribute_config>
 		<item_class_existence_config>
 			<item_class_existence class="carry_item" slot="1" probability="0.5" />
+			<item_class_existence class="carry_item" slot="0" probability="0.001" />
 		</item_class_existence_config>
 	</soldier>
 	<soldier name="smasher" spawn_score="0.2" squad_size_xp_cap="0.5">
@@ -682,6 +683,7 @@
 		</attribute_config>
 		<item_class_existence_config>
 			<item_class_existence class="carry_item" slot="1" probability="1.0" />
+			<item_class_existence class="carry_item" slot="0" probability="0.001" />
 		</item_class_existence_config>
 	</soldier>	
 	<!-- Paradeus强无敌doppelsoldner -->
@@ -691,8 +693,8 @@
 		<ai filename="para_mg.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="parw_doppelsoldner_rocket" enabled="1" />
-			<weapon key="parw_doppelsoldner_mg_1.weapon" enabled="1" />
 			<carry_item key="pard_roarer.carry_item" />
+			<projectile key="selfnone.projectile" enabled="1" />
 		</resources>
 		<item_class_existence_config>
 			<item_class_existence class="weapon" slot="1" probability="1" />
