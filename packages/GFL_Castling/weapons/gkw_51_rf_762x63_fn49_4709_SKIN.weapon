@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 体素模型由YABA提供 -->
+<weapon on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0" key="gkw_fn49_4709.weapon">
+	<tag name="rifle" />
+    <specification 
+	retrigger_time="-1" 
+	last_burst_retrigger_time = "0.125"
+	accuracy_factor="1" 
+	sustained_fire_grow_step="0.4" 
+	sustained_fire_diminish_rate="1.8"
+	magazine_size="10" 
+	can_shoot_standing="1" 
+	suppressed="0" 
+	name="FN-49-[Umbrella Daydream]" 
+	class="4" 
+	burst_shots="1"
+	reload_one_at_a_time="0" 
+	sight_range_modifier="2.5" 
+	projectile_speed="245" 
+	barrel_offset="0.6" 
+	projectiles_per_shot="1"
+	slot="0"
+	stab_enabled="1"
+    stab_range="3"
+	/>
+    <effect class="muzzle" ref="ejection_76251" />
+    <animation key="cycle" animation_key="Brifle1.1" />
+    <animation key="cycle" stance_key="prone" animation_key="Brifle1.1p" />	
+    <animation state_key="reload" animation_key="reloading, magazine rifle 1.2" />
+	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone" />
+	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone" />
+	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone" />
+	<animation key="recoil" animation_key="recoil1" />
+	<animation key="recoil" animation_key="recoil2" />
+	<animation key="recoil" animation_key="recoil3" />
+	<animation state_key="stabbing"	animation_key="melee, bayonet" />
+	<commonness value="0" in_stock="0" can_respawn_with="1" />
+    <weak_hand_hold offset="0.3" />
+    <sound key="fire" fileref="fn49_fire_FromCOD18.wav" pitch_variety="0.05" volume="1.1"/>
+    <sound key="cycle" fileref="fn49_cycle_FromCOD18.wav" volume="0.7" />
+    <sound key="magazine_out" fileref="fn49_mgz_out_FromCOD18.wav" volume="0.7" />
+    <sound key="magazine_in" fileref="fn49_mgz_in_FromCOD18.wav" volume="0.7" />
+    <model filename="gkw_rf_fn49.xml" />
+    <hud_icon filename="gkw_fn49_4709.png" />
+    <inventory encumbrance="10.0" price="5.0" />
+    <capacity value="1" source="rank" source_value="0.0" />
+    <projectile file="bullet.projectile">
+        <result 
+		class="hit" 
+		kill_probability="2.2"
+		kill_probability_offset_on_successful_hit="3.5" 
+		kill_decay_start_time="0.964" 
+		kill_decay_end_time="1.607"
+		/>
+    </projectile>
+    <stance state_key="running" accuracy="0.9" />
+    <stance state_key="walking" accuracy="0.9" />
+    <stance state_key="crouch_moving" accuracy="0.9" />
+    <stance state_key="prone_moving" accuracy="0.9" />
+    <stance state_key="standing" accuracy="0.95" />
+    <stance state_key="crouching" accuracy="0.98" />
+    <stance state_key="prone" accuracy="1" />
+    <stance state_key="overwall" accuracy="1" />
+	<modifier class="detectability" value="-0.1"/>
+	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0" />
+	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5" />
+    <target_factors tag="shotgun" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0" />
+    <target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0" />
+    <target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0" />
+    <target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0" />
+</weapon>
