@@ -155,7 +155,12 @@ class ItemDropEvent : Tracker {
                         addItemInBackpack(m_metagame,cId,"weapon","gkw_aa12_only.weapon");
                         m_craftQueue.removeAt(findQueueIndex(pId,"aa12"));
                         playPrivateSound(m_metagame,"digimind_sfx2.wav",pId);
-                    }  
+                    }
+                    else if (checkQueue(pId,"aa12") && (itemKey=="gkw_aa12_4401.weapon" || itemKey=="gkw_aa12_4401_skill.weapon")){
+                        addItemInBackpack(m_metagame,cId,"weapon","gkw_aa12_4401_only.weapon");
+                        m_craftQueue.removeAt(findQueueIndex(pId,"aa12"));
+                        playPrivateSound(m_metagame,"digimind_sfx2.wav",pId);
+                    }                        
                     break;
                 }
             }

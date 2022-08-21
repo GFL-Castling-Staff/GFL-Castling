@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<weapon key="gkw_aa12_only.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+<weapon key="gkw_aa12_4401_only.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<specification 
 	retrigger_time="0.167"
 	accuracy_factor="1.0"
@@ -8,7 +8,7 @@
 	magazine_size="20"
 	can_shoot_standing="1"
 	suppressed="0"
-	name="AA-12-[Frag-12 HE Round]"
+	name="AA-12-[Smokeless Lollipop]-[Frag-12 HE Round]"
 	class="0"
 	reload_one_at_a_time="0"
 	sight_range_modifier="1.0"
@@ -31,7 +31,7 @@
 	<commonness value="0" in_stock="0"/>
 	<inventory encumbrance="10.0" buy_price="75.0" sell_price="75.0"/>
 	<model filename="gkw_sg_aa12.xml"/>
-	<hud_icon filename="gkw_aa12only_skill.png"/>
+	<hud_icon filename="gkw_aa12_4401.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="aa12_only.projectile">
 		<result class="blast" radius="3" damage="2.1" push="0.3" decal="1" faction_compare="not_equal"/>
