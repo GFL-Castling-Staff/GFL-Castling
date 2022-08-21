@@ -25,9 +25,9 @@
     <animation key="cycle" animation_key="Brifle1" />
     <animation key="cycle" stance_key="prone" animation_key="Brifle1p" />
     <animation key="reload" animation_key="reloading, oaat" />
-    <animation key="recoil"  ref="12" />
-    <animation key="recoil"  ref="13" />
-    <animation key="recoil"  ref="14" />
+    <animation key="recoil"  animation_key="recoil1" />
+    <animation key="recoil"  animation_key="recoil2" />
+    <animation key="recoil"  animation_key="recoil3" />
     <animation key="recoil" stance_key="prone" animation_key="recoil1, prone" />
     <animation key="recoil" stance_key="prone" animation_key="recoil2, prone" />
     <animation key="recoil" stance_key="prone" animation_key="recoil3, prone" />

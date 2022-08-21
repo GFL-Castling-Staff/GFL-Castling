@@ -26,8 +26,8 @@
     <animation key="recoil" animation_key="recoil2" />
     <animation key="recoil" animation_key="recoil3" />
     <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
-    <animation key="hold" ref="39" />
-    <animation key="hold_on_wall" ref="39" />
+    <animation key="hold" animation_key="still, with law" />
+    <animation key="hold_on_wall" animation_key="still, with law" />
     <animation state_key="walking" animation_key="walking, hip fire" />
     <animation state_key="running" animation_key="walking, hip fire" />
     <animation state_key="crouch_moving" animation_key="crouching forwards, hip fire" />
@@ -81,11 +81,11 @@
   buy_price="648.0" 
   sell_price="648.0"/>
 
-	<animation key="recoil" ref="40" />
+	<animation key="recoil" animation_key="recoil, law" />
     <animation key="reload" animation_key="reload architect" />
 	<animation key="reload" stance_key="prone" animation_key="magBrifleRpntw" />
-    <animation key="hold" ref="39" />
-    <animation key="hold_on_wall" ref="39" />
+    <animation key="hold" animation_key="still, with law" />
+    <animation key="hold_on_wall" animation_key="still, with law" />
     <animation state_key="walking" animation_key="walking, hip fire" />
     <animation state_key="running" animation_key="walking, hip fire" />
     <animation state_key="crouch_moving" animation_key="crouching forwards, hip fire" />

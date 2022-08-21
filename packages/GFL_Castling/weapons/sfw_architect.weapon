@@ -4,11 +4,11 @@
 	<tag name="antiarmor" />
 	<tag name="elite" />
     <specification retrigger_time="11.1" accuracy_factor="1.0" sustained_fire_grow_step="0.4" sustained_fire_diminish_rate="0.1" magazine_size="10" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" suppressed="0" name="SF-Architect" class="0" sight_range_modifier="1.5" projectile_speed="85.0" slot="0" projectiles_per_shot="1" />
-    <animation key="recoil" ref="40" />
+    <animation key="recoil" animation_key="recoil, law" />
     <animation key="reload" animation_key="reloading, portable mortar" />
     <!-- <animation state_key="reload" animation_key="reloading, pf98" />     -->
-    <animation key="hold" ref="39" />
-    <animation key="hold_on_wall" ref="39" />
+    <animation key="hold" animation_key="still, with law" />
+    <animation key="hold_on_wall" animation_key="still, with law" />
 
     <animation state_key="walking" animation_key="walking, hip fire" />
     <animation state_key="running" animation_key="walking, hip fire" />

@@ -19,7 +19,7 @@
 		<animation key="recoil" stance_key="prone" animation_key="recoil3, prone" />
 
 		<animation state_key="hold" animation_key="hold, hip fire" />
-		<animation state_key="hold_on_wall" ref="1" />
+		<animation state_key="hold_on_wall" animation_key="still" />
 		<animation state_key="walking" animation_key="walking, hip fire" />
 		<animation state_key="walking_backwards" animation_key="walking backwards, hip fire" />
 
@@ -82,7 +82,7 @@
 		<animation key="recoil" stance_key="prone" animation_key="recoil3, prone" />
 
 		<animation state_key="hold" animation_key="hold, hip fire" />
-		<animation state_key="hold_on_wall" ref="1" />
+		<animation state_key="hold_on_wall" animation_key="still" />
 		<animation state_key="walking" animation_key="walking, hip fire" />
 		<animation state_key="walking_backwards" animation_key="walking backwards, hip fire" />
 

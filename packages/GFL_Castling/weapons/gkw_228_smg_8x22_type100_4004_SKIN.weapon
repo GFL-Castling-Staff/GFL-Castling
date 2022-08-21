@@ -25,16 +25,16 @@
     <animation key="recoil" animation_key="recoil1" />
     <animation key="recoil" animation_key="recoil2" />
     <animation key="recoil" animation_key="recoil3" />
-    <animation key="recoil" stance_key="over_wall" ref="12" />
-    <animation key="recoil" stance_key="over_wall" ref="13" />
-    <animation key="recoil" stance_key="over_wall" ref="14" />
-    <animation key="recoil" stance_key="crouching" ref="12" />
-    <animation key="recoil" stance_key="crouching" ref="13" />
-    <animation key="recoil" stance_key="crouching" ref="14" />
+    <animation key="recoil" stance_key="over_wall" animation_key="recoil1" />
+    <animation key="recoil" stance_key="over_wall" animation_key="recoil2" />
+    <animation key="recoil" stance_key="over_wall" animation_key="recoil3" />
+    <animation key="recoil" stance_key="crouching" animation_key="recoil1" />
+    <animation key="recoil" stance_key="crouching" animation_key="recoil2" />
+    <animation key="recoil" stance_key="crouching" animation_key="recoil3" />
     <animation key="recoil" stance_key="prone" animation_key="recoil1, prone" />
     <animation key="recoil" stance_key="prone" animation_key="recoil2, prone" />
     <animation key="recoil" stance_key="prone" animation_key="recoil3, prone" />
-    <animation state_key="hold_on_wall" ref="1" />
+    <animation state_key="hold_on_wall" animation_key="still" />
     <animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
     <animation state_key="reload" animation_key="reloading, magazine rifle 0.9" />
 	<animation state_key="stabbing"	animation_key="melee, bayonet" />
@@ -97,16 +97,16 @@
     <animation key="recoil" animation_key="recoil1" />
     <animation key="recoil" animation_key="recoil2" />
     <animation key="recoil" animation_key="recoil3" />
-    <animation key="recoil" stance_key="over_wall" ref="12" />
-    <animation key="recoil" stance_key="over_wall" ref="13" />
-    <animation key="recoil" stance_key="over_wall" ref="14" />
-    <animation key="recoil" stance_key="crouching" ref="12" />
-    <animation key="recoil" stance_key="crouching" ref="13" />
-    <animation key="recoil" stance_key="crouching" ref="14" />
+    <animation key="recoil" stance_key="over_wall" animation_key="recoil1" />
+    <animation key="recoil" stance_key="over_wall" animation_key="recoil2" />
+    <animation key="recoil" stance_key="over_wall" animation_key="recoil3" />
+    <animation key="recoil" stance_key="crouching" animation_key="recoil1" />
+    <animation key="recoil" stance_key="crouching" animation_key="recoil2" />
+    <animation key="recoil" stance_key="crouching" animation_key="recoil3" />
     <animation key="recoil" stance_key="prone" animation_key="recoil1, prone" />
     <animation key="recoil" stance_key="prone" animation_key="recoil2, prone" />
     <animation key="recoil" stance_key="prone" animation_key="recoil3, prone" />
-    <animation state_key="hold_on_wall" ref="1" />
+    <animation state_key="hold_on_wall" animation_key="still" />
     <animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
     <animation state_key="reload" animation_key="reloading, magazine rifle 0.9" />
 	<animation state_key="stabbing"	animation_key="melee, banzai" />

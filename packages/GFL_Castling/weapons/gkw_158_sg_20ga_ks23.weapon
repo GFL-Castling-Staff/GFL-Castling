@@ -29,14 +29,14 @@
         
         <next_in_chain key="gkw_ks23_skill.weapon" share_ammo="1" />
         <!--Animations-->
-        <animation key="recoil"  ref="12" />
-        <animation key="recoil"  ref="13" />
-        <animation key="recoil"  ref="14" />
+        <animation key="recoil"  animation_key="recoil1" />
+        <animation key="recoil"  animation_key="recoil2" />
+        <animation key="recoil"  animation_key="recoil3" />
         <animation key="recoil" stance_key="prone" animation_key="recoil1, prone" />
         <animation key="recoil" stance_key="prone" animation_key="recoil2, prone" />
         <animation key="recoil" stance_key="prone" animation_key="recoil3, prone" />
         <!-- <animation state_key="hold" animation_key="hold, hip fire" /> -->
-        <animation state_key="hold_on_wall" ref="1" />
+        <animation state_key="hold_on_wall" animation_key="still" />
         <animation state_key="running" animation_key="running, bayonet" />
         <animation state_key="walking" animation_key="walking, hip fire" />
         <animation state_key="walking_backwards" animation_key="walking backwards, hip fire" />
@@ -118,14 +118,14 @@
         
         <next_in_chain key="gkw_ks23_frag.weapon" share_ammo="1" />
         <!--Animations-->
-        <animation key="recoil"  ref="12" />
-        <animation key="recoil"  ref="13" />
-        <animation key="recoil"  ref="14" />
+        <animation key="recoil"  animation_key="recoil1" />
+        <animation key="recoil"  animation_key="recoil2" />
+        <animation key="recoil"  animation_key="recoil3" />
         <animation key="recoil" stance_key="prone" animation_key="recoil1, prone" />
         <animation key="recoil" stance_key="prone" animation_key="recoil2, prone" />
         <animation key="recoil" stance_key="prone" animation_key="recoil3, prone" />
         <!-- <animation state_key="hold" animation_key="hold, hip fire" /> -->
-        <animation state_key="hold_on_wall" ref="1" />
+        <animation state_key="hold_on_wall" animation_key="still" />
         <animation state_key="running" animation_key="running, bayonet" />
         <animation state_key="walking" animation_key="walking, hip fire" />
         <animation state_key="walking_backwards" animation_key="walking backwards, hip fire" />
@@ -205,14 +205,14 @@
         
         <next_in_chain key="gkw_ks23.weapon" share_ammo="1" />
         <!--Animations-->
-        <animation key="recoil"  ref="12" />
-        <animation key="recoil"  ref="13" />
-        <animation key="recoil"  ref="14" />
+        <animation key="recoil"  animation_key="recoil1" />
+        <animation key="recoil"  animation_key="recoil2" />
+        <animation key="recoil"  animation_key="recoil3" />
         <animation key="recoil" stance_key="prone" animation_key="recoil1, prone" />
         <animation key="recoil" stance_key="prone" animation_key="recoil2, prone" />
         <animation key="recoil" stance_key="prone" animation_key="recoil3, prone" />
         <!-- <animation state_key="hold" animation_key="hold, hip fire" /> -->
-        <animation state_key="hold_on_wall" ref="1" />
+        <animation state_key="hold_on_wall" animation_key="still" />
         <animation state_key="running" animation_key="running, bayonet" />
         <animation state_key="walking" animation_key="walking, hip fire" />
         <animation state_key="walking_backwards" animation_key="walking backwards, hip fire" />

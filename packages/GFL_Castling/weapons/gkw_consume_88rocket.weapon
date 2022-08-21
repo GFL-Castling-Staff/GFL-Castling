@@ -25,12 +25,12 @@
     <capacity value="5" source="rank" source_value="20.88" />
     <capacity value="6" source="rank" source_value="57.433" />
     <commonness value="0.5" in_stock="1" can_respawn_with="1" />
-    <animation key="recoil" ref="40" />
+    <animation key="recoil" animation_key="recoil, law" />
     <animation key="cycle" animation_key="Brifle1" />
-    <animation key="reload" ref="35" />
+    <animation key="reload" animation_key="reloading, m24" />
     <animation key="reload" stance_key="prone" animation_key="reloading, sniper1, prone" />
-    <animation key="hold" ref="39" />
-    <animation key="hold_on_wall" ref="39" />
+    <animation key="hold" animation_key="still, with law" />
+    <animation key="hold_on_wall" animation_key="still, with law" />
     <sound key="fire" fileref="type25_fire_FromCOD16.wav" volume="1.6"/>
     <sound key="cycle" fileref="sniper_cycle.wav" />
     <sound key="magazine_out" fileref="sniper_clip_out.wav" />

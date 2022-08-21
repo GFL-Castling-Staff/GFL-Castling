@@ -20,8 +20,8 @@
     <next_in_chain key="gkw_hvy_qlz04_st.weapon" share_ammo="0"/>
     <inventory encumbrance="50.0" buy_price="180.0" sell_price="180.0"/>
     <animation key="reload" animation_key="reloading, Machine gun 5"/>
-    <animation key="hold" ref="32"/>
-    <animation key="hold_on_wall" ref="1"/>
+    <animation key="hold" animation_key="still, heavy weapon"/>
+    <animation key="hold_on_wall" animation_key="still"/>
     <animation state_key="walking" animation_key="walking, heavy weapon"/>
     <animation state_key="walking_backwards" animation_key="walking backwards, heavy weapon"/>
     <sound key="fire" fileref="qlz04_fire_FromFC4.wav" pitch_variety="0.05" volume="1.4"/>
