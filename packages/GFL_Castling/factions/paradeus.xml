@@ -692,7 +692,7 @@
 		<character filename="dopp.character" />
 		<ai filename="para_mg.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
-			<weapon key="parw_doppelsoldner_rocket" enabled="1" />
+			<weapon key="parw_doppelsoldner_rocket.weapon" enabled="1" />
 			<carry_item key="pard_roarer.carry_item" />
 			<projectile key="selfnone.projectile" enabled="1" />
 		</resources>

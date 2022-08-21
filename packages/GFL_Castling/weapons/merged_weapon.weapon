@@ -42000,11 +42000,12 @@
 	<sound key="stab_hit_any" fileref="melee_impact_flesh3_fromFO4.wav" pitch_variety="0.05" volume="1.6"/>
 </weapon>
 
-<weapon key="parw_doppelsoldner_rocket" transform_on_consume="parw_doppelsoldner_mg" time_to_live_out_in_the_open="0" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0">
+<weapon key="parw_doppelsoldner_rocket.weapon" transform_on_consume="parw_doppelsoldner_mg" time_to_live_out_in_the_open="0" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0">
 	<tag name="metal_heavy"/>
 	<tag name="mecha"/>
 	<tag name="bazooka"/>
-	<specification retrigger_time="0.3" accuracy_factor="0.75" sustained_fire_grow_step="-2.0" sustained_fire_diminish_rate="0.9" magazine_size="30" can_shoot_standing="1" can_shoot_crouching="0" can_shoot_prone="0" suppressed="0" name="Doppelsoldner-Rocket" class="4" reload_one_at_a_time="0" sight_range_modifier="1.1" ai_sight_range_modifier="1.1" projectile_speed="86.0" carry_in_two_hands="0" projectiles_per_shot="3" burst_shot="3" last_burst_retrigger_time="5.0" stab_enabled="1" barrel_offset_3d="0.6 1 0.5"/>
+	<specification retrigger_time="0.3" slot="0" accuracy_factor="0.75" sustained_fire_grow_step="-2.0" sustained_fire_diminish_rate="0.9" magazine_size="30" can_shoot_standing="1" can_shoot_crouching="0" can_shoot_prone="0" suppressed="0" name="Doppelsoldner-Rocket" class="4" reload_one_at_a_time="0" sight_range_modifier="1.1" ai_sight_range_modifier="1.1" projectile_speed="86.0" carry_in_two_hands="0" projectiles_per_shot="3" burst_shot="3" last_burst_retrigger_time="5.0" stab_enabled="1" barrel_offset_3d="0.6 1 0.5"/>
+	<commonness value="0.0001" in_stock="1" can_respawn_with="1"/>
 	<animation state_key="recoil" animation_key="still, doppelsoldner"/>
 	<animation state_key="reload" animation_key="still, doppelsoldner"/>
 	<animation state_key="hold" animation_key="still, doppelsoldner"/>
@@ -42035,6 +42036,7 @@
 	<stance state_key="standing" accuracy="1"/>
 	<stance state_key="crouching" accuracy="1"/>
 	<stance state_key="prone" accuracy="1"/>
+	<stance state_key="over_wall" accuracy="1"/>
 	<shield offset="0.5 -0.35 0" extent="0.4 0.4 0.4" usable_for_cover="0"/>
 	<modifier class="projectile_blast_result" input_character_state="none" output_character_state="none" consumes_item="1"/>
 	<modifier class="speed" value="-0.6"/>
@@ -42045,27 +42047,14 @@
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="5.5"/>
 	<target_factors tag="shield" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
 	<target_factors tag="punchme" distance="1.0" direction="0.0" squad_command="1.0" base_score="30.0"/>
-	<commonness value="0.0001" in_stock="1" can_respawn_with="1"/>
 	<inventory encumbrance="0.0" price="0.0"/>
-	<capacity value="1" source="rank" source_value="0.0"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
-	<stance state_key="running" accuracy="0.3"/>
-	<stance state_key="walking" accuracy="0.675"/>
-	<stance state_key="crouch_moving" accuracy="0.75"/>
-	<stance state_key="standing" accuracy="0.85"/>
-	<stance state_key="crouching" accuracy="0.9"/>
-	<stance state_key="prone" accuracy="0.95"/>
-	<stance state_key="prone_moving" accuracy="0.3"/>
-	<stance state_key="over_wall" accuracy="1"/>
 </weapon>
 
 <weapon key="parw_doppelsoldner_mg" transform_on_consume="parw_doppelsoldner_rocket" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="metal_heavy"/>
 	<tag name="mecha"/>
 	<tag name="machine gun"/>
-	<commonness value="0.0001" in_stock="1" can_respawn_with="1"/>
+	<commonness value="0" in_stock="0" can_respawn_with="0"/>
 	<inventory encumbrance="0.0" price="0.0"/>
 	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
 	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
@@ -42105,6 +42094,56 @@
 	<shield offset="0.5 -0.35 0" extent="0.4 0.4 0.4" usable_for_cover="0"/>
 	<modifier class="projectile_blast_result" input_character_state="none" output_character_state="none" consumes_item="1"/>
 	<modifier class="speed" value="-0.6"/>
+</weapon>
+
+<weapon key="parw_doppelsoldner_rocket" transform_on_consume="parw_doppelsoldner_mg" time_to_live_out_in_the_open="0" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0">
+	<tag name="metal_heavy"/>
+	<tag name="mecha"/>
+	<tag name="bazooka"/>
+	<specification retrigger_time="0.3" slot="0" accuracy_factor="0.75" sustained_fire_grow_step="-2.0" sustained_fire_diminish_rate="0.9" magazine_size="30" can_shoot_standing="1" can_shoot_crouching="0" can_shoot_prone="0" suppressed="0" name="Doppelsoldner-Rocket" class="4" reload_one_at_a_time="0" sight_range_modifier="1.1" ai_sight_range_modifier="1.1" projectile_speed="86.0" carry_in_two_hands="0" projectiles_per_shot="3" burst_shot="3" last_burst_retrigger_time="5.0" stab_enabled="1" barrel_offset_3d="0.6 1 0.5"/>
+	<animation state_key="recoil" animation_key="still, doppelsoldner"/>
+	<animation state_key="reload" animation_key="still, doppelsoldner"/>
+	<animation state_key="hold" animation_key="still, doppelsoldner"/>
+	<animation state_key="hold_casual" animation_key="still, doppelsoldner"/>
+	<animation state_key="hold_on_wall" animation_key="still, doppelsoldner"/>
+	<animation state_key="walking" animation_key="walking, doppelsoldner"/>
+	<animation state_key="stabbing" animation_key="still, doppelsoldner"/>
+	<animation state_key="crouching" animation_key="crouch, doppelsoldner"/>
+	<animation state_key="crouch_moving" animation_key="crouch walking, large mecha"/>
+	<animation state_key="crouch_moving_backwards" animation_key="crouch walking, large mecha"/>
+	<animation state_key="running" animation_key="walking, doppelsoldner"/>
+	<commonness value="0" in_stock="0" can_respawn_with="0"/>
+	<sound key="fire" fileref="Doppelsoldner_fire_FromCOD13.wav" volume="1.0"/>
+	<sound key="cycle" fileref="mossberg500_cycle.wav"/>
+	<sound key="reload_one" fileref="Doppelsoldner_reload_FromCOD13.wav" volume="0.7"/>
+	<sound class="impact" fileref="rifle_drop.wav"/>
+	<model filename=""/>
+	<hud_icon filename="parw_Doppelsoldner_2.png"/>
+	<capacity value="1" source="rank" source_value="0.0"/>
+	<weak_hand_hold offset="0.2"/>
+	<projectile file="Doppelsoldner_rocket.projectile">
+	<result class="blast" radius="2.8" damage="2.0" push="0.2" decal="1" faction_compare="not_equal"/>
+	</projectile>
+	<ballistics curve_height="3.0" near_far_distance="16.0" speed_estimation_near="10.0" speed_estimation_far="16.0" max_speed="47.0" randomness="0.0" tweak_factor="1.55"/>
+	<stance state_key="running" accuracy="1"/>
+	<stance state_key="walking" accuracy="1"/>
+	<stance state_key="crouch_moving" accuracy="1"/>
+	<stance state_key="prone_moving" accuracy="1"/>
+	<stance state_key="standing" accuracy="1"/>
+	<stance state_key="crouching" accuracy="1"/>
+	<stance state_key="prone" accuracy="1"/>
+	<stance state_key="over_wall" accuracy="1"/>
+	<shield offset="0.5 -0.35 0" extent="0.4 0.4 0.4" usable_for_cover="0"/>
+	<modifier class="projectile_blast_result" input_character_state="none" output_character_state="none" consumes_item="1"/>
+	<modifier class="speed" value="-0.6"/>
+	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
+	<target_factors tag="heavy_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0"/>
+	<target_factors tag="apc" distance="1.0" direction="0.0" squad_command="1.0" base_score="6.0"/>
+	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="5.0"/>
+	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="5.5"/>
+	<target_factors tag="shield" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
+	<target_factors tag="punchme" distance="1.0" direction="0.0" squad_command="1.0" base_score="30.0"/>
+	<inventory encumbrance="0.0" price="0.0"/>
 </weapon>
 
 <weapon key="parw_nyto_black.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
