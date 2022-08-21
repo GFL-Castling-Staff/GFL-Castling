@@ -303,7 +303,7 @@ dictionary tdoll_index = {
     {"301",""},
     {"302",""},
     {"303","gkw_hp35.weapon"},
-    {"304",""},
+    {"304","gkw_saf.weapon"},
     {"305",""},
     {"306","gkw_akalfa.weapon"},
     {"307",""},
