@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <achievements>
-    <achievement name="KCCO_Hatred" no_level_title="Stroke Dead-Center" include_in_alltime_stats="0">
+    <achievement name="KCCO_Hatred" no_level_title="Splinter Point" include_in_alltime_stats="0">
 		<level>
 			<notification image="hud_achievement_kcco_ping.png" sound="achievement1.wav" />
 			<rank title="Stroke Dead-Center" image="hud_achievement_kcco.png" />
@@ -49,31 +49,31 @@
 
     <achievement name="SF_Hatred" no_level_title="Operation Cube" include_in_alltime_stats="0">
 		<level>
-			<notification image="hud_achievement_vehicle_destroyer_bronze.png" sound="achievement1.wav" />
-			<rank title="Seven-Step Puzzle" image="hud_achievement_vehicle_destroyer_bronze_pin.png" />
+			<notification image="hud_achievement_sf_ping.png" sound="achievement1.wav" />
+			<rank title="Seven-Step Puzzle" image="hud_achievement_sf.png" />
 		</level>
 		<level>
-			<notification image="hud_achievement_vehicle_destroyer_bronze.png" sound="achievement2_1.wav" />
-			<rank title="Corner Breaker" image="hud_achievement_vehicle_destroyer_bronze_pin.png" />
+			<notification image="hud_achievement_sf_ping.png" sound="achievement2_1.wav" />
+			<rank title="Corner Breaker" image="hud_achievement_sf.png" />
 		</level>
 		<level>
-			<notification image="hud_achievement_vehicle_destroyer_bronze.png" sound="achievement3.wav" />
-			<rank title="Layer Reversal" image="hud_achievement_vehicle_destroyer_bronze_pin.png" />
+			<notification image="hud_achievement_sf_ping.png" sound="achievement3.wav" />
+			<rank title="Layer Reversal" image="hud_achievement_sf.png" />
 		</level>		
 		<level>
-			<notification image="hud_achievement_vehicle_destroyer_bronze.png" sound="achievement3.wav" />
-			<rank title="Side Collapse" image="hud_achievement_vehicle_destroyer_bronze_pin.png" />
+			<notification image="hud_achievement_sf_ping.png" sound="achievement3.wav" />
+			<rank title="Side Collapse" image="hud_achievement_sf.png" />
 		</level>
 		<level>
-			<notification image="hud_achievement_vehicle_destroyer_bronze.png" sound="achievement3.wav" />
-			<rank title="W.A.V.E. ERROR" image="hud_achievement_kcco.png" />
+			<notification image="hud_achievement_sf_ping.png" sound="achievement3.wav" />
+			<rank title="W.A.V.E. ERROR" image="hud_achievement_sf.png" />
 		</level>
 		<criteria class="custom_stat" tag="jupiter_broken" description="* destroy %target_count Jupiter">
 			<level value="1" />
 			<level value="5" />
 			<level value="10" />
 			<level value="50" />
-			<level value="114514" />
+			<level value="1145141919" />
 		</criteria>
 		<criteria class="custom_stat" tag="sfboss_kill" description="* defeat %target_count S.F. Boss">
 			<level value="10" />
@@ -82,5 +82,44 @@
 			<level value="1000" />
 			<level value="1145141919" />
 		</criteria>
-	</achievement>            
+	</achievement>
+
+    <achievement name="Paradeus_Hatred" no_level_title="Entropy Reduction" include_in_alltime_stats="0">
+		<level>
+			<notification image="hud_achievement_pard_ping.png" sound="achievement1.wav" />
+			<rank title="Starlight re-modelling" image="hud_achievement_pard.png" />
+		</level>
+		<level>
+			<notification image="hud_achievement_pard_ping.png" sound="achievement2_1.wav" />
+			<rank title="Entropy Reversal" image="hud_achievement_pard.png" />
+		</level>
+		<level>
+			<notification image="hud_achievement_pard_ping.png" sound="achievement3.wav" />
+			<rank title="Dark Failure" image="hud_achievement_pard.png" />
+		</level>		
+		<level>
+			<notification image="hud_achievement_pard_ping.png" sound="achievement3.wav" />
+			<rank title="Chaos End" image="hud_achievement_pard.png" />
+		</level>
+		<level>
+			<notification image="hud_achievement_pard_ping.png" sound="achievement3.wav" />
+			<rank title="W.A.V.E. ERROR" image="hud_achievement_pard.png" />
+		</level>
+		<criteria class="vehicle_destroy" owner="any" description="* destroy %target_count Uhlan">
+			<vehicle key="uhlan.vehicle" />
+			<level value="5" />
+			<level value="10" />
+			<level value="50" />
+			<level value="100" />
+			<level value="1145141919"/>
+		</criteria>       
+		<criteria class="vehicle_destroy" owner="any" description="* destroy %target_count Pyxis">
+			<vehicle key="par_compass.vehicle" />
+			<level value="5" />
+			<level value="10" />
+			<level value="50" />
+			<level value="100" />
+			<level value="1145141919"/>
+		</criteria>
+	</achievement>
 </achievements>
