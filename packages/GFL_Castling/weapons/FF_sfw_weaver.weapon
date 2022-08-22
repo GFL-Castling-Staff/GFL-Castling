@@ -75,10 +75,10 @@
 		<sound class="impact" fileref="rifle_drop.wav" />
 		<model filename="" />
 		<hud_icon filename="sfw_weaver.png" />
-		<ballistics curve_height="3.0" near_far_distance="16.0" speed_estimation_near="10.0" speed_estimation_far="20.0" max_speed="50.0" randomness="0.0" tweak_factor="1.55" />
+		<ballistics curve_height="3.0" near_far_distance="16.0" speed_estimation_near="10.0" speed_estimation_far="16.0" max_speed="47.0" randomness="0.0" tweak_factor="1.55" />
 		<weak_hand_hold offset="0.2" />
 		<projectile file="Doppelsoldner_rocket.projectile">
-			<result class="blast" damage="3" radius="3.5" decal="1" push="1" character_state="death" faction_compare="not_equal" />
+			<result class="blast" damage="4" radius="3.5" decal="1" push="1" character_state="death" faction_compare="not_equal" />
 		</projectile>
 	    <stance state_key="running" accuracy="0.5" />
         <stance state_key="walking" accuracy="0.65" />

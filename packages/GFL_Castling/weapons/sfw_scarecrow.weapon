@@ -3,7 +3,7 @@
   <tag name="smg" />
   <tag name="elite" />
 
-  <specification accuracy_factor="0.95" barrel_offset="0.5" class="0" slot="0" magazine_size="50" name="SF-Scarecrow" projectile_speed="80" retrigger_time="0.1" suppressed="1" carry_in_two_hands="0" can_shoot_standing="1" can_shoot_crouching="0" can_shoot_prone="0" burst_shots="1" projectiles_per_shot="2" sustained_fire_diminish_rate="1.0" sustained_fire_grow_step="1.1"/>
+  <specification accuracy_factor="0.95" barrel_offset="0.5" class="0" slot="0" magazine_size="50" name="SF-Scarecrow" projectile_speed="80" retrigger_time="0.1" suppressed="1" carry_in_two_hands="0" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" burst_shots="1" projectiles_per_shot="2" sustained_fire_diminish_rate="1.0" sustained_fire_grow_step="1.1"/>
 
 
   <animation state_key="recoil" animation_key="recoil, scarecrow" />
