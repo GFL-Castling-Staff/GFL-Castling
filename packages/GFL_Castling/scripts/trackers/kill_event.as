@@ -15,14 +15,19 @@
 
 // --------------------------------------------
 class kill_event : Tracker {
-	protected Metagame@ m_metagame;
+	protected GameMode@ m_metagame;
     protected array<HealOnKill_tracker@> HealOnKill_track;
+	protected int m_difficulty;
+
+    protected float m_droprate_offset=0;
 
 	// --------------------------------------------
-	kill_event(Metagame@ metagame) {
+	kill_event(GameMode@ metagame) {
 		@m_metagame = @metagame;
         //rpScale = rp_multiplier;
 		m_metagame.getComms().send("<command class='set_metagame_event' name='character_kill' enabled='1' />");
+        m_difficulty=m_metagame.UserSettings.m_GlobalDifficulty;
+        m_droprate_offset= m_difficulty* 0.05;
 	}
     
     dictionary healOnKillWeaponList = {
@@ -180,7 +185,7 @@ class kill_event : Tracker {
 
             if(reward_pool_key != "" && factionId==0){
                 if(reward_pool_key=="common"){
-                    if(rand(0.0f,1.0f) <= 0.15f){
+                    if(rand(0.0f,1.0f) <= (0.15f+ m_droprate_offset)){
 						ScoredResource@ r = getRandomScoredResource(reward_pool_common);
                         string c = 
                             "<command class='create_instance'" +
@@ -193,7 +198,7 @@ class kill_event : Tracker {
                     }
                 }
                 else if(reward_pool_key=="uncommon"){
-                    if(rand(0.0f,1.0f) <= 0.15f){
+                    if(rand(0.0f,1.0f) <= (0.15f+ m_droprate_offset)){
 						ScoredResource@ r = getRandomScoredResource(reward_pool_uncommon);
                         string c = 
                             "<command class='create_instance'" +
@@ -206,7 +211,7 @@ class kill_event : Tracker {
                     }
                 }
                 else if(reward_pool_key=="rare"){
-                    if(rand(0.0f,1.0f) <= 0.2f){
+                    if(rand(0.0f,1.0f) <= (0.2f+ m_droprate_offset)){
 						ScoredResource@ r = getRandomScoredResource(reward_pool_rare);
                         string c = 
                             "<command class='create_instance'" +
