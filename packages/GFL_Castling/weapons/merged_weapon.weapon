@@ -37026,7 +37026,7 @@
 </weapon>
 
 <weapon key="ff_destroyer.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification accuracy_factor="0.95" barrel_offset="0.5" class="0" slot="0" magazine_size="20" name="GK-Destroyer" projectile_speed="45" retrigger_time="0.3" suppressed="0" projectiles_per_shot="2" burst_shots="1" carry_in_two_hands="0" can_shoot_standing="1" can_shoot_crouching="0" can_shoot_prone="0" sustained_fire_diminish_rate="1.0" sustained_fire_grow_step="0.5"/>
+	<specification accuracy_factor="0.95" barrel_offset="0.5" class="0" slot="0" magazine_size="20" name="GK-Destroyer" projectile_speed="65" retrigger_time="0.3" suppressed="0" projectiles_per_shot="2" burst_shots="1" carry_in_two_hands="0" can_shoot_standing="1" can_shoot_crouching="0" can_shoot_prone="0" sustained_fire_diminish_rate="1.0" sustained_fire_grow_step="0.5"/>
 	<inventory encumbrance="27.0" buy_price="330.0" sell_price="330.0"/>
 	<animation state_key="recoil" animation_key="recoil, destroyer"/>
 	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil, destroyer"/>
@@ -37052,18 +37052,19 @@
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename=""/>
 	<hud_icon filename="sfw_destroyer.png"/>
-	<ballistics curve_height="3.0" near_far_distance="16.0" speed_estimation_near="10.0" speed_estimation_far="16.0" max_speed="47.0" randomness="0.0" tweak_factor="1.55"/>
+	<ballistics curve_height="3.0" near_far_distance="16.0" speed_estimation_near="10.0" speed_estimation_far="25.0" max_speed="55.0" randomness="0.0" tweak_factor="1.55" />
 	<weak_hand_hold offset="0.2"/>
 	<projectile file="standard_agl.projectile">
 	<result class="blast" damage="3.0" radius="3.5" decal="1" push="0.4" character_state="death" faction_compare="not_equal"/>
 	</projectile>
-	<stance state_key="running" accuracy="0.5"/>
-	<stance state_key="walking" accuracy="0.6"/>
-	<stance state_key="crouch_moving" accuracy="0.8"/>
-	<stance state_key="prone_moving" accuracy="0.8"/>
-	<stance state_key="standing" accuracy="0.98"/>
-	<stance state_key="crouching" accuracy="1.1"/>
-	<stance state_key="prone" accuracy="1.2"/>
+	<stance state_key="running" accuracy="0.5" />
+    <stance state_key="walking" accuracy="0.5" />
+    <stance state_key="crouch_moving" accuracy="0.75" />
+    <stance state_key="prone_moving" accuracy="0.75" />
+    <stance state_key="standing" accuracy="0.9"/>
+    <stance state_key="crouching" accuracy="0.9" />
+    <stance state_key="prone" accuracy="1" />
+    <stance state_key="over_wall" accuracy="1" />
 	<modifier class="speed" value="-0.2"/>
 	<tag name="elite"/>
 	<commonness value="0.0000001" in_stock="0" can_respawn_with="1"/>
