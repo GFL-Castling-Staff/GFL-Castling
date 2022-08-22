@@ -714,7 +714,7 @@
 			<call key="sf_jaguar.call" />
 			<call key="sf_jupiter.call" />
 			<weapon key="sfw_architect.weapon" enabled="1"/>
-			<carry_item key="sf_architect.carry_item" enabled="1" />
+			<carry_item key="vest_40hp.carry_item" enabled="1" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="150.0" max="300.05" />
@@ -738,7 +738,7 @@
 			<call key="sf_jaguar.call" />
 			<call key="sf_jupiter.call" />
 			<weapon key="sfw_Intruder.weapon" enabled="1"/>
-			<carry_item key="sf_dreamer.carry_item" enabled="1" />
+			<carry_item key="vest_40hp.carry_item" enabled="1" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="300.0" max="300.05" />
@@ -762,7 +762,7 @@
 			<call key="sf_jaguar.call" />
 			<call key="sf_jupiter.call" />
 			<weapon key="sfw_dreamer.weapon" enabled="1"/>
-			<carry_item key="sf_dreamer.carry_item" enabled="1" />
+			<carry_item key="vest_40hp.carry_item" enabled="1" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="310.0" max="400.05" />
@@ -929,7 +929,7 @@
 		<ai filename="destroyer.ai" />
 		<resources clear_vehicles="1" clear_weapons="1" clear_calls="1" clear_carry_items="1">
 			<weapon key="sfw_destroyer.weapon" enabled="1"/>
-			<carry_item key="sf_destroyer.carry_item" enabled="1" />
+			<carry_item key="vest_40hp.carry_item" enabled="1" />
 			<call key="sf_destroyer.call" />
 			<call key="sf_jaguar.call" />
 			<call key="sf_jupiter.call" />
@@ -957,7 +957,7 @@
 		<ai filename="sniper.ai" />
 		<resources clear_vehicles="1" clear_weapons="1" clear_calls="1" clear_carry_items="1">
 			<weapon key="sfw_weaver.weapon" enabled="1"/>
-			<carry_item key="sf_architect.carry_item" enabled="1" />
+			<carry_item key="vest_40hp.carry_item" enabled="1" />
 			<call key="sf_destroyer.call" />
 			<call key="sf_jaguar.call" />
 			<call key="sf_jupiter.call" />
@@ -1015,7 +1015,7 @@
 		<ai filename="lonewolf.ai" />
 		<resources clear_vehicles="1" clear_weapons="1" clear_calls="1" clear_carry_items="1">
 			<weapon key="sfw_scarecrow.weapon" enabled="1"/>
-			<carry_item key="sf_scarecrow.carry_item" enabled="1" />
+			<carry_item key="vest_40hp.carry_item" enabled="1" />
 			<call key="sf_jaguar.call" />
 		</resources>
 		<attribute_config class="xp">

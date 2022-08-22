@@ -39,8 +39,8 @@
         <hud_icon filename="kcco_aks74u.png" />
         <weak_hand_hold offset="0.2" />
         <projectile file="bullet_kcco.projectile">
-            <result class="hit"  kill_probability="1.85" kill_probability_offset_on_successful_hit="0.4" kill_decay_start_time="0.069" kill_decay_end_time="0.
-            6" />
+            <result class="hit"  kill_probability="1.85" kill_probability_offset_on_successful_hit="0.4" kill_decay_start_time="0.174" kill_decay_end_time="0.
+            7" />
         </projectile>
         <effect class="muzzle" ref="ejection_556" />
         <stance state_key="running" accuracy="0.65" />
@@ -51,7 +51,7 @@
         <stance state_key="crouching" accuracy="0.85" />
         <stance state_key="over_wall" accuracy="1.1" />
         <stance state_key="prone" accuracy="1.1" />
-        <modifier class="speed" value="0.4" />
+        <modifier class="speed" value="0.75" />
         <modifier class="hit_success_probability" value="-0.2" />
         <target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0" />
         <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0" />
