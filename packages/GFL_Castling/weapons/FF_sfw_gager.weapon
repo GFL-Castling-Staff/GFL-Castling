@@ -44,16 +44,18 @@
   
     <weak_hand_hold offset="0.4" />
     <projectile file="bullet_sf.projectile">
-        <result class="hit"  kill_probability="2.1" kill_decay_start_time="1" kill_decay_end_time="1"  />
+        <result class="hit"  kill_probability="2.2" kill_probability_offset_on_successful_hit="0.4" kill_decay_start_time="1" kill_decay_end_time="1"  />
     </projectile>
 
-    <stance state_key="running" accuracy="0.8" />
-    <stance state_key="walking" accuracy="0.8" />
-    <stance state_key="crouch_moving" accuracy="0.9" />
-    <stance state_key="prone_moving" accuracy="0.9" />
-    <stance state_key="standing" accuracy="0.85" />
-    <stance state_key="crouching" accuracy="0.95" />    
-    <modifier class="speed" value="0.1" />
+    <stance state_key="running" accuracy="0.75" />
+    <stance state_key="walking" accuracy="0.75" />
+    <stance state_key="crouch_moving" accuracy="0.85" />
+    <stance state_key="prone_moving" accuracy="0.85" />
+    <stance state_key="standing" accuracy="0.9"/>
+    <stance state_key="crouching" accuracy="0.9" />
+    <stance state_key="prone" accuracy="1" />
+    <stance state_key="over_wall" accuracy="1" />  
+    <modifier class="speed" value="0.3" />
 </weapon>
 <weapon file="gk_sf_boss.base_weapon" key="ff_gager_1.weapon">
     <tag name="melee" />
@@ -105,7 +107,7 @@
   
     <weak_hand_hold offset="0.4" />
     <projectile file="teal.projectile">
-        <result class="blast" radius="3.8" damage="4.1" decal="0" push="0.001" character_state="death" faction_compare="not_equal" make_vehicle_hit_sound="0" />
+        <result class="blast" radius="3.8" damage="4.1" decal="0" push="0.2" character_state="death" faction_compare="not_equal" make_vehicle_hit_sound="0" />
     </projectile>
 
     <modifier class="speed" value="1.01" />
