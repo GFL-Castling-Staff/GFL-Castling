@@ -670,7 +670,7 @@
 	</soldier>
 	<!-- KCCO石英小队精英突击兵 -->
 	<soldier name="kcco_quartz_ranger" spawn_score="0.2" copy_from="default_bot">
-		<models filename="kccod_human_5.xml" />
+		<model filename="kccod_human_5.xml" />
 		<ai filename="kcco_human_smg.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="kcco_aks74u.weapon" enabled="1" />
