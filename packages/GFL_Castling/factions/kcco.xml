@@ -365,9 +365,11 @@
 	</rank>
 	<!-- player group -->
 	<soldier name="default" spawn_score="0.0" firstnames_file="kcco_first.name" lastnames_file="kcco_last.name">
-		<character filename="default_kcco_human.character">
+		<!-- <character filename="default_kcco_human.character">
 			<parameter class="default_squad_config_index" value="0" />
-		</character>
+		</character> -->
+		<character filename="kcco_othrusdog.character" />
+
 		<ai filename="elite.ai" />
 		<models file="kcco.models" />
 		<models file="common_bonus.models" />
@@ -539,10 +541,11 @@
 	<soldier name="kcco_dog" spawn_score="0.4" copy_from="default_bot">
 		<model filename="kccod_othrusdog.xml" />
 		<character filename="kcco_othrusdog.character" />
-		<ai filename="melee_nb.ai" />
+		<ai filename="kcco_dog.ai" />
 		<resources clear_weapons="1" clear_grenades="1" clear_vehicles="1" clear_calls="1" clear_carry_items="1">
 			<weapon key="kcco_othrusdog.weapon" enabled="1" />
 			<carry_item key="vest_40hp_21" enabled="1" />
+			<projectile key="selfnone.projectile" enabled="1" />
 		</resources>
 	</soldier>
 	<!-- archer -->

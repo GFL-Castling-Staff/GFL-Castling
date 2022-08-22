@@ -62489,7 +62489,7 @@
 			<position x="11.113781" y="10.866108" z="-37.174576" />
 		</frame>
 	</animation>
-	<animation loop="0" end="1.000000" speed="1.000000" comment="defence, othrusdog">
+	<animation loop="0" end="0.500000" speed="0.500000" comment="defence, othrusdog">
 		<frame time="0.000000">
 			<position x="0.374303" y="32.015823" z="25.485092" />
 			<position x="0.045286" y="30.284115" z="18.637251" />
@@ -62574,8 +62574,28 @@
 			<position x="9.972318" y="11.358835" z="-4.465235" />
 			<position x="-11.500000" y="0.500000" z="-14.500000" />
 			<position x="12.500000" y="0.500000" z="-14.500000" />
+			<control key="action" value="1" />
 		</frame>
 	</animation>
+	<animation loop="0" end="1.000000" speed="1.000000" comment="defence still, othrusdog">
+		<frame time="0.000000">
+			<position x="-7.073971" y="42.165726" z="49.039352" />
+			<position x="-7.015317" y="35.103779" z="48.685146" />
+			<position x="-23.651081" y="29.897236" z="42.116795" />
+			<position x="10.268657" y="30.142033" z="43.822460" />
+			<position x="-24.030045" y="-0.096952" z="41.664024" />
+			<position x="9.882326" y="0.200753" z="42.012363" />
+			<position x="-24.075445" y="-0.097369" z="44.663681" />
+			<position x="9.722113" y="0.367403" z="45.003445" />
+			<position x="-5.695551" y="25.163197" z="24.572069" />
+			<position x="-16.029888" y="21.945755" z="4.888577" />
+			<position x="8.039767" y="21.140253" z="7.248382" />
+			<position x="-12.474463" y="13.001933" z="-6.233198" />
+			<position x="9.972318" y="11.358835" z="-4.465235" />
+			<position x="-11.500000" y="0.500000" z="-14.500000" />
+			<position x="12.500000" y="0.500000" z="-14.500000" />
+		</frame>
+	</animation>	
 	<animation loop="0" end="0.300000" speed="1.000000" comment="stab attack, othrusdog">
 		<frame time="0.000000">
 			<position x="0.532539" y="31.648701" z="24.466194" />
