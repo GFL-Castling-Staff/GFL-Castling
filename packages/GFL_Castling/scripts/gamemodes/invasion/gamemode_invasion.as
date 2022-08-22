@@ -327,7 +327,7 @@ class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 		addTracker(SquadEquipmentKit(this)); 
 		addTracker(RangeFinder(this)); 
 		addTracker(GFLskill(this));
-		addTracker(kill_event(this));
+		addTracker(kill_event(this,getUserSettings()));
 		addTracker(ManualCall(this));
 		addTracker(ServerHelper(this));
 		addTracker(BanManager(this,true));
