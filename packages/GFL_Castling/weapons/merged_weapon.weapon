@@ -37347,7 +37347,7 @@
 	<effect class="muzzle" offset="0"/>
 	<weak_hand_hold offset="0"/>
 	<projectile file="bullet_sf.projectile">
-	<result class="hit" kill_probability="1.8" kill_probability_offset_on_successful_hit="1.4" kill_decay_start_time="0.75" kill_decay_end_time="0.75"/>
+	<result class="hit" kill_probability="1.8" kill_probability_offset_on_successful_hit="1.8" kill_decay_start_time="0.75" kill_decay_end_time="1.75"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.8"/>
 	<stance state_key="walking" accuracy="0.8"/>
@@ -37387,8 +37387,8 @@
 	<effect class="muzzle" offset="0"/>
 	<weak_hand_hold offset="0.4"/>
 	<projectile file="bullet_sf.projectile">
-	<result class="hit" kill_probability="2.2" kill_probability_offset_on_successful_hit="0.4" kill_decay_start_time="0.4" kill_decay_end_time="0.8"/>
-	</projectile>
+        <result class="hit"  kill_probability="2.4" kill_probability_offset_on_successful_hit="0.2" kill_decay_start_time="0.05" kill_decay_end_time="0.55" />
+    </projectile>
 	<modifier class="speed" value="-0.35"/>
 	<tag name="elite"/>
 	<commonness value="0.0000001" in_stock="0" can_respawn_with="1"/>
