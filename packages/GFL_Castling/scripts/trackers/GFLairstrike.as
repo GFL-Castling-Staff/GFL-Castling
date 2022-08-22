@@ -35,7 +35,7 @@ dictionary airstrikeIndex = {
         // 激光射线模板
         {"ioncannon_strafe",1},
 
-        // 暴怒妖精
+        // 暴怒妖精_a10
         {"a10_call_strafe",2},
 
         // 带火箭弹的a10
@@ -43,6 +43,15 @@ dictionary airstrikeIndex = {
 
         // M200狙击
         {"m200_snipe",4},
+
+        // 暴怒妖精_ac130_三联霰弹枪
+        {"ac130_shotgun",5},
+
+        // 暴怒妖精_ac130_机枪扫射 
+        {"ac130_minigun",6},
+
+        // 暴怒妖精_ac130_四联火箭筒
+        {"ac130_m202",7},
 
         // 下面这行是用来占位的，在这之上添加新的即可
         {"666",-1}
@@ -81,7 +90,7 @@ class GFLairstrike : Tracker {
                         float strike_didis = 5.0;
                         //扫射起点 从弹头终点指向弹头起点的位置基础偏移 
                         Vector3 pos_offset = strike_vector.add(getMultiplicationVector(strike_vector,Vector3(-40,0,-40)));  
-                        pos_offset = pos_offset.add(Vector3(0,30,0));
+                        pos_offset = pos_offset.add(Vector3(0,60,0));
                         //扫射终点的起点与终点（就生成弹头的终点的起始位置与终止位置）
                         Vector3 c_pos = start_pos.add(getMultiplicationVector(strike_vector,Vector3(-15,0,-15)));
                         Vector3 s_pos = end_pos.add(getMultiplicationVector(strike_vector,Vector3(10,0,10)));
@@ -282,6 +291,65 @@ class GFLairstrike : Tracker {
                         // _log("Sniper Fairy activated");
                         CreateDirectProjectile(m_metagame,start_pos.add(Vector3(0,50,0)),end_pos,"m200_snipe.projectile",cid,fid,240);
                         playSoundAtLocation(m_metagame,"m200_fire_snipe.wav",fid,end_pos);
+                        Airstrike_strafe.removeAt(a);
+                        break;                        
+                    }
+                    case 5:{
+                        _log("ac130 Fairy activated");
+                        float strike_rand=4.0;
+                        for(int j=1;j<=5;j++)
+                        {
+                            float rand_x = rand(-strike_rand,strike_rand);
+                            float rand_y = rand(-strike_rand,strike_rand);
+                            CreateDirectProjectile(m_metagame,start_pos,end_pos.add(Vector3(rand_x,0,rand_y)),"ASW_AC130_breath.projectile",cid,fid,240);
+                            playSoundAtLocation(m_metagame,"thrower_fire_FromSAM4_2.wav",fid,end_pos);
+                        }
+                        Airstrike_strafe.removeAt(a);
+                        break;                        
+                    }
+                    case 6:{//AC130 单次 锁人扫射
+                        _log("ac130 minigun Fairy activated");
+
+                        float rand_angle = rand(-3.14,3.14);
+                        float rand_x1 = 2*cos(rand_angle);
+                        float rand_y1 = 2*sin(rand_angle);
+
+                        //扫射位置偏移单位向量 与 扫射位置偏移单位距离
+                        Vector3 strike_vector = getAimUnitVector(1,end_pos,end_pos.add(Vector3(rand_x1,0,rand_y1))); 
+                        float strike_didis = 2;
+                        //扫射终点的起点与终点（就生成弹头的终点的起始位置与终止位置）
+                        Vector3 c_pos = end_pos.add(getMultiplicationVector(strike_vector,Vector3(-8,0,-8)));
+                        Vector3 s_pos = end_pos.add(getMultiplicationVector(strike_vector,Vector3(8,0,8)));
+                        //依据扫射位置偏移单位距离而设置的扫射次数
+                        int strike_time = int(getAimUnitDistance(1,c_pos,s_pos)/strike_didis);
+                        //最终弹头随机程度
+                        float strike_rand = 2.0;
+                                                
+                        for(int i=0;i<=strike_time;i++){
+                            //水平偏移
+                            c_pos = c_pos.add(getMultiplicationVector(strike_vector,Vector3(strike_didis,0,strike_didis)));
+                            //每单轮扫射生成6次对点扫射
+                            for(int j=1;j<=6;j++)
+                            {
+                                rand_x1 = rand(-strike_rand,strike_rand);
+                                rand_y1 = rand(-strike_rand,strike_rand);
+                                
+                                CreateDirectProjectile(m_metagame,start_pos,c_pos.add(Vector3(rand_x1,0,rand_y1)),"ASW_A10_strafe.projectile",cid,fid,240);           
+                            } 
+                        }                               
+                        Airstrike_strafe.removeAt(a);
+                        break;
+                    }
+                    case 7:{
+                        _log("ac130 m202 Fairy activated");
+                        float strike_rand=4.0;
+                        for(int j=1;j<=4;j++)
+                        {
+                            float rand_x = rand(-strike_rand,strike_rand);
+                            float rand_y = rand(-strike_rand,strike_rand);
+                            CreateDirectProjectile(m_metagame,start_pos,end_pos.add(Vector3(rand_x,0,rand_y)),"88heat.projectile",cid,fid,120);
+                            playSoundAtLocation(m_metagame,"thrower_fire_FromSAM4_2.wav",fid,end_pos);
+                        }
                         Airstrike_strafe.removeAt(a);
                         break;                        
                     }

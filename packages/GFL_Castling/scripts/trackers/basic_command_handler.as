@@ -454,7 +454,7 @@ class BasicCommandHandler : Tracker {
 			int characterId= playerInfo.getIntAttribute("character_id");
 			int factionId= playerInfo.getIntAttribute("faction_id");
 			string target = playerInfo.getStringAttribute("aim_target");			
-			GFL_event_array.insertLast(GFL_event(characterId,factionId,1,stringToVector3(target),1.0));
+			GFL_event_array.insertLast(GFL_event(characterId,factionId,2,stringToVector3(target),1.0,-1.0));
 		}
 		// it's a silent server command, check which one
 		if (checkCommand(message, "test2")) {

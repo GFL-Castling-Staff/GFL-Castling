@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<projectile class="grenade" name="Dragon fire" slot="1" pulldown_in_air="128.0" time_to_live="1.5" key="dragons_breath_ac130.projectile">
+
+	<trigger class="impact" />
+	<result
+	class="blast"
+	radius="3"
+	damage="0.5"
+	push="0.1"  
+	character_state="death"
+	make_vehicle_hit_sound="0"
+	faction_compare="not_equal" 
+	/>
+
+	<rotation class="motion" />
+	<commonness value="0.0" />
+
+    <effect class="result" key="vehicle" ref="Burst" use_surface_color="1" />
+    <effect class="result" key="vehicle" ref="hitMetal" />
+    <effect class="result" key="vehicle" ref="hitMetal_1" />
+    <effect class="result" key="vehicle" ref="BulletImpact" />
+    <effect class="result" key="character" copy="vehicle" />
+    <effect class="result" key="shield" copy="vehicle" />
+
+	<effect class="result" key="terrain" ref="DragonSparkle" lighting="0" />
+	<effect class="result" key="terrain" ref="DragonFlame2" lighting="0" />    
+    <effect class="result" key="terrain" ref="FlameSparkleEnd" lighting="0" />    
+
+	<effect class="result" type="splat_map" surface_tag="" size="1.0" atlas_index="4" layer="0" />
+
+    <effect class="result" key="other" copy="terrain" />
+    <effect class="result" key="vehicle" copy="terrain" />
+    <effect class="result" key="static_object" copy="terrain" />
+	
+	<!-- <trail probability="1.0" key="FlamethrowerTrail" /> -->
+</projectile>
