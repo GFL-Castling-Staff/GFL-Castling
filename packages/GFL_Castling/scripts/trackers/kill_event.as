@@ -22,11 +22,11 @@ class kill_event : Tracker {
     protected float m_droprate_offset=0;
 
 	// --------------------------------------------
-	kill_event(GameMode@ metagame) {
+	kill_event(GameMode@ metagame,const UserSettings@ m_userSettings) {
 		@m_metagame = @metagame;
         //rpScale = rp_multiplier;
 		m_metagame.getComms().send("<command class='set_metagame_event' name='character_kill' enabled='1' />");
-        m_difficulty=m_metagame.UserSettings.m_GlobalDifficulty;
+        m_difficulty=m_userSettings.m_GlobalDifficulty;
         m_droprate_offset= m_difficulty* 0.05;
 	}
     
