@@ -44,6 +44,7 @@
 	<stance state_key="prone_moving" accuracy="0.75"/>
 	<stance state_key="over_wall" accuracy="1"/>
 	<modifier class="speed" value="0.5"/>
+	<modifier class="detectability" value="-0.15"/>
 	<modifier class="hit_success_probability" value="-0.2"/>
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
@@ -19898,6 +19899,7 @@
 	<stance state_key="prone_moving" accuracy="0.85"/>
 	<stance state_key="over_wall" accuracy="1"/>
 	<modifier class="speed" value="+0.4"/>
+	<modifier class="detectability" value="-0.15"/>
 	<modifier class="hit_success_probability" value="-0.2"/>
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
@@ -23516,6 +23518,7 @@
 	<stance state_key="prone_moving" accuracy="0.75"/>
 	<stance state_key="over_wall" accuracy="1"/>
 	<modifier class="speed" value="0.5"/>
+	<modifier class="detectability" value="-0.15"/>
 	<modifier class="hit_success_probability" value="-0.2"/>
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
@@ -23571,6 +23574,7 @@
 	<stance state_key="prone_moving" accuracy="0.75"/>
 	<stance state_key="over_wall" accuracy="1"/>
 	<modifier class="speed" value="0.5"/>
+	<modifier class="detectability" value="-0.15"/>
 	<modifier class="hit_success_probability" value="-0.2"/>
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
@@ -23625,6 +23629,7 @@
 	<stance state_key="prone_moving" accuracy="0.75"/>
 	<stance state_key="over_wall" accuracy="1"/>
 	<modifier class="speed" value="0.5"/>
+	<modifier class="detectability" value="-0.15"/>
 	<modifier class="hit_success_probability" value="-0.2"/>
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
@@ -34027,6 +34032,7 @@
 	<stance state_key="prone_moving" accuracy="0.85"/>
 	<stance state_key="over_wall" accuracy="1"/>
 	<modifier class="speed" value="+0.4"/>
+	<modifier class="detectability" value="-0.15"/>
 	<modifier class="hit_success_probability" value="-0.2"/>
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
@@ -34081,6 +34087,7 @@
 	<stance state_key="prone_moving" accuracy="0.85"/>
 	<stance state_key="over_wall" accuracy="1"/>
 	<modifier class="speed" value="+0.5"/>
+	<modifier class="detectability" value="-0.15"/>
 	<modifier class="hit_success_probability" value="-0.2"/>
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
@@ -34135,6 +34142,7 @@
 	<stance state_key="prone_moving" accuracy="0.85"/>
 	<stance state_key="over_wall" accuracy="1"/>
 	<modifier class="speed" value="+0.4"/>
+	<modifier class="detectability" value="-0.15"/>
 	<modifier class="hit_success_probability" value="-0.2"/>
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
