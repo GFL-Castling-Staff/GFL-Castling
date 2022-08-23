@@ -155,40 +155,40 @@
 
     <achievement name="map_complete" no_level_title="Memorable Moment" include_in_alltime_stats="0">
 		<level>
-			<notification image="hud_achievement_pard_ping.png" sound="achievement1.wav" />
-			<rank title="Rocking the Battlefield" image="hud_achievement_pard.png" />
+			<notification image="hud_achievement_complete_ping.png" sound="achievement1.wav" />
+			<rank title="Rocking the Battlefield" image="hud_achievement_complete.png" />
 		</level>
 		<level>
-			<notification image="hud_achievement_pard_ping.png" sound="achievement2_1.wav" />
-			<rank title="Medal of Honor" image="hud_achievement_pard.png" />
+			<notification image="hud_achievement_complete_ping.png" sound="achievement2_1.wav" />
+			<rank title="Medal of Honor" image="hud_achievement_complete.png" />
 		</level>
 		<level>
-			<notification image="hud_achievement_pard_ping.png" sound="achievement3.wav" />
-			<rank title="The Great Adventurer" image="hud_achievement_pard.png" />
+			<notification image="hud_achievement_complete_ping.png" sound="achievement3.wav" />
+			<rank title="The Great Adventurer" image="hud_achievement_complete.png" />
 		</level>		
 		<level>
-			<notification image="hud_achievement_pard_ping.png" sound="achievement3.wav" />
-			<rank title="Moment of Glory" image="hud_achievement_pard.png" />
+			<notification image="hud_achievement_complete_ping.png" sound="achievement3.wav" />
+			<rank title="Moment of Glory" image="hud_achievement_complete.png" />
 		</level>
 		<level>
-			<notification image="hud_achievement_pard_ping.png" sound="achievement3.wav" />
-			<rank title="Abysswalker" image="hud_achievement_pard.png" />
+			<notification image="hud_achievement_complete_ping.png" sound="achievement3.wav" />
+			<rank title="Abysswalker" image="hud_achievement_complete.png" />
 		</level>
 		<level>
-			<notification image="hud_achievement_pard_ping.png" sound="achievement3.wav" />
-			<rank title="Roar of Victory" image="hud_achievement_pard.png" />
+			<notification image="hud_achievement_complete_ping.png" sound="achievement3.wav" />
+			<rank title="Roar of Victory" image="hud_achievement_complete.png" />
 		</level>
 		<level>
-			<notification image="hud_achievement_pard_ping.png" sound="achievement3.wav" />
-			<rank title="BattleParaside" image="hud_achievement_pard.png" />
+			<notification image="hud_achievement_complete_ping.png" sound="achievement3.wav" />
+			<rank title="BattleParaside" image="hud_achievement_complete.png" />
 		</level>
 		<level>
-			<notification image="hud_achievement_pard_ping.png" sound="achievement3.wav" />
-			<rank title="Griffin Expendables" image="hud_achievement_pard.png" />
+			<notification image="hud_achievement_complete_ping.png" sound="achievement3.wav" />
+			<rank title="Griffin Expendables" image="hud_achievement_complete.png" />
 		</level>
 		<level>
-			<notification image="hud_achievement_pard_ping.png" sound="achievement3.wav" />
-			<rank title="W.A.V.E. ERROR" image="hud_achievement_pard.png" />
+			<notification image="hud_achievement_complete_ping.png" sound="achievement3.wav" />
+			<rank title="W.A.V.E. ERROR" image="hud_achievement_complete.png" />
 		</level>			
 		<criteria class="custom_stat" tag="match_complete" description="* complete %target_count Stages">
 			<level value="1" />
