@@ -13,7 +13,7 @@
   <parameter class="team_check_time" value="3.0" />
   <parameter class="check_alert_time" value="1.5" />
   <parameter class="check_reinforcement_need_time" value="30.0" />
-  <parameter class="choose_enemy_time" value="0.6" />
+  <parameter class="choose_enemy_time" value="0.1" />
   <parameter class="check_need_help_time" value="1.0" />
   <parameter class="fighting_time_fire_not_open" value="2.0" />
   <parameter class="cover_status_recheck_time" value="1.5" />
@@ -22,8 +22,8 @@
   <parameter class="crouching_near_leader_rejoin_range" value="12.0" />
   <parameter class="grenade_monitor_range" value="15.0" />
   <parameter class="max_sight_range_with_muzzle" value="40.0" />
-  <parameter class="leader_sight_range" value="35.0" />
-  <parameter class="team_member_sight_range" value="30.0" />
+  <parameter class="leader_sight_range" value="40.0" />
+  <parameter class="team_member_sight_range" value="40.0" />
   <parameter class="strike_frequency_time" value="90.0" /> 
   <parameter class="global_separation_radius_factor" value="1.5" />
   <parameter class="prefer_roofs_probability" value="0.0" />
@@ -65,15 +65,14 @@
   <parameter class="shooting_against_vehicle_burst_time" value="0.5" />
   <parameter class="fighting_favor_helping_probability" value="0.7" />
   <parameter class="check_need_for_help_range" value="40.0" />
-  <parameter class="check_fellows_for_shield_use_range" value="60.0" />
-  <parameter class="max_active_shields_per_fellows" value="1.00" /> 
+
   <parameter class="fighting_against_vehicle_separation" value="2.0" />
   <parameter class="fighting_against_vehicle_move_radius" value="2.0" />
   <parameter class="day_reaction_time_to_fight_min" value="1.2" />
   <parameter class="day_reaction_time_to_fight_max" value="1.4" />
   <parameter class="night_reaction_time_to_fight_min" value="0.1" />
   <parameter class="night_reaction_time_to_fight_max" value="0.2" />
-  <parameter class="willingness_to_guard" value="0.0" />
+  <parameter class="willingness_to_guard" value="1.0" />
   <parameter class="minimum_distance_to_consider_deploying_cover" value="18.0" />
   <parameter class="recheck_cover_over_shootability_time" value="3.0" />
   <parameter class="max_objects_per_sqm_to_consider_deployment" value="0.08" />
@@ -83,6 +82,9 @@
   <parameter class="shielding_min_distance_to_sidestep" value="1.0" />
   <parameter class="shielding_max_distance_to_sidestep" value="3.0" />
   <parameter class="shielding_min_distance_to_keep" value="6.0" />
+
+  <parameter class="check_fellows_for_shield_use_range" value="100.0" />
+  <parameter class="max_active_shields_per_fellows" value="1000" /> 
 
   <parameter class="leaving_cover_separation" value="4.0" />
   <parameter class="guarding_comment_before_proceed_time" value="2.0" />
@@ -110,9 +112,10 @@
   <parameter class="grenade_throw_hold_time" value="0.1" />
   <parameter class="throw_grenade_time_interval_max" value="10.0" />
   <parameter class="throw_grenade_time_interval_min" value="5.0" />
-  <parameter class="max_distance_to_throw_grenade" value="10.0" />
+  <parameter class="max_distance_to_throw_grenade" value="20.0" />
   <parameter class="min_distance_to_throw_grenade" value="0.0" />  
 
   <parameter class="melee_attack_wait_time" value="0.33" />
+  <parameter class="reaction_time_after_choosing_target" value="-1.0" />
 
 </ai>

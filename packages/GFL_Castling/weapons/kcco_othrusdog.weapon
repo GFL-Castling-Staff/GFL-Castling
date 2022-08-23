@@ -2,10 +2,8 @@
 <weapons>
 <weapon file="KCCO.base_weapon" key="kcco_othrusdog.weapon" transform_on_consume="kcco_othrusdog_s">
 	<tag name="melee" />
-	<specification accuracy_factor="0.85" barrel_offset="0.3" can_shoot_standing="1" class="0" slot="0" magazine_size="-1" name="Code:Orthros" projectile_speed="80" retrigger_time="0.35" suppressed="0" carry_in_two_hands="0" sustained_fire_diminish_rate="0.8" sustained_fire_grow_step="0.5" stab_enabled="1" stab_range="2" use_basic_muzzle_smoke_effect="0"/>
-	<animation state_key="recoil" animation_key="still, othrusdog" />
-	<animation key="recoil" stance_key="prone" animation_key="still, othrusdog" />
-	<animation key="recoil" stance_key="over_wall" animation_key="still, othrusdog" />
+	<specification accuracy_factor="0.85" barrel_offset="0.3" can_shoot_standing="1" can_shoot_crouching="0" can_shoot_prone="0" class="0" slot="0" magazine_size="-1" name="Code:Orthros" projectile_speed="80" retrigger_time="0.35" suppressed="0" carry_in_two_hands="0" sustained_fire_diminish_rate="0.8" sustained_fire_grow_step="0.5" stab_enabled="1" stab_range="2.5" use_basic_muzzle_smoke_effect="0"/>
+	<animation state_key="recoil" animation_key="stab attack, othrusdog" />
 	<animation state_key="reload" animation_key="change weaponreload, othrusdog" />
 	<animation key="reload" stance_key="prone" animation_key="change weaponreload, othrusdog" />
 	<animation state_key="hold" animation_key="still, othrusdog" />
@@ -46,7 +44,7 @@
 <weapon file="KCCO.base_weapon" key="kcco_othrusdog_s" transform_on_consume="kcco_othrusdog">
 	<tag name="melee" />
 	<tag name="shieild" />
-	<specification accuracy_factor="0.85" barrel_offset="0.3" can_shoot_standing="1" class="3" slot="0" magazine_size="0" name="Code:Orthros"  stab_enabled="1" sight_range_modifier="1.5" carry_in_two_hands="0"/>
+	<specification accuracy_factor="0.85" barrel_offset="0.3" can_shoot_standing="1" class="3" slot="0" magazine_size="0" name="Code:Orthros"  stab_enabled="1" stab_range="3" sight_range_modifier="1.5" carry_in_two_hands="0"/>
 	<animation state_key="recoil" animation_key="defence still, othrusdog" />
 	<animation state_key="reload" animation_key="change weaponreload, othrusdog" />
 	<animation key="reload" stance_key="prone" animation_key="change weaponreload, othrusdog" />
@@ -66,7 +64,7 @@
 	<model />
 	<hud_icon filename="testing.png" />
 	<weak_hand_hold offset="0.2" />
-	<shield offset="-3.0 0.3 0" extent="0.8 4.0 3.0" />
+	<shield offset="-1.0 0 0.3" extent="2.8 4.0 3.0" />
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0" />
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
@@ -90,10 +88,8 @@
 </weapon>
 <weapon file="KCCO.base_weapon" key="kcco_othrusdog" transform_on_consume="kcco_othrusdog_s">
 	<tag name="melee" />
-	<specification accuracy_factor="0.85" barrel_offset="0.3" can_shoot_standing="1" class="0" slot="0" magazine_size="-1" name="Code:Orthros" projectile_speed="80" retrigger_time="0.35" suppressed="0" carry_in_two_hands="0" sustained_fire_diminish_rate="0.8" sustained_fire_grow_step="0.5" stab_enabled="1" stab_range="2" use_basic_muzzle_smoke_effect="0"/>
-	<animation state_key="recoil" animation_key="still, othrusdog" />
-	<animation key="recoil" stance_key="prone" animation_key="still, othrusdog" />
-	<animation key="recoil" stance_key="over_wall" animation_key="still, othrusdog" />
+	<specification accuracy_factor="0.85" barrel_offset="0.3" can_shoot_standing="1" can_shoot_crouching="0" can_shoot_prone="0" class="0" slot="0" magazine_size="-1" name="Code:Orthros" projectile_speed="80" retrigger_time="0.35" suppressed="0" carry_in_two_hands="0" sustained_fire_diminish_rate="0.8" sustained_fire_grow_step="0.5" stab_enabled="1" stab_range="2.5" use_basic_muzzle_smoke_effect="0"/>
+	<animation state_key="recoil" animation_key="stab attack, othrusdog" />
 	<animation state_key="reload" animation_key="change weaponreload, othrusdog" />
 	<animation key="reload" stance_key="prone" animation_key="change weaponreload, othrusdog" />
 	<animation state_key="hold" animation_key="still, othrusdog" />
