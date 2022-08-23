@@ -102,6 +102,9 @@ class kill_event : Tracker {
         {"gkw_sterling.weapon",3},
         {"gkw_tmp.weapon",3},
         {"gkw_ar57_skill.weapon",3},
+        {"gkw_sten.weapon",3},
+        {"gkw_stenmod3.weapon",3},
+        {"gkw_saf.weapon",3},
 
         // SMG——4kills
         {"gkw_ppsh41.weapon",4},
