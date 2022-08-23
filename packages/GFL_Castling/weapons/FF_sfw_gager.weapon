@@ -19,6 +19,7 @@
 	sustained_fire_grow_step="0.15" />
 
     <next_in_chain key="ff_gager_1.weapon" share_ammo="0" />
+    <inventory encumbrance="20.0" buy_price="648.0" sell_price="324.0"/>
 
 	<animation state_key="recoil"	animation_key="recoil, hip fire" />
 	<animation state_key="hold" animation_key="hold, hip fire" />
@@ -82,6 +83,7 @@
 	sustained_fire_grow_step="0" />
 
     <next_in_chain key="ff_gager.weapon" share_ammo="0" />
+    <inventory encumbrance="20.0" buy_price="648.0" sell_price="324.0"/>
 
 	<animation state_key="recoil"	animation_key="recoil, gager_melee" />
     <animation state_key="reload" animation_key="reload, gager_melee" />
