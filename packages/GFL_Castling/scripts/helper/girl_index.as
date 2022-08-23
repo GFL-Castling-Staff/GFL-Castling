@@ -323,7 +323,7 @@ dictionary tdoll_index = {
     {"321",""},
     {"322","gkw_qsb91.weapon"},
     {"323","gkw_ltlx7000.weapon"},
-    {"324",""},
+    {"324","gkw_m6asw.weapon"},
     {"325",""},
     {"326",""},
     {"327",""},
