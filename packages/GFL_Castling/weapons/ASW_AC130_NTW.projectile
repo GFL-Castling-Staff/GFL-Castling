@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<projectile class="bullet" key="ntw.projectile" name="AP bullet" slot="1" pulldown_in_air="4">
+<projectile class="grenade" key="ASW_AC130_NTW.projectile" name="AP bullet" slot="1" pulldown_in_air="4">
     <result class="blast" radius="4.0" damage="20" push="1" decal="0" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0" />
     <rotation class="motion" />
     <trigger class="impact"/>

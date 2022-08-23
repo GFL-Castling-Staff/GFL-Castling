@@ -296,13 +296,16 @@ class GFLairstrike : Tracker {
                     }
                     case 5:{
                         _log("ac130 Fairy activated");
-                        float strike_rand=4.0;
-                        for(int j=1;j<=5;j++)
+                        
+                        float strike_rand=6.0;
+                        playSoundAtLocation(m_metagame,"ntw20_fire_FromBF2042.wav",fid,end_pos,5.0);
+                        for(int j=1;j<=18;j++)
                         {
-                            float rand_x = rand(-strike_rand,strike_rand);
-                            float rand_y = rand(-strike_rand,strike_rand);
-                            CreateDirectProjectile(m_metagame,start_pos,end_pos.add(Vector3(rand_x,0,rand_y)),"ASW_AC130_breath.projectile",cid,fid,240);
-                            playSoundAtLocation(m_metagame,"thrower_fire_FromSAM4_2.wav",fid,end_pos);
+                            float rand_angle = rand(-3.14,3.14);
+                            float rand_dis = rand(-strike_rand,strike_rand);
+                            float rand_x = rand_dis*cos(rand_angle);
+                            float rand_y = rand_dis*sin(rand_angle);
+                            CreateDirectProjectile(m_metagame,start_pos,end_pos.add(Vector3(rand_x,0,rand_y)),"ASW_AC130_NTW.projectile",cid,fid,255);
                         }
                         Airstrike_strafe.removeAt(a);
                         break;                        
@@ -318,8 +321,8 @@ class GFLairstrike : Tracker {
                         Vector3 strike_vector = getAimUnitVector(1,end_pos,end_pos.add(Vector3(rand_x1,0,rand_y1))); 
                         float strike_didis = 2;
                         //扫射终点的起点与终点（就生成弹头的终点的起始位置与终止位置）
-                        Vector3 c_pos = end_pos.add(getMultiplicationVector(strike_vector,Vector3(-8,0,-8)));
-                        Vector3 s_pos = end_pos.add(getMultiplicationVector(strike_vector,Vector3(8,0,8)));
+                        Vector3 c_pos = end_pos.add(getMultiplicationVector(strike_vector,Vector3(-4,0,-4)));
+                        Vector3 s_pos = end_pos.add(getMultiplicationVector(strike_vector,Vector3(4,0,4)));
                         //依据扫射位置偏移单位距离而设置的扫射次数
                         int strike_time = int(getAimUnitDistance(1,c_pos,s_pos)/strike_didis);
                         //最终弹头随机程度
@@ -342,12 +345,14 @@ class GFLairstrike : Tracker {
                     }
                     case 7:{
                         _log("ac130 m202 Fairy activated");
-                        float strike_rand=4.0;
-                        for(int j=1;j<=4;j++)
+                        float strike_rand=8.0;
+                        for(int j=1;j<=8;j++)
                         {
-                            float rand_x = rand(-strike_rand,strike_rand);
-                            float rand_y = rand(-strike_rand,strike_rand);
-                            CreateDirectProjectile(m_metagame,start_pos,end_pos.add(Vector3(rand_x,0,rand_y)),"88heat.projectile",cid,fid,120);
+                            float rand_angle = rand(-3.14,3.14);
+                            float rand_dis = rand(-strike_rand,strike_rand);
+                            float rand_x = rand_dis*cos(rand_angle);
+                            float rand_y = rand_dis*sin(rand_angle);
+                            CreateDirectProjectile(m_metagame,start_pos,end_pos.add(Vector3(rand_x,0,rand_y)),"88heat.projectile",cid,fid,100);
                             playSoundAtLocation(m_metagame,"thrower_fire_FromSAM4_2.wav",fid,end_pos);
                         }
                         Airstrike_strafe.removeAt(a);

@@ -113,8 +113,13 @@ void excuteSniperFairy(GameMode@ metagame,GFL_event@ eventinfo){
     }
 }
 
+array<int> RampageFairyAC130List={
+    6,6,6,5,6,6,6,5,7,6,6,5,6,6,5,7,6,6,5
+};
 void excuteRampageFairyAC130(GameMode@ metagame,GFL_event@ eventinfo){
     eventinfo.m_time=1.5;
+    if(eventinfo.m_phase<=1)
+        playSoundAtLocation(metagame,"ac130_flyby.wav",eventinfo.m_factionid,eventinfo.m_pos,8.0);
     int luckyGuyid = getNearbyRandomLuckyGuyId(metagame,eventinfo.m_factionid,eventinfo.m_pos,40.0f);
     if(luckyGuyid!=-1){
         const XmlElement@ luckyGuy = getCharacterInfo(metagame, luckyGuyid);
@@ -125,11 +130,7 @@ void excuteRampageFairyAC130(GameMode@ metagame,GFL_event@ eventinfo){
         Vector3 luckyGuyPos = stringToVector3(luckyGuy.getStringAttribute("position"));
         Vector3 aimPos = luckyGuyPos.add(Vector3(45.0*cos(rand_angle),40,45.0*sin(rand_angle)));
 
-        if((eventinfo.m_phase%3)==0)
-            insertCommonStrike(eventinfo.m_characterId,eventinfo.m_factionid,7,aimPos,luckyGuyPos);
-        if((eventinfo.m_phase%5)!=0)
-            insertCommonStrike(eventinfo.m_characterId,eventinfo.m_factionid,5,aimPos,luckyGuyPos);
-        else insertCommonStrike(eventinfo.m_characterId,eventinfo.m_factionid,6,aimPos,luckyGuyPos);
+        insertCommonStrike(eventinfo.m_characterId,eventinfo.m_factionid,RampageFairyAC130List[int(eventinfo.m_phase%RampageFairyAC130List.length())],aimPos,luckyGuyPos);
     }
     eventinfo.m_phase++;
     if(eventinfo.m_phase>=20){
