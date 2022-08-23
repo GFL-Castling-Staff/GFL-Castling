@@ -11,7 +11,8 @@ int getRPKillReward(string name) {
 }
 
 dictionary RP_enemy_index = {
-    {"kcco_ar_human_tel",30},
+    {"kcco_ar_human_elite",30},
+    {"kcco_ar_human_tel",75},
     {"kcco_talos",75},
     {"kcco_mg",75},
     {"kcco_cerynitis",30},
@@ -78,7 +79,8 @@ float getXPKillReward(string name) {
 }
 
 dictionary XP_enemy_index = {
-    {"kcco_ar_human_tel",0.003},
+    {"kcco_ar_human_elite",0.001},
+    {"kcco_ar_human_tel",0.005},
     {"kcco_talos",0.002},
     {"kcco_mg",0.002},
     {"kcco_cerynitis",0.003},
@@ -164,6 +166,7 @@ dictionary reward_pool_list= {
     {"alina","elite"},
     {"vanguard","elite"},
     {"eagleyes","elite"},
+    {"wrath","elite"},
     {"Adeline","elite"},
     {"smasher","elite"},
     {"kcco_quartz_ranger","elite"},
@@ -174,6 +177,7 @@ dictionary reward_pool_list= {
     {"kcco_Hydra","rare"},
     {"kcco_teslatrooper","rare"},
     {"kcco_human_sniper","rare"},
+    {"kcco_ar_human_tel","rare"},
 
     {"sfw_nemeum","uncommon"},
     {"sfw_nemeum_swap","uncommon"},
@@ -188,7 +192,10 @@ dictionary reward_pool_list= {
     {"kcco_talos","uncommon"},
     {"kcco_mg","uncommon"},
     {"parw_commander","uncommon"},
-    
+    {"kcco_ar_human_elite","uncommon"},
+    {"kcco_cerynitis","uncommon"},
+    {"kcco_cerynitis_alter","uncommon"},
+
     {"","common"}
 };
 

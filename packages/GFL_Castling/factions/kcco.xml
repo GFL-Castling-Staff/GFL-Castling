@@ -463,14 +463,25 @@
 	</soldier>
 	<!--人类士兵-->
 	<soldier name="kcco_ar_human" spawn_score="0.6" copy_from="default_bot">
-		<ai filename="elite.ai" />
+		<ai filename="default.ai" />
 		<character filename="default_kcco_human.character" />
 		<models file="kcco_human_basic.models" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_carry_items="1">
 			<weapon key="kcco_ar_2.weapon" enabled="1" />
-			<!-- <weapon key="kcco_tracer_dart_ranged.weapon" enabled="1" />  -->
-			<!-- <weapon key="kcco_tracer_dart_accurate.weapon" enabled="1" />  -->
 			<carry_item key="kcco_ar.carry_item" enabled="1" />
+			<projectile key="kcco_smartgrenade_1.projectile" enabled="1.0" />
+		</resources>
+		<attribute_config class="xp">
+			<attribute weight="1.0" min="0.5" max="3.8" />
+		</attribute_config>
+	</soldier>
+	<soldier name="kcco_ar_human_elite" spawn_score="0.3" copy_from="default_bot">
+		<ai filename="kcco_elite.ai" />
+		<character filename="default_kcco_human.character" />
+		<models file="kcco_human_commander.models" />
+		<resources clear_weapons="1" clear_vehicles="1" clear_carry_items="1">
+			<weapon key="kcco_ar_2.weapon" enabled="1" />
+			<carry_item key="kcco_bp.carry_item" enabled="1" />
 			<projectile key="kcco_smartgrenade_1.projectile" enabled="1.0" />
 		</resources>
 		<attribute_config class="xp">
@@ -483,12 +494,10 @@
 		<character filename="default_kcco_human.character" />
 		<model filename="kccod_human_3.xml" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_carry_items="1">
-			<weapon key="kcco_ar_2.weapon" enabled="1" />
-			<!-- <weapon key="kcco_tracer_dart_ranged.weapon" enabled="1" />  -->
+			<weapon key="kcco_fe2o3_svd.weapon" enabled="1" />
 			<weapon key="kcco_tracer_dart_accurate.weapon" enabled="1" /> 
-			<carry_item key="kcco_ar.carry_item" enabled="1" />
+			<carry_item key="kcco_bp.carry_item" enabled="1" />
 			<projectile key="kcco_tracer_dart_r.projectile" enabled="1.0" />
-			<!-- <projectile key="kcco_tracer_dart_a.projectile" enabled="1.0" /> -->
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="0.5" max="3.8" />
