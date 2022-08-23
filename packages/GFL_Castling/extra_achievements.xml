@@ -122,4 +122,34 @@
 			<level value="1145141919"/>
 		</criteria>
 	</achievement>
+
+    <achievement name="Zhabi" no_level_title="War is Firepowder" include_in_alltime_stats="0">
+		<level>
+			<notification image="hud_achievement_pard_ping.png" sound="achievement1.wav" />
+			<rank title="War is Quantity" image="hud_achievement_pard.png" />
+		</level>
+		<level>
+			<notification image="hud_achievement_pard_ping.png" sound="achievement2_1.wav" />
+			<rank title="War is Bigger Caliber" image="hud_achievement_pard.png" />
+		</level>
+		<level>
+			<notification image="hud_achievement_pard_ping.png" sound="achievement3.wav" />
+			<rank title="War is Money-Money-Money" image="hud_achievement_pard.png" />
+		</level>		
+		<level>
+			<notification image="hud_achievement_pard_ping.png" sound="achievement3.wav" />
+			<rank title="War,War Never Change" image="hud_achievement_pard.png" />
+		</level>
+		<level>
+			<notification image="hud_achievement_pard_ping.png" sound="achievement3.wav" />
+			<rank title="W.A.V.E. ERROR" image="hud_achievement_pard.png" />
+		</level>
+		<criteria class="custom_stat" tag="radio_call" description="* use %target_count Radio Call">
+			<level value="10" />
+			<level value="100" />
+			<level value="500" />
+			<level value="1000" />
+			<level value="1145141919"/>
+		</criteria>
+	</achievement>
 </achievements>
