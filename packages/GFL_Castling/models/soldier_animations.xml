@@ -75807,7 +75807,7 @@
             <position x="13.500000" y="0.500000" z="0.500000" />
         </frame>
     </animation>
-    <animation loop="0" end="0.300000" speed="1.000000" comment="stabbing, gunda">
+    <animation loop="0" end="0.300000" speed="0.37500000" comment="stabbing, gunda">
         <frame time="0.000000">
             <position x="0.149308" y="120.049858" z="-0.313593" />
             <position x="0.325979" y="116.055206" z="-0.421150" />
@@ -75859,6 +75859,7 @@
             <position x="17.376734" y="41.423374" z="-11.629779" />
             <position x="-3.067258" y="17.819223" z="-22.815737" />
             <position x="22.464006" y="7.081373" z="-27.081209" />
+			<control key="action" value="1" />
 			<control key="action" value="1" />
 			<control key="action" value="1" />
 			<control key="action" value="1" />
