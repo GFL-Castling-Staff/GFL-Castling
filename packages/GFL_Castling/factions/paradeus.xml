@@ -464,7 +464,7 @@
 	</soldier>
 	<!-- 警备士 -->
 	<soldier name="parw_police" spawn_score="1.2" squad_size_xp_cap="0.5" copy_from="default_ai">
-		<ai filename="melee.ai">/
+		<ai filename="shield.ai">/
 		  <parameter class="deployment_area_utilization_factor" value="0.99" />
 		  <parameter class="uses_vehicles" value="100.0" />
 		</ai>
@@ -549,7 +549,7 @@
 			</attribute_config>
 		</resources>
 	</soldier>
-	<soldier name="eagleyes" spawn_score="0.1" squad_size_xp_cap="0.5" copy_from="default_ai">
+	<soldier name="eagleyes" spawn_score="0.2" squad_size_xp_cap="0.5" copy_from="default_ai">
 		<character filename="paradeus_nyto.text_lines"/>
 		<ai filename="elite.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
@@ -565,9 +565,9 @@
 			</attribute_config>
 		</resources>
 	</soldier>
-	<soldier name="vanguard" spawn_score="0.1" squad_size_xp_cap="0.5" copy_from="default_ai">
+	<soldier name="vanguard" spawn_score="0.2" squad_size_xp_cap="0.5" copy_from="default_ai">
 		<character filename="paradeus_nyto.text_lines"/>
-		<ai filename="eod.ai" />
+		<ai filename="nyto_vanguard.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="parw_vanguard.weapon" enabled="1" />
 			<model filename="pard_vanguard.xml" />
@@ -581,7 +581,7 @@
 			</attribute_config>
 		</resources>
 	</soldier>
-	<soldier name="wrath" spawn_score="0.1" squad_size_xp_cap="0.5" copy_from="default_ai">
+	<soldier name="wrath" spawn_score="0.2" squad_size_xp_cap="0.5" copy_from="default_ai">
 		<character filename="paradeus_nyto.text_lines">
 			<parameter class="can_use_vehicles" value="0" /> 
 			<parameter class="walking_steer_amount" value="0.63" />
@@ -634,7 +634,7 @@
 	</soldier>
 	<soldier name="Adeline" spawn_score="0.05" squad_size_xp_cap="0.5" copy_from="default_ai">
 		<character filename="paradeus_nyto.text_lines"/>
-		<ai filename="sniper.ai" />
+		<ai filename="elite.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="parw_nyto_black.weapon" enabled="1" />
 			<model filename="pard_boss_nyto_black.xml" />
@@ -667,7 +667,7 @@
 			<item_class_existence class="carry_item" slot="0" probability="0.001" />
 		</item_class_existence_config>
 	</soldier>
-	<soldier name="smasher" spawn_score="0.2" squad_size_xp_cap="0.5">
+	<soldier name="smasher" spawn_score="0.1" squad_size_xp_cap="0.5">
 		<ai filename="roarer.ai" />
 		<model filename="pard_big_zombie.xml" />
 		<character filename="smasher.character" />
@@ -688,13 +688,13 @@
 		</item_class_existence_config>
 	</soldier>	
 	<!-- Paradeus强无敌doppelsoldner -->
-	<soldier name="Paradeus_doppelsoldner" firstnames="Paradeus-SHIELD HEAVY ARMOR UNIT-" lastnames_file="Paradeus_last.name" spawn_score="0.4">
+	<soldier name="Paradeus_doppelsoldner" firstnames="Paradeus-SHIELD HEAVY ARMOR UNIT-" lastnames_file="Paradeus_last.name" spawn_score="0.3">
 		<model filename="pard_doppelsoldner_remake.xml" />
 		<character filename="dopp.character" />
 		<ai filename="para_mg.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="parw_doppelsoldner_rocket.weapon" enabled="1" />
-			<carry_item key="pard_roarer.carry_item" />
+			<carry_item key="pard_roarer_15" />
 			<projectile key="selfnone.projectile" enabled="1" />
 		</resources>
 		<item_class_existence_config>
@@ -711,7 +711,7 @@
 			<attribute weight="1.0" min="30.0" max="60.0" />
 		</attribute_config>
 	</soldier>
-	<soldier name="Paradeus_roarer" firstnames="Paradeus-SHIELD HEAVY ARMOR UNIT-" lastnames_file="Paradeus_last.name" spawn_score="0.5">
+	<soldier name="Paradeus_roarer" firstnames="Paradeus-SHIELD HEAVY ARMOR UNIT-" lastnames_file="Paradeus_last.name" spawn_score="0.4">
 		<model filename="pard_roarer_from_sv-98.xml" />
 		<character filename="roarer.character" />
 		<ai filename="roarer.ai" />

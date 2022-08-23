@@ -1,22 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapon file="paradeus.base_weapon" key="parw_nyto_black.weapon">
 	<tag name="elite" />
-	<tag name="rifle" />
+	<tag name="autorifle" />
 	<specification 
-	accuracy_factor="1.5" 
+	accuracy_factor="1.0" 
 	barrel_offset="0.5" 
 	can_shoot_standing="1" 
-	can_shoot_crouching="0"
+	can_shoot_crouching="1"
 	can_shoot_prone="0"
 	class="4"
 	burst_shots="3"       
 	slot="0" 
-	magazine_size="15" 
+	magazine_size="30" 
 	name="Adeline" 
 	projectile_speed="400" 
-	retrigger_time="0.15"
+	retrigger_time="0.2"
 	last_burst_retrigger_time="0.6" 
 	suppressed="0" 
+	sight_range_modifier="1.2"
 	sustained_fire_diminish_rate="2.5"
 	sustained_fire_grow_step="2.0" />
 
@@ -26,7 +27,7 @@
 	<animation state_key="crouching" animation_key="crouch, hold, hip fire" />
 	<animation state_key="crouch_moving" animation_key="crouching forwards, hip fire" />
   	<animation state_key="walking_backwards" animation_key="walking backwards, hip fire" />  
-    <animation state_key="reload" animation_key="reloading, microgun" volume="0.7" />
+    <animation state_key="reload" animation_key="reloading, magazine rifle 2.1"/>
 	<animation state_key="hold_on_wall" animation_key="hold, hip fire" />
     <animation state_key="still_against_wall" 	animation_key="hold, hip fire" />
 	<animation state_key="walking" animation_key="walking, hip fire" />
@@ -38,7 +39,17 @@
     <sound key="magazine_in" fileref="" volume="0.8" />
     <sound key="cycle" fileref="adeline_cycle_FromDOOMETERNAL.wav" volume="0.9" />
     <sound class="impact" fileref="rifle_drop.wav" />    
-	
+
+	<stance state_key="running" accuracy="1.0" />
+	<stance state_key="walking" accuracy="1.0" />
+	<stance state_key="crouch_moving" accuracy="1.0" />
+	<stance state_key="standing" accuracy="1.0" />
+	<stance state_key="crouching" accuracy="1.0" />
+	<stance state_key="prone" accuracy="1.0" />
+	<stance state_key="prone_moving" accuracy="1.0" />
+	<stance state_key="over_wall" accuracy="1" />
+	<modifier class="detectability" value="-0.1"/>
+
     <model filename="parw_nyto_black.xml" />
 
     <hud_icon filename="parw_nyto_black.png" />
@@ -47,7 +58,7 @@
 
     <weak_hand_hold offset="0.4" />
     <projectile file="bullet_paradeus.projectile">
-        <result class="hit"  kill_probability="2.1" kill_decay_start_time="1.0" kill_decay_end_time="1.5" />
+		<result class="blast" radius="1.5" damage="0.1" push="0.1" decal="1" damage_origin_vehicle="0"/>
         <trail key="paradeus_long" />
     </projectile>
 

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ai filename="eod.ai">
+    <parameter class="burst_time" value="1.0" />
+    <parameter class="burst_time_variance" value="0" />
+    <parameter class="longer_burst_time" value="1.5" />
+    <parameter class="longer_burst_time_variance" value="0" />
+
+    <parameter class="choose_enemy_time" value="0.3" />
+    <parameter class="fighting_melee_move_radius" value="3.0" />
+    <parameter class="fighting_regular_move_radius" value="10.0" />
+
+    <parameter class="wait_time" value="0.5" />
+    <parameter class="wait_time_variance" value="0" />
+
+    <parameter class="willingness_to_charge" value="1.0" />
+
+	<parameter class="fighting_approach_alarm_spread_max_range" value="30.0" />
+	<parameter class="fighting_approach_alarm_max_soldiers" value="20" /> 
+	<parameter class="leading_inspect_alarm_spread_out_distance" value="30.0" />
+	<parameter class="leading_inspect_alarm_min_distance" value="20.0" />
+</ai>
