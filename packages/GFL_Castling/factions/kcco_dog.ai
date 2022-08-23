@@ -105,8 +105,8 @@
   <parameter class="reaction_time_after_choosing_target" value="0.1" />  
   <parameter class="avoid_moving_vehicles" value="1" />   
 
-  <parameter class="fighting_melee_move_radius" value="2.0" />
-  <parameter class="fighting_regular_move_radius" value="5.0" />
+  <parameter class="fighting_melee_move_radius" value="1.0" />
+  <parameter class="fighting_regular_move_radius" value="3.0" />
   
   <parameter class="min_number_of_enemies_to_throw_grenade" value="1.0" />  
   <parameter class="grenade_throw_hold_time" value="0.1" />
