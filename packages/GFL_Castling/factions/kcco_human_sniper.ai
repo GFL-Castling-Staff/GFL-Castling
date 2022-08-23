@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ai filename="sniper.ai">
+  <parameter class="accuracy_offset" value="0.1" /> 
   <parameter class="prefer_roofs_probability" value="0.95" />
   <parameter class="force_as_leader" value="1.0" />
   <parameter class="max_leader_authority_willing_to_join_another_squad" value="0" />

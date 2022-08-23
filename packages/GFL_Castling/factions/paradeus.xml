@@ -432,6 +432,7 @@
 		</resources>
 	</soldier>
 	<soldier name="para_streletplus_richman" spawn_score="0.2" squad_size_xp_cap="0.5" copy_from="default_ai">
+		<model filename="pard_stretletplus_neo.xml" />
 		<ai filename="para_streletplus.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="parw_streletplus.weapon" enabled="1" />
@@ -451,7 +452,7 @@
 		<ai filename="commander.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="parw_commander.weapon" enabled="1" />
-			<carry_item key="pard_ar.carry_item" />
+			<carry_item key="pard_sg.carry_item" />
 			<call file="pard_zombie.call" />
 			<attribute_config class="xp">
 				<attribute weight="1.0" min="20.0" max="25.6" />
@@ -485,7 +486,7 @@
 		<character filename="pard_germdog.character" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="parw_germdog.weapon" enabled="1" probability="1.0"/>
-			<carry_item key="pard_ar_2" />
+			<carry_item key="pard_ar.carry_item" />
 			<attribute_config class="xp">
 				<attribute weight="1.0" min="1.0" max="5.6" />
 			</attribute_config>

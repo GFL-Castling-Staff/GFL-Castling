@@ -65,8 +65,8 @@
 		<specification 
 		retrigger_time="0.05" 
 		accuracy_factor="0.6" 
-		sustained_fire_grow_step="0.40" 
-		sustained_fire_diminish_rate="1.2" 
+		sustained_fire_grow_step="0.75" 
+		sustained_fire_diminish_rate="2.0" 
 		magazine_size="200" 
 		can_shoot_standing="1" 
 		can_shoot_crouching="0"
@@ -78,7 +78,7 @@
 		slot="0"
 		last_burst_retrigger_time="2.0"
 		reload_one_at_a_time="0"
-		sight_range_modifier="1.5" 
+		sight_range_modifier="1.21" 
 		projectile_speed="100.0" 
 		carry_in_two_hands="0" 
 		projectiles_per_shot="2" 
@@ -112,16 +112,15 @@
 		<weak_hand_hold offset="0.2" />
 		<projectile file="bullet_paradeus.projectile" >
 			<result class="hit" 
-			kill_probability="2.0" 
-			kill_decay_start_time="0.10" 
-			kill_decay_end_time="0.800" />
+			kill_probability="1.6" 
+			kill_decay_start_time="0.3" 
+			kill_decay_end_time="0.4" />
 		</projectile>
 		
 		<stance state_key="running" accuracy="1" />
 		<stance state_key="walking" accuracy="1" />
 		<stance state_key="crouch_moving" accuracy="1" />
 		<stance state_key="prone_moving" accuracy="1" />
-	
 		<stance state_key="standing" accuracy="1" />
 		<stance state_key="crouching" accuracy="1" />
 		<stance state_key="prone" accuracy="1" />
