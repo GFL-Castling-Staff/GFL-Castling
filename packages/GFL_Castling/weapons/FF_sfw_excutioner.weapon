@@ -39,7 +39,7 @@
 		<!-- Model, Icon, Cost -->
 		<model filename="sfw_excutioner2.xml" />
 		<hud_icon filename="sfw_excutioner.png" />
-		<inventory encumbrance="27.0" buy_price="648.0" sell_price="648.0" />
+		<inventory encumbrance="20.0" buy_price="648.0" sell_price="324.0"/>
 		<!-- Ballistics -->
 		<weak_hand_hold offset="0.1" />
 		<projectile file="bullet_sf.projectile">
@@ -47,12 +47,13 @@
 		</projectile>
 		<!-- Accuracy, Movement speed -->
 		<stance state_key="running" accuracy="0.7" />
-		<stance state_key="walking" accuracy="0.75" />
-		<stance state_key="crouch_moving" accuracy="0.85" />
-		<stance state_key="prone_moving" accuracy="0.95" />
-		<stance state_key="standing" accuracy="0.9" />
-		<stance state_key="crouching" accuracy="0.95" />
-		<stance state_key="prone" accuracy="1" />
+        <stance state_key="walking" accuracy="0.75" />
+        <stance state_key="crouch_moving" accuracy="0.8" />
+        <stance state_key="prone_moving" accuracy="0.85" />
+        <stance state_key="standing" accuracy="0.9"/>
+        <stance state_key="crouching" accuracy="0.9" />
+        <stance state_key="prone" accuracy="1.2" />
+        <stance state_key="over_wall" accuracy="1.2" />
 		<modifier class="detectability" value="-0.25" />
 		<modifier class="speed" value="0.8" />
 	</weapon>
@@ -81,7 +82,7 @@
 		<projectile file="teal.projectile">
 			<result class="blast" radius="3" damage="5" decal="0" push="0.0" character_state="death" faction_compare="not_equal" make_vehicle_hit_sound="0" />
 		</projectile>
-		<inventory encumbrance="27.0" buy_price="648.0" sell_price="648.0" />
+		<inventory encumbrance="20.0" buy_price="648.0" sell_price="324.0"/>
 		<stance state_key="running" accuracy="1" />
 		<stance state_key="walking" accuracy="1" />
 		<stance state_key="crouch_moving" accuracy="1" />

@@ -20,6 +20,7 @@
 	sustained_fire_grow_step="0.3" />
 
     <next_in_chain key="ff_Intruder_1.weapon" share_ammo="0" />
+    <inventory encumbrance="20.0" buy_price="648.0" sell_price="324.0"/>
 
 	<animation state_key="recoil"	animation_key="recoil, hip fire" />
 	<animation state_key="hold" animation_key="hold, hip fire" />
@@ -51,13 +52,14 @@
         <result class="hit"  kill_probability="1.8" kill_probability_offset_on_successful_hit="1.8" kill_decay_start_time="0.75" kill_decay_end_time="1.75"  />
     </projectile>
 
-    <stance state_key="running" accuracy="0.8" />
-    <stance state_key="walking" accuracy="0.8" />
-    <stance state_key="crouch_moving" accuracy="0.9" />
-    <stance state_key="prone_moving" accuracy="0.9" />
-    <stance state_key="standing" accuracy="0.8" />
+    <stance state_key="running" accuracy="0.75" />
+    <stance state_key="walking" accuracy="0.75" />
+    <stance state_key="crouch_moving" accuracy="0.85" />
+    <stance state_key="prone_moving" accuracy="0.85" />
+    <stance state_key="standing" accuracy="0.9"/>
     <stance state_key="crouching" accuracy="0.9" />
-    <stance state_key="prone" accuracy="1" />
+    <stance state_key="prone" accuracy="1.2" />
+    <stance state_key="over_wall" accuracy="1.2" />
     <modifier class="speed" value="0.2" />
 </weapon>
 <weapon file="gk_sf_boss.base_weapon" key="ff_Intruder_1.weapon">
@@ -78,6 +80,7 @@
     projectiles_per_shot="2" />
 
     <next_in_chain key="ff_Intruder.weapon" share_ammo="0" />
+    <inventory encumbrance="20.0" buy_price="648.0" sell_price="324.0"/>
 
 	<animation state_key="recoil"	animation_key="recoil, hip fire" />
 	<animation state_key="hold" animation_key="hold, hip fire" />
@@ -109,13 +112,14 @@
         <result class="hit"  kill_probability="2.4" kill_probability_offset_on_successful_hit="0.2" kill_decay_start_time="0.05" kill_decay_end_time="0.55" />
     </projectile>
 
-    <stance state_key="running" accuracy="0.8" />
-    <stance state_key="walking" accuracy="0.8" />
-    <stance state_key="crouch_moving" accuracy="0.9" />
-    <stance state_key="prone_moving" accuracy="0.9" />
-    <stance state_key="standing" accuracy="0.8" />
+    <stance state_key="running" accuracy="0.55" />
+    <stance state_key="walking" accuracy="0.55" />
+    <stance state_key="crouch_moving" accuracy="0.75" />
+    <stance state_key="prone_moving" accuracy="0.75" />
+    <stance state_key="standing" accuracy="0.85"/>
     <stance state_key="crouching" accuracy="0.9" />
-    <stance state_key="prone" accuracy="1" />
+    <stance state_key="prone" accuracy="1.2" />
+    <stance state_key="over_wall" accuracy="1.2" />
     <modifier class="speed" value="-0.35" />
 </weapon>
 </weapons>

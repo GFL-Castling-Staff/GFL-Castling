@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapons>
 	<weapon file="gk_sf_boss.base_weapon" key="ff_weaver.weapon">
-		<specification accuracy_factor="1" barrel_offset="0.5" class="0" slot="0" magazine_size="20" name="GK-Ouroboros" projectile_speed="80" retrigger_time="0.25" suppressed="0" projectiles_per_shot="2" carry_in_two_hands="0" can_shoot_standing="1" can_shoot_crouching="0" can_shoot_prone="0" sustained_fire_diminish_rate="0.8" sustained_fire_grow_step="0.25" />
-		<inventory encumbrance="10.0" buy_price="648.0" sell_price="648.0" />
+		<specification accuracy_factor="1" barrel_offset="0.5" class="0" slot="0" magazine_size="20" name="GK-Ouroboros" projectile_speed="145" retrigger_time="0.25" suppressed="0" projectiles_per_shot="2" carry_in_two_hands="0" can_shoot_standing="1" can_shoot_crouching="0" can_shoot_prone="0" sustained_fire_diminish_rate="0.8" sustained_fire_grow_step="0.25" />
+		<inventory encumbrance="20.0" buy_price="648.0" sell_price="324.0"/>
 		<animation state_key="recoil" animation_key="recoil,ouroboros" />
 		<animation state_key="recoil" stance_key="over_wall" animation_key="recoil,ouroboros" />
 		<animation state_key="reload" animation_key="reloading2, A DG 1.0" />
@@ -36,18 +36,20 @@
 			<result class="hit" kill_probability="2.1" kill_decay_start_time="1" kill_decay_end_time="1" />
 		</projectile>
 		<weak_hand_hold offset="0.2" />
-		<stance state_key="running" accuracy="0.5" />
-		<stance state_key="walking" accuracy="0.6" />
-		<stance state_key="crouch_moving" accuracy="0.8" />
-		<stance state_key="prone_moving" accuracy="0.8" />
-		<stance state_key="standing" accuracy="0.64" />
-		<stance state_key="crouching" accuracy="0.8" />
-		<modifier class="speed" value="0.3" />
+		<stance state_key="running" accuracy="0.75" />
+        <stance state_key="walking" accuracy="0.75" />
+        <stance state_key="crouch_moving" accuracy="0.85" />
+        <stance state_key="prone_moving" accuracy="0.85" />
+        <stance state_key="standing" accuracy="0.9"/>
+        <stance state_key="crouching" accuracy="0.9" />
+        <stance state_key="prone" accuracy="1" />
+        <stance state_key="over_wall" accuracy="1" />  
+        <modifier class="speed" value="0.3" />
 	</weapon>
 	<weapon file="gk_sf_boss.base_weapon" key="ff_weaver_1.weapon">
-		<specification accuracy_factor="0.95" barrel_offset="0.5" class="4" solt="0" magazine_size="50" name="GK-Ouroboros" projectile_speed="65" retrigger_time="-1" last_burst_retrigger_time="3.5" suppressed="1" projectiles_per_shot="3" carry_in_two_hands="0" can_shoot_standing="1" can_shoot_crouching="0" can_shoot_prone="0" sustained_fire_diminish_rate="1.0" sustained_fire_grow_step="0.5" />
+		<specification accuracy_factor="0.95" barrel_offset="0.5" class="4" solt="0" magazine_size="50" name="GK-Ouroboros" projectile_speed="85" retrigger_time="-1" last_burst_retrigger_time="3.5" suppressed="0" projectiles_per_shot="3" carry_in_two_hands="0" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" sustained_fire_diminish_rate="1.0" sustained_fire_grow_step="0.5" />
 		<next_in_chain key="ff_weaver.weapon" share_ammo="0" />
-		<inventory encumbrance="27.0" buy_price="480.0" sell_price="480.0" />
+		<inventory encumbrance="20.0" buy_price="648.0" sell_price="324.0"/>
 		<animation state_key="recoil" animation_key="recoil,ouroboros" />
 		<animation state_key="recoil" stance_key="over_wall" animation_key="recoil,ouroboros" />
 		<animation state_key="reload" animation_key="reloading, dreamer3" />
@@ -76,16 +78,16 @@
 		<ballistics curve_height="3.0" near_far_distance="16.0" speed_estimation_near="10.0" speed_estimation_far="16.0" max_speed="47.0" randomness="0.0" tweak_factor="1.55" />
 		<weak_hand_hold offset="0.2" />
 		<projectile file="Doppelsoldner_rocket.projectile">
-			<result class="blast" damage="3" radius="3.5" decal="1" push="0.75" character_state="death" faction_compare="not_equal" />
+			<result class="blast" damage="4" radius="3.5" decal="1" push="1" character_state="death" faction_compare="not_equal" />
 		</projectile>
-		<stance state_key="running" accuracy="0.5" />
-		<stance state_key="walking" accuracy="0.6" />
-		<stance state_key="crouch_moving" accuracy="0.8" />
-		<stance state_key="prone_moving" accuracy="0.8" />
-		<stance state_key="standing" accuracy="0.98" />
-		<stance state_key="crouching" accuracy="1.1" />
-		<stance state_key="prone" accuracy="1.2" />
-		<modifier class="speed" value="0" />
-		<modifier class="speed" value="0" />
+	    <stance state_key="running" accuracy="0.5" />
+        <stance state_key="walking" accuracy="0.65" />
+        <stance state_key="crouch_moving" accuracy="0.85" />
+        <stance state_key="prone_moving" accuracy="0.85" />
+        <stance state_key="standing" accuracy="0.85"/>
+        <stance state_key="crouching" accuracy="0.95" />
+        <stance state_key="prone" accuracy="1" />
+        <stance state_key="over_wall" accuracy="1" />  
+		<modifier class="speed" value="0.3" />
 	</weapon>
 </weapons>
