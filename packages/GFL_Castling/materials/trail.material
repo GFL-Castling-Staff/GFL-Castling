@@ -415,3 +415,20 @@ material redlong
       } 
     }
   }
+
+material laser_white {
+  receive_shadows off
+  technique {
+    pass {
+      lighting off
+      fog_override true
+
+      depth_write off
+      scene_blend add
+
+      texture_unit {
+        texture laser_white.png
+      }
+    }
+  }
+}

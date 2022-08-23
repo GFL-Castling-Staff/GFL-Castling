@@ -305,6 +305,43 @@ particle_system Laser_ImpactBeam_Blue
 
 }
 
+particle_system Laser_ImpactBeam_White
+{
+	quota 1000
+	material LaserBurnOut
+	particle_width	0.25
+	particle_height	0.65
+	cull_each	false
+	renderer	billboard
+	billboard_type	oriented_self
+
+	emitter Point{
+        angle	180
+        position 0.0 0.2 0.0
+        colour 1 1 1 1
+        direction 0 1 0
+        time_to_live 0.2
+        velocity_max 7
+        velocity_min 3.5
+        duration 0.05
+        emission_rate 200
+    }
+
+    affector Scaler
+	{
+		rate	-0.9
+	}
+
+	affector ColourFader
+	{
+		red	0
+		green	0
+		blue	0
+		alpha	-0.8
+	}
+
+}
+
 particle_system Laser_ImpackShine_Blue
 {
 	quota 400
@@ -416,3 +453,4 @@ material impactShine_Red {
         }
     }
 }
+
