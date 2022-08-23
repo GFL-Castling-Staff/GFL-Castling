@@ -50,6 +50,8 @@
 #include "GFLairstrike.as"
 #include "shared_reward.as"
 #include "enemy_reward.as"
+#include "call_event_handler.as"
+
 
 // --------------------------------------------
 class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
@@ -338,6 +340,7 @@ class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 		addTracker(GFLairstrike(this));
 		addTracker(GFL_event_system(this));
 		addTracker(SharedReward(this));
+		addTracker(call_event(this));
 	}
 
 	// --------------------------------------------

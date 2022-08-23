@@ -239,7 +239,7 @@ class MapRotatorInvasion : MapRotator {
                     }                    
                 }
 			}
-			m_metagame.save();
+			addCustomStatToAllPlayers(m_metagame,"match_complete");
 			if (m_world !is null) {
 				// now, update world view, declare the area ours
 				m_world.refresh(m_stages, m_stagesCompleted, m_currentStageIndex);

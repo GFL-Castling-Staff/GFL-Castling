@@ -125,30 +125,80 @@
 
     <achievement name="Zhabi" no_level_title="War is Firepowder" include_in_alltime_stats="0">
 		<level>
-			<notification image="hud_achievement_pard_ping.png" sound="achievement1.wav" />
-			<rank title="War is Quantity" image="hud_achievement_pard.png" />
+			<notification image="hud_achievement_zhabi_ping.png" sound="achievement1.wav" />
+			<rank title="War is Quantity" image="hud_achievement_zhabi.png" />
 		</level>
 		<level>
-			<notification image="hud_achievement_pard_ping.png" sound="achievement2_1.wav" />
-			<rank title="War is Bigger Caliber" image="hud_achievement_pard.png" />
+			<notification image="hud_achievement_zhabi_ping.png" sound="achievement2_1.wav" />
+			<rank title="War is Bigger Caliber" image="hud_achievement_zhabi.png" />
 		</level>
 		<level>
-			<notification image="hud_achievement_pard_ping.png" sound="achievement3.wav" />
-			<rank title="War is Money-Money-Money" image="hud_achievement_pard.png" />
+			<notification image="hud_achievement_zhabi_ping.png" sound="achievement3.wav" />
+			<rank title="War is Money-Money-Money" image="hud_achievement_zhabi.png" />
 		</level>		
 		<level>
-			<notification image="hud_achievement_pard_ping.png" sound="achievement3.wav" />
-			<rank title="War,War Never Change" image="hud_achievement_pard.png" />
+			<notification image="hud_achievement_zhabi_ping.png" sound="achievement3.wav" />
+			<rank title="War,War Never Change" image="hud_achievement_zhabi.png" />
 		</level>
 		<level>
-			<notification image="hud_achievement_pard_ping.png" sound="achievement3.wav" />
-			<rank title="W.A.V.E. ERROR" image="hud_achievement_pard.png" />
+			<notification image="hud_achievement_zhabi_ping.png" sound="achievement3.wav" />
+			<rank title="W.A.V.E. ERROR" image="hud_achievement_zhabi.png" />
 		</level>
 		<criteria class="custom_stat" tag="radio_call" description="* use %target_count Radio Call">
 			<level value="10" />
 			<level value="100" />
 			<level value="500" />
 			<level value="1000" />
+			<level value="1145141919"/>
+		</criteria>
+	</achievement>
+
+    <achievement name="map_complete" no_level_title="Memorable Moment" include_in_alltime_stats="0">
+		<level>
+			<notification image="hud_achievement_pard_ping.png" sound="achievement1.wav" />
+			<rank title="Rocking the Battlefield" image="hud_achievement_pard.png" />
+		</level>
+		<level>
+			<notification image="hud_achievement_pard_ping.png" sound="achievement2_1.wav" />
+			<rank title="Medal of Honor" image="hud_achievement_pard.png" />
+		</level>
+		<level>
+			<notification image="hud_achievement_pard_ping.png" sound="achievement3.wav" />
+			<rank title="The Great Adventurer" image="hud_achievement_pard.png" />
+		</level>		
+		<level>
+			<notification image="hud_achievement_pard_ping.png" sound="achievement3.wav" />
+			<rank title="Moment of Glory" image="hud_achievement_pard.png" />
+		</level>
+		<level>
+			<notification image="hud_achievement_pard_ping.png" sound="achievement3.wav" />
+			<rank title="Abysswalker" image="hud_achievement_pard.png" />
+		</level>
+		<level>
+			<notification image="hud_achievement_pard_ping.png" sound="achievement3.wav" />
+			<rank title="Roar of Victory" image="hud_achievement_pard.png" />
+		</level>
+		<level>
+			<notification image="hud_achievement_pard_ping.png" sound="achievement3.wav" />
+			<rank title="BattleParaside" image="hud_achievement_pard.png" />
+		</level>
+		<level>
+			<notification image="hud_achievement_pard_ping.png" sound="achievement3.wav" />
+			<rank title="Griffin Expendables" image="hud_achievement_pard.png" />
+		</level>
+		<level>
+			<notification image="hud_achievement_pard_ping.png" sound="achievement3.wav" />
+			<rank title="W.A.V.E. ERROR" image="hud_achievement_pard.png" />
+		</level>			
+		<criteria class="custom_stat" tag="match_complete" description="* complete %target_count Stages">
+			<level value="1" />
+			<level value="5" />
+			<level value="50" />
+			<level value="100" />
+			<level value="300" />
+			<level value="500" />
+			<level value="1000" />
+			<level value="2000" />
 			<level value="1145141919"/>
 		</criteria>
 	</achievement>
