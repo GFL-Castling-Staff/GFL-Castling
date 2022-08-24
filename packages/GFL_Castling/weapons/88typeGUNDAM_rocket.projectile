@@ -2,7 +2,7 @@
 <projectile class="grenade" key="88typeGUNDAM_rocket.projectile" name="88HEAT" slot="2" pulldown_in_air="150" >
     <tag name="rocket"/>
 	
-    <result class="blast"  damage="20.0"  radius="7.5" decal="1" push="0.6" character_state="death"  faction_compare="not_equal"/>
+    <result class="blast"  damage="20.0"  radius="7.5" decal="1" push="1.2" character_state="death"  faction_compare="not_equal"/>
     <trigger class="impact" />
     <rotation class="motion" />
     <model mesh_filename="88HEAT.xml" />
