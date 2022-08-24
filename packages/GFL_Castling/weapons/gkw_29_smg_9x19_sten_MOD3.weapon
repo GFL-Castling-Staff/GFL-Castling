@@ -35,10 +35,10 @@
     <animation state_key="reload" animation_key="reloading, magazine rifle 0.9" />
     <animation state_key="stabbing" animation_key="melee, quick knife" />
     <animation state_key="stabbing" animation_key="pistol whip 3" />
-    <sound key="fire" fileref="stenmk2_fire_FromINS.wav" pitch_variety="0.05" volume="1" />
-    <sound key="magazine_out" fileref="stenmk2_mgz_out_FromINS.wav" volume="1.0" />
-    <sound key="magazine_in" fileref="stenmk2_mgz_in_FromINS.wav" volume="1.0" />
-    <sound key="cycle" fileref="stenmk2_cycle_FromINS.wav" volume="1.0" />
+    <sound key="fire" fileref="stensd_fire_FromCOD18.wav" pitch_variety="0.05" volume="1.2" />
+    <sound key="magazine_out" fileref="sten_mgz_out_FromCOD18.wav" volume="0.7" />
+    <sound key="magazine_in" fileref="sten_mgz_in_FromCOD18.wav" volume="0.7" />
+    <sound key="cycle" fileref="sten_cycle_FromCOD18.wav" volume="0.7" />
     <sound class="impact" fileref="rifle_drop.wav" />
     <model filename="gkw_smg_stenmod3.xml"/>
     <commonness value="0.001" in_stock="0" can_respawn_with="1" />

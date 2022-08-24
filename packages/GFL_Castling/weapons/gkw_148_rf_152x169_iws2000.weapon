@@ -19,7 +19,7 @@
         sight_range_modifier="4.5" 
         projectile_speed="300" 
         barrel_offset="0.4" 
-        projectiles_per_shot="4"
+        projectiles_per_shot="3"
         last_burst_retrigger_time="1"
         burst_shots="1" />
         <next_in_chain key="gkw_iws2000_skill.weapon" share_ammo="1" />
@@ -41,10 +41,10 @@
         <weak_hand_hold offset="0.3" />
         <projectile file="bullet_iwsAPFSDS.projectile">
             <result class="blast" 
-        damage="4" 
+        damage="14" 
         radius="3.5" 
         decal="1" 
-        push="0" 
+        push="0.8" 
         character_state="death"
         faction_compare="not_equal"
 		/>
@@ -75,10 +75,10 @@
         name="IWS 2000-[Hawk Assault]" 
         class="4" 
         reload_one_at_a_time="0" 
-        sight_range_modifier="3.0" 
+        sight_range_modifier="4.5" 
         projectile_speed="300" 
         barrel_offset="0.4" 
-        projectiles_per_shot="5"
+        projectiles_per_shot="3"
         last_burst_retrigger_time="3"
         burst_shots="1" />
         <next_in_chain key="gkw_iws2000.weapon" share_ammo="1" />
@@ -100,10 +100,10 @@
         <weak_hand_hold offset="0.3" />
         <projectile file="bullet_iwsAPFSDS.projectile">
             <result class="blast" 
-            damage="10" 
+            damage="18" 
             radius="4.0" 
             decal="1" 
-            push="0.2" 
+            push="1.0" 
             character_state="death"
             faction_compare="not_equal"
             />
