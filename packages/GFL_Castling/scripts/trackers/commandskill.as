@@ -137,6 +137,10 @@ dictionary commandSkillIndex = {
 
         // SMG燃烧弹
         {"gkw_vector.weapon",2},
+        {"gkw_vector_549.weapon",2},
+        {"gkw_vector_549_skill.weapon",2},
+        {"gkw_vector_1901.weapon",2},
+
         {"gkw_vz61.weapon",2},
         {"gkw_klin.weapon",2},
         {"gkw_uzi.weapon",2},
@@ -625,7 +629,7 @@ class CommandSkill : Tracker {
                     string target = player.getStringAttribute("aim_target");
                     Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
                     int factionid = character.getIntAttribute("faction_id");
-                    if(weaponname=="gkw_vector.weapon") {
+                    if(weaponname=="gkw_vector.weapon" || weaponname=="gkw_vector_549.weapon" || weaponname=="gkw_vector_549_skill.weapon" || weaponname=="gkw_vector_1901.weapon") {
                         array<string> Voice={
                             "Vector_SKILL1_JP.wav",
                             "Vector_SKILL2_JP.wav",
