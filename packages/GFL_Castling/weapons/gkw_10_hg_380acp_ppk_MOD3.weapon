@@ -51,10 +51,11 @@
 
 	<!--Sounds-->
 		
-	<sound key="fire" fileref="ppksd_fire_FromBF5.wav" pitch_variety="0.05" volume="1" />
-    <sound key="magazine_out" fileref="ppk_mgz_out_FromBF5.wav" volume="0.8" />
-    <sound key="magazine_in" fileref="ppk_mgz_in_FromBF5.wav" volume="0.8"/>    
-    <sound key="cycle" fileref="ppk_cycle_FromBF5.wav" volume="0.8" />
+	<sound key="fire" fileref="ppksd_fire_FromBF5.wav" pitch_variety="0.05" volume="1.2" />
+    <sound key="magazine_out" fileref="ppk_mgz_out_FromBF5.wav" volume="0.6" />
+    <sound key="magazine_in" fileref="ppk_mgz_in_FromBF5.wav" volume="0.6"/>    
+    <sound key="cycle" fileref="ppk_cycle_FromBF5.wav" volume="0.6" />
+
 
    
 	<!--Model, Icon, Cost-->

@@ -40,10 +40,10 @@
 	  <animation state_key="stabbing" animation_key="pistol whip 3" />
     <effect class="muzzle" ref="ejection_9mm" />
 
-    <sound key="fire" fileref="mab38_fire_FromBF5.wav" pitch_variety="0.05" volume="2.1" />
-    <sound key="magazine_out" fileref="mab38_mgz_out_FromBF5.wav" volume="1.9" />
-    <sound key="magazine_in" fileref="mab38_mgz_in_FromBF5.wav" volume="1.9" />
-    <sound key="cycle" fileref="mab38_cycle_FromBF5.wav" volume="1.9" />
+    <sound key="fire" fileref="mab38_fire_FromBF5.wav" pitch_variety="0.05" volume="1.5" />
+    <sound key="magazine_out" fileref="mab38_mgz_out_FromBF5.wav" volume="0.8" />
+    <sound key="magazine_in" fileref="mab38_mgz_in_FromBF5.wav" volume="0.8" />
+    <sound key="cycle" fileref="mab38_cycle_FromBF5.wav" volume="0.8" />
     <sound class="impact" fileref="rifle_drop.wav" volume="1"/>    
     <commonness value="0.2" in_stock="1" can_respawn_with="1" />
 
