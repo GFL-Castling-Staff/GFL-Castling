@@ -18219,7 +18219,7 @@
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_mg_type80.xml"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
-	<hud_icon filename="gkw_type80.png"/>
+	<hud_icon filename="gkw_80type.png" />
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="2.0" kill_decay_start_time="1.5" kill_decay_end_time="1.6"/>
 	</projectile>
@@ -46045,4 +46045,3 @@
 </weapon>
 
 </weapons>
-
