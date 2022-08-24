@@ -188,7 +188,7 @@ void excuteRampageFairyAC130(GameMode@ metagame,GFL_event@ eventinfo){
 
     if(eventinfo.m_phase<=1)
     {
-        playSoundAtLocation(metagame,"ac130_flyby.wav",eventinfo.m_factionid,eventinfo.m_pos,6.0);
+        playSoundAtLocation(metagame,"ac130_flyby.wav",eventinfo.m_factionid,eventinfo.m_pos,4.0);
         playRandomSoundArray(metagame,AC130StartVoice,eventinfo.m_factionid,eventinfo.m_pos.toString(),4.0);
         ac130_voice_interval = 2;
         ac130_flyby_interval = 3;
@@ -206,7 +206,7 @@ void excuteRampageFairyAC130(GameMode@ metagame,GFL_event@ eventinfo){
     if( (ac130_flyby_interval == 0) && ((ac130_strike_num-eventinfo.m_phase)>(voice_phase_interval-4))){
         _log("current phase: " + eventinfo.m_phase);
         ac130_flyby_interval == 6;
-        playSoundAtLocation(metagame,"ac130_flyby.wav",eventinfo.m_factionid,eventinfo.m_pos,6.0);
+        playSoundAtLocation(metagame,"ac130_flyby.wav",eventinfo.m_factionid,eventinfo.m_pos,4.0);
     }
 
     int luckyGuyid;
@@ -244,9 +244,9 @@ void excuteRampageFairyAC130(GameMode@ metagame,GFL_event@ eventinfo){
             if(ac130_voice_interval<=0){
                 switch(attacknum)
                 {
-                    case 5:{playRandomSoundArray(metagame,AC130ShotgunVoice,eventinfo.m_factionid,eventinfo.m_pos.toString(),4.0);break;}
-                    case 6:{playRandomSoundArray(metagame,AC130MinigunVoice,eventinfo.m_factionid,eventinfo.m_pos.toString(),4.0);break;}
-                    case 7:{playRandomSoundArray(metagame,AC130M202Voice,eventinfo.m_factionid,eventinfo.m_pos.toString(),4.0);break;}
+                    case 5:{playRandomSoundArray(metagame,AC130ShotgunVoice,eventinfo.m_factionid,eventinfo.m_pos.toString(),3.5);break;}
+                    case 6:{playRandomSoundArray(metagame,AC130MinigunVoice,eventinfo.m_factionid,eventinfo.m_pos.toString(),3.5);break;}
+                    case 7:{playRandomSoundArray(metagame,AC130M202Voice,eventinfo.m_factionid,eventinfo.m_pos.toString(),3.5);break;}
                     default:    break;
                 }           
                 ac130_voice_interval = 2;
@@ -258,16 +258,16 @@ void excuteRampageFairyAC130(GameMode@ metagame,GFL_event@ eventinfo){
             ac130_jud_confused++;
             if(ac130_jud_confused>=5){
                 ac130_jud_confused = 0;
-                playSoundAtLocation(metagame,"AUHarbi_voiSelBate.wav",eventinfo.m_factionid,eventinfo.m_pos,4.0);
+                playSoundAtLocation(metagame,"AUHarbi_voiSelBate.wav",eventinfo.m_factionid,eventinfo.m_pos,3.5);
             }
-            else playRandomSoundArray(metagame,AC130NoTargetVoice,eventinfo.m_factionid,eventinfo.m_pos.toString(),4.0);
+            else playRandomSoundArray(metagame,AC130NoTargetVoice,eventinfo.m_factionid,eventinfo.m_pos.toString(),3.5);
 
         }        
     }
 
     eventinfo.m_phase++;
     if(eventinfo.m_phase>=ac130_strike_num){
-        playRandomSoundArray(metagame,AC130EndVoice,eventinfo.m_factionid,eventinfo.m_pos.toString(),4.0);
+        playRandomSoundArray(metagame,AC130EndVoice,eventinfo.m_factionid,eventinfo.m_pos.toString(),3.5);
         eventinfo.m_enable=false;
     }
 }

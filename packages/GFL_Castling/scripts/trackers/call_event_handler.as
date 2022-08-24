@@ -58,11 +58,12 @@ class call_event : Tracker {
                     FairyRequest.setIndex(9);
                     FairyRequest.setSize(0.5);
                     FairyRequest.setDummyId(m_DummyCallID);
-                    FairyRequest.setRange(60.0);
+                    FairyRequest.setRange(120.0);
                     FairyRequest.setIconTypeKey("call_marker_air");
                     int flagId = m_DummyCallID + 15000;
+                    addCastlingMarker(FairyRequest);
                     m_DummyCallID++;
-                    GFL_event_array.insertLast(GFL_event(callId,factionId,2,stringToVector3(position),1.0,-1.0,flagId));
+                    GFL_event_array.insertLast(GFL_event(characterId,factionId,2,stringToVector3(position),1.0,-1.0,flagId));
                 }
 				
 			}
@@ -92,5 +93,15 @@ class call_event : Tracker {
         m_metagame.getComms().send(command);
     }
 
+	bool hasEnded() const {
+		// always on
+		return false;
+	}
+
+	// --------------------------------------------
+	bool hasStarted() const {
+		// always on
+		return true;
+	}
 
 }

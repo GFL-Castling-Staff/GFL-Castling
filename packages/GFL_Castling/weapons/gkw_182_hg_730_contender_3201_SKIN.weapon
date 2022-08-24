@@ -51,7 +51,7 @@
 	<hud_icon filename="gkw_contender_3201.png" />
 	<weak_hand_hold offset="0.1" />
 	<projectile file="ntw.projectile">
-		<result class="blast" damage="2.1" radius="2.5" decal="1" push="0.4" character_state="death" faction_compare="not_equal"/>
+		<result class="blast" damage="2.0" radius="2.5" decal="1" push="0.4" character_state="death" faction_compare="not_equal"/>
 	</projectile>
 	<stance state_key="running" accuracy="1.0" />
 	<stance state_key="walking" accuracy="1.0" />
