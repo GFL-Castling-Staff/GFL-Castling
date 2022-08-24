@@ -149,6 +149,8 @@ class kill_event : Tracker {
         {"gkw_g36c_mod3_skill.weapon",5},
         {"gkw_x95.weapon",5},
         {"gkw_ar57.weapon",5},
+        {"gkw_type80mod3.weapon",5},
+        {"gkw_type80mod3_skill.weapon",5},
 
         {"666",-1}
     };
