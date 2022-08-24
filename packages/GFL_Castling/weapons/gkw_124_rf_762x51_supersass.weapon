@@ -18,7 +18,7 @@
 	last_burst_retrigger_time="0.125"
 	reload_one_at_a_time="0" 
 	sight_range_modifier="2.8" 
-	projectile_speed="216.6" 
+	projectile_speed="230.5" 
 	barrel_offset="0.4" 
 	projectiles_per_shot="1" />
 
@@ -51,7 +51,7 @@
     <projectile file="bullet.projectile" can_be_detected_by_footmen="0">
         <result class="hit" 
         kill_probability="2.4"
-        kill_probability_offset_on_successful_hit="1.7" 
+        kill_probability_offset_on_successful_hit="2.8" 
         kill_decay_start_time="1.448" 
         kill_decay_end_time="2.414" />
     </projectile>
@@ -66,6 +66,7 @@
     <stance state_key="crouching" accuracy="0.98" />
     <stance state_key="prone" accuracy="1" />
     <stance state_key="over_wall" accuracy="1" />
+    <modifier class="detectability" value="-0.15"/>
     <modifier class="speed" value="0" />   
 
 </weapon>
