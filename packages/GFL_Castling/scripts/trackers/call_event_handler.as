@@ -26,7 +26,39 @@ class call_event : Tracker {
 
 	protected void handleCallEvent(const XmlElement@ event) {
         if(event.getIntAttribute("player_id") != -1 ){
-            if(event.getStringAttribute("phase") == "queue"){
+
+            string callKey = event.getStringAttribute("call_key");
+            string phase = event.getStringAttribute("phase");
+            string position = event.getStringAttribute("target_position");
+            int callId = event.getIntAttribute("id");
+            int characterId = event.getIntAttribute("character_id");
+            int factionId = event.getIntAttribute("faction_id");
+
+            if (callKey == "gk_rampage_fairy_ac130.call" && phase == "launch") {
+                bool exsist_ac130 = false;
+                int j=-1;
+                for (uint i=0;i<GFL_event_array.length();i++){
+                    if (GFL_event_array[i].m_eventkey==2) {
+                        exsist_ac130=true;
+                        j=i;
+                    }
+                }
+                if (exsist_ac130){
+                    const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+                    if (character !is null) {
+                        int playerId = character.getIntAttribute("player_id");
+                        sendPrivateMessageKey(m_metagame,playerId,"ac130callexisthint");
+                        GiveRP(m_metagame,characterId,3000);
+                    }
+                }
+                else {
+                    sendFactionMessageKey(m_metagame,factionId,"ac130callstarthint");
+                    GFL_event_array.insertLast(GFL_event(callId,factionId,2,stringToVector3(position),1.0,-1.0));
+                }
+				
+			}
+
+			else if(phase == "queue"){
                 addCustomStatToCharacter(m_metagame,"radio_call",event.getIntAttribute("character_id"));
             }
         }
