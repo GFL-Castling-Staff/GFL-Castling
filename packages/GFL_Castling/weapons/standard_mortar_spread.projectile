@@ -2,7 +2,7 @@
 <projectile class="grenade" name="M2 mortar" slot="1" pulldown_in_air="58" key="standard_mortar_spread.projectile" >
     <tag name="grenade"/>
 
-    <result class="blast" radius="7.5" damage="6" decal="1" character_state="death" push="0.3" faction_compare="not_equal" damage_origin_vehicle="0"/>
+    <result class="blast" radius="7.5" damage="6" decal="1" character_state="death" push="0.8" faction_compare="not_equal" damage_origin_vehicle="0"/>
     <trigger class="impact" />
     <rotation class="motion" />
 

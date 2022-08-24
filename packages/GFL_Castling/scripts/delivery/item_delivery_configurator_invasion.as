@@ -1182,6 +1182,8 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 				ScoredResource("gkw_m1891.weapon", "weapon", 0.3f),
 				ScoredResource("gkw_ptrd.weapon", "weapon", 0.3f),
 				ScoredResource("gkw_saf.weapon", "weapon", 0.3f),
+				ScoredResource("gkw_hawk97.weapon", "weapon", 0.3f),
+				ScoredResource("gkw_k5.weapon", "weapon", 0.3f),
 
 
 				ScoredResource("gkw_type89.weapon", "weapon", 0.2f),
@@ -1286,6 +1288,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 				ScoredResource("gkw_type79.weapon", "weapon", 0.2f),
 				ScoredResource("gkw_spas15.weapon", "weapon", 0.2f),
 				ScoredResource("gkw_m6asw.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_mk3a1.weapon", "weapon", 0.2f),
 
 				ScoredResource("gkw_negev.weapon", "weapon", 0.2f)
 
@@ -1322,6 +1325,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 				ScoredResource("gkw_p7.weapon", "weapon", 0.3f),
 				ScoredResource("gkw_thunder.weapon", "weapon", 0.3f),
 				ScoredResource("gkw_Jericho.weapon", "weapon", 0.3f),
+				ScoredResource("gkw_k5.weapon", "weapon", 0.3f),
 
 				ScoredResource("gkw_c93.weapon", "weapon", 0.2f),
 				ScoredResource("gkw_python.weapon", "weapon", 0.2f),
@@ -1557,6 +1561,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 				ScoredResource("gkw_spas12.weapon", "weapon", 0.3f),
 				ScoredResource("gkw_m37.weapon", "weapon", 0.3f),
 				ScoredResource("gkw_m590.weapon", "weapon", 0.3f),
+				ScoredResource("gkw_hawk97.weapon", "weapon", 0.3f),
 
 				ScoredResource("gkw_aa12.weapon", "weapon", 0.2f),
 				ScoredResource("gkw_caws.weapon", "weapon", 0.2f),
@@ -1569,6 +1574,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 				ScoredResource("gkw_fp6.weapon", "weapon", 0.2f),
 				ScoredResource("gkw_spas15.weapon", "weapon", 0.2f),
 				ScoredResource("gkw_m6asw.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_mk3a1.weapon", "weapon", 0.2f),
 				ScoredResource("gkw_ltlx7000.weapon","weapon",0.2f)
 
 			},
