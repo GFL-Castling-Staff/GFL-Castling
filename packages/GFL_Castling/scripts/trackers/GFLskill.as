@@ -98,16 +98,14 @@ class GFLskill : Tracker {
 	}
 	protected array<string> GKcallList={
 		"gk_airstrike_fairy.call",
-		"gk_rocket_fairy.call",
+		"gk_rampage_fairy_ac130.call",
 		"sg1hg1mg2.call",
 		"hvy_landing.call",
 		"martina.call",
 		"chiara.call",
 		"pierre.call",
 		"gk_repair_fairy.call",
-		"target.call",
-		"gk_rampage_fairy_ac130.call",
-		"manticore.call"
+		"target.call"
 	};
 
     protected array<XM8tracker@> XM8track;

@@ -19,6 +19,7 @@
 
 class call_event : Tracker {
 	protected Metagame@ m_metagame;
+    protected int m_DummyCallID=0;
 
 	call_event(Metagame@ metagame) {
 		@m_metagame = @metagame;
@@ -53,18 +54,26 @@ class call_event : Tracker {
                 }
                 else {
                     sendFactionMessageKey(m_metagame,factionId,"ac130callstarthint");
-                    GFL_event_array.insertLast(GFL_event(callId,factionId,2,stringToVector3(position),1.0,-1.0));
+                    ManualCallTask@ FairyRequest = ManualCallTask(characterId,"",0.0,factionId,stringToVector3(position),"foobar");
+                    FairyRequest.setIndex(9);
+                    FairyRequest.setSize(0.5);
+                    FairyRequest.setDummyId(m_DummyCallID);
+                    FairyRequest.setRange(60.0);
+                    FairyRequest.setIconTypeKey("call_marker_air");
+                    int flagId = m_DummyCallID + 15000;
+                    m_DummyCallID++;
+                    GFL_event_array.insertLast(GFL_event(callId,factionId,2,stringToVector3(position),1.0,-1.0,flagId));
                 }
 				
 			}
 
-			else if(phase == "queue"){
+			if(phase == "queue"){
                 addCustomStatToCharacter(m_metagame,"radio_call",event.getIntAttribute("character_id"));
             }
         }
     }
 
-    protected void addCastlnigMarker(ManualCallTask@ info){
+    protected void addCastlingMarker(ManualCallTask@ info){
         int flagId = info.m_callId + 15000;
         XmlElement command("command");
             command.setStringAttribute("class", "set_marker");
@@ -83,14 +92,5 @@ class call_event : Tracker {
         m_metagame.getComms().send(command);
     }
 
-    protected void removeCastlnigMarker(ManualCallTask@ info){
-        int flagId = info.m_callId + 15000;
-        XmlElement command("command");
-            command.setStringAttribute("class", "set_marker");
-            command.setIntAttribute("id", flagId);
-            command.setIntAttribute("faction_id", info.m_factions);
-            command.setIntAttribute("enabled", 0);
-        m_metagame.getComms().send(command);
-    }
 
 }

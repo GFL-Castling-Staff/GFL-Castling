@@ -68,11 +68,8 @@
     <effect class="result" key="vehicle" ref="Burst" use_surface_color="1" />
 
     <effect class="result" key="terrain" ref="BigBurst" use_surface_color="1" />
-    <!--<effect class="result" key="terrain" ref="SmokeTop" post_processing="1" />-->
-    <!--<effect class="result" key="terrain" ref="Smoke" post_processing="1" />-->
     <effect class="result" key="terrain" ref="Shine" lighting="0" />
     <effect class="result" key="terrain" ref="Godray" lighting="0" />
-    <!--<effect class="result" key="terrain" ref="ShadowSmoke" shadow="1" />-->
     <effect class="result" type="splat_map" surface_tag="" size="2.0" atlas_index="0" layer="1" />
     <effect class="result" type="splat_map" surface_tag="" size="3.5" atlas_index="4" layer="0" />
     <effect class="result" type="splat_map" surface_tag="" size="4.0" atlas_index="0" layer="2" additive="0" /> 
@@ -80,6 +77,5 @@
     <effect class="result" key="static_object" copy="terrain" />    
 
     <trail probability="1.0" key="red_dreamer" />
-    <!-- <trail probability="1.0" /> -->
 
 </projectile>

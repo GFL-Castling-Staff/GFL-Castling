@@ -204,7 +204,7 @@
         <inventory encumbrance="0.0" price="500.0" />
     </call>
     <!-- 暴怒妖精（AC130） -->
-    <call name="Rampage Fairy [AC130]" key="gk_rampage_fairy_ac130.call" initiation_comment1="Rampage Fairy [AC130]" acknowledge_comment="Confirm, checking gunship status" acknowledge_time="2" launch_comment="Gunship status confirmed" notify_metagame="1">
+    <call name="Fury Fairy" key="gk_rampage_fairy_ac130.call" initiation_comment1="Fury Fairy" initiation_comment2="Gunship support" acknowledge_comment="Confirm, checking gunship status" acknowledge_time="2" launch_comment="Gunship status confirmed" notify_metagame="1">
 
         <round 
         instances="0"
@@ -221,9 +221,9 @@
         <effect class="spawn" ref="ShadowAirplaneCircle" shadow="1" />
         </round>
 
-        <hud_icon filename="call_Firesupport_RocketFairy.png" />
+        <hud_icon filename="call_RampageFairy.png" />
         <capacity value="0" source="rank" source_value="0.0" />
-        <capacity value="100" source="rank" source_value="2.364" />
+        <capacity value="100" source="rank" source_value="6.48" />
         <inventory encumbrance="0.0" price="3000.0" />
     </call> 
 </calls>
