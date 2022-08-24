@@ -48,8 +48,9 @@ class GFL_event_system : Tracker {
                         switch(GFL_event_array[a].m_eventkey){
                             case 1:{excuteSniperFairy(m_metagame,GFL_event_array[a]);break;}
                             case 2:{
-                                if(GFL_event_array[a].m_randseed==-1.0)
+                                if(GFL_event_array[a].m_randseed==-1.0){
                                     GFL_event_array[a].m_randseed=float(rand(0,3.14));
+                                }
                                 excuteRampageFairyAC130(m_metagame,GFL_event_array[a]);
                                 break;
                             }
@@ -58,7 +59,7 @@ class GFL_event_system : Tracker {
                         }
                     }
                     else{
-                        if(GFL_event_array[a].m_randseed.m_markerId != 0){
+                        if(GFL_event_array[a].m_markerId != 0){
                             removeCastlingMarker(GFL_event_array[a]);
                         }
                         GFL_event_array.removeAt(a);
@@ -192,7 +193,7 @@ void excuteRampageFairyAC130(GameMode@ metagame,GFL_event@ eventinfo){
         ac130_voice_interval = 2;
         ac130_flyby_interval = 3;
         ac130_pre_pos = eventinfo.m_pos;
-        sendFactionMessageKey(m_metagame,eventinfo.m_factionid,"ac130fight");
+        sendFactionMessageKey(metagame,eventinfo.m_factionid,"ac130fight");
     }
 
     float jud_time = eventinfo.m_phase*eventinfo.m_time;
