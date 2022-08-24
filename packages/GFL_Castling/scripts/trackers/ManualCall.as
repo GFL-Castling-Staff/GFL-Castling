@@ -348,7 +348,7 @@ class ManualCall : Tracker {
 		return true;
 	}
 
-    void addCastlnigMarker(ManualCallTask@ info){
+    protected void addCastlnigMarker(ManualCallTask@ info){
         int flagId = info.m_callId + 114514;
         XmlElement command("command");
             command.setStringAttribute("class", "set_marker");
@@ -367,7 +367,7 @@ class ManualCall : Tracker {
         m_metagame.getComms().send(command);
     }
 
-    void removeCastlnigMarker(ManualCallTask@ info){
+    protected void removeCastlnigMarker(ManualCallTask@ info){
         int flagId = info.m_callId + 114514;
         XmlElement command("command");
             command.setStringAttribute("class", "set_marker");

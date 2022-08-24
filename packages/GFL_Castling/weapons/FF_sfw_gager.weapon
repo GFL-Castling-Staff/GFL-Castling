@@ -10,7 +10,7 @@
 	can_shoot_prone="0"
 	class="0"
 	solt="0" 
-	magazine_size="50" 
+	magazine_size="100" 
 	name="GK-Gager" 
 	projectile_speed="150" 
 	retrigger_time="0.04" 
@@ -45,7 +45,7 @@
   
     <weak_hand_hold offset="0.4" />
     <projectile file="bullet_sf.projectile">
-        <result class="hit"  kill_probability="2.2" kill_probability_offset_on_successful_hit="0.4" kill_decay_start_time="1" kill_decay_end_time="1"  />
+        <result class="hit"  kill_probability="2.2" kill_probability_offset_on_successful_hit="0.4" kill_decay_start_time="0.02" kill_decay_end_time="0.75"  />
     </projectile>
 
     <stance state_key="running" accuracy="0.75" />

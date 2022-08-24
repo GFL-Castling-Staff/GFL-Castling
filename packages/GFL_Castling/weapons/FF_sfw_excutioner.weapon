@@ -80,7 +80,7 @@
 		<model filename="sfw_excutioner1.xml" />
 		<next_in_chain key="ff_excutioner_1.weapon" share_ammo="0" />
 		<projectile file="teal.projectile">
-			<result class="blast" radius="3" damage="5" decal="0" push="0.0" character_state="death" faction_compare="not_equal" make_vehicle_hit_sound="0" />
+			<result class="blast" radius="3" damage="5" decal="0" push="0.6" character_state="death" faction_compare="not_equal" make_vehicle_hit_sound="0" />
 		</projectile>
 		<inventory encumbrance="20.0" buy_price="648.0" sell_price="324.0"/>
 		<stance state_key="running" accuracy="1" />

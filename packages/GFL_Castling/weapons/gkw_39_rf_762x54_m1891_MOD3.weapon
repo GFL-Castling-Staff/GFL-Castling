@@ -69,9 +69,9 @@
     class="2" 
     reload_one_at_a_time="0" 
     sight_range_modifier="3" 
-    projectile_speed="205.95" 
+    projectile_speed="235.95" 
     barrel_offset="0.4" 
-    projectiles_per_shot="2" />
+    projectiles_per_shot="8" />
 
     <inventory  buy_price="110.0" sell_price="110.0" />	
     <capacity value="1" source="rank" source_value="0.0" />
@@ -101,7 +101,7 @@
     
     <weak_hand_hold offset="0.3" />
     <projectile file="bullet.projectile" can_be_detected_by_footmen="0">
-        <result class="blast" damage="12" radius="2.5" push="0.2" charater_state="death" faction_compare="not_equal" />
+        <result class="blast" damage="3" radius="2.5" push="0.2" charater_state="death" faction_compare="not_equal" />
     </projectile>
 	<stance state_key="running" accuracy="1" />
 	<stance state_key="walking" accuracy="1" />
