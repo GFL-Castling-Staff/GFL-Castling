@@ -748,9 +748,9 @@
 	<inventory buy_price="8.0" sell_price="8.0"/>
 	<next_in_chain key="gkw_QBZ95_skill.weapon" share_ammo="1"/>
 	<sound key="fire" fileref="type95_fire_FromBF4.wav" pitch_variety="0.05" volume="1.6"/>
-	<sound key="magazine_out" fileref="type95_mgz_out_FromBF4.wav" volume="1.1"/>
-	<sound key="magazine_in" fileref="type95_mgz_in_FromBF4.wav" volume="1.1"/>
-	<sound key="cycle" fileref="type95_cycle_FromBF4.wav" volume="1.1"/>
+	<sound key="magazine_out" fileref="type95_mgz_out_FromBF4.wav" volume="1"/>
+	<sound key="magazine_in" fileref="type95_mgz_in_FromBF4.wav" volume="1"/>
+	<sound key="cycle" fileref="qbz95_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_ar_type95.xml"/>
 	<hud_icon filename="gkw_95type.png"/>
@@ -802,10 +802,10 @@
 	<inventory buy_price="8.0" sell_price="8.0"/>
 	<next_in_chain key="gkw_QBZ95.weapon" share_ammo="1"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
-	<sound key="fire" fileref="type95skill_fire_FromDOOM4.wav" pitch_variety="0.05" volume="1.5"/>
-	<sound key="magazine_out" fileref="type95_mgz_out_FromBF4.wav" volume="1.1"/>
-	<sound key="magazine_in" fileref="type95_mgz_in_FromBF4.wav" volume="1.1"/>
-	<sound key="cycle" fileref="type95_cycle_FromBF4.wav" volume="1.1"/>
+	<sound key="fire" fileref="qbz95skill_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.2"/>
+	<sound key="magazine_out" fileref="type95_mgz_out_FromBF4.wav" volume="1"/>
+	<sound key="magazine_in" fileref="type95_mgz_in_FromBF4.wav" volume="1"/>
+	<sound key="cycle" fileref="qbz95_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_ar_type95.xml"/>
 	<hud_icon filename="gkw_95type_skill.png"/>
@@ -1575,7 +1575,7 @@
 <weapon key="gkw_p226.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<specification retrigger_time="-1" last_burst_retrigger_time="0.1" accuracy_factor="1.0" sustained_fire_grow_step="0.35" sustained_fire_diminish_rate="1.3" magazine_size="15" suppressed="0" name="P226" class="4" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="97.28" projectiles_per_shot="1" burst_shots="1" stab_enabled="1" carry_in_two_hands="0" slot="0"/>
 	<inventory buy_price="3.0" sell_price="3.0"/>
-	<sound key="fire" fileref="p226_fire_FromEFT.wav" pitch_variety="0.05" volume="1.1"/>
+	<sound key="fire" fileref="p226_fire_FromEFT.wav" pitch_variety="0.05" volume="1.3"/>
 	<sound key="magazine_out" fileref="p226_mgz_out_FromDAYSGONE.wav" volume="0.65"/>
 	<sound key="magazine_in" fileref="p226_mgz_in_FromDAYSGONE.wav" volume="0.65"/>
 	<sound key="cycle" fileref="p226_cycle_FromRS2V.wav" volume="0.5"/>
@@ -1639,7 +1639,7 @@
 	<animation state_key="hold_casual" animation_key="dancing, kazachok"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
 	<inventory buy_price="8.0" sell_price="8.0"/>
-	<sound key="fire" fileref="an94_fire_FromCOD15.wav" pitch_variety="0.02" volume="1.5"/>
+	<sound key="fire" fileref="an94_fire_FromCF.wav" pitch_variety="0.02" volume="1.2"/>
 	<sound key="magazine_out" fileref="an94_mgz_out_FromCOD16.wav" volume="0.6"/>
 	<sound key="magazine_in" fileref="an94_mgz_in_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.6"/>
@@ -1696,10 +1696,10 @@
 	<animation state_key="hold_casual" animation_key="dancing, kazachok"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.5"/>
 	<inventory buy_price="8.0" sell_price="8.0"/>
-	<sound key="fire" fileref="an94skill_fire_FromCOD16.wav" pitch_variety="0.02" volume="1.1"/>
-	<sound key="magazine_out" fileref="an94_mgz_out_FromCOD16.wav" volume="0.8"/>
-	<sound key="magazine_in" fileref="an94_mgz_in_FromCOD16.wav" volume="0.8"/>
-	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.8"/>
+	<sound key="fire" fileref="an94skill_fire_FromCOD16.wav" pitch_variety="0.02" volume="1"/>
+	<sound key="magazine_out" fileref="an94_mgz_out_FromCOD16.wav" volume="0.6"/>
+	<sound key="magazine_in" fileref="an94_mgz_in_FromCOD16.wav" volume="0.6"/>
+	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_ar_an94.xml"/>
 	<hud_icon filename="gkw_an94_skill.png"/>
@@ -2114,7 +2114,7 @@
 	<hud_icon filename="gkw_m82a1.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="ntw.projectile">
-	<result class="blast" damage="8" radius="3.5" decal="1" push="0.2" character_state="death" faction_compare="not_equal"/>
+	<result class="blast" damage="8" radius="3.5" decal="1" push="0.4" character_state="death" faction_compare="not_equal"/>
 	</projectile>
 	<stance state_key="walking" accuracy="0.7"/>
 	<stance state_key="crouch_moving" accuracy="0.5"/>
@@ -2169,7 +2169,7 @@
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="ntw.projectile">
-	<result class="blast" damage="6" radius="2.5" decal="1" push="0.2" character_state="death" faction_compare="not_equal"/>
+	<result class="blast" damage="6" radius="2.5" decal="1" push="0.4" character_state="death" faction_compare="not_equal"/>
 	</projectile>
 	<stance state_key="walking" accuracy="0.7"/>
 	<stance state_key="crouch_moving" accuracy="0.5"/>
@@ -2875,7 +2875,7 @@
 	<hud_icon filename="gkw_gm6lynx.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="ntw.projectile">
-	<result class="blast" damage="8" radius="3.5" decal="1" push="0.2" character_state="death" faction_compare="not_equal"/>
+	<result class="blast" damage="8" radius="3.5" decal="1" push="0.4" character_state="death" faction_compare="not_equal"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_50BMG"/>
 	<stance state_key="walking" accuracy="0.65"/>
@@ -2923,11 +2923,11 @@
 	<animation key="cycle" stance_key="prone" animation_key="Brifle1p"/>
 	<animation key="reload" animation_key="reloading, oaat"/>
 	<effect class="muzzle" ref="ejection_special_rf"/>
-	<sound key="fire" fileref="m1903only_fire_FromRODH.wav" pitch_variety="0.05" volume="1.2"/>
-	<sound key="cycle" fileref="m1903_cycle_FromFC6.wav" volume="0.6"/>
-	<sound key="reload_one" fileref="m1903_reload_FromCOD16.wav" volume="0.4"/>
-	<sound key="cycle_out" fileref="m1903_cycle_out_FromFC6.wav" volume="0.6"/>
-	<sound key="cycle_in" fileref="m1903_cycle_in_FromFC6.wav" volume="0.6"/>
+	<sound key="fire" fileref="m1903only_fire_FromRODH.wav" pitch_variety="0.05" volume="1.1"/>
+	<sound key="cycle" fileref="m1903_cycle_FromFC6.wav" volume="0.5"/>
+	<sound key="reload_one" fileref="m1903_reload_FromCOD16.wav" volume="0.5"/>
+	<sound key="cycle_out" fileref="m1903_cycle_out_FromFC6.wav" volume="0.5"/>
+	<sound key="cycle_in" fileref="m1903_cycle_in_FromFC6.wav" volume="0.5"/>
 	<sound class="impact" fileref="rifle_drop.wav" volume="1"/>
 	<commonness value="0.2" in_stock="1" can_respawn_with="1"/>
 	<model filename="gkw_rf_m1903.xml"/>
@@ -2978,10 +2978,10 @@
 	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="0.4" sustained_fire_diminish_rate="1.6" magazine_size="20" can_shoot_standing="1" suppressed="0" name="M14" class="4" burst_shots="1" last_burst_retrigger_time="0.125" reload_one_at_a_time="0" sight_range_modifier="2" projectile_speed="230.85" barrel_offset="0.4" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<inventory buy_price="10.0" sell_price="10.0"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.8"/>
-	<sound key="fire" fileref="m14_fire_FromDAYSGONE.wav" pitch_variety="0.01" volume="1.1"/>
-	<sound key="magazine_out" fileref="m14_mgz_out_FromCOD8.wav" volume="0.5"/>
-	<sound key="magazine_in" fileref="m14_mgz_in_FromCOD8.wav" volume="0.5"/>
-	<sound key="cycle" fileref="m14_cycle_FromCOD8.wav" volume="0.5"/>
+	<sound key="fire" fileref="m14_fire_FromDAYSGONE.wav" pitch_variety="0.01" volume="1.3"/>
+	<sound key="magazine_out" fileref="m14_mgz_out_FromCOD15.wav" volume="0.6"/>
+	<sound key="magazine_in" fileref="m14_mgz_in_FromCOD15.wav" volume="0.6"/>
+	<sound key="cycle" fileref="m14_cycle_FromCOD15.wav" volume="0.6"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_rf_m14.xml"/>
 	<hud_icon filename="gkw_m14.png"/>
@@ -4890,26 +4890,26 @@
 	<animation state_key="hold_casual" animation_key="dancing, kazachok"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
 	<inventory buy_price="8.0" sell_price="8.0"/>
-	<sound key="fire" fileref="ak12_fire_FromWF.wav" pitch_variety="0.02" volume="1.2"/>
-	<sound key="magazine_out" fileref="ak12_mgz_out_FromKF2.wav" volume="0.7"/>
-	<sound key="magazine_in" fileref="ak12_mgz_in_FromKF2.wav" volume="0.7"/>
-	<sound key="cycle" fileref="ak12_cycle_FromKF2.wav" volume="0.7"/>
+	<sound key="fire" fileref="ak12_fire_FromBFH.wav" pitch_variety="0.02" volume="1.2"/>
+	<sound key="magazine_out" fileref="ak12_mgz_out_FromCOD16.wav" volume="0.6"/>
+	<sound key="magazine_in" fileref="ak12_mgz_in_FromCOD16.wav" volume="0.6"/>
+	<sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AK12_LOADING_JP.wav" volume="0.9" pitch_variety="0"/>
-	<sound key="cycle" fileref="ak12_cycle_FromKF2.wav" volume="0.7"/>
+	<sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AK12_TIP_JP.wav" volume="0.9" pitch_variety="0"/>
-	<sound key="cycle" fileref="ak12_cycle_FromKF2.wav" volume="0.7"/>
+	<sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AK12_FEED_JP.wav" volume="0.9" pitch_variety="0"/>
-	<sound key="cycle" fileref="ak12_cycle_FromKF2.wav" volume="0.7"/>
+	<sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AK12_FIX_JP.wav" volume="0.9" pitch_variety="0"/>
-	<sound key="cycle" fileref="ak12_cycle_FromKF2.wav" volume="0.7"/>
+	<sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AK12_OPERATIONBEGIN_JP.wav" volume="0.9" pitch_variety="0"/>
-	<sound key="cycle" fileref="ak12_cycle_FromKF2.wav" volume="0.7"/>
+	<sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AK12_BLACKACTION_JP.wav" volume="0.9" pitch_variety="0"/>
-	<sound key="cycle" fileref="ak12_cycle_FromKF2.wav" volume="0.7"/>
+	<sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AK12_GOATTACK_JP.wav" volume="0.9" pitch_variety="0"/>
-	<sound key="cycle" fileref="ak12_cycle_FromKF2.wav" volume="0.7"/>
+	<sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AK12_MEET_JP.wav" volume="0.9" pitch_variety="0"/>
-	<sound key="cycle" fileref="ak12_cycle_FromKF2.wav" volume="0.7"/>
+	<sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_ar_ak12.xml"/>
 	<hud_icon filename="gkw_ak12.png"/>
@@ -4963,20 +4963,20 @@
 	<animation state_key="hold_casual" animation_key="dancing, kazachok"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
 	<inventory buy_price="8.0" sell_price="8.0"/>
-	<sound key="fire" fileref="ak12_fire_FromCOD10.wav" pitch_variety="0.02" volume="1"/>
-	<sound key="magazine_out" fileref="ak12_mgz_out_FromKF2.wav" volume="0.7"/>
-	<sound key="magazine_in" fileref="ak12_mgz_in_FromKF2.wav" volume="0.7"/>
-	<sound key="cycle" fileref="ak12_cycle_FromKF2.wav" volume="0.7"/>
+	<sound key="fire" fileref="ak12_fire_FromCOD16.wav" pitch_variety="0.02" volume="1"/>
+	<sound key="magazine_out" fileref="ak12_mgz_out_FromCOD16.wav" volume="0.6"/>
+	<sound key="magazine_in" fileref="ak12_mgz_in_FromCOD16.wav" volume="0.6"/>
+	<sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AK12_WIN_JP.wav" volume="0.9" pitch_variety="0"/>
-	<sound key="cycle" fileref="ak12_cycle_FromKF2.wav" volume="0.7"/>
+	<sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AK12_GOATTACK_JP.wav" volume="0.9" pitch_variety="0"/>
-	<sound key="cycle" fileref="ak12_cycle_FromKF2.wav" volume="0.7"/>
+	<sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AK12_SKILL1_JP.wav" volume="0.9" pitch_variety="0"/>
-	<sound key="cycle" fileref="ak12_cycle_FromKF2.wav" volume="0.7"/>
+	<sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AK12_SKILL2_JP.wav" volume="0.9" pitch_variety="0"/>
-	<sound key="cycle" fileref="ak12_cycle_FromKF2.wav" volume="0.7"/>
+	<sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AK12_SKILL3_JP.wav" volume="0.9" pitch_variety="0"/>
-	<sound key="cycle" fileref="ak12_cycle_FromKF2.wav" volume="0.7"/>
+	<sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_ar_ak12.xml"/>
 	<hud_icon filename="gkw_ak12.png"/>
@@ -5202,7 +5202,7 @@
 	<hud_icon filename="gkw_ksvk.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="ksvk_mod3.projectile">
-	<result class="blast" damage="10.0" radius="3.5" decal="1" push="0.5" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+	<result class="blast" damage="10.0" radius="3.5" decal="1" push="0.6" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	</projectile>
 	<stance state_key="running" accuracy="1.0"/>
 	<stance state_key="walking" accuracy="1.0"/>
@@ -5832,7 +5832,7 @@
 	<hud_icon filename="gkw_dsr50.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="ntw.projectile" can_be_detected_by_footmen="0">
-	<result class="blast" damage="8.0" radius="4" decal="1" push="0.2" character_state="death" faction_compare="not_equal"/>
+	<result class="blast" damage="8.0" radius="4" decal="1" push="0.4" character_state="death" faction_compare="not_equal"/>
 	</projectile>
 	<stance state_key="running" accuracy="1.1"/>
 	<stance state_key="walking" accuracy="1.1"/>
@@ -6064,7 +6064,7 @@
 	<hud_icon filename="gkw_m99.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="ntw.projectile">
-	<result class="blast" damage="10.0" radius="3.5" decal="1" push="0.4" character_state="death" faction_compare="not_equal"/>
+	<result class="blast" damage="10.0" radius="3.5" decal="1" push="0.6" character_state="death" faction_compare="not_equal"/>
 	</projectile>
 	<stance state_key="running" accuracy="1.0"/>
 	<stance state_key="walking" accuracy="1.0"/>
@@ -6382,10 +6382,10 @@
 	<animation state_key="reload" animation_key="reloading, magazine rifle 0.9"/>
 	<animation state_key="stabbing" animation_key="melee, quick knife"/>
 	<animation state_key="stabbing" animation_key="pistol whip 3"/>
-	<sound key="fire" fileref="sp9_fire_FromHALOINFINTE.wav" pitch_variety="0.05" volume="1"/>
-	<sound key="magazine_out" fileref="sp9_mgz_out_FromDIVISION2.wav" volume="0.7"/>
-	<sound key="magazine_in" fileref="sp9_mgz_in_FromDIVISION2.wav" volume="0.7"/>
-	<sound key="cycle" fileref="sp9_cycle_FromDIVISION2.wav" volume="0.7"/>
+	<sound key="fire" fileref="sp9_fire_FromHALOINFINTE.wav" pitch_variety="0.05" volume="1.2"/>
+	<sound key="magazine_out" fileref="sp9_mgz_out_FromDIVISION2.wav" volume="0.6"/>
+	<sound key="magazine_in" fileref="sp9_mgz_in_FromDIVISION2.wav" volume="0.6"/>
+	<sound key="cycle" fileref="sp9_cycle_FromDIVISION2.wav" volume="0.5"/>
 	<sound key="cycle" fileref="SP9_ATTACK_JP.wav" volume="1.4" pitch_variety="0"/>
 	<sound key="cycle" fileref="SP9_BLACKACTION_JP.wav" volume="1.4" pitch_variety="0"/>
 	<sound key="cycle" fileref="SP9_COMBINE_JP.wav" volume="1.4" pitch_variety="0"/>
@@ -6511,10 +6511,10 @@
 	<animation state_key="stabbing" animation_key="pistol whip 3"/>
 	<next_in_chain key="gkw_rpk16_skill.weapon" share_ammo="1"/>
 	<inventory encumbrance="30.0" buy_price="16.0" sell_price="16.0"/>
-	<sound key="fire" fileref="rpk16_Fire_FromEFT.wav" pitch_variety="0.02" volume="1"/>
-	<sound key="magazine_out" fileref="rpk16_mgz_out_FromEFT.wav" volume="1"/>
-	<sound key="magazine_in" fileref="rpk16_mgz_in_FromEFT.wav" volume="1"/>
-	<sound key="cycle" fileref="rpk16_cycle_FromEFT.wav" volume="1"/>
+	<sound key="fire" fileref="rpk16_Fire_FromEFT.wav" pitch_variety="0.02" volume="1.2"/>
+	<sound key="magazine_out" fileref="rpk16_mgz_out_FromCOD16.wav" volume="0.6"/>
+	<sound key="magazine_in" fileref="rpk16_mgz_in_FromCOD16.wav" volume="0.6"/>
+	<sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_mg_rpk16.xml"/>
 	<hud_icon filename="gkw_rpk16.png"/>
@@ -6558,10 +6558,10 @@
 	<animation state_key="stabbing" animation_key="pistol whip 3"/>
 	<next_in_chain key="gkw_rpk16.weapon" share_ammo="1"/>
 	<inventory encumbrance="30.0" buy_price="16.0" sell_price="16.0"/>
-	<sound key="fire" fileref="rpk16_Fire_FromEFT.wav" pitch_variety="0.02" volume="1"/>
-	<sound key="magazine_out" fileref="rpk16_mgz_out_FromEFT.wav" volume="1"/>
-	<sound key="magazine_in" fileref="rpk16_mgz_in_FromEFT.wav" volume="1"/>
-	<sound key="cycle" fileref="rpk16_cycle_FromEFT.wav" volume="1"/>
+	<sound key="fire" fileref="rpk16_Fire_FromEFT.wav" pitch_variety="0.02" volume="1.2"/>
+	<sound key="magazine_out" fileref="rpk16_mgz_out_FromCOD16.wav" volume="0.6"/>
+	<sound key="magazine_in" fileref="rpk16_mgz_in_FromCOD16.wav" volume="0.6"/>
+	<sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_mg_rpk16.xml"/>
 	<hud_icon filename="gkw_rpk16_skill.png"/>
@@ -7879,7 +7879,7 @@
 	<inventory buy_price="3.0" sell_price="3.0"/>
 	<next_in_chain key="gkw_m1918_skill.weapon" share_ammo="1"/>
 	<commonness value="0.2" in_stock="1" can_respawn_with="1"/>
-	<sound key="fire" fileref="m1918_fire_FromWF.wav" pitch_variety="0.05" volume="1.4"/>
+	<sound key="fire" fileref="m1918_fire_FromWF.wav" pitch_variety="0.05" volume="1.2"/>
 	<sound key="magazine_out" fileref="m1918_mgz_out_FromRS2V.wav" volume="0.6"/>
 	<sound key="magazine_in" fileref="m1918_mgz_in_FromRS2V.wav" volume="0.6"/>
 	<sound key="cycle" fileref="m1918_cycle_FromRS2V.wav" volume="0.6"/>
@@ -8697,7 +8697,7 @@
 	<hud_icon filename="gkw_js05.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="ntw.projectile">
-	<result class="blast" damage="10.0" radius="3.5" decal="1" push="0.3" character_state="death" faction_compare="not_equal"/>
+	<result class="blast" damage="10.0" radius="3.5" decal="1" push="0.6" character_state="death" faction_compare="not_equal"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.9"/>
 	<stance state_key="walking" accuracy="0.9"/>
@@ -9224,7 +9224,7 @@
 	<hud_icon filename="gkw_hs50.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="ntw.projectile">
-	<result class="blast" damage="8" radius="4" decal="1" push="0.2" character_state="death" faction_compare="not_equal"/>
+	<result class="blast" damage="8" radius="4" decal="1" push="0.4" character_state="death" faction_compare="not_equal"/>
 	</projectile>
 	<stance state_key="running" accuracy="1"/>
 	<stance state_key="walking" accuracy="1"/>
@@ -11432,10 +11432,10 @@
 	<animation state_key="hold_casual" animation_key="dancing, kazachok"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
 	<inventory buy_price="45.0" sell_price="45.0"/>
-	<sound key="fire" fileref="ak74m_fire_FromBF3.wav" pitch_variety="0.05" volume="1.2"/>
-	<sound key="magazine_out" fileref="ak74m_mgz_out_FromBF3.wav" volume="0.8"/>
-	<sound key="magazine_in" fileref="ak74m_mgz_in_FromBF3.wav" volume="0.8"/>
-	<sound key="cycle" fileref="ak74m_cycle_FromBF3.wav" volume="0.8"/>
+	<sound key="fire" fileref="ak74m_fire_FromBF3.wav" pitch_variety="0.05" volume="1.3"/>
+	<sound key="magazine_out" fileref="ak74_mgz_out_FromCOD16.wav" volume="0.6"/>
+	<sound key="magazine_in" fileref="ak74_mgz_in_FromCOD16.wav" volume="0.6"/>
+	<sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_ak74m_From_melondove.xml"/>
 	<hud_icon filename="gkw_ak74m.png"/>
@@ -12966,9 +12966,9 @@
 	<effect class="muzzle" ref="ejection_76251"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.8"/>
 	<sound key="fire" fileref="m21_fire_FromCOD4R.wav" pitch_variety="0.01" volume="1.1"/>
-	<sound key="magazine_out" fileref="m14_mgz_out_FromCOD8.wav" volume="0.5"/>
-	<sound key="magazine_in" fileref="m14_mgz_in_FromCOD8.wav" volume="0.5"/>
-	<sound key="cycle" fileref="m14_cycle_FromCOD8.wav" volume="0.5"/>
+	<sound key="magazine_out" fileref="m14_mgz_out_FromCOD15.wav" volume="0.6"/>
+	<sound key="magazine_in" fileref="m14_mgz_in_FromCOD15.wav" volume="0.6"/>
+	<sound key="cycle" fileref="m14_cycle_FromCOD15.wav" volume="0.6"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_rf_m14.xml"/>
 	<hud_icon filename="gkw_m21.png"/>
@@ -13022,10 +13022,10 @@
 	<animation key="reload" animation_key="magBrifleRSASS"/>
 	<animation key="reload" stance_key="prone" animation_key="magBrifleRpSASS"/>
 	<animation state_key="next_in_chain_in" animation_key="change weapon in ssass"/>
-	<sound key="fire" fileref="m21skill_fire_FromTLOU2.wav" pitch_variety="0.01" volume="1.15"/>
-	<sound key="magazine_out" fileref="m14_mgz_out_FromCOD8.wav" volume="0.5"/>
-	<sound key="magazine_in" fileref="m14_mgz_in_FromCOD8.wav" volume="0.5"/>
-	<sound key="cycle" fileref="m14_cycle_FromCOD8.wav" volume="0.5"/>
+	<sound key="fire" fileref="m21skill_fire_FromTLOU2.wav" pitch_variety="0.01" volume="1.3"/>
+	<sound key="magazine_out" fileref="m21skill_mgz_out_FromCOD15.wav" volume="0.6"/>
+	<sound key="magazine_in" fileref="m21skill_mgz_in_FromCOD16.wav" volume="0.7"/>
+	<sound key="cycle" fileref="m21skill_cycle_FromCOD15.wav" volume="0.6"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_rf_m14.xml"/>
 	<hud_icon filename="gkw_m21_skill.png"/>
@@ -13452,7 +13452,7 @@
 	<hud_icon filename="gkw_tac50.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="ntw.projectile">
-	<result class="blast" damage="8" radius="3.5" decal="1" push="0.2" character_state="death" faction_compare="not_equal"/>
+	<result class="blast" damage="8" radius="3.5" decal="1" push="0.4" character_state="death" faction_compare="not_equal"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.9"/>
 	<stance state_key="walking" accuracy="1.1"/>
@@ -14728,10 +14728,10 @@
 	<animation state_key="changing_weapon_in" animation_key="change weapon in, single hand carry"/>
 	<animation state_key="stabbing" animation_key="pistol whip"/>
 	<animation state_key="stabbing" animation_key="pistol whip 3"/>
-	<sound key="fire" fileref="ppk_fire_FromRE2RE.wav" pitch_variety="0.05" volume="1"/>
-	<sound key="magazine_out" fileref="ppk_mgz_out_FromBF5.wav" volume="0.8"/>
-	<sound key="magazine_in" fileref="ppk_mgz_in_FromBF5.wav" volume="0.8"/>
-	<sound key="cycle" fileref="ppk_cycle_FromBF5.wav" volume="0.8"/>
+	<sound key="fire" fileref="ppk_fire_FromRE2RE.wav" pitch_variety="0.05" volume="1.2"/>
+	<sound key="magazine_out" fileref="ppk_mgz_out_FromBF5.wav" volume="0.6"/>
+	<sound key="magazine_in" fileref="ppk_mgz_in_FromBF5.wav" volume="0.6"/>
+	<sound key="cycle" fileref="ppk_cycle_FromBF5.wav" volume="0.6"/>
 	<model filename="gkw_hg_ppk.xml"/>
 	<hud_icon filename="gkw_ppk.png"/>
 	<weak_hand_hold offset="0.1"/>
@@ -14782,10 +14782,10 @@
 	<animation state_key="changing_weapon_in" animation_key="change weapon in, single hand carry"/>
 	<animation state_key="stabbing" animation_key="pistol whip"/>
 	<animation state_key="stabbing" animation_key="pistol whip 3"/>
-	<sound key="fire" fileref="ppksd_fire_FromBF5.wav" pitch_variety="0.05" volume="1"/>
-	<sound key="magazine_out" fileref="ppk_mgz_out_FromBF5.wav" volume="0.8"/>
-	<sound key="magazine_in" fileref="ppk_mgz_in_FromBF5.wav" volume="0.8"/>
-	<sound key="cycle" fileref="ppk_cycle_FromBF5.wav" volume="0.8"/>
+	<sound key="fire" fileref="ppksd_fire_FromBF5.wav" pitch_variety="0.05" volume="1.2"/>
+	<sound key="magazine_out" fileref="ppk_mgz_out_FromBF5.wav" volume="0.6"/>
+	<sound key="magazine_in" fileref="ppk_mgz_in_FromBF5.wav" volume="0.6"/>
+	<sound key="cycle" fileref="ppk_cycle_FromBF5.wav" volume="0.6"/>
 	<model filename="gkw_hg_ppk_mod3.xml"/>
 	<hud_icon filename="gkw_ppkmod3.png"/>
 	<weak_hand_hold offset="0.1"/>
@@ -15684,10 +15684,10 @@
 	<animation state_key="stabbing" animation_key="melee, quick knife"/>
 	<animation state_key="stabbing" animation_key="pistol whip 3"/>
 	<effect class="muzzle" ref="ejection_9mm"/>
-	<sound key="fire" fileref="mab38_fire_FromBF5.wav" pitch_variety="0.05" volume="2.1"/>
-	<sound key="magazine_out" fileref="mab38_mgz_out_FromBF5.wav" volume="1.9"/>
-	<sound key="magazine_in" fileref="mab38_mgz_in_FromBF5.wav" volume="1.9"/>
-	<sound key="cycle" fileref="mab38_cycle_FromBF5.wav" volume="1.9"/>
+	<sound key="fire" fileref="mab38_fire_FromBF5.wav" pitch_variety="0.05" volume="1.5"/>
+	<sound key="magazine_out" fileref="mab38_mgz_out_FromBF5.wav" volume="0.8"/>
+	<sound key="magazine_in" fileref="mab38_mgz_in_FromBF5.wav" volume="0.8"/>
+	<sound key="cycle" fileref="mab38_cycle_FromBF5.wav" volume="0.8"/>
 	<sound class="impact" fileref="rifle_drop.wav" volume="1"/>
 	<commonness value="0.2" in_stock="1" can_respawn_with="1"/>
 	<model filename="gkw_smg_mab38_mod3_from_gua.xml"/>
@@ -15739,10 +15739,10 @@
 	<animation state_key="stabbing" animation_key="melee, quick knife"/>
 	<animation state_key="stabbing" animation_key="pistol whip 3"/>
 	<effect class="muzzle" ref="ejection_9mm"/>
-	<sound key="fire" fileref="mab38_fire_FromBF5.wav" pitch_variety="0.05" volume="2.1"/>
-	<sound key="magazine_out" fileref="mab38_mgz_out_FromBF5.wav" volume="1.9"/>
-	<sound key="magazine_in" fileref="mab38_mgz_in_FromBF5.wav" volume="1.9"/>
-	<sound key="cycle" fileref="mab38_cycle_FromBF5.wav" volume="1.9"/>
+	<sound key="fire" fileref="mab38_fire_FromBF5.wav" pitch_variety="0.05" volume="1.5"/>
+	<sound key="magazine_out" fileref="mab38_mgz_out_FromBF5.wav" volume="0.8"/>
+	<sound key="magazine_in" fileref="mab38_mgz_in_FromBF5.wav" volume="0.8"/>
+	<sound key="cycle" fileref="mab38_cycle_FromBF5.wav" volume="0.8"/>
 	<sound class="impact" fileref="rifle_drop.wav" volume="1"/>
 	<model filename="gkw_smg_mab38_mod3_from_gua.xml"/>
 	<hud_icon filename="gkw_mab38mod3.png"/>
@@ -16948,10 +16948,10 @@
 	<animation state_key="stabbing" animation_key="pistol whip"/>
 	<animation state_key="stabbing" animation_key="pistol whip 2"/>
 	<animation state_key="stabbing" animation_key="pistol whip 3"/>
-	<sound key="fire" fileref="p38_fire_FromHELLLETLOOSE.wav" pitch_variety="0.05" volume="1.2"/>
-	<sound key="magazine_out" fileref="p38_mgz_out_FromRO2.wav" volume="0.4"/>
-	<sound key="magazine_in" fileref="p38_mgz_in_FromRO2.wav" volume="0.4"/>
-	<sound key="cycle" fileref="p38_cycle_FromRO2.wav" volume="0.4"/>
+	<sound key="fire" fileref="p38_fire_FromHELLLETLOOSE.wav" pitch_variety="0.05" volume="1.6"/>
+	<sound key="magazine_out" fileref="p38_mgz_out_FromRO2.wav" volume="0.7"/>
+	<sound key="magazine_in" fileref="p38_mgz_in_FromRO2.wav" volume="0.7"/>
+	<sound key="cycle" fileref="p38_cycle_FromRO2.wav" volume="0.7"/>
 	<model filename=""/>
 	<hud_icon filename="gkw_p38.png"/>
 	<effect class="muzzle" ref="MuzzleDual1"/>
@@ -21128,36 +21128,36 @@
 	<animation key="reload" animation_key="reloading, magazine rifle 1.5"/>
 	<inventory buy_price="270.0" sell_price="270.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<sound key="fire" fileref="an94mod3_fire_FromCOD16.wav" pitch_variety="0.02" volume="1.1"/>
-	<sound key="magazine_out" fileref="an94_mgz_out_FromCOD16.wav" volume="0.8"/>
-	<sound key="magazine_in" fileref="an94_mgz_in_FromCOD16.wav" volume="0.8"/>
-	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.8"/>
+	<sound key="fire" fileref="an94mod3_fire_FromCOD16.wav" pitch_variety="0.02" volume="1"/>
+	<sound key="magazine_out" fileref="an94_mgz_out_FromCOD16.wav" volume="0.6"/>
+	<sound key="magazine_in" fileref="an94_mgz_in_FromCOD16.wav" volume="0.6"/>
+	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AN94_BREAK_JP.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.8"/>
+	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AN94_BUILDOVER_JP.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.8"/>
+	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AN94_DEFENSE_JP.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.8"/>
+	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AN94_DIALOGUE2_JP.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.8"/>
+	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AN94_FEED_JP.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.8"/>
+	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AN94_FIX_JP.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.8"/>
+	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AN94_FORMATION_JP.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.8"/>
+	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AN94_GOATTACK_JP.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.8"/>
+	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AN94_OPERATIONBEGIN_JP.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.8"/>
+	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AN94_OPERATIONOVER_JP.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.8"/>
+	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AN94_PHRASE_JP.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.8"/>
+	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AN94_RETREAT_JP.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.8"/>
+	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AN94_TIP_JP.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.8"/>
+	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AN94_WIN_JP.wav" volume="1.0" pitch_variety="0"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_ar_an94_mod3_from_melondove.xml"/>
@@ -21215,15 +21215,15 @@
 	<inventory buy_price="270.0" sell_price="270.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<sound key="fire" fileref="an94mod3skill_fire_FromCOD16.wav" pitch_variety="0.02" volume="1"/>
-	<sound key="magazine_out" fileref="an94_mgz_out_FromCOD16.wav" volume="0.8"/>
-	<sound key="magazine_in" fileref="an94_mgz_in_FromCOD16.wav" volume="0.8"/>
-	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.8"/>
+	<sound key="magazine_out" fileref="an94_mgz_out_FromCOD16.wav" volume="0.6"/>
+	<sound key="magazine_in" fileref="an94_mgz_in_FromCOD16.wav" volume="0.6"/>
+	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AN94_ATTACK_JP.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.8"/>
+	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AN94_BLACKACTION_JP.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.8"/>
+	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AN94_LOADING_JP.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.8"/>
+	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AN94_MEET_JP.wav" volume="1.0" pitch_variety="0"/>
 	<sound key="cycle" fileref="AN94_SKILL1_JP.wav" volume="1.0" pitch_variety="0"/>
 	<sound key="cycle" fileref="AN94_SKILL2_JP.wav" volume="1.0" pitch_variety="0"/>
@@ -21284,10 +21284,10 @@
 	<next_in_chain key="gkw_m14mod3_skill.weapon" share_ammo="1"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.8"/>
 	<effect class="muzzle" ref="ejection_76251"/>
-	<sound key="fire" fileref="m14_fire_FromDAYSGONE.wav" pitch_variety="0.01" volume="1.1"/>
-	<sound key="magazine_out" fileref="m14_mgz_out_FromCOD8.wav" volume="0.5"/>
-	<sound key="magazine_in" fileref="m14_mgz_in_FromCOD8.wav" volume="0.5"/>
-	<sound key="cycle" fileref="m14_cycle_FromCOD8.wav" volume="0.5"/>
+	<sound key="fire" fileref="m14_fire_FromDAYSGONE.wav" pitch_variety="0.01" volume="1.3"/>
+	<sound key="magazine_out" fileref="m14_mgz_out_FromCOD15.wav" volume="0.6"/>
+	<sound key="magazine_in" fileref="m14_mgz_in_FromCOD15.wav" volume="0.6"/>
+	<sound key="cycle" fileref="m14_cycle_FromCOD15.wav" volume="0.6"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_rf_m14mod3.xml"/>
 	<hud_icon filename="gkw_m14mod3.png"/>
@@ -21341,9 +21341,9 @@
 	<next_in_chain key="gkw_m14mod3.weapon" share_ammo="1"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 2.1"/>
 	<sound key="fire" fileref="m14skill_fire_FromBFH.wav" pitch_variety="0.01" volume="1.1"/>
-	<sound key="magazine_out" fileref="m14_mgz_out_FromCOD8.wav" volume="0.5"/>
-	<sound key="magazine_in" fileref="m14_mgz_in_FromCOD8.wav" volume="0.5"/>
-	<sound key="cycle" fileref="m14_cycle_FromCOD8.wav" volume="0.5"/>
+	<sound key="magazine_out" fileref="m14_mgz_out_FromCOD15.wav" volume="0.6"/>
+	<sound key="magazine_in" fileref="m14_mgz_in_FromCOD15.wav" volume="0.6"/>
+	<sound key="cycle" fileref="m14_cycle_FromCOD15.wav" volume="0.6"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_rf_m14mod3.xml"/>
 	<hud_icon filename="gkw_m14mod3_skill.png"/>
@@ -21677,7 +21677,7 @@
 	<animation key="reload" animation_key="reloading, Machine gun 0.6"/>
 	<inventory buy_price="120.0" sell_price="120.0"/>
 	<next_in_chain key="gkw_m1918mod3_skill.weapon" share_ammo="1"/>
-	<sound key="fire" fileref="m1918_fire_FromWF.wav" pitch_variety="0.05" volume="1.4"/>
+	<sound key="fire" fileref="m1918_fire_FromWF.wav" pitch_variety="0.05" volume="1.2"/>
 	<sound key="magazine_out" fileref="m1918_mgz_out_FromRS2V.wav" volume="0.6"/>
 	<sound key="magazine_in" fileref="m1918_mgz_in_FromRS2V.wav" volume="0.6"/>
 	<sound key="cycle" fileref="m1918_cycle_FromRS2V.wav" volume="0.6"/>
@@ -24759,7 +24759,7 @@
 	<hud_icon filename="gkw_m99_404.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="ntw.projectile">
-	<result class="blast" damage="10.0" radius="3.5" decal="1" push="0.4" character_state="death" faction_compare="not_equal"/>
+	<result class="blast" damage="10.0" radius="3.5" decal="1" push="0.6" character_state="death" faction_compare="not_equal"/>
 	</projectile>
 	<stance state_key="running" accuracy="1.0"/>
 	<stance state_key="walking" accuracy="1.0"/>
@@ -24804,7 +24804,7 @@
 	<hud_icon filename="gkw_m99_1701.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="ntw.projectile">
-	<result class="blast" damage="10.0" radius="3.5" decal="1" push="0.4" character_state="death" faction_compare="not_equal"/>
+	<result class="blast" damage="10.0" radius="3.5" decal="1" push="0.6" character_state="death" faction_compare="not_equal"/>
 	</projectile>
 	<stance state_key="running" accuracy="1.0"/>
 	<stance state_key="walking" accuracy="1.0"/>
@@ -24849,7 +24849,7 @@
 	<hud_icon filename="gkw_m99_3304.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="ntw.projectile">
-	<result class="blast" damage="10.0" radius="3.5" decal="1" push="0.4" character_state="death" faction_compare="not_equal"/>
+	<result class="blast" damage="10.0" radius="3.5" decal="1" push="0.6" character_state="death" faction_compare="not_equal"/>
 	</projectile>
 	<stance state_key="running" accuracy="1.0"/>
 	<stance state_key="walking" accuracy="1.0"/>
@@ -25998,7 +25998,7 @@
 	<animation state_key="hold_casual" animation_key="dancing, kazachok"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
 	<inventory buy_price="8.0" sell_price="8.0"/>
-	<sound key="fire" fileref="an94_fire_FromCOD15.wav" pitch_variety="0.02" volume="1.5"/>
+	<sound key="fire" fileref="an94_fire_FromCF.wav" pitch_variety="0.02" volume="1.2"/>
 	<sound key="magazine_out" fileref="an94_mgz_out_FromCOD16.wav" volume="0.6"/>
 	<sound key="magazine_in" fileref="an94_mgz_in_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.6"/>
@@ -26056,10 +26056,10 @@
 	<animation state_key="hold_casual" animation_key="dancing, kazachok"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.5"/>
 	<inventory buy_price="8.0" sell_price="8.0"/>
-	<sound key="fire" fileref="an94skill_fire_FromCOD16.wav" pitch_variety="0.02" volume="1.1"/>
-	<sound key="magazine_out" fileref="an94_mgz_out_FromCOD16.wav" volume="0.8"/>
-	<sound key="magazine_in" fileref="an94_mgz_in_FromCOD16.wav" volume="0.8"/>
-	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.8"/>
+	<sound key="fire" fileref="an94skill_fire_FromCOD16.wav" pitch_variety="0.02" volume="1"/>
+	<sound key="magazine_out" fileref="an94_mgz_out_FromCOD16.wav" volume="0.6"/>
+	<sound key="magazine_in" fileref="an94_mgz_in_FromCOD16.wav" volume="0.6"/>
+	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_ar_an94.xml"/>
 	<hud_icon filename="gkw_an94_skill.png"/>
@@ -26115,7 +26115,7 @@
 	<animation state_key="hold_casual" animation_key="dancing, kazachok"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
 	<inventory buy_price="8.0" sell_price="8.0"/>
-	<sound key="fire" fileref="an94_fire_FromCOD15.wav" pitch_variety="0.02" volume="1.5"/>
+	<sound key="fire" fileref="an94_fire_FromCF.wav" pitch_variety="0.02" volume="1.2"/>
 	<sound key="magazine_out" fileref="an94_mgz_out_FromCOD16.wav" volume="0.6"/>
 	<sound key="magazine_in" fileref="an94_mgz_in_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.6"/>
@@ -26173,10 +26173,10 @@
 	<animation state_key="hold_casual" animation_key="dancing, kazachok"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.5"/>
 	<inventory buy_price="8.0" sell_price="8.0"/>
-	<sound key="fire" fileref="an94skill_fire_FromCOD16.wav" pitch_variety="0.02" volume="1.1"/>
-	<sound key="magazine_out" fileref="an94_mgz_out_FromCOD16.wav" volume="0.8"/>
-	<sound key="magazine_in" fileref="an94_mgz_in_FromCOD16.wav" volume="0.8"/>
-	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.8"/>
+	<sound key="fire" fileref="an94skill_fire_FromCOD16.wav" pitch_variety="0.02" volume="1"/>
+	<sound key="magazine_out" fileref="an94_mgz_out_FromCOD16.wav" volume="0.6"/>
+	<sound key="magazine_in" fileref="an94_mgz_in_FromCOD16.wav" volume="0.6"/>
+	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_ar_an94.xml"/>
 	<hud_icon filename="gkw_an94_skill.png"/>
@@ -26233,26 +26233,26 @@
 	<animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
 	<inventory buy_price="8.0" sell_price="8.0"/>
 	<commonness value="0" in_stock="0"/>
-	<sound key="fire" fileref="ak12_fire_FromWF.wav" pitch_variety="0.02" volume="1.2"/>
-	<sound key="magazine_out" fileref="ak12_mgz_out_FromKF2.wav" volume="0.7"/>
-	<sound key="magazine_in" fileref="ak12_mgz_in_FromKF2.wav" volume="0.7"/>
-	<sound key="cycle" fileref="ak12_cycle_FromKF2.wav" volume="0.7"/>
+	<sound key="fire" fileref="ak12_fire_FromBFH.wav" pitch_variety="0.02" volume="1.2"/>
+	<sound key="magazine_out" fileref="ak12_mgz_out_FromCOD16.wav" volume="0.6"/>
+	<sound key="magazine_in" fileref="ak12_mgz_in_FromCOD16.wav" volume="0.6"/>
+	<sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AK12_LOADING_JP.wav" volume="0.9" pitch_variety="0"/>
-	<sound key="cycle" fileref="ak12_cycle_FromKF2.wav" volume="0.7"/>
+	<sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AK12_TIP_JP.wav" volume="0.9" pitch_variety="0"/>
-	<sound key="cycle" fileref="ak12_cycle_FromKF2.wav" volume="0.7"/>
+	<sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AK12_FEED_JP.wav" volume="0.9" pitch_variety="0"/>
-	<sound key="cycle" fileref="ak12_cycle_FromKF2.wav" volume="0.7"/>
+	<sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AK12_FIX_JP.wav" volume="0.9" pitch_variety="0"/>
-	<sound key="cycle" fileref="ak12_cycle_FromKF2.wav" volume="0.7"/>
+	<sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AK12_OPERATIONBEGIN_JP.wav" volume="0.9" pitch_variety="0"/>
-	<sound key="cycle" fileref="ak12_cycle_FromKF2.wav" volume="0.7"/>
+	<sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AK12_BLACKACTION_JP.wav" volume="0.9" pitch_variety="0"/>
-	<sound key="cycle" fileref="ak12_cycle_FromKF2.wav" volume="0.7"/>
+	<sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AK12_GOATTACK_JP.wav" volume="0.9" pitch_variety="0"/>
-	<sound key="cycle" fileref="ak12_cycle_FromKF2.wav" volume="0.7"/>
+	<sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AK12_MEET_JP.wav" volume="0.9" pitch_variety="0"/>
-	<sound key="cycle" fileref="ak12_cycle_FromKF2.wav" volume="0.7"/>
+	<sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_ar_ak12_2402.xml"/>
 	<hud_icon filename="gkw_ak12_2402.png"/>
@@ -26306,20 +26306,20 @@
 	<animation state_key="hold_casual" animation_key="dancing, kazachok"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
 	<inventory buy_price="8.0" sell_price="8.0"/>
-	<sound key="fire" fileref="ak12_fire_FromCOD10.wav" pitch_variety="0.02" volume="1"/>
-	<sound key="magazine_out" fileref="ak12_mgz_out_FromKF2.wav" volume="0.8"/>
-	<sound key="magazine_in" fileref="ak12_mgz_in_FromKF2.wav" volume="0.8"/>
-	<sound key="cycle" fileref="ak12_cycle_FromKF2.wav" volume="0.7"/>
+	<sound key="fire" fileref="ak12_fire_FromCOD16.wav" pitch_variety="0.02" volume="1"/>
+	<sound key="magazine_out" fileref="ak12_mgz_out_FromCOD16.wav" volume="0.6"/>
+	<sound key="magazine_in" fileref="ak12_mgz_in_FromCOD16.wav" volume="0.6"/>
+	<sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AK12_WIN_JP.wav" volume="0.9" pitch_variety="0"/>
-	<sound key="cycle" fileref="ak12_cycle_FromKF2.wav" volume="0.7"/>
+	<sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AK12_GOATTACK_JP.wav" volume="0.9" pitch_variety="0"/>
-	<sound key="cycle" fileref="ak12_cycle_FromKF2.wav" volume="0.7"/>
+	<sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AK12_SKILL1_JP.wav" volume="0.9" pitch_variety="0"/>
-	<sound key="cycle" fileref="ak12_cycle_FromKF2.wav" volume="0.7"/>
+	<sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AK12_SKILL2_JP.wav" volume="0.9" pitch_variety="0"/>
-	<sound key="cycle" fileref="ak12_cycle_FromKF2.wav" volume="0.7"/>
+	<sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AK12_SKILL3_JP.wav" volume="0.9" pitch_variety="0"/>
-	<sound key="cycle" fileref="ak12_cycle_FromKF2.wav" volume="0.7"/>
+	<sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_ar_ak12_2402.xml"/>
 	<hud_icon filename="gkw_ak12_2402.png"/>
@@ -26374,26 +26374,26 @@
 	<animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
 	<inventory buy_price="8.0" sell_price="8.0"/>
 	<commonness value="0" in_stock="0"/>
-	<sound key="fire" fileref="ak12_fire_FromWF.wav" pitch_variety="0.02" volume="1.2"/>
-	<sound key="magazine_out" fileref="ak12_mgz_out_FromKF2.wav" volume="0.7"/>
-	<sound key="magazine_in" fileref="ak12_mgz_in_FromKF2.wav" volume="0.7"/>
-	<sound key="cycle" fileref="ak12_cycle_FromKF2.wav" volume="0.7"/>
+	<sound key="fire" fileref="ak12_fire_FromBFH.wav" pitch_variety="0.02" volume="1.2"/>
+	<sound key="magazine_out" fileref="ak12_mgz_out_FromCOD16.wav" volume="0.6"/>
+	<sound key="magazine_in" fileref="ak12_mgz_in_FromCOD16.wav" volume="0.6"/>
+	<sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AK12_LOADING_JP.wav" volume="0.9" pitch_variety="0"/>
-	<sound key="cycle" fileref="ak12_cycle_FromKF2.wav" volume="0.7"/>
+	<sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AK12_TIP_JP.wav" volume="0.9" pitch_variety="0"/>
-	<sound key="cycle" fileref="ak12_cycle_FromKF2.wav" volume="0.7"/>
+	<sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AK12_FEED_JP.wav" volume="0.9" pitch_variety="0"/>
-	<sound key="cycle" fileref="ak12_cycle_FromKF2.wav" volume="0.7"/>
+	<sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AK12_FIX_JP.wav" volume="0.9" pitch_variety="0"/>
-	<sound key="cycle" fileref="ak12_cycle_FromKF2.wav" volume="0.7"/>
+	<sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AK12_OPERATIONBEGIN_JP.wav" volume="0.9" pitch_variety="0"/>
-	<sound key="cycle" fileref="ak12_cycle_FromKF2.wav" volume="0.7"/>
+	<sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AK12_BLACKACTION_JP.wav" volume="0.9" pitch_variety="0"/>
-	<sound key="cycle" fileref="ak12_cycle_FromKF2.wav" volume="0.7"/>
+	<sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AK12_GOATTACK_JP.wav" volume="0.9" pitch_variety="0"/>
-	<sound key="cycle" fileref="ak12_cycle_FromKF2.wav" volume="0.7"/>
+	<sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AK12_MEET_JP.wav" volume="0.9" pitch_variety="0"/>
-	<sound key="cycle" fileref="ak12_cycle_FromKF2.wav" volume="0.7"/>
+	<sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_ar_ak12_2402.xml"/>
 	<hud_icon filename="gkw_ak12_blm.png"/>
@@ -26447,20 +26447,20 @@
 	<animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
 	<inventory buy_price="8.0" sell_price="8.0"/>
 	<commonness value="0" in_stock="0"/>
-	<sound key="fire" fileref="ak12_fire_FromCOD10.wav" pitch_variety="0.02" volume="1"/>
-	<sound key="magazine_out" fileref="ak12_mgz_out_FromKF2.wav" volume="0.8"/>
-	<sound key="magazine_in" fileref="ak12_mgz_in_FromKF2.wav" volume="0.8"/>
-	<sound key="cycle" fileref="ak12_cycle_FromKF2.wav" volume="0.7"/>
+	<sound key="fire" fileref="ak12_fire_FromCOD16.wav" pitch_variety="0.02" volume="1"/>
+	<sound key="magazine_out" fileref="ak12_mgz_out_FromCOD16.wav" volume="0.6"/>
+	<sound key="magazine_in" fileref="ak12_mgz_in_FromCOD16.wav" volume="0.6"/>
+	<sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AK12_WIN_JP.wav" volume="0.9" pitch_variety="0"/>
-	<sound key="cycle" fileref="ak12_cycle_FromKF2.wav" volume="0.7"/>
+	<sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AK12_GOATTACK_JP.wav" volume="0.9" pitch_variety="0"/>
-	<sound key="cycle" fileref="ak12_cycle_FromKF2.wav" volume="0.7"/>
+	<sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AK12_SKILL1_JP.wav" volume="0.9" pitch_variety="0"/>
-	<sound key="cycle" fileref="ak12_cycle_FromKF2.wav" volume="0.7"/>
+	<sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AK12_SKILL2_JP.wav" volume="0.9" pitch_variety="0"/>
-	<sound key="cycle" fileref="ak12_cycle_FromKF2.wav" volume="0.7"/>
+	<sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AK12_SKILL3_JP.wav" volume="0.9" pitch_variety="0"/>
-	<sound key="cycle" fileref="ak12_cycle_FromKF2.wav" volume="0.7"/>
+	<sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_ar_ak12_2402.xml"/>
 	<hud_icon filename="gkw_ak12_blm.png"/>
@@ -26526,10 +26526,10 @@
 	<animation state_key="stabbing" animation_key="pistol whip 3"/>
 	<next_in_chain key="gkw_rpk16_blm_skill.weapon" share_ammo="1"/>
 	<inventory encumbrance="30.0" buy_price="16.0" sell_price="16.0"/>
-	<sound key="fire" fileref="rpk16_Fire_FromEFT.wav" pitch_variety="0.02" volume="1"/>
-	<sound key="magazine_out" fileref="rpk16_mgz_out_FromEFT.wav" volume="1"/>
-	<sound key="magazine_in" fileref="rpk16_mgz_in_FromEFT.wav" volume="1"/>
-	<sound key="cycle" fileref="rpk16_cycle_FromEFT.wav" volume="1"/>
+	<sound key="fire" fileref="rpk16_Fire_FromEFT.wav" pitch_variety="0.02" volume="1.2"/>
+	<sound key="magazine_out" fileref="rpk16_mgz_out_FromCOD16.wav" volume="0.6"/>
+	<sound key="magazine_in" fileref="rpk16_mgz_in_FromCOD16.wav" volume="0.6"/>
+	<sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_mg_rpk16.xml"/>
 	<hud_icon filename="gkw_rpk16_blm.png"/>
@@ -26573,10 +26573,10 @@
 	<animation state_key="stabbing" animation_key="pistol whip 3"/>
 	<next_in_chain key="gkw_rpk16_blm.weapon" share_ammo="1"/>
 	<inventory encumbrance="30.0" buy_price="16.0" sell_price="16.0"/>
-	<sound key="fire" fileref="rpk16_Fire_FromEFT.wav" pitch_variety="0.02" volume="1"/>
-	<sound key="magazine_out" fileref="rpk16_mgz_out_FromEFT.wav" volume="1"/>
-	<sound key="magazine_in" fileref="rpk16_mgz_in_FromEFT.wav" volume="1"/>
-	<sound key="cycle" fileref="rpk16_cycle_FromEFT.wav" volume="1"/>
+	<sound key="fire" fileref="rpk16_Fire_FromEFT.wav" pitch_variety="0.02" volume="1.2"/>
+	<sound key="magazine_out" fileref="rpk16_mgz_out_FromCOD16.wav" volume="0.6"/>
+	<sound key="magazine_in" fileref="rpk16_mgz_in_FromCOD16.wav" volume="0.6"/>
+	<sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_mg_rpk16.xml"/>
 	<hud_icon filename="gkw_rpk16_blm.png"/>
@@ -28793,7 +28793,7 @@
 	<hud_icon filename="gkw_hs50_6805.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="ntw.projectile">
-	<result class="blast" damage="8" radius="4" decal="1" push="0.2" character_state="death" faction_compare="not_equal"/>
+	<result class="blast" damage="8" radius="4" decal="1" push="0.4" character_state="death" faction_compare="not_equal"/>
 	</projectile>
 	<stance state_key="running" accuracy="1"/>
 	<stance state_key="walking" accuracy="1"/>
@@ -28902,7 +28902,7 @@
 	<inventory buy_price="3.0" sell_price="3.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<next_in_chain key="gkw_m1918_102_skill.weapon" share_ammo="1"/>
-	<sound key="fire" fileref="m1918_fire_FromWF.wav" pitch_variety="0.05" volume="2.1"/>
+	<sound key="fire" fileref="m1918_fire_FromWF.wav" pitch_variety="0.05" volume="1.2"/>
 	<sound key="magazine_out" fileref="m1918_mgz_out_FromRS2V.wav" volume="0.6"/>
 	<sound key="magazine_in" fileref="m1918_mgz_in_FromRS2V.wav" volume="0.6"/>
 	<sound key="cycle" fileref="m1918_cycle_FromRS2V.wav" volume="0.6"/>
@@ -29013,7 +29013,7 @@
 	<inventory buy_price="3.0" sell_price="3.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<next_in_chain key="gkw_m1918_806_skill.weapon" share_ammo="1"/>
-	<sound key="fire" fileref="m1918_fire_FromWF.wav" pitch_variety="0.05" volume="2.1"/>
+	<sound key="fire" fileref="m1918_fire_FromWF.wav" pitch_variety="0.05" volume="1.2"/>
 	<sound key="magazine_out" fileref="m1918_mgz_out_FromRS2V.wav" volume="0.6"/>
 	<sound key="magazine_in" fileref="m1918_mgz_in_FromRS2V.wav" volume="0.6"/>
 	<sound key="cycle" fileref="m1918_cycle_FromRS2V.wav" volume="0.6"/>
@@ -29124,7 +29124,7 @@
 	<inventory buy_price="3.0" sell_price="3.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<next_in_chain key="gkw_m1918_1606_skill.weapon" share_ammo="1"/>
-	<sound key="fire" fileref="m1918_fire_FromWF.wav" pitch_variety="0.05" volume="2.1"/>
+	<sound key="fire" fileref="m1918_fire_FromWF.wav" pitch_variety="0.05" volume="1.2"/>
 	<sound key="magazine_out" fileref="m1918_mgz_out_FromRS2V.wav" volume="0.6"/>
 	<sound key="magazine_in" fileref="m1918_mgz_in_FromRS2V.wav" volume="0.6"/>
 	<sound key="cycle" fileref="m1918_cycle_FromRS2V.wav" volume="0.6"/>
@@ -29449,7 +29449,7 @@
 	<commonness value="0" in_stock="0"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="ksvk_mod3.projectile">
-	<result class="blast" damage="10.0" radius="3.5" decal="1" push="0.5" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+	<result class="blast" damage="10.0" radius="3.5" decal="1" push="0.6" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	</projectile>
 	<stance state_key="running" accuracy="1.0"/>
 	<stance state_key="walking" accuracy="1.0"/>
@@ -29556,7 +29556,7 @@
 	<commonness value="0" in_stock="0"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="ksvk_mod3.projectile">
-	<result class="blast" damage="10.0" radius="3.5" decal="1" push="0.5" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+	<result class="blast" damage="10.0" radius="3.5" decal="1" push="0.6" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	</projectile>
 	<stance state_key="running" accuracy="1.0"/>
 	<stance state_key="walking" accuracy="1.0"/>
@@ -29657,7 +29657,7 @@
 	<commonness value="0" in_stock="0"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="ksvk_mod3.projectile">
-	<result class="blast" damage="10.0" radius="3.5" decal="1" push="0.5" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+	<result class="blast" damage="10.0" radius="3.5" decal="1" push="0.6" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	</projectile>
 	<stance state_key="running" accuracy="1.0"/>
 	<stance state_key="walking" accuracy="1.0"/>
@@ -29764,7 +29764,7 @@
 	<commonness value="0" in_stock="0"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="ksvk_mod3.projectile">
-	<result class="blast" damage="10.0" radius="3.5" decal="1" push="0.5" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+	<result class="blast" damage="10.0" radius="3.5" decal="1" push="0.6" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	</projectile>
 	<stance state_key="running" accuracy="1.0"/>
 	<stance state_key="walking" accuracy="1.0"/>
@@ -31231,7 +31231,7 @@
 	<commonness value="0" in_stock="0"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="ntw.projectile" can_be_detected_by_footmen="0">
-	<result class="blast" damage="8.0" radius="4" decal="1" push="0.2" character_state="death" faction_compare="not_equal"/>
+	<result class="blast" damage="8.0" radius="4" decal="1" push="0.4" character_state="death" faction_compare="not_equal"/>
 	</projectile>
 	<stance state_key="running" accuracy="1.1"/>
 	<stance state_key="walking" accuracy="1.1"/>
@@ -31290,7 +31290,7 @@
 	<commonness value="0" in_stock="0"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="ntw.projectile" can_be_detected_by_footmen="0">
-	<result class="blast" damage="8.0" radius="4" decal="1" push="0.2" character_state="death" faction_compare="not_equal"/>
+	<result class="blast" damage="8.0" radius="4" decal="1" push="0.4" character_state="death" faction_compare="not_equal"/>
 	</projectile>
 	<stance state_key="running" accuracy="1.1"/>
 	<stance state_key="walking" accuracy="1.1"/>
@@ -31369,7 +31369,7 @@
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="88type_laser.projectile">
 	<trail probability="1.0" key="laser_hyz"/>
-	<result class="blast" damage="6.5" radius="4.5" decal="1" push="0.2" character_state="death" faction_compare="not_equal"/>
+	<result class="blast" damage="6.5" radius="4.5" decal="1" push="0.8" character_state="death" faction_compare="not_equal"/>
 	</projectile>
 	<stance state_key="running" accuracy="1"/>
 	<stance state_key="walking" accuracy="1"/>
@@ -31417,7 +31417,7 @@
 	<animation state_key="next_in_chain_in" animation_key="change weapon to melee, gunda"/>
 	<model filename="gkw_88type_gudan_melee.xml"/>
 	<projectile file="teal.projectile">
-	<result class="blast" radius="6" damage="5" decal="0" push="0.2" character_state="death" faction_compare="not_equal" make_vehicle_hit_sound="0"/>
+	<result class="blast" radius="6" damage="5" decal="0" push="0.8" character_state="death" faction_compare="not_equal" make_vehicle_hit_sound="0"/>
 	</projectile>
 	<stance state_key="running" accuracy="1"/>
 	<stance state_key="walking" accuracy="1"/>
@@ -31460,10 +31460,10 @@
 	<animation state_key="stabbing" animation_key="pistol whip"/>
 	<animation state_key="stabbing" animation_key="pistol whip 2"/>
 	<animation state_key="stabbing" animation_key="pistol whip 3"/>
-	<sound key="fire" fileref="p38_fire_FromHELLLETLOOSE.wav" pitch_variety="0.05" volume="1.2"/>
-	<sound key="magazine_out" fileref="p38_mgz_out_FromRO2.wav" volume="0.4"/>
-	<sound key="magazine_in" fileref="p38_mgz_in_FromRO2.wav" volume="0.4"/>
-	<sound key="cycle" fileref="p38_cycle_FromRO2.wav" volume="0.4"/>
+	<sound key="fire" fileref="p38_fire_FromHELLLETLOOSE.wav" pitch_variety="0.05" volume="1.6"/>
+	<sound key="magazine_out" fileref="p38_mgz_out_FromRO2.wav" volume="0.7"/>
+	<sound key="magazine_in" fileref="p38_mgz_in_FromRO2.wav" volume="0.7"/>
+	<sound key="cycle" fileref="p38_cycle_FromRO2.wav" volume="0.7"/>
 	<model filename=""/>
 	<hud_icon filename="gkw_p38_2401.png"/>
 	<effect class="muzzle" ref="MuzzleDual1"/>
@@ -31497,10 +31497,10 @@
 	<animation state_key="hold_casual" animation_key="dancing, kazachok"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 2.1"/>
 	<inventory buy_price="74.0" sell_price="74.0"/>
-	<sound key="fire" fileref="ak74m_fire_FromBF3.wav" pitch_variety="0.05" volume="1.2"/>
-	<sound key="magazine_out" fileref="ak74m_mgz_out_FromBF3.wav" volume="0.8"/>
-	<sound key="magazine_in" fileref="ak74m_mgz_in_FromBF3.wav" volume="0.8"/>
-	<sound key="cycle" fileref="ak74m_cycle_FromBF3.wav" volume="0.8"/>
+	<sound key="fire" fileref="ak74m_fire_FromBF3.wav" pitch_variety="0.05" volume="1.3"/>
+	<sound key="magazine_out" fileref="ak74_mgz_out_FromCOD16.wav" volume="0.6"/>
+	<sound key="magazine_in" fileref="ak74_mgz_in_FromCOD16.wav" volume="0.6"/>
+	<sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_ar_ak74m_7305.xml"/>
 	<hud_icon filename="gkw_ak74m_7305.png"/>
@@ -34552,36 +34552,36 @@
 	<inventory buy_price="270.0" sell_price="270.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
-	<sound key="fire" fileref="an94mod3_fire_FromCOD16.wav" pitch_variety="0.02" volume="1.1"/>
-	<sound key="magazine_out" fileref="an94_mgz_out_FromCOD16.wav" volume="0.8"/>
-	<sound key="magazine_in" fileref="an94_mgz_in_FromCOD16.wav" volume="0.8"/>
-	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.8"/>
+	<sound key="fire" fileref="an94mod3_fire_FromCOD16.wav" pitch_variety="0.02" volume="1"/>
+	<sound key="magazine_out" fileref="an94_mgz_out_FromCOD16.wav" volume="0.6"/>
+	<sound key="magazine_in" fileref="an94_mgz_in_FromCOD16.wav" volume="0.6"/>
+	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AN94_BREAK_JP.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.8"/>
+	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AN94_BUILDOVER_JP.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.8"/>
+	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AN94_DEFENSE_JP.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.8"/>
+	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AN94_DIALOGUE2_JP.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.8"/>
+	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AN94_FEED_JP.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.8"/>
+	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AN94_FIX_JP.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.8"/>
+	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AN94_FORMATION_JP.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.8"/>
+	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AN94_GOATTACK_JP.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.8"/>
+	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AN94_OPERATIONBEGIN_JP.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.8"/>
+	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AN94_OPERATIONOVER_JP.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.8"/>
+	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AN94_PHRASE_JP.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.8"/>
+	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AN94_RETREAT_JP.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.8"/>
+	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AN94_TIP_JP.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.8"/>
+	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AN94_WIN_JP.wav" volume="1.0" pitch_variety="0"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_ar_an94.xml"/>
@@ -34639,15 +34639,15 @@
 	<inventory buy_price="270.0" sell_price="270.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<sound key="fire" fileref="an94mod3skill_fire_FromCOD16.wav" pitch_variety="0.02" volume="1"/>
-	<sound key="magazine_out" fileref="an94_mgz_out_FromCOD16.wav" volume="0.8"/>
-	<sound key="magazine_in" fileref="an94_mgz_in_FromCOD16.wav" volume="0.8"/>
-	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.8"/>
+	<sound key="magazine_out" fileref="an94_mgz_out_FromCOD16.wav" volume="0.6"/>
+	<sound key="magazine_in" fileref="an94_mgz_in_FromCOD16.wav" volume="0.6"/>
+	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AN94_ATTACK_JP.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.8"/>
+	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AN94_BLACKACTION_JP.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.8"/>
+	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AN94_LOADING_JP.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.8"/>
+	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AN94_MEET_JP.wav" volume="1.0" pitch_variety="0"/>
 	<sound key="cycle" fileref="AN94_SKILL1_JP.wav" volume="1.0" pitch_variety="0"/>
 	<sound key="cycle" fileref="AN94_SKILL2_JP.wav" volume="1.0" pitch_variety="0"/>
@@ -34708,36 +34708,36 @@
 	<inventory buy_price="270.0" sell_price="270.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
-	<sound key="fire" fileref="an94mod3_fire_FromCOD16.wav" pitch_variety="0.02" volume="1.1"/>
-	<sound key="magazine_out" fileref="an94_mgz_out_FromCOD16.wav" volume="0.8"/>
-	<sound key="magazine_in" fileref="an94_mgz_in_FromCOD16.wav" volume="0.8"/>
-	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.8"/>
+	<sound key="fire" fileref="an94mod3_fire_FromCOD16.wav" pitch_variety="0.02" volume="1"/>
+	<sound key="magazine_out" fileref="an94_mgz_out_FromCOD16.wav" volume="0.6"/>
+	<sound key="magazine_in" fileref="an94_mgz_in_FromCOD16.wav" volume="0.6"/>
+	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AN94_BREAK_JP.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.8"/>
+	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AN94_BUILDOVER_JP.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.8"/>
+	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AN94_DEFENSE_JP.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.8"/>
+	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AN94_DIALOGUE2_JP.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.8"/>
+	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AN94_FEED_JP.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.8"/>
+	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AN94_FIX_JP.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.8"/>
+	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AN94_FORMATION_JP.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.8"/>
+	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AN94_GOATTACK_JP.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.8"/>
+	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AN94_OPERATIONBEGIN_JP.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.8"/>
+	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AN94_OPERATIONOVER_JP.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.8"/>
+	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AN94_PHRASE_JP.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.8"/>
+	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AN94_RETREAT_JP.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.8"/>
+	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AN94_TIP_JP.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.8"/>
+	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AN94_WIN_JP.wav" volume="1.0" pitch_variety="0"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_ar_an94.xml"/>
@@ -34795,15 +34795,15 @@
 	<inventory buy_price="270.0" sell_price="270.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<sound key="fire" fileref="an94mod3skill_fire_FromCOD16.wav" pitch_variety="0.02" volume="1"/>
-	<sound key="magazine_out" fileref="an94_mgz_out_FromCOD16.wav" volume="0.8"/>
-	<sound key="magazine_in" fileref="an94_mgz_in_FromCOD16.wav" volume="0.8"/>
-	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.8"/>
+	<sound key="magazine_out" fileref="an94_mgz_out_FromCOD16.wav" volume="0.6"/>
+	<sound key="magazine_in" fileref="an94_mgz_in_FromCOD16.wav" volume="0.6"/>
+	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AN94_ATTACK_JP.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.8"/>
+	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AN94_BLACKACTION_JP.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.8"/>
+	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AN94_LOADING_JP.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.8"/>
+	<sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AN94_MEET_JP.wav" volume="1.0" pitch_variety="0"/>
 	<sound key="cycle" fileref="AN94_SKILL1_JP.wav" volume="1.0" pitch_variety="0"/>
 	<sound key="cycle" fileref="AN94_SKILL2_JP.wav" volume="1.0" pitch_variety="0"/>
@@ -35234,7 +35234,7 @@
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<next_in_chain key="gkw_m1918mod3_102_skill.weapon" share_ammo="1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<sound key="fire" fileref="m1918_fire_FromWF.wav" pitch_variety="0.05" volume="2.1"/>
+	<sound key="fire" fileref="m1918_fire_FromWF.wav" pitch_variety="0.05" volume="1.2"/>
 	<sound key="magazine_out" fileref="m1918_mgz_out_FromRS2V.wav" volume="0.6"/>
 	<sound key="magazine_in" fileref="m1918_mgz_in_FromRS2V.wav" volume="0.6"/>
 	<sound key="cycle" fileref="m1918_cycle_FromRS2V.wav" volume="0.6"/>
@@ -35347,7 +35347,7 @@
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<next_in_chain key="gkw_m1918mod3_806_skill.weapon" share_ammo="1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<sound key="fire" fileref="m1918_fire_FromWF.wav" pitch_variety="0.05" volume="2.1"/>
+	<sound key="fire" fileref="m1918_fire_FromWF.wav" pitch_variety="0.05" volume="1.2"/>
 	<sound key="magazine_out" fileref="m1918_mgz_out_FromRS2V.wav" volume="0.6"/>
 	<sound key="magazine_in" fileref="m1918_mgz_in_FromRS2V.wav" volume="0.6"/>
 	<sound key="cycle" fileref="m1918_cycle_FromRS2V.wav" volume="0.6"/>
@@ -35460,7 +35460,7 @@
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<next_in_chain key="gkw_m1918mod3_1606_skill.weapon" share_ammo="1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<sound key="fire" fileref="m1918_fire_FromWF.wav" pitch_variety="0.05" volume="2.1"/>
+	<sound key="fire" fileref="m1918_fire_FromWF.wav" pitch_variety="0.05" volume="1.2"/>
 	<sound key="magazine_out" fileref="m1918_mgz_out_FromRS2V.wav" volume="0.6"/>
 	<sound key="magazine_in" fileref="m1918_mgz_in_FromRS2V.wav" volume="0.6"/>
 	<sound key="cycle" fileref="m1918_cycle_FromRS2V.wav" volume="0.6"/>
@@ -38616,133 +38616,6 @@
 	<stance state_key="crouching" accuracy="0.85"/>
 	<stance state_key="prone" accuracy="0.94"/>
 	<modifier class="speed" value="-0.6"/>
-	<tag name="elite"/>
-	<commonness value="0.0000001" in_stock="0" can_respawn_with="1"/>
-	<inventory encumbrance="17.0" buy_price="328.0" sell_price="328.0"/>
-	<capacity value="0" source="rank" source_value="0.0"/>
-	<capacity value="1" source="rank" source_value="39.633"/>
-</weapon>
-
-<weapon key="ff_dreamer.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification accuracy_factor="1.5" barrel_offset="0.5" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" class="4" sight_range_modifier="2" slot="0" burst_shots="1" magazine_size="20" name="GK-Dreamer" projectile_speed="230" retrigger_time="-1" last_burst_retrigger_time="0.214" suppressed="0" sustained_fire_diminish_rate="1.0" sustained_fire_grow_step="1.2" use_basic_muzzle_smoke_effect="0" projectiles_per_shot="1"/>
-	<next_in_chain key="ff_dreamer_skill.weapon" share_ammo="0"/>
-	<animation state_key="recoil" animation_key="recoil2, dreamer"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil2, dreamer"/>
-	<animation key="recoil" stance_key="crouching" animation_key="recoil2, dreamer"/>
-	<animation state_key="hold" animation_key="hold, dreamer"/>
-	<animation state_key="hold_casual" animation_key="relax, dreamer"/>
-	<animation state_key="hold_on_wall" animation_key="hold, dreamer"/>
-	<animation state_key="still_against_wall" animation_key="hold, dreamer"/>
-	<animation state_key="walking" animation_key="walking, dreamer"/>
-	<animation state_key="walking_backwards" animation_key="walking backwards, dreamer"/>
-	<animation state_key="running" animation_key="rush, dreamer"/>
-	<animation state_key="crouching" animation_key="hold, dreamer"/>
-	<animation state_key="crouch_moving" animation_key="walking, dreamer"/>
-	<animation state_key="crouch_moving_backwards" animation_key="walking backwards, dreamer"/>
-	<animation state_key="reload" animation_key="reloading, dreamer1.5"/>
-	<sound key="fire" fileref="dreamer_fire_FromTTF2.wav" pitch_variety="0.05" volume="2.7"/>
-	<sound key="magazine_out" fileref="kccoar_mgz_out_FromINS.wav" volume="0.8"/>
-	<sound key="magazine_in" fileref="kccoar_mgz_in_FromINS.wav" volume="0.8"/>
-	<sound key="cycle" fileref="kccoar_cycle_FromINS.wav" volume="0.8"/>
-	<sound class="impact" fileref="rifle_drop.wav"/>
-	<model filename="sfw_dreamer.xml"/>
-	<hud_icon filename="sfw_dreamer.png"/>
-	<weak_hand_hold offset="0.4"/>
-	<projectile file="bullet_dreamer.projectile"/>
-	<stance state_key="walking" accuracy="0.95"/>
-	<stance state_key="crouch_moving" accuracy="0.99"/>
-	<stance state_key="prone_moving" accuracy="0.85"/>
-	<stance state_key="standing" accuracy="0.95"/>
-	<stance state_key="crouching" accuracy="1.0"/>
-	<stance state_key="prone" accuracy="1.0"/>
-	<stance state_key="over_wall" accuracy="1.0"/>
-	<modifier class="speed" value="0.1"/>
-	<tag name="elite"/>
-	<commonness value="0.0000001" in_stock="0" can_respawn_with="1"/>
-	<inventory encumbrance="17.0" buy_price="328.0" sell_price="328.0"/>
-	<capacity value="0" source="rank" source_value="0.0"/>
-	<capacity value="1" source="rank" source_value="39.633"/>
-</weapon>
-
-<weapon key="ff_dreamer_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification accuracy_factor="1.5" barrel_offset="0.5" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" class="4" sight_range_modifier="3.5" slot="0" magazine_size="1" burst_shots="1" name="GK-Dreamer-[Execution Time]" projectile_speed="250" retrigger_time="-1" last_burst_retrigger_time="3.0" suppressed="0" sustained_fire_diminish_rate="1.0" sustained_fire_grow_step="1.2" use_basic_muzzle_smoke_effect="0" projectiles_per_shot="1"/>
-	<next_in_chain key="ff_dreamer_skill_1.weapon" share_ammo="0"/>
-	<animation state_key="recoil" animation_key="recoil, dreamer skill"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil, dreamer skill"/>
-	<animation key="recoil" stance_key="crouching" animation_key="recoil, dreamer skill"/>
-	<animation state_key="hold" animation_key="hold, dreamer"/>
-	<animation state_key="hold_casual" animation_key="relax, dreamer"/>
-	<animation state_key="hold_on_wall" animation_key="hold, dreamer"/>
-	<animation state_key="still_against_wall" animation_key="hold, dreamer"/>
-	<animation state_key="walking" animation_key="walking, dreamer"/>
-	<animation state_key="walking_backwards" animation_key="walking backwards, dreamer"/>
-	<animation state_key="running" animation_key="rush, dreamer"/>
-	<animation state_key="crouching" animation_key="hold, dreamer"/>
-	<animation state_key="crouch_moving" animation_key="walking, dreamer"/>
-	<animation state_key="crouch_moving_backwards" animation_key="walking backwards, dreamer"/>
-	<animation state_key="reload" animation_key="reloading, dreamer1.5"/>
-	<sound key="fire" fileref="sf_boss_fire_3.wav" pitch_variety="0.05" volume="0.2"/>
-	<sound key="magazine_out" fileref="kccoar_mgz_out_FromINS.wav" volume="0.8"/>
-	<sound key="magazine_in" fileref="kccoar_mgz_in_FromINS.wav" volume="0.8"/>
-	<sound key="cycle" fileref="kccoar_cycle_FromINS.wav" volume="0.8"/>
-	<sound class="impact" fileref="rifle_drop.wav"/>
-	<model filename="sfw_dreamer_skill.xml"/>
-	<hud_icon filename="sfw_dreamer_skill1.png"/>
-	<weak_hand_hold offset="0.4"/>
-	<projectile file="bullet_sf.projectile">
-	<result class="blast" damage="26.0" radius="2.5" decal="1" push="0.1" character_state="death" faction_compare="not_equal"/>
-	<trail probability="1.0" key="sf_long"/>
-	</projectile>
-	<stance state_key="walking" accuracy="0.95"/>
-	<stance state_key="crouch_moving" accuracy="0.99"/>
-	<stance state_key="prone_moving" accuracy="0.85"/>
-	<stance state_key="standing" accuracy="0.95"/>
-	<stance state_key="crouching" accuracy="1.0"/>
-	<stance state_key="prone" accuracy="1.0"/>
-	<stance state_key="over_wall" accuracy="1.0"/>
-	<modifier class="speed" value="0"/>
-	<tag name="elite"/>
-	<commonness value="0.0000001" in_stock="0" can_respawn_with="1"/>
-	<inventory encumbrance="17.0" buy_price="328.0" sell_price="328.0"/>
-	<capacity value="0" source="rank" source_value="0.0"/>
-	<capacity value="1" source="rank" source_value="39.633"/>
-</weapon>
-
-<weapon key="ff_dreamer_skill_1.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification accuracy_factor="1.5" barrel_offset="1.4" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" class="4" sight_range_modifier="1.5" burst_shots="90" slot="0" magazine_size="90" name="GK-Dreamer-[Nirvanic Demolition]" projectile_speed="300" retrigger_time="0.0333" last_burst_retrigger_time="3.0" suppressed="0" sustained_fire_diminish_rate="0.4" sustained_fire_grow_step="0.2" projectiles_per_shot="1" use_basic_muzzle_smoke_effect="0"/>
-	<next_in_chain key="ff_dreamer.weapon" share_ammo="0"/>
-	<animation state_key="recoil" animation_key="recoil2, dreamer"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil2, dreamer"/>
-	<animation key="recoil" stance_key="crouching" animation_key="recoil2, dreamer"/>
-	<animation state_key="hold" animation_key="hold, dreamer"/>
-	<animation state_key="hold_casual" animation_key="relax, dreamer"/>
-	<animation state_key="hold_on_wall" animation_key="hold, dreamer"/>
-	<animation state_key="still_against_wall" animation_key="hold, dreamer"/>
-	<animation state_key="walking" animation_key="walking, dreamer"/>
-	<animation state_key="walking_backwards" animation_key="walking backwards, dreamer"/>
-	<animation state_key="running" animation_key="rush, dreamer"/>
-	<animation state_key="crouching" animation_key="hold, dreamer"/>
-	<animation state_key="crouch_moving" animation_key="walking, dreamer"/>
-	<animation state_key="crouch_moving_backwards" animation_key="walking backwards, dreamer"/>
-	<animation state_key="reload" animation_key="reloading, dreamer3"/>
-	<sound key="fire" fileref="Typhon_Fire.wav" pitch_variety="0.00" volume="0.2"/>
-	<sound key="magazine_out" fileref="kccoar_mgz_out_FromINS.wav" volume="0.8"/>
-	<sound key="magazine_in" fileref="kccoar_mgz_in_FromINS.wav" volume="0.8"/>
-	<sound key="cycle" fileref="kccoar_cycle_FromINS.wav" volume="0.8"/>
-	<sound class="impact" fileref="rifle_drop.wav"/>
-	<model filename="sfw_dreamer_skill.xml"/>
-	<hud_icon filename="sfw_dreamer_skill2.png"/>
-	<effect class="muzzle" ref="dreamer"/>
-	<weak_hand_hold offset="0.4"/>
-	<projectile file="rocket_dreamer.projectile"/>
-	<stance state_key="walking" accuracy="0.95"/>
-	<stance state_key="crouch_moving" accuracy="0.97"/>
-	<stance state_key="prone_moving" accuracy="1"/>
-	<stance state_key="standing" accuracy="1.5"/>
-	<stance state_key="crouching" accuracy="1.0"/>
-	<stance state_key="prone" accuracy="1.0"/>
-	<stance state_key="over_wall" accuracy="1.0"/>
-	<modifier class="speed" value="-0.85"/>
 	<tag name="elite"/>
 	<commonness value="0.0000001" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="17.0" buy_price="328.0" sell_price="328.0"/>
