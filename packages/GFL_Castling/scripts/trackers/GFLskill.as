@@ -106,6 +106,7 @@ class GFLskill : Tracker {
 		"pierre.call",
 		"gk_repair_fairy.call",
 		"target.call",
+		"gk_rampage_fairy_ac130.call",
 		"manticore.call"
 	};
 

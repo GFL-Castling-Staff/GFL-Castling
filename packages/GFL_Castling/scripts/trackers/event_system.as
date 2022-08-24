@@ -49,7 +49,7 @@ class GFL_event_system : Tracker {
                             case 1:{excuteSniperFairy(m_metagame,GFL_event_array[a]);break;}
                             case 2:{
                                 if(GFL_event_array[a].m_randseed==-1.0)
-                                    GFL_event_array[a].m_randseed=rand(0,3.14);
+                                    GFL_event_array[a].m_randseed=float(rand(0,3.14));
                                 excuteRampageFairyAC130(m_metagame,GFL_event_array[a]);
                                 break;
                             }
@@ -187,7 +187,7 @@ void excuteRampageFairyAC130(GameMode@ metagame,GFL_event@ eventinfo){
     // 算了保险起见都写着
     // tnnd为了配合下面还得中途多放几次
     int voice_last_time = 30;
-    uint voice_phase_interval = uint(voice_last_time/eventinfo.m_time);
+    int voice_phase_interval = int(voice_last_time/eventinfo.m_time);
     if( (ac130_flyby_interval == 0) && ((ac130_strike_num-eventinfo.m_phase)>(voice_phase_interval-4))){
         _log("current phase: " + eventinfo.m_phase);
         ac130_flyby_interval == 6;
