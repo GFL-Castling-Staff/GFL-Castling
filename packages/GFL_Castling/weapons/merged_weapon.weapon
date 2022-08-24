@@ -57,10 +57,10 @@
 <weapon key="gkw_p7.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<specification retrigger_time="-1" last_burst_retrigger_time="0.1" accuracy_factor="0.98" sustained_fire_grow_step="0.4" sustained_fire_diminish_rate="1.5" magazine_size="8" suppressed="0" name="P7" class="4" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="74.68" projectiles_per_shot="1" burst_shots="1" stab_enabled="1" carry_in_two_hands="0" slot="0"/>
 	<inventory buy_price="2.0" sell_price="2.0"/>
-	<sound key="fire" fileref="p7_fire_FromPD2.wav" pitch_variety="0.05" volume="1"/>
-	<sound key="magazine_out" fileref="p7_mgz_out_FromHALO4.wav" volume="0.4"/>
-	<sound key="magazine_in" fileref="p7_mgz_in_FromHALO4.wav" volume="0.4"/>
-	<sound key="cycle" fileref="p7_cycle_FromHALO4.wav" volume="0.4"/>
+	<sound key="fire" fileref="p7_fire_FromCOD13.wav" pitch_variety="0.05" volume="1.3"/>
+	<sound key="magazine_out" fileref="p7_mgz_out_FromCOD15.wav" volume="0.7"/>
+	<sound key="magazine_in" fileref="p7_mgz_in_FromCOD15.wav" volume="0.7"/>
+	<sound key="cycle" fileref="p7_cycle_FromCOD15.wav" volume="0.7"/>
 	<model filename="gkw_hg_p7.xml"/>
 	<hud_icon filename="gkw_p7.png"/>
 	<weak_hand_hold offset="0.1"/>
@@ -686,7 +686,7 @@
 </weapon>
 
 <weapon key="gkw_supersass.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="0.5" sustained_fire_diminish_rate="1.4" magazine_size="20" can_shoot_standing="1" suppressed="1" name="Super SASS" class="4" burst_shots="1" last_burst_retrigger_time="0.125" reload_one_at_a_time="0" sight_range_modifier="2.8" projectile_speed="216.6" barrel_offset="0.4" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="0.5" sustained_fire_diminish_rate="1.4" magazine_size="20" can_shoot_standing="1" suppressed="1" name="Super SASS" class="4" burst_shots="1" last_burst_retrigger_time="0.125" reload_one_at_a_time="0" sight_range_modifier="2.8" projectile_speed="230.5" barrel_offset="0.4" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<next_in_chain key="gkw_supersass_skill.weapon" share_ammo="0"/>
 	<inventory buy_price="12.0" sell_price="12.0"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.8"/>
@@ -699,7 +699,7 @@
 	<hud_icon filename="gkw_supersass.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="bullet.projectile" can_be_detected_by_footmen="0">
-	<result class="hit" kill_probability="2.4" kill_probability_offset_on_successful_hit="1.7" kill_decay_start_time="1.448" kill_decay_end_time="2.414"/>
+	<result class="hit" kill_probability="2.4" kill_probability_offset_on_successful_hit="2.8" kill_decay_start_time="1.448" kill_decay_end_time="2.414"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_76251"/>
 	<stance state_key="running" accuracy="0.6"/>
@@ -710,6 +710,7 @@
 	<stance state_key="crouching" accuracy="0.98"/>
 	<stance state_key="prone" accuracy="1"/>
 	<stance state_key="over_wall" accuracy="1"/>
+	<modifier class="detectability" value="-0.15"/>
 	<modifier class="speed" value="0"/>
 	<tag name="rifle"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
@@ -13613,10 +13614,10 @@
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="2.0" buy_price="5.0" sell_price="5.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<sound key="fire" fileref="thunder50_fire_FromBF1.wav" pitch_variety="0.05" volume="1.6"/>
-	<sound key="magazine_out" fileref="thunder50_mgz_out_FromBF5.wav" volume="0.6"/>
-	<sound key="magazine_in" fileref="thunder50_mgz_in_FromBF5.wav" volume="0.6"/>
-	<sound key="reload_one" fileref="thunder50_cycle_FromTTF2.wav" volume="0.7"/>
+	<sound key="fire" fileref="thunder50_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.4"/>
+	<sound key="magazine_out" fileref="thunder50_mgz_out_FromCOD16.wav" volume="0.6"/>
+	<sound key="magazine_in" fileref="thunder50_mgz_in_FromCOD16.wav" volume="0.6"/>
+	<sound key="reload_one" fileref="thunder50_cycle_FromCOD15.wav" volume="0.6"/>
 	<animation state_key="cycle" animation_key="cycle, revolver"/>
 	<model filename="gkw_hg_thunder50_from_melondove.xml"/>
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
@@ -15139,12 +15140,10 @@
 	<inventory buy_price="180.0" sell_price="60.0"/>
 	<next_in_chain key="gkw_fo12_skill.weapon" share_ammo="0"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
-	<sound key="fire" fileref="sat8sd_fire_FromWF.WAV" pitch_variety="0.05" volume="1.7"/>
-	<sound key="cycle" fileref="m870_cycle_FromTTF2.wav"/>
-	<sound key="reload_one" fileref="sg1_reload_FromREALLIFE.wav" volume="0.5"/>
-	<sound key="reload_one" fileref="sg2_reload_FromREALLIFE.wav" volume="0.5"/>
-	<sound key="reload_one" fileref="sg3_reload_FromREALLIFE.wav" volume="0.5"/>
-	<sound key="reload_one" fileref="sg4_reload_FromREALLIFE.wav" volume="0.5"/>
+	<sound key="fire" fileref="origin12_fire_FromWF.wav" pitch_variety="0.05" volume="1.5"/>
+	<sound key="magazine_out" fileref="origin12_mgz_out_FromCOD16.wav" volume="0.7"/>
+	<sound key="magazine_in" fileref="origin12_mgz_in_FromCOD16.wav" volume="0.7"/>
+	<sound key="cycle" fileref="origin12_cycle_FromWF.wav" volume="0.8"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_sg_fo-12.xml"/>
 	<hud_icon filename="gkw_fo-12.png"/>
@@ -16443,8 +16442,8 @@
 	<animation state_key="cycle" animation_key="Pshotgun0.5"/>
 	<animation state_key="cycle" stance_key="prone" animation_key="Pshotgun0.5p"/>
 	<animation key="reload" animation_key="reloading, oaat"/>
-	<sound key="fire" fileref="m590_fire_FromKF2.wav" pitch_variety="0.05" volume="1"/>
-	<sound key="cycle" fileref="m590_cycle_FromREALLIFE.wav"/>
+	<sound key="fire" fileref="m590_fire_FromKF2.wav" pitch_variety="0.05" volume="1.4"/>
+	<sound key="cycle" fileref="m590_cycle_FromREALLIFE.wav" volume="0.7"/>
 	<sound key="reload_one" fileref="sg1_reload_FromREALLIFE.wav" volume="0.5"/>
 	<sound key="reload_one" fileref="sg2_reload_FromREALLIFE.wav" volume="0.5"/>
 	<sound key="reload_one" fileref="sg3_reload_FromREALLIFE.wav" volume="0.5"/>
@@ -17325,10 +17324,10 @@
 	<animation state_key="stabbing" animation_key="melee, bayonet"/>
 	<commonness value="0.2" in_stock="1" can_respawn_with="1"/>
 	<weak_hand_hold offset="0.3"/>
-	<sound key="fire" fileref="fn49_fire_FromCOD18.wav" pitch_variety="0.05" volume="1.1"/>
-	<sound key="cycle" fileref="fn49_cycle_FromCOD18.wav" volume="0.7"/>
-	<sound key="magazine_out" fileref="fn49_mgz_out_FromCOD18.wav" volume="0.7"/>
-	<sound key="magazine_in" fileref="fn49_mgz_in_FromCOD18.wav" volume="0.7"/>
+	<sound key="fire" fileref="fn49_fire_FromCOD18.wav" pitch_variety="0.05" volume="1.3"/>
+	<sound key="cycle" fileref="fn49_cycle_FromCOD18.wav" volume="0.6"/>
+	<sound key="magazine_out" fileref="fn49_mgz_out_FromCOD18.wav" volume="0.6"/>
+	<sound key="magazine_in" fileref="fn49_mgz_in_FromCOD18.wav" volume="0.6"/>
 	<model filename="gkw_rf_fn49.xml"/>
 	<hud_icon filename="gkw_fn49.png"/>
 	<inventory encumbrance="10.0" price="5.0"/>
@@ -17369,10 +17368,10 @@
 	<animation state_key="stabbing" animation_key="melee, bayonet"/>
 	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
 	<weak_hand_hold offset="0.3"/>
-	<sound key="fire" fileref="fn49_fire_FromCOD18.wav" pitch_variety="0.05" volume="1.1"/>
-	<sound key="cycle" fileref="fn49_cycle_FromCOD18.wav" volume="0.7"/>
-	<sound key="magazine_out" fileref="fn49_mgz_out_FromCOD18.wav" volume="0.7"/>
-	<sound key="magazine_in" fileref="fn49_mgz_in_FromCOD18.wav" volume="0.7"/>
+	<sound key="fire" fileref="fn49_fire_FromCOD18.wav" pitch_variety="0.05" volume="1.3"/>
+	<sound key="cycle" fileref="fn49_cycle_FromCOD18.wav" volume="0.6"/>
+	<sound key="magazine_out" fileref="fn49_mgz_out_FromCOD18.wav" volume="0.6"/>
+	<sound key="magazine_in" fileref="fn49_mgz_in_FromCOD18.wav" volume="0.6"/>
 	<model filename="gkw_rf_fn49.xml"/>
 	<hud_icon filename="gkw_fn49mod3.png"/>
 	<inventory encumbrance="10.0" price="150.0"/>
@@ -17467,12 +17466,12 @@
 	<animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
 	<animation state_key="cycle" animation_key="Pshotgun0.5"/>
 	<animation state_key="cycle" stance_key="prone" animation_key="Pshotgun0.5p"/>
-	<sound key="fire" fileref="spas15_fire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.1"/>
-	<sound key="magazine_out" fileref="spas15_mgz_out_FromWF.wav" volume="0.8"/>
-	<sound key="magazine_in" fileref="spas15_mgz_in_FromWF.wav" volume="0.8"/>
-	<sound key="cycle" fileref="spas15_cycle2_FromREALLIFE.wav" volume="0.8"/>
-	<sound key="cycle_out" fileref="spas15_cycle_out_FromREALLIFE.wav"/>
-	<sound key="cycle_in" fileref="spas15_cycle_in_FromREALLIFE.wav"/>
+	<sound key="fire" fileref="spas15_fire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.3"/>
+	<sound key="magazine_out" fileref="spas15_mgz_out_FromWF.wav" volume="0.7"/>
+	<sound key="magazine_in" fileref="spas15_mgz_in_FromWF.wav" volume="0.7"/>
+	<sound key="cycle" fileref="spas15_cycle2_FromREALLIFE.wav" volume="0.7"/>
+	<sound key="cycle_out" fileref="spas15_cycle_out_FromREALLIFE.wav" volume="0.7"/>
+	<sound key="cycle_in" fileref="spas15_cycle_in_FromREALLIFE.wav" volume="0.7"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_sg_spas15.xml"/>
 	<hud_icon filename="gkw_spas15.png"/>
@@ -17526,10 +17525,10 @@
 	<inventory encumbrance="10.0" buy_price="86" sell_price="86"/>
 	<next_in_chain key="gkw_spas15.weapon" share_ammo="1"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.8"/>
-	<sound key="fire" fileref="spas15_fire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.1"/>
-	<sound key="magazine_out" fileref="spas15_mgz_out_FromWF.wav" volume="0.8"/>
-	<sound key="magazine_in" fileref="spas15_mgz_in_FromWF.wav" volume="0.8"/>
-	<sound key="cycle" fileref="spas15_cycle1_FromWF.wav" volume="1.0"/>
+	<sound key="fire" fileref="spas15_fire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.3"/>
+	<sound key="magazine_out" fileref="spas15_mgz_out_FromWF.wav" volume="0.7"/>
+	<sound key="magazine_in" fileref="spas15_mgz_in_FromWF.wav" volume="0.7"/>
+	<sound key="cycle" fileref="spas15_cycle1_FromWF.wav" volume="0.7"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<commonness value="0" in_stock="0"/>
 	<model filename="gkw_sg_spas15.xml"/>
@@ -17704,10 +17703,10 @@
 	<animation state_key="reload" animation_key="reloading, magazine rifle 0.9"/>
 	<animation state_key="stabbing" animation_key="melee, quick knife"/>
 	<animation state_key="stabbing" animation_key="pistol whip 3"/>
-	<sound key="fire" fileref="stenmk2_fire_FromINS.wav" pitch_variety="0.05" volume="1"/>
-	<sound key="magazine_out" fileref="stenmk2_mgz_out_FromINS.wav" volume="1.0"/>
-	<sound key="magazine_in" fileref="stenmk2_mgz_in_FromINS.wav" volume="1.0"/>
-	<sound key="cycle" fileref="stenmk2_cycle_FromINS.wav" volume="1.0"/>
+	<sound key="fire" fileref="sten_fire_FromBF5.wav" pitch_variety="0.05" volume="1.3"/>
+	<sound key="magazine_out" fileref="sten_mgz_out_FromCOD18.wav" volume="0.7"/>
+	<sound key="magazine_in" fileref="sten_mgz_in_FromCOD18.wav" volume="0.7"/>
+	<sound key="cycle" fileref="sten_cycle_FromCOD18.wav" volume="0.7"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_smg_sten.xml"/>
 	<commonness value="0.2" in_stock="1" can_respawn_with="1"/>
@@ -17757,10 +17756,10 @@
 	<animation state_key="reload" animation_key="reloading, magazine rifle 0.9"/>
 	<animation state_key="stabbing" animation_key="melee, quick knife"/>
 	<animation state_key="stabbing" animation_key="pistol whip 3"/>
-	<sound key="fire" fileref="stenmk2_fire_FromINS.wav" pitch_variety="0.05" volume="1"/>
-	<sound key="magazine_out" fileref="stenmk2_mgz_out_FromINS.wav" volume="1.0"/>
-	<sound key="magazine_in" fileref="stenmk2_mgz_in_FromINS.wav" volume="1.0"/>
-	<sound key="cycle" fileref="stenmk2_cycle_FromINS.wav" volume="1.0"/>
+	<sound key="fire" fileref="stensd_fire_FromCOD18.wav" pitch_variety="0.05" volume="1.2"/>
+	<sound key="magazine_out" fileref="sten_mgz_out_FromCOD18.wav" volume="0.7"/>
+	<sound key="magazine_in" fileref="sten_mgz_in_FromCOD18.wav" volume="0.7"/>
+	<sound key="cycle" fileref="sten_cycle_FromCOD18.wav" volume="0.7"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_smg_stenmod3.xml"/>
 	<commonness value="0.001" in_stock="0" can_respawn_with="1"/>
@@ -18983,7 +18982,7 @@
 </weapon>
 
 <weapon key="gkw_supersassmod3.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="0.5" sustained_fire_diminish_rate="1.7" magazine_size="20" can_shoot_standing="1" suppressed="1" name="Super SASS(MOD3)" class="4" burst_shots="1" last_burst_retrigger_time="0.125" reload_one_at_a_time="0" sight_range_modifier="2.8" projectile_speed="216.6" barrel_offset="0.4" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="0.5" sustained_fire_diminish_rate="1.7" magazine_size="20" can_shoot_standing="1" suppressed="1" name="Super SASS(MOD3)" class="4" burst_shots="1" last_burst_retrigger_time="0.125" reload_one_at_a_time="0" sight_range_modifier="2.8" projectile_speed="230.5" barrel_offset="0.4" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<next_in_chain key="gkw_supersassmod3_skill.weapon" share_ammo="0"/>
 	<inventory buy_price="120.0" sell_price="40.0"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.8"/>
@@ -19018,7 +19017,7 @@
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="bullet.projectile" can_be_detected_by_footmen="0">
-	<result class="hit" kill_probability="2.5" kill_probability_offset_on_successful_hit="3.3" kill_decay_start_time="1.448" kill_decay_end_time="2.414"/>
+	<result class="hit" kill_probability="2.5" kill_probability_offset_on_successful_hit="3.8" kill_decay_start_time="1.448" kill_decay_end_time="2.414"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_76251"/>
 	<stance state_key="running" accuracy="0.7"/>
@@ -19029,6 +19028,7 @@
 	<stance state_key="crouching" accuracy="1"/>
 	<stance state_key="prone" accuracy="1"/>
 	<stance state_key="over_wall" accuracy="1"/>
+	<modifier class="detectability" value="-0.15"/>
 	<modifier class="speed" value="0"/>
 	<tag name="rifle"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
@@ -21237,13 +21237,14 @@
 	<result class="hit" kill_probability="1.85" kill_probability_offset_on_successful_hit="2.4" kill_decay_start_time="2.8" kill_decay_end_time="3.333"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_556"/>
-	<stance state_key="running" accuracy="0.4"/>
-	<stance state_key="walking" accuracy="0.55"/>
-	<stance state_key="crouch_moving" accuracy="0.8"/>
-	<stance state_key="prone_moving" accuracy="0.8"/>
-	<stance state_key="standing" accuracy="0.98"/>
+	<stance state_key="running" accuracy="1.0"/>
+	<stance state_key="walking" accuracy="1.0"/>
+	<stance state_key="crouch_moving" accuracy="1.0"/>
+	<stance state_key="prone_moving" accuracy="1.0"/>
+	<stance state_key="standing" accuracy="1.0"/>
 	<stance state_key="crouching" accuracy="1.2"/>
 	<stance state_key="prone" accuracy="1.2"/>
+	<stance state_key="overwall" accuracy="1.2"/>
 	<modifier class="detectability" value="-0.1"/>
 	<tag name="autorifle"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
@@ -22012,7 +22013,7 @@
 </weapon>
 
 <weapon key="gkw_m1891mod3_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="2" sustained_fire_diminish_rate="1.2" magazine_size="1" can_shoot_standing="1" suppressed="0" name="Mosin-Nagant M1891(MOD3)-[Pure White Reaper]" class="2" reload_one_at_a_time="0" sight_range_modifier="3" projectile_speed="205.95" barrel_offset="0.4" projectiles_per_shot="2" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="2" sustained_fire_diminish_rate="1.2" magazine_size="1" can_shoot_standing="1" suppressed="0" name="Mosin-Nagant M1891(MOD3)-[Pure White Reaper]" class="2" reload_one_at_a_time="0" sight_range_modifier="3" projectile_speed="235.95" barrel_offset="0.4" projectiles_per_shot="8" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
 	<inventory buy_price="110.0" sell_price="110.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<next_in_chain key="gkw_m1891mod3.weapon" share_ammo="0"/>
@@ -22032,7 +22033,7 @@
 	<hud_icon filename="gkw_m1891mod3_skill.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="bullet.projectile" can_be_detected_by_footmen="0">
-	<result class="blast" damage="12" radius="2.5" push="0.2" charater_state="death" faction_compare="not_equal"/>
+	<result class="blast" damage="3" radius="2.5" push="0.2" charater_state="death" faction_compare="not_equal"/>
 	</projectile>
 	<stance state_key="running" accuracy="1"/>
 	<stance state_key="walking" accuracy="1"/>
@@ -22772,7 +22773,7 @@
 </weapon>
 
 <weapon key="gkw_supersass_1407.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="0.5" sustained_fire_diminish_rate="1.4" magazine_size="20" can_shoot_standing="1" suppressed="1" name="Super SASS-[Wolfwalker]" class="4" burst_shots="1" last_burst_retrigger_time="0.125" reload_one_at_a_time="0" sight_range_modifier="2.8" projectile_speed="216.6" barrel_offset="0.4" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="0.5" sustained_fire_diminish_rate="1.4" magazine_size="20" can_shoot_standing="1" suppressed="1" name="Super SASS-[Wolfwalker]" class="4" burst_shots="1" last_burst_retrigger_time="0.125" reload_one_at_a_time="0" sight_range_modifier="2.8" projectile_speed="230.5" barrel_offset="0.4" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<next_in_chain key="gkw_supersass_skill.weapon" share_ammo="0"/>
 	<inventory buy_price="12.0" sell_price="12.0"/>
 	<commonness value="0" in_stock="0"/>
@@ -22787,7 +22788,7 @@
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="bullet.projectile" can_be_detected_by_footmen="0">
-	<result class="hit" kill_probability="2.4" kill_probability_offset_on_successful_hit="1.7" kill_decay_start_time="1.448" kill_decay_end_time="2.414"/>
+	<result class="hit" kill_probability="2.4" kill_probability_offset_on_successful_hit="2.8" kill_decay_start_time="1.448" kill_decay_end_time="2.414"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_76251"/>
 	<stance state_key="running" accuracy="0.6"/>
@@ -22798,6 +22799,7 @@
 	<stance state_key="crouching" accuracy="0.98"/>
 	<stance state_key="prone" accuracy="1"/>
 	<stance state_key="over_wall" accuracy="1"/>
+	<modifier class="detectability" value="-0.15"/>
 	<modifier class="speed" value="0"/>
 	<tag name="rifle"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
@@ -30054,10 +30056,10 @@
 	<commonness value="0.0" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="2.0" buy_price="5.0" sell_price="5.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<sound key="fire" fileref="thunder50_fire_FromBF1.wav" pitch_variety="0.05" volume="1.6"/>
-	<sound key="magazine_out" fileref="thunder50_mgz_out_FromBF5.wav" volume="0.6"/>
-	<sound key="magazine_in" fileref="thunder50_mgz_in_FromBF5.wav" volume="0.6"/>
-	<sound key="reload_one" fileref="thunder50_cycle_FromTTF2.wav" volume="0.7"/>
+	<sound key="fire" fileref="thunder50_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.4"/>
+	<sound key="magazine_out" fileref="thunder50_mgz_out_FromCOD16.wav" volume="0.6"/>
+	<sound key="magazine_in" fileref="thunder50_mgz_in_FromCOD16.wav" volume="0.6"/>
+	<sound key="reload_one" fileref="thunder50_cycle_FromCOD15.wav" volume="0.6"/>
 	<animation state_key="cycle" animation_key="cycle, revolver"/>
 	<model filename="gkw_hg_thunder50_from_melondove.xml"/>
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
@@ -30952,8 +30954,8 @@
 	<animation state_key="cycle" animation_key="Pshotgun0.5"/>
 	<animation state_key="cycle" stance_key="prone" animation_key="Pshotgun0.5p"/>
 	<animation key="reload" animation_key="reloading, oaat"/>
-	<sound key="fire" fileref="m590_fire_FromKF2.wav" pitch_variety="0.05" volume="1"/>
-	<sound key="cycle" fileref="m590_cycle_FromREALLIFE.wav"/>
+	<sound key="fire" fileref="m590_fire_FromKF2.wav" pitch_variety="0.05" volume="1.4"/>
+	<sound key="cycle" fileref="m590_cycle_FromREALLIFE.wav" volume="0.7"/>
 	<sound key="reload_one" fileref="sg1_reload_FromREALLIFE.wav" volume="0.5"/>
 	<sound key="reload_one" fileref="sg2_reload_FromREALLIFE.wav" volume="0.5"/>
 	<sound key="reload_one" fileref="sg3_reload_FromREALLIFE.wav" volume="0.5"/>
@@ -31890,10 +31892,10 @@
 	<animation state_key="stabbing" animation_key="melee, bayonet"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<weak_hand_hold offset="0.3"/>
-	<sound key="fire" fileref="fn49_fire_FromCOD18.wav" pitch_variety="0.05" volume="1.1"/>
-	<sound key="cycle" fileref="fn49_cycle_FromCOD18.wav" volume="0.7"/>
-	<sound key="magazine_out" fileref="fn49_mgz_out_FromCOD18.wav" volume="0.7"/>
-	<sound key="magazine_in" fileref="fn49_mgz_in_FromCOD18.wav" volume="0.7"/>
+	<sound key="fire" fileref="fn49_fire_FromCOD18.wav" pitch_variety="0.05" volume="1.3"/>
+	<sound key="cycle" fileref="fn49_cycle_FromCOD18.wav" volume="0.6"/>
+	<sound key="magazine_out" fileref="fn49_mgz_out_FromCOD18.wav" volume="0.6"/>
+	<sound key="magazine_in" fileref="fn49_mgz_in_FromCOD18.wav" volume="0.6"/>
 	<model filename="gkw_rf_fn49.xml"/>
 	<hud_icon filename="gkw_fn49_4709.png"/>
 	<inventory encumbrance="10.0" price="5.0"/>
@@ -34270,7 +34272,7 @@
 </weapon>
 
 <weapon key="gkw_supersassmod3_1407.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="0.5" sustained_fire_diminish_rate="1.7" magazine_size="20" can_shoot_standing="1" suppressed="1" name="Super SASS(MOD3)-[Wolfwalker]" class="4" burst_shots="1" last_burst_retrigger_time="0.125" reload_one_at_a_time="0" sight_range_modifier="2.8" projectile_speed="216.6" barrel_offset="0.4" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="0.5" sustained_fire_diminish_rate="1.7" magazine_size="20" can_shoot_standing="1" suppressed="1" name="Super SASS(MOD3)-[Wolfwalker]" class="4" burst_shots="1" last_burst_retrigger_time="0.125" reload_one_at_a_time="0" sight_range_modifier="2.8" projectile_speed="230.5" barrel_offset="0.4" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<next_in_chain key="gkw_supersassmod3_1407_skill.weapon" share_ammo="0"/>
 	<inventory buy_price="120.0" sell_price="120.0"/>
 	<commonness value="0" in_stock="0"/>
@@ -34307,7 +34309,7 @@
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="bullet.projectile" can_be_detected_by_footmen="0">
-	<result class="hit" kill_probability="2.5" kill_probability_offset_on_successful_hit="3.3" kill_decay_start_time="1.448" kill_decay_end_time="2.414"/>
+	<result class="hit" kill_probability="2.5" kill_probability_offset_on_successful_hit="3.8" kill_decay_start_time="1.448" kill_decay_end_time="2.414"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_76251"/>
 	<stance state_key="running" accuracy="0.7"/>
@@ -34318,6 +34320,7 @@
 	<stance state_key="crouching" accuracy="1"/>
 	<stance state_key="prone" accuracy="1"/>
 	<stance state_key="over_wall" accuracy="1"/>
+	<modifier class="detectability" value="-0.15"/>
 	<modifier class="speed" value="0"/>
 	<tag name="rifle"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
@@ -34350,7 +34353,7 @@
 </weapon>
 
 <weapon key="gkw_supersassmod3_1407_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="1" accuracy_factor="1" sustained_fire_grow_step="0.5" sustained_fire_diminish_rate="1.7" magazine_size="1" suppressed="1" name="Super SASS(MOD3)-[Wolfwalker]-[Snipers Pursuit]" class="4" burst_shots="1" sight_range_modifier="2.8" projectile_speed="166.6" barrel_offset="0.4" stab_enabled="1" carry_in_two_hands="1" last_burst_retrigger_time="-1" slot="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="0.5" sustained_fire_diminish_rate="1.7" magazine_size="10" can_shoot_standing="1" suppressed="1" name="Super SASS(MOD3)-[Wolfwalker]-[Snipers Pursuit]" class="4" burst_shots="1" last_burst_retrigger_time="0.125" reload_one_at_a_time="0" sight_range_modifier="2.8" projectile_speed="230.5" barrel_offset="0.4" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<next_in_chain key="gkw_supersassmod3_1407.weapon" share_ammo="0"/>
 	<inventory buy_price="120.0" sell_price="120.0"/>
 	<commonness value="0" in_stock="0"/>
@@ -34372,18 +34375,21 @@
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_rf_supersass.xml"/>
 	<hud_icon filename="gkw_supersass_1407.png"/>
+	<projectiles_per_shot value="1"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="bullet.projectile" can_be_detected_by_footmen="0">
-	<result class="blast" damage="24" radius="2.5" decal="0" push="0.1" character_state="death" faction_compare="not_equal"/>
+	<result class="blast" damage="2.1" radius="2.5" decal="0" push="0.2" character_state="death" faction_compare="not_equal"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_76251"/>
-	<stance state_key="walking" accuracy="0.45"/>
-	<stance state_key="crouch_moving" accuracy="0.4"/>
-	<stance state_key="prone_moving" accuracy="0.4"/>
+	<stance state_key="running" accuracy="0.6"/>
+	<stance state_key="walking" accuracy="0.7"/>
+	<stance state_key="crouch_moving" accuracy="0.75"/>
+	<stance state_key="prone_moving" accuracy="0.75"/>
 	<stance state_key="standing" accuracy="0.85"/>
 	<stance state_key="crouching" accuracy="0.98"/>
 	<stance state_key="prone" accuracy="1"/>
 	<stance state_key="over_wall" accuracy="1"/>
+	<modifier class="detectability" value="-0.15"/>
 	<modifier class="speed" value="0"/>
 	<tag name="rifle"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
@@ -34655,13 +34661,14 @@
 	<result class="hit" kill_probability="1.85" kill_probability_offset_on_successful_hit="2.4" kill_decay_start_time="2.8" kill_decay_end_time="3.333"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_556"/>
-	<stance state_key="running" accuracy="0.4"/>
-	<stance state_key="walking" accuracy="0.55"/>
-	<stance state_key="crouch_moving" accuracy="0.8"/>
-	<stance state_key="prone_moving" accuracy="0.8"/>
-	<stance state_key="standing" accuracy="0.98"/>
+	<stance state_key="running" accuracy="1.0"/>
+	<stance state_key="walking" accuracy="1.0"/>
+	<stance state_key="crouch_moving" accuracy="1.0"/>
+	<stance state_key="prone_moving" accuracy="1.0"/>
+	<stance state_key="standing" accuracy="1.0"/>
 	<stance state_key="crouching" accuracy="1.2"/>
 	<stance state_key="prone" accuracy="1.2"/>
+	<stance state_key="overwall" accuracy="1.2"/>
 	<modifier class="detectability" value="-0.1"/>
 	<tag name="autorifle"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
@@ -34810,13 +34817,14 @@
 	<result class="hit" kill_probability="1.85" kill_probability_offset_on_successful_hit="2.4" kill_decay_start_time="2.8" kill_decay_end_time="3.333"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_556"/>
-	<stance state_key="running" accuracy="0.4"/>
-	<stance state_key="walking" accuracy="0.55"/>
-	<stance state_key="crouch_moving" accuracy="0.8"/>
-	<stance state_key="prone_moving" accuracy="0.8"/>
-	<stance state_key="standing" accuracy="0.98"/>
+	<stance state_key="running" accuracy="1.0"/>
+	<stance state_key="walking" accuracy="1.0"/>
+	<stance state_key="crouch_moving" accuracy="1.0"/>
+	<stance state_key="prone_moving" accuracy="1.0"/>
+	<stance state_key="standing" accuracy="1.0"/>
 	<stance state_key="crouching" accuracy="1.2"/>
 	<stance state_key="prone" accuracy="1.2"/>
+	<stance state_key="overwall" accuracy="1.2"/>
 	<modifier class="detectability" value="-0.1"/>
 	<tag name="autorifle"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
@@ -37154,10 +37162,10 @@
 	<animation state_key="stabbing" animation_key="melee, bayonet"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<weak_hand_hold offset="0.3"/>
-	<sound key="fire" fileref="fn49_fire_FromCOD18.wav" pitch_variety="0.05" volume="1.1"/>
-	<sound key="cycle" fileref="fn49_cycle_FromCOD18.wav" volume="0.7"/>
-	<sound key="magazine_out" fileref="fn49_mgz_out_FromCOD18.wav" volume="0.7"/>
-	<sound key="magazine_in" fileref="fn49_mgz_in_FromCOD18.wav" volume="0.7"/>
+	<sound key="fire" fileref="fn49_fire_FromCOD18.wav" pitch_variety="0.05" volume="1.3"/>
+	<sound key="cycle" fileref="fn49_cycle_FromCOD18.wav" volume="0.6"/>
+	<sound key="magazine_out" fileref="fn49_mgz_out_FromCOD18.wav" volume="0.6"/>
+	<sound key="magazine_in" fileref="fn49_mgz_in_FromCOD18.wav" volume="0.6"/>
 	<model filename="gkw_rf_fn49.xml"/>
 	<hud_icon filename="gkw_fn49_4709.png"/>
 	<inventory encumbrance="10.0" price="150.0"/>
@@ -37240,7 +37248,7 @@
 </weapon>
 
 <weapon key="gkw_supersassmod3_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="1" accuracy_factor="1" sustained_fire_grow_step="0.5" sustained_fire_diminish_rate="1.7" magazine_size="1" suppressed="1" name="Super SASS(MOD3)-[Snipers Pursuit]" class="4" burst_shots="1" sight_range_modifier="2.8" projectile_speed="166.6" barrel_offset="0.4" stab_enabled="1" carry_in_two_hands="1" last_burst_retrigger_time="-1" slot="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="0.5" sustained_fire_diminish_rate="1.7" magazine_size="10" can_shoot_standing="1" suppressed="1" name="Super SASS(MOD3)-[Snipers Pursuit]" class="4" burst_shots="1" last_burst_retrigger_time="0.125" reload_one_at_a_time="0" sight_range_modifier="2.8" projectile_speed="230.5" barrel_offset="0.4" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<next_in_chain key="gkw_supersassmod3.weapon" share_ammo="0"/>
 	<animation key="reload" animation_key="magBrifleRSASS"/>
 	<animation key="reload" stance_key="prone" animation_key="magBrifleRpSASS"/>
@@ -37264,16 +37272,18 @@
 	<projectiles_per_shot value="1"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="bullet.projectile" can_be_detected_by_footmen="0">
-	<result class="blast" damage="24" radius="2.5" decal="0" push="0.1" character_state="death" faction_compare="not_equal"/>
+	<result class="blast" damage="2.1" radius="2.5" decal="0" push="0.2" character_state="death" faction_compare="not_equal"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_76251"/>
-	<stance state_key="walking" accuracy="0.45"/>
-	<stance state_key="crouch_moving" accuracy="0.4"/>
-	<stance state_key="prone_moving" accuracy="0.4"/>
+	<stance state_key="running" accuracy="0.6"/>
+	<stance state_key="walking" accuracy="0.7"/>
+	<stance state_key="crouch_moving" accuracy="0.75"/>
+	<stance state_key="prone_moving" accuracy="0.75"/>
 	<stance state_key="standing" accuracy="0.85"/>
-	<stance state_key="crouching" accuracy="0.92"/>
+	<stance state_key="crouching" accuracy="0.98"/>
 	<stance state_key="prone" accuracy="1"/>
 	<stance state_key="over_wall" accuracy="1"/>
+	<modifier class="detectability" value="-0.15"/>
 	<modifier class="speed" value="0"/>
 	<tag name="rifle"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
@@ -37639,7 +37649,7 @@
 </weapon>
 
 <weapon key="ff_gager.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification accuracy_factor="1" barrel_offset="0.5" can_shoot_standing="1" can_shoot_crouching="0" can_shoot_prone="0" class="0" solt="0" magazine_size="50" name="GK-Gager" projectile_speed="150" retrigger_time="0.04" suppressed="0" sustained_fire_diminish_rate="3.0" sustained_fire_grow_step="0.15"/>
+	<specification accuracy_factor="1" barrel_offset="0.5" can_shoot_standing="1" can_shoot_crouching="0" can_shoot_prone="0" class="0" solt="0" magazine_size="100" name="GK-Gager" projectile_speed="150" retrigger_time="0.04" suppressed="0" sustained_fire_diminish_rate="3.0" sustained_fire_grow_step="0.15"/>
 	<next_in_chain key="ff_gager_1.weapon" share_ammo="0"/>
 	<inventory encumbrance="20.0" buy_price="648.0" sell_price="324.0"/>
 	<animation state_key="recoil" animation_key="recoil, hip fire"/>
@@ -37661,7 +37671,7 @@
 	<hud_icon filename="sfw_gager.png"/>
 	<weak_hand_hold offset="0.4"/>
 	<projectile file="bullet_sf.projectile">
-	<result class="hit" kill_probability="2.2" kill_probability_offset_on_successful_hit="0.4" kill_decay_start_time="1" kill_decay_end_time="1"/>
+	<result class="hit" kill_probability="2.2" kill_probability_offset_on_successful_hit="0.4" kill_decay_start_time="0.02" kill_decay_end_time="0.75"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.75"/>
 	<stance state_key="walking" accuracy="0.75"/>
@@ -42268,7 +42278,7 @@
 	<stance state_key="crouching" accuracy="0.85"/>
 	<stance state_key="over_wall" accuracy="1.1"/>
 	<stance state_key="prone" accuracy="1.1"/>
-	<modifier class="speed" value="0.75"/>
+	<modifier class="speed" value="0.5"/>
 	<modifier class="hit_success_probability" value="-0.2"/>
 	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
