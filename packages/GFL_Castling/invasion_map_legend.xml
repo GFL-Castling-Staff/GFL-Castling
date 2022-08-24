@@ -1,0 +1,12 @@
+<map_legend>
+	<entry image="mapview_spawnpoint.png" text="Spawn point" scale="0.5" />
+	<entry image="mapview_investigate.png" text="Recon target" scale="0.5" />
+	<entry image="mapview_attack_secondary.png" text="Capturable target" />
+	<entry image="mapview_attack_target.png" text="Main attack target" scale="0.8" />
+	<entry image="mapview_attack_start.png" text="Main attack route" use_faction_color="1" />
+
+	<entry image="mapview_alert.png" text="Base under attack" scale="0.7" />
+	<entry image="mapview_defense_target.png" text="Defense target" />
+
+	<entry image="mapview_comms_marker.png" text="Extraction point" atlas_index="1" atlas_size="4" scale="0.6" />
+</map_legend>
