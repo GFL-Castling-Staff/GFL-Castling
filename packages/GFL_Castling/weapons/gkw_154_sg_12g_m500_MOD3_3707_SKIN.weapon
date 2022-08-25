@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<weapon key="gkw_m500mod3.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+<weapon key="gkw_m500mod3_3707.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
     <specification 
     retrigger_time="-1.0"
 	accuracy_factor="1.0" 
@@ -8,7 +8,7 @@
     magazine_size="9"
     can_shoot_standing="1"
     suppressed="0"
-    name="Mossberg Model 500(MOD3)"
+    name="Mossberg Model 500(MOD3)-[Daydreaming]"
     class="1"
     reload_one_at_a_time="1"
     sight_range_modifier="1.5"
@@ -22,7 +22,7 @@
     slot="0"
     use_basic_muzzle_smoke_effect="0"/>
     <inventory encumbrance="20.0" buy_price="200.0" sell_price="200.0"/>
-    <commonness value="0.01" in_stock="0"/>
+    <commonness value="0" in_stock="0"/>
     <animation state_key="cycle" animation_key="Pshotgun0.5"/>
     <animation state_key="cycle" stance_key="prone" animation_key="Pshotgun0.5p"/>
     <animation key="reload" animation_key="reloading, oaat"/>
@@ -35,7 +35,7 @@
     <sound key="reload_one" fileref="sg4_reload_FromREALLIFE.wav" volume="0.5"/>
     <sound class="impact" fileref="rifle_drop.wav"/>
     <model filename="gkw_sg_m500.xml"/>
-    <hud_icon filename="gkw_m500mod3.png"/>
+    <hud_icon filename="gkw_m500mod3_3707.png"/>
     <weak_hand_hold offset="0.3"/>
     <projectile file="bullet.projectile">
         <result class="hit" 
