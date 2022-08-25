@@ -46,9 +46,9 @@
 	<animation state_key="stabbing" 			animation_key="pistol whip 3" />
 	<!--Sounds-->
 	<sound key="fire" fileref="k5_fire_FromWF.wav" pitch_variety="0.05" volume="1" />
-	<sound key="magazine_out" fileref="mk23_mgz_out_FromSNIPER3.wav" volume="0.8" />
-	<sound key="magazine_in" fileref="mk23_mgz_in_FromSNIPER3.wav" volume="0.8"/>
-	<sound key="cycle" fileref="mk23_cycle_FromSNIPER3.wav" volume="0.8" />
+	<sound key="magazine_out" fileref="k5_mgz_out_FromCOD16.wav" volume="0.8" />
+	<sound key="magazine_in" fileref="k5_mgz_in_FromCOD16.wav" volume="0.8"/>
+	<sound key="cycle" fileref="k5_cycle_FromWF.wav" volume="0.8" />
 	<!--Model, Icon, Cost-->
 	<model filename="gkw_hg_k5.xml" />
 	<hud_icon filename="gkw_k5.png" />
