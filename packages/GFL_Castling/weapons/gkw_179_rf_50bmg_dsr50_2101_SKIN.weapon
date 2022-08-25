@@ -18,7 +18,7 @@
 	projectile_speed="240" 
 	barrel_offset="1.4" 
 	projectiles_per_shot="5" />
-    <inventory buy_price="90.0" sell_price="90.0" />
+    <inventory buy_price="300.0" sell_price="200.0" />
     <!--Animations-->
     <animation key="cycle" animation_key="Brifle1.5" />
     <animation key="cycle" stance_key="prone" animation_key="Brifle1.5p" />
@@ -43,7 +43,7 @@
         damage="8.0" 
         radius="4" 
         decal="1" 
-        push="0.2" 
+        push="0.4" 
         character_state="death"
         faction_compare="not_equal"
 		/>
@@ -58,4 +58,5 @@
     <stance state_key="prone" accuracy="1.1" />
     <stance state_key="over_wall" accuracy="1.1" />
     <modifier class="speed" value="-0.1" />
+    <modifier class="hit_success_probability" value="0.2" />  
 </weapon>

@@ -27,7 +27,7 @@
 	<!--Animations-->
 	
 
-	<inventory  buy_price="50.0" sell_price="10.0" />
+	<inventory  buy_price="300.0" sell_price="200.0" />
     <animation key="reload" animation_key="reloading, magazine rifle 2.1" />
 	
 	<!--Sounds-->
@@ -49,7 +49,7 @@
 
     <weak_hand_hold offset="0.3" />
     <projectile file="ntw.projectile">
-        <result class="blast" damage="8"   radius="3.5" decal="1" push="0.2" character_state="death" faction_compare="not_equal"/>
+        <result class="blast" damage="8" radius="3.5" decal="1" push="0.4" character_state="death" faction_compare="not_equal"/>
     </projectile>
     <effect class="muzzle" ref="ejection_50BMG" />
     <!--Accuracy, Movement speed-->
@@ -61,8 +61,6 @@
     <stance state_key="crouching" accuracy="1" />
     <stance state_key="prone" accuracy="1" />
     <stance state_key="over_wall" accuracy="1.0" />
+	<modifier class="hit_success_probability" value="0.2" />
     <modifier class="speed" value="-0.1" /> 
-
-
-
 </weapon>

@@ -72,6 +72,9 @@ class kill_event : Tracker {
         {"gkw_type100_4004.weapon",3},
         {"gkw_sp9.weapon",3},
         {"gkw_vector.weapon",3},
+        {"gkw_vector_549.weapon",3},
+        {"gkw_vector_549_skill.weapon",3},
+        {"gkw_vector_1901.weapon",3},
         {"gkw_pm06.weapon",3},
         {"gkw_pp90.weapon",3},
         {"gkw_js9.weapon",3},
@@ -149,6 +152,8 @@ class kill_event : Tracker {
         {"gkw_g36c_mod3_skill.weapon",5},
         {"gkw_x95.weapon",5},
         {"gkw_ar57.weapon",5},
+        {"gkw_type80mod3.weapon",5},
+        {"gkw_type80mod3_skill.weapon",5},
 
         {"666",-1}
     };

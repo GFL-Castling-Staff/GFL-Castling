@@ -3,7 +3,7 @@
     <result class="blast" radius="10" damage="1" decal="0" push="1" character_state="stun" make_vehicle_hit_sound="0" faction_compare="equal" />
     <trigger class="time" time_to_live="0.0" />
     <rotation class="motion" />
-    <sound class="result" key="other" fileref="Type100_APPRECIATE_JP.wav" />
+    <sound class="result" key="other" fileref="Type100_APPRECIATE_JP.wav"  pitch_variety="0" volume="1.3"/>
     <sound class="result" key="terrain" copy="other" />
     <sound class="result" key="static_object" copy="other" />
     <sound class="result" key="character" copy="other" />

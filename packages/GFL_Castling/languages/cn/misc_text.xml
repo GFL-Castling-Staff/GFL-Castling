@@ -90,6 +90,19 @@
 	<text key="Acceleration Coil" text="加速线圈"/>
 	<text key="AA-12 HE Slug Ammo" text="AA-12 高爆独头弹药"/>
 	<text key="Black Fancy Motorbike" text="黑色高级摩托车"/>
+	<text key="Fury Fairy" text="暴怒妖精"/>	
+	<text key="Gunship support" text="炮艇支援"/>	
+	<text key="Confirm, checking gunship status" text="确认请求，正在检查炮艇机状态"/>	
+	<text key="Gunship status confirmed" text="炮艇机状态确认完毕"/>	
+	<text key="Snipe Fairy" text="狙击妖精"/>	
+	<text key="Snipe Command" text="狙击指令"/>	
+	<text key="Confirm, checking Snipe UAV status" text="确认请求，正在检查UAV狙击单元状态"/>	
+	<text key="UAV status confirmed" text="UAV状态确认完毕"/>	
+
+	<text key="Defence Fairy - Hesco Bastion" text="防御妖精 - Hesco防爆墙"/>	
+	<text key="Defence Fairy - Sandbag Cover" text="防御妖精 - 沙袋掩体"/>	
+	<text key="Fairy Command:Defence Fairy - Hesco Bastion" text="妖精指令:防御妖精 - Hesco防爆墙"/>
+	<text key="Fairy Command:Defence Fairy - Sandbag Cover" text="妖精指令:防御妖精 - 沙袋掩体"/>
 
 	<!-- 敌人单位翻译 -->
 	<text key="SF-Manticore" text="强 无敌“蝎甲兽”机甲"/>
@@ -451,6 +464,20 @@
 	<text key="Sten Mk II" text="司登Mk II 冲锋枪"/>
 	<text key="Sten Mk II(MOD3)" text="司登Mk II 冲锋枪(MOD3)"/>
 	<text key="M6 ASW-[Resilience of Blood and Fire]" text="M6 ASW-[血火适性]"/>
+	<text key="Hawk Type 97" text="Hawk 97式霰弹枪"/>
+	<text key="Hawk Type 97(MOD3)" text="Hawk 97式霰弹枪(MOD3)"/>
+	<text key="Jackhammer MK3A1" text="MK3A1“汽锤”霰弹枪"/>
+	<text key="Daewoo K5" text="大宇K5半自动手枪"/>
+	<text key="Type 80 GPMG" text="80式通用机枪" />
+	<text key="Type 80 GPMG-[Damage Focus MG]" text="80式通用机枪-[火力专注 MG]" />
+	<text key="Type 80 GPMG(MOD3)" text="80式通用机枪(MOD3)" />
+	<text key="Type 80 GPMG(MOD3)-[Position Fortification]" text="80式通用机枪(MOD3)-[阵地强化]" />
+	<text key="Contender" text="竞争者" />
+	<text key="KRISS Vector" text="维克托“短剑”冲锋枪"/>
+	<text key="MP-443 Rook" text="MP-443“乌鸦”式手枪" />
+	<text key="MP-443 Rook(MOD3)" text="MP-443“乌鸦”式手枪(MOD3)" />
+
+
 
 	<!-- 皮肤翻译 -->
 	<text key="Ameli-[Gift-selling Christmas Tree]" text="Ameli-[卖礼物的圣诞树]" />
@@ -546,7 +573,8 @@
 	<text key="HOWA Type 89-[Reindeer Manifesto]" text="HOWA 89式自突击步枪-[麋鹿宣言]" />
 	<text key="HK21-[Silver Fox's 1/9 Platform]" text="HK21-[银狐的1/9月台]" />
 	<text key="FABARM FP-6-[Satellite of Love]" text="FABARM FP-6-[恋爱卫星]" />
-	<text key="Contender-[Dragon Wolf Cub]" text="Contender-[龙狼子]" />
+	<text key="Contender-[Dragon Wolf Cub]" text="竞争者-[龙狼子]" />
+	<text key="Contender-[Phantom of the Opera]" text="竞争者-[歌剧魅影]" />
 	<text key="T91-[Snowy Plum Pearls]" text="T91-[朱梅雪]"/>
 	<text key="T91-[Snowy Plum Pearls]-[Annihilation Focus N]" text="T91-[朱梅雪]-[歼灭专注N]"/>
 	<text key="NZ75-[Golden Coreopsis]" text="NZ75-[金姬菊]"/>
@@ -617,6 +645,10 @@
 	<text key="SV-98 (MOD3)-[Waitress]-[Shadowy Savior]" text="SV-98 (MOD3)-[女服务生]-[阴影解救者]"/>
 	<text key="SV-98 (MOD3)-[Piercing the Heart]" text="SV-98 (MOD3)-[正中红心！]"/>
 	<text key="SV-98 (MOD3)-[Piercing the Heart]-[Shadowy Savior]" text="SV-98 (MOD3)-[正中红心！]-[阴影解救者]"/>
+	<text key="KRISS Vector-[Love is Blind]" text="维克托“短剑”冲锋枪-[盲信者]"/>
+	<text key="KRISS Vector-[Hellfire]" text="维克托“短剑”冲锋枪-[地狱火]"/>
+	<text key="FN-49-[Umbrella Daydream]" text="FN-49-[伞中之梦]"/>
+	<text key="FN-49(MOD3)-[Umbrella Daydream]" text="FN-49(MOD3)-[伞中之梦]"/>
 
     <!--MOD3皮肤枪翻译-->
 	<text key="HK416(MOD3)-[Primrose-Flavored Foil Candy]" text="HK416(MOD3)-[千宵草味的锡纸糖]" />
@@ -714,11 +746,6 @@
 	<text key="rocket" text="火箭弹" />
 	<text key="P90" text="P90冲锋枪" />
 	<text key="Medikit" text="医疗包" />
-	<text key="m79 grenade launcher" text="M79榴弹发射器" />
-	<text key="M79" text="M79" />
-	<text key="MG deploy" text="重机枪部署包" />
-	<text key="MG" text="重机枪" />
-	<text key="D40mm-Flak" text="Flak 40mm防空炮" />
 	<text key="PS Mortar" text="巡逻艇迫击炮" />
 	<text key="PB" text="PB 6P9微声手枪" />
 	<text key="Glock 17" text="Glock 17手枪" />

@@ -19,6 +19,7 @@
 
 class call_event : Tracker {
 	protected Metagame@ m_metagame;
+    protected int m_DummyCallID=0;
 
 	call_event(Metagame@ metagame) {
 		@m_metagame = @metagame;
@@ -26,13 +27,86 @@ class call_event : Tracker {
 
 	protected void handleCallEvent(const XmlElement@ event) {
         if(event.getIntAttribute("player_id") != -1 ){
-            if(event.getStringAttribute("phase") == "queue"){
+
+            string callKey = event.getStringAttribute("call_key");
+            string phase = event.getStringAttribute("phase");
+            string position = event.getStringAttribute("target_position");
+            int callId = event.getIntAttribute("id");
+            int characterId = event.getIntAttribute("character_id");
+            int factionId = event.getIntAttribute("faction_id");
+
+            if (callKey == "gk_rampage_fairy_ac130.call" && phase == "launch") {
+                bool exsist_ac130 = false;
+                int j=-1;
+                for (uint i=0;i<GFL_event_array.length();i++){
+                    if (GFL_event_array[i].m_eventkey==2) {
+                        exsist_ac130=true;
+                        j=i;
+                    }
+                }
+                if (exsist_ac130){
+                    const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+                    if (character !is null) {
+                        int playerId = character.getIntAttribute("player_id");
+                        sendPrivateMessageKey(m_metagame,playerId,"ac130callexisthint");
+                        GiveRP(m_metagame,characterId,3000);
+                    }
+                }
+                else {
+                    sendFactionMessageKey(m_metagame,factionId,"ac130callstarthint");
+                    ManualCallTask@ FairyRequest = ManualCallTask(characterId,"",0.0,factionId,stringToVector3(position),"foobar");
+                    FairyRequest.setIndex(9);
+                    FairyRequest.setSize(0.5);
+                    FairyRequest.setDummyId(m_DummyCallID);
+                    FairyRequest.setRange(120.0);
+                    FairyRequest.setIconTypeKey("call_marker_fury");
+                    int flagId = m_DummyCallID + 15000;
+                    addCastlingMarker(FairyRequest);
+                    m_DummyCallID++;
+                    GFL_event_array.insertLast(GFL_event(characterId,factionId,2,stringToVector3(position),1.0,-1.0,flagId));
+                }
+				
+			}
+
+            else if (callKey == "gk_snipe_fairy.call" && phase == "launch") {
+                bool exsist = false;
+                int j=-1;
+                for (uint i=0;i<GFL_event_array.length();i++){
+                    if (GFL_event_array[i].m_eventkey==1) {
+                        exsist=true;
+                        j=i;
+                    }
+                }
+                if (exsist){
+                    const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+                    if (character !is null) {
+                        int playerId = character.getIntAttribute("player_id");
+                        sendPrivateMessageKey(m_metagame,playerId,"snipecallexisthint");
+                        GiveRP(m_metagame,characterId,300);
+                    }
+                }
+                else {
+                    sendFactionMessageKey(m_metagame,factionId,"snipecallstarthint");
+                    ManualCallTask@ FairyRequest = ManualCallTask(characterId,"",0.0,factionId,stringToVector3(position),"foobar");
+                    FairyRequest.setIndex(14);
+                    FairyRequest.setSize(0.5);
+                    FairyRequest.setDummyId(m_DummyCallID);
+                    FairyRequest.setRange(80.0);
+                    FairyRequest.setIconTypeKey("call_marker_snipe");
+                    int flagId = m_DummyCallID + 15000;
+                    addCastlingMarker(FairyRequest);
+                    m_DummyCallID++;
+                    GFL_event_array.insertLast(GFL_event(characterId,factionId,1,stringToVector3(position),1.0,-1.0,flagId));
+                }
+			}
+
+			if(phase == "queue"){
                 addCustomStatToCharacter(m_metagame,"radio_call",event.getIntAttribute("character_id"));
             }
         }
     }
 
-    protected void addCastlnigMarker(ManualCallTask@ info){
+    protected void addCastlingMarker(ManualCallTask@ info){
         int flagId = info.m_callId + 15000;
         XmlElement command("command");
             command.setStringAttribute("class", "set_marker");
@@ -51,14 +125,15 @@ class call_event : Tracker {
         m_metagame.getComms().send(command);
     }
 
-    protected void removeCastlnigMarker(ManualCallTask@ info){
-        int flagId = info.m_callId + 15000;
-        XmlElement command("command");
-            command.setStringAttribute("class", "set_marker");
-            command.setIntAttribute("id", flagId);
-            command.setIntAttribute("faction_id", info.m_factions);
-            command.setIntAttribute("enabled", 0);
-        m_metagame.getComms().send(command);
-    }
+	bool hasEnded() const {
+		// always on
+		return false;
+	}
+
+	// --------------------------------------------
+	bool hasStarted() const {
+		// always on
+		return true;
+	}
 
 }

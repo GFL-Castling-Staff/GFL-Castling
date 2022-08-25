@@ -25,7 +25,7 @@
 	last_burst_retrigger_time="0.25"
 	burst_shots="1"
 	/>
-	<inventory  buy_price="80.0" sell_price="20.0" />
+	<inventory  buy_price="300.0" sell_price="200.0" />
 	<!--Animations-->
 	<next_in_chain key="gkw_m82a1_skill.weapon" share_ammo="1" />
 
@@ -52,7 +52,7 @@
 
     <weak_hand_hold offset="0.3" />
     <projectile file="ntw.projectile">
-        <result class="blast" damage="8"   radius="3.5" decal="1" push="0.2" character_state="death" 	faction_compare="not_equal"/>
+        <result class="blast" damage="8"   radius="3.5" decal="1" push="0.4" character_state="death" 	faction_compare="not_equal"/>
     </projectile>
     
     <!--Accuracy, Movement speed-->
@@ -64,6 +64,7 @@
     <stance state_key="crouching" accuracy="1" />
     <stance state_key="prone" accuracy="1" />
     <stance state_key="over_wall" accuracy="1" />
+	<modifier class="hit_success_probability" value="0.2" />  
     <modifier class="speed" value="-0.1" /> 
 
 
@@ -95,7 +96,7 @@
 	last_burst_retrigger_time="0.25"
 	burst_shots="1"
 	/>
-	<inventory  buy_price="80.0" sell_price="20.0" />
+	<inventory  buy_price="300.0" sell_price="200.0" />
 	<!--Animations-->
 	<next_in_chain key="gkw_m82a1.weapon" share_ammo="1" />
 
@@ -121,7 +122,7 @@
 
     <weak_hand_hold offset="0.3" />
     <projectile file="ntw.projectile">
-        <result class="blast" damage="6"   radius="2.5" decal="1" push="0.2" character_state="death" 	faction_compare="not_equal"/>
+        <result class="blast" damage="6"   radius="2.5" decal="1" push="0.4" character_state="death" 	faction_compare="not_equal"/>
     </projectile>
     
     <!--Accuracy, Movement speed-->
@@ -134,6 +135,7 @@
     <stance state_key="prone" accuracy="1" />
     <stance state_key="over_wall" accuracy="1" />
     <modifier class="speed" value="-0.25" />
+	<modifier class="hit_success_probability" value="0.2" />  
 	<modifier class="detectability" value="-0.15" />
 
 </weapon>

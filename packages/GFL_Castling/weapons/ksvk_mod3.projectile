@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projectile class="bullet" name="AP bullet" key="ksvk_mod3.projectile" slot="1" pulldown_in_air="4">
-    <result class="blast" radius="2.5" damage="12" push="0.3" decal="0" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0" />
+    <result class="blast" radius="2.5" damage="12" push="0.6" decal="0" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0" />
     <trigger class="impact" />
     <rotation class="motion" />
 

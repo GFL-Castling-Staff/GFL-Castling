@@ -203,4 +203,47 @@
         <capacity value="100" source="rank" source_value="1.143" />
         <inventory encumbrance="0.0" price="500.0" />
     </call>
+    <!-- 暴怒妖精（AC130） -->
+    <call name="Fury Fairy" key="gk_rampage_fairy_ac130.call" initiation_comment1="Fury Fairy" initiation_comment2="Gunship support" acknowledge_comment="Confirm, checking gunship status" acknowledge_time="2" launch_comment="Gunship status confirmed" notify_metagame="1">
+
+        <round 
+        instances="0"
+        instance_class="projectile"
+        instance_key=""
+        launch_time="3.0"
+        spawn_time="5.0">
+        
+        <effect class="launch" ref="ShadowAirplaneCircleApproach" shadow="1" />
+        </round>
+
+        <round launch_time="3.0"
+        spawn_time="5.0">
+        <effect class="spawn" ref="ShadowAirplaneCircle" shadow="1" />
+        </round>
+
+        <hud_icon filename="call_RampageFairy.png" />
+        <capacity value="0" source="rank" source_value="0.0" />
+        <capacity value="100" source="rank" source_value="6.48" />
+        <inventory encumbrance="0.0" price="3000.0" />
+    </call> 
+    <!-- 狙击妖精 -->
+    <call name="Snipe Fairy" key="gk_snipe_fairy.call" initiation_comment1="Snipe Fairy" initiation_comment2="Snipe Command" acknowledge_comment="Confirm, checking Snipe UAV status" acknowledge_time="0" launch_comment="UAV status confirmed" notify_metagame="1">
+
+        <round 
+        instances="0"
+        instance_class="projectile"
+        instance_key=""
+        launch_time="2.0"
+        spawn_time="2.0">
+        </round>
+
+        <round launch_time="2.0"
+        spawn_time="2.0">
+        </round>
+
+        <hud_icon filename="call_RampageFairy.png" />
+        <capacity value="0" source="rank" source_value="0.0" />
+        <capacity value="100" source="rank" source_value="6.48" />
+        <inventory encumbrance="0.0" price="300.0" />
+    </call>     
 </calls>

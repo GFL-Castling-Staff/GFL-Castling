@@ -21,6 +21,8 @@ dictionary GFL_Event_Index = {
         // 暴怒妖精——AC130
         {"rampage_fairy_ac130",2},
 
+        {"sniper_m200",3},
+
         // 下面这行是用来占位的，在这之上添加新的即可
         {"666",-1}
 };
@@ -48,16 +50,21 @@ class GFL_event_system : Tracker {
                         switch(GFL_event_array[a].m_eventkey){
                             case 1:{excuteSniperFairy(m_metagame,GFL_event_array[a]);break;}
                             case 2:{
-                                if(GFL_event_array[a].m_randseed==-1.0)
-                                    GFL_event_array[a].m_randseed=rand(0,3.14);
+                                if(GFL_event_array[a].m_randseed==-1.0){
+                                    GFL_event_array[a].m_randseed=float(rand(0,3.14));
+                                }
                                 excuteRampageFairyAC130(m_metagame,GFL_event_array[a]);
                                 break;
                             }
+                            case 3:{excuteSniperM200(m_metagame,GFL_event_array[a]);break;}
                             default:
                                 break;
                         }
                     }
                     else{
+                        if(GFL_event_array[a].m_markerId != 0){
+                            removeCastlingMarker(GFL_event_array[a]);
+                        }
                         GFL_event_array.removeAt(a);
                     }
                 }
@@ -76,6 +83,14 @@ class GFL_event_system : Tracker {
 		return true;
 	}
 
+    protected void removeCastlingMarker(GFL_event@ info){
+        XmlElement command("command");
+            command.setStringAttribute("class", "set_marker");
+            command.setIntAttribute("id", info.m_markerId);
+            command.setIntAttribute("faction_id", info.m_factionid);
+            command.setIntAttribute("enabled", 0);
+        m_metagame.getComms().send(command);
+    }
 }
 
 class GFL_event{
@@ -86,21 +101,37 @@ class GFL_event{
     float m_randseed;
 
     int m_phase=1;
+    int m_markerId=0;
     float m_time;
     bool m_enable=true;
 
-    GFL_event(int characterId,int factionid,int key,Vector3 pos,float delay_time=0.0,float randseed=-1.0){
+    GFL_event(int characterId,int factionid,int key,Vector3 pos,float delay_time=0.0,float randseed=-1.0,int markerId=0){
         m_characterId=characterId;
         m_factionid=factionid;
         m_eventkey=key;
         m_pos=pos;
         m_time=delay_time;
         m_randseed=randseed;
+        m_markerId=markerId;
     }
 }
 
 void excuteSniperFairy(GameMode@ metagame,GFL_event@ eventinfo){
-    eventinfo.m_time=1.5;
+    eventinfo.m_time=1;
+    int luckyGuyid = getNearbyRandomLuckyGuyId(metagame,eventinfo.m_factionid,eventinfo.m_pos,30.0f);
+    if(luckyGuyid!=-1){
+        const XmlElement@ luckyGuy = getCharacterInfo(metagame, luckyGuyid);
+        Vector3 luckyGuyPos = stringToVector3(luckyGuy.getStringAttribute("position"));
+        insertCommonStrike(eventinfo.m_characterId,eventinfo.m_factionid,8,getRandomOffsetVector(eventinfo.m_pos,60.0),luckyGuyPos);                        
+    }
+    eventinfo.m_phase++;
+    if(eventinfo.m_phase>=20){
+        eventinfo.m_enable=false;
+    }
+}
+
+void excuteSniperM200(GameMode@ metagame,GFL_event@ eventinfo){
+    eventinfo.m_time=2.0;
     int luckyGuyid = getNearbyRandomLuckyGuyId(metagame,eventinfo.m_factionid,eventinfo.m_pos,40.0f);
     if(luckyGuyid!=-1){
         const XmlElement@ luckyGuy = getCharacterInfo(metagame, luckyGuyid);
@@ -174,11 +205,12 @@ void excuteRampageFairyAC130(GameMode@ metagame,GFL_event@ eventinfo){
 
     if(eventinfo.m_phase<=1)
     {
-        playSoundAtLocation(metagame,"ac130_flyby.wav",eventinfo.m_factionid,eventinfo.m_pos,6.0);
+        playSoundAtLocation(metagame,"ac130_flyby.wav",eventinfo.m_factionid,eventinfo.m_pos,4.0);
         playRandomSoundArray(metagame,AC130StartVoice,eventinfo.m_factionid,eventinfo.m_pos.toString(),4.0);
         ac130_voice_interval = 2;
         ac130_flyby_interval = 3;
         ac130_pre_pos = eventinfo.m_pos;
+        sendFactionMessageKey(metagame,eventinfo.m_factionid,"ac130fight");
     }
 
     float jud_time = eventinfo.m_phase*eventinfo.m_time;
@@ -187,11 +219,11 @@ void excuteRampageFairyAC130(GameMode@ metagame,GFL_event@ eventinfo){
     // 算了保险起见都写着
     // tnnd为了配合下面还得中途多放几次
     int voice_last_time = 30;
-    uint voice_phase_interval = uint(voice_last_time/eventinfo.m_time);
+    int voice_phase_interval = int(voice_last_time/eventinfo.m_time);
     if( (ac130_flyby_interval == 0) && ((ac130_strike_num-eventinfo.m_phase)>(voice_phase_interval-4))){
         _log("current phase: " + eventinfo.m_phase);
         ac130_flyby_interval == 6;
-        playSoundAtLocation(metagame,"ac130_flyby.wav",eventinfo.m_factionid,eventinfo.m_pos,6.0);
+        playSoundAtLocation(metagame,"ac130_flyby.wav",eventinfo.m_factionid,eventinfo.m_pos,4.0);
     }
 
     int luckyGuyid;
@@ -229,9 +261,9 @@ void excuteRampageFairyAC130(GameMode@ metagame,GFL_event@ eventinfo){
             if(ac130_voice_interval<=0){
                 switch(attacknum)
                 {
-                    case 5:{playRandomSoundArray(metagame,AC130ShotgunVoice,eventinfo.m_factionid,eventinfo.m_pos.toString(),4.0);break;}
-                    case 6:{playRandomSoundArray(metagame,AC130MinigunVoice,eventinfo.m_factionid,eventinfo.m_pos.toString(),4.0);break;}
-                    case 7:{playRandomSoundArray(metagame,AC130M202Voice,eventinfo.m_factionid,eventinfo.m_pos.toString(),4.0);break;}
+                    case 5:{playRandomSoundArray(metagame,AC130ShotgunVoice,eventinfo.m_factionid,eventinfo.m_pos.toString(),3.5);break;}
+                    case 6:{playRandomSoundArray(metagame,AC130MinigunVoice,eventinfo.m_factionid,eventinfo.m_pos.toString(),3.5);break;}
+                    case 7:{playRandomSoundArray(metagame,AC130M202Voice,eventinfo.m_factionid,eventinfo.m_pos.toString(),3.5);break;}
                     default:    break;
                 }           
                 ac130_voice_interval = 2;
@@ -243,16 +275,16 @@ void excuteRampageFairyAC130(GameMode@ metagame,GFL_event@ eventinfo){
             ac130_jud_confused++;
             if(ac130_jud_confused>=5){
                 ac130_jud_confused = 0;
-                playSoundAtLocation(metagame,"AUHarbi_voiSelBate.wav",eventinfo.m_factionid,eventinfo.m_pos,4.0);
+                playSoundAtLocation(metagame,"AUHarbi_voiSelBate.wav",eventinfo.m_factionid,eventinfo.m_pos,3.5);
             }
-            else playRandomSoundArray(metagame,AC130NoTargetVoice,eventinfo.m_factionid,eventinfo.m_pos.toString(),4.0);
+            else playRandomSoundArray(metagame,AC130NoTargetVoice,eventinfo.m_factionid,eventinfo.m_pos.toString(),3.5);
 
         }        
     }
 
     eventinfo.m_phase++;
     if(eventinfo.m_phase>=ac130_strike_num){
-        playRandomSoundArray(metagame,AC130EndVoice,eventinfo.m_factionid,eventinfo.m_pos.toString(),4.0);
+        playRandomSoundArray(metagame,AC130EndVoice,eventinfo.m_factionid,eventinfo.m_pos.toString(),3.5);
         eventinfo.m_enable=false;
     }
 }

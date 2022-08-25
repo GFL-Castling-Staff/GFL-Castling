@@ -53,6 +53,9 @@ dictionary airstrikeIndex = {
         // 暴怒妖精_ac130_四联火箭筒
         {"ac130_m202",7},
 
+        // 狙击
+        {"snipe",8},
+
         // 下面这行是用来占位的，在这之上添加新的即可
         {"666",-1}
 };
@@ -289,13 +292,13 @@ class GFLairstrike : Tracker {
                     }
                     case 4:{
                         // _log("Sniper Fairy activated");
-                        CreateDirectProjectile(m_metagame,start_pos.add(Vector3(0,50,0)),end_pos,"m200_snipe.projectile",cid,fid,240);
-                        playSoundAtLocation(m_metagame,"m200_fire_snipe.wav",fid,end_pos);
+                        CreateDirectProjectile(m_metagame,start_pos.add(Vector3(0,60,0)),end_pos,"m200_snipe.projectile",cid,fid,270);
+                        playSoundAtLocation(m_metagame,"m200_fire_snipe.wav",fid,end_pos,2.4);
                         Airstrike_strafe.removeAt(a);
                         break;                        
                     }
                     case 5:{
-                        _log("ac130 Fairy activated");
+                        // _log("ac130 Fairy activated");
                         
                         float strike_rand=6.0;
                         playSoundAtLocation(m_metagame,"ntw20_fire_FromBF2042.wav",fid,end_pos,5.0);
@@ -311,7 +314,7 @@ class GFLairstrike : Tracker {
                         break;                        
                     }
                     case 6:{//AC130 单次 锁人扫射
-                        _log("ac130 minigun Fairy activated");
+                        // _log("ac130 minigun Fairy activated");
 
                         float rand_angle = rand(-3.14,3.14);
                         float rand_x1 = 2*cos(rand_angle);
@@ -344,7 +347,7 @@ class GFLairstrike : Tracker {
                         break;
                     }
                     case 7:{
-                        _log("ac130 m202 Fairy activated");
+                        // _log("ac130 m202 Fairy activated");
                         float strike_rand=8.0;
                         for(int j=1;j<=8;j++)
                         {
@@ -358,6 +361,13 @@ class GFLairstrike : Tracker {
                         Airstrike_strafe.removeAt(a);
                         break;                        
                     }
+                    case 8:{
+                        // _log("Sniper Fairy activated");
+                        CreateDirectProjectile(m_metagame,start_pos.add(Vector3(0,40,0)),end_pos,"fairy_snipe.projectile",cid,fid,240);
+                        playSoundAtLocation(m_metagame,"supersassmod3_fire_FromINS.wav",fid,end_pos,2.4);
+                        Airstrike_strafe.removeAt(a);
+                        break;                        
+                    }                    
                     default:
                         break;
                 }
