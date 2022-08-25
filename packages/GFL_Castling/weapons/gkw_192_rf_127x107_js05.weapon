@@ -22,7 +22,7 @@
 	projectile_speed="230.21" 
 	barrel_offset="0.4" 
 	projectiles_per_shot="4" />
-    <inventory  buy_price="20.0" sell_price="10.0" />	
+    <inventory  buy_price="300.0" sell_price="200.0" />	
 	<!--Animations-->
 	
 
@@ -66,5 +66,5 @@
     <stance state_key="prone" accuracy="1.1" />
     <stance state_key="over_wall" accuracy="1.1" /> 
     <modifier class="speed" value="-0.1" />  
-
+    <modifier class="hit_success_probability" value="0.2" />  
 </weapon>

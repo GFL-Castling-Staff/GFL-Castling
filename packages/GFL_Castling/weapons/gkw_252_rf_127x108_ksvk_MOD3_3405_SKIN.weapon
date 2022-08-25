@@ -22,7 +22,7 @@
 	projectile_speed="255" 
 	barrel_offset="0.6" 
 	projectiles_per_shot="4" />
-    <inventory  buy_price="300.0" sell_price="300.0" />	
+    <inventory  buy_price="450.0" sell_price="300.0" />	
     <next_in_chain key="gkw_ksvkmod3_3405_skill.weapon" share_ammo="0" />
 	<!--Animations-->
 	
@@ -105,7 +105,8 @@
     <stance state_key="standing" accuracy="1.0"/>
     <stance state_key="crouching" accuracy="1.0" />
     <stance state_key="prone" accuracy="1.0" />
-    <stance state_key="over_wall" accuracy="1.0" />  
+    <stance state_key="over_wall" accuracy="1.0" />
+    <modifier class="hit_success_probability" value="0.2" />    
     <capacity value="1" source="rank" source_value="0.0" />
     
 </weapon>
@@ -130,7 +131,7 @@
 	projectile_speed="200" 
 	barrel_offset="0.6" 
 	projectiles_per_shot="1" />
-    <inventory  buy_price="300.0" sell_price="300.0" />	
+    <inventory  buy_price="450.0" sell_price="300.0" />	
     <next_in_chain key="gkw_ksvkmod3_3405.weapon" share_ammo="0" />
 	<!--Animations-->
 	
@@ -173,7 +174,7 @@
     <stance state_key="prone" accuracy="1.0" />
     <stance state_key="over_wall" accuracy="1.0" />  
     <capacity value="1" source="rank" source_value="0.0" />
-    
+    <modifier class="hit_success_probability" value="0.2" />  
     <modifier class="speed" value="-0.2" /> 
 </weapon>
 </weapons>

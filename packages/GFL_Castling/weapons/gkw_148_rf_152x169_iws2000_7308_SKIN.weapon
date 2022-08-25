@@ -24,7 +24,7 @@
         burst_shots="1" />
         <next_in_chain key="gkw_iws2000_7308_skill.weapon" share_ammo="1" />
         <!--Animations-->
-        <inventory  buy_price="120.0" sell_price="120.0" />
+        <inventory  buy_price="320.0" sell_price="220.0" />
         <animation key="reload" animation_key="reloading, magazine rifle 2.1" />
         <!--Sounds-->
         <sound key="fire" fileref="iws2000_fire_FromSAMTSE.wav" pitch_variety="0.05" volume="1.4" />
@@ -58,6 +58,7 @@
         <stance state_key="crouching" accuracy="1" />
         <stance state_key="prone" accuracy="1" />
         <stance state_key="over_wall" accuracy="1" />
+        <modifier class="hit_success_probability" value="0.2" />  
     </weapon>
     <weapon file="heavy_anti_materiel_rifle.animation_base" key="gkw_iws2000_7308_skill.weapon">
         <!--Weapon specifications-->
@@ -83,7 +84,7 @@
         burst_shots="1" />
         <next_in_chain key="gkw_iws2000_7308.weapon" share_ammo="1" />
         <!--Animations-->
-        <inventory  buy_price="120.0" sell_price="120.0" />
+        <inventory  buy_price="320.0" sell_price="220.0" />
         <animation key="reload" animation_key="reloading, magazine rifle 2.1" />
         <!--Sounds-->
         <sound key="fire" fileref="iws2000_fire_FromSAMTSE.wav" pitch_variety="0.05" volume="1.4" />
@@ -118,5 +119,6 @@
         <stance state_key="crouching" accuracy="1" />
         <stance state_key="prone" accuracy="1" />
         <stance state_key="over_wall" accuracy="1" />
+        <modifier class="hit_success_probability" value="0.2" />  
     </weapon>
 </weapons>
