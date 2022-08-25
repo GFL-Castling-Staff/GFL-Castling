@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<projectiles>
+    <projectile class="grenade" name="Fairy Command:Defence Fairy - Hesco Bastion" key="fairy_command_defence_1.projectile" slot="1" pulldown_in_air="0.0" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" >
+        <result class="notify_script" key="fc_defence_1"/>
+        <trigger class="time" time_to_live="0.0"/>
+        <rotation class="random" />
+        <model />
+        <trail probability="0.0" />
+        <commonness value="0.0" can_respawn_with="1" in_stock="1"/>
+        <capacity value="4" source="rank" source_value="6.48" />
+        <hud_icon filename="hud_glorianade.png" />
+        <inventory encumbrance="1.0" price="40.0" />
+    </projectile>
+    <projectile class="grenade" name="Fairy Command:Defence Fairy - Sandbag Cover" key="fairy_command_defence_2.projectile" slot="1" pulldown_in_air="0.0" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" >
+        <result class="notify_script" key="fc_defence_2"/>
+        <trigger class="time" time_to_live="0.0"/>
+        <rotation class="random" />
+        <model />
+        <trail probability="0.0" />
+        <commonness value="0.0" can_respawn_with="1" in_stock="1"/>
+        <capacity value="4" source="rank" source_value="0.0" />
+        <hud_icon filename="hud_glorianade.png" />
+        <inventory encumbrance="1.0" price="20.0" />
+    </projectile>
+</projectiles>

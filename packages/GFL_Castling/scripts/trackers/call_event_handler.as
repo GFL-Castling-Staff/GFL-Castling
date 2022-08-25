@@ -59,13 +59,45 @@ class call_event : Tracker {
                     FairyRequest.setSize(0.5);
                     FairyRequest.setDummyId(m_DummyCallID);
                     FairyRequest.setRange(120.0);
-                    FairyRequest.setIconTypeKey("call_marker_air");
+                    FairyRequest.setIconTypeKey("call_marker_fury");
                     int flagId = m_DummyCallID + 15000;
                     addCastlingMarker(FairyRequest);
                     m_DummyCallID++;
                     GFL_event_array.insertLast(GFL_event(characterId,factionId,2,stringToVector3(position),1.0,-1.0,flagId));
                 }
 				
+			}
+
+            else if (callKey == "gk_snipe_fairy.call" && phase == "launch") {
+                bool exsist = false;
+                int j=-1;
+                for (uint i=0;i<GFL_event_array.length();i++){
+                    if (GFL_event_array[i].m_eventkey==1) {
+                        exsist=true;
+                        j=i;
+                    }
+                }
+                if (exsist){
+                    const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+                    if (character !is null) {
+                        int playerId = character.getIntAttribute("player_id");
+                        sendPrivateMessageKey(m_metagame,playerId,"snipecallexisthint");
+                        GiveRP(m_metagame,characterId,300);
+                    }
+                }
+                else {
+                    sendFactionMessageKey(m_metagame,factionId,"snipecallstarthint");
+                    ManualCallTask@ FairyRequest = ManualCallTask(characterId,"",0.0,factionId,stringToVector3(position),"foobar");
+                    FairyRequest.setIndex(14);
+                    FairyRequest.setSize(0.5);
+                    FairyRequest.setDummyId(m_DummyCallID);
+                    FairyRequest.setRange(80.0);
+                    FairyRequest.setIconTypeKey("call_marker_snipe");
+                    int flagId = m_DummyCallID + 15000;
+                    addCastlingMarker(FairyRequest);
+                    m_DummyCallID++;
+                    GFL_event_array.insertLast(GFL_event(characterId,factionId,1,stringToVector3(position),1.0,-1.0,flagId));
+                }
 			}
 
 			if(phase == "queue"){

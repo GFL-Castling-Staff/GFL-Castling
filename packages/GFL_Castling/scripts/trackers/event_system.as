@@ -21,6 +21,8 @@ dictionary GFL_Event_Index = {
         // 暴怒妖精——AC130
         {"rampage_fairy_ac130",2},
 
+        {"sniper_m200",3},
+
         // 下面这行是用来占位的，在这之上添加新的即可
         {"666",-1}
 };
@@ -54,6 +56,7 @@ class GFL_event_system : Tracker {
                                 excuteRampageFairyAC130(m_metagame,GFL_event_array[a]);
                                 break;
                             }
+                            case 3:{excuteSniperM200(m_metagame,GFL_event_array[a]);break;}
                             default:
                                 break;
                         }
@@ -114,7 +117,21 @@ class GFL_event{
 }
 
 void excuteSniperFairy(GameMode@ metagame,GFL_event@ eventinfo){
-    eventinfo.m_time=1.5;
+    eventinfo.m_time=3;
+    int luckyGuyid = getNearbyRandomLuckyGuyId(metagame,eventinfo.m_factionid,eventinfo.m_pos,30.0f);
+    if(luckyGuyid!=-1){
+        const XmlElement@ luckyGuy = getCharacterInfo(metagame, luckyGuyid);
+        Vector3 luckyGuyPos = stringToVector3(luckyGuy.getStringAttribute("position"));
+        insertCommonStrike(eventinfo.m_characterId,eventinfo.m_factionid,8,getRandomOffsetVector(eventinfo.m_pos,60.0),luckyGuyPos);                        
+    }
+    eventinfo.m_phase++;
+    if(eventinfo.m_phase>=10){
+        eventinfo.m_enable=false;
+    }
+}
+
+void excuteSniperM200(GameMode@ metagame,GFL_event@ eventinfo){
+    eventinfo.m_time=2.0;
     int luckyGuyid = getNearbyRandomLuckyGuyId(metagame,eventinfo.m_factionid,eventinfo.m_pos,40.0f);
     if(luckyGuyid!=-1){
         const XmlElement@ luckyGuy = getCharacterInfo(metagame, luckyGuyid);

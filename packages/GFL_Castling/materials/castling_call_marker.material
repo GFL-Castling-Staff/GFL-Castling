@@ -67,7 +67,7 @@ material CastlingMarkerGroundCall_2 {
 	}
 }
 
-material CastlingMarkerGroundCall_2 {
+material CastlingMarkerGroundCall_3 {
 	receive_shadows off
 	technique Default {
 		pass Basic {
@@ -84,6 +84,52 @@ material CastlingMarkerGroundCall_2 {
 
 			texture_unit Image {
 				texture castling_marker_ground_call_3.png
+				tex_address_mode clamp
+			}
+		} 
+	}
+}
+
+material CastlingMarkerGroundCall_4 {
+	receive_shadows off
+	technique Default {
+		pass Basic {
+			lighting off
+			ambient vertexcolour
+			diffuse vertexcolour
+
+			cull_hardware none
+			cull_software none        
+			scene_blend alpha_blend
+
+			depth_write off
+            depth_check off
+
+			texture_unit Image {
+				texture castling_marker_ground_call_4.png
+				tex_address_mode clamp
+			}
+		} 
+	}
+}
+
+material CastlingMarkerGroundCall_5 {
+	receive_shadows off
+	technique Default {
+		pass Basic {
+			lighting off
+			ambient vertexcolour
+			diffuse vertexcolour
+
+			cull_hardware none
+			cull_software none        
+			scene_blend alpha_blend
+
+			depth_write off
+            depth_check off
+
+			texture_unit Image {
+				texture castling_marker_ground_call_5.png
 				tex_address_mode clamp
 			}
 		} 

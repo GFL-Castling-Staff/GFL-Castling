@@ -689,6 +689,9 @@
 	<weapon key="repair_fairy.weapon" />
 	<weapon key="rescue_fairy.weapon" />
 	<weapon key="target_fairy.weapon" />
+	<projectile key="fairy_command_defence_1.projectile" />
+	<projectile key="fairy_command_defence_2.projectile" />
+
 	<!-- 打call -->
 	<!-- <call key="rubber_airboat.call" /> -->
 	<call key="sg1hg1mg2.call" />
@@ -703,6 +706,7 @@
 	<call key="gk_bombardment_fairy.call" />
 	<call key="gk_airstrike_fairy.call" />
 	<call key="gk_rampage_fairy_ac130.call"/>
+	<call key="gk_snipe_fairy.call"/>
 	<!-- <call key="gk_rocket_fairy.call" /> -->
 	<call key="gk_airdrop_supply.call"/>
 	<!-- 手雷类 -->
@@ -761,6 +765,9 @@
 	<weapon key="gkw_consume_at4.weapon" />
 	<weapon key="gkw_consume_javelin.weapon" />
 	<weapon key="gkw_ump9_guard_vent.weapon"/>
+	<weapon key="cover_deploy.weapon"/>
+	<weapon key="cover_deploy_2.weapon"/>
+
 	<!-- 维修机甲 -->
 	<weapon key="gkr_bbs.weapon" />
 	<!-- HG医疗榴弹 -->
