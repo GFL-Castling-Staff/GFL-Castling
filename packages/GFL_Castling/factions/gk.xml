@@ -290,6 +290,12 @@
 			<carry_item key="exo_ai_only_3" />
 		</resources>	
 	</soldier>
+	<soldier name="default_fuck_panzer" spawn_score="0.3" squad_size_xp_cap="0.0" copy_from="default_spawn_ai">
+		<ai filename="sniper.ai" />
+		<resources file="gk_atrf.resources" clear_carry_items="1" clear_calls="1">
+			<carry_item key="exo_ai_only.carry_item" />
+		</resources>	
+	</soldier>
 	<soldier name="default_mg" spawn_score="1.6" squad_size_xp_cap="0.0" copy_from="default_spawn_ai">
 		<ai filename="eod.ai" />
 		<resources file="gk_mg.resources" clear_carry_items="1" clear_calls="1">
@@ -318,7 +324,7 @@
 			<attribute weight="1.0" min="7000.0" max="15000.0" />
 		</attribute_config>
 	</soldier>
-	<soldier name="special_forces_404" spawn_score="0.01" squad_size_xp_cap="0.0" copy_from="default_spawn_ai">
+	<soldier name="special_forces_404" spawn_score="0.1" squad_size_xp_cap="0.0" copy_from="default_spawn_ai">
 		<ai filename="elite.ai" />
 		<resources file="gk.resources" clear_weapons="1" clear_carry_items="1">
 		    <weapon key="gkw_404_g11mod3.weapon" />
@@ -505,7 +511,7 @@
 			<attribute weight="1.0" min="7.622" max="10.833" />
 		</attribute_config>
 	</soldier>
-	<soldier name="53_ntw20_rf" spawn_score="0.05" copy_from="default_rf">
+	<soldier name="53_ntw20_rf" spawn_score="0.025" copy_from="default_rf">
 		<character filename="default_gk_pmc.text_lines">
 			<sound key="death" fileref="NTW20_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
 			<sound key="throw" fileref="NTW20_ATTACK_JP.wav" pitch_variety="0.01" volume="0.8" />
@@ -776,7 +782,7 @@
 			<attribute weight="1.0" min="0.100" max="102.833" />
 		</attribute_config>
 	</soldier>
-	<soldier name="95_88typemod3_rf" spawn_score="0.05" copy_from="default_rf">
+	<soldier name="95_88typemod3_rf" spawn_score="0.01" copy_from="default_rf">
 		<character filename="default_gk_pmc.text_lines">
 			<sound key="death" fileref="88typeMod_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
 			<sound key="throw" fileref="88typeMod_MEET_JP.wav" pitch_variety="0.01" volume="0.8" />
@@ -784,7 +790,7 @@
 		</character>
 		<resources file="gk_elite.resources">
 			<weapon key="gkw_88typemod3.weapon" />
-			<carry_item key="cc_t5_16lab.carry_item" />
+			<carry_item key="bp_t5_16lab.carry_item" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="6.622" max="102.833" />
@@ -1148,7 +1154,7 @@
 			<attribute weight="1.0" min="0.100" max="102.833" />
 		</attribute_config>
 	</soldier>
-	<soldier name="231_m82a1_rf" spawn_score="0.05" copy_from="default_rf">
+	<soldier name="231_m82a1_rf" spawn_score="0.025" copy_from="default_rf">
 		<character filename="default_gk_pmc.text_lines">
 			<sound key="death" fileref="M82A1_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
 			<sound key="throw" fileref="M82A1_MEET_JP.wav" pitch_variety="0.01" volume="0.8" />
@@ -1278,7 +1284,7 @@
 			<attribute weight="1.0" min="0.100" max="3.833" />
 		</attribute_config>
 	</soldier>
-	<soldier name="320_gm6_rf" spawn_score="0.05" copy_from="default_rf">
+	<soldier name="320_gm6_rf" spawn_score="0.025" copy_from="default_rf">
 		<character filename="default_gk_pmc.text_lines">
 			<sound key="death" fileref="Gm6Lynx_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
 			<sound key="throw" fileref="Gm6Lynx_ATTACK_JP.wav" pitch_variety="0.01" volume="0.8" />
