@@ -117,22 +117,15 @@ class GFL_event{
 }
 
 void excuteSniperFairy(GameMode@ metagame,GFL_event@ eventinfo){
-    eventinfo.m_time=3;
+    eventinfo.m_time=1;
     int luckyGuyid = getNearbyRandomLuckyGuyId(metagame,eventinfo.m_factionid,eventinfo.m_pos,30.0f);
-    int luckyGuyid2 = getNearbyRandomLuckyGuyId(metagame,eventinfo.m_factionid,eventinfo.m_pos,30.0f);
     if(luckyGuyid!=-1){
         const XmlElement@ luckyGuy = getCharacterInfo(metagame, luckyGuyid);
         Vector3 luckyGuyPos = stringToVector3(luckyGuy.getStringAttribute("position"));
         insertCommonStrike(eventinfo.m_characterId,eventinfo.m_factionid,8,getRandomOffsetVector(eventinfo.m_pos,60.0),luckyGuyPos);                        
     }
-    if(luckyGuyid2!=-1){
-        const XmlElement@ luckyGuy2 = getCharacterInfo(metagame, luckyGuyid);
-        Vector3 luckyGuyPos = stringToVector3(luckyGuy2.getStringAttribute("position"));
-        insertCommonStrike(eventinfo.m_characterId,eventinfo.m_factionid,8,getRandomOffsetVector(eventinfo.m_pos,60.0),luckyGuyPos);                        
-    }
-
     eventinfo.m_phase++;
-    if(eventinfo.m_phase>=10){
+    if(eventinfo.m_phase>=20){
         eventinfo.m_enable=false;
     }
 }
