@@ -462,6 +462,7 @@
 			<weapon key="sfw_vespid.weapon" enabled="1"/>
 			<carry_item key="sf_ar.carry_item" enabled="1" />
 			<projectile key="sf_ap_mine.projectile" enabled="1.0" />
+			<weapon key="cover_deploy.weapon" enabled="1"/>
 		</resources>
 	</soldier>
 	<soldier name="sf_vespid_swap" spawn_score="1.0" copy_from="default_spawn_ai">
@@ -471,6 +472,7 @@
 			<weapon key="sfw_vespid_swap.weapon" enabled="1"/>
 			<carry_item key="sf_swap.carry_item" enabled="1" />
 			<projectile key="sf_ap_mine.projectile" enabled="1.0" />
+			<weapon key="cover_deploy.weapon" enabled="1"/>
 		</resources>
 	</soldier>
 	<!-- ripper -->
@@ -496,6 +498,7 @@
 		<resources clear_weapons="1" clear_calls="1">
 			<weapon key="sfw_guard.weapon" enabled="1"/>
 			<carry_item key="sf_ar.carry_item" enabled="1" />
+			<weapon key="cover_deploy.weapon" enabled="1"/>
 		</resources>
 	</soldier>
 	<!-- jaeger -->

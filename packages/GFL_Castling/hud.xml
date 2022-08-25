@@ -20,5 +20,9 @@
 
 	<comms_marker key="call_marker_snipe" mask_rect="0.4375 0.044921875 0.5625 0.169921875" flag_material="CommsMarkerFlagCall" ground_material="CastlingMarkerGroundCall_3" size="9.0" />
 
+	<comms_marker key="call_marker_snipe_m200" mask_rect="0.4375 0.044921875 0.5625 0.169921875" flag_material="CommsMarkerFlagCall" ground_material="CastlingMarkerGroundCall_4" size="9.0" />
+
+	<comms_marker key="call_marker_fury" mask_rect="0.4375 0.044921875 0.5625 0.169921875" flag_material="CommsMarkerFlagCall" ground_material="CastlingMarkerGroundCall_5" size="9.0" />
+
 	<end_view play_victory_soundtrack="1" />
 </hud>
