@@ -35,10 +35,10 @@
         <animation state_key="stabbing" animation_key="melee, quick knife" />
         <animation state_key="stabbing" animation_key="pistol whip 3" />
         <next_in_chain key="gkw_sr3mp_skill.weapon" share_ammo="1" />
-        <sound key="fire" fileref="sr3mp_fire_FromGRWildlands.wav" pitch_variety="0.05" volume="1.5" />
-        <sound key="magazine_out" fileref="sr3mp_mgz_out_FromBFBC1.wav" volume="0.7" />
-        <sound key="magazine_in" fileref="sr3mp_mgz_in_FromBFBC1.wav" volume="0.7" />
-        <sound key="cycle" fileref="sr3mp_cycle_FromBFBC1.wav" volume="0.7" />
+        <sound key="fire" fileref="sr3mpskill_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.15" />
+        <sound key="magazine_out" fileref="sr3mp_mgz_out_FromCOD16.wav" volume="0.45" />
+        <sound key="magazine_in" fileref="sr3mp_mgz_in_FromCOD16.wav" volume="0.45" />
+        <sound key="cycle" fileref="sr3mp_cycle_FromCOD16.wav" volume="0.45" />
         <sound class="impact" fileref="rifle_drop.wav" />
         <model filename="gkw_smg_sr3mp.xml" />
         <hud_icon filename="gkw_sr3mp.png" />
@@ -83,10 +83,10 @@
         sell_price="40.0"/>
         <commonness value="0.2" in_stock="0" can_respawn_with="1" />
         <next_in_chain key="gkw_sr3mp.weapon" share_ammo="1" />
-        <sound key="fire" fileref="sr3mp_fire_FromGRWildlands.wav" pitch_variety="0.05" volume="1.5" />
-        <sound key="magazine_out" fileref="sr3mp_mgz_out_FromBFBC1.wav" volume="0.7" />
-        <sound key="magazine_in" fileref="sr3mp_mgz_in_FromBFBC1.wav" volume="0.7" />
-        <sound key="cycle" fileref="sr3mp_cycle_FromBFBC1.wav" volume="0.7" />
+        <sound key="fire" fileref="sr3mpskill_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.1" />
+        <sound key="magazine_out" fileref="sr3mp_mgz_out_FromCOD16.wav" volume="0.45" />
+        <sound key="magazine_in" fileref="sr3mp_mgz_in_FromCOD16.wav" volume="0.45" />
+        <sound key="cycle" fileref="sr3mp_cycle_FromCOD16.wav" volume="0.45" />
         <sound class="impact" fileref="rifle_drop.wav" />
         <model filename="gkw_smg_sr3mp.xml" />
         <hud_icon filename="gkw_sr3mp_skill.png" />

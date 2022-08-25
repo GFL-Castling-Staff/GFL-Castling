@@ -29,11 +29,11 @@
         <animation state_key="cycle" stance_key="prone" animation_key="Pshotgun0.5p" />
 
         <sound key="fire" fileref="spas15_fire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.3"/>
-        <sound key="magazine_out" fileref="spas15_mgz_out_FromWF.wav" volume="0.7"/>
-        <sound key="magazine_in" fileref="spas15_mgz_in_FromWF.wav" volume="0.7"/>
-        <sound key="cycle" fileref="spas15_cycle2_FromREALLIFE.wav" volume="0.7"/>
-        <sound key="cycle_out" fileref="spas15_cycle_out_FromREALLIFE.wav" volume="0.7" />
-        <sound key="cycle_in" fileref="spas15_cycle_in_FromREALLIFE.wav" volume="0.7" />
+        <sound key="magazine_out" fileref="spas15_mgz_out_FromWF.wav" volume="0.6"/>
+        <sound key="magazine_in" fileref="spas15_mgz_in_FromWF.wav" volume="0.6"/>
+        <sound key="cycle" fileref="spas15_cycle2_FromREALLIFE.wav" volume="0.6"/>
+        <sound key="cycle_out" fileref="spas15_cycle_out_FromREALLIFE.wav" volume="0.6" />
+        <sound key="cycle_in" fileref="spas15_cycle_in_FromREALLIFE.wav" volume="0.6" />
 
         <sound class="impact" fileref="rifle_drop.wav"/>
         <model filename="gkw_sg_spas15.xml"/>
@@ -111,10 +111,10 @@
         <next_in_chain key="gkw_spas15.weapon" share_ammo="1"/>
         <animation key="reload" animation_key="reloading, magazine rifle 1.8"/>
         <sound key="fire" fileref="spas15_fire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.3"/>
-        <sound key="magazine_out" fileref="spas15_mgz_out_FromWF.wav" volume="0.7"/>
-        <sound key="magazine_in" fileref="spas15_mgz_in_FromWF.wav" volume="0.7"/>
+        <sound key="magazine_out" fileref="spas15_mgz_out_FromWF.wav" volume="0.6"/>
+        <sound key="magazine_in" fileref="spas15_mgz_in_FromWF.wav" volume="0.6"/>
 
-        <sound key="cycle" fileref="spas15_cycle1_FromWF.wav" volume="0.7"/>
+        <sound key="cycle" fileref="spas15_cycle1_FromWF.wav" volume="0.6"/>
 
         <sound class="impact" fileref="rifle_drop.wav"/>
 

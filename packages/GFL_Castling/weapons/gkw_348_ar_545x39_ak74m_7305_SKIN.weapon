@@ -16,10 +16,10 @@
     <animation state_key="hold_casual" animation_key="dancing, kazachok" />
     <animation key="reload" animation_key="reloading, magazine rifle 2.1" />
     <inventory buy_price="74.0" sell_price="74.0" />
-    <sound key="fire" fileref="ak74m_fire_FromBF3.wav" pitch_variety="0.05" volume="1.3" />
-    <sound key="magazine_out" fileref="ak74_mgz_out_FromCOD16.wav" volume="0.6" />
-    <sound key="magazine_in" fileref="ak74_mgz_in_FromCOD16.wav" volume="0.6" />
-    <sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6" />
+    <sound key="fire" fileref="ak74m_fire_FromBF3.wav" pitch_variety="0.05" volume="1.2" />
+    <sound key="magazine_out" fileref="ak74_mgz_out_FromCOD16.wav" volume="0.5" />
+    <sound key="magazine_in" fileref="ak74_mgz_in_FromCOD16.wav" volume="0.5" />
+    <sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.5" />
     <sound class="impact" fileref="rifle_drop.wav" />
     <model filename="gkw_ar_ak74m_7305.xml" />
     <hud_icon filename="gkw_ak74m_7305.png" />

@@ -34,9 +34,9 @@
         <animation state_key="stabbing" animation_key="melee, quick knife" />
         <animation state_key="stabbing" animation_key="pistol whip 3" />
         <sound key="fire" fileref="mg36_Fire_FromCOD16.wav" pitch_variety="0.05" volume="1.1" />
-        <sound key="magazine_out" fileref="mg36_mgz_out_FromCOD16.wav" volume="0.65" />
-        <sound key="magazine_in" fileref="mg36_mgz_in_FromCOD16.wav" volume="0.65" />
-        <sound key="cycle" fileref="mg36_cycle_FromCOD16.wav" volume="0.65" />
+        <sound key="magazine_out" fileref="mg36_mgz_out_FromCOD16.wav" volume="0.5" />
+        <sound key="magazine_in" fileref="mg36_mgz_in_FromCOD16.wav" volume="0.5" />
+        <sound key="cycle" fileref="mg36_cycle_FromCOD16.wav" volume="0.7" />
         <sound class="impact" fileref="rifle_drop.wav" />
         <model filename="gkw_mg_mg36.xml" />
         <hud_icon filename="gkw_mg36.png" />
@@ -97,9 +97,9 @@
         <animation state_key="stabbing" animation_key="melee, quick knife" />
         <animation state_key="stabbing" animation_key="pistol whip 3" />
         <sound key="fire" fileref="mg36_Fire_FromCOD16.wav" pitch_variety="0.05" volume="1.1" />
-        <sound key="magazine_out" fileref="mg36_mgz_out_FromCOD16.wav" volume="0.65" />
-        <sound key="magazine_in" fileref="mg36_mgz_in_FromCOD16.wav" volume="0.65" />
-        <sound key="cycle" fileref="mg36_cycle_FromCOD16.wav" volume="0.65" />
+        <sound key="magazine_out" fileref="mg36_mgz_out_FromCOD16.wav" volume="0.5" />
+        <sound key="magazine_in" fileref="mg36_mgz_in_FromCOD16.wav" volume="0.5" />
+        <sound key="cycle" fileref="mg36_cycle_FromCOD16.wav" volume="0.7" />
         <sound class="impact" fileref="rifle_drop.wav" />
         <model filename="gkw_mg_mg36.xml" />
         <hud_icon filename="gkw_mg36.png" />

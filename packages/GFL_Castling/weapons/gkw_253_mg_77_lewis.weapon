@@ -27,10 +27,10 @@
     <animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
     <animation state_key="stabbing" animation_key="melee, quick knife" />
     <inventory  buy_price="97.0" sell_price="97.0" />
-    <sound key="fire" fileref="lewis_fire_FromBF5.wav" pitch_variety="0.05" volume="1.3" />
-    <sound key="magazine_out" fileref="lewis_mgz_in_FromBF1.wav" volume="0.8" />
-    <sound key="magazine_in" fileref="lewis_mgz_in_FromBF1.wav" volume="0.8" />
-    <sound key="cycle" fileref="lewis_cycle_FromBF5.wav" volume="0.8" />
+    <sound key="fire" fileref="lewis_fire_FromBF5.wav" pitch_variety="0.05" volume="1.2" />
+    <sound key="magazine_out" fileref="lewis_mgz_out_FromBF1.wav" volume="0.7" />
+    <sound key="magazine_in" fileref="lewis_mgz_in_FromBF1.wav" volume="0.7" />
+    <sound key="cycle" fileref="lewis_cycle_FromBF5.wav" volume="0.7" />
     <sound class="impact" fileref="rifle_drop.wav" />
     <model filename="gkw_mg_lewis.xml" />
     <hud_icon filename="gkw_lewis.png" />
@@ -81,10 +81,10 @@
     <animation state_key="walking_backwards" animation_key="walking backwards, heavy weapon" />
 
     <inventory  buy_price="97.0" sell_price="97.0" />
-    <sound key="fire" fileref="lewis_fire_FromBF5.wav" pitch_variety="0.05" volume="1.3" />
-    <sound key="magazine_out" fileref="lewis_mgz_in_FromBF1.wav" volume="0.8" />
-    <sound key="magazine_in" fileref="lewis_mgz_in_FromBF1.wav" volume="0.8" />
-    <sound key="cycle" fileref="lewis_cycle_FromBF5.wav" volume="0.8" />
+    <sound key="fire" fileref="lewis_fire_FromBF5.wav" pitch_variety="0.05" volume="1.2" />
+    <sound key="magazine_out" fileref="lewis_mgz_out_FromBF1.wav" volume="0.7" />
+    <sound key="magazine_in" fileref="lewis_mgz_in_FromBF1.wav" volume="0.7" />
+    <sound key="cycle" fileref="lewis_cycle_FromBF5.wav" volume="0.7" />
     <sound class="impact" fileref="rifle_drop.wav" />
     <model filename="gkw_mg_lewis.xml" />
     <hud_icon filename="gkw_lewis_skill.png" />

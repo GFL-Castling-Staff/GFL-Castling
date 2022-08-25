@@ -7,7 +7,7 @@
 		<animation state_key="cycle" animation_key="Pshotgun0.5"/>
 		<animation state_key="cycle" stance_key="prone" animation_key="Pshotgun0.5p"/>
 		<animation key="reload" animation_key="reloading, oaat"/>
-		<sound key="fire" fileref="spas12_fire_FromWF.wav" pitch_variety="0.05" volume="1.5"/>
+		<sound key="fire" fileref="spas12_fire_FromWF.wav" pitch_variety="0.05" volume="1.3"/>
 		<sound key="cycle" fileref="spas12_cycle_FromINS.wav"/>
 		<sound key="cycle" fileref="spas12_cycle_FromINS.wav"/>
 		<sound key="cycle" fileref="spas12_cycle_FromINS.wav"/>
@@ -122,7 +122,7 @@
 		<next_in_chain key="gkw_spas12.weapon" share_ammo="1"/>
 		<commonness value="0" in_stock="0" can_respawn_with="1"/>
 		<animation key="reload" animation_key="reloading, oaat"/>
-		<sound key="fire" fileref="spas12skill_fire_FromCOD13.wav" pitch_variety="0.05" volume="1.5"/>
+		<sound key="fire" fileref="spas12skill_fire_FromCOD13.wav" pitch_variety="0.05" volume="1.3"/>
 		<sound key="cycle" fileref="spas12_cycle_FromINS.wav"/>
 		<sound key="cycle" fileref="spas12_cycle_FromINS.wav"/>
 		<sound key="cycle" fileref="spas12_cycle_FromINS.wav"/>

@@ -30,10 +30,10 @@
 	
 	<!--Sounds-->
 	
-    <sound key="fire" fileref="origin12_fire_FromWF.wav" pitch_variety="0.05" volume="1.5" />
-    <sound key="magazine_out" fileref="origin12_mgz_out_FromCOD16.wav" volume="0.7" />
-    <sound key="magazine_in" fileref="origin12_mgz_in_FromCOD16.wav" volume="0.7" />
-    <sound key="cycle" fileref="origin12_cycle_FromWF.wav" volume="0.8" />
+    <sound key="fire" fileref="origin12_fire_FromWF.wav" pitch_variety="0.05" volume="1.2" />
+    <sound key="magazine_out" fileref="origin12_mgz_out_FromCOD16.wav" volume="0.6" />
+    <sound key="magazine_in" fileref="origin12_mgz_in_FromCOD16.wav" volume="0.6" />
+    <sound key="cycle" fileref="origin12_cycle_FromWF.wav" volume="0.7" />
     <sound class="impact" fileref="rifle_drop.wav" />
    
 	<!--Model, Icon, Cost-->
@@ -95,12 +95,10 @@
 	
 	<!--Sounds-->
 	
-    <sound key="fire" fileref="sat8sd_fire_FromWF.WAV" pitch_variety="0.05" volume="1.7" />
-    <sound key="cycle" fileref="m870_cycle_FromTTF2.wav" />
-    <sound key="reload_one" fileref="sg1_reload_FromREALLIFE.wav" volume="0.5" />
-    <sound key="reload_one" fileref="sg2_reload_FromREALLIFE.wav" volume="0.5" />
-    <sound key="reload_one" fileref="sg3_reload_FromREALLIFE.wav" volume="0.5" />
-    <sound key="reload_one" fileref="sg4_reload_FromREALLIFE.wav" volume="0.5" />
+    <sound key="fire" fileref="origin12_fire_FromWF.wav" pitch_variety="0.05" volume="1.2" />
+    <sound key="magazine_out" fileref="origin12_mgz_out_FromCOD16.wav" volume="0.6" />
+    <sound key="magazine_in" fileref="origin12_mgz_in_FromCOD16.wav" volume="0.6" />
+    <sound key="cycle" fileref="origin12_cycle_FromWF.wav" volume="0.7" />
     <sound class="impact" fileref="rifle_drop.wav" />
    
 	<!--Model, Icon, Cost-->

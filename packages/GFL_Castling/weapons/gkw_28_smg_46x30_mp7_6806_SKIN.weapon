@@ -38,9 +38,9 @@
     <animation state_key="reload"	animation_key="reloading, A OHG 0.75" />
     <animation state_key="reload"	animation_key="reloading2, A OHG 0.75" />
     <sound key="fire" fileref="mp7_fire_FromFC6.wav" pitch_variety="0.05" volume="1.1" />
-    <sound key="magazine_out" fileref="mp7_mgz_out_FromDIVISION2.wav" volume="0.6" />
-    <sound key="magazine_in" fileref="mp7_mgz_in_FromDIVISION2.wav" volume="0.6" />
-    <sound key="cycle" fileref="mp7_cycle_FromDIVISION2.wav" volume="0.6" />
+    <sound key="magazine_out" fileref="mp7_mgz_out_FromCOD16.wav" volume="0.5" />
+    <sound key="magazine_in" fileref="mp7_mgz_in_FromCOD16.wav" volume="0.5" />
+    <sound key="cycle" fileref="mp7_cycle_FromCOD16.wav" volume="0.5" />
     <sound class="impact" fileref="rifle_drop.wav" />
     <model filename="gkw_smg_mp7.xml"/>
     <hud_icon filename="gkw_mp7_6806.png"/>

@@ -16,9 +16,9 @@
     
     <inventory  buy_price="5.0" sell_price="5.0" />
     <sound key="fire" fileref="ump9_fire_FromGRBP.wav" pitch_variety="0.05" volume="2" />
-    <sound key="magazine_out" fileref="ump9_mgz_out_FromCOD6R.wav" volume="1.5" />
-    <sound key="magazine_in" fileref="ump9_mgz_in_FromCOD6R.wav" volume="1.5" />
-    <sound key="cycle" fileref="ump9_cycle_FromCOD6R.wav" volume="1.5" />
+    <sound key="magazine_out" fileref="ump45_mgz_out_FromCOD16.wav" volume="0.5" />
+    <sound key="magazine_in" fileref="ump45_mgz_in_FromCOD16.wav" volume="0.5" />
+    <sound key="cycle" fileref="ump45_cycle_FromCOD16.wav" volume="0.5" />
     <sound class="impact" fileref="rifle_drop.wav" volume="1.2"/>    
     <model filename="gkw_smg_ump9.xml" />
 

@@ -34,11 +34,11 @@
 	<!--Sounds-->
 	
     <sound key="fire" fileref="tac50_fire_FromMOH2012.wav" volume="1.2" />
-    <sound key="cycle" fileref="tac50_cycle_FromDIVISION2.wav" volume="0.7"/>
-    <sound key="magazine_out" fileref="tac50_mgz_in_FromDIVISION2.wav" volume="0.7"/>
-    <sound key="magazine_in" fileref="tac50_mgz_in_FromDIVISION2.wav" volume="0.7"/>
-    <sound key="cycle_out" fileref="tac50_cycle_out_FromDIVISION2.wav" volume="0.7"/>
-    <sound key="cycle_in" fileref="tac50_cycle_in_FromDIVISION2.wav" volume="0.7"/>
+    <sound key="cycle" fileref="tac50_cycle_FromCOD17.wav" volume="0.5"/>
+    <sound key="magazine_out" fileref="tac50_mgz_out_FromCOD16.wav" volume="0.5"/>
+    <sound key="magazine_in" fileref="tac50_mgz_in_FromCOD16.wav" volume="0.5"/>
+    <sound key="cycle_out" fileref="tac50_cycle_out_FromCOD16.wav" volume="0.5"/>
+    <sound key="cycle_in" fileref="tac50_cycle_in_FromCOD16.wav" volume="0.5"/>
     <sound class="impact" fileref="rifle_drop.wav" />
    
 	<!--Model, Icon, Cost-->

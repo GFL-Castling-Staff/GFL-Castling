@@ -37,9 +37,9 @@
 
     <inventory encumbrance="30.0"  buy_price="16.0" sell_price="16.0" />
     <sound key="fire" fileref="rpk16_Fire_FromEFT.wav" pitch_variety="0.02" volume="1.2" />
-    <sound key="magazine_out" fileref="rpk16_mgz_out_FromCOD16.wav" volume="0.6" />
-    <sound key="magazine_in" fileref="rpk16_mgz_in_FromCOD16.wav" volume="0.6" />
-    <sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6" />
+    <sound key="magazine_out" fileref="rpk16_mgz_out_FromCOD16.wav" volume="0.5" />
+    <sound key="magazine_in" fileref="rpk16_mgz_in_FromCOD16.wav" volume="0.5" />
+    <sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.5" />
     <sound class="impact" fileref="rifle_drop.wav" />
     <model filename="gkw_mg_rpk16.xml" />
     <hud_icon filename="gkw_rpk16.png" />
@@ -105,9 +105,9 @@
 
     <inventory encumbrance="30.0"  buy_price="16.0" sell_price="16.0" />
     <sound key="fire" fileref="rpk16_Fire_FromEFT.wav" pitch_variety="0.02" volume="1.2" />
-    <sound key="magazine_out" fileref="rpk16_mgz_out_FromCOD16.wav" volume="0.6" />
-    <sound key="magazine_in" fileref="rpk16_mgz_in_FromCOD16.wav" volume="0.6" />
-    <sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6" />
+    <sound key="magazine_out" fileref="rpk16_mgz_out_FromCOD16.wav" volume="0.5" />
+    <sound key="magazine_in" fileref="rpk16_mgz_in_FromCOD16.wav" volume="0.5" />
+    <sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.5" />
     <sound class="impact" fileref="rifle_drop.wav" />
     <model filename="gkw_mg_rpk16.xml" />
     <hud_icon filename="gkw_rpk16_skill.png" />

@@ -16,10 +16,10 @@
         <next_in_chain key="gkw_k11_20mm_impact.weapon" share_ammo="0" />
         <inventory buy_price="300.0" sell_price="300.0" />
         <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
-        <sound key="fire" fileref="k11_fire_FromBLACKSQUAD.wav" pitch_variety="0.05" volume="1.1" />
-        <sound key="magazine_out" fileref="k11_mgz_out_FromWF.wav" volume="0.8" />
-        <sound key="magazine_in" fileref="k11_mgz_in_FromWF.wav" volume="0.8" />
-        <sound key="cycle" fileref="k11_cycle_FromWF.wav" volume="0.8" />
+        <sound key="fire" fileref="k11_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.1" />
+        <sound key="magazine_out" fileref="k11_mgz_out_FromSQUAD.wav" volume="0.7" />
+        <sound key="magazine_in" fileref="k11_mgz_in_FromSQUAD.wav" volume="0.7" />
+        <sound key="cycle" fileref="k11_cycle_FromSQUAD.wav" volume="0.7" />
         <sound class="impact" fileref="rifle_drop.wav" />
         <model filename="gkw_ar_k11.xml" />
         <hud_icon filename="gkw_k11.png" />

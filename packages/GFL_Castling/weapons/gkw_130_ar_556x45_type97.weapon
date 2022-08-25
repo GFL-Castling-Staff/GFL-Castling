@@ -18,10 +18,10 @@
         <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
         <inventory  buy_price="8.0" sell_price="8.0" />
         <next_in_chain key="gkw_QBZ97_skill.weapon" share_ammo="1" />
-        <sound key="fire" fileref="type97_fire_FromINSSANDSTORM.wav" pitch_variety="0.05" volume="1" />
-        <sound key="magazine_out" fileref="type97_mgz_out_FromWF.wav" volume="0.8" />
-        <sound key="magazine_in" fileref="type97_mgz_in_FromWF.wav" volume="0.8" />
-        <sound key="cycle" fileref="type97_cycle_FromWF.wav" volume="0.8" />
+        <sound key="fire" fileref="type97_fire_FromINSSANDSTORM.wav" pitch_variety="0.05" volume="1.1" />
+        <sound key="magazine_out" fileref="qbz97_mgz_out_FromCOD17.wav" volume="0.55" />
+        <sound key="magazine_in" fileref="qbz97_mgz_in_FromCOD17.wav" volume="0.55" />
+        <sound key="cycle" fileref="qbz97_cycle_FromCOD17.wav" volume="0.5" />
         <sound class="impact" fileref="rifle_drop.wav" />
         <model filename="gkw_ar_97type.xml" />
         <hud_icon filename="gkw_97type.png" />
@@ -58,10 +58,10 @@
         <inventory  buy_price="8.0" sell_price="8.0" />
         <next_in_chain key="gkw_QBZ97.weapon" share_ammo="1" />
         <commonness value="0" in_stock="0" can_respawn_with="1" />
-        <sound key="fire" fileref="type97_fire_FromWF.wav" pitch_variety="0.05" volume="1" />
-        <sound key="magazine_out" fileref="type97_mgz_out_FromWF.wav" volume="0.8" />
-        <sound key="magazine_in" fileref="type97_mgz_in_FromWF.wav" volume="0.8" />
-        <sound key="cycle" fileref="type97_cycle_FromWF.wav" volume="0.8" />
+        <sound key="fire" fileref="type97_fire_FromWF.wav" pitch_variety="0.05" volume="1.1" />
+        <sound key="magazine_out" fileref="qbz97_mgz_out_FromCOD17.wav" volume="0.55" />
+        <sound key="magazine_in" fileref="qbz97_mgz_in_FromCOD17.wav" volume="0.55" />
+        <sound key="cycle" fileref="qbz97_cycle_FromCOD17.wav" volume="0.5" />
         <sound class="impact" fileref="rifle_drop.wav" />
         <model filename="gkw_ar_97type.xml" />
         <hud_icon filename="gkw_97type_skill.png" />

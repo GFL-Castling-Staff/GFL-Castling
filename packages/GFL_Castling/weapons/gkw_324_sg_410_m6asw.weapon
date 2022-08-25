@@ -26,7 +26,7 @@
     <next_in_chain key="gkw_m6asw_skill.weapon" share_ammo="0" />
 
     <!--Sounds-->
-    <sound key="fire" fileref="liberator_fire_FromSAM4.wav" volume="1" />
+    <sound key="fire" fileref="m6asw_sg_fire_FromCOD15.wav" volume="1.05" />
     <sound key="reload_one" fileref="Liberator_reload_FromCODOLRanger.wav" volume="0.7"  />
     <sound class="impact" fileref="rifle_drop.wav" />
     <!--Model, Icon, Cost-->
@@ -86,9 +86,12 @@
 	<animation key="recoil" animation_key="recoil3" />
 	<commonness value="0" in_stock="0" can_respawn_with="1" />
     <weak_hand_hold offset="0.3" />
-    <sound key="fire" fileref="m1_fire_FromSE4.wav" pitch_variety="0.05" volume="3"/>
+    <sound key="fire" fileref="m6asw_point22_FromCOD15.wav" pitch_variety="0.05" volume="1.2"/>
     <sound key="cycle" fileref="pistol2_chamber.wav" />
-    <sound key="reload_one" fileref="Liberator_reload_FromCODOLRanger.wav" volume="0.7"  />
+    <sound key="reload_one" fileref="m6asw_reload1_FromCOD16.wav" volume="0.5"  />
+    <sound key="reload_one" fileref="m6asw_reload2_FromCOD16.wav" volume="0.5"  />
+    <sound key="reload_one" fileref="m6asw_reload3_FromCOD16.wav" volume="0.5"  />
+    <sound key="reload_one" fileref="m6asw_reload4_FromCOD16.wav" volume="0.5"  />
     <model filename="gkw_sg_m6asw.xml" />
     <hud_icon filename="gkw_m6asw_skill.png" />
     <capacity value="1" source="rank" source_value="0.0" />

@@ -24,10 +24,10 @@
         <animation key="reload" animation_key="reloading, Machine gun 2.0" />
         <inventory buy_price="240.0" sell_price="240.0" />
         <next_in_chain key="gkw_type80mod3_skill.weapon" share_ammo="1" />
-        <sound key="fire" fileref="qjy80_fire_FromCOD16.wav" pitch_variety="0.05" volume="1" />
-        <sound key="magazine_out" fileref="qjy80_mgz_out_FromCOD16.wav" volume="0.8" />
-        <sound key="magazine_in" fileref="qjy80_mgz_in_FromCOD16.wav" volume="0.8" />
-        <sound key="cycle" fileref="qjy80_cycle_FromCOD16.wav" volume="0.8" />
+        <sound key="fire" fileref="qjy80_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.1" />
+        <sound key="magazine_out" fileref="qjy80_mgz_out_FromCOD16.wav" volume="0.6" />
+        <sound key="magazine_in" fileref="qjy80_mgz_in_FromCOD16.wav" volume="0.6" />
+        <sound key="cycle" fileref="qjy80_cycle_FromCOD16.wav" volume="0.6" />
         <sound class="impact" fileref="rifle_drop.wav" />
         <model filename="gkw_mg_type80.xml" />
         <commonness value="0.001" in_stock="0" can_respawn_with="1" />
@@ -69,10 +69,10 @@
         <animation key="reload" animation_key="reloading, Machine gun 2.0" />
         <inventory buy_price="240.0" sell_price="240.0" />
         <next_in_chain key="gkw_type80mod3.weapon" share_ammo="1" />
-        <sound key="fire" fileref="qjy80_fire_FromCOD16.wav" pitch_variety="0.05" volume="1" />
-        <sound key="magazine_out" fileref="qjy80_mgz_out_FromCOD16.wav" volume="0.8" />
-        <sound key="magazine_in" fileref="qjy80_mgz_in_FromCOD16.wav" volume="0.8" />
-        <sound key="cycle" fileref="qjy80_cycle_FromCOD16.wav" volume="0.8" />
+        <sound key="fire" fileref="qjy80_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.1" />
+        <sound key="magazine_out" fileref="qjy80_mgz_out_FromCOD16.wav" volume="0.6" />
+        <sound key="magazine_in" fileref="qjy80_mgz_in_FromCOD16.wav" volume="0.6" />
+        <sound key="cycle" fileref="qjy80_cycle_FromCOD16.wav" volume="0.6" />
         <sound class="impact" fileref="rifle_drop.wav" />
         <model filename="gkw_mg_type80.xml" />
         <commonness value="0" in_stock="0" can_respawn_with="1" />

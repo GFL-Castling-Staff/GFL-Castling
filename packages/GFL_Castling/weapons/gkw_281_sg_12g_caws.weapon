@@ -29,10 +29,10 @@
     <animation key="reload" animation_key="reloading, magazine rifle 1.8" />
     <!--Sounds-->
 
-    <sound key="fire" fileref="caws_fire_FromWF.wav" pitch_variety="0.05" volume="1" />
-    <sound key="magazine_out" fileref="caws_mgz_out_FromWF.wav" volume="1" />
-    <sound key="magazine_in" fileref="caws_mgz_in_FromWF.wav" volume="1" />
-    <sound key="cycle" fileref="caws_cycle_FromWF.wav" volume="1" />
+    <sound key="fire" fileref="caws_fire_FromWF.wav" pitch_variety="0.05" volume="1.1" />
+    <sound key="magazine_out" fileref="caws_mgz_out_FromWF.wav" volume="0.65" />
+    <sound key="magazine_in" fileref="caws_mgz_in_FromWF.wav" volume="0.65" />
+    <sound key="cycle" fileref="caws_cycle_FromWF.wav" volume="0.65" />
     <sound key="cycle" fileref="HKCAWS_APPRECIATE_JP.wav" volume="0.8" pitch_variety="0"/>
     <sound key="cycle" fileref="caws_cycle_FromWF.wav" volume="1" />
     <sound key="cycle" fileref="HKCAWS_FEELING_JP.wav" volume="0.8" pitch_variety="0"/>

@@ -37,14 +37,14 @@
     <animation state_key="stabbing" animation_key="melee, quick knife" />
     <animation state_key="stabbing" animation_key="pistol whip 3" />
     <!--Sounds-->
-    <sound key="fire" fileref="delisle_fire_FromBF5.wav" pitch_variety="0.05" volume="2.3" />
+    <sound key="fire" fileref="delisle_fire_FromBF5.wav" pitch_variety="0.05" volume="1.6" />
     <sound key="cycle" fileref="delisle_cycle_FromBF5.wav" volume="0.6"/>
     <!-- <sound key="magazine_out" fileref="" volume="1"/> -->
     <sound key="cycle_out" fileref="delisle_cycle_out_FromBF5.wav"  volume="0.6"/>
     <sound key="cycle_in" fileref="delisle_cycle_in_FromBF5.wav"  volume="0.6"/>
     <sound class="impact" fileref="rifle_drop.wav" volume="1"/>
-    <sound key="magazine_out" fileref="delisle_mgz_out_FromBF5.wav" volume="1" />
-    <sound key="magazine_in" fileref="delisle_mgz_in_FromBF5.wav" volume="1" />
+    <sound key="magazine_out" fileref="delisle_mgz_out_FromBF5.wav" volume="0.6" />
+    <sound key="magazine_in" fileref="delisle_mgz_in_FromBF5.wav" volume="0.6" />
     <!--Model, Icon, Cost-->
     <model filename="gkw_delisle_From_melondove.xml" />
     <hud_icon filename="gkw_delisle.png" />

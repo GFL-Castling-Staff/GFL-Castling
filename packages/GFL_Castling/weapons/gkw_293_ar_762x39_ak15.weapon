@@ -15,10 +15,10 @@
     <animation state_key="hold_casual" animation_key="dancing, kazachok" />
     <animation key="reload" animation_key="reloading, magazine rifle 1.5" />
     <inventory  buy_price="45.0" sell_price="45.0" />
-    <sound key="fire" fileref="ak15_fire_FromWF.wav" pitch_variety="0.02" volume="1.1" />
-    <sound key="magazine_out" fileref="ak15_mgz_out_FromWF.wav" volume="0.8" />
-    <sound key="magazine_in" fileref="ak15_mgz_in_FromWF.wav" volume="0.8" />
-    <sound key="cycle" fileref="ak15_cycle_FromWF.wav" volume="0.8" />
+    <sound key="fire" fileref="ak15_fire_FromWF.wav" pitch_variety="0.02" volume="1.2" />
+    <sound key="magazine_out" fileref="ak12_mgz_out_FromCOD16.wav" volume="0.6" />
+    <sound key="magazine_in" fileref="ak12_mgz_in_FromCOD16.wav" volume="0.6" />
+    <sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6" />
     <sound class="impact" fileref="rifle_drop.wav" />
     <model filename="gkw_ar_ak15.xml" />
     <hud_icon filename="gkw_ak15.png" />

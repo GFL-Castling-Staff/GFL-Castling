@@ -36,11 +36,11 @@
     <animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
     <animation state_key="stabbing" animation_key="melee, quick knife" />
     <animation state_key="stabbing" animation_key="pistol whip 3" />
-    <sound key="fire" fileref="type88_fire_FromBF1.wav" pitch_variety="0.05" volume="1.3" />
-    <sound key="cycle" fileref="type88original_cycle_FromBF1.wav" volume="0.6"/>
-    <sound key="reload_one" fileref="type88_reload_FromBF1.wav" volume="0.6" />
-    <sound key="cycle_out" fileref="type88_cycle_out_FromBF1.wav"  volume="0.6"/>
-    <sound key="cycle_in" fileref="type88_cycle_in_FromBF1.wav"  volume="0.6"/>
+    <sound key="fire" fileref="type88_fire_FromBF1.wav" pitch_variety="0.05" volume="1.2" />
+    <sound key="cycle" fileref="type88original_cycle_FromBF1.wav" volume="0.45"/>
+    <sound key="reload_one" fileref="type88_reload_FromBF1.wav" volume="0.45" />
+    <sound key="cycle_out" fileref="type88_cycle_out_FromBF1.wav"  volume="0.45"/>
+    <sound key="cycle_in" fileref="type88_cycle_in_FromBF1.wav"  volume="0.45"/>
     <sound class="impact" fileref="rifle_drop.wav" volume="1"/>
     <model filename="gkw_rf_88type.xml" />
     <hud_icon filename="gkw_88type.png" />

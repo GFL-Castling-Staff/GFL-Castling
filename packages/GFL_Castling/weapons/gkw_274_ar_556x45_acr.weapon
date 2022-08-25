@@ -16,10 +16,10 @@
             sustained_fire_grow_step="0.3" />
         <inventory encumbrance="5.0" buy_price="50.0" sell_price="50.0" />
         <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
-        <sound key="fire" fileref="acr_fire_FromDIVISION2.wav" pitch_variety="0.05" volume="1" />
-        <sound key="magazine_out" fileref="acr_mgz_out_FromDIVISION2.wav" volume="1" />
-        <sound key="magazine_in" fileref="acr_mgz_in_FromDIVISION2.wav" volume="1" />
-        <sound key="cycle" fileref="acr_cycle_FromDIVISION2.wav" volume="1" />
+        <sound key="fire" fileref="acr_fire_FromCOD17.wav" pitch_variety="0.05" volume="1" />
+        <sound key="magazine_out" fileref="acr_mgz_out_FromCOD17.wav" volume="0.6" />
+        <sound key="magazine_in" fileref="acr_mgz_in_FromCOD17.wav" volume="0.6" />
+        <sound key="cycle" fileref="acr_cycle_FromCOD17.wav" volume="0.6" />
         <sound class="impact" fileref="rifle_drop.wav" />
         <next_in_chain key="gkw_acr_skill.weapon" share_ammo="1" />
         <model filename="gkw_ar_acr.xml" />
@@ -57,10 +57,10 @@
             sustained_fire_grow_step="0.1" />
         <inventory encumbrance="5.0" buy_price="50.0" sell_price="50.0" />
         <animation key="reload" animation_key="reloading, magazine rifle 0.8" />
-        <sound key="fire" fileref="acr_fire_FromDIVISION2.wav" pitch_variety="0.05" volume="1" />
-        <sound key="magazine_out" fileref="acr_mgz_out_FromDIVISION2.wav" volume="1" />
-        <sound key="magazine_in" fileref="acr_mgz_in_FromDIVISION2.wav" volume="1" />
-        <sound key="cycle" fileref="acr_cycle_FromDIVISION2.wav" volume="1" />
+        <sound key="fire" fileref="acr_fire_FromDIVISION2.wav" pitch_variety="0.05" volume="1.1" />
+        <sound key="magazine_out" fileref="acr_mgz_out_FromCOD17.wav" volume="0.6" />
+        <sound key="magazine_in" fileref="acr_mgz_in_FromCOD17.wav" volume="0.6" />
+        <sound key="cycle" fileref="acr_cycle_FromCOD17.wav" volume="0.6" />
         <sound class="impact" fileref="rifle_drop.wav" />
         <next_in_chain key="gkw_acr.weapon" share_ammo="1" />
         <model filename="gkw_ar_acr.xml" />

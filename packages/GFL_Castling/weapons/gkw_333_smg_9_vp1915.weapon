@@ -34,9 +34,9 @@
     <animation state_key="stabbing" animation_key="melee, quick knife" />
     <animation state_key="stabbing" animation_key="pistol whip 3" />
     <sound key="fire" fileref="vp1915_fire_FromBF1.wav" pitch_variety="0.02" volume="1.2" />
-    <sound key="magazine_out" fileref="vp1915_mgz_out_FromBF1.wav" volume="0.8" />
-    <sound key="magazine_in" fileref="vp1915_mgz_in_FromBF1.wav" volume="0.8" />
-    <sound key="cycle" fileref="vp1915_cycle_FromBF1.wav" volume="0.8" />
+    <sound key="magazine_out" fileref="vp1915_mgz_out_FromBF1.wav" volume="0.6" />
+    <sound key="magazine_in" fileref="vp1915_mgz_in_FromBF1.wav" volume="0.6" />
+    <sound key="cycle" fileref="vp1915_cycle_FromBF1.wav" volume="0.6" />
     <sound class="impact" fileref="rifle_drop.wav" />
     <model filename="gkw_vp1915_From_melondove.xml" />
     <hud_icon filename="gkw_vp1915.png" />

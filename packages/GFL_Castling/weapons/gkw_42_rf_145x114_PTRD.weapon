@@ -27,12 +27,12 @@
     <animation key="reload" animation_key="HS50RTemp" />
     <animation key="reload" stance_key="prone" animation_key="HS50RpTemp" />
     <!--Sounds-->
-    <sound key="fire" fileref="ptrd_fire_FromCOD18.wav" pitch_variety="0.05" volume="2.5" />
+    <sound key="fire" fileref="ptrd_fire_FromCOD18.wav" pitch_variety="0.05" volume="1.6" />
     <sound key="cycle" fileref="" />
     <sound key="magazine_out" fileref="" />
     <sound key="magazine_in" fileref="ptrd_mgz_in_FromBF1.wav" volume="0.5"  />
-    <sound key="cycle_out" fileref="ptrd_cycle_out_FromREALLIFE.wav" />
-    <sound key="cycle_in" fileref="ptrd_cycle_in_FromREALLIFE.wav" />
+    <sound key="cycle_out" fileref="ptrd_cycle_out_FromREALLIFE.wav" volume="0.6" />
+    <sound key="cycle_in" fileref="ptrd_cycle_in_FromREALLIFE.wav" volume="0.6" />
     <sound class="impact" fileref="rifle_drop.wav" />
     <!--Model, Icon, Cost-->
     <model filename="gkw_rf_ptrd_from_Eisen.xml" />
