@@ -903,7 +903,7 @@
 		<ai filename="agent.ai" />
 		<resources clear_vehicles="1" clear_weapons="1" clear_calls="1" clear_carry_items="1">
 			<weapon key="sfw_agent.weapon" enabled="1"/>
-			<carry_item key="sf_agent.carry_item" enabled="1" />
+			<carry_item key="vest_50hp_tank.carry_item" enabled="1" />
 			<call key="sf_destroyer.call" />
 			<call key="sf_jaguar.call" />
 			<call key="sf_jupiter.call" />
@@ -985,7 +985,7 @@
 		<ai filename="eod.ai" />
 		<resources clear_vehicles="1" clear_weapons="1" clear_calls="1" clear_carry_items="1">
 			<weapon key="sfw_justice.weapon" enabled="1"/>
-			<carry_item key="sf_justice.carry_item" enabled="1" />
+			<carry_item key="vest_50hp_tank.carry_item" enabled="1" />
 			<call key="sf_destroyer.call" />
 			<call key="sf_jaguar.call" />
 			<call key="sf_jupiter.call" />
