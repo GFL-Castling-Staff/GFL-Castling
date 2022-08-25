@@ -43,11 +43,10 @@
     <animation state_key="walking_backwards" animation_key="walking backwards, pistol" />
     <animation state_key="stabbing" animation_key="pistol whip" />
 	<animation state_key="stabbing" animation_key="pistol whip 3" />
-	
-	<sound key="fire" fileref="k5_fire_FromWF.wav" pitch_variety="0.05" volume="1" />
-	<sound key="magazine_out" fileref="mk23_mgz_out_FromSNIPER3.wav" volume="0.8" />
-	<sound key="magazine_in" fileref="mk23_mgz_in_FromSNIPER3.wav" volume="0.8"/>
-	<sound key="cycle" fileref="mk23_cycle_FromSNIPER3.wav" volume="0.8" />
+	<sound key="fire" fileref="mp443_fire_FromSQUAD.wav" pitch_variety="0.05" volume="1" />
+	<sound key="magazine_out" fileref="mp443_mgz_out_FromSQUAD.wav" volume="0.8" />
+	<sound key="magazine_in" fileref="mp443_mgz_in_FromSQUAD.wav" volume="0.8"/>
+	<sound key="cycle" fileref="mp443_cycle_FromSQUAD.wav" volume="0.8" />
 	
     <model filename="gkw_hg_mp443.xml" />
 
