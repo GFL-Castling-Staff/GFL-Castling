@@ -14,10 +14,10 @@
   <animation state_key="hold_casual" animation_key="dancing, kazachok" />
   <inventory buy_price="190.0" sell_price="190.0" />
   <capacity value="1" source="rank" source_value="0.0" />
-  <sound key="fire" fileref="pp19_fire_FromWF.wav" pitch_variety="0.05" volume="1.2" />
-  <sound key="magazine_out" fileref="PP19_mgz_out_FromCOD16.wav" volume="1.1" />
-  <sound key="magazine_in" fileref="PP19_mgz_in_FromCOD16.wav" volume="1.1" />
-  <sound key="cycle" fileref="PP19_cycle_FromCOD16.wav" volume="1.1" />
+  <sound key="fire" fileref="pp19_fire_FromWF.wav" pitch_variety="0.05" volume="1.3" />
+  <sound key="magazine_out" fileref="PP19_mgz_out_FromCOD16.wav" volume="0.5" />
+  <sound key="magazine_in" fileref="PP19_mgz_in_FromCOD16.wav" volume="0.5" />
+  <sound key="cycle" fileref="PP19_cycle_FromCOD16.wav" volume="0.5" />
   <sound class="impact" fileref="rifle_drop.wav" />
   <model filename="gkw_smg_pp19_mod3.xml" />
   <hud_icon filename="gkw_pp19mod3.png" />

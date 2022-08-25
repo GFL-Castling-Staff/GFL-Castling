@@ -30,7 +30,7 @@
 		<animation state_key="stabbing" animation_key="pistol whip 3" />
 		<!-- Sounds -->
 		<sound key="fire" fileref="m870_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.7" />
-		<sound key="cycle" fileref="m870_cycle_FromTTF2.wav" />
+		<sound key="cycle" fileref="m870_cycle_FromTTF2.wav" volume="0.8" />
 		<sound key="magazine_out" fileref="sg3_reload_FromREALLIFE.wav" volume="0.4" />
 		<sound key="magazine_in" fileref="sg1_reload_FromREALLIFE.wav" volume="0.4" />
 		<sound key="reload_one" fileref="sg1_reload_FromREALLIFE.wav" volume="0.5" />
@@ -97,7 +97,7 @@
 		<animation state_key="stabbing" animation_key="pistol whip 3" />
 		<!-- Sounds -->
 		<sound key="fire" fileref="m870_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.7" />
-		<sound key="cycle" fileref="m870_cycle_FromTTF2.wav" />
+		<sound key="cycle" fileref="m870_cycle_FromCOD13.wav" volume="0.6" />
 		<sound key="magazine_out" fileref="sg3_reload_FromREALLIFE.wav" volume="0.4" />
 		<sound key="magazine_in" fileref="sg1_reload_FromREALLIFE.wav" volume="0.4" />
 		<sound key="reload_one" fileref="sg1_reload_FromREALLIFE.wav" volume="0.5" />

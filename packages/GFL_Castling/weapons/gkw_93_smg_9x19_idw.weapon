@@ -39,10 +39,10 @@
     <animation state_key="reload"	animation_key="reloading, A OHG 0.75" />
     <animation state_key="reload"	animation_key="reloading2, A OHG 0.75" />
 
-    <sound key="fire" fileref="idwsd_fire_FromEFT.wav" pitch_variety="0" volume="1" />
-    <sound key="magazine_out" fileref="klin_mgz_out_FromEFT.wav" volume="0.7" />
-    <sound key="magazine_in" fileref="klin_mgz_in_FromEFT.wav" volume="0.7" />
-    <sound key="cycle" fileref="klin_cycle_FromEFT.wav" volume="0.7" />
+    <sound key="fire" fileref="idwsd_fire_FromEFT.wav" pitch_variety="0" volume="1.1" />
+    <sound key="magazine_out" fileref="idw_mgz_out_FromCOD16.wav" volume="0.5" />
+    <sound key="magazine_in" fileref="idw_mgz_in_FromCOD16.wav" volume="0.5" />
+    <sound key="cycle" fileref="idw_cycle_FromCOD13.wav" volume="0.5" />
     <sound class="impact" fileref="rifle_drop.wav" />
     <model filename="gkw_smg_idw.xml" />
     <hud_icon filename="gkw_idw.png" />
