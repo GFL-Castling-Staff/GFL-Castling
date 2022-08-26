@@ -18164,7 +18164,7 @@
 	<modifier class="speed" value="-0.2"/>
 </weapon>
 
-<weapon on_ground_up="0 0 1" drop_count_factor_on_death="0.1" drop_count_factor_on_player_death="1.0" drop_count_limit_in_range="3" key="cover_deploy.weapon" radius="0.25" time_to_live_out_in_the_open="30.0">
+<weapon on_ground_up="0 0 1" drop_count_factor_on_death="0.05" drop_count_factor_on_player_death="1.0" drop_count_limit_in_range="3" key="cover_deploy.weapon" radius="0.25" time_to_live_out_in_the_open="30.0">
 	<tag name="engineer"/>
 	<specification magazine_size="1" can_shoot_standing="0" can_shoot_crouching="1" carry_in_two_hands="1" can_shoot_prone="0" name="Defence Fairy - Hesco Bastion" class="5" spawn_instance_class="vehicle" spawn_instance_key="cover1.vehicle" consume="1" sight_range_modifier="1" slot="1" deployment="1"/>
 	<animation state_key="running" animation_key="walking, carrying load"/>
@@ -18180,13 +18180,13 @@
 	<sound class="impact" fileref="sandbag_drop.wav"/>
 	<model mesh_filename="barrier_item.mesh" texture_filename="barrier_item.png"/>
 	<capacity value="4" source="rank" source_value="0.0"/>
-	<hud_icon filename="hud_hesco_barrier.png"/>
+	<hud_icon filename="hud_fairy_defence_1.png"/>
 	<commonness value="0.025" in_stock="1" can_respawn_with="1"/>
 	<inventory encumbrance="4.0" price="30.0"/>
 	<modifier class="speed" value="-0.2"/>
 </weapon>
 
-<weapon on_ground_up="0 0 1" drop_count_factor_on_death="0.1" drop_count_factor_on_player_death="1.0" drop_count_limit_in_range="3" key="cover_deploy_2.weapon" radius="0.25" time_to_live_out_in_the_open="30.0">
+<weapon on_ground_up="0 0 1" drop_count_factor_on_death="0.05" drop_count_factor_on_player_death="1.0" drop_count_limit_in_range="3" key="cover_deploy_2.weapon" radius="0.25" time_to_live_out_in_the_open="30.0">
 	<tag name="engineer"/>
 	<specification magazine_size="1" can_shoot_standing="0" can_shoot_crouching="1" carry_in_two_hands="1" can_shoot_prone="0" name="Defence Fairy - Sandbag Cover" class="5" spawn_instance_class="vehicle" spawn_instance_key="cover2.vehicle" consume="1" sight_range_modifier="1" slot="1" deployment="1"/>
 	<animation state_key="running" animation_key="walking, carrying load"/>
@@ -18202,7 +18202,7 @@
 	<sound class="impact" fileref="sandbag_drop.wav"/>
 	<model mesh_filename="barrier_item.mesh" texture_filename="barrier_item.png"/>
 	<capacity value="4" source="rank" source_value="0.0"/>
-	<hud_icon filename="hud_hesco_barrier.png"/>
+	<hud_icon filename="hud_fairy_defence_2.png"/>
 	<commonness value="0.025" in_stock="1" can_respawn_with="1"/>
 	<inventory encumbrance="8.0" price="10.0"/>
 	<modifier class="speed" value="-0.2"/>

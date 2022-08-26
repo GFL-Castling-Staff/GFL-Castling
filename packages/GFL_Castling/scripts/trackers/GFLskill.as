@@ -84,6 +84,10 @@ dictionary gameSkillIndex = {
         // 玩家炼金术师脚本弹头
         {"ff_alchemist_skill_scan",23},
 
+        // 防御妖精
+        {"fc_defence_1",24},
+        {"fc_defence_2",25},
+
         // 下面这行是用来占位的，在这之上添加新的技能key和index即可
         {"666",-1}
 };
@@ -886,6 +890,57 @@ class GFLskill : Tracker {
 				break;
 			}
 
+			case 24:{
+				int characterId = event.getIntAttribute("character_id");
+				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+				if (character !is null) {
+					int playerId = character.getIntAttribute("player_id");
+					const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+					if(player !is null){
+						if (player.hasAttribute("aim_target")) {
+							Vector3 target = stringToVector3(player.getStringAttribute("aim_target"));
+							Vector3 height = Vector3(0,70,0);
+							target = target.add(height);
+							int Faction= character.getIntAttribute("faction_id");
+							string c = 
+							"<command class='create_instance'" +
+							" faction_id='"+ Faction +"'" +
+							" instance_class='vehicle'" +
+							" instance_key='cover1.vehicle' " +
+							" character_id='" + characterId +"'" +
+							" position='" + target.toString() + "' />";
+							m_metagame.getComms().send(c);
+						}
+					}
+				}
+				break;
+			}
+
+			case 25:{
+				int characterId = event.getIntAttribute("character_id");
+				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+				if (character !is null) {
+					int playerId = character.getIntAttribute("player_id");
+					const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+					if(player !is null){
+						if (player.hasAttribute("aim_target")) {
+							Vector3 target = stringToVector3(player.getStringAttribute("aim_target"));
+							Vector3 height = Vector3(0,70,0);
+							target = target.add(height);
+							int Faction= character.getIntAttribute("faction_id");
+							string c = 
+							"<command class='create_instance'" +
+							" faction_id='"+ Faction +"'" +
+							" instance_class='vehicle'" +
+							" instance_key='cover2.vehicle' " +
+							" character_id='" + characterId +"'" +
+							" position='" + target.toString() + "' />";
+							m_metagame.getComms().send(c);
+						}
+					}
+				}
+				break;
+			}
             default:
                 break;
 		}
