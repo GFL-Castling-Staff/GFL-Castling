@@ -806,9 +806,11 @@ class GFLskill : Tracker {
 							uint luckyGuyid = affectedCharacter[luckyGuyindex].getIntAttribute("id");
 							const XmlElement@ luckyGuy = getCharacterInfo(m_metagame, luckyGuyid);
 							Vector3 luckyGuyPos = stringToVector3(luckyGuy.getStringAttribute("position"));
-
-							CreateProjectile(m_metagame,sniperPos,luckyGuyPos,"kcco_smartbullet_1.projectile",characterId,factionid,240,0.01);
-							break;
+							const XmlElement@ LiveGuy = getCharacterInfo(m_metagame, characterId);
+							if(LiveGuy !is null){
+								CreateProjectile(m_metagame,sniperPos,luckyGuyPos,"kcco_smartbullet_1.projectile",characterId,factionid,240,0.01);
+								break;
+							}
 						}			
 						else if (num_jud<=15) {
 							_log("Mode 2");
