@@ -120,7 +120,7 @@
     <weak_hand_hold offset="0.4" />
 
     <projectile file="bullet_sf.projectile">
-		<result class="blast" damage="26.0"   radius="2.5" decal="1" push="0.1" character_state="death" faction_compare="not_equal"/>
+		<result class="blast" damage="26.0"   radius="2.5" decal="1" push="0.2" character_state="death" faction_compare="not_equal"/>
 		<trail probability="1.0" key="sf_long" />
     </projectile>
 

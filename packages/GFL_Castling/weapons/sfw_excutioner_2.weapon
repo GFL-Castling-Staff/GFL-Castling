@@ -41,7 +41,9 @@
 
     <next_in_chain key="sfw_excutioner_1.weapon" share_ammo="0" />
      
-    <projectile file="teal.projectile"/>
+    <projectile file="teal.projectile">
+		<result class="blast" radius="4" damage="6" decal="0" push="0.6" character_state="death" faction_compare="not_equal" make_vehicle_hit_sound="0" />
+	</projectile>
 
     <capacity value="0" source="rank" source_value="0.0" />
     <capacity value="1" source="rank" source_value="0.0" /> 
@@ -61,7 +63,7 @@
     <commonness value="0.00001" can_respawn_with="1" in_stock="1" />
 
   
-    <modifier class="speed" value="0.6" />
+    <modifier class="speed" value="0.7" />
     <modifier class="detectability" value="0.6"/>
     <shield offset="-0.55 0.0 0" extent="0.8 0.5 1.0" />
     <!-- state modifiers for weapons are connected to shield impact events -->

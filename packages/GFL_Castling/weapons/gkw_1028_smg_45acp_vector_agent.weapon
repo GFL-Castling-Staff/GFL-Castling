@@ -259,9 +259,9 @@
     <hud_icon filename="gkw_vector_agent_547.png" />
 
     <!--Ballistics-->
-    <projectile file="agent_sticky_bomb.projectile" />
-
-
+    <projectile file="agent_sticky_bomb.projectile">
+		<result class="blast" radius="8.5" damage="10" push="0.6" decal="1" faction_compare="not_equal"/>
+	</projectile>
     <ballistics near_far_distance="1000.0" speed_estimation_near="140.0" speed_estimation_far="140.0" max_speed="180.0" randomness="0.0" tweak_factor="0.95" />
 
 
