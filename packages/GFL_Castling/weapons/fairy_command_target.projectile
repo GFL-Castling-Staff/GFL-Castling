@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<projectile class="grenade" name="" key="fairy_command_target.projectile" slot="0" pulldown_in_air="0.0" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" >
-
+<projectile class="grenade" name="Fairy Command:Targetdrone" key="fairy_command_target.projectile" slot="0" pulldown_in_air="0.0" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" >
+	
     <result class="notify_script" key="fc_target" />
     <trigger class="time" time_to_live="0.0"/>
     <rotation class="random" />
 
     <model filename="" />
-
-    <commonness value="0.0" can_respawn_with="0" in_stock="0"/>
+	<trail probability="0.0" />
+	<commonness value="0.0" can_respawn_with="1" in_stock="1"/>
+	<capacity value="4" source="rank" source_value="6.48" />
+	<hud_icon filename="fairy_command_target.png" />
+	<inventory encumbrance="1.0" price="80.0" />
+	<animation key="throw" animation_key="air thrust" />
 
 </projectile>
