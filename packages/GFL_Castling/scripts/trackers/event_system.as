@@ -256,6 +256,17 @@ void excuteRampageFairyAC130(GameMode@ metagame,GFL_event@ eventinfo){
             ac130_pre_pos = luckyGuyPos;
 
             int attacknum = RampageFairyAC130List[int(eventinfo.m_phase%RampageFairyAC130List.length())];
+
+            // 烈火看这里，对 playSoundAtLocation 这个函数的 第二项（音效文件名） 和 最后一项（音量大小） 操作就行
+            // 5是霰弹音效，可以不用给其实；6是机炮音效；7是火箭弹齐射音效
+            switch(attacknum)
+            {
+                case 5:{playSoundAtLocation(metagame,"ac130_flyby.wav",eventinfo.m_factionid,eventinfo.m_pos,4.0);break;}
+                case 6:{playSoundAtLocation(metagame,"ac130_flyby.wav",eventinfo.m_factionid,eventinfo.m_pos,4.0);break;}
+                case 7:{playSoundAtLocation(metagame,"ac130_flyby.wav",eventinfo.m_factionid,eventinfo.m_pos,4.0);break;}
+                default:    break;
+            }  
+
             insertCommonStrike(eventinfo.m_characterId,eventinfo.m_factionid,attacknum,aimPos,luckyGuyPos);
 
             if(ac130_voice_interval<=0){
