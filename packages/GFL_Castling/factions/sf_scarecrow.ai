@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ai filename="lonewolf.ai">
+  <parameter class="going_to_cover_crouched_lonewolf_min_enemy_distance" value="0.0" />
+  <parameter class="accuracy_offset" value="0.03" /> 
+  <parameter class="accuracy_offset_in_player_squad" value="0.01" />
+  <parameter class="force_comparison_multiplier_to_call_reinforcements" value="0.01" />
+  <parameter class="burst_time" value="4.0" />
+  <parameter class="burst_time_variance" value="0.5" />
+  <parameter class="longer_burst_time" value="4.0" />
+  <parameter class="longer_burst_time_variance" value="0.5" />
+  <parameter class="choose_enemy_time" value="0.5" />
+  
+  <parameter class="fighting_melee_move_radius" value="3.0" />
+  <parameter class="fighting_regular_move_radius" value="30.0" />
+</ai>

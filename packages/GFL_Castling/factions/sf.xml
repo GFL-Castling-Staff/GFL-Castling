@@ -1015,7 +1015,7 @@
 			<sound key="throw" fileref="Scarecrow_buhuo_GOATTACK_JP.wav" pitch_variety="0.001" volume="0.8" />
 		</character>
 		<model filename="sfd_scarecrow.xml" />
-		<ai filename="lonewolf.ai" />
+		<ai filename="sf_scarecrow.ai" />
 		<resources clear_vehicles="1" clear_weapons="1" clear_calls="1" clear_carry_items="1">
 			<weapon key="sfw_scarecrow.weapon" enabled="1"/>
 			<carry_item key="vest_40hp.carry_item" enabled="1" />
