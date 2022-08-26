@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapons>
 	<weapon file="gk_sf_boss.base_weapon" key="ff_weaver.weapon">
-		<specification accuracy_factor="1" barrel_offset="0.5" class="0" slot="0" magazine_size="20" name="GK-Ouroboros" projectile_speed="145" retrigger_time="0.25" suppressed="0" projectiles_per_shot="2" carry_in_two_hands="0" can_shoot_standing="1" can_shoot_crouching="0" can_shoot_prone="0" sustained_fire_diminish_rate="0.8" sustained_fire_grow_step="0.25" />
+		<specification accuracy_factor="1" barrel_offset="0.5" class="0" slot="0" magazine_size="30" name="GK-Ouroboros" projectile_speed="145" retrigger_time="0.15" suppressed="0" projectiles_per_shot="2" carry_in_two_hands="0" can_shoot_standing="1" can_shoot_crouching="0" can_shoot_prone="0" sustained_fire_diminish_rate="0.8" sustained_fire_grow_step="0.25" />
 		<inventory encumbrance="20.0" buy_price="648.0" sell_price="324.0"/>
 		<animation state_key="recoil" animation_key="recoil,ouroboros" />
 		<animation state_key="recoil" stance_key="over_wall" animation_key="recoil,ouroboros" />
@@ -78,7 +78,7 @@
 		<ballistics curve_height="3.0" near_far_distance="16.0" speed_estimation_near="10.0" speed_estimation_far="16.0" max_speed="47.0" randomness="0.0" tweak_factor="1.55" />
 		<weak_hand_hold offset="0.2" />
 		<projectile file="Doppelsoldner_rocket.projectile">
-			<result class="blast" damage="4" radius="3.5" decal="1" push="1" character_state="death" faction_compare="not_equal" />
+			<result class="blast" damage="4" radius="4" decal="1" push="0.8" character_state="death" faction_compare="not_equal" />
 		</projectile>
 	    <stance state_key="running" accuracy="0.5" />
         <stance state_key="walking" accuracy="0.65" />

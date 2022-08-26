@@ -60,7 +60,7 @@
 
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet_kcco.projectile">
-      <result class="hit"  kill_probability="1.55" kill_probability_offset_on_successful_hit="2.0"  kill_decay_start_time="0.17" kill_decay_end_time="1.1" />
+      <result class="hit"  kill_probability="1.55" kill_probability_offset_on_successful_hit="1.0"  kill_decay_start_time="0.17" kill_decay_end_time="1.1" />
     </projectile>
      
     <stance state_key="running" accuracy="0.5" />
@@ -137,7 +137,7 @@
 
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet_kcco.projectile">
-      <result class="hit"  kill_probability="1.85" kill_probability_offset_on_successful_hit="0.4"  kill_decay_start_time="2.8" kill_decay_end_time="5.6" />
+      <result class="hit"  kill_probability="2.2" kill_probability_offset_on_successful_hit="0.2"  kill_decay_start_time="2.8" kill_decay_end_time="5.6" />
     </projectile>
      
     <stance state_key="running" accuracy="0.5" />
