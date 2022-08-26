@@ -7009,7 +7009,6 @@
 	<modifier class="detectability" value="1.5"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<inventory encumbrance="0.0" price="0"/>
-	<commonness value="1.0" in_stock="1" can_respawn_with="1"/>
 	<model/>
 </carry_item>
 
@@ -15222,14 +15221,8 @@
 	<inventory encumbrance="5" price="1"/>
 	<model mesh_filename="vest.xml"/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
-	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
-	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="speed" value="-0.1"/>
-	<modifier class="detectability" value="0.3"/>
 </carry_item>
 
 <carry_item key="pra_infected_2" name="infected" transform_on_consume="pra_infected_3" time_to_live_out_in_the_open="15" drop_count_factor_on_death="0.0" drop_count_factor_on_player_death="0.0" slot="1">
@@ -15242,14 +15235,8 @@
 	<inventory encumbrance="5" price="1"/>
 	<model mesh_filename="vest.xml"/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
-	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
-	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="speed" value="-0.1"/>
-	<modifier class="detectability" value="0.3"/>
 </carry_item>
 
 <carry_item key="pra_infected_3" name="infected" time_to_live_out_in_the_open="15" drop_count_factor_on_death="0.0" drop_count_factor_on_player_death="0.0" slot="1">
@@ -15262,14 +15249,8 @@
 	<inventory encumbrance="5" price="1"/>
 	<model mesh_filename="vest.xml"/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
-	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
-	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="speed" value="-0.1"/>
-	<modifier class="detectability" value="0.3"/>
 </carry_item>
 
 <carry_item name="cigars" key="cigars.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
@@ -16090,6 +16071,14 @@
 	<commonness value="0.0" in_stock="1" can_respawn_with="0"/>
 </carry_item>
 
+<carry_item name="Evil object from an unknown world" key="upgrade_m1.carry_item" time_to_live_out_in_the_open="90" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="1.0" player_death_drop_owner_lock_time="90.0">
+	<capacity value="1" source="rank" source_value="0.0"/>
+	<hud_icon filename="gki_m1_upgrade.png"/>
+	<inventory encumbrance="-1.0" buy_price="0" sell_price="0"/>
+	<model mesh_filename="vestexo.xml"/>
+	<commonness value="0.0" in_stock="0" can_respawn_with="0"/>
+</carry_item>
+
 <carry_item time_to_live_out_in_the_open="90.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="1.0" name="T-Doll Contract" key="dollcraft.carry_item">
 	<capacity value="100" source="rank" source_value="0.0"/>
 	<hud_icon filename="hud_dollcraft.png"/>
@@ -16211,7 +16200,6 @@
 	<commonness value="0" in_stock="0"/>
 	<capacity value="100" source="rank" source_value="0.0"/>
 	<inventory encumbrance="-0.5"/>
-	<commonness value="1.0" in_stock="0" can_respawn_with="0"/>
 </carry_item>
 
 <carry_item key="vest_40hp.carry_item" time_to_live_out_in_the_open="15" name="40HP Vest" transform_on_consume="vest_40hp_1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">

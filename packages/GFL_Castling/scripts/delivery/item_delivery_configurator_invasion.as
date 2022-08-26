@@ -678,6 +678,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		ScoredResource("ange_street.carry_item", "carry_item", 1.0f),
 		ScoredResource("gk_persica.carry_item", "carry_item", 0.1f),
 		ScoredResource("gkw_kccoar.weapon","weapon",0.7f),
+		ScoredResource("upgrade_m1.carry_item","carry_item",0.5f),
 
 		ScoredResource("dandelion.carry_item", "carry_item", 1.0f),
 		ScoredResource("dima.carry_item", "carry_item", 1.0f),

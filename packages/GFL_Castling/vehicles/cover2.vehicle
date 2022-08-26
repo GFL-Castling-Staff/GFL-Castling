@@ -10,7 +10,7 @@
 	<sound key="hit" filename="barrier_impact2.wav" />
 	<effect event_key="destroy" key="other" ref="SmokeMinor" post_processing="1" />
 	<effect event_key="destroy" key="other" ref="ShadowSmokeMinor" shadow="1" />
-	<sky_diving chute_offset="0 -1.1 0.0" trigger_height="20.0" gravity="-20" mesh_filename="chute.mesh" texture_filename="chute.png" />
+	<sky_diving chute_offset="0 -1.1 0.0" trigger_height="20.0" gravity="-10" mesh_filename="chute.mesh" texture_filename="chute.png" />
 	<event>
 		<trigger class="destroy" />
 		<result class="spawn" instance_class="visual_item" instance_key="burning_piece_barrier.visual_item" min_amount="3" max_amount="5" offset="0 2.0 0" position_spread="1.5 1.5" direction_spread="0.1 0.1" />

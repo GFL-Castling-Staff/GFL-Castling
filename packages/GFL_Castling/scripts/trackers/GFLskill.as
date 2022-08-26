@@ -84,6 +84,10 @@ dictionary gameSkillIndex = {
         // 玩家炼金术师脚本弹头
         {"ff_alchemist_skill_scan",23},
 
+        // 防御妖精
+        {"fc_defence_1",24},
+        {"fc_defence_2",25},
+
         // 下面这行是用来占位的，在这之上添加新的技能key和index即可
         {"666",-1}
 };
@@ -806,9 +810,11 @@ class GFLskill : Tracker {
 							uint luckyGuyid = affectedCharacter[luckyGuyindex].getIntAttribute("id");
 							const XmlElement@ luckyGuy = getCharacterInfo(m_metagame, luckyGuyid);
 							Vector3 luckyGuyPos = stringToVector3(luckyGuy.getStringAttribute("position"));
-
-							CreateProjectile(m_metagame,sniperPos,luckyGuyPos,"kcco_smartbullet_1.projectile",characterId,factionid,240,0.01);
-							break;
+							const XmlElement@ LiveGuy = getCharacterInfo(m_metagame, characterId);
+							if(LiveGuy !is null){
+								CreateProjectile(m_metagame,sniperPos,luckyGuyPos,"kcco_smartbullet_1.projectile",characterId,factionid,240,0.01);
+								break;
+							}
 						}			
 						else if (num_jud<=15) {
 							_log("Mode 2");
@@ -884,6 +890,47 @@ class GFLskill : Tracker {
 				break;
 			}
 
+			case 24:{
+				int characterId = event.getIntAttribute("character_id");
+				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+				if (character !is null) {
+					int playerId = character.getIntAttribute("player_id");
+					const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+					if(player !is null){
+						if (player.hasAttribute("aim_target")) {
+							Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
+							Vector3 target = stringToVector3(player.getStringAttribute("aim_target"));
+							float ori4 = getAimOrientation4(c_pos,target);
+							Vector3 height = Vector3(0,70,0);
+							target = target.add(height);
+							int Faction= character.getIntAttribute("faction_id");
+							spawnVehicle(m_metagame,1,Faction,target,Orientation(0,1,0,ori4),"cover1.vehicle");	
+						}
+					}
+				}
+				break;
+			}
+
+			case 25:{
+				int characterId = event.getIntAttribute("character_id");
+				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+				if (character !is null) {
+					int playerId = character.getIntAttribute("player_id");
+					const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+					if(player !is null){
+						if (player.hasAttribute("aim_target")) {
+							Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
+							Vector3 target = stringToVector3(player.getStringAttribute("aim_target"));
+							float ori4 = getAimOrientation4(c_pos,target);
+							Vector3 height = Vector3(0,70,0);
+							target = target.add(height);
+							int Faction= character.getIntAttribute("faction_id");
+							spawnVehicle(m_metagame,1,Faction,target,Orientation(0,1,0,ori4),"cover2.vehicle");	
+						}
+					}
+				}
+				break;
+			}
             default:
                 break;
 		}
