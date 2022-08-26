@@ -113,6 +113,7 @@ array<string> targetAAgrenades = {
     "gkw_hk416.weapon",
     "gkw_hk416_6505.weapon",
     "gkw_hk416_537.weapon",
+    "gkw_hk416_805.weapon",
     "gkw_hk416_3401.weapon"
 };
 array<string> targetAPgrenades = {
@@ -287,6 +288,8 @@ dictionary commandSkillIndex = {
         {"gkw_hk416_537_mod3_skill.weapon",36},
         {"gkw_hk416_6505_mod3.weapon",36},
         {"gkw_hk416_6505_mod3_skill.weapon",36},
+        {"gkw_hk416mod3_805.weapon",36},
+        {"gkw_hk416mod3_805_skill.weapon",36},
 
         {"gkw_hk416_3401_mod3.weapon",37},
         {"gkw_hk416_3401_mod3_skill.weapon",37},
@@ -1442,7 +1445,7 @@ class CommandSkill : Tracker {
                         };
                         playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);                        
                     }
-                    if(weaponname=="gkw_hk416.weapon"|| weaponname=="gkw_hk416_6505.weapon"|| weaponname=="gkw_hk416_537.weapon") {
+                    if(weaponname=="gkw_hk416.weapon"|| weaponname=="gkw_hk416_6505.weapon"|| weaponname=="gkw_hk416_537.weapon"|| weaponname=="gkw_hk416_805.weapon") {
                         array<string> Voice={
                             "HK416_Skill1.wav",
                             "HK416_Skill2.wav",
