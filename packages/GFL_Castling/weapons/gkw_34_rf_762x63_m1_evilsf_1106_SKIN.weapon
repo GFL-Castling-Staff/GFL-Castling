@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- 体素模型由YABA提供 -->
 <weapons>
-<weapon on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0" key="gkw_m1_sf.weapon">
+<weapon on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0" key="gkw_m1_sf_1106.weapon">
 	<tag name="rifle" />
     <specification 
 	retrigger_time="-1" 
@@ -25,7 +25,7 @@
 	stab_range="4.0"
 	/>
     <effect class="muzzle" ref="ejection_76251" />
-    <next_in_chain key="gkw_m1_sf_skill.weapon" share_ammo="1" />
+    <next_in_chain key="gkw_m1_sf_1106_skill.weapon" share_ammo="1" />
     <animation state_key="reload" animation_key="reloading, Machine gun 4" />
 	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone" />
 	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone" />
@@ -70,7 +70,7 @@
     <target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0" />
     <target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0" />
 </weapon>
-<weapon on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0" key="gkw_m1_sf_skill.weapon">
+<weapon on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0" key="gkw_m1_sf_1106_skill.weapon">
 	<tag name="rifle" />
     <specification 
 	retrigger_time="0.2" 
@@ -93,7 +93,7 @@
 	stab_range="4.0"
 	/>
     <effect class="muzzle" ref="ejection_76251" />
-    <next_in_chain key="gkw_m1_sf.weapon" share_ammo="1" />
+    <next_in_chain key="gkw_m1_sf_1106.weapon" share_ammo="1" />
     <animation state_key="reload" animation_key="reloading, Machine gun 4" />
 	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone" />
 	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone" />
