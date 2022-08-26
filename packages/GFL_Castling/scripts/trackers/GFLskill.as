@@ -898,18 +898,13 @@ class GFLskill : Tracker {
 					const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
 					if(player !is null){
 						if (player.hasAttribute("aim_target")) {
+							Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
 							Vector3 target = stringToVector3(player.getStringAttribute("aim_target"));
+							float ori4 = getAimOrientation4(c_pos,target);
 							Vector3 height = Vector3(0,70,0);
 							target = target.add(height);
 							int Faction= character.getIntAttribute("faction_id");
-							string c = 
-							"<command class='create_instance'" +
-							" faction_id='"+ Faction +"'" +
-							" instance_class='vehicle'" +
-							" instance_key='cover1.vehicle' " +
-							" character_id='" + characterId +"'" +
-							" position='" + target.toString() + "' />";
-							m_metagame.getComms().send(c);
+							spawnVehicle(m_metagame,1,Faction,target,Orientation(0,1,0,ori4),"cover1.vehicle");	
 						}
 					}
 				}
@@ -924,18 +919,13 @@ class GFLskill : Tracker {
 					const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
 					if(player !is null){
 						if (player.hasAttribute("aim_target")) {
+							Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
 							Vector3 target = stringToVector3(player.getStringAttribute("aim_target"));
+							float ori4 = getAimOrientation4(c_pos,target);
 							Vector3 height = Vector3(0,70,0);
 							target = target.add(height);
 							int Faction= character.getIntAttribute("faction_id");
-							string c = 
-							"<command class='create_instance'" +
-							" faction_id='"+ Faction +"'" +
-							" instance_class='vehicle'" +
-							" instance_key='cover2.vehicle' " +
-							" character_id='" + characterId +"'" +
-							" position='" + target.toString() + "' />";
-							m_metagame.getComms().send(c);
+							spawnVehicle(m_metagame,1,Faction,target,Orientation(0,1,0,ori4),"cover2.vehicle");	
 						}
 					}
 				}

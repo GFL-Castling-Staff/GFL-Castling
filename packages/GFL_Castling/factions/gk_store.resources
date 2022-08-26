@@ -6,6 +6,8 @@
 	<weapon key="gkw_consume_at4.weapon" />
 	<weapon key="gkw_consume_javelin.weapon" />
 	<weapon key="gkw_ump9_guard_vent.weapon"/>
+	<weapon key="cover_deploy.weapon"/>
+	<weapon key="cover_deploy_2.weapon"/>
 
     <carry_item key="dollcraft.carry_item"/>
 	<carry_item key="dollcraft_ar.carry_item"/>
@@ -23,7 +25,10 @@
 	<weapon key="repair_fairy.weapon" />
 	<weapon key="rescue_fairy.weapon" />
 	<weapon key="target_fairy.weapon" />
+	<projectile key="fairy_command_defence_1.projectile" />
+	<projectile key="fairy_command_defence_2.projectile" />
 
+	
 	<projectile key="flare.projectile" />
 	<projectile key="c4.projectile" />
     <projectile key="hand_grenade.projectile"/>
