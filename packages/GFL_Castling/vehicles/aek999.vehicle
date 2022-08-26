@@ -19,9 +19,10 @@
 	<character_slot type="driver" position="0.0 0.65 -0.12" rotation="0" exit_rotation="1.57" hiding="0" animation_key="driving atv" marker_offset="0 0.35 0.2" />
 
 	<!-- sound handling -->
-	<rev_sound filename="atv_rev0.wav" low_pitch="1.2" high_pitch="1.5" low_rev="0.0" high_rev="0.4" volume="0.6" />
-	<rev_sound filename="atv_rev1.wav" low_pitch="0.6" high_pitch="1.0" low_rev="0.3" high_rev="0.7" volume="0.6" />
-	<rev_sound filename="atv_rev2.wav" low_pitch="0.8" high_pitch="1.0" low_rev="0.6" high_rev="1.0" volume="0.8" />
+	<!-- <rev_sound filename="atv_rev0.wav" low_pitch="1.2" high_pitch="1.5" low_rev="0.0" high_rev="0.4" volume="0.6" /> -->
+	<!-- <rev_sound filename="atv_rev1.wav" low_pitch="0.6" high_pitch="1.0" low_rev="0.3" high_rev="0.7" volume="0.6" /> -->
+	<!-- <rev_sound filename="atv_rev2.wav" low_pitch="0.8" high_pitch="1.0" low_rev="0.6" high_rev="1.0" volume="0.8" /> -->
+	<rev_sound filename="aek_djv_from_RegingFlame.wav" low_pitch="1.0" high_pitch="1.0" low_rev="0.0" high_rev="0.0" volume="4.0" />
 
 	<sound key="slide" filename="slide_noise.wav" volume="0.5" />
 	<sound key="squeal" filename="tire_squeal.wav" volume="0.5" />
