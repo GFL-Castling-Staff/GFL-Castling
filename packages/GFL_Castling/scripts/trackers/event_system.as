@@ -117,7 +117,7 @@ class GFL_event{
 }
 
 void excuteSniperFairy(GameMode@ metagame,GFL_event@ eventinfo){
-    eventinfo.m_time=1;
+    eventinfo.m_time=1.5;
     int luckyGuyid = getNearbyRandomLuckyGuyId(metagame,eventinfo.m_factionid,eventinfo.m_pos,30.0f);
     if(luckyGuyid!=-1){
         const XmlElement@ luckyGuy = getCharacterInfo(metagame, luckyGuyid);
@@ -125,13 +125,13 @@ void excuteSniperFairy(GameMode@ metagame,GFL_event@ eventinfo){
         insertCommonStrike(eventinfo.m_characterId,eventinfo.m_factionid,8,getRandomOffsetVector(eventinfo.m_pos,60.0),luckyGuyPos);                        
     }
     eventinfo.m_phase++;
-    if(eventinfo.m_phase>=20){
+    if(eventinfo.m_phase>=10){
         eventinfo.m_enable=false;
     }
 }
 
 void excuteSniperM200(GameMode@ metagame,GFL_event@ eventinfo){
-    eventinfo.m_time=2.0;
+    eventinfo.m_time=1.5;
     int luckyGuyid = getNearbyRandomLuckyGuyId(metagame,eventinfo.m_factionid,eventinfo.m_pos,40.0f);
     if(luckyGuyid!=-1){
         const XmlElement@ luckyGuy = getCharacterInfo(metagame, luckyGuyid);
@@ -139,7 +139,7 @@ void excuteSniperM200(GameMode@ metagame,GFL_event@ eventinfo){
         insertCommonStrike(eventinfo.m_characterId,eventinfo.m_factionid,4,getRandomOffsetVector(eventinfo.m_pos,70.0),luckyGuyPos);                        
     }
     eventinfo.m_phase++;
-    if(eventinfo.m_phase>=8){
+    if(eventinfo.m_phase>=6){
         eventinfo.m_enable=false;
     }
 }

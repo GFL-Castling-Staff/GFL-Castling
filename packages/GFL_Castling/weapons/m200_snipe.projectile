@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projectiles>
 <projectile class="grenade" key="m200_snipe.projectile" name="AP bullet" slot="1" pulldown_in_air="4" can_be_detected_by_footmen="0" can_be_detected_by_driver="0">
-    <result class="spawn" instance_class="projectile" instance_key="m200_snipe_sub.projectile" min_amount="20" max_amount="30" offset="0 1 0" position_spread="0 0" direction_spread="0.0 0.0" />
+    <result class="spawn" instance_class="projectile" instance_key="m200_snipe_sub.projectile" min_amount="30" max_amount="40" offset="0 1 0" position_spread="0 0" direction_spread="0.0 0.0" />
     <rotation class="motion" />
     <trigger class="impact"/>
     <sound class="result" key="terrain" fileref="ricochet1.wav" />

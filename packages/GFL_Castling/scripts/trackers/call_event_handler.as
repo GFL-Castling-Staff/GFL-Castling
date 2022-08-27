@@ -49,18 +49,18 @@ class call_event : Tracker {
                     if (character !is null) {
                         int playerId = character.getIntAttribute("player_id");
                         sendPrivateMessageKey(m_metagame,playerId,"ac130callexisthint");
-                        GiveRP(m_metagame,characterId,3000);
+                        GiveRP(m_metagame,characterId,5000);
                     }
                 }
                 else {
                     sendFactionMessageKey(m_metagame,factionId,"ac130callstarthint");
+                    int flagId = m_DummyCallID + 15000;
                     ManualCallTask@ FairyRequest = ManualCallTask(characterId,"",0.0,factionId,stringToVector3(position),"foobar");
                     FairyRequest.setIndex(9);
                     FairyRequest.setSize(0.5);
-                    FairyRequest.setDummyId(m_DummyCallID);
+                    FairyRequest.setDummyId(flagId);
                     FairyRequest.setRange(120.0);
                     FairyRequest.setIconTypeKey("call_marker_fury");
-                    int flagId = m_DummyCallID + 15000;
                     addCastlingMarker(FairyRequest);
                     m_DummyCallID++;
                     GFL_event_array.insertLast(GFL_event(characterId,factionId,2,stringToVector3(position),1.0,-1.0,flagId));
@@ -87,13 +87,13 @@ class call_event : Tracker {
                 }
                 else {
                     sendFactionMessageKey(m_metagame,factionId,"snipecallstarthint");
+                    int flagId = m_DummyCallID + 15000;
                     ManualCallTask@ FairyRequest = ManualCallTask(characterId,"",0.0,factionId,stringToVector3(position),"foobar");
                     FairyRequest.setIndex(14);
                     FairyRequest.setSize(0.5);
-                    FairyRequest.setDummyId(m_DummyCallID);
-                    FairyRequest.setRange(80.0);
+                    FairyRequest.setDummyId(flagId);
+                    FairyRequest.setRange(60.0);
                     FairyRequest.setIconTypeKey("call_marker_snipe");
-                    int flagId = m_DummyCallID + 15000;
                     addCastlingMarker(FairyRequest);
                     m_DummyCallID++;
                     GFL_event_array.insertLast(GFL_event(characterId,factionId,1,stringToVector3(position),1.0,-1.0,flagId));
@@ -107,10 +107,9 @@ class call_event : Tracker {
     }
 
     protected void addCastlingMarker(ManualCallTask@ info){
-        int flagId = info.m_callId + 15000;
         XmlElement command("command");
             command.setStringAttribute("class", "set_marker");
-            command.setIntAttribute("id", flagId);
+            command.setIntAttribute("id", info.m_callId);
             command.setIntAttribute("faction_id", info.m_factions);
             command.setIntAttribute("atlas_index", info.m_atlasIndex);
             command.setFloatAttribute("size", info.m_size);

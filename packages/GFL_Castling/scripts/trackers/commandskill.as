@@ -9,6 +9,9 @@
 #include "task_sequencer.as"
 #include "GFLhelpers.as"
 #include "kill_event.as"
+#include "event_system.as"
+#include "ManualCall.as"
+
 //Interface Author: NetherCrow
 //Contributor: SAIWA K309 Lappland
 
@@ -307,7 +310,11 @@ dictionary commandSkillIndex = {
 
         // 汉阳造高达，攻顶火箭
         {"gkw_88typemod3_6503.weapon",42},        
-        {"gkw_88typemod3_6503_skill.weapon",42},        
+        {"gkw_88typemod3_6503_skill.weapon",42},   
+
+        // M200 无言杀意
+        {"gkw_m200.weapon",43},        
+        {"gkw_m200_560.weapon",43},        
 
         // 下面这行是用来占位的，在这之上添加新的枪和index即可
         {"666",-1}
@@ -315,7 +322,8 @@ dictionary commandSkillIndex = {
 
 class CommandSkill : Tracker {
     protected GameMode@ m_metagame;
-    
+    protected int m_DummyCallID=0;
+
     array<SkillEffectTimer@> TimerArray;
     array<SpamAvoider@> DontSpamingYourFuckingSkillWhileCoolDownBro;
 
@@ -428,6 +436,7 @@ class CommandSkill : Tracker {
                     case 40:{excute88typeskill(cId,senderId,m_modifer);break;}
                     case 41:{excute88typeskill(cId,senderId,m_modifer,true);break;}
                     case 42:{excute88typeGUNDAMskill(cId,senderId,m_modifer);break;}
+                    case 43:{excuteM200skill(cId,senderId,m_modifer);break;}
 
                     default:
                         break;
@@ -549,6 +558,25 @@ class CommandSkill : Tracker {
 
         //破坏者，法官，
     }
+
+    protected void addCastlingMarker(ManualCallTask@ info){
+        XmlElement command("command");
+            command.setStringAttribute("class", "set_marker");
+            command.setIntAttribute("id", info.m_callId);
+            command.setIntAttribute("faction_id", info.m_factions);
+            command.setIntAttribute("atlas_index", info.m_atlasIndex);
+            command.setFloatAttribute("size", info.m_size);
+            command.setFloatAttribute("range", info.m_range);
+            command.setIntAttribute("enabled", 1);
+            command.setStringAttribute("position", info.m_pos.toString());
+            command.setStringAttribute("text", "");
+            command.setStringAttribute("type_key", info.m_typeKey);
+            command.setBoolAttribute("show_in_map_view", true);
+            command.setBoolAttribute("show_in_game_view", true);
+            command.setBoolAttribute("show_at_screen_edge", false);
+        m_metagame.getComms().send(command);
+    }
+
     void excuteAN94skill(int characterId,int playerId,SkillModifer@ modifer){
         bool ExistQueue = false;
         int j =-1;
@@ -2661,4 +2689,52 @@ class CommandSkill : Tracker {
             }
         }
     }
+
+    void excuteM200skill(int characterId,int playerId,SkillModifer@ modifer){
+        bool ExistQueue = false;
+        int j=-1;
+        for (uint i=0;i<SkillArray.length();i++){
+            if (InCooldown(characterId,modifer,SkillArray[i],true) && SkillArray[i].m_weapontype=="M200") {
+                ExistQueue=true;
+                j=i;
+            }
+        }
+        if (ExistQueue){
+            dictionary a;
+            a["%time"] = ""+SkillArray[j].m_time;
+            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            _log("skill cooldown" + SkillArray[j].m_time);
+            return;
+        }
+        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+        if (character !is null) {
+            const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+            if (player !is null){
+                if (player.hasAttribute("aim_target")) {
+                    string target = player.getStringAttribute("aim_target");
+                    int factionid = character.getIntAttribute("faction_id");
+                    Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
+                    array<string> Voice={
+                        "M200_SKILL1_JP.wav",
+                        "M200_SKILL2_JP.wav",
+                        "M200_SKILL3_JP.wav",
+                        "M200_ATTACK_JP.wav"
+                    };
+                    playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),2.0);
+                    TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                    int flagId = m_DummyCallID + 20000;
+                    ManualCallTask@ FairyRequest = ManualCallTask(characterId,"",0.0,factionid,stringToVector3(target),"foobar");
+                    FairyRequest.setIndex(14);
+                    FairyRequest.setSize(0.5);
+                    FairyRequest.setDummyId(flagId);
+                    FairyRequest.setRange(80.0);
+                    FairyRequest.setIconTypeKey("call_marker_snipe_m200");
+                    addCastlingMarker(FairyRequest);
+                    GFL_event_array.insertLast(GFL_event(characterId,factionid,3,stringToVector3(target),0.0,-1.0,flagId));
+                    m_DummyCallID++;
+                    addCoolDown("M200",60,characterId,modifer);
+                }
+            }
+        }
+    }    
 }
