@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projectile class="grenade" name="architect, rocket" slot="2" pulldown_in_air="50.0" key="sfw_architect_rocket_sub.projectile" >
-    <result class="blast" radius="8.5" damage="15" push="1.2" decal="1" faction_compare="not_equal"/>
+    <result class="blast" radius="9.5" damage="15" push="1.2" decal="1" faction_compare="not_equal"/>
     <trigger class="impact" />
     <rotation class="motion" />
 
