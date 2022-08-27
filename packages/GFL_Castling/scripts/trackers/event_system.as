@@ -267,7 +267,7 @@ void excuteRampageFairyAC130(GameMode@ metagame,GFL_event@ eventinfo){
             {
                 case 5:{playSoundAtLocation(metagame,"ac130sg_fire_FromWARTHUNDER.wav",eventinfo.m_factionid,eventinfo.m_pos,3);break;}
                 case 6:{playSoundAtLocation(metagame,"ac130mg_fire_FromSAM4.wav",eventinfo.m_factionid,eventinfo.m_pos,3.1);break;}
-                case 7:{playSoundAtLocation(metagame,"ac130rpg_fire_FromCOD16.wav",eventinfo.m_factionid,eventinfo.m_pos,2.8);break;}
+                case 7:{playSoundAtLocation(metagame,"ac130rpg_fire_FromCOD16.wav",eventinfo.m_factionid,eventinfo.m_pos,2.4);break;}
                 default:    break;
             }  
 
