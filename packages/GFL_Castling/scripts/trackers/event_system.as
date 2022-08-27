@@ -154,39 +154,44 @@ array<int> RampageFairyAC130List={
 
 array<string> AC130StartVoice={
     "ac130entrance_rus1.wav",
+    "ac130entrance_rus2.wav",
+    "ac130entrance_rus3.wav"
 };
 
 array<string> AC130EndVoice={
-    "AUHarbi_voiRetreaa.wav",
-    "AUHarbi_voiMvAtte.wav"
+    "ac130exit_rus1.wav",
+    "ac130exit_rus2.wav",
+    "ac130exit_rus3.wav"
 };
 
 array<string> AC130NoTargetVoice={
-    "AUHarbi_voiSelBatf.wav",
-    "AUHarbi_voiSelBath.wav",
-    "AUHarbi_voiSelBatg.wav",
-    ""
+    "ac130search_rus1.wav",
+    "ac130search_rus2.wav",
 };
 
 array<string> AC130MinigunVoice={
-    "AUHarbi_voiAttackc.wav",
-    "AUHarbi_voiAttacke.wav",
-    "AUHarbi_voiAttackb.wav",
-    "AUHarbi_voiAttacka.wav",
-    "","",""
+    "ac130mg_rus1.wav",
+    "ac130mg_rus2.wav",
+    "ac130allguns_rus1.wav",
+    "ac130allguns_rus2.wav",
+    "ac130allguns_rus3.wav"
 };
 
 array<string> AC130ShotgunVoice={
-    "AUHarbi_voiSelBata.wav",
-    "AUHarbi_voiSelBatc.wav",
-    "AUHarbi_voiAttSpeca.wav",
-    "",""
+    "ac130sg_rus1.wav",
+    "ac130sg_rus2.wav",
+    "ac130allguns_rus1.wav",
+    "ac130allguns_rus2.wav",
+    "ac130allguns_rus3.wav"
 };
 
 array<string> AC130M202Voice={
-    "AUHarbi_voiAttSpecd.wav",
-    "AUHarbi_voiAttSpece.wav",
-    "AUHarbi_voiAttSpecg.wav"
+    "ac130rpg_rus1.wav",
+    "ac130rpg_rus2.wav",
+    "ac130rpg_rus3.wav",
+    "ac130allguns_rus1.wav",
+    "ac130allguns_rus2.wav",
+    "ac130allguns_rus3.wav"
 };
 
 int ac130_voice_interval = 0;
