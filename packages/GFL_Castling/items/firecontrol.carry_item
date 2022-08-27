@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <carry_item time_to_live_out_in_the_open="90.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="1.0" player_death_drop_owner_lock_time="90.0" name="Fire Control Component" key="firecontrol.carry_item">
     <hud_icon filename="hud_firecontrol.png" />
-    <inventory encumbrance="0.0" buy_price="500000" sell_price="-1000.0"/>
+    <inventory encumbrance="0.0" buy_price="500000" sell_price="-2000.0"/>
     <model mesh_filename="fire_control.xml"/>
     <commonness value="0" in_stock="0" />
 </carry_item>

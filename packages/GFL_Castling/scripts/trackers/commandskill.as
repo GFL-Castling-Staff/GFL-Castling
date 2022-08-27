@@ -299,6 +299,8 @@ dictionary commandSkillIndex = {
 
         // M3
         {"gkw_m3.weapon",38},
+        {"gkw_sten.weapon",38},
+        {"gkw_stenmod3.weapon",38},
 
         // 炼金术师 大限
         {"ff_alchemist.weapon",39},
@@ -307,6 +309,7 @@ dictionary commandSkillIndex = {
         // 汉阳造88式，88雷(普通一颗雷，mod3三颗充能雷)
         {"gkw_88type.weapon",40},
         {"gkw_88typemod3.weapon",41},
+        {"gkw_88typemod3_skill.weapon",41},
 
         // 汉阳造高达，攻顶火箭
         {"gkw_88typemod3_6503.weapon",42},        
@@ -315,6 +318,8 @@ dictionary commandSkillIndex = {
         // M200 无言杀意
         {"gkw_m200.weapon",43},        
         {"gkw_m200_560.weapon",43},        
+
+
 
         // 下面这行是用来占位的，在这之上添加新的枪和index即可
         {"666",-1}
@@ -2426,22 +2431,61 @@ class CommandSkill : Tracker {
 
                     if(weaponname=="gkw_m3.weapon") {
                         array<string> Voice={
-                            "M9_SKILL1_JP.wav",
-                            "M9_SKILL2_JP.wav",
-                            "M9_SKILL3_JP.wav"
+                            "M3_ATTACK_JP.wav",
+                            "M3_GOATTACK_JP.wav"
                         };
                         playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
                         playSoundAtLocation(m_metagame,"grenade_throw1.wav",factionid,c_pos,1.0);
                         addCoolDown("Grenade",15,characterId,modifer);
+                        playAnimationKey(m_metagame,characterId,"throwing, upside",true,true);
+                        c_pos=c_pos.add(Vector3(0,1,0));
+                        if (checkFlatRange(c_pos,stringToVector3(target),10)){
+                            CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"grenade_m67_s.projectile",characterId,factionid,60);
+                        }
+                        else{
+                            CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"grenade_m67_s.projectile",characterId,factionid,30.0,3.0);
+                        }                        
                     }
-                    playAnimationKey(m_metagame,characterId,"throwing, upside",true,true);
-                    c_pos=c_pos.add(Vector3(0,1,0));
-                    if (checkFlatRange(c_pos,stringToVector3(target),10)){
-                        CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"grenade_m67_s.projectile",characterId,factionid,60);
+
+                    else if(weaponname=="gkw_sten.weapon") {
+                        array<string> Voice={
+                            "StenMK2_ATTACK_JP.wav",
+                            "StenMK2_GOATTACK_JP.wav",
+                            "StenMK2_SKILL1_JP.wav",
+                            "StenMK2_SKILL3_JP.wav"
+                        };
+                        playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+                        playSoundAtLocation(m_metagame,"grenade_throw1.wav",factionid,c_pos,0.7);
+                        addCoolDown("Grenade",15,characterId,modifer);
+                        playAnimationKey(m_metagame,characterId,"throwing, upside",true,true);
+                        c_pos=c_pos.add(Vector3(0,1,0));
+                        if (checkFlatRange(c_pos,stringToVector3(target),10)){
+                            CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"grenade_m67_s.projectile",characterId,factionid,60);
+                        }
+                        else{
+                            CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"grenade_m67_s.projectile",characterId,factionid,30.0,3.0);
+                        }                        
                     }
-                    else{
-                        CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"grenade_m67_s.projectile",characterId,factionid,30.0,3.0);
-                    }
+
+                    else if(weaponname=="gkw_stenmod3.weapon") {
+                        array<string> Voice={
+                            "StenMK2Mod_ATTACK_JP.wav",
+                            "StenMK2Mod_DEFENSE_JP.wav",
+                            "StenMK2Mod_SKILL1_JP.wav",
+                            "StenMK2Mod_SKILL2_JP.wav"
+                        };
+                        playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+                        playSoundAtLocation(m_metagame,"grenade_throw1.wav",factionid,c_pos,1.2);
+                        addCoolDown("Grenade",12,characterId,modifer);
+                        playAnimationKey(m_metagame,characterId,"throwing, upside",true,true);
+                        c_pos=c_pos.add(Vector3(0,1,0));
+                        if (checkFlatRange(c_pos,stringToVector3(target),10)){
+                            CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"grenade_m67_s.projectile",characterId,factionid,60);
+                        }
+                        else{
+                            CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"grenade_m67_s.projectile",characterId,factionid,30.0,3.0);
+                        }                        
+                    }                    
                 }
             }
         }
