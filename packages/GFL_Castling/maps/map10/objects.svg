@@ -11394,7 +11394,8 @@ show_base_names_in_map_view = 0;</desc>
        id="rect9344-60-7-4-5-4-5"
        style="fill:#656565;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:5;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;display:inline;enable-background:new">
       <desc
-         id="desc9346-8-2-1-6-2-0">name = FarmFence2; color = 1.0 1.0 1.0 1.0; depth = -1.0; height = 1.2; side_texture = farm_fence_bw.png; side_texture_scale = 1.0 0.3; separator_side_texture = trunk_side_bw.png; separator_top_texture = trench_end_bw.png; separator_color = 1.0 1.0 1.0 1.0; separator_over_height = 0.3; separator_depth = 0.2; penetrability = 0.7; see_through = 1;</desc>
+         id="desc9346-8-2-1-6-2-0">name = FarmFence2; 
+static_object_type_key=woodfence.static_object; color = 1.0 1.0 1.0 1.0; depth = -1.0; height = 1.2; side_texture = farm_fence_bw.png; side_texture_scale = 1.0 0.3; separator_side_texture = trunk_side_bw.png; separator_top_texture = trench_end_bw.png; separator_color = 1.0 1.0 1.0 1.0; separator_over_height = 0.3; separator_depth = 0.2; penetrability = 0.7; see_through = 1;</desc>
     </rect>
     <flowRoot
        inkscape:label="#flowRoot9399-4-1-5"
@@ -16757,7 +16758,8 @@ penetrability = 1.0;</desc>
        id="rect9344-60-7-4-5-4"
        style="fill:#656565;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:5;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;display:inline;enable-background:new">
       <desc
-         id="desc9346-8-2-1-6-2">name = FarmFence1;
+         id="desc9346-8-2-1-6-2">name = FarmFence1; 
+static_object_type_key=woodfence.static_object;
 color = #6f6555;
 depth = -1.0;
 height = 1.2;
@@ -16815,7 +16817,8 @@ hack1 = 1;</desc>
        id="rect9344-60-7-4-5-4-5-1"
        style="fill:#656565;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:5;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;display:inline;enable-background:new">
       <desc
-         id="desc9346-8-2-1-6-2-0-7">name = FarmFence2;
+         id="desc9346-8-2-1-6-2-0-7">name = FarmFence2; 
+static_object_type_key=woodfence.static_object;
 color = 1.0 1.0 1.0 1.0;
 depth = -1.0;
 height = 1.2;

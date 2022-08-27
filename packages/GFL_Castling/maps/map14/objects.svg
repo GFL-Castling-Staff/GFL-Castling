@@ -14311,7 +14311,8 @@ climbable = 0;</desc>
        y="-8.6849098"
        inkscape:label="#wall_template">
       <desc
-         id="desc9346-8-2-1-6-2-5">name = FarmFence1;
+         id="desc9346-8-2-1-6-2-5">name = FarmFence1; 
+static_object_type_key=woodfence.static_object;
 color = #6f6555;
 depth = -1.0;
 height = 1.2;
@@ -14369,7 +14370,8 @@ hack1 = 1;</desc>
        y="-10.477818"
        inkscape:label="#wall_template">
       <desc
-         id="desc9346-8-2-1-6-2-0-7">name = FarmFence2;
+         id="desc9346-8-2-1-6-2-0-7">name = FarmFence2; 
+static_object_type_key=woodfence.static_object;
 color = 1.0 1.0 1.0 1.0;
 depth = -1.0;
 height = 1.2;

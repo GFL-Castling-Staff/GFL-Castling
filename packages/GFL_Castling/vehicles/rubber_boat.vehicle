@@ -6,7 +6,9 @@
 	time_to_live_unsteerable="495" 
 	character_leave_request_mode="friendly"  >
 	
-	<tag name="vehicle" />
+	<tag name="metal_thin" />
+	<tag name="boat" />
+
 	<tire_set offset="0.5 0.0 1.55" radius="0.4" />
 	<tire_set offset="0.8 0.0 0" radius="0.4" />
 	<tire_set offset="0.8 0.0 -1.55" radius="0.4" />
@@ -21,9 +23,10 @@
 	steer_smoothening="0.8" />
 
 	<physics 
-	max_health="16" 
-	mass="2.0" 
-	gravity="-28" 
+	max_health="20" 
+	mass="3.0" 
+	gravity="-28"
+	blast_damage_threshold="1.5"
 	extent="1.87 0.0 3.41" 
 	offset="0 0.2 0" 
 	collision_model_pos="0 1.0 0" 
@@ -35,7 +38,7 @@
 	destroy_on_top_hit="0"	/> 
 
 
-	<modifier class="blast_damage" value="-0.75" />
+	<modifier class="blast_damage" value="-1.0" />
 
 	<visual  offset="0 0 0.24" class="turret" turret_index="0" mesh_filename="Crusher_turret.mesh" texture_filename="Crasher_Base_color.png" />
 	<visual  offset="0 0 0.24" class="turret" turret_index="0" key="broken" mesh_filename="Crusher_turret.mesh" texture_filename="humvee_broken.png" />
