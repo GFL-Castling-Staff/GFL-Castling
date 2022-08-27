@@ -153,12 +153,7 @@ array<int> RampageFairyAC130List={
 };
 
 array<string> AC130StartVoice={
-    "AUHarbi_voiMovef.wav",
-    "AUHarbi_voiMoveb.wav",
-    "AUHarbi_voiSelectg.wav",
-    "AUHarbi_voiSelectb.wav",
-    "AUHarbi_voiCreateb.wav",
-    "AUHarbi_voiCreatea.wav"
+    "ac130entrance_rus1.wav",
 };
 
 array<string> AC130EndVoice={
