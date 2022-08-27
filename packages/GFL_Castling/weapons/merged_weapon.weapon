@@ -9035,7 +9035,29 @@
 	<sound key="fire" fileref="ar57_fire_FromIRONSIGHT.wav" pitch_variety="0.05" volume="1"/>
 	<sound key="magazine_out" fileref="ar57_mgz_out_FromKF2.wav" volume="1.1"/>
 	<sound key="magazine_in" fileref="ar57_mgz_in_FromKF2.wav" volume="1.1"/>
+	<sound key="cycle" fileref="AR57_PHRASE_JP.wav" volume="1.0" pitch_variety="0"/>
 	<sound key="cycle" fileref="ar57_cycle_FromBORDERLAND3.wav" volume="1.1"/>
+	<sound key="cycle" fileref="ar57_cycle_FromBORDERLAND3.wav" volume="1.1"/>
+	<sound key="cycle" fileref="ar57_cycle_FromBORDERLAND3.wav" volume="1.1"/>
+	<sound key="cycle" fileref="ar57_cycle_FromBORDERLAND3.wav" volume="1.1"/>
+	<sound key="cycle" fileref="AR57_GOATTACK_JP.wav" volume="1.0" pitch_variety="0"/>
+	<sound key="cycle" fileref="ar57_cycle_FromBORDERLAND3.wav" volume="1.1"/>
+	<sound key="cycle" fileref="ar57_cycle_FromBORDERLAND3.wav" volume="1.1"/>
+	<sound key="cycle" fileref="ar57_cycle_FromBORDERLAND3.wav" volume="1.1"/>
+	<sound key="cycle" fileref="ar57_cycle_FromBORDERLAND3.wav" volume="1.1"/>
+	<sound key="cycle" fileref="AR57_SKILL1_JP.wav" volume="1.0" pitch_variety="0"/>
+	<sound key="cycle" fileref="ar57_cycle_FromBORDERLAND3.wav" volume="1.1"/>
+	<sound key="cycle" fileref="ar57_cycle_FromBORDERLAND3.wav" volume="1.1"/>
+	<sound key="cycle" fileref="ar57_cycle_FromBORDERLAND3.wav" volume="1.1"/>
+	<sound key="cycle" fileref="ar57_cycle_FromBORDERLAND3.wav" volume="1.1"/>
+	<sound key="cycle" fileref="ar57_cycle_FromBORDERLAND3.wav" volume="1.1"/>
+	<sound key="cycle" fileref="AR57_SKILL2_JP.wav" volume="1.0" pitch_variety="0"/>
+	<sound key="cycle" fileref="ar57_cycle_FromBORDERLAND3.wav" volume="1.1"/>
+	<sound key="cycle" fileref="ar57_cycle_FromBORDERLAND3.wav" volume="1.1"/>
+	<sound key="cycle" fileref="ar57_cycle_FromBORDERLAND3.wav" volume="1.1"/>
+	<sound key="cycle" fileref="ar57_cycle_FromBORDERLAND3.wav" volume="1.1"/>
+	<sound key="cycle" fileref="ar57_cycle_FromBORDERLAND3.wav" volume="1.1"/>
+	<sound key="cycle" fileref="AR57_SKILL3_JP.wav" volume="1.0" pitch_variety="0"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_smg_ar57.xml"/>
 	<hud_icon filename="gkw_ar57.png"/>
@@ -9082,7 +9104,29 @@
 	<sound key="fire" fileref="ar57_fire_FromIRONSIGHT.wav" pitch_variety="0.05" volume="1"/>
 	<sound key="magazine_out" fileref="ar57_mgz_out_FromKF2.wav" volume="1.1"/>
 	<sound key="magazine_in" fileref="ar57_mgz_in_FromKF2.wav" volume="1.1"/>
+	<sound key="cycle" fileref="AR57_PHRASE_JP.wav" volume="1.0" pitch_variety="0"/>
 	<sound key="cycle" fileref="ar57_cycle_FromBORDERLAND3.wav" volume="1.1"/>
+	<sound key="cycle" fileref="ar57_cycle_FromBORDERLAND3.wav" volume="1.1"/>
+	<sound key="cycle" fileref="ar57_cycle_FromBORDERLAND3.wav" volume="1.1"/>
+	<sound key="cycle" fileref="ar57_cycle_FromBORDERLAND3.wav" volume="1.1"/>
+	<sound key="cycle" fileref="AR57_GOATTACK_JP.wav" volume="1.0" pitch_variety="0"/>
+	<sound key="cycle" fileref="ar57_cycle_FromBORDERLAND3.wav" volume="1.1"/>
+	<sound key="cycle" fileref="ar57_cycle_FromBORDERLAND3.wav" volume="1.1"/>
+	<sound key="cycle" fileref="ar57_cycle_FromBORDERLAND3.wav" volume="1.1"/>
+	<sound key="cycle" fileref="ar57_cycle_FromBORDERLAND3.wav" volume="1.1"/>
+	<sound key="cycle" fileref="AR57_SKILL1_JP.wav" volume="1.0" pitch_variety="0"/>
+	<sound key="cycle" fileref="ar57_cycle_FromBORDERLAND3.wav" volume="1.1"/>
+	<sound key="cycle" fileref="ar57_cycle_FromBORDERLAND3.wav" volume="1.1"/>
+	<sound key="cycle" fileref="ar57_cycle_FromBORDERLAND3.wav" volume="1.1"/>
+	<sound key="cycle" fileref="ar57_cycle_FromBORDERLAND3.wav" volume="1.1"/>
+	<sound key="cycle" fileref="ar57_cycle_FromBORDERLAND3.wav" volume="1.1"/>
+	<sound key="cycle" fileref="AR57_SKILL2_JP.wav" volume="1.0" pitch_variety="0"/>
+	<sound key="cycle" fileref="ar57_cycle_FromBORDERLAND3.wav" volume="1.1"/>
+	<sound key="cycle" fileref="ar57_cycle_FromBORDERLAND3.wav" volume="1.1"/>
+	<sound key="cycle" fileref="ar57_cycle_FromBORDERLAND3.wav" volume="1.1"/>
+	<sound key="cycle" fileref="ar57_cycle_FromBORDERLAND3.wav" volume="1.1"/>
+	<sound key="cycle" fileref="ar57_cycle_FromBORDERLAND3.wav" volume="1.1"/>
+	<sound key="cycle" fileref="AR57_SKILL3_JP.wav" volume="1.0" pitch_variety="0"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_smg_ar57.xml"/>
 	<hud_icon filename="gkw_ar57_skill.png"/>
@@ -30298,46 +30342,53 @@
 	<sound key="cycle_out" fileref="ksvk_cycle_out_FromSURVARIUM.wav" volume="0.8"/>
 	<sound key="cycle_in" fileref="ksvk_cycle_in_FromSURVARIUM.wav" volume="0.8"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
-	<sound key="cycle" fileref="KSVK_0_PHRASE_JP.wav" volume="0.8" pitch_variety="0"/>
+	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
+	<sound key="cycle" fileref="KSVK_PHRASE_JP.wav" volume="0.8" pitch_variety="0"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
-	<sound key="cycle" fileref="KSVK_0_TIP_JP.wav" volume="0.8" pitch_variety="0"/>
+	<sound key="cycle" fileref="KSVK_TIP_JP.wav" volume="0.8" pitch_variety="0"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
-	<sound key="cycle" fileref="KSVK_0_BUILDOVER_JP.wav" volume="0.8" pitch_variety="0"/>
+	<sound key="cycle" fileref="KSVK_BUILDOVER_JP.wav" volume="0.8" pitch_variety="0"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
-	<sound key="cycle" fileref="KSVK_0_FEED_JP.wav" volume="0.8" pitch_variety="0"/>
+	<sound key="cycle" fileref="KSVK_FEED_JP.wav" volume="0.8" pitch_variety="0"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
-	<sound key="cycle" fileref="KSVK_0_FORMATION_JP.wav" volume="0.8" pitch_variety="0"/>
+	<sound key="cycle" fileref="KSVK_FORMATION_JP.wav" volume="0.8" pitch_variety="0"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
-	<sound key="cycle" fileref="KSVK_0_OPERATIONBEGIN_JP.wav" volume="0.8" pitch_variety="0"/>
+	<sound key="cycle" fileref="KSVK_OPERATIONBEGIN_JP.wav" volume="0.8" pitch_variety="0"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
-	<sound key="cycle" fileref="KSVK_0_BLACKACTION_JP.wav" volume="0.8" pitch_variety="0"/>
+	<sound key="cycle" fileref="KSVK_BLACKACTION_JP.wav" volume="0.8" pitch_variety="0"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
-	<sound key="cycle" fileref="KSVK_0_MEET_JP.wav" volume="0.8" pitch_variety="0"/>
+	<sound key="cycle" fileref="KSVK_GOATTACK_JP.wav" volume="0.8" pitch_variety="0"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
-	<sound key="cycle" fileref="KSVK_0_GOATTACK_JP.wav" volume="0.8" pitch_variety="0"/>
+	<sound key="cycle" fileref="KSVK_BREAK_JP.wav" volume="0.8" pitch_variety="0"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
-	<sound key="cycle" fileref="KSVK_0_ATTACK_JP.wav" volume="0.8" pitch_variety="0"/>
+	<sound key="cycle" fileref="KSVK_RETREAT_JP.wav" volume="0.8" pitch_variety="0"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
-	<sound key="cycle" fileref="KSVK_0_DEFENSE_JP.wav" volume="0.8" pitch_variety="0"/>
+	<sound key="cycle" fileref="KSVK_ATTACK_JP.wav" volume="0.8" pitch_variety="0"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
-	<sound key="cycle" fileref="KSVK_0_SKILL1_JP.wav" volume="0.8" pitch_variety="0"/>
+	<sound key="cycle" fileref="KSVK_DEFENSE_JP.wav" volume="0.8" pitch_variety="0"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
-	<sound key="cycle" fileref="KSVK_0_SKILL2_JP.wav" volume="0.8" pitch_variety="0"/>
+	<sound key="cycle" fileref="KSVK_SKILL1_JP.wav" volume="0.8" pitch_variety="0"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
-	<sound key="cycle" fileref="KSVK_0_SKILL3_JP.wav" volume="0.8" pitch_variety="0"/>
+	<sound key="cycle" fileref="KSVK_SKILL2_JP.wav" volume="0.8" pitch_variety="0"/>
+	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
+	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
+	<sound key="cycle" fileref="KSVK_SKILL3_JP.wav" volume="0.8" pitch_variety="0"/>
+	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
+	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
+	<sound key="cycle" fileref="KSVK_LOWMOOD_JP.wav" volume="0.8" pitch_variety="0"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
 	<model filename="gkw_rf_ksvk_4509.xml"/>
@@ -30399,56 +30450,49 @@
 	<sound key="cycle_out" fileref="ksvk_cycle_out_FromSURVARIUM.wav" volume="0.8"/>
 	<sound key="cycle_in" fileref="ksvk_cycle_in_FromSURVARIUM.wav" volume="0.8"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
-	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
-	<sound key="cycle" fileref="KSVK_PHRASE_JP.wav" volume="0.8" pitch_variety="0"/>
-	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
-	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
-	<sound key="cycle" fileref="KSVK_TIP_JP.wav" volume="0.8" pitch_variety="0"/>
+	<sound key="cycle" fileref="KSVK_0_PHRASE_JP.wav" volume="0.8" pitch_variety="0"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
-	<sound key="cycle" fileref="KSVK_BUILDOVER_JP.wav" volume="0.8" pitch_variety="0"/>
+	<sound key="cycle" fileref="KSVK_0_TIP_JP.wav" volume="0.8" pitch_variety="0"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
-	<sound key="cycle" fileref="KSVK_FEED_JP.wav" volume="0.8" pitch_variety="0"/>
+	<sound key="cycle" fileref="KSVK_0_BUILDOVER_JP.wav" volume="0.8" pitch_variety="0"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
-	<sound key="cycle" fileref="KSVK_FORMATION_JP.wav" volume="0.8" pitch_variety="0"/>
+	<sound key="cycle" fileref="KSVK_0_FEED_JP.wav" volume="0.8" pitch_variety="0"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
-	<sound key="cycle" fileref="KSVK_OPERATIONBEGIN_JP.wav" volume="0.8" pitch_variety="0"/>
+	<sound key="cycle" fileref="KSVK_0_FORMATION_JP.wav" volume="0.8" pitch_variety="0"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
-	<sound key="cycle" fileref="KSVK_BLACKACTION_JP.wav" volume="0.8" pitch_variety="0"/>
+	<sound key="cycle" fileref="KSVK_0_OPERATIONBEGIN_JP.wav" volume="0.8" pitch_variety="0"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
-	<sound key="cycle" fileref="KSVK_GOATTACK_JP.wav" volume="0.8" pitch_variety="0"/>
+	<sound key="cycle" fileref="KSVK_0_BLACKACTION_JP.wav" volume="0.8" pitch_variety="0"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
-	<sound key="cycle" fileref="KSVK_BREAK_JP.wav" volume="0.8" pitch_variety="0"/>
+	<sound key="cycle" fileref="KSVK_0_MEET_JP.wav" volume="0.8" pitch_variety="0"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
-	<sound key="cycle" fileref="KSVK_RETREAT_JP.wav" volume="0.8" pitch_variety="0"/>
+	<sound key="cycle" fileref="KSVK_0_GOATTACK_JP.wav" volume="0.8" pitch_variety="0"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
-	<sound key="cycle" fileref="KSVK_ATTACK_JP.wav" volume="0.8" pitch_variety="0"/>
+	<sound key="cycle" fileref="KSVK_0_ATTACK_JP.wav" volume="0.8" pitch_variety="0"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
-	<sound key="cycle" fileref="KSVK_DEFENSE_JP.wav" volume="0.8" pitch_variety="0"/>
+	<sound key="cycle" fileref="KSVK_0_DEFENSE_JP.wav" volume="0.8" pitch_variety="0"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
-	<sound key="cycle" fileref="KSVK_SKILL1_JP.wav" volume="0.8" pitch_variety="0"/>
+	<sound key="cycle" fileref="KSVK_0_SKILL1_JP.wav" volume="0.8" pitch_variety="0"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
-	<sound key="cycle" fileref="KSVK_SKILL2_JP.wav" volume="0.8" pitch_variety="0"/>
+	<sound key="cycle" fileref="KSVK_0_SKILL2_JP.wav" volume="0.8" pitch_variety="0"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
-	<sound key="cycle" fileref="KSVK_SKILL3_JP.wav" volume="0.8" pitch_variety="0"/>
+	<sound key="cycle" fileref="KSVK_0_SKILL3_JP.wav" volume="0.8" pitch_variety="0"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
-	<sound key="cycle" fileref="KSVK_LOWMOOD_JP.wav" volume="0.8" pitch_variety="0"/>
-	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
-	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
-	<model filename="gkw_rf_ksvk_4509.xml"/>
+	<model filename="gkw_rf_ksvk.xml"/>
 	<hud_icon filename="gkw_ksvk_5504.png"/>
 	<commonness value="0" in_stock="0"/>
 	<weak_hand_hold offset="0.3"/>
@@ -37310,46 +37354,53 @@
 	<sound key="cycle_out" fileref="ksvk_cycle_out_FromSURVARIUM.wav" volume="0.1"/>
 	<sound key="cycle_in" fileref="ksvk_cycle_in_FromSURVARIUM.wav" volume="0.5"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
-	<sound key="cycle" fileref="KSVK_0_PHRASE_JP.wav" volume="0.8" pitch_variety="0"/>
+	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
+	<sound key="cycle" fileref="KSVK_PHRASE_JP.wav" volume="0.8" pitch_variety="0"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
-	<sound key="cycle" fileref="KSVK_0_TIP_JP.wav" volume="0.8" pitch_variety="0"/>
+	<sound key="cycle" fileref="KSVK_TIP_JP.wav" volume="0.8" pitch_variety="0"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
-	<sound key="cycle" fileref="KSVK_0_BUILDOVER_JP.wav" volume="0.8" pitch_variety="0"/>
+	<sound key="cycle" fileref="KSVK_BUILDOVER_JP.wav" volume="0.8" pitch_variety="0"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
-	<sound key="cycle" fileref="KSVK_0_FEED_JP.wav" volume="0.8" pitch_variety="0"/>
+	<sound key="cycle" fileref="KSVK_FEED_JP.wav" volume="0.8" pitch_variety="0"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
-	<sound key="cycle" fileref="KSVK_0_FORMATION_JP.wav" volume="0.8" pitch_variety="0"/>
+	<sound key="cycle" fileref="KSVK_FORMATION_JP.wav" volume="0.8" pitch_variety="0"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
-	<sound key="cycle" fileref="KSVK_0_OPERATIONBEGIN_JP.wav" volume="0.8" pitch_variety="0"/>
+	<sound key="cycle" fileref="KSVK_OPERATIONBEGIN_JP.wav" volume="0.8" pitch_variety="0"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
-	<sound key="cycle" fileref="KSVK_0_BLACKACTION_JP.wav" volume="0.8" pitch_variety="0"/>
+	<sound key="cycle" fileref="KSVK_BLACKACTION_JP.wav" volume="0.8" pitch_variety="0"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
-	<sound key="cycle" fileref="KSVK_0_MEET_JP.wav" volume="0.8" pitch_variety="0"/>
+	<sound key="cycle" fileref="KSVK_GOATTACK_JP.wav" volume="0.8" pitch_variety="0"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
-	<sound key="cycle" fileref="KSVK_0_GOATTACK_JP.wav" volume="0.8" pitch_variety="0"/>
+	<sound key="cycle" fileref="KSVK_BREAK_JP.wav" volume="0.8" pitch_variety="0"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
-	<sound key="cycle" fileref="KSVK_0_ATTACK_JP.wav" volume="0.8" pitch_variety="0"/>
+	<sound key="cycle" fileref="KSVK_RETREAT_JP.wav" volume="0.8" pitch_variety="0"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
-	<sound key="cycle" fileref="KSVK_0_DEFENSE_JP.wav" volume="0.8" pitch_variety="0"/>
+	<sound key="cycle" fileref="KSVK_ATTACK_JP.wav" volume="0.8" pitch_variety="0"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
-	<sound key="cycle" fileref="KSVK_0_SKILL1_JP.wav" volume="0.8" pitch_variety="0"/>
+	<sound key="cycle" fileref="KSVK_DEFENSE_JP.wav" volume="0.8" pitch_variety="0"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
-	<sound key="cycle" fileref="KSVK_0_SKILL2_JP.wav" volume="0.8" pitch_variety="0"/>
+	<sound key="cycle" fileref="KSVK_SKILL1_JP.wav" volume="0.8" pitch_variety="0"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
-	<sound key="cycle" fileref="KSVK_0_SKILL3_JP.wav" volume="0.8" pitch_variety="0"/>
+	<sound key="cycle" fileref="KSVK_SKILL2_JP.wav" volume="0.8" pitch_variety="0"/>
+	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
+	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
+	<sound key="cycle" fileref="KSVK_SKILL3_JP.wav" volume="0.8" pitch_variety="0"/>
+	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
+	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
+	<sound key="cycle" fileref="KSVK_LOWMOOD_JP.wav" volume="0.8" pitch_variety="0"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
 	<model filename="gkw_rf_ksvk_mod3.xml"/>
@@ -37475,42 +37526,49 @@
 	<sound key="cycle_out" fileref="ksvk_cycle_out_FromSURVARIUM.wav" volume="0.1"/>
 	<sound key="cycle_in" fileref="ksvk_cycle_in_FromSURVARIUM.wav" volume="0.5"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
+	<sound key="cycle" fileref="KSVK_0_PHRASE_JP.wav" volume="0.8" pitch_variety="0"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
-	<sound key="cycle" fileref="KSVKMod_BUILDOVER_JP.wav" volume="0.8" pitch_variety="0"/>
+	<sound key="cycle" fileref="KSVK_0_TIP_JP.wav" volume="0.8" pitch_variety="0"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
-	<sound key="cycle" fileref="KSVKMod_FEED_JP.wav" volume="0.8" pitch_variety="0"/>
+	<sound key="cycle" fileref="KSVK_0_BUILDOVER_JP.wav" volume="0.8" pitch_variety="0"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
-	<sound key="cycle" fileref="KSVKMod_FORMATION_JP.wav" volume="0.8" pitch_variety="0"/>
+	<sound key="cycle" fileref="KSVK_0_FEED_JP.wav" volume="0.8" pitch_variety="0"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
-	<sound key="cycle" fileref="KSVKMod_ATTACK_JP.wav" volume="0.8" pitch_variety="0"/>
+	<sound key="cycle" fileref="KSVK_0_FORMATION_JP.wav" volume="0.8" pitch_variety="0"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
-	<sound key="cycle" fileref="KSVKMod_DEFENSE_JP.wav" volume="0.8" pitch_variety="0"/>
+	<sound key="cycle" fileref="KSVK_0_OPERATIONBEGIN_JP.wav" volume="0.8" pitch_variety="0"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
-	<sound key="cycle" fileref="KSVKMod_SKILL1_JP.wav" volume="0.8" pitch_variety="0"/>
+	<sound key="cycle" fileref="KSVK_0_BLACKACTION_JP.wav" volume="0.8" pitch_variety="0"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
-	<sound key="cycle" fileref="KSVKMod_SKILL2_JP.wav" volume="0.8" pitch_variety="0"/>
+	<sound key="cycle" fileref="KSVK_0_MEET_JP.wav" volume="0.8" pitch_variety="0"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
-	<sound key="cycle" fileref="KSVKMod_SKILL3_JP.wav" volume="0.8" pitch_variety="0"/>
+	<sound key="cycle" fileref="KSVK_0_GOATTACK_JP.wav" volume="0.8" pitch_variety="0"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
-	<sound key="cycle" fileref="KSVKMod_GOATTACK_JP.wav" volume="0.8" pitch_variety="0"/>
+	<sound key="cycle" fileref="KSVK_0_ATTACK_JP.wav" volume="0.8" pitch_variety="0"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
-	<sound key="cycle" fileref="KSVKMod_MEET_JP.wav" volume="0.8" pitch_variety="0"/>
+	<sound key="cycle" fileref="KSVK_0_DEFENSE_JP.wav" volume="0.8" pitch_variety="0"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
-	<sound key="cycle" fileref="KSVKMod_WIN_JP.wav" volume="0.8" pitch_variety="0"/>
+	<sound key="cycle" fileref="KSVK_0_SKILL1_JP.wav" volume="0.8" pitch_variety="0"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
 	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
-	<model filename="gkw_rf_ksvk_4509.xml"/>
+	<sound key="cycle" fileref="KSVK_0_SKILL2_JP.wav" volume="0.8" pitch_variety="0"/>
+	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
+	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
+	<sound key="cycle" fileref="KSVK_0_SKILL3_JP.wav" volume="0.8" pitch_variety="0"/>
+	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
+	<sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
+	<model filename="gkw_rf_ksvk_mod3.xml"/>
 	<hud_icon filename="gkw_ksvk_5504.png"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<commonness value="0" in_stock="0"/>
@@ -37571,7 +37629,7 @@
 	<sound key="cycle_out" fileref="ksvk_cycle_out_FromSURVARIUM.wav" volume="0.1"/>
 	<sound key="cycle_in" fileref="ksvk_cycle_in_FromSURVARIUM.wav" volume="0.5"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
-	<model filename="gkw_rf_ksvk_4509.xml"/>
+	<model filename="gkw_rf_ksvk_mod3.xml"/>
 	<hud_icon filename="gkw_ksvk_5504.png"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<commonness value="0" in_stock="0"/>
