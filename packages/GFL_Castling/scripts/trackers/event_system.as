@@ -260,9 +260,9 @@ void excuteRampageFairyAC130(GameMode@ metagame,GFL_event@ eventinfo){
             // 5是霰弹音效，可以不用给其实；6是机炮音效；7是火箭弹齐射音效
             switch(attacknum)
             {
-                case 5:{playSoundAtLocation(metagame,"ac130sg_fire_FromWARTHUNDER.wav",eventinfo.m_factionid,eventinfo.m_pos,2.3);break;}
-                case 6:{playSoundAtLocation(metagame,"ac130mg_fire_FromSAM4.wav",eventinfo.m_factionid,eventinfo.m_pos,2.2);break;}
-                case 7:{playSoundAtLocation(metagame,"ac130rpg_fire_FromCOD16.wav",eventinfo.m_factionid,eventinfo.m_pos,2.5);break;}
+                case 5:{playSoundAtLocation(metagame,"ac130sg_fire_FromWARTHUNDER.wav",eventinfo.m_factionid,eventinfo.m_pos,3);break;}
+                case 6:{playSoundAtLocation(metagame,"ac130mg_fire_FromSAM4.wav",eventinfo.m_factionid,eventinfo.m_pos,3.1);break;}
+                case 7:{playSoundAtLocation(metagame,"ac130rpg_fire_FromCOD16.wav",eventinfo.m_factionid,eventinfo.m_pos,2.8);break;}
                 default:    break;
             }  
 
