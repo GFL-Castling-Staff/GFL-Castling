@@ -124,6 +124,10 @@ void excuteSniperFairy(GameMode@ metagame,GFL_event@ eventinfo){
         Vector3 luckyGuyPos = stringToVector3(luckyGuy.getStringAttribute("position"));
         insertCommonStrike(eventinfo.m_characterId,eventinfo.m_factionid,8,getRandomOffsetVector(eventinfo.m_pos,60.0),luckyGuyPos);                        
     }
+    if(eventinfo.m_phase<=1)
+    {
+        sendFactionMessageKey(metagame,eventinfo.m_factionid,"snipefight");
+    }
     eventinfo.m_phase++;
     if(eventinfo.m_phase>=10){
         eventinfo.m_enable=false;

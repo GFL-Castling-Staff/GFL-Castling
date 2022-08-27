@@ -2730,7 +2730,7 @@ class CommandSkill : Tracker {
                     FairyRequest.setRange(80.0);
                     FairyRequest.setIconTypeKey("call_marker_snipe_m200");
                     addCastlingMarker(FairyRequest);
-                    GFL_event_array.insertLast(GFL_event(characterId,factionid,3,stringToVector3(target),0.0,-1.0,flagId));
+                    GFL_event_array.insertLast(GFL_event(characterId,factionid,3,stringToVector3(target),2.0,-1.0,flagId));
                     m_DummyCallID++;
                     addCoolDown("M200",60,characterId,modifer);
                 }
