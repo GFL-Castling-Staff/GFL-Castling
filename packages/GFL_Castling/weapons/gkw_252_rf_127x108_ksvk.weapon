@@ -103,7 +103,7 @@
 
     <weak_hand_hold offset="0.3" />
     <projectile file="ksvk_mod3.projectile" >
-        <result class="blast" damage="10.0" radius="3.5" decal="1" push="0.6" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0" />
+        <result class="blast" damage="10.0" radius="2.5" decal="1" push="0.6" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0" />
     </projectile>
     <!--Accuracy, Movement speed-->
     

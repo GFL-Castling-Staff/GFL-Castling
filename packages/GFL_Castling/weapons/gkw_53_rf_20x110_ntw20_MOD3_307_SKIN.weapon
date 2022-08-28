@@ -73,7 +73,7 @@
         <!--Ballistics-->
         <weak_hand_hold offset="0.3" />
         <projectile file="ntw.projectile" >
-            <result class="blast" damage="18.0" radius="4" decal="1" push="1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0" />
+            <result class="blast" damage="18.0" radius="3" decal="1" push="1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0" />
         </projectile>
         <!--Accuracy, Movement speed-->
         <modifier class="speed" value="0.1" />
@@ -135,7 +135,7 @@
         <!--Ballistics-->
         <weak_hand_hold offset="0.3" />
         <projectile file="ntw.projectile" >
-            <result class="blast" damage="22" radius="5" decal="1" push="1.0" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0" />
+            <result class="blast" damage="22" radius="4" decal="1" push="1.0" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0" />
         </projectile>
         <!--Accuracy, Movement speed-->
         <modifier class="speed" value="-0.3" />
