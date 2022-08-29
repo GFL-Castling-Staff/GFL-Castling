@@ -209,36 +209,30 @@ void excuteRampageFairyAC130(GameMode@ metagame,GFL_event@ eventinfo){
         }
         case 2:
         {
-            AC130StartVoice.insertLast("ac130entrance_rus1.wav");
-            AC130StartVoice.insertLast("ac130entrance_rus2.wav");
-            AC130StartVoice.insertLast("ac130entrance_rus3.wav");
+            AC130StartVoice.insertLast("ac130entrance_blkops1.wav");
+            AC130StartVoice.insertLast("ac130entrance_blkops2.wav");
+            AC130StartVoice.insertLast("ac130entrance_blkops3.wav");
 
-            AC130EndVoice.insertLast("ac130exit_rus1.wav");
-            AC130EndVoice.insertLast("ac130exit_rus2.wav");
-            AC130EndVoice.insertLast("ac130exit_rus3.wav");
+            AC130EndVoice.insertLast("ac130exit_blkops1.wav");
+            AC130EndVoice.insertLast("ac130exit_blkops2.wav");
+            AC130EndVoice.insertLast("ac130exit_blkops3.wav");
 
-            AC130NoTargetVoice.insertLast("ac130search_rus1.wav");
-            AC130NoTargetVoice.insertLast("ac130search_rus2.wav");
+            AC130NoTargetVoice.insertLast("ac130search_blkops1.wav");
+            AC130NoTargetVoice.insertLast("ac130search_blkops2.wav");
+            AC130NoTargetVoice.insertLast("ac130search_blkops3.wav");
+            AC130NoTargetVoice.insertLast("ac130search_blkops4.wav")
 
-            AC130MinigunVoice.insertLast("ac130mg_rus1.wav");
-            AC130MinigunVoice.insertLast("ac130mg_rus2.wav");
-            AC130MinigunVoice.insertLast("ac130allguns_rus1.wav");
-            AC130MinigunVoice.insertLast("ac130allguns_rus2.wav");
-            AC130MinigunVoice.insertLast("ac130allguns_rus3.wav");
+            AC130MinigunVoice.insertLast("ac130mg_blkops1.wav");
+            AC130MinigunVoice.insertLast("ac130mg_blkops2.wav");
 
-            AC130ShotgunVoice.insertLast("ac130sg_rus1.wav");
-            AC130ShotgunVoice.insertLast("ac130sg_rus2.wav");
-            AC130ShotgunVoice.insertLast("ac130allguns_rus1.wav");
-            AC130ShotgunVoice.insertLast("ac130allguns_rus2.wav");
-            AC130ShotgunVoice.insertLast("ac130allguns_rus3.wav");
+            AC130ShotgunVoice.insertLast("ac130sg_blkops1.wav");
+            AC130ShotgunVoice.insertLast("ac130sg_blkops2.wav");
+            AC130ShotgunVoice.insertLast("ac130sg_blkops3.wav");
 
-            AC130M202Voice.insertLast("ac130rpg_rus1.wav");
-            AC130M202Voice.insertLast("ac130rpg_rus2.wav");
-            AC130M202Voice.insertLast("ac130rpg_rus3.wav");
-            AC130M202Voice.insertLast("ac130allguns_rus1.wav");
-            AC130M202Voice.insertLast("ac130allguns_rus2.wav");
-            AC130M202Voice.insertLast("ac130allguns_rus3.wav");
-            break;
+            AC130M202Voice.insertLast("ac130rpg_blkops1.wav");
+            AC130M202Voice.insertLast("ac130rpg_blkops2.wav");
+            AC130M202Voice.insertLast("ac130rpg_blkops3.wav");
+
         }
         default:break;        
     }
