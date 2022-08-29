@@ -209,7 +209,7 @@ void excuteRampageFairyAC130(GameMode@ metagame,GFL_event@ eventinfo){
 
     if(eventinfo.m_phase<=1)
     {
-        playSoundAtLocation(metagame,"ac130_flyby.wav",eventinfo.m_factionid,eventinfo.m_pos,4.0);
+        playSoundAtLocation(metagame,"ac130_flyby.wav",eventinfo.m_factionid,eventinfo.m_pos,3.0);
         playRandomSoundArray(metagame,AC130StartVoice,eventinfo.m_factionid,eventinfo.m_pos.toString(),4.0);
         ac130_voice_interval = 2;
         ac130_flyby_interval = 3;
@@ -227,7 +227,7 @@ void excuteRampageFairyAC130(GameMode@ metagame,GFL_event@ eventinfo){
     if( (ac130_flyby_interval == 0) && ((ac130_strike_num-eventinfo.m_phase)>(voice_phase_interval-4))){
         _log("current phase: " + eventinfo.m_phase);
         ac130_flyby_interval == 6;
-        playSoundAtLocation(metagame,"ac130_flyby.wav",eventinfo.m_factionid,eventinfo.m_pos,4.0);
+        playSoundAtLocation(metagame,"ac130_flyby.wav",eventinfo.m_factionid,eventinfo.m_pos,3.0);
     }
 
     int luckyGuyid;
