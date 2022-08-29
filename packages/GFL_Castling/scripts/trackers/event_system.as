@@ -51,7 +51,7 @@ class GFL_event_system : Tracker {
                             case 1:{excuteSniperFairy(m_metagame,GFL_event_array[a]);break;}
                             case 2:{
                                 if(GFL_event_array[a].m_randseed==-1.0){
-                                    GFL_event_array[a].m_randseed=float(rand(0,3.14));
+                                    GFL_event_array[a].m_randseed= rand(0,3.14);
                                 }
                                 excuteRampageFairyAC130(m_metagame,GFL_event_array[a]);
                                 break;
@@ -162,6 +162,12 @@ Vector3 ac130_pre_pos = Vector3(-1,-1,-1); // 这是为了ac130索敌能每次�
             
 void excuteRampageFairyAC130(GameMode@ metagame,GFL_event@ eventinfo){
     eventinfo.m_time = 1.8;
+    array<string> AC130StartVoice;
+    array<string> AC130EndVoice;
+    array<string> AC130NoTargetVoice;
+    array<string> AC130MinigunVoice;
+    array<string> AC130ShotgunVoice;
+    array<string> AC130M202Voice;
 
     if(ac130_voice_interval>0)ac130_voice_interval -= 1;
     if(eventinfo.m_phase>=(ac130_strike_num-2))ac130_voice_interval = 99;
@@ -170,92 +176,68 @@ void excuteRampageFairyAC130(GameMode@ metagame,GFL_event@ eventinfo){
     switch(rand(1,2)){
         case 1:
         {
-            array<string> AC130StartVoice={
-            "ac130entrance_rus1.wav",
-            "ac130entrance_rus2.wav",
-            "ac130entrance_rus3.wav"
-            };
+            AC130StartVoice.insertLast("ac130entrance_rus1.wav");
+            AC130StartVoice.insertLast("ac130entrance_rus2.wav");
+            AC130StartVoice.insertLast("ac130entrance_rus3.wav");
 
-            array<string> AC130EndVoice={
-            "ac130exit_rus1.wav",
-            "ac130exit_rus2.wav",
-            "ac130exit_rus3.wav"
-            };
+            AC130EndVoice.insertLast("ac130exit_rus1.wav");
+            AC130EndVoice.insertLast("ac130exit_rus2.wav");
+            AC130EndVoice.insertLast("ac130exit_rus3.wav");
 
-            array<string> AC130NoTargetVoice={
-            "ac130search_rus1.wav",
-            "ac130search_rus2.wav",
-            };
+            AC130NoTargetVoice.insertLast("ac130search_rus1.wav");
+            AC130NoTargetVoice.insertLast("ac130search_rus2.wav");
 
-            array<string> AC130MinigunVoice={
-            "ac130mg_rus1.wav",
-            "ac130mg_rus2.wav",
-            "ac130allguns_rus1.wav",
-            "ac130allguns_rus2.wav",
-            "ac130allguns_rus3.wav"
-            };
+            AC130MinigunVoice.insertLast("ac130mg_rus1.wav");
+            AC130MinigunVoice.insertLast("ac130mg_rus2.wav");
+            AC130MinigunVoice.insertLast("ac130allguns_rus1.wav");
+            AC130MinigunVoice.insertLast("ac130allguns_rus2.wav");
+            AC130MinigunVoice.insertLast("ac130allguns_rus3.wav");
 
-            array<string> AC130ShotgunVoice={
-            "ac130sg_rus1.wav",
-            "ac130sg_rus2.wav",
-            "ac130allguns_rus1.wav",
-            "ac130allguns_rus2.wav",
-            "ac130allguns_rus3.wav"
-            };
+            AC130ShotgunVoice.insertLast("ac130sg_rus1.wav");
+            AC130ShotgunVoice.insertLast("ac130sg_rus2.wav");
+            AC130ShotgunVoice.insertLast("ac130allguns_rus1.wav");
+            AC130ShotgunVoice.insertLast("ac130allguns_rus2.wav");
+            AC130ShotgunVoice.insertLast("ac130allguns_rus3.wav");
 
-            array<string> AC130M202Voice={
-            "ac130rpg_rus1.wav",
-            "ac130rpg_rus2.wav",
-            "ac130rpg_rus3.wav",
-            "ac130allguns_rus1.wav",
-            "ac130allguns_rus2.wav",
-            "ac130allguns_rus3.wav"
-            };
+            AC130M202Voice.insertLast("ac130rpg_rus1.wav");
+            AC130M202Voice.insertLast("ac130rpg_rus2.wav");
+            AC130M202Voice.insertLast("ac130rpg_rus3.wav");
+            AC130M202Voice.insertLast("ac130allguns_rus1.wav");
+            AC130M202Voice.insertLast("ac130allguns_rus2.wav");
+            AC130M202Voice.insertLast("ac130allguns_rus3.wav");
             break;
         }
         case 2:
         {
-            array<string> AC130StartVoice={
-            "ac130entrance_rus1.wav",
-            "ac130entrance_rus2.wav",
-            "ac130entrance_rus3.wav"
-            };
+            AC130StartVoice.insertLast("ac130entrance_rus1.wav");
+            AC130StartVoice.insertLast("ac130entrance_rus2.wav");
+            AC130StartVoice.insertLast("ac130entrance_rus3.wav");
 
-            array<string> AC130EndVoice={
-            "ac130exit_rus1.wav",
-            "ac130exit_rus2.wav",
-            "ac130exit_rus3.wav"
-            };
+            AC130EndVoice.insertLast("ac130exit_rus1.wav");
+            AC130EndVoice.insertLast("ac130exit_rus2.wav");
+            AC130EndVoice.insertLast("ac130exit_rus3.wav");
 
-            array<string> AC130NoTargetVoice={
-            "ac130search_rus1.wav",
-            "ac130search_rus2.wav",
-            };
+            AC130NoTargetVoice.insertLast("ac130search_rus1.wav");
+            AC130NoTargetVoice.insertLast("ac130search_rus2.wav");
 
-            array<string> AC130MinigunVoice={
-            "ac130mg_rus1.wav",
-            "ac130mg_rus2.wav",
-            "ac130allguns_rus1.wav",
-            "ac130allguns_rus2.wav",
-            "ac130allguns_rus3.wav"
-            };
+            AC130MinigunVoice.insertLast("ac130mg_rus1.wav");
+            AC130MinigunVoice.insertLast("ac130mg_rus2.wav");
+            AC130MinigunVoice.insertLast("ac130allguns_rus1.wav");
+            AC130MinigunVoice.insertLast("ac130allguns_rus2.wav");
+            AC130MinigunVoice.insertLast("ac130allguns_rus3.wav");
 
-            array<string> AC130ShotgunVoice={
-            "ac130sg_rus1.wav",
-            "ac130sg_rus2.wav",
-            "ac130allguns_rus1.wav",
-            "ac130allguns_rus2.wav",
-            "ac130allguns_rus3.wav"
-            };
+            AC130ShotgunVoice.insertLast("ac130sg_rus1.wav");
+            AC130ShotgunVoice.insertLast("ac130sg_rus2.wav");
+            AC130ShotgunVoice.insertLast("ac130allguns_rus1.wav");
+            AC130ShotgunVoice.insertLast("ac130allguns_rus2.wav");
+            AC130ShotgunVoice.insertLast("ac130allguns_rus3.wav");
 
-            array<string> AC130M202Voice={
-            "ac130rpg_rus1.wav",
-            "ac130rpg_rus2.wav",
-            "ac130rpg_rus3.wav",
-            "ac130allguns_rus1.wav",
-            "ac130allguns_rus2.wav",
-            "ac130allguns_rus3.wav"
-            };
+            AC130M202Voice.insertLast("ac130rpg_rus1.wav");
+            AC130M202Voice.insertLast("ac130rpg_rus2.wav");
+            AC130M202Voice.insertLast("ac130rpg_rus3.wav");
+            AC130M202Voice.insertLast("ac130allguns_rus1.wav");
+            AC130M202Voice.insertLast("ac130allguns_rus2.wav");
+            AC130M202Voice.insertLast("ac130allguns_rus3.wav");
             break;
         }
         default:break;        
