@@ -106,7 +106,7 @@
 			<rank title="W.A.V.E. ERROR" image="hud_achievement_pard.png" />
 		</level>
 		<criteria class="vehicle_destroy" owner="any" description="* destroy %target_count Uhlan">
-			<vehicle key="uhlan.vehicle" />
+			<vehicle key="paradeus_uhlan.vehicle" />
 			<level value="5" />
 			<level value="10" />
 			<level value="50" />
