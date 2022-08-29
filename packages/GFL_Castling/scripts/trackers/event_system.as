@@ -220,7 +220,7 @@ void excuteRampageFairyAC130(GameMode@ metagame,GFL_event@ eventinfo){
             AC130NoTargetVoice.insertLast("ac130search_blkops1.wav");
             AC130NoTargetVoice.insertLast("ac130search_blkops2.wav");
             AC130NoTargetVoice.insertLast("ac130search_blkops3.wav");
-            AC130NoTargetVoice.insertLast("ac130search_blkops4.wav")
+            AC130NoTargetVoice.insertLast("ac130search_blkops4.wav");
 
             AC130MinigunVoice.insertLast("ac130mg_blkops1.wav");
             AC130MinigunVoice.insertLast("ac130mg_blkops2.wav");
