@@ -152,47 +152,7 @@ array<int> RampageFairyAC130List={
     6,6,6,5,6,6,6,5,7
 };
 
-array<string> AC130StartVoice={
-    "ac130entrance_rus1.wav",
-    "ac130entrance_rus2.wav",
-    "ac130entrance_rus3.wav"
-};
 
-array<string> AC130EndVoice={
-    "ac130exit_rus1.wav",
-    "ac130exit_rus2.wav",
-    "ac130exit_rus3.wav"
-};
-
-array<string> AC130NoTargetVoice={
-    "ac130search_rus1.wav",
-    "ac130search_rus2.wav",
-};
-
-array<string> AC130MinigunVoice={
-    "ac130mg_rus1.wav",
-    "ac130mg_rus2.wav",
-    "ac130allguns_rus1.wav",
-    "ac130allguns_rus2.wav",
-    "ac130allguns_rus3.wav"
-};
-
-array<string> AC130ShotgunVoice={
-    "ac130sg_rus1.wav",
-    "ac130sg_rus2.wav",
-    "ac130allguns_rus1.wav",
-    "ac130allguns_rus2.wav",
-    "ac130allguns_rus3.wav"
-};
-
-array<string> AC130M202Voice={
-    "ac130rpg_rus1.wav",
-    "ac130rpg_rus2.wav",
-    "ac130rpg_rus3.wav",
-    "ac130allguns_rus1.wav",
-    "ac130allguns_rus2.wav",
-    "ac130allguns_rus3.wav"
-};
 
 int ac130_voice_interval = 0;
 int ac130_flyby_interval = 0;
@@ -206,6 +166,100 @@ void excuteRampageFairyAC130(GameMode@ metagame,GFL_event@ eventinfo){
     if(ac130_voice_interval>0)ac130_voice_interval -= 1;
     if(eventinfo.m_phase>=(ac130_strike_num-2))ac130_voice_interval = 99;
     if(ac130_flyby_interval>0)ac130_flyby_interval -= 1;
+
+    switch(rand(1,2)){
+        case 1:
+        {
+            array<string> AC130StartVoice={
+            "ac130entrance_rus1.wav",
+            "ac130entrance_rus2.wav",
+            "ac130entrance_rus3.wav"
+            };
+
+            array<string> AC130EndVoice={
+            "ac130exit_rus1.wav",
+            "ac130exit_rus2.wav",
+            "ac130exit_rus3.wav"
+            };
+
+            array<string> AC130NoTargetVoice={
+            "ac130search_rus1.wav",
+            "ac130search_rus2.wav",
+            };
+
+            array<string> AC130MinigunVoice={
+            "ac130mg_rus1.wav",
+            "ac130mg_rus2.wav",
+            "ac130allguns_rus1.wav",
+            "ac130allguns_rus2.wav",
+            "ac130allguns_rus3.wav"
+            };
+
+            array<string> AC130ShotgunVoice={
+            "ac130sg_rus1.wav",
+            "ac130sg_rus2.wav",
+            "ac130allguns_rus1.wav",
+            "ac130allguns_rus2.wav",
+            "ac130allguns_rus3.wav"
+            };
+
+            array<string> AC130M202Voice={
+            "ac130rpg_rus1.wav",
+            "ac130rpg_rus2.wav",
+            "ac130rpg_rus3.wav",
+            "ac130allguns_rus1.wav",
+            "ac130allguns_rus2.wav",
+            "ac130allguns_rus3.wav"
+            };
+            break;
+        }
+        case 2:
+        {
+            array<string> AC130StartVoice={
+            "ac130entrance_rus1.wav",
+            "ac130entrance_rus2.wav",
+            "ac130entrance_rus3.wav"
+            };
+
+            array<string> AC130EndVoice={
+            "ac130exit_rus1.wav",
+            "ac130exit_rus2.wav",
+            "ac130exit_rus3.wav"
+            };
+
+            array<string> AC130NoTargetVoice={
+            "ac130search_rus1.wav",
+            "ac130search_rus2.wav",
+            };
+
+            array<string> AC130MinigunVoice={
+            "ac130mg_rus1.wav",
+            "ac130mg_rus2.wav",
+            "ac130allguns_rus1.wav",
+            "ac130allguns_rus2.wav",
+            "ac130allguns_rus3.wav"
+            };
+
+            array<string> AC130ShotgunVoice={
+            "ac130sg_rus1.wav",
+            "ac130sg_rus2.wav",
+            "ac130allguns_rus1.wav",
+            "ac130allguns_rus2.wav",
+            "ac130allguns_rus3.wav"
+            };
+
+            array<string> AC130M202Voice={
+            "ac130rpg_rus1.wav",
+            "ac130rpg_rus2.wav",
+            "ac130rpg_rus3.wav",
+            "ac130allguns_rus1.wav",
+            "ac130allguns_rus2.wav",
+            "ac130allguns_rus3.wav"
+            };
+            break;
+        }
+        default:break;        
+    }
 
     if(eventinfo.m_phase<=1)
     {
