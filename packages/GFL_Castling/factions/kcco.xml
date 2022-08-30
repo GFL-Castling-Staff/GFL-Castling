@@ -365,10 +365,9 @@
 	</rank>
 	<!-- player group -->
 	<soldier name="default" spawn_score="0.0" firstnames_file="kcco_first.name" lastnames_file="kcco_last.name">
-		<!-- <character filename="default_kcco_human.character">
+		<character filename="default_kcco_human.character">
 			<parameter class="default_squad_config_index" value="0" />
-		</character> -->
-		<character filename="kcco_othrusdog.character" />
+		</character>
 
 		<ai filename="elite.ai" />
 		<models file="kcco.models" />
