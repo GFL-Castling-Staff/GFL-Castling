@@ -297,22 +297,28 @@ array<string> unlockable_vehicles = {
 	"deco_pickup_khaki.vehicle"
 };
 
+array<string> vip_vehicles = {
+	"mobile_armory.vehicle", 		// 军械车
+	"armored_truck.vehicle",		// 艾莫号
+	"ogas_pulse_generator.vehicle",	// OGAS干扰仪
+	"radio_jammer.vehicle",
+	"radio_jammer2.vehicle"
+};
+
 int getAmosPosition(Metagame@ metagame, uint ownerid, Vector3 judgePos, float radius) {
-	for(uint f=0;f<4;f++){
-		if(f<10){
-			array<const XmlElement@>@ vehicles = getAllVehicles(metagame, f);
-			for(uint i=0;i<vehicles.length();i++){
-				Vector3 vehiclePos = stringToVector3(vehicles[i].getStringAttribute("position"));
-				if(getAimUnitDistance(1.0,judgePos,vehiclePos)<=radius){
-					int vehicleid = vehicles[i].getIntAttribute("id");
-					const XmlElement@ vehicleInfo = getVehicleInfo(metagame, vehicleid);
-					if(vehicleInfo !is null)  //AMOS存在
-						if(vehicleInfo.getStringAttribute("key") == "armored_truck.vehicle" || vehicleInfo.getStringAttribute("key") == "ogas_pulse_generator.vehicle")
-							return vehicleid;
-				}
-			}
-		}		
+	
+	array<const XmlElement@>@ vehicles = getAllVehicles(metagame, 0);
+	for(uint i=0;i<vehicles.length();i++){
+		Vector3 vehiclePos = stringToVector3(vehicles[i].getStringAttribute("position"));
+		if(getAimUnitDistance(1.0,judgePos,vehiclePos)<=radius){
+			int vehicleid = vehicles[i].getIntAttribute("id");
+			const XmlElement@ vehicleInfo = getVehicleInfo(metagame, vehicleid);
+			if(vehicleInfo !is null)  //Vip载具存在
+				if(vip_vehicles.find(vehicleInfo.getStringAttribute("key"))!=-1)
+					return 1;
+		}
 	}
+
 	return -1;	
 }
 
