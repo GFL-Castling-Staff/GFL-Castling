@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <character filename="default_base.character">
-  <!-- defined in default.character for differentiation, see maps/lobby/default.character too -->
-  <!--  <comment key="Hmm, no signal" text="Hmm, no signal?"/> -->
+	<tag name="meat_man" />
   <parameter class="walking_steer_amount" value="0.45" />
 	<parameter class="running_steer_amount" value="0.63" />
   <comment key="Driver, abandon vehicle" text="This vehicle is Toast" />
@@ -248,11 +247,11 @@
   <comment key="Lone leader, open fire" text="Fire! Fire!" />
   <comment key="Lone leader, open fire" text="Open Fire!" />
 
-  <comment key="fire opened, weapon tag = sniper" text="Enemy Sniper!" />
-  <comment key="fire opened, weapon tag = sniper" text="Sniper!" />
-  <comment key="fire opened, weapon tag = sniper" text="Contact! Sniper!" />
-  <comment key="fire opened, weapon tag = sniper" text="Sniper! Take cover" />
-  <comment key="fire opened, weapon tag = sniper" text="Sniper! Get down!" />
+  <comment key="fire opened, weapon tag = rifle" text="Enemy Sniper!" />
+  <comment key="fire opened, weapon tag = rifle" text="Sniper!" />
+  <comment key="fire opened, weapon tag = rifle" text="Contact! Sniper!" />
+  <comment key="fire opened, weapon tag = rifle" text="Sniper! Take cover" />
+  <comment key="fire opened, weapon tag = rifle" text="Sniper! Get down!" />
 
   <comment key="grenade alert, grenade tag = grenade" text="Grenade!" />
   <comment key="grenade alert, grenade tag = grenade" text="Crap, Grenade!" />
@@ -759,7 +758,8 @@
 
     <comment key="aa_emplacement.vehicle spotted, instructions" text="Destroy that Anti-Air weapon for additional Air support" />
     <comment key="aa_emplacement.vehicle destroyed" text="Target has been destroyed. Tactical fairy has established a connection with the support system" />
-
+    <comment key="sf_jupiter.vehicle spotted, instructions" text="Destroy that Anti-Air weapon for additional Air support" />
+    <comment key="sf_jupiter.vehicle destroyed" text="Target has been destroyed. Tactical fairy has established a connection with the support system" />
     <comment key="intel radio reminder" text="Don't forget to call tactical fairy support when needed" />
 
     <comment key="report very weak defense" text="Information shows that the &#37;base_name area is hardly fortified." />
