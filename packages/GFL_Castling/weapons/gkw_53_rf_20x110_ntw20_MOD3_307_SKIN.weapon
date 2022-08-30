@@ -83,11 +83,11 @@
         <!--Weapon specifications-->
         <specification 
         retrigger_time="0.01"
-        burst_shots="3"
+        burst_shots="1"
         accuracy_factor="1.0" 
-        sustained_fire_grow_step="1.0" 
+        sustained_fire_grow_step="5" 
         sustained_fire_diminish_rate="1.2" 
-        magazine_size="3" 
+        magazine_size="1" 
         can_shoot_standing="0" 
         can_shoot_crouching="0"
         can_shoot_prone="1"
