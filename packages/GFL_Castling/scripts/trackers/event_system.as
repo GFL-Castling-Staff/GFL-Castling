@@ -237,7 +237,7 @@ void excuteRampageFairyAC130(GameMode@ metagame,GFL_event@ eventinfo){
             AC130M202Voice.insertLast("ac130rpg_blkops1.wav");
             AC130M202Voice.insertLast("ac130rpg_blkops2.wav");
             AC130M202Voice.insertLast("ac130rpg_blkops3.wav");
-
+            break;
         }
         default:break;        
     }
