@@ -42,6 +42,8 @@ class kill_event : Tracker {
         {"ff_gager_1.weapon",3},
         {"gkw_type100_skill.weapon",3},
         {"gkw_type100_4004_skill.weapon",3},
+        {"ff_alchemist.weapon",4},
+        {"ff_alchemist_skill.weapon",4},
 
         // 近战定位HG
         {"gkw_m1911_mod3.weapon",3},
