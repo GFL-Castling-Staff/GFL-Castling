@@ -783,11 +783,12 @@
 			<sound key="throw" fileref="Alchemist_buhuo_SKILL01_JP.wav" pitch_variety="0.001" volume="0.8" />
 		</character>
 		<model filename="sfd_alchemist.xml" />
-		<ai filename="eod.ai" />
+		<ai filename="sf_alchemist.ai" />
 		<resources clear_vehicles="1" clear_weapons="1" clear_calls="1" clear_carry_items="1">
 			<call key="sf_destroyer.call" />
 			<call key="sf_jaguar.call" />
 			<weapon key="sfw_alchemist.weapon" enabled="1"/>
+			<weapon key="sfw_alchemist_at.weapon" enabled="1"/>
 			<carry_item key="sf_alchemist.carry_item" enabled="1" />
 		</resources>
 		<attribute_config class="xp">

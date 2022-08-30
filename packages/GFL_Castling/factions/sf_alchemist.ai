@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ai filename="default.ai">
+
+  <parameter class="check_vehicles_interval" value="1.0" />
+
+  <parameter class="accuracy_penalty_range" value="0.0" />
+  <parameter class="accuracy_offset" value="0.1" /> 
+  <parameter class="accuracy_offset_in_player_squad" value="0.12" />
+
+  <parameter class="force_comparison_multiplier_to_call_reinforcements" value="0.25" />
+
+  <parameter class="burst_time" value="1.5" />
+  <parameter class="burst_time_variance" value="0" />
+  <parameter class="longer_burst_time" value="3.0" />
+  <parameter class="longer_burst_time_variance" value="0" />
+  <parameter class="choose_enemy_time" value="0.15" />
+  <parameter class="wait_time" value="0.7" />
+  <parameter class="wait_time_variance" value="0" />
+  <parameter class="cover_status_recheck_time" value="0.5" />
+
+  <parameter class="leading_inspect_alarm_spread_out_distance" value="60.0" />
+  <parameter class="leading_inspect_alarm_min_distance" value="30.0" />
+  <parameter class="fighting_approach_alarm_spread_max_range" value="45.0" />
+  <parameter class="fighting_approach_alarm_max_soldiers" value="20" /> 
+
+  <parameter class="prefer_roofs_probability" value="0.0" />
+
+  <parameter class="using_cover_min_time" value="2.0" />
+  <parameter class="using_cover_max_time" value="4.0" />
+
+  <parameter class="willingness_to_charge" value="0.75" />
+
+  <parameter class="run_limit_margin" value="4.0" />
+  <parameter class="run_limit" value="16.0" />
+
+  <parameter class="force_as_leader" value="1.0" />
+	<parameter class="fighting_melee_move_radius" value="2.0" />
+	<parameter class="fighting_regular_move_radius" value="6.0" />
+
+
+</ai>
