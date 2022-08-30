@@ -178,7 +178,7 @@ void excuteRampageFairyAC130(GameMode@ metagame,GFL_event@ eventinfo){
     if(eventinfo.m_phase>=(ac130_strike_num-2))ac130_voice_interval = 99;
     if(ac130_flyby_interval>0)ac130_flyby_interval -= 1;
 
-    switch(m_specialkey)){
+    switch(eventinfo.m_specialkey){
         case 1:
         {
             AC130StartVoice.insertLast("ac130entrance_rus1.wav");
