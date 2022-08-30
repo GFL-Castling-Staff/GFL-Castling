@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projectiles>
-    <projectile class="grenade" name="KCCO ap grenade" key="kcco_ap_grenade.projectile" slot="0" radius="0.05" drop_count_factor_on_death="0.2" drop_count_factor_on_player_death="1" time_to_live_out_in_the_open="30" pulldown_in_air="30">
-        <result class="spawn" instance_class="projectile" instance_key="kcco_ap_grenade_sub.projectile" min_amount="4" max_amount="4" offset="0 1.5 0" position_spread="0.3 0.3" direction_spread="0.0 0.0" />
+    <projectile class="grenade" name="KCCO AP grenade" key="kcco_ap_grenade.projectile" slot="0" radius="0.05" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="30" pulldown_in_air="30">
+        <result class="spawn" instance_class="projectile" instance_key="blast_shard_rad6.projectile" min_amount="6" max_amount="6" offset="0 1.5 0" position_spread="0 0" direction_spread="0.0 0.0" />
         <trigger class="impact"/>
         <rotation class="random" />
         <trail probability="0.0" key="BulletApTrail" />
         <model mesh_filename="kcco_grenade_3.xml" />
         <hud_icon filename="88r.png" />
-        <!-- <throwable curve_height="5.0" near_far_distance="5.0" speed_estimation_near="9.0" speed_estimation_far="15.0" max_speed="13.0" randomness="0.07" /> -->
-        <!-- <throwable curve_height="6.0" near_far_distance="5.0" speed_estimation_near="20.0" speed_estimation_far="17.0" max_speed="11.0" randomness="0.07" /> -->
         <throwable curve_height="8.0" near_far_distance="10.0" speed_estimation_near="30" speed_estimation_far="40.0" max_speed="100.0" randomness="0.07" tweak_factor="1.75"/>
-        <!-- projectile slot 0 is used for hand grenade items currently -->
-        <!-- bound to change -->
         <commonness value="2.0" />
         <inventory encumbrance="10.0" price="5.0" />
         <capacity value="5" source="rank" source_value="0.0" />
@@ -39,15 +35,5 @@
         <effect class="result" key="static_object" copy="terrain" />
         <effect class="result" key="character" copy="terrain" />
         <effect class="result" key="vehicle" copy="terrain" />
-    </projectile>
-    <projectile class="grenade" name="KCCO ap sub grenade" key="kcco_ap_grenade_sub.projectile" slot="0" radius="0.15">
-        <result class="blast" radius="6.5" damage="1.1" push="0.3" decal="1" character_state="death" faction_compare="not_equal" />
-        <trigger class="time" time_to_live="0.0"/>
-        <rotation class="random" />
-        <model mesh_filename="" />
-        <hud_icon filename="88r.png" />
-        <commonness value="0" />
-        <inventory encumbrance="1.0" price="5.0" />
-        <capacity value="1" source="rank" source_value="0.0" />
     </projectile>
 </projectiles>
