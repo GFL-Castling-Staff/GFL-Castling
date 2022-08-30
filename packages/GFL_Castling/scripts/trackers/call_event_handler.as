@@ -63,7 +63,9 @@ class call_event : Tracker {
                     FairyRequest.setIconTypeKey("call_marker_fury");
                     addCastlingMarker(FairyRequest);
                     m_DummyCallID++;
-                    GFL_event_array.insertLast(GFL_event(characterId,factionId,2,stringToVector3(position),1.0,-1.0,flagId));
+                    GFL_event newCall = GFL_event(characterId,factionId,2,stringToVector3(position),1.0,-1.0,flagId);
+                    newCall.setSpeicalKey(rand(1,2));
+                    GFL_event_array.insertLast(newCall);
                 }
 				
 			}

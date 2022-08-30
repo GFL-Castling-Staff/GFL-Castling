@@ -99,6 +99,7 @@ class GFL_event{
     int m_eventkey;
     Vector3 m_pos;
     float m_randseed;
+    int m_specialkey=1;
 
     int m_phase=1;
     int m_markerId=0;
@@ -113,6 +114,10 @@ class GFL_event{
         m_time=delay_time;
         m_randseed=randseed;
         m_markerId=markerId;
+    }
+
+    void setSpeicalKey(int key){
+        m_specialkey=key;
     }
 }
 
@@ -173,7 +178,7 @@ void excuteRampageFairyAC130(GameMode@ metagame,GFL_event@ eventinfo){
     if(eventinfo.m_phase>=(ac130_strike_num-2))ac130_voice_interval = 99;
     if(ac130_flyby_interval>0)ac130_flyby_interval -= 1;
 
-    switch(rand(1,2)){
+    switch(m_specialkey)){
         case 1:
         {
             AC130StartVoice.insertLast("ac130entrance_rus1.wav");
