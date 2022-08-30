@@ -42512,7 +42512,7 @@
 	<model filename=""/>
 	<weak_hand_hold offset="0.1"/>
 	<projectile file="bullet_sf.projectile">
-	<result class="blast" damage="8" radius="2.5" decal="1" push="0.2" character_state="death" faction_compare="not_equal"/>
+	<result class="blast" damage="7" radius="2.5" decal="1" push="0.2" character_state="death" faction_compare="not_equal"/>
 	</projectile>
 	<hud_icon filename="sfw_alchemist.png"/>
 	<stance state_key="running" accuracy="0.75"/>
