@@ -33,7 +33,7 @@ class SkillTrigger{
         m_weapontype=weapontype;
     }
     void setSkillInfo(SkillModifer@ skillinfo){
-        @m_skillInfo=@skillinfo;
+        m_skillInfo= skillinfo;
     }
 
     // void setPlayerId(int num){
@@ -532,7 +532,9 @@ class CommandSkill : Tracker {
     bool InCooldown(int cId, SkillModifer@ modifer,SkillTrigger@ queue,bool NoRemoveOnDeath=false){
         if(queue.m_character_id==cId) return true;
         if(NoRemoveOnDeath){
-            if(queue.m_skillInfo.m_playername==modifer.m_playername) return true;
+            if(queue.m_skillInfo.m_playername==modifer.m_playername){
+                return true;
+            }
         }
         return false;
     }
