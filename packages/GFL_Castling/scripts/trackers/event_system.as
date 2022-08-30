@@ -51,7 +51,7 @@ class GFL_event_system : Tracker {
                             case 1:{excuteSniperFairy(m_metagame,GFL_event_array[a]);break;}
                             case 2:{
                                 if(GFL_event_array[a].m_randseed==-1.0){
-                                    GFL_event_array[a].m_randseed= rand(0,3.14);
+                                    GFL_event_array[a].m_randseed= rand(0.0,3.14);
                                 }
                                 excuteRampageFairyAC130(m_metagame,GFL_event_array[a]);
                                 break;

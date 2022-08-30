@@ -33,7 +33,7 @@ class SkillTrigger{
         m_weapontype=weapontype;
     }
     void setSkillInfo(SkillModifer@ skillinfo){
-        m_skillInfo= skillinfo;
+        @m_skillInfo= @skillinfo;
     }
 
     // void setPlayerId(int num){
