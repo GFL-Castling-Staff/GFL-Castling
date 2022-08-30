@@ -11394,8 +11394,7 @@ show_base_names_in_map_view = 0;</desc>
        id="rect9344-60-7-4-5-4-5"
        style="fill:#656565;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:5;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;display:inline;enable-background:new">
       <desc
-         id="desc9346-8-2-1-6-2-0">name = FarmFence2; 
-static_object_type_key=woodfence.static_object; color = 1.0 1.0 1.0 1.0; depth = -1.0; height = 1.2; side_texture = farm_fence_bw.png; side_texture_scale = 1.0 0.3; separator_side_texture = trunk_side_bw.png; separator_top_texture = trench_end_bw.png; separator_color = 1.0 1.0 1.0 1.0; separator_over_height = 0.3; separator_depth = 0.2; penetrability = 0.7; see_through = 1;</desc>
+         id="desc9346-8-2-1-6-2-0">name = FarmFence2;  color = 1.0 1.0 1.0 1.0; depth = -1.0; height = 1.2; side_texture = farm_fence_bw.png; side_texture_scale = 1.0 0.3; separator_side_texture = trunk_side_bw.png; separator_top_texture = trench_end_bw.png; separator_color = 1.0 1.0 1.0 1.0; separator_over_height = 0.3; separator_depth = 0.2; penetrability = 0.7; see_through = 1;</desc>
     </rect>
     <flowRoot
        inkscape:label="#flowRoot9399-4-1-5"
@@ -11971,7 +11970,7 @@ roof_texture = wall_atlas1.png; roof_texture_atlas_cell = 1 0 2 2 0.0078125; roo
        id="mesh_template6-4-4-2-9"
        style="opacity:0.79775277;fill:#0e5500;fill-opacity:1;fill-rule:nonzero;stroke:none;display:inline;enable-background:new">
       <desc
-         id="desc8739-3-3-8-0-0-9-1-6-0-2-2-5">name = concrete_barrier; mesh_name = concrete_barrier.mesh; texture0 = world_atlas1.png; texture0_atlas_cell = 4 3 32 32; collision_model_type = 1; collision_model_size = 1.10 1.10 2.3; appear_as_wall = 1;</desc>
+         id="desc8739-3-3-8-0-0-9-1-6-0-2-2-5">name = concrete_barrier;static_object_type_key=concrete_barrier.static_object; mesh_name = concrete_barrier.mesh; texture0 = world_atlas1.png; texture0_atlas_cell = 4 3 32 32; collision_model_type = 1; collision_model_size = 1.10 1.10 2.3; appear_as_wall = 1;</desc>
     </rect>
     <flowRoot
        transform="translate(32.463562,-1063.5596)"
@@ -12080,7 +12079,7 @@ roof_texture = wall_atlas1.png; roof_texture_atlas_cell = 1 0 2 2 0.0078125; roo
        id="rect8111-3-89-7-5-1-8-5"
        style="fill:#563a16;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1.95491481;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline;enable-background:new">
       <desc
-         id="desc8113-22-2-9-4-7-8-3">name =bench; mesh_name = bench.mesh; texture0 = world_atlas1.png; texture0_atlas_cell = 1 1 128 128; collision_model_type = 1; collision_model_size = 1 1.2 3.7; penetrability = 0.5; see_through = 1;</desc>
+         id="desc8113-22-2-9-4-7-8-3">name =bench;static_object_type_key=trash.static_object; mesh_name = bench.mesh; texture0 = world_atlas1.png; texture0_atlas_cell = 1 1 128 128; collision_model_type = 1; collision_model_size = 1 1.2 3.7; penetrability = 0.5; see_through = 1;</desc>
     </rect>
     <rect
        transform="matrix(-0.02287321,-0.99973837,0.99973837,-0.02287321,0,0)"
@@ -16498,7 +16497,7 @@ backline = 1;</desc>
        id="mesh923-1-9"
        style="fill:#855e00;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2.79999995;stroke-opacity:1;stroke-dasharray:6, 2;stroke-dashoffset:5.69999933;display:inline;enable-background:new">
       <desc
-         id="desc6925-7-4">name = chairset_chair;
+         id="desc6925-7-4">name = chairset_chair;static_object_type_key=trash.static_object;
 mesh_name = chairset_chair.mesh;
 texture0 = chairset.png;
 #texture0 = world_atlas1.png; 
@@ -16517,7 +16516,7 @@ penetrability = 0.6;</desc>
        inkscape:label="#mesh_template"
        transform="scale(-1,-1)">
       <desc
-         id="desc7915-8">name = chairset_table;
+         id="desc7915-8">name = chairset_table;static_object_type_key=trash.static_object;
 mesh_name = chairset_table.mesh;
 texture0 = chairset.png;
 #texture0 = world_atlas1.png; 
@@ -16818,7 +16817,6 @@ hack1 = 1;</desc>
        style="fill:#656565;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:5;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;display:inline;enable-background:new">
       <desc
          id="desc9346-8-2-1-6-2-0-7">name = FarmFence2; 
-static_object_type_key=woodfence.static_object;
 color = 1.0 1.0 1.0 1.0;
 depth = -1.0;
 height = 1.2;
