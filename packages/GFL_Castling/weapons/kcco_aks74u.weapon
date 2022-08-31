@@ -30,10 +30,10 @@
         <animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
         <animation state_key="stabbing" animation_key="melee, quick knife" />
         <animation state_key="stabbing" animation_key="pistol whip 3" />
-        <sound key="fire" fileref="ak74u_fire_FromSQUAD.wav" pitch_variety="0.05" volume="1" />
-        <sound key="magazine_out" fileref="ak74u_mgz_out_FromSQUAD.wav" volume="0.9" />
-        <sound key="magazine_in" fileref="ak74u_mgz_in_FromSQUAD.wav" volume="0.9" />
-        <sound key="cycle" fileref="ak74u_cycle_FromSQUAD.wav" volume="0.9" />
+        <sound key="fire" fileref="ak74uskill_fire_FromCOD17.wav" pitch_variety="0.05" volume="1.1" />
+        <sound key="magazine_out" fileref="ak74_mgz_out_FromCOD16.wav" volume="0.5" />
+        <sound key="magazine_in" fileref="ak74_mgz_in_FromCOD16.wav" volume="0.5" />
+        <sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.5" />
         <sound class="impact" fileref="rifle_drop.wav" volume="1"/>
         <model filename="gkw_smg_ak74u.xml" />
         <hud_icon filename="kcco_aks74u.png" />

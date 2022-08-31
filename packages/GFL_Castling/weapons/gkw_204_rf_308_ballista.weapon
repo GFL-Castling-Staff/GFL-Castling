@@ -25,12 +25,12 @@
 	<animation key="cycle" stance_key="prone" animation_key="Brifle0.8p" />	
     <animation key="reload" animation_key="reloading, magazine rifle 2.1" />
     <!--Sounds-->
-    <sound key="fire" fileref="ballista_fire_FromCOD9.wav" pitch_variety="0.05" volume="1.2" />
+    <sound key="fire" fileref="ballista_fire_FromCOD9.wav" pitch_variety="0.05" volume="1.3" />
     <sound key="magazine_out" fileref="ballista_mgz_out_FromCOD16.wav" volume="0.8"/>
     <sound key="magazine_in" fileref="ballista_mgz_in_FromCOD16.wav" volume="0.8"/>
-    <sound key="cycle" fileref="ballista_cycle_FromCOD10.wav" volume="0.5"/>
-    <sound key="cycle_out" fileref="ballista_cycle_out_FromCOD10.wav"  volume="0.5"/>
-    <sound key="cycle_in" fileref="ballista_cycle_in_FromCOD10.wav"  volume="0.5"/> 
+    <sound key="cycle" fileref="ballista_cycle_FromCOD10.wav" volume="0.3"/>
+    <sound key="cycle_out" fileref="ballista_cycle_out_FromCOD10.wav"  volume="0.3"/>
+    <sound key="cycle_in" fileref="ballista_cycle_in_FromCOD10.wav"  volume="0.3"/> 
     <sound class="impact" fileref="rifle_drop.wav" volume="1"/>
     <!--Model, Icon, Cost-->
     <model filename="gkw_ballista_From_melondove.xml" />
@@ -85,9 +85,9 @@
     <sound key="fire" fileref="ballista_fire_FromCF.wav" pitch_variety="0.05" volume="1.2" />
     <sound key="magazine_out" fileref="ballista_mgz_out_FromCOD16.wav" volume="0.8"/>
     <sound key="magazine_in" fileref="ballista_mgz_in_FromCOD16.wav" volume="0.8"/>
-    <sound key="cycle" fileref="ballista_cycle_FromCOD10.wav" volume="0.5"/>
-    <sound key="cycle_out" fileref="ballista_cycle_out_FromCOD10.wav"  volume="0.5"/>
-    <sound key="cycle_in" fileref="ballista_cycle_in_FromCOD10.wav"  volume="0.5"/> 
+    <sound key="cycle" fileref="ballista_cycle_FromCOD10.wav" volume="0.3"/>
+    <sound key="cycle_out" fileref="ballista_cycle_out_FromCOD10.wav"  volume="0.3"/>
+    <sound key="cycle_in" fileref="ballista_cycle_in_FromCOD10.wav"  volume="0.3"/> 
     <sound class="impact" fileref="rifle_drop.wav" volume="1"/>
     <!--Model, Icon, Cost-->
     <model filename="gkw_ballista_From_melondove.xml" />

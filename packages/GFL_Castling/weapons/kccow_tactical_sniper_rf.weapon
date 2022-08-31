@@ -43,10 +43,10 @@ key="kccow_tactical_sniper_rf.weapon">
     <animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
     <animation state_key="stabbing" animation_key="melee, bayonet" />
     <!--Sounds-->
-    <sound key="fire" fileref="sv98_fire_FromBF4.wav" pitch_variety="0.05" volume="1.7" />
-    <sound key="magazine_out" fileref="m1911_mgz_out_FromINS.wav" volume="0.8" />
-    <sound key="magazine_in" fileref="m1911_mgz_in_FromINS.wav" volume="0.8"/>
-    <sound key="cycle" fileref="m1911_cycle_FromINS.wav" volume="0.8" />
+    <sound key="fire" fileref="kccosr_fire_FromCOD10.wav" pitch_variety="0.05" volume="1.2" />
+    <sound key="magazine_out" fileref="kccosr_mgz_out_FromCOD10.wav" volume="0.45" />
+    <sound key="magazine_in" fileref="m21skill_mgz_in_FromCOD16.wav" volume="0.7"/>
+    <sound key="cycle" fileref="kccosr_cycle_FromCOD10.wav" volume="0.45" />
     <!--Model, Icon, Cost-->
     <model filename="kccow_tactical_sniper_rf.xml" />
     <hud_icon filename="kccow_cerynitis.png" />
