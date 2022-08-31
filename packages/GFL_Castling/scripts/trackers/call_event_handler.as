@@ -64,7 +64,7 @@ class call_event : Tracker {
                     addCastlingMarker(FairyRequest);
                     m_DummyCallID++;
                     GFL_event@ newCall = GFL_event(characterId,factionId,2,stringToVector3(position),1.0,-1.0,flagId);
-                    newCall.setSpeicalKey(rand(1,2));
+                    newCall.setSpeicalKey(rand(1,2,3));
                     GFL_event_array.insertLast(newCall);
                 }
 				

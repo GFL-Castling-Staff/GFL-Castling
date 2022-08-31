@@ -239,6 +239,33 @@ void excuteRampageFairyAC130(GameMode@ metagame,GFL_event@ eventinfo){
             AC130M202Voice.insertLast("ac130rpg_blkops3.wav");
             break;
         }
+        case 3:
+        {
+            AC130StartVoice.insertLast("ac130entrance_nato1.wav");
+            AC130StartVoice.insertLast("ac130entrance_nato2.wav");
+
+            AC130EndVoice.insertLast("ac130exit_nato1.wav");
+            AC130EndVoice.insertLast("ac130exit_nato2.wav");
+
+            AC130NoTargetVoice.insertLast("ac130search_nato1.wav");
+            AC130NoTargetVoice.insertLast("ac130search_nato2.wav");
+            AC130NoTargetVoice.insertLast("ac130search_nato3.wav");
+            AC130NoTargetVoice.insertLast("ac130search_nato4.wav");
+            AC130NoTargetVoice.insertLast("ac130search_nato5.wav");
+            AC130NoTargetVoice.insertLast("ac130search_nato6.wav");
+
+            AC130MinigunVoice.insertLast("ac130mg_nato1.wav");
+            AC130MinigunVoice.insertLast("ac130mg_nato2.wav");
+            AC130MinigunVoice.insertLast("ac130mg_nato3.wav");
+
+            AC130ShotgunVoice.insertLast("ac130sg_nato1.wav");
+            AC130ShotgunVoice.insertLast("ac130sg_nato2.wav");
+            AC130ShotgunVoice.insertLast("ac130sg_nato3.wav");
+
+            AC130M202Voice.insertLast("ac130rpg_nato1.wav");
+            AC130M202Voice.insertLast("ac130rpg_nato2.wav");
+            break;
+        }
         default:break;        
     }
 
