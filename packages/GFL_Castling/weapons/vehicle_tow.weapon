@@ -37,7 +37,7 @@
     <effect class="muzzle" ref="CannonSmokeBig" />
     <effect class="muzzle" ref="CannonSmokeBigSphere" />
 
-    <sound class="operation" key="fire" fileref="tow_shot.wav" />
+    <sound class="operation" key="fire" fileref="tow_fire_FromCOD17.wav" volume="1.2" />
     <!-- front plate-mid -->
     <shield offset="0.3 -0.55 0" extent="0.2 0.8 0.3" />
 </weapon>
