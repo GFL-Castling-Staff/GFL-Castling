@@ -12,7 +12,7 @@ void main(dictionary@ inputData) {
         _setupLog("dev_verbose");
 
         settings.m_factionChoice = 0;                  // 0 (greenbelts), 1 (graycollars), 2 (brownpants)
-        settings.m_playerAiCompensationFactor = 1.0;   // was 1.1  (1.75)
+        settings.m_playerAiCompensationFactor = 1.1;   // was 1.1  (1.75)
         settings.m_teamKillPenaltyEnabled = true;
         settings.m_completionVarianceEnabled = false;
         settings.m_journalEnabled = true;
@@ -35,9 +35,9 @@ void main(dictionary@ inputData) {
 
         settings.m_startServerCommand = """
 <command class='start_server'
-	server_name='[Castling][Eazy-1 150%]'
+	server_name='[Castling][Eazy-1 LV1]'
 	server_port='1234'
-	comment='Read server rules in our discord: discord.gg/wwUM3kYmRC, QQ Group: 706234535'
+	comment='(1.0:1.5)Read server rules in our discord: discord.gg/wwUM3kYmRC, QQ Group: 706234535'
 	url='https://castling.fandom.com/wiki/Castling_Wiki'
 	register_in_serverlist='1'
 	mode='Castling'
