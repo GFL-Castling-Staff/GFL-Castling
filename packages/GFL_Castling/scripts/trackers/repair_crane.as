@@ -50,7 +50,7 @@ class RepairCrane : Tracker {
 			y_offset = -5.0;
 		} else if (key == "bbs_repair") {
 			range = 5.0;
-			repairValue = 3.0;
+			repairValue = 6.0;
 			overHealth = 1.1;
 			y_offset = 0.0;
 			rpReward = 0;

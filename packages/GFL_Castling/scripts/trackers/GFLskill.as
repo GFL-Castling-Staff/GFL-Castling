@@ -725,6 +725,7 @@ class GFLskill : Tracker {
 						case 0:{
 							int factionid = character.getIntAttribute("faction_id");
 							playAnimationKey(m_metagame,characterId,"warcry, elid boss",false);
+							playSoundAtLocation(m_metagame,"bigzombie_summon_fromDOTA2.wav",0,pos,1.0);
 							spawnSoldier(m_metagame,10,factionid,pos,"infected");
 							break;
 						}
