@@ -22,10 +22,10 @@
     <!--Animations-->
     <animation key="reload" animation_key="reloading, magazine rifle 1.8" />
     <!--Sounds-->
-    <sound key="fire" fileref="aa12_fire_FromROUGECOMPANY.wav" pitch_variety="0.05" volume="1" />
-    <sound key="magazine_out" fileref="AA12_mgz_out_FromCOD16.wav" volume="1" />
-    <sound key="magazine_in" fileref="AA12_mgz_in_FromCOD16.wav" volume="1" />
-    <sound key="cycle" fileref="AA12_cycle_FromCOD16.wav" volume="1" />
+    <sound key="fire" fileref="aa12_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.2" />
+    <sound key="magazine_out" fileref="aa12_mgz_out_FromCOD16.wav" volume="0.45" />
+    <sound key="magazine_in" fileref="aa12_mgz_in_FromCOD16.wav" volume="0.45" />
+    <sound key="cycle" fileref="aa12_cycle_FromCOD16.wav" volume="0.45" />
     <sound class="impact" fileref="rifle_drop.wav" />
     <!--Model, Icon, Cost-->
     <commonness value="0" in_stock="0" />
