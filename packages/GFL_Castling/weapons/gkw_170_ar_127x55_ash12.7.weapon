@@ -17,10 +17,10 @@
         <animation state_key="reload" animation_key="reloading, magazine rifle 0.9" />
         <inventory buy_price="200.0" sell_price="200.0" />
         <next_in_chain key="gkw_ash127_skill.weapon" share_ammo="1" />
-        <sound key="fire" fileref="ash127_fire_FromCOD16.wav" pitch_variety="0.05" volume="1" />
-        <sound key="magazine_out" fileref="ash127_mgz_out_FromEFT.wav" volume="1" />
-        <sound key="magazine_in" fileref="ash127_mgz_in_FromEFT.wav" volume="1" />
-        <sound key="cycle" fileref="ash127_cycle_FromEFT.wav" volume="1" />
+        <sound key="fire" fileref="ash12_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.1" />
+        <sound key="magazine_out" fileref="ash12_mgz_out_FromCOD16.wav" volume="0.5" />
+        <sound key="magazine_in" fileref="ash12_mgz_in_FromCOD16.wav" volume="0.4" />
+        <sound key="cycle" fileref="ash12_cycle_FromCOD16.wav" volume="0.4" />
         <sound class="impact" fileref="rifle_drop.wav" />
         <model filename="gkw_ar_ash127.xml" />
         <hud_icon filename="gkw_ash127.png" />
@@ -58,9 +58,9 @@
         <next_in_chain key="gkw_ash127.weapon" share_ammo="1" />
         <commonness value="0" in_stock="0" can_respawn_with="1" />
         <sound key="fire" fileref="ash127skill_fire_FromCF.wav" pitch_variety="0.05" volume="1" />
-        <sound key="magazine_out" fileref="ash127_mgz_out_FromEFT.wav" volume="1" />
-        <sound key="magazine_in" fileref="ash127_mgz_in_FromEFT.wav" volume="1" />
-        <sound key="cycle" fileref="ash127_cycle_FromEFT.wav" volume="1" />
+        <sound key="magazine_out" fileref="ash12_mgz_out_FromCOD16.wav" volume="0.5" />
+        <sound key="magazine_in" fileref="ash12_mgz_in_FromCOD16.wav" volume="0.4" />
+        <sound key="cycle" fileref="ash12_cycle_FromCOD16.wav" volume="0.4" />
         <sound class="impact" fileref="rifle_drop.wav" />
         <model filename="gkw_ar_ash127.xml" />
         <hud_icon filename="gkw_ash127_skill.png" />

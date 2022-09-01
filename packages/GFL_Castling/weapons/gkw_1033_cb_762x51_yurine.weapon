@@ -29,10 +29,10 @@
         <animation state_key="still_against_wall" 	animation_key="hold, hip fire" />
         <animation state_key="walking" animation_key="walking, hip fire" />
         <animation state_key="running" animation_key="walking, hip fire" />
-        <sound key="fire" fileref="minigun_From_payday2.wav" pitch_variety="0.05" volume="0.15" />
-        <sound key="magazine_out" fileref="mg_clip_out.wav" />
-        <sound key="magazine_in" fileref="mg_clip_in.wav" />
-        <sound key="cycle" fileref="rifle_chamber.wav" />
+        <sound key="fire" fileref="minigun_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.2" />
+        <sound key="magazine_out" fileref="minigun_mgz_out_FromCOD16.wav" volume="0.5" />
+        <sound key="magazine_in" fileref="minigun_mgz_in_FromCOD16.wav" volume="0.5" />
+        <sound key="cycle" fileref="minigun_cycle_FromCOD16.wav" volume="0.7" />
         <sound class="impact" fileref="rifle_drop.wav" />
         <model filename="gkw_cb_yurine_hanazono_from_dusk.xml" />
         <hud_icon filename="gkw_yurine.png" />
