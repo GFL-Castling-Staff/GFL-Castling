@@ -25,10 +25,11 @@
         <animation key="reload" animation_key="reloading, oaat" />
         <!--Sounds-->
         <sound key="fire" fileref="xm3_fire_FromRS2V.wav" pitch_variety="0.05" volume="1.2" />
-        <sound key="cycle" fileref="xm3_cycle_FromCOD4R.wav" volume="0.5"/>
-        <sound key="reload_one" fileref="xm3_reload_FromCOD4R.wav" volume="0.2" />
-        <sound key="cycle_out" fileref="xm3_cycle_out_FromCOD4R.wav"  volume="0.5"/>
-        <sound key="cycle_in" fileref="xm3_cycle_in_FromCOD4R.wav"  volume="0.5"/>
+        <sound key="cycle" fileref="xm3_cycle_FromCOD4R.wav" volume="0.4"/>
+        <sound key="reload_one" fileref="xm3_reload1_FromCOD4R.wav" volume="0.25" />
+        <sound key="reload_one" fileref="xm3_reload2_FromCOD4R.wav" volume="0.25" />
+        <sound key="cycle_out" fileref="xm3_cycle_out_FromCOD4R.wav"  volume="0.4"/>
+        <sound key="cycle_in" fileref="xm3_cycle_in_FromCOD4R.wav"  volume="0.4"/>
         <sound class="impact" fileref="rifle_drop.wav" volume="1"/>
         <!--Model, Icon, Cost-->
         <model filename="gkw_rf_carcano1938.xml" />
@@ -79,10 +80,11 @@
         <animation key="reload" animation_key="reloading, oaat" />
         <!--Sounds-->
         <sound key="fire" fileref="xm3_fire_FromRS2V.wav" pitch_variety="0.05" volume="1.5" />
-        <sound key="cycle" fileref="xm3_cycle_FromCOD4R.wav" volume="0.5"/>
-        <sound key="reload_one" fileref="xm3_reload_FromCOD4R.wav" volume="0.2" />
-        <sound key="cycle_out" fileref="xm3_cycle_out_FromCOD4R.wav"  volume="0.5"/>
-        <sound key="cycle_in" fileref="xm3_cycle_in_FromCOD4R.wav"  volume="0.5"/>
+        <sound key="cycle" fileref="xm3_cycle_FromCOD4R.wav" volume="0.4"/>
+        <sound key="reload_one" fileref="xm3_reload1_FromCOD4R.wav" volume="0.25" />
+        <sound key="reload_one" fileref="xm3_reload2_FromCOD4R.wav" volume="0.25" />
+        <sound key="cycle_out" fileref="xm3_cycle_out_FromCOD4R.wav"  volume="0.4"/>
+        <sound key="cycle_in" fileref="xm3_cycle_in_FromCOD4R.wav"  volume="0.4"/>
         <sound class="impact" fileref="rifle_drop.wav" volume="1"/>
         <!--Model, Icon, Cost-->
         <model filename="gkw_rf_carcano1938.xml" />

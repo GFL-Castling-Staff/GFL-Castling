@@ -7,10 +7,10 @@
         <commonness value="0" in_stock="0" />
         <capacity value="1" source="rank" source_value="0.0" />
         <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
-        <sound key="fire" fileref="star15mod_fire_FromDAYSGONE.wav" pitch_variety="0.01" volume="1.4"/>
-        <sound key="magazine_out" fileref="star15_mgz_out_FromCOD17.wav" volume="0.7" />
-        <sound key="magazine_in" fileref="star15_mgz_in_FromCOD17.wav" volume="0.7" />
-        <sound key="cycle" fileref="star15_cycle_FromCOD17.wav" volume="0.7" />
+        <sound key="fire" fileref="ar15mod3_fire_FromCOD8.wav" pitch_variety="0.01" volume="1.2"/>
+        <sound key="magazine_out" fileref="star15_mgz_out_FromCOD17.wav" volume="0.6" />
+        <sound key="magazine_in" fileref="star15_mgz_in_FromCOD17.wav" volume="0.6" />
+        <sound key="cycle" fileref="star15_cycle_FromCOD17.wav" volume="0.6" />
         <sound key="cycle" fileref="AR15Mod_BUILDOVER_JP.wav" volume="0.7" pitch_variety="0"/>
         <sound key="cycle" fileref="AR15Mod_FEED_JP.wav" volume="0.7" pitch_variety="0"/>
         <sound key="cycle" fileref="AR15Mod_FIX_JP.wav" volume="0.7" pitch_variety="0"/>
@@ -62,9 +62,9 @@
         <animation state_key="stabbing" animation_key="pistol whip 3" />
         <effect class="muzzle" ref="muzzle_pink"/>
         <sound key="fire" fileref="ar15mod3skill_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.1" />
-        <sound key="magazine_out" fileref="star15_mgz_out_FromCOD17.wav" volume="0.7" />
-        <sound key="magazine_in" fileref="star15_mgz_in_FromCOD17.wav" volume="0.7" />
-        <sound key="cycle" fileref="star15_cycle_FromCOD17.wav" volume="0.7" />
+        <sound key="magazine_out" fileref="star15_mgz_out_FromCOD17.wav" volume="0.6" />
+        <sound key="magazine_in" fileref="star15_mgz_in_FromCOD17.wav" volume="0.6" />
+        <sound key="cycle" fileref="star15_cycle_FromCOD17.wav" volume="0.6" />
         <sound key="cycle" fileref="AR15Mod_ATTACK_JP.wav" volume="0.7" pitch_variety="0"/>
         <sound key="cycle" fileref="AR15Mod_DEFENSE_JP.wav" volume="0.7" pitch_variety="0"/>
         <sound key="cycle" fileref="AR15Mod_SKILL1_JP.wav" volume="0.7" pitch_variety="0"/>

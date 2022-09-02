@@ -18,10 +18,10 @@
         <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
         <inventory  buy_price="7.0" sell_price="7.0" />
         <next_in_chain key="gkw_ak47_skill.weapon" share_ammo="1" />
-        <sound key="fire" fileref="ak47_fire_FromRE5.wav" pitch_variety="0.05" volume="1" />
-        <sound key="magazine_out" fileref="ak47_mgz_out_FromBORDERLAND3.wav" volume="0.7" />
-        <sound key="magazine_in" fileref="ak47_mgz_in_FromBORDERLAND3.wav" volume="0.7" />
-        <sound key="cycle" fileref="ak47_cycle_FromBORDERLAND3.wav" volume="0.8" />
+        <sound key="fire" fileref="ak47_fire_FromRE5.wav" pitch_variety="0.05" volume="1.3" />
+        <sound key="magazine_out" fileref="ak12_mgz_out_FromCOD16.wav" volume="0.6" />
+        <sound key="magazine_in" fileref="ak12_mgz_in_FromCOD16.wav" volume="0.6" />
+        <sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6" />
         <sound class="impact" fileref="rifle_drop.wav" />
         <model filename="gkw_ar_ak47.xml" />
         <hud_icon filename="gkw_ak47.png" />
@@ -59,10 +59,10 @@
         <inventory  buy_price="7.0" sell_price="7.0" />
         <commonness value="0" in_stock="0" can_respawn_with="1" />
         <next_in_chain key="gkw_ak47.weapon" share_ammo="1" />
-        <sound key="fire" fileref="ak47_fire_FromCOD16.wav" pitch_variety="0.05" volume="0.9" />
-        <sound key="magazine_out" fileref="ak47_mgz_out_FromBORDERLAND3.wav" volume="0.7" />
-        <sound key="magazine_in" fileref="ak47_mgz_in_FromBORDERLAND3.wav" volume="0.7" />
-        <sound key="cycle" fileref="ak47_cycle_FromBORDERLAND3.wav" volume="0.8" />
+        <sound key="fire" fileref="ak47_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.2" />
+        <sound key="magazine_out" fileref="ak12_mgz_out_FromCOD16.wav" volume="0.6" />
+        <sound key="magazine_in" fileref="ak12_mgz_in_FromCOD16.wav" volume="0.6" />
+        <sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6" />
         <sound class="impact" fileref="rifle_drop.wav" />
         <model filename="gkw_ar_ak47.xml" />
         <hud_icon filename="gkw_ak47_skill.png" />

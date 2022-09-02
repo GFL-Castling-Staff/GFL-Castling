@@ -48,11 +48,12 @@
         <animation state_key="throwing_self_over" animation_key="running, gunda sniper" />
         <animation key="throwing_self_over" animation_key="running, gunda sniper" />
         <animation state_key="stabbing" animation_key="stabbing, gunda" />
-        <sound key="fire" fileref="type88mod3_fire_FromKF2.wav" pitch_variety="0.05" volume="1.5" />
-        <sound key="cycle" fileref="type88_cycle_FromBF1.wav" volume="0.6"/>
-        <sound key="reload_one" fileref="m1903_reload_FromCOD16.wav" volume="0.4" />
-        <sound key="cycle_out" fileref="sniper_cycle_out.wav" volume="1"/>
-        <sound key="cycle_in" fileref="sniper_cycle_in.wav" volume="1"/>
+        <sound key="fire" fileref="type88robot_fire_FromCOD13.wav" pitch_variety="0.05" volume="1.05" />
+        <sound key="cycle" fileref="type88robot_cycle_FromCOD13.wav" volume="0.4"/>
+        <sound key="magazine_out" fileref="type88robot_mgz_out_FromCOD13.wav" volume="0.4"/>
+        <sound key="magazine_in" fileref="type88robot_mgz_in_FromCOD13.wav" volume="0.4"/>
+        <sound key="cycle_out" fileref="type88robot_cycle_out_FromCOD13.wav" volume="0.4"/>
+        <sound key="cycle_in" fileref="type88robot_cycle_in_FromCOD13.wav" volume="0.4"/>
         <sound class="impact" fileref="rifle_drop.wav" volume="1"/>
         <model filename="gkw_88type_gudan_gun.xml" />
         <hud_icon filename="gkw_88type_6503_mod3.png" />

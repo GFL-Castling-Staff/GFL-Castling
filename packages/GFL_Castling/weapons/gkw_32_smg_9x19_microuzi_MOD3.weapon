@@ -46,9 +46,9 @@
         <effect class="muzzle" ref="ejection_9mm" />
 
         <sound key="fire" fileref="uzi_fire_FromCOD17.wav" pitch_variety="0.05" volume="1.4" />
-        <sound key="magazine_out" fileref="uzi_mgz_out_FromCOD16.wav" volume="0.5" />
-        <sound key="magazine_in" fileref="uzi_mgz_in_FromCOD16.wav" volume="0.5" />
-        <sound key="cycle" fileref="uzi_cycle_FromCOD16.wav" volume="0.5" />
+        <sound key="magazine_out" fileref="uzi_mgz_out_FromCOD16.wav" volume="0.35" />
+        <sound key="magazine_in" fileref="uzi_mgz_in_FromCOD16.wav" volume="0.35" />
+        <sound key="cycle" fileref="uzi_cycle_FromCOD16.wav" volume="0.35" />
         <sound class="impact" fileref="rifle_drop.wav" />
         <model filename=""/>
         <hud_icon filename="gkw_microuzimod3.png"/>
@@ -125,9 +125,9 @@
         <effect class="muzzle" ref="ejection_9mm" />
 
         <sound key="fire" fileref="uzimod3_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.5" />
-        <sound key="magazine_out" fileref="uzi_mgz_out_FromCOD16.wav" volume="0.5" />
-        <sound key="magazine_in" fileref="uzi_mgz_in_FromCOD16.wav" volume="0.5" />
-        <sound key="cycle" fileref="uzi_cycle_FromCOD16.wav" volume="0.5" />
+        <sound key="magazine_out" fileref="uzi_mgz_out_FromCOD16.wav" volume="0.35" />
+        <sound key="magazine_in" fileref="uzi_mgz_in_FromCOD16.wav" volume="0.35" />
+        <sound key="cycle" fileref="uzi_cycle_FromCOD16.wav" volume="0.35" />
         <sound class="impact" fileref="rifle_drop.wav" />
         <model filename="gkw_smg_uzimod3.xml"/>
         <hud_icon filename="gkw_microuzimod3_skill.png"/>

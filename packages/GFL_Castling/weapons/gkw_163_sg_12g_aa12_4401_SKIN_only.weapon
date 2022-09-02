@@ -25,8 +25,8 @@
 	<animation key="reload" animation_key="reloading, magazine rifle 1.8"/>
 	<sound key="fire" fileref="aa12_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.2" />
     <sound key="magazine_out" fileref="aa12_mgz_out_FromCOD16.wav" volume="0.45" />
-    <sound key="magazine_in" fileref="aa12_mgz_in_FromCOD16.wav" volume="0.45" />
-    <sound key="cycle" fileref="aa12_cycle_FromCOD16.wav" volume="0.45" />
+    <sound key="magazine_in" fileref="aa12_mgz_in_FromCOD16.wav" volume="0.35" />
+    <sound key="cycle" fileref="aa12_cycle_FromCOD16.wav" volume="0.35" />
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<commonness value="0" in_stock="0"/>
 	<inventory encumbrance="10.0" buy_price="75.0" sell_price="75.0"/>

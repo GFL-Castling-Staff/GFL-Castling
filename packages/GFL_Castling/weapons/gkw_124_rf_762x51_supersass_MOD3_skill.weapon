@@ -30,16 +30,16 @@
     <animation state_key="next_in_chain_in" animation_key="change weapon in ssass" />
 	<!--Sounds-->
     <commonness value="0" in_stock="0" />
-    <sound key="fire" fileref="supersassmod3_fire_FromBF4.wav" pitch_variety="0.01" volume="1.2" />
-    <sound key="magazine_out" fileref="supersass_mgz_out_FromSQUAD.wav"  volume="0.7" />
-    <sound key="magazine_in" fileref="supersass_mgz_in_FromSQUAD.wav"  volume="0.7" />
-	<sound key="cycle" fileref="supersass_cycle_FromR6S.wav"  volume="0.7" />
+    <sound key="fire" fileref="sassskill_fire_FromCOD16.wav" pitch_variety="0.01" volume="1.2" />
+    <sound key="magazine_out" fileref="sass_mgz_out_FromSQUAD.wav"  volume="0.55" />
+    <sound key="magazine_in" fileref="sass_mgz_in_FromSQUAD.wav"  volume="0.55" />
+	<sound key="cycle" fileref="sass_cycle_FromCOD13.wav"  volume="0.4" />
     <sound key="cycle" fileref="SuperSASSMod_SKILL1_JP.wav"  volume="1.0" pitch_variety="0"/>
-    <sound key="cycle" fileref="supersass_cycle_FromR6S.wav"  volume="0.7" />
+    <sound key="cycle" fileref="sass_cycle_FromCOD13.wav"  volume="0.4" />
     <sound key="cycle" fileref="SuperSASSMod_SKILL2_JP.wav"  volume="1.0" pitch_variety="0"/>
-    <sound key="cycle" fileref="supersass_cycle_FromR6S.wav"  volume="0.7" />
+    <sound key="cycle" fileref="sass_cycle_FromCOD13.wav"  volume="0.4" />
     <sound key="cycle" fileref="SuperSASSMod_SKILL3_JP.wav"  volume="1.0" pitch_variety="0"/>
-    <sound key="cycle" fileref="supersass_cycle_FromR6S.wav"  volume="0.7" />
+    <sound key="cycle" fileref="sass_cycle_FromCOD13.wav"  volume="0.4" />
     <sound key="cycle" fileref="SuperSASSMod_TIP_JP.wav"  volume="1.0" pitch_variety="0"/>
     <sound class="impact" fileref="rifle_drop.wav" />
    

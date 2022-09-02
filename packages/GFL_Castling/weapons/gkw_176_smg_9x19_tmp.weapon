@@ -38,10 +38,10 @@
     <animation state_key="reload" animation_key="reloading, magazine rifle 0.9" />
 	<animation state_key="stabbing" animation_key="melee, quick knife" />
 	<animation state_key="stabbing" animation_key="pistol whip 3" />
-    <sound key="fire" fileref="tmp_fire_FromCOD6R.wav" pitch_variety="0.05" volume="1" />
-    <sound key="magazine_out" fileref="tmp_mgz_out_FromCOD6R.wav" volume="0.5" />
-    <sound key="magazine_in" fileref="tmp_mgz_in_FromCOD6R.wav" volume="0.5" />
-    <sound key="cycle" fileref="tmp_cycle_FromCOD6R.wav" volume="0.5" />
+    <sound key="fire" fileref="tmp_fire_FromCOD6R.wav" pitch_variety="0.05" volume="1.2" />
+    <sound key="magazine_out" fileref="tmp_mgz_out_FromCOD6R.wav" volume="0.35" />
+    <sound key="magazine_in" fileref="tmp_mgz_in_FromCOD6R.wav" volume="0.35" />
+    <sound key="cycle" fileref="tmp_cycle_FromCOD6R.wav" volume="0.35" />
     <sound class="impact" fileref="rifle_drop.wav" />    
     <model filename="gkw_smg_tmp.xml"/>
     <commonness value="0.2" in_stock="0" can_respawn_with="1" />

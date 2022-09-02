@@ -14,10 +14,10 @@
 		sustained_fire_grow_step="0.45" />
     <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
     <inventory buy_price="150.0" sell_price="150.0" />
-    <sound key="fire" fileref="g3_fire_FromBF2.wav" pitch_variety="0.05" volume="1" />
-    <sound key="magazine_out" fileref="g3_mgz_out_FromCOD4R.wav" volume="0.9" />
-    <sound key="magazine_in" fileref="g3_mgz_in_FromCOD4R.wav" volume="0.9" />
-    <sound key="cycle" fileref="g3_cycle_FromCOD4R.wav" volume="0.9" />
+    <sound key="fire" fileref="g3_fire_FromCOD17.wav" pitch_variety="0.05" volume="1.2" />
+    <sound key="magazine_out" fileref="g3_mgz_out_FromCOD17.wav" volume="0.4" />
+    <sound key="magazine_in" fileref="g3_mgz_in_FromCOD17.wav" volume="0.4" />
+    <sound key="cycle" fileref="g3_cycle_FromCOD17.wav" volume="0.4" />
     <sound class="impact" fileref="rifle_drop.wav" />
     <model filename="gkw_ar_g3.xml" />
     <hud_icon filename="gkw_g3_1303.png" />
