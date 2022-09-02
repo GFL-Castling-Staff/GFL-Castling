@@ -1974,7 +1974,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		// 掐头去尾 建立一个数组后随机排序输出打乱的数组
 		array<int> CopyedFactionList;
 		array<int> FactionList;
-		for (int i = 1; i < (getFactionConfigs().size()-1); i++){
+		for (uint i = 1; i < (getFactionConfigs().size()-1); i++){
 			CopyedFactionList.insertLast(i);
 		}
 		while (CopyedFactionList.size()>0){
