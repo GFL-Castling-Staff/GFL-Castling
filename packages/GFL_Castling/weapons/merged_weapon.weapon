@@ -111,10 +111,10 @@
 <weapon key="gkw_ump9.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<specification accuracy_factor="0.98" barrel_offset="0.1" class="0" magazine_size="30" name="UMP9" projectile_speed="100" retrigger_time="0.085" suppressed="1" sustained_fire_diminish_rate="1.6" sustained_fire_grow_step="0.2" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
 	<inventory buy_price="5.0" sell_price="5.0"/>
-	<sound key="fire" fileref="ump9_fire_FromGRBP.wav" pitch_variety="0.05" volume="2"/>
-	<sound key="magazine_out" fileref="ump45_mgz_out_FromCOD16.wav" volume="0.5"/>
-	<sound key="magazine_in" fileref="ump45_mgz_in_FromCOD16.wav" volume="0.5"/>
-	<sound key="cycle" fileref="ump45_cycle_FromCOD16.wav" volume="0.5"/>
+	<sound key="fire" fileref="ump9_fire_FromGRBP.wav" pitch_variety="0.05" volume="3.5"/>
+	<sound key="magazine_out" fileref="ump45_mgz_out_FromCOD16.wav" volume="0.4"/>
+	<sound key="magazine_in" fileref="ump45_mgz_in_FromCOD16.wav" volume="0.4"/>
+	<sound key="cycle" fileref="ump45_cycle_FromCOD16.wav" volume="0.4"/>
 	<sound class="impact" fileref="rifle_drop.wav" volume="1.2"/>
 	<model filename="gkw_smg_ump9.xml"/>
 	<hud_icon filename="gkw_ump9.png"/>
@@ -167,10 +167,10 @@
 <weapon key="gkw_ump40.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<specification accuracy_factor="0.98" barrel_offset="0.4" class="0" magazine_size="30" name="UMP40" projectile_speed="100" retrigger_time="0.085" suppressed="1" sustained_fire_diminish_rate="1.9" sustained_fire_grow_step="0.28" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
 	<inventory buy_price="5.0" sell_price="5.0"/>
-	<sound key="fire" fileref="UMP_Fire_FromCOD16Striker45.wav" pitch_variety="0.05" volume="1.2"/>
-	<sound key="magazine_out" fileref="ump45_mgz_out_FromCOD16.wav" volume="0.5"/>
-	<sound key="magazine_in" fileref="ump45_mgz_in_FromCOD16.wav" volume="0.5"/>
-	<sound key="cycle" fileref="ump45_cycle_FromCOD16.wav" volume="0.5"/>
+	<sound key="fire" fileref="ump40_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.2"/>
+	<sound key="magazine_out" fileref="ump45_mgz_out_FromCOD16.wav" volume="0.4"/>
+	<sound key="magazine_in" fileref="ump45_mgz_in_FromCOD16.wav" volume="0.4"/>
+	<sound key="cycle" fileref="ump45_cycle_FromCOD16.wav" volume="0.4"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_smg_ump40.xml"/>
 	<hud_icon filename="gkw_ump40.png"/>
@@ -242,9 +242,9 @@
 	<animation state_key="stabbing" animation_key="melee, quick knife"/>
 	<animation state_key="stabbing" animation_key="pistol whip 3"/>
 	<sound key="fire" fileref="ump45_fire_FromBF4.wav" pitch_variety="0.05" volume="1.2"/>
-	<sound key="magazine_out" fileref="ump45_mgz_out_FromCOD16.wav" volume="0.5"/>
-	<sound key="magazine_in" fileref="ump45_mgz_in_FromCOD16.wav" volume="0.5"/>
-	<sound key="cycle" fileref="ump45_cycle_FromCOD16.wav" volume="0.5"/>
+	<sound key="magazine_out" fileref="ump45_mgz_out_FromCOD16.wav" volume="0.4"/>
+	<sound key="magazine_in" fileref="ump45_mgz_in_FromCOD16.wav" volume="0.4"/>
+	<sound key="cycle" fileref="ump45_cycle_FromCOD16.wav" volume="0.4"/>
 	<sound class="impact" fileref="rifle_drop.wav" volume="1"/>
 	<model filename="gkw_smg_ump45.xml"/>
 	<hud_icon filename="gkw_ump45.png"/>
@@ -629,10 +629,10 @@
 	<next_in_chain key="gkw_supersass_skill.weapon" share_ammo="0"/>
 	<inventory buy_price="12.0" sell_price="12.0"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.8"/>
-	<sound key="fire" fileref="sass_fire_From_arma2.wav" pitch_variety="0.01" volume="1"/>
-	<sound key="magazine_out" fileref="supersass_mgz_out_FromSQUAD.wav" volume="0.7"/>
-	<sound key="magazine_in" fileref="supersass_mgz_in_FromSQUAD.wav" volume="0.7"/>
-	<sound key="cycle" fileref="supersass_cycle_FromR6S.wav" volume="0.7"/>
+	<sound key="fire" fileref="sass_fire_FromCOD13.wav" pitch_variety="0.01" volume="1.1"/>
+	<sound key="magazine_out" fileref="sass_mgz_out_FromSQUAD.wav" volume="0.55"/>
+	<sound key="magazine_in" fileref="sass_mgz_in_FromSQUAD.wav" volume="0.55"/>
+	<sound key="cycle" fileref="sass_cycle_FromCOD13.wav" volume="0.4"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_rf_supersass.xml"/>
 	<hud_icon filename="gkw_supersass.png"/>
@@ -678,9 +678,9 @@
 	<inventory buy_price="8.0" sell_price="8.0"/>
 	<next_in_chain key="gkw_QBZ95_skill.weapon" share_ammo="1"/>
 	<sound key="fire" fileref="type95_fire_FromBF4.wav" pitch_variety="0.05" volume="1.6"/>
-	<sound key="magazine_out" fileref="type95_mgz_out_FromBF4.wav" volume="1.1"/>
-	<sound key="magazine_in" fileref="type95_mgz_in_FromBF4.wav" volume="1.1"/>
-	<sound key="cycle" fileref="qbz95_cycle_FromCOD16.wav" volume="0.45"/>
+	<sound key="magazine_out" fileref="qbz95_mgz_in_FromCOD17.wav" volume="0.45"/>
+	<sound key="magazine_in" fileref="qbz95_mgz_in_FromCOD17.wav" volume="0.45"/>
+	<sound key="cycle" fileref="qbz95_cycle_FromCOD16.wav" volume="0.35"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_ar_type95.xml"/>
 	<hud_icon filename="gkw_95type.png"/>
@@ -726,9 +726,9 @@
 	<next_in_chain key="gkw_QBZ95.weapon" share_ammo="1"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<sound key="fire" fileref="qbz95skill_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.2"/>
-	<sound key="magazine_out" fileref="type95_mgz_out_FromBF4.wav" volume="1.1"/>
-	<sound key="magazine_in" fileref="type95_mgz_in_FromBF4.wav" volume="1.1"/>
-	<sound key="cycle" fileref="qbz95_cycle_FromCOD16.wav" volume="0.45"/>
+	<sound key="magazine_out" fileref="qbz95_mgz_in_FromCOD17.wav" volume="0.45"/>
+	<sound key="magazine_in" fileref="qbz95_mgz_in_FromCOD17.wav" volume="0.45"/>
+	<sound key="cycle" fileref="qbz95_cycle_FromCOD16.wav" volume="0.35"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_ar_type95.xml"/>
 	<hud_icon filename="gkw_95type_skill.png"/>
@@ -1139,10 +1139,10 @@
 	<inventory buy_price="50.0" sell_price="50.0"/>
 	<next_in_chain key="gkw_aa12_skill.weapon" share_ammo="1"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.8"/>
-	<sound key="fire" fileref="aa12_fire_FromROUGECOMPANY.wav" pitch_variety="0.05" volume="1"/>
-	<sound key="magazine_out" fileref="AA12_mgz_out_FromCOD16.wav" volume="1"/>
-	<sound key="magazine_in" fileref="AA12_mgz_in_FromCOD16.wav" volume="1"/>
-	<sound key="cycle" fileref="AA12_cycle_FromCOD16.wav" volume="1"/>
+	<sound key="fire" fileref="aa12_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.2"/>
+	<sound key="magazine_out" fileref="aa12_mgz_out_FromCOD16.wav" volume="0.45"/>
+	<sound key="magazine_in" fileref="aa12_mgz_in_FromCOD16.wav" volume="0.35"/>
+	<sound key="cycle" fileref="aa12_cycle_FromCOD16.wav" volume="0.35"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_sg_aa12.xml"/>
 	<hud_icon filename="gkw_aa12.png"/>
@@ -1193,10 +1193,10 @@
 	<inventory buy_price="50.0" sell_price="50.0"/>
 	<next_in_chain key="gkw_aa12.weapon" share_ammo="1"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.8"/>
-	<sound key="fire" fileref="aa12_fire_FromROUGECOMPANY.wav" pitch_variety="0.05" volume="1"/>
-	<sound key="magazine_out" fileref="AA12_mgz_out_FromCOD16.wav" volume="1"/>
-	<sound key="magazine_in" fileref="AA12_mgz_in_FromCOD16.wav" volume="1"/>
-	<sound key="cycle" fileref="AA12_cycle_FromCOD16.wav" volume="1"/>
+	<sound key="fire" fileref="aa12_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.2"/>
+	<sound key="magazine_out" fileref="aa12_mgz_out_FromCOD16.wav" volume="0.45"/>
+	<sound key="magazine_in" fileref="aa12_mgz_in_FromCOD16.wav" volume="0.35"/>
+	<sound key="cycle" fileref="aa12_cycle_FromCOD16.wav" volume="0.35"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<commonness value="0" in_stock="0"/>
 	<model filename="gkw_sg_aa12.xml"/>
@@ -1872,10 +1872,10 @@
 	<inventory buy_price="300.0" sell_price="200.0"/>
 	<next_in_chain key="gkw_m82a1_skill.weapon" share_ammo="1"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 2.1"/>
-	<sound key="fire" fileref="m82a1_fire_FromSAM4.wav" pitch_variety="0.05" volume="3.5"/>
-	<sound key="cycle" fileref="m82a1_cycle_FromCOD6R.wav" volume="0.6"/>
-	<sound key="magazine_out" fileref="m82a1_mgz_out_FromCOD6R.wav" volume="0.6"/>
-	<sound key="magazine_in" fileref="m82a1_mgz_in_FromCOD6R.wav" volume="0.6"/>
+	<sound key="fire" fileref="m82a1_fire_FromSAM4.wav" pitch_variety="0.05" volume="1.2"/>
+	<sound key="cycle" fileref="m82a1_cycle_FromCOD16.wav" volume="0.4"/>
+	<sound key="magazine_out" fileref="m82a1_mgz_out_FromCOD16.wav" volume="0.4"/>
+	<sound key="magazine_in" fileref="m82a1_mgz_in_FromCOD16.wav" volume="0.4"/>
 	<sound class="impact" fileref="rifle_drop.wav" volume="1"/>
 	<model filename="gkw_rf_m82a1.xml"/>
 	<hud_icon filename="gkw_m82a1.png"/>
@@ -1920,10 +1920,10 @@
 	<inventory buy_price="300.0" sell_price="200.0"/>
 	<next_in_chain key="gkw_m82a1.weapon" share_ammo="1"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 2.1"/>
-	<sound key="fire" fileref="m82a1_fire_FromSAM4.wav" pitch_variety="0.05" volume="3.5"/>
-	<sound key="cycle" fileref="m82a1_cycle_FromCOD6R.wav" volume="0.6"/>
-	<sound key="magazine_out" fileref="m82a1_mgz_out_FromCOD6R.wav" volume="0.6"/>
-	<sound key="magazine_in" fileref="m82a1_mgz_in_FromCOD6R.wav" volume="0.6"/>
+	<sound key="fire" fileref="m82a1_fire_FromSAM4.wav" pitch_variety="0.05" volume="1.2"/>
+	<sound key="cycle" fileref="m82a1_cycle_FromCOD16.wav" volume="0.4"/>
+	<sound key="magazine_out" fileref="m82a1_mgz_out_FromCOD16.wav" volume="0.4"/>
+	<sound key="magazine_in" fileref="m82a1_mgz_in_FromCOD16.wav" volume="0.4"/>
 	<sound class="impact" fileref="rifle_drop.wav" volume="1"/>
 	<model filename="gkw_rf_m82a1.xml"/>
 	<hud_icon filename="gkw_m82a1.png"/>
@@ -2074,10 +2074,10 @@
 <weapon key="gkw_hs2000.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<specification retrigger_time="-1" last_burst_retrigger_time="0.1" accuracy_factor="1.0" sustained_fire_grow_step="0.35" sustained_fire_diminish_rate="1.4" magazine_size="16" suppressed="0" name="HS2000" class="4" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="97.87" projectiles_per_shot="1" burst_shots="1" stab_enabled="1" carry_in_two_hands="0" slot="0"/>
 	<inventory buy_price="3.0" sell_price="3.0"/>
-	<sound key="fire" fileref="hs2000_fire_FromSQUAD.wav" pitch_variety="0.05" volume="1.2"/>
+	<sound key="fire" fileref="hs2000_fire_FromSQUAD.wav" pitch_variety="0.05" volume="1.3"/>
 	<sound key="magazine_out" fileref="hs2000_mgz_out_FromSQUAD.wav" volume="0.6"/>
 	<sound key="magazine_in" fileref="hs2000_mgz_in_FromSQUAD.wav" volume="0.6"/>
-	<sound key="cycle" fileref="hs2000_cycle_FromCOD16.wav" volume="0.45"/>
+	<sound key="cycle" fileref="hs2000_cycle_FromCOD16.wav" volume="0.35"/>
 	<model filename="gkw_hg_hs2000.xml"/>
 	<hud_icon filename="gkw_hs2000.png"/>
 	<weak_hand_hold offset="0.1"/>
@@ -2132,12 +2132,12 @@
 	<animation key="cycle" animation_key="Brifle1.3"/>
 	<animation key="cycle" stance_key="prone" animation_key="Brifle1.3p"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
-	<sound key="fire" fileref="m200_fire_FromARMA3.wav" volume="1.3"/>
-	<sound key="cycle" fileref="m200_cycle_FromCOD6R.wav" volume="0.5"/>
-	<sound key="magazine_out" fileref="m200_mgz_out_FromCOD6R.wav" volume="0.6"/>
-	<sound key="magazine_in" fileref="m200_mgz_in_FromCOD6R.wav" volume="0.6"/>
-	<sound key="cycle_out" fileref="m200_cycle_out_FromCOD6R.wav" volume="0.5"/>
-	<sound key="cycle_in" fileref="m200_cycle_in_FromCOD6R.wav" volume="0.5"/>
+	<sound key="fire" fileref="m200_fire_FromCOD4R.wav" volume="1.2"/>
+	<sound key="cycle" fileref="m200_cycle_FromCOD13.wav" volume="0.35"/>
+	<sound key="magazine_out" fileref="m200_mgz_out_FromCOD13.wav" volume="0.35"/>
+	<sound key="magazine_in" fileref="m200_mgz_in_FromCOD13.wav" volume="0.35"/>
+	<sound key="cycle_out" fileref="m200_cycle_out_FromCOD13.wav" volume="0.35"/>
+	<sound key="cycle_in" fileref="m200_cycle_in_FromCOD13.wav" volume="0.35"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_rf_m200.xml"/>
 	<hud_icon filename="gkw_m200.png"/>
@@ -3300,9 +3300,9 @@
 	<commonness value="0.2" in_stock="1" can_respawn_with="1"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
 	<sound key="fire" fileref="star15_fire_FromBLACKSQUAD.wav" pitch_variety="0.01" volume="1.2"/>
-	<sound key="magazine_out" fileref="star15_mgz_out_FromCOD17.wav" volume="0.7"/>
-	<sound key="magazine_in" fileref="star15_mgz_in_FromCOD17.wav" volume="0.7"/>
-	<sound key="cycle" fileref="star15_cycle_FromCOD17.wav" volume="0.7"/>
+	<sound key="magazine_out" fileref="star15_mgz_out_FromCOD17.wav" volume="0.6"/>
+	<sound key="magazine_in" fileref="star15_mgz_in_FromCOD17.wav" volume="0.6"/>
+	<sound key="cycle" fileref="star15_cycle_FromCOD17.wav" volume="0.6"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_ar_ar15.xml"/>
 	<hud_icon filename="gkw_ar15.png"/>
@@ -3347,10 +3347,10 @@
 	<animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
 	<inventory buy_price="7.0" sell_price="7.0"/>
 	<next_in_chain key="gkw_ak47_skill.weapon" share_ammo="1"/>
-	<sound key="fire" fileref="ak47_fire_FromRE5.wav" pitch_variety="0.05" volume="1"/>
-	<sound key="magazine_out" fileref="ak47_mgz_out_FromBORDERLAND3.wav" volume="0.7"/>
-	<sound key="magazine_in" fileref="ak47_mgz_in_FromBORDERLAND3.wav" volume="0.7"/>
-	<sound key="cycle" fileref="ak47_cycle_FromBORDERLAND3.wav" volume="0.8"/>
+	<sound key="fire" fileref="ak47_fire_FromRE5.wav" pitch_variety="0.05" volume="1.3"/>
+	<sound key="magazine_out" fileref="ak12_mgz_out_FromCOD16.wav" volume="0.6"/>
+	<sound key="magazine_in" fileref="ak12_mgz_in_FromCOD16.wav" volume="0.6"/>
+	<sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_ar_ak47.xml"/>
 	<hud_icon filename="gkw_ak47.png"/>
@@ -3397,10 +3397,10 @@
 	<inventory buy_price="7.0" sell_price="7.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<next_in_chain key="gkw_ak47.weapon" share_ammo="1"/>
-	<sound key="fire" fileref="ak47_fire_FromCOD16.wav" pitch_variety="0.05" volume="0.9"/>
-	<sound key="magazine_out" fileref="ak47_mgz_out_FromBORDERLAND3.wav" volume="0.7"/>
-	<sound key="magazine_in" fileref="ak47_mgz_in_FromBORDERLAND3.wav" volume="0.7"/>
-	<sound key="cycle" fileref="ak47_cycle_FromBORDERLAND3.wav" volume="0.8"/>
+	<sound key="fire" fileref="ak47_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.2"/>
+	<sound key="magazine_out" fileref="ak12_mgz_out_FromCOD16.wav" volume="0.6"/>
+	<sound key="magazine_in" fileref="ak12_mgz_in_FromCOD16.wav" volume="0.6"/>
+	<sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_ar_ak47.xml"/>
 	<hud_icon filename="gkw_ak47_skill.png"/>
@@ -3603,10 +3603,10 @@
 	<animation state_key="stabbing" animation_key="pistol whip 3"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
 	<inventory encumbrance="10.0" buy_price="7.0" sell_price="7.0"/>
-	<sound key="fire" fileref="g3_fire_FromBF2.wav" pitch_variety="0.05" volume="1"/>
-	<sound key="magazine_out" fileref="g3_mgz_out_FromCOD4R.wav" volume="0.9"/>
-	<sound key="magazine_in" fileref="g3_mgz_in_FromCOD4R.wav" volume="0.9"/>
-	<sound key="cycle" fileref="g3_cycle_FromCOD4R.wav" volume="0.9"/>
+	<sound key="fire" fileref="g3_fire_FromCOD17.wav" pitch_variety="0.05" volume="1.2"/>
+	<sound key="magazine_out" fileref="g3_mgz_out_FromCOD17.wav" volume="0.4"/>
+	<sound key="magazine_in" fileref="g3_mgz_in_FromCOD17.wav" volume="0.4"/>
+	<sound key="cycle" fileref="g3_cycle_FromCOD17.wav" volume="0.4"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_ar_g3.xml"/>
 	<hud_icon filename="gkw_g3.png"/>
@@ -3946,9 +3946,9 @@
 	<animation key="reload" animation_key="reloading, Machine gun 1.6"/>
 	<inventory buy_price="16.0" sell_price="16.0"/>
 	<next_in_chain key="gkw_rpd_skill.weapon" share_ammo="1"/>
-	<sound key="fire" fileref="rpd_fire_FromRS2V.wav" pitch_variety="0.02" volume="1"/>
-	<sound key="magazine_out" fileref="rpd_mgz_out_FromCOD6R.wav" volume="0.7"/>
-	<sound key="magazine_in" fileref="rpd_mgz_in_FromCOD6R.wav" volume="0.7"/>
+	<sound key="fire" fileref="rpd_fire_FromRS2V.wav" pitch_variety="0.02" volume="1.1"/>
+	<sound key="magazine_out" fileref="rpd_mgz_out_FromCOD17.wav" volume="0.45"/>
+	<sound key="magazine_in" fileref="rpd_mgz_in_FromCOD17.wav" volume="0.45"/>
 	<sound key="cycle" fileref="rpd_cycle_FromCOD6R.wav" volume="0.7"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_mg_rpd.xml"/>
@@ -3999,9 +3999,9 @@
 	<inventory buy_price="16.0" sell_price="16.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<next_in_chain key="gkw_rpd.weapon" share_ammo="1"/>
-	<sound key="fire" fileref="RPD_Fire_FromCODOLRPD.wav" pitch_variety="0.02" volume="1.1"/>
-	<sound key="magazine_out" fileref="rpd_mgz_out_FromCOD6R.wav" volume="0.7"/>
-	<sound key="magazine_in" fileref="rpd_mgz_in_FromCOD6R.wav" volume="0.7"/>
+	<sound key="fire" fileref="rpdskill_Fire_FromCOD17.wav" pitch_variety="0.02" volume="1.1"/>
+	<sound key="magazine_out" fileref="rpd_mgz_out_FromCOD17.wav" volume="0.45"/>
+	<sound key="magazine_in" fileref="rpd_mgz_in_FromCOD17.wav" volume="0.45"/>
 	<sound key="cycle" fileref="rpd_cycle_FromCOD6R.wav" volume="0.7"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_mg_rpd.xml"/>
@@ -5026,10 +5026,10 @@
 	<animation state_key="stabbing" animation_key="pistol whip"/>
 	<animation state_key="stabbing" animation_key="pistol whip 2"/>
 	<animation state_key="stabbing" animation_key="pistol whip 3"/>
-	<sound key="fire" fileref="uzi_fire_FromCOD17.wav" pitch_variety="0.05" volume="1.2"/>
-	<sound key="magazine_out" fileref="uzi_mgz_out_FromCOD16.wav" volume="1"/>
-	<sound key="magazine_in" fileref="uzi_mgz_in_FromCOD16.wav" volume="1"/>
-	<sound key="cycle" fileref="uzi_cycle_FromCOD16.wav" volume="1"/>
+	<sound key="fire" fileref="uzi_fire_FromCOD17.wav" pitch_variety="0.05" volume="1.4"/>
+	<sound key="magazine_out" fileref="uzi_mgz_out_FromCOD16.wav" volume="0.35"/>
+	<sound key="magazine_in" fileref="uzi_mgz_in_FromCOD16.wav" volume="0.35"/>
+	<sound key="cycle" fileref="uzi_cycle_FromCOD16.wav" volume="0.35"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename=""/>
 	<hud_icon filename="gkw_microuzi.png"/>
@@ -5253,10 +5253,10 @@
 	<specification accuracy_factor="0.99" barrel_offset="0.4" class="0" slot="0" magazine_size="30" name="Bushmaster ACR" projectile_speed="250" retrigger_time="0.08" suppressed="1" sight_range_modifier="1.25" sustained_fire_diminish_rate="1.8" sustained_fire_grow_step="0.3" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1"/>
 	<inventory encumbrance="5.0" buy_price="50.0" sell_price="50.0"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
-	<sound key="fire" fileref="acr_fire_FromCOD17.wav" pitch_variety="0.05" volume="1"/>
-	<sound key="magazine_out" fileref="acr_mgz_out_FromCOD17.wav" volume="0.6"/>
-	<sound key="magazine_in" fileref="acr_mgz_in_FromCOD17.wav" volume="0.6"/>
-	<sound key="cycle" fileref="acr_cycle_FromCOD17.wav" volume="0.6"/>
+	<sound key="fire" fileref="acr_fire_FromCOD17.wav" pitch_variety="0.05" volume="1.2"/>
+	<sound key="magazine_out" fileref="acr_mgz_out_FromCOD6R.wav" volume="0.6"/>
+	<sound key="magazine_in" fileref="acr_mgz_in_FromCOD6R.wav" volume="0.6"/>
+	<sound key="cycle" fileref="acr_cycle_FromCOD6.wav" volume="0.35"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<next_in_chain key="gkw_acr_skill.weapon" share_ammo="1"/>
 	<model filename="gkw_ar_acr.xml"/>
@@ -5301,9 +5301,9 @@
 	<specification accuracy_factor="0.99" barrel_offset="0.4" class="0" slot="0" magazine_size="30" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" name="Bushmaster ACR-[Shadow Strangling Tune]" projectile_speed="250" retrigger_time="0.0545" suppressed="1" sight_range_modifier="1.75" sustained_fire_diminish_rate="1.8" sustained_fire_grow_step="0.1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1"/>
 	<inventory encumbrance="5.0" buy_price="50.0" sell_price="50.0"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 0.8"/>
-	<sound key="fire" fileref="acr_fire_FromDIVISION2.wav" pitch_variety="0.05" volume="1.1"/>
-	<sound key="magazine_out" fileref="acr_mgz_out_FromCOD17.wav" volume="0.6"/>
-	<sound key="magazine_in" fileref="acr_mgz_in_FromCOD17.wav" volume="0.6"/>
+	<sound key="fire" fileref="acr_fire_FromDIVISION2.wav" pitch_variety="0.05" volume="1.2"/>
+	<sound key="magazine_out" fileref="acr_mgz_out_FromCOD6R.wav" volume="0.7"/>
+	<sound key="magazine_in" fileref="acr_mgz_in_FromCOD6R.wav" volume="0.7"/>
 	<sound key="cycle" fileref="acr_cycle_FromCOD17.wav" volume="0.6"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<next_in_chain key="gkw_acr.weapon" share_ammo="1"/>
@@ -5827,7 +5827,7 @@
 	<animation state_key="stabbing" animation_key="pistol whip 3"/>
 	<next_in_chain key="gkw_rpk16_skill.weapon" share_ammo="1"/>
 	<inventory encumbrance="30.0" buy_price="16.0" sell_price="16.0"/>
-	<sound key="fire" fileref="rpk16_Fire_FromEFT.wav" pitch_variety="0.02" volume="1.2"/>
+	<sound key="fire" fileref="rpk16_fire_FromCOD4R.wav" pitch_variety="0.02" volume="1.2"/>
 	<sound key="magazine_out" fileref="rpk16_mgz_out_FromCOD16.wav" volume="0.5"/>
 	<sound key="magazine_in" fileref="rpk16_mgz_in_FromCOD16.wav" volume="0.5"/>
 	<sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.5"/>
@@ -5957,10 +5957,10 @@
 	<animation state_key="reload" animation_key="reloading, magazine rifle 0.9"/>
 	<inventory buy_price="200.0" sell_price="200.0"/>
 	<next_in_chain key="gkw_ash127_skill.weapon" share_ammo="1"/>
-	<sound key="fire" fileref="ash127_fire_FromCOD16.wav" pitch_variety="0.05" volume="1"/>
-	<sound key="magazine_out" fileref="ash127_mgz_out_FromEFT.wav" volume="1"/>
-	<sound key="magazine_in" fileref="ash127_mgz_in_FromEFT.wav" volume="1"/>
-	<sound key="cycle" fileref="ash127_cycle_FromEFT.wav" volume="1"/>
+	<sound key="fire" fileref="ash12_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.1"/>
+	<sound key="magazine_out" fileref="ash12_mgz_out_FromCOD16.wav" volume="0.5"/>
+	<sound key="magazine_in" fileref="ash12_mgz_in_FromCOD16.wav" volume="0.4"/>
+	<sound key="cycle" fileref="ash12_cycle_FromCOD16.wav" volume="0.4"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_ar_ash127.xml"/>
 	<hud_icon filename="gkw_ash127.png"/>
@@ -6008,9 +6008,9 @@
 	<next_in_chain key="gkw_ash127.weapon" share_ammo="1"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<sound key="fire" fileref="ash127skill_fire_FromCF.wav" pitch_variety="0.05" volume="1"/>
-	<sound key="magazine_out" fileref="ash127_mgz_out_FromEFT.wav" volume="1"/>
-	<sound key="magazine_in" fileref="ash127_mgz_in_FromEFT.wav" volume="1"/>
-	<sound key="cycle" fileref="ash127_cycle_FromEFT.wav" volume="1"/>
+	<sound key="magazine_out" fileref="ash12_mgz_out_FromCOD16.wav" volume="0.5"/>
+	<sound key="magazine_in" fileref="ash12_mgz_in_FromCOD16.wav" volume="0.4"/>
+	<sound key="cycle" fileref="ash12_cycle_FromCOD16.wav" volume="0.4"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_ar_ash127.xml"/>
 	<hud_icon filename="gkw_ash127_skill.png"/>
@@ -6199,7 +6199,7 @@
 	<sound key="fire" fileref="g41_fire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.3"/>
 	<sound key="magazine_out" fileref="g41_mgz_out_FromCOD17.wav" volume="0.6"/>
 	<sound key="magazine_in" fileref="g41_mgz_in_FromCOD17.wav" volume="0.6"/>
-	<sound key="cycle" fileref="g3_cycle_FromCOD4R.wav" volume="0.8"/>
+	<sound key="cycle" fileref="g3_cycle_FromCOD17.wav" volume="0.4"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_ar_g41.xml"/>
 	<hud_icon filename="gkw_g41.png"/>
@@ -6248,7 +6248,7 @@
 	<sound key="fire" fileref="g41skill_fire_FromBF3.wav" pitch_variety="0.05" volume="1.2"/>
 	<sound key="magazine_out" fileref="g41_mgz_out_FromCOD17.wav" volume="0.6"/>
 	<sound key="magazine_in" fileref="g41_mgz_in_FromCOD17.wav" volume="0.6"/>
-	<sound key="cycle" fileref="g3_cycle_FromCOD4R.wav" volume="0.8"/>
+	<sound key="cycle" fileref="g3_cycle_FromCOD17.wav" volume="0.4"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_ar_g41.xml"/>
 	<hud_icon filename="gkw_g41_skill.png"/>
@@ -7634,10 +7634,11 @@
 	<animation key="cycle" animation_key="Brifle1"/>
 	<animation key="reload" animation_key="reloading, m1908"/>
 	<weak_hand_hold offset="0.3"/>
-	<sound key="fire" fileref="4type_fire_FromBFBC2.wav" pitch_variety="0.05" volume="2.6"/>
-	<sound key="cycle" fileref="4type_cycle_FromBFBC2.wav" volume="1"/>
-	<sound key="magazine_out" fileref="4type_mgz_out_FromBFBC2.wav" volume="1"/>
-	<sound key="magazine_in" fileref="4type_mgz_in_FromBFBC2.wav" volume="1"/>
+	<sound key="fire" fileref="type4_fire_FromCOD14.wav" pitch_variety="0.05" volume="1.2"/>
+	<sound key="cycle" fileref="type4_cycle_FromCOD14.wav" volume="0.4"/>
+	<sound key="magazine_out" fileref="rifle_02_m1_garand_ping.wav" volume="1"/>
+	<sound key="magazine_in" fileref="type4_cycle_FromCOD14.wav" volume="0.4"/>
+	<sound key="last_ammo" fileref="type4_ping_FromCOD14.wav" volume="0.75"/>
 	<model filename="gkw_rf_4type.xml"/>
 	<hud_icon filename="gkw_4type.png"/>
 	<inventory encumbrance="10.0" price="5.0"/>
@@ -7875,10 +7876,10 @@
 	<animation key="cycle" stance_key="prone" animation_key="Brifle0.8p"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 0.9"/>
 	<sound key="fire" fileref="k31_fire_FromBF5.wav" pitch_variety="0.05" volume="1.3"/>
-	<sound key="cycle" fileref="k31_cycle_FromBF5.wav" volume="0.6"/>
-	<sound key="reload_one" fileref="carcano_reload_FromBF5.wav" volume="0.3"/>
-	<sound key="cycle_out" fileref="k31_cycle_out_FromBF5.wav" volume="0.6"/>
-	<sound key="cycle_in" fileref="k31_cycle_in_FromBF5.wav" volume="0.6"/>
+	<sound key="cycle" fileref="k31_cycle_FromBF5.wav" volume="0.4"/>
+	<sound key="reload_one" fileref="carcano_reload_FromBF5.wav" volume="0.4"/>
+	<sound key="cycle_out" fileref="k31_cycle_out_FromBF5.wav" volume="0.4"/>
+	<sound key="cycle_in" fileref="k31_cycle_in_FromBF5.wav" volume="0.4"/>
 	<sound class="impact" fileref="rifle_drop.wav" volume="1"/>
 	<model filename="gkw_rf_k31.xml"/>
 	<hud_icon filename="gkw_k31.png"/>
@@ -7922,9 +7923,9 @@
 	<next_in_chain key="gkw_k31.weapon" share_ammo="1"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 0.9"/>
 	<sound key="fire" fileref="k31_fire_FromBF5.wav" pitch_variety="0.05" volume="1.3"/>
-	<sound key="cycle" fileref="k31_cycle_FromBF5.wav" volume="0.6"/>
-	<sound key="magazine_out" fileref="k31_mgz_out_FromBF5.wav" volume="0.6"/>
-	<sound key="magazine_in" fileref="k31_mgz_in_FromBF5.wav" volume="0.6"/>
+	<sound key="cycle" fileref="k31_cycle_FromBF5.wav" volume="0.4"/>
+	<sound key="magazine_out" fileref="k31_mgz_out_FromBF5.wav" volume="0.4"/>
+	<sound key="magazine_in" fileref="k31_mgz_in_FromBF5.wav" volume="0.4"/>
 	<sound class="impact" fileref="rifle_drop.wav" volume="1"/>
 	<model filename="gkw_rf_k31.xml"/>
 	<hud_icon filename="gkw_k31_skill.png"/>
@@ -7977,10 +7978,10 @@
 	<animation state_key="stabbing" animation_key="melee, bayonet"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<weak_hand_hold offset="0.3"/>
-	<sound key="fire" fileref="m1_fire_FromSE4.wav" pitch_variety="0.05" volume="3"/>
-	<sound key="cycle" fileref="pistol2_chamber.wav"/>
+	<sound key="fire" fileref="m1garand_fire_FromCOD18.wav" pitch_variety="0.05" volume="1.3"/>
+	<sound key="cycle" fileref="m1garand_cycle_FromCOD13.wav" volume="0.45"/>
 	<sound key="magazine_out" fileref="rifle_02_m1_garand_ping.wav"/>
-	<sound key="magazine_in" fileref="rifle_clip_in.wav"/>
+	<sound key="magazine_in" fileref="m1garand_mgz_in_FromCOD13.wav" volume="0.45"/>
 	<sound key="last_ammo" fileref="rifle_02_m1_garand_ping.wav"/>
 	<model filename="gkw_rf_m1_bt.xml"/>
 	<hud_icon filename="gkw_m1.png"/>
@@ -8104,10 +8105,10 @@
 	<specification accuracy_factor="1" barrel_offset="0.8" class="4" burst_shots="1" slot="0" magazine_size="20" name="PSG-1" projectile_speed="234.83" retrigger_time="-1" last_burst_retrigger_time="0.25" suppressed="0" sight_range_modifier="2.8" sustained_fire_diminish_rate="1.5" sustained_fire_grow_step="0.3" stab_enabled="1" carry_in_two_hands="1"/>
 	<inventory buy_price="10.0" sell_price="10.0"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.8"/>
-	<sound key="fire" fileref="psg1_fire_FromCOD7.wav" pitch_variety="0.01" volume="1.2"/>
-	<sound key="magazine_out" fileref="g3_mgz_out_FromCOD4R.wav" volume="0.8"/>
-	<sound key="magazine_in" fileref="g3_mgz_in_FromCOD4R.wav" volume="0.8"/>
-	<sound key="cycle" fileref="g3_cycle_FromCOD4R.wav" volume="0.8"/>
+	<sound key="fire" fileref="psg1_fire_FromCOD7.wav" pitch_variety="0.01" volume="1.3"/>
+	<sound key="magazine_out" fileref="g3_mgz_out_FromCOD17.wav" volume="0.4"/>
+	<sound key="magazine_in" fileref="g3_mgz_in_FromCOD17.wav" volume="0.4"/>
+	<sound key="cycle" fileref="g3_cycle_FromCOD17.wav" volume="0.4"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_rf_psg1.xml"/>
 	<hud_icon filename="gkw_psg1.png"/>
@@ -9259,9 +9260,9 @@
 	<animation state_key="stabbing" animation_key="pistol whip 3"/>
 	<inventory buy_price="8.0" sell_price="8.0"/>
 	<commonness in_stock="0"/>
-	<sound key="fire" fileref="welrod_fire_FromBF5.wav" pitch_variety="0.05" volume="1.2"/>
-	<sound key="magazine_out" fileref="welrod_mgz_out_FromBF5.wav" volume="0.5"/>
-	<sound key="magazine_in" fileref="welrod_mgz_in_FromBF5.wav" volume="0.5"/>
+	<sound key="fire" fileref="welrod_fire_FromBF5.wav" pitch_variety="0.05" volume="1.6"/>
+	<sound key="magazine_out" fileref="welrod_mgz_out_FromBF5.wav" volume="0.7"/>
+	<sound key="magazine_in" fileref="welrod_mgz_in_FromBF5.wav" volume="0.7"/>
 	<sound key="cycle" fileref="welrod_cycle_FromBF5.wav" volume="0.7"/>
 	<model filename="gkw_welrod_From_melondove.xml"/>
 	<hud_icon filename="gkw_welrod.png"/>
@@ -9678,7 +9679,7 @@
 	<specification retrigger_time="-1.0" last_burst_retrigger_time="0.125" accuracy_factor="1.0" sustained_fire_grow_step="0.4" sustained_fire_diminish_rate="1.6" magazine_size="5" can_shoot_standing="1" suppressed="0" name="SVCh" class="4" reload_one_at_a_time="0" sight_range_modifier="3" projectile_speed="240" barrel_offset="0.4" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" slot="0"/>
 	<inventory buy_price="24.0" sell_price="24.0"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 0.9"/>
-	<sound key="fire" fileref="svch_fire_FromBF2042.wav" pitch_variety="0.05" volume="1.3"/>
+	<sound key="fire" fileref="svch_fire_FromCOD15.wav" pitch_variety="0.05" volume="1.3"/>
 	<sound key="cycle" fileref="svch_cycle_FromBF2042.wav" volume="0.8"/>
 	<sound key="magazine_out" fileref="svch_mgz_out_FromBF2042.wav" volume="0.8"/>
 	<sound key="magazine_in" fileref="svch_mgz_in_FromBF2042.wav" volume="0.8"/>
@@ -10658,7 +10659,7 @@
 	<animation state_key="celebrate_shoot" animation_key="celebrating, shooting"/>
 	<animation state_key="reload" animation_key="reloading, magazine rifle 0.9"/>
 	<animation state_key="stabbing" animation_key="melee, bayonet"/>
-	<sound key="fire" fileref="type100_fire_FromRS.wav" pitch_variety="0.05" volume="0.8"/>
+	<sound key="fire" fileref="type100_fire_FromCOD18.wav" pitch_variety="0.05" volume="1.2"/>
 	<sound key="magazine_out" fileref="type100_mgz_out_FromBFBC2.wav" volume="0.6"/>
 	<sound key="magazine_in" fileref="type100_mgz_in_FromBFBC2.wav" volume="0.6"/>
 	<sound key="cycle" fileref="type100_cycle_FromBFBC2.wav" volume="0.6"/>
@@ -11510,7 +11511,7 @@
 	<animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
 	<inventory buy_price="7.0" sell_price="7.0"/>
 	<next_in_chain key="gkw_galil_skill.weapon" share_ammo="1"/>
-	<sound key="fire" fileref="galil_fire_FromCOD12.wav" pitch_variety="0.05" volume="1.1"/>
+	<sound key="fire" fileref="galil_fire_FromCOD17.wav" pitch_variety="0.05" volume="1.2"/>
 	<sound key="magazine_out" fileref="galil_mgz_out_FromCOD12.wav" volume="0.8"/>
 	<sound key="magazine_in" fileref="galil_mgz_in_FromCOD12.wav" volume="0.8"/>
 	<sound key="cycle" fileref="galil_cycle_FromCOD7.wav" volume="0.8"/>
@@ -11609,11 +11610,12 @@
 	<animation key="cycle" animation_key="Brifle1.1"/>
 	<animation key="cycle" stance_key="prone" animation_key="Brifle1.1p"/>
 	<animation key="reload" animation_key="reloading, oaat"/>
-	<sound key="fire" fileref="xm3_fire_FromRS2V.wav" pitch_variety="0.05" volume="1.2"/>
-	<sound key="cycle" fileref="xm3_cycle_FromCOD4R.wav" volume="0.5"/>
-	<sound key="reload_one" fileref="xm3_reload_FromCOD4R.wav" volume="0.2"/>
-	<sound key="cycle_out" fileref="xm3_cycle_out_FromCOD4R.wav" volume="0.5"/>
-	<sound key="cycle_in" fileref="xm3_cycle_in_FromCOD4R.wav" volume="0.5"/>
+	<sound key="fire" fileref="xm3_fire_FromCOD4R.wav" pitch_variety="0.05" volume="1.2"/>
+	<sound key="cycle" fileref="xm3_cycle_FromCOD4R.wav" volume="0.4"/>
+	<sound key="reload_one" fileref="xm3_reload1_FromCOD4R.wav" volume="0.25"/>
+	<sound key="reload_one" fileref="xm3_reload2_FromCOD4R.wav" volume="0.25"/>
+	<sound key="cycle_out" fileref="xm3_cycle_out_FromCOD4R.wav" volume="0.4"/>
+	<sound key="cycle_in" fileref="xm3_cycle_in_FromCOD4R.wav" volume="0.4"/>
 	<sound class="impact" fileref="rifle_drop.wav" volume="1"/>
 	<model filename="gkw_rf_carcano1938.xml"/>
 	<hud_icon filename="gkw_xm3.png"/>
@@ -11660,11 +11662,12 @@
 	<animation key="cycle" animation_key="Brifle0.6"/>
 	<animation key="cycle" stance_key="prone" animation_key="Brifle0.6p"/>
 	<animation key="reload" animation_key="reloading, oaat"/>
-	<sound key="fire" fileref="xm3_fire_FromRS2V.wav" pitch_variety="0.05" volume="1.7"/>
-	<sound key="cycle" fileref="xm3_cycle_FromCOD4R.wav" volume="0.5"/>
-	<sound key="reload_one" fileref="xm3_reload_FromCOD4R.wav" volume="0.2"/>
-	<sound key="cycle_out" fileref="xm3_cycle_out_FromCOD4R.wav" volume="0.5"/>
-	<sound key="cycle_in" fileref="xm3_cycle_in_FromCOD4R.wav" volume="0.5"/>
+	<sound key="fire" fileref="xm3_fire_FromCOD4R.wav" pitch_variety="0.05" volume="1.2"/>
+	<sound key="cycle" fileref="xm3_cycle_FromCOD4R.wav" volume="0.4"/>
+	<sound key="reload_one" fileref="xm3_reload1_FromCOD4R.wav" volume="0.25"/>
+	<sound key="reload_one" fileref="xm3_reload2_FromCOD4R.wav" volume="0.25"/>
+	<sound key="cycle_out" fileref="xm3_cycle_out_FromCOD4R.wav" volume="0.4"/>
+	<sound key="cycle_in" fileref="xm3_cycle_in_FromCOD4R.wav" volume="0.4"/>
 	<sound class="impact" fileref="rifle_drop.wav" volume="1"/>
 	<model filename="gkw_rf_carcano1938.xml"/>
 	<hud_icon filename="gkw_xm3_skill.png"/>
@@ -11871,7 +11874,7 @@
 	<animation key="reload" animation_key="magBrifleRSASS"/>
 	<animation key="reload" stance_key="prone" animation_key="magBrifleRpSASS"/>
 	<animation state_key="next_in_chain_in" animation_key="change weapon in ssass"/>
-	<sound key="fire" fileref="m21skill_fire_FromTLOU2.wav" pitch_variety="0.01" volume="1.5"/>
+	<sound key="fire" fileref="m21skill_fire_FromTLOU2.wav" pitch_variety="0.01" volume="2"/>
 	<sound key="magazine_out" fileref="m21skill_mgz_out_FromCOD15.wav" volume="0.6"/>
 	<sound key="magazine_in" fileref="m21skill_mgz_in_FromCOD16.wav" volume="0.7"/>
 	<sound key="cycle" fileref="m21skill_cycle_FromCOD15.wav" volume="0.6"/>
@@ -13313,37 +13316,27 @@
 	<animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
 	<inventory buy_price="170.0" sell_price="170.0"/>
 	<next_in_chain key="gkw_galilmod3_skill.weapon" share_ammo="1"/>
-	<sound key="fire" fileref="galilmod_fire_FromWF.wav" pitch_variety="0.05" volume="1.4"/>
-	<sound key="magazine_out" fileref="galilmod_mgz_out_FromWF.wav" volume="1.0"/>
-	<sound key="magazine_in" fileref="galilmod_mgz_in_FromWF.wav" volume="1.0"/>
-	<sound key="cycle" fileref="galilmod_cycle_FromWF.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="galilmod_cycle_FromWF.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="galilmod_cycle_FromWF.wav" volume="1.0" pitch_variety="0"/>
+	<sound key="fire" fileref="galilace_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.2"/>
+	<sound key="magazine_out" fileref="galilace_mgz_out_FromCOD16.wav" volume="0.4"/>
+	<sound key="magazine_in" fileref="galilace_mgz_in_FromCOD16.wav" volume="0.4"/>
+	<sound key="cycle" fileref="galilace_cycle_FromCOD16.wav" volume="0.4" pitch_variety="0"/>
 	<sound key="cycle" fileref="AR_PHRASE_JP.wav" volume="1.2" pitch_variety="0"/>
-	<sound key="cycle" fileref="galilmod_cycle_FromWF.wav" volume="1.2" pitch_variety="0"/>
-	<sound key="cycle" fileref="galilmod_cycle_FromWF.wav" volume="1.2" pitch_variety="0"/>
+	<sound key="cycle" fileref="galilace_cycle_FromCOD16.wav" volume="0.4" pitch_variety="0"/>
 	<sound key="cycle" fileref="AR_LOADING_JP.wav" volume="1.2" pitch_variety="0"/>
 	<sound key="cycle" fileref="AR_FORMATION_JP.wav" volume="1.2" pitch_variety="0"/>
-	<sound key="cycle" fileref="galilmod_cycle_FromWF.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="galilmod_cycle_FromWF.wav" volume="1.0" pitch_variety="0"/>
+	<sound key="cycle" fileref="galilace_cycle_FromCOD16.wav" volume="0.4" pitch_variety="0"/>
 	<sound key="cycle" fileref="AR_BLACKACTION_JP.wav" volume="1.2" pitch_variety="0"/>
 	<sound key="cycle" fileref="AR_GOATTACK_JP.wav" volume="1.2" pitch_variety="0"/>
 	<sound key="cycle" fileref="AR_MEET_JP.wav" volume="1.2" pitch_variety="0"/>
-	<sound key="cycle" fileref="galilmod_cycle_FromWF.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="galilmod_cycle_FromWF.wav" volume="1.0" pitch_variety="0"/>
+	<sound key="cycle" fileref="galilace_cycle_FromCOD16.wav" volume="0.4" pitch_variety="0"/>
 	<sound key="cycle" fileref="AR_BREAK_JP.wav" volume="1.2" pitch_variety="0"/>
 	<sound key="cycle" fileref="AR_WIN_JP.wav" volume="1.2" pitch_variety="0"/>
-	<sound key="cycle" fileref="galilmod_cycle_FromWF.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="galilmod_cycle_FromWF.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="galilmod_cycle_FromWF.wav" volume="1.0" pitch_variety="0"/>
+	<sound key="cycle" fileref="galilace_cycle_FromCOD16.wav" volume="0.4" pitch_variety="0"/>
 	<sound key="cycle" fileref="AR_ATTACK_JP.wav" volume="1.2" pitch_variety="0"/>
 	<sound key="cycle" fileref="AR_DEFENSE_JP.wav" volume="1.2" pitch_variety="0"/>
-	<sound key="cycle" fileref="galilmod_cycle_FromWF.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="galilmod_cycle_FromWF.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="galilmod_cycle_FromWF.wav" volume="1.0" pitch_variety="0"/>
+	<sound key="cycle" fileref="galilace_cycle_FromCOD16.wav" volume="0.4" pitch_variety="0"/>
 	<sound key="cycle" fileref="ARMod_ATTACK_JP.wav" volume="1.4" pitch_variety="0"/>
-	<sound key="cycle" fileref="galilmod_cycle_FromWF.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="galilmod_cycle_FromWF.wav" volume="1.0" pitch_variety="0"/>
+	<sound key="cycle" fileref="galilace_cycle_FromCOD16.wav" volume="0.4" pitch_variety="0"/>
 	<sound key="cycle" fileref="ARMod_DEFENSE_JP.wav" volume="1.4" pitch_variety="0"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_ar_galil_mod3_from_gua.xml"/>
@@ -13394,28 +13387,23 @@
 	<sound key="fire" fileref="galilmodskill_fire_FromCSGO.wav" pitch_variety="0.05" volume="1.4"/>
 	<sound key="magazine_out" fileref="galilmod_mgz_out_FromWF.wav" volume="1.0"/>
 	<sound key="magazine_in" fileref="galilmod_mgz_in_FromWF.wav" volume="1.0"/>
-	<sound key="cycle" fileref="galilmod_cycle_FromWF.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="galilmod_cycle_FromWF.wav" volume="1.0" pitch_variety="0"/>
+	<sound key="cycle" fileref="galilace_cycle_FromCOD16.wav" volume="0.4" pitch_variety="0"/>
 	<sound key="cycle" fileref="ARMod_ATTACK_JP.wav" volume="1.4" pitch_variety="0"/>
-	<sound key="cycle" fileref="galilmod_cycle_FromWF.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="galilmod_cycle_FromWF.wav" volume="1.0" pitch_variety="0"/>
+	<sound key="cycle" fileref="galilace_cycle_FromCOD16.wav" volume="0.4" pitch_variety="0"/>
 	<sound key="cycle" fileref="AR_BREAK_JP.wav" volume="1.2" pitch_variety="0"/>
-	<sound key="cycle" fileref="galilmod_cycle_FromWF.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="galilmod_cycle_FromWF.wav" volume="1.0" pitch_variety="0"/>
+	<sound key="cycle" fileref="galilace_cycle_FromCOD16.wav" volume="0.4" pitch_variety="0"/>
 	<sound key="cycle" fileref="AR_ATTACK_JP.wav" volume="1.2" pitch_variety="0"/>
-	<sound key="cycle" fileref="galilmod_cycle_FromWF.wav" volume="1.0" pitch_variety="0"/>
+	<sound key="cycle" fileref="galilace_cycle_FromCOD16.wav" volume="0.4" pitch_variety="0"/>
 	<sound key="cycle" fileref="ARMod_SKILL1_JP.wav" volume="1.4" pitch_variety="0"/>
-	<sound key="cycle" fileref="galilmod_cycle_FromWF.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="galilmod_cycle_FromWF.wav" volume="1.0" pitch_variety="0"/>
+	<sound key="cycle" fileref="galilace_cycle_FromCOD16.wav" volume="0.4" pitch_variety="0"/>
 	<sound key="cycle" fileref="ARMod_SKILL2_JP.wav" volume="1.4" pitch_variety="0"/>
-	<sound key="cycle" fileref="galilmod_cycle_FromWF.wav" volume="1.0" pitch_variety="0"/>
+	<sound key="cycle" fileref="galilace_cycle_FromCOD16.wav" volume="0.4" pitch_variety="0"/>
 	<sound key="cycle" fileref="ARMod_SKILL3_JP.wav" volume="1.4" pitch_variety="0"/>
-	<sound key="cycle" fileref="galilmod_cycle_FromWF.wav" volume="1.0" pitch_variety="0"/>
+	<sound key="cycle" fileref="galilace_cycle_FromCOD16.wav" volume="0.4" pitch_variety="0"/>
 	<sound key="cycle" fileref="ARMod_WIN_JP.wav" volume="1.4" pitch_variety="0"/>
-	<sound key="cycle" fileref="galilmod_cycle_FromWF.wav" volume="1.0" pitch_variety="0"/>
+	<sound key="cycle" fileref="galilace_cycle_FromCOD16.wav" volume="0.4" pitch_variety="0"/>
 	<sound key="cycle" fileref="ARMod_MEET_JP.wav" volume="1.4" pitch_variety="0"/>
-	<sound key="cycle" fileref="galilmod_cycle_FromWF.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="galilmod_cycle_FromWF.wav" volume="1.0" pitch_variety="0"/>
+	<sound key="cycle" fileref="galilace_cycle_FromCOD16.wav" volume="0.4" pitch_variety="0"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_ar_galil_mod3_from_gua.xml"/>
 	<hud_icon filename="gkw_galilmod3_skill.png"/>
@@ -13591,9 +13579,9 @@
 	<inventory buy_price="250.0" sell_price="200.0"/>
 	<commonness in_stock="0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<sound key="fire" fileref="welrod_fire_FromBF5.wav" pitch_variety="0.05" volume="1.2"/>
-	<sound key="magazine_out" fileref="welrod_mgz_out_FromBF5.wav" volume="0.5"/>
-	<sound key="magazine_in" fileref="welrod_mgz_in_FromBF5.wav" volume="0.5"/>
+	<sound key="fire" fileref="welrod_fire_FromBF5.wav" pitch_variety="0.05" volume="1.6"/>
+	<sound key="magazine_out" fileref="welrod_mgz_out_FromBF5.wav" volume="0.7"/>
+	<sound key="magazine_in" fileref="welrod_mgz_in_FromBF5.wav" volume="0.7"/>
 	<sound key="cycle" fileref="welrod_cycle_FromBF5.wav" volume="0.7"/>
 	<model filename="gkw_welrod_From_melondove.xml"/>
 	<hud_icon filename="gkw_welrodmod3.png"/>
@@ -14134,10 +14122,10 @@
 	<animation state_key="stabbing" animation_key="pistol whip 2"/>
 	<animation state_key="stabbing" animation_key="pistol whip 3"/>
 	<effect class="muzzle" ref="ejection_9mm"/>
-	<sound key="fire" fileref="uzimod3_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.1"/>
-	<sound key="magazine_out" fileref="uzi_mgz_out_FromCOD16.wav" volume="1"/>
-	<sound key="magazine_in" fileref="uzi_mgz_in_FromCOD16.wav" volume="1"/>
-	<sound key="cycle" fileref="uzi_cycle_FromCOD16.wav" volume="1"/>
+	<sound key="fire" fileref="uzi_fire_FromCOD17.wav" pitch_variety="0.05" volume="1.4"/>
+	<sound key="magazine_out" fileref="uzi_mgz_out_FromCOD16.wav" volume="0.35"/>
+	<sound key="magazine_in" fileref="uzi_mgz_in_FromCOD16.wav" volume="0.35"/>
+	<sound key="cycle" fileref="uzi_cycle_FromCOD16.wav" volume="0.35"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename=""/>
 	<hud_icon filename="gkw_microuzimod3.png"/>
@@ -14194,10 +14182,10 @@
 	<animation state_key="reload" animation_key="reloading, A OHG 0.75"/>
 	<animation state_key="reload" animation_key="reloading2, A OHG 0.75"/>
 	<effect class="muzzle" ref="ejection_9mm"/>
-	<sound key="fire" fileref="uzimod3_fire_FromINS.wav" pitch_variety="0.05" volume="0.5"/>
-	<sound key="magazine_out" fileref="uzimod3_mgz_out_FromINS.wav" volume="1"/>
-	<sound key="magazine_in" fileref="uzimod3_mgz_in_FromINS.wav" volume="1"/>
-	<sound key="cycle" fileref="uzimod3_cycle_FromINS.wav" volume="1"/>
+	<sound key="fire" fileref="uzimod3_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.5"/>
+	<sound key="magazine_out" fileref="uzi_mgz_out_FromCOD16.wav" volume="0.35"/>
+	<sound key="magazine_in" fileref="uzi_mgz_in_FromCOD16.wav" volume="0.35"/>
+	<sound key="cycle" fileref="uzi_cycle_FromCOD16.wav" volume="0.35"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_smg_uzimod3.xml"/>
 	<hud_icon filename="gkw_microuzimod3_skill.png"/>
@@ -15536,9 +15524,9 @@
 	<animation key="cycle" animation_key="Brifle0.8"/>
 	<animation key="cycle" stance_key="prone" animation_key="Brifle0.8p"/>
 	<animation key="reload" animation_key="reloading, oaat"/>
-	<sound key="fire" fileref="m1891_fire_FromCOD18.wav" volume="1.2"/>
+	<sound key="fire" fileref="m1891_fire_FromCOD14.wav" volume="1.3"/>
 	<sound key="cycle" fileref="m1891_cycle_FromSQUAD.wav" volume="0.6"/>
-	<sound key="reload_one" fileref="m1891_reload_FromSQUAD.wav" volume="0.45"/>
+	<sound key="reload_one" fileref="m1891_reload_FromSQUAD.wav" volume="0.5"/>
 	<sound key="cycle_out" fileref="m1891_cycle_out_FromSQUAD.wav" volume="0.6"/>
 	<sound key="cycle_in" fileref="m1891_cycle_in_FromSQUAD.wav" volume="0.6"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
@@ -15747,10 +15735,11 @@
 	<animation key="cycle" stance_key="prone" animation_key="Brifle0.8p"/>
 	<animation key="reload" animation_key="reloading, oaat"/>
 	<sound key="fire" fileref="xm3_fire_FromRS2V.wav" pitch_variety="0.05" volume="1.2"/>
-	<sound key="cycle" fileref="xm3_cycle_FromCOD4R.wav" volume="0.5"/>
-	<sound key="reload_one" fileref="xm3_reload_FromCOD4R.wav" volume="0.2"/>
-	<sound key="cycle_out" fileref="xm3_cycle_out_FromCOD4R.wav" volume="0.5"/>
-	<sound key="cycle_in" fileref="xm3_cycle_in_FromCOD4R.wav" volume="0.5"/>
+	<sound key="cycle" fileref="xm3_cycle_FromCOD4R.wav" volume="0.4"/>
+	<sound key="reload_one" fileref="xm3_reload1_FromCOD4R.wav" volume="0.25"/>
+	<sound key="reload_one" fileref="xm3_reload2_FromCOD4R.wav" volume="0.25"/>
+	<sound key="cycle_out" fileref="xm3_cycle_out_FromCOD4R.wav" volume="0.4"/>
+	<sound key="cycle_in" fileref="xm3_cycle_in_FromCOD4R.wav" volume="0.4"/>
 	<sound class="impact" fileref="rifle_drop.wav" volume="1"/>
 	<model filename="gkw_rf_carcano1938.xml"/>
 	<hud_icon filename="gkw_xm3mod3.png"/>
@@ -15798,10 +15787,11 @@
 	<animation key="cycle" stance_key="prone" animation_key="Brifle0.6p"/>
 	<animation key="reload" animation_key="reloading, oaat"/>
 	<sound key="fire" fileref="xm3_fire_FromRS2V.wav" pitch_variety="0.05" volume="1.5"/>
-	<sound key="cycle" fileref="xm3_cycle_FromCOD4R.wav" volume="0.5"/>
-	<sound key="reload_one" fileref="xm3_reload_FromCOD4R.wav" volume="0.2"/>
-	<sound key="cycle_out" fileref="xm3_cycle_out_FromCOD4R.wav" volume="0.5"/>
-	<sound key="cycle_in" fileref="xm3_cycle_in_FromCOD4R.wav" volume="0.5"/>
+	<sound key="cycle" fileref="xm3_cycle_FromCOD4R.wav" volume="0.4"/>
+	<sound key="reload_one" fileref="xm3_reload1_FromCOD4R.wav" volume="0.25"/>
+	<sound key="reload_one" fileref="xm3_reload2_FromCOD4R.wav" volume="0.25"/>
+	<sound key="cycle_out" fileref="xm3_cycle_out_FromCOD4R.wav" volume="0.4"/>
+	<sound key="cycle_in" fileref="xm3_cycle_in_FromCOD4R.wav" volume="0.4"/>
 	<sound class="impact" fileref="rifle_drop.wav" volume="1"/>
 	<model filename="gkw_rf_carcano1938.xml"/>
 	<hud_icon filename="gkw_xm3mod3_skill.png"/>
@@ -15866,10 +15856,10 @@
 	<animation state_key="reload" animation_key="reloading, magazine rifle 0.9"/>
 	<animation state_key="stabbing" animation_key="melee, quick knife"/>
 	<animation state_key="stabbing" animation_key="pistol whip 3"/>
-	<sound key="fire" fileref="tmp_fire_FromCOD6R.wav" pitch_variety="0.05" volume="1"/>
-	<sound key="magazine_out" fileref="tmp_mgz_out_FromCOD6R.wav" volume="0.5"/>
-	<sound key="magazine_in" fileref="tmp_mgz_in_FromCOD6R.wav" volume="0.5"/>
-	<sound key="cycle" fileref="tmp_cycle_FromCOD6R.wav" volume="0.5"/>
+	<sound key="fire" fileref="tmp_fire_FromCOD6R.wav" pitch_variety="0.05" volume="1.2"/>
+	<sound key="magazine_out" fileref="tmp_mgz_out_FromCOD6R.wav" volume="0.35"/>
+	<sound key="magazine_in" fileref="tmp_mgz_in_FromCOD6R.wav" volume="0.35"/>
+	<sound key="cycle" fileref="tmp_cycle_FromCOD6R.wav" volume="0.35"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_smg_tmp.xml"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
@@ -16373,10 +16363,10 @@
 	<animation state_key="reload" animation_key="reloading, magazine rifle 0.9"/>
 	<animation state_key="stabbing" animation_key="melee, quick knife"/>
 	<animation state_key="stabbing" animation_key="pistol whip 3"/>
-	<sound key="fire" fileref="sten_fire_FromBF5.wav" pitch_variety="0.05" volume="1.7"/>
-	<sound key="magazine_out" fileref="sten_mgz_out_FromCOD18.wav" volume="0.55"/>
-	<sound key="magazine_in" fileref="sten_mgz_in_FromCOD18.wav" volume="0.5"/>
-	<sound key="cycle" fileref="sten_cycle_FromCOD18.wav" volume="0.55"/>
+	<sound key="fire" fileref="sten_fire_FromCOD11.wav" pitch_variety="0.05" volume="1.2"/>
+	<sound key="magazine_out" fileref="sten_mgz_out_FromCOD18.wav" volume="0.45"/>
+	<sound key="magazine_in" fileref="sten_mgz_in_FromCOD18.wav" volume="0.45"/>
+	<sound key="cycle" fileref="sten_cycle_FromCOD18.wav" volume="0.5"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_smg_sten.xml"/>
 	<commonness value="0.2" in_stock="1" can_respawn_with="1"/>
@@ -16426,10 +16416,10 @@
 	<animation state_key="reload" animation_key="reloading, magazine rifle 0.9"/>
 	<animation state_key="stabbing" animation_key="melee, quick knife"/>
 	<animation state_key="stabbing" animation_key="pistol whip 3"/>
-	<sound key="fire" fileref="stensd_fire_FromCOD18.wav" pitch_variety="0.05" volume="1.3"/>
-	<sound key="magazine_out" fileref="sten_mgz_out_FromCOD18.wav" volume="0.55"/>
-	<sound key="magazine_in" fileref="sten_mgz_in_FromCOD18.wav" volume="0.55"/>
-	<sound key="cycle" fileref="sten_cycle_FromCOD18.wav" volume="0.55"/>
+	<sound key="fire" fileref="stensd_fire_FromCOD18.wav" pitch_variety="0.05" volume="1.5"/>
+	<sound key="magazine_out" fileref="sten_mgz_out_FromCOD18.wav" volume="0.45"/>
+	<sound key="magazine_in" fileref="sten_mgz_in_FromCOD18.wav" volume="0.45"/>
+	<sound key="cycle" fileref="sten_cycle_FromCOD18.wav" volume="0.5"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_smg_stenmod3.xml"/>
 	<commonness value="0.001" in_stock="0" can_respawn_with="1"/>
@@ -17016,10 +17006,11 @@
 	<animation state_key="stabbing" animation_key="melee, bayonet"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<weak_hand_hold offset="0.3"/>
-	<sound key="fire" fileref="m1_fire_FromSE4.wav" pitch_variety="0.05" volume="3"/>
-	<sound key="cycle" fileref="pistol2_chamber.wav"/>
-	<sound key="magazine_out" fileref="m1_mgz_out_FromINS.wav"/>
-	<sound key="magazine_in" fileref="m1_mgz_in_FromINS.wav"/>
+	<sound key="fire" fileref="m1garand_fire_FromCOD18.wav" pitch_variety="0.05" volume="1.3"/>
+	<sound key="cycle" fileref="m1garand_cycle_FromCOD13.wav" volume="0.45"/>
+	<sound key="magazine_out" fileref="rifle_02_m1_garand_ping.wav"/>
+	<sound key="magazine_in" fileref="m1garand_mgz_in_FromCOD13.wav" volume="0.45"/>
+	<sound key="last_ammo" fileref="rifle_02_m1_garand_ping.wav"/>
 	<model filename="gkw_rf_m1_sf.xml"/>
 	<hud_icon filename="gkw_m1.png"/>
 	<inventory encumbrance="10.0" price="498.0"/>
@@ -17104,10 +17095,11 @@
 	<animation state_key="stabbing" animation_key="melee, bayonet"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<weak_hand_hold offset="0.3"/>
-	<sound key="fire" fileref="m1_fire_FromSE4.wav" pitch_variety="0.05" volume="3"/>
-	<sound key="cycle" fileref="pistol2_chamber.wav"/>
-	<sound key="magazine_out" fileref="m1_mgz_out_FromINS.wav"/>
-	<sound key="magazine_in" fileref="m1_mgz_in_FromINS.wav"/>
+	<sound key="fire" fileref="m1garand_fire_FromCOD18.wav" pitch_variety="0.05" volume="1.3"/>
+	<sound key="cycle" fileref="m1garand_cycle_FromCOD13.wav" volume="0.45"/>
+	<sound key="magazine_out" fileref="rifle_02_m1_garand_ping.wav"/>
+	<sound key="magazine_in" fileref="m1garand_mgz_in_FromCOD13.wav" volume="0.45"/>
+	<sound key="last_ammo" fileref="rifle_02_m1_garand_ping.wav"/>
 	<model filename="gkw_rf_m1_sf.xml"/>
 	<hud_icon filename="gkw_m1_1106.png"/>
 	<inventory encumbrance="10.0" price="498.0"/>
@@ -18259,30 +18251,30 @@
 	<next_in_chain key="gkw_supersassmod3_skill.weapon" share_ammo="0"/>
 	<inventory buy_price="120.0" sell_price="40.0"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.8"/>
-	<sound key="fire" fileref="sass_fire_From_arma2.wav" pitch_variety="0.01" volume="1"/>
-	<sound key="magazine_out" fileref="supersass_mgz_out_FromSQUAD.wav" volume="0.7"/>
-	<sound key="magazine_in" fileref="supersass_mgz_in_FromSQUAD.wav" volume="0.7"/>
-	<sound key="cycle" fileref="supersass_cycle_FromR6S.wav" volume="0.7"/>
+	<sound key="fire" fileref="sass_fire_FromCOD13.wav" pitch_variety="0.01" volume="1.1"/>
+	<sound key="magazine_out" fileref="sass_mgz_out_FromSQUAD.wav" volume="0.55"/>
+	<sound key="magazine_in" fileref="sass_mgz_in_FromSQUAD.wav" volume="0.55"/>
+	<sound key="cycle" fileref="sass_cycle_FromCOD13.wav" volume="0.4"/>
 	<sound key="cycle" fileref="SuperSASSMod_ATTACK_JP.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="supersass_cycle_FromR6S.wav" volume="0.7"/>
+	<sound key="cycle" fileref="sass_cycle_FromCOD13.wav" volume="0.4"/>
 	<sound key="cycle" fileref="SuperSASSMod_BLACKACTION_JP.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="supersass_cycle_FromR6S.wav" volume="0.7"/>
+	<sound key="cycle" fileref="sass_cycle_FromCOD13.wav" volume="0.4"/>
 	<sound key="cycle" fileref="SuperSASSMod_BREAK_JP.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="supersass_cycle_FromR6S.wav" volume="0.7"/>
+	<sound key="cycle" fileref="sass_cycle_FromCOD13.wav" volume="0.4"/>
 	<sound key="cycle" fileref="SuperSASSMod_COMBINE_JP.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="supersass_cycle_FromR6S.wav" volume="0.7"/>
+	<sound key="cycle" fileref="sass_cycle_FromCOD13.wav" volume="0.4"/>
 	<sound key="cycle" fileref="SuperSASSMod_DEFENSE_JP.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="supersass_cycle_FromR6S.wav" volume="0.7"/>
+	<sound key="cycle" fileref="sass_cycle_FromCOD13.wav" volume="0.4"/>
 	<sound key="cycle" fileref="SuperSASSMod_FEED_JP.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="supersass_cycle_FromR6S.wav" volume="0.7"/>
+	<sound key="cycle" fileref="sass_cycle_FromCOD13.wav" volume="0.4"/>
 	<sound key="cycle" fileref="SuperSASSMod_FORMATION_JP.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="supersass_cycle_FromR6S.wav" volume="0.7"/>
+	<sound key="cycle" fileref="sass_cycle_FromCOD13.wav" volume="0.4"/>
 	<sound key="cycle" fileref="SuperSASSMod_GOATTACK_JP.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="supersass_cycle_FromR6S.wav" volume="0.7"/>
+	<sound key="cycle" fileref="sass_cycle_FromCOD13.wav" volume="0.4"/>
 	<sound key="cycle" fileref="SuperSASSMod_LOADING_JP.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="supersass_cycle_FromR6S.wav" volume="0.7"/>
+	<sound key="cycle" fileref="sass_cycle_FromCOD13.wav" volume="0.4"/>
 	<sound key="cycle" fileref="SuperSASSMod_MEET_JP.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="supersass_cycle_FromR6S.wav" volume="0.7"/>
+	<sound key="cycle" fileref="sass_cycle_FromCOD13.wav" volume="0.4"/>
 	<sound key="cycle" fileref="SuperSASSMod_OPERATIONBEGIN_JP.wav" volume="1.0" pitch_variety="0"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_rf_supersassmod3.xml"/>
@@ -18626,10 +18618,10 @@
 	<next_in_chain key="gkw_ar15mod3_skill.weapon" share_ammo="0"/>
 	<inventory buy_price="240.0" sell_price="240.0"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
-	<sound key="fire" fileref="star15mod_fire_FromDAYSGONE.wav" pitch_variety="0.01" volume="1.4"/>
-	<sound key="magazine_out" fileref="star15_mgz_out_FromCOD17.wav" volume="0.7"/>
-	<sound key="magazine_in" fileref="star15_mgz_in_FromCOD17.wav" volume="0.7"/>
-	<sound key="cycle" fileref="star15_cycle_FromCOD17.wav" volume="0.7"/>
+	<sound key="fire" fileref="ar15mod3_fire_FromCOD8.wav" pitch_variety="0.01" volume="1.2"/>
+	<sound key="magazine_out" fileref="star15_mgz_out_FromCOD17.wav" volume="0.6"/>
+	<sound key="magazine_in" fileref="star15_mgz_in_FromCOD17.wav" volume="0.6"/>
+	<sound key="cycle" fileref="star15_cycle_FromCOD17.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AR15Mod_BUILDOVER_JP.wav" volume="0.7" pitch_variety="0"/>
 	<sound key="cycle" fileref="AR15Mod_FEED_JP.wav" volume="0.7" pitch_variety="0"/>
 	<sound key="cycle" fileref="AR15Mod_FIX_JP.wav" volume="0.7" pitch_variety="0"/>
@@ -18702,9 +18694,9 @@
 	<animation state_key="stabbing" animation_key="pistol whip 3"/>
 	<effect class="muzzle" ref="muzzle_pink"/>
 	<sound key="fire" fileref="ar15mod3skill_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.1"/>
-	<sound key="magazine_out" fileref="star15_mgz_out_FromCOD17.wav" volume="0.7"/>
-	<sound key="magazine_in" fileref="star15_mgz_in_FromCOD17.wav" volume="0.7"/>
-	<sound key="cycle" fileref="star15_cycle_FromCOD17.wav" volume="0.7"/>
+	<sound key="magazine_out" fileref="star15_mgz_out_FromCOD17.wav" volume="0.6"/>
+	<sound key="magazine_in" fileref="star15_mgz_in_FromCOD17.wav" volume="0.6"/>
+	<sound key="cycle" fileref="star15_cycle_FromCOD17.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AR15Mod_ATTACK_JP.wav" volume="0.7" pitch_variety="0"/>
 	<sound key="cycle" fileref="AR15Mod_DEFENSE_JP.wav" volume="0.7" pitch_variety="0"/>
 	<sound key="cycle" fileref="AR15Mod_SKILL1_JP.wav" volume="0.7" pitch_variety="0"/>
@@ -18947,7 +18939,7 @@
 	<next_in_chain key="gkw_hk416mod3.weapon" share_ammo="0"/>
 	<inventory buy_price="270.0" sell_price="270.0"/>
 	<animation state_key="reload" animation_key="reloading, gl06"/>
-	<sound key="fire" fileref="hk416_fire_FromBFH.wav" pitch_variety="0.05" volume="0.8"/>
+	<sound key="fire" fileref="m320_fire_FromBFBC2.wav" pitch_variety="0.05" volume="1.3"/>
 	<sound key="magazine_out" fileref="m320_mgz_out_FromSQUAD.wav" volume="0.7"/>
 	<sound key="magazine_in" fileref="m320_mgz_in_FromSQUAD.wav" volume="0.7"/>
 	<sound key="cycle" fileref="m320_cycle_FromSQUAD.wav" volume="0.8"/>
@@ -19590,9 +19582,9 @@
 	<animation state_key="stabbing" animation_key="melee, quick knife"/>
 	<animation state_key="stabbing" animation_key="pistol whip 3"/>
 	<sound key="fire" fileref="ump45_fire_FromBF4.wav" pitch_variety="0.05" volume="1.2"/>
-	<sound key="magazine_out" fileref="ump45_mgz_out_FromCOD16.wav" volume="0.5"/>
-	<sound key="magazine_in" fileref="ump45_mgz_in_FromCOD16.wav" volume="0.5"/>
-	<sound key="cycle" fileref="ump45_cycle_FromCOD16.wav" volume="0.5"/>
+	<sound key="magazine_out" fileref="ump45_mgz_out_FromCOD16.wav" volume="0.4"/>
+	<sound key="magazine_in" fileref="ump45_mgz_in_FromCOD16.wav" volume="0.4"/>
+	<sound key="cycle" fileref="ump45_cycle_FromCOD16.wav" volume="0.4"/>
 	<sound class="impact" fileref="rifle_drop.wav" volume="1"/>
 	<model filename="gkw_smg_ump45.xml"/>
 	<hud_icon filename="gkw_ump45mod3.png"/>
@@ -19857,10 +19849,10 @@
 <weapon key="gkw_ump9mod3.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<specification accuracy_factor="1" barrel_offset="0.4" sight_range_modifier="1.3" class="0" magazine_size="30" name="UMP9(MOD3)" projectile_speed="120" retrigger_time="0.075" suppressed="1" sustained_fire_diminish_rate="2.4" sustained_fire_grow_step="0.2" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
 	<inventory buy_price="150.0" sell_price="150.0"/>
-	<sound key="fire" fileref="ump9_fire_FromGRBP.wav" pitch_variety="0.05" volume="2"/>
-	<sound key="magazine_out" fileref="ump45_mgz_out_FromCOD16.wav" volume="0.5"/>
-	<sound key="magazine_in" fileref="ump45_mgz_in_FromCOD16.wav" volume="0.5"/>
-	<sound key="cycle" fileref="ump45_cycle_FromCOD16.wav" volume="0.5"/>
+	<sound key="fire" fileref="ump9_fire_FromGRBP.wav" pitch_variety="0.05" volume="3.5"/>
+	<sound key="magazine_out" fileref="ump45_mgz_out_FromCOD16.wav" volume="0.4"/>
+	<sound key="magazine_in" fileref="ump45_mgz_in_FromCOD16.wav" volume="0.4"/>
+	<sound key="cycle" fileref="ump45_cycle_FromCOD16.wav" volume="0.4"/>
 	<sound class="impact" fileref="rifle_drop.wav" volume="1"/>
 	<model filename="gkw_smg_ump9.xml"/>
 	<next_in_chain key="gkw_ump9mod3_skill.weapon" share_ammo="0"/>
@@ -21000,9 +20992,9 @@
 	<animation key="cycle" animation_key="Brifle0.8"/>
 	<animation key="cycle" stance_key="prone" animation_key="Brifle0.8p"/>
 	<animation key="reload" animation_key="reloading, oaat"/>
-	<sound key="fire" fileref="m1891_fire_FromCOD18.wav" volume="1.2"/>
+	<sound key="fire" fileref="m1891_fire_FromCOD14.wav" volume="1.3"/>
 	<sound key="cycle" fileref="m1891_cycle_FromSQUAD.wav" volume="0.6"/>
-	<sound key="reload_one" fileref="m1891_reload_FromSQUAD.wav" volume="0.45"/>
+	<sound key="reload_one" fileref="m1891_reload_FromSQUAD.wav" volume="0.5"/>
 	<sound key="cycle_out" fileref="m1891_cycle_out_FromSQUAD.wav" volume="0.6"/>
 	<sound key="cycle_in" fileref="m1891_cycle_in_FromSQUAD.wav" volume="0.6"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
@@ -21052,7 +21044,7 @@
 	<animation key="cycle" stance_key="prone" animation_key="Brifle1p"/>
 	<animation key="reload" animation_key="HS50RTemp"/>
 	<animation state_key="next_in_chain_in" animation_key="change weapon in ssass"/>
-	<sound key="fire" fileref="m1891_fire_FromCOD18.wav" volume="0.95"/>
+	<sound key="fire" fileref="m1891skill_fire_FromCOD8.wav" volume="1.35"/>
 	<sound key="cycle" fileref="m1891_cycle_FromSQUAD.wav" volume="0.6"/>
 	<sound key="magazine_out" fileref=""/>
 	<sound key="magazine_in" fileref="m1891_reload_FromSQUAD.wav" volume="0.5"/>
@@ -21218,10 +21210,10 @@
 	<specification accuracy_factor="1.0" barrel_offset="0.4" class="0" slot="0" magazine_size="20" name="G3(MOD3)" projectile_speed="238.0" retrigger_time="0.1" suppressed="0" sustained_fire_diminish_rate="2.5" sustained_fire_grow_step="0.45" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
 	<inventory buy_price="150.0" sell_price="150.0"/>
-	<sound key="fire" fileref="g3_fire_FromBF2.wav" pitch_variety="0.05" volume="1"/>
-	<sound key="magazine_out" fileref="g3_mgz_out_FromCOD4R.wav" volume="0.9"/>
-	<sound key="magazine_in" fileref="g3_mgz_in_FromCOD4R.wav" volume="0.9"/>
-	<sound key="cycle" fileref="g3_cycle_FromCOD4R.wav" volume="0.9"/>
+	<sound key="fire" fileref="g3_fire_FromCOD17.wav" pitch_variety="0.05" volume="1.2"/>
+	<sound key="magazine_out" fileref="g3_mgz_out_FromCOD17.wav" volume="0.4"/>
+	<sound key="magazine_in" fileref="g3_mgz_in_FromCOD17.wav" volume="0.4"/>
+	<sound key="cycle" fileref="g3_cycle_FromCOD17.wav" volume="0.4"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_ar_g3.xml"/>
 	<hud_icon filename="gkw_g3mod3.png"/>
@@ -21473,9 +21465,9 @@
 	<animation state_key="stabbing" animation_key="melee, quick knife"/>
 	<animation state_key="stabbing" animation_key="pistol whip 3"/>
 	<sound key="fire" fileref="ump45_fire_FromBF4.wav" pitch_variety="0.05" volume="1.2"/>
-	<sound key="magazine_out" fileref="ump45_mgz_out_FromCOD16.wav" volume="0.5"/>
-	<sound key="magazine_in" fileref="ump45_mgz_in_FromCOD16.wav" volume="0.5"/>
-	<sound key="cycle" fileref="ump45_cycle_FromCOD16.wav" volume="0.5"/>
+	<sound key="magazine_out" fileref="ump45_mgz_out_FromCOD16.wav" volume="0.4"/>
+	<sound key="magazine_in" fileref="ump45_mgz_in_FromCOD16.wav" volume="0.4"/>
+	<sound key="cycle" fileref="ump45_cycle_FromCOD16.wav" volume="0.4"/>
 	<sound class="impact" fileref="rifle_drop.wav" volume="1"/>
 	<model filename="gkw_smg_ump45.xml"/>
 	<hud_icon filename="gkw_ump45_410.png"/>
@@ -21528,9 +21520,9 @@
 	<animation state_key="stabbing" animation_key="melee, quick knife"/>
 	<animation state_key="stabbing" animation_key="pistol whip 3"/>
 	<sound key="fire" fileref="ump45_fire_FromBF4.wav" pitch_variety="0.05" volume="1.2"/>
-	<sound key="magazine_out" fileref="ump45_mgz_out_FromCOD16.wav" volume="0.5"/>
-	<sound key="magazine_in" fileref="ump45_mgz_in_FromCOD16.wav" volume="0.5"/>
-	<sound key="cycle" fileref="ump45_cycle_FromCOD16.wav" volume="0.5"/>
+	<sound key="magazine_out" fileref="ump45_mgz_out_FromCOD16.wav" volume="0.4"/>
+	<sound key="magazine_in" fileref="ump45_mgz_in_FromCOD16.wav" volume="0.4"/>
+	<sound key="cycle" fileref="ump45_cycle_FromCOD16.wav" volume="0.4"/>
 	<sound class="impact" fileref="rifle_drop.wav" volume="1"/>
 	<model filename="gkw_smg_ump45.xml"/>
 	<hud_icon filename="gkw_ump45_535.png"/>
@@ -21760,10 +21752,10 @@
 	<inventory buy_price="12.0" sell_price="12.0"/>
 	<commonness value="0" in_stock="0"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.8"/>
-	<sound key="fire" fileref="supersass_fire_FromSQUAD.wav" pitch_variety="0.01" volume="1"/>
-	<sound key="magazine_out" fileref="supersass_mgz_out_FromSQUAD.wav" volume="0.7"/>
-	<sound key="magazine_in" fileref="supersass_mgz_in_FromSQUAD.wav" volume="0.7"/>
-	<sound key="cycle" fileref="supersass_cycle_FromR6S.wav" volume="0.7"/>
+	<sound key="fire" fileref="sass_fire_FromCOD13.wav" pitch_variety="0.01" volume="1.1"/>
+	<sound key="magazine_out" fileref="sass_mgz_out_FromSQUAD.wav" volume="0.55"/>
+	<sound key="magazine_in" fileref="sass_mgz_in_FromSQUAD.wav" volume="0.55"/>
+	<sound key="cycle" fileref="sass_cycle_FromCOD13.wav" volume="0.4"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_rf_supersass.xml"/>
 	<hud_icon filename="gkw_supersass_1407.png"/>
@@ -21808,9 +21800,9 @@
 	<animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
 	<inventory buy_price="8.0" sell_price="8.0"/>
 	<sound key="fire" fileref="type95_fire_FromBF4.wav" pitch_variety="0.05" volume="1.6"/>
-	<sound key="magazine_out" fileref="type95_mgz_out_FromBF4.wav" volume="1.1"/>
-	<sound key="magazine_in" fileref="type95_mgz_in_FromBF4.wav" volume="1.1"/>
-	<sound key="cycle" fileref="qbz95_cycle_FromCOD16.wav" volume="0.45"/>
+	<sound key="magazine_out" fileref="qbz95_mgz_in_FromCOD17.wav" volume="0.45"/>
+	<sound key="magazine_in" fileref="qbz95_mgz_in_FromCOD17.wav" volume="0.45"/>
+	<sound key="cycle" fileref="qbz95_cycle_FromCOD16.wav" volume="0.35"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_ar_type95.xml"/>
 	<hud_icon filename="gkw_95type_405.png"/>
@@ -21856,9 +21848,9 @@
 	<animation key="reload" animation_key="reloading, magazine rifle 1.5"/>
 	<inventory buy_price="8.0" sell_price="8.0"/>
 	<sound key="fire" fileref="qbz95skill_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.2"/>
-	<sound key="magazine_out" fileref="type95_mgz_out_FromBF4.wav" volume="1.1"/>
-	<sound key="magazine_in" fileref="type95_mgz_in_FromBF4.wav" volume="1.1"/>
-	<sound key="cycle" fileref="qbz95_cycle_FromCOD16.wav" volume="0.45"/>
+	<sound key="magazine_out" fileref="qbz95_mgz_in_FromCOD17.wav" volume="0.45"/>
+	<sound key="magazine_in" fileref="qbz95_mgz_in_FromCOD17.wav" volume="0.45"/>
+	<sound key="cycle" fileref="qbz95_cycle_FromCOD16.wav" volume="0.35"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_ar_type95.xml"/>
 	<hud_icon filename="gkw_95type_405.png"/>
@@ -21905,9 +21897,9 @@
 	<animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
 	<inventory buy_price="8.0" sell_price="8.0"/>
 	<sound key="fire" fileref="type95_fire_FromBF4.wav" pitch_variety="0.05" volume="1.6"/>
-	<sound key="magazine_out" fileref="type95_mgz_out_FromBF4.wav" volume="1.1"/>
-	<sound key="magazine_in" fileref="type95_mgz_in_FromBF4.wav" volume="1.1"/>
-	<sound key="cycle" fileref="qbz95_cycle_FromCOD16.wav" volume="0.45"/>
+	<sound key="magazine_out" fileref="qbz95_mgz_in_FromCOD17.wav" volume="0.45"/>
+	<sound key="magazine_in" fileref="qbz95_mgz_in_FromCOD17.wav" volume="0.45"/>
+	<sound key="cycle" fileref="qbz95_cycle_FromCOD16.wav" volume="0.35"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_ar_type95.xml"/>
 	<hud_icon filename="gkw_95type_1102.png"/>
@@ -21953,9 +21945,9 @@
 	<animation key="reload" animation_key="reloading, magazine rifle 1.5"/>
 	<inventory buy_price="8.0" sell_price="8.0"/>
 	<sound key="fire" fileref="qbz95skill_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.2"/>
-	<sound key="magazine_out" fileref="type95_mgz_out_FromBF4.wav" volume="1.1"/>
-	<sound key="magazine_in" fileref="type95_mgz_in_FromBF4.wav" volume="1.1"/>
-	<sound key="cycle" fileref="qbz95_cycle_FromCOD16.wav" volume="0.45"/>
+	<sound key="magazine_out" fileref="qbz95_mgz_in_FromCOD17.wav" volume="0.45"/>
+	<sound key="magazine_in" fileref="qbz95_mgz_in_FromCOD17.wav" volume="0.45"/>
+	<sound key="cycle" fileref="qbz95_cycle_FromCOD16.wav" volume="0.35"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_ar_type95.xml"/>
 	<hud_icon filename="gkw_95type_1102.png"/>
@@ -22002,9 +21994,9 @@
 	<animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
 	<inventory buy_price="8.0" sell_price="8.0"/>
 	<sound key="fire" fileref="type95_fire_FromBF4.wav" pitch_variety="0.05" volume="1.6"/>
-	<sound key="magazine_out" fileref="type95_mgz_out_FromBF4.wav" volume="1.1"/>
-	<sound key="magazine_in" fileref="type95_mgz_in_FromBF4.wav" volume="1.1"/>
-	<sound key="cycle" fileref="qbz95_cycle_FromCOD16.wav" volume="0.45"/>
+	<sound key="magazine_out" fileref="qbz95_mgz_in_FromCOD17.wav" volume="0.45"/>
+	<sound key="magazine_in" fileref="qbz95_mgz_in_FromCOD17.wav" volume="0.45"/>
+	<sound key="cycle" fileref="qbz95_cycle_FromCOD16.wav" volume="0.35"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_ar_type95.xml"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
@@ -22050,9 +22042,9 @@
 	<animation key="reload" animation_key="reloading, magazine rifle 1.5"/>
 	<inventory buy_price="8.0" sell_price="8.0"/>
 	<sound key="fire" fileref="qbz95skill_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.2"/>
-	<sound key="magazine_out" fileref="type95_mgz_out_FromBF4.wav" volume="1.1"/>
-	<sound key="magazine_in" fileref="type95_mgz_in_FromBF4.wav" volume="1.1"/>
-	<sound key="cycle" fileref="qbz95_cycle_FromCOD16.wav" volume="0.45"/>
+	<sound key="magazine_out" fileref="qbz95_mgz_in_FromCOD17.wav" volume="0.45"/>
+	<sound key="magazine_in" fileref="qbz95_mgz_in_FromCOD17.wav" volume="0.45"/>
+	<sound key="cycle" fileref="qbz95_cycle_FromCOD16.wav" volume="0.35"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_ar_type95.xml"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
@@ -22481,10 +22473,10 @@
 	<animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
 	<inventory buy_price="7.0" sell_price="7.0"/>
 	<next_in_chain key="gkw_ak47_501_skill.weapon" share_ammo="1"/>
-	<sound key="fire" fileref="ak47_fire_FromRE5.wav" pitch_variety="0.05" volume="1"/>
-	<sound key="magazine_out" fileref="ak47_mgz_out_FromBORDERLAND3.wav" volume="0.7"/>
-	<sound key="magazine_in" fileref="ak47_mgz_in_FromBORDERLAND3.wav" volume="0.7"/>
-	<sound key="cycle" fileref="ak47_cycle_FromBORDERLAND3.wav" volume="0.8"/>
+	<sound key="fire" fileref="ak47_fire_FromRE5.wav" pitch_variety="0.05" volume="1.3"/>
+	<sound key="magazine_out" fileref="ak12_mgz_out_FromCOD16.wav" volume="0.6"/>
+	<sound key="magazine_in" fileref="ak12_mgz_in_FromCOD16.wav" volume="0.6"/>
+	<sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_ar_ak47_501.xml"/>
 	<hud_icon filename="gkw_ak47_501.png"/>
@@ -22531,10 +22523,10 @@
 	<inventory buy_price="7.0" sell_price="7.0"/>
 	<commonness value="0" in_stock="0"/>
 	<next_in_chain key="gkw_ak47_501.weapon" share_ammo="1"/>
-	<sound key="fire" fileref="ak47_fire_FromCOD16.wav" pitch_variety="0.05" volume="0.9"/>
-	<sound key="magazine_out" fileref="ak47_mgz_out_FromBORDERLAND3.wav" volume="0.7"/>
-	<sound key="magazine_in" fileref="ak47_mgz_in_FromBORDERLAND3.wav" volume="0.7"/>
-	<sound key="cycle" fileref="ak47_cycle_FromBORDERLAND3.wav" volume="0.8"/>
+	<sound key="fire" fileref="ak47_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.2"/>
+	<sound key="magazine_out" fileref="ak12_mgz_out_FromCOD16.wav" volume="0.6"/>
+	<sound key="magazine_in" fileref="ak12_mgz_in_FromCOD16.wav" volume="0.6"/>
+	<sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_ar_ak47_501.xml"/>
 	<hud_icon filename="gkw_ak47_501.png"/>
@@ -22581,9 +22573,9 @@
 	<commonness value="0" in_stock="0"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
 	<sound key="fire" fileref="star15_fire_FromBLACKSQUAD.wav" pitch_variety="0.01" volume="1.2"/>
-	<sound key="magazine_out" fileref="star15_mgz_out_FromCOD17.wav" volume="0.7"/>
-	<sound key="magazine_in" fileref="star15_mgz_in_FromCOD17.wav" volume="0.7"/>
-	<sound key="cycle" fileref="star15_cycle_FromCOD17.wav" volume="0.7"/>
+	<sound key="magazine_out" fileref="star15_mgz_out_FromCOD17.wav" volume="0.6"/>
+	<sound key="magazine_in" fileref="star15_mgz_in_FromCOD17.wav" volume="0.6"/>
+	<sound key="cycle" fileref="star15_cycle_FromCOD17.wav" volume="0.6"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_ar_ar15_532.xml"/>
 	<hud_icon filename="gkw_ar15_532.png"/>
@@ -22821,10 +22813,10 @@
 	<animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
 	<inventory buy_price="7.0" sell_price="7.0"/>
 	<commonness value="0" in_stock="0"/>
-	<sound key="fire" fileref="g3_fire_FromBF2.wav" pitch_variety="0.05" volume="1"/>
-	<sound key="magazine_out" fileref="g3_mgz_out_FromCOD4R.wav" volume="0.9"/>
-	<sound key="magazine_in" fileref="g3_mgz_in_FromCOD4R.wav" volume="0.9"/>
-	<sound key="cycle" fileref="g3_cycle_FromCOD4R.wav" volume="0.9"/>
+	<sound key="fire" fileref="g3_fire_FromCOD17.wav" pitch_variety="0.05" volume="1.2"/>
+	<sound key="magazine_out" fileref="g3_mgz_out_FromCOD17.wav" volume="0.4"/>
+	<sound key="magazine_in" fileref="g3_mgz_in_FromCOD17.wav" volume="0.4"/>
+	<sound key="cycle" fileref="g3_cycle_FromCOD17.wav" volume="0.4"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_ar_g3.xml"/>
 	<hud_icon filename="gkw_g3_1303.png"/>
@@ -23282,9 +23274,9 @@
 	<inventory buy_price="10.0" sell_price="10.0"/>
 	<commonness value="0" in_stock="0"/>
 	<sound key="fire" fileref="9a91_fire_FromBFBC2.wav" pitch_variety="0.05" volume="1.5"/>
-	<sound key="magazine_out" fileref="9a91_mgz_out_FromBFBC1.wav" volume="0.7"/>
-	<sound key="magazine_in" fileref="9a91_mgz_in_FromBFBC1.wav" volume="0.7"/>
-	<sound key="cycle" fileref="9a91_cycle_FromBFBC1.wav" volume="0.7"/>
+	<sound key="magazine_out" fileref="sr3mp_mgz_out_FromBFBC1.wav" volume="0.7"/>
+	<sound key="magazine_in" fileref="sr3mp_mgz_in_FromBFBC1.wav" volume="0.7"/>
+	<sound key="cycle" fileref="sr3mp_cycle_FromBFBC1.wav" volume="0.7"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_ar_9a91_1302.xml"/>
 	<hud_icon filename="gkw_9a91_1302.png"/>
@@ -23333,9 +23325,9 @@
 	<commonness value="0" in_stock="0"/>
 	<next_in_chain key="gkw_9a91_1302.weapon" share_ammo="1"/>
 	<sound key="fire" fileref="9a91skill_fire_FromSURVARIUM.wav" pitch_variety="0.05" volume="1.2"/>
-	<sound key="magazine_out" fileref="9a91_mgz_out_FromBFBC1.wav" volume="0.7"/>
-	<sound key="magazine_in" fileref="9a91_mgz_in_FromBFBC1.wav" volume="0.7"/>
-	<sound key="cycle" fileref="9a91_cycle_FromBFBC1.wav" volume="0.7"/>
+	<sound key="magazine_out" fileref="sr3mp_mgz_out_FromBFBC1.wav" volume="0.7"/>
+	<sound key="magazine_in" fileref="sr3mp_mgz_in_FromBFBC1.wav" volume="0.7"/>
+	<sound key="cycle" fileref="sr3mp_cycle_FromBFBC1.wav" volume="0.7"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_ar_9a91_1302.xml"/>
 	<hud_icon filename="gkw_9a91_1302.png"/>
@@ -25136,7 +25128,7 @@
 	<animation state_key="stabbing" animation_key="pistol whip 3"/>
 	<next_in_chain key="gkw_rpk16_blm_skill.weapon" share_ammo="1"/>
 	<inventory encumbrance="30.0" buy_price="16.0" sell_price="16.0"/>
-	<sound key="fire" fileref="rpk16_Fire_FromEFT.wav" pitch_variety="0.02" volume="1.2"/>
+	<sound key="fire" fileref="rpk16_fire_FromCOD4R.wav" pitch_variety="0.02" volume="1.2"/>
 	<sound key="magazine_out" fileref="rpk16_mgz_out_FromCOD16.wav" volume="0.5"/>
 	<sound key="magazine_in" fileref="rpk16_mgz_in_FromCOD16.wav" volume="0.5"/>
 	<sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.5"/>
@@ -26059,10 +26051,10 @@
 	<specification retrigger_time="-1" last_burst_retrigger_time="0.1" accuracy_factor="1.0" sustained_fire_grow_step="0.35" sustained_fire_diminish_rate="1.4" magazine_size="16" suppressed="0" name="HS2000-[Tin Man's Burning Heart]" class="4" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="97.87" projectiles_per_shot="1" burst_shots="1" stab_enabled="1" carry_in_two_hands="0" slot="0"/>
 	<commonness in_stock="0" value="0"/>
 	<inventory buy_price="3.0" sell_price="3.0"/>
-	<sound key="fire" fileref="hs2000_fire_FromSQUAD.wav" pitch_variety="0.05" volume="1.2"/>
+	<sound key="fire" fileref="hs2000_fire_FromSQUAD.wav" pitch_variety="0.05" volume="1.3"/>
 	<sound key="magazine_out" fileref="hs2000_mgz_out_FromSQUAD.wav" volume="0.6"/>
 	<sound key="magazine_in" fileref="hs2000_mgz_in_FromSQUAD.wav" volume="0.6"/>
-	<sound key="cycle" fileref="hs2000_cycle_FromCOD16.wav" volume="0.45"/>
+	<sound key="cycle" fileref="hs2000_cycle_FromCOD16.wav" volume="0.35"/>
 	<model filename="gkw_hg_hs2000.xml"/>
 	<hud_icon filename="gkw_hs2000_5304.png"/>
 	<weak_hand_hold offset="0.1"/>
@@ -27115,10 +27107,10 @@
 	<next_in_chain key="gkw_aa12_4401_skill.weapon" share_ammo="1"/>
 	<commonness value="0" in_stock="0"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.8"/>
-	<sound key="fire" fileref="aa12_fire_FromROUGECOMPANY.wav" pitch_variety="0.05" volume="1"/>
-	<sound key="magazine_out" fileref="AA12_mgz_out_FromCOD16.wav" volume="1"/>
-	<sound key="magazine_in" fileref="AA12_mgz_in_FromCOD16.wav" volume="1"/>
-	<sound key="cycle" fileref="AA12_cycle_FromCOD16.wav" volume="1"/>
+	<sound key="fire" fileref="aa12_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.2"/>
+	<sound key="magazine_out" fileref="aa12_mgz_out_FromCOD16.wav" volume="0.45"/>
+	<sound key="magazine_in" fileref="aa12_mgz_in_FromCOD16.wav" volume="0.35"/>
+	<sound key="cycle" fileref="aa12_cycle_FromCOD16.wav" volume="0.35"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_sg_aa12_4401.xml"/>
 	<hud_icon filename="gkw_aa12_4401.png"/>
@@ -27169,10 +27161,10 @@
 	<next_in_chain key="gkw_aa12_4401.weapon" share_ammo="1"/>
 	<commonness value="0" in_stock="0"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.8"/>
-	<sound key="fire" fileref="aa12_fire_FromROUGECOMPANY.wav" pitch_variety="0.05" volume="1"/>
-	<sound key="magazine_out" fileref="AA12_mgz_out_FromCOD16.wav" volume="1"/>
-	<sound key="magazine_in" fileref="AA12_mgz_in_FromCOD16.wav" volume="1"/>
-	<sound key="cycle" fileref="AA12_cycle_FromCOD16.wav" volume="1"/>
+	<sound key="fire" fileref="aa12_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.2"/>
+	<sound key="magazine_out" fileref="aa12_mgz_out_FromCOD16.wav" volume="0.45"/>
+	<sound key="magazine_in" fileref="aa12_mgz_in_FromCOD16.wav" volume="0.35"/>
+	<sound key="cycle" fileref="aa12_cycle_FromCOD16.wav" volume="0.35"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_sg_aa12_4401.xml"/>
 	<hud_icon filename="gkw_aa12_4401.png"/>
@@ -28204,18 +28196,18 @@
 	<inventory buy_price="8.0" sell_price="8.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<next_in_chain key="gkw_tar21_1305_skill.weapon" share_ammo="1"/>
-	<sound key="fire" fileref="tar21_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.0"/>
-	<sound key="magazine_out" fileref="tar21_mgz_out_FromINS.wav" volume="1.1"/>
-	<sound key="magazine_in" fileref="tar21_mgz_in_FromINS.wav" volume="1.1"/>
-	<sound key="cycle" fileref="tar21_cycle_FromINS.wav" volume="1.1"/>
+	<sound key="fire" fileref="tar21_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.1"/>
+	<sound key="magazine_out" fileref="x95_mgz_out_FromCOD16.wav" volume="0.5"/>
+	<sound key="magazine_in" fileref="x95_mgz_in_FromCOD16.wav" volume="0.5"/>
+	<sound key="cycle" fileref="x95_cycle_FromCOD16.wav" volume="0.5"/>
 	<sound key="cycle" fileref="TAR21_ATTACK_JP.wav" volume="0.8" pitch_variety="0"/>
-	<sound key="cycle" fileref="tar21_cycle_FromINS.wav" volume="1.1"/>
+	<sound key="cycle" fileref="x95_cycle_FromCOD16.wav" volume="0.5"/>
 	<sound key="cycle" fileref="TAR21_WIN_JP.wav" volume="0.8" pitch_variety="0"/>
-	<sound key="cycle" fileref="tar21_cycle_FromINS.wav" volume="1.1"/>
+	<sound key="cycle" fileref="x95_cycle_FromCOD16.wav" volume="0.5"/>
 	<sound key="cycle" fileref="TAR21_MEET_JP.wav" volume="0.8" pitch_variety="0"/>
-	<sound key="cycle" fileref="tar21_cycle_FromINS.wav" volume="1.1"/>
+	<sound key="cycle" fileref="x95_cycle_FromCOD16.wav" volume="0.5"/>
 	<sound key="cycle" fileref="TAR21_LOADING_JP.wav" volume="0.8" pitch_variety="0"/>
-	<sound key="cycle" fileref="tar21_cycle_FromINS.wav" volume="1.1"/>
+	<sound key="cycle" fileref="x95_cycle_FromCOD16.wav" volume="0.5"/>
 	<sound key="cycle" fileref="TAR21_PHRASE_JP.wav" volume="0.8" pitch_variety="0"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_ar_tar21_from_Eisen.xml"/>
@@ -28262,17 +28254,17 @@
 	<inventory buy_price="8.0" sell_price="8.0"/>
 	<next_in_chain key="gkw_tar21_1305.weapon" share_ammo="1"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
-	<sound key="fire" fileref="tar21_fire_FromINS.wav" pitch_variety="0.05" volume="1.2"/>
-	<sound key="magazine_out" fileref="tar21_mgz_out_FromINS.wav" volume="1.1"/>
-	<sound key="magazine_in" fileref="tar21_mgz_in_FromINS.wav" volume="1.1"/>
+	<sound key="fire" fileref="tar21skill_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.1"/>
+	<sound key="magazine_out" fileref="x95_mgz_out_FromCOD16.wav" volume="0.5"/>
+	<sound key="magazine_in" fileref="x95_mgz_in_FromCOD16.wav" volume="0.5"/>
 	<sound key="cycle" fileref="TAR21_SKILL1_JP.wav" volume="0.8" pitch_variety="0"/>
-	<sound key="cycle" fileref="tar21_cycle_FromINS.wav" volume="1.1"/>
+	<sound key="cycle" fileref="x95_cycle_FromCOD16.wav" volume="0.5"/>
 	<sound key="cycle" fileref="TAR21_SKILL2_JP.wav" volume="0.8" pitch_variety="0"/>
-	<sound key="cycle" fileref="tar21_cycle_FromINS.wav" volume="1.1"/>
+	<sound key="cycle" fileref="x95_cycle_FromCOD16.wav" volume="0.5"/>
 	<sound key="cycle" fileref="TAR21_SKILL3_JP.wav" volume="0.8" pitch_variety="0"/>
-	<sound key="cycle" fileref="tar21_cycle_FromINS.wav" volume="1.1"/>
+	<sound key="cycle" fileref="x95_cycle_FromCOD16.wav" volume="0.5"/>
 	<sound key="cycle" fileref="TAR21_FORMATION_JP.wav" volume="0.8" pitch_variety="0"/>
-	<sound key="cycle" fileref="tar21_cycle_FromINS.wav" volume="1.1"/>
+	<sound key="cycle" fileref="x95_cycle_FromCOD16.wav" volume="0.5"/>
 	<sound key="cycle" fileref="TAR21_GOATTACK_JP.wav" volume="0.8" pitch_variety="0"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_ar_tar21_from_Eisen.xml"/>
@@ -28938,7 +28930,7 @@
 	<sound key="fire" fileref="g41_fire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.3"/>
 	<sound key="magazine_out" fileref="g41_mgz_out_FromCOD17.wav" volume="0.6"/>
 	<sound key="magazine_in" fileref="g41_mgz_in_FromCOD17.wav" volume="0.6"/>
-	<sound key="cycle" fileref="g3_cycle_FromCOD4R.wav" volume="0.8"/>
+	<sound key="cycle" fileref="g3_cycle_FromCOD17.wav" volume="0.4"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_ar_g41_2401.xml"/>
 	<hud_icon filename="gkw_g41_2401.png"/>
@@ -28986,7 +28978,7 @@
 	<sound key="fire" fileref="g41skill_fire_FromBF3.wav" pitch_variety="0.05" volume="1.2"/>
 	<sound key="magazine_out" fileref="g41_mgz_out_FromCOD17.wav" volume="0.6"/>
 	<sound key="magazine_in" fileref="g41_mgz_in_FromCOD17.wav" volume="0.6"/>
-	<sound key="cycle" fileref="g3_cycle_FromCOD4R.wav" volume="0.8"/>
+	<sound key="cycle" fileref="g3_cycle_FromCOD17.wav" volume="0.4"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_ar_g41_2401.xml"/>
 	<hud_icon filename="gkw_g41_2401.png"/>
@@ -29350,12 +29342,12 @@
 	<animation key="cycle" animation_key="Brifle1.3"/>
 	<animation key="cycle" stance_key="prone" animation_key="Brifle1.3p"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
-	<sound key="fire" fileref="m200_fire_FromARMA3.wav" volume="1.3"/>
-	<sound key="cycle" fileref="m200_cycle_FromCOD6R.wav" volume="0.5"/>
-	<sound key="magazine_out" fileref="m200_mgz_out_FromCOD6R.wav" volume="0.6"/>
-	<sound key="magazine_in" fileref="m200_mgz_in_FromCOD6R.wav" volume="0.6"/>
-	<sound key="cycle_out" fileref="m200_cycle_out_FromCOD6R.wav" volume="0.5"/>
-	<sound key="cycle_in" fileref="m200_cycle_in_FromCOD6R.wav" volume="0.5"/>
+	<sound key="fire" fileref="m200_fire_FromCOD4R.wav" volume="1.2"/>
+	<sound key="cycle" fileref="m200_cycle_FromCOD13.wav" volume="0.35"/>
+	<sound key="magazine_out" fileref="m200_mgz_out_FromCOD13.wav" volume="0.35"/>
+	<sound key="magazine_in" fileref="m200_mgz_in_FromCOD13.wav" volume="0.35"/>
+	<sound key="cycle_out" fileref="m200_cycle_out_FromCOD13.wav" volume="0.35"/>
+	<sound key="cycle_in" fileref="m200_cycle_in_FromCOD13.wav" volume="0.35"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_rf_m200.xml"/>
 	<hud_icon filename="gkw_m200_560.png"/>
@@ -29636,11 +29628,12 @@
 	<animation state_key="throwing_self_over" animation_key="running, gunda sniper"/>
 	<animation key="throwing_self_over" animation_key="running, gunda sniper"/>
 	<animation state_key="stabbing" animation_key="stabbing, gunda"/>
-	<sound key="fire" fileref="type88mod3_fire_FromKF2.wav" pitch_variety="0.05" volume="1.5"/>
-	<sound key="cycle" fileref="type88_cycle_FromBF1.wav" volume="0.6"/>
-	<sound key="reload_one" fileref="m1903_reload_FromCOD16.wav" volume="0.4"/>
-	<sound key="cycle_out" fileref="sniper_cycle_out.wav" volume="1"/>
-	<sound key="cycle_in" fileref="sniper_cycle_in.wav" volume="1"/>
+	<sound key="fire" fileref="type88robot_fire_FromCOD13.wav" pitch_variety="0.05" volume="1.05"/>
+	<sound key="cycle" fileref="type88robot_cycle_FromCOD13.wav" volume="0.4"/>
+	<sound key="magazine_out" fileref="type88robot_mgz_out_FromCOD13.wav" volume="0.4"/>
+	<sound key="magazine_in" fileref="type88robot_mgz_in_FromCOD13.wav" volume="0.4"/>
+	<sound key="cycle_out" fileref="type88robot_cycle_out_FromCOD13.wav" volume="0.4"/>
+	<sound key="cycle_in" fileref="type88robot_cycle_in_FromCOD13.wav" volume="0.4"/>
 	<sound class="impact" fileref="rifle_drop.wav" volume="1"/>
 	<model filename="gkw_88type_gudan_gun.xml"/>
 	<hud_icon filename="gkw_88type_6503_mod3.png"/>
@@ -29982,10 +29975,10 @@
 	<animation state_key="stabbing" animation_key="melee, bayonet"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<weak_hand_hold offset="0.3"/>
-	<sound key="fire" fileref="m1_fire_FromSE4.wav" pitch_variety="0.05" volume="3"/>
-	<sound key="cycle" fileref="pistol2_chamber.wav"/>
+	<sound key="fire" fileref="m1garand_fire_FromCOD18.wav" pitch_variety="0.05" volume="1.3"/>
+	<sound key="cycle" fileref="m1garand_cycle_FromCOD13.wav" volume="0.45"/>
 	<sound key="magazine_out" fileref="rifle_02_m1_garand_ping.wav"/>
-	<sound key="magazine_in" fileref="rifle_clip_in.wav"/>
+	<sound key="magazine_in" fileref="m1garand_mgz_in_FromCOD13.wav" volume="0.45"/>
 	<sound key="last_ammo" fileref="rifle_02_m1_garand_ping.wav"/>
 	<model filename="gkw_rf_m1_bt.xml"/>
 	<hud_icon filename="gkw_m1_1106.png"/>
@@ -30158,10 +30151,10 @@
 <weapon key="gkw_aa12_4401_only.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<specification retrigger_time="0.167" accuracy_factor="1.0" sustained_fire_grow_step="2.1" sustained_fire_diminish_rate="0.45" magazine_size="20" can_shoot_standing="1" suppressed="0" name="AA-12-[Smokeless Lollipop]-[Frag-12 HE Round]" class="0" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="100" barrel_offset="0.4" projectiles_per_shot="1" spread_range="0.1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0" use_basic_muzzle_smoke_effect="0"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.8"/>
-	<sound key="fire" fileref="aa12_fire_FromROUGECOMPANY.wav" pitch_variety="0.05" volume="1"/>
-	<sound key="magazine_out" fileref="AA12_mgz_out_FromCOD16.wav" volume="1"/>
-	<sound key="magazine_in" fileref="AA12_mgz_in_FromCOD16.wav" volume="1"/>
-	<sound key="cycle" fileref="AA12_cycle_FromCOD16.wav" volume="1"/>
+	<sound key="fire" fileref="aa12_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.2"/>
+	<sound key="magazine_out" fileref="aa12_mgz_out_FromCOD16.wav" volume="0.45"/>
+	<sound key="magazine_in" fileref="aa12_mgz_in_FromCOD16.wav" volume="0.35"/>
+	<sound key="cycle" fileref="aa12_cycle_FromCOD16.wav" volume="0.35"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<commonness value="0" in_stock="0"/>
 	<inventory encumbrance="10.0" buy_price="75.0" sell_price="75.0"/>
@@ -30334,7 +30327,7 @@
 	<sound key="fire" fileref="g41_fire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.3"/>
 	<sound key="magazine_out" fileref="g41_mgz_out_FromCOD17.wav" volume="0.6"/>
 	<sound key="magazine_in" fileref="g41_mgz_in_FromCOD17.wav" volume="0.6"/>
-	<sound key="cycle" fileref="g3_cycle_FromCOD4R.wav" volume="0.8"/>
+	<sound key="cycle" fileref="g3_cycle_FromCOD17.wav" volume="0.4"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_ar_g41_7406.xml"/>
 	<hud_icon filename="gkw_g41_7406.png"/>
@@ -30382,7 +30375,7 @@
 	<sound key="fire" fileref="g41skill_fire_FromBF3.wav" pitch_variety="0.05" volume="1.2"/>
 	<sound key="magazine_out" fileref="g41_mgz_out_FromCOD17.wav" volume="0.6"/>
 	<sound key="magazine_in" fileref="g41_mgz_in_FromCOD17.wav" volume="0.6"/>
-	<sound key="cycle" fileref="g3_cycle_FromCOD4R.wav" volume="0.8"/>
+	<sound key="cycle" fileref="g3_cycle_FromCOD17.wav" volume="0.4"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_ar_g41_7406.xml"/>
 	<hud_icon filename="gkw_g41_7406.png"/>
@@ -30735,10 +30728,10 @@
 	<animation state_key="still_against_wall" animation_key="hold, hip fire"/>
 	<animation state_key="walking" animation_key="walking, hip fire"/>
 	<animation state_key="running" animation_key="walking, hip fire"/>
-	<sound key="fire" fileref="minigun_From_payday2.wav" pitch_variety="0.05" volume="0.15"/>
-	<sound key="magazine_out" fileref="mg_clip_out.wav"/>
-	<sound key="magazine_in" fileref="mg_clip_in.wav"/>
-	<sound key="cycle" fileref="rifle_chamber.wav"/>
+	<sound key="fire" fileref="minigun_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.2"/>
+	<sound key="magazine_out" fileref="minigun_mgz_out_FromCOD16.wav" volume="0.5"/>
+	<sound key="magazine_in" fileref="minigun_mgz_in_FromCOD16.wav" volume="0.5"/>
+	<sound key="cycle" fileref="minigun_cycle_FromCOD16.wav" volume="0.7"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_cb_yurine_hanazono_from_dusk.xml"/>
 	<hud_icon filename="gkw_yurine.png"/>
@@ -31334,7 +31327,7 @@
 	<next_in_chain key="gkw_hk416_537_mod3.weapon" share_ammo="0"/>
 	<inventory buy_price="270.0" sell_price="270.0"/>
 	<animation state_key="reload" animation_key="reloading, gl06"/>
-	<sound key="fire" fileref="hk416_fire_FromBFH.wav" pitch_variety="0.05" volume="0.8"/>
+	<sound key="fire" fileref="m320_fire_FromBFBC2.wav" pitch_variety="0.05" volume="1.3"/>
 	<sound key="magazine_out" fileref="m320_mgz_out_FromSQUAD.wav" volume="0.7"/>
 	<sound key="magazine_in" fileref="m320_mgz_in_FromSQUAD.wav" volume="0.7"/>
 	<sound key="cycle" fileref="m320_cycle_FromSQUAD.wav" volume="0.8"/>
@@ -31432,7 +31425,7 @@
 	<next_in_chain key="gkw_hk416_6505_mod3.weapon" share_ammo="0"/>
 	<inventory buy_price="270.0" sell_price="270.0"/>
 	<animation state_key="reload" animation_key="reloading, gl06"/>
-	<sound key="fire" fileref="hk416_fire_FromBFH.wav" pitch_variety="0.05" volume="0.8"/>
+	<sound key="fire" fileref="m320_fire_FromBFBC2.wav" pitch_variety="0.05" volume="1.3"/>
 	<sound key="magazine_out" fileref="m320_mgz_out_FromSQUAD.wav" volume="0.7"/>
 	<sound key="magazine_in" fileref="m320_mgz_in_FromSQUAD.wav" volume="0.7"/>
 	<sound key="cycle" fileref="m320_cycle_FromSQUAD.wav" volume="0.8"/>
@@ -31530,7 +31523,7 @@
 	<next_in_chain key="gkw_hk416_3401_mod3.weapon" share_ammo="0"/>
 	<inventory buy_price="270.0" sell_price="270.0"/>
 	<animation state_key="reload" animation_key="reloading, gl06"/>
-	<sound key="fire" fileref="hk416_fire_FromBFH.wav" pitch_variety="0.05" volume="0.8"/>
+	<sound key="fire" fileref="m320_fire_FromBFBC2.wav" pitch_variety="0.05" volume="1.3"/>
 	<sound key="magazine_out" fileref="m320_mgz_out_FromSQUAD.wav" volume="0.7"/>
 	<sound key="magazine_in" fileref="m320_mgz_in_FromSQUAD.wav" volume="0.7"/>
 	<sound key="cycle" fileref="m320_cycle_FromSQUAD.wav" volume="0.8"/>
@@ -31628,7 +31621,7 @@
 	<next_in_chain key="gkw_hk416mod3_805.weapon" share_ammo="0"/>
 	<inventory buy_price="270.0" sell_price="270.0"/>
 	<animation state_key="reload" animation_key="reloading, gl06"/>
-	<sound key="fire" fileref="hk416_fire_FromBFH.wav" pitch_variety="0.05" volume="0.8"/>
+	<sound key="fire" fileref="m320_fire_FromBFBC2.wav" pitch_variety="0.05" volume="1.3"/>
 	<sound key="magazine_out" fileref="m320_mgz_out_FromSQUAD.wav" volume="0.7"/>
 	<sound key="magazine_in" fileref="m320_mgz_in_FromSQUAD.wav" volume="0.7"/>
 	<sound key="cycle" fileref="m320_cycle_FromSQUAD.wav" volume="0.8"/>
@@ -32334,10 +32327,10 @@
 	<commonness value="0" in_stock="0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
-	<sound key="fire" fileref="star15mod_fire_FromDAYSGONE.wav" pitch_variety="0.01" volume="1.4"/>
-	<sound key="magazine_out" fileref="star15_mgz_out_FromCOD17.wav" volume="0.7"/>
-	<sound key="magazine_in" fileref="star15_mgz_in_FromCOD17.wav" volume="0.7"/>
-	<sound key="cycle" fileref="star15_cycle_FromCOD17.wav" volume="0.7"/>
+	<sound key="fire" fileref="ar15mod3_fire_FromCOD8.wav" pitch_variety="0.01" volume="1.2"/>
+	<sound key="magazine_out" fileref="star15_mgz_out_FromCOD17.wav" volume="0.6"/>
+	<sound key="magazine_in" fileref="star15_mgz_in_FromCOD17.wav" volume="0.6"/>
+	<sound key="cycle" fileref="star15_cycle_FromCOD17.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AR15Mod_BUILDOVER_JP.wav" volume="0.7" pitch_variety="0"/>
 	<sound key="cycle" fileref="AR15Mod_FEED_JP.wav" volume="0.7" pitch_variety="0"/>
 	<sound key="cycle" fileref="AR15Mod_FIX_JP.wav" volume="0.7" pitch_variety="0"/>
@@ -32410,9 +32403,9 @@
 	<animation state_key="stabbing" animation_key="pistol whip 3"/>
 	<effect class="muzzle" ref="muzzle_pink"/>
 	<sound key="fire" fileref="ar15mod3skill_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.1"/>
-	<sound key="magazine_out" fileref="star15_mgz_out_FromCOD17.wav" volume="0.7"/>
-	<sound key="magazine_in" fileref="star15_mgz_in_FromCOD17.wav" volume="0.7"/>
-	<sound key="cycle" fileref="star15_cycle_FromCOD17.wav" volume="0.7"/>
+	<sound key="magazine_out" fileref="star15_mgz_out_FromCOD17.wav" volume="0.6"/>
+	<sound key="magazine_in" fileref="star15_mgz_in_FromCOD17.wav" volume="0.6"/>
+	<sound key="cycle" fileref="star15_cycle_FromCOD17.wav" volume="0.6"/>
 	<sound key="cycle" fileref="AR15Mod_ATTACK_JP.wav" volume="0.7" pitch_variety="0"/>
 	<sound key="cycle" fileref="AR15Mod_DEFENSE_JP.wav" volume="0.7" pitch_variety="0"/>
 	<sound key="cycle" fileref="AR15Mod_SKILL1_JP.wav" volume="0.7" pitch_variety="0"/>
@@ -32634,9 +32627,9 @@
 	<animation state_key="stabbing" animation_key="melee, quick knife"/>
 	<animation state_key="stabbing" animation_key="pistol whip 3"/>
 	<sound key="fire" fileref="ump45_fire_FromBF4.wav" pitch_variety="0.05" volume="1.2"/>
-	<sound key="magazine_out" fileref="ump45_mgz_out_FromCOD16.wav" volume="0.5"/>
-	<sound key="magazine_in" fileref="ump45_mgz_in_FromCOD16.wav" volume="0.5"/>
-	<sound key="cycle" fileref="ump45_cycle_FromCOD16.wav" volume="0.5"/>
+	<sound key="magazine_out" fileref="ump45_mgz_out_FromCOD16.wav" volume="0.4"/>
+	<sound key="magazine_in" fileref="ump45_mgz_in_FromCOD16.wav" volume="0.4"/>
+	<sound key="cycle" fileref="ump45_cycle_FromCOD16.wav" volume="0.4"/>
 	<sound class="impact" fileref="rifle_drop.wav" volume="1"/>
 	<model filename="gkw_smg_ump45.xml"/>
 	<hud_icon filename="gkw_ump45_410.png"/>
@@ -32689,9 +32682,9 @@
 	<animation state_key="stabbing" animation_key="melee, quick knife"/>
 	<animation state_key="stabbing" animation_key="pistol whip 3"/>
 	<sound key="fire" fileref="ump45_fire_FromBF4.wav" pitch_variety="0.05" volume="1.2"/>
-	<sound key="magazine_out" fileref="ump45_mgz_out_FromCOD16.wav" volume="0.5"/>
-	<sound key="magazine_in" fileref="ump45_mgz_in_FromCOD16.wav" volume="0.5"/>
-	<sound key="cycle" fileref="ump45_cycle_FromCOD16.wav" volume="0.5"/>
+	<sound key="magazine_out" fileref="ump45_mgz_out_FromCOD16.wav" volume="0.4"/>
+	<sound key="magazine_in" fileref="ump45_mgz_in_FromCOD16.wav" volume="0.4"/>
+	<sound key="cycle" fileref="ump45_cycle_FromCOD16.wav" volume="0.4"/>
 	<sound class="impact" fileref="rifle_drop.wav" volume="1"/>
 	<model filename="gkw_smg_ump45.xml"/>
 	<hud_icon filename="gkw_ump45_535.png"/>
@@ -32726,30 +32719,30 @@
 	<inventory buy_price="120.0" sell_price="120.0"/>
 	<commonness value="0" in_stock="0"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.8"/>
-	<sound key="fire" fileref="sass_fire_From_arma2.wav" pitch_variety="0.01" volume="1"/>
-	<sound key="magazine_out" fileref="supersass_mgz_out_FromSQUAD.wav" volume="0.7"/>
-	<sound key="magazine_in" fileref="supersass_mgz_in_FromSQUAD.wav" volume="0.7"/>
-	<sound key="cycle" fileref="supersass_cycle_FromR6S.wav" volume="0.7"/>
+	<sound key="fire" fileref="sass_fire_FromCOD13.wav" pitch_variety="0.01" volume="1.1"/>
+	<sound key="magazine_out" fileref="sass_mgz_out_FromSQUAD.wav" volume="0.55"/>
+	<sound key="magazine_in" fileref="sass_mgz_in_FromSQUAD.wav" volume="0.55"/>
+	<sound key="cycle" fileref="sass_cycle_FromCOD13.wav" volume="0.4"/>
 	<sound key="cycle" fileref="SuperSASSMod_ATTACK_JP.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="supersass_cycle_FromR6S.wav" volume="0.7"/>
+	<sound key="cycle" fileref="sass_cycle_FromCOD13.wav" volume="0.4"/>
 	<sound key="cycle" fileref="SuperSASSMod_BLACKACTION_JP.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="supersass_cycle_FromR6S.wav" volume="0.7"/>
+	<sound key="cycle" fileref="sass_cycle_FromCOD13.wav" volume="0.4"/>
 	<sound key="cycle" fileref="SuperSASSMod_BREAK_JP.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="supersass_cycle_FromR6S.wav" volume="0.7"/>
+	<sound key="cycle" fileref="sass_cycle_FromCOD13.wav" volume="0.4"/>
 	<sound key="cycle" fileref="SuperSASSMod_COMBINE_JP.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="supersass_cycle_FromR6S.wav" volume="0.7"/>
+	<sound key="cycle" fileref="sass_cycle_FromCOD13.wav" volume="0.4"/>
 	<sound key="cycle" fileref="SuperSASSMod_DEFENSE_JP.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="supersass_cycle_FromR6S.wav" volume="0.7"/>
+	<sound key="cycle" fileref="sass_cycle_FromCOD13.wav" volume="0.4"/>
 	<sound key="cycle" fileref="SuperSASSMod_FEED_JP.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="supersass_cycle_FromR6S.wav" volume="0.7"/>
+	<sound key="cycle" fileref="sass_cycle_FromCOD13.wav" volume="0.4"/>
 	<sound key="cycle" fileref="SuperSASSMod_FORMATION_JP.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="supersass_cycle_FromR6S.wav" volume="0.7"/>
+	<sound key="cycle" fileref="sass_cycle_FromCOD13.wav" volume="0.4"/>
 	<sound key="cycle" fileref="SuperSASSMod_GOATTACK_JP.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="supersass_cycle_FromR6S.wav" volume="0.7"/>
+	<sound key="cycle" fileref="sass_cycle_FromCOD13.wav" volume="0.4"/>
 	<sound key="cycle" fileref="SuperSASSMod_LOADING_JP.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="supersass_cycle_FromR6S.wav" volume="0.7"/>
+	<sound key="cycle" fileref="sass_cycle_FromCOD13.wav" volume="0.4"/>
 	<sound key="cycle" fileref="SuperSASSMod_MEET_JP.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="supersass_cycle_FromR6S.wav" volume="0.7"/>
+	<sound key="cycle" fileref="sass_cycle_FromCOD13.wav" volume="0.4"/>
 	<sound key="cycle" fileref="SuperSASSMod_OPERATIONBEGIN_JP.wav" volume="1.0" pitch_variety="0"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_rf_supersass.xml"/>
@@ -32800,16 +32793,16 @@
 	<animation key="reload" stance_key="prone" animation_key="magBrifleRpSASS"/>
 	<animation state_key="next_in_chain_in" animation_key="change weapon in ssass"/>
 	<commonness value="0" in_stock="0"/>
-	<sound key="fire" fileref="supersassmod3_fire_FromBF4.wav" pitch_variety="0.01" volume="1.2"/>
-	<sound key="magazine_out" fileref="supersass_mgz_out_FromSQUAD.wav" volume="0.7"/>
-	<sound key="magazine_in" fileref="supersass_mgz_in_FromSQUAD.wav" volume="0.7"/>
-	<sound key="cycle" fileref="supersass_cycle_FromR6S.wav" volume="0.7"/>
+	<sound key="fire" fileref="sassskill_fire_FromCOD16.wav" pitch_variety="0.01" volume="1.2"/>
+	<sound key="magazine_out" fileref="sass_mgz_out_FromSQUAD.wav" volume="0.55"/>
+	<sound key="magazine_in" fileref="sass_mgz_in_FromSQUAD.wav" volume="0.55"/>
+	<sound key="cycle" fileref="sass_cycle_FromCOD13.wav" volume="0.4"/>
 	<sound key="cycle" fileref="SuperSASSMod_SKILL1_JP.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="supersass_cycle_FromR6S.wav" volume="0.7"/>
+	<sound key="cycle" fileref="sass_cycle_FromCOD13.wav" volume="0.4"/>
 	<sound key="cycle" fileref="SuperSASSMod_SKILL2_JP.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="supersass_cycle_FromR6S.wav" volume="0.7"/>
+	<sound key="cycle" fileref="sass_cycle_FromCOD13.wav" volume="0.4"/>
 	<sound key="cycle" fileref="SuperSASSMod_SKILL3_JP.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="supersass_cycle_FromR6S.wav" volume="0.7"/>
+	<sound key="cycle" fileref="sass_cycle_FromCOD13.wav" volume="0.4"/>
 	<sound key="cycle" fileref="SuperSASSMod_TIP_JP.wav" volume="1.0" pitch_variety="0"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_rf_supersass.xml"/>
@@ -35029,10 +35022,10 @@
 	<specification accuracy_factor="1.0" barrel_offset="0.4" class="0" slot="0" magazine_size="20" name="G3(MOD3)-[Parsty Cook on Battlefield]" projectile_speed="238.0" retrigger_time="0.1" suppressed="0" sustained_fire_diminish_rate="2.5" sustained_fire_grow_step="0.45" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
 	<inventory buy_price="150.0" sell_price="150.0"/>
-	<sound key="fire" fileref="g3_fire_FromBF2.wav" pitch_variety="0.05" volume="1"/>
-	<sound key="magazine_out" fileref="g3_mgz_out_FromCOD4R.wav" volume="0.9"/>
-	<sound key="magazine_in" fileref="g3_mgz_in_FromCOD4R.wav" volume="0.9"/>
-	<sound key="cycle" fileref="g3_cycle_FromCOD4R.wav" volume="0.9"/>
+	<sound key="fire" fileref="g3_fire_FromCOD17.wav" pitch_variety="0.05" volume="1.2"/>
+	<sound key="magazine_out" fileref="g3_mgz_out_FromCOD17.wav" volume="0.4"/>
+	<sound key="magazine_in" fileref="g3_mgz_in_FromCOD17.wav" volume="0.4"/>
+	<sound key="cycle" fileref="g3_cycle_FromCOD17.wav" volume="0.4"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_ar_g3.xml"/>
 	<hud_icon filename="gkw_g3_1303.png"/>
@@ -35438,10 +35431,10 @@
 <weapon key="gkw_aa12_only.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<specification retrigger_time="0.167" accuracy_factor="1.0" sustained_fire_grow_step="2.1" sustained_fire_diminish_rate="0.45" magazine_size="20" can_shoot_standing="1" suppressed="0" name="AA-12-[Frag-12 HE Round]" class="0" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="100" barrel_offset="0.4" projectiles_per_shot="1" spread_range="0.1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0" use_basic_muzzle_smoke_effect="0"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.8"/>
-	<sound key="fire" fileref="aa12_fire_FromROUGECOMPANY.wav" pitch_variety="0.05" volume="1"/>
-	<sound key="magazine_out" fileref="AA12_mgz_out_FromCOD16.wav" volume="1"/>
-	<sound key="magazine_in" fileref="AA12_mgz_in_FromCOD16.wav" volume="1"/>
-	<sound key="cycle" fileref="AA12_cycle_FromCOD16.wav" volume="1"/>
+	<sound key="fire" fileref="aa12_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.2"/>
+	<sound key="magazine_out" fileref="aa12_mgz_out_FromCOD16.wav" volume="0.45"/>
+	<sound key="magazine_in" fileref="aa12_mgz_in_FromCOD16.wav" volume="0.35"/>
+	<sound key="cycle" fileref="aa12_cycle_FromCOD16.wav" volume="0.35"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<commonness value="0" in_stock="0"/>
 	<inventory encumbrance="10.0" buy_price="75.0" sell_price="75.0"/>
@@ -35498,16 +35491,16 @@
 	<animation key="reload" stance_key="prone" animation_key="magBrifleRpSASS"/>
 	<animation state_key="next_in_chain_in" animation_key="change weapon in ssass"/>
 	<commonness value="0" in_stock="0"/>
-	<sound key="fire" fileref="supersassmod3_fire_FromBF4.wav" pitch_variety="0.01" volume="1.2"/>
-	<sound key="magazine_out" fileref="supersass_mgz_out_FromSQUAD.wav" volume="0.7"/>
-	<sound key="magazine_in" fileref="supersass_mgz_in_FromSQUAD.wav" volume="0.7"/>
-	<sound key="cycle" fileref="supersass_cycle_FromR6S.wav" volume="0.7"/>
+	<sound key="fire" fileref="sassskill_fire_FromCOD16.wav" pitch_variety="0.01" volume="1.2"/>
+	<sound key="magazine_out" fileref="sass_mgz_out_FromSQUAD.wav" volume="0.55"/>
+	<sound key="magazine_in" fileref="sass_mgz_in_FromSQUAD.wav" volume="0.55"/>
+	<sound key="cycle" fileref="sass_cycle_FromCOD13.wav" volume="0.4"/>
 	<sound key="cycle" fileref="SuperSASSMod_SKILL1_JP.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="supersass_cycle_FromR6S.wav" volume="0.7"/>
+	<sound key="cycle" fileref="sass_cycle_FromCOD13.wav" volume="0.4"/>
 	<sound key="cycle" fileref="SuperSASSMod_SKILL2_JP.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="supersass_cycle_FromR6S.wav" volume="0.7"/>
+	<sound key="cycle" fileref="sass_cycle_FromCOD13.wav" volume="0.4"/>
 	<sound key="cycle" fileref="SuperSASSMod_SKILL3_JP.wav" volume="1.0" pitch_variety="0"/>
-	<sound key="cycle" fileref="supersass_cycle_FromR6S.wav" volume="0.7"/>
+	<sound key="cycle" fileref="sass_cycle_FromCOD13.wav" volume="0.4"/>
 	<sound key="cycle" fileref="SuperSASSMod_TIP_JP.wav" volume="1.0" pitch_variety="0"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_rf_supersassmod3.xml"/>
@@ -37417,10 +37410,10 @@
 	<animation state_key="reload" animation_key="reloading, magazine rifle 0.9"/>
 	<animation state_key="stabbing" animation_key="melee, quick knife"/>
 	<animation state_key="stabbing" animation_key="pistol whip 3"/>
-	<sound key="fire" fileref="ump45_fire_FromBF4.wav" pitch_variety="0.05" volume="1.1"/>
-	<sound key="magazine_out" fileref="ump45_mgz_out_FromKF2.wav" volume="1.5"/>
-	<sound key="magazine_in" fileref="ump45_mgz_in_FromKF2.wav" volume="1.5"/>
-	<sound key="cycle" fileref="ump45_cycle_FromKF2.wav" volume="1.5"/>
+	<sound key="fire" fileref="ump45_fire_FromBF4.wav" pitch_variety="0.05" volume="1.2"/>
+	<sound key="magazine_out" fileref="ump45_mgz_out_FromCOD16.wav" volume="0.4"/>
+	<sound key="magazine_in" fileref="ump45_mgz_in_FromCOD16.wav" volume="0.4"/>
+	<sound key="cycle" fileref="ump45_cycle_FromCOD16.wav" volume="0.4"/>
 	<sound class="impact" fileref="rifle_drop.wav" volume="1"/>
 	<model filename="gkw_smg_ump45.xml"/>
 	<hud_icon filename="gkw_ump45mod3.png"/>
@@ -39350,7 +39343,7 @@
 </weapon>
 
 <weapon time_to_live_out_in_the_open="0" drop_count_factor_on_death="0.5" drop_count_factor_on_player_death="1.0" key="sfw_alchemist_at.weapon" on_ground_up="0 0 1">
-	<specification retrigger_time="0.12" accuracy_factor="0.75" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="0.5" magazine_size="20" can_shoot_standing="1" can_shoot_crouching="0" can_shoot_prone="0" carry_in_two_hands="0" suppressed="0" name="SF-Alchemist" class="0" reload_one_at_a_time="0" sight_range_modifier="1.5" projectile_speed="135" burst_shots="1" slot="1" spread_range="0.1" projectiles_per_shot="2"/>
+	<specification retrigger_time="0.12" accuracy_factor="0.75" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="0.5" magazine_size="2" can_shoot_standing="1" can_shoot_crouching="0" can_shoot_prone="0" carry_in_two_hands="0" suppressed="0" name="SF-Alchemist" class="0" consume="1" reload_one_at_a_time="0" sight_range_modifier="1.5" projectile_speed="135" burst_shots="1" slot="1" spread_range="0.1" projectiles_per_shot="2"/>
 	<inventory encumbrance="3.0" buy_price="5.0" sell_price="5.0"/>
 	<capacity value="6" source="rank" source_value="0.0"/>
 	<commonness value="0.1" in_stock="1" can_respawn_with="1"/>
@@ -40189,7 +40182,7 @@
 	<sound key="fire" fileref="kccosr_fire_FromCOD10.wav" pitch_variety="0.05" volume="1.2"/>
 	<sound key="magazine_out" fileref="kccosr_mgz_out_FromCOD10.wav" volume="0.45"/>
 	<sound key="magazine_in" fileref="m21skill_mgz_in_FromCOD16.wav" volume="0.7"/>
-	<sound key="cycle" fileref="m1911_cycle_FromINS.wav" volume="0.8"/>
+	<sound key="cycle" fileref="kccosr_cycle_FromCOD10.wav" volume="0.8"/>
 	<model filename="kccow_tactical_sniper_rf.xml"/>
 	<hud_icon filename="kccow_cerynitis.png"/>
 	<ballistics near_far_distance="0.0" speed_estimation_near="240.0" speed_estimation_far="240.0" max_speed="3200.0" randomness="0.0" curve_height="4.5" tweak_factor="4.8"/>
