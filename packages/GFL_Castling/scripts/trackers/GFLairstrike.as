@@ -363,7 +363,7 @@ class GFLairstrike : Tracker {
                     case 8:{
                         // _log("Sniper Fairy activated");
                         CreateDirectProjectile(m_metagame,start_pos.add(Vector3(0,40,0)),end_pos,"fairy_snipe.projectile",cid,fid,240);
-                        playSoundAtLocation(m_metagame,"sniperfairy_fire_FromCOD15.wav",fid,end_pos,2.0);
+                        playSoundAtLocation(m_metagame,"sniperfairy_fire_FromCOD15.wav",fid,end_pos,2.2);
                         Airstrike_strafe.removeAt(a);
                         break;                        
                     }                    
