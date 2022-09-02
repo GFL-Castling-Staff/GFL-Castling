@@ -987,7 +987,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.m_mapInfo.m_path = "media/packages/GFL_Castling/maps/map6_c";
 		stage.m_mapInfo.m_id = "map6";
 
-		stage.m_maxSoldiers = 15 * 11;                                             // was 17*7 in 1.65
+		stage.m_maxSoldiers = 15 * 5;                                             // was 17*7 in 1.65
 		stage.m_playerAiCompensation = 8;                                         // was 7 (test4)
         stage.m_playerAiReduction = 2;                                            // was 3 (test2)
     	stage.addTracker(jupiter(m_metagame,30));
@@ -1006,9 +1006,10 @@ class StageConfiguratorInvasion : StageConfigurator {
 			stage.m_factions.insertLast(f);
 		}
 		{
-			Faction f(getFactionConfigs()[getRandomEnemyIndex()], createCommanderAiCommand(1, 0.65, 0.2)); 
+			Faction f(getFactionConfigs()[getRandomEnemyIndex()], createCommanderAiCommand(1, 0.45, 0.2)); 
 			f.m_overCapacity = 80;                                              
-			f.m_capacityOffset = 30;                                            
+			f.m_capacityOffset = 50;
+			f.m_capacityMultiplier = 1.0;
 			stage.m_factions.insertLast(f);
 		}
 
@@ -1973,7 +1974,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		// 掐头去尾 建立一个数组后随机排序输出打乱的数组
 		array<int> CopyedFactionList;
 		array<int> FactionList;
-		for (int i = 1; i < getFactionConfigs().size()-1; i++){
+		for (int i = 1; i < (getFactionConfigs().size()-1); i++){
 			CopyedFactionList.insertLast(i);
 		}
 		while (CopyedFactionList.size()>0){

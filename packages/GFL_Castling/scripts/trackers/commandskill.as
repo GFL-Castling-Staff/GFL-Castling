@@ -363,7 +363,7 @@ class CommandSkill : Tracker {
             const XmlElement@ info = getPlayerInfo(m_metagame, senderId);
 			if (info !is null) {
                 int cId = info.getIntAttribute("character_id");
-                string pname = info.getIntAttribute("name");
+                string pname = info.getStringAttribute("name");
                 const XmlElement@ targetCharacter = getCharacterInfo2(m_metagame,cId);
                 if (targetCharacter is null) return;
                 array<const XmlElement@>@ equipment = targetCharacter.getElementsByTagName("item");

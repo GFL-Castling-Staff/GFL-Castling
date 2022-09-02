@@ -151,6 +151,7 @@ class ItemDropEvent : Tracker {
                             a["%doll_name"] = getResourceName(m_metagame, itemKey, "weapon");
                             sendPrivateMessageKey(m_metagame, pId, "digimindupdatesuccess",a);
                             playPrivateSound(m_metagame,"digimind_sfx2.wav",pId);
+                            giveRP(m_metagame,cId,-499);
                         }
                         else{
                             addItemInBackpack(m_metagame,cId,"carry_item","firecontrol.carry_item");
