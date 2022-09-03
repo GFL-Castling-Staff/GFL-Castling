@@ -1443,7 +1443,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		array<int> FactionIndex = getRandomEnemyList();
 
 		{
-			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0, 0.5, 0.15));   
+			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0, 0.6, 0.15));   
 			f.m_overCapacity = 0;
 			f.m_capacityOffset = 0; 
 			f.m_capacityMultiplier = 1.0;                                          
@@ -1651,7 +1651,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.m_maxRandomCrates = 3;  
 
 		{ 				
-			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0, 0.4, 0.1));   // was 0.3 0.1  
+			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0, 0.6, 0.2));   // was 0.3 0.1  
 			f.m_overCapacity = 50;
 			f.m_capacityOffset = 50;      // was 5                                       
 			f.m_capacityMultiplier = 1.0;                                               
