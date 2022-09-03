@@ -1,35 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <carry_items>
-
-<carry_item name="Decrypt Dream Box" key="complete_box.carry_item" time_to_live_out_in_the_open="90.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="1.0" player_death_drop_owner_lock_time="90.0">
-	<capacity value="100" source="rank" source_value="0.0" />
-	<inventory buy_price="0" sell_price="0" encumbrance="-0.5" />
-	<commonness value="0.0" in_stock="0" can_respawn_with="0" />
-	<model mesh_filename="reward_box.xml"/>
-	<hud_icon filename="hud_reward_box.png" />
-</carry_item>
-
-<carry_item name="Singularity Supply Box" key="complete_box_singularity.carry_item" time_to_live_out_in_the_open="90.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="1.0" player_death_drop_owner_lock_time="90.0">
-	<capacity value="100" source="rank" source_value="0.0" />
-	<inventory buy_price="0" sell_price="0" encumbrance="-0.5" />
-	<commonness value="0.0" in_stock="0" can_respawn_with="0" />
-	<model mesh_filename="reward_box_Singularity.xml"/>
-	<hud_icon filename="hud_reward_box_1.png" />
-</carry_item>
-
-<carry_item name="Tough Battle Supply Box" key="complete_box_hardcore.carry_item" time_to_live_out_in_the_open="90.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="1.0" player_death_drop_owner_lock_time="90.0">
-	<capacity value="100" source="rank" source_value="0.0" />
-	<inventory buy_price="0" sell_price="0" encumbrance="-0.5" />
-	<commonness value="0.0" in_stock="0" can_respawn_with="0" />
-	<model mesh_filename="reward_box_hardcore.xml"/>
-	<hud_icon filename="hud_reward_box_3.png" />
-</carry_item>
-
-<carry_item name="Enjoy Time Supply Box" key="complete_box_xb.carry_item" time_to_live_out_in_the_open="90.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="1.0" player_death_drop_owner_lock_time="90.0">
-	<capacity value="100" source="rank" source_value="0.0" />
-	<inventory buy_price="0" sell_price="0" encumbrance="-0.5" />
-	<commonness value="0.0" in_stock="0" can_respawn_with="0" />
-	<model mesh_filename="reward_box_xb.xml"/>
-	<hud_icon filename="hud_reward_box_2.png" />
-</carry_item>
+	<carry_item name="Decrypt Dream Box" key="complete_box.carry_item" time_to_live_out_in_the_open="90.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="1.0" player_death_drop_owner_lock_time="90.0">
+		<capacity value="100" source="rank" source_value="0.0" />
+		<inventory buy_price="0" sell_price="0" encumbrance="-0.5" />
+		<commonness value="0.0" in_stock="0" can_respawn_with="0" />
+		<model mesh_filename="reward_box.xml"/>
+		<hud_icon filename="hud_reward_box.png" />
+	</carry_item>
+	<carry_item name="Singularity Supply Box" key="complete_box_singularity.carry_item" time_to_live_out_in_the_open="90.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="1.0" player_death_drop_owner_lock_time="90.0">
+		<capacity value="100" source="rank" source_value="0.0" />
+		<inventory buy_price="0" sell_price="0" encumbrance="-0.5" />
+		<commonness value="0.0" in_stock="0" can_respawn_with="0" />
+		<model mesh_filename="reward_box_Singularity.xml"/>
+		<hud_icon filename="hud_reward_box_1.png" />
+	</carry_item>
+	<carry_item name="Tough Battle Supply Box" key="complete_box_hardcore.carry_item" time_to_live_out_in_the_open="90.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="1.0" player_death_drop_owner_lock_time="90.0">
+		<capacity value="100" source="rank" source_value="0.0" />
+		<inventory buy_price="0" sell_price="0" encumbrance="-0.5" />
+		<commonness value="0.0" in_stock="0" can_respawn_with="0" />
+		<model mesh_filename="reward_box_hardcore.xml"/>
+		<hud_icon filename="hud_reward_box_3.png" />
+	</carry_item>
+	<carry_item name="Enjoy Time Supply Box" key="complete_box_xb.carry_item" time_to_live_out_in_the_open="90.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="1.0" player_death_drop_owner_lock_time="90.0">
+		<capacity value="100" source="rank" source_value="0.0" />
+		<inventory buy_price="0" sell_price="0" encumbrance="-0.5" />
+		<commonness value="0.0" in_stock="0" can_respawn_with="0" />
+		<model mesh_filename="reward_box_xb.xml"/>
+		<hud_icon filename="hud_reward_box_2.png" />
+	</carry_item>
 </carry_items>

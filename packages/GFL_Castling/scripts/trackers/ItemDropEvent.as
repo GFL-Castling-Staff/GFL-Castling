@@ -189,6 +189,76 @@ class ItemDropEvent : Tracker {
                     break;
                 }
             }
+
+            if(startsWith(itemKey,"exchange_t6_ticket")){
+                int jud_num1 =  int(Tier6VestIndex[itemKey]);
+                switch(jud_num1)
+                {
+                    case 1:{
+                        addMutilItemInBackpack(m_metagame,cId,"carry_item","acbp_t6.carry_item",3);
+                        playPrivateSound(m_metagame,"digimind_sfx1.wav",pId);
+                        break;
+                    }
+                    case 2:{
+                        addMutilItemInBackpack(m_metagame,cId,"carry_item","bp_t6.carry_item",3);
+                        playPrivateSound(m_metagame,"digimind_sfx1.wav",pId);
+                        break;
+                    }
+                    case 3:{
+                        addMutilItemInBackpack(m_metagame,cId,"carry_item","cc_t6.carry_item",3);
+                        playPrivateSound(m_metagame,"digimind_sfx1.wav",pId);
+                        break;
+                    }
+                    case 4:{
+                        addMutilItemInBackpack(m_metagame,cId,"carry_item","exo_t6.carry_item",3);
+                        playPrivateSound(m_metagame,"digimind_sfx1.wav",pId);
+                        break;
+                    }
+                    case 5:{
+                        addMutilItemInBackpack(m_metagame,cId,"carry_item","exo_x_t6.carry_item",3);
+                        playPrivateSound(m_metagame,"digimind_sfx1.wav",pId);
+                        break;
+                    }
+                    case 6:{
+                        addMutilItemInBackpack(m_metagame,cId,"carry_item","lcc_t6.carry_item",3);
+                        playPrivateSound(m_metagame,"digimind_sfx1.wav",pId);
+                        break;
+                    }
+                    case 7:{
+                        addMutilItemInBackpack(m_metagame,cId,"carry_item","srexo_t6.carry_item",3);
+                        playPrivateSound(m_metagame,"digimind_sfx1.wav",pId);
+                        break;
+                    }
+                    case 8:{
+                        addMutilItemInBackpack(m_metagame,cId,"carry_item","tms_t6.carry_item",3);
+                        playPrivateSound(m_metagame,"digimind_sfx1.wav",pId);
+                        break;
+                    }
+                    case 9:{
+                        addMutilItemInBackpack(m_metagame,cId,"carry_item","ultra_bp_t6.carry_item",3);
+                        playPrivateSound(m_metagame,"digimind_sfx1.wav",pId);
+                        break;
+                    }        
+                    case 10:{
+                        addMutilItemInBackpack(m_metagame,cId,"carry_item","gk_persica.carry_item",3);
+                        playPrivateSound(m_metagame,"digimind_sfx1.wav",pId);
+                        break;
+                    }       
+                    case 11:{
+                        addMutilItemInBackpack(m_metagame,cId,"carry_item","chip_a_t6.carry_item",3);
+                        playPrivateSound(m_metagame,"digimind_sfx1.wav",pId);
+                        break;
+                    }    
+                    case 12:{
+                        addMutilItemInBackpack(m_metagame,cId,"carry_item","chip_b_t6.carry_item",3);
+                        playPrivateSound(m_metagame,"digimind_sfx1.wav",pId);
+                        break;
+                    }                                                                                                                       
+                    default:{
+                        break;
+                    }
+                }
+            }
         }
     }
 
@@ -341,3 +411,23 @@ class ItemDropEvent : Tracker {
 }
 
 
+dictionary Tier6VestIndex = {
+    // 空
+    {"",0},
+
+    {"exchange_t6_ticket_1",1},
+    {"exchange_t6_ticket_2",2}, 
+    {"exchange_t6_ticket_3",3}, 
+    {"exchange_t6_ticket_4",4},     
+    {"exchange_t6_ticket_5",5}, 
+    {"exchange_t6_ticket_6",6}, 
+    {"exchange_t6_ticket_7",7}, 
+    {"exchange_t6_ticket_8",8}, 
+    {"exchange_t6_ticket_9",9}, 
+    {"exchange_t6_ticket_10",10}, 
+    {"exchange_t6_ticket_11",11}, 
+    {"exchange_t6_ticket_12",12}, 
+    {"exchange_t6_ticket_13",13}, 
+
+    {"666",0}
+};

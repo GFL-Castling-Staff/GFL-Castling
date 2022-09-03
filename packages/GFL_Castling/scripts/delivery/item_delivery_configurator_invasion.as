@@ -151,18 +151,18 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		};
 		array<array<ScoredResource@>> rewardPasses = {
 			{
-		ScoredResource("exo_t6.carry_item", "carry_item", 1.0f),
-		ScoredResource("exo_x_t6.carry_item", "carry_item", 1.0f),
-		ScoredResource("bp_t6.carry_item", "carry_item", 1.0f),
-		ScoredResource("chip_a_t6.carry_item", "carry_item", 1.0f),
-		ScoredResource("chip_b_t6.carry_item", "carry_item", 1.0f),
-		ScoredResource("cc_t6.carry_item", "carry_item", 1.0f),
-		ScoredResource("lcc_t6.carry_item", "carry_item", 1.0f),
-		ScoredResource("tms_t6.carry_item", "carry_item", 1.0f),
-		ScoredResource("srexo_t6.carry_item", "carry_item", 1.0f),
-		ScoredResource("ultra_bp_t6.carry_item", "carry_item", 1.0f),
-		ScoredResource("gk_persica.carry_item", "carry_item", 0.2f),
-		ScoredResource("acbp_t6.carry_item", "carry_item", 1.0f)
+		ScoredResource("exchange_t6_ticket_1", "carry_item", 1.0f),
+		ScoredResource("exchange_t6_ticket_2", "carry_item", 1.0f),
+		ScoredResource("exchange_t6_ticket_3", "carry_item", 1.0f),
+		ScoredResource("exchange_t6_ticket_4", "carry_item", 1.0f),
+		ScoredResource("exchange_t6_ticket_5", "carry_item", 1.0f),
+		ScoredResource("exchange_t6_ticket_6", "carry_item", 1.0f),
+		ScoredResource("exchange_t6_ticket_7", "carry_item", 1.0f),
+		ScoredResource("exchange_t6_ticket_8", "carry_item", 1.0f),
+		ScoredResource("exchange_t6_ticket_9", "carry_item", 1.0f),
+		ScoredResource("exchange_t6_ticket_10", "carry_item", 0.2f),
+		ScoredResource("exchange_t6_ticket_11", "carry_item", 1.0f),
+		ScoredResource("exchange_t6_ticket_12", "carry_item", 1.0f)
 			}
 		};
 		processRewardPasses(rewardPasses);
