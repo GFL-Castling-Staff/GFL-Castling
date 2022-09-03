@@ -22,6 +22,12 @@ class PausingKothTimer : Tracker {
 		_log("starting PausingKothTimer", 1);
 		m_started = true;
 		m_metagame.getComms().send("<command class='set_game_timer' faction_id='0' pause='1' time='" + m_time + "' />");
+		XmlElement command("command");
+		command.setStringAttribute("class", "change_game_settings");
+		XmlElement f1("faction");
+		f1.setIntAttribute("disable_enemy_spawnpoints_soldier_count_offset", -100);
+		command.appendChild(f1);
+		m_metagame.getComms().send(command);
 		refresh();
 	}
 

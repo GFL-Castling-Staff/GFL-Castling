@@ -14,7 +14,7 @@
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
         <modifier class="speed" value="-0.1" />
-        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="hit_success_probability" value="-1.35" />
         <modifier class="detectability" value="0.5" />
 	</carry_item>
 	<carry_item key="pard_sg_1" time_to_live_out_in_the_open="15" name="Armed Paradesu Force Armor" transform_on_consume="pard_sg_2" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
