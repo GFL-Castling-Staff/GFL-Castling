@@ -16829,7 +16829,7 @@
 </weapon>
 
 <weapon key="gkw_type80_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.5" retrigger_time="0.08" accuracy_factor="1.0" sustained_fire_grow_step="0.5" sustained_fire_diminish_rate="1.0" magazine_size="100" stance_accuracy_rate="0.5" suppressed="0" name="Type 80 GPMG-[Damage Focus MG]" class="0" projectile_speed="220" sight_range_modifier="2.5" slot="0" can_shoot_standing="0" can_shoot_crouching="0" can_shoot_prone="1" carry_in_two_hands="1" projectiles_per_shot="2" stab_enabled="1"/>
+	<specification barrel_offset="0.5" retrigger_time="0.08" accuracy_factor="1.0" sustained_fire_grow_step="0" sustained_fire_diminish_rate="1.0" magazine_size="100" stance_accuracy_rate="0.5" suppressed="0" name="Type 80 GPMG-[Damage Focus MG]" class="0" projectile_speed="220" sight_range_modifier="2.5" slot="0" can_shoot_standing="0" can_shoot_crouching="0" can_shoot_prone="1" carry_in_two_hands="1" projectiles_per_shot="2" stab_enabled="1"/>
 	<animation key="reload" animation_key="reloading, Machine gun 2.0"/>
 	<inventory buy_price="40.0" sell_price="40.0"/>
 	<next_in_chain key="gkw_type80.weapon" share_ammo="1"/>
@@ -16937,7 +16937,7 @@
 </weapon>
 
 <weapon key="gkw_type80mod3_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.5" retrigger_time="0.08" accuracy_factor="1.0" sustained_fire_grow_step="0.3" sustained_fire_diminish_rate="1.0" magazine_size="200" stance_accuracy_rate="0.5" suppressed="0" name="Type 80 GPMG(MOD3)-[Position Fortification]" class="0" projectile_speed="240" sight_range_modifier="2.75" slot="0" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" carry_in_two_hands="1" projectiles_per_shot="2" stab_enabled="1"/>
+	<specification barrel_offset="0.5" retrigger_time="0.08" accuracy_factor="1.0" sustained_fire_grow_step="0" sustained_fire_diminish_rate="1.0" magazine_size="200" stance_accuracy_rate="0.5" suppressed="0" name="Type 80 GPMG(MOD3)-[Position Fortification]" class="0" projectile_speed="240" sight_range_modifier="2.75" slot="0" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" carry_in_two_hands="1" projectiles_per_shot="2" stab_enabled="1"/>
 	<animation key="reload" animation_key="reloading, Machine gun 2.0"/>
 	<inventory buy_price="240.0" sell_price="240.0"/>
 	<next_in_chain key="gkw_type80mod3.weapon" share_ammo="1"/>
@@ -37938,7 +37938,7 @@
 	<tag name="mecha"/>
 	<tag name="antiarmor"/>
 	<tag name="sniper"/>
-	<specification retrigger_time="1.0" accuracy_factor="0.95" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="0.5" magazine_size="20" can_shoot_standing="1" can_shoot_crouching="0" can_shoot_prone="0" suppressed="0" name="SF-Nemeum" class="0" stab_enabled="0" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="120.0" carry_in_two_hands="0" projectiles_per_shot="1" slot="0"/>
+	<specification retrigger_time="1.5" accuracy_factor="1.0" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="0.5" magazine_size="20" can_shoot_standing="1" can_shoot_crouching="0" can_shoot_prone="0" suppressed="0" name="SF-Nemeum" class="0" stab_enabled="0" reload_one_at_a_time="0" sight_range_modifier="1.3" projectile_speed="100.0" carry_in_two_hands="0" projectiles_per_shot="1" slot="0"/>
 	<animation state_key="recoil" animation_key="recoil, pistol dual 1"/>
 	<animation state_key="recoil" animation_key="recoil, pistol dual 2"/>
 	<animation state_key="reload" animation_key="recoil, pistol dual 1"/>
@@ -37956,31 +37956,31 @@
 	<model filename=""/>
 	<hud_icon filename="sfw_nemeum.png"/>
 	<projectile file="bullet_sf.projectile">
-	<result class="blast" radius="2.0" damage="4.0" decal="1" push="0.05" character_state="death" faction_compare="not_equal"/>
+	<result class="blast" radius="2.0" damage="4.0" decal="1" push="0.15" character_state="death" faction_compare="not_equal"/>
 	<trail probability="1.0" key="BulletApTrail"/>
 	</projectile>
-	<stance state_key="running" accuracy="0.9"/>
-	<stance state_key="walking" accuracy="1.0"/>
-	<stance state_key="crouch_moving" accuracy="0.75"/>
-	<stance state_key="prone_moving" accuracy="0.3"/>
-	<stance state_key="standing" accuracy="1.2"/>
-	<stance state_key="crouching" accuracy="0.85"/>
-	<stance state_key="prone" accuracy="0.94"/>
-	<modifier class="speed" value="-0.4"/>
+	<stance state_key="running" accuracy="0.8"/>
+	<stance state_key="walking" accuracy="0.8"/>
+	<stance state_key="crouch_moving" accuracy="0.8"/>
+	<stance state_key="prone_moving" accuracy="0.8"/>
+	<stance state_key="standing" accuracy="0.8"/>
+	<stance state_key="crouching" accuracy="1"/>
+	<stance state_key="prone" accuracy="1"/>
+	<stance state_key="over_wall" accuracy="1"/>
+	<modifier class="speed" value="-0.2"/>
 	<commonness value="0.000001" in_stock="1" can_respawn_with="1"/>
 	<inventory encumbrance="0.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
 	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
 	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
-	<stance state_key="over_wall" accuracy="1"/>
 </weapon>
 
 <weapon key="sfw_nemeum_swap.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="mecha"/>
 	<tag name="antiarmor"/>
 	<tag name="sniper"/>
-	<specification retrigger_time="3.0" accuracy_factor="0.95" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="0.5" magazine_size="10" can_shoot_standing="1" can_shoot_crouching="0" can_shoot_prone="0" suppressed="0" name="SF-Nemeum SWAP" class="0" stab_enabled="0" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="120.0" carry_in_two_hands="0" projectiles_per_shot="1" slot="0" barrel_offset="0.4"/>
+	<specification retrigger_time="3.0" accuracy_factor="1.0" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="0.5" magazine_size="10" can_shoot_standing="1" can_shoot_crouching="0" can_shoot_prone="0" suppressed="0" name="SF-Nemeum SWAP" class="0" stab_enabled="0" reload_one_at_a_time="0" sight_range_modifier="1.35" projectile_speed="100.0" carry_in_two_hands="0" projectiles_per_shot="1" slot="0" barrel_offset="0.4"/>
 	<animation state_key="recoil" animation_key="recoil, pistol dual 1"/>
 	<animation state_key="recoil" animation_key="recoil, pistol dual 2"/>
 	<animation state_key="reload" animation_key="recoil, pistol dual 1"/>
@@ -38013,15 +38013,15 @@
 	<effect class="result" key="vehicle" copy="terrain"/>
 	<effect class="result" key="character" copy="terrain"/>
 	</projectile>
-	<stance state_key="running" accuracy="0.9"/>
-	<stance state_key="walking" accuracy="1.0"/>
-	<stance state_key="crouch_moving" accuracy="0.75"/>
-	<stance state_key="prone_moving" accuracy="0.3"/>
-	<stance state_key="standing" accuracy="1.2"/>
-	<stance state_key="crouching" accuracy="0.85"/>
-	<stance state_key="prone" accuracy="0.94"/>
+	<stance state_key="running" accuracy="0.8"/>
+	<stance state_key="walking" accuracy="0.8"/>
+	<stance state_key="crouch_moving" accuracy="0.8"/>
+	<stance state_key="prone_moving" accuracy="0.8"/>
+	<stance state_key="standing" accuracy="0.8"/>
+	<stance state_key="crouching" accuracy="1"/>
+	<stance state_key="prone" accuracy="1"/>
+	<stance state_key="over_wall" accuracy="1"/>
 	<modifier class="speed" value="-0.2"/>
-	<modifier class="hit_success_probability" value="-0.2"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
 	<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
 	<target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
@@ -38036,7 +38036,6 @@
 	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
 	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
 	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
-	<stance state_key="over_wall" accuracy="1"/>
 </weapon>
 
 <weapon key="sfw_dreamer.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
@@ -39590,7 +39589,7 @@
 <weapon on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0" key="kccow_cerynitis.weapon">
 	<tag name="machine gun"/>
 	<tag name="mecha"/>
-	<specification retrigger_time="0.2" accuracy_factor="1.0" sustained_fire_grow_step="0.2" sustained_fire_diminish_rate="2.0" magazine_size="100" can_shoot_standing="1" can_shoot_crouching="0" can_shoot_prone="0" suppressed="0" name="Code:Cerynitis Type Anti-Air" class="0" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="90.0" carry_in_two_hands="0" projectiles_per_shot="1" slot="0" stab_enabled="0"/>
+	<specification retrigger_time="0.2" accuracy_factor="1.0" sustained_fire_grow_step="0.2" sustained_fire_diminish_rate="2.0" magazine_size="100" can_shoot_standing="1" can_shoot_crouching="0" can_shoot_prone="0" suppressed="0" name="Code:Cerynitis Type Anti-Air" class="0" reload_one_at_a_time="0" sight_range_modifier="1.45" projectile_speed="80.0" carry_in_two_hands="0" projectiles_per_shot="1" slot="0" stab_enabled="0"/>
 	<animation state_key="recoil" animation_key="recoil, pistol dual 1"/>
 	<animation state_key="recoil" animation_key="recoil, pistol dual 2"/>
 	<animation state_key="reload" animation_key="recoil, pistol dual 1"/>
@@ -39608,7 +39607,7 @@
 	<model filename=""/>
 	<hud_icon filename="kccow_cerynitis.png"/>
 	<projectile file="bullet_kcco.projectile">
-	<result class="hit" kill_probability="2.0" kill_decay_start_time="1.0" kill_decay_end_time="1.2"/>
+	<result class="hit" kill_probability="2.2" kill_decay_start_time="1.0" kill_decay_end_time="1.2"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.9"/>
 	<stance state_key="walking" accuracy="1.0"/>
@@ -39618,7 +39617,7 @@
 	<stance state_key="crouching" accuracy="0.85"/>
 	<stance state_key="prone" accuracy="0.94"/>
 	<stance state_key="overwall" accuracy="1.0"/>
-	<modifier class="speed" value="-0.4"/>
+	<modifier class="speed" value="-0.2"/>
 	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
 	<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
@@ -39631,7 +39630,7 @@
 <weapon on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0" key="kccow_cerynitis_1.weapon">
 	<tag name="machine gun"/>
 	<tag name="mecha"/>
-	<specification retrigger_time="0.1" accuracy_factor="1.0" sustained_fire_grow_step="0.0" sustained_fire_diminish_rate="0.0" magazine_size="20" can_shoot_standing="1" can_shoot_crouching="0" can_shoot_prone="0" suppressed="0" name="Code:Cerynitis Type Suppressive" class="4" burst_shots="5" reload_one_at_a_time="0" sight_range_modifier="0.7" projectile_speed="90.0" carry_in_two_hands="0" projectiles_per_shot="2" last_burst_retrigger_time="3.0" slot="0" stab_enabled="0"/>
+	<specification retrigger_time="0.1" accuracy_factor="1.0" sustained_fire_grow_step="0.0" sustained_fire_diminish_rate="0.0" magazine_size="50" can_shoot_standing="1" can_shoot_crouching="0" can_shoot_prone="0" suppressed="0" name="Code:Cerynitis Type Suppressive" class="4" burst_shots="5" reload_one_at_a_time="0" sight_range_modifier="1.1" projectile_speed="80.0" carry_in_two_hands="0" projectiles_per_shot="2" last_burst_retrigger_time="3.0" slot="0" stab_enabled="0"/>
 	<animation state_key="recoil" animation_key="recoil, pistol dual 1"/>
 	<animation state_key="recoil" animation_key="recoil, pistol dual 2"/>
 	<animation state_key="reload" animation_key="recoil, pistol dual 1"/>
@@ -39649,7 +39648,7 @@
 	<model filename=""/>
 	<hud_icon filename="kccow_cerynitis.png"/>
 	<projectile file="bullet_kcco.projectile">
-	<result class="hit" kill_probability="2.0" kill_decay_start_time="1.0" kill_decay_end_time="1.2"/>
+	<result class="hit" kill_probability="2.2" kill_decay_start_time="1.0" kill_decay_end_time="1.2"/>
 	</projectile>
 	<stance state_key="running" accuracy="1.0"/>
 	<stance state_key="walking" accuracy="1.0"/>
@@ -39658,7 +39657,7 @@
 	<stance state_key="standing" accuracy="1.2"/>
 	<stance state_key="crouching" accuracy="0.85"/>
 	<stance state_key="prone" accuracy="1.0"/>
-	<modifier class="speed" value="-0.3"/>
+	<modifier class="speed" value="-0.2"/>
 	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
 	<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
@@ -41018,7 +41017,7 @@
 	<tag name="elite"/>
 	<tag name="bazooka"/>
 	<tag name="melee"/>
-	<specification retrigger_time="-1" last_burst_retrigger_time="0.03" accuracy_factor="0.98" sustained_fire_grow_step="0.8" sustained_fire_diminish_rate="1.8" magazine_size="7" carry_in_two_hands="0" suppressed="0" name="Narciss" class="1" sight_range_modifier="1.3" projectile_speed="90.0" projectiles_per_shot="1" burst_shots="1"/>
+	<specification retrigger_time="-1" last_burst_retrigger_time="0.03" accuracy_factor="0.95" sustained_fire_grow_step="0.5" sustained_fire_diminish_rate="1.8" magazine_size="7" carry_in_two_hands="0" suppressed="0" name="Narciss" class="1" sight_range_modifier="1.3" projectile_speed="90.0" projectiles_per_shot="1" burst_shots="1"/>
 	<inventory buy_price="3.0" sell_price="3.0"/>
 	<animation state_key="recoil" animation_key="recoil, pistol"/>
 	<animation state_key="recoil" stance_key="prone" animation_key="recoil, pistol, prone"/>
@@ -41056,7 +41055,7 @@
 	<stance state_key="standing" accuracy="0.9"/>
 	<stance state_key="crouching" accuracy="0.95"/>
 	<stance state_key="prone" accuracy="1"/>
-	<modifier class="speed" value="0.6"/>
+	<modifier class="speed" value="0.3"/>
 	<commonness value="0.0001" in_stock="1" can_respawn_with="1"/>
 	<inventory encumbrance="0.0" price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
