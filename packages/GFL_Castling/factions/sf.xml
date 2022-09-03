@@ -693,7 +693,7 @@
 			<call key="sf_jaguar.call" />
 			<call key="sf_jupiter.call" />
 			<projectile key="sf_emp_mine.projectile"/>
-			<carry_item key="sf_hunter.carry_item" enabled="1" />
+			<carry_item key="vest_50hp_enforcer.carry_item" enabled="1" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="12.0" max="350.05" />
@@ -789,7 +789,7 @@
 			<call key="sf_jaguar.call" />
 			<weapon key="sfw_alchemist.weapon" enabled="1"/>
 			<weapon key="sfw_alchemist_at.weapon" enabled="1"/>
-			<carry_item key="sf_alchemist.carry_item" enabled="1" />
+			<carry_item key="vest_50hp_enforcer.carry_item" enabled="1" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="310.0" max="400.05" />
@@ -812,7 +812,7 @@
 			<call key="sf_jaguar.call" />
 			<call key="sf_destroyer.call" />
 			<weapon key="sfw_gager.weapon" enabled="1"/>
-			<carry_item key="sf_gager.carry_item" enabled="1" />
+			<carry_item key="vest_50hp_enforcer.carry_item" enabled="1" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="300.0" max="300.05" />
@@ -834,7 +834,7 @@
 		<resources clear_vehicles="1" clear_weapons="1" clear_calls="1" clear_carry_items="1">
 			<call key="sf_jaguar.call" />
 			<weapon key="sfw_excutioner_1.weapon" enabled="1"/>
-			<carry_item key="sf_excutioner.carry_item" enabled="1" />
+			<carry_item key="vest_50hp_enforcer.carry_item" enabled="1" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="300.0" max="300.05" />
@@ -860,7 +860,7 @@
 		<resources clear_vehicles="1" clear_weapons="1" clear_calls="1" clear_carry_items="1">
 			<call key="sf_jaguar.call" />
 			<weapon key="sfw_excutioner_2.weapon" enabled="1"/>
-			<carry_item key="sf_excutioner.carry_item" enabled="1" />
+			<carry_item key="vest_50hp_enforcer.carry_item" enabled="1" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="300.0" max="300.05" />
