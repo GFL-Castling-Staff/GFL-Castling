@@ -156,6 +156,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 	// ------------------------------------------------------------------------------------------------
 	protected void setupNormalStages() {
+				addStage(setupStage17());         // map17
 		addStage(setupStage1());          // map2
 		addStage(setupStage7());          // map6c by diling
 		addStage(setupStage8());          // map8
@@ -171,7 +172,6 @@ class StageConfiguratorInvasion : StageConfigurator {
 		addStage(setupStage12());         // map14
 		addStage(setupStage10());         // map10
 		addStage(setupStage106());		  // map106 E30 Route by diling
-		addStage(setupStage17());         // map17
 		addStage(setupStage13());         // map16
 		addStage(setupStage15());         // map1_2
 		addStage(setupFinalStage1());     // map11
