@@ -241,6 +241,20 @@ float getAimOrientation4(Vector3 s_pos, Vector3 e_pos) {
 	}
 }
 
+float getOrientation4(Vector3 a) {
+	float dx = a.m_values[0];
+	float dy = a.m_values[2];
+    float ds = sqrt(dx*dx+dy*dy);
+    if(ds<=0.000001f) ds=0.000001f;
+	float dir = acos(dx/ds);
+	if(asin(dy/ds)>0) {
+		return (dir*1.0-1.57)*(-1.0);
+	}
+	else {
+		return (dir*(-1.0)-1.57)*(-1.0);
+	}
+}
+
 Vector3 getMultiplicationVector(Vector3 s_pos, Vector3 scale) {
 	float x = s_pos.m_values[0]*scale.m_values[0];
 	float y = s_pos.m_values[1]*scale.m_values[1];
@@ -438,6 +452,7 @@ class Orientation{
 	float a2;
 	float a3;
 	float a4;
+	Orientation(){};
 	Orientation(float a_1, float a_2, float a_3,float a_4){
 		a1=a_1;
 		a2=a_2;
