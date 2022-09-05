@@ -726,7 +726,9 @@ class BasicCommandHandler : Tracker {
 		} else  if(checkCommand(message, "spawntyphon")) {
 			spawnInstanceNearPlayer(senderId, "typhon.vehicle", "vehicle", 0);
 		} else  if(checkCommand(message, "spawnaek")) {
-			spawnInstanceNearPlayer(senderId, "aek999.vehicle", "vehicle", 0);
+			spawnInstanceNearPlayer(senderId, "aek999.vehicle", "vehicle", 0);		
+		} else  if(checkCommand(message, "spawnbfg")) {
+			spawnInstanceNearPlayer(senderId, "kcco_BFG.vehicle", "vehicle", 0);
 		} else  if(checkCommand(message, "spawnpierre")) {
 			spawnInstanceNearPlayer(senderId, "pierre.vehicle", "vehicle", 0);
 		} else  if(checkCommand(message, "spawnamos")) {
