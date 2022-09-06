@@ -31,6 +31,7 @@
 	slot="0"
 	/>
 	
+	<animation state_key="stabbing"	animation_key="melee, bayonet_6hp" />
     <animation key="recoil" animation_key="recoil1, big"/>
 	<animation key="recoil" stance_key="prone" animation_key="recoil1, big, prone" />
     <sound key="stab" fileref="dagger_swing1_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>

@@ -22,7 +22,7 @@
         <inventory  buy_price="20.0" sell_price="20.0" />
         <next_in_chain key="gkw_m1908_skill.weapon" share_ammo="1" />
         <!--Animations-->
-        <animation key="reload" animation_key="reloading, m1908" />
+        <animation key="reload" animation_key="reloading, clip" />
         <!--Sounds-->
         <sound key="fire" fileref="m1908_fire_FromBF1.wav" pitch_variety="0.01" volume="1.2" />
         <sound key="cycle" fileref="m1908_cycle_FromBF1.wav"  volume="1" />
@@ -73,7 +73,7 @@
         <commonness value="0" in_stock="0" can_respawn_with="1" />
         <next_in_chain key="gkw_m1908.weapon" share_ammo="1" />
         <!--Animations-->
-        <animation key="reload" animation_key="reloading, m1908" />
+        <animation key="reload" animation_key="reloading, clip" />
         <!--Sounds-->
         <sound key="fire" fileref="m1908skill_fire_FromBF1.wav" pitch_variety="0.01" volume="1.3" />
         <sound key="cycle" fileref="m1908_cycle_FromBF1.wav"  volume="1" />
