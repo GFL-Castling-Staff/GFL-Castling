@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ai filename="default.ai">
 
-  <parameter class="check_vehicles_interval" value="1.0" />
+  <parameter class="check_vehicles_interval" value="0.5" />
 
   <parameter class="accuracy_penalty_range" value="0.0" />
   <parameter class="accuracy_offset" value="0.1" /> 
@@ -36,6 +36,7 @@
   <parameter class="force_as_leader" value="1.0" />
 	<parameter class="fighting_melee_move_radius" value="2.0" />
 	<parameter class="fighting_regular_move_radius" value="6.0" />
+  <parameter class="uses_vehicles" value="0.0" />
 
 
 </ai>

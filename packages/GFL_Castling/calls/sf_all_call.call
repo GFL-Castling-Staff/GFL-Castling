@@ -4,7 +4,7 @@
 	<!-- 木星炮打击 -->
 	<call name="Jupiter Air-Strike" key="sf_jupiter.call" initiation_comment1="Request Jupiter Air-Strike" acknowledge_comment="Confirm, Adjusting Jupiter rotation" acknowledge_time="0" launch_comment="Jupiter is Launching" notify_metagame="1">
 		<round instances="2" instance_class="grenade" instance_key="artillery_jupiter_420.projectile" instance_spread="5 5 5" common_spread="2 0 2" launch_time="4.0" spawn_time="5.0">
-			<sound class="launch" fileref="Jupitercannon_firesupport_FromDOOMETERNAL.wav" volume="0.4" />
+			<sound class="launch" fileref="Jupitercannon_firesupport_FromDOOMETERNAL.wav" volume="0.6" pitch_variety="0.0"/>
 			<sound class="spawn" fileref="woosh1.wav" volume="0.2" />
 		</round>
 		<round instances="2" instance_class="grenade" instance_key="artillery_jupiter_420.projectile" instance_spread="5 5 5" common_spread="2 0 2" launch_time="6.0" spawn_time="7.0">
@@ -75,7 +75,7 @@
 	<!-- 破坏者炮击 -->
 	<call name="Destroyer Waypoint Strike" key="sf_destroyer.call" initiation_comment1="Request Destroyer Waypoint Strike" acknowledge_comment="Confirm,Contacting to Dreamer" acknowledge_time="0" launch_comment="Waypoint Strike On going!" notify_metagame="1">
 		<round instances="15" instance_class="grenade" instance_key="artillery_rocket_fairies.projectile" instance_spread="14 14 14" common_spread="8 0 8" launch_time="5.0" spawn_time="8.0">
-			<sound class="launch" fileref="destroyer_firesupport_FromEFT.wav" volume="0.5" />
+			<sound class="launch" fileref="destroyer_firesupport_FromEFT.wav" volume="0.5" pitch_variety="0.0" />
 			<sound class="spawn" fileref="woosh1.wav" volume="0.2" />
 		</round>
 		<round instances="20" instance_class="grenade" instance_key="artillery_rocket_fairies.projectile" instance_spread="14 14 14" common_spread="8 0 8" launch_time="7.0" spawn_time="10.0">
