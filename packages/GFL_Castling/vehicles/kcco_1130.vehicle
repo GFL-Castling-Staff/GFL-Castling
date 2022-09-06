@@ -6,9 +6,9 @@
     <tire_set offset="1.0 0 1.0" radius="0.5" />
     <tire_set offset="1.0 0 -1.0" radius="0.5" />
     <control max_speed="12.0" acceleration="20.0" max_reverse_speed="12.0" min_health_to_steer="1.5" max_rotation="0.2" max_water_depth="6.0" can_steer_in_water="0.0" steer_smoothening="0.6" tracked="1" gears="0" max_limiter_speed="6.0" tracked_visual_tire_max_rotation="1.0" tracked_visual_tire_rotation_smoothening="0.9" simulated_speed_factor="0.1" />
-    <physics max_health="20" blast_damage_threshold="1.8" mass="150.0" broken_mass="200" gravity="-40" remove_collision_threshold="50.0" extent="1.5 4.0 1.5" offset="0.0 +0.0 -0.0" top_offset="0 0 0" collision_model_pos="0 0 0" collision_model_extent="1.5 4.0 1.5" visual_offset="0 0.24 0" drag_offset="-0.1" friction_offset="-0.1" preserve_motion_on_impact_factor="1" />
-    <turret offset="0.0 0.0 0.0" weapon_key="KCCO_1130_mg.weapon" weapon_offset="0.0 1.72 1.64" weapon_recoil="0.0" physics_recoil="0.0" max_rotation_step="0.00016" rotation_range="6.30" />
-    <modifier class="blast_range" value="-0.6" />
+    <physics max_health="40" blast_damage_threshold="1.0" mass="150.0" broken_mass="200" gravity="-40" remove_collision_threshold="50.0" extent="1.5 4.0 1.5" offset="0.0 +0.0 -0.0" top_offset="0 0 0" collision_model_pos="0 0 0" collision_model_extent="1.5 4.0 1.5" visual_offset="0 0.24 0" drag_offset="-0.1" friction_offset="-0.1" preserve_motion_on_impact_factor="1" />
+    <turret offset="0.0 0.0 0.0" weapon_key="kccow_vehicle_1130mg.weapon" weapon_offset="0.0 1.72 1.64" weapon_recoil="0.0" physics_recoil="0.0" max_rotation_step="0.00016" rotation_range="6.30" />
+    <modifier class="blast_range" value="-1.0" />
 
     <visual class="turret" turret_index="0" mesh_filename="KCCO1130.mesh" texture_filename="KCCO1130_Base_color.png" />
     <visual class="turret" turret_index="0" key="broken" mesh_filename="KCCO1130.mesh" texture_filename="humvee_broken.png" />
