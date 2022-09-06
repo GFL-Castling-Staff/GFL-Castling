@@ -1221,6 +1221,7 @@ class CommandSkill : Tracker {
             "Excutioner_buhuo_SKILL03_JP.wav",
             };
             playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+            playAnimationKey(m_metagame,characterId,"excution_skill",false,false);
 
             // CreateProjectile(m_metagame,c_pos.add(Vector3(0,-10.0,0)),c_pos,"destroyer_skill_body.projectile",characterId,factionid,80,-0.01);              
             int ix = 5;

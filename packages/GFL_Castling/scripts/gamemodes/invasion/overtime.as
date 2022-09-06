@@ -209,8 +209,8 @@ class Overtime : Tracker {
 			Faction@ f = m_metagame.getFactions()[i];
 			float multiplier = m_metagame.determineFinalFactionCapacityMultiplier(f, i);
 			float offset = f.m_capacityOffset;
-			offset += m_risklevel * 5;
-			multiplier += m_risklevel * 0.02;
+			// offset += m_risklevel * 5;
+			// multiplier += m_risklevel * 0.02;
 
 			command +=
 			"    <faction capacity_multiplier='" + multiplier + "' " +
