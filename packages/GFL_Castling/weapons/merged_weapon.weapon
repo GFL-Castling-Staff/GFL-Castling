@@ -43024,7 +43024,7 @@
 </weapon>
 
 <weapon key="KCCO_1130_mg.weapon">
-	<specification slot="2" retrigger_time="0.02" accuracy_factor="0.9" sustained_fire_grow_step="0.5" sustained_fire_diminish_rate="2.0" sight_range_modifier="1.5" ai_sight_range_modifier="1.15" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="0" suppressed="0" name="KCCO 1130 MG" class="0" projectile_speed="120.0"/>
+	<specification slot="2" retrigger_time="0.02" accuracy_factor="0.9" sustained_fire_grow_step="0.5" sustained_fire_diminish_rate="2.0" sight_range_modifier="1.5" ai_sight_range_modifier="1.15" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="0" suppressed="0" name="KCCO 1130 MG" class="0" projectile_speed="120.0" use_basic_muzzle_smoke_effect="0"/>
 	<animation key="recoil" animation_key="recoil1"/>
 	<animation key="recoil" animation_key="recoil2"/>
 	<animation key="recoil" animation_key="recoil3"/>
