@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+	<tag name="rifle" />
+	<commonness value="0.2" in_stock="0" can_respawn_with="1" />
+	<inventory encumbrance="20.0" buy_price="1.0" sell_price="0.0"/>
+	<capacity value="1" source="rank" source_value="0.0" />
+
+	<stance state_key="running" accuracy="1.0" />
+	<stance state_key="walking" accuracy="1.0" />
+	<stance state_key="crouch_moving" accuracy="1.0" />
+	<stance state_key="standing" accuracy="1.0" />
+	<stance state_key="crouching" accuracy="1.0" />
+	<stance state_key="prone" accuracy="1.0" />
+	<stance state_key="prone_moving" accuracy="1.0" />
+	<stance state_key="over_wall" accuracy="1.0" />
+	<modifier class="detectability" value="-0.1"/>
+
+	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0" />
+	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5" />
+    <target_factors tag="shotgun" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0" />
+    <target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0" />
+    <target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0" />
+    <target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0" />
+
+	<specification 
+	stab_enabled="1"
+	carry_in_two_hands="1"
+	burst_shots="1"
+	retrigger_time="-1" 
+	last_burst_retrigger_time="-1"
+	slot="0"
+	/>
+	
+    <animation key="recoil" animation_key="recoil1, big"/>
+	<animation key="recoil" stance_key="prone" animation_key="recoil1, big, prone" />
+    <sound key="stab" fileref="dagger_swing1_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab" fileref="dagger_swing2_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab" fileref="dagger_swing3_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+    <sound key="stab_hit" fileref="blade_impact_01_fromESV.wav" pitch_variety="0.05" volume="2.0" />
+    <sound key="stab_hit" fileref="blade_impact_02_fromESV.wav" pitch_variety="0.05" volume="2.0" />
+    <sound key="stab_hit" fileref="blade_impact_03_fromESV.wav" pitch_variety="0.05" volume="2.0" />
+    <sound key="stab_hit" fileref="blade_impact_04_fromESV.wav" pitch_variety="0.05" volume="2.0" />
+    
+</weapon>
