@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <vehicle name="shelter" key="GKshelter.vehicle" map_view_atlas_index="-1" respawn_time="36000.0" usable_for_cover="1" >
     <tag name="sandbag" />
-    <tire_set offset="1.0 0.0 0.5" radius="0.65" />
-    <tire_set offset="1.0 0.0 -0.5" radius="0.65" />
+    <tire_set offset="1.0 0.0 1.0" radius="0.65" />
+    <tire_set offset="1.0 0.0 -1.0" radius="0.65" />
     <control max_speed="1" acceleration="1" max_reverse_speed="1.0" max_rotation="0.8" max_water_depth="1.9" />
 	<physics 
 	max_health="60" 
@@ -12,11 +12,11 @@
 	top_offset="0 2.4 0" 
 	collision_model_pos="-0.4 0.2 0" 
 	collision_model_extent="10.0 2.4 1.0" 
-	visual_offset="0 0.5 0" 
+	visual_offset="0 0.6 0.4" 
 	collision_response_factor="0.2" 
 	blast_push_threshold="0.2" 
 	vehicle_collision_damage_factor="2.0" />     
-    <modifier class="blast_damage" value="-1.0" />
+    <modifier class="blast_damage" value="-5.0" />
     <sound key="hit" filename="barrier_impact1.wav" />
     <sound key="hit" filename="barrier_impact2.wav" />
     <effect event_key="destroy" key="other" ref="SmokeMinor" post_processing="1" />
