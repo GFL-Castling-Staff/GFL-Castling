@@ -5,27 +5,27 @@
         <tag name="rifle" />
         <tag name="antiarmor" />
         <specification 
-	  retrigger_time="-1.0" 
-	  accuracy_factor="1.0" 
-	  sustained_fire_grow_step="0" 
-	  sustained_fire_diminish_rate="1.0" 
-	  magazine_size="5" 
-	  can_shoot_standing="1" 
-      can_shoot_prone="0"
-      can_shoot_crouching="1"
-	  suppressed="0" 
-	  name="Hanyang-made Type88(MOD3)"
-	  class="4" 
-	  reload_one_at_a_time="1" 
-	  sight_range_modifier="2.5" 
-	  projectile_speed="250" 
-      last_burst_retrigger_time="0.8"
-	  barrel_offset="1.65" 
-	  projectiles_per_shot="2" 
-      use_basic_muzzle_smoke_effect="0"
-      burst_shots="1"
-      stab_enabled="1"
-      stab_range="4.0" />
+        retrigger_time="-1.0" 
+        accuracy_factor="1.0" 
+        sustained_fire_grow_step="2.0" 
+        sustained_fire_diminish_rate="3.0" 
+        magazine_size="5" 
+        can_shoot_standing="1" 
+        can_shoot_prone="0"
+        can_shoot_crouching="0"
+        suppressed="0" 
+        name="Hanyang-made Type88(MOD3)"
+        class="2" 
+        reload_one_at_a_time="1" 
+        sight_range_modifier="2.5" 
+        projectile_speed="200" 
+        last_burst_retrigger_time="-1"
+        barrel_offset="1.65" 
+        projectiles_per_shot="6" 
+        use_basic_muzzle_smoke_effect="0"
+        burst_shots="1"
+        stab_enabled="1"
+        stab_range="4.0" />
         <next_in_chain key="gkw_88typemod3_skill.weapon" share_ammo="0" />
         <commonness value="0.0000001" in_stock="0" can_respawn_with="1" />
         <inventory encumbrance="20.0" buy_price="550.0" sell_price="500.0"/>
@@ -36,10 +36,9 @@
         <animation key="recoil" stance_key="prone" animation_key="recoil1, prone" />
         <animation key="recoil" stance_key="prone" animation_key="recoil2, prone" />
         <animation key="recoil" stance_key="prone" animation_key="recoil3, prone" />
-        <animation key="cycle" animation_key="Brifle0.8" />
-        <animation key="cycle" stance_key="prone" animation_key="Brifle0.8p" />
+        <animation key="cycle" animation_key="Brifle1.1" />
         <animation key="reload" animation_key="reloading, oaat" />
-        <animation state_key="stabbing" animation_key="melee, bayonet" />
+        <animation state_key="stabbing" animation_key="melee, bayonet_6hp"/>
         <animation state_key="hold" animation_key="still, 88typemod3" />
         <animation state_key="hold_on_wall" animation_key="still, 88typemod3" />
         <animation state_key="still_against_wall"   animation_key="still against wall, 88typemod3_melee" />
@@ -63,7 +62,7 @@
         <weak_hand_hold offset="0.3" />
         <projectile file="88type_laser.projectile">
             <trail probability="1.0" key="laser_hyz" />
-            <result class="blast" damage="6.5"  radius="2.5" decal="1" push="0.2" character_state="death" faction_compare="not_equal" />
+            <result class="blast" damage="1.1"  radius="2.0" decal="1" push="0.2" character_state="death" faction_compare="not_equal" />
         </projectile>
         <stance state_key="running" accuracy="1" />
         <stance state_key="walking" accuracy="1" />
@@ -74,7 +73,6 @@
         <stance state_key="prone" accuracy="1" />
         <stance state_key="over_wall" accuracy="1" />
         <modifier class="speed" value="0.4" />
-        <modifier class="detectability" value="-0.1"/>
         <target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0" />
         <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5" />
         <target_factors tag="shotgun" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0" />
