@@ -106,6 +106,5 @@
     <stance state_key="standing" accuracy="1.0"/>
     <stance state_key="crouching" accuracy="1.0" />
     <stance state_key="prone" accuracy="1.0" />
-    <stance state_key="over_wall" accuracy="1.0" />
-    <modifier class="hit_success_probability" value="0.2" />  
+    <stance state_key="over_wall" accuracy="1.0" /> 
 </weapon>

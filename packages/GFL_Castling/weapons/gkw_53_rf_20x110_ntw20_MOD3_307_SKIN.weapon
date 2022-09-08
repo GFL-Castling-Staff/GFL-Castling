@@ -77,7 +77,6 @@
         </projectile>
         <!--Accuracy, Movement speed-->
         <modifier class="speed" value="0.1" />
-        <modifier class="hit_success_probability" value="0.2" />  
     </weapon>
     <weapon file="heavy_anti_materiel_rifle.animation_base" key="gkw_ntw20mod3_307_skill.weapon">
         <!--Weapon specifications-->
@@ -139,6 +138,5 @@
         </projectile>
         <!--Accuracy, Movement speed-->
         <modifier class="speed" value="-0.3" />
-        <modifier class="hit_success_probability" value="0.2" />  
     </weapon>
 </weapons>
