@@ -103,11 +103,9 @@
     barrel_offset_3d="0.0 0.0 0.0"
     projectiles_per_shot="1"
     sight_height_offset="2.0" />
-        <!-- <model mesh_filename="hornet.mesh" texture_filename="hornet.png" />     -->
         <model  />
         <hud_icon filename="hud_hornet.png" />
         <commonness value="0.0" />
-        <!--     <ballistics curve_height="12.0" near_far_distance="0.0" speed_estimation_near="0.0" speed_estimation_far="28.0" max_speed="50.0" randomness="0.0" tweak_factor="1.1" /> -->
         <ballistics curve_height="10.0" near_far_distance="0.0" speed_estimation_near="0.0" speed_estimation_far="58.0" max_speed="42.0" randomness="0.0" tweak_factor="1.2" />
         <projectile file="hornet.projectile" >
             <result class="blast" 
@@ -116,17 +114,14 @@
             push="1.0" 
             decal="1"
             damage_origin_vehicle="0"
+            faction_compare="not_equal"
             />
         </projectile>
-        <!-- Scoring for target priority. Distance is between 0 and 1 based on range; direction is between 0 and 1 based on whether its near the barrel; squad_command is between 0 and on based on how close to the player's command order is, and base_score is a weight.. -->
-        <!-- These all add together and the highest 'score' is the new target, targets are rescanned every 2.5 seconds to see if a new higher-score target is in sight-range. -->
-        <!-- You must define a blank tag at the top of the list to handle all cases where the vehicle is fighting something "undefined", which is what common infantry might best fit under. -->
         <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5" />
         <target_factors tag="heavy_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="10.0" />
         <target_factors tag="apc" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0" />
         <target_factors tag="light_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="6.0" />
         <target_factors tag="defensive_at" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.5" />
-        <target_factors tag="tactical" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0" />
         <!-- important non combat player-only vehicles -->
         <target_factors tag="bazooka" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0" />
         <effect class="muzzle" ref="LawMuzzle" />
