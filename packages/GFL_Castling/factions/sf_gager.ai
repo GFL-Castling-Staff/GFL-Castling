@@ -2,7 +2,7 @@
 <ai filename="eod.ai">
   <parameter class="accuracy_offset" value="0.03" /> 
   <parameter class="accuracy_offset_in_player_squad" value="0.01" />
-  <parameter class="force_comparison_multiplier_to_call_reinforcements" value="0.01" />
+  <parameter class="force_comparison_multiplier_to_call_reinforcements" value="1.1" />
   <parameter class="burst_time" value="4.0" />
   <parameter class="burst_time_variance" value="0.5" />
   <parameter class="longer_burst_time" value="4.0" />

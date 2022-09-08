@@ -428,7 +428,6 @@
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="parw_streletplus.weapon" enabled="1" />
 			<carry_item key="pard_sg.carry_item" />
-			<call key="pard_zombie.call" />
 		</resources>
 	</soldier>
 	<soldier name="para_streletplus_richman" spawn_score="0.2" squad_size_xp_cap="0.5" copy_from="default_ai">
@@ -438,11 +437,10 @@
 			<weapon key="parw_streletplus.weapon" enabled="1" />
 			<weapon key="par_deploy_compass.weapon" enabled="1" />
 			<carry_item key="pard_sg.carry_item" />
-			<call key="pard_zombie.call" />
 		</resources>
 	</soldier>
 	<soldier name="para_rodelero" spawn_score="2.0" squad_size_xp_cap="0.5" copy_from="default_ai">
-		<ai filename="default.ai" />
+		<ai filename="pard_rod.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="parw_rodelero.weapon" enabled="1" />
 			<carry_item key="pard_ar.carry_item" />
@@ -471,7 +469,6 @@
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="parw_police.weapon" enabled="1" probability="1.0" />
 			<carry_item key="pard_sg.carry_item" />
-			<call file="pard_zombie.call" />
 			<attribute_config class="xp">
 				<attribute weight="1.0" min="1.0" max="5.6" />
 			</attribute_config>
@@ -493,13 +490,12 @@
 		</resources>
 	</soldier>
 	<soldier name="parw_thrower" spawn_score="2.0" squad_size_xp_cap="0.5" copy_from="default_ai">
-		<ai filename="eod.ai" />
+		<ai filename="pard_thrower.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="parw_thrower.weapon" enabled="1" probability="1.0" />
 			<projectile key="parw_grenade.projectile" enabled="1" probability="1.0" />
 			<weapon key="parw_rocket.weapon" enabled="1" probability="1.0" />
 			<carry_item key="pard_sg.carry_item" />
-			<call file="pard_zombie.call" />
 			<attribute_config class="xp">
 				<attribute weight="1.0" min="1.0" max="13.833" />
 			</attribute_config>
@@ -616,7 +612,7 @@
 			</attribute_config>
 		</resources>
 	</soldier>
-	<soldier name="Narciss" spawn_score="0.1" squad_size_xp_cap="0.5" copy_from="default_ai">
+	<soldier name="Narciss" spawn_score="0.05" squad_size_xp_cap="0.5" copy_from="default_ai">
 		<character filename="narciss.character"/>
 		<ai filename="narciss.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
@@ -632,7 +628,7 @@
 			</attribute_config>
 		</resources>
 	</soldier>
-	<soldier name="Adeline" spawn_score="0.05" squad_size_xp_cap="0.5" copy_from="default_ai">
+	<soldier name="Adeline" spawn_score="0.1" squad_size_xp_cap="0.5" copy_from="default_ai">
 		<character filename="paradeus_nyto.text_lines"/>
 		<ai filename="elite.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
