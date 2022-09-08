@@ -54,7 +54,8 @@
     <effect class="result" type="splat_map" surface_tag="" size="2.5" atlas_index="0" layer="1" />
     <effect class="result" type="splat_map" surface_tag="" size="3.0" atlas_index="4" layer="0" />
     <effect class="result" type="splat_map" surface_tag="" size="3.5" atlas_index="0" layer="2" additive="0" />
-
+    <effect class="result" key="character" ref="common_hit_effect_1" lighting="0"/>
+    <effect class="result" key="character" ref="common_hit_effect_2" lighting="0" />
     <trail probability="1.0" key="bluepara"/>
 
 </projectile>

@@ -76,6 +76,9 @@
     <effect class="result" key="character" ref="BulletImpact" />
     <effect class="result" key="shield" ref="BulletImpact" />
 
+    <effect class="result" key="character" ref="common_hit_effect_1" lighting="0"/>
+    <effect class="result" key="character" ref="common_hit_effect_2" lighting="0" />    
+
     <effect class="result" key="terrain" ref="Bullet_Burnout"/>
     <effect class="result" key="static_object" copy="terrain" />
 
