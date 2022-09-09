@@ -110,7 +110,7 @@
         <sound key="cycle_in" fileref="Kar98K_cycle_in_FromCOD16.wav" volume="0.8"/>
         <sound class="impact" fileref="rifle_drop.wav"/>
         <model filename="gkw_rf_98k_b.xml"/>
-        <hud_icon filename="gkw_98k.png"/>
+        <hud_icon filename="gkw_98k_b.png"/>
         <weak_hand_hold offset="0.3"/>
         <projectile file="bullet.projectile">
             <result class="hit" kill_probability="2.5" kill_probability_offset_on_successful_hit="2.0" kill_decay_start_time="2.0" kill_decay_end_time="3.0"/>

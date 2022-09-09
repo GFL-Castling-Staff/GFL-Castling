@@ -90,7 +90,7 @@
         <sound key="cycle_in" fileref="m1903_cycle_in_FromBF1.wav" volume="0.6"/>
         <sound class="impact" fileref="rifle_drop.wav" volume="1"/>
         <model filename="gkw_rf_mlemk1.xml"/>
-        <hud_icon filename="gkw_mlemk1.png"/>
+        <hud_icon filename="gkw_mlemk1_b.png"/>
         <weak_hand_hold offset="0.3"/>
         <projectile file="bullet.projectile" can_be_detected_by_footmen="0">
             <result class="hit" kill_probability="2.2" kill_probability_offset_on_successful_hit="2.5" kill_decay_start_time="1.895" kill_decay_end_time="3.158"/>
