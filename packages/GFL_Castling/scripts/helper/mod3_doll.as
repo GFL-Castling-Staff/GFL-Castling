@@ -15,8 +15,11 @@ dictionary MOD3craftList = {
     {"gkw_ar15.weapon","gkw_ar15mod3.weapon"},
     {"gkw_ar15_532.weapon","gkw_ar15mod3_532.weapon"},
     {"gkw_asval.weapon","gkw_asvalmod3.weapon"},
+
     {"gkw_g36.weapon","gkw_g36mod3.weapon"},
     {"gkw_g36_1507.weapon","gkw_g36mod3_1507.weapon"},
+    {"gkw_g36_skill.weapon","gkw_g36mod3.weapon"},
+    {"gkw_g36_1507_skill.weapon","gkw_g36mod3_1507.weapon"},
 
     {"gkw_m4a1.weapon","gkw_m4a1mod3.weapon"},
     {"gkw_m4a1_530.weapon","gkw_m4a1mod3_530.weapon"},
@@ -122,6 +125,7 @@ dictionary MOD3craftList = {
     {"gkw_m1897.weapon","gkw_m1897mod3.weapon"},
     {"gkw_mp446.weapon","gkw_mp446mod3.weapon"},
     {"gkw_xm3.weapon","gkw_xm3mod3.weapon"},
+    {"gkw_xm3_skill.weapon","gkw_xm3mod3.weapon"},
 
     {"gkw_fn49.weapon","gkw_fn49mod3.weapon"},
     {"gkw_fn49_4709.weapon","gkw_fn49mod3_4709.weapon"},
@@ -130,8 +134,10 @@ dictionary MOD3craftList = {
 
     {"gkw_hawk97.weapon","gkw_hawk97mod3.weapon"},
     {"gkw_type80.weapon","gkw_type80mod3.weapon"},
+    {"gkw_type80_skill.weapon","gkw_type80mod3.weapon"},
     {"gkw_mp443.weapon","gkw_mp443mod3.weapon"},
 
+    {"gkw_98k.weapon","gkw_98kmod3.weapon"},
 
 
     {"666","-1"}
