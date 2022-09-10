@@ -17,6 +17,8 @@
 	<weapon key="parw_narciss.weapon" />
 	<weapon key="parw_rocket.weapon" />
 	<weapon key="parw_police.weapon"/>
+	<weapon key="parw_thunder.weapon"/>
+
 	
 	<weapon key="parw_eagleyes.weapon"/>
 	<weapon key="parw_vanguard.weapon"/>
@@ -41,12 +43,13 @@
 	<call key="pard_zombie.call" />
 
 	<projectile key="parw_grenade.projectile"/>
-	
+	<projectile key="selfstun.projectile"/>
+
 	<!-- 护甲 -->
 	<carry_item key="pard_nyto.carry_item" />
 	<carry_item key="pard_ar.carry_item" />
 	<carry_item key="pard_sg.carry_item" />
-	<carry_item key="pard_doppelsoldner.carry_item" />
+	<carry_item key="pard_narciss.carry_item" />
 
 	<carry_item key="par_infected.carry_item" />
 	
