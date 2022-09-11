@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon key="eild_armed.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+	<specification 
+    accuracy_factor="0.75"
+    barrel_offset="0.4"
+    class="0"
+    slot="0"
+    magazine_size="30"
+    name="E.I.L.D. Armed Infected"
+    sight_range_modifier="1.5"
+    projectile_speed="150"
+    retrigger_time="0.1"
+    suppressed="0"
+    sustained_fire_diminish_rate="1.0"
+    sustained_fire_grow_step="0.5"
+    stab_enabled="1"
+    carry_in_two_hands="0"
+    burst_shots="1"
+    can_shoot_crouching="0"
+    can_shoot_prone="0"
+    last_burst_retrigger_time="-1"/>
+	<inventory encumbrance="10.0" buy_price="0.0" sell_price="0.0"/>
+
+	<sound key="fire" fileref="ak47_fire_FromRE5.wav" pitch_variety="0.05" volume="1.3"/>
+	<sound key="magazine_out" fileref="ak12_mgz_out_FromCOD16.wav" volume="0.6"/>
+	<sound key="magazine_in" fileref="ak12_mgz_in_FromCOD16.wav" volume="0.6"/>
+	<sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6"/>
+	<sound class="impact" fileref="rifle_drop.wav"/>
+
+	<model filename="gkw_ar_ak47.xml"/>
+	<hud_icon filename="testing.png"/>
+
+	<commonness value="0.2" in_stock="1" can_respawn_with="1"/>
+	<weak_hand_hold offset="0.2"/>
+	<projectile file="bullet.projectile">
+        <result class="hit" kill_probability="1.8" kill_decay_start_time="0.2" kill_decay_end_time="1.0"/>
+	</projectile>
+	<effect class="muzzle" ref="ejection_76239"/>
+	<stance state_key="running" accuracy="0.3"/>
+	<stance state_key="walking" accuracy="0.7"/>
+	<stance state_key="crouch_moving" accuracy="0.8"/>
+	<stance state_key="prone_moving" accuracy="0.8"/>
+	<stance state_key="standing" accuracy="0.85"/>
+	<stance state_key="crouching" accuracy="0.9"/>
+	<stance state_key="prone" accuracy="1"/>
+    <stance state_key="over_wall" accuracy="1"/>
+    
+	<tag name="autorifle"/>
+
+    <animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
+	<animation state_key="recoil"	animation_key="recoil, pistol dual 1" />
+  	<animation state_key="recoil"	animation_key="recoil, pistol dual 2" />
+
+    <animation state_key="stabbing" animation_key="recoil, barf"/>
+    <animation state_key="hold" animation_key="still, zombie" />
+    <animation state_key="hold_on_wall" animation_key="still, zombie" />
+    <animation state_key="still_against_wall"   animation_key="still, zombie" />
+    <animation state_key="hold_casual"  animation_key="still, zombie" />
+    <animation state_key="running"  animation_key="walking, zombie" />
+    <animation state_key="walking"  animation_key="walking, zombie" />
+    <animation state_key="crouching"    animation_key="still, zombie" />
+    <animation state_key="crouch_moving"    animation_key="walking, zombie" />
+    <animation state_key="crouch_moving_backwards"  animation_key="walking, zombie" />
+    <animation state_key="prone_still" animation_key="still, zombie" />
+    <animation state_key="prone_moving" animation_key="walking, zombie" />
+    <animation state_key="walking_backwards" animation_key="walking, zombie" />
+
+	<modifier class="speed" value="-0.3"/>
+</weapon>
