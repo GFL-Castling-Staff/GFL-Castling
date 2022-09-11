@@ -8,4 +8,11 @@
   <parameter class="check_need_for_help_range" value="0.0" />
   <parameter class="using_cover_min_time" value="0.0" />
 	<parameter class="using_cover_max_time" value="0.0" />
+
+  <parameter class="max_distance_to_throw_grenade" value="35.0" />
+  <parameter class="min_distance_to_throw_grenade" value="8.0" />
+  
+  <parameter class="min_number_of_enemies_to_throw_grenade" value="1" />
+  <parameter class="throw_grenade_time_interval_max" value="30.0" />
+  <parameter class="throw_grenade_time_interval_min" value="10.0" />
 </ai>

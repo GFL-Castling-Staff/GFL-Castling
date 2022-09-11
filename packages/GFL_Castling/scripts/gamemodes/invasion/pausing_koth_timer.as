@@ -10,7 +10,7 @@ class PausingKothTimer : Tracker {
 	protected bool m_bgm;
 
 	// --------------------------------------------
-	PausingKothTimer(GameModeInvasion@ metagame, float time，bool bgm=true) {
+	PausingKothTimer(GameModeInvasion@ metagame, float time,bool bgm = true) {
 		super();
 
 		@m_metagame = @metagame;
