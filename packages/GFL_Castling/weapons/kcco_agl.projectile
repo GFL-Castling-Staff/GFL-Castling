@@ -9,7 +9,7 @@
     <throwable curve_height="3.0" near_far_distance="16.0" speed_estimation_near="10.0" speed_estimation_far="16.0" max_speed="47.0" randomness="0.0" tweak_factor="1.55" />
     <inventory encumbrance="10.0" buy_price="0.0" sell_price="0.0"/>
 
-    <animation key="throw" animation_key="recoil1, big" /> 
+    <animation key="throw" animation_key="recoil, hip fire" /> 
     <capacity value="20" source="rank" source_value="0.0" />
 
     <sound class="result" key="other" fileref="explosion_FromSQUAD_1.wav" volume="2" />
