@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<models>
+	<model file="pard_zombie.xml" />
+
+	<model filename="pard_zombie.xml"><requirement class="weapon" slot="0" key="eild_infected.weapon" /></model>
+	<model filename="eild_armed.xml"><requirement class="weapon" slot="0" key="eild_armed.weapon" /></model>
+
+</models>
