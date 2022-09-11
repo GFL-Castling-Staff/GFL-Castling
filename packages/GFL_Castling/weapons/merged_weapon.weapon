@@ -43768,9 +43768,9 @@
 	<animation key="hold" animation_key="still, heavy weapon"/>
 	<animation key="hold_on_wall" animation_key="still"/>
 	<animation key="walking" animation_key="walking, heavy weapon"/>
-	<sound key="fire" fileref="1130_fire_FromSAM3.wav" pitch_variety="0.05" volume="1.0"/>
-	<sound key="magazine_out" fileref="mg_clip_out.wav"/>
-	<sound key="magazine_in" fileref="mg_clip_in.wav"/>
+	<sound key="fire" fileref="parw_rod_Fire.wav" pitch_variety="0.03" volume="0.6"/>
+	<sound key="magazine_out" fileref="rifle_clip_out.wav"/>
+	<sound key="magazine_in" fileref="rifle_clip_in.wav"/>
 	<sound key="cycle" fileref="rifle_chamber.wav"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model mesh_filename="Sentry_Moth.mesh" texture_filename="2Sentry_Moth_Texture.png" />
@@ -43800,9 +43800,9 @@
 	<animation key="hold" animation_key="still, heavy weapon"/>
 	<animation key="hold_on_wall" animation_key="still"/>
 	<animation key="walking" animation_key="walking, heavy weapon"/>
-	<sound key="fire" fileref="1130_fire_FromSAM3.wav" pitch_variety="0.05" volume="1.0"/>
-	<sound key="magazine_out" fileref="mg_clip_out.wav"/>
-	<sound key="magazine_in" fileref="mg_clip_in.wav"/>
+	<sound key="fire" fileref="parw_rod_Fire.wav" pitch_variety="0.03" volume="0.6"/>
+	<sound key="magazine_out" fileref="rifle_clip_out.wav"/>
+	<sound key="magazine_in" fileref="rifle_clip_in.wav"/>
 	<sound key="cycle" fileref="rifle_chamber.wav"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model mesh_filename="Sentry_Moth.mesh" texture_filename="2Sentry_Moth_Texture.png"/>

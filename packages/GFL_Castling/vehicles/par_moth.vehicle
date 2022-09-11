@@ -2,15 +2,40 @@
 <vehicle file="vehicle_base.vehicle" name="Paradeus Moth Aircraft" key="par_moth.vehicle" respawn_time="100" time_to_live_unsteerable="10" map_view_atlas_index="46" minimum_fill_requirement="1.0" max_character_collision_speed_on_normal="8.0" max_character_collision_speed="8" character_leave_request_mode="friendly" allow_ai_to_use="1" allow_player_to_use="1" ai_driver_turns_to_target="0" ai_abandon_when_unsteerable="0" ai_stop_to_fight="0" >
     <tag name="metal_heavy" />
     <tag name="PARA_MOTH" />
+    <tag name="jeep" />
     <tag name="heavy_combat" />
-    <tire_set offset="3.0 0 3.0" radius="0.5" />
-    <tire_set offset="3.0 0 -3.0" radius="0.5" />
+    <tire_set offset="5.0 0 5.0" radius="2.5" />
+    <tire_set offset="5.0 0 -5.0" radius="2.5" />
 	
-    <control max_speed="21.0" acceleration="21.0" max_reverse_speed="20.0" min_health_to_steer="1.5" max_rotation="0.1" max_water_depth="6.0" can_steer_in_water="0.0" steer_smoothening="0.6" tracked="1" gears="0" max_limiter_speed="6.0" tracked_visual_tire_max_rotation="1.0" tracked_visual_tire_rotation_smoothening="0.9" simulated_speed_factor="0.1" />
+    <control 
+	max_speed="21.0" 
+	acceleration="21.0" 
+	max_reverse_speed="20.0" 
+	min_health_to_steer="1.5" 
+	max_rotation="0.1" 
+	max_water_depth="6.0" 
+	can_steer_in_water="0.0" 
+	steer_smoothening="0.6" 
+	tracked="1" 
+	gears="0" 
+	max_limiter_speed="15.0" 
+	simulated_speed_factor="0.1" />
 	
-    <physics max_health="150" blast_damage_threshold="1.0" mass="50.0" gravity="-90" remove_collision_threshold="50.0" extent="2.7 2.0 2.7" offset="0.0 +0.0 -0.0" top_offset="0 1 0" collision_model_pos="0 6.4 0" collision_model_extent="2.4 2.0 2.4" visual_offset="0 0.0 0" />
+    <physics 
+	max_health="150" 
+	blast_damage_threshold="1.0"
+	mass="50.0" 
+	preserve_motion_on_impact_factor="0.0"
+	gravity="-8" 
+	remove_collision_threshold="50.0" 
+	extent="6.2 0.0 6.2" 
+	offset="0.0 +0.0 -0.0" 
+	top_offset="0 15 0" 
+	collision_model_pos="0 10.4 0" 
+	collision_model_extent="2.4 2.0 2.4" 
+	visual_offset="0 0.0 0" />
 	
-    0<turret offset="0.0 5.0 0.0" weapon_key="parw_moth_mg.weapon" weapon_offset="0.0 0 0" max_rotation_step="0.00036" rotation="0" rotation_range="6.30" weapon_recoil="0.0" physics_recoil="0.0" />
+    0<turret offset="0.0 9.0 0.0" weapon_key="parw_moth_mg.weapon" weapon_offset="0.0 0 0" max_rotation_step="0.00036" rotation="0" rotation_range="6.30" weapon_recoil="0.0" physics_recoil="0.0" />
 	
     <modifier class="blast_range" value="-1.0" />
 
