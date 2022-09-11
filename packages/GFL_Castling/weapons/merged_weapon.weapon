@@ -43571,7 +43571,7 @@
 	<effect class="result" key="terrain" ref="ShadowSmoke" shadow="1"/>
 	<trail probability="1.0" key="laser_tiaotiao"/>
 	</projectile>
-	<shield offset="0.4 1.2 0.0" extent="1.0 1.0 0.8"/>
+	<!-- <shield offset="0.8 1.2 0.0" extent="2.0 2.0 0.8"/> -->
 </weapon>
 
 </weapons>

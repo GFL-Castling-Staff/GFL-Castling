@@ -719,6 +719,8 @@ class BasicCommandHandler : Tracker {
 			spawnInstanceNearPlayer(senderId, "aa_emplacement.vehicle", "vehicle", 1); 
 		} else  if(checkCommand(message, "spawnjpt")) {
 			spawnInstanceNearPlayer(senderId, "sf_jupiter.vehicle", "vehicle", 1); 		
+		} else  if(checkCommand(message, "spawnmoth")) {
+			spawnInstanceNearPlayer(senderId, "par_moth.vehicle", "vehicle", 1); 		
 		} else  if(checkCommand(message, "spawnuhlan")) {
 			spawnInstanceNearPlayer(senderId, "paradeus_uhlan.vehicle", "vehicle", 0);
 		} else  if(checkCommand(message, "spawncoeus")) {
