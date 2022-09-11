@@ -845,7 +845,6 @@
 	<stance state_key="crouching" accuracy="1"/>
 	<stance state_key="prone" accuracy="1"/>
 	<stance state_key="over_wall" accuracy="1"/>
-	<modifier class="hit_success_probability" value="0.2"/>
 	<tag name="rifle"/>
 	<tag name="antiarmor"/>
 	<commonness value="0.05" in_stock="0" can_respawn_with="1"/>
@@ -895,7 +894,6 @@
 	<stance state_key="crouching" accuracy="1"/>
 	<stance state_key="prone" accuracy="1"/>
 	<stance state_key="over_wall" accuracy="1"/>
-	<modifier class="hit_success_probability" value="0.2"/>
 	<tag name="rifle"/>
 	<tag name="antiarmor"/>
 	<commonness value="0.05" in_stock="0" can_respawn_with="1"/>
@@ -1890,7 +1888,6 @@
 	<stance state_key="crouching" accuracy="1"/>
 	<stance state_key="prone" accuracy="1"/>
 	<stance state_key="over_wall" accuracy="1"/>
-	<modifier class="hit_success_probability" value="0.2"/>
 	<modifier class="speed" value="-0.1"/>
 	<tag name="rifle"/>
 	<tag name="antiarmor"/>
@@ -1940,7 +1937,6 @@
 	<stance state_key="prone" accuracy="1"/>
 	<stance state_key="over_wall" accuracy="1"/>
 	<modifier class="speed" value="-0.25"/>
-	<modifier class="hit_success_probability" value="0.2"/>
 	<modifier class="detectability" value="-0.2"/>
 	<tag name="rifle"/>
 	<tag name="antiarmor"/>
@@ -2580,7 +2576,6 @@
 	<stance state_key="crouching" accuracy="1"/>
 	<stance state_key="prone" accuracy="1"/>
 	<stance state_key="over_wall" accuracy="1.0"/>
-	<modifier class="hit_success_probability" value="0.2"/>
 	<modifier class="speed" value="-0.1"/>
 	<tag name="rifle"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
@@ -2918,7 +2913,7 @@
 	<sound key="cycle_in" fileref="Kar98K_cycle_in_FromCOD16.wav" volume="0.8"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_rf_98k_b.xml"/>
-	<hud_icon filename="gkw_98k.png"/>
+	<hud_icon filename="gkw_98k_b.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="2.5" kill_probability_offset_on_successful_hit="2.0" kill_decay_start_time="2.0" kill_decay_end_time="3.0"/>
@@ -2941,12 +2936,109 @@
 	<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
 	<target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
 	<target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
-	<animation key="recoil" animation_key="recoil1"/>
-	<animation key="recoil" animation_key="recoil2"/>
-	<animation key="recoil" animation_key="recoil3"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
+</weapon>
+
+<weapon key="gkw_98kmod3.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="3.0" magazine_size="5" can_shoot_standing="1" suppressed="0" name="Karabiner 98k(MOD3) - Scoped" class="2" reload_one_at_a_time="1" sight_range_modifier="2.5" projectile_speed="210" barrel_offset="0.55" projectiles_per_shot="7" stab_enabled="1" stab_range="4.5" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
+	<inventory encumbrance="20.0" buy_price="298.0" sell_price="298.0"/>
+	<next_in_chain key="gkw_98kmod3_skill.weapon" share_ammo="0"/>
+	<animation key="cycle" animation_key="Brifle1.1"/>
+	<animation key="cycle" stance_key="prone" animation_key="Brifle1.1p"/>
+	<animation key="reload" animation_key="reloading, oaat"/>
+	<animation state_key="next_in_chain_in" animation_key="change weapon install part"/>
+	<animation state_key="next_in_chain_out" animation_key="change weapon install part"/>
+	<animation state_key="stabbing" animation_key="melee, bayonet_6hp"/>
+	<animation key="recoil" animation_key="recoil1, big"/>
+	<animation key="recoil" stance_key="prone" animation_key="recoil1, big, prone"/>
+	<sound key="fire" fileref="kar98k_fire_FromCOD16.wav" volume="1.2"/>
+	<sound key="cycle" fileref="Kar98K_cycle_FromCOD16.wav" volume="0.8"/>
+	<sound key="reload_one" fileref="Kar98K_reload_FromCOD16.wav" volume="1.0"/>
+	<sound key="cycle_out" fileref="Kar98K_cycle_out_FromCOD16.wav" volume="0.8"/>
+	<sound key="cycle_in" fileref="Kar98K_cycle_in_FromCOD16.wav" volume="0.8"/>
+	<sound class="impact" fileref="rifle_drop.wav"/>
+	<sound key="stab" fileref="dagger_swing1_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab" fileref="dagger_swing2_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab" fileref="dagger_swing3_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab_hit" fileref="blade_impact_01_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
+	<sound key="stab_hit" fileref="blade_impact_02_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
+	<sound key="stab_hit" fileref="blade_impact_03_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
+	<sound key="stab_hit" fileref="blade_impact_04_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
+	<model filename="gkw_rf_98kmod3_s.xml"/>
+	<hud_icon filename="testing.png"/>
+	<weak_hand_hold offset="0.3"/>
+	<projectile file="bullet.projectile" can_be_detected_by_footmen="0">
+	<result class="blast" radius="2.0" damage="2.0" push="0.05" decal="0" character_state="death" faction_compare="not_equal"/>
+	</projectile>
+	<stance state_key="running" accuracy="1.0"/>
+	<stance state_key="walking" accuracy="1.0"/>
+	<stance state_key="crouch_moving" accuracy="1.0"/>
+	<stance state_key="prone_moving" accuracy="1.0"/>
+	<stance state_key="standing" accuracy="1.0"/>
+	<stance state_key="crouching" accuracy="1.0"/>
+	<stance state_key="prone" accuracy="1.0"/>
+	<stance state_key="over_wall" accuracy="1.0"/>
+	<tag name="rifle"/>
+	<commonness value="0.001" in_stock="0" can_respawn_with="1"/>
+	<capacity value="1" source="rank" source_value="0.0"/>
+	<modifier class="detectability" value="-0.15"/>
+	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
+	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
+	<target_factors tag="shotgun" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
+	<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
+	<target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
+	<target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
+</weapon>
+
+<weapon key="gkw_98kmod3_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="1.3" magazine_size="10" can_shoot_standing="1" suppressed="0" name="Karabiner 98k(MOD3) - Assault" class="2" reload_one_at_a_time="0" sight_range_modifier="1.5" projectile_speed="210" barrel_offset="0.55" projectiles_per_shot="8" stab_enabled="1" stab_range="5" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
+	<inventory encumbrance="20.0" buy_price="298.0" sell_price="298.0"/>
+	<next_in_chain key="gkw_98kmod3.weapon" share_ammo="0"/>
+	<animation key="cycle" animation_key="Brifle0.8"/>
+	<animation key="cycle" stance_key="prone" animation_key="Brifle0.8p"/>
+	<animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
+	<animation state_key="next_in_chain_in" animation_key="change weapon install part"/>
+	<animation state_key="next_in_chain_out" animation_key="change weapon install part"/>
+	<animation state_key="stabbing" animation_key="melee, bayonet_6hp_fast"/>
+	<animation key="recoil" animation_key="recoil1, big"/>
+	<animation key="recoil" stance_key="prone" animation_key="recoil1, big, prone"/>
+	<sound key="stab" fileref="dagger_swing1_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab" fileref="dagger_swing2_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab" fileref="dagger_swing3_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab_hit" fileref="blade_impact_01_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
+	<sound key="stab_hit" fileref="blade_impact_02_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
+	<sound key="stab_hit" fileref="blade_impact_03_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
+	<sound key="stab_hit" fileref="blade_impact_04_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
+	<sound key="fire" fileref="kar98k_fire_FromCOD16.wav" volume="1.2"/>
+	<sound key="cycle" fileref="Kar98K_cycle_FromCOD16.wav" volume="0.8"/>
+	<sound key="magazine_out" fileref="Kar98K_mgz_out_FromCOD16.wav" volume="0.8"/>
+	<sound key="magazine_in" fileref="Kar98K_mgz_in_FromCOD16.wav" volume="0.8"/>
+	<sound key="cycle_out" fileref="Kar98K_cycle_out_FromCOD16.wav" volume="0.8"/>
+	<sound key="cycle_in" fileref="Kar98K_cycle_in_FromCOD16.wav" volume="0.8"/>
+	<sound class="impact" fileref="rifle_drop.wav"/>
+	<model filename="gkw_rf_98kmod3_b.xml"/>
+	<hud_icon filename="testing.png"/>
+	<weak_hand_hold offset="0.3"/>
+	<projectile file="bullet.projectile">
+	<result class="hit" kill_probability="2.5" kill_probability_offset_on_successful_hit="1.0" kill_decay_start_time="2.0" kill_decay_end_time="3.0"/>
+	</projectile>
+	<stance state_key="running" accuracy="1.0"/>
+	<stance state_key="walking" accuracy="1.0"/>
+	<stance state_key="crouch_moving" accuracy="1.0"/>
+	<stance state_key="prone_moving" accuracy="1.0"/>
+	<stance state_key="standing" accuracy="1.0"/>
+	<stance state_key="crouching" accuracy="1.0"/>
+	<stance state_key="prone" accuracy="1.0"/>
+	<stance state_key="over_wall" accuracy="1.0"/>
+	<tag name="rifle"/>
+	<commonness value="0" in_stock="0" can_respawn_with="1"/>
+	<capacity value="1" source="rank" source_value="0.0"/>
+	<modifier class="speed" value="0.25"/>
+	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
+	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
+	<target_factors tag="shotgun" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
+	<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
+	<target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
+	<target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
 </weapon>
 
 <weapon key="gkw_g43.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
@@ -3045,7 +3137,6 @@
 	<projectile file="ntw.projectile">
 	<result class="blast" damage="16" radius="3" decal="1" push="1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	</projectile>
-	<modifier class="hit_success_probability" value="0.2"/>
 	<tag name="rifle"/>
 	<tag name="antiarmor"/>
 	<commonness value="0.05" in_stock="0" can_respawn_with="1"/>
@@ -4702,7 +4793,6 @@
 	<stance state_key="crouching" accuracy="1.0"/>
 	<stance state_key="prone" accuracy="1.0"/>
 	<stance state_key="over_wall" accuracy="1.0"/>
-	<modifier class="hit_success_probability" value="0.2"/>
 	<tag name="rifle"/>
 	<tag name="antiarmor"/>
 	<commonness value="0.05" in_stock="0" can_respawn_with="1"/>
@@ -5279,7 +5369,6 @@
 	<stance state_key="prone" accuracy="1.1"/>
 	<stance state_key="over_wall" accuracy="1.1"/>
 	<modifier class="speed" value="-0.1"/>
-	<modifier class="hit_success_probability" value="0.2"/>
 	<tag name="rifle"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="20.0" buy_price="1.0" sell_price="0.0"/>
@@ -5482,7 +5571,6 @@
 	<stance state_key="prone_moving" accuracy="1.0"/>
 	<stance state_key="over_wall" accuracy="1.0"/>
 	<modifier class="detectability" value="-0.1"/>
-	<modifier class="hit_success_probability" value="0.2"/>
 	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
 	<target_factors tag="shotgun" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
@@ -7898,7 +7986,6 @@
 	<stance state_key="prone" accuracy="1.1"/>
 	<stance state_key="over_wall" accuracy="1.1"/>
 	<modifier class="speed" value="-0.1"/>
-	<modifier class="hit_success_probability" value="0.2"/>
 	<tag name="rifle"/>
 	<tag name="antiarmor"/>
 	<commonness value="0.05" in_stock="0" can_respawn_with="1"/>
@@ -8162,7 +8249,7 @@
 	<sound key="cycle_in" fileref="m1903_cycle_in_FromBF1.wav" volume="0.6"/>
 	<sound class="impact" fileref="rifle_drop.wav" volume="1"/>
 	<model filename="gkw_rf_mlemk1.xml"/>
-	<hud_icon filename="gkw_mlemk1.png"/>
+	<hud_icon filename="gkw_mlemk1_b.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="bullet.projectile" can_be_detected_by_footmen="0">
 	<result class="hit" kill_probability="2.2" kill_probability_offset_on_successful_hit="2.5" kill_decay_start_time="1.895" kill_decay_end_time="3.158"/>
@@ -8458,7 +8545,6 @@
 	<stance state_key="crouching" accuracy="1"/>
 	<stance state_key="prone" accuracy="1"/>
 	<stance state_key="over_wall" accuracy="1"/>
-	<modifier class="hit_success_probability" value="0.2"/>
 	<modifier class="speed" value="0.2"/>
 	<tag name="rifle"/>
 	<tag name="antiarmor"/>
@@ -12387,7 +12473,6 @@
 	<stance state_key="prone" accuracy="1.1"/>
 	<stance state_key="over_wall" accuracy="1.1"/>
 	<modifier class="speed" value="-0.1"/>
-	<modifier class="hit_success_probability" value="0.2"/>
 	<tag name="rifle"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="20.0" buy_price="1.0" sell_price="0.0"/>
@@ -16367,7 +16452,6 @@
 	<stance state_key="crouching" accuracy="1"/>
 	<stance state_key="prone" accuracy="1"/>
 	<stance state_key="over_wall" accuracy="1"/>
-	<modifier class="hit_success_probability" value="0.2"/>
 	<tag name="rifle"/>
 	<tag name="antiarmor"/>
 	<commonness value="0.05" in_stock="0" can_respawn_with="1"/>
@@ -19171,7 +19255,7 @@
 	<tag name="elite"/>
 	<tag name="rifle"/>
 	<tag name="antiarmor"/>
-	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="0" sustained_fire_diminish_rate="1.0" magazine_size="5" can_shoot_standing="1" can_shoot_prone="0" can_shoot_crouching="1" suppressed="0" name="Hanyang-made Type88(MOD3)" class="4" reload_one_at_a_time="1" sight_range_modifier="2.5" projectile_speed="250" last_burst_retrigger_time="0.8" barrel_offset="1.65" projectiles_per_shot="2" use_basic_muzzle_smoke_effect="0" burst_shots="1" stab_enabled="1" stab_range="4.0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="3.0" magazine_size="5" can_shoot_standing="1" can_shoot_prone="0" can_shoot_crouching="0" suppressed="0" name="Hanyang-made Type88(MOD3)" class="2" reload_one_at_a_time="1" sight_range_modifier="2.5" projectile_speed="200" last_burst_retrigger_time="-1" barrel_offset="1.65" projectiles_per_shot="6" use_basic_muzzle_smoke_effect="0" burst_shots="1" stab_enabled="1" stab_range="4.0"/>
 	<next_in_chain key="gkw_88typemod3_skill.weapon" share_ammo="0"/>
 	<commonness value="0.0000001" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="20.0" buy_price="550.0" sell_price="500.0"/>
@@ -19182,10 +19266,9 @@
 	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
 	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
 	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
-	<animation key="cycle" animation_key="Brifle0.8"/>
-	<animation key="cycle" stance_key="prone" animation_key="Brifle0.8p"/>
+	<animation key="cycle" animation_key="Brifle1.1"/>
 	<animation key="reload" animation_key="reloading, oaat"/>
-	<animation state_key="stabbing" animation_key="melee, bayonet"/>
+	<animation state_key="stabbing" animation_key="melee, bayonet_6hp"/>
 	<animation state_key="hold" animation_key="still, 88typemod3"/>
 	<animation state_key="hold_on_wall" animation_key="still, 88typemod3"/>
 	<animation state_key="still_against_wall" animation_key="still against wall, 88typemod3_melee"/>
@@ -19209,7 +19292,7 @@
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="88type_laser.projectile">
 	<trail probability="1.0" key="laser_hyz"/>
-	<result class="blast" damage="6.5" radius="2.5" decal="1" push="0.2" character_state="death" faction_compare="not_equal"/>
+	<result class="blast" damage="1.1" radius="2.0" decal="1" push="0.2" character_state="death" faction_compare="not_equal"/>
 	</projectile>
 	<stance state_key="running" accuracy="1"/>
 	<stance state_key="walking" accuracy="1"/>
@@ -19220,7 +19303,6 @@
 	<stance state_key="prone" accuracy="1"/>
 	<stance state_key="over_wall" accuracy="1"/>
 	<modifier class="speed" value="0.4"/>
-	<modifier class="detectability" value="-0.1"/>
 	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
 	<target_factors tag="shotgun" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
@@ -19393,7 +19475,6 @@
 	<projectile file="ntw.projectile">
 	<result class="blast" damage="18.0" radius="3.5" decal="1" push="1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	</projectile>
-	<modifier class="hit_success_probability" value="0.2"/>
 	<modifier class="speed" value="0.1"/>
 	<tag name="rifle"/>
 	<tag name="antiarmor"/>
@@ -19459,7 +19540,6 @@
 	<projectile file="ntw.projectile">
 	<result class="blast" damage="22" radius="4" decal="1" push="1.0" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	</projectile>
-	<modifier class="hit_success_probability" value="0.2"/>
 	<modifier class="speed" value="-0.3"/>
 	<tag name="rifle"/>
 	<tag name="antiarmor"/>
@@ -19554,7 +19634,6 @@
 	<stance state_key="crouching" accuracy="1.0"/>
 	<stance state_key="prone" accuracy="1.0"/>
 	<stance state_key="over_wall" accuracy="1.0"/>
-	<modifier class="hit_success_probability" value="0.2"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<tag name="rifle"/>
 	<tag name="antiarmor"/>
@@ -19608,7 +19687,6 @@
 	<stance state_key="over_wall" accuracy="1.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<modifier class="speed" value="-0.2"/>
-	<modifier class="hit_success_probability" value="0.2"/>
 	<tag name="rifle"/>
 	<tag name="antiarmor"/>
 	<inventory encumbrance="20.0" buy_price="1.0" sell_price="0.0"/>
@@ -23631,7 +23709,6 @@
 	<stance state_key="prone_moving" accuracy="1.0"/>
 	<stance state_key="over_wall" accuracy="1.0"/>
 	<modifier class="detectability" value="-0.1"/>
-	<modifier class="hit_success_probability" value="0.2"/>
 	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
 	<target_factors tag="shotgun" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
@@ -23677,7 +23754,6 @@
 	<stance state_key="prone_moving" accuracy="1.0"/>
 	<stance state_key="over_wall" accuracy="1.0"/>
 	<modifier class="detectability" value="-0.1"/>
-	<modifier class="hit_success_probability" value="0.2"/>
 	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
 	<target_factors tag="shotgun" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
@@ -23723,7 +23799,6 @@
 	<stance state_key="prone_moving" accuracy="1.0"/>
 	<stance state_key="over_wall" accuracy="1.0"/>
 	<modifier class="detectability" value="-0.1"/>
-	<modifier class="hit_success_probability" value="0.2"/>
 	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
 	<target_factors tag="shotgun" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
@@ -24678,7 +24753,6 @@
 	<projectile file="ntw.projectile">
 	<result class="blast" damage="16" radius="3" decal="1" push="1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	</projectile>
-	<modifier class="hit_success_probability" value="0.2"/>
 	<tag name="rifle"/>
 	<tag name="antiarmor"/>
 	<inventory encumbrance="20.0" buy_price="1.0" sell_price="0.0"/>
@@ -24760,7 +24834,6 @@
 	<projectile file="ntw.projectile">
 	<result class="blast" damage="16" radius="3" decal="1" push="1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	</projectile>
-	<modifier class="hit_success_probability" value="0.2"/>
 	<tag name="rifle"/>
 	<tag name="antiarmor"/>
 	<inventory encumbrance="20.0" buy_price="1.0" sell_price="0.0"/>
@@ -27421,7 +27494,6 @@
 	<stance state_key="crouching" accuracy="1"/>
 	<stance state_key="prone" accuracy="1"/>
 	<stance state_key="over_wall" accuracy="1"/>
-	<modifier class="hit_success_probability" value="0.2"/>
 	<modifier class="speed" value="0.2"/>
 	<tag name="rifle"/>
 	<tag name="antiarmor"/>
@@ -28006,7 +28078,6 @@
 	<stance state_key="crouching" accuracy="1.0"/>
 	<stance state_key="prone" accuracy="1.0"/>
 	<stance state_key="over_wall" accuracy="1.0"/>
-	<modifier class="hit_success_probability" value="0.2"/>
 	<tag name="rifle"/>
 	<tag name="antiarmor"/>
 	<inventory encumbrance="20.0" buy_price="1.0" sell_price="0.0"/>
@@ -28105,7 +28176,6 @@
 	<stance state_key="crouching" accuracy="1.0"/>
 	<stance state_key="prone" accuracy="1.0"/>
 	<stance state_key="over_wall" accuracy="1.0"/>
-	<modifier class="hit_success_probability" value="0.2"/>
 	<tag name="rifle"/>
 	<tag name="antiarmor"/>
 	<inventory encumbrance="20.0" buy_price="1.0" sell_price="0.0"/>
@@ -28205,7 +28275,6 @@
 	<stance state_key="crouching" accuracy="1.0"/>
 	<stance state_key="prone" accuracy="1.0"/>
 	<stance state_key="over_wall" accuracy="1.0"/>
-	<modifier class="hit_success_probability" value="0.2"/>
 	<tag name="rifle"/>
 	<tag name="antiarmor"/>
 	<inventory encumbrance="20.0" buy_price="1.0" sell_price="0.0"/>
@@ -28297,7 +28366,6 @@
 	<stance state_key="crouching" accuracy="1.0"/>
 	<stance state_key="prone" accuracy="1.0"/>
 	<stance state_key="over_wall" accuracy="1.0"/>
-	<modifier class="hit_success_probability" value="0.2"/>
 	<tag name="rifle"/>
 	<tag name="antiarmor"/>
 	<inventory encumbrance="20.0" buy_price="1.0" sell_price="0.0"/>
@@ -29349,7 +29417,6 @@
 	<stance state_key="crouching" accuracy="1"/>
 	<stance state_key="prone" accuracy="1"/>
 	<stance state_key="over_wall" accuracy="1"/>
-	<modifier class="hit_success_probability" value="0.2"/>
 	<tag name="rifle"/>
 	<tag name="antiarmor"/>
 	<inventory encumbrance="20.0" buy_price="1.0" sell_price="0.0"/>
@@ -29660,7 +29727,6 @@
 	<stance state_key="prone" accuracy="1.1"/>
 	<stance state_key="over_wall" accuracy="1.1"/>
 	<modifier class="speed" value="-0.1"/>
-	<modifier class="hit_success_probability" value="0.2"/>
 	<tag name="rifle"/>
 	<inventory encumbrance="20.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -29711,7 +29777,6 @@
 	<stance state_key="prone" accuracy="1.1"/>
 	<stance state_key="over_wall" accuracy="1.1"/>
 	<modifier class="speed" value="-0.1"/>
-	<modifier class="hit_success_probability" value="0.2"/>
 	<tag name="rifle"/>
 	<inventory encumbrance="20.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -29737,10 +29802,10 @@
 	<tag name="elite"/>
 	<tag name="rifle"/>
 	<tag name="antiarmor"/>
-	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="0" sustained_fire_diminish_rate="1.0" magazine_size="5" can_shoot_standing="1" can_shoot_prone="0" can_shoot_crouching="1" suppressed="0" name="Hanyang-made Type88(MOD3)-[White Comet]" class="4" reload_one_at_a_time="0" sight_range_modifier="2.5" projectile_speed="250" last_burst_retrigger_time="0.8" barrel_offset="3.6" projectiles_per_shot="2" use_basic_muzzle_smoke_effect="0" burst_shots="1" stab_enabled="1" stab_range="6.0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="4.5" magazine_size="5" can_shoot_standing="1" can_shoot_prone="0" can_shoot_crouching="1" suppressed="0" name="Hanyang-made Type88(MOD3)-[White Comet]" class="4" reload_one_at_a_time="0" sight_range_modifier="2.5" projectile_speed="250" last_burst_retrigger_time="1.5" barrel_offset="3.6" projectiles_per_shot="6" use_basic_muzzle_smoke_effect="0" burst_shots="1" stab_enabled="1" stab_range="6.0"/>
 	<next_in_chain key="gkw_88typemod3_6503_skill.weapon" share_ammo="0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
-	<inventory encumbrance="20.0" buy_price="1895.0" sell_price="1500.0"/>
+	<inventory encumbrance="20.0" buy_price="1895.0" sell_price="648.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<animation key="reload" animation_key="reload, gunda"/>
 	<animation state_key="hold" animation_key="still, gunda"/>
@@ -29772,7 +29837,7 @@
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="88type_laser.projectile">
 	<trail probability="1.0" key="laser_hyz"/>
-	<result class="blast" damage="6.5" radius="4.5" decal="1" push="0.8" character_state="death" faction_compare="not_equal"/>
+	<result class="blast" damage="2.0" radius="2.5" decal="1" push="0.8" character_state="death" faction_compare="not_equal"/>
 	</projectile>
 	<stance state_key="running" accuracy="1"/>
 	<stance state_key="walking" accuracy="1"/>
@@ -29783,7 +29848,7 @@
 	<stance state_key="prone" accuracy="1"/>
 	<stance state_key="over_wall" accuracy="1"/>
 	<modifier class="speed" value="0.4"/>
-	<modifier class="detectability" value="0.2"/>
+	<modifier class="detectability" value="0.3"/>
 	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
 	<target_factors tag="shotgun" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
@@ -30019,7 +30084,6 @@
 	<stance state_key="crouching" accuracy="1"/>
 	<stance state_key="prone" accuracy="1"/>
 	<stance state_key="over_wall" accuracy="1"/>
-	<modifier class="hit_success_probability" value="0.2"/>
 	<tag name="rifle"/>
 	<tag name="antiarmor"/>
 	<commonness value="0.05" in_stock="0" can_respawn_with="1"/>
@@ -30069,7 +30133,6 @@
 	<stance state_key="crouching" accuracy="1"/>
 	<stance state_key="prone" accuracy="1"/>
 	<stance state_key="over_wall" accuracy="1"/>
-	<modifier class="hit_success_probability" value="0.2"/>
 	<tag name="rifle"/>
 	<tag name="antiarmor"/>
 	<commonness value="0.05" in_stock="0" can_respawn_with="1"/>
@@ -32050,7 +32113,6 @@
 	<result class="blast" damage="18.0" radius="3" decal="1" push="1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	</projectile>
 	<modifier class="speed" value="0.1"/>
-	<modifier class="hit_success_probability" value="0.2"/>
 	<tag name="rifle"/>
 	<tag name="antiarmor"/>
 	<inventory encumbrance="20.0" buy_price="1.0" sell_price="0.0"/>
@@ -32115,7 +32177,6 @@
 	<result class="blast" damage="22" radius="4" decal="1" push="1.0" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	</projectile>
 	<modifier class="speed" value="-0.3"/>
-	<modifier class="hit_success_probability" value="0.2"/>
 	<tag name="rifle"/>
 	<tag name="antiarmor"/>
 	<inventory encumbrance="20.0" buy_price="1.0" sell_price="0.0"/>
@@ -32200,7 +32261,6 @@
 	<result class="blast" damage="18.0" radius="3" decal="1" push="1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	</projectile>
 	<modifier class="speed" value="0.1"/>
-	<modifier class="hit_success_probability" value="0.2"/>
 	<tag name="rifle"/>
 	<tag name="antiarmor"/>
 	<inventory encumbrance="20.0" buy_price="1.0" sell_price="0.0"/>
@@ -32266,7 +32326,6 @@
 	<result class="blast" damage="22" radius="4" decal="1" push="1.0" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	</projectile>
 	<modifier class="speed" value="-0.3"/>
-	<modifier class="hit_success_probability" value="0.2"/>
 	<tag name="rifle"/>
 	<tag name="antiarmor"/>
 	<inventory encumbrance="20.0" buy_price="1.0" sell_price="0.0"/>
@@ -34341,7 +34400,6 @@
 	<stance state_key="crouching" accuracy="1.0"/>
 	<stance state_key="prone" accuracy="1.0"/>
 	<stance state_key="over_wall" accuracy="1.0"/>
-	<modifier class="hit_success_probability" value="0.2"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<tag name="rifle"/>
 	<tag name="antiarmor"/>
@@ -34394,7 +34452,6 @@
 	<stance state_key="prone" accuracy="1.0"/>
 	<stance state_key="over_wall" accuracy="1.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<modifier class="hit_success_probability" value="0.2"/>
 	<modifier class="speed" value="-0.2"/>
 	<tag name="rifle"/>
 	<tag name="antiarmor"/>
@@ -34481,7 +34538,6 @@
 	<stance state_key="crouching" accuracy="1.0"/>
 	<stance state_key="prone" accuracy="1.0"/>
 	<stance state_key="over_wall" accuracy="1.0"/>
-	<modifier class="hit_success_probability" value="0.2"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<tag name="rifle"/>
 	<tag name="antiarmor"/>
@@ -34533,7 +34589,6 @@
 	<stance state_key="crouching" accuracy="1.0"/>
 	<stance state_key="prone" accuracy="1.0"/>
 	<stance state_key="over_wall" accuracy="1.0"/>
-	<modifier class="hit_success_probability" value="0.2"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<modifier class="speed" value="-0.2"/>
 	<tag name="rifle"/>
@@ -34635,7 +34690,6 @@
 	<stance state_key="crouching" accuracy="1.0"/>
 	<stance state_key="prone" accuracy="1.0"/>
 	<stance state_key="over_wall" accuracy="1.0"/>
-	<modifier class="hit_success_probability" value="0.2"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<tag name="rifle"/>
 	<tag name="antiarmor"/>
@@ -34688,7 +34742,6 @@
 	<stance state_key="prone" accuracy="1.0"/>
 	<stance state_key="over_wall" accuracy="1.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<modifier class="hit_success_probability" value="0.2"/>
 	<modifier class="speed" value="-0.2"/>
 	<tag name="rifle"/>
 	<tag name="antiarmor"/>
@@ -34782,7 +34835,6 @@
 	<stance state_key="crouching" accuracy="1.0"/>
 	<stance state_key="prone" accuracy="1.0"/>
 	<stance state_key="over_wall" accuracy="1.0"/>
-	<modifier class="hit_success_probability" value="0.2"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<tag name="rifle"/>
 	<tag name="antiarmor"/>
@@ -34835,7 +34887,6 @@
 	<stance state_key="prone" accuracy="1.0"/>
 	<stance state_key="over_wall" accuracy="1.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<modifier class="hit_success_probability" value="0.2"/>
 	<modifier class="speed" value="-0.2"/>
 	<tag name="rifle"/>
 	<tag name="antiarmor"/>
@@ -39474,9 +39525,9 @@
 </weapon>
 
 <weapon time_to_live_out_in_the_open="0" drop_count_factor_on_death="0.5" drop_count_factor_on_player_death="1.0" key="sfw_alchemist_at.weapon" on_ground_up="0 0 1">
-	<specification retrigger_time="0.12" accuracy_factor="0.75" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="0.5" magazine_size="2" can_shoot_standing="1" can_shoot_crouching="0" can_shoot_prone="0" carry_in_two_hands="0" suppressed="0" name="SF-Alchemist" class="0" consume="1" reload_one_at_a_time="0" sight_range_modifier="1.5" projectile_speed="135" burst_shots="1" slot="1" spread_range="0.1" projectiles_per_shot="2"/>
+	<specification retrigger_time="0.12" accuracy_factor="0.75" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="0.5" magazine_size="1" can_shoot_standing="1" can_shoot_crouching="0" can_shoot_prone="0" carry_in_two_hands="0" suppressed="0" name="SF-Alchemist" class="0" consume="1" reload_one_at_a_time="0" sight_range_modifier="1.5" projectile_speed="135" burst_shots="1" slot="1" spread_range="0.1" projectiles_per_shot="2"/>
 	<inventory encumbrance="3.0" buy_price="5.0" sell_price="5.0"/>
-	<capacity value="6" source="rank" source_value="0.0"/>
+	<capacity value="50" source="rank" source_value="0.0"/>
 	<commonness value="0.1" in_stock="1" can_respawn_with="1"/>
 	<animation state_key="recoil" animation_key="high recoil, pistol dual 1"/>
 	<animation state_key="recoil" animation_key="high recoil, pistol dual 2"/>
@@ -40643,12 +40694,6 @@
 	<projectile file="bullet_paradeus.projectile">
 	<result class="blast" damage="1.0" radius="1.5" decal="1" push="0" character_state="death" faction_compare="not_equal"/>
 	<trigger class="impact"/>
-	<effect class="result" key="terrain" ref="BigBurst" use_surface_color="1"/>
-	<effect class="result" key="terrain" ref="SmokeTop" post_processing="1"/>
-	<effect class="result" key="terrain" ref="Smoke" post_processing="1"/>
-	<effect class="result" key="terrain" ref="Shine" lighting="0"/>
-	<effect class="result" key="terrain" ref="Godray" lighting="0"/>
-	<effect class="result" key="terrain" ref="ShadowSmoke" shadow="1"/>
 	<trail probability="1.0" key="laser_tiaotiao"/>
 	</projectile>
 	<modifier class="speed" value="0.3"/>
@@ -41515,6 +41560,59 @@
 	<sound key="stab_hit" fileref="melee_hit_impact_flesh2_fromFO4.wav" pitch_variety="0.05" volume="2.5"/>
 	<sound key="stab_hit_any" fileref="melee_hit_impact_flesh1_fromFO4.wav" pitch_variety="0.05" volume="1.6"/>
 	<sound key="stab_hit_any" fileref="melee_hit_impact_flesh2_fromFO4.wav" pitch_variety="0.05" volume="1.6"/>
+</weapon>
+
+<weapon on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0" key="parw_thunder.weapon">
+	<tag name="elite"/>
+	<tag name="mecha"/>
+	<tag name="antiarmor"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="4.5" magazine_size="500" can_shoot_standing="1" can_shoot_prone="0" can_shoot_crouching="0" suppressed="0" name="Thunder" class="4" carry_in_two_hands="0" reload_one_at_a_time="0" sight_range_modifier="1.5" projectile_speed="150" last_burst_retrigger_time="3" barrel_offset="0.5" projectiles_per_shot="1" use_basic_muzzle_smoke_effect="0" burst_shots="1" stab_enabled="1" stab_range="1.0"/>
+	<commonness value="1" in_stock="1" can_respawn_with="1"/>
+	<inventory encumbrance="20.0" buy_price="0.0" sell_price="0.0"/>
+	<capacity value="1" source="rank" source_value="0.0"/>
+	<animation key="reload" animation_key="reload, thunder"/>
+	<animation state_key="hold" animation_key="still, thunder"/>
+	<animation state_key="hold_on_wall" animation_key="still, thunder"/>
+	<animation state_key="still_against_wall" animation_key="still, thunder"/>
+	<animation state_key="hold_casual" animation_key="still, thunder"/>
+	<animation state_key="running" animation_key="walking2, thunder"/>
+	<animation state_key="walking" animation_key="walking2, thunder"/>
+	<animation state_key="crouching" animation_key="still, thunder"/>
+	<animation state_key="crouch_moving" animation_key="walking2, thunder"/>
+	<animation state_key="crouch_moving_backwards" animation_key="walking2, thunder"/>
+	<animation state_key="prone_moving" animation_key="walking2, thunder"/>
+	<animation key="recoil" animation_key="recoil, thunder"/>
+	<animation state_key="stabbing" animation_key="stab, thunder"/>
+	<sound key="fire" fileref="type88robot_fire_FromCOD13.wav" pitch_variety="0.05" volume="1.05"/>
+	<sound key="cycle" fileref="type88robot_cycle_FromCOD13.wav" volume="0.4"/>
+	<sound key="magazine_out" fileref="type88robot_mgz_out_FromCOD13.wav" volume="0.4"/>
+	<sound key="magazine_in" fileref="type88robot_mgz_in_FromCOD13.wav" volume="0.4"/>
+	<sound key="cycle_out" fileref="type88robot_cycle_out_FromCOD13.wav" volume="0.4"/>
+	<sound key="cycle_in" fileref="type88robot_cycle_in_FromCOD13.wav" volume="0.4"/>
+	<sound class="impact" fileref="rifle_drop.wav" volume="1"/>
+	<model/>
+	<hud_icon filename="testing.png"/>
+	<weak_hand_hold offset="0.3"/>
+	<projectile file="88type_laser.projectile">
+	<trail probability="1.0" key="laser_hyz"/>
+	<result class="blast" damage="15.0" radius="2.5" decal="1" push="0.8" character_state="death" faction_compare="not_equal"/>
+	</projectile>
+	<stance state_key="running" accuracy="1"/>
+	<stance state_key="walking" accuracy="1"/>
+	<stance state_key="crouch_moving" accuracy="1"/>
+	<stance state_key="prone_moving" accuracy="1"/>
+	<stance state_key="standing" accuracy="1"/>
+	<stance state_key="crouching" accuracy="1"/>
+	<stance state_key="prone" accuracy="1"/>
+	<stance state_key="over_wall" accuracy="1"/>
+	<modifier class="speed" value="0.4"/>
+	<modifier class="detectability" value="1.0"/>
+	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
+	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
+	<target_factors tag="shotgun" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
+	<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
+	<target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
+	<target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
 </weapon>
 
 <weapon key="parw_roarer.weapon" on_ground_up="0 0 1" time_to_live_out_in_the_open="0.0" drop_count_factor_on_death="0.0" player_death_drop_owner_lock_time="0">
@@ -43169,14 +43267,13 @@
 	<commonness value="0.0"/>
 	<ballistics curve_height="10.0" near_far_distance="0.0" speed_estimation_near="0.0" speed_estimation_far="58.0" max_speed="42.0" randomness="0.0" tweak_factor="1.2"/>
 	<projectile file="hornet.projectile">
-	<result class="blast" radius="4.5" damage="10.0" push="1.0" decal="1" damage_origin_vehicle="0"/>
+	<result class="blast" radius="4.5" damage="10.0" push="1.0" decal="1" damage_origin_vehicle="0" faction_compare="not_equal"/>
 	</projectile>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
 	<target_factors tag="heavy_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="10.0"/>
 	<target_factors tag="apc" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0"/>
 	<target_factors tag="light_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="6.0"/>
 	<target_factors tag="defensive_at" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.5"/>
-	<target_factors tag="tactical" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0"/>
 	<target_factors tag="bazooka" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
 	<effect class="muzzle" ref="LawMuzzle"/>
 	<effect class="muzzle" ref="UpDust"/>
