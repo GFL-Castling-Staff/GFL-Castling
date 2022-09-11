@@ -9,7 +9,7 @@
     can_shoot_standing="1"
     suppressed="0"
     name="Winchester Model 1887"
-    class="4"
+    class="1"
     reload_one_at_a_time="1"
     sight_range_modifier="1"
     projectile_speed="80"
@@ -18,11 +18,13 @@
     stab_enabled="1"
     carry_in_two_hands="0"
     burst_shots="1"
-    last_burst_retrigger_time="0.45"
+    last_burst_retrigger_time="0.3"
     slot="0"
     use_basic_muzzle_smoke_effect="0"/>
     <inventory  encumbrance="10.0"  buy_price="20.0" sell_price="10.0"/>
-    <animation key="reload" animation_key="reloading,m1887"/>
+    
+    <animation state_key="cycle" animation_key="recoil,m1887" />
+    <animation key="reload" animation_key="RevolverReload"/>
     <sound key="fire" fileref="m1897_fire_FromCOD5.wav" pitch_variety="0.05" volume="1"/>
     <sound key="cycle" fileref="m1897_cycle_FromCOD5.wav" volume="0.7"/>
     <sound key="reload_one" fileref="m1897_reload_FromCOD14.wav" volume="0.9"/>

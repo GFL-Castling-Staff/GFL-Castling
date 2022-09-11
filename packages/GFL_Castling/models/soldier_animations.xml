@@ -78989,7 +78989,7 @@
 			<control key="strong_hand" value="1" />
 		</frame>
 	</animation>
-    <animation loop="1" end="0.320000" speed="1.500000" comment="reloading,m1887">
+    <animation loop="0" end="0.320000" speed="1.000000" comment="recoil,m1887">
         <frame time="0.000000">
             <position x="0.500000" y="55.500000" z="0.500000" />
             <position x="0.500000" y="48.500000" z="0.500000" />
@@ -79006,7 +79006,7 @@
             <position x="5.500000" y="13.500000" z="0.500000" />
             <position x="-4.500000" y="0.500000" z="0.500000" />
             <position x="5.500000" y="0.500000" z="0.500000" />
-			<control key="weak_hand" value="0" />
+			<control key="strong_hand" value="1" />
         </frame>
         <frame time="0.1000000">
             <position x="0.500000" y="55.500000" z="0.500000" />
@@ -79058,7 +79058,6 @@
             <position x="5.500000" y="13.500000" z="0.500000" />
             <position x="-4.500000" y="0.500000" z="0.500000" />
             <position x="5.500000" y="0.500000" z="0.500000" />
-            <control key="reload" value="1" />
         </frame>
         <frame time="0.2500000">
             <position x="0.500000" y="55.500000" z="0.500000" />
@@ -79093,7 +79092,6 @@
             <position x="5.500000" y="13.500000" z="0.500000" />
             <position x="-4.500000" y="0.500000" z="0.500000" />
             <position x="5.500000" y="0.500000" z="0.500000" />
-            <control key="stop" value="1" />
         </frame>
     </animation>	
 </animations>
