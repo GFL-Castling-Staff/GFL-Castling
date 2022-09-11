@@ -7,14 +7,16 @@ class PausingKothTimer : Tracker {
 	protected GameModeInvasion@ m_metagame;
 	protected bool m_started;
 	protected float m_time;
+	protected bool m_bgm;
 
 	// --------------------------------------------
-	PausingKothTimer(GameModeInvasion@ metagame, float time) {
+	PausingKothTimer(GameModeInvasion@ metagame, float time，bool bgm=true) {
 		super();
 
 		@m_metagame = @metagame;
 		m_started = false;
 		m_time = time;
+		m_bgm = bgm;
 	}
 
 	// --------------------------------------------
@@ -48,7 +50,9 @@ class PausingKothTimer : Tracker {
 	protected void refresh() {
         // query about bases
 		array<const XmlElement@> baseList = getBases(m_metagame);
-		playSoundtrack(m_metagame,"soundtrack_koth.wav");
+		if(m_bgm){
+			playSoundtrack(m_metagame,"soundtrack_koth.wav");
+		}
 
 		int winner = -1;
 		bool pause = false;
