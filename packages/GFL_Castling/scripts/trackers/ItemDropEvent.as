@@ -24,6 +24,7 @@ dictionary itemDropFileIndex = {
     {"upgrade_type88.carry_item",3},    // 汉阳造加速线圈
     {"upgrade_aa12.carry_item",4},      // AA12独头弹
     {"upgrade_m1.carry_item",5},      // M1加兰德弹鼓
+    {"upgrade_fg42.carry_item",6},      // FG42
 
     {"666",0}
 };
@@ -37,6 +38,7 @@ dictionary itemDropKeyIndex = {
     {"type88",3},                       // 汉阳造加速线圈
     {"aa12",4},                         // AA12独头弹
     {"m1garand",5},                     // M1加兰德弹鼓
+    {"fg42",6},
 
     {"666",0}
 };
@@ -140,7 +142,19 @@ class ItemDropEvent : Tracker {
                         playPrivateSound(m_metagame,"sfx_equip.wav",pId);
                     }
                     break;
-                }                
+                } 
+                case 6:{
+                    if(checkQueue(pId,"fg42")){
+                        addItemInBackpack(m_metagame,cId,"carry_item","upgrade_fg42.carry_item");
+                        sendPrivateMessageKey(m_metagame, pId, "onlyonequeue_common");
+                        playPrivateSound(m_metagame,"sfx_failed.wav",pId);
+                    }
+                    else{
+                        startQueue(pId,"fg42");
+                        playPrivateSound(m_metagame,"sfx_equip.wav",pId);
+                    }
+                    break;
+                }
                 default:{
                     if (checkQueue(pId,"mod3")){
                         string outputItem = string(MOD3craftList[itemKey]);
@@ -184,6 +198,11 @@ class ItemDropEvent : Tracker {
                     else if (checkQueue(pId,"m1garand") && (itemKey=="gkw_m1_1106.weapon")){
                         addItemInBackpack(m_metagame,cId,"weapon","gkw_m1_sf_1106.weapon");
                         m_craftQueue.removeAt(findQueueIndex(pId,"m1garand"));
+                        playPrivateSound(m_metagame,"digimind_sfx2.wav",pId);
+                    }
+                    else if (checkQueue(pId,"fg42") && (itemKey=="gkw_fg42.weapon" || itemKey=="gkw_fg42_skill.weapon")){
+                        addItemInBackpack(m_metagame,cId,"weapon","gkw_fg42_only.weapon");
+                        m_craftQueue.removeAt(findQueueIndex(pId,"fg42"));
                         playPrivateSound(m_metagame,"digimind_sfx2.wav",pId);
                     }                    
                     break;
