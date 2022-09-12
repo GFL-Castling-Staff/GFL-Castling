@@ -42,7 +42,6 @@
 		<animation state_key="walking" animation_key="walking, hip fire" />
 		<animation state_key="walking_backwards" animation_key="walking backwards, hip fire" />
 		<animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
-		<animation state_key="stabbing" animation_key="pistol whip 3" />
         <animation state_key="stabbing" animation_key="melee, bayonet_6hp"/>
 
         <sound key="stab" fileref="dagger_swing1_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
@@ -62,7 +61,7 @@
 		<sound class="impact" fileref="rifle_drop.wav" />
 		<model filename="gkw_mg_fg42_only.xml" />
 		<hud_icon filename="gkw_fg42_only.png" />
-		<projectile file="bullet_vanilla.projectile">
+		<projectile file="bullet.projectile">
 			<result class="hit" kill_probability="2.1" kill_probability_offset_on_successful_hit="1.75" kill_decay_start_time="2.432" kill_decay_end_time="4.054" />
 		</projectile>
 		<commonness value="0" in_stock="0" can_respawn_with="1" />
@@ -118,7 +117,6 @@
 		<animation state_key="walking" animation_key="walking, hip fire" />
 		<animation state_key="walking_backwards" animation_key="walking backwards, hip fire" />
 		<animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
-		<animation state_key="stabbing" animation_key="pistol whip 3" />
         <animation state_key="stabbing" animation_key="melee, bayonet_6hp"/>
 
         <sound key="stab" fileref="dagger_swing1_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
@@ -139,7 +137,7 @@
 		<sound class="impact" fileref="rifle_drop.wav" />
 		<model filename="gkw_mg_fg42_only.xml" />
 		<hud_icon filename="gkw_fg42_only_skill.png" />
-		<projectile file="bullet_vanilla.projectile">
+		<projectile file="bullet.projectile">
 			<result class="hit" kill_probability="2.5" kill_probability_offset_on_successful_hit="2.7" kill_decay_start_time="2.432" kill_decay_end_time="4.054" />
 		</projectile>
 		<stance state_key="running" accuracy="0.6" />
