@@ -405,7 +405,16 @@ class BasicCommandHandler : Tracker {
 			int characterId= playerInfo.getIntAttribute("character_id");			
 			playAnimationKey(m_metagame,characterId,"celebrating2",true,true);
 		}
-		
+		else if (checkCommand(message, "playsound1")) {
+			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
+			if (playerInfo is null) return;
+			int characterId= playerInfo.getIntAttribute("character_id");
+			const XmlElement@ characterInfo = getCharacterInfo(m_metagame, characterId);
+			if (characterInfo is null) return;
+			string c_pos = characterInfo.getStringAttribute("position");
+			int fId = characterInfo.getIntAttribute("faction_id");
+			playSoundAtLocation(m_metagame,"Bella Ciao.wav",fId,c_pos,1.0);
+		}		
 		// admin and moderator only from here on
 		if (!m_metagame.getAdminManager().isAdmin(sender, senderId) && !m_metagame.getModeratorManager().isModerator(sender, senderId)) {
 			return;
