@@ -4,8 +4,8 @@
     <tag name="PARA_MOTH" />
     <tag name="jeep" />
     <tag name="heavy_combat" />
-    <tire_set offset="5.0 0 5.0" radius="2.5" />
-    <tire_set offset="5.0 0 -5.0" radius="2.5" />
+    <tire_set offset="4.0 0 4.0" radius="2.5" />
+    <tire_set offset="4.0 0 -4.0" radius="2.5" />
 	
     <control 
 	max_speed="21.0" 
@@ -28,7 +28,7 @@
 	preserve_motion_on_impact_factor="0.0"
 	gravity="-8" 
 	remove_collision_threshold="50.0" 
-	extent="6.2 0.0 6.2" 
+	extent="5.4 0.0 5.4" 
 	offset="0.0 +0.0 -0.0" 
 	top_offset="0 15 0" 
 	collision_model_pos="0 10.4 0" 
