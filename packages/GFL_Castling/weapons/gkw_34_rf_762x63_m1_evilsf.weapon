@@ -42,7 +42,7 @@
     <sound key="magazine_in" fileref="m1garand_mgz_in_FromCOD13.wav" volume="0.45" />
     <sound key="last_ammo" fileref="rifle_02_m1_garand_ping.wav" />
     <model filename="gkw_rf_m1_sf.xml" />
-    <hud_icon filename="gkw_m1.png" />
+    <hud_icon filename="gkw_m1_sf_1.png" />
     <inventory encumbrance="10.0" price="498.0" />
     <capacity value="1" source="rank" source_value="0.0" />
     <projectile file="bullet_sf.projectile">
@@ -110,7 +110,7 @@
     <sound key="magazine_out" fileref="m1_mgz_out_FromINS.wav" />
     <sound key="magazine_in" fileref="m1_mgz_in_FromINS.wav" />
     <model filename="gkw_rf_m1_sf_2.xml" />
-    <hud_icon filename="gkw_m1.png" />
+    <hud_icon filename="gkw_m1_sf_2.png" />
     <inventory encumbrance="10.0" price="498.0" />
     <capacity value="1" source="rank" source_value="0.0" />
     <projectile file="bullet_sf.projectile">
