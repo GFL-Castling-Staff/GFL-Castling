@@ -735,6 +735,8 @@ class BasicCommandHandler : Tracker {
 			spawnInstanceNearPlayer(senderId, "darkcat.vehicle", "vehicle", 1);
 		} else  if(checkCommand(message, "spawntower")) {
 			spawnInstanceNearPlayer(senderId, "radar_tower.vehicle", "vehicle", 0); 
+		} else  if(checkCommand(message, "lblm")) {
+			spawnInstanceNearPlayer(senderId, "wheelchair.vehicle", "vehicle", 0); 
 		} else  if(checkCommand(message, "spawnaa")) {
 			spawnInstanceNearPlayer(senderId, "aa_emplacement.vehicle", "vehicle", 1); 
 		} else  if(checkCommand(message, "spawnjpt")) {
