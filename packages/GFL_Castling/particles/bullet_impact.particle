@@ -29,7 +29,7 @@ material impactShine {
             lighting off
             depth_write off
             fog_override true
-            scene_blend add
+            scene_blend alpha_blend
 
             texture_unit{
                 texture ct_impact.png
