@@ -725,13 +725,13 @@
 			<attribute weight="1.0" min="30.0" max="60.0" />
 		</attribute_config>
 	</soldier>
-	<soldier name="Thunder" firstnames="Paradeus-SHIELD HEAVY ARMOR UNIT-" lastnames_file="Paradeus_last.name" spawn_score="0.05">
+	<soldier name="Thunder" firstnames="Paradeus-SHIELD HEAVY ARMOR UNIT-" lastnames_file="Paradeus_last.name" spawn_score="0.1">
 		<model filename="pard_thunder.xml" />
 		<character filename="thunder.character" />
 		<ai filename="hydra.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="parw_thunder.weapon" enabled="1" />
-			<carry_item key="pard_roarer_20.carry_item" />
+			<carry_item key="vest_thunder.carry_item" />
 		</resources>
 		<item_class_existence_config>
 			<item_class_existence class="weapon" slot="1" probability="1" />

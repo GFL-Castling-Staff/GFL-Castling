@@ -64,7 +64,7 @@
 	<animation key="swimming still" target_key="swim still, thunder" />
 	<animation key="swimming forwards" target_key="swimming, thunder" />
 
-	<parameter class="being_stunned_steer_amount" value="1.5" />
+	<parameter class="being_stunned_steer_amount" value="1.75" />
 	<animation key="stunned" target_key="jumping, thunder" />
     <parameter class="can_use_vehicles" value="0" /> 
 
