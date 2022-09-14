@@ -2846,4 +2846,5 @@ class CommandSkill : Tracker {
             addCoolDown("CZ75",25,characterId,modifer);
             
         }    
+    }
 }
