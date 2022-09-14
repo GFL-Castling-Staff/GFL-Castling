@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <character filename="paradeus.text_lines">
+	<parameter class="walking_steer_amount" value="0.45" />
+	<parameter class="running_steer_amount" value="0.45" />
 
 	<sound key="footstep" fileref="qwd_walk1.wav" volume="1.2" />
 	<sound key="death" fileref="qwd_die.wav" volume="0.8" />
@@ -64,7 +66,7 @@
 	<animation key="swimming still" target_key="swim still, thunder" />
 	<animation key="swimming forwards" target_key="swimming, thunder" />
 
-	<parameter class="being_stunned_steer_amount" value="1.75" />
+	<parameter class="being_stunned_steer_amount" value="1.5" />
 	<animation key="stunned" target_key="jumping, thunder" />
     <parameter class="can_use_vehicles" value="0" /> 
 

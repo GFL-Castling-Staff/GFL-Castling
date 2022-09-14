@@ -2819,29 +2819,21 @@ class CommandSkill : Tracker {
             if(ds<=0.000001f) ds=0.000001f;
             dx = dx/ds; dy=dy/ds;
             float dd = 1.0; //同一列相邻弹头的距离
-            float tt = 2.5;   //同一行相邻弹头位置偏移比值
+            float tt = 4;   //同一行相邻弹头位置偏移比值
      
             array<string> Voice={
             "CZ75_SKILL1_JP.wav",
             "CZ75_SKILL2_JP.wav",
             "CZ75_SKILL3_JP.wav"
             };
-            playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+            playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1.8);
             playSoundAtLocation(m_metagame,"cz75_skill_throwout.wav",factionid,c_pos,1.2);
 
             
             int ix = 5;
-            CreateProjectile(m_metagame,c_pos.add(Vector3(dx*dd*3-dy*dd*3/tt,0,dy*dd*3+dx*dd*3/tt)),c_pos.add(Vector3(dx*dd*(ix*2-1)-dy*dd*(ix*2-1)/tt,0,dy*dd*(ix*2-1)+dx*dd*(ix*2-1)/tt)),"gkw_cz75_axe.projectile",characterId,factionid,60,1,Orientation(0,1,3,2.14));
-            CreateProjectile(m_metagame,c_pos.add(Vector3(dx*dd*4           ,0,dy*dd*4           )),c_pos.add(Vector3(dx*dd*(ix*2)                    ,0,dy*dd*(ix*2)                    )),"gkw_cz75_axe.projectile",characterId,factionid,60,1,Orientation(0,1,3,2.14));
-            CreateProjectile(m_metagame,c_pos.add(Vector3(dx*dd*3+dy*dd*3/tt,0,dy*dd*3-dx*dd*3/tt)),c_pos.add(Vector3(dx*dd*(ix*2-1)+dy*dd*(ix*2-1)/tt,0,dy*dd*(ix*2-1)-dx*dd*(ix*2-1)/tt)),"gkw_cz75_axe.projectile",characterId,factionid,60,1,Orientation(0,1,3,2.14));
-
-            for(ix=2;ix<=6;ix++)
-            {
-                CreateProjectile(m_metagame,c_pos.add(Vector3(dx*dd*(ix*2-1)-dy*dd*(ix*2-1)/tt,1,dy*dd*(ix*2-1)+dx*dd*(ix*2-1)/tt)),c_pos.add(Vector3(dx*dd*(ix*2-1)-dy*dd*(ix*2-1)/tt,0,dy*dd*(ix*2-1)+dx*dd*(ix*2-1)/tt)),"gkw_cz75_axe.projectile",characterId,factionid,100,0.001);
-                CreateProjectile(m_metagame,c_pos.add(Vector3(dx*dd*(ix*2)                    ,1,dy*dd*(ix*2)                    )),c_pos.add(Vector3(dx*dd*(ix*2)                    ,0,dy*dd*(ix*2)                    )),"gkw_cz75_axe.projectile",characterId,factionid,100,0.001);
-                CreateProjectile(m_metagame,c_pos.add(Vector3(dx*dd*(ix*2-1)+dy*dd*(ix*2-1)/tt,1,dy*dd*(ix*2-1)-dx*dd*(ix*2-1)/tt)),c_pos.add(Vector3(dx*dd*(ix*2-1)+dy*dd*(ix*2-1)/tt,0,dy*dd*(ix*2-1)-dx*dd*(ix*2-1)/tt)),"gkw_cz75_axe.projectile",characterId,factionid,100,0.001);
-            }
-
+            CreateProjectile(m_metagame,c_pos.add(Vector3(dx*dd*3-dy*dd*3/tt,0,dy*dd*3+dx*dd*3/tt)),c_pos.add(Vector3(dx*dd*(ix*2-1)-dy*dd*(ix*2-1)/tt,0,dy*dd*(ix*2-1)+dx*dd*(ix*2-1)/tt)),"gkw_cz75_axe.projectile",characterId,factionid,50,1,Orientation(0,1,3,2.14));
+            CreateProjectile(m_metagame,c_pos.add(Vector3(dx*dd*4           ,0,dy*dd*4           )),c_pos.add(Vector3(dx*dd*(ix*2)                    ,0,dy*dd*(ix*2)                    )),"gkw_cz75_axe.projectile",characterId,factionid,50,1,Orientation(0,1,3,2.14));
+            CreateProjectile(m_metagame,c_pos.add(Vector3(dx*dd*3+dy*dd*3/tt,0,dy*dd*3-dx*dd*3/tt)),c_pos.add(Vector3(dx*dd*(ix*2-1)+dy*dd*(ix*2-1)/tt,0,dy*dd*(ix*2-1)-dx*dd*(ix*2-1)/tt)),"gkw_cz75_axe.projectile",characterId,factionid,50,1,Orientation(0,1,3,2.14));
 
             addCoolDown("CZ75",25,characterId,modifer);
             
