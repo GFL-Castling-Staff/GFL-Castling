@@ -62,7 +62,7 @@ key="kccow_cerynitis.weapon">
     <stance state_key="crouching" accuracy="0.85" />
     <stance state_key="prone" accuracy="0.94" />
     <stance state_key="overwall" accuracy="1.0" />
-    <modifier class="speed" value="-0.2" />
+    <modifier class="speed" value="-0.5" />
 
 	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0" />
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0" />
@@ -139,7 +139,7 @@ key="kccow_cerynitis_1.weapon">
     <stance state_key="standing" accuracy="1.2" />
     <stance state_key="crouching" accuracy="0.85" />
     <stance state_key="prone" accuracy="1.0" />
-    <modifier class="speed" value="-0.2" />
+    <modifier class="speed" value="-0.5" />
 
 	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0" />
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0" />
