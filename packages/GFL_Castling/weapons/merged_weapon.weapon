@@ -929,8 +929,26 @@
 </weapon>
 
 <weapon key="gkw_iws2000.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification affect_vehicles="1" retrigger_time="1.0" accuracy_factor="1.0" sustained_fire_grow_step="0.0" sustained_fire_diminish_rate="2.0" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="IWS 2000" class="4" reload_one_at_a_time="0" sight_range_modifier="4.5" projectile_speed="300" barrel_offset="0.4" projectiles_per_shot="3" last_burst_retrigger_time="1" burst_shots="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
-	<next_in_chain key="gkw_iws2000_skill.weapon" share_ammo="1"/>
+	<specification 
+	affect_vehicles="1"
+	retrigger_time="1.0" 
+	accuracy_factor="1.0" 
+	sustained_fire_grow_step="5.0" 
+	sustained_fire_diminish_rate="3.0" 
+	magazine_size="5" 
+	can_shoot_standing="0" 
+	can_shoot_crouching="1"
+	can_shoot_prone="1"
+	suppressed="0" 
+	name="IWS 2000" 
+	class="4" 
+	reload_one_at_a_time="0" 
+	sight_range_modifier="4.5" 
+	projectile_speed="300" 
+	barrel_offset="0.4" 
+	projectiles_per_shot="3"
+	last_burst_retrigger_time="1"
+	burst_shots="1" />	<next_in_chain key="gkw_iws2000_skill.weapon" share_ammo="1"/>
 	<inventory buy_price="320.0" sell_price="220.0"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 2.1"/>
 	<sound key="fire" fileref="iws2000_fire_FromSAMTSE.wav" pitch_variety="0.05" volume="1.4"/>
@@ -977,8 +995,26 @@
 </weapon>
 
 <weapon key="gkw_iws2000_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification affect_vehicles="1" retrigger_time="3.0" accuracy_factor="1.0" sustained_fire_grow_step="0.0" sustained_fire_diminish_rate="2.0" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="0" can_shoot_prone="1" suppressed="0" name="IWS 2000-[Hawk Assault]" class="4" reload_one_at_a_time="0" sight_range_modifier="4.5" projectile_speed="300" barrel_offset="0.4" projectiles_per_shot="3" last_burst_retrigger_time="3" burst_shots="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
-	<next_in_chain key="gkw_iws2000.weapon" share_ammo="1"/>
+	<specification 
+	affect_vehicles="1"
+	retrigger_time="3.0" 
+	accuracy_factor="1.0" 
+	sustained_fire_grow_step="9.0" 
+	sustained_fire_diminish_rate="3.0" 
+	magazine_size="5" 
+	can_shoot_standing="0" 
+	can_shoot_crouching="0"
+	can_shoot_prone="1"
+	suppressed="0" 
+	name="IWS 2000-[Hawk Assault]" 
+	class="4" 
+	reload_one_at_a_time="0" 
+	sight_range_modifier="4.5" 
+	projectile_speed="300" 
+	barrel_offset="0.4" 
+	projectiles_per_shot="3"
+	last_burst_retrigger_time="3"
+	burst_shots="1" />	<next_in_chain key="gkw_iws2000.weapon" share_ammo="1"/>
 	<inventory buy_price="320.0" sell_price="220.0"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 2.1"/>
 	<sound key="fire" fileref="iws2000_fire_FromSAMTSE.wav" pitch_variety="0.05" volume="1.4"/>
@@ -43877,4 +43913,3 @@
 </weapon>
 
 </weapons>
-
