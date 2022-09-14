@@ -714,6 +714,8 @@ class BasicCommandHandler : Tracker {
 			spawnInstanceNearPlayer(senderId, "humvee_gl_para.vehicle", "vehicle", 0);        
 		} else  if(checkCommand(message, "javelin")) {
 			spawnInstanceNearPlayer(senderId, "javelin_ap.weapon", "weapon", 0);        
+		} else  if(checkCommand(message, "vectorflame")) {
+			spawnInstanceNearPlayer(senderId, "gkw_vector_549_skill.weapon", "weapon", 0);        
 		} else  if(checkCommand(message, "complete_campaign")) {
 			m_metagame.getComms().send("<command class='set_campaign_status' show_stats='1'/>");
 		} else if (checkCommand(message, "enable_gps")) {
