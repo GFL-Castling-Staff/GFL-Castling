@@ -319,6 +319,9 @@ dictionary commandSkillIndex = {
         {"gkw_m200.weapon",43},        
         {"gkw_m200_560.weapon",43},        
 
+        // CZ75 
+        {"gkw_cz75.weapon",44},
+        {"gkw_cz75_1604.weapon",44},
 
 
         // 下面这行是用来占位的，在这之上添加新的枪和index即可
@@ -442,6 +445,7 @@ class CommandSkill : Tracker {
                     case 41:{excute88typeskill(cId,senderId,m_modifer,true);break;}
                     case 42:{excute88typeGUNDAMskill(cId,senderId,m_modifer);break;}
                     case 43:{excuteM200skill(cId,senderId,m_modifer);break;}
+                    case 44:{excuteCZ75skill(cId,senderId,m_modifer);break;}
 
                     default:
                         break;
@@ -2783,5 +2787,63 @@ class CommandSkill : Tracker {
                 }
             }
         }
-    }    
+    }
+    void excuteCZ75skill(int characterId,int playerId,SkillModifer@ modifer){
+        bool ExistQueue = false;
+        int j=-1;
+        for (uint i=0;i<SkillArray.length();i++){
+            if (InCooldown(characterId,modifer,SkillArray[i]) && SkillArray[i].m_weapontype=="CZ75") {
+                ExistQueue=true;
+                j=i;
+            }
+        }
+        if (ExistQueue){
+            dictionary a;
+            a["%time"] = ""+SkillArray[j].m_time;
+            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            return;
+        }
+        const XmlElement@ characterinfo = getCharacterInfo(m_metagame, characterId);
+        const XmlElement@ playerinfo = getPlayerInfo(m_metagame, playerId);
+
+        if (playerinfo.hasAttribute("aim_target")) {
+            string target = playerinfo.getStringAttribute("aim_target");
+            Vector3 c_pos = stringToVector3(characterinfo.getStringAttribute("position"));
+            Vector3 s_pos = stringToVector3(target);
+            int factionid = characterinfo.getIntAttribute("faction_id");
+            c_pos=c_pos.add(Vector3(0,1,0));
+
+            float dx = s_pos.m_values[0]-c_pos.m_values[0];
+            float dy = s_pos.m_values[2]-c_pos.m_values[2];
+            float ds = sqrt(dx*dx+dy*dy);
+            if(ds<=0.000001f) ds=0.000001f;
+            dx = dx/ds; dy=dy/ds;
+            float dd = 1.0; //同一列相邻弹头的距离
+            float tt = 2.5;   //同一行相邻弹头位置偏移比值
+     
+            array<string> Voice={
+            "CZ75_SKILL1_JP.wav",
+            "CZ75_SKILL2_JP.wav",
+            "CZ75_SKILL3_JP.wav"
+            };
+            playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+            playSoundAtLocation(m_metagame,"cz75_skill_throwout.wav",factionid,c_pos,1.2);
+
+            
+            int ix = 5;
+            CreateProjectile(m_metagame,c_pos.add(Vector3(dx*dd*3-dy*dd*3/tt,0,dy*dd*3+dx*dd*3/tt)),c_pos.add(Vector3(dx*dd*(ix*2-1)-dy*dd*(ix*2-1)/tt,0,dy*dd*(ix*2-1)+dx*dd*(ix*2-1)/tt)),"gkw_cz75_axe.projectile",characterId,factionid,60,1,Orientation(0,1,3,2.14));
+            CreateProjectile(m_metagame,c_pos.add(Vector3(dx*dd*4           ,0,dy*dd*4           )),c_pos.add(Vector3(dx*dd*(ix*2)                    ,0,dy*dd*(ix*2)                    )),"gkw_cz75_axe.projectile",characterId,factionid,60,1,Orientation(0,1,3,2.14));
+            CreateProjectile(m_metagame,c_pos.add(Vector3(dx*dd*3+dy*dd*3/tt,0,dy*dd*3-dx*dd*3/tt)),c_pos.add(Vector3(dx*dd*(ix*2-1)+dy*dd*(ix*2-1)/tt,0,dy*dd*(ix*2-1)-dx*dd*(ix*2-1)/tt)),"gkw_cz75_axe.projectile",characterId,factionid,60,1,Orientation(0,1,3,2.14));
+
+            for(ix=2;ix<=6;ix++)
+            {
+                CreateProjectile(m_metagame,c_pos.add(Vector3(dx*dd*(ix*2-1)-dy*dd*(ix*2-1)/tt,1,dy*dd*(ix*2-1)+dx*dd*(ix*2-1)/tt)),c_pos.add(Vector3(dx*dd*(ix*2-1)-dy*dd*(ix*2-1)/tt,0,dy*dd*(ix*2-1)+dx*dd*(ix*2-1)/tt)),"gkw_cz75_axe.projectile",characterId,factionid,100,0.001);
+                CreateProjectile(m_metagame,c_pos.add(Vector3(dx*dd*(ix*2)                    ,1,dy*dd*(ix*2)                    )),c_pos.add(Vector3(dx*dd*(ix*2)                    ,0,dy*dd*(ix*2)                    )),"gkw_cz75_axe.projectile",characterId,factionid,100,0.001);
+                CreateProjectile(m_metagame,c_pos.add(Vector3(dx*dd*(ix*2-1)+dy*dd*(ix*2-1)/tt,1,dy*dd*(ix*2-1)-dx*dd*(ix*2-1)/tt)),c_pos.add(Vector3(dx*dd*(ix*2-1)+dy*dd*(ix*2-1)/tt,0,dy*dd*(ix*2-1)-dx*dd*(ix*2-1)/tt)),"gkw_cz75_axe.projectile",characterId,factionid,100,0.001);
+            }
+
+
+            addCoolDown("CZ75",25,characterId,modifer);
+            
+        }    
 }
