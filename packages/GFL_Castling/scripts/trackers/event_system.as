@@ -157,14 +157,21 @@ array<int> RampageFairyAC130List={
     6,6,6,5,6,6,6,5,7
 };
 
-
+int ac130_rocket_ready = 8;
+int ac130_rocket_ammo = 1;
+int ac130_shotgun_ready = 3;
+int ac130_shotgun_ammo = 3;
+int ac130_minigun_ready = 0;
+int ac130_minigun_ammo = 1;
 
 int ac130_voice_interval = 0;
 int ac130_flyby_interval = 0;
 int ac130_strike_num = 30;
 int ac130_jud_confused = 0;
+
 Vector3 ac130_pre_pos = Vector3(-1,-1,-1); // 这是为了ac130索敌能每次尽量锁附近的，而不是去到处乱锁
-            
+// 事实证明有时候不如随机锁      
+
 void excuteRampageFairyAC130(GameMode@ metagame,GFL_event@ eventinfo){
     eventinfo.m_time = 1.8;
     array<string> AC130StartVoice;
@@ -286,6 +293,13 @@ void excuteRampageFairyAC130(GameMode@ metagame,GFL_event@ eventinfo){
         ac130_flyby_interval = 3;
         ac130_pre_pos = eventinfo.m_pos;
         sendFactionMessageKey(metagame,eventinfo.m_factionid,"ac130fight");
+                
+        ac130_rocket_ready = 8;
+        ac130_rocket_ammo = 1;
+        ac130_shotgun_ready = 3;
+        ac130_shotgun_ammo = 3;
+        ac130_minigun_ready = 0;
+        ac130_minigun_ammo = 1;
     }
 
     float jud_time = eventinfo.m_phase*eventinfo.m_time;
@@ -302,21 +316,27 @@ void excuteRampageFairyAC130(GameMode@ metagame,GFL_event@ eventinfo){
     }
 
     int luckyGuyid;
+    float searchrange_nearby = 30.0f;
+    float searchrange_origin = 75.0f;
+
+    // 随机索敌
+    // luckyGuyid = getNearbyRandomLuckyGuyId(metagame,eventinfo.m_factionid,ac130_pre_pos,searchrange_origin);
+
     // 优先锁定上一个目标点旁边的
-    luckyGuyid = getNearbyRandomLuckyGuyId(metagame,eventinfo.m_factionid,ac130_pre_pos,20.0f);
+    luckyGuyid = getNearbyRandomLuckyGuyId(metagame,eventinfo.m_factionid,ac130_pre_pos,searchrange_nearby);
     Vector3 ac130_jud_pos;
 
     // 如果没有索敌到敌人或者距离超过130范围，重新索敌一次
     if (luckyGuyid!=-1) {
         ac130_jud_pos = stringToVector3(getCharacterInfo(metagame,luckyGuyid).getStringAttribute("position"));
-        if(getAimUnitDistance(1.0,ac130_jud_pos,ac130_pre_pos)>60) {
+        if(getAimUnitDistance(1.0,ac130_jud_pos,eventinfo.m_pos)>(searchrange_origin+9.0f)) {
             ac130_pre_pos = eventinfo.m_pos;
-            luckyGuyid = getNearbyRandomLuckyGuyId(metagame,eventinfo.m_factionid,ac130_pre_pos,60.0f);
+            luckyGuyid = getNearbyRandomLuckyGuyId(metagame,eventinfo.m_factionid,ac130_pre_pos,searchrange_origin);
         }
     }
     else {
         ac130_pre_pos = eventinfo.m_pos;
-        luckyGuyid = getNearbyRandomLuckyGuyId(metagame,eventinfo.m_factionid,ac130_pre_pos,60.0f);
+        luckyGuyid = getNearbyRandomLuckyGuyId(metagame,eventinfo.m_factionid,ac130_pre_pos,searchrange_origin);
     }
         
     if(eventinfo.m_phase>1){
@@ -330,7 +350,19 @@ void excuteRampageFairyAC130(GameMode@ metagame,GFL_event@ eventinfo){
             Vector3 aimPos = luckyGuyPos.add(Vector3(45.0*cos(rand_angle),40,45.0*sin(rand_angle)));
             ac130_pre_pos = luckyGuyPos;
 
-            int attacknum = RampageFairyAC130List[int(eventinfo.m_phase%RampageFairyAC130List.length())];
+            //攻击由phase模式改为充能模式
+            if(ac130_rocket_ready<=0 && ac130_rocket_ammo<1)    {ac130_rocket_ammo+=1;ac130_rocket_ready=8;}
+            if(ac130_shotgun_ready<=0 && ac130_shotgun_ammo<3)  {ac130_shotgun_ammo+=1;ac130_shotgun_ready=3;}
+            if(ac130_minigun_ready<=0 && ac130_minigun_ammo<1)  {ac130_minigun_ammo+=1;ac130_minigun_ready=0;}
+
+            int attacknum;
+            if(ac130_rocket_ammo>0)         {attacknum=7;ac130_rocket_ammo-=1;}
+            else if(ac130_shotgun_ammo>0)   {attacknum=5;ac130_shotgun_ammo-=1;}
+            else                            {attacknum=6;ac130_minigun_ammo-=1;}
+
+            ac130_rocket_ready-=1;  ac130_shotgun_ready-=1;  ac130_minigun_ready-=0;
+
+            //int attacknum = RampageFairyAC130List[int(eventinfo.m_phase%RampageFairyAC130List.length())];
 
             // 烈火看这里，对 playSoundAtLocation 这个函数的 第二项（音效文件名） 和 最后一项（音量大小） 操作就行
             // 5是霰弹音效，可以不用给其实；6是机炮音效；7是火箭弹齐射音效

@@ -16,7 +16,13 @@
 	<commonness value="0.0" can_respawn_with="0" in_stock="0"/>
 	<inventory encumbrance="10.0" price="100.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<ballistics near_far_distance="15.0" speed_estimation_near="-10.0" speed_estimation_far="10.0" max_speed="33.0" randomness="0.05" tweak_factor="1.5" curve_height="15.0"/>
+	<ballistics
+	near_far_distance="100.0"
+	speed_estimation_near="25.0"
+	speed_estimation_far="25.0"
+	max_speed="25.0" 
+	randomness="0.05"
+	/> 
 	<projectile file="flamethrower_flame.projectile" pulldown_in_air="22.0">
 	<trigger class="impact"/>
 	<result class="blast" radius="1.65" damage="0.5" push="0" character_state="death" faction_compare="not_equal" damage_as_probability="1"/>

@@ -347,8 +347,8 @@ class GFLairstrike : Tracker {
                     }
                     case 7:{
                         // _log("ac130 m202 Fairy activated");
-                        float strike_rand=8.0;
-                        for(int j=1;j<=8;j++)
+                        float strike_rand=12.0;
+                        for(int j=1;j<=12;j++)
                         {
                             float rand_angle = rand(-3.14,3.14);
                             float rand_dis = rand(-strike_rand,strike_rand);
