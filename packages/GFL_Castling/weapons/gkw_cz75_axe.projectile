@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<projectile class="grenade" name="CZ75 AXE" key="gkw_cz75_axe.projectile" pulldown_in_air="10"  drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="5" can_be_disarmed="1" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" slot="0" radius="0.2">
+<projectile class="grenade" name="CZ75 AXE" key="gkw_cz75_axe.projectile" pulldown_in_air="10"  drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="5" can_be_disarmed="1" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" slot="0" radius="1">
 	<!-- the new shuriken, just a buff and a cosmetic change -->
 	<result class="hit" kill_probability="4.31" kill_probability_offset_on_successful_hit="22.0"  kill_decay_start_time="6.0" kill_decay_end_time="6.01" />
     <trigger class="impact">
