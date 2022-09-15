@@ -2812,15 +2812,26 @@ class CommandSkill : Tracker {
             Vector3 s_pos = stringToVector3(target);
             int factionid = characterinfo.getIntAttribute("faction_id");
             c_pos=c_pos.add(Vector3(0,1,0));
-
-            float dx = s_pos.m_values[0]-c_pos.m_values[0];
-            float dy = s_pos.m_values[2]-c_pos.m_values[2];
-            float ds = sqrt(dx*dx+dy*dy);
-            if(ds<=0.000001f) ds=0.000001f;
-            dx = dx/ds; dy=dy/ds;
-            float dd = 1.0; //同一列相邻弹头的距离
-            float tt = 4;   //同一行相邻弹头位置偏移比值
      
+
+            int num_jud = 0;
+            int num_max_character = 3;
+            int m_fnum = m_metagame.getFactionCount();
+            array<const XmlElement@> affectedCharacter;
+            for(int i=0;i<m_fnum;i++) {
+                if(i!=factionid) {
+                    array<const XmlElement@> affectedCharacter2;
+                    affectedCharacter2 = getCharactersNearPosition(m_metagame,s_pos,i,10.0f);
+                    if (affectedCharacter2 !is null){
+                        for(int x=0;x<affectedCharacter2.length();x++){
+                            affectedCharacter.insertLast(affectedCharacter2[x]);
+                            num_jud += 1;
+                            if(num_jud>=num_max_character)break;
+                        }
+                    }
+                }
+            }
+
             array<string> Voice={
             "CZ75_SKILL1_JP.wav",
             "CZ75_SKILL2_JP.wav",
@@ -2829,13 +2840,23 @@ class CommandSkill : Tracker {
             playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1.8);
             playSoundAtLocation(m_metagame,"cz75_skill_throwout.wav",factionid,c_pos,1.2);
 
-            
-            int ix = 5;
-            CreateProjectile(m_metagame,c_pos.add(Vector3(dx*dd*3-dy*dd*3/tt,0,dy*dd*3+dx*dd*3/tt)),c_pos.add(Vector3(dx*dd*(ix*2-1)-dy*dd*(ix*2-1)/tt,0,dy*dd*(ix*2-1)+dx*dd*(ix*2-1)/tt)),"gkw_cz75_axe.projectile",characterId,factionid,50,1,Orientation(0,1,3,2.14));
-            CreateProjectile(m_metagame,c_pos.add(Vector3(dx*dd*4           ,0,dy*dd*4           )),c_pos.add(Vector3(dx*dd*(ix*2)                    ,0,dy*dd*(ix*2)                    )),"gkw_cz75_axe.projectile",characterId,factionid,50,1,Orientation(0,1,3,2.14));
-            CreateProjectile(m_metagame,c_pos.add(Vector3(dx*dd*3+dy*dd*3/tt,0,dy*dd*3-dx*dd*3/tt)),c_pos.add(Vector3(dx*dd*(ix*2-1)+dy*dd*(ix*2-1)/tt,0,dy*dd*(ix*2-1)-dx*dd*(ix*2-1)/tt)),"gkw_cz75_axe.projectile",characterId,factionid,50,1,Orientation(0,1,3,2.14));
+            while(num_jud>0){
+                for (int i1=0;i1<affectedCharacter.length();i1++)	{
+                    int luckyoneid = affectedCharacter[i1].getIntAttribute("id");
+                    const XmlElement@ luckyoneC = getCharacterInfo(m_metagame, luckyoneid);
+                    if ((luckyoneC.getIntAttribute("id")!=-1)&&(luckyoneid!=characterId)){
+                        string luckyonepos = luckyoneC.getStringAttribute("position");
+                        Vector3 luckyoneposV = stringToVector3(luckyonepos);
+                        CreateProjectile(m_metagame,c_pos.add(Vector3(0,1,0)),luckyoneposV,"gkw_cz75_axe.projectile",characterId,factionid,60,10);
+                    }			
+                    num_jud-=1;	
+                }
+                num_jud-=1;
+            }
 
-            addCoolDown("CZ75",25,characterId,modifer);
+
+
+            addCoolDown("CZ75",20,characterId,modifer);
             
         }    
     }
