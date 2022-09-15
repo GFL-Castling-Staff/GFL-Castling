@@ -40,7 +40,7 @@
 	offset="0.0 -0.1 0.0" 
 	top_offset="0 1.8 -1.5" 
 	collision_model_pos="0 0.6 0.1" 
-	collision_model_extent="4.0 2.8 6.5" 
+	collision_model_extent="4.0 3.2 6.5" 
 	visual_offset="0 0.2 0.0" />
     <modifier class="blast_damage" value="-3.0" />
     <!-- one weapon per turret so that only one soldier controls the turret orientation -->
@@ -65,8 +65,8 @@
     <!-- class="track" dont work -->
     <visual class="chassis" mesh_filename="Uhlan_body.mesh" texture_filename="none_black.png" key="broken" />
     <visual class="turret" turret_index="0" mesh_filename="Uhlan_turret.mesh" texture_filename="none_black.png" key="broken"/>
-    <character_slot type="driver" position="1.1 0.5 -2.3" rotation="0" exit_rotation="-3.14" hiding="1" animation_id="36" />
-    <character_slot type="gunner" position="-1.1 0.5 -2.3" seat_position="0 1.5 -2" rotation="0" exit_rotation="-3.14" hiding="1" animation_id="37">
+    <character_slot type="driver" position="1.1 0.5 -2.3" seat_position="0 1.0 -0.5" rotation="0" exit_rotation="-3.14" hiding="1" animation_id="36" />
+    <character_slot type="gunner" position="-1.1 0.5 -2.3" seat_position="0 1.0 -1.5" rotation="0" exit_rotation="-3.14" hiding="1" animation_id="37">
         <turret index="0" />
         <turret index="1" />
         <turret index="2" />

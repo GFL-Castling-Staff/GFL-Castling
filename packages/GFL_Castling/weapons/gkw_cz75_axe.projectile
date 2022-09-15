@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<projectile class="grenade" name="CZ75 AXE" key="gkw_cz75_axe.projectile" pulldown_in_air="10"  drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="5" can_be_disarmed="1" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" slot="0" radius="1">
+<projectile class="grenade" name="CZ75 AXE" key="gkw_cz75_axe.projectile" pulldown_in_air="10"  drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="5" can_be_disarmed="1" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" slot="0" radius="0.4">
 	<!-- the new shuriken, just a buff and a cosmetic change -->
 	<result class="hit" kill_probability="4.31" kill_probability_offset_on_successful_hit="22.0"  kill_decay_start_time="6.0" kill_decay_end_time="6.01" />
     <trigger class="impact">
@@ -13,7 +13,7 @@
     <model filename="gkw_cz75_axe_1604_From_melondove.xml" />
     <hud_icon filename="gkw_hg_cz75_axe.png" />
 
-    <throwable near_far_distance="100.0" speed_estimation_near="40.0" speed_estimation_far="40.0" max_speed="40.0" randomness="0.0" />
+    <throwable near_far_distance="0.0" speed_estimation_near="40.0" speed_estimation_far="40.0" max_speed="140.0" randomness="0.0" tweak_factor="2.05" curve_height="1.0"/>
 
     <commonness value="0.0" can_respawn_with="1" in_stock="1" />
 	<!-- 原本想给22块钱能带11个的，但22太贵了，就给2块钱了 1963.11.22-->

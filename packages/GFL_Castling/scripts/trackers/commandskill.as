@@ -2811,7 +2811,7 @@ class CommandSkill : Tracker {
             Vector3 c_pos = stringToVector3(characterinfo.getStringAttribute("position"));
             Vector3 s_pos = stringToVector3(target);
             int factionid = characterinfo.getIntAttribute("faction_id");
-            c_pos=c_pos.add(Vector3(0,1,0));
+            // c_pos=c_pos.add(Vector3(0,1,0));
      
 
             int num_jud = 0;
@@ -2849,7 +2849,7 @@ class CommandSkill : Tracker {
                         if ((luckyoneC.getIntAttribute("id")!=-1)&&(luckyoneid!=characterId)){
                             string luckyonepos = luckyoneC.getStringAttribute("position");
                             Vector3 luckyoneposV = stringToVector3(luckyonepos);
-                            CreateProjectile(m_metagame,c_pos.add(Vector3(0,1,0)),luckyoneposV.add(Vector3(0,0.4,0)),"gkw_cz75_axe.projectile",characterId,factionid,60,10);
+                            CreateDirectProjectile(m_metagame,c_pos.add(Vector3(0,1.2,0)),luckyoneposV.add(Vector3(0,1.8,0)),"gkw_cz75_axe.projectile",characterId,factionid,60);
                         }			
                         num_jud-=1;	
                     }
