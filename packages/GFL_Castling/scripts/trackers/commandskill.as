@@ -105,8 +105,23 @@ class SpamAvoider{
     }
 }
 
+// 战术RF，可直接击杀载具敌人
+array<string> RF_normal_Tactical = {
 
-array<string> targetAAgrenades = {
+};
+
+// 战术级炮狙RF，伤害低回转快
+array<string> RF_jupiter_SmallCup = {
+
+};
+
+// 战略级炮狙RF，伤害高回转慢
+array<string> RF_jupiter_BigCup = {
+    
+};
+
+// 反装甲榴弹AR，杀伤大范围小
+array<string> AR_grenade_AntiArmor = {
     "gkw_arx160.weapon",
     "gkw_xm8.weapon",
     "gkw_g3.weapon",
@@ -119,12 +134,15 @@ array<string> targetAAgrenades = {
     "gkw_hk416_805.weapon",
     "gkw_hk416_3401.weapon"
 };
-array<string> targetAPgrenades = {
+
+// 反人员榴弹AR，杀伤小范围大
+array<string> AR_grenade_AntiPersonal = {
     "gkw_stg44.weapon",
     "gkw_famas.weapon",
     "gkw_k11_ar.weapon",
     "gkw_k11_20mm_impact.weapon"
 };
+
 // 列举枪对应的脚本技能编号。注意字典的值为了配合后面的只能用uint，不可用string，float等    
 dictionary commandSkillIndex = {
 
@@ -390,11 +408,11 @@ class CommandSkill : Tracker {
                     m_modifer.setCooldownMinus(2.0);
                 }
 
-                if (targetAAgrenades.find(c_weaponType)> -1){
+                if (AR_grenade_AntiArmor.find(c_weaponType)> -1){
                     excuteAntiArmorskill(cId,senderId,m_modifer,c_weaponType);
                     return;        
                 }
-                if (targetAPgrenades.find(c_weaponType)> -1){
+                if (AR_grenade_AntiPersonal.find(c_weaponType)> -1){
                     excuteAntiPersonalskill(cId,senderId,m_modifer,c_weaponType);
                     return;        
                 }

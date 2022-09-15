@@ -36032,8 +36032,14 @@
 	<inventory price="120"/>
 	<projectiles_per_shot value="1"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="bullet.projectile" can_be_detected_by_footmen="0">
-	<result class="blast" damage="2.1" radius="2.5" decal="0" push="0.2" character_state="death" faction_compare="not_equal"/>
+	<projectile key="standard_mortar.projectile" can_be_detected_by_footmen="0" class="grenade">
+	    <trigger class="impact">
+		 <collider class="terrain" enabled="1" />     
+		 <collider class="static_object" enabled="1" /> 
+		 <collider class="vehicle" enabled="1" /> 
+		 <collider class="character" enabled="1" />
+		</trigger>
+		<result class="spawn" instance_class="projectile" instance_key="standard_tactical_bullet.projectile" min_amount="1" max_amount="1" offset="0 0 0" position_spread="0.1 0.1" direction_spread="0.0 0.0" />
 	</projectile>
 	<effect class="muzzle" ref="ejection_76251"/>
 	<stance state_key="running" accuracy="0.6"/>
