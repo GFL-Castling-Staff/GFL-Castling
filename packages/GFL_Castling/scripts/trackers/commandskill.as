@@ -2847,11 +2847,10 @@ class CommandSkill : Tracker {
                     if ((luckyoneC.getIntAttribute("id")!=-1)&&(luckyoneid!=characterId)){
                         string luckyonepos = luckyoneC.getStringAttribute("position");
                         Vector3 luckyoneposV = stringToVector3(luckyonepos);
-                        CreateProjectile(m_metagame,c_pos.add(Vector3(0,1,0)),luckyoneposV,"gkw_cz75_axe.projectile",characterId,factionid,60,10);
+                        CreateProjectile(m_metagame,c_pos.add(Vector3(0,1,0)),luckyoneposV.add(Vector3(0,0.4,0)),"gkw_cz75_axe.projectile",characterId,factionid,60,10);
                     }			
                     num_jud-=1;	
                 }
-                num_jud-=1;
             }
 
 
