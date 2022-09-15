@@ -2832,30 +2832,31 @@ class CommandSkill : Tracker {
                 }
             }
 
-            array<string> Voice={
-            "CZ75_SKILL1_JP.wav",
-            "CZ75_SKILL2_JP.wav",
-            "CZ75_SKILL3_JP.wav"
-            };
-            playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1.8);
-            playSoundAtLocation(m_metagame,"cz75_skill_throwout.wav",factionid,c_pos,1.2);
+            if(num_jud>0)
+            {
+                array<string> Voice={
+                "CZ75_SKILL1_JP.wav",
+                "CZ75_SKILL2_JP.wav",
+                "CZ75_SKILL3_JP.wav"
+                };
+                playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1.8);
+                playSoundAtLocation(m_metagame,"cz75_skill_throwout.wav",factionid,c_pos,1.2);
 
-            while(num_jud>0){
-                for (int i1=0;i1<affectedCharacter.length();i1++)	{
-                    int luckyoneid = affectedCharacter[i1].getIntAttribute("id");
-                    const XmlElement@ luckyoneC = getCharacterInfo(m_metagame, luckyoneid);
-                    if ((luckyoneC.getIntAttribute("id")!=-1)&&(luckyoneid!=characterId)){
-                        string luckyonepos = luckyoneC.getStringAttribute("position");
-                        Vector3 luckyoneposV = stringToVector3(luckyonepos);
-                        CreateProjectile(m_metagame,c_pos.add(Vector3(0,1,0)),luckyoneposV.add(Vector3(0,0.4,0)),"gkw_cz75_axe.projectile",characterId,factionid,60,10);
-                    }			
-                    num_jud-=1;	
+                while(num_jud>0){
+                    for (int i1=0;i1<affectedCharacter.length();i1++)	{
+                        int luckyoneid = affectedCharacter[i1].getIntAttribute("id");
+                        const XmlElement@ luckyoneC = getCharacterInfo(m_metagame, luckyoneid);
+                        if ((luckyoneC.getIntAttribute("id")!=-1)&&(luckyoneid!=characterId)){
+                            string luckyonepos = luckyoneC.getStringAttribute("position");
+                            Vector3 luckyoneposV = stringToVector3(luckyonepos);
+                            CreateProjectile(m_metagame,c_pos.add(Vector3(0,1,0)),luckyoneposV.add(Vector3(0,0.4,0)),"gkw_cz75_axe.projectile",characterId,factionid,60,10);
+                        }			
+                        num_jud-=1;	
+                    }
                 }
+
+                addCoolDown("CZ75",1,characterId,modifer);
             }
-
-
-
-            addCoolDown("CZ75",20,characterId,modifer);
             
         }    
     }
