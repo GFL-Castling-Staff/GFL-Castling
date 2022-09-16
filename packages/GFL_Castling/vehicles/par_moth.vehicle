@@ -4,8 +4,9 @@
     <tag name="PARA_MOTH" />
     <tag name="jeep" />
     <tag name="heavy_combat" />
-    <tire_set offset="3.0 0 3.0" radius="2.5" />
-    <tire_set offset="3.0 0 -3.0" radius="2.5" />
+ 
+	<tire_set offset="1.8 0.0 +3" radius="0.52" />
+	<tire_set offset="1.8 0.0 -3" radius="0.52" />
 	
     <control 
 	max_speed="21.0" 
@@ -17,7 +18,7 @@
 	can_steer_in_water="0.0" 
 	steer_smoothening="0.99" 
 	tracked="1" 
-	gears="0" 
+	gears="1" 
 	max_limiter_speed="15.0" 
 	simulated_speed_factor="0.1" />
 	
