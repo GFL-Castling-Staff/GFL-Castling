@@ -2842,7 +2842,7 @@ class CommandSkill : Tracker {
                     array<const XmlElement@> affectedCharacter2;
                     affectedCharacter2 = getCharactersNearPosition(m_metagame,s_pos,i,10.0f);
                     if (affectedCharacter2 !is null){
-                        for(int x=0;x<affectedCharacter2.length();x++){
+                        for(uint x=0;x<affectedCharacter2.length();x++){
                             affectedCharacter.insertLast(affectedCharacter2[x]);
                             num_jud += 1;
                             if(num_jud>=num_max_character)break;
@@ -2862,7 +2862,7 @@ class CommandSkill : Tracker {
                 playSoundAtLocation(m_metagame,"cz75_skill_throwout.wav",factionid,c_pos,1.0);
 
                 while(num_jud>0){
-                    for (int i1=0;i1<affectedCharacter.length();i1++)	{
+                    for (uint i1=0;i1<affectedCharacter.length();i1++)	{
                         int luckyoneid = affectedCharacter[i1].getIntAttribute("id");
                         const XmlElement@ luckyoneC = getCharacterInfo(m_metagame, luckyoneid);
                         if ((luckyoneC.getIntAttribute("id")!=-1)&&(luckyoneid!=characterId)){
