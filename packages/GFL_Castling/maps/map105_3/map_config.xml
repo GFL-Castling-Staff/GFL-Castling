@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<map_config min_factions="3" max_factions="3" add_neutral_last="1">
-	<faction file="green.xml" />
-	<faction file="grey.xml" />
+<map_config min_factions="4" max_factions="4" add_neutral_last="1">
+	<faction file="gk.xml" />
+	<faction file="paradeus.xml" />
+	<faction file="eild.xml" />
+	<faction file="sf.xml" />
+
 	<weapon file="all_weapons.xml" />
 	<projectile file="all_throwables.xml" />
 	<call file="all_calls.xml" />

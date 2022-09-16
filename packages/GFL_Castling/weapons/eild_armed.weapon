@@ -32,7 +32,7 @@
 
 	<commonness value="0.2" in_stock="1" can_respawn_with="1"/>
 	<weak_hand_hold offset="0.2"/>
-	<projectile file="bullet.projectile">
+	<projectile file="bullet_ai.projectile">
         <result class="hit" kill_probability="1.8" kill_decay_start_time="0.2" kill_decay_end_time="1.0"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_76239"/>

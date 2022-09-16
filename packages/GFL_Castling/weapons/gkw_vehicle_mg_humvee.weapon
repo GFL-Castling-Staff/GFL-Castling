@@ -35,7 +35,7 @@
 
 
     <weak_hand_hold offset="0.4" />
-    <projectile file="bullet.projectile">
+    <projectile file="bullet_ai.projectile">
         <result class="hit"  kill_probability="1.45" kill_decay_start_time="1.933" kill_decay_end_time="3.222" />
     </projectile>
     

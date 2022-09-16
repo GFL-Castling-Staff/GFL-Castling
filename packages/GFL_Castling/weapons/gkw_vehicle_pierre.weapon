@@ -43,7 +43,7 @@
 	<effect class="muzzle" ref="BigMuzzle" />
 	
     <weak_hand_hold offset="0.4" />
-    <projectile file="bullet.projectile" radius="1.0" >
+    <projectile file="bullet_ai.projectile" radius="1.0" >
 		<model filename="agl.xml" />
         <result class="blast" radius="3.2" damage="2.5" push="0.1" decal="1" faction_compare="not_equal" damage_origin_vehicle="0"/>
         <effect class="result" key="terrain" ref="SmokeBurst" post_processing="1" />
@@ -104,7 +104,7 @@
     <commonness value="0.0" />
 
     <weak_hand_hold offset="0.4" />
-    <projectile file="bullet.projectile" radius="2.0" >
+    <projectile file="bullet_ai.projectile" radius="2.0" >
         <result class="hit"  kill_probability="4.0" kill_decay_start_time="2.121" kill_decay_end_time="4.422" />
         <trail probability="0.0"  />
     </projectile>

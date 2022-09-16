@@ -15,12 +15,12 @@
 
 class map_DeadZone_Phase : Tracker {
 	protected GameModeInvasion@ m_metagame;
-	protected PhaseControllerMap105@ m_controller;
+	protected PhaseControllerDeadZone@ m_controller;
 	protected bool m_started;
 	protected bool m_ended;
 
 	// --------------------------------------------
-	map_DeadZone_Phase(GameModeInvasion@ metagame, PhaseControllerMap105@ controller) {
+	map_DeadZone_Phase(GameModeInvasion@ metagame, PhaseControllerDeadZone@ controller) {
 		@m_metagame = @metagame;
 		@m_controller = @controller;
 		m_started = false;
@@ -69,7 +69,7 @@ class map_DeadZone_Phase : Tracker {
 };
 
 class map_DeadZone_Phase1 : map_DeadZone_Phase {
-	map_DeadZone_Phase1(GameModeInvasion@ metagame, PhaseControllerMap105@ controller) {
+	map_DeadZone_Phase1(GameModeInvasion@ metagame, PhaseControllerDeadZone@ controller) {
 		super(metagame, controller);
 	}
 	void start() {
@@ -104,7 +104,7 @@ class map_DeadZone_Phase1 : map_DeadZone_Phase {
 };
 
 class map_DeadZone_Phase2 : map_DeadZone_Phase {
-	map_DeadZone_Phase2(GameModeInvasion@ metagame, PhaseControllerMap105@ controller) {
+	map_DeadZone_Phase2(GameModeInvasion@ metagame, PhaseControllerDeadZone@ controller) {
 		super(metagame, controller);
 	}
 	void start() {
@@ -134,14 +134,14 @@ class map_DeadZone_Phase2 : map_DeadZone_Phase {
 
 
 // --------------------------------------------
-class PhaseControllerMap105 : PhaseController {
+class PhaseControllerDeadZone : PhaseController {
 	protected GameModeInvasion@ m_metagame;
 	protected bool m_started;
 	protected uint m_currentPhaseIndex;
 	protected array<map_DeadZone_Phase@> m_phases;
 	protected array<string> m_destroyTargets;
 
-	PhaseControllerMap105(GameModeInvasion@ metagame) {
+	PhaseControllerDeadZone(GameModeInvasion@ metagame) {
 		@m_metagame = @metagame;
 		m_started = false;
 		m_currentPhaseIndex = 0;
@@ -158,7 +158,7 @@ class PhaseControllerMap105 : PhaseController {
 	}
 
 	void gameContinuePreStart() {
-		_log("starting PhaseControllerMap105 tracker with game_continue_pre_start, phase=" + m_currentPhaseIndex);
+		_log("starting PhaseControllerDeadZone tracker with game_continue_pre_start, phase=" + m_currentPhaseIndex);
 		m_started = true;
 		startCurrentPhase();
 	}
@@ -170,7 +170,7 @@ class PhaseControllerMap105 : PhaseController {
 	// --------------------------------------------
 	void start() {
 		reset();
-		_log("starting PhaseControllerMap105 tracker, phase=" + m_currentPhaseIndex);
+		_log("starting PhaseControllerDeadZone tracker, phase=" + m_currentPhaseIndex);
 		m_started = true;
 		startCurrentPhase();
 	}

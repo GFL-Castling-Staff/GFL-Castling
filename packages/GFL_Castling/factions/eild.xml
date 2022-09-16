@@ -365,7 +365,7 @@
 		<hud_icon filename="commander_ye.png" />
 	</rank>
 	<!-- player group -->
-	<soldier name="default" spawn_score="0.0" firstnames_file="Paradeus_first.name" lastnames_file="Paradeus_last.name">
+	<soldier name="default" spawn_score="0.0" firstnames="E.I.L.D." lastnames="">
 		<character filename="default_infected.character" />
 		<ai filename="default.ai" />
 		<models file="eild.models" />
@@ -430,9 +430,10 @@
 
     <soldier name="infected_armed" spawn_score="3.0" squad_size_xp_cap="0.5">
 		<ai filename="eod.ai" />
+		<model filename="eild_armed.xml" />
 		<character filename="infected.character" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
-			<weapon key="parw_infected.weapon" enabled="1" />
+			<weapon key="eild_armed.weapon" enabled="1" />
 			<carry_item key="sf_ar.carry_item" />
 		</resources>
 		<attribute_config class="xp">

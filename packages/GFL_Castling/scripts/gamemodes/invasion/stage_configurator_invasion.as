@@ -404,10 +404,9 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.m_fogRange= 28.5;
 		stage.m_minRandomCrates = 1; 
 		stage.m_maxRandomCrates = 3;
+		
+		stage.m_primaryObjective = "capture";
 
-		stage.m_defenseWinTime = 300; 
-		stage.m_defenseWinTimeMode = "custom";
-		stage.addTracker(PausingKothTimer(m_metagame, stage.m_defenseWinTime,false));
 
 		{
 			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0, 0.6, 0.2));                                            
