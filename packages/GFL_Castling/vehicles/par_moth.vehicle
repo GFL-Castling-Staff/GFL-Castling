@@ -4,8 +4,8 @@
     <tag name="PARA_MOTH" />
     <tag name="jeep" />
     <tag name="heavy_combat" />
-    <tire_set offset="4.0 0 4.0" radius="2.5" />
-    <tire_set offset="4.0 0 -4.0" radius="2.5" />
+    <tire_set offset="3.0 0 3.0" radius="2.5" />
+    <tire_set offset="3.0 0 -3.0" radius="2.5" />
 	
     <control 
 	max_speed="21.0" 
@@ -15,7 +15,7 @@
 	max_rotation="0.1" 
 	max_water_depth="6.0" 
 	can_steer_in_water="0.0" 
-	steer_smoothening="0.6" 
+	steer_smoothening="0.99" 
 	tracked="1" 
 	gears="0" 
 	max_limiter_speed="15.0" 
@@ -28,9 +28,9 @@
 	preserve_motion_on_impact_factor="0.0"
 	gravity="-8" 
 	remove_collision_threshold="50.0" 
-	extent="5.4 0.0 5.4" 
+	extent="4.0 0.0 4.0" 
 	offset="0.0 +0.0 -0.0" 
-	top_offset="0 15 0" 
+	top_offset="0 6 0" 
 	collision_model_pos="0 6.6 0" 
 	collision_model_extent="2.4 2.0 2.4" 
 	visual_offset="0 0.0 0" />
@@ -82,4 +82,8 @@
         <trigger class="destroy" />
         <result class="reward" rp="1000.0" />
     </event>
+	<event>
+		<trigger class="destroy" />
+		<result class="spawn" instance_class="vehicle" instance_key="par_moth.vehicle" min_amount="1" max_amount="1" offset="0 1.0 0" position_spread="0 0" direction_spread="0 0" />
+	</event>
 </vehicle>

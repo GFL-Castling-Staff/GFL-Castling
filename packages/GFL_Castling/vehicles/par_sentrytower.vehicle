@@ -24,15 +24,15 @@
     10<turret offset="-1.71 10.0 -1.0" weapon_key="parw_sentrytower_mg.weapon" weapon_offset="0.0 0 0" max_rotation_step="0.0006" rotation="4.20" rotation_range="1.08" weapon_recoil="0.0" physics_recoil="0.0" />
     11<turret offset="-1.71 10.0 1.0" weapon_key="parw_sentrytower_mg.weapon" weapon_offset="0.0 0 0" max_rotation_step="0.0006" rotation="5.24" rotation_range="1.08" weapon_recoil="0.0" physics_recoil="0.0" />
 
-    12<turret offset="0 0.0 0.0" weapon_key="Compass_mg.weapon" weapon_offset="0.6 1.6 -8" parent_turret_index="5" weapon_recoil="0.0" physics_recoil="0.0" rotation="0" rotation_range="0"/>
-    13<turret offset="0 0.0 0.0" weapon_key="Compass_mg.weapon" weapon_offset="-0.6 1.6 -8" parent_turret_index="5" weapon_recoil="0.0" physics_recoil="0.0" rotation="0" rotation_range="0"/>
+    12<turret offset="0 0.0 0.0" weapon_key="Compass_mg.weapon" weapon_offset="0.6 1.8 -9.6" parent_turret_index="5" weapon_recoil="0.0" physics_recoil="0.0" rotation="0" rotation_range="0"/>
+    13<turret offset="0 0.0 0.0" weapon_key="Compass_mg.weapon" weapon_offset="-0.6 1.8 -9.6" parent_turret_index="5" weapon_recoil="0.0" physics_recoil="0.0" rotation="0" rotation_range="0"/>
 	
     <modifier class="blast_range" value="-1.0" />
 
-	<visual class="chassis" mesh_filename="Sentry_Tower.mesh" texture_filename="Sentry_Tower_Texture.png" rotation="1.57"/>
+	<visual class="chassis" mesh_filename="Sentry_Tower.mesh" texture_filename="Sentry_Tower_Texture.png"/>
 	<visual class="chassis" key="broken" mesh_filename="Sentry_Tower.mesh" texture_filename="Sentry_Tower_Texture.png" />
 	
-    <character_slot type="gunner" position="0 0.7 1" rotation="1.57" exit_rotation="1.57" hiding="1" animation_id="37" seat_position="0.0 10.0 0.0">
+    <character_slot type="gunner" position="0 0.7 1.5" rotation="0" exit_rotation="0" hiding="1" animation_id="37" seat_position="0.0 10.0 0.0">
         <turret index="6" />
         <turret index="8" />
         <turret index="10" />
@@ -41,7 +41,7 @@
         <turret index="11" />		
     </character_slot>
 	
-    <character_slot type="gunner" position="0 0.7 -1" rotation="0" exit_rotation="3.14" hiding="1" animation_id="37" seat_position="0.0 10.0 0.0">
+    <character_slot type="gunner" position="0 0.7 -1.5" rotation="0" exit_rotation="3.14" hiding="1" animation_id="37" seat_position="0.0 10.0 0.0">
 		<turret index="0" />
         <turret index="1" />
         <turret index="2" />
@@ -64,14 +64,26 @@
     <sound key="hit" filename="car_hit1.wav" />
     <sound key="turret_rotation" filename="turret_rotation1.wav" volume="3" />
     <sound key="turret_rotation" filename="turret_rotation2.wav" volume="3" />
+	
+	<effect event_key="idle_chassis" ref="TracerFlash" lighting="0" post_processing="0" offset="1.35 13.75 -2.31"/>
+	<effect event_key="idle_chassis" ref="TracerFlash" lighting="0" post_processing="0" offset="2.7 13.75 -0.0"/>
+	<effect event_key="idle_chassis" ref="TracerFlash" lighting="0" post_processing="0" offset="1.35 13.75 2.31"/>
+	<effect event_key="idle_chassis" ref="TracerFlash" lighting="0" post_processing="0" offset="-1.35 13.75 2.31"/>
+	<effect event_key="idle_chassis" ref="TracerFlash" lighting="0" post_processing="0" offset="-2.7 13.75 -0.0"/>
+	<effect event_key="idle_chassis" ref="TracerFlash" lighting="0" post_processing="0" offset="-1.35 13.75 -2.31"/>
+	
     <effect event_key="health" value="90" ref="BrokenSparkle" offset="0.0 13.0 -0.0" />
+	
     <effect event_key="health" value="60" ref="SmallSmokeVehicle" offset="0.0 12.8 -0.0" />
     <effect event_key="health" value="60" ref="BrokenSparkle" post_processing="0" offset="0.0 13.0 -0.0" />
+	
     <effect event_key="health" value="30" ref="SmallSmokeVehicle" offset="0.0 12.8 -0.0" />
     <effect event_key="health" value="30" ref="BrokenSparkle" post_processing="0" offset="0.0 13.0 -0.0" />
     <effect event_key="health" value="30" ref="SmallSmokeVehicle" post_processing="0" offset="0.0 13.0 -0.0" />
+	
     <effect event_key="destroyed" ref="MediumSmokeVehicle" offset="0.0 13.5 0.3" />
     <effect event_key="destroyed" ref="SmallFireRepeat" offset="0.0 13.2 0.3" />
+	
     <effect event_key="destroy" key="other" ref="woosh" post_processing="0" shadow="0" />
     <effect event_key="cleanup" key="other" ref="woosh" post_processing="0" shadow="0" />
     <event key="receive_damage_xp_reward">
