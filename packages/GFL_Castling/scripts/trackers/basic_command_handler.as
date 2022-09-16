@@ -413,7 +413,7 @@ class BasicCommandHandler : Tracker {
 			if (characterInfo is null) return;
 			string c_pos = characterInfo.getStringAttribute("position");
 			int fId = characterInfo.getIntAttribute("faction_id");
-			playSoundAtLocation(m_metagame,"war.wav",fId,c_pos,1.0);
+			playSoundAtLocation(m_metagame,"holywar.wav",fId,c_pos,2.0);
 		}		
 		// admin and moderator only from here on
 		if (!m_metagame.getAdminManager().isAdmin(sender, senderId) && !m_metagame.getModeratorManager().isModerator(sender, senderId)) {
