@@ -476,6 +476,10 @@ class MapRotatorInvasion : MapRotator {
 					}
 				}
 
+				if (stage !is null) {
+					stage.announceStart(m_metagame);
+				}
+				
 				m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 0.0, 0, "map start, ending", a));
 
 			} else {
