@@ -464,6 +464,7 @@ class CommandSkill : Tracker {
                     case 42:{excute88typeGUNDAMskill(cId,senderId,m_modifer);break;}
                     case 43:{excuteM200skill(cId,senderId,m_modifer);break;}
                     case 44:{excuteCZ75skill(cId,senderId,m_modifer);break;}
+                    case 45:{excutSuperSASSSkill(cId,senderId,m_modifer);break;}
 
                     default:
                         break;
@@ -2857,8 +2858,8 @@ class CommandSkill : Tracker {
                 "CZ75_SKILL2_JP.wav",
                 "CZ75_SKILL3_JP.wav"
                 };
-                playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1.8);
-                playSoundAtLocation(m_metagame,"cz75_skill_throwout.wav",factionid,c_pos,1.2);
+                playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1.4);
+                playSoundAtLocation(m_metagame,"cz75_skill_throwout.wav",factionid,c_pos,1.0);
 
                 while(num_jud>0){
                     for (int i1=0;i1<affectedCharacter.length();i1++)	{
@@ -2878,4 +2879,21 @@ class CommandSkill : Tracker {
             
         }    
     }
+    void excutSuperSASSSkill(int characterId,int playerId,SkillModifer@ modifer,bool mod3 =false){
+        bool ExistQueue = false;
+        int j=-1;
+        for (uint i=0;i<SkillArray.length();i++){
+            if (InCooldown(characterId,modifer,SkillArray[i]) && SkillArray[i].m_weapontype=="SASS") {
+                ExistQueue=true;
+                j=i;
+            }
+        }
+        if (ExistQueue){
+            dictionary a;
+            a["%time"] = ""+SkillArray[j].m_time;
+            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            return;
+        }
+    }
+
 }
