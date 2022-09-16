@@ -435,11 +435,11 @@
 			<carry_item key="pard_sg.carry_item" />
 		</resources>
 	</soldier>
-	<soldier name="para_rodelero" spawn_score="2.0" squad_size_xp_cap="0.5" copy_from="default_ai">
+	<soldier name="para_rodelero" spawn_score="0.5" squad_size_xp_cap="0.5" copy_from="default_ai">
 		<ai filename="pard_rod.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="parw_rodelero.weapon" enabled="1" />
-			<carry_item key="pard_ar.carry_item" />
+			<carry_item key="pard_sg.carry_item" />
 		</resources>
 	</soldier>
 	<soldier name="parw_commander" spawn_score="0.5" squad_size_xp_cap="0.5" copy_from="default_ai">
