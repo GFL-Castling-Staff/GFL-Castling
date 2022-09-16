@@ -2,8 +2,11 @@
 #include "faction_config.as"
 #include "stage_configurator.as"
 #include "stage_invasion.as"
+
 #include "phase_controller_map12.as"
 #include "phase_controller_shockzone.as"
+#include "phase_controller_deadzone.as"
+
 #include "pausing_koth_timer.as"
 #include "spawn_at_node.as"
 #include "comms_capacity_handler.as"
@@ -156,6 +159,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 	// ------------------------------------------------------------------------------------------------
 	protected void setupNormalStages() {
+		addStage(setupDeadZone());
 		addStage(setupStage1());          // map2
 		addStage(setupStage7());          // map6c by diling
 		addStage(setupStage8());          // map8
@@ -385,6 +389,60 @@ class StageConfiguratorInvasion : StageConfigurator {
 		return stage;
 	} 	
 
+	protected Stage@ setupDeadZone() {
+		PhasedStage@ stage = createPhasedStage();
+		stage.setPhaseController(PhaseControllerDeadZone(m_metagame));
+		stage.m_mapInfo.m_name = "Dead Zone";
+		stage.m_mapInfo.m_path = "media/packages/GFL_Castling/maps/map105_3";
+		stage.m_mapInfo.m_id = "map105_3";
+
+		stage.m_maxSoldiers = 80;
+		stage.m_playerAiCompensation = 3;
+        stage.m_playerAiReduction = 0;
+		stage.m_finalBattle = true;
+		stage.m_fogOffset= 28;
+		stage.m_fogRange= 28.5;
+		stage.m_minRandomCrates = 1; 
+		stage.m_maxRandomCrates = 3;
+
+		stage.m_defenseWinTime = 300; 
+		stage.m_defenseWinTimeMode = "custom";
+		stage.addTracker(PausingKothTimer(m_metagame, stage.m_defenseWinTime,false));
+
+		{
+			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0, 0.6, 0.2));                                            
+			f.m_capacityOffset = 0; 
+			f.m_capacityMultiplier = 0.85;
+			f.m_bases = 1;
+			stage.m_factions.insertLast(f);
+		}
+
+		{
+			Faction f(FactionConfig(1, "paradeus.xml", "Paradeus", "1 1 1", "paradeus.xml"), createCommanderAiCommand(1, 0.30, 0.30));
+			f.m_capacityMultiplier = 1.0;
+			f.m_capacityOffset = 80;
+			stage.m_factions.insertLast(f);                                                                
+		}
+		{
+			Faction f(FactionConfig(2, "eild.xml", "E.I.L.D.", "0.3 0.17 0.11", "eild.xml"), createCommanderAiCommand(2, 0.80, 0.20));             
+			f.m_overCapacity = 70;
+            f.m_capacityOffset = 80;
+			f.m_capacityMultiplier = 0.001;
+			stage.m_factions.insertLast(f);                                    
+		}
+		{
+			Faction f(FactionConfig(3, "sf.xml", "S.F.", "0.91 0.11 0.20", "sf.xml"), createCommanderAiCommand(3, 0.75, 0.15));             
+			f.m_overCapacity = 70;                                             
+            f.m_capacityOffset = 40;
+			f.m_capacityMultiplier = 0.001;
+			stage.m_factions.insertLast(f);
+		}
+		// metadata
+		stage.m_primaryObjective = "koth";
+		stage.m_kothTargetBase = "All SF Base";
+
+		return stage;
+	} 	
 	protected Stage@ setupStage106(){
 		Stage@ stage = createStage();
 		stage.m_mapInfo.m_name = "Route E30";
