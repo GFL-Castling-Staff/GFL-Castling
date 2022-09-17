@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<vehicle file="vehicle_base.vehicle" name="Paradeus Sentry Tower" key="par_sentrytower.vehicle" respawn_time="100" time_to_live_unsteerable="95" map_view_atlas_index="46" minimum_fill_requirement="1.0" max_character_collision_speed_on_normal="8.0" max_character_collision_speed="8"  protectors="5" soldier_capacity_offset="5" allow_owner_to_use_only="0"  should_be_destroyed="1" allow_character_leave_request="0" ai_stop_to_fight="0"  >
-    <tag name="metal_heavy" />
+<vehicle file="vehicle_base.vehicle" name="Paradeus Sentry Tower" key="par_sentrytower.vehicle" respawn_time="100" time_to_live_unsteerable="95" map_view_atlas_index="46" minimum_fill_requirement="1.0" max_character_collision_speed_on_normal="8.0" max_character_collision_speed="8"   character_leave_request_mode="friendly" allow_ai_to_use="1" allow_player_to_use="1" ai_driver_turns_to_target="0" allow_character_leave_request="0" ai_stop_to_fight="0"  >
+
     <tag name="PARA_AA" />
-    <tag name="heavy_combat" />
+
     <tire_set offset="3.0 0 3.0" radius="0.5" />
     <tire_set offset="3.0 0 -3.0" radius="0.5" />
 	
@@ -32,16 +32,7 @@
 	<visual class="chassis" mesh_filename="Sentry_Tower.mesh" texture_filename="Sentry_Tower_Texture.png"/>
 	<visual class="chassis" key="broken" mesh_filename="Sentry_Tower.mesh" texture_filename="Sentry_Tower_Texture.png" />
 	
-    <character_slot type="gunner" position="0 0.7 1.5" rotation="0" exit_rotation="0" hiding="1" animation_id="37" seat_position="0.0 10.0 0.0">
-        <turret index="6" />
-        <turret index="8" />
-        <turret index="10" />
-        <turret index="7" />
-        <turret index="9" />
-        <turret index="11" />		
-    </character_slot>
-	
-    <character_slot type="gunner" position="0 0.7 -1.5" rotation="0" exit_rotation="3.14" hiding="1" animation_id="37" seat_position="0.0 10.0 0.0">
+    <character_slot type="gunner" position="0 0.7 -1.5" rotation="0" exit_rotation="3.14" hiding="1" animation_id="37" seat_position="0.0 9.0 1.0">
 		<turret index="0" />
         <turret index="1" />
         <turret index="2" />
@@ -52,6 +43,14 @@
 		<turret index="13" />
     </character_slot>
 
+    <character_slot type="gunner" position="0 0.7 1.5" rotation="0" exit_rotation="0" hiding="1" animation_id="37" seat_position="0.0 10.0 0.0">
+        <turret index="6" />
+        <turret index="8" />
+        <turret index="10" />
+        <turret index="7" />
+        <turret index="9" />
+        <turret index="11" />		
+    </character_slot>
 
     <rev_sound filename="tank_rev0.wav" low_pitch="0.4" high_pitch="0.5" low_rev="0.0" high_rev="1.0" volume="0.9" />
     <rev_sound filename="tank_rev0_b.wav" low_pitch="0.6" high_pitch="0.7" low_rev="0.0" high_rev="1.0" volume="0.6" />
