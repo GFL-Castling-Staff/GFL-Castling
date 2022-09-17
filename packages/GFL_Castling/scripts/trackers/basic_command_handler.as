@@ -433,8 +433,18 @@ class BasicCommandHandler : Tracker {
 			if (characterInfo is null) return;
 			string c_pos = characterInfo.getStringAttribute("position");
 			int fId = characterInfo.getIntAttribute("faction_id");
-			playSoundAtLocation(m_metagame,"Song of the CYL.wav",fId,c_pos,1.0);
+			playSoundAtLocation(m_metagame,"Fortunate Son.wav",fId,c_pos,1.0);
 		}	
+		else if (checkCommand(message, "sing4")) {
+			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
+			if (playerInfo is null) return;
+			int characterId= playerInfo.getIntAttribute("character_id");
+			const XmlElement@ characterInfo = getCharacterInfo(m_metagame, characterId);
+			if (characterInfo is null) return;
+			string c_pos = characterInfo.getStringAttribute("position");
+			int fId = characterInfo.getIntAttribute("faction_id");
+			playSoundAtLocation(m_metagame,"Song of the CYL.wav",fId,c_pos,1.0);
+		}
 		// admin and moderator only from here on
 		if (!m_metagame.getAdminManager().isAdmin(sender, senderId) && !m_metagame.getModeratorManager().isModerator(sender, senderId)) {
 			return;
