@@ -405,13 +405,13 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.m_minRandomCrates = 1; 
 		stage.m_maxRandomCrates = 3;
 		
-		stage.m_primaryObjective = "capture";
+		stage.m_primaryObjective = "phases";
 
 
 		{
 			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0, 0.6, 0.2));                                            
 			f.m_capacityOffset = 0; 
-			f.m_capacityMultiplier = 0.85;
+			f.m_capacityMultiplier = 1.0;
 			f.m_bases = 1;
 			stage.m_factions.insertLast(f);
 		}
@@ -436,6 +436,24 @@ class StageConfiguratorInvasion : StageConfigurator {
 			f.m_capacityMultiplier = 0.001;
 			stage.m_factions.insertLast(f);
 		}
+
+		{
+			XmlElement command("command");
+			command.setStringAttribute("class", "faction_resources");
+			command.setIntAttribute("faction_id", 0);
+			addFactionResourceElements(command, "vehicle", array<string> = {"radio_jammer.vehicle", "radar_tower.vehicle"}, false);
+
+			stage.m_extraCommands.insertLast(command);
+		}   
+		    
+		{
+			XmlElement command("command");
+			command.setStringAttribute("class", "faction_resources");
+			command.setIntAttribute("faction_id", 0);
+			command.setBoolAttribute("clear_calls", true);
+			stage.m_extraCommands.insertLast(command);
+		}
+
 		// metadata
 		stage.m_primaryObjective = "koth";
 		stage.m_kothTargetBase = "All SF Base";

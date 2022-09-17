@@ -94,6 +94,8 @@ class Stage {
 	float m_playerAiCompensation;
 	float m_playerAiReduction;
 	bool m_showMapAtStartIfDead;
+	bool m_useCustomTimerMode;
+	array<Comment@> m_startComments;
 
 	// metadata, mostly for instructions comment selection logic
 	string m_primaryObjective;
@@ -125,6 +127,7 @@ class Stage {
 		m_radioObjectivePresent = true;
 		m_allowChangeCapacityOnTheFly = true;
 		m_showMapAtStartIfDead = false;
+		m_useCustomTimerMode = false;
 
 		m_includeLayers.insertLast("bases.default");
 		m_includeLayers.insertLast("layer1.default");
@@ -354,6 +357,10 @@ class Stage {
 			command.setFloatAttribute("defense_win_time", m_defenseWinTime);
 			command.setStringAttribute("defense_win_time_mode", m_defenseWinTimeMode);
 		}
+		
+		if (m_useCustomTimerMode) {
+			command.setStringAttribute("defense_win_time_mode", "custom");
+		}
 
 		for (uint i = 0; i < m_factions.size(); ++i) {
 			Faction@ f = m_factions[i];
@@ -453,7 +460,23 @@ class Stage {
 	bool hasIntelManager() const {
 		return m_intelManager !is null;
 	}
+
+	void addStartComment(Comment@ comment) {
+		m_startComments.push_back(comment);
+	}
 	
+	void announceStart(Metagame@ metagame) {
+		dictionary a = {
+			{"%map_name", m_mapInfo.m_name},
+			{"%faction_name", m_factions.size() >= 2 ? m_factions[1].m_config.m_name : ""}
+		};
+
+		for (uint i = 0; i < m_startComments.size(); ++i) {
+			Comment@ comment = m_startComments[i];
+			metagame.getTaskSequencer().add(AnnounceTask(metagame, comment.m_duration, 0, comment.m_key, a));
+		}
+	}
+
 	// --------------------------------------------
 	void save(XmlElement@ root) {
 		if (m_intelManager !is null) {
@@ -498,5 +521,15 @@ class PhasedStage : Stage {
 		if (m_phaseController !is null) {
 			m_phaseController.load(root);
 		}
+	}
+}
+
+class Comment {
+	string m_key;
+	float m_duration;
+
+	Comment(string key, float duration) {
+		m_key = key;
+		m_duration = duration;
 	}
 }

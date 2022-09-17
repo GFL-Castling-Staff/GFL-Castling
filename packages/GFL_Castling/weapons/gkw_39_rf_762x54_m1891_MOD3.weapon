@@ -7,16 +7,16 @@
     accuracy_factor="2.0" 
     sustained_fire_grow_step="0.1" 
     sustained_fire_diminish_rate="2.0" 
-    magazine_size="5" 
+    magazine_size="6" 
     can_shoot_standing="1" 
     suppressed="0" 
     name="Mosin-Nagant M1891(MOD3)" 
     class="2" 
     reload_one_at_a_time="1" 
     sight_range_modifier="3" 
-    projectile_speed="205.95" 
+    projectile_speed="225.95" 
     barrel_offset="0.4" 
-    projectiles_per_shot="5" />
+    projectiles_per_shot="4" />
 
     <inventory  buy_price="110.0" sell_price="110.0" />	
     <capacity value="1" source="rank" source_value="0.0" />
@@ -43,7 +43,7 @@
     
     <weak_hand_hold offset="0.3" />
     <projectile file="bullet.projectile" can_be_detected_by_footmen="0">
-        <result class="hit" kill_probability="2.0" kill_probability_offset_on_successful_hit="4" kill_decay_start_time="1.895" kill_decay_end_time="3.158"/>
+        <result class="hit" kill_probability="2.4" kill_probability_offset_on_successful_hit="6" kill_decay_start_time="1.895" kill_decay_end_time="3.158"/>
     </projectile>
     <stance state_key="running" accuracy="1.2" />
 	<stance state_key="walking" accuracy="1.2" />
@@ -62,7 +62,7 @@
     accuracy_factor="1.0" 
     sustained_fire_grow_step="2" 
     sustained_fire_diminish_rate="1.2" 
-    magazine_size="1" 
+    magazine_size="6" 
     can_shoot_standing="1" 
     suppressed="0" 
     name="Mosin-Nagant M1891(MOD3)-[Pure White Reaper]" 
@@ -71,7 +71,8 @@
     sight_range_modifier="3" 
     projectile_speed="235.95" 
     barrel_offset="0.4" 
-    projectiles_per_shot="8" />
+    stance_accrucy_rate="0.2"
+    projectiles_per_shot="1" />
 
     <inventory  buy_price="110.0" sell_price="110.0" />	
     <capacity value="1" source="rank" source_value="0.0" />
@@ -101,16 +102,16 @@
     
     <weak_hand_hold offset="0.3" />
     <projectile file="bullet.projectile" can_be_detected_by_footmen="0">
-        <result class="blast" damage="3" radius="2.5" push="0.2" charater_state="death" faction_compare="not_equal" />
+        <result class="hit" kill_probability="2.4" kill_probability_offset_on_successful_hit="30" kill_decay_start_time="1.895" kill_decay_end_time="3.158"/>
     </projectile>
-	<stance state_key="running" accuracy="1" />
-	<stance state_key="walking" accuracy="1" />
-    <stance state_key="crouch_moving" accuracy="1" />
-    <stance state_key="prone_moving" accuracy="1" />
-    <stance state_key="standing" accuracy="1" />
+	<stance state_key="running" accuracy="0.75" />
+	<stance state_key="walking" accuracy="0.75" />
+    <stance state_key="crouch_moving" accuracy="0.85" />
+    <stance state_key="prone_moving" accuracy="0.85" />
+    <stance state_key="standing" accuracy="0.95" />
     <stance state_key="crouching" accuracy="1" />
     <stance state_key="prone" accuracy="1" />
     <stance state_key="over_wall" accuracy="1" />
-    <modifier class="speed" value="-0.2" />
+    <modifier class="speed" value="0.4" />
 </weapon>
 </weapons>
