@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<static_object key="security_fence.static_object" destroy_on_drive_over="1" destroy_on_blast="1" blast_damage_threshold="15" destroy_on_stab="0" undestroy_on_block_activate="1">
+
+    <sound key="destroy" filename="security_fence_break1.wav" volume="0.45" pitch_variety="0.1" />
+    <sound key="destroy" filename="security_fence_break2.wav" volume="0.45" pitch_variety="0.1" />
+
+	<destroy_on_drive_over_tags>
+		<tag name="bulldozer" /> 
+	</destroy_on_drive_over_tags>
+	
+	<effect event_key="destroy" key="other" ref="SmokeMinor" post_processing="1" />
+	<effect event_key="destroy" key="other" ref="ShadowSmokeMinor" shadow="1" />
+	
+	<event>
+		<trigger class="destroy" />
+  	<result class="spawn" instance_class="visual_item" instance_key="security_fence_debris.visual_item" min_amount="6" max_amount="10" offset="0 1 0" position_spread="1.5 1.5" direction_spread="0.1 0.2" />
+	</event>
+	
+      
+		
+</static_object>

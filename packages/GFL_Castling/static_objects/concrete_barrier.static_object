@@ -6,8 +6,7 @@
     <effect event_key="destroy" key="other" ref="ShadowSmokeMinor" shadow="1" />
 
     <destroy_on_drive_over_tags>
-        <tag name="metal_heavy" />
-        <tag name="armory" />        
+        <tag name="bulldozer" />
     </destroy_on_drive_over_tags>
 
     <event>
