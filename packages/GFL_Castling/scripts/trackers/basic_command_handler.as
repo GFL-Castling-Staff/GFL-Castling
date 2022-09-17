@@ -9,6 +9,19 @@
 #include "GFLhelpers.as"
 #include "event_system.as"
 
+array<string> commandSingIndex = {
+
+	// 命名规则：枪种key+歌曲编号+.wav
+	// 歌曲编号直接与sing挂钩（举例：sing1 = 歌曲编号为1）
+	// 以sopii为例，命名规则为 ‘gkw_m4sopmodii.weapon’ + ‘1’ + ‘.wav’
+	// 当然，相应的你要把你的歌在文件夹里也改成这个名字
+
+    "gkw_m4sopmodii.weapon1.wav",
+
+	// 列表末尾，不用管
+	"end_of_list"
+};
+
 //Adapted and optimizated by Castling Staff
 
 // --------------------------------------------
@@ -405,46 +418,33 @@ class BasicCommandHandler : Tracker {
 			int characterId= playerInfo.getIntAttribute("character_id");			
 			playAnimationKey(m_metagame,characterId,"celebrating2",true,true);
 		}
-		else if (checkCommand(message, "sing1")) {
-			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
+		else if (checkCommand(message, "sing")) {
+
+			// 获取玩家阵营，位置信息
+			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);_log('pre_sing 0.');
 			if (playerInfo is null) return;
 			int characterId= playerInfo.getIntAttribute("character_id");
 			const XmlElement@ characterInfo = getCharacterInfo(m_metagame, characterId);
 			if (characterInfo is null) return;
 			string c_pos = characterInfo.getStringAttribute("position");
 			int fId = characterInfo.getIntAttribute("faction_id");
-			playSoundAtLocation(m_metagame,"holywar.wav",fId,c_pos,3.0);
+
+			// 获取玩家装备，注意这里用的是getCharacterInfo2，和上面getCharacterInfo不同
+			const XmlElement@ targetCharacter = getCharacterInfo2(m_metagame,characterId);
+			if (targetCharacter is null) return;
+			array<const XmlElement@>@ equipment = targetCharacter.getElementsByTagName("item");
+			if (equipment.size() == 0) return;
+			if (equipment[0].getIntAttribute("amount") == 0) return;
+			string c_weaponType = equipment[0].getStringAttribute("key");
+			string c_armorType = equipment[4].getStringAttribute("key");
+
+			uint jud_num = uint(message.toLowerCase()[5]) - 48;
+			string jud_sing_file = c_weaponType + '' + jud_num + '.wav';
+			if(commandSingIndex.find(jud_sing_file)> -1){
+				playSoundAtLocation(m_metagame,jud_sing_file,fId,c_pos,3.0);
+			}
+			
 		}	
-		else if (checkCommand(message, "sing2")) {
-			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
-			if (playerInfo is null) return;
-			int characterId= playerInfo.getIntAttribute("character_id");
-			const XmlElement@ characterInfo = getCharacterInfo(m_metagame, characterId);
-			if (characterInfo is null) return;
-			string c_pos = characterInfo.getStringAttribute("position");
-			int fId = characterInfo.getIntAttribute("faction_id");
-			playSoundAtLocation(m_metagame,"bababa.wav",fId,c_pos,3.0);
-		}
-		else if (checkCommand(message, "sing3")) {
-			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
-			if (playerInfo is null) return;
-			int characterId= playerInfo.getIntAttribute("character_id");
-			const XmlElement@ characterInfo = getCharacterInfo(m_metagame, characterId);
-			if (characterInfo is null) return;
-			string c_pos = characterInfo.getStringAttribute("position");
-			int fId = characterInfo.getIntAttribute("faction_id");
-			playSoundAtLocation(m_metagame,"Fortunate Son.wav",fId,c_pos,3.0);
-		}	
-		else if (checkCommand(message, "sing4")) {
-			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
-			if (playerInfo is null) return;
-			int characterId= playerInfo.getIntAttribute("character_id");
-			const XmlElement@ characterInfo = getCharacterInfo(m_metagame, characterId);
-			if (characterInfo is null) return;
-			string c_pos = characterInfo.getStringAttribute("position");
-			int fId = characterInfo.getIntAttribute("faction_id");
-			playSoundAtLocation(m_metagame,"Song of the CYL.wav",fId,c_pos,3.0);
-		}
 		// admin and moderator only from here on
 		if (!m_metagame.getAdminManager().isAdmin(sender, senderId) && !m_metagame.getModeratorManager().isModerator(sender, senderId)) {
 			return;
