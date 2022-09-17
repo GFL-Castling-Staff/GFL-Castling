@@ -17,7 +17,7 @@
 	<commonness value="0.0"/>
 	<weak_hand_hold offset="0.0"/>
 	<projectile file="bullet_paradeus.projectile">
-	<result class="blast" damage="2.0" radius="3" decal="1" push="0.2" character_state="death" faction_compare="not_equal"/>
+	<result class="blast" damage="2.0" radius="1.5" decal="1" push="0.2" character_state="death" faction_compare="not_equal"/>
 	<trigger class="impact"/>
 	<effect class="result" key="terrain" ref="BigBurst" use_surface_color="1"/>
 	<effect class="result" key="terrain" ref="SmokeTop" post_processing="1"/>
