@@ -22,6 +22,16 @@ array<string> commandSingIndex = {
 	"end_of_list"
 };
 
+dictionary songVolumeIndex = {
+
+	// 对应上面的歌曲名设置一下音量就行
+
+	{"gkw_m4sopmodii.weapon1.wav",3.0},
+
+	// 列表末尾，不用管
+	{"end_of_list",0.0}
+};
+
 //Adapted and optimizated by Castling Staff
 
 // --------------------------------------------
@@ -441,7 +451,7 @@ class BasicCommandHandler : Tracker {
 			uint jud_num = uint(message.toLowerCase()[5]) - 48;
 			string jud_sing_file = c_weaponType + '' + jud_num + '.wav';
 			if(commandSingIndex.find(jud_sing_file)> -1){
-				playSoundAtLocation(m_metagame,jud_sing_file,fId,c_pos,3.0);
+				playSoundAtLocation(m_metagame,jud_sing_file,fId,c_pos,float(songVolumeIndex[jud_sing_file]));
 			}
 			
 		}	
