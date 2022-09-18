@@ -36,7 +36,7 @@ void main(dictionary@ inputData) {
         settings.m_startServerCommand = """
 <command class='start_server'
 	server_name='[Castling][France-2 LV3]'
-	server_port='1234'
+	server_port='1235'
 	comment='(0.6:1.75) FOV, Read server rules in our discord: discord.gg/wwUM3kYmRC, QQ Group: 706234535'
 	url='https://castling.fandom.com/wiki/Castling_Wiki'
 	register_in_serverlist='1'
