@@ -16610,7 +16610,7 @@ climb_type = 0;
        transform="matrix(-0.99999236,-0.00390919,0.00390919,-0.99999236,0,0)"
        ry="0">
       <desc
-         id="desc16653-2-9-3-3-2-6">name = barbwire; mesh_name = barbwire.mesh; texture0 = world_atlas1.png; texture0_atlas_cell = 1 9 16 16; collision_model_type = 1; collision_model_size = 1.4 1.4 2.8; collision_model_offset = 0 0 0; walkable = 0; alpha_blend = 1; penetrability = 0.8; see_through = 1;</desc>
+         id="desc16653-2-9-3-3-2-6">name = barbwire; static_object_type_key=barbed_wire.static_object;  mesh_name = barbwire.mesh; texture0 = world_atlas1.png; texture0_atlas_cell = 1 9 16 16; collision_model_type = 1; collision_model_size = 1.4 1.4 2.8; collision_model_offset = 0 0 0; walkable = 0; alpha_blend = 1; penetrability = 0.8; see_through = 1;</desc>
     </rect>
     <rect
        style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#ff0000;stroke-width:1.00000119;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1.00000118, 2.00000246;stroke-dashoffset:0;display:inline;enable-background:new"

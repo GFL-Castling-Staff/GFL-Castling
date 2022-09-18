@@ -10167,7 +10167,7 @@ mesh_template = stone_5;
        id="rect16633-4-8-7-6-9-9"
        style="fill:#6a6a6a;fill-opacity:1;fill-rule:nonzero;stroke:#ffff00;stroke-width:1.00000119;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1.00000118, 1.00000118;stroke-dashoffset:0;display:inline;enable-background:new">
       <desc
-         id="desc16653-2-9-3-3-2">name = barbwire; mesh_name = barbwire.mesh; texture0 = world_atlas1.png; texture0_atlas_cell = 1 9 16 16; collision_model_type = 1; collision_model_size = 1.4 1.4 2.8; collision_model_offset = 0 0 0; walkable = 0; alpha_blend = 1; penetrability = 0.8; see_through = 1;</desc>
+         id="desc16653-2-9-3-3-2">name = barbwire; static_object_type_key=barbed_wire.static_object;  mesh_name = barbwire.mesh; texture0 = world_atlas1.png; texture0_atlas_cell = 1 9 16 16; collision_model_type = 1; collision_model_size = 1.4 1.4 2.8; collision_model_offset = 0 0 0; walkable = 0; alpha_blend = 1; penetrability = 0.8; see_through = 1;</desc>
     </rect>
     <rect
        ry="0"

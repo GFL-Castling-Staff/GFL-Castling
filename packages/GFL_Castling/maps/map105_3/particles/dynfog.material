@@ -3,12 +3,9 @@ material DynFog {
 	technique {
 		pass {
 			lighting off
-      scene_blend alpha_blend
-			//scene_blend add
-			//scene_blend one zero
+		      scene_blend alpha_blend
 			depth_write off
 
-			//fog_override true
 
 			texture_unit {
 				texture dynfog.png
