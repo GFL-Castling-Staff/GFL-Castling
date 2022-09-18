@@ -945,7 +945,12 @@ class GFLskill : Tracker {
 					Vector3 ruin_dir = stringToVector3(event.getStringAttribute("direction"));
 					Vector3 ruin_pos = stringToVector3(event.getStringAttribute("position"));
 					float ori4 = getAimOrientation4(ruin_dir);
-					spawnVehicle(m_metagame,1,Faction,ruin_pos,Orientation(0,1,0,ori4),"par_moth.vehicle");		
+
+					float jud = rand(0,2);
+
+					if(jud>1)	spawnVehicle(m_metagame,1,Faction,ruin_pos.add(Vector3(0,6,0)),Orientation(0,1,0,ori4),"par_moth_ruin.vehicle");		
+					else	CreateProjectile(m_metagame,ruin_pos.add(Vector3(0,5.4,0)),ruin_pos.add(Vector3(0,5.4,0)),"moth_explode.projectile",characterId,Faction,0,1);
+
 					break;
 				}
 			}

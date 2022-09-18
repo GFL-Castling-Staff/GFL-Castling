@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vehicle file="vehicle_base.vehicle" name="Ruin of Paradeus Moth Aircraft" key="par_moth_ruin.vehicle" respawn_time="60" time_to_live="60">
+    <tag name="ruin" />
+    <tag name="PARA_MOTH_ruin" />
+ 
+	<tire_set offset="1.0 0.0 +1.0" radius="0.2" />
+	<tire_set offset="1.0 0.0 -1.0" radius="0.2" />
+	
+    <physics 
+	max_health="60" 
+	blast_damage_threshold="1.0"
+	mass="150.0" 
+	preserve_motion_on_impact_factor="0.5"
+	gravity="-10"
+	remove_collision_threshold="50.0" 
+	extent="3.0 0.0 3.0" 
+	offset="0.0 +0.0 -0.0" 
+	top_offset="0 1 0" 
+	collision_model_pos="0 1 -1.6" 
+	collision_model_extent="1.8 2.0 5.0" 
+	visual_offset="0 -0.5 0" />
+	
+    <modifier class="blast_range" value="-5.0" />
+    <modifier class="blast_damage" value="-9.0" />
+	
+	<visual class="chassis" mesh_filename="Sentry_Moth.mesh" texture_filename="humvee_broken.png" />
+    <effect event_key="idle_chassis" ref="SmallSmokeVehicle" offset="0.0 1.8 -0.0" />
+    <effect event_key="idle_chassis" ref="BrokenSparkle" post_processing="0" offset="0.0 2.0 -0.0" />
+    <effect event_key="idle_chassis" ref="SmallSmokeVehicle" post_processing="0" offset="0.0 2.0 -0.0" />
+    <effect event_key="destroyed" ref="MediumSmokeVehicle" offset="0.0 8.5 0.3" />
+    <effect event_key="destroyed" ref="SmallFireRepeat" offset="0.0 8.2 0.3" />
+    <effect event_key="destroy" key="other" ref="woosh" post_processing="0" shadow="0" />
+    <effect event_key="cleanup" key="other" ref="woosh" post_processing="0" shadow="0" />
+
+    <event key="receive_damage_xp_reward">
+        <trigger class="receive_damage" />
+        <result class="reward" xp="0.0200" />
+    </event>
+    <event key="spot_rp_reward">
+        <trigger class="spot" />
+        <result class="reward" rp="200.0" />
+    </event>
+    <event key="destroy_rp_reward">
+        <trigger class="destroy" />
+        <result class="reward" rp="1000.0" />
+    </event>
+	  <event>
+		<trigger class="destroy" />		
+		<result class="spawn" instance_class="visual_item" instance_key="burning_piece_cleanup.visual_item" min_amount="20" max_amount="20" offset="0 2.0 0" position_spread="1.5 1.5" direction_spread="0.2 0.2" /> 
+	  </event>    
+	  <event>
+		<trigger class="destroy" />		
+		<result class="spawn" instance_class="projectile" instance_key="moth_explode.projectile" min_amount="1" max_amount="1" offset="0 0 0" position_spread="0 0" direction_spread="0 0" /> 
+	  </event>  
+	<!-- <event> -->
+		<!-- <trigger class="destroy" /> -->
+		<!-- <result class="spawn" instance_class="vehicle" instance_key="par_moth.vehicle" min_amount="1" max_amount="1" offset="0 1.0 0" position_spread="0 0" direction_spread="0 0" /> -->
+	<!-- </event> -->
+</vehicle>

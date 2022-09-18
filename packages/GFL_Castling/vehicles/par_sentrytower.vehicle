@@ -3,12 +3,15 @@
 
     <tag name="PARA_AA" />
 
-    <tire_set offset="3.0 0 3.0" radius="0.5" />
-    <tire_set offset="3.0 0 -3.0" radius="0.5" />
+    <tire_set offset="2.0 0 2.0" radius="0.5" />
+    <tire_set offset="2.0 0 -2.0" radius="0.5" />
 	
     <control max_speed="12.0" acceleration="20.0" max_reverse_speed="12.0" min_health_to_steer="1.5" max_rotation="0.2" max_water_depth="6.0" can_steer_in_water="0.0" steer_smoothening="0.6" tracked="1" gears="0" max_limiter_speed="6.0" tracked_visual_tire_max_rotation="1.0" tracked_visual_tire_rotation_smoothening="0.9" simulated_speed_factor="0.1" />
 	
-    <physics max_health="150" blast_damage_threshold="1.0" mass="150.0" broken_mass="150" gravity="-900" remove_collision_threshold="50.0" extent="2.7 10.0 2.7" offset="0.0 +0.0 -0.0" top_offset="0 1 0" collision_model_pos="0 6.0 0" collision_model_extent="2.4 14.0 2.4" visual_offset="0 0.0 0" />
+    <physics max_health="150" blast_damage_threshold="1.0" mass="150.0" broken_mass="150" gravity="-900" remove_collision_threshold="50.0" extent="2.7 10.0 2.7" offset="0.0 +0.0 -0.0" top_offset="0 1 0" collision_model_pos="0 6.0 0" collision_model_extent="2.8 14.0 2.8" visual_offset="0 0.0 0" />
+	
+    <modifier class="blast_range" value="+1.0" />
+    <modifier class="blast_damage" value="-1.5" />
 	
     0<turret offset="0.0 13.0 0.0" weapon_key="amos_mine_sight.weapon" weapon_offset="0 0 0" max_rotation_step="0.00016" rotation="0" rotation_range="6.30" weapon_recoil="0.0" physics_recoil="0.0" />
     1<turret offset="0.0 0.0 20.0" weapon_key="amos_mine_sight.weapon" weapon_offset="0 0 0" parent_turret_index="0" max_rotation_step="0.00016" rotation="3.14" rotation_range="6.30" weapon_recoil="0.0" physics_recoil="0.0" />
@@ -27,10 +30,8 @@
     12<turret offset="0 0.0 0.0" weapon_key="parw_sentrytower_moth_mg.weapon" weapon_offset="0.6 1.8 -9.2" parent_turret_index="5" weapon_recoil="0.0" physics_recoil="0.0" rotation="0" rotation_range="0"/>
     13<turret offset="0 0.0 0.0" weapon_key="parw_sentrytower_moth_mg.weapon" weapon_offset="-0.6 1.8 -9.2" parent_turret_index="5" weapon_recoil="0.0" physics_recoil="0.0" rotation="0" rotation_range="0"/>
 	
-    <modifier class="blast_range" value="-1.0" />
-
 	<visual class="chassis" mesh_filename="Sentry_Tower.mesh" texture_filename="Sentry_Tower_Texture.png"/>
-	<visual class="chassis" key="broken" mesh_filename="Sentry_Tower.mesh" texture_filename="Sentry_Tower_Texture.png" />
+	<visual class="chassis" key="broken" mesh_filename="Sentry_Tower.mesh" texture_filename="Sentry_Tower_Texture_repairing.png" />
 	
     <character_slot type="gunner" position="0 0.7 -1.5" rotation="0" exit_rotation="3.14" hiding="1" animation_id="37" seat_position="0.0 9.0 1.0">
 		<turret index="0" />
