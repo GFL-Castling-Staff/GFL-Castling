@@ -17,6 +17,12 @@ array<string> commandSingIndex = {
 	// 当然，相应的你要把你的歌在文件夹里也改成这个名字
 
     "gkw_m4sopmodii.weapon1.wav",
+	"gkw_m1891mod3.weapon1.wav",
+	"gkw_ppsh41mod3.weapon1.wav",
+	"gkw_type80mod3.weapon1.wav",
+	"gkw_mp5mod3.weapon1.wav",
+	"gkw_ak12.weapon1.wav",
+	"gkw_ak47.weapon1.wav",
 
 	// 列表末尾，不用管
 	"end_of_list"
@@ -27,6 +33,12 @@ dictionary songVolumeIndex = {
 	// 对应上面的歌曲名设置一下音量就行
 
 	{"gkw_m4sopmodii.weapon1.wav",3.0},
+	{"gkw_m1891mod3.weapon1.wav",3.0},
+	{"gkw_ppsh41mod3.weapon1.wav",3.0},
+	{"gkw_type80mod3.weapon1.wav",3.0},
+	{"gkw_mp5mod3.weapon1.wav",3.0},
+	{"gkw_ak12.weapon1.wav",3.0},
+	{"gkw_ak47.weapon1.wav",3.0},
 
 	// 列表末尾，不用管
 	{"end_of_list",0.0}
