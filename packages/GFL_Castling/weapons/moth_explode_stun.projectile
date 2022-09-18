@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<projectile class="grenade" name="40mm" slot="1" pulldown_in_air="0.0" time_to_live="0" key="moth_explode.projectile">
+<projectile class="grenade" name="40mm" slot="1" pulldown_in_air="0.0" time_to_live="0" key="moth_explode_stun.projectile">
 
 	<result
 	class="blast"
 	radius="10"
 	damage="1"
 	push="0"  
-	character_state="death"
+	character_state="stun"
 	make_vehicle_hit_sound="1"
 	/>
     <trigger class="time" time_to_live="0.0"/>  

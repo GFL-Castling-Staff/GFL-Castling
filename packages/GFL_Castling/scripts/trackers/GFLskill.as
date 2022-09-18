@@ -948,8 +948,13 @@ class GFLskill : Tracker {
 
 					float jud = rand(0,2);
 
-					if(jud>1)	spawnVehicle(m_metagame,1,Faction,ruin_pos.add(Vector3(0,6,0)),Orientation(0,1,0,ori4),"par_moth_ruin.vehicle");		
-					else	CreateProjectile(m_metagame,ruin_pos.add(Vector3(0,5.4,0)),ruin_pos.add(Vector3(0,5.4,0)),"moth_explode.projectile",characterId,Faction,0,1);
+					if(jud>1){
+						spawnVehicle(m_metagame,1,Faction,ruin_pos.add(Vector3(0,6,0)),Orientation(0,1,0,ori4),"par_moth_ruin.vehicle");
+					}			
+					else{
+						CreateProjectile(m_metagame,ruin_pos.add(Vector3(0,5.4,0)),ruin_pos.add(Vector3(0,5.4,0)),"moth_explode_death.projectile",characterId,Faction,0,1);
+						CreateProjectile(m_metagame,ruin_pos.add(Vector3(0,5.4,0)),ruin_pos.add(Vector3(0,5.4,0)),"moth_explode_stun.projectile",characterId,Faction,0,1);
+					}	
 
 					break;
 				}
