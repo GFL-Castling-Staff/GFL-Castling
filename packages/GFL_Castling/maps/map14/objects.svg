@@ -14341,6 +14341,7 @@ see_through = 1;</desc>
        inkscape:label="#wall_template">
       <desc
          id="desc9346-8-2-1-6-2-7-2">name = SecurityFence1;
+static_object_type_key=security_fence.static_object;
 color = 1.0 1.0 1.0 1.0;
 depth = -1.0;
 height = 2.5;
@@ -14702,7 +14703,8 @@ visual_hitbox_size = 3.5 15 3.5;
        y="1099.5193"
        inkscape:label="#mesh_template">
       <desc
-         id="desc9040-4-3-2-0-75-7">name = parasol_blue; 
+         id="desc9040-4-3-2-0-75-7">name = parasol_blue;
+static_object_type_key=parasol.static_object; 
 mesh_name = parasol.mesh; 
 texture0 = world_atlas1.png; 
 texture0_atlas_cell = 4 0 32 32; 
@@ -14723,7 +14725,8 @@ visual_hitbox_size = 2 2 2;
        y="1099.5193"
        inkscape:label="#mesh_template">
       <desc
-         id="desc9040-4-3-2-0-75-7-8">name = parasol_yellow; 
+         id="desc9040-4-3-2-0-75-7-8">name = parasol_yellow;
+static_object_type_key=parasol.static_object; 
 mesh_name = parasol.mesh; 
 texture0 = world_atlas1.png; 
 texture0_atlas_cell = 4 1 32 32; 
@@ -14744,7 +14747,8 @@ visual_hitbox_size = 2 2 2;
        y="1099.5193"
        inkscape:label="#mesh_template">
       <desc
-         id="desc9040-4-3-2-0-75-7-4">name = parasol_green; 
+         id="desc9040-4-3-2-0-75-7-4">name = parasol_green;
+static_object_type_key=parasol.static_object; 
 mesh_name = parasol.mesh; 
 texture0 = world_atlas1.png; 
 texture0_atlas_cell = 5 0 32 32; 
@@ -14765,7 +14769,8 @@ visual_hitbox_size = 2 2 2;
        y="1099.5193"
        inkscape:label="#mesh_template">
       <desc
-         id="desc9040-4-3-2-0-75-8">name = parasol_red; 
+         id="desc9040-4-3-2-0-75-8">name = parasol_red;
+static_object_type_key=parasol.static_object; 
 mesh_name = parasol.mesh; 
 texture0 = world_atlas1.png; 
 texture0_atlas_cell = 5 1 32 32; 

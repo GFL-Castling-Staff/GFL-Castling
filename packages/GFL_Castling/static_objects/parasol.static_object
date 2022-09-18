@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<static_object key="parasol.static_object" destroy_on_blast="1" blast_damage_threshold="2.0" destroy_on_drive_over="1" destroy_on_stab="0" undestroy_on_block_activate="1">
+	
+	<sound key="destroy" filename="crate_smash1.wav" volume="0.3" />
+	<sound key="destroy" filename="crate_smash2.wav" volume="0.3" />
+	<sound key="destroy" filename="crate_smash3.wav" volume="0.3" />
+	
+	<destroy_on_drive_over_tags>
+        <tag name="metal_thin" />   
+        <tag name="metal_heavy" />
+		<tag name="any_tank" /> 
+        <tag name="apc" />
+		<tag name="truck" />
+		<tag name="jeep" /> 
+	</destroy_on_drive_over_tags>
+	
+	<effect event_key="destroy" key="other" ref="SmokeMinor" post_processing="1" />
+	<effect event_key="destroy" key="other" ref="ShadowSmokeMinor" shadow="1" />
+	
+	<effect event_key="destroy" key="other" ref="SmokeMinor" post_processing="1" />
+	<effect event_key="destroy" key="other" ref="ShadowSmokeMinor" shadow="1" />
+	
+	<effect event_key="destroy" key="other" ref="SmokeMinor" post_processing="1" />
+	<effect event_key="destroy" key="other" ref="ShadowSmokeMinor" shadow="1" />
+	
+	<effect event_key="destroy" key="other" ref="SmokeMinor" post_processing="1" />
+	<effect event_key="destroy" key="other" ref="ShadowSmokeMinor" shadow="1" />
+	
+	<effect event_key="destroy" key="other" ref="SmokeMinor" post_processing="1" />
+	<effect event_key="destroy" key="other" ref="ShadowSmokeMinor" shadow="1" />
+	
+	<effect event_key="destroy" key="other" ref="SmokeMinor" post_processing="1" />
+	<effect event_key="destroy" key="other" ref="ShadowSmokeMinor" shadow="1" />
+
+		
+</static_object>

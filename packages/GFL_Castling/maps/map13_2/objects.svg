@@ -16530,7 +16530,8 @@ flip = 1;</desc>
        id="rect9036-2-2-4-2-83-1"
        style="display:inline;fill:#0000ff;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;enable-background:new">
       <desc
-         id="desc9040-4-3-2-0-75-7">name = parasol_blue; mesh_name = parasol.mesh; texture0 = world_atlas1.png; texture0_atlas_cell = 4 0 32 32; collision_model_type = 0; penetrability = 0.2; see_through = 1; collision_model_size = 0.1 2.0 0.1; visual_hitbox_size = 2 2 2; #visual_hitbox_offset = ;</desc>
+         id="desc9040-4-3-2-0-75-7">name = parasol_blue;
+static_object_type_key=parasol.static_object; mesh_name = parasol.mesh; texture0 = world_atlas1.png; texture0_atlas_cell = 4 0 32 32; collision_model_type = 0; penetrability = 0.2; see_through = 1; collision_model_size = 0.1 2.0 0.1; visual_hitbox_size = 2 2 2; #visual_hitbox_offset = ;</desc>
     </rect>
     <rect
        inkscape:label="#mesh_template"
@@ -16541,7 +16542,8 @@ flip = 1;</desc>
        id="rect9036-2-2-4-2-83-1-8"
        style="display:inline;fill:#ffff00;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;enable-background:new">
       <desc
-         id="desc9040-4-3-2-0-75-7-8">name = parasol_yellow; mesh_name = parasol.mesh; texture0 = world_atlas1.png; texture0_atlas_cell = 4 1 32 32; collision_model_type = 0; penetrability = 0.2; see_through = 1; collision_model_size = 0.1 2.0 0.1; visual_hitbox_size = 2 2 2; #visual_hitbox_offset = ;</desc>
+         id="desc9040-4-3-2-0-75-7-8">name = parasol_yellow;
+static_object_type_key=parasol.static_object; mesh_name = parasol.mesh; texture0 = world_atlas1.png; texture0_atlas_cell = 4 1 32 32; collision_model_type = 0; penetrability = 0.2; see_through = 1; collision_model_size = 0.1 2.0 0.1; visual_hitbox_size = 2 2 2; #visual_hitbox_offset = ;</desc>
     </rect>
     <rect
        inkscape:label="#mesh_template"
@@ -16552,7 +16554,8 @@ flip = 1;</desc>
        id="rect9036-2-2-4-2-83-1-2"
        style="display:inline;fill:#0e5500;fill-opacity:0.79607801;stroke:#000000;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;enable-background:new">
       <desc
-         id="desc9040-4-3-2-0-75-7-4">name = parasol_green; mesh_name = parasol.mesh; texture0 = world_atlas1.png; texture0_atlas_cell = 5 0 32 32; collision_model_type = 0; penetrability = 0.2; see_through = 1; collision_model_size = 0.1 2.0 0.1; visual_hitbox_size = 2 2 2; #visual_hitbox_offset = ;</desc>
+         id="desc9040-4-3-2-0-75-7-4">name = parasol_green;
+static_object_type_key=parasol.static_object; mesh_name = parasol.mesh; texture0 = world_atlas1.png; texture0_atlas_cell = 5 0 32 32; collision_model_type = 0; penetrability = 0.2; see_through = 1; collision_model_size = 0.1 2.0 0.1; visual_hitbox_size = 2 2 2; #visual_hitbox_offset = ;</desc>
     </rect>
     <rect
        inkscape:label="#mesh_template"
@@ -16563,7 +16566,8 @@ flip = 1;</desc>
        id="rect9036-2-2-4-2-83-16"
        style="display:inline;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;enable-background:new">
       <desc
-         id="desc9040-4-3-2-0-75-8">name = parasol_red; mesh_name = parasol.mesh; texture0 = world_atlas1.png; texture0_atlas_cell = 5 1 32 32; collision_model_type = 0; penetrability = 0.2; see_through = 1; collision_model_size = 0.1 2.0 0.1; visual_hitbox_size = 2 2 2; #visual_hitbox_offset = ;</desc>
+         id="desc9040-4-3-2-0-75-8">name = parasol_red;
+static_object_type_key=parasol.static_object; mesh_name = parasol.mesh; texture0 = world_atlas1.png; texture0_atlas_cell = 5 1 32 32; collision_model_type = 0; penetrability = 0.2; see_through = 1; collision_model_size = 0.1 2.0 0.1; visual_hitbox_size = 2 2 2; #visual_hitbox_offset = ;</desc>
     </rect>
     <rect
        style="display:inline;fill:#00ffff;stroke:#ffff00;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;enable-background:new"
@@ -16691,7 +16695,8 @@ static_object_type_key=woodfence.static_object; color = #6f6555; depth = -1.0; h
        id="rect9344-60-7-4-5-4-6-4"
        style="display:inline;fill:#d2d2d2;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:5;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;enable-background:new">
       <desc
-         id="desc9346-8-2-1-6-2-7-2">name = SecurityFence1; color = 1.0 1.0 1.0 1.0; depth = -1.0; height = 2.5; side_texture = fence_atlas1.png; side_texture_scale = 1.25 1.25; side_texture_atlas_cell = 1 0 4 4 0.015625; separator_side_texture = wall_atlas1.png; separator_side_texture_scale = 0.2 1.0; separator_side_texture_atlas_cell = 6 3 16 8 0.015625 0.0078125; separator_top_texture = wall_atlas1.png; separator_top_texture_scale = 0.2 1.0; separator_top_texture_atlas_cell = 6 5 16 16 0.015625; separator_color = 1.0 1.0 1.0 1.0; separator_over_height = 0.3; separator_depth = 0.2; penetrability = 1.0; see_through = 1; climb_type = 1; hack1 = 1;</desc>
+         id="desc9346-8-2-1-6-2-7-2">name = SecurityFence1;
+static_object_type_key=security_fence.static_object; color = 1.0 1.0 1.0 1.0; depth = -1.0; height = 2.5; side_texture = fence_atlas1.png; side_texture_scale = 1.25 1.25; side_texture_atlas_cell = 1 0 4 4 0.015625; separator_side_texture = wall_atlas1.png; separator_side_texture_scale = 0.2 1.0; separator_side_texture_atlas_cell = 6 3 16 8 0.015625 0.0078125; separator_top_texture = wall_atlas1.png; separator_top_texture_scale = 0.2 1.0; separator_top_texture_atlas_cell = 6 5 16 16 0.015625; separator_color = 1.0 1.0 1.0 1.0; separator_over_height = 0.3; separator_depth = 0.2; penetrability = 1.0; see_through = 1; climb_type = 1; hack1 = 1;</desc>
     </rect>
     <rect
        inkscape:label="#wall_template"

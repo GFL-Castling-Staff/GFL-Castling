@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <vehicles>
+
+	<vehicle file="GFL_Castling_vehicles.xml" />
+	<vehicle file="map_vehicles.xml" />
+
 	<vehicle file="armored_truck.vehicle" />
-	<!-- <vehicle file="mobile_armory.vehicle" /> -->
 	<vehicle file="transport_truck.vehicle" /> 
-	<!-- <vehicle file="transport_truck_1.vehicle" />   -->
-	<!-- <vehicle file="transport_truck_2.vehicle" />   -->
-	<vehicle file="armored_truck.vehicle" />
+
 	<vehicle file="radar_truck.vehicle" />
 	<vehicle file="cargo_truck.vehicle" />
 	<vehicle file="para_spawn.vehicle" />
@@ -20,7 +21,6 @@
 	<vehicle file="tank2.vehicle" />
 	<!-- <vehicle file="humvee.vehicle" /> -->
 	<vehicle file="all_special.xml" />
-	<vehicle file="GFL_Castling_vehicles.xml" />
 	<vehicle file="deployable_minig_2.vehicle" />
 	<vehicle file="para_spawn.vehicle" />
 	<vehicle file="radar_tower.vehicle" />
