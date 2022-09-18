@@ -5,33 +5,32 @@
     <tag name="jeep" />
     <tag name="heavy_combat" />
  
-	<tire_set offset="1.8 0.0 +3" radius="0.52" />
-	<tire_set offset="1.8 0.0 -3" radius="0.52" />
+	<tire_set offset="1.8 0.0 +1.8" radius="0.52" />
+	<tire_set offset="1.8 0.0 -1.8" radius="0.52" />
 	
     <control 
-	max_speed="21.0" 
-	acceleration="21.0" 
-	max_reverse_speed="20.0" 
-	min_health_to_steer="1.5" 
-	max_rotation="0.1" 
+	max_speed="15.0" 
+	acceleration="18.0" 
+	max_reverse_speed="12.0" 
+	min_health_to_steer="0" 
+	max_rotation="0.0" 
 	max_water_depth="6.0" 
 	can_steer_in_water="0.0" 
 	steer_smoothening="0.99" 
 	tracked="1" 
 	gears="1" 
-	max_limiter_speed="15.0" 
-	simulated_speed_factor="0.1" />
+	max_limiter_speed="6.0" />
 	
     <physics 
 	max_health="30" 
 	blast_damage_threshold="1.0"
-	mass="50.0" 
+	mass="150.0" 
 	preserve_motion_on_impact_factor="0.0"
-	gravity="-8" 
+
 	remove_collision_threshold="50.0" 
-	extent="4.0 0.0 4.0" 
+	extent="3.0 0.0 3.0" 
 	offset="0.0 +0.0 -0.0" 
-	top_offset="0 6 0" 
+	top_offset="0 4 0" 
 	collision_model_pos="0 6.6 0" 
 	collision_model_extent="2.4 2.0 2.4" 
 	visual_offset="0 0.0 0" />

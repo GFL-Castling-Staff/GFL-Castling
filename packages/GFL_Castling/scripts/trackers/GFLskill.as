@@ -89,7 +89,7 @@ dictionary gameSkillIndex = {
         {"fc_defence_2",25},
 
 		// 飞蛾无人机坠毁
-        // {"moth_destroy",26},
+        {"moth_destroy",26},
 
         // 下面这行是用来占位的，在这之上添加新的技能key和index即可
         {"666",-1}
@@ -934,7 +934,21 @@ class GFLskill : Tracker {
 					}
 				}
 				break;
-			}			
+			}	
+
+			// 15:33:08: SCRIPT:  received: TagName=result_event character_id=851 direction=-0.871521 0.020148 -0.489943 key=moth_destroy position=289.461 10.8204 551.587 
+			case 26:{
+				int characterId = event.getIntAttribute("character_id");
+				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+				if (character !is null) {
+					int Faction = character.getIntAttribute("faction_id");
+					Vector3 ruin_dir = stringToVector3(event.getStringAttribute("direction"));
+					Vector3 ruin_pos = stringToVector3(event.getStringAttribute("position"));
+					float ori4 = getAimOrientation4(ruin_dir);
+					spawnVehicle(m_metagame,1,Faction,ruin_pos,Orientation(0,1,0,ori4),"par_moth.vehicle");		
+					break;
+				}
+			}
 
             default:
                 break;
