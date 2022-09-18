@@ -1,0 +1,853 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<carry_items>
+	<carry_item key="vest_50hp_enforcer.carry_item" time_to_live_out_in_the_open="0" name="Enforcer Equipment" transform_on_consume="vest_50hp_enforcer_1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="testing.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.2" />
+        <modifier class="hit_success_probability" value="-1.2" />
+        <modifier class="detectability" value="1.0" />
+	</carry_item>
+	<carry_item key="vest_50hp_enforcer_1" time_to_live_out_in_the_open="0" name="Enforcer Equipment" transform_on_consume="vest_50hp_enforcer_2" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="testing.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.2" />
+        <modifier class="hit_success_probability" value="-1.2" />
+        <modifier class="detectability" value="1.0" />
+	</carry_item>
+	<carry_item key="vest_50hp_enforcer_2" time_to_live_out_in_the_open="0" name="Enforcer Equipment" transform_on_consume="vest_50hp_enforcer_3" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="testing.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.2" />
+        <modifier class="hit_success_probability" value="-1.2" />
+        <modifier class="detectability" value="1.0" />
+	</carry_item>
+	<carry_item key="vest_50hp_enforcer_3" time_to_live_out_in_the_open="0" name="Enforcer Equipment" transform_on_consume="vest_50hp_enforcer_4" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="testing.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.2" />
+        <modifier class="hit_success_probability" value="-1.2" />
+        <modifier class="detectability" value="1.0" />
+	</carry_item>
+	<carry_item key="vest_50hp_enforcer_4" time_to_live_out_in_the_open="0" name="Enforcer Equipment" transform_on_consume="vest_50hp_enforcer_5" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="testing.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.2" />
+        <modifier class="hit_success_probability" value="-1.2" />
+        <modifier class="detectability" value="1.0" />
+	</carry_item>
+	<carry_item key="vest_50hp_enforcer_5" time_to_live_out_in_the_open="0" name="Enforcer Equipment" transform_on_consume="vest_50hp_enforcer_6" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="testing.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.2" />
+        <modifier class="hit_success_probability" value="-1.2" />
+        <modifier class="detectability" value="1.0" />
+	</carry_item>
+	<carry_item key="vest_50hp_enforcer_6" time_to_live_out_in_the_open="0" name="Enforcer Equipment" transform_on_consume="vest_50hp_enforcer_7" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="testing.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.2" />
+        <modifier class="hit_success_probability" value="-1.2" />
+        <modifier class="detectability" value="1.0" />
+	</carry_item>
+	<carry_item key="vest_50hp_enforcer_7" time_to_live_out_in_the_open="0" name="Enforcer Equipment" transform_on_consume="vest_50hp_enforcer_8" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="testing.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.2" />
+        <modifier class="hit_success_probability" value="-1.2" />
+        <modifier class="detectability" value="1.0" />
+	</carry_item>
+	<carry_item key="vest_50hp_enforcer_8" time_to_live_out_in_the_open="0" name="Enforcer Equipment" transform_on_consume="vest_50hp_enforcer_9" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="testing.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.2" />
+        <modifier class="hit_success_probability" value="-1.2" />
+        <modifier class="detectability" value="1.0" />
+	</carry_item>
+	<carry_item key="vest_50hp_enforcer_9" time_to_live_out_in_the_open="0" name="Enforcer Equipment" transform_on_consume="vest_50hp_enforcer_10" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="testing.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.2" />
+        <modifier class="hit_success_probability" value="-1.2" />
+        <modifier class="detectability" value="1.0" />
+	</carry_item>
+	<carry_item key="vest_50hp_enforcer_10" time_to_live_out_in_the_open="0" name="Enforcer Equipment" transform_on_consume="vest_50hp_enforcer_11" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="testing.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="1.0" />
+	</carry_item>
+	<carry_item key="vest_50hp_enforcer_11" time_to_live_out_in_the_open="0" name="Enforcer Equipment" transform_on_consume="vest_50hp_enforcer_12" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="testing.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="1.0" />
+	</carry_item>
+	<carry_item key="vest_50hp_enforcer_12" time_to_live_out_in_the_open="0" name="Enforcer Equipment" transform_on_consume="vest_50hp_enforcer_13" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="testing.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="1.0" />
+	</carry_item>
+	<carry_item key="vest_50hp_enforcer_13" time_to_live_out_in_the_open="0" name="Enforcer Equipment" transform_on_consume="vest_50hp_enforcer_14" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="testing.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="1.0" />
+	</carry_item>
+	<carry_item key="vest_50hp_enforcer_14" time_to_live_out_in_the_open="0" name="Enforcer Equipment" transform_on_consume="vest_50hp_enforcer_15" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="testing.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="1.0" />
+	</carry_item>
+	<carry_item key="vest_50hp_enforcer_15" time_to_live_out_in_the_open="0" name="Enforcer Equipment" transform_on_consume="vest_50hp_enforcer_16" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="testing.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="1.0" />
+	</carry_item>
+	<carry_item key="vest_50hp_enforcer_16" time_to_live_out_in_the_open="0" name="Enforcer Equipment" transform_on_consume="vest_50hp_enforcer_17" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="testing.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="1.0" />
+	</carry_item>
+	<carry_item key="vest_50hp_enforcer_17" time_to_live_out_in_the_open="0" name="Enforcer Equipment" transform_on_consume="vest_50hp_enforcer_18" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="testing.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="1.0" />
+	</carry_item>
+	<carry_item key="vest_50hp_enforcer_18" time_to_live_out_in_the_open="0" name="Enforcer Equipment" transform_on_consume="vest_50hp_enforcer_19" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="testing.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="1.0" />
+	</carry_item>
+	<carry_item key="vest_50hp_enforcer_19" time_to_live_out_in_the_open="0" name="Enforcer Equipment" transform_on_consume="vest_50hp_enforcer_20" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="testing.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="1.0" />
+	</carry_item>
+	<carry_item key="vest_50hp_enforcer_20" time_to_live_out_in_the_open="0" name="Enforcer Equipment" transform_on_consume="vest_50hp_enforcer_21" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="testing.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="stun" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="1.0" />
+	</carry_item>
+	<carry_item key="vest_50hp_enforcer_21" time_to_live_out_in_the_open="0" name="Enforcer Equipment" transform_on_consume="vest_50hp_enforcer_22" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="testing.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="1.0" />
+	</carry_item>
+	<carry_item key="vest_50hp_enforcer_22" time_to_live_out_in_the_open="0" name="Enforcer Equipment" transform_on_consume="vest_50hp_enforcer_23" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="testing.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="1.0" />
+	</carry_item>
+	<carry_item key="vest_50hp_enforcer_23" time_to_live_out_in_the_open="0" name="Enforcer Equipment" transform_on_consume="vest_50hp_enforcer_24" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="testing.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="1.0" />
+	</carry_item>
+	<carry_item key="vest_50hp_enforcer_24" time_to_live_out_in_the_open="0" name="Enforcer Equipment" transform_on_consume="vest_50hp_enforcer_25" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="testing.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="1.0" />
+	</carry_item>
+	<carry_item key="vest_50hp_enforcer_25" time_to_live_out_in_the_open="0" name="Enforcer Equipment" transform_on_consume="vest_50hp_enforcer_26" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="testing.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="1.0" />
+	</carry_item>
+	<carry_item key="vest_50hp_enforcer_26" time_to_live_out_in_the_open="0" name="Enforcer Equipment" transform_on_consume="vest_50hp_enforcer_27" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="testing.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="1.0" />
+	</carry_item>
+	<carry_item key="vest_50hp_enforcer_27" time_to_live_out_in_the_open="0" name="Enforcer Equipment" transform_on_consume="vest_50hp_enforcer_28" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="testing.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="1.0" />
+	</carry_item>
+	<carry_item key="vest_50hp_enforcer_28" time_to_live_out_in_the_open="0" name="Enforcer Equipment" transform_on_consume="vest_50hp_enforcer_29" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="testing.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="1.0" />
+	</carry_item>
+	<carry_item key="vest_50hp_enforcer_29" time_to_live_out_in_the_open="0" name="Enforcer Equipment" transform_on_consume="vest_50hp_enforcer_30" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="testing.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="1.0" />
+	</carry_item>
+	<carry_item key="vest_50hp_enforcer_30" time_to_live_out_in_the_open="0" name="Enforcer Equipment" transform_on_consume="vest_50hp_enforcer_31" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="testing.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="1.0" />
+	</carry_item>
+	<carry_item key="vest_50hp_enforcer_31" time_to_live_out_in_the_open="0" name="Enforcer Equipment" transform_on_consume="vest_50hp_enforcer_32" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="testing.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="1.0" />
+	</carry_item>
+	<carry_item key="vest_50hp_enforcer_32" time_to_live_out_in_the_open="0" name="Enforcer Equipment" transform_on_consume="vest_50hp_enforcer_33" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="testing.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="1.0" />
+	</carry_item>
+	<carry_item key="vest_50hp_enforcer_33" time_to_live_out_in_the_open="0" name="Enforcer Equipment" transform_on_consume="vest_50hp_enforcer_34" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="testing.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="1.0" />
+	</carry_item>
+	<carry_item key="vest_50hp_enforcer_34" time_to_live_out_in_the_open="0" name="Enforcer Equipment" transform_on_consume="vest_50hp_enforcer_35" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="testing.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="1.0" />
+	</carry_item>
+	<carry_item key="vest_50hp_enforcer_35" time_to_live_out_in_the_open="0" name="Enforcer Equipment" transform_on_consume="vest_50hp_enforcer_36" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="testing.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="1.0" />
+	</carry_item>
+	<carry_item key="vest_50hp_enforcer_36" time_to_live_out_in_the_open="0" name="Enforcer Equipment" transform_on_consume="vest_50hp_enforcer_37" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="testing.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="1.0" />
+	</carry_item>
+	<carry_item key="vest_50hp_enforcer_37" time_to_live_out_in_the_open="0" name="Enforcer Equipment" transform_on_consume="vest_50hp_enforcer_38" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="testing.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="1.0" />
+	</carry_item>
+	<carry_item key="vest_50hp_enforcer_38" time_to_live_out_in_the_open="0" name="Enforcer Equipment" transform_on_consume="vest_50hp_enforcer_39" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="testing.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="1.0" />
+	</carry_item>
+	<carry_item key="vest_50hp_enforcer_39" time_to_live_out_in_the_open="0" name="Enforcer Equipment" transform_on_consume="vest_50hp_enforcer_40" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="testing.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="1.0" />
+	</carry_item>
+	<carry_item key="vest_50hp_enforcer_40" time_to_live_out_in_the_open="0" name="Enforcer Equipment" transform_on_consume="vest_50hp_enforcer_41" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="testing.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="1.0" />
+	</carry_item>
+	<carry_item key="vest_50hp_enforcer_41" time_to_live_out_in_the_open="0" name="Enforcer Equipment" transform_on_consume="vest_50hp_enforcer_42" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="testing.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="1.0" />
+	</carry_item>
+	<carry_item key="vest_50hp_enforcer_42" time_to_live_out_in_the_open="0" name="Enforcer Equipment" transform_on_consume="vest_50hp_enforcer_43" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="testing.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="1.0" />
+	</carry_item>
+	<carry_item key="vest_50hp_enforcer_43" time_to_live_out_in_the_open="0" name="Enforcer Equipment" transform_on_consume="vest_50hp_enforcer_44" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="testing.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="1.0" />
+	</carry_item>
+	<carry_item key="vest_50hp_enforcer_44" time_to_live_out_in_the_open="0" name="Enforcer Equipment" transform_on_consume="vest_50hp_enforcer_45" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="testing.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="1.0" />
+	</carry_item>
+	<carry_item key="vest_50hp_enforcer_45" time_to_live_out_in_the_open="0" name="Enforcer Equipment" transform_on_consume="vest_50hp_enforcer_46" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="testing.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="1.0" />
+	</carry_item>
+	<carry_item key="vest_50hp_enforcer_46" time_to_live_out_in_the_open="0" name="Enforcer Equipment" transform_on_consume="vest_50hp_enforcer_47" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="testing.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="1.0" />
+	</carry_item>
+	<carry_item key="vest_50hp_enforcer_47" time_to_live_out_in_the_open="0" name="Enforcer Equipment" transform_on_consume="vest_50hp_enforcer_48" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="testing.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="1.0" />
+	</carry_item>
+	<carry_item key="vest_50hp_enforcer_48" time_to_live_out_in_the_open="0" name="Enforcer Equipment" transform_on_consume="vest_50hp_enforcer_49" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="testing.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="1.0" />
+	</carry_item>
+	<carry_item key="vest_50hp_enforcer_49" time_to_live_out_in_the_open="0" name="Enforcer Equipment" transform_on_consume="vest_50hp_enforcer_50" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="testing.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="death" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="death" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.0" />
+        <modifier class="detectability" value="1.0" />
+	</carry_item>
+</carry_items>

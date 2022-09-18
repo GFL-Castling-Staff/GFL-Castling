@@ -1,34 +1,92 @@
 particle_system ground_break
 {
-	quota	1
+	quota	100
 	material	ground_break_1
-	particle_width	3     
-	particle_height	3
+	particle_width	2.4
+	particle_height	2.4
 	cull_each	false
-	renderer	billboard
-    billboard_type    perpendicular_common
+	renderer billboard
+	billboard_rotation_type vertex
+    billboard_type perpendicular_self
     common_direction 0 1 0
     common_up_vector 0 0 1
-    billboard_origin center    
 
 	emitter Point
 	{
-		angle	0
-		colour	0 0 0 1
-       
-		direction	0 1 0
-		emission_rate	2
-		position	0 0.2 0
-		velocity	0
-		velocity_min	0
-		velocity_max	0
-		time_to_live	0
-		time_to_live_min	5
-		time_to_live_max	5
-		duration 2
+        angle 0
+        position 0 0.2 0
+        direction 0 1 0
+        velocity 0.0001
+        time_to_live 15
+        duration 0.05
+        emission_rate 21
+		colour	
     }    
-    
-affector Rotator
+
+	
+	affector ColourInterpolator{
+		time0 0
+		colour0 0.5 0.5 0.3 1
+		time1 0.133
+		colour1 0.51 0.2 0.09 1
+		time2 0.33
+		colour2 0 0 0 1
+		time3 0.667
+		colour3 0 0 0 1
+		time4 1
+		colour4 0 0 0 0		
+	}
+
+
+	affector Rotator
+    {
+        rotation_range_start 0
+        rotation_range_end 360
+        
+    }
+}
+
+particle_system ground_break_small
+{
+	quota	100
+	material	ground_break_1
+	particle_width	1.5
+	particle_height	1.5
+	cull_each	false
+	renderer billboard
+	billboard_rotation_type vertex
+    billboard_type perpendicular_self
+    common_direction 0 1 0
+    common_up_vector 0 0 1
+
+	emitter Point
+	{
+        angle 0
+        position 0 0.1 0
+        direction 0 1 0
+        velocity 0.0001
+        time_to_live 10
+        duration 0.05
+        emission_rate 21
+		colour	
+    }    
+
+	
+	affector ColourInterpolator{
+		time0 0
+		colour0 0.5 0.5 0.3 1
+		time1 0.133
+		colour1 0.51 0.2 0.09 1
+		time2 0.33
+		colour2 0 0 0 1
+		time3 0.667
+		colour3 0 0 0 1
+		time4 1
+		colour4 0 0 0 0		
+	}
+
+
+	affector Rotator
     {
         rotation_range_start 0
         rotation_range_end 360
@@ -44,17 +102,15 @@ material ground_break_1
 		pass
 		{
 			lighting off
-			fog_override true none
 			ambient vertexcolour
 			diffuse vertexcolour
 			scene_blend alpha_blend
 			depth_write off
-			depth_check off
 			diffuse vertexcolour
 
 			texture_unit
 			{
-				texture ground_break.png
+				texture ground_break_1.png
 				tex_address_mode clamp
 			}
 		}

@@ -12,10 +12,10 @@
 		<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
 		<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
 		<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
-		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0" />
 		<modifier class="speed" value="0.0" />
-		<modifier class="detectability" value="0.1" />
-		<modifier class="hit_success_probability" value="-1.1" />
+		<modifier class="detectability" value="0.25" />
+		<modifier class="hit_success_probability" value="-1.3" />
 	</carry_item>
 	<carry_item key="bp_t4_1" time_to_live_out_in_the_open="15" name="Armor Plate Mk IV" transform_on_consume="bp_t4_2" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="bp_t4_14.png"/>
@@ -29,10 +29,10 @@
 		<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
 		<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
 		<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
-		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
 		<modifier class="speed" value="0.0" />
-		<modifier class="detectability" value="0.1" />
-		<modifier class="hit_success_probability" value="-1.1" />
+		<modifier class="detectability" value="0.25" />
+		<modifier class="hit_success_probability" value="-1.3" />
 	</carry_item>
 	<carry_item key="bp_t4_2" time_to_live_out_in_the_open="15" name="Armor Plate Mk IV" transform_on_consume="bp_t4_3" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="bp_t4_13.png"/>
@@ -46,10 +46,10 @@
 		<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
 		<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
 		<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
-		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0" />
 		<modifier class="speed" value="0.0" />
-		<modifier class="detectability" value="0.1" />
-		<modifier class="hit_success_probability" value="-1.1" />
+		<modifier class="detectability" value="0.25" />
+		<modifier class="hit_success_probability" value="-1.3" />
 	</carry_item>
 	<carry_item key="bp_t4_3" time_to_live_out_in_the_open="15" name="Armor Plate Mk IV" transform_on_consume="bp_t4_4" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="bp_t4_12.png"/>
@@ -63,10 +63,10 @@
 		<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
 		<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
 		<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
-		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
 		<modifier class="speed" value="0.0" />
-		<modifier class="detectability" value="0.1" />
-		<modifier class="hit_success_probability" value="-1.1" />
+		<modifier class="detectability" value="0.25" />
+		<modifier class="hit_success_probability" value="-1.3" />
 	</carry_item>
 	<carry_item key="bp_t4_4" time_to_live_out_in_the_open="15" name="Armor Plate Mk IV" transform_on_consume="bp_t4_5" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="bp_t4_11.png"/>
@@ -80,10 +80,10 @@
 		<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
 		<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
 		<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
-		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0" />
 		<modifier class="speed" value="0.0" />
-		<modifier class="detectability" value="0.1" />
-		<modifier class="hit_success_probability" value="-1.1" />
+		<modifier class="detectability" value="0.25" />
+		<modifier class="hit_success_probability" value="-1.3" />
 	</carry_item>
 	<carry_item key="bp_t4_5" time_to_live_out_in_the_open="15" name="Armor Plate Mk IV" transform_on_consume="bp_t4_6" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="bp_t4_10.png"/>
@@ -97,10 +97,10 @@
 		<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
 		<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
 		<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
-		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
 		<modifier class="speed" value="0.0" />
-		<modifier class="detectability" value="0.1" />
-		<modifier class="hit_success_probability" value="-1.1" />
+		<modifier class="detectability" value="0.25" />
+		<modifier class="hit_success_probability" value="-1.3" />
 	</carry_item>
 	<carry_item key="bp_t4_6" time_to_live_out_in_the_open="15" name="Armor Plate Mk IV" transform_on_consume="bp_t4_7" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="bp_t4_9.png"/>
@@ -114,10 +114,10 @@
 		<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
 		<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
 		<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
-		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0" />
 		<modifier class="speed" value="0.0" />
-		<modifier class="detectability" value="0.1" />
-		<modifier class="hit_success_probability" value="-1.1" />
+		<modifier class="detectability" value="0.25" />
+		<modifier class="hit_success_probability" value="-1.3" />
 	</carry_item>
 	<carry_item key="bp_t4_7" time_to_live_out_in_the_open="15" name="Armor Plate Mk IV" transform_on_consume="bp_t4_8" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="bp_t4_8.png"/>
@@ -131,10 +131,10 @@
 		<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
 		<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
 		<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
-		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
 		<modifier class="speed" value="0.0" />
-		<modifier class="detectability" value="0.1" />
-		<modifier class="hit_success_probability" value="-1.1" />
+		<modifier class="detectability" value="0.25" />
+		<modifier class="hit_success_probability" value="-1.3" />
 	</carry_item>
 	<carry_item key="bp_t4_8" time_to_live_out_in_the_open="15" name="Armor Plate Mk IV" transform_on_consume="bp_t4_9" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="bp_t4_7.png"/>
@@ -148,10 +148,10 @@
 		<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
 		<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
 		<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
-		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0" />
 		<modifier class="speed" value="0.0" />
-		<modifier class="detectability" value="0.1" />
-		<modifier class="hit_success_probability" value="-1.1" />
+		<modifier class="detectability" value="0.25" />
+		<modifier class="hit_success_probability" value="-1.3" />
 	</carry_item>
 	<carry_item key="bp_t4_9" time_to_live_out_in_the_open="15" name="Armor Plate Mk IV" transform_on_consume="bp_t4_10" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="bp_t4_6.png"/>
@@ -165,10 +165,10 @@
 		<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
 		<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
 		<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
-		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
 		<modifier class="speed" value="0.0" />
-		<modifier class="detectability" value="0.1" />
-		<modifier class="hit_success_probability" value="-1.1" />
+		<modifier class="detectability" value="0.25" />
+		<modifier class="hit_success_probability" value="-1.3" />
 	</carry_item>
 	<carry_item key="bp_t4_10" time_to_live_out_in_the_open="15" name="Armor Plate Mk IV" transform_on_consume="bp_t4_11" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="bp_t4_5.png"/>
@@ -182,10 +182,10 @@
 		<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
 		<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
 		<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
-		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0" />
 		<modifier class="speed" value="0.0" />
-		<modifier class="detectability" value="0.1" />
-		<modifier class="hit_success_probability" value="-1.1" />
+		<modifier class="detectability" value="0.25" />
+		<modifier class="hit_success_probability" value="-1.3" />
 	</carry_item>
 	<carry_item key="bp_t4_11" time_to_live_out_in_the_open="15" name="Armor Plate Mk IV" transform_on_consume="bp_t4_12" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="bp_t4_4.png"/>
@@ -199,10 +199,10 @@
 		<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
 		<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
 		<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
-		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
 		<modifier class="speed" value="0.0" />
-		<modifier class="detectability" value="0.1" />
-		<modifier class="hit_success_probability" value="-1.1" />
+		<modifier class="detectability" value="0.25" />
+		<modifier class="hit_success_probability" value="-1.3" />
 	</carry_item>
 	<carry_item key="bp_t4_12" time_to_live_out_in_the_open="15" name="Armor Plate Mk IV" transform_on_consume="bp_t4_13" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="bp_t4_3.png"/>
@@ -216,10 +216,10 @@
 		<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
 		<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
 		<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
-		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0" />
 		<modifier class="speed" value="0.0" />
-		<modifier class="detectability" value="0.1" />
-		<modifier class="hit_success_probability" value="-1.1" />
+		<modifier class="detectability" value="0.25" />
+		<modifier class="hit_success_probability" value="-1.3" />
 	</carry_item>
 	<carry_item key="bp_t4_13" time_to_live_out_in_the_open="15" name="Armor Plate Mk IV" transform_on_consume="bp_t4_14" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="bp_t4_2.png"/>
@@ -233,10 +233,10 @@
 		<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
 		<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
 		<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
-		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
 		<modifier class="speed" value="0.0" />
-		<modifier class="detectability" value="0.1" />
-		<modifier class="hit_success_probability" value="-1.1" />
+		<modifier class="detectability" value="0.25" />
+		<modifier class="hit_success_probability" value="-1.3" />
 	</carry_item>
 	<carry_item key="bp_t4_14" time_to_live_out_in_the_open="15" name="Armor Plate Mk IV" transform_on_consume="bp_t4_15" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="bp_t4_1.png"/>
@@ -252,8 +252,8 @@
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="wound" />
         <modifier class="speed" value="0.0" />
-		<modifier class="detectability" value="0.1" />
-		<modifier class="hit_success_probability" value="-1.1" />
+		<modifier class="detectability" value="0.25" />
+		<modifier class="hit_success_probability" value="-1.3" />
 		</carry_item>
 	<carry_item key="bp_t4_15" time_to_live_out_in_the_open="15" name="Armor Plate Mk IV" transform_on_consume="bp_t4_16" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="bp_t4_0.png"/>
@@ -274,7 +274,7 @@
         <modifier class="melee_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
         <modifier class="melee_hit_result" input_character_state="unwound" output_character_state="unwound" consumes_item="0"/>      
 		<modifier class="speed" value="0.0" />
-		<modifier class="detectability" value="0.1" />
-		<modifier class="hit_success_probability" value="-1.1" />
+		<modifier class="detectability" value="0.25" />
+		<modifier class="hit_success_probability" value="-1.3" />
 	</carry_item>
 </carry_items>

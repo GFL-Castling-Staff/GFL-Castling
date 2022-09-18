@@ -58,11 +58,27 @@
 
     <sound class="result" key="static_object" copy="terrain" />
     
-    <effect class="result" key="terrain" ref="Burst" use_surface_color="1" />
-    <effect class="result" key="vehicle" ref="Burst" use_surface_color="1" />
-    <effect class="result" key="static_object" ref="Burst" use_surface_color="1" />
-    <effect class="result" key="shield" ref="ShieldBurst" />
-	
+
+    <effect class="result" key="shield" ref="Laser_ImpackShine_Blue" />
+    <effect class="result" key="vehicle" ref="Laser_ImpackShine_Blue" />
+    <effect class="result" key="other" copy="vehicle"/>
+
+    <effect class="result" key="shield" ref="Laser_ImpactBeam_Blue" />
+    <effect class="result" key="vehicle" ref="Laser_ImpactBeam_Blue" />
+
+    <effect class="result" key="terrain" ref="Laser_Burnout"/>
+    <effect class="result" key="static_object" ref="Laser_Burnout_on_staticobject"/>
+    <effect class="result" key="terrain" ref="Laser_ImpackSmoke"/>
+    <effect class="result" key="static_object" ref="Laser_ImpackSmoke"/>
+
+    <effect class="result" key="terrain" ref="Laser_ImpackShine"/>
+    <effect class="result" key="static_object" ref="Laser_ImpackShine"/>
+
+    <effect class="result" key="other" ref="LaserImpact_Blue" />
+    <effect class="result" key="terrain" ref="LaserImpact_Blue" />
+    <effect class="result" key="character" ref="LaserImpact_Blue" />
+    <effect class="result" key="static_object" ref="LaserImpact_Blue"/>
+
     <trail probability="1.0" key="bluepara" />
 
 </projectile>

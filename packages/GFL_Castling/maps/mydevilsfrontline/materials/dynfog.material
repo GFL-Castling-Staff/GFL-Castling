@@ -1,0 +1,19 @@
+material DynFog {
+	receive_shadows on
+	technique {
+		pass {
+			lighting off
+      scene_blend alpha_blend
+			//scene_blend add
+			//scene_blend one zero
+			depth_write off
+
+			//fog_override true
+
+			texture_unit {
+				texture dynfog.png
+				tex_address_mode clamp
+			}
+ 		} 
+	}
+}

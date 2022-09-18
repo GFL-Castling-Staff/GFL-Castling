@@ -2,8 +2,11 @@
 #include "faction_config.as"
 #include "stage_configurator.as"
 #include "stage_invasion.as"
+
 #include "phase_controller_map12.as"
 #include "phase_controller_shockzone.as"
+#include "phase_controller_deadzone.as"
+
 #include "pausing_koth_timer.as"
 #include "spawn_at_node.as"
 #include "comms_capacity_handler.as"
@@ -132,10 +135,10 @@ class StageConfiguratorInvasion : StageConfigurator {
 			// for testing: 0 score no spawn -> 100% chance for icecream
 			//ScoredResource("", "", 0.0f),          
 			ScoredResource("", "", 70.0f),
-			ScoredResource("icecream.vehicle", "vehicle", 30.0f),
-			ScoredResource("icecream_Solar_Sea.vehicle", "vehicle", 30.0f),
-			ScoredResource("icecream_akino.vehicle", "vehicle", 30.0f),
-			ScoredResource("icecream_connexion.vehicle", "vehicle", 30.0f)
+			ScoredResource("icecream.vehicle", "vehicle", 100.0f)
+			// ScoredResource("icecream_Solar_Sea.vehicle", "vehicle", 30.0f),
+			// ScoredResource("icecream_akino.vehicle", "vehicle", 30.0f),
+			// ScoredResource("icecream_connexion.vehicle", "vehicle", 30.0f)
 		};
 		stage.addTracker(SpawnAtNode(m_metagame, resources, "icecream", 0, 1));
 	}
@@ -156,36 +159,36 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 	// ------------------------------------------------------------------------------------------------
 	protected void setupNormalStages() {
-		addStage(setupStage107());		  // chapter1 by diling
-		addStage(setupStage109());		  // chapter2 by diling
+		addStage(setupDeadZone());
+		addStage(setupStage1());          // map2
+		addStage(setupStage7());          // map6c by diling
 		addStage(setupStage8());          // map8
-		addStage(setupStage103()); 		  // map103 Palo Island by diling
 		addStage(setupStage2());          // map4 c
 		addStage(setupStage3());		  // map3 c
+		addStage(setupStage103()); 		  // map103 Palo Island by diling
 		// addStage(setupEggStage());		  // 上坟
 		addStage(setupStage9());          // map9
 		addStage(setupStage18());         // map13_2
-		addStage(setupStage1());          // map2
+		addStage(setupStage107());		  // chapter1 by diling
+		addStage(setupStage109());		  // chapter2 by diling
 		// addStage(setupStage1_rust());          // map2_?
-		addStage(setupStage7());          // map6
-		addStage(setupStage4());          // map7
-		addStage(setupStage15());         // map1_2
 		addStage(setupStage12());         // map14
 		addStage(setupStage10());         // map10
+		addStage(setupStage106());		  // map106 E30 Route by diling
 		addStage(setupStage17());         // map17
 		addStage(setupStage13());         // map16
-		addStage(setupStage19());		  // map18    
+		addStage(setupStage15());         // map1_2
 		addStage(setupFinalStage1());     // map11
 		addStage(setupStage104()); 		  // map105_1 zoneAttack by diling
 		addStage(setupStage105()); 		  // map105_2 shockzone by diling
 		addStage(setupStage6());          // map5
 		// addStage(setupStage14());         // map6_2
-		addStage(setupStage106());		  // map106 E30 Route by diling
 		// addStage(setupStage5());          // map1
-		addStage(setupFinalStage2());     // map12
 		addStage(setupStage108());		  // xiaoxieshen by diling
 		// addStage(setupStage11());         // map13
 		addStage(setupStage16());         // map8_2
+		addStage(setupStage19());		  // map18    
+		addStage(setupStage4());          // map7
 	}
 
 	// --------------------------------------------
@@ -238,7 +241,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 	protected Stage@ setupStage103() {
 		Stage@ stage = createStage();
 		stage.m_mapInfo.m_name = "Palo Island";
-		stage.m_mapInfo.m_path = "media/packages/GFLC_Map/maps/map103";
+		stage.m_mapInfo.m_path = "media/packages/GFL_Castling/maps/map103";
 		stage.m_mapInfo.m_id = "map103";
 
 		stage.addTracker(PeacefulLastBase(m_metagame, 0));
@@ -249,10 +252,10 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.m_playerAiCompensation = 8;                                         // was 4 (1.82)
         stage.m_playerAiReduction = 0;                                          // was 2 (test3)    
 
-		stage.m_finalBattle = true;
-
 		stage.m_minRandomCrates = 1; 
 		stage.m_maxRandomCrates = 3;
+
+		array<int> FactionIndex = getRandomEnemyList();
 
 		{
 			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0));                                                  
@@ -261,14 +264,14 @@ class StageConfiguratorInvasion : StageConfigurator {
 			stage.m_factions.insertLast(f);
 		}
 		{
-			Faction f(getFactionConfigs()[1], createCommanderAiCommand(1,0.3,0.1));
+			Faction f(getFactionConfigs()[FactionIndex[0]], createCommanderAiCommand(1,0.3,0.1));
 			f.m_overCapacity = 30;                                               
 			f.m_capacityOffset = 15;
 			f.m_capacityMultiplier = 1.0;                                                 
 			stage.m_factions.insertLast(f);                                         
 		}
 		{
-			Faction f(getFactionConfigs()[2], createCommanderAiCommand(2,0.4,0.3));
+			Faction f(getFactionConfigs()[FactionIndex[1]], createCommanderAiCommand(2,0.4,0.3));
 			f.m_capacityOffset = 10;
 			f.m_capacityMultiplier = 0.8;                                                 
 			stage.m_factions.insertLast(f);                                         
@@ -285,7 +288,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 	protected Stage@ setupStage104() {
 		Stage@ stage = createStage();
 		stage.m_mapInfo.m_name = "Zone Attack";
-		stage.m_mapInfo.m_path = "media/packages/GFLC_Map/maps/map105_1";
+		stage.m_mapInfo.m_path = "media/packages/GFL_Castling/maps/map105_1";
 		stage.m_mapInfo.m_id = "map105_1";
 
 		stage.addTracker(PeacefulLastBase(m_metagame, 0));
@@ -323,7 +326,8 @@ class StageConfiguratorInvasion : StageConfigurator {
 		}
 		{
 			Faction f(FactionConfig(1, "sf.xml", "S.F.", "0.91 0.11 0.20", "sf.xml"), createCommanderAiCommand(1,0.3,0.2));
-			f.m_capacityMultiplier = 0.8;                                                 
+			f.m_capacityMultiplier = 0.8;
+			f.m_capacityOffset = 35;
 			stage.m_factions.insertLast(f);                                         
 		}
 		
@@ -339,51 +343,45 @@ class StageConfiguratorInvasion : StageConfigurator {
 		PhasedStage@ stage = createPhasedStage();
 		stage.setPhaseController(PhaseControllerMap105(m_metagame));
 		stage.m_mapInfo.m_name = "Shock Zone";
-		stage.m_mapInfo.m_path = "media/packages/GFLC_Map/maps/map105_2";
+		stage.m_mapInfo.m_path = "media/packages/GFL_Castling/maps/map105_2";
 		stage.m_mapInfo.m_id = "map105_2";
 
-		stage.addTracker(Overtime(m_metagame, 0));
-		stage.m_maxSoldiers = 200;                                          // was 11*10
-		stage.m_soldierCapacityModel = "constant";     
-		stage.m_playerAiCompensation = 8;                                       // was 4
-        stage.m_playerAiReduction = 0;                                        // was 2    
+		stage.m_maxSoldiers = 120;
+		stage.m_soldierCapacityModel = "constant";
+		stage.m_playerAiCompensation = 3;
+        stage.m_playerAiReduction = 0;
 		stage.m_finalBattle = true;
-
+		stage.m_fogOffset= 28;
+		stage.m_fogRange= 28.5;
 		stage.m_minRandomCrates = 1; 
 		stage.m_maxRandomCrates = 3;
 
 		stage.m_defenseWinTime = 360; 
 		stage.m_defenseWinTimeMode = "custom";
-		stage.addTracker(PausingKothTimer(m_metagame, stage.m_defenseWinTime));
+		stage.addTracker(PausingKothTimer(m_metagame, stage.m_defenseWinTime,false));
 
 		{
-			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0, 0.6, 0.14));                                            
+			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0, 0.6, 0.2));                                            
 			f.m_capacityOffset = 0; 
-			f.m_capacityMultiplier = 1.0;
+			f.m_capacityMultiplier = 0.85;
 			f.m_bases = 1;
 			stage.m_factions.insertLast(f);
 		}
 
 		{
 			Faction f(FactionConfig(1, "sf.xml", "S.F.", "0.91 0.11 0.20", "sf.xml"), createCommanderAiCommand(1, 0.50, 0.50));
-			f.m_capacityMultiplier = 0.2;
+			f.m_capacityMultiplier = 0.3;
 			f.m_capacityOffset = 10;
 			stage.m_factions.insertLast(f);                                                                
 		}
 		{
 			Faction f(FactionConfig(2, "kcco.xml", "KCCO", "0.43 0.49 0.18", "kcco.xml"), createCommanderAiCommand(2, 0.10, 0.10));             
-			f.m_overCapacity = 80;                                             
-            f.m_capacityOffset = 10;                                            
+			f.m_overCapacity = 70;                                             
+            f.m_capacityOffset = 40;
+			f.m_capacityMultiplier = 1.3;
 			stage.m_factions.insertLast(f);                                    
 		}
-		{
-			XmlElement command("command");
-			command.setStringAttribute("class", "faction_resources");
-			command.setIntAttribute("faction_id", 2);
-			addFactionResourceElements(command, "vehicle", array<string> = {"aa_emplacement.vehicle"}, true);
 
-			stage.m_extraCommands.insertLast(command);
-		}
 		// metadata
 		stage.m_primaryObjective = "koth";
 		stage.m_kothTargetBase = "All SF Base";
@@ -391,13 +389,84 @@ class StageConfiguratorInvasion : StageConfigurator {
 		return stage;
 	} 	
 
+	protected Stage@ setupDeadZone() {
+		PhasedStage@ stage = createPhasedStage();
+		stage.setPhaseController(PhaseControllerDeadZone(m_metagame));
+		stage.m_mapInfo.m_name = "Dead Zone";
+		stage.m_mapInfo.m_path = "media/packages/GFL_Castling/maps/map105_3";
+		stage.m_mapInfo.m_id = "map105_3";
+
+		stage.m_maxSoldiers = 80;
+		stage.m_playerAiCompensation = 3;
+        stage.m_playerAiReduction = 0;
+		stage.m_finalBattle = true;
+		stage.m_fogOffset= 28;
+		stage.m_fogRange= 28.5;
+		stage.m_minRandomCrates = 1; 
+		stage.m_maxRandomCrates = 3;
+		
+		stage.m_primaryObjective = "phases";
+
+
+		{
+			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0, 0.6, 0.2));                                            
+			f.m_capacityOffset = 0; 
+			f.m_capacityMultiplier = 1.0;
+			f.m_bases = 1;
+			stage.m_factions.insertLast(f);
+		}
+
+		{
+			Faction f(FactionConfig(1, "paradeus.xml", "Paradeus", "1 1 1", "paradeus.xml"), createCommanderAiCommand(1, 0.30, 0.30));
+			f.m_capacityMultiplier = 1.0;
+			f.m_capacityOffset = 80;
+			stage.m_factions.insertLast(f);                                                                
+		}
+		{
+			Faction f(FactionConfig(2, "eild.xml", "E.I.L.D.", "0.3 0.17 0.11", "eild.xml"), createCommanderAiCommand(2, 0.80, 0.20));             
+			f.m_overCapacity = 70;
+            f.m_capacityOffset = 80;
+			f.m_capacityMultiplier = 0.001;
+			stage.m_factions.insertLast(f);                                    
+		}
+		{
+			Faction f(FactionConfig(3, "sf.xml", "S.F.", "0.91 0.11 0.20", "sf.xml"), createCommanderAiCommand(3, 0.75, 0.15));             
+			f.m_overCapacity = 70;                                             
+            f.m_capacityOffset = 40;
+			f.m_capacityMultiplier = 0.001;
+			stage.m_factions.insertLast(f);
+		}
+
+		{
+			XmlElement command("command");
+			command.setStringAttribute("class", "faction_resources");
+			command.setIntAttribute("faction_id", 0);
+			addFactionResourceElements(command, "vehicle", array<string> = {"radio_jammer.vehicle", "radar_tower.vehicle"}, false);
+
+			stage.m_extraCommands.insertLast(command);
+		}   
+		    
+		{
+			XmlElement command("command");
+			command.setStringAttribute("class", "faction_resources");
+			command.setIntAttribute("faction_id", 0);
+			command.setBoolAttribute("clear_calls", true);
+			stage.m_extraCommands.insertLast(command);
+		}
+
+		// metadata
+		stage.m_primaryObjective = "koth";
+		stage.m_kothTargetBase = "All SF Base";
+
+		return stage;
+	} 	
 	protected Stage@ setupStage106(){
 		Stage@ stage = createStage();
 		stage.m_mapInfo.m_name = "Route E30";
-		stage.m_mapInfo.m_path = "media/packages/GFLC_Map/maps/map106";
+		stage.m_mapInfo.m_path = "media/packages/GFL_Castling/maps/map106";
 		stage.m_mapInfo.m_id = "map106";
 
-		stage.addTracker(Overtime(m_metagame, 0));
+		stage.addTracker(Overtime(m_metagame, 0,10));
 		stage.m_soldierCapacityModel = "constant";     
 		stage.m_maxSoldiers = 160;                                             // was 12*7 in 1.65, 1 base added
 
@@ -442,7 +511,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 	protected Stage@ setupStage107(){
 		Stage@ stage = createStage();
 		stage.m_mapInfo.m_name = "Awakening";
-		stage.m_mapInfo.m_path = "media/packages/GFLC_Map/maps/Chapter01";
+		stage.m_mapInfo.m_path = "media/packages/GFL_Castling/maps/Chapter01";
 		stage.m_mapInfo.m_id = "chapter01";
 		stage.addTracker(PeacefulLastBase(m_metagame, 0));
 		stage.addTracker(CommsCapacityHandler(m_metagame));
@@ -456,7 +525,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 			stage.m_factions.insertLast(f);
 		}
 		{
-			Faction f(getFactionConfigs()[1], createCommanderAiCommand(1,0.4,0.2));
+			Faction f(getFactionConfigs()[getRandomEnemyIndex()], createCommanderAiCommand(1,0.4,0.2));
 			f.m_overCapacity = 50;                                            
 			f.m_capacityOffset = 20;                                           
 			stage.m_factions.insertLast(f); 
@@ -476,7 +545,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 	protected Stage@ setupStage108(){
 		Stage@ stage = createStage();
 		stage.m_mapInfo.m_name = "Kanda jimbocho";
-		stage.m_mapInfo.m_path = "media/packages/GFLC_Map/maps/mydevilsfrontline";
+		stage.m_mapInfo.m_path = "media/packages/GFL_Castling/maps/mydevilsfrontline";
 		stage.m_mapInfo.m_id = "Tokyo Jimbocho";
 		stage.addTracker(PeacefulLastBase(m_metagame, 0));
 		stage.addTracker(CommsCapacityHandler(m_metagame));
@@ -485,18 +554,19 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.m_playerAiReduction = 2;                                         
 		stage.m_minRandomCrates = 2; 
 		stage.m_maxRandomCrates = 6;
+		array<int> FactionIndex = getRandomEnemyList();
 		{
 			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0));
 			stage.m_factions.insertLast(f);
 		}
 		{
-			Faction f(getFactionConfigs()[1], createCommanderAiCommand(1,0.4,0.2));
+			Faction f(getFactionConfigs()[FactionIndex[0]], createCommanderAiCommand(1,0.4,0.2));
 			f.m_overCapacity = 40;                                            
 			f.m_capacityOffset = 20;                                           
 			stage.m_factions.insertLast(f); 
 		}
 		{
-			Faction f(getFactionConfigs()[2], createCommanderAiCommand(2,0.3,0.2));
+			Faction f(getFactionConfigs()[FactionIndex[1]], createCommanderAiCommand(2,0.3,0.2));
 			f.m_overCapacity = 40;                                            
 			f.m_capacityOffset = 20;                                           
 			stage.m_factions.insertLast(f); 
@@ -516,7 +586,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 	protected Stage@ setupEggStage() {
 		Stage@ stage = createStage();
 		stage.m_mapInfo.m_name = "High Land 33";
-		stage.m_mapInfo.m_path = "media/packages/GFLC_Map/maps/egg001";
+		stage.m_mapInfo.m_path = "media/packages/GFL_Castling/maps/egg001";
 		stage.m_mapInfo.m_id = "Highland33";
 
 		stage.addTracker(Overtime(m_metagame, 0));
@@ -570,23 +640,25 @@ class StageConfiguratorInvasion : StageConfigurator {
 	protected Stage@ setupStage109(){
 		Stage@ stage = createStage();
 		stage.m_mapInfo.m_name = "Echo";
-		stage.m_mapInfo.m_path = "media/packages/GFLC_Map/maps/Chapter02";
+		stage.m_mapInfo.m_path = "media/packages/GFL_Castling/maps/Chapter02";
 		stage.m_mapInfo.m_id = "chapter02";
 		stage.addTracker(PeacefulLastBase(m_metagame, 0));
 		stage.addTracker(CommsCapacityHandler(m_metagame));
 		stage.m_maxSoldiers = 100;
-		stage.m_playerAiCompensation = 4;                                     
+		stage.m_playerAiCompensation = 8;                                     
 		stage.m_playerAiReduction = 0;                                         
-		stage.m_minRandomCrates = 5; 
-		stage.m_maxRandomCrates = 6;
+		stage.m_minRandomCrates = 3; 
+		stage.m_maxRandomCrates = 4;
+		stage.m_fogOffset = 24.0;
+		stage.m_fogRange = 24.5;
 		{
-			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0));
+			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0, 0.6, 0.15));
 			stage.m_factions.insertLast(f);
 		}
 		{
-			Faction f(getFactionConfigs()[1], createCommanderAiCommand(1,0.4,0.2));
-			f.m_overCapacity = 80;                                            
-			f.m_capacityOffset = 20;                                           
+			Faction f(getFactionConfigs()[getRandomEnemyIndex()], createCommanderAiCommand(1,0.5,0.2));
+			f.m_overCapacity = 120;                                            
+			f.m_capacityOffset = 30;                                           
 			stage.m_factions.insertLast(f); 
 		}
 		{
@@ -604,7 +676,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 	protected Stage@ setupStage1() {
 		Stage@ stage = createStage();
 		stage.m_mapInfo.m_name = "Keepsake Bay";
-		stage.m_mapInfo.m_path = "media/packages/GFLC_Map/maps/map2";
+		stage.m_mapInfo.m_path = "media/packages/GFL_Castling/maps/map2";
 		stage.m_mapInfo.m_id = "map2";
 		
 		stage.m_includeLayers.insertLast("layer1.invasion"); 
@@ -629,7 +701,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 			stage.m_factions.insertLast(f);
 		}
 		{
-			Faction f(getFactionConfigs()[1], createCommanderAiCommand(1));
+			Faction f(getFactionConfigs()[getRandomEnemyIndex()], createCommanderAiCommand(1));
 			f.m_overCapacity = 50;                                               // was 30 (test2)
 			f.m_capacityOffset = 8;                                                 // was 5 (1.81)
 			stage.m_factions.insertLast(f);                                         // was 0 in 1.65
@@ -655,7 +727,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 	protected Stage@ setupStage1_rust() {
 		Stage@ stage = createStage();
 		stage.m_mapInfo.m_name = "Casake Bay";
-		stage.m_mapInfo.m_path = "media/packages/GFLC_Map/maps/map2_c";
+		stage.m_mapInfo.m_path = "media/packages/GFL_Castling/maps/map2_c";
 		stage.m_mapInfo.m_id = "map2_?";
 		
 		stage.m_includeLayers.insertLast("layer1.invasion"); 
@@ -680,7 +752,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 			stage.m_factions.insertLast(f);
 		}
 		{
-			Faction f(getFactionConfigs()[1], createCommanderAiCommand(1));
+			Faction f(getFactionConfigs()[getRandomEnemyIndex()], createCommanderAiCommand(1));
 			f.m_overCapacity = 50;                                               // was 30 (test2)
 			f.m_capacityOffset = 20;                                                 // was 5 (1.81)
 			stage.m_factions.insertLast(f);                                         // was 0 in 1.65
@@ -696,7 +768,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 	protected Stage@ setupStage2() {
 		Stage@ stage = createStage();
 		stage.m_mapInfo.m_name = "Fridge Valley";
-		stage.m_mapInfo.m_path = "media/packages/GFLC_Map/maps/map4_c";
+		stage.m_mapInfo.m_path = "media/packages/GFL_Castling/maps/map4_c";
 		stage.m_mapInfo.m_id = "map4";
 
 		stage.m_fogOffset = 20.0;    
@@ -718,7 +790,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 			stage.m_factions.insertLast(f);
 		}
 		{
-			Faction f(getFactionConfigs()[1], createCommanderAiCommand(1));
+			Faction f(getFactionConfigs()[getRandomEnemyIndex()], createCommanderAiCommand(1));
 			f.m_overCapacity = 40;                                              // was 30 (test2)
 			f.m_capacityOffset = 5;                                                // was 0 in 1.65
 			stage.m_factions.insertLast(f); 
@@ -741,7 +813,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 	protected Stage@ setupStage3() {
 		Stage@ stage = createStage();
 		stage.m_mapInfo.m_name = "Raining Fort Creek";
-		stage.m_mapInfo.m_path = "media/packages/GFLC_Map/maps/map3_c";
+		stage.m_mapInfo.m_path = "media/packages/GFL_Castling/maps/map3_c";
 		stage.m_mapInfo.m_id = "map3";
 
 		stage.addTracker(PeacefulLastBase(m_metagame, 0));
@@ -754,7 +826,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 		stage.m_minRandomCrates = 3; 
 		stage.m_maxRandomCrates = 6;    
-
+		array<int> FactionIndex = getRandomEnemyList();
 		{
 			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0));
 			f.m_capacityOffset = 0; 
@@ -763,18 +835,25 @@ class StageConfiguratorInvasion : StageConfigurator {
 			stage.m_factions.insertLast(f);
 		}
 		{
-			Faction f(getFactionConfigs()[1], createCommanderAiCommand(1));
+			Faction f(getFactionConfigs()[FactionIndex[0]], createCommanderAiCommand(1));
 			f.m_overCapacity = 20;
 			f.m_capacityOffset = 10;
 			stage.m_factions.insertLast(f); 
 		}
 		{
-			Faction f(getFactionConfigs()[2], createCommanderAiCommand(2));
+			Faction f(getFactionConfigs()[FactionIndex[1]], createCommanderAiCommand(2));
 			f.m_overCapacity = 20;
 			f.m_capacityOffset = 10;
 			stage.m_factions.insertLast(f); 
 		}
+		{
+			XmlElement command("command");
+			command.setStringAttribute("class", "faction_resources");
+			command.setIntAttribute("faction_id", 0);
+			addFactionResourceElements(command, "vehicle", array<string> = {"radio_jammer2.vehicle"}, false);
 
+			stage.m_extraCommands.insertLast(command);
+		}
 		// metadata
 		stage.m_primaryObjective = "capture";
 
@@ -786,7 +865,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 	protected Stage@ setupStage4() {
 		Stage@ stage = createStage();
 		stage.m_mapInfo.m_name = "Power Junction";
-		stage.m_mapInfo.m_path = "media/packages/vanilla/maps/map7";
+		stage.m_mapInfo.m_path = "media/packages/GFL_Castling/maps/map7";
 		stage.m_mapInfo.m_id = "map7";
 
 		stage.m_includeLayers.insertLast("layer1.invasion");        
@@ -804,21 +883,21 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.m_defenseWinTime = 600;     // was 400 in 1.65 old koth mode
 		stage.m_defenseWinTimeMode = "custom";
 		stage.addTracker(PausingKothTimer(m_metagame, stage.m_defenseWinTime));
-	
+		array<int> FactionIndex = getRandomEnemyList();
 		{
 			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0, 0.35, 0.1));     // was 0.1, 0.1 in 1.65
 			stage.m_factions.insertLast(f);
 		}
 		{
-			Faction f(getFactionConfigs()[2], createCommanderAiCommand(2, 0.38, 0.1));           // was 0.1, 0.1 in 1.65
+			Faction f(getFactionConfigs()[FactionIndex[0]], createCommanderAiCommand(2, 0.38, 0.1));           // was 0.1, 0.1 in 1.65
 			f.m_overCapacity = 20;                                              // was 0 (test2)
-			f.m_capacityOffset = 5;                                                             // was 0 in 1.65
+			f.m_capacityOffset = 35;                                                             // was 0 in 1.65
 			stage.m_factions.insertLast(f);
 		}
 		{
-			Faction f(getFactionConfigs()[1], createCommanderAiCommand(1, 0.38, 0.1));           // was 0.1, 0.1 in 1.65
+			Faction f(getFactionConfigs()[FactionIndex[1]], createCommanderAiCommand(1, 0.38, 0.1));           // was 0.1, 0.1 in 1.65
             f.m_overCapacity = 20;                                              // was 0 (test2)
-			f.m_capacityOffset = 5;                                                             // was 0 in 1.65
+			f.m_capacityOffset = 35;                                                             // was 0 in 1.65
 			stage.m_factions.insertLast(f);
 		}
 		{
@@ -861,7 +940,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 		stage.m_minRandomCrates = 3; 
 		stage.m_maxRandomCrates = 5;
-
+		array<int> FactionIndex = getRandomEnemyList();
 		{
 			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0));
 			f.m_overCapacity = 6;                                                   
@@ -870,12 +949,12 @@ class StageConfiguratorInvasion : StageConfigurator {
 			stage.m_factions.insertLast(f);
 		}
 		{
-			Faction f(getFactionConfigs()[1], createCommanderAiCommand(1));
+			Faction f(getFactionConfigs()[FactionIndex[0]], createCommanderAiCommand(1));
 			f.m_overCapacity = 60;                                                  // was 50 (test2)   
 			stage.m_factions.insertLast(f);
 		}
 		{
-			Faction f(getFactionConfigs()[2], createCommanderAiCommand(2));
+			Faction f(getFactionConfigs()[FactionIndex[1]], createCommanderAiCommand(2));
 			f.m_overCapacity = 60;                                                  // was 50 (test2)      
 			stage.m_factions.insertLast(f);
 		}
@@ -883,14 +962,6 @@ class StageConfiguratorInvasion : StageConfigurator {
 		// aa emplacements work right only if one enemy faction has them
 		// - all factions have it disabled by default
 		// - manually enable it for faction #1 in map1 
-		{
-			XmlElement command("command");
-			command.setStringAttribute("class", "faction_resources");
-			command.setIntAttribute("faction_id", 1);
-			addFactionResourceElements(command, "vehicle", array<string> = {"aa_emplacement.vehicle"}, true);
-
-			stage.m_extraCommands.insertLast(command);
-		}
 
 		// metadata
 		stage.m_primaryObjective = "capture";
@@ -902,7 +973,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 	protected Stage@ setupStage102() {
 		Stage@ stage = createStage();
 		stage.m_mapInfo.m_name = "M16A1's Farm 0-2";
-		stage.m_mapInfo.m_path = "media/packages/GFLC_Map/maps/map102";
+		stage.m_mapInfo.m_path = "media/packages/GFL_Castling/maps/map102";
 		stage.m_mapInfo.m_id = "map102";
 
 		stage.m_maxSoldiers = 14 * 14;
@@ -925,7 +996,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 			stage.m_factions.insertLast(f);
 		}
 		{
-			Faction f(getFactionConfigs()[1], createCommanderAiCommand(1));
+			Faction f(getFactionConfigs()[getRandomEnemyIndex()], createCommanderAiCommand(1));
 			f.m_overCapacity = 80;                                                  // was 50 (test2)   
 			stage.m_factions.insertLast(f);
 		}
@@ -942,7 +1013,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 	protected Stage@ setupStage6() {
 		Stage@ stage = createStage();
 		stage.m_mapInfo.m_name = "Bootleg Islands";
-		stage.m_mapInfo.m_path = "media/packages/vanilla/maps/map5";
+		stage.m_mapInfo.m_path = "media/packages/GFL_Castling/maps/map5";
 		stage.m_mapInfo.m_id = "map5";
 
 		stage.m_maxSoldiers = 11 * 12;
@@ -954,7 +1025,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 		stage.m_minRandomCrates = 2; 
 		stage.m_maxRandomCrates = 4;
-
+		array<int> FactionIndex = getRandomEnemyList();
 		{
 			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0));
 			f.m_overCapacity = 0;                                                  // was 20 in 1.65
@@ -965,13 +1036,13 @@ class StageConfiguratorInvasion : StageConfigurator {
 			stage.m_factions.insertLast(f);
 		}
 		{
-			Faction f(getFactionConfigs()[2], createCommanderAiCommand(2));
+			Faction f(getFactionConfigs()[FactionIndex[0]], createCommanderAiCommand(2));
 			f.m_overCapacity = 30;                                              // was 0 (test2)            
 			f.m_capacityOffset = 5;                                                // was 0 in 1.65
 			stage.m_factions.insertLast(f);
 		}
 		{
-			Faction f(getFactionConfigs()[1], createCommanderAiCommand(1));
+			Faction f(getFactionConfigs()[FactionIndex[1]], createCommanderAiCommand(1));
 			f.m_overCapacity = 30;                                              // was 0 (test2)             
 			f.m_capacityOffset = 5;                                                // was 0 in 1.65
 			stage.m_factions.insertLast(f);
@@ -988,10 +1059,10 @@ class StageConfiguratorInvasion : StageConfigurator {
 	protected Stage@ setupStage7() {
 		Stage@ stage = createStage();
 		stage.m_mapInfo.m_name = "Rattlesnake Crescent";
-		stage.m_mapInfo.m_path = "media/packages/GFLC_Map/maps/map6_c";
+		stage.m_mapInfo.m_path = "media/packages/GFL_Castling/maps/map6_c";
 		stage.m_mapInfo.m_id = "map6";
 
-		stage.m_maxSoldiers = 15 * 9;                                             // was 17*7 in 1.65
+		stage.m_maxSoldiers = 15 * 5;                                             // was 17*7 in 1.65
 		stage.m_playerAiCompensation = 8;                                         // was 7 (test4)
         stage.m_playerAiReduction = 2;                                            // was 3 (test2)
     	stage.addTracker(jupiter(m_metagame,30));
@@ -1010,24 +1081,16 @@ class StageConfiguratorInvasion : StageConfigurator {
 			stage.m_factions.insertLast(f);
 		}
 		{
-			Faction f(getFactionConfigs()[2], createCommanderAiCommand(1, 0.45, 0.2)); 
+			Faction f(getFactionConfigs()[getRandomEnemyIndex()], createCommanderAiCommand(1, 0.45, 0.2)); 
 			f.m_overCapacity = 80;                                              
-			f.m_capacityOffset = 15;                                            
+			f.m_capacityOffset = 50;
+			f.m_capacityMultiplier = 1.0;
 			stage.m_factions.insertLast(f);
 		}
 
 		// metadata
 		stage.m_primaryObjective = "capture";
 		stage.m_radioObjectivePresent = false;
-
-		{
-			XmlElement command("command");
-			command.setStringAttribute("class", "faction_resources");
-			command.setIntAttribute("faction_id", 1);
-			addFactionResourceElements(command, "vehicle", array<string> = {"aa_emplacement.vehicle"}, true);
-
-			stage.m_extraCommands.insertLast(command); 
-		}
 
 		setDefaultAttackBreakTimes(stage);
 		return stage;
@@ -1037,7 +1100,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 	protected Stage@ setupStage8() {
 		Stage@ stage = createStage();
 		stage.m_mapInfo.m_name = "Vigil Island";
-		stage.m_mapInfo.m_path = "media/packages/GFLC_Map/maps/map8";
+		stage.m_mapInfo.m_path = "media/packages/GFL_Castling/maps/map8";
 		stage.m_mapInfo.m_id = "map8";
 
 		stage.m_includeLayers.insertLast("layer1.campaign");
@@ -1049,8 +1112,8 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.m_playerAiReduction = 2;                                            // was 2 (1.81)   
 		stage.m_soldierCapacityModel = "constant";
 
-		stage.m_minRandomCrates = 1; 
-		stage.m_maxRandomCrates = 2;
+		stage.m_minRandomCrates = 2; 
+		stage.m_maxRandomCrates = 3;
 
 		stage.m_defenseWinTime = 600.0;   // was 600 in 1.65
 		stage.m_defenseWinTimeMode = "custom";
@@ -1061,10 +1124,10 @@ class StageConfiguratorInvasion : StageConfigurator {
 			stage.m_factions.insertLast(f);
 		}
 		{
-			Faction f(getFactionConfigs()[1], createCommanderAiCommand(1, 0.25, 0.05));             // was 0.2 0.1 in 1.65
-			f.m_overCapacity = 70;
+			Faction f(getFactionConfigs()[getRandomEnemyIndex()], createCommanderAiCommand(1, 0.25, 0.05));             // was 0.2 0.1 in 1.65
+			f.m_overCapacity = 50;
 			f.m_capacityMultiplier = 1;                                                      // was 1.32 in 1.65, now working with offset only
-			f.m_capacityOffset = 40;
+			f.m_capacityOffset = 70;
 			stage.m_factions.insertLast(f);
 		}
 		{
@@ -1095,7 +1158,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 	protected Stage@ setupStage9() {
 		Stage@ stage = createStage();
 		stage.m_mapInfo.m_name = "Black Gold Estuary";
-		stage.m_mapInfo.m_path = "media/packages/vanilla.desert/maps/map9";
+		stage.m_mapInfo.m_path = "media/packages/GFL_Castling/maps/map9";
 		stage.m_mapInfo.m_id = "map9";
 
 		stage.m_includeLayers.insertLast("layer1.invasion");
@@ -1118,7 +1181,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 			stage.m_factions.insertLast(f);
 		}
 		{
-			Faction f(getFactionConfigs()[2], createCommanderAiCommand(1, 0.5, 0.2));           // 0.45, 0.2 in 1.65
+			Faction f(getFactionConfigs()[getRandomEnemyIndex()], createCommanderAiCommand(1, 0.5, 0.2));           // 0.45, 0.2 in 1.65
 			f.m_overCapacity = 80;                                              // was 60 (test2) 
 			f.m_capacityOffset = 5;                                                   // was 0 (test3)
 			stage.m_factions.insertLast(f);
@@ -1128,22 +1191,6 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.m_primaryObjective = "capture";
 		stage.m_radioObjectivePresent = true;
 
-		{
-			XmlElement command("command");
-			command.setStringAttribute("class", "faction_resources");
-			command.setIntAttribute("faction_id", 1);
-			addFactionResourceElements(command, "vehicle", array<string> = {"aa_emplacement.vehicle"}, true);
-
-			stage.m_extraCommands.insertLast(command);
-		}
-		{
-			XmlElement command("command");
-			command.setStringAttribute("class", "faction_resources");
-			command.setIntAttribute("faction_id", 0);
-			addFactionResourceElements(command, "vehicle", array<string> = {"sev90.vehicle"}, false);
-
-			stage.m_extraCommands.insertLast(command);
-		}         
 
 		setDefaultAttackBreakTimes(stage);
 		return stage;
@@ -1153,7 +1200,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 	protected Stage@ setupStage10() {
 		Stage@ stage = createStage();
 		stage.m_mapInfo.m_name = "Railroad Gap";
-		stage.m_mapInfo.m_path = "media/packages/vanilla.desert/maps/map10";
+		stage.m_mapInfo.m_path = "media/packages/GFL_Castling/maps/map10";
 		stage.m_mapInfo.m_id = "map10";
 
 		stage.m_maxSoldiers = 13 * 12;                                            // 156, was 15*10 in 1.65
@@ -1161,9 +1208,6 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.m_soldierCapacityVariance = 0.45;                                   // 0.4 in 1.65
 		stage.m_playerAiCompensation = 6;                                     // was 5 (test4)
 		stage.m_playerAiReduction = 0;                                            // was 1.5 (test3)
-
-		stage.addTracker(Spawner(m_metagame, 1, Vector3(309,15,524), 10, "default_ai"));        // 1st tow slot filler
-		stage.addTracker(Spawner(m_metagame, 1, Vector3(658,10,374), 10, "default_ai"));        // vulcan slot filler
 
 		stage.addTracker(PeacefulLastBase(m_metagame, 0));
 		stage.addTracker(CommsCapacityHandler(m_metagame));
@@ -1180,7 +1224,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 			stage.m_factions.insertLast(f);
 		}
 		{
-			Faction f(getFactionConfigs()[2], createCommanderAiCommand(1, 0.5, 0.2));          // 0.6 0.2 in 1.65
+			Faction f(getFactionConfigs()[getRandomEnemyIndex()], createCommanderAiCommand(1, 0.5, 0.2));          // 0.6 0.2 in 1.65
 			f.m_overCapacity = 70;                                              // was 50 (test2) 
 			f.m_capacityOffset = 20; 
 			stage.m_factions.insertLast(f);
@@ -1190,14 +1234,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.m_primaryObjective = "capture";
 		stage.m_radioObjectivePresent = false;
 
-		{
-			XmlElement command("command");
-			command.setStringAttribute("class", "faction_resources");
-			command.setIntAttribute("faction_id", 1);
-			addFactionResourceElements(command, "vehicle", array<string> = {"aa_emplacement.vehicle"}, true);
 
-			stage.m_extraCommands.insertLast(command);
-		}
 
 		setDefaultAttackBreakTimes(stage);
 		return stage;
@@ -1222,7 +1259,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 		stage.m_minRandomCrates = 1; 
 		stage.m_maxRandomCrates = 2;
-
+		array<int> FactionIndex = getRandomEnemyList();
 		{
 			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0, 0.5, 0.2));
 			f.m_overCapacity = 0;                                              // was 20
@@ -1231,14 +1268,14 @@ class StageConfiguratorInvasion : StageConfigurator {
 			stage.m_factions.insertLast(f);
 		}
 		{
-			Faction f(getFactionConfigs()[1], createCommanderAiCommand(1, 0.5, 0.2));
+			Faction f(getFactionConfigs()[FactionIndex[0]], createCommanderAiCommand(1, 0.5, 0.2));
 			f.m_overCapacity = 50;                                              // was 20 (test3)
             f.m_capacityOffset = 20;                                            // was 10 (test3)
 			f.m_capacityMultiplier = 1.0; 
 			stage.m_factions.insertLast(f);
 		}
 		{
-			Faction f(getFactionConfigs()[2], createCommanderAiCommand(2, 0.5, 0.2));
+			Faction f(getFactionConfigs()[FactionIndex[1]], createCommanderAiCommand(2, 0.5, 0.2));
 			f.m_overCapacity = 50;                                              // was 20 (test3)
             f.m_capacityOffset = 20;                                            // was 10 (test3)
 			f.m_capacityMultiplier = 1.0; 
@@ -1251,14 +1288,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 			stage.m_factions.insertLast(f);
 		}
 
-		{
-			XmlElement command("command");
-			command.setStringAttribute("class", "faction_resources");
-			command.setIntAttribute("faction_id", 1);
-			addFactionResourceElements(command, "vehicle", array<string> = {"aa_emplacement.vehicle"}, true);
 
-			stage.m_extraCommands.insertLast(command);
-		}
 
 		// metadata
 		stage.m_primaryObjective = "capture";
@@ -1271,7 +1301,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 	protected Stage@ setupStage12() {
 		Stage@ stage = createStage();
 		stage.m_mapInfo.m_name = "Misty Heights";
-		stage.m_mapInfo.m_path = "media/packages/vanilla/maps/map14";
+		stage.m_mapInfo.m_path = "media/packages/GFL_Castling/maps/map14";
 		stage.m_mapInfo.m_id = "map14";
 
 		stage.m_fogOffset = 20.0;    
@@ -1301,7 +1331,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 			stage.m_factions.insertLast(f);
 		}
 		{
-			Faction f(getFactionConfigs()[1], createCommanderAiCommand(1, 0.6, 0.25));
+			Faction f(getFactionConfigs()[getRandomEnemyIndex()], createCommanderAiCommand(1, 0.6, 0.25));
 			f.m_overCapacity = 70;                                              // was 50 (test2)
 			f.m_capacityOffset = 15; 
 			stage.m_factions.insertLast(f);
@@ -1311,14 +1341,6 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.m_primaryObjective = "capture";
 		stage.m_radioObjectivePresent = false;
 
-		{
-			XmlElement command("command");
-			command.setStringAttribute("class", "faction_resources");
-			command.setIntAttribute("faction_id", 1);
-			addFactionResourceElements(command, "vehicle", array<string> = {"aa_emplacement.vehicle"}, true);
-
-			stage.m_extraCommands.insertLast(command);
-		}
 		{
 			XmlElement command("command");
 			command.setStringAttribute("class", "faction_resources");
@@ -1338,7 +1360,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 	protected Stage@ setupStage13() {
 		Stage@ stage = createStage();
 		stage.m_mapInfo.m_name = "Green Coast";
-		stage.m_mapInfo.m_path = "media/packages/vanilla/maps/map16";
+		stage.m_mapInfo.m_path = "media/packages/GFL_Castling/maps/map16";
 		stage.m_mapInfo.m_id = "map16";
 
 		stage.m_maxSoldiers = 18 * 13;
@@ -1352,6 +1374,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 		stage.m_minRandomCrates = 2; 
 		stage.m_maxRandomCrates = 5;
+		array<int> FactionIndex = getRandomEnemyList();
 
 		{
 			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0, 0.53, 0.3));   // was 0.45 0.3
@@ -1361,27 +1384,20 @@ class StageConfiguratorInvasion : StageConfigurator {
 			stage.m_factions.insertLast(f);
 		}
 		{
-			Faction f(getFactionConfigs()[1], createCommanderAiCommand(1, 0.6, 0.28));
+			Faction f(getFactionConfigs()[FactionIndex[0]], createCommanderAiCommand(1, 0.6, 0.28));
 			f.m_overCapacity = 80;                                              // was 40 (test2)
 			f.m_capacityOffset = 10;         
 			f.m_capacityMultiplier = 1.0; 
 			stage.m_factions.insertLast(f);
 		}
 		{
-			Faction f(getFactionConfigs()[2], createCommanderAiCommand(2, 0.65, 0.1));          
+			Faction f(getFactionConfigs()[FactionIndex[1]], createCommanderAiCommand(2, 0.65, 0.1));          
 			f.m_overCapacity = 40;
 			f.m_capacityOffset = 5;                                                             
 			f.m_capacityMultiplier = 1.0; 
 			stage.m_factions.insertLast(f);
 		}
-		{
-			XmlElement command("command");
-			command.setStringAttribute("class", "faction_resources");
-			command.setIntAttribute("faction_id", 1);
-			addFactionResourceElements(command, "vehicle", array<string> = {"aa_emplacement.vehicle"}, true);
 
-			stage.m_extraCommands.insertLast(command);
-		}
 		{
 			XmlElement command("command");
 			command.setStringAttribute("class", "faction_resources");
@@ -1426,8 +1442,8 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.addTracker(PeacefulLastBase(m_metagame, 0));
 		stage.addTracker(CommsCapacityHandler(m_metagame));
 
-    stage.m_minRandomCrates = 1; 
-    stage.m_maxRandomCrates = 3;
+		stage.m_minRandomCrates = 1; 
+		stage.m_maxRandomCrates = 3;
 
 		{
 			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0, 0.5, 0.15));   
@@ -1438,7 +1454,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 			stage.m_factions.insertLast(f);
 		}
 		{
-			Faction f(getFactionConfigs()[2], createCommanderAiCommand(1, 0.48, 0.15));        
+			Faction f(getFactionConfigs()[getRandomEnemyIndex()], createCommanderAiCommand(1, 0.48, 0.15));        
 			f.m_overCapacity = 70;                                                
 			f.m_capacityOffset = 15;                                            // was 0 (test2)                           
 			stage.m_factions.insertLast(f);
@@ -1448,14 +1464,6 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.m_primaryObjective = "capture";
 		stage.m_radioObjectivePresent = false;
 
-		{
-			XmlElement command("command");
-			command.setStringAttribute("class", "faction_resources");
-			command.setIntAttribute("faction_id", 1);
-			addFactionResourceElements(command, "vehicle", array<string> = {"aa_emplacement.vehicle"}, true);
-
-			stage.m_extraCommands.insertLast(command);
-		}
 		{
 			XmlElement command("command");
 			command.setStringAttribute("class", "faction_resources");
@@ -1473,7 +1481,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 	protected Stage@ setupStage15() {
 		Stage@ stage = createStage();
 		stage.m_mapInfo.m_name = "Moorland Apocalypse";
-		stage.m_mapInfo.m_path = "media/packages/vanilla/maps/map1_2";
+		stage.m_mapInfo.m_path = "media/packages/GFL_Castling/maps/map1_2";
 		stage.m_mapInfo.m_id = "map1_2";
         
 		stage.m_includeLayers.insertLast("layer1.invasion");        
@@ -1507,9 +1515,10 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 		stage.m_minRandomCrates = 4; 
 		stage.m_maxRandomCrates = 6;
+		array<int> FactionIndex = getRandomEnemyList();
 
 		{
-			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0, 0.5, 0.15));   
+			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0, 0.6, 0.15));   
 			f.m_overCapacity = 0;
 			f.m_capacityOffset = 0; 
 			f.m_capacityMultiplier = 1.0;                                          
@@ -1517,14 +1526,14 @@ class StageConfiguratorInvasion : StageConfigurator {
 			stage.m_factions.insertLast(f);
 		}
 		{
-			Faction f(getFactionConfigs()[1], createCommanderAiCommand(1, 0.58, 0.15));        
+			Faction f(getFactionConfigs()[FactionIndex[0]], createCommanderAiCommand(1, 0.58, 0.15));        
 			f.m_overCapacity = 40;                                                
 			f.m_capacityOffset = 0;                                            
 			stage.m_factions.insertLast(f);
 		}
 		{
 // attack score is taken from the map1_2 attack handler script, if bases => 11    
-			Faction f(getFactionConfigs()[2], createCommanderAiCommand(2, 0.70, 0.1));          
+			Faction f(getFactionConfigs()[FactionIndex[1]], createCommanderAiCommand(2, 0.70, 0.1));          
 			f.m_overCapacity = 50;
 			f.m_capacityOffset = 30;                                                             
 			f.m_capacityMultiplier = 1.0; 
@@ -1535,14 +1544,6 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.m_primaryObjective = "capture";
 		stage.m_radioObjectivePresent = false;
 
-		{
-			XmlElement command("command");
-			command.setStringAttribute("class", "faction_resources");
-			command.setIntAttribute("faction_id", 1);
-			addFactionResourceElements(command, "vehicle", array<string> = {"aa_emplacement.vehicle"}, true);
-
-			stage.m_extraCommands.insertLast(command);
-		}
 		{
 			XmlElement command("command");
 			command.setStringAttribute("class", "faction_resources");
@@ -1560,7 +1561,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 	protected Stage@ setupStage16() {
 		Stage@ stage = createStage();
 		stage.m_mapInfo.m_name = "Tropical Blizzard";
-		stage.m_mapInfo.m_path = "media/packages/vanilla.winter/maps/map8_2";
+		stage.m_mapInfo.m_path = "media/packages/GFL_Castling/maps/map8_2";
 		stage.m_mapInfo.m_id = "map8_2";
 
 
@@ -1584,7 +1585,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 			stage.m_factions.insertLast(f);
 		}
 		{
-			Faction f(getFactionConfigs()[1], createCommanderAiCommand(1, 0.65, 0.1));            // was 0.7 0.1
+			Faction f(getFactionConfigs()[getRandomEnemyIndex()], createCommanderAiCommand(1, 0.65, 0.1));            // was 0.7 0.1
 			f.m_overCapacity = 50;                                                
 			f.m_capacityOffset = 0;                                            
 			stage.m_factions.insertLast(f);
@@ -1594,14 +1595,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.m_primaryObjective = "capture";
 		stage.m_radioObjectivePresent = false;
 
-		{
-			XmlElement command("command");
-			command.setStringAttribute("class", "faction_resources");
-			command.setIntAttribute("faction_id", 1);
-			addFactionResourceElements(command, "vehicle", array<string> = {"aa_emplacement.vehicle"}, true);
 
-			stage.m_extraCommands.insertLast(command);
-		}
 		{
 			XmlElement command("command");
 			command.setStringAttribute("class", "faction_resources");
@@ -1618,7 +1612,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 	protected Stage@ setupStage17() {
 		Stage@ stage = createStage();
 		stage.m_mapInfo.m_name = "Gotcha Island";
-		stage.m_mapInfo.m_path = "media/packages/vanilla/maps/map17";
+		stage.m_mapInfo.m_path = "media/packages/GFL_Castling/maps/map17";
 		stage.m_mapInfo.m_id = "map17";
 
 		stage.addTracker(PeacefulLastBase(m_metagame, 0));
@@ -1640,19 +1634,12 @@ class StageConfiguratorInvasion : StageConfigurator {
 			stage.m_factions.insertLast(f);
 		}
 		{
-			Faction f(getFactionConfigs()[1], createCommanderAiCommand(1, 0.60, 0.14));             // was 0.0.62, 0.14 (test 6)
+			Faction f(getFactionConfigs()[getRandomEnemyIndex()], createCommanderAiCommand(1, 0.60, 0.14));             // was 0.0.62, 0.14 (test 6)
 			f.m_overCapacity = 60;                                             // was 30
             f.m_capacityOffset = 15;                                            // was 5
 			stage.m_factions.insertLast(f);                                    
 		}
-		{
-			XmlElement command("command");
-			command.setStringAttribute("class", "faction_resources");
-			command.setIntAttribute("faction_id", 1);
-			addFactionResourceElements(command, "vehicle", array<string> = {"aa_emplacement.vehicle"}, true);
 
-			stage.m_extraCommands.insertLast(command);
-		}
 		{
 			XmlElement command("command");
 			command.setStringAttribute("class", "faction_resources");
@@ -1674,39 +1661,40 @@ class StageConfiguratorInvasion : StageConfigurator {
 	protected Stage@ setupStage18() {
 		Stage@ stage = createStage();
 		stage.m_mapInfo.m_name = "Holy Enclave";
-		stage.m_mapInfo.m_path = "media/packages/GFLC_Map/maps/map13_2";
+		stage.m_mapInfo.m_path = "media/packages/GFL_Castling/maps/map13_2";
 		stage.m_mapInfo.m_id = "map13_2";
-		stage.m_includeLayers.insertLast("layer1.invasion");        
+		stage.m_includeLayers.insertLast("layer1.invasion");
+		stage.m_includeLayers.insertLast("layer1.dominance");        
 		stage.addTracker(Overtime(m_metagame, 0));
-		stage.m_maxSoldiers = 10 * 5;
-		stage.m_playerAiCompensation = 6;
+		stage.m_maxSoldiers = 10 * 3;
+		stage.m_playerAiCompensation = 0;
 		stage.m_playerAiReduction = 0;
 		stage.m_soldierCapacityModel = "constant";       		
-		stage.m_minRandomCrates = 0; 
-		stage.m_maxRandomCrates = 1;
+		stage.m_minRandomCrates = 1; 
+		stage.m_maxRandomCrates = 5;
 		stage.m_defenseWinTime = 600; 
 		stage.m_defenseWinTimeMode = "custom";
 		stage.addTracker(PausingKothTimer(m_metagame, stage.m_defenseWinTime));
 		
 		{
-			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0, 0.5, 0.3));     
+			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0, 0.6, 0.3));     
 			f.m_capacityMultiplier = 0.4;                                               
 			stage.m_factions.insertLast(f);
 		}
 		{
-			Faction f(getFactionConfigs()[2], createCommanderAiCommand(2, 0.32, 0.05));          // was 0.38 0.1 (1.82)  
+			Faction f(getFactionConfigs()[2], createCommanderAiCommand(2, 0.2, 0.05));          // was 0.38 0.1 (1.82)  
 			f.m_overCapacity = 50;                                              
 			f.m_capacityOffset = 30;                                                             
 			stage.m_factions.insertLast(f);
 		}
 		{
-			Faction f(getFactionConfigs()[1], createCommanderAiCommand(1, 0.32, 0.05));          // was 0.38 0.1 (1.82)  
+			Faction f(getFactionConfigs()[1], createCommanderAiCommand(1, 0.2, 0.05));          // was 0.38 0.1 (1.82)  
             f.m_overCapacity = 50;                                              
 			f.m_capacityOffset = 30;                                                             
 			stage.m_factions.insertLast(f);
 		}
 		{
-			Faction f(getFactionConfigs()[3], createCommanderAiCommand(3, 0.32, 0.05));          // was 0.38 0.1 (1.82)  
+			Faction f(getFactionConfigs()[3], createCommanderAiCommand(3, 0.2, 0.05));          // was 0.38 0.1 (1.82)  
             f.m_overCapacity = 50;                                              
 			f.m_capacityOffset = 30;                                                             
 			stage.m_factions.insertLast(f);
@@ -1722,7 +1710,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 	protected Stage@ setupStage19() {
 		Stage@ stage = createStage();
 		stage.m_mapInfo.m_name = "Warsalt Legacy";
-		stage.m_mapInfo.m_path = "media/packages/GFLC_Map/maps/map18";
+		stage.m_mapInfo.m_path = "media/packages/GFL_Castling/maps/map18";
 		stage.m_mapInfo.m_id = "map18";
 		stage.addTracker(jupiter(m_metagame,30));
 		stage.m_includeLayers.insertLast("layer1.invasion");		
@@ -1738,15 +1726,15 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.m_maxRandomCrates = 3;  
 
 		{ 				
-			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0, 0.4, 0.1));   // was 0.3 0.1  
-			f.m_overCapacity = 0;
-			f.m_capacityOffset = 0;      // was 5                                       
-			f.m_capacityMultiplier = 1;                                               
+			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0, 0.6, 0.2));   // was 0.3 0.1  
+			f.m_overCapacity = 50;
+			f.m_capacityOffset = 50;      // was 5                                       
+			f.m_capacityMultiplier = 1.0;                                               
 			f.m_bases = 1;
 			stage.m_factions.insertLast(f);
 		}
 		{
-			Faction f(getFactionConfigs()[1], createCommanderAiCommand(1, 0.5, 0.2));   // was 0.6 0.2
+			Faction f(getFactionConfigs()[getRandomEnemyIndex()], createCommanderAiCommand(1, 0.5, 0.2));   // was 0.6 0.2
 			f.m_overCapacity = 100;      // was 70                                       
 			f.m_capacityOffset = 30;     // was 15
 			stage.m_factions.insertLast(f);
@@ -1756,14 +1744,6 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.m_primaryObjective = "capture";
 		stage.m_radioObjectivePresent = false;
 
-		{
-			XmlElement command("command");
-			command.setStringAttribute("class", "faction_resources");
-			command.setIntAttribute("faction_id", 1);
-			addFactionResourceElements(command, "vehicle", array<string> = {"aa_emplacement.vehicle"}, true);
-
-			stage.m_extraCommands.insertLast(command);
-		}
 		{
 			XmlElement command("command");
 			command.setStringAttribute("class", "faction_resources");
@@ -1787,7 +1767,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 	protected Stage@ setupFinalStage1() {
 		Stage@ stage = createStage();
 		stage.m_mapInfo.m_name = "Final mission I"; // warning, default.character has reference to this name, careful if it needs to be changed
-		stage.m_mapInfo.m_path = "media/packages/vanilla/maps/map11";
+		stage.m_mapInfo.m_path = "media/packages/GFL_Castling/maps/map11";
 		stage.m_mapInfo.m_id = "map11";
         
 		stage.m_includeLayers.insertLast("layer1.invasion");        
@@ -1806,41 +1786,6 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.addTracker(DestroyVehicleToCaptureBase(m_metagame, "radio_jammer.vehicle", 2));
 		stage.addTracker(DestroyVehicleToCaptureBase(m_metagame, "radar_tower.vehicle", 2));    
 
-		stage.addTracker(Spawner(m_metagame, 1, Vector3(367,0,702), 5, "default_ai"));         // 1st tower
-		stage.addTracker(Spawner(m_metagame, 1, Vector3(396,0,692), 5, "default_ai"));         
-		stage.addTracker(Spawner(m_metagame, 1, Vector3(407,0,720), 5, "default_ai"));
-
-		stage.addTracker(Spawner(m_metagame, 1, Vector3(422,0,539), 5, "default_ai"));         // 1st top tower
-		stage.addTracker(Spawner(m_metagame, 1, Vector3(416,0,500), 5, "default_ai"));
-		
-		stage.addTracker(Spawner(m_metagame, 1, Vector3(507,0,651), 5, "default_ai")); 
-		stage.addTracker(Spawner(m_metagame, 1, Vector3(471,0,672), 5, "default_ai")); 
-
-		stage.addTracker(Spawner(m_metagame, 1, Vector3(482,0,730), 5, "default_ai"));  
-		stage.addTracker(Spawner(m_metagame, 1, Vector3(500,0,550), 5, "default_ai"));     
-		
-		stage.addTracker(Spawner(m_metagame, 1, Vector3(612,0,519), 5, "default_ai"));    
-		stage.addTracker(Spawner(m_metagame, 1, Vector3(641,0,527), 5, "default_ai"));    
-
-		stage.addTracker(Spawner(m_metagame, 1, Vector3(544,0,476), 5, "default_ai")); 
-		
-		stage.addTracker(Spawner(m_metagame, 1, Vector3(603,0,620), 5, "default_ai")); 
-		stage.addTracker(Spawner(m_metagame, 1, Vector3(622,0,601), 5, "default_ai")); 
-		
-		stage.addTracker(Spawner(m_metagame, 1, Vector3(707,0,569), 5, "default_ai")); 
-		stage.addTracker(Spawner(m_metagame, 1, Vector3(705,0,595), 5, "default_ai")); 
-
-		stage.addTracker(Spawner(m_metagame, 1, Vector3(720,0,477), 5, "default_ai"));    
-		stage.addTracker(Spawner(m_metagame, 1, Vector3(688,0,463), 5, "default_ai"));    
-		
-		stage.addTracker(Spawner(m_metagame, 1, Vector3(790,0,454), 5, "default_ai")); 
-		stage.addTracker(Spawner(m_metagame, 1, Vector3(766,0,454), 5, "default_ai")); 
-		
-		stage.addTracker(Spawner(m_metagame, 1, Vector3(541,0,608), 5, "default_ai"));     
-		stage.addTracker(Spawner(m_metagame, 1, Vector3(527,0,581), 5, "default_ai"));     
-		
-		// make neutral instantly not alive to avoid any possibility to gain capacity, like via not losing all bases first 
-		// and then gaining bases which have vehicles that give capacity offset..
 		{
 			XmlElement command("command");
 			command.setStringAttribute("class", "set_match_status");
@@ -1859,7 +1804,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		}
 		{
 			// in adventure mode, this faction config will be replaced with the correct one when final battle 1 opponent is decided 
-			Faction f(getFactionConfigs()[1], createCommanderAiCommand(1, 1.0, 0.0, false));
+			Faction f(getFactionConfigs()[getRandomEnemyIndex()], createCommanderAiCommand(1, 1.0, 0.0, false));
 			stage.m_factions.insertLast(f); 
 		}
 		{
@@ -1898,7 +1843,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		PhasedStage@ stage = createPhasedStage();
 		stage.setPhaseController(PhaseControllerMap12(m_metagame));
 		stage.m_mapInfo.m_name = "Final mission II"; // warning, default.character has reference to this name, careful if it needs to be changed
-		stage.m_mapInfo.m_path = "media/packages/vanilla.winter/maps/map12";
+		stage.m_mapInfo.m_path = "media/packages/GFL_Castling/maps/map12";
 		stage.m_mapInfo.m_id = "map12";
 
 		stage.m_fogOffset = 20.0;    
@@ -1944,13 +1889,6 @@ class StageConfiguratorInvasion : StageConfigurator {
 			stage.m_extraCommands.insertLast(command);
 		}
 
-		{
-			XmlElement command("command");
-			command.setStringAttribute("class", "faction_resources");
-			command.setIntAttribute("faction_id", 1);
-			addFactionResourceElements(command, "vehicle", array<string> = {"aa_emplacement.vehicle"}, true);
-			stage.m_extraCommands.insertLast(command);
-		}
 		
 		stage.m_allowChangeCapacityOnTheFly = false;
 
@@ -2101,4 +2039,25 @@ class StageConfiguratorInvasion : StageConfigurator {
 		return commands;
 	}
 
+	protected int getRandomEnemyIndex(){
+		// 玩家faction固定为0，中立阵营固定为index最后一位，在StartUp过程中maprotater已经排列好了随机阵营，我们只需要直接引用即可。
+		int index = rand(1, getFactionConfigs().size()-2);
+		return index;
+	}
+
+	protected array<int> getRandomEnemyList(){
+		// 掐头去尾 建立一个数组后随机排序输出打乱的数组
+		array<int> CopyedFactionList;
+		array<int> FactionList;
+		for (uint i = 1; i < (getFactionConfigs().size()-1); i++){
+			CopyedFactionList.insertLast(i);
+		}
+		while (CopyedFactionList.size()>0){
+			int index = rand(0,CopyedFactionList.size()-1);
+			FactionList.insertLast(CopyedFactionList[index]);
+			CopyedFactionList.removeAt(index);
+		}
+
+		return FactionList;
+	}
 }

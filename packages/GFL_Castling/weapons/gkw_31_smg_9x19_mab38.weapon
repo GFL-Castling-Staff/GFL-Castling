@@ -21,29 +21,29 @@
     <capacity value="1" source="rank" source_value="0.0" />
 
   	<animation state_key="hold_casual" />
-    <animation key="recoil" ref="12" />
-	  <animation key="recoil" ref="13" />
-	  <animation key="recoil" ref="14" />
-	  <animation key="recoil" stance_key="over_wall" ref="12" />
-	  <animation key="recoil" stance_key="over_wall" ref="13" />
-	  <animation key="recoil" stance_key="over_wall" ref="14" />
-    <animation key="recoil" stance_key="crouching" ref="12" />
-    <animation key="recoil" stance_key="crouching" ref="13" />
-    <animation key="recoil" stance_key="crouching" ref="14" />
+    <animation key="recoil" animation_key="recoil1" />
+	  <animation key="recoil" animation_key="recoil2" />
+	  <animation key="recoil" animation_key="recoil3" />
+	  <animation key="recoil" stance_key="over_wall" animation_key="recoil1" />
+	  <animation key="recoil" stance_key="over_wall" animation_key="recoil2" />
+	  <animation key="recoil" stance_key="over_wall" animation_key="recoil3" />
+    <animation key="recoil" stance_key="crouching" animation_key="recoil1" />
+    <animation key="recoil" stance_key="crouching" animation_key="recoil2" />
+    <animation key="recoil" stance_key="crouching" animation_key="recoil3" />
 	  <animation key="recoil" stance_key="prone" animation_key="recoil1, prone" />
 	  <animation key="recoil" stance_key="prone" animation_key="recoil2, prone" />
 	  <animation key="recoil" stance_key="prone" animation_key="recoil3, prone" />
-	  <animation state_key="hold_on_wall" ref="1" />
+	  <animation state_key="hold_on_wall" animation_key="still" />
     <animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
     <animation state_key="reload" animation_key="reloading, magazine rifle 0.9" />
 	  <animation state_key="stabbing" animation_key="melee, quick knife" />
 	  <animation state_key="stabbing" animation_key="pistol whip 3" />
     <effect class="muzzle" ref="ejection_9mm" />
 
-    <sound key="fire" fileref="mab38_fire_FromBF5.wav" pitch_variety="0.05" volume="2.1" />
-    <sound key="magazine_out" fileref="mab38_mgz_out_FromBF5.wav" volume="1.9" />
-    <sound key="magazine_in" fileref="mab38_mgz_in_FromBF5.wav" volume="1.9" />
-    <sound key="cycle" fileref="mab38_cycle_FromBF5.wav" volume="1.9" />
+    <sound key="fire" fileref="mab38_fire_FromBF5.wav" pitch_variety="0.05" volume="1.5" />
+    <sound key="magazine_out" fileref="mab38_mgz_out_FromBF5.wav" volume="0.8" />
+    <sound key="magazine_in" fileref="mab38_mgz_in_FromBF5.wav" volume="0.8" />
+    <sound key="cycle" fileref="mab38_cycle_FromBF5.wav" volume="0.8" />
     <sound class="impact" fileref="rifle_drop.wav" volume="1"/>    
     <commonness value="0.2" in_stock="1" can_respawn_with="1" />
 
@@ -55,8 +55,8 @@
       <result class="hit" kill_probability="1.65" kill_probability_offset_on_successful_hit="1.75" kill_decay_start_time="0.005" kill_decay_end_time="0.45" />
     </projectile>
     
-    <stance state_key="running" accuracy="0.85" />
-    <stance state_key="walking" accuracy="0.8" />
+    <stance state_key="running" accuracy="0.8" />
+    <stance state_key="walking" accuracy="0.85" />
     <stance state_key="crouch_moving" accuracy="0.9" />
     <stance state_key="prone_moving" accuracy="0.9" />
     <stance state_key="standing" accuracy="0.9" />

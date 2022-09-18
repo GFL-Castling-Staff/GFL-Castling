@@ -6,6 +6,7 @@
 #include "query_helpers2.as"
 #include "gamemode.as"
 #include "GFLhelpers.as"
+//Originally created by NetherCrow
 
 class vehicle_spawn : Tracker {
 	protected Metagame@ m_metagame;
@@ -27,4 +28,11 @@ class vehicle_spawn : Tracker {
             spawnSoldier(m_metagame,3,f_id,v_pos,"kcco_sg");
 		}
     }
+
+	protected void handleVehicleDestroyEvent(const XmlElement@ event) {
+		string key = event.getStringAttribute("vehicle_key");
+		if (key == "sf_jupiter.vehicle") {
+            addCustomStatToAllPlayers(m_metagame,"jupiter_broken");
+		}
+	}
 }

@@ -1,0 +1,118 @@
+particle_system Ct_Shine
+{
+	quota	500
+	material	Shine
+	particle_width	1
+	particle_height	1
+	cull_each	false
+	renderer	billboard
+	billboard_type	point
+
+	emitter Cylinder
+	{
+		angle	90
+		colour_range_start	0.5 0.5 0.3 1
+		colour_range_end	0.5 0.5 0.4 1
+		direction	0 1 0
+		emission_rate	100
+		position	0 0 0
+		velocity	0
+		time_to_live	1
+		duration	0.05
+		width	1
+		height	1
+		depth	1
+	}
+
+	affector ColourFader
+	{
+		red	-0.7
+		green	-0.7
+		blue	-0.7
+		alpha	0
+	}
+
+	affector Scaler
+	{
+		rate	1
+	}
+}
+
+particle_system Ct_Shine_50AE
+{
+	quota	500
+	material	Shine
+	particle_width	0.5
+	particle_height	0.5
+	cull_each	false
+	renderer	billboard
+	billboard_type	point
+
+	emitter Cylinder
+	{
+		angle	90
+		colour_range_start	0.5 0.5 0.3 1
+		colour_range_end	0.5 0.5 0.4 1
+		direction	0 1 0
+		emission_rate	100
+		position	0 0 0
+		velocity	0
+		time_to_live	0.75
+		duration	0.05
+		width	1
+		height	1
+		depth	1
+	}
+
+	affector ColourFader
+	{
+		red	-0.5
+		green	-0.5
+		blue	-0.5
+		alpha	0
+	}
+
+	affector Scaler
+	{
+		rate	0.75
+	}
+}
+
+particle_system Ct_Shine_Blood
+{
+	quota	500
+	material	Shine
+	particle_width	1
+	particle_height	1
+	cull_each	false
+	renderer	billboard
+	billboard_type	point
+
+	emitter Cylinder
+	{
+		angle	90
+		colour	0.54 0 0 1
+		direction	0 1 0
+		emission_rate	100
+		position	0 0 0
+		velocity	0
+		time_to_live	1
+		duration	0.05
+		width	1
+		height	1
+		depth	1
+	}
+
+	affector ColourFader
+	{
+		red	-0.7
+		green	-0.7
+		blue	-0.7
+		alpha	0
+	}
+
+	affector Scaler
+	{
+		rate	1
+	}
+}

@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapon file="two_hands_sg.animation_base" key="gkw_liberator.weapon">
-
-    
     <!--Weapon specifications-->
-    
     <specification 
 	retrigger_time="-1.0" 
 	accuracy_factor="0.9" 
@@ -12,57 +9,42 @@
 	magazine_size="4" 
 	can_shoot_standing="1" 
 	suppressed="0" 
-	name="Liberator" 
+	name="Winchester Liberator" 
 	class="4" 
 	burst_shots="1"
 	last_burst_retrigger_time="0.01"
 	reload_one_at_a_time="1"
-	sight_range_modifier="0.8" 
-	projectile_speed="75" 
+	sight_range_modifier="1.0" 
+	projectile_speed="90" 
 	barrel_offset="0.4" 
 	projectiles_per_shot="18"
-	spread_range="0.4"
+	spread_range="0.3"
 	 />
-	
-	<!--Animations-->
-	<inventory  buy_price="20.0" sell_price="10.0" />
-
-    <animation key="reload" animation_key="reloading, oaat" />		
-	
-	<!--Sounds-->
-	
-    <sound key="fire" fileref="liberator_fire_FromSAM4.wav" volume="1" />
+    <!--Animations-->
+    <inventory buy_price="20.0" sell_price="10.0" />
+    <animation key="reload" animation_key="reloading, oaat" />
+    <!--Sounds-->
+    <sound key="fire" fileref="liberator_fire_FromCOD17.wav" volume="1.1" />
     <sound key="reload_one" fileref="Liberator_reload_FromCODOLRanger.wav" volume="0.7"  />
     <sound class="impact" fileref="rifle_drop.wav" />
-   
-	<!--Model, Icon, Cost-->
-   
+    <!--Model, Icon, Cost-->
     <model filename="shotgun1.xml" />
     <hud_icon filename="gkw_liberator.png" />
-
-
-	
-	<!--Ballistics-->
-	
-    
+    <!--Ballistics-->
     <weak_hand_hold offset="0.3" />
     <projectile file="bullet.projectile">
         <result class="hit" 
-        kill_probability="1.85" 
-        kill_decay_start_time="0.067" 
-        kill_decay_end_time="0.533" />
+        kill_probability="1.9" 
+        kill_decay_start_time="0.3" 
+        kill_decay_end_time="0.3" />
     </projectile>
-    
     <!--Accuracy, Movement speed-->
-    
-	<stance state_key="walking" accuracy="0.5" />
-    <stance state_key="crouch_moving" accuracy="0.4" />
-    <stance state_key="prone_moving" accuracy="0.4" />
-    <stance state_key="standing" accuracy="0.55"/>
-    <stance state_key="crouching" accuracy="0.6" />
-    <stance state_key="prone" accuracy="0.65" />
-    <stance state_key="over_wall" accuracy="0.65" />  
+    <stance state_key="walking" accuracy="0.5" />
+    <stance state_key="crouch_moving" accuracy="0.6" />
+    <stance state_key="prone_moving" accuracy="0.6" />
+    <stance state_key="standing" accuracy="0.6"/>
+    <stance state_key="crouching" accuracy="0.7" />
+    <stance state_key="prone" accuracy="0.8" />
+    <stance state_key="over_wall" accuracy="0.85" />
     <modifier class="speed" value="0.2" />
-	
-
 </weapon>

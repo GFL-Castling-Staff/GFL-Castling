@@ -1,0 +1,55 @@
+<vehicle name="" key="heli_extraction_broken.vehicle" map_view_atlas_index="-1" respawn_time="10000.0">
+	<tag name="deco_car" />
+	<tire_set offset="1.5 0.0 6.0" radius="0.65" />
+	<tire_set offset="1.5 0.0 -6.0" radius="0.65" />
+
+
+	<control max_speed="20.0" acceleration="6.7" max_reverse_speed="6.0" max_rotation="0.8" max_water_depth="1.9" />
+                                                                                                                                                       
+	<physics max_health="1000.0" mass="100000" extent="3.6 0 14" offset="0 0.0 0" top_offset="0 5 0" collision_model_pos="0 0.8 0" collision_model_extent="3.8 3.8 15" visual_offset="0 0.0 3.6" /> 
+
+	<visual class="chassis" mesh_filename="huey.mesh" texture_filename="huey.png"  />
+	<visual class="chassis" key="broken" mesh_filename="huey.mesh" texture_filename="huey_broken.png" />
+  
+	<sound key="hit" filename="car_hit1.wav" />
+	<sound key="hit" filename="car_hit2.wav" />
+	<sound key="hit" filename="car_hit3.wav" />
+
+	<event>
+		<trigger class="receive_damage" />
+		<result class="reward" xp="0.0" />
+	</event>
+
+  <effect event_key="idle_chassis" ref="MediumSmokeFuel" offset="1.5 2.8 -1.0" />
+  <effect event_key="idle_chassis" ref="SmallSmokeVehicle" offset="-1.0 3.0 -4.3" />
+  	
+  <effect event_key="destroy" key="other" ref="SmokeMinor" post_processing="1" />
+	<effect event_key="destroy" key="other" ref="ShadowSmokeMinor" shadow="1" />
+  <effect event_key="slide_hard" type="splat_map" surface_tag="road" size="2.0" atlas_index="5" layer="0" />
+  
+  <effect event_key="destroyed" ref="SmallSmokeVehicle" offset="0.8 1.4 -0.7" />
+  <effect event_key="destroyed" ref="SmallSmokeVehicle" offset="-0.4 1.1 2.1" />
+  <effect event_key="destroyed" ref="SmallFireRepeat" offset="-0.4 0.8 2.1" /> 
+
+	<event>
+		<trigger class="destroy" />
+  	<result class="spawn" instance_class="visual_item" instance_key="burning_piece_car1.visual_item" min_amount="1" max_amount="3" offset="0 2.0 0" position_spread="1.5 1.5" direction_spread="0.15 0.3" />
+	</event>
+	<event>
+		<trigger class="destroy" />  	
+    <result class="spawn" instance_class="visual_item" instance_key="burning_piece_car2.visual_item" min_amount="0" max_amount="1" offset="0 2.0 0" position_spread="1.5 1.5" direction_spread="0.1 0.25" />
+	</event>
+  <event>
+		<trigger class="destroy" />		
+    <result class="spawn" instance_class="visual_item" instance_key="burning_piece_car3.visual_item" min_amount="1" max_amount="2" offset="0 2.0 0" position_spread="1.5 1.5" direction_spread="0.1 0.28" />
+	</event>
+  <event>
+		<trigger class="destroy" />		
+    <result class="spawn" instance_class="visual_item" instance_key="burning_piece_car4.visual_item" min_amount="1" max_amount="3" offset="0 2.0 0" position_spread="1.5 1.5" direction_spread="0.1 0.35" />
+	</event>
+  <event>
+		<trigger class="destroy" />		
+    <result class="spawn" instance_class="visual_item" instance_key="burning_piece_car5.visual_item" min_amount="2" max_amount="3" offset="0 2.0 0" position_spread="1.5 1.5" direction_spread="0.05 0.2" />
+	</event>
+   
+</vehicle>

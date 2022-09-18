@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projectile class="grenade" name="Javelin rocket 3" slot="2" pulldown_in_air="30" key="javelin_rocket_3.projectile">
     <tag name="rocket"/>
-	<result class="blast" radius="8" damage="72.0" push="3" decal="1" faction_compare="not_equal"/>
+	<result class="blast" radius="8" damage="120.0" push="3" decal="1" faction_compare="not_equal"/>
     <trigger class="impact" />
     <rotation class="motion" />
     <model filename="gkw_javelin_rocket.xml" />

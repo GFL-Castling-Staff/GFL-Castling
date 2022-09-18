@@ -1,66 +1,156 @@
 <?xml version="1.0" encoding="utf-8"?>
-<weapon file="two_hands_sg.animation_base" key="gkw_aa12_only.weapon">
-
-    
-    <!--Weapon specifications-->
-    
-    <specification 
-	retrigger_time="0.167" 
-	accuracy_factor="0.98" 
-	sustained_fire_grow_step="0.6" 
-	sustained_fire_diminish_rate="1.9" 
-	magazine_size="20" 
-	can_shoot_standing="1" 
-	suppressed="0" 
-	name="AA-12 with Frag-12 HE Rounds" 
-	class="0" 
+<weapons>
+<weapon key="gkw_aa12_only.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+	<specification 
+	retrigger_time="0.167"
+	accuracy_factor="1.0"
+	sustained_fire_grow_step="2.1"
+	sustained_fire_diminish_rate="0.45"
+	magazine_size="20"
+	can_shoot_standing="1"
+	suppressed="0"
+	name="AA-12-[Frag-12 HE Round]"
+	class="0"
 	reload_one_at_a_time="0"
-	sight_range_modifier="1.0" 
-	projectile_speed="74.47" 
-	barrel_offset="0.4" 
+	sight_range_modifier="1.0"
+	projectile_speed="100"
+	barrel_offset="0.4"
 	projectiles_per_shot="1"
-	spread_range="0.15"
-	 />
-	<!--Animations-->
-	
-
-
-
-    <animation key="reload" animation_key="reloading, magazine rifle 1.8" />
-	
-	<!--Sounds-->
-	
-	<sound key="fire" fileref="aa12_fire_FromROUGECOMPANY.wav" pitch_variety="0.05" volume="1" />
-    <sound key="magazine_out" fileref="AA12_mgz_out_FromCOD16.wav" volume="1" />
-    <sound key="magazine_in" fileref="AA12_mgz_in_FromCOD16.wav" volume="1" />
-    <sound key="cycle" fileref="AA12_cycle_FromCOD16.wav" volume="1" />
-    <sound class="impact" fileref="rifle_drop.wav" />
-   
-	<!--Model, Icon, Cost-->
-	<commonness value="0"  />
-	<inventory  buy_price="20.0" sell_price="10.0" />
-    <model filename="gkw_sg_aa12.xml" />
-    <hud_icon filename="gkw_aa12only_skill.png" />
-
-
-	
-	<!--Ballistics-->
-	
-    
-    <weak_hand_hold offset="0.3" />
-    <projectile file="aa12_only.projectile">
-	
-    <result class="blast" radius="3" damage="1.5" push="0" decal="1" faction_compare="not_equal" />
+	spread_range="0.1"
+	stab_enabled="1"
+	carry_in_two_hands="1"
+	burst_shots="1"
+	last_burst_retrigger_time="-1"
+	slot="0"
+	use_basic_muzzle_smoke_effect="0"/>
+	<animation key="reload" animation_key="reloading, magazine rifle 1.8"/>
+	<next_in_chain key="gkw_aa12_only_skill.weapon" share_ammo="0" />
+	<sound key="fire" fileref="aa12_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.2" />
+    <sound key="magazine_out" fileref="aa12_mgz_out_FromCOD16.wav" volume="0.45" />
+    <sound key="magazine_in" fileref="aa12_mgz_in_FromCOD16.wav" volume="0.35" />
+    <sound key="cycle" fileref="aa12_cycle_FromCOD16.wav" volume="0.35" />
+	<sound class="impact" fileref="rifle_drop.wav"/>
+	<commonness value="0" in_stock="0"/>
+	<inventory encumbrance="10.0" buy_price="75.0" sell_price="75.0"/>
+	<model filename="gkw_sg_aa12.xml"/>
+	<hud_icon filename="gkw_aa12only_skill.png"/>
+	<weak_hand_hold offset="0.3"/>
+	<projectile file="aa12_only.projectile">
+		<result class="blast" radius="3" damage="2.1" push="0.3" decal="1" faction_compare="not_equal"/>
 	</projectile>
-    
-    <!--Accuracy, Movement speed-->
-    
-	<stance state_key="walking" accuracy="0.7" />
-    <stance state_key="crouch_moving" accuracy="0.65" />
-    <stance state_key="prone_moving" accuracy="0.65" />
-    <stance state_key="standing" accuracy="0.9"/>
-    <stance state_key="crouching" accuracy="0.95" />
-    <stance state_key="prone" accuracy="0.95" />
-    <stance state_key="over_wall" accuracy="1" />  
-
+	<stance state_key="running" accuracy="0.7"/>
+	<stance state_key="walking" accuracy="0.8"/>
+	<stance state_key="crouch_moving" accuracy="0.85"/>
+	<stance state_key="prone_moving" accuracy="0.85"/>
+	<stance state_key="standing" accuracy="0.85"/>
+	<stance state_key="crouching" accuracy="0.9"/>
+	<stance state_key="prone" accuracy="1.0"/>
+	<stance state_key="over_wall" accuracy="1.0"/>
+	<modifier class="detectability" value="0.45"/>
+	<tag name="shotgun"/>
+	<capacity value="1" source="rank" source_value="0.0"/>
+	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
+	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
+	<target_factors tag="smg" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
+	<target_factors tag="melee" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
+	<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
+	<target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
+	<animation key="recoil" animation_key="recoil1"/>
+	<animation key="recoil" animation_key="recoil2"/>
+	<animation key="recoil" animation_key="recoil3"/>
+	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
+	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
+	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
+	<effect class="muzzle" ref="muzzle_sg"/>
+	<animation state_key="hold_on_wall" animation_key="still"/>
+	<animation state_key="running" animation_key="running, bayonet"/>
+	<animation state_key="walking" animation_key="walking, hip fire"/>
+	<animation state_key="walking_backwards" animation_key="walking backwards, hip fire"/>
+	<animation state_key="celebrate_shoot" animation_key="celebrating, shooting"/>
+	<animation state_key="stabbing" animation_key="melee, bayonet"/>
+	<modifier class="hit_success_probability" value="-0.4"/>
 </weapon>
+<weapon key="gkw_aa12_only_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+	<specification 
+	retrigger_time="0.167"
+	accuracy_factor="0.8"
+	sustained_fire_grow_step="2.1"
+	sustained_fire_diminish_rate="0.45"
+	magazine_size="20"
+	can_shoot_standing="1"
+	suppressed="0"
+	name="AA-12-[Dragon Breath Round]"
+	class="0"
+	reload_one_at_a_time="0"
+	sight_range_modifier="0.8"
+	projectile_speed="100"
+	barrel_offset="0.4"
+	projectiles_per_shot="6"
+	stab_enabled="1"
+	carry_in_two_hands="1"
+	burst_shots="1"
+	last_burst_retrigger_time="-1"
+	slot="0"
+	use_basic_muzzle_smoke_effect="0"/>
+	<animation key="reload" animation_key="reloading, magazine rifle 3.0"/>
+	<next_in_chain key="gkw_aa12_only.weapon" share_ammo="0" />
+	<sound key="fire" fileref="aa12_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.2" />
+    <sound key="magazine_out" fileref="aa12_mgz_out_FromCOD16.wav" volume="0.45" />
+    <sound key="magazine_in" fileref="aa12_mgz_in_FromCOD16.wav" volume="0.35" />
+    <sound key="cycle" fileref="aa12_cycle_FromCOD16.wav" volume="0.35" />
+	<sound class="impact" fileref="rifle_drop.wav"/>
+	<commonness value="0" in_stock="0"/>
+	<inventory encumbrance="10.0" buy_price="75.0" sell_price="75.0"/>
+	<model filename="gkw_sg_aa12.xml"/>
+	<hud_icon filename="gkw_aa12only_skill.png"/>
+	<weak_hand_hold offset="0.3"/>
+	<projectile file="dragons_breath2.projectile">
+		<result class="blast" radius="1.8" damage="0.1" push="0.0" decal="1" faction_compare="not_equal"/>
+	</projectile>
+	<stance state_key="running" accuracy="0.5"/>
+	<stance state_key="walking" accuracy="0.7"/>
+	<stance state_key="crouch_moving" accuracy="0.85"/>
+	<stance state_key="prone_moving" accuracy="0.85"/>
+	<stance state_key="standing" accuracy="0.8"/>
+	<stance state_key="crouching" accuracy="0.85"/>
+	<stance state_key="prone" accuracy="0.85"/>
+	<stance state_key="over_wall" accuracy="0.9"/>
+	<modifier class="detectability" value="0.45"/>
+	<tag name="shotgun"/>
+	<capacity value="1" source="rank" source_value="0.0"/>
+	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
+	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
+	<target_factors tag="smg" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
+	<target_factors tag="melee" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
+	<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
+	<target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
+	<animation key="recoil" animation_key="recoil1"/>
+	<animation key="recoil" animation_key="recoil2"/>
+	<animation key="recoil" animation_key="recoil3"/>
+	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
+	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
+	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
+	<effect class="muzzle" ref="muzzle_sg"/>
+	<animation state_key="hold_on_wall" animation_key="still"/>
+	<animation state_key="running" animation_key="running, bayonet"/>
+	<animation state_key="walking" animation_key="walking, hip fire"/>
+	<animation state_key="walking_backwards" animation_key="walking backwards, hip fire"/>
+	<animation state_key="celebrate_shoot" animation_key="celebrating, shooting"/>
+	<animation state_key="stabbing" animation_key="melee, bayonet"/>
+	<modifier class="hit_success_probability" value="-0.4"/>
+</weapon>
+</weapons>

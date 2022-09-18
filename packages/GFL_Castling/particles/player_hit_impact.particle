@@ -1,0 +1,71 @@
+particle_system common_hit_effect_1
+{
+    quota 200
+    material hit_crosshair
+    particle_width 0.3
+    particle_height	0.3
+    renderer billboard
+	billboard_type	point
+	cull_each	false
+
+    emitter Point
+    {
+        angle 0
+        colour_range_start  1.0 1.0 1.0 0.5
+        colour_range_end    1.0 1.0 1.0 0.6
+        position 0 0 0
+        direction 0 1 0
+        velocity 0.01
+        time_to_live 0.05
+        duration 0.01
+        emission_rate 101
+    }
+
+    affector Scaler
+    {
+        rate    10
+    }
+
+    affector ColourFader
+    {
+        red    0
+        green  0
+        blue   0
+        alpha  10
+    }
+}
+
+particle_system common_hit_effect_2
+{
+    quota 200
+    material hit_crosshair
+    particle_width 0.8
+    particle_height 0.8
+    renderer billboard
+    billboard_type  point
+    cull_each   false
+
+    emitter Point
+    {
+        angle 0
+        colour  0 0 0 0
+        position 0 0 0
+        direction 0 1 0
+        velocity 0.01
+        time_to_live 0.5
+        duration 0.01
+        emission_rate 101
+    }
+
+    affector ColourInterpolator
+    {
+        time0 0
+        colour0 0 0 0 0
+        time1 0.1
+        colour1 1 1 1 1
+        time2 0.8
+        colour2 1 1 1 1
+        time3 1
+        colour3 0 0 0 0        
+    }
+}

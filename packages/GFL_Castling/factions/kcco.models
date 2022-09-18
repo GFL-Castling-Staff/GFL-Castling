@@ -1,11 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <models>
-	<model filename="kccod_human.xml" />  
-	<model filename="kccod_cerynitis_remake.xml"><requirement class="weapon" slot="0" key="kccow_cerynitis.weapon"/></model>
-	<model filename="kccod_dactyl.xml"><requirement class="weapon" slot="0" key="kccow_dactyl.weapon"/></model>
-	<model filename="kcco_teslatrooper.xml"><requirement class="weapon" slot="0" key="kcco_teslatrooper.weapon"/></model>
+	<model filename="kccod_human.xml" />
+	<model filename="kccod_cerynitis_remake.xml">
+		<requirement class="weapon" slot="0" key="kccow_cerynitis.weapon"/>
+	</model>
+	<model filename="kccod_dactyl.xml">
+		<requirement class="weapon" slot="0" key="kccow_dactyl.weapon"/>
+	</model>
+	<model filename="kcco_teslatrooper.xml">
+		<requirement class="weapon" slot="0" key="kcco_teslatrooper.weapon"/>
+	</model>
 	<model filename="kccod_Hydra.xml">
 		<requirement class="weapon" slot="0" key="kccow_hydra.weapon"/>
 	</model>
-	<model filename="kccod_archer.xml"><requirement class="weapon" slot="0" key="compound_bow.weapon"/></model>
+	<model filename="kccod_archer.xml">
+		<requirement class="weapon" slot="0" key="compound_bow.weapon"/>
+	</model>
+	<model filename="kccod_archer.xml">
+		<requirement class="weapon" slot="0" key="compound_bow_2.weapon"/>
+	</model>
+	<model filename="kccod_sniper_melondove_saiwa.xml">
+		<requirement class="weapon" slot="0" key="kccow_tactical_sniper_rf.weapon"/>
+	</model>
+	<model filename="kccod_gatling3.xml">
+		<requirement class="weapon" slot="0" key="kcco_gatling.weapon"/>
+	</model>
+	<model filename="kccod_othrusdog.xml">
+		<requirement class="weapon" slot="0" key="kcco_othrusdog.weapon"/>
+	</model>
+	<model filename="kccod_othrusdog.xml">
+		<requirement class="weapon" slot="0" key="kcco_othrusdog"/>
+	</model>
+
+	<model filename="kccod_othrusdog_shield.xml">
+		<requirement class="weapon" slot="0" key="kcco_othrusdog_s"/>
+	</model>
+
+
 </models>

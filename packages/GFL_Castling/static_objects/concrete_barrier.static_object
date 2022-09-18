@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<static_object key="concrete_barrier.static_object" destroy_on_drive_over="1" destroy_on_blast="1" blast_damage_threshold="13.9" destroy_on_stab="0" undestroy_on_block_activate="0">
+    <sound key="destroy" filename="stone_break_1_fromDOTA2.wav" volume="1.0" />
+    <sound key="destroy" filename="stone_break_2_fromDOTA2.wav" volume="1.0" />
+    <effect event_key="destroy" key="other" ref="SmokeMinor" post_processing="1" />
+    <effect event_key="destroy" key="other" ref="ShadowSmokeMinor" shadow="1" />
+
+    <destroy_on_drive_over_tags>
+        <tag name="bulldozer" />
+    </destroy_on_drive_over_tags>
+
+    <event>
+        <trigger class="destroy" />
+        <result class="spawn" instance_class="visual_item" instance_key="burning_piece_barrier.visual_item" min_amount="1" max_amount="4" offset="0 2.0 0" position_spread="1.5 1.5" direction_spread="0.1 0.1" />
+    </event>
+    <event>
+        <trigger class="destroy" />
+        <result class="spawn" instance_class="visual_item" instance_key="burning_piece_truck1.visual_item" min_amount="1" max_amount="3" offset="0 2.4 0" position_spread="1.5 1.5" direction_spread="0.1 0.2" />
+    </event>
+    <event>
+        <trigger class="destroy" />
+        <result class="spawn" instance_class="visual_item" instance_key="burning_piece_truck2.visual_item" min_amount="2" max_amount="4" offset="0 2.4 0" position_spread="1.5 1.5" direction_spread="0.15 0.25" />
+    </event>
+    <event>
+        <trigger class="destroy" />
+        <result class="spawn" instance_class="visual_item" instance_key="burning_piece_truck3.visual_item" min_amount="1" max_amount="2" offset="0 2.4 0" position_spread="1.5 1.5" direction_spread="0.1 0.18" />
+    </event>
+    <event>
+        <trigger class="destroy" />
+        <result class="spawn" instance_class="visual_item" instance_key="burning_piece_truck4.visual_item" min_amount="1" max_amount="3" offset="0 2.4 0" position_spread="1.5 1.5" direction_spread="0.1 0.15" />
+    </event>
+    <event>
+        <trigger class="destroy" />
+        <result class="spawn" instance_class="visual_item" instance_key="burning_piece_truck5.visual_item" min_amount="2" max_amount="3" offset="0 2.4 0" position_spread="1.5 1.5" direction_spread="0.05 0.2" />
+    </event>
+</static_object>

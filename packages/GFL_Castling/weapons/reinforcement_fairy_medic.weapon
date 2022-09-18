@@ -28,9 +28,9 @@
     <animation key="walking" animation_key="walking, binoculars" />
     <animation key="walking_backwards" animation_key="walking backwards, binoculars" />
     <animation key="crouch_moving" animation_key="crouching forwards, binoculars" />
-    <animation key="changing_weapon_out" ref="57" />
-    <animation key="changing_weapon_in" ref="58" />
-    <animation key="reload" ref="35" />
+    <animation key="changing_weapon_out" animation_key="change weapon out, reversed" />
+    <animation key="changing_weapon_in" animation_key="change weapon in, reversed" />
+    <animation key="reload" animation_key="reloading, m24" />
     
     <sound class="impact" fileref="sandbag_drop.wav" />    
 

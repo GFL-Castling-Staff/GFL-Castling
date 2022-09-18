@@ -1,55 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<weapon file="designated_marksman_rifle.animation_base" key="gkw_m1903.weapon">
-
-
+<weapon file="bolt_action_rifle.animation_base" key="gkw_m1903.weapon">
     <!--Weapon specifications-->
-    
     <specification 
 	retrigger_time="-1.0" 
 	accuracy_factor="1.0" 
-	sustained_fire_grow_step="1" 
-	sustained_fire_diminish_rate="0.8" 
+	sustained_fire_grow_step="1.5" 
+	sustained_fire_diminish_rate="1.5" 
 	magazine_size="5" 
 	can_shoot_standing="1" 
 	suppressed="0" 
 	name="M1903 Springfield" 
 	class="2" 
 	reload_one_at_a_time="1" 
-	sight_range_modifier="2.5" 
-	projectile_speed="239.66" 
+	sight_range_modifier="2.25" 
+	projectile_speed="230" 
 	barrel_offset="0.4" 
+    stab_range="3.5"
 	projectiles_per_shot="4" />
-    <inventory  buy_price="8.0" sell_price="8.0" />
-	<!--Animations-->
-	
-
-
+    <inventory buy_price="19.03" sell_price="19.03" />
     <animation key="cycle" animation_key="Brifle1" />
-	<animation key="cycle" stance_key="prone" animation_key="Brifle1p" />	
-    <animation key="reload" animation_key="reloading, oaat" />			
-    <effect class="muzzle" ref="ejection_special_rf" />
-
-	<!--Sounds-->
-	
-    <sound key="fire" fileref="m1903only_fire_FromRODH.wav" pitch_variety="0.05" volume="1.2" />
-    <sound key="cycle" fileref="m1903_cycle_FromFC6.wav" volume="0.6"/>
-      <!-- <sound key="magazine_out" fileref="" volume="1"/> -->
-    <sound key="reload_one" fileref="m1903_reload_FromCOD16.wav" volume="0.4" />
-    <sound key="cycle_out" fileref="m1903_cycle_out_FromFC6.wav"  volume="0.6"/>
-    <sound key="cycle_in" fileref="m1903_cycle_in_FromFC6.wav"  volume="0.6"/> 
+    <animation key="cycle" stance_key="prone" animation_key="Brifle1p" />
+    <animation key="reload" animation_key="reloading, oaat" />
+    <sound key="fire" fileref="m1903only_fire_FromRODH.wav" pitch_variety="0.05" volume="1.1" />
+    <sound key="cycle" fileref="m1903_cycle_FromFC6.wav" volume="0.5"/>
+    <sound key="reload_one" fileref="m1903_reload_FromCOD16.wav" volume="0.5" />
+    <sound key="cycle_out" fileref="m1903_cycle_out_FromFC6.wav"  volume="0.5"/>
+    <sound key="cycle_in" fileref="m1903_cycle_in_FromFC6.wav"  volume="0.5"/>
     <sound class="impact" fileref="rifle_drop.wav" volume="1"/>
     <commonness value="0.2" in_stock="1" can_respawn_with="1" />
-
-	<!--Model, Icon, Cost-->
-   
     <model filename="gkw_rf_m1903.xml" />
     <hud_icon filename="gkw_m1903.png" />
-
-
-	
-	<!--Ballistics-->
-	
-    
     <weak_hand_hold offset="0.3" />
     <projectile file="bullet.projectile">
         <result class="hit" 
@@ -58,10 +38,9 @@
         kill_decay_start_time="0.895" 
         kill_decay_end_time="1.659" />
     </projectile>
-    
     <!--Accuracy, Movement speed-->
     <stance state_key="running" accuracy="1.2" />
-	<stance state_key="walking" accuracy="1.2" />
+    <stance state_key="walking" accuracy="1.2" />
     <stance state_key="crouch_moving" accuracy="1.2" />
     <stance state_key="prone_moving" accuracy="1.2" />
     <stance state_key="standing" accuracy="1.2" />

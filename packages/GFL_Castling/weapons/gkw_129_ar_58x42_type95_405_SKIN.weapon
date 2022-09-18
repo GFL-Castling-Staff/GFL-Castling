@@ -17,9 +17,9 @@
         <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
         <inventory buy_price="8.0" sell_price="8.0" />
         <sound key="fire" fileref="type95_fire_FromBF4.wav" pitch_variety="0.05" volume="1.6" />
-        <sound key="magazine_out" fileref="type95_mgz_out_FromBF4.wav" volume="1.1" />
-        <sound key="magazine_in" fileref="type95_mgz_in_FromBF4.wav" volume="1.1" />
-        <sound key="cycle" fileref="type95_cycle_FromBF4.wav" volume="1.1" />
+        <sound key="magazine_out" fileref="qbz95_mgz_in_FromCOD17.wav" volume="0.45" />
+        <sound key="magazine_in" fileref="qbz95_mgz_in_FromCOD17.wav" volume="0.45" />
+        <sound key="cycle" fileref="qbz95_cycle_FromCOD16.wav" volume="0.35" />
         <sound class="impact" fileref="rifle_drop.wav" />
         <model filename="gkw_ar_type95.xml" />
         <hud_icon filename="gkw_95type_405.png" />
@@ -29,6 +29,7 @@
         <projectile file="bullet.projectile">
             <result class="hit" kill_probability="2.1" kill_probability_offset_on_successful_hit="0.75" kill_decay_start_time="0.75" kill_decay_end_time="1.333" />
         </projectile>
+        <effect class="muzzle" ref="ejection_556"/>
         <stance state_key="running" accuracy="0.5" />
         <stance state_key="walking" accuracy="0.8" />
         <stance state_key="crouch_moving" accuracy="0.8" />
@@ -54,10 +55,10 @@
 		sustained_fire_grow_step="0.5"/>
         <animation key="reload" animation_key="reloading, magazine rifle 1.5" />
         <inventory  buy_price="8.0" sell_price="8.0" />
-        <sound key="fire" fileref="type95skill_fire_FromDOOM4.wav" pitch_variety="0.05" volume="1.5" />
-        <sound key="magazine_out" fileref="type95_mgz_out_FromBF4.wav" volume="1.1" />
-        <sound key="magazine_in" fileref="type95_mgz_in_FromBF4.wav" volume="1.1" />
-        <sound key="cycle" fileref="type95_cycle_FromBF4.wav" volume="1.1" />
+        <sound key="fire" fileref="qbz95skill_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.2" />
+        <sound key="magazine_out" fileref="qbz95_mgz_in_FromCOD17.wav" volume="0.45" />
+        <sound key="magazine_in" fileref="qbz95_mgz_in_FromCOD17.wav" volume="0.45" />
+        <sound key="cycle" fileref="qbz95_cycle_FromCOD16.wav" volume="0.35" />
         <sound class="impact" fileref="rifle_drop.wav" />
         <model filename="gkw_ar_type95.xml" />
         <hud_icon filename="gkw_95type_405.png" />
@@ -67,6 +68,7 @@
         <projectile file="bullet.projectile">
             <result class="hit" kill_probability="2.4" kill_probability_offset_on_successful_hit="1.75" kill_decay_start_time="0.75" kill_decay_end_time="1.333" />
         </projectile>
+        <effect class="muzzle" ref="ejection_556"/>
         <stance state_key="running" accuracy="0.8" />
         <stance state_key="walking" accuracy="0.8" />
         <stance state_key="crouch_moving" accuracy="0.8" />

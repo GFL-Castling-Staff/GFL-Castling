@@ -3,6 +3,7 @@
 
 //别抄了学不会的，有需求请联系 冥府乌鸦NetherCrow 为你解惑，不识趣的不建议来。
 //Credit: NetherCrow & Castling Staff
+//Contributor: Saiwa
 //Inspired by Pasik & Unit G17 & RWR ww2 DLC staff
 //Don't copy without gimme a ask and if you has some question about script just contact @NetherCrowCSOLYOO in rwr discord #modding
 
@@ -148,6 +149,34 @@ void addItemInBackpack(Metagame@ metagame, int characterId, string ItemType, str
 	metagame.getComms().send(c);
 }
 
+void addItemInStash(Metagame@ metagame, int characterId, string ItemType, string ItemKey) {
+	string c = 
+		"<command class='update_inventory' character_id='" + characterId + "' container_type_class='stash'>" + 
+			"<item class='" + ItemType + "' key='" + ItemKey + "' />" +
+		"</command>";
+	metagame.getComms().send(c);
+}
+
+void addRangeItemInBackpack(Metagame@ metagame, int factionId, string ItemType, string ItemKey,Vector3 pos,float range){
+	array<const XmlElement@> nowPlayers = getPlayers(metagame);
+	array<int> player_cId;
+	if (nowPlayers !is null){
+		for(uint i=0;i<nowPlayers.length();i++){
+			player_cId.insertLast(nowPlayers[i].getIntAttribute("character_id"));
+		}
+		array<const XmlElement@> affectedCharacter = getCharactersNearPosition(metagame,pos,factionId,range);
+		if (affectedCharacter !is null){
+			for(uint i=0;i<affectedCharacter.length();i++){
+				int cId = affectedCharacter[i].getIntAttribute("id");
+				if(player_cId.find(cId)>=0){
+					addItemInBackpack(metagame,cId,ItemType,ItemKey);
+				}
+			}
+		}
+	}
+
+}
+
 bool checkCommandAlter(string message, string target, string target1) {
     return startsWith(message.toLowerCase(), "/" + target) || endsWith(message.toLowerCase(),"/"+ target1);
 }
@@ -201,6 +230,20 @@ void spawnSoldier(Metagame@ metagame, uint count, uint factionId, string positio
 float getAimOrientation4(Vector3 s_pos, Vector3 e_pos) {
 	float dx = e_pos.m_values[0]-s_pos.m_values[0];
 	float dy = e_pos.m_values[2]-s_pos.m_values[2];
+    float ds = sqrt(dx*dx+dy*dy);
+    if(ds<=0.000001f) ds=0.000001f;
+	float dir = acos(dx/ds);
+	if(asin(dy/ds)>0) {
+		return (dir*1.0-1.57)*(-1.0);
+	}
+	else {
+		return (dir*(-1.0)-1.57)*(-1.0);
+	}
+}
+
+float getOrientation4(Vector3 a) {
+	float dx = a.m_values[0];
+	float dy = a.m_values[2];
     float ds = sqrt(dx*dx+dy*dy);
     if(ds<=0.000001f) ds=0.000001f;
 	float dir = acos(dx/ds);
@@ -268,6 +311,31 @@ array<string> unlockable_vehicles = {
 	"deco_pickup_khaki.vehicle"
 };
 
+array<string> vip_vehicles = {
+	"mobile_armory.vehicle", 		// 军械车
+	"armored_truck.vehicle",		// 艾莫号
+	"ogas_pulse_generator.vehicle",	// OGAS干扰仪
+	"radio_jammer.vehicle",
+	"radio_jammer2.vehicle"
+};
+
+int getAmosPosition(Metagame@ metagame, uint ownerid, Vector3 judgePos, float radius) {
+	
+	array<const XmlElement@>@ vehicles = getAllVehicles(metagame, 0);
+	for(uint i=0;i<vehicles.length();i++){
+		Vector3 vehiclePos = stringToVector3(vehicles[i].getStringAttribute("position"));
+		if(getAimUnitDistance(1.0,judgePos,vehiclePos)<=radius){
+			int vehicleid = vehicles[i].getIntAttribute("id");
+			const XmlElement@ vehicleInfo = getVehicleInfo(metagame, vehicleid);
+			if(vehicleInfo !is null)  //Vip载具存在
+				if(vip_vehicles.find(vehicleInfo.getStringAttribute("key"))!=-1)
+					return 1;
+		}
+	}
+
+	return -1;	
+}
+
 int getNearByEnemyVehicle(Metagame@ metagame, uint ownerid, Vector3 judgePos, float radius) {
 	for(uint f=0;f<4;f++){
 		if(f<10){
@@ -284,7 +352,6 @@ int getNearByEnemyVehicle(Metagame@ metagame, uint ownerid, Vector3 judgePos, fl
 						_log("Get vehicle id successful.");
 						return vehicleid;
 					}
-					else return -1;
 				}
 			}
 		}		
@@ -310,6 +377,12 @@ Vector3 getAimUnitPosition(Vector3 s_pos, Vector3 e_pos, float scale) {
     float ds = sqrt(dx*dx+dy*dy);
     if(ds<=0.000005f) {ds=0.000005f;dx=0.000004f;dy=0.000003f;}
 	return s_pos.add(Vector3(dx*scale/ds,0,dy*scale/ds));
+}
+
+Vector3 getRandomOffsetVector(Vector3 pos,float strike_rand){
+	float rand_x = rand(-strike_rand,strike_rand);
+	float rand_z = rand(-strike_rand,strike_rand);
+	return pos.add(Vector3(rand_x,0,rand_z));
 }
 
 void spawnVehicle(Metagame@ metagame, uint count, uint factionId, Vector3 position, Orientation@ dir, string instanceKey) {
@@ -379,6 +452,7 @@ class Orientation{
 	float a2;
 	float a3;
 	float a4;
+	Orientation(){};
 	Orientation(float a_1, float a_2, float a_3,float a_4){
 		a1=a_1;
 		a2=a_2;
@@ -625,4 +699,22 @@ void ProfileSave(Metagame@ m_metagame) {
 
 	m_metagame.getComms().send(command);
 
+}
+
+void setVisualTimer(Metagame@ metagame, float time) {
+	XmlElement command("command");
+	command.setStringAttribute("class", "set_game_timer");
+	command.setIntAttribute("faction_id", 0);
+	command.setIntAttribute("pause", 0); 
+	command.setFloatAttribute("time", time); 
+	metagame.getComms().send(command);
+}
+
+void clearVisualTimer(Metagame@ metagame) {
+	XmlElement command("command");
+	command.setStringAttribute("class", "set_game_timer");
+	command.setIntAttribute("faction_id", -1);
+	command.setIntAttribute("pause", 1); 
+	command.setFloatAttribute("time", -1.0f); 
+	metagame.getComms().send(command);
 }

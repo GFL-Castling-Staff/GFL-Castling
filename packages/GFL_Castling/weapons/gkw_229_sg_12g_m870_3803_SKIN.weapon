@@ -30,7 +30,7 @@
 		<animation state_key="stabbing" animation_key="pistol whip 3" />
 		<!-- Sounds -->
 		<sound key="fire" fileref="m870_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.7" />
-		<sound key="cycle" fileref="m870_cycle_FromTTF2.wav" />
+		<sound key="cycle" fileref="m870_cycle_FromTTF2.wav" volume="0.8" />
 		<sound key="magazine_out" fileref="sg3_reload_FromREALLIFE.wav" volume="0.4" />
 		<sound key="magazine_in" fileref="sg1_reload_FromREALLIFE.wav" volume="0.4" />
 		<sound key="reload_one" fileref="sg1_reload_FromREALLIFE.wav" volume="0.5" />
@@ -66,6 +66,7 @@
 		<stance state_key="prone" accuracy="0.85" />
 		<stance state_key="over_wall" accuracy="0.85" />
 		<modifier class="speed" value="-0.1" />
+		<modifier class="hit_success_probability" value="-0.4" />
 	</weapon>
 	<weapon key="gkw_m870_3803_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 		<tag name="shotgun" />
@@ -97,7 +98,7 @@
 		<animation state_key="stabbing" animation_key="pistol whip 3" />
 		<!-- Sounds -->
 		<sound key="fire" fileref="m870_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.7" />
-		<sound key="cycle" fileref="m870_cycle_FromTTF2.wav" />
+		<sound key="cycle" fileref="m870_cycle_FromCOD13.wav" volume="0.6" />
 		<sound key="magazine_out" fileref="sg3_reload_FromREALLIFE.wav" volume="0.4" />
 		<sound key="magazine_in" fileref="sg1_reload_FromREALLIFE.wav" volume="0.4" />
 		<sound key="reload_one" fileref="sg1_reload_FromREALLIFE.wav" volume="0.5" />
@@ -122,5 +123,6 @@
 		<stance state_key="prone" accuracy="0.85" />
 		<stance state_key="over_wall" accuracy="0.85" />
 		<modifier class="speed" value="+0.1" />
+		<modifier class="hit_success_probability" value="-0.4" />
 	</weapon>
 </weapons>

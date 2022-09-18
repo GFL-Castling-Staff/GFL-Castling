@@ -27,6 +27,7 @@
 #include "local_ban_manager.as"
 #include "testing_tools_tracker.as"
 #include "call_marker_tracker.as"
+#include "idler_kicker.as"
 
 // community trackers
 #include "gps_laptop.as"
@@ -47,6 +48,10 @@
 #include "vehicle_spawn_handler.as"
 #include "MatchCompleteReward.as"
 #include "GFLairstrike.as"
+#include "shared_reward.as"
+#include "enemy_reward.as"
+#include "call_event_handler.as"
+
 
 // --------------------------------------------
 class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
@@ -305,7 +310,8 @@ class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 		setupDisableRadioAtMatchOver();
 		addTracker(AutoSaver(this));
 		addTracker(BasicCommandHandler(this));
-		
+		addTracker(IdlerKicker(this));
+
 		setupExperimentalFeatures();
 		setupIcecreamReport();
 		
@@ -313,6 +319,7 @@ class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 		
 		setupSpawnTimeHandler();
 		setupSideBaseAttackHandler();
+		setupDropTable();
 	}
 
 	// --------------------------------------------
@@ -322,7 +329,7 @@ class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 		addTracker(SquadEquipmentKit(this)); 
 		addTracker(RangeFinder(this)); 
 		addTracker(GFLskill(this));
-		addTracker(kill_event(this));
+		addTracker(kill_event(this,getUserSettings()));
 		addTracker(ManualCall(this));
 		addTracker(ServerHelper(this));
 		addTracker(BanManager(this,true));
@@ -331,6 +338,9 @@ class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 		addTracker(vehicle_spawn(this));
 		addTracker(MatchCompleteReward(this));
 		addTracker(GFLairstrike(this));
+		addTracker(GFL_event_system(this));
+		addTracker(SharedReward(this));
+		addTracker(call_event(this));
 	}
 
 	// --------------------------------------------
@@ -414,9 +424,9 @@ class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 		array<CallMarkerConfig@> configs = {
 			// CallMarkerConfig("callkey", "call_marker\call_marker_drop", 6, 0.5, 30.0)
 			//CallMarkerConfig(string key, int atlasIndex = 0, float size = 2.0, float range = 1.0, string text = "")
-			CallMarkerConfig("gk_airstrike_fairy.call", "call_marker", 9, 0.5, 20.0),
-			CallMarkerConfig("gk_bombardment_fairy.call", "call_marker", 11, 0.5, 30.0),
-			CallMarkerConfig("gk_rocket_fairy.call", "call_marker", 10, 0.5, 60.0),
+			CallMarkerConfig("gk_airstrike_fairy.call", "call_marker_air", 9, 0.5, 20.0),
+			CallMarkerConfig("gk_bombardment_fairy.call", "call_marker_bomb", 11, 0.5, 30.0),
+			CallMarkerConfig("gk_rocket_fairy.call", "call_marker_rocket", 10, 0.5, 60.0),
 			
 			CallMarkerConfig("gk_medic.call", "call_marker_drop", 4, 0.5),
 			CallMarkerConfig("sg1hg1mg2.call", "call_marker_drop", 4, 0.5),
@@ -456,7 +466,7 @@ class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 			if (faction.isNeutral()) continue;
 			
 			// interpolate players 1 -> 32, spawn time 3.0 -> 1.0
-			addTracker(SpawnTimeHandler(this, i, 1, 20, 4.0, 2.0));
+			addTracker(SpawnTimeHandler(this, i, 1, 20, 5.0, 1.0));
 		}
 	}
 	
@@ -471,7 +481,7 @@ class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 			addTracker(SideBaseAttackHandler(this, i, 
 				1, 24, 
 				0.05, 0.0,    // side base attack probability
-				0.005, 0.0)); // lonewolf spawn score
+				0.0, 0.0)); // lonewolf spawn score
 		}
 	}
 	
@@ -485,6 +495,15 @@ class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 	protected void trackerCompleted(Tracker@ tracker) {
 	}
 
+	protected void setupDropTable() {
+		normalizeScoredResources(reward_pool_common);
+		normalizeScoredResources(reward_pool_uncommon);
+		normalizeScoredResources(reward_pool_rare);
+		normalizeScoredResources(reward_pool_elite);
+		normalizeScoredResources(reward_pool_boss);
+
+		_log("loot reward pool inited");
+	}
 	// --------------------------------------------
 	// map rotator is the one that actually defines which factions are in the game and which default values are used,
 	// it will feed us the faction data

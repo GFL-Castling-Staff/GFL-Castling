@@ -32,7 +32,7 @@
   <parameter class="favor_staying_in_current_player_squad_value_increase" value="0.5" />
   <parameter class="authority_margin" value="0.07" /> 
   <parameter class="monitor_enemies_max_dot_range" value="1.8" />
-  <parameter class="active_guarding_probability" value="5.0" />
+  <parameter class="active_guarding_probability" value="0.75" />
   <parameter class="leading_inspect_alarm_spread_out_distance" value="50.0" />
   <parameter class="leading_inspect_alarm_min_distance" value="45.0" />
   <parameter class="maximum_distance_to_consider_for_heal" value="40.0" />
@@ -98,6 +98,8 @@
   <parameter class="celebrating_shoot_probability" value="0.3" /> 
   <parameter class="celebrating_comment_probability" value="0.4" /> 
   <parameter class="celebrating_stab_probability" value="1.0" /> 
-  <parameter class="uses_vehicles" value="1.0" />
+  <parameter class="uses_vehicles" value="0.0" />
   <parameter class="willingness_to_charge" value="0.75" />
+  <parameter class="fighting_melee_move_radius" value="3.0" />
+	<parameter class="fighting_regular_move_radius" value="30.0" />
 </ai>

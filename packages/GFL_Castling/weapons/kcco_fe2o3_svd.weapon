@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon key="kcco_fe2o3_svd.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+    <specification 
+    retrigger_time="-1.0" 
+    accuracy_factor="1"
+    sustained_fire_grow_step="2.0" 
+    sustained_fire_diminish_rate="1.5" 
+    magazine_size="10" 
+    can_shoot_standing="1" 
+    suppressed="0" 
+    name="KCCO Hematite Observers" 
+    class="4" 
+    burst_shots="1" 
+    last_burst_retrigger_time="0.5" 
+    reload_one_at_a_time="0" 
+    sight_range_modifier="1.4" 
+    projectile_speed="120" 
+    barrel_offset="0.4" 
+    stance_accuracy_rate="1.0" 
+    projectiles_per_shot="1" 
+    stab_enabled="1" 
+    carry_in_two_hands="1" 
+    slot="0"/>
+
+    <inventory encumbrance="20.0" buy_price="0.0" sell_price="0.0"/>
+
+    <animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
+
+    <sound key="fire" fileref="svd_fire_FromSURVARIUM.wav" pitch_variety="0.05" volume="1.2" />
+    <sound key="magazine_out" fileref="svd_mgz_out_FromCOD16.wav" volume="0.8"/>
+    <sound key="magazine_in" fileref="svd_mgz_in_FromSQUAD.wav" volume="0.8"/>
+    <sound key="cycle" fileref="svd_cycle_FromSQUAD.wav" volume="0.8"/>
+    <sound class="impact" fileref="rifle_drop.wav" volume="1"/>
+
+    <model filename="gkw_rf_svd.xml"/>
+    <hud_icon filename="gkw_svd.png"/>
+    <weak_hand_hold offset="0.3"/>
+    <projectile file="bullet_kcco.projectile">
+        <result class="hit" kill_probability="2.4" kill_probability_offset_on_successful_hit="1.0" kill_decay_start_time="1.735" kill_decay_end_time="2.892"/>
+    </projectile>
+    <tag name="rifle"/>
+    <commonness value="0.2" in_stock="1" can_respawn_with="1"/>
+    <capacity value="1" source="rank" source_value="0.0"/>
+    <stance state_key="running" accuracy="1.0"/>
+    <stance state_key="walking" accuracy="1.0"/>
+    <stance state_key="crouch_moving" accuracy="1.0"/>
+    <stance state_key="standing" accuracy="1.0"/>
+    <stance state_key="crouching" accuracy="1.0"/>
+    <stance state_key="prone" accuracy="1.0"/>
+    <stance state_key="prone_moving" accuracy="1.0"/>
+    <stance state_key="over_wall" accuracy="1"/>
+    <modifier class="speed" value="0.2"/>
+
+    <target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
+    <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
+    <target_factors tag="shotgun" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
+    <target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
+    <target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
+    <target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
+    <animation key="recoil" animation_key="recoil1"/>
+    <animation key="recoil" animation_key="recoil2"/>
+    <animation key="recoil" animation_key="recoil3"/>
+    <animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
+    <animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
+    <animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
+    <animation state_key="celebrate_shoot" animation_key="celebrating, shooting"/>
+    <animation state_key="stabbing" animation_key="melee, quick knife"/>
+    <animation state_key="stabbing" animation_key="pistol whip 3"/>
+</weapon>

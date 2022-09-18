@@ -13,7 +13,7 @@
 	magazine_size="6" 
 	can_shoot_standing="1" 
 	suppressed="0" 
-	name="M1897" 
+	name="Winchester Model 1897" 
 	class="1" 
 	reload_one_at_a_time="1"
 	sight_range_modifier="1" 
@@ -57,7 +57,7 @@
     </projectile>
     
     <!--Accuracy, Movement speed-->
-    
+    <stance state_key="running" accuracy="0.55" />
 	<stance state_key="walking" accuracy="0.65" />
     <stance state_key="crouch_moving" accuracy="0.6" />
     <stance state_key="prone_moving" accuracy="0.6" />
@@ -80,7 +80,7 @@
 	magazine_size="1" 
 	can_shoot_standing="1" 
 	suppressed="0" 
-	name="M1897-[Burst Impact]" 
+	name="Winchester Model 1897-[Burst Impact]" 
 	class="1" 
 	reload_one_at_a_time="1"
 	sight_range_modifier="1" 
@@ -122,7 +122,7 @@
     </projectile>
     
     <!--Accuracy, Movement speed-->
-    
+    <stance state_key="running" accuracy="0.55" />
 	<stance state_key="walking" accuracy="0.65" />
     <stance state_key="crouch_moving" accuracy="0.6" />
     <stance state_key="prone_moving" accuracy="0.6" />

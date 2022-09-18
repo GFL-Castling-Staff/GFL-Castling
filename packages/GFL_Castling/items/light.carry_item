@@ -153,7 +153,7 @@
         <modifier class="hit_success_probability" value="-1.1" />
         <modifier class="detectability" value="-0.05" />
     </carry_item>
-    <carry_item key="light_9" time_to_live_out_in_the_open="15" name="[...See you in the new world]" transform_on_consume="light_10" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+    <carry_item key="light_9" time_to_live_out_in_the_open="15" name='["The Hero"]' transform_on_consume="light_10" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
         <hud_icon filename="light_0.png"/>
         <capacity value="1" source="rank" source_value="0"/>
         <commonness value="0.001" in_stock="0" can_respawn_with="1"/>

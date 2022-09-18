@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projectile class="grenade" name="Anti Personal Grenade" slot="2" pulldown_in_air="45.0" key="std_ap_grenade.projectile" >
     <tag name="grenade"/>
-    <result class="blast" damage="8.1" radius="12" decal="1" push="0.3" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0" />
+    <result class="blast" damage="8.1" radius="12" decal="1" push="0.75" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0" />
     <trigger class="impact">
         <collider class="character" enabled="1" faction_compare="not_equal"/>
     </trigger>
@@ -33,9 +33,9 @@
     <effect class="result" key="terrain" ref="ShadowSmoke" shadow="1" />
     <effect class="result" key="terrain" ref="Shine" lighting="0" />
     <effect class="result" key="terrain" ref="Godray" lighting="0" />
-    <effect class="result" type="splat_map" surface_tag="" size="3.0" atlas_index="0" layer="1" />
-    <effect class="result" type="splat_map" surface_tag="" size="5.0" atlas_index="4" layer="0" />
-    <effect class="result" type="splat_map" surface_tag="" size="6.0" atlas_index="0" layer="2" additive="0" />
+    <effect class="result" type="splat_map" surface_tag="" size="6.0" atlas_index="0" layer="1" />
+    <effect class="result" type="splat_map" surface_tag="" size="8.0" atlas_index="4" layer="0" />
+    <effect class="result" type="splat_map" surface_tag="" size="10.0" atlas_index="0" layer="2" additive="0" />
     <!-- remove top snow everywhere -->
     <effect class="result" key="terrain" ref="Shine" lighting="0" />
     <effect class="result" key="terrain" ref="Godray" lighting="0" />

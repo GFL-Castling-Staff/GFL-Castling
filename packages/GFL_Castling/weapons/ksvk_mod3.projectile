@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<projectile class="bullet" name="NTW20" slot="1" pulldown_in_air="4">
-    <result class="blast" radius="4" damage="3.5" push="0.2" decal="0" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0" />
+<projectile class="bullet" name="AP bullet" key="ksvk_mod3.projectile" slot="1" pulldown_in_air="4">
+    <result class="blast" radius="2.5" damage="12" push="0.6" decal="0" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0" />
     <trigger class="impact" />
     <rotation class="motion" />
 
@@ -39,12 +39,34 @@
     <sound class="result" key="vehicle" tag="metal_dumpster" file="dumpster_bullet_02.wav" pitch_variety="0.4" volume="1.0" />              
 
     <sound class="result" key="static_object" copy="terrain" />
-    
-    <effect class="result" key="terrain" ref="result_ksvk" use_surface_color="1" />
-    <effect class="result" key="vehicle" ref="result_ksvk" use_surface_color="1" />
-    <effect class="result" key="static_object" ref="result_ksvk" use_surface_color="1" />
-    <effect class="result" key="charater" ref="result_ksvk" use_surface_color="1" />
 
+    <effect class="result" key="terrain" ref="hitGround_20mm" use_surface_color="1" />
+    <effect class="result" key="terrain" ref="BulletImpactDust4" />
+    <effect class="result" key="terrain" ref="BulletImpactDust5" />
+    <effect class="result" key="terrain" ref="BulletImpactDust6" />
+
+    <effect class="result" key="vehicle" ref="Burst" use_surface_color="1" />
+    <effect class="result" key="vehicle" ref="hitMetal" />
+    <effect class="result" key="vehicle" ref="hitMetal_1" />
+    <effect class="result" key="static_object" copy="terrain" />
+
+    <effect class="result" key="shield" ref="hitMetal" />
+    <effect class="result" key="shield" ref="hitMetal_1" />
+
+    <effect class="result" key="terrain" ref="result_ksvk"  />
+    <effect class="result" key="vehicle" ref="result_ksvk"  />
+    <effect class="result" key="static_object" ref="result_ksvk" />
+    <effect class="result" key="charater" ref="result_ksvk" />
+    <effect class="result" key="shield" ref="result_ksvk"  />
+    <effect class="result" key="vehicle" ref="result_ksvk" />
+
+    <effect class="result" key="terrain" ref="ground_break" />
+
+    <effect class="result" type="splat_map" surface_tag="" size="2.5" atlas_index="0" layer="1" />
+    <effect class="result" type="splat_map" surface_tag="" size="3.0" atlas_index="4" layer="0" />
+    <effect class="result" type="splat_map" surface_tag="" size="3.5" atlas_index="0" layer="2" additive="0" />
+    <effect class="result" key="character" ref="common_hit_effect_1" lighting="0"/>
+    <effect class="result" key="character" ref="common_hit_effect_2" lighting="0" />
     <trail probability="1.0" key="bullet_new"/>
 
 </projectile>

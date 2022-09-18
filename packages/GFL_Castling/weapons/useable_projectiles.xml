@@ -5,7 +5,6 @@
 	<projectile file="icecream.projectile" />
 	<projectile file="88_HEAT.projectile" />
     <projectile file="m4a1mod3_skill_s.projectile" />
-    <projectile file="firework_s.projectile" />
 	<projectile file="narciss.projectile" />
 	<projectile file="gkw_cz75_axe.projectile" />
 
@@ -29,7 +28,9 @@
 	<projectile file="destroyer_skill.projectile"/>
 	<projectile file="excutioner_skill.projectile"/>
 	<projectile file="baibaozi_skill.projectile"/>
-	
+
+	<!--KCCO-->
+	<projectile file="kcco_ap_grenade.projectile"/>
 	<projectile file="kcco_smartgrenade.throwable"/>
 	<projectile file="kcco_smartgrenade_2.projectile"/>
 	<projectile file="kcco_smartgrenade_3.projectile"/>
@@ -67,16 +68,34 @@
 	<projectile file="kcco_tracer_dart_a.projectile"/>	
 	<projectile file="kcco_tracer_dart_r.projectile"/>	
 	
+	<projectile file="kcco_smartbullet.projectile"/>	
+	<projectile file="kcco_smartbullet_s.projectile"/>	
+	<projectile file="kcco_smartbullet_0.projectile"/>	
+	<projectile file="kcco_smartbullet_1.projectile"/>	
+	<projectile file="kcco_smartbullet_2.projectile"/>	
+	<projectile file="kcco_smartbullet_3.projectile"/>	
+	<projectile file="kcco_smartbullet_4.projectile"/>	
+		
 	<projectile file="ppk_tracer_dart_1.projectile"/>	
 	<projectile file="ppk_tracer_dart_2.projectile"/>
 	<projectile file="ppk_tracer_dart_3.projectile"/>	
 	<projectile file="ppk_tracer_dart_4.projectile"/>		
 	<projectile file="ppk_artillery.projectile"/>	
 	
+	<projectile file="ff_alchemist_skill_scan.projectile"/>	
+	<projectile file="ff_alchemist_skill_kill.projectile"/>	
+	
+	<projectile file="88typeGUNDAM_rocket.projectile"/>	
+	
 	<projectile file="ASW_A10_strafe.projectile"/>
+	<projectile file="ASW_A10_rocket.projectile"/>
 	<projectile file="a10_warthog_shadow.projectile"/>
 	<projectile file="ASW_IonCannon_strafe.projectile"/>
+	<projectile file="ASW_AC130_breath.projectile"/>
+	<projectile file="dragons_breath_ac130.projectile"/>
+	<projectile file="ASW_AC130_NTW.projectile"/>
 	
 	<projectile file="dragons_breath.projectile"/>
-
+	<projectile file="fairy_command_defence.projectile"/>
+	<projectile file="standard_tactical_bullet.projectile"/>
 </projectiles>

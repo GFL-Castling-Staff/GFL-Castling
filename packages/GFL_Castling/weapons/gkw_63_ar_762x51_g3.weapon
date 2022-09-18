@@ -18,22 +18,22 @@
     sustained_fire_diminish_rate="1.7" 
     sustained_fire_grow_step="0.5" />
     <commonness value="0.2" in_stock="1" can_respawn_with="1" />
-    <animation key="recoil" ref="12" />
-    <animation key="recoil" ref="13" />
-    <animation key="recoil" ref="14" />
+    <animation key="recoil" animation_key="recoil1" />
+    <animation key="recoil" animation_key="recoil2" />
+    <animation key="recoil" animation_key="recoil3" />
     <animation key="recoil" stance_key="prone" animation_key="recoil1, prone" />
     <animation key="recoil" stance_key="prone" animation_key="recoil2, prone" />
     <animation key="recoil" stance_key="prone" animation_key="recoil3, prone" />
-    <animation state_key="hold_on_wall" ref="1" />
+    <animation state_key="hold_on_wall" animation_key="still" />
     <animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
     <animation state_key="stabbing" animation_key="melee, quick knife" />
     <animation state_key="stabbing" animation_key="pistol whip 3" />
     <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
     <inventory encumbrance="10.0" buy_price="7.0" sell_price="7.0" />
-    <sound key="fire" fileref="g3_fire_FromBF2.wav" pitch_variety="0.05" volume="1" />
-    <sound key="magazine_out" fileref="g3_mgz_out_FromCOD4R.wav" volume="0.9" />
-    <sound key="magazine_in" fileref="g3_mgz_in_FromCOD4R.wav" volume="0.9" />
-    <sound key="cycle" fileref="g3_cycle_FromCOD4R.wav" volume="0.9" />
+    <sound key="fire" fileref="g3_fire_FromCOD17.wav" pitch_variety="0.05" volume="1.2" />
+    <sound key="magazine_out" fileref="g3_mgz_out_FromCOD17.wav" volume="0.4" />
+    <sound key="magazine_in" fileref="g3_mgz_in_FromCOD17.wav" volume="0.4" />
+    <sound key="cycle" fileref="g3_cycle_FromCOD17.wav" volume="0.4" />
     <sound class="impact" fileref="rifle_drop.wav" />
     <model filename="gkw_ar_g3.xml" />
     <hud_icon filename="gkw_g3.png" />

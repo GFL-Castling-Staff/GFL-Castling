@@ -1,78 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapon file="paradeus.base_weapon" key="parw_thrower.weapon">
-
 	<tag name="shotgun" />
-
-    <!--Weapon specifications-->
-    
-    <specification 
-	retrigger_time="0.2" 
-	accuracy_factor="0.9" 
-	sustained_fire_grow_step="1.7" 
-	sustained_fire_diminish_rate="0.7" 
+	<!--Weapon specifications-->
+	<specification 
+	retrigger_time="0.3" 
+	accuracy_factor="0.85" 
+	sustained_fire_grow_step="2.0" 
+	sustained_fire_diminish_rate="1.0" 
 	magazine_size="6" 
 	can_shoot_standing="1" 
 	suppressed="0" 
-	name="Thrower" 
+	name="Grenadier" 
 	class="4" 
 	burst_shots="3"
-	last_burst_retrigger_time="0.8"
+	last_burst_retrigger_time="1.0"
 	reload_one_at_a_time="0"
-	sight_range_modifier="0.7" 
+	sight_range_modifier="1.0" 
 	projectile_speed="90" 
 	barrel_offset="0.4" 
 	projectiles_per_shot="7"
-	spread_range="0.3"
+	spread_range="0.35"
 	 />
-	
 	<!--Animations-->
-	<inventory encumbrance="23.0" buy_price="0.0" sell_price="0.0" />
-
-	<animation key="recoil" ref="12" />
-	<animation key="recoil" ref="13" />
-	<animation key="recoil" ref="14" />
+	<inventory encumbrance="20.0" buy_price="0.0" sell_price="0.0" />
+	<animation key="recoil" animation_key="recoil1" />
+	<animation key="recoil" animation_key="recoil2" />
+	<animation key="recoil" animation_key="recoil3" />
 	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone" />
 	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone" />
 	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone" />
-    <animation key="reload" animation_key="reloading, magazine rifle 1.5" />
-	<animation state_key="hold_on_wall" ref="1" />
+	<animation key="reload" animation_key="reloading, magazine rifle 1.2" />
+	<animation state_key="hold_on_wall" animation_key="still" />
 	<animation state_key="walking" animation_key="walking, hip fire" />
-    <animation state_key="walking_backwards" animation_key="walking backwards, hip fire" />
-	
-    <animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
-	
+	<animation state_key="walking_backwards" animation_key="walking backwards, hip fire" />
+	<animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
 	<!--Sounds-->
-	
-    <sound key="fire" fileref="thrower_fire_FromSAM4_1.wav" volume="1" />
-	<sound key="fire" fileref="thrower_fire_FromSAM4_2.wav" volume="1" />
-    <sound key="reload_one" fileref="Liberator_reload_FromCODOLRanger.wav" volume="0.7"  />
+	<sound key="fire" fileref="thrower_fire_FromSAM4_1.wav" volume="0.85" />
+	<sound key="fire" fileref="thrower_fire_FromSAM4_2.wav" volume="0.85" />
+	<sound key="reload_one" fileref="Liberator_reload_FromCODOLRanger.wav" volume="0.7"  />
 	<sound key="cycle" fileref="Liberator_reload_FromCODOLRanger.wav" />
-    <sound class="impact" fileref="rifle_drop.wav" />
-   
+	<sound class="impact" fileref="rifle_drop.wav" />
 	<!--Model, Icon, Cost-->
-   
-    <model filename="parw_thrower_gun.xml" />
-    <hud_icon filename="parw_grenadier.png" />
-
-
-	
+	<model filename="parw_thrower_gun.xml" />
+	<hud_icon filename="parw_grenadier.png" />
 	<!--Ballistics-->
-	
-    <weak_hand_hold offset="0.3" />
-    <projectile file="bullet_paradeus.projectile">
-        <result class="hit" 
-        kill_probability="1.5" 
-		kill_decay_start_time="0.2" 
-        kill_decay_end_time="1.2" />
-    </projectile>
-    
-    <!--Accuracy, Movement speed-->
-    
+	<weak_hand_hold offset="0.3" />
+	<projectile file="bullet_paradeus.projectile">
+		<result class="hit" 
+        kill_probability="2" 
+		kill_decay_start_time="0.06" 
+        kill_decay_end_time="0.8" />
+	</projectile>
+	<!--Accuracy, Movement speed-->
+	<stance state_key="running" accuracy="0.5" />
 	<stance state_key="walking" accuracy="0.5" />
-    <stance state_key="crouch_moving" accuracy="0.4" />
-    <stance state_key="prone_moving" accuracy="0.4" />
-    <stance state_key="standing" accuracy="0.55"/>
-    <stance state_key="crouching" accuracy="0.6" />
-    <stance state_key="prone" accuracy="0.65" />
-    <stance state_key="over_wall" accuracy="0.65" />  
+	<stance state_key="crouch_moving" accuracy="0.4" />
+	<stance state_key="prone_moving" accuracy="0.4" />
+	<stance state_key="standing" accuracy="0.55"/>
+	<stance state_key="crouching" accuracy="0.6" />
+	<stance state_key="prone" accuracy="0.65" />
+	<stance state_key="over_wall" accuracy="0.65" />
 </weapon>

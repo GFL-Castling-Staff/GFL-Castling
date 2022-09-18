@@ -19,10 +19,10 @@
     spread_range="0.3" />
 
 
-	<animation key="recoil"  ref="12" />
-	<animation key="recoil"  ref="13" />
-	<animation key="recoil"  ref="14" />
-    <animation state_key="cycle" ref="28" />
+	<animation key="recoil"  animation_key="recoil1" />
+	<animation key="recoil"  animation_key="recoil2" />
+	<animation key="recoil"  animation_key="recoil3" />
+    <animation state_key="cycle" animation_key="cycle pump action" />
     <animation key="reload" animation_key="reloading, magazine rifle 1.5" />
     <commonness value="1.5" in_stock="1" />
 	

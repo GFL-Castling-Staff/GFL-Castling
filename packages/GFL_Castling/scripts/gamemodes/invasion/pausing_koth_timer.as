@@ -7,22 +7,29 @@ class PausingKothTimer : Tracker {
 	protected GameModeInvasion@ m_metagame;
 	protected bool m_started;
 	protected float m_time;
+	protected bool m_bgm;
 
 	// --------------------------------------------
-	PausingKothTimer(GameModeInvasion@ metagame, float time) {
+	PausingKothTimer(GameModeInvasion@ metagame, float time,bool bgm = true) {
 		super();
 
 		@m_metagame = @metagame;
 		m_started = false;
 		m_time = time;
+		m_bgm = bgm;
 	}
 
 	// --------------------------------------------
 	void start() {
 		_log("starting PausingKothTimer", 1);
 		m_started = true;
-		
 		m_metagame.getComms().send("<command class='set_game_timer' faction_id='0' pause='1' time='" + m_time + "' />");
+		XmlElement command("command");
+		command.setStringAttribute("class", "change_game_settings");
+		XmlElement f1("faction");
+		f1.setIntAttribute("disable_enemy_spawnpoints_soldier_count_offset", -100);
+		command.appendChild(f1);
+		m_metagame.getComms().send(command);
 		refresh();
 	}
 
@@ -43,7 +50,10 @@ class PausingKothTimer : Tracker {
 	protected void refresh() {
         // query about bases
 		array<const XmlElement@> baseList = getBases(m_metagame);
-		
+		if(m_bgm){
+			playSoundtrack(m_metagame,"soundtrack_koth.wav");
+		}
+
 		int winner = -1;
 		bool pause = false;
 		for (uint i = 0; i < baseList.size(); ++i) {

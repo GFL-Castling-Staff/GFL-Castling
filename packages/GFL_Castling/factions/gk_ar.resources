@@ -32,8 +32,8 @@
 	<weapon key="gkw_fal.weapon" />
 	<weapon key="gkw_fal_2406.weapon" />
 	<weapon key="gkw_fal_308.weapon" />
-	<weapon key="gkw_fnfnc.weapon" />
-	<weapon key="gkw_fnfnc_1406.weapon" />
+	<weapon key="gkw_fnc.weapon" />
+	<weapon key="gkw_fnc_1406.weapon" />
 	<weapon key="gkw_g11.weapon" />
 	<weapon key="gkw_g11mod3.weapon" />
 	<weapon key="gkw_g11_538.weapon" />
@@ -59,7 +59,6 @@
 	<weapon key="gkw_m4a1mod3.weapon" />
 	<weapon key="gkw_m4a1mod3_skill.weapon" />
 	<weapon key="gkw_m4sopmodii.weapon" />
-	<weapon key="gkw_m4sopmodii_531.weapon" />
 	<weapon key="gkw_m4sopmodiimod3.weapon" />
 	<weapon key="gkw_mdr.weapon" />
 	<weapon key="gkw_ots14.weapon" />
@@ -100,17 +99,8 @@
 	<weapon key="gkw_galilmod3.weapon" />
 	<weapon key="medikit.weapon" />
 	<weapon key="vest_repair.weapon" />
-	<!-- 护甲 -->
-	<carry_item key="exo_t1.carry_item" />
-	<carry_item key="exo_t2.carry_item" />
-	<carry_item key="exo_t3.carry_item" />
-	<carry_item key="exo_t4.carry_item" />
-	<carry_item key="exo_t5_16lab.carry_item" />
-	<carry_item key="exo_x_t1.carry_item" />
-	<carry_item key="exo_x_t2.carry_item" />
-	<carry_item key="exo_x_t3.carry_item" />
-	<carry_item key="exo_x_t4.carry_item" />
 
 	<projectile key="c4.projectile" />
-
+	<projectile key="hand_88grenade.projectile" />
+	<weapon key="gkw_88rocker.weapon" />
 </resources>

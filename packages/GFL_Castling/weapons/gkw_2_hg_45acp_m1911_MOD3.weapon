@@ -16,13 +16,13 @@
 	slot="0"
 	reload_one_at_a_time="0"
 	sight_range_modifier="1.0"
-	projectile_speed="85"
+	projectile_speed="120"
 	burst_shots="1"
-	projectiles_per_shot="12"
+	projectiles_per_shot="14"
 	use_basic_muzzle_smoke_effect="0"
 	stab_enabled="1"/>
 	<commonness value="0.01" in_stock="0" can_respawn_with="1" />
-	<inventory encumbrance="6.0" buy_price="50.0" sell_price="50.0" />
+	<inventory encumbrance="6.0" buy_price="150.0" sell_price="50.0" />
     <capacity value="1" source="rank" source_value="0.0" />
 	<!--Animations-->
 	<animation state_key="recoil"	animation_key="recoil, pistol dual 1" />
@@ -69,7 +69,7 @@
     
     <weak_hand_hold offset="0.1" />
     <projectile file="bullet.projectile" time_to_live="0.3">
-        <result class="blast" radius="2.5" damage="0.2" push="0.2" decal="1" faction_compare="not_equal" damage_as_probability="1"/>
+        <result class="blast" radius="2.5" damage="0.3" push="0.2" decal="1" faction_compare="not_equal" damage_as_probability="1"/>
     </projectile>
     
     <!--Accuracy, Movement speed-->
@@ -81,7 +81,7 @@
     <stance state_key="standing" accuracy="0.9" />
     <stance state_key="crouching" accuracy="0.95" />
     <stance state_key="prone" accuracy="1" />
-	<modifier class="speed" value="1.15" />
+	<modifier class="speed" value="1.2" />
 	<modifier class="hit_success_probability" value="-0.2" />
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0" />
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0" />

@@ -13,91 +13,22 @@
 	/>
 
 	<rotation class="motion" />
-	
 	<commonness value="0.0" />
 
+    <effect class="result" key="vehicle" ref="Burst" use_surface_color="1" />
+    <effect class="result" key="vehicle" ref="hitMetal" />
+    <effect class="result" key="vehicle" ref="hitMetal_1" />
+    <effect class="result" key="vehicle" ref="BulletImpact" />
+    <effect class="result" key="character" copy="vehicle" />
+    <effect class="result" key="shield" copy="vehicle" />
 
- 
-    <sound class="result" key="terrain" copy="other" />
-    <sound class="result" key="static_object" copy="other" />
-    <sound class="result" key="character" copy="other" />
-
-
-
-
-
-    <sound class="result" key="terrain" fileref="ricochet1.wav" />
-    <sound class="result" key="terrain" fileref="ricochet2.wav" />
-    <sound class="result" key="terrain" fileref="ricochet3.wav" />
-    <sound class="result" key="terrain" fileref="ricochet4.wav" />
-
-    <sound class="result" key="shield" fileref="ricochet5.wav" />
-    <sound class="result" key="shield" fileref="ricochet6.wav" />
-    <sound class="result" key="shield" fileref="ricochet7.wav" />
-    
-    <sound class="result" key="character" fileref="impact_body2.wav" pitch_variety="0.4" volume="0.7" />
-    <sound class="result" key="character" fileref="impact_body3.wav" pitch_variety="0.4" volume="0.7" />
-    <sound class="result" key="character" fileref="impact_body4.wav" pitch_variety="0.4" volume="0.7" />
-
-    <sound class="result" key="vehicle" copy="terrain" />
-
-    <sound class="result" key="vehicle" tag="metal_thin" file="metal_thin_01.wav" pitch_variety="0.3" volume="0.5" />
-    <sound class="result" key="vehicle" tag="metal_thin" file="metal_thin_02.wav" pitch_variety="0.3" volume="0.5" />
-    <sound class="result" key="vehicle" tag="metal_thin" file="metal_thin_03.wav" pitch_variety="0.3" volume="0.5" />
-    <sound class="result" key="vehicle" tag="metal_thin" file="metal_thin_04.wav" pitch_variety="0.3" volume="0.5" />
-    <sound class="result" key="vehicle" tag="metal_thin" file="metal_thin_05.wav" pitch_variety="0.3" volume="0.5" />  
-    
-    <sound class="result" key="vehicle" tag="deco_car" file="metal_thin_06.wav" pitch_variety="0.3" volume="0.6" />    
-    <sound class="result" key="vehicle" tag="deco_car" file="metal_thin_07.wav" pitch_variety="0.3" volume="0.6" />
-    <sound class="result" key="vehicle" tag="deco_car" file="metal_thin_06.wav" pitch_variety="0.3" volume="0.6" />    
-    <sound class="result" key="vehicle" tag="deco_car" file="metal_thin_07.wav" pitch_variety="0.3" volume="0.8" />    
-    <sound class="result" key="vehicle" tag="deco_car" file="metal_thin_06.wav" pitch_variety="0.3" volume="0.5" />    
-    <sound class="result" key="vehicle" tag="deco_car" file="metal_thin_07.wav" pitch_variety="0.3" volume="0.5" />    
-    <sound class="result" key="vehicle" tag="deco_car" file="metal_thin_08.wav" pitch_variety="0.3" volume="0.7" />
-    <sound class="result" key="vehicle" tag="deco_car" file="metal_thin_08.wav" pitch_variety="0.3" volume="0.8" />
-
-    <sound class="result" key="vehicle" tag="metal_heavy" file="metal_heavy_01.wav" pitch_variety="0.3" volume="0.5" />
-    <sound class="result" key="vehicle" tag="metal_heavy" file="metal_heavy_02.wav" pitch_variety="0.3" volume="0.5" /> 
-    <sound class="result" key="vehicle" tag="metal_heavy" file="metal_heavy_03.wav" pitch_variety="0.3" volume="0.5" />       
-    
-    <sound class="result" key="vehicle" tag="sandbag" file="barrier_bullet_01.wav" pitch_variety="0.3" volume="0.8" />  
-    <sound class="result" key="vehicle" tag="sandbag" file="barrier_bullet_02.wav" pitch_variety="0.3" volume="0.8" /> 
-    <sound class="result" key="vehicle" tag="sandbag" file="barrier_bullet_03.wav" pitch_variety="0.3" volume="0.4" /> 
-    
-    <sound class="result" key="vehicle" tag="metal_dumpster" file="dumpster_bullet_01.wav" pitch_variety="0.4" volume="0.6" />  
-    <sound class="result" key="vehicle" tag="metal_dumpster" file="dumpster_bullet_01.wav" pitch_variety="0.4" volume="0.5" />    
-    <sound class="result" key="vehicle" tag="metal_dumpster" file="dumpster_bullet_02.wav" pitch_variety="0.4" volume="0.8" />              
-
-    <sound class="result" key="static_object" copy="terrain" />
-
-
-
-
-
-	<!-- <effect class="activated" ref="SmokePropulsion" /> -->
-	<effect class="activated" ref="DragonPropulsion" lighting="0" />   
-	<effect class="activated" ref="FlameSparkle" lighting="0" /> 
-
-	<!-- <effect class="result" ref="SmokePropulsionEnd" /> -->
-	<effect class="result" key="terrain" ref="FlamePropulsionEnd" lighting="0" /> 
-	<effect class="result" key="terrain" ref="FlameSparkleEnd" lighting="0" />
 	<effect class="result" key="terrain" ref="DragonSparkle" lighting="0" />
 	<effect class="result" key="terrain" ref="DragonFlame2" lighting="0" />    
-   
+    <effect class="result" key="terrain" ref="FlameSparkleEnd" lighting="0" />    
 
-	<!-- <effect class="result" type="splat_map" surface_tag="" size="3.0" atlas_index="0" layer="1" /> -->
-	<effect class="result" type="splat_map" surface_tag="" size="2.0" atlas_index="4" layer="0" />
+	<effect class="result" type="splat_map" surface_tag="" size="1.0" atlas_index="4" layer="0" />
 
-    
     <effect class="result" key="other" copy="terrain" />
     <effect class="result" key="vehicle" copy="terrain" />
-    <effect class="result" key="static_object" copy="terrain" />    
-    
-    <effect class="result" key="shield" ref="ShieldBurst" />   
-
-
-
-
-	<!-- <trail probability="1.0" key="DragonTrail" /> -->
-
+    <effect class="result" key="static_object" copy="terrain" />
 </projectile>

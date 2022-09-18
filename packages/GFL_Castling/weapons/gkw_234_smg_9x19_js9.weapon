@@ -18,10 +18,10 @@
 
     
 	<inventory  buy_price="9.0" sell_price="9.0" />
-    <sound key="fire" fileref="js9_fire_FromBF4.wav" pitch_variety="0.05" volume="1" />
-    <sound key="magazine_out" fileref="js9_mgz_out_FromWF.wav" volume="0.7" />
-    <sound key="magazine_in" fileref="js9_mgz_in_FromBF4.wav" volume="0.7" />
-    <sound key="cycle" fileref="js9_cycle_FromBF4.wav" volume="0.6" />
+    <sound key="fire" fileref="js9_fire_FromBF4.wav" pitch_variety="0.05" volume="1.1" />
+    <sound key="magazine_out" fileref="js9_mgz_out_FromCOD17.wav" volume="0.6" />
+    <sound key="magazine_in" fileref="js9_mgz_in_FromCOD17.wav" volume="0.6" />
+    <sound key="cycle" fileref="js9_cycle_FromCOD17.wav" volume="0.6" />
     <sound class="impact" fileref="rifle_drop.wav" />    
     <model filename="gkw_smg_js9.xml" />
 

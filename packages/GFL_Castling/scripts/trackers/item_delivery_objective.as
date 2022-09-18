@@ -8,6 +8,7 @@
 // generic trackers
 #include "resource_unlocker.as"
 #include "item_delivery_organizer.as"
+//Adapted and optimizated by NetherCrow
 
 // ------------------------------------------------------------------------------------------------
 interface ItemDeliveryRewarder {

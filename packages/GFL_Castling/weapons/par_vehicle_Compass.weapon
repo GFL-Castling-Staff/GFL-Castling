@@ -18,13 +18,13 @@
     class="0" 
     projectile_speed="0.0" />
     
-    <animation key="recoil" ref="12" />
-    <animation key="recoil" ref="13" />
-    <animation key="recoil" ref="14" />
-    <animation key="reload" ref="33" />
-    <animation key="hold" ref="32" />
-    <animation key="hold_on_wall" ref="1" />
-    <animation key="walking" ref="31" />
+    <animation key="recoil" animation_key="recoil1" />
+    <animation key="recoil" animation_key="recoil2" />
+    <animation key="recoil" animation_key="recoil3" />
+    <animation key="reload" animation_key="reloading, Machine gun 2.0" />
+    <animation key="hold" animation_key="still, heavy weapon" />
+    <animation key="hold_on_wall" animation_key="still" />
+    <animation key="walking" animation_key="walking, heavy weapon" />
     <sound key="fire" fileref="minigun_From_payday2.wav" pitch_variety="0.05" volume="0.1" />
     <sound key="magazine_out" fileref="mg_clip_out.wav" />
     <sound key="magazine_in" fileref="mg_clip_in.wav" />
@@ -58,13 +58,13 @@
     class="0" 
     projectile_speed="120.0" />
     
-    <animation key="recoil" ref="12" />
-    <animation key="recoil" ref="13" />
-    <animation key="recoil" ref="14" />
-    <animation key="reload" ref="33" />
-    <animation key="hold" ref="32" />
-    <animation key="hold_on_wall" ref="1" />
-    <animation key="walking" ref="31" />
+    <animation key="recoil" animation_key="recoil1" />
+    <animation key="recoil" animation_key="recoil2" />
+    <animation key="recoil" animation_key="recoil3" />
+    <animation key="reload" animation_key="reloading, Machine gun 2.0" />
+    <animation key="hold" animation_key="still, heavy weapon" />
+    <animation key="hold_on_wall" animation_key="still" />
+    <animation key="walking" animation_key="walking, heavy weapon" />
     <sound key="fire" fileref="minigun_From_payday2.wav" pitch_variety="0.05" volume="0.1" />
     <sound key="magazine_out" fileref="mg_clip_out.wav" />
     <sound key="magazine_in" fileref="mg_clip_in.wav" />
@@ -100,13 +100,13 @@
     class="0" 
     projectile_speed="120.0" />
     
-    <animation key="recoil" ref="12" />
-    <animation key="recoil" ref="13" />
-    <animation key="recoil" ref="14" />
-    <animation key="reload" ref="33" />
-    <animation key="hold" ref="32" />
-    <animation key="hold_on_wall" ref="1" />
-    <animation key="walking" ref="31" />
+    <animation key="recoil" animation_key="recoil1" />
+    <animation key="recoil" animation_key="recoil2" />
+    <animation key="recoil" animation_key="recoil3" />
+    <animation key="reload" animation_key="reloading, Machine gun 2.0" />
+    <animation key="hold" animation_key="still, heavy weapon" />
+    <animation key="hold_on_wall" animation_key="still" />
+    <animation key="walking" animation_key="walking, heavy weapon" />
     <sound key="fire" fileref="minigun_From_payday2.wav" pitch_variety="0.05" volume="0.1" />
     <sound key="magazine_out" fileref="mg_clip_out.wav" />
     <sound key="magazine_in" fileref="mg_clip_in.wav" />

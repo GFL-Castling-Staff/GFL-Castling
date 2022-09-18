@@ -1,42 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <carry_items>
-    <carry_item key="costume_santa.carry_item" name="costume, santa" slot="1" transform_on_consume="costume_santa_1" time_to_live_out_in_the_open="60.0">
+    <carry_item key="costume_santa.carry_item" name="costume, santa" slot="1" transform_on_consume="costume_santa_1" time_to_live_out_in_the_open="0.0">
         <hud_icon filename="santa_1.png" />
-        <capacity value="0" source="rank" source_value="0.0" />
-        <capacity value="1" source="rank" source_value="0.05" />
-        <inventory encumbrance="3" price="200" />
-
+        <capacity value="1" source="rank" source_value="0.0" />
+        <inventory encumbrance="100" price="250" />
         <model mesh_filename="santa_vest.xml" />
-
-	<commonness value="0.0" in_stock="0" can_respawn_with="1" />
-  
+        <commonness value="0.0" in_stock="0" can_respawn_with="1" />
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="wound" consumes_item="1" />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="1"/>
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />   
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="death" output_character_state="wound" consumes_item="1" />
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
-	<!-- melee_hit goes right through, and doesn't consume -->  
-    <modifier class="detectability" value="+1.0" />
-  <modifier class="speed" value="1.0" />  
+        <modifier class="detectability" value="+1.0" />
+        <modifier class="speed" value="1.0" />
     </carry_item>
-	
-    <carry_item key="costume_santa_1" name="costume, santa, destroyed" slot="1" time_to_live_out_in_the_open="60.0">
+    <carry_item key="costume_santa_1" name="costume, santa, destroyed" slot="1" time_to_live_out_in_the_open="0.0">
         <hud_icon filename="santa_2.png" />
         <capacity value="0" source="rank" source_value="0.0" />
         <capacity value="1" source="rank" source_value="0.05" />
         <inventory encumbrance="3" price="1" />
-
         <model mesh_filename="santa_vest.xml" />
-
         <commonness value="0.0" in_stock="0" can_respawn_with="0" />
-
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="1" />
         <modifier class="projectile_hit_result" input_character_state="death" output_character_state="death" consumes_item="1" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="death" consumes_item="1"/>
-
-    <modifier class="detectability" value="+1.0" />
+        <modifier class="detectability" value="+1.0" />
     </carry_item>
-
-
 </carry_items>

@@ -18,18 +18,18 @@
         <inventory  buy_price="8.0" sell_price="8.0" />
         <commonness value="0" in_stock="0" can_respawn_with="1" />
         <next_in_chain key="gkw_tar21_1305_skill.weapon" share_ammo="1" />
-        <sound key="fire" fileref="tar21_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.0" />
-        <sound key="magazine_out" fileref="tar21_mgz_out_FromINS.wav" volume="1.1" />
-        <sound key="magazine_in" fileref="tar21_mgz_in_FromINS.wav" volume="1.1" />
-        <sound key="cycle" fileref="tar21_cycle_FromINS.wav" volume="1.1" />
+        <sound key="fire" fileref="tar21_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.1" />
+        <sound key="magazine_out" fileref="x95_mgz_out_FromCOD16.wav" volume="0.5"  />
+        <sound key="magazine_in" fileref="x95_mgz_in_FromCOD16.wav" volume="0.5"  />
+        <sound key="cycle" fileref="x95_cycle_FromCOD16.wav" volume="0.5"  />
         <sound key="cycle" fileref="TAR21_ATTACK_JP.wav" volume="0.8" pitch_variety="0"/>
-        <sound key="cycle" fileref="tar21_cycle_FromINS.wav" volume="1.1" />
+        <sound key="cycle" fileref="x95_cycle_FromCOD16.wav" volume="0.5"  />
         <sound key="cycle" fileref="TAR21_WIN_JP.wav" volume="0.8" pitch_variety="0"/>
-        <sound key="cycle" fileref="tar21_cycle_FromINS.wav" volume="1.1" />
+        <sound key="cycle" fileref="x95_cycle_FromCOD16.wav" volume="0.5"  />
         <sound key="cycle" fileref="TAR21_MEET_JP.wav" volume="0.8" pitch_variety="0"/>
-        <sound key="cycle" fileref="tar21_cycle_FromINS.wav" volume="1.1" />
+        <sound key="cycle" fileref="x95_cycle_FromCOD16.wav" volume="0.5"  />
         <sound key="cycle" fileref="TAR21_LOADING_JP.wav" volume="0.8" pitch_variety="0"/>
-        <sound key="cycle" fileref="tar21_cycle_FromINS.wav" volume="1.1" />
+        <sound key="cycle" fileref="x95_cycle_FromCOD16.wav" volume="0.5"  />
         <sound key="cycle" fileref="TAR21_PHRASE_JP.wav" volume="0.8" pitch_variety="0"/>
         <sound class="impact" fileref="rifle_drop.wav" />
         <model filename="gkw_ar_tar21_from_Eisen.xml" />
@@ -67,17 +67,17 @@
         <inventory  buy_price="8.0" sell_price="8.0" />
         <next_in_chain key="gkw_tar21_1305.weapon" share_ammo="1" />
         <commonness value="0" in_stock="0" can_respawn_with="1" />
-        <sound key="fire" fileref="tar21_fire_FromINS.wav" pitch_variety="0.05" volume="1.2" />
-        <sound key="magazine_out" fileref="tar21_mgz_out_FromINS.wav" volume="1.1" />
-        <sound key="magazine_in" fileref="tar21_mgz_in_FromINS.wav" volume="1.1" />
+        <sound key="fire" fileref="tar21skill_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.1" />
+        <sound key="magazine_out" fileref="x95_mgz_out_FromCOD16.wav" volume="0.5"  />
+        <sound key="magazine_in" fileref="x95_mgz_in_FromCOD16.wav" volume="0.5"  />
         <sound key="cycle" fileref="TAR21_SKILL1_JP.wav" volume="0.8" pitch_variety="0"/>
-        <sound key="cycle" fileref="tar21_cycle_FromINS.wav" volume="1.1" />
+        <sound key="cycle" fileref="x95_cycle_FromCOD16.wav" volume="0.5"  />
         <sound key="cycle" fileref="TAR21_SKILL2_JP.wav" volume="0.8" pitch_variety="0"/>
-        <sound key="cycle" fileref="tar21_cycle_FromINS.wav" volume="1.1" />
+        <sound key="cycle" fileref="x95_cycle_FromCOD16.wav" volume="0.5"  />
         <sound key="cycle" fileref="TAR21_SKILL3_JP.wav" volume="0.8" pitch_variety="0"/>
-        <sound key="cycle" fileref="tar21_cycle_FromINS.wav" volume="1.1" />
+        <sound key="cycle" fileref="x95_cycle_FromCOD16.wav" volume="0.5"  />
         <sound key="cycle" fileref="TAR21_FORMATION_JP.wav" volume="0.8" pitch_variety="0"/>
-        <sound key="cycle" fileref="tar21_cycle_FromINS.wav" volume="1.1" />
+        <sound key="cycle" fileref="x95_cycle_FromCOD16.wav" volume="0.5"  />
         <sound key="cycle" fileref="TAR21_GOATTACK_JP.wav" volume="0.8" pitch_variety="0"/>
         <sound class="impact" fileref="rifle_drop.wav" />
         <model filename="gkw_ar_tar21_from_Eisen.xml" />

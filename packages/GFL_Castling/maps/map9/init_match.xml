@@ -1,0 +1,144 @@
+<commands>
+  <!-- start_game command: new game menu picks up defaults from here and allows user to override certain settings -->
+  <command 
+	  class="start_game" 
+	  vehicles="1" 
+	  max_soldiers="220" 
+	  player_bot_compensation="4" 
+	  xp_multiplier="1.0"
+	  rp_multiplier="1.0"
+	  friendly_fire="0" 
+	  base_capture_system="any" >
+
+    <faction initial_over_capacity="0" ai_accuracy="0.94" capacity_multiplier="1.0" />
+    <faction initial_over_capacity="0" ai_accuracy="0.94" />
+  </command>
+  <command 
+	  class="commander_ai" 
+	  faction="0"
+	  base_defense="0.2"
+	  border_defense="0.2">
+  </command>
+  <command 
+	  class="commander_ai" 
+	  faction="2"
+	  base_defense="0.45"
+	  border_defense="0.2">
+  </command>
+  <command
+	  class="faction_resources"
+	  faction_id="0">
+    <vehicle key="radar_truck.vehicle" enabled="0"/>
+  </command>
+
+<!--> <command 
+	class="create_instance" 
+	faction_id="1"
+	position="134 9 433"
+	offset="0 0 0"
+	character_id="0" 
+	instance_class="projectile"
+	instance_key="at_mine.projectile" >
+</command> -->
+
+ <command 
+	class="create_instance" 
+	faction_id="1"
+	position="820 0 463"
+	offset="0 1 0"
+	character_id="0" 
+	instance_class="projectile"
+	instance_key="naval_mine.projectile" >
+</command>
+
+ <command 
+	class="create_instance" 
+	faction_id="1"
+	position="851 0 469"
+	offset="0 1 0"
+	character_id="0" 
+	instance_class="projectile"
+	instance_key="naval_mine.projectile" >
+</command>
+
+ <command 
+	class="create_instance" 
+	faction_id="1"
+	position="839 0 487"
+	offset="0 1 0"
+	character_id="0" 
+	instance_class="projectile"
+	instance_key="naval_mine.projectile" >
+</command>
+
+ <command 
+	class="create_instance" 
+	faction_id="1"
+	position="819 0 482"
+	offset="0 1 0"
+	character_id="0" 
+	instance_class="projectile"
+	instance_key="naval_mine.projectile" >
+</command>
+
+ <command 
+	class="create_instance" 
+	faction_id="1"
+	position="730 0 325"
+	offset="0 1 0"
+	character_id="0" 
+	instance_class="projectile"
+	instance_key="naval_mine.projectile" >
+</command>
+
+ <command 
+	class="create_instance" 
+	faction_id="1"
+	position="740 0 310"
+	offset="0 1 0"
+	character_id="0" 
+	instance_class="projectile"
+	instance_key="naval_mine.projectile" >
+</command>
+
+ <command 
+	class="create_instance" 
+	faction_id="1"
+	position="730 0 295"
+	offset="0 1 0"
+	character_id="0" 
+	instance_class="projectile"
+	instance_key="naval_mine.projectile" >
+</command>
+
+ <command 
+	class="create_instance" 
+	faction_id="1"
+	position="760 0 320"
+	offset="0 1 0"
+	character_id="0" 
+	instance_class="projectile"
+	instance_key="naval_mine.projectile" >
+</command>
+
+ <command 
+	class="create_instance" 
+	faction_id="1"
+	position="770 0 305"
+	offset="0 1 0"
+	character_id="0" 
+	instance_class="projectile"
+	instance_key="naval_mine.projectile" >
+</command>
+
+ <command 
+	class="create_instance" 
+	faction_id="1"
+	position="760 0 290"
+	offset="0 1 0"
+	character_id="0" 
+	instance_class="projectile"
+	instance_key="naval_mine.projectile" >
+</command>
+
+</commands>

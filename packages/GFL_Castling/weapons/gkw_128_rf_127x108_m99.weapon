@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<weapon file="heavy_anti_materiel_rifle.animation_base" key="gkw_m99.weapon" >
-
+<weapon key="gkw_m99.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+<tag name="rifle" />
+<tag name="antiarmor" />
 
     <!--Weapon specifications-->
     
     <specification 
 	retrigger_time="-1.0" 
 	accuracy_factor="1" 
-	sustained_fire_grow_step="1.4" 
+	sustained_fire_grow_step="0" 
 	sustained_fire_diminish_rate="1.5" 
 	magazine_size="5" 
 	can_shoot_standing="0" 
@@ -16,19 +17,31 @@
 	suppressed="0" 
 	name="M99" 
 	class="4" 
+	slot="0"
 	reload_one_at_a_time="0" 
-	sight_range_modifier="3" 
-	projectile_speed="170.21" 
-	barrel_offset="0.4" 
+	sight_range_modifier="3.5" 
+	projectile_speed="224.21" 
+	barrel_offset="0.65" 
 	projectiles_per_shot="1"
-	last_burst_retrigger_time="0.333"
-	burst_shots="1"/>
+	last_burst_retrigger_time="0.5"
+	burst_shots="1"
+	stab_enabled="1"
+	carry_in_two_hands="1"/>
 	
-	<inventory  buy_price="80.0" sell_price="10.0" />
+	<commonness value="0.2" in_stock="0" can_respawn_with="1" />
+	<inventory encumbrance="20.0" buy_price="300.0" sell_price="200.0"/>
+	<capacity value="1" source="rank" source_value="0.0" />
 	<!--Animations-->
-	
 
-
+	<animation state_key="recoil" animation_key="recoil1, big" />
+	<animation key="recoil" stance_key="prone" animation_key="recoil1, big, prone" />
+	<animation key="hold" animation_key="still, heavy weapon" />
+	<animation state_key="hold_casual"	animation_key="still, carrying load" />
+    <animation state_key="running" animation_key="running, line infantry" />
+    <animation state_key="walking" animation_key="walking, line infantry" />
+    <animation state_key="walking_backwards" animation_key="walking, line infantry" />
+    <animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
+	<animation state_key="stabbing" animation_key="stabbing, bat" />
     <animation key="reload" animation_key="reloading, magazine rifle 1.5" />	
 	
 	<!--Sounds-->
@@ -50,21 +63,25 @@
 	
 
     <weak_hand_hold offset="0.3" />
-    <projectile file="bullet.projectile">
-        <result class="blast" damage="9.4"   radius="3.5" decal="1" push="0" character_state="death" 	faction_compare="not_equal"/>
+    <projectile file="ntw.projectile">
+        <result class="blast" damage="10.0" radius="2.5" decal="1" push="0.6" character_state="death" 	faction_compare="not_equal"/>
     </projectile>
     
     <!--Accuracy, Movement speed-->
 
-	<stance state_key="walking" accuracy="0.7" />
-    <stance state_key="crouch_moving" accuracy="0.7" />
-    <stance state_key="prone_moving" accuracy="0.7" />
-    <stance state_key="standing" accuracy="0.7"/>
-    <stance state_key="crouching" accuracy="0.95" />
-    <stance state_key="prone" accuracy="1" />
-    <stance state_key="over_wall" accuracy="1" />
-    <modifier class="speed" value="-0.1" /> 
-
-
-
+	<stance state_key="running" accuracy="1.0" />
+	<stance state_key="walking" accuracy="1.0" />
+	<stance state_key="crouch_moving" accuracy="1.0" />
+	<stance state_key="standing" accuracy="1.0" />
+	<stance state_key="crouching" accuracy="1.0" />
+	<stance state_key="prone" accuracy="1.0" />
+	<stance state_key="prone_moving" accuracy="1.0" />
+	<stance state_key="over_wall" accuracy="1.0" />
+	<modifier class="detectability" value="-0.1"/>
+	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0" />
+	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5" />
+    <target_factors tag="shotgun" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0" />
+    <target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0" />
+    <target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0" />
+    <target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0" />
 </weapon>

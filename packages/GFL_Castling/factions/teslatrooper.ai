@@ -15,7 +15,7 @@
 	<parameter class="choose_enemy_time" value="1.0" />
 	<parameter class="check_need_help_time" value="1.0" />
 	<parameter class="fighting_time_fire_not_open" value="3.0" />
-	<parameter class="cover_status_recheck_time" value="1.5" />
+	<parameter class="cover_status_recheck_time" value="4.0" />
 	<parameter class="deploy_recheck_time" value="5.0" />
 	<parameter class="monitor_enemies_to_stab_while_peace" value="1.0" />
 	<parameter class="crouching_near_leader_rejoin_range" value="0.0" />
@@ -89,7 +89,7 @@
 	<parameter class="deployment_area_utilization_factor" value="0.4" />
 	<parameter class="deployment_max_position_pick_attempts" value="2" />
 	<parameter class="fighting_approach_alarm_max_soldiers" value="12" /> 
-	<parameter class="accuracy_offset" value="0.02" /> 
+	<parameter class="accuracy_offset" value="-0.03" /> 
 	<parameter class="grenade_throw_hold_time" value="0.5" />
 	<parameter class="using_cover_min_time" value="0.0" />
 	<parameter class="using_cover_max_time" value="0.0" />
@@ -99,7 +99,7 @@
 	<parameter class="celebrating_comment_probability" value="0.4" /> 
 	<parameter class="celebrating_stab_probability" value="1.0" /> 
 	<parameter class="uses_vehicles" value="0" />
-	<parameter class="willingness_to_charge" value="0.7" />
+	<parameter class="willingness_to_charge" value="1.0" />
 	<parameter class="stab_range" value="5.0" />
-
+    <parameter class="fighting_regular_move_radius" value="20.0" />
 </ai>

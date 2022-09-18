@@ -1,49 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<weapon file="two_hands_smg.animation_base" key="gkw_qlz04_peak79.weapon">
-
-    <specification 
-		accuracy_factor="0.95" 
-		barrel_offset="0.4" 
-		class="0"
-        sight_range_modifier="1"
-		magazine_size="20" 
-		name="PEAK79(qlz04)" 
-		projectile_speed="120" 
-		retrigger_time="0.12" 
-		suppressed="0" 
-		sustained_fire_diminish_rate="2.1" 
-		sustained_fire_grow_step="0.3" />
-
-
-
-	<next_in_chain key="gkw_hvy_qlz04.weapon" share_ammo="0" />
-    <commonness value="0" in_stock="0" can_respawn_with="1" />
-	
-	
-
-    
-    <inventory  buy_price="80.0" sell_price="10.0" />
-    <sound key="fire" fileref="type79_fire_FromBF2.wav" pitch_variety="0.05" volume="1.2" />
-    <sound key="magazine_out" fileref="type79_mgz_out_FromBF2.wav" volume="0.8" />
-    <sound key="magazine_in" fileref="type79_mgz_in_FromBF2.wav" volume="0.8" />
-    <sound key="cycle" fileref="type79_cycle_FromBF2.wav" volume="0.8" />
-    <sound class="impact" fileref="rifle_drop.wav" volume="1"/>    
-    <model filename="gkw_smg_peak79.xml" />
-
-    <hud_icon filename="gkw_79type.png" />
-
-
-
-    <weak_hand_hold offset="0.2" />
+<weapon key="gkw_qlz04_peak79.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+    <specification accuracy_factor="0.95" barrel_offset="0.4" class="0" sight_range_modifier="1" magazine_size="20" name="PEAK79(qlz04)" projectile_speed="120" retrigger_time="0.12" suppressed="0" sustained_fire_diminish_rate="2.1" sustained_fire_grow_step="0.3" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
+    <next_in_chain key="gkw_hvy_qlz04.weapon" share_ammo="0"/>
+    <commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+    <inventory encumbrance="50.0" buy_price="180.0" sell_price="180.0"/>
+    <sound key="fire" fileref="type79_fire_FromBF2.wav" pitch_variety="0.05" volume="1.2"/>
+    <sound key="magazine_out" fileref="type79_mgz_out_FromBF2.wav" volume="0.8"/>
+    <sound key="magazine_in" fileref="type79_mgz_in_FromBF2.wav" volume="0.8"/>
+    <sound key="cycle" fileref="type79_cycle_FromBF2.wav" volume="0.8"/>
+    <sound class="impact" fileref="rifle_drop.wav" volume="1"/>
+    <model filename="gkw_smg_peak79.xml"/>
+    <hud_icon filename="gkw_79type.png"/>
+    <weak_hand_hold offset="0.2"/>
     <projectile file="bullet.projectile">
-        <result class="hit"  kill_probability="1.65" kill_probability_offset_on_successful_hit="0.4" kill_decay_start_time="0.2" kill_decay_end_time="0.96" />
+        <result class="hit" kill_probability="1.65" kill_probability_offset_on_successful_hit="0.4" kill_decay_start_time="0.2" kill_decay_end_time="0.96"/>
     </projectile>
-    
-    <stance state_key="running" accuracy="0.8" />
-    <stance state_key="walking" accuracy="0.85" />
-    <stance state_key="crouch_moving" accuracy="0.8" />
-    <stance state_key="prone_moving" accuracy="0.8" />
-    <stance state_key="standing" accuracy="0.9" />
-    <stance state_key="prone" accuracy="0.95" />
-    <modifier class="speed" value="0.12" />
+    <modifier class="speed" value="0.2"/>
+    <tag name="smg"/>
+    <capacity value="1" source="rank" source_value="0.0"/>
+    <sound class="impact" fileref="rifle_drop.wav"/>
+    <stance state_key="running" accuracy="0.8"/>
+    <stance state_key="walking" accuracy="0.85"/>
+    <stance state_key="crouch_moving" accuracy="0.8"/>
+    <stance state_key="prone_moving" accuracy="0.8"/>
+    <stance state_key="standing" accuracy="0.9"/>
+    <stance state_key="crouching" accuracy="0.9"/>
+    <stance state_key="prone" accuracy="0.95"/>
+    <stance state_key="over_wall" accuracy="1"/>
+    <target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
+    <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
+    <target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
+    <target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
+    <target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0"/>
+    <target_factors tag="commander" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0"/>
+    <animation key="recoil" animation_key="recoil1"/>
+    <animation key="recoil" animation_key="recoil2"/>
+    <animation key="recoil" animation_key="recoil3"/>
+    <animation key="recoil" stance_key="over_wall" animation_key="recoil1"/>
+    <animation key="recoil" stance_key="over_wall" animation_key="recoil2"/>
+    <animation key="recoil" stance_key="over_wall" animation_key="recoil3"/>
+    <animation key="recoil" stance_key="crouching" animation_key="recoil1"/>
+    <animation key="recoil" stance_key="crouching" animation_key="recoil2"/>
+    <animation key="recoil" stance_key="crouching" animation_key="recoil3"/>
+    <animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
+    <animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
+    <animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
+    <animation state_key="hold_on_wall" animation_key="still"/>
+    <animation state_key="celebrate_shoot" animation_key="celebrating, shooting"/>
+    <animation state_key="reload" animation_key="reloading, magazine rifle 0.9"/>
+    <animation state_key="stabbing" animation_key="melee, quick knife"/>
+    <animation state_key="stabbing" animation_key="pistol whip 3"/>
 </weapon>

@@ -6,6 +6,7 @@
 #include "query_helpers2.as"
 #include "GFLhelpers.as"
 #include "call_marker_tracker.as"
+//Author: NetherCrow
 
 class ManualCallTask{
     int m_characterId;
@@ -95,7 +96,7 @@ class ManualCall : Tracker {
                         FairyRequest.setDummyId(m_DummyCallID);
                         m_DummyCallID++;                        
                         CallTaskArray.insertLast(FairyRequest);
-                        addCastlnigMarker(FairyRequest);
+                        addCastlingMarker(FairyRequest);
                         _log("QueueLegeth:"+CallTaskArray.length());
                         sendFactionMessageKey(m_metagame,Faction,"Request trauma team support!");
                         sendFactionMessageKey(m_metagame,Faction,"Receive, transport aircraft is maneuvering");
@@ -136,7 +137,7 @@ class ManualCall : Tracker {
                         FairyRequest.setDummyId(m_DummyCallID);
                         m_DummyCallID++;                        
                         CallTaskArray.insertLast(FairyRequest);
-                        addCastlnigMarker(FairyRequest);                        
+                        addCastlingMarker(FairyRequest);                        
                         _log("QueueLegeth:"+CallTaskArray.length());
                         sendFactionMessageKey(m_metagame,Faction,"Request MG-SG echelon support!");
                         sendFactionMessageKey(m_metagame,Faction,"Receive, transport aircraft is maneuvering");
@@ -176,7 +177,7 @@ class ManualCall : Tracker {
                         FairyRequest.setDummyId(m_DummyCallID);
                         m_DummyCallID++;                        
                         CallTaskArray.insertLast(FairyRequest);
-                        addCastlnigMarker(FairyRequest);                   
+                        addCastlingMarker(FairyRequest);                   
                         _log("QueueLegeth:"+CallTaskArray.length());
                         sendFactionMessageKey(m_metagame,Faction,"Request HVY echelon support!");
                         sendFactionMessageKey(m_metagame,Faction,"Receive, transport aircraft is maneuvering");
@@ -216,7 +217,7 @@ class ManualCall : Tracker {
                         FairyRequest.setDummyId(m_DummyCallID);
                         m_DummyCallID++;                        
                         CallTaskArray.insertLast(FairyRequest);
-                        addCastlnigMarker(FairyRequest);                   
+                        addCastlingMarker(FairyRequest);                   
                         _log("QueueLegeth:"+CallTaskArray.length());
                         sendFactionMessageKey(m_metagame,Faction,"Request Barrier Fairy");
                         sendFactionMessageKey(m_metagame,Faction,"Armor Fortification in progress");
@@ -256,7 +257,7 @@ class ManualCall : Tracker {
                         FairyRequest.setDummyId(m_DummyCallID);
                         m_DummyCallID++;                        
                         CallTaskArray.insertLast(FairyRequest);
-                        addCastlnigMarker(FairyRequest);
+                        addCastlingMarker(FairyRequest);
                         _log("QueueLegeth:"+CallTaskArray.length());
                         sendFactionMessageKey(m_metagame,Faction,"Request Rescue Fairy support!");
                         sendFactionMessageKey(m_metagame,Faction,"Nano repair capsules in progress");
@@ -296,7 +297,7 @@ class ManualCall : Tracker {
                         FairyRequest.setDummyId(m_DummyCallID);
                         m_DummyCallID++;                        
                         CallTaskArray.insertLast(FairyRequest);
-                        addCastlnigMarker(FairyRequest);
+                        addCastlingMarker(FairyRequest);
                         _log("QueueLegeth:"+CallTaskArray.length());
                         sendFactionMessageKey(m_metagame,Faction,"Provocation Fairy");
                         sendFactionMessageKey(m_metagame,Faction,"Targetdrone,Unlock!");
@@ -315,19 +316,19 @@ class ManualCall : Tracker {
                 if(CallTaskArray[0].CallType=="medic_call" || CallTaskArray[0].CallType=="mgsg_call" || CallTaskArray[0].CallType=="hvy_call"){
                     playSoundAtLocation(m_metagame,"osprey.wav",CallTaskArray[0].m_factions,CallTaskArray[0].m_pos,7.0f);
                     m_metagame.getComms().send(CallTaskArray[0].Callkey);
-                    removeCastlnigMarker(CallTaskArray[0]);
+                    removeCastlingMarker(CallTaskArray[0]);
                     sendFactionMessageKey(m_metagame,CallTaskArray[0].m_factions,"Echelon enter the battlefield");
                 }
                 if(CallTaskArray[0].CallType=="target_call"){
                     playSoundAtLocation(m_metagame,"hello.wav",CallTaskArray[0].m_factions,CallTaskArray[0].m_pos,3.0f);
                     m_metagame.getComms().send(CallTaskArray[0].Callkey);
-                    removeCastlnigMarker(CallTaskArray[0]);
+                    removeCastlingMarker(CallTaskArray[0]);
                     sendFactionMessageKey(m_metagame,CallTaskArray[0].m_factions,"Targetdrone,Unlock!");
                 }
                 if(CallTaskArray[0].CallType=="rescue_call" || CallTaskArray[0].CallType=="repair_call"){
                     playSoundAtLocation(m_metagame,"woosh1.wav",CallTaskArray[0].m_factions,CallTaskArray[0].m_pos,3.0f);
                     m_metagame.getComms().send(CallTaskArray[0].Callkey);
-                    removeCastlnigMarker(CallTaskArray[0]);
+                    removeCastlingMarker(CallTaskArray[0]);
                     sendFactionMessageKey(m_metagame,CallTaskArray[0].m_factions,"Confirm, data reception is normal");
                 }
                 CallTaskArray.removeAt(0);
@@ -347,7 +348,7 @@ class ManualCall : Tracker {
 		return true;
 	}
 
-    void addCastlnigMarker(ManualCallTask@ info){
+    protected void addCastlingMarker(ManualCallTask@ info){
         int flagId = info.m_callId + 114514;
         XmlElement command("command");
             command.setStringAttribute("class", "set_marker");
@@ -366,7 +367,7 @@ class ManualCall : Tracker {
         m_metagame.getComms().send(command);
     }
 
-    void removeCastlnigMarker(ManualCallTask@ info){
+    protected void removeCastlingMarker(ManualCallTask@ info){
         int flagId = info.m_callId + 114514;
         XmlElement command("command");
             command.setStringAttribute("class", "set_marker");

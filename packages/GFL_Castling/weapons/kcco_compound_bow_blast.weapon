@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon file="KCCO.base_weapon" key="compound_bow_2.weapon">
+  <tag name="rifle" />
+  <specification 
+  retrigger_time="5.0" 
+  accuracy_factor="1.0"
+  sustained_fire_grow_step="2"
+  sustained_fire_diminish_rate="0.5"
+  magazine_size="100"
+  can_shoot_standing="1"
+  can_shoot_crouching="1"
+  can_shoot_prone="0"
+  sight_range_modifier="1.2"
+  suppressed="1"
+  name="Code:Centaurus"
+  class="0"
+  projectile_speed="180.0"
+  barrel_offset="0.55"
+  use_basic_muzzle_smoke_effect="0" />
+	<ballistics curve_height="30.0" near_far_distance="10.0" speed_estimation_near="180.0" speed_estimation_far="300.0" max_speed="300.0" randomness="0.0"/>
+  <animation state_key="recoil" animation_key="recoil, bow" />
+  <animation state_key="hold" animation_key="still, bow" />
+  <animation state_key="crouching" animation_key="crouch still, bow" />
+  <animation state_key="crouch_moving" animation_key="crouching forwards, bow" />
+  <animation state_key="crouch_moving_backwards" animation_key="crouching backwards, bow" />
+  <animation state_key="walking_backwards" animation_key="walking backwards, bow" />
+  <animation state_key="reload" animation_key="reload, bow" volume="0.7" />
+  <animation state_key="hold_on_wall" animation_key="still, bow" />
+  <animation state_key="still_against_wall" animation_key="still, bow" />
+  <animation state_key="walking" animation_key="walking, bow" />
+  <animation state_key="running" animation_key="running, bow" />
+  <animation state_key="hold_casual" animation_key="casual, bow" />
+  <sound key="fire" fileref="Archer_fire_FromCOD12.wav" pitch_variety="0.1" volume="1.2" />
+  <sound class="impact" fileref="rifle_drop.wav" />
+  <model filename="compound_bow.xml" />
+  <hud_icon filename="kccow_archer.png" />
+  <weak_hand_hold offset="0.55" />
+  <projectile file="arrow_bomb_blast.projectile">
+    <collision class="sticky" />
+  </projectile>
+  <stance state_key="running" accuracy="0.85" />
+  <stance state_key="walking" accuracy="0.9" />
+  <stance state_key="crouch_moving" accuracy="0.9" />
+  <stance state_key="prone_moving" accuracy="0.9" />
+  <stance state_key="standing" accuracy="1.0" />
+  <stance state_key="crouching" accuracy="1.0" />
+  <stance state_key="prone" accuracy="1.0" />
+  <stance state_key="over_wall" accuracy="1.0" />
+  <modifier class="speed" value="0.25" />
+</weapon>

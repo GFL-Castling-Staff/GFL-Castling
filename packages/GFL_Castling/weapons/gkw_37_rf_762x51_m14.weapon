@@ -30,10 +30,10 @@
 	
 	<!--Sounds-->
 	
-    <sound key="fire" fileref="m14_fire_FromDAYSGONE.wav" pitch_variety="0.01" volume="1.1" />
-    <sound key="magazine_out" fileref="m14_mgz_out_FromCOD8.wav"  volume="0.5" />
-    <sound key="magazine_in" fileref="m14_mgz_in_FromCOD8.wav"  volume="0.5" />
-	<sound key="cycle" fileref="m14_cycle_FromCOD8.wav"  volume="0.5" />
+    <sound key="fire" fileref="m14_fire_FromDAYSGONE.wav" pitch_variety="0.01" volume="1.6" />
+    <sound key="magazine_out" fileref="m14_mgz_out_FromCOD15.wav"  volume="0.6" />
+    <sound key="magazine_in" fileref="m14_mgz_in_FromCOD15.wav"  volume="0.6" />
+	<sound key="cycle" fileref="m14_cycle_FromCOD15.wav"  volume="0.6" />
     <sound class="impact" fileref="rifle_drop.wav" />
    
 	<!--Model, Icon, Cost-->
@@ -51,8 +51,8 @@
     <weak_hand_hold offset="0.3" />
     <projectile file="bullet.projectile">
         <result class="hit" 
-        kill_probability="1.6"
-        kill_probability_offset_on_successful_hit="2.2" 
+        kill_probability="2.2"
+        kill_probability_offset_on_successful_hit="3.5" 
         kill_decay_start_time="0.974" 
         kill_decay_end_time="1.624" />
     </projectile>

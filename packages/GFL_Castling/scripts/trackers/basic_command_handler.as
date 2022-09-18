@@ -7,6 +7,44 @@
 #include "generic_call_task.as"
 #include "task_sequencer.as"
 #include "GFLhelpers.as"
+#include "event_system.as"
+
+array<string> commandSingIndex = {
+
+	// 命名规则：枪种key+歌曲编号+.wav
+	// 歌曲编号直接与sing挂钩（举例：sing1 = 歌曲编号为1）
+	// 以sopii为例，命名规则为 ‘gkw_m4sopmodii.weapon’ + ‘1’ + ‘.wav’
+	// 当然，相应的你要把你的歌在文件夹里也改成这个名字
+
+    "gkw_m4sopmodii.weapon1.wav",
+	"gkw_m1891mod3.weapon1.wav",
+	"gkw_ppsh41mod3.weapon1.wav",
+	"gkw_type80mod3.weapon1.wav",
+	"gkw_mp5mod3.weapon1.wav",
+	"gkw_ak12.weapon1.wav",
+	"gkw_ak47.weapon1.wav",
+
+	// 列表末尾，不用管
+	"end_of_list"
+};
+
+dictionary songVolumeIndex = {
+
+	// 对应上面的歌曲名设置一下音量就行
+
+	{"gkw_m4sopmodii.weapon1.wav",3.0},
+	{"gkw_m1891mod3.weapon1.wav",3.0},
+	{"gkw_ppsh41mod3.weapon1.wav",3.0},
+	{"gkw_type80mod3.weapon1.wav",3.0},
+	{"gkw_mp5mod3.weapon1.wav",3.0},
+	{"gkw_ak12.weapon1.wav",3.0},
+	{"gkw_ak47.weapon1.wav",3.0},
+
+	// 列表末尾，不用管
+	{"end_of_list",0.0}
+};
+
+//Adapted and optimizated by Castling Staff
 
 // --------------------------------------------
 class BasicCommandHandler : Tracker {
@@ -377,7 +415,19 @@ class BasicCommandHandler : Tracker {
 			if (playerInfo is null) return;
 			int characterId= playerInfo.getIntAttribute("character_id");			
 			playAnimationKey(m_metagame,characterId,"dancing, zoufang",true,true);
+		}
+		else if (checkCommand(message, "dance8")) {
+			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
+			if (playerInfo is null) return;
+			int characterId= playerInfo.getIntAttribute("character_id");			
+			playAnimationKey(m_metagame,characterId,"dance, groove battle",true,true);
 		}		
+		else if (checkCommand(message, "dance9")) {
+			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
+			if (playerInfo is null) return;
+			int characterId= playerInfo.getIntAttribute("character_id");			
+			playAnimationKey(m_metagame,characterId,"dance, moonwalk",true,true);
+		}												
 		else if (checkCommand(message, "action1")) {
 			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
 			if (playerInfo is null) return;
@@ -390,7 +440,33 @@ class BasicCommandHandler : Tracker {
 			int characterId= playerInfo.getIntAttribute("character_id");			
 			playAnimationKey(m_metagame,characterId,"celebrating2",true,true);
 		}
-		
+		else if (checkCommand(message, "sing")) {
+
+			// 获取玩家阵营，位置信息
+			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);_log('pre_sing 0.');
+			if (playerInfo is null) return;
+			int characterId= playerInfo.getIntAttribute("character_id");
+			const XmlElement@ characterInfo = getCharacterInfo(m_metagame, characterId);
+			if (characterInfo is null) return;
+			string c_pos = characterInfo.getStringAttribute("position");
+			int fId = characterInfo.getIntAttribute("faction_id");
+
+			// 获取玩家装备，注意这里用的是getCharacterInfo2，和上面getCharacterInfo不同
+			const XmlElement@ targetCharacter = getCharacterInfo2(m_metagame,characterId);
+			if (targetCharacter is null) return;
+			array<const XmlElement@>@ equipment = targetCharacter.getElementsByTagName("item");
+			if (equipment.size() == 0) return;
+			if (equipment[0].getIntAttribute("amount") == 0) return;
+			string c_weaponType = equipment[0].getStringAttribute("key");
+			string c_armorType = equipment[4].getStringAttribute("key");
+
+			uint jud_num = uint(message.toLowerCase()[5]) - 48;
+			string jud_sing_file = c_weaponType + '' + jud_num + '.wav';
+			if(commandSingIndex.find(jud_sing_file)> -1){
+				playSoundAtLocation(m_metagame,jud_sing_file,fId,c_pos,float(songVolumeIndex[jud_sing_file]));
+			}
+			
+		}	
 		// admin and moderator only from here on
 		if (!m_metagame.getAdminManager().isAdmin(sender, senderId) && !m_metagame.getModeratorManager().isModerator(sender, senderId)) {
 			return;
@@ -433,14 +509,13 @@ class BasicCommandHandler : Tracker {
 		if (!m_metagame.getAdminManager().isAdmin(sender, senderId)) {
 			return;
 		}
-		else if (checkCommand(message, "testa1")) {
-			ProfileSave(m_metagame);
-		}
 		else if (checkCommand(message, "testa2")) {
 			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
 			if (playerInfo is null) return;
-			int characterId= playerInfo.getIntAttribute("character_id");			
-			playAnimationKey(m_metagame,characterId,"throwing, large mecha",true,true);
+			int characterId= playerInfo.getIntAttribute("character_id");
+			int factionId= playerInfo.getIntAttribute("faction_id");
+			string target = playerInfo.getStringAttribute("aim_target");			
+			GFL_event_array.insertLast(GFL_event(characterId,factionId,2,stringToVector3(target),1.0,-1.0));
 		}
 		// it's a silent server command, check which one
 		if (checkCommand(message, "test2")) {
@@ -541,7 +616,32 @@ class BasicCommandHandler : Tracker {
 		} else if (checkCommand(message, "jeep")) {
 			spawnInstanceNearPlayer(senderId, "jeep.vehicle", "vehicle");      
 		} else  if(checkCommand(message, "c4")) {
-			spawnInstanceNearPlayer(senderId, "c4.projectile", "projectile");      
+			spawnInstanceNearPlayer(senderId, "c4.projectile", "projectile");
+		} else  if(checkCommand(message, "rewardtest")) {
+			spawnInstanceNearPlayer(senderId, "city_gifts.drop_reward", "projectile");
+			spawnInstanceNearPlayer(senderId, "city_gifts.drop_reward", "grenade");
+			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
+			const XmlElement@ characterInfo = getCharacterInfo(m_metagame, playerInfo.getIntAttribute("character_id"));
+			Vector3 pos = stringToVector3(characterInfo.getStringAttribute("position"));					
+			string c = 
+				"<command class='create_instance'" +
+				" faction_id='" + 0 + "'" +
+				" instance_class='grenade'" +
+				" instance_key='" + "city_gifts.drop_reward" + "'" +
+				" position='" + pos.toString() + "'" +
+				" character_id='" + playerInfo.getIntAttribute("character_id") + "'/>";
+		} else  if(checkCommand(message, "stunme")) {
+			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
+			const XmlElement@ characterInfo = getCharacterInfo(m_metagame, playerInfo.getIntAttribute("character_id"));
+			Vector3 pos = stringToVector3(characterInfo.getStringAttribute("position"));					
+			string c = 
+				"<command class='create_instance'" +
+				" faction_id='" + 0 + "'" +
+				" instance_class='grenade'" +
+				" instance_key='" + "selfstun.projectile" + "'" +
+				" position='" + pos.toString() + "'" +
+				" character_id='" + playerInfo.getIntAttribute("character_id") + "'/>";				
+			m_metagame.getComms().send(c);				      
 		} else if (checkCommand(message, "dc")) {
 			spawnInstanceNearPlayer(senderId, "cover_resource.weapon", "weapon");
 		} else if (checkCommand(message, "dgl")) {
@@ -602,8 +702,8 @@ class BasicCommandHandler : Tracker {
 		} else if (checkCommand(message, "dog")) {
 			spawnInstanceNearPlayer(senderId, "dog", "soldier", 0);    	
 		} else if (checkCommand(message, "gb1")) {
-			spawnInstanceNearPlayer(senderId, "complete_box.carry_item", "carry_item", 0);
-			spawnInstanceNearPlayer(senderId, "complete_box.carry_item", "carry_item", 0);
+			spawnInstanceNearPlayer(senderId, "upgrade_aa12.carry_item", "carry_item", 0);
+			spawnInstanceNearPlayer(senderId, "upgrade_type88.carry_item", "carry_item", 0);
 			spawnInstanceNearPlayer(senderId, "complete_box.carry_item", "carry_item", 0);
 			spawnInstanceNearPlayer(senderId, "complete_box.carry_item", "carry_item", 0);
 			spawnInstanceNearPlayer(senderId, "complete_box.carry_item", "carry_item", 0);
@@ -666,18 +766,21 @@ class BasicCommandHandler : Tracker {
 			spawnInstanceNearPlayer(senderId, "humvee_gl_para.vehicle", "vehicle", 0);        
 		} else  if(checkCommand(message, "javelin")) {
 			spawnInstanceNearPlayer(senderId, "javelin_ap.weapon", "weapon", 0);        
+		} else  if(checkCommand(message, "vectorflame")) {
+			spawnInstanceNearPlayer(senderId, "gkw_vector_549_skill.weapon", "weapon", 0);        
 		} else  if(checkCommand(message, "complete_campaign")) {
 			m_metagame.getComms().send("<command class='set_campaign_status' show_stats='1'/>");
 		} else if (checkCommand(message, "enable_gps")) {
 			m_metagame.getComms().send("<command class='faction_resources' faction_id='0'><call key='gps.call' /></command>");
 		} else  if(checkCommand(message, "icecream")) {
-			int randIndex=rand(1,4);
-			switch (randIndex){
-				case 1: spawnInstanceNearPlayer(senderId, "icecream.vehicle", "vehicle", 0);break;      
-				case 2: spawnInstanceNearPlayer(senderId, "icecream_Solar_Sea.vehicle", "vehicle", 0);break;
-				case 3: spawnInstanceNearPlayer(senderId, "icecream_akino.vehicle", "vehicle", 0);break;
-				case 4: spawnInstanceNearPlayer(senderId, "icecream_connexion.vehicle", "vehicle", 0);break;
-			}
+			// int randIndex=rand(1,4);
+			// switch (randIndex){
+			// 	case 1: spawnInstanceNearPlayer(senderId, "icecream.vehicle", "vehicle", 0);break;      
+			// 	case 2: spawnInstanceNearPlayer(senderId, "icecream_Solar_Sea.vehicle", "vehicle", 0);break;
+			// 	case 3: spawnInstanceNearPlayer(senderId, "icecream_akino.vehicle", "vehicle", 0);break;
+			// 	case 4: spawnInstanceNearPlayer(senderId, "icecream_connexion.vehicle", "vehicle", 0);break;
+			// }
+			spawnInstanceNearPlayer(senderId, "icecream.vehicle", "vehicle", 0);
 		} else  if(checkCommand(message, "rj")) {
 			spawnInstanceNearPlayer(senderId, "radio_jammer.vehicle", "vehicle", 1);        
 		} else  if(checkCommand(message, "cat")) {
@@ -686,16 +789,26 @@ class BasicCommandHandler : Tracker {
 			spawnInstanceNearPlayer(senderId, "darkcat.vehicle", "vehicle", 1);
 		} else  if(checkCommand(message, "spawntower")) {
 			spawnInstanceNearPlayer(senderId, "radar_tower.vehicle", "vehicle", 0); 
+		} else  if(checkCommand(message, "lblm")) {
+			spawnInstanceNearPlayer(senderId, "wheelchair.vehicle", "vehicle", 0); 
 		} else  if(checkCommand(message, "spawnaa")) {
 			spawnInstanceNearPlayer(senderId, "aa_emplacement.vehicle", "vehicle", 1); 
 		} else  if(checkCommand(message, "spawnjpt")) {
 			spawnInstanceNearPlayer(senderId, "sf_jupiter.vehicle", "vehicle", 1); 		
+		} else  if(checkCommand(message, "spawnmoth")) {
+			spawnInstanceNearPlayer(senderId, "par_moth.vehicle", "vehicle", 1); 		
 		} else  if(checkCommand(message, "spawnuhlan")) {
 			spawnInstanceNearPlayer(senderId, "paradeus_uhlan.vehicle", "vehicle", 0);
+		} else  if(checkCommand(message, "spawnsand")) {
+			spawnInstanceNearPlayer(senderId, "sandstorm.vehicle", "vehicle", 0);
 		} else  if(checkCommand(message, "spawncoeus")) {
 			spawnInstanceNearPlayer(senderId, "coeus.vehicle", "vehicle", 0);
 		} else  if(checkCommand(message, "spawntyphon")) {
 			spawnInstanceNearPlayer(senderId, "typhon.vehicle", "vehicle", 0);
+		} else  if(checkCommand(message, "spawnaek")) {
+			spawnInstanceNearPlayer(senderId, "aek999.vehicle", "vehicle", 0);		
+		} else  if(checkCommand(message, "spawnbfg")) {
+			spawnInstanceNearPlayer(senderId, "kcco_BFG.vehicle", "vehicle", 0);
 		} else  if(checkCommand(message, "spawnpierre")) {
 			spawnInstanceNearPlayer(senderId, "pierre.vehicle", "vehicle", 0);
 		} else  if(checkCommand(message, "spawnamos")) {
@@ -730,10 +843,15 @@ class BasicCommandHandler : Tracker {
             spawnInstanceNearPlayer(senderId, "kcco_ar", "soldier", 1);
             spawnInstanceNearPlayer(senderId, "kcco_ar", "soldier", 1);
             spawnInstanceNearPlayer(senderId, "kcco_ar", "soldier", 1);      
-		} else if (checkCommand(message,"givesfweapon")){
+		} else if (checkCommand(message,"givetestweapon")){
 			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
-			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","ff_agent.weapon");
-			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","ff_alchemist.weapon");
+			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_mk3a1.weapon");
+			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_k5.weapon");
+			
+			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"carry_item","upgrade_fg42.carry_item");
+
+
+
 		} else if (checkCommand(message,"114514sf")){
 			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
 			addMutilItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"carry_item","gift_box_1.carry_item",400);

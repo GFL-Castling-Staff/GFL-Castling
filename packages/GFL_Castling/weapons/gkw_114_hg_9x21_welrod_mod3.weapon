@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapon key="gkw_welrodmod3.weapon" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+<tag name="pistol" />
     <!--Weapon specifications-->
     <specification
 	retrigger_time="-1"
@@ -38,13 +39,13 @@
     <animation state_key="stabbing" 			animation_key="pistol whip" />
     <animation state_key="stabbing" 			animation_key="pistol whip 3" />
     <!--Animations-->
-    <inventory buy_price="250.0" sell_price="250.0" />
+    <inventory buy_price="250.0" sell_price="200.0" />
     <commonness in_stock="0" />
 	<capacity value="1" source="rank" source_value="0.0" />
         <!--Sounds-->
-    <sound key="fire" fileref="welrod_fire_FromBF5.wav" pitch_variety="0.05" volume="1.2" />
-    <sound key="magazine_out" fileref="welrod_mgz_out_FromBF5.wav" volume="0.5" />
-    <sound key="magazine_in" fileref="welrod_mgz_in_FromBF5.wav" volume="0.5"/>
+    <sound key="fire" fileref="welrod_fire_FromBF5.wav" pitch_variety="0.05" volume="1.6" />
+    <sound key="magazine_out" fileref="welrod_mgz_out_FromBF5.wav" volume="0.7" />
+    <sound key="magazine_in" fileref="welrod_mgz_in_FromBF5.wav" volume="0.7"/>
     <sound key="cycle" fileref="welrod_cycle_FromBF5.wav" volume="0.7" />
     <!--Model, Icon, Cost-->
     <model filename="gkw_welrod_From_melondove.xml" />
@@ -72,7 +73,6 @@
     <target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0" />
     <target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0" />
     <target_factors tag="commander" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0" />
-
     <modifier class="detectability" value="-0.25" />
     <modifier class="speed" value="1.1" />
 

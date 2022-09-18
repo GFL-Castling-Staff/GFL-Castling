@@ -1,6 +1,7 @@
 // internal
 #include "tracker.as"
 #include "log.as"
+//Adapted and optimizated by NetherCrow
 
 // --------------------------------------------
 class CallMarkerConfig {

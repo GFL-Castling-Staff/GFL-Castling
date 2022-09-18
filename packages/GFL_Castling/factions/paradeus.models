@@ -12,6 +12,8 @@
 	<model filename="pard_Thrower.xml"><requirement class="weapon" slot="0" key="parw_thrower.weapon" /></model>
 	<model filename="pard_doppelsoldner_remake.xml"><requirement class="weapon" slot="0" key="parw_doppelsoldner_mg" /></model>
 	<model filename="pard_doppelsoldner_remake.xml"><requirement class="weapon" slot="0" key="parw_doppelsoldner_rocket" /></model>
+	<model filename="pard_doppelsoldner_remake.xml"><requirement class="weapon" slot="0" key="parw_doppelsoldner_rocket.weapon" /></model>
+
 	<model filename="pard_boss_nyto_black.xml"><requirement class="weapon" slot="0" key="parw_nyto_black.weapon" /></model>
 	<model filename="pard_nimogen.xml"><requirement class="weapon" slot="0" key="parw_nimogen.weapon" /></model>
 	<model filename="pard_narciss.xml"><requirement class="weapon" slot="0" key="parw_narciss.weapon" /></model>
@@ -23,6 +25,10 @@
 
 	<model filename="pard_eagleyes.xml"><requirement class="weapon" slot="0" key="parw_eagleyes.weapon" /></model>
 	<model filename="pard_vanguard.xml"><requirement class="weapon" slot="0" key="parw_vanguard.weapon" /></model>
+	<model filename="pard_wrath.xml"><requirement class="weapon" slot="0" key="parw_wrath.weapon" /></model>
+
 	<model filename="pard_roarer_from_sv-98.xml"><requirement class="weapon" slot="0" key="parw_roarer.weapon" /></model>
+	<model filename="pard_thunder.xml"><requirement class="weapon" slot="0" key="parw_thunder.weapon" /></model>
+	<model filename="eild_armed.xml"><requirement class="weapon" slot="0" key="eild_armed.weapon" /></model>
 
 </models>

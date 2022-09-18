@@ -14,26 +14,26 @@
 	encumbrance="10.0" 
 	buy_price="1.0" 
 	sell_price="0.0"/>
-    <animation key="recoil" ref="12" />
-    <animation key="recoil" ref="13" />
-    <animation key="recoil" ref="14" />
+    <animation key="recoil" animation_key="recoil1" />
+    <animation key="recoil" animation_key="recoil2" />
+    <animation key="recoil" animation_key="recoil3" />
     <animation key="recoil" stance_key="prone" animation_key="recoil1, prone" />
     <animation key="recoil" stance_key="prone" animation_key="recoil2, prone" />
     <animation key="recoil" stance_key="prone" animation_key="recoil3, prone" />
-    <animation state_key="hold_on_wall" ref="1" />
+    <animation state_key="hold_on_wall" animation_key="still" />
     <animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
     <animation state_key="stabbing" animation_key="melee, quick knife" />
     <animation state_key="stabbing" animation_key="pistol whip 3" />
     <!-- <animation state_key="walking" animation_key="running, bayonet" />
     <animation state_key="running" animation_key="running" /> -->
 
-	<stance state_key="running" accuracy="0.3" />
+	<stance state_key="running" accuracy="0.6" />
 	<stance state_key="walking" accuracy="0.675" />
 	<stance state_key="crouch_moving" accuracy="0.75" />
 	<stance state_key="standing" accuracy="0.85" />
 	<stance state_key="crouching" accuracy="0.9" />
 	<stance state_key="prone" accuracy="0.95" />
-	<stance state_key="prone_moving" accuracy="0.3" />
+	<stance state_key="prone_moving" accuracy="0.85" />
 	<stance state_key="over_wall" accuracy="1" />
 	
 	<modifier class="speed" value="0.1" />

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ai>
-	<parameter class="force_as_leader" value="0" />
+	<parameter class="force_as_leader" value="1" />
 	<parameter class="vehicle_stuck_short_time" value="1000.0" />
 	<parameter class="in_trenches_fade_off_timer" value="4.0" />
 	<parameter class="accuracy_penalty_wear_off_rate" value="0.333" /> 
@@ -15,7 +15,7 @@
 	<parameter class="choose_enemy_time" value="2.0" />
 	<parameter class="check_need_help_time" value="1.0" />
 	<parameter class="fighting_time_fire_not_open" value="2.0" />
-	<parameter class="cover_status_recheck_time" value="1.5" />
+	<parameter class="cover_status_recheck_time" value="4.0" />
 	<parameter class="deploy_recheck_time" value="5.0" />
 	<parameter class="monitor_enemies_to_stab_while_peace" value="2.0" />
 	<parameter class="crouching_near_leader_rejoin_range" value="0.0" />
@@ -102,5 +102,5 @@
 	<parameter class="willingness_to_charge" value="1" />
 	<parameter class="stab_range" value="2.0" />
 	<parameter class="uses_ladders" value="0.0" />
-
+    <parameter class="fighting_regular_move_radius" value="20.0" />
 </ai>

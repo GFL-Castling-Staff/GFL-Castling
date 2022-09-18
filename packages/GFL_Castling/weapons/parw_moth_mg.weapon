@@ -1,0 +1,31 @@
+<weapon key="parw_moth_mg.weapon">
+	<specification slot="2" retrigger_time="0.3" accuracy_factor="0.8" sustained_fire_grow_step="0" sustained_fire_diminish_rate="2.0" sight_range_modifier="1.0" ai_sight_range_modifier="1.15" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="0" suppressed="0" name="Paradeus Moth MG" class="4" burst_shots="3" projectile_speed="120.0" use_basic_muzzle_smoke_effect="0" barrel_offset_3d="0 0.5 2.0"/>
+	<animation key="recoil" animation_key="recoil1"/>
+	<animation key="recoil" animation_key="recoil2"/>
+	<animation key="recoil" animation_key="recoil3"/>
+	<animation key="reload" animation_key="reloading, Machine gun 2.0"/>
+	<animation key="hold" animation_key="still, heavy weapon"/>
+	<animation key="hold_on_wall" animation_key="still"/>
+	<animation key="walking" animation_key="walking, heavy weapon"/>
+	<sound key="fire" fileref="1130_fire_FromSAM3.wav" pitch_variety="0.05" volume="1.0"/>
+	<sound key="magazine_out" fileref="mg_clip_out.wav"/>
+	<sound key="magazine_in" fileref="mg_clip_in.wav"/>
+	<sound key="cycle" fileref="rifle_chamber.wav"/>
+	<sound class="impact" fileref="rifle_drop.wav"/>
+	<model mesh_filename="Sentry_Moth.mesh" texture_filename="2Sentry_Moth_Texture.png" />
+	<hud_icon filename="gkw_v_LM5.png"/>
+	<commonness value="0.0"/>
+	<weak_hand_hold offset="0.0"/>
+	<projectile file="bullet_paradeus.projectile">
+	<result class="blast" damage="2.0" radius="1.5" decal="1" push="0.2" character_state="death" faction_compare="not_equal"/>
+	<trigger class="impact"/>
+	<effect class="result" key="terrain" ref="BigBurst" use_surface_color="1"/>
+	<effect class="result" key="terrain" ref="SmokeTop" post_processing="1"/>
+	<effect class="result" key="terrain" ref="Smoke" post_processing="1"/>
+	<effect class="result" key="terrain" ref="Shine" lighting="0"/>
+	<effect class="result" key="terrain" ref="Godray" lighting="0"/>
+	<effect class="result" key="terrain" ref="ShadowSmoke" shadow="1"/>
+	<trail probability="1.0" key="laser_tiaotiao"/>
+	</projectile>
+	<shield offset="0.0 4.5 0.0" extent="3.0 3.0 3.0"/>
+</weapon>

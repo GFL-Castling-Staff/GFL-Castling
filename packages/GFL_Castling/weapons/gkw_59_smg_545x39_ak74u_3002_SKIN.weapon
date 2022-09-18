@@ -20,13 +20,13 @@
         <commonness value="0.2" in_stock="0" can_respawn_with="1" />
         <inventory encumbrance="10.0" buy_price="8.0" sell_price="8.0" />
         <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
-        <animation key="recoil" ref="12" />
-        <animation key="recoil" ref="13" />
-        <animation key="recoil" ref="14" />
+        <animation key="recoil" animation_key="recoil1" />
+        <animation key="recoil" animation_key="recoil2" />
+        <animation key="recoil" animation_key="recoil3" />
         <animation key="recoil" stance_key="prone" animation_key="recoil1, prone" />
         <animation key="recoil" stance_key="prone" animation_key="recoil2, prone" />
         <animation key="recoil" stance_key="prone" animation_key="recoil3, prone" />
-        <animation state_key="hold_on_wall" ref="1" />
+        <animation state_key="hold_on_wall" animation_key="still" />
         <animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
         <animation state_key="stabbing" animation_key="melee, quick knife" />
         <animation state_key="stabbing" animation_key="pistol whip 3" />
@@ -75,19 +75,18 @@
 		sustained_fire_diminish_rate="1.8" 
 		sustained_fire_grow_step="0.45"
         burst_shots="1"
-        spread_range="0.25"
         stab_enabled="1"/>
         <next_in_chain key="gkw_ak74u_3002.weapon" share_ammo="1" />
         <commonness value="0" in_stock="0" can_respawn_with="1" />
         <inventory encumbrance="10.0" buy_price="8.0" sell_price="8.0" />
         <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
-        <animation key="recoil" ref="12" />
-        <animation key="recoil" ref="13" />
-        <animation key="recoil" ref="14" />
+        <animation key="recoil" animation_key="recoil1" />
+        <animation key="recoil" animation_key="recoil2" />
+        <animation key="recoil" animation_key="recoil3" />
         <animation key="recoil" stance_key="prone" animation_key="recoil1, prone" />
         <animation key="recoil" stance_key="prone" animation_key="recoil2, prone" />
         <animation key="recoil" stance_key="prone" animation_key="recoil3, prone" />
-        <animation state_key="hold_on_wall" ref="1" />
+        <animation state_key="hold_on_wall" animation_key="still" />
         <animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
         <animation state_key="stabbing" animation_key="melee, quick knife" />
         <animation state_key="stabbing" animation_key="pistol whip 3" />

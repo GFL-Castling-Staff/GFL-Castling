@@ -4,8 +4,8 @@
     <specification 
 	retrigger_time="2.0" 
 	accuracy_factor="1" 
-	sustained_fire_grow_step="0" 
-	sustained_fire_diminish_rate="0.5" 
+	sustained_fire_grow_step="3.0" 
+	sustained_fire_diminish_rate="1.5" 
 	magazine_size="3" 
 	can_shoot_standing="0" 
 	can_shoot_crouching="1"
@@ -15,17 +15,49 @@
 	class="2"
 	reload_one_at_a_time="0" 
 	sight_range_modifier="4" 
-	projectile_speed="200" 
+	projectile_speed="225" 
 	barrel_offset="0.6" 
-	projectiles_per_shot="8" />
-    <inventory buy_price="20.0" sell_price="20.0" />
+	projectiles_per_shot="3" />
+    <inventory buy_price="350.0" sell_price="250.0" />
     <!--Animations-->
     <animation key="cycle" animation_key="Brifle1.8" />
     <animation key="cycle" stance_key="prone" animation_key="Brifle1.8p" />
     <animation key="reload" animation_key="reloading, magazine rifle 2.1" />
     <!--Sounds-->
     <sound key="fire" fileref="ntw20_fire_FromBF2042.wav" volume="1.6" />
-    <sound key="cycle" fileref="ntw20_cycle_FromBF5.wav" volume="0.6"/>
+    <sound key="cycle" fileref="ntw20_cycle_FromBF5.wav" volume="0.8" pitch_variety="0"/>
+    <sound key="cycle" fileref="ntw20_cycle_FromBF5.wav" volume="0.8" pitch_variety="0"/>
+    <sound key="cycle" fileref="NTW20_DIALOGUE3_JP.wav" volume="0.8" pitch_variety="0"/>
+    <sound key="cycle" fileref="ntw20_cycle_FromBF5.wav" volume="0.8" pitch_variety="0"/>
+    <sound key="cycle" fileref="ntw20_cycle_FromBF5.wav" volume="0.8" pitch_variety="0"/>
+    <sound key="cycle" fileref="NTW20_PHRASE_JP.wav" volume="0.8" pitch_variety="0"/>
+    <sound key="cycle" fileref="ntw20_cycle_FromBF5.wav" volume="0.8" pitch_variety="0"/>
+    <sound key="cycle" fileref="ntw20_cycle_FromBF5.wav" volume="0.8" pitch_variety="0"/>
+    <sound key="cycle" fileref="NTW20_LOADING_JP.wav" volume="0.8" pitch_variety="0"/>
+    <sound key="cycle" fileref="ntw20_cycle_FromBF5.wav" volume="0.8" pitch_variety="0"/>
+    <sound key="cycle" fileref="ntw20_cycle_FromBF5.wav" volume="0.8" pitch_variety="0"/>
+    <sound key="cycle" fileref="NTW20_FORMATION_JP.wav" volume="0.8" pitch_variety="0"/>
+    <sound key="cycle" fileref="ntw20_cycle_FromBF5.wav" volume="0.8" pitch_variety="0"/>
+    <sound key="cycle" fileref="ntw20_cycle_FromBF5.wav" volume="0.8" pitch_variety="0"/>
+    <sound key="cycle" fileref="NTW20_BLACKACTION_JP.wav" volume="0.8" pitch_variety="0"/>
+    <sound key="cycle" fileref="ntw20_cycle_FromBF5.wav" volume="0.8" pitch_variety="0"/>
+    <sound key="cycle" fileref="ntw20_cycle_FromBF5.wav" volume="0.8" pitch_variety="0"/>
+    <sound key="cycle" fileref="NTW20_OPERATIONBEGIN_JP.wav" volume="0.8" pitch_variety="0"/>
+    <sound key="cycle" fileref="ntw20_cycle_FromBF5.wav" volume="0.8" pitch_variety="0"/>
+    <sound key="cycle" fileref="ntw20_cycle_FromBF5.wav" volume="0.8" pitch_variety="0"/>
+    <sound key="cycle" fileref="NTW20_GOATTACK_JP.wav" volume="0.8" pitch_variety="0"/>
+    <sound key="cycle" fileref="ntw20_cycle_FromBF5.wav" volume="0.8" pitch_variety="0"/>
+    <sound key="cycle" fileref="ntw20_cycle_FromBF5.wav" volume="0.8" pitch_variety="0"/>
+    <sound key="cycle" fileref="NTW20_MEET_JP.wav" volume="0.8" pitch_variety="0"/>
+    <sound key="cycle" fileref="ntw20_cycle_FromBF5.wav" volume="0.8" pitch_variety="0"/>
+    <sound key="cycle" fileref="ntw20_cycle_FromBF5.wav" volume="0.8" pitch_variety="0"/>
+    <sound key="cycle" fileref="NTW20_ATTACK_JP.wav" volume="0.8" pitch_variety="0"/>
+    <sound key="cycle" fileref="ntw20_cycle_FromBF5.wav" volume="0.8" pitch_variety="0"/>
+    <sound key="cycle" fileref="ntw20_cycle_FromBF5.wav" volume="0.8" pitch_variety="0"/>
+    <sound key="cycle" fileref="NTW20_DEFENSE_JP.wav" volume="0.8" pitch_variety="0"/>
+    <sound key="cycle" fileref="ntw20_cycle_FromBF5.wav" volume="0.8" pitch_variety="0"/>
+    <sound key="cycle" fileref="ntw20_cycle_FromBF5.wav" volume="0.8" pitch_variety="0"/>
+
     <sound key="magazine_out" fileref="ntw20_mgz_out_FromBF2042.wav" volume="0.7"/>
     <sound key="magazine_in" fileref="ntw20_mgz_in_FromBF2042.wav" volume="0.7"/>
     <sound key="cycle_out" fileref="ntw20_cycle_out_FromBF5.wav" volume="0.6"/>
@@ -38,15 +70,7 @@
     <!--Ballistics-->
     <weak_hand_hold offset="0.3" />
     <projectile file="ntw.projectile" >
-        <result class="blast" damage="4.5" radius="4" decal="1" push="1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0" />
-    </projectile>
+        <result class="blast" damage="16" radius="3" decal="1" push="1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0" />
+    </projectile> 
     <!--Accuracy, Movement speed-->
-    <stance state_key="running" accuracy="1.0" />
-    <stance state_key="walking" accuracy="1.0" />
-    <stance state_key="crouch_moving" accuracy="1.0" />
-    <stance state_key="prone_moving" accuracy="1.0" />
-    <stance state_key="standing" accuracy="1.0"/>
-    <stance state_key="crouching" accuracy="1.0" />
-    <stance state_key="prone" accuracy="1.0" />
-    <stance state_key="over_wall" accuracy="1.0" />
 </weapon>

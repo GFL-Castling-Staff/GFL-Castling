@@ -1,16 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ai filename="hydra.ai">
-  <parameter class="melee_attack_wait_time" value="100.0" />
-  <parameter class="stab_range" value="0.0" />
-  <parameter class="check_fellows_for_shield_use_range" value="100.0" />
-  <parameter class="max_active_shields_per_fellows" value="100.0" />
-
-  <parameter class="burst_time" value="2.0" />
-	<parameter class="burst_time_variance" value="0.3" />
+	<parameter class="melee_attack_wait_time" value="1.0" />
+	<parameter class="stab_range" value="0.0" />
+	<parameter class="check_fellows_for_shield_use_range" value="100.0" />
+	<parameter class="max_active_shields_per_fellows" value="100.0" />
+	<parameter class="burst_time" value="2.0" />
+	<parameter class="burst_time_variance" value="0" />
 	<parameter class="in_vehicle_burst_time" value="2.0" />
 	<parameter class="in_vehicle_burst_time_variance" value="0.3" />
-	<parameter class="longer_burst_time" value="3.0" />
-	<parameter class="longer_burst_time_variance" value="0.5" />
-  <parameter class="wait_time" value="0.5" />
+	<parameter class="longer_burst_time" value="2.0" />
+	<parameter class="longer_burst_time_variance" value="0.0" />
+	<parameter class="wait_time" value="1.0" />
+	<parameter class="wait_time_variance" value="0.0" />
+	<parameter class="fighting_melee_move_radius" value="3.0" />
+	<parameter class="fighting_regular_move_radius" value="15.0" />
+	<parameter class="guard_wait_time_min" value="1.0" />
+	<parameter class="guard_wait_time_max" value="2.0" />
+	<parameter class="active_guarding_probability" value="0.85" />
 
+	<parameter class="max_distance_to_throw_grenade" value="100.0" />
+	<parameter class="min_distance_to_throw_grenade" value="1.0" />
+	<parameter class="min_number_of_enemies_to_throw_grenade" value="1" />
+	<parameter class="throw_grenade_time_interval_max" value="10.0" />
+	<parameter class="throw_grenade_time_interval_min" value="5.0" />
+	<parameter class="grenade_throw_hold_time" value="0.0" />
 </ai>

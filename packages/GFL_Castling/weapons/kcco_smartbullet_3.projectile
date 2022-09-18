@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<projectile class="grenade" name="tracer dart" key="kcco_smartbullet_3.projectile" slot="0" on_ground_up="0 1 0" can_be_disarmed="0" can_be_detected_by_driver="0" time_to_live_out_in_the_open="0.0" drop_count_factor_on_death="0.0" drop_count_factor_on_player_death="0.0" pulldown_in_air="1.0" radius="0.1">
+    <result class="spawn" instance_class="projectile" instance_key="kcco_ranged_artillery.projectile"  min_amount="20" max_amount="20" offset="0 40 0" position_spread="0.6 0.6" direction_spread="0.2 0.2" />    
+    <collision class="sticky" />
+    <trigger class="time" time_to_live="2"/>
+    <rotation class="motion" />
+    
+    <model mesh_filename="paw20_round.xml" />
+    <hud_icon filename="hud_grenade.png" />
+
+	<effect class="activated" ref="FlareSparkle" lighting="0" />
+	<effect class="activated" ref="FlareSmokeYellow" lighting="0" />
+	<effect class="activated" ref="FlareFlashYellow" lighting="0" /> 
+
+    <!-- <throwable curve_height="2.0" near_far_distance="2.0" speed_estimation_near="5.0" speed_estimation_far="5.0" max_speed="5.0" randomness="0.01" /> -->
+
+    <commonness value="0.0" can_respawn_with="0" in_stock="0" />
+    <inventory encumbrance="2.0" price="100.0" />
+
+    <capacity value="0" source="rank" source_value="0.0" />
+    <capacity value="1" source="rank" source_value="0.1" />
+    <capacity value="2" source="rank" source_value="0.2" />
+    <capacity value="3" source="rank" source_value="0.3" />
+
+
+    <effect class="activated" ref="TracerFlash" lighting="0" />
+
+</projectile>

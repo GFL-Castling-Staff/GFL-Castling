@@ -15,10 +15,10 @@
 		sight_range_modifier="1"/>
     <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
     <inventory  buy_price="8.0" sell_price="8.0" />
-    <sound key="fire" fileref="fara83_Fire_FromCOD17.wav" pitch_variety="0.05" volume="1" />
-    <sound key="magazine_out" fileref="fara83_mgz_out_FromCOD17.wav" volume="1" />
-    <sound key="magazine_in" fileref="fara83_mgz_in_FromCOD17.wav" volume="1" />
-    <sound key="cycle" fileref="fara83_cycle_FromCOD17.wav" volume="1" />
+    <sound key="fire" fileref="fara83_Fire_FromCOD17.wav" pitch_variety="0.05" volume="1.2" />
+    <sound key="magazine_out" fileref="fara83_mgz_out_FromCOD17.wav" volume="0.7" />
+    <sound key="magazine_in" fileref="fara83_mgz_in_FromCOD17.wav" volume="0.7" />
+    <sound key="cycle" fileref="fara83_cycle_FromCOD17.wav" volume="0.7" />
     <sound class="impact" fileref="rifle_drop.wav" volume="1"/>
     <model filename="gkw_smg_fara83.xml" />
     <hud_icon filename="gkw_fara83.png" />

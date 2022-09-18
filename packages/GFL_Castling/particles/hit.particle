@@ -75,7 +75,7 @@ material hit
 
 particle_system hitMetal
 {
-	quota 50
+	quota 100
 	material FlareSparkle
 	particle_width 0.15
 	particle_height 0.15
@@ -86,7 +86,7 @@ particle_system hitMetal
 	{
 		angle 45
 		position 0.0 0.0 0.0
-		colour 0.976 0.529 0 4
+		colour 0.976 0.529 0 1
 		direction	0 0 0
 		emission_rate	500
 		velocity_min	5
@@ -114,7 +114,7 @@ particle_system hitMetal
 
 particle_system hitMetal_1
 {
-	quota 50
+	quota 100
 	material FlareSparkle
 	particle_width 0.15
 	particle_height 0.15
@@ -152,28 +152,25 @@ particle_system hitMetal_1
 
 particle_system hitGround
 {
-	quota 50
+	quota 1000
 	material Piece
 	particle_width 0.1
-	particle_height 0.11
+	particle_height 0.1
 	cull_each false
 	renderer billboard
 	billboard_type point
-	emitter Box
+	emitter Point
 	{
 		angle 30
 		position 0.0 0.0 0.0
         colour 0.7 0.7 0.7 1
 		direction	0 0 0
-		emission_rate	300
+		emission_rate	200
 		velocity_min 10
 		velocity_max 15
 		time_to_live_min	0.4
 		time_to_live_max	0.6
         duration 0.15
-		width	0.2
-		height	0.0
-		depth	0.2
 	}
     affector LinearForce
     {
@@ -183,6 +180,43 @@ particle_system hitGround
 	affector Scaler
 	{
 		rate	0.3
+	}
+    affector ColourFader
+    {
+	alpha -0.5
+    }
+}
+
+particle_system hitGround_20mm
+{
+	quota 1000
+	material Piece
+	particle_width 0.1
+	particle_height 0.1
+	cull_each false
+	renderer billboard
+	billboard_type point
+	emitter Point
+	{
+		angle 30
+		position 0.0 0.0 0.0
+        colour 0.7 0.7 0.7 1
+		direction	0 0 0
+		emission_rate	300
+		velocity_min 15
+		velocity_max 20
+		time_to_live_min	0.6
+		time_to_live_max	0.9
+        duration 0.15
+	}
+    affector LinearForce
+    {
+        force_vector      0 -40 0
+        force_application add
+    }	
+	affector Scaler
+	{
+		rate	0.4
 	}
     affector ColourFader
     {

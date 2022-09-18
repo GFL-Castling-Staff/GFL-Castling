@@ -27,15 +27,15 @@
 	<!--Animations-->
 	
 
-	<inventory  buy_price="50.0" sell_price="10.0" />
+	<inventory  buy_price="300.0" sell_price="200.0" />
     <animation key="reload" animation_key="reloading, magazine rifle 2.1" />
 	
 	<!--Sounds-->
 	
     <sound key="fire" fileref="gm6_fire_FromCOD10.wav" pitch_variety="0.05" volume="1.3" />
-    <sound key="cycle" fileref="gm6_cycle_FromWF.wav" volume="0.7"/>
-    <sound key="magazine_out" fileref="gm6_mgz_out_FromFC5.wav" volume="0.7"/>
-    <sound key="magazine_in" fileref="gm6_mgz_in_FromFC5.wav" volume="0.7"/>
+    <sound key="cycle" fileref="gm6_cycle_FromWF.wav" volume="0.6"/>
+    <sound key="magazine_out" fileref="gm6_mgz_out_FromFC5.wav" volume="0.6"/>
+    <sound key="magazine_in" fileref="gm6_mgz_in_FromFC5.wav" volume="0.6"/>
     <sound class="impact" fileref="rifle_drop.wav" volume="1"/>
    
 	<!--Model, Icon, Cost-->
@@ -48,10 +48,10 @@
 	<!--Ballistics-->
 
     <weak_hand_hold offset="0.3" />
-    <projectile file="bullet.projectile">
-        <result class="blast" damage="8"   radius="2" decal="1" push="0" character_state="death" faction_compare="not_equal"/>
+    <projectile file="ntw.projectile">
+        <result class="blast" damage="8" radius="2.5" decal="1" push="0.4" character_state="death" faction_compare="not_equal"/>
     </projectile>
-    
+    <effect class="muzzle" ref="ejection_50BMG" />
     <!--Accuracy, Movement speed-->
 
 	<stance state_key="walking" accuracy="0.65" />
@@ -62,7 +62,4 @@
     <stance state_key="prone" accuracy="1" />
     <stance state_key="over_wall" accuracy="1.0" />
     <modifier class="speed" value="-0.1" /> 
-
-
-
 </weapon>

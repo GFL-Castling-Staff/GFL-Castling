@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vehicle file="vehicle_base.vehicle" name="KCCO BFG" key="kcco_BFG.vehicle" respawn_time="100" time_to_live_unsteerable="95" map_view_atlas_index="46" minimum_fill_requirement="1.0" max_character_collision_speed_on_normal="8.0" max_character_collision_speed="8" character_leave_request_mode="friendly" allow_ai_to_use="1" allow_player_to_use="1" ai_driver_turns_to_target="1" ai_abandon_when_unsteerable="0" ai_stop_to_fight="1" >
+    <tag name="metal_heavy" />
+    <tag name="KCCO_BFG" />
+    <tag name="heavy_combat" />
+    <tire_set offset="1.6 +0.1 +4.2" radius="0.5" />
+    <tire_set offset="1.0 +0.1 -1.0" radius="0.5" />
+    <tire_set offset="1.8 +0.1 -4.2" radius="0.5" />
+    <control max_speed="12.0" acceleration="20.0" max_reverse_speed="12.0" min_health_to_steer="1.5" max_rotation="0.2" max_water_depth="6.0" can_steer_in_water="0.0" steer_smoothening="0.6" tracked="1" gears="0" max_limiter_speed="6.0" tracked_visual_tire_max_rotation="1.0" tracked_visual_tire_rotation_smoothening="0.9" simulated_speed_factor="0.1" />
+    <physics max_health="55" blast_damage_threshold="4" mass="150.0" broken_mass="200" gravity="-40" remove_collision_threshold="50.0" extent="4.0 1.0 9.0" offset="0.0 +0.0 -0.0" top_offset="0 1.8 -1.5" collision_model_pos="0 1.3 0.5" collision_model_extent="4.0 3.0 9.5" visual_offset="0 0.6 -1.2" drag_offset="-0.1" friction_offset="-0.1" preserve_motion_on_impact_factor="1" />
+    <turret offset="0.0 0.0 0.0" weapon_key="kccow_vehicle_BFG.weapon" weapon_offset="0.0 0.0 0.0" weapon_recoil="0.0" physics_recoil="0.0" max_rotation_step="0.00016" rotation_range="1.05" />
+    <modifier class="blast_damage" value="-3.0" />
+
+    <visual class="chassis" mesh_filename="bfg_base.mesh" texture_filename="BFG_Texture.png" offset="0.0 -0.8 0.0" max_tilt="-0.05" />
+    <visual class="chassis" key="broken" mesh_filename="bfg_base.mesh" texture_filename="BFG_Texture.png" />
+    <visual class="turret" turret_index="0" mesh_filename="bfg_turret.mesh" texture_filename="BFG_Texture.png" />
+    <visual class="turret" key="broken" mesh_filename="bfg_turret.mesh" texture_filename="BFG_Texture.png" />
+    <character_slot type="gunner" position="-1.5 0.7 0" rotation="0" exit_rotation="-1.57" hiding="1" animation_id="37">
+        <turret index="0" />
+        <turret index="1" />
+        <turret index="2" />
+        <turret index="3" />
+        <turret index="4" />
+    </character_slot>
+    <rev_sound filename="tank_rev0.wav" low_pitch="0.4" high_pitch="0.5" low_rev="0.0" high_rev="1.0" volume="0.9" />
+    <rev_sound filename="tank_rev0_b.wav" low_pitch="0.6" high_pitch="0.7" low_rev="0.0" high_rev="1.0" volume="0.6" />
+    <rev_sound filename="tank_rev1.wav" low_pitch="0.2" high_pitch="0.4" low_rev="0.4" high_rev="0.7" volume="1.0" />
+    <rev_sound filename="tank_tracks.wav" low_pitch="0.4" high_pitch="0.8" low_rev="0.1" high_rev="1.0" volume="0.9" />
+    <rev_sound filename="tank_rev2.wav" low_pitch="0.3" high_pitch="0.5" low_rev="0.9" high_rev="1.0" volume="0.9" />
+    <sound key="squeal" filename="tire_squeal.wav" />
+    <sound key="ignition" filename="jeep2_ignition.wav" />
+    <sound key="hit" filename="car_hit2.wav" />
+    <sound key="hit" filename="car_hit1.wav" />
+    <sound key="turret_rotation" filename="turret_rotation1.wav" volume="0.8" />
+    <sound key="turret_rotation" filename="turret_rotation2.wav" volume="0.8" />
+    <effect event_key="health" value="36" ref="SmallSmokeVehicle" offset="0.0 1.8 -2.0" />
+    <effect event_key="health" value="12" ref="SmallSmokeVehicle" offset="0.0 1.8 -2.0" />
+    <effect event_key="health" value="12" ref="BrokenSparkle" post_processing="0" offset="0.0 2.0 -2.0" />
+    <effect event_key="health" value="6" ref="SmallSmokeVehicle" offset="0.0 1.8 -2.0" />
+    <effect event_key="health" value="6" ref="BrokenSparkle" post_processing="0" offset="0.0 2.0 -2.0" />
+    <effect event_key="health" value="6" ref="SmallSmokeVehicle" post_processing="0" offset="0.0 2.0 -2.0" />
+    <effect event_key="destroyed" ref="SmallSmokeVehicle" offset="0.0 1.8 -1.8" />
+    <effect event_key="destroyed" ref="SmallSmokeVehicle" offset="-0.8 1.8 -1.8" />
+    <effect event_key="destroyed" ref="MediumSmokeVehicle" offset="0.0 2.9 0.6" />
+    <effect event_key="destroyed" ref="MediumSmokeVehicle" offset="-0.6 2.7 -0.2" />
+    <effect event_key="destroyed" ref="SmallFireRepeat" offset="0.0 2.4 -1.8" />
+    <effect event_key="destroy" key="other" ref="woosh" post_processing="0" shadow="0" />
+    <effect event_key="cleanup" key="other" ref="woosh" post_processing="0" shadow="0" />
+    <event key="receive_damage_xp_reward">
+        <trigger class="receive_damage" />
+        <result class="reward" xp="0.0200" />
+    </event>
+    <event key="spot_rp_reward">
+        <trigger class="spot" />
+        <result class="reward" rp="200.0" />
+    </event>
+    <event key="destroy_rp_reward">
+        <trigger class="destroy" />
+        <result class="reward" rp="1000.0" />
+    </event>
+</vehicle>

@@ -7,6 +7,7 @@
 #include "query_helpers.as"
 #include "query_helpers2.as"
 #include "GFLhelpers.as"
+//Author: NetherCrow
 
 class VestRecoverTask : Task {
     protected Metagame@ m_metagame;

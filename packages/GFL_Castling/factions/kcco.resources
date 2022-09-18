@@ -3,16 +3,24 @@
 	<!-- 武器 -->
 	<weapon key="kcco_ar.weapon" />
 	<weapon key="compound_bow.weapon" />
+	<weapon key="compound_bow_2.weapon" />
+
 	<weapon key="kcco_sg.weapon" />
 	<weapon key="kccow_hydra.weapon" />
 	<weapon key="kccow_cerynitis.weapon" />
 	<weapon key="kccow_cerynitis_1.weapon" />
 	<weapon key="kcco_flamethrower.weapon" />
-
 	<weapon key="kccow_dactyl.weapon" />
 	<weapon key="kcco_teslatrooper.weapon" />
 	<weapon key="kcco_aegis.weapon"/>
+	<weapon key="kccow_tactical_sniper_rf.weapon"/>
+	<weapon key="kcco_gatling.weapon"/>
+	<weapon key="kcco_othrusdog.weapon"/>
+	<weapon key="kcco_othrusdog_s"/>
+	<weapon key="kcco_fe2o3_svd.weapon"/>
+	<weapon key="kcco_aks74u.weapon"/>
 
+	
 	<!-- 副手武器 -->
 	<weapon key="kcco_tracer_dart_accurate.weapon"/>
 	<weapon key="kcco_tracer_dart_ranged.weapon"/>
@@ -31,7 +39,11 @@
 	<projectile key="kcco_smartgrenade_1.projectile" />
 	<projectile key="kcco_tracer_dart_r.projectile" />
 	<projectile key="kcco_tracer_dart_a.projectile" />
+	<projectile key="selfnone_dog.projectile" />
+	<projectile key="kcco_ap_grenade.projectile" />
+	<projectile key="kcco_agl.projectile" />
 
+	
 	<!-- 载具 -->
 	<vehicle key="typhon.vehicle" />
 	<vehicle key="sandstorm.vehicle" />
@@ -39,6 +51,10 @@
 	<vehicle key="aa_emplacement.vehicle" enabled="1"/>
 	<vehicle key="atv_base_kcco.vehicle"/>
 
+	<vehicle key="deployable_mg.vehicle" />
+	<vehicle key="deployable_mg_2.vehicle" />
+	<vehicle key="deployable_minig.vehicle" />
+	<vehicle key="deployable_minig_2.vehicle" />
 	<!-- 增援 -->
 	<call key="kcco_argo_puppis.call" />
 	<call key="kcco_argo_vela.call" />

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projectile class="grenade" name="30mm" slot="1" pulldown_in_air="0.01" key="ff_justice_riderkick_2.projectile">
     <tag name="grenade"/>
-    <result class="blast" radius="4.5" damage="21" push="4" decal="1"  damage_origin_vehicle="0" faction_compare="not_equal"/>
+    <result class="blast" radius="6.0" damage="25" push="0.4" decal="1"  damage_origin_vehicle="0" faction_compare="not_equal"/>
     <trigger class="impact" />
     <rotation class="none" />
     <model mesh_filename="ff_justice_riderkick_2_no_effect.xml" />

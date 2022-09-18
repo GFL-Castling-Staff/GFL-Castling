@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<vehicle file="vehicle_base.vehicle" name="Crius" key="sandstorm.vehicle" respawn_time="60" time_to_live_unsteerable="95" map_view_atlas_index="49" minimum_fill_requirement="1.0" max_character_collision_speed_on_normal="8.0" max_character_collision_speed="8" character_leave_request_mode="friendly" allow_ai_to_use="1" allow_player_to_use="1" existence="one_per_spawn_point" ai_driver_turns_to_target="1" ai_abandon_when_unsteerable="0" ai_stop_to_fight="1" >
+<vehicle name="Crius" key="sandstorm.vehicle" respawn_time="60" time_to_live_unsteerable="95" map_view_atlas_index="49" minimum_fill_requirement="1.0" max_character_collision_speed_on_normal="8.0" max_character_collision_speed="8" character_leave_request_mode="friendly" allow_ai_to_use="1" allow_player_to_use="1" ai_driver_turns_to_target="1" ai_abandon_when_unsteerable="0" ai_stop_to_fight="1" >
 	<tag name="metal_thin" />
 	<tag name="tank" />
-	
+	<tag name="vehicle" />
 	<tire_set offset="1.2 +0.1 +1.8" radius="0.5" />
 	<tire_set offset="1.0 +0.1 -0.0" radius="0.5" />
 	<tire_set offset="1.2 +0.1 -1.8" radius="0.5" />
-	
 	<control 
 	max_speed="12.0" 
 	acceleration="20.0" 
@@ -22,16 +21,15 @@
 	tracked_visual_tire_max_rotation="1.0" 
 	tracked_visual_tire_rotation_smoothening="0.9" 
 	simulated_speed_factor="0.1" />
-
 	<physics 
-	max_health="36" 
-	blast_damage_threshold="1.7" 
+	max_health="40" 
 	mass="10.0" 
 	broken_mass="20" 
 	gravity="-40" 
 	remove_collision_threshold="50.0" 
 	extent="2.6 2.0 6.0" 
 	offset="0.0 +0.0 -0.0" 
+	blast_damage_threshold="3.0"
 	top_offset="0 4.8 0" 
 	collision_model_pos="0 2.7 0.0" 
 	collision_model_extent="2.8 2.4 6.4" 
@@ -39,22 +37,19 @@
 	drag_offset="-0.1" 
 	friction_offset="-0.1" 
 	preserve_motion_on_impact_factor="1" />
-	
 	<modifier class="blast_range" value="+2.0" />
-
-0	<turret offset="-0.0 1.8 -0.7" weapon_key="sandstorm_none.weapon" weapon_offset="0.0 0.0 0.0" weapon_recoil="0.0" physics_recoil="0.0" max_rotation_step="0.0004" rotation_range="2" />	
-1	<turret offset="-0.84 2.15 0.2" weapon_key="kcco_vehicle_sandstorm.weapon" weapon_offset="0.0 0.0 0.0" weapon_recoil="0.0" physics_recoil="0.08" max_rotation_step="0.000005" rotation="0.08" rotation_range="0.4" parent_turret_index="0"/>
-2	<turret offset="+0.84 2.15 0.2" weapon_key="kcco_vehicle_sandstorm.weapon" weapon_offset="0.0 0.0 0.0" weapon_recoil="0.0" physics_recoil="0.08" max_rotation_step="0.000005" rotation="-0.1" rotation_range="0.4" parent_turret_index="0"/>
-3	<turret offset="-1.12 2.0 0.2" weapon_key="kcco_vehicle_sandstorm.weapon" weapon_offset="0.0 0.0 0.0" weapon_recoil="0.0" physics_recoil="0.08" max_rotation_step="0.000005" rotation="0.12" rotation_range="0.4" parent_turret_index="0"/>
-4	<turret offset="+1.12 2.0 0.2" weapon_key="kcco_vehicle_sandstorm.weapon" weapon_offset="0.0 0.0 0.0" weapon_recoil="0.0" physics_recoil="0.08" max_rotation_step="0.000005" rotation="-0.14" rotation_range="0.4" parent_turret_index="0"/>
-5	<turret offset="-1.40 1.85 0.2" weapon_key="kcco_vehicle_sandstorm.weapon" weapon_offset="0.0 0.0 0.0" weapon_recoil="0.0" physics_recoil="0.08" max_rotation_step="0.000005" rotation="0.16" rotation_range="0.4" parent_turret_index="0"/>
-6	<turret offset="+1.40 1.85 0.2" weapon_key="kcco_vehicle_sandstorm.weapon" weapon_offset="0.0 0.0 0.0" weapon_recoil="0.0" physics_recoil="0.08" max_rotation_step="0.000005" rotation="-0.18" rotation_range="0.4" parent_turret_index="0"/>
-
+	<modifier class="blast_damage" value="-1.0" />
+	<turret offset="-0.0 1.8 -0.7" weapon_key="sandstorm_none.weapon" weapon_offset="0.0 0.0 0.0" weapon_recoil="0.0" physics_recoil="0.0" max_rotation_step="0.0004" rotation_range="2" />
+	<turret offset="-0.84 2.15 0.2" weapon_key="kcco_vehicle_sandstorm.weapon" weapon_offset="0.0 0.0 0.0" weapon_recoil="0.0" physics_recoil="0.08" max_rotation_step="0.000005" rotation="0.08" rotation_range="0.4" parent_turret_index="0"/>
+	<turret offset="+0.84 2.15 0.2" weapon_key="kcco_vehicle_sandstorm.weapon" weapon_offset="0.0 0.0 0.0" weapon_recoil="0.0" physics_recoil="0.08" max_rotation_step="0.000005" rotation="-0.1" rotation_range="0.4" parent_turret_index="0"/>
+	<turret offset="-1.12 2.0 0.2" weapon_key="kcco_vehicle_sandstorm.weapon" weapon_offset="0.0 0.0 0.0" weapon_recoil="0.0" physics_recoil="0.08" max_rotation_step="0.000005" rotation="0.12" rotation_range="0.4" parent_turret_index="0"/>
+	<turret offset="+1.12 2.0 0.2" weapon_key="kcco_vehicle_sandstorm.weapon" weapon_offset="0.0 0.0 0.0" weapon_recoil="0.0" physics_recoil="0.08" max_rotation_step="0.000005" rotation="-0.14" rotation_range="0.4" parent_turret_index="0"/>
+	<turret offset="-1.40 1.85 0.2" weapon_key="kcco_vehicle_sandstorm.weapon" weapon_offset="0.0 0.0 0.0" weapon_recoil="0.0" physics_recoil="0.08" max_rotation_step="0.000005" rotation="0.16" rotation_range="0.4" parent_turret_index="0"/>
+	<turret offset="+1.40 1.85 0.2" weapon_key="kcco_vehicle_sandstorm.weapon" weapon_offset="0.0 0.0 0.0" weapon_recoil="0.0" physics_recoil="0.08" max_rotation_step="0.000005" rotation="-0.18" rotation_range="0.4" parent_turret_index="0"/>
 	<visual class="chassis" mesh_filename="sandstorm_base.mesh" texture_filename="sandstorm_texture.png" offset="0.0 -0.8 0.0" max_tilt="-0.08" />
 	<visual class="chassis" key="broken" mesh_filename="sandstorm_base.mesh" texture_filename="tank_2_broken.png" offset="0.0 -2.8 0.0"/>
 	<visual class="turret" turret_index="0" mesh_filename="sandstorm_turret.mesh" texture_filename="sandstorm_texture.png" />
 	<visual class="turret" key="broken" mesh_filename="sandstorm_turret.mesh" texture_filename="tank_2_broken.png" />
-	
 	<character_slot type="driver" position="1.5 0.5 0" rotation="0" exit_rotation="1.57" hiding="1" animation_id="36" />
 	<character_slot type="gunner" position="-1.5 0.7 0" rotation="0" exit_rotation="-1.57" hiding="1" animation_id="37">
 		<turret index="0" />
@@ -65,20 +60,17 @@
 		<turret index="5" />
 		<turret index="6" />
 	</character_slot>
-	
 	<rev_sound filename="tank_rev0.wav" low_pitch="0.4" high_pitch="0.5" low_rev="0.0" high_rev="1.0" volume="0.9" />
 	<rev_sound filename="tank_rev0_b.wav" low_pitch="0.6" high_pitch="0.7" low_rev="0.0" high_rev="1.0" volume="0.6" />
 	<rev_sound filename="tank_rev1.wav" low_pitch="0.2" high_pitch="0.4" low_rev="0.4" high_rev="0.7" volume="1.0" />
 	<rev_sound filename="tank_tracks.wav" low_pitch="0.4" high_pitch="0.8" low_rev="0.1" high_rev="1.0" volume="0.9" />
 	<rev_sound filename="tank_rev2.wav" low_pitch="0.3" high_pitch="0.5" low_rev="0.9" high_rev="1.0" volume="0.9" />
-	
 	<sound key="squeal" filename="tire_squeal.wav" />
 	<sound key="ignition" filename="jeep2_ignition.wav" />
 	<sound key="hit" filename="car_hit2.wav" />
 	<sound key="hit" filename="car_hit1.wav" />
 	<sound key="turret_rotation" filename="turret_rotation1.wav" volume="0.8" />
 	<sound key="turret_rotation" filename="turret_rotation2.wav" volume="0.8" />
-	
 	<effect event_key="health" value="20" ref="SmallSmokeVehicle" offset="1.0 1.8 1.0" />
 	<effect event_key="health" value="10" ref="SmallSmokeVehicle" offset="1.0 1.8 1.0" />
 	<effect event_key="health" value="10" ref="BrokenSparkle" post_processing="0" offset="1.0 1.8 1.0" />
@@ -89,7 +81,6 @@
 	<effect event_key="destroyed" ref="SmallFireRepeat" offset="0.0 1.8 -1.8" />
 	<effect event_key="destroy" key="other" ref="woosh" post_processing="0" shadow="0" />
 	<effect event_key="cleanup" key="other" ref="woosh" post_processing="0" shadow="0" />
-	
 	<event key="receive_damage_xp_reward">
 		<trigger class="receive_damage" />
 		<result class="reward" xp="0.0200" />
@@ -102,5 +93,4 @@
 		<trigger class="destroy" />
 		<result class="reward" rp="500.0" />
 	</event>
-	
 </vehicle>

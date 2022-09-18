@@ -1,0 +1,33 @@
+<weapon key="gkw_deploy_test_BFG.weapon" radius="0.25" drop_count_factor_on_death="0" drop_count_factor_on_player_death="1" time_to_live_out_in_the_open="60.0">
+	<specification name="test_kcco_bfg" spawn_instance_class="vehicle" spawn_instance_key="kcco_1130.vehicle" magazine_size="1" can_shoot_standing="0" can_shoot_crouching="1" carry_in_two_hands="1" can_shoot_prone="0" class="5" consume="1" sight_range_modifier="1" slot="1" deployment="1"/>
+	<commonness value="0" in_stock="1" can_respawn_with="0"/>
+	<animation state_key="recoil" animation_key="deploy2"/>
+	<capacity value="0" source="rank" source_value="0.0"/>
+	<capacity value="1" source="rank" source_value="0.0"/>
+	<model filename="vest_repair.xml"/>
+	<hud_icon filename="call_Construction_Fairy.png"/>
+	<inventory encumbrance="0" price="10.0"/>
+	<tag name="engineer"/>
+	<stance state_key="running" accuracy="0.3"/>
+	<stance state_key="walking" accuracy="0.675"/>
+	<stance state_key="crouch_moving" accuracy="0.75"/>
+	<stance state_key="standing" accuracy="0.85"/>
+	<stance state_key="crouching" accuracy="0.9"/>
+	<stance state_key="prone" accuracy="0.95"/>
+	<stance state_key="prone_moving" accuracy="0.3"/>
+	<stance state_key="over_wall" accuracy="0.95"/>
+	<animation state_key="running" animation_key="running, carrying load"/>
+	<animation state_key="walking" animation_key="walking, carrying load"/>
+	<animation state_key="hold" animation_key="still, carrying load"/>
+	<animation state_key="hold_on_wall" animation_key="still, carrying load"/>
+	<animation state_key="hold_casual" animation_key="still, carrying load"/>
+	<animation state_key="still_against_wall" animation_key="still, carrying load"/>
+	<animation state_key="recoil" animation_key="deploy1"/>
+	<animation state_key="crouching" animation_key="crouch still, carrying load"/>
+	<animation state_key="crouch_moving" animation_key="crouching forwards, carrying load"/>
+	<animation state_key="changing_weapon_in" animation_key="change weapon in, single hand carry"/>
+	<sound class="impact" fileref="sandbag_drop.wav"/>
+	<inventory encumbrance="1.0" price="1.0"/>
+	<capacity value="1" source="rank" source_value="0.0"/>
+	<modifier class="speed" value="-0.4"/>
+</weapon>

@@ -13,7 +13,7 @@
 	magazine_size="7"
 	suppressed="0"
 	carry_in_two_hands="0"
-	name="PPK"
+	name="Walther PPK"
 	class="4"
 	slot="0"
 	reload_one_at_a_time="0"
@@ -51,10 +51,10 @@
 
 	<!--Sounds-->
 		
-	<sound key="fire" fileref="ppk_fire_FromRE2RE.wav" pitch_variety="0.05" volume="1" />
-    <sound key="magazine_out" fileref="ppk_mgz_out_FromBF5.wav" volume="0.8" />
-    <sound key="magazine_in" fileref="ppk_mgz_in_FromBF5.wav" volume="0.8"/>    
-    <sound key="cycle" fileref="ppk_cycle_FromBF5.wav" volume="0.8" />
+	<sound key="fire" fileref="ppk_fire_FromRE2RE.wav" pitch_variety="0.05" volume="1.2" />
+    <sound key="magazine_out" fileref="ppk_mgz_out_FromBF5.wav" volume="0.6" />
+    <sound key="magazine_in" fileref="ppk_mgz_in_FromBF5.wav" volume="0.6"/>    
+    <sound key="cycle" fileref="ppk_cycle_FromBF5.wav" volume="0.6" />
 
    
 	<!--Model, Icon, Cost-->

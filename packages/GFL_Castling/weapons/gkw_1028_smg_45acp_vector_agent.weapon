@@ -23,19 +23,19 @@
 	<capacity value="1" source="rank" source_value="0.0" />
     <next_in_chain key="gkw_vector_agent_hpi.weapon" share_ammo="0" />
 	<animation state_key="reload" animation_key="reloading, magazine rifle 0.9" />
-    <animation key="recoil" ref="12" />
-	<animation key="recoil" ref="13" />
-	<animation key="recoil" ref="14" />
-	<animation key="recoil" stance_key="over_wall" ref="12" />
-	<animation key="recoil" stance_key="over_wall" ref="13" />
-	<animation key="recoil" stance_key="over_wall" ref="14" />
-    <animation key="recoil" stance_key="crouching" ref="12" />
-    <animation key="recoil" stance_key="crouching" ref="13" />
-    <animation key="recoil" stance_key="crouching" ref="14" />
+    <animation key="recoil" animation_key="recoil1" />
+	<animation key="recoil" animation_key="recoil2" />
+	<animation key="recoil" animation_key="recoil3" />
+	<animation key="recoil" stance_key="over_wall" animation_key="recoil1" />
+	<animation key="recoil" stance_key="over_wall" animation_key="recoil2" />
+	<animation key="recoil" stance_key="over_wall" animation_key="recoil3" />
+    <animation key="recoil" stance_key="crouching" animation_key="recoil1" />
+    <animation key="recoil" stance_key="crouching" animation_key="recoil2" />
+    <animation key="recoil" stance_key="crouching" animation_key="recoil3" />
 	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone" />
 	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone" />
 	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone" />
-	<animation state_key="hold_on_wall" ref="1" />
+	<animation state_key="hold_on_wall" animation_key="still" />
     <animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
 	<animation state_key="stabbing" animation_key="melee, quick knife" />
 	<animation state_key="stabbing" animation_key="pistol whip 3" />
@@ -74,13 +74,13 @@
     <effect class="muzzle" ref="ejection_9mm" />
     
     <stance state_key="running" accuracy="0.85" />
-    <stance state_key="walking" accuracy="0.93" />
-    <stance state_key="crouch_moving" accuracy="0.9" />
-    <stance state_key="prone_moving" accuracy="0.9" />
-    <stance state_key="standing" accuracy="0.95" />
+    <stance state_key="walking" accuracy="0.9" />
+    <stance state_key="crouch_moving" accuracy="0.95" />
+    <stance state_key="prone_moving" accuracy="0.95" />
+    <stance state_key="standing" accuracy="0.95"/>
     <stance state_key="crouching" accuracy="0.95" />
-    <stance state_key="prone" accuracy="0.98" />
-    <stance state_key="over_wall" accuracy="1" />
+    <stance state_key="prone" accuracy="1" />
+    <stance state_key="over_wall" accuracy="1" /> 
     <modifier class="hit_success_probability" value="-0.2" />
     <modifier class="speed" value="0.75" />
     <target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0" />
@@ -113,19 +113,19 @@
 	<capacity value="1" source="rank" source_value="0.0" />
     <next_in_chain key="gkw_vector_agent_sticky.weapon" share_ammo="0" />
 	<animation state_key="reload" animation_key="reloading, magazine rifle 0.9" />
-    <animation key="recoil" ref="12" />
-	<animation key="recoil" ref="13" />
-	<animation key="recoil" ref="14" />
-	<animation key="recoil" stance_key="over_wall" ref="12" />
-	<animation key="recoil" stance_key="over_wall" ref="13" />
-	<animation key="recoil" stance_key="over_wall" ref="14" />
-    <animation key="recoil" stance_key="crouching" ref="12" />
-    <animation key="recoil" stance_key="crouching" ref="13" />
-    <animation key="recoil" stance_key="crouching" ref="14" />
+    <animation key="recoil" animation_key="recoil1" />
+	<animation key="recoil" animation_key="recoil2" />
+	<animation key="recoil" animation_key="recoil3" />
+	<animation key="recoil" stance_key="over_wall" animation_key="recoil1" />
+	<animation key="recoil" stance_key="over_wall" animation_key="recoil2" />
+	<animation key="recoil" stance_key="over_wall" animation_key="recoil3" />
+    <animation key="recoil" stance_key="crouching" animation_key="recoil1" />
+    <animation key="recoil" stance_key="crouching" animation_key="recoil2" />
+    <animation key="recoil" stance_key="crouching" animation_key="recoil3" />
 	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone" />
 	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone" />
 	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone" />
-	<animation state_key="hold_on_wall" ref="1" />
+	<animation state_key="hold_on_wall" animation_key="still" />
     <animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
 	<animation state_key="stabbing" animation_key="melee, quick knife" />
 	<animation state_key="stabbing" animation_key="pistol whip 3" />
@@ -164,13 +164,13 @@
     <effect class="muzzle" ref="ejection_9mm" />
     
     <stance state_key="running" accuracy="0.85" />
-    <stance state_key="walking" accuracy="0.93" />
-    <stance state_key="crouch_moving" accuracy="0.9" />
-    <stance state_key="prone_moving" accuracy="0.9" />
-    <stance state_key="standing" accuracy="0.95" />
+    <stance state_key="walking" accuracy="0.9" />
+    <stance state_key="crouch_moving" accuracy="0.95" />
+    <stance state_key="prone_moving" accuracy="0.95" />
+    <stance state_key="standing" accuracy="0.95"/>
     <stance state_key="crouching" accuracy="0.95" />
-    <stance state_key="prone" accuracy="0.98" />
-    <stance state_key="over_wall" accuracy="1" />
+    <stance state_key="prone" accuracy="1" />
+    <stance state_key="over_wall" accuracy="1" /> 
     <modifier class="hit_success_probability" value="-0.2" />
     <modifier class="speed" value="0.75" />
     <target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0" />
@@ -205,19 +205,19 @@
     stab_enabled="1"/>
 
 	<animation key="reload" animation_key="reloading, magazine rifle 2.1" />
-    <animation key="recoil" ref="12" />
-	<animation key="recoil" ref="13" />
-	<animation key="recoil" ref="14" />
-	<animation key="recoil" stance_key="over_wall" ref="12" />
-	<animation key="recoil" stance_key="over_wall" ref="13" />
-	<animation key="recoil" stance_key="over_wall" ref="14" />
-    <animation key="recoil" stance_key="crouching" ref="12" />
-    <animation key="recoil" stance_key="crouching" ref="13" />
-    <animation key="recoil" stance_key="crouching" ref="14" />
+    <animation key="recoil" animation_key="recoil1" />
+	<animation key="recoil" animation_key="recoil2" />
+	<animation key="recoil" animation_key="recoil3" />
+	<animation key="recoil" stance_key="over_wall" animation_key="recoil1" />
+	<animation key="recoil" stance_key="over_wall" animation_key="recoil2" />
+	<animation key="recoil" stance_key="over_wall" animation_key="recoil3" />
+    <animation key="recoil" stance_key="crouching" animation_key="recoil1" />
+    <animation key="recoil" stance_key="crouching" animation_key="recoil2" />
+    <animation key="recoil" stance_key="crouching" animation_key="recoil3" />
 	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone" />
 	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone" />
 	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone" />
-	<animation state_key="hold_on_wall" ref="1" />
+	<animation state_key="hold_on_wall" animation_key="still" />
     <animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
 	<animation state_key="stabbing" animation_key="melee, quick knife" />
 	<animation state_key="stabbing" animation_key="pistol whip 3" />
@@ -259,22 +259,22 @@
     <hud_icon filename="gkw_vector_agent_547.png" />
 
     <!--Ballistics-->
-    <projectile file="agent_sticky_bomb.projectile" />
-
-
+    <projectile file="agent_sticky_bomb.projectile">
+		<result class="blast" radius="8.5" damage="10" push="0.6" decal="1" faction_compare="not_equal"/>
+	</projectile>
     <ballistics near_far_distance="1000.0" speed_estimation_near="140.0" speed_estimation_far="140.0" max_speed="180.0" randomness="0.0" tweak_factor="0.95" />
 
 
     <!--Accuracy, Movement speed-->
 
     <stance state_key="running" accuracy="0.85" />
-    <stance state_key="walking" accuracy="0.93" />
-    <stance state_key="crouch_moving" accuracy="0.9" />
-    <stance state_key="prone_moving" accuracy="0.9" />
-    <stance state_key="standing" accuracy="0.95" />
+    <stance state_key="walking" accuracy="0.9" />
+    <stance state_key="crouch_moving" accuracy="0.95" />
+    <stance state_key="prone_moving" accuracy="0.95" />
+    <stance state_key="standing" accuracy="0.95"/>
     <stance state_key="crouching" accuracy="0.95" />
-    <stance state_key="prone" accuracy="0.98" />
-    <stance state_key="over_wall" accuracy="1" />
+    <stance state_key="prone" accuracy="1" />
+    <stance state_key="over_wall" accuracy="1" /> 
     <modifier class="hit_success_probability" value="-0.2" />
     <modifier class="speed" value="0.45" />
     <target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0" />

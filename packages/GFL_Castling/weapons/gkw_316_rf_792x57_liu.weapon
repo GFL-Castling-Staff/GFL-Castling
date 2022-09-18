@@ -31,9 +31,9 @@
 
     <!--Animations-->
 
-    <animation key="recoil"  ref="12" />
-    <animation key="recoil"  ref="13" />
-    <animation key="recoil"  ref="14" />
+    <animation key="recoil"  animation_key="recoil1" />
+    <animation key="recoil"  animation_key="recoil2" />
+    <animation key="recoil"  animation_key="recoil3" />
 	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone" />
 	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone" />
 	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone" />
@@ -48,14 +48,14 @@
 
     <!--Sounds-->
 
-    <sound key="fire" fileref="k31_fire_FromBF5.wav" pitch_variety="0.05" volume="2" />
-    <sound key="cycle" fileref="k31_cycle_FromBF5.wav" volume="0.7"/>
+    <sound key="fire" fileref="GenLiu_Fire_FromCOD16.wav" pitch_variety="0.05" volume="1.3" />
+    <sound key="cycle" fileref="GenLiu_cycle_FromBF1.wav" volume="0.7"/>
 
     <!-- <sound key="magazine_out" fileref="" volume="1"/> -->
 
-    <sound key="reload_one" fileref="carcano_reload_FromBF5.wav" volume="0.3" />
-    <sound key="cycle_out" fileref="k31_cycle_out_FromBF5.wav"  volume="0.9"/>
-    <sound key="cycle_in" fileref="k31_cycle_in_FromBF5.wav"  volume="0.9"/>
+    <sound key="reload_one" fileref="GenLiu_reload_FromBF1.wav" volume="0.5" />
+    <sound key="cycle_out" fileref="GenLiu_cycle_out_FromBF1.wav"  volume="0.8"/>
+    <sound key="cycle_in" fileref="GenLiu_cycle_in_FromBF1.wav"  volume="0.8"/>
     <sound class="impact" fileref="rifle_drop.wav" volume="1"/>
 
     <!--Model, Icon, Cost-->
@@ -126,9 +126,9 @@
 
     <!--Animations-->
 
-    <animation key="recoil"  ref="12" />
-    <animation key="recoil"  ref="13" />
-    <animation key="recoil"  ref="14" />
+    <animation key="recoil"  animation_key="recoil1" />
+    <animation key="recoil"  animation_key="recoil2" />
+    <animation key="recoil"  animation_key="recoil3" />
 	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone" />
 	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone" />
 	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone" />
@@ -142,10 +142,10 @@
 
     <!--Sounds-->
 
-    <sound key="fire" fileref="k31_fire_FromBF5.wav" pitch_variety="0.05" volume="2" />
-    <sound key="cycle" fileref="k31_cycle_FromBF5.wav" volume="0.7"/>
-    <sound key="magazine_out" fileref="svd_mgz_out_FromCOD16.wav" volume="0.8"/>
-    <sound key="magazine_in" fileref="svd_mgz_in_FromSQUAD.wav" volume="0.8"/>
+    <sound key="fire" fileref="GenLiu_Fire_FromCOD16.wav" pitch_variety="0.05" volume="1.3" />
+    <sound key="cycle" fileref="GenLiu_cycle_FromBF1.wav" volume="0.7"/>
+    <sound key="magazine_out" fileref="GenLiu_mgz_out_FromBF1.wav" volume="0.8"/>
+    <sound key="magazine_in" fileref="GenLiu_mgz_in_FromBF1.wav" volume="0.8"/>
     <sound class="impact" fileref="rifle_drop.wav" volume="1"/>
 
     <!--Model, Icon, Cost-->
@@ -206,9 +206,9 @@
     
         <!--Animations-->
     
-        <animation key="recoil"  ref="12" />
-        <animation key="recoil"  ref="13" />
-        <animation key="recoil"  ref="14" />
+        <animation key="recoil"  animation_key="recoil1" />
+        <animation key="recoil"  animation_key="recoil2" />
+        <animation key="recoil"  animation_key="recoil3" />
         <animation key="recoil" stance_key="prone" animation_key="recoil1, prone" />
         <animation key="recoil" stance_key="prone" animation_key="recoil2, prone" />
         <animation key="recoil" stance_key="prone" animation_key="recoil3, prone" />
@@ -223,14 +223,14 @@
     
         <!--Sounds-->
     
-        <sound key="fire" fileref="k31_fire_FromBF5.wav" pitch_variety="0.05" volume="2" />
-        <sound key="cycle" fileref="k31_cycle_FromBF5.wav" volume="0.7"/>
-    
+        <sound key="fire" fileref="GenLiu_fire_FromBF1.wav" pitch_variety="0.05" volume="1.3" />
+        <sound key="cycle" fileref="GenLiu_cycle_FromBF1.wav" volume="0.7"/>
+
         <!-- <sound key="magazine_out" fileref="" volume="1"/> -->
-    
-        <sound key="reload_one" fileref="carcano_reload_FromBF5.wav" volume="0.3" />
-        <sound key="cycle_out" fileref="k31_cycle_out_FromBF5.wav"  volume="0.9"/>
-        <sound key="cycle_in" fileref="k31_cycle_in_FromBF5.wav"  volume="0.9"/>
+
+        <sound key="reload_one" fileref="GenLiu_reload_FromBF1.wav" volume="0.5" />
+        <sound key="cycle_out" fileref="GenLiu_cycle_out_FromBF1.wav"  volume="0.8"/>
+        <sound key="cycle_in" fileref="GenLiu_cycle_in_FromBF1.wav"  volume="0.8"/>
         <sound class="impact" fileref="rifle_drop.wav" volume="1"/>
     
         <!--Model, Icon, Cost-->

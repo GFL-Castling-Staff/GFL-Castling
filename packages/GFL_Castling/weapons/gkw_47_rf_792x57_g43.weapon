@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapon file="designated_marksman_rifle.animation_base" key="gkw_g43.weapon">
-
-
     <!--Weapon specifications-->
-    
     <specification 
 	retrigger_time="-1.0" 
 	accuracy_factor="1" 
@@ -20,50 +17,36 @@
 	projectile_speed="215.1" 
 	barrel_offset="0.4" 
 	projectiles_per_shot="1" />
-    <inventory  buy_price="8.0" sell_price="8.0" />	
-	<!--Animations-->
+    <inventory  buy_price="8.0" sell_price="8.0" />
+    <!--Animations-->
     <commonness value="0.2" in_stock="1" can_respawn_with="1" />
-
-
-
-	<animation state_key="reload" animation_key="reloading, magazine rifle 1.2" />
-	
-	<!--Sounds-->
-	
+    <animation state_key="reload" animation_key="reloading, magazine rifle 1.2" />
+    <!--Sounds-->
     <sound key="fire" fileref="g43_fire_FromPOSTSCRIPTUM.wav" pitch_variety="0.01" volume="1.4" />
     <sound key="cycle" fileref="g43_cycle_FromBF5.wav" volume="0.7"/>
     <sound key="magazine_out" fileref="g43_mgz_out_FromBF5.wav" volume="0.6" />
     <sound key="magazine_in" fileref="g43_mgz_in_FromBF5.wav" volume="0.6" />
     <sound class="impact" fileref="rifle_drop.wav" />
-   
-	<!--Model, Icon, Cost-->
-   
+    <!--Model, Icon, Cost-->
     <model filename="gkw_rf_g43.xml" />
     <hud_icon filename="gkw_g43.png" />
-
     <!-- <inventory  price="4.0" /> -->
-	
-	<!--Ballistics-->
-	
-    
+    <!--Ballistics-->
     <weak_hand_hold offset="0.3" />
     <projectile file="bullet.projectile">
         <result class="hit" 
-        kill_probability="1.6" 
-        kill_probability_offset_on_successful_hit="8.0"
+        kill_probability="2.2" 
+        kill_probability_offset_on_successful_hit="4.0"
         kill_decay_start_time="1.16" 
         kill_decay_end_time="1.933" />
     </projectile>
-    
     <!--Accuracy, Movement speed-->
-    
-	<stance state_key="walking" accuracy="0.3" />
+    <stance state_key="walking" accuracy="0.3" />
     <stance state_key="crouch_moving" accuracy="0.65" />
     <stance state_key="prone_moving" accuracy="0.7" />
     <stance state_key="standing" accuracy="0.85"/>
     <stance state_key="crouching" accuracy="0.9" />
     <stance state_key="prone" accuracy="1.0" />
-    <stance state_key="over_wall" accuracy="1.0" /> 
-    <modifier class="speed" value="0" />  
-
+    <stance state_key="over_wall" accuracy="1.0" />
+    <modifier class="speed" value="0" />
 </weapon>

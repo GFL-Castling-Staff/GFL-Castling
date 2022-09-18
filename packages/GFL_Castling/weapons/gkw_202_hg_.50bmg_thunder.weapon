@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapon key="gkw_thunder.weapon" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-
+<tag name="pistol" />
 
 	<specification 
     retrigger_time="-1" 
@@ -21,10 +21,10 @@
 	<inventory encumbrance="2.0" buy_price="5.0" sell_price="5.0"/>
 	<capacity value="1" source="rank" source_value="0.0" />
 
-	<sound key="fire" fileref="thunder50_fire_FromBF1.wav" pitch_variety="0.05" volume="1.6" />
-	<sound key="magazine_out" fileref="thunder50_mgz_out_FromBF5.wav" volume="0.6" />
-	<sound key="magazine_in" fileref="thunder50_mgz_in_FromBF5.wav" volume="0.6" />
-	<sound key="reload_one" fileref="thunder50_cycle_FromTTF2.wav" volume="0.7" />
+	<sound key="fire" fileref="thunder50_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.4" />
+	<sound key="magazine_out" fileref="thunder50_mgz_out_FromCOD16.wav" volume="0.6" />
+	<sound key="magazine_in" fileref="thunder50_mgz_in_FromCOD16.wav" volume="0.6" />
+	<sound key="reload_one" fileref="thunder50_cycle_FromCOD15.wav" volume="0.6" />
 
 	<animation state_key="cycle" animation_key="cycle, revolver" />
 
@@ -68,7 +68,7 @@
 	<modifier class="speed" value="+0.7" />
 
 	<weak_hand_hold offset="0.1" />
-	<projectile file="bullet.projectile">
+	<projectile file="ntw.projectile">
         <result class="blast" damage="8.1" radius="4.5" decal="1" push="0.5" character_state="death" faction_compare="not_equal"/>
         <trail probability="1.0" key="BulletApTrail" />
         <effect class="result" key="terrain" ref="BigBurst" use_surface_color="1" />
@@ -88,7 +88,7 @@
     <effect class="muzzle" ref="coeus" />
     <effect class="muzzle" ref="coeusphere" />
     <effect class="muzzle" ref="coeusmuzzle" lighting="0" />
-
+    <effect class="muzzle" ref="ejection_50BMG" />
 	<stance state_key="running" accuracy="0.5" />
 	<stance state_key="walking" accuracy="0.85" />
 	<stance state_key="crouch_moving" accuracy="0.8" />

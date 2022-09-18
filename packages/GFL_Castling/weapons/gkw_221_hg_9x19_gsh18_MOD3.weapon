@@ -19,7 +19,7 @@
      />
     <!--Animations-->
     <animation state_key="hold_casual" animation_key="dancing, kazachok" />
-    <inventory  buy_price="40.0" sell_price="40.0" />
+    <inventory  buy_price="120.0" sell_price="40.0" />
     <next_in_chain key="gkw_medical_agl_hg.weapon" share_ammo="0" />
     <!--Sounds-->
     <sound key="fire" fileref="gsh18sd_fire_FromR6S.wav" pitch_variety="0.05" volume="2" />
@@ -35,7 +35,7 @@
     <projectile file="bullet.projectile" can_be_detected_by_footmen="0">
         <result class="hit"
 		kill_probability="1.9"
-		kill_probability_offset_on_successful_hit="2.0"
+		kill_probability_offset_on_successful_hit="3.5"
 		kill_decay_start_time="0.14"
 		kill_decay_end_time="0.27"  />
     </projectile>
@@ -49,4 +49,6 @@
     <stance state_key="crouching" accuracy="1.0" />
     <stance state_key="prone" accuracy="1.0" />
     <stance state_key="overwall" accuracy="1.3" />
+    <modifier class="speed" value="0.7" />
+    <modifier class="detectability" value="-0.25" />
 </weapon>

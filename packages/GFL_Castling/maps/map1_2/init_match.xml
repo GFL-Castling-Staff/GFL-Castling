@@ -1,0 +1,104 @@
+<commands>
+  <!-- start_game command: new game menu picks up defaults from here and allows user to override certain settings -->
+  <command 
+	  class="start_game" 
+	  vehicles="1" 
+	  max_soldiers="234" 
+	  player_bot_compensation="4" 
+	  xp_multiplier="1.0"
+	  rp_multiplier="1.0"
+	  friendly_fire="0" 
+	  base_capture_system="any" >
+
+    <faction initial_over_capacity="20" ai_accuracy="0.94"  capacity_offset="10" capacity_multiplier="0.9" />
+    <faction initial_over_capacity="0" ai_accuracy="0.94"  capacity_offset="0" />
+    <faction initial_over_capacity="30" ai_accuracy="0.94"  capacity_offset="0" />    
+  </command>
+
+  <command 
+	  class="commander_ai" 
+	  faction="0"
+	  base_defense="0.5"
+	  border_defense="0.2">
+  </command>
+  <command 
+	  class="commander_ai" 
+	  faction="1"
+	  base_defense="0.6"
+	  border_defense="0.2">
+  </command>
+  <command 
+	  class="commander_ai" 
+	  faction="2"
+	  base_defense="0.6"
+	  border_defense="0.3">
+  </command>  
+  
+<!--  <command
+	  class="faction_resources"
+	  faction_id="0">
+    <vehicle key="aa_emplacement.vehicle" enabled="0"/>
+  </command>
+  <command
+	  class="faction_resources"
+	  faction_id="1">
+    <vehicle key="aa_emplacement.vehicle" enabled="0"/>
+  </command>
+  <command
+	  class="faction_resources"
+	  faction_id="2">
+    <vehicle key="aa_emplacement.vehicle" enabled="0"/>
+  </command>    
+  <command
+	  class="faction_resources"
+	  faction_id="0">
+    <vehicle key="prison_bus.vehicle" enabled="0"/>
+  </command>  
+  <command
+	  class="faction_resources"
+	  faction_id="1">
+    <vehicle key="prison_bus.vehicle" enabled="0"/>
+  </command> 
+  <command
+	  class="faction_resources"
+	  faction_id="2">
+    <vehicle key="prison_bus.vehicle" enabled="0"/>
+  </command>     
+  <command
+	  class="faction_resources"
+	  faction_id="0">
+    <vehicle key="radio_jammer2.vehicle" enabled="0"/>
+  </command>
+  <command
+	  class="faction_resources"
+	  faction_id="0">
+    <vehicle key="radar_tank2.vehicle" enabled="0"/>
+  </command>  
+  <command
+	  class="faction_resources"
+	  faction_id="1">
+    <vehicle key="radar_tank2.vehicle" enabled="0"/>
+  </command> 
+  <command
+	  class="faction_resources"
+	  faction_id="2">
+    <vehicle key="radar_tank2.vehicle" enabled="0"/>
+  </command> 
+  <command
+	  class="faction_resources"
+	  faction_id="0">
+    <vehicle key="cargo_truck.vehicle" enabled="0"/>
+  </command> 
+  <command
+	  class="faction_resources"
+	  faction_id="1">
+    <vehicle key="cargo_truck.vehicle" enabled="0"/>
+  </command>
+  <command
+	  class="faction_resources"
+	  faction_id="2">
+    <vehicle key="cargo_truck.vehicle" enabled="0"/>
+  </command>          
+    
+-->  
+</commands>

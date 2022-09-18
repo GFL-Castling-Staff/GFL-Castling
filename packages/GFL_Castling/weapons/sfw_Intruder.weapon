@@ -43,7 +43,6 @@
     <model filename="sfw_Intruder.xml" />
     <effect class="muzzle" ref="cygnus_red" />
     <hud_icon filename="sfw_intruder.png" />
-    <drop_on_death_result class="spawn" instance_class="carry_item" instance_key="snow_gifts.carry_item" min_amount="1.0" max_amount="2.0" offset="0 1.0 0" position_spread="0 0" direction_spread="0 0" />
 
 
     <weak_hand_hold offset="0.4" />

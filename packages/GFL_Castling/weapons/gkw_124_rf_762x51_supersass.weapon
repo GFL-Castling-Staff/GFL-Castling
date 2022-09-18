@@ -18,11 +18,10 @@
 	last_burst_retrigger_time="0.125"
 	reload_one_at_a_time="0" 
 	sight_range_modifier="2.8" 
-	projectile_speed="216.6" 
+	projectile_speed="230.5" 
 	barrel_offset="0.4" 
 	projectiles_per_shot="1" />
 
-	<next_in_chain key="gkw_supersass_skill.weapon" share_ammo="0" />
 	<!--Animations-->
     <inventory  buy_price="12.0" sell_price="12.0" />
 
@@ -31,10 +30,10 @@
 	
 	<!--Sounds-->
 	
-    <sound key="fire" fileref="sass_fire_From_arma2.wav" pitch_variety="0.01" volume="1" />
-    <sound key="magazine_out" fileref="supersass_mgz_out_FromSQUAD.wav"  volume="0.7" />
-    <sound key="magazine_in" fileref="supersass_mgz_in_FromSQUAD.wav"  volume="0.7" />
-	<sound key="cycle" fileref="supersass_cycle_FromR6S.wav"  volume="0.7" />
+    <sound key="fire" fileref="sass_fire_FromCOD13.wav" pitch_variety="0.01" volume="1.1" />
+    <sound key="magazine_out" fileref="sass_mgz_out_FromSQUAD.wav"  volume="0.55" />
+    <sound key="magazine_in" fileref="sass_mgz_in_FromSQUAD.wav"  volume="0.55" />
+	<sound key="cycle" fileref="sass_cycle_FromCOD13.wav"  volume="0.4" />
     <sound class="impact" fileref="rifle_drop.wav" />
    
 	<!--Model, Icon, Cost-->
@@ -50,22 +49,23 @@
     <weak_hand_hold offset="0.3" />
     <projectile file="bullet.projectile" can_be_detected_by_footmen="0">
         <result class="hit" 
-        kill_probability="1.6"
-        kill_probability_offset_on_successful_hit="1.5" 
+        kill_probability="2.4"
+        kill_probability_offset_on_successful_hit="2.8" 
         kill_decay_start_time="1.448" 
         kill_decay_end_time="2.414" />
     </projectile>
     <effect class="muzzle" ref="ejection_76251" />
     
     <!--Accuracy, Movement speed-->
-    
-	<stance state_key="walking" accuracy="0.45" />
-    <stance state_key="crouch_moving" accuracy="0.4" />
-    <stance state_key="prone_moving" accuracy="0.4" />
+    <stance state_key="running" accuracy="0.6" />
+	<stance state_key="walking" accuracy="0.7" />
+    <stance state_key="crouch_moving" accuracy="0.75" />
+    <stance state_key="prone_moving" accuracy="0.75" />
     <stance state_key="standing" accuracy="0.85"/>
     <stance state_key="crouching" accuracy="0.98" />
     <stance state_key="prone" accuracy="1" />
     <stance state_key="over_wall" accuracy="1" />
+    <modifier class="detectability" value="-0.15"/>
     <modifier class="speed" value="0" />   
 
 </weapon>

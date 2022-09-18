@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon key="vehicle_tow.weapon">
+    <specification retrigger_time="5.0" 
+    accuracy_factor="0.99" 
+    sustained_fire_grow_step="0.8" 
+    sustained_fire_diminish_rate="0.2" 
+    sight_range_modifier="2.0"
+    ai_sight_range_modifier="0.75" 
+    magazine_size="-1" 
+    can_shoot_standing="0" 
+    can_shoot_crouching="0" 
+    suppressed="0" 
+    name="Tank cannon" 
+    class="0" 
+    projectile_speed="50.0" 
+    slot="2" 
+    barrel_offset="1.7" 
+    projectiles_per_shot="1"
+    sight_height_offset="2.0" />
+    <model mesh_filename="tow_cannon.mesh" 
+    texture_filename="tow.png" />
+    <hud_icon filename="hud_tow.png" />
+    <commonness value="0.0" />
+    <projectile file="bunker_rocket.projectile" pulldown_in_air="8" >
+        <result class="blast" radius="3.0" damage="20.0" push="0.5" decal="1" faction_compare="not_equal"/>
+    </projectile>
+    <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5" />
+    <target_factors tag="heavy_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0" />
+    <target_factors tag="light_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="6.0" />
+    <target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="5.0" />	
+	<target_factors tag="shield" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0" />	
+    <ballistics near_far_distance="1000.0" speed_estimation_near="50.0" speed_estimation_far="50.0" max_speed="125.0" randomness="0.0"/>
+    <!-- important non combat player-only vehicles -->
+    <target_factors tag="bazooka" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0" />
+
+    <effect class="muzzle" ref="BiggerMuzzle" />
+    <effect class="muzzle" ref="CannonSmokeBig" />
+    <effect class="muzzle" ref="CannonSmokeBigSphere" />
+
+    <sound class="operation" key="fire" fileref="tow_fire_FromCOD17.wav" volume="1.2" />
+    <!-- front plate-mid -->
+    <shield offset="0.3 -0.55 0" extent="0.2 0.8 0.3" />
+</weapon>

@@ -1,29 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <carry_items>
 	<!-- I.O.P./16LAB -->
-	<!-- <carry_item file="bp_t1.carry_item" /> -->
-	<!-- <carry_item file="bp_t2.carry_item" /> -->
-	<!-- <carry_item file="bp_t3.carry_item" /> -->
+
 	<carry_item file="bp_t4.carry_item" />
 	<carry_item file="bp_t5_16lab.carry_item" />
-	<!-- <carry_item file="cc_t1.carry_item" /> -->
-	<!-- <carry_item file="cc_t2.carry_item" /> -->
-	<!-- <carry_item file="cc_t3.carry_item" /> -->
+
 	<carry_item file="cc_t4.carry_item" />
 	<carry_item file="cc_t5_16lab.carry_item" />
-	<!-- <carry_item file="exo_t1.carry_item" /> -->
-	<!-- <carry_item file="exo_t2.carry_item" /> -->
-	<!-- <carry_item file="exo_t3.carry_item" /> -->
+
 	<carry_item file="exo_t4.carry_item" />
 	<carry_item file="exo_t5_16lab.carry_item" />
-	<!-- <carry_item file="exo_x_t1.carry_item" /> -->
-	<!-- <carry_item file="exo_x_t2.carry_item" /> -->
-	<!-- <carry_item file="exo_x_t3.carry_item" /> -->
+
 	<carry_item file="exo_x_t4.carry_item" />
 	<carry_item file="exo_ai_only.carry_item" />
 
+
+	<carry_item file="exo_t6.carry_item"/>
+	<carry_item file="exo_x_t6.carry_item"/>
+	<carry_item file="acbp_t6.carry_item"/>
+	<carry_item file="chip_a_t6.carry_item"/>
+	<carry_item file="chip_b_t6.carry_item"/>
+	<carry_item file="bp_t6.carry_item" />
+	<carry_item file="cc_t6.carry_item" />
+	<carry_item file="ultra_bp_t6.carry_item" />
+	<carry_item file="srexo_t6.carry_item"/>
+	<carry_item file="tms_t6.carry_item" />
+	<carry_item file="lcc_t6.carry_item" />
+	
 	<!-- Only/MOD.3 Only -->
-	<carry_item file="exo_AK12_defy.carry_item"/>
 	<carry_item file="gentiane.carry_item" />
 	<carry_item file="kalina.carry_item" />
 	<carry_item file="machlian.carry_item" />
@@ -38,9 +42,10 @@
     <carry_item file="ange.carry_item" />
     <carry_item file="dima.carry_item" />
 <!--<carry_item file="ange_2.carry_item" />-->
-<!--<carry_item file="ange_street.carry_item" />-->
+	<carry_item file="ange_street.carry_item" />
 	<carry_item file="gk_jack_dog.carry_item" />
 	<carry_item file="bakery_jefuty.carry_item" />
+	<carry_item file="gk_persica.carry_item" />
 
 	<!-- 靶机 -->
 	<carry_item file="target.carry_item" />
@@ -49,6 +54,5 @@
 	<!--融合势力特殊甲 -->
 	<carry_item file="agent_drone.carry_item"/>
 	<!--精英小队专属外骨骼 -->
-	<carry_item file="exo_t5_ai_16lab.carry_item"/>
-	<carry_item file="exo_defy.carry_item"/>
+	<!-- <carry_item file="exo_defy.carry_item"/> -->
 </carry_items>

@@ -16,9 +16,9 @@
 	class="2"
 	reload_one_at_a_time="0" 
 	sight_range_modifier="4" 
-	projectile_speed="230" 
+	projectile_speed="240" 
 	barrel_offset="0.6" 
-	projectiles_per_shot="6" />
+	projectiles_per_shot="4" />
     <inventory buy_price="99.0" sell_price="99.0" />	
 	<!--Animations-->
 
@@ -45,7 +45,7 @@
 	
     <weak_hand_hold offset="0.3" />
     <projectile file="ntw.projectile" >
-       <result class="blast" damage="5.0" radius="4" decal="1" push="1.0" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0" />
+       <result class="blast" damage="10.0" radius="4" decal="1" push="1.0" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0" />
     </projectile>
 
     <!--Accuracy, Movement speed-->

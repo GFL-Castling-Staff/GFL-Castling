@@ -9,9 +9,9 @@
 	<parameter class="crouch_walking_doing_something_steer_amount" value="0.156" />
 	<parameter class="leaving_vehicle_jump_steer_amount" value="0.4" />
 
-	<parameter class="prone_moving_steer_amount" value="0.05" />
+	<parameter class="prone_moving_steer_amount" value="0.10" />
 	<parameter class="prone_moving_steer_amount_stroke" value="3.0" />
-	<parameter class="prone_moving_max_dot_to_move" value="0.5" />
+	<parameter class="prone_moving_max_dot_to_move" value="0.75" />
 
 	<parameter class="stopping_oppositesteer_amount" value="5.0" /> 
 
@@ -113,7 +113,6 @@
 	<animation key="celebrating, shooting" target_key="celebrating, shooting2" add="1" /> 
 
     <effect class="blood" ref="BloodSplat_bot" />
-    <effect class="blood" type="splat_map" size="2.0" atlas_index="3" layer="3" additive="1" apply_gore_factor="1" />
 	
 	<parameter class="taxi_request_time" value="15" />
 
@@ -125,7 +124,7 @@
     <comment key="skillcooldownhint" text="Skill Cooldown has &#37;time seconds left"/>
 	<comment key="skillcooldowndone" text="Skill is done"/>
 	<comment key="onlyonequeue" text="You can only upgrade one t-doll at one time"/>
-	<comment key="digimindupdate" text="Submit the t=doll to armory, IOP will handle the digi-mind upgrade"/>
+	<comment key="digimindupdate" text="Submit the t-doll to armory, IOP will handle the digi-mind upgrade"/>
 	<comment key="digimindupdatefailed" text="The item you submitted cannot be upgraded"/>
 	<comment key="digimindupdatesuccess" text="&#37;doll_name digi-mind update finish. The shining beacon in a brave new world!"/>
 	<comment key="onlyonequeue_mask" text="You can only exchange one t-doll at one time"/>
@@ -134,6 +133,19 @@
 	<comment key="truemask_success" text="Redeem successfully，Tactical Doll &#37;doll_name reporting to you!"/>
 	<comment key="quest_timeout" text="Your request has timed out, IOP has returned the item to you, please resubmit your order"/>
 	<comment key="celebrateXB" text="Great work! Let us cheer for victory!"/>
+	<comment key="onlyonequeue_common" text="IOP Queue is busy, please try again later"/>
+	<comment key="upgrade_88type" text="Submit the t-doll to armory, IOP will handle the upgrade"/>
+	<comment key="upgrade_aa12" text="Submit the t-doll to armory, IOP will handle the upgrade"/>
+	<comment key="upgrade_common" text="Submit the t-doll to armory, IOP will handle the upgrade"/>
+
+
+	<comment key="ac130callexisthint" text="[Fury Fairy] gunship is currently in the war zone, please call it later. The cost of the call has been refunded"/>
+	<comment key="ac130callstarthint" text="[Fury Fairy] gunship flight check completed, heading towards war zone"/>
+	<comment key="ac130fight" text="[Fury Fairy] Come at me, you devil! I'mma send you smack in the middle of Hell!"/>
+
+	<comment key="snipecallexisthint" text="[Snipe Fairy] UAV Snipe Unit is currently in the war zone, please call it later. The cost of the call has been refunded"/>
+	<comment key="snipecallstarthint" text="[Snipe Fairy] UAV Snipe Unit check completed, heading towards war zone"/>
+	<comment key="snipefight" text="[Snipe Fairy] T-Dolls can only salvage things on their end."/>
 
 	<comment key="quickchat1" text="Thank you!"/>
 	<comment key="quickchat1d" text="&#37;name>> Thank you!"/>

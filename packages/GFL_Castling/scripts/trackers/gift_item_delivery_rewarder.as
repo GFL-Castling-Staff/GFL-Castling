@@ -1,5 +1,6 @@
 #include "item_delivery_objective.as"
 #include "query_helpers.as"
+//Adapted and optimizated by NetherCrow
 
 // ------------------------------------------------------------------------------------------------
 class GiftItemDeliveryRewarder : ItemDeliveryRewarder {
@@ -115,8 +116,8 @@ class GiftItemDeliveryRandomRewarder : ItemDeliveryRewarder {
 						}
 						string name = getResourceName(m_metagame, r.m_key, r.m_type);
 						a["%item_name" + formatInt(i+1)] = name;
-						sendPrivateMessageKey(m_metagame, playerId, "gift box delivery, reward", a);
 					}
+					sendPrivateMessageKey(m_metagame, playerId, "gift box delivery, reward", a);
 				}
 				m_metagame.getComms().send(command);
 			}

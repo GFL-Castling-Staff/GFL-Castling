@@ -23,13 +23,13 @@
 	
 	<!--Animations-->
 	
-    <animation key="recoil" ref="12" />
-    <animation key="recoil" ref="13" />
-    <animation key="recoil" ref="14" />
+    <animation key="recoil" animation_key="recoil1" />
+    <animation key="recoil" animation_key="recoil2" />
+    <animation key="recoil" animation_key="recoil3" />
     <animation key="reload" animation_key="reloading, Machine gun 0.8" />
-    <animation key="hold" ref="32" />
+    <animation key="hold" animation_key="still, heavy weapon" />
   	<animation state_key="hold_casual"			animation_key="dancing, kazachok" />
-    <animation key="hold_on_wall" ref="1" />
+    <animation key="hold_on_wall" animation_key="still" />
     <animation state_key="walking" animation_key="walking, heavy weapon" />
     <animation state_key="walking_backwards" animation_key="walking backwards, heavy weapon" />
 

@@ -10,6 +10,7 @@
 	max_character_collision_speed_on_normal="12"
 	max_character_collision_speed="13"
 	character_leave_request_mode="friendly" 
+	existence="one_per_faction"
 	allow_ai_to_use="1"
 	ai_driver_turns_to_target="1"
 	ai_abandon_when_unsteerable="0"
@@ -45,6 +46,7 @@
 	top_offset="0 4.0 0" 
 	collision_model_pos="0 0.8 0.08" 
 	collision_model_extent="2.56 2.4 4.44" 
+	blast_damage_threshold="2.0"
 	visual_offset="0 0.12 0.0" 
 	friction_offset="0.05"
 	drag_offset="-0.05" /> 

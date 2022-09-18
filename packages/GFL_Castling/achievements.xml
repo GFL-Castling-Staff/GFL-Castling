@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <achievements>
-	<achievement name="destroyer" no_level_title="not much of a destroyer" include_in_alltime_stats="0">
+	<!-- <achievement name="destroyer" no_level_title="not much of a destroyer" include_in_alltime_stats="0">
 		<level steam_achievement_id="ACH_DESTROYER_LVL1">
 			<notification image="hud_achievement_vehicle_destroyer_bronze.png" sound="achievement1.wav" />
 			<rank title="Rookie destroyer" image="hud_achievement_vehicle_destroyer_bronze_pin.png" />
@@ -23,21 +23,25 @@
 			<level value="100" />
 			<level value="1000" />
 		</criteria>
-	</achievement>
+	</achievement> -->
 
-	<achievement name="saboteur" no_level_title="barely a saboteur" include_in_alltime_stats="0">
+	<achievement name="target_destroy" no_level_title="Angry Cafe Maid" include_in_alltime_stats="0">
 		<level steam_achievement_id="ACH_TARGET_LVL1">
-			<notification image="hud_achievement_target_destroyer_bronze.png" sound="achievement1.wav" />
-			<rank title="Rookie saboteur" image="hud_achievement_target_destroyer_bronze_pin.png" />
+			<notification image="hud_achievement_destroy_ping.png" sound="achievement1.wav" />
+			<rank title="Deal trouble with C4" image="hud_achievement_destroy.png" />
 		</level>
 		<level steam_achievement_id="ACH_TARGET_LVL2">
-			<notification image="hud_achievement_target_destroyer_silver.png" sound="achievement2_2.wav" />
-			<rank title="Master saboteur" image="hud_achievement_target_destroyer_silver_pin.png" />
+			<notification image="hud_achievement_destroy_ping.png" sound="achievement2_2.wav" />
+			<rank title="Dam buster" image="hud_achievement_destroy.png" />
 		</level>
 		<level steam_achievement_id="ACH_TARGET_LVL3">
-			<notification image="hud_achievement_target_destroyer_gold.png" sound="achievement3.wav" />
-			<rank title="Elite saboteur" image="hud_achievement_target_destroyer_gold_pin.png" />
+			<notification image="hud_achievement_destroy_ping.png" sound="achievement3.wav" />
+			<rank title="Blow up to origin" image="hud_achievement_destroy.png" />
 		</level>
+		<level>
+			<notification image="hud_achievement_destroy_ping.png" sound="achievement3.wav" />
+			<rank title="W.A.V.E. ERROR" image="hud_achievement_destroy.png" />
+		</level>		
 		<criteria class="vehicle_destroy" owner="enemy" description="* destroy %target_count structures or deployed weapons">
 			<vehicle key="gas_tank.vehicle" />
 			<vehicle key="radar_tower.vehicle" />
@@ -46,19 +50,23 @@
 			<vehicle key="mortar_ammunition_crates.vehicle" />
 			<vehicle key="aa_emplacement.vehicle" />
 			<vehicle key="deployable_mg.vehicle" />
+			<vehicle tag="target" />
 			<level value="5" />
-			<level value="10" />
-			<level value="20" />
+			<level value="50" />
+			<level value="500" />
+			<level value="1145141919" />
 		</criteria>
 		<criteria class="vehicle_destroy" owner="enemy" description="* destroy %target_count radio towers">
 			<vehicle key="radar_tower.vehicle" />
+			<vehicle key="radio_jammer.vehicle" />
 			<level value="1" />
-			<level value="5" />
 			<level value="10" />
+			<level value="100" />
+			<level value="1145141919" />
 		</criteria>
 	</achievement>
 
-	<achievement name="tracker" no_level_title="wannabe tracker" include_in_alltime_stats="0">
+	<achievement name="tracker" no_level_title="Heh, Surprise!" include_in_alltime_stats="0">
 		<level steam_achievement_id="ACH_TRACKER_LVL1">
 			<notification image="hud_achievement_special_crates_bronze.png" sound="achievement1.wav" />
 			<rank title="Rookie tracker" image="hud_achievement_special_crates_bronze_pin.png" />
@@ -71,6 +79,10 @@
 			<notification image="hud_achievement_special_crates_gold.png" sound="achievement3.wav" />
 			<rank title="Elite tracker" image="hud_achievement_special_crates_gold_pin.png" />
 		</level>
+		<level>
+			<notification image="hud_achievement_special_crates_gold.png" sound="achievement3.wav" />
+			<rank title="Elite tracker" image="hud_achievement_special_crates_gold_pin.png" />
+		</level>		
 		<criteria class="vehicle_destroy" owner="any" description="* locate %target_count secret crates">
 			<vehicle key="gflc_crate1.vehicle" />
 			<vehicle key="gflc_crate2.vehicle" />
@@ -81,29 +93,65 @@
 			<vehicle key="gflc_crate7.vehicle" />
 			<vehicle key="gflc_crate8.vehicle" />
 			<vehicle key="gflc_crate9.vehicle" />
-			<level value="2" />
-			<level value="5" />
 			<level value="10" />
+			<level value="50" />
+			<level value="100" />
+			<level value="1145141919" />
 		</criteria>
 	</achievement>
 
-	<achievement name="killer" no_level_title="combat student" include_in_alltime_stats="0">
+	<achievement name="killer" no_level_title="First Blood" include_in_alltime_stats="0">
 		<level steam_achievement_id="ACH_KILLER_LVL1">
-			<notification image="hud_achievement_serial_killer_bronze.png" sound="achievement1.wav" />
-			<rank title="Rookie killer" image="hud_achievement_serial_killer_bronze_pin.png" />
+			<notification image="hud_achievement_killer_ping.png" sound="achievement1.wav" />
+			<rank title="War Machine" image="hud_achievement_killer.png" />
 		</level>
 		<level steam_achievement_id="ACH_KILLER_LVL2">
-			<notification image="hud_achievement_serial_killer_silver.png" sound="achievement2_2.wav"  />
-			<rank title="Master combatant" image="hud_achievement_serial_killer_silver_pin.png" />
+			<notification image="hud_achievement_killer_ping.png" sound="achievement2_2.wav"  />
+			<rank title="Incomparable" image="hud_achievement_killer.png" />
 		</level>
 		<level steam_achievement_id="ACH_KILLER_LVL3">
-			<notification image="hud_achievement_serial_killer_gold.png" sound="achievement3.wav"  />
-			<rank title="Elite marksman" image="hud_achievement_serial_killer_gold_pin.png" />
+			<notification image="hud_achievement_killer_ping.png" sound="achievement3.wav"  />
+			<rank title="Tales of Valkyries" image="hud_achievement_killer.png" />
 		</level>
+		<level>
+			<notification image="hud_achievement_killer_ping.png" sound="achievement3.wav"  />
+			<rank title="Day of Wrath" image="hud_achievement_killer.png" />
+		</level>
+		<level>
+			<notification image="hud_achievement_killer_ping.png" sound="achievement3.wav"  />
+			<rank title="The Lifeless Emperor" image="hud_achievement_killer.png" />
+		</level>
+		<level>
+			<notification image="hud_achievement_killer_ping.png" sound="achievement3.wav"  />
+			<rank title="It's Over 90,000" image="hud_achievement_killer.png" />
+		</level>
+		<level>
+			<notification image="hud_achievement_killer_ping.png" sound="achievement3.wav"  />
+			<rank title="Exorcist Girl" image="hud_achievement_killer.png" />
+		</level>
+		<level>
+			<notification image="hud_achievement_killer_ping.png" sound="achievement3.wav"  />
+			<rank title="Peacemaker" image="hud_achievement_killer.png" />
+		</level>				
+		<level>
+			<notification image="hud_achievement_killer_ping.png" sound="achievement3.wav"  />
+			<rank title="Red Griffin Redemption" image="hud_achievement_killer.png" />
+		</level>
+		<level>
+			<notification image="hud_achievement_killer_ping.png" sound="achievement3.wav"  />
+			<rank title="W.A.V.E. ERROR" image="hud_achievement_killer.png" />
+		</level>																		
 		<criteria class="kill" description="* kill %target_count enemy soldiers">
 			<level value="100" />
 			<level value="500" />
 			<level value="1000" />
+			<level value="5000" />
+			<level value="10000" />
+			<level value="100000" />
+			<level value="200000" />
+			<level value="300000" />
+			<level value="500000" />
+			<level value="1145141919" />
 		</criteria>
 	</achievement>
 

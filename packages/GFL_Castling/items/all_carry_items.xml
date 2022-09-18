@@ -2,8 +2,6 @@
 <carry_items>
 	<!-- I.O.P./16LAB -->
 	<carry_item file="gk_carry_items.xml" />
-	<!-- gk_only/mod3废案例 -->
-	<!-- <carry_item file="only_carry_items.xml" /> -->
 	<!-- KCCO/叶叶叶 -->
 	<carry_item file="kcco_carry_items.xml" />
 	<!-- 铁血！ -->
@@ -11,8 +9,20 @@
     <!-- 帕拉蒂斯！ -->
     <carry_item file="pard_carry_items.xml" />
 	<!-- 垃圾全是垃圾 -->
-	<carry_item file="valuable_item.xml" />
+	<carry_item file="valuable_item.carry_item" />
+
+	<carry_item file="complete_reward_box.carry_item"/>
+	<carry_item file="exchange.carry_item"/>
+	<carry_item file="dollcraft.carry_item"/>
+	<carry_item file="exchange_t6_ticket.carry_item"/>
+
 	<carry_item file="costume_santa.carry_item" />
 	<carry_item file="god_vest.carry_item" />
 	<carry_item file="fadan.carry_item" />
+
+	<carry_item file="vest_40hp.carry_item" />
+	<carry_item file="vest_50hp_tank.carry_item" />
+	<carry_item file="vest_50hp_enforcer.carry_item" />
+
+	
 </carry_items>

@@ -32,7 +32,7 @@
   <parameter class="favor_staying_in_current_player_squad_value_increase" value="0.5" />
   <parameter class="authority_margin" value="0.07" /> 
   <parameter class="monitor_enemies_max_dot_range" value="1.8" />
-  <parameter class="active_guarding_probability" value="5.0" />
+  <parameter class="active_guarding_probability" value="0.75" />
   <parameter class="leading_inspect_alarm_spread_out_distance" value="50.0" />
   <parameter class="leading_inspect_alarm_min_distance" value="45.0" />
   <parameter class="maximum_distance_to_consider_for_heal" value="40.0" />
@@ -74,7 +74,7 @@
   <parameter class="day_reaction_time_to_fight_max" value="0.8" />
   <parameter class="night_reaction_time_to_fight_min" value="1.3" />
   <parameter class="night_reaction_time_to_fight_max" value="1.8" />
-  <parameter class="willingness_to_guard" value="0.5" />
+  <parameter class="willingness_to_guard" value="0.4" />
   <parameter class="minimum_distance_to_consider_deploying_cover" value="18.0" />
   <parameter class="recheck_cover_over_shootability_time" value="3.0" />
   <parameter class="max_objects_per_sqm_to_consider_deployment" value="0.08" />
@@ -89,7 +89,7 @@
   <parameter class="deployment_area_utilization_factor" value="0.4" />
   <parameter class="deployment_max_position_pick_attempts" value="2" />
   <parameter class="fighting_approach_alarm_max_soldiers" value="12" /> 
-  <parameter class="accuracy_offset" value="0.02" /> 
+  <parameter class="accuracy_offset" value="0.0" /> 
   <parameter class="grenade_throw_hold_time" value="0.5" />
   <parameter class="using_cover_min_time" value="1.0" />
   <parameter class="using_cover_max_time" value="2.0" />

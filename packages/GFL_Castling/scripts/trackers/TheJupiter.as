@@ -6,11 +6,13 @@
 #include "query_helpers2.as"
 #include "gamemode.as"
 #include "GFLhelpers.as"
+//Author: NetherCrow
+//Author: Saiwa
 
 class jupiter: Tracker {
 	protected Metagame@ m_metagame;
 	protected float reload_cycle;
-	protected float reload_time=15.0;
+	protected float reload_time=60.0;
 	protected bool m_started=false;
 	protected bool tracker_started;
 	protected int m_numLeft=0;
@@ -55,17 +57,20 @@ class jupiter: Tracker {
         if (characterinfo is null) return;
 		Vector3 c_pos = stringToVector3(characterinfo.getStringAttribute("position"));
 		
-		//艾莫号特别保护措施
-		float jud_amos = 40.0;
-		int vehicleid = getNearByEnemyVehicle(m_metagame,0,c_pos,jud_amos);
-		if(vehicleid!=-1) {
-			_log("Vehicle detected");
-			const XmlElement@ target_info = getVehicleInfo(m_metagame, vehicleid);
-			if(target_info.getStringAttribute("key") == "armored_truck.vehicle") {
-				_log("Amos detected");
+		//艾莫号等一众vip载具特别保护措施
+		float jud_amos = 48.0;
+		int vehicleid;
+		int jud_fire = 1;
+
+		while(jud_fire!=0)
+		{
+			vehicleid = getAmosPosition(m_metagame,0,c_pos,jud_amos);
+			if(vehicleid!=-1) {
 				c_pos = c_pos.add(Vector3(jud_amos*sin(rand(0,20)/20*6.28),0,jud_amos*cos(rand(0,20)/20*6.28)));
 			}
+			else	jud_fire = 0;
 		}
+
 		int circle = 8;	//警示烟雾数量
 
 		for(int i=0;i<circle;i++){

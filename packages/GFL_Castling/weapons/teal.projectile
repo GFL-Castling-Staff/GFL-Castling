@@ -1,18 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<projectile class="grenade" name="" slot="1" time_to_live="0.10" pulldown_in_air="-60">
-    <result class="blast" radius="4" damage="5" decal="0" push="0.0" character_state="death" faction_compare="not_equal" make_vehicle_hit_sound="0" />
+<projectile class="grenade" name="" slot="1" time_to_live="0.10" pulldown_in_air="-30">
+    <result class="blast" radius="4" damage="5" decal="0" push="0.4" character_state="death" faction_compare="not_equal" make_vehicle_hit_sound="0" />
     <trigger class="time" time_to_live="0.01">
-     <collider class="terrain" enabled="1" />     
-     <collider class="static_object" enabled="1" /> 
-     <collider class="vehicle" enabled="1" /> 
-     <collider class="character" enabled="1" faction_compare="not_equal" />
+        <collider class="terrain" enabled="1" />
+        <collider class="static_object" enabled="1" />
+        <collider class="vehicle" enabled="1" />
+        <collider class="character" enabled="1" faction_compare="not_equal" />
     </trigger>
     <rotation class="motion" />
-
     <model />
 
+    <sound class="result" key="character" fileref="melee_impact_flesh1_fromFO4.wav" volume="1.9" />
+    <sound class="result" key="character" fileref="melee_impact_flesh2_fromFO4.wav" volume="1.9" />
+    <sound class="result" key="character" fileref="melee_impact_flesh3_fromFO4.wav" volume="1.9" />
 
+    <sound class="result" key="vehicle" fileref="melee_hit_metal 1.wav" volume="2.5" />
+    <sound class="result" key="vehicle" fileref="melee_hit_metal 2.wav" volume="2.5" />
+    <sound class="result" key="vehicle" fileref="melee_hit_metal 3.wav" volume="2.5" />
+    <sound class="result" key="vehicle" fileref="melee_hit_metal 4.wav" volume="2.5" />
 
-    <trail probability="0.0" />
+    <sound class="result" key="shield" fileref="melee_hit_metal 1.wav" volume="2.5" />
+    <sound class="result" key="shield" fileref="melee_hit_metal 2.wav" volume="2.5" />
+    <sound class="result" key="shield" fileref="melee_hit_metal 3.wav" volume="2.5" />
+    <sound class="result" key="shield" fileref="melee_hit_metal 4.wav" volume="2.5" />
 
 </projectile>

@@ -4,7 +4,7 @@
     <tag name="smg"/>
     <specification 
 		accuracy_factor="1.0" 
-		barrel_offset="0.4" 
+		barrel_offset="0.45" 
 		class="0"
         slot="0"
 		magazine_size="30" 
@@ -22,23 +22,23 @@
     <inventory encumbrance="2.0" buy_price="30.0" sell_price="30.0" />
     <capacity value="1" source="rank" source_value="0.0" />
     <next_in_chain key="gkw_type100_skill.weapon" share_ammo="1" />
-    <animation key="recoil" ref="12" />
-    <animation key="recoil" ref="13" />
-    <animation key="recoil" ref="14" />
-    <animation key="recoil" stance_key="over_wall" ref="12" />
-    <animation key="recoil" stance_key="over_wall" ref="13" />
-    <animation key="recoil" stance_key="over_wall" ref="14" />
-    <animation key="recoil" stance_key="crouching" ref="12" />
-    <animation key="recoil" stance_key="crouching" ref="13" />
-    <animation key="recoil" stance_key="crouching" ref="14" />
+    <animation key="recoil" animation_key="recoil1" />
+    <animation key="recoil" animation_key="recoil2" />
+    <animation key="recoil" animation_key="recoil3" />
+    <animation key="recoil" stance_key="over_wall" animation_key="recoil1" />
+    <animation key="recoil" stance_key="over_wall" animation_key="recoil2" />
+    <animation key="recoil" stance_key="over_wall" animation_key="recoil3" />
+    <animation key="recoil" stance_key="crouching" animation_key="recoil1" />
+    <animation key="recoil" stance_key="crouching" animation_key="recoil2" />
+    <animation key="recoil" stance_key="crouching" animation_key="recoil3" />
     <animation key="recoil" stance_key="prone" animation_key="recoil1, prone" />
     <animation key="recoil" stance_key="prone" animation_key="recoil2, prone" />
     <animation key="recoil" stance_key="prone" animation_key="recoil3, prone" />
-    <animation state_key="hold_on_wall" ref="1" />
+    <animation state_key="hold_on_wall" animation_key="still" />
     <animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
     <animation state_key="reload" animation_key="reloading, magazine rifle 0.9" />
 	<animation state_key="stabbing"	animation_key="melee, bayonet" />
-    <sound key="fire" fileref="type100_fire_FromRS.wav" pitch_variety="0.05" volume="0.8" />
+    <sound key="fire" fileref="type100_fire_FromCOD18.wav" pitch_variety="0.05" volume="1.2" />
     <sound key="magazine_out" fileref="type100_mgz_out_FromBFBC2.wav" volume="0.6" />
     <sound key="magazine_in" fileref="type100_mgz_in_FromBFBC2.wav" volume="0.6" />
     <sound key="cycle" fileref="type100_cycle_FromBFBC2.wav" volume="0.6" />
@@ -51,6 +51,7 @@
     <projectile file="bullet.projectile">
         <result class="hit" kill_probability="1.3" kill_probability_offset_on_successful_hit="2.5" kill_decay_start_time="0.1" kill_decay_end_time="0.6" />
     </projectile>
+    <effect class="muzzle" ref="ejection_9mm" />
     <stance state_key="running" accuracy="0.85" />
     <stance state_key="walking" accuracy="0.9" />
     <stance state_key="crouch_moving" accuracy="0.9" />
@@ -93,19 +94,19 @@
     <inventory encumbrance="2.0" buy_price="30.0" sell_price="30.0" />
     <capacity value="1" source="rank" source_value="0.0" />
     <next_in_chain key="gkw_type100.weapon" share_ammo="1" />
-    <animation key="recoil" ref="12" />
-    <animation key="recoil" ref="13" />
-    <animation key="recoil" ref="14" />
-    <animation key="recoil" stance_key="over_wall" ref="12" />
-    <animation key="recoil" stance_key="over_wall" ref="13" />
-    <animation key="recoil" stance_key="over_wall" ref="14" />
-    <animation key="recoil" stance_key="crouching" ref="12" />
-    <animation key="recoil" stance_key="crouching" ref="13" />
-    <animation key="recoil" stance_key="crouching" ref="14" />
+    <animation key="recoil" animation_key="recoil1" />
+    <animation key="recoil" animation_key="recoil2" />
+    <animation key="recoil" animation_key="recoil3" />
+    <animation key="recoil" stance_key="over_wall" animation_key="recoil1" />
+    <animation key="recoil" stance_key="over_wall" animation_key="recoil2" />
+    <animation key="recoil" stance_key="over_wall" animation_key="recoil3" />
+    <animation key="recoil" stance_key="crouching" animation_key="recoil1" />
+    <animation key="recoil" stance_key="crouching" animation_key="recoil2" />
+    <animation key="recoil" stance_key="crouching" animation_key="recoil3" />
     <animation key="recoil" stance_key="prone" animation_key="recoil1, prone" />
     <animation key="recoil" stance_key="prone" animation_key="recoil2, prone" />
     <animation key="recoil" stance_key="prone" animation_key="recoil3, prone" />
-    <animation state_key="hold_on_wall" ref="1" />
+    <animation state_key="hold_on_wall" animation_key="still" />
     <animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
     <animation state_key="reload" animation_key="reloading, magazine rifle 0.9" />
 	<animation state_key="stabbing"	animation_key="melee, banzai" />
@@ -122,6 +123,7 @@
     <projectile file="bullet.projectile">
         <result class="hit" kill_probability="1.3" kill_probability_offset_on_successful_hit="2.5" kill_decay_start_time="0.1" kill_decay_end_time="0.6" />
     </projectile>
+    <effect class="muzzle" ref="ejection_9mm" />
     <stance state_key="running" accuracy="0.85" />
     <stance state_key="walking" accuracy="0.9" />
     <stance state_key="crouch_moving" accuracy="0.9" />

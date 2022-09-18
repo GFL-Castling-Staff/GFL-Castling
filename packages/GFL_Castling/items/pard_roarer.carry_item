@@ -1,11 +1,96 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <carry_items>
-	<carry_item key="pard_roarer.carry_item" time_to_live_out_in_the_open="15" name="Roarer Shield" transform_on_consume="pard_roarer_1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="pard_roarer.carry_item" time_to_live_out_in_the_open="15" name="Paradesu General Force Armor" transform_on_consume="pard_roarer_1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
+		<model />
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.2" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
+	<carry_item key="pard_roarer_1" time_to_live_out_in_the_open="15" name="Paradesu General Force Armor" transform_on_consume="pard_roarer_2" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model />
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.2" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
+	<carry_item key="pard_roarer_2" time_to_live_out_in_the_open="15" name="Paradesu General Force Armor" transform_on_consume="pard_roarer_3" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model />
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.2" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
+	<carry_item key="pard_roarer_3" time_to_live_out_in_the_open="15" name="Paradesu General Force Armor" transform_on_consume="pard_roarer_4" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model />
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.2" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
+	<carry_item key="pard_roarer_4" time_to_live_out_in_the_open="15" name="Paradesu General Force Armor" transform_on_consume="pard_roarer_5" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model />
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.2" />
+        <modifier class="detectability" value="0.0" />
+	</carry_item>
+	<carry_item key="pard_roarer_5" time_to_live_out_in_the_open="15" name="Paradesu General Force Armor" transform_on_consume="pard_roarer_6" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model />
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
@@ -17,12 +102,12 @@
         <modifier class="hit_success_probability" value="-1.0" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="pard_roarer_1" time_to_live_out_in_the_open="15" name="Roarer Shield" transform_on_consume="pard_roarer_2" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="pard_roarer_6" time_to_live_out_in_the_open="15" name="Paradesu General Force Armor" transform_on_consume="pard_roarer_7" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
+		<model />
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
@@ -34,12 +119,12 @@
         <modifier class="hit_success_probability" value="-1.0" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="pard_roarer_2" time_to_live_out_in_the_open="15" name="Roarer Shield" transform_on_consume="pard_roarer_3" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="pard_roarer_7" time_to_live_out_in_the_open="15" name="Paradesu General Force Armor" transform_on_consume="pard_roarer_8" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
+		<model />
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
@@ -51,12 +136,12 @@
         <modifier class="hit_success_probability" value="-1.0" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="pard_roarer_3" time_to_live_out_in_the_open="15" name="Roarer Shield" transform_on_consume="pard_roarer_4" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="pard_roarer_8" time_to_live_out_in_the_open="15" name="Paradesu General Force Armor" transform_on_consume="pard_roarer_9" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
+		<model />
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
@@ -68,12 +153,12 @@
         <modifier class="hit_success_probability" value="-1.0" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="pard_roarer_4" time_to_live_out_in_the_open="15" name="Roarer Shield" transform_on_consume="pard_roarer_5" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="pard_roarer_9" time_to_live_out_in_the_open="15" name="Paradesu General Force Armor" transform_on_consume="pard_roarer_10" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
+		<model />
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
@@ -85,12 +170,12 @@
         <modifier class="hit_success_probability" value="-1.0" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="pard_roarer_5" time_to_live_out_in_the_open="15" name="Roarer Shield" transform_on_consume="pard_roarer_6" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="pard_roarer_10" time_to_live_out_in_the_open="15" name="Paradesu General Force Armor" transform_on_consume="pard_roarer_11" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
+		<model />
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
@@ -102,12 +187,12 @@
         <modifier class="hit_success_probability" value="-1.0" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="pard_roarer_6" time_to_live_out_in_the_open="15" name="Roarer Shield" transform_on_consume="pard_roarer_7" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="pard_roarer_11" time_to_live_out_in_the_open="15" name="Paradesu General Force Armor" transform_on_consume="pard_roarer_12" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
+		<model />
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
@@ -119,12 +204,12 @@
         <modifier class="hit_success_probability" value="-1.0" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="pard_roarer_7" time_to_live_out_in_the_open="15" name="Roarer Shield" transform_on_consume="pard_roarer_8" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="pard_roarer_12" time_to_live_out_in_the_open="15" name="Paradesu General Force Armor" transform_on_consume="pard_roarer_13" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
+		<model />
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
@@ -136,12 +221,12 @@
         <modifier class="hit_success_probability" value="-1.0" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="pard_roarer_8" time_to_live_out_in_the_open="15" name="Roarer Shield" transform_on_consume="pard_roarer_9" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="pard_roarer_13" time_to_live_out_in_the_open="15" name="Paradesu General Force Armor" transform_on_consume="pard_roarer_14" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
+		<model />
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
@@ -153,12 +238,12 @@
         <modifier class="hit_success_probability" value="-1.0" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="pard_roarer_9" time_to_live_out_in_the_open="15" name="Roarer Shield" transform_on_consume="pard_roarer_10" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="pard_roarer_14" time_to_live_out_in_the_open="15" name="Paradesu General Force Armor" transform_on_consume="pard_roarer_15" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
+		<model />
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
@@ -170,12 +255,12 @@
         <modifier class="hit_success_probability" value="-1.0" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="pard_roarer_10" time_to_live_out_in_the_open="15" name="Roarer Shield" transform_on_consume="pard_roarer_11" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="pard_roarer_15" time_to_live_out_in_the_open="15" name="Paradesu General Force Armor" transform_on_consume="pard_roarer_16" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
+		<model />
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
@@ -187,12 +272,12 @@
         <modifier class="hit_success_probability" value="-1.0" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="pard_roarer_11" time_to_live_out_in_the_open="15" name="Roarer Shield" transform_on_consume="pard_roarer_12" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="pard_roarer_16" time_to_live_out_in_the_open="15" name="Paradesu General Force Armor" transform_on_consume="pard_roarer_17" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
+		<model />
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
@@ -204,12 +289,12 @@
         <modifier class="hit_success_probability" value="-1.0" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="pard_roarer_12" time_to_live_out_in_the_open="15" name="Roarer Shield" transform_on_consume="pard_roarer_13" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="pard_roarer_17" time_to_live_out_in_the_open="15" name="Paradesu General Force Armor" transform_on_consume="pard_roarer_18" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
+		<model />
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
@@ -221,12 +306,12 @@
         <modifier class="hit_success_probability" value="-1.0" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="pard_roarer_13" time_to_live_out_in_the_open="15" name="Roarer Shield" transform_on_consume="pard_roarer_14" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="pard_roarer_18" time_to_live_out_in_the_open="15" name="Paradesu General Force Armor" transform_on_consume="pard_roarer_19" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
+		<model />
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
@@ -238,12 +323,12 @@
         <modifier class="hit_success_probability" value="-1.0" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="pard_roarer_14" time_to_live_out_in_the_open="15" name="Roarer Shield" transform_on_consume="pard_roarer_15" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="pard_roarer_19" time_to_live_out_in_the_open="15" name="Paradesu General Force Armor" transform_on_consume="pard_roarer_20" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
+		<model />
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
@@ -255,97 +340,12 @@
         <modifier class="hit_success_probability" value="-1.0" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="pard_roarer_15" time_to_live_out_in_the_open="15" name="Roarer Shield" transform_on_consume="pard_roarer_16" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="pard_roarer_20" time_to_live_out_in_the_open="15" name="Paradesu General Force Armor" transform_on_consume="pard_roarer_21" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.0" />
-        <modifier class="hit_success_probability" value="-1.0" />
-        <modifier class="detectability" value="0.0" />
-	</carry_item>
-	<carry_item key="pard_roarer_16" time_to_live_out_in_the_open="15" name="Roarer Shield" transform_on_consume="pard_roarer_17" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="pard_ar.png"/>
-		<capacity value="1" source="rank" source_value="0"/>
-		<commonness value="1" in_stock="1" can_respawn_with="1"/>
-		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.0" />
-        <modifier class="hit_success_probability" value="-1.0" />
-        <modifier class="detectability" value="0.0" />
-	</carry_item>
-	<carry_item key="pard_roarer_17" time_to_live_out_in_the_open="15" name="Roarer Shield" transform_on_consume="pard_roarer_18" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="pard_ar.png"/>
-		<capacity value="1" source="rank" source_value="0"/>
-		<commonness value="1" in_stock="1" can_respawn_with="1"/>
-		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.0" />
-        <modifier class="hit_success_probability" value="-1.0" />
-        <modifier class="detectability" value="0.0" />
-	</carry_item>
-	<carry_item key="pard_roarer_18" time_to_live_out_in_the_open="15" name="Roarer Shield" transform_on_consume="pard_roarer_19" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="pard_ar.png"/>
-		<capacity value="1" source="rank" source_value="0"/>
-		<commonness value="1" in_stock="1" can_respawn_with="1"/>
-		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.0" />
-        <modifier class="hit_success_probability" value="-1.0" />
-        <modifier class="detectability" value="0.0" />
-	</carry_item>
-	<carry_item key="pard_roarer_19" time_to_live_out_in_the_open="15" name="Roarer Shield" transform_on_consume="pard_roarer_20" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="pard_ar.png"/>
-		<capacity value="1" source="rank" source_value="0"/>
-		<commonness value="1" in_stock="1" can_respawn_with="1"/>
-		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
-        <modifier class="speed" value="0.0" />
-        <modifier class="hit_success_probability" value="-1.0" />
-        <modifier class="detectability" value="0.0" />
-	</carry_item>
-	<carry_item key="pard_roarer_20" time_to_live_out_in_the_open="15" name="Roarer Shield" transform_on_consume="pard_roarer_21" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-		<hud_icon filename="pard_ar.png"/>
-		<capacity value="1" source="rank" source_value="0"/>
-		<commonness value="1" in_stock="1" can_respawn_with="1"/>
-		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
+		<model />
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
@@ -357,12 +357,12 @@
         <modifier class="hit_success_probability" value="-0.6" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="pard_roarer_21" time_to_live_out_in_the_open="15" name="Roarer Shield" transform_on_consume="pard_roarer_22" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="pard_roarer_21" time_to_live_out_in_the_open="15" name="Paradesu General Force Armor" transform_on_consume="pard_roarer_22" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
+		<model />
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
@@ -374,12 +374,12 @@
         <modifier class="hit_success_probability" value="-0.6" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="pard_roarer_22" time_to_live_out_in_the_open="15" name="Roarer Shield" transform_on_consume="pard_roarer_23" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="pard_roarer_22" time_to_live_out_in_the_open="15" name="Paradesu General Force Armor" transform_on_consume="pard_roarer_23" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
+		<model />
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
@@ -391,12 +391,12 @@
         <modifier class="hit_success_probability" value="-0.6" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="pard_roarer_23" time_to_live_out_in_the_open="15" name="Roarer Shield" transform_on_consume="pard_roarer_24" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="pard_roarer_23" time_to_live_out_in_the_open="15" name="Paradesu General Force Armor" transform_on_consume="pard_roarer_24" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
+		<model />
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
@@ -408,12 +408,12 @@
         <modifier class="hit_success_probability" value="-0.6" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="pard_roarer_24" time_to_live_out_in_the_open="15" name="Roarer Shield" transform_on_consume="pard_roarer_25" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="pard_roarer_24" time_to_live_out_in_the_open="15" name="Paradesu General Force Armor" transform_on_consume="pard_roarer_25" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
+		<model />
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
@@ -425,12 +425,12 @@
         <modifier class="hit_success_probability" value="-0.6" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="pard_roarer_25" time_to_live_out_in_the_open="15" name="Roarer Shield" transform_on_consume="pard_roarer_26" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="pard_roarer_25" time_to_live_out_in_the_open="15" name="Paradesu General Force Armor" transform_on_consume="pard_roarer_26" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
+		<model />
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
@@ -442,12 +442,12 @@
         <modifier class="hit_success_probability" value="-0.6" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="pard_roarer_26" time_to_live_out_in_the_open="15" name="Roarer Shield" transform_on_consume="pard_roarer_27" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="pard_roarer_26" time_to_live_out_in_the_open="15" name="Paradesu General Force Armor" transform_on_consume="pard_roarer_27" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
+		<model />
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
@@ -459,12 +459,12 @@
         <modifier class="hit_success_probability" value="-0.6" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="pard_roarer_27" time_to_live_out_in_the_open="15" name="Roarer Shield" transform_on_consume="pard_roarer_28" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="pard_roarer_27" time_to_live_out_in_the_open="15" name="Paradesu General Force Armor" transform_on_consume="pard_roarer_28" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
+		<model />
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
@@ -476,12 +476,12 @@
         <modifier class="hit_success_probability" value="-0.6" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="pard_roarer_28" time_to_live_out_in_the_open="15" name="Roarer Shield" transform_on_consume="pard_roarer_29" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="pard_roarer_28" time_to_live_out_in_the_open="15" name="Paradesu General Force Armor" transform_on_consume="pard_roarer_29" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
+		<model />
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
@@ -493,12 +493,12 @@
         <modifier class="hit_success_probability" value="-0.6" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="pard_roarer_29" time_to_live_out_in_the_open="15" name="Roarer Shield" transform_on_consume="pard_roarer_30" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="pard_roarer_29" time_to_live_out_in_the_open="15" name="Paradesu General Force Armor" transform_on_consume="pard_roarer_30" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
+		<model />
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
@@ -510,12 +510,12 @@
         <modifier class="hit_success_probability" value="-0.6" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="pard_roarer_30" time_to_live_out_in_the_open="15" name="Roarer Shield" transform_on_consume="pard_roarer_31" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="pard_roarer_30" time_to_live_out_in_the_open="15" name="Paradesu General Force Armor" transform_on_consume="pard_roarer_31" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
+		<model />
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
@@ -527,12 +527,12 @@
         <modifier class="hit_success_probability" value="-0.6" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="pard_roarer_31" time_to_live_out_in_the_open="15" name="Roarer Shield" transform_on_consume="pard_roarer_32" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="pard_roarer_31" time_to_live_out_in_the_open="15" name="Paradesu General Force Armor" transform_on_consume="pard_roarer_32" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
+		<model />
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
@@ -544,12 +544,12 @@
         <modifier class="hit_success_probability" value="-0.6" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="pard_roarer_32" time_to_live_out_in_the_open="15" name="Roarer Shield" transform_on_consume="pard_roarer_33" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="pard_roarer_32" time_to_live_out_in_the_open="15" name="Paradesu General Force Armor" transform_on_consume="pard_roarer_33" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
+		<model />
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
@@ -561,12 +561,12 @@
         <modifier class="hit_success_probability" value="-0.6" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="pard_roarer_33" time_to_live_out_in_the_open="15" name="Roarer Shield" transform_on_consume="pard_roarer_34" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="pard_roarer_33" time_to_live_out_in_the_open="15" name="Paradesu General Force Armor" transform_on_consume="pard_roarer_34" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
+		<model />
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
@@ -578,12 +578,12 @@
         <modifier class="hit_success_probability" value="-0.6" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="pard_roarer_34" time_to_live_out_in_the_open="15" name="Roarer Shield" transform_on_consume="pard_roarer_35" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="pard_roarer_34" time_to_live_out_in_the_open="15" name="Paradesu General Force Armor" transform_on_consume="pard_roarer_35" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
+		<model />
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
@@ -595,12 +595,12 @@
         <modifier class="hit_success_probability" value="-0.6" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="pard_roarer_35" time_to_live_out_in_the_open="15" name="Roarer Shield" transform_on_consume="pard_roarer_36" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="pard_roarer_35" time_to_live_out_in_the_open="15" name="Paradesu General Force Armor" transform_on_consume="pard_roarer_36" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
+		<model />
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
@@ -612,12 +612,12 @@
         <modifier class="hit_success_probability" value="-0.6" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="pard_roarer_36" time_to_live_out_in_the_open="15" name="Roarer Shield" transform_on_consume="pard_roarer_37" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="pard_roarer_36" time_to_live_out_in_the_open="15" name="Paradesu General Force Armor" transform_on_consume="pard_roarer_37" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
+		<model />
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
@@ -629,12 +629,12 @@
         <modifier class="hit_success_probability" value="-0.6" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="pard_roarer_37" time_to_live_out_in_the_open="15" name="Roarer Shield" transform_on_consume="pard_roarer_38" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="pard_roarer_37" time_to_live_out_in_the_open="15" name="Paradesu General Force Armor" transform_on_consume="pard_roarer_38" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
+		<model />
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
@@ -646,12 +646,12 @@
         <modifier class="hit_success_probability" value="-0.6" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="pard_roarer_38" time_to_live_out_in_the_open="15" name="Roarer Shield" transform_on_consume="pard_roarer_39" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="pard_roarer_38" time_to_live_out_in_the_open="15" name="Paradesu General Force Armor" transform_on_consume="pard_roarer_39" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
+		<model />
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
@@ -663,12 +663,12 @@
         <modifier class="hit_success_probability" value="-0.6" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="pard_roarer_39" time_to_live_out_in_the_open="15" name="Roarer Shield" transform_on_consume="pard_roarer_40" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="pard_roarer_39" time_to_live_out_in_the_open="15" name="Paradesu General Force Armor" transform_on_consume="pard_roarer_40" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
+		<model />
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
@@ -680,12 +680,12 @@
         <modifier class="hit_success_probability" value="-0.6" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="pard_roarer_40" time_to_live_out_in_the_open="15" name="Roarer Shield" transform_on_consume="pard_roarer_41" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="pard_roarer_40" time_to_live_out_in_the_open="15" name="Paradesu General Force Armor" transform_on_consume="pard_roarer_41" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
+		<model />
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
@@ -697,12 +697,12 @@
         <modifier class="hit_success_probability" value="-0.6" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="pard_roarer_41" time_to_live_out_in_the_open="15" name="Roarer Shield" transform_on_consume="pard_roarer_42" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="pard_roarer_41" time_to_live_out_in_the_open="15" name="Paradesu General Force Armor" transform_on_consume="pard_roarer_42" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
+		<model />
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
@@ -714,12 +714,12 @@
         <modifier class="hit_success_probability" value="-0.6" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="pard_roarer_42" time_to_live_out_in_the_open="15" name="Roarer Shield" transform_on_consume="pard_roarer_43" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="pard_roarer_42" time_to_live_out_in_the_open="15" name="Paradesu General Force Armor" transform_on_consume="pard_roarer_43" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
+		<model />
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
@@ -731,12 +731,12 @@
         <modifier class="hit_success_probability" value="-0.6" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="pard_roarer_43" time_to_live_out_in_the_open="15" name="Roarer Shield" transform_on_consume="pard_roarer_44" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="pard_roarer_43" time_to_live_out_in_the_open="15" name="Paradesu General Force Armor" transform_on_consume="pard_roarer_44" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
+		<model />
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
@@ -748,12 +748,12 @@
         <modifier class="hit_success_probability" value="-0.6" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="pard_roarer_44" time_to_live_out_in_the_open="15" name="Roarer Shield" transform_on_consume="pard_roarer_45" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="pard_roarer_44" time_to_live_out_in_the_open="15" name="Paradesu General Force Armor" transform_on_consume="pard_roarer_45" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
+		<model />
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
@@ -765,12 +765,12 @@
         <modifier class="hit_success_probability" value="-0.6" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="pard_roarer_45" time_to_live_out_in_the_open="15" name="Roarer Shield" transform_on_consume="pard_roarer_46" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="pard_roarer_45" time_to_live_out_in_the_open="15" name="Paradesu General Force Armor" transform_on_consume="pard_roarer_46" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
+		<model />
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
@@ -782,12 +782,12 @@
         <modifier class="hit_success_probability" value="-0.6" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="pard_roarer_46" time_to_live_out_in_the_open="15" name="Roarer Shield" transform_on_consume="pard_roarer_47" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="pard_roarer_46" time_to_live_out_in_the_open="15" name="Paradesu General Force Armor" transform_on_consume="pard_roarer_47" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
+		<model />
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
@@ -799,12 +799,12 @@
         <modifier class="hit_success_probability" value="-0.6" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="pard_roarer_47" time_to_live_out_in_the_open="15" name="Roarer Shield" transform_on_consume="pard_roarer_48" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="pard_roarer_47" time_to_live_out_in_the_open="15" name="Paradesu General Force Armor" transform_on_consume="pard_roarer_48" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
+		<model />
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
@@ -816,12 +816,12 @@
         <modifier class="hit_success_probability" value="-0.6" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="pard_roarer_48" time_to_live_out_in_the_open="15" name="Roarer Shield" transform_on_consume="pard_roarer_49" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="pard_roarer_48" time_to_live_out_in_the_open="15" name="Paradesu General Force Armor" transform_on_consume="pard_roarer_49" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
+		<model />
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
@@ -833,12 +833,12 @@
         <modifier class="hit_success_probability" value="-0.6" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="pard_roarer_49" time_to_live_out_in_the_open="15" name="Roarer Shield" transform_on_consume="pard_roarer_50" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="pard_roarer_49" time_to_live_out_in_the_open="15" name="Paradesu General Force Armor" transform_on_consume="pard_roarer_50" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="1"/>
-		<model mesh_filename="vestexo.xml"/>
+		<model />
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />

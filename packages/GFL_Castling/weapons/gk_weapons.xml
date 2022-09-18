@@ -8,6 +8,7 @@
 <weapon file="gkw_106_ar_762x51_fal.weapon" />
 <weapon file="gkw_107_ar_556x45_f2000.weapon" />
 <weapon file="gkw_110_mg_792x57_fg42.weapon" />
+<weapon file="gkw_110_mg_792x57_fg42_only.weapon" />
 <weapon file="gkw_119_ar_9x39_ots14.weapon" />
 <weapon file="gkw_124_rf_762x51_supersass.weapon" />
 <weapon file="gkw_129_ar_58x42_type95.weapon" />
@@ -45,6 +46,7 @@
 <weapon file="gkw_43_rf_762x54r_svd.weapon" />
 <weapon file="gkw_44_rf_762x54r_sv98.weapon" />
 <weapon file="gkw_46_rf_792x57_kar98k.weapon" />
+<weapon file="gkw_46_rf_792x57_kar98k_MOD3.weapon" />
 <weapon file="gkw_47_rf_792x57_g43.weapon" />
 <weapon file="gkw_53_rf_20x110_ntw20.weapon" />
 <weapon file="gkw_54_ar_556x45_m16a1.weapon" />
@@ -64,7 +66,6 @@
 <weapon file="gkw_84_mg_762x39_rpd.weapon" />
 <weapon file="gkw_86_mg_792x57_mg42.weapon" />
 <weapon file="gkw_87_mg_792x57_mg34.weapon" />
-<weapon file="gkw_95_rf_792x57_88type.weapon" />
 <weapon file="gkw_118_ar_9x39_9a91.weapon" />
 <weapon file="gkw_206_ar_545x39_ak12.weapon" />
 <weapon file="gkw_122_ar_473x33_g11.weapon" />
@@ -75,7 +76,7 @@
 <weapon file="gkw_25_smg_9x19_mp40.weapon" />
 <weapon file="gkw_22_smg_762x25_pps43.weapon" />
 <weapon file="gkw_17_smg_45acp_m3.weapon" />
-<weapon file="gkw_12_hg_9x19_c96.weapon" />
+<weapon file="gkw_12_hg_763x25_c96.weapon" />
 <weapon file="gkw_26_smg_9x19_mp5.weapon" />
 <weapon file="gkw_32_smg_9x19_microuzi.weapon" />
 <!-- 2021年10月1日 -->
@@ -92,7 +93,7 @@
 <weapon file="gkw_128_rf_127x108_m99.weapon" />
 <!-- 2021年10月6日 -->
 <weapon file="gkw_344_ar_556x45_fara83.weapon" />
-<weapon file="gkw_16_smg_9x19_thompson.weapon" />
+<weapon file="gkw_16_smg_45acp_thompson.weapon" />
 <weapon file="gkw_330_ar_556x45_fx05.weapon" /> 
 <weapon file="gkw_343_ar_556x45_apc556.weapon" />
 <weapon file="gkw_346_hg_9x19_cz100.weapon" />
@@ -135,7 +136,7 @@
 <weapon file="gkw_206_rf_338_r93.weapon" />
 <weapon file="gkw_348_rf_50_hs50.weapon" />
 <weapon file="gkw_238_mg_58x42_qjy88.weapon" />
-<weapon file="gkw_203_smg_556x45_honeybadger.weapon" />
+<weapon file="gkw_203_smg_.300BLK_honeybadger.weapon" />
 <weapon file="gkw_130_ar_556x45_type97.weapon" />
 <weapon file="gkw_260_hg_9x19_pa15.weapon" />
 <weapon file="gkw_196_ar_556x45_zastavaM21.weapon" />
@@ -151,8 +152,10 @@
 <weapon file="gkw_4_hg_357_python.weapon" />
 <weapon file="gkw_4_hg_357_python_skill.weapon" />
 <weapon file="gkw_331_hg_27x9_kolibri.weapon" />
-<weapon file="gkw_96_hg_45_grizzly.weapon" />
+<weapon file="gkw_96_hg_50ae_grizzly.weapon" />
 <weapon file="gkw_182_hg_730_contender.weapon" />
+<weapon file="gkw_220_hg_9x19_mp443.weapon" />
+<weapon file="gkw_220_hg_9x19_mp443_MOD3.weapon" />
 
 <!-- 2021年12月10日 -->
 <weapon file="gkw_329_rf_338_svch.weapon" />
@@ -185,7 +188,6 @@
 <weapon file="gkw_313_ar_556x45_sacr.weapon"/>
 <weapon file="gkw_81_mg_338_lwmmg.weapon" />
 <weapon file="gkw_115_smg_9x19_kp31.weapon" />
-<weapon file="gkw_206_ar_545x39_ak12_defyAI.weapon"/>
 <!-- 2022年2月19日 -->
 <weapon file="gkw_26_smg_9x19_mp5_MOD3.weapon"/>
 <!-- 2022年2月25日-->
@@ -238,6 +240,7 @@
 <weapon file="gkw_31_smg_9x19_mab38.weapon"/>
 <weapon file="gkw_31_smg_9x19_mab38_MOD3.weapon"/>
 <weapon file="gkw_154_sg_12g_m500_MOD3.weapon"/>
+<weapon file="gkw_154_sg_12g_m500_MOD3_3707_SKIN.weapon"/>
 <weapon file="gkw_213_smg_65x25_cms.weapon"/>
 <weapon file="gkw_404_ar_473x33_g11_MOD3.weapon"/>
 <weapon file="gkw_97_hg_9x19_m950a_MOD3.weapon"/>
@@ -251,10 +254,39 @@
 <weapon file="gkw_263_mg_556x45_mg36.weapon"/>
 <weapon file="gkw_95_rf_792x57_88type.weapon"/>
 <weapon file="gkw_39_rf_762x54_m1891.weapon"/>
+<weapon file="gkw_9_hg_9x19_p38.weapon"/>
+<weapon file="gkw_80_mg_.30-06_m1919a4.weapon"/>
+<weapon file="gkw_200_rf_762x51_xm3_MOD3.weapon"/>
+<weapon file="gkw_176_smg_9x19_tmp.weapon"/>
+<weapon file="gkw_337_rf_45acp_delisle.weapon"/>
+<weapon file="gkw_51_rf_762x63_fn49.weapon"/>
+<weapon file="gkw_51_rf_762x63_fn49_MOD3.weapon"/>
+<weapon file="gkw_70_ar_556x45_fnc.weapon"/>
+<weapon file="gkw_127_smg_762x25_type79.weapon"/>
+<weapon file="gkw_366_sg_12g_spas15.weapon"/>
 
+<weapon file="gkw_42_rf_145x114_PTRD.weapon"/>
+<weapon file="gkw_304_smg_9x19_saf.weapon"/>
+<weapon file="gkw_29_smg_9x19_sten.weapon"/>
+<weapon file="gkw_29_smg_9x19_sten_MOD3.weapon"/>
 
-<!--靶机-->
+<weapon file="gkw_324_sg_410_m6asw.weapon"/>
+
+<weapon file="gkw_161_sg_12g_hawk97.weapon"/>
+<weapon file="gkw_161_sg_12g_hawk97_MOD3.weapon"/>
+<weapon file="gkw_367_sg_12g_mk3a1.weapon"/>
+<weapon file="gkw_212_hg_9x19_k5.weapon"/>
+<weapon file="gkw_199_mg_762x54r_type80.weapon"/>
+<weapon file="gkw_199_mg_762x54r_type80_MOD3.weapon"/>
+
+<weapon file="gkw_34_rf_762x63_m1_evilsf.weapon"/>
+<weapon file="gkw_34_rf_762x63_m1_evilsf_1106_SKIN.weapon"/>
+
+<weapon file="gkw_151_sg_12g_m1887.weapon"/>
+
+<!--Special-->
 <weapon file="target.weapon" />
+<weapon file="gkw_special_cyclops.weapon"/>
 
 <!--手枪医疗榴弹-->
 <weapon file="gkw_medical_agl_hg.weapon" />
@@ -285,7 +317,9 @@
 <weapon file="gkw_consume_88rocket.weapon" />
 <weapon file="gkw_consume_at4.weapon" />
 <weapon file="gkw_consume_javelin.weapon" />
-
+<weapon file="gkw_ump9_guard_vent.weapon" />
+<weapon file="cover_deploy.weapon" />
+<weapon file="gkw_deploy_test_BFG.weapon"/>
 <!-- skin\mod3 -->
 <weapon file="gk_weapons_skin_mod3.xml" />
 <weapon file="gk_weapons_only.xml" />
@@ -293,15 +327,15 @@
 <weapon file="gk_weapons_FF.xml" />
 
 <!--firework-->
-<weapon file="firework.weapon" />
+<!-- <weapon file="firework.weapon" /> -->
 <!-- 404精英小队 -->
 <weapon file="gkw_404_ar_473x33_g11_MOD3.weapon" />
 <weapon file="gkw_404_ar_556x45_hk416_MOD3.weapon" />
 <weapon file="gkw_404_smg_45acp_ump45_MOD3.weapon" />
 <!-- 忤逆精英小队 -->
 <weapon file="gkw_ak12_defyAI.weapon" />
-<weapon file="gkw_ak15_defyAI.weapon" />
-<weapon file="gkw_rpk16_defyAI.weapon" />
+<!-- <weapon file="gkw_ak15_defyAI.weapon" />
+<weapon file="gkw_rpk16_defyAI.weapon" /> -->
 <!-- <weapon file="gkw_defy_rocker.weapon" /> -->
 <!-- 忤逆精英军方小队 -->
 <!-- <weapon file="gkw_aegis.weapon" />

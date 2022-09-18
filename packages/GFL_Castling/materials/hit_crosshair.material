@@ -1,0 +1,21 @@
+material hit_crosshair
+{
+    receive_shadows off
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend add 
+			depth_write on
+			depth_check on
+			depth_func always_pass
+			fog_override true
+
+			texture_unit 
+			{
+				texture hit_impact.png
+			}
+		}
+	}
+}

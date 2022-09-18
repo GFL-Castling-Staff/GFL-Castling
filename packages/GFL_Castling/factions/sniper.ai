@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ai filename="default.ai">
-  <parameter class="accuracy_offset" value="0.1" /> 
+  <parameter class="accuracy_offset" value="0.07" /> 
   <parameter class="max_sight_range_with_muzzle" value="40.0" />
   <parameter class="leader_sight_range" value="50.0" />
   <parameter class="team_member_sight_range" value="40.0" />  
@@ -11,5 +11,8 @@
   <parameter class="squad_cover_provider_offset_factor" value="-0.9" />
   <parameter class="prefer_roofs_probability" value="0.8" />
   <parameter class="willingness_to_guard" value="0.0" />
-
+  <parameter class="fighting_regular_move_radius" value="40.0" />
+  <parameter class="using_cover_min_time" value="4.0" />
+  <parameter class="using_cover_max_time" value="8.0" />
+  <parameter class="accuracy_penalty_range" value="0.0" />
 </ai>

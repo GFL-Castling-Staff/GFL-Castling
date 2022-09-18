@@ -1,63 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<weapon file="sf.base_weapon" key="sfw_prowler.weapon">
-    <tag name="smg" />
-
-    <specification
-	retrigger_time="0.15"
-	accuracy_factor="0.95"
-	sustained_fire_grow_step="0.5"
-	sustained_fire_diminish_rate="3.0"
-	magazine_size="30"
-	can_shoot_standing="1"
-	suppressed="0"
-    carry_in_two_hands="0"  
-	name="SF-Prowler"
-	class="0"
-	reload_one_at_a_time="0"
-	sight_range_modifier="1.0"
-	projectile_speed="100.0"
-	projectiles_per_shot="2"
-    barrel_offset="0.0"
-	stab_enabled="0"
-	use_basic_muzzle_smoke_effect="0"
-    slot="0" />
-
-		
-    <animation state_key="recoil" animation_key="still,jaguar" />
-    <animation state_key="reload"	animation_key="still,jaguar" />
-    <animation state_key="hold"	animation_key="still,jaguar" />
-    <animation state_key="hold_casual"	animation_key="still,jaguar" />
-    <animation state_key="hold_on_wall"	animation_key="still,jaguar" />
-    <animation state_key="still_against_wall"	animation_key="still,jaguar" />
-    <animation state_key="running" animation_key="still,jaguar" />
-    <animation state_key="walking"	animation_key="still,jaguar" />
-    <animation state_key="walking_backwards" animation_key="still,jaguar" />
-    <animation state_key="changing_weapon_in" 	animation_key="still,jaguar" />
-    <animation state_key="crouching"	animation_key="still,jaguar" />
-    <animation state_key="crouch_moving"	animation_key="still,jaguar" />
-
-    <sound key="fire" fileref="ripper_fire_FromCOD13.wav" pitch_variety="0.05" volume="1.1" />
-    <sound key="magazine_out" fileref="ripper_mgz_out_FromCOD12.wav" volume="0.8" />
-    <sound key="magazine_in" fileref="ripper_mgz_in_FromCOD12.wav" volume="0.8" />
-    <sound key="cycle" fileref="ripper_cycle_FromCOD12.wav" volume="0.8" />
-    <sound class="impact" fileref="rifle_drop.wav" />    
-    <model filename="" />
-
-    <hud_icon filename="testing.png" />
-
-    <weak_hand_hold offset="0.2" />
-    <projectile file="bullet_sf.projectile">
-        <result class="hit" kill_probability="1.3" kill_decay_start_time="0.5" kill_decay_end_time="0.5" />
-    </projectile>
-    
-    <stance state_key="running" accuracy="0.4" />
-    <stance state_key="walking" accuracy="0.5" />
-    <stance state_key="crouch_moving" accuracy="0.6" />
-    <stance state_key="prone_moving" accuracy="0.6" />
-
-    <stance state_key="standing" accuracy="0.8" />
-    <stance state_key="crouching" accuracy="1" />
-    <stance state_key="prone" accuracy="1" />
-    
-    <modifier class="speed" value="0.3" />
+<weapons>
+<weapon key="sfw_prowler.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+	<tag name="smg"/>
+	<specification retrigger_time="0.2" accuracy_factor="1.0" sustained_fire_grow_step="0.5" sustained_fire_diminish_rate="3.0" magazine_size="100" can_shoot_standing="1" suppressed="0" carry_in_two_hands="0" name="SF-Prowler" class="0" spread_range="0.15" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="100.0" projectiles_per_shot="1" barrel_offset_3d="-0.35 0.0 0.0" stab_enabled="0" use_basic_muzzle_smoke_effect="0" slot="0"/>
+	<animation state_key="recoil" animation_key="still,jaguar"/>
+	<animation state_key="reload" animation_key="still,jaguar"/>
+	<animation state_key="hold" animation_key="still,jaguar"/>
+	<animation state_key="hold_casual" animation_key="still,jaguar"/>
+	<animation state_key="hold_on_wall" animation_key="still,jaguar"/>
+	<animation state_key="still_against_wall" animation_key="still,jaguar"/>
+	<animation state_key="running" animation_key="still,jaguar"/>
+	<animation state_key="walking" animation_key="still,jaguar"/>
+	<animation state_key="walking_backwards" animation_key="still,jaguar"/>
+	<animation state_key="changing_weapon_in" animation_key="still,jaguar"/>
+	<animation state_key="crouching" animation_key="still,jaguar"/>
+	<animation state_key="crouch_moving" animation_key="still,jaguar"/>
+	<sound key="fire" fileref="ripper_fire_FromCOD13.wav" pitch_variety="0.05" volume="1.1"/>
+	<sound key="magazine_out" fileref="ripper_mgz_out_FromCOD12.wav" volume="0.8"/>
+	<sound key="magazine_in" fileref="ripper_mgz_in_FromCOD12.wav" volume="0.8"/>
+	<sound key="cycle" fileref="ripper_cycle_FromCOD12.wav" volume="0.8"/>
+	<sound class="impact" fileref="rifle_drop.wav"/>
+	<model filename=""/>
+	<hud_icon filename="testing.png"/>
+	<weak_hand_hold offset="0.2"/>
+	<projectile file="bullet_sf.projectile">
+        <result class="hit" kill_probability="1.5" kill_decay_start_time="0.5" kill_decay_end_time="0.5"/>
+	</projectile>
+	<stance state_key="running" accuracy="0.8"/>
+	<stance state_key="walking" accuracy="0.8"/>
+	<stance state_key="crouch_moving" accuracy="0.8"/>
+	<stance state_key="prone_moving" accuracy="0.8"/>
+	<stance state_key="standing" accuracy="0.8"/>
+	<stance state_key="crouching" accuracy="1"/>
+	<stance state_key="prone" accuracy="1"/>
+    <stance state_key="over_wall" accuracy="1"/>
+	<modifier class="speed" value="0.3"/>
+	<commonness value="0.000001" in_stock="1" can_respawn_with="1"/>
+	<inventory encumbrance="0.0" buy_price="1.0" sell_price="0.0"/>
+	<capacity value="1" source="rank" source_value="0.0"/>
+	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
+	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
+	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
 </weapon>
+<weapon key="sfw_prowler_swap.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+	<tag name="smg"/>
+	<specification retrigger_time="0.1" accuracy_factor="1.0" sustained_fire_grow_step="0.3" sustained_fire_diminish_rate="3.0" magazine_size="100" can_shoot_standing="1" suppressed="0" carry_in_two_hands="0" name="SF-Prowler SWAP" class="0" spread_range="0.05" reload_one_at_a_time="0" sight_range_modifier="1.25" projectile_speed="100.0" projectiles_per_shot="1" barrel_offset_3d="-0.35 0.0 0.0" stab_enabled="0" use_basic_muzzle_smoke_effect="0" slot="0"/>
+	<animation state_key="recoil" animation_key="still,jaguar"/>
+	<animation state_key="reload" animation_key="still,jaguar"/>
+	<animation state_key="hold" animation_key="still,jaguar"/>
+	<animation state_key="hold_casual" animation_key="still,jaguar"/>
+	<animation state_key="hold_on_wall" animation_key="still,jaguar"/>
+	<animation state_key="still_against_wall" animation_key="still,jaguar"/>
+	<animation state_key="running" animation_key="still,jaguar"/>
+	<animation state_key="walking" animation_key="still,jaguar"/>
+	<animation state_key="walking_backwards" animation_key="still,jaguar"/>
+	<animation state_key="changing_weapon_in" animation_key="still,jaguar"/>
+	<animation state_key="crouching" animation_key="still,jaguar"/>
+	<animation state_key="crouch_moving" animation_key="still,jaguar"/>
+	<sound key="fire" fileref="ripper_fire_FromCOD13.wav" pitch_variety="0.05" volume="1.1"/>
+	<sound key="magazine_out" fileref="ripper_mgz_out_FromCOD12.wav" volume="0.8"/>
+	<sound key="magazine_in" fileref="ripper_mgz_in_FromCOD12.wav" volume="0.8"/>
+	<sound key="cycle" fileref="ripper_cycle_FromCOD12.wav" volume="0.8"/>
+	<sound class="impact" fileref="rifle_drop.wav"/>
+	<model filename=""/>
+	<hud_icon filename="testing.png"/>
+	<weak_hand_hold offset="0.2"/>
+	<projectile file="bullet_sf.projectile">
+        <result class="hit" kill_probability="1.5" kill_probability_offset_on_successful_hit="0.5" kill_decay_start_time="0.5" kill_decay_end_time="0.5"/>
+	</projectile>
+	<stance state_key="running" accuracy="0.8"/>
+	<stance state_key="walking" accuracy="0.8"/>
+	<stance state_key="crouch_moving" accuracy="0.8"/>
+	<stance state_key="prone_moving" accuracy="0.8"/>
+	<stance state_key="standing" accuracy="0.8"/>
+	<stance state_key="crouching" accuracy="1"/>
+	<stance state_key="prone" accuracy="1"/>
+    <stance state_key="over_wall" accuracy="1"/>
+	<modifier class="speed" value="0.4"/>
+    <modifier class="hit_success_probability" value="-0.35" />
+	<commonness value="0.000001" in_stock="1" can_respawn_with="1"/>
+	<inventory encumbrance="0.0" buy_price="1.0" sell_price="0.0"/>
+	<capacity value="1" source="rank" source_value="0.0"/>
+	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
+	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
+	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
+</weapon>
+</weapons>

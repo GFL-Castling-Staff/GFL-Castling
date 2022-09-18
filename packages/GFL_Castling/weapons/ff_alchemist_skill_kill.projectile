@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<projectile class="grenade" name="" key="ff_alchemist_skill_kill.projectile" slot="1" pulldown_in_air="4">
+    <result class="blast" radius="4.5" damage="4" push="0.3" decal="0" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0" />
+    <trigger class="impact" />
+    <rotation class="motion" />
+
+    <sound class="result" key="other" fileref="melee_impact_flesh1_fromFO4.wav" volume="1.9" />
+    <sound class="result" key="other" fileref="melee_impact_flesh2_fromFO4.wav" volume="1.9" />
+    <sound class="result" key="other" fileref="melee_impact_flesh3_fromFO4.wav" volume="1.9" />     
+
+    <sound class="result" key="character" copy="other" />
+    <sound class="result" key="terrain" copy="other" />
+    <sound class="result" key="vehicle" copy="other" />
+    <sound class="result" key="static_object" copy="other" />
+    <sound class="result" key="shield" copy="other" />
+
+    <effect class="result" key="terrain" ref="Ct_Shine_Blood" />
+    <effect class="result" key="vehicle" ref="Ct_Shine_Blood" />
+    <effect class="result" key="static_object" ref="Ct_Shine_Blood"/>
+    <effect class="result" key="charater" ref="Ct_Shine_Blood" />
+    <effect class="result" key="shield" ref="Ct_Shine_Blood" />
+    <effect class="result" key="other" ref="Ct_Shine_Blood" />
+    <effect class="result" key="terrain" ref="ct_woosh_small" />
+    <effect class="result" key="vehicle" ref="ct_woosh_small" />
+    <effect class="result" key="static_object" ref="ct_woosh_small"/>
+    <effect class="result" key="charater" ref="ct_woosh_small" />
+    <effect class="result" key="shield" ref="ct_woosh_small" />
+    <effect class="result" key="other" ref="ct_woosh_small" />
+    <effect class="result" key="charater" ref="BloodExplosion"/>
+	
+</projectile>

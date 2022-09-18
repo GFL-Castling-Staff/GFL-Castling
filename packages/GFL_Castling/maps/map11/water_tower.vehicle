@@ -1,0 +1,51 @@
+<vehicle name="Water Tower" key="water_tower.vehicle" map_view_atlas_index="-1"  reserves_spawn_point="1" protectors="5"  soldier_capacity_offset="5" respawn_time="36000.0">    
+	<tag name="target" />
+	<tire_set offset="1.0 0.0 1.0" radius="0.65" />
+	<tire_set offset="1.0 0.0 -1.0" radius="0.65" />
+
+	<control max_speed="20.0" acceleration="6.7" max_reverse_speed="6.0" max_rotation="0.8" max_water_depth="1.9" />
+                                                                                                                                                       
+	<physics max_health="12.0" mass="10000.0" extent="3.5 0.0 3.5" offset="0 0.0 0" top_offset="0 2 0" collision_model_pos="0 2.0 0" collision_model_extent="3.5 14 3.5" visual_offset="0 0.0 0.0" /> 
+
+	<visual class="chassis" mesh_filename="water_tower.mesh" texture_filename="water_tower.png" />
+	<visual class="chassis" key="broken" mesh_filename="water_tower_broken.mesh" texture_filename="water_tower_broken.png" />
+  
+	<effect event_key="destroyed" ref="SmallSmokeVehicle" offset="0.0 1.8 0.0" />
+
+	<event>
+		<trigger class="destroy" />
+		<result class="reward" xp="0.0050" />
+	</event>
+  
+	<event>
+		<trigger class="destroy" />
+		<result class="reward" rp="200" />
+	</event>
+
+	<event>
+		<trigger class="spot" />
+		<result class="reward" rp="50.0" />
+	</event>
+
+	<effect event_key="destroy" key="other" ref="SmokeMinor" post_processing="1" />
+	<effect event_key="destroy" key="other" ref="ShadowSmokeMinor" shadow="1" />
+  
+	<event>
+		<trigger class="destroy" />
+  	<result class="spawn" instance_class="visual_item" instance_key="burning_piece_radartower.visual_item" min_amount="2" max_amount="4" offset="0 4.0 0" position_spread="1.5 1.5" direction_spread="0.2 0.5" />
+	</event>  
+	<event>
+		<trigger class="destroy" />
+  	<result class="spawn" instance_class="visual_item" instance_key="burning_piece_water_tower1.visual_item" min_amount="1" max_amount="1" offset="0 8.0 0" position_spread="1.5 1.5" direction_spread="0.2 0.4" />
+	</event>  
+	<event>
+		<trigger class="destroy" />
+  	<result class="spawn" instance_class="visual_item" instance_key="burning_piece_water_tower2.visual_item" min_amount="1" max_amount="1" offset="0 7.0 0" position_spread="1.5 1.5" direction_spread="0.2 0.4" />
+	</event>  
+	<event>
+		<trigger class="destroy" />
+  	<result class="spawn" instance_class="visual_item" instance_key="burning_piece_water_tower3.visual_item" min_amount="1" max_amount="1" offset="0 12.0 0" position_spread="1.0 1.0" direction_spread="0.05 0.3" texture_filename="water_tower_broken.png" />
+	</event>      
+   
+  
+</vehicle>

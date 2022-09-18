@@ -382,9 +382,14 @@ class Vector3 {
 Vector3 stringToVector3(string s) {
 	Vector3 d;
 	array<string> strings = s.split(" ");
-	for (int i = 0; i < 3; ++i) {
-		d.m_values[i] = parseFloat(strings[i]);
-	}
+	if(strings.length()!=3)
+		for (int i = 0; i < 3; ++i) {
+			d.m_values[i] = 0.0;
+		}		
+	else
+		for (int i = 0; i < 3; ++i) {
+			d.m_values[i] = parseFloat(strings[i]);
+		}
 	return d;
 }
 

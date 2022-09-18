@@ -1,0 +1,55 @@
+<weapon key="kccow_vehicle_BFG.weapon">
+	<specification retrigger_time="9.6" accuracy_factor="1" sustained_fire_grow_step="1.2" sustained_fire_diminish_rate="0.6" sight_range_modifier="8.0" ai_sight_range_modifier="1.0" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="0" suppressed="0" name="the Big Fucking Gun for KCCO" class="0" projectile_speed="180.0" slot="2" barrel_offset_3d="0.0 3.5 5.0" projectiles_per_shot="1" sight_height_offset="2.0"/>
+	<model />
+	<hud_icon filename="hud_hornet.png"/>
+	<commonness value="0.0"/>
+	<weak_hand_hold offset="0.2"/>
+	<projectile file="artillery_jupiter_420.projectile" radius="0.5">
+	<result class="blast" damage="40" radius="24" decal="1" push="4" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+	<trigger class="impact"/>
+	<effect class="result" key="terrain" ref="NavalBurstInner" post_processing="1" use_surface_color="1"/>
+	<effect class="result" key="terrain" ref="NavalBurstOuter" post_processing="1" use_surface_color="1"/>
+	<effect class="result" key="terrain" ref="NavalBurstUp" post_processing="1" use_surface_color="1"/>
+	<effect class="result" key="terrain" ref="NavalSmokeUp1" post_processing="1"/>
+	<effect class="result" key="terrain" ref="NavalSmokeUp2" post_processing="1"/>
+	<effect class="result" key="terrain" ref="NavalSmokeTop1" post_processing="1"/>
+	<effect class="result" key="terrain" ref="NavalSmokeTop2" post_processing="1"/>
+	<effect class="result" key="terrain" ref="NavalSmokeTop3" post_processing="1"/>
+	<effect class="result" key="terrain" ref="NavalSmoke1" post_processing="1"/>
+	<effect class="result" key="terrain" ref="NavalSmoke2" post_processing="1"/>
+	<effect class="result" key="terrain" ref="NavalSmoke3" post_processing="1"/>
+	<effect class="result" key="terrain" ref="NavalGodray" lighting="0"/>
+	<effect class="result" key="terrain" ref="woosh_big1" lighting="0"/>
+	<effect class="result" key="terrain" ref="ShadowSmoke" shadow="1"/>
+	<effect class="result" type="splat_map" surface_tag="" size="10.0" atlas_index="0" layer="1"/>
+	<effect class="result" type="splat_map" surface_tag="" size="16.0" atlas_index="4" layer="0"/>
+	<effect class="result" type="splat_map" surface_tag="" size="18.0" atlas_index="0" layer="2" additive="0"/>
+	<effect class="result" key="other" ref="NavalBurstInner" post_processing="1"/>
+	<effect class="result" key="other" ref="NavalBurstOuter" post_processing="1"/>
+	<effect class="result" key="other" ref="NavalSmokeUp1" post_processing="1"/>
+	<effect class="result" key="other" ref="NavalSmokeUp2" post_processing="1"/>
+	<effect class="result" key="other" ref="NavalSmokeTop1" post_processing="1"/>
+	<effect class="result" key="other" ref="NavalSmokeTop2" post_processing="1"/>
+	<effect class="result" key="other" ref="NavalSmokeTop3" post_processing="1"/>
+	<effect class="result" key="other" ref="NavalSmoke1" post_processing="1"/>
+	<effect class="result" key="other" ref="NavalSmoke2" post_processing="1"/>
+	<effect class="result" key="other" ref="NavalSmoke3" post_processing="1"/>
+	<effect class="result" key="other" ref="NavalGodray" lighting="0"/>
+	<effect class="result" key="other" ref="woosh_big1" lighting="0"/>
+	<effect class="result" key="other" ref="ShadowSmoke" shadow="1"/>
+	<effect class="result" key="static_object" copy="terrain"/>
+	<effect class="result" key="vehicle" copy="terrain"/>
+	<effect class="result" key="character" copy="terrain"/>
+	</projectile>
+	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
+	<target_factors tag="heavy_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="10.0"/>
+	<target_factors tag="apc" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0"/>
+	<target_factors tag="light_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="6.0"/>
+	<target_factors tag="defensive_at" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.5"/>
+	<target_factors tag="tactical" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0"/>
+	<target_factors tag="bazooka" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
+	<target_factors tag="punchme" distance="1.0" direction="0.0" squad_command="1.0" base_score="30.0"/>
+	<effect class="muzzle" ref="LawMuzzle"/>
+	<effect class="muzzle" ref="UpDust"/>
+	<sound key="fire" fileref="hornet_shot.wav" volume="0.5"/>
+</weapon>

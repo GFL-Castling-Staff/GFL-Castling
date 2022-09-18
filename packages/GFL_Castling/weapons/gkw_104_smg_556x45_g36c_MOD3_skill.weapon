@@ -23,13 +23,13 @@
     <commonness value="0.01" in_stock="0" can_respawn_with="1" />
     <inventory encumbrance="10.0" buy_price="80.0" sell_price="80.0" />
 
-    <animation key="recoil" ref="12" />
-    <animation key="recoil" ref="13" />
-    <animation key="recoil" ref="14" />
+    <animation key="recoil" animation_key="recoil1" />
+    <animation key="recoil" animation_key="recoil2" />
+    <animation key="recoil" animation_key="recoil3" />
     <animation key="recoil" stance_key="prone" animation_key="recoil1, prone" />
     <animation key="recoil" stance_key="prone" animation_key="recoil2, prone" />
     <animation key="recoil" stance_key="prone" animation_key="recoil3, prone" />
-    <animation state_key="hold_on_wall" ref="1" />
+    <animation state_key="hold_on_wall" animation_key="still" />
     <animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
     <animation state_key="stabbing" animation_key="melee, quick knife" />
     <animation state_key="stabbing" animation_key="pistol whip 3" />
@@ -62,6 +62,7 @@
     <stance state_key="prone" accuracy="1" />
 	<stance state_key="over_wall" accuracy="1" />
     <modifier class="speed" value="-0.08" />
+    <modifier class="hit_success_probability" value="-0.1" />
 	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" />
     <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0" />
     <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />

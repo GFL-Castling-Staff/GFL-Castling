@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon key="kcco_gatling.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+	<tag name="machine gun"/>
+	<tag name="elite"/>
+	<specification accuracy_factor="1.0" barrel_offset_3d="0 0.2 0.6" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" class="0" slot="0" magazine_size="200" name="Code:Cyclops-MG" carry_in_two_hands="0" projectile_speed="100" spread_range="0.2" retrigger_time="0.06" suppressed="0" sustained_fire_diminish_rate="1.0" sight_range_modifier="1.45" use_basic_muzzle_smoke_effect="0" sustained_fire_grow_step="2.0"/>
+	<animation state_key="recoil" animation_key="recoil, hip gatling"/>
+	<animation key="recoil" stance_key="crouching" animation_key="recoil, crouch gatling"/>
+	<animation state_key="hold_casual" animation_key="casual, blowgun"/>
+	<animation state_key="hold_casual" animation_key="still, single hand carry"/>
+	<animation state_key="hold" animation_key="hold, hip gatling"/>
+	<animation state_key="crouching" animation_key="crouch, hip gatling"/>
+	<animation state_key="crouch_moving" animation_key="crouching forwards, single hand carry"/>
+	<animation state_key="reload" animation_key="hold, hip gatling"/>
+	<animation state_key="walking" animation_key="walking, pistol"/>
+	<animation state_key="walking_backwards" animation_key="walking backwards, pistol"/>
+	<animation state_key="running" animation_key="running, single hand carry"/>
+	<sound key="fire" fileref="Doppelsoldner_mg_fire_FromTTF2.wav" pitch_variety="0.05" volume="1.3"/>
+	<sound key="magazine_out" fileref="ags30_mgz_out_FromBF1.wav" volume="0.8"/>
+	<sound key="magazine_in" fileref="ags30_mgz_in_FromBF1.wav" volume="0.8"/>
+	<sound key="cycle" fileref="striker_cycle_FromCOD12.wav" volume="0.7"/>
+	<sound class="impact" fileref="rifle_drop.wav"/>
+	<model />
+	<hud_icon filename="testing.png"/>
+	<weak_hand_hold offset="0.3"/>
+	<projectile file="bullet_kcco.projectile">
+		<result class="hit" kill_probability="1.8" kill_decay_start_time="0.1" kill_decay_end_time="1.0"/>
+	</projectile>
+	<addon_model filename="kcco_ammopack.xml"/>
+	<effect class="muzzle" ref="sawsnone" />
+	<effect class="muzzle" ref="ejection_76251" />
+	<modifier class="speed" value="-0.1"/>
+	<modifier class="hit_success_probability" value="-0.2" />
+	<commonness value="0.000001" in_stock="1" can_respawn_with="1"/>
+	<inventory encumbrance="0.0" buy_price="1.0" sell_price="0.0"/>
+	<capacity value="1" source="rank" source_value="0.0"/>
+	<stance state_key="running" accuracy="1.0"/>
+	<stance state_key="walking" accuracy="1.0"/>
+	<stance state_key="crouch_moving" accuracy="1.0"/>
+	<stance state_key="standing" accuracy="1.0"/>
+	<stance state_key="crouching" accuracy="1.0"/>
+	<stance state_key="prone" accuracy="1.0"/>
+	<stance state_key="prone_moving" accuracy="1.0"/>
+	<stance state_key="over_wall" accuracy="1.0"/>
+</weapon>

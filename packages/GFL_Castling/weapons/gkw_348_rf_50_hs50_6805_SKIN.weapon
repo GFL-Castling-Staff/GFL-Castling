@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapon file="heavy_anti_materiel_rifle.animation_base" key="gkw_hs50_6805.weapon">
-
-
     <!--Weapon specifications-->
-    
     <specification 
     affect_vehicles="1"
 	retrigger_time="0.1" 
@@ -20,22 +17,16 @@
 	reload_one_at_a_time="0" 
 	sight_range_modifier="3.0" 
 	projectile_speed="300" 
-	barrel_offset="0.4" 
-	projectiles_per_shot="6"
+	barrel_offset="0.55" 
+	projectiles_per_shot="4"
 	last_burst_retrigger_time="1"
 	burst_shots="1" />
-
-
-	<!--Animations-->
-	<inventory  buy_price="18.0" sell_price="18.0" />
+    <!--Animations-->
+    <inventory  buy_price="300.0" sell_price="200.0" />
     <commonness value="0" in_stock="0" can_respawn_with="1" />
-
-
     <animation key="reload" animation_key="HS50RTemp" />
-	<animation key="reload" stance_key="prone" animation_key="HS50RpTemp" />		
-	
-	<!--Sounds-->
-	
+    <animation key="reload" stance_key="prone" animation_key="HS50RpTemp" />
+    <!--Sounds-->
     <sound key="fire" fileref="hs50_fire_FromBLACKSQUAD.wav" pitch_variety="0.05" volume="2.8" />
     <sound key="cycle" fileref="hs50_cycle_FromINS.wav" />
     <sound key="magazine_out" fileref="" />
@@ -43,41 +34,29 @@
     <sound key="cycle_out" fileref="HS50_cycle_out_FromCOD16HDR.wav" />
     <sound key="cycle_in" fileref="HS50_cycle_in_FromCOD16AX50.wav" />
     <sound class="impact" fileref="rifle_drop.wav" />
-   
-	<!--Model, Icon, Cost-->
-   
+    <!--Model, Icon, Cost-->
     <model filename="gkw_rf_hs50_6805_from_melondove.xml" />
     <hud_icon filename="gkw_hs50_6805.png" />
-
-
-	
-	<!--Ballistics-->
-	
-
-   <weak_hand_hold offset="0.3" />
+    <!--Ballistics-->
+    <weak_hand_hold offset="0.3" />
     <projectile file="ntw.projectile">
         <result class="blast" 
-        damage="5" 
-        radius="3.5" 
+        damage="8" 
+        radius="3" 
         decal="1" 
-        push="0.5" 
+        push="0.4" 
         character_state="death"
         faction_compare="not_equal"
 		/>
-        
     </projectile>
-    
     <!--Accuracy, Movement speed-->
-	<stance state_key="running" accuracy="1" />
-	<stance state_key="walking" accuracy="1" />
+    <stance state_key="running" accuracy="1" />
+    <stance state_key="walking" accuracy="1" />
     <stance state_key="crouch_moving" accuracy="1" />
     <stance state_key="prone_moving" accuracy="1" />
     <stance state_key="standing" accuracy="1"/>
     <stance state_key="crouching" accuracy="1" />
     <stance state_key="prone" accuracy="1" />
     <stance state_key="over_wall" accuracy="1" />
-    <modifier class="speed" value="0.2" /> 
-
-
-
+    <modifier class="speed" value="0.2" />
 </weapon>

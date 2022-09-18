@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon time_to_live_out_in_the_open="0" drop_count_factor_on_death="0.0" drop_count_factor_on_player_death="0.0" file="secondary.base_weapon" key="sfw_alchemist_at.weapon">
+    <specification 
+    retrigger_time="0.12"
+	accuracy_factor="0.75"
+	sustained_fire_grow_step="2.0"
+	sustained_fire_diminish_rate="0.5"
+	magazine_size="1"
+	can_shoot_standing="1" 
+	can_shoot_crouching="0"
+	can_shoot_prone="0"
+    carry_in_two_hands="0" 
+	suppressed="0"
+	name="SF-Alchemist"
+	class="0"
+    consume="1"
+	reload_one_at_a_time="0"
+	sight_range_modifier="1.5"
+	projectile_speed="135"
+	burst_shots="1"
+    slot="1" 
+    spread_range="0.1"
+    projectiles_per_shot="2" />
+    <inventory encumbrance="3.0" buy_price="5.0" sell_price="5.0" />
+    <capacity value="50" source="rank" source_value="0.0" />
+    <commonness value="0.1" in_stock="1" can_respawn_with="1" />
+    <animation state_key="recoil"	animation_key="high recoil, pistol dual 1" />
+	<animation state_key="recoil"	animation_key="high recoil, pistol dual 2" />
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil, overwall dual" />
+    <animation state_key="reload"	animation_key="reloading, weapon dual2" />
+  	<animation state_key="hold"	animation_key="still, pistol dual" />
+  	<animation state_key="hold_casual"	animation_key="hold_casual, pistol dual" />
+  	<animation state_key="hold_on_wall"	animation_key="hold, overwall dual" />
+  	<animation state_key="still_against_wall"	animation_key="hold_casual, pistol dual" />
+  	<animation state_key="crouching"	animation_key="crouch, pistol dual" />
+	<animation state_key="crouch_moving"	animation_key="crouching, pistol 2" />
+	<animation state_key="crouch_moving_backwards"	animation_key="crouching backwards, pistol 2" />
+	<animation state_key="running" animation_key="running,ninja" />
+  	<animation state_key="walking"	animation_key="walking, pistol dual" />
+    <animation state_key="walking_backwards" animation_key="walking backwards, pistol dual" />
+    <animation state_key="changing_weapon_in" 	animation_key="change weapon in, single hand carry" />
+    <animation state_key="prone_still" animation_key="prone_still, pistol dual" />
+    <sound key="fire" fileref="alchemist_fire_FromHALOINFINTE.wav" pitch_variety="0.05" volume="1.4" />
+    <sound key="magazine_out" fileref="alchemist_mgz_out_FromCOD11.wav" volume="0.65" />
+    <sound key="magazine_in" fileref="" volume="0.8"/>    
+    <sound key="cycle" fileref="alchemist_cycle_FromCOD11.wav" volume="0.65" />
+    <model filename="" />
+    <weak_hand_hold offset="0.1" />
+    <projectile file="bullet_sf.projectile">
+		<result class="blast"  damage="7"  radius="2.5" decal="1" push="0.2" character_state="death" faction_compare="not_equal"/>
+    </projectile>
+    <hud_icon filename="sfw_alchemist.png" />
+    <stance state_key="running" accuracy="0.75" />
+    <stance state_key="walking" accuracy="0.75" />
+    <stance state_key="crouch_moving" accuracy="0.85" />
+    <stance state_key="prone_moving" accuracy="0.95" />
+    <stance state_key="standing" accuracy="0.9" />
+    <stance state_key="crouching" accuracy="0.95" />
+    <stance state_key="prone" accuracy="1" />
+	<stance state_key="overwall" accuracy="1" />
+    <modifier class="speed" value="0.6" /> 
+</weapon>

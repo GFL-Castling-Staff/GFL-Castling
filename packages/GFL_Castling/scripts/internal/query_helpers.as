@@ -827,6 +827,22 @@ void addCustomStatToAllPlayers(Metagame@ metagame, string tag) {
 	}
 }
 
+void addCustomStatToPlayers(Metagame@ metagame, string tag ,int playerId) {
+	const XmlElement@ player = getPlayerInfo(metagame,playerId);
+	int characterId = player.getIntAttribute("character_id");
+	if (characterId >= 0) {
+		string c = "<command class='add_custom_stat' character_id='" + characterId + "' tag='" + tag + "' />";
+		metagame.getComms().send(c);
+	}
+}
+
+void addCustomStatToCharacter(Metagame@ metagame, string tag ,int characterId) {
+	if (characterId >= 0) {
+		string c = "<command class='add_custom_stat' character_id='" + characterId + "' tag='" + tag + "' />";
+		metagame.getComms().send(c);
+	}
+}
+
 // -------------------------------------------------------
 void playSound(const Metagame@ metagame, string filename, int factionId,float volume=1.0) {
 	XmlElement command("command");

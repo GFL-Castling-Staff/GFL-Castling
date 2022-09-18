@@ -23,9 +23,9 @@
 
         <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
         <sound key="fire" fileref="star15_fire_FromBLACKSQUAD.wav" pitch_variety="0.01" volume="1.2"/>
-        <sound key="magazine_out" fileref="star15_mgz_out_FromCOD17.wav" volume="0.7" />
-        <sound key="magazine_in" fileref="star15_mgz_in_FromCOD17.wav" volume="0.7" />
-        <sound key="cycle" fileref="star15_cycle_FromCOD17.wav" volume="0.7" />
+        <sound key="magazine_out" fileref="star15_mgz_out_FromCOD17.wav" volume="0.6" />
+        <sound key="magazine_in" fileref="star15_mgz_in_FromCOD17.wav" volume="0.6" />
+        <sound key="cycle" fileref="star15_cycle_FromCOD17.wav" volume="0.6" />
         <sound class="impact" fileref="rifle_drop.wav" />
         <model filename="gkw_ar_ar15_532.xml" />
         <hud_icon filename="gkw_ar15_532.png" />

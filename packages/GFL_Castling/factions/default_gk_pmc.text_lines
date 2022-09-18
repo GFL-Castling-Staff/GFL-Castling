@@ -91,8 +91,8 @@
   <comment key="Open fire" text="开火！" />
   <comment key="Open fire" text="发现敌方单位！" />
   <comment key="Lone leader, open fire" text="射击！" />
-  <comment key="fire opened, weapon tag = sniper" text="敌方狙击手！" />
-  <comment key="fire opened, weapon tag = sniper" text="狙击手！找掩护" />
+  <comment key="fire opened, weapon tag = rifle" text="敌方狙击手！" />
+  <comment key="fire opened, weapon tag = rifle" text="狙击手！找掩护" />
   <comment key="grenade alert, grenade tag = grenade" text="手榴弹！" />
   <comment key="grenade alert, grenade tag = grenade" text="手雷！" />
   <comment key="grenade alert, grenade tag = grenade" text="趴下！" />
@@ -187,7 +187,7 @@
   <comment key="Where to, chief?" text="等待路线指示" />
   <comment key="Where to, chief?" text="等待作战命令" />
   <comment key="Where to, chief?" text="等待命令" />
-  <comment key="Press SPACE to continue!" text="按 空格键 进行再部署" />
+  <comment key="Press SPACE to continue!" text="狂拍 Space 以再部署" />
   <comment key="celebrating" text="我们赢了！" />
   <comment key="celebrating" text="好耶！！！" />
   <comment key="celebrating" text="作战结束" />
@@ -242,7 +242,7 @@
   <comment key="defense timer to go" text="还剩&#37;time_left秒！" />
   <!-- adventure mode -->
   <comment key="map start with 1 base, part 1" text="指挥官通讯接入，识别码Beta2731" />
-  <comment key="map start with 1 base, part 2" text="我直说了，现在的态势很不乐观，我们只能避开军方的主力，从这个薄弱点突围"/>
+  <comment key="map start with 1 base, part 2" text="我直说了，现在的态势很不乐观，我们只能避开敌方的主力，从这个薄弱点突围"/>
   <comment key="map start with 1 base, part 3" text="该地区的敌方单位力量相对较弱，但也只是相对，做好进行高烈度作战的准备"/>
   <comment key="map start with 1 base, part 4" text="格里芬的主力纵队已经集结在&#37;map_name，军方机动速度很快，我们不能浪费时间" />
   <comment key="map start with 1 base, part 5" text="调色板小队已经在&#37;base_name附近设立了前进基地，本次作战目标是完全控制&#37;map_name" />
@@ -343,6 +343,8 @@
 
   <comment key="aa_emplacement.vehicle spotted, instructions" text="摧毁防空设施才能让一部分战术妖精呼叫支援" />
   <comment key="aa_emplacement.vehicle destroyed" text="防空炮已摧毁，战术妖精已与支援系统建立连接" />
+  <comment key="sf_jupiter.vehicle spotted, instructions" text="摧毁木星才能让一部分战术妖精呼叫支援" />
+  <comment key="sf_jupiter.vehicle destroyed" text="木星已摧毁，战术妖精已与支援系统建立连接" />
 
   <comment key="intel radio reminder" text="别忘了在需要的时候呼叫战术妖精支援" />
 

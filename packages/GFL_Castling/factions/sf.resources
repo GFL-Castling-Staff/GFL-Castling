@@ -27,7 +27,8 @@
 	<weapon key="sfw_aegis.weapon"/>
 	<weapon key="sfw_dragoon.weapon"/>
 	<weapon key="sfw_brute.weapon"/>
-	
+	<weapon key="sfw_brute_swap.weapon"/>
+
 	<weapon key="sfw_dinergate.weapon"/>
 	<weapon key="sfw_tarantula.weapon"/>
 	<weapon key="sfw_ripper_swap.weapon"/>
@@ -40,20 +41,23 @@
 
 	<vehicle key="atv_base.vehicle"/>
 	<vehicle key="sf_jupiter.vehicle"/>
-
+	<vehicle key="deployable_mg.vehicle" />
+	<vehicle key="deployable_mg_2.vehicle" />
+	<vehicle key="deployable_minig.vehicle" />
+	<vehicle key="deployable_minig_2.vehicle" />
+	
 	<!-- 护甲 -->
 	<carry_item key="sf_qwd.carry_item"/>
 	<carry_item key="sf_ar.carry_item"/>
-	<carry_item key="sf_sh.carry_item"/>
+	<carry_item key="sf_nemeum.carry_item"/>
+	<carry_item key="sf_nemeum_swap.carry_item"/>
 	<carry_item key="sf_dragoon.carry_item"/>
-	<carry_item key="sf_boss_blast_none.carry_item" />
 	<carry_item key="sf_tarantula.carry_item" />
 	<carry_item key="sf_dinergate.carry_item" />
 	
 	<call key="sf_jaguar.call" />
 	<call key="sf_destroyer.call" />
 	<call key="sf_jupiter.call" />
-	<call key="sf_m16a1.call" />
 	<call key="sf_dinergate.call" />
 	
 	<projectile key="sf_emp_mine.projectile" />

@@ -11,6 +11,7 @@
 
 #include "gamemode_invasion.as"
 #include "GFLhelpers.as"
+//Author: NetherCrow
 
 class map105_Phase : Tracker {
 	protected GameModeInvasion@ m_metagame;
@@ -29,6 +30,12 @@ class map105_Phase : Tracker {
 	// --------------------------------------------
 	void start() {
 		m_started = true;
+		XmlElement command("command");
+		command.setStringAttribute("class", "change_game_settings");
+		XmlElement f1("faction");
+		f1.setIntAttribute("disable_enemy_spawnpoints_soldier_count_offset", -100);
+		command.appendChild(f1);
+		m_metagame.getComms().send(command);
 	}
 
 	// --------------------------------------------

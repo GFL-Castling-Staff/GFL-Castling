@@ -22,10 +22,10 @@
 
     
     <inventory  buy_price="5.0" sell_price="5.0" />
-    <sound key="fire" fileref="UMP_Fire_FromCOD16Striker45.wav" pitch_variety="0.05" volume="2.5" />
-    <sound key="magazine_out" fileref="ump40_mgz_out_FromCSGO.wav" volume="1" />
-    <sound key="magazine_in" fileref="ump40_mgz_in_FromCSGO.wav" volume="1" />
-    <sound key="cycle" fileref="ump40_cycle_FromCSGO.wav" volume="1" />
+    <sound key="fire" fileref="ump40_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.2" />
+    <sound key="magazine_out" fileref="ump45_mgz_out_FromCOD16.wav" volume="0.4" />
+    <sound key="magazine_in" fileref="ump45_mgz_in_FromCOD16.wav" volume="0.4" />
+    <sound key="cycle" fileref="ump45_cycle_FromCOD16.wav" volume="0.4" />
     <sound class="impact" fileref="rifle_drop.wav" />    
     <model filename="gkw_smg_ump40.xml" />
 

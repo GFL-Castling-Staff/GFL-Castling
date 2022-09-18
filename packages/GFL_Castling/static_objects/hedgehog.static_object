@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<static_object key="hedgehog.static_object" destroy_on_drive_over="1" destroy_on_blast="1" blast_damage_threshold="5" destroy_on_stab="0" undestroy_on_block_activate="0">
+	<sound key="destroy" filename="stook_crush1.wav" volume="0.15" />
+	<sound key="destroy" filename="stook_crush2.wav" volume="0.15" />
+    <effect event_key="destroy" key="other" ref="SmokeMinor" post_processing="1" />
+    <effect event_key="destroy" key="other" ref="ShadowSmokeMinor" shadow="1" />
+    <event>
+        <trigger class="destroy" />
+        <result 
+		class="spawn" 
+		instance_class="visual_item" 
+		instance_key="stook_debris.visual_item" 
+		min_amount="8" 
+		max_amount="12" 
+		offset="0 0.2 0" 
+		position_spread="1.0 0.0" 
+		direction_spread="0.05 0.1" />
+    </event>
+    <event>
+        <trigger class="destroy" />
+        <result class="spawn" instance_class="visual_item" instance_key="burning_piece_barrier.visual_item" min_amount="2" max_amount="4" offset="0 2.0 0" position_spread="1.5 1.5" direction_spread="0.1 0.1" />
+    </event>
+</static_object>
