@@ -20,6 +20,7 @@
 class call_event : Tracker {
 	protected Metagame@ m_metagame;
     protected int m_DummyCallID=0;
+    protected array<Call_Cooldown@> m_cooldown;
 
 	call_event(Metagame@ metagame) {
 		@m_metagame = @metagame;
@@ -34,6 +35,7 @@ class call_event : Tracker {
             int callId = event.getIntAttribute("id");
             int characterId = event.getIntAttribute("character_id");
             int factionId = event.getIntAttribute("faction_id");
+            int playerId = event.getIntAttribute("player_id");
 
             if (callKey == "gk_rampage_fairy_ac130.call" && phase == "launch") {
                 bool exsist_ac130 = false;
@@ -47,12 +49,21 @@ class call_event : Tracker {
                 if (exsist_ac130){
                     const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
                     if (character !is null) {
-                        int playerId = character.getIntAttribute("player_id");
                         sendPrivateMessageKey(m_metagame,playerId,"ac130callexisthint");
                         GiveRP(m_metagame,characterId,5000);
                     }
                 }
+                if(findCooldown(playerId,"ac130")){
+                    const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+                    if (character !is null) {
+                        dictionary a;
+                        a["%time"] = ""+getCooldown(playerId,"ac130");                        
+                        sendPrivateMessageKey(m_metagame,playerId,"ac130cooldown",a);
+                        GiveRP(m_metagame,characterId,5000);
+                    }
+                }
                 else {
+                    m_cooldown.insertLast(Call_Cooldown(300.0,playerId,"ac130"));
                     sendFactionMessageKey(m_metagame,factionId,"ac130callstarthint");
                     int flagId = m_DummyCallID + 15000;
                     ManualCallTask@ FairyRequest = ManualCallTask(characterId,"",0.0,factionId,stringToVector3(position),"foobar");
@@ -137,4 +148,36 @@ class call_event : Tracker {
 		return true;
 	}
 
+    void update(float time) {
+    }
+
+    bool findCooldown(int pId,string type){
+        for(uint i=0;i<m_cooldown.size();i++){
+            if(m_cooldown[i].m_playerid==pId && m_cooldown[i].m_type==type){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    float getCooldown(int pId,string type){
+        for(uint i=0;i<m_cooldown.size();i++){
+            if(m_cooldown[i].m_playerid==pId && m_cooldown[i].m_type==type){
+                return m_cooldown[i].m_time;
+            }
+        }
+        return 0;
+    }
+
+}
+
+class Call_Cooldown{
+    float m_time=0;
+    int m_playerid;
+    string m_type;
+    Call_Cooldown(float time,int pId,string type){
+        m_time=time;
+        m_playerid=pId;
+        m_type=type;
+    }
 }

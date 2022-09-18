@@ -12270,7 +12270,8 @@ penetrability = 0.2;</desc>
        id="rect9036-2-2-4-2-83-1"
        style="fill:#0000ff;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;display:inline;enable-background:new">
       <desc
-         id="desc9040-4-3-2-0-75-7">base_template = parasol_red; name = parasol_blue; texture0 = world_atlas1.png; texture0_atlas_cell = 4 0 32 32;</desc>
+         id="desc9040-4-3-2-0-75-7">base_template = parasol_red; name = parasol_blue;
+static_object_type_key=parasol.static_object; texture0 = world_atlas1.png; texture0_atlas_cell = 4 0 32 32;</desc>
     </rect>
     <rect
        inkscape:label="#mesh_template"
@@ -12281,7 +12282,8 @@ penetrability = 0.2;</desc>
        id="rect9036-2-2-4-2-83-1-8"
        style="fill:#ffff00;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;display:inline;enable-background:new">
       <desc
-         id="desc9040-4-3-2-0-75-7-8">base_template = parasol_red; name = parasol_yellow; texture0 = world_atlas1.png; texture0_atlas_cell = 4 1 32 32;</desc>
+         id="desc9040-4-3-2-0-75-7-8">base_template = parasol_red; name = parasol_yellow;
+static_object_type_key=parasol.static_object; texture0 = world_atlas1.png; texture0_atlas_cell = 4 1 32 32;</desc>
     </rect>
     <rect
        inkscape:label="#mesh_template"
@@ -12292,7 +12294,8 @@ penetrability = 0.2;</desc>
        id="rect9036-2-2-4-2-83-1-2"
        style="fill:#0e5500;fill-opacity:0.79607843;stroke:#000000;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;display:inline;enable-background:new">
       <desc
-         id="desc9040-4-3-2-0-75-7-4">base_template = parasol_red; name = parasol_green; texture0 = world_atlas1.png; texture0_atlas_cell = 5 0 32 32;</desc>
+         id="desc9040-4-3-2-0-75-7-4">base_template = parasol_red; name = parasol_green;
+static_object_type_key=parasol.static_object; texture0 = world_atlas1.png; texture0_atlas_cell = 5 0 32 32;</desc>
     </rect>
     <rect
        inkscape:label="#mesh"
@@ -13414,7 +13417,7 @@ texture0_rect = 0 0.03125 0.09375 0.125; collision_model_type = 1; collision_mod
        id="rect16633-4-8-7-6-9-9"
        style="fill:#6a6a6a;fill-opacity:1;fill-rule:nonzero;stroke:#ffff00;stroke-width:1.00000119;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1.00000118, 1.00000118;stroke-dashoffset:0;display:inline;enable-background:new">
       <desc
-         id="desc16653-2-9-3-3-2">name = barbwire; mesh_name = barbwire.mesh; texture0 = world_atlas1.png; texture0_atlas_cell = 1 9 16 16; collision_model_type = 1; collision_model_size = 1.4 1.4 2.8; collision_model_offset = 0 0 0; walkable = 0; alpha_blend = 1; penetrability = 0.8; see_through = 1;</desc>
+         id="desc16653-2-9-3-3-2">name = barbwire; static_object_type_key=barbed_wire.static_object;  mesh_name = barbwire.mesh; texture0 = world_atlas1.png; texture0_atlas_cell = 1 9 16 16; collision_model_type = 1; collision_model_size = 1.4 1.4 2.8; collision_model_offset = 0 0 0; walkable = 0; alpha_blend = 1; penetrability = 0.8; see_through = 1;</desc>
     </rect>
     <flowRoot
        transform="translate(-60.60935,-290.49627)"
@@ -15874,6 +15877,7 @@ see_through = 1;</desc>
        style="fill:#b8a08f;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:5;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;display:inline;enable-background:new">
       <desc
          id="desc9346-8-2-1-6-2-7">name = SecurityFence1;
+static_object_type_key=security_fence.static_object;
 color = 1.0 1.0 1.0 1.0;
 depth = -1.0;
 height = 2.5;
@@ -16052,7 +16056,8 @@ visual_hitbox_size = 3.5 15 3.5;
        id="rect9036-2-2-4-2-83"
        style="fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;display:inline;enable-background:new">
       <desc
-         id="desc9040-4-3-2-0-75">name = parasol_red; 
+         id="desc9040-4-3-2-0-75">name = parasol_red;
+static_object_type_key=parasol.static_object; 
 mesh_name = parasol.mesh; 
 texture0 = world_atlas1.png; 
 texture0_atlas_cell = 5 1 32 32; 

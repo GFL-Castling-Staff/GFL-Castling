@@ -139,6 +139,7 @@ class ItemDropEvent : Tracker {
                     }
                     else{
                         startQueue(pId,"m1garand");
+                        sendPrivateMessageKey(m_metagame, pId, "upgrade_common");
                         playPrivateSound(m_metagame,"sfx_equip.wav",pId);
                     }
                     break;
@@ -151,6 +152,7 @@ class ItemDropEvent : Tracker {
                     }
                     else{
                         startQueue(pId,"fg42");
+                        sendPrivateMessageKey(m_metagame, pId, "upgrade_common");
                         playPrivateSound(m_metagame,"sfx_equip.wav",pId);
                     }
                     break;
