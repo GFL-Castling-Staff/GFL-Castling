@@ -39,7 +39,8 @@
     0<turret offset="0.0 6.0 0.0" weapon_key="parw_moth_mg.weapon" weapon_offset="0.0 0 0" max_rotation_step="0.00036" rotation="0" rotation_range="6.30" weapon_recoil="0.0" physics_recoil="0.0" />
 	
     <modifier class="blast_range" value="+6.0" />
-
+    <modifier class="blast_damage" value="-1.0" />
+	
 	<visual class="chassis" mesh_filename="" texture_filename="Sentry_Tower_BaseColor.png" />
 	
     <character_slot type="driver" position="0 0.7 1" rotation="0" exit_rotation="0" hiding="1" animation_id="36" attached_on_turret="0" seat_position="0.0 0.0 0.4" />

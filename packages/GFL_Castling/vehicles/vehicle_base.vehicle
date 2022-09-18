@@ -1,0 +1,5 @@
+<vehicle time_to_live_unsteerable="40" >
+	<tag name="vehicle" />
+	<control max_limiter_speed="7.0" />             
+    <physics destroy_on_top_hit="1" destroy_on_top_hit_time="1.0" top_hit_tracking_time="0.6" />
+</vehicle>

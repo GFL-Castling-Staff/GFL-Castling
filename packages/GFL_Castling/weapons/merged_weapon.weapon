@@ -42825,7 +42825,7 @@
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile file="dragons_breath.projectile">
-	<result class="blast" radius="2" damage="0.5" push="0.05" decal="1" faction_compare="not_equal" damage_origin_vehicle="0" damage_as_probability="1"/>
+	<result class="blast" radius="2.4" damage="0.5" push="0.05" decal="1" faction_compare="not_equal" damage_origin_vehicle="0" damage_as_probability="1"/>
 	</projectile>
 	<modifier class="speed" value="-0.02"/>
 </weapon>
@@ -44027,7 +44027,26 @@
 </weapon>
 
 <weapon key="parw_moth_mg.weapon">
-	<specification slot="2" retrigger_time="0.3" accuracy_factor="0.8" sustained_fire_grow_step="0" sustained_fire_diminish_rate="2.0" sight_range_modifier="1.0" ai_sight_range_modifier="1.15" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="0" suppressed="0" name="Paradeus Moth MG" class="0" projectile_speed="120.0" use_basic_muzzle_smoke_effect="0" barrel_offset_3d="0 0.5 2.0"/>
+	<specification 
+	slot="2" 
+	retrigger_time="0.2" 
+	accuracy_factor="1.0" 
+	sustained_fire_grow_step="0.06" 
+	sustained_fire_diminish_rate="0.1" 
+	sight_range_modifier="1.0" 
+	ai_sight_range_modifier="1.15" 
+	magazine_size="-1" 
+	can_shoot_standing="0" 
+	can_shoot_crouching="0" 
+	suppressed="0" 
+	name="Paradeus Moth MG" 
+	class="0" 
+	projectile_speed="120.0" 
+	use_basic_muzzle_smoke_effect="0" 
+	barrel_offset_3d="0 0.5 2.0"
+	cooldown_start="0.1"
+    cooldown_end="0.0" />
+	
 	<animation key="recoil" animation_key="recoil1"/>
 	<animation key="recoil" animation_key="recoil2"/>
 	<animation key="recoil" animation_key="recoil3"/>
@@ -44045,7 +44064,7 @@
 	<commonness value="0.0"/>
 	<weak_hand_hold offset="0.0"/>
 	<projectile file="bullet_paradeus.projectile">
-	<result class="blast" damage="1.0" radius="1.5" decal="1" push="0" character_state="death" faction_compare="not_equal"/>
+	<result class="blast" damage="2.1" radius="2.5" decal="1" push="0" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	<trigger class="impact"/>
 	<effect class="result" key="terrain" ref="BigBurst" use_surface_color="1"/>
 	<effect class="result" key="terrain" ref="SmokeTop" post_processing="1"/>
@@ -44058,8 +44077,8 @@
 	<shield offset="0.0 7.5 0.0" extent="2.4 2.4 2.4"/>
 </weapon>
 
-<weapon time_to_live_out_in_the_open="0" drop_count_factor_on_death="0.5" drop_count_factor_on_player_death="1.0" key="parw_moth_rocket.weapon" on_ground_up="0 0 1">
-	<specification retrigger_time="9" accuracy_factor="1.0" sustained_fire_grow_step="0.4" sustained_fire_diminish_rate="0.1" magazine_size="-1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" suppressed="0" name="Seraph's Blaze" class="0" consume="1" reload_one_at_a_time="1" sight_range_modifier="1.5" projectile_speed="85.0" slot="2" projectiles_per_shot="1" barrel_offset_3d="0 0.5 2.0"/>
+<weapon time_to_live_out_in_the_open="0" drop_count_factor_on_death="0.5" drop_count_factor_on_player_death="1.0" key="parw_sentrytower_moth_rocket.weapon" on_ground_up="0 0 1">
+	<specification retrigger_time="6" accuracy_factor="1.0" sustained_fire_grow_step="0.4" sustained_fire_diminish_rate="0.1" magazine_size="-1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" suppressed="0" name="Seraph's Blaze" class="0" consume="1" reload_one_at_a_time="1" sight_range_modifier="1.5" projectile_speed="85.0" slot="2" projectiles_per_shot="1" barrel_offset_3d="0 0.5 2.0"/>
 	<inventory encumbrance="3.0" buy_price="5.0" sell_price="5.0"/>
 	<capacity value="6" source="rank" source_value="0.0"/>
 	<commonness value="0.1" in_stock="1" can_respawn_with="1"/>
@@ -44079,7 +44098,7 @@
 	<model mesh_filename="Sentry_Moth.mesh" texture_filename="2Sentry_Moth_Texture.png"/>
 	<ballistics near_far_distance="1000.0" speed_estimation_near="50.0" speed_estimation_far="50.0" max_speed="125.0" randomness="0.0"/>
 	<projectile file="at4.projectile">
-	<result class="blast" damage="12.0" radius="4.5" decal="1" push="0.75" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+	<result class="blast" damage="6.0" radius="3.5" decal="1" push="0.75" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0" damage_origin_vehicle="0"/>
 	</projectile>
 	<weak_hand_hold offset="0.3"/>
 	<hud_icon filename="rocket.png"/>
@@ -44098,7 +44117,30 @@
 	<capacity value="1" source="rank" source_value="0.0"/>
 </weapon>
 
-<weapon key="parw_sentrytower_mg.weapon">
+<weapon key="parw_sentrytower_moth_mg.weapon">
+	<specification slot="2" retrigger_time="0.10" accuracy_factor="0.84" sustained_fire_grow_step="0.5" sustained_fire_diminish_rate="2.0" sight_range_modifier="1.0" ai_sight_range_modifier="1.15" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="0" suppressed="0" name="Compass MG" class="0" projectile_speed="120.0"/>
+	<animation key="recoil" animation_key="recoil1"/>
+	<animation key="recoil" animation_key="recoil2"/>
+	<animation key="recoil" animation_key="recoil3"/>
+	<animation key="reload" animation_key="reloading, Machine gun 2.0"/>
+	<animation key="hold" animation_key="still, heavy weapon"/>
+	<animation key="hold_on_wall" animation_key="still"/>
+	<animation key="walking" animation_key="walking, heavy weapon"/>
+	<sound key="fire" fileref="minigun_From_payday2.wav" pitch_variety="0.05" volume="0.1"/>
+	<sound key="magazine_out" fileref="mg_clip_out.wav"/>
+	<sound key="magazine_in" fileref="mg_clip_in.wav"/>
+	<sound key="cycle" fileref="rifle_chamber.wav"/>
+	<sound class="impact" fileref="rifle_drop.wav"/>
+	<model filename=""/>
+	<hud_icon filename="gkw_v_LM5.png"/>
+	<commonness value="0.0"/>
+	<weak_hand_hold offset="0.4"/>
+	<projectile file="bullet_paradeus.projectile">
+	<result class="hit" kill_probability="1.65" kill_decay_start_time="1.933" kill_decay_end_time="3.222"/>
+	</projectile>
+</weapon>
+
+<weapon key="parw_sentrytower_base_mg.weapon">
 	<specification slot="2" retrigger_time="0.3" accuracy_factor="0.8" sustained_fire_grow_step="0" sustained_fire_diminish_rate="2.0" sight_range_modifier="1.0" ai_sight_range_modifier="1.15" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="0" suppressed="0" name="Paradeus Sentry Tower MG" class="0" projectile_speed="120.0" use_basic_muzzle_smoke_effect="0" barrel_offset_3d="0 1.2 0.5"/>
 	<animation key="recoil" animation_key="recoil1"/>
 	<animation key="recoil" animation_key="recoil2"/>
@@ -44117,7 +44159,7 @@
 	<commonness value="0.0"/>
 	<weak_hand_hold offset="0.0"/>
 	<projectile file="bullet_paradeus.projectile">
-	<result class="blast" damage="1.0" radius="1.5" decal="1" push="0" character_state="death" faction_compare="not_equal"/>
+	<result class="blast" damage="2.1" radius="2.5" decal="1" push="0" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	<trigger class="impact"/>
 	<effect class="result" key="terrain" ref="BigBurst" use_surface_color="1"/>
 	<effect class="result" key="terrain" ref="SmokeTop" post_processing="1"/>
