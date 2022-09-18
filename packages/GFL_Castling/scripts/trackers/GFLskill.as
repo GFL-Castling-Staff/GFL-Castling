@@ -88,6 +88,9 @@ dictionary gameSkillIndex = {
         {"fc_defence_1",24},
         {"fc_defence_2",25},
 
+		// 飞蛾无人机坠毁
+        // {"moth_destroy",26},
+
         // 下面这行是用来占位的，在这之上添加新的技能key和index即可
         {"666",-1}
 };
@@ -931,7 +934,8 @@ class GFLskill : Tracker {
 					}
 				}
 				break;
-			}
+			}			
+
             default:
                 break;
 		}

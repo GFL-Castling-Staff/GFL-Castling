@@ -72,6 +72,10 @@
     <effect event_key="destroyed" ref="SmallFireRepeat" offset="0.0 8.2 0.3" />
     <effect event_key="destroy" key="other" ref="woosh" post_processing="0" shadow="0" />
     <effect event_key="cleanup" key="other" ref="woosh" post_processing="0" shadow="0" />
+	<event>
+		<trigger class="destroy" />
+  		<result class="notify_script" key="moth_destroy"/>
+	</event> 
     <event key="receive_damage_xp_reward">
         <trigger class="receive_damage" />
         <result class="reward" xp="0.0200" />
