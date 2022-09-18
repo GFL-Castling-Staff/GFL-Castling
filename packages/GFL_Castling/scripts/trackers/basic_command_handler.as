@@ -19,7 +19,7 @@ array<string> commandSingIndex = {
     "gkw_m4sopmodii.weapon1.wav",
 	"gkw_m1891mod3.weapon1.wav",
 	"gkw_ak15mod3.weapon1.wav",
-	"gkw_an94mod3.weapon1.wav",
+	"gkw_an94_mod3.weapon1.wav",
 	"gkw_ppsh41mod3.weapon1.wav",
 	"gkw_ppsh41mod3.weapon2.wav",
 	"gkw_stenmod3.weapon1.wav",
@@ -40,7 +40,7 @@ dictionary songVolumeIndex = {
 	{"gkw_m4sopmodii.weapon1.wav",4.0},
 	{"gkw_m1891mod3.weapon1.wav",4.0},
 	{"gkw_ak15mod3.weapon1.wav",4.0},
-	{"gkw_an94mod3.weapon1.wav",4.0},
+	{"gkw_an94_mod3.weapon1.wav",4.0},
 	{"gkw_ppsh41mod3.weapon1.wav",4.0},
 	{"gkw_ppsh41mod3.weapon2.wav",4.0},
 	{"gkw_stenmod3.weapon1.wav",4.0},
@@ -48,7 +48,7 @@ dictionary songVolumeIndex = {
 	{"gkw_mp5mod3.weapon1.wav",4.0},
 	{"gkw_ak12.weapon1.wav",4.0},
 	{"gkw_ak47.weapon1.wav",4.0},
-	{"gkw_m16a1.weapon1.wav",,4.0},
+	{"gkw_m16a1.weapon1.wav",4.0},
 
 	// 列表末尾，不用管
 	{"end_of_list",0.0}
