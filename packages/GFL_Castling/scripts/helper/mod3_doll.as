@@ -138,6 +138,7 @@ dictionary MOD3craftList = {
     {"gkw_mp443.weapon","gkw_mp443mod3.weapon"},
 
     {"gkw_98k.weapon","gkw_98kmod3.weapon"},
+    {"gkw_obr.weapon","gkw_obrmod3.weapon"},
 
 
     {"666","-1"}
