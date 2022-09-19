@@ -159,6 +159,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 	// ------------------------------------------------------------------------------------------------
 	protected void setupNormalStages() {
+		addStage(setupStage6());          // map5
 		addStage(setupStage1());          // map2
 		addStage(setupStage7());          // map6c by diling
 		addStage(setupStage8());          // map8
@@ -181,7 +182,6 @@ class StageConfiguratorInvasion : StageConfigurator {
 		addStage(setupStage104()); 		  // map105_1 zoneAttack by diling
 		addStage(setupStage105()); 		  // map105_2 shockzone by diling
 		// addStage(setupDeadZone());
-		addStage(setupStage6());          // map5
 		// addStage(setupStage14());         // map6_2
 		// addStage(setupStage5());          // map1
 		addStage(setupStage108());		  // xiaoxieshen by diling
@@ -1013,7 +1013,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 	protected Stage@ setupStage6() {
 		Stage@ stage = createStage();
 		stage.m_mapInfo.m_name = "Bootleg Islands";
-		stage.m_mapInfo.m_path = "media/packages/GFL_Castling/maps/map5";
+		stage.m_mapInfo.m_path = "media/packages/GFL_Castling/maps/map5_c";
 		stage.m_mapInfo.m_id = "map5";
 
 		stage.m_maxSoldiers = 11 * 12;

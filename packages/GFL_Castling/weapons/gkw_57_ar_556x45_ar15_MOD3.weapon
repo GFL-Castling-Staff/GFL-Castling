@@ -36,65 +36,85 @@
         <modifier class="detectability" value="-0.35" />
         <modifier class="detectability" value="-0.1" />
     </weapon>
-    <weapon file="gf_ar.base_weapon" key="gkw_ar15mod3_skill.weapon">
-        <!--Weapon specifications-->
-        <specification retrigger_time="0.066" accuracy_factor="1" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="1" magazine_size="30" can_shoot_standing="1" can_shoot_prone="0" carry_in_two_hands="0" suppressed="0" name="ST-AR15(MOD3)-[Crime and punishment]" class="0" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="200" projectiles_per_shot="2" burst_shots="1" slot="0" stab_enabled="1"/>
-        <!--Animations-->
-        <next_in_chain key="gkw_ar15mod3.weapon" share_ammo="0" />
-        <animation state_key="recoil" animation_key="recoil, pistol dual 1" />
-        <animation state_key="recoil" animation_key="recoil, pistol dual 2" />
-        <animation state_key="recoil" stance_key="over_wall" animation_key="recoil, overwall dual" />
-        <animation state_key="reload" animation_key="reloading ar15" />
-        <animation state_key="hold" animation_key="still, pistol dual" />
-        <animation state_key="hold_casual" animation_key="hold_casual, pistol dual" />
-        <animation state_key="hold_on_wall" animation_key="hold, overwall dual" />
-        <animation state_key="still_against_wall" animation_key="hold_casual, pistol dual" />
-        <animation state_key="crouching" animation_key="crouch, pistol dual" />
-        <animation state_key="crouch_moving" animation_key="crouching, pistol 2" />
-        <animation state_key="crouch_moving_backwards" animation_key="crouching backwards, pistol 2" />
-        <animation state_key="running" animation_key="running, no weapon, 60" />
-        <animation state_key="walking" animation_key="walking, pistol dual" />
-        <animation state_key="walking_backwards" animation_key="walking backwards, pistol dual" />
-        <animation state_key="next_in_chain_in" animation_key="change weapon in ar15" />
-        <animation state_key="prone_still" animation_key="prone_still, pistol dual" />
-        <!-- <animation state_key="reload" animation_key="pistol whip" /> -->
-        <!-- <animation state_key="reload" animation_key="pistol whip 2" /> -->
-        <!-- <animation state_key="reload" animation_key="pistol whip 3" /> -->
-        <animation state_key="stabbing" animation_key="pistol whip" />
-        <animation state_key="stabbing" animation_key="pistol whip 2" />
-        <animation state_key="stabbing" animation_key="pistol whip 3" />
+    <weapon key="gkw_ar15mod3_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+        <specification 
+        retrigger_time="0.066"
+        accuracy_factor="1"
+        sustained_fire_grow_step="1.0"
+        sustained_fire_diminish_rate="1"
+        magazine_size="30"
+        can_shoot_standing="1"
+        can_shoot_prone="0"
+        carry_in_two_hands="0"
+        suppressed="0"
+        name="ST-AR15(MOD3)-[Crime and punishment]"
+        class="0"
+        reload_one_at_a_time="0"
+        sight_range_modifier="1.0"
+        projectile_speed="200"
+        projectiles_per_shot="2"
+        burst_shots="1"
+        slot="0"
+        stab_enabled="1"/>
+        <next_in_chain key="gkw_ar15mod3.weapon" share_ammo="0"/>
+        <animation state_key="recoil" animation_key="recoil, pistol dual 1"/>
+        <animation state_key="recoil" animation_key="recoil, pistol dual 2"/>
+        <animation state_key="recoil" stance_key="over_wall" animation_key="recoil, overwall dual"/>
+        <animation state_key="reload" animation_key="reloading ar15"/>
+        <animation state_key="hold" animation_key="still, pistol dual"/>
+        <animation state_key="hold_casual" animation_key="casual, blowgun"/>
+        <animation state_key="hold_on_wall" animation_key="hold, overwall dual"/>
+        <animation state_key="still_against_wall" animation_key="hold_casual, pistol dual"/>
+        <animation state_key="crouching" animation_key="crouch, pistol dual"/>
+        <animation state_key="crouch_moving" animation_key="crouching, pistol 2"/>
+        <animation state_key="crouch_moving_backwards" animation_key="crouching backwards, pistol 2"/>
+        <animation state_key="running" animation_key="running, no weapon, 60"/>
+        <animation state_key="walking" animation_key="walking, pistol dual"/>
+        <animation state_key="walking_backwards" animation_key="walking backwards, pistol dual"/>
+        <animation state_key="next_in_chain_in" animation_key="change weapon in ar15"/>
+        <animation state_key="prone_still" animation_key="prone_still, pistol dual"/>
+        <animation state_key="stabbing" animation_key="pistol whip"/>
+        <animation state_key="stabbing" animation_key="pistol whip 2"/>
+        <animation state_key="stabbing" animation_key="pistol whip 3"/>
         <effect class="muzzle" ref="muzzle_pink"/>
-        <!--Sounds-->
-        <sound key="fire" fileref="ar15mod3skill_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.1" />
-        <sound key="magazine_out" fileref="star15_mgz_out_FromCOD17.wav" volume="0.6" />
-        <sound key="magazine_in" fileref="star15_mgz_in_FromCOD17.wav" volume="0.6" />
-        <sound key="cycle" fileref="star15_cycle_FromCOD17.wav" volume="0.6" />
+        <sound key="fire" fileref="ar15mod3skill_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.1"/>
+        <sound key="magazine_out" fileref="star15_mgz_out_FromCOD17.wav" volume="0.6"/>
+        <sound key="magazine_in" fileref="star15_mgz_in_FromCOD17.wav" volume="0.6"/>
+        <sound key="cycle" fileref="star15_cycle_FromCOD17.wav" volume="0.6"/>
         <sound key="cycle" fileref="AR15Mod_ATTACK_JP.wav" volume="0.7" pitch_variety="0"/>
         <sound key="cycle" fileref="AR15Mod_DEFENSE_JP.wav" volume="0.7" pitch_variety="0"/>
         <sound key="cycle" fileref="AR15Mod_SKILL1_JP.wav" volume="0.7" pitch_variety="0"/>
         <sound key="cycle" fileref="AR15Mod_SKILL2_JP.wav" volume="0.7" pitch_variety="0"/>
         <sound key="cycle" fileref="AR15Mod_SKILL3_JP.wav" volume="0.7" pitch_variety="0"/>
-        <commonness value="0" in_stock="0" can_respawn_with="1" />
-        <capacity value="1" source="rank" source_value="0.0" />
-        <!--Model, Icon, Cost-->
-        <model filename="none.xml" />
-        <hud_icon filename="gkw_ar15mod3_skill.png" />
-        <inventory price="240.0" />
-        <!--Ballistics-->
-        <weak_hand_hold offset="0.1" />
+        <commonness value="0" in_stock="0" can_respawn_with="1"/>
+        <capacity value="1" source="rank" source_value="0.0"/>
+        <model filename="none.xml"/>
+        <hud_icon filename="gkw_ar15mod3_skill.png"/>
+        <inventory price="240.0"/>
+        <weak_hand_hold offset="0.1"/>
         <projectile file="bullet.projectile">
-            <result class="hit" kill_probability="1.85" kill_probability_offset_on_successful_hit="1.6" kill_decay_start_time="0.2" kill_decay_end_time="0.25" />
+        <result class="hit" kill_probability="1.85" kill_probability_offset_on_successful_hit="1.6" kill_decay_start_time="0.2" kill_decay_end_time="0.25"/>
         </projectile>
-        <effect class="muzzle" ref="ejection_556" />
-        <!--Accuracy, Movement speed-->
-        <stance state_key="running" accuracy="0.2" />
-        <stance state_key="walking" accuracy="0.7" />
-        <stance state_key="crouch_moving" accuracy="0.85" />
-        <stance state_key="prone_moving" accuracy="0.95" />
-        <stance state_key="standing" accuracy="0.85" />
-        <stance state_key="crouching" accuracy="0.9" />
-        <stance state_key="prone" accuracy="0.95" />
-        <modifier class="detectability" value="-0.1" />
-        <modifier class="hit_success_probability" value="-0.20" />
+        <effect class="muzzle" ref="ejection_556"/>
+        <stance state_key="running" accuracy="0.2"/>
+        <stance state_key="walking" accuracy="0.7"/>
+        <stance state_key="crouch_moving" accuracy="0.85"/>
+        <stance state_key="prone_moving" accuracy="0.95"/>
+        <stance state_key="standing" accuracy="0.85"/>
+        <stance state_key="crouching" accuracy="0.9"/>
+        <stance state_key="prone" accuracy="0.95"/>
+        <modifier class="detectability" value="-0.1"/>
+        <modifier class="hit_success_probability" value="-0.20"/>
+        <tag name="autorifle"/>
+        <inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
+        <capacity value="1" source="rank" source_value="0.0"/>
+        <stance state_key="over_wall" accuracy="1"/>
+        <modifier class="speed" value="0.1"/>
+        <target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
+        <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
+        <target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
+        <target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
+        <target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0"/>
+        <target_factors tag="commander" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0"/>
     </weapon>
 </weapons>
