@@ -336,6 +336,7 @@ dictionary commandSkillIndex = {
         // M200 无言杀意
         {"gkw_m200.weapon",43},        
         {"gkw_m200_560.weapon",43},        
+        {"gkw_m200_4502.weapon",43},        
 
         // CZ75 
         {"gkw_cz75.weapon",44},

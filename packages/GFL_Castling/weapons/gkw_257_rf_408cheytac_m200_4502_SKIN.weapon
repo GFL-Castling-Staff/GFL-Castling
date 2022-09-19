@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<weapon file="designated_marksman_rifle.animation_base" key="gkw_m200_560.weapon">
+<weapon file="designated_marksman_rifle.animation_base" key="gkw_m200_4502.weapon">
     <!--Weapon specifications-->
     <specification 
 	retrigger_time="-1.0" 
@@ -9,7 +9,7 @@
 	magazine_size="7" 
 	can_shoot_standing="1" 
 	suppressed="1" 
-	name="Cheytac M200-[Solemn March]" 
+	name="Cheytac M200-[War Correspondent]" 
 	class="2" 
 	reload_one_at_a_time="0" 
 	sight_range_modifier="3" 
@@ -31,8 +31,8 @@
     <sound key="cycle_in" fileref="m200_cycle_in_FromCOD13.wav" volume="0.25" />
     <sound class="impact" fileref="rifle_drop.wav" />
     <!--Model, Icon, Cost-->
-    <model filename="gkw_rf_m200.xml" />
-    <hud_icon filename="gkw_m200_560.png" />
+    <model filename="gkw_rf_m200_4502.xml" />
+    <hud_icon filename="gkw_m200_4502.png" />
     <commonness value="0" in_stock="0" />
     <!--Ballistics-->
     <weak_hand_hold offset="0.3" />
