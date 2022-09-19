@@ -54,6 +54,7 @@ class kill_event : Tracker {
         {"gkw_ak15mod3_blm_skill.weapon",4},
         {"gkw_ar15mod3_skill.weapon",4},
         {"gkw_ar15mod3_532_skill.weapon",4},
+        {"gkw_ar15mod3_30001_skill.weapon",4},
 
         // SMG——3kills
         {"gkw_ump40.weapon",3},
