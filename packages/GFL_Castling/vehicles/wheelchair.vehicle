@@ -1,4 +1,4 @@
-<vehicle file="vehicle_base.vehicle" name="Jeep" key="wheelchair.vehicle" map_view_atlas_index="0" minimum_fill_requirement="0.5" >
+<vehicle file="vehicle_base.vehicle" name="Liu Ba Lao Ma's Wheelchair" key="wheelchair.vehicle" map_view_atlas_index="0" minimum_fill_requirement="0.5" >
 	<tag name="metal_thin" />
 	<tag name="wheelchair" />  
 
@@ -7,15 +7,15 @@
 
 	<control max_speed="24.0" acceleration="6.5" max_reverse_speed="24.0" min_health_to_steer="0.12" max_rotation="0.7" max_water_depth="9.0" steer_smoothening="0.8" />
 
-	<physics max_health="40" mass="4.0" extent="1.44 0.0 3.04" offset="0 0.0 0" top_offset="0 3.2 0" collision_model_pos="0 0.4 -0.16" collision_model_extent="1.76 1.28 1.84" visual_offset="0 0.86 -0.56" preserve_motion_on_impact_factor="1.0" gravity="-40" friction_offset="0.0" drag_offset="-0.15" destroy_on_top_hit="1" destroy_on_top_hit_time="1.0" top_hit_tracking_time="0.6" /> 
+	<physics max_health="30" mass="4.0" extent="1.44 0.0 3.04" offset="0 0.0 0" top_offset="0 3.2 0" collision_model_pos="0 0.4 -0.16" collision_model_extent="1.76 1.28 1.84" visual_offset="0 0.0 -0.56" preserve_motion_on_impact_factor="1.0" gravity="-40" friction_offset="0.0" drag_offset="-0.15" destroy_on_top_hit="0" /> 
 
-	<turret offset="-0.0 0.4 -2" weapon_key="all_vehicles_wheelchair_shield.weapon" weapon_offset="0.0 0.0 0.0"/>
+	<turret offset="-0.0 1.4 -2" weapon_key="all_vehicles_wheelchair_shield.weapon" weapon_offset="0.0 0.0 0.0"/> 
 
-	<visual class="chassis" mesh_filename="wheelchair_body.mesh" texture_filename="jeep_body.png" />
+	<visual class="chassis" mesh_filename="wheelchair_body.mesh" texture_filename="Wheel_Chair_BaseColor.png" />
  	<visual class="front_tire" mesh_filename="" texture_filename="" />
-	<visual class="rear_tire" mesh_filename="wheelchair_wheel.mesh" texture_filename="jeep_wheel.png" />
+	<visual class="rear_tire" mesh_filename="wheelchair_wheel.mesh" texture_filename="Wheel_Chair_BaseColor.png" />
 
-	<character_slot type="driver" position="0.0 0.32 -1.5" rotation="0" exit_rotation="3.14" hiding="0" animation_id="36" marker_offset="0 0.35 0.2"/>
+	<character_slot type="driver" position="0.0 0.32 -1.6" rotation="0" exit_rotation="3.14" hiding="0" animation_id="36" marker_offset="0 0.35 0.2"/>
 	<character_slot type="passenger" position="0.0 0.30 -0.5" rotation="0" exit_rotation="0" hiding="0" animation_key="passenger atv" marker_offset="0 0.35 0.2" rotation_range="3.00"/>
 
 
