@@ -50,7 +50,7 @@
         <stance state_key="prone" accuracy="1.2" /> 
         <stance state_key="prone_moving" accuracy="0.5" />
         <stance state_key="over_wall" accuracy="1.2" /> 	
-
+        <modifier class="speed" value="-0.1" />
     </weapon>
     <weapon file="lmg_mg.animation_base" key="gkw_pkp_skill.weapon">
 
@@ -104,6 +104,5 @@
         <stance state_key="prone_moving" accuracy="1.3" />
         <stance state_key="over_wall" accuracy="1.3" /> 	
         <modifier class="speed" value="-0.3" />
-
     </weapon>
 </weapons>

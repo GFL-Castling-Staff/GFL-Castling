@@ -37,7 +37,7 @@
         <stance state_key="crouching" accuracy="1.7" />
         <stance state_key="prone" accuracy="1.95" />
         <stance state_key="over_wall" accuracy="1.95" />
-        <modifier class="speed" value="0.2"/>
+        <modifier class="speed" value="0.1"/>
     </weapon>
     <weapon file="heavy_mg.animation_base" key="gkw_mg34_skill.weapon">
         <specification 
@@ -77,5 +77,6 @@
         <stance state_key="crouching" accuracy="0.85" />
         <stance state_key="prone" accuracy="1" />
         <stance state_key="over_wall" accuracy="1" />
+        <modifier class="speed" value="-0.1" />
     </weapon>
 </weapons>
