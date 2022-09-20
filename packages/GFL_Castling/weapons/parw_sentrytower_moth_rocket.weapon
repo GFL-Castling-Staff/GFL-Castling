@@ -1,0 +1,40 @@
+
+<weapon time_to_live_out_in_the_open="0" drop_count_factor_on_death="0.5" drop_count_factor_on_player_death="1.0" key="parw_sentrytower_moth_rocket.weapon" on_ground_up="0 0 1">
+	<specification retrigger_time="6" accuracy_factor="1.0" sustained_fire_grow_step="0.4" sustained_fire_diminish_rate="0.1" magazine_size="-1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" suppressed="0" name="Seraph's Blaze" class="0" consume="1" reload_one_at_a_time="1" sight_range_modifier="1.5" projectile_speed="85.0" slot="2" projectiles_per_shot="1" barrel_offset_3d="0 0.5 2.0"/>
+	<inventory encumbrance="3.0" buy_price="5.0" sell_price="5.0"/>
+	<capacity value="6" source="rank" source_value="0.0"/>
+	<commonness value="0.1" in_stock="1" can_respawn_with="1"/>
+	<animation key="recoil" animation_key="recoil, law"/>
+	<animation key="cycle" animation_key="Brifle1"/>
+	<animation key="reload" animation_key="reloading, m24"/>
+	<animation key="reload" stance_key="prone" animation_key="reloading, sniper1, prone"/>
+	<animation key="hold" animation_key="still, with law"/>
+	<animation key="hold_on_wall" animation_key="still, with law"/>
+	<sound key="fire" fileref="seraph_fire_FromBF5.wav" volume="1.7"/>
+	<sound key="cycle" fileref="sniper_cycle.wav"/>
+	<sound key="magazine_out" fileref="sniper_clip_out.wav"/>
+	<sound key="magazine_in" fileref="sniper_clip_in.wav"/>
+	<sound key="cycle_out" fileref="sniper_cycle_out.wav"/>
+	<sound key="cycle_in" fileref="sniper_cycle_in.wav"/>
+	<sound class="impact" fileref="rifle_drop.wav"/>
+	<model mesh_filename="Sentry_Moth.mesh" texture_filename="2Sentry_Moth_Texture.png"/>
+	<ballistics near_far_distance="1000.0" speed_estimation_near="50.0" speed_estimation_far="50.0" max_speed="125.0" randomness="0.0"/>
+	<projectile file="at4.projectile">
+	<result class="blast" damage="6.0" radius="3.5" decal="1" push="0.75" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+	</projectile>
+	<weak_hand_hold offset="0.3"/>
+	<hud_icon filename="rocket.png"/>
+	<effect class="muzzle" ref="LawMuzzle"/>
+	<effect class="muzzle" ref="UpDust"/>
+	<stance state_key="running" accuracy="0.9"/>
+	<stance state_key="walking" accuracy="0.9"/>
+	<stance state_key="crouch_moving" accuracy="0.9"/>
+	<stance state_key="standing" accuracy="1"/>
+	<stance state_key="crouching" accuracy="1"/>
+	<stance state_key="prone" accuracy="1"/>
+	<stance state_key="prone_moving" accuracy="0.9"/>
+	<stance state_key="over_wall" accuracy="1"/>
+	<modifier class="speed" value="0.2"/>
+	<inventory encumbrance="0.0" buy_price="1.0" sell_price="0.0"/>
+	<capacity value="1" source="rank" source_value="0.0"/>
+</weapon>

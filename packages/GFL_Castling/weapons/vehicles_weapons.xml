@@ -6,53 +6,43 @@
 	<weapon file="tank2_missile_launcher.weapon" />    
 	<weapon file="deployable_minig.weapon"/>
 	
-	<!--GK_BUNKER-->
+	<!-- G&K -->
 	<weapon file="gkw_vehicle_bunker.weapon" />
 	<weapon file="gkw_deploy_bunker.weapon"/>
-	
- 	<!--GK_HUMVEE-->
 	<weapon file="gkw_vehicle_mg_humvee.weapon"/>
-	
-	<!--GK_CHARA-->
 	<weapon file="gkw_vehicle_chara.weapon" />
 	<weapon file="gkw_323_sg_12g_ltlx7000_icecream.weapon" />
-	
-	<!--GK_PIERRE-->
 	<weapon file="gkw_vehicle_pierre.weapon"/>
-	
-	<!--GK_AMOS-->
 	<weapon file="gkw_vehicle_amos.weapon"/>
 
-	<!--SF_JUPITER-->
+	<!-- SF -->
 	<weapon file="sfw_vehicle_jupiter.weapon"/>
 	
-	<!--KCCO_TYPHOON-->
+	<!-- KCCO -->
 	<weapon file="kcco_vehicle_typhoon.weapon"/>
 	<weapon file="kcco_vehicle_typhoon_2.weapon"/>
-	
-	<!--KCCO_COEUS-->
 	<weapon file="kcco_vehicle_coeus.weapon"/> 
 	<weapon file="kcco_vehicle_mg.weapon"/>
-	
-	<!--KCCO_SANDSTORM-->
 	<weapon file="kcco_vehicle_sandstorm.weapon"/> 
+	<weapon file="kccow_vehicle_BFG.weapon"/>
+	<weapon file="kccow_vehicle_1130mg.weapon"/>	
 	
-	<!--PARW_UHLAN-->
+	<!-- Paradeus -->
 	<weapon file="parw_vehicle_uhlan.weapon"/>
 	<weapon file="parw_vehicle_uhlan_shield_2.weapon"/>
 	<weapon file="parw_vehicle_uhlan_shield.weapon"/>	
-	
-	<!--PARW_COMPASS-->
 	<weapon file="par_vehicle_Compass.weapon"/>
+	<weapon file="parw_moth_mg.weapon"/>	
+	<weapon file="parw_sentrytower_base_mg.weapon"/>	
+	<weapon file="parw_sentrytower_moth_mg.weapon"/>	
+	<weapon file="parw_sentrytower_moth_rocket.weapon"/>	
 	
-	<!--OTHER_VEHICLES-->
+	<!-- Other -->
 	<weapon file="gkw_vehicle_crasher.weapon"/>
 	<weapon file="gkw_vehicle_crasher_shield1.weapon"/>
 	<weapon file="gkw_vehicle_crasher_shield2.weapon"/>	
-	
 	<weapon file="allw_vehicle_mortar.weapon"/>
 	<weapon file="vehicle_tow.weapon"/>
-	<weapon file="kccow_vehicle_BFG.weapon"/>
-	<weapon file="kccow_vehicle_1130mg.weapon"/>
-	<weapon file="parw_moth_mg.weapon"/>
+	<weapon file="all_vehicles_wheelchair_shield.weapon"/>	
+
 </weapons>
