@@ -35,6 +35,7 @@ dictionary RP_enemy_index = {
     {"smasher",100},
     {"Paradeus_doppelsoldner",100},
     {"Paradeus_roarer",100},
+    {"Thunder",130},
 
     {"sfw_nemeum",30},
     {"sfw_nemeum_swap",50},
@@ -103,6 +104,7 @@ dictionary XP_enemy_index = {
     {"smasher",0.01},
     {"Paradeus_doppelsoldner",0.01},
     {"Paradeus_roarer",0.01},
+    {"Thunder",0.015},
 
     {"sfw_nemeum",0.003},
     {"sfw_nemeum_swap",0.005},
@@ -170,6 +172,7 @@ dictionary reward_pool_list= {
     {"Adeline","elite"},
     {"smasher","elite"},
     {"kcco_quartz_ranger","elite"},
+    {"Thunder","elite"},
 
     {"sf_manticore","rare"},
     {"Paradeus_doppelsoldner","rare"},
