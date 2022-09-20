@@ -29,6 +29,8 @@ array<string> commandSingIndex = {
 	"gkw_ak12.weapon1.wav",
 	"gkw_ak47.weapon1.wav",
 	"gkw_m16a1.weapon1.wav",
+	"gkw_dp28.weapon1.wav",
+	"gkw_mg42.weapon1.wav",
 
 	// 列表末尾，不用管
 	"end_of_list"
@@ -51,6 +53,8 @@ dictionary songVolumeIndex = {
 	{"gkw_ak12.weapon1.wav",4.0},
 	{"gkw_ak47.weapon1.wav",4.0},
 	{"gkw_m16a1.weapon1.wav",4.0},
+	{"gkw_dp28.weapon1.wav",4.0},
+	{"gkw_mg42.weapon1.wav",4.0},
 
 	// 列表末尾，不用管
 	{"end_of_list",0.0}
