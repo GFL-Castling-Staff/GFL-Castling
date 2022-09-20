@@ -13,7 +13,7 @@ class IdlerKicker : Tracker {
 	protected dictionary m_positions;
 
 	// --------------------------------------------
-	IdlerKicker(GameMode@ metagame, float time = 300.0) {
+	IdlerKicker(GameMode@ metagame, float time = 600.0) {
 		@m_metagame = @metagame;
 
 		m_maxIdleTime = time;
