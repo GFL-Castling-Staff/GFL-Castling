@@ -29,6 +29,8 @@ class call_event : Tracker {
 	protected void handleCallEvent(const XmlElement@ event) {
         if(event.getIntAttribute("player_id") != -1 ){
 
+            _log("Player Call Detected.");
+
             string callKey = event.getStringAttribute("call_key");
             string phase = event.getStringAttribute("phase");
             string position = event.getStringAttribute("target_position");
