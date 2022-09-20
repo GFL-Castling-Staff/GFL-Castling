@@ -33,7 +33,7 @@
         <commonness value="0.2" in_stock="0" can_respawn_with="1" />
         <hud_icon filename="gkw_80type.png" />
         <projectile file="bullet.projectile">
-            <result class="hit" kill_probability="2.0" kill_decay_start_time="1.5" kill_decay_end_time="1.6" />
+            <result class="hit" kill_probability="2.0" kill_probability_offset_on_successful_hit="1.0" kill_decay_start_time="1.5" kill_decay_end_time="1.6" />
         </projectile>
         <stance state_key="running" accuracy="0.3" />
         <stance state_key="walking" accuracy="0.4" />
@@ -63,7 +63,7 @@
         can_shoot_crouching="0"
         can_shoot_prone="1"
         carry_in_two_hands="1"
-        projectiles_per_shot="2"
+        projectiles_per_shot="1"
         stab_enabled="1"
         />
         <animation key="reload" animation_key="reloading, Machine gun 2.0" />
@@ -78,7 +78,7 @@
         <commonness value="0" in_stock="0" can_respawn_with="1" />
         <hud_icon filename="gkw_80type_skill.png" />
         <projectile file="bullet.projectile">
-            <result class="hit" kill_probability="2.0" kill_probability_offset_on_successful_hit="1.2" kill_decay_start_time="1.5" kill_decay_end_time="1.6" />
+            <result class="hit" kill_probability="2.0" kill_probability_offset_on_successful_hit="1.85" kill_decay_start_time="1.5" kill_decay_end_time="1.6" />
             <trail probability="1.0" key="BulletMgTrail" />
         </projectile>
         <stance state_key="running" accuracy="1.3" />

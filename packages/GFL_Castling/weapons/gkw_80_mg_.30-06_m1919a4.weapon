@@ -62,15 +62,9 @@
         <sound class="impact" fileref="rifle_drop.wav" />
         <model filename="gkw_mg_m1919a4lmg.xml" />
         <hud_icon filename="gkw_m1919a4_skill.png" />
-        <projectile file="bullet.projectile">
+        <projectile file="bullet_he.projectile">
             <result class="blast" damage="2.1"  radius="2.0" decal="1" push="0.15" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
             <trail probability="1.0" key="BulletApTrail" />
-            <effect class="result" key="terrain" ref="BigBurst" use_surface_color="1" />
-            <effect class="result" key="terrain" ref="LowDust"/>
-            <effect class="result" key="terrain" ref="Shine" lighting="0" />
-            <effect class="result" key="terrain" ref="Godray" lighting="0" />
-            <effect class="result" key="static_object" copy="terrain"/>
-            <effect class="result" key="vehicle" copy="terrain"/>
         </projectile>
         <effect class="muzzle" ref="ejection_76251" />
         <stance state_key="running" accuracy="0.6" />
