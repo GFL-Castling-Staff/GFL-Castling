@@ -168,6 +168,14 @@ class call_event : Tracker {
 	}
 
     void update(float time) {
+        if(m_cooldown.length()>0){
+            for(uint a=0;a<m_cooldown.length();a++){
+                m_cooldown[a].m_time-=time;
+                if(m_cooldown[a].m_time<0){
+                    m_cooldown.removeAt(a);
+                }
+            }
+        }
     }
 
     bool findCooldown(string pName,string type){
