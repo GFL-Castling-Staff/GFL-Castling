@@ -26,7 +26,7 @@
         <hud_icon filename="gkw_mg34.png" />
         <!-- <inventory  price="3.0" /> -->
         <projectile file="bullet.projectile">
-            <result class="hit" kill_probability="2.05" kill_decay_start_time="2.432" kill_decay_end_time="4.054" />
+            <result class="hit" kill_probability="2.05" kill_probability_offset_on_successful_hit="1.0" kill_decay_start_time="2.432" kill_decay_end_time="4.054" />
         </projectile>
         <effect class="muzzle" ref="ejection_76251" />
         <stance state_key="running" accuracy="0.1" />
@@ -37,7 +37,7 @@
         <stance state_key="crouching" accuracy="1.7" />
         <stance state_key="prone" accuracy="1.95" />
         <stance state_key="over_wall" accuracy="1.95" />
-        <modifier class="speed" value="0.2"/>
+        <modifier class="speed" value="0.1"/>
     </weapon>
     <weapon file="heavy_mg.animation_base" key="gkw_mg34_skill.weapon">
         <specification 
@@ -67,7 +67,7 @@
         <hud_icon filename="gkw_mg34_skill.png" />
         <!-- <inventory  price="3.0" /> -->
         <projectile file="bullet.projectile">
-            <result class="hit" kill_probability="2.2" kill_probability_offset_on_successful_hit="1.0" kill_decay_start_time="2.432" kill_decay_end_time="4.054" />
+            <result class="hit" kill_probability="2.5" kill_probability_offset_on_successful_hit="2.5" kill_decay_start_time="2.432" kill_decay_end_time="4.054" />
         </projectile>
         <effect class="muzzle" ref="ejection_76251" />
         <stance state_key="running" accuracy="0.4" />
@@ -77,5 +77,6 @@
         <stance state_key="crouching" accuracy="0.85" />
         <stance state_key="prone" accuracy="1" />
         <stance state_key="over_wall" accuracy="1" />
+        <modifier class="speed" value="-0.1" />
     </weapon>
 </weapons>

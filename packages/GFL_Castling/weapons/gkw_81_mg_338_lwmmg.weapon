@@ -67,15 +67,8 @@
     <sound class="impact" fileref="rifle_drop.wav" />
     <model filename="gkw_mg_lwmmg_from_melondove.xml" />
     <hud_icon filename="gkw_lwmmg.png" />
-    <projectile file="bullet.projectile">
+    <projectile file="bullet_he.projectile">
         <result class="blast"  damage="1" radius="1.7" decal="1" push="0.3" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0" />
-        <trigger class="impact" />
-        <effect class="result" key="terrain" ref="BigBurst" use_surface_color="1" />
-        <effect class="result" key="terrain" ref="LowDust"/>
-        <effect class="result" key="terrain" ref="Shine" lighting="0" />
-        <effect class="result" key="terrain" ref="Godray" lighting="0" />
-        <effect class="result" key="static_object" copy="terrain"/>
-        <effect class="result" key="vehicle" copy="terrain"/>
     </projectile>
     <effect class="muzzle" ref="ejection_76251" />
     <stance state_key="running" accuracy="0.65" />
@@ -85,6 +78,6 @@
     <stance state_key="crouching" accuracy="0.75" />
     <stance state_key="prone" accuracy="1" />
     <stance state_key="over_wall" accuracy="1" />
-    <modifier class="speed" value="-0.2" />
+    <modifier class="speed" value="-0.25" />
 </weapon>
 </weapons>

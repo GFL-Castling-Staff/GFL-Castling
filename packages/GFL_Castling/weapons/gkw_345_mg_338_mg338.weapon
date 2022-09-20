@@ -9,16 +9,16 @@
     sustained_fire_diminish_rate="2.2" 
     magazine_size="100" 
     suppressed="0" 
+    stance_accuracy_rate="0.5"
     name="MG338" 
     class="0" 
     projectile_speed="245" 
-    spread_range="0.3"
     sight_range_modifier="1.75"
     can_shoot_standing="1" 
     />
     <animation key="reload" animation_key="reloading, Machine gun 4" />
     <inventory  buy_price="30.0" sell_price="30.0" />
-    <next_in_chain key="gkw_mg338_skill.weapon" share_ammo="0" />
+    <next_in_chain key="gkw_mg338_skill.weapon" share_ammo="1" />
     <sound key="fire" fileref="mg338_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.1" />
     <sound key="magazine_out" fileref="mg338_mgz_out_FromCOD16.wav" volume="0.65" />
     <sound key="magazine_in" fileref="mg338_mgz_in_FromCOD16.wav" volume="0.65" />
@@ -30,14 +30,15 @@
     <projectile file="bullet.projectile">
         <result class="hit" kill_probability="2.2" kill_probability_offset_on_successful_hit="0.8" kill_decay_start_time="2.135" kill_decay_end_time="4.245" />
     </projectile>
-    <stance state_key="running" accuracy="0.75" />
-    <stance state_key="walking" accuracy="0.8" />
+    <stance state_key="running" accuracy="0.35" />
+    <stance state_key="walking" accuracy="0.5" />
     <stance state_key="crouch_moving" accuracy="0.9" />
     <stance state_key="prone_moving" accuracy="0.9" />
     <stance state_key="standing" accuracy="0.9" />
-    <stance state_key="crouching" accuracy="1.55" />
-    <stance state_key="prone" accuracy="1.85" />
-    <stance state_key="over_wall" accuracy="1.85" />
+    <stance state_key="crouching" accuracy="1.0" />
+    <stance state_key="prone" accuracy="1.0" />
+    <stance state_key="over_wall" accuracy="1.0" />
+    <modifier class="speed" value="-0.1" />
 </weapon>
 <weapon file="heavy_mg.animation_base" key="gkw_mg338_skill.weapon">
     <specification 
@@ -51,14 +52,13 @@
     name="MG338-[Get Drunk]" 
     class="0" 
     projectile_speed="245" 
-    spread_range="0.25"
     sight_range_modifier="2.0"
     can_shoot_crouching="1" 
     />
     <animation key="reload" animation_key="reloading, Machine gun 4" />
     <inventory  buy_price="30.0" sell_price="30.0" />
     <commonness  value="0" in_stock="0" can_respawn_with="1" />
-    <next_in_chain key="gkw_mg338.weapon" share_ammo="0" />
+    <next_in_chain key="gkw_mg338.weapon" share_ammo="1" />
     <sound key="fire" fileref="mg338skill_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.1" />
     <sound key="magazine_out" fileref="mg338_mgz_out_FromCOD16.wav" volume="0.45" />
     <sound key="magazine_in" fileref="mg338_mgz_in_FromCOD16.wav" volume="0.45" />
@@ -67,15 +67,8 @@
     <model filename="gkw_mg_mg338.xml" />
     <hud_icon filename="gkw_mg338_skill.png" />
     <effect class="muzzle" ref="fire_newtest_muzzle"/>
-    <projectile file="bullet.projectile">
+    <projectile file="bullet_he.projectile">
         <result class="blast"  damage="2.5" radius="2.5" decal="1" push="0.3" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0" />
-        <trigger class="impact" />
-        <effect class="result" key="terrain" ref="BigBurst" use_surface_color="1" />
-        <effect class="result" key="terrain" ref="LowDust"/>
-        <effect class="result" key="terrain" ref="Shine" lighting="0" />
-        <effect class="result" key="terrain" ref="Godray" lighting="0" />
-        <effect class="result" key="static_object" copy="terrain"/>
-        <effect class="result" key="vehicle" copy="terrain"/>
     </projectile>
     <stance state_key="running" accuracy="0.75" />
     <stance state_key="walking" accuracy="0.8" />
@@ -85,6 +78,6 @@
     <stance state_key="crouching" accuracy="1.55" />
     <stance state_key="prone" accuracy="1.85" />
     <stance state_key="over_wall" accuracy="1.85" />
-    <modifier class="speed" value="-0.2" />
+    <modifier class="speed" value="-0.5" />
 </weapon>
 </weapons>

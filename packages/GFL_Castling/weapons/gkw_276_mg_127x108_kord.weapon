@@ -7,12 +7,13 @@
 	accuracy_factor="0.95" 
 	class="0"
 	magazine_size="50" 
-	name="KORD" 
+	name="Kord" 
 	projectile_speed="204" 
 	retrigger_time="0.092" 
 	suppressed="0" 
+    stance_accuracy_rate="0.4"
 	sustained_fire_diminish_rate="1.7" 
-	sustained_fire_grow_step="0.7"
+	sustained_fire_grow_step="1.0"
 	sight_range_modifier="1.5" />
     <!--Animations-->
     <next_in_chain key="gkw_kord_skill.weapon" share_ammo="0" />
@@ -29,25 +30,20 @@
     <model filename="gkw_mg_kord.xml" />
     <hud_icon filename="gkw_kord.png" />
     <!--Ballistics-->
-    <projectile file="bullet.projectile">
+    <projectile file="bullet_he.projectile">
         <result class="blast"  damage="1.01"  radius="2" decal="1" push="0" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
-        <effect class="result" key="terrain" ref="BigBurst" use_surface_color="1" />
-        <effect class="result" key="terrain" ref="LowDust"/>
-        <effect class="result" key="terrain" ref="Shine" lighting="0" />
-        <effect class="result" key="terrain" ref="Godray" lighting="0" />
-        <effect class="result" key="static_object" copy="terrain"/>
-        <effect class="result" key="vehicle" copy="terrain"/>
     </projectile>
     <effect class="muzzle" ref="ejection_50BMG" />
     <!--Accuracy, Movement speed-->
     <stance state_key="running" accuracy="0.3" />
-    <stance state_key="crouch_moving" accuracy="0.3" />
+    <stance state_key="walking" accuracy="0.5" />
+    <stance state_key="crouch_moving" accuracy="0.5" />
     <stance state_key="prone_moving" accuracy="0.5" />
-    <stance state_key="standing" accuracy="0.25" />
-    <stance state_key="crouching" accuracy="0.4" />
-    <stance state_key="prone" accuracy="0.9" /> />
+    <stance state_key="standing" accuracy="0.6" />
+    <stance state_key="crouching" accuracy="0.8" />
+    <stance state_key="prone" accuracy="0.9" />
     <stance state_key="over_wall" accuracy="0.9" />
-    <modifier class="speed" value="0.0" />
+    <modifier class="speed" value="-0.2" />
 </weapon>
 <weapon file="heavy_mg.animation_base" key="gkw_kord_skill.weapon">
     <!--Weapon specifications-->
@@ -57,12 +53,12 @@
 	class="0"
 	magazine_size="150" 
     can_shoot_crouching="0"
-	name="KORD-[High Pressure Assault]" 
+	name="Kord-[High Pressure Assault]" 
 	projectile_speed="220" 
 	retrigger_time="0.08" 
 	suppressed="0" 
-	sustained_fire_diminish_rate="3.0" 
-	sustained_fire_grow_step="0.5"
+	sustained_fire_diminish_rate="2.0" 
+	sustained_fire_grow_step="0.85"
 	sight_range_modifier="2.0" />
     <!--Animations-->
     <next_in_chain key="gkw_kord.weapon" share_ammo="0" />
@@ -80,15 +76,8 @@
     <hud_icon filename="gkw_kord_skill.png" />
     <commonness value="0" in_stock="0" can_respawn_with="1" />
     <!--Ballistics-->
-    <projectile file="bullet.projectile">
-        <result class="blast"  damage="2.0" radius="3.0" decal="1" push="0.3" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
-        <trail probability="1.0" key="BulletApTrail" />
-        <effect class="result" key="terrain" ref="BigBurst" use_surface_color="1" />
-        <effect class="result" key="terrain" ref="LowDust"/>
-        <effect class="result" key="terrain" ref="Shine" lighting="0" />
-        <effect class="result" key="terrain" ref="Godray" lighting="0" />
-        <effect class="result" key="static_object" copy="terrain"/>
-        <effect class="result" key="vehicle" copy="terrain"/>
+    <projectile file="bullet_he.projectile">
+        <result class="blast"  damage="3.0" radius="3.0" decal="1" push="0.3" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
     </projectile>
     <effect class="muzzle" ref="ejection_50BMG" />
     <!--Accuracy, Movement speed-->
@@ -97,9 +86,8 @@
     <stance state_key="prone_moving" accuracy="0.9" />
     <stance state_key="standing" accuracy="0.85" />
     <stance state_key="crouching" accuracy="0.6" />
-    <stance state_key="prone" accuracy="0.9" /> />
+    <stance state_key="prone" accuracy="0.9" />
     <stance state_key="over_wall" accuracy="1.0" />
-    <modifier class="speed" value="-0.4" />
-
+    <modifier class="speed" value="-0.5" />
 </weapon>
 </weapons>

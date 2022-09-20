@@ -25,6 +25,7 @@ dictionary itemDropFileIndex = {
     {"upgrade_aa12.carry_item",4},      // AA12独头弹
     {"upgrade_m1.carry_item",5},      // M1加兰德弹鼓
     {"upgrade_fg42.carry_item",6},      // FG42
+    {"upgrade_g41.carry_item",7},      // G41
 
     {"666",0}
 };
@@ -38,7 +39,8 @@ dictionary itemDropKeyIndex = {
     {"type88",3},                       // 汉阳造加速线圈
     {"aa12",4},                         // AA12独头弹
     {"m1garand",5},                     // M1加兰德弹鼓
-    {"fg42",6},
+    {"fg42",6},                         // FG42
+    {"g41",7},                          // G41
 
     {"666",0}
 };
@@ -157,6 +159,19 @@ class ItemDropEvent : Tracker {
                     }
                     break;
                 }
+                case 7:{
+                    if(checkQueue(pId,"g41")){
+                        addItemInBackpack(m_metagame,cId,"carry_item","upgrade_g41.carry_item");
+                        sendPrivateMessageKey(m_metagame, pId, "onlyonequeue_common");
+                        playPrivateSound(m_metagame,"sfx_failed.wav",pId);
+                    }
+                    else{
+                        startQueue(pId,"g41");
+                        sendPrivateMessageKey(m_metagame, pId, "upgrade_common");
+                        playPrivateSound(m_metagame,"sfx_equip.wav",pId);
+                    }
+                    break;
+                }                
                 default:{
                     if (checkQueue(pId,"mod3")){
                         string outputItem = string(MOD3craftList[itemKey]);
@@ -206,7 +221,22 @@ class ItemDropEvent : Tracker {
                         addItemInBackpack(m_metagame,cId,"weapon","gkw_fg42_only.weapon");
                         m_craftQueue.removeAt(findQueueIndex(pId,"fg42"));
                         playPrivateSound(m_metagame,"digimind_sfx2.wav",pId);
-                    }                    
+                    }
+                    else if (checkQueue(pId,"g41") && (itemKey=="gkw_g41.weapon" || itemKey=="gkw_g41_skill.weapon")){
+                        addItemInBackpack(m_metagame,cId,"weapon","gkw_g41_only.weapon");
+                        m_craftQueue.removeAt(findQueueIndex(pId,"g41"));
+                        playPrivateSound(m_metagame,"digimind_sfx2.wav",pId);
+                    }
+                    else if (checkQueue(pId,"g41") && (itemKey=="gkw_g41_2401.weapon" || itemKey=="gkw_g41_2401_skill.weapon")){
+                        addItemInBackpack(m_metagame,cId,"weapon","gkw_g41_2401_only.weapon");
+                        m_craftQueue.removeAt(findQueueIndex(pId,"g41"));
+                        playPrivateSound(m_metagame,"digimind_sfx2.wav",pId);
+                    }
+                    else if (checkQueue(pId,"g41") && (itemKey=="gkw_g41_7406.weapon" || itemKey=="gkw_g41_7406_skill.weapon")){
+                        addItemInBackpack(m_metagame,cId,"weapon","gkw_g41_7406_only.weapon");
+                        m_craftQueue.removeAt(findQueueIndex(pId,"g41"));
+                        playPrivateSound(m_metagame,"digimind_sfx2.wav",pId);
+                    }
                     break;
                 }
             }
@@ -397,7 +427,19 @@ class ItemDropEvent : Tracker {
                                 playPrivateSound(m_metagame,"sfx_returnback.wav",pId);
                                 sendPrivateMessageKey(m_metagame, pId, "quest_timeout");
                                 break;
-                            }                            
+                            }
+                            case 6:{ // fg42
+                                addItemInBackpack(m_metagame,cId,"carry_item","upgrade_fg42.carry_item");
+                                playPrivateSound(m_metagame,"sfx_returnback.wav",pId);
+                                sendPrivateMessageKey(m_metagame, pId, "quest_timeout");
+                                break;
+                            }
+                            case 7:{ // g41
+                                addItemInBackpack(m_metagame,cId,"carry_item","upgrade_g41.carry_item");
+                                playPrivateSound(m_metagame,"sfx_returnback.wav",pId);
+                                sendPrivateMessageKey(m_metagame, pId, "quest_timeout");
+                                break;
+                            }                                                        
                             default:
                                 break;
                         }                                      

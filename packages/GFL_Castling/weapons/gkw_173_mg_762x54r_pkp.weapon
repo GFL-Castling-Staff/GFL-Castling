@@ -39,7 +39,7 @@
         <hud_icon filename="gkw_pkp.png" />
 
         <projectile file="bullet.projectile">
-            <result class="hit" kill_probability="2.0" kill_decay_start_time="1.5" kill_decay_end_time="1.6" />
+            <result class="hit" kill_probability="2.0" kill_probability_offset_on_successful_hit="1.0" kill_decay_start_time="1.5" kill_decay_end_time="1.6" />
         </projectile>
 
         <stance state_key="running" accuracy="0.5" />
@@ -50,7 +50,7 @@
         <stance state_key="prone" accuracy="1.2" /> 
         <stance state_key="prone_moving" accuracy="0.5" />
         <stance state_key="over_wall" accuracy="1.2" /> 	
-
+        <modifier class="speed" value="-0.1" />
     </weapon>
     <weapon file="lmg_mg.animation_base" key="gkw_pkp_skill.weapon">
 
@@ -92,7 +92,7 @@
         <hud_icon filename="gkw_pkp.png" />
 
         <projectile file="bullet.projectile">
-            <result class="hit" kill_probability="2.0" kill_probability_offset_on_successful_hit="0.5" kill_decay_start_time="1.5" kill_decay_end_time="1.6" />
+            <result class="hit" kill_probability="2.0" kill_probability_offset_on_successful_hit="1.15" kill_decay_start_time="1.5" kill_decay_end_time="1.6" />
         </projectile>
 
         <stance state_key="running" accuracy="1.3" />
@@ -104,6 +104,5 @@
         <stance state_key="prone_moving" accuracy="1.3" />
         <stance state_key="over_wall" accuracy="1.3" /> 	
         <modifier class="speed" value="-0.3" />
-
     </weapon>
 </weapons>

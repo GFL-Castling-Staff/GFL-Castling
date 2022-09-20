@@ -22,7 +22,7 @@
     <model filename="gkw_mg_mg4.xml" />
     <hud_icon filename="gkw_mg4.png" />
     <projectile file="bullet.projectile">
-        <result class="hit" kill_probability="2.1" kill_decay_start_time="1.967" kill_decay_end_time="3.279" />
+        <result class="hit" kill_probability="2.1" kill_probability_offset_on_successful_hit="1.0" kill_decay_start_time="1.967" kill_decay_end_time="3.279" />
     </projectile>
     <effect class="muzzle" ref="ejection_556" />
     <stance state_key="running" accuracy="0.5" />
