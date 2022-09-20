@@ -344,6 +344,13 @@ dictionary commandSkillIndex = {
         {"gkw_cz75.weapon",44},
         {"gkw_cz75_1604.weapon",44},
 
+        // G41_only
+        {"gkw_g41_only.weapon",46},
+        {"gkw_g41_only_skill.weapon",46},
+        {"gkw_g41_2401_only.weapon",46},
+        {"gkw_g41_2401_only_skill.weapon",46},
+        {"gkw_g41_7406_only.weapon",46},
+        {"gkw_g41_7406_only_skill.weapon",46},
 
         // 下面这行是用来占位的，在这之上添加新的枪和index即可
         {"666",-1}
@@ -468,6 +475,7 @@ class CommandSkill : Tracker {
                     case 43:{excuteM200skill(cId,senderId,m_modifer);break;}
                     case 44:{excuteCZ75skill(cId,senderId,m_modifer);break;}
                     case 45:{excutSuperSASSSkill(cId,senderId,m_modifer);break;}
+                    case 46:{excuteG41Onlyskill(cId,senderId,m_modifer);break;}
 
                     default:
                         break;
@@ -2899,4 +2907,42 @@ class CommandSkill : Tracker {
         }
     }
 
+    void excuteG41Onlyskill(int characterId,int playerId,SkillModifer@ modifer){
+        bool ExistQueue = false;
+        int j=-1;
+        for (uint i=0;i<SkillArray.length();i++){
+            if (InCooldown(characterId,modifer,SkillArray[i]) && SkillArray[i].m_weapontype=="G41") {
+                ExistQueue=true;
+                j=i;
+            }
+        }
+        if (ExistQueue){
+            dictionary a;
+            a["%time"] = ""+SkillArray[j].m_time;
+            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            _log("skill cooldown" + SkillArray[j].m_time);
+            return;
+        }
+        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+        if (character !is null) {
+            const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+            if (player !is null){
+                if (player.hasAttribute("aim_target")) {
+                    string target = player.getStringAttribute("aim_target");
+                    Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
+                    int factionid = character.getIntAttribute("faction_id");
+                    array<string> Voice={
+                        "G41_SKILL1_JP.wav",
+                        "G41_SKILL2_JP.wav",
+                        "G41_SKILL3_JP.wav"
+                    };
+                    playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+                    playAnimationKey(m_metagame,characterId,"throwing, upside",true,true);
+                    c_pos=c_pos.add(Vector3(0,1,0));
+                    CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"grenade_g41_trigger.projectile",characterId,factionid,41.0,6.0);
+                    addCoolDown("G41",15,characterId,modifer);
+                }
+            }
+        }
+    }
 }
