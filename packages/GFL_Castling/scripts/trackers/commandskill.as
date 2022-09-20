@@ -213,6 +213,8 @@ dictionary commandSkillIndex = {
         // G3 Mod3
         {"gkw_g3mod3.weapon",13},
         {"gkw_g3mod3_1303.weapon",13},
+        {"gkw_g3mod3_skill.weapon",13},
+        {"gkw_g3mod3_1303_skill.weapon",13},
 
         // UMP45
         {"gkw_ump45.weapon",14},
