@@ -42,11 +42,11 @@
 		steer_smoothening="0.8"
 		min_health_to_steer="22.5"
 		tracked="1"
-		gears="0"/>
+		gears="1"/>
     <physics 
 		max_health="150.0"
 		mass="2000.0"
-		gravity="-90"
+		gravity="-180"
 		broken_mass="2000"
 		remove_collision_threshold="0.2"
     	blast_damage_threshold="3.0"
@@ -185,7 +185,7 @@
     <!-- 无人机操控 -->
     <character_slot type="gunner" position="2.0 0.0 -8.4"  rotation="0" exit_rotation="1.57" hiding="1" animation_id="37" attached_on_turret="13" seat_position="0.0 0.0 -0.0">
         <turret index="13" />
-        <turret index="15" />
+        <turret index="14" />
     </character_slot>
     <!-- 无人机视角 -->
     <character_slot type="gunner" position="-2.0 0.0 -8.4" rotation="0" exit_rotation="1.57" hiding="1" animation_id="37" attached_on_turret="13" seat_position="0.0 0.0 -0.0">

@@ -69,7 +69,7 @@
     <effect event_key="health" value="6" ref="SmallSmokeVehicle" post_processing="0" offset="0.0 8.0 -0.0" />
     <effect event_key="destroyed" ref="MediumSmokeVehicle" offset="0.0 8.5 0.3" />
     <effect event_key="destroyed" ref="SmallFireRepeat" offset="0.0 8.2 0.3" />
-    <effect event_key="destroy" key="other" ref="woosh" post_processing="0" shadow="0" />
+    <effect event_key="destroy" key="other" ref="woosh" post_processing="0" shadow="0"  offset="0.0 8.2 0.3"/>
     <effect event_key="cleanup" key="other" ref="woosh" post_processing="0" shadow="0" />
 	<event>
 		<trigger class="destroy" />
