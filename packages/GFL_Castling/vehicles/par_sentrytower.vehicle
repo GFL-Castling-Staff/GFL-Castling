@@ -14,10 +14,10 @@
     <modifier class="blast_damage" value="-1.5" />
 	
     0<turret offset="0.0 13.0 0.0" weapon_key="amos_mine_sight.weapon" weapon_offset="0 0 0" max_rotation_step="0.00016" rotation="0" rotation_range="6.30" weapon_recoil="0.0" physics_recoil="0.0" />
-    1<turret offset="0.0 0.0 20.0" weapon_key="amos_mine_sight.weapon" weapon_offset="0 0 0" parent_turret_index="0" max_rotation_step="0.00016" rotation="3.14" rotation_range="6.30" weapon_recoil="0.0" physics_recoil="0.0" />
-    2<turret offset="0.0 0.0 20.0" weapon_key="amos_mine_sight.weapon" weapon_offset="0 0 0" parent_turret_index="1" max_rotation_step="0.00016" rotation="3.14" rotation_range="6.30" weapon_recoil="0.0" physics_recoil="0.0" />
-    3<turret offset="0.0 0.0 6.0" weapon_key="amos_mine_sight.weapon" weapon_offset="0 0 0" parent_turret_index="2" max_rotation_step="0.00026" rotation="3.14" rotation_range="6.30" weapon_recoil="0.0" physics_recoil="0.0" />
-    4<turret offset="0.0 0.0 6.0" weapon_key="amos_mine_sight.weapon" weapon_offset="0 0 0" parent_turret_index="3" max_rotation_step="0.00026" rotation="3.14" rotation_range="6.30" weapon_recoil="0.0" physics_recoil="0.0" />
+    1<turret offset="0.0 0.0 20.0" weapon_key="amos_mine_sight.weapon" weapon_offset="0 0 0" parent_turret_index="0" max_rotation_step="0.00009" rotation="3.14" rotation_range="6.30" weapon_recoil="0.0" physics_recoil="0.0" />
+    2<turret offset="0.0 0.0 20.0" weapon_key="amos_mine_sight.weapon" weapon_offset="0 0 0" parent_turret_index="1" max_rotation_step="0.00009" rotation="3.14" rotation_range="6.30" weapon_recoil="0.0" physics_recoil="0.0" />
+    3<turret offset="0.0 0.0 6.0" weapon_key="amos_mine_sight.weapon" weapon_offset="0 0 0" parent_turret_index="2" max_rotation_step="0.00021" rotation="3.14" rotation_range="6.30" weapon_recoil="0.0" physics_recoil="0.0" />
+    4<turret offset="0.0 0.0 6.0" weapon_key="amos_mine_sight.weapon" weapon_offset="0 0 0" parent_turret_index="3" max_rotation_step="0.00021" rotation="3.14" rotation_range="6.30" weapon_recoil="0.0" physics_recoil="0.0" />
     5<turret offset="0.0 0.0 9.0" weapon_key="parw_sentrytower_moth_rocket.weapon" weapon_offset="0.0 0 -9" parent_turret_index="4" max_rotation_step="0.00026" rotation="0" rotation_range="6.30" weapon_recoil="0.0" physics_recoil="0.0" />
 	
     6<turret offset="0.0 10.0 2.0" weapon_key="parw_sentrytower_base_mg.weapon" weapon_offset="0.0 0 0" max_rotation_step="0.0006" rotation="0.00" rotation_range="1.08" weapon_recoil="0.0" physics_recoil="0.0" />

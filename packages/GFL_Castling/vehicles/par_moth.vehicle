@@ -44,8 +44,8 @@
 	
 	<visual class="chassis" mesh_filename="" texture_filename="balloon.png" />
 	
-    <character_slot type="driver" position="0 0.7 1" rotation="0" exit_rotation="0" hiding="1" animation_id="36" attached_on_turret="0" seat_position="0.0 0.0 0.4" />
-    <character_slot type="gunner" position="0 0.7 -1" rotation="0" exit_rotation="3.14" hiding="1" animation_id="37" attached_on_turret="0" seat_position="0.0 0.4 0.0">
+    <character_slot type="driver" position="0 0.7 1" rotation="0" exit_rotation="0" hiding="1" animation_id="36" attached_on_turret="1" seat_position="0.0 0.0 0.4" />
+    <character_slot type="gunner" position="0 0.7 -1" rotation="0" exit_rotation="3.14" hiding="1" animation_id="37" attached_on_turret="1" seat_position="0.0 0.4 0.0">
 		<turret index="1" />
     </character_slot>
     <character_slot type="passenger" position="1 0.7 0" rotation="1.05" exit_rotation="1.57" hiding="0" animation_key="passenger, boat"  attached_on_turret="1" seat_position="0.7 0.3 0.8" rotation_range="3.40"/>	
