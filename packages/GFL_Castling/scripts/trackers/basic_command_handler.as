@@ -10,50 +10,102 @@
 #include "event_system.as"
 
 // 目前正在播放的点歌机中的歌曲剩余时间
-float singLastTime = 0.0;
 
-// --------------------------------------------
-class SongInfo {
-	// --------------------------------------------
-	SongInfo() {
-		float m_volume=0.0;
-		float m_lasttime=0.0;
-	}
-
-	// --------------------------------------------
-	SongInfo(float volume, float lasttime) {
-		float m_volume=0.0;
-		float m_lasttime=0.0;
-		m_volume = volume;
-		m_lasttime = lasttime;
-	}
-
-	float m_volume;
-	float m_lasttime;
-};
-
-array<string> commandSingIndex = {
+dictionary songIndex = {
 
 	// 命名规则：枪种key+歌曲编号+.wav
 	// 歌曲编号直接与sing挂钩（举例：sing1 = 歌曲编号为1）
 	// 以sopii为例，命名规则为 ‘gkw_m4sopmodii.weapon’ + ‘1’ + ‘.wav’
 	// 当然，相应的你要把你的歌在文件夹里也改成这个名字
 
-    "gkw_m16a1.weapon1.wav",
+	{"gkw_m16a1.weapon1.wav",1},
+    {"gkw_m1895mod3.weapon1.wav",2},//已检测，歌曲：神圣的战争
 
+	{"gkw_m1891mod3.weapon1.wav",3},//已检测，歌曲：布谷鸟
+	{"gkw_m1891mod3.weapon2.wav",4},//已检测，歌曲：小雄鹰
+
+	{"gkw_ak15mod3.weapon1.wav",5},//已检测，歌曲：为俄罗斯服役
+	{"gkw_ak15mod3.weapon2.wav",6},//已检测，歌曲：我们是人民的军队
+	{"gkw_ak15mod3.weapon3.wav",7},//已检测，歌曲：俄罗斯终结者
+	{"gkw_ak15mod3.weapon4.wav",8},//已检测，歌曲：半机械大爷
+
+	{"gkw_an94_mod3.weapon1.wav",9},//已检测，歌曲：战斗仍将继续
+	{"gkw_an94_mod3.weapon2.wav",10},//已检测，歌曲：空
+	{"gkw_an94_mod3.weapon3.wav",11},//已检测，歌曲：空
+
+	{"gkw_stg44mod3.weapon1.wav",12},//已检测，歌曲：守望莱茵
+
+	{"gkw_ppsh41mod3.weapon1.wav",13},//已检测，歌曲：喀秋莎
+	{"gkw_ppsh41mod3.weapon2.wav",14},//已检测，歌曲：喀秋莎
+
+	{"gkw_stenmod3.weapon1.wav",15},//已检测，歌曲：统治吧不列颠尼亚
+
+	{"gkw_type80mod3.weapon1.wav",16},//已检测，歌曲：共青团员之歌
+
+	{"gkw_mp5mod3.weapon1.wav",17},//已检测，歌曲：秘密集结
+
+	{"gkw_98kmod3.weapon1.wav",18},//已检测，歌曲：艾丽卡
+
+	{"gkw_ak12.weapon1.wav",19},//已检测，歌曲：战斗仍将继续
+	{"gkw_ak12.weapon2.wav",20},//已检测，歌曲：歌唱动荡的青春
+	{"gkw_ak12.weapon3.wav",21},//已检测，歌曲：布尔什维克离开家
+	{"gkw_ak12.weapon4.wav",22},//已检测，歌曲：伊里奇的训言号飞艇
+
+	{"gkw_ak47.weapon1.wav",23},//已检测，歌曲：我们的装甲师
+
+	{"gkw_ak74m.weapon1.wav",24},//已检测，歌曲：变革
+	{"gkw_ak74m.weapon2.wav",25},//已检测，歌曲：永别了（结尾有问题
+	{"gkw_ak74m.weapon3.wav",26},//已检测，歌曲：血液型
+
+	{"gkw_dp28.weapon1.wav",27},//已检测，歌曲：莫斯科保卫者
+
+	{"gkw_mg42.weapon1.wav",28},//已检测，歌曲：我们是黑色盖叶部队
+
+	{"gkw_fg42.weapon1.wav",29},//已检测，歌曲：无
 
 	// 列表末尾，不用管
-	"end_of_list"
+	{"end_of_list",0}
 };
 
-dictionary songVolumeIndex = {
+array<array<float>> songInfo = {
+	
+	// 对应上面的歌曲名设置一下音量和时长(单位：秒)就行
 
-	// 对应上面的歌曲名设置一下音量就行
+	// 列表开头，不用管
+	{0.0,0.0},
 
-	{"gkw_m16a1.weapon1.wav",SongInfo(4.0,10.0)},
+    {4.0,140.0}, // 编号1，以此类推
+    {4.0,170.0}, // 2 
+    {4.0,190.0}, // 3
+    {4.0,290.0}, // 4
+    {4.0,220.0}, // 5
+    {4.0,130.0}, // 6
+    {4.0,210.0}, // 7
+    {4.0,190.0}, // 8
+    {4.0,210.0}, // 9
+    {4.0,140.0}, // 10
+    {4.0,310.0}, // 11
+    {4.0,290.0}, // 12
+    {4.0,260.0}, // 13
+    {4.0,140.0}, // 14
+    {4.0,170.0}, // 15
+    {4.0,130.0}, // 16
+    {4.0,110.0}, // 17
+    {4.0,130.0}, // 18
+    {4.0,210.0}, // 19
+    {4.0,260.0}, // 20
+    {4.0,210.0}, // 21
+    {4.0,210.0}, // 22
+    {4.0,110.0}, // 23
+    {4.0,270.0}, // 24
+    {4.0,260.0}, // 25
+    {4.0,240.0}, // 26
+    {4.0,230.0}, // 27
+    {4.0,200.0}, // 28
+    {4.0,140.0}, // 29
 
 	// 列表末尾，不用管
-	{"end_of_list",SongInfo(0.0,0.0)}
+	{0.0,0.0}
 };
 
 //Adapted and optimizated by Castling Staff
@@ -61,6 +113,7 @@ dictionary songVolumeIndex = {
 // --------------------------------------------
 class BasicCommandHandler : Tracker {
 	protected Metagame@ m_metagame;
+	protected float singLastTime = 0.0;
 
 	// --------------------------------------------
 	BasicCommandHandler(Metagame@ metagame) {
@@ -488,10 +541,12 @@ class BasicCommandHandler : Tracker {
 			else{
 				uint jud_num = uint(message.toLowerCase()[5]) - 48;
 				string jud_sing_file = c_weaponType + '' + jud_num + '.wav';
-				if(commandSingIndex.find(jud_sing_file)> -1){
+				if(songIndex.exists(jud_sing_file)){
 					_log("Sing file is: "+jud_sing_file);
-					singLastTime += SongInfo(songVolumeIndex[jud_sing_file]).m_lasttime;
-					playSoundAtLocation(m_metagame,jud_sing_file,fId,c_pos,SongInfo(songVolumeIndex[jud_sing_file]).m_volume);
+					int songId = int(songIndex[jud_sing_file]);
+					_log("Add up time: " + float(songInfo[songId][1]));
+					singLastTime += float(songInfo[songId][1]);
+					playSoundAtLocation(m_metagame,jud_sing_file,fId,c_pos,float(songInfo[songId][0]));
 				}				
 				else{
 					sendPrivateMessageKey(m_metagame,playerId,"VODerror");
