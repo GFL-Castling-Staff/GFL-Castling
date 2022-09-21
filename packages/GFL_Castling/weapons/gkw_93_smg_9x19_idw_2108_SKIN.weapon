@@ -40,9 +40,9 @@
     <animation state_key="reload"	animation_key="reloading2, A OHG 0.75" />
 
     <sound key="fire" fileref="idw_fire_FromBORDERLAND3.wav" pitch_variety="0" volume="1" />
-    <sound key="magazine_out" fileref="idw_mgz_out_FromCOD16.wav" volume="0.5" />
-    <sound key="magazine_in" fileref="idw_mgz_in_FromCOD16.wav" volume="0.5" />
-    <sound key="cycle" fileref="idw_cycle_FromCOD13.wav" volume="0.5" />
+    <sound key="magazine_out" fileref="idw_mgz_out_FromCOD16.wav" volume="0.35" />
+    <sound key="magazine_in" fileref="idw_mgz_in_FromCOD16.wav" volume="0.35" />
+    <sound key="cycle" fileref="idw_cycle_FromCOD13.wav" volume="0.4" />
     <sound class="impact" fileref="rifle_drop.wav" />
     <model filename="gkw_smg_idw_2108.xml" />
     <hud_icon filename="gkw_idw_2108.png" />

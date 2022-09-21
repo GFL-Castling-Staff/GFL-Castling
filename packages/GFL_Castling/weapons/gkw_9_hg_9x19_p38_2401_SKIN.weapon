@@ -44,10 +44,10 @@
     <animation state_key="stabbing" animation_key="pistol whip 2" />
     <animation state_key="stabbing" animation_key="pistol whip 3" />
     <!--Sounds-->
-    <sound key="fire" fileref="p38_fire_FromCOD14.wav" pitch_variety="0.05" volume="0.9" />
-    <sound key="magazine_out" fileref="p38_mgz_out_FromRO2.wav" volume="0.8" />
-    <sound key="magazine_in" fileref="p38_mgz_in_FromRO2.wav" volume="0.8"/>
-    <sound key="cycle" fileref="p38_cycle_FromRO2.wav" volume="0.8" />
+    <sound key="fire" fileref="p38_fire_FromPOSTSCRIPTUM.wav" pitch_variety="0.05" volume="1.1" />
+    <sound key="magazine_out" fileref="p38_mgz_out_FromRO2.wav" volume="0.9" />
+    <sound key="magazine_in" fileref="p38_mgz_in_FromRO2.wav" volume="0.9"/>
+    <sound key="cycle" fileref="p38_cycle_FromRO2.wav" volume="0.9" />
     <!--Model, Icon, Cost-->
     <model filename="" />
     <hud_icon filename="gkw_p38_2401.png" />
