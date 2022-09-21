@@ -490,8 +490,8 @@ class BasicCommandHandler : Tracker {
 				string jud_sing_file = c_weaponType + '' + jud_num + '.wav';
 				if(commandSingIndex.find(jud_sing_file)> -1){
 					_log("Sing file is: "+jud_sing_file);
-					singLastTime += float(SongInfo(songVolumeIndex[jud_sing_file]).m_lasttime);
-					playSoundAtLocation(m_metagame,jud_sing_file,fId,c_pos,float(SongInfo(songVolumeIndex[jud_sing_file]).m_volume));
+					singLastTime += SongInfo(songVolumeIndex[jud_sing_file]).m_lasttime;
+					playSoundAtLocation(m_metagame,jud_sing_file,fId,c_pos,SongInfo(songVolumeIndex[jud_sing_file]).m_volume);
 				}				
 				else{
 					sendPrivateMessageKey(m_metagame,playerId,"VODerror");

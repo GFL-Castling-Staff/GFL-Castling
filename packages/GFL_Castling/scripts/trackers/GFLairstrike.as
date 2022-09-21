@@ -56,6 +56,9 @@ dictionary airstrikeIndex = {
         // 狙击
         {"snipe",8},
 
+        // 大口径机枪压制
+        {"mg_strafe",9},
+
         // 下面这行是用来占位的，在这之上添加新的即可
         {"666",-1}
 };
@@ -366,7 +369,29 @@ class GFLairstrike : Tracker {
                         playSoundAtLocation(m_metagame,"sniperfairy_fire_FromCOD15.wav",fid,end_pos,2.2);
                         Airstrike_strafe.removeAt(a);
                         break;                        
-                    }                    
+                    }
+                    case 9:{//鱼鹰 单次 锁人扫射
+                        float rand_angle = rand(-3.14,3.14);
+                        float rand_x1 = 2*cos(rand_angle);
+                        float rand_y1 = 2*sin(rand_angle);
+
+                        //扫射位置偏移单位向量 与 扫射位置偏移单位距离
+                        Vector3 strike_vector = getAimUnitVector(1,end_pos,end_pos.add(Vector3(rand_x1,0,rand_y1))); 
+                        Vector3 c_pos = end_pos.add(getMultiplicationVector(strike_vector,Vector3(-4,0,-4)));
+                        //最终弹头随机程度
+                        float strike_rand = 0.5;
+                                                
+                        //每单轮扫射5发
+                        for(int j=1;j<=5;j++)
+                        {
+                            rand_x1 = rand(-strike_rand,strike_rand);
+                            rand_y1 = rand(-strike_rand,strike_rand);
+                            
+                            CreateDirectProjectile(m_metagame,start_pos,c_pos.add(Vector3(rand_x1,0,rand_y1)),"bullet_fairy.projectile",cid,fid,180);           
+                        } 
+                        Airstrike_strafe.removeAt(a);
+                        break;
+                    }
                     default:
                         break;
                 }

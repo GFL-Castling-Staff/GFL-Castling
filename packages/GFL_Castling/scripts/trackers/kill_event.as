@@ -283,7 +283,7 @@ class kill_event : Tracker {
                     }    
                 }
                 if(startsWith(c_armorType,"srexo_t6")){
-                    updateHealByKillEvent(characterId,factionId,5,15,"vest");
+                    updateHealByKillEvent(characterId,factionId,4,30,"vest");
                 }
             }
 
