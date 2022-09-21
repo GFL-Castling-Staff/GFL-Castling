@@ -826,7 +826,7 @@ class BasicCommandHandler : Tracker {
 			// }
 			spawnInstanceNearPlayer(senderId, "icecream.vehicle", "vehicle", 0);
 		} else  if(checkCommand(message, "rj")) {
-			spawnInstanceNearPlayer(senderId, "radio_jammer.vehicle", "vehicle", 1);        
+			spawnInstanceNearPlayer(senderId, "deployed_mortar.vehicle", "vehicle", 1);        
 		} else  if(checkCommand(message, "cat")) {
 			spawnInstanceNearPlayer(senderId, "darkcat.vehicle", "vehicle", 0);
 		} else  if(checkCommand(message, "ecat")) {
