@@ -15,10 +15,10 @@
 		sight_range_modifier="2.3" />
     <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
     <inventory buy_price="180.0" sell_price="180.0" />
-    <sound key="fire" fileref="stg44_fire_FromRO2.wav" pitch_variety="0.05" volume="1.3" />
-    <sound key="magazine_out" fileref="STG44_mgz_out_FromBF5.wav" volume="0.9" />
-    <sound key="magazine_in" fileref="STG44_mgz_in_FromBF5.wav" volume="0.8" />
-    <sound key="cycle" fileref="stg44_cycle_FromCOD4R.wav" volume="0.8" />
+    <sound key="fire" fileref="stg44_fire_FromPOSTSCRIPTUM.wav" pitch_variety="0.05" volume="1.2" />
+    <sound key="magazine_out" fileref="stg44_mgz_out_FromPOSTSCRIPTUM.wav" volume="0.7" />
+    <sound key="magazine_in" fileref="stg44_mgz_in_FromPOSTSCRIPTUM.wav" volume="0.7" />
+    <sound key="cycle" fileref="stg44_cycle_FromPOSTSCRIPTUM.wav" volume="0.7" />
     <sound class="impact" fileref="rifle_drop.wav" />
     <model filename="gkw_ar_stg44.xml" />
     <hud_icon filename="gkw_stg44mod3.png" />

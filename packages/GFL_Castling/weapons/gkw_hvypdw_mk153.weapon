@@ -21,10 +21,10 @@
 	<next_in_chain key="gkw_hvy_mk153.weapon" share_ammo="0"/>
     <inventory encumbrance="50.0" buy_price="153.0" sell_price="153.0"/>
 	<commonness value="0.01" in_stock="0" can_respawn_with="1"/>
-	<sound key="fire" fileref="mk153pdw_fire_FromCOD16.wav" pitch_variety="0.05" volume="1"/>
-	<sound key="magazine_out" fileref="mk153pdw_mgz_out_FromCOD16.wav" volume="0.8"/>
-	<sound key="magazine_in" fileref="mk153pdw_mgz_in_FromCOD16.wav" volume="0.8"/>
-	<sound key="cycle" fileref="mk153pdw_cycle_FromCOD16.wav" volume="0.8"/>
+	<sound key="fire" fileref="m9_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.1"/>
+	<sound key="magazine_out" fileref="m9_mgz_out_FromCOD16.wav" volume="0.4"/>
+	<sound key="magazine_in" fileref="m9_mgz_in_FromCOD16.wav" volume="0.4"/>
+	<sound key="cycle" fileref="m9_cycle_FromCOD16.wav" volume="0.4"/>
 	<model filename="gkw_hg_berettam93r.xml"/>
 	<hud_icon filename="testing.png"/>
 	<weak_hand_hold offset="0.1"/>

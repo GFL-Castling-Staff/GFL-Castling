@@ -19,9 +19,9 @@
     <inventory buy_price="180.0" sell_price="180.0" />
     <next_in_chain key="gkw_asvalmod3_skill.weapon" share_ammo="1" />
     <sound key="fire" fileref="asval_fire_FromFC6.wav" pitch_variety="0.05" volume="0.9" />
-    <sound key="magazine_out" fileref="sr3mp_mgz_out_FromCOD16.wav" volume="0.45" />
-    <sound key="magazine_in" fileref="sr3mp_mgz_in_FromCOD16.wav" volume="0.45" />
-    <sound key="cycle" fileref="sr3mp_cycle_FromCOD16.wav" volume="0.45" />
+    <sound key="magazine_out" fileref="sr3mp_mgz_out_FromCOD16.wav" volume="0.35" />
+    <sound key="magazine_in" fileref="sr3mp_mgz_in_FromCOD16.wav" volume="0.35" />
+    <sound key="cycle" fileref="sr3mp_cycle_FromCOD16.wav" volume="0.35" />
     <sound class="impact" fileref="rifle_drop.wav" />
     <model filename="gkw_ar_asval_mod3.xml" />
     <hud_icon filename="gkw_asvalmod3.png" />
@@ -60,9 +60,9 @@
     <inventory buy_price="180.0" sell_price="180.0" />
     <next_in_chain key="gkw_asvalmod3.weapon" share_ammo="1" />
     <sound key="fire" fileref="asvalskill_fire_FromCOD16.wav" pitch_variety="0.05" volume="1" />
-    <sound key="magazine_out" fileref="sr3mp_mgz_out_FromCOD16.wav" volume="0.45" />
-    <sound key="magazine_in" fileref="sr3mp_mgz_in_FromCOD16.wav" volume="0.45" />
-    <sound key="cycle" fileref="sr3mp_cycle_FromCOD16.wav" volume="0.45" />
+    <sound key="magazine_out" fileref="sr3mp_mgz_out_FromCOD16.wav" volume="0.35" />
+    <sound key="magazine_in" fileref="sr3mp_mgz_in_FromCOD16.wav" volume="0.35" />
+    <sound key="cycle" fileref="sr3mp_cycle_FromCOD16.wav" volume="0.35" />
     <sound class="impact" fileref="rifle_drop.wav" />
     <model filename="gkw_ar_asval_mod3.xml" />
     <hud_icon filename="gkw_asvalmod3_skill.png" />
