@@ -25,10 +25,10 @@
         <inventory encumbrance="10.0" buy_price="45.0" sell_price="45.0"/>
         <next_in_chain key="gkw_usas12_skill.weapon" share_ammo="1"/>
         <animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
-        <sound key="fire" fileref="usas12_fire_FromWF.wav" pitch_variety="0.05" volume="1.1"/>
-        <sound key="magazine_out" fileref="usas12_mgz_out_FromWF.wav" volume="0.8"/>
-        <sound key="magazine_in" fileref="usas12_mgz_in_FromWF.wav" volume="0.8"/>
-        <sound key="cycle" fileref="usas12_cycle_FromWF.wav" volume="0.8"/>
+        <sound key="fire" fileref="usas12_fire_FromCOD8.wav" pitch_variety="0.05" volume="1.2"/>
+        <sound key="magazine_out" fileref="usas12_mgz_out_FromCOD8.wav" volume="0.5"/>
+        <sound key="magazine_in" fileref="usas12_mgz_in_FromCOD8.wav" volume="0.5"/>
+        <sound key="cycle" fileref="usas12_cycle_FromCOD8.wav" volume="0.5"/>
         <sound class="impact" fileref="rifle_drop.wav"/>
         <model filename="gkw_sg_usas12.xml"/>
         <hud_icon filename="gkw_usas12.png"/>
@@ -103,10 +103,10 @@
         <inventory encumbrance="10.0" buy_price="45.0" sell_price="45.0"/>
         <next_in_chain key="gkw_usas12.weapon" share_ammo="1"/>
         <animation key="reload" animation_key="reloading, magazine rifle 3.0"/>
-        <sound key="fire" fileref="usas12_fire_FromWF.wav" pitch_variety="0.05" volume="1.1"/>
-        <sound key="magazine_out" fileref="usas12_mgz_out_FromWF.wav" volume="0.8"/>
-        <sound key="magazine_in" fileref="usas12_mgz_in_FromWF.wav" volume="0.8"/>
-        <sound key="cycle" fileref="usas12_cycle_FromWF.wav" volume="0.8"/>
+        <sound key="fire" fileref="usas12_fire_FromCOD8.wav" pitch_variety="0.05" volume="1.2"/>
+        <sound key="magazine_out" fileref="usas12_mgz_out_FromCOD8.wav" volume="0.5"/>
+        <sound key="magazine_in" fileref="usas12_mgz_in_FromCOD8.wav" volume="0.5"/>
+        <sound key="cycle" fileref="usas12_cycle_FromCOD8.wav" volume="0.5"/>
         <sound class="impact" fileref="rifle_drop.wav"/>
         <commonness value="0" in_stock="0"/>
         <model filename="gkw_sg_usas12.xml"/>

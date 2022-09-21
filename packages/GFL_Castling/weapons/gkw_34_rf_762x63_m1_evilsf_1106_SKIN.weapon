@@ -37,7 +37,7 @@
 	<animation state_key="stabbing"	animation_key="melee, bayonet_6hp" />
 	<commonness value="0" in_stock="0" can_respawn_with="1" />
     <weak_hand_hold offset="0.3" />
-    <sound key="fire" fileref="m1garand_fire_FromPOSTSCRIPTUM.wav" pitch_variety="0.05" volume="1.2"/>
+    <sound key="fire" fileref="m1garand_fire_FromPOSTSCRIPTUM.wav" pitch_variety="0.05" volume="1.4"/>
     <sound key="cycle" fileref="m1garand_cycle_FromPOSTSCRIPTUM.wav" volume="0.6" />
     <sound key="magazine_out" fileref="t44_mgz_out_FromCOD17.wav" volume="0.45" />
     <sound key="magazine_in" fileref="t44_mgz_in_FromCOD17.wav" volume="0.45" />
@@ -105,8 +105,8 @@
 	<animation state_key="stabbing"	animation_key="melee, bayonet_6hp" />
 	<commonness value="0" in_stock="0" can_respawn_with="1" />
     <weak_hand_hold offset="0.3" />
-    <sound key="fire" fileref="m1garand_fire_FromCOD18.wav" pitch_variety="0.05" volume="1.3"/>
-    <sound key="cycle" fileref="m1garand_cycle_FromCOD13.wav" volume="0.45" />
+    <sound key="fire" fileref="m1garand_fire_FromPOSTSCRIPTUM.wav" pitch_variety="0.05" volume="1.4"/>
+    <sound key="cycle" fileref="m1garand_cycle_FromPOSTSCRIPTUM.wav" volume="0.6" />
     <sound key="magazine_out" fileref="t44_mgz_out_FromCOD17.wav" volume="0.45" />
     <sound key="magazine_in" fileref="t44_mgz_in_FromCOD17.wav" volume="0.45" />
     <model filename="gkw_rf_m1_sf_2.xml" />
