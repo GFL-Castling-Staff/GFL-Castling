@@ -18,6 +18,9 @@ dictionary callLaunchIndex = {
     // 狙击妖精
     {"gk_snipe_fairy.call",2},
 
+    // 增援妖精
+    {"gk_yaoren_fairy.call",3},
+
     // 空空投
     {"",0}
 };
@@ -107,7 +110,6 @@ class call_event : Tracker {
                         if (exsist){
                             const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
                             if (character !is null) {
-                                int playerId = character.getIntAttribute("player_id");
                                 sendPrivateMessageKey(m_metagame,playerId,"snipecallexisthint");
                                 GiveRP(m_metagame,characterId,300);
                             }
@@ -124,6 +126,34 @@ class call_event : Tracker {
                             addCastlingMarker(FairyRequest);
                             m_DummyCallID++;
                             GFL_event_array.insertLast(GFL_event(characterId,factionId,1,stringToVector3(position),1.0,-1.0,flagId));
+                        }
+                        break;
+                    }
+                    case 3:{
+                        bool yaoren_cooldown = false;
+                        int j=-1;
+                        if(findCooldown(playerName,"yaoren_8")){
+                            const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+                            if (character !is null) {
+                                dictionary a;
+                                a["%time"] = ""+getCooldown(playerName,"yaoren_8");                        
+                                sendPrivateMessageKey(m_metagame,playerId,"ac130cooldown",a);
+                                GiveRP(m_metagame,characterId,500);
+                            }
+                        }
+                        else {
+                            m_cooldown.insertLast(Call_Cooldown(playerName,playerId,300.0,"yaoren_8"));
+                            sendFactionMessageKey(m_metagame,factionId,"ac130callstarthint");
+                            int flagId = m_DummyCallID + 15000;
+                            ManualCallTask@ FairyRequest = ManualCallTask(characterId,"",0.0,factionId,stringToVector3(position),"foobar");
+                            FairyRequest.setIconTypeKey("call_marker_drop");
+                            FairyRequest.setIndex(8);
+                            FairyRequest.setSize(0.5);
+                            FairyRequest.setDummyId(flagId);
+                            addCastlingMarker(FairyRequest);
+                            m_DummyCallID++;
+                            GFL_event@ newCall = GFL_event(characterId,factionId,4,stringToVector3(position),1.0,-1.0,flagId);
+                            GFL_event_array.insertLast(newCall);
                         }
                         break;
                     }

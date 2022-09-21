@@ -23,6 +23,8 @@ dictionary GFL_Event_Index = {
 
         {"sniper_m200",3},
 
+        {"mg_strafe",4},
+
         // 下面这行是用来占位的，在这之上添加新的即可
         {"666",-1}
 };
@@ -57,6 +59,8 @@ class GFL_event_system : Tracker {
                                 break;
                             }
                             case 3:{excuteSniperM200(m_metagame,GFL_event_array[a]);break;}
+                            case 4:{excuteYaoren(m_metagame,GFL_event_array[a]);break;}
+
                             default:
                                 break;
                         }
@@ -146,6 +150,30 @@ void excuteSniperM200(GameMode@ metagame,GFL_event@ eventinfo){
         const XmlElement@ luckyGuy = getCharacterInfo(metagame, luckyGuyid);
         Vector3 luckyGuyPos = stringToVector3(luckyGuy.getStringAttribute("position"));
         insertCommonStrike(eventinfo.m_characterId,eventinfo.m_factionid,4,getRandomOffsetVector(eventinfo.m_pos,70.0),luckyGuyPos);                        
+    }
+    eventinfo.m_phase++;
+    if(eventinfo.m_phase>=6){
+        eventinfo.m_enable=false;
+    }
+}
+
+void excuteYaoren(GameMode@ metagame,GFL_event@ eventinfo){
+    eventinfo.m_time=1.5;
+    int luckyGuyid = getNearbyRandomLuckyGuyId(metagame,eventinfo.m_factionid,eventinfo.m_pos,25.0f);
+    if(luckyGuyid!=-1){
+        const XmlElement@ luckyGuy = getCharacterInfo(metagame, luckyGuyid);
+        Vector3 luckyGuyPos = stringToVector3(luckyGuy.getStringAttribute("position"));
+        insertCommonStrike(eventinfo.m_characterId,eventinfo.m_factionid,9,getRandomOffsetVector(eventinfo.m_pos,30.0),luckyGuyPos);                        
+    }
+    if(eventinfo.m_phase==3){
+        string c = 
+        "<command class='create_instance'" +
+        " faction_id='"+ eventinfo.m_factionid +"'" +
+        " instance_class='vehicle'" +
+        " instance_key='hvy_landing.vehicle' " +
+        " character_id='" + eventinfo.m_characterId +"'" +
+        " position='" + (eventinfo.m_pos.add(Vector3(0,50,0))).toString() + "' />";
+        metagame.getComms().send(c);
     }
     eventinfo.m_phase++;
     if(eventinfo.m_phase>=6){
