@@ -142,7 +142,7 @@ class call_event : Tracker {
                             }
                         }
                         else {
-                            m_cooldown.insertLast(Call_Cooldown(playerName,playerId,300.0,"yaoren_8"));
+                            m_cooldown.insertLast(Call_Cooldown(playerName,playerId,1.0,"yaoren_8"));
                             sendFactionMessageKey(m_metagame,factionId,"ac130callstarthint");
                             int flagId = m_DummyCallID + 15000;
                             ManualCallTask@ FairyRequest = ManualCallTask(characterId,"",0.0,factionId,stringToVector3(position),"foobar");

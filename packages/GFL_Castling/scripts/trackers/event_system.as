@@ -157,13 +157,17 @@ void excuteSniperM200(GameMode@ metagame,GFL_event@ eventinfo){
     }
 }
 
+array<int> ParatrooperHeight={
+    50,50,50,50,35,20,20,20,35,50,50,50,50
+};
+
 void excuteYaoren(GameMode@ metagame,GFL_event@ eventinfo){
-    eventinfo.m_time=1.5;
-    int luckyGuyid = getNearbyRandomLuckyGuyId(metagame,eventinfo.m_factionid,eventinfo.m_pos,25.0f);
+    eventinfo.m_time=1.0;
+    int luckyGuyid = getNearbyRandomLuckyGuyId(metagame,eventinfo.m_factionid,eventinfo.m_pos,30.0f);
     if(luckyGuyid!=-1){
         const XmlElement@ luckyGuy = getCharacterInfo(metagame, luckyGuyid);
         Vector3 luckyGuyPos = stringToVector3(luckyGuy.getStringAttribute("position"));
-        insertCommonStrike(eventinfo.m_characterId,eventinfo.m_factionid,9,getRandomOffsetVector(eventinfo.m_pos,30.0),luckyGuyPos);                        
+        insertCommonStrike(eventinfo.m_characterId,eventinfo.m_factionid,9,eventinfo.m_pos.add(Vector3(0.0,float(ParatrooperHeight[eventinfo.m_phase]),4.0)),luckyGuyPos);                        
     }
     if(eventinfo.m_phase==3){
         string c = 
@@ -176,7 +180,7 @@ void excuteYaoren(GameMode@ metagame,GFL_event@ eventinfo){
         metagame.getComms().send(c);
     }
     eventinfo.m_phase++;
-    if(eventinfo.m_phase>=6){
+    if(eventinfo.m_phase>=10){
         eventinfo.m_enable=false;
     }
 }
@@ -375,7 +379,7 @@ void excuteRampageFairyAC130(GameMode@ metagame,GFL_event@ eventinfo){
             float rand_angle = eventinfo.m_randseed + eventinfo.m_phase*3.14/10;
 
             Vector3 luckyGuyPos = stringToVector3(getCharacterInfo(metagame,luckyGuyid).getStringAttribute("position"));
-            Vector3 aimPos = luckyGuyPos.add(Vector3(45.0*cos(rand_angle),40,45.0*sin(rand_angle)));
+            Vector3 aimPos = eventinfo.m_pos.add(Vector3(45.0*cos(rand_angle),40,45.0*sin(rand_angle)));
             ac130_pre_pos = luckyGuyPos;
 
             //攻击由phase模式改为充能模式

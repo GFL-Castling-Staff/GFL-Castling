@@ -371,23 +371,23 @@ class GFLairstrike : Tracker {
                         break;                        
                     }
                     case 9:{//鱼鹰 单次 锁人扫射
-                        float rand_angle = rand(-3.14,3.14);
-                        float rand_x1 = 2*cos(rand_angle);
-                        float rand_y1 = 2*sin(rand_angle);
+
 
                         //扫射位置偏移单位向量 与 扫射位置偏移单位距离
-                        Vector3 strike_vector = getAimUnitVector(1,end_pos,end_pos.add(Vector3(rand_x1,0,rand_y1))); 
-                        Vector3 c_pos = end_pos.add(getMultiplicationVector(strike_vector,Vector3(-4,0,-4)));
+                        //Vector3 strike_vector = getAimUnitVector(1,end_pos,end_pos.add(Vector3(rand_x1,0,rand_y1))); 
+                        //Vector3 c_pos = end_pos.add(getMultiplicationVector(strike_vector,Vector3(-4,0,-4)));
+
                         //最终弹头随机程度
-                        float strike_rand = 0.5;
+                        float strike_rand = 2;
                                                 
-                        //每单轮扫射5发
-                        for(int j=1;j<=5;j++)
+                        //每单轮扫射6发
+                        for(int j=1;j<=6;j++)
                         {
-                            rand_x1 = rand(-strike_rand,strike_rand);
-                            rand_y1 = rand(-strike_rand,strike_rand);
+                            float rand_angle = rand(-3.14,3.14);
+                            float rand_x1 = strike_rand*cos(rand_angle);
+                            float rand_y1 = strike_rand*sin(rand_angle);                            
                             
-                            CreateDirectProjectile(m_metagame,start_pos,c_pos.add(Vector3(rand_x1,0,rand_y1)),"bullet_fairy.projectile",cid,fid,180);           
+                            CreateDirectProjectile(m_metagame,start_pos,end_pos.add(Vector3(rand_x1,0,rand_y1)),"bullet_fairy.projectile",cid,fid,180);           
                         } 
                         Airstrike_strafe.removeAt(a);
                         break;
