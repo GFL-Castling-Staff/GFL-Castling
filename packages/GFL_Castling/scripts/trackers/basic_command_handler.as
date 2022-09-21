@@ -30,8 +30,8 @@ dictionary songIndex = {
 	{"gkw_ak15mod3.weapon5.wav",38},//已检测，歌曲：战斗仍将继续
 
 	{"gkw_an94_mod3.weapon1.wav",8},//已检测，歌曲：战斗仍将继续
-	{"gkw_an94_mod3.weapon2.wav",9},//未检测，歌曲：起身吧，同志
-	{"gkw_an94_mod3.weapon3.wav",10},//未检测，歌曲：救救孩子
+	{"gkw_an94_mod3.weapon2.wav",9},//已检测，歌曲：起身吧，同志
+	{"gkw_an94_mod3.weapon3.wav",10},//已检测，歌曲：救救孩子
 
 	{"gkw_stg44mod3.weapon1.wav",11},//已检测，歌曲：守望莱茵
 
@@ -42,7 +42,7 @@ dictionary songIndex = {
 
 	{"gkw_type80mod3.weapon1.wav",15},//已检测，歌曲：共青团员之歌
 
-	{"gkw_88typemod3.weapon1.wav",16},//未检测，歌曲：旗正飘飘(?)
+	{"gkw_88typemod3.weapon1.wav",16},//已检测，歌曲：旗正飘飘(?)
 
 	{"gkw_mp5mod3.weapon1.wav",17},//已检测，歌曲：秘密集结
 
@@ -54,32 +54,32 @@ dictionary songIndex = {
 	{"gkw_ak12.weapon2.wav",20},//已检测，歌曲：歌唱动荡的青春
 	{"gkw_ak12.weapon3.wav",21},//已检测，歌曲：布尔什维克离开家
 	{"gkw_ak12.weapon4.wav",22},//已检测，歌曲：伊里奇的训言号飞艇
-	{"gkw_ak12.weapon5.wav",23},//未检测，歌曲：飞翔吧，白鹤
+	{"gkw_ak12.weapon5.wav",23},//已检测，歌曲：飞翔吧，白鹤
 
 	{"gkw_ak47.weapon1.wav",24},//已检测，歌曲：我们的装甲师
 
 	{"gkw_ak74m.weapon1.wav",25},//已检测，歌曲：变革
-	{"gkw_ak74m.weapon2.wav",26},//未检测，歌曲：永别了
+	{"gkw_ak74m.weapon2.wav",26},//已检测，歌曲：永别了
 	{"gkw_ak74m.weapon3.wav",27},//已检测，歌曲：血液型
 
 	{"gkw_m16a1.weapon1.wav",28},//已检测，歌曲：幸运儿
 
 	{"gkw_dp28.weapon1.wav",29},//已检测，歌曲：莫斯科保卫者
 
-	{"gkw_mg42.weapon1.wav",30},//未检测，歌曲：我们是黑色盖叶部队
+	{"gkw_mg42.weapon1.wav",30},//已检测，歌曲：我们是黑色盖叶部队
 
-	{"gkw_fg42.weapon1.wav",31},//未检测，歌曲：榛子是黑色的
+	{"gkw_fg42.weapon1.wav",31},//已检测，歌曲：榛子是黑色的
 
-	{"gkw_qbz191.weapon1.wav",32},//未检测，歌曲：当那一天来临
+	{"gkw_qbz191.weapon1.wav",32},//已检测，歌曲：当那一天来临
 
-	{"gkw_QBZ95.weapon1.wav",33},//未检测，歌曲：中国人民志愿军战歌
+	{"gkw_QBZ95.weapon1.wav",33},//已检测，歌曲：中国人民志愿军战歌
 
-	{"gkw_QBZ97.weapon1.wav",34},//未检测，歌曲：大海航行靠舵手
+	{"gkw_QBZ97.weapon1.wav",34},//已检测，歌曲：大海航行靠舵手
 
-	{"gkw_mab38mod3.weapon1.wav",35},//未检测，歌曲：阿迪蒂突击队
-	{"gkw_mab38mod3.weapon2.wav",39},//未检测，歌曲：啊，朋友再见
+	{"gkw_mab38mod3.weapon1.wav",35},//已检测，歌曲：阿迪蒂突击队
+	{"gkw_mab38mod3.weapon2.wav",39},//已检测，歌曲：啊，朋友再见
 
-	{"gkw_ots14.weapon1.wav",40},//未检测，歌曲：暗夜女巫
+	{"gkw_ots14.weapon1.wav",40},//已检测，歌曲：暗夜女巫
 	// 列表末尾，不用管
 	{"end_of_list",0}
 };
