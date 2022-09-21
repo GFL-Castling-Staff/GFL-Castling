@@ -16,21 +16,35 @@ array<string> commandSingIndex = {
 	// 以sopii为例，命名规则为 ‘gkw_m4sopmodii.weapon’ + ‘1’ + ‘.wav’
 	// 当然，相应的你要把你的歌在文件夹里也改成这个名字
 
-    "gkw_m4sopmodii.weapon1.wav",
-	"gkw_m1891mod3.weapon1.wav",
-	"gkw_ak15mod3.weapon1.wav",
-	"gkw_an94_mod3.weapon1.wav",
-	"gkw_stg44mod3.weapon1.wav",
-	"gkw_ppsh41mod3.weapon1.wav",
-	"gkw_ppsh41mod3.weapon2.wav",
-	"gkw_stenmod3.weapon1.wav",
-	"gkw_type80mod3.weapon1.wav",
-	"gkw_mp5mod3.weapon1.wav",
-	"gkw_ak12.weapon1.wav",
-	"gkw_ak47.weapon1.wav",
-	"gkw_m16a1.weapon1.wav",
-	"gkw_dp28.weapon1.wav",
-	"gkw_mg42.weapon1.wav",
+    "gkw_m1895mod3.weapon1.wav",//已检测，歌曲：神圣的战争
+	"gkw_m1891mod3.weapon1.wav",//已检测，歌曲：布谷鸟
+	"gkw_m1891mod3.weapon2.wav",//已检测，歌曲：小雄鹰
+	"gkw_ak15mod3.weapon1.wav",//已检测，歌曲：为俄罗斯服役
+	"gkw_ak15mod3.weapon2.wav",//已检测，歌曲：我们是人民的军队
+	"gkw_ak15mod3.weapon3.wav",//已检测，歌曲：俄罗斯终结者
+	"gkw_ak15mod3.weapon4.wav",//已检测，歌曲：半机械大爷
+	"gkw_an94_mod3.weapon1.wav",//已检测，歌曲：战斗仍将继续
+	"gkw_an94_mod3.weapon2.wav",//已检测，歌曲：空
+	"gkw_an94_mod3.weapon3.wav",//已检测，歌曲：空
+	"gkw_stg44mod3.weapon1.wav",//已检测，歌曲：守望莱茵
+	"gkw_ppsh41mod3.weapon1.wav",//已检测，歌曲：喀秋莎
+	"gkw_ppsh41mod3.weapon2.wav",//已检测，歌曲：喀秋莎
+	"gkw_stenmod3.weapon1.wav",//已检测，歌曲：统治吧不列颠尼亚
+	"gkw_type80mod3.weapon1.wav",//已检测，歌曲：共青团员之歌
+	"gkw_mp5mod3.weapon1.wav",//已检测，歌曲：秘密集结
+	"gkw_98kmod3.weapon1.wav",//已检测，歌曲：艾丽卡
+	"gkw_ak12.weapon1.wav",//已检测，歌曲：战斗仍将继续
+	"gkw_ak12.weapon2.wav",//已检测，歌曲：歌唱动荡的青春
+	"gkw_ak12.weapon3.wav",//已检测，歌曲：布尔什维克离开家
+	"gkw_ak12.weapon4.wav",//已检测，歌曲：伊里奇的训言号飞艇
+	"gkw_ak47.weapon1.wav",//已检测，歌曲：我们的装甲师
+	"gkw_ak74m.weapon1.wav",//已检测，歌曲：变革
+	"gkw_ak74m.weapon2.wav",//已检测，歌曲：永别了（结尾有问题
+	"gkw_ak74m.weapon3.wav",//已检测，歌曲：血液型
+	"gkw_m16a1.weapon1.wav",//已检测，歌曲：幸运儿
+	"gkw_dp28.weapon1.wav",//已检测，歌曲：莫斯科保卫者
+	"gkw_mg42.weapon1.wav",//已检测，歌曲：我们是黑色盖叶部队
+	"gkw_fg42.weapon1.wav",//已检测，歌曲：无
 
 	// 列表末尾，不用管
 	"end_of_list"
@@ -40,21 +54,35 @@ dictionary songVolumeIndex = {
 
 	// 对应上面的歌曲名设置一下音量就行
 
-	{"gkw_m4sopmodii.weapon1.wav",4.0},
+	{"gkw_m1895mod3.weapon1.wav",4.0},
 	{"gkw_m1891mod3.weapon1.wav",4.0},
+	{"gkw_m1891mod3.weapon2.wav",4.0},
 	{"gkw_ak15mod3.weapon1.wav",4.0},
+	{"gkw_ak15mod3.weapon2.wav",4.0},
+	{"gkw_ak15mod3.weapon3.wav",4.0},
+	{"gkw_ak15mod3.weapon4.wav",4.0},
 	{"gkw_an94_mod3.weapon1.wav",4.0},
+	{"gkw_an94_mod3.weapon2.wav",4.0},
+	{"gkw_an94_mod3.weapon3.wav",4.0},
 	{"gkw_stg44mod3.weapon1.wav",4.0},
 	{"gkw_ppsh41mod3.weapon1.wav",4.0},
 	{"gkw_ppsh41mod3.weapon2.wav",4.0},
 	{"gkw_stenmod3.weapon1.wav",4.0},
 	{"gkw_type80mod3.weapon1.wav",4.0},
 	{"gkw_mp5mod3.weapon1.wav",4.0},
+	{"gkw_98kmod3.weapon1.wav",4.0},
 	{"gkw_ak12.weapon1.wav",4.0},
+	{"gkw_ak12.weapon2.wav",4.0},
+	{"gkw_ak12.weapon3.wav",4.0},
+	{"gkw_ak12.weapon4.wav",4.0},
 	{"gkw_ak47.weapon1.wav",4.0},
+	{"gkw_ak74m.weapon1.wav",4.0},
+	{"gkw_ak74m.weapon2.wav",4.0},
+	{"gkw_ak74m.weapon3.wav",4.0},
 	{"gkw_m16a1.weapon1.wav",4.0},
 	{"gkw_dp28.weapon1.wav",4.0},
 	{"gkw_mg42.weapon1.wav",4.0},
+	{"gkw_fg42.weapon1.wav",4.0},
 
 	// 列表末尾，不用管
 	{"end_of_list",0.0}
@@ -813,6 +841,8 @@ class BasicCommandHandler : Tracker {
 			spawnInstanceNearPlayer(senderId, "sf_jupiter.vehicle", "vehicle", 1); 		
 		} else  if(checkCommand(message, "spawnmoth")) {
 			spawnInstanceNearPlayer(senderId, "par_moth.vehicle", "vehicle", 1); 		
+		} else  if(checkCommand(message, "moth1")) {
+			spawnInstanceNearPlayer(senderId, "par_moth_ruin.vehicle", "vehicle", 1); 		
 		} else  if(checkCommand(message, "spawnuhlan")) {
 			spawnInstanceNearPlayer(senderId, "paradeus_uhlan.vehicle", "vehicle", 0);
 		} else  if(checkCommand(message, "spawnsand")) {

@@ -24,10 +24,10 @@
         slot="0"/>
         <animation key="reload" animation_key="reloading, Machine gun 1.6"/>
         <next_in_chain key="gkw_m240l_skill.weapon" share_ammo="0"/>
-        <sound key="fire" fileref="mg42_fire_FromHELLLETLOOSE.wav" pitch_variety="0.05" volume="1.3"/>
-        <sound key="magazine_out" fileref="mg42_mgz_out_FromHELLLETLOOSE.wav" volume="1"/>
-        <sound key="magazine_in" fileref="mg42_mgz_in_FromHELLLETLOOSE.wav" volume="1"/>
-        <sound key="cycle" fileref="mg42_cycle_FromHELLLETLOOSE.wav" volume="1"/>
+        <sound key="fire" fileref="m240_fire_FromCOD6.wav" pitch_variety="0.05" volume="1.2"/>
+        <sound key="magazine_out" fileref="m240_mgz_out_FromSQUAD.wav" volume="0.6"/>
+        <sound key="magazine_in" fileref="m240_mgz_in_FromSQUAD.wav" volume="0.6"/>
+        <sound key="cycle" fileref="m240_cycle_FromSQUAD.wav" volume="0.6"/>
         <sound class="impact" fileref="rifle_drop.wav"/>
         <model filename="gkw_mg_m240l_2.xml"/>
         <hud_icon filename="gkw_m240l.png"/>
@@ -95,10 +95,10 @@
         <inventory encumbrance="30.0" buy_price="40.0" sell_price="40.0"/>
         <commonness value="0" in_stock="0" can_respawn_with="1"/>
         <next_in_chain key="gkw_m240l.weapon" share_ammo="1"/>
-        <sound key="fire" fileref="mg42skill_fire_FromFC5.wav" pitch_variety="0.05" volume="1.2"/>
-        <sound key="magazine_out" fileref="mg42_mgz_out_FromHELLLETLOOSE.wav" volume="1"/>
-        <sound key="magazine_in" fileref="mg42_mgz_in_FromHELLLETLOOSE.wav" volume="1"/>
-        <sound key="cycle" fileref="mg42_cycle_FromHELLLETLOOSE.wav" volume="1"/>
+        <sound key="fire" fileref="m240_fire_FromCOD6.wav" pitch_variety="0.05" volume="1.2"/>
+        <sound key="magazine_out" fileref="m240_mgz_out_FromSQUAD.wav" volume="0.6"/>
+        <sound key="magazine_in" fileref="m240_mgz_in_FromSQUAD.wav" volume="0.6"/>
+        <sound key="cycle" fileref="m240_cycle_FromSQUAD.wav" volume="0.6"/>
         <sound class="impact" fileref="rifle_drop.wav"/>
         <model filename="gkw_mg_m240l_1.xml"/>
         <hud_icon filename="gkw_m240l_skill.png"/>

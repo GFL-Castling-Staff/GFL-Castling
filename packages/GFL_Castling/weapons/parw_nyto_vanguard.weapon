@@ -15,7 +15,7 @@
         carry_in_two_hands="0"
         use_basic_muzzle_smoke_effect="0"
 		magazine_size="128" 
-		name="Nyto-Vanguard" 
+		name="Nyto-Patrol" 
 		projectile_speed="90.0" 
 		suppressed="0" 
 		projectiles_per_shot="2"
@@ -45,10 +45,10 @@
     <effect class="muzzle" ref="MuzzleSmokeDual1" />
     <effect class="muzzle" ref="MuzzleDual2" />
     <effect class="muzzle" ref="MuzzleSmokeDual2" />
-    <sound key="fire" fileref="uzi_Fire_FromSAM2.wav" pitch_variety="0.05" volume="0.5" />
-    <sound key="magazine_out" fileref="uzi_mgz_out_FromCOD16.wav" volume="1" />
-    <sound key="magazine_in" fileref="uzi_mgz_in_FromCOD16.wav" volume="1" />
-    <sound key="cycle" fileref="uzi_cycle_FromCOD16.wav" volume="1" />
+    <sound key="fire" fileref="Nytoportal_fire_FromCOD13.wav" pitch_variety="0.05" volume="0.8" />
+    <sound key="magazine_out" fileref="Nytoportal_mgz_out_FromCOD13.wav" volume="0.4" />
+    <sound key="magazine_in" fileref="Nytoportal_mgz_in_FromCOD13.wav" volume="0.4" />
+    <sound key="cycle" fileref="Nytoportal_cycle_FromCOD13.wav" volume="0.4" />
     <sound class="impact" fileref="rifle_drop.wav" />
     <model filename=""/>
     <hud_icon filename="parw_nytoblacksmg.png"/>

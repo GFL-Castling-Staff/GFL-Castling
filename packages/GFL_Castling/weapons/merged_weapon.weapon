@@ -18899,7 +18899,7 @@
 </weapon>
 
 <weapon key="gkw_deploy_test_BFG.weapon" radius="0.25" drop_count_factor_on_death="0" drop_count_factor_on_player_death="1" time_to_live_out_in_the_open="60.0">
-	<specification name="test_kcco_bfg" spawn_instance_class="vehicle" spawn_instance_key="kcco_1130.vehicle" magazine_size="1" can_shoot_standing="0" can_shoot_crouching="1" carry_in_two_hands="1" can_shoot_prone="0" class="5" consume="1" sight_range_modifier="1" slot="1" deployment="1"/>
+	<specification name="test_kcco_bfg" spawn_instance_class="vehicle" spawn_instance_key="deployed_mortar.vehicle" magazine_size="1" can_shoot_standing="0" can_shoot_crouching="1" carry_in_two_hands="1" can_shoot_prone="0" class="5" consume="1" sight_range_modifier="1" slot="1" deployment="1"/>
 	<commonness value="0" in_stock="1" can_respawn_with="0"/>
 	<animation state_key="recoil" animation_key="deploy2"/>
 	<capacity value="0" source="rank" source_value="0.0"/>
@@ -41454,7 +41454,7 @@
 	<inventory encumbrance="0.0" price="80.0"/>
 	<projectiles_per_shot value="1"/>
 	<weak_hand_hold offset="0.1"/>
-	<capacity value="4" source="rank" source_value="0.0"/>
+	<capacity value="2" source="rank" source_value="0.0"/>
 	<projectile file="kcco_tracer_dart_accurate.projectile">
 	</projectile>
 	<stance state_key="running" accuracy="1.4"/>
@@ -41497,7 +41497,7 @@
 	<inventory encumbrance="0.0" price="80.0"/>
 	<projectiles_per_shot value="1"/>
 	<weak_hand_hold offset="0.1"/>
-	<capacity value="4" source="rank" source_value="0.0"/>
+	<capacity value="3" source="rank" source_value="0.0"/>
 	<projectile file="kcco_tracer_dart_ranged.projectile">
 	</projectile>
 	<stance state_key="running" accuracy="1.4"/>
@@ -43847,13 +43847,13 @@
 </weapon>
 
 <weapon key="amos_drone_mg1.weapon">
-	<specification slot="2" retrigger_time="0.075" accuracy_factor="0.5" sustained_fire_grow_step="0.25" sustained_fire_diminish_rate="2.0" sight_range_modifier="0.01" ai_sight_range_modifier="150.0" magazine_size="-1" suppressed="0" name="Amos MG" class="0" projectile_speed="195"/>
+	<specification slot="2" retrigger_time="0.125" accuracy_factor="0.5" sustained_fire_grow_step="0.25" sustained_fire_diminish_rate="2.0" sight_range_modifier="0.01" ai_sight_range_modifier="150.0" magazine_size="-1" suppressed="0" name="Amos MG" class="0" projectile_speed="195"/>
 	<model mesh_filename="Amos_drone.mesh" texture_filename="AMOS_drone.png"/>
 	<hud_icon filename="testing.png"/>
 	<commonness value="0.0"/>
 	<weak_hand_hold offset="0.4"/>
-	<projectile file="bullet.projectile">
-	<result class="blast" damage="0.25" radius="2.5" decal="1" push="0.1" character_state="death" faction_compare="not_equal"/>
+	<projectile file="bullet_he.projectile">
+	<result class="blast" damage="0.8" radius="2.5" decal="1" push="0.1" character_state="death" faction_compare="not_equal"  damage_origin_vehicle="0"/>
 	</projectile>
 </weapon>
 
@@ -43888,9 +43888,9 @@
 	<commonness value="0.0"/>
 	<weak_hand_hold offset="0.4"/>
 	<projectile file="pierre_rocket.projectile">
-	<result class="blast" radius="5.6" damage="9.0" push="0.2" decal="1" faction_compare="not_equal" damage_origin_vehicle="0"/>
+		<result class="blast" radius="5.6" damage="9.0" push="0.2" decal="1" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	</projectile>
-	<ballistics near_far_distance="1000.0" speed_estimation_near="50.0" speed_estimation_far="50.0" max_speed="125.0" randomness="0.0"/>
+	<ballistics near_far_distance="1000.0" speed_estimation_near="50.0" speed_estimation_far="50.0" max_speed="255.0" randomness="0.0"/>
 </weapon>
 
 <weapon key="amos_emp.weapon">
@@ -43902,17 +43902,30 @@
 	<effect class="muzzle" ref="coeusphere"/>
 	<effect class="muzzle" ref="coeusmuzzle" lighting="1"/>
 	<sound key="fire" fileref="amos_fire.wav" pitch_variety="0.02" volume="1.5"/>
-	<projectile file="at4.projectile">
-	<result class="blast" radius="8.5" damage="9" push="1" decal="1" faction_compare="not_equal" damage_origin_vehicle="0"/>
-	<effect class="result" key="terrain" ref="SmokeBurst" post_processing="1"/>
-	<effect class="result" key="terrain" ref="Shine" lighting="0"/>
-	<effect class="result" key="terrain" ref="HitTankSparks" lighting="0"/>
-	<effect class="result" key="other" ref="SmokeBurst" post_processing="1"/>
-	<effect class="result" key="other" ref="Shine" lighting="0"/>
-	<effect class="result" key="other" ref="HitTankSparks" lighting="0"/>
-	<effect class="result" key="static_object" copy="terrain"/>
-	<effect class="result" key="vehicle" copy="terrain"/>
-	<effect class="result" key="character" copy="terrain"/>
+	<projectile file="at4.projectile" radius="0.5">
+		<result class="blast" radius="8.5" damage="15" push="1" decal="1" faction_compare="not_equal" damage_origin_vehicle="0"/>
+
+		<effect class="result" type="splat_map" surface_tag="" size="3.0" atlas_index="0" layer="1" />
+		<effect class="result" type="splat_map" surface_tag="" size="5.0" atlas_index="4" layer="0" />
+		<effect class="result" type="splat_map" surface_tag="" size="6.0" atlas_index="0" layer="2" additive="0" /> <!-- remove top snow everywhere -->
+		   
+		<effect class="result" key="static_object" copy="terrain" />
+		<effect class="result" key="vehicle" copy="terrain" />     
+		<effect class="result" key="character" copy="terrain" />
+		<effect class="result" type="splat_map" surface_tag="" size="3.0" atlas_index="0" layer="1" />
+		<effect class="result" type="splat_map" surface_tag="" size="5.0" atlas_index="4" layer="0" />
+		<effect class="result" type="splat_map" surface_tag="" size="6.0" atlas_index="0" layer="2" additive="0" />
+		<effect class="result" key="terrain" ref="NavalSmokeTop1" post_processing="1" />
+		<effect class="result" key="terrain" ref="woosh" post_processing="0" shadow="0" />  
+		<effect class="result" key="terrain" ref="ShadowSmoke" shadow="1" />
+
+		<effect class="result" key="other" ref="Shine" lighting="0" />
+
+		<effect class="result" key="static_object" copy="terrain" />
+		<effect class="result" key="vehicle" copy="terrain" />     
+		<effect class="result" key="character" copy="terrain" />
+
+		<effect class="activated" ref="Propulsion_gl" /> 
 	</projectile>
 </weapon>
 
@@ -44910,50 +44923,95 @@
 </weapon>
 
 <weapon key="Motar_cannon.weapon">
-	<tag name="bazooka"/>
-	<specification retrigger_time="6.0" accuracy_factor="0.85" sight_range_modifier="2.35" ai_sight_range_modifier="1.05" sight_height_offset="45" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="0.3" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="0" suppressed="0" name="M2 Mortar" class="0" projectile_speed="100.0" barrel_offset="0.6" projectiles_per_shot="1" spread_range="0.2"/>
-	<sound key="fire" fileref="m2_fire_FromREALLIFE.wav" pitch_variety="0.1" volume="1.2"/>
-	<sound key="magazine_out" fileref="portable_mortar_reload.wav" volume="0.7"/>
+	<tag name="bazooka" />
+	
+    <specification 
+	 retrigger_time="0.2" 
+	 accuracy_factor="0.70" 
+	 sight_range_modifier="2.35"
+     ai_sight_range_modifier="1.05"
+     sight_height_offset="45"   
+	magazine_size="-1" 
+	 can_shoot_standing="0" 
+	 can_shoot_crouching="1" 
+	 can_shoot_prone="0" 
+	 suppressed="0" 
+	 name="M2 Mortar" 
+	 class="0" 
+     projectile_speed="100.0"  
+     barrel_offset="0.6"  
+	 projectiles_per_shot="1"
+     spread_range="0.2"
+	 sustained_fire_grow_step="0.013" 
+	 sustained_fire_diminish_rate="0.01" 
+	 cooldown_start="0.06"
+     cooldown_end="0.0"	/> 
+
+    <sound key="fire" fileref="m2_fire_FromREALLIFE.wav" pitch_variety="0.1" volume="1.2" />
+	<sound key="magazine_out" fileref="portable_mortar_reload.wav" volume="0.7" />
 	<sound key="magazine_in" fileref="dry_fire.wav" volume="0.7"/>
 	<sound key="cycle" fileref="portable_mortar_reload.wav" volume="0.7"/>
-	<sound class="impact" fileref="rifle_drop.wav"/>
-	<inventory buy_price="420.0" sell_price="10.0"/>
-	<commonness value="0.00001"/>
-	<hud_icon filename="gkw_m2.png"/>
-	<capacity value="0" source="rank" source_value="0.0"/>
-	<capacity value="1" source="rank" source_value="3.457"/>
-	<weak_hand_hold offset="0.3"/>
-	<projectile file="portable_mortar.projectile">
-	<result class="blast" radius="7.2" damage="5.0" push="1.0" decal="1" faction_compare="not_equal" damage_origin_vehicle="0"/>
-	<effect class="result" type="splat_map" surface_tag="" size="3.0" atlas_index="0" layer="1"/>
-	<effect class="result" type="splat_map" surface_tag="" size="5.0" atlas_index="4" layer="0"/>
-	<effect class="result" type="splat_map" surface_tag="" size="6.0" atlas_index="0" layer="2" additive="0"/>
-	<effect class="result" key="static_object" copy="terrain"/>
-	<effect class="result" key="vehicle" copy="terrain"/>
-	<effect class="result" key="character" copy="terrain"/>
-	<effect class="result" type="splat_map" surface_tag="" size="3.0" atlas_index="0" layer="1"/>
-	<effect class="result" type="splat_map" surface_tag="" size="5.0" atlas_index="4" layer="0"/>
-	<effect class="result" type="splat_map" surface_tag="" size="6.0" atlas_index="0" layer="2" additive="0"/>
-	<effect class="result" key="terrain" ref="NavalSmokeTop1" post_processing="1"/>
-	<effect class="result" key="terrain" ref="ShadowSmoke" shadow="1"/>
-	<effect class="result" key="other" ref="Shine" lighting="0"/>
-	<effect class="result" key="static_object" copy="terrain"/>
-	<effect class="result" key="vehicle" copy="terrain"/>
-	<effect class="result" key="character" copy="terrain"/>
-	<effect class="activated" ref="Propulsion_gl"/>
-	<trail probability="1.0" key="FlamethrowerTrail"/>
+	<sound class="impact" fileref="rifle_drop.wav" />
+	
+	<inventory  buy_price="420.0" sell_price="10.0" />
+	<commonness value="0.00001"  />
+
+	<hud_icon filename="gkw_m2.png" />
+	
+    <capacity value="0" source="rank" source_value="0.0" />
+    <capacity value="1" source="rank" source_value="3.457" />
+
+	<weak_hand_hold offset="0.3" />
+	<projectile file="portable_mortar.projectile" pulldown_in_air="18">
+		<result class="blast" radius="7.2" damage="5.0" push="1.0" decal="1" faction_compare="not_equal" damage_origin_vehicle="0" />
+
+		<effect class="result" type="splat_map" surface_tag="" size="3.0" atlas_index="0" layer="1" />
+		<effect class="result" type="splat_map" surface_tag="" size="5.0" atlas_index="4" layer="0" />
+		<effect class="result" type="splat_map" surface_tag="" size="6.0" atlas_index="0" layer="2" additive="0" /> <!-- remove top snow everywhere -->
+		   
+		<effect class="result" key="static_object" copy="terrain" />
+		<effect class="result" key="vehicle" copy="terrain" />     
+		<effect class="result" key="character" copy="terrain" />
+		<effect class="result" type="splat_map" surface_tag="" size="3.0" atlas_index="0" layer="1" />
+		<effect class="result" type="splat_map" surface_tag="" size="5.0" atlas_index="4" layer="0" />
+		<effect class="result" type="splat_map" surface_tag="" size="6.0" atlas_index="0" layer="2" additive="0" />
+		<effect class="result" key="terrain" ref="NavalSmokeTop1" post_processing="1" />
+		<effect class="result" key="terrain" ref="woosh" post_processing="0" shadow="0" />  
+		<effect class="result" key="terrain" ref="ShadowSmoke" shadow="1" />
+
+		<effect class="result" key="other" ref="Shine" lighting="0" />
+
+		<effect class="result" key="static_object" copy="terrain" />
+		<effect class="result" key="vehicle" copy="terrain" />     
+		<effect class="result" key="character" copy="terrain" />
+
+		<effect class="activated" ref="Propulsion_gl" /> 
+		<trail probability="1.0" key="FlamethrowerTrail" />
 	</projectile>
-	<ballistics near_far_distance="1.0" speed_estimation_near="10.0" speed_estimation_far="35.0" max_speed="800.0" randomness="0.05"/>
-	<effect class="muzzle" ref="MusketMuzzle"/>
-	<effect class="muzzle" ref="UpDust"/>
-	<stance state_key="running" accuracy="0.3"/>
-	<stance state_key="walking" accuracy="0.4"/>
-	<stance state_key="crouch_moving" accuracy="0.3"/>
-	<stance state_key="prone_moving" accuracy="0.1"/>
-	<stance state_key="standing" accuracy="0.5"/>
-	<stance state_key="crouching" accuracy="1.0"/>
-	<stance state_key="prone" accuracy="1.0"/>
-	<modifier class="speed" value="-3.0"/>
+
+  <ballistics
+	 near_far_distance="1.0"
+	 speed_estimation_near="10.0"
+	 speed_estimation_far="35.0"
+	 max_speed="900.0"
+	 randomness="0.05"
+	/>
+	<effect class="muzzle" ref="coeus"/>
+	<effect class="muzzle" ref="coeusphere"/>
+	
+	<effect class="muzzle" ref="MusketMuzzle" />
+	<effect class="muzzle" ref="UpDust" />
+	
+	<stance state_key="running" accuracy="0.3" />
+	<stance state_key="walking" accuracy="0.4" />
+	<stance state_key="crouch_moving" accuracy="0.3" />
+	<stance state_key="prone_moving" accuracy="0.1" />
+	
+	<stance state_key="standing" accuracy="0.5" />
+	<stance state_key="crouching" accuracy="1.0" />
+	<stance state_key="prone" accuracy="1.0" />
+
+	<modifier class="speed" value="-3.0" />
 </weapon>
 
 <weapon key="vehicle_tow.weapon">

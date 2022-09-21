@@ -26,10 +26,10 @@
     <animation state_key="walking_backwards" animation_key="walking backwards, hip fire" />
     <animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
     <sound key="fire" fileref="parw_shoot1.wav" pitch_variety="0" volume="1.0" />
-    <sound key="reload_one" fileref="IDW_mgz_in_FromPD2.wav" />
-    <sound key="magazine_out" fileref="IDW_mgz_out_FromPD2.wav" />
-    <sound key="magazine_in" fileref="IDW_mgz_in_FromPD2.wav" />
-    <sound key="cycle" fileref="IDW_cycle_FromPD2.wav" />
+    <sound key="reload_one" fileref="IDW_mgz_in_FromPD2.wav" volume="1.1" />
+    <sound key="magazine_out" fileref="commander_mgz_out_FromCOD13.wav" volume="0.35" />
+    <sound key="magazine_in" fileref="commander_mgz_in_FromCOD13.wav" volume="0.35" />
+    <sound key="cycle" fileref="commander_cycle_FromCOD13.wav" volume="0.35" />
     <sound class="impact" fileref="rifle_drop.wav" />
     <model filename="parw_commander.xml" />
     <hud_icon filename="testing.png" />
