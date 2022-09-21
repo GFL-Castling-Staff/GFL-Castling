@@ -35,28 +35,26 @@
 	collision_model_extent="2.4 2.0 2.4" 
 	visual_offset="0 0.0 0" />
 	
-    0<turret offset="0.0 6.0 0.0" weapon_key="parw_moth_mg.weapon" weapon_offset="0.0 0 0" max_rotation_step="0.00036" rotation="0" rotation_range="6.30" weapon_recoil="0.0" physics_recoil="0.0" />
+	0<turret offset="0.0 11.8 0.0" weapon_key="amos_none.weapon" weapon_offset="0.0 0 0" max_rotation_step="0.00036" rotation="0" rotation_range="0" weapon_recoil="0.0" physics_recoil="0.0" />
+    1<turret offset="0.0 6.0 0.0" weapon_key="parw_moth_mg.weapon" weapon_offset="0.0 0 0" max_rotation_step="0.00048" rotation="0" rotation_range="6.30" weapon_recoil="0.0" physics_recoil="0.0" />
+    <visual class="turret" turret_index="0" mesh_filename="moth_dir.mesh" texture_filename="balloon.png"/>
 	
     <modifier class="blast_range" value="+6.0" />
     <modifier class="blast_damage" value="-1.0" />
 	
-	<visual class="chassis" mesh_filename="" texture_filename="Sentry_Tower_BaseColor.png" />
+	<visual class="chassis" mesh_filename="" texture_filename="balloon.png" />
 	
     <character_slot type="driver" position="0 0.7 1" rotation="0" exit_rotation="0" hiding="1" animation_id="36" attached_on_turret="0" seat_position="0.0 0.0 0.4" />
     <character_slot type="gunner" position="0 0.7 -1" rotation="0" exit_rotation="3.14" hiding="1" animation_id="37" attached_on_turret="0" seat_position="0.0 0.4 0.0">
-		<turret index="0" />
+		<turret index="1" />
     </character_slot>
-    <character_slot type="passenger" position="1 0.7 0" rotation="1.05" exit_rotation="1.57" hiding="0" animation_key="passenger, boat"  attached_on_turret="0" seat_position="0.7 0.3 0.8" rotation_range="3.40"/>	
-    <character_slot type="passenger" position="-1 0.7 0" rotation="-1.05" exit_rotation="-1.57" hiding="0" animation_key="passenger, boat"  attached_on_turret="0" seat_position="-0.7 0.3 0.8" rotation_range="3.40"/>	
+    <character_slot type="passenger" position="1 0.7 0" rotation="1.05" exit_rotation="1.57" hiding="0" animation_key="passenger, boat"  attached_on_turret="1" seat_position="0.7 0.3 0.8" rotation_range="3.40"/>	
+    <character_slot type="passenger" position="-1 0.7 0" rotation="-1.05" exit_rotation="-1.57" hiding="0" animation_key="passenger, boat"  attached_on_turret="1" seat_position="-0.7 0.3 0.8" rotation_range="3.40"/>	
 
 	
-    <rev_sound filename="tank_rev0.wav" low_pitch="0.4" high_pitch="0.5" low_rev="0.0" high_rev="1.0" volume="0.9" />
-    <rev_sound filename="tank_rev0_b.wav" low_pitch="0.6" high_pitch="0.7" low_rev="0.0" high_rev="1.0" volume="0.6" />
-    <rev_sound filename="tank_rev1.wav" low_pitch="0.2" high_pitch="0.4" low_rev="0.4" high_rev="0.7" volume="1.0" />
-    <rev_sound filename="tank_tracks.wav" low_pitch="0.4" high_pitch="0.8" low_rev="0.1" high_rev="1.0" volume="0.9" />
-    <rev_sound filename="tank_rev2.wav" low_pitch="0.3" high_pitch="0.5" low_rev="0.9" high_rev="1.0" volume="0.9" />
+    <rev_sound filename="vtol_engine_online.wav" low_pitch="0.4" high_pitch="0.5" low_rev="0.0" high_rev="1.0" volume="1.0" />
     <sound key="squeal" filename="tire_squeal.wav" />
-    <sound key="ignition" filename="vtol_engine_poweron.wav" />
+    <sound key="ignition" filename="vtol_engine_poweron.wav" volume="1.0" />
     <sound key="hit" filename="car_hit2.wav" />
     <sound key="hit" filename="car_hit1.wav" />
     <sound key="turret_rotation" filename="turret_rotation1.wav" volume="3" />
