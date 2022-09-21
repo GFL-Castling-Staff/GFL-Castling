@@ -9,6 +9,29 @@
 #include "GFLhelpers.as"
 #include "event_system.as"
 
+// 目前正在播放的点歌机中的歌曲剩余时间
+float singLastTime = 0.0;
+
+// --------------------------------------------
+class SongInfo {
+	// --------------------------------------------
+	SongInfo() {
+		float m_volume=0.0;
+		float m_lasttime=0.0;
+	}
+
+	// --------------------------------------------
+	SongInfo(float volume, float lasttime) {
+		float m_volume=0.0;
+		float m_lasttime=0.0;
+		m_volume = volume;
+		m_lasttime = lasttime;
+	}
+
+	float m_volume;
+	float m_lasttime;
+};
+
 array<string> commandSingIndex = {
 
 	// 命名规则：枪种key+歌曲编号+.wav
@@ -16,35 +39,8 @@ array<string> commandSingIndex = {
 	// 以sopii为例，命名规则为 ‘gkw_m4sopmodii.weapon’ + ‘1’ + ‘.wav’
 	// 当然，相应的你要把你的歌在文件夹里也改成这个名字
 
-    "gkw_m1895mod3.weapon1.wav",//已检测，歌曲：神圣的战争
-	"gkw_m1891mod3.weapon1.wav",//已检测，歌曲：布谷鸟
-	"gkw_m1891mod3.weapon2.wav",//已检测，歌曲：小雄鹰
-	"gkw_ak15mod3.weapon1.wav",//已检测，歌曲：为俄罗斯服役
-	"gkw_ak15mod3.weapon2.wav",//已检测，歌曲：我们是人民的军队
-	"gkw_ak15mod3.weapon3.wav",//已检测，歌曲：俄罗斯终结者
-	"gkw_ak15mod3.weapon4.wav",//已检测，歌曲：半机械大爷
-	"gkw_an94_mod3.weapon1.wav",//已检测，歌曲：战斗仍将继续
-	"gkw_an94_mod3.weapon2.wav",//已检测，歌曲：空
-	"gkw_an94_mod3.weapon3.wav",//已检测，歌曲：空
-	"gkw_stg44mod3.weapon1.wav",//已检测，歌曲：守望莱茵
-	"gkw_ppsh41mod3.weapon1.wav",//已检测，歌曲：喀秋莎
-	"gkw_ppsh41mod3.weapon2.wav",//已检测，歌曲：喀秋莎
-	"gkw_stenmod3.weapon1.wav",//已检测，歌曲：统治吧不列颠尼亚
-	"gkw_type80mod3.weapon1.wav",//已检测，歌曲：共青团员之歌
-	"gkw_mp5mod3.weapon1.wav",//已检测，歌曲：秘密集结
-	"gkw_98kmod3.weapon1.wav",//已检测，歌曲：艾丽卡
-	"gkw_ak12.weapon1.wav",//已检测，歌曲：战斗仍将继续
-	"gkw_ak12.weapon2.wav",//已检测，歌曲：歌唱动荡的青春
-	"gkw_ak12.weapon3.wav",//已检测，歌曲：布尔什维克离开家
-	"gkw_ak12.weapon4.wav",//已检测，歌曲：伊里奇的训言号飞艇
-	"gkw_ak47.weapon1.wav",//已检测，歌曲：我们的装甲师
-	"gkw_ak74m.weapon1.wav",//已检测，歌曲：变革
-	"gkw_ak74m.weapon2.wav",//已检测，歌曲：永别了（结尾有问题
-	"gkw_ak74m.weapon3.wav",//已检测，歌曲：血液型
-	"gkw_m16a1.weapon1.wav",//已检测，歌曲：幸运儿
-	"gkw_dp28.weapon1.wav",//已检测，歌曲：莫斯科保卫者
-	"gkw_mg42.weapon1.wav",//已检测，歌曲：我们是黑色盖叶部队
-	"gkw_fg42.weapon1.wav",//已检测，歌曲：无
+    "gkw_m16a1.weapon1.wav",
+
 
 	// 列表末尾，不用管
 	"end_of_list"
@@ -54,38 +50,10 @@ dictionary songVolumeIndex = {
 
 	// 对应上面的歌曲名设置一下音量就行
 
-	{"gkw_m1895mod3.weapon1.wav",4.0},
-	{"gkw_m1891mod3.weapon1.wav",4.0},
-	{"gkw_m1891mod3.weapon2.wav",4.0},
-	{"gkw_ak15mod3.weapon1.wav",4.0},
-	{"gkw_ak15mod3.weapon2.wav",4.0},
-	{"gkw_ak15mod3.weapon3.wav",4.0},
-	{"gkw_ak15mod3.weapon4.wav",4.0},
-	{"gkw_an94_mod3.weapon1.wav",4.0},
-	{"gkw_an94_mod3.weapon2.wav",4.0},
-	{"gkw_an94_mod3.weapon3.wav",4.0},
-	{"gkw_stg44mod3.weapon1.wav",4.0},
-	{"gkw_ppsh41mod3.weapon1.wav",4.0},
-	{"gkw_ppsh41mod3.weapon2.wav",4.0},
-	{"gkw_stenmod3.weapon1.wav",4.0},
-	{"gkw_type80mod3.weapon1.wav",4.0},
-	{"gkw_mp5mod3.weapon1.wav",4.0},
-	{"gkw_98kmod3.weapon1.wav",4.0},
-	{"gkw_ak12.weapon1.wav",4.0},
-	{"gkw_ak12.weapon2.wav",4.0},
-	{"gkw_ak12.weapon3.wav",4.0},
-	{"gkw_ak12.weapon4.wav",4.0},
-	{"gkw_ak47.weapon1.wav",4.0},
-	{"gkw_ak74m.weapon1.wav",4.0},
-	{"gkw_ak74m.weapon2.wav",4.0},
-	{"gkw_ak74m.weapon3.wav",4.0},
-	{"gkw_m16a1.weapon1.wav",4.0},
-	{"gkw_dp28.weapon1.wav",4.0},
-	{"gkw_mg42.weapon1.wav",4.0},
-	{"gkw_fg42.weapon1.wav",4.0},
+	{"gkw_m16a1.weapon1.wav",SongInfo(4.0,10.0)},
 
 	// 列表末尾，不用管
-	{"end_of_list",0.0}
+	{"end_of_list",SongInfo(0.0,0.0)}
 };
 
 //Adapted and optimizated by Castling Staff
@@ -486,8 +454,10 @@ class BasicCommandHandler : Tracker {
 		}
 		else if (checkCommand(message, "sing")) {
 
+			_log('pre_sing 0.');
 			// 获取玩家阵营，位置信息
-			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);_log('pre_sing 0.');
+			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
+			int playerId = playerInfo.getIntAttribute("player_id");
 			if (playerInfo is null) return;
 			int characterId= playerInfo.getIntAttribute("character_id");
 			const XmlElement@ characterInfo = getCharacterInfo(m_metagame, characterId);
@@ -504,12 +474,29 @@ class BasicCommandHandler : Tracker {
 			string c_weaponType = equipment[0].getStringAttribute("key");
 			string c_armorType = equipment[4].getStringAttribute("key");
 
-			uint jud_num = uint(message.toLowerCase()[5]) - 48;
-			string jud_sing_file = c_weaponType + '' + jud_num + '.wav';
-			if(commandSingIndex.find(jud_sing_file)> -1){
-				playSoundAtLocation(m_metagame,jud_sing_file,fId,c_pos,float(songVolumeIndex[jud_sing_file]));
+			if(singLastTime>0){
+				dictionary a;
+                a["%time"] = ""+singLastTime;  
+				sendPrivateMessageKey(m_metagame,playerId,"VODcooldown",a);
+				return;
 			}
-			
+
+			_log("Sing last time is: "+singLastTime);
+			if(message=="/sing"){
+				sendPrivateMessageKey(m_metagame,playerId,"VODvoid");
+			}
+			else{
+				uint jud_num = uint(message.toLowerCase()[5]) - 48;
+				string jud_sing_file = c_weaponType + '' + jud_num + '.wav';
+				if(commandSingIndex.find(jud_sing_file)> -1){
+					_log("Sing file is: "+jud_sing_file);
+					singLastTime += float(SongInfo(songVolumeIndex[jud_sing_file]).m_lasttime);
+					playSoundAtLocation(m_metagame,jud_sing_file,fId,c_pos,float(SongInfo(songVolumeIndex[jud_sing_file]).m_volume));
+				}				
+				else{
+					sendPrivateMessageKey(m_metagame,playerId,"VODerror");
+				}
+			}
 		}	
 		// admin and moderator only from here on
 		if (!m_metagame.getAdminManager().isAdmin(sender, senderId) && !m_metagame.getModeratorManager().isModerator(sender, senderId)) {
@@ -933,6 +920,10 @@ class BasicCommandHandler : Tracker {
 		// always on
 		return true;
 	}
+
+    void update(float time) {
+        if(singLastTime>0){singLastTime-=time;}
+    }
 	
 	// --------------------------------------------
 	void handleKick(string message, int senderId, bool id = false) {
