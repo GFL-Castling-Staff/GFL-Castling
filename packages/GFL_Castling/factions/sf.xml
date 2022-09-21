@@ -986,7 +986,7 @@
 			<sound key="throw" fileref="Justice_buhuo_ATTACK_JP.wav" pitch_variety="0.001" volume="0.8" />
 		</character>
 		<model filename="sfd_justice.xml" />
-		<ai filename="eod.ai" />
+		<ai filename="sf_gager.ai" />
 		<resources clear_vehicles="1" clear_weapons="1" clear_calls="1" clear_carry_items="1">
 			<weapon key="sfw_justice.weapon" enabled="1"/>
 			<carry_item key="vest_50hp_tank.carry_item" enabled="1" />

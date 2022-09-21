@@ -21,7 +21,7 @@
 	projectiles_per_shot="1"
 	slot="0"
 	stab_enabled="1"
-	stab_range="4.0"
+	stab_range="4.5"
 	/>
     <effect class="muzzle" ref="ejection_76251" />
     <animation key="cycle" animation_key="Brifle1" />
@@ -32,7 +32,7 @@
 	<animation key="recoil" animation_key="recoil1" />
 	<animation key="recoil" animation_key="recoil2" />
 	<animation key="recoil" animation_key="recoil3" />
-	<animation state_key="stabbing"	animation_key="melee, bayonet" />
+	<animation state_key="stabbing"	animation_key="melee, bayonet_6hp" />
 	<commonness value="0.2" in_stock="0" can_respawn_with="1" />
     <weak_hand_hold offset="0.3" />
     <sound key="fire" fileref="m1garand_fire_FromPOSTSCRIPTUM.wav" pitch_variety="0.05" volume="1.2"/>
@@ -47,7 +47,7 @@
     <projectile file="bullet.projectile">
         <result 
 		class="hit" 
-		kill_probability="2.2"
+		kill_probability="2.4"
 		kill_probability_offset_on_successful_hit="3.5" 
 		kill_decay_start_time="0.964" 
 		kill_decay_end_time="1.607"

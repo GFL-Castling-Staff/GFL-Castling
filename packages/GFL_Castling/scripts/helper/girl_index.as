@@ -261,7 +261,7 @@ dictionary tdoll_index = {
     {"258",""},
     {"259",""},
     {"260","gkw_pa15.weapon"},
-    {"261",""},
+    {"261","gkw_qbu88.weapon"},
     {"262",""},
     {"263","gkw_mg36.weapon"},
     {"264",""},
