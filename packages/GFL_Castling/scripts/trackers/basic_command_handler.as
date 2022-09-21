@@ -27,6 +27,7 @@ dictionary songIndex = {
 	{"gkw_ak15mod3.weapon2.wav",5},//已检测，歌曲：我们是人民的军队
 	{"gkw_ak15mod3.weapon3.wav",6},//已检测，歌曲：俄罗斯终结者
 	{"gkw_ak15mod3.weapon4.wav",7},//已检测，歌曲：半机械大爷
+	{"gkw_ak15mod3.weapon5.wav",38},//已检测，歌曲：战斗仍将继续
 
 	{"gkw_an94_mod3.weapon1.wav",8},//已检测，歌曲：战斗仍将继续
 	{"gkw_an94_mod3.weapon2.wav",9},//未检测，歌曲：起身吧，同志
@@ -46,6 +47,8 @@ dictionary songIndex = {
 	{"gkw_mp5mod3.weapon1.wav",17},//已检测，歌曲：秘密集结
 
 	{"gkw_98kmod3.weapon1.wav",18},//已检测，歌曲：艾丽卡
+	{"gkw_98kmod3.weapon2.wav",36},//已检测，歌曲：西部森林之歌
+	{"gkw_98kmod3.weapon3.wav",37},//已检测，歌曲：罗尔之歌
 
 	{"gkw_ak12.weapon1.wav",19},//已检测，歌曲：战斗仍将继续
 	{"gkw_ak12.weapon2.wav",20},//已检测，歌曲：歌唱动荡的青春
@@ -74,6 +77,9 @@ dictionary songIndex = {
 	{"gkw_QBZ97.weapon1.wav",34},//未检测，歌曲：大海航行靠舵手
 
 	{"gkw_mab38mod3.weapon1.wav",35},//未检测，歌曲：阿迪蒂突击队
+	{"gkw_mab38mod3.weapon2.wav",39},//未检测，歌曲：啊，朋友再见
+
+	{"gkw_ots14.weapon1.wav",40},//未检测，歌曲：暗夜女巫
 	// 列表末尾，不用管
 	{"end_of_list",0}
 };
@@ -120,6 +126,11 @@ array<array<float>> songInfo = {
 	{4.0,107.0}, // 33
 	{4.0,97.0}, // 34
 	{4.0,275.0}, // 35
+	{4.0,147.0}, // 36
+	{4.0,144.0}, // 37
+	{4.0,120.0}, // 38
+	{4.0,179.0}, // 39
+	{4.0,183.0}, // 40
 
 	// 列表末尾，不用管
 	{0.0,0.0}
