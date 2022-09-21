@@ -23,10 +23,11 @@
 	ai_navigation_offset="0.0"
 	jams_enemy_radio="1">
 	
-    <tag name="Amos" />
     <tag name="metal_heavy" />
     <tag name="trans_truck" />
     <tag name="heavy_combat" />
+    <tag name="bulldozer" />
+
     <tire_set offset="2.6 0.05 7.00" radius="0.3" />
     <tire_set offset="2.6 0.05 -7.00" radius="0.3" />
     <modifier class="blast_damage" value="-3.0" />
