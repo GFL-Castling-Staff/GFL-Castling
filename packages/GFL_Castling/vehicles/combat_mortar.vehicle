@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <vehicle name="Deployed Artillery" key="deployed_mortar.vehicle" map_view_atlas_index="21" usable_for_cover="1" protectors="2" soldier_capacity_offset="1" respawn_time="600" character_leave_request_mode="friendly" allow_ai_to_use="1" >
-	<modifier class="blast_damage" value="-0.5" />
+	<modifier class="blast_damage" value="-3.0" />
 	<modifier class="blast_range" value="+0.5" />
 	<tag name="target" />
 	<tag name="metal_heavy" />
@@ -9,7 +9,7 @@
 	<tire_set offset="1.0 0.0 0.5" radius="0.65" />
 	<tire_set offset="1.0 0.0 -0.5" radius="0.65" />
 	<control max_speed="3.0" acceleration="1.0" max_reverse_speed="1.0" max_rotation="0.8" max_water_depth="1.0" />
-	<physics max_health="60.0" min_health_to_steer="0.5" mass="999.5" extent="2.0 1.0 2.0" offset="0 0.0 0" top_offset="0 2 0" collision_model_pos="0 0.0 0" collision_model_extent="2.0 2.8 2.0" visual_offset="0 0.0 0" collision_response_factor="0.2" blast_push_threshold="10.0" vehicle_collision_damage_factor="2.0" />
+	<physics max_health="27.0" min_health_to_steer="0.5" mass="999.5" extent="2.0 1.0 2.0" offset="0 0.0 0" top_offset="0 2 0" collision_model_pos="0 0.0 0" collision_model_extent="2.0 2.8 2.0" visual_offset="0 0.0 0" collision_response_factor="0.2" blast_push_threshold="10.0" vehicle_collision_damage_factor="2.0" />
 	<turret offset="0 1.0 0.5" weapon_key="Motar_cannon_at.weapon" weapon_offset="0.0 1.8 0.80" weapon_recoil="0.05" physics_recoil="0.0" max_rotation_step="0.00005" rotation="0" rotation_range="1.60" />
 	<turret offset="0 1.0 0.5" weapon_key="Motar_cannon.weapon" weapon_offset="0.0 1.8 0.80" parent_turret_index="0" weapon_recoil="0.05" physics_recoil="0.0" max_rotation_step="0.00005" rotation="0" rotation_range="1.60" />
 
