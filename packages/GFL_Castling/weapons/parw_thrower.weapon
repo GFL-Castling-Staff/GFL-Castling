@@ -35,10 +35,10 @@
 	<animation state_key="walking_backwards" animation_key="walking backwards, hip fire" />
 	<animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
 	<!--Sounds-->
-	<sound key="fire" fileref="thrower_fire_FromSAM4_1.wav" volume="0.85" />
-	<sound key="fire" fileref="thrower_fire_FromSAM4_2.wav" volume="0.85" />
-	<sound key="reload_one" fileref="Liberator_reload_FromCODOLRanger.wav" volume="0.7"  />
-	<sound key="cycle" fileref="Liberator_reload_FromCODOLRanger.wav" />
+	<sound key="fire" fileref="Grenadier_fire_FromCOD13.wav" volume="1.05" />
+	<sound key="magazine_out" fileref="Grenadier_mgz_out_FromCOD13.wav" volume="0.4" />
+    <sound key="magazine_in" fileref="Grenadier_mgz_in_FromCOD13.wav" volume="0.4" />
+	<sound key="cycle" fileref="Grenadier_cycle_FromCOD13.wav" volume="0.4" />
 	<sound class="impact" fileref="rifle_drop.wav" />
 	<!--Model, Icon, Cost-->
 	<model filename="parw_thrower_gun.xml" />

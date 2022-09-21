@@ -16,10 +16,10 @@
     <animation state_key="hold_on_wall" animation_key="hold, dreamer" />
     <animation state_key="still_against_wall" 	animation_key="hold, dreamer" />
     <animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
-    <sound key="fire" fileref="parw_rod_Fire.wav" pitch_variety="0.03" volume="0.6" />
-    <sound key="magazine_out" fileref="rifle_clip_out.wav" />
-    <sound key="magazine_in" fileref="rifle_clip_in.wav" />
-    <sound key="cycle" fileref="rifle_chamber.wav" />
+    <sound key="fire" fileref="Rodelero_fire_FromCOD13.wav" pitch_variety="0.03" volume="0.95" />
+    <sound key="magazine_out" fileref="Rodelero_mgz_out_FromCOD13.wav" volume="0.35" />
+    <sound key="magazine_in" fileref="Rodelero_mgz_in_FromCOD13.wav" volume="0.35" />
+    <sound key="cycle" fileref="Rodelero_cycle_FromCOD13.wav" volume="0.45" />
     <sound class="impact" fileref="rifle_drop.wav" />
     <model filename="parw_rodelero.xml" />
     <hud_icon filename="parw_rodelero.png" />
