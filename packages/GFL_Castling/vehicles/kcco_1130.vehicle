@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<vehicle file="vehicle_base.vehicle" name="KCCO 1130" key="kcco_1130.vehicle" respawn_time="100" time_to_live_unsteerable="95" map_view_atlas_index="46" minimum_fill_requirement="1.0" max_character_collision_speed_on_normal="8.0" max_character_collision_speed="8" character_leave_request_mode="friendly" allow_ai_to_use="1" allow_player_to_use="1" ai_driver_turns_to_target="1" ai_abandon_when_unsteerable="0" ai_stop_to_fight="1" >
+<vehicle name="Neo-SU Defence System" key="kcco_1130.vehicle" respawn_time="3600" map_view_atlas_index="46" minimum_fill_requirement="1.0" max_character_collision_speed_on_normal="8.0" max_character_collision_speed="8" character_leave_request_mode="friendly" allow_ai_to_use="1" allow_player_to_use="1" ai_driver_turns_to_target="1" ai_abandon_when_unsteerable="0" ai_stop_to_fight="1" >
     <tag name="metal_heavy" />
-    <tag name="KCCO_1130" />
+    <tag name="tow" />
     <tag name="light_combat" />
     <tire_set offset="1.0 0 1.0" radius="0.5" />
     <tire_set offset="1.0 0 -1.0" radius="0.5" />
@@ -44,10 +44,10 @@
     </event>
     <event key="spot_rp_reward">
         <trigger class="spot" />
-        <result class="reward" rp="200.0" />
+        <result class="reward" rp="50.0" />
     </event>
     <event key="destroy_rp_reward">
         <trigger class="destroy" />
-        <result class="reward" rp="1000.0" />
+        <result class="reward" rp="300.0" />
     </event>
 </vehicle>

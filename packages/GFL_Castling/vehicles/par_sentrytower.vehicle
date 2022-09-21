@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<vehicle file="vehicle_base.vehicle" name="Paradeus Sentry Tower" key="par_sentrytower.vehicle" respawn_time="100" time_to_live_unsteerable="95" map_view_atlas_index="46" minimum_fill_requirement="1.0" max_character_collision_speed_on_normal="8.0" max_character_collision_speed="8"   character_leave_request_mode="friendly" allow_ai_to_use="1" allow_player_to_use="1" ai_driver_turns_to_target="0" allow_character_leave_request="0" ai_stop_to_fight="0"  >
+<vehicle name="Paradeus Sentry Tower" key="par_sentrytower.vehicle" respawn_time="86400" map_view_atlas_index="46" minimum_fill_requirement="1.0" max_character_collision_speed_on_normal="8.0" max_character_collision_speed="8" character_leave_request_mode="friendly" existence="one_per_faction" allow_ai_to_use="1" allow_player_to_use="1" ai_driver_turns_to_target="0" allow_character_leave_request="0" protectors="5" soldier_capacity_offset="5" ai_stop_to_fight="0"  >
 
-    <tag name="PARA_AA" />
+    <tag name="only_aa" />
+	<tag name="target" />
 
     <tire_set offset="2.0 0 2.0" radius="0.5" />
     <tire_set offset="2.0 0 -2.0" radius="0.5" />
 	
     <control max_speed="12.0" acceleration="20.0" max_reverse_speed="12.0" min_health_to_steer="1.5" max_rotation="0.2" max_water_depth="6.0" can_steer_in_water="0.0" steer_smoothening="0.6" tracked="1" gears="0" max_limiter_speed="6.0" tracked_visual_tire_max_rotation="1.0" tracked_visual_tire_rotation_smoothening="0.9" simulated_speed_factor="0.1" />
 	
-    <physics max_health="150" blast_damage_threshold="1.0" mass="150.0" broken_mass="150" gravity="-900" remove_collision_threshold="50.0" extent="2.7 10.0 2.7" offset="0.0 +0.0 -0.0" top_offset="0 1 0" collision_model_pos="0 6.0 0" collision_model_extent="2.8 14.0 2.8" visual_offset="0 0.0 0" />
+    <physics max_health="150" blast_damage_threshold="3.0" mass="1500.0" broken_mass="1500" gravity="-900" remove_collision_threshold="50.0" extent="2.7 10.0 2.7" offset="0.0 +0.0 -0.0" top_offset="0 1 0" collision_model_pos="0 6.0 0" collision_model_extent="2.8 14.0 2.8" visual_offset="0 0.0 0" />
 	
-    <modifier class="blast_range" value="+1.0" />
-    <modifier class="blast_damage" value="-1.5" />
+    <modifier class="blast_range" value="+1.5" />
 	
     0<turret offset="0.0 13.0 0.0" weapon_key="amos_mine_sight.weapon" weapon_offset="0 0 0" max_rotation_step="0.00016" rotation="0" rotation_range="6.30" weapon_recoil="0.0" physics_recoil="0.0" />
     1<turret offset="0.0 0.0 20.0" weapon_key="amos_mine_sight.weapon" weapon_offset="0 0 0" parent_turret_index="0" max_rotation_step="0.00009" rotation="3.14" rotation_range="6.30" weapon_recoil="0.0" physics_recoil="0.0" />
@@ -86,6 +86,7 @@
 	
     <effect event_key="destroy" key="other" ref="woosh" post_processing="0" shadow="0" />
     <effect event_key="cleanup" key="other" ref="woosh" post_processing="0" shadow="0" />
+
     <event key="receive_damage_xp_reward">
         <trigger class="receive_damage" />
         <result class="reward" xp="0.0200" />
@@ -98,4 +99,13 @@
         <trigger class="destroy" />
         <result class="reward" rp="1000.0" />
     </event>
+    <event>
+		<trigger class="spawn" />
+  		<result class="notify_script" key="aa_spawn"/>
+	</event> 
+
+	<event>
+		<trigger class="destroy" />
+  		<result class="notify_script" key="aa_destroy"/>
+	</event> 
 </vehicle>

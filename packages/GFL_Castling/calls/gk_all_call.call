@@ -245,5 +245,24 @@
         <capacity value="0" source="rank" source_value="0.0" />
         <capacity value="100" source="rank" source_value="6.48" />
         <inventory encumbrance="0.0" price="300.0" />
-    </call>     
+    </call>
+    <call name="Reinforcement Fairy" key="gk_yaoren_fairy.call" initiation_comment1="Reinforcement Fairy" initiation_comment2="8 Dummy with fire support" acknowledge_comment="Confirm, checking dummys status" acknowledge_time="0" launch_comment="Dummy status confirmed" notify_metagame="1">
+
+        <round 
+        instances="0"
+        instance_class="projectile"
+        instance_key=""
+        launch_time="1.0"
+        spawn_time="1.0">
+        </round>
+
+        <round launch_time="1.0"
+        spawn_time="1.0">
+        </round>
+
+        <hud_icon filename="call_Airborne_MG-SGsquad.png" />
+        <capacity value="0" source="rank" source_value="0.0" />
+        <capacity value="100" source="rank" source_value="6.48" />
+        <inventory encumbrance="0.0" price="500.0" />
+    </call>    
 </calls>

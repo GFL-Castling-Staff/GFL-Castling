@@ -54,12 +54,14 @@
 </projectile>
 <projectile class="grenade" name="=w=" key="grenade_g41_scan.projectile" slot="1" radius="0.15" drop_count_factor_on_death="0.25" drop_count_factor_on_player_death="1"  time_to_live_out_in_the_open="15" pulldown_in_air="-7.5">
     <result class="notify_script" key="g41_scan" />
-    <trigger class="time" time_to_live="0.2"/>
+    <trigger class="time" time_to_live="1.5"/>
     <rotation class="random" />
     <model mesh_filename="gki_g41_deco.xml" />
     <hud_icon filename="hud_g41_upgrade.png" />
     <commonness value="0.8" />
     <inventory encumbrance="1.0" price="5.0" />
+    <effect class="result" key="other" ref="Shine" lighting="0" />
+    <effect class="result" key="other" ref="Godray" lighting="0" />
     <sound class="result" key="other" fileref="smartgrenade_locking_FromDIVISION2.wav" volume="2.8" pitch_variety="0"/>
     <sound class="result" key="terrain" copy="other" />
     <sound class="result" key="static_object" copy="other" />

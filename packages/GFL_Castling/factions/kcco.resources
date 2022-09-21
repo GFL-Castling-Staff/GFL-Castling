@@ -46,10 +46,13 @@
 	
 	<!-- 载具 -->
 	<vehicle key="typhon.vehicle" />
-	<vehicle key="sandstorm.vehicle" />
 	<vehicle key="coeus.vehicle" />
+	<vehicle key="sandstorm.vehicle" />
 	<vehicle key="aa_emplacement.vehicle" enabled="1"/>
 	<vehicle key="atv_base_kcco.vehicle"/>
+
+	<vehicle key="bgm71_tow.vehicle" enabled="0"/>
+	<vehicle key="kcco_1130.vehicle"/>
 
 	<vehicle key="deployable_mg.vehicle" />
 	<vehicle key="deployable_mg_2.vehicle" />

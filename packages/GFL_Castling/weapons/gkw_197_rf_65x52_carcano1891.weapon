@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<weapon file="designated_marksman_rifle.animation_base" key="gkw_carcano1891.weapon">
+<weapon file="bolt_action_rifle.animation_base" key="gkw_carcano1891.weapon">
 
 
     <!--Weapon specifications-->
@@ -18,6 +18,7 @@
 	sight_range_modifier="2.8" 
 	projectile_speed="210.64" 
 	barrel_offset="0.4" 
+    stab_range="4.5"
 	projectiles_per_shot="4" />
     <inventory  buy_price="8.0" sell_price="8.0" />
 	<!--Animations-->
@@ -52,7 +53,7 @@
     <weak_hand_hold offset="0.3" />
     <projectile file="bullet.projectile">
         <result class="hit" 
-        kill_probability="2"
+        kill_probability="2.2"
         kill_probability_offset_on_successful_hit="3" 
         kill_decay_start_time="1.448" 
         kill_decay_end_time="2.414" />
