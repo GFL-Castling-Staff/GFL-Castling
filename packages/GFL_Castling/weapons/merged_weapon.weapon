@@ -20963,7 +20963,7 @@
 	<hud_icon filename="gkw_an94mod3.png"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile file="bullet.projectile" can_be_detected_by_footmen="0">
-	<result class="hit" kill_probability="1.9" kill_probability_offset_on_successful_hit="2.2" kill_decay_start_time="0.476" kill_decay_end_time="0.7943"/>
+	<result class="hit" kill_probability="2.2" kill_probability_offset_on_successful_hit="2.2" kill_decay_start_time="0.476" kill_decay_end_time="0.7943"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_556"/>
 	<stance state_key="running" accuracy="0.5"/>
@@ -21025,7 +21025,7 @@
 	<effect class="muzzle" ref="muzzle_blue"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile file="bullet.projectile" can_be_detected_by_footmen="0">
-	<result class="hit" kill_probability="1.85" kill_probability_offset_on_successful_hit="2.4" kill_decay_start_time="2.8" kill_decay_end_time="3.333"/>
+	<result class="hit" kill_probability="1.85" kill_probability_offset_on_successful_hit="2.5" kill_decay_start_time="2.8" kill_decay_end_time="3.333"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_556"/>
 	<stance state_key="running" accuracy="1.0"/>
@@ -34082,7 +34082,7 @@
 	<hud_icon filename="gkw_an94_3303.png"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile file="bullet.projectile" can_be_detected_by_footmen="0">
-	<result class="hit" kill_probability="1.9" kill_probability_offset_on_successful_hit="2.2" kill_decay_start_time="0.476" kill_decay_end_time="0.7943"/>
+	<result class="hit" kill_probability="2.2" kill_probability_offset_on_successful_hit="2.2" kill_decay_start_time="0.476" kill_decay_end_time="0.7943"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_556"/>
 	<stance state_key="running" accuracy="0.5"/>
@@ -34143,7 +34143,7 @@
 	<effect class="muzzle" ref="muzzle_blue"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile file="bullet.projectile" can_be_detected_by_footmen="0">
-	<result class="hit" kill_probability="1.85" kill_probability_offset_on_successful_hit="2.4" kill_decay_start_time="2.8" kill_decay_end_time="3.333"/>
+	<result class="hit" kill_probability="1.85" kill_probability_offset_on_successful_hit="2.5" kill_decay_start_time="2.8" kill_decay_end_time="3.333"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_556"/>
 	<stance state_key="running" accuracy="1.0"/>
@@ -34221,7 +34221,7 @@
 	<hud_icon filename="gkw_an94_MOD3_blm.png"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile file="bullet.projectile" can_be_detected_by_footmen="0">
-	<result class="hit" kill_probability="1.9" kill_probability_offset_on_successful_hit="2.2" kill_decay_start_time="0.476" kill_decay_end_time="0.7943"/>
+	<result class="hit" kill_probability="2.2" kill_probability_offset_on_successful_hit="2.2" kill_decay_start_time="0.476" kill_decay_end_time="0.7943"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_556"/>
 	<stance state_key="running" accuracy="0.5"/>
@@ -34282,7 +34282,7 @@
 	<effect class="muzzle" ref="muzzle_blue"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile file="bullet.projectile" can_be_detected_by_footmen="0">
-	<result class="hit" kill_probability="1.85" kill_probability_offset_on_successful_hit="2.4" kill_decay_start_time="2.8" kill_decay_end_time="3.333"/>
+	<result class="hit" kill_probability="1.85" kill_probability_offset_on_successful_hit="2.5" kill_decay_start_time="2.8" kill_decay_end_time="3.333"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_556"/>
 	<stance state_key="running" accuracy="1.0"/>
