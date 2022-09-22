@@ -2701,8 +2701,8 @@ class CommandSkill : Tracker {
                 }
             }
 
-            int healnum = num_max_character-num_jud;
-            healCharacter(m_metagame,characterId,min(3*healnum,10));
+            int healnum = min(3,num_max_character-num_jud);
+            healCharacter(m_metagame,characterId,3*healnum);
 
             if(num_jud>0)
             {
@@ -2727,7 +2727,7 @@ class CommandSkill : Tracker {
                     }
                 }
 
-                addCoolDown("SAT8",30+10*min(healnum,3),characterId,modifer);
+                addCoolDown("SAT8",15+15*healnum,characterId,modifer);
             }
             
         }    
