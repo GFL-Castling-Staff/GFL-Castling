@@ -18573,7 +18573,7 @@
 	<animation key="hold" animation_key="still, with law"/>
 	<animation key="hold_on_wall" animation_key="still, with law"/>
 	<sound key="fire" fileref="at4_fire_FromSQUAD.wav" pitch_variety="0.05" volume="1.8"/>
-    <sound key="cycle" fileref="at4_cycle_FromSQUAD.wav" volume="0.7" />
+	<sound key="cycle" fileref="at4_cycle_FromSQUAD.wav" volume="0.7"/>
 	<sound key="magazine_out" fileref="at4_mgz_out_FromSQUAD.wav" volume="0.7"/>
 	<sound key="magazine_in" fileref="at4_mgz_in_FromSQUAD.wav" volume="0.7"/>
 	<sound key="cycle_out" fileref="at4_cycle_out_FromSQUAD.wav" volume="0.7"/>
@@ -31008,7 +31008,7 @@
 </weapon>
 
 <weapon key="gkw_aa12_4401_only.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="0.167" accuracy_factor="1.0" sustained_fire_grow_step="2.1" sustained_fire_diminish_rate="0.45" magazine_size="20" can_shoot_standing="1" suppressed="0" name="AA-12-[Smokeless Lollipop]-[Frag-12 HE Round]" class="0" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="100" barrel_offset="0.4" projectiles_per_shot="1" spread_range="0.1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0" use_basic_muzzle_smoke_effect="0"/>
+	<specification retrigger_time="0.167" accuracy_factor="1.0" sustained_fire_grow_step="2.1" sustained_fire_diminish_rate="0.45" magazine_size="20" can_shoot_standing="1" suppressed="0" name="AA-12-[Smokeless Lollipop]-[Frag-12 HE Round]" class="0" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="100" barrel_offset="0.5" projectiles_per_shot="1" spread_range="0.1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0" use_basic_muzzle_smoke_effect="0"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.8"/>
 	<next_in_chain key="gkw_aa12_4401_only_skill.weapon" share_ammo="0"/>
 	<sound key="fire" fileref="aa12_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.2"/>
@@ -31065,7 +31065,7 @@
 </weapon>
 
 <weapon key="gkw_aa12_4401_only_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="0.167" accuracy_factor="0.8" sustained_fire_grow_step="2.1" sustained_fire_diminish_rate="0.45" magazine_size="20" can_shoot_standing="1" suppressed="0" name="AA-12-[Smokeless Lollipop]-[Dragon Breath Round]" class="0" reload_one_at_a_time="0" sight_range_modifier="0.8" projectile_speed="100" barrel_offset="0.4" projectiles_per_shot="6" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0" use_basic_muzzle_smoke_effect="0"/>
+	<specification retrigger_time="0.167" accuracy_factor="0.8" sustained_fire_grow_step="2.1" sustained_fire_diminish_rate="0.45" magazine_size="20" can_shoot_standing="1" suppressed="0" name="AA-12-[Smokeless Lollipop]-[Dragon Breath Round]" class="0" reload_one_at_a_time="0" sight_range_modifier="0.8" projectile_speed="100" barrel_offset="0.5" projectiles_per_shot="6" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0" use_basic_muzzle_smoke_effect="0"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 3.0"/>
 	<next_in_chain key="gkw_aa12_4401_only.weapon" share_ammo="0"/>
 	<sound key="fire" fileref="aa12_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.2"/>
@@ -36549,7 +36549,7 @@
 </weapon>
 
 <weapon key="gkw_aa12_only.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="0.167" accuracy_factor="1.0" sustained_fire_grow_step="2.1" sustained_fire_diminish_rate="0.45" magazine_size="20" can_shoot_standing="1" suppressed="0" name="AA-12-[Frag-12 HE Round]" class="0" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="100" barrel_offset="0.4" projectiles_per_shot="1" spread_range="0.1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0" use_basic_muzzle_smoke_effect="0"/>
+	<specification retrigger_time="0.167" accuracy_factor="1.0" sustained_fire_grow_step="2.1" sustained_fire_diminish_rate="0.45" magazine_size="20" can_shoot_standing="1" suppressed="0" name="AA-12-[Frag-12 HE Round]" class="0" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="100" barrel_offset="0.5" projectiles_per_shot="1" spread_range="0.1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0" use_basic_muzzle_smoke_effect="0"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.8"/>
 	<next_in_chain key="gkw_aa12_only_skill.weapon" share_ammo="0"/>
 	<sound key="fire" fileref="aa12_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.2"/>
@@ -36606,7 +36606,7 @@
 </weapon>
 
 <weapon key="gkw_aa12_only_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="0.167" accuracy_factor="0.8" sustained_fire_grow_step="2.1" sustained_fire_diminish_rate="0.45" magazine_size="20" can_shoot_standing="1" suppressed="0" name="AA-12-[Dragon Breath Round]" class="0" reload_one_at_a_time="0" sight_range_modifier="0.8" projectile_speed="100" barrel_offset="0.4" projectiles_per_shot="6" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0" use_basic_muzzle_smoke_effect="0"/>
+	<specification retrigger_time="0.167" accuracy_factor="0.8" sustained_fire_grow_step="2.1" sustained_fire_diminish_rate="0.45" magazine_size="20" can_shoot_standing="1" suppressed="0" name="AA-12-[Dragon Breath Round]" class="0" reload_one_at_a_time="0" sight_range_modifier="0.8" projectile_speed="100" barrel_offset="0.5" projectiles_per_shot="6" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0" use_basic_muzzle_smoke_effect="0"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 3.0"/>
 	<next_in_chain key="gkw_aa12_only.weapon" share_ammo="0"/>
 	<sound key="fire" fileref="aa12_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.2"/>
@@ -43492,14 +43492,14 @@
 	<effect class="muzzle" ref="UpDust"/>
 </weapon>
 
-<weapon key="deployable_minig.weapon">
+<weapon key="deployable_minig.weapon" ai_burst_time="3" ai_burst_time_variance="0.5" ai_burst_wait_time="1.0" ai_burst_wait_time_variance="0.5">
 	<specification retrigger_time="0.03" accuracy_factor="1.0" sustained_fire_grow_step="0.17" sustained_fire_diminish_rate="1.9" spread_range="0.35" sight_range_modifier="1.0" ai_sight_range_modifier="1.15" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="0" suppressed="0" name="Minigun" class="0" projectile_speed="125.0" slot="2" barrel_offset="0" barrel_offset_3d="0 0.2 1.1" projectiles_per_shot="1" sight_height_offset="2.0"/>
 	<model mesh_filename="deployable_migu.mesh" texture_filename="deployable_mg.png"/>
 	<hud_icon filename="hud_minigun.png"/>
 	<commonness value="0.0" can_respawn_with="0" in_stock="1"/>
 	<inventory encumbrance="10.0" price="40.0"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="1.45" kill_decay_start_time="1.933" kill_decay_end_time="3.222"/>
+	<result class="hit" kill_probability="1.65" kill_decay_start_time="1.933" kill_decay_end_time="3.222"/>
 	</projectile>
 	<effect class="muzzle" ref="BigMuzzle"/>
 	<sound class="operation" key="fire" fileref="minigun_shot.wav" pitch_variety="0.05" volume="0.75"/>
@@ -44644,8 +44644,8 @@
 	<sound key="fire" fileref="hornet_shot.wav" volume="0.5"/>
 </weapon>
 
-<weapon key="kccow_vehicle_1130mg.weapon">
-	<specification slot="2" retrigger_time="0.02" accuracy_factor="0.9" sustained_fire_grow_step="0.5" sustained_fire_diminish_rate="2.0" sight_range_modifier="1.5" ai_sight_range_modifier="1.15" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="0" suppressed="0" name="KCCO 1130 MG" class="0" projectile_speed="120.0" use_basic_muzzle_smoke_effect="0"/>
+<weapon key="kccow_vehicle_1130mg.weapon" ai_burst_time="3" ai_burst_time_variance="0.5" ai_burst_wait_time="3" ai_burst_wait_time_variance="0">
+	<specification slot="2" retrigger_time="0.02" accuracy_factor="0.9" sustained_fire_grow_step="0.5" sustained_fire_diminish_rate="2.0" sight_range_modifier="1.5" ai_sight_range_modifier="1.15" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="0" suppressed="0" name="KCCO 1130 MG" class="0" projectile_speed="100.0" use_basic_muzzle_smoke_effect="0"/>
 	<animation key="recoil" animation_key="recoil1"/>
 	<animation key="recoil" animation_key="recoil2"/>
 	<animation key="recoil" animation_key="recoil3"/>
@@ -44662,8 +44662,8 @@
 	<hud_icon filename="gkw_v_LM5.png"/>
 	<commonness value="0.0"/>
 	<weak_hand_hold offset="0.0"/>
-	<projectile file="bullet_kcco.projectile">
-	<result class="blast" damage="1" radius="1.8" decal="1" push="0.1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+	<projectile file="bullet_kcco.projectile" time_to_live="0.5">
+	<result class="blast" damage="1.0" radius="1.0" decal="1" push="0.1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	</projectile>
 </weapon>
 
@@ -45132,3 +45132,4 @@
 </weapon>
 
 </weapons>
+
