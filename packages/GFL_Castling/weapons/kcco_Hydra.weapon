@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapon file="KCCO.base_weapon" key="kccow_hydra.weapon" time_to_live_out_in_the_open="0">
-    <tag name="antiarmor" />
+	<tag name="antiarmor" />
 	<tag name="mecha" />
-	<tag name="metal_heavy" />
-
-    <specification 
+	<specification 
 	  retrigger_time="0.2" 
 	  accuracy_factor="0.75" 
 	  sustained_fire_grow_step="2.0" 
@@ -25,40 +23,31 @@
 	  burst_shots="4"
 	  barrel_offset="0.1"
 	  barrel_offset_3d="5.0 1.0 0.1"/>
-	  <commonness value="0.000000001" in_stock="1" />
-	  <animation state_key="recoil"	animation_key="recoil, hydra and manticore" />
-	  <animation state_key="recoil" stance_key="prone" animation_key="recoil, hydra and manticore" />
-	  <animation state_key="recoil" stance_key="over_wall" animation_key="recoil, hydra and manticore" />	
-	  <animation state_key="hold" animation_key="still, hydra and manticore" />
-	  <animation state_key="hold_on_wall" animation_key="still, hydra and manticore" />
-	  <animation state_key="hold_casual" animation_key="still, hydra and manticore" />
-      <animation state_key="still_against_wall" animation_key="still, hydra and manticore" />
-	  <animation state_key="walking" animation_key="walking, hydra and manticore" />
-	  <animation state_key="running" animation_key="running, hydra and manticore" />
-	  <animation state_key="crouching" animation_key="still, hydra and manticore" />
-	  <animation state_key="crouch_moving"		animation_key="walking, hydra and manticore" />
-	  <animation state_key="crouch_moving_backwards"	animation_key="walking, hydra and manticore" />
-	  <animation state_key="reload" animation_key="reload, hydra and manticore" />
-	  <animation key="stabbing" animation_key="stabbing, hydra and manticore" />
-	
-	
-    <sound key="fire" fileref="Manticore_fire_FromSQUAD.wav" volume="1.8" />
-	<sound key="magazine_out" fileref="qwd_re.wav" volume="0.5"/> 
-    <sound key="cycle" fileref="mossberg500_cycle.wav" />
-    <sound key="reload_one" fileref="mossberg500_reload.wav" />
-    <sound class="impact" fileref="rifle_drop.wav" />
-    <model filename="" />
-
-    <hud_icon filename="kccow_qwd.png" />
-
-
-
-    <capacity value="1" source="rank" source_value="0.0" />
-
-
-    <projectile file="qwd.projectile">
+	<commonness value="0.000000001" in_stock="1" />
+	<animation state_key="recoil"	animation_key="recoil, hydra and manticore" />
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil, hydra and manticore" />
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil, hydra and manticore" />
+	<animation state_key="hold" animation_key="still, hydra and manticore" />
+	<animation state_key="hold_on_wall" animation_key="still, hydra and manticore" />
+	<animation state_key="hold_casual" animation_key="still, hydra and manticore" />
+	<animation state_key="still_against_wall" animation_key="still, hydra and manticore" />
+	<animation state_key="walking" animation_key="walking, hydra and manticore" />
+	<animation state_key="running" animation_key="running, hydra and manticore" />
+	<animation state_key="crouching" animation_key="still, hydra and manticore" />
+	<animation state_key="crouch_moving"		animation_key="walking, hydra and manticore" />
+	<animation state_key="crouch_moving_backwards"	animation_key="walking, hydra and manticore" />
+	<animation state_key="reload" animation_key="reload, hydra and manticore" />
+	<animation key="stabbing" animation_key="stabbing, hydra and manticore" />
+	<sound key="fire" fileref="Manticore_fire_FromSQUAD.wav" volume="1.8" />
+	<sound key="magazine_out" fileref="qwd_re.wav" volume="0.5"/>
+	<sound key="cycle" fileref="mossberg500_cycle.wav" />
+	<sound key="reload_one" fileref="mossberg500_reload.wav" />
+	<sound class="impact" fileref="rifle_drop.wav" />
+	<model filename="" />
+	<hud_icon filename="kccow_qwd.png" />
+	<capacity value="1" source="rank" source_value="0.0" />
+	<projectile file="qwd.projectile">
     </projectile>
-
 	<shield offset="2.7 3.0 1.5" extent="0.3 5.0 4.0" />
 	<!-- state modifiers for weapons are connected to shield impact events -->
 	<!-- deflects all bullets; death, stun, wound become none, doesn't consume -->
@@ -69,15 +58,13 @@
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0" />
 	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
 	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
-    
-    <stance state_key="running" accuracy="0.3" />
-    <stance state_key="walking" accuracy="0.675" />
-    <stance state_key="crouch_moving" accuracy="0.75" />
-    <stance state_key="prone_moving" accuracy="0.3" />
-
-    <stance state_key="standing" accuracy="0.8" />
-    <stance state_key="crouching" accuracy="0.85" />
-    <stance state_key="prone" accuracy="0.94" />
-
-    <modifier class="speed" value="-0.6" />    
+	<stance state_key="running" accuracy="0.3" />
+	<stance state_key="walking" accuracy="0.675" />
+	<stance state_key="crouch_moving" accuracy="0.75" />
+	<stance state_key="prone_moving" accuracy="0.3" />
+	<stance state_key="standing" accuracy="0.8" />
+	<stance state_key="crouching" accuracy="0.85" />
+	<stance state_key="prone" accuracy="0.94" />
+	<modifier class="speed" value="-0.6" />
+	<modifier class="hit_success_probability" value="-0.2" />
 </weapon>

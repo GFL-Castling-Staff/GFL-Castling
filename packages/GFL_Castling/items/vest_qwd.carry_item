@@ -1,0 +1,683 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<carry_items>
+    <carry_item key="vest_qwd.carry_item" time_to_live_out_in_the_open="15" name="Manticore Armor" transform_on_consume="vest_qwd_1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+        <hud_icon filename="testing.png"/>
+        <capacity value="1" source="rank" source_value="0"/>
+        <commonness value="1" in_stock="1" can_respawn_with="1"/>
+        <inventory encubrance="100" price="1"/>
+        <model />
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.5" />
+        <modifier class="detectability" value="1.0" />
+    </carry_item>
+    <carry_item key="vest_qwd_1" time_to_live_out_in_the_open="15" name="Manticore Armor" transform_on_consume="vest_qwd_2" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+        <hud_icon filename="testing.png"/>
+        <capacity value="1" source="rank" source_value="0"/>
+        <commonness value="1" in_stock="1" can_respawn_with="1"/>
+        <inventory encubrance="100" price="1"/>
+        <model />
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.5" />
+        <modifier class="detectability" value="1.0" />
+    </carry_item>
+    <carry_item key="vest_qwd_2" time_to_live_out_in_the_open="15" name="Manticore Armor" transform_on_consume="vest_qwd_3" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+        <hud_icon filename="testing.png"/>
+        <capacity value="1" source="rank" source_value="0"/>
+        <commonness value="1" in_stock="1" can_respawn_with="1"/>
+        <inventory encubrance="100" price="1"/>
+        <model />
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.5" />
+        <modifier class="detectability" value="1.0" />
+    </carry_item>
+    <carry_item key="vest_qwd_3" time_to_live_out_in_the_open="15" name="Manticore Armor" transform_on_consume="vest_qwd_4" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+        <hud_icon filename="testing.png"/>
+        <capacity value="1" source="rank" source_value="0"/>
+        <commonness value="1" in_stock="1" can_respawn_with="1"/>
+        <inventory encubrance="100" price="1"/>
+        <model />
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.5" />
+        <modifier class="detectability" value="1.0" />
+    </carry_item>
+    <carry_item key="vest_qwd_4" time_to_live_out_in_the_open="15" name="Manticore Armor" transform_on_consume="vest_qwd_5" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+        <hud_icon filename="testing.png"/>
+        <capacity value="1" source="rank" source_value="0"/>
+        <commonness value="1" in_stock="1" can_respawn_with="1"/>
+        <inventory encubrance="100" price="1"/>
+        <model />
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.5" />
+        <modifier class="detectability" value="1.0" />
+    </carry_item>
+    <carry_item key="vest_qwd_5" time_to_live_out_in_the_open="15" name="Manticore Armor" transform_on_consume="vest_qwd_6" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+        <hud_icon filename="testing.png"/>
+        <capacity value="1" source="rank" source_value="0"/>
+        <commonness value="1" in_stock="1" can_respawn_with="1"/>
+        <inventory encubrance="100" price="1"/>
+        <model />
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.3" />
+        <modifier class="detectability" value="1.0" />
+    </carry_item>
+    <carry_item key="vest_qwd_6" time_to_live_out_in_the_open="15" name="Manticore Armor" transform_on_consume="vest_qwd_7" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+        <hud_icon filename="testing.png"/>
+        <capacity value="1" source="rank" source_value="0"/>
+        <commonness value="1" in_stock="1" can_respawn_with="1"/>
+        <inventory encubrance="100" price="1"/>
+        <model />
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.3" />
+        <modifier class="detectability" value="1.0" />
+    </carry_item>
+    <carry_item key="vest_qwd_7" time_to_live_out_in_the_open="15" name="Manticore Armor" transform_on_consume="vest_qwd_8" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+        <hud_icon filename="testing.png"/>
+        <capacity value="1" source="rank" source_value="0"/>
+        <commonness value="1" in_stock="1" can_respawn_with="1"/>
+        <inventory encubrance="100" price="1"/>
+        <model />
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.3" />
+        <modifier class="detectability" value="1.0" />
+    </carry_item>
+    <carry_item key="vest_qwd_8" time_to_live_out_in_the_open="15" name="Manticore Armor" transform_on_consume="vest_qwd_9" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+        <hud_icon filename="testing.png"/>
+        <capacity value="1" source="rank" source_value="0"/>
+        <commonness value="1" in_stock="1" can_respawn_with="1"/>
+        <inventory encubrance="100" price="1"/>
+        <model />
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.3" />
+        <modifier class="detectability" value="1.0" />
+    </carry_item>
+    <carry_item key="vest_qwd_9" time_to_live_out_in_the_open="15" name="Manticore Armor" transform_on_consume="vest_qwd_10" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+        <hud_icon filename="testing.png"/>
+        <capacity value="1" source="rank" source_value="0"/>
+        <commonness value="1" in_stock="1" can_respawn_with="1"/>
+        <inventory encubrance="100" price="1"/>
+        <model />
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.3" />
+        <modifier class="detectability" value="1.0" />
+    </carry_item>
+    <carry_item key="vest_qwd_10" time_to_live_out_in_the_open="15" name="Manticore Armor" transform_on_consume="vest_qwd_11" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+        <hud_icon filename="testing.png"/>
+        <capacity value="1" source="rank" source_value="0"/>
+        <commonness value="1" in_stock="1" can_respawn_with="1"/>
+        <inventory encubrance="100" price="1"/>
+        <model />
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.3" />
+        <modifier class="detectability" value="1.0" />
+    </carry_item>
+    <carry_item key="vest_qwd_11" time_to_live_out_in_the_open="15" name="Manticore Armor" transform_on_consume="vest_qwd_12" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+        <hud_icon filename="testing.png"/>
+        <capacity value="1" source="rank" source_value="0"/>
+        <commonness value="1" in_stock="1" can_respawn_with="1"/>
+        <inventory encubrance="100" price="1"/>
+        <model />
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.3" />
+        <modifier class="detectability" value="1.0" />
+    </carry_item>
+    <carry_item key="vest_qwd_12" time_to_live_out_in_the_open="15" name="Manticore Armor" transform_on_consume="vest_qwd_13" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+        <hud_icon filename="testing.png"/>
+        <capacity value="1" source="rank" source_value="0"/>
+        <commonness value="1" in_stock="1" can_respawn_with="1"/>
+        <inventory encubrance="100" price="1"/>
+        <model />
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.3" />
+        <modifier class="detectability" value="1.0" />
+    </carry_item>
+    <carry_item key="vest_qwd_13" time_to_live_out_in_the_open="15" name="Manticore Armor" transform_on_consume="vest_qwd_14" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+        <hud_icon filename="testing.png"/>
+        <capacity value="1" source="rank" source_value="0"/>
+        <commonness value="1" in_stock="1" can_respawn_with="1"/>
+        <inventory encubrance="100" price="1"/>
+        <model />
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.3" />
+        <modifier class="detectability" value="1.0" />
+    </carry_item>
+    <carry_item key="vest_qwd_14" time_to_live_out_in_the_open="15" name="Manticore Armor" transform_on_consume="vest_qwd_15" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+        <hud_icon filename="testing.png"/>
+        <capacity value="1" source="rank" source_value="0"/>
+        <commonness value="1" in_stock="1" can_respawn_with="1"/>
+        <inventory encubrance="100" price="1"/>
+        <model />
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.3" />
+        <modifier class="detectability" value="1.0" />
+    </carry_item>
+    <carry_item key="vest_qwd_15" time_to_live_out_in_the_open="15" name="Manticore Armor" transform_on_consume="vest_qwd_16" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+        <hud_icon filename="testing.png"/>
+        <capacity value="1" source="rank" source_value="0"/>
+        <commonness value="1" in_stock="1" can_respawn_with="1"/>
+        <inventory encubrance="100" price="1"/>
+        <model />
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.3" />
+        <modifier class="detectability" value="1.0" />
+    </carry_item>
+    <carry_item key="vest_qwd_16" time_to_live_out_in_the_open="15" name="Manticore Armor" transform_on_consume="vest_qwd_17" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+        <hud_icon filename="testing.png"/>
+        <capacity value="1" source="rank" source_value="0"/>
+        <commonness value="1" in_stock="1" can_respawn_with="1"/>
+        <inventory encubrance="100" price="1"/>
+        <model />
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.3" />
+        <modifier class="detectability" value="1.0" />
+    </carry_item>
+    <carry_item key="vest_qwd_17" time_to_live_out_in_the_open="15" name="Manticore Armor" transform_on_consume="vest_qwd_18" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+        <hud_icon filename="testing.png"/>
+        <capacity value="1" source="rank" source_value="0"/>
+        <commonness value="1" in_stock="1" can_respawn_with="1"/>
+        <inventory encubrance="100" price="1"/>
+        <model />
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.3" />
+        <modifier class="detectability" value="1.0" />
+    </carry_item>
+    <carry_item key="vest_qwd_18" time_to_live_out_in_the_open="15" name="Manticore Armor" transform_on_consume="vest_qwd_19" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+        <hud_icon filename="testing.png"/>
+        <capacity value="1" source="rank" source_value="0"/>
+        <commonness value="1" in_stock="1" can_respawn_with="1"/>
+        <inventory encubrance="100" price="1"/>
+        <model />
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.3" />
+        <modifier class="detectability" value="1.0" />
+    </carry_item>
+    <carry_item key="vest_qwd_19" time_to_live_out_in_the_open="15" name="Manticore Armor" transform_on_consume="vest_qwd_20" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+        <hud_icon filename="testing.png"/>
+        <capacity value="1" source="rank" source_value="0"/>
+        <commonness value="1" in_stock="1" can_respawn_with="1"/>
+        <inventory encubrance="100" price="1"/>
+        <model />
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.3" />
+        <modifier class="detectability" value="1.0" />
+    </carry_item>
+    <carry_item key="vest_qwd_20" time_to_live_out_in_the_open="15" name="Manticore Armor" transform_on_consume="vest_qwd_21" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+        <hud_icon filename="testing.png"/>
+        <capacity value="1" source="rank" source_value="0"/>
+        <commonness value="1" in_stock="1" can_respawn_with="1"/>
+        <inventory encubrance="100" price="1"/>
+        <model />
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="stun" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="stun" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.3" />
+        <modifier class="detectability" value="1.0" />
+    </carry_item>
+    <carry_item key="vest_qwd_21" time_to_live_out_in_the_open="15" name="Manticore Armor" transform_on_consume="vest_qwd_22" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+        <hud_icon filename="testing.png"/>
+        <capacity value="1" source="rank" source_value="0"/>
+        <commonness value="1" in_stock="1" can_respawn_with="1"/>
+        <inventory encubrance="100" price="1"/>
+        <model />
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.3" />
+        <modifier class="detectability" value="1.0" />
+    </carry_item>
+    <carry_item key="vest_qwd_22" time_to_live_out_in_the_open="15" name="Manticore Armor" transform_on_consume="vest_qwd_23" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+        <hud_icon filename="testing.png"/>
+        <capacity value="1" source="rank" source_value="0"/>
+        <commonness value="1" in_stock="1" can_respawn_with="1"/>
+        <inventory encubrance="100" price="1"/>
+        <model />
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.3" />
+        <modifier class="detectability" value="1.0" />
+    </carry_item>
+    <carry_item key="vest_qwd_23" time_to_live_out_in_the_open="15" name="Manticore Armor" transform_on_consume="vest_qwd_24" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+        <hud_icon filename="testing.png"/>
+        <capacity value="1" source="rank" source_value="0"/>
+        <commonness value="1" in_stock="1" can_respawn_with="1"/>
+        <inventory encubrance="100" price="1"/>
+        <model />
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.3" />
+        <modifier class="detectability" value="1.0" />
+    </carry_item>
+    <carry_item key="vest_qwd_24" time_to_live_out_in_the_open="15" name="Manticore Armor" transform_on_consume="vest_qwd_25" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+        <hud_icon filename="testing.png"/>
+        <capacity value="1" source="rank" source_value="0"/>
+        <commonness value="1" in_stock="1" can_respawn_with="1"/>
+        <inventory encubrance="100" price="1"/>
+        <model />
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.3" />
+        <modifier class="detectability" value="1.0" />
+    </carry_item>
+    <carry_item key="vest_qwd_25" time_to_live_out_in_the_open="15" name="Manticore Armor" transform_on_consume="vest_qwd_26" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+        <hud_icon filename="testing.png"/>
+        <capacity value="1" source="rank" source_value="0"/>
+        <commonness value="1" in_stock="1" can_respawn_with="1"/>
+        <inventory encubrance="100" price="1"/>
+        <model />
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.3" />
+        <modifier class="detectability" value="1.0" />
+    </carry_item>
+    <carry_item key="vest_qwd_26" time_to_live_out_in_the_open="15" name="Manticore Armor" transform_on_consume="vest_qwd_27" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+        <hud_icon filename="testing.png"/>
+        <capacity value="1" source="rank" source_value="0"/>
+        <commonness value="1" in_stock="1" can_respawn_with="1"/>
+        <inventory encubrance="100" price="1"/>
+        <model />
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.3" />
+        <modifier class="detectability" value="1.0" />
+    </carry_item>
+    <carry_item key="vest_qwd_27" time_to_live_out_in_the_open="15" name="Manticore Armor" transform_on_consume="vest_qwd_28" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+        <hud_icon filename="testing.png"/>
+        <capacity value="1" source="rank" source_value="0"/>
+        <commonness value="1" in_stock="1" can_respawn_with="1"/>
+        <inventory encubrance="100" price="1"/>
+        <model />
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.3" />
+        <modifier class="detectability" value="1.0" />
+    </carry_item>
+    <carry_item key="vest_qwd_28" time_to_live_out_in_the_open="15" name="Manticore Armor" transform_on_consume="vest_qwd_29" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+        <hud_icon filename="testing.png"/>
+        <capacity value="1" source="rank" source_value="0"/>
+        <commonness value="1" in_stock="1" can_respawn_with="1"/>
+        <inventory encubrance="100" price="1"/>
+        <model />
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.3" />
+        <modifier class="detectability" value="1.0" />
+    </carry_item>
+    <carry_item key="vest_qwd_29" time_to_live_out_in_the_open="15" name="Manticore Armor" transform_on_consume="vest_qwd_30" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+        <hud_icon filename="testing.png"/>
+        <capacity value="1" source="rank" source_value="0"/>
+        <commonness value="1" in_stock="1" can_respawn_with="1"/>
+        <inventory encubrance="100" price="1"/>
+        <model />
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.3" />
+        <modifier class="detectability" value="1.0" />
+    </carry_item>
+    <carry_item key="vest_qwd_30" time_to_live_out_in_the_open="15" name="Manticore Armor" transform_on_consume="vest_qwd_31" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+        <hud_icon filename="testing.png"/>
+        <capacity value="1" source="rank" source_value="0"/>
+        <commonness value="1" in_stock="1" can_respawn_with="1"/>
+        <inventory encubrance="100" price="1"/>
+        <model />
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.3" />
+        <modifier class="detectability" value="1.0" />
+    </carry_item>
+    <carry_item key="vest_qwd_31" time_to_live_out_in_the_open="15" name="Manticore Armor" transform_on_consume="vest_qwd_32" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+        <hud_icon filename="testing.png"/>
+        <capacity value="1" source="rank" source_value="0"/>
+        <commonness value="1" in_stock="1" can_respawn_with="1"/>
+        <inventory encubrance="100" price="1"/>
+        <model />
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.3" />
+        <modifier class="detectability" value="1.0" />
+    </carry_item>
+    <carry_item key="vest_qwd_32" time_to_live_out_in_the_open="15" name="Manticore Armor" transform_on_consume="vest_qwd_33" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+        <hud_icon filename="testing.png"/>
+        <capacity value="1" source="rank" source_value="0"/>
+        <commonness value="1" in_stock="1" can_respawn_with="1"/>
+        <inventory encubrance="100" price="1"/>
+        <model />
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.3" />
+        <modifier class="detectability" value="1.0" />
+    </carry_item>
+    <carry_item key="vest_qwd_33" time_to_live_out_in_the_open="15" name="Manticore Armor" transform_on_consume="vest_qwd_34" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+        <hud_icon filename="testing.png"/>
+        <capacity value="1" source="rank" source_value="0"/>
+        <commonness value="1" in_stock="1" can_respawn_with="1"/>
+        <inventory encubrance="100" price="1"/>
+        <model />
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.3" />
+        <modifier class="detectability" value="1.0" />
+    </carry_item>
+    <carry_item key="vest_qwd_34" time_to_live_out_in_the_open="15" name="Manticore Armor" transform_on_consume="vest_qwd_35" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+        <hud_icon filename="testing.png"/>
+        <capacity value="1" source="rank" source_value="0"/>
+        <commonness value="1" in_stock="1" can_respawn_with="1"/>
+        <inventory encubrance="100" price="1"/>
+        <model />
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.3" />
+        <modifier class="detectability" value="1.0" />
+    </carry_item>
+    <carry_item key="vest_qwd_35" time_to_live_out_in_the_open="15" name="Manticore Armor" transform_on_consume="vest_qwd_36" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+        <hud_icon filename="testing.png"/>
+        <capacity value="1" source="rank" source_value="0"/>
+        <commonness value="1" in_stock="1" can_respawn_with="1"/>
+        <inventory encubrance="100" price="1"/>
+        <model />
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.3" />
+        <modifier class="detectability" value="1.0" />
+    </carry_item>
+    <carry_item key="vest_qwd_36" time_to_live_out_in_the_open="15" name="Manticore Armor" transform_on_consume="vest_qwd_37" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+        <hud_icon filename="testing.png"/>
+        <capacity value="1" source="rank" source_value="0"/>
+        <commonness value="1" in_stock="1" can_respawn_with="1"/>
+        <inventory encubrance="100" price="1"/>
+        <model />
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.3" />
+        <modifier class="detectability" value="1.0" />
+    </carry_item>
+    <carry_item key="vest_qwd_37" time_to_live_out_in_the_open="15" name="Manticore Armor" transform_on_consume="vest_qwd_38" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+        <hud_icon filename="testing.png"/>
+        <capacity value="1" source="rank" source_value="0"/>
+        <commonness value="1" in_stock="1" can_respawn_with="1"/>
+        <inventory encubrance="100" price="1"/>
+        <model />
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.3" />
+        <modifier class="detectability" value="1.0" />
+    </carry_item>
+    <carry_item key="vest_qwd_38" time_to_live_out_in_the_open="15" name="Manticore Armor" transform_on_consume="vest_qwd_39" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+        <hud_icon filename="testing.png"/>
+        <capacity value="1" source="rank" source_value="0"/>
+        <commonness value="1" in_stock="1" can_respawn_with="1"/>
+        <inventory encubrance="100" price="1"/>
+        <model />
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.3" />
+        <modifier class="detectability" value="1.0" />
+    </carry_item>
+    <carry_item key="vest_qwd_39" time_to_live_out_in_the_open="15" name="Manticore Armor" transform_on_consume="vest_qwd_40" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+        <hud_icon filename="testing.png"/>
+        <capacity value="1" source="rank" source_value="0"/>
+        <commonness value="1" in_stock="1" can_respawn_with="1"/>
+        <inventory encubrance="100" price="1"/>
+        <model />
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="death" />
+        <modifier class="speed" value="0.0" />
+        <modifier class="hit_success_probability" value="-1.3" />
+        <modifier class="detectability" value="1.0" />
+    </carry_item>
+</carry_items>
