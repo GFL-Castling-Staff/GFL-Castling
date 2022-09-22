@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<static_object key="parasol.static_object" destroy_on_blast="1" blast_damage_threshold="2.0" destroy_on_drive_over="1" destroy_on_stab="0" undestroy_on_block_activate="1">
+<static_object key="parasol.static_object" destroy_on_blast="1" blast_damage_threshold="2.0" destroy_on_drive_over="1" destroy_on_stab="0" undestroy_on_block_activate="0">
 	
 	<sound key="destroy" filename="crate_smash1.wav" volume="0.3" />
 	<sound key="destroy" filename="crate_smash2.wav" volume="0.3" />

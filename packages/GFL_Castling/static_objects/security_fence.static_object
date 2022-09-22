@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<static_object key="security_fence.static_object" destroy_on_drive_over="1" destroy_on_blast="1" blast_damage_threshold="24.9" destroy_on_stab="0" undestroy_on_block_activate="1">
+<static_object key="security_fence.static_object" destroy_on_drive_over="1" destroy_on_blast="1" blast_damage_threshold="24.9" destroy_on_stab="0" undestroy_on_block_activate="0">
 
     <sound key="destroy" filename="security_fence_break1.wav" volume="0.45" pitch_variety="0.1" />
     <sound key="destroy" filename="security_fence_break2.wav" volume="0.45" pitch_variety="0.1" />
