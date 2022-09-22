@@ -287,7 +287,6 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.m_primaryObjective = "capture";
 
 		setDefaultAttackBreakTimes(stage);
-		// setReduceDefenseForFinalAttack(stage, 0.1); // use this for final attack boost if needed for friendlies
 		return stage;
 	}
 
