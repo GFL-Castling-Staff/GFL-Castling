@@ -45,6 +45,8 @@ class kill_event : Tracker {
 
         // 近战定位HG
         {"gkw_m1911_mod3.weapon",3},
+        {"ff_alchemist.weapon",3},
+        {"ff_alchemist_skill.weapon",3},
 
         // 近战定位AR
         {"gkw_ak12_skill.weapon",4},

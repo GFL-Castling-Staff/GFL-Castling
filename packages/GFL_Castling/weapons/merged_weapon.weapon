@@ -21653,7 +21653,7 @@
 </weapon>
 
 <weapon key="gkw_m1891mod3.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="2.0" sustained_fire_grow_step="0.1" sustained_fire_diminish_rate="2.0" magazine_size="6" can_shoot_standing="1" suppressed="0" name="Mosin-Nagant M1891(MOD3)" class="2" reload_one_at_a_time="1" sight_range_modifier="3" projectile_speed="225.95" barrel_offset="0.4" projectiles_per_shot="4" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="2.0" sustained_fire_grow_step="0.3" sustained_fire_diminish_rate="2.0" magazine_size="5" can_shoot_standing="1" suppressed="0" name="Mosin-Nagant M1891(MOD3)" class="2" reload_one_at_a_time="1" sight_range_modifier="3" projectile_speed="225.95" barrel_offset="0.4" projectiles_per_shot="4" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
 	<inventory buy_price="110.0" sell_price="110.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<commonness value="0.01" in_stock="0" can_respawn_with="1"/>
@@ -21661,7 +21661,7 @@
 	<animation key="cycle" animation_key="Brifle0.8"/>
 	<animation key="cycle" stance_key="prone" animation_key="Brifle0.8p"/>
 	<animation key="reload" animation_key="reloading, oaat"/>
-	<sound key="fire" fileref="m1891_fire_FromCOD14.wav" volume="1.6"/>
+	<sound key="fire" fileref="m1891mod3_fire_FromINS.wav" volume="1.6"/>
 	<sound key="cycle" fileref="m1891_cycle_FromSQUAD.wav" volume="0.6"/>
 	<sound key="reload_one" fileref="m1891_reload_FromSQUAD.wav" volume="0.5"/>
 	<sound key="cycle_out" fileref="m1891_cycle_out_FromSQUAD.wav" volume="0.6"/>
@@ -21704,14 +21704,14 @@
 </weapon>
 
 <weapon key="gkw_m1891mod3_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="2" sustained_fire_diminish_rate="1.2" magazine_size="6" can_shoot_standing="1" suppressed="0" name="Mosin-Nagant M1891(MOD3)-[Pure White Reaper]" class="2" reload_one_at_a_time="0" sight_range_modifier="3" projectile_speed="235.95" barrel_offset="0.4" stance_accrucy_rate="0.2" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="0.4" sustained_fire_diminish_rate="1.2" magazine_size="5" can_shoot_standing="1" suppressed="0" name="Mosin-Nagant M1891(MOD3)-[Pure White Reaper]" class="2" reload_one_at_a_time="0" sight_range_modifier="3" projectile_speed="235.95" barrel_offset="0.4" stance_accrucy_rate="0.2" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
 	<inventory buy_price="110.0" sell_price="110.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<next_in_chain key="gkw_m1891mod3.weapon" share_ammo="0"/>
 	<commonness value="0.0" in_stock="0" can_respawn_with="1"/>
 	<animation key="cycle" animation_key="Brifle1"/>
 	<animation key="cycle" stance_key="prone" animation_key="Brifle1p"/>
-	<animation key="reload" animation_key="HS50RTemp"/>
+	<animation key="reload" animation_key="reloading, clip"/>
 	<animation state_key="next_in_chain_in" animation_key="change weapon in ssass"/>
 	<sound key="fire" fileref="m1891skill_fire_FromCOD8.wav" volume="1.5"/>
 	<sound key="cycle" fileref="m1891_cycle_FromSQUAD.wav" volume="0.6"/>
@@ -21726,11 +21726,11 @@
 	<projectile file="bullet.projectile" can_be_detected_by_footmen="0">
 	<result class="hit" kill_probability="2.4" kill_probability_offset_on_successful_hit="30" kill_decay_start_time="1.895" kill_decay_end_time="3.158"/>
 	</projectile>
-	<stance state_key="running" accuracy="0.75"/>
-	<stance state_key="walking" accuracy="0.75"/>
-	<stance state_key="crouch_moving" accuracy="0.85"/>
-	<stance state_key="prone_moving" accuracy="0.85"/>
-	<stance state_key="standing" accuracy="0.95"/>
+	<stance state_key="running" accuracy="0.55" />
+	<stance state_key="walking" accuracy="0.65" />
+    <stance state_key="crouch_moving" accuracy="0.75" />
+    <stance state_key="prone_moving" accuracy="0.75" />
+    <stance state_key="standing" accuracy="0.9" />
 	<stance state_key="crouching" accuracy="1"/>
 	<stance state_key="prone" accuracy="1"/>
 	<stance state_key="over_wall" accuracy="1"/>
@@ -30088,7 +30088,7 @@
 	<effect class="muzzle" ref="sawsnone"/>
 	<commonness value="0.0" can_respawn_with="1" in_stock="0"/>
 	<modifier class="speed" value="0.7"/>
-	<modifier class="hit_success_probability" value="-0.2"/>
+	<modifier class="hit_success_probability" value="-0.15"/>
 	<modifier class="detectability" value="0.45"/>
 </weapon>
 
@@ -37113,7 +37113,7 @@
 </weapon>
 
 <weapon key="ff_alchemist.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1" last_burst_retrigger_time="0.12" accuracy_factor="0.9" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="0.5" magazine_size="20" can_shoot_standing="1" can_shoot_crouching="0" can_shoot_prone="0" carry_in_two_hands="0" suppressed="0" name="GK-Alchemist" class="4" sight_range_modifier="0.75" projectile_speed="220" projectiles_per_shot="2" burst_shots="1" slot="0" spread_range="0.1" stab_enabled="1"/>
+	<specification retrigger_time="-1" last_burst_retrigger_time="0.15" accuracy_factor="0.9" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="0.5" magazine_size="20" can_shoot_standing="1" can_shoot_crouching="0" can_shoot_prone="0" carry_in_two_hands="0" suppressed="0" name="GK-Alchemist" class="4" sight_range_modifier="0.75" projectile_speed="220" projectiles_per_shot="2" burst_shots="1" slot="0" spread_range="0.1" stab_enabled="1"/>
 	<next_in_chain key="ff_alchemist_skill.weapon" share_ammo="1"/>
 	<animation state_key="recoil" animation_key="high recoil, pistol dual 1"/>
 	<animation state_key="recoil" animation_key="high recoil, pistol dual 2"/>
@@ -37142,7 +37142,7 @@
 	<hud_icon filename="sfw_alchemist.png"/>
 	<weak_hand_hold offset="0.1"/>
 	<projectile file="bullet_sf.projectile">
-	<result class="hit" kill_probability="2.4" kill_probability_offset_on_successful_hit="2.0" kill_decay_start_time="0.09" kill_decay_end_time="0.34"/>
+	<result class="hit" kill_probability="2.4" kill_probability_offset_on_successful_hit="2.0" kill_decay_start_time="0.01" kill_decay_end_time="0.35"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.75"/>
 	<stance state_key="walking" accuracy="0.75"/>
@@ -37152,7 +37152,7 @@
 	<stance state_key="crouching" accuracy="0.95"/>
 	<stance state_key="prone" accuracy="1"/>
 	<stance state_key="overwall" accuracy="1"/>
-	<modifier class="speed" value="0.6"/>
+	<modifier class="speed" value="1.0"/>
 	<tag name="elite"/>
 	<commonness value="0.0000001" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="17.0" buy_price="328.0" sell_price="328.0"/>
@@ -37161,7 +37161,7 @@
 </weapon>
 
 <weapon key="ff_alchemist_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1" last_burst_retrigger_time="0.12" accuracy_factor="0.9" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="0.5" magazine_size="20" can_shoot_standing="1" can_shoot_crouching="0" can_shoot_prone="0" carry_in_two_hands="0" suppressed="0" name="GK-Alchemist" class="4" sight_range_modifier="0.75" projectile_speed="200" projectiles_per_shot="2" burst_shots="1" slot="0" spread_range="0.1" stab_enabled="1"/>
+	<specification retrigger_time="-1" last_burst_retrigger_time="0.15" accuracy_factor="0.9" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="0.5" magazine_size="20" can_shoot_standing="1" can_shoot_crouching="0" can_shoot_prone="0" carry_in_two_hands="0" suppressed="0" name="GK-Alchemist" class="4" sight_range_modifier="0.75" projectile_speed="200" projectiles_per_shot="2" burst_shots="1" slot="0" spread_range="0.1" stab_enabled="1"/>
 	<next_in_chain key="ff_alchemist.weapon" share_ammo="1"/>
 	<animation state_key="recoil" animation_key="high recoil, pistol dual 1"/>
 	<animation state_key="recoil" animation_key="high recoil, pistol dual 2"/>
@@ -37189,7 +37189,7 @@
 	<model filename=""/>
 	<hud_icon filename="sfw_alchemist.png"/>
 	<weak_hand_hold offset="0.1"/>
-	<projectile file="bullet_sf.projectile">
+	<projectile file="bullet_sf.projectile" time_to_live="0.175">
 	<result class="blast" radius="2.5" damage="1.1" push="0.2" decal="1" faction_compare="not_equal"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.75"/>
