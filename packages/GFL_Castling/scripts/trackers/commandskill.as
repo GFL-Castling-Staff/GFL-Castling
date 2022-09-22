@@ -1662,7 +1662,7 @@ class CommandSkill : Tracker {
                     };
                     playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
                     playAnimationKey(m_metagame,characterId,"throwing, upside",true,true);
-                    c_pos=c_pos.add(Vector3(0,1,0));
+                    c_pos=c_pos.add(Vector3(0,1.8,0));
                     CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"smoke_grenade.projectile",characterId,factionid,30.0,5.0);
                 }
             }
@@ -1706,7 +1706,7 @@ class CommandSkill : Tracker {
                     };
                     playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
                     playAnimationKey(m_metagame,characterId,"throwing, upside",true,true);
-                    c_pos=c_pos.add(Vector3(0,1,0));
+                    c_pos=c_pos.add(Vector3(0,1.8,0));
                     CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"ump45mod3_smoke_grenade.projectile",characterId,factionid,30.0,1.0);
                 }
             }
