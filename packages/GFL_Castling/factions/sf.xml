@@ -1059,7 +1059,7 @@
 	<soldier name="sf_dinergate" spawn_score="1.0">
 		<models filename="sf_dinergate.models" />
 		<character filename="sf_dinergate.character" />
-		<ai filename="eod.ai" />
+		<ai filename="eod_mecha.ai" />
 
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1">
 			<weapon key="sfw_dinergate.weapon"/>
