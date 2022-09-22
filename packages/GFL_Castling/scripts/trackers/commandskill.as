@@ -2663,7 +2663,7 @@ class CommandSkill : Tracker {
 
     void excuteSAT8skill(int characterId,int playerId,SkillModifer@ modifer){
         bool ExistQueue = false;
-        int j =-1;
+        int j=-1;
         for (uint i=0;i<SkillArray.length();i++){
             if (InCooldown(characterId,modifer,SkillArray[i]) && SkillArray[i].m_weapontype=="SAT8") {
                 ExistQueue=true;
@@ -2674,27 +2674,65 @@ class CommandSkill : Tracker {
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
             sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
-            _log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
-        addCoolDown("SAT8",30,characterId,modifer);
-        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
-        if (character !is null) {
-            Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
-            int factionid = character.getIntAttribute("faction_id");
-            XmlElement c ("command");
-            c.setStringAttribute("class", "update_inventory");
-            c.setIntAttribute("character_id", characterId); 
-            c.setIntAttribute("untransform_count", 4);
-            m_metagame.getComms().send(c);
-            array<string> Voice={
-                "SAT8_SKILL1_JP.wav",
-                "SAT8_SKILL2_JP.wav",
-                "SAT8_SKILL3_JP.wav"
-            };
-            playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
-        }
-    }    
+        const XmlElement@ characterinfo = getCharacterInfo(m_metagame, characterId);
+        const XmlElement@ playerinfo = getPlayerInfo(m_metagame, playerId);
+
+        if (playerinfo.hasAttribute("aim_target")) {
+            string target = playerinfo.getStringAttribute("aim_target");
+            Vector3 c_pos = stringToVector3(characterinfo.getStringAttribute("position"));
+            Vector3 s_pos = stringToVector3(target);
+            int factionid = characterinfo.getIntAttribute("faction_id");
+            // c_pos=c_pos.add(Vector3(0,1,0));
+            int num_jud = 0;
+            int num_max_character = 6;
+            int m_fnum = m_metagame.getFactionCount();
+
+            array<const XmlElement@> affectedCharacter;
+            array<const XmlElement@> affectedCharacter2;
+
+            affectedCharacter2 = getCharactersNearPosition(m_metagame,s_pos,0,10.0f);
+            if (affectedCharacter2 !is null){
+                for(uint x=0;x<affectedCharacter2.length();x++){
+                    affectedCharacter.insertLast(affectedCharacter2[x]);
+                    num_jud += 1;
+                    if(num_jud>=(num_max_character-1))break;
+                }
+            }
+
+            int healnum = num_max_character-num_jud;
+            healCharacter(m_metagame,characterId,min(3*healnum,10));
+
+            if(num_jud>0)
+            {
+                array<string> Voice={
+                    "SAT8_SKILL1_JP.wav",
+                    "SAT8_SKILL2_JP.wav",
+                    "SAT8_SKILL3_JP.wav"
+                };
+                playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+                playSoundAtLocation(m_metagame,"cz75_skill_throwout.wav",factionid,c_pos,1.0);
+
+                while(num_jud>0){
+                    for (uint i1=0;i1<affectedCharacter.length();i1++)	{
+                        int luckyoneid = affectedCharacter[i1].getIntAttribute("id");
+                        const XmlElement@ luckyoneC = getCharacterInfo(m_metagame, luckyoneid);
+                        if ((luckyoneC.getIntAttribute("id")!=-1)&&(luckyoneid!=characterId)){
+                            string luckyonepos = luckyoneC.getStringAttribute("position");
+                            Vector3 luckyoneposV = stringToVector3(luckyonepos);
+                            CreateDirectProjectile(m_metagame,c_pos.add(Vector3(0,1.2,0)),luckyoneposV.add(Vector3(0,1.8,0)),"sat8_pizza.projectile",characterId,factionid,60);
+                        }			
+                        num_jud-=1;	
+                    }
+                }
+
+                addCoolDown("SAT8",30+10*min(healnum,3),characterId,modifer);
+            }
+            
+        }    
+    }
+
     void excuteAlchemistskill(int characterId,int playerId,SkillModifer@ modifer){
         bool ExistQueue = false;
         int j=-1;
@@ -2951,7 +2989,7 @@ class CommandSkill : Tracker {
                     }
                 }
 
-                addCoolDown("CZ75",1,characterId,modifer);
+                addCoolDown("CZ75",25,characterId,modifer);
             }
             
         }    
@@ -3011,5 +3049,4 @@ class CommandSkill : Tracker {
             }
         }
     }
-
 }

@@ -732,3 +732,18 @@ void clearVisualTimer(Metagame@ metagame) {
 	command.setFloatAttribute("time", -1.0f); 
 	metagame.getComms().send(command);
 }
+
+void healCharacter(Metagame@ metagame,int characterId,int healnum) {
+	XmlElement c ("command");
+	c.setStringAttribute("class", "update_inventory");
+	c.setIntAttribute("character_id", characterId); 
+	c.setIntAttribute("untransform_count", healnum);
+	metagame.getComms().send(c);
+}
+
+void healRangedCharacters(Metagame@ metagame,Vector3 pos,int faction_id,float range,int healnum) {
+	array<const XmlElement@>@ characters = getCharactersNearPosition(metagame, pos, faction_id, range);
+	for (uint i = 0; i < characters.length; i++) {
+		healCharacter(metagame,characters[i].getIntAttribute("id"),healnum);
+	}	
+}

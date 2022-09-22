@@ -97,6 +97,9 @@ dictionary gameSkillIndex = {
 		// UMP45MOD3 烟雾弹
         {"ump45mod3_skill",28},
 
+		// SAT8 披萨
+        {"sat8_pizza",29},
+
         // 下面这行是用来占位的，在这之上添加新的技能key和index即可
         {"666",-1}
 };
@@ -1010,6 +1013,16 @@ class GFLskill : Tracker {
 				break;			
 			}
 
+			case 29: {
+				int characterId = event.getIntAttribute("character_id");
+				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+				if (character !is null) {
+					Vector3 grenade_pos = stringToVector3(event.getStringAttribute("position"));
+					int factionid = character.getIntAttribute("faction_id");
+					healRangedCharacters(m_metagame,grenade_pos,factionid,2.5,3);
+				}
+				break;		
+			}
 
             default:
                 break;
