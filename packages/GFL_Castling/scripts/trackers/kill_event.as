@@ -261,6 +261,8 @@ class kill_event : Tracker {
             }
             
             if (killer.getIntAttribute("player_id") == -1) return;
+            int playerId =killer.getIntAttribute("player_id");
+            
             //只查询我方杀敌
             if (factionId==0 && characterId > 0){
                 const XmlElement@ killerCharacter = getCharacterInfo2(m_metagame,characterId);
@@ -301,6 +303,14 @@ class kill_event : Tracker {
                     int j = findKillCountIndex(characterId);
                     if(j>=0){
                         KillCountArray[j].add();
+                        int kill_num = KillCountArray[j].m_killnum;
+                        switch(kill_num)
+                        {
+                            case 7:{sendPrivateMessageKey(m_metagame,playerId,"ppkmod3killstage1");break;}
+                            case 15:{sendPrivateMessageKey(m_metagame,playerId,"ppkmod3killstage2");break;}
+                            case 30:{sendPrivateMessageKey(m_metagame,playerId,"ppkmod3killstage3");break;}
+                            default:    break;
+                        }
                     }
                     else{
                         KillCountArray.insertLast(kill_count(characterId,1));
