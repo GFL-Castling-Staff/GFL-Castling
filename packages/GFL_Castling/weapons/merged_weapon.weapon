@@ -18573,7 +18573,7 @@
 	<animation key="hold" animation_key="still, with law"/>
 	<animation key="hold_on_wall" animation_key="still, with law"/>
 	<sound key="fire" fileref="at4_fire_FromSQUAD.wav" pitch_variety="0.05" volume="1.8"/>
-	<sound key="cycle" fileref="at4_cycle_FromSQUAD" volume="0.7"/>
+    <sound key="cycle" fileref="at4_cycle_FromSQUAD.wav" volume="0.7" />
 	<sound key="magazine_out" fileref="at4_mgz_out_FromSQUAD.wav" volume="0.7"/>
 	<sound key="magazine_in" fileref="at4_mgz_in_FromSQUAD.wav" volume="0.7"/>
 	<sound key="cycle_out" fileref="at4_cycle_out_FromSQUAD.wav" volume="0.7"/>
@@ -21716,7 +21716,7 @@
 	<sound key="fire" fileref="m1891skill_fire_FromCOD8.wav" volume="1.5"/>
 	<sound key="cycle" fileref="m1891_cycle_FromSQUAD.wav" volume="0.6"/>
 	<sound key="magazine_out" fileref="m1891_mgz_out_FromPOSTSCRIPTUM.wav" volume="0.7"/>
-	<sound key="magazine_in" fileref="m1891_in_FromPOSTSCRIPTUM.wav" volume="0.7"/>
+	<sound key="magazine_in" fileref="m1891_mgz_in_FromPOSTSCRIPTUM.wav" volume="0.7"/>
 	<sound key="cycle_out" fileref="m1891_cycle_out_FromSQUAD.wav" volume="0.6"/>
 	<sound key="cycle_in" fileref="m1891_cycle_in_FromSQUAD.wav" volume="0.6"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
@@ -45132,4 +45132,3 @@
 </weapon>
 
 </weapons>
-
