@@ -12,9 +12,9 @@
         <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
-        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
         <modifier class="speed" value="0.5" />
-        <modifier class="hit_success_probability" value="-1.1" />
+        <modifier class="hit_success_probability" value="-1.2" />
         <modifier class="detectability" value="-0.05" />
     </carry_item>
     <carry_item key="dima_1" time_to_live_out_in_the_open="15" name="[Please do not tell anyone]" transform_on_consume="dima_2" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
@@ -29,7 +29,7 @@
         <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
-        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
         <modifier class="speed" value="0.5" />
         <modifier class="hit_success_probability" value="-1.1" />
         <modifier class="detectability" value="-0.05" />

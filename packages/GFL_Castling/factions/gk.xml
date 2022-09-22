@@ -1361,7 +1361,7 @@
 		<ai filename="hydra.ai" />
 		<resources clear_vehicles="1" clear_weapons="1" clear_grenades="1" clear_carry_items="1">
 			<weapon key="ff_agent.weapon" />
-			<carry_item key="agent_drone.carry_item" />
+			<carry_item key="bp_t4.carry_item" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="0.3" min="57.433" max="122.833" />
