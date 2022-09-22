@@ -21798,7 +21798,7 @@
 	<hud_icon filename="gkw_ak15mod3.png"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="1.9" kill_probability_offset_on_successful_hit="2.2" kill_decay_start_time="0.8" kill_decay_end_time="1.333"/>
+	<result class="hit" kill_probability="2.2" kill_probability_offset_on_successful_hit="2.0" kill_decay_start_time="0.8" kill_decay_end_time="1.333"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_76239"/>
 	<stance state_key="running" accuracy="0.85"/>
@@ -21821,7 +21821,7 @@
 
 <weapon key="gkw_ak15mod3_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="autorifle"/>
-	<specification accuracy_factor="1" barrel_offset="0.4" class="0" slot="0" magazine_size="30" name="AK-15(MOD3)-[Eye of the White Mastiff]" projectile_speed="200" retrigger_time="0.066" suppressed="0" sight_range_modifier="0.75" stab_enabled="1" stab_range="2" carry_in_two_hands="1" sustained_fire_diminish_rate="2.4" sustained_fire_grow_step="0.3"/>
+	<specification accuracy_factor="1" barrel_offset="0.4" class="0" slot="0" magazine_size="30" name="AK-15(MOD3)-[Eye of the White Mastiff]" projectile_speed="220" retrigger_time="0.066" suppressed="0" sight_range_modifier="0.75" stab_enabled="1" stab_range="2" carry_in_two_hands="1" sustained_fire_diminish_rate="2.4" sustained_fire_grow_step="0.3"/>
 	<animation key="recoil" animation_key="recoil1"/>
 	<animation key="recoil" animation_key="recoil2"/>
 	<animation key="recoil" animation_key="recoil3"/>
@@ -21854,7 +21854,7 @@
 	<effect class="muzzle" ref="muzzle_yellow"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="1.75" kill_probability_offset_on_successful_hit="2.8" kill_decay_start_time="0.1" kill_decay_end_time="0.375"/>
+	<result class="hit" kill_probability="1.75" kill_probability_offset_on_successful_hit="3.0" kill_decay_start_time="0.1" kill_decay_end_time="0.375"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_76239"/>
 	<stance state_key="running" accuracy="0.75"/>
@@ -36016,7 +36016,7 @@
 	<hud_icon filename="gkw_ak15_blm.png"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="1.9" kill_probability_offset_on_successful_hit="2.2" kill_decay_start_time="0.8" kill_decay_end_time="1.333"/>
+	<result class="hit" kill_probability="2.2" kill_probability_offset_on_successful_hit="2.0" kill_decay_start_time="0.8" kill_decay_end_time="1.333"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_76239"/>
 	<stance state_key="running" accuracy="0.85"/>
@@ -36039,7 +36039,7 @@
 
 <weapon key="gkw_ak15mod3_blm_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="autorifle"/>
-	<specification accuracy_factor="1" barrel_offset="0.4" class="0" slot="0" magazine_size="30" name="AK-15(MOD3)-['Alvin']-[Eye of the White Mastiff]" projectile_speed="200" retrigger_time="0.066" suppressed="0" sight_range_modifier="0.75" stab_enabled="1" stab_range="2" carry_in_two_hands="1" sustained_fire_diminish_rate="2.4" sustained_fire_grow_step="0.3"/>
+	<specification accuracy_factor="1" barrel_offset="0.4" class="0" slot="0" magazine_size="30" name="AK-15(MOD3)-['Alvin']-[Eye of the White Mastiff]" projectile_speed="220" retrigger_time="0.066" suppressed="0" sight_range_modifier="0.75" stab_enabled="1" stab_range="2" carry_in_two_hands="1" sustained_fire_diminish_rate="2.4" sustained_fire_grow_step="0.3"/>
 	<animation key="recoil" animation_key="recoil1"/>
 	<animation key="recoil" animation_key="recoil2"/>
 	<animation key="recoil" animation_key="recoil3"/>
@@ -36072,7 +36072,7 @@
 	<effect class="muzzle" ref="muzzle_yellow"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="1.75" kill_probability_offset_on_successful_hit="2.8" kill_decay_start_time="0.1" kill_decay_end_time="0.375"/>
+	<result class="hit" kill_probability="1.75" kill_probability_offset_on_successful_hit="3.0" kill_decay_start_time="0.1" kill_decay_end_time="0.375"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_76239"/>
 	<stance state_key="running" accuracy="0.75"/>
