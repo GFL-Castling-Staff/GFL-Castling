@@ -62,7 +62,7 @@
 	<stance state_key="crouching" accuracy="1"/>
 	<stance state_key="prone" accuracy="1"/>
     <stance state_key="over_wall" accuracy="1"/>
-    <modifier class="speed" value="-0.5" />
+    <modifier class="speed" value="-0.8" />
 </weapon>
 <weapon file="sf.base_weapon" key="sfw_nemeum_swap.weapon">
     <tag name="mecha" />
@@ -139,7 +139,7 @@
 	<stance state_key="crouching" accuracy="1"/>
 	<stance state_key="prone" accuracy="1"/>
     <stance state_key="over_wall" accuracy="1"/>
-    <modifier class="speed" value="-0.3" />
+    <modifier class="speed" value="-0.6" />
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0" />
     <target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0" />
     <target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0" />
