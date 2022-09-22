@@ -4,7 +4,7 @@ abstract emitter SmokeGrenadeEmitter {
 	colour_range_start	1 1 1 0.0
 	colour_range_end	1 1 1 0.1
 	direction	0 1 0
-	emission_rate	65
+	emission_rate	30
 	position	0 0 0
 	width 6.0
 	height 3.0
@@ -61,7 +61,7 @@ abstract affector SmokeGrenadeLinearForce
 // ---------------------------------------------------------------------------------------
 particle_system SmokeGrenade
 {
-	quota	500
+	quota	1000
 	material	FlareSmoke
 	particle_width	7.5
 	particle_height	7.5
@@ -97,3 +97,25 @@ particle_system ThrownSmokeGrenade
 	affector ColourFader2 : SmokeGrenadeFader {}
 	affector LinearForce : SmokeGrenadeLinearForce {}
 }
+
+particle_system SmokeGrenade_big
+{
+	quota	1000
+	material	FlareSmoke
+	particle_width	7.5
+	particle_height	7.5
+	cull_each	false
+	renderer	billboard
+	billboard_type	point
+
+	emitter Box : SmokeGrenadeEmitter {
+		width 10.0
+		height 10.0
+		emission_rate	60
+	}
+	affector Scaler : SmokeGrenadeScaler {}
+	affector Rotator : SmokeGrenadeRotator {}
+	affector ColourFader2 : SmokeGrenadeFader {}
+	affector LinearForce : SmokeGrenadeLinearForce {}
+}
+

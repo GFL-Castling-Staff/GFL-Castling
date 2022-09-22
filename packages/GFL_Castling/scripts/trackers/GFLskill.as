@@ -1005,7 +1005,7 @@ class GFLskill : Tracker {
 					uint factionid = character.getIntAttribute("faction_id");
 					Vector3 pos_smartgrenade = stringToVector3(event.getStringAttribute("position"));
 					CreateProjectile(m_metagame,pos_smartgrenade.add(Vector3(0,0.1,0)),pos_smartgrenade,"smoke_grenade.projectile",characterId,factionid,0,26);
-                    GFL_event_array.insertLast(GFL_event(characterId,factionid,"ump45mod3_smoke",pos_smartgrenade,1.5));												
+                    GFL_event_array.insertLast(GFL_event(characterId,factionid,"ump45mod3_smoke",pos_smartgrenade,1.5));
 				}			
 				break;			
 			}

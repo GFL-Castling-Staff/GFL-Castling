@@ -3,4 +3,6 @@
     <tag name="grenade"/>
     <result class="blast" damage="0.5" radius="9" decal="1" push="0" character_state="wound" faction_compare="not_equal" damage_origin_vehicle="0"/>
     <trigger class="time" time_to_live="0.0"/>
+    <effect class="result" key="character" ref="hitMetal" />
+    <effect class="result" key="character" ref="hitMetal_1" />
 </projectile>
