@@ -1,23 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources clear_weapons="1" clear_vehicles="1" clear_calls="1" clear_grenades="1" clear_carry_items="1">
-
+	
+	<carry_item key='gift_box_1.carry_item' enabled="1" />
 	<carry_item key='lottery.carry_item' enabled="1" />
-	<carry_item key="ice_theatre.carry_item" />
 	<carry_item key="armor_crafting_master.carry_item"/>
 	<carry_item key="upgrade_type88.carry_item"/>
 	<carry_item key="upgrade_aa12.carry_item"/>
+	<carry_item key="upgrade_fg42.carry_item"/>
+	<carry_item key="upgrade_g41.carry_item"/>
+	<weapon key="deployable_t6.weapon" />
+
 	
-
-	<carry_item key="exchange_t6_ticket_1"/>
-	<carry_item key="exchange_t6_ticket_2"/>
-	<carry_item key="exchange_t6_ticket_3"/>
-	<carry_item key="exchange_t6_ticket_4"/>
-	<carry_item key="exchange_t6_ticket_5"/>
-	<carry_item key="exchange_t6_ticket_6"/>
-	<carry_item key="exchange_t6_ticket_7"/>
-	<carry_item key="exchange_t6_ticket_8"/>
-	<carry_item key="exchange_t6_ticket_9"/>
-	<carry_item key="exchange_t6_ticket_11"/>
-	<carry_item key="exchange_t6_ticket_12"/>
-
 </resources>
