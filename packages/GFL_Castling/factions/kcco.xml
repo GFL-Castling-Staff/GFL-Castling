@@ -655,6 +655,9 @@
 	</soldier>
 	<!-- KCCO人类狙击手 -->
 	<soldier name="kcco_human_sniper" spawn_score="0.05" copy_from="default_bot">
+		<character filename="default_kcco_human.character" >
+			<parameter class="can_use_vehicles" value="0" /> 
+		</character>
 		<model filename="kccod_sniper_melondove_saiwa.xml" />
 		<ai filename="kcco_human_sniper.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
