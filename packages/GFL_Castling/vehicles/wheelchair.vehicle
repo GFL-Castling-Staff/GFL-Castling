@@ -19,15 +19,6 @@
 	<character_slot type="driver" position="0.0 0.32 -1.6" rotation="0" exit_rotation="3.14" hiding="0" animation_key="running, zombie" marker_offset="0 0.35 0.2"/>
 	<character_slot type="passenger" position="0.0 0.27 -0.4" rotation="0" exit_rotation="0" hiding="0" animation_key="passenger atv" marker_offset="0 0.35 0.2" rotation_range="3.00"/>
 
-	<!-- sound handling -->
-	<!--
-	<rev_sound filename="jeep_rev0.wav" low_pitch="0.8" high_pitch="1.0" low_rev="0.0" high_rev="0.2" volume="0.8" />
-	<rev_sound filename="jeep_rev1.wav" low_pitch="0.5" high_pitch="1.1" low_rev="0.1" high_rev="1.0" volume="1.0" />
-	-->
-	<rev_sound filename="jeep2_rev0.wav" low_pitch="0.8" high_pitch="1.0" low_rev="0.0" high_rev="0.3" volume="0.8" />
-	<rev_sound filename="jeep2_rev2.wav" low_pitch="0.6" high_pitch="1.0" low_rev="0.1" high_rev="0.7" volume="0.65" />
-	<rev_sound filename="jeep2_rev3.wav" low_pitch="0.8" high_pitch="1.0" low_rev="0.5" high_rev="1.0" volume="0.8" />
-
 	<sound key="slide" filename="slide_noise.wav" />
 	<sound key="squeal" filename="tire_squeal.wav" />
 	<sound key="ignition" filename="jeep2_ignition.wav" />
