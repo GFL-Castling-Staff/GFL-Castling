@@ -31,4 +31,13 @@
     <model mesh_filename="barrier_item.mesh" texture_filename="none.png" />
     <hud_icon filename="ogas_jammer.png" />
 </weapon>
+<weapon file="deployable.base_weapon" key="deployable_t6.weapon" radius="0.25" >
+    <specification
+	name="T6 Equipment Shop"
+    spawn_instance_class="vehicle" 
+    spawn_instance_key="t6_store" 
+	/>
+    <model mesh_filename="deploy_boxi.mesh" texture_filename="box2.png" />
+    <hud_icon filename="gkw_deploy_t6.png" />
+</weapon>
 </weapons>

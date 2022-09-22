@@ -183,6 +183,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 			{
 		ScoredResource("gkw_ump45_410.weapon", "weapon", 1.0f),
 		ScoredResource("gkw_ump45_535.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_ump45_3403.weapon", "weapon", 1.0f),
 		ScoredResource("gkw_fal_2406.weapon", "weapon", 1.0f),
 		ScoredResource("gkw_fal_308.weapon", "weapon", 1.0f),
 		ScoredResource("gkw_ots14_4501.weapon", "weapon", 1.0f),
@@ -529,9 +530,12 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 
 		array<array<ScoredResource@>> rewardPasses = {
 			{
+		ScoredResource("upgrade_g41.carry_item", "carry_item", 0.25f),
+		ScoredResource("upgrade_fg42.carry_item", "carry_item", 0.25f),
+
 		ScoredResource("RO365_Ant_Doll.carry_item", "carry_item", 5.0f,2),
 		ScoredResource("RO365_Ant_Doll.carry_item", "carry_item", 25.0f),
-		ScoredResource("city_gifts.carry_item", "carry_item", 10.0f, 10),
+		ScoredResource("city_gifts.carry_item", "carry_item", 9.5f, 10),
 		ScoredResource("wild_gifts.carry_item", "carry_item", 10.0f, 10),
 		ScoredResource("snow_gifts.carry_item", "carry_item", 10.0f, 10),
 		ScoredResource("forest_gifts.carry_item", "carry_item", 10.0f, 10),	
@@ -584,7 +588,8 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		ScoredResource("gkw_iws2000.weapon", "weapon", 0.5f),
 		ScoredResource("gkw_sat8.weapon", "weapon", 0.5f),
 		ScoredResource("gkw_rfb.weapon", "weapon", 0.5f),
-		ScoredResource("wild_gifts.carry_item", "carry_item", 3.0f,5)
+		ScoredResource("upgrade_g41.carry_item", "carry_item", 0.15f),
+		ScoredResource("upgrade_fg42.carry_item", "carry_item", 0.15f)
 			}
 		};
 		processRewardPasses(rewardPasses);
@@ -603,9 +608,11 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 
 		array<array<ScoredResource@>> rewardPasses = {
 			{
+		ScoredResource("upgrade_g41.carry_item", "carry_item", 2.5f),
+		ScoredResource("upgrade_fg42.carry_item", "carry_item", 2.5f),
 		ScoredResource("RO365_Ant_Doll.carry_item", "carry_item", 15.0f),
-		ScoredResource("wild_gifts.carry_item", "carry_item", 10.0f, 20),
-		ScoredResource("snow_gifts.carry_item", "carry_item", 10.0f, 20),
+		ScoredResource("wild_gifts.carry_item", "carry_item", 7.5f, 20),
+		ScoredResource("snow_gifts.carry_item", "carry_item", 7.5f, 20),
 		ScoredResource("gift_box_1.carry_item", "carry_item", 30.0f,3),
 		ScoredResource("firecontrol.carry_item", "carry_item", 15.0f,1),
 		ScoredResource("gift_box_2.carry_item", "carry_item", 15.0f,1),

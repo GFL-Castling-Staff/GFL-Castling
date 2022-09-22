@@ -39,7 +39,7 @@
     <sound key="cycle" fileref="m1garand_cycle_FromPOSTSCRIPTUM.wav" volume="0.6" />
     <sound key="magazine_out" fileref="m1garand_mgz_out_FromPOSTSCRIPTUM.wav" volume="0.6" />
     <sound key="magazine_in" fileref="m1garand_mgz_in_FromPOSTSCRIPTUM.wav" volume="0.6" />
-    <sound key="last_ammo" fileref="rifle_02_m1_garand_ping.wav" />
+    <sound key="last_ammo" fileref="rifle_02_m1_garand_ping.wav" pitch_variety="0.0" volume="1.75" />
     <model filename="gkw_rf_m1_bt.xml" />
     <hud_icon filename="gkw_m1_1106.png" />
     <inventory encumbrance="10.0" price="5.0" />

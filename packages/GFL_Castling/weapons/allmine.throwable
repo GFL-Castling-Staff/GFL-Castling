@@ -134,7 +134,7 @@
         visible_height="-4.4" 
         blast_damage_threshold="0.4"
         use_time_to_live="1" 
-        time_to_live="180" >
+        time_to_live="120" >
         <collision class="sticky" />
         <trigger class="impact">
             <collider class="terrain" enabled="0" />
@@ -144,9 +144,7 @@
         </trigger>
         <result class="spawn" instance_class="projectile" instance_key="bounding_mine_blast.projectile" min_amount="1" max_amount="1" offset="0 2.2 0" position_spread="0 0 0" direction_spread="0 0 0" />
 
-        <!-- <model mesh_filename="" texture_filename="at_mine.png" /> -->
         <model filename="kcco_mine.xml" />
-		<!-- <model mesh_filename="painting.mesh" texture_filename="painting.png" /> -->
 
         <hud_icon filename="hud_claymore.png" />
 

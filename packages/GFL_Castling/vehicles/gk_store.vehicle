@@ -14,4 +14,8 @@
 		<item_container class="armory" offset="0 0 0.0" soldier_group="player_hvy"/>
 		<visual class="chassis" mesh_filename="deploy_box.mesh" texture_filename="box2.png" />
 	</vehicle>
+	<vehicle name="T6 Equipment Shop" key="t6_store" file="store.base_vehicle">
+		<item_container class="armory" offset="0 0 0.0" soldier_group="t6_shop"/>
+		<visual class="chassis" mesh_filename="deploy_box.mesh" texture_filename="box2.png" />
+	</vehicle>	
 </vehicles>

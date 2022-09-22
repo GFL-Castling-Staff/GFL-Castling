@@ -92,6 +92,7 @@
 	<text key="AA-12 HE Slug Ammo" text="AA-12 特种弹药组合"/>
 	<text key="ZFG42 Telescopic Sight" text="ZFG42 光学瞄具"/>
 	<text key="Evil object from an unknown world" text="来自未知世界的邪恶物品"/>
+	<text key="High Performance Tactical Hair Decoration" text="高性能战术发饰"/>
 
 	<text key="Black Fancy Motorbike" text="黑色高级摩托车"/>
 	<text key="Fury Fairy" text="暴怒妖精"/>	
@@ -175,12 +176,14 @@
 	<text key="Coeus" text="奎乌-Coeus 重装步战车"/>
 	<text key="Crius" text="克利俄斯-Crius 火力打击平台"/>
 	<text key="Helios Transport Truck" text="赫利俄斯-Helios 人员输送载具"/>
+	<text key="Neo-SU Defence System" text="新苏联近防机炮系统"/>
 	<text key="Pegasus" text="帕加索斯-Pegasus 全地形车"/>
 
 	<text key="Pard-Commander" text="Commander 指挥士"/>
 	<text key="Doppelsoldner-Rocket" text="Doppelsoldner “巨剑士”作战机甲 榴弹模式"/>
 	<text key="Doppelsoldner-MG" text="Doppelsoldner “巨剑士”作战机甲 机炮模式"/>
 	<text key="Roarer" text="Roarer “角斗士”作战机甲"/>
+	<text key="Thunder" text="Thunder “侦察士”巨像"/>
 	<text key="Germ" text="Germ “加尔姆”犬型合成单位"/>
 	<text key="Infected" text="Infected “受洗者”"/>
 	<text key="Narciss" text="Narciss 娜希斯"/>
@@ -188,7 +191,7 @@
 	<text key="Adeline" text="Adeline 黑涅托"/>
 	<text key="E.I.L.D. Smasher" text="E.I.L.D. Smasher 感染头目"/>
 	<text key="Nyto-Eagleyes" text="Nyto-Eagleyes 涅托-鹰眼"/>
-	<text key="Nyto-Partol" text="Nyto-Partol 涅托-巡卫"/>
+	<text key="Nyto-Patrol" text="Nyto-Patrol 涅托-巡卫"/>
 	<text key="Nyto-Wrath" text="Nyto-Wrath 涅托-怒锤"/>
 	<text key="Police" text="Police 警备士"/>
 	<text key="Rodelero" text="Rodelero 剑盾士"/>
@@ -200,6 +203,9 @@
 	<text key="Uhlan" text="枪骑兵-Uhlan 巡航坦克"/>
 	<text key="Pyxis" text="指南针-Pyxis 轻型碉堡"/>
 	<text key="The Apostle" text="“使徒”-The Apostle 全地形车"/>
+	<text key="Moth" text="飞蛾-Moth 轻型飞行器"/>
+
+	
 
 	<text key="E.I.L.D. Armed Infected" text="E.I.L.D. 武装感染者 "/>
 	<text key="E.I.L.D. Infected" text="E.I.L.D. 感染者 "/>
@@ -525,6 +531,8 @@
 	<text key="Ameli-[Ameli`s Catching Ball]" text="Ameli-[阿梅利的接球]" />
 	<text key="UMP45-['Just this once']" text="UMP45-['下不为例']" />
 	<text key="UMP45-[The wish-seeking firework magician]" text="UMP45-[逐愿的礼花魔法师]" />
+	<text key="UMP45-[Lop-Eared Rabbit Agent]" text="UMP45-[特工垂耳兔]" />
+
 	<text key="FAL-[Operation Winter Veil Supply]" text="FAL-[冬幕补给行动]" />
 	<text key="FAL-[FAL's summer]" text="FAL-[FAL的夏天]" />
 	<text key="OTS-14 Groza-[Banquet rulers]" text="OTS-14“闪电”突击步枪-[晚宴的统治者]" />
@@ -659,10 +667,10 @@
 	<text key="G41-[Beach Punk 2064]-[Damage Focus T]" text="G41-[沙滩朋克2064]-[火力专注T]"/>
 	<text key="G41-[Universal Express]" text="G41-[寰宇特急]"/>
 	<text key="G41-[Universal Express]-[Damage Focus T]" text="G41-[寰宇特急]-[火力专注T]"/>
-	<text key="G41-[H.P.T.H.D.]-[Beach Punk 2064]" text="G41-[高性能战术发饰]-[沙滩朋克2064]"/>
-	<text key="G41-[H.P.T.H.D.]-[Beach Punk 2064]-[Damage Focus T]" text="G41-[高性能战术发饰]-[沙滩朋克2064]-[火力专注T]"/>
-	<text key="G41-[H.P.T.H.D.]-[Universal Express]" text="G41-[高性能战术发饰]-[寰宇特急]"/>
-	<text key="G41-[H.P.T.H.D.]-[Universal Express]-[Damage Focus T]" text="G41-[高性能战术发饰]-[寰宇特急]-[火力专注T]"/>
+	<text key="G41-[Beach Punk 2064]-[H.P.T.H.D.]" text="G41-[沙滩朋克2064]-[高性能战术发饰]"/>
+	<text key="G41-[Beach Punk 2064]-[H.P.T.H.D.]-[Damage Focus T]" text="G41-[沙滩朋克2064]-[高性能战术发饰]-[火力专注T]"/>
+	<text key="G41-[Universal Express]-[H.P.T.H.D.]" text="G41-[寰宇特急]-[高性能战术发饰]"/>
+	<text key="G41-[Universal Express]-[H.P.T.H.D.]-[Damage Focus T]" text="G41-[寰宇特急]-[高性能战术发饰]-[火力专注T]"/>
 	<text key="G41-[H.P.T.H.D.]" text="G41-[高性能战术发饰]"/>
 	<text key="G41-[H.P.T.H.D.]-[Damage Focus T]" text="G41-[高性能战术发饰]-[火力专注T]"/>
 	<text key="Cheytac M200-[Solemn March]" text="Cheytac M200-[庄严行进]"/>
@@ -728,6 +736,8 @@
 	<text key="IDW(MOD3)-[Tumbler Cat]" text="IDW(MOD3)-[不倒猫侍]" />
 	<text key="UMP45(MOD3)-['Just this once']" text="UMP45(MOD3)-['下不为例']" />
 	<text key="UMP45(MOD3)-[The wish-seeking firework magician]" text="UMP45(MOD3)-[逐愿的礼花魔法师]" />
+	<text key="UMP45(MOD3)-[Lop-Eared Rabbit Agent]" text="UMP45(MOD3)-[特工垂耳兔]" />
+
 	<text key="Super SASS(MOD3)-[Wolfwalker]" text="Super SASS(MOD3)-[狼行者]" />
 	<text key="Super SASS(MOD3)-[Wolfwalker]-[Snipers Pursuit]" text="Super SASS(MOD3)-[狼行者]-[后发狙击]" />
 	<text key="GSH18(MOD3)-[Walking operating table]" text="GSH18(MOD3)-[行走的手术台]" />
