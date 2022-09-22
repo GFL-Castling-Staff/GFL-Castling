@@ -220,9 +220,6 @@ dictionary commandSkillIndex = {
         {"gkw_ump45.weapon",14},
         {"gkw_ump45_535.weapon",14},
         {"gkw_ump45_410.weapon",14},      
-        {"gkw_ump45mod3.weapon",14},
-        {"gkw_ump45mod3_535.weapon",14},
-        {"gkw_ump45mod3_410.weapon",14},
 
         // M870
         {"gkw_m870.weapon",15},
@@ -352,6 +349,11 @@ dictionary commandSkillIndex = {
         {"gkw_g41_7406_only.weapon",46},
         {"gkw_g41_7406_only_skill.weapon",46},
 
+        // UMP45MOD3
+        {"gkw_ump45mod3.weapon",47},
+        {"gkw_ump45mod3_535.weapon",47},
+        {"gkw_ump45mod3_410.weapon",47},
+
         // 下面这行是用来占位的，在这之上添加新的枪和index即可
         {"666",-1}
 };
@@ -476,6 +478,7 @@ class CommandSkill : Tracker {
                     case 44:{excuteCZ75skill(cId,senderId,m_modifer);break;}
                     case 45:{excutSuperSASSSkill(cId,senderId,m_modifer);break;}
                     case 46:{excuteG41Onlyskill(cId,senderId,m_modifer);break;}
+                    case 47:{excuteUMP45MOD3skill(cId,senderId,m_modifer);break;}
 
                     default:
                         break;
@@ -1615,9 +1618,10 @@ class CommandSkill : Tracker {
             if (InCooldown(characterId,modifer,SkillArray[i]) && SkillArray[i].m_weapontype=="UMP45") {
                 ExistQueue=true;
                 j=i;
+                SkillArray[j].addCharge();
             }
-        }
-        if (ExistQueue){
+        }        
+        if (ExistQueue && SkillArray[j].m_charge>3){
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
             sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
@@ -1629,6 +1633,8 @@ class CommandSkill : Tracker {
             const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
             if (player !is null){
                 if (player.hasAttribute("aim_target")) {
+                    if(!ExistQueue)
+                        addCoolDown("UMP45MOD3",25,characterId,modifer); 
                     string target = player.getStringAttribute("aim_target");
                     Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
                     int factionid = character.getIntAttribute("faction_id");
@@ -1646,6 +1652,7 @@ class CommandSkill : Tracker {
             }
         }
     }
+
     void excuteM870skill(int characterId,int playerId,SkillModifer@ modifer){
         bool ExistQueue = false;
         int j =-1;
@@ -2811,7 +2818,7 @@ class CommandSkill : Tracker {
                     FairyRequest.setRange(80.0);
                     FairyRequest.setIconTypeKey("call_marker_snipe_m200");
                     addCastlingMarker(FairyRequest);
-                    GFL_event_array.insertLast(GFL_event(characterId,factionid,3,stringToVector3(target),2.0,-1.0,flagId));
+                    GFL_event_array.insertLast(GFL_event(characterId,factionid,"sniper_m200",stringToVector3(target),2.0,-1.0,flagId));
                     m_DummyCallID++;
                     addCoolDown("M200",60,characterId,modifer);
                 }
@@ -2941,6 +2948,46 @@ class CommandSkill : Tracker {
                     c_pos=c_pos.add(Vector3(0,1,0));
                     CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"grenade_g41_trigger.projectile",characterId,factionid,41.0,6.0);
                     addCoolDown("G41",15,characterId,modifer);
+                }
+            }
+        }
+    }
+    void excuteUMP45MOD3skill(int characterId,int playerId,SkillModifer@ modifer){
+        bool ExistQueue = false;
+        int j=-1;
+        for (uint i=0;i<SkillArray.length();i++){
+            if (InCooldown(characterId,modifer,SkillArray[i]) && SkillArray[i].m_weapontype=="UMP45MOD3") {
+                ExistQueue=true;
+                j=i;
+                SkillArray[j].addCharge();
+            }
+        }        
+        if (ExistQueue && SkillArray[j].m_charge>5){
+            dictionary a;
+            a["%time"] = ""+SkillArray[j].m_time;
+            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            _log("skill cooldown" + SkillArray[j].m_time);
+            return;
+        }
+        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+        if (character !is null) {
+            const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+            if (player !is null){
+                if (player.hasAttribute("aim_target")) {
+                    if(!ExistQueue)
+                        addCoolDown("UMP45MOD3",25,characterId,modifer);                    string target = player.getStringAttribute("aim_target");
+                    Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
+                    int factionid = character.getIntAttribute("faction_id");
+                    array<string> Voice={
+                        "ump45_skill1.wav",
+                        "ump45_skill2.wav",
+                        "ump45_skill3.wav"
+                    };
+                    playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+                    playAnimationKey(m_metagame,characterId,"throwing, upside",true,true);
+                    c_pos=c_pos.add(Vector3(0,1,0));
+                    CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"ump45mod3_smoke_grenade.projectile",characterId,factionid,30.0,1.0);
+
                 }
             }
         }

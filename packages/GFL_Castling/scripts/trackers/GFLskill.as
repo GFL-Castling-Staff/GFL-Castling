@@ -94,6 +94,9 @@ dictionary gameSkillIndex = {
 		// G41 Only
         {"g41_scan",27},
 
+		// UMP45MOD3 烟雾弹
+        {"ump45mod3_skill",28},
+
         // 下面这行是用来占位的，在这之上添加新的技能key和index即可
         {"666",-1}
 };
@@ -993,7 +996,21 @@ class GFLskill : Tracker {
 					}									
 				}			
 				break;			
+			}			
+			
+			case 28: {
+				int characterId = event.getIntAttribute("character_id");
+				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+				if (character !is null) {
+					uint factionid = character.getIntAttribute("faction_id");
+					Vector3 pos_smartgrenade = stringToVector3(event.getStringAttribute("position"));
+					CreateProjectile(m_metagame,pos_smartgrenade.add(Vector3(0,0.1,0)),pos_smartgrenade,"smoke_grenade.projectile",characterId,factionid,0,26);
+                    GFL_event_array.insertLast(GFL_event(characterId,factionid,"ump45mod3_smoke",pos_smartgrenade,1.5));												
+				}			
+				break;			
 			}
+
+
             default:
                 break;
 		}

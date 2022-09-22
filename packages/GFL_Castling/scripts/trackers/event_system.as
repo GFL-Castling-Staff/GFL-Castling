@@ -25,6 +25,8 @@ dictionary GFL_Event_Index = {
 
         {"mg_strafe",4},
 
+        {"ump45mod3_smoke",5},
+
         // 下面这行是用来占位的，在这之上添加新的即可
         {"666",-1}
 };
@@ -60,6 +62,7 @@ class GFL_event_system : Tracker {
                             }
                             case 3:{excuteSniperM200(m_metagame,GFL_event_array[a]);break;}
                             case 4:{excuteYaoren(m_metagame,GFL_event_array[a]);break;}
+                            case 5:{excuteUMP45MOD3event(m_metagame,GFL_event_array[a]);break;}
 
                             default:
                                 break;
@@ -120,6 +123,16 @@ class GFL_event{
         m_markerId=markerId;
     }
 
+    GFL_event(int characterId,int factionid,string key,Vector3 pos,float delay_time=0.0,float randseed=-1.0,int markerId=0){
+        m_characterId=characterId;
+        m_factionid=factionid;
+        m_eventkey=int(GFL_Event_Index[key]);
+        m_pos=pos;
+        m_time=delay_time;
+        m_randseed=randseed;
+        m_markerId=markerId;
+    }
+
     void setSpeicalKey(int key){
         m_specialkey=key;
     }
@@ -153,6 +166,24 @@ void excuteSniperM200(GameMode@ metagame,GFL_event@ eventinfo){
     }
     eventinfo.m_phase++;
     if(eventinfo.m_phase>=6){
+        eventinfo.m_enable=false;
+    }
+}
+
+void excuteUMP45MOD3event(GameMode@ metagame,GFL_event@ eventinfo){
+    eventinfo.m_time=2.0;
+    // array<const XmlElement@>@ characters = getCharactersNearPosition(metagame, eventinfo.m_pos, eventinfo.m_factionid, 10.0f);
+    // for (uint i = 0; i < characters.length; i++) {
+    //     int soldierId = characters[i].getIntAttribute("id");
+    //     XmlElement c ("command");
+    //     c.setStringAttribute("class", "update_inventory");
+    //     c.setIntAttribute("character_id", soldierId); 
+    //     c.setIntAttribute("untransform_count", 5);
+    //     metagame.getComms().send(c);
+    // }
+    CreateDirectProjectile(metagame,eventinfo.m_pos.add(Vector3(0,6,0)),eventinfo.m_pos.add(Vector3(0,6.1,0)),'ump45mod3_skill.projectile',eventinfo.m_characterId,eventinfo.m_factionid,10);
+    eventinfo.m_phase++;
+    if(eventinfo.m_phase>9){
         eventinfo.m_enable=false;
     }
 }
