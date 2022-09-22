@@ -1298,33 +1298,43 @@ class CommandSkill : Tracker {
         for (uint i=0;i<SkillArray.length();i++){
             if (InCooldown(characterId,modifer,SkillArray[i]) && SkillArray[i].m_weapontype=="FF_ALINA") {
                 ExistQueue=true;
-                j=i;
+                j=i;        
+                if (ExistQueue && SkillArray[j].m_charge >= 6){
+                    dictionary a;
+                    a["%time"] = ""+SkillArray[j].m_time;
+                    sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+                    return;
+                }
+                if(SkillArray[j].m_charge <6){
+                    SkillArray[j].addCharge();
+                }
             }
         }
-        if (ExistQueue){
-            dictionary a;
-            a["%time"] = ""+SkillArray[j].m_time;
-            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
-            return;
-        }
+
         const XmlElement@ characterinfo = getCharacterInfo(m_metagame, characterId);
-        const XmlElement@ playerinfo = getPlayerInfo(m_metagame, playerId);
+        if(characterinfo !is null){
+            const XmlElement@ playerinfo = getPlayerInfo(m_metagame, playerId);
+            if(playerinfo !is null){
+                if (playerinfo.hasAttribute("aim_target")) {
+                    if(!ExistQueue){
+                        addCoolDown("FF_ALINA",15,characterId,modifer,"constant");
+                    }
+                    string target = playerinfo.getStringAttribute("aim_target");
+                    Vector3 c_pos = stringToVector3(characterinfo.getStringAttribute("position"));
+                    Vector3 s_pos = stringToVector3(target);        
+                    int factionid = characterinfo.getIntAttribute("faction_id");
 
-        if (playerinfo.hasAttribute("aim_target")) {
-            string target = playerinfo.getStringAttribute("aim_target");
-            Vector3 c_pos = stringToVector3(characterinfo.getStringAttribute("position"));
-            Vector3 s_pos = stringToVector3(target);        
-            int factionid = characterinfo.getIntAttribute("faction_id");
-
-            CreateDirectProjectile(m_metagame,c_pos,s_pos,'baibaozi_skill.projectile',characterId,factionid,120);
-            // array<string> Voice={
-            // "Excutioner_buhuo_SKILL02_JP.wav",
-            // "Excutioner_buhuo_SKILL03_JP.wav",
-            // };
-            // playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
-            addCoolDown("FF_ALINA",25,characterId,modifer);
-            
+                    CreateDirectProjectile(m_metagame,c_pos,s_pos,'baibaozi_skill.projectile',characterId,factionid,120);
+                    // array<string> Voice={
+                    // "Excutioner_buhuo_SKILL02_JP.wav",
+                    // "Excutioner_buhuo_SKILL03_JP.wav",
+                    // };
+                    // playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+                }  
+            }
+          
         }
+
     }
     void excuteXM8MOD3skill(int characterId,int playerId,SkillModifer@ modifer){
         bool ExistQueue = false;
@@ -2749,7 +2759,7 @@ class CommandSkill : Tracker {
             _log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
-        addCoolDown("FF_ALCHEMIST",40,characterId,modifer);
+        addCoolDown("FF_ALCHEMIST",25,characterId,modifer);
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
         int factionid = character.getIntAttribute("faction_id");

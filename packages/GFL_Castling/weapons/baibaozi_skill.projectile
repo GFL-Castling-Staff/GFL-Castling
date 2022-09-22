@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+<projectiles>
 <projectile class="grenade" name="30mm" slot="1" pulldown_in_air="8.0" key="baibaozi_skill.projectile">
     <tag name="grenade"/>
-    <result class="blast" radius="7" damage="45" push="1.2" decal="1" faction_compare="not_equal" />
-	 <trigger class="impact"> 
+    <result class="spawn" instance_class="projectile" instance_key="baibaozi_skill_sub.projectile" min_amount="4" max_amount="4" offset="0 1.5 0" position_spread="0.32 0.32" direction_spread="0.0 0.0" />
+	<trigger class="impact"> 
 			<collider class="terrain" enabled="1" />  
 			<collider class="static_object" enabled="1" />  
 			<collider class="vehicle" enabled="1" /> 
@@ -49,3 +50,33 @@
 
     <!-- <effect class="activated" ref="Propulsion_gl" /> -->
 </projectile>
+<projectile class="grenade" name="30mm" key="baibaozi_skill_sub.projectile" slot="0" radius="0.15">
+	<result class="blast" radius="6.4" damage="5.6" push="0.3" decal="1" character_state="death" faction_compare="not_equal" />
+	<trigger class="time" time_to_live="0.0"/>
+	<rotation class="random" />
+	<model mesh_filename="" />
+	<hud_icon filename="88r.png" />
+	<!-- projectile slot 0 is used for hand grenade items currently -->
+	<!-- bound to change -->
+	<commonness value="0" />
+	<inventory encumbrance="1.0" price="5.0" />
+	<capacity value="1" source="rank" source_value="0.0" />
+        <effect class="result" key="terrain" ref="BigBurst" use_surface_color="1" />
+        <effect class="result" key="terrain" ref="SmokeTop" post_processing="1" />
+        <effect class="result" key="terrain" ref="Smoke" post_processing="1" />
+        <effect class="result" key="terrain" ref="Shine" lighting="0" />
+        <effect class="result" key="terrain" ref="Godray" lighting="0" />
+        <effect class="result" key="terrain" ref="ShadowSmoke" shadow="1" />
+        <effect class="result" type="splat_map" surface_tag="" size="3.0" atlas_index="0" layer="1" />
+        <effect class="result" type="splat_map" surface_tag="" size="4.0" atlas_index="4" layer="0" />
+        <effect class="result" type="splat_map" surface_tag="" size="5.0" atlas_index="0" layer="2" additive="0" />
+        <effect class="result" key="other" ref="SmokeTop" post_processing="1" />
+        <effect class="result" key="other" ref="Smoke" post_processing="1" />
+        <effect class="result" key="other" ref="Shine" lighting="0" />
+        <effect class="result" key="other" ref="Godray" lighting="0" />
+        <effect class="result" key="other" ref="ShadowSmoke" shadow="1" />
+        <effect class="result" key="static_object" copy="terrain" />
+        <effect class="result" key="character" copy="terrain" />
+        <effect class="result" key="vehicle" copy="terrain" />
+</projectile>
+</projectiles>
