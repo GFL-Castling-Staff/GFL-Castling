@@ -34,9 +34,9 @@
 	collision_model_pos="0 2.7 0.0" 
 	collision_model_extent="2.8 2.4 6.4" 
 	visual_offset="0 1.4 0" 
-	drag_offset="-0.1" 
-	friction_offset="-0.1" 
-	preserve_motion_on_impact_factor="1" />
+	drag_offset="-1.0" 
+	friction_offset="-1.0" 
+	preserve_motion_on_impact_factor="0.3" />
 	<modifier class="blast_range" value="+2.0" />
 	<modifier class="blast_damage" value="-1.0" />
 	<turret offset="-0.0 1.8 -0.7" weapon_key="sandstorm_none.weapon" weapon_offset="0.0 0.0 0.0" weapon_recoil="0.0" physics_recoil="0.0" max_rotation_step="0.0004" rotation_range="2" />
