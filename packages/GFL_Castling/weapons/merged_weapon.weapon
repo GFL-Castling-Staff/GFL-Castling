@@ -21309,7 +21309,7 @@
 </weapon>
 
 <weapon key="gkw_ribeyrollesmod3.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification accuracy_factor="1" barrel_offset="0.8" class="0" slot="0" magazine_size="25" name="Ribeyrolles(MOD3)" projectile_speed="180" retrigger_time="0.10" suppressed="0" sustained_fire_diminish_rate="1.8" sustained_fire_grow_step="0.3" sight_range_modifier="1.7" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1"/>
+	<specification accuracy_factor="1" barrel_offset="0.8" class="0" slot="0" magazine_size="25" name="Ribeyrolles(MOD3)" projectile_speed="224" retrigger_time="0.10" suppressed="0" sustained_fire_diminish_rate="1.8" sustained_fire_grow_step="0.3" sight_range_modifier="1.7" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1"/>
 	<inventory buy_price="150.0" sell_price="120.0"/>
 	<next_in_chain key="gkw_ribeyrollesmod3_skill.weapon" share_ammo="1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -21324,7 +21324,7 @@
 	<hud_icon filename="gkw_ribeyrollesmod3.png"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="1.9" kill_probability_offset_on_successful_hit="2.1" kill_decay_start_time="1.129" kill_decay_end_time="1.881"/>
+	<result class="hit" kill_probability="2.0" kill_probability_offset_on_successful_hit="2.5" kill_decay_start_time="1.129" kill_decay_end_time="1.881"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.35"/>
 	<stance state_key="walking" accuracy="0.7"/>
@@ -21357,7 +21357,7 @@
 </weapon>
 
 <weapon key="gkw_ribeyrollesmod3_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification accuracy_factor="1" barrel_offset="0.8" class="0" slot="0" magazine_size="25" name="Ribeyrolles(MOD3)-[Mechanical Wave]" projectile_speed="180" retrigger_time="0.08" suppressed="0" sustained_fire_diminish_rate="1.85" sustained_fire_grow_step="0.2" sight_range_modifier="2.5" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1"/>
+	<specification accuracy_factor="1" barrel_offset="0.8" class="0" slot="0" magazine_size="25" name="Ribeyrolles(MOD3)-[Mechanical Wave]" projectile_speed="224" retrigger_time="0.08" suppressed="0" sustained_fire_diminish_rate="1.85" sustained_fire_grow_step="0.2" sight_range_modifier="2.5" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1"/>
 	<inventory buy_price="150.0" sell_price="120.0"/>
 	<next_in_chain key="gkw_ribeyrollesmod3.weapon" share_ammo="1"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
@@ -21372,7 +21372,7 @@
 	<hud_icon filename="gkw_ribeyrollesmod3_skill.png"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="2.0" kill_probability_offset_on_successful_hit="3.3" kill_decay_start_time="1.129" kill_decay_end_time="1.881"/>
+	<result class="hit" kill_probability="2.0" kill_probability_offset_on_successful_hit="3.5" kill_decay_start_time="1.129" kill_decay_end_time="1.881"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.75"/>
 	<stance state_key="walking" accuracy="0.75"/>
