@@ -51,7 +51,7 @@
     <!-- <effect class="activated" ref="Propulsion_gl" /> -->
 </projectile>
 <projectile class="grenade" name="30mm" key="baibaozi_skill_sub.projectile" slot="0" radius="0.15">
-	<result class="blast" radius="6.4" damage="5.6" push="0.3" decal="1" character_state="death" faction_compare="not_equal" />
+	<result class="blast" radius="6.4" damage="6" push="0.3" decal="1" character_state="death" faction_compare="not_equal" />
 	<trigger class="time" time_to_live="0.0"/>
 	<rotation class="random" />
 	<model mesh_filename="" />
