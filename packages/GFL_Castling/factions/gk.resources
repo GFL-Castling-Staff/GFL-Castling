@@ -353,7 +353,7 @@
 	<weapon key="gkw_m870.weapon" />
 	<weapon key="gkw_sat8.weapon" />
 	<weapon key="gkw_sat8_1802.weapon" />
-	<weapon key="gkw_sat8_1802_s.weapon" />
+	<weapon key="gkw_sat8_2601.weapon" />
 	<weapon key="gkw_supershorty.weapon" />
 	<weapon key="gkw_usas12.weapon" />
 	<weapon key="gkw_usas12_skill.weapon"/>
@@ -728,13 +728,12 @@
 
 	<!-- 妖精指令 -->
 	<weapon key="reinforcement_fairy_medic.weapon" />
-	<weapon key="reinforcement_fairy_mgsg.weapon" />
+	<!-- <weapon key="reinforcement_fairy_mgsg.weapon" /> -->
 	<weapon key="reinforcement_fairy_hvy.weapon" />
 	<weapon key="repair_fairy.weapon" />
 	<weapon key="rescue_fairy.weapon" />
 	<weapon key="target_fairy.weapon" />
-	<weapon key="binoculars_wheelchair_spawn_fairy.weapon" />
-	<weapon key="binoculars_aek999_spawn_fairy.weapon" />
+
 	<projectile key="fairy_command_defence_1.projectile" />
 	<projectile key="fairy_command_defence_2.projectile" />
 	<projectile key="fairy_command_target.projectile" />
@@ -743,7 +742,7 @@
 	<!-- <call key="rubber_airboat.call" /> -->
 	<call key="gk_airdrop_supply.call"/>
 	<call key="gk_yaoren_fairy.call" />
-	<call key="hvy_landing.call" />
+	<!-- <call key="hvy_landing.call" /> -->
 	<call key="martina.call" />
 	<call key="chiara.call" />
 	<call key="pierre.call" />

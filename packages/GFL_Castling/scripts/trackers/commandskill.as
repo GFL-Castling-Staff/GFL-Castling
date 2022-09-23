@@ -301,6 +301,7 @@ dictionary commandSkillIndex = {
         //sat8
         {"gkw_sat8.weapon",35},
         {"gkw_sat8_1802.weapon",35},
+        {"gkw_sat8_2601.weapon",35},
 
         // HK416MOD3
         {"gkw_hk416mod3.weapon",36},
@@ -2722,7 +2723,7 @@ class CommandSkill : Tracker {
                     "SAT8_SKILL3_JP.wav"
                 };
                 playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
-                playSoundAtLocation(m_metagame,"cz75_skill_throwout.wav",factionid,c_pos,1.0);
+                playSoundAtLocation(m_metagame,"grenade_throw1.wav",factionid,c_pos,1.0);
 
                 while(num_jud>0){
                     for (uint i1=0;i1<affectedCharacter.length();i1++)	{

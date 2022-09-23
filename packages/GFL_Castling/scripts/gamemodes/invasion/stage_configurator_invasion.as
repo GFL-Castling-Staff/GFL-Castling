@@ -1017,7 +1017,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 	// ------------------------------------------------------------------------------------------------
 	protected Stage@ setupStage6() {
 		Stage@ stage = createStage();
-		stage.m_mapInfo.m_name = "Bootleg Islands";
+		stage.m_mapInfo.m_name = "Corrupt lefands";
 		stage.m_mapInfo.m_path = "media/packages/GFL_Castling/maps/map5_c";
 		stage.m_mapInfo.m_id = "map5";
 

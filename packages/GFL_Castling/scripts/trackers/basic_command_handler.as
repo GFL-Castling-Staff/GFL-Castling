@@ -533,6 +533,16 @@ class BasicCommandHandler : Tracker {
 			int characterId= playerInfo.getIntAttribute("character_id");			
 			playAnimationKey(m_metagame,characterId,"celebrating2",true,true);
 		}
+
+		// admin and moderator only from here on
+		if (!m_metagame.getAdminManager().isAdmin(sender, senderId) && !m_metagame.getModeratorManager().isModerator(sender, senderId)) {
+			return;
+		}
+
+		if (checkCommand(message, "modtest")) {
+			dictionary dict = {{"TagName", "command"},{"class", "chat"},{"text", "mod or admin"}};
+			m_metagame.getComms().send(XmlElement(dict));
+		}
 		else if (checkCommand(message, "sing")) {
 
 			_log('pre_sing 0.');
@@ -580,15 +590,8 @@ class BasicCommandHandler : Tracker {
 					sendPrivateMessageKey(m_metagame,playerId,"VODerror");
 				}
 			}
-		}	
-		// admin and moderator only from here on
-		if (!m_metagame.getAdminManager().isAdmin(sender, senderId) && !m_metagame.getModeratorManager().isModerator(sender, senderId)) {
-			return;
-		}
-		if (checkCommand(message, "modtest")) {
-			dictionary dict = {{"TagName", "command"},{"class", "chat"},{"text", "mod or admin"}};
-			m_metagame.getComms().send(XmlElement(dict));
-		} else if (checkCommand(message, "sidinfo")) {
+		}			
+		else if (checkCommand(message, "sidinfo")) {
 			handleSidInfo(message,senderId);
 		} else if (checkCommand(message, "kick_id")) {
 			handleKick(message, senderId, true);
