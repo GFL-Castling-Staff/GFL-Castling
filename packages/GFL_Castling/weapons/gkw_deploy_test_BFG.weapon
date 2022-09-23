@@ -1,6 +1,6 @@
 <weapon key="gkw_deploy_test_BFG.weapon" radius="0.25" drop_count_factor_on_death="0" drop_count_factor_on_player_death="1" time_to_live_out_in_the_open="60.0">
 	<specification name="test_kcco_bfg" spawn_instance_class="vehicle" spawn_instance_key="kcco_1130.vehicle" magazine_size="1" can_shoot_standing="0" can_shoot_crouching="1" carry_in_two_hands="1" can_shoot_prone="0" class="5" consume="1" sight_range_modifier="1" slot="1" deployment="1"/>
-	<commonness value="0" in_stock="1" can_respawn_with="0"/>
+	<commonness value="0" in_stock="0" can_respawn_with="0"/>
 	<animation state_key="recoil" animation_key="deploy2"/>
 	<capacity value="0" source="rank" source_value="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
