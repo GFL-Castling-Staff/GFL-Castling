@@ -11,6 +11,7 @@
 	drag_offset="0.05"
 	destroy_on_top_hit="0"/>  
 
+	<sky_diving chute_offset="0 1.05 0.0" trigger_height="20.0" gravity="-10" mesh_filename="chute_large.mesh" texture_filename="chute.png" />
 
 	<visual class="chassis" mesh_filename="aek999_motor.mesh" texture_filename="aek999_motor.png"/>
  	<visual class="front_tire" mesh_filename="aek999_motor_wheel.mesh" texture_filename="aek999_motor.png" />

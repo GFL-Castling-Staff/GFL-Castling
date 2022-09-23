@@ -45066,7 +45066,7 @@
 
 <weapon key="Motar_cannon.weapon">
 	<tag name="bazooka"/>
-	<specification retrigger_time="0.2" accuracy_factor="0.64" sight_range_modifier="2.35" ai_sight_range_modifier="1.05" sight_height_offset="45" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="0" suppressed="0" name="M2 Mortar" class="0" projectile_speed="100.0" barrel_offset="0.6" projectiles_per_shot="1" spread_range="0.1" sustained_fire_grow_step="0.0135" sustained_fire_diminish_rate="0.008" cooldown_start="0.06" cooldown_end="0.0"/>
+	<specification retrigger_time="0.2" accuracy_factor="0.64" sight_range_modifier="2.35" ai_sight_range_modifier="1.05" sight_height_offset="45" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="0" suppressed="0" name="M2 Mortar" class="0" projectile_speed="100.0" barrel_offset="0.6" projectiles_per_shot="1" spread_range="0.1" sustained_fire_grow_step="0.0128" sustained_fire_diminish_rate="0.008" cooldown_start="0.06" cooldown_end="0.0"/>
 	<sound key="fire" fileref="m2_fire_FromREALLIFE.wav" pitch_variety="0.1" volume="1.2"/>
 	<sound key="magazine_out" fileref="portable_mortar_reload.wav" volume="0.7"/>
 	<sound key="magazine_in" fileref="dry_fire.wav" volume="0.7"/>
@@ -45129,6 +45129,90 @@
 
 <weapon key="all_vehicles_wheelchair_shield.weapon">
 	<shield offset="0.0 0.0 0.0" extent="2.8 2.8 2.8"/>
+</weapon>
+
+<weapon key="binoculars_wheelchair_spawn_fairy.weapon" on_ground_up="0 1 0">
+           
+    <specification magazine_size="1" 
+    retrigger_time="1.0" 
+    sustained_fire_grow_step="0" 
+    can_shoot_standing="1" 
+    can_shoot_crouching="1" 
+    can_shoot_prone="0" 
+    suppressed="1" 
+    name="Wheelchair spawn" 
+    class="3" 
+    consume="1"
+    sight_range_modifier="1.65" 
+    slot="1"
+    use_basic_muzzle_smoke_effect="0" />
+
+    <animation key="hold" animation_key="still, binoculars" />
+    <animation key="hold_on_wall" animation_key="still, binoculars" />
+    <animation key="hold_casual" animation_key="still, binoculars" />
+    <animation key="still_against_wall" animation_key="still, binoculars" />
+    <animation key="recoil" animation_key="recoil, binoculars" />
+    <animation key="crouching" animation_key="crouching still, binoculars" />
+    <animation key="running" animation_key="running, binoculars" />
+    <animation key="walking" animation_key="walking, binoculars" />
+    <animation key="walking_backwards" animation_key="walking backwards, binoculars" />
+    <animation key="crouch_moving" animation_key="crouching forwards, binoculars" />
+    <animation key="changing_weapon_out" animation_key="change weapon out, reversed" />
+    <animation key="changing_weapon_in" animation_key="change weapon in, reversed" />
+    <animation key="reload" animation_key="reloading, m24" />
+   
+    <model filename="binoculars.xml" />
+    <hud_icon filename="aimer.png" />
+    <commonness value="0.0" can_respawn_with="1" in_stock="1" />
+    <capacity value="1" source="rank" source_value="0.0" />
+    <inventory encumbrance="3.0" price="5.0" />
+
+    <projectile file="binoculars_wheelchair_spawn.projectile" />
+    
+   <modifier class="speed" value="-0.0" /> 
+    
+</weapon>
+
+<weapon key="binoculars_aek999_spawn_fairy.weapon" on_ground_up="0 1 0">
+           
+    <specification magazine_size="1" 
+    retrigger_time="1.0" 
+    sustained_fire_grow_step="0" 
+    can_shoot_standing="1" 
+    can_shoot_crouching="1" 
+    can_shoot_prone="0" 
+    suppressed="1" 
+    name="Wheelchair spawn" 
+    class="3" 
+    consume="1"
+    sight_range_modifier="1.65" 
+    slot="1"
+    use_basic_muzzle_smoke_effect="0" />
+
+    <animation key="hold" animation_key="still, binoculars" />
+    <animation key="hold_on_wall" animation_key="still, binoculars" />
+    <animation key="hold_casual" animation_key="still, binoculars" />
+    <animation key="still_against_wall" animation_key="still, binoculars" />
+    <animation key="recoil" animation_key="recoil, binoculars" />
+    <animation key="crouching" animation_key="crouching still, binoculars" />
+    <animation key="running" animation_key="running, binoculars" />
+    <animation key="walking" animation_key="walking, binoculars" />
+    <animation key="walking_backwards" animation_key="walking backwards, binoculars" />
+    <animation key="crouch_moving" animation_key="crouching forwards, binoculars" />
+    <animation key="changing_weapon_out" animation_key="change weapon out, reversed" />
+    <animation key="changing_weapon_in" animation_key="change weapon in, reversed" />
+    <animation key="reload" animation_key="reloading, m24" />
+   
+    <model filename="binoculars.xml" />
+    <hud_icon filename="aimer.png" />
+    <commonness value="0.0" can_respawn_with="1" in_stock="1" />
+    <capacity value="1" source="rank" source_value="0.0" />
+    <inventory encumbrance="3.0" price="5.0" />
+
+    <projectile file="binoculars_aek999_spawn.projectile" />
+    
+   <modifier class="speed" value="-0.0" /> 
+    
 </weapon>
 
 </weapons>
