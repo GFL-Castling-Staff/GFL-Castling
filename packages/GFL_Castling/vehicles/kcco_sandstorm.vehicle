@@ -35,7 +35,7 @@
 	collision_model_extent="2.8 2.4 6.4" 
 	visual_offset="0 1.4 0" 
 	drag_offset="-1.0" 
-	friction_offset="-1.0" 
+	friction_offset="-0.1" 
 	preserve_motion_on_impact_factor="0.3" />
 	<modifier class="blast_range" value="+2.0" />
 	<modifier class="blast_damage" value="-1.0" />

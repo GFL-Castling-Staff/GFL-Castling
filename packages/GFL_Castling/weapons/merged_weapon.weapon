@@ -18901,7 +18901,7 @@
 </weapon>
 
 <weapon key="gkw_deploy_test_BFG.weapon" radius="0.25" drop_count_factor_on_death="0" drop_count_factor_on_player_death="1" time_to_live_out_in_the_open="60.0">
-	<specification name="test_kcco_bfg" spawn_instance_class="vehicle" spawn_instance_key="kcco_1130.vehicle" magazine_size="1" can_shoot_standing="0" can_shoot_crouching="1" carry_in_two_hands="1" can_shoot_prone="0" class="5" consume="1" sight_range_modifier="1" slot="1" deployment="1"/>
+	<specification name="test_kcco_bfg" spawn_instance_class="vehicle" spawn_instance_key="deployed_mortar.vehicle" magazine_size="1" can_shoot_standing="0" can_shoot_crouching="1" carry_in_two_hands="1" can_shoot_prone="0" class="5" consume="1" sight_range_modifier="1" slot="1" deployment="1"/>
 	<commonness value="0" in_stock="1" can_respawn_with="0"/>
 	<animation state_key="recoil" animation_key="deploy2"/>
 	<capacity value="0" source="rank" source_value="0.0"/>
@@ -45066,7 +45066,7 @@
 
 <weapon key="Motar_cannon.weapon">
 	<tag name="bazooka"/>
-	<specification retrigger_time="0.2" accuracy_factor="0.95" sight_range_modifier="2.35" ai_sight_range_modifier="1.05" sight_height_offset="45" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="0" suppressed="0" name="M2 Mortar" class="0" projectile_speed="100.0" barrel_offset="0.6" projectiles_per_shot="1" spread_range="0.05" sustained_fire_grow_step="0.013" sustained_fire_diminish_rate="0.01" cooldown_start="0.06" cooldown_end="0.0"/>
+	<specification retrigger_time="0.2" accuracy_factor="0.64" sight_range_modifier="2.35" ai_sight_range_modifier="1.05" sight_height_offset="45" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="0" suppressed="0" name="M2 Mortar" class="0" projectile_speed="100.0" barrel_offset="0.6" projectiles_per_shot="1" spread_range="0.1" sustained_fire_grow_step="0.0135" sustained_fire_diminish_rate="0.008" cooldown_start="0.06" cooldown_end="0.0"/>
 	<sound key="fire" fileref="m2_fire_FromREALLIFE.wav" pitch_variety="0.1" volume="1.2"/>
 	<sound key="magazine_out" fileref="portable_mortar_reload.wav" volume="0.7"/>
 	<sound key="magazine_in" fileref="dry_fire.wav" volume="0.7"/>
@@ -45076,8 +45076,8 @@
 	<hud_icon filename="gkw_m2.png"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="portable_mortar.projectile" pulldown_in_air="25">
-	<result class="blast" radius="4.5" damage="5.0" push="1.0" decal="1" faction_compare="not_equal" damage_origin_vehicle="0"/>
+	<projectile file="portable_mortar.projectile" pulldown_in_air="20">
+	<result class="blast" radius="6.4" damage="8.0" push="1.0" decal="1" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	<effect class="result" type="splat_map" surface_tag="" size="3.0" atlas_index="0" layer="1"/>
 	<effect class="result" type="splat_map" surface_tag="" size="5.0" atlas_index="4" layer="0"/>
 	<effect class="result" type="splat_map" surface_tag="" size="6.0" atlas_index="0" layer="2" additive="0"/>
@@ -45097,7 +45097,7 @@
 	<effect class="activated" ref="Propulsion_gl"/>
 	<trail probability="1.0" key="FlamethrowerTrail"/>
 	</projectile>
-	<ballistics near_far_distance="1.0" speed_estimation_near="20.0" speed_estimation_far="35.0" max_speed="100.0" randomness="0.05"/>
+	<ballistics near_far_distance="1.0" speed_estimation_near="40.0" speed_estimation_far="48.0" max_speed="100.0" randomness="0.05"/>
 	<effect class="muzzle" ref="coeus"/>
 	<effect class="muzzle" ref="coeusphere"/>
 	<effect class="muzzle" ref="MusketMuzzle"/>
