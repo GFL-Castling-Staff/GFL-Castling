@@ -2723,7 +2723,7 @@ class CommandSkill : Tracker {
                     "SAT8_SKILL3_JP.wav"
                 };
                 playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
-                playSoundAtLocation(m_metagame,"cz75_skill_throwout.wav",factionid,c_pos,1.0);
+                playSoundAtLocation(m_metagame,"grenade_throw1.wav",factionid,c_pos,1.0);
 
                 while(num_jud>0){
                     for (uint i1=0;i1<affectedCharacter.length();i1++)	{
