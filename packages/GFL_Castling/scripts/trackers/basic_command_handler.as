@@ -80,6 +80,8 @@ dictionary songIndex = {
 	{"gkw_mab38mod3.weapon2.wav",39},//已检测，歌曲：啊，朋友再见
 
 	{"gkw_ots14.weapon1.wav",40},//已检测，歌曲：暗夜女巫
+
+	{"gkw_galilmod3.weapon1.wav",41},//已检测，歌曲：团结的人民永不被击败
 	// 列表末尾，不用管
 	{"end_of_list",0}
 };
@@ -131,6 +133,7 @@ array<array<float>> songInfo = {
 	{4.0,120.0}, // 38
 	{4.0,179.0}, // 39
 	{4.0,183.0}, // 40
+	{4.0,187.0}, // 41
 
 	// 列表末尾，不用管
 	{0.0,0.0}
