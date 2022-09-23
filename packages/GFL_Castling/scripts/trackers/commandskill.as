@@ -301,6 +301,7 @@ dictionary commandSkillIndex = {
         //sat8
         {"gkw_sat8.weapon",35},
         {"gkw_sat8_1802.weapon",35},
+        {"gkw_sat8_2601.weapon",35},
 
         // HK416MOD3
         {"gkw_hk416mod3.weapon",36},
