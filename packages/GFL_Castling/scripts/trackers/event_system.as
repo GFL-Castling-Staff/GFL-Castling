@@ -205,7 +205,7 @@ void excuteYaoren(GameMode@ metagame,GFL_event@ eventinfo){
         "<command class='create_instance'" +
         " faction_id='"+ eventinfo.m_factionid +"'" +
         " instance_class='vehicle'" +
-        " instance_key='hvy_landing.vehicle' " +
+        " instance_key='sg1hg1mg2_landing.vehicle' " +
         " character_id='" + eventinfo.m_characterId +"'" +
         " position='" + (eventinfo.m_pos.add(Vector3(0,50,0))).toString() + "' />";
         metagame.getComms().send(c);

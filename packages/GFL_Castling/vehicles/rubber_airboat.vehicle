@@ -66,11 +66,11 @@
 	<vehicle name="" key="sg1hg1mg2_airboat_holding" file="airboat_holding.base_vehicle">
 		<event>
 			<trigger class="destroy" />
-			<result class="spawn" instance_class="soldier" instance_key="Task_MG" min_amount="1" max_amount="1" offset="0 0.0 0" position_spread="0 0" direction_spread="0 -1" />
+			<result class="spawn" instance_class="soldier" instance_key="Task_MG" min_amount="3" max_amount="3" offset="0 0.0 0" position_spread="0 0" direction_spread="0 -1" />
 		</event>
 		<event>
 			<trigger class="destroy" />
-			<result class="spawn" instance_class="soldier" instance_key="Task_SG" min_amount="4" max_amount="4" offset="0 0.0 0" position_spread="0 0" direction_spread="0 -1" />
+			<result class="spawn" instance_class="soldier" instance_key="Task_SG" min_amount="5" max_amount="5" offset="0 0.0 0" position_spread="0 0" direction_spread="0 -1" />
 		</event>
 	</vehicle>
 	
