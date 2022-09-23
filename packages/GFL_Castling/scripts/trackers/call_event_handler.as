@@ -137,13 +137,12 @@ class call_event : Tracker {
                             if (character !is null) {
                                 dictionary a;
                                 a["%time"] = ""+getCooldown(playerName,"yaoren_8");                        
-                                sendPrivateMessageKey(m_metagame,playerId,"ac130cooldown",a);
+                                sendPrivateMessageKey(m_metagame,playerId,"callcooldown",a);
                                 GiveRP(m_metagame,characterId,500);
                             }
                         }
                         else {
-                            m_cooldown.insertLast(Call_Cooldown(playerName,playerId,1.0,"yaoren_8"));
-                            sendFactionMessageKey(m_metagame,factionId,"ac130callstarthint");
+                            m_cooldown.insertLast(Call_Cooldown(playerName,playerId,120.0,"yaoren_8"));
                             int flagId = m_DummyCallID + 15000;
                             ManualCallTask@ FairyRequest = ManualCallTask(characterId,"",0.0,factionId,stringToVector3(position),"foobar");
                             FairyRequest.setIconTypeKey("call_marker_drop");
