@@ -100,6 +100,11 @@ dictionary gameSkillIndex = {
 		// SAT8 披萨
         {"sat8_pizza",29},
 
+	    // 整活载具召唤
+        {"spawn_aek999",30},
+        {"spawn_wheelchair",31},
+
+
         // 下面这行是用来占位的，在这之上添加新的技能key和index即可
         {"666",-1}
 };
@@ -1022,6 +1027,48 @@ class GFLskill : Tracker {
 					healRangedCharacters(m_metagame,grenade_pos,factionid,2.5,3);
 				}
 				break;		
+			}
+
+			case 30:{
+				int characterId = event.getIntAttribute("character_id");
+				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+				if (character !is null) {
+					int playerId = character.getIntAttribute("player_id");
+					const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+					if(player !is null){
+						if (player.hasAttribute("aim_target")) {
+							Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
+							Vector3 target = stringToVector3(player.getStringAttribute("aim_target"));
+							float ori4 = getAimOrientation4(c_pos,target);
+							Vector3 height = Vector3(0,70,0);
+							target = target.add(height);
+							int Faction= character.getIntAttribute("faction_id");
+							spawnVehicle(m_metagame,1,Faction,target,Orientation(0,1,0,ori4),"aek999.vehicle");	
+						}
+					}
+				}
+				break;
+			}
+
+			case 31:{
+				int characterId = event.getIntAttribute("character_id");
+				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+				if (character !is null) {
+					int playerId = character.getIntAttribute("player_id");
+					const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+					if(player !is null){
+						if (player.hasAttribute("aim_target")) {
+							Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
+							Vector3 target = stringToVector3(player.getStringAttribute("aim_target"));
+							float ori4 = getAimOrientation4(c_pos,target);
+							Vector3 height = Vector3(0,70,0);
+							target = target.add(height);
+							int Faction= character.getIntAttribute("faction_id");
+							spawnVehicle(m_metagame,1,Faction,target,Orientation(0,1,0,ori4),"wheelchair.vehicle");	
+						}
+					}
+				}
+				break;
 			}
 
             default:
