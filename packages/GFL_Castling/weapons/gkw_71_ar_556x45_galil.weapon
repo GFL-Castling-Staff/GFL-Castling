@@ -19,7 +19,7 @@
         <sound key="fire" fileref="galil_fire_FromCOD17.wav" pitch_variety="0.05" volume="1.2" />
         <sound key="magazine_out" fileref="galil_mgz_out_FromCOD12.wav" volume="0.8" />
         <sound key="magazine_in" fileref="galil_mgz_in_FromCOD12.wav" volume="0.8" />
-        <sound key="cycle" fileref="galil_cycle_FromCOD7.wav" volume="0.8" />
+        <sound key="cycle" fileref="galil_cycle_FromCOD17.wav" volume="0.5" />
         <sound class="impact" fileref="rifle_drop.wav" />
         <model filename="gkw_ar_galil_from_melondove.xml" />
         <hud_icon filename="gkw_galil.png" />
@@ -59,7 +59,7 @@
         <sound key="fire" fileref="galilskill_fire_FromCSS.wav" pitch_variety="0.05" volume="1" />
         <sound key="magazine_out" fileref="galil_mgz_out_FromCOD12.wav" volume="0.7" />
         <sound key="magazine_in" fileref="galil_mgz_in_FromCOD12.wav" volume="0.7" />
-        <sound key="cycle" fileref="galil_cycle_FromCOD7.wav" volume="0.7" />
+        <sound key="cycle" fileref="galil_cycle_FromCOD17.wav" volume="0.5" />
         <sound class="impact" fileref="rifle_drop.wav" />
         <model filename="gkw_ar_galil_from_melondove.xml" />
         <hud_icon filename="gkw_galil_skill.png" />

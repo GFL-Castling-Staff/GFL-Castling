@@ -46,12 +46,9 @@
         <animation state_key="cycle" stance_key="prone" animation_key="Pshotgun0.5p" />
         <animation key="reload" animation_key="reloading, oaat" />
         <!--Sounds-->
-        <sound key="fire" fileref="ks23_fire_FromSURVARIUM.wav" pitch_variety="0.05" volume="1.2" />
-        <sound key="cycle" fileref="ks23_cycle_fromSURVARIUM.wav" />
-        <sound key="reload_one" fileref="sg1_reload_FromREALLIFE.wav" volume="0.5" />
-        <sound key="reload_one" fileref="sg2_reload_FromREALLIFE.wav" volume="0.5" />
-        <sound key="reload_one" fileref="sg3_reload_FromREALLIFE.wav" volume="0.5" />
-        <sound key="reload_one" fileref="sg4_reload_FromREALLIFE.wav" volume="0.5" />
+        <sound key="fire" fileref="ks23_fire_FromWARTHUNDER.wav" pitch_variety="0.05" volume="1.2" />
+        <sound key="cycle" fileref="ks23_cycle_fromSURVARIUM.wav" volume="0.9" />
+        <sound key="reload_one" fileref="ks23_reload_FromCOD11.wav" volume="0.65" />
         <sound class="impact" fileref="rifle_drop.wav" />
         <!--Model, Icon, Cost-->
         <model filename="gkw_ks-23_from_melondove.xml" />
@@ -135,12 +132,9 @@
         <animation state_key="cycle" stance_key="prone" animation_key="Pshotgun0.5p" />
         <animation key="reload" animation_key="reloading, oaat" />
         <!--Sounds-->
-        <sound key="fire" fileref="ks23skill_fire_FromBORDERLAND3.wav" pitch_variety="0.05" volume="1" />
-        <sound key="cycle" fileref="ks23_cycle_fromSURVARIUM.wav" />
-        <sound key="reload_one" fileref="sg1_reload_FromREALLIFE.wav" volume="0.5" />
-        <sound key="reload_one" fileref="sg2_reload_FromREALLIFE.wav" volume="0.5" />
-        <sound key="reload_one" fileref="sg3_reload_FromREALLIFE.wav" volume="0.5" />
-        <sound key="reload_one" fileref="sg4_reload_FromREALLIFE.wav" volume="0.5" />
+        <sound key="fire" fileref="ks23_fire_FromWARTHUNDER.wav" pitch_variety="0.05" volume="1.2" />
+        <sound key="cycle" fileref="ks23_cycle_fromSURVARIUM.wav" volume="0.9" />
+        <sound key="reload_one" fileref="ks23_reload_FromCOD11.wav" volume="0.65" />
         <sound class="impact" fileref="rifle_drop.wav" />
         <!--Model, Icon, Cost-->
         <commonness  value="0" in_stock="0" can_respawn_with="1" />
@@ -222,9 +216,9 @@
         <animation state_key="cycle" stance_key="prone" animation_key="Pshotgun0.5p" />
         <animation key="reload" animation_key="reloading, oaat" />
         <!--Sounds-->
-        <sound key="fire" fileref="ks23_fire_FromSURVARIUM.wav" pitch_variety="0.05" volume="1.2" />
-        <sound key="cycle" fileref="ks23_cycle_fromSURVARIUM.wav" />
-        <sound key="reload_one" fileref="sg_reload_fromCOD10.wav" volume="0.7" />
+        <sound key="fire" fileref="ks23_fire_FromWARTHUNDER.wav" pitch_variety="0.05" volume="1.2" />
+        <sound key="cycle" fileref="ks23_cycle_fromSURVARIUM.wav" volume="0.9" />
+        <sound key="reload_one" fileref="ks23_reload_FromCOD11.wav" volume="0.65" />
         <sound class="impact" fileref="rifle_drop.wav" />
         <!--Model, Icon, Cost-->
         <model filename="gkw_ks-23_from_melondove.xml" />
