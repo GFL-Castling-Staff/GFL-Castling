@@ -2,12 +2,10 @@
 <weapon file="sf.base_weapon" key="sfw_alchemist.weapon">
 	<tag name="smg" />
 	<tag name="elite" />
-	
 	<!--Weapon specifications-->
-	
-    <specification
+	<specification
 	retrigger_time="0.12"
-	accuracy_factor="0.75"
+	accuracy_factor="0.9"
 	sustained_fire_grow_step="2.0"
 	sustained_fire_diminish_rate="0.5"
 	magazine_size="20"
@@ -24,71 +22,56 @@
 	projectiles_per_shot="1"
 	burst_shots="1"
     slot="0" 
-    spread_range="0.1"
+    spread_range="0.15"
 	stab_enabled="1"/>
-	
 	<!--Animations-->
-	
 	<animation state_key="recoil"	animation_key="high recoil, pistol dual 1" />
 	<animation state_key="recoil"	animation_key="high recoil, pistol dual 2" />
 	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil, overwall dual" />
-    <animation state_key="reload"	animation_key="reloading, weapon dual2" />
-  	<animation state_key="hold"	animation_key="still, pistol dual" />
-  	<animation state_key="hold_casual"	animation_key="hold_casual, pistol dual" />
-  	<animation state_key="hold_on_wall"	animation_key="hold, overwall dual" />
-  	<animation state_key="still_against_wall"	animation_key="hold_casual, pistol dual" />
-  	<animation state_key="crouching"	animation_key="crouch, pistol dual" />
+	<animation state_key="reload"	animation_key="reloading, weapon dual2" />
+	<animation state_key="hold"	animation_key="still, pistol dual" />
+	<animation state_key="hold_casual"	animation_key="hold_casual, pistol dual" />
+	<animation state_key="hold_on_wall"	animation_key="hold, overwall dual" />
+	<animation state_key="still_against_wall"	animation_key="hold_casual, pistol dual" />
+	<animation state_key="crouching"	animation_key="crouch, pistol dual" />
 	<animation state_key="crouch_moving"	animation_key="crouching, pistol 2" />
 	<animation state_key="crouch_moving_backwards"	animation_key="crouching backwards, pistol 2" />
 	<animation state_key="running" animation_key="running,ninja" />
-  	<animation state_key="walking"	animation_key="walking, pistol dual" />
-    <animation state_key="walking_backwards" animation_key="walking backwards, pistol dual" />
-    <animation state_key="changing_weapon_in" 	animation_key="change weapon in, single hand carry" />
-    <animation state_key="prone_still" animation_key="prone_still, pistol dual" />
-	
-    <!-- <animation state_key="reload" animation_key="pistol whip" /> -->
-    <!-- <animation state_key="reload" animation_key="pistol whip 2" /> -->
-    <!-- <animation state_key="reload" animation_key="pistol whip 3" /> -->
-	
-    <animation state_key="stabbing" animation_key="pistol whip" />
-    <animation state_key="stabbing" animation_key="pistol whip 2" />
-    <animation state_key="stabbing" animation_key="pistol whip 3" />
-	
+	<animation state_key="walking"	animation_key="walking, pistol dual" />
+	<animation state_key="walking_backwards" animation_key="walking backwards, pistol dual" />
+	<animation state_key="changing_weapon_in" 	animation_key="change weapon in, single hand carry" />
+	<animation state_key="prone_still" animation_key="prone_still, pistol dual" />
+	<!-- <animation state_key="reload" animation_key="pistol whip" /> -->
+	<!-- <animation state_key="reload" animation_key="pistol whip 2" /> -->
+	<!-- <animation state_key="reload" animation_key="pistol whip 3" /> -->
+	<animation state_key="stabbing" animation_key="pistol whip" />
+	<animation state_key="stabbing" animation_key="pistol whip 2" />
+	<animation state_key="stabbing" animation_key="pistol whip 3" />
 	<!--Sounds-->
-		
 	<sound key="fire" fileref="alchemist_fire_FromHALOINFINTE.wav" pitch_variety="0.05" volume="1.4" />
-    <sound key="magazine_out" fileref="alchemist_mgz_out_FromCOD11.wav" volume="0.65" />
-    <sound key="magazine_in" fileref="" volume="0.8"/>    
-    <sound key="cycle" fileref="alchemist_cycle_FromCOD11.wav" volume="0.65" />
-
-   
+	<sound key="magazine_out" fileref="alchemist_mgz_out_FromCOD11.wav" volume="0.65" />
+	<sound key="magazine_in" fileref="" volume="0.8"/>
+	<sound key="cycle" fileref="alchemist_cycle_FromCOD11.wav" volume="0.65" />
 	<!--Model, Icon, Cost-->
-    <model filename="" />
-    <hud_icon filename="sfw_alchemist.png" />
-
-	
+	<model filename="" />
+	<hud_icon filename="sfw_alchemist.png" />
 	<!--Ballistics-->
-
-    
-    <weak_hand_hold offset="0.1" />
-    <projectile file="bullet_sf.projectile">
-		<result class="blast"  damage="4"  radius="1.5" decal="1" push="0" character_state="death" 	faction_compare="not_equal"/>
-    </projectile>
-    
-    <!--Accuracy, Movement speed-->
-        
-    <stance state_key="running" accuracy="0.2" />
-    <stance state_key="walking" accuracy="0.75" />
-    <stance state_key="crouch_moving" accuracy="0.85" />
-    <stance state_key="prone_moving" accuracy="0.95" />
-    <stance state_key="standing" accuracy="0.9" />
-    <stance state_key="crouching" accuracy="0.95" />
-    <stance state_key="prone" accuracy="1" />
-    <modifier class="speed" value="0.6" /> 
-
+	<weak_hand_hold offset="0.1" />
+	<projectile file="bullet_sf.projectile">
+		<result class="blast"  damage="2"  radius="1.8" decal="1" push="0" character_state="death" faction_compare="not_equal"/>
+	</projectile>
+	<!--Accuracy, Movement speed-->
+	<stance state_key="running" accuracy="0.75" />
+	<stance state_key="walking" accuracy="0.75" />
+	<stance state_key="crouch_moving" accuracy="0.85" />
+	<stance state_key="prone_moving" accuracy="0.95" />
+	<stance state_key="standing" accuracy="0.9" />
+	<stance state_key="crouching" accuracy="0.95" />
+	<stance state_key="prone" accuracy="1" />
+	<modifier class="speed" value="0.6" />
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5" />
 	<target_factors tag="jeep" distance="1.0" direction="0.0" squad_command="1.0" base_score="10.0" />
-    <target_factors tag="tank" distance="1.0" direction="0.0" squad_command="1.0" base_score="15.0" />
-    <target_factors tag="apc" distance="1.0" direction="0.0" squad_command="1.0" base_score="12.0" />
+	<target_factors tag="tank" distance="1.0" direction="0.0" squad_command="1.0" base_score="15.0" />
+	<target_factors tag="apc" distance="1.0" direction="0.0" squad_command="1.0" base_score="12.0" />
 	<target_factors tag="punchme" distance="1.0" direction="0.0" squad_command="1.0" base_score="30.0" />
 </weapon>
