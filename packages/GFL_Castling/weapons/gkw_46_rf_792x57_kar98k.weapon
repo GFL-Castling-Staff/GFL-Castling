@@ -104,8 +104,8 @@
         <sound key="stab_hit" fileref="blade_impact_04_fromESV.wav" pitch_variety="0.05" volume="2.0" />
         <sound key="fire" fileref="kar98k_fire_FromCOD16.wav" volume="1.2"/>
         <sound key="cycle" fileref="Kar98K_cycle_FromCOD16.wav" volume="0.8"/>
-        <sound key="magazine_out" fileref="Kar98K_mgz_out_FromCOD16.wav" volume="0.8"/>
-        <sound key="magazine_in" fileref="Kar98K_mgz_in_FromCOD16.wav" volume="0.8"/>
+        <sound key="magazine_out" fileref="kar98kmag_mgz_out_FromPOSTSCRIPTUM.wav" volume="0.9"/>
+        <sound key="magazine_in" fileref="kar98kmag_mgz_in_FromPOSTSCRIPTUM.wav" volume="0.9"/>
         <sound key="cycle_out" fileref="Kar98K_cycle_out_FromCOD16.wav" volume="0.8"/>
         <sound key="cycle_in" fileref="Kar98K_cycle_in_FromCOD16.wav" volume="0.8"/>
         <sound class="impact" fileref="rifle_drop.wav"/>
