@@ -75,7 +75,7 @@
 	
 	<event key="destroy_rp_reward">
 		<trigger class="destroy" />
-		<result class="reward" rp="1000.0" />
+		<result class="reward" rp="2000.0" />
 	</event>
 	
 	<effect event_key="destroyed" ref="SmallSmokeVehicle" offset="0.0 4.96 0.0" />

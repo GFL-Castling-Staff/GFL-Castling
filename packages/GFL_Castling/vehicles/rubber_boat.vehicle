@@ -24,8 +24,9 @@
 
 	<physics 
 	max_health="30" 
-	mass="6.0" 
-	gravity="-28"
+	mass="20.0" 
+	broken_mass="10.0" 
+	gravity="-40"
 	blast_damage_threshold="0.5"
 	extent="1.87 0.0 3.41" 
 	offset="0 0.2 0" 
@@ -33,8 +34,8 @@
 	collision_model_extent="2.8 2.0 6.0" 
 	visual_offset="0 0.7 0" 
 	top_offset="0 3.0 0" 	
-	friction_offset="0.05"
-	drag_offset="-0.05"
+	friction_offset="-0.05"
+	drag_offset="-0.5"
 	destroy_on_top_hit="0"	/> 
 
 

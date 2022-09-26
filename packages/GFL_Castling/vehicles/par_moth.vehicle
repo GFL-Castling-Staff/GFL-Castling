@@ -19,7 +19,7 @@
 	gears="1" 
 	max_limiter_speed="6.0" />
     <physics 
-	max_health="30" 
+	max_health="28" 
 	blast_damage_threshold="1.0"
 	mass="150.0" 
 	preserve_motion_on_impact_factor="0.0"
@@ -72,18 +72,14 @@
     </event>
     <event key="spot_rp_reward">
         <trigger class="spot" />
-        <result class="reward" rp="200.0" />
+        <result class="reward" rp="100.0" />
     </event>
     <event key="destroy_rp_reward">
         <trigger class="destroy" />
-        <result class="reward" rp="1000.0" />
+        <result class="reward" rp="300.0" />
     </event>
     <event>
         <trigger class="destroy" />
         <result class="spawn" instance_class="visual_item" instance_key="burning_piece_cleanup.visual_item" min_amount="10" max_amount="10" offset="0 6.0 0" position_spread="1.5 1.5" direction_spread="0.2 0.2" />
     </event>
-    <!-- <event> -->
-    <!-- <trigger class="destroy" /> -->
-    <!-- <result class="spawn" instance_class="vehicle" instance_key="par_moth.vehicle" min_amount="1" max_amount="1" offset="0 1.0 0" position_spread="0 0" direction_spread="0 0" /> -->
-    <!-- </event> -->
 </vehicle>

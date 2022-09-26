@@ -13,7 +13,11 @@ offset 载具中心偏移
 top_offset 载具顶点偏移
 collision_model_pos 载具碰撞盒中心偏移
 visual_offset 模型偏移
-collision_response_factor 碰撞强度系数 【受到撞击的强度】
+collision_response_factor 碰撞强度系数 【撞击的强度】
+preserve_motion_on_impact_factor 撞击后动量保留
 blast_push_threshold 物理强度推动阈值
-
-
+gravity 重力
+friction_offset 摩擦力偏移
+drag_offset 阻力偏移
+destroy_on_top_hit 翻车是否摧毁 【0/1】
+top_hit_tracking_time= 翻车摧毁所需时间

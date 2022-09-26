@@ -9,7 +9,7 @@
 	
     <control max_speed="12.0" acceleration="20.0" max_reverse_speed="12.0" min_health_to_steer="1.5" max_rotation="0.2" max_water_depth="6.0" can_steer_in_water="0.0" steer_smoothening="0.6" tracked="1" gears="0" max_limiter_speed="6.0" tracked_visual_tire_max_rotation="1.0" tracked_visual_tire_rotation_smoothening="0.9" simulated_speed_factor="0.1" />
 	
-    <physics max_health="150" blast_damage_threshold="3.0" mass="1500.0" broken_mass="1500" gravity="-900" remove_collision_threshold="50.0" extent="2.7 10.0 2.7" offset="0.0 +0.0 -0.0" top_offset="0 1 0" collision_model_pos="0 6.0 0" collision_model_extent="2.8 14.0 2.8" visual_offset="0 0.0 0" />
+    <physics max_health="150" blast_damage_threshold="3.0" mass="1500.0" broken_mass="1500" gravity="-90" remove_collision_threshold="50.0" extent="2.7 10.0 2.7" offset="0.0 +0.0 -0.0" top_offset="0 1 0" collision_model_pos="0 6.0 0" collision_model_extent="2.8 14.0 2.8" visual_offset="0 0.0 0" />
 	
     <modifier class="blast_range" value="+1.5" />
 	
@@ -97,7 +97,7 @@
     </event>
     <event key="destroy_rp_reward">
         <trigger class="destroy" />
-        <result class="reward" rp="1000.0" />
+        <result class="reward" rp="2000.0" />
     </event>
     <event>
 		<trigger class="spawn" />
