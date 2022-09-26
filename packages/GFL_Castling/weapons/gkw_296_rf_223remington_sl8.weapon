@@ -23,9 +23,9 @@
     <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
     <!--Sounds-->
     <sound key="fire" fileref="sl8_fire_FromWF.wav" volume="1.1" />
-    <sound key="magazine_out" fileref="g36_mgz_out_FromWF.wav" volume="0.65" />
-    <sound key="magazine_in" fileref="g36_mgz_in_FromWF.wav" volume="0.65" />
-    <sound key="cycle" fileref="g36_cycle_FromWF.wav" volume="0.65" />
+    <sound key="magazine_out" fileref="g36_mgz_out_FromCOD16.wav" volume="0.4" />
+    <sound key="magazine_in" fileref="g36_mgz_in_FromCOD16.wav" volume="0.4" />
+    <sound key="cycle" fileref="g36_cycle_FromCOD16.wav" volume="0.4" />
     <sound class="impact" fileref="rifle_drop.wav" />
     <!--Model, Icon, Cost-->
     <model filename="gkw_rf_sl8.xml" />

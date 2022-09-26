@@ -15,8 +15,8 @@
     <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
     <inventory  buy_price="7.0" sell_price="7.0" />
     <sound key="fire" fileref="fx05_fire_FromDIVISION2.wav" pitch_variety="0.05" volume="1.1" />
-    <sound key="magazine_out" fileref="g36_mgz_out_FromWF.wav" volume="0.65" />
-    <sound key="magazine_in" fileref="g36_mgz_in_FromWF.wav" volume="0.65" />
+    <sound key="magazine_out" fileref="g36_mgz_out_FromCOD16.wav" volume="0.4" />
+    <sound key="magazine_in" fileref="g36_mgz_in_FromCOD16.wav" volume="0.4" />
     <sound key="cycle" fileref="fx05_cycle_FromBF2042.wav" volume="0.8" />
     <sound class="impact" fileref="rifle_drop.wav" />
     <model filename="gkw_ar_fx05.xml" />
