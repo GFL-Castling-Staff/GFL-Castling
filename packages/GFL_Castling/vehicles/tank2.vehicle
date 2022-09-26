@@ -18,7 +18,7 @@
 
 	<control max_speed="12.0" acceleration="12.0" max_reverse_speed="8.0" TODO_min_health_to_steer="3.0" max_rotation="0.0" max_water_depth="1.9" steer_smoothening="0.99" tracked="1" gears="1" max_limiter_speed="6.0" />
 
-	<physics max_health="300.0" TODO_blast_damage_threshold="1.02" mass="500.0" 	broken_mass="10"  remove_collision_threshold="0.2"	extent="5 0.0 7" offset="0 0.0 0" top_offset="0 6.0 0" collision_model_pos="0 1.2 0" collision_model_extent="4.0 4.8 8.0" visual_offset="0 0.6 0.0" /> 
+	<physics max_health="300.0" TODO_blast_damage_threshold="1.02" mass="500.0" broken_mass="10"  remove_collision_threshold="0.2"	extent="5 0.0 7" offset="0 0.0 0" top_offset="0 6.0 0" collision_model_pos="0 1.2 0" collision_model_extent="4.0 4.8 8.0" visual_offset="0 0.6 0.0" /> 
 
 	<!-- one weapon per turret so that only one soldier controls the turret orientation -->
 	<!-- similarly, a controllable turret can only exist if it has a weapon -->

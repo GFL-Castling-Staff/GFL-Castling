@@ -747,3 +747,10 @@ void healRangedCharacters(Metagame@ metagame,Vector3 pos,int faction_id,float ra
 		healCharacter(metagame,characters[i].getIntAttribute("id"),healnum);
 	}	
 }
+
+void updateMapViewPic(Metagame@ metagame,string pic){
+	XmlElement command("command");
+	command.setStringAttribute("class", "update_map_view");
+	command.setStringAttribute("overlay_texture", pic);
+	metagame.getComms().send(command);
+}
