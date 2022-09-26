@@ -20,9 +20,9 @@
         <capacity value="1" source="rank" source_value="0.0" />
         <next_in_chain key="gkw_g36mod3_1507_skill.weapon" share_ammo="1" />
         <sound key="fire" fileref="g36_fire_FromBF2.wav" pitch_variety="0.05" volume="1.1" />
-        <sound key="magazine_out" fileref="g36_mgz_out_FromWF.wav" volume="0.65" />
-        <sound key="magazine_in" fileref="g36_mgz_in_FromWF.wav" volume="0.65" />
-        <sound key="cycle" fileref="g36_cycle_FromWF.wav" volume="0.65" />
+        <sound key="magazine_out" fileref="g36_mgz_out_FromCOD16.wav" volume="0.4" />
+        <sound key="magazine_in" fileref="g36_mgz_in_FromCOD16.wav" volume="0.4" />
+        <sound key="cycle" fileref="g36_cycle_FromCOD16.wav" volume="0.4" />
         <sound class="impact" fileref="rifle_drop.wav" volume="1"/>
         <model filename="gkw_ar_g36_1507.xml" />
         <hud_icon filename="gkw_g36_1507.png" />
