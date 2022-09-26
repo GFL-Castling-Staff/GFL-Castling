@@ -58,7 +58,7 @@ particle_system Laser_Burnout
         position 0 0.2 0
         direction 0 1 0
         velocity 0.01
-        time_to_live 5.0
+        time_to_live 3.0
         duration 0.05
         emission_rate 21
     }
@@ -98,7 +98,7 @@ particle_system Laser_Burnout_on_staticobject
         position 0 0.2 0
         direction 0 1 0
         velocity 0.01
-        time_to_live 5.0
+        time_to_live 3.0
         duration 0.05
         emission_rate 21
     }
