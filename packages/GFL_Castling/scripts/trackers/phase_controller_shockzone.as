@@ -128,7 +128,7 @@ class map105_Phase2 : map105_Phase {
 		if (factionId == 2) {
 			// kcco倒了
 			m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 3.0, 0, "Map105WIN", dictionary(),2.0, "explosion3.wav"));
-			updateMapViewPic("map_ruin.png")
+			updateMapViewPic(m_metagame,"map_ruin.png");
 		}
 	}
 };
