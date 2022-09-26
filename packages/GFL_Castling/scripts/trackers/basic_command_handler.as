@@ -527,6 +527,13 @@ class BasicCommandHandler : Tracker {
 		if (!m_metagame.getAdminManager().isAdmin(sender, senderId)) {
 			return;
 		}
+		else if (checkCommand(message, "anime1")) {
+			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
+			if (playerInfo is null) return;
+			int characterId= playerInfo.getIntAttribute("character_id");			
+			playAnimationKey(m_metagame,characterId,"celebrating2",true,true);
+		}
+
 		else if (checkCommand(message, "testa2")) {
 			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
 			if (playerInfo is null) return;
