@@ -32,10 +32,10 @@
 	
 	<!--Sounds-->
 	
-    <sound key="fire" fileref="gm6_fire_FromCOD10.wav" pitch_variety="0.05" volume="1.3" />
-    <sound key="cycle" fileref="gm6_cycle_FromWF.wav" volume="0.6"/>
-    <sound key="magazine_out" fileref="gm6_mgz_out_FromFC5.wav" volume="0.6"/>
-    <sound key="magazine_in" fileref="gm6_mgz_in_FromFC5.wav" volume="0.6"/>
+    <sound key="fire" fileref="gm6_fire_FromCOD17.wav" pitch_variety="0.05" volume="1.2" />
+    <sound key="cycle" fileref="gm6_cycle_FromCOD19.wav" volume="0.7"/>
+    <sound key="magazine_out" fileref="gm6_mgz_out_FromCOD19.wav" volume="0.7"/>
+    <sound key="magazine_in" fileref="gm6_mgz_in_FromCOD19.wav" volume="0.7"/>
     <sound class="impact" fileref="rifle_drop.wav" volume="1"/>
    
 	<!--Model, Icon, Cost-->
