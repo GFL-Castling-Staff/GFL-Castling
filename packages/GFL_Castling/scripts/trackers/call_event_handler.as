@@ -53,7 +53,7 @@ class call_event : Tracker {
             int playerId = event.getIntAttribute("player_id");
 
             const XmlElement@ playerinfo = getPlayerInfo(m_metagame, playerId);
-
+            if (playerinfo is null) return;
             string playerName = playerinfo.getStringAttribute("name");
 
             if (phase == "launch") {
