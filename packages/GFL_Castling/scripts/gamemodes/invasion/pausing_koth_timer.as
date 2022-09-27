@@ -8,15 +8,17 @@ class PausingKothTimer : Tracker {
 	protected bool m_started;
 	protected float m_time;
 	protected bool m_bgm;
+	protected bool m_suppress;
 
 	// --------------------------------------------
-	PausingKothTimer(GameModeInvasion@ metagame, float time,bool bgm = true) {
+	PausingKothTimer(GameModeInvasion@ metagame, float time,bool bgm = true,bool suppress = true) {
 		super();
 
 		@m_metagame = @metagame;
 		m_started = false;
 		m_time = time;
 		m_bgm = bgm;
+		m_suppress = suppress;
 	}
 
 	// --------------------------------------------
@@ -24,12 +26,22 @@ class PausingKothTimer : Tracker {
 		_log("starting PausingKothTimer", 1);
 		m_started = true;
 		m_metagame.getComms().send("<command class='set_game_timer' faction_id='0' pause='1' time='" + m_time + "' />");
-		XmlElement command("command");
-		command.setStringAttribute("class", "change_game_settings");
-		XmlElement f1("faction");
-		f1.setIntAttribute("disable_enemy_spawnpoints_soldier_count_offset", -100);
-		command.appendChild(f1);
-		m_metagame.getComms().send(command);
+		if(m_suppress){
+			XmlElement command("command");
+			command.setStringAttribute("class", "change_game_settings");
+			for (uint i = 0; i < m_metagame.getFactions().size(); ++i) {
+				if (i == 0) {
+					XmlElement faction("faction");
+					command.appendChild(faction);
+				}
+				else {
+					XmlElement faction("faction");
+					faction.setIntAttribute("disable_enemy_spawnpoints_soldier_count_offset", -100);
+					command.appendChild(faction);
+				}
+			}
+			m_metagame.getComms().send(command);
+		}
 		refresh();
 	}
 

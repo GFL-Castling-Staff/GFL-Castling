@@ -363,7 +363,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 		stage.m_defenseWinTime = 360; 
 		stage.m_defenseWinTimeMode = "custom";
-		stage.addTracker(PausingKothTimer(m_metagame, stage.m_defenseWinTime,false));
+		stage.addTracker(PausingKothTimer(m_metagame, stage.m_defenseWinTime,false,false));
 
 		{
 			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0, 0.6, 0.2));                                            
