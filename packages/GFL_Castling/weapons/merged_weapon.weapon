@@ -44948,7 +44948,7 @@
 </weapon>
 
 <weapon key="parw_moth_mg.weapon">
-	<specification slot="2" retrigger_time="0.2" accuracy_factor="1.0" sustained_fire_grow_step="0.06" sustained_fire_diminish_rate="0.1" sight_range_modifier="1.0" ai_sight_range_modifier="1.15" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="0" suppressed="0" name="Paradeus Moth MG" class="0" projectile_speed="120.0" use_basic_muzzle_smoke_effect="0" barrel_offset_3d="0 0.5 2.0" cooldown_start="0.1" cooldown_end="0.0"/>
+	<specification slot="2" retrigger_time="0.2" accuracy_factor="1.0" sustained_fire_grow_step="0.06" sustained_fire_diminish_rate="0.1" sight_range_modifier="1.15" ai_sight_range_modifier="0.95" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="0" suppressed="0" name="Paradeus Moth MG" class="0" projectile_speed="120.0" use_basic_muzzle_smoke_effect="0" barrel_offset_3d="0 0.5 2.0" cooldown_start="0.1" cooldown_end="0.0"/>
 	<animation key="recoil" animation_key="recoil1"/>
 	<animation key="recoil" animation_key="recoil2"/>
 	<animation key="recoil" animation_key="recoil3"/>

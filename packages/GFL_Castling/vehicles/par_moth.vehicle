@@ -45,9 +45,9 @@
     </character_slot>
     <character_slot type="passenger" position="1 0.7 0" rotation="1.05" exit_rotation="1.57" hiding="0" animation_key="passenger, boat"  attached_on_turret="1" seat_position="0.7 0.3 0.8" rotation_range="3.40"/>
     <character_slot type="passenger" position="-1 0.7 0" rotation="-1.05" exit_rotation="-1.57" hiding="0" animation_key="passenger, boat"  attached_on_turret="1" seat_position="-0.7 0.3 0.8" rotation_range="3.40"/>
-    <rev_sound filename="vtol_engine_online.wav" low_pitch="0.4" high_pitch="0.5" low_rev="0.0" high_rev="1.0" volume="1.0" />
+    <rev_sound filename="vtol_engine_online.wav" low_pitch="0.4" high_pitch="0.5" low_rev="0.0" high_rev="1.0" volume="2.0" />
     <sound key="squeal" filename="tire_squeal.wav" />
-    <sound key="ignition" filename="vtol_engine_poweron.wav" volume="1.0" />
+    <sound key="ignition" filename="vtol_engine_poweron.wav" volume="2.0" />
     <sound key="hit" filename="car_hit2.wav" />
     <sound key="hit" filename="car_hit1.wav" />
     <sound key="turret_rotation" filename="turret_rotation1.wav" volume="3" />
