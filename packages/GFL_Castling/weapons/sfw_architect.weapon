@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
+<weapons>
 <weapon file="sf.base_weapon" key="sfw_architect.weapon">
     <tag name="bazooka" />
-	<tag name="antiarmor" />
-	<tag name="elite" />
-    <specification retrigger_time="11.1" accuracy_factor="1.0" sustained_fire_grow_step="0.4" sustained_fire_diminish_rate="0.1" magazine_size="10" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" suppressed="0" name="SF-Architect" class="0" sight_range_modifier="1.5" projectile_speed="85.0" slot="0" projectiles_per_shot="1" />
+    <tag name="antiarmor" />
+    <tag name="elite" />
+    <specification retrigger_time="7.0" accuracy_factor="1.0" sustained_fire_grow_step="0.4" sustained_fire_diminish_rate="0.1" magazine_size="10" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" suppressed="0" name="SF-Architect" class="0" sight_range_modifier="1.75" projectile_speed="85.0" slot="0" projectiles_per_shot="1" />
     <animation key="recoil" animation_key="recoil, law" />
     <animation key="reload" animation_key="reloading, portable mortar" />
-    <!-- <animation state_key="reload" animation_key="reloading, pf98" />     -->
     <animation key="hold" animation_key="still, with law" />
     <animation key="hold_on_wall" animation_key="still, with law" />
-
     <animation state_key="walking" animation_key="walking, hip fire" />
     <animation state_key="running" animation_key="walking, hip fire" />
     <animation state_key="crouch_moving" animation_key="crouching forwards, hip fire" />
     <animation state_key="walking_backwards" animation_key="walking backwards, hip fire" />
-
     <sound key="fire" fileref="Architect_fire_FromCOD16.wav" pitch_variety="0.00" volume="2.4"/>
     <sound key="cycle" fileref="Architectskill_cycle_FromCOD17.wav" />
     <sound key="magazine_out" fileref="Architectskill_mgz_out_FromCOD17.wav" />
@@ -23,24 +21,72 @@
     <sound key="cycle_in" fileref="sniper_cycle_in.wav" />
     <sound class="impact" fileref="rifle_drop.wav" />
     <model filename="sfw_architect.xml" />
-
-
-    <!-- <ballistics near_far_distance="1000.0" speed_estimation_near="50.0" speed_estimation_far="50.0" max_speed="125.0" randomness="0.0" /> -->
     <ballistics curve_height="20.0" near_far_distance="25" speed_estimation_near="20.0" speed_estimation_far="40.0" max_speed="90.0" randomness="0.0" tweak_factor="1.5" />
-
     <projectile file="sfw_architect_rocket.projectile" />
-    <result class="blast" damage="7.0" radius="2.3" decal="1" push="1" character_state="death" faction_compare="not_equal"/>
     <weak_hand_hold offset="0.3" />
     <commonness value="0.00001" in_stock="1" />
-    <inventory encumbrance="45.0" buy_price="200.0" sell_price="150.0" />
+    <inventory encumbrance="10.0" buy_price="0.0" sell_price="0.0" />
     <hud_icon filename="sfw_architect.png" />
-
-    <capacity value="0" source="rank" source_value="0.0" />
     <capacity value="1" source="rank" source_value="0.0" />
-
-
-
     <effect class="muzzle" ref="LawMuzzle" />
     <effect class="muzzle" ref="UpDust" />
-
 </weapon>
+<weapon file="sf.base_weapon" key="sfw_architect_at.weapon">
+    <tag name="bazooka" />
+    <tag name="antiarmor" />
+    <tag name="elite" />
+    <specification 
+    retrigger_time="5.0" 
+    accuracy_factor="1.0" 
+    sustained_fire_grow_step="0.5" 
+    sustained_fire_diminish_rate="0.1" 
+    magazine_size="1" 
+    can_shoot_standing="1" 
+    can_shoot_crouching="1" 
+    can_shoot_prone="0"
+    suppressed="0" 
+    name="SF-Architect" 
+    class="3" 
+    consume="1"
+    reload_one_at_a_time="1" 
+    sight_range_modifier="1.5" 
+    projectile_speed="150.0" 
+    slot="1" 
+    projectiles_per_shot="1" />
+    <capacity value="6" source="rank" source_value="0.0" />
+    <animation key="recoil" animation_key="recoil, law" />
+    <animation key="reload" animation_key="reloading, portable mortar" />
+    <animation key="hold" animation_key="still, with law" />
+    <animation key="hold_on_wall" animation_key="still, with law" />
+    <animation state_key="walking" animation_key="walking, hip fire" />
+    <animation state_key="running" animation_key="walking, hip fire" />
+    <animation state_key="crouch_moving" animation_key="crouching forwards, hip fire" />
+    <animation state_key="walking_backwards" animation_key="walking backwards, hip fire" />
+    <sound key="fire" fileref="architect_normal_FromCOD4R.wav" pitch_variety="0.00" volume="2.4"/>
+    <sound key="cycle" fileref="Architectskill_cycle_FromCOD17.wav" />
+    <sound key="magazine_out" fileref="Architectskill_mgz_out_FromCOD17.wav" />
+    <sound key="magazine_in" fileref="Architectskill_mgz_in_FromCOD17.wav" />
+    <sound key="cycle_out" fileref="sniper_cycle_out.wav" />
+    <sound key="cycle_in" fileref="sniper_cycle_in.wav" />
+    <sound class="impact" fileref="rifle_drop.wav" />
+    <model filename="sfw_architect.xml" />
+    <ballistics near_far_distance="1000.0" speed_estimation_near="120.0" speed_estimation_far="120.0" max_speed="125.0" randomness="0.0" />
+    <projectile file="at4.projectile">
+        <result class="blast" damage="40" radius="3.0" decal="1" push="1.0" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+        <model mesh_filename="sfw_architect_rocket.xml" />
+    </projectile>
+    <weak_hand_hold offset="0.3" />
+    <commonness value="0.00001" in_stock="1" />
+    <inventory encumbrance="10.0" buy_price="0.0" sell_price="0.0" />
+    <hud_icon filename="sfw_architect.png" />
+    <capacity value="1" source="rank" source_value="0.0" />
+    <effect class="muzzle" ref="LawMuzzle" />
+    <effect class="muzzle" ref="UpDust" />
+    <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
+    <target_factors tag="heavy_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="10.0"/>
+    <target_factors tag="light_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0"/>
+    <target_factors tag="tank" distance="1.0" direction="0.0" squad_command="1.0" base_score="10.0"/>
+    <target_factors tag="apc" distance="1.0" direction="0.0" squad_command="1.0" base_score="7.0"/>
+    <target_factors tag="jeep" distance="1.0" direction="0.0" squad_command="1.0" base_score="5.0"/>
+</weapon>
+</weapons>
