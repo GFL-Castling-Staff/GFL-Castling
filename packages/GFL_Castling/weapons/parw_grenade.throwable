@@ -19,9 +19,10 @@
     <capacity value="16" source="rank" source_value="11.45" />
     <capacity value="20" source="rank" source_value="23.33" />
 
-    <sound class="result" key="other" fileref="explosion_FromSQUAD_1.wav" />
-    <sound class="result" key="other" fileref="explosion_FromSQUAD_2.wav" />
-    <sound class="result" key="other" fileref="explosion_FromSQUAD_3.wav" />    
+    <sound class="result" key="other" fileref="parw_explosion1_FromCOD13.wav" />
+    <sound class="result" key="other" fileref="parw_explosion2_FromCOD13.wav" />
+    <sound class="result" key="other" fileref="parw_explosion3_FromCOD13.wav" />
+    <sound class="result" key="other" fileref="parw_explosion4_FromCOD13.wav" />      
 
     <sound class="result" key="terrain" copy="other" />
     <sound class="result" key="static_object" copy="other" />
