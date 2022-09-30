@@ -22,8 +22,14 @@
 	<animation state_key="changing_weapon_in" animation_key="change weaponreload, othrusdog" />
 	<animation state_key="stabbing" animation_key="stab attack, othrusdog" />
 	<model filename="" />
-	<shield offset="0.07 0.02 0.07" extent="0.55 0.55 0.55" usable_for_cover="0"/>
+	<shield offset="0.07 0.02 0.07" extent="0.8 0.8 0.8" usable_for_cover="0"/>
 	<modifier class="projectile_blast_result" input_character_state="none" output_character_state="none" consumes_item="1"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0" />
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" consumes_item="0" />
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />	
 	<hud_icon filename="testing.png" />
 	<effect class="muzzle" ref="sawsnone" />
 	<projectile file="teal.projectile">
@@ -110,7 +116,13 @@
 	<model filename="" />
 	<hud_icon filename="testing.png" />
 	<effect class="muzzle" ref="sawsnone" />
-	<shield offset="0.07 0.02 0.07" extent="0.55 0.55 0.55" usable_for_cover="0"/>
+	<shield offset="0.07 0.02 0.07" extent="0.8 0.8 0.8" usable_for_cover="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0" />
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" consumes_item="0" />
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
 	<modifier class="projectile_blast_result" input_character_state="none" output_character_state="none" consumes_item="1"/>
 	<projectile file="teal.projectile">
 		<result class="blast" damage="1.1" radius="2.0" decal="1" push="0" character_state="death" faction_compare="not_equal"/>

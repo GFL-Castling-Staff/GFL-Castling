@@ -434,8 +434,7 @@
 	</soldier>
 
 	<soldier name="default_spawn_ai" spawn_score="0.0" copy_from="default_ai">
-		<resources file="common.resources" />
-		<resources file="sf_call.resources" />
+		<resources file="sf_call.resources" clear_calls="1"/>
 		<item_class_existence_config>
 			<!-- secondaries -->
 			<item_class_existence class="weapon" slot="1" probability="1.0" />
@@ -1103,41 +1102,6 @@
 		<resources file="gk_store.resources" />
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="0.0" max="0.05" />
-		</attribute_config>
-	</soldier>
-
-	<!-- chicken -->
-	<soldier name="chicken" spawn_score="0.0" squad_size_xp_cap="0.0" firstnames_file="chicken_firstnames.txt" lastnames_file="chicken_lastnames.txt">
-		<character filename="chicken_base.character" />
-		<ai filename="chicken.ai" />
-
-		<models>
-			<model filename="chick_en1.xml" />
-			<model filename="chick_en2.xml" />
-			<model filename="chick_rooster.xml" />
-			<model filename="chick_brown.xml" />
-			<model filename="chick_yellow.xml" />
-			<model filename="chick_glasses.xml" />
-			<model filename="chick_bananchick.xml" />
-		</models>
-
-		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1"/>
-
-		<item_class_existence_config>
-			<!-- secondaries -->
-			<item_class_existence class="weapon" slot="1" probability="0.0" />
-			<!-- wearables -->
-			<item_class_existence class="carry_item" slot="1" probability="0.0" />
-			<!-- backpack -->
-			<item_class_existence class="carry_item" slot="0" probability="0.0" />
-		</item_class_existence_config>
-
-		<attribute_config class="rp">
-			<attribute weight="1.0" min="0.0" max="0.0" />
-		</attribute_config>
-
-		<attribute_config class="xp">
-			<attribute weight="1.0" min="0.0" max="0.0" />
 		</attribute_config>
 	</soldier>
 

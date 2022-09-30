@@ -104,18 +104,8 @@
 	<vehicle key="cargo_helicopter_broken.vehicle" />
 
 	<vehicle key="cargo_truck.vehicle" />
-	<vehicle key="prison_bus.vehicle" />
-	<vehicle key="prison_door.vehicle" />
-	<vehicle key="prison_hatch.vehicle" />
 
 	<vehicle key="tank_trap.vehicle" />
-
-	<!-- aa_emplacement can not be enabled by default; will be enabled by campaign script dynamically for the faction that has it -->
-<!-- 	<vehicle key="aa_emplacement.vehicle" /> -->
-	<!-- heli extraction is dynamic campaign decoration, not used by default -->
-<!-- 	<vehicle key="heli_extraction.vehicle" /> -->
-
-<!-- 	<vehicle key="tank2.vehicle" /> -->
 
 	<vehicle key="special_cargo_vehicle1.vehicle" />
 	<vehicle key="special_cargo_vehicle2.vehicle" />
@@ -179,28 +169,10 @@
 	<vehicle key="radar_tank.vehicle" />
 	<vehicle key="radar_tank2.vehicle" />
 
-	<vehicle key="vulcan_tank.vehicle" />
-	<vehicle key="buggy.vehicle" />
-	<vehicle key="technical.vehicle" />
-
-	<vehicle key="wiesel_tow.vehicle" />
-	<vehicle key="wiesel_spawn.vehicle" />
-
 	<vehicle key="banana_car.vehicle" />
 	<vehicle key="banana_car_spawn.vehicle" />
 	<vehicle key="banana_car_para.vehicle" />
 	<vehicle key="banana_peel_spawner.vehicle" />
-
-	<vehicle key="aav7.vehicle" />
-	<vehicle key="aav7_spawn.vehicle" />
-	<vehicle key="aav7_para.vehicle" />
-	<vehicle key="atv_armory_para.vehicle" />
-	<vehicle key="buggy_para.vehicle" />
-	<vehicle key="humvee_gl_para.vehicle" />
-	<vehicle key="rubber_boat_para.vehicle" />
-	<vehicle key="wiesel_tow_para.vehicle" />
-	<vehicle key="cover_crate_para.vehicle" />
-
 
 	<vehicle key="emp.vehicle" />
 	<vehicle key="guntruck.vehicle" />
@@ -208,39 +180,11 @@
 	<vehicle key="guntruck_spawn.vehicle" />
 	<vehicle key="hornet.vehicle" />
 	<vehicle key="hornet_2.vehicle" />
-	<vehicle key="m113_tank_acav.vehicle" />
-	<vehicle key="m113_tank_acav_para.vehicle" />
 	<vehicle key="icecream.vehicle" />
-	<vehicle key="icecream.vehicle" />
-	<vehicle key="icecream_Solar_Sea.vehicle" />      
-	<vehicle key="icecream_akino.vehicle" />
-	<vehicle key="icecream_connexion.vehicle" />  
-	<vehicle key="medivan.vehicle" />
-	<vehicle key="repair.vehicle" />
-	<vehicle key="repair_crane.vehicle" />
-	<vehicle key="vulcan_acav_spawn.vehicle" />
-
-	<vehicle key="zjx19.vehicle" />
-	<vehicle key="zjx19_para.vehicle" />
-	<vehicle key="zjx19_spawn.vehicle" />
-
-	<vehicle key="wiesel_mk20.vehicle" />
-	<vehicle key="noxe.vehicle" />
-	<vehicle key="noxe_para.vehicle" />
-	<vehicle key="sev90.vehicle" />
-	<vehicle key="sev90_para.vehicle" />
-	<vehicle key="legion.vehicle" />
-	<vehicle key="flamer_tank.vehicle" />
-	<vehicle key="flamer_tank_para.vehicle" />
-	<vehicle key="m528.vehicle" />	
 	
-
-	
-	
-	<call key="rubber_boat.call" />
 	
 	<!-- 垃圾/箱子 -->
-	<carry_item key="cigars.carry_item" />
+	<!-- <carry_item key="cigars.carry_item" />
 	<carry_item key="beer_can.carry_item" />
 	<carry_item key="lighter.carry_item" />   
 	<carry_item key="steroids.carry_item" />  
@@ -287,42 +231,10 @@
 	<carry_item key="comic_book.carry_item" />
 	<carry_item key="rwr_handbook.carry_item" />
 	<carry_item key="oscar_statue.carry_item" />
-	<carry_item key="laptop.carry_item" />  
+	<carry_item key="laptop.carry_item" />   -->
 
-	<carry_item key="gift_box_1.carry_item" />  
-	<carry_item key="gift_box_2.carry_item" />
-	<carry_item key="gift_box_3.carry_item" />  
-	<!-- <carry_item key="gift_box_community_1.carry_item" />  -->
-	<carry_item key="gift_box_community_2.carry_item" />  
-	<carry_item key="gift_box_community_3.carry_item" /> 
-	<carry_item key="gift_box_community_4.carry_item" />
-	<carry_item key="gift_box_community_5.carry_item" />      
-	<carry_item key="gift_box_community_6.carry_item" /> 	
-	<carry_item key="dollcraft.carry_item"/>
-	<carry_item key="firecontrol.carry_item"/>
 
-	
-    <carry_item key="wild_gifts.carry_item" />
-    <carry_item key="snow_gifts.carry_item" />
-    <carry_item key="forest_gifts.carry_item" />
-    <carry_item key="city_gifts.carry_item" />
-	<carry_item key="SOPII_Ant_Doll.carry_item" />
-	<carry_item key="RO365_Ant_Doll.carry_item" />
-	<carry_item key="sweet_bomb_box.carry_item" />
-	<carry_item key="double_enjoyment_package.carry_item" />
-	<carry_item key="holy_meat_buns.carry_item" />
-	<carry_item key="ice_theatre.carry_item" />
-	<!-- 群友甲及其他皮肤甲 -->
-	<carry_item key="gentiane.carry_item" />
-	<carry_item key="machlian.carry_item" />
-	<carry_item key="kalina.carry_item" />
-	<carry_item key="m1903.carry_item" />
-	<carry_item key="light.carry_item" />
-	<carry_item key="jill.carry_item" />
-	<carry_item key="K309.carry_item" />
-	<carry_item key="IAQS.carry_item" />
-	<carry_item key="NZ75.carry_item" />
-	<carry_item key="woshieoe.carry_item" />
+
 	<!-- 制作组盒子 -->
 	<carry_item key="ak12_box.carry_item" />
 	<carry_item key="ftggrg_box.carry_item" />

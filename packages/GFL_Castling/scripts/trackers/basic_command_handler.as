@@ -658,7 +658,8 @@ class BasicCommandHandler : Tracker {
 		} else  if(checkCommand(message, "stunme")) {
 			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
 			const XmlElement@ characterInfo = getCharacterInfo(m_metagame, playerInfo.getIntAttribute("character_id"));
-			Vector3 pos = stringToVector3(characterInfo.getStringAttribute("position"));					
+			Vector3 pos = stringToVector3(characterInfo.getStringAttribute("position"));
+			pos = pos.add(Vector3(0,1.5,0));
 			string c = 
 				"<command class='create_instance'" +
 				" faction_id='" + 0 + "'" +
@@ -670,7 +671,8 @@ class BasicCommandHandler : Tracker {
 		} else  if(checkCommand(message, "noneme")) {
 			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
 			const XmlElement@ characterInfo = getCharacterInfo(m_metagame, playerInfo.getIntAttribute("character_id"));
-			Vector3 pos = stringToVector3(characterInfo.getStringAttribute("position"));					
+			Vector3 pos = stringToVector3(characterInfo.getStringAttribute("position"));	
+			pos = pos.add(Vector3(0,1.5,0));				
 			string c = 
 				"<command class='create_instance'" +
 				" faction_id='" + 0 + "'" +
@@ -899,9 +901,8 @@ class BasicCommandHandler : Tracker {
 
 			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"carry_item","upgrade_fg42.carry_item");
 			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"carry_item","upgrade_g41.carry_item");
-		} else if (checkCommand(message,"114514sf")){
-			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
-			addMutilItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"carry_item","gift_box_1.carry_item",400);
+		} else if (checkCommand(message,"admintest")){
+			ProfileSave(m_metagame);
 		} else if (checkCommand(message,"1919test")){
 			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
 			addMutilItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"carry_item","complete_box.carry_item",20);  			            			
