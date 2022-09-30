@@ -419,8 +419,7 @@ class CommandSkill : Tracker {
                 }
 
                 if (startsWith(c_armorType,'gk_persica')){
-                    m_modifer.setCooldownReduction(0.9);
-                    m_modifer.setCooldownMinus(2.0);
+                    m_modifer.setCooldownReduction(0.8);
                 }
 
                 if (AR_grenade_AntiArmor.find(c_weaponType)> -1){
