@@ -42,4 +42,6 @@
     <effect class="result" key="static_object" copy="terrain" />
     <effect class="result" key="character" copy="terrain" /> 
     <effect class="result" key="vehicle" copy="terrain" /> 
+    <effect class="activated" ref="SatchelSparkle" />
+    <effect class="activated" ref="SatchelFlash" />
 </projectile>
