@@ -3,6 +3,8 @@
 	<tag name="meat_man" />
   <parameter class="walking_steer_amount" value="0.45" />
 	<parameter class="running_steer_amount" value="0.63" />
+  <parameter class="request_strike_time" value="-1.0" />
+	<parameter class="request_strike_no_signal_time" value="-1.0" /> 
   <comment key="Driver, abandon vehicle" text="This vehicle is Toast" />
   <comment key="Driver, abandon vehicle" text="This thing is gonna blow!" />
   <comment key="Driver, abandon vehicle" text="Damn, gotta bail out now!" />

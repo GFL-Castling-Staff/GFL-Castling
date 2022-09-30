@@ -666,7 +666,19 @@ class BasicCommandHandler : Tracker {
 				" instance_key='" + "selfstun.projectile" + "'" +
 				" position='" + pos.toString() + "'" +
 				" character_id='" + playerInfo.getIntAttribute("character_id") + "'/>";				
-			m_metagame.getComms().send(c);				      
+			m_metagame.getComms().send(c);		
+		} else  if(checkCommand(message, "noneme")) {
+			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
+			const XmlElement@ characterInfo = getCharacterInfo(m_metagame, playerInfo.getIntAttribute("character_id"));
+			Vector3 pos = stringToVector3(characterInfo.getStringAttribute("position"));					
+			string c = 
+				"<command class='create_instance'" +
+				" faction_id='" + 0 + "'" +
+				" instance_class='grenade'" +
+				" instance_key='" + "selfnone.projectile" + "'" +
+				" position='" + pos.toString() + "'" +
+				" character_id='" + playerInfo.getIntAttribute("character_id") + "'/>";				
+			m_metagame.getComms().send(c);							      
 		} else if (checkCommand(message, "dc")) {
 			spawnInstanceNearPlayer(senderId, "cover_resource.weapon", "weapon");
 		} else if (checkCommand(message, "dgl")) {
