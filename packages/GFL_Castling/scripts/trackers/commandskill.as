@@ -1150,16 +1150,16 @@ class CommandSkill : Tracker {
 					target0.m_values[0] = target0.m_values[0]-xx1;
 					target0.m_values[2] = target0.m_values[2]-yy1;
 					target = target0.toString();
-                    spawnSoldier(m_metagame,1,0,target,"GK_Agent");
+                    spawnSoldier(m_metagame,1,0,target,"Dummy_Agent");
 					
 					target0.m_values[2] = target0.m_values[2]+2*yy1;
 					target = target0.toString();
-                    spawnSoldier(m_metagame,1,0,target,"GK_Agent");
+                    spawnSoldier(m_metagame,1,0,target,"Dummy_Agent");
 
 					target0.m_values[0] = target0.m_values[0]+3*xx1;
 					target0.m_values[2] = target0.m_values[2]-yy1;
 					target = target0.toString();					
-                    spawnSoldier(m_metagame,1,0,target,"GK_Agent");					
+                    spawnSoldier(m_metagame,1,0,target,"Dummy_Agent");					
                 }
                 array<string> Voice={
                     "Agent_buhuo_SKILL02_JP.wav"

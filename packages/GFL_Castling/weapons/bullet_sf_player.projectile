@@ -9,18 +9,15 @@
     <sound class="result" key="terrain" fileref="ricochet3.wav" />
     <sound class="result" key="terrain" fileref="ricochet4.wav" />
 
-    <sound class="result" key="shield" file="metal_hit_1.wav" pitch_variety="0.2" volume="1.0" />
-    <sound class="result" key="shield" file="metal_hit_2.wav" pitch_variety="0.2" volume="1.0" /> 
-    <sound class="result" key="shield" file="metal_hit_3.wav" pitch_variety="0.2" volume="1.0" /> 
-    <sound class="result" key="shield" file="metal_hit_4.wav" pitch_variety="0.2" volume="1.0" /> 
-    <sound class="result" key="shield" file="metal_hit_5.wav" pitch_variety="0.2" volume="1.0" /> 
-    <sound class="result" key="shield" file="metal_hit_6.wav" pitch_variety="0.2" volume="1.0" /> 
+    <sound class="result" key="shield" fileref="ricochet5.wav" />
+    <sound class="result" key="shield" fileref="ricochet6.wav" />
+    <sound class="result" key="shield" fileref="ricochet7.wav" />
     
     <sound class="result" key="character"  fileref="impact_body2.wav" pitch_variety="0.4" volume="0.7" />
     <sound class="result" key="character"  fileref="impact_body3.wav" pitch_variety="0.4" volume="0.7" />
     <sound class="result" key="character"  fileref="impact_body4.wav" pitch_variety="0.4" volume="0.7" />
     <sound class="result" key="character"  fileref="impact_body3.wav" pitch_variety="0.4" volume="0.7" />
-    <sound class="result" key="character" tag="meat_man" fileref="impact_body4.wav" pitch_variety="0.4" volume="0.7" />
+    <sound class="result" key="character"  fileref="impact_body4.wav" pitch_variety="0.4" volume="0.7" />
 	
     <sound class="result" key="character" tag="metal_man" file="metal_hit_1.wav" pitch_variety="0.2" volume="1.0" />
     <sound class="result" key="character" tag="metal_man" file="metal_hit_2.wav" pitch_variety="0.2" volume="1.0" /> 
@@ -28,7 +25,7 @@
     <sound class="result" key="character" tag="metal_man" file="metal_hit_4.wav" pitch_variety="0.2" volume="1.0" /> 
     <sound class="result" key="character" tag="metal_man" file="metal_hit_5.wav" pitch_variety="0.2" volume="1.0" /> 
     <sound class="result" key="character" tag="metal_man" file="metal_hit_6.wav" pitch_variety="0.2" volume="1.0" /> 
-
+	
 
     <sound class="result" key="vehicle" copy="terrain" />
 
@@ -61,30 +58,30 @@
 
     <sound class="result" key="static_object" copy="terrain" />
     
-    <effect class="result" key="terrain" ref="hitGround" use_surface_color="1" />
-    <effect class="result" key="terrain" ref="BulletImpactDust1" />
-    <effect class="result" key="terrain" ref="BulletImpactDust2" />
-    <effect class="result" key="terrain" ref="BulletImpactDust3" />
 
-    <effect class="result" key="vehicle" ref="Burst" use_surface_color="1" />
-    <effect class="result" key="vehicle" ref="hitMetal" />
-    <effect class="result" key="vehicle" ref="hitMetal_1" />
+    <effect class="result" key="shield" ref="Laser_ImpackShine_Red" />
+    <effect class="result" key="vehicle" ref="Laser_ImpackShine_Red" />
+    <effect class="result" key="other" copy="vehicle"/>
 
-    <effect class="result" key="other" ref="BulletImpact" />
-    <effect class="result" key="vehicle" ref="BulletImpact" />
-    <effect class="result" key="terrain" ref="BulletImpact" />
-    <effect class="result" key="character" ref="BulletImpact" />
-    <effect class="result" key="shield" ref="BulletImpact" />
+    <effect class="result" key="shield" ref="Laser_ImpactBeam_Red" />
+    <effect class="result" key="vehicle" ref="Laser_ImpactBeam_Red" />
+
+    <effect class="result" key="terrain" ref="Laser_Burnout"/>
+    <effect class="result" key="static_object" ref="Laser_Burnout_on_staticobject"/>
+    <effect class="result" key="terrain" ref="Laser_ImpackSmoke"/>
+    <effect class="result" key="static_object" ref="Laser_ImpackSmoke"/>
+
+    <effect class="result" key="terrain" ref="Laser_ImpackShine_Red"/>
+    <effect class="result" key="static_object" ref="Laser_ImpackShine_Red"/>
+
+    <effect class="result" key="other" ref="LaserImpact_Red" />
+    <effect class="result" key="terrain" ref="LaserImpact_Red" />
+    <effect class="result" key="character" ref="LaserImpact_Red" />
+    <effect class="result" key="static_object" ref="LaserImpact_Red"/>
 
     <effect class="result" key="character" ref="common_hit_effect_1" lighting="0"/>
     <effect class="result" key="character" ref="common_hit_effect_2" lighting="0" />    
 
-    <effect class="result" key="terrain" ref="Bullet_Burnout"/>
-    <effect class="result" key="static_object" copy="terrain" />
-
-    <effect class="result" key="shield" ref="hitMetal" />
-    <effect class="result" key="shield" ref="hitMetal_1" />
-
-    <trail probability="1.0" key="bullet_new" />
+    <trail probability="1.0" key="red" />
 
 </projectile>

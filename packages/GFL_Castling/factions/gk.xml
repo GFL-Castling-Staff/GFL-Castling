@@ -1361,7 +1361,7 @@
 		</item_class_existence_config>
 	</soldier>
 	
-	<soldier name="GK_Agent" spawn_score="0" >
+	<soldier name="Dummy_Agent" spawn_score="0" >
 		<character filename="default_sf.text_lines">
 			<sound key="death" fileref="Agent_buhuo_DEAD01_JP.wav" pitch_variety="0.001" volume="0.8" />
 			<sound key="death" fileref="Agent_buhuo_DEAD02_JP.wav" pitch_variety="0.001" volume="0.8" />
@@ -1378,6 +1378,26 @@
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="0.3" min="57.433" max="122.833" />
+		</attribute_config>
+		<item_class_existence_config>
+			<!-- wearables -->
+			<item_class_existence class="carry_item" slot="1" probability="1.0" />
+			<!-- backpack -->
+			<item_class_existence class="carry_item" slot="0" probability="0" />
+		</item_class_existence_config>
+	</soldier>
+
+	<soldier name="Dummy_Scarecrow" spawn_score="0" >
+		<character filename="default_sf.text_lines">
+		</character>
+		<model filename="sfd_scarecrow.xml" />
+		<ai filename="dummy_scarecrow.ai" />
+		<resources clear_vehicles="1" clear_weapons="1" clear_grenades="1" clear_carry_items="1">
+			<weapon key="ff_scarecrow_dummy.weapon" />
+			<carry_item key="exo_t4.carry_item" />
+		</resources>
+		<attribute_config class="xp">
+			<attribute weight="0.3" min="0" max="0.1" />
 		</attribute_config>
 		<item_class_existence_config>
 			<!-- wearables -->

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapons>
-<weapon key="ff_scarecrow.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-<tag name="elite" />
+  <weapon key="ff_scarecrow.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+    <tag name="elite" />
     <specification 
 		accuracy_factor="0.95" 
 		barrel_offset="0.5" 
@@ -9,10 +9,10 @@
     slot="0" 
 		magazine_size="100" 
 		name="GK-Scarecrow" 
-    projectile_speed="165" 
+    projectile_speed="150" 
     retrigger_time="0.08"
 		suppressed="1" 
-    sight_range_modifier="1.00" 
+    sight_range_modifier="1.0" 
     carry_in_two_hands="0"  
     can_shoot_standing="1" 
     can_shoot_crouching="0"
@@ -21,49 +21,38 @@
     projectiles_per_shot="3"
 		sustained_fire_diminish_rate="1.0"
 		sustained_fire_grow_step="1.1" />
-
-    <commonness value="0.0000001" in_stock="0" can_respawn_with="1" />
-    <inventory encumbrance="20.0" buy_price="648.0" sell_price="324.0"/>
+    <commonness value="0" in_stock="0" can_respawn_with="1" />
+    <inventory encumbrance="50.0" buy_price="648.0" sell_price="648.0"/>
     <capacity value="0" source="rank" source_value="0.0" />
-	  <capacity value="1" source="rank" source_value="39.633" />
-    <next_in_chain key="ff_scarecrow_skill.weapon" share_ammo="0" />
-
-		
-      <animation state_key="recoil"	animation_key="recoil, scarecrow" />
-      <animation state_key="recoil" stance_key="over_wall" animation_key="recoil, scarecrow" />
-      <animation state_key="hold"	animation_key="still, scarecrow" />
-      <animation state_key="hold_casual"	animation_key="relax, scarecrow" />
-      <animation state_key="hold_on_wall"	animation_key="still, scarecrow" />
-      <animation state_key="still_against_wall"	animation_key="still, scarecrow" />
-      <animation state_key="running" animation_key="running, scarecrow" />
-      <animation state_key="walking"	animation_key="walking, scarecrow" />
-      <animation state_key="walking_backwards" animation_key="walking, scarecrow" />
-      <animation state_key="changing_weapon_in" 	animation_key="change weapon in, single hand carry" />
-      <animation state_key="prone_still" animation_key="prone_still, pistol dual" />
-      <animation state_key="reload" animation_key="reload, scarecrow" />
-      <!-- <animation state_key="reload" animation_key="pistol whip 2" /> -->
-      <!-- <animation state_key="reload" animation_key="pistol whip 3" /> -->
-      
-      <animation state_key="stabbing" animation_key="pistol whip" />
-      <animation state_key="stabbing" animation_key="pistol whip 2" />
-      <animation state_key="stabbing" animation_key="pistol whip 3" />
-
-      <sound key="fire" fileref="scarecrow_fire_FromCOD12.wav" pitch_variety="0.05" volume="1.4" />
-      <sound key="magazine_out" fileref="" volume="0.8" />
-      <sound key="magazine_in" fileref="sf_boss_re.wav" volume="0.6" />
-      <sound key="cycle" fileref="" volume="0.8" />
-      <sound class="impact" fileref="rifle_drop.wav" />    
-      <model filename="" />
-
+    <capacity value="1" source="rank" source_value="39.633" />
+    <next_in_chain key="ff_scarecrow_skill.weapon" share_ammo="1" />
+    <animation state_key="recoil"	animation_key="recoil, scarecrow" />
+    <animation state_key="recoil" stance_key="over_wall" animation_key="recoil, scarecrow" />
+    <animation state_key="hold"	animation_key="still, scarecrow" />
+    <animation state_key="hold_casual"	animation_key="relax, scarecrow" />
+    <animation state_key="hold_on_wall"	animation_key="still, scarecrow" />
+    <animation state_key="still_against_wall"	animation_key="still, scarecrow" />
+    <animation state_key="running" animation_key="running, scarecrow" />
+    <animation state_key="walking"	animation_key="walking, scarecrow" />
+    <animation state_key="walking_backwards" animation_key="walking, scarecrow" />
+    <animation state_key="changing_weapon_in" 	animation_key="change weapon in, single hand carry" />
+    <animation state_key="prone_still" animation_key="prone_still, pistol dual" />
+    <animation state_key="reload" animation_key="reload, scarecrow" />
+    <animation state_key="stabbing" animation_key="pistol whip" />
+    <animation state_key="stabbing" animation_key="pistol whip 2" />
+    <animation state_key="stabbing" animation_key="pistol whip 3" />
+    <sound key="fire" fileref="scarecrow_fire_FromCOD12.wav" pitch_variety="0.05" volume="1.4" />
+    <sound key="magazine_out" fileref="" volume="0.8" />
+    <sound key="magazine_in" fileref="sf_boss_re.wav" volume="0.6" />
+    <sound key="cycle" fileref="" volume="0.8" />
+    <sound class="impact" fileref="rifle_drop.wav" />
+    <model filename="" />
     <hud_icon filename="sfw_scarecrow.png" />
-
-
-
     <weak_hand_hold offset="0.2" />
-    <projectile file="bullet_kcco.projectile">
-      <result class="hit"  kill_probability="1.55" kill_probability_offset_on_successful_hit="1.0"  kill_decay_start_time="0.17" kill_decay_end_time="1.1" />
+    <projectile file="bullet_sf_player.projectile">
+      <result class="hit" kill_probability="1.55" kill_probability_offset_on_successful_hit="1.0"  kill_decay_start_time="0.2" kill_decay_end_time="0.6" />
+      <trail probability="1.0" key="green" />
     </projectile>
-     
     <stance state_key="running" accuracy="0.5" />
     <stance state_key="walking" accuracy="0.5" />
     <stance state_key="crouch_moving" accuracy="0.75" />
@@ -71,76 +60,133 @@
     <stance state_key="standing" accuracy="0.9"/>
     <stance state_key="crouching" accuracy="0.9" />
     <stance state_key="prone" accuracy="1" />
-    <stance state_key="over_wall" accuracy="1" />  
+    <stance state_key="over_wall" accuracy="1" />
     <modifier class="detectability" value="-0.1" />
     <modifier class="speed" value="0.6" />
-</weapon>
-
-<weapon key="ff_scarecrow_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-<tag name="elite" />
+  </weapon>
+  <weapon key="ff_scarecrow_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+    <tag name="elite" />
     <specification 
-    last_burst_retrigger_time="0.525"
-    retrigger_time="-1.0" 
-		accuracy_factor="0.95" 
+    last_burst_retrigger_time="0.5"
+    retrigger_time="0.025" 
+		accuracy_factor="1.0" 
 		barrel_offset="0.5" 
 		class="4"
     slot="0" 
-		magazine_size="350" 
-		name="GK-Scarecrow" 
-    projectile_speed="145" 
+		magazine_size="100" 
+		name="GK-Scarecrow-[Battlefield Purge]" 
+    projectile_speed="150" 
 		suppressed="1" 
     sight_range_modifier="2.25" 
     carry_in_two_hands="0"  
     can_shoot_standing="1" 
     can_shoot_crouching="0"
     can_shoot_prone="0"
-    burst_shots="7"
+    burst_shots="10"
+    projectiles_per_shot="3"
+		sustained_fire_diminish_rate="1.5"
+		sustained_fire_grow_step="0.15" />
+    <commonness value="0" in_stock="0" can_respawn_with="1" />
+    <inventory encumbrance="50.0" buy_price="648.0" sell_price="648.0"/>
+    <capacity value="0" source="rank" source_value="0.0" />
+    <capacity value="1" source="rank" source_value="39.633" />
+    <next_in_chain key="ff_scarecrow.weapon" share_ammo="1" />
+    <animation state_key="recoil"	animation_key="recoil, scarecrow" />
+    <animation state_key="recoil" stance_key="over_wall" animation_key="recoil, scarecrow" />
+    <animation state_key="hold"	animation_key="still, scarecrow" />
+    <animation state_key="hold_casual"	animation_key="relax, scarecrow" />
+    <animation state_key="hold_on_wall"	animation_key="still, scarecrow" />
+    <animation state_key="still_against_wall"	animation_key="still, scarecrow" />
+    <animation state_key="running" animation_key="running, scarecrow" />
+    <animation state_key="walking"	animation_key="walking, scarecrow" />
+    <animation state_key="walking_backwards" animation_key="walking, scarecrow" />
+    <animation state_key="changing_weapon_in" 	animation_key="change weapon in, single hand carry" />
+    <animation state_key="prone_still" animation_key="prone_still, pistol dual" />
+    <animation state_key="reload" animation_key="reload, scarecrow" />
+    <animation state_key="stabbing" animation_key="pistol whip" />
+    <animation state_key="stabbing" animation_key="pistol whip 2" />
+    <animation state_key="stabbing" animation_key="pistol whip 3" />
+    <sound key="fire" fileref="scarecrow_fire_FromCOD12.wav" pitch_variety="0.05" volume="1.4" />
+    <sound key="magazine_out" fileref="" volume="0.8" />
+    <sound key="magazine_in" fileref="sf_boss_re.wav" volume="0.6" />
+    <sound key="cycle" fileref="" volume="0.8" />
+    <sound class="impact" fileref="rifle_drop.wav" />
+    <model filename="" />
+    <hud_icon filename="sfw_scarecrow.png" />
+    <weak_hand_hold offset="0.2" />
+    <projectile file="bullet_sf_player.projectile">
+      <result class="hit" kill_probability="2.0" kill_probability_offset_on_successful_hit="1.0" kill_decay_start_time="1.0" kill_decay_end_time="1.2" />
+      <trail probability="1.0" key="green" />
+    </projectile>
+    <stance state_key="running" accuracy="1.0" />
+    <stance state_key="walking" accuracy="1.0" />
+    <stance state_key="crouch_moving" accuracy="1.0" />
+    <stance state_key="prone_moving" accuracy="1.0" />
+    <stance state_key="standing" accuracy="1.0"/>
+    <stance state_key="crouching" accuracy="1.0" />
+    <stance state_key="prone" accuracy="1" />
+    <stance state_key="over_wall" accuracy="1" />
+    <modifier class="speed" value="-3.0" />
+    <modifier class="hit_success_probability" value="-0.2" />
+    <shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" />
+    <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0" />
+    <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+    <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+    <modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0" />
+    <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+    <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+  </weapon>
+  <weapon key="ff_scarecrow_dummy.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+    <tag name="punchme" />
+    <specification 
+		accuracy_factor="1.0" 
+		barrel_offset="0.5" 
+		class="0"
+    slot="0" 
+		magazine_size="100" 
+		name="GK-Scarecrow-[Shadow Predation]" 
+    projectile_speed="150" 
+    retrigger_time="0.08"
+		suppressed="1" 
+    sight_range_modifier="1.75" 
+    carry_in_two_hands="0"  
+    can_shoot_standing="0" 
+    can_shoot_crouching="0"
+    can_shoot_prone="0"
+    burst_shots="1"
     projectiles_per_shot="3"
 		sustained_fire_diminish_rate="1.0"
 		sustained_fire_grow_step="1.1" />
-
-    <commonness value="0.0000001" in_stock="0" can_respawn_with="1" />
-    <inventory encumbrance="20.0" buy_price="648.0" sell_price="324.0"/>
-    <capacity value="0" source="rank" source_value="0.0" />
-	  <capacity value="1" source="rank" source_value="39.633" />
-    <next_in_chain key="ff_scarecrow.weapon" share_ammo="0" />
-
-		
-      <animation state_key="recoil"	animation_key="recoil, scarecrow" />
-      <animation state_key="recoil" stance_key="over_wall" animation_key="recoil, scarecrow" />
-      <animation state_key="hold"	animation_key="still, scarecrow" />
-      <animation state_key="hold_casual"	animation_key="relax, scarecrow" />
-      <animation state_key="hold_on_wall"	animation_key="still, scarecrow" />
-      <animation state_key="still_against_wall"	animation_key="still, scarecrow" />
-      <animation state_key="running" animation_key="running, scarecrow" />
-      <animation state_key="walking"	animation_key="walking, scarecrow" />
-      <animation state_key="walking_backwards" animation_key="walking, scarecrow" />
-      <animation state_key="changing_weapon_in" 	animation_key="change weapon in, single hand carry" />
-      <animation state_key="prone_still" animation_key="prone_still, pistol dual" />
-      <animation state_key="reload" animation_key="reload, scarecrow" />
-      <!-- <animation state_key="reload" animation_key="pistol whip 2" /> -->
-      <!-- <animation state_key="reload" animation_key="pistol whip 3" /> -->
-      
-      <animation state_key="stabbing" animation_key="pistol whip" />
-      <animation state_key="stabbing" animation_key="pistol whip 2" />
-      <animation state_key="stabbing" animation_key="pistol whip 3" />
-
-      <sound key="fire" fileref="scarecrow_fire_FromCOD12.wav" pitch_variety="0.05" volume="1.4" />
-      <sound key="magazine_out" fileref="" volume="0.8" />
-      <sound key="magazine_in" fileref="sf_boss_re.wav" volume="0.6" />
-      <sound key="cycle" fileref="" volume="0.8" />
-      <sound class="impact" fileref="rifle_drop.wav" />    
-      <model filename="" />
-
+    <commonness value="0.01" in_stock="0"/>
+    <inventory encumbrance="50.0" buy_price="0.0" sell_price="0.0"/>
+    <capacity value="1" source="rank" source_value="0.0" />
+    <animation state_key="recoil"	animation_key="recoil, scarecrow" />
+    <animation state_key="recoil" stance_key="over_wall" animation_key="recoil, scarecrow" />
+    <animation state_key="hold"	animation_key="still, scarecrow" />
+    <animation state_key="hold_casual"	animation_key="relax, scarecrow" />
+    <animation state_key="hold_on_wall"	animation_key="still, scarecrow" />
+    <animation state_key="still_against_wall"	animation_key="still, scarecrow" />
+    <animation state_key="running" animation_key="running, scarecrow" />
+    <animation state_key="walking"	animation_key="walking, scarecrow" />
+    <animation state_key="walking_backwards" animation_key="walking, scarecrow" />
+    <animation state_key="changing_weapon_in" 	animation_key="change weapon in, single hand carry" />
+    <animation state_key="prone_still" animation_key="prone_still, pistol dual" />
+    <animation state_key="reload" animation_key="reload, scarecrow" />
+    <animation state_key="stabbing" animation_key="pistol whip" />
+    <animation state_key="stabbing" animation_key="pistol whip 2" />
+    <animation state_key="stabbing" animation_key="pistol whip 3" />
+    <sound key="fire" fileref="scarecrow_fire_FromCOD12.wav" pitch_variety="0.05" volume="1.4" />
+    <sound key="magazine_out" fileref="" volume="0.8" />
+    <sound key="magazine_in" fileref="sf_boss_re.wav" volume="0.6" />
+    <sound key="cycle" fileref="" volume="0.8" />
+    <sound class="impact" fileref="rifle_drop.wav" />
+    <model filename="" />
     <hud_icon filename="sfw_scarecrow.png" />
-
-
-
     <weak_hand_hold offset="0.2" />
-    <projectile file="bullet_kcco.projectile">
-      <result class="hit"  kill_probability="2.2" kill_probability_offset_on_successful_hit="0.2"  kill_decay_start_time="2.8" kill_decay_end_time="5.6" />
+    <projectile file="bullet_sf_player.projectile">
+      <result class="hit" kill_probability="1.55" kill_probability_offset_on_successful_hit="1.0"  kill_decay_start_time="0.2" kill_decay_end_time="0.6" />
+      <trail probability="1.0" key="green" />
     </projectile>
-     
     <stance state_key="running" accuracy="0.5" />
     <stance state_key="walking" accuracy="0.5" />
     <stance state_key="crouch_moving" accuracy="0.75" />
@@ -148,15 +194,10 @@
     <stance state_key="standing" accuracy="0.9"/>
     <stance state_key="crouching" accuracy="0.9" />
     <stance state_key="prone" accuracy="1" />
-    <stance state_key="over_wall" accuracy="1" />  
-    <modifier class="detectability" value="0.25" />
-    <modifier class="speed" value="-1.0" />
-    <shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" />
-    <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0" />
-    <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-    <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-    <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" consumes_item="0" />
-    <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-    <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-</weapon>
+    <stance state_key="over_wall" accuracy="1" />
+    <modifier class="detectability" value="1.0" />
+    <modifier class="speed" value="1.0" />
+    <modifier class="hit_success_probability" value="-0.5" />
+    <drop_on_death_result class="spawn" instance_class="projectile" instance_key="grenade_scarecrow.projectile" min_amount="1.0" max_amount="1.0" offset="0 0.2 0" position_spread="0 0" direction_spread="0 0"/>
+  </weapon>
 </weapons>
