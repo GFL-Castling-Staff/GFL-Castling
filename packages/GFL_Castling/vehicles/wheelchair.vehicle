@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<vehicles>
 <vehicle file="vehicle_base.vehicle" name="Wheel Chair" key="wheelchair.vehicle" map_view_atlas_index="-1" minimum_fill_requirement="0.5" >
 	<tag name="metal_thin" />
 	<tag name="wheelchair" />
@@ -78,3 +79,83 @@
 		<result class="spawn" instance_class="projectile" instance_key="debri_stun" min_amount="1" max_amount="1" offset="0 3.0 0" position_spread="0.0 0.0" direction_spread="0.0 0.0" />
 	</event>
 </vehicle>
+<vehicle file="vehicle_base.vehicle" name="Wheel Chair" key="wheelchair_lblm.vehicle" map_view_atlas_index="-1" minimum_fill_requirement="0.5" >
+	<tag name="metal_thin" />
+	<tag name="wheelchair" />
+	<tire_set offset="0.60 0.0 0.8" radius="0.45" />
+	<tire_set offset="0.60 0.0 -0.8" radius="0.45" />
+	<control max_speed="24.0" acceleration="12.5" max_reverse_speed="24.0" min_health_to_steer="0.12" max_rotation="0.5" max_water_depth="9.0" steer_smoothening="0.5" />
+	<sky_diving chute_offset="0 1.05 0.0" trigger_height="20.0" gravity="-10" mesh_filename="chute_large.mesh" texture_filename="chute.png" />
+	<physics max_health="60" mass="6.0" extent="1.44 0.0 3.04" offset="0 0.0 0" top_offset="0 3.2 0" collision_model_pos="0 0.4 -0.16" collision_model_extent="1.76 1.28 1.84" visual_offset="0 0.0 -0.56" preserve_motion_on_impact_factor="0.5" gravity="-70" friction_offset="0.3" drag_offset="-0.75" destroy_on_top_hit="0" remove_collision_threshold="30.0" />
+	<turret offset="-0.0 1.4 -2" weapon_key="all_vehicles_wheelchair_shield.weapon" weapon_offset="0.0 0.0 0.0"/>
+	<visual class="chassis" mesh_filename="wheelchair_body.mesh" texture_filename="Wheel_Chair_BaseColor.png" />
+	<visual class="front_tire" mesh_filename="" texture_filename="" />
+	<visual class="rear_tire" mesh_filename="wheelchair_wheel.mesh" texture_filename="Wheel_Chair_BaseColor.png" />
+	<character_slot type="driver" position="0.0 0.0 -1.8" rotation="0" exit_rotation="3.14" hiding="1" marker_offset="0 0.35 0.2"/>
+	<character_slot type="passenger" position="0.0 0.27 -0.4" rotation="0" exit_rotation="0" hiding="0" animation_key="crouch,slav" marker_offset="0 0.35 0.2" rotation_range="3.00"/>
+	<rev_sound filename="" />
+	<sound key="slide" filename="slide_noise.wav" />
+	<sound key="squeal" filename="tire_squeal.wav" />
+	<sound key="ignition" filename="jeep2_ignition.wav" />
+	<sound key="horn" filename="horn_jeep.wav" />
+	<sound key="hit" filename="car_hit1.wav" />
+	<sound key="hit" filename="car_hit2.wav" />
+	<sound key="hit" filename="car_hit3.wav" />
+	<sound key="destroy" filename="vehicle_explosion_1.wav" />
+	<sound key="cleanup" filename="vehicle_explosion_1.wav" />
+	<modifier class="blast_damage" value="-5.0" />
+	<effect event_key="slide" type="splat_map" surface_tag="road" size="2.0" atlas_index="5" layer="0" />
+	<effect event_key="slide_hard" type="splat_map" surface_tag="road" size="2.0" atlas_index="5" layer="0" />
+	<!-- <effect event_key="slide_hard" type="splat_map" surface_tag="road" size="0.5" atlas_index="2" layer="0" /> -->
+	<effect event_key="slide" type="splat_map" surface_tag="dirt" size="1.0" atlas_index="2" layer="1" />
+	<effect event_key="slide" type="particle" key="terrain" surface_tag="dirt" ref="Burst" use_surface_color="1" />
+	<!-- <effect event_key="slide_hard" type="particle" key="terrain" ref="Burst" use_surface_color="1" /> -->
+	<effect event_key="health" value="0.6" ref="SmallSmokeVehicle" offset="0.32 1.44 1.5" />
+	<effect event_key="health" value="0.12" ref="SmallSmokeVehicle" offset="0.32 1.44 1.5" />
+	<effect event_key="health" value="0.12" ref="BrokenSparkle" post_processing="0" offset="0.32 0.96 1.55" />
+	<effect event_key="destroyed" ref="SmallSmokeVehicle" offset="0.32 1.44 1.45" />
+	<effect event_key="destroyed" ref="SmallFireRepeat" offset="0.32 0.96 1.45" />
+	<effect event_key="destroy" key="other" ref="woosh" post_processing="0" shadow="0" />
+	<effect event_key="cleanup" key="other" ref="woosh" post_processing="0" shadow="0" />
+	<event key="receive_damage_xp_reward">
+		<trigger class="receive_damage" />
+		<result class="reward" xp="0.0015" />
+	</event>
+	<event key="spot_rp_reward">
+		<trigger class="spot" />
+		<result class="reward" rp="10.0" />
+	</event>
+	<event>
+		<trigger class="destroy" />
+		<result class="spawn" instance_class="visual_item" instance_key="burning_piece_jeep1.visual_item" min_amount="1" max_amount="3" offset="0 1.6 0" position_spread="1.5 1.5" direction_spread="0.15 0.3" />
+	</event>
+	<event>
+		<trigger class="destroy" />
+		<result class="spawn" instance_class="visual_item" instance_key="burning_piece_jeep2.visual_item" min_amount="0" max_amount="1" offset="0 1.6 0" position_spread="1.5 1.5" direction_spread="0.1 0.3" />
+	</event>
+	<event>
+		<trigger class="destroy" />
+		<result class="spawn" instance_class="visual_item" instance_key="burning_piece_jeep3.visual_item" min_amount="1" max_amount="2" offset="0 1.6 0" position_spread="1.5 1.5" direction_spread="0.1 0.25" />
+	</event>
+	<event>
+		<trigger class="destroy" />
+		<result class="spawn" instance_class="visual_item" instance_key="burning_piece_jeep4.visual_item" min_amount="1" max_amount="3" offset="0 1.6 0" position_spread="1.5 1.5" direction_spread="0.15 0.25" />
+	</event>
+	<event>
+		<trigger class="destroy" />
+		<result class="spawn" instance_class="visual_item" instance_key="burning_piece_jeep5.visual_item" min_amount="2" max_amount="3" offset="0 1.6 0" position_spread="1.5 1.5" direction_spread="0.1 0.3" />
+	</event>
+	<event>
+		<trigger class="destroy" />
+		<result class="spawn" instance_class="visual_item" instance_key="burning_piece_jeep6.visual_item" min_amount="2" max_amount="3" offset="0 1.6 0" position_spread="1.5 1.5" direction_spread="0.1 0.2" />
+	</event>
+	<event>
+		<trigger class="cleanup" />
+		<result class="spawn" instance_class="visual_item" instance_key="burning_piece_cleanup.visual_item" min_amount="20" max_amount="30" offset="0 2.0 0" position_spread="1.5 1.5" direction_spread="0.1 0.1" />
+	</event>
+	<event>
+		<trigger class="cleanup" />
+		<result class="spawn" instance_class="projectile" instance_key="debri_stun" min_amount="1" max_amount="1" offset="0 3.0 0" position_spread="0.0 0.0" direction_spread="0.0 0.0" />
+	</event>
+</vehicle>
+</vehicles>
