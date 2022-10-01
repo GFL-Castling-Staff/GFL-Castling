@@ -9,6 +9,7 @@
     <commonness value="0.0" />
 
     <sound class="result" key="other" fileref="stim_hit.wav" />
+    <sound class="result" key="other" fileref="rescue_heal_up.wav" volume="1.8"/>
 
     <sound class="result" key="vehicle" copy="other" />    
     <sound class="result" key="vehicle" tag="metal_heavy" fileref="blast_metal_hit_01.wav" pitch_variety="0.2" volume="0.8" />
@@ -23,8 +24,9 @@
     <effect class="result" key="terrain" ref="BigBurst" use_surface_color="1" />
     <effect class="result" key="terrain" ref="Shine" lighting="0" />
     <effect class="result" key="terrain" ref="StimSmoke" lighting="0" shadow="0"/>
-    <effect class="result" key="terrain" ref="ct_heal_woosh" />
-    <effect class="result" key="terrain" ref="ct_heal_woosh" />
+    <effect class="result" key="terrain" ref="ct_heal_woosh" shadow="0" />
+    <effect class="result" key="terrain" ref="ct_heal_woosh" shadow="0" />
+    <effect class="result" key="terrain" ref="ct_heal_woosh" shadow="0" />
 
 
     <effect class="result" key="other" copy="terrain" />
