@@ -378,11 +378,6 @@
 
 		<resources file="common.resources" />
 		<resources file="sf.resources" />
-		<!-- <resources file="green_secondaries.resources" /> -->
-		<!-- <resources file="green_default.resources" /> -->
-		<!-- <resources> -->
-		<!-- <carry_item key="camouflage_suit.carry_item" enabled="1" /> -->
-		<!-- </resources> -->
 
 		<item_class_existence_config>
 			<!-- secondaries -->
@@ -411,10 +406,6 @@
 		<!-- <resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" > -->
 
 		<resources file="common.resources" />
-		<resources>
-			<weapon key="sfw_vespid.weapon" enabled="1"/>
-			<carry_item key="sf_ar.carry_item" enabled="1" />
-		</resources>
 		<item_class_existence_config>
 			<!-- secondaries -->
 			<item_class_existence class="weapon" slot="1" probability="1.0" />
@@ -603,7 +594,7 @@
 	<soldier name="sfw_aegis" spawn_score="0.6" copy_from="default_spawn_ai">
 		<model filename="sfd_aegis_1.xml" />
 		<ai filename="shield.ai" />
-		<resources clear_weapons="1" clear_calls="1" clear_grenades="1">
+		<resources clear_weapons="1" clear_vehicles="1" clear_calls="1" clear_grenades="1">
 			<weapon key="sfw_aegis.weapon" enabled="1"/>
 			<carry_item key="kcco_ga.carry_item" enabled="1" />
 		</resources>
@@ -611,7 +602,7 @@
 	<soldier name="sfw_aegis_swap" spawn_score="0.3" copy_from="default_spawn_ai">
 		<model filename="sfd_aegis_swap.xml" />
 		<ai filename="shield.ai" />
-		<resources clear_weapons="1" clear_calls="1" clear_grenades="1">
+		<resources clear_weapons="1" clear_vehicles="1" clear_calls="1" clear_grenades="1">
 			<weapon key="sfw_aegis_swap.weapon" enabled="1"/>
 			<carry_item key="kcco_ga.carry_item" enabled="1" />
 		</resources>
