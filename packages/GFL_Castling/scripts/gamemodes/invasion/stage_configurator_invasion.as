@@ -165,7 +165,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 	// ------------------------------------------------------------------------------------------------
 	protected void setupNormalStages() {
-		addStage(setupStageRace());          // map2
+		// addStage(setupStageRace());          // DEJAHU
 		addStage(setupStage1());          // map2
 		addStage(setupStage7());          // map6c by diling
 		addStage(setupStage6());          // map5
@@ -265,28 +265,24 @@ class StageConfiguratorInvasion : StageConfigurator {
                 faction.setBoolAttribute("lose_without_bases", false);
             }
             command.appendChild(faction);
-            }
-        m_metagame.getComms().send(command);
+		}
         stage.addTracker(RunAtStart(m_metagame, command));
         }
 
 		stage.m_minRandomCrates = 1; 
 		stage.m_maxRandomCrates = 3;
 
-		array<int> FactionIndex = getRandomEnemyList();
-
 		{
-			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0));                                                  
-			f.m_capacityOffset = 0; 
-			f.m_capacityMultiplier = 0.00001;
+			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0, 0.0, 0.0, false));
+			f.m_overCapacity = 2;
+			f.m_capacityMultiplier = 0;
+			f.m_bases = 1;
 			stage.m_factions.insertLast(f);
 		}
 		{
-			Faction f(getFactionConfigs()[FactionIndex[0]], createCommanderAiCommand(1,0.3,0.1));
-			f.m_overCapacity = 0;                                               
-			f.m_capacityOffset = 0;
-			f.m_capacityMultiplier = 0.0000001;                                                 
-			stage.m_factions.insertLast(f);                                         
+			Faction f(getFactionConfigs()[getRandomEnemyIndex()], createCommanderAiCommand(1, 1.0, 0.0, false));
+			f.m_capacityMultiplier = 0;
+			stage.m_factions.insertLast(f); 
 		}
 		{
 			XmlElement command("command");
@@ -301,7 +297,6 @@ class StageConfiguratorInvasion : StageConfigurator {
 		// metadata
 		stage.m_primaryObjective = "capture";
 
-		setDefaultAttackBreakTimes(stage);
 		return stage;
 	}
 
