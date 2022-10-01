@@ -165,6 +165,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 	// ------------------------------------------------------------------------------------------------
 	protected void setupNormalStages() {
+		addStage(setupStageRace());          // map2
 		addStage(setupStage1());          // map2
 		addStage(setupStage7());          // map6c by diling
 		addStage(setupStage6());          // map5
@@ -243,6 +244,66 @@ class StageConfiguratorInvasion : StageConfigurator {
 	}
 	
 	// ------------------------------------------------------------------------------------------------
+	protected Stage@ setupStageRace() {
+		Stage@ stage = createStage();
+		stage.m_mapInfo.m_name = "De ja vu";
+		stage.m_mapInfo.m_path = "media/packages/GFL_Castling/maps/C01_Race";
+		stage.m_mapInfo.m_id = "Dejavu";
+
+		stage.m_maxSoldiers = 10;
+
+		stage.m_soldierCapacityVariance = 0.4;
+		stage.m_playerAiCompensation = 0;
+        stage.m_playerAiReduction = 0;
+
+		{
+        XmlElement command("command");
+        command.setStringAttribute("class", "change_game_settings");
+        for (uint i = 0; i < m_metagame.getFactionCount(); ++i) {
+            XmlElement faction("faction");
+            if (int(i) == 1) {
+                faction.setBoolAttribute("lose_without_bases", false);
+            }
+            command.appendChild(faction);
+            }
+        m_metagame.getComms().send(command);
+        stage.addTracker(RunAtStart(m_metagame, command));
+        }
+
+		stage.m_minRandomCrates = 1; 
+		stage.m_maxRandomCrates = 3;
+
+		array<int> FactionIndex = getRandomEnemyList();
+
+		{
+			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0));                                                  
+			f.m_capacityOffset = 0; 
+			f.m_capacityMultiplier = 0.00001;
+			stage.m_factions.insertLast(f);
+		}
+		{
+			Faction f(getFactionConfigs()[FactionIndex[0]], createCommanderAiCommand(1,0.3,0.1));
+			f.m_overCapacity = 0;                                               
+			f.m_capacityOffset = 0;
+			f.m_capacityMultiplier = 0.0000001;                                                 
+			stage.m_factions.insertLast(f);                                         
+		}
+		{
+			XmlElement command("command");
+			command.setStringAttribute("class", "faction_resources");
+			command.setIntAttribute("faction_id", 0);
+			addFactionResourceElements(command, "vehicle", array<string> = {"aek999.vehicle","wheelchair.vehicle"}, true);
+			stage.m_extraCommands.insertLast(command);
+			command.setIntAttribute("faction_id", 1);
+			stage.m_extraCommands.insertLast(command);
+		}
+		
+		// metadata
+		stage.m_primaryObjective = "capture";
+
+		setDefaultAttackBreakTimes(stage);
+		return stage;
+	}
 
 	protected Stage@ setupStage103() {
 		Stage@ stage = createStage();
@@ -912,7 +973,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 			addFactionResourceElements(command, "vehicle", array<string> = {"radio_jammer2.vehicle"}, false);
 
 			stage.m_extraCommands.insertLast(command);
-		}        
+		}
 		{
 			// neutral
 			Faction f(getFactionConfigs()[3], createCommanderAiCommand(3));
