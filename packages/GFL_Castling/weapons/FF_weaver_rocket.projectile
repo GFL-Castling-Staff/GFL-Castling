@@ -2,7 +2,7 @@
 <projectile class="grenade" name="" slot="1" pulldown_in_air="0.5" key="ff_weaver_rocket.projectile">
     <tag name="rocket"/>
     <result class="spawn" instance_class="projectile" instance_key="ff_weaver_rocket_sub.projectile" min_amount="1" max_amount="1" offset="0 0.0 0" position_spread="0 0" direction_spread="0 -1" />
-    <trigger class="time" time_to_live="0.77"/>
+    <trigger class="time" time_to_live="0.4"/>
     <rotation class="motion" />
     <model mesh_filename="m202_rocket.xml"/>
 

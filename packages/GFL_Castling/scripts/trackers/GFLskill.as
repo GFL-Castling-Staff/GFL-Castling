@@ -104,6 +104,8 @@ dictionary gameSkillIndex = {
         {"spawn_aek999",30},
         {"spawn_wheelchair",31},
 
+        // 玩家衔尾蛇脚本弹头
+        {"ff_weaver_skill_scan",32},
 
         // 下面这行是用来占位的，在这之上添加新的技能key和index即可
         {"666",-1}
@@ -1067,6 +1069,78 @@ class GFLskill : Tracker {
 						}
 					}
 				}
+				break;
+			}
+
+			case 32: {// 玩家衔尾蛇脚本榴弹
+				int characterId = event.getIntAttribute("character_id");
+				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+				if (character !is null) {
+					uint factionid = character.getIntAttribute("faction_id");
+					Vector3 pos_smartbullet = stringToVector3(event.getStringAttribute("position"));
+					//获取技能影响的敌人数量
+					m_fnum = m_metagame.getFactionCount();
+					array<const XmlElement@> affectedCharacter;
+					uint num_jud = 0;
+					uint num_max_character = 6; //最多锁定目标数
+					uint num_max_kill = 15;	//最多斩击次数，目标数不为0则对剩余目标继续用完斩杀次数
+
+					for(uint i=0;i<m_fnum;i++) {
+						if(i!=factionid) {
+							array<const XmlElement@> affectedCharacter2;
+							affectedCharacter2 = getCharactersNearPosition(m_metagame,pos_smartbullet,i,12.0f);
+							if (affectedCharacter2 !is null){
+								for(uint x=0;x<affectedCharacter2.length();x++){
+									affectedCharacter.insertLast(affectedCharacter2[x]);
+									num_jud += 1;
+									if(num_jud>num_max_character)break;
+								}
+							}
+						}
+					}
+
+					const XmlElement@ now_character = getCharacterInfo(m_metagame, characterId);
+					if (now_character !is null) {
+						Vector3 c_pos = stringToVector3(now_character.getStringAttribute("position"));
+						c_pos = c_pos.add(Vector3(0,1,0));
+						_log("ff_weaver Scan start successful");
+
+						for (uint i0=1;i0<=num_max_kill;){
+							if(affectedCharacter.length()>0){
+								for (uint i1=0;i1<affectedCharacter.length();i1++)	{
+									int jud1=1;
+									int luckyoneid = affectedCharacter[i1].getIntAttribute("id");
+									const XmlElement@ luckyoneC = getCharacterInfo(m_metagame, luckyoneid);
+									if ((luckyoneC.getIntAttribute("id")!=-1)&&(luckyoneid!=characterId)){
+										i0+=1;	jud1=0;
+										string luckyonepos = luckyoneC.getStringAttribute("position");
+										Vector3 luckyoneposV = stringToVector3(luckyonepos);
+										float rand_x = rand(-1,1);
+										float rand_y = rand(-1,1);			
+										luckyoneposV = luckyoneposV.add(Vector3(rand_x,16,rand_y));
+
+										float v_offset = getAimUnitDistance(1.0,c_pos,luckyoneposV);
+										CreateDirectProjectile(m_metagame,c_pos,luckyoneposV,"ff_weaver_rocket.projectile",characterId,factionid,1.02*v_offset/0.4);	
+										playSoundAtLocation(m_metagame,"m202_flash_shot.wav",factionid,luckyonepos,1.0);
+										_log("ff_weaver scan kill successful");
+									}
+									i0+=jud1;				
+								}								
+							}
+
+							else{
+								i0+=1;
+								float rand_x = rand(-4,4);
+								float rand_y = rand(-4,4);
+
+								Vector3 pos_smartbullet1 = pos_smartbullet.add(Vector3(rand_x,16,rand_y));
+								float v_offset = getAimUnitDistance(1.0,c_pos,pos_smartbullet1);
+								CreateDirectProjectile(m_metagame,c_pos,pos_smartbullet1,"ff_weaver_rocket.projectile",characterId,factionid,1.02*v_offset/0.4);                              			
+                            }     
+						}
+					}				
+					_log("ff_weaver skill over.");			
+				}			
 				break;
 			}
 

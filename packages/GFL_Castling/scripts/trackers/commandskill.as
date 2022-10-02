@@ -357,6 +357,10 @@ dictionary commandSkillIndex = {
         {"gkw_ump45mod3_410.weapon",47},
         {"gkw_ump45mod3_3403.weapon",47},
 
+        // 衔尾蛇
+        {"ff_weaver.weapon",48},
+        {"ff_weaver_1.weapon",48},
+
         // 下面这行是用来占位的，在这之上添加新的枪和index即可
         {"666",-1}
 };
@@ -481,6 +485,7 @@ class CommandSkill : Tracker {
                     case 45:{excutSuperSASSSkill(cId,senderId,m_modifer);break;}
                     case 46:{excuteG41Onlyskill(cId,senderId,m_modifer);break;}
                     case 47:{excuteUMP45MOD3skill(cId,senderId,m_modifer);break;}
+                    case 48:{excuteWeaverskill(cId,senderId,m_modifer);break;}
 
                     default:
                         break;
@@ -3064,4 +3069,42 @@ class CommandSkill : Tracker {
             }
         }
     }
+    void excuteWeaverskill(int characterId,int playerId,SkillModifer@ modifer){
+        bool ExistQueue = false;
+        int j=-1;
+        for (uint i=0;i<SkillArray.length();i++){
+            if (InCooldown(characterId,modifer,SkillArray[i]) && SkillArray[i].m_weapontype=="FF_WEAVER") {
+                ExistQueue=true;
+                j=i;
+            }
+        }
+        if (ExistQueue){
+            dictionary a;
+            a["%time"] = ""+SkillArray[j].m_time;
+            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            _log("skill cooldown" + SkillArray[j].m_time);
+            return;
+        }
+
+        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+        if (character !is null) {
+            const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+            if (player !is null){
+                if (player.hasAttribute("aim_target")) {
+                    string target = player.getStringAttribute("aim_target");
+                    Vector3 c_pos = stringToVector3(target);
+                    int factionid = character.getIntAttribute("faction_id");
+                    array<string> Voice={
+                        "G41_SKILL1_JP.wav",
+                        "G41_SKILL2_JP.wav",
+                        "G41_SKILL3_JP.wav"
+                    };
+                    playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+                    c_pos=c_pos.add(Vector3(0,1,0));
+                    CreateDirectProjectile(m_metagame,c_pos.add(Vector3(0,1,0)),c_pos,"ff_weaver_skill_scan.projectile",characterId,factionid,6.0);
+                    addCoolDown("FF_WEAVER",25,characterId,modifer);
+                }
+            }
+        }
+    }   
 }
