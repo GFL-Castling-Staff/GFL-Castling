@@ -1083,12 +1083,13 @@ class GFLskill : Tracker {
 					array<const XmlElement@> affectedCharacter;
 					uint num_jud = 0;
 					uint num_max_character = 6; //最多锁定目标数
-					uint num_max_kill = 15;	//最多斩击次数，目标数不为0则对剩余目标继续用完斩杀次数
+					uint num_max_kill = 18;	//最多斩击次数，目标数不为0则对剩余目标继续用完斩杀次数
 
 					for(uint i=0;i<m_fnum;i++) {
+						if(num_jud>num_max_character)break;
 						if(i!=factionid) {
 							array<const XmlElement@> affectedCharacter2;
-							affectedCharacter2 = getCharactersNearPosition(m_metagame,pos_smartbullet,i,12.0f);
+							affectedCharacter2 = getCharactersNearPosition(m_metagame,pos_smartbullet,i,18.0f);
 							if (affectedCharacter2 !is null){
 								for(uint x=0;x<affectedCharacter2.length();x++){
 									affectedCharacter.insertLast(affectedCharacter2[x]);
@@ -1107,6 +1108,7 @@ class GFLskill : Tracker {
 
 						for (uint i0=1;i0<=num_max_kill;){
 							if(affectedCharacter.length()>0){
+								_log("ff_weaver lock successful");								
 								for (uint i1=0;i1<affectedCharacter.length();i1++)	{
 									int jud1=1;
 									int luckyoneid = affectedCharacter[i1].getIntAttribute("id");

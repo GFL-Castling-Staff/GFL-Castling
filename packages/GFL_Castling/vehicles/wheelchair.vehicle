@@ -87,12 +87,12 @@
 	<control max_speed="24.0" acceleration="12.5" max_reverse_speed="24.0" min_health_to_steer="0.12" max_rotation="0.5" max_water_depth="9.0" steer_smoothening="0.5" />
 	<sky_diving chute_offset="0 1.05 0.0" trigger_height="20.0" gravity="-10" mesh_filename="chute_large.mesh" texture_filename="chute.png" />
 	<physics max_health="60" mass="6.0" extent="1.44 0.0 3.04" offset="0 0.0 0" top_offset="0 3.2 0" collision_model_pos="0 0.4 -0.16" collision_model_extent="1.76 1.28 1.84" visual_offset="0 0.0 -0.56" preserve_motion_on_impact_factor="0.5" gravity="-70" friction_offset="0.3" drag_offset="-0.75" destroy_on_top_hit="0" remove_collision_threshold="30.0" />
-	<turret offset="-0.0 1.4 -2" weapon_key="all_vehicles_wheelchair_shield.weapon" weapon_offset="0.0 0.0 0.0"/>
+	
 	<visual class="chassis" mesh_filename="wheelchair_body.mesh" texture_filename="Wheel_Chair_BaseColor.png" />
 	<visual class="front_tire" mesh_filename="" texture_filename="" />
 	<visual class="rear_tire" mesh_filename="wheelchair_wheel.mesh" texture_filename="Wheel_Chair_BaseColor.png" />
 	<character_slot type="driver" position="0.0 0.0 -1.8" rotation="0" exit_rotation="3.14" hiding="1" marker_offset="0 0.35 0.2"/>
-	<character_slot type="passenger" position="0.0 0.27 -0.4" rotation="0" exit_rotation="0" hiding="0" animation_key="crouch,slav" marker_offset="0 0.35 0.2" rotation_range="3.00"/>
+	<character_slot type="passenger" position="0.0 1.27 -0.4" rotation="0" exit_rotation="0" hiding="0" animation_key="crouch,slav" marker_offset="0 0.35 0.2" rotation_range="6.30"/>
 	<rev_sound filename="" />
 	<sound key="slide" filename="slide_noise.wav" />
 	<sound key="squeal" filename="tire_squeal.wav" />
