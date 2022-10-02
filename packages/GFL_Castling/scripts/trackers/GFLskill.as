@@ -1135,7 +1135,8 @@ class GFLskill : Tracker {
 
 								Vector3 pos_smartbullet1 = pos_smartbullet.add(Vector3(rand_x,16,rand_y));
 								float v_offset = getAimUnitDistance(1.0,c_pos,pos_smartbullet1);
-								CreateDirectProjectile(m_metagame,c_pos,pos_smartbullet1,"ff_weaver_rocket.projectile",characterId,factionid,1.02*v_offset/0.4);                              			
+								CreateDirectProjectile(m_metagame,c_pos,pos_smartbullet1,"ff_weaver_rocket.projectile",characterId,factionid,1.02*v_offset/0.4); 
+								playSoundAtLocation(m_metagame,"m202_flash_shot.wav",factionid,luckyonepos,1.0);                             			
                             }     
 						}
 					}				
