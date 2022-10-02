@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<vehicle name="Neo-SU Defence System" key="kcco_1130.vehicle" respawn_time="3600" map_view_atlas_index="32" minimum_fill_requirement="1.0" max_character_collision_speed_on_normal="8.0" max_character_collision_speed="8" character_leave_request_mode="friendly" allow_ai_to_use="1" allow_player_to_use="1" ai_driver_turns_to_target="1" ai_abandon_when_unsteerable="0" ai_stop_to_fight="1" >
+<vehicle name="Neo-SU Defence System" key="kcco_1130.vehicle" respawn_time="3600" map_view_atlas_index="32" minimum_fill_requirement="1.0" max_character_collision_speed_on_normal="8.0" max_character_collision_speed="8" character_leave_request_mode="friendly" allow_ai_to_use="1" allow_player_to_use="1" ai_driver_turns_to_target="1" ai_abandon_when_unsteerable="0" ai_stop_to_fight="1" soldier_capacity_offset="1" >
     <tag name="metal_heavy" />
     <tag name="tow" />
     <tag name="light_combat" />
     <tire_set offset="1.0 0 1.0" radius="0.5" />
     <tire_set offset="1.0 0 -1.0" radius="0.5" />
     <control max_speed="12.0" acceleration="20.0" max_reverse_speed="12.0" min_health_to_steer="1.5" max_rotation="0.2" max_water_depth="6.0" can_steer_in_water="0.0" steer_smoothening="0.6" tracked="1" gears="0" max_limiter_speed="6.0" tracked_visual_tire_max_rotation="1.0" tracked_visual_tire_rotation_smoothening="0.9" simulated_speed_factor="0.1" />
-    <physics max_health="40" blast_damage_threshold="1.0" mass="150.0" broken_mass="200" gravity="-40" remove_collision_threshold="50.0" extent="1.5 4.0 1.5" offset="0.0 +0.0 -0.0" top_offset="0 0 0" collision_model_pos="0 2.0 0" collision_model_extent="1.5 4.0 1.5" visual_offset="0 0.24 0" drag_offset="-0.1" friction_offset="-0.1" preserve_motion_on_impact_factor="1" />
+    <physics max_health="40" blast_damage_threshold="1.5" mass="1500.0" broken_mass="2000" gravity="-40" remove_collision_threshold="50.0" extent="1.5 4.0 1.5" offset="0.0 +0.0 -0.0" top_offset="0 0 0" collision_model_pos="0 2.0 0" collision_model_extent="1.5 4.0 1.5" visual_offset="0 0.24 0" drag_offset="-0.1" friction_offset="-0.1" preserve_motion_on_impact_factor="1" />
     <turret offset="0.0 0.0 0.0" weapon_key="kccow_vehicle_1130mg.weapon" weapon_offset="0.0 1.72 1.64" weapon_recoil="0.0" physics_recoil="0.0" max_rotation_step="0.00016" rotation_range="6.30" />
     <modifier class="blast_range" value="-1.0" />
 
