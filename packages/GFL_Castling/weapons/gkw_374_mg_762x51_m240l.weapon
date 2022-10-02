@@ -23,6 +23,7 @@
         can_shoot_prone="1"
         slot="0"/>
         <animation key="reload" animation_key="reloading, Machine gun 1.6"/>
+        <animation state_key="next_in_chain_out" animation_key="open tripod"/>
         <next_in_chain key="gkw_m240l_skill.weapon" share_ammo="1"/>
         <sound key="fire" fileref="m240_fire_FromCOD6.wav" pitch_variety="0.05" volume="1.2"/>
         <sound key="magazine_out" fileref="m240_mgz_out_FromSQUAD.wav" volume="0.6"/>
@@ -92,6 +93,7 @@
         can_shoot_prone="1"
         slot="0"/>
         <animation key="reload" animation_key="reloading, Machine gun 1.6"/>
+        <animation state_key="next_in_chain_out" animation_key="close tripod"/>
         <inventory encumbrance="30.0" buy_price="40.0" sell_price="40.0"/>
         <commonness value="0" in_stock="0" can_respawn_with="1"/>
         <next_in_chain key="gkw_m240l.weapon" share_ammo="1"/>

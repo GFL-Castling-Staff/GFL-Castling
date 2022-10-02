@@ -1,85 +1,151 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- 体素模型由YABA提供 -->
 <weapons>
-    <weapon file="heavy_mg_standing.animation_base" key="gkw_mg4mod3_703.weapon">
+    <weapon key="gkw_mg4mod3_703.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
         <specification 
-        barrel_offset="0.5" 
-        retrigger_time="0.075" 
-        accuracy_factor="0.8" 
-        sustained_fire_grow_step="0.35" 
-        sustained_fire_diminish_rate="1.5" 
-        magazine_size="200" 
-        suppressed="0" 
+        barrel_offset="0.5"
+        retrigger_time="0.075"
+        accuracy_factor="0.8"
+        sustained_fire_grow_step="0.35"
+        sustained_fire_diminish_rate="1.5"
+        magazine_size="200"
+        suppressed="0"
         name="MG4(MOD3)-[Survival Club Member]" 
-        class="0" 
-        projectile_speed="240" 
+        class="0"
+        projectile_speed="240"
         sight_range_modifier="1.5"
-        />
-        <animation key="reload" animation_key="reloading, Machine gun 4" />
-        <inventory  buy_price="270.0" sell_price="270.0" />
-        <capacity value="1" source="rank" source_value="0.0" />
-        <next_in_chain key="gkw_mg4mod3_703_skill.weapon" share_ammo="1" />
-        <commonness value="0" in_stock="0" />
-        <sound key="fire" fileref="mg4_fire_FromMOH2012.wav" pitch_variety="0.05" volume="1" />
-        <sound key="magazine_out" fileref="mg4_mgz_out_FromBF2PR.wav" volume="0.8" />
-        <sound key="magazine_in" fileref="mg4_mgz_in_FromBF2PR.wav" volume="0.8" />
-        <sound key="cycle" fileref="mg4_cycle_FromBF2PR.wav" volume="0.8" />
-        <sound class="impact" fileref="rifle_drop.wav" />
-        <model filename="gkw_mg_mg4.xml" />
+        stab_enabled="1"
+        carry_in_two_hands="1"
+        burst_shots="1"
+        last_burst_retrigger_time="-1"
+        can_shoot_standing="1"
+        can_shoot_crouching="1"
+        can_shoot_prone="1"
+        slot="0"/>
+        <animation key="reload" animation_key="reloading, Machine gun 4"/>
+        <animation state_key="next_in_chain_out" animation_key="open tripod"/>
+        <inventory encumbrance="50.0" buy_price="270.0" sell_price="270.0"/>
+        <capacity value="1" source="rank" source_value="0.0"/>
+        <next_in_chain key="gkw_mg4mod3_703_skill.weapon" share_ammo="1"/>
+        <sound key="fire" fileref="mg4_fire_FromMOH2012.wav" pitch_variety="0.05" volume="1"/>
+        <sound key="magazine_out" fileref="mg4_mgz_out_FromBF2PR.wav" volume="0.8"/>
+        <sound key="magazine_in" fileref="mg4_mgz_in_FromBF2PR.wav" volume="0.8"/>
+        <sound key="cycle" fileref="mg4_cycle_FromBF2PR.wav" volume="0.8"/>
+        <sound key="last_ammo" fileref="MG4_BREAK_JP.wav" pitch_variety="0.0" volume="2.4"/>
+        <sound key="effect" fileref="MG4_MEET_JP.wav" pitch_variety="0.0" volume="1.4"/>
+        <sound key="effect" fileref="MG4_GOATTACK_JP.wav" pitch_variety="0.0" volume="1.4"/>
+        <sound class="impact" fileref="rifle_drop.wav"/>
+        <model filename="gkw_mg_mg4mod3_n.xml"/>
         <hud_icon filename="gkw_mg4_703.png" />
         <projectile file="bullet.projectile">
-            <result class="hit" kill_probability="2.1" kill_probability_offset_on_successful_hit="1.8" kill_decay_start_time="1.967" kill_decay_end_time="3.279" />
+            <result class="hit" kill_probability="2.1" kill_probability_offset_on_successful_hit="1.8" kill_decay_start_time="1.967" kill_decay_end_time="3.279"/>
         </projectile>
-        <effect class="muzzle" ref="ejection_556" />
-        <stance state_key="running" accuracy="0.6" />
-        <stance state_key="walking" accuracy="0.65" />
-        <stance state_key="crouch_moving" accuracy="0.7" />
-        <stance state_key="prone_moving" accuracy="0.8" />
-        <stance state_key="standing" accuracy="0.9" />
-        <stance state_key="crouching" accuracy="1.6" />
-        <stance state_key="prone" accuracy="1.9" />
-        <stance state_key="over_wall" accuracy="1.9" />
+        <effect class="muzzle" ref="ejection_556"/>
+        <stance state_key="running" accuracy="0.6"/>
+        <stance state_key="walking" accuracy="0.7"/>
+        <stance state_key="crouch_moving" accuracy="0.7"/>
+        <stance state_key="prone_moving" accuracy="0.8"/>
+        <stance state_key="standing" accuracy="0.9"/>
+        <stance state_key="crouching" accuracy="0.9"/>
+        <stance state_key="prone" accuracy="1.5"/>
+        <stance state_key="over_wall" accuracy="1.5"/>
+        <tag name="machine gun"/>
+        <commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+        <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
+        <target_factors tag="smg" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
+        <target_factors tag="melee" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
+        <target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
+        <target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
+        <animation state_key="recoil" animation_key="recoil, hip fire"/>
+        <animation state_key="recoil" animation_key="recoil2, hip fire"/>
+        <animation state_key="recoil" animation_key="recoil3, hip fire"/>
+        <animation key="recoil" stance_key="over_wall" animation_key="recoil1"/>
+        <animation key="recoil" stance_key="over_wall" animation_key="recoil2"/>
+        <animation key="recoil" stance_key="over_wall" animation_key="recoil3"/>
+        <animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
+        <animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
+        <animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
+        <animation state_key="hold" animation_key="hold, lmg"/>
+        <animation state_key="running" animation_key="running, bayonet"/>
+        <animation state_key="walking" animation_key="walking, hip fire"/>
+        <animation state_key="walking_backwards" animation_key="walking backwards, hip fire"/>
+        <animation state_key="celebrate_shoot" animation_key="celebrating, shooting"/>
+        <animation state_key="stabbing" animation_key="melee, quick knife"/>
+        <animation state_key="stabbing" animation_key="pistol whip 3"/>
     </weapon>
-    <weapon file="heavy_mg.animation_base" key="gkw_mg4mod3_703_skill.weapon">
+    <weapon key="gkw_mg4mod3_703_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
         <specification 
-        barrel_offset="0.5" 
-        retrigger_time="0.075" 
-        accuracy_factor="1" 
-        sustained_fire_grow_step="0.25" 
-        sustained_fire_diminish_rate="2.25" 
-        magazine_size="200" 
-        suppressed="0" 
+        barrel_offset="0.5"
+        retrigger_time="0.075"
+        accuracy_factor="0.95"
+        sustained_fire_grow_step="0.25"
+        sustained_fire_diminish_rate="2.25"
+        magazine_size="200"
+        suppressed="0"
         name="MG4(MOD3)-[Survival Club Member]-[Haunted House Hammer]" 
-        class="0" 
-        projectile_speed="240" 
+        class="0"
+        projectile_speed="240"
         sight_range_modifier="2.75"
         can_shoot_standing="0"
         can_shoot_crouching="1"
         can_shoot_prone="1"
-        />
-        <animation key="reload" animation_key="reloading, Machine gun 5" />
-        <inventory buy_price="270.0" sell_price="270.0" />
-        <commonness value="0" in_stock="0" />
-        <capacity value="1" source="rank" source_value="0.0" />
-        <next_in_chain key="gkw_mg4mod3_703.weapon" share_ammo="1" />
-        <sound key="fire" fileref="mg4skill_fire_FromHALOINFINTE.wav" pitch_variety="0.05" volume="1" />
-        <sound key="magazine_out" fileref="mg4_mgz_out_FromBF2PR.wav" volume="0.8" />
-        <sound key="magazine_in" fileref="mg4_mgz_in_FromBF2PR.wav" volume="0.8" />
-        <sound key="cycle" fileref="mg4_cycle_FromBF2PR.wav" volume="0.8" />
-        <sound class="impact" fileref="rifle_drop.wav" />
-        <model filename="gkw_mg_mg4.xml" />
+        stance_accuracy_rate="0.975"
+        stab_enabled="1"
+        carry_in_two_hands="1"
+        burst_shots="1"
+        last_burst_retrigger_time="-1"
+        slot="0"/>
+        <animation key="reload" animation_key="reloading, Machine gun 5"/>
+        <animation state_key="next_in_chain_out" animation_key="close tripod"/>
+        <inventory encumbrance="50.0" buy_price="270.0" sell_price="270.0"/>
+        <commonness value="0" in_stock="0" can_respawn_with="1"/>
+        <capacity value="1" source="rank" source_value="0.0"/>
+        <next_in_chain key="gkw_mg4mod3_703.weapon" share_ammo="1"/>
+        <sound key="fire" fileref="mg4skill_fire_FromHALOINFINTE.wav" pitch_variety="0.05" volume="1"/>
+        <sound key="magazine_out" fileref="mg4_mgz_out_FromBF2PR.wav" volume="0.8"/>
+        <sound key="magazine_in" fileref="mg4_mgz_in_FromBF2PR.wav" volume="0.8"/>
+        <sound key="cycle" fileref="mg4_cycle_FromBF2PR.wav" volume="0.8"/>
+        <sound key="last_ammo" fileref="MG4_BREAK_JP.wav" pitch_variety="0.0" volume="2.4"/>
+        <sound key="effect" fileref="MG4_MEET_JP.wav" pitch_variety="0.0" volume="1.4"/>
+        <sound key="effect" fileref="MG4_GOATTACK_JP.wav" pitch_variety="0.0" volume="1.4"/>
+        <sound class="impact" fileref="rifle_drop.wav"/>
+        <model filename="gkw_mg_mg4mod3.xml"/>
         <hud_icon filename="gkw_mg4_703.png" />
         <projectile file="bullet_he.projectile">
-            <result class="blast"  damage="2.0" radius="2.8" decal="1" push="0.3" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0" />
+            <result class="blast" damage="2.0" radius="2.8" decal="1" push="0.3" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
         </projectile>
-        <effect class="muzzle" ref="ejection_556" />
-        <stance state_key="running" accuracy="0.6" />
-        <stance state_key="crouch_moving" accuracy="0.6" />
-        <stance state_key="prone_moving" accuracy="0.6" />
-        <stance state_key="standing" accuracy="0.75" />
-        <stance state_key="crouching" accuracy="0.8" />
-        <stance state_key="prone" accuracy="1" />
-        <stance state_key="over_wall" accuracy="1" />
-        <modifier class="speed" value="-0.2" />
+        <effect class="muzzle" ref="ejection_556"/>
+        <effect class="muzzle" ref="muzzle_pink"/>
+        <stance state_key="running" accuracy="0.3"/>
+        <stance state_key="walking" accuracy="0.4"/>
+        <stance state_key="crouch_moving" accuracy="0.95"/>
+        <stance state_key="prone_moving" accuracy="0.3"/>
+        <stance state_key="standing" accuracy="0.5"/>
+        <stance state_key="crouching" accuracy="0.95"/>
+        <stance state_key="prone" accuracy="1"/>
+        <stance state_key="over_wall" accuracy="1"/>
+        <modifier class="speed" value="-0.2"/>
+        <tag name="machine gun"/>
+        <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
+        <target_factors tag="smg" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
+        <target_factors tag="melee" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
+        <target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
+        <target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
+        <animation state_key="recoil" animation_key="recoil, hip fire"/>
+        <animation state_key="recoil" animation_key="recoil2, hip fire"/>
+        <animation state_key="recoil" animation_key="recoil3, hip fire"/>
+        <animation key="recoil" stance_key="over_wall" animation_key="recoil1"/>
+        <animation key="recoil" stance_key="over_wall" animation_key="recoil2"/>
+        <animation key="recoil" stance_key="over_wall" animation_key="recoil3"/>
+        <animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
+        <animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
+        <animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
+        <animation state_key="hold" animation_key="still, heavy weapon"/>
+        <animation state_key="running" animation_key="running, line infantry"/>
+        <animation state_key="walking" animation_key="walking, heavy weapon"/>
+        <animation state_key="walking_backwards" animation_key="walking backwards, heavy weapon"/>
+        <animation state_key="celebrate_shoot" animation_key="celebrating, shooting"/>
+        <animation state_key="stabbing" animation_key="melee, quick knife"/>
+        <animation state_key="stabbing" animation_key="pistol whip 3"/>
     </weapon>
 </weapons>

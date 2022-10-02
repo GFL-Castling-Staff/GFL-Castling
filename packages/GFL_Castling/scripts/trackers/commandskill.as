@@ -2634,6 +2634,11 @@ class CommandSkill : Tracker {
                         "A-10_3.wav"
                     };
                     playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+                    array<string> Voice2={
+                        "MG4_SKILL3_JP.wav",
+                        "MG4_SKILL1_JP.wav"
+                    };
+                    playRandomSoundArray(m_metagame,Voice2,factionid,c_pos.toString(),1);                    
                     playAnimationKey(m_metagame,characterId,"air thrust",false,true);
                     playSoundAtLocation(m_metagame,"dart_shot.wav",factionid,c_pos,1.0);
                     TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
