@@ -56,7 +56,7 @@ class BanManager : Tracker {
 
 	// --------------------------------------------
 	protected array<string> loadData(string filename) {
-		return loadStringsFromFile(m_metagame, filename);
+		return loadStringsFromSaveFile(m_metagame, filename);
 	}
 
 	// --------------------------------------------

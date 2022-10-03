@@ -708,7 +708,6 @@ void ProfileSave(Metagame@ m_metagame) {
 	XmlElement command("command");
 	command.setStringAttribute("class", "save_data");
 	command.setStringAttribute("filename", FILENAME);
-	command.setStringAttribute("location", "app_data/CTprofile/");
 	command.appendChild(root);
 
 	m_metagame.getComms().send(command);

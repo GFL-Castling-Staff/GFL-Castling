@@ -786,6 +786,26 @@ array<string>@ loadStringsFromFile(const Metagame@ metagame, string filename, st
 	return result;
 }
 
+array<string>@ loadStringsFromSaveFile(const Metagame@ metagame, string filename, string itemName = "item", string valueName = "value") {
+	array<string> result;
+	XmlElement@ query = XmlElement(
+		makeQuery(metagame, array<dictionary> = {
+			dictionary = { {"TagName", "data"}, {"class", "saved_data"}, {"filename", filename} } }));
+	const XmlElement@ doc = metagame.getComms().query(query);
+
+	if (doc !is null) {
+		const XmlElement@ root = doc.getFirstChild();
+		if (root !is null) {
+			array<const XmlElement@> items = root.getElementsByTagName(itemName);
+			for (uint i = 0; i < items.size(); ++i) {
+				const XmlElement@ item = items[i];
+				result.insertLast(item.getStringAttribute(valueName));
+			}
+		}
+	}
+	return result;
+}
+
 // --------------------------------------------
 void addFactionResourceElements(XmlElement@ command, string type, const array<string>@ keys, bool enabled) {
 	for (uint i = 0; i < keys.size(); ++i) {

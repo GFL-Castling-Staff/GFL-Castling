@@ -15,7 +15,7 @@ class AdminManager {
 
 	// --------------------------------------------
 	void loadFromFile() {
-		m_admins = loadStringsFromFile(m_metagame, "admins.xml");
+		m_admins = loadStringsFromSaveFile(m_metagame, "admins.xml");
 		for (uint i = 0; i < m_admins.size(); ++i) {
 			m_admins[i] = m_admins[i].toLowerCase();
 		}
