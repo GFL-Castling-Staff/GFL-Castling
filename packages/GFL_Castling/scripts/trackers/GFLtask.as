@@ -209,14 +209,16 @@ class DelayAirstrikeRequest :Task{
 	protected float m_timeLeft;
 	protected Vector3 m_pos;
 	protected string m_airstrike_key;
+	protected bool m_voice;
 
-	DelayAirstrikeRequest(GameMode@ metagame, float time, int cId,int fId,Vector3 pos, string airstrike_key) {
+	DelayAirstrikeRequest(GameMode@ metagame, float time, int cId,int fId,Vector3 pos, string airstrike_key,bool voice=false) {
 		@m_metagame = metagame;
 		m_time = time;
 		m_character_id = cId;
 		m_faction_id =fId;
 		m_pos=pos;
 		m_airstrike_key=airstrike_key;
+		m_voice = voice;
 	}
 
 	void start() {
@@ -228,6 +230,14 @@ class DelayAirstrikeRequest :Task{
 		if (m_timeLeft < 0)
 		{
 			insertLockOnStrafeAirstrike(m_metagame,m_airstrike_key,m_character_id,m_faction_id,m_pos);
+			if (m_voice){
+				array<string> Voice={
+					"A-10_1.wav",
+					"A-10_2.wav",
+					"A-10_3.wav"
+				};
+				playRandomSoundArray(m_metagame,Voice,m_faction_id,m_pos.toString(),1);		
+			}
 		}
 	}
 

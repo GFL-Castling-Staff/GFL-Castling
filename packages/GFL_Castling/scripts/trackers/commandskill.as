@@ -2463,10 +2463,9 @@ class CommandSkill : Tracker {
                     };
                     playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
                     playAnimationKey(m_metagame,characterId,"recoil, pistol",true,true);
-                    playSoundAtLocation(m_metagame,"dart_shot.wav",factionid,c_pos,1.0);
+                    playSoundAtLocation(m_metagame,"dart_shot.wav",factionid,c_pos,1.75);
                     c_pos=c_pos.add(Vector3(0,1,0));
                     CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"ppk_tracer_dart_1.projectile",characterId,factionid,60);
-                    //insertLockOnStrafeAirstrike(m_metagame,"a10_call_strafe",characterId,factionid,stringToVector3(target));
 
                     int index = findKillCountIndex(characterId);
                     if (index>=0){
@@ -2633,23 +2632,17 @@ class CommandSkill : Tracker {
                     string target = player.getStringAttribute("aim_target");
                     Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
                     int factionid = character.getIntAttribute("faction_id");
-                    array<string> Voice={
-                        "A-10_1.wav",
-                        "A-10_2.wav",
-                        "A-10_3.wav"
-                    };
-                    playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+
                     array<string> Voice2={
                         "MG4_SKILL3_JP.wav",
                         "MG4_SKILL1_JP.wav"
                     };
                     playRandomSoundArray(m_metagame,Voice2,factionid,c_pos.toString(),1);                    
                     playAnimationKey(m_metagame,characterId,"air thrust",false,true);
-                    playSoundAtLocation(m_metagame,"dart_shot.wav",factionid,c_pos,1.0);
+                    playSoundAtLocation(m_metagame,"dart_shot.wav",factionid,c_pos,1.75);
                     TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
-                    tasker.add(DelayAirstrikeRequest(m_metagame,2.0,characterId,factionid,stringToVector3(target),"a10_rockcet_strafe"));
+                    tasker.add(DelayAirstrikeRequest(m_metagame,2.0,characterId,factionid,stringToVector3(target),"a10_rockcet_strafe",true));
                     tasker.add(DelayAirstrikeRequest(m_metagame,3.0,characterId,factionid,stringToVector3(target),"a10_strafe"));
-
                     addCoolDown("MG4MOD3",60,characterId,modifer);
                 }
             }

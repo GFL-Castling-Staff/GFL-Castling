@@ -7,7 +7,7 @@
         <trail probability="0.0" key="BulletApTrail" />
         <model mesh_filename="kcco_grenade_3.xml" />
         <hud_icon filename="88r.png" />
-        <throwable curve_height="8.0" near_far_distance="10.0" speed_estimation_near="30" speed_estimation_far="40.0" max_speed="100.0" randomness="0.07" tweak_factor="1.75"/>
+        <throwable curve_height="8.0" near_far_distance="10.0" speed_estimation_near="25" speed_estimation_far="30.0" max_speed="50.0" randomness="0.07" tweak_factor="1.75"/>
         <commonness value="2.0" />
         <inventory encumbrance="10.0" price="5.0" />
         <capacity value="5" source="rank" source_value="0.0" />
@@ -35,5 +35,7 @@
         <effect class="result" key="static_object" copy="terrain" />
         <effect class="result" key="character" copy="terrain" />
         <effect class="result" key="vehicle" copy="terrain" />
+        <effect class="activated" ref="SatchelSparkle" />
+        <effect class="activated" ref="SatchelFlash" />
     </projectile>
 </projectiles>
