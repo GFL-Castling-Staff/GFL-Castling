@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- 体素模型由YABA提供 -->
 <weapons>
     <weapon key="gkw_mg4mod3_703.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
         <specification 
@@ -66,6 +65,7 @@
         <animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
         <animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
         <animation state_key="hold" animation_key="hold, lmg"/>
+        <animation state_key="hold" stance_key="crouch" animation_key="crouch, hold_mg4"/>
         <animation state_key="running" animation_key="running, bayonet"/>
         <animation state_key="walking" animation_key="walking, hip fire"/>
         <animation state_key="walking_backwards" animation_key="walking backwards, hip fire"/>
@@ -141,7 +141,7 @@
         <animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
         <animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
         <animation state_key="hold" animation_key="still, heavy weapon"/>
-        <animation state_key="running" animation_key="running, line infantry"/>
+        <animation state_key="running" animation_key="running, heavy mg"/>
         <animation state_key="walking" animation_key="walking, heavy weapon"/>
         <animation state_key="walking_backwards" animation_key="walking backwards, heavy weapon"/>
         <animation state_key="celebrate_shoot" animation_key="celebrating, shooting"/>
