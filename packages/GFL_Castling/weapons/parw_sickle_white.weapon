@@ -48,7 +48,7 @@
 
     <modifier class="detectability" value="0.6"/>
     <modifier class="speed" value="0.4" />
-    <shield offset="-0.55 0.0 0" extent="0.8 0.5 1.0" />
+    <shield offset="-0.55 0.0 0" extent="0.8 0.5 1.0" usable_for_cover="0" />
     <!-- state modifiers for weapons are connected to shield impact events -->
     <!-- deflects all bullets; death, stun, wound become none, doesn't consume -->
     <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0" />

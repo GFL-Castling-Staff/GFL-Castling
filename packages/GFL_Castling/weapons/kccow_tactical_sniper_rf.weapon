@@ -55,7 +55,6 @@ key="kccow_tactical_sniper_rf.weapon">
     <!-- <weak_hand_hold offset="0.1" /> -->
     <projectile file="kcco_smartbullet.projectile" />
     <!-- state modifiers for weapons are connected to shield impact events -->
-    <!-- <shield offset="0 0 0.2" extent="0.4 1.6 0.6" /> -->
     <stance state_key="running" accuracy="1.1" />
     <stance state_key="walking" accuracy="1.1" />
     <stance state_key="crouch_moving" accuracy="1.1" />

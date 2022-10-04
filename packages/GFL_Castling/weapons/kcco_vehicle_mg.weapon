@@ -38,18 +38,4 @@
     <projectile file="bullet_kcco.projectile">
         <result class="hit"  kill_probability="1.45" kill_decay_start_time="1.933" kill_decay_end_time="3.222" />
     </projectile>
-    
-<!-- front plate-mid -->    
-    <shield offset="0.3 -0.6 0" extent="0.2 0.8 0.3" />    
-<!-- front plate-L -->    
-    <shield offset="0.3 -0.4 0.3" extent="0.2 1.0 0.3" />
-<!-- front plate-R -->    
-    <shield offset="0.3 -0.4 -0.3" extent="0.2 1.0 0.3" />    
-<!-- left plate -->
-    <shield offset="0.9 -0.5 +0.6" extent="1.5 0.3 0.2" />
-<!-- right plate -->  
-    <shield offset="0.9 -0.5 -0.6" extent="1.5 0.3 0.2" />      
-<!-- rear plate --> 
-    <!-- <shield offset="1.7 -0.2 0" extent="0.2 1.0 0.8" />   -->
-    
 </weapon>
