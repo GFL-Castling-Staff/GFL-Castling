@@ -32,7 +32,7 @@
     <model filename="gkw_ar_m16a1.xml" />
     <hud_icon filename="sfw_m16a1.png" />
     <weak_hand_hold offset="0.2" />
-    <projectile file="bullet.projectile">
+    <projectile file="bullet_ai.projectile">
         <result class="hit" kill_probability="1.85" kill_decay_start_time="0.1" kill_decay_end_time="0.5" />
     </projectile>
     <stance state_key="running" accuracy="0.3" />

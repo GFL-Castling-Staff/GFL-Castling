@@ -30,7 +30,7 @@
     <effect class="result" key="vehicle" copy="terrain" />
     <effect class="result" key="character" copy="terrain" />
 </projectile>
-<projectile class="grenade" name="Flashbang" slot="0" drop_count_factor_on_death="0.0" radius="0.15" key="m16a1_flashbang.projectile">
+<projectile class="grenade" name="Flashbang" slot="0" drop_count_factor_on_death="0.0" radius="0.15" key="m16a1_flashbang.projectile" pulldown_in_air="40">
     <tag name="flashbang" />
 
     <result class="spawn" instance_class="grenade" instance_key="flashbang_effect_10m.projectile" min_amount="1" max_amount="1" offset="0 1.5 0" position_spread="0 0" direction_spread="0 0" />
@@ -46,7 +46,7 @@
     <capacity value="20" source="rank" source_value="0.0" />
     <inventory encumbrance="0.0" price="0.0" />
 
-    <throwable curve_height="5.5" near_far_distance="8.0" speed_estimation_near="25.0" speed_estimation_far="30.0" max_speed="30.0" randomness="0.07" />
+    <throwable curve_height="11.8" near_far_distance="10.0" speed_estimation_near="20" speed_estimation_far="30.0" max_speed="100.0" randomness="0.07" tweak_factor="1.775"/>
 
     <sound class="result" key="other" fileref="stun_grenade1.wav" />
 
