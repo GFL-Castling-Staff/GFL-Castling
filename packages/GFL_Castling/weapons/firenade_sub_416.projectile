@@ -1,37 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projectile class="grenade" name="flame grenade" slot="2" key="firenade_sub_416.projectile" radius="0.15" pulldown_in_air="20">
-<tag name="grenade" />
-
-    <trigger class="impact" />
-    <result class="blast" radius="2.8" damage="0.1" push="0.0" decal="1" make_vehicle_hit_sound="0" faction_compare="not_equal"/>
-
+    <tag name="grenade" />
+    <trigger class="time" time_to_live="0.0"/>
+    <result class="blast" radius="3.0" damage="0.01" push="0.0" decal="1" make_vehicle_hit_sound="0" faction_compare="not_equal"/>
     <commonness value="0.0"/>
-
     <rotation class="random" />
-
     <model mesh_filename="" />
     <hud_icon filename="" />
-
-    
     <effect class="result" key="other" type="splat_map" surface_tag="" size="1.0" atlas_index="0" layer="1" />
-    <effect class="result" key="other" type="splat_map" surface_tag="" size="1.5.0" atlas_index="4" layer="0" />
-    <effect class="result" key="other" type="splat_map" surface_tag="" size="2.0" atlas_index="0" layer="2" additive="0" /> <!-- remove top snow everywhere -->
-
-
-    <effect class="result" key="terrain" ref="BurnOut" post_processing="1" />  
-
+    <effect class="result" key="other" type="splat_map" surface_tag="" size="1.5" atlas_index="4" layer="0" />
+    <effect class="result" key="other" type="splat_map" surface_tag="" size="2.0" atlas_index="0" layer="2" additive="0" />
+    <!-- remove top snow everywhere -->
+    <effect class="result" key="terrain" ref="BurnOut" post_processing="1" />
     <effect class="result" key="other" ref="SmokePropulsion" />
     <effect class="result" key="other" ref="FlamePropulsion" lighting="0" />
     <effect class="result" key="other" ref="FlameSparkle" lighting="0" />
-
     <effect class="result" key="other" ref="SmokePropulsionEnd" />
     <effect class="result" key="other" ref="FlamePropulsionEnd" lighting="0" />
     <effect class="result" key="other" ref="FlameSparkleEnd" lighting="0" />
-
     <effect class="result" key="terrain" copy="other" />
     <effect class="result" key="static_object" copy="other" />
     <effect class="result" key="vehicle" copy="other" />
     <effect class="result" key="character" copy="other" />
-
-	<effect class="activated" ref="FlameSparkle" lighting="0" />
+    <effect class="activated" ref="FlameSparkle" lighting="0" />
 </projectile>

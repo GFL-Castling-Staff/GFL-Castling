@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<projectile class="grenade" name="Anti Armor Grenade" slot="1" pulldown_in_air="45.0" key="damage_40mm_aamod3.projectile">
+<projectile class="grenade" name="" slot="1" pulldown_in_air="45.0" key="damage_40mm_aamod3.projectile">
     <tag name="grenade"/>
-    <result class="blast" damage="18" radius="7.0" decal="1" push="0.6" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
-    <trigger class="time" time_to_live="0.01"/>
+    <result class="spawn" instance_class="grenade" instance_key="blast_shard_rad_40mm_aamod3.projectile" min_amount="3" max_amount="3" offset="0 1.0 0" position_spread="0 0" direction_spread="0 0" />
+    <trigger class="time" time_to_live="0.0"/>
     <rotation class="motion" />
     <model />
     <commonness value="0.0" />

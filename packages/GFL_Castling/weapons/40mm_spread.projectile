@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projectile class="grenade" name="40mm" slot="1" pulldown_in_air="45.0" key="40mm_spread.projectile">
     <tag name="grenade"/>
-    <result class="blast" radius="8" damage="3.1" push="0.4" decal="1" faction_compare="not_equal"/>
+    <result class="blast" radius="7.5" damage="6.1" push="0.35" decal="1" faction_compare="not_equal"/>
     <trigger class="impact" />
     <rotation class="motion" />
     <model mesh_filename="agl.xml" />
@@ -34,9 +34,9 @@
     <effect class="result" key="terrain" ref="Shine" lighting="0" />
     <effect class="result" key="terrain" ref="Godray" lighting="0" />
     <effect class="result" key="terrain" ref="ShadowSmoke" shadow="1" />
-    <effect class="result" type="splat_map" surface_tag="" size="3.0" atlas_index="0" layer="1" />
-    <effect class="result" type="splat_map" surface_tag="" size="5.0" atlas_index="4" layer="0" />
-    <effect class="result" type="splat_map" surface_tag="" size="6.0" atlas_index="0" layer="2" additive="0" /> <!-- remove top snow everywhere -->
+    <effect class="result" type="splat_map" surface_tag="" size="5" atlas_index="0" layer="1" />
+    <effect class="result" type="splat_map" surface_tag="" size="6" atlas_index="4" layer="0" />
+    <effect class="result" type="splat_map" surface_tag="" size="7" atlas_index="0" layer="2" additive="0" /> <!-- remove top snow everywhere -->
 
     <effect class="result" key="other" ref="SmokeTop" post_processing="1" />
     <effect class="result" key="other" ref="Smoke" post_processing="1" />

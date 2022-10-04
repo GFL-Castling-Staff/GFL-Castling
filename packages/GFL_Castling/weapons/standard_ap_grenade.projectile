@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projectile class="grenade" name="Anti Personal Grenade" slot="2" pulldown_in_air="45.0" key="std_ap_grenade.projectile" >
     <tag name="grenade"/>
-    <result class="blast" damage="8.1" radius="12" decal="1" push="0.75" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0" />
+    <result class="spawn" instance_class="grenade" instance_key="blast_shard_rad_40mm_ap.projectile" min_amount="5" max_amount="5" offset="0 1.5 0" position_spread="0 0" direction_spread="0 0" />
     <trigger class="impact">
         <collider class="character" enabled="1" faction_compare="not_equal"/>
     </trigger>
     <rotation class="motion" />
     <model mesh_filename="agl.xml" />
     <commonness value="0.0" />
+
     <sound class="result" key="other" fileref="explosion_FromSQUAD_1.wav" volume="2" />
     <sound class="result" key="other" fileref="explosion_FromSQUAD_2.wav" volume="2" />
     <sound class="result" key="other" fileref="explosion_FromSQUAD_3.wav" volume="2" />
@@ -22,22 +23,17 @@
     <effect class="result" key="terrain" ref="NavalBurstInner" post_processing="1" use_surface_color="1" />
     <effect class="result" key="terrain" ref="NavalBurstOuter" post_processing="1" use_surface_color="1" />
     <effect class="result" key="terrain" ref="NavalBurstUp" post_processing="1" use_surface_color="1" />
-    <effect class="result" key="terrain" ref="NavalSmokeUp1" post_processing="1" />
-    <effect class="result" key="terrain" ref="NavalSmokeUp2" post_processing="1" />
-    <effect class="result" key="terrain" ref="NavalSmokeTop1" post_processing="1" />
-    <effect class="result" key="terrain" ref="NavalSmokeTop2" post_processing="1" />
-    <effect class="result" key="terrain" ref="NavalSmoke1" post_processing="1" />
-    <effect class="result" key="terrain" ref="NavalSmoke2" post_processing="1" />
+    <effect class="result" key="terrain" ref="BigBurst" use_surface_color="1" />
+    <effect class="result" key="terrain" ref="SmokeTop" post_processing="1" />
+    <effect class="result" key="terrain" ref="Smoke" post_processing="1" />
     <effect class="result" key="terrain" ref="NavalGodray" lighting="0" />
-    <effect class="result" key="terrain" ref="woosh_big1" lighting="0" />
+    <effect class="result" key="terrain" ref="woosh" lighting="0" />
     <effect class="result" key="terrain" ref="ShadowSmoke" shadow="1" />
     <effect class="result" key="terrain" ref="Shine" lighting="0" />
-    <effect class="result" key="terrain" ref="Godray" lighting="0" />
-    <effect class="result" type="splat_map" surface_tag="" size="6.0" atlas_index="0" layer="1" />
-    <effect class="result" type="splat_map" surface_tag="" size="8.0" atlas_index="4" layer="0" />
-    <effect class="result" type="splat_map" surface_tag="" size="10.0" atlas_index="0" layer="2" additive="0" />
+    <effect class="result" type="splat_map" surface_tag="" size="10.0" atlas_index="0" layer="1" />
+    <effect class="result" type="splat_map" surface_tag="" size="12.0" atlas_index="4" layer="0" />
+    <effect class="result" type="splat_map" surface_tag="" size="14.0" atlas_index="0" layer="2" additive="0" />
     <!-- remove top snow everywhere -->
-    <effect class="result" key="terrain" ref="Shine" lighting="0" />
     <effect class="result" key="terrain" ref="Godray" lighting="0" />
 
 

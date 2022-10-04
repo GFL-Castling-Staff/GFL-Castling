@@ -2,15 +2,9 @@
 <projectile class="grenade" name="flame grenade" slot="2" key="firenade_Vector_blast.projectile" radius="0.15" pulldown_in_air="20">
     <!-- <event> -->
     <trigger class="time" time_to_live="0.0" />
-    <result class="blast" radius="8.0" damage="4.0" push="0.0" decal="1" make_vehicle_hit_sound="0" faction_compare="not_equal"/>
+    <result class="blast" radius="7.5" damage="6.0" push="0.0" decal="1" make_vehicle_hit_sound="0" faction_compare="not_equal"/>
     <commonness value="0.0"/>
-    <!-- </event> -->
     <rotation class="random" />
     <model mesh_filename="" />
     <hud_icon filename="" />
-    <effect class="result" key="other" ref="woosh" />
-    <effect class="result" key="terrain" copy="other" />
-    <effect class="result" key="static_object" copy="other" />
-    <effect class="result" key="vehicle" copy="other" />
-    <effect class="result" key="character" copy="other" />
 </projectile>

@@ -220,18 +220,11 @@ class GFLskill : Tracker {
 					const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
 					if (player !is null) {
 						Vector3 Pos_40mm = stringToVector3(event.getStringAttribute("position"));
-						// string c = 
-						// 	"<command class='create_instance'" +
-						// 	" faction_id='"+ player.getIntAttribute("faction_id") +"'" +
-						// 	" instance_class='grenade'" +
-						// 	" instance_key='40mm.projectile'" +
-						// 	" position='" + Pos_40mm.toString() + "'"+
-						// 	" character_id='" + characterId + "' />";
 						string c1 = 
 							"<command class='create_instance'" +
 							" faction_id='"+ player.getIntAttribute("faction_id") +"'" +
 							" instance_class='grenade'" +
-							" instance_key='std_aa_grenade.projectile'" +
+							" instance_key='damage_40mm_aamod3.projectile'" +
 							" position='" + Pos_40mm.toString() + "'"+
 							" character_id='" + characterId + "' />";
 						m_metagame.getComms().send(c1);
@@ -1247,7 +1240,7 @@ class GFLskill : Tracker {
 						}
 					}
 					HK416_track[a].m_numtime--;
-					HK416_track[a].m_time=0.33;
+					HK416_track[a].m_time=0.2;
 					if (HK416_track[a].m_numtime<0){
 						HK416_track.removeAt(a);
 					}
@@ -1318,8 +1311,8 @@ class XM8tracker{
 
 class HK416_tracker{
     int m_characterId;
-	float m_time=0.25;
-	int m_numtime=16;
+	float m_time=0.2;
+	int m_numtime=20;
 	int m_factionid;
 	array<const XmlElement@> m_affected;
 	Vector3 m_pos;

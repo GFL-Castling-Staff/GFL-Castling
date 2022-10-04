@@ -2,7 +2,7 @@
 <projectile class="grenade" name="XM8 skillnade" key="skill_stg44_3.projectile" slot="0" radius="0.05">
 
 
-    <result class="blast" radius="4" damage="8" push="0.3" decal="1" character_state="death" faction_compare="not_equal" />
+    <result class="blast" radius="7" damage="10" push="0.3" decal="1" character_state="death" faction_compare="not_equal" />
     <trigger class="time" time_to_live="0.6"/>
 
     <rotation class="random" />
@@ -25,9 +25,9 @@
     <effect class="result" key="terrain" ref="Godray" lighting="0" />
     <effect class="result" key="terrain" ref="ShadowSmoke" shadow="1" />
     <effect class="result" key="terrain" ref="woosh" post_processing="0" shadow="0" />   
-    <effect class="result" type="splat_map" surface_tag="" size="3.0" atlas_index="0" layer="1" />
-    <effect class="result" type="splat_map" surface_tag="" size="4.0" atlas_index="4" layer="0" />
-    <effect class="result" type="splat_map" surface_tag="" size="5.0" atlas_index="0" layer="2" additive="0" /> 
+    <effect class="result" type="splat_map" surface_tag="" size="7.0" atlas_index="0" layer="1" />
+    <effect class="result" type="splat_map" surface_tag="" size="9.0" atlas_index="4" layer="0" />
+    <effect class="result" type="splat_map" surface_tag="" size="11.0" atlas_index="0" layer="2" additive="0" /> 
 
     <effect class="result" key="static_object" copy="terrain" />
     <effect class="result" key="character" copy="terrain" /> 

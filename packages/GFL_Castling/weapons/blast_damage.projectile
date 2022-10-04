@@ -59,5 +59,45 @@
         <commonness value="0" />
         <inventory encumbrance="1.0" price="5.0" />
         <capacity value="1" source="rank" source_value="0.0" />
+    </projectile>
+    <projectile class="grenade" name="" key="blast_shard_rad_40mm_ap.projectile" slot="2" radius="0.15">
+        <result class="blast" radius="13.5" damage="3.1" push="0.15" decal="1" character_state="death" faction_compare="not_equal" />
+        <trigger class="time" time_to_live="0.0"/>
+        <rotation class="random" />
+        <model mesh_filename="" />
+        <hud_icon filename="88r.png" />
+        <commonness value="0" />
+        <inventory encumbrance="1.0" price="5.0" />
+        <capacity value="1" source="rank" source_value="0.0" />
+    </projectile>
+    <projectile class="grenade" name="" key="blast_shard_rad_40mm_aa.projectile" slot="2" radius="0.15">
+        <result class="blast" radius="7.0" damage="12.5" push="0.5" decal="1" character_state="death" faction_compare="not_equal" />
+        <trigger class="time" time_to_live="0.0"/>
+        <rotation class="random" />
+        <model mesh_filename="" />
+        <hud_icon filename="88r.png" />
+        <commonness value="0" />
+        <inventory encumbrance="1.0" price="5.0" />
+        <capacity value="1" source="rank" source_value="0.0" />
+    </projectile>
+    <projectile class="grenade" name="" key="blast_shard_rad_40mm_aamod3.projectile" slot="2" radius="0.15">
+        <result class="blast" radius="8.0" damage="10" push="0.5" decal="1" character_state="death" faction_compare="not_equal" />
+        <trigger class="time" time_to_live="0.0"/>
+        <rotation class="random" />
+        <model mesh_filename="" />
+        <hud_icon filename="88r.png" />
+        <commonness value="0" />
+        <inventory encumbrance="1.0" price="5.0" />
+        <capacity value="1" source="rank" source_value="0.0" />
     </projectile>    
+    <projectile class="grenade" name="" key="blast_shard_rad_g3mod3.projectile" slot="2" radius="0.15">
+        <result class="blast" radius="8.0" damage="11.1" push="0.4" decal="1" character_state="death" faction_compare="not_equal" />
+        <trigger class="time" time_to_live="0.0"/>
+        <rotation class="random" />
+        <model mesh_filename="" />
+        <hud_icon filename="88r.png" />
+        <commonness value="0" />
+        <inventory encumbrance="1.0" price="5.0" />
+        <capacity value="1" source="rank" source_value="0.0" />
+    </projectile>         
 </projectiles>

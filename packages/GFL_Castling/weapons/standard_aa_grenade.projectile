@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projectile class="grenade" name="Anti Armor Grenade" slot="1" pulldown_in_air="45.0" key="std_aa_grenade.projectile">
     <tag name="grenade"/>
-    <result class="blast" damage="15" radius="6" decal="1" push="0.6" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+    <result class="spawn" instance_class="grenade" instance_key="blast_shard_rad_40mm_aa.projectile" min_amount="2" max_amount="2" offset="0 1.0 0" position_spread="0 0" direction_spread="0 0" />
     <trigger class="impact">
 		<collider class="character" enabled="1" faction_compare="not_equal"/>
 	</trigger>
@@ -37,9 +37,9 @@
     <effect class="result" key="terrain" ref="Godray" lighting="0" />
     <effect class="result" key="terrain" ref="ShadowSmoke" shadow="1" />
     <effect class="result" key="terrain" ref="woosh" post_processing="0" shadow="0" />     
-    <effect class="result" type="splat_map" surface_tag="" size="3.0" atlas_index="0" layer="1" />
-    <effect class="result" type="splat_map" surface_tag="" size="5.0" atlas_index="4" layer="0" />
-    <effect class="result" type="splat_map" surface_tag="" size="6.0" atlas_index="0" layer="2" additive="0" /> <!-- remove top snow everywhere -->
+    <effect class="result" type="splat_map" surface_tag="" size="6.0" atlas_index="0" layer="1" />
+    <effect class="result" type="splat_map" surface_tag="" size="7.5" atlas_index="4" layer="0" />
+    <effect class="result" type="splat_map" surface_tag="" size="9.0" atlas_index="0" layer="2" additive="0" /> <!-- remove top snow everywhere -->
 
     <effect class="result" key="static_object" copy="terrain" />
     <effect class="result" key="vehicle" copy="terrain" />     
