@@ -22,7 +22,7 @@
         can_shoot_prone="1"
         slot="0"/>
         <animation key="reload" animation_key="reloading, Machine gun 4"/>
-        <animation state_key="next_in_chain_out" animation_key="open tripod"/>
+        <animation state_key="next_in_chain_out" animation_key="close tripod"/>
         <inventory encumbrance="50.0" buy_price="270.0" sell_price="270.0"/>
         <capacity value="1" source="rank" source_value="0.0"/>
         <next_in_chain key="gkw_mg4mod3_skill.weapon" share_ammo="1"/>
@@ -33,6 +33,8 @@
         <sound key="last_ammo" fileref="MG4_BREAK_JP.wav" pitch_variety="0.0" volume="2.4"/>
         <sound key="effect" fileref="MG4_MEET_JP.wav" pitch_variety="0.0" volume="1.4"/>
         <sound key="effect" fileref="MG4_GOATTACK_JP.wav" pitch_variety="0.0" volume="1.4"/>
+        <sound key="effect" fileref="MG4_PHRASE_JP.wav" pitch_variety="0.0" volume="1.4"/>
+        <sound key="effect" fileref=""/>
         <sound class="impact" fileref="rifle_drop.wav"/>
         <model filename="gkw_mg_mg4mod3_n.xml"/>
         <hud_icon filename="gkw_mg4mod3.png"/>
@@ -96,7 +98,7 @@
         last_burst_retrigger_time="-1"
         slot="0"/>
         <animation key="reload" animation_key="reloading, Machine gun 5"/>
-        <animation state_key="next_in_chain_out" animation_key="close tripod"/>
+        <animation state_key="next_in_chain_out" animation_key="open tripod"/>
         <inventory encumbrance="50.0" buy_price="270.0" sell_price="270.0"/>
         <commonness value="0" in_stock="0" can_respawn_with="1"/>
         <capacity value="1" source="rank" source_value="0.0"/>
@@ -108,6 +110,8 @@
         <sound key="last_ammo" fileref="MG4_BREAK_JP.wav" pitch_variety="0.0" volume="2.4"/>
         <sound key="effect" fileref="MG4_MEET_JP.wav" pitch_variety="0.0" volume="1.4"/>
         <sound key="effect" fileref="MG4_GOATTACK_JP.wav" pitch_variety="0.0" volume="1.4"/>
+        <sound key="effect" fileref="MG4_PHRASE_JP.wav" pitch_variety="0.0" volume="1.4"/>
+        <sound key="effect" fileref=""/>
         <sound class="impact" fileref="rifle_drop.wav"/>
         <model filename="gkw_mg_mg4mod3.xml"/>
         <hud_icon filename="gkw_mg4mod3_skill.png"/>

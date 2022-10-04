@@ -41,7 +41,14 @@
     <sound key="cycle" fileref="m1garand_cycle_FromPOSTSCRIPTUM.wav" volume="0.6" />
     <sound key="magazine_out" fileref="t44_mgz_out_FromCOD17.wav" volume="0.45" />
     <sound key="magazine_in" fileref="t44_mgz_in_FromCOD17.wav" volume="0.45" />
-	<sound key="last_ammo" fileref="rifle_02_m1_garand_ping.wav" pitch_variety="0.0" volume="1.75" />
+	<sound key="last_ammo" fileref="rifle_02_m1_garand_ping.wav" pitch_variety="0.0" volume="2.3" />
+	<sound key="stab" fileref="dagger_swing1_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab" fileref="dagger_swing2_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab" fileref="dagger_swing3_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab_hit" fileref="blade_impact_01_fromESV.wav" pitch_variety="0.05" volume="2.0" />
+	<sound key="stab_hit" fileref="blade_impact_02_fromESV.wav" pitch_variety="0.05" volume="2.0" />
+	<sound key="stab_hit" fileref="blade_impact_03_fromESV.wav" pitch_variety="0.05" volume="2.0" />
+	<sound key="stab_hit" fileref="blade_impact_04_fromESV.wav" pitch_variety="0.05" volume="2.0" />
     <model filename="gkw_rf_m1_sf.xml" />
     <hud_icon filename="gkw_m1_1106.png" />
     <inventory encumbrance="10.0" price="498.0" />
@@ -110,7 +117,14 @@
     <sound key="cycle" fileref="m1garand_cycle_FromPOSTSCRIPTUM.wav" volume="0.6" />
     <sound key="magazine_out" fileref="t44_mgz_out_FromCOD17.wav" volume="0.45" />
     <sound key="magazine_in" fileref="t44_mgz_in_FromCOD17.wav" volume="0.45" />
-	<sound key="last_ammo" fileref="rifle_02_m1_garand_ping.wav" pitch_variety="0.0" volume="1.75" />
+	<sound key="last_ammo" fileref="rifle_02_m1_garand_ping.wav" pitch_variety="0.0" volume="2.3" />
+	<sound key="stab" fileref="dagger_swing1_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab" fileref="dagger_swing2_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab" fileref="dagger_swing3_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab_hit" fileref="blade_impact_01_fromESV.wav" pitch_variety="0.05" volume="2.0" />
+	<sound key="stab_hit" fileref="blade_impact_02_fromESV.wav" pitch_variety="0.05" volume="2.0" />
+	<sound key="stab_hit" fileref="blade_impact_03_fromESV.wav" pitch_variety="0.05" volume="2.0" />
+	<sound key="stab_hit" fileref="blade_impact_04_fromESV.wav" pitch_variety="0.05" volume="2.0" />
     <model filename="gkw_rf_m1_sf_2.xml" />
     <hud_icon filename="gkw_m1_1106.png" />
     <inventory encumbrance="10.0" price="498.0" />
