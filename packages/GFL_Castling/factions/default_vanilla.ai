@@ -10,7 +10,7 @@
   <parameter class="check_wounded_time" value="3.0" />
   <parameter class="team_check_time" value="3.0" />
   <parameter class="check_alert_time" value="1.5" />
-  <parameter class="check_reinforcement_need_time" value="20.0" />
+  <parameter class="check_reinforcement_need_time" value="30.0" />
   <parameter class="choose_enemy_time" value="1.0" />
   <parameter class="check_need_help_time" value="1.0" />
   <parameter class="fighting_time_fire_not_open" value="2.0" />
@@ -21,7 +21,7 @@
   <parameter class="grenade_monitor_range" value="15.0" />
   <parameter class="leader_sight_range" value="35.0" />
   <parameter class="team_member_sight_range" value="30.0" />
-  <parameter class="strike_frequency_time" value="60.0" />
+  <parameter class="strike_frequency_time" value="60.0" />   <!-- was 90 (1.82) -->
   <parameter class="global_separation_radius_factor" value="1.5" />
   <parameter class="prefer_roofs_probability" value="0.5" />
   <parameter class="max_leader_authority_willing_to_join_another_squad" value="0.3" />
@@ -46,7 +46,7 @@
   <parameter class="maximum_distance_to_consider_for_heal" value="40.0" />
   <parameter class="consider_someone_already_healing_wounded_distance" value="10.0" />
   <parameter class="force_comparison_multiplier_to_call_reinforcements" value="1.1" />
-  <parameter class="call_reinforcements_max_distance" value="50.0" />
+  <parameter class="call_reinforcements_max_distance" value="40.0" />
   <parameter class="fighting_approach_alarm_spread_max_range" value="30.0" />
   <parameter class="default_fighting_separation" value="7.0" />
   <parameter class="boosted_fighting_separation" value="3.0" />
@@ -64,12 +64,12 @@
   <parameter class="guard_steps" value="2" />
   <parameter class="wait_time" value="1.2" />
   <parameter class="wait_time_variance" value="0.6" />
-  <parameter class="burst_time" value="1.0" />
-  <parameter class="burst_time_variance" value="0.5" />
-  <parameter class="longer_burst_time" value="2.0" />
-  <parameter class="longer_burst_time_variance" value="0.6" />
+  <parameter class="burst_time" value="0.3" />
+  <parameter class="burst_time_variance" value="0.2" />
   <parameter class="in_vehicle_burst_time" value="1.0" />
   <parameter class="in_vehicle_burst_time_variance" value="0.3" />
+  <parameter class="longer_burst_time" value="2.5" />
+  <parameter class="longer_burst_time_variance" value="0.5" />
   <parameter class="accuracy_penalty_range" value="0.07" />
   <parameter class="melee_attack_wait_time" value="0.5" />
   <parameter class="shooting_against_vehicle_burst_time" value="0.5" />
@@ -105,7 +105,7 @@
   <parameter class="using_cover_min_time" value="2.0" />
   <parameter class="using_cover_max_time" value="5.0" />
   <parameter class="fire_open_min_time" value="12.0" />
-  <parameter class="dive_from_grenade_probability" value="0.7" />
+  <parameter class="dive_from_grenade_probability" value="0.5" />
   <parameter class="celebrating_shoot_probability" value="0.3" /> 
   <parameter class="celebrating_comment_probability" value="0.4" /> 
   <parameter class="celebrating_stab_probability" value="1.0" /> 
@@ -114,5 +114,10 @@
   <parameter class="check_vehicles_while_fire_open_interval" value="10.0" />  
   
   <parameter class="reaction_time_after_choosing_target" value="-1.0" />
+  
+<!--      <parameter class="min_number_of_enemies_to_throw_grenade" value="1.0" />  -->
+	  
+	<parameter class="grenade_throw_over_obstacle_offset_min" value="-0.5" />
+	<parameter class="grenade_throw_over_obstacle_offset_max" value="3.5" />
 
 </ai>

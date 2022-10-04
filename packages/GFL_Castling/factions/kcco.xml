@@ -537,7 +537,7 @@
 		</item_class_existence_config>
 	</soldier>	
 	<!-- 欧特鲁斯 -->
-	<soldier name="kcco_dog" spawn_score="0.4" copy_from="default_bot">
+	<soldier name="kcco_dog" spawn_score="0.2" copy_from="default_bot">
 		<character filename="kcco_othrusdog.character" />
 		<models filename="kcco_dog.models" />
 		<ai filename="kcco_dog.ai" />
@@ -548,7 +548,7 @@
 		</resources>
 	</soldier>
 	<!-- archer -->
-	<soldier name="kcco_archer" spawn_score="0.5" squad_size_xp_cap="0.0" copy_from="default_bot">
+	<soldier name="kcco_archer" spawn_score="0.3" squad_size_xp_cap="0.0" copy_from="default_bot">
 		<model filename="kccod_archer.xml" />
 		<ai filename="sniper.ai" />
 		<resources file="kcco_lonewolf_archer.resources" clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
