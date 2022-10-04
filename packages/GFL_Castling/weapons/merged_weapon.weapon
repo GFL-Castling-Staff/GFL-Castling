@@ -264,7 +264,7 @@
 	<modifier class="speed" value="+0.3"/>
 	<modifier class="detectability" value="-0.15"/>
 	<modifier class="hit_success_probability" value="-0.2"/>
-	<shield offset="-0.05 0.0 0.05" extent="0.15 0.3 0.4"/>
+	<shield offset="-0.05 0.0 0.05" extent="0.15 0.3 0.4" usable_for_cover="0"/>
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
 	<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
@@ -8277,9 +8277,24 @@
 	<weak_hand_hold offset="0.3"/>
 	<sound key="fire" fileref="m1garand_fire_FromPOSTSCRIPTUM.wav" pitch_variety="0.05" volume="1.4"/>
 	<sound key="cycle" fileref="m1garand_cycle_FromPOSTSCRIPTUM.wav" volume="0.6"/>
+	<sound key="cycle" fileref="m1garand_cycle_FromPOSTSCRIPTUM.wav" volume="0.6"/>
+	<sound key="cycle" fileref="M1garand_sound1.wav" pitch_variety="0.0" volume="0.6"/>
+	<sound key="cycle" fileref="m1garand_cycle_FromPOSTSCRIPTUM.wav" volume="0.6"/>
+	<sound key="cycle" fileref="M1garand_sound2.wav" pitch_variety="0.0" volume="0.6"/>
+	<sound key="cycle" fileref="m1garand_cycle_FromPOSTSCRIPTUM.wav" volume="0.6"/>
+	<sound key="cycle" fileref="M1garand_sound3.wav" pitch_variety="0.0" volume="0.6"/>
+	<sound key="cycle" fileref="m1garand_cycle_FromPOSTSCRIPTUM.wav" volume="0.6"/>
+	<sound key="cycle" fileref="m1garand_cycle_FromPOSTSCRIPTUM.wav" volume="0.6"/>
 	<sound key="magazine_out" fileref="m1garand_mgz_out_FromPOSTSCRIPTUM.wav" volume="0.6"/>
 	<sound key="magazine_in" fileref="m1garand_mgz_in_FromPOSTSCRIPTUM.wav" volume="0.6"/>
-	<sound key="last_ammo" fileref="rifle_02_m1_garand_ping.wav" pitch_variety="0.0" volume="1.75"/>
+	<sound key="last_ammo" fileref="rifle_02_m1_garand_ping.wav" pitch_variety="0.0" volume="2.0"/>
+	<sound key="stab" fileref="dagger_swing1_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab" fileref="dagger_swing2_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab" fileref="dagger_swing3_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab_hit" fileref="blade_impact_01_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
+	<sound key="stab_hit" fileref="blade_impact_02_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
+	<sound key="stab_hit" fileref="blade_impact_03_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
+	<sound key="stab_hit" fileref="blade_impact_04_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
 	<model filename="gkw_rf_m1_bt.xml"/>
 	<hud_icon filename="gkw_m1.png"/>
 	<inventory encumbrance="10.0" price="5.0"/>
@@ -14124,7 +14139,7 @@
 	<trail probability="1.0" key="BulletApTrail"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_76251"/>
-	<shield offset="-0.60 0.0 -0.2" extent="0.8 1.5 2.4"/>
+	<shield offset="-0.60 0.0 -0.2" extent="0.8 1.5 2.4" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
@@ -17321,7 +17336,14 @@
 	<sound key="cycle" fileref="m1garand_cycle_FromPOSTSCRIPTUM.wav" volume="0.6"/>
 	<sound key="magazine_out" fileref="t44_mgz_out_FromCOD17.wav" volume="0.45"/>
 	<sound key="magazine_in" fileref="t44_mgz_in_FromCOD17.wav" volume="0.45"/>
-	<sound key="last_ammo" fileref="rifle_02_m1_garand_ping.wav" pitch_variety="0.0" volume="1.75"/>
+	<sound key="last_ammo" fileref="rifle_02_m1_garand_ping.wav" pitch_variety="0.0" volume="2.3"/>
+	<sound key="stab" fileref="dagger_swing1_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab" fileref="dagger_swing2_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab" fileref="dagger_swing3_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab_hit" fileref="blade_impact_01_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
+	<sound key="stab_hit" fileref="blade_impact_02_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
+	<sound key="stab_hit" fileref="blade_impact_03_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
+	<sound key="stab_hit" fileref="blade_impact_04_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
 	<model filename="gkw_rf_m1_sf.xml"/>
 	<hud_icon filename="gkw_m1_sf_1.png"/>
 	<inventory encumbrance="10.0" price="498.0"/>
@@ -17366,7 +17388,14 @@
 	<sound key="cycle" fileref="m1garand_cycle_FromPOSTSCRIPTUM.wav" volume="0.6"/>
 	<sound key="magazine_out" fileref="t44_mgz_out_FromCOD17.wav" volume="0.45"/>
 	<sound key="magazine_in" fileref="t44_mgz_in_FromCOD17.wav" volume="0.45"/>
-	<sound key="last_ammo" fileref="rifle_02_m1_garand_ping.wav" pitch_variety="0.0" volume="1.75"/>
+	<sound key="last_ammo" fileref="rifle_02_m1_garand_ping.wav" pitch_variety="0.0" volume="2.3"/>
+	<sound key="stab" fileref="dagger_swing1_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab" fileref="dagger_swing2_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab" fileref="dagger_swing3_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab_hit" fileref="blade_impact_01_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
+	<sound key="stab_hit" fileref="blade_impact_02_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
+	<sound key="stab_hit" fileref="blade_impact_03_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
+	<sound key="stab_hit" fileref="blade_impact_04_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
 	<model filename="gkw_rf_m1_sf_2.xml"/>
 	<hud_icon filename="gkw_m1_sf_2.png"/>
 	<inventory encumbrance="10.0" price="498.0"/>
@@ -17411,7 +17440,14 @@
 	<sound key="cycle" fileref="m1garand_cycle_FromPOSTSCRIPTUM.wav" volume="0.6"/>
 	<sound key="magazine_out" fileref="t44_mgz_out_FromCOD17.wav" volume="0.45"/>
 	<sound key="magazine_in" fileref="t44_mgz_in_FromCOD17.wav" volume="0.45"/>
-	<sound key="last_ammo" fileref="rifle_02_m1_garand_ping.wav" pitch_variety="0.0" volume="1.75"/>
+	<sound key="last_ammo" fileref="rifle_02_m1_garand_ping.wav" pitch_variety="0.0" volume="2.3"/>
+	<sound key="stab" fileref="dagger_swing1_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab" fileref="dagger_swing2_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab" fileref="dagger_swing3_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab_hit" fileref="blade_impact_01_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
+	<sound key="stab_hit" fileref="blade_impact_02_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
+	<sound key="stab_hit" fileref="blade_impact_03_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
+	<sound key="stab_hit" fileref="blade_impact_04_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
 	<model filename="gkw_rf_m1_sf.xml"/>
 	<hud_icon filename="gkw_m1_1106.png"/>
 	<inventory encumbrance="10.0" price="498.0"/>
@@ -17456,7 +17492,14 @@
 	<sound key="cycle" fileref="m1garand_cycle_FromPOSTSCRIPTUM.wav" volume="0.6"/>
 	<sound key="magazine_out" fileref="t44_mgz_out_FromCOD17.wav" volume="0.45"/>
 	<sound key="magazine_in" fileref="t44_mgz_in_FromCOD17.wav" volume="0.45"/>
-	<sound key="last_ammo" fileref="rifle_02_m1_garand_ping.wav" pitch_variety="0.0" volume="1.75"/>
+	<sound key="last_ammo" fileref="rifle_02_m1_garand_ping.wav" pitch_variety="0.0" volume="2.3"/>
+	<sound key="stab" fileref="dagger_swing1_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab" fileref="dagger_swing2_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab" fileref="dagger_swing3_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab_hit" fileref="blade_impact_01_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
+	<sound key="stab_hit" fileref="blade_impact_02_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
+	<sound key="stab_hit" fileref="blade_impact_03_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
+	<sound key="stab_hit" fileref="blade_impact_04_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
 	<model filename="gkw_rf_m1_sf_2.xml"/>
 	<hud_icon filename="gkw_m1_1106.png"/>
 	<inventory encumbrance="10.0" price="498.0"/>
@@ -19923,7 +19966,7 @@
 	<stance state_key="prone_moving" accuracy="1"/>
 	<stance state_key="over_wall" accuracy="1"/>
 	<modifier class="speed" value="0.3"/>
-	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
+	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
@@ -20382,7 +20425,7 @@
 	<modifier class="speed" value="+0.5"/>
 	<modifier class="detectability" value="-0.15"/>
 	<modifier class="hit_success_probability" value="-0.2"/>
-	<shield offset="-0.05 0.0 0.05" extent="0.15 0.3 0.4"/>
+	<shield offset="-0.05 0.0 0.05" extent="0.15 0.3 0.4" usable_for_cover="0"/>
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
 	<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
@@ -21255,7 +21298,7 @@
 <weapon key="gkw_mg4mod3.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<specification barrel_offset="0.5" retrigger_time="0.075" accuracy_factor="0.8" sustained_fire_grow_step="0.35" sustained_fire_diminish_rate="1.5" magazine_size="200" suppressed="0" name="MG4(MOD3)" class="0" projectile_speed="240" sight_range_modifier="1.5" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" slot="0"/>
 	<animation key="reload" animation_key="reloading, Machine gun 4"/>
-	<animation state_key="next_in_chain_out" animation_key="open tripod"/>
+	<animation state_key="next_in_chain_out" animation_key="close tripod"/>
 	<inventory encumbrance="50.0" buy_price="270.0" sell_price="270.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<next_in_chain key="gkw_mg4mod3_skill.weapon" share_ammo="1"/>
@@ -21266,6 +21309,8 @@
 	<sound key="last_ammo" fileref="MG4_BREAK_JP.wav" pitch_variety="0.0" volume="2.4"/>
 	<sound key="effect" fileref="MG4_MEET_JP.wav" pitch_variety="0.0" volume="1.4"/>
 	<sound key="effect" fileref="MG4_GOATTACK_JP.wav" pitch_variety="0.0" volume="1.4"/>
+	<sound key="effect" fileref="MG4_PHRASE_JP.wav" pitch_variety="0.0" volume="1.4"/>
+	<sound key="effect" fileref=""/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_mg_mg4mod3_n.xml"/>
 	<hud_icon filename="gkw_mg4mod3.png"/>
@@ -21310,7 +21355,7 @@
 <weapon key="gkw_mg4mod3_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<specification barrel_offset="0.5" retrigger_time="0.075" accuracy_factor="0.95" sustained_fire_grow_step="0.25" sustained_fire_diminish_rate="2.25" magazine_size="200" suppressed="0" name="MG4(MOD3)-[Haunted House Hammer]" class="0" projectile_speed="240" sight_range_modifier="2.75" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" stance_accuracy_rate="0.975" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
 	<animation key="reload" animation_key="reloading, Machine gun 5"/>
-	<animation state_key="next_in_chain_out" animation_key="close tripod"/>
+	<animation state_key="next_in_chain_out" animation_key="open tripod"/>
 	<inventory encumbrance="50.0" buy_price="270.0" sell_price="270.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -21322,6 +21367,8 @@
 	<sound key="last_ammo" fileref="MG4_BREAK_JP.wav" pitch_variety="0.0" volume="2.4"/>
 	<sound key="effect" fileref="MG4_MEET_JP.wav" pitch_variety="0.0" volume="1.4"/>
 	<sound key="effect" fileref="MG4_GOATTACK_JP.wav" pitch_variety="0.0" volume="1.4"/>
+	<sound key="effect" fileref="MG4_PHRASE_JP.wav" pitch_variety="0.0" volume="1.4"/>
+	<sound key="effect" fileref=""/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_mg_mg4mod3.xml"/>
 	<hud_icon filename="gkw_mg4mod3_skill.png"/>
@@ -22311,7 +22358,7 @@
 	<modifier class="speed" value="+0.3"/>
 	<modifier class="detectability" value="-0.15"/>
 	<modifier class="hit_success_probability" value="-0.2"/>
-	<shield offset="-0.05 0.0 0.05" extent="0.15 0.3 0.4"/>
+	<shield offset="-0.05 0.0 0.05" extent="0.15 0.3 0.4" usable_for_cover="0"/>
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
 	<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
@@ -22366,7 +22413,7 @@
 	<modifier class="speed" value="+0.3"/>
 	<modifier class="detectability" value="-0.15"/>
 	<modifier class="hit_success_probability" value="-0.2"/>
-	<shield offset="-0.05 0.0 0.05" extent="0.15 0.3 0.4"/>
+	<shield offset="-0.05 0.0 0.05" extent="0.15 0.3 0.4" usable_for_cover="0"/>
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
 	<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
@@ -22421,7 +22468,7 @@
 	<modifier class="speed" value="+0.3"/>
 	<modifier class="detectability" value="-0.15"/>
 	<modifier class="hit_success_probability" value="-0.2"/>
-	<shield offset="-0.05 0.0 0.05" extent="0.15 0.3 0.4"/>
+	<shield offset="-0.05 0.0 0.05" extent="0.15 0.3 0.4" usable_for_cover="0"/>
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
 	<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
@@ -30992,9 +31039,24 @@
 	<weak_hand_hold offset="0.3"/>
 	<sound key="fire" fileref="m1garand_fire_FromPOSTSCRIPTUM.wav" pitch_variety="0.05" volume="1.4"/>
 	<sound key="cycle" fileref="m1garand_cycle_FromPOSTSCRIPTUM.wav" volume="0.6"/>
+	<sound key="cycle" fileref="m1garand_cycle_FromPOSTSCRIPTUM.wav" volume="0.6"/>
+	<sound key="cycle" fileref="M1garand_sound1.wav" pitch_variety="0.0" volume="0.6"/>
+	<sound key="cycle" fileref="m1garand_cycle_FromPOSTSCRIPTUM.wav" volume="0.6"/>
+	<sound key="cycle" fileref="M1garand_sound2.wav" pitch_variety="0.0" volume="0.6"/>
+	<sound key="cycle" fileref="m1garand_cycle_FromPOSTSCRIPTUM.wav" volume="0.6"/>
+	<sound key="cycle" fileref="M1garand_sound3.wav" pitch_variety="0.0" volume="0.6"/>
+	<sound key="cycle" fileref="m1garand_cycle_FromPOSTSCRIPTUM.wav" volume="0.6"/>
+	<sound key="cycle" fileref="m1garand_cycle_FromPOSTSCRIPTUM.wav" volume="0.6"/>
 	<sound key="magazine_out" fileref="m1garand_mgz_out_FromPOSTSCRIPTUM.wav" volume="0.6"/>
 	<sound key="magazine_in" fileref="m1garand_mgz_in_FromPOSTSCRIPTUM.wav" volume="0.6"/>
-	<sound key="last_ammo" fileref="rifle_02_m1_garand_ping.wav" pitch_variety="0.0" volume="1.75"/>
+	<sound key="last_ammo" fileref="rifle_02_m1_garand_ping.wav" pitch_variety="0.0" volume="2.0"/>
+	<sound key="stab" fileref="dagger_swing1_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab" fileref="dagger_swing2_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab" fileref="dagger_swing3_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab_hit" fileref="blade_impact_01_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
+	<sound key="stab_hit" fileref="blade_impact_02_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
+	<sound key="stab_hit" fileref="blade_impact_03_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
+	<sound key="stab_hit" fileref="blade_impact_04_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
 	<model filename="gkw_rf_m1_bt.xml"/>
 	<hud_icon filename="gkw_m1_1106.png"/>
 	<inventory encumbrance="10.0" price="5.0"/>
@@ -31697,7 +31759,7 @@
 	<stance state_key="crouching" accuracy="1.0"/>
 	<stance state_key="prone" accuracy="1.0"/>
 	<modifier class="speed" value="-0.3"/>
-	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
+	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
@@ -33839,7 +33901,7 @@
 	<modifier class="speed" value="+0.5"/>
 	<modifier class="detectability" value="-0.15"/>
 	<modifier class="hit_success_probability" value="-0.2"/>
-	<shield offset="-0.05 0.0 0.05" extent="0.15 0.3 0.4"/>
+	<shield offset="-0.05 0.0 0.05" extent="0.15 0.3 0.4" usable_for_cover="0"/>
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
 	<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
@@ -33894,7 +33956,7 @@
 	<modifier class="speed" value="+0.5"/>
 	<modifier class="detectability" value="-0.15"/>
 	<modifier class="hit_success_probability" value="-0.2"/>
-	<shield offset="-0.05 0.0 0.05" extent="0.15 0.3 0.4"/>
+	<shield offset="-0.05 0.0 0.05" extent="0.15 0.3 0.4" usable_for_cover="0"/>
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
 	<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
@@ -33949,7 +34011,7 @@
 	<modifier class="speed" value="+0.5"/>
 	<modifier class="detectability" value="-0.15"/>
 	<modifier class="hit_success_probability" value="-0.2"/>
-	<shield offset="-0.05 0.0 0.05" extent="0.15 0.3 0.4"/>
+	<shield offset="-0.05 0.0 0.05" extent="0.15 0.3 0.4" usable_for_cover="0"/>
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
 	<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
@@ -36352,7 +36414,7 @@
 <weapon key="gkw_mg4mod3_703.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<specification barrel_offset="0.5" retrigger_time="0.075" accuracy_factor="0.8" sustained_fire_grow_step="0.35" sustained_fire_diminish_rate="1.5" magazine_size="200" suppressed="0" name="MG4(MOD3)-[Survival Club Member]" class="0" projectile_speed="240" sight_range_modifier="1.5" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" slot="0"/>
 	<animation key="reload" animation_key="reloading, Machine gun 4"/>
-	<animation state_key="next_in_chain_out" animation_key="open tripod"/>
+	<animation state_key="next_in_chain_out" animation_key="close tripod"/>
 	<inventory encumbrance="50.0" buy_price="270.0" sell_price="270.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<next_in_chain key="gkw_mg4mod3_703_skill.weapon" share_ammo="1"/>
@@ -36363,6 +36425,8 @@
 	<sound key="last_ammo" fileref="MG4_BREAK_JP.wav" pitch_variety="0.0" volume="2.4"/>
 	<sound key="effect" fileref="MG4_MEET_JP.wav" pitch_variety="0.0" volume="1.4"/>
 	<sound key="effect" fileref="MG4_GOATTACK_JP.wav" pitch_variety="0.0" volume="1.4"/>
+	<sound key="effect" fileref="MG4_PHRASE_JP.wav" pitch_variety="0.0" volume="1.4"/>
+	<sound key="effect" fileref=""/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_mg_mg4mod3_n.xml"/>
 	<hud_icon filename="gkw_mg4_703.png"/>
@@ -36407,7 +36471,7 @@
 <weapon key="gkw_mg4mod3_703_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<specification barrel_offset="0.5" retrigger_time="0.075" accuracy_factor="0.95" sustained_fire_grow_step="0.25" sustained_fire_diminish_rate="2.25" magazine_size="200" suppressed="0" name="MG4(MOD3)-[Survival Club Member]-[Haunted House Hammer]" class="0" projectile_speed="240" sight_range_modifier="2.75" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" stance_accuracy_rate="0.975" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
 	<animation key="reload" animation_key="reloading, Machine gun 5"/>
-	<animation state_key="next_in_chain_out" animation_key="close tripod"/>
+	<animation state_key="next_in_chain_out" animation_key="open tripod"/>
 	<inventory encumbrance="50.0" buy_price="270.0" sell_price="270.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -36419,6 +36483,8 @@
 	<sound key="last_ammo" fileref="MG4_BREAK_JP.wav" pitch_variety="0.0" volume="2.4"/>
 	<sound key="effect" fileref="MG4_MEET_JP.wav" pitch_variety="0.0" volume="1.4"/>
 	<sound key="effect" fileref="MG4_GOATTACK_JP.wav" pitch_variety="0.0" volume="1.4"/>
+	<sound key="effect" fileref="MG4_PHRASE_JP.wav" pitch_variety="0.0" volume="1.4"/>
+	<sound key="effect" fileref=""/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_mg_mg4mod3.xml"/>
 	<hud_icon filename="gkw_mg4_703.png"/>
@@ -36922,7 +36988,7 @@
 	<stance state_key="over_wall" accuracy="1"/>
 	<modifier class="speed" value="-0.08"/>
 	<modifier class="hit_success_probability" value="-0.1"/>
-	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
+	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
@@ -38281,7 +38347,7 @@
 	<projectile file="bullet_sf.projectile">
 	<result class="hit" kill_probability="1.85" kill_probability_offset_on_successful_hit="0.4" kill_decay_start_time="0.2" kill_decay_end_time="0.6"/>
 	</projectile>
-	<shield offset="-0.60 0.0 0" extent="0.4 0.5 1.5"/>
+	<shield offset="-0.60 0.0 0" extent="0.4 0.5 1.5" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
@@ -38503,7 +38569,7 @@
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename=""/>
 	<hud_icon filename="sfw_manticore.png"/>
-	<shield offset="2.2 3.0 1.5" extent="3.3 5.0 4.0"/>
+	<shield offset="2.2 3.0 1.5" extent="3.3 5.0 4.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
@@ -38755,7 +38821,7 @@
 	<modifier class="speed" value="0.8"/>
 	<modifier class="hit_success_probability" value="-0.15"/>
 	<modifier class="detectability" value="0.45"/>
-	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
+	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
@@ -39440,7 +39506,7 @@
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename=""/>
 	<hud_icon filename="sfw_manticore.png"/>
-	<shield offset="2.7 3.0 1.5" extent="0.3 5.0 4.0"/>
+	<shield offset="2.7 3.0 1.5" extent="0.3 5.0 4.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
@@ -40053,7 +40119,7 @@
 	<commonness value="0.00001" can_respawn_with="1" in_stock="1"/>
 	<modifier class="speed" value="0.7"/>
 	<modifier class="detectability" value="0.6"/>
-	<shield offset="-0.55 0.0 0" extent="0.8 0.5 1.0"/>
+	<shield offset="-0.55 0.0 0" extent="0.8 0.5 1.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
@@ -40775,7 +40841,7 @@
 	<projectile file="bullet_sf.projectile">
 	<result class="hit" kill_probability="1.3" kill_decay_start_time="1.0" kill_decay_end_time="1.5"/>
 	</projectile>
-	<shield offset="-0.60 0.0 0" extent="0.4 0.5 1.5"/>
+	<shield offset="-0.60 0.0 0" extent="0.4 0.5 1.5" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
@@ -41144,7 +41210,7 @@
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<projectile file="qwd.projectile">
 	</projectile>
-	<shield offset="2.7 3.0 1.5" extent="0.3 5.0 4.0"/>
+	<shield offset="2.7 3.0 1.5" extent="0.3 5.0 4.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
@@ -42161,7 +42227,7 @@
 	<commonness value="0.00001" can_respawn_with="1" in_stock="1"/>
 	<modifier class="detectability" value="0.6"/>
 	<modifier class="speed" value="0.4"/>
-	<shield offset="-0.55 0.0 0" extent="0.8 0.5 1.0"/>
+	<shield offset="-0.55 0.0 0" extent="0.8 0.5 1.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
@@ -42432,7 +42498,7 @@
 	<commonness value="0.00001" can_respawn_with="1" in_stock="1"/>
 	<modifier class="detectability" value="0.6"/>
 	<modifier class="speed" value="0.6"/>
-	<shield offset="-0.55 0.0 0" extent="0.8 0.5 1.0"/>
+	<shield offset="-0.55 0.0 0" extent="0.8 0.5 1.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
@@ -43804,11 +43870,7 @@
 	<projectile file="bullet_ai.projectile">
 	<result class="hit" kill_probability="1.45" kill_decay_start_time="2.00" kill_decay_end_time="3.60"/>
 	</projectile>
-	<shield offset="0.3 -0.6 0" extent="0.2 0.8 0.3"/>
-	<shield offset="0.3 -0.4 0.3" extent="0.2 1.0 0.3"/>
-	<shield offset="0.3 -0.4 -0.3" extent="0.2 1.0 0.3"/>
-	<shield offset="0.9 -0.5 +0.6" extent="1.5 0.3 0.2"/>
-	<shield offset="0.9 -0.5 -0.6" extent="1.5 0.3 0.2"/>
+	<shield offset="0.3 -0.6 0" extent="0.2 0.8 0.3" usable_for_cover="0"/>
 </weapon>
 
 <weapon key="bunker_base_mg.weapon">
@@ -44049,11 +44111,6 @@
 	<projectile file="bullet_ai.projectile">
 	<result class="hit" kill_probability="2.0" kill_probability_offset_on_successful_hit="0.4" kill_decay_start_time="1.933" kill_decay_end_time="3.222"/>
 	</projectile>
-	<shield offset="0.3 -0.6 0" extent="0.2 0.8 0.3"/>
-	<shield offset="0.3 -0.4 0.3" extent="0.2 1.0 0.3"/>
-	<shield offset="0.3 -0.4 -0.3" extent="0.2 1.0 0.3"/>
-	<shield offset="0.9 -0.5 +0.6" extent="1.5 0.3 0.2"/>
-	<shield offset="0.9 -0.5 -0.6" extent="1.5 0.3 0.2"/>
 </weapon>
 
 <weapon key="chiara_breath.weapon" time_to_live_out_in_the_open="90.0" drop_count_factor_on_death="1.0" player_death_drop_owner_lock_time="45.0">
@@ -44772,11 +44829,6 @@
 	<effect class="result" key="vehicle" copy="terrain"/>
 	<effect class="result" key="character" copy="terrain"/>
 	</projectile>
-	<shield offset="0.3 -0.6 0" extent="0.2 0.8 0.3"/>
-	<shield offset="0.3 -0.4 0.3" extent="0.2 1.0 0.3"/>
-	<shield offset="0.3 -0.4 -0.3" extent="0.2 1.0 0.3"/>
-	<shield offset="0.9 -0.5 +0.6" extent="1.5 0.3 0.2"/>
-	<shield offset="0.9 -0.5 -0.6" extent="1.5 0.3 0.2"/>
 </weapon>
 
 <weapon key="coeus_mg">
@@ -44800,11 +44852,6 @@
 	<projectile file="bullet_kcco.projectile">
 	<result class="hit" kill_probability="1.45" kill_decay_start_time="1.933" kill_decay_end_time="3.222"/>
 	</projectile>
-	<shield offset="0.3 -0.6 0" extent="0.2 0.8 0.3"/>
-	<shield offset="0.3 -0.4 0.3" extent="0.2 1.0 0.3"/>
-	<shield offset="0.3 -0.4 -0.3" extent="0.2 1.0 0.3"/>
-	<shield offset="0.9 -0.5 +0.6" extent="1.5 0.3 0.2"/>
-	<shield offset="0.9 -0.5 -0.6" extent="1.5 0.3 0.2"/>
 </weapon>
 
 <weapon key="sandstorm_none.weapon">
@@ -45127,7 +45174,6 @@
 	<effect class="result" key="terrain" ref="Godray" lighting="0"/>
 	<effect class="result" key="terrain" ref="ShadowSmoke" shadow="1"/>
 	</projectile>
-	<shield offset="0.0 7.5 0.0" extent="2.4 2.4 2.4"/>
 </weapon>
 
 <weapon key="parw_sentrytower_base_mg.weapon">
@@ -45380,7 +45426,7 @@
 	<effect class="muzzle" ref="CannonSmokeBig"/>
 	<effect class="muzzle" ref="CannonSmokeBigSphere"/>
 	<sound class="operation" key="fire" fileref="tow_fire_FromCOD17.wav" volume="1.2"/>
-	<shield offset="0.3 -0.55 0" extent="0.2 0.8 0.3"/>
+	<shield offset="0.3 -0.55 0" extent="0.2 0.8 0.3" usable_for_cover="0"/>
 </weapon>
 
 <weapon key="all_vehicles_wheelchair_shield.weapon">
