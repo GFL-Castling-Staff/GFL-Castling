@@ -1,5 +1,6 @@
-<weapon key="parw_moth_mg.weapon">
-	<specification slot="2" retrigger_time="0.2" accuracy_factor="1.0" sustained_fire_grow_step="0.06" sustained_fire_diminish_rate="0.1" sight_range_modifier="1.15" ai_sight_range_modifier="0.95" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="0" suppressed="0" name="Paradeus Moth MG" class="0" projectile_speed="120.0" use_basic_muzzle_smoke_effect="0" barrel_offset_3d="0 0.5 2.0" cooldown_start="0.1" cooldown_end="0.0"/>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- <weapon key="parw_moth_mg.weapon">
+	<specification slot="2" retrigger_time="0.2" accuracy_factor="1.0" sustained_fire_grow_step="0.06" sustained_fire_diminish_rate="0.1" sight_range_modifier="1.0" ai_sight_range_modifier="0.95" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="0" suppressed="0" name="Paradeus Moth MG" class="0" projectile_speed="120.0" use_basic_muzzle_smoke_effect="0" barrel_offset_3d="0 0.5 2.0" cooldown_start="0.1" cooldown_end="0.0"/>
 	<animation key="recoil" animation_key="recoil1"/>
 	<animation key="recoil" animation_key="recoil2"/>
 	<animation key="recoil" animation_key="recoil3"/>
@@ -26,6 +27,48 @@
 	<effect class="result" key="terrain" ref="Godray" lighting="0"/>
 	<effect class="result" key="terrain" ref="ShadowSmoke" shadow="1"/>
 	<trail probability="1.0" key="laser_tiaotiao"/>
+	</projectile>
+	<shield offset="0.0 7.5 0.0" extent="2.4 2.4 2.4"/>
+</weapon> -->
+<weapon key="parw_moth_mg.weapon">
+	<specification 
+	slot="2"
+	retrigger_time="0.1"
+	accuracy_factor="0.8"
+	spread_range="0.2"
+	sustained_fire_grow_step="0.025"
+	sustained_fire_diminish_rate="0.1"
+	sight_range_modifier="1.3"
+	ai_sight_range_modifier="0.75"
+	magazine_size="-1"
+	can_shoot_standing="0"
+	can_shoot_crouching="0"
+	suppressed="0"
+	name="Paradeus Moth MG"
+	class="0"
+	projectile_speed="100.0"
+	use_basic_muzzle_smoke_effect="0"
+	barrel_offset_3d="0 0.5 2.0"
+	cooldown_start="0.3"
+	cooldown_end="0.0"/>
+	<sound key="fire" fileref="1130_fire_FromSAM3.wav" pitch_variety="0.05" volume="1.0"/>
+	<sound key="magazine_out" fileref="mg_clip_out.wav"/>
+	<sound key="magazine_in" fileref="mg_clip_in.wav"/>
+	<sound key="cycle" fileref="rifle_chamber.wav"/>
+	<sound class="impact" fileref="rifle_drop.wav"/>
+	<model mesh_filename="Sentry_Moth.mesh" texture_filename="2Sentry_Moth_Texture.png"/>
+	<hud_icon filename="gkw_v_LM5.png"/>
+	<commonness value="0.0"/>
+	<weak_hand_hold offset="0.0"/>
+	<projectile file="bullet_paradeus.projectile">
+		<result class="blast" damage="0.1" radius="2.0" decal="1" push="0.1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+		<trigger class="impact"/>
+		<effect class="result" key="terrain" ref="BigBurst" use_surface_color="1"/>
+		<effect class="result" key="terrain" ref="SmokeTop" post_processing="1"/>
+		<effect class="result" key="terrain" ref="Smoke" post_processing="1"/>
+		<effect class="result" key="terrain" ref="Shine" lighting="0"/>
+		<effect class="result" key="terrain" ref="Godray" lighting="0"/>
+		<effect class="result" key="terrain" ref="ShadowSmoke" shadow="1"/>
 	</projectile>
 	<shield offset="0.0 7.5 0.0" extent="2.4 2.4 2.4"/>
 </weapon>
