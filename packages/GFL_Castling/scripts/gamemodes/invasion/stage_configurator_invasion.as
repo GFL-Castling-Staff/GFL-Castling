@@ -32,6 +32,8 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 	// ------------------------------------------------------------------------------------------------
 	void setup() {
+		setupGlobalConfigs();
+		
 		setupFactionConfigs();
 
 		setupWorld();

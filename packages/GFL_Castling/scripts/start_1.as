@@ -35,14 +35,14 @@ void main(dictionary@ inputData) {
 
         settings.m_startServerCommand = """
 <command class='start_server'
-	server_name='[Castling][Eazy-1 LV1]'
+	server_name='[LV1]'
 	server_port='1234'
-	comment='(1.0:1.5)Read server rules in our discord: discord.gg/wwUM3kYmRC, QQ Group: 706234535'
+	comment='Read server rules in our discord: discord.gg/wwUM3kYmRC, QQ Group: 706234535'
 	url='https://castling.fandom.com/wiki/Castling_Wiki'
 	register_in_serverlist='1'
 	mode='Castling'
 	persistency='forever'
-	max_players='20'
+	max_players='24'
 	friendly_fire="1">
 	<client_faction id='0' />
 </command>
