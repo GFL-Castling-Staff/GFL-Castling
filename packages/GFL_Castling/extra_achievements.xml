@@ -112,7 +112,7 @@
 			<level value="50" />
 			<level value="100" />
 			<level value="1145141919"/>
-		</criteria>       
+		</criteria>
 		<criteria class="vehicle_destroy" owner="any" description="* destroy %target_count Pyxis">
 			<vehicle key="par_compass.vehicle" />
 			<level value="5" />
@@ -202,4 +202,32 @@
 			<level value="1145141919"/>
 		</criteria>
 	</achievement>
+
+    <achievement name="I am super zuo ai wang" no_level_title="Vehicle Log" include_in_alltime_stats="0">
+		<level>
+			<rank title="Vehicle Log" image="hud_achievement_zhabi.png" />
+		</level>
+		<criteria class="vehicle_destroy" owner="any" description="* destroy %target_count moth">
+			<vehicle key="par_moth.vehicle" />
+			<level value="1145141919"/>
+		</criteria>
+		<criteria class="vehicle_destroy" owner="any" description="* destroy %target_count KCCO1130">
+			<vehicle key="kcco_1130.vehicle" />
+			<level value="1145141919"/>
+		</criteria>		
+		<criteria class="vehicle_destroy" owner="enemy" description="* destroy %target_count ATV">
+			<vehicle tag="atv" />
+			<level value="1145141919" />
+		</criteria>
+		<criteria class="vehicle_destroy" owner="enemy" description="* destroy %target_count AA">
+			<vehicle tag="only_aa" />
+			<level value="1145141919" />
+		</criteria>
+		<criteria class="vehicle_destroy" owner="enemy" description="* destroy %target_count turret">
+			<vehicle tag="minigun_deploy" />
+			<vehicle tag="tow" />
+			<vehicle tag="hornet_deploy" />
+			<level value="1145141919" />
+		</criteria>
+	</achievement>	
 </achievements>
