@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<static_object key="barbed_wire.static_object" destroy_on_blast="1" blast_damage_threshold="5" destroy_on_drive_over="1" destroy_on_stab="0" undestroy_on_block_activate="1">
+<static_object key="barbed_wire.static_object" destroy_on_blast="1" blast_damage_threshold="5" destroy_on_drive_over="1" destroy_on_stab="0" undestroy_on_block_activate="0">
 	
-	<sound key="destroy" filename="barbed_wire1.wav" volume="0.9" />
-	<sound key="destroy" filename="barbed_wire2.wav" volume="0.9" />
-	<sound key="destroy" filename="barbed_wire3.wav" volume="0.9" />
+	<sound key="destroy" filename="barbed_wire1.wav" volume="1.5" />
+	<sound key="destroy" filename="barbed_wire2.wav" volume="1.5" />
+	<sound key="destroy" filename="barbed_wire3.wav" volume="1.5" />
 	
 	<destroy_on_drive_over_tags>
 		<tag name="metal_heavy" />
