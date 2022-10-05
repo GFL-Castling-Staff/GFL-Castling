@@ -260,8 +260,9 @@ class kill_event : Tracker {
                 }                
             }
             
-            if (killer.getIntAttribute("player_id") == -1) return;
-            int playerId =killer.getIntAttribute("player_id");
+            int playerId = killer.getIntAttribute("player_id");
+            if (playerId == -1) return;
+            
             
             //只查询我方杀敌
             if (factionId==0 && characterId > 0){
@@ -368,8 +369,6 @@ class kill_event : Tracker {
                                 " character_id='" + HealOnKill_track[a].m_characterId + "' />";
                             m_metagame.getComms().send(c);
                         }
-                        // if(vestrestore>0)   _log("Heal successful.");  
-                        // else    _log("Heal failed.");  
 					}
 					HealOnKill_track[a].m_numtime--;
 					HealOnKill_track[a].m_time=0.2;
