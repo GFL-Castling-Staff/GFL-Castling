@@ -833,6 +833,10 @@ class BasicCommandHandler : Tracker {
 			spawnInstanceNearPlayer(senderId, "radar_tower.vehicle", "vehicle", 0); 
 		} else  if(checkCommand(message, "lblm")) {
 			spawnInstanceNearPlayer(senderId, "wheelchair_lblm.vehicle", "vehicle", 0); 
+		} else  if(checkCommand(message, "dapc")) {
+			spawnInstanceNearPlayer(senderId, "default_apc_1.vehicle", "vehicle", 0);
+		} else  if(checkCommand(message, "acar")) {
+			spawnInstanceNearPlayer(senderId, "default_car_1.vehicle", "vehicle", 0);
 		} else  if(checkCommand(message, "spawnaa")) {
 			spawnInstanceNearPlayer(senderId, "aa_emplacement.vehicle", "vehicle", 1); 
 		} else  if(checkCommand(message, "spawnjpt")) {
@@ -843,8 +847,6 @@ class BasicCommandHandler : Tracker {
 			spawnInstanceNearPlayer(senderId, "par_moth_ruin.vehicle", "vehicle", 1); 		
 		} else  if(checkCommand(message, "spawnuhlan")) {
 			spawnInstanceNearPlayer(senderId, "paradeus_uhlan.vehicle", "vehicle", 0);
-		} else  if(checkCommand(message, "dapc")) {
-			spawnInstanceNearPlayer(senderId, "default_apc_1.vehicle", "vehicle", 0);
 		} else  if(checkCommand(message, "spawnsand")) {
 			spawnInstanceNearPlayer(senderId, "sandstorm.vehicle", "vehicle", 0);
 		} else  if(checkCommand(message, "spawncoeus")) {
