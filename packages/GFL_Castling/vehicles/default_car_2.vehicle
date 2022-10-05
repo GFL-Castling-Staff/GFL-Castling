@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<vehicle file="vehicle_base.vehicle" name="Abandoned Car 1" key="default_car_1.vehicle" map_view_atlas_index="20" respawn_time="100.0" allow_ai_to_use="0">
+<vehicle file="vehicle_base.vehicle" name="Abandoned Car 2" key="default_car_2.vehicle" map_view_atlas_index="20" respawn_time="100.0" allow_ai_to_use="0">
 	<tag name="metal_light" />
-	<tire_set offset="0.9 0.0 1.68" radius="0.45" />
-	<tire_set offset="0.9 0.0 -1.68" radius="0.45" />
+	<tire_set offset="0.9 0.0 2.1" radius="0.5" />
+	<tire_set offset="0.9 0.0 -1.9" radius="0.5" />
 	<control max_speed="16.0" acceleration="8.0" max_reverse_speed="12.0" max_rotation="0.75" max_water_depth="1.9" />
-	<physics max_health="40.0" mass="10" extent="2.0 0.0 4.5" offset="0 0.0 0" top_offset="0 4 0" collision_model_pos="0 0.4 0" collision_model_extent="2.2 1.5 5.4" visual_offset="0 0.0 -0.1" />
-	<visual class="chassis" mesh_filename="car1_base.mesh" texture_filename="sedan_albedo.jpg" />
-	<visual class="tire" mesh_filename="car1_wheel.mesh" texture_filename="sedan_albedo.jpg" />
-	<visual class="chassis" key="broken" mesh_filename="car1_base.mesh" texture_filename="humvee_broken.png" />
-	<character_slot type="driver" position="0.47 0.6 1.02" rotation="0" exit_rotation="1.57" hiding="1" animation_id="36" />
-	<character_slot type="passenger" position="-0.47 0.6 1.02" rotation="0" exit_rotation="-1.57" hiding="1" />
+	<physics max_health="40.0" mass="10" extent="2.0 0.0 5.4" offset="0 0.0 0" top_offset="0 4 0" collision_model_pos="0 0.6 -0.2" collision_model_extent="2.2 2.4 6.4" visual_offset="0 0.0 -0.1" />
+	<visual class="chassis" mesh_filename="truck_base.mesh" texture_filename="pickup_albedo.jpg" />
+	<visual class="tire" mesh_filename="truck_wheel.mesh" texture_filename="pickup_albedo.jpg" />
+	<visual class="chassis" key="broken" mesh_filename="truck_base.mesh" texture_filename="humvee_broken.png" />
+	<character_slot type="driver" position="0.47 0.6 0.86" rotation="0" exit_rotation="1.57" hiding="1" animation_id="36" />
+	<character_slot type="passenger" position="-0.47 0.6 0.86" rotation="0" exit_rotation="-1.57" hiding="1" />
 
 	<character_slot type="passenger" position="-0.192 0.44 -4.0" rotation="0" exit_rotation="3.14" hiding="1" />
 	<character_slot type="passenger" position="-0.096 0.44 -4.0" rotation="0" exit_rotation="3.14" hiding="1" />
