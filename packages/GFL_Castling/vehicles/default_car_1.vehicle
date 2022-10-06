@@ -11,10 +11,9 @@
 	<character_slot type="driver" position="0.47 0.6 1.02" rotation="0" exit_rotation="1.57" hiding="1" animation_id="36" />
 	<character_slot type="passenger" position="-0.47 0.6 1.02" rotation="0" exit_rotation="-1.57" hiding="1" />
 
-	<character_slot type="passenger" position="-0.192 0.44 -4.0" rotation="0" exit_rotation="3.14" hiding="1" />
-	<character_slot type="passenger" position="-0.096 0.44 -4.0" rotation="0" exit_rotation="3.14" hiding="1" />
-	<character_slot type="passenger" position="0.096 0.44 -4.0" rotation="0" exit_rotation="3.14" hiding="1" />
-	<character_slot type="passenger" position="0.192 0.44 -4.0" rotation="0" exit_rotation="3.14" hiding="1" />
+	<character_slot type="passenger" position="0.47 0.6 -1.0" rotation="0" exit_rotation="1.57" hiding="1" />
+	<character_slot type="passenger" position="-0.47 0.6 -1.0" rotation="0" exit_rotation="-1.57" hiding="1" />
+	<character_slot type="passenger" position="0.0 0.44 -2.0" rotation="0" exit_rotation="3.14" hiding="1" />
 
 	<!--	<character_slot type="passenger" position="-0.47 0.6 1.12" rotation="0" exit_rotation="-1.57" hiding="1" animation_id="37" />   -->
 	<!-- <item_container class="armory" offset="1.0 0.45 0.0" soldier_group="icecream" /> -->
