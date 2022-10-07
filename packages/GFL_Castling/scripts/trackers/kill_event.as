@@ -8,6 +8,7 @@
 #include "GFLhelpers.as"
 #include "commandskill.as"
 #include "enemy_reward.as"
+#include "GFLplayerlist.as"
 
 //Originally created by NetherCrow
 //Author: NetherCrow
@@ -261,16 +262,12 @@ class kill_event : Tracker {
             }
             
             if (killer.getIntAttribute("player_id") == -1) return;
-            int playerId =killer.getIntAttribute("player_id");
+            int playerId = killer.getIntAttribute("player_id");
             
             //只查询我方杀敌
             if (factionId==0 && characterId > 0){
-                const XmlElement@ killerCharacter = getCharacterInfo2(m_metagame,characterId);
-                if (killerCharacter is null) return;
-                array<const XmlElement@>@ equipment = killerCharacter.getElementsByTagName("item");
-                if (equipment.size() == 0) return;
-                string c_weaponType = equipment[0].getStringAttribute("key");
-                string c_armorType = equipment[4].getStringAttribute("key");
+                string c_weaponType = getPlayerWeaponFromList(playerId,0);
+                string c_armorType = getPlayerWeaponFromList(playerId,4);
                 if(c_weaponType=="gkw_ppkmod3.weapon"){
                     int i = findSkillIndex(characterId,"PPKMOD3");
                     if(i >=0){
