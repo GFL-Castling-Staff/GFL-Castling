@@ -1,5 +1,6 @@
 #include "query_helpers2.as"
 #include "helpers.as"
+#include "GFLplayerlist.as"
 
 //别抄了学不会的，有需求请联系 冥府乌鸦NetherCrow 为你解惑，不识趣的不建议来。
 //Credit: NetherCrow & Castling Staff
@@ -158,11 +159,11 @@ void addItemInStash(Metagame@ metagame, int characterId, string ItemType, string
 }
 
 void addRangeItemInBackpack(Metagame@ metagame, int factionId, string ItemType, string ItemKey,Vector3 pos,float range){
-	array<const XmlElement@> nowPlayers = getPlayers(metagame);
 	array<int> player_cId;
-	if (nowPlayers !is null){
-		for(uint i=0;i<nowPlayers.length();i++){
-			player_cId.insertLast(nowPlayers[i].getIntAttribute("character_id"));
+	if (GFL_playerlist_array.length()>0){
+		_log("playerlist get.");
+		for(uint i=0;i<GFL_playerlist_array.length();i++){
+			player_cId.insertLast(GFL_playerlist_array[i].m_characterid);
 		}
 		array<const XmlElement@> affectedCharacter = getCharactersNearPosition(metagame,pos,factionId,range);
 		if (affectedCharacter !is null){

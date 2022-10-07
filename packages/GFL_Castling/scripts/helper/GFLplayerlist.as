@@ -5,7 +5,6 @@
 #include "query_helpers.as"
 #include "generic_call_task.as"
 #include "task_sequencer.as"
-#include "GFLhelpers.as"
 
 //Originally created by Saiwa
 
