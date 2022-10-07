@@ -37,7 +37,7 @@ class GFL_playerlist{
 class GFL_playerlist_system : Tracker {
 	protected GameMode@ m_metagame;
     protected float m_time = 1.0; 
-    protected float refresh_time = 1.0; // 刷新时间
+    protected float refresh_time = 3.0; // 刷新时间
 
 	// --------------------------------------------
 	GFL_playerlist_system(GameMode@ metagame) {
@@ -61,15 +61,19 @@ class GFL_playerlist_system : Tracker {
 
                     int cid = nowPlayers[i].getIntAttribute("character_id");
                     int pid = nowPlayers[i].getIntAttribute("player_id");
-                    array<const XmlElement@>@ equipment = nowPlayers[i].getElementsByTagName("item");
-                    string w1 = equipment[0].getStringAttribute("key");
-                    string w2 = equipment[1].getStringAttribute("key");
-                    string w3 = equipment[2].getStringAttribute("key");
-                    string w4 = equipment[3].getStringAttribute("key");
-                    string w5 = equipment[4].getStringAttribute("key");
-                    GFL_playerlist@ new_player = GFL_playerlist(cid, pid, w1, w2, w3, w4, w5, 0); 
+                    const XmlElement@ targetCharacter = getCharacterInfo2(metagame,characterId);
 
-                    GFL_playerlist_array.insertLast(new_player); 
+                    if(targetCharacter !is null){
+                        array<const XmlElement@>@ equipment = targetCharacter.getElementsByTagName("item");
+                        string w1 = equipment[0].getStringAttribute("key");
+                        string w2 = equipment[1].getStringAttribute("key");
+                        string w3 = equipment[2].getStringAttribute("key");
+                        string w4 = equipment[3].getStringAttribute("key");
+                        string w5 = equipment[4].getStringAttribute("key");
+                        GFL_playerlist@ new_player = GFL_playerlist(cid, pid, w1, w2, w3, w4, w5, 0); 
+
+                        GFL_playerlist_array.insertLast(new_player); 
+                    }
                 }
             }
         }
@@ -94,7 +98,6 @@ class GFL_playerlist_system : Tracker {
         refresh_time = new_refresh_time;
     }
 }
-
 
 int getPlayerCidFromList(int playerid) {
     if(GFL_playerlist_array.length()>0){
