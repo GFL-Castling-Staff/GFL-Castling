@@ -835,8 +835,12 @@ class BasicCommandHandler : Tracker {
 			spawnInstanceNearPlayer(senderId, "wheelchair_lblm.vehicle", "vehicle", 0); 
 		} else  if(checkCommand(message, "dapc")) {
 			spawnInstanceNearPlayer(senderId, "default_apc_1.vehicle", "vehicle", 0);
-		} else  if(checkCommand(message, "acar")) {
+		} else  if(checkCommand(message, "acar1")) {
 			spawnInstanceNearPlayer(senderId, "default_car_1.vehicle", "vehicle", 0);
+		} else  if(checkCommand(message, "acar2")) {
+			spawnInstanceNearPlayer(senderId, "default_car_2.vehicle", "vehicle", 0);
+		} else  if(checkCommand(message, "acar3")) {
+			spawnInstanceNearPlayer(senderId, "default_car_3.vehicle", "vehicle", 0);
 		} else  if(checkCommand(message, "spawnaa")) {
 			spawnInstanceNearPlayer(senderId, "aa_emplacement.vehicle", "vehicle", 1); 
 		} else  if(checkCommand(message, "spawnjpt")) {
