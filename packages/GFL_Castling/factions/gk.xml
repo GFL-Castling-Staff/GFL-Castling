@@ -403,7 +403,7 @@
 		</attribute_config>
 	</soldier>
 
-	<soldier name="93_idw_smg" spawn_score="0.05" copy_from="default_smg">
+	<soldier name="smg_93_idw" spawn_score="0.05" copy_from="default_smg">
 		<character filename="gk_idw.text_lines">
 			<sound key="death" fileref="IDW_die.wav" pitch_variety="0.05" volume="0.8" />
 			<sound key="death" fileref="IDW_BREAK_JP.wav" pitch_variety="0.02" volume="0.4" />
@@ -425,7 +425,7 @@
 			<attribute weight="1.0" min="0.100" max="102.833" />
 		</attribute_config>
 	</soldier>
-	<soldier name="20_vector_smg" spawn_score="0.05" copy_from="default_smg">
+	<soldier name="smg_20_vector" spawn_score="0.05" copy_from="default_smg">
 		<character filename="default_gk_pmc.text_lines">
 			<sound key="death" fileref="Vector_BREAK_JP.wav" pitch_variety="0.02" volume="0.4" />
 			<sound key="throw" fileref="Vector_SKILL1_JP.wav" pitch_variety="0.01" volume="0.8" />
@@ -440,7 +440,7 @@
 			<attribute weight="1.0" min="0.100" max="102.833" />
 		</attribute_config>
 	</soldier>
-	<soldier name="21_ppsh_smg" spawn_score="0.05" copy_from="default_smg">
+	<soldier name="smg_21_ppsh" spawn_score="0.05" copy_from="default_smg">
 		<character filename="default_gk_pmc.text_lines">
 			<sound key="death" fileref="PPsh41_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
 			<sound key="throw" fileref="PPsh41_SKILL1_JP.wav" pitch_variety="0.01" volume="0.8" />
@@ -455,7 +455,7 @@
 			<attribute weight="1.0" min="0.100" max="102.833" />
 		</attribute_config>
 	</soldier>
-	<soldier name="36_m1903_rf" spawn_score="0.05" copy_from="default_rf">
+	<soldier name="rf_36_m1903" spawn_score="0.05" copy_from="default_rf">
 		<character filename="default_gk_pmc.text_lines">
 			<sound key="death" fileref="M1903_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
 			<sound key="throw" fileref="M1903_GOATTACK_JP.wav" pitch_variety="0.01" volume="0.8" />
@@ -469,7 +469,7 @@
 			<attribute weight="1.0" min="0.100" max="102.833" />
 		</attribute_config>
 	</soldier>
-	<soldier name="37_m14_rf" spawn_score="0.05" copy_from="default_rf">
+	<soldier name="rf_37_m14" spawn_score="0.05" copy_from="default_rf">
 		<character filename="default_gk_pmc.text_lines">
 			<sound key="death" fileref="M14_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
 			<sound key="throw" fileref="M14_ATTACK_JP.wav" pitch_variety="0.01" volume="0.8" />
@@ -483,7 +483,7 @@
 			<attribute weight="1.0" min="0.100" max="102.833" />
 		</attribute_config>
 	</soldier>
-	<soldier name="43_svd_rf" spawn_score="0.05" copy_from="default_rf">
+	<soldier name="rf_43_svd" spawn_score="0.05" copy_from="default_rf">
 		<character filename="default_gk_pmc.text_lines">
 			<sound key="death" fileref="SVD_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
 			<sound key="throw" fileref="SVD_MEET_JP.wav" pitch_variety="0.01" volume="0.8" />
@@ -497,7 +497,7 @@
 			<attribute weight="1.0" min="0.100" max="102.833" />
 		</attribute_config>
 	</soldier>
-	<soldier name="44_sv98_rf" spawn_score="0.05" copy_from="default_rf">
+	<soldier name="rf_44_sv98" spawn_score="0.05" copy_from="default_rf">
 		<character filename="default_gk_pmc.text_lines">
 			<sound key="death" fileref="SV98_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
 			<sound key="throw" fileref="SV98_ATTACK_JP.wav" pitch_variety="0.01" volume="0.8" />
@@ -511,7 +511,7 @@
 			<attribute weight="1.0" min="0.100" max="8.833" />
 		</attribute_config>
 	</soldier>
-	<soldier name="44_sv98mod3_rf" spawn_score="0.05" copy_from="default_rf">
+	<soldier name="rf_44_sv98mod3" spawn_score="0.05" copy_from="default_rf">
 		<character filename="default_gk_pmc.text_lines">
 			<sound key="death" fileref="SV98Mod_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
 			<sound key="throw" fileref="SV98Mod_ATTACK_JP.wav" pitch_variety="0.01" volume="0.8" />
@@ -525,7 +525,7 @@
 			<attribute weight="1.0" min="7.622" max="10.833" />
 		</attribute_config>
 	</soldier>
-	<soldier name="53_ntw20_rf" spawn_score="0.025" copy_from="default_rf">
+	<soldier name="rf_53_ntw20" spawn_score="0.025" copy_from="default_rf">
 		<character filename="default_gk_pmc.text_lines">
 			<sound key="death" fileref="NTW20_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
 			<sound key="throw" fileref="NTW20_ATTACK_JP.wav" pitch_variety="0.01" volume="0.8" />
@@ -539,7 +539,7 @@
 			<attribute weight="1.0" min="0.100" max="102.833" />
 		</attribute_config>
 	</soldier>
-	<soldier name="54_m16a1_ar" spawn_score="0.05" copy_from="default_ar">
+	<soldier name="ar_54_m16a1" spawn_score="0.05" copy_from="default_ar">
 		<character filename="default_gk_pmc.text_lines">
 			<sound key="death" fileref="M16A1_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
 			<sound key="throw" fileref="M16A1_SKILL1_JP.wav" pitch_variety="0.01" volume="0.8" />
@@ -555,7 +555,7 @@
 			<attribute weight="1.0" min="0.100" max="102.833" />
 		</attribute_config>
 	</soldier>
-	<soldier name="55_m4a1_ar" spawn_score="0.05" copy_from="default_ar">
+	<soldier name="ar_55_m4a1" spawn_score="0.05" copy_from="default_ar">
 		<character filename="default_gk_pmc.text_lines">
 			<sound key="death" fileref="M4A1_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
 			<sound key="throw" fileref="M4A1_SKILL1_JP.wav" pitch_variety="0.01" volume="0.8" />
@@ -571,7 +571,7 @@
 			<attribute weight="1.0" min="0.100" max="102.833" />
 		</attribute_config>
 	</soldier>
-	<soldier name="55_m4a1mod3_ar" spawn_score="0.05" copy_from="default_ar">
+	<soldier name="ar_55_m4a1mod3" spawn_score="0.05" copy_from="default_ar">
 		<character filename="default_gk_pmc.text_lines">
 			<sound key="death" fileref="M4A1Mod_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
 			<sound key="throw" fileref="M4A1Mod_SKILL1_JP.wav" pitch_variety="0.01" volume="0.8" />
@@ -586,7 +586,7 @@
 			<attribute weight="1.0" min="7.622" max="102.833" />
 		</attribute_config>
 	</soldier>
-	<soldier name="56_m4sop2mod3_ar" spawn_score="0.05" copy_from="default_ar">
+	<soldier name="ar_56_m4sop2mod3" spawn_score="0.05" copy_from="default_ar">
 		<character filename="default_gk_pmc.text_lines">
 			<sound key="death" fileref="M4_SOPMOD_IIMod_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
 			<sound key="throw" fileref="M4_SOPMOD_IIMod_ATTACK_JP.wav" pitch_variety="0.01" volume="0.8" />
@@ -602,7 +602,7 @@
 			<attribute weight="1.0" min="7.622" max="102.833" />
 		</attribute_config>
 	</soldier>
-	<soldier name="57_ar15_ar" spawn_score="0.05" copy_from="default_ar">
+	<soldier name="ar_57_ar15" spawn_score="0.05" copy_from="default_ar">
 		<character filename="default_gk_pmc.text_lines">
 			<sound key="death" fileref="AR15_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
 			<sound key="throw" fileref="AR15_SKILL1_JP.wav" pitch_variety="0.01" volume="0.8" />
@@ -618,7 +618,7 @@
 			<attribute weight="1.0" min="0.100" max="3.833" />
 		</attribute_config>
 	</soldier>
-	<soldier name="57_ar15mod3_ar" spawn_score="0.05" copy_from="default_ar">
+	<soldier name="ar_57_ar15mod3" spawn_score="0.05" copy_from="default_ar">
 		<character filename="default_gk_pmc.text_lines">
 			<sound key="death" fileref="AR15Mod_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
 			<sound key="throw" fileref="AR15Mod_MEET_JP.wav" pitch_variety="0.01" volume="0.8" />
@@ -632,7 +632,7 @@
 			<attribute weight="1.0" min="7.100" max="102.833" />
 		</attribute_config>
 	</soldier>
-	<soldier name="58_ak47_ar" spawn_score="0.05" copy_from="default_ar">
+	<soldier name="ar_58_ak47" spawn_score="0.05" copy_from="default_ar">
 		<character filename="default_gk_pmc.text_lines">
 			<sound key="death" fileref="AK47_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
 			<sound key="throw" fileref="AK47_SKILL2_JP.wav" pitch_variety="0.01" volume="0.8" />
@@ -647,7 +647,7 @@
 			<attribute weight="1.0" min="0.100" max="102.833" />
 		</attribute_config>
 	</soldier>
-	<soldier name="60_asval_ar" spawn_score="0.05" copy_from="default_ar">
+	<soldier name="ar_60_asval" spawn_score="0.05" copy_from="default_ar">
 		<character filename="default_gk_pmc.text_lines">
 			<sound key="death" fileref="ASVAL_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
 			<sound key="throw" fileref="ASVAL_ATTACK_JP.wav" pitch_variety="0.01" volume="0.8" />
@@ -663,7 +663,7 @@
 			<attribute weight="1.0" min="0.100" max="102.833" />
 		</attribute_config>
 	</soldier>
-	<soldier name="61_stg44_ar" spawn_score="0.05" copy_from="default_ar">
+	<soldier name="ar_61_stg44" spawn_score="0.05" copy_from="default_ar">
 		<character filename="default_gk_pmc.text_lines">
 			<sound key="death" fileref="STG44_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
 			<sound key="throw" fileref="STG44_ATTACK_JP.wav" pitch_variety="0.01" volume="0.8" />
@@ -678,7 +678,7 @@
 			<attribute weight="1.0" min="0.100" max="102.833" />
 		</attribute_config>
 	</soldier>
-	<soldier name="65_hk416_ar" spawn_score="0.05" copy_from="default_ar">
+	<soldier name="ar_65_hk416" spawn_score="0.05" copy_from="default_ar">
 		<character filename="default_gk_pmc.text_lines">
 			<sound key="death" fileref="HK416_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
 			<sound key="throw" fileref="HK416_MEET_JP.wav" pitch_variety="0.01" volume="0.8" />
@@ -693,7 +693,7 @@
 			<attribute weight="1.0" min="0.100" max="102.833" />
 		</attribute_config>
 	</soldier>
-	<soldier name="65_hk416mod3_ar" spawn_score="0.05" copy_from="default_ar">
+	<soldier name="ar_65_hk416mod3" spawn_score="0.05" copy_from="default_ar">
 		<character filename="default_gk_pmc.text_lines">
 			<sound key="death" fileref="HK416Mod_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
 			<sound key="throw" fileref="HK416Mod_MEET_JP.wav" pitch_variety="0.01" volume="0.8" />
@@ -707,7 +707,7 @@
 			<attribute weight="1.0" min="7.622" max="102.833" />
 		</attribute_config>
 	</soldier>
-	<soldier name="69_famas_ar" spawn_score="0.05" copy_from="default_ar">
+	<soldier name="ar_69_famas" spawn_score="0.05" copy_from="default_ar">
 		<character filename="default_gk_pmc.text_lines">
 			<sound key="death" fileref="FAMAS_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
 			<sound key="throw" fileref="FAMAS_ATTACK_JP.wav" pitch_variety="0.01" volume="0.8" />
@@ -722,7 +722,7 @@
 			<attribute weight="1.0" min="0.100" max="102.833" />
 		</attribute_config>
 	</soldier>
-	<soldier name="73_aug_ar" spawn_score="0.05" copy_from="default_ar">
+	<soldier name="ar_73_aug" spawn_score="0.05" copy_from="default_ar">
 		<character filename="default_gk_pmc.text_lines">
 			<sound key="death" fileref="AUG_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
 			<sound key="throw" fileref="AUG_MEET_JP.wav" pitch_variety="0.01" volume="0.8" />
@@ -736,7 +736,7 @@
 			<attribute weight="1.0" min="0.100" max="102.833" />
 		</attribute_config>
 	</soldier>
-	<soldier name="77_m2hb_mg" spawn_score="0.05" copy_from="default_mg">
+	<soldier name="mg_77_m2hb" spawn_score="0.05" copy_from="default_mg">
 		<character filename="default_gk_pmc.text_lines">
 			<sound key="death" fileref="M2HB_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
 			<sound key="throw" fileref="M2HB_MEET_JP.wav" pitch_variety="0.01" volume="0.8" />
@@ -751,7 +751,7 @@
 			<attribute weight="1.0" min="0.100" max="102.833" />
 		</attribute_config>
 	</soldier>
-	<soldier name="79_m249saw_mg" spawn_score="0.05" copy_from="default_mg">
+	<soldier name="mg_79_m249saw" spawn_score="0.05" copy_from="default_mg">
 		<character filename="default_gk_pmc.text_lines">
 			<sound key="death" fileref="M249SAW_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
 			<sound key="throw" fileref="M249SAW_SKILL1_JP.wav" pitch_variety="0.01" volume="0.8" />
@@ -766,7 +766,7 @@
 			<attribute weight="1.0" min="0.100" max="102.833" />
 		</attribute_config>
 	</soldier>
-	<soldier name="87_mg34_mg" spawn_score="0.05" copy_from="default_mg">
+	<soldier name="mg_87_mg34" spawn_score="0.05" copy_from="default_mg">
 		<character filename="default_gk_pmc.text_lines">
 			<sound key="death" fileref="MG34_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
 			<sound key="throw" fileref="MG34_ATTACK_JP.wav" pitch_variety="0.01" volume="0.8" />
@@ -781,7 +781,7 @@
 			<attribute weight="1.0" min="0.100" max="102.833" />
 		</attribute_config>
 	</soldier>
-	<soldier name="86_mg42_mg" spawn_score="0.05" copy_from="default_mg">
+	<soldier name="mg_86_mg42" spawn_score="0.05" copy_from="default_mg">
 		<character filename="default_gk_pmc.text_lines">
 			<sound key="death" fileref="MG42_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
 			<sound key="throw" fileref="MG42_ATTACK_JP.wav" pitch_variety="0.01" volume="0.8" />
@@ -796,7 +796,7 @@
 			<attribute weight="1.0" min="0.100" max="102.833" />
 		</attribute_config>
 	</soldier>
-	<soldier name="95_88typemod3_rf" spawn_score="0.01" copy_from="default_rf">
+	<soldier name="rf_95_88typemod3" spawn_score="0.01" copy_from="default_rf">
 		<character filename="default_gk_pmc.text_lines">
 			<sound key="death" fileref="88typeMod_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
 			<sound key="throw" fileref="88typeMod_MEET_JP.wav" pitch_variety="0.01" volume="0.8" />
@@ -810,7 +810,7 @@
 			<attribute weight="1.0" min="6.622" max="102.833" />
 		</attribute_config>
 	</soldier>
-	<soldier name="100_p7_hg" spawn_score="0.05" copy_from="default_hg">
+	<soldier name="hg_100_p7" spawn_score="0.05" copy_from="default_hg">
 		<character filename="default_gk_pmc.text_lines">
 			<sound key="death" fileref="P7_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
 			<sound key="throw" fileref="P7_ATTACK_JP.wav" pitch_variety="0.01" volume="0.8" />
@@ -825,7 +825,7 @@
 			<attribute weight="1.0" min="14.100" max="102.833" />
 		</attribute_config>
 	</soldier>
-	<soldier name="101_ump9_smg" spawn_score="0.05" copy_from="default_smg">
+	<soldier name="smg_101_ump9" spawn_score="0.05" copy_from="default_smg">
 		<character filename="default_gk_pmc.text_lines">
 			<sound key="death" fileref="UMP9_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
 			<sound key="throw" fileref="UMP9_SKILL1_JP.wav" pitch_variety="0.01" volume="0.8" />
@@ -840,7 +840,7 @@
 			<attribute weight="1.0" min="0.100" max="102.833" />
 		</attribute_config>
 	</soldier>
-	<soldier name="106_fal_ar" spawn_score="0.05" copy_from="default_ar">
+	<soldier name="ar_106_fal" spawn_score="0.05" copy_from="default_ar">
 		<character filename="default_gk_pmc.text_lines">
 			<sound key="death" fileref="FNFAL_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
 			<sound key="throw" fileref="FNFAL_SKILL1_JP.wav" pitch_variety="0.01" volume="0.8" />
@@ -857,7 +857,7 @@
 			<attribute weight="1.0" min="0.100" max="102.833" />
 		</attribute_config>
 	</soldier>
-	<soldier name="107_f2000_ar" spawn_score="0.05" copy_from="default_ar">
+	<soldier name="ar_107_f2000" spawn_score="0.05" copy_from="default_ar">
 		<character filename="default_gk_pmc.text_lines">
 			<sound key="death" fileref="F2000_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
 			<sound key="throw" fileref="F2000_SKILL2_JP.wav" pitch_variety="0.01" volume="0.8" />
@@ -872,7 +872,7 @@
 			<attribute weight="1.0" min="0.100" max="102.833" />
 		</attribute_config>
 	</soldier>
-	<soldier name="110_fg42_mg" spawn_score="0.05" copy_from="default_mg">
+	<soldier name="mg_110_fg42" spawn_score="0.05" copy_from="default_mg">
 		<character filename="default_gk_pmc.text_lines">
 			<sound key="death" fileref="FG42_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
 			<sound key="throw" fileref="FG42_MEET_JP.wav" pitch_variety="0.01" volume="0.8" />
@@ -887,7 +887,7 @@
 			<attribute weight="1.0" min="0.100" max="102.833" />
 		</attribute_config>
 	</soldier>
-	<soldier name="102_ump40_smg" spawn_score="0.05" copy_from="default_smg">
+	<soldier name="smg_102_ump40" spawn_score="0.05" copy_from="default_smg">
 		<character filename="default_gk_pmc.text_lines">
 			<sound key="death" fileref="UMP40_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
 			<sound key="throw" fileref="UMP40_MEET_JP.wav" pitch_variety="0.01" volume="0.8" />
@@ -902,7 +902,7 @@
 			<attribute weight="1.0" min="0.100" max="102.833" />
 		</attribute_config>
 	</soldier>
-	<soldier name="103_ump45_smg" spawn_score="0.05" copy_from="default_smg">
+	<soldier name="smg_103_ump45" spawn_score="0.05" copy_from="default_smg">
 		<character filename="default_gk_pmc.text_lines">
 			<sound key="death" fileref="UMP45_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
 			<sound key="throw" fileref="UMP45_SKILL2_JP.wav" pitch_variety="0.01" volume="0.8" />
@@ -917,7 +917,7 @@
 			<attribute weight="1.0" min="0.100" max="102.833" />
 		</attribute_config>
 	</soldier>
-	<soldier name="118_9a91_ar" spawn_score="0.05" copy_from="default_ar">
+	<soldier name="ar_118_9a91" spawn_score="0.05" copy_from="default_ar">
 		<character filename="default_gk_pmc.text_lines">
 			<sound key="death" fileref="9A91_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
 			<sound key="throw" fileref="9A91_MEET_JP.wav" pitch_variety="0.01" volume="0.8" />
@@ -932,7 +932,7 @@
 			<attribute weight="1.0" min="0.100" max="102.833" />
 		</attribute_config>
 	</soldier>
-	<soldier name="119_ots14_ar" spawn_score="0.05" copy_from="default_ar">
+	<soldier name="ar_119_ots14" spawn_score="0.05" copy_from="default_ar">
 		<character filename="default_gk_pmc.text_lines">
 			<sound key="death" fileref="OTs14_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
 			<sound key="throw" fileref="OTs14_ATTACK_JP.wav" pitch_variety="0.01" volume="0.8" />
@@ -946,7 +946,7 @@
 			<attribute weight="1.0" min="0.100" max="102.833" />
 		</attribute_config>
 	</soldier>
-	<soldier name="122_g11_ar" spawn_score="0.05" copy_from="default_ar">
+	<soldier name="ar_122_g11" spawn_score="0.05" copy_from="default_ar">
 		<character filename="default_gk_pmc.text_lines">
 			<sound key="death" fileref="G11_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
 			<sound key="throw" fileref="G11_SKILL1_JP.wav" pitch_variety="0.01" volume="0.8" />
@@ -960,7 +960,7 @@
 			<attribute weight="1.0" min="0.100" max="102.833" />
 		</attribute_config>
 	</soldier>
-	<soldier name="124_supersass_rf" spawn_score="0.05" copy_from="default_rf">
+	<soldier name="rf_124_supersass" spawn_score="0.05" copy_from="default_rf">
 		<character filename="default_gk_pmc.text_lines">
 			<sound key="death" fileref="SuperSASS_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
 			<sound key="throw" fileref="SuperSASS_SKILL1_JP.wav" pitch_variety="0.01" volume="0.8" />
@@ -974,7 +974,7 @@
 			<attribute weight="1.0" min="0.100" max="6.833" />
 		</attribute_config>
 	</soldier>
-	<soldier name="124_supersassmod3_rf" spawn_score="0.05" copy_from="default_rf">
+	<soldier name="rf_124_supersassmod3" spawn_score="0.05" copy_from="default_rf">
 		<character filename="default_gk_pmc.text_lines">
 			<sound key="death" fileref="SuperSASSMod_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
 			<sound key="throw" fileref="SuperSASSMod_SKILL1_JP.wav" pitch_variety="0.01" volume="0.8" />
@@ -988,7 +988,7 @@
 			<attribute weight="1.0" min="6.622" max="7.833" />
 		</attribute_config>
 	</soldier>
-	<soldier name="136_pp19_smg" spawn_score="0.05" copy_from="default_smg">
+	<soldier name="smg_136_pp19" spawn_score="0.05" copy_from="default_smg">
 		<character filename="default_gk_pmc.text_lines">
 		</character>
 		<resources file="gk_elite.resources">
@@ -1001,7 +1001,7 @@
 			<attribute weight="1.0" min="0.100" max="102.833" />
 		</attribute_config>
 	</soldier>
-	<soldier name="142_fn57_hg" spawn_score="0.05" copy_from="default_hg">
+	<soldier name="hg_142_fn57" spawn_score="0.05" copy_from="default_hg">
 		<character filename="default_gk_pmc.text_lines">
 			<sound key="death" fileref="FN57_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
 			<sound key="throw" fileref="FN57_SKILL1_JP.wav" pitch_variety="0.01" volume="0.8" />
@@ -1015,7 +1015,7 @@
 			<attribute weight="1.0" min="0.100" max="102.833" />
 		</attribute_config>
 	</soldier>
-	<soldier name="148_iws2000_rf" spawn_score="0.05" copy_from="default_rf">
+	<soldier name="rf_148_iws2000" spawn_score="0.05" copy_from="default_rf">
 		<character filename="default_gk_pmc.text_lines">
 			<sound key="death" fileref="IWS2000_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
 			<sound key="throw" fileref="IWS2000_MEET_JP.wav" pitch_variety="0.01" volume="0.8" />
@@ -1029,7 +1029,7 @@
 			<attribute weight="1.0" min="0.100" max="102.833" />
 		</attribute_config>
 	</soldier>
-	<soldier name="124_supershorty_sg" spawn_score="0.05" copy_from="default_sg">
+	<soldier name="sg_124_supershorty" spawn_score="0.05" copy_from="default_sg">
 		<character filename="default_gk_pmc.text_lines">
 			<sound key="death" fileref="SuperShorty_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
 			<sound key="throw" fileref="SuperShorty_MEET_JP.wav" pitch_variety="0.01" volume="0.8" />
@@ -1043,7 +1043,7 @@
 			<attribute weight="1.0" min="0.100" max="102.833" />
 		</attribute_config>
 	</soldier>
-	<soldier name="156_sat8_sg" spawn_score="0.05" copy_from="default_sg">
+	<soldier name="sg_156_sat8" spawn_score="0.05" copy_from="default_sg">
 		<character filename="default_gk_pmc.text_lines">
 			<sound key="death" fileref="SAT8_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
 			<sound key="throw" fileref="SAT8_SKILL1_JP.wav" pitch_variety="0.01" volume="0.8" />
@@ -1057,7 +1057,7 @@
 			<attribute weight="1.0" min="0.100" max="102.833" />
 		</attribute_config>
 	</soldier>
-	<soldier name="163_aa12_sg" spawn_score="0.05" copy_from="default_sg">
+	<soldier name="sg_163_aa12" spawn_score="0.05" copy_from="default_sg">
 		<character filename="default_gk_pmc.text_lines">
 			<sound key="death" fileref="AA12_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
 			<sound key="throw" fileref="AA12_SKILL2_JP.wav" pitch_variety="0.01" volume="0.8" />
@@ -1071,7 +1071,7 @@
 			<attribute weight="1.0" min="0.100" max="102.833" />
 		</attribute_config>
 	</soldier>
-	<soldier name="175_art556_ar" spawn_score="0.05" copy_from="default_ar">
+	<soldier name="ar_175_art556" spawn_score="0.05" copy_from="default_ar">
 		<character filename="default_gk_pmc.text_lines">
 			<sound key="death" fileref="ART556_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
 			<sound key="throw" fileref="ART556_ATTACK_JP.wav" pitch_variety="0.01" volume="0.8" />
@@ -1085,7 +1085,7 @@
 			<attribute weight="1.0" min="0.100" max="102.833" />
 		</attribute_config>
 	</soldier>
-	<soldier name="205_an94_ar" spawn_score="0.05" copy_from="default_ar">
+	<soldier name="ar_205_an94" spawn_score="0.05" copy_from="default_ar">
 		<character filename="default_gk_pmc.text_lines">
 			<sound key="death" fileref="AN94_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
 			<sound key="throw" fileref="AN94_SKILL2_JP.wav" pitch_variety="0.01" volume="0.8" />
@@ -1099,7 +1099,7 @@
 			<attribute weight="1.0" min="0.100" max="102.833" />
 		</attribute_config>
 	</soldier>
-	<soldier name="206_ak12_ar" spawn_score="0.05" copy_from="default_ar">
+	<soldier name="ar_206_ak12" spawn_score="0.05" copy_from="default_ar">
 		<character filename="gk_ak12.text_lines">
 			<sound key="death" fileref="AK12_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
 			<sound key="throw" fileref="AK12_MEET_JP.wav" pitch_variety="0.01" volume="0.8" />
@@ -1113,7 +1113,7 @@
 			<attribute weight="1.0" min="0.100" max="102.833" />
 		</attribute_config>
 	</soldier>
-	<soldier name="229_m870_sg" spawn_score="0.05" copy_from="default_sg">
+	<soldier name="sg_229_m870" spawn_score="0.05" copy_from="default_sg">
 		<character filename="default_gk_pmc.text_lines">
 			<sound key="death" fileref="M870P_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
 			<sound key="throw" fileref="M870P_MEET_JP.wav" pitch_variety="0.01" volume="0.8" />
@@ -1127,7 +1127,7 @@
 			<attribute weight="1.0" min="0.100" max="102.833" />
 		</attribute_config>
 	</soldier>
-	<soldier name="293_ak15_ar" spawn_score="0.05" copy_from="default_ar">
+	<soldier name="ar_293_ak15" spawn_score="0.05" copy_from="default_ar">
 		<character filename="default_gk_pmc.text_lines">
 			<sound key="death" fileref="AK15_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
 			<sound key="throw" fileref="AK15_MEET_JP.wav" pitch_variety="0.01" volume="0.8" />
@@ -1141,7 +1141,7 @@
 			<attribute weight="1.0" min="0.100" max="102.833" />
 		</attribute_config>
 	</soldier>
-	<soldier name="316_liu_rf" spawn_score="0.05" copy_from="default_rf">
+	<soldier name="rf_316_liu" spawn_score="0.05" copy_from="default_rf">
 		<character filename="default_gk_pmc.text_lines">
 			<sound key="death" fileref="GeneralLiu_BREAK_JP.wav" pitch_variety="0.05" volume="0.8" />
 		</character>
@@ -1153,7 +1153,7 @@
 			<attribute weight="1.0" min="0.100" max="6.833" />
 		</attribute_config>
 	</soldier>
-	<soldier name="216_xm8_ar" spawn_score="0.05" copy_from="default_ar">
+	<soldier name="ar_216_xm8" spawn_score="0.05" copy_from="default_ar">
 		<character filename="default_gk_pmc.text_lines">
 			<sound key="death" fileref="XM8_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
 			<sound key="throw" fileref="XM8_ATTACK_JP.wav" pitch_variety="0.01" volume="0.8" />
@@ -1167,7 +1167,7 @@
 			<attribute weight="1.0" min="0.100" max="102.833" />
 		</attribute_config>
 	</soldier>
-	<soldier name="231_m82a1_rf" spawn_score="0.025" copy_from="default_rf">
+	<soldier name="rf_231_m82a1" spawn_score="0.025" copy_from="default_rf">
 		<character filename="default_gk_pmc.text_lines">
 			<sound key="death" fileref="M82A1_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
 			<sound key="throw" fileref="M82A1_MEET_JP.wav" pitch_variety="0.01" volume="0.8" />
@@ -1181,7 +1181,7 @@
 			<attribute weight="1.0" min="0.100" max="102.833" />
 		</attribute_config>
 	</soldier>
-	<soldier name="234_js9_smg" spawn_score="0.05" copy_from="default_smg">
+	<soldier name="smg_234_js9" spawn_score="0.05" copy_from="default_smg">
 		<character filename="default_gk_pmc.text_lines">
 			<sound key="death" fileref="JS9mm_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
 			<sound key="throw" fileref="JS9mm_ATTACK_JP.wav" pitch_variety="0.01" volume="0.8" />
@@ -1196,7 +1196,7 @@
 			<attribute weight="1.0" min="0.100" max="102.833" />
 		</attribute_config>
 	</soldier>
-	<soldier name="245_p90_smg" spawn_score="0.05" copy_from="default_smg">
+	<soldier name="smg_245_p90" spawn_score="0.05" copy_from="default_smg">
 		<character filename="default_gk_pmc.text_lines">
 			<sound key="death" fileref="P90_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
 			<sound key="throw" fileref="P90_ATTACK_JP.wav" pitch_variety="0.01" volume="0.8" />
@@ -1211,7 +1211,7 @@
 			<attribute weight="1.0" min="0.100" max="102.833" />
 		</attribute_config>
 	</soldier>
-	<soldier name="250_hs2000_hg" spawn_score="0.05" copy_from="default_hg">
+	<soldier name="hg_250_hs2000" spawn_score="0.05" copy_from="default_hg">
 		<character filename="default_gk_pmc.text_lines">
 			<sound key="death" fileref="HS2000_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
 			<sound key="throw" fileref="HS2000_ATTACK_JP.wav" pitch_variety="0.01" volume="0.8" />
@@ -1226,7 +1226,7 @@
 			<attribute weight="1.0" min="0.100" max="102.833" />
 		</attribute_config>
 	</soldier>
-	<soldier name="257_m200_rf" spawn_score="0.05" copy_from="default_rf">
+	<soldier name="rf_257_m200" spawn_score="0.05" copy_from="default_rf">
 		<character filename="default_gk_pmc.text_lines">
 			<sound key="death" fileref="M200_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
 			<sound key="throw" fileref="M200_MEET_JP.wav" pitch_variety="0.01" volume="0.8" />
@@ -1240,7 +1240,7 @@
 			<attribute weight="1.0" min="0.100" max="102.833" />
 		</attribute_config>
 	</soldier>
-	<soldier name="272_desert_hg" spawn_score="0.05" copy_from="default_hg">
+	<soldier name="hg_272_desert" spawn_score="0.05" copy_from="default_hg">
 		<character filename="default_gk_pmc.text_lines">
 			<sound key="death" fileref="DesertEagle_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
 			<sound key="throw" fileref="DesertEagle_ATTACK_JP.wav" pitch_variety="0.01" volume="0.8" />
@@ -1254,7 +1254,7 @@
 			<attribute weight="1.0" min="0.100" max="102.833" />
 		</attribute_config>
 	</soldier>
-	<soldier name="276_kord_mg" spawn_score="0.05" copy_from="default_mg">
+	<soldier name="mg_276_kord" spawn_score="0.05" copy_from="default_mg">
 		<character filename="default_gk_pmc.text_lines">
 			<sound key="death" fileref="Kord_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
 			<sound key="throw" fileref="Kord_SKILL1_JP.wav" pitch_variety="0.01" volume="0.8" />
@@ -1269,7 +1269,7 @@
 			<attribute weight="1.0" min="0.100" max="102.833" />
 		</attribute_config>
 	</soldier>
-	<soldier name="296_sl8_rf" spawn_score="0.05" copy_from="default_rf">
+	<soldier name="rf_296_sl8" spawn_score="0.05" copy_from="default_rf">
 		<character filename="default_gk_pmc.text_lines">
 			<sound key="death" fileref="SL8_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
 			<sound key="throw" fileref="SL8_ATTACK_JP.wav" pitch_variety="0.01" volume="0.8" />
@@ -1283,7 +1283,7 @@
 			<attribute weight="1.0" min="0.100" max="102.833" />
 		</attribute_config>
 	</soldier>
-	<soldier name="312_vsk94_rf" spawn_score="0.05" copy_from="default_rf">
+	<soldier name="rf_312_vsk94" spawn_score="0.05" copy_from="default_rf">
 		<character filename="default_gk_pmc.text_lines">
 			<sound key="death" fileref="VSK_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
 			<sound key="throw" fileref="VSK_ATTACK_JP.wav" pitch_variety="0.01" volume="0.8" />
@@ -1297,7 +1297,7 @@
 			<attribute weight="1.0" min="0.100" max="3.833" />
 		</attribute_config>
 	</soldier>
-	<soldier name="320_gm6_rf" spawn_score="0.025" copy_from="default_rf">
+	<soldier name="rf_320_gm6" spawn_score="0.025" copy_from="default_rf">
 		<character filename="default_gk_pmc.text_lines">
 			<sound key="death" fileref="Gm6Lynx_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
 			<sound key="throw" fileref="Gm6Lynx_ATTACK_JP.wav" pitch_variety="0.01" volume="0.8" />
