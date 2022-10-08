@@ -51,6 +51,7 @@
 #include "shared_reward.as"
 #include "enemy_reward.as"
 #include "call_event_handler.as"
+#include "GFLplayerlist.as"
 
 
 // --------------------------------------------
@@ -341,6 +342,7 @@ class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 		addTracker(GFL_event_system(this));
 		addTracker(SharedReward(this));
 		addTracker(call_event(this));
+		addTracker(GFL_playerlist_system(this));
 	}
 
 	// --------------------------------------------

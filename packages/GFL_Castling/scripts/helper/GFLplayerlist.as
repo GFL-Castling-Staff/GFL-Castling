@@ -61,7 +61,7 @@ class GFL_playerlist_system : Tracker {
 
                     int cid = nowPlayers[i].getIntAttribute("character_id");
                     int pid = nowPlayers[i].getIntAttribute("player_id");
-                    const XmlElement@ targetCharacter = getCharacterInfo2(metagame,characterId);
+                    const XmlElement@ targetCharacter = getCharacterInfo2(m_metagame,cid);
 
                     if(targetCharacter !is null){
                         array<const XmlElement@>@ equipment = targetCharacter.getElementsByTagName("item");
@@ -101,7 +101,7 @@ class GFL_playerlist_system : Tracker {
 
 int getPlayerCidFromList(int playerid) {
     if(GFL_playerlist_array.length()>0){
-        for(int i=0;i<GFL_playerlist_array.length();i++){
+        for(uint i=0;i<GFL_playerlist_array.length();i++){
             if(GFL_playerlist_array[i].m_playerid == playerid)
                 return GFL_playerlist_array[i].m_characterid;
         }
@@ -111,15 +111,15 @@ int getPlayerCidFromList(int playerid) {
 
 string getPlayerWeaponFromList(int playerid, int weaponnum) {
     if(GFL_playerlist_array.length()>0){
-        for(int i=0;i<GFL_playerlist_array.length();i++){
+        for(uint i=0;i<GFL_playerlist_array.length();i++){
             if(GFL_playerlist_array[i].m_playerid == playerid){
                 switch(weaponnum){
-                    case 0:{return GFL_playerlist_array[i].m_weapon1key;break;}
-                    case 1:{return GFL_playerlist_array[i].m_weapon2key;break;}
-                    case 2:{return GFL_playerlist_array[i].m_weapon3key;break;}
-                    case 3:{return GFL_playerlist_array[i].m_vestkey;break;}
-                    case 4:{return GFL_playerlist_array[i].m_itemkey;break;}
-                    default:{return "-nan-";break;}
+                    case 0:{return GFL_playerlist_array[i].m_weapon1key;}
+                    case 1:{return GFL_playerlist_array[i].m_weapon2key;}
+                    case 2:{return GFL_playerlist_array[i].m_weapon3key;}
+                    case 3:{return GFL_playerlist_array[i].m_vestkey;}
+                    case 4:{return GFL_playerlist_array[i].m_itemkey;}
+                    default:{return "-nan-";}
                 }
             }
         }

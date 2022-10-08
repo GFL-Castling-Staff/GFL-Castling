@@ -734,10 +734,25 @@ class GFLskill : Tracker {
 					int randomeffect = rand(0,1);
 					switch(randomeffect){
 						case 0:{
+							string soldier_name = "infected";
 							int factionid = character.getIntAttribute("faction_id");
-							playAnimationKey(m_metagame,characterId,"warcry, elid boss",false);
-							playSoundAtLocation(m_metagame,"bigzombie_summon_fromDOTA2.wav",0,pos,1.0);
-							spawnSoldier(m_metagame,10,factionid,pos,"infected");
+							array<const XmlElement@>@ groups = getSoldierGroups(m_metagame, factionid);
+							if (groups is null) return;
+							bool status = false;
+							for (uint i = 0; i < groups.size(); ++i) {
+								const XmlElement@ group = groups[i];
+								if (group is null) continue;
+								string name = group.getStringAttribute("name");
+								if (name == soldier_name){
+									status = true;
+									break;
+								}
+							}
+							if (status){
+								playAnimationKey(m_metagame,characterId,"warcry, elid boss",false);
+								playSoundAtLocation(m_metagame,"bigzombie_summon_fromDOTA2.wav",0,pos,1.0);
+								spawnSoldier(m_metagame,10,factionid,pos,soldier_name);
+							}
 							break;
 						}
 						case 1:{
