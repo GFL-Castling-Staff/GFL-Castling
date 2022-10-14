@@ -2826,7 +2826,7 @@ class CommandSkill : Tracker {
                     }
 
                     if (checkFlatRange(c_pos,stringToVector3(target),15)){
-                        CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"hand_88grenade.projectile",characterId,factionid,60);
+                        CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"hand_88grenade.projectile",characterId,factionid,40);
                     }
                     else{
                         CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"hand_88grenade.projectile",characterId,factionid,30.0,5.0);
@@ -3087,12 +3087,12 @@ class CommandSkill : Tracker {
                     string target = player.getStringAttribute("aim_target");
                     Vector3 c_pos = stringToVector3(target);
                     int factionid = character.getIntAttribute("faction_id");
-                    array<string> Voice={
-                        "G41_SKILL1_JP.wav",
-                        "G41_SKILL2_JP.wav",
-                        "G41_SKILL3_JP.wav"
-                    };
-                    playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+                    // array<string> Voice={
+                    //     "G41_SKILL1_JP.wav",
+                    //     "G41_SKILL2_JP.wav",
+                    //     "G41_SKILL3_JP.wav"
+                    // };
+                    // playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
                     c_pos=c_pos.add(Vector3(0,1,0));
                     CreateDirectProjectile(m_metagame,c_pos.add(Vector3(0,1,0)),c_pos,"ff_weaver_skill_scan.projectile",characterId,factionid,6.0);
                     addCoolDown("FF_WEAVER",25,characterId,modifer);
