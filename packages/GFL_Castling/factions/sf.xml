@@ -527,7 +527,7 @@
 	</soldier>
 	<!-- nemeum 钢狮 -->
 	<soldier name="sfw_nemeum" spawn_score="0.7" copy_from="default_spawn_ai">
-		<character filename="default_mecha.character"/>
+		<character filename="sf_nemeum.character"/>
 		<ai filename="sf_nemeum.ai" />
 		<model filename="sfd_sangvisfeaal.xml" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_calls="1">
@@ -537,7 +537,7 @@
 	</soldier>
 	<!-- nemeum 钢狮 swap -->
 	<soldier name="sfw_nemeum_swap" spawn_score="0.35" copy_from="default_spawn_ai">
-		<character filename="default_mecha.character"/>
+		<character filename="sf_nemeum.character"/>
 		<ai filename="sf_nemeum_swap.ai" />
 		<model filename="sfd_sangvisfeaal_swap.xml" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_calls="1">
