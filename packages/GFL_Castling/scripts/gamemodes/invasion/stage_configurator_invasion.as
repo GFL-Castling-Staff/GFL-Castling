@@ -20,7 +20,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 	protected GameModeInvasion@ m_metagame;
 	protected MapRotatorInvasion@ m_mapRotator;
 	protected int m_stagesAdded;
-	protected int m_playerAiCompensation_offset = 0;
+	protected int m_playerAiCompensation_offset = -1;
 
 	// ------------------------------------------------------------------------------------------------
 	StageConfiguratorInvasion(GameModeInvasion@ metagame, MapRotatorInvasion@ mapRotator) {
@@ -56,7 +56,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 	// ------------------------------------------------------------------------------------------------
 	protected void setupGlobalConfigs() {
 		const UserSettings@ settings = m_metagame.getUserSettings();
-		m_playerAiCompensation_offset += (settings.m_GlobalDifficulty *2);
+		m_playerAiCompensation_offset += (settings.m_GlobalDifficulty);
 	}
 
 	protected void setupFactionConfigs() {

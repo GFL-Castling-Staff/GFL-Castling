@@ -448,7 +448,7 @@
 		</attribute_config>
 	</soldier>
 	<!-- 独眼巨人ar -->
-	<soldier name="kcco_ar" spawn_score="1.2" copy_from="default_bot">
+	<soldier name="kcco_ar" spawn_score="2.5" copy_from="default_bot">
 		<ai filename="kcco_bot.ai" />
 		<model filename="kccod_cyclops_remake.xml" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_calls="1" clear_carry_items="1" clear_grenades="1">
@@ -461,7 +461,7 @@
 		</attribute_config>
 	</soldier>
 	<!--人类士兵-->
-	<soldier name="kcco_ar_human" spawn_score="0.6" copy_from="default_bot">
+	<soldier name="kcco_ar_human" spawn_score="0.75" copy_from="default_bot">
 		<ai filename="default.ai" />
 		<character filename="default_kcco_human.character" />
 		<models file="kcco_human_basic.models" />
@@ -504,7 +504,7 @@
 		</attribute_config>
 	</soldier>	
 	<!-- sg -->
-	<soldier name="kcco_sg" spawn_score="1.0" copy_from="default_bot">
+	<soldier name="kcco_sg" spawn_score="1.5" copy_from="default_bot">
 		<model filename="kccod_cyclops_sg_remake.xml" />
 		<ai filename="eod.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_calls="1" clear_carry_items="1">
@@ -513,7 +513,7 @@
 		</resources>
 	</soldier>
 	<!-- mg -->
-	<soldier name="kcco_mg" spawn_score="0.2" copy_from="default_bot">
+	<soldier name="kcco_mg" spawn_score="0.4" copy_from="default_bot">
 		<model filename="kccod_gatling3.xml" />
 		<ai filename="kcco_bot_mg.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_calls="1" clear_carry_items="1">
@@ -522,7 +522,7 @@
 		</resources>
 	</soldier>
 	<!-- 喷火兵 -->
-	<soldier name="kcco_talos" spawn_score="0.2" copy_from="default_bot">
+	<soldier name="kcco_talos" spawn_score="0.3" copy_from="default_bot">
 		<model filename="kccod_talos.xml" />
 		<ai filename="eod.ai" />
 		<resources clear_weapons="1" clear_grenades="1" clear_calls="1" clear_carry_items="1">
@@ -590,7 +590,7 @@
 		</attribute_config>
 	</soldier>
 	<!-- aegis 圣盾军方版本 -->
-	<soldier name="kcco_aegis" spawn_score="0.5" copy_from="default_bot">
+	<soldier name="kcco_aegis" spawn_score="0.75" copy_from="default_bot">
 		<model filename="kccod_aegis.xml" />
 		<ai filename="shield.ai" />
 		<resources clear_calls="1" clear_grenades="1" clear_carry_items="1" clear_weapons="1" clear_vehicles="1">
@@ -602,7 +602,7 @@
 		</attribute_config>
 	</soldier>
 	<!-- dactyl指灵\地雷 -->
-	<soldier name="kcco_dactyl" spawn_score="0.2" copy_from="default_bot">
+	<soldier name="kcco_dactyl" spawn_score="0.3" copy_from="default_bot">
 		<model filename="kccod_dactyl.xml" />
 		<ai filename="hydra.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
@@ -675,6 +675,7 @@
 	</soldier>
 	<!-- KCCO石英小队精英突击兵 -->
 	<soldier name="kcco_quartz_ranger" spawn_score="0.05" copy_from="default_bot">
+		<character filename="default_kcco_human.character" />
 		<model filename="kccod_human_5.xml" />
 		<ai filename="kcco_human_smg.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
