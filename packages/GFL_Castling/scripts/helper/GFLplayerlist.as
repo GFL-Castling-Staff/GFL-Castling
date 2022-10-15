@@ -20,9 +20,11 @@ class GFL_playerlist{
     string m_weapon3key;    //投掷物key
     string m_vestkey;       //甲key
     string m_itemkey;       //掉落物key
+    string m_pos;
+    string m_old_pos;
     int m_count;
 
-    GFL_playerlist(int cid, int pid, string w1key="-nan-", string w2key="-nan-", string w3key="-nan-", string vkey="-nan-", string ikey="-nan-",int count=0){
+    GFL_playerlist(int cid, int pid, string w1key="-nan-", string w2key="-nan-", string w3key="-nan-", string vkey="-nan-", string ikey="-nan-",int count=0,string pos){
         m_characterid = cid;
 	    m_playerid = pid;
         m_weapon1key = w1key;
@@ -31,6 +33,12 @@ class GFL_playerlist{
         m_vestkey = vkey;
         m_itemkey = ikey;
         m_count = count;
+        m_pos = pos;
+    }
+
+    void updatePos(string pos){ 
+        m_old_pos = m_pos;
+        m_pos= pos;
     }
 }
 
@@ -64,13 +72,14 @@ class GFL_playerlist_system : Tracker {
                     const XmlElement@ targetCharacter = getCharacterInfo2(m_metagame,cid);
 
                     if(targetCharacter !is null){
+                        string pos = targetCharacter.getStringAttribute("position");
                         array<const XmlElement@>@ equipment = targetCharacter.getElementsByTagName("item");
                         string w1 = equipment[0].getStringAttribute("key");
                         string w2 = equipment[1].getStringAttribute("key");
                         string w3 = equipment[2].getStringAttribute("key");
                         string w4 = equipment[3].getStringAttribute("key");
                         string w5 = equipment[4].getStringAttribute("key");
-                        GFL_playerlist@ new_player = GFL_playerlist(cid, pid, w1, w2, w3, w4, w5, 0); 
+                        GFL_playerlist@ new_player = GFL_playerlist(cid, pid, w1, w2, w3, w4, w5, 0,pos); 
 
                         GFL_playerlist_array.insertLast(new_player); 
                     }
@@ -125,4 +134,17 @@ string getPlayerWeaponFromList(int playerid, int weaponnum) {
         }
     }
     return "-nan-";
+}
+
+bool checkIdle(int playerid){
+    if(GFL_playerlist_array.length()>0){
+        for(uint i=0;i<GFL_playerlist_array.length();i++){
+            if(GFL_playerlist_array[i].m_playerid == playerid){
+                if (GFL_playerlist_array[i].m_pos == GFL_playerlist_array[i].m_old_pos){
+                    return true;
+                }
+            }    
+        }
+    }
+    return false;
 }
