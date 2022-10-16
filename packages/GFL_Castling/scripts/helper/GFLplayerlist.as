@@ -24,7 +24,7 @@ class GFL_playerlist{
     string m_old_pos;
     int m_count;
 
-    GFL_playerlist(int cid, int pid, string w1key="-nan-", string w2key="-nan-", string w3key="-nan-", string vkey="-nan-", string ikey="-nan-",int count=0,string pos){
+    GFL_playerlist(int cid, int pid, string w1key="-nan-", string w2key="-nan-", string w3key="-nan-", string vkey="-nan-", string ikey="-nan-",int count=0,string pos="-nan-"){
         m_characterid = cid;
 	    m_playerid = pid;
         m_weapon1key = w1key;
