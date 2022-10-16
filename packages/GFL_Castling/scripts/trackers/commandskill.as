@@ -1807,10 +1807,10 @@ class CommandSkill : Tracker {
                         Vector3 c_pos2 = c_pos.add(Vector3(-3,0,-3));
                         Vector3 c_pos3 = c_pos.add(Vector3(-3,0,3));
                         Vector3 c_pos4 = c_pos.add(Vector3(3,0,-3));                        
-                        spawnSoldier(m_metagame,1,factionid,c_pos1,"136_pp19_smg");
-                        spawnSoldier(m_metagame,1,factionid,c_pos2,"136_pp19_smg");
-                        spawnSoldier(m_metagame,1,factionid,c_pos3,"136_pp19_smg");
-                        spawnSoldier(m_metagame,1,factionid,c_pos4,"136_pp19_smg");
+                        spawnSoldier(m_metagame,1,factionid,c_pos1,"smg_136_pp19");
+                        spawnSoldier(m_metagame,1,factionid,c_pos2,"smg_136_pp19");
+                        spawnSoldier(m_metagame,1,factionid,c_pos3,"smg_136_pp19");
+                        spawnSoldier(m_metagame,1,factionid,c_pos4,"smg_136_pp19");
                         playSoundAtLocation(m_metagame,"grenade_throw1.wav",factionid,c_pos,0.9);
                         CreateProjectile_H(m_metagame,c_pos1,stringToVector3(target),"grenade_pp19_sub.projectile",characterId,factionid,40.0,6.0);
                         CreateProjectile_H(m_metagame,c_pos2,stringToVector3(target),"grenade_pp19_sub.projectile",characterId,factionid,40.0,6.0);
@@ -2669,8 +2669,8 @@ class CommandSkill : Tracker {
         const XmlElement@ info = getCharacterInfo(m_metagame, characterId);
         int fID = info.getIntAttribute("faction_id");
         string c_pos = info.getStringAttribute("position");
-        spawnSoldier(m_metagame,5,fID,c_pos,"316_liu_rf");
-        playSoundAtLocation(m_metagame,"GeneralLiu_skill.wav",fID,c_pos,1.2);
+        spawnSoldier(m_metagame,5,fID,c_pos,"rf_316_liu");
+        playSoundAtLocation(m_metagame,"GeneralLiu_skill.wav",fID,c_pos,1.0);
 
     }
 
@@ -2987,7 +2987,7 @@ class CommandSkill : Tracker {
                 "CZ75_SKILL3_JP.wav"
                 };
                 playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1.4);
-                playSoundAtLocation(m_metagame,"cz75_skill_throwout.wav",factionid,c_pos,1.0);
+                playSoundAtLocation(m_metagame,"cz75_skill_throwout.wav",factionid,c_pos,0.85);
 
                 while(num_jud>0){
                     for (uint i1=0;i1<affectedCharacter.length();i1++)	{

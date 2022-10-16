@@ -1471,7 +1471,7 @@
 		</attribute_config>
 	</soldier>
 	<!-- 忤逆精英小队 -->
-	<soldier name="defy_ak12_ar" spawn_score="0.0001" copy_from="206_ak12_ar">
+	<soldier name="defy_ak12_ar" spawn_score="0.0001" copy_from="ar_206_ak12">
 	    <ai filename="defy_ak12.ai" />
 		<character filename="gk_ak12.text_lines">
 			<sound key="death" fileref="AK12_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
