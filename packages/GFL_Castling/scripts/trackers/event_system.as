@@ -481,7 +481,8 @@ void excuteRampageFairyAC130(GameMode@ metagame,GFL_event@ eventinfo){
 }
 
 int apache_javelin_luckyvehicleid = -1;
-array<const XmlElement@> apache_affectedCharacter;
+
+array<Apache_Javelin_lister@> Apache_Javelin_list;
 
 void excuteWarriorFariyApache(GameMode@ metagame,GFL_event@ eventinfo){
     eventinfo.m_time=1.0;
@@ -491,16 +492,22 @@ void excuteWarriorFariyApache(GameMode@ metagame,GFL_event@ eventinfo){
         
         insertCommonStrike(eventinfo.m_characterId,eventinfo.m_factionid,"apache_bait",aimPos,eventinfo.m_pos);
 
+        apache_javelin_luckyvehicleid  = getNearByEnemyVehicle(metagame,eventinfo.m_factionid,eventinfo.m_pos,20);
+        if(apache_javelin_luckyvehicleid!=-1)playSoundAtLocation(metagame,"javelin_locked.wav",eventinfo.m_factionid,eventinfo.m_pos,1.0);//锁定载具成功
+        else	playSoundAtLocation(metagame,"javelin_lock_fail.wav",eventinfo.m_factionid,eventinfo.m_pos,1.0);//未锁定载具
+
+        Apache_Javelin_list.insertLast(Apache_Javelin_lister(eventinfo.m_characterId,eventinfo.m_factionid,apache_javelin_luckyvehicleid,eventinfo.m_pos));
+
+    }
+    else if(eventinfo.m_phase==3){
+
         int m_fnum = metagame.getFactionCount();
         int max_check = 6;  // 最多扫描6个人
         int jud_check = 0;
         int max_num = 3;    // 最多记录3个精英
         int jud_num = 0;
 
-        while(apache_affectedCharacter.length()>0){
-            apache_affectedCharacter.removeLast();
-        }
-        
+        array<const XmlElement@> apache_affectedCharacter;
         for(uint i=0;i<m_fnum;i++) 
             if(i!=eventinfo.m_factionid) {
 
@@ -533,14 +540,8 @@ void excuteWarriorFariyApache(GameMode@ metagame,GFL_event@ eventinfo){
                 }
             }
             if((jud_num>=max_num) || (jud_check>=max_check))break;
-        }        
+        }         
 
-        apache_javelin_luckyvehicleid  = getNearByEnemyVehicle(metagame,eventinfo.m_factionid,eventinfo.m_pos,20);
-        if(apache_javelin_luckyvehicleid!=-1)playSoundAtLocation(metagame,"javelin_locked.wav",eventinfo.m_factionid,eventinfo.m_pos,1.0);//锁定载具成功
-        else	playSoundAtLocation(metagame,"javelin_lock_fail.wav",eventinfo.m_factionid,eventinfo.m_pos,1.0);//未锁定载具
-
-    }
-    else if(eventinfo.m_phase==3){
         for (uint i0=1;i0<=3;i0++){
             for (uint i1=0;i1<apache_affectedCharacter.length();i1++)	{
                 int luckyoneid = apache_affectedCharacter[i1].getIntAttribute("id");
@@ -554,16 +555,45 @@ void excuteWarriorFariyApache(GameMode@ metagame,GFL_event@ eventinfo){
         }
     }
     else if(eventinfo.m_phase==5){
-        if(apache_javelin_luckyvehicleid!=-1){
-            const XmlElement@ target_info = getVehicleInfo(metagame, apache_javelin_luckyvehicleid);
-			Vector3 target_pos = stringToVector3(target_info.getStringAttribute("position"));
-            insertCommonStrike(eventinfo.m_characterId,eventinfo.m_factionid,"apache_javelin",aimPos,target_pos);            
+        if(Apache_Javelin_list.length()>0){
+            for (uint a=0;a<Apache_Javelin_list.length();a++){
+                if((Apache_Javelin_list[a].m_characterId==eventinfo.m_characterId)&&(Apache_Javelin_list[a].m_factionid==eventinfo.m_factionid)){//在序列中如果能找到
+                    _log("javelin_locate_aimer success");
+                    int target_id = Apache_Javelin_list[a].m_vehicleid;
+                    Vector3 target_fin_pos;
+                    if(target_id!=-1){
+                        _log("aimming 2 success.");
+                        const XmlElement@ target_info = getVehicleInfo(metagame, target_id);
+                        target_fin_pos = stringToVector3(target_info.getStringAttribute("position"));//标枪导弹目标位置
+                    }
+                    else{
+                        target_fin_pos = Apache_Javelin_list[a].m_pos;
+                    }
+                    insertCommonStrike(eventinfo.m_characterId,eventinfo.m_factionid,"apache_javelin",aimPos,target_fin_pos);
+                    Apache_Javelin_list.removeAt(a);
+                    break;																	
+                }
+            }
         }
-        else
-            insertCommonStrike(eventinfo.m_characterId,eventinfo.m_factionid,"apache_javelin",aimPos,eventinfo.m_pos);
     }
     eventinfo.m_phase++;
     if(eventinfo.m_phase>=6){
         eventinfo.m_enable=false;
     }
+}
+
+class Apache_Javelin_lister{
+    int m_characterId;
+	float m_time=6;
+	int m_numtime=1;
+	int m_factionid;
+	int m_vehicleid;
+	Vector3 m_pos;
+	Apache_Javelin_lister(int characterId,int factionid,int vehicleid,Vector3 pos)
+	{
+		m_characterId = characterId;
+		m_factionid = factionid;
+		m_vehicleid = vehicleid;
+		m_pos = pos;
+	}
 }

@@ -187,22 +187,6 @@
         <capacity value="100" source="rank" source_value="0.231" />
         <inventory encumbrance="0.0" price="200.0" />
     </call>
-    <!-- 空袭妖精 -->
-    <call name="Airstrike Fairy" key="gk_airstrike_fairy.call" initiation_comment1="Airstrike Fairy" acknowledge_comment="Confirmed, UAV is online, situational awareness is complete" acknowledge_time="0" launch_comment="Execution of air strikes" notify_metagame="1">
-        <round instances="1" instance_class="grenade" instance_key="artillery_airstrike_fairies.projectile" instance_spread="0 0 0" common_spread="0 0 0" launch_time="1.0" spawn_time="3.0" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="45.0" initial_speed_to_target="20.0">
-            <effect class="launch" ref="gk_ShadowCallFlyby" shadow="1" />
-            <sound class="launch" fileref="plane_flyby.wav" volume="6.0" />
-            <sound class="spawn" fileref="woosh1.wav" volume="0.3" />
-        </round>
-        <round instances="1" instance_class="grenade" instance_key="artillery_airstrike_fairies.projectile" instance_spread="0 0 0" common_spread="0 0 0" launch_time="1.0" spawn_time="5.0" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="45.0" initial_speed_to_target="20.0">
-            <sound class="launch" fileref="plane_flyby.wav" volume="0" />
-            <sound class="spawn" fileref="woosh1.wav" volume="0.3" />
-        </round>
-        <hud_icon filename="call_Firesupport_AirborneFairy.png" />
-        <capacity value="0" source="rank" source_value="0.0" />
-        <capacity value="100" source="rank" source_value="1.143" />
-        <inventory encumbrance="0.0" price="500.0" />
-    </call>
     <!-- 暴怒妖精（AC130） -->
     <call name="Fury Fairy" key="gk_rampage_fairy_ac130.call" initiation_comment1="Fury Fairy" initiation_comment2="Gunship support" acknowledge_comment="Confirm, checking gunship status" acknowledge_time="2" launch_comment="Gunship status confirmed" notify_metagame="1">
 
@@ -226,7 +210,42 @@
         <capacity value="100" source="rank" source_value="6.48" />
         <inventory encumbrance="0.0" price="5000.0" />
     </call> 
-    <!-- 狙击妖精 -->
+    <!-- 空袭妖精 -->
+    <call name="Airstrike Fairy" key="gk_airstrike_fairy.call" initiation_comment1="Airstrike Fairy" acknowledge_comment="Confirmed, UAV is online, situational awareness is complete" acknowledge_time="0" launch_comment="Execution of air strikes" notify_metagame="1">
+	
+        <round 
+        instances="0"
+        instance_class="projectile"
+        instance_key=""
+        launch_time="4.0"
+        spawn_time="6.0"/>
+		
+        <hud_icon filename="call_Firesupport_AirborneFairy.png" />
+        <capacity value="0" source="rank" source_value="0.0" />
+        <capacity value="100" source="rank" source_value="1.143" />
+        <inventory encumbrance="0.0" price="5000.0" />
+    </call>    
+	<!-- 勇士妖精 -->
+    <call name="Warrior Fairy" key="gk_warrior_fairy.call" initiation_comment1="Warrior Fairy" initiation_comment2="Apache online" acknowledge_comment="Longbow Apache inbound, scanning target" acknowledge_time="0" launch_comment="Assasin target confirmed" notify_metagame="1">
+
+        <round 
+        instances="0"
+        instance_class="projectile"
+        instance_key=""
+        launch_time="2.0"
+        spawn_time="2.0">
+        </round>
+
+        <round launch_time="2.0"
+        spawn_time="2.0">
+        </round>
+
+        <hud_icon filename="call_SnipeFairy.png" />
+        <capacity value="0" source="rank" source_value="0.0" />
+        <capacity value="100" source="rank" source_value="6.48" />
+        <inventory encumbrance="0.0" price="300.0" />
+    </call>
+	<!-- 狙击妖精 -->
     <call name="Snipe Fairy" key="gk_snipe_fairy.call" initiation_comment1="Snipe Fairy" initiation_comment2="Snipe Command" acknowledge_comment="Confirm, checking Snipe UAV status" acknowledge_time="0" launch_comment="UAV status confirmed" notify_metagame="1">
 
         <round 

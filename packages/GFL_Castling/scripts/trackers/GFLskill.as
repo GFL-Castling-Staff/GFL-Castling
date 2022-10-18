@@ -86,7 +86,7 @@ dictionary gameSkillIndex = {
         {"javelin_launch_for_sb_ai",10},
 
         // 标枪锁定兼射出弹头阶段
-        {"javelin_launch",11},
+        {"javelin_launch_for_player",11},
 
         // 标枪弹头改垂直爬升阶段
         {"javelin_uprise",12},
@@ -162,6 +162,7 @@ class GFLskill : Tracker {
 	protected array<string> GKcallList={
 		"gk_airstrike_fairy.call",
 		"gk_rampage_fairy_ac130.call",
+		"gk_warrior_fairy.call",
 		"gk_snipe_fairy.call",
 		"gk_yaoren_fairy.call",
 		"martina.call",
