@@ -406,8 +406,8 @@ class GFLairstrike : Tracker {
                         break;
                     }
                     case 10:{//勇士妖精 诱饵弹头
-                        CreateDirectProjectile(m_metagame,start_pos,end_pos,"m200_snipe.projectile",cid,fid,100);
-                        playSoundAtLocation(m_metagame,"m200_fire_snipe.wav",fid,end_pos,2.4);
+                        CreateDirectProjectile(m_metagame,start_pos,end_pos,"warrior_fairy_arrow.projectile",cid,fid,100);
+                        playSoundAtLocation(m_metagame,"Archer_fire_FromCOD12.wav",fid,end_pos,2.4);
                         Airstrike_strafe.removeAt(a);
                         break;                        
                     }                    

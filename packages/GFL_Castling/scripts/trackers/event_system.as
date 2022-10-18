@@ -486,7 +486,7 @@ array<Apache_Javelin_lister@> Apache_Javelin_list;
 
 void excuteWarriorFariyApache(GameMode@ metagame,GFL_event@ eventinfo){
     eventinfo.m_time=1.0;
-    Vector3 aimPos = eventinfo.m_pos.add(Vector3(10.0*cos(eventinfo.m_randseed),60,10.0*sin(eventinfo.m_randseed)));
+    Vector3 aimPos = eventinfo.m_pos.add(Vector3(10.0*cos(eventinfo.m_randseed),40,10.0*sin(eventinfo.m_randseed)));
 
     if(eventinfo.m_phase==1){
         
@@ -499,7 +499,7 @@ void excuteWarriorFariyApache(GameMode@ metagame,GFL_event@ eventinfo){
         Apache_Javelin_list.insertLast(Apache_Javelin_lister(eventinfo.m_characterId,eventinfo.m_factionid,apache_javelin_luckyvehicleid,eventinfo.m_pos));
 
     }
-    else if(eventinfo.m_phase==3){
+    else if(eventinfo.m_phase==4){
 
         int m_fnum = metagame.getFactionCount();
         int max_check = 6;  // 最多扫描6个人
@@ -554,7 +554,7 @@ void excuteWarriorFariyApache(GameMode@ metagame,GFL_event@ eventinfo){
             }        
         }
     }
-    else if(eventinfo.m_phase==5){
+    else if(eventinfo.m_phase==6){
         if(Apache_Javelin_list.length()>0){
             for (uint a=0;a<Apache_Javelin_list.length();a++){
                 if((Apache_Javelin_list[a].m_characterId==eventinfo.m_characterId)&&(Apache_Javelin_list[a].m_factionid==eventinfo.m_factionid)){//在序列中如果能找到
@@ -577,7 +577,7 @@ void excuteWarriorFariyApache(GameMode@ metagame,GFL_event@ eventinfo){
         }
     }
     eventinfo.m_phase++;
-    if(eventinfo.m_phase>=6){
+    if(eventinfo.m_phase>=7){
         eventinfo.m_enable=false;
     }
 }

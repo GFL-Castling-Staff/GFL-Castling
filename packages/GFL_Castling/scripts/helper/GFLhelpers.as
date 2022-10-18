@@ -323,7 +323,12 @@ array<string> unlockable_vehicles = {
 	"deco_pickup_yellow.vehicle",
 	"deco_pickup_blue.vehicle",
 	"deco_pickup_green.vehicle",
-	"deco_pickup_khaki.vehicle"
+	"deco_pickup_khaki.vehicle",
+
+	"dumpster.vehicle"
+	"cover1.vehicle"
+	"cover2.vehicle"
+	"shelter.vehicle"
 };
 
 array<string> vip_vehicles = {
@@ -363,7 +368,7 @@ int getNearByEnemyVehicle(Metagame@ metagame, uint ownerid, Vector3 judgePos, fl
 					if((vehicleInfo !is null)  //载具存在
 						&&(vehicleInfo.getIntAttribute("health")!=0)  //载具未被击毁
 						//&&(vehicleInfo.getIntAttribute("owner_id")!=ownerid)   //载具正在被我方阵营使用
-						&&(unlockable_vehicles.find(vehicleInfo.getStringAttribute("TagName"))==-1)){  //载具不是中立地图物件
+						&&(unlockable_vehicles.find(vehicleInfo.getStringAttribute("key"))==-1)){  //载具不是中立地图物件
 						_log("Get vehicle id successful.");
 						return vehicleid;
 					}
