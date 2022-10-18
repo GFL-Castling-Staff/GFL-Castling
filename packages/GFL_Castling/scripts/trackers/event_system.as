@@ -27,6 +27,9 @@ dictionary GFL_Event_Index = {
 
         {"ump45mod3_smoke",5},
 
+        // 勇士妖精——Apache
+        {"warrior_fairy_apache",6},
+
         // 下面这行是用来占位的，在这之上添加新的即可
         {"666",-1}
 };
@@ -63,6 +66,13 @@ class GFL_event_system : Tracker {
                             case 3:{excuteSniperM200(m_metagame,GFL_event_array[a]);break;}
                             case 4:{excuteYaoren(m_metagame,GFL_event_array[a]);break;}
                             case 5:{excuteUMP45MOD3event(m_metagame,GFL_event_array[a]);break;}
+                            case 6:{
+                                if(GFL_event_array[a].m_randseed==-1.0){
+                                    GFL_event_array[a].m_randseed= rand(0.0,3.14);
+                                }
+                                excuteWarriorFariyApache(m_metagame,GFL_event_array[a]);
+                                break;
+                            }
 
                             default:
                                 break;
@@ -140,7 +150,7 @@ class GFL_event{
 
 void excuteSniperFairy(GameMode@ metagame,GFL_event@ eventinfo){
     eventinfo.m_time=1.5;
-    int luckyGuyid = getNearbyRandomLuckyGuyId(metagame,eventinfo.m_factionid,eventinfo.m_pos,30.0f);
+    int luckyGuyid = getNearbyRandomLuckyGuyId(metagame,eventinfo.m_factionid,eventinfo.m_pos,40.0f);
     if(luckyGuyid!=-1){
         const XmlElement@ luckyGuy = getCharacterInfo(metagame, luckyGuyid);
         Vector3 luckyGuyPos = stringToVector3(luckyGuy.getStringAttribute("position"));
@@ -410,7 +420,7 @@ void excuteRampageFairyAC130(GameMode@ metagame,GFL_event@ eventinfo){
             float rand_angle = eventinfo.m_randseed + eventinfo.m_phase*3.14/10;
 
             Vector3 luckyGuyPos = stringToVector3(getCharacterInfo(metagame,luckyGuyid).getStringAttribute("position"));
-            Vector3 aimPos = eventinfo.m_pos.add(Vector3(45.0*cos(rand_angle),40,45.0*sin(rand_angle)));
+            Vector3 aimPos = eventinfo.m_pos.add(Vector3(45.0*cos(rand_angle),60,45.0*sin(rand_angle)));
             ac130_pre_pos = luckyGuyPos;
 
             //攻击由phase模式改为充能模式
@@ -466,6 +476,94 @@ void excuteRampageFairyAC130(GameMode@ metagame,GFL_event@ eventinfo){
     eventinfo.m_phase++;
     if(eventinfo.m_phase>=ac130_strike_num){
         playRandomSoundArray(metagame,AC130EndVoice,eventinfo.m_factionid,eventinfo.m_pos.toString(),3.5);
+        eventinfo.m_enable=false;
+    }
+}
+
+int apache_javelin_luckyvehicleid = -1;
+array<const XmlElement@> apache_affectedCharacter;
+
+void excuteWarriorFariyApache(GameMode@ metagame,GFL_event@ eventinfo){
+    eventinfo.m_time=1.0;
+    Vector3 aimPos = eventinfo.m_pos.add(Vector3(10.0*cos(eventinfo.m_randseed),60,10.0*sin(eventinfo.m_randseed)));
+
+    if(eventinfo.m_phase==1){
+        
+        insertCommonStrike(eventinfo.m_characterId,eventinfo.m_factionid,"apache_bait",aimPos,eventinfo.m_pos);
+
+        int m_fnum = metagame.getFactionCount();
+        int max_check = 6;  // 最多扫描6个人
+        int jud_check = 0;
+        int max_num = 3;    // 最多记录3个精英
+        int jud_num = 0;
+
+        while(apache_affectedCharacter.length()>0){
+            apache_affectedCharacter.removeLast();
+        }
+        
+        for(uint i=0;i<m_fnum;i++) 
+            if(i!=eventinfo.m_factionid) {
+
+            array<const XmlElement@> affectedCharacter2;
+            affectedCharacter2 = getCharactersNearPosition(metagame,eventinfo.m_pos,i,20.0f);
+
+            // 优先扫描精英
+            if (affectedCharacter2 !is null){
+                for(uint x=0;x<affectedCharacter2.length();x++){
+                    int cidd = affectedCharacter2[x].getIntAttribute("id");
+                    const XmlElement@ possibleElitecharacter = getCharacterInfo(metagame,cidd);
+                    string soldier_name = possibleElitecharacter.getStringAttribute("soldier_group_name");
+                    max_check++;
+                    if(eliteEnemyName.find(soldier_name)> -1){
+                        apache_affectedCharacter.insertLast(affectedCharacter2[x]);
+                        jud_num++;
+                        if((jud_num>=max_num) || (jud_check>=max_check))break;                                      
+                    }
+                    if((jud_num>=max_num) || (jud_check>=max_check))break; 
+                }
+            }
+            if((jud_num>=max_num) || (jud_check>=max_check))break;
+
+            // 如果精英数量少于3个，则继续选择其他敌人，满额为止
+            else if (affectedCharacter2 !is null){
+                for(uint x=0;x<affectedCharacter2.length();x++){
+                    apache_affectedCharacter.insertLast(affectedCharacter2[x]);
+                    jud_num++;  max_check++;
+                    if((jud_num>=max_num) || (jud_check>=max_check))break;                                      
+                }
+            }
+            if((jud_num>=max_num) || (jud_check>=max_check))break;
+        }        
+
+        apache_javelin_luckyvehicleid  = getNearByEnemyVehicle(metagame,eventinfo.m_factionid,eventinfo.m_pos,20);
+        if(apache_javelin_luckyvehicleid!=-1)playSoundAtLocation(metagame,"javelin_locked.wav",eventinfo.m_factionid,eventinfo.m_pos,1.0);//锁定载具成功
+        else	playSoundAtLocation(metagame,"javelin_lock_fail.wav",eventinfo.m_factionid,eventinfo.m_pos,1.0);//未锁定载具
+
+    }
+    else if(eventinfo.m_phase==3){
+        for (uint i0=1;i0<=3;i0++){
+            for (uint i1=0;i1<apache_affectedCharacter.length();i1++)	{
+                int luckyoneid = apache_affectedCharacter[i1].getIntAttribute("id");
+                const XmlElement@ luckyoneC = getCharacterInfo(metagame, luckyoneid);
+                if ((luckyoneC.getIntAttribute("id")!=-1)){
+                    string luckyonepos = luckyoneC.getStringAttribute("position");
+                    Vector3 luckyoneposV = stringToVector3(luckyonepos);
+                    insertCommonStrike(eventinfo.m_characterId,eventinfo.m_factionid,"apache_mg",aimPos,luckyoneposV);
+                }				
+            }        
+        }
+    }
+    else if(eventinfo.m_phase==5){
+        if(apache_javelin_luckyvehicleid!=-1){
+            const XmlElement@ target_info = getVehicleInfo(metagame, apache_javelin_luckyvehicleid);
+			Vector3 target_pos = stringToVector3(target_info.getStringAttribute("position"));
+            insertCommonStrike(eventinfo.m_characterId,eventinfo.m_factionid,"apache_javelin",aimPos,target_pos);            
+        }
+        else
+            insertCommonStrike(eventinfo.m_characterId,eventinfo.m_factionid,"apache_javelin",aimPos,eventinfo.m_pos);
+    }
+    eventinfo.m_phase++;
+    if(eventinfo.m_phase>=6){
         eventinfo.m_enable=false;
     }
 }

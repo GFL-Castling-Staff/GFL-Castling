@@ -10,6 +10,46 @@
 //Author: NetherCrow
 //Author: SAIWA
 
+// 敌方精英单位
+array<string> eliteEnemyName = {
+
+	// sf
+    "sf_hunter",
+    "sf_architect",
+    "sfw_Intruder",
+    "sfw_Dreamer",
+    "sfw_Alchemist",
+    "sfw_Gager",
+    "sfw_Excutioner-Wind_rose",
+    "sfw_Excutioner-Queen_of_the_Moon",
+    "sfw_M16A1",
+    "sfw_Agent",
+    "sfw_Destroyer",
+    "sfw_Weaver",
+    "sfw_Justice",
+    "sfw_Scarecrow",
+    "sf_manticore",
+
+	// paradeus
+    "alina",
+    "Thunder",
+    "teal",
+    "eagleyes",
+    "vanguard",
+    "wrath",
+    "Nimogen",
+    "Narciss",
+    "Adeline",
+    "Paradeus_doppelsoldner",
+    "Paradeus_roarer",
+
+	// kcco
+    "kcco_Hydra",
+    "kcco_teslatrooper",
+    "kcco_human_sniper",
+    "kcco_quartz_ranger"
+};
+
 dictionary gameSkillIndex = {
 
         // 空技能
@@ -790,7 +830,7 @@ class GFLskill : Tracker {
 								int RF_cId = affectedCharacter[i].getIntAttribute("id");
 								const XmlElement@ RFcharacter = getCharacterInfo(m_metagame, RF_cId);
 								if (RFcharacter !is null){
-									if(RFcharacter.getStringAttribute("soldier_group_name")=="316_liu_rf"){
+									if(RFcharacter.getStringAttribute("soldier_group_name")=="rf_316_liu"){
 										string start_pos = RFcharacter.getStringAttribute("position");
 										CreateDirectProjectile(m_metagame,stringToVector3(start_pos).add(Vector3(0,1,0)),stringToVector3(target_pos),"liu.projectile",characterId,fId,220.0);  
 									}

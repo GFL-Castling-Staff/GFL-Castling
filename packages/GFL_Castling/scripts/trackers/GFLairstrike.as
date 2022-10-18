@@ -6,6 +6,7 @@
 #include "query_helpers2.as"
 #include "GFLhelpers.as"
 #include "GFLtask.as"
+#include "GFLskill.as"
 #include "task_sequencer.as"
 //Author: SAIWA
 //编写API的原则：依赖倒置
@@ -39,7 +40,7 @@ dictionary airstrikeIndex = {
         {"a10_call_strafe",2},
 
         // 带火箭弹的a10
-        {"a10_rockcet_strafe",3},
+        {"a10_rocket_strafe",3},
 
         // M200狙击
         {"m200_snipe",4},
@@ -58,6 +59,18 @@ dictionary airstrikeIndex = {
 
         // 大口径机枪压制
         {"mg_strafe",9},
+
+        // 勇士妖精_apache_诱饵箭矢
+        {"apache_bait",10},
+
+        // 勇士妖精_apache_机枪压制
+        {"apache_mg",11},
+
+        // 勇士妖精_apache_标枪导弹
+        {"apache_javelin",12},
+
+        // 空袭妖精_TU160_航弹洗地
+        {"TU160_bomb_strafe",13},
 
         // 下面这行是用来占位的，在这之上添加新的即可
         {"666",-1}
@@ -392,6 +405,76 @@ class GFLairstrike : Tracker {
                         Airstrike_strafe.removeAt(a);
                         break;
                     }
+                    case 10:{//勇士妖精 诱饵弹头
+                        CreateDirectProjectile(m_metagame,start_pos,end_pos,"m200_snipe.projectile",cid,fid,100);
+                        playSoundAtLocation(m_metagame,"m200_fire_snipe.wav",fid,end_pos,2.4);
+                        Airstrike_strafe.removeAt(a);
+                        break;                        
+                    }                    
+                    case 11:{//勇士妖精 机枪扫射
+                        //最终弹头随机程度
+                        float strike_rand = 2;
+                                                
+                        //每单轮扫射12发
+                        for(int j=1;j<=12;j++)
+                        {
+                            float rand_angle = rand(-3.14,3.14);
+                            float rand_x1 = strike_rand*cos(rand_angle);
+                            float rand_y1 = strike_rand*sin(rand_angle);                            
+                            
+                            CreateDirectProjectile(m_metagame,start_pos,end_pos.add(Vector3(rand_x1,0,rand_y1)),"ASW_A10_strafe.projectile",cid,fid,180);           
+                        } 
+                        Airstrike_strafe.removeAt(a);
+                        break;                        
+                    }                    
+                    case 12:{//勇士妖精 标枪导弹
+                        CreateDirectProjectile(m_metagame,start_pos,end_pos,"javelin_rocket_2.projectile",cid,fid,200);	
+                        Airstrike_strafe.removeAt(a);
+                        break;                        
+                    }                    
+                    case 13:{//空袭妖精 单次 航弹覆盖
+                        //扫射位置偏移单位向量 与 扫射位置偏移单位距离
+                        Vector3 strike_vector = getAimUnitVector(1,start_pos,end_pos); 
+                        float strike_didis = 8;
+                        //与扫射方向相垂直的向量 与 扫射方向垂直方向偏移距离
+                        Vector3 v1 = getVerticalUnitVector(strike_vector);
+                        float strike_dy = 7;
+                        //扫射起点 从弹头终点指向弹头起点的位置 
+                        Vector3 pos_offset = Vector3(0,60,0);
+                        //扫射终点的起点与终点（就生成弹头的终点的起始位置与终止位置）
+                        Vector3 c_pos = start_pos.add(getMultiplicationVector(strike_vector,Vector3(-8,0,-8)));
+                        Vector3 s_pos = end_pos.add(getMultiplicationVector(strike_vector,Vector3(8,0,8)));
+                        //依据扫射位置偏移单位距离而设置的扫射次数
+                        int strike_time = int(getAimUnitDistance(1,c_pos,s_pos)/strike_didis);
+                        //弹头起始扫射位置与终止扫射位置
+                        Vector3 startPos = c_pos.add(pos_offset);
+                        Vector3 endPos = c_pos;
+
+                        array<string> Voice={
+                        "a10_fire_FromWARTHUNDER.wav",
+                        };   
+
+                        array<int> BombHorizontalOffsetList={0,-1,1,2,-2};
+
+                        for(int i=0;i<=strike_time;i++){
+                            //水平平移
+                            startPos = startPos.add(getMultiplicationVector(strike_vector,Vector3(strike_didis,0,strike_didis)));
+                            endPos = endPos.add(getMultiplicationVector(strike_vector,Vector3(strike_didis,0,strike_didis)));
+                            for(int j=0;j<5;j++){
+                                Vector3 fin_pos1 = startPos.add(getMultiplicationVector(v1,Vector3(strike_dy,0,strike_dy)));
+                                Vector3 fin_pos2 = endPos.add(getMultiplicationVector(v1,Vector3(strike_dy,0,strike_dy)));
+                                //随机落点
+                                float strike_rand = 1.5;
+                                float rand_angle = rand(-3.14,3.14);
+                                float rand_x1 = strike_rand*cos(rand_angle);
+                                float rand_y1 = strike_rand*sin(rand_angle);     
+                                //每单轮扫射生成1次对点扫射
+                                CreateDirectProjectile(m_metagame,fin_pos1,fin_pos2.add(Vector3(rand_x1,0,rand_y1)),"ASW_IonCannon_strafe.projectile",cid,fid,100);           
+                            }
+                        }                               
+                        Airstrike_strafe.removeAt(a);
+                        break;
+                    }                    
                     default:
                         break;
                 }
@@ -487,4 +570,8 @@ void insertA10Airstrike(GameMode@ metagame,int characterId,int factionid,Vector3
 
 void insertCommonStrike(int characterId,int factionid,int straferkey,Vector3 c_pos,Vector3 s_pos){
     Airstrike_strafe.insertLast(Airstrike_strafer(characterId,factionid,straferkey,c_pos,s_pos));
+}
+
+void insertCommonStrike(int characterId,int factionid,string straferkey,Vector3 c_pos,Vector3 s_pos){
+    Airstrike_strafe.insertLast(Airstrike_strafer(characterId,factionid,int(airstrikeIndex[straferkey]),c_pos,s_pos));
 }
