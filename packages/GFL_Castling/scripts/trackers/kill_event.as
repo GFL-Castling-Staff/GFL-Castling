@@ -317,7 +317,7 @@ class kill_event : Tracker {
             }
 
             if(killway=="stab"){
-                KillerWeaponKey = getDeadPlayerEquipmentKey(m_metagame,characterId,0);
+                KillerWeaponKey = getPlayerWeaponFromList(playerId,0);
             }
 
             updateHealByKillEvent(characterId,factionId,int(healOnKillWeaponList[KillerWeaponKey]),15);
