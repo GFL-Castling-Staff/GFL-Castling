@@ -45,7 +45,7 @@ class GFL_playerlist{
 class GFL_playerlist_system : Tracker {
 	protected GameMode@ m_metagame;
     protected float m_time = 1.0; 
-    protected float refresh_time = 3.0; // 刷新时间
+    protected float refresh_time = 5.0; // 刷新时间
 
 	// --------------------------------------------
 	GFL_playerlist_system(GameMode@ metagame) {
@@ -74,14 +74,17 @@ class GFL_playerlist_system : Tracker {
                     if(targetCharacter !is null){
                         string pos = targetCharacter.getStringAttribute("position");
                         array<const XmlElement@>@ equipment = targetCharacter.getElementsByTagName("item");
-                        string w1 = equipment[0].getStringAttribute("key");
-                        string w2 = equipment[1].getStringAttribute("key");
-                        string w3 = equipment[2].getStringAttribute("key");
-                        string w4 = equipment[3].getStringAttribute("key");
-                        string w5 = equipment[4].getStringAttribute("key");
-                        GFL_playerlist@ new_player = GFL_playerlist(cid, pid, w1, w2, w3, w4, w5, 0,pos); 
-
-                        GFL_playerlist_array.insertLast(new_player); 
+                        if(equipment !is null && equipment.length() >=5){
+                        	{
+	                            string w1 = equipment[0].getStringAttribute("key");
+	                            string w2 = equipment[1].getStringAttribute("key");
+	                            string w3 = equipment[2].getStringAttribute("key");
+	                            string w4 = equipment[3].getStringAttribute("key");
+	                            string w5 = equipment[4].getStringAttribute("key");
+	                            GFL_playerlist@ new_player = GFL_playerlist(cid, pid, w1, w2, w3, w4, w5, 0,pos); 
+	                            GFL_playerlist_array.insertLast(new_player);
+	                        }
+                        }
                     }
                 }
             }
