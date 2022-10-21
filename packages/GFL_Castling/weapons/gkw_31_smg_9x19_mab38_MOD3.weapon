@@ -2,7 +2,7 @@
 <weapon key="gkw_mab38mod3.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 <tag name="smg" />
     <specification 
-		accuracy_factor="0.98" 
+		accuracy_factor="0.85" 
 		barrel_offset="0.4" 
 		class="0"
     slot="0"
@@ -13,11 +13,13 @@
 		retrigger_time="0.1" 
     sight_range_modifier="1.5" 
 		suppressed="0" 
-		sustained_fire_diminish_rate="1.8" 
-		sustained_fire_grow_step="0.25"
+    sustained_fire_grow_step="0.15" 
+    sustained_fire_diminish_rate="1.6"
+    stance_accuracy_rate="3.0"
+    spread_range="0.15"
     burst_shots="1" 
     stab_enabled="1"/>
-    <commonness value="0.01" in_stock="0" can_respawn_with="1" />
+    <commonness value="0.0001" in_stock="0" can_respawn_with="1" />
     <inventory encumbrance="2.0" buy_price="120.0" sell_price="120.0" />
     <capacity value="1" source="rank" source_value="0.0" />
   	<animation state_key="hold_casual" />
@@ -51,19 +53,19 @@
 
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet.projectile">
-      <result class="hit" kill_probability="1.95" kill_probability_offset_on_successful_hit="2.2" kill_decay_start_time="0.05" kill_decay_end_time="0.45" />
+      <result class="hit" kill_probability="1.8" kill_probability_offset_on_successful_hit="3.75" kill_decay_start_time="0.2" kill_decay_end_time="0.43" />
     </projectile>
     
-    <stance state_key="running" accuracy="0.85" />
-    <stance state_key="walking" accuracy="0.9" />
-    <stance state_key="crouch_moving" accuracy="0.9" />
-    <stance state_key="prone_moving" accuracy="0.9" />
-    <stance state_key="standing" accuracy="0.9" />
-	  <stance state_key="crouching" accuracy="1.0" />
-    <stance state_key="prone" accuracy="1" />
-    <stance state_key="over_wall" accuracy="1" />
+    <stance state_key="running" accuracy="0.55" />
+    <stance state_key="walking" accuracy="0.75" />
+    <stance state_key="crouch_moving" accuracy="0.85" />
+    <stance state_key="prone_moving" accuracy="0.85" />
+    <stance state_key="standing" accuracy="0.8" />
+	  <stance state_key="crouching" accuracy="0.9" />
+    <stance state_key="prone" accuracy="0.8" />
+	  <stance state_key="over_wall" accuracy="0.9" />
     <modifier class="hit_success_probability" value="-0.2" />
-    <modifier class="speed" value="0.65" />
+    <modifier class="speed" value="0.3" />
     <target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0" />
 	  <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0" />
     <target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0" />
