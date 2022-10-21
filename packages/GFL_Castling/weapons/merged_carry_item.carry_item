@@ -7581,7 +7581,7 @@
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
 	<modifier class="speed" value="0.0"/>
-	<modifier class="hit_success_probability" value="-0.75"/>
+	<modifier class="hit_success_probability" value="-0.8"/>
 	<modifier class="detectability" value="0.8"/>
 </carry_item>
 
@@ -7599,7 +7599,7 @@
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
 	<modifier class="speed" value="0.0"/>
-	<modifier class="hit_success_probability" value="-0.75"/>
+	<modifier class="hit_success_probability" value="-0.8"/>
 	<modifier class="detectability" value="0.8"/>
 </carry_item>
 
@@ -7617,7 +7617,7 @@
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
 	<modifier class="speed" value="0.0"/>
-	<modifier class="hit_success_probability" value="-0.6"/>
+	<modifier class="hit_success_probability" value="-0.8"/>
 	<modifier class="detectability" value="0.8"/>
 </carry_item>
 
@@ -7635,7 +7635,7 @@
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
 	<modifier class="speed" value="0.0"/>
-	<modifier class="hit_success_probability" value="-0.6"/>
+	<modifier class="hit_success_probability" value="-0.8"/>
 	<modifier class="detectability" value="0.8"/>
 </carry_item>
 
@@ -7653,7 +7653,7 @@
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
 	<modifier class="speed" value="0.0"/>
-	<modifier class="hit_success_probability" value="-0.6"/>
+	<modifier class="hit_success_probability" value="-0.8"/>
 	<modifier class="detectability" value="0.8"/>
 </carry_item>
 
@@ -7671,7 +7671,7 @@
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
 	<modifier class="speed" value="0.0"/>
-	<modifier class="hit_success_probability" value="-0.6"/>
+	<modifier class="hit_success_probability" value="-0.8"/>
 	<modifier class="detectability" value="0.8"/>
 </carry_item>
 
@@ -7681,15 +7681,15 @@
 	<commonness value="1" in_stock="1" can_respawn_with="1"/>
 	<inventory encumbrance="3" price="1"/>
 	<model/>
-	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="stun"/>
 	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
 	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
-	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="stun"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
 	<modifier class="speed" value="0.0"/>
-	<modifier class="hit_success_probability" value="-0.6"/>
+	<modifier class="hit_success_probability" value="-0.8"/>
 	<modifier class="detectability" value="0.8"/>
 </carry_item>
 
@@ -7707,278 +7707,8 @@
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="death"/>
 	<modifier class="speed" value="0.0"/>
-	<modifier class="hit_success_probability" value="-0.6"/>
+	<modifier class="hit_success_probability" value="-0.8"/>
 	<modifier class="detectability" value="0.8"/>
-</carry_item>
-
-<carry_item key="kcco_bp.carry_item" time_to_live_out_in_the_open="15" name="6B43 Ratnik 2064" transform_on_consume="kcco_bp_1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-	<hud_icon filename="testing.png"/>
-	<capacity value="1" source="rank" source_value="0"/>
-	<commonness value="1" in_stock="1" can_respawn_with="1"/>
-	<inventory encumbrance="100" price="50"/>
-	<model mesh_filename="vestexo.xml"/>
-	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
-	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
-	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
-	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
-	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="speed" value="0.0"/>
-	<modifier class="detectability" value="0.3"/>
-	<modifier class="hit_success_probability" value="-0.8"/>
-</carry_item>
-
-<carry_item key="kcco_bp_1" time_to_live_out_in_the_open="15" name="6B43 Ratnik 2064" transform_on_consume="kcco_bp_2" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-	<hud_icon filename="testing.png"/>
-	<capacity value="1" source="rank" source_value="0"/>
-	<commonness value="1" in_stock="1" can_respawn_with="1"/>
-	<inventory encumbrance="100" price="50"/>
-	<model mesh_filename="vestexo.xml"/>
-	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
-	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
-	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
-	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
-	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="speed" value="0.0"/>
-	<modifier class="detectability" value="0.3"/>
-	<modifier class="hit_success_probability" value="-0.8"/>
-</carry_item>
-
-<carry_item key="kcco_bp_2" time_to_live_out_in_the_open="15" name="6B43 Ratnik 2064" transform_on_consume="kcco_bp_3" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-	<hud_icon filename="testing.png"/>
-	<capacity value="1" source="rank" source_value="0"/>
-	<commonness value="1" in_stock="1" can_respawn_with="1"/>
-	<inventory encumbrance="100" price="50"/>
-	<model mesh_filename="vestexo.xml"/>
-	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
-	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
-	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
-	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
-	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="speed" value="0.0"/>
-	<modifier class="detectability" value="0.3"/>
-	<modifier class="hit_success_probability" value="-0.8"/>
-</carry_item>
-
-<carry_item key="kcco_bp_3" time_to_live_out_in_the_open="15" name="6B43 Ratnik 2064" transform_on_consume="kcco_bp_4" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-	<hud_icon filename="testing.png"/>
-	<capacity value="1" source="rank" source_value="0"/>
-	<commonness value="1" in_stock="1" can_respawn_with="1"/>
-	<inventory encumbrance="100" price="50"/>
-	<model mesh_filename="vestexo.xml"/>
-	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
-	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
-	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
-	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
-	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="speed" value="0.0"/>
-	<modifier class="detectability" value="0.3"/>
-	<modifier class="hit_success_probability" value="-0.8"/>
-</carry_item>
-
-<carry_item key="kcco_bp_4" time_to_live_out_in_the_open="15" name="6B43 Ratnik 2064" transform_on_consume="kcco_bp_5" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-	<hud_icon filename="testing.png"/>
-	<capacity value="1" source="rank" source_value="0"/>
-	<commonness value="1" in_stock="1" can_respawn_with="1"/>
-	<inventory encumbrance="100" price="50"/>
-	<model mesh_filename="vestexo.xml"/>
-	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
-	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
-	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
-	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
-	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="speed" value="0.0"/>
-	<modifier class="detectability" value="0.3"/>
-	<modifier class="hit_success_probability" value="-0.8"/>
-</carry_item>
-
-<carry_item key="kcco_bp_5" time_to_live_out_in_the_open="15" name="6B43 Ratnik 2064" transform_on_consume="kcco_bp_6" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-	<hud_icon filename="testing.png"/>
-	<capacity value="1" source="rank" source_value="0"/>
-	<commonness value="1" in_stock="1" can_respawn_with="1"/>
-	<inventory encumbrance="100" price="50"/>
-	<model mesh_filename="vestexo.xml"/>
-	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
-	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
-	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
-	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
-	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="speed" value="0.0"/>
-	<modifier class="detectability" value="0.3"/>
-	<modifier class="hit_success_probability" value="-0.8"/>
-</carry_item>
-
-<carry_item key="kcco_bp_6" time_to_live_out_in_the_open="15" name="6B43 Ratnik 2064" transform_on_consume="kcco_bp_7" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-	<hud_icon filename="testing.png"/>
-	<capacity value="1" source="rank" source_value="0"/>
-	<commonness value="1" in_stock="1" can_respawn_with="1"/>
-	<inventory encumbrance="100" price="50"/>
-	<model mesh_filename="vestexo.xml"/>
-	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
-	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
-	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
-	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
-	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="speed" value="0.0"/>
-	<modifier class="detectability" value="0.3"/>
-	<modifier class="hit_success_probability" value="-0.8"/>
-</carry_item>
-
-<carry_item key="kcco_bp_7" time_to_live_out_in_the_open="15" name="6B43 Ratnik 2064" transform_on_consume="kcco_bp_8" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-	<hud_icon filename="testing.png"/>
-	<capacity value="1" source="rank" source_value="0"/>
-	<commonness value="1" in_stock="1" can_respawn_with="1"/>
-	<inventory encumbrance="100" price="50"/>
-	<model mesh_filename="vestexo.xml"/>
-	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
-	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
-	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
-	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
-	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="speed" value="0.0"/>
-	<modifier class="detectability" value="0.3"/>
-	<modifier class="hit_success_probability" value="-0.8"/>
-</carry_item>
-
-<carry_item key="kcco_bp_8" time_to_live_out_in_the_open="15" name="6B43 Ratnik 2064" transform_on_consume="kcco_bp_9" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-	<hud_icon filename="testing.png"/>
-	<capacity value="1" source="rank" source_value="0"/>
-	<commonness value="1" in_stock="1" can_respawn_with="1"/>
-	<inventory encumbrance="100" price="50"/>
-	<model mesh_filename="vestexo.xml"/>
-	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
-	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
-	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
-	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
-	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="speed" value="0.0"/>
-	<modifier class="detectability" value="0.3"/>
-	<modifier class="hit_success_probability" value="-0.8"/>
-</carry_item>
-
-<carry_item key="kcco_bp_9" time_to_live_out_in_the_open="15" name="6B43 Ratnik 2064" transform_on_consume="kcco_bp_10" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-	<hud_icon filename="testing.png"/>
-	<capacity value="1" source="rank" source_value="0"/>
-	<commonness value="1" in_stock="1" can_respawn_with="1"/>
-	<inventory encumbrance="100" price="50"/>
-	<model mesh_filename="vestexo.xml"/>
-	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
-	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
-	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
-	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
-	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="speed" value="0.0"/>
-	<modifier class="detectability" value="0.3"/>
-	<modifier class="hit_success_probability" value="-0.8"/>
-</carry_item>
-
-<carry_item key="kcco_bp_10" time_to_live_out_in_the_open="15" name="6B43 Ratnik 2064" transform_on_consume="kcco_bp_11" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-	<hud_icon filename="testing.png"/>
-	<capacity value="1" source="rank" source_value="0"/>
-	<commonness value="1" in_stock="1" can_respawn_with="1"/>
-	<inventory encumbrance="100" price="50"/>
-	<model mesh_filename="vestexo.xml"/>
-	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
-	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
-	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
-	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
-	<modifier class="melee_hit_result" input_character_state="death" output_character_state="stun"/>
-	<modifier class="speed" value="0.0"/>
-	<modifier class="detectability" value="0.3"/>
-	<modifier class="hit_success_probability" value="-0.8"/>
-</carry_item>
-
-<carry_item key="kcco_bp_11" time_to_live_out_in_the_open="15" name="6B43 Ratnik 2064" transform_on_consume="kcco_bp_12" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-	<hud_icon filename="testing.png"/>
-	<capacity value="1" source="rank" source_value="0"/>
-	<commonness value="1" in_stock="1" can_respawn_with="1"/>
-	<inventory encumbrance="100" price="50"/>
-	<model mesh_filename="vestexo.xml"/>
-	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
-	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
-	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
-	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
-	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="speed" value="0.0"/>
-	<modifier class="detectability" value="0.3"/>
-	<modifier class="hit_success_probability" value="-0.8"/>
-</carry_item>
-
-<carry_item key="kcco_bp_12" time_to_live_out_in_the_open="15" name="6B43 Ratnik 2064" transform_on_consume="kcco_bp_13" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-	<hud_icon filename="testing.png"/>
-	<capacity value="1" source="rank" source_value="0"/>
-	<commonness value="1" in_stock="1" can_respawn_with="1"/>
-	<inventory encumbrance="100" price="50"/>
-	<model mesh_filename="vestexo.xml"/>
-	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
-	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
-	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
-	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
-	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="speed" value="0.0"/>
-	<modifier class="detectability" value="0.3"/>
-	<modifier class="hit_success_probability" value="-0.8"/>
-</carry_item>
-
-<carry_item key="kcco_bp_13" time_to_live_out_in_the_open="15" name="6B43 Ratnik 2064" transform_on_consume="kcco_bp_14" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-	<hud_icon filename="testing.png"/>
-	<capacity value="1" source="rank" source_value="0"/>
-	<commonness value="1" in_stock="1" can_respawn_with="1"/>
-	<inventory encumbrance="100" price="50"/>
-	<model mesh_filename="vestexo.xml"/>
-	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
-	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
-	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
-	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
-	<modifier class="melee_hit_result" input_character_state="death" output_character_state="wound"/>
-	<modifier class="speed" value="0.0"/>
-	<modifier class="detectability" value="0.3"/>
-	<modifier class="hit_success_probability" value="-0.8"/>
-</carry_item>
-
-<carry_item key="kcco_bp_14" time_to_live_out_in_the_open="15" name="6B43 Ratnik 2064" transform_on_consume="kcco_bp_15" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-	<hud_icon filename="testing.png"/>
-	<capacity value="1" source="rank" source_value="0"/>
-	<commonness value="1" in_stock="1" can_respawn_with="1"/>
-	<inventory encumbrance="100" price="50"/>
-	<model mesh_filename="vestexo.xml"/>
-	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="death"/>
-	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
-	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
-	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="death"/>
-	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
-	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
-	<modifier class="melee_hit_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
-	<modifier class="speed" value="0.0"/>
-	<modifier class="detectability" value="0.3"/>
-	<modifier class="hit_success_probability" value="-0.8"/>
 </carry_item>
 
 <carry_item key="sf_ar.carry_item" time_to_live_out_in_the_open="15" name="Standard SF Assualt Exo" transform_on_consume="sf_ar_1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
@@ -10027,173 +9757,6 @@
 	<modifier class="melee_hit_result" input_character_state="unwound" output_character_state="unwound" consumes_item="0"/>
 	<modifier class="speed" value="0"/>
 	<modifier class="hit_success_probability" value="-0.6"/>
-	<modifier class="detectability" value="0"/>
-</carry_item>
-
-<carry_item key="sf_swap.carry_item" time_to_live_out_in_the_open="15" name="SWAP SF Assualt Exo" transform_on_consume="sf_swap_1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-	<hud_icon filename="sfd_ar.png"/>
-	<capacity value="1" source="rank" source_value="0"/>
-	<commonness value="1" in_stock="1" can_respawn_with="1"/>
-	<inventory encumbrance="3" price="1"/>
-	<model/>
-	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
-	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
-	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
-	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
-	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="speed" value="0.0"/>
-	<modifier class="hit_success_probability" value="-0.75"/>
-	<modifier class="detectability" value="0"/>
-</carry_item>
-
-<carry_item key="sf_swap_1" time_to_live_out_in_the_open="15" name="SWAP SF Assualt Exo" transform_on_consume="sf_swap_2" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-	<hud_icon filename="sfd_ar.png"/>
-	<capacity value="1" source="rank" source_value="0"/>
-	<commonness value="1" in_stock="1" can_respawn_with="1"/>
-	<inventory encumbrance="3" price="1"/>
-	<model/>
-	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
-	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
-	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
-	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
-	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="speed" value="0.0"/>
-	<modifier class="hit_success_probability" value="-0.75"/>
-	<modifier class="detectability" value="0"/>
-</carry_item>
-
-<carry_item key="sf_swap_2" time_to_live_out_in_the_open="15" name="SWAP SF Assualt Exo" transform_on_consume="sf_swap_3" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-	<hud_icon filename="sfd_ar.png"/>
-	<capacity value="1" source="rank" source_value="0"/>
-	<commonness value="1" in_stock="1" can_respawn_with="1"/>
-	<inventory encumbrance="3" price="1"/>
-	<model/>
-	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
-	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
-	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
-	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
-	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="speed" value="0.0"/>
-	<modifier class="hit_success_probability" value="-0.75"/>
-	<modifier class="detectability" value="0"/>
-</carry_item>
-
-<carry_item key="sf_swap_3" time_to_live_out_in_the_open="15" name="SWAP SF Assualt Exo" transform_on_consume="sf_swap_4" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-	<hud_icon filename="sfd_ar.png"/>
-	<capacity value="1" source="rank" source_value="0"/>
-	<commonness value="1" in_stock="1" can_respawn_with="1"/>
-	<inventory encumbrance="3" price="1"/>
-	<model/>
-	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
-	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
-	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
-	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
-	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="speed" value="0.0"/>
-	<modifier class="hit_success_probability" value="-0.75"/>
-	<modifier class="detectability" value="0"/>
-</carry_item>
-
-<carry_item key="sf_swap_4" time_to_live_out_in_the_open="15" name="SWAP SF Assualt Exo" transform_on_consume="sf_swap_5" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-	<hud_icon filename="sfd_ar.png"/>
-	<capacity value="1" source="rank" source_value="0"/>
-	<commonness value="1" in_stock="1" can_respawn_with="1"/>
-	<inventory encumbrance="3" price="1"/>
-	<model/>
-	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
-	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
-	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
-	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
-	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="speed" value="0.0"/>
-	<modifier class="hit_success_probability" value="-0.75"/>
-	<modifier class="detectability" value="0"/>
-</carry_item>
-
-<carry_item key="sf_swap_5" time_to_live_out_in_the_open="15" name="SWAP SF Assualt Exo" transform_on_consume="sf_swap_6" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-	<hud_icon filename="sfd_ar.png"/>
-	<capacity value="1" source="rank" source_value="0"/>
-	<commonness value="1" in_stock="1" can_respawn_with="1"/>
-	<inventory encumbrance="3" price="1"/>
-	<model/>
-	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
-	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
-	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
-	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
-	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="speed" value="0.0"/>
-	<modifier class="hit_success_probability" value="-0.75"/>
-	<modifier class="detectability" value="0"/>
-</carry_item>
-
-<carry_item key="sf_swap_6" time_to_live_out_in_the_open="15" name="SWAP SF Assualt Exo" transform_on_consume="sf_swap_7" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-	<hud_icon filename="sfd_ar.png"/>
-	<capacity value="1" source="rank" source_value="0"/>
-	<commonness value="1" in_stock="1" can_respawn_with="1"/>
-	<inventory encumbrance="3" price="1"/>
-	<model/>
-	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
-	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
-	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
-	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
-	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="speed" value="0.0"/>
-	<modifier class="hit_success_probability" value="-0.75"/>
-	<modifier class="detectability" value="0"/>
-</carry_item>
-
-<carry_item key="sf_swap_7" time_to_live_out_in_the_open="15" name="SWAP SF Assualt Exo" transform_on_consume="sf_swap_8" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-	<hud_icon filename="sfd_ar.png"/>
-	<capacity value="1" source="rank" source_value="0"/>
-	<commonness value="1" in_stock="1" can_respawn_with="1"/>
-	<inventory encumbrance="3" price="1"/>
-	<model/>
-	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="wound"/>
-	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
-	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
-	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="wound"/>
-	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
-	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
-	<modifier class="melee_hit_result" input_character_state="death" output_character_state="wound"/>
-	<modifier class="speed" value="0.0"/>
-	<modifier class="hit_success_probability" value="-0.75"/>
-	<modifier class="detectability" value="0"/>
-</carry_item>
-
-<carry_item key="sf_swap_8" time_to_live_out_in_the_open="15" name="SWAP SF Assualt Exo" transform_on_consume="sf_swap_9" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-	<hud_icon filename="sfd_ar.png"/>
-	<capacity value="1" source="rank" source_value="0"/>
-	<commonness value="1" in_stock="1" can_respawn_with="1"/>
-	<inventory encumbrance="3" price="1"/>
-	<model/>
-	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
-	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
-	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
-	<modifier class="projectile_blast_result" input_character_state="unwound" output_character_state="unwound" consumes_item="0"/>
-	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
-	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
-	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
-	<modifier class="projectile_hit_result" input_character_state="unwound" output_character_state="unwound" consumes_item="0"/>
-	<modifier class="melee_hit_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
-	<modifier class="melee_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
-	<modifier class="melee_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
-	<modifier class="melee_hit_result" input_character_state="unwound" output_character_state="unwound" consumes_item="0"/>
-	<modifier class="speed" value="0.0"/>
-	<modifier class="hit_success_probability" value="-0.75"/>
 	<modifier class="detectability" value="0"/>
 </carry_item>
 
@@ -18056,6 +17619,276 @@
 	<modifier class="speed" value="0.0"/>
 	<modifier class="hit_success_probability" value="-1.3"/>
 	<modifier class="detectability" value="1.0"/>
+</carry_item>
+
+<carry_item key="vest_15hp_elite.carry_item" time_to_live_out_in_the_open="15" name="Elite Vest" transform_on_consume="vest_15hp_elite_1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="1" in_stock="1" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="50"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="speed" value="0.0"/>
+	<modifier class="detectability" value="0.3"/>
+	<modifier class="hit_success_probability" value="-0.8"/>
+</carry_item>
+
+<carry_item key="vest_15hp_elite_1" time_to_live_out_in_the_open="15" name="Elite Vest" transform_on_consume="vest_15hp_elite_2" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="1" in_stock="1" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="50"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="speed" value="0.0"/>
+	<modifier class="detectability" value="0.3"/>
+	<modifier class="hit_success_probability" value="-0.8"/>
+</carry_item>
+
+<carry_item key="vest_15hp_elite_2" time_to_live_out_in_the_open="15" name="Elite Vest" transform_on_consume="vest_15hp_elite_3" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="1" in_stock="1" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="50"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="speed" value="0.0"/>
+	<modifier class="detectability" value="0.3"/>
+	<modifier class="hit_success_probability" value="-0.8"/>
+</carry_item>
+
+<carry_item key="vest_15hp_elite_3" time_to_live_out_in_the_open="15" name="Elite Vest" transform_on_consume="vest_15hp_elite_4" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="1" in_stock="1" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="50"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="speed" value="0.0"/>
+	<modifier class="detectability" value="0.3"/>
+	<modifier class="hit_success_probability" value="-0.8"/>
+</carry_item>
+
+<carry_item key="vest_15hp_elite_4" time_to_live_out_in_the_open="15" name="Elite Vest" transform_on_consume="vest_15hp_elite_5" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="1" in_stock="1" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="50"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="speed" value="0.0"/>
+	<modifier class="detectability" value="0.3"/>
+	<modifier class="hit_success_probability" value="-0.8"/>
+</carry_item>
+
+<carry_item key="vest_15hp_elite_5" time_to_live_out_in_the_open="15" name="Elite Vest" transform_on_consume="vest_15hp_elite_6" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="1" in_stock="1" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="50"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="speed" value="0.0"/>
+	<modifier class="detectability" value="0.3"/>
+	<modifier class="hit_success_probability" value="-0.8"/>
+</carry_item>
+
+<carry_item key="vest_15hp_elite_6" time_to_live_out_in_the_open="15" name="Elite Vest" transform_on_consume="vest_15hp_elite_7" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="1" in_stock="1" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="50"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="speed" value="0.0"/>
+	<modifier class="detectability" value="0.3"/>
+	<modifier class="hit_success_probability" value="-0.8"/>
+</carry_item>
+
+<carry_item key="vest_15hp_elite_7" time_to_live_out_in_the_open="15" name="Elite Vest" transform_on_consume="vest_15hp_elite_8" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="1" in_stock="1" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="50"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="speed" value="0.0"/>
+	<modifier class="detectability" value="0.3"/>
+	<modifier class="hit_success_probability" value="-0.8"/>
+</carry_item>
+
+<carry_item key="vest_15hp_elite_8" time_to_live_out_in_the_open="15" name="Elite Vest" transform_on_consume="vest_15hp_elite_9" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="1" in_stock="1" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="50"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="speed" value="0.0"/>
+	<modifier class="detectability" value="0.3"/>
+	<modifier class="hit_success_probability" value="-0.8"/>
+</carry_item>
+
+<carry_item key="vest_15hp_elite_9" time_to_live_out_in_the_open="15" name="Elite Vest" transform_on_consume="vest_15hp_elite_10" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="1" in_stock="1" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="50"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="speed" value="0.0"/>
+	<modifier class="detectability" value="0.3"/>
+	<modifier class="hit_success_probability" value="-0.8"/>
+</carry_item>
+
+<carry_item key="vest_15hp_elite_10" time_to_live_out_in_the_open="15" name="Elite Vest" transform_on_consume="vest_15hp_elite_11" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="1" in_stock="1" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="50"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="stun"/>
+	<modifier class="speed" value="0.0"/>
+	<modifier class="detectability" value="0.3"/>
+	<modifier class="hit_success_probability" value="-0.8"/>
+</carry_item>
+
+<carry_item key="vest_15hp_elite_11" time_to_live_out_in_the_open="15" name="Elite Vest" transform_on_consume="vest_15hp_elite_12" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="1" in_stock="1" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="50"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="speed" value="0.0"/>
+	<modifier class="detectability" value="0.3"/>
+	<modifier class="hit_success_probability" value="-0.8"/>
+</carry_item>
+
+<carry_item key="vest_15hp_elite_12" time_to_live_out_in_the_open="15" name="Elite Vest" transform_on_consume="vest_15hp_elite_13" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="1" in_stock="1" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="50"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="speed" value="0.0"/>
+	<modifier class="detectability" value="0.3"/>
+	<modifier class="hit_success_probability" value="-0.8"/>
+</carry_item>
+
+<carry_item key="vest_15hp_elite_13" time_to_live_out_in_the_open="15" name="Elite Vest" transform_on_consume="vest_15hp_elite_14" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="1" in_stock="1" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="50"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="wound"/>
+	<modifier class="speed" value="0.0"/>
+	<modifier class="detectability" value="0.3"/>
+	<modifier class="hit_success_probability" value="-0.8"/>
+</carry_item>
+
+<carry_item key="vest_15hp_elite_14" time_to_live_out_in_the_open="15" name="Elite Vest" transform_on_consume="vest_15hp_elite_15" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="1" in_stock="1" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="50"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="death"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="death"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
+	<modifier class="speed" value="0.0"/>
+	<modifier class="detectability" value="0.3"/>
+	<modifier class="hit_success_probability" value="-0.8"/>
 </carry_item>
 
 </carry_items>
