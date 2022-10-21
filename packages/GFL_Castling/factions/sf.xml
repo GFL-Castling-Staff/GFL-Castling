@@ -460,7 +460,7 @@
 		<ai filename="elite.ai" />
 		<resources clear_weapons="1" clear_calls="1">
 			<weapon key="sfw_vespid_swap.weapon" enabled="1"/>
-			<carry_item key="sf_swap.carry_item" enabled="1" />
+			<carry_item key="vest_15hp_elite.carry_item" enabled="1" />
 			<projectile key="sf_ap_mine.projectile" enabled="1.0" />
 			<weapon key="cover_deploy.weapon" enabled="1"/>
 		</resources>
@@ -479,7 +479,7 @@
 		<ai filename="elite.ai" />
 		<resources clear_weapons="1" clear_calls="1">
 			<weapon key="sfw_ripper_swap.weapon" enabled="1"/>
-			<carry_item key="sf_swap_2" enabled="1" />
+			<carry_item key="vest_15hp_elite_2" enabled="1" />
 		</resources>
 	</soldier>
 	<!-- guard -->
@@ -503,7 +503,7 @@
 		<ai filename="sniper.ai" />
 		<resources clear_weapons="1" clear_calls="1">
 			<weapon key="sfw_jaeger_swap.weapon" enabled="1"/>
-			<carry_item key="sf_swap.carry_item" enabled="1" />
+			<carry_item key="vest_15hp_elite.carry_item" enabled="1" />
 		</resources>
 	</soldier>
 	<!-- striker -->
@@ -521,7 +521,7 @@
 		<model filename="sfd_striker_swap_from_dusk.xml" />
 		<resources clear_weapons="1" clear_calls="1">
 			<weapon key="sfw_striker_swap.weapon" enabled="1"/>
-			<carry_item key="sf_swap.carry_item" enabled="1" />
+			<carry_item key="vest_15hp_elite.carry_item" enabled="1" />
 			<projectile key="sf_ap_mine.projectile" enabled="1.0" />
 		</resources>
 	</soldier>

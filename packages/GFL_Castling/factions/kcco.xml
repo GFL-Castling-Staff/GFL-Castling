@@ -480,7 +480,7 @@
 		<models file="kcco_human_commander.models" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_carry_items="1" clear_grenades="1">
 			<weapon key="kcco_ar_2.weapon" enabled="1" />
-			<carry_item key="kcco_bp.carry_item" enabled="1" />
+			<carry_item key="vest_15hp_elite.carry_item" enabled="1" />
 			<projectile key="kcco_ap_grenade.projectile" enabled="1.0" />
 		</resources>
 		<attribute_config class="xp">
@@ -495,7 +495,7 @@
 		<resources clear_weapons="1" clear_vehicles="1" clear_carry_items="1" clear_grenades="1">
 			<weapon key="kcco_fe2o3_svd.weapon" enabled="1" />
 			<weapon key="kcco_tracer_dart_accurate.weapon" enabled="1" /> 
-			<carry_item key="kcco_bp.carry_item" enabled="1" />
+			<carry_item key="vest_15hp_elite.carry_item" enabled="1" />
 			<projectile key="kcco_tracer_dart_r.projectile" enabled="1.0" />
 			<projectile key="kcco_tracer_dart_a.projectile" enabled="1.0" />		
 		</resources>
@@ -518,7 +518,7 @@
 		<ai filename="kcco_bot_mg.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_calls="1" clear_carry_items="1">
 			<weapon key="kcco_gatling.weapon" enabled="1" />
-			<carry_item key="kcco_bp.carry_item" enabled="1" />
+			<carry_item key="vest_15hp_elite.carry_item" enabled="1" />
 		</resources>
 	</soldier>
 	<!-- 喷火兵 -->
@@ -527,7 +527,7 @@
 		<ai filename="eod.ai" />
 		<resources clear_weapons="1" clear_grenades="1" clear_calls="1" clear_carry_items="1">
 			<weapon key="kcco_flamethrower.weapon" enabled="1" />
-			<carry_item key="kcco_bp.carry_item" enabled="1" />
+			<carry_item key="vest_15hp_elite.carry_item" enabled="1" />
 		</resources>
 		<item_class_existence_config>
 			<!-- wearables -->
