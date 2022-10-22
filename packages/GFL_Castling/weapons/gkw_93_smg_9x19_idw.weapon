@@ -1,73 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapon key="gkw_idw.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-<tag name="smg" />
-    <specification 
+	<tag name="smg" />
+	<specification 
 		retrigger_time="0.133" 
-		accuracy_factor="1.0" 
-		sustained_fire_grow_step="0.2" 
-		sustained_fire_diminish_rate="1.7" 
+		accuracy_factor="0.9" 
+		sustained_fire_grow_step="0.24" 
+		sustained_fire_diminish_rate="1.25" 
+		stance_accuracy_rate="2.5"
 		magazine_size="32" 
 		carry_in_two_hands="0"
 		suppressed="1" 
 		name="IDW" 
 		class="0" 
         slot="0"
+		spread_range="0.2"
 		projectile_speed="110" 
         burst_shots="1"
 		barrel_offset="0.4" 
 	    stab_enabled="1"/>
-    <commonness value="0.2" in_stock="1" can_respawn_with="1" />
+	<commonness value="0.2" in_stock="1" can_respawn_with="1" />
 	<inventory encumbrance="2.0" buy_price="0.0" sell_price="-1.0"/>
 	<capacity value="1" source="rank" source_value="0.0" />
-
-    <animation state_key="recoil" animation_key="recoil, pistol 2" />
+	<animation state_key="recoil" animation_key="recoil, pistol 2" />
 	<animation state_key="recoil" stance_key="prone" animation_key="recoil, smg1, prone" />
-	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil, overwall pistol" />	
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil, overwall pistol" />
 	<animation state_key="hold"					animation_key="still, pistol 2" />
-  	<animation state_key="hold_casual"			animation_key="hold_casual, pistol 2" />
+	<animation state_key="hold_casual"			animation_key="hold_casual, pistol 2" />
 	<animation state_key="hold_on_wall"			animation_key="hold, overwall pistol" />
-  	<animation state_key="still_against_wall"	animation_key="hold_casual, pistol 4" />
+	<animation state_key="still_against_wall"	animation_key="hold_casual, pistol 4" />
 	<animation state_key="running"				animation_key="running, pistol 2" />
 	<animation state_key="walking"				animation_key="walking, pistol 2" />
-    <animation state_key="walking_backwards" 	animation_key="walking backwards, pistol" />
+	<animation state_key="walking_backwards" 	animation_key="walking backwards, pistol" />
 	<animation state_key="crouching"			animation_key="crouch, pistol 2" />
 	<animation state_key="crouch_moving"		animation_key="crouching forwards, single hand carry" />
 	<animation state_key="crouch_moving_backwards"	animation_key="crouching backwards, pistol 2" />
-    <animation state_key="prone_still" 			animation_key="prone_still, pistol" />
-    <animation state_key="changing_weapon_in" 	animation_key="change weapon in, single hand carry" />
-    <animation state_key="stabbing" 			animation_key="pistol whip 2" />
-    <animation state_key="reload"	animation_key="reloading, A OHG 0.75" />
-    <animation state_key="reload"	animation_key="reloading2, A OHG 0.75" />
-
-    <sound key="fire" fileref="idwsd_fire_FromEFT.wav" pitch_variety="0" volume="1.1" />
-    <sound key="magazine_out" fileref="idw_mgz_out_FromCOD16.wav" volume="0.35" />
-    <sound key="magazine_in" fileref="idw_mgz_in_FromCOD16.wav" volume="0.35" />
-    <sound key="cycle" fileref="idw_cycle_FromCOD13.wav" volume="0.4" />
-    <sound class="impact" fileref="rifle_drop.wav" />
-    <model filename="gkw_smg_idw.xml" />
-    <hud_icon filename="gkw_idw.png" />
-
-    <projectile file="bullet.projectile" can_be_detected_by_footmen="0">
-        <result class="hit" kill_probability="1.65" kill_probability_offset_on_successful_hit="1.5" kill_decay_start_time="0.05" kill_decay_end_time="1.3" />
-    </projectile>
-    <effect class="muzzle" ref="ejection_9mm" />
-
-    <stance state_key="running" accuracy="0.75" />
-	<stance state_key="walking" accuracy="0.75" />
-	<stance state_key="crouch_moving" accuracy="0.75" />
-	<stance state_key="standing" accuracy="0.85" />
-	<stance state_key="crouching" accuracy="0.95" />
-	<stance state_key="prone" accuracy="0.95" />
-	<stance state_key="prone_moving" accuracy="0.75" />
-	<stance state_key="over_wall" accuracy="1" />
-	<modifier class="speed" value="0.5" />
-    <modifier class="hit_success_probability" value="-0.2" />
-	<modifier class="detectability" value="-0.15"/>
-    <target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0" />
+	<animation state_key="prone_still" 			animation_key="prone_still, pistol" />
+	<animation state_key="changing_weapon_in" 	animation_key="change weapon in, single hand carry" />
+	<animation state_key="stabbing" 			animation_key="pistol whip 2" />
+	<animation state_key="reload"	animation_key="reloading, A OHG 0.75" />
+	<animation state_key="reload"	animation_key="reloading2, A OHG 0.75" />
+	<sound key="fire" fileref="idwsd_fire_FromEFT.wav" pitch_variety="0" volume="1.1" />
+	<sound key="magazine_out" fileref="idw_mgz_out_FromCOD16.wav" volume="0.35" />
+	<sound key="magazine_in" fileref="idw_mgz_in_FromCOD16.wav" volume="0.35" />
+	<sound key="cycle" fileref="idw_cycle_FromCOD13.wav" volume="0.4" />
+	<sound class="impact" fileref="rifle_drop.wav" />
+	<model filename="gkw_smg_idw.xml" />
+	<hud_icon filename="gkw_idw.png" />
+	<projectile file="bullet.projectile" can_be_detected_by_footmen="0">
+		<result class="hit" kill_probability="1.6" kill_probability_offset_on_successful_hit="3" kill_decay_start_time="0.32" kill_decay_end_time="0.55" />
+	</projectile>
+	<effect class="muzzle" ref="ejection_9mm" />
+	<stance state_key="running" accuracy="0.3" />
+	<stance state_key="walking" accuracy="0.5" />
+	<stance state_key="standing" accuracy="0.7" />
+	<stance state_key="crouching" accuracy="0.85" />
+	<stance state_key="crouch_moving" accuracy="0.5" />
+	<stance state_key="prone" accuracy="0.8" />
+	<stance state_key="prone_moving" accuracy="0.5" />
+	<stance state_key="over_wall" accuracy="0.85" />
+	<modifier class="speed" value="0.2" />
+	<modifier class="hit_success_probability" value="-0.2" />
+	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0" />
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0" />
-    <target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0" />
-    <target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0" />
-    <target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0" />
+	<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0" />
+	<target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0" />
+	<target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0" />
 	<target_factors tag="commander" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0" />
 </weapon>
 <!-- IDW was here -->

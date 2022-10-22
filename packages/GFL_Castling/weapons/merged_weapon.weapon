@@ -2,7 +2,7 @@
 <weapons>
 <weapon key="gkw_idw.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="smg"/>
-	<specification retrigger_time="0.133" accuracy_factor="1.0" sustained_fire_grow_step="0.2" sustained_fire_diminish_rate="1.7" magazine_size="32" carry_in_two_hands="0" suppressed="1" name="IDW" class="0" slot="0" projectile_speed="110" burst_shots="1" barrel_offset="0.4" stab_enabled="1"/>
+	<specification retrigger_time="0.133" accuracy_factor="0.9" sustained_fire_grow_step="0.24" sustained_fire_diminish_rate="1.25" stance_accuracy_rate="2.5" magazine_size="32" carry_in_two_hands="0" suppressed="1" name="IDW" class="0" slot="0" spread_range="0.2" projectile_speed="110" burst_shots="1" barrel_offset="0.4" stab_enabled="1"/>
 	<commonness value="0.2" in_stock="1" can_respawn_with="1"/>
 	<inventory encumbrance="2.0" buy_price="0.0" sell_price="-1.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -32,20 +32,19 @@
 	<model filename="gkw_smg_idw.xml"/>
 	<hud_icon filename="gkw_idw.png"/>
 	<projectile file="bullet.projectile" can_be_detected_by_footmen="0">
-	<result class="hit" kill_probability="1.65" kill_probability_offset_on_successful_hit="1.5" kill_decay_start_time="0.05" kill_decay_end_time="1.3"/>
+	<result class="hit" kill_probability="1.6" kill_probability_offset_on_successful_hit="3" kill_decay_start_time="0.32" kill_decay_end_time="0.55"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_9mm"/>
-	<stance state_key="running" accuracy="0.75"/>
-	<stance state_key="walking" accuracy="0.75"/>
-	<stance state_key="crouch_moving" accuracy="0.75"/>
-	<stance state_key="standing" accuracy="0.85"/>
-	<stance state_key="crouching" accuracy="0.95"/>
-	<stance state_key="prone" accuracy="0.95"/>
-	<stance state_key="prone_moving" accuracy="0.75"/>
-	<stance state_key="over_wall" accuracy="1"/>
-	<modifier class="speed" value="0.5"/>
+	<stance state_key="running" accuracy="0.3"/>
+	<stance state_key="walking" accuracy="0.5"/>
+	<stance state_key="standing" accuracy="0.7"/>
+	<stance state_key="crouching" accuracy="0.85"/>
+	<stance state_key="crouch_moving" accuracy="0.5"/>
+	<stance state_key="prone" accuracy="0.8"/>
+	<stance state_key="prone_moving" accuracy="0.5"/>
+	<stance state_key="over_wall" accuracy="0.85"/>
+	<modifier class="speed" value="0.2"/>
 	<modifier class="hit_success_probability" value="-0.2"/>
-	<modifier class="detectability" value="-0.15"/>
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
 	<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
@@ -12834,7 +12833,7 @@
 </weapon>
 
 <weapon key="gkw_mg5.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.55" retrigger_time="0.09375" accuracy_factor="0.7" sustained_fire_grow_step="0.15" sustained_fire_diminish_rate="1.0" stance_accuracy_rate="1.0" magazine_size="200" suppressed="0" name="MG5" class="0" projectile_speed="220" spread_range="0.15" sight_range_modifier="1.5" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" slot="0"/>
+	<specification barrel_offset="0.55" retrigger_time="0.09375" accuracy_factor="0.65" sustained_fire_grow_step="0.25" sustained_fire_diminish_rate="1.0" stance_accuracy_rate="1.0" magazine_size="200" suppressed="0" name="MG5" class="0" projectile_speed="160" spread_range="0.15" sight_range_modifier="1.5" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" slot="0"/>
 	<animation key="reload" animation_key="reloading, Machine gun 2.8"/>
 	<inventory buy_price="80.0" sell_price="80.0"/>
 	<next_in_chain key="gkw_mg5_skill.weapon" share_ammo="1"/>
@@ -12859,11 +12858,11 @@
 	<result class="hit" kill_probability="2.3" kill_probability_offset_on_successful_hit="1.7" kill_decay_start_time="1.0" kill_decay_end_time="1.1"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_76251"/>
-	<stance state_key="running" accuracy="0.2"/>
-	<stance state_key="walking" accuracy="0.3"/>
-	<stance state_key="crouch_moving" accuracy="0.35"/>
-	<stance state_key="prone_moving" accuracy="0.45"/>
-	<stance state_key="standing" accuracy="0.5"/>
+	<stance state_key="running" accuracy="0.1"/>
+	<stance state_key="walking" accuracy="0.2"/>
+	<stance state_key="crouch_moving" accuracy="0.45"/>
+	<stance state_key="prone_moving" accuracy="0.7"/>
+	<stance state_key="standing" accuracy="0.3"/>
 	<stance state_key="crouching" accuracy="0.75"/>
 	<stance state_key="prone" accuracy="1.2"/>
 	<stance state_key="over_wall" accuracy="1.3"/>
@@ -12895,7 +12894,7 @@
 </weapon>
 
 <weapon key="gkw_mg5_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.55" retrigger_time="0.075" accuracy_factor="0.9" sustained_fire_grow_step="0.25" sustained_fire_diminish_rate="1.0" stance_accuracy_rate="1.0" spread_range="0.15" magazine_size="200" suppressed="0" name="MG5-[Terminating Barrage]" class="0" projectile_speed="195" sight_range_modifier="1.75" can_shoot_standing="0" can_shoot_crouching="0" can_shoot_prone="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
+	<specification barrel_offset="0.55" retrigger_time="0.075" accuracy_factor="0.8" sustained_fire_grow_step="0.25" sustained_fire_diminish_rate="1.0" stance_accuracy_rate="1.0" spread_range="0.15" magazine_size="200" suppressed="0" name="MG5-[Terminating Barrage]" class="0" projectile_speed="150" sight_range_modifier="1.75" can_shoot_standing="0" can_shoot_crouching="0" can_shoot_prone="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
 	<animation key="reload" animation_key="reloading, Machine gun 2.8"/>
 	<inventory buy_price="80.0" sell_price="80.0"/>
 	<commonness value="0" in_stock="0"/>
@@ -12914,11 +12913,11 @@
 	<result class="blast" damage="2.0" radius="2.5" decal="1" push="0.3" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_76251"/>
-	<stance state_key="running" accuracy="0.2"/>
+	<stance state_key="running" accuracy="0.1"/>
 	<stance state_key="walking" accuracy="0.3"/>
-	<stance state_key="crouch_moving" accuracy="0.35"/>
-	<stance state_key="prone_moving" accuracy="0.45"/>
-	<stance state_key="standing" accuracy="0.5"/>
+	<stance state_key="crouch_moving" accuracy="0.45"/>
+	<stance state_key="prone_moving" accuracy="0.7"/>
+	<stance state_key="standing" accuracy="0.3"/>
 	<stance state_key="crouching" accuracy="0.75"/>
 	<stance state_key="prone" accuracy="1.0"/>
 	<stance state_key="over_wall" accuracy="1.0"/>
@@ -14657,7 +14656,7 @@
 
 <weapon key="gkw_mab38.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="smg"/>
-	<specification accuracy_factor="0.85" barrel_offset="0.4" class="0" slot="0" magazine_size="30" name="Beretta Model 38" projectile_speed="125" retrigger_time="0.1" carry_in_two_hands="1" suppressed="0" sustained_fire_grow_step="0.2" sustained_fire_diminish_rate="1.6" stance_accuracy_rate="2.5" spread_range="0.15" burst_shots="1" stab_enabled="1"/>
+	<specification accuracy_factor="0.85" barrel_offset="0.4" class="0" slot="0" magazine_size="30" name="Beretta Model 38" projectile_speed="125" retrigger_time="0.1" carry_in_two_hands="1" suppressed="0" sustained_fire_grow_step="0.2" sustained_fire_diminish_rate="1.4" stance_accuracy_rate="2.5" spread_range="0.23" burst_shots="1" stab_enabled="1"/>
 	<commonness value="0.2" in_stock="1" can_respawn_with="1"/>
 	<inventory encumbrance="2.0" buy_price="8.0" sell_price="8.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -14691,13 +14690,13 @@
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="1.6" kill_probability_offset_on_successful_hit="3.0" kill_decay_start_time="0.25" kill_decay_end_time="0.5"/>
 	</projectile>
-	<stance state_key="running" accuracy="0.45"/>
+	<stance state_key="running" accuracy="0.3"/>
 	<stance state_key="walking" accuracy="0.6"/>
-	<stance state_key="crouch_moving" accuracy="0.85"/>
-	<stance state_key="prone_moving" accuracy="0.85"/>
 	<stance state_key="standing" accuracy="0.7"/>
 	<stance state_key="crouching" accuracy="0.85"/>
+	<stance state_key="crouch_moving" accuracy="0.5"/>
 	<stance state_key="prone" accuracy="0.8"/>
+	<stance state_key="prone_moving" accuracy="0.5"/>
 	<stance state_key="over_wall" accuracy="0.85"/>
 	<modifier class="hit_success_probability" value="-0.2"/>
 	<modifier class="speed" value="0.2"/>
@@ -14711,7 +14710,7 @@
 
 <weapon key="gkw_mab38mod3.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="smg"/>
-	<specification accuracy_factor="0.85" barrel_offset="0.4" class="0" slot="0" magazine_size="30" carry_in_two_hands="1" name="Beretta Model 38(MOD3)" projectile_speed="145" retrigger_time="0.1" sight_range_modifier="1.5" suppressed="0" sustained_fire_grow_step="0.15" sustained_fire_diminish_rate="1.6" stance_accuracy_rate="3.0" spread_range="0.15" burst_shots="1" stab_enabled="1"/>
+	<specification accuracy_factor="0.85" barrel_offset="0.4" class="0" slot="0" magazine_size="30" carry_in_two_hands="1" name="Beretta Model 38(MOD3)" projectile_speed="145" retrigger_time="0.1" sight_range_modifier="1.5" suppressed="0" sustained_fire_grow_step="0.2" sustained_fire_diminish_rate="1.4" stance_accuracy_rate="3.0" spread_range="0.2" burst_shots="1" stab_enabled="1"/>
 	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="2.0" buy_price="120.0" sell_price="120.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -14745,10 +14744,10 @@
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="1.8" kill_probability_offset_on_successful_hit="3.75" kill_decay_start_time="0.2" kill_decay_end_time="0.43"/>
 	</projectile>
-	<stance state_key="running" accuracy="0.55"/>
+	<stance state_key="running" accuracy="0.45"/>
 	<stance state_key="walking" accuracy="0.75"/>
-	<stance state_key="crouch_moving" accuracy="0.85"/>
-	<stance state_key="prone_moving" accuracy="0.85"/>
+	<stance state_key="crouch_moving" accuracy="0.5"/>
+	<stance state_key="prone_moving" accuracy="0.5"/>
 	<stance state_key="standing" accuracy="0.8"/>
 	<stance state_key="crouching" accuracy="0.9"/>
 	<stance state_key="prone" accuracy="0.8"/>
@@ -19811,9 +19810,9 @@
 
 <weapon key="gkw_idwmod3.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="smg"/>
-	<specification retrigger_time="0.042" accuracy_factor="1.0" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="4.1" magazine_size="32" suppressed="0" carry_in_two_hands="0" name="IDW(MOD3)" class="0" slot="0" projectile_speed="125" burst_shots="1" barrel_offset="0.1" stab_enabled="1"/>
-	<commonness value="0.02" in_stock="0" can_respawn_with="1"/>
-	<inventory encumbrance="2.0" buy_price="50.0" sell_price="50.0"/>
+	<specification retrigger_time="0.1" accuracy_factor="0.9" sustained_fire_grow_step="0.18" sustained_fire_diminish_rate="1.4" stance_accuracy_rate="2.5" magazine_size="32" carry_in_two_hands="0" suppressed="1" name="IDW(MOD3)" class="0" slot="0" spread_range="0.2" projectile_speed="125" sight_range_modifier="1.3" burst_shots="1" barrel_offset="0.4" stab_enabled="1"/>
+	<commonness value="0.001" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="5.0" buy_price="100.0" sell_price="100.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<animation state_key="recoil" animation_key="recoil, pistol 2"/>
 	<animation state_key="recoil" stance_key="prone" animation_key="recoil, smg1, prone"/>
@@ -19833,7 +19832,7 @@
 	<animation state_key="stabbing" animation_key="pistol whip 2"/>
 	<animation state_key="reload" animation_key="reloading, A OHG 0.75"/>
 	<animation state_key="reload" animation_key="reloading2, A OHG 0.75"/>
-	<sound key="fire" fileref="idw_fire_FromBORDERLAND3.wav" pitch_variety="0" volume="1"/>
+	<sound key="fire" fileref="idwsd_fire_FromEFT.wav" pitch_variety="0" volume="1.3"/>
 	<sound key="magazine_out" fileref="idw_mgz_out_FromCOD16.wav" volume="0.35"/>
 	<sound key="magazine_in" fileref="idw_mgz_in_FromCOD16.wav" volume="0.35"/>
 	<sound key="cycle" fileref="idw_cycle_FromCOD13.wav" volume="0.4"/>
@@ -19841,19 +19840,18 @@
 	<model filename="gkw_smg_idwmod3.xml"/>
 	<hud_icon filename="gkw_idwmod3.png"/>
 	<projectile file="bullet.projectile" can_be_detected_by_footmen="0">
-	<result class="hit" kill_probability="1.75" kill_probability_offset_on_successful_hit="1.5" kill_decay_start_time="0.05" kill_decay_end_time="1.3"/>
+	<result class="hit" kill_probability="1.65" kill_probability_offset_on_successful_hit="3.25" kill_decay_start_time="0.28" kill_decay_end_time="0.55"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_9mm"/>
-	<stance state_key="running" accuracy="0.75"/>
-	<stance state_key="walking" accuracy="0.75"/>
-	<stance state_key="crouch_moving" accuracy="0.85"/>
-	<stance state_key="standing" accuracy="0.95"/>
-	<stance state_key="crouching" accuracy="0.95"/>
-	<stance state_key="prone" accuracy="0.95"/>
-	<stance state_key="prone_moving" accuracy="0.85"/>
-	<stance state_key="over_wall" accuracy="1"/>
-	<modifier class="speed" value="+0.4"/>
-	<modifier class="detectability" value="-0.15"/>
+	<stance state_key="running" accuracy="0.45"/>
+	<stance state_key="walking" accuracy="0.6"/>
+	<stance state_key="standing" accuracy="0.75"/>
+	<stance state_key="crouching" accuracy="0.85"/>
+	<stance state_key="crouch_moving" accuracy="0.5"/>
+	<stance state_key="prone" accuracy="0.8"/>
+	<stance state_key="prone_moving" accuracy="0.5"/>
+	<stance state_key="over_wall" accuracy="0.85"/>
+	<modifier class="speed" value="0.3"/>
 	<modifier class="hit_success_probability" value="-0.2"/>
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
@@ -23289,7 +23287,7 @@
 
 <weapon key="gkw_idw_2108.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="smg"/>
-	<specification retrigger_time="0.133" accuracy_factor="1.0" sustained_fire_grow_step="0.2" sustained_fire_diminish_rate="1.7" magazine_size="32" carry_in_two_hands="0" suppressed="1" name="IDW-[Cat in a box]" class="0" slot="0" projectile_speed="110" burst_shots="1" barrel_offset="0.4" stab_enabled="1"/>
+	<specification retrigger_time="0.133" accuracy_factor="0.9" sustained_fire_grow_step="0.24" sustained_fire_diminish_rate="1.25" stance_accuracy_rate="2.5" magazine_size="32" carry_in_two_hands="0" suppressed="1" name="IDW-[Cat in a box]" class="0" slot="0" spread_range="0.2" projectile_speed="110" burst_shots="1" barrel_offset="0.4" stab_enabled="1"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="2.0" buy_price="0.0" sell_price="-1.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -23311,7 +23309,7 @@
 	<animation state_key="stabbing" animation_key="pistol whip 2"/>
 	<animation state_key="reload" animation_key="reloading, A OHG 0.75"/>
 	<animation state_key="reload" animation_key="reloading2, A OHG 0.75"/>
-	<sound key="fire" fileref="idw_fire_FromBORDERLAND3.wav" pitch_variety="0" volume="1"/>
+	<sound key="fire" fileref="idwsd_fire_FromEFT.wav" pitch_variety="0" volume="1.1"/>
 	<sound key="magazine_out" fileref="idw_mgz_out_FromCOD16.wav" volume="0.35"/>
 	<sound key="magazine_in" fileref="idw_mgz_in_FromCOD16.wav" volume="0.35"/>
 	<sound key="cycle" fileref="idw_cycle_FromCOD13.wav" volume="0.4"/>
@@ -23319,19 +23317,18 @@
 	<model filename="gkw_smg_idw_2108.xml"/>
 	<hud_icon filename="gkw_idw_2108.png"/>
 	<projectile file="bullet.projectile" can_be_detected_by_footmen="0">
-	<result class="hit" kill_probability="1.65" kill_probability_offset_on_successful_hit="1.5" kill_decay_start_time="0.05" kill_decay_end_time="1.3"/>
+	<result class="hit" kill_probability="1.6" kill_probability_offset_on_successful_hit="3" kill_decay_start_time="0.32" kill_decay_end_time="0.55"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_9mm"/>
-	<stance state_key="running" accuracy="0.75"/>
-	<stance state_key="walking" accuracy="0.75"/>
-	<stance state_key="crouch_moving" accuracy="0.75"/>
-	<stance state_key="standing" accuracy="0.85"/>
-	<stance state_key="crouching" accuracy="0.95"/>
-	<stance state_key="prone" accuracy="0.95"/>
-	<stance state_key="prone_moving" accuracy="0.75"/>
-	<stance state_key="over_wall" accuracy="1"/>
-	<modifier class="speed" value="0.5"/>
-	<modifier class="detectability" value="-0.15"/>
+	<stance state_key="running" accuracy="0.3"/>
+	<stance state_key="walking" accuracy="0.5"/>
+	<stance state_key="standing" accuracy="0.7"/>
+	<stance state_key="crouching" accuracy="0.85"/>
+	<stance state_key="crouch_moving" accuracy="0.5"/>
+	<stance state_key="prone" accuracy="0.8"/>
+	<stance state_key="prone_moving" accuracy="0.5"/>
+	<stance state_key="over_wall" accuracy="0.85"/>
+	<modifier class="speed" value="0.2"/>
 	<modifier class="hit_success_probability" value="-0.2"/>
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
@@ -23343,7 +23340,7 @@
 
 <weapon key="gkw_idw_3205.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="smg"/>
-	<specification retrigger_time="0.133" accuracy_factor="1.0" sustained_fire_grow_step="0.2" sustained_fire_diminish_rate="1.7" magazine_size="32" carry_in_two_hands="0" suppressed="1" name="IDW-[Cloak and cat]" class="0" slot="0" projectile_speed="110" burst_shots="1" barrel_offset="0.4" stab_enabled="1"/>
+	<specification retrigger_time="0.133" accuracy_factor="0.9" sustained_fire_grow_step="0.24" sustained_fire_diminish_rate="1.25" stance_accuracy_rate="2.5" magazine_size="32" carry_in_two_hands="0" suppressed="1" name="IDW-[Cloak and cat]" class="0" slot="0" spread_range="0.2" projectile_speed="110" burst_shots="1" barrel_offset="0.4" stab_enabled="1"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="2.0" buy_price="0.0" sell_price="-1.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -23363,30 +23360,28 @@
 	<animation state_key="prone_still" animation_key="prone_still, pistol"/>
 	<animation state_key="changing_weapon_in" animation_key="change weapon in, single hand carry"/>
 	<animation state_key="stabbing" animation_key="pistol whip 2"/>
-	<animation state_key="reload" animation_key="reloading, mp5sd"/>
-	<animation key="reload" stance_key="prone" animation_key="reloading, ar1, prone"/>
-	<sound key="fire" fileref="idw_fire_FromBORDERLAND3.wav" pitch_variety="0" volume="1"/>
+	<animation state_key="reload" animation_key="reloading, A OHG 0.75"/>
+	<animation state_key="reload" animation_key="reloading2, A OHG 0.75"/>
+	<sound key="fire" fileref="idwsd_fire_FromEFT.wav" pitch_variety="0" volume="1.1"/>
 	<sound key="magazine_out" fileref="idw_mgz_out_FromCOD16.wav" volume="0.35"/>
 	<sound key="magazine_in" fileref="idw_mgz_in_FromCOD16.wav" volume="0.35"/>
 	<sound key="cycle" fileref="idw_cycle_FromCOD13.wav" volume="0.4"/>
+	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_smg_idw_3205.xml"/>
 	<hud_icon filename="gkw_idw_3205.png"/>
-	<commonness value="0" in_stock="0" can_respawn_with="1"/>
-	<inventory buy_price="30.0" sell_price="1.0"/>
 	<projectile file="bullet.projectile" can_be_detected_by_footmen="0">
 	<result class="hit" kill_probability="1.65" kill_probability_offset_on_successful_hit="1.5" kill_decay_start_time="0.05" kill_decay_end_time="1.3"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_9mm"/>
-	<stance state_key="running" accuracy="0.75"/>
-	<stance state_key="walking" accuracy="0.75"/>
-	<stance state_key="crouch_moving" accuracy="0.75"/>
-	<stance state_key="standing" accuracy="0.85"/>
-	<stance state_key="crouching" accuracy="0.95"/>
-	<stance state_key="prone" accuracy="0.95"/>
-	<stance state_key="prone_moving" accuracy="0.75"/>
-	<stance state_key="over_wall" accuracy="1"/>
-	<modifier class="speed" value="0.5"/>
-	<modifier class="detectability" value="-0.15"/>
+	<stance state_key="running" accuracy="0.3"/>
+	<stance state_key="walking" accuracy="0.5"/>
+	<stance state_key="standing" accuracy="0.7"/>
+	<stance state_key="crouching" accuracy="0.85"/>
+	<stance state_key="crouch_moving" accuracy="0.5"/>
+	<stance state_key="prone" accuracy="0.8"/>
+	<stance state_key="prone_moving" accuracy="0.5"/>
+	<stance state_key="over_wall" accuracy="0.85"/>
+	<modifier class="speed" value="0.2"/>
 	<modifier class="hit_success_probability" value="-0.2"/>
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
@@ -23398,7 +23393,7 @@
 
 <weapon key="gkw_idw_4908.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="smg"/>
-	<specification retrigger_time="0.133" accuracy_factor="1.0" sustained_fire_grow_step="0.2" sustained_fire_diminish_rate="1.7" magazine_size="32" carry_in_two_hands="0" suppressed="1" name="IDW-[Tumbler Cat]" class="0" slot="0" projectile_speed="110" burst_shots="1" barrel_offset="0.4" stab_enabled="1"/>
+	<specification retrigger_time="0.133" accuracy_factor="0.9" sustained_fire_grow_step="0.24" sustained_fire_diminish_rate="1.25" stance_accuracy_rate="2.5" magazine_size="32" carry_in_two_hands="0" suppressed="1" name="IDW-[Tumbler Cat]" class="0" slot="0" spread_range="0.2" projectile_speed="110" burst_shots="1" barrel_offset="0.4" stab_enabled="1"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="2.0" buy_price="0.0" sell_price="-1.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -23420,7 +23415,7 @@
 	<animation state_key="stabbing" animation_key="pistol whip 2"/>
 	<animation state_key="reload" animation_key="reloading, A OHG 0.75"/>
 	<animation state_key="reload" animation_key="reloading2, A OHG 0.75"/>
-	<sound key="fire" fileref="idw_fire_FromBORDERLAND3.wav" pitch_variety="0" volume="1"/>
+	<sound key="fire" fileref="idwsd_fire_FromEFT.wav" pitch_variety="0" volume="1.1"/>
 	<sound key="magazine_out" fileref="idw_mgz_out_FromCOD16.wav" volume="0.35"/>
 	<sound key="magazine_in" fileref="idw_mgz_in_FromCOD16.wav" volume="0.35"/>
 	<sound key="cycle" fileref="idw_cycle_FromCOD13.wav" volume="0.4"/>
@@ -23428,19 +23423,18 @@
 	<model filename="gkw_smg_idw_4908.xml"/>
 	<hud_icon filename="gkw_idw_4908.png"/>
 	<projectile file="bullet.projectile" can_be_detected_by_footmen="0">
-	<result class="hit" kill_probability="1.65" kill_probability_offset_on_successful_hit="1.5" kill_decay_start_time="0.05" kill_decay_end_time="1.3"/>
+	<result class="hit" kill_probability="1.6" kill_probability_offset_on_successful_hit="3" kill_decay_start_time="0.32" kill_decay_end_time="0.55"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_9mm"/>
-	<stance state_key="running" accuracy="0.75"/>
-	<stance state_key="walking" accuracy="0.75"/>
-	<stance state_key="crouch_moving" accuracy="0.75"/>
-	<stance state_key="standing" accuracy="0.85"/>
-	<stance state_key="crouching" accuracy="0.95"/>
-	<stance state_key="prone" accuracy="0.95"/>
-	<stance state_key="prone_moving" accuracy="0.75"/>
-	<stance state_key="over_wall" accuracy="1"/>
-	<modifier class="speed" value="0.5"/>
-	<modifier class="detectability" value="-0.15"/>
+	<stance state_key="running" accuracy="0.3"/>
+	<stance state_key="walking" accuracy="0.5"/>
+	<stance state_key="standing" accuracy="0.7"/>
+	<stance state_key="crouching" accuracy="0.85"/>
+	<stance state_key="crouch_moving" accuracy="0.5"/>
+	<stance state_key="prone" accuracy="0.8"/>
+	<stance state_key="prone_moving" accuracy="0.5"/>
+	<stance state_key="over_wall" accuracy="0.85"/>
+	<modifier class="speed" value="0.2"/>
 	<modifier class="hit_success_probability" value="-0.2"/>
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
@@ -33700,9 +33694,9 @@
 
 <weapon key="gkw_idwmod3_2108.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="smg"/>
-	<specification retrigger_time="0.042" accuracy_factor="1.0" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="4.1" magazine_size="32" suppressed="0" carry_in_two_hands="0" name="IDW(MOD3)-[Cat in a box]" class="0" slot="0" projectile_speed="125" burst_shots="1" barrel_offset="0.1" stab_enabled="1"/>
-	<commonness value="0.02" in_stock="0" can_respawn_with="1"/>
-	<inventory encumbrance="2.0" buy_price="50.0" sell_price="50.0"/>
+	<specification retrigger_time="0.1" accuracy_factor="0.9" sustained_fire_grow_step="0.18" sustained_fire_diminish_rate="1.4" stance_accuracy_rate="2.5" magazine_size="32" carry_in_two_hands="0" suppressed="1" name="IDW(MOD3)-[Cat in a box]" class="0" slot="0" spread_range="0.2" projectile_speed="125" sight_range_modifier="1.3" burst_shots="1" barrel_offset="0.4" stab_enabled="1"/>
+	<commonness value="0" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="5.0" buy_price="100.0" sell_price="100.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<animation state_key="recoil" animation_key="recoil, pistol 2"/>
 	<animation state_key="recoil" stance_key="prone" animation_key="recoil, smg1, prone"/>
@@ -33722,7 +33716,7 @@
 	<animation state_key="stabbing" animation_key="pistol whip 2"/>
 	<animation state_key="reload" animation_key="reloading, A OHG 0.75"/>
 	<animation state_key="reload" animation_key="reloading2, A OHG 0.75"/>
-	<sound key="fire" fileref="idw_fire_FromBORDERLAND3.wav" pitch_variety="0" volume="1"/>
+	<sound key="fire" fileref="idwsd_fire_FromEFT.wav" pitch_variety="0" volume="1.3"/>
 	<sound key="magazine_out" fileref="idw_mgz_out_FromCOD16.wav" volume="0.35"/>
 	<sound key="magazine_in" fileref="idw_mgz_in_FromCOD16.wav" volume="0.35"/>
 	<sound key="cycle" fileref="idw_cycle_FromCOD13.wav" volume="0.4"/>
@@ -33730,19 +33724,18 @@
 	<model filename="gkw_smg_idw_2108.xml"/>
 	<hud_icon filename="gkw_idw_2108.png"/>
 	<projectile file="bullet.projectile" can_be_detected_by_footmen="0">
-	<result class="hit" kill_probability="1.75" kill_probability_offset_on_successful_hit="1.5" kill_decay_start_time="0.05" kill_decay_end_time="1.3"/>
+	<result class="hit" kill_probability="1.65" kill_probability_offset_on_successful_hit="3.25" kill_decay_start_time="0.28" kill_decay_end_time="0.55"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_9mm"/>
-	<stance state_key="running" accuracy="0.75"/>
-	<stance state_key="walking" accuracy="0.75"/>
-	<stance state_key="crouch_moving" accuracy="0.85"/>
-	<stance state_key="standing" accuracy="0.95"/>
-	<stance state_key="crouching" accuracy="0.95"/>
-	<stance state_key="prone" accuracy="0.95"/>
-	<stance state_key="prone_moving" accuracy="0.85"/>
-	<stance state_key="over_wall" accuracy="1"/>
-	<modifier class="speed" value="+0.4"/>
-	<modifier class="detectability" value="-0.15"/>
+	<stance state_key="running" accuracy="0.45"/>
+	<stance state_key="walking" accuracy="0.6"/>
+	<stance state_key="standing" accuracy="0.75"/>
+	<stance state_key="crouching" accuracy="0.85"/>
+	<stance state_key="crouch_moving" accuracy="0.5"/>
+	<stance state_key="prone" accuracy="0.8"/>
+	<stance state_key="prone_moving" accuracy="0.5"/>
+	<stance state_key="over_wall" accuracy="0.85"/>
+	<modifier class="speed" value="0.3"/>
 	<modifier class="hit_success_probability" value="-0.2"/>
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
@@ -33754,9 +33747,9 @@
 
 <weapon key="gkw_idwmod3_3205.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="smg"/>
-	<specification retrigger_time="0.042" accuracy_factor="1.0" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="4.1" magazine_size="32" suppressed="0" carry_in_two_hands="0" name="IDW(MOD3)-[Cloak and cat]" class="0" slot="0" projectile_speed="125" burst_shots="1" barrel_offset="0.1" stab_enabled="1"/>
-	<commonness value="0.02" in_stock="0" can_respawn_with="1"/>
-	<inventory encumbrance="2.0" buy_price="50.0" sell_price="50.0"/>
+	<specification retrigger_time="0.1" accuracy_factor="0.9" sustained_fire_grow_step="0.18" sustained_fire_diminish_rate="1.4" stance_accuracy_rate="2.5" magazine_size="32" carry_in_two_hands="0" suppressed="1" name="IDW(MOD3)-[Cloak and cat]" class="0" slot="0" spread_range="0.2" projectile_speed="125" sight_range_modifier="1.3" burst_shots="1" barrel_offset="0.4" stab_enabled="1"/>
+	<commonness value="0" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="5.0" buy_price="100.0" sell_price="100.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<animation state_key="recoil" animation_key="recoil, pistol 2"/>
 	<animation state_key="recoil" stance_key="prone" animation_key="recoil, pistol, prone"/>
@@ -33774,9 +33767,9 @@
 	<animation state_key="prone_still" animation_key="prone_still, pistol"/>
 	<animation state_key="changing_weapon_in" animation_key="change weapon in, single hand carry"/>
 	<animation state_key="stabbing" animation_key="pistol whip 2"/>
-	<animation state_key="reload" animation_key="reloading, mp5sd"/>
-	<animation key="reload" stance_key="prone" animation_key="reloading, ar1, prone"/>
-	<sound key="fire" fileref="idw_fire_FromBORDERLAND3.wav" pitch_variety="0" volume="1"/>
+	<animation state_key="reload" animation_key="reloading, A OHG 0.75"/>
+	<animation state_key="reload" animation_key="reloading2, A OHG 0.75"/>
+	<sound key="fire" fileref="idwsd_fire_FromEFT.wav" pitch_variety="0" volume="1.3"/>
 	<sound key="magazine_out" fileref="idw_mgz_out_FromCOD16.wav" volume="0.35"/>
 	<sound key="magazine_in" fileref="idw_mgz_in_FromCOD16.wav" volume="0.35"/>
 	<sound key="cycle" fileref="idw_cycle_FromCOD13.wav" volume="0.4"/>
@@ -33784,19 +33777,18 @@
 	<model filename="gkw_smg_idwmod3.xml"/>
 	<hud_icon filename="gkw_idw_3205.png"/>
 	<projectile file="bullet.projectile" can_be_detected_by_footmen="0">
-	<result class="hit" kill_probability="1.75" kill_probability_offset_on_successful_hit="1.5" kill_decay_start_time="0.05" kill_decay_end_time="1.3"/>
+	<result class="hit" kill_probability="1.65" kill_probability_offset_on_successful_hit="3.25" kill_decay_start_time="0.28" kill_decay_end_time="0.55"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_9mm"/>
-	<stance state_key="running" accuracy="0.75"/>
-	<stance state_key="walking" accuracy="0.75"/>
-	<stance state_key="crouch_moving" accuracy="0.85"/>
-	<stance state_key="standing" accuracy="0.95"/>
-	<stance state_key="crouching" accuracy="0.95"/>
-	<stance state_key="prone" accuracy="0.95"/>
-	<stance state_key="prone_moving" accuracy="0.85"/>
-	<stance state_key="over_wall" accuracy="1"/>
-	<modifier class="speed" value="+0.5"/>
-	<modifier class="detectability" value="-0.15"/>
+	<stance state_key="running" accuracy="0.45"/>
+	<stance state_key="walking" accuracy="0.6"/>
+	<stance state_key="standing" accuracy="0.75"/>
+	<stance state_key="crouching" accuracy="0.85"/>
+	<stance state_key="crouch_moving" accuracy="0.5"/>
+	<stance state_key="prone" accuracy="0.8"/>
+	<stance state_key="prone_moving" accuracy="0.5"/>
+	<stance state_key="over_wall" accuracy="0.85"/>
+	<modifier class="speed" value="0.3"/>
 	<modifier class="hit_success_probability" value="-0.2"/>
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
@@ -33808,9 +33800,9 @@
 
 <weapon key="gkw_idwmod3_4908.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="smg"/>
-	<specification retrigger_time="0.042" accuracy_factor="1.0" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="4.1" magazine_size="32" suppressed="0" carry_in_two_hands="0" name="IDW(MOD3)-[Tumbler Cat]" class="0" slot="0" projectile_speed="125" burst_shots="1" barrel_offset="0.1" stab_enabled="1"/>
-	<commonness value="0.02" in_stock="0" can_respawn_with="1"/>
-	<inventory encumbrance="2.0" buy_price="50.0" sell_price="50.0"/>
+	<specification retrigger_time="0.1" accuracy_factor="0.9" sustained_fire_grow_step="0.18" sustained_fire_diminish_rate="1.4" stance_accuracy_rate="2.5" magazine_size="32" carry_in_two_hands="0" name="IDW(MOD3)-[Tumbler Cat]" suppressed="1" class="0" slot="0" spread_range="0.2" projectile_speed="125" sight_range_modifier="1.3" burst_shots="1" barrel_offset="0.4" stab_enabled="1"/>
+	<commonness value="0" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="5.0" buy_price="100.0" sell_price="100.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<animation state_key="recoil" animation_key="recoil, pistol 2"/>
 	<animation state_key="recoil" stance_key="prone" animation_key="recoil, smg1, prone"/>
@@ -33830,7 +33822,7 @@
 	<animation state_key="stabbing" animation_key="pistol whip 2"/>
 	<animation state_key="reload" animation_key="reloading, A OHG 0.75"/>
 	<animation state_key="reload" animation_key="reloading2, A OHG 0.75"/>
-	<sound key="fire" fileref="idw_fire_FromBORDERLAND3.wav" pitch_variety="0" volume="1"/>
+	<sound key="fire" fileref="idwsd_fire_FromEFT.wav" pitch_variety="0" volume="1.3"/>
 	<sound key="magazine_out" fileref="idw_mgz_out_FromCOD16.wav" volume="0.35"/>
 	<sound key="magazine_in" fileref="idw_mgz_in_FromCOD16.wav" volume="0.35"/>
 	<sound key="cycle" fileref="idw_cycle_FromCOD13.wav" volume="0.4"/>
@@ -33838,19 +33830,18 @@
 	<model filename="gkw_smg_idw_4908.xml"/>
 	<hud_icon filename="gkw_idw_4908.png"/>
 	<projectile file="bullet.projectile" can_be_detected_by_footmen="0">
-	<result class="hit" kill_probability="1.75" kill_probability_offset_on_successful_hit="1.5" kill_decay_start_time="0.05" kill_decay_end_time="1.3"/>
+	<result class="hit" kill_probability="1.65" kill_probability_offset_on_successful_hit="3.25" kill_decay_start_time="0.28" kill_decay_end_time="0.55"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_9mm"/>
-	<stance state_key="running" accuracy="0.75"/>
-	<stance state_key="walking" accuracy="0.75"/>
-	<stance state_key="crouch_moving" accuracy="0.85"/>
-	<stance state_key="standing" accuracy="0.95"/>
-	<stance state_key="crouching" accuracy="0.95"/>
-	<stance state_key="prone" accuracy="0.95"/>
-	<stance state_key="prone_moving" accuracy="0.85"/>
-	<stance state_key="over_wall" accuracy="1"/>
-	<modifier class="speed" value="+0.4"/>
-	<modifier class="detectability" value="-0.15"/>
+	<stance state_key="running" accuracy="0.45"/>
+	<stance state_key="walking" accuracy="0.6"/>
+	<stance state_key="standing" accuracy="0.75"/>
+	<stance state_key="crouching" accuracy="0.85"/>
+	<stance state_key="crouch_moving" accuracy="0.5"/>
+	<stance state_key="prone" accuracy="0.8"/>
+	<stance state_key="prone_moving" accuracy="0.5"/>
+	<stance state_key="over_wall" accuracy="0.85"/>
+	<modifier class="speed" value="0.3"/>
 	<modifier class="hit_success_probability" value="-0.2"/>
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
