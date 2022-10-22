@@ -361,6 +361,8 @@ dictionary commandSkillIndex = {
         {"ff_weaver.weapon",48},
         {"ff_weaver_1.weapon",48},
 
+        {"gkw_thompson.weapon",49},
+
         // 下面这行是用来占位的，在这之上添加新的枪和index即可
         {"666",-1}
 };
@@ -486,6 +488,7 @@ class CommandSkill : Tracker {
                     case 46:{excuteG41Onlyskill(cId,senderId,m_modifer);break;}
                     case 47:{excuteUMP45MOD3skill(cId,senderId,m_modifer);break;}
                     case 48:{excuteWeaverskill(cId,senderId,m_modifer);break;}
+                    case 49:{excuteM1928A1skill(cId,senderId,m_modifer);break;}
 
                     default:
                         break;
@@ -618,7 +621,14 @@ class CommandSkill : Tracker {
             deleteItemInBackpack(m_metagame,Trigger.m_character_id,"carry_item","immunity_mp5.carry_item");
             deleteItemInStash(m_metagame,Trigger.m_character_id,"carry_item","immunity_mp5.carry_item");
         }
-
+        if (Trigger.m_EffectKey =="M1928A1"){
+            if(Trigger.m_specialkey1==""){
+                Trigger.m_specialkey1="exo_t4.carry_item";
+            }
+            editPlayerVest(m_metagame,Trigger.m_character_id,Trigger.m_specialkey1,4);
+            deleteItemInBackpack(m_metagame,Trigger.m_character_id,"carry_item","immunity_thompson.carry_item");
+            deleteItemInStash(m_metagame,Trigger.m_character_id,"carry_item","immunity_thompson.carry_item");
+        }
         //破坏者，法官，
     }
 
@@ -1093,6 +1103,53 @@ class CommandSkill : Tracker {
             playRandomSoundArray(m_metagame,Voice,0,character.getStringAttribute("position"),1);
         }
     }
+    void excuteM1928A1skill(int characterId,int playerId,SkillModifer@ modifer){
+        bool ExistQueue = false;
+        int j =-1;
+        for (uint i=0;i<SkillArray.length();i++){
+            if (InCooldown(characterId,modifer,SkillArray[i]) && SkillArray[i].m_weapontype=="M1928A1") {
+                ExistQueue=true;
+                j=i;
+            }
+        }
+        if (ExistQueue){
+            dictionary a;
+            a["%time"] = ""+SkillArray[j].m_time;
+            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            _log("skill cooldown" + SkillArray[j].m_time);
+            return;
+        }
+        addCoolDown("M1928A1",25,characterId,modifer);
+        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+        string vestkey="exo_t4.carry_item";
+        if (character !is null) {
+            vestkey = getPlayerEquipmentKey(m_metagame,characterId,4);
+            if (vestkey=="immunity_thompson.carry_item" || vestkey==""){
+                vestkey="exo_t4.carry_item";
+            }
+            XmlElement c ("command");
+            c.setStringAttribute("class", "update_inventory");
+            c.setIntAttribute("container_type_id", 4);
+            c.setIntAttribute("character_id", characterId); 
+            {
+                XmlElement k("item");
+                k.setStringAttribute("class", "carry_item");
+                k.setStringAttribute("key", "immunity_thompson.carry_item");
+                c.appendChild(k);
+            }            
+            m_metagame.getComms().send(c);
+            deleteItemInBackpack(m_metagame,characterId,"carry_item","immunity_thompson.carry_item");
+            SkillEffectTimer@ stimer = SkillEffectTimer(characterId,3,"M1928A1");
+            stimer.setSkey(vestkey);
+            TimerArray.insertLast(stimer);
+            array<string> Voice={
+                "M1928A1_SKILL1_JP.wav",
+                "M1928A1_SKILL2_JP.wav",
+                "M1928A1_SKILL3_JP.wav"
+            };
+            playRandomSoundArray(m_metagame,Voice,0,character.getStringAttribute("position"),1);
+        }
+    }    
     void excuteIntruderskill(int characterId,int playerId,SkillModifer@ modifer){
         bool ExistQueue = false;
         int j =-1;
