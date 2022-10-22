@@ -1,9 +1,9 @@
-particle_system Propulsion_rocket
+particle_system Propulsion_grenade
 {
 	quota	500
 	material	Dust4
-	particle_width	0.2
-	particle_height	0.2
+	particle_width	0.15
+	particle_height	0.15
 	cull_each	false
 	renderer	billboard
 	billboard_type	point
@@ -11,24 +11,21 @@ particle_system Propulsion_rocket
 	emitter Point
 	{
 		angle	180
-		colour	1 1 1 0.4
-		colour_range_start	1 1 1 0.4
-		colour_range_end	1 1 1 1
+		colour_range_start	1 1 1 0.3
+		colour_range_end	1 1 1 0.8
 		direction	0 1 0
-		emission_rate	400
+		emission_rate	50
 		position	0 0 0
 		velocity	0.0
 		velocity_min	0.0
 		velocity_max	0.8
-		time_to_live	0.4
-		time_to_live_min	0.2
-		time_to_live_max	0.4
-		duration	0.5
+		time_to_live_min	0.3
+		time_to_live_max	0.5
 	}
 
 	affector Scaler
 	{
-		rate	0.5
+		rate	0.6
 	}
 
 	affector Rotator
