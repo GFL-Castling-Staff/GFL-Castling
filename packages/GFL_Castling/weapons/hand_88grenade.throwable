@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projectiles>
-    <projectile class="grenade" name="88type Cluster grenade" key="hand_88grenade.projectile" slot="0" radius="0.05" drop_count_factor_on_death="0.2" drop_count_factor_on_player_death="1" time_to_live_out_in_the_open="30" pulldown_in_air="40">
+    <projectile class="grenade" name="88type Cluster grenade" key="hand_88grenade.projectile" slot="0" radius="0.05" drop_count_factor_on_death="0.4" drop_count_factor_on_player_death="1" time_to_live_out_in_the_open="30" pulldown_in_air="40">
+        <tag name="grenade" />
         <result class="spawn" instance_class="projectile" instance_key="hand_88grenade_sub.projectile" min_amount="5" max_amount="5" offset="0 1.5 0" position_spread="0.3 0.3" direction_spread="0.0 0.0" />
         <trigger class="impact"/>
         <rotation class="random" />

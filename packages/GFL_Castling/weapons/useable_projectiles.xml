@@ -10,10 +10,13 @@
 
 	<projectile file="parw_grenade.throwable" />
 	<projectile file="allmine.throwable" />
-	<projectile file="hand_88grenade.throwable" />
 	<projectile file="c4.throwable" />
 	<projectile file="claymore.throwable" />
+	
 	<projectile file="hand_grenade.throwable" />
+	<projectile file="hand_atgrenade.throwable"/>	
+	<projectile file="hand_88grenade.throwable" />
+
 	<projectile file="40mm.projectile" />
 	<projectile file="40mm_spread.projectile" />
 	<projectile file="SopmodSk_script.projectile" />
@@ -114,4 +117,5 @@
 
 	<projectile file="warrior_fairy_arrow.projectile"/>	
 
+	
 </projectiles>

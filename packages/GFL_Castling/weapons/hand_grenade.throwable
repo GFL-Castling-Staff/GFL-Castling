@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projectiles>
-    <projectile class="grenade" name="RGD-5 Offensive grenade" key="hand_grenade.projectile" slot="0" radius="0.25" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" >
+    <projectile class="grenade" name="RGD-5 Offensive grenade" key="hand_grenade.projectile" slot="0" radius="0.25" drop_count_factor_on_death="0.3" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="30" drop_count_limit_in_range="3">
+        <tag name="grenade" />
         <result class="spawn" instance_class="projectile" instance_key="blast_shard_rad5.projectile" min_amount="8" max_amount="12" offset="0 0 0" position_spread="0.0 0.0" direction_spread="0.0 0.0" />
         <trigger class="time" time_to_live="2.0"/>
         <rotation class="random" />
@@ -8,7 +9,7 @@
         <model mesh_filename="grenade_rgd_5.mesh" texture_filename="grenade_rgd_5.png" />
         <hud_icon filename="hud_grenade_old.png" />
         <throwable curve_height="8.0" near_far_distance="5.0" speed_estimation_near="60.0" speed_estimation_far="60.0" max_speed="60.0" randomness="0.07" />
-        <commonness value="1.0" />
+        <commonness value="3.0" />
         <inventory encumbrance="3.0" price="1.0" />
         <capacity value="8" source="rank" source_value="0.0" />
         <sound class="result" key="other" fileref="explosion_FromSQUAD_1.wav" volume="2" />

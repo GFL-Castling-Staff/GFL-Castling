@@ -5782,9 +5782,9 @@
 
 <weapon key="gkw_thompson.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="smg"/>
-	<specification accuracy_factor="0.99" barrel_offset="0.4" class="0" slot="0" magazine_size="50" carry_in_two_hands="1" name="Thompson M1928A1" projectile_speed="120" retrigger_time="0.1" suppressed="0" sustained_fire_diminish_rate="1.8" sustained_fire_grow_step="0.2" burst_shots="1" stab_enabled="1"/>
+	<specification accuracy_factor="0.88" barrel_offset="0.4" class="0" slot="0" magazine_size="50" carry_in_two_hands="1" name="Thompson M1928A1" projectile_speed="120" retrigger_time="0.1" spread_range="0.25" suppressed="0" sustained_fire_grow_step="0.275" sustained_fire_diminish_rate="1.75" stance_accuracy_rate="2.5" burst_shots="1" stab_enabled="1"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
-	<inventory encumbrance="2.0" buy_price="9.0" sell_price="9.0"/>
+	<inventory encumbrance="2.0" buy_price="45.0" sell_price="45.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<animation key="recoil" animation_key="recoil1"/>
 	<animation key="recoil" animation_key="recoil2"/>
@@ -5812,19 +5812,19 @@
 	<hud_icon filename="gkw_m1928a1.png"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="1.5" kill_probability_offset_on_successful_hit="2.3" kill_decay_start_time="0.15" kill_decay_end_time="0.55"/>
+	<result class="hit" kill_probability="1.45" kill_probability_offset_on_successful_hit="4.5" kill_decay_start_time="0.25" kill_decay_end_time="0.4"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_9mm"/>
-	<stance state_key="running" accuracy="0.85"/>
-	<stance state_key="walking" accuracy="0.85"/>
-	<stance state_key="crouch_moving" accuracy="0.8"/>
-	<stance state_key="prone_moving" accuracy="0.8"/>
-	<stance state_key="standing" accuracy="0.9"/>
-	<stance state_key="crouching" accuracy="0.93"/>
-	<stance state_key="prone" accuracy="1"/>
-	<stance state_key="over_wall" accuracy="1"/>
+	<stance state_key="running" accuracy="0.65"/>
+	<stance state_key="walking" accuracy="0.65"/>
+	<stance state_key="standing" accuracy="0.65"/>
+	<stance state_key="crouching" accuracy="0.75"/>
+	<stance state_key="crouch_moving" accuracy="0.5"/>
+	<stance state_key="prone" accuracy="0.75"/>
+	<stance state_key="prone_moving" accuracy="0.5"/>
+	<stance state_key="over_wall" accuracy="0.75"/>
+	<modifier class="speed" value="0.1"/>
 	<modifier class="hit_success_probability" value="-0.2"/>
-	<modifier class="speed" value="+0.4"/>
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
 	<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
@@ -16055,6 +16055,7 @@
 <weapon key="gkw_xm3mod3.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="0" sustained_fire_diminish_rate="1.6" magazine_size="5" can_shoot_standing="1" name="XM3(MOD3)" class="2" reload_one_at_a_time="1" sight_range_modifier="3.5" projectile_speed="240" barrel_offset="0.4" suppressed="1" projectiles_per_shot="6" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
 	<inventory buy_price="150.0" sell_price="150.0"/>
+	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
 	<next_in_chain key="gkw_xm3mod3_skill.weapon" share_ammo="1"/>
 	<animation key="cycle" animation_key="Brifle0.8"/>
 	<animation key="cycle" stance_key="prone" animation_key="Brifle0.8p"/>
@@ -16083,7 +16084,6 @@
 	<stance state_key="over_wall" accuracy="1.1"/>
 	<modifier class="night_detectability" value="-0.3"/>
 	<tag name="rifle"/>
-	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="20.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<modifier class="detectability" value="-0.1"/>
@@ -19810,7 +19810,7 @@
 
 <weapon key="gkw_idwmod3.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="smg"/>
-	<specification retrigger_time="0.1" accuracy_factor="0.9" sustained_fire_grow_step="0.18" sustained_fire_diminish_rate="1.4" stance_accuracy_rate="2.5" magazine_size="32" carry_in_two_hands="0" suppressed="1" name="IDW(MOD3)" class="0" slot="0" spread_range="0.2" projectile_speed="125" sight_range_modifier="1.3" burst_shots="1" barrel_offset="0.4" stab_enabled="1"/>
+	<specification retrigger_time="0.1" accuracy_factor="0.9" sustained_fire_grow_step="0.18" sustained_fire_diminish_rate="1.4" stance_accuracy_rate="2.5" magazine_size="32" carry_in_two_hands="0" suppressed="1" name="IDW(MOD3)" class="0" slot="0" spread_range="0.15" projectile_speed="125" sight_range_modifier="1.3" burst_shots="1" barrel_offset="0.4" stab_enabled="1"/>
 	<commonness value="0.001" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="5.0" buy_price="100.0" sell_price="100.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -23370,7 +23370,7 @@
 	<model filename="gkw_smg_idw_3205.xml"/>
 	<hud_icon filename="gkw_idw_3205.png"/>
 	<projectile file="bullet.projectile" can_be_detected_by_footmen="0">
-	<result class="hit" kill_probability="1.65" kill_probability_offset_on_successful_hit="1.5" kill_decay_start_time="0.05" kill_decay_end_time="1.3"/>
+	<result class="hit" kill_probability="1.6" kill_probability_offset_on_successful_hit="3" kill_decay_start_time="0.32" kill_decay_end_time="0.55"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_9mm"/>
 	<stance state_key="running" accuracy="0.3"/>
@@ -33694,7 +33694,7 @@
 
 <weapon key="gkw_idwmod3_2108.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="smg"/>
-	<specification retrigger_time="0.1" accuracy_factor="0.9" sustained_fire_grow_step="0.18" sustained_fire_diminish_rate="1.4" stance_accuracy_rate="2.5" magazine_size="32" carry_in_two_hands="0" suppressed="1" name="IDW(MOD3)-[Cat in a box]" class="0" slot="0" spread_range="0.2" projectile_speed="125" sight_range_modifier="1.3" burst_shots="1" barrel_offset="0.4" stab_enabled="1"/>
+	<specification retrigger_time="0.1" accuracy_factor="0.9" sustained_fire_grow_step="0.18" sustained_fire_diminish_rate="1.4" stance_accuracy_rate="2.5" magazine_size="32" carry_in_two_hands="0" suppressed="1" name="IDW(MOD3)-[Cat in a box]" class="0" slot="0" spread_range="0.15" projectile_speed="125" sight_range_modifier="1.3" burst_shots="1" barrel_offset="0.4" stab_enabled="1"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="5.0" buy_price="100.0" sell_price="100.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -33747,7 +33747,7 @@
 
 <weapon key="gkw_idwmod3_3205.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="smg"/>
-	<specification retrigger_time="0.1" accuracy_factor="0.9" sustained_fire_grow_step="0.18" sustained_fire_diminish_rate="1.4" stance_accuracy_rate="2.5" magazine_size="32" carry_in_two_hands="0" suppressed="1" name="IDW(MOD3)-[Cloak and cat]" class="0" slot="0" spread_range="0.2" projectile_speed="125" sight_range_modifier="1.3" burst_shots="1" barrel_offset="0.4" stab_enabled="1"/>
+	<specification retrigger_time="0.1" accuracy_factor="0.9" sustained_fire_grow_step="0.18" sustained_fire_diminish_rate="1.4" stance_accuracy_rate="2.5" magazine_size="32" carry_in_two_hands="0" suppressed="1" name="IDW(MOD3)-[Cloak and cat]" class="0" slot="0" spread_range="0.15" projectile_speed="125" sight_range_modifier="1.3" burst_shots="1" barrel_offset="0.4" stab_enabled="1"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="5.0" buy_price="100.0" sell_price="100.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -33800,7 +33800,7 @@
 
 <weapon key="gkw_idwmod3_4908.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="smg"/>
-	<specification retrigger_time="0.1" accuracy_factor="0.9" sustained_fire_grow_step="0.18" sustained_fire_diminish_rate="1.4" stance_accuracy_rate="2.5" magazine_size="32" carry_in_two_hands="0" name="IDW(MOD3)-[Tumbler Cat]" suppressed="1" class="0" slot="0" spread_range="0.2" projectile_speed="125" sight_range_modifier="1.3" burst_shots="1" barrel_offset="0.4" stab_enabled="1"/>
+	<specification retrigger_time="0.1" accuracy_factor="0.9" sustained_fire_grow_step="0.18" sustained_fire_diminish_rate="1.4" stance_accuracy_rate="2.5" magazine_size="32" carry_in_two_hands="0" name="IDW(MOD3)-[Tumbler Cat]" suppressed="1" class="0" slot="0" spread_range="0.15" projectile_speed="125" sight_range_modifier="1.3" burst_shots="1" barrel_offset="0.4" stab_enabled="1"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="5.0" buy_price="100.0" sell_price="100.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
