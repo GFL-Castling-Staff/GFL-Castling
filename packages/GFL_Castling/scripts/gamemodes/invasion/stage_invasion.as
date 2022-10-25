@@ -262,8 +262,7 @@ class Stage {
 	// --------------------------------------------
 	protected void appendScene(XmlElement@ mapConfig) const {
 		XmlElement scene("scene");
-		appendCamera(scene);
-		appendFog(scene);
+		scene.setStringAttribute("filename", "scene.xml");
 		mapConfig.appendChild(scene); 
 	}
 

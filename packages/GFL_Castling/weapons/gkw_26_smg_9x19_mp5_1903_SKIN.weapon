@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapon key="gkw_mp5_1903.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-<tag name="smg" />
+    <tag name="smg" />
     <specification 
-		accuracy_factor="0.99" 
-		retrigger_time="0.075" 
+        accuracy_factor="0.88" 
+        retrigger_time="0.075" 
 		barrel_offset="0.32" 
 		class="0"
         slot="0"
@@ -13,61 +13,57 @@
 		projectile_speed="110" 
 		suppressed="0" 
         burst_shots="1"
-		sustained_fire_diminish_rate="1.9" 
-		sustained_fire_grow_step="0.25"
+        spread_range="0.15"
+        stance_accuracy_rate="2.0"
+		sustained_fire_diminish_rate="1.2" 
+		sustained_fire_grow_step="0.2"
         stab_enabled="1"/>
-
     <commonness value="0" in_stock="0" can_respawn_with="1" />
-	<inventory encumbrance="2.0" buy_price="15.0" sell_price="15.0"/>
-	<capacity value="1" source="rank" source_value="0.0" />
-
+    <inventory encumbrance="2.0" buy_price="15.0" sell_price="15.0"/>
+    <capacity value="1" source="rank" source_value="0.0" />
     <animation key="recoil" animation_key="recoil1" />
-	<animation key="recoil" animation_key="recoil2" />
-	<animation key="recoil" animation_key="recoil3" />
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil1" />
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil2" />
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil3" />
+    <animation key="recoil" animation_key="recoil2" />
+    <animation key="recoil" animation_key="recoil3" />
+    <animation key="recoil" stance_key="over_wall" animation_key="recoil1" />
+    <animation key="recoil" stance_key="over_wall" animation_key="recoil2" />
+    <animation key="recoil" stance_key="over_wall" animation_key="recoil3" />
     <animation key="recoil" stance_key="crouching" animation_key="recoil1" />
     <animation key="recoil" stance_key="crouching" animation_key="recoil2" />
     <animation key="recoil" stance_key="crouching" animation_key="recoil3" />
-	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone" />
-	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone" />
-	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone" />
-	<animation state_key="hold_on_wall" animation_key="still" />
+    <animation key="recoil" stance_key="prone" animation_key="recoil1, prone" />
+    <animation key="recoil" stance_key="prone" animation_key="recoil2, prone" />
+    <animation key="recoil" stance_key="prone" animation_key="recoil3, prone" />
+    <animation state_key="hold_on_wall" animation_key="still" />
     <animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
     <animation state_key="reload" animation_key="reloading, magazine rifle 0.9" />
-	<animation state_key="stabbing" animation_key="melee, quick knife" />
-	<animation state_key="stabbing" animation_key="pistol whip 3" />
+    <animation state_key="stabbing" animation_key="melee, quick knife" />
+    <animation state_key="stabbing" animation_key="pistol whip 3" />
     <sound key="fire" fileref="mp5_fire_FromCOD16.wav" pitch_variety="0.05" volume="1" />
     <sound key="magazine_out" fileref="mp5_mgz_out_FromCOD16.wav" volume="0.5" />
     <sound key="magazine_in" fileref="mp5_mgz_in_FromCOD16.wav" volume="0.5" />
     <sound key="cycle" fileref="mp5_cycle_FromCOD16.wav" volume="0.5" />
-    <sound class="impact" fileref="rifle_drop.wav" />    
+    <sound class="impact" fileref="rifle_drop.wav" />
     <model filename="gkw_smg_mp5_1903.xml"/>
-
     <hud_icon filename="gkw_mp5_1903.png"/>
-
-
-
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet.projectile">
-        <result class="hit" kill_probability="1.6" kill_probability_offset_on_successful_hit="1.2" kill_decay_start_time="0.05" kill_decay_end_time="0.7" />
+        <result class="hit" kill_probability="1.6" kill_probability_offset_on_successful_hit="2.0" kill_decay_start_time="0.28" kill_decay_end_time="0.56" />
     </projectile>
     <effect class="muzzle" ref="ejection_9mm"/>
-    <stance state_key="running" accuracy="0.8" />
-    <stance state_key="walking" accuracy="0.85" />
-    <stance state_key="crouch_moving" accuracy="0.9" />
-    <stance state_key="prone_moving" accuracy="0.9" />
-    <stance state_key="standing" accuracy="0.9" />
-	<stance state_key="crouching" accuracy="0.95" />
-    <stance state_key="prone" accuracy="1" />
-    <stance state_key="over_wall" accuracy="1" />
+    <stance state_key="running" accuracy="0.25" />
+    <stance state_key="walking" accuracy="0.55" />
+    <stance state_key="standing" accuracy="0.6" />
+    <stance state_key="crouching" accuracy="0.9" />
+    <stance state_key="crouch_moving" accuracy="0.5" />
+    <stance state_key="prone" accuracy="0.88" />
+    <stance state_key="prone_moving" accuracy="0.5" />
+    <stance state_key="over_wall" accuracy="0.88" />
     <modifier class="hit_success_probability" value="-0.2" />
-	<modifier class="speed" value="+0.4" />
-	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0" />
-	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0" />
+    <modifier class="speed" value="0.2" />
+    <target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0" />
+    <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0" />
     <target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0" />
     <target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0" />
     <target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0" />
-	<target_factors tag="commander" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0" />
+    <target_factors tag="commander" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0" />
 </weapon>

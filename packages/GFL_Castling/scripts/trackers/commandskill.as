@@ -1139,7 +1139,7 @@ class CommandSkill : Tracker {
             }            
             m_metagame.getComms().send(c);
             deleteItemInBackpack(m_metagame,characterId,"carry_item","immunity_thompson.carry_item");
-            SkillEffectTimer@ stimer = SkillEffectTimer(characterId,3,"M1928A1");
+            SkillEffectTimer@ stimer = SkillEffectTimer(characterId,4,"M1928A1");
             stimer.setSkey(vestkey);
             TimerArray.insertLast(stimer);
             array<string> Voice={
