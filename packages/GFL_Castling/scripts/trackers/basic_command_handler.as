@@ -907,7 +907,7 @@ class BasicCommandHandler : Tracker {
 			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_obr.weapon");
 			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_g3mod3.weapon");
 
-			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"carry_item","upgrade_fg42.carry_item");
+			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"carry_item","upgrade_vz61.carry_item");
 			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"carry_item","upgrade_g41.carry_item");
 		} else if (checkCommand(message,"admintest")){
 			ProfileSave(m_metagame);

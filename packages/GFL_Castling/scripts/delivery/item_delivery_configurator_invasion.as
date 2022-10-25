@@ -531,12 +531,13 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 
 		array<array<ScoredResource@>> rewardPasses = {
 			{
-		ScoredResource("upgrade_g41.carry_item", "carry_item", 2.0f),
-		ScoredResource("upgrade_fg42.carry_item", "carry_item", 2.0f),
+		ScoredResource("upgrade_g41.carry_item", "carry_item", 0.25f),
+		ScoredResource("upgrade_fg42.carry_item", "carry_item", 0.25f),
+		ScoredResource("upgrade_vz61.carry_item", "carry_item", 0.25f),
 
 		ScoredResource("RO365_Ant_Doll.carry_item", "carry_item", 5.0f,2),
 		ScoredResource("RO365_Ant_Doll.carry_item", "carry_item", 25.0f),
-		ScoredResource("city_gifts.carry_item", "carry_item", 6.0f, 10),
+		ScoredResource("city_gifts.carry_item", "carry_item", 9.5f, 10),
 		ScoredResource("wild_gifts.carry_item", "carry_item", 10.0f, 10),
 		ScoredResource("snow_gifts.carry_item", "carry_item", 10.0f, 10),
 		ScoredResource("forest_gifts.carry_item", "carry_item", 10.0f, 10),	
@@ -609,8 +610,9 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 
 		array<array<ScoredResource@>> rewardPasses = {
 			{
-		ScoredResource("upgrade_g41.carry_item", "carry_item", 2.5f),
-		ScoredResource("upgrade_fg42.carry_item", "carry_item", 2.5f),
+		ScoredResource("upgrade_g41.carry_item", "carry_item", 0.25f),
+		ScoredResource("upgrade_fg42.carry_item", "carry_item", 0.25f),
+		ScoredResource("upgrade_vz61.carry_item", "carry_item", 0.25f),
 		ScoredResource("RO365_Ant_Doll.carry_item", "carry_item", 15.0f),
 		ScoredResource("wild_gifts.carry_item", "carry_item", 7.5f, 20),
 		ScoredResource("snow_gifts.carry_item", "carry_item", 7.5f, 20),

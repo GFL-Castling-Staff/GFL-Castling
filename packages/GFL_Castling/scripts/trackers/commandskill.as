@@ -164,6 +164,7 @@ dictionary commandSkillIndex = {
         {"gkw_vector_1901.weapon",2},
 
         {"gkw_vz61.weapon",2},
+        {"gkw_vz61_only.weapon",2},
         {"gkw_klin.weapon",2},
         {"gkw_uzi.weapon",2},
         {"gkw_uzimod3.weapon",2},
@@ -743,7 +744,7 @@ class CommandSkill : Tracker {
                         };
                         playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
                     }
-                    if(weaponname=="gkw_vz61.weapon") {
+                    if(weaponname=="gkw_vz61.weapon" || weaponname=="gkw_vz61_only.weapon") {
                         array<string> Voice={
                             "VZ61_SKILL1_JP.wav",
                             "VZ61_SKILL2_JP.wav",

@@ -26,6 +26,7 @@ dictionary itemDropFileIndex = {
     {"upgrade_m1.carry_item",5},      // M1加兰德弹鼓
     {"upgrade_fg42.carry_item",6},      // FG42
     {"upgrade_g41.carry_item",7},      // G41
+    {"upgrade_vz61.carry_item",8},      // vz61
 
     {"666",0}
 };
@@ -41,6 +42,7 @@ dictionary itemDropKeyIndex = {
     {"m1garand",5},                     // M1加兰德弹鼓
     {"fg42",6},                         // FG42
     {"g41",7},                          // G41
+    {"vz61",8},                          // vz61
 
     {"666",0}
 };
@@ -171,6 +173,19 @@ class ItemDropEvent : Tracker {
                         playPrivateSound(m_metagame,"sfx_equip.wav",pId);
                     }
                     break;
+                }
+                case 8:{
+                    if(checkQueue(pId,"vz61")){
+                        addItemInBackpack(m_metagame,cId,"carry_item","upgrade_vz61.carry_item");
+                        sendPrivateMessageKey(m_metagame, pId, "onlyonequeue_common");
+                        playPrivateSound(m_metagame,"sfx_failed.wav",pId);
+                    }
+                    else{
+                        startQueue(pId,"vz61");
+                        sendPrivateMessageKey(m_metagame, pId, "upgrade_common");
+                        playPrivateSound(m_metagame,"sfx_equip.wav",pId);
+                    }
+                    break;
                 }                
                 default:{
                     if (checkQueue(pId,"mod3")){
@@ -237,6 +252,11 @@ class ItemDropEvent : Tracker {
                         m_craftQueue.removeAt(findQueueIndex(pId,"g41"));
                         playPrivateSound(m_metagame,"digimind_sfx2.wav",pId);
                     }
+                    else if (checkQueue(pId,"vz61") && (itemKey=="gkw_vz61.weapon")){
+                        addItemInBackpack(m_metagame,cId,"weapon","gkw_vz61_only.weapon");
+                        m_craftQueue.removeAt(findQueueIndex(pId,"vz61"));
+                        playPrivateSound(m_metagame,"digimind_sfx2.wav",pId);
+                    }                    
                     break;
                 }
             }
@@ -439,7 +459,13 @@ class ItemDropEvent : Tracker {
                                 playPrivateSound(m_metagame,"sfx_returnback.wav",pId);
                                 sendPrivateMessageKey(m_metagame, pId, "quest_timeout");
                                 break;
-                            }                                                        
+                            }
+                            case 8:{ // vz61
+                                addItemInBackpack(m_metagame,cId,"carry_item","upgrade_vz61.carry_item");
+                                playPrivateSound(m_metagame,"sfx_returnback.wav",pId);
+                                sendPrivateMessageKey(m_metagame, pId, "quest_timeout");
+                                break;
+                            }                            
                             default:
                                 break;
                         }                                      
