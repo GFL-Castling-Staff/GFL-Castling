@@ -440,7 +440,9 @@ class GFLairstrike : Tracker {
                         Vector3 v1 = getVerticalUnitVector(strike_vector);
                         float strike_dy = 6;
                         //扫射起点 从弹头终点指向弹头起点的位置 
-                        Vector3 pos_offset = Vector3(0,60,0);
+                        //扫射起点 从弹头终点指向弹头起点的位置基础偏移 
+                        Vector3 pos_offset = strike_vector.add(getMultiplicationVector(strike_vector,Vector3(-60,0,-60)));  
+                        pos_offset = pos_offset.add(Vector3(0,80,0));                        
                         //扫射终点的起点与终点（就生成弹头的终点的起始位置与终止位置）
                         Vector3 c_pos = end_pos.add(getMultiplicationVector(strike_vector,Vector3(-32,0,-32)));
                         Vector3 s_pos = end_pos.add(getMultiplicationVector(strike_vector,Vector3(64,0,64)));
@@ -469,7 +471,7 @@ class GFLairstrike : Tracker {
                                 float rand_x1 = strike_rand*cos(rand_angle);
                                 float rand_y1 = strike_rand*sin(rand_angle);     
                                 //每单轮扫射生成1次对点扫射
-                                CreateDirectProjectile(m_metagame,fin_pos1,fin_pos2.add(Vector3(rand_x1,0,rand_y1)),"artillery_airstrike_fairies.projectile",cid,fid,100);           
+                                CreateDirectProjectile(m_metagame,fin_pos1,fin_pos2.add(Vector3(rand_x1,0,rand_y1)),"artillery_airstrike_fairies.projectile",cid,fid,80);           
                             }
                         }                               
                         Airstrike_strafe.removeAt(a);
