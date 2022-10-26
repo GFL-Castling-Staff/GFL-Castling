@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- 人设设计来自 染羽 Pixiv id 1522108 -->
+<!-- 原画来自 MG4 スニーカー Pixiv id 72994540 -->
 <weapon file="heavy_mg_standing.animation_base" key="gkw_mg4_oc.weapon">
     <specification 
     barrel_offset="0.5" 
@@ -21,7 +23,7 @@
     <sound key="cycle" fileref="mg4_cycle_FromBF2PR.wav" volume="0.8" />
     <sound class="impact" fileref="rifle_drop.wav" />
     <model filename="gkw_mg_mg4.xml" />
-    <hud_icon filename="gkw_mg4_703.png" />
+    <hud_icon filename="gkw_mg4_oc.png" />
     <projectile file="bullet.projectile">
         <result class="hit" kill_probability="2.1" kill_probability_offset_on_successful_hit="1.0" kill_decay_start_time="1.967" kill_decay_end_time="3.279" />
     </projectile>

@@ -50,6 +50,7 @@ dictionary MOD3craftList = {
     
     {"gkw_mg4.weapon","gkw_mg4mod3.weapon"},
     {"gkw_mg4_703.weapon","gkw_mg4mod3_703.weapon"},
+    {"gkw_mg4_oc.weapon","gkw_mg4mod3_oc.weapon"},
 
     {"gkw_ksvk.weapon","gkw_ksvkmod3.weapon"},
     {"gkw_ksvk_3405.weapon","gkw_ksvkmod3_3405.weapon"},
