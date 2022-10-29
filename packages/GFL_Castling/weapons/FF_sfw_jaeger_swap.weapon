@@ -1,48 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<weapon file="gk_sf_boss.base_weapon" key="ff_jaeger_swap.weapon">
+<weapon key="ff_jaeger_swap.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="rifle"/>
 	<specification 
-	retrigger_time="-1" 
-	accuracy_factor="1.0" 
-	sustained_fire_grow_step="3.0" 
-	sustained_fire_diminish_rate="0.55" 
-	magazine_size="10" 
-	can_shoot_standing="0" 
-	suppressed="0" 
-	name="GK-Jaeger SWAP" 
-	class="2" 
-	reload_one_at_a_time="0" 
-	sight_range_modifier="3.0" 
-	projectile_speed="300.0" 
-	barrel_offset="0.65" 
-	projectiles_per_shot="1" 
+	retrigger_time="-1"
+	accuracy_factor="1.0"
+	sustained_fire_grow_step="3.0"
+	sustained_fire_diminish_rate="1.0"
+	magazine_size="10"
+	can_shoot_standing="0"
+	suppressed="1"
+	name="GK-Jaeger SWAP"
+	class="2"
+	reload_one_at_a_time="0"
+	sight_range_modifier="2.25"
+	stance_accuracy_rate="1.5"
+	projectile_speed="240.0"
+	barrel_offset="0.65"
+	projectiles_per_shot="1"
 	burst_shots="1"/>
-	  
-    <animation key="recoil" animation_key="recoil1, big" />
-	<animation key="recoil" stance_key="prone" animation_key="recoil1, big, prone" />
-    <animation key="cycle" animation_key="Brifle1" />
-	<animation key="cycle" stance_key="prone" animation_key="Brifle1p" />	
-    <animation state_key="reload" animation_key="reloading, dragunov_svd" />
-	<animation key="reload" stance_key="prone" animation_key="reloading, sniper1, prone" />
-	<inventory buy_price="500.0" sell_price="500.0" />	
-
-    <sound key="fire" fileref="Gauss_fire_FromBORDERLAND3.wav" pitch_variety="0.03" volume="2.5" />
-    <sound key="cycle" fileref="sniper_cycle.wav" />
-    <sound key="magazine_out" fileref="jaeger_mgz_out_FromCOD13.wav" />
-    <sound key="magazine_in" fileref="jaeger_mgz_in_FromCOD13.wav" />
-    <sound key="cycle_out" fileref="sniper_cycle_out.wav" />
-    <sound key="cycle_in" fileref="sniper_cycle_in.wav" />
-    <sound class="impact" fileref="rifle_drop.wav" />
-
-    <model filename="sfw_jaeger_swap_from_dusk.xml" />
-    <hud_icon filename="sfw_jaeger_swap.png" />
-	<capacity value="0" source="rank" source_value="0.0" />
-    <capacity value="1" source="rank" source_value="6.48" />
-
-    <weak_hand_hold offset="0.3" />
-    <projectile file="bullet_sf.projectile">
-		<result class="blast" radius="4" damage="8.0" decal="1" push="0.25" character_state="death" faction_compare="not_equal"/>
-		<trail probability="1.0" key="sf_long" />
-    </projectile>
- 
+	<animation key="recoil" animation_key="recoil1, big"/>
+	<animation key="recoil" stance_key="prone" animation_key="recoil1, big, prone"/>
+	<animation key="cycle" animation_key="Brifle1"/>
+	<animation key="cycle" stance_key="prone" animation_key="Brifle1p"/>
+	<animation state_key="reload" animation_key="reloading, magazine rifle 1.2" />
+	<inventory encumbrance="15.0" buy_price="648.0" sell_price="648.0"/>
+	<sound key="fire" fileref="Gauss_Rifle_FromFO4.wav" pitch_variety="0.03" volume="2.5"/>
+	<sound key="cycle" fileref="sniper_cycle.wav"/>
+	<sound key="magazine_out" fileref="jaeger_mgz_out_FromCOD13.wav"/>
+	<sound key="magazine_in" fileref="jaeger_mgz_in_FromCOD13.wav"/>
+	<sound key="cycle_out" fileref="sniper_cycle_out.wav"/>
+	<sound key="cycle_in" fileref="sniper_cycle_in.wav"/>
+	<sound class="impact" fileref="rifle_drop.wav"/>
+	<model filename="sfw_jaeger_swap_from_dusk.xml"/>
+	<hud_icon filename="sfw_jaeger_swap.png"/>
+	<capacity value="0" source="rank" source_value="0.0"/>
+	<capacity value="1" source="rank" source_value="20.0"/>
+	<weak_hand_hold offset="0.3"/>
+	<projectile file="bullet_sf_player.projectile">
+		<result class="hit" kill_probability="2.8" kill_probability_offset_on_successful_hit="15.0" kill_decay_start_time="0.8" kill_decay_end_time="0.9"/>
+		<trail probability="1.0" key="sf_long"/>
+	</projectile>
+	<commonness value="0" in_stock="0" can_respawn_with="1"/>
+	<stance state_key="running" accuracy="0.3" />
+	<stance state_key="walking" accuracy="0.5" />
+	<stance state_key="crouch_moving" accuracy="0.5" />
+	<stance state_key="standing" accuracy="0.95" />
+	<stance state_key="crouching" accuracy="1.0" />
+	<stance state_key="prone" accuracy="1.1" />
+	<stance state_key="prone_moving" accuracy="0.6" />
+	<stance state_key="over_wall" accuracy="1.1" />
 </weapon>

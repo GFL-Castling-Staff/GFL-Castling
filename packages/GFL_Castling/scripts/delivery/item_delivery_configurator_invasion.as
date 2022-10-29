@@ -385,14 +385,21 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		ScoredResource("ff_hunter.weapon", "weapon", 0.3f),
 		ScoredResource("ff_Intruder.weapon", "weapon", 0.3f),
 		ScoredResource("ff_justice.weapon", "weapon", 0.3f),
-		ScoredResource("ff_ripper.weapon", "weapon", 30.0f),
-		ScoredResource("ff_ripper_swap.weapon", "weapon", 20.0f),
-		ScoredResource("ff_vespid_swap.weapon", "weapon", 20.0f),
-		ScoredResource("ff_striker_swap.weapon", "weapon", 20.0f),
 		ScoredResource("ff_dreamer.weapon", "weapon", 0.3f),
 		ScoredResource("ff_scarecrow.weapon", "weapon", 0.3f),
+
+		ScoredResource("ff_ripper.weapon", "weapon", 30.0f),
+		ScoredResource("ff_ripper_swap.weapon", "weapon", 15.0f),
+
+		ScoredResource("ff_jaeger.weapon", "weapon", 30.0f),
+		ScoredResource("ff_jaeger_swap.weapon", "weapon", 15.0f),
+
 		ScoredResource("ff_striker.weapon", "weapon", 30.0f),
-		ScoredResource("ff_vespid.weapon", "weapon", 30.0f)
+		ScoredResource("ff_striker_swap.weapon", "weapon", 15.0f),
+
+		ScoredResource("ff_vespid.weapon", "weapon", 30.0f),
+		ScoredResource("ff_vespid_swap.weapon", "weapon", 15.0f)
+
 			}
 		};
 			
