@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ai>
-  <parameter class="vehicle_stuck_short_time" value="10.0" />
-  <parameter class="in_trenches_fade_off_timer" value="4.0" />
+  <parameter class="vehicle_stuck_short_time" value="5.0" />
+  <parameter class="in_trenches_fade_off_timer" value="5.0" />
   <parameter class="accuracy_penalty_wear_off_rate" value="0.333" /> 
-  <parameter class="check_vehicles_interval" value="2.0" />
+  <parameter class="check_vehicles_interval" value="1.0" />
   <parameter class="team_member_monitor_enemies_time" value="1.5" />
   <parameter class="monitor_enemies_time" value="0.8" />
   <parameter class="check_supplies_time" value="5.0" />
@@ -41,8 +41,8 @@
   <parameter class="max_sight_range_with_muzzle" value="40.0" />
 
   <parameter class="active_guarding_probability" value="0.5" />
-  <parameter class="leading_inspect_alarm_spread_out_distance" value="30.0" />
-  <parameter class="leading_inspect_alarm_min_distance" value="45.0" />
+  <parameter class="leading_inspect_alarm_spread_out_distance" value="25.0" />
+  <parameter class="leading_inspect_alarm_min_distance" value="40.0" />
   <parameter class="maximum_distance_to_consider_for_heal" value="40.0" />
   <parameter class="consider_someone_already_healing_wounded_distance" value="10.0" />
   <parameter class="force_comparison_multiplier_to_call_reinforcements" value="1.1" />
@@ -64,12 +64,12 @@
   <parameter class="guard_steps" value="2" />
   <parameter class="wait_time" value="1.2" />
   <parameter class="wait_time_variance" value="0.6" />
-  <parameter class="burst_time" value="1.0" />
-  <parameter class="burst_time_variance" value="0.5" />
-  <parameter class="longer_burst_time" value="2.0" />
-  <parameter class="longer_burst_time_variance" value="0.6" />
-  <parameter class="in_vehicle_burst_time" value="1.0" />
-  <parameter class="in_vehicle_burst_time_variance" value="0.3" />
+  <parameter class="burst_time" value="0.45" />
+  <parameter class="burst_time_variance" value="0.15" />
+  <parameter class="longer_burst_time" value="2.5" />
+  <parameter class="longer_burst_time_variance" value="0.5" />
+  <parameter class="in_vehicle_burst_time" value="0.45" />
+  <parameter class="in_vehicle_burst_time_variance" value="0.15" />
   <parameter class="accuracy_penalty_range" value="0.07" />
   <parameter class="melee_attack_wait_time" value="0.5" />
   <parameter class="shooting_against_vehicle_burst_time" value="0.5" />
@@ -102,8 +102,8 @@
   <parameter class="accuracy_offset" value="0.0" /> 
   <parameter class="accuracy_offset_in_player_squad" value="0.025" /> 
   <parameter class="grenade_throw_hold_time" value="0.5" />
-  <parameter class="using_cover_min_time" value="2.0" />
-  <parameter class="using_cover_max_time" value="5.0" />
+  <parameter class="using_cover_min_time" value="4.0" />
+  <parameter class="using_cover_max_time" value="7.0" />
   <parameter class="fire_open_min_time" value="12.0" />
   <parameter class="dive_from_grenade_probability" value="0.7" />
   <parameter class="celebrating_shoot_probability" value="0.3" /> 

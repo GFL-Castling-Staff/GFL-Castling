@@ -89,13 +89,13 @@
   <parameter class="leader_sight_range" value="40.0" />
   <parameter class="team_member_sight_range" value="35.0" />
   <parameter class="force_comparison_multiplier_to_call_reinforcements" value="0.3" />
-  <parameter class="burst_time" value="1.5" />
+  <parameter class="burst_time" value="0.3" />
   <parameter class="burst_time_variance" value="0" />
-  <parameter class="longer_burst_time" value="1.5" />
+  <parameter class="longer_burst_time" value="0.3" />
   <parameter class="longer_burst_time_variance" value="0" />
-  <parameter class="wait_time" value="2.0" />
-  <parameter class="wait_time_variance" value="1.0" />
-  <parameter class="choose_enemy_time" value="1.25" />
+  <parameter class="wait_time" value="1.0" />
+  <parameter class="wait_time_variance" value="0.0" />
+  <parameter class="choose_enemy_time" value="1.0" />
 
 	<parameter class="willingness_to_guard" value="0.2" />
 
@@ -106,7 +106,9 @@
 	<parameter class="using_cover_max_time" value="0.0" />
 
   <parameter class="uses_vehicles" value="0" />
-	<parameter class="willingness_to_charge" value="0.3" />
+	<parameter class="willingness_to_charge" value="1.0" />
 	<parameter class="stab_range" value="0" />
 	<parameter class="uses_ladders" value="1" />
+  <parameter class="fighting_melee_move_radius" value="1.0" />
+  <parameter class="fighting_regular_move_radius" value="20.0" />
 </ai>

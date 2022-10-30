@@ -7,7 +7,7 @@
   
   <parameter class="prefer_roofs_probability" value="0.0" />
   <parameter class="active_guarding_probability" value="0.0" />
-  <parameter class="willingness_to_guard" value="1.0" />
+  <parameter class="willingness_to_guard" value="0.25" />
   <parameter class="guard_wait_time_min" value="10.0" />
   <parameter class="guard_wait_time_max" value="60.0" />
   <parameter class="fire_open_min_time" value="3000.0" /> <!-- squad member combat mode time -->

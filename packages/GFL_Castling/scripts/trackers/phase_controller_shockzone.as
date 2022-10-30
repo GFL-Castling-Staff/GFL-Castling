@@ -36,6 +36,10 @@ class map105_Phase : Tracker {
 		f1.setIntAttribute("disable_enemy_spawnpoints_soldier_count_offset", -100);
 		command.appendChild(f1);
 		m_metagame.getComms().send(command);
+		m_metagame.getComms().send(
+			"<command class='soldier_ai' faction='2'>" + 
+			"  <parameter class='willingness_to_charge' value='0.5' />" +
+			"</command>");		
 	}
 
 	// --------------------------------------------
@@ -76,6 +80,10 @@ class map105_Phase1 : map105_Phase {
 		map105_Phase::start();
 		_log("Phase1 starting");
 		playSoundtrack(m_metagame,"Singularity_3.wav");
+		m_metagame.getComms().send(
+			"<command class='soldier_ai' faction='2'>" + 
+			"  <parameter class='willingness_to_charge' value='0.7' />" +
+			"</command>");		
 	}
 	
 	protected void handleBaseOwnerChangeEvent(const XmlElement@ event) {
@@ -112,8 +120,11 @@ class map105_Phase2 : map105_Phase {
 		_log("Phase2 starting");
 		m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 3.0, 0, "Map105HandleAll"));
 		playSoundtrack(m_metagame,"Map105Defend.wav");
-		m_metagame.getComms().send("<command class='commander_ai' faction='0' base_defense='0.0' border_defense='0.05' />");
-
+		m_metagame.getComms().send("<command class='commander_ai' faction='2' base_defense='0.0' border_defense='0.05' attack_start_spread='0' />");
+		m_metagame.getComms().send(
+			"<command class='soldier_ai' faction='2'>" + 
+			"  <parameter class='willingness_to_charge' value='1.0' />" +
+			"</command>");		
 	}
 
 	protected void handleFactionLoseEvent(const XmlElement@ event) {
@@ -174,6 +185,7 @@ class PhaseControllerMap105 : PhaseController {
 		_log("starting PhaseControllerMap105 tracker, phase=" + m_currentPhaseIndex);
 		m_started = true;
 		startCurrentPhase();
+		
 	}
 
 	void phaseEnded() {

@@ -81,7 +81,7 @@
   <parameter class="day_reaction_time_to_fight_max" value="0.6" />
   <parameter class="night_reaction_time_to_fight_min" value="0.8" />
   <parameter class="night_reaction_time_to_fight_max" value="1.1" />
-  <parameter class="willingness_to_guard" value="0.5" />
+  <parameter class="willingness_to_guard" value="0.25" />
   <parameter class="minimum_distance_to_consider_deploying_cover" value="24.0" />
   <parameter class="recheck_cover_over_shootability_time" value="3.0" />
   <parameter class="max_objects_per_sqm_to_consider_deployment" value="0.08" />
@@ -114,5 +114,4 @@
   <parameter class="grenade_throw_over_obstacle_offset_min" value="-0.5" />
   <parameter class="grenade_throw_over_obstacle_offset_max" value="3.5" />
   <parameter class="uses_vehicles" value="1.0" />
-  <parameter class="willingness_to_charge" value="0.2" />
 </ai>
