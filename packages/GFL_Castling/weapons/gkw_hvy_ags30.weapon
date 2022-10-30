@@ -1,73 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<weapon file="heavy_anti_materiel_rifle.animation_base" key="gkw_hvy_ags30.weapon">
-
-    
-    <!--Weapon specifications-->
-    
+<weapon key="gkw_hvy_ags30.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
     <specification 
-	accuracy_factor="0.9" 
-	barrel_offset="0.4" 
-	can_shoot_standing="0" 
-	can_shoot_crouching="0"
-	can_shoot_prone="1"
+	accuracy_factor="0.85" 
+	barrel_offset="0.6" 
+	can_shoot_standing="1" 
+	can_shoot_crouching="1"
+	can_shoot_prone="0"
 	class="0"
+    sight_range_modifier="1.75"
     slot="0" 
 	magazine_size="30" 
-	name="AGS30" 
-	projectile_speed="90" 
-	retrigger_time="0.141" 
-	suppressed="0" 
+	name="AGS-30 Atlant" 
+	projectile_speed="120" 
+	retrigger_time="0.15" 
+	suppressed="1" 
 	sustained_fire_diminish_rate="1.5" 
 	sustained_fire_grow_step="0.7"
-	spread_range="0.35" />
-	
-	<!--Animations-->
-	
+    stance_accuracy_rate="0.8"
+	spread_range="0.15" />
+    <inventory encumbrance="50.0" buy_price="450.0" sell_price="450.0"/>
+    <commonness value="0.2" in_stock="1" can_respawn_with="1"/>
     <animation key="recoil" animation_key="recoil1" />
     <animation key="recoil" animation_key="recoil2" />
     <animation key="recoil" animation_key="recoil3" />
-    <animation key="reload" animation_key="reloading, Machine gun 0.8" />
+    <animation key="reload" animation_key="reloading, Machine gun 4" />
     <animation key="hold" animation_key="still, heavy weapon" />
-  	<animation state_key="hold_casual"			animation_key="dancing, kazachok" />
+    <animation state_key="hold_casual" animation_key="dancing, kazachok" />
     <animation key="hold_on_wall" animation_key="still" />
     <animation state_key="walking" animation_key="walking, heavy weapon" />
     <animation state_key="walking_backwards" animation_key="walking backwards, heavy weapon" />
-
-	
-	<!--Sounds-->
-	
     <sound key="fire" fileref="ags30_fire_FromEFT.wav" pitch_variety="0.05" volume="1.4" />
     <sound key="magazine_out" fileref="ags30_mgz_out_FromBF1.wav" volume="0.9" />
     <sound key="magazine_in" fileref="ags30_mgz_in_FromBF1.wav" volume="0.9" />
     <sound key="cycle" fileref="ags30_cycle_FromCOD6R.wav" volume="0.9" />
     <sound class="impact" fileref="rifle_drop.wav" />
-   
-	<!--Model, Icon, Cost-->
-   
-	<model filename="gkw_hvy_ags30.xml" />
+    <model filename="gkw_hvy_ags30.xml" />
     <hud_icon filename="gkw_ags30.png" />
-	<inventory  buy_price="80.0" sell_price="10.0" />
-    <commonness value="0" in_stock="0" />
-    <commonness in_stock="0" />
-    <capacity value="0" source="rank" source_value="0.0" />
-    <capacity value="1" source="rank" source_value="3.457" />
-	
-	<!--Ballistics-->
-	
-    
+    <capacity value="0" source="rank" source_value="0.0"/>
+    <capacity value="1" source="rank" source_value="10.0"/>
     <weak_hand_hold offset="0.3" />
     <projectile file="standard_agl.projectile">
-        <result class="blast"  damage="3.5"  radius="2" decal="1" push="1" character_state="death" 	faction_compare="not_equal"/>
+        <result class="blast"  damage="4.5"  radius="4.5" decal="1" push="0.3" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
     </projectile>
-    
-    <!--Accuracy, Movement speed-->
-    
-    <stance state_key="running" accuracy="0.3" />
-    <stance state_key="walking" accuracy="0.3" />
-    <stance state_key="crouch_moving" accuracy="0.3" />
-    <stance state_key="prone_moving" accuracy="0.5" />
-    <stance state_key="standing" accuracy="0.5" />
-    <stance state_key="crouching" accuracy="0.7" />
-    <stance state_key="prone" accuracy="0.8" /> />
-
+    <ballistics curve_height="18.0" near_far_distance="45.0" speed_estimation_near="10.0" speed_estimation_far="16.0" max_speed="150.0" randomness="0.0" tweak_factor="1.55"/>
+    <modifier class="speed" value="-0.4"/>
+    <modifier class="detectability" value="0.1"/>
+    <tag name="bazooka"/>
+    <stance state_key="running" accuracy="0.1"/>
+    <stance state_key="walking" accuracy="0.15"/>
+    <stance state_key="crouch_moving" accuracy="0.3"/>
+    <stance state_key="standing" accuracy="0.4"/>
+    <stance state_key="crouching" accuracy="0.8"/>
+    <stance state_key="prone" accuracy="0.8"/>
+    <stance state_key="prone_moving" accuracy="0.8"/>
+    <stance state_key="over_wall" accuracy="0.8"/>
+    <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
+    <target_factors tag="heavy_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0"/>
+    <target_factors tag="light_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="6.0"/>
+    <target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="5.0"/>
+    <target_factors tag="shield" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
 </weapon>
