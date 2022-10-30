@@ -1,0 +1,53 @@
+material hyz_ring_1
+{
+	receive_shadows off
+    technique
+    {
+        pass
+        {
+			lighting off
+			fog_override true
+			depth_write off
+			scene_blend add
+            texture_unit{
+                texture hyz_ring_1.png
+            }
+        }
+    }
+}
+
+material hyz_ring_2
+{
+	receive_shadows off
+    technique
+    {
+        pass
+        {
+			lighting off
+			fog_override true
+			depth_write off
+			scene_blend add
+            texture_unit{
+                texture hyz_ring_2.png
+            }
+        }
+    }
+}
+
+material hyz_soft_point
+{
+	receive_shadows off
+    technique
+    {
+        pass
+        {
+			lighting off
+			fog_override true
+			depth_write off
+			scene_blend add
+            texture_unit{
+                texture ct_point_soft.png
+            }
+        }
+    }
+}

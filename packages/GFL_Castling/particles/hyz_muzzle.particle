@@ -1,0 +1,141 @@
+particle_system hyz_laser_circle_1
+{
+	quota 100
+	material hyz_ring_1
+	particle_width 1.5
+	particle_height 1.5
+	renderer billboard
+	billboard_type perpendicular_self
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 0 0 1
+
+	emitter Point{
+		angle 1.1
+		colour 1 1 1 1
+		direction 0 1 0
+		emission_rate 21
+		position 0 0 0
+		velocity 0.001
+		time_to_live 0.5
+		duration 0.05
+    }
+
+	affector Scaler
+	{
+		rate 0.1
+	}
+
+	affector ColourFader2
+	{
+		red1 	0
+		green1 	0
+		blue1 	0
+		alpha1 	0
+		red2 	0
+		green2	0
+		blue2	0
+		alpha2	-5
+		state_change 0.2
+	}
+
+	affector Rotator
+	{
+		rotation_speed_range_start	45
+		rotation_speed_range_end	45
+		rotation_range_start 0
+		rotation_range_end 0
+	}
+}
+
+particle_system hyz_laser_circle_2
+{
+	quota 100
+	material hyz_ring_2
+	particle_width 0.7
+	particle_height 0.7
+	renderer billboard
+	billboard_type perpendicular_self
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 0 0 1
+
+	emitter Point{
+		angle 1.1
+		colour 1 1 1 1
+		direction 0 1 0
+		emission_rate 21
+		position 0 0 0
+		velocity 0.001
+		time_to_live 0.5
+		duration 0.05
+    }
+
+	affector Scaler
+	{
+		rate 0.1
+	}
+
+	affector ColourFader2
+	{
+		red1 	0
+		green1 	0
+		blue1 	0
+		alpha1 	0
+		red2 	0
+		green2	0
+		blue2	0
+		alpha2	-5
+		state_change 0.2
+	}
+
+	affector Rotator
+	{
+		rotation_speed_range_start	450
+		rotation_speed_range_end	450
+		rotation_range_start 0
+		rotation_range_end 0
+	}
+}
+
+particle_system hyz_laser_point_trail
+{
+	quota 1000
+	particle_width 0.2
+	particle_height 0.2
+    renderer billboard
+	billboard_type oriented_self
+    material hyz_soft_point
+	iteration_interval 0.005
+	emitter Box
+	{
+		angle 360
+		colour 0.42 0.58 0.9 1
+		direction 0 1 0
+		emission_rate 300
+		position 0 0 0
+		velocity_min 0.05
+		velocity_max 0.25
+		time_to_live_min 0.6
+		time_to_live_max 0.9
+		duration 3
+		depth 1.5
+        height 1.5
+        width 1.5
+	}    
+
+	affector ColourFader2
+	{
+		red1	 0
+		green1  0
+		blue1	0
+		alpha1	0
+		red2	 0
+		green2  0
+		blue2	0
+		alpha2	-40
+		state_change 0.05
+	}    
+}	
