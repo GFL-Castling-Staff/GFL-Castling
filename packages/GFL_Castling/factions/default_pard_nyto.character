@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<character filename="paradeus_nyto.text_lines">
+    <effect class="blood" ref="BloodSplat" />
+    <effect class="blood" type="splat_map" size="3.0" atlas_index="3" layer="3" additive="1" apply_gore_factor="1" />
+    <animation key="stunned" target_key="stunned_sit 1.0" />
+</character>

@@ -674,6 +674,7 @@
 			<sound key="death" fileref="Hunter_buhuo_RETREAT_JP.wav" pitch_variety="0.001" volume="0.8" />
 			<sound key="throw" fileref="Hunter_buhuo_SKILL01_JP.wav" pitch_variety="0.001" volume="0.8" />
 			<sound key="throw" fileref="Hunter_buhuo_SKILL03_JP.wav" pitch_variety="0.001" volume="0.8" />
+			<animation key="stunned" target_key="stunned_sit 1.0" />
 		</character>
 		<model filename="sfd_boss_hunter.xml" />
 		<ai filename="sf_hunter.ai" />
@@ -770,6 +771,7 @@
 			<sound key="death" fileref="Alchemist_buhuo_DEAD02_JP.wav" pitch_variety="0.001" volume="0.8" />
 			<sound key="throw" fileref="Alchemist_buhuo_SKILL02_JP.wav" pitch_variety="0.001" volume="0.8" />
 			<sound key="throw" fileref="Alchemist_buhuo_SKILL01_JP.wav" pitch_variety="0.001" volume="0.8" />
+			<animation key="stunned" target_key="stunned_sit 1.0" />
 		</character>
 		<model filename="sfd_alchemist.xml" />
 		<ai filename="sf_alchemist.ai" />
@@ -793,6 +795,7 @@
 			<sound key="death" fileref="BossGager_buhuo_RETREAT_JP.wav" pitch_variety="0.001" volume="0.8" />
 			<sound key="throw" fileref="BossGager_buhuo_SKILL01_JP.wav" pitch_variety="0.001" volume="0.8" />
 			<sound key="throw" fileref="BossGager_buhuo_SKILL03_JP.wav" pitch_variety="0.001" volume="0.8" />
+			<animation key="stunned" target_key="stunned_sit 1.0" />
 		</character>
 		<model filename="sfd_gager.xml" />
 		<ai filename="sf_gager.ai" />
@@ -816,6 +819,7 @@
 			<sound key="death" fileref="Excutioner_buhuo_DEAD01_JP.wav" pitch_variety="0.001" volume="0.8" />
 			<sound key="throw" fileref="Excutioner_buhuo_SKILL02_JP.wav" pitch_variety="0.001" volume="0.8" />
 			<sound key="throw" fileref="Excutioner_buhuo_SKILL03_JP.wav" pitch_variety="0.001" volume="0.8" />
+			<animation key="stunned" target_key="stunned_sit 1.0" />
 		</character>
 		<model filename="sfd_excutioner.xml" />
 		<ai filename="eod.ai" />
@@ -838,6 +842,7 @@
 			<sound key="death" fileref="Excutioner_buhuo_DEAD01_JP.wav" pitch_variety="0.001" volume="0.8" />
 			<sound key="throw" fileref="Excutioner_buhuo_SKILL02_JP.wav" pitch_variety="0.001" volume="0.8" />
 			<sound key="throw" fileref="Excutioner_buhuo_SKILL03_JP.wav" pitch_variety="0.001" volume="0.8" />
+			<animation key="stunned" target_key="stunned_sit 1.0" />
 			<parameter class="can_use_vehicles" value="0" /> 
 			<parameter class="walking_steer_amount" value="0.63" />
 			<parameter class="running_steer_amount" value="0.63" />
@@ -863,6 +868,7 @@
 		<character filename="default_sf.text_lines">
 			<sound key="death" fileref="" pitch_variety="0.001" volume="0.8" />
 			<sound key="throw" fileref="" pitch_variety="0.001" volume="0.8" />
+			<animation key="stunned" target_key="stunned_sit 1.0" />
 		</character>
 		<model filename="sfd_m16a1.xml" />
 		<ai filename="sf_m16a1.ai" />
