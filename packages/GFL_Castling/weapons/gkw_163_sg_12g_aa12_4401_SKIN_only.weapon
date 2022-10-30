@@ -49,7 +49,7 @@
 	<modifier class="detectability" value="0.45"/>
 	<tag name="shotgun"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
+	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
@@ -125,7 +125,7 @@
 	<modifier class="detectability" value="0.45"/>
 	<tag name="shotgun"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
+	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>

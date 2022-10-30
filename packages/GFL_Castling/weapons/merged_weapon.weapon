@@ -1157,7 +1157,7 @@
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
+	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
@@ -1215,7 +1215,7 @@
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<stance state_key="running" accuracy="0.7"/>
-	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
+	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
@@ -1268,7 +1268,7 @@
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
+	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
@@ -1323,7 +1323,7 @@
 	<tag name="shotgun"/>
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
+	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
@@ -1380,7 +1380,7 @@
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
+	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
@@ -1438,7 +1438,7 @@
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
+	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
@@ -2008,7 +2008,7 @@
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<stance state_key="running" accuracy="0.7"/>
-	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
+	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
@@ -2529,7 +2529,7 @@
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<stance state_key="running" accuracy="0.7"/>
-	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
+	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
@@ -6077,7 +6077,7 @@
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
+	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
@@ -8804,7 +8804,7 @@
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_mg_qjy88.xml"/>
 	<hud_icon filename="gkw_type88_skill.png"/>
-	<shield offset="-0.60 0.0 -0.2" extent="1.2 1.5 2.4"/>
+	<shield offset="-0.60 0.0 -0.2" extent="1.2 1.5 2.4" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
@@ -10648,7 +10648,7 @@
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<stance state_key="running" accuracy="0.7"/>
-	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
+	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
@@ -10705,7 +10705,7 @@
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<stance state_key="running" accuracy="0.7"/>
-	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
+	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
@@ -10912,7 +10912,7 @@
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
+	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
@@ -10967,7 +10967,7 @@
 	<tag name="shotgun"/>
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
+	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
@@ -11094,7 +11094,7 @@
 	<stance state_key="prone" accuracy="1"/>
 	<modifier class="speed" value="1.0"/>
 	<modifier class="hit_success_probability" value="-0.5"/>
-	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
+	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
@@ -11195,7 +11195,7 @@
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
+	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
@@ -11253,7 +11253,7 @@
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<stance state_key="running" accuracy="0.7"/>
-	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
+	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
@@ -11317,7 +11317,7 @@
 	<stance state_key="crouching" accuracy="0.85"/>
 	<stance state_key="prone" accuracy="0.95"/>
 	<stance state_key="over_wall" accuracy="0.95"/>
-	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
+	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
 	<modifier class="hit_success_probability" value="-0.4"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -11377,7 +11377,7 @@
 	<modifier class="speed" value="-0.15"/>
 	<modifier class="detectability" value="0.35"/>
 	<modifier class="hit_success_probability" value="-0.4"/>
-	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
+	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
@@ -11432,7 +11432,7 @@
 	<stance state_key="crouching" accuracy="0.85"/>
 	<stance state_key="prone" accuracy="0.95"/>
 	<stance state_key="over_wall" accuracy="0.95"/>
-	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
+	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
 	<modifier class="hit_success_probability" value="-0.4"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -12084,7 +12084,7 @@
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
+	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
@@ -12139,7 +12139,7 @@
 	<tag name="shotgun"/>
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
+	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
@@ -13298,7 +13298,7 @@
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
+	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
@@ -14294,7 +14294,7 @@
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<stance state_key="running" accuracy="0.7"/>
-	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
+	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
@@ -14350,7 +14350,7 @@
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<stance state_key="running" accuracy="0.7"/>
-	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
+	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
@@ -14405,7 +14405,7 @@
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<stance state_key="running" accuracy="0.7"/>
-	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
+	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
@@ -14461,7 +14461,7 @@
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<stance state_key="running" accuracy="0.7"/>
-	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
+	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
@@ -14634,7 +14634,7 @@
 	<tag name="shotgun"/>
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
+	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
@@ -14690,7 +14690,7 @@
 	<tag name="shotgun"/>
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
+	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
@@ -14854,7 +14854,7 @@
 	<modifier class="hit_success_probability" value="-0.5"/>
 	<modifier class="speed" value="0.1"/>
 	<tag name="shotgun"/>
-	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
+	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
@@ -14914,7 +14914,7 @@
 	<modifier class="hit_success_probability" value="-0.5"/>
 	<modifier class="speed" value="0.1"/>
 	<tag name="shotgun"/>
-	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
+	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
@@ -15535,7 +15535,7 @@
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<stance state_key="running" accuracy="0.7"/>
-	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
+	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
@@ -15592,7 +15592,7 @@
 	<tag name="shotgun"/>
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
+	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
@@ -16543,7 +16543,7 @@
 	<stance state_key="crouching" accuracy="0.85"/>
 	<stance state_key="prone" accuracy="1.0"/>
 	<stance state_key="over_wall" accuracy="1.0"/>
-	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
+	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
@@ -16601,7 +16601,7 @@
 	<stance state_key="crouching" accuracy="0.85"/>
 	<stance state_key="prone" accuracy="1.0"/>
 	<stance state_key="over_wall" accuracy="1.0"/>
-	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
+	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
@@ -16829,7 +16829,7 @@
 	<target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
 	<target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0"/>
 	<target_factors tag="commander" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0"/>
-	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
+	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
@@ -16865,7 +16865,7 @@
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
+	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
@@ -16965,7 +16965,7 @@
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
+	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
@@ -17023,7 +17023,7 @@
 	<tag name="shotgun"/>
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
+	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
@@ -17076,7 +17076,7 @@
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
+	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
@@ -17608,7 +17608,7 @@
 	<tag name="shotgun"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
+	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
@@ -18735,7 +18735,7 @@
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="cl_s.projectile"/>
 	<ballistics near_far_distance="0.0001" speed_estimation_near="0.0001" speed_estimation_far="0.0001" max_speed="900.0" randomness="0.0001" curve_height="0.0001"/>
-	<shield offset="-0.55 0.0 0" extent="0.8 0.5 1.0"/>
+	<shield offset="-0.55 0.0 0" extent="0.8 0.5 1.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
@@ -19093,7 +19093,7 @@
 	<commonness value="0" in_stock="1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<inventory encumbrance="50.0" price="99.0"/>
-	<shield offset="0.5 -0.35 0" extent="0.8 1.4 1.6"/>
+	<shield offset="0.5 -0.35 0" extent="0.8 1.4 1.6" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
@@ -20958,7 +20958,7 @@
 	<stance state_key="prone" accuracy="1.9"/>
 	<stance state_key="over_wall" accuracy="1.9"/>
 	<modifier class="speed" value="0.1"/>
-	<shield offset="-1.2 0.0 0" extent="0.4 1.5 2.0"/>
+	<shield offset="-1.2 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
@@ -21014,7 +21014,7 @@
 	<stance state_key="crouching" accuracy="1.0"/>
 	<stance state_key="prone" accuracy="1"/>
 	<stance state_key="over_wall" accuracy="1"/>
-	<shield offset="-1.2 0.0 0" extent="0.4 1.5 2.0"/>
+	<shield offset="-1.2 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
 	<modifier class="speed" value="-0.25"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -23204,7 +23204,7 @@
 	<tag name="shotgun"/>
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
+	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
@@ -23257,7 +23257,7 @@
 	<tag name="shotgun"/>
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
+	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
@@ -23371,7 +23371,7 @@
 	<tag name="shotgun"/>
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
+	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
@@ -27671,7 +27671,7 @@
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<stance state_key="running" accuracy="0.7"/>
-	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
+	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
@@ -28100,7 +28100,7 @@
 	<tag name="shotgun"/>
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
+	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
@@ -28258,7 +28258,7 @@
 	<tag name="shotgun"/>
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
+	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
@@ -28313,7 +28313,7 @@
 	<tag name="shotgun"/>
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
+	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
@@ -29473,7 +29473,7 @@
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="1.8" kill_decay_start_time="0.09" kill_decay_end_time="0.800"/>
 	</projectile>
-	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
+	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
@@ -29699,7 +29699,7 @@
 	<stance state_key="over_wall" accuracy="1.0"/>
 	<tag name="shotgun"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
+	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
@@ -29803,7 +29803,7 @@
 	<stance state_key="over_wall" accuracy="1.0"/>
 	<tag name="shotgun"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
+	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
@@ -29937,7 +29937,7 @@
 	<stance state_key="prone" accuracy="1.0"/>
 	<stance state_key="over_wall" accuracy="1.0"/>
 	<tag name="shotgun"/>
-	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
+	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
@@ -30037,7 +30037,7 @@
 	<stance state_key="crouching" accuracy="0.9"/>
 	<stance state_key="prone" accuracy="1.0"/>
 	<stance state_key="over_wall" accuracy="1.0"/>
-	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
+	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
@@ -30174,7 +30174,7 @@
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<stance state_key="running" accuracy="0.7"/>
-	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
+	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
@@ -30301,7 +30301,7 @@
 	<stance state_key="prone" accuracy="1"/>
 	<modifier class="speed" value="1.0"/>
 	<modifier class="hit_success_probability" value="-0.5"/>
-	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
+	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
@@ -30436,7 +30436,7 @@
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<stance state_key="running" accuracy="0.7"/>
-	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
+	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
@@ -30593,7 +30593,7 @@
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<stance state_key="running" accuracy="0.7"/>
-	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
+	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
@@ -30650,7 +30650,7 @@
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<stance state_key="running" accuracy="0.7"/>
-	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
+	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
@@ -31485,7 +31485,7 @@
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<stance state_key="running" accuracy="0.7"/>
-	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
+	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
@@ -31542,7 +31542,7 @@
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<stance state_key="running" accuracy="0.7"/>
-	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
+	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
@@ -34863,7 +34863,7 @@
 	<stance state_key="prone" accuracy="1.9"/>
 	<stance state_key="over_wall" accuracy="1.9"/>
 	<modifier class="speed" value="0.1"/>
-	<shield offset="-1.2 0.0 0" extent="0.4 1.5 2.0"/>
+	<shield offset="-1.2 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
@@ -34919,7 +34919,7 @@
 	<stance state_key="crouching" accuracy="1.0"/>
 	<stance state_key="prone" accuracy="1"/>
 	<stance state_key="over_wall" accuracy="1"/>
-	<shield offset="-1.2 0.0 0" extent="0.4 1.5 2.0"/>
+	<shield offset="-1.2 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
 	<modifier class="speed" value="-0.25"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -37614,7 +37614,7 @@
 	<stance state_key="crouching" accuracy="1"/>
 	<stance state_key="prone" accuracy="1.2"/>
 	<modifier class="speed" value="-0.2"/>
-	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
+	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
@@ -37998,7 +37998,7 @@
 	<stance state_key="standing" accuracy="0.8"/>
 	<stance state_key="crouching" accuracy="1"/>
 	<stance state_key="prone" accuracy="1"/>
-	<shield offset="-0.3 -0.2 0.27" extent="0.65 1.4 1.75"/>
+	<shield offset="-0.3 -0.2 0.27" extent="0.65 1.4 1.75" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
@@ -38239,7 +38239,7 @@
 	<stance state_key="prone" accuracy="1"/>
 	<stance state_key="over_wall" accuracy="1"/>
 	<modifier class="speed" value="0.1"/>
-	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
+	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
@@ -39460,7 +39460,7 @@
 	<stance state_key="prone" accuracy="1.1"/>
 	<modifier class="speed" value="+0.5"/>
 	<modifier class="hit_success_probability" value="-0.2"/>
-	<shield offset="-0.05 0.0 0.05" extent="0.15 0.3 0.4"/>
+	<shield offset="-0.05 0.0 0.05" extent="0.15 0.3 0.4" usable_for_cover="0"/>
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
 	<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
@@ -39584,7 +39584,7 @@
 	<stance state_key="standing" accuracy="0.8"/>
 	<stance state_key="crouching" accuracy="1"/>
 	<stance state_key="prone" accuracy="1"/>
-	<shield offset="-0.4 -0.2 0.3" extent="0.4 1.4 1"/>
+	<shield offset="-0.4 -0.2 0.3" extent="0.4 1.4 1" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
@@ -40516,7 +40516,7 @@
 	<stance state_key="standing" accuracy="0.98"/>
 	<stance state_key="crouching" accuracy="1.1"/>
 	<stance state_key="prone" accuracy="1.2"/>
-	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
+	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
@@ -40816,7 +40816,7 @@
 	<stance state_key="standing" accuracy="0.8"/>
 	<stance state_key="crouching" accuracy="1"/>
 	<stance state_key="prone" accuracy="1"/>
-	<shield offset="-0.4 -0.2 -0.03" extent="0.4 1.4 0.7"/>
+	<shield offset="-0.4 -0.2 -0.03" extent="0.4 1.4 0.7" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
@@ -40875,7 +40875,7 @@
 	<stance state_key="standing" accuracy="0.8"/>
 	<stance state_key="crouching" accuracy="1"/>
 	<stance state_key="prone" accuracy="1"/>
-	<shield offset="-0.4 -0.2 -0.03" extent="0.4 1.4 0.7"/>
+	<shield offset="-0.4 -0.2 -0.03" extent="0.4 1.4 0.7" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
@@ -41931,7 +41931,7 @@
 	<stance state_key="standing" accuracy="0.8"/>
 	<stance state_key="crouching" accuracy="1"/>
 	<stance state_key="prone" accuracy="1"/>
-	<shield offset="-0.4 -0.2 -0.03" extent="0.4 1.4 0.7"/>
+	<shield offset="-0.4 -0.2 -0.03" extent="0.4 1.4 0.7" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
@@ -42608,7 +42608,7 @@
 	<result class="hit" kill_probability="0.55" kill_decay_start_time="0.33" kill_decay_end_time="0.68"/>
 	</projectile>
 	<modifier class="speed" value="-0.02"/>
-	<shield offset="-0.55 0.0 0" extent="0.8 0.5 1.0"/>
+	<shield offset="-0.55 0.0 0" extent="0.8 0.5 1.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
@@ -43236,7 +43236,7 @@
 	<stance state_key="standing" accuracy="0.8"/>
 	<stance state_key="crouching" accuracy="1"/>
 	<stance state_key="prone" accuracy="1"/>
-	<shield offset="-0.3 -0.2 -0.05" extent="0.4 1.3 0.9"/>
+	<shield offset="-0.3 -0.2 -0.05" extent="0.4 1.3 0.9" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
@@ -44487,7 +44487,7 @@
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<stance state_key="running" accuracy="0.7"/>
-	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
+	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
