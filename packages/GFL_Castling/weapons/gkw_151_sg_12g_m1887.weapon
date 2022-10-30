@@ -45,7 +45,7 @@
     <tag name="shotgun"/>
     <commonness value="0.2" in_stock="0" can_respawn_with="1"/>
     <capacity value="1" source="rank" source_value="0.0"/>
-    <shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0"/>
+    <shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
     <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
     <modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
     <target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>

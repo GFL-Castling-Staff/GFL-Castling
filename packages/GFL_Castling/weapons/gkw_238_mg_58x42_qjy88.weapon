@@ -60,7 +60,7 @@
 		<sound class="impact" fileref="rifle_drop.wav" />
 		<model filename="gkw_mg_qjy88.xml" />
 		<hud_icon filename="gkw_type88_skill.png" />
-		<shield offset="-0.60 0.0 -0.2" extent="1.2 1.5 2.4" />
+		<shield offset="-0.60 0.0 -0.2" extent="1.2 1.5 2.4" usable_for_cover="0"/>
 		<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0" />
 		<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
 		<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />

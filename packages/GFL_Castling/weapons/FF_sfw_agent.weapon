@@ -68,7 +68,7 @@
     <stance state_key="crouching" accuracy="1" />
     <stance state_key="prone" accuracy="1.2" />
     <modifier class="speed" value="-0.2" />
-    <shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" />
+    <shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0" />
     <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0" />
     <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
     <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
