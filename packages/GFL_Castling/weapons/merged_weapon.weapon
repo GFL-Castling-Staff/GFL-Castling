@@ -18862,7 +18862,7 @@
 </weapon>
 
 <weapon key="gkw_hvy_ags30.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification accuracy_factor="0.85" barrel_offset="0.6" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" class="0" sight_range_modifier="1.75" slot="0" magazine_size="30" name="AGS-30 Atlant" projectile_speed="120" retrigger_time="0.15" suppressed="1" sustained_fire_diminish_rate="1.5" sustained_fire_grow_step="0.7" stance_accuracy_rate="0.8" spread_range="0.15"/>
+	<specification accuracy_factor="0.85" barrel_offset="0.6" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" class="4" sight_range_modifier="1.75" slot="0" magazine_size="30" name="AGS-30 Atlant" projectile_speed="120" retrigger_time="0.15" last_burst_retrigger_time="-1" burst_shots="3" suppressed="1" sustained_fire_diminish_rate="1.5" sustained_fire_grow_step="0.7" stance_accuracy_rate="0.8" spread_range="0.15"/>
 	<inventory encumbrance="50.0" buy_price="450.0" sell_price="450.0"/>
 	<commonness value="0.2" in_stock="1" can_respawn_with="1"/>
 	<animation key="recoil" animation_key="recoil1"/>
@@ -18884,9 +18884,7 @@
 	<capacity value="0" source="rank" source_value="0.0"/>
 	<capacity value="1" source="rank" source_value="10.0"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="standard_agl.projectile">
-	<result class="blast" damage="4.5" radius="4.5" decal="1" push="0.3" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
-	</projectile>
+	<projectile file="30mm_agl_ags.projectile"/>
 	<ballistics curve_height="18.0" near_far_distance="45.0" speed_estimation_near="10.0" speed_estimation_far="16.0" max_speed="150.0" randomness="0.0" tweak_factor="1.55"/>
 	<modifier class="speed" value="-0.4"/>
 	<modifier class="detectability" value="0.1"/>
@@ -19984,7 +19982,7 @@
 	<animation state_key="hold_on_wall" animation_key="still, 88typemod3"/>
 	<animation state_key="still_against_wall" animation_key="still against wall, 88typemod3_melee"/>
 	<animation state_key="hold_casual" animation_key="still, 88typemod3"/>
-	<animation state_key="running" animation_key="running, 88typemod3"/>
+	<animation state_key="running" animation_key="running, 88typemod3_melee"/>
 	<animation state_key="walking" animation_key="walking, 88typemod3"/>
 	<animation state_key="crouching" animation_key="still, 88typemod3"/>
 	<animation state_key="crouch_moving" animation_key="walking, 88typemod3"/>

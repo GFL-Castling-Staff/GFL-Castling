@@ -6,13 +6,15 @@
 	can_shoot_standing="1" 
 	can_shoot_crouching="1"
 	can_shoot_prone="0"
-	class="0"
+	class="4"
     sight_range_modifier="1.75"
     slot="0" 
 	magazine_size="30" 
 	name="AGS-30 Atlant" 
 	projectile_speed="120" 
 	retrigger_time="0.15" 
+    last_burst_retrigger_time ="-1"
+    burst_shots="3"
 	suppressed="1" 
 	sustained_fire_diminish_rate="1.5" 
 	sustained_fire_grow_step="0.7"
@@ -39,9 +41,7 @@
     <capacity value="0" source="rank" source_value="0.0"/>
     <capacity value="1" source="rank" source_value="10.0"/>
     <weak_hand_hold offset="0.3" />
-    <projectile file="standard_agl.projectile">
-        <result class="blast"  damage="4.5"  radius="4.5" decal="1" push="0.3" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
-    </projectile>
+    <projectile file="30mm_agl_ags.projectile"/>
     <ballistics curve_height="18.0" near_far_distance="45.0" speed_estimation_near="10.0" speed_estimation_far="16.0" max_speed="150.0" randomness="0.0" tweak_factor="1.55"/>
     <modifier class="speed" value="-0.4"/>
     <modifier class="detectability" value="0.1"/>

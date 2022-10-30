@@ -8,7 +8,6 @@
 	pulldown_in_air="-20.5" 
 	can_be_detected_by_driver="0" 
 	can_be_detected_by_footmen="0" >
-    <tag name="grenade" />
 
     <result class="blast" radius="0.0" damage="0.0" push="0.0" decal="0" character_state="none" />
     <trigger class="time" time_to_live="3.0"/>
