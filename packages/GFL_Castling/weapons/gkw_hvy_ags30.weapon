@@ -3,7 +3,7 @@
     <specification 
 	accuracy_factor="0.85" 
 	barrel_offset="0.6" 
-	can_shoot_standing="1" 
+	can_shoot_standing="0" 
 	can_shoot_crouching="1"
 	can_shoot_prone="0"
 	class="4"
@@ -25,7 +25,7 @@
     <animation key="recoil" animation_key="recoil1" />
     <animation key="recoil" animation_key="recoil2" />
     <animation key="recoil" animation_key="recoil3" />
-    <animation key="reload" animation_key="reloading, Machine gun 4" />
+    <animation key="reload" animation_key="reloading, agl 4.0" />
     <animation key="hold" animation_key="still, heavy weapon" />
     <animation state_key="hold_casual" animation_key="dancing, kazachok" />
     <animation key="hold_on_wall" animation_key="still" />
