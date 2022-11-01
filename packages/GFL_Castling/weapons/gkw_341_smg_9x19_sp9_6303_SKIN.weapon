@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<weapon key="gkw_sp9.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+<weapon key="gkw_sp9_6303.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 <tag name="smg" />
     <specification 
 		accuracy_factor="0.88" 
@@ -9,7 +9,7 @@
     spread_range="0.2"
 		magazine_size="30" 
     carry_in_two_hands="1"
-		name="SP-9" 
+		name="SP-9-[Dream Sleeping In The Galaxy]" 
 		projectile_speed="105" 
 		retrigger_time="0.1" 
 		suppressed="0" 
@@ -17,7 +17,7 @@
 		sustained_fire_diminish_rate="1.35" 
 		sustained_fire_grow_step="0.2" 
     stab_enabled="1"/>
-    <commonness value="0.2" in_stock="0" can_respawn_with="1" />
+    <commonness value="0" in_stock="0" can_respawn_with="1" />
 	  <inventory encumbrance="2.0" buy_price="7.0" sell_price="7.0"/>
 	  <capacity value="1" source="rank" source_value="0.0" />
 
@@ -61,7 +61,7 @@
     <sound key="cycle" fileref="SP9_SKILL3_JP.wav" volume="1.4" pitch_variety="0"/>
     <sound class="impact" fileref="rifle_drop.wav" volume="1"/>
     <model filename="gkw_smg_ump9.xml" />
-    <hud_icon filename="gkw_sp9.png" />
+    <hud_icon filename="gkw_sp9_6303.png" />
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet.projectile">
         <result class="hit" kill_probability="1.6" kill_probability_offset_on_successful_hit="3.5" kill_decay_start_time="0.28" kill_decay_end_time="0.58" />
