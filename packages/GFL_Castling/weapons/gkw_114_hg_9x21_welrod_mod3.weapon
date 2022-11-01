@@ -40,7 +40,7 @@
     <animation state_key="stabbing" 			animation_key="pistol whip 3" />
     <!--Animations-->
     <inventory buy_price="250.0" sell_price="200.0" />
-    <commonness in_stock="0" />
+    <commonness value="0" in_stock="0" />
 	<capacity value="1" source="rank" source_value="0.0" />
         <!--Sounds-->
     <sound key="fire" fileref="welrod_fire_FromBF5.wav" pitch_variety="0.05" volume="1.6" />

@@ -246,6 +246,8 @@ dictionary commandSkillIndex = {
 
         // WERLODMOD3
         {"gkw_welrodmod3.weapon",21},
+        {"gkw_welrodmod3_411.weapon",21},
+        {"gkw_welrodmod3_2103.weapon",21},
 
         // FAL
         {"gkw_fal.weapon",22},

@@ -102,6 +102,8 @@ dictionary MOD3craftList = {
 
     {"gkw_ribeyrolles.weapon","gkw_ribeyrollesmod3.weapon"},
     {"gkw_welrod.weapon","gkw_welrodmod3.weapon"},
+    {"gkw_welrod_411.weapon","gkw_welrodmod3_411.weapon"},
+    {"gkw_welrod_2103.weapon","gkw_welrodmod3_2103.weapon"},
 
     {"gkw_lwmmg.weapon","gkw_lwmmgmod3.weapon"},
     {"gkw_lwmmg_1808.weapon","gkw_lwmmgmod3_1808.weapon"},

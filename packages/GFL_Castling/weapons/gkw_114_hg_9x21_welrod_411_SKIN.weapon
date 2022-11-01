@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<weapon key="gkw_welrod.weapon" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+<!-- 体素模型由ina提供 -->
+<weapon key="gkw_welrod_411.weapon" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
     <!--Weapon specifications-->
     <specification
 	retrigger_time="-1"
@@ -9,7 +10,7 @@
 	magazine_size="8"
 	suppressed="1"
 	carry_in_two_hands="0" 
-	name="Welrod MK.II"
+	name="Welrod MK.II-[English in Love]"
 	class="1"
 	reload_one_at_a_time="0"
 	sight_range_modifier="1.0"
@@ -39,7 +40,7 @@
     <animation state_key="stabbing" 			animation_key="pistol whip 3" />
     <!--Animations-->
     <inventory buy_price="8.0" sell_price="8.0" />
-    <commonness value="0.2" in_stock="0" />
+    <commonness value="0" in_stock="0" />
     <!--Sounds-->
     <sound key="fire" fileref="welrod_fire_FromBF5.wav" pitch_variety="0.05" volume="1.6" />
     <sound key="magazine_out" fileref="welrod_mgz_out_FromBF5.wav" volume="0.7" />
@@ -47,7 +48,7 @@
     <sound key="cycle" fileref="welrod_cycle_FromBF5.wav" volume="0.7" />
     <!--Model, Icon, Cost-->
     <model filename="gkw_welrod_From_melondove.xml" />
-    <hud_icon filename="gkw_welrod.png" />
+    <hud_icon filename="gkw_welrod_411.png" />
     <!--Ballistics-->
     <weak_hand_hold offset="0.1" />
     <projectile file="bullet.projectile" can_be_detected_by_footmen="0">
