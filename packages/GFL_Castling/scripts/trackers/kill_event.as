@@ -270,7 +270,7 @@ class kill_event : Tracker {
             if (factionId==0 && characterId > 0){
                 string c_weaponType = getPlayerWeaponFromList(playerId,0);
                 string c_armorType = getPlayerWeaponFromList(playerId,4);
-                if(c_weaponType=="gkw_ppkmod3.weapon"){
+                if(c_weaponType=="gkw_ppkmod3.weapon" || c_weaponType =="gkw_ppkmod3_3905.weapon"){
                     int i = findSkillIndex(characterId,"PPKMOD3");
                     if(i >=0){
                         SkillArray[i].m_time-=2.0;
@@ -296,7 +296,7 @@ class kill_event : Tracker {
                 addCustomStatToCharacter(m_metagame,"sfboss_kill",characterId);
             }
 
-            if(KillerWeaponKey=="gkw_ppkmod3.weapon"){
+            if(KillerWeaponKey=="gkw_ppkmod3.weapon" || KillerWeaponKey=="gkw_ppkmod3_3905.weapon"){
                 // 乌鸦是猪，望周知
                 if (killway=="hit"){
                     int j = findKillCountIndex(characterId);
