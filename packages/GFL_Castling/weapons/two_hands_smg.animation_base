@@ -17,14 +17,14 @@
 	<capacity value="1" source="rank" source_value="0.0" />
 	<sound class="impact" fileref="rifle_drop.wav" />
 	<stance state_key="running" accuracy="0.3" />
-	<stance state_key="walking" accuracy="0.675" />
-	<stance state_key="crouch_moving" accuracy="0.75" />
-	<stance state_key="standing" accuracy="0.85" />
+	<stance state_key="walking" accuracy="0.6" />
+	<stance state_key="standing" accuracy="0.6" />
 	<stance state_key="crouching" accuracy="0.9" />
-	<stance state_key="prone" accuracy="0.95" />
-	<stance state_key="prone_moving" accuracy="0.3" />
-	<stance state_key="over_wall" accuracy="1" />
-	<modifier class="speed" value="+0.4" />
+	<stance state_key="crouch_moving" accuracy="0.5" />
+	<stance state_key="prone" accuracy="0.88" />
+	<stance state_key="prone_moving" accuracy="0.5" />
+	<stance state_key="over_wall" accuracy="0.88" />
+	<modifier class="speed" value="0.2" />
 
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0" />
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0" />
