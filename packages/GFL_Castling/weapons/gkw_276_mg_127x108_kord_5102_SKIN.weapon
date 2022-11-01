@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapons>
-    <weapon file="heavy_mg_standing.animation_base" key="gkw_kord.weapon">
+    <weapon file="heavy_mg_standing.animation_base" key="gkw_kord_5102.weapon">
         <!--Weapon specifications-->
         <specification 
         barrel_offset="0.7" 
         accuracy_factor="1.0"
         class="0"
         magazine_size="50" 
-        name="Kord" 
+        name="Kord-[Dead Silent Dancer]" 
         projectile_speed="200" 
         retrigger_time="0.2" 
         suppressed="0" 
@@ -16,8 +16,8 @@
         sustained_fire_grow_step="5.0"
         sight_range_modifier="1.0" />
         <!--Animations-->
-        <next_in_chain key="gkw_kord_skill.weapon" share_ammo="0" />
-        <animation key="reload" animation_key="reloading, Machine gun 3.0" />
+        <next_in_chain key="gkw_kord_5102_skill.weapon" share_ammo="0" />
+        <animation key="reload" animation_key="reloading, Machine gun 2.4" />
         <animation state_key="hold_casual" animation_key="dancing, kazachok" />
         <inventory  buy_price="45.0" sell_price="45.0" />
         <!--Sounds-->
@@ -27,8 +27,8 @@
         <sound key="cycle" fileref="kord_cycle_FromSQUAD.wav" volume="0.55" />
         <sound class="impact" fileref="rifle_drop.wav" />
         <!--Model, Icon, Cost-->
-        <model filename="gkw_mg_kord.xml" />
-        <hud_icon filename="gkw_kord.png" />
+        <model filename="gkw_mg_kord_5102.xml" />
+        <hud_icon filename="gkw_kord_5102.png" />
         <!--Ballistics-->
         <projectile file="bullet.projectile">
             <result class="hit" kill_probability="3.5" kill_probability_offset_on_successful_hit="0.3" kill_decay_start_time="1.5" kill_decay_end_time="1.6" />
@@ -46,7 +46,7 @@
         <stance state_key="over_wall" accuracy="1.0" />
         <modifier class="speed" value="-0.2" />
     </weapon>
-    <weapon file="heavy_mg.animation_base" key="gkw_kord_skill.weapon">
+    <weapon file="heavy_mg.animation_base" key="gkw_kord_5102_skill.weapon">
         <!--Weapon specifications-->
         <specification 
         barrel_offset="0.5" 
@@ -58,7 +58,7 @@
         can_shoot_standing="1"
         can_shoot_crouching="1"
         can_shoot_prone="1"
-        name="Kord-[High Pressure Assault]" 
+        name="Kord-[Dead Silent Dancer]-[High Pressure Assault]" 
         projectile_speed="200" 
         retrigger_time="0.92" 
         suppressed="0" 
@@ -66,7 +66,7 @@
         sustained_fire_diminish_rate="3.0"
         sight_range_modifier="1.8" />
         <!--Animations-->
-        <next_in_chain key="gkw_kord.weapon" share_ammo="0" />
+        <next_in_chain key="gkw_kord_5102.weapon" share_ammo="0" />
         <animation key="reload" animation_key="reloading, Machine gun 4" />
         <animation state_key="hold_casual" animation_key="dancing, kazachok" />
         <inventory  buy_price="45.0" sell_price="45.0" />
@@ -77,8 +77,8 @@
         <sound key="cycle" fileref="kord_cycle_FromSQUAD.wav" volume="0.55" />
         <sound class="impact" fileref="rifle_drop.wav" />
         <!--Model, Icon, Cost-->
-        <model filename="gkw_mg_kord.xml" />
-        <hud_icon filename="gkw_kord_skill.png" />
+        <model filename="gkw_mg_kord_5102.xml" />
+        <hud_icon filename="gkw_kord_5102.png" />
         <commonness value="0" in_stock="0" can_respawn_with="1" />
         <!--Ballistics-->
         <projectile file="bullet_he.projectile">
