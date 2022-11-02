@@ -65,7 +65,7 @@
 		<specification 
 		retrigger_time="0.05" 
 		accuracy_factor="0.6" 
-		sustained_fire_grow_step="0.75" 
+		sustained_fire_grow_step="0.35" 
 		sustained_fire_diminish_rate="2.0" 
 		magazine_size="200" 
 		can_shoot_standing="1" 
@@ -73,10 +73,8 @@
 		can_shoot_prone="0"
 		suppressed="0" 
 		name="Doppelsoldner-MG" 
-		class="4" 
-		burst_shots="20"
+		class="0" 
 		slot="0"
-		last_burst_retrigger_time="2.0"
 		reload_one_at_a_time="0"
 		sight_range_modifier="1.21" 
 		projectile_speed="100.0" 
@@ -112,7 +110,7 @@
 		<weak_hand_hold offset="0.2" />
 		<projectile file="bullet_paradeus.projectile" >
 			<result class="hit" 
-			kill_probability="1.6" 
+			kill_probability="1.75" 
 			kill_decay_start_time="0.3" 
 			kill_decay_end_time="0.4" />
 		</projectile>
