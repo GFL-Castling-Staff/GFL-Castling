@@ -1088,7 +1088,7 @@ class MapRotatorInvasion : MapRotator {
 
 	protected void sendMsgStart(string mapname,int num,dictionary a){
 		if (num > 0){
-			for (int j=1;j<num;j++){
+			for (int j=1;j<=num;j++){
 				m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 3.0, 0, mapname+" start with 1 base, part "+j, a));
 			}
 		}
@@ -1096,7 +1096,7 @@ class MapRotatorInvasion : MapRotator {
 
 	protected void sendMsgAdvance(string mapname,int num,dictionary a){
 		if (num > 0){
-			for (int j=1;j<num;j++){
+			for (int j=1;j<=num;j++){
 				m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 3.0, 0, mapname+" advance, held by enemy, part "+j, a));
 			}
 		}
