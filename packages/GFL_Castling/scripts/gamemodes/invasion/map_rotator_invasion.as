@@ -465,13 +465,13 @@ class MapRotatorInvasion : MapRotator {
 						a["%target_base_name"] = stage.m_kothTargetBase;
 						m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 6.0, 0, "map start with 1 base, koth", a));
 					}
+					m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 0.0, 0, "map start, ending", a));
 				}
 
 				if (stage !is null) {
 					stage.announceStart(m_metagame);
 				}
 				
-				m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 0.0, 0, "map start, ending", a));
 
 			} else {
 				// completed, assuming friendly for now
