@@ -442,23 +442,14 @@ class MapRotatorInvasion : MapRotator {
 				// lore 最后播放
 
 				if (stage.m_mapInfo.m_name == "Zone Attack") {
-					m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 2.0, 0, stage.m_mapInfo.m_name+" start with 1 base, part 1", a));
-					m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 3.0, 0, stage.m_mapInfo.m_name+" start with 1 base, part 2", a));
-					m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 3.0, 0, stage.m_mapInfo.m_name+" start with 1 base, part 3", a));
-					m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 3.0, 0, stage.m_mapInfo.m_name+" start with 1 base, part 4", a));
-					m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 3.0, 0, stage.m_mapInfo.m_name+" start with 1 base, part 5", a));
-					m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 3.0, 0, stage.m_mapInfo.m_name+" start with 1 base, part 6", a));
+					sendMsgStart("Zone Attack",6,a);
 				}
 				else if (stage.m_mapInfo.m_name == "Awakening") {
-					m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 2.0, 0, stage.m_mapInfo.m_name+" start with 1 base, part 1", a));
-					m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 3.0, 0, stage.m_mapInfo.m_name+" start with 1 base, part 2", a));
-					m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 3.0, 0, stage.m_mapInfo.m_name+" start with 1 base, part 3", a));
-					m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 3.0, 0, stage.m_mapInfo.m_name+" start with 1 base, part 4", a));
-					m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 3.0, 0, stage.m_mapInfo.m_name+" start with 1 base, part 5", a));
-					m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 3.0, 0, stage.m_mapInfo.m_name+" start with 1 base, part 6", a));
-					m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 3.0, 0, stage.m_mapInfo.m_name+" start with 1 base, part 7", a));
-					
+					sendMsgStart("Awakening",7,a);
 				}
+				else if (stage.m_mapInfo.m_name == "Echo") {
+					sendMsgStart("Echo",5,a);
+				}				
 				else{
 					// commander says something
 					m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 2.0, 0, "map start with 1 base, part 1", a));
@@ -626,12 +617,14 @@ class MapRotatorInvasion : MapRotator {
 						{"%map_name", regionName},
 						{"%faction_name", enemyNames[0]}
 					};
-					m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 3.0, 0, stage.m_mapInfo.m_name+" advance, held by enemy, part 1", a));
-					m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 3.0, 0, stage.m_mapInfo.m_name+" advance, held by enemy, part 2", a));
-					m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 3.0, 0, stage.m_mapInfo.m_name+" advance, held by enemy, part 3", a));
-					m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 3.0, 0, stage.m_mapInfo.m_name+" advance, held by enemy, part 4", a));
-					m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 3.0, 0, stage.m_mapInfo.m_name+" advance, held by enemy, part 5", a));
-					m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 3.0, 0, stage.m_mapInfo.m_name+" advance, held by enemy, part 6", a));
+					sendMsgAdvance("Zone Attack",6,a);
+
+				}else if (stage.m_mapInfo.m_name == "Echo"){
+					dictionary a = {
+						{"%map_name", regionName},
+						{"%faction_name", enemyNames[0]}
+					};
+					sendMsgAdvance("Echo",4,a);
 
 				}else{
 					// if there are enemies, report it
@@ -1092,4 +1085,20 @@ class MapRotatorInvasion : MapRotator {
 			_log("WARNING, map_rotator not found", -1);
 		}
 	}
+
+	protected void sendMsgStart(string mapname,int num,dictionary a){
+		if (num > 0){
+			for (int j=1;j<num;j++){
+				m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 3.0, 0, mapname+" start with 1 base, part "+j, a));
+			}
+		}
+	}
+
+	protected void sendMsgAdvance(string mapname,int num,dictionary a){
+		if (num > 0){
+			for (int j=1;j<num;j++){
+				m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 3.0, 0, mapname+" advance, held by enemy, part "+j, a));
+			}
+		}
+	}	
 }
