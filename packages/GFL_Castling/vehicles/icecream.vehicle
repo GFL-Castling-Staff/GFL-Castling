@@ -5,7 +5,7 @@
         <tire_set offset="0.86 0.0 1.141" radius="0.7" />
         <tire_set offset="0.86 0.0 -1.374" radius="0.7" />
         <control max_speed="10.0" acceleration="8.0" max_reverse_speed="6.0" max_rotation="0.8" max_water_depth="1.9" />
-        <physics max_health="70.0" mass="3.5" extent="2.0 0.0 1.5" offset="0 0.0 0" top_offset="0 4 0" collision_model_pos="0 0.8 0" collision_model_extent="2.2 2.0 4.7" visual_offset="0 0.5 0.1" />
+        <physics max_health="70.0" mass="15" extent="2.0 0.0 1.5" offset="0 0.0 0" top_offset="0 4 0" collision_model_pos="0 0.8 0" collision_model_extent="2.2 2.0 4.7" visual_offset="0 0.5 0.1" />
         <visual class="chassis" mesh_filename="conevan.mesh" texture_filename="conevan.png" />
         <visual class="tire" mesh_filename="medivan_wheel.mesh" texture_filename="conevan.png" />
         <visual class="chassis" key="broken" mesh_filename="conevan_broken.mesh" texture_filename="conevan.png" />
