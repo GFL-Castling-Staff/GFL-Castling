@@ -7,16 +7,17 @@
 		class="0"
 		magazine_size="50" 
 		name="AR57" 
-		projectile_speed="215" 
+		projectile_speed="180" 
 		retrigger_time="0.12" 
-		suppressed="0" 
+		suppressed="1" 
     sight_range_modifier="1.75"
-		sustained_fire_diminish_rate="3.0" 
-		sustained_fire_grow_step="0.15" />
+    stance_accuracy_rate="1.0"
+		sustained_fire_diminish_rate="2.1" 
+		sustained_fire_grow_step="0.3" />
     <inventory encumbrance="10.0" buy_price="57.0" sell_price="57.0"/>
     <animation key="reload" animation_key="reloading, magazine rifle 1.5"/>
     <next_in_chain key="gkw_ar57_skill.weapon" share_ammo="1"/>
-    <sound key="fire" fileref="ar57_fire_FromCOD19.wav" pitch_variety="0.05" volume="1.3"/>
+    <sound key="fire" fileref="ar57sd_fire_FromCOD19.wav" pitch_variety="0.05" volume="1.3"/>
     <sound key="magazine_out" fileref="ar57_mgz_out_FromCOD19.wav" volume="0.6"/>
     <sound key="magazine_in" fileref="ar57_mgz_in_FromCOD19.wav" volume="0.6"/>
     <sound key="cycle" fileref="AR57_PHRASE_JP.wav" volume="1.0" pitch_variety="0"/>
@@ -48,7 +49,7 @@
     <hud_icon filename="gkw_ar57.png"/>
     <weak_hand_hold offset="0.2"/>
     <projectile file="bullet.projectile">
-      <result class="hit" kill_probability="1.8" kill_probability_offset_on_successful_hit="1.5" kill_decay_start_time="2.0" kill_decay_end_time="2.0"/>
+      <result class="hit" kill_probability="2.4" kill_probability_offset_on_successful_hit="1.2" kill_decay_start_time="2.0" kill_decay_end_time="2.0"/>
     </projectile>
     <effect class="muzzle" ref="ejection_556"/>
     <tag name="autorifle"/>
@@ -63,16 +64,15 @@
     <animation state_key="celebrate_shoot" animation_key="celebrating, shooting"/>
     <animation state_key="stabbing" animation_key="melee, quick knife"/>
     <animation state_key="stabbing" animation_key="pistol whip 3"/>
-    <stance state_key="running" accuracy="0.75"/>
-    <stance state_key="walking" accuracy="0.75"/>
-    <stance state_key="crouch_moving" accuracy="0.75"/>
+    <stance state_key="running" accuracy="0.3"/>
+    <stance state_key="walking" accuracy="0.7"/>
+    <stance state_key="crouch_moving" accuracy="0.7"/>
     <stance state_key="standing" accuracy="0.85"/>
     <stance state_key="crouching" accuracy="0.9"/>
     <stance state_key="prone" accuracy="0.95"/>
-    <stance state_key="prone_moving" accuracy="0.85"/>
-    <stance state_key="over_wall" accuracy="1"/>
+    <stance state_key="prone_moving" accuracy="0.7"/>
+    <stance state_key="over_wall" accuracy="1.0"/>
     <modifier class="detectability" value="-0.1" />
-    <modifier class="speed" value="-0.1" />
     <target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
     <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
     <target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
@@ -82,21 +82,22 @@
   </weapon>
   <weapon key="gkw_ar57_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
     <specification 
-		accuracy_factor="0.98" 
+		accuracy_factor="0.85" 
 		barrel_offset="0.4" 
 		class="0"
 		magazine_size="50" 
 		name="AR57-[Complex Modification]" 
-		projectile_speed="200" 
+		projectile_speed="150" 
 		retrigger_time="0.075" 
-		suppressed="0" 
+		suppressed="1" 
     sight_range_modifier="1.0"
-		sustained_fire_diminish_rate="1.5" 
+    stance_accuracy_rate="2.5"
+		sustained_fire_diminish_rate="2.1" 
 		sustained_fire_grow_step="0.15" />
     <inventory encumbrance="10.0" buy_price="57.0" sell_price="57.0"/>
     <animation key="reload" animation_key="reloading, magazine rifle 0.9"/>
     <next_in_chain key="gkw_ar57.weapon" share_ammo="1"/>
-    <sound key="fire" fileref="ar57_fire_FromCOD19.wav" pitch_variety="0.05" volume="1.3"/>
+    <sound key="fire" fileref="ar57sd_fire_FromCOD19.wav" pitch_variety="0.05" volume="1.3"/>
     <sound key="magazine_out" fileref="ar57_mgz_out_FromCOD19.wav" volume="0.6"/>
     <sound key="magazine_in" fileref="ar57_mgz_in_FromCOD19.wav" volume="0.6"/>
     <sound key="cycle" fileref="AR57_PHRASE_JP.wav" volume="1.0" pitch_variety="0"/>
@@ -127,7 +128,7 @@
     <hud_icon filename="gkw_ar57_skill.png"/>
     <weak_hand_hold offset="0.2"/>
     <projectile file="bullet.projectile">
-      <result class="hit" kill_probability="2.1" kill_probability_offset_on_successful_hit="0.45" kill_decay_start_time="0" kill_decay_end_time="0.3"/>
+      <result class="hit" kill_probability="2.4" kill_probability_offset_on_successful_hit="0.85" kill_decay_start_time="0.2" kill_decay_end_time="0.38 "/>
     </projectile>
     <effect class="muzzle" ref="ejection_556"/>
     <tag name="smg"/>
@@ -142,16 +143,16 @@
     <animation state_key="celebrate_shoot" animation_key="celebrating, shooting"/>
     <animation state_key="stabbing" animation_key="melee, quick knife"/>
     <animation state_key="stabbing" animation_key="pistol whip 3"/>
-    <stance state_key="running" accuracy="0.65"/>
+    <stance state_key="running" accuracy="0.3"/>
     <stance state_key="walking" accuracy="0.7"/>
-    <stance state_key="crouch_moving" accuracy="0.75"/>
+    <stance state_key="crouch_moving" accuracy="0.7"/>
     <stance state_key="standing" accuracy="0.85"/>
     <stance state_key="crouching" accuracy="0.9"/>
     <stance state_key="prone" accuracy="0.95"/>
-    <stance state_key="prone_moving" accuracy="0.85"/>
-    <stance state_key="over_wall" accuracy="1"/>
+    <stance state_key="prone_moving" accuracy="0.7"/>
+    <stance state_key="over_wall" accuracy="1.0"/>
     <modifier class="detectability" value="-0.1" />
-    <modifier class="speed" value="0.4" />
+    <modifier class="speed" value="0.15" />
     <modifier class="hit_success_probability" value="-0.15" />
     <target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
     <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
