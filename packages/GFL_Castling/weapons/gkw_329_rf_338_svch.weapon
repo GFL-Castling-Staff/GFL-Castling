@@ -1,69 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<weapon file="designated_marksman_rifle.animation_base" key="gkw_svch.weapon">
-
-
-    <!--Weapon specifications-->
-    
+<weapon key="gkw_svch.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
     <specification 
-	retrigger_time="-1.0" 
-	last_burst_retrigger_time="0.125"
-	accuracy_factor="1.0" 
-	sustained_fire_grow_step="0.4" 
-	sustained_fire_diminish_rate="1.6" 
-	magazine_size="5" 
-	can_shoot_standing="1" 
-	suppressed="0" 
-	name="SVCh" 
-	class="4" 
-	reload_one_at_a_time="0" 
-	sight_range_modifier="3" 
-	projectile_speed="240" 
-	barrel_offset="0.4" 
-	projectiles_per_shot="1" />
-    <inventory  buy_price="24.0" sell_price="24.0" />
-	<!--Animations-->
-	
-
-
-    <animation key="reload" animation_key="reloading, magazine rifle 0.9" />	
-	
-	
-	<!--Sounds-->
-	
-    <sound key="fire" fileref="svch_fire_FromCOD15.wav" pitch_variety="0.05" volume="1.3" />
+    retrigger_time="0.33"
+    accuracy_factor="1.0"
+    sustained_fire_grow_step="0.9"
+    sustained_fire_diminish_rate="1.1"
+    magazine_size="10"
+    can_shoot_standing="1"
+    suppressed="0"
+    name="SVCh"
+    class="4"
+    reload_one_at_a_time="0"
+    sight_range_modifier="2.0"
+    stance_accuracy_rate="1.0"
+    projectile_speed="200"
+    barrel_offset="0.5"
+    projectiles_per_shot="1"
+    stab_enabled="1"
+    carry_in_two_hands="1"
+    slot="0"/>
+    <inventory encumbrance="20.0" buy_price="24.0" sell_price="24.0"/>
+    <animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
+    <sound key="fire" fileref="svch_fire_FromCOD15.wav" pitch_variety="0.05" volume="1.3"/>
     <sound key="cycle" fileref="svch_cycle_FromBF2042.wav" volume="0.8"/>
-    <sound key="magazine_out" fileref="svch_mgz_out_FromBF2042.wav"  volume="0.8" />
-    <sound key="magazine_in" fileref="svch_mgz_in_FromBF2042.wav"  volume="0.8" />
+    <sound key="magazine_out" fileref="svch_mgz_out_FromBF2042.wav" volume="0.8"/>
+    <sound key="magazine_in" fileref="svch_mgz_in_FromBF2042.wav" volume="0.8"/>
     <sound class="impact" fileref="rifle_drop.wav" volume="1"/>
-   
-	<!--Model, Icon, Cost-->
-   
-    <model filename="gkw_SVCh_From_melondove.xml" />
-    <hud_icon filename="gkw_svch.png" />
-
-
-	
-	<!--Ballistics-->
-	
-    
-    <weak_hand_hold offset="0.3" />
+    <model filename="gkw_SVCh_From_melondove.xml"/>
+    <hud_icon filename="gkw_svch.png"/>
+    <weak_hand_hold offset="0.3"/>
     <projectile file="bullet.projectile">
-        <result class="hit" 
-        kill_probability="1.6"
-        kill_probability_offset_on_successful_hit="4.0" 
-        kill_decay_start_time="1.448" 
-        kill_decay_end_time="2.414" />
+        <result class="hit" kill_probability="2.8" kill_probability_offset_on_successful_hit="7.5" kill_decay_start_time="1.0" kill_decay_end_time="2.0"/>
     </projectile>
-    
-    <!--Accuracy, Movement speed-->
-    
-	<stance state_key="walking" accuracy="0.4" />
-    <stance state_key="crouch_moving" accuracy="0.6" />
-    <stance state_key="prone_moving" accuracy="0.6" />
-    <stance state_key="standing" accuracy="0.9"/>
-    <stance state_key="crouching" accuracy="0.95" />
-    <stance state_key="prone" accuracy="1" />
-    <stance state_key="over_wall" accuracy="1" /> 
-	
-
+    <stance state_key="running" accuracy="0.4" />
+    <stance state_key="walking" accuracy="0.55" />
+    <stance state_key="crouch_moving" accuracy="0.7" />
+    <stance state_key="standing" accuracy="0.9" />
+    <stance state_key="crouching" accuracy="1.0" />
+    <stance state_key="prone" accuracy="1.1" />
+    <stance state_key="prone_moving" accuracy="0.7" />
+    <stance state_key="over_wall" accuracy="1" />
+    <tag name="rifle"/>
+    <commonness value="0.2" in_stock="0" can_respawn_with="1"/>
+    <capacity value="1" source="rank" source_value="0.0"/>
+    <modifier class="detectability" value="-0.1"/>
+    <target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
+    <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
+    <target_factors tag="shotgun" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
+    <target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
+    <target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
+    <target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
+    <animation key="recoil" animation_key="recoil1"/>
+    <animation key="recoil" animation_key="recoil2"/>
+    <animation key="recoil" animation_key="recoil3"/>
+    <animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
+    <animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
+    <animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
+    <animation state_key="celebrate_shoot" animation_key="celebrating, shooting"/>
+    <animation state_key="stabbing" animation_key="melee, quick knife"/>
+    <animation state_key="stabbing" animation_key="pistol whip 3"/>
 </weapon>
