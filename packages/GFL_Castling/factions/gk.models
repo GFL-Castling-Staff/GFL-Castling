@@ -181,6 +181,9 @@
 <model filename="gkd_hvy_ags30_1.xml"><requirement class="weapon" slot="0" key="gkw_hvy_ags30.weapon"/></model>
 <model filename="gkd_hvy_ags30_2.xml"><requirement class="weapon" slot="0" key="gkw_hvy_ags30.weapon"/></model>
 <model filename="gkd_hvy_ags30_3.xml"><requirement class="weapon" slot="0" key="gkw_hvy_ags30.weapon"/></model>
+<model filename="gkd_hvy_ags30_1.xml"><requirement class="weapon" slot="0" key="gkw_hvy_ags30_fix.weapon"/></model>
+<model filename="gkd_hvy_ags30_2.xml"><requirement class="weapon" slot="0" key="gkw_hvy_ags30_fix.weapon"/></model>
+<model filename="gkd_hvy_ags30_3.xml"><requirement class="weapon" slot="0" key="gkw_hvy_ags30_fix.weapon"/></model>
 
 <model filename="gkd_hvy_at4_1.xml"><requirement class="weapon" slot="0" key="gkw_hvy_at4.weapon"/></model>
 <model filename="gkd_hvy_at4_2.xml"><requirement class="weapon" slot="0" key="gkw_hvy_at4.weapon"/></model>
@@ -264,8 +267,8 @@
 <model filename="gkd_rf_4type.xml"><requirement class="weapon" slot="0" key="gkw_4type.weapon"/></model>
 <model filename="gkd_rf_88typemod3.xml"><requirement class="weapon" slot="0" key="gkw_88typemod3.weapon"/></model>
 <model filename="gkd_rf_88typemod3.xml"><requirement class="weapon" slot="0" key="gkw_88typemod3_skill.weapon"/></model>
-<model filename="gkd_rf_88type_6503.xml"><requirement class="weapon" slot="0" key="gkw_88typemod3_6503.weapon"/></model>
-<model filename="gkd_rf_88type_6503.xml"><requirement class="weapon" slot="0" key="gkw_88typemod3_6503_skill.weapon"/></model>
+<model filename="gkd_rf_88type_6503.xml" score="114514"><requirement class="weapon" slot="0" key="gkw_88typemod3_6503.weapon"/></model>
+<model filename="gkd_rf_88type_6503.xml" score="114514"><requirement class="weapon" slot="0" key="gkw_88typemod3_6503_skill.weapon"/></model>
 <model filename="gkd_rf_98k.xml"><requirement class="weapon" slot="0" key="gkw_98k.weapon"/></model>
 <model filename="gkd_rf_98k.xml"><requirement class="weapon" slot="0" key="gkw_98k_skill.weapon"/></model>
 <model filename="gkd_rf_98kmod3.xml"><requirement class="weapon" slot="0" key="gkw_98kmod3.weapon"/></model>
@@ -524,7 +527,7 @@
 <model filename="sfd_dreamer.xml"><requirement class="weapon" slot="0" key="ff_dreamer.weapon"/></model>
 <model filename="sfd_dreamer.xml"><requirement class="weapon" slot="0" key="ff_dreamer_skill.weapon"/></model>
 <model filename="sfd_dreamer.xml"><requirement class="weapon" slot="0" key="ff_dreamer_skill_1.weapon"/></model>
-<model filename="gkd_isc_large_mecha.xml"><requirement class="weapon" slot="0" key="gkr_bbs.weapon"/></model>
+<model filename="gkd_isc_large_mecha.xml" score="114514"><requirement class="weapon" slot="0" key="gkr_bbs.weapon"/></model>
 
 <model filename="gkd_smg_vp1915.xml"><requirement class="weapon" slot="0" key="gkw_vp1915.weapon"/></model>
 <model filename="gkd_sg_fo-12.xml"><requirement class="weapon" slot="0" key="gkw_fo12.weapon"/></model>

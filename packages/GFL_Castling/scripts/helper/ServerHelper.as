@@ -214,5 +214,5 @@ dictionary lv120dict={
     {"HUALIN",3011.0},
     {"NEKO_CUP",3061.0},
     {"EISEN",3110.0},
-    {"NETHER_CROW",11452.0}
+    {"NETHER_CROW",761.0}
 };
