@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<projectile class="grenade" name="flame grenade" slot="2" key="firenade_sub_416.projectile" radius="0.15" pulldown_in_air="20">
-    <tag name="grenade" />
+<projectile class="grenade" name="" slot="2" key="firenade_sub_416.projectile" radius="0.1" pulldown_in_air="20">
+    <tag name="fire" />
     <trigger class="time" time_to_live="0.0"/>
-    <result class="blast" radius="3.0" damage="0.01" push="0.0" decal="1" make_vehicle_hit_sound="0" faction_compare="not_equal"/>
+    <result class="spawn" instance_class="grenade" instance_key="blast_shard_rad3.projectile" min_amount="2" max_amount="3" offset="0 0.5 0" position_spread="0 0" direction_spread="0.0 0.0" />   
     <commonness value="0.0"/>
     <rotation class="random" />
     <model mesh_filename="" />
@@ -10,7 +10,6 @@
     <effect class="result" key="other" type="splat_map" surface_tag="" size="1.0" atlas_index="0" layer="1" />
     <effect class="result" key="other" type="splat_map" surface_tag="" size="1.5" atlas_index="4" layer="0" />
     <effect class="result" key="other" type="splat_map" surface_tag="" size="2.0" atlas_index="0" layer="2" additive="0" />
-    <!-- remove top snow everywhere -->
     <effect class="result" key="terrain" ref="BurnOut" post_processing="1" />
     <effect class="result" key="other" ref="SmokePropulsion" />
     <effect class="result" key="other" ref="FlamePropulsion" lighting="0" />

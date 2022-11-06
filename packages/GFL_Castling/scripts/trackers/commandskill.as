@@ -167,8 +167,6 @@ dictionary commandSkillIndex = {
         {"gkw_vz61_only.weapon",2},
         {"gkw_klin.weapon",2},
         {"gkw_uzi.weapon",2},
-        {"gkw_uzimod3.weapon",2},
-        {"gkw_uzimod3_skill.weapon",2},
         {"gkw_mp40.weapon",2},
         {"gkw_kp31mod3.weapon",2},
 
@@ -369,6 +367,9 @@ dictionary commandSkillIndex = {
 
         {"gkw_thompson.weapon",49},
 
+        {"gkw_uzimod3.weapon",50},
+        {"gkw_uzimod3_skill.weapon",50},
+
         // 下面这行是用来占位的，在这之上添加新的枪和index即可
         {"666",-1}
 };
@@ -495,6 +496,7 @@ class CommandSkill : Tracker {
                     case 47:{excuteUMP45MOD3skill(cId,senderId,m_modifer);break;}
                     case 48:{excuteWeaverskill(cId,senderId,m_modifer);break;}
                     case 49:{excuteM1928A1skill(cId,senderId,m_modifer);break;}
+                    case 50:{excuteUZImod3skill(cId,senderId,m_modifer);break;}
 
                     default:
                         break;
@@ -3163,4 +3165,50 @@ class CommandSkill : Tracker {
             }
         }
     }   
+    void excuteUZImod3skill(int characterId,int playerId,SkillModifer@ modifer){
+        bool ExistQueue = false;
+        int j=-1;
+        for (uint i=0;i<SkillArray.length();i++){
+            if (InCooldown(characterId,modifer,SkillArray[i]) && SkillArray[i].m_weapontype=="FIRENADE") {
+                ExistQueue=true;
+                j=i;
+            }
+        }
+        if (ExistQueue){
+            dictionary a;
+            a["%time"] = ""+SkillArray[j].m_time;
+            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            _log("skill cooldown" + SkillArray[j].m_time);
+            return;
+        }
+        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+        if (character !is null) {
+            const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+            if (player !is null){
+                if (player.hasAttribute("aim_target")) {
+                    string target = player.getStringAttribute("aim_target");
+                    Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
+                    int factionid = character.getIntAttribute("faction_id");
+                    array<string> Voice={
+                        "MicroUZI_SKILL1_JP.wav",
+                        "MicroUZI_SKILL2_JP.wav",
+                        "MicroUZIMod_SKILL1_JP.wav",
+                        "MicroUZIMod_SKILL2_JP.wav",
+                        "MicroUZIMod_SKILL3_JP.wav"
+                    };
+                    playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+                    playAnimationKey(m_metagame,characterId,"throwing, upside",true,true);
+                    playSoundAtLocation(m_metagame,"grenade_throw1.wav",factionid,c_pos,1.0);
+                    c_pos=c_pos.add(Vector3(0,1,0));
+                    if (checkFlatRange(c_pos,stringToVector3(target),16)){
+                        CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"firenade_uzimod3.projectile",characterId,factionid,50);
+                    }
+                    else{
+                        CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"firenade_uzimod3.projectile",characterId,factionid,26.0,4.0);
+                    }
+                }
+            }
+        }
+        addCoolDown("FIRENADE",15,characterId,modifer);
+    }    
 }

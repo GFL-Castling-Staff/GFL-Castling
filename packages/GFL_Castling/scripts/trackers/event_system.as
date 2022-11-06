@@ -508,7 +508,7 @@ void excuteWarriorFariyApache(GameMode@ metagame,GFL_event@ eventinfo){
         int jud_num = 0;
 
         array<const XmlElement@> apache_affectedCharacter;
-        for(uint i=0;i<m_fnum;i++) 
+        for(int i=0;i<m_fnum;i++) 
             if(i!=eventinfo.m_factionid) {
 
             array<const XmlElement@> affectedCharacter2;

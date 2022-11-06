@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<projectile class="grenade" name="" slot="2" key="firenade_sub_uzi.projectile" radius="0.1" pulldown_in_air="20">
+    <tag name="fire" />
+    <trigger class="time" time_to_live="0.0" />
+    <result class="spawn" instance_class="grenade" instance_key="firenade_sub_big.projectile" min_amount="20" max_amount="20" offset="0 3.0 0" position_spread="3 -3" direction_spread="0.0 0.0" />   
+    <commonness value="0.0"/>
+    <rotation class="random" />
+    <model mesh_filename="" />
+    <hud_icon filename="" />
+</projectile>

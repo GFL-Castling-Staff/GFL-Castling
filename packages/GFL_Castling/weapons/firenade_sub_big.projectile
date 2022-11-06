@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projectile class="grenade" name="flame grenade" slot="2" key="firenade_sub_big.projectile" radius="0.15" pulldown_in_air="20">
-    <tag name="grenade" />
+    <tag name="fire" />
     <!-- <event> -->
     <trigger class="impact" />
     <result class="blast" radius="4" damage="0.6" push="0.0" decal="1" make_vehicle_hit_sound="0" faction_compare="not_equal" damage_as_probability="1"/>

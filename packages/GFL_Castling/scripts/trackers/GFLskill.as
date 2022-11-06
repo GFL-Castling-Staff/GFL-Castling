@@ -147,6 +147,10 @@ dictionary gameSkillIndex = {
         // 玩家衔尾蛇脚本弹头
         {"ff_weaver_skill_scan",32},
 
+		// uzi mod3 fire
+        {"uzi_firenade",33},
+
+
         // 下面这行是用来占位的，在这之上添加新的技能key和index即可
         {"666",-1}
 };
@@ -174,6 +178,7 @@ class GFLskill : Tracker {
 
     protected array<XM8tracker@> XM8track;
 	protected array<HK416_tracker@> HK416_track;
+	protected array<UZI_tracker@> UZI_track;
 	protected array<Vector_tracker@> Vector_track;
 	protected array<Javelin_lister@> Javelin_list;
 
@@ -1196,6 +1201,42 @@ class GFLskill : Tracker {
 				break;
 			}
 
+			case 33: {// UZIMOD3燃烧弹
+				int characterId = event.getIntAttribute("character_id");
+				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+				if (character !is null) {
+					Vector3 grenade_pos = stringToVector3(event.getStringAttribute("position"));
+					int factionid = character.getIntAttribute("faction_id");
+					string c = 
+						"<command class='create_instance'" +
+						" faction_id='"+ factionid +"'" +
+						" instance_class='grenade'" +
+						" instance_key='firenade_Vector_blast.projectile'" +
+						" position='" + grenade_pos.toString() + "'"+
+						" character_id='" + characterId + "' />";
+					m_metagame.getComms().send(c);
+					Vector_track.insertLast(Vector_tracker(characterId,factionid,grenade_pos));
+
+					//获取技能影响的敌人数量
+					m_fnum= m_metagame.getFactionCount();
+					array<const XmlElement@> affectedCharacter;
+					for(uint i=0;i<m_fnum;i++) {
+						if(i!=factionid) {
+							array<const XmlElement@> affectedCharacter2;
+							affectedCharacter2 = getCharactersNearPosition(m_metagame,grenade_pos,i,7.5f);
+							if (affectedCharacter2 !is null){
+								for(uint x=0;x<affectedCharacter2.length();x++){
+									affectedCharacter.insertLast(affectedCharacter2[x]);
+								}
+							}
+						}
+					}
+					if (affectedCharacter.length()>0){
+						UZI_track.insertLast(UZI_tracker(characterId,factionid,grenade_pos,affectedCharacter));
+					}					
+				}
+				break;			
+			}
             default:
                 break;
 		}
@@ -1278,7 +1319,7 @@ class GFLskill : Tracker {
 						for(uint b=0;b<HK416_track[a].m_affected.length();b++){
 							int luckyoneid = HK416_track[a].m_affected[b].getIntAttribute("id");
 							const XmlElement@ luckyoneC = getCharacterInfo(m_metagame, luckyoneid);
-							if (luckyoneC.getIntAttribute("id")!=-1){
+							if (luckyoneC.getIntAttribute("id")!=-1 && luckyoneC !is null ){
 								string luckyonepos = luckyoneC.getStringAttribute("position");
 								Vector3 luckyoneposV = stringToVector3(luckyonepos);
 								Vector3 height = Vector3(0,0.5,0);
@@ -1296,7 +1337,7 @@ class GFLskill : Tracker {
 						}
 					}
 					HK416_track[a].m_numtime--;
-					HK416_track[a].m_time=0.2;
+					HK416_track[a].m_time=0.5;
 					if (HK416_track[a].m_numtime<0){
 						HK416_track.removeAt(a);
 					}
@@ -1334,7 +1375,40 @@ class GFLskill : Tracker {
 					}
 				}
 			}
-		}		
+		}
+		if(UZI_track.length()>0){
+			for (uint a=0;a<UZI_track.length();a++){
+				UZI_track[a].m_time-=time;
+				if(UZI_track[a].m_time<0){	
+					if (UZI_track[a].m_affected.length()>0){
+						for(uint b=0;b<UZI_track[a].m_affected.length();b++){
+							int luckyoneid = UZI_track[a].m_affected[b].getIntAttribute("id");
+							const XmlElement@ luckyoneC = getCharacterInfo(m_metagame, luckyoneid);
+							if (luckyoneC.getIntAttribute("id")!=-1 && luckyoneC !is null ){
+								string luckyonepos = luckyoneC.getStringAttribute("position");
+								Vector3 luckyoneposV = stringToVector3(luckyonepos);
+								Vector3 height = Vector3(0,0.5,0);
+								luckyoneposV = luckyoneposV.add(height);
+								luckyonepos = luckyoneposV.toString();
+								string c = 
+									"<command class='create_instance'" +
+									" faction_id='"+ UZI_track[a].m_factionid +"'" +
+									" instance_class='grenade'" +
+									" instance_key='firenade_sub_uzi.projectile'" +
+									" position='" + luckyonepos + "'"+
+									" character_id='" + UZI_track[a].m_characterId + "' />";
+								m_metagame.getComms().send(c);
+							}
+						}
+					}
+					UZI_track[a].m_numtime--;
+					UZI_track[a].m_time=1.5;
+					if (UZI_track[a].m_numtime<0){
+						UZI_track.removeAt(a);
+					}
+				}			
+			}
+		}				
 	}
 	
 	bool hasEnded() const {
@@ -1367,12 +1441,28 @@ class XM8tracker{
 
 class HK416_tracker{
     int m_characterId;
-	float m_time=0.2;
-	int m_numtime=20;
+	float m_time=0.5;
+	int m_numtime=8;
 	int m_factionid;
 	array<const XmlElement@> m_affected;
 	Vector3 m_pos;
 	HK416_tracker(int characterId,int factionid,Vector3 pos,array<const XmlElement@> affected)
+	{
+		m_characterId = characterId;
+		m_factionid= factionid;
+		m_pos= pos;
+		m_affected= affected;
+	}
+}
+
+class UZI_tracker{
+    int m_characterId;
+	float m_time=1.5;
+	int m_numtime=3;
+	int m_factionid;
+	array<const XmlElement@> m_affected;
+	Vector3 m_pos;
+	UZI_tracker(int characterId,int factionid,Vector3 pos,array<const XmlElement@> affected)
 	{
 		m_characterId = characterId;
 		m_factionid= factionid;
