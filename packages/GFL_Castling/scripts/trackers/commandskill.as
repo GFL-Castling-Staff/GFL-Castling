@@ -2162,7 +2162,7 @@ class CommandSkill : Tracker {
                     else{
                         CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"SopmodSk_script.projectile",characterId,factionid,45.0,6.0);
                     }
-                    addCoolDown("m4sopmodiimod3",25,characterId,modifer);
+                    addCoolDown("m4sopmodiimod3",16,characterId,modifer);
                 }
             }
         }
