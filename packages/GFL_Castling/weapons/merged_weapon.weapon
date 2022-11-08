@@ -8515,7 +8515,7 @@
 	<hud_icon filename="gkw_m1.png"/>
 	<inventory encumbrance="10.0" price="100.0"/>
 	<projectile file="m1_grenade.projectile"/>
-	<ballistics curve_height="6.0" near_far_distance="0.0" speed_estimation_near="15.0" speed_estimation_far="20.0" max_speed="45.0" randomness="0.0" tweak_factor="1.1"/>
+	<ballistics curve_height="6.0" near_far_distance="0.0" speed_estimation_near="9.0" speed_estimation_far="17.0" max_speed="30.0" randomness="0.0" tweak_factor="1.1"/>
 	<stance state_key="running" accuracy="0.6"/>
 	<stance state_key="walking" accuracy="0.6"/>
 	<stance state_key="crouch_moving" accuracy="0.6"/>
@@ -9850,7 +9850,7 @@
 </weapon>
 
 <weapon key="gkw_python.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1" last_burst_retrigger_time="0.3" accuracy_factor="0.98" sustained_fire_grow_step="0.8" sustained_fire_diminish_rate="1.8" magazine_size="6" carry_in_two_hands="0" suppressed="0" name="Colt Python" class="1" reload_one_at_a_time="1" sight_range_modifier="1.0" projectile_speed="100.0" projectiles_per_shot="1" burst_shots="1" slot="0" stab_enabled="1"/>
+	<specification retrigger_time="-1" last_burst_retrigger_time="0.25" accuracy_factor="0.9" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="1.0" magazine_size="6" carry_in_two_hands="0" suppressed="0" name="Colt Python" class="1" reload_one_at_a_time="1" sight_range_modifier="1.0" projectile_speed="100.0" projectiles_per_shot="1" burst_shots="1" slot="0" stab_enabled="1"/>
 	<next_in_chain key="gkw_python_skill.weapon" share_ammo="1"/>
 	<animation state_key="recoil" animation_key="recoil, revolver"/>
 	<animation state_key="recoil" stance_key="prone" animation_key="recoil, pistol, prone"/>
@@ -9872,7 +9872,7 @@
 	<animation state_key="changing_weapon_in" animation_key="change weapon in, single hand carry"/>
 	<animation state_key="stabbing" animation_key="pistol whip"/>
 	<animation state_key="stabbing" animation_key="pistol whip 3"/>
-	<inventory buy_price="5.0" sell_price="5.0"/>
+	<inventory encumbrance="5.0" buy_price="35.0" sell_price="35.0"/>
 	<sound key="fire" fileref="python_fire_FromCOD16.wav" pitch_variety="0.05" volume="3.3"/>
 	<sound key="magazine_out" fileref="python_mgz_out_FromINS.wav" volume="1.5"/>
 	<sound key="magazine_in" fileref="python_mgz_in_FromINS.wav" volume="1"/>
@@ -9885,21 +9885,20 @@
 	<hud_icon filename="gkw_python.png"/>
 	<weak_hand_hold offset="0.1"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="1.75" kill_decay_start_time="0.895" kill_decay_end_time="1.659"/>
+	<result class="hit" kill_probability="2.0" kill_probability_offset_on_successful_hit="7.0" kill_decay_start_time="0.3" kill_decay_end_time="0.5"/>
 	</projectile>
-	<stance state_key="running" accuracy="0.5"/>
+	<stance state_key="running" accuracy="0.8"/>
 	<stance state_key="walking" accuracy="0.85"/>
-	<stance state_key="crouch_moving" accuracy="0.8"/>
-	<stance state_key="prone_moving" accuracy="0.8"/>
+	<stance state_key="crouch_moving" accuracy="0.85"/>
 	<stance state_key="standing" accuracy="0.9"/>
-	<stance state_key="crouching" accuracy="0.95"/>
-	<stance state_key="prone" accuracy="1"/>
+	<stance state_key="crouching" accuracy="0.9"/>
+	<stance state_key="prone" accuracy="0.9"/>
+	<stance state_key="prone_moving" accuracy="0.85"/>
+	<stance state_key="over_wall" accuracy="0.9"/>
+	<modifier class="speed" value="1.0"/>
 	<tag name="pistol"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
-	<inventory encumbrance="2.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<stance state_key="over_wall" accuracy="1"/>
-	<modifier class="speed" value="+1.0"/>
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
 	<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
@@ -9909,7 +9908,7 @@
 </weapon>
 
 <weapon key="gkw_python_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="0.08" last_burst_retrigger_time="0.5" accuracy_factor="0.98" sustained_fire_grow_step="0.8" sustained_fire_diminish_rate="1.8" magazine_size="6" carry_in_two_hands="0" suppressed="0" name="Colt Python-[Embrace of the Dauntless]" class="4" burst_shots="6" reload_one_at_a_time="1" sight_range_modifier="1.0" projectile_speed="120.0" projectiles_per_shot="1" slot="0" stab_enabled="1"/>
+	<specification retrigger_time="0.08" last_burst_retrigger_time="-1" accuracy_factor="0.9" sustained_fire_grow_step="0.4" sustained_fire_diminish_rate="1.0" magazine_size="6" carry_in_two_hands="0" suppressed="0" name="Colt Python-[Embrace of the Dauntless]" class="4" burst_shots="6" reload_one_at_a_time="1" sight_range_modifier="1.0" projectile_speed="100.0" projectiles_per_shot="1" slot="0" stab_enabled="1"/>
 	<next_in_chain key="gkw_python.weapon" share_ammo="1"/>
 	<animation state_key="recoil" animation_key="recoil, hip revolver"/>
 	<animation state_key="recoil" stance_key="crouching" animation_key="recoil, crouch revolver"/>
@@ -9932,7 +9931,7 @@
 	<animation state_key="changing_weapon_in" animation_key="change weapon in, single hand carry"/>
 	<animation state_key="stabbing" animation_key="pistol whip"/>
 	<animation state_key="stabbing" animation_key="pistol whip 3"/>
-	<inventory buy_price="5.0" sell_price="5.0"/>
+	<inventory encumbrance="5.0" buy_price="35.0" sell_price="35.0"/>
 	<sound key="fire" fileref="python_fire_FromCOD16.wav" pitch_variety="0.05" volume="3.3"/>
 	<sound key="magazine_out" fileref="python_mgz_out_FromINS.wav" volume="1.5"/>
 	<sound key="magazine_in" fileref="python_mgz_in_FromINS.wav" volume="1"/>
@@ -9946,20 +9945,19 @@
 	<commonness value="0" in_stock="0"/>
 	<weak_hand_hold offset="0.1"/>
 	<projectile file="bullet.projectile">
-	<result class="blast" damage="1.5" radius="3.0" decal="1" push="0.3" character_state="death" faction_compare="not_equal"/>
+	<result class="blast" damage="3.1" radius="3.0" decal="1" push="0.3" character_state="death" faction_compare="not_equal"/>
 	</projectile>
-	<stance state_key="running" accuracy="0.5"/>
+	<stance state_key="running" accuracy="0.8"/>
 	<stance state_key="walking" accuracy="0.85"/>
-	<stance state_key="crouch_moving" accuracy="0.8"/>
-	<stance state_key="prone_moving" accuracy="0.8"/>
+	<stance state_key="crouch_moving" accuracy="0.85"/>
 	<stance state_key="standing" accuracy="0.9"/>
-	<stance state_key="crouching" accuracy="0.95"/>
-	<stance state_key="prone" accuracy="1"/>
+	<stance state_key="crouching" accuracy="0.9"/>
+	<stance state_key="prone" accuracy="0.9"/>
+	<stance state_key="prone_moving" accuracy="0.85"/>
+	<stance state_key="over_wall" accuracy="0.9"/>
+	<modifier class="speed" value="1.0"/>
 	<tag name="pistol"/>
-	<inventory encumbrance="2.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<stance state_key="over_wall" accuracy="1"/>
-	<modifier class="speed" value="+1.0"/>
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
 	<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
@@ -27671,7 +27669,7 @@
 </weapon>
 
 <weapon key="gkw_python_6603.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1" last_burst_retrigger_time="0.3" accuracy_factor="0.98" sustained_fire_grow_step="0.8" sustained_fire_diminish_rate="1.8" magazine_size="6" carry_in_two_hands="0" suppressed="0" name="Colt Python-[Hunting Time]" class="1" reload_one_at_a_time="1" sight_range_modifier="1.0" projectile_speed="100.0" projectiles_per_shot="1" burst_shots="1" slot="0" stab_enabled="1"/>
+	<specification retrigger_time="-1" last_burst_retrigger_time="0.25" accuracy_factor="0.9" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="1.0" magazine_size="6" carry_in_two_hands="0" suppressed="0" name="Colt Python-[Hunting Time]" class="1" reload_one_at_a_time="1" sight_range_modifier="1.0" projectile_speed="100.0" projectiles_per_shot="1" burst_shots="1" slot="0" stab_enabled="1"/>
 	<commonness in_stock="0" value="0"/>
 	<next_in_chain key="gkw_python_6603_skill.weapon" share_ammo="1"/>
 	<animation state_key="recoil" animation_key="recoil, revolver"/>
@@ -27694,7 +27692,7 @@
 	<animation state_key="changing_weapon_in" animation_key="change weapon in, single hand carry"/>
 	<animation state_key="stabbing" animation_key="pistol whip"/>
 	<animation state_key="stabbing" animation_key="pistol whip 3"/>
-	<inventory buy_price="5.0" sell_price="5.0"/>
+	<inventory encumbrance="5.0" buy_price="35.0" sell_price="35.0"/>
 	<sound key="fire" fileref="python_fire_FromCOD16.wav" pitch_variety="0.05" volume="3.3"/>
 	<sound key="magazine_out" fileref="python_mgz_out_FromINS.wav" volume="1.5"/>
 	<sound key="magazine_in" fileref="python_mgz_in_FromINS.wav" volume="1"/>
@@ -27707,20 +27705,20 @@
 	<hud_icon filename="gkw_python_6603.png"/>
 	<weak_hand_hold offset="0.1"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="1.75" kill_decay_start_time="0.895" kill_decay_end_time="1.659"/>
+	<result class="hit" kill_probability="2.0" kill_probability_offset_on_successful_hit="7.0" kill_decay_start_time="0.3" kill_decay_end_time="0.5"/>
 	</projectile>
-	<stance state_key="running" accuracy="0.5"/>
+	<stance state_key="running" accuracy="0.8"/>
 	<stance state_key="walking" accuracy="0.85"/>
-	<stance state_key="crouch_moving" accuracy="0.8"/>
-	<stance state_key="prone_moving" accuracy="0.8"/>
+	<stance state_key="crouch_moving" accuracy="0.85"/>
 	<stance state_key="standing" accuracy="0.9"/>
-	<stance state_key="crouching" accuracy="0.95"/>
-	<stance state_key="prone" accuracy="1"/>
+	<stance state_key="crouching" accuracy="0.9"/>
+	<stance state_key="prone" accuracy="0.9"/>
+	<stance state_key="prone_moving" accuracy="0.85"/>
+	<stance state_key="over_wall" accuracy="0.9"/>
+	<modifier class="speed" value="1.0"/>
 	<tag name="pistol"/>
-	<inventory encumbrance="2.0" buy_price="1.0" sell_price="0.0"/>
+	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<stance state_key="over_wall" accuracy="1"/>
-	<modifier class="speed" value="+1.0"/>
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
 	<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
@@ -27730,7 +27728,7 @@
 </weapon>
 
 <weapon key="gkw_python_6603_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="0.08" last_burst_retrigger_time="0.5" accuracy_factor="0.98" sustained_fire_grow_step="0.8" sustained_fire_diminish_rate="1.8" magazine_size="6" carry_in_two_hands="0" suppressed="0" name="Colt Python-[Hunting Time]-[Embrace of the Dauntless]" class="4" burst_shots="6" reload_one_at_a_time="1" sight_range_modifier="1.0" projectile_speed="120.0" projectiles_per_shot="1" slot="0" stab_enabled="1"/>
+	<specification retrigger_time="0.08" last_burst_retrigger_time="-1" accuracy_factor="0.9" sustained_fire_grow_step="0.4" sustained_fire_diminish_rate="1.0" magazine_size="6" carry_in_two_hands="0" suppressed="0" name="Colt Python-[Hunting Time]-[Embrace of the Dauntless]" class="4" burst_shots="6" reload_one_at_a_time="1" sight_range_modifier="1.0" projectile_speed="100.0" projectiles_per_shot="1" slot="0" stab_enabled="1"/>
 	<next_in_chain key="gkw_python_6603.weapon" share_ammo="1"/>
 	<animation state_key="recoil" animation_key="recoil, hip revolver"/>
 	<animation state_key="recoil" stance_key="crouching" animation_key="recoil, crouch revolver"/>
@@ -27753,8 +27751,7 @@
 	<animation state_key="changing_weapon_in" animation_key="change weapon in, single hand carry"/>
 	<animation state_key="stabbing" animation_key="pistol whip"/>
 	<animation state_key="stabbing" animation_key="pistol whip 3"/>
-	<inventory buy_price="5.0" sell_price="5.0"/>
-	<commonness in_stock="0" value="0"/>
+	<inventory encumbrance="5.0" buy_price="35.0" sell_price="35.0"/>
 	<sound key="fire" fileref="python_fire_FromCOD16.wav" pitch_variety="0.05" volume="3.3"/>
 	<sound key="magazine_out" fileref="python_mgz_out_FromINS.wav" volume="1.5"/>
 	<sound key="magazine_in" fileref="python_mgz_in_FromINS.wav" volume="1"/>
@@ -27768,20 +27765,19 @@
 	<effect class="muzzle" ref="ejection_556"/>
 	<weak_hand_hold offset="0.1"/>
 	<projectile file="bullet.projectile">
-	<result class="blast" damage="1.5" radius="3.0" decal="1" push="0.3" character_state="death" faction_compare="not_equal"/>
+	<result class="blast" damage="3.1" radius="3.0" decal="1" push="0.3" character_state="death" faction_compare="not_equal"/>
 	</projectile>
-	<stance state_key="running" accuracy="0.5"/>
+	<stance state_key="running" accuracy="0.8"/>
 	<stance state_key="walking" accuracy="0.85"/>
-	<stance state_key="crouch_moving" accuracy="0.8"/>
-	<stance state_key="prone_moving" accuracy="0.8"/>
+	<stance state_key="crouch_moving" accuracy="0.85"/>
 	<stance state_key="standing" accuracy="0.9"/>
-	<stance state_key="crouching" accuracy="0.95"/>
-	<stance state_key="prone" accuracy="1"/>
+	<stance state_key="crouching" accuracy="0.9"/>
+	<stance state_key="prone" accuracy="0.9"/>
+	<stance state_key="prone_moving" accuracy="0.85"/>
+	<stance state_key="over_wall" accuracy="0.9"/>
+	<modifier class="speed" value="1.0"/>
 	<tag name="pistol"/>
-	<inventory encumbrance="2.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<stance state_key="over_wall" accuracy="1"/>
-	<modifier class="speed" value="+1.0"/>
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
 	<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
@@ -31574,7 +31570,7 @@
 	<hud_icon filename="gkw_m1.png"/>
 	<inventory encumbrance="10.0" price="100.0"/>
 	<projectile file="m1_grenade.projectile"/>
-	<ballistics curve_height="6.0" near_far_distance="0.0" speed_estimation_near="15.0" speed_estimation_far="20.0" max_speed="45.0" randomness="0.0" tweak_factor="1.1"/>
+	<ballistics curve_height="6.0" near_far_distance="0.0" speed_estimation_near="9.0" speed_estimation_far="17.0" max_speed="30.0" randomness="0.0" tweak_factor="1.1"/>
 	<stance state_key="running" accuracy="0.6"/>
 	<stance state_key="walking" accuracy="0.6"/>
 	<stance state_key="crouch_moving" accuracy="0.6"/>
