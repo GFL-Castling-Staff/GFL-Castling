@@ -216,7 +216,7 @@ class call_event : Tracker {
                             FairyRequest.setIconTypeKey("call_marker_drop");
                             FairyRequest.setIndex(6);
                             FairyRequest.setSize(0.5);
-                            FairyRequest.setDummyId(m_DummyCallID);
+                            FairyRequest.setDummyId(flagId);
                             addCastlingMarker(FairyRequest);
                             m_DummyCallID++;
                             GFL_event_array.insertLast(GFL_event(characterId,factionId,int(GFL_Event_Index["warrior_fairy_apache"]),stringToVector3(position),1.0,-1.0,flagId));

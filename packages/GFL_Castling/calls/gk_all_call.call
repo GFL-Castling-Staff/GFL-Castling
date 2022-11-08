@@ -224,8 +224,8 @@
 
         <hud_icon filename="call_RampageFairy.png" />
         <capacity value="0" source="rank" source_value="0.0" />
-        <capacity value="100" source="rank" source_value="6.48" />
-        <inventory encumbrance="0.0" price="5000.0" />
+        <capacity value="100" source="rank" source_value="10.00" />
+        <inventory encumbrance="0.0" price="10000.0" />
     </call> 
     <!-- 空袭妖精 -->
     <call name="Airstrike Fairy" key="gk_airstrike_fairy.call" initiation_comment1="Airstrike Fairy" acknowledge_comment="Confirmed, UAV is online, situational awareness is complete" acknowledge_time="0" launch_comment="Execution of air strikes" notify_metagame="1">
