@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vehicle name="Mortar Truck" key="mortar_truck.vehicle" respawn_time="180" map_view_atlas_index="35" minimum_fill_requirement="0.3" reserves_spawn_point="1"
+>
+    <tag name="metal_thin" />
+    <tag name="light_combat" />
+    <tire_set offset="1.12 0.0 2.835" radius="0.64" />
+    <tire_set offset="1.12 0.0 -1.302" radius="0.64" />
+    <tire_set offset="1.12 0.0 -2.894" radius="0.64" />
+    <control 
+	max_speed="25.0" 
+	acceleration="8.0" 
+	max_reverse_speed="10.0" 
+	max_rotation="0.9" 
+	max_water_depth="1.6" 
+	steer_smoothening="0.7" />
+    <turret offset="0 1.7 -1.2" weapon_key="truck_mortar.weapon" weapon_offset="0 0 0" weapon_recoil="0.05" max_rotation_step="0.00008" rotation="0"/>
+    <physics 
+	max_health="40" 
+	mass="15" 
+	broken_mass="15"
+    remove_collision_threshold="0.3"	
+	extent="3.2 0.0 6.4" 
+	offset="0 0.0 0" 
+	top_offset="0 11.2 0" 
+	collision_model_pos="0 1.44 0.32" 
+	collision_model_extent="2.72 3.25 8.3" 
+	visual_offset="0 0.24 -0.24" 
+	friction_offset="0.0" 
+	drag_offset="-0.05" />
+    <visual class="chassis" mesh_filename="guntruck.mesh" texture_filename="guntruck_body.png" />
+    <visual class="chassis" key="broken" mesh_filename="guntruck_broken.mesh" texture_filename="guntruck_body_broken.png" />
+    <visual class="tire" mesh_filename="transport_truck_wheel.mesh" texture_filename="transport_truck_wheel.png" />
+    <character_slot type="driver" position="0.5 0.8 1.8" rotation="0" exit_rotation="1.57" hiding="1" />
+    <character_slot type="gunner" attached_on_turret="0" seat_position="0 -1.8 -0.3" enter_position="-1.6 1.5 0.6" rotation="-3.14"  exit_rotation="-1.57" hiding="0" animation_key="technical mg still">
+        <turret index="0" />
+        <state class="entering" animation_key="crouching forwards short, no weapon" position="0 0.5 -0.3" rotation="0" />
+        <state class="leaving" animation_key="crouching forwards short, no weapon" position="0 0.5 -0.3" rotation="-3.14" />
+        <state class="idle" animation_key="crouch still, no weapon, 62" position="0 0.5 -0.3" />
+    </character_slot>
+	<character_slot type="passenger" position="-0.7 1.8 -3.0" enter_position="-0.7 1.8 -3.0" rotation="-1.57" exit_rotation="-1.57" hiding="0" allow_weapon="1" animation_key="still" />
+	<character_slot type="passenger" position="0.7 1.8 -3.0" enter_position="0.7 1.8 -3.0" rotation="1.57" exit_rotation="1.57" hiding="0" allow_weapon="1" animation_key="still" />  
+	<character_slot type="passenger" position="-0.7 1.8 0.6" enter_position="-0.7 1.8 0.9" rotation="-1.57" exit_rotation="-1.57" hiding="0" allow_weapon="1" animation_key="still" />
+	<character_slot type="passenger" position="0.7 1.8 0.6" enter_position="0.7 1.8 0.9" rotation="1.57" exit_rotation="1.57" hiding="0" allow_weapon="1" animation_key="still" />       
+    <rev_sound filename="truck_rev0.wav" low_pitch="0.95" high_pitch="1.05" low_rev="0.0" high_rev="0.2" volume="1.0" />
+    <rev_sound filename="truck_rev1.wav" low_pitch="0.8" high_pitch="1.1" low_rev="0.05" high_rev="0.7" volume="0.75" />
+    <rev_sound filename="truck_rev3.wav" low_pitch="0.8" high_pitch="1.1" low_rev="0.4" high_rev="1.0" volume="1.0" />
+    <sound key="slide" filename="slide_noise.wav" />
+    <sound key="squeal" filename="tire_squeal.wav" />
+    <sound key="ignition" filename="truck_ignition.wav" />
+    <sound key="horn" filename="horn_truck.wav" />
+    <sound key="hit" filename="car_hit1.wav" />
+    <sound key="hit" filename="car_hit2.wav" />
+    <sound key="hit" filename="car_hit3.wav" />
+    <sound key="destroy" filename="vehicle_explosion_1.wav" />
+    <sound key="cleanup" filename="vehicle_explosion_1.wav" />
+    <effect event_key="slide" type="splat_map" surface_tag="road" size="1.0" atlas_index="5" layer="0" />
+    <effect event_key="slide_hard" type="splat_map" surface_tag="road" size="0.5" atlas_index="2" layer="0" />
+    <effect event_key="slide" type="splat_map" surface_tag="dirt" size="1.0" atlas_index="2" layer="1" />
+    <effect event_key="slide" type="particle" key="terrain" ref="Burst" surface_tag="dirt" use_surface_color="1" />
+    <effect event_key="health" value="1.2" ref="MediumSmokeVehicle" offset="0.0 1.6 3.92" />
+    <effect event_key="destroyed" ref="SmallSmokeVehicle" offset="1.0 1.2 0.48" />
+    <effect event_key="destroyed" ref="SmallFireRepeat" offset="1.0 1.04 0.48" />
+    <effect event_key="destroyed" ref="SmallSmokeVehicle" offset="0.48 2.08 2.0" />
+    <effect event_key="destroyed" ref="MediumSmokeVehicle" offset="0.0 1.04 -1.6" />
+    <effect event_key="destroyed" ref="SmallSmokeVehicle" offset="-0.64 1.04 -3.2" />
+    <effect event_key="destroy" key="other" ref="woosh" post_processing="0" shadow="0" />
+    <effect event_key="cleanup" key="other" ref="woosh" post_processing="0" shadow="0" />
+    <event>
+        <trigger class="destroy" />
+        <result class="spawn" instance_class="visual_item" instance_key="burning_piece_truck1.visual_item" min_amount="1" max_amount="3" offset="0 2.4 0" position_spread="1.5 1.5" direction_spread="0.1 0.2" />
+    </event>
+    <event>
+        <trigger class="destroy" />
+        <result class="spawn" instance_class="visual_item" instance_key="burning_piece_truck2.visual_item" min_amount="2" max_amount="4" offset="0 2.4 0" position_spread="1.5 1.5" direction_spread="0.15 0.25" />
+    </event>
+    <event>
+        <trigger class="destroy" />
+        <result class="spawn" instance_class="visual_item" instance_key="burning_piece_truck3.visual_item" min_amount="1" max_amount="2" offset="0 2.4 0" position_spread="1.5 1.5" direction_spread="0.1 0.18" />
+    </event>
+    <event>
+        <trigger class="destroy" />
+        <result class="spawn" instance_class="visual_item" instance_key="burning_piece_truck4.visual_item" min_amount="1" max_amount="3" offset="0 2.4 0" position_spread="1.5 1.5" direction_spread="0.1 0.15" />
+    </event>
+    <event>
+        <trigger class="destroy" />
+        <result class="spawn" instance_class="visual_item" instance_key="burning_piece_truck5.visual_item" min_amount="2" max_amount="3" offset="0 2.4 0" position_spread="1.5 1.5" direction_spread="0.05 0.2" />
+    </event>
+    <event>
+        <trigger class="destroy" />
+        <result class="spawn" instance_class="visual_item" instance_key="burning_piece_radartower.visual_item" min_amount="3" max_amount="5" offset="0 2.4 0" position_spread="1.5 1.5" direction_spread="0.1 0.2" />
+    </event>
+</vehicle>

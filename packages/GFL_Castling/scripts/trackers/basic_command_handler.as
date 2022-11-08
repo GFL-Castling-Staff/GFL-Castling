@@ -796,9 +796,7 @@ class BasicCommandHandler : Tracker {
 		} else  if(checkCommand(message, "kill_rj")) {
 			destroyAllEnemyVehicles("radio_jammer.vehicle");
 		} else  if(checkCommand(message, "mustela")) {
-			spawnInstanceNearPlayer(senderId, "wiesel_tow.vehicle", "vehicle", 0);        
-		} else  if(checkCommand(message, "mortar")) {
-			spawnInstanceNearPlayer(senderId, "mortar_resource.weapon", "weapon", 0);        
+			spawnInstanceNearPlayer(senderId, "wiesel_tow.vehicle", "vehicle", 0);          
 		} else  if(checkCommand(message, "javelin")) {
 			spawnInstanceNearPlayer(senderId, "gkw_consume_javelin.weapon", "weapon", 0);        
 		} else  if(checkCommand(message, "lblm1")) {
@@ -827,8 +825,8 @@ class BasicCommandHandler : Tracker {
 			spawnInstanceNearPlayer(senderId, "deployed_mortar.vehicle", "vehicle", 1);        
 		} else  if(checkCommand(message, "cat")) {
 			spawnInstanceNearPlayer(senderId, "darkcat.vehicle", "vehicle", 0);
-		} else  if(checkCommand(message, "ecat")) {
-			spawnInstanceNearPlayer(senderId, "darkcat.vehicle", "vehicle", 1);
+		} else  if(checkCommand(message, "mortar")) {
+			spawnInstanceNearPlayer(senderId, "mortar_truck.vehicle", "vehicle", 0);
 		} else  if(checkCommand(message, "spawntower")) {
 			spawnInstanceNearPlayer(senderId, "radar_tower.vehicle", "vehicle", 0); 
 		} else  if(checkCommand(message, "lblm")) {
