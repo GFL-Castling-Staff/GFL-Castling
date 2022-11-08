@@ -27,6 +27,9 @@ dictionary callLaunchIndex = {
     // 勇士妖精
     {"gk_warrior_fairy.call",5},
 
+    // 炮击妖精
+    {"gk_bombardment_fairy.call",6},
+
     // 空空投
     {"",0}
 };
@@ -186,17 +189,8 @@ class call_event : Tracker {
                                 }
                             }
                             else {
-                                m_cooldown.insertLast(Call_Cooldown(playerName,playerId,300.0,"TU160"));
+                                m_cooldown.insertLast(Call_Cooldown(playerName,playerId,120.0,"TU160"));
                                 sendFactionMessageKey(m_metagame,factionId,"ac130callstarthint");
-                                int flagId = m_DummyCallID + 15000;
-                                ManualCallTask@ FairyRequest = ManualCallTask(characterId,"",0.0,factionId,stringToVector3(position),"foobar");
-                                FairyRequest.setIndex(9);
-                                FairyRequest.setSize(0.5);
-                                FairyRequest.setDummyId(flagId);
-                                FairyRequest.setRange(120.0);
-                                FairyRequest.setIconTypeKey("call_marker_fury");
-                                //addCastlingMarker(FairyRequest);
-                                m_DummyCallID++;
                                 const XmlElement@ characterinfo = getCharacterInfo(m_metagame, characterId);
                                 Vector3 player_pos = stringToVector3(characterinfo.getStringAttribute("position"));
                                 insertCommonStrike(characterId,factionId,int(airstrikeIndex["TU160_bomb_strafe"]),player_pos,stringToVector3(position));
@@ -205,33 +199,58 @@ class call_event : Tracker {
                         break;
                     }
                     case 5:{
-                        bool exsist = false;
-                        int j=-1;
-                        for (uint i=0;i<GFL_event_array.length();i++){
-                            if (GFL_event_array[i].m_eventkey==1) {exsist=true;j=i;}
-                        }
-                        if (exsist){
+                        if(findCooldown(playerName,"warrior")){
                             const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
                             if (character !is null) {
-                                sendPrivateMessageKey(m_metagame,playerId,"snipecallexisthint");
-                                GiveRP(m_metagame,characterId,300);
+                                dictionary a;
+                                a["%time"] = ""+getCooldown(playerName,"warrior");                        
+                                sendPrivateMessageKey(m_metagame,playerId,"warriorcooldown",a);
+                                GiveRP(m_metagame,characterId,1000);
                             }
                         }
-                        else {
-                            sendFactionMessageKey(m_metagame,factionId,"snipecallstarthint");
+                        else{           
+                            m_cooldown.insertLast(Call_Cooldown(playerName,playerId,120.0,"warrior"));
+                            sendFactionMessageKey(m_metagame,factionId,"warriorcallstarthint");
                             int flagId = m_DummyCallID + 15000;
                             ManualCallTask@ FairyRequest = ManualCallTask(characterId,"",0.0,factionId,stringToVector3(position),"foobar");
-                            FairyRequest.setIndex(14);
+                            FairyRequest.setIconTypeKey("call_marker_drop");
+                            FairyRequest.setIndex(6);
                             FairyRequest.setSize(0.5);
-                            FairyRequest.setDummyId(flagId);
-                            FairyRequest.setRange(60.0);
-                            FairyRequest.setIconTypeKey("call_marker_snipe");
+                            FairyRequest.setDummyId(m_DummyCallID);
                             addCastlingMarker(FairyRequest);
                             m_DummyCallID++;
                             GFL_event_array.insertLast(GFL_event(characterId,factionId,int(GFL_Event_Index["warrior_fairy_apache"]),stringToVector3(position),1.0,-1.0,flagId));
                         }
                         break;
                     }
+                    case 6:{
+                        if(findCooldown(playerName,"bombardment")){
+                            const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+                            if (character !is null) {
+                                dictionary a;
+                                a["%time"] = ""+getCooldown(playerName,"bombardment");                        
+                                sendPrivateMessageKey(m_metagame,playerId,"warriorcooldown",a);
+                                GiveRP(m_metagame,characterId,500);
+                            }
+                        }
+                        else {
+                            // m_cooldown.insertLast(Call_Cooldown(playerName,playerId,120.0,"bombardment"));
+                            m_cooldown.insertLast(Call_Cooldown(playerName,playerId,5.0,"bombardment"));
+                            playSoundAtLocation(m_metagame,"kcco_dn_1.wav",factionId,position,1.5);
+                            sendFactionMessageKey(m_metagame,factionId,"snipecallstarthint");
+                            int flagId = m_DummyCallID + 15000;
+                            ManualCallTask@ FairyRequest = ManualCallTask(characterId,"",0.0,factionId,stringToVector3(position),"foobar");
+                            FairyRequest.setIndex(11);
+                            FairyRequest.setSize(0.5);
+                            FairyRequest.setDummyId(flagId);
+                            FairyRequest.setRange(40.0);
+                            FairyRequest.setIconTypeKey("call_marker_bomb");
+                            addCastlingMarker(FairyRequest);
+                            m_DummyCallID++;
+                            GFL_event_array.insertLast(GFL_event(characterId,factionId,int(GFL_Event_Index["bomb_fairy"]),stringToVector3(position),1.0,-1.0,flagId));
+                        }
+                        break;
+                    }                    
                     default:
                         break;
                 }

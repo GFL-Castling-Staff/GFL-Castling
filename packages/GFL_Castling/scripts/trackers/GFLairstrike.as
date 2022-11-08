@@ -72,6 +72,12 @@ dictionary airstrikeIndex = {
         // 空袭妖精_TU160_航弹洗地
         {"TU160_bomb_strafe",13},
 
+        // 炮击妖精 105mm航弹
+        {"bomb_105",14},
+
+        // 炮击妖精 155mm航弹
+        {"bomb_155",15},
+
         // 下面这行是用来占位的，在这之上添加新的即可
         {"666",-1}
 };
@@ -415,8 +421,8 @@ class GFLairstrike : Tracker {
                         //最终弹头随机程度
                         float strike_rand = 2;
                                                 
-                        //每单轮扫射12发
-                        for(int j=1;j<=12;j++)
+                        //每单轮扫射8发
+                        for(int j=1;j<=8;j++)
                         {
                             float rand_angle = rand(-3.14,3.14);
                             float rand_x1 = strike_rand*cos(rand_angle);
@@ -476,7 +482,25 @@ class GFLairstrike : Tracker {
                         }                               
                         Airstrike_strafe.removeAt(a);
                         break;
-                    }                    
+                    }
+                    case 14:{//炮击105
+                        string c = 
+                            "<command class='create_instance'" +
+                            " faction_id='" + fid + "'" +
+                            " instance_class='grenade'" +
+                            " instance_key='" + "artillery_bomb.projectile" + "'" +
+                            " position='" + start_pos.toString() + "'" +
+                            " character_id='" + cid + "' />";
+                        m_metagame.getComms().send(c);                        	
+                        Airstrike_strafe.removeAt(a);
+                        break;                        
+                    }
+                    case 15:{//炮击155
+                        CreateDirectProjectile(m_metagame,start_pos,end_pos,"artillery_shell_fairies_155.projectile",cid,fid,5);	
+                        playSoundAtLocation(m_metagame,"kcco_dn_3.wav",fid,start_pos,2.0);
+                        Airstrike_strafe.removeAt(a);
+                        break;                        
+                    }                                                                 
                     default:
                         break;
                 }

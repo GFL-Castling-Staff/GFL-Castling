@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projectiles>
-<projectile class="grenade" name="artillery shell" slot="2" key="artillery_shell_fairies.projectile" >
-    <result class="blast" radius="8.0" damage="4.1" push="0.5" decal="1" faction_compare="not_equal"/>
+<projectile class="grenade" name="artillery shell" slot="2" key="artillery_shell_fairies_105.projectile" pulldown_in_air="26">
+    <result class="blast" radius="8.0" damage="6.1" push="0.4" decal="1" faction_compare="not_equal"/>
     <trigger class="impact" />
     <rotation class="motion" />
-    <model mesh_filename="mortar_shell.xml" />
+    <model mesh_filename="mortar_shell_heavy.xml" />
     <commonness value="0.0" />
 
     <sound class="result" key="other" fileref="explosion_FromFC5_1.wav" volume="1.8" />
@@ -49,7 +49,47 @@
     <effect class="result" key="static_object" copy="other" />
     <effect class="result" key="vehicle" copy="other" />
     <effect class="result" key="character" copy="other" />
-	<trail probability="1.0" key="BulletApTrail"/>
+</projectile>
+<projectile class="grenade" name="artillery shell" slot="2" key="artillery_shell_fairies_155.projectile" pulldown_in_air="20">
+    <result class="blast" radius="18.0" damage="20.0" push="0.75" decal="1" faction_compare="not_equal"/>
+    <trigger class="impact" />
+    <rotation class="motion" />
+    <model mesh_filename="shell_152mm.xml" />
+    <commonness value="0.0" />
+
+    <sound class="result" key="other" fileref="explosion_FromFC5_1.wav" volume="1.8" />
+    <sound class="result" key="other" fileref="explosion_FromFC5_2.wav" volume="1.8" />
+    <sound class="result" key="other" fileref="explosion_FromFC5_3.wav" volume="1.8" />
+    <sound class="result" key="other" fileref="explosion_FromFC5_4.wav" volume="1.8" />
+
+    <sound class="result" key="terrain" copy="other" />
+    <sound class="result" key="static_object" copy="other" />
+    <sound class="result" key="vehicle" copy="other" />
+    <sound class="result" key="character" copy="other" />
+
+    <effect class="result" key="terrain" ref="NavalBurstInner" post_processing="1" use_surface_color="1" />
+    <effect class="result" key="terrain" ref="NavalBurstOuter" post_processing="1" use_surface_color="1" />
+    <effect class="result" key="terrain" ref="NavalBurstUp" post_processing="1" use_surface_color="1" />
+    <effect class="result" key="terrain" ref="NavalSmokeUp1" post_processing="1" />
+    <effect class="result" key="terrain" ref="NavalSmokeUp2" post_processing="1" />
+    <effect class="result" key="terrain" ref="NavalSmokeTop1" post_processing="1" />
+    <effect class="result" key="terrain" ref="NavalSmokeTop2" post_processing="1" />
+    <effect class="result" key="terrain" ref="NavalSmoke1" post_processing="1" />
+    <effect class="result" key="terrain" ref="NavalSmoke2" post_processing="1" />
+    <effect class="result" key="terrain" ref="NavalGodray" lighting="0" />
+    <effect class="result" key="terrain" ref="woosh_big1" lighting="0" />
+    <effect class="result" key="terrain" ref="ShadowSmoke" shadow="1" />
+    <effect class="result" key="terrain" ref="Shine" lighting="0" />
+    <effect class="result" key="terrain" ref="Godray" lighting="0" />
+
+    <effect class="result" type="splat_map" surface_tag="" size="13.0" atlas_index="0" layer="1" />
+    <effect class="result" type="splat_map" surface_tag="" size="15.0" atlas_index="4" layer="0" />
+    <effect class="result" type="splat_map" surface_tag="" size="17.0" atlas_index="0" layer="2" additive="0" /> <!-- remove top snow everywhere -->
+   
+    <effect class="result" key="other" copy="terrain" />
+    <effect class="result" key="static_object" copy="terrain" />
+    <effect class="result" key="vehicle" copy="terrain" />
+    <effect class="result" key="character" copy="terrain" />
 </projectile>
 <projectile class="grenade" name="artillery shell" slot="2" key="artillery_shell_kcco.projectile" >
     <result class="blast" radius="7.0" damage="1.8" push="0.4" decal="1" faction_compare="not_equal"/>

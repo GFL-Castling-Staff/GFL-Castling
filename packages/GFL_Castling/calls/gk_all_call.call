@@ -164,7 +164,7 @@
         <inventory encumbrance="0.0" price="108.0" />
     </call>
     <!-- 炮击妖精 -->
-    <call name="Bombardment Fairy" key="gk_bombardment_fairy.call" initiation_comment1="Bombardment Fairy" acknowledge_comment="Confirm, data reception is normal" acknowledge_time="0" launch_comment="Artillery strikes in progress." notify_metagame="1">
+    <!-- <call name="Bombardment Fairy" key="gk_bombardment_fairy.call" initiation_comment1="Bombardment Fairy" acknowledge_comment="Confirm, data reception is normal" acknowledge_time="0" launch_comment="Artillery strikes in progress." notify_metagame="1">
         <round instances="3" instance_class="grenade" instance_key="artillery_shell_fairies.projectile" instance_spread="4 4 4" common_spread="2 0 2" launch_time="1.5" spawn_time="3.0">
             <sound class="launch" fileref="Fairy_artillery_FromRA3.wav" volume="2.5" />
             <sound class="spawn" fileref="woosh1.wav" volume="0.2" />
@@ -186,7 +186,24 @@
         <capacity value="0" source="rank" source_value="0.0" />
         <capacity value="100" source="rank" source_value="0.231" />
         <inventory encumbrance="0.0" price="200.0" />
-    </call>
+    </call> -->
+    <call name="Bombardment Fairy" key="gk_bombardment_fairy.call" initiation_comment1="Bombardment Fairy" acknowledge_comment="Confirm, data reception is normal" acknowledge_time="0" launch_comment="Artillery strikes in progress." notify_metagame="1">
+        <round 
+        instances="0"
+        instance_class="projectile"
+        instance_key=""
+        launch_time="1.0"
+        spawn_time="1.0">
+        </round>
+
+        <round launch_time="1.0"
+        spawn_time="1.0">
+        </round>
+        <hud_icon filename="call_Firesupport_ShellingFairy.png" />
+        <capacity value="0" source="rank" source_value="0.0" />
+        <capacity value="100" source="rank" source_value="0.231" />
+        <inventory encumbrance="0.0" price="500.0" />
+    </call>    
     <!-- 暴怒妖精（AC130） -->
     <call name="Fury Fairy" key="gk_rampage_fairy_ac130.call" initiation_comment1="Fury Fairy" initiation_comment2="Gunship support" acknowledge_comment="Confirm, checking gunship status" acknowledge_time="2" launch_comment="Gunship status confirmed" notify_metagame="1">
 
@@ -243,7 +260,7 @@
         <hud_icon filename="call_SnipeFairy.png" />
         <capacity value="0" source="rank" source_value="0.0" />
         <capacity value="100" source="rank" source_value="6.48" />
-        <inventory encumbrance="0.0" price="300.0" />
+        <inventory encumbrance="0.0" price="1000.0" />
     </call>
 	<!-- 狙击妖精 -->
     <call name="Snipe Fairy" key="gk_snipe_fairy.call" initiation_comment1="Snipe Fairy" initiation_comment2="Snipe Command" acknowledge_comment="Confirm, checking Snipe UAV status" acknowledge_time="0" launch_comment="UAV status confirmed" notify_metagame="1">

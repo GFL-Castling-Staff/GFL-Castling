@@ -1210,7 +1210,7 @@ class GFLskill : Tracker {
 				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
 				if (character !is null) {
 					Vector3 grenade_pos = stringToVector3(event.getStringAttribute("position"));
-					int factionid = character.getIntAttribute("faction_id");
+					uint factionid = character.getIntAttribute("faction_id");
 					string c = 
 						"<command class='create_instance'" +
 						" faction_id='"+ factionid +"'" +

@@ -30,6 +30,8 @@ dictionary GFL_Event_Index = {
         // 勇士妖精——Apache
         {"warrior_fairy_apache",6},
 
+        {"bomb_fairy",7},
+
         // 下面这行是用来占位的，在这之上添加新的即可
         {"666",-1}
 };
@@ -73,6 +75,7 @@ class GFL_event_system : Tracker {
                                 excuteWarriorFariyApache(m_metagame,GFL_event_array[a]);
                                 break;
                             }
+                            case 7:{excuteBombFairy(m_metagame,GFL_event_array[a]);break;}
 
                             default:
                                 break;
@@ -224,6 +227,27 @@ void excuteYaoren(GameMode@ metagame,GFL_event@ eventinfo){
     if(eventinfo.m_phase>=10){
         eventinfo.m_enable=false;
     }
+}
+
+void excuteBombFairy(GameMode@ metagame,GFL_event@ eventinfo){
+    eventinfo.m_time=0.6;
+    if(eventinfo.m_phase<=1)
+    {
+        sendFactionMessageKey(metagame,eventinfo.m_factionid,"bombfight");
+    }    
+    if(eventinfo.m_phase!=7){
+        insertCommonStrike(eventinfo.m_characterId,eventinfo.m_factionid,14,eventinfo.m_pos.add(Vector3(0,40,0)),eventinfo.m_pos);
+    }
+    if(eventinfo.m_phase==6){
+        eventinfo.m_time=1.0;
+    }    
+    if(eventinfo.m_phase==7){
+        insertCommonStrike(eventinfo.m_characterId,eventinfo.m_factionid,15,eventinfo.m_pos.add(Vector3(0,40,0)),eventinfo.m_pos);
+    }
+    eventinfo.m_phase++;
+    if(eventinfo.m_phase>=8){
+        eventinfo.m_enable=false;
+    }        
 }
 
 array<int> RampageFairyAC130List={
@@ -491,7 +515,7 @@ void excuteWarriorFariyApache(GameMode@ metagame,GFL_event@ eventinfo){
     if(eventinfo.m_phase==1){
         
         insertCommonStrike(eventinfo.m_characterId,eventinfo.m_factionid,"apache_bait",aimPos,eventinfo.m_pos);
-
+        sendFactionMessageKey(metagame,eventinfo.m_factionid,"warriorfight");
         apache_javelin_luckyvehicleid  = getNearByEnemyVehicle(metagame,eventinfo.m_factionid,eventinfo.m_pos,20);
         if(apache_javelin_luckyvehicleid!=-1)playSoundAtLocation(metagame,"javelin_locked.wav",eventinfo.m_factionid,eventinfo.m_pos,1.0);//锁定载具成功
         else	playSoundAtLocation(metagame,"javelin_lock_fail.wav",eventinfo.m_factionid,eventinfo.m_pos,1.0);//未锁定载具
