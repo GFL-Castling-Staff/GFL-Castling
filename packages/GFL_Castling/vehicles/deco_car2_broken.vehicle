@@ -1,0 +1,16 @@
+<vehicle name="" key="deco_car2_broken.vehicle" map_view_atlas_index="-1" respawn_time="10000.0" repair_factor="0">
+	<tag name="deco_car" />	
+ 	<tire_set offset="1.0 0.0 1.0" radius="0.65" />
+	<tire_set offset="1.0 0.0 -1.0" radius="0.65" />
+
+	<control max_speed="20.0" acceleration="6.7" max_reverse_speed="6.0" max_rotation="0.8" max_water_depth="1.9" />
+                                                                                                                                                       
+	<physics max_health="100" mass="18" broken_mass="8" extent="2.0 0.0 1.5" offset="0 0 0" top_offset="0 3 0" collision_model_pos="0 0.8 0" collision_model_extent="2.2 1.30 4.5" visual_offset="0 0.1 0.1" destroy_on_top_hit="0" /> 
+
+	<visual class="chassis" mesh_filename="car2_broken.mesh" texture_filename="car_atlas1_broken.png" texture_atlas_cell="1 2 4 4" />
+  
+	<sound key="hit" filename="car_hit1.wav" />
+	<sound key="hit" filename="car_hit2.wav" />
+	<sound key="hit" filename="car_hit3.wav" />
+   
+</vehicle>

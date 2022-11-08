@@ -16,8 +16,8 @@
     <turret offset="0 1.7 -1.2" weapon_key="truck_mortar.weapon" weapon_offset="0 0 0" weapon_recoil="0.05" max_rotation_step="0.00008" rotation="0"/>
     <physics 
 	max_health="40" 
-	mass="15" 
-	broken_mass="15"
+	mass="60" 
+	broken_mass="30"
     remove_collision_threshold="0.3"	
 	extent="3.2 0.0 6.4" 
 	offset="0 0.0 0" 
