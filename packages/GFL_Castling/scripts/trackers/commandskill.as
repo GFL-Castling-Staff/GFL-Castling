@@ -320,10 +320,12 @@ dictionary commandSkillIndex = {
         {"gkw_hk416_3401_mod3.weapon",37},
         {"gkw_hk416_3401_mod3_skill.weapon",37},
 
-        // M3
+        // SMG 手雷
         {"gkw_m3.weapon",38},
         {"gkw_sten.weapon",38},
         {"gkw_stenmod3.weapon",38},
+        {"gkw_sterling.weapon",38},
+
 
         // 炼金术师 大限
         {"ff_alchemist.weapon",39},
@@ -2622,7 +2624,7 @@ class CommandSkill : Tracker {
                         playAnimationKey(m_metagame,characterId,"throwing, upside",true,true);
                         c_pos=c_pos.add(Vector3(0,1,0));
                         if (checkFlatRange(c_pos,stringToVector3(target),10)){
-                            CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"grenade_m67_s.projectile",characterId,factionid,60);
+                            CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"grenade_m67_s.projectile",characterId,factionid,45);
                         }
                         else{
                             CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"grenade_m67_s.projectile",characterId,factionid,30.0,3.0);
@@ -2642,7 +2644,7 @@ class CommandSkill : Tracker {
                         playAnimationKey(m_metagame,characterId,"throwing, upside",true,true);
                         c_pos=c_pos.add(Vector3(0,1,0));
                         if (checkFlatRange(c_pos,stringToVector3(target),10)){
-                            CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"grenade_m67_s.projectile",characterId,factionid,60);
+                            CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"grenade_m67_s.projectile",characterId,factionid,45);
                         }
                         else{
                             CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"grenade_m67_s.projectile",characterId,factionid,30.0,3.0);
@@ -2662,12 +2664,24 @@ class CommandSkill : Tracker {
                         playAnimationKey(m_metagame,characterId,"throwing, upside",true,true);
                         c_pos=c_pos.add(Vector3(0,1,0));
                         if (checkFlatRange(c_pos,stringToVector3(target),10)){
-                            CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"grenade_m67_s.projectile",characterId,factionid,60);
+                            CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"grenade_m67_s.projectile",characterId,factionid,45);
                         }
                         else{
                             CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"grenade_m67_s.projectile",characterId,factionid,30.0,3.0);
                         }                        
-                    }                    
+                    }     
+                    else if(weaponname=="gkw_sterling.weapon") {
+                        playSoundAtLocation(m_metagame,"grenade_throw1.wav",factionid,c_pos,1.2);
+                        addCoolDown("Grenade",15,characterId,modifer);
+                        playAnimationKey(m_metagame,characterId,"throwing, upside",true,true);
+                        c_pos=c_pos.add(Vector3(0,1,0));
+                        if (checkFlatRange(c_pos,stringToVector3(target),10)){
+                            CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"grenade_english.projectile",characterId,factionid,45);
+                        }
+                        else{
+                            CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"grenade_english.projectile",characterId,factionid,30.0,3.0);
+                        }                        
+                    }                                      
                 }
             }
         }

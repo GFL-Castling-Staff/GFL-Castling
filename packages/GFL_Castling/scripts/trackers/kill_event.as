@@ -290,6 +290,7 @@ class kill_event : Tracker {
                 if(startsWith(c_armorType,"srexo_t6")){
                     updateHealByKillEvent(characterId,factionId,4,30,"vest");
                 }
+                updateHealByKillEvent(characterId,factionId,int(healOnKillWeaponList[c_weaponType]),15);
             }
 
             if(SFbossList.find(Solider_Name)>-1 && characterId > 0){
@@ -316,12 +317,6 @@ class kill_event : Tracker {
                     }
                 }    
             }
-
-            if(killway=="stab"){
-                KillerWeaponKey = getPlayerWeaponFromList(playerId,0);
-            }
-
-            updateHealByKillEvent(characterId,factionId,int(healOnKillWeaponList[KillerWeaponKey]),15);
 
             if (Solider_Name=="") return;
 
