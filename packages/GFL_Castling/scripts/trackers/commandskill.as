@@ -325,6 +325,7 @@ dictionary commandSkillIndex = {
         {"gkw_sten.weapon",38},
         {"gkw_stenmod3.weapon",38},
         {"gkw_sterling.weapon",38},
+        {"gkw_saf.weapon",38},
 
 
         // 炼金术师 大限
@@ -2681,7 +2682,25 @@ class CommandSkill : Tracker {
                         else{
                             CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"grenade_english.projectile",characterId,factionid,30.0,3.0);
                         }                        
-                    }                                      
+                    }       
+                    else if(weaponname=="gkw_saf.weapon") {
+                        array<string> Voice={
+                            "SAF_SKILL1_JP.wav",
+                            "SAF_SKILL2_JP.wav",
+                            "SAF_SKILL3_JP.wav"
+                        };
+                        playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);                        
+                        playSoundAtLocation(m_metagame,"grenade_throw1.wav",factionid,c_pos,1.2);
+                        addCoolDown("Grenade",15,characterId,modifer);
+                        playAnimationKey(m_metagame,characterId,"throwing, upside",true,true);
+                        c_pos=c_pos.add(Vector3(0,1,0));
+                        if (checkFlatRange(c_pos,stringToVector3(target),10)){
+                            CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"hand_88grenade.projectile",characterId,factionid,45);
+                        }
+                        else{
+                            CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"hand_88grenade.projectile",characterId,factionid,40.0,5.0);
+                        }                        
+                    }                                                   
                 }
             }
         }
