@@ -20,7 +20,26 @@ material bullet_new
     } 
   }
 }
-  
+
+material bullet_new_add
+{
+  receive_shadows off
+  technique
+  {
+    pass
+    {
+      lighting off
+      fog_override false
+      depth_write off
+      scene_blend add
+
+      texture_unit {
+        texture bullet_new_trail.png
+      }
+    } 
+  }
+}
+
 material laser_hyz {
 	receive_shadows off
 	technique {
