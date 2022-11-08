@@ -150,6 +150,8 @@ dictionary gameSkillIndex = {
 		// uzi mod3 fire
         {"uzi_firenade",33},
 
+		// gsh18 庸医
+        {"gsh18_medic",34},
 
         // 下面这行是用来占位的，在这之上添加新的技能key和index即可
         {"666",-1}
@@ -343,13 +345,15 @@ class GFLskill : Tracker {
 					Vector3 grenade_pos = stringToVector3(event.getStringAttribute("position"));
 					int factionid = character.getIntAttribute("faction_id");
 					array<const XmlElement@>@ characters = getCharactersNearPosition(m_metagame, grenade_pos, factionid, 20.0f);
-					for (uint i = 0; i < characters.length; i++) {
-						int soldierId = characters[i].getIntAttribute("id");
-						XmlElement c ("command");
-						c.setStringAttribute("class", "update_inventory");
-						c.setIntAttribute("character_id", soldierId); 
-						c.setIntAttribute("untransform_count", 20);
-						m_metagame.getComms().send(c);
+					if (characters !is null && characters.length > 0 ){
+						for (uint i = 0; i < characters.length; i++) {
+							int soldierId = characters[i].getIntAttribute("id");
+							XmlElement c ("command");
+							c.setStringAttribute("class", "update_inventory");
+							c.setIntAttribute("character_id", soldierId); 
+							c.setIntAttribute("untransform_count", 20);
+							m_metagame.getComms().send(c);
+						}
 					}
 				}
 				break;
@@ -1236,6 +1240,27 @@ class GFLskill : Tracker {
 					}					
 				}
 				break;			
+			}
+
+			case 34: {// GSH18
+				int characterId = event.getIntAttribute("character_id");
+				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+				if (character !is null) {
+					Vector3 grenade_pos = stringToVector3(event.getStringAttribute("position"));
+					int factionid = character.getIntAttribute("faction_id");
+					array<const XmlElement@>@ characters = getCharactersNearPosition(m_metagame, grenade_pos, factionid, 4.5f);
+					if (characters !is null && characters.length > 0 ){
+						for (uint i = 0; i < characters.length; i++) {
+							int soldierId = characters[i].getIntAttribute("id");
+							XmlElement c ("command");
+							c.setStringAttribute("class", "update_inventory");
+							c.setIntAttribute("character_id", soldierId); 
+							c.setIntAttribute("untransform_count", 3);
+							m_metagame.getComms().send(c);
+						}
+					}
+				}
+				break;
 			}
             default:
                 break;
