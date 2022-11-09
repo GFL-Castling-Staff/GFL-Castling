@@ -368,14 +368,24 @@ dictionary commandSkillIndex = {
         {"ff_weaver.weapon",48},
         {"ff_weaver_1.weapon",48},
 
+        //汤普森
         {"gkw_thompson.weapon",49},
 
+        //燃烧链接 UZI
         {"gkw_uzimod3.weapon",50},
         {"gkw_uzimod3_skill.weapon",50},
 
+        //瞄准射击 锁人版
         {"gkw_m1903.weapon",51},
         {"gkw_m1903_only.weapon",51},
         {"gkw_m1903_exp.weapon",51},
+        {"gkw_m1.weapon",51},
+        {"gkw_m1_1106.weapon",51},
+        {"gkw_m1_sf.weapon",51},
+        {"gkw_m1_sf_skill.weapon",51},
+        {"gkw_m1_sf_1106.weapon",51},
+        {"gkw_m1_sf_1106_skill.weapon",51},
+        {"gkw_m1891.weapon",51},
 
         // 下面这行是用来占位的，在这之上添加新的枪和index即可
         {"666",-1}
@@ -3180,10 +3190,24 @@ class CommandSkill : Tracker {
 
                 if (closestIndex >= 0){
                     int target_id = affectedCharacter[closestIndex].getIntAttribute("id");
-                    playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 2.5s",false);
-                    TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
-                    tasker.add(DelayAntiPersonSnipeRequest(m_metagame,2.5,characterId,factionid,"snipe_hit_40.projectile",c_pos.add(Vector3(0,0.75,0)),target_id));
-                    addCoolDown("sniper",15,characterId,modifer);                    
+                    if (weapon_name == "gkw_m1.weapon" || weapon_name=="gkw_m1_1106.weapon" || weapon_name=="gkw_m1_sf.weapon" || weapon_name== "gkw_m1_1106_sf.weapon"){
+                        playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 2.5s",false);
+                        TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                        tasker.add(DelayAntiPersonSnipeRequest(m_metagame,2.5,characterId,factionid,"snipe_hit_40.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
+                        addCoolDown("sniper",20,characterId,modifer);
+                    }
+                    else if (weapon_name == "gkw_m1903.weapon" || weapon_name=="gkw_m1903_exp.weapon" || weapon_name=="gkw_m1903_only.weapon"){
+                        playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 2.5s",false);
+                        TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                        tasker.add(DelayAntiPersonSnipeRequest(m_metagame,2.5,characterId,factionid,"snipe_hit_40.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
+                        addCoolDown("sniper",20,characterId,modifer);
+                    }
+                    else if (weapon_name == "gkw_m1891.weapon"){
+                        playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 2s",false);
+                        TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                        tasker.add(DelayAntiPersonSnipeRequest(m_metagame,2.0,characterId,factionid,"snipe_hit_40.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
+                        addCoolDown("sniper",25,characterId,modifer);
+                    }                    
                 }
             }
             else{
