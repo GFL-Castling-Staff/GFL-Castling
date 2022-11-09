@@ -32,7 +32,7 @@
 	<sound key="cycle_out" fileref="m1903_cycle_out_FromPOSTSCRIPTUM.wav" volume="0.6"/>
 	<sound key="cycle_in" fileref="m1903_cycle_in_FromPOSTSCRIPTUM.wav" volume="0.6"/>
 	<sound class="impact" fileref="rifle_drop.wav" volume="1"/>
-	<commonness value="0.2" in_stock="1" can_respawn_with="1"/>
+	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<model filename="gkw_rf_m1903_iris.xml"/>
 	<!-- 武器模型BY kurumi -->
 	<hud_icon filename="gkw_m1903_only.png"/>

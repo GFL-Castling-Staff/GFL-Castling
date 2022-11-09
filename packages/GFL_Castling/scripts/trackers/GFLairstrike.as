@@ -438,8 +438,9 @@ class GFLairstrike : Tracker {
                         Airstrike_strafe.removeAt(a);
                         break;                        
                     }                    
-                    case 13:{//空袭妖精 单次 航弹覆盖
+                    case 13:{//火箭妖精 单次 航弹覆盖
                         //扫射位置偏移单位向量 与 扫射位置偏移单位距离
+                        sendFactionMessageKey(m_metagame,fid,"rocketcallstarthint");
                         Vector3 strike_vector = getAimUnitVector(1,start_pos,end_pos); 
                         float strike_didis = 8;
                         //与扫射方向相垂直的向量 与 扫射方向垂直方向偏移距离
@@ -496,7 +497,7 @@ class GFLairstrike : Tracker {
                         break;                        
                     }
                     case 15:{//炮击155
-                        CreateDirectProjectile(m_metagame,start_pos,end_pos,"artillery_shell_fairies_155.projectile",cid,fid,5);	
+                        CreateDirectProjectile(m_metagame,start_pos,end_pos,"artillery_shell_fairies_155.projectile",cid,fid,15);	
                         playSoundAtLocation(m_metagame,"kcco_dn_3.wav",fid,start_pos,2.0);
                         Airstrike_strafe.removeAt(a);
                         break;                        

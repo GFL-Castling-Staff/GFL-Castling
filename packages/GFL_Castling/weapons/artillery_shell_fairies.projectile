@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projectiles>
 <projectile class="grenade" name="artillery shell" slot="2" key="artillery_shell_fairies_105.projectile" pulldown_in_air="26">
-    <result class="blast" radius="8.0" damage="6.1" push="0.4" decal="1" faction_compare="not_equal"/>
+    <result class="blast" radius="10.0" damage="6.1" push="0.4" decal="1" faction_compare="not_equal"/>
     <trigger class="impact" />
     <rotation class="motion" />
     <model mesh_filename="mortar_shell_heavy.xml" />
@@ -51,7 +51,7 @@
     <effect class="result" key="character" copy="other" />
 </projectile>
 <projectile class="grenade" name="artillery shell" slot="2" key="artillery_shell_fairies_155.projectile" pulldown_in_air="20">
-    <result class="blast" radius="18.0" damage="20.0" push="0.75" decal="1" faction_compare="not_equal"/>
+    <result class="blast" radius="20.0" damage="20.0" push="0.75" decal="1" faction_compare="not_equal"/>
     <trigger class="impact" />
     <rotation class="motion" />
     <model mesh_filename="shell_152mm.xml" />

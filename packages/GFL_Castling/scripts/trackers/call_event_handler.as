@@ -21,8 +21,8 @@ dictionary callLaunchIndex = {
     // 增援妖精
     {"gk_yaoren_fairy.call",3},
 
-    // 空袭妖精
-    {"gk_airstrike_fairy.call",4},
+    // 火箭妖精
+    {"gk_rocket_fairy.call",4},
 
     // 勇士妖精
     {"gk_warrior_fairy.call",5},
@@ -174,7 +174,7 @@ class call_event : Tracker {
                         if (exsist_TU160){
                             const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
                             if (character !is null) {
-                                sendPrivateMessageKey(m_metagame,playerId,"ac130callexisthint");
+                                sendPrivateMessageKey(m_metagame,playerId,"rocketcooldown");
                                 GiveRP(m_metagame,characterId,5000);
                             }
                         }
@@ -190,7 +190,7 @@ class call_event : Tracker {
                             }
                             else {
                                 m_cooldown.insertLast(Call_Cooldown(playerName,playerId,120.0,"TU160"));
-                                sendFactionMessageKey(m_metagame,factionId,"ac130callstarthint");
+                                sendFactionMessageKey(m_metagame,factionId,"rocketcallstarthint");
                                 const XmlElement@ characterinfo = getCharacterInfo(m_metagame, characterId);
                                 Vector3 player_pos = stringToVector3(characterinfo.getStringAttribute("position"));
                                 insertCommonStrike(characterId,factionId,int(airstrikeIndex["TU160_bomb_strafe"]),player_pos,stringToVector3(position));
@@ -229,7 +229,7 @@ class call_event : Tracker {
                             if (character !is null) {
                                 dictionary a;
                                 a["%time"] = ""+getCooldown(playerName,"bombardment");                        
-                                sendPrivateMessageKey(m_metagame,playerId,"warriorcooldown",a);
+                                sendPrivateMessageKey(m_metagame,playerId,"bombcooldown",a);
                                 GiveRP(m_metagame,characterId,500);
                             }
                         }
@@ -237,7 +237,7 @@ class call_event : Tracker {
                             // m_cooldown.insertLast(Call_Cooldown(playerName,playerId,120.0,"bombardment"));
                             m_cooldown.insertLast(Call_Cooldown(playerName,playerId,5.0,"bombardment"));
                             playSoundAtLocation(m_metagame,"kcco_dn_1.wav",factionId,position,1.5);
-                            sendFactionMessageKey(m_metagame,factionId,"snipecallstarthint");
+                            sendFactionMessageKey(m_metagame,factionId,"bombcallstarthint");
                             int flagId = m_DummyCallID + 15000;
                             ManualCallTask@ FairyRequest = ManualCallTask(characterId,"",0.0,factionId,stringToVector3(position),"foobar");
                             FairyRequest.setIndex(11);

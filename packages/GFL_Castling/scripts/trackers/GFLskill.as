@@ -167,8 +167,9 @@ class GFLskill : Tracker {
 	}
 	protected array<string> GKcallList={
 		"gk_airstrike_fairy.call",
-		"gk_rampage_fairy_ac130.call",
+		"gk_rocket_fairy.call",
 		"gk_warrior_fairy.call",
+		"gk_rampage_fairy_ac130.call",
 		"gk_snipe_fairy.call",
 		"gk_yaoren_fairy.call",
 		"martina.call",
