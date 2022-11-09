@@ -7,6 +7,8 @@
 #include "query_helpers.as"
 #include "query_helpers2.as"
 #include "GFLhelpers.as"
+#include "GFLairstrike.as"
+
 //Author: NetherCrow
 
 class VestRecoverTask : Task {
@@ -243,6 +245,106 @@ class DelayAirstrikeRequest :Task{
 
     bool hasEnded() const {
 		if (m_timeLeft < 0) {
+			return true;
+		}
+		return false;
+	}
+}
+
+class DelayCommonCallRequest :Task{
+	protected GameMode@ m_metagame;
+	protected float m_time;
+    protected int m_character_id;
+    protected int m_faction_id;
+	protected float m_timeLeft;
+	protected Vector3 m_pos_1;
+	protected Vector3 m_pos_2;
+	protected string m_airstrike_key;
+
+	DelayCommonCallRequest(GameMode@ metagame, float time, int cId,int fId, string airstrike_key,Vector3 pos1,Vector3 pos2) {
+		@m_metagame = metagame;
+		m_time = time;
+		m_character_id = cId;
+		m_faction_id =fId;
+		m_pos_1=pos1;
+		m_pos_2=pos2;
+		m_airstrike_key=airstrike_key;
+	}
+
+	void start() {
+		m_timeLeft=m_time;
+	}
+
+	void update(float time) {
+		m_timeLeft -= time;
+		if (m_timeLeft < 0)
+		{
+			insertCommonStrike(m_character_id,m_faction_id,m_airstrike_key,m_pos_1,m_pos_2);
+		}
+	}
+
+    bool hasEnded() const {
+		if (m_timeLeft < 0) {
+			return true;
+		}
+		return false;
+	}
+}
+
+class DelayAntiPersonSnipeRequest :Task{
+	protected GameMode@ m_metagame;
+	protected float m_time;
+	protected float m_addtime;
+    protected int m_character_id;
+    protected int m_faction_id;
+	protected int m_target_id;
+	protected float m_timeLeft;
+	protected Vector3 m_pos_1;
+	protected Vector3 m_pos_2;
+	protected string m_airstrike_key;
+
+	DelayAntiPersonSnipeRequest(GameMode@ metagame, float time, int cId,int fId, string airstrike_key,Vector3 pos1,int target) {
+		@m_metagame = metagame;
+		m_time = time;
+		m_addtime = time + 0.2;
+		m_character_id = cId;
+		m_faction_id =fId;
+		m_pos_1=pos1;
+		m_airstrike_key=airstrike_key;
+		m_target_id = target;
+	}
+
+	void start() {
+		m_timeLeft=m_time;
+	}
+
+	void update(float time) {
+		m_timeLeft -= time;
+		m_addtime -= time;
+		if (m_timeLeft < 0)
+		{
+			const XmlElement@ characterinfo = getCharacterInfo(m_metagame, m_target_id);
+			if (characterinfo !is null){
+				m_pos_2 = stringToVector3(characterinfo.getStringAttribute("position"));
+				float dis = getFlatPositionDistance(m_pos_1,m_pos_2);
+				CreateDirectProjectile(m_metagame,m_pos_1,m_pos_2,"sniper_bullet.projectile",m_character_id,m_faction_id,dis/0.2);
+			}
+			if (m_addtime < 0){
+				m_pos_2.add(Vector3(0,0.3,0));
+				string c = 
+					"<command class='create_instance'" +
+					" faction_id='"+ m_faction_id +"'" +
+					" instance_class='grenade'" +
+					" instance_key='" + m_airstrike_key + "'" +
+					" position='" + m_pos_2.toString() + "'"+
+					" character_id='" + m_character_id + "' />";
+				m_metagame.getComms().send(c);
+			}
+		}		
+	}
+
+    bool hasEnded() const {
+		if (m_addtime < 0) {
 			return true;
 		}
 		return false;

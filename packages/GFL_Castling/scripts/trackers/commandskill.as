@@ -373,6 +373,10 @@ dictionary commandSkillIndex = {
         {"gkw_uzimod3.weapon",50},
         {"gkw_uzimod3_skill.weapon",50},
 
+        {"gkw_m1903.weapon",51},
+        {"gkw_m1903_only.weapon",51},
+        {"gkw_m1903_exp.weapon",51},
+
         // 下面这行是用来占位的，在这之上添加新的枪和index即可
         {"666",-1}
 };
@@ -500,6 +504,7 @@ class CommandSkill : Tracker {
                     case 48:{excuteWeaverskill(cId,senderId,m_modifer);break;}
                     case 49:{excuteM1928A1skill(cId,senderId,m_modifer);break;}
                     case 50:{excuteUZImod3skill(cId,senderId,m_modifer);break;}
+                    case 51:{excutSniperSkill_Antiperson(cId,senderId,m_modifer,c_weaponType);break;}
 
                     default:
                         break;
@@ -3120,6 +3125,71 @@ class CommandSkill : Tracker {
             sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
             return;
         }
+    }
+
+    void excutSniperSkill_Antiperson(int characterId,int playerId,SkillModifer@ modifer,string weapon_name){
+        bool ExistQueue = false;
+        int j=-1;
+        for (uint i=0;i<SkillArray.length();i++){
+            if (InCooldown(characterId,modifer,SkillArray[i]) && SkillArray[i].m_weapontype=="sniper") {
+                ExistQueue=true;
+                j=i;
+            }
+        }
+        if (ExistQueue){
+            dictionary a;
+            a["%time"] = ""+SkillArray[j].m_time;
+            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            return;
+        }
+        const XmlElement@ characterinfo = getCharacterInfo(m_metagame, characterId);
+        const XmlElement@ playerinfo = getPlayerInfo(m_metagame, playerId);
+
+        if (playerinfo.hasAttribute("aim_target")) {
+            string target = playerinfo.getStringAttribute("aim_target");
+            Vector3 c_pos = stringToVector3(characterinfo.getStringAttribute("position"));
+            Vector3 s_pos = stringToVector3(target);
+            int factionid = characterinfo.getIntAttribute("faction_id");
+            // c_pos=c_pos.add(Vector3(0,1,0));
+    
+            int m_fnum = m_metagame.getFactionCount();
+            array<const XmlElement@> affectedCharacter;
+            for(int i=0;i<m_fnum;i++) {
+                if(i!=factionid) {
+                    array<const XmlElement@> affectedCharacter2;
+                    affectedCharacter2 = getCharactersNearPosition(m_metagame,s_pos,i,5.0f);
+                    if (affectedCharacter2 !is null){
+                        for(uint x=0;x<affectedCharacter2.length();x++){
+                            affectedCharacter.insertLast(affectedCharacter2[x]);
+                        }
+                    }
+                }
+            }
+
+            if (affectedCharacter !is null && affectedCharacter.length > 0){
+                int closestIndex = -1;
+                float closestDistance = -1.0f;                
+                for(uint i=0;i<affectedCharacter.length();i++){
+                    float distance = getPositionDistance(c_pos, stringToVector3(affectedCharacter[i].getStringAttribute("position")));
+                    if (distance < closestDistance || closestDistance < 0.0){
+                        closestDistance = distance;
+                        closestIndex = i;
+                    }
+                }
+
+
+                if (closestIndex >= 0){
+                    int target_id = affectedCharacter[closestIndex].getIntAttribute("id");
+                    playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 2.5s",false);
+                    TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                    tasker.add(DelayAntiPersonSnipeRequest(m_metagame,2.5,characterId,factionid,"snipe_hit_40.projectile",c_pos.add(Vector3(0,0.75,0)),target_id));
+                    addCoolDown("sniper",15,characterId,modifer);                    
+                }
+            }
+            else{
+                addCoolDown("sniper",3,characterId,modifer);
+            }  
+        } 
     }
 
     void excuteG41Onlyskill(int characterId,int playerId,SkillModifer@ modifer){

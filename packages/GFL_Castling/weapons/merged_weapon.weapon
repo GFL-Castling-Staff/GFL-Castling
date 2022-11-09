@@ -2925,7 +2925,7 @@
 	<sound key="cycle_out" fileref="m1903_cycle_out_FromPOSTSCRIPTUM.wav" volume="0.6"/>
 	<sound key="cycle_in" fileref="m1903_cycle_in_FromPOSTSCRIPTUM.wav" volume="0.6"/>
 	<sound class="impact" fileref="rifle_drop.wav" volume="1"/>
-	<commonness value="0.2" in_stock="1" can_respawn_with="1"/>
+	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<model filename="gkw_rf_m1903_iris.xml"/>
 	<hud_icon filename="gkw_m1903_only.png"/>
 	<weak_hand_hold offset="0.3"/>
@@ -2962,7 +2962,7 @@
 </weapon>
 
 <weapon key="gkw_m1903_exp.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1" accuracy_factor="0.9" sustained_fire_grow_step="0.2" sustained_fire_diminish_rate="1.4" stance_accuracy_rate="3.0" magazine_size="41" can_shoot_standing="1" suppressed="0" name="M1903 Springfield-[Experiment]" class="4" reload_one_at_a_time="0" sight_range_modifier="1.15" projectile_speed="120" barrel_offset="0.5" stab_range="4" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="0.1" slot="0"/>
+	<specification retrigger_time="-1" accuracy_factor="0.9" sustained_fire_grow_step="0.2" sustained_fire_diminish_rate="1.4" stance_accuracy_rate="3.0" magazine_size="41" can_shoot_standing="1" suppressed="0" name="M1903 Springfield-[Experiment]" class="4" reload_one_at_a_time="0" sight_range_modifier="1.15" projectile_speed="140" barrel_offset="0.5" stab_range="4" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="0.1" slot="0"/>
 	<inventory encumbrance="20.0" buy_price="19.03" sell_price="19.03"/>
 	<animation state_key="reload" animation_key="reloading, magazine rifle 1.5"/>
 	<sound key="fire" fileref="m1903_fire_FromPOSTSCRIPTUM.wav" pitch_variety="0.05" volume="1.5"/>
@@ -2971,12 +2971,12 @@
 	<sound key="cycle_out" fileref="m1903_cycle_out_FromPOSTSCRIPTUM.wav" volume="0.6"/>
 	<sound key="cycle_in" fileref="m1903_cycle_in_FromPOSTSCRIPTUM.wav" volume="0.6"/>
 	<sound class="impact" fileref="rifle_drop.wav" volume="1"/>
-	<commonness value="0.2" in_stock="1" can_respawn_with="1"/>
+	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<model filename="gkw_rf_m1903_perderson.xml"/>
 	<hud_icon filename="gkw_m1903_exp.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="1.6" kill_probability_offset_on_successful_hit="5.0" kill_decay_start_time="0.35" kill_decay_end_time="0.5"/>
+	<result class="hit" kill_probability="1.6" kill_probability_offset_on_successful_hit="5.0" kill_decay_start_time="0.5" kill_decay_end_time="0.6"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.6"/>
 	<stance state_key="walking" accuracy="0.6"/>

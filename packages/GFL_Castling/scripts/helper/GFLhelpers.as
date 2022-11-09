@@ -759,3 +759,4 @@ void updateMapViewPic(Metagame@ metagame,string pic){
 	command.setStringAttribute("overlay_texture", pic);
 	metagame.getComms().send(command);
 }
+
