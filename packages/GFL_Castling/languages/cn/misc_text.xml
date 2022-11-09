@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <translation>
 	<!-- 杂项翻译 -->
-	<text key="Airstrike Fairy" text="空袭妖精" />
+
 	<text key="Confirmed, UAV is online, situational awareness is complete" text="确认，UAV上线，视野良好" />
 	<text key="Execution of air strikes" text="执行" />
-	<text key="Bombardment Fairy" text="炮击妖精" />
-	<text key="Confirm, data reception is normal" text="确认，数据接收正常" />
 	<text key="Artillery strikes in progress" text="打击开始" />
-	<text key="Rocket Fairy" text="火箭妖精" />
 	<text key="Provocation Fairy" text="嘲讽妖精" />
 	<text key="Manticore x2" text="协议同归-启用两台蝎甲兽" />
 	<text key="Manticore x5" text="协议同归-启用五台蝎甲兽" />
@@ -16,7 +13,6 @@
 	<text key="Medical UAV is online and closing in on the target." text="医疗无人机已上线，正在接近目标" />
 	<text key="Medical support is complete. May everyone survive the mission." text="医疗急救执行完毕，愿所有人平安" />
 	<text key="Nano repair capsules in progress." text="纳米维修胶囊投放中" />
-	<text key="Confirm, upload the coordinates" text="确认，坐标已上传" />
 	<text key="Start rocket strike" text="执行" />
 	<text key="Launch Chiara IV" text="投放Chiara IV" />
 	<text key="Launch Pierre II" text="投放Pierre II" />
@@ -94,21 +90,44 @@
 	<text key="R.I.P. .380 ACP" text="R.I.P .380 ACP空尖弹"/>
 	<text key="Evil object from an unknown world" text="来自未知世界的邪恶物品"/>
 	<text key="High Performance Tactical Hair Decoration" text="高性能战术发饰"/>
+	<text key="National Match-Grade Armor-Piercing Ammo" text="国家竞赛穿甲弹"/>
+	<text key="Pedersen Device" text="佩德森装置"/>
 
 	<text key="Black Fancy Motorbike" text="黑色高级摩托车"/>
+
 	<text key="Fury Fairy" text="暴怒妖精"/>	
 	<text key="Gunship support" text="很生气的炮艇支援"/>	
 	<text key="Confirm, checking gunship status" text="确认请求，正在检查炮艇机状态"/>	
 	<text key="Gunship status confirmed" text="炮艇机怒气值确认完毕"/>	
+
+	<text key="Warrior Fairy" text="勇士妖精"/>
+	<text key="Cruise missile" text="超勇的巡曳飞弹"/>
+	<text key="Confirm, checking Helicopter status" text="确认请求，正在检查攻击直升机状态"/>	
+	<text key="Helicopter status confirmed" text="攻击直升机各参数确认完毕"/>
+
 	<text key="Snipe Fairy" text="狙击妖精"/>	
 	<text key="Snipe Command" text="狙击指令"/>	
 	<text key="Confirm, checking Snipe UAV status" text="确认请求，正在检查UAV狙击单元状态"/>	
 	<text key="UAV status confirmed" text="UAV状态确认完毕"/>	
+
 	<text key="Reinforcement Fairy" text="增援妖精"/>
-	<text key="8 Dummy with fire support" text="8台作战傀儡与火力制压"/>
+	<text key="8 Dummy with fire support" text="8台作战傀儡与火力压制"/>
 	<text key="Confirm, checking dummys status" text="确认请求，正在调试人形傀儡"/>
 	<text key="Dummy status confirmed" text="增援傀儡检查完毕"/>
+
+	<text key="Rocket Fairy" text="火箭妖精" />
+	<text key="Trench Reaper" text="阵地死神" />
+	<text key="Confirm, upload the coordinates" text="确认，坐标已上传" />
+
+	<text key="Bombardment Fairy" text="炮击妖精" />
+	<text key="Bombard" text="炮击指令" />
+	<text key="Data has been confirmed" text="确认，数据接收正常" />
 	
+	<text key="Airstrike Fairy" text="空袭妖精" />
+	<text key="Fatal Airstrike" text="致命空袭"/>
+
+	<text key="droping in" text="投放中"/>
+
 	<text key="Tier 6 Equipment Ticket" text="Tier 6 装备兑换劵"/> 
 	<text key="Defence Fairy - Hesco Bastion" text="防御妖精 - Hesco防爆墙"/>	
 	<text key="Defence Fairy - Sandbag Cover" text="防御妖精 - 沙袋掩体"/>	
@@ -499,6 +518,8 @@
 	<text key="AA-12-[Dragon Breath Round]" text="AA-12-[龙息霰弹]"/>
 	<text key="AA-12-[Smokeless Lollipop]-[Dragon Breath Round]" text="AA-12-[无烟棒棒糖]-[龙息霰弹]"/>
 	<text key="M1903 Springfield" text="M1903春田步枪"/>
+	<text key="M1903 Springfield-[Experiment]" text="M1903春田步枪-[佩德森实验装置]"/>
+	<text key="M1903 Springfield-[AP]" text="M1903春田步枪-[国家竞赛穿甲弹]"/>
 	<text key="Sterling" text="斯特林冲锋枪"/>
 	<text key="Sten Mk II" text="司登Mk II 冲锋枪"/>
 	<text key="Sten Mk II(MOD3)" text="司登Mk II 冲锋枪(MOD3)"/>
@@ -542,7 +563,7 @@
 	<text key="M240L-[Heart of the Paladin]" text="M240L-[帕拉丁之心]"/>
 
 	<text key="QBU-88-[Rushing Cloud]" text="QBU-88-[乱石崩云]"/>
-
+	
 	<!-- 皮肤翻译 -->
 	<text key="Ameli-[Gift-selling Christmas Tree]" text="Ameli-[卖礼物的圣诞树]" />
 	<text key="Ameli-[Ameli`s Catching Ball]" text="Ameli-[阿梅利的接球]" />

@@ -291,6 +291,7 @@
 	<weapon key="gkw_m1891mod3.weapon"/>
 	<weapon key="gkw_m1891mod3_skill.weapon"/>
 	<weapon key="gkw_m1903.weapon" />
+	<weapon key="gkw_m1903_only.weapon" />
 	<weapon key="gkw_m1a1.weapon" />
 	<weapon key="gkw_m200.weapon" />
 	<weapon key="gkw_m200_560.weapon" />
@@ -772,10 +773,10 @@
 	<call key="target.call" />
 	<call key="gk_bombardment_fairy.call" />
 	<call key="gk_airstrike_fairy.call" />
+	<call key="gk_rocket_fairy.call" />
 	<call key="gk_warrior_fairy.call" />
 	<call key="gk_rampage_fairy_ac130.call"/>
 	<call key="gk_snipe_fairy.call"/>
-	<!-- <call key="gk_rocket_fairy.call" /> -->
 	<!-- 手雷类 -->
 	<projectile key="hand_grenade.projectile"/>
 	<projectile key="hand_88grenade.projectile" />
