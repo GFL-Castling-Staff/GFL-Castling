@@ -5,9 +5,9 @@
 	<tire_set offset="0.9 0.0 -1.8" radius="0.5" />
 	<control max_speed="16.0" acceleration="8.0" max_reverse_speed="12.0" max_rotation="0.75" max_water_depth="1.9" />
 	<physics max_health="40.0" mass="12" extent="2.0 0.0 5.4" offset="0 0.0 0" top_offset="0 4 0" collision_model_pos="0 0.8 -0.2" collision_model_extent="2.2 1.6 6.4" visual_offset="0 0.0 -0.1" />
-	<visual class="chassis" mesh_filename="truck_base.mesh" texture_filename="pickup_albedo.jpg" />
-	<visual class="tire" mesh_filename="truck_wheel.mesh" texture_filename="pickup_albedo.jpg" />
-	<visual class="chassis" key="broken" mesh_filename="truck_base.mesh" texture_filename="humvee_broken.png" />
+	<visual class="chassis" mesh_filename="truck1_base.mesh" texture_filename="pickup_albedo.jpg" />
+	<visual class="tire" mesh_filename="truck1_wheel.mesh" texture_filename="pickup_albedo.jpg" />
+	<visual class="chassis" key="broken" mesh_filename="truck1_base.mesh" texture_filename="humvee_broken.png" />
 	<character_slot type="driver" position="0.47 0.6 0.86" rotation="0" exit_rotation="1.57" hiding="1" animation_id="36" />
 	<character_slot type="passenger" position="-0.47 0.6 0.86" rotation="0" exit_rotation="-1.57" hiding="1" />
 

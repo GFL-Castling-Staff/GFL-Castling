@@ -31,10 +31,9 @@
     <visual class="chassis" key="broken" mesh_filename="guntruck_broken.mesh" texture_filename="guntruck_body_broken.png" />
     <visual class="tire" mesh_filename="transport_truck_wheel.mesh" texture_filename="transport_truck_wheel.png" />
     <character_slot type="driver" position="0.5 0.8 1.8" rotation="0" exit_rotation="1.57" hiding="1" />
-    <character_slot type="gunner" attached_on_turret="0" seat_position="0 -1.8 -0.3" enter_position="-1.6 1.5 0.6" rotation="-3.14"  exit_rotation="-1.57" hiding="0" animation_key="technical mg still">
+    <character_slot type="passenger" position="-0.5 0.8 1.8" rotation="0" exit_rotation="-1.57" hiding="1" />
+    <character_slot type="gunner" attached_on_turret="0" seat_position="0 -1.8 -0.3" enter_position="0.0 0.8 -3.2" rotation="0"  exit_rotation="3.14" hiding="0" animation_key="technical mg still">
         <turret index="0" />
-        <state class="entering" animation_key="crouching forwards short, no weapon" position="0 0.5 -0.3" rotation="0" />
-        <state class="leaving" animation_key="crouching forwards short, no weapon" position="0 0.5 -0.3" rotation="-3.14" />
         <state class="idle" animation_key="crouch still, no weapon, 62" position="0 0.5 -0.3" />
     </character_slot>
 	<character_slot type="passenger" position="-0.7 1.8 -3.0" enter_position="-0.7 1.8 -3.0" rotation="-1.57" exit_rotation="-1.57" hiding="0" allow_weapon="1" animation_key="still" />
