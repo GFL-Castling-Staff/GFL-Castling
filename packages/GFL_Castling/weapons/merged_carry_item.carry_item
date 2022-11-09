@@ -14171,6 +14171,22 @@
 	<commonness value="0.0" in_stock="1" can_respawn_with="0"/>
 </carry_item>
 
+<carry_item name="National Match-Grade Armor-Piercing Ammo" key="upgrade_m1903_1.carry_item" time_to_live_out_in_the_open="90" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="1.0" player_death_drop_owner_lock_time="90.0">
+	<capacity value="1" source="rank" source_value="0.0"/>
+	<hud_icon filename="hud_m1903_upgrade.png"/>
+	<inventory encumbrance="-1.0" buy_price="250000" sell_price="0"/>
+	<model mesh_filename="vestexo.xml"/>
+	<commonness value="0.0" in_stock="1" can_respawn_with="0"/>
+</carry_item>
+
+<carry_item name="Pedersen Device" key="upgrade_m1903_2.carry_item" time_to_live_out_in_the_open="90" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="1.0" player_death_drop_owner_lock_time="90.0">
+	<capacity value="1" source="rank" source_value="0.0"/>
+	<hud_icon filename="hud_m1903_upgrade_exp.png"/>
+	<inventory encumbrance="-1.0" buy_price="250000" sell_price="0"/>
+	<model mesh_filename="vestexo.xml"/>
+	<commonness value="0.0" in_stock="1" can_respawn_with="0"/>
+</carry_item>
+
 <carry_item time_to_live_out_in_the_open="90.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="1.0" name="T-Doll Contract" key="dollcraft.carry_item">
 	<capacity value="100" source="rank" source_value="0.0"/>
 	<hud_icon filename="hud_dollcraft.png"/>

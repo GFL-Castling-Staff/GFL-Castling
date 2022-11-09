@@ -33,19 +33,20 @@
 	<sound key="cycle_in" fileref="m1903_cycle_in_FromPOSTSCRIPTUM.wav" volume="0.6"/>
 	<sound class="impact" fileref="rifle_drop.wav" volume="1"/>
 	<commonness value="0.2" in_stock="1" can_respawn_with="1"/>
-	<model filename="gkw_rf_m1903.xml"/>
+	<model filename="gkw_rf_m1903_iris.xml"/>
+	<!-- 武器模型BY kurumi -->
 	<hud_icon filename="gkw_m1903_only.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="bullet.projectile">
         <result class="hit" kill_probability="4.0" kill_probability_offset_on_successful_hit="13.5" kill_decay_start_time="0.895" kill_decay_end_time="1.659"/>
 	</projectile>
-    <stance state_key="running" accuracy="0.1" />
-    <stance state_key="walking" accuracy="0.5" />
-    <stance state_key="crouch_moving" accuracy="0.5" />
-    <stance state_key="standing" accuracy="0.95" />
+    <stance state_key="running" accuracy="0.3" />
+    <stance state_key="walking" accuracy="0.7" />
+    <stance state_key="crouch_moving" accuracy="0.65" />
+    <stance state_key="standing" accuracy="0.98" />
     <stance state_key="crouching" accuracy="1.0" />
     <stance state_key="prone" accuracy="1.1" /> 
-    <stance state_key="prone_moving" accuracy="0.6" />
+    <stance state_key="prone_moving" accuracy="0.65" />
     <stance state_key="over_wall" accuracy="1.1" />
 	<tag name="rifle"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
