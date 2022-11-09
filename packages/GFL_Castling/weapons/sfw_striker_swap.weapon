@@ -3,15 +3,15 @@
     <tag name="machine gun" />
     <specification 
     accuracy_factor="0.6" 
-    barrel_offset="0.5" 
+    barrel_offset="0.75" 
     can_shoot_standing="1" 
     can_shoot_crouching="1"
     can_shoot_prone="0"
     class="0"
     slot="0" 
-    magazine_size="100" 
+    magazine_size="150" 
     name="SF-Striker SWAP" 
-    projectile_speed="95" 
+    projectile_speed="120" 
     retrigger_time="0.09" 
     suppressed="0" 
     spread_range="0.25"
