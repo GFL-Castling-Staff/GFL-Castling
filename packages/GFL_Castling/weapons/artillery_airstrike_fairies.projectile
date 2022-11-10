@@ -3,12 +3,12 @@
     <result class="blast" radius="10.0" damage="15.0" push="0.8" decal="1" faction_compare="not_equal"/>
     <trigger class="impact" />
     <rotation class="motion" />
-    <model mesh_filename="gk_airstrike_shell.xml" />
+    <model mesh_filename="gk_rocket_shell.xml" />
     <commonness value="0.0" />
 
  	
-    <sound class="result" key="other" fileref="explosion_Large_FromSQUAD_1.wav" volume="3.6" />
-    <sound class="result" key="other" fileref="explosion_Large_FromSQUAD_2.wav" volume="3.6" />
+    <sound class="result" key="other" fileref="explosion_Large_FromSQUAD_1.wav" volume="2.0" />
+    <sound class="result" key="other" fileref="explosion_Large_FromSQUAD_2.wav" volume="2.0" />
 
     <sound class="result" key="terrain" copy="other" />
     <sound class="result" key="static_object" copy="other" />

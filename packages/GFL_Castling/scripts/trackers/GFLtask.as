@@ -354,3 +354,62 @@ class DelayAntiPersonSnipeRequest :Task{
 		return false;
 	}
 }
+
+class DelayAntiTankSnipeRequest :Task{
+	protected GameMode@ m_metagame;
+	protected float m_time;
+	protected float m_addtime;
+    protected int m_character_id;
+    protected int m_faction_id;
+	protected float m_timeLeft;
+	protected Vector3 m_pos_1;
+	protected Vector3 m_pos_2;
+	protected string m_airstrike_key;	
+	protected bool m_shoot = false;
+
+
+	DelayAntiTankSnipeRequest(GameMode@ metagame, float time, int cId,int fId, string airstrike_key,Vector3 pos1,Vector3 pos2) {
+		@m_metagame = metagame;
+		m_time = time;
+		m_addtime = time + 0.2;
+		m_character_id = cId;
+		m_faction_id =fId;
+		m_pos_1=pos1;
+		m_pos_2=pos2;
+		m_airstrike_key=airstrike_key;
+	}
+
+	void start() {
+		m_timeLeft=m_time;
+	}
+
+	void update(float time) {
+		m_timeLeft -= time;
+		m_addtime -= time;
+		if (m_timeLeft < 0 && m_shoot==false)
+		{
+			float dis = getFlatPositionDistance(m_pos_1,m_pos_2);
+			CreateDirectProjectile(m_metagame,m_pos_1,m_pos_2,"sniper_bullet.projectile",m_character_id,m_faction_id,float(max(dis/0.2,40.0)));
+			playSoundAtLocation(m_metagame,"BT_rifle.wav",m_faction_id,m_pos_1,2.0);
+			m_shoot = true;
+		}		
+		if (m_addtime < 0 && m_timeLeft < 0){
+			m_pos_2.add(Vector3(0,0.3,0));
+			string c = 
+				"<command class='create_instance'" +
+				" faction_id='"+ m_faction_id +"'" +
+				" instance_class='grenade'" +
+				" instance_key='" + m_airstrike_key + "'" +
+				" position='" + m_pos_2.toString() + "'"+
+				" character_id='" + m_character_id + "' />";
+			m_metagame.getComms().send(c);
+		}		
+	}
+
+    bool hasEnded() const {
+		if (m_addtime < 0) {
+			return true;
+		}
+		return false;
+	}
+}

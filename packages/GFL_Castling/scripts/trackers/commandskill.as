@@ -389,9 +389,29 @@ dictionary commandSkillIndex = {
         {"gkw_m1_sf_1106.weapon",51},
         {"gkw_m1_sf_1106_skill.weapon",51},
         {"gkw_m1891.weapon",51},
+        {"gkw_m21.weapon",51},
+        {"gkw_qbu88.weapon",51},
+        {"gkw_qbu88_skill.weapon",51},
+        {"gkw_sv98.weapon",51},
+        {"gkw_sv98_502.weapon",51},
+        {"gkw_sv98_1906.weapon",51},
+
+        {"gkw_sv98mod3.weapon",51},
+        {"gkw_sv98mod3_502.weapon",51},
+        {"gkw_sv98mod3_1906.weapon",51},
+        {"gkw_sv98mod3_skill.weapon",51},
+        {"gkw_sv98mod3_502_skill.weapon",51},
+        {"gkw_sv98mod3_1906_skill.weapon",51},
 
         //墨尔斯假面 乐
         {"gkw_carcano1938.weapon",52},
+
+        //瞄准射击 坐标版
+        {"gkw_m99.weapon",53},
+        {"gkw_m99_1701.weapon",53},
+        {"gkw_m99_3304.weapon",53},
+        {"gkw_m99_404.weapon",53},
+        {"gkw_ptrd.weapon",53},
 
         // 下面这行是用来占位的，在这之上添加新的枪和index即可
         {"666",-1}
@@ -522,6 +542,7 @@ class CommandSkill : Tracker {
                     case 50:{excuteUZImod3skill(cId,senderId,m_modifer);break;}
                     case 51:{excuteSniperSkill_Antiperson(cId,senderId,m_modifer,c_weaponType);break;}
                     case 52:{excuteCarcano1938(cId,senderId,m_modifer);break;}
+                    case 53:{excuteSniperSkill_Pos(cId,senderId,m_modifer,c_weaponType);break;}
 
                     default:
                         break;
@@ -3146,6 +3167,47 @@ class CommandSkill : Tracker {
         }
     }
 
+    void excuteSniperSkill_Pos(int characterId,int playerId,SkillModifer@ modifer,string weapon_name){
+        bool ExistQueue = false;
+        int j=-1;
+        for (uint i=0;i<SkillArray.length();i++){
+            if (InCooldown(characterId,modifer,SkillArray[i]) && SkillArray[i].m_weapontype=="sniper") {
+                ExistQueue=true;
+                j=i;
+            }
+        }
+        if (ExistQueue){
+            dictionary a;
+            a["%time"] = ""+SkillArray[j].m_time;
+            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            return;
+        }
+        const XmlElement@ characterinfo = getCharacterInfo(m_metagame, characterId);
+        const XmlElement@ playerinfo = getPlayerInfo(m_metagame, playerId);
+
+        if (playerinfo.hasAttribute("aim_target") && characterinfo !is null) {
+            string target = playerinfo.getStringAttribute("aim_target");
+            Vector3 c_pos = stringToVector3(characterinfo.getStringAttribute("position"));
+            Vector3 s_pos = stringToVector3(target);
+            int factionid = characterinfo.getIntAttribute("faction_id");
+            if (weapon_name == "gkw_m99.weapon" || weapon_name=="gkw_m99_1701.weapon" || weapon_name=="gkw_m99_3304.weapon" || weapon_name== "gkw_m99_404.weapon"){
+                playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 2.5s noob",false);
+                TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                tasker.add(DelayAntiTankSnipeRequest(m_metagame,2.5,characterId,factionid,"snipe_blast_40.projectile",c_pos.add(Vector3(0,0.5,0)),s_pos));
+                addCoolDown("sniper",60,characterId,modifer);
+            }
+            else if (weapon_name == "gkw_ptrd.weapon"){
+                playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 2.5s",false);
+                TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                tasker.add(DelayAntiTankSnipeRequest(m_metagame,2.5,characterId,factionid,"snipe_blast_30.projectile",c_pos.add(Vector3(0,0.5,0)),s_pos));
+                addCoolDown("sniper",45,characterId,modifer);
+            }
+        }
+        else{
+            addCoolDown("sniper",5,characterId,modifer);
+        } 
+    }
+
     void excuteSniperSkill_Antiperson(int characterId,int playerId,SkillModifer@ modifer,string weapon_name){
         bool ExistQueue = false;
         int j=-1;
@@ -3216,7 +3278,25 @@ class CommandSkill : Tracker {
                         TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
                         tasker.add(DelayAntiPersonSnipeRequest(m_metagame,2.0,characterId,factionid,"snipe_hit_40.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
                         addCoolDown("sniper",25,characterId,modifer);
+                    }
+                    else if (weapon_name == "gkw_m21.weapon"){
+                        playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 2s",false);
+                        TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                        tasker.add(DelayAntiPersonSnipeRequest(m_metagame,2.0,characterId,factionid,"snipe_hit_30.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
+                        addCoolDown("sniper",20,characterId,modifer);
                     }                    
+                    else if (weapon_name == "gkw_sv98.weapon" || weapon_name =="gkw_sv98_502.weapon" || weapon_name=="gkw_sv98_1906.weapon"){
+                        playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 1.5s",false);
+                        TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                        tasker.add(DelayAntiPersonSnipeRequest(m_metagame,1.5,characterId,factionid,"snipe_hit_20.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
+                        addCoolDown("sniper",12,characterId,modifer);
+                    }
+                    else if (weapon_name == "gkw_qbu88.weapon" || weapon_name == "gkw_qbu88_skill.weapon"){
+                        playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 1.5s",false);
+                        TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                        tasker.add(DelayAntiPersonSnipeRequest(m_metagame,1.5,characterId,factionid,"snipe_blast_15.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
+                        addCoolDown("sniper",15,characterId,modifer);
+                    }
                 }
             }
             else{
