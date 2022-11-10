@@ -1,14 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<vehicle name="Mortar Truck" key="mortar_truck.vehicle" respawn_time="180" map_view_atlas_index="35" minimum_fill_requirement="0.3" reserves_spawn_point="1"
->
+<vehicle file="vehicle_base.vehicle" 
+    name="Mortar Truck" 
+    key="mortar_truck.vehicle" 
+    respawn_time="180" 
+    map_view_atlas_index="35" 
+    minimum_fill_requirement="0.3" 
+    character_leave_request_mode="friendly" 
+    allow_ai_to_use="1" 
+    allow_player_to_use="1" 
+    reserves_spawn_point="1"
+    ai_stop_to_fight="1" 
+    >
+
+    <tag name="guntruck" />
     <tag name="metal_thin" />
     <tag name="light_combat" />
-    <tire_set offset="1.12 0.0 2.835" radius="0.64" />
-    <tire_set offset="1.12 0.0 -1.302" radius="0.64" />
-    <tire_set offset="1.12 0.0 -2.894" radius="0.64" />
+    <tire_set offset="1.15 0.0 2.835" radius="0.64" />
+    <tire_set offset="1.15 0.0 -1.302" radius="0.64" />
+    <tire_set offset="1.15 0.0 -2.894" radius="0.64" />
     <control 
-	max_speed="25.0" 
-	acceleration="8.0" 
+	max_speed="24.0" 
+	acceleration="6.0" 
 	max_reverse_speed="10.0" 
 	max_rotation="0.9" 
 	max_water_depth="1.6" 
@@ -17,13 +29,13 @@
     <physics 
 	max_health="40" 
 	mass="60" 
-	broken_mass="30"
+	broken_mass="60"
     remove_collision_threshold="0.3"	
 	extent="3.2 0.0 6.4" 
 	offset="0 0.0 0" 
 	top_offset="0 11.2 0" 
-	collision_model_pos="0 1.44 0.32" 
-	collision_model_extent="2.72 3.25 8.3" 
+	collision_model_pos="0 1.40 0.32" 
+	collision_model_extent="2.72 3.10 8.3" 
 	visual_offset="0 0.24 -0.24" 
 	friction_offset="0.0" 
 	drag_offset="-0.05" />
@@ -56,7 +68,9 @@
     <effect event_key="slide_hard" type="splat_map" surface_tag="road" size="0.5" atlas_index="2" layer="0" />
     <effect event_key="slide" type="splat_map" surface_tag="dirt" size="1.0" atlas_index="2" layer="1" />
     <effect event_key="slide" type="particle" key="terrain" ref="Burst" surface_tag="dirt" use_surface_color="1" />
-    <effect event_key="health" value="1.2" ref="MediumSmokeVehicle" offset="0.0 1.6 3.92" />
+    <effect event_key="health" value="24" ref="BrokenSparkle" post_processing="0" offset="0.0 1.6 3.92"  />
+    <effect event_key="health" value="12" ref="BrokenSparkle" post_processing="0" offset="0.0 1.6 3.92"  />
+    <effect event_key="health" value="12" ref="SmallSmokeVehicle" offset="0.0 1.6 3.92" />
     <effect event_key="destroyed" ref="SmallSmokeVehicle" offset="1.0 1.2 0.48" />
     <effect event_key="destroyed" ref="SmallFireRepeat" offset="1.0 1.04 0.48" />
     <effect event_key="destroyed" ref="SmallSmokeVehicle" offset="0.48 2.08 2.0" />
