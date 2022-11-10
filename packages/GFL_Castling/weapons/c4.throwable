@@ -41,6 +41,8 @@ time_to_live_out_in_the_open="45.0"
     <effect class="result" key="terrain" ref="Shine" lighting="0" />
     <effect class="result" key="terrain" ref="Godray" lighting="0" />
     <effect class="result" key="terrain" ref="ShadowSmoke" shadow="1" />
+    <effect class="result" key="terrain" ref="woosh1" post_processing="0" shadow="0" />  
+    <effect class="result" key="terrain" ref="woosh1" post_processing="0" shadow="0" />  
     <effect class="result" type="splat_map" surface_tag="" size="3.0" atlas_index="0" layer="1" />
     <effect class="result" type="splat_map" surface_tag="" size="4.5" atlas_index="4" layer="0" />
     <effect class="result" type="splat_map" surface_tag="" size="6.0" atlas_index="0" layer="2" additive="0" /> <!-- remove top snow everywhere -->
@@ -50,10 +52,14 @@ time_to_live_out_in_the_open="45.0"
     <effect class="result" key="other" ref="Shine" lighting="0" />
     <effect class="result" key="other" ref="Godray" lighting="0" />
     <effect class="result" key="other" ref="ShadowSmoke" shadow="1" />
-
+    <effect class="result" key="other" ref="woosh1" post_processing="0" shadow="0" />  
+    <effect class="result" key="other" ref="woosh1" post_processing="0" shadow="0" />  
+ 
     <effect class="result" key="static_object" copy="terrain" />
     <effect class="result" key="vehicle" copy="terrain" />
     <effect class="result" key="character" copy="terrain" />
     <effect class="result" key="shield" copy="terrain" />
+
+    <effect class="activated" ref="TracerFlash" lighting="0" />
 
 </projectile>
