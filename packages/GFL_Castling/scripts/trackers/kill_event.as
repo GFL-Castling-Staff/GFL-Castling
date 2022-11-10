@@ -300,7 +300,7 @@ class kill_event : Tracker {
             if(KillerWeaponKey=="gkw_ppkmod3.weapon" || KillerWeaponKey=="gkw_ppkmod3_3905.weapon"){
                 // 乌鸦是猪，望周知
                 if (killway=="hit"){
-                    int j = findKillCountIndex(characterId);
+                    int j = findKillCountIndex(characterId,"ppk");
                     if(j>=0){
                         KillCountArray[j].add();
                         int kill_num = KillCountArray[j].m_killnum;
@@ -313,9 +313,19 @@ class kill_event : Tracker {
                         }
                     }
                     else{
-                        KillCountArray.insertLast(kill_count(characterId,1));
+                        KillCountArray.insertLast(kill_count(characterId,1,"ppk"));
                     }
                 }    
+            }
+
+            if(KillerWeaponKey=="gkw_carcano1938.weapon" && killway=="hit"){
+                int j = findKillCountIndex(characterId,"carcano");
+                if(j>=0){
+                    KillCountArray[j].add();
+                }
+                else{
+                    KillCountArray.insertLast(kill_count(characterId,1,"carcano"));
+                }
             }
 
             if (Solider_Name=="") return;
@@ -407,9 +417,11 @@ class HealOnKill_tracker{
 class kill_count{
     int m_characterId;
     int m_killnum=0;
-    kill_count(int a,int b){
+    string m_kill_count_type;
+    kill_count(int a,int b,string c){
         m_characterId=a;
         m_killnum=b;
+        m_kill_count_type = c;
     }
 
     void add(){
@@ -429,6 +441,15 @@ int findSkillIndex(int cId,string key){
 int findSkillIndex(int cId){
     for (uint i=0;i<SkillArray.length();i++){
         if (SkillArray[i].m_character_id==cId) {
+            return i;
+        }
+    }
+    return -1;
+}
+
+int findKillCountIndex(int cId,string type){
+    for (uint i=0;i<KillCountArray.length();i++){
+        if (KillCountArray[i].m_characterId==cId && KillCountArray[i].m_kill_count_type == type ) {
             return i;
         }
     }

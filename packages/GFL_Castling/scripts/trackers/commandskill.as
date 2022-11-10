@@ -25,20 +25,23 @@ class SkillTrigger{
     string m_weapontype;
     int m_charge=1;
     string m_charge_mode;
+    bool m_alert;
     // int m_player_id=-1;
     // string m_playername="";
     SkillModifer@ m_skillInfo;
 
-    SkillTrigger(int characterId, float time,string weapontype,string charge_mode="normal"){
+    SkillTrigger(int characterId, float time,string weapontype,string charge_mode="normal",bool alert = true){
         m_character_id=characterId;
         m_time=time;
         m_inittime=time;
         m_weapontype=weapontype;
         m_charge_mode=charge_mode;
+        m_alert = alert;
     }
     void setSkillInfo(SkillModifer@ skillinfo){
         @m_skillInfo= @skillinfo;
     }
+    
 
     void setCharge(int num){
         m_charge=num;
@@ -387,6 +390,9 @@ dictionary commandSkillIndex = {
         {"gkw_m1_sf_1106_skill.weapon",51},
         {"gkw_m1891.weapon",51},
 
+        //墨尔斯假面 乐
+        {"gkw_carcano1938.weapon",52},
+
         // 下面这行是用来占位的，在这之上添加新的枪和index即可
         {"666",-1}
 };
@@ -514,7 +520,8 @@ class CommandSkill : Tracker {
                     case 48:{excuteWeaverskill(cId,senderId,m_modifer);break;}
                     case 49:{excuteM1928A1skill(cId,senderId,m_modifer);break;}
                     case 50:{excuteUZImod3skill(cId,senderId,m_modifer);break;}
-                    case 51:{excutSniperSkill_Antiperson(cId,senderId,m_modifer,c_weaponType);break;}
+                    case 51:{excuteSniperSkill_Antiperson(cId,senderId,m_modifer,c_weaponType);break;}
+                    case 52:{excuteCarcano1938(cId,senderId,m_modifer);break;}
 
                     default:
                         break;
@@ -562,8 +569,10 @@ class CommandSkill : Tracker {
                 SkillArray[a].m_time-=time;
                 if(SkillArray[a].m_time<0){
                     if(SkillArray[a].m_charge_mode=="normal"){
+                        if(SkillArray[a].m_alert){
+                            playPrivateSound(m_metagame,"skilldone.wav",SkillArray[a].m_skillInfo.m_player_id);
+                        }
                         sendFactionMessageKeySaidAsCharacter(m_metagame,0,SkillArray[a].m_character_id,"skillcooldowndone");
-                        playPrivateSound(m_metagame,"skilldone.wav",SkillArray[a].m_skillInfo.m_player_id);
                         SkillArray.removeAt(a);
                     }
                     else if (SkillArray[a].m_charge_mode=="constant"){
@@ -606,10 +615,10 @@ class CommandSkill : Tracker {
 		return true;
 	}
 
-    void addCoolDown(string key,float time,int cId,SkillModifer@ modifer,string charge_mode="normal"){
+    void addCoolDown(string key,float time,int cId,SkillModifer@ modifer,string charge_mode="normal",bool alert =true){
         float cdr=modifer.m_cdr;
         float cdm=modifer.m_cdm;
-        SkillTrigger@ cooldown = SkillTrigger(cId,max((time*cdr-cdm),0.0),key,charge_mode);
+        SkillTrigger@ cooldown = SkillTrigger(cId,max((time*cdr-cdm),0.0),key,charge_mode,alert);
         cooldown.setSkillInfo(modifer);
         SkillArray.insertLast(cooldown);
     }
@@ -2550,7 +2559,7 @@ class CommandSkill : Tracker {
                     c_pos=c_pos.add(Vector3(0,1,0));
                     CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"ppk_tracer_dart_1.projectile",characterId,factionid,60);
 
-                    int index = findKillCountIndex(characterId);
+                    int index = findKillCountIndex(characterId,"ppk");
                     if (index>=0){
                         int kill_count=KillCountArray[index].m_killnum;
                         if (kill_count>=7){
@@ -3137,7 +3146,7 @@ class CommandSkill : Tracker {
         }
     }
 
-    void excutSniperSkill_Antiperson(int characterId,int playerId,SkillModifer@ modifer,string weapon_name){
+    void excuteSniperSkill_Antiperson(int characterId,int playerId,SkillModifer@ modifer,string weapon_name){
         bool ExistQueue = false;
         int j=-1;
         for (uint i=0;i<SkillArray.length();i++){
@@ -3211,11 +3220,92 @@ class CommandSkill : Tracker {
                 }
             }
             else{
-                addCoolDown("sniper",3,characterId,modifer);
+                addCoolDown("sniper",3,characterId,modifer,"normal",false);
+                sendFactionMessageKeySaidAsCharacter(m_metagame,0,characterId,"snipe_skill_notfound");
             }  
         } 
     }
 
+    void excuteCarcano1938(int characterId,int playerId,SkillModifer@ modifer){
+        bool ExistQueue = false;
+        int j=-1;
+        for (uint i=0;i<SkillArray.length();i++){
+            if (InCooldown(characterId,modifer,SkillArray[i]) && SkillArray[i].m_weapontype=="sniper") {
+                ExistQueue=true;
+                j=i;
+            }
+        }
+        if (ExistQueue){
+            dictionary a;
+            a["%time"] = ""+SkillArray[j].m_time;
+            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            return;
+        }
+        const XmlElement@ characterinfo = getCharacterInfo(m_metagame, characterId);
+        const XmlElement@ playerinfo = getPlayerInfo(m_metagame, playerId);
+
+        int index = findKillCountIndex(characterId,"carcano");
+
+        if(index>=0){
+            int kill_count=KillCountArray[index].m_killnum;
+            if (kill_count >= 6){
+                if (playerinfo.hasAttribute("aim_target")) {
+                    string target = playerinfo.getStringAttribute("aim_target");
+                    Vector3 c_pos = stringToVector3(characterinfo.getStringAttribute("position"));
+                    Vector3 s_pos = stringToVector3(target);
+                    int factionid = characterinfo.getIntAttribute("faction_id");
+            
+                    int m_fnum = m_metagame.getFactionCount();
+                    array<const XmlElement@> affectedCharacter;
+                    for(int i=0;i<m_fnum;i++) {
+                        if(i!=factionid) {
+                            array<const XmlElement@> affectedCharacter2;
+                            affectedCharacter2 = getCharactersNearPosition(m_metagame,s_pos,i,5.0f);
+                            if (affectedCharacter2 !is null){
+                                for(uint x=0;x<affectedCharacter2.length();x++){
+                                    affectedCharacter.insertLast(affectedCharacter2[x]);
+                                }
+                            }
+                        }
+                    }
+
+                    if (affectedCharacter !is null && affectedCharacter.length > 0){
+                        int closestIndex = -1;
+                        float closestDistance = -1.0f;                
+                        for(uint i=0;i<affectedCharacter.length();i++){
+                            float distance = getPositionDistance(c_pos, stringToVector3(affectedCharacter[i].getStringAttribute("position")));
+                            if (distance < closestDistance || closestDistance < 0.0){
+                                closestDistance = distance;
+                                closestIndex = i;
+                            }
+                        }
+
+                        if (closestIndex >= 0){
+                            KillCountArray[index].m_killnum -= 6;
+                            int target_id = affectedCharacter[closestIndex].getIntAttribute("id");
+                            playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 2.5s",false);
+                            TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                            tasker.add(DelayAntiPersonSnipeRequest(m_metagame,2.5,characterId,factionid,"snipe_hit_kennedy.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
+                            addCoolDown("sniper",30,characterId,modifer);
+                        }
+                    }
+                    else{
+                        sendFactionMessageKeySaidAsCharacter(m_metagame,0,characterId,"snipe_skill_notfound");
+                        addCoolDown("sniper",3,characterId,modifer,"normal",false);
+                    }  
+                } 
+            }
+            else{
+                sendFactionMessageKeySaidAsCharacter(m_metagame,0,characterId,"carcano_1938_not_ready");
+                addCoolDown("sniper",5,characterId,modifer,"normal",false);
+            }
+        }
+        else{
+            sendFactionMessageKeySaidAsCharacter(m_metagame,0,characterId,"carcano_1938_not_ready");
+            addCoolDown("sniper",5,characterId,modifer,"normal",false);
+        }
+
+    }
     void excuteG41Onlyskill(int characterId,int playerId,SkillModifer@ modifer){
         bool ExistQueue = false;
         int j=-1;
