@@ -330,7 +330,7 @@ class DelayAntiPersonSnipeRequest :Task{
 				m_pos_2 = stringToVector3(characterinfo.getStringAttribute("position"));
 				float dis = getFlatPositionDistance(m_pos_1,m_pos_2);
 				CreateDirectProjectile(m_metagame,m_pos_1,m_pos_2,"sniper_bullet.projectile",m_character_id,m_faction_id,float(max(dis/0.2,40.0)));
-				playSoundAtLocation(m_metagame,"supersassmod3_fire_FromBF4.wav",m_faction_id,m_pos_1,2.0);
+				playSoundAtLocation(m_metagame,"BT_rifle.wav",m_faction_id,m_pos_1,2.0);
 				m_shoot = true;
 			}
 		}		
