@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projectiles>
-    <projectile class="grenade" name="M24 Anti-Tank grenade" key="hand_atgrenade.projectile" slot="0" radius="0.3" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" pulldown_in_air="26">
+    <projectile class="grenade" name="M24 Anti-Tank grenade" key="hand_atgrenade.projectile" slot="0" radius="0.3" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" pulldown_in_air="20">
         <tag name="grenade" />
-        <result class="blast" radius="6.0" damage="25.0" push="0.4" decal="1" character_state="wound" faction_compare="not_equal" />
+        <result class="blast" radius="6.0" damage="25.0" push="0.6" decal="1" character_state="wound" faction_compare="not_equal" />
         <trigger class="impact">
             <collider class="terrain" enabled="1" />
             <collider class="static_object" enabled="1" />
@@ -13,7 +13,7 @@
         <model mesh_filename="assualt_at_grenade.mesh" texture_filename="assualt_at_grenade.png" />
         <hud_icon filename="hud_at_grenade.png" />
         <!-- HUD provived by Bad Goose  -->
-        <throwable curve_height="8.0" near_far_distance="5.0" speed_estimation_near="45.0" speed_estimation_far="45.0" max_speed="50.0" randomness="0.07" />
+        <throwable curve_height="8.0" near_far_distance="8.0" speed_estimation_near="45.0" speed_estimation_far="75.0" max_speed="150.0" randomness="0.4" tweak_factor="1.5"/>
         <commonness value="0.2" />
         <inventory encumbrance="10.0" price="15.0" />
         <capacity value="2" source="rank" source_value="0.0" />
@@ -56,7 +56,7 @@
         <model mesh_filename="gk_at_mine.mesh" texture_filename="at_mine.png" />
         <hud_icon filename="hud_at_mine.png" />
 
-        <throwable curve_height="4.0" near_far_distance="5.0" speed_estimation_near="40.0" speed_estimation_far="40.0" max_speed="40.0" randomness="0.07" />
+        <throwable curve_height="4.0" near_far_distance="5.0" speed_estimation_near="40.0" speed_estimation_far="40.0" max_speed="80.0" randomness="0.07" />
         <commonness value="0.2" />
         <inventory encumbrance="11.0" price="60.0" />
         <capacity value="2" source="rank" source_value="0.0" />
