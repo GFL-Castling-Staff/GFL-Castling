@@ -335,7 +335,7 @@ class DelayAntiPersonSnipeRequest :Task{
 			}
 		}		
 		if (m_addtime < 0 && m_timeLeft < 0){
-			m_pos_2.add(Vector3(0,0.3,0));
+			m_pos_2 = m_pos_2.add(Vector3(0,5,0));
 			string c = 
 				"<command class='create_instance'" +
 				" faction_id='"+ m_faction_id +"'" +
