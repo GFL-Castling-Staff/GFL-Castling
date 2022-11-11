@@ -50,8 +50,8 @@
 	<visual class="chassis" key="broken" mesh_filename="sandstorm_base.mesh" texture_filename="tank_2_broken.png" offset="0.0 -2.8 0.0"/>
 	<visual class="turret" turret_index="0" mesh_filename="sandstorm_turret.mesh" texture_filename="sandstorm_texture.png" />
 	<visual class="turret" key="broken" mesh_filename="sandstorm_turret.mesh" texture_filename="tank_2_broken.png" />
-	<character_slot type="driver" position="1.5 0.5 0" rotation="0" exit_rotation="1.57" hiding="1" animation_id="36" />
-	<character_slot type="gunner" position="-1.5 0.7 0" rotation="0" exit_rotation="-1.57" hiding="1" animation_id="37">
+	<character_slot type="driver" position="1.2 1.2 0" rotation="0" exit_rotation="1.57" hiding="1" animation_id="36" />
+	<character_slot type="gunner" position="-1.2 1.2 0" rotation="0" exit_rotation="-1.57" hiding="1" animation_id="37">
 		<turret index="0" />
 		<turret index="1" />
 		<turret index="2" />
