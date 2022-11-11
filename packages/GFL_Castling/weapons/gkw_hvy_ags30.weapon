@@ -115,8 +115,8 @@
     <capacity value="0" source="rank" source_value="0.0"/>
     <capacity value="1" source="rank" source_value="10.0"/>
     <weak_hand_hold offset="0.3" />
-    <projectile file="30mm_agl_ags.projectile"/>
-    <ballistics curve_height="18.0" near_far_distance="45.0" speed_estimation_near="10.0" speed_estimation_far="16.0" max_speed="150.0" randomness="0.0" tweak_factor="1.55"/>
+    <projectile file="30mm_agl_ags.projectile" pulldown_in_air="21.0" />
+    <ballistics curve_height="18.0" near_far_distance="15.0" speed_estimation_near="10.0" speed_estimation_far="16.0" max_speed="150.0" randomness="0.0" tweak_factor="1.25"/>
     <modifier class="speed" value="-2.5"/>
     <modifier class="detectability" value="0.1"/>
     <tag name="bazooka"/>
