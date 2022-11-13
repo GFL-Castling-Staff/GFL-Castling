@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <vehicle file="vehicle_base.vehicle" 
-    name="Mortar Truck" 
+    name="Mortar Truck - The Guer" 
     key="mortar_truck.vehicle" 
     respawn_time="180" 
     map_view_atlas_index="35" 
@@ -20,7 +20,7 @@
     <tire_set offset="1.15 0.0 -2.894" radius="0.64" />
     <control 
 	max_speed="24.0" 
-	acceleration="6.0" 
+	acceleration="12.0" 
 	max_reverse_speed="10.0" 
 	max_rotation="0.9" 
 	max_water_depth="1.6" 

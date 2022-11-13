@@ -451,9 +451,12 @@
 		<resources clear_weapons="1" clear_calls="1">
 			<weapon key="sfw_vespid.weapon" enabled="1"/>
 			<carry_item key="sf_ar.carry_item" enabled="1" />
-			<projectile key="sf_ap_mine.projectile" enabled="1.0" />
 			<weapon key="cover_deploy.weapon" enabled="1"/>
+			<weapon key="cover_deploy2.weapon" enabled="1"/>			
 		</resources>
+		<item_class_existence_config>
+			<item_class_existence class="weapon" slot="1" probability="0.5" />
+		</item_class_existence_config>
 	</soldier>
 	<soldier name="sf_vespid_swap" spawn_score="1.0" copy_from="default_spawn_ai">
 		<model filename="sfd_vespid_swap_from_dusk.xml" />
@@ -461,9 +464,11 @@
 		<resources clear_weapons="1" clear_calls="1">
 			<weapon key="sfw_vespid_swap.weapon" enabled="1"/>
 			<carry_item key="vest_15hp_elite.carry_item" enabled="1" />
-			<projectile key="sf_ap_mine.projectile" enabled="1.0" />
 			<weapon key="cover_deploy.weapon" enabled="1"/>
 		</resources>
+		<item_class_existence_config>
+			<item_class_existence class="weapon" slot="1" probability="0.2" />
+		</item_class_existence_config>		
 	</soldier>
 	<!-- ripper -->
 	<soldier name="sf_ripper" spawn_score="3.0" copy_from="default_spawn_ai">
@@ -483,13 +488,18 @@
 		</resources>
 	</soldier>
 	<!-- guard -->
-	<soldier name="sf_guard" spawn_score="2.0" copy_from="default_spawn_ai">
+	<soldier name="sf_guard" spawn_score="3.0" copy_from="default_spawn_ai">
 		<ai filename="shield.ai" />
 		<resources clear_weapons="1" clear_calls="1">
 			<weapon key="sfw_guard.weapon" enabled="1"/>
 			<carry_item key="sf_ar.carry_item" enabled="1" />
 			<weapon key="cover_deploy.weapon" enabled="1"/>
+			<weapon key="cover_deploy2.weapon" enabled="1"/>
+			<projectile key="sf_ap_mine.projectile" enabled="1.0" />
 		</resources>
+		<item_class_existence_config>
+			<item_class_existence class="weapon" slot="1" probability="0.75" />
+		</item_class_existence_config>		
 	</soldier>
 	<!-- jaeger -->
 	<soldier name="sf_jaeger" spawn_score="2.0" copy_from="default_spawn_ai">

@@ -416,24 +416,24 @@
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="parw_strelet.weapon" enabled="1" />
 			<carry_item key="pard_ar.carry_item" />
+			<weapon key="cover_deploy.weapon" enabled="1"/>
+			<weapon key="cover_deploy2.weapon" enabled="1"/>				
 		</resources>
+		<item_class_existence_config>
+			<item_class_existence class="weapon" slot="1" probability="0.2" />
+		</item_class_existence_config>			
 	</soldier>
 	<soldier name="para_streletplus" spawn_score="2.0" squad_size_xp_cap="0.5" copy_from="default_ai">
 		<model filename="pard_stretletplus_neo.xml" />
 		<ai filename="para_streletplus.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="parw_streletplus.weapon" enabled="1" />
-			<carry_item key="pard_sg.carry_item" />
-		</resources>
-	</soldier>
-	<soldier name="para_streletplus_richman" spawn_score="0.4" squad_size_xp_cap="0.5" copy_from="default_ai">
-		<model filename="pard_stretletplus_neo.xml" />
-		<ai filename="para_streletplus.ai" />
-		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
-			<weapon key="parw_streletplus.weapon" enabled="1" />
 			<weapon key="par_deploy_compass.weapon" enabled="1" />
-			<carry_item key="pard_sg.carry_item" />
+			<carry_item key="vest_15hp_elite.carry_item" />
 		</resources>
+		<item_class_existence_config>
+			<item_class_existence class="weapon" slot="1" probability="0.2" />
+		</item_class_existence_config>			
 	</soldier>
 	<soldier name="para_rodelero" spawn_score="1.0" squad_size_xp_cap="0.5" copy_from="default_ai">
 		<ai filename="pard_rod.ai" />

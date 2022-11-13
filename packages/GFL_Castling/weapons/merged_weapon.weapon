@@ -18550,7 +18550,7 @@
 </weapon>
 
 <weapon key="gkw_hvy_qlz04.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification accuracy_factor="1" barrel_offset="0.9" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="0" class="0" sight_range_modifier="2.5" slot="0" magazine_size="30" name="QLZ04" projectile_speed="90" retrigger_time="0.151" suppressed="0" sustained_fire_diminish_rate="1.2" sustained_fire_grow_step="0.9" carry_in_two_hands="0" spread_range="0.06"/>
+	<specification accuracy_factor="1" barrel_offset="0.9" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="0" class="4" sight_range_modifier="2.0" slot="0" magazine_size="20" name="QLZ04" projectile_speed="180" retrigger_time="0.5" suppressed="0" sustained_fire_diminish_rate="1.2" sustained_fire_grow_step="0.9" carry_in_two_hands="0" spread_range="0.06" burst_shots="1" last_burst_retrigger_time="0.5"/>
 	<next_in_chain key="gkw_hvy_qlz04_st.weapon" share_ammo="0"/>
 	<inventory encumbrance="50.0" buy_price="404.0" sell_price="404.0"/>
 	<animation key="reload" animation_key="reloading, agl 4.0"/>
@@ -18579,10 +18579,11 @@
 	<capacity value="0" source="rank" source_value="0.0"/>
 	<capacity value="1" source="rank" source_value="10.0"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="standard_agl.projectile">
-	<result class="blast" damage="4.5" radius="5" decal="1" push="0.4" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+	<projectile file="standard_agl.projectile" pulldown_in_air="18">
+	<trigger class="time" time_to_live="0.405"/>
+	<result class="blast" damage="7.5" radius="6" decal="1" push="0.4" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	</projectile>
-	<ballistics curve_height="18.0" near_far_distance="45.0" speed_estimation_near="10.0" speed_estimation_far="16.0" max_speed="150.0" randomness="0.0" tweak_factor="1.55"/>
+	<ballistics curve_height="2" near_far_distance="15.0" speed_estimation_near="160.0" speed_estimation_far="160.0" max_speed="280.0" randomness="0.0" tweak_factor="4.5"/>
 	<modifier class="speed" value="-3.0"/>
 	<modifier class="detectability" value="0.25"/>
 	<tag name="bazooka"/>
@@ -19259,7 +19260,7 @@
 </weapon>
 
 <weapon key="gkw_hvy_ags30_fix.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification accuracy_factor="0.85" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="0" class="4" sight_range_modifier="1.75" slot="0" magazine_size="30" name="AGS-30 Atlant" projectile_speed="120" retrigger_time="0.15" last_burst_retrigger_time="-1" burst_shots="3" suppressed="1" barrel_offset_3d="0 0.1 1.2" sustained_fire_diminish_rate="1.5" sustained_fire_grow_step="0.7" stance_accuracy_rate="0.8" carry_in_two_hands="0" spread_range="0.05"/>
+	<specification accuracy_factor="0.84" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="0" class="4" sight_range_modifier="1.75" slot="0" magazine_size="30" name="AGS-30 Atlant" projectile_speed="120" retrigger_time="0.15" last_burst_retrigger_time="-1" burst_shots="3" suppressed="1" barrel_offset_3d="0 0.1 1.2" sustained_fire_diminish_rate="1.2" sustained_fire_grow_step="0.8" stance_accuracy_rate="0.8" carry_in_two_hands="0" spread_range="0.064"/>
 	<next_in_chain key="gkw_hvy_ags30.weapon" share_ammo="0"/>
 	<inventory encumbrance="50.0" buy_price="450.0" sell_price="450.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
@@ -19288,8 +19289,8 @@
 	<capacity value="0" source="rank" source_value="0.0"/>
 	<capacity value="1" source="rank" source_value="10.0"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="30mm_agl_ags.projectile" pulldown_in_air="21.0"/>
-	<ballistics curve_height="18.0" near_far_distance="15.0" speed_estimation_near="10.0" speed_estimation_far="16.0" max_speed="150.0" randomness="0.0" tweak_factor="1.25"/>
+	<projectile file="30mm_agl_ags.projectile" pulldown_in_air="49.0"/>
+	<ballistics curve_height="15.0" near_far_distance="0.0" speed_estimation_near="60.0" speed_estimation_far="150.0" max_speed="150.0" randomness="0.0" tweak_factor="1.75"/>
 	<modifier class="speed" value="-2.5"/>
 	<modifier class="detectability" value="0.1"/>
 	<tag name="bazooka"/>
