@@ -153,6 +153,9 @@ dictionary gameSkillIndex = {
 		// gsh18 庸医
         {"gsh18_medic",34},
 
+		// 利贝罗勒
+        {"mle_skill_heal",35},
+
         // 下面这行是用来占位的，在这之上添加新的技能key和index即可
         {"666",-1}
 };
@@ -1263,6 +1266,26 @@ class GFLskill : Tracker {
 				}
 				break;
 			}
+
+			case 35: {// LBLL
+				int characterId = event.getIntAttribute("character_id");
+				Vector3 grenade_pos = stringToVector3(event.getStringAttribute("position"));
+				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+				if (character !is null) {
+					int factionid = character.getIntAttribute("faction_id");
+					XmlElement c ("command");
+					c.setStringAttribute("class", "update_inventory");
+					c.setIntAttribute("character_id", characterId); 
+					c.setIntAttribute("untransform_count", 4);
+					m_metagame.getComms().send(c);
+                    int index = findSkillIndex_reserve(characterId,"RBLL");
+                    if(index != -1){
+                        SkillArray[index].m_time-=5.0;
+                    }
+				}
+				break;
+			}
+
             default:
                 break;
 		}

@@ -450,6 +450,15 @@ int findSkillIndex(int cId){
     return -1;
 }
 
+int findSkillIndex_reserve(int cId,string key){
+    for (uint i=0;i<SkillArray.length();i++){
+        if (SkillArray[i].m_character_id==cId && SkillArray[i].m_weapontype!=key) {
+            return i;
+        }
+    }
+    return -1;
+}
+
 int findKillCountIndex(int cId,string type){
     for (uint i=0;i<KillCountArray.length();i++){
         if (KillCountArray[i].m_characterId==cId && KillCountArray[i].m_kill_count_type == type ) {

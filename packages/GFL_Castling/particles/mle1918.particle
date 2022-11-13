@@ -1,0 +1,109 @@
+particle_system mle1918_sonic
+{
+    quota 50
+    material mle1918_woosh
+    particle_width 1
+    particle_height 1
+    renderer billboard 
+    billboard_type oriented_common
+    common_up_vector 0 0 1 
+
+    emitter Point 
+    {
+    colour	1.0 0.2 0.2 1.0
+    position 0 0 0
+    direction	0 1 0
+    emission_rate	21
+    time_to_live	0.3
+    duration	0.05
+    duration_min	0.05
+    duration_max	0.05
+    }
+
+    affector Scaler 
+    {
+        rate 25
+    }
+
+    affector ColourFader
+    {
+        red	0
+        green	0
+        blue	0
+        alpha	-1.0
+    }
+}
+
+particle_system heal_point_mist
+{
+	quota 1000
+	material point_area
+	particle_width 0.3
+	particle_height 0.3
+	renderer billboard
+	
+	emitter Cylinder
+	{
+		angle 90
+		colour 0 0.7 0 1.0
+		direction 0 1 0
+		emission_rate 600
+		position 0 0 0
+		velocity 0.1
+		time_to_live_min 0.4
+		time_to_live_max 0.8
+		duration 0.2
+		width 3
+		height 3
+		depth 6
+	}
+
+	affector Scaler
+	{
+		rate -0.25
+	}
+	
+	affector DirectionRandomiser
+	{
+		randomness 2.0
+		scope 1.0
+		keep_velocity false
+	}
+}
+
+material mle1918_woosh
+{
+    technique
+    {
+        pass
+        {
+            lighting off
+            scene_blend alpha_blend
+            depth_write off
+
+            texture_unit
+            {
+                texture ct_common_quan4.png 
+                tex_address_mode clamp
+            }
+        }
+    }
+}
+
+material point_area
+{
+    technique
+    {
+        pass
+        {
+            lighting on
+			emissive 1 1 1 1
+            scene_blend alpha_blend
+            depth_write off
+            texture_unit
+            {
+                texture ct_common_point.png
+            }
+        }
+    }
+}

@@ -2606,30 +2606,40 @@ class CommandSkill : Tracker {
             if (InCooldown(characterId,modifer,SkillArray[i],true) && SkillArray[i].m_weapontype=="RBLL") {
                 ExistQueue=true;
                 j=i;
+                if (ExistQueue && SkillArray[j].m_charge >=3){
+                    dictionary a;
+                    a["%time"] = ""+SkillArray[j].m_time;
+                    sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+                    _log("skill cooldown" + SkillArray[j].m_time);
+                    return;
+                }
+                if(SkillArray[j].m_charge <3){
+                    SkillArray[j].addCharge();
+                }                
             }
-        }
-        if (ExistQueue){
-            dictionary a;
-            a["%time"] = ""+SkillArray[j].m_time;
-            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
-            _log("skill cooldown" + SkillArray[j].m_time);
-            return;
         }
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         if (character !is null) {
             const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
             if (player !is null){
-                Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
-                int factionid = character.getIntAttribute("faction_id");
-                array<const XmlElement@>@ characters = getCharactersNearPosition(m_metagame, c_pos, factionid, 20.0f);
-                for (uint i = 0; i < characters.length; i++) {   
-                    int soldierId = characters[i].getIntAttribute("id");
-                    int index = findSkillIndex(soldierId);
-                    if(index != -1 && soldierId != characterId ){
-                        SkillArray[index].m_time-=10.0;
+                if (player.hasAttribute("aim_target")) {
+                    if(!ExistQueue){
+                        addCoolDown("RBLL",20,characterId,modifer,"constant");
                     }
+                    string target = player.getStringAttribute("aim_target");
+                    Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
+                    int factionid = character.getIntAttribute("faction_id");
+                    array<string> Voice={
+                        "Ribeyrolles_ATTACK_JP.wav",
+                        "Ribeyrolles_MEET_JP.wav",
+                        "Ribeyrolles_PHRASE_JP.wav",
+                        "Ribeyrolles_TIP_JP.wav"
+                    };
+                    playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+                    playAnimationKey(m_metagame,characterId,"throwing, upside",true,true);
+                    c_pos=c_pos.add(Vector3(0,2.2,0));
+                    CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"bandage_mle1918_spawn.projectile",characterId,factionid,30.0,3.0);
                 }
-                addCoolDown("RBLL",30,characterId,modifer);
             }
         }
     }    
