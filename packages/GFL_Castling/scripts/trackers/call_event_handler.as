@@ -88,7 +88,7 @@ class call_event : Tracker {
                                     dictionary a;
                                     a["%time"] = ""+getCooldown(playerName,"ac130");                        
                                     sendPrivateMessageKey(m_metagame,playerId,"ac130cooldown",a);
-                                    GiveRP(m_metagame,characterId,5000);
+                                    GiveRP(m_metagame,characterId,10000);
                                 }
                             }
                             else {
