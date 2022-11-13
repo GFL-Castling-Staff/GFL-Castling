@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<weapon key="binoculars_wheelchair_spawn_fairy.weapon" on_ground_up="0 1 0">
+<weapon key="binoculars_mortartruck_spawn_fairy.weapon" on_ground_up="0 1 0">
            
     <specification magazine_size="1" 
     retrigger_time="1.0" 
@@ -8,7 +7,7 @@
     can_shoot_crouching="1" 
     can_shoot_prone="0" 
     suppressed="1" 
-    name="Wheelchair spawn" 
+    name="Mortar Truck - The Guer" 
     class="3" 
     consume="1"
     sight_range_modifier="1.65" 
@@ -30,12 +29,12 @@
     <animation key="reload" animation_key="reloading, m24" />
    
     <model filename="binoculars.xml" />
-    <hud_icon filename="aimer.png" />
-    <commonness value="0.02" can_respawn_with="1" in_stock="1" />
+    <hud_icon filename="fairy_command.png" />
+    <commonness value="0.0" can_respawn_with="1" in_stock="1" />
     <capacity value="1" source="rank" source_value="0.0" />
-    <inventory encumbrance="3.0" price="2000.0" />
+    <inventory encumbrance="3.0" price="5000.0" />
 
-    <projectile key="binoculars_wheelchair_spawn.projectile" />
+    <projectile key="binoculars_mortartruck_spawn.projectile" />
     
    <modifier class="speed" value="-0.0" /> 
     
