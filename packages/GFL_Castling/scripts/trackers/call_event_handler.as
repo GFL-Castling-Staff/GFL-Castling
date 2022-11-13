@@ -166,35 +166,21 @@ class call_event : Tracker {
                         break;
                     }              
                     case 4:{
-                        bool exsist_TU160 = false;
-                        int j=-1;
-                        for (uint i=0;i<GFL_event_array.length();i++){
-                            if (GFL_event_array[i].m_eventkey==2) {exsist_TU160=true;j=i;}
-                        }
-                        if (exsist_TU160){
+                        if(findCooldown(playerName,"TU160")){
                             const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
                             if (character !is null) {
-                                sendPrivateMessageKey(m_metagame,playerId,"rocketcooldown");
+                                dictionary a;
+                                a["%time"] = ""+getCooldown(playerName,"TU160");                        
+                                sendPrivateMessageKey(m_metagame,playerId,"rocketcooldown",a);
                                 GiveRP(m_metagame,characterId,5000);
                             }
                         }
-                        else{
-                            if(findCooldown(playerName,"TU160")){
-                                const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
-                                if (character !is null) {
-                                    dictionary a;
-                                    a["%time"] = ""+getCooldown(playerName,"TU160");                        
-                                    sendPrivateMessageKey(m_metagame,playerId,"ac130cooldown",a);
-                                    GiveRP(m_metagame,characterId,5000);
-                                }
-                            }
-                            else {
-                                m_cooldown.insertLast(Call_Cooldown(playerName,playerId,300.0,"TU160"));
-                                sendFactionMessageKey(m_metagame,factionId,"rocketcallstarthint");
-                                const XmlElement@ characterinfo = getCharacterInfo(m_metagame, characterId);
-                                Vector3 player_pos = stringToVector3(characterinfo.getStringAttribute("position"));
-                                insertCommonStrike(characterId,factionId,int(airstrikeIndex["TU160_bomb_strafe"]),player_pos,stringToVector3(position));
-                            }
+                        else {
+                            m_cooldown.insertLast(Call_Cooldown(playerName,playerId,300.0,"TU160"));
+                            sendFactionMessageKey(m_metagame,factionId,"rocketcallstarthint");
+                            const XmlElement@ characterinfo = getCharacterInfo(m_metagame, characterId);
+                            Vector3 player_pos = stringToVector3(characterinfo.getStringAttribute("position"));
+                            insertCommonStrike(characterId,factionId,int(airstrikeIndex["TU160_bomb_strafe"]),player_pos,stringToVector3(position));
                         }
                         break;
                     }

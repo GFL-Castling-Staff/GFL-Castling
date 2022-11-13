@@ -45347,7 +45347,9 @@
 	<commonness value="0.0" can_respawn_with="1" in_stock="1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<inventory encumbrance="3.0" price="1000.0"/>
-	<projectile key="binoculars_aek999_spawn.projectile"/>
+	<projectile file="vehicle_drop_script.projectile">
+	<result class="notify_script" key="spawn_aek999"/>
+	</projectile>
 	<modifier class="speed" value="-0.0"/>
 </weapon>
 
@@ -45371,7 +45373,9 @@
 	<commonness value="0.02" can_respawn_with="1" in_stock="1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<inventory encumbrance="3.0" price="2000.0"/>
-	<projectile key="binoculars_wheelchair_spawn.projectile"/>
+	<projectile file="vehicle_drop_script.projectile">
+	<result class="notify_script" key="spawn_wheelchair"/>
+	</projectile>
 	<modifier class="speed" value="-0.0"/>
 </weapon>
 
@@ -45395,7 +45399,9 @@
 	<commonness value="0.0" can_respawn_with="1" in_stock="1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<inventory encumbrance="3.0" price="5000.0"/>
-	<projectile key="binoculars_mortartruck_spawn.projectile"/>
+	<projectile file="vehicle_drop_script.projectile">
+	<result class="notify_script" key="spawn_mortar_truck"/>
+	</projectile>
 	<modifier class="speed" value="-0.0"/>
 </weapon>
 
@@ -45409,6 +45415,29 @@
 
 <weapon key="chute_small.weapon">
 	<model mesh_filename="chute.mesh" texture_filename="chute.png"/>
+</weapon>
+
+<weapon key="deploy_kit_tow.weapon" time_to_live_out_in_the_open="60.0" drop_count_factor_on_death="0" drop_count_factor_on_player_death="1">
+	<specification name="BGM-71 TOW Deploy" retrigger_time="0.1" spawn_instance_class="vehicle" spawn_instance_key="bgm71_tow.vehicle" magazine_size="1" can_shoot_standing="0" can_shoot_crouching="1" carry_in_two_hands="1" can_shoot_prone="0" class="5" consume="1" sight_range_modifier="1" slot="1" deployment="1"/>
+	<inventory encumbrance="15.0" price="500.0"/>
+	<capacity value="0" source="rank" source_value="0.0"/>
+	<capacity value="1" source="rank" source_value="0.0"/>
+	<commonness value="0" in_stock="1" can_respawn_with="0"/>
+	<model mesh_filename="barrier_item.mesh" texture_filename="tow_item.png"/>
+	<hud_icon filename="hud_tow2.png"/>
+	<modifier class="speed" value="-0.2"/>
+	<tag name="engineer"/>
+	<animation state_key="running" animation_key="running, carrying load"/>
+	<animation state_key="walking" animation_key="walking, carrying load"/>
+	<animation state_key="hold" animation_key="still, carrying load"/>
+	<animation state_key="hold_on_wall" animation_key="still, carrying load"/>
+	<animation state_key="hold_casual" animation_key="still, carrying load"/>
+	<animation state_key="still_against_wall" animation_key="still, carrying load"/>
+	<animation state_key="recoil" animation_key="deploy1"/>
+	<animation state_key="crouching" animation_key="crouch still, carrying load"/>
+	<animation state_key="crouch_moving" animation_key="crouching forwards, carrying load"/>
+	<animation state_key="changing_weapon_in" animation_key="change weapon in, single hand carry"/>
+	<sound class="impact" fileref="sandbag_drop.wav"/>
 </weapon>
 
 <weapon key="tank2_cannon.weapon">

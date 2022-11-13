@@ -440,7 +440,7 @@ class GFLairstrike : Tracker {
                     }                    
                     case 13:{//火箭妖精 单次 航弹覆盖
                         //扫射位置偏移单位向量 与 扫射位置偏移单位距离
-                        sendFactionMessageKey(m_metagame,fid,"rocketcallstarthint");
+                        sendFactionMessageKey(m_metagame,fid,"rocketfight");
                         Vector3 strike_vector = getAimUnitVector(1,start_pos,end_pos); 
                         float strike_didis = 8;
                         //与扫射方向相垂直的向量 与 扫射方向垂直方向偏移距离

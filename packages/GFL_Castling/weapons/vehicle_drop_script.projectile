@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<projectile class="grenade" name="" key="vehicle_drop_script.projectile" slot="0" pulldown_in_air="0.0" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" >
+    <trigger class="time" time_to_live="0.0"/>
+    <rotation class="random" />
+    <hud_icon filename="testing.png" />
+    <model />
+    <commonness value="0.0" can_respawn_with="0" in_stock="0"/>
+</projectile>

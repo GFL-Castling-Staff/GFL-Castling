@@ -156,6 +156,8 @@ dictionary gameSkillIndex = {
 		// 利贝罗勒
         {"mle_skill_heal",35},
 
+        {"spawn_mortar_truck",36},
+
         // 下面这行是用来占位的，在这之上添加新的技能key和index即可
         {"666",-1}
 };
@@ -1282,6 +1284,27 @@ class GFLskill : Tracker {
                     if(index != -1){
                         SkillArray[index].m_time-=5.0;
                     }
+				}
+				break;
+			}
+
+			case 36:{
+				int characterId = event.getIntAttribute("character_id");
+				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+				if (character !is null) {
+					int playerId = character.getIntAttribute("player_id");
+					const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+					if(player !is null){
+						if (player.hasAttribute("aim_target")) {
+							Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
+							Vector3 target = stringToVector3(player.getStringAttribute("aim_target"));
+							float ori4 = getAimOrientation4(c_pos,target);
+							Vector3 height = Vector3(0,70,0);
+							target = target.add(height);
+							int Faction= character.getIntAttribute("faction_id");
+							spawnVehicle(m_metagame,1,Faction,target,Orientation(0,1,0,ori4),"mortar_truck.vehicle");	
+						}
+					}
 				}
 				break;
 			}

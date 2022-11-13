@@ -1,5 +1,4 @@
 <weapon key="binoculars_mortartruck_spawn_fairy.weapon" on_ground_up="0 1 0">
-           
     <specification magazine_size="1" 
     retrigger_time="1.0" 
     sustained_fire_grow_step="0" 
@@ -13,7 +12,6 @@
     sight_range_modifier="1.65" 
     slot="1"
     use_basic_muzzle_smoke_effect="0" />
-
     <animation key="hold" animation_key="still, binoculars" />
     <animation key="hold_on_wall" animation_key="still, binoculars" />
     <animation key="hold_casual" animation_key="still, binoculars" />
@@ -27,15 +25,13 @@
     <animation key="changing_weapon_out" animation_key="change weapon out, reversed" />
     <animation key="changing_weapon_in" animation_key="change weapon in, reversed" />
     <animation key="reload" animation_key="reloading, m24" />
-   
     <model filename="binoculars.xml" />
     <hud_icon filename="fairy_command.png" />
     <commonness value="0.0" can_respawn_with="1" in_stock="1" />
     <capacity value="1" source="rank" source_value="0.0" />
     <inventory encumbrance="3.0" price="5000.0" />
-
-    <projectile key="binoculars_mortartruck_spawn.projectile" />
-    
-   <modifier class="speed" value="-0.0" /> 
-    
+    <projectile file="vehicle_drop_script.projectile" >
+        <result class="notify_script" key="spawn_mortar_truck"/>
+    </projectile>
+    <modifier class="speed" value="-0.0" />
 </weapon>
