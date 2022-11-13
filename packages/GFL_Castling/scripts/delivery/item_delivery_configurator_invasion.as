@@ -36,6 +36,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		setupArmorCraftMaster();
 		setupStuffEasterEgg();
 		setupSupplyBox();
+		setupGiftHalloween();
 	}
 
 	// --------------------------------------------
@@ -319,6 +320,10 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		ScoredResource("gkw_m200_4502.weapon","weapon",1.0f),
 		ScoredResource("gkw_sp9_6303.weapon", "weapon", 1.0f),
 		ScoredResource("gkw_kord_5102.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_mdr_2603.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_cms_6403.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_mg36_4205.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_aps_4306.weapon", "weapon", 1.0f),
 
 		ScoredResource("gkw_m870_3803.weapon", "weapon", 1.0f)
 			}
@@ -1688,5 +1693,48 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		m_itemDeliveryOrganizer.addObjective(
 			ItemDeliveryObjective(m_metagame, 0, deliveryList, m_itemDeliveryOrganizer, null, "", "", "", -1 /* loop */, rewarder)
 		);
+	}	
+
+	protected void setupGiftHalloween() {
+		array<Resource@> deliveryList = {
+			 Resource("ct_gift_halloween.carry_item", "carry_item")
+		};
+
+		array<array<ScoredResource@>> rewardPasses = {
+			{
+		ScoredResource("gkw_cms_6403.weapon", "weapon", 0.45f),
+		ScoredResource("gkw_kord_5102.weapon", "weapon", 0.45f),
+		ScoredResource("gkw_mdr_2603.weapon", "weapon", 0.45f),
+		ScoredResource("gkw_sat8_2601.weapon", "weapon", 0.45f),
+		ScoredResource("gkw_mp5_3.weapon", "weapon", 0.45f),
+		ScoredResource("gkw_m870_3803.weapon", "weapon", 0.45f),
+		ScoredResource("gkw_ksvk_3805.weapon", "weapon", 0.45f),
+		ScoredResource("gkw_iws2000_1403.weapon", "weapon", 0.45f),
+		ScoredResource("gkw_g11_9.weapon", "weapon", 0.45f)
+			},
+			{
+		ScoredResource("snow_gifts.carry_item", "carry_item", 1.0f, 40),
+		ScoredResource("wild_gifts.carry_item", "carry_item", 1.0f, 40),
+		ScoredResource("city_gifts.carry_item", "carry_item", 1.0f, 40),
+		ScoredResource("forest_gifts.carry_item", "carry_item", 1.0f, 40),
+		ScoredResource("snow_gifts.carry_item", "carry_item", 0.25f, 60),
+		ScoredResource("wild_gifts.carry_item", "carry_item", 0.25f, 60),
+		ScoredResource("city_gifts.carry_item", "carry_item", 0.25f, 60),
+		ScoredResource("forest_gifts.carry_item", "carry_item", 0.25f, 60),				
+		ScoredResource("SOPII_Ant_Doll.carry_item", "carry_item", 0.5f),
+		ScoredResource("RO365_Ant_Doll.carry_item", "carry_item", 1.6f),
+		ScoredResource("gift_box_1.carry_item", "carry_item", 1.0f,5),
+		ScoredResource("gift_box_1.carry_item", "carry_item", 0.25f,10),
+		ScoredResource("core_mask.carry_item", "carry_item", 0.15f,1)
+			}
+		};   
+			
+		processRewardPasses(rewardPasses);
+
+		GiftItemDeliveryRandomRewarder@ rewarder = GiftItemDeliveryRandomRewarder(m_metagame, rewardPasses);
+
+		m_itemDeliveryOrganizer.addObjective(
+			ItemDeliveryObjective(m_metagame, 0, deliveryList, m_itemDeliveryOrganizer, null, "", "", "", -1 /* loop */, rewarder)
+			);
 	}	
 }

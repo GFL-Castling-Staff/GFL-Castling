@@ -140,6 +140,9 @@ class kill_event : Tracker {
         {"gkw_cms.weapon",4},
         {"gkw_cms_aps.weapon",4},
         {"gkw_cms_st.weapon",4},
+        {"gkw_cms_6403.weapon",4},
+        {"gkw_cms_6403_aps.weapon",4},
+        {"gkw_cms_6403_st.weapon",4},
         {"gkw_vp1915.weapon",4},
         {"gkw_vp1915_6604.weapon",4},
 

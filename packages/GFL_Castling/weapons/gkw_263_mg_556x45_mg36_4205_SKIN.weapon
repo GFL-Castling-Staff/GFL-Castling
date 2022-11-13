@@ -8,27 +8,27 @@
         <inventory buy_price="36.0" encumbrance="10.0" sell_price="36.0" />
         <capacity source="rank" source_value="0" value="1" />
         <animation state_key="hold_casual" />
-        <animation animation_key="reloading, magazine rifle 1.5" key="reload" />
-        <animation animation_key="recoil1" key="recoil" />
-        <animation animation_key="recoil2" key="recoil" />
-        <animation animation_key="recoil3" key="recoil" />
-        <animation animation_key="recoil1, prone" key="recoil" stance_key="prone" />
-        <animation animation_key="recoil2, prone" key="recoil" stance_key="prone" />
-        <animation animation_key="recoil3, prone" key="recoil" stance_key="prone" />
-        <animation animation_key="still" state_key="hold_on_wall" />
-        <animation animation_key="celebrating, shooting" state_key="celebrate_shoot" />
-        <animation animation_key="melee, quick knife" state_key="stabbing" />
-        <animation animation_key="pistol whip 3" state_key="stabbing" />
-        <sound fileref="mg36_Fire_FromCOD16.wav" key="fire" pitch_variety="0.05" volume="1.1" />
-        <sound fileref="mg36_mgz_out_FromCOD16.wav" key="magazine_out" volume="0.5" />
-        <sound fileref="mg36_mgz_in_FromCOD16.wav" key="magazine_in" volume="0.5" />
-        <sound fileref="mg36_cycle_FromCOD16.wav" key="cycle" volume="0.7" />
+        <animation key="reload" animation_key="reloading, magazine rifle 1.5" />
+        <animation key="recoil" animation_key="recoil1" />
+        <animation key="recoil" animation_key="recoil2" />
+        <animation key="recoil" animation_key="recoil3" />
+        <animation key="recoil" stance_key="prone" animation_key="recoil1, prone" />
+        <animation key="recoil" stance_key="prone" animation_key="recoil2, prone" />
+        <animation key="recoil" stance_key="prone" animation_key="recoil3, prone" />
+        <animation state_key="hold_on_wall" animation_key="still" />
+        <animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
+        <animation state_key="stabbing" animation_key="melee, quick knife" />
+        <animation state_key="stabbing" animation_key="pistol whip 3" />
+        <sound key="fire" fileref="mg36_Fire_FromCOD16.wav" pitch_variety="0.05" volume="1.1" />
+        <sound key="magazine_out" fileref="mg36_mgz_out_FromCOD16.wav" volume="0.5" />
+        <sound key="magazine_in" fileref="mg36_mgz_in_FromCOD16.wav" volume="0.5" />
+        <sound key="cycle" fileref="mg36_cycle_FromCOD16.wav" volume="0.7" />
         <sound class="impact" fileref="rifle_drop.wav" />
-        <model filename="" />
+        <model filename="gkw_mg_mg36" />
         <hud_icon filename="gkw_mg36_4205.png" />
         <weak_hand_hold offset="0.2" />
         <projectile file="bullet.projectile">
-            <result class="hit" kill_decay_end_time="3.222" kill_decay_start_time="1.933" kill_probability="1.85" kill_probability_offset_on_successful_hit="1.5" />
+            <result class="hit"  kill_probability="1.85" kill_probability_offset_on_successful_hit="1.5" kill_decay_start_time="1.933" kill_decay_end_time="3.222" />
         </projectile>
         <effect class="muzzle" ref="ejection_556" />
         <stance accuracy="0.65" state_key="running" />
@@ -79,19 +79,19 @@
             <trail key="BulletApTrail" probability="1.0" />
         </projectile>
         <effect class="muzzle" ref="ejection_556" />
-        <stance accuracy="0.65" state_key="running" />
-        <stance accuracy="0.75" state_key="walking" />
-        <stance accuracy="0.85" state_key="crouch_moving" />
-        <stance accuracy="0.85" state_key="prone_moving" />
-        <stance accuracy="0.95" state_key="standing" />
-        <stance accuracy="0.95" state_key="crouching" />
-        <stance accuracy="1" state_key="prone" />
+        <stance state_key="running" accuracy="0.65" />
+        <stance state_key="walking" accuracy="0.75" />
+        <stance state_key="crouch_moving" accuracy="0.85" />
+        <stance state_key="prone_moving" accuracy="0.85" />
+        <stance state_key="standing" accuracy="0.95" />
+        <stance state_key="crouching" accuracy="0.95" />
+        <stance state_key="prone" accuracy="1" />
         <modifier class="speed" value="-0.2" />
-        <target_factors base_score="0.0" direction="0.0" distance="1.0" squad_command="1.0" tag="mecha" />
-        <target_factors base_score="1.0" direction="0.0" distance="1.0" squad_command="1.0" tag="" />
-        <target_factors base_score="3.0" direction="0.0" distance="1.0" squad_command="1.0" tag="elite" />
-        <target_factors base_score="2.0" direction="0.0" distance="1.0" squad_command="1.0" tag="antiarmor" />
-        <target_factors base_score="4.0" direction="0.0" distance="1.0" squad_command="1.0" tag="rifle" />
-        <target_factors base_score="4.0" direction="0.0" distance="1.0" squad_command="1.0" tag="commander" />
+        <target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0" />
+        <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0" />
+        <target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0" />
+        <target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0" />
+        <target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0" />
+        <target_factors tag="commander" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0" />
     </weapon>
 </weapons>

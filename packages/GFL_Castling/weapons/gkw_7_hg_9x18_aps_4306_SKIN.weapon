@@ -5,28 +5,28 @@
     <!-- Animations -->
     <animation animation_key="dancing, kazachok" state_key="hold_casual" />
     <inventory buy_price="18.0" sell_price="18.0" />
-    <commonness can_respawn_with="1" in_stock="0" value="0" />
-    <!-- Sounds -->
-    <sound fileref="aps_fire_FromSQUAD.wav" key="fire" pitch_variety="0.05" volume="1.2" />
-    <sound fileref="aps_mgz_out_FromSQUAD.wav" key="magazine_out" volume="0.6" />
-    <sound fileref="aps_mgz_in_FromSQUAD.wav" key="magazine_in" volume="0.6" />
-    <sound fileref="aps_cycle_FromSQUAD.wav" key="cycle" volume="0.6" />
-    <!-- Model, Icon, Cost -->
-    <model filename="" />
+    <commonness value="0" in_stock="0" can_respawn_with="1" />
+    <!--Sounds-->
+    <sound key="fire" fileref="aps_fire_FromSQUAD.wav" pitch_variety="0.05" volume="1.2" />
+    <sound key="magazine_out" fileref="aps_mgz_out_FromSQUAD.wav" volume="0.6" />
+    <sound key="magazine_in" fileref="aps_mgz_in_FromSQUAD.wav" volume="0.6"/>
+    <sound key="cycle" fileref="aps_cycle_FromSQUAD.wav" volume="0.6" />
+    <!--Model, Icon, Cost-->
+    <model filename="gkw_hg_aps_6808_from_melondove.xml" />
     <hud_icon filename="gkw_aps_4306.png" />
-    <!-- Ballistics -->
+    <!--Ballistics-->
     <weak_hand_hold offset="0.1" />
     <projectile file="bullet.projectile">
-        <result class="hit" kill_decay_end_time="0.4" kill_decay_start_time="0.25" kill_probability="1.65" kill_probability_offset_on_successful_hit="2.5" />
+        <result class="hit" kill_probability="1.65" kill_probability_offset_on_successful_hit="2.5" kill_decay_start_time="0.25" kill_decay_end_time="0.4" />
     </projectile>
-    <effect class="muzzle" ref="ejection_9mm" />
-    <!-- Accuracy, Movement speed -->
-    <stance accuracy="0.85" state_key="running" />
-    <stance accuracy="0.85" state_key="walking" />
-    <stance accuracy="0.85" state_key="crouch_moving" />
-    <stance accuracy="0.85" state_key="prone_moving" />
-    <stance accuracy="0.9" state_key="standing" />
-    <stance accuracy="0.95" state_key="crouching" />
-    <stance accuracy="1" state_key="prone" />
-    <stance accuracy="1" state_key="overwall" />
+    <effect class="muzzle" ref="ejection_9mm"/>
+    <!--Accuracy, Movement speed-->
+    <stance state_key="running" accuracy="0.85" />
+    <stance state_key="walking" accuracy="0.85" />
+    <stance state_key="crouch_moving" accuracy="0.85" />
+    <stance state_key="prone_moving" accuracy="0.85" />
+    <stance state_key="standing" accuracy="0.9" />
+    <stance state_key="crouching" accuracy="0.95" />
+    <stance state_key="prone" accuracy="1" />
+    <stance state_key="overwall" accuracy="1" />
 </weapon>

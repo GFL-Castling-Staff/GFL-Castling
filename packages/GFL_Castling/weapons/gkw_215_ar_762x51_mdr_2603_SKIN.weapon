@@ -11,7 +11,7 @@
         <sound fileref="mdr_mgz_in_FromDIVISION2.wav" key="magazine_in" volume="0.9" />
         <sound fileref="mdr_cycle_FromDIVISION2.wav" key="cycle" volume="0.9" />
         <sound class="impact" fileref="rifle_drop.wav" />
-        <model filename="" />
+        <model filename="gkw_ar_mdr.xml" />
         <hud_icon filename="gkw_mdr_2603.png" />
         <weak_hand_hold offset="0.2" />
         <projectile file="bullet.projectile">
@@ -40,7 +40,7 @@
         <sound fileref="mdr_mgz_in_FromDIVISION2.wav" key="magazine_in" volume="0.9" />
         <sound fileref="mdr_cycle_FromDIVISION2.wav" key="cycle" volume="0.9" />
         <sound class="impact" fileref="rifle_drop.wav" />
-        <model filename="" />
+        <model filename="gkw_ar_mdr.xml" />
         <hud_icon filename="gkw_mdr_2603.png" />
         <weak_hand_hold offset="0.2" />
         <projectile can_be_detected_by_footmen="0" file="bullet.projectile">

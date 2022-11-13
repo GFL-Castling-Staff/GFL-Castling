@@ -249,6 +249,7 @@ array<ScoredResource@> reward_pool_common ={
     ScoredResource("laptop.drop_reward", "grenade", 4.0f),
     ScoredResource("painting.drop_reward", "grenade", 0.6f),
     ScoredResource("gift_box_community_2.drop_reward", "grenade", 0.4f),
+    ScoredResource("ct_gift_halloween.drop_reward", "grenade", 0.4f),
     ScoredResource("gift_box_1.drop_reward", "grenade", 1.0f)
 };
 
@@ -291,6 +292,7 @@ array<ScoredResource@> reward_pool_uncommon ={
     ScoredResource("laptop.drop_reward", "grenade", 4.0f),
     ScoredResource("painting.drop_reward", "grenade", 0.6f),
     ScoredResource("gift_box_community_2.drop_reward", "grenade", 0.4f),
+    ScoredResource("ct_gift_halloween.drop_reward", "grenade", 0.4f),
     ScoredResource("gift_box_1.drop_reward", "grenade", 1.0f)
 };
 
@@ -319,6 +321,7 @@ array<ScoredResource@> reward_pool_rare ={
     ScoredResource("laptop.drop_reward", "grenade", 4.0f),
     ScoredResource("painting.drop_reward", "grenade", 0.6f),
     ScoredResource("gift_box_community_2.drop_reward", "grenade", 0.4f),
+    ScoredResource("ct_gift_halloween.drop_reward", "grenade", 0.4f),
     ScoredResource("gift_box_1.drop_reward", "grenade", 1.0f)
 };
 
@@ -341,6 +344,7 @@ array<ScoredResource@> reward_pool_boss ={
     ScoredResource("underpants.drop_reward", "grenade", 0.4f),
     ScoredResource("painting.drop_reward", "grenade", 0.2f),
     ScoredResource("gift_box_community_2.drop_reward", "grenade", 0.05f),
+    ScoredResource("ct_gift_halloween.drop_reward", "grenade", 0.05f),
     ScoredResource("gift_box_1.drop_reward", "grenade", 0.4f)    
 };
 
