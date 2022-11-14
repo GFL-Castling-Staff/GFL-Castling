@@ -7,7 +7,7 @@ string getGFLkey(string num) {
 }
 
 dictionary tdoll_index = {
-    {"1",""},
+    {"1","gkw_m1873.weapon"},
     {"2","gkw_m1911.weapon"},
     {"3","gkw_m9.weapon"},
     {"4","gkw_python.weapon"},
@@ -202,7 +202,7 @@ dictionary tdoll_index = {
     {"198","gkw_carcano1938.weapon"},
     {"199","gkw_type80.weapon"},
     {"200","gkw_xm3.weapon"},
-    {"201",""},
+    {"201","gkw_lepordm1.weapon"},
     {"202","gkw_thunder.weapon"},
     {"203","gkw_honeybadger.weapon"},
     {"204","gkw_ballista.weapon"},
@@ -356,7 +356,7 @@ dictionary tdoll_index = {
     {"353",""},
     {"354",""},
     {"355",""},
-    {"356",""},
+    {"356","gkw_a545.weapon"},
     {"357",""},
     {"358",""},
     {"359","gkw_sterling.weapon"},
@@ -372,7 +372,7 @@ dictionary tdoll_index = {
     {"369",""},
     {"370",""},
     {"371",""},
-    {"372",""},
+    {"372","gkw_ar18.weapon"},
     {"373",""},
     {"374","gkw_m240l.weapon"},
 
