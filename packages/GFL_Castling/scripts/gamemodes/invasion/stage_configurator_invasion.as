@@ -167,15 +167,14 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 	// ------------------------------------------------------------------------------------------------
 	protected void setupNormalStages() {
-		addStage(setupStage20());
-		addStage(setupStage1_rust());          // map2_?
+		// addStage(setupStage1_rust());          // map2_?
 		// addStage(setupStageRace());          // DEJAHU
 		addStage(setupStage1());          // map2
 		addStage(setupStage7());          // map6c by diling
+		addStage(setupStage20());
 		addStage(setupStage6());          // map5
 		addStage(setupStage8());          // map8
 		addStage(setupStage2());          // map4 c
-		addStage(setupStage3());		  // map3 c
 		addStage(setupStage103()); 		  // map103 Palo Island by diling
 		// addStage(setupEggStage());		  // 上坟
 		addStage(setupStage9());          // map9
@@ -188,6 +187,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		addStage(setupStage17());         // map17
 		addStage(setupStage13());         // map16
 		addStage(setupStage15());         // map1_2
+		addStage(setupStage3());		  // map3 c
 		addStage(setupFinalStage1());     // map11
 		addStage(setupStage104()); 		  // map105_1 zoneAttack by diling
 		addStage(setupStage105()); 		  // map105_2 shockzone by diling
