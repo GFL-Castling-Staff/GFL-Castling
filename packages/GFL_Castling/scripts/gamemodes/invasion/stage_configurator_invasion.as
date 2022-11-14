@@ -167,6 +167,8 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 	// ------------------------------------------------------------------------------------------------
 	protected void setupNormalStages() {
+		addStage(setupStage20());
+		addStage(setupStage1_rust());          // map2_?
 		// addStage(setupStageRace());          // DEJAHU
 		addStage(setupStage1());          // map2
 		addStage(setupStage7());          // map6c by diling
@@ -180,7 +182,6 @@ class StageConfiguratorInvasion : StageConfigurator {
 		addStage(setupStage18());         // map13_2
 		addStage(setupStage107());		  // chapter1 by diling
 		addStage(setupStage109());		  // chapter2 by diling
-		// addStage(setupStage1_rust());          // map2_?
 		addStage(setupStage12());         // map14
 		addStage(setupStage10());         // map10
 		addStage(setupStage106());		  // map106 E30 Route by diling
@@ -824,7 +825,6 @@ class StageConfiguratorInvasion : StageConfigurator {
 		// metadata
 		stage.m_primaryObjective = "capture";
 		setDefaultAttackBreakTimes(stage);
-		// setReduceDefenseForFinalAttack(stage, 0.1); // use this for final attack boost if needed for friendlies
 		return stage;
 	}
 	// ------------------------------------------------------------------------------------------------
@@ -1274,6 +1274,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 		stage.addTracker(PeacefulLastBase(m_metagame, 0));
 		stage.addTracker(CommsCapacityHandler(m_metagame));
+		stage.addTracker(jupiter(m_metagame));
 
 		stage.m_minRandomCrates = 2; 
 		stage.m_maxRandomCrates = 3;
@@ -1434,7 +1435,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 
         stage.addTracker(AttackDefenseHandlerMap16(m_metagame, 0));   // we use this instead of peacefullastbase for map16
 		stage.addTracker(CommsCapacityHandler(m_metagame));
-
+		
 		stage.m_minRandomCrates = 2; 
 		stage.m_maxRandomCrates = 5;
 		array<int> FactionIndex = getRandomEnemyList();
@@ -1821,6 +1822,60 @@ class StageConfiguratorInvasion : StageConfigurator {
 		return stage;
 	}  
 
+	protected Stage@ setupStage20() {
+		Stage@ stage = createStage();
+		stage.m_mapInfo.m_name = "Swan River";
+		stage.m_mapInfo.m_path = "media/packages/GFL_Castling/maps/map19";
+		stage.m_mapInfo.m_id = "map19";
+		
+		stage.m_includeLayers.insertLast("layer1.invasion");		
+
+		stage.m_fogOffset = 24.0;    
+		stage.m_fogRange = 50.0; 
+
+		stage.m_maxSoldiers = 19 * 15;
+		stage.m_playerAiCompensation = 2 + m_playerAiCompensation_offset;                                       
+        stage.m_playerAiReduction = 2.0;                                            
+  
+		stage.m_soldierCapacityVariance = 0.6;   
+
+		stage.addTracker(PeacefulLastBase(m_metagame, 0));    
+		stage.addTracker(CommsCapacityHandler(m_metagame));
+
+		stage.m_minRandomCrates = 1; 
+		stage.m_maxRandomCrates = 4;  
+
+		{ 				
+			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0, 0.5, 0.1));   
+			f.m_overCapacity = 0;
+			f.m_capacityOffset = 10;     // was 12                                        
+			f.m_capacityMultiplier = 1;                                               
+			f.m_bases = 1;
+			stage.m_factions.insertLast(f);
+		}
+		{
+			Faction f(getFactionConfigs()[1], createCommanderAiCommand(1, 0.60, 0.15));  // was 0.62 0.15  
+			f.m_overCapacity = 120;                                          
+			f.m_capacityOffset = 10;      // was 0
+			stage.m_factions.insertLast(f);
+		}
+
+		// metadata
+		stage.m_primaryObjective = "capture";
+		stage.m_radioObjectivePresent = false;
+
+		{
+			XmlElement command("command");
+			command.setStringAttribute("class", "faction_resources");
+			command.setIntAttribute("faction_id", 0);
+			addFactionResourceElements(command, "vehicle", array<string> = {"radio_jammer.vehicle", "radio_jammer2.vehicle", "radar_tower.vehicle"}, false);
+
+			stage.m_extraCommands.insertLast(command);
+		}
+
+		setDefaultAttackBreakTimes(stage);
+		return stage;
+	}   
 	// ------------------------------------------------------------------------------------------------
 	// ------------------------------------------------------------------------------------------------
 	// FINAL STAGES
