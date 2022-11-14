@@ -27,7 +27,7 @@
     <result class="hit"  kill_probability="1.65" kill_probability_offset_on_successful_hit="3.1" kill_decay_start_time="0.3" kill_decay_end_time="0.57" />
   </projectile>
   <effect class="muzzle" ref="ejection_9mm" />
-  <stance state_key="running" accuracy="0.45" />
+  <stance state_key="running" accuracy="0.55" />
   <stance state_key="walking" accuracy="0.7" />
   <stance state_key="standing" accuracy="0.75" />
   <stance state_key="crouching" accuracy="0.9" />
