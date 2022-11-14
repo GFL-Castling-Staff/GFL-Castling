@@ -202,7 +202,7 @@ dictionary tdoll_index = {
     {"198","gkw_carcano1938.weapon"},
     {"199","gkw_type80.weapon"},
     {"200","gkw_xm3.weapon"},
-    {"201","gkw_lepordm1.weapon"},
+    {"201","gkw_gepardm1.weapon"},
     {"202","gkw_thunder.weapon"},
     {"203","gkw_honeybadger.weapon"},
     {"204","gkw_ballista.weapon"},

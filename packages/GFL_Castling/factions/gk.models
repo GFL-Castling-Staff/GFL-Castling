@@ -1777,5 +1777,11 @@
     </model>    
     <model filename="gkd_hg_m1873_mod3.xml">
         <requirement class="weapon" key="gkw_m1873mod3.weapon" slot="0" />
-    </model>        
+    </model>      
+    <model filename="gkd_rf_gepardm1.xml">
+        <requirement class="weapon" key="gkw_gepardm1.weapon" slot="0" />
+    </model>    
+    <model filename="gkd_rf_gepardm1mod3.xml">
+        <requirement class="weapon" key="gkw_gepardm1mod3.weapon" slot="0" />
+    </model>         
 </models>
