@@ -18606,7 +18606,7 @@
 	<specification accuracy_factor="1" barrel_offset="0.9" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="0" class="0" sight_range_modifier="1.8" slot="0" magazine_size="30" name="QLZ04-[Straight Mode]" projectile_speed="145" retrigger_time="0.151" suppressed="0" carry_in_two_hands="0" sustained_fire_diminish_rate="1.2" sustained_fire_grow_step="0.9" spread_range="0.12"/>
 	<next_in_chain key="gkw_qlz04_peak79.weapon" share_ammo="0"/>
 	<inventory encumbrance="50.0" buy_price="404.0" sell_price="404.0"/>
-	<animation key="reload" animation_key="reloading, agl 4.0"/>
+	<animation key="reload" animation_key="reloading, agl 2.5"/>
 	<animation state_key="hold_casual" animation_key="crouch, pistol dual"/>
 	<animation state_key="recoil" animation_key="recoil, pistol dual 1"/>
 	<animation key="recoil" stance_key="over_wall" animation_key="recoil, pistol dual 1"/>
@@ -47037,9 +47037,7 @@
 	<effect class="result" type="splat_map" surface_tag="" size="5.0" atlas_index="4" layer="0"/>
 	<effect class="result" type="splat_map" surface_tag="" size="6.0" atlas_index="0" layer="2" additive="0"/>
 	<effect class="result" key="terrain" ref="NavalSmokeTop1" post_processing="1"/>
-	<effect class="result" key="terrain" ref="woosh" post_processing="0" shadow="0"/>
 	<effect class="result" key="terrain" ref="woosh1" post_processing="0" shadow="0"/>
-	<effect class="result" key="terrain" ref="woosh" post_processing="0" shadow="0"/>
 	<effect class="result" key="terrain" ref="ShadowSmoke" shadow="1"/>
 	<effect class="result" key="other" ref="Shine" lighting="0"/>
 	<effect class="result" key="static_object" copy="terrain"/>
