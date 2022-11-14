@@ -1783,5 +1783,11 @@
     </model>    
     <model filename="gkd_rf_gepardm1mod3.xml">
         <requirement class="weapon" key="gkw_gepardm1mod3.weapon" slot="0" />
-    </model>         
+    </model>  
+    <model filename="gkd_ar_a545.xml">
+        <requirement class="weapon" key="gkw_a545.weapon" slot="0" />
+    </model>           
+    <model filename="gkd_ar_a545.xml">
+        <requirement class="weapon" key="gkw_a545_skill.weapon" slot="0" />
+    </model>               
 </models>
