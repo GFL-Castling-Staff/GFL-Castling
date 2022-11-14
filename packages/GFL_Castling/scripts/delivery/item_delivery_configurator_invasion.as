@@ -551,9 +551,11 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 
 		array<array<ScoredResource@>> rewardPasses = {
 			{
-		ScoredResource("upgrade_g41.carry_item", "carry_item", 0.25f),
-		ScoredResource("upgrade_fg42.carry_item", "carry_item", 0.25f),
-		ScoredResource("upgrade_vz61.carry_item", "carry_item", 0.25f),
+		ScoredResource("upgrade_g41.carry_item", "carry_item", 0.1f),
+		ScoredResource("upgrade_fg42.carry_item", "carry_item", 0.1f),
+		ScoredResource("upgrade_vz61.carry_item", "carry_item", 0.1f),
+		ScoredResource("upgrade_m1903_1.carry_item", "carry_item", 0.1f),
+		ScoredResource("upgrade_m1903_2.carry_item", "carry_item", 0.1f),
 
 		ScoredResource("RO365_Ant_Doll.carry_item", "carry_item", 5.0f,2),
 		ScoredResource("RO365_Ant_Doll.carry_item", "carry_item", 25.0f),
@@ -610,8 +612,11 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		ScoredResource("gkw_iws2000.weapon", "weapon", 0.5f),
 		ScoredResource("gkw_sat8.weapon", "weapon", 0.5f),
 		ScoredResource("gkw_rfb.weapon", "weapon", 0.5f),
-		ScoredResource("upgrade_g41.carry_item", "carry_item", 0.25f),
-		ScoredResource("upgrade_fg42.carry_item", "carry_item", 0.25f)
+		ScoredResource("upgrade_g41.carry_item", "carry_item", 0.1f),
+		ScoredResource("upgrade_fg42.carry_item", "carry_item", 0.1f),
+		ScoredResource("upgrade_vz61.carry_item", "carry_item", 0.1f),
+		ScoredResource("upgrade_m1903_1.carry_item", "carry_item", 0.1f),
+		ScoredResource("upgrade_m1903_2.carry_item", "carry_item", 0.1f)
 			}
 		};
 		processRewardPasses(rewardPasses);
@@ -630,9 +635,11 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 
 		array<array<ScoredResource@>> rewardPasses = {
 			{
-		ScoredResource("upgrade_g41.carry_item", "carry_item", 0.25f),
-		ScoredResource("upgrade_fg42.carry_item", "carry_item", 0.25f),
-		ScoredResource("upgrade_vz61.carry_item", "carry_item", 0.25f),
+		ScoredResource("upgrade_g41.carry_item", "carry_item", 0.1f),
+		ScoredResource("upgrade_fg42.carry_item", "carry_item", 0.1f),
+		ScoredResource("upgrade_vz61.carry_item", "carry_item", 0.1f),
+		ScoredResource("upgrade_m1903_1.carry_item", "carry_item", 0.1f),
+		ScoredResource("upgrade_m1903_2.carry_item", "carry_item", 0.1f),
 		ScoredResource("RO365_Ant_Doll.carry_item", "carry_item", 15.0f),
 		ScoredResource("wild_gifts.carry_item", "carry_item", 7.5f, 20),
 		ScoredResource("snow_gifts.carry_item", "carry_item", 7.5f, 20),
@@ -1710,15 +1717,20 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 
 		array<array<ScoredResource@>> rewardPasses = {
 			{
-		ScoredResource("gkw_cms_6403.weapon", "weapon", 0.45f),
-		ScoredResource("gkw_kord_5102.weapon", "weapon", 0.45f),
-		ScoredResource("gkw_mdr_2603.weapon", "weapon", 0.45f),
-		ScoredResource("gkw_sat8_2601.weapon", "weapon", 0.45f),
-		ScoredResource("gkw_mp5_3.weapon", "weapon", 0.45f),
-		ScoredResource("gkw_m870_3803.weapon", "weapon", 0.45f),
-		ScoredResource("gkw_ksvk_3805.weapon", "weapon", 0.45f),
-		ScoredResource("gkw_iws2000_1403.weapon", "weapon", 0.45f),
-		ScoredResource("gkw_g11_9.weapon", "weapon", 0.45f)
+		ScoredResource("upgrade_g41.carry_item", "carry_item", 0.01f),
+		ScoredResource("upgrade_fg42.carry_item", "carry_item", 0.01f),
+		ScoredResource("upgrade_vz61.carry_item", "carry_item", 0.01f),
+		ScoredResource("upgrade_m1903_1.carry_item", "carry_item", 0.01f),
+		ScoredResource("upgrade_m1903_2.carry_item", "carry_item", 0.01f),				
+		ScoredResource("gkw_cms_6403.weapon", "weapon", 0.6f),
+		ScoredResource("gkw_kord_5102.weapon", "weapon", 0.6f),
+		ScoredResource("gkw_mdr_2603.weapon", "weapon", 0.6f),
+		ScoredResource("gkw_sat8_2601.weapon", "weapon", 0.6f),
+		ScoredResource("gkw_mp5_3.weapon", "weapon", 0.6f),
+		ScoredResource("gkw_m870_3803.weapon", "weapon", 0.6f),
+		ScoredResource("gkw_ksvk_3805.weapon", "weapon", 0.6f),
+		ScoredResource("gkw_iws2000_1403.weapon", "weapon", 0.6f),
+		ScoredResource("gkw_g11_9.weapon", "weapon", 0.6f)
 			},
 			{
 		ScoredResource("snow_gifts.carry_item", "carry_item", 1.0f, 40),
