@@ -33,8 +33,8 @@
 		<hud_icon filename="gkw_m2.png"/>
 		<capacity value="1" source="rank" source_value="0.0"/>
 		<weak_hand_hold offset="0.3"/>
-		<projectile file="portable_mortar.projectile" pulldown_in_air="20">
-		<result class="blast" radius="6.4" damage="8.0" push="1.0" decal="1" faction_compare="not_equal" damage_origin_vehicle="0"/>
+		<projectile file="portable_mortar.projectile" pulldown_in_air="30">
+		<result class="blast" radius="8.0" damage="10.0" push="1.0" decal="1" faction_compare="not_equal" damage_origin_vehicle="0" tweak_factor="1.60"/>
 		<effect class="result" type="splat_map" surface_tag="" size="3.0" atlas_index="0" layer="1"/>
 		<effect class="result" type="splat_map" surface_tag="" size="5.0" atlas_index="4" layer="0"/>
 		<effect class="result" type="splat_map" surface_tag="" size="6.0" atlas_index="0" layer="2" additive="0"/>
@@ -45,6 +45,8 @@
 		<effect class="result" type="splat_map" surface_tag="" size="5.0" atlas_index="4" layer="0"/>
 		<effect class="result" type="splat_map" surface_tag="" size="6.0" atlas_index="0" layer="2" additive="0"/>
 		<effect class="result" key="terrain" ref="NavalSmokeTop1" post_processing="1"/>
+		<effect class="result" key="terrain" ref="woosh" post_processing="0" shadow="0"/>
+		<effect class="result" key="terrain" ref="woosh1" post_processing="0" shadow="0"/>
 		<effect class="result" key="terrain" ref="woosh" post_processing="0" shadow="0"/>
 		<effect class="result" key="terrain" ref="ShadowSmoke" shadow="1"/>
 		<effect class="result" key="other" ref="Shine" lighting="0"/>
