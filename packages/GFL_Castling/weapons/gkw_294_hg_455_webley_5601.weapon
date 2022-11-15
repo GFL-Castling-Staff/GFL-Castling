@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<weapon key="gkw_webley.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+<weapon key="gkw_webley_5601.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
     <tag name="pistol" />
     <specification
 	retrigger_time="-1"	
@@ -10,7 +10,7 @@
 	magazine_size="6"
     carry_in_two_hands="0"
 	suppressed="0"
-	name="Webley Mark VI Revolver"
+	name="Webley Mark VI Revolver-[At Twilight]"
 	class="1"
     slot="0"
 	reload_one_at_a_time="0"
@@ -50,8 +50,8 @@
     <sound key="cycle_in" fileref="revolver_cycle_in.wav" volume="1" />
     <sound key="cycle" fileref="revolver_cycle.wav" volume="1" />
     <sound key="reload_one" fileref="revolver_magazine_in.wav" />
-    <model filename="gkw_webley_From_melondove.xml" />
-    <hud_icon filename="gkw_webley.png" />
+    <model filename="gkw_hg_webley_5601.xml" />
+    <hud_icon filename="gkw_webley_5601.png" />
     <weak_hand_hold offset="0.1" />
     <projectile file="bullet.projectile">
         <result class="hit" kill_probability="1.8" kill_probability_offset_on_successful_hit="8.0" kill_decay_start_time="0.22" kill_decay_end_time="0.4"/>
