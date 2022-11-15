@@ -19002,7 +19002,7 @@
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="standard_agl.projectile" pulldown_in_air="18">
 	<trigger class="time" time_to_live="0.405"/>
-	<result class="blast" damage="7.5" radius="6" decal="1" push="0.4" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+	<result class="blast" damage="7.5" radius="5.5" decal="1" push="0.4" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	</projectile>
 	<ballistics curve_height="2" near_far_distance="15.0" speed_estimation_near="160.0" speed_estimation_far="160.0" max_speed="280.0" randomness="0.0" tweak_factor="4.5"/>
 	<modifier class="speed" value="-3.0"/>
