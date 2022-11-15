@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<carry_items>
+	<carry_item key="bp_sp_naben.carry_item" time_to_live_out_in_the_open="15" name="[Star and Rose]" transform_on_consume="bp_sp_naben_1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="hud_vest_paul_15.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="0.001" in_stock="0" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="30"/>
+		<model mesh_filename="vestexo.xml"/>
+		<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0" />
+		<modifier class="speed" value="0.05" />
+		<modifier class="detectability" value="0.25" />
+		<modifier class="hit_success_probability" value="-1.2" />
+	</carry_item>
+	<carry_item key="bp_sp_naben_1" time_to_live_out_in_the_open="15" name="[Star and Rose]" transform_on_consume="bp_sp_naben_2" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="hud_vest_paul_14.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="0.001" in_stock="0" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="30"/>
+		<model mesh_filename="vestexo.xml"/>
+		<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+		<modifier class="speed" value="0.05" />
+		<modifier class="detectability" value="0.25" />
+		<modifier class="hit_success_probability" value="-1.2" />
+	</carry_item>
+	<carry_item key="bp_sp_naben_2" time_to_live_out_in_the_open="15" name="[Star and Rose]" transform_on_consume="bp_sp_naben_3" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="hud_vest_paul_13.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="0.001" in_stock="0" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="30"/>
+		<model mesh_filename="vestexo.xml"/>
+		<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0" />
+		<modifier class="speed" value="0.05" />
+		<modifier class="detectability" value="0.25" />
+		<modifier class="hit_success_probability" value="-1.2" />
+	</carry_item>
+	<carry_item key="bp_sp_naben_3" time_to_live_out_in_the_open="15" name="[Star and Rose]" transform_on_consume="bp_sp_naben_4" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="hud_vest_paul_12.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="0.001" in_stock="0" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="30"/>
+		<model mesh_filename="vestexo.xml"/>
+		<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+		<modifier class="speed" value="0.05" />
+		<modifier class="detectability" value="0.25" />
+		<modifier class="hit_success_probability" value="-1.2" />
+	</carry_item>
+	<carry_item key="bp_sp_naben_4" time_to_live_out_in_the_open="15" name="[Star and Rose]" transform_on_consume="bp_sp_naben_5" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="hud_vest_paul_11.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="0.001" in_stock="0" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="30"/>
+		<model mesh_filename="vestexo.xml"/>
+		<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0" />
+		<modifier class="speed" value="0.05" />
+		<modifier class="detectability" value="0.25" />
+		<modifier class="hit_success_probability" value="-1.2" />
+	</carry_item>
+	<carry_item key="bp_sp_naben_5" time_to_live_out_in_the_open="15" name="[Star and Rose]" transform_on_consume="bp_sp_naben_6" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="hud_vest_paul_10.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="0.001" in_stock="0" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="30"/>
+		<model mesh_filename="vestexo.xml"/>
+		<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+		<modifier class="speed" value="0.05" />
+		<modifier class="detectability" value="0.25" />
+		<modifier class="hit_success_probability" value="-1.2" />
+	</carry_item>
+	<carry_item key="bp_sp_naben_6" time_to_live_out_in_the_open="15" name="[Star and Rose]" transform_on_consume="bp_sp_naben_7" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="hud_vest_paul_9.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="0.001" in_stock="0" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="30"/>
+		<model mesh_filename="vestexo.xml"/>
+		<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0" />
+		<modifier class="speed" value="0.05" />
+		<modifier class="detectability" value="0.25" />
+		<modifier class="hit_success_probability" value="-1.2" />
+	</carry_item>
+	<carry_item key="bp_sp_naben_7" time_to_live_out_in_the_open="15" name="[Star and Rose]" transform_on_consume="bp_sp_naben_8" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="hud_vest_paul_8.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="0.001" in_stock="0" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="30"/>
+		<model mesh_filename="vestexo.xml"/>
+		<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+		<modifier class="speed" value="0.05" />
+		<modifier class="detectability" value="0.25" />
+		<modifier class="hit_success_probability" value="-1.2" />
+	</carry_item>
+	<carry_item key="bp_sp_naben_8" time_to_live_out_in_the_open="15" name="[Star and Rose]" transform_on_consume="bp_sp_naben_9" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="hud_vest_paul_7.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="0.001" in_stock="0" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="30"/>
+		<model mesh_filename="vestexo.xml"/>
+		<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0" />
+		<modifier class="speed" value="0.05" />
+		<modifier class="detectability" value="0.25" />
+		<modifier class="hit_success_probability" value="-1.2" />
+	</carry_item>
+	<carry_item key="bp_sp_naben_9" time_to_live_out_in_the_open="15" name="[Star and Rose]" transform_on_consume="bp_sp_naben_10" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="hud_vest_paul_6.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="0.001" in_stock="0" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="30"/>
+		<model mesh_filename="vestexo.xml"/>
+		<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+		<modifier class="speed" value="0.05" />
+		<modifier class="detectability" value="0.25" />
+		<modifier class="hit_success_probability" value="-1.2" />
+	</carry_item>
+	<carry_item key="bp_sp_naben_10" time_to_live_out_in_the_open="15" name="[Star and Rose]" transform_on_consume="bp_sp_naben_11" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="hud_vest_paul_5.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="0.001" in_stock="0" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="30"/>
+		<model mesh_filename="vestexo.xml"/>
+		<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0" />
+		<modifier class="speed" value="0.05" />
+		<modifier class="detectability" value="0.25" />
+		<modifier class="hit_success_probability" value="-1.2" />
+	</carry_item>
+	<carry_item key="bp_sp_naben_11" time_to_live_out_in_the_open="15" name="[Star and Rose]" transform_on_consume="bp_sp_naben_12" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="hud_vest_paul_4.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="0.001" in_stock="0" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="30"/>
+		<model mesh_filename="vestexo.xml"/>
+		<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+		<modifier class="speed" value="0.05" />
+		<modifier class="detectability" value="0.25" />
+		<modifier class="hit_success_probability" value="-1.2" />
+	</carry_item>
+	<carry_item key="bp_sp_naben_12" time_to_live_out_in_the_open="15" name="[Star and Rose]" transform_on_consume="bp_sp_naben_13" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="hud_vest_paul_3.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="0.001" in_stock="0" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="30"/>
+		<model mesh_filename="vestexo.xml"/>
+		<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0" />
+		<modifier class="speed" value="0.05" />
+		<modifier class="detectability" value="0.25" />
+		<modifier class="hit_success_probability" value="-1.2" />
+	</carry_item>
+	<carry_item key="bp_sp_naben_13" time_to_live_out_in_the_open="15" name="[Star and Rose]" transform_on_consume="bp_sp_naben_14" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="hud_vest_paul_2.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="0.001" in_stock="0" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="30"/>
+		<model mesh_filename="vestexo.xml"/>
+		<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+		<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+		<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+		<modifier class="speed" value="0.05" />
+		<modifier class="detectability" value="0.25" />
+		<modifier class="hit_success_probability" value="-1.2" />
+	</carry_item>
+	<carry_item key="bp_sp_naben_14" time_to_live_out_in_the_open="15" name="[Star and Rose]" transform_on_consume="bp_sp_naben_15" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="hud_vest_paul_1.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="0.001" in_stock="0" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="30"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="wound"  />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="wound" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="wound" />
+        <modifier class="speed" value="0.05" />
+		<modifier class="detectability" value="0.25" />
+		<modifier class="hit_success_probability" value="-1.2" />
+		</carry_item>
+	<carry_item key="bp_sp_naben_15" time_to_live_out_in_the_open="15" name="[Star and Rose]" transform_on_consume="bp_sp_naben_16" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="hud_vest_paul_0.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="0.001" in_stock="0" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="30"/>
+		<model mesh_filename="vestexo.xml"/>
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_blast_result" input_character_state="unwound" output_character_state="unwound" consumes_item="0"/>      
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+        <modifier class="projectile_hit_result" input_character_state="unwound" output_character_state="unwound" consumes_item="0"/>      
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
+        <modifier class="melee_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
+        <modifier class="melee_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+        <modifier class="melee_hit_result" input_character_state="unwound" output_character_state="unwound" consumes_item="0"/>      
+		<modifier class="speed" value="0.05" />
+		<modifier class="detectability" value="0.25" />
+		<modifier class="hit_success_probability" value="-1.2" />
+	</carry_item>
+</carry_items>

@@ -729,6 +729,9 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		ScoredResource("gkw_ltlx7000_icecream.weapon", "weapon", 0.5f),
 		ScoredResource("gkw_consume_javelin.weapon", "weapon", 0.5f,5),
 		ScoredResource("woshieoe.carry_item", "carry_item", 0.7f),
+		ScoredResource("cc_sp_tyls.carry_item", "carry_item", 0.7f),
+		ScoredResource("bp_sp_naben.carry_item", "carry_item", 0.7f),
+
 		ScoredResource("gkw_yurine.weapon","weapon",0.7f)
 			}
 		};

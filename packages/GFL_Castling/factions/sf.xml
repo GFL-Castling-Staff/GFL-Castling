@@ -504,6 +504,7 @@
 	<!-- jaeger -->
 	<soldier name="sf_jaeger" spawn_score="2.0" copy_from="default_spawn_ai">
 		<ai filename="sniper.ai" />
+		<model filename="sfd_jaeger_christmas.xml" />
 		<resources clear_weapons="1" clear_calls="1">
 			<weapon key="sfw_jaeger.weapon" enabled="1"/>
 			<carry_item key="sf_ar.carry_item" enabled="1" />
@@ -511,6 +512,7 @@
 	</soldier>
 	<soldier name="sf_jaeger_swap" spawn_score="1.0" copy_from="default_spawn_ai">
 		<ai filename="sniper.ai" />
+		<model filename="sfd_jaeger_swap_from_dusk.xml" />
 		<resources clear_weapons="1" clear_calls="1">
 			<weapon key="sfw_jaeger_swap.weapon" enabled="1"/>
 			<carry_item key="vest_15hp_elite.carry_item" enabled="1" />
