@@ -24,7 +24,7 @@
         <capacity value="0" source="rank" source_value="0.0" />
         <capacity value="100" source="rank" source_value="1.143" />
         <inventory encumbrance="0.0" price="300.0" />
-        <round instances="1" instance_class="soldier" instance_key="GK_target" instance_spread="0 0 0" common_spread="0 0 0" launch_time="5.0" spawn_time="5.5" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="-5.0" initial_speed_to_target="0.0">
+        <round instances="3" instance_class="soldier" instance_key="GK_target" instance_spread="15 8 15" common_spread="0 0 0" launch_time="5.0" spawn_time="5.5" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="40.0" initial_speed_to_target="0.0">
             <sound class="spawn" fileref="hello.wav" volume="1.0" />
         </round>
     </call>
