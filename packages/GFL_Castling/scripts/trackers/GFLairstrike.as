@@ -402,9 +402,10 @@ class GFLairstrike : Tracker {
                         //每单轮扫射6发
                         for(int j=1;j<=6;j++)
                         {
+                            float rand_dis = rand(-strike_rand,strike_rand);
                             float rand_angle = rand(-3.14,3.14);
-                            float rand_x1 = strike_rand*cos(rand_angle);
-                            float rand_y1 = strike_rand*sin(rand_angle);                            
+                            float rand_x1 = rand_dis*cos(rand_angle);
+                            float rand_y1 = rand_dis*sin(rand_angle);                            
                             
                             CreateDirectProjectile(m_metagame,start_pos,end_pos.add(Vector3(rand_x1,0,rand_y1)),"bullet_fairy.projectile",cid,fid,180);           
                         } 
@@ -451,8 +452,8 @@ class GFLairstrike : Tracker {
                         Vector3 pos_offset = strike_vector.add(getMultiplicationVector(strike_vector,Vector3(-60,0,-60)));  
                         pos_offset = pos_offset.add(Vector3(0,80,0));                        
                         //扫射终点的起点与终点（就生成弹头的终点的起始位置与终止位置）
-                        Vector3 c_pos = end_pos.add(getMultiplicationVector(strike_vector,Vector3(-32,0,-32)));
-                        Vector3 s_pos = end_pos.add(getMultiplicationVector(strike_vector,Vector3(64,0,64)));
+                        Vector3 c_pos = end_pos.add(getMultiplicationVector(strike_vector,Vector3(-36,0,-36)));
+                        Vector3 s_pos = end_pos.add(getMultiplicationVector(strike_vector,Vector3(36,0,36)));
                         //依据扫射位置偏移单位距离而设置的扫射次数
                         int strike_time = int(getAimUnitDistance(1,c_pos,s_pos)/strike_didis);
                         //弹头起始扫射位置与终止扫射位置
@@ -473,10 +474,11 @@ class GFLairstrike : Tracker {
                                 Vector3 fin_pos1 = startPos.add(getMultiplicationVector(v1,Vector3(BombHorizontalOffsetList[j]*strike_dy,0,BombHorizontalOffsetList[j]*strike_dy)));
                                 Vector3 fin_pos2 = endPos.add(getMultiplicationVector(v1,Vector3(BombHorizontalOffsetList[j]*strike_dy,0,BombHorizontalOffsetList[j]*strike_dy)));
                                 //随机落点
-                                float strike_rand = 2;
+                                float strike_rand = 4;
+                                float rand_dis = rand(-strike_rand,strike_rand);
                                 float rand_angle = rand(-3.14,3.14);
-                                float rand_x1 = strike_rand*cos(rand_angle);
-                                float rand_y1 = strike_rand*sin(rand_angle);     
+                                float rand_x1 = rand_dis*cos(rand_angle);
+                                float rand_y1 = rand_dis*sin(rand_angle);     
                                 //每单轮扫射生成1次对点扫射
                                 CreateDirectProjectile(m_metagame,fin_pos1,fin_pos2.add(Vector3(rand_x1,0,rand_y1)),"artillery_airstrike_fairies.projectile",cid,fid,80);           
                             }
