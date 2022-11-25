@@ -11,22 +11,22 @@ key="kccow_cerynitis.weapon">
 
     <!--Weapon specifications-->
     <specification
-	retrigger_time="0.2" 
+	retrigger_time="0.1" 
 	accuracy_factor="1.0" 
 	sustained_fire_grow_step="0.2" 
-	sustained_fire_diminish_rate="2.0" 
+	sustained_fire_diminish_rate="0.8" 
 	magazine_size="100" 
 	can_shoot_standing="1" 
 	can_shoot_crouching="0"
 	can_shoot_prone="0"
 	suppressed="0" 
-	name="Code:Cerynitis Type Anti-Air" 
+	name="Code:Cerynitis" 
 	class="0" 
 	reload_one_at_a_time="0"
-	sight_range_modifier="1.45" 
+	sight_range_modifier="1.0" 
 	projectile_speed="80.0" 
 	carry_in_two_hands="0" 
-	projectiles_per_shot="1" 
+	projectiles_per_shot="2" 
 	slot="0" 
 	stab_enabled="0"/>
     <!--Animations-->
@@ -52,7 +52,7 @@ key="kccow_cerynitis.weapon">
     <!--Ballistics-->
     
     <projectile file="bullet_kcco.projectile">
-        <result class="hit" kill_probability="2.2" kill_decay_start_time="1.0" kill_decay_end_time="1.2" />
+        <result class="hit" kill_probability="2.0" kill_decay_start_time="0.4" kill_decay_end_time="0.75" />
     </projectile>
     <stance state_key="running" accuracy="0.9" />
     <stance state_key="walking" accuracy="1.0" />
@@ -78,7 +78,7 @@ key="kccow_cerynitis.weapon">
 drop_count_factor_on_death="0" 
 drop_count_factor_on_player_death="0"
 time_to_live_out_in_the_open="0"  
-key="kccow_cerynitis_1.weapon">
+key="kccow_cerynitis_swap.weapon">
 
     <tag name="machine gun" />
 	<tag name="mecha" />
@@ -87,22 +87,20 @@ key="kccow_cerynitis_1.weapon">
     <specification
 	retrigger_time="0.1" 
 	accuracy_factor="1.0" 
-	sustained_fire_grow_step="0.0" 
-	sustained_fire_diminish_rate="0.0" 
-	magazine_size="50" 
+	sustained_fire_grow_step="0.2" 
+	sustained_fire_diminish_rate="1.2" 
+	magazine_size="100" 
 	can_shoot_standing="1" 
 	can_shoot_crouching="0"
 	can_shoot_prone="0"
 	suppressed="0" 
-	name="Code:Cerynitis Type Suppressive" 
-	class="4"
-    burst_shots="5" 
+	name="Code:Cerynitis SWAP" 
+	class="0" 
 	reload_one_at_a_time="0"
-	sight_range_modifier="1.1" 
+	sight_range_modifier="1.2" 
 	projectile_speed="80.0" 
 	carry_in_two_hands="0" 
 	projectiles_per_shot="2" 
-    last_burst_retrigger_time="3.0"
 	slot="0" 
 	stab_enabled="0"/>
     <!--Animations-->
@@ -129,17 +127,18 @@ key="kccow_cerynitis_1.weapon">
     
     <!-- <weak_hand_hold offset="0.1" /> -->
     <projectile file="bullet_kcco.projectile">
-        <result class="hit"  kill_probability="2.2" kill_decay_start_time="1.0" kill_decay_end_time="1.2" />
+        <result class="hit" kill_probability="2.0" kill_probability_offset_on_successful_hit="0.15" kill_decay_start_time="0.4" kill_decay_end_time="0.75" />
     </projectile>
 
     <stance state_key="running" accuracy="1.0" />
     <stance state_key="walking" accuracy="1.0" />
     <stance state_key="crouch_moving" accuracy="1.0" />
     <stance state_key="prone_moving" accuracy="1.0" />
-    <stance state_key="standing" accuracy="1.2" />
-    <stance state_key="crouching" accuracy="0.85" />
+    <stance state_key="standing" accuracy="1.0" />
+    <stance state_key="crouching" accuracy="1.0" />
     <stance state_key="prone" accuracy="1.0" />
     <modifier class="speed" value="-0.5" />
+	<modifier class="hit_success_probability" value="-0.05" />
 
 	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0" />
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0" />

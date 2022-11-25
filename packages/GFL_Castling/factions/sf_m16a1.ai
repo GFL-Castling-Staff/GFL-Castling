@@ -6,9 +6,9 @@
   <parameter class="accuracy_penalty_range" value="0.0" />
 
   <parameter class="force_comparison_multiplier_to_call_reinforcements" value="1.5" />
-  <parameter class="burst_time" value="2.0" />
-  <parameter class="burst_time_variance" value="0.5" />
-  <parameter class="longer_burst_time" value="2.5" />
+  <parameter class="burst_time" value="1.0" />
+  <parameter class="burst_time_variance" value="0.3" />
+  <parameter class="longer_burst_time" value="2.0" />
   <parameter class="longer_burst_time_variance" value="0.5" />
   <parameter class="choose_enemy_time" value="0.2" />
   <parameter class="wait_time" value="1.0" />
@@ -27,8 +27,10 @@
   <parameter class="grenade_throw_over_obstacle_offset_min" value="-0.5" />
   <parameter class="grenade_throw_over_obstacle_offset_max" value="3.5" />
 
+  
+  <parameter class="recheck_cover_over_shootability_time" value="1.5" />
 
-  <parameter class="fire_open_min_time" value="12.0" />
+  <parameter class="fire_open_min_time" value="20.0" />
   <parameter class="uses_vehicles" value="0.0" />
 	<parameter class="fighting_regular_move_radius" value="15.0" />
   <parameter class="run_limit_margin" value="4.0" />

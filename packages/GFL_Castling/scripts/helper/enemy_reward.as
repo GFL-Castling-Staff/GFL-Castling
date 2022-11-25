@@ -16,7 +16,7 @@ dictionary RP_enemy_index = {
     {"kcco_talos",75},
     {"kcco_mg",75},
     {"kcco_cerynitis",30},
-    {"kcco_cerynitis_alter",30},
+    {"kcco_cerynitis_swap",30},
     {"kcco_Hydra",100},
     {"kcco_teslatrooper",100},
     {"kcco_human_sniper",200},
@@ -85,7 +85,7 @@ dictionary XP_enemy_index = {
     {"kcco_talos",0.002},
     {"kcco_mg",0.002},
     {"kcco_cerynitis",0.003},
-    {"kcco_cerynitis_alter",0.003},
+    {"kcco_cerynitis_swap",0.003},
     {"kcco_Hydra",0.01},
     {"kcco_teslatrooper",0.01},
     {"kcco_human_sniper",0.01},
@@ -197,7 +197,7 @@ dictionary reward_pool_list= {
     {"parw_commander","uncommon"},
     {"kcco_ar_human_elite","uncommon"},
     {"kcco_cerynitis","uncommon"},
-    {"kcco_cerynitis_alter","uncommon"},
+    {"kcco_cerynitis_swap","uncommon"},
 
     {"","common"}
 };

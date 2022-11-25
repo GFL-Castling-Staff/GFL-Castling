@@ -7523,11 +7523,11 @@
 	<modifier class="detectability" value="0"/>
 </carry_item>
 
-<carry_item key="kcco_cet.carry_item" time_to_live_out_in_the_open="0" name="Cerynitis Armor Plate" transform_on_consume="kcco_cet_1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+<carry_item key="vest_cet.carry_item" time_to_live_out_in_the_open="15" name="30HP Cet" transform_on_consume="vest_cet_1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 	<hud_icon filename="testing.png"/>
 	<capacity value="1" source="rank" source_value="0"/>
-	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
-	<inventory encumbrance="100" price="1"/>
+	<commonness value="1" in_stock="1" can_respawn_with="1"/>
+	<inventory encubrance="100" price="1"/>
 	<model/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
 	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -7536,16 +7536,16 @@
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="speed" value="0.1"/>
+	<modifier class="speed" value="0.0"/>
 	<modifier class="hit_success_probability" value="-1.35"/>
-	<modifier class="detectability" value="0.5"/>
+	<modifier class="detectability" value="0.0"/>
 </carry_item>
 
-<carry_item key="kcco_cet_1" time_to_live_out_in_the_open="0" name="Cerynitis Armor Plate" transform_on_consume="kcco_cet_2" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+<carry_item key="vest_cet_1" time_to_live_out_in_the_open="15" name="30HP Cet" transform_on_consume="vest_cet_2" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 	<hud_icon filename="testing.png"/>
 	<capacity value="1" source="rank" source_value="0"/>
-	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
-	<inventory encumbrance="100" price="1"/>
+	<commonness value="1" in_stock="1" can_respawn_with="1"/>
+	<inventory encubrance="100" price="1"/>
 	<model/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
 	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -7554,16 +7554,16 @@
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="speed" value="0.1"/>
+	<modifier class="speed" value="0.0"/>
 	<modifier class="hit_success_probability" value="-1.35"/>
-	<modifier class="detectability" value="0.5"/>
+	<modifier class="detectability" value="0.0"/>
 </carry_item>
 
-<carry_item key="kcco_cet_2" time_to_live_out_in_the_open="0" name="Cerynitis Armor Plate" transform_on_consume="kcco_cet_3" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+<carry_item key="vest_cet_2" time_to_live_out_in_the_open="15" name="30HP Cet" transform_on_consume="vest_cet_3" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 	<hud_icon filename="testing.png"/>
 	<capacity value="1" source="rank" source_value="0"/>
-	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
-	<inventory encumbrance="100" price="1"/>
+	<commonness value="1" in_stock="1" can_respawn_with="1"/>
+	<inventory encubrance="100" price="1"/>
 	<model/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
 	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -7572,16 +7572,16 @@
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="speed" value="0.1"/>
+	<modifier class="speed" value="0.0"/>
 	<modifier class="hit_success_probability" value="-1.35"/>
-	<modifier class="detectability" value="0.5"/>
+	<modifier class="detectability" value="0.0"/>
 </carry_item>
 
-<carry_item key="kcco_cet_3" time_to_live_out_in_the_open="0" name="Cerynitis Armor Plate" transform_on_consume="kcco_cet_4" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+<carry_item key="vest_cet_3" time_to_live_out_in_the_open="15" name="30HP Cet" transform_on_consume="vest_cet_4" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 	<hud_icon filename="testing.png"/>
 	<capacity value="1" source="rank" source_value="0"/>
-	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
-	<inventory encumbrance="100" price="1"/>
+	<commonness value="1" in_stock="1" can_respawn_with="1"/>
+	<inventory encubrance="100" price="1"/>
 	<model/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
 	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -7590,16 +7590,16 @@
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="speed" value="0.1"/>
+	<modifier class="speed" value="0.0"/>
 	<modifier class="hit_success_probability" value="-1.35"/>
-	<modifier class="detectability" value="0.5"/>
+	<modifier class="detectability" value="0.0"/>
 </carry_item>
 
-<carry_item key="kcco_cet_4" time_to_live_out_in_the_open="0" name="Cerynitis Armor Plate" transform_on_consume="kcco_cet_5" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+<carry_item key="vest_cet_4" time_to_live_out_in_the_open="15" name="30HP Cet" transform_on_consume="vest_cet_5" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 	<hud_icon filename="testing.png"/>
 	<capacity value="1" source="rank" source_value="0"/>
-	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
-	<inventory encumbrance="100" price="1"/>
+	<commonness value="1" in_stock="1" can_respawn_with="1"/>
+	<inventory encubrance="100" price="1"/>
 	<model/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
 	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -7608,16 +7608,16 @@
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="speed" value="0.1"/>
+	<modifier class="speed" value="0.0"/>
 	<modifier class="hit_success_probability" value="-1.35"/>
-	<modifier class="detectability" value="0.5"/>
+	<modifier class="detectability" value="0.0"/>
 </carry_item>
 
-<carry_item key="kcco_cet_5" time_to_live_out_in_the_open="0" name="Cerynitis Armor Plate" transform_on_consume="kcco_cet_6" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+<carry_item key="vest_cet_5" time_to_live_out_in_the_open="15" name="30HP Cet" transform_on_consume="vest_cet_6" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 	<hud_icon filename="testing.png"/>
 	<capacity value="1" source="rank" source_value="0"/>
-	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
-	<inventory encumbrance="100" price="1"/>
+	<commonness value="1" in_stock="1" can_respawn_with="1"/>
+	<inventory encubrance="100" price="1"/>
 	<model/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
 	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -7626,16 +7626,16 @@
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="speed" value="0.1"/>
+	<modifier class="speed" value="0.0"/>
 	<modifier class="hit_success_probability" value="-1.35"/>
-	<modifier class="detectability" value="0.5"/>
+	<modifier class="detectability" value="0.0"/>
 </carry_item>
 
-<carry_item key="kcco_cet_6" time_to_live_out_in_the_open="0" name="Cerynitis Armor Plate" transform_on_consume="kcco_cet_7" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+<carry_item key="vest_cet_6" time_to_live_out_in_the_open="15" name="30HP Cet" transform_on_consume="vest_cet_7" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 	<hud_icon filename="testing.png"/>
 	<capacity value="1" source="rank" source_value="0"/>
-	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
-	<inventory encumbrance="100" price="1"/>
+	<commonness value="1" in_stock="1" can_respawn_with="1"/>
+	<inventory encubrance="100" price="1"/>
 	<model/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
 	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -7644,16 +7644,16 @@
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="speed" value="0.1"/>
+	<modifier class="speed" value="0.0"/>
 	<modifier class="hit_success_probability" value="-1.35"/>
-	<modifier class="detectability" value="0.5"/>
+	<modifier class="detectability" value="0.0"/>
 </carry_item>
 
-<carry_item key="kcco_cet_7" time_to_live_out_in_the_open="0" name="Cerynitis Armor Plate" transform_on_consume="kcco_cet_8" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+<carry_item key="vest_cet_7" time_to_live_out_in_the_open="15" name="30HP Cet" transform_on_consume="vest_cet_8" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 	<hud_icon filename="testing.png"/>
 	<capacity value="1" source="rank" source_value="0"/>
-	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
-	<inventory encumbrance="100" price="1"/>
+	<commonness value="1" in_stock="1" can_respawn_with="1"/>
+	<inventory encubrance="100" price="1"/>
 	<model/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
 	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -7662,16 +7662,16 @@
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="speed" value="0.1"/>
+	<modifier class="speed" value="0.0"/>
 	<modifier class="hit_success_probability" value="-1.35"/>
-	<modifier class="detectability" value="0.5"/>
+	<modifier class="detectability" value="0.0"/>
 </carry_item>
 
-<carry_item key="kcco_cet_8" time_to_live_out_in_the_open="0" name="Cerynitis Armor Plate" transform_on_consume="kcco_cet_9" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+<carry_item key="vest_cet_8" time_to_live_out_in_the_open="15" name="30HP Cet" transform_on_consume="vest_cet_9" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 	<hud_icon filename="testing.png"/>
 	<capacity value="1" source="rank" source_value="0"/>
-	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
-	<inventory encumbrance="100" price="1"/>
+	<commonness value="1" in_stock="1" can_respawn_with="1"/>
+	<inventory encubrance="100" price="1"/>
 	<model/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
 	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -7680,16 +7680,16 @@
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="speed" value="0.1"/>
+	<modifier class="speed" value="0.0"/>
 	<modifier class="hit_success_probability" value="-1.35"/>
-	<modifier class="detectability" value="0.5"/>
+	<modifier class="detectability" value="0.0"/>
 </carry_item>
 
-<carry_item key="kcco_cet_9" time_to_live_out_in_the_open="0" name="Cerynitis Armor Plate" transform_on_consume="kcco_cet_10" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+<carry_item key="vest_cet_9" time_to_live_out_in_the_open="15" name="30HP Cet" transform_on_consume="vest_cet_10" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 	<hud_icon filename="testing.png"/>
 	<capacity value="1" source="rank" source_value="0"/>
-	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
-	<inventory encumbrance="100" price="1"/>
+	<commonness value="1" in_stock="1" can_respawn_with="1"/>
+	<inventory encubrance="100" price="1"/>
 	<model/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
 	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -7698,16 +7698,16 @@
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="speed" value="0.1"/>
+	<modifier class="speed" value="0.0"/>
 	<modifier class="hit_success_probability" value="-1.35"/>
-	<modifier class="detectability" value="0.5"/>
+	<modifier class="detectability" value="0.0"/>
 </carry_item>
 
-<carry_item key="kcco_cet_10" time_to_live_out_in_the_open="0" name="Cerynitis Armor Plate" transform_on_consume="kcco_cet_11" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+<carry_item key="vest_cet_10" time_to_live_out_in_the_open="15" name="30HP Cet" transform_on_consume="vest_cet_11" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 	<hud_icon filename="testing.png"/>
 	<capacity value="1" source="rank" source_value="0"/>
-	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
-	<inventory encumbrance="100" price="1"/>
+	<commonness value="1" in_stock="1" can_respawn_with="1"/>
+	<inventory encubrance="100" price="1"/>
 	<model/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
 	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -7716,16 +7716,16 @@
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="speed" value="0.1"/>
+	<modifier class="speed" value="0.0"/>
 	<modifier class="hit_success_probability" value="-1.35"/>
-	<modifier class="detectability" value="0.5"/>
+	<modifier class="detectability" value="0.0"/>
 </carry_item>
 
-<carry_item key="kcco_cet_11" time_to_live_out_in_the_open="0" name="Cerynitis Armor Plate" transform_on_consume="kcco_cet_12" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+<carry_item key="vest_cet_11" time_to_live_out_in_the_open="15" name="30HP Cet" transform_on_consume="vest_cet_12" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 	<hud_icon filename="testing.png"/>
 	<capacity value="1" source="rank" source_value="0"/>
-	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
-	<inventory encumbrance="100" price="1"/>
+	<commonness value="1" in_stock="1" can_respawn_with="1"/>
+	<inventory encubrance="100" price="1"/>
 	<model/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
 	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -7734,16 +7734,16 @@
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="speed" value="0.1"/>
+	<modifier class="speed" value="0.0"/>
 	<modifier class="hit_success_probability" value="-1.35"/>
-	<modifier class="detectability" value="0.5"/>
+	<modifier class="detectability" value="0.0"/>
 </carry_item>
 
-<carry_item key="kcco_cet_12" time_to_live_out_in_the_open="0" name="Cerynitis Armor Plate" transform_on_consume="kcco_cet_13" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+<carry_item key="vest_cet_12" time_to_live_out_in_the_open="15" name="30HP Cet" transform_on_consume="vest_cet_13" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 	<hud_icon filename="testing.png"/>
 	<capacity value="1" source="rank" source_value="0"/>
-	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
-	<inventory encumbrance="100" price="1"/>
+	<commonness value="1" in_stock="1" can_respawn_with="1"/>
+	<inventory encubrance="100" price="1"/>
 	<model/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
 	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -7752,16 +7752,16 @@
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="speed" value="0.1"/>
+	<modifier class="speed" value="0.0"/>
 	<modifier class="hit_success_probability" value="-1.35"/>
-	<modifier class="detectability" value="0.5"/>
+	<modifier class="detectability" value="0.0"/>
 </carry_item>
 
-<carry_item key="kcco_cet_13" time_to_live_out_in_the_open="0" name="Cerynitis Armor Plate" transform_on_consume="kcco_cet_14" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+<carry_item key="vest_cet_13" time_to_live_out_in_the_open="15" name="30HP Cet" transform_on_consume="vest_cet_14" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 	<hud_icon filename="testing.png"/>
 	<capacity value="1" source="rank" source_value="0"/>
-	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
-	<inventory encumbrance="100" price="1"/>
+	<commonness value="1" in_stock="1" can_respawn_with="1"/>
+	<inventory encubrance="100" price="1"/>
 	<model/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
 	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -7770,27 +7770,297 @@
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="speed" value="0.1"/>
+	<modifier class="speed" value="0.0"/>
 	<modifier class="hit_success_probability" value="-1.35"/>
-	<modifier class="detectability" value="0.5"/>
+	<modifier class="detectability" value="0.0"/>
 </carry_item>
 
-<carry_item key="kcco_cet_14" time_to_live_out_in_the_open="0" name="Cerynitis Armor Plate" transform_on_consume="kcco_cet_15" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+<carry_item key="vest_cet_14" time_to_live_out_in_the_open="15" name="30HP Cet" transform_on_consume="vest_cet_15" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 	<hud_icon filename="testing.png"/>
 	<capacity value="1" source="rank" source_value="0"/>
-	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
-	<inventory encumbrance="100" price="1"/>
+	<commonness value="1" in_stock="1" can_respawn_with="1"/>
+	<inventory encubrance="100" price="1"/>
 	<model/>
-	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="death"/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
 	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
-	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="death"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
-	<modifier class="melee_hit_result" input_character_state="death" output_character_state="death"/>
-	<modifier class="speed" value="0.1"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="speed" value="0.0"/>
 	<modifier class="hit_success_probability" value="-1.35"/>
-	<modifier class="detectability" value="0.5"/>
+	<modifier class="detectability" value="0.0"/>
+</carry_item>
+
+<carry_item key="vest_cet_15" time_to_live_out_in_the_open="15" name="30HP Cet" transform_on_consume="vest_cet_16" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="1" in_stock="1" can_respawn_with="1"/>
+	<inventory encubrance="100" price="1"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="speed" value="0.0"/>
+	<modifier class="hit_success_probability" value="-1.35"/>
+	<modifier class="detectability" value="0.0"/>
+</carry_item>
+
+<carry_item key="vest_cet_16" time_to_live_out_in_the_open="15" name="30HP Cet" transform_on_consume="vest_cet_17" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="1" in_stock="1" can_respawn_with="1"/>
+	<inventory encubrance="100" price="1"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="speed" value="0.0"/>
+	<modifier class="hit_success_probability" value="-1.35"/>
+	<modifier class="detectability" value="0.0"/>
+</carry_item>
+
+<carry_item key="vest_cet_17" time_to_live_out_in_the_open="15" name="30HP Cet" transform_on_consume="vest_cet_18" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="1" in_stock="1" can_respawn_with="1"/>
+	<inventory encubrance="100" price="1"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="speed" value="0.0"/>
+	<modifier class="hit_success_probability" value="-1.35"/>
+	<modifier class="detectability" value="0.0"/>
+</carry_item>
+
+<carry_item key="vest_cet_18" time_to_live_out_in_the_open="15" name="30HP Cet" transform_on_consume="vest_cet_19" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="1" in_stock="1" can_respawn_with="1"/>
+	<inventory encubrance="100" price="1"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="speed" value="0.0"/>
+	<modifier class="hit_success_probability" value="-1.35"/>
+	<modifier class="detectability" value="0.0"/>
+</carry_item>
+
+<carry_item key="vest_cet_19" time_to_live_out_in_the_open="15" name="30HP Cet" transform_on_consume="vest_cet_20" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="1" in_stock="1" can_respawn_with="1"/>
+	<inventory encubrance="100" price="1"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="speed" value="0.0"/>
+	<modifier class="hit_success_probability" value="-1.35"/>
+	<modifier class="detectability" value="0.0"/>
+</carry_item>
+
+<carry_item key="vest_cet_20" time_to_live_out_in_the_open="15" name="30HP Cet" transform_on_consume="vest_cet_21" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="1" in_stock="1" can_respawn_with="1"/>
+	<inventory encubrance="100" price="1"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="speed" value="0.0"/>
+	<modifier class="hit_success_probability" value="-1.35"/>
+	<modifier class="detectability" value="0.0"/>
+</carry_item>
+
+<carry_item key="vest_cet_21" time_to_live_out_in_the_open="15" name="30HP Cet" transform_on_consume="vest_cet_22" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="1" in_stock="1" can_respawn_with="1"/>
+	<inventory encubrance="100" price="1"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="speed" value="0.0"/>
+	<modifier class="hit_success_probability" value="-1.35"/>
+	<modifier class="detectability" value="0.0"/>
+</carry_item>
+
+<carry_item key="vest_cet_22" time_to_live_out_in_the_open="15" name="30HP Cet" transform_on_consume="vest_cet_23" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="1" in_stock="1" can_respawn_with="1"/>
+	<inventory encubrance="100" price="1"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="speed" value="0.0"/>
+	<modifier class="hit_success_probability" value="-1.35"/>
+	<modifier class="detectability" value="0.0"/>
+</carry_item>
+
+<carry_item key="vest_cet_23" time_to_live_out_in_the_open="15" name="30HP Cet" transform_on_consume="vest_cet_24" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="1" in_stock="1" can_respawn_with="1"/>
+	<inventory encubrance="100" price="1"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="speed" value="0.0"/>
+	<modifier class="hit_success_probability" value="-1.35"/>
+	<modifier class="detectability" value="0.0"/>
+</carry_item>
+
+<carry_item key="vest_cet_24" time_to_live_out_in_the_open="15" name="30HP Cet" transform_on_consume="vest_cet_25" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="1" in_stock="1" can_respawn_with="1"/>
+	<inventory encubrance="100" price="1"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="speed" value="0.0"/>
+	<modifier class="hit_success_probability" value="-1.35"/>
+	<modifier class="detectability" value="0.0"/>
+</carry_item>
+
+<carry_item key="vest_cet_25" time_to_live_out_in_the_open="15" name="30HP Cet" transform_on_consume="vest_cet_26" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="1" in_stock="1" can_respawn_with="1"/>
+	<inventory encubrance="100" price="1"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="speed" value="0.0"/>
+	<modifier class="hit_success_probability" value="-1.35"/>
+	<modifier class="detectability" value="0.0"/>
+</carry_item>
+
+<carry_item key="vest_cet_26" time_to_live_out_in_the_open="15" name="30HP Cet" transform_on_consume="vest_cet_27" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="1" in_stock="1" can_respawn_with="1"/>
+	<inventory encubrance="100" price="1"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="speed" value="0.0"/>
+	<modifier class="hit_success_probability" value="-1.35"/>
+	<modifier class="detectability" value="0.0"/>
+</carry_item>
+
+<carry_item key="vest_cet_27" time_to_live_out_in_the_open="15" name="30HP Cet" transform_on_consume="vest_cet_28" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="1" in_stock="1" can_respawn_with="1"/>
+	<inventory encubrance="100" price="1"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="speed" value="0.0"/>
+	<modifier class="hit_success_probability" value="-1.35"/>
+	<modifier class="detectability" value="0.0"/>
+</carry_item>
+
+<carry_item key="vest_cet_28" time_to_live_out_in_the_open="15" name="30HP Cet" transform_on_consume="vest_cet_29" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="1" in_stock="1" can_respawn_with="1"/>
+	<inventory encubrance="100" price="1"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="speed" value="0.0"/>
+	<modifier class="hit_success_probability" value="-1.35"/>
+	<modifier class="detectability" value="0.0"/>
+</carry_item>
+
+<carry_item key="vest_cet_29" time_to_live_out_in_the_open="15" name="30HP Cet" transform_on_consume="vest_cet_30" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="1" in_stock="1" can_respawn_with="1"/>
+	<inventory encubrance="100" price="1"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="speed" value="0.0"/>
+	<modifier class="hit_success_probability" value="-1.35"/>
+	<modifier class="detectability" value="0.0"/>
 </carry_item>
 
 <carry_item key="kcco_ga.carry_item" time_to_live_out_in_the_open="15" name="Aegis Defend Armor" transform_on_consume="kcco_ga_1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
