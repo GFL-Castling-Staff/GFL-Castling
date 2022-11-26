@@ -19797,6 +19797,7 @@
 	<result class="blast" damage="10.0" radius="8" decal="1" push="0.5" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	</projectile>
 	<weak_hand_hold offset="0.3"/>
+	<commonness value="0.00001"/>
 	<hud_icon filename="88rocket.png"/>
 	<effect class="muzzle" ref="LawMuzzle"/>
 	<effect class="muzzle" ref="UpDust"/>
@@ -19812,12 +19813,12 @@
 </weapon>
 
 <weapon on_ground_up="0 0 1" drop_count_factor_on_death="0.5" drop_count_factor_on_player_death="1.0" key="gkw_consume_at4.weapon">
-	<specification retrigger_time="-1" accuracy_factor="0.8" spread_range="0.5" sustained_fire_grow_step="0.4" sustained_fire_diminish_rate="0.1" magazine_size="1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" suppressed="0" name="AT-4 Anti-Tank rocket launcher" class="3" consume="1" reload_one_at_a_time="1" sight_range_modifier="2.0" projectile_speed="150.0" slot="1" projectiles_per_shot="3"/>
+	<specification retrigger_time="-1" accuracy_factor="1.0" sustained_fire_grow_step="0.4" sustained_fire_diminish_rate="0.1" magazine_size="1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" suppressed="0" name="AT-4 Anti-Tank rocket launcher" class="3" consume="1" reload_one_at_a_time="1" sight_range_modifier="2.0" projectile_speed="150.0" slot="1" projectiles_per_shot="1"/>
 	<inventory encumbrance="20.0" buy_price="50.0" sell_price="50.0"/>
 	<capacity value="1" source="rank" source_value="4.369"/>
 	<capacity value="2" source="rank" source_value="10.633"/>
 	<capacity value="3" source="rank" source_value="30.433"/>
-	<commonness value="10" in_stock="1" can_respawn_with="1"/>
+	<commonness value="0.1" in_stock="1" can_respawn_with="1"/>
 	<animation key="recoil" animation_key="recoil, law"/>
 	<animation key="cycle" animation_key="Brifle1"/>
 	<animation key="reload" animation_key="AT4Reload"/>
@@ -19831,8 +19832,10 @@
 	<sound key="cycle_in" fileref="at4_cycle_in_FromSQUAD.wav" volume="0.7"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_hvy_at4.xml"/>
-	<ballistics near_far_distance="1.0" speed_estimation_near="180.0" speed_estimation_far="180.0" max_speed="280.0" randomness="0.0" curve_height="3.6" tweak_factor="4.5"/>
-	<projectile file="at4_aa_1.projectile"/>
+	<ballistics near_far_distance="1000.0" speed_estimation_near="120.0" speed_estimation_far="120.0" max_speed="125.0" randomness="0.0"/>
+	<projectile file="at4.projectile">
+	<result class="blast" damage="40" radius="2.0" decal="1" push="0.75" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+	</projectile>
 	<weak_hand_hold offset="0.3"/>
 	<hud_icon filename="gkw_at4.png"/>
 	<effect class="muzzle" ref="LawMuzzle"/>
@@ -19847,6 +19850,48 @@
 	<stance state_key="over_wall" accuracy="1"/>
 	<modifier class="speed" value="0"/>
 </weapon>
+
+<?xml version="1.0" encoding="utf-8"?>
+
+<weapon on_ground_up="0 0 1" drop_count_factor_on_death="0.5" drop_count_factor_on_player_death="1.0" key="gkw_consume_m202.weapon">
+	<specification retrigger_time="-1" accuracy_factor="0.8" spread_range="0.5" sustained_fire_grow_step="0.4" sustained_fire_diminish_rate="0.1" magazine_size="1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" suppressed="0" name="AT-4 Anti-Tank rocket launcher" class="3" consume="1" reload_one_at_a_time="1" sight_range_modifier="2.0" projectile_speed="150.0" slot="1" projectiles_per_shot="4"/>
+	
+	<hud_icon filename="hud_m202.png" />
+	<inventory encumbrance="20.0" buy_price="40.0" sell_price="40.0"/>
+	<capacity value="1" source="rank" source_value="4.369"/>
+	<capacity value="2" source="rank" source_value="10.633"/>
+	<capacity value="3" source="rank" source_value="30.433"/>
+	<commonness value="10" in_stock="1" can_respawn_with="1"/>
+	<animation key="recoil" animation_key="recoil, law"/>
+	<animation key="cycle" animation_key="Brifle1"/>
+	<animation key="reload" animation_key="AT4Reload"/>
+	<animation key="hold" animation_key="still, with law"/>
+	<animation key="hold_on_wall" animation_key="still, with law"/>
+    <sound key="fire" fileref="m202_flash_shot.wav" />
+    <sound key="cycle" fileref="sniper_cycle.wav" />
+    <sound key="magazine_out" fileref="sniper_clip_out.wav" />
+    <sound key="magazine_in" fileref="sniper_clip_in.wav" />
+    <sound key="cycle_out" fileref="sniper_cycle_out.wav" />
+    <sound key="cycle_in" fileref="sniper_cycle_in.wav" />
+    <sound class="impact" fileref="rifle_drop.wav" />
+    <model filename="m202_model.xml" />
+	<ballistics near_far_distance="1.0" speed_estimation_near="180.0" speed_estimation_far="180.0" max_speed="280.0" randomness="0.0" curve_height="3.6" tweak_factor="4.5"/>
+	<projectile file="m202_aa_1.projectile"/>
+	<weak_hand_hold offset="0.3"/>
+
+	<effect class="muzzle" ref="LawMuzzle"/>
+	<effect class="muzzle" ref="UpDust"/>
+	<stance state_key="running" accuracy="0.9"/>
+	<stance state_key="walking" accuracy="0.9"/>
+	<stance state_key="crouch_moving" accuracy="0.9"/>
+	<stance state_key="standing" accuracy="1"/>
+	<stance state_key="crouching" accuracy="1"/>
+	<stance state_key="prone" accuracy="1"/>
+	<stance state_key="prone_moving" accuracy="0.9"/>
+	<stance state_key="over_wall" accuracy="1"/>
+	<modifier class="speed" value="0"/>
+</weapon>
+
 
 <weapon key="gkw_consume_javelin.weapon" time_to_live_out_in_the_open="90.0" drop_count_factor_on_death="0.5" drop_count_factor_on_player_death="1.0" on_ground_up="0 0 1" drop_count_limit_in_range="2">
 	<tag name="bazooka"/>
@@ -19866,7 +19911,7 @@
 	<model filename="gkw_javelin_2.xml"/>
 	<projectile file="javelin_locater_1.projectile"/>
 	<weak_hand_hold offset="0.0"/>
-	<commonness value="0.01" in_stock="0" can_respawn_with="0"/>
+	<commonness value="0" in_stock="0" can_respawn_with="0"/>
 	<capacity value="0" source="rank" source_value="0.0"/>
 	<capacity value="1" source="rank" source_value="0.15"/>
 	<capacity value="2" source="rank" source_value="0.25"/>

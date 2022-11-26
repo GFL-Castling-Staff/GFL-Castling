@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<projectile key="at4_aa_2.projectile" class="grenade" name="AT-4-Anti-Air-Rocket" slot="2" pulldown_in_air="90" radius="1">
+<projectile key="m202_aa_2.projectile" class="grenade" name="AT-4-Anti-Air-Rocket" slot="2" pulldown_in_air="90" radius="1">
     <tag name="rocket"/>
 	
-	<result class="blast" damage="10" radius="4.0" decal="1" push="0.25" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+	<result class="blast" damage="8" radius="4.0" decal="1" push="0.25" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	
     <trigger class="impact" />
     <rotation class="motion" />
-    <model mesh_filename="mk153HEAT.xml" />
+	<model mesh_filename="m202_rocket.xml"/>
 
     <commonness value="0.0" />
 
