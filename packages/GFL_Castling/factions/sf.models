@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <models>
 	<model filename="sfd_guard.xml"><requirement class="weapon" slot="0" key="sfw_guard.weapon"/></model>
+	<model filename="sfd_guard_swap_from_dusk.xml"><requirement class="weapon" slot="0" key="sfw_guard_swap.weapon"/></model>
+
 	<model filename="sfd_jaeger.xml"><requirement class="weapon" slot="0" key="sfw_jaeger.weapon"/></model>
 	<model filename="sfd_jaeger_christmas.xml"><requirement class="weapon" slot="0" key="sfw_jaeger.weapon"/></model>
 
