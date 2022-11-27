@@ -7,6 +7,7 @@
 #include "GFLhelpers.as"
 #include "GFLtask.as"
 #include "task_sequencer.as"
+#include "resource_helpers.as"
 //Author: NetherCrow
 //Author: SAIWA
 
@@ -170,18 +171,18 @@ class GFLskill : Tracker {
 	GFLskill(GameMode@ metagame) {
 		@m_metagame = @metagame;
 	}
-	protected array<string> GKcallList={
-		"gk_airstrike_fairy.call",
-		"gk_rocket_fairy.call",
-		"gk_warrior_fairy.call",
-		"gk_rampage_fairy_ac130.call",
-		"gk_snipe_fairy.call",
-		"gk_yaoren_fairy.call",
-		"martina.call",
-		"chiara.call",
-		"pierre.call",
-		"gk_repair_fairy.call",
-		"target.call"
+	protected array<Resource@> GKcallList={
+		Resource("gk_airstrike_fairy.call", "call"),
+		Resource("gk_rocket_fairy.call", "call"),
+		Resource("gk_warrior_fairy.call", "call"),
+		Resource("gk_rampage_fairy_ac130.call", "call"),
+		Resource("gk_snipe_fairy.call", "call"),
+		Resource("gk_yaoren_fairy.call", "call"),
+		Resource("martina.call", "call"),
+		Resource("chiara.call", "call"),
+		Resource("pierre.call", "call"),
+		Resource("gk_repair_fairy.call", "call"),
+		Resource("target.call", "call")
 	};
 
     protected array<XM8tracker@> XM8track;
@@ -199,48 +200,14 @@ class GFLskill : Tracker {
             case 0: {break;}
 
             case 1: {// 生成防空炮
-				const XmlElement@ playerFaction = getFactionInfo(m_metagame,0);
-				if(playerFaction.getStringAttribute("name")=="G&K PMC"){
-					XmlElement command("command");
-					command.setStringAttribute("class", "faction_resources");
-					command.setIntAttribute("faction_id", 0);
-					addFactionResourceElements(command, "call", GKcallList, false);
-					m_metagame.getComms().send(command);
-				}
+				resetFactionCallResources(m_metagame, 0, GKcallList, false, getCallSorting());
 				break;
 			}
 
 			case 2: {// 摧毁防空炮
-				const XmlElement@ playerFaction = getFactionInfo(m_metagame,0);
-				if(playerFaction.getStringAttribute("name")=="G&K PMC"){
-					XmlElement command("command");
-					command.setStringAttribute("class", "faction_resources");
-					command.setIntAttribute("faction_id", 0);
-					addFactionResourceElements(command, "call", GKcallList, true);
-					m_metagame.getComms().send(command);
-				}
+				resetFactionCallResources(m_metagame, 0, GKcallList, true, getCallSorting());
 				break;
 			}
-			// if (EventKeyGet == "Jupiter_spawn"){
-			// 	const XmlElement@ playerFaction = getFactionInfo(m_metagame,0);
-			// 	if(playerFaction.getStringAttribute("name")=="G&K PMC"){
-			// 		XmlElement command("command");
-			// 		command.setStringAttribute("class", "faction_resources");
-			// 		command.setIntAttribute("faction_id", 0);
-			// 		addFactionResourceElements(command, "call", GKcallList, false);
-			// 		m_metagame.getComms().send(command);
-			// 	}
-			// }
-			// if (EventKeyGet == "Jupiter_down"){
-			// 	const XmlElement@ playerFaction = getFactionInfo(m_metagame,0);
-			// 	if(playerFaction.getStringAttribute("name")=="G&K PMC"){
-			// 		XmlElement command("command");
-			// 		command.setStringAttribute("class", "faction_resources");
-			// 		command.setIntAttribute("faction_id", 0);
-			// 		addFactionResourceElements(command, "call", GKcallList, true);
-			// 		m_metagame.getComms().send(command);
-			// 	}
-			// }
 			case 3: {// RO635技能，已弃用
 				int characterId = event.getIntAttribute("character_id");
 				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
