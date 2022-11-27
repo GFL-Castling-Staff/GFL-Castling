@@ -1270,21 +1270,35 @@ class GFLskill : Tracker {
 			}
 
 			case 35: {// LBLL
-				int characterId = event.getIntAttribute("character_id");
 				Vector3 grenade_pos = stringToVector3(event.getStringAttribute("position"));
-				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
-				if (character !is null) {
-					int factionid = character.getIntAttribute("faction_id");
-					XmlElement c ("command");
-					c.setStringAttribute("class", "update_inventory");
-					c.setIntAttribute("character_id", characterId); 
-					c.setIntAttribute("untransform_count", 4);
-					m_metagame.getComms().send(c);
-                    int index = findSkillIndex_reserve(characterId,"RBLL");
-                    if(index != -1){
-                        SkillArray[index].m_time-=5.0;
-                    }
+				// int factionid = character.getIntAttribute("faction_id");
+				int factionid = 0;
+				array<const XmlElement@>@ affectedCharacter = getCharactersNearPosition(m_metagame, grenade_pos, factionid, 2.5f);
+
+				if (affectedCharacter !is null && affectedCharacter.length > 0){
+					int closestIndex = -1;
+					float closestDistance = -1.0f;                
+					for(uint i=0;i<affectedCharacter.length();i++){
+						float distance = getPositionDistance(grenade_pos, stringToVector3(affectedCharacter[i].getStringAttribute("position")));
+						if (distance < closestDistance || closestDistance < 0.0){
+							closestDistance = distance;
+							closestIndex = i;
+						}
+					}
+					if (closestIndex >= 0){
+						int target_id = affectedCharacter[closestIndex].getIntAttribute("id");
+						XmlElement c ("command");
+						c.setStringAttribute("class", "update_inventory");
+						c.setIntAttribute("character_id", target_id); 
+						c.setIntAttribute("untransform_count", 4);
+						m_metagame.getComms().send(c);
+						int index = findSkillIndex_reserve(target_id,"RBLL");
+						if(index != -1){
+							SkillArray[index].m_time-=5.0;
+						}
+					}					
 				}
+
 				break;
 			}
 
