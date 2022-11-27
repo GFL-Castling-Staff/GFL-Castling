@@ -666,7 +666,9 @@ class CommandSkill : Tracker {
 
         // MP5无敌甲
         if (Trigger.m_EffectKey =="MP5MOD3" || Trigger.m_EffectKey =="MP5" || Trigger.m_EffectKey =="AK15MOD3"){
-            if(Trigger.m_specialkey1==""){
+            if(Trigger.m_specialkey1=="" ||
+               Trigger.m_specialkey1=="immunity_thompson.carry_item"
+            ){
                 Trigger.m_specialkey1="exo_t4.carry_item";
             }
             editPlayerVest(m_metagame,Trigger.m_character_id,Trigger.m_specialkey1,4);
@@ -687,7 +689,9 @@ class CommandSkill : Tracker {
             deleteItemInStash(m_metagame,Trigger.m_character_id,"carry_item","immunity_mp5.carry_item");
         }
         if (Trigger.m_EffectKey =="M1928A1"){
-            if(Trigger.m_specialkey1==""){
+            if(Trigger.m_specialkey1=="" ||
+               Trigger.m_specialkey1=="immunity_mp5.carry_item"
+            ){
                 Trigger.m_specialkey1="exo_t4.carry_item";
             }
             editPlayerVest(m_metagame,Trigger.m_character_id,Trigger.m_specialkey1,4);
