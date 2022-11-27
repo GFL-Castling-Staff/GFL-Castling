@@ -24,10 +24,12 @@ key="kccow_cerynitis.weapon">
 	class="0" 
 	reload_one_at_a_time="0"
 	sight_range_modifier="1.0" 
-	projectile_speed="80.0" 
+	projectile_speed="60.0" 
 	carry_in_two_hands="0" 
 	projectiles_per_shot="2" 
 	slot="0" 
+    use_basic_muzzle_smoke_effect="0"
+    barrel_offset_3d="0 0.2 1.0"
 	stab_enabled="0"/>
     <!--Animations-->
     <animation state_key="recoil"	animation_key="recoil, pistol dual 1" />
@@ -63,7 +65,10 @@ key="kccow_cerynitis.weapon">
     <stance state_key="prone" accuracy="0.94" />
     <stance state_key="overwall" accuracy="1.0" />
     <modifier class="speed" value="-0.5" />
-
+    <effect class="muzzle" ref="MuzzleDual1" />
+    <effect class="muzzle" ref="MuzzleSmokeDual1" />
+    <effect class="muzzle" ref="MuzzleDual2" /> 
+    <effect class="muzzle" ref="MuzzleSmokeDual2" />
 	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0" />
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0" />
     <target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0" />
@@ -98,10 +103,12 @@ key="kccow_cerynitis_swap.weapon">
 	class="0" 
 	reload_one_at_a_time="0"
 	sight_range_modifier="1.2" 
-	projectile_speed="80.0" 
+	projectile_speed="70.0" 
 	carry_in_two_hands="0" 
 	projectiles_per_shot="2" 
 	slot="0" 
+    use_basic_muzzle_smoke_effect="0"
+    barrel_offset_3d="0 0.2 1.0"
 	stab_enabled="0"/>
     <!--Animations-->
     <animation state_key="recoil"	animation_key="recoil, pistol dual 1" />
@@ -139,7 +146,10 @@ key="kccow_cerynitis_swap.weapon">
     <stance state_key="prone" accuracy="1.0" />
     <modifier class="speed" value="-0.5" />
 	<modifier class="hit_success_probability" value="-0.05" />
-
+    <effect class="muzzle" ref="MuzzleDual1" />
+    <effect class="muzzle" ref="MuzzleSmokeDual1" />
+    <effect class="muzzle" ref="MuzzleDual2" /> 
+    <effect class="muzzle" ref="MuzzleSmokeDual2" />
 	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0" />
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0" />
     <target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0" />

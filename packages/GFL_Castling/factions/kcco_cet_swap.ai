@@ -96,9 +96,9 @@
     <parameter class="burst_time_variance" value="0" />
     <parameter class="longer_burst_time" value="1.0" />
     <parameter class="longer_burst_time_variance" value="0" />
-    <parameter class="wait_time" value="0.5" />
-    <parameter class="wait_time_variance" value="0.0" />
-    <parameter class="choose_enemy_time" value="0.5" />
+    <parameter class="wait_time" value="0.8" />
+    <parameter class="wait_time_variance" value="0.3" />
+    <parameter class="choose_enemy_time" value="1.0" />
     <parameter class="willingness_to_guard" value="0.2" />
     <parameter class="shooting_against_vehicle_burst_time" value="1.6" />
     <parameter class="vehicle_target_aim_time" value="0.33" />

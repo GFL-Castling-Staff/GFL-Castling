@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<projectile class="grenade" name="30mm" slot="1" pulldown_in_air="17.5" key="sf_jaguar_shell.projectile">
+<projectile class="grenade" name="" slot="1" pulldown_in_air="17.5" key="sf_jaguar_shell.projectile">
     <tag name="grenade"/>
     <trigger class="impact" />
     <rotation class="motion" />
     <model mesh_filename="sf_jaguar_shell.xml" />
-    <result class="blast" damage="1.8" radius="8.0" decal="1" push="1" character_state="death" faction_compare="not_equal"/>
+    <result class="blast" damage="3.0" radius="5.0" decal="1" push="1" character_state="death" faction_compare="not_equal"/>
     <trail probability="1.0" key="FlamethrowerTrail" />
 
     <commonness value="0.0" />

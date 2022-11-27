@@ -78,7 +78,7 @@ class call_event : Tracker {
                             const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
                             if (character !is null) {
                                 sendPrivateMessageKey(m_metagame,playerId,"ac130callexisthint");
-                                GiveRP(m_metagame,characterId,5000);
+                                GiveRP(m_metagame,characterId,10000);
                             }
                         }
                         else{
