@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <vehicle file="vehicle_base.vehicle" name="Moth" key="par_moth.vehicle" respawn_time="100" time_to_live_unsteerable="10" map_view_atlas_index="34" minimum_fill_requirement="1.0" max_character_collision_speed_on_normal="8.0" max_character_collision_speed="8" character_leave_request_mode="friendly" allow_ai_to_use="1" allow_player_to_use="1" ai_driver_turns_to_target="0" ai_abandon_when_unsteerable="0" ai_stop_to_fight="0" >
     <tag name="metal_heavy" />
-    <tag name="PARA_MOTH" />
+    <tag name="para_moth" />
     <tag name="jeep" />
     <tag name="heavy_combat" />
     <tire_set offset="1.8 0.0 +1.8" radius="0.52" />

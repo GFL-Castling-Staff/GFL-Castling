@@ -3,13 +3,14 @@
 
 	<vehicle file="GFL_Castling_vehicles.xml" />
 	<vehicle file="map_vehicles.xml" />
+	<vehicle file="deco_vehicles.xml" /> 
+	<vehicle file="race_vehicles.xml" />   
 
 	<vehicle file="armored_truck.vehicle" />
 	<vehicle file="transport_truck.vehicle" /> 
 
 	<vehicle file="radar_truck.vehicle" />
 	<vehicle file="cargo_truck.vehicle" />
-	<vehicle file="para_spawn.vehicle" />
 	<vehicle file="rubber_boat.vehicle" />
 	<vehicle file="radio_jammer.vehicle" />  
 	<vehicle file="radio_jammer2.vehicle" />  
@@ -19,7 +20,6 @@
 	<vehicle file="cover2.vehicle" />
 	<vehicle file="cargo_truck.vehicle" />
 	<vehicle file="tank2.vehicle" />
-	<!-- <vehicle file="humvee.vehicle" /> -->
 	<vehicle file="all_special.xml" />
 	<vehicle file="deployable_minig_2.vehicle" />
 	<vehicle file="para_spawn.vehicle" />
@@ -27,7 +27,6 @@
 	<vehicle file="Ogas_pulse_generator.vehicle" />
 	<vehicle file="mortar_ammunition_crates.vehicle"/>
 
-	<vehicle file="deco_vehicles.xml" /> 
 	<vehicle file="mobile_armory.vehicle" />
 	<vehicle file="aa_emplacement.vehicle" />
 
@@ -38,13 +37,13 @@
  	<vehicle file="heli_broken1.vehicle" />   
 	<vehicle file="heli_broken2.vehicle" />            
 	<vehicle file="cargo_helicopter.vehicle" />      
-	<vehicle file="race_vehicles.xml" />   
 	<vehicle file="icecream.vehicle" />
 	
-	<vehicle file="deploy_trans.vehicle" />
+	<!-- <vehicle file="deploy_trans.vehicle" /> -->
 	<vehicle file="gk_werlod_shelter.vehicle" />
 	<vehicle file="jupiter_airstrike_warning.vehicle"/>
 
 	<vehicle file="tow_ct.vehicle" />
+	<vehicle file="hornet_ct.vehicle" />
 
 </vehicles>

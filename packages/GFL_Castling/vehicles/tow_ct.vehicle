@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<vehicle name="BGM-71 TOW" key="bgm71_tow.vehicle" map_view_atlas_index="7" usable_for_cover="0" protectors="1" soldier_capacity_offset="1">
+<vehicle name="BGM-71 TOW" key="bgm71_tow.vehicle" map_view_atlas_index="7" respawn_time="1200.0" usable_for_cover="0" protectors="1" soldier_capacity_offset="1">
 	<tag name="target" />
 	<tag name="tow" />
 	<tire_set offset="1.0 0.0 1.0" radius="0.65" />
