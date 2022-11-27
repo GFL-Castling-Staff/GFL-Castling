@@ -25,7 +25,7 @@
 	<parameter class="climbing_switch_steer" value="0.2" />
 
 	<animation state_key="hold"  animation_key="still, thunder" />
-	<animation state_key="hold_one_wall"  animation_key="still, thunder" />
+	<animation state_key="hold_on_wall"  animation_key="still, thunder" />
 	<animation key="still" target_key="still, thunder" />
 	<animation state_key="hold_casual"  animation_key="still, thunder" />
 	<animation key="still against wall" target_key="still, thunder" />

@@ -3328,7 +3328,7 @@
 	<sound key="stab_hit" fileref="blade_impact_03_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
 	<sound key="stab_hit" fileref="blade_impact_04_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
 	<model filename="gkw_rf_98kmod3_s.xml"/>
-	<hud_icon filename="testing.png"/>
+	<hud_icon filename="gkw_kar98k_mod3.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="bullet.projectile" can_be_detected_by_footmen="0" pulldown_in_air="10">
 	<result class="blast" radius="2.0" damage="2.0" push="0.05" decal="0" character_state="death" faction_compare="not_equal"/>
@@ -3380,7 +3380,7 @@
 	<sound key="cycle_in" fileref="kar98k_cycle_in_FromPOSTSCRIPTUM.wav" volume="0.7"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_rf_98kmod3_b.xml"/>
-	<hud_icon filename="testing.png"/>
+	<hud_icon filename="gkw_kar98k_mod3.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="2.5" kill_probability_offset_on_successful_hit="1.75" kill_decay_start_time="2.0" kill_decay_end_time="3.0"/>
@@ -41347,7 +41347,7 @@
 <weapon key="sfw_guard_swap.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="shotgun"/>
 	<tag name="shield"/>
-	<specification accuracy_factor="1.0" barrel_offset="0.5" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" carry_in_two_hands="0" class="0" burst_shots="1" projectiles_per_shot="6" spread_range="0.3" slot="0" magazine_size="10" name="SF-Guardian SWAP" projectile_speed="100" retrigger_time="0.5" suppressed="0" sustained_fire_diminish_rate="1.0" sustained_fire_grow_step="0.5"/>
+	<specification accuracy_factor="0.65" barrel_offset="0.5" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" carry_in_two_hands="0" class="0" burst_shots="1" projectiles_per_shot="6" spread_range="0.3" slot="0" magazine_size="10" name="SF-Guardian SWAP" projectile_speed="100" retrigger_time="0.5" suppressed="0" sustained_fire_diminish_rate="1.0" sustained_fire_grow_step="0.5"/>
 	<animation state_key="recoil" animation_key="recoil, pistol dual 1"/>
 	<animation state_key="recoil" animation_key="recoil, pistol dual 2"/>
 	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil, overwall dual"/>
@@ -43090,7 +43090,7 @@
 	<tag name="mecha"/>
 	<tag name="bazooka"/>
 	<tag name="antiarmor"/>
-	<specification accuracy_factor="0.95" barrel_offset="0.5" class="4" slot="0" magazine_size="6" name="SF-Jaguar" projectile_speed="90" retrigger_time="0.2" burst_shots="3" last_burst_retrigger_time="4.0" suppressed="0" stab_enabled="0" projectiles_per_shot="1" carry_in_two_hands="0" can_shoot_standing="1" can_shoot_crouching="0" can_shoot_prone="0" sight_range_modifier="1.2" sustained_fire_diminish_rate="1.0" sustained_fire_grow_step="0.5"/>
+	<specification accuracy_factor="1.0" barrel_offset="0.5" class="4" slot="0" magazine_size="6" name="SF-Jaguar" projectile_speed="90" retrigger_time="0.2" burst_shots="3" last_burst_retrigger_time="3.0" suppressed="0" stab_enabled="0" projectiles_per_shot="1" carry_in_two_hands="0" can_shoot_standing="1" can_shoot_crouching="0" can_shoot_prone="0" sight_range_modifier="1.2" sustained_fire_diminish_rate="1.0" sustained_fire_grow_step="1.0"/>
 	<commonness value="0.1" in_stock="1" can_respawn_with="1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<inventory encumbrance="0.0" buy_price="1.0" sell_price="0.0"/>
@@ -43117,11 +43117,7 @@
 	<model filename=""/>
 	<hud_icon filename="testing.png"/>
 	<weak_hand_hold offset="0.2"/>
-	<projectile file="sf_jaguar_shell.projectile" pulldown_in_air="17.5">
-	<model mesh_filename="sf_jaguar_shell.xml"/>
-	<result class="blast" damage="3.0" radius="3.6" decal="1" push="1" character_state="death" faction_compare="not_equal"/>
-	<trail probability="1.0" key="FlamethrowerTrail"/>
-	</projectile>
+	<projectile file="sf_jaguar_shell.projectile"/>
 	<ballistics curve_height="60.0" near_far_distance="5.0" speed_estimation_near="15.0" speed_estimation_far="20.0" max_speed="80.0" randomness="0.0" tweak_factor="0.84"/>
 	<stance state_key="running" accuracy="1.0"/>
 	<stance state_key="walking" accuracy="1.0"/>
@@ -43132,7 +43128,6 @@
 	<stance state_key="prone_moving" accuracy="1.0"/>
 	<stance state_key="over_wall" accuracy="1"/>
 	<modifier class="speed" value="0.1"/>
-	<modifier class="hit_success_probability" value="+0.4"/>
 </weapon>
 
 <weapon key="sfw_prowler.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
@@ -43202,7 +43197,7 @@
 	<hud_icon filename="testing.png"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile file="bullet_sf.projectile">
-	<result class="hit" kill_probability="1.5" kill_probability_offset_on_successful_hit="0.5" kill_decay_start_time="0.5" kill_decay_end_time="0.5"/>
+	<result class="hit" kill_probability="1.7" kill_decay_start_time="0.5" kill_decay_end_time="0.5"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.8"/>
 	<stance state_key="walking" accuracy="0.8"/>
@@ -43212,8 +43207,8 @@
 	<stance state_key="crouching" accuracy="1"/>
 	<stance state_key="prone" accuracy="1"/>
 	<stance state_key="over_wall" accuracy="1"/>
-	<modifier class="speed" value="0.4"/>
-	<modifier class="hit_success_probability" value="-0.35"/>
+	<modifier class="speed" value="0.3"/>
+	<modifier class="hit_success_probability" value="-0.4"/>
 	<commonness value="0.000001" in_stock="1" can_respawn_with="1"/>
 	<inventory encumbrance="0.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -43425,7 +43420,7 @@
 <weapon on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0" key="kccow_cerynitis.weapon">
 	<tag name="machine gun"/>
 	<tag name="mecha"/>
-	<specification retrigger_time="0.1" accuracy_factor="1.0" sustained_fire_grow_step="0.2" sustained_fire_diminish_rate="0.8" magazine_size="100" can_shoot_standing="1" can_shoot_crouching="0" can_shoot_prone="0" suppressed="0" name="Code:Cerynitis" class="0" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="80.0" carry_in_two_hands="0" projectiles_per_shot="2" slot="0" stab_enabled="0"/>
+	<specification retrigger_time="0.1" accuracy_factor="1.0" sustained_fire_grow_step="0.2" sustained_fire_diminish_rate="0.8" magazine_size="100" can_shoot_standing="1" can_shoot_crouching="0" can_shoot_prone="0" suppressed="0" name="Code:Cerynitis" class="0" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="60.0" carry_in_two_hands="0" projectiles_per_shot="2" slot="0" use_basic_muzzle_smoke_effect="0" barrel_offset_3d="0 0.2 1.0" stab_enabled="0"/>
 	<animation state_key="recoil" animation_key="recoil, pistol dual 1"/>
 	<animation state_key="recoil" animation_key="recoil, pistol dual 2"/>
 	<animation state_key="reload" animation_key="recoil, pistol dual 1"/>
@@ -43454,6 +43449,10 @@
 	<stance state_key="prone" accuracy="0.94"/>
 	<stance state_key="overwall" accuracy="1.0"/>
 	<modifier class="speed" value="-0.5"/>
+	<effect class="muzzle" ref="MuzzleDual1"/>
+	<effect class="muzzle" ref="MuzzleSmokeDual1"/>
+	<effect class="muzzle" ref="MuzzleDual2"/>
+	<effect class="muzzle" ref="MuzzleSmokeDual2"/>
 	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
 	<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
@@ -43466,7 +43465,7 @@
 <weapon on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0" key="kccow_cerynitis_swap.weapon">
 	<tag name="machine gun"/>
 	<tag name="mecha"/>
-	<specification retrigger_time="0.1" accuracy_factor="1.0" sustained_fire_grow_step="0.2" sustained_fire_diminish_rate="1.2" magazine_size="100" can_shoot_standing="1" can_shoot_crouching="0" can_shoot_prone="0" suppressed="0" name="Code:Cerynitis SWAP" class="0" reload_one_at_a_time="0" sight_range_modifier="1.2" projectile_speed="80.0" carry_in_two_hands="0" projectiles_per_shot="2" slot="0" stab_enabled="0"/>
+	<specification retrigger_time="0.1" accuracy_factor="1.0" sustained_fire_grow_step="0.2" sustained_fire_diminish_rate="1.2" magazine_size="100" can_shoot_standing="1" can_shoot_crouching="0" can_shoot_prone="0" suppressed="0" name="Code:Cerynitis SWAP" class="0" reload_one_at_a_time="0" sight_range_modifier="1.2" projectile_speed="70.0" carry_in_two_hands="0" projectiles_per_shot="2" slot="0" use_basic_muzzle_smoke_effect="0" barrel_offset_3d="0 0.2 1.0" stab_enabled="0"/>
 	<animation state_key="recoil" animation_key="recoil, pistol dual 1"/>
 	<animation state_key="recoil" animation_key="recoil, pistol dual 2"/>
 	<animation state_key="reload" animation_key="recoil, pistol dual 1"/>
@@ -43495,6 +43494,10 @@
 	<stance state_key="prone" accuracy="1.0"/>
 	<modifier class="speed" value="-0.5"/>
 	<modifier class="hit_success_probability" value="-0.05"/>
+	<effect class="muzzle" ref="MuzzleDual1"/>
+	<effect class="muzzle" ref="MuzzleSmokeDual1"/>
+	<effect class="muzzle" ref="MuzzleDual2"/>
+	<effect class="muzzle" ref="MuzzleSmokeDual2"/>
 	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
 	<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
@@ -43642,8 +43645,8 @@
 	<tag name="mecha"/>
 	<tag name="metal_heavy"/>
 	<tag name="bazooka"/>
-	<specification retrigger_time="3.0" accuracy_factor="0.75" sustained_fire_grow_step="-2.0" sustained_fire_diminish_rate="0.9" magazine_size="4" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" suppressed="0" name="Code:Teslatrooper" class="0" reload_one_at_a_time="0" sight_range_modifier="0.75" projectile_speed="76.0" carry_in_two_hands="0" projectiles_per_shot="5" stab_enabled="0" stab_range="3" barrel_offset_3d="0.6 1 0.5"/>
-	<animation state_key="recoil" animation_key="recoil, large mecha"/>
+	<specification retrigger_time="3.0" accuracy_factor="0.75" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="0.33" magazine_size="4" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" suppressed="0" name="Code:Teslatrooper" class="0" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="76.0" carry_in_two_hands="0" projectiles_per_shot="5" stab_enabled="0" stab_range="2" barrel_offset_3d="0.6 1 0.5"/>
+	<animation state_key="recoil" animation_key="recoil, teslatrooper"/>
 	<animation key="reload" animation_key="change weapon, large mecha"/>
 	<animation state_key="cycle" animation_key="still_big_unit"/>
 	<animation key="walking" target_key="walking_big_unit"/>
@@ -44062,7 +44065,7 @@
 <weapon key="kcco_gatling.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="machine gun"/>
 	<tag name="elite"/>
-	<specification accuracy_factor="1.0" barrel_offset_3d="0 0.2 0.6" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" class="0" slot="0" magazine_size="200" name="Code:Cyclops-MG" carry_in_two_hands="0" projectile_speed="100" spread_range="0.2" retrigger_time="0.06" suppressed="0" sustained_fire_diminish_rate="1.0" sight_range_modifier="1.45" use_basic_muzzle_smoke_effect="0" sustained_fire_grow_step="2.0"/>
+	<specification accuracy_factor="0.95" barrel_offset_3d="0 0.2 0.6" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" class="0" slot="0" magazine_size="200" name="Code:Cyclops-MG" carry_in_two_hands="0" projectile_speed="100" spread_range="0.2" retrigger_time="0.06" suppressed="0" sustained_fire_diminish_rate="1.0" sight_range_modifier="1.45" use_basic_muzzle_smoke_effect="0" sustained_fire_grow_step="0.25"/>
 	<animation state_key="recoil" animation_key="recoil, hip gatling"/>
 	<animation key="recoil" stance_key="crouching" animation_key="recoil, crouch gatling"/>
 	<animation state_key="hold_casual" animation_key="casual, blowgun"/>
@@ -44088,7 +44091,7 @@
 	<addon_model filename="kcco_ammopack.xml"/>
 	<effect class="muzzle" ref="sawsnone"/>
 	<effect class="muzzle" ref="ejection_76251"/>
-	<modifier class="speed" value="-0.1"/>
+	<modifier class="speed" value="-0.3"/>
 	<modifier class="hit_success_probability" value="-0.2"/>
 	<commonness value="0.000001" in_stock="1" can_respawn_with="1"/>
 	<inventory encumbrance="0.0" buy_price="1.0" sell_price="0.0"/>
@@ -46942,7 +46945,7 @@
 	<animation key="hold" animation_key="still, heavy weapon"/>
 	<animation key="hold_on_wall" animation_key="still"/>
 	<animation key="walking" animation_key="walking, heavy weapon"/>
-	<sound key="fire" fileref="coeus_main_fire.wav" pitch_variety="0.02" volume="1.0"/>
+	<sound key="fire" fileref="coeus_main_fire.wav" pitch_variety="0.02" volume="0.8"/>
 	<sound key="magazine_out" fileref="mg_clip_out.wav"/>
 	<sound key="magazine_in" fileref="mg_clip_in.wav"/>
 	<sound key="cycle" fileref="rifle_chamber.wav"/>
@@ -47103,8 +47106,8 @@
 	<sound key="fire" fileref="hornet_shot.wav" volume="0.5"/>
 </weapon>
 
-<weapon key="kccow_vehicle_1130mg.weapon" ai_burst_time="3" ai_burst_time_variance="0.5" ai_burst_wait_time="3" ai_burst_wait_time_variance="0">
-	<specification slot="2" retrigger_time="0.02" accuracy_factor="0.75" sustained_fire_grow_step="0.02" sustained_fire_diminish_rate="0.5" sight_range_modifier="1.5" ai_sight_range_modifier="1.15" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="0" suppressed="0" name="KCCO 1130 MG" class="0" projectile_speed="100.0" use_basic_muzzle_smoke_effect="0"/>
+<weapon key="kccow_vehicle_1130mg.weapon" ai_burst_time="2" ai_burst_time_variance="0" ai_burst_wait_time="3" ai_burst_wait_time_variance="0">
+	<specification slot="2" retrigger_time="0.02" accuracy_factor="0.8" sustained_fire_grow_step="0.02" sustained_fire_diminish_rate="0.5" sight_range_modifier="1.5" ai_sight_range_modifier="1.15" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="0" suppressed="0" name="KCCO 1130 MG" class="0" projectile_speed="100.0" use_basic_muzzle_smoke_effect="0"/>
 	<sound key="fire" fileref="1130_fire_FromSAM3.wav" pitch_variety="0.05" volume="1.0"/>
 	<model filename=""/>
 	<hud_icon filename="gkw_v_LM5.png"/>

@@ -21,7 +21,7 @@
 	<parameter class="climbing_with_jump_end_height_offset" value="0.15" />
 
 	<animation state_key="hold"  animation_key="still, othrusdog" />
-	<animation state_key="hold_one_wall"  animation_key="still, othrusdog" />
+	<animation state_key="hold_on_wall"  animation_key="still, othrusdog" />
 	<animation key="still" target_key="still, othrusdog" />
 	<animation key="still against wall" target_key="still, othrusdog" />
 	<animation key="still, heavy weapon" target_key="still, othrusdog" />
