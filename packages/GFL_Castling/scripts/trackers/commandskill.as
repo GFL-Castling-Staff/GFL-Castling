@@ -1385,6 +1385,12 @@ class CommandSkill : Tracker {
             int factionid = characterinfo.getIntAttribute("faction_id");
             c_pos=c_pos.add(Vector3(0,1,0));
 
+            XmlElement c ("command");
+            c.setStringAttribute("class", "update_inventory");
+            c.setIntAttribute("character_id", characterId); 
+            c.setIntAttribute("untransform_count", 4);
+            m_metagame.getComms().send(c);
+
             float dx = s_pos.m_values[0]-c_pos.m_values[0];
             float dy = s_pos.m_values[2]-c_pos.m_values[2];
             float ds = sqrt(dx*dx+dy*dy);
