@@ -6579,7 +6579,7 @@
 <carry_item key="bp_sp_naben.carry_item" time_to_live_out_in_the_open="15" name="[Star and Rose]" transform_on_consume="bp_sp_naben_1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 	<hud_icon filename="hud_vest_paul_15.png"/>
 	<capacity value="1" source="rank" source_value="0"/>
-	<commonness value="0.001" in_stock="0" can_respawn_with="1"/>
+	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="100" price="30"/>
 	<model mesh_filename="vestexo.xml"/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
@@ -6872,7 +6872,7 @@
 <carry_item key="cc_sp_tyls.carry_item" time_to_live_out_in_the_open="15" name="[Miss Villanelle]" transform_on_consume="cc_sp_tyls_1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 	<hud_icon filename="hud_tyls_5.png"/>
 	<capacity value="1" source="rank" source_value="0"/>
-	<commonness value="0.001" in_stock="0" can_respawn_with="1"/>
+	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="100" price="30"/>
 	<model mesh_filename="vestexo.xml"/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>

@@ -23,7 +23,9 @@
 	projectile_speed="100.0" 
 	carry_in_two_hands="0" 
 	projectiles_per_shot="1" 
+    use_basic_muzzle_smoke_effect="0"
 	slot="0" 
+    barrel_offset="0.3"
 	/>
     <!--Animations-->
     <animation state_key="recoil"	animation_key="recoil, pistol dual 1" />
@@ -88,6 +90,7 @@
 	carry_in_two_hands="0" 
 	projectiles_per_shot="1" 
 	slot="0" 
+    use_basic_muzzle_smoke_effect="0"
     barrel_offset="0.4"
 	/>
     <!--Animations-->
