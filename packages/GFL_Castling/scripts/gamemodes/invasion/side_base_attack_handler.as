@@ -85,15 +85,6 @@ class SideBaseAttackHandler : Tracker {
 			m_metagame.getComms().send(command);		
 		}
 		
-		{
-			float lonewolfSpawnScore = m_lonewolfSpawnScoreAtMinPlayers + p * (m_lonewolfSpawnScoreAtMaxPlayers - m_lonewolfSpawnScoreAtMinPlayers);
-			XmlElement command("command");
-			command.setStringAttribute("class", "faction");
-			command.setIntAttribute("faction_id", m_factionId);
-			command.setStringAttribute("soldier_group_name", "lonewolf");
-			command.setFloatAttribute("spawn_score", lonewolfSpawnScore);
-			m_metagame.getComms().send(command);
-		}
 		
 	}
 }
