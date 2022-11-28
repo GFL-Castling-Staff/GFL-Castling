@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon key="gkw_f1.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+    <tag name="smg" />
+    <specification 
+		accuracy_factor="0.9" 
+		retrigger_time="0.1" 
+		barrel_offset="0.4" 
+		class="0"
+        slot="0"
+		magazine_size="34" 
+        carry_in_two_hands="1"
+		name="F1" 
+		projectile_speed="105" 
+        stance_accuracy_rate="2.0"
+        spread_range="0.23"
+		suppressed="0" 
+        burst_shots="1"
+        sustained_fire_grow_step="0.27" 
+    	sustained_fire_diminish_rate="1.5" 
+        stab_enabled="1"
+        stab_range="3.0"/>
+    <inventory encumbrance="5.0" buy_price="10.0" sell_price="10.0"/>
+    <capacity value="1" source="rank" source_value="0.0" />
+    <animation key="recoil" animation_key="recoil1" />
+    <animation key="recoil" animation_key="recoil2" />
+    <animation key="recoil" animation_key="recoil3" />
+    <animation key="recoil" stance_key="over_wall" animation_key="recoil1" />
+    <animation key="recoil" stance_key="over_wall" animation_key="recoil2" />
+    <animation key="recoil" stance_key="over_wall" animation_key="recoil3" />
+    <animation key="recoil" stance_key="crouching" animation_key="recoil1" />
+    <animation key="recoil" stance_key="crouching" animation_key="recoil2" />
+    <animation key="recoil" stance_key="crouching" animation_key="recoil3" />
+    <animation key="recoil" stance_key="prone" animation_key="recoil1, prone" />
+    <animation key="recoil" stance_key="prone" animation_key="recoil2, prone" />
+    <animation key="recoil" stance_key="prone" animation_key="recoil3, prone" />
+    <animation state_key="hold_on_wall" animation_key="still" />
+    <animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
+    <animation state_key="reload" animation_key="reloading, magazine rifle 0.9" />
+    <animation state_key="stabbing" animation_key="melee, bayonet_6hp" />
+    <sound key="fire" fileref="f1_fire_FromRS2V.wav" pitch_variety="0.05" volume="1.0" />
+    <sound key="magazine_out" fileref="f1_mgz_out_FromRS2V.wav" volume="0.8" />
+    <sound key="magazine_in" fileref="f1_mgz_in_FromRS2V.wav" volume="0.8" />
+    <sound key="cycle" fileref="f1_cycle_FromRS2V.wav" volume="1.0" />
+    <sound class="impact" fileref="rifle_drop.wav" />
+    <model filename="gkw_smg_f1_b.xml"/>
+    <commonness value="0.2" in_stock="0" can_respawn_with="1" />
+    <hud_icon filename="gkw_f1.png"/>
+    <weak_hand_hold offset="0.3" />
+    <projectile file="bullet.projectile">
+        <result class="hit" kill_probability="1.6" kill_probability_offset_on_successful_hit="3" kill_decay_start_time="0.35" kill_decay_end_time="0.55" />
+    </projectile>
+    <effect class="muzzle" ref="ejection_9mm" />
+    <stance state_key="running" accuracy="0.5" />
+    <stance state_key="walking" accuracy="0.6" />
+    <stance state_key="standing" accuracy="0.7" />
+    <stance state_key="crouching" accuracy="0.85" />
+    <stance state_key="crouch_moving" accuracy="0.5" />
+    <stance state_key="prone" accuracy="0.8" />
+    <stance state_key="prone_moving" accuracy="0.5" />
+    <stance state_key="over_wall" accuracy="0.85" />
+    <modifier class="hit_success_probability" value="-0.2" />
+    <modifier class="speed" value="0.2" />
+    <target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0" />
+    <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0" />
+    <target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0" />
+    <target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0" />
+    <target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0" />
+    <target_factors tag="commander" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0" />
+    <sound key="stab" fileref="dagger_swing1_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+    <sound key="stab" fileref="dagger_swing2_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+    <sound key="stab" fileref="dagger_swing3_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+    <sound key="stab_hit" fileref="blade_impact_01_fromESV.wav" pitch_variety="0.05" volume="2.0" />
+    <sound key="stab_hit" fileref="blade_impact_02_fromESV.wav" pitch_variety="0.05" volume="2.0" />
+    <sound key="stab_hit" fileref="blade_impact_03_fromESV.wav" pitch_variety="0.05" volume="2.0" />
+    <sound key="stab_hit" fileref="blade_impact_04_fromESV.wav" pitch_variety="0.05" volume="2.0" />
+</weapon>

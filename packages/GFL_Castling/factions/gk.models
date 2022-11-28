@@ -1792,5 +1792,11 @@
     </model>   
     <model filename="gkd_ar_ar18.xml">
         <requirement class="weapon" key="gkw_ar18.weapon" slot="0" />
-    </model>                
+    </model>          
+    <model filename="gkd_smg_f1_mod3.xml">
+        <requirement class="weapon" key="gkw_f1.weapon" slot="0" />
+    </model>      
+    <model filename="gkd_smg_f1_mod3.xml">
+        <requirement class="weapon" key="gkw_f1mod3.weapon" slot="0" />
+    </model>                    
 </models>

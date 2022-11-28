@@ -422,6 +422,9 @@ dictionary commandSkillIndex = {
         {"gkw_gepardm1.weapon",53},
         {"gkw_gepardm1mod3.weapon",53},
 
+        {"gkw_f1.weapon",54},
+        {"gkw_f1mod3.weapon",54},
+
         // 下面这行是用来占位的，在这之上添加新的枪和index即可
         {"666",-1}
 };
@@ -552,6 +555,7 @@ class CommandSkill : Tracker {
                     case 51:{excuteSniperSkill_Antiperson(cId,senderId,m_modifer,c_weaponType);break;}
                     case 52:{excuteCarcano1938(cId,senderId,m_modifer);break;}
                     case 53:{excuteSniperSkill_Pos(cId,senderId,m_modifer,c_weaponType);break;}
+                    case 54:{excuteF1skill(cId,senderId,m_modifer);break;}
 
                     default:
                         break;
@@ -3593,5 +3597,44 @@ class CommandSkill : Tracker {
             }
         }
         addCoolDown("FIRENADE",15,characterId,modifer);
-    }    
+    }
+    void excuteF1skill(int characterId,int playerId,SkillModifer@ modifer){
+        bool ExistQueue = false;
+        int j=-1;
+        for (uint i=0;i<SkillArray.length();i++){
+            if (InCooldown(characterId,modifer,SkillArray[i]) && SkillArray[i].m_weapontype=="F1") {
+                ExistQueue=true;
+                j=i;
+            }
+        }
+        if (ExistQueue){
+            dictionary a;
+            a["%time"] = ""+SkillArray[j].m_time;
+            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            _log("skill cooldown" + SkillArray[j].m_time);
+            return;
+        }
+        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+        if (character !is null) {
+            const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+            if (player !is null){
+                if (player.hasAttribute("aim_target")) {
+                    string target = player.getStringAttribute("aim_target");
+                    Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
+                    int factionid = character.getIntAttribute("faction_id");
+                    array<string> Voice={
+                        "F1_SKILL1_JP.wav",
+                        "F1_SKILL2_JP.wav",
+                        "F1_SKILL3_JP.wav"
+                    };
+                    playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+                    playSoundAtLocation(m_metagame,"grenade_throw1.wav",factionid,c_pos,1.0);
+                    playAnimationKey(m_metagame,characterId,"throwing, upside",true,true);
+                    c_pos=c_pos.add(Vector3(0,1,0));
+                    CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"smoke_grenade.projectile",characterId,factionid,26.0,4.0);
+                    addCoolDown("F1",15,characterId,modifer);
+                }
+            }
+        }
+    }        
 }
