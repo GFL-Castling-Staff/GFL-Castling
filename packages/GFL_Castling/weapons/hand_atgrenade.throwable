@@ -54,7 +54,7 @@
         pulldown_in_air="20" 
         on_ground_up="0 1 0" 
         use_time_to_live="1" 
-        time_to_live="120" >
+        time_to_live="300" >
         
         <tag name="grenade" />
         <result class="blast" radius="6.0" damage="40.0" push="1.5" decal="1" character_state="wound" faction_compare="not_equal" />
