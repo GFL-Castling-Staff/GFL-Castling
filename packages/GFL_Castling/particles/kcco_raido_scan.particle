@@ -1,0 +1,158 @@
+particle_system leida_area_expand
+{
+	quota 50
+	material leida_quan_1
+	particle_width 1
+	particle_height 1
+	renderer billboard
+	billboard_type perpendicular_common
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 0 0 1
+	
+	emitter Point
+	{
+		angle 0
+		colour 1 1 1 0.5
+		direction 0 1 0
+		emission_rate 1
+		position 0 0 0
+		velocity 0.001
+		time_to_live 8
+		duration 20
+	}
+
+	affector Scaler
+	{
+		rate 10
+	}
+}
+
+particle_system leida_area_exist
+{
+	quota 20
+	material leida_quan_1
+	particle_width 80
+	particle_height 80
+	renderer billboard
+	billboard_type perpendicular_common
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 0 0 1
+	
+	emitter Point
+	{
+		angle 0
+		direction 0 1 0
+        colour  0 0 0 0
+		emission_rate 11
+		position 0 0 0
+		velocity 0.001
+		time_to_live 20
+		duration 0.1
+	}
+
+	affector ColourInterpolator
+	{
+        time0 0
+        colour0 0 0 0 0
+        time1 0.4
+        colour1 0 0 0 0
+        time2 0.41
+        colour2 1 1 1 1
+        time3 0.99
+        colour3 1 1 1 1    
+        time4 1
+        colour4 0 0 0 0            
+	}
+}
+
+particle_system leida_area_net
+{
+	quota 20
+	material leida_quan_2
+	particle_width 80.5
+	particle_height 80.5
+	renderer billboard
+	billboard_type perpendicular_common
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 0 0 1
+	
+	emitter Point
+	{
+        colour  0 0 0 0
+		angle 0
+		direction 0 1 0
+		emission_rate 11
+		position 0 0 0
+		velocity 0.001
+		time_to_live 20
+		duration 0.1
+	}
+
+	affector ColourInterpolator
+	{
+        time0 0
+        colour0 0 0 0 0
+        time1 0.4
+        colour1 0 0 0 0
+        time2 0.41
+        colour2 1 1 1 1
+        time3 0.99
+        colour3 1 1 1 1    
+        time4 1
+        colour4 0 0 0 0            
+	}
+}
+
+particle_system leida_area_scan
+{
+	quota 20
+	material leida_scan
+	particle_width 80
+	particle_height 80
+	renderer billboard
+	billboard_type perpendicular_common
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 0 0 1
+	
+	emitter Point
+	{
+        colour  0 0 0 0
+		angle 0
+		direction 0 1 0
+		emission_rate 11
+		position 0 0 0
+		velocity 0.001
+		time_to_live 20
+		duration 0.1
+	}
+
+	affector ColourInterpolator
+	{
+        time0 0
+        colour0 0 0 0 0
+        time1 0.4
+        colour1 0 0 0 0
+        time2 0.41
+        colour2 1 1 1 1
+        time3 0.99
+        colour3 1 1 1 1 
+        time4 1
+        colour4 0 0 0 0            
+	}
+
+	affector Rotator
+	{
+		rotation_speed_range_start 120
+		rotation_speed_range_end 120
+		rotation_range_start 0
+		rotation_range_end 360
+	}    
+}

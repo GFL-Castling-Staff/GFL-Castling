@@ -1,0 +1,14 @@
+<projectile class="grenade" name="" key="test_particle.projectile" slot="2" radius="0.15">
+    <result class="blast" radius="3" damage="0.1" push="0.8" decal="1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+    <trigger class="time" time_to_live="20.0"/>
+    <rotation class="motion" />
+    <model mesh_filename="RO365_Ant_Doll.xml" />
+    <hud_icon filename="88r.png" />
+    <commonness value="0" />
+    <inventory encumbrance="1.0" price="5.0" />
+    <capacity value="1" source="rank" source_value="0.0" />
+    <effect class="activated" ref="leida_area_expand" lighting="0" />
+    <effect class="activated" ref="leida_area_exist" lighting="0" />
+    <effect class="activated" ref="leida_area_net" lighting="0" />
+    <effect class="activated" ref="leida_area_scan" lighting="0" />    
+</projectile>

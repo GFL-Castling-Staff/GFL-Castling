@@ -546,10 +546,6 @@ class BasicCommandHandler : Tracker {
 		if (checkCommand(message, "test2")) {
 			string command = "<command class='set_marker' faction_id='0' position='512 0 512' color='0 0 1' atlas_index='0' text='hello!' />";
 			m_metagame.getComms().send(command);
-		} else if (checkCommand(message, "test")) {
-			dictionary dict = {{"TagName", "command"},{"class", "chat"},{"text", "test yourself!"}};
-			m_metagame.getComms().send(XmlElement(dict));
-
 		} else if (checkCommand(message, "defend")) {
 			// make ai defend only, both sides
 			for (int i = 0; i < 2; ++i) {
@@ -680,7 +676,19 @@ class BasicCommandHandler : Tracker {
 				" instance_key='" + "selfnone.projectile" + "'" +
 				" position='" + pos.toString() + "'" +
 				" character_id='" + playerInfo.getIntAttribute("character_id") + "'/>";				
-			m_metagame.getComms().send(c);							      
+			m_metagame.getComms().send(c);				
+		} else  if(checkCommand(message, "testme")) {
+			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
+			const XmlElement@ characterInfo = getCharacterInfo(m_metagame, playerInfo.getIntAttribute("character_id"));
+			Vector3 pos = stringToVector3(playerInfo.getStringAttribute("aim_target"));	
+			string c = 
+				"<command class='create_instance'" +
+				" faction_id='" + 0 + "'" +
+				" instance_class='grenade'" +
+				" instance_key='" + "test_particle.projectile" + "'" +
+				" position='" + pos.toString() + "'" +
+				" character_id='" + playerInfo.getIntAttribute("character_id") + "'/>";				
+			m_metagame.getComms().send(c);								      
 		} else if (checkCommand(message, "dc")) {
 			spawnInstanceNearPlayer(senderId, "cover_resource.weapon", "weapon");
 		} else if (checkCommand(message, "dgl")) {

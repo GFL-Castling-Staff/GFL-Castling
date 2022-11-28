@@ -1,0 +1,68 @@
+material leida_quan_1 : add_base
+{   
+    technique
+    {
+        pass
+        {
+            depth_func always_pass
+            texture_unit
+            {
+                texture leida_quan_1.png 	
+            }
+        }
+    }
+}
+
+material leida_quan_2 : alpha_blend_base
+{   
+    technique
+    {
+        pass
+        {
+            depth_func always_pass
+            texture_unit
+            {
+                texture leida_quan_2.png 	
+            }
+        }
+    }
+}
+
+material leida_scan : alpha_blend_base
+{   
+    technique
+    {
+        pass
+        {
+            depth_func always_pass
+            texture_unit
+            {
+                texture leida_scan.png 	
+            }
+        }
+    }
+}
+
+material add_base{
+	receive_shadows off
+	technique{
+		pass{
+			lighting off
+			fog_override true
+			depth_write off
+			scene_blend add
+		}
+	}
+}
+
+material alpha_blend_base{
+	receive_shadows off
+	technique{
+		pass{
+			lighting off
+			fog_override true
+			depth_write off
+			scene_blend alpha_blend
+		}
+	}
+}
