@@ -2,7 +2,7 @@
 <projectile key="m202_aa_1.projectile" class="grenade" name="M202-Anti-Air-Rocket" slot="2" pulldown_in_air="0.5" radius="0.4">
     <tag name="rocket"/>
 	
-    <result class="spawn" instance_class="projectile" instance_key="m202_aa_2.projectile" min_amount="1" max_amount="1" offset="0 0.0 0" position_spread="0 0" direction_spread="0 -1"  damage_origin_vehicle="0"/>
+    <result class="spawn" instance_class="projectile" instance_key="m202_aa_2.projectile" min_amount="2" max_amount="2" offset="0 0.0 0" position_spread="0 0" direction_spread="0 -1"  damage_origin_vehicle="0"/>
     <trigger class="time" time_to_live="0.42"/>
     <rotation class="motion" />
     <model mesh_filename="m202_rocket.xml"/>
