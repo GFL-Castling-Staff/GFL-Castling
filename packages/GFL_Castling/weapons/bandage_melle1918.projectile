@@ -16,7 +16,7 @@
     <inventory encumbrance="4.0" price="5.0" />
     <capacity value="1" source="rank" source_value="0.0" />
   
-    <sound class="result" key="other" fileref="stim_hit.wav" />
+    <sound class="result" key="other" fileref="lbll_sonicwave.wav" pitch_variety="0" volume="1.1" />
 
     <sound class="result" key="terrain" copy="other" />
     <sound class="result" key="static_object" copy="other" />

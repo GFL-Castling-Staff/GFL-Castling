@@ -9293,7 +9293,7 @@
 
 <weapon key="gkw_pa15.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
-	<specification retrigger_time="-1" last_burst_retrigger_time="0.085" accuracy_factor="0.95" sustained_fire_grow_step="0.6" sustained_fire_diminish_rate="1.6" magazine_size="20" carry_in_two_hands="0" suppressed="0" name="PA15" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="138.3" projectiles_per_shot="1" burst_shots="1" stab_enabled="1"/>
+	<specification retrigger_time="0.3" accuracy_factor="0.95" sustained_fire_grow_step="1.5" sustained_fire_diminish_rate="0.5" magazine_size="15" carry_in_two_hands="0" suppressed="0" name="MAB PA-15" class="0" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="115" projectiles_per_shot="1" burst_shots="1" stab_enabled="1"/>
 	<animation state_key="recoil" animation_key="recoil, pistol 2"/>
 	<animation state_key="recoil" stance_key="prone" animation_key="recoil, pistol, prone"/>
 	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil, overwall pistol"/>
@@ -9314,7 +9314,7 @@
 	<animation state_key="stabbing" animation_key="pistol whip"/>
 	<animation state_key="stabbing" animation_key="pistol whip 3"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
-	<inventory encumbrance="2.0" buy_price="6.0" sell_price="6.0"/>
+	<inventory encumbrance="5.0" buy_price="15.0" sell_price="15.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<sound key="fire" fileref="pa15_fire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.2"/>
 	<sound key="magazine_out" fileref="pa15_mgz_out_FromCOD16.wav" volume="0.8"/>
@@ -9324,7 +9324,7 @@
 	<hud_icon filename="gkw_pa15.png"/>
 	<weak_hand_hold offset="0.1"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="1.65" kill_probability_offset_on_successful_hit="1.75" kill_decay_start_time="0.138" kill_decay_end_time="0.231"/>
+	<result class="hit" kill_probability="1.6" kill_probability_offset_on_successful_hit="5" kill_decay_start_time="0.5" kill_decay_end_time="0.6"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_9mm"/>
 	<stance state_key="running" accuracy="0.8"/>
@@ -14232,7 +14232,7 @@
 	<hud_icon filename="gkw_ppk.png"/>
 	<weak_hand_hold offset="0.1"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="1.45" kill_probability_offset_on_successful_hit="2.5" kill_decay_start_time="0.18" kill_decay_end_time="0.48"/>
+	<result class="hit" kill_probability="1.45" kill_probability_offset_on_successful_hit="3.5" kill_decay_start_time="0.4" kill_decay_end_time="0.48"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_9mm"/>
 	<stance state_key="running" accuracy="0.85"/>
@@ -14286,7 +14286,7 @@
 	<hud_icon filename="gkw_ppkmod3.png"/>
 	<weak_hand_hold offset="0.1"/>
 	<projectile file="bullet.projectile" can_be_detected_by_footmen="0">
-	<result class="hit" kill_probability="1.45" kill_probability_offset_on_successful_hit="4.2" kill_decay_start_time="0.18" kill_decay_end_time="0.48"/>
+	<result class="hit" kill_probability="1.6" kill_probability_offset_on_successful_hit="3.5" kill_decay_start_time="0.4" kill_decay_end_time="0.48"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_9mm"/>
 	<stance state_key="running" accuracy="1.0"/>
@@ -15818,12 +15818,14 @@
 </weapon>
 
 <weapon on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0" key="gkw_Jericho.weapon">
-	<specification retrigger_time="-1" last_burst_retrigger_time="-1" accuracy_factor="0.98" sustained_fire_grow_step="0.4" sustained_fire_diminish_rate="2.0" magazine_size="13" suppressed="0" carry_in_two_hands="0" stab_enabled="1" name="IWI Jericho 941" class="4" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="140" projectiles_per_shot="1" burst_shots="1"/>
-	<inventory buy_price="12.0" sell_price="12.0"/>
+	<specification retrigger_time="-1" last_burst_retrigger_time="1.0" accuracy_factor="1.0" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="2.8" magazine_size="13" suppressed="0" carry_in_two_hands="0" stab_enabled="1" name="IWI Jericho 941" class="1" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="140" projectiles_per_shot="1" burst_shots="1"/>
+	<inventory buy_price="41.0" sell_price="41.0"/>
 	<commonness in_stock="0"/>
 	<animation state_key="recoil" animation_key="recoil, pistol"/>
 	<animation state_key="recoil" stance_key="prone" animation_key="recoil, pistol, prone"/>
 	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil, overwall pistol"/>
+	<animation state_key="cycle" animation_key="cycle, revolver"/>
+	<animation state_key="cycle" stance_key="prone" animation_key="cycle, revolver, prone"/>
 	<animation state_key="reload" animation_key="reloading, SA OHG 0.5"/>
 	<animation state_key="reload" animation_key="reloading2, SA OHG 0.5"/>
 	<animation state_key="hold" animation_key="hold, pistol"/>
@@ -15848,7 +15850,7 @@
 	<hud_icon filename="gkw_jericho.png"/>
 	<weak_hand_hold offset="0.1"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="1.4" kill_probability_offset_on_successful_hit="3.0" kill_decay_start_time="0.1" kill_decay_end_time="0.4"/>
+	<result class="hit" kill_probability="1.8" kill_probability_offset_on_successful_hit="10.0" kill_decay_start_time="0.3" kill_decay_end_time="0.45"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_9mm"/>
 	<stance state_key="running" accuracy="0.8"/>
@@ -33150,7 +33152,7 @@
 	<hud_icon filename="gkw_ppk_3905.png"/>
 	<weak_hand_hold offset="0.1"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="1.45" kill_probability_offset_on_successful_hit="2.5" kill_decay_start_time="0.18" kill_decay_end_time="0.48"/>
+	<result class="hit" kill_probability="1.45" kill_probability_offset_on_successful_hit="3.5" kill_decay_start_time="0.4" kill_decay_end_time="0.48"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_9mm"/>
 	<stance state_key="running" accuracy="0.85"/>
@@ -33204,7 +33206,7 @@
 	<hud_icon filename="gkw_ppk_3905.png"/>
 	<weak_hand_hold offset="0.1"/>
 	<projectile file="bullet.projectile" can_be_detected_by_footmen="0">
-	<result class="hit" kill_probability="1.45" kill_probability_offset_on_successful_hit="4.2" kill_decay_start_time="0.18" kill_decay_end_time="0.48"/>
+	<result class="hit" kill_probability="1.6" kill_probability_offset_on_successful_hit="3.5" kill_decay_start_time="0.4" kill_decay_end_time="0.48"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_9mm"/>
 	<stance state_key="running" accuracy="1.0"/>
