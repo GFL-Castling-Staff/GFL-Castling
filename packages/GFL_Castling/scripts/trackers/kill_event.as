@@ -336,10 +336,10 @@ class kill_event : Tracker {
             int GivenRP = getRPKillReward(Solider_Name);
             float GivenXP = getXPKillReward(Solider_Name);
             if(GivenRP>0){
-                GiveRP(m_metagame,characterId,GivenRP);
+                givePlayerRPcount(playerId,GivenRP);
             }
             if(GivenXP>0){
-                GiveXP(m_metagame,characterId,GivenXP);
+                givePlayerXPcount(playerId,GivenXP);
             }
             
 

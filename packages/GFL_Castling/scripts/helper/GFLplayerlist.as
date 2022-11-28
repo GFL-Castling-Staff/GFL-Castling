@@ -22,6 +22,8 @@ class GFL_playerlist{
     string m_itemkey;       //掉落物key
     string m_pos;
     string m_old_pos;
+    int m_rp;
+    float m_xp;
     int m_count;
 
     GFL_playerlist(int cid, int pid, string w1key="-nan-", string w2key="-nan-", string w3key="-nan-", string vkey="-nan-", string ikey="-nan-",int count=0,string pos="-nan-"){
@@ -34,6 +36,8 @@ class GFL_playerlist{
         m_itemkey = ikey;
         m_count = count;
         m_pos = pos;
+        m_rp= 0;
+        m_xp= 0;
     }
 
     void updatePos(string pos){ 
@@ -58,6 +62,10 @@ class GFL_playerlist_system : Tracker {
             m_time = refresh_time;
 
             while(GFL_playerlist_array.length()>0){        
+                int index_last = GFL_playerlist_array.length() -1;
+                GFL_playerlist@ player = GFL_playerlist_array[index_last];
+                GiveRP(m_metagame,player.m_characterid,player.m_rp);
+                GiveXP(m_metagame,player.m_characterid,player.m_xp);
                 GFL_playerlist_array.removeLast();
             }            
             
@@ -150,4 +158,24 @@ bool checkIdle(int playerid){
         }
     }
     return false;
+}
+
+void givePlayerRPcount(int playerid,int rp_count){
+    if(GFL_playerlist_array.length()>0){
+        for(uint i=0;i<GFL_playerlist_array.length();i++){
+            if(GFL_playerlist_array[i].m_playerid == playerid){
+                GFL_playerlist_array[i].m_rp +=rp_count;
+            }
+        }
+    }    
+}
+
+void givePlayerXPcount(int playerid,float xp_count){
+    if(GFL_playerlist_array.length()>0){
+        for(uint i=0;i<GFL_playerlist_array.length();i++){
+            if(GFL_playerlist_array[i].m_playerid == playerid){
+                GFL_playerlist_array[i].m_xp +=xp_count;
+            }
+        }
+    }    
 }
