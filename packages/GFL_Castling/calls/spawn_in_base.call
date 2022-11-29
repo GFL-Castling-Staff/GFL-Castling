@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <calls>
-	<call key="sf_assault.call" initiation_comment1="Rescue Fairy" initiation_comment2="Smoke Medical Support" acknowledge_comment="Roger" notify_metagame="1" consume_rp="0" show_target_marker="0">
+	<call key="sf_assault.call" initiation_comment1="Request S.F. Assault Infanry" acknowledge_comment="Roger" notify_metagame="1" consume_rp="0" show_target_marker="0">
 		<tag name="reinforcements" />
 		<hud_icon filename="call_Airbone_Traumateam.png" />
 		<capacity value="0" source="rank" source_value="0.0" />
@@ -8,14 +8,31 @@
 		<inventory encumbrance="0.0" price="300.0" />
 	</call>
 	<call key="sf_assault_sub.call" acknowledge_time="0.0" launch_comment="">
-		<round instances="4" instance_class="soldier" instance_key="sf_vespid" instance_spread="3 0 3" common_spread="0 0 0" launch_time="5.0" spawn_time="7.5" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="0.0" initial_speed_to_target="0.0">
+		<round instances="4" instance_class="soldier" instance_key="sf_vespid" instance_spread="3 0 3" common_spread="0 0 0" launch_time="3.0" spawn_time="4.5" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="0.0" initial_speed_to_target="0.0">
 		</round>
-		<round instances="2" instance_class="soldier" instance_key="sf_vespid_swap" instance_spread="3 0 3" common_spread="0 0 0" launch_time="5.0" spawn_time="7.5" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="0.0" initial_speed_to_target="0.0">
+		<round instances="2" instance_class="soldier" instance_key="sf_vespid_swap" instance_spread="3 0 3" common_spread="0 0 0" launch_time="3.0" spawn_time="4.5" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="0.0" initial_speed_to_target="0.0">
 		</round>
-		<round instances="4" instance_class="soldier" instance_key="sf_ripper" instance_spread="3 0 3" common_spread="0 0 0" launch_time="5.0" spawn_time="7.5" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="0.0" initial_speed_to_target="0.0">
+		<round instances="4" instance_class="soldier" instance_key="sf_ripper" instance_spread="3 0 3" common_spread="0 0 0" launch_time="3.0" spawn_time="5.0" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="0.0" initial_speed_to_target="0.0">
 		</round>
-		<round instances="2" instance_class="soldier" instance_key="sf_ripper_swap" instance_spread="3 0 3" common_spread="0 0 0" launch_time="5.0" spawn_time="7.5" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="0.0" initial_speed_to_target="0.0">
-		</round>        
+		<round instances="2" instance_class="soldier" instance_key="sf_ripper_swap" instance_spread="3 0 3" common_spread="0 0 0" launch_time="3.0" spawn_time="5.0" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="0.0" initial_speed_to_target="0.0">
+		</round>
 		<inventory encumbrance="0.0" price="300.0" />
 	</call>
+
+	<call key="para_assault.call" initiation_comment1="Request Strelet Assemble" acknowledge_comment="Roger" notify_metagame="1" consume_rp="0" show_target_marker="0">
+		<tag name="reinforcements" />
+		<hud_icon filename="call_Airbone_Traumateam.png" />
+		<capacity value="0" source="rank" source_value="0.0" />
+		<capacity value="100" source="rank" source_value="0.0" />
+		<inventory encumbrance="0.0" price="300.0" />
+	</call>
+	<call key="para_assault_sub.call" acknowledge_time="0.0" launch_comment="">
+		<round instances="8" instance_class="soldier" instance_key="para_strelet" instance_spread="4 0 4" common_spread="0 0 0" launch_time="3.0" spawn_time="4.5" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="0.0" initial_speed_to_target="0.0">
+		</round>
+		<round instances="3" instance_class="soldier" instance_key="para_streletplus" instance_spread="3 0 3" common_spread="0 0 0" launch_time="3.0" spawn_time="4.5" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="0.0" initial_speed_to_target="0.0">
+		</round>
+		<round instances="2" instance_class="soldier" instance_key="para_rodelero" instance_spread="3 0 3" common_spread="0 0 0" launch_time="3.0" spawn_time="4.8" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="0.0" initial_speed_to_target="0.0">
+		</round>
+		<inventory encumbrance="0.0" price="300.0" />
+	</call>    
 </calls>

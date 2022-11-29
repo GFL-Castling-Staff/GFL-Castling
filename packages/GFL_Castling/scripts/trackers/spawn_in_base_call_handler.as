@@ -108,12 +108,14 @@ class SpawnInBaseCallHandler : Tracker {
 
 					else{
 						bool safe = true;
+						array<const XmlElement@>@ friend = getCharactersInBlocks(m_metagame, factionId, blocks);
+						int friend_count  = friend.size();
 						for (int enemyId = 0; enemyId < int(m_metagame.getFactionCount()); ++enemyId) {
 							if (enemyId != factionId) {
 								array<const XmlElement@>@ enemies = getCharactersInBlocks(m_metagame, enemyId, blocks);
-								if (enemies.size() > 0) {
+								int enemies_count=enemies.size();
+								if (enemies_count/(friend_count+enemies_count) > 0.33) {
 									_log("base " + base.getStringAttribute("name") + " not safe, faction " + enemyId + " is in block");
-									// not safe
 									safe = false;
 									break;
 								}
