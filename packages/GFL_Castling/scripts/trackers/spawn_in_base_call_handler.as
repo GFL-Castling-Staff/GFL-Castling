@@ -38,9 +38,11 @@ class SpawnInBaseCallHandler : Tracker {
 	protected bool m_useGenericNodes;
 	protected string m_nodeLayerName;
 	protected string m_nodeTagName;
+	protected bool m_boardcast;
+	protected bool m_forcerefresh;
 
 	// ----------------------------------------------------
-	SpawnInBaseCallHandler(GameMode@ metagame, string listenCallKey, string targetCallKey, const array<string>@ unacceptedBaseKeys, bool useGenericNodes = false, string nodeTagName = "", string nodeLayerName = "") {
+	SpawnInBaseCallHandler(GameMode@ metagame, string listenCallKey, string targetCallKey, const array<string>@ unacceptedBaseKeys, bool useGenericNodes = false,bool boardcast=false,bool force=false,string nodeTagName = "", string nodeLayerName = ""){
 		@m_metagame = @metagame;
 		m_listenCallKey = listenCallKey;
 		m_targetCallKey = targetCallKey;
@@ -48,6 +50,8 @@ class SpawnInBaseCallHandler : Tracker {
 		m_useGenericNodes = useGenericNodes;
 		m_nodeLayerName = nodeLayerName;
 		m_nodeTagName = nodeTagName;
+		m_boardcast = boardcast;
+		m_forcerefresh = force;
 	}
 
 	// ----------------------------------------------------
@@ -61,7 +65,7 @@ class SpawnInBaseCallHandler : Tracker {
 	}
 
 	// --------------------------------------------------------
-	const XmlElement@ getClosestSafeBaseAndPosition(const Vector3@ position, int factionId, float &out out_distance, Vector3 &out out_targetPosition) {
+	const XmlElement@ getClosestBaseAndPosition(const Vector3@ position, int factionId, float &out out_distance, Vector3 &out out_targetPosition,bool force_spawn = false) {
 		const XmlElement@ result = null;
 		array<const XmlElement@> baseList = getBases(m_metagame);
 		if (baseList.size() > 0) {
@@ -96,23 +100,31 @@ class SpawnInBaseCallHandler : Tracker {
 						addBlockRange(blocks, BLOCK_RANGE, base.getStringAttribute("block"));
 					}
 
-					bool safe = true;
-					for (int enemyId = 0; enemyId < int(m_metagame.getFactionCount()); ++enemyId) {
-						if (enemyId != factionId) {
-							array<const XmlElement@>@ enemies = getCharactersInBlocks(m_metagame, enemyId, blocks);
-							if (enemies.size() > 0) {
-								_log("base " + base.getStringAttribute("name") + " not safe, faction " + enemyId + " is in block");
-								// not safe
-								safe = false;
-								break;
-							}
-						}
-					}
-
-					if (safe) {
+					if(force_spawn){
 						closestDistance = distance;
 						closestBaseIndex = i;
-						closestTargetPosition = basePosition;
+						closestTargetPosition = basePosition;						
+					}
+
+					else{
+						bool safe = true;
+						for (int enemyId = 0; enemyId < int(m_metagame.getFactionCount()); ++enemyId) {
+							if (enemyId != factionId) {
+								array<const XmlElement@>@ enemies = getCharactersInBlocks(m_metagame, enemyId, blocks);
+								if (enemies.size() > 0) {
+									_log("base " + base.getStringAttribute("name") + " not safe, faction " + enemyId + " is in block");
+									// not safe
+									safe = false;
+									break;
+								}
+							}
+						}
+
+						if (safe) {
+							closestDistance = distance;
+							closestBaseIndex = i;
+							closestTargetPosition = basePosition;
+						}
 					}
 				}
 			}
@@ -129,7 +141,7 @@ class SpawnInBaseCallHandler : Tracker {
 
 	// ----------------------------------------------------
 	protected void handleCallRequestEvent(const XmlElement@ event) {
-		_log("SpawnInBaseCallHandler, handleCallRequestEvent, key=" + event.getStringAttribute("call_key"), 1); 
+		// _log("SpawnInBaseCallHandler, handleCallRequestEvent, key=" + event.getStringAttribute("call_key"), 1); 
 
 		if (event.getStringAttribute("call_key") == m_listenCallKey) {
 			Vector3 position = stringToVector3(event.getStringAttribute("target_position"));
@@ -140,11 +152,13 @@ class SpawnInBaseCallHandler : Tracker {
 				float distance = -1.0;
 
 				Vector3 targetPosition;
-				const XmlElement@ baseInfo = getClosestSafeBaseAndPosition(position, factionId, distance, targetPosition);
+				const XmlElement@ baseInfo = getClosestBaseAndPosition(position, factionId, distance, targetPosition,m_forcerefresh);
 				if (baseInfo !is null) {
-					sendFactionMessageKey(m_metagame, factionId, "spawn_in_base_call, accepted, key=" + m_listenCallKey, 
-						dictionary = {{"%base_name", baseInfo.getStringAttribute("name")}} );
-					
+					dictionary a = {{"%base_name", baseInfo.getStringAttribute("name")}};
+					sendFactionMessageKey(m_metagame, factionId, "spawn_in_base_call, accepted, key=" + m_listenCallKey,a);
+					if(m_boardcast && factionId!=0){
+						sendFactionMessageKey(m_metagame, 0, "spawn_in_base_call, alerted, key=" + m_listenCallKey,a);
+					}
 					XmlElement command("command");
 					command.setStringAttribute("class", "create_call");
 					command.setStringAttribute("key", m_targetCallKey);
@@ -152,6 +166,7 @@ class SpawnInBaseCallHandler : Tracker {
 					command.setIntAttribute("faction_id", factionId);
 					command.setIntAttribute("character_id", callerId);
 					m_metagame.getComms().send(command);
+					_log("生成call 坐标"+ targetPosition.toString());
 				} else {
 					// denied, no acceptable base found
 					sendFactionMessageKey(m_metagame, factionId, "spawn_in_base_call, denied, key=" + m_listenCallKey);

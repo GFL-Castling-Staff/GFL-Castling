@@ -14,6 +14,8 @@
 #include "attack_defense_handler_map1_2.as"
 #include "run_at_start.as"
 #include "TheJupiter.as"
+#include "spawn_in_base_call_handler.as"
+#include "call_sort.as"
 
 // ------------------------------------------------------------------------------------------------
 class StageConfiguratorInvasion : StageConfigurator {
@@ -100,6 +102,13 @@ class StageConfiguratorInvasion : StageConfigurator {
 		_log("total faction configs " + getFactionConfigs().size(), 1);
 	}
 
+	protected void setupGeneralCallConfig(Stage@ stage) {
+		for(uint i=0;i<GeneralCallList.length();i++){
+			stage.addTracker(GeneralCallList[i]);
+			_log("录入编号"+ i);
+		}
+	}
+
 	// ------------------------------------------------------------------------------------------------
 	protected void addRandomSpecialCrates(Stage@ stage, int minCount, int maxCount) {
 		array<ScoredResource@> resources = {
@@ -150,7 +159,13 @@ class StageConfiguratorInvasion : StageConfigurator {
 		};
 		stage.addTracker(SpawnAtNode(m_metagame, resources, "icecream", 0, 1));
 	}
-	
+
+	array<SpawnInBaseCallHandler@> GeneralCallList ={
+		SpawnInBaseCallHandler(m_metagame, "sf_assault.call", "sf_assault_sub.call", array<string> = {""}, false,false,false),
+		SpawnInBaseCallHandler(m_metagame, "para_assault.call", "para_assault_sub.call", array<string> = {""}, false,false,false),
+		SpawnInBaseCallHandler(m_metagame, "kcco_assault.call", "kcco_assault_sub.call", array<string> = {""}, false,false,false)
+	};
+
 	// ------------------------------------------------------------------------------------------------
 	protected void addStage(Stage@ stage) {
 		addFixedSpecialCrates(stage);
@@ -300,6 +315,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		// metadata
 		stage.m_primaryObjective = "capture";
 
+		
 		return stage;
 	}
 
@@ -346,6 +362,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.m_primaryObjective = "capture";
 
 		setDefaultAttackBreakTimes(stage);
+		
 		return stage;
 	}
 
@@ -400,6 +417,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 		setDefaultAttackBreakTimes(stage);
 		// setReduceDefenseForFinalAttack(stage, 0.1); // use this for final attack boost if needed for friendlies
+		
 		return stage;
 	}
 
@@ -450,6 +468,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.m_primaryObjective = "koth";
 		stage.m_kothTargetBase = "All SF Base";
 
+		
 		return stage;
 	} 	
 
@@ -522,6 +541,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.m_primaryObjective = "koth";
 		stage.m_kothTargetBase = "All SF Base";
 
+		
 		return stage;
 	} 	
 	protected Stage@ setupStage106(){
@@ -569,6 +589,7 @@ class StageConfiguratorInvasion : StageConfigurator {
                 
 		stage.m_primaryObjective = "koth";
 		stage.m_kothTargetBase = "All Center Base";
+		
 		return stage;		
 	}
 
@@ -604,6 +625,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		}
 		stage.m_primaryObjective = "capture";
 		setDefaultAttackBreakTimes(stage);
+		
 		return stage;
 	}
 	protected Stage@ setupStage108(){
@@ -645,6 +667,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		}
 		stage.m_primaryObjective = "capture";
 		setDefaultAttackBreakTimes(stage);
+		
 		return stage;
 	}
 	protected Stage@ setupEggStage() {
@@ -699,6 +722,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.m_primaryObjective = "koth";
 		stage.m_kothTargetBase = "grave";
 
+		
 		return stage;
 	} 
 	protected Stage@ setupStage109(){
@@ -735,6 +759,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		}
 		stage.m_primaryObjective = "capture";
 		setDefaultAttackBreakTimes(stage);
+		
 		return stage;
 	}	
 	protected Stage@ setupStage1() {
@@ -756,6 +781,10 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 		stage.m_minRandomCrates = 2; 
 		stage.m_maxRandomCrates = 4;
+		
+		stage.addTracker(SpawnInBaseCallHandler(m_metagame, "sf_assault.call", "sf_assault_sub.call", array<string> = {""}, false,false,true));
+		stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_assault.call", "para_assault_sub.call", array<string> = {""}, false,false,false));
+		stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_assault.call", "kcco_assault_sub.call", array<string> = {""}, false,false,false));
 
 		{
 			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0));                                                  
@@ -785,6 +814,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 		setDefaultAttackBreakTimes(stage);
 		// setReduceDefenseForFinalAttack(stage, 0.1); // use this for final attack boost if needed for friendlies
+		
 		return stage;
 	}
 
@@ -825,6 +855,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		// metadata
 		stage.m_primaryObjective = "capture";
 		setDefaultAttackBreakTimes(stage);
+		
 		return stage;
 	}
 	// ------------------------------------------------------------------------------------------------
@@ -869,6 +900,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.m_primaryObjective = "capture";
 
 		setDefaultAttackBreakTimes(stage);
+		
 		return stage;
 	}
 
@@ -921,6 +953,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.m_primaryObjective = "capture";
 
 		setDefaultAttackBreakTimes(stage);
+		
 		return stage;
 	}
 
@@ -982,6 +1015,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.m_primaryObjective = "koth";
 		stage.m_kothTargetBase = "Power Plant";
 
+		
 		return stage;
 	} 
 
@@ -1030,6 +1064,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.m_primaryObjective = "capture";
 
 		setDefaultAttackBreakTimes(stage);
+		
 		return stage;
 	}
 
@@ -1069,6 +1104,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.m_primaryObjective = "capture";
 
 		setDefaultAttackBreakTimes(stage);
+		
 		return stage;
 	}
 
@@ -1115,6 +1151,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.m_primaryObjective = "capture";
 
 		setDefaultAttackBreakTimes(stage);
+		
 		return stage;
 	} 
 
@@ -1156,6 +1193,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.m_radioObjectivePresent = false;
 
 		setDefaultAttackBreakTimes(stage);
+		
 		return stage;
 	} 
 
@@ -1214,6 +1252,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.m_kothTargetBase = "Airfield";
 		stage.m_radioObjectivePresent = false;
 
+		
 		return stage;
 	}
 
@@ -1256,6 +1295,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 
 		setDefaultAttackBreakTimes(stage);
+		
 		return stage;
 	}
 
@@ -1301,6 +1341,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 
 		setDefaultAttackBreakTimes(stage);
+		
 		return stage;
 	}
 
@@ -1358,6 +1399,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.m_primaryObjective = "capture";
 
 		setDefaultAttackBreakTimes(stage);
+		
 		return stage;
 	}
   
@@ -1416,6 +1458,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 
 		setDefaultAttackBreakTimes(stage);
+		
 		return stage;
 	}  
   
@@ -1475,6 +1518,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.m_primaryObjective = "capture";
 
 		setDefaultAttackBreakTimes(stage);
+		
 		return stage;
 	} 
 
@@ -1538,6 +1582,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		} 
 
 		setDefaultAttackBreakTimes(stage);
+		
 		return stage;
 	} 
     
@@ -1618,6 +1663,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		} 
         
 		setDefaultAttackBreakTimes(stage);
+		
 		return stage;
 	}     
 
@@ -1670,6 +1716,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		} 
 
 		setDefaultAttackBreakTimes(stage);
+		
 		return stage;
 	} 
 	// ------------------------------------------------------------------------------------------------
@@ -1718,6 +1765,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 		setDefaultAttackBreakTimes(stage);
 		// setReduceDefenseForFinalAttack(stage, 0.1); // use this for final attack boost if needed for friendlies
+		
 		return stage;
 	}
 	
@@ -1768,6 +1816,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.m_primaryObjective = "koth";
 		stage.m_kothTargetBase = "Dry Enclave";
 
+		
 		return stage;
 	} 	
 
@@ -1819,6 +1868,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 
 		setDefaultAttackBreakTimes(stage);
+		
 		return stage;
 	}  
 
@@ -1874,6 +1924,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		}
 
 		setDefaultAttackBreakTimes(stage);
+		
 		return stage;
 	}   
 	// ------------------------------------------------------------------------------------------------
@@ -1953,6 +2004,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		// metadata
 		stage.m_primaryObjective = "final1";
 
+		
 		return stage;
 	}
 
@@ -2010,6 +2062,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		
 		stage.m_allowChangeCapacityOnTheFly = false;
 
+		
 		return stage;
 	}
 

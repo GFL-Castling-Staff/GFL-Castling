@@ -39,6 +39,8 @@
 
 	<weapon key="sfw_jaguar.weapon"/>
 
+	
+
 	<vehicle key="atv_base.vehicle"/>
 	<vehicle key="sf_jupiter.vehicle"/>
 	<vehicle key="deployable_mg.vehicle" />
@@ -59,6 +61,7 @@
 	<call key="sf_destroyer.call" />
 	<call key="sf_jupiter.call" />
 	<call key="sf_dinergate.call" />
-	
+	<call key="sf_assault.call" />
+
 	<projectile key="sf_emp_mine.projectile" />
 </resources>

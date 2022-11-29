@@ -38,6 +38,9 @@
 #include "squad_equipment_kit.as"
 #include "rangefinder.as"
 
+// ww2 dlc tracker usage
+#include "spawn_in_base_call_handler.as"
+
 // GFL castling trackers
 #include "GFLskill.as"
 #include "kill_event.as"
@@ -52,7 +55,6 @@
 #include "enemy_reward.as"
 #include "call_event_handler.as"
 #include "GFLplayerlist.as"
-
 
 // --------------------------------------------
 class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
