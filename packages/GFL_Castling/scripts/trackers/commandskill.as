@@ -3344,6 +3344,18 @@ class CommandSkill : Tracker {
                         tasker.add(DelayAntiPersonSnipeRequest(m_metagame,1.5,characterId,factionid,"snipe_hit_20.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
                         addCoolDown("sniper",12,characterId,modifer);
                     }
+                    else if (weapon_name == "gkw_sv98mod3.weapon" || weapon_name =="gkw_sv98mod3_502.weapon" || weapon_name=="gkw_sv98mod3_1906.weapon"){
+                        playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 1.5s",false);
+                        TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                        tasker.add(DelayAntiPersonSnipeRequest(m_metagame,1.5,characterId,factionid,"snipe_hit_20.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
+                        addCoolDown("sniper",12,characterId,modifer);
+                    }                    
+                    else if (weapon_name == "gkw_sv98mod3_skill.weapon" || weapon_name =="gkw_sv98mod3_502_skill.weapon" || weapon_name=="gkw_sv98mod3_1906_skill.weapon"){
+                        playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 1.5s",false);
+                        TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                        tasker.add(DelayAntiPersonSnipeRequest(m_metagame,1.5,characterId,factionid,"snipe_hit_20.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
+                        addCoolDown("sniper",12,characterId,modifer);
+                    }                                        
                     else if (weapon_name == "gkw_qbu88.weapon" || weapon_name == "gkw_qbu88_skill.weapon"){
                         playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 1.5s",false);
                         TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
