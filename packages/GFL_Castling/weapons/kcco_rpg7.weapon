@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon file="base_secondary.weapon" key="kcco_rpg7.weapon">
+    <tag name="bazooka" />
+    <specification 
+    retrigger_time="-1.0" 
+    accuracy_factor="1.0" 
+    sustained_fire_grow_step="2.0" 
+    sustained_fire_diminish_rate="0.5" 
+    magazine_size="1" 
+    can_shoot_standing="1" 
+    can_shoot_crouching="1" 
+    suppressed="0" 
+    name="RPG-7" 
+    class="3" 
+    reload_one_at_a_time="1" 
+    sight_range_modifier="1.5" 
+    projectile_speed="60.0" 
+    slot="1" 
+    projectiles_per_shot="1" />
+    <animation key="recoil" animation_key="recoil, law" />
+    <animation key="cycle" animation_key="Brifle1" />
+    <animation key="reload" animation_key="AT4Reload" />
+    <animation key="hold" animation_key="still, with law" />
+    <animation key="hold_on_wall" animation_key="still, with law" />
+    <sound key="fire" fileref="rpg-7_shot.wav" volume="0.8" />
+    <sound key="cycle" fileref="sniper_cycle.wav" />
+    <sound key="magazine_out" fileref="sniper_clip_out.wav" />
+    <sound key="magazine_in" fileref="sniper_clip_in.wav" />
+    <sound key="cycle_out" fileref="sniper_cycle_out.wav" />
+    <sound key="cycle_in" fileref="sniper_cycle_in.wav" />
+    <sound class="impact" fileref="rifle_drop.wav" />
+    <model filename="rpg-7.xml" />
+
+    <ballistics near_far_distance="1000.0" speed_estimation_near="60.0" speed_estimation_far="60.0" max_speed="100.0" randomness="0.0" />
+
+    <projectile file="rpg-7.projectile" />
+    <weak_hand_hold offset="0.3" />
+
+    <capacity value="1" source="rank" source_value="0.0" />
+    <capacity value="2" source="rank" source_value="1.0" />
+    <capacity value="3" source="rank" source_value="2.0" />
+    <capacity value="4" source="rank" source_value="3.0" />
+
+    <hud_icon filename="rpg-7.png" />
+    <commonness value="0.2" />
+    <inventory encumbrance="5.0" price="3.0" />
+
+    <effect class="muzzle" ref="LawMuzzle" />
+    <effect class="muzzle" ref="UpDust" />
+    <modifier class="speed" value="-0.2" />     
+</weapon>
