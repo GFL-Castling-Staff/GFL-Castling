@@ -151,8 +151,8 @@ class kill_event : Tracker {
         //短突 5kill
         {"gkw_ak74u.weapon",5},
         {"gkw_ak74u_3002.weapon",5},
-        {"gkw_ak74u_skill.weapon",5},
-        {"gkw_ak74u_3002_skill.weapon",5},
+        {"gkw_ak74u_skill.weapon",3},
+        {"gkw_ak74u_3002_skill.weapon",3},
         {"gkw_sr3mp.weapon",5},
         {"gkw_sr3mp_skill.weapon",5},
         {"gkw_ro635.weapon",5},
