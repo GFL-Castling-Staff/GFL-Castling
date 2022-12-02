@@ -2,7 +2,7 @@
 <projectile key="weather_lightning_storm_2.projectile" class="grenade" name="Lightning Thunder" slot="2" pulldown_in_air="30" radius="1">
     <tag name="rocket"/>
 	
-	<result class="blast" damage="3" radius="4.0" decal="1" push="0.25" character_state="death"/>
+	<result class="blast" damage="8" radius="5.0" decal="1" push="0.25" character_state="death"/>
 	
     <trigger class="impact" />
     <rotation class="motion" />
@@ -10,8 +10,7 @@
 
     <commonness value="0.0" />
 
-    <sound class="result" key="other" fileref="explosion_RPG_FromSQUAD_1.wav" volume="2.9" />
-    <sound class="result" key="other" fileref="explosion_RPG_FromSQUAD_2.wav" volume="2.9" />
+    <sound class="result" key="other" fileref="thunder.wav" volume="4.0"  />
 
     <sound class="result" key="vehicle" copy="other" />    
     <sound class="result" key="vehicle" tag="metal_heavy" fileref="blast_metal_hit_01.wav" pitch_variety="0.2" volume="0.8" />
