@@ -32,6 +32,12 @@ dictionary GFL_Event_Index = {
 
         {"bomb_fairy",7},
 
+        // 天气系统——离子风暴
+        // {"ion_storm",8},
+
+        // 天气系统——闪电风暴
+        {"lightning_storm",9},
+
         // 下面这行是用来占位的，在这之上添加新的即可
         {"666",-1}
 };
@@ -76,6 +82,8 @@ class GFL_event_system : Tracker {
                                 break;
                             }
                             case 7:{excuteBombFairy(m_metagame,GFL_event_array[a]);break;}
+                            // case 8:{excuteIonStormFairy(m_metagame,GFL_event_array[a]);break;}
+                            case 9:{excuteLightningStorm(m_metagame,GFL_event_array[a]);break;}
 
                             default:
                                 break;
@@ -118,6 +126,7 @@ class GFL_event{
 	int m_factionid;
     int m_eventkey;
     Vector3 m_pos;
+    Vector3 m_dir;
     float m_randseed;
     int m_specialkey=1;
 
@@ -126,7 +135,7 @@ class GFL_event{
     float m_time;
     bool m_enable=true;
 
-    GFL_event(int characterId,int factionid,int key,Vector3 pos,float delay_time=0.0,float randseed=-1.0,int markerId=0){
+    GFL_event(int characterId,int factionid,int key,Vector3 pos,float delay_time=0.0,float randseed=-1.0,int markerId=0,Vector3 dir=Vector3(0,0,0)){
         m_characterId=characterId;
         m_factionid=factionid;
         m_eventkey=key;
@@ -134,9 +143,10 @@ class GFL_event{
         m_time=delay_time;
         m_randseed=randseed;
         m_markerId=markerId;
+        m_dir=dir;
     }
 
-    GFL_event(int characterId,int factionid,string key,Vector3 pos,float delay_time=0.0,float randseed=-1.0,int markerId=0){
+    GFL_event(int characterId,int factionid,string key,Vector3 pos,float delay_time=0.0,float randseed=-1.0,int markerId=0,Vector3 dir=Vector3(0,0,0)){
         m_characterId=characterId;
         m_factionid=factionid;
         m_eventkey=int(GFL_Event_Index[key]);
@@ -144,6 +154,7 @@ class GFL_event{
         m_time=delay_time;
         m_randseed=randseed;
         m_markerId=markerId;
+        m_dir=dir;
     }
 
     void setSpeicalKey(int key){
@@ -227,6 +238,18 @@ void excuteYaoren(GameMode@ metagame,GFL_event@ eventinfo){
     if(eventinfo.m_phase>=10){
         eventinfo.m_enable=false;
     }
+}
+
+void excuteLightningStorm(GameMode@ metagame,GFL_event@ eventinfo){
+    eventinfo.m_time=5;
+    
+    Vector3 lightning_storm_center_pos = eventinfo.m_pos.add(Vector3(0,20,0));
+    CreateDirectProjectile(metagame,lightning_storm_center_pos,lightning_storm_center_pos,"weather_lightning_storm_1.projectile",eventinfo.m_characterId,eventinfo.m_factionid,0);
+    
+    eventinfo.m_phase++;
+    if(eventinfo.m_phase>12){
+        eventinfo.m_enable=false;
+    }        
 }
 
 void excuteBombFairy(GameMode@ metagame,GFL_event@ eventinfo){

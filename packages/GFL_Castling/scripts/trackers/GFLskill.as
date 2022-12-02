@@ -159,6 +159,8 @@ dictionary gameSkillIndex = {
 
         {"spawn_mortar_truck",36},
 
+        {"spawn_lightning_storm_1_min",37},
+
         // 下面这行是用来占位的，在这之上添加新的技能key和index即可
         {"666",-1}
 };
@@ -1285,6 +1287,21 @@ class GFLskill : Tracker {
 							int Faction= character.getIntAttribute("faction_id");
 							spawnVehicle(m_metagame,1,Faction,target,Orientation(0,1,0,ori4),"mortar_truck.vehicle");	
 						}
+					}
+				}
+				break;
+			}
+
+			case 37:{
+				int characterId = event.getIntAttribute("character_id");
+				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+				int factionId = character.getIntAttribute("faction_id");
+				if (character !is null) {
+					int playerId = character.getIntAttribute("player_id");
+					const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+					if (player !is null) {
+						Vector3 position = stringToVector3(event.getStringAttribute("position"));
+                        GFL_event_array.insertLast(GFL_event(characterId,factionId,int(GFL_Event_Index["lightning_storm"]),position,1.0,-1.0));
 					}
 				}
 				break;
