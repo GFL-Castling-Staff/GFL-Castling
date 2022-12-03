@@ -32,7 +32,7 @@
 	visual_offset="0 0.0 0" />
 	
 	0
-    <turret offset="0.0 11.8 0.0" weapon_key="amos_none.weapon" weapon_offset="0.0 0 0" max_rotation_step="0.00036" rotation="0" rotation_range="0" weapon_recoil="0.0" physics_recoil="0.0" />
+    <turret offset="0.0 0.5 0.0" weapon_key="amos_none.weapon" weapon_offset="0.0 0 0" max_rotation_step="0.00036" rotation="0" rotation_range="0" weapon_recoil="0.0" physics_recoil="0.0" />
     1
     <turret offset="0.0 6.0 0.0" weapon_key="parw_moth_mg.weapon" weapon_offset="0.0 0 0" max_rotation_step="0.00048" rotation="0" rotation_range="6.30" weapon_recoil="0.0" physics_recoil="0.0" />
     <visual class="turret" turret_index="0" mesh_filename="moth_dir.mesh" texture_filename="balloon.png"/>
