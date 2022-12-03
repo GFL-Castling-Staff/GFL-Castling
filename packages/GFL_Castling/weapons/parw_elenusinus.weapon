@@ -140,12 +140,36 @@
 		<result class="blast" damage="0.1" radius="2.0" decal="1" push="0.1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
 		<trigger class="impact"/>
 		<effect class="result" key="terrain" ref="BigBurst" use_surface_color="1"/>
-		<effect class="result" key="terrain" ref="SmokeTop" post_processing="1"/>
-		<effect class="result" key="terrain" ref="Smoke" post_processing="1"/>
 		<effect class="result" key="terrain" ref="Shine" lighting="0"/>
 		<effect class="result" key="terrain" ref="Godray" lighting="0"/>
-		<effect class="result" key="terrain" ref="ShadowSmoke" shadow="1"/>
 	</projectile>
 	
 </weapon>
+
+<weapon on_ground_up="0 0 1" drop_count_factor_on_death="0.5" drop_count_factor_on_player_death="1.0" key="elenusis_acid_cannon.weapon">
+	<specification retrigger_time="12" accuracy_factor="0.75" spread_range="0.5" magazine_size="1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" suppressed="0" name="M202 Air-Burst rocket launcher" class="0" reload_one_at_a_time="1" sight_range_modifier="2.0" projectile_speed="150.0" slot="1" burst_shots="2" projectiles_per_shot="1"/>
+	
+	<hud_icon filename="hud_m202.png" />
+	<inventory encumbrance="20.0" buy_price="40.0" sell_price="40.0"/>
+	<capacity value="1" source="rank" source_value="4.369"/>
+	<capacity value="2" source="rank" source_value="10.633"/>
+	<capacity value="3" source="rank" source_value="30.433"/>
+	<commonness value="10" in_stock="1" can_respawn_with="1"/>
+	<animation key="recoil" animation_key="recoil, law"/>
+	<animation key="cycle" animation_key="Brifle1"/>
+	<animation key="reload" animation_key="AT4Reload"/>
+	<animation key="hold" animation_key="still, with law"/>
+	<animation key="hold_on_wall" animation_key="still, with law"/>
+    <sound key="fire" fileref="m202_flash_shot.wav" />
+    <sound key="cycle" fileref="sniper_cycle.wav" />
+    <sound key="magazine_out" fileref="sniper_clip_out.wav" />
+    <sound key="magazine_in" fileref="sniper_clip_in.wav" />
+    <sound key="cycle_out" fileref="sniper_cycle_out.wav" />
+    <sound key="cycle_in" fileref="sniper_cycle_in.wav" />
+    <sound class="impact" fileref="rifle_drop.wav" />
+    <model />
+	<ballistics near_far_distance="1.0" speed_estimation_near="180.0" speed_estimation_far="180.0" max_speed="280.0" randomness="0.0" curve_height="2.5" tweak_factor="4.5"/>
+	<projectile file="elenusis_acid_bomb.projectile"/>
+</weapon>
+
 </weapons>

@@ -1,0 +1,76 @@
+material AcidCloud {
+        receive_shadows off
+	technique {
+		pass {
+			lighting off
+			depth_write off
+			scene_blend add
+			fog_override true
+
+			texture_unit {
+				texture acid_cloud.png
+			}
+		}
+	}
+}
+
+material Acid {
+        receive_shadows off
+	technique {
+		pass {
+			lighting off
+			depth_write off
+			scene_blend alpha_blend
+			fog_override true
+
+			texture_unit {
+				texture acid.png
+			}
+		}
+	}
+}
+
+material FlamePropulsionDummy
+{
+        receive_shadows off
+	technique
+	{
+		pass
+		{
+			lighting off
+			//ambient vertexcolour
+			//diffuse vertexcolour
+			scene_blend add
+			fog_override true
+			depth_write off
+
+			texture_unit
+			{
+				texture flamethrowerflame.png
+			}
+		}
+	}
+}
+
+material FlameSmokeDummy
+{
+        receive_shadows off
+	technique
+	{
+		pass
+		{
+			lighting on
+			diffuse vertexcolour
+			scene_blend alpha_blend
+			depth_write off
+			diffuse vertexcolour
+			specular vertexcolour
+
+			texture_unit
+			{
+				texture flamesmoke.png
+				tex_address_mode clamp
+			}
+		}
+	}
+}

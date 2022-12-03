@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<projectile class="grenade" name="Acid Cloud" key="acid_bomb.projectile" slot="0" radius="0.15" drop_count_factor_on_death="0.5" time_to_live_out_in_the_open="0.0" >
+    <tag name="grenade" />
+
+    <result class="blast" radius="4.0" damage="1.1" decal="1" character_state="death" faction_compare="not_equal" push="0" make_vehicle_hit_sound="0" />
+    <trigger class="impact">
+     <collider class="terrain" enabled="1" />     
+     <collider class="static_object" enabled="1" /> 
+     <collider class="vehicle" enabled="1" /> 
+     <collider class="character" enabled="1" />
+    </trigger>
+    <rotation class="random" />
+
+    <model />
+    <hud_icon filename="hud_acid_cloud.png" />
+
+ <!--   <throwable curve_height="2.0" near_far_distance="4.0" speed_estimation_near="5.0" speed_estimation_far="17.0" max_speed="9.0" randomness="0.06" tweak_factor="1.1" />  
+    <throwable curve_height="4.5" near_far_distance="5.0" speed_estimation_near="9.0" speed_estimation_far="17.0" max_speed="25.0" randomness="0.06" tweak_factor="1.1" />  -->
+       <throwable curve_height="3.0" near_far_distance="6.0" speed_estimation_near="10.0" speed_estimation_far="16.0" max_speed="37.0" randomness="0.0" tweak_factor="1.4" /> 
+    
+
+    <!-- projectile slot 0 is used for hand grenade items currently -->
+    <!-- bound to change -->
+    <commonness value="0.5" in_stock="0" />
+
+    <capacity value="30" source="rank" source_value="0.0" />
+    <capacity value="40" source="rank" source_value="0.4" />
+    <capacity value="60" source="rank" source_value="0.6" />        
+    <inventory encumbrance="4.0" price="0.0" />
+
+    <sound class="result" key="other" fileref="acid_cloud.wav" volume="1.0" pitch_variety="0.1"/>
+
+    <sound class="result" key="terrain" copy="other" />
+    <sound class="result" key="static_object" copy="other" />
+    <sound class="result" key="vehicle" copy="other" />
+    <sound class="result" key="character" copy="other" />
+
+    <effect class="result" key="terrain" ref="AcidCloud" post_processing="1" />
+    <effect class="result" type="splat_map" surface_tag="" size="3.5" atlas_index="0" layer="1" />
+    <effect class="result" type="splat_map" surface_tag="" size="4.5" atlas_index="4" layer="0" />
+    <effect class="result" type="splat_map" surface_tag="" size="5.5" atlas_index="0" layer="2" additive="0" /> <!-- remove top snow everywhere -->
+
+    <effect class="result" key="other" ref="SmokeTop" post_processing="1" />
+    <effect class="result" key="other" ref="Smoke" post_processing="1" />
+    <effect class="result" key="other" ref="Shine" lighting="0" />
+    <effect class="result" key="other" ref="Godray" lighting="0" />
+    <effect class="result" key="other" ref="ShadowSmoke" shadow="1" />
+
+    <effect class="result" key="static_object" copy="terrain" />
+    <effect class="result" key="vehicle" copy="terrain" />
+    <effect class="result" key="character" copy="terrain" />
+    
+    <effect class="activated" ref="PropulsionAcid" />    
+
+</projectile>

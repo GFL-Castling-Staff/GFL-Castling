@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<vehicle name="Bunker" key="par_elenusinus_1.vehicle" respawn_time="30" map_view_atlas_index="43" usable_for_cover="0" protectors="2" soldier_capacity_offset="2"  should_be_destroyed="1" character_leave_request_mode="friendly" allow_ai_to_use="1" allow_player_to_use="1" ai_driver_turns_to_target="1" ai_abandon_when_unsteerable="0" ai_stop_to_fight="1">
+<vehicle name="Elenusinus Plus" key="par_elenusinus_1.vehicle" respawn_time="60" map_view_atlas_index="43" usable_for_cover="0" character_leave_request_mode="friendly" allow_ai_to_use="1" allow_player_to_use="1" ai_driver_turns_to_target="1" ai_abandon_when_unsteerable="0" ai_stop_to_fight="1">
 	<tag name="target" />
 	<tire_set offset="0.08 0.0 2.56" radius="0.5" />
 	<tire_set offset="2.76 0.0 -2.58" radius="0.5" />
@@ -7,12 +7,13 @@
 	<modifier class="blast_damage" value="-1.0" />
 	<modifier class="blast_range" value="-0.5" />
 	
-	<control max_speed="8.0"  acceleration="5.0"	max_reverse_speed="8.0"	max_limiter_speed="2.0"	max_rotation="1.0"	max_water_depth="1.0" steer_smoothening="0.9" min_health_to_steer="15"  tracked="1" gears="1"/>
+	<control max_speed="8.0"  acceleration="5.0"	max_reverse_speed="8.0"	max_limiter_speed="2.0"	max_rotation="1.0"	max_water_depth="2.0" steer_smoothening="0.9" min_health_to_steer="15"  tracked="1" gears="1"/>
 	<physics max_health="60" mass="90" broken_mass="200" extent="3.2 0.0 3.2" offset="0 0.0 0" top_offset="0 2 0" collision_model_pos="0 1.2 0" collision_model_extent="0.8 0.8 0.8" visual_offset="0 0.6 0" collision_response_factor="0.2" blast_push_threshold="10.0" vehicle_collision_damage_factor="2.0" />
 
 	<visual class="tire" mesh_filename="car1_wheel.mesh" texture_filename="sedan_albedo.jpg" />
 
     <turret offset="0 0.96 0" weapon_key="parw_elenusinus_1_cannon.weapon" weapon_offset="0.0 1.56 2.0" weapon_recoil="0.02" physics_recoil="0.0"  max_rotation_step="0.0001" rotation="0" rotation_range="1.28" />
+    <turret offset="0 0 0" weapon_key="elenusis_acid_cannon.weapon" weapon_offset="0.0 1.0 2.0" weapon_recoil="0.02" physics_recoil="0.0"  max_rotation_step="0.0001" rotation="0" rotation_range="0" parent_turret_index="0" />
 
 	<turret offset="0 0 0" weapon_key="parw_elenusinus_mg.weapon" weapon_offset="-1.0 0.25 -1.2" weapon_recoil="0.02" physics_recoil="0.0" max_rotation_step="0.005" rotation="0" rotation_range="0" parent_turret_index="0" />
 	<turret offset="0 0 0" weapon_key="parw_elenusinus_mg.weapon" weapon_offset="1.0 0.25 -1.2" weapon_recoil="0.02" physics_recoil="0.0" max_rotation_step="0.005" rotation="0" rotation_range="0" parent_turret_index="0" />
