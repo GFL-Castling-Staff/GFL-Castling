@@ -13,7 +13,7 @@
     <hud_icon filename="hud_icecream.png" />
     <throwable curve_height="2.0" near_far_distance="2.0" speed_estimation_near="5.0" speed_estimation_far="5.0" max_speed="5.0" randomness="0.01" />
     <commonness value="0.0" can_respawn_with="0" in_stock="1" />
-    <inventory encumbrance="-1.0" buy_price="15.0" sell_price="0.1" />
+    <inventory encumbrance="0.0" buy_price="15.0" sell_price="0.1" />
     <capacity value="1" source="rank" source_value="0.0" />
     <sound class="result" key="character" fileref="slip.wav" volume="0.5" />
 </projectile>
