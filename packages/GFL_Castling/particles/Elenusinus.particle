@@ -1,0 +1,100 @@
+//枪口光芒
+particle_system Elenusinus_Light
+{
+	quota 500
+	material	common_shine
+	particle_width	1.0
+	particle_height	1.0
+	cull_each	false
+	renderer	billboard
+	billboard_type	point
+
+	emitter Point
+	{
+		angle	90
+		colour	0.26 0.89 0.97 1.0
+		direction	0 1 0
+		emission_rate	150
+		position	0 0 0
+		velocity	0
+		time_to_live	0.25
+		duration	0.05
+	}
+
+	affector ColourFader
+	{
+		red	0
+		green	0
+		blue	0
+		alpha	-2
+	}
+
+    affector Scaler 
+    {
+        rate 0.3
+    }
+}
+
+particle_system Elenusinus_SprayMuzzle
+{
+	quota	200
+	material	Elenusinus_Spread
+	particle_width	1.5
+	particle_height	1.5
+	cull_each	false
+	renderer	billboard
+	billboard_type	oriented_self
+	common_direction	0 -1 0
+
+	emitter Point
+	{
+		angle	90
+		colour	1 1 1 1
+		direction	0 1 0
+		emission_rate 100
+		position	0 0 0
+		velocity	0.0001
+		time_to_live	0.2
+		duration	0.05
+	}
+}
+
+material alpha_blend_base{
+	receive_shadows off
+	technique{
+		pass{
+			lighting off
+			fog_override true
+			depth_write off
+			scene_blend alpha_blend
+		}
+	}
+}
+
+material add_base{
+	receive_shadows off
+	technique{
+		pass{
+			lighting off
+			fog_override true
+			depth_write off
+			scene_blend add
+		}
+	}
+}
+
+material Elenusinus_Spread : add_base
+{   
+    technique
+    {
+        pass
+        {
+            depth_func always_pass
+            texture_unit
+            {
+                tex_address_mode clamp
+                anim_texture fire_frame.png 4 0.2
+            }
+        }
+    }
+}
