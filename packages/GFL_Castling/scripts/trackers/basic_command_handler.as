@@ -880,31 +880,11 @@ class BasicCommandHandler : Tracker {
 		} else  if(checkCommand(message, "spawnjxk")) {
 			spawnInstanceNearPlayer(senderId, "mobile_armory.vehicle", "vehicle", 0);
 		} else  if(checkCommand(message, "spawnybc")) {
-			spawnInstanceNearPlayer(senderId, "kcco_trans_truck.vehicle", "vehicle", 0);			
-		} else if (checkCommand(message, "spawntarget")) {
-			spawnInstanceNearPlayer(senderId, "GK_target", "soldier", 0);
-            spawnInstanceNearPlayer(senderId, "GK_target", "soldier", 0);
-            spawnInstanceNearPlayer(senderId, "GK_target", "soldier", 0);
-            spawnInstanceNearPlayer(senderId, "GK_target", "soldier", 0);
-            spawnInstanceNearPlayer(senderId, "GK_target", "soldier", 0);
-		} else if (checkCommand(message, "spawnqwd")) {
-			spawnInstanceNearPlayer(senderId, "kcco_Hydra", "soldier", 1);
-            spawnInstanceNearPlayer(senderId, "kcco_Hydra", "soldier", 1);
-            spawnInstanceNearPlayer(senderId, "kcco_Hydra", "soldier", 1);
-            spawnInstanceNearPlayer(senderId, "kcco_Hydra", "soldier", 1);
-            spawnInstanceNearPlayer(senderId, "kcco_Hydra", "soldier", 1);
-		} else if (checkCommand(message, "spawnlhh")) {
-			spawnInstanceNearPlayer(senderId, "kcco_teslatrooper", "soldier", 1);
-            spawnInstanceNearPlayer(senderId, "kcco_teslatrooper", "soldier", 1);
-            spawnInstanceNearPlayer(senderId, "kcco_teslatrooper", "soldier", 1);
-            spawnInstanceNearPlayer(senderId, "kcco_teslatrooper", "soldier", 1);
-            spawnInstanceNearPlayer(senderId, "kcco_teslatrooper", "soldier", 1);
-		} else if (checkCommand(message, "spawnkccoar")) {
-			spawnInstanceNearPlayer(senderId, "kcco_ar", "soldier", 1);
-            spawnInstanceNearPlayer(senderId, "kcco_ar", "soldier", 1);
-            spawnInstanceNearPlayer(senderId, "kcco_ar", "soldier", 1);
-            spawnInstanceNearPlayer(senderId, "kcco_ar", "soldier", 1);
-            spawnInstanceNearPlayer(senderId, "kcco_ar", "soldier", 1);      
+			spawnInstanceNearPlayer(senderId, "kcco_trans_truck.vehicle", "vehicle", 0);
+		} else  if(checkCommand(message, "spawn my")) {
+			spawnInstanceNearPlayer(senderId, "par_elenusinus.vehicle", "vehicle", 1); 		
+		} else  if(checkCommand(message, "spawn aks")) {
+			spawnInstanceNearPlayer(senderId, "par_aceso.vehicle", "vehicle", 1); 						
 		} else if (checkCommand(message,"givetestweapon")){
 			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
 			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_mg4_oc.weapon");

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vehicle 
+name="Dish of Aceso"
+key="par_aceso.vehicle"
+respawn_time="100"
+map_view_atlas_index="43"
+usable_for_cover="0"
+character_leave_request_mode="friendly"
+max_character_collision_speed_on_normal="10.0"
+max_character_collision_speed="10.0"
+allow_ai_to_use="1"
+allow_player_to_use="1"
+ai_driver_turns_to_target="1"
+ai_abandon_when_unsteerable="0"
+ai_stop_to_fight="1"
+>
+	<tag name="target" />
+	<tag name="apc" />
+	<tag name="metal_heavy" />
+
+	<tire_set offset="0.08 0.0 2.56" radius="0.5" />
+	<tire_set offset="3.0 0.0 -2.65" radius="0.5" />
+	<modifier class="blast_damage" value="-1.0" />
+	<modifier class="blast_range" value="-1.0" />
+	<control max_speed="15.0" acceleration="5.0" max_reverse_speed="10.0"	max_limiter_speed="3.0"	max_rotation="0.6"	max_water_depth="2.0" steer_smoothening="0.9" min_health_to_steer="10"  tracked="1" gears="1"/>
+	<physics max_health="50" mass="100" broken_mass="100" extent="3.2 0.0 3.2" offset="0 0.0 0" top_offset="0 2 0" collision_model_pos="0 1.2 0" collision_model_extent="0.8 0.8 0.8" visual_offset="0 0.65 0" collision_response_factor="0.2" blast_push_threshold="10.0" vehicle_collision_damage_factor="2.0" blast_damage_threshold="1.0"/>
+	<turret offset="0 0.96 0" weapon_key="parw_elenusinus_0_cannon.weapon" weapon_offset="0.0 1.56 2.0" weapon_recoil="0.3" physics_recoil="0.05"  max_rotation_step="0.0001" rotation="0" rotation_range="1.6" />
+	<turret offset="0 0 0" weapon_key="parw_elenusinus_mg.weapon" weapon_offset="-1.0 0.25 -1.2" weapon_recoil="0.02" physics_recoil="0.0" max_rotation_step="0.005" rotation="0" rotation_range="0" parent_turret_index="0" />
+	<turret offset="0 0 0" weapon_key="parw_elenusinus_mg.weapon" weapon_offset="1.0 0.25 -1.2" weapon_recoil="0.02" physics_recoil="0.0" max_rotation_step="0.005" rotation="0" rotation_range="0" parent_turret_index="0" />
+	<visual offset="0 1.05 0" class="turret" turret_index="0" mesh_filename="Elenusinus_0_turret.mesh" texture_filename="Eleusinus_Turret.png" />
+	<visual offset="0 1.05 0" key="broken" class="turret" turret_index="0" mesh_filename="Elenusinus_0_turret.mesh" texture_filename="humvee_broken.png" />
+	<visual class="tire" mesh_filename="car1_wheel.mesh" texture_filename="sedan_albedo.jpg" />
+
+	<visual class="chassis" mesh_filename="Elenusinus_base.mesh" texture_filename="Eleusinus_Base.png" />
+	<visual class="chassis" key="broken" mesh_filename="Elenusinus_base.mesh" texture_filename="humvee_broken.png" />
+	<character_slot type="driver" position="0.0 0.0 1.0" rotation="0" exit_rotation="0" hiding="1" animation_id="36" />
+	<character_slot type="gunner" attached_on_turret="1" seat_position="0.0 0.0 -0.8" enter_position="0 0 -2.0" rotation="0" exit_rotation="-1.57" hiding="1" animation_key="tank mg still">
+		<state class="entering" animation_key="crouching forwards short, no weapon" position="0 0 -1.0" rotation="0" />
+		<state class="leaving" animation_key="crouching forwards short, no weapon" position="0.2 0 -0.7" rotation="3.14" />
+		<turret index="0" />
+		<turret index="1" />
+		<turret index="2" />
+	</character_slot>
+
+	<rev_sound filename="truck_rev0.wav" low_pitch="0.95" high_pitch="1.05" low_rev="0.0" high_rev="0.2" volume="1.0" />
+	<rev_sound filename="truck_rev3.wav" low_pitch="0.7" high_pitch="1.0" low_rev="0.05" high_rev="0.7" volume="1.0" />
+	<rev_sound filename="truck_rev4.wav" low_pitch="0.8" high_pitch="1.0" low_rev="0.4" high_rev="1.0" volume="1.0" />
+	<sound key="slide" filename="slide_noise.wav" />
+	<sound key="squeal" filename="tire_squeal.wav" />
+	<sound key="ignition" filename="truck_ignition.wav" />
+	<sound key="hit" filename="car_hit1.wav" />
+	<sound key="hit" filename="car_hit2.wav" />
+	<sound key="hit" filename="car_hit3.wav" />
+	<effect event_key="health" value="30" ref="BrokenSparkle" post_processing="0" offset="0.0 0.8 0.0" />
+	<effect event_key="health" value="10" ref="BrokenSparkle" post_processing="0" offset="0.0 0.8 0.0" />
+	<effect event_key="health" value="10" ref="SmallSmokeVehicle" offset="0.0 0.8 0.0" />
+	<effect event_key="destroyed" ref="SmallSmokeVehicle" offset="0.0 0.8 0.0" />
+
+	<event key="spot_rp_reward">
+		<trigger class="spot" />
+		<result class="reward" rp="100.0" />
+	</event>
+	<event key="destroy_rp_reward">
+        <trigger class="destroy" />
+        <result class="reward" rp="300.0" />
+    </event>
+	<event>
+		<trigger class="destroy" />
+		<result class="spawn" instance_class="visual_item" instance_key="burning_piece_radartower.visual_item" min_amount="3" max_amount="3" offset="0 2.0 0" position_spread="1.5 1.5" direction_spread="0.05 0.2" />
+	</event>
+	<event>
+		<trigger class="destroy" />
+		<result class="spawn" instance_class="visual_item" instance_key="burning_piece_armor1.visual_item" min_amount="2" max_amount="3" offset="0 2.0 0" position_spread="1.5 1.5" direction_spread="0.1 0.2" />
+	</event>
+	<event>
+		<trigger class="destroy" />
+		<result class="spawn" instance_class="visual_item" instance_key="burning_piece_truck1.visual_item" min_amount="1" max_amount="2" offset="0 2.0 0" position_spread="1.5 1.5" direction_spread="0.1 0.2" />
+	</event>
+	<event>
+		<trigger class="destroy" />
+		<result class="spawn" instance_class="visual_item" instance_key="burning_piece_jeep2.visual_item" min_amount="1" max_amount="1" offset="0 2.0 0" position_spread="1.5 1.5" direction_spread="0.05 0.2" />
+	</event>
+</vehicle>
