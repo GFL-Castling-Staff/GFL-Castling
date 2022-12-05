@@ -1,126 +1,294 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapons>
-    <weapon file="heavy_mg.animation_base" key="gkw_negev.weapon">
-
-        <specification barrel_offset="0.5" retrigger_time="0.052" accuracy_factor="0.98" sustained_fire_grow_step="0.35" sustained_fire_diminish_rate="1.5" magazine_size="150" suppressed="0" name="NEGEV" class="0" projectile_speed="195"  sight_range_modifier="1.5" />
-        <animation key="reload" animation_key="reloading, Machine gun 4" />
-        <animation state_key="next_in_chain_in" animation_key="NegevSwitch" />
-        <inventory buy_price="75.0" sell_price="75.0" />
-        <next_in_chain key="gkw_negev_skill_1.weapon" share_ammo="0" />
-        <sound key="fire" fileref="negev_fire_FromCSGO.wav" pitch_variety="0.05" volume="1.2" />
-        <sound key="magazine_out" fileref="negev_mgz_out_FromCF.wav" volume="0.7" />
-        <sound key="magazine_in" fileref="negev_mgz_in_FromCF.wav" volume="0.7" />
-        <sound key="cycle" fileref="negev_cycle_FromCF.wav" volume="0.7" />
-        <sound class="impact" fileref="rifle_drop.wav" />
+    <weapon key="gkw_negev.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+        <specification 
+        barrel_offset="0.4"
+        retrigger_time="0.08"
+        accuracy_factor="0.6"
+        sustained_fire_grow_step="0.5"
+        sustained_fire_diminish_rate="3.0"
+        magazine_size="150"
+        suppressed="0"
+        name="NEGEV"
+        class="0"
+        stance_accuracy_rate="2.0"
+        projectile_speed="180"
+        sight_range_modifier="1.5"
+        stab_enabled="1"
+        carry_in_two_hands="1"
+        burst_shots="1"
+        last_burst_retrigger_time="-1"
+        can_shoot_standing="1"
+        can_shoot_crouching="1"
+        can_shoot_prone="1"
+        slot="0"/>
+        <animation key="reload" animation_key="reloading, Machine gun 4"/>
+        <animation state_key="next_in_chain_in" animation_key="NegevSwitch"/>
+        <inventory encumbrance="30.0" buy_price="75.0" sell_price="75.0"/>
+        <next_in_chain key="gkw_negev_skill_1.weapon" share_ammo="0"/>
+        <sound key="fire" fileref="negev_fire_FromCSGO.wav" pitch_variety="0.05" volume="1.2"/>
+        <sound key="magazine_out" fileref="negev_mgz_out_FromCF.wav" volume="0.7"/>
+        <sound key="magazine_in" fileref="negev_mgz_in_FromCF.wav" volume="0.7"/>
+        <sound key="cycle" fileref="negev_cycle_FromCF.wav" volume="0.7"/>
+        <sound class="impact" fileref="rifle_drop.wav"/>
         <sound key="effect" fileref="negev_skill_4.wav" pitch_variety="0.0" volume="1.0"/>
-        <model filename="gkw_mg_negev.xml" />
-        <hud_icon filename="gkw_negev.png" />
+        <model filename="gkw_mg_negev.xml"/>
+        <hud_icon filename="gkw_negev.png"/>
         <projectile file="bullet.projectile">
-            <result class="hit" kill_probability="2.1" kill_probability_offset_on_successful_hit="1.0" kill_decay_start_time="1.967" kill_decay_end_time="3.279" />
+            <result class="hit" kill_probability="2.2" kill_probability_offset_on_successful_hit="2.1" kill_decay_start_time="1.0" kill_decay_end_time="1.0"/>
+            <trail probability="1.0" key="BulletMgTrail" />
         </projectile>
-        <effect class="muzzle" ref="ejection_556" />
-        <stance state_key="running" accuracy="0.6" />
-        <stance state_key="crouch_moving" accuracy="0.6" />
-        <stance state_key="prone_moving" accuracy="0.6" />
-        <stance state_key="standing" accuracy="0.6" />
-        <stance state_key="crouching" accuracy="1.0" />
-        <stance state_key="prone" accuracy="1.9" />
-        <stance state_key="over_wall" accuracy="1.0" />
-        <modifier class="speed" value="-0.2" />
-
+        <effect class="muzzle" ref="ejection_556"/>
+        <stance state_key="running" accuracy="0.3"/>
+        <stance state_key="walking" accuracy="0.35"/>
+        <stance state_key="standing" accuracy="0.4"/>
+        <stance state_key="crouch_moving" accuracy="0.3"/>
+        <stance state_key="prone_moving" accuracy="0.3"/>
+        <stance state_key="crouching" accuracy="0.8"/>
+        <stance state_key="prone" accuracy="1.4"/>
+        <stance state_key="over_wall" accuracy="1.55"/>
+        <tag name="machine gun"/>
+        <commonness value="0.2" in_stock="0" can_respawn_with="1"/>
+        <capacity value="1" source="rank" source_value="0.0"/>
+        <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
+        <target_factors tag="smg" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
+        <target_factors tag="melee" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
+        <target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
+        <target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
+        <animation state_key="recoil" animation_key="recoil, hip fire"/>
+        <animation state_key="recoil" animation_key="recoil2, hip fire"/>
+        <animation state_key="recoil" animation_key="recoil3, hip fire"/>
+        <animation key="recoil" stance_key="over_wall" animation_key="recoil1"/>
+        <animation key="recoil" stance_key="over_wall" animation_key="recoil2"/>
+        <animation key="recoil" stance_key="over_wall" animation_key="recoil3"/>
+        <animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
+        <animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
+        <animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
+        <animation state_key="hold" animation_key="hold, lmg"/>
+        <animation state_key="running" animation_key="running, bayonet"/>
+        <animation state_key="walking" animation_key="walking, hip fire"/>
+        <animation state_key="walking_backwards" animation_key="walking backwards, hip fire"/>
+        <animation state_key="celebrate_shoot" animation_key="celebrating, shooting"/>
+        <animation state_key="stabbing" animation_key="melee, quick knife"/>
+        <animation state_key="stabbing" animation_key="pistol whip 3"/>
     </weapon>
-
-    <weapon file="heavy_mg.animation_base" key="gkw_negev_skill_1.weapon">
-
-        <specification barrel_offset="0.5" retrigger_time="0.052" accuracy_factor="0.98" sustained_fire_grow_step="0.6" sustained_fire_diminish_rate="1.5" magazine_size="150" suppressed="0" name="NEGEV-[Manic Blood]" class="0" projectile_speed="195"  sight_range_modifier="1.5" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1"/>
-        <animation key="reload" animation_key="reloading, Machine gun 5" />
-        <animation state_key="next_in_chain_in" animation_key="NegevSwitch" />
-        <commonness value="0" in_stock="0" />
-        <inventory buy_price="75.0" sell_price="75.0" />
-        <next_in_chain key="gkw_negev_skill_2.weapon" share_ammo="0" />
-        <sound key="fire" fileref="negevskill_fire_FromCF.wav" pitch_variety="0.05" volume="1" />
-        <sound key="magazine_out" fileref="negev_mgz_out_FromCF.wav" volume="0.7" />
-        <sound key="magazine_in" fileref="negev_mgz_in_FromCF.wav" volume="0.7" />
-        <sound key="cycle" fileref="negev_cycle_FromCF.wav" volume="0.7" />
-        <sound class="impact" fileref="rifle_drop.wav" />
+    <weapon key="gkw_negev_skill_1.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+        <specification 
+        barrel_offset="0.4"
+        retrigger_time="0.08"
+        accuracy_factor="0.6"
+        sustained_fire_grow_step="0.5"
+        sustained_fire_diminish_rate="3.0"
+        magazine_size="150"
+        suppressed="0"
+        name="NEGEV-[Manic Blood]"
+        class="0"
+        projectile_speed="180"
+        sight_range_modifier="1.5"
+        can_shoot_standing="1"
+        can_shoot_crouching="1"
+        can_shoot_prone="1"
+        stab_enabled="1"
+        carry_in_two_hands="1"
+        burst_shots="1"
+        last_burst_retrigger_time="-1"
+        slot="0"/>
+        <animation key="reload" animation_key="reloading, Machine gun 5"/>
+        <animation state_key="next_in_chain_in" animation_key="NegevSwitch"/>
+        <commonness value="0" in_stock="0"/>
+        <inventory encumbrance="30.0" buy_price="75.0" sell_price="75.0"/>
+        <next_in_chain key="gkw_negev_skill_2.weapon" share_ammo="0"/>
+        <sound key="fire" fileref="negevskill_fire_FromCF.wav" pitch_variety="0.05" volume="1"/>
+        <sound key="magazine_out" fileref="negev_mgz_out_FromCF.wav" volume="0.7"/>
+        <sound key="magazine_in" fileref="negev_mgz_in_FromCF.wav" volume="0.7"/>
+        <sound key="cycle" fileref="negev_cycle_FromCF.wav" volume="0.7"/>
+        <sound class="impact" fileref="rifle_drop.wav"/>
         <sound key="effect" fileref="negev_skill_1.wav" pitch_variety="0.0" volume="1.0"/>
         <sound key="effect" fileref="negev_skill_2.wav" pitch_variety="0.0" volume="1.0"/>
         <sound key="effect" fileref="negev_skill_3.wav" pitch_variety="0.0" volume="1.0"/>
-        <model filename="gkw_mg_negev.xml" />
-        <hud_icon filename="gkw_negev_skill1.png" />
+        <model filename="gkw_mg_negev.xml"/>
+        <hud_icon filename="gkw_negev_skill1.png"/>
         <projectile file="bullet.projectile">
-            <result class="hit" kill_probability="2.2" kill_probability_offset_on_successful_hit="1.35" kill_decay_start_time="1.967" kill_decay_end_time="3.279" />
+            <result class="hit" kill_probability="2.4" kill_probability_offset_on_successful_hit="2.4" kill_decay_start_time="1.0" kill_decay_end_time="1.0"/>
+            <trail probability="1.0" key="BulletMgTrail" />
         </projectile>
-        <effect class="muzzle" ref="ejection_556" />
-        <stance state_key="running" accuracy="0.6" />
-        <stance state_key="crouch_moving" accuracy="0.6" />
-        <stance state_key="prone_moving" accuracy="0.6" />
-        <stance state_key="standing" accuracy="0.6" />
-        <stance state_key="crouching" accuracy="0.8" />
-        <stance state_key="prone" accuracy="1.9" />
-        <stance state_key="over_wall" accuracy="1.0" />
-        <modifier class="speed" value="-0.2" />
+        <effect class="muzzle" ref="ejection_556"/>
+        <stance state_key="running" accuracy="0.3"/>
+        <stance state_key="walking" accuracy="0.35"/>
+        <stance state_key="standing" accuracy="0.4"/>
+        <stance state_key="crouch_moving" accuracy="0.3"/>
+        <stance state_key="prone_moving" accuracy="0.3"/>
+        <stance state_key="crouching" accuracy="0.8"/>
+        <stance state_key="prone" accuracy="1.4"/>
+        <stance state_key="over_wall" accuracy="1.55"/>
+        <tag name="machine gun"/>
+        <capacity value="1" source="rank" source_value="0.0"/>
+        <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
+        <target_factors tag="smg" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
+        <target_factors tag="melee" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
+        <target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
+        <target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
+        <animation state_key="recoil" animation_key="recoil, hip fire"/>
+        <animation state_key="recoil" animation_key="recoil2, hip fire"/>
+        <animation state_key="recoil" animation_key="recoil3, hip fire"/>
+        <animation key="recoil" stance_key="over_wall" animation_key="recoil1"/>
+        <animation key="recoil" stance_key="over_wall" animation_key="recoil2"/>
+        <animation key="recoil" stance_key="over_wall" animation_key="recoil3"/>
+        <animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
+        <animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
+        <animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
+        <animation state_key="hold" animation_key="hold, lmg"/>
+        <animation state_key="running" animation_key="running, bayonet"/>
+        <animation state_key="walking" animation_key="walking, hip fire"/>
+        <animation state_key="walking_backwards" animation_key="walking backwards, hip fire"/>
+        <animation state_key="celebrate_shoot" animation_key="celebrating, shooting"/>
+        <animation state_key="stabbing" animation_key="melee, quick knife"/>
+        <animation state_key="stabbing" animation_key="pistol whip 3"/>
     </weapon>
-    <weapon file="heavy_mg.animation_base" key="gkw_negev_skill_2.weapon">
-
-        <specification barrel_offset="0.5" retrigger_time="0.052" accuracy_factor="0.98" sustained_fire_grow_step="0.6" sustained_fire_diminish_rate="1.5" magazine_size="150" suppressed="0" name="NEGEV-[Manic Blood]" class="0" projectile_speed="195"  sight_range_modifier="1.5" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1"/>
-        <animation key="reload" animation_key="reloading, Machine gun 5" />
-        <animation state_key="next_in_chain_in" animation_key="NegevSwitch" />
-        <commonness value="0" in_stock="0" />
-        <inventory buy_price="75.0" sell_price="75.0" />
-        <next_in_chain key="gkw_negev_skill_3.weapon" share_ammo="0" />
-        <sound key="fire" fileref="negevskill_fire_FromCF.wav" pitch_variety="0.05" volume="1" />
-        <sound key="magazine_out" fileref="negev_mgz_out_FromCF.wav" volume="0.7" />
-        <sound key="magazine_in" fileref="negev_mgz_in_FromCF.wav" volume="0.7" />
-        <sound key="cycle" fileref="negev_cycle_FromCF.wav" volume="0.7" />
-        <sound class="impact" fileref="rifle_drop.wav" />
+    <weapon key="gkw_negev_skill_2.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+        <specification 
+        barrel_offset="0.4"
+        retrigger_time="0.08"
+        accuracy_factor="0.6"
+        sustained_fire_grow_step="0.5"
+        sustained_fire_diminish_rate="3.0"
+        magazine_size="150"
+        suppressed="0"
+        name="NEGEV-[Manic Blood]"
+        class="0"
+        projectile_speed="180"
+        sight_range_modifier="1.5"
+        can_shoot_standing="1"
+        can_shoot_crouching="1"
+        can_shoot_prone="1"
+        stab_enabled="1"
+        carry_in_two_hands="1"
+        burst_shots="1"
+        last_burst_retrigger_time="-1"
+        slot="0"/>
+        <animation key="reload" animation_key="reloading, Machine gun 5"/>
+        <animation state_key="next_in_chain_in" animation_key="NegevSwitch"/>
+        <commonness value="0" in_stock="0"/>
+        <inventory encumbrance="30.0" buy_price="75.0" sell_price="75.0"/>
+        <next_in_chain key="gkw_negev_skill_3.weapon" share_ammo="0"/>
+        <sound key="fire" fileref="negevskill_fire_FromCF.wav" pitch_variety="0.05" volume="1"/>
+        <sound key="magazine_out" fileref="negev_mgz_out_FromCF.wav" volume="0.7"/>
+        <sound key="magazine_in" fileref="negev_mgz_in_FromCF.wav" volume="0.7"/>
+        <sound key="cycle" fileref="negev_cycle_FromCF.wav" volume="0.7"/>
+        <sound class="impact" fileref="rifle_drop.wav"/>
         <sound key="effect" fileref="negev_skill_1.wav" pitch_variety="0.0" volume="1.0"/>
         <sound key="effect" fileref="negev_skill_2.wav" pitch_variety="0.0" volume="1.0"/>
         <sound key="effect" fileref="negev_skill_3.wav" pitch_variety="0.0" volume="1.0"/>
-        <model filename="gkw_mg_negev.xml" />
-        <hud_icon filename="gkw_negev_skill2.png" />
+        <model filename="gkw_mg_negev.xml"/>
+        <hud_icon filename="gkw_negev_skill2.png"/>
         <projectile file="bullet.projectile">
-            <result class="hit" kill_probability="2.3" kill_probability_offset_on_successful_hit="1.85" kill_decay_start_time="1.967" kill_decay_end_time="3.279" />
+            <result class="hit" kill_probability="2.6" kill_probability_offset_on_successful_hit="2.7" kill_decay_start_time="1.0" kill_decay_end_time="1.0"/>
+            <trail probability="1.0" key="BulletMgTrail" />
         </projectile>
-        <effect class="muzzle" ref="ejection_556" />
-        <stance state_key="running" accuracy="0.6" />
-        <stance state_key="crouch_moving" accuracy="0.6" />
-        <stance state_key="prone_moving" accuracy="0.6" />
-        <stance state_key="standing" accuracy="0.6" />
-        <stance state_key="crouching" accuracy="0.8" />
-        <stance state_key="prone" accuracy="1.9" />
-        <stance state_key="over_wall" accuracy="1.0" />
-        <modifier class="speed" value="-0.2" />
+        <effect class="muzzle" ref="ejection_556"/>
+        <stance state_key="running" accuracy="0.3"/>
+        <stance state_key="walking" accuracy="0.35"/>
+        <stance state_key="standing" accuracy="0.4"/>
+        <stance state_key="crouch_moving" accuracy="0.3"/>
+        <stance state_key="prone_moving" accuracy="0.3"/>
+        <stance state_key="crouching" accuracy="0.8"/>
+        <stance state_key="prone" accuracy="1.4"/>
+        <stance state_key="over_wall" accuracy="1.55"/>
+        <tag name="machine gun"/>
+        <capacity value="1" source="rank" source_value="0.0"/>
+        <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
+        <target_factors tag="smg" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
+        <target_factors tag="melee" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
+        <target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
+        <target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
+        <animation state_key="recoil" animation_key="recoil, hip fire"/>
+        <animation state_key="recoil" animation_key="recoil2, hip fire"/>
+        <animation state_key="recoil" animation_key="recoil3, hip fire"/>
+        <animation key="recoil" stance_key="over_wall" animation_key="recoil1"/>
+        <animation key="recoil" stance_key="over_wall" animation_key="recoil2"/>
+        <animation key="recoil" stance_key="over_wall" animation_key="recoil3"/>
+        <animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
+        <animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
+        <animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
+        <animation state_key="hold" animation_key="hold, lmg"/>
+        <animation state_key="running" animation_key="running, bayonet"/>
+        <animation state_key="walking" animation_key="walking, hip fire"/>
+        <animation state_key="walking_backwards" animation_key="walking backwards, hip fire"/>
+        <animation state_key="celebrate_shoot" animation_key="celebrating, shooting"/>
+        <animation state_key="stabbing" animation_key="melee, quick knife"/>
+        <animation state_key="stabbing" animation_key="pistol whip 3"/>
     </weapon>
-    <weapon file="heavy_mg.animation_base" key="gkw_negev_skill_3.weapon">
-
-        <specification barrel_offset="0.5" retrigger_time="0.052" accuracy_factor="0.98" sustained_fire_grow_step="0.6" sustained_fire_diminish_rate="1.5" magazine_size="150" suppressed="0" name="NEGEV-[Manic Blood]" class="0" projectile_speed="195"  sight_range_modifier="1.5"/>
-        <animation key="reload" animation_key="reloading, Machine gun 5" />
-        <animation state_key="next_in_chain_in" animation_key="NegevSwitch" />
-        <commonness value="0" in_stock="0" />
-        <inventory buy_price="75.0" sell_price="75.0" />
-        <next_in_chain key="gkw_negev.weapon" share_ammo="0" />
-        <sound key="fire" fileref="negevskill_fire_FromCF.wav" pitch_variety="0.05" volume="1" />
-        <sound key="magazine_out" fileref="negev_mgz_out_FromCF.wav" volume="0.8" />
-        <sound key="magazine_in" fileref="negev_mgz_in_FromCF.wav" volume="0.8" />
-        <sound key="cycle" fileref="negev_cycle_FromCF.wav" volume="0.8" />
-        <sound class="impact" fileref="rifle_drop.wav" />
+    <weapon key="gkw_negev_skill_3.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+        <specification 
+        barrel_offset="0.4"
+        retrigger_time="0.08"
+        accuracy_factor="0.6"
+        sustained_fire_grow_step="0.5"
+        sustained_fire_diminish_rate="3.0"
+        magazine_size="150"
+        suppressed="0"
+        name="NEGEV-[Manic Blood]"
+        class="0"
+        projectile_speed="180"
+        sight_range_modifier="1.5"
+        can_shoot_standing="1"
+        can_shoot_crouching="1"
+        can_shoot_prone="1"
+        stab_enabled="1"
+        carry_in_two_hands="1"
+        burst_shots="1"
+        last_burst_retrigger_time="-1"
+        slot="0"/>
+        <animation key="reload" animation_key="reloading, Machine gun 5"/>
+        <animation state_key="next_in_chain_in" animation_key="NegevSwitch"/>
+        <commonness value="0" in_stock="0"/>
+        <inventory encumbrance="30.0" buy_price="75.0" sell_price="75.0"/>
+        <next_in_chain key="gkw_negev.weapon" share_ammo="0"/>
+        <sound key="fire" fileref="negevskill_fire_FromCF.wav" pitch_variety="0.05" volume="1"/>
+        <sound key="magazine_out" fileref="negev_mgz_out_FromCF.wav" volume="0.8"/>
+        <sound key="magazine_in" fileref="negev_mgz_in_FromCF.wav" volume="0.8"/>
+        <sound key="cycle" fileref="negev_cycle_FromCF.wav" volume="0.8"/>
+        <sound class="impact" fileref="rifle_drop.wav"/>
         <sound key="effect" fileref="negev_skill_1.wav" pitch_variety="0.0" volume="1.0"/>
         <sound key="effect" fileref="negev_skill_2.wav" pitch_variety="0.0" volume="1.0"/>
         <sound key="effect" fileref="negev_skill_3.wav" pitch_variety="0.0" volume="1.0"/>
-        <model filename="gkw_mg_negev.xml" />
-        <hud_icon filename="gkw_negev_skill3.png" />
+        <model filename="gkw_mg_negev.xml"/>
+        <hud_icon filename="gkw_negev_skill3.png"/>
         <projectile file="bullet.projectile">
-            <result class="hit" kill_probability="2.4" kill_probability_offset_on_successful_hit="2.0" kill_decay_start_time="1.967" kill_decay_end_time="3.279" />
+            <result class="hit" kill_probability="2.8" kill_probability_offset_on_successful_hit="2.8" kill_decay_start_time="1.0" kill_decay_end_time="1.0"/>
+            <trail probability="1.0" key="BulletMgTrail" />
         </projectile>
-        <effect class="muzzle" ref="ejection_556" />
-        <stance state_key="running" accuracy="0.6" />
-        <stance state_key="crouch_moving" accuracy="0.6" />
-        <stance state_key="prone_moving" accuracy="0.6" />
-        <stance state_key="standing" accuracy="0.6" />
-        <stance state_key="crouching" accuracy="0.8" />
-        <stance state_key="prone" accuracy="1.9" />
-        <stance state_key="over_wall" accuracy="1.0" />
-        <modifier class="speed" value="-0.2" />
+        <effect class="muzzle" ref="ejection_556"/>
+        <stance state_key="running" accuracy="0.3"/>
+        <stance state_key="walking" accuracy="0.35"/>
+        <stance state_key="standing" accuracy="0.4"/>
+        <stance state_key="crouch_moving" accuracy="0.3"/>
+        <stance state_key="prone_moving" accuracy="0.3"/>
+        <stance state_key="crouching" accuracy="0.8"/>
+        <stance state_key="prone" accuracy="1.4"/>
+        <stance state_key="over_wall" accuracy="1.55"/>
+        <tag name="machine gun"/>
+        <capacity value="1" source="rank" source_value="0.0"/>
+        <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
+        <target_factors tag="smg" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
+        <target_factors tag="melee" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
+        <target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
+        <target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
+        <animation state_key="recoil" animation_key="recoil, hip fire"/>
+        <animation state_key="recoil" animation_key="recoil2, hip fire"/>
+        <animation state_key="recoil" animation_key="recoil3, hip fire"/>
+        <animation key="recoil" stance_key="over_wall" animation_key="recoil1"/>
+        <animation key="recoil" stance_key="over_wall" animation_key="recoil2"/>
+        <animation key="recoil" stance_key="over_wall" animation_key="recoil3"/>
+        <animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
+        <animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
+        <animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
+        <animation state_key="hold" animation_key="hold, lmg"/>
+        <animation state_key="running" animation_key="running, bayonet"/>
+        <animation state_key="walking" animation_key="walking, hip fire"/>
+        <animation state_key="walking_backwards" animation_key="walking backwards, hip fire"/>
+        <animation state_key="celebrate_shoot" animation_key="celebrating, shooting"/>
+        <animation state_key="stabbing" animation_key="melee, quick knife"/>
+        <animation state_key="stabbing" animation_key="pistol whip 3"/>
     </weapon>
 </weapons>
