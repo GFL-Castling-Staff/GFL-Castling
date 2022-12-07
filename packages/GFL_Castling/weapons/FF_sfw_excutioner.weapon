@@ -54,7 +54,7 @@
         <stance state_key="crouching" accuracy="0.9" />
         <stance state_key="prone" accuracy="1.2" />
         <stance state_key="over_wall" accuracy="1.2" />
-		<modifier class="detectability" value="-0.25" />
+		<modifier class="detectability" value="-0.15" />
 		<modifier class="speed" value="0.8" />
 	</weapon>
 	<weapon file="gk_sf_boss.base_weapon" key="ff_excutioner_2.weapon" on_ground_up="0 0 1" time_to_live_out_in_the_open="0.0" drop_count_factor_on_death="0.0" player_death_drop_owner_lock_time="0">
