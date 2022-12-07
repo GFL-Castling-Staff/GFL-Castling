@@ -63,7 +63,7 @@
         <tag name="rifle"/>
         <commonness value="0.001" in_stock="0" can_respawn_with="1"/>
         <capacity value="1" source="rank" source_value="0.0"/>
-        <modifier class="detectability" value="-0.1"/>
+        <modifier class="detectability" value="0.0"/>
         <target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
         <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
         <target_factors tag="shotgun" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>

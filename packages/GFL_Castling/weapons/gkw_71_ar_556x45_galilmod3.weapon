@@ -56,7 +56,7 @@
         <stance state_key="standing" accuracy="1.0" />
         <stance state_key="crouching" accuracy="0.9" />
         <stance state_key="prone" accuracy="1" />
-        <modifier class="detectability" value="-0.1" />
+        <modifier class="detectability" value="0.0" />
     </weapon>
     <weapon file="two_hands_ar.animation_base" key="gkw_galilmod3_skill.weapon">
         <specification 
@@ -115,7 +115,7 @@
         <stance state_key="crouching" accuracy="1.0" />
         <stance state_key="prone" accuracy="1" />
         <modifier class="speed" value="-0.2" />
-        <modifier class="detectability" value="-0.1" />
+        <modifier class="detectability" value="0.0" />
         <modifier class="hit_success_probability" value="0" />
     </weapon>
 </weapons>
