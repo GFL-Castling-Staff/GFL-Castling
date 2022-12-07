@@ -76,7 +76,6 @@
             <result class="blast" damage="18.0" radius="3.5" decal="1" push="1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0" />
         </projectile>
         <!--Accuracy, Movement speed-->
-        <modifier class="speed" value="0.1" />
     </weapon>
     <weapon file="heavy_anti_materiel_rifle.animation_base" key="gkw_ntw20mod3_skill.weapon">
         <!--Weapon specifications-->

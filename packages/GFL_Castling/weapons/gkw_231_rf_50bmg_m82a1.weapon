@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapons>
-<weapon file="heavy_anti_materiel_rifle.animation_base" key="gkw_m82a1.weapon" >
-
-
-    <!--Weapon specifications-->
-    
-    <specification 
+	<weapon file="heavy_anti_materiel_rifle.animation_base" key="gkw_m82a1.weapon" >
+		<!--Weapon specifications-->
+		<specification 
 	retrigger_time="-1.0" 
 	accuracy_factor="1" 
 	sustained_fire_grow_step="1.1" 
@@ -25,57 +22,37 @@
 	last_burst_retrigger_time="0.25"
 	burst_shots="1"
 	/>
-	<inventory  buy_price="300.0" sell_price="200.0" />
-	<!--Animations-->
-	<next_in_chain key="gkw_m82a1_skill.weapon" share_ammo="1" />
-
-
-    <animation key="reload" animation_key="reloading, magazine rifle 2.1" />	
-	
-	<!--Sounds-->
-	
-    <sound key="fire" fileref="m82a1_fire_FromSAM4.wav" pitch_variety="0.05" volume="1.2" />
-    <sound key="cycle" fileref="m82a1_cycle_FromCOD16.wav" volume="0.4"/>
-    <sound key="magazine_out" fileref="m82a1_mgz_out_FromCOD16.wav" volume="0.4"/>
-    <sound key="magazine_in" fileref="m82a1_mgz_in_FromCOD16.wav" volume="0.4"/>
-    <sound class="impact" fileref="rifle_drop.wav" volume="1"/>
-   
-	<!--Model, Icon, Cost-->
-   
-    <model filename="gkw_rf_m82a1.xml" />
-    <hud_icon filename="gkw_m82a1.png" />
-
-
-	
-	<!--Ballistics-->
-	
-
-    <weak_hand_hold offset="0.3" />
-    <projectile file="ntw.projectile">
-        <result class="blast" damage="8"   radius="2.5" decal="1" push="0.4" character_state="death" 	faction_compare="not_equal"/>
-    </projectile>
-    
-    <!--Accuracy, Movement speed-->
-
-	<stance state_key="walking" accuracy="0.7" />
-    <stance state_key="crouch_moving" accuracy="0.5" />
-    <stance state_key="prone_moving" accuracy="0.5" />
-    <stance state_key="standing" accuracy="1"/>
-    <stance state_key="crouching" accuracy="1" />
-    <stance state_key="prone" accuracy="1" />
-    <stance state_key="over_wall" accuracy="1" />
-    <modifier class="speed" value="-0.1" /> 
-
-
-
-</weapon>
-
-<weapon file="heavy_anti_materiel_rifle.animation_base" key="gkw_m82a1_skill.weapon" >
-
-
-    <!--Weapon specifications-->
-    
-    <specification 
+		<inventory  buy_price="300.0" sell_price="200.0" />
+		<!--Animations-->
+		<next_in_chain key="gkw_m82a1_skill.weapon" share_ammo="1" />
+		<animation key="reload" animation_key="reloading, magazine rifle 2.1" />
+		<!--Sounds-->
+		<sound key="fire" fileref="m82a1_fire_FromSAM4.wav" pitch_variety="0.05" volume="1.2" />
+		<sound key="cycle" fileref="m82a1_cycle_FromCOD16.wav" volume="0.4"/>
+		<sound key="magazine_out" fileref="m82a1_mgz_out_FromCOD16.wav" volume="0.4"/>
+		<sound key="magazine_in" fileref="m82a1_mgz_in_FromCOD16.wav" volume="0.4"/>
+		<sound class="impact" fileref="rifle_drop.wav" volume="1"/>
+		<!--Model, Icon, Cost-->
+		<model filename="gkw_rf_m82a1.xml" />
+		<hud_icon filename="gkw_m82a1.png" />
+		<!--Ballistics-->
+		<weak_hand_hold offset="0.3" />
+		<projectile file="ntw.projectile">
+			<result class="blast" damage="8"   radius="2.5" decal="1" push="0.4" character_state="death" 	faction_compare="not_equal"/>
+		</projectile>
+		<!--Accuracy, Movement speed-->
+		<stance state_key="walking" accuracy="0.7" />
+		<stance state_key="crouch_moving" accuracy="0.5" />
+		<stance state_key="prone_moving" accuracy="0.5" />
+		<stance state_key="standing" accuracy="1"/>
+		<stance state_key="crouching" accuracy="1" />
+		<stance state_key="prone" accuracy="1" />
+		<stance state_key="over_wall" accuracy="1" />
+		<modifier class="speed" value="-0.1" />
+	</weapon>
+	<weapon file="heavy_anti_materiel_rifle.animation_base" key="gkw_m82a1_skill.weapon" >
+		<!--Weapon specifications-->
+		<specification 
 	retrigger_time="-1.0" 
 	accuracy_factor="1" 
 	sustained_fire_grow_step="0.9" 
@@ -95,45 +72,34 @@
 	last_burst_retrigger_time="0.25"
 	burst_shots="1"
 	/>
-	<inventory  buy_price="300.0" sell_price="200.0" />
-	<!--Animations-->
-	<next_in_chain key="gkw_m82a1.weapon" share_ammo="1" />
-
-
-    <animation key="reload" animation_key="reloading, magazine rifle 2.1" />	
-	
-	<!--Sounds-->
-	
-    <sound key="fire" fileref="m82a1_fire_FromSAM4.wav" pitch_variety="0.05" volume="1.2" />
-    <sound key="cycle" fileref="m82a1_cycle_FromCOD16.wav" volume="0.4"/>
-    <sound key="magazine_out" fileref="m82a1_mgz_out_FromCOD16.wav" volume="0.4"/>
-    <sound key="magazine_in" fileref="m82a1_mgz_in_FromCOD16.wav" volume="0.4"/>
-    <sound class="impact" fileref="rifle_drop.wav" volume="1"/>
-   
-	<!--Model, Icon, Cost-->
-   
-    <model filename="gkw_rf_m82a1.xml" />
-    <hud_icon filename="gkw_m82a1.png" />
-	<commonness value="0" in_stock="0" can_respawn_with="1" />
-	
-	<!--Ballistics-->
-	
-
-    <weak_hand_hold offset="0.3" />
-    <projectile file="ntw.projectile">
-        <result class="blast" damage="6"   radius="2.5" decal="1" push="0.4" character_state="death" 	faction_compare="not_equal"/>
-    </projectile>
-    
-    <!--Accuracy, Movement speed-->
-
-	<stance state_key="walking" accuracy="0.7" />
-    <stance state_key="crouch_moving" accuracy="0.5" />
-    <stance state_key="prone_moving" accuracy="0.5" />
-    <stance state_key="standing" accuracy="0.85"/>
-    <stance state_key="crouching" accuracy="0.9" />
-    <stance state_key="prone" accuracy="1" />
-    <stance state_key="over_wall" accuracy="1" />
-    <modifier class="speed" value="-0.25" />
-	<modifier class="detectability" value="-0.2" />
-</weapon>
+		<inventory  buy_price="300.0" sell_price="200.0" />
+		<!--Animations-->
+		<next_in_chain key="gkw_m82a1.weapon" share_ammo="1" />
+		<animation key="reload" animation_key="reloading, magazine rifle 2.1" />
+		<!--Sounds-->
+		<sound key="fire" fileref="m82a1_fire_FromSAM4.wav" pitch_variety="0.05" volume="1.2" />
+		<sound key="cycle" fileref="m82a1_cycle_FromCOD16.wav" volume="0.4"/>
+		<sound key="magazine_out" fileref="m82a1_mgz_out_FromCOD16.wav" volume="0.4"/>
+		<sound key="magazine_in" fileref="m82a1_mgz_in_FromCOD16.wav" volume="0.4"/>
+		<sound class="impact" fileref="rifle_drop.wav" volume="1"/>
+		<!--Model, Icon, Cost-->
+		<model filename="gkw_rf_m82a1.xml" />
+		<hud_icon filename="gkw_m82a1.png" />
+		<commonness value="0" in_stock="0" can_respawn_with="1" />
+		<!--Ballistics-->
+		<weak_hand_hold offset="0.3" />
+		<projectile file="ntw.projectile">
+			<result class="blast" damage="6"   radius="2.5" decal="1" push="0.4" character_state="death" 	faction_compare="not_equal"/>
+		</projectile>
+		<!--Accuracy, Movement speed-->
+		<stance state_key="walking" accuracy="0.7" />
+		<stance state_key="crouch_moving" accuracy="0.5" />
+		<stance state_key="prone_moving" accuracy="0.5" />
+		<stance state_key="standing" accuracy="0.85"/>
+		<stance state_key="crouching" accuracy="0.9" />
+		<stance state_key="prone" accuracy="1" />
+		<stance state_key="over_wall" accuracy="1" />
+		<modifier class="speed" value="-0.25" />
+		<modifier class="detectability" value="-0.1" />
+	</weapon>
 </weapons>
