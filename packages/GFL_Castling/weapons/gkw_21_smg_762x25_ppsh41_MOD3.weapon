@@ -2,7 +2,7 @@
 <weapon key="gkw_ppsh41mod3.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 <tag name="smg" />
     <specification 
-    accuracy_factor="0.8"
+    accuracy_factor="0.85"
     barrel_offset="0.4"
     class="0"
     slot="0"
@@ -15,7 +15,7 @@
     burst_shots="1"
 	sustained_fire_grow_step="0.18" 
 	sustained_fire_diminish_rate="2.2"
-    spread_range="0.25"
+    spread_range="0.2"
     stance_accuracy_rate="1.5"
     sight_range_modifier="1.25"
     stab_enabled="1"/>
