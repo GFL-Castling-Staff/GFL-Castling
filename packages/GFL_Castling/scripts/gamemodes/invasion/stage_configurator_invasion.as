@@ -450,7 +450,11 @@ class StageConfiguratorInvasion : StageConfigurator {
 			f.m_bases = 1;
 			stage.m_factions.insertLast(f);
 		}
-
+		{
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "sf_assault.call", "sf_assault_sub.call", array<string> = {""}, false,true,false,"infantry"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_assault.call", "kcco_assault_sub.call", array<string> = {""}, false,true,false,"infantry"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_zircon.call", "kcco_zircon_sub.call", array<string> = {""}, false,true,false,"infantry"));
+		}
 		{
 			Faction f(FactionConfig(1, "sf.xml", "S.F.", "0.91 0.11 0.20", "sf.xml"), createCommanderAiCommand(1, 0.50, 0.50));
 			f.m_capacityMultiplier = 0.3;
@@ -808,14 +812,6 @@ class StageConfiguratorInvasion : StageConfigurator {
 			stage.m_factions.insertLast(f);                                         // was 0 in 1.65
 		}
 		
-		{
-			XmlElement command("command");
-			command.setStringAttribute("class", "faction_resources");
-			command.setIntAttribute("faction_id", 0);
-			addFactionResourceElements(command, "vehicle", array<string> = {"noxe.vehicle"}, false);
-
-			stage.m_extraCommands.insertLast(command);
-		}        
 
 		// metadata
 		stage.m_primaryObjective = "capture";

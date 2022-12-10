@@ -35,4 +35,42 @@
 		</round>
 		<inventory encumbrance="0.0" price="300.0" />
 	</call>    
+
+	<call key="kcco_assault.call" initiation_comment1="Enemy contact, request infanry support" acknowledge_comment="Roger" notify_metagame="1" consume_rp="0" show_target_marker="0">
+		<tag name="reinforcements" />
+		<hud_icon filename="call_Airbone_Traumateam.png" />
+		<capacity value="0" source="rank" source_value="0.0" />
+		<capacity value="100" source="rank" source_value="0.0" />
+		<inventory encumbrance="0.0" price="300.0" />
+	</call>
+	<call key="kcco_assault_sub.call" acknowledge_time="0.0" launch_comment="">
+		<round instances="4" instance_class="soldier" instance_key="kcco_ar" instance_spread="4 0 4" common_spread="0 0 0" launch_time="3.0" spawn_time="4.5" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="0.0" initial_speed_to_target="0.0">
+		</round>
+		<round instances="4" instance_class="soldier" instance_key="kcco_sg" instance_spread="3 0 3" common_spread="0 0 0" launch_time="3.0" spawn_time="4.5" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="0.0" initial_speed_to_target="0.0">
+		</round>
+		<round instances="4" instance_class="soldier" instance_key="kcco_ar_human" instance_spread="3 0 3" common_spread="0 0 0" launch_time="3.0" spawn_time="4.8" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="0.0" initial_speed_to_target="0.0">
+		</round>
+		<round instances="1" instance_class="soldier" instance_key="kcco_ar_human_elite" instance_spread="3 0 3" common_spread="0 0 0" launch_time="3.0" spawn_time="4.8" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="0.0" initial_speed_to_target="0.0">
+		</round>		
+		<inventory encumbrance="0.0" price="300.0" />
+	</call>    
+
+	<call key="kcco_zircon.call" initiation_comment1="Engage enemy, request Zircon support" acknowledge_comment="Roger" notify_metagame="1" consume_rp="0" show_target_marker="0">
+		<tag name="reinforcements" />
+		<hud_icon filename="call_Airbone_Traumateam.png" />
+		<capacity value="0" source="rank" source_value="0.0" />
+		<capacity value="100" source="rank" source_value="0.0" />
+		<inventory encumbrance="0.0" price="500.0" />
+	</call>
+	<call key="kcco_zircon_sub.call" acknowledge_time="0.0" launch_comment="">
+		<round instances="4" instance_class="soldier" instance_key="kcco_mg" instance_spread="3 0 3" common_spread="0 0 0" launch_time="3.0" spawn_time="4.5" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="0.0" initial_speed_to_target="0.0">
+		</round>
+		<round instances="3" instance_class="soldier" instance_key="kcco_cerynitis" instance_spread="3 0 3" common_spread="0 0 0" launch_time="3.0" spawn_time="4.5" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="0.0" initial_speed_to_target="0.0">
+		</round>
+		<round instances="1" instance_class="soldier" instance_key="kcco_cerynitis_swap" instance_spread="3 0 3" common_spread="0 0 0" launch_time="3.0" spawn_time="4.5" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="0.0" initial_speed_to_target="0.0">
+		</round>
+		<round instances="4" instance_class="soldier" instance_key="kcco_aegis" instance_spread="3 0 3" common_spread="0 0 0" launch_time="3.0" spawn_time="4.5" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="0.0" initial_speed_to_target="0.0">
+		</round>		
+		<inventory encumbrance="0.0" price="500.0" />
+	</call>
 </calls>

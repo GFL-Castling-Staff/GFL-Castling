@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<weapon file="base_secondary.weapon" key="kcco_rpg7.weapon">
+<weapon on_ground_up="0 0 1" drop_count_factor_on_death="0.0" drop_count_factor_on_player_death="0.0" key="kcco_rpg7.weapon">
     <tag name="bazooka" />
     <specification 
     retrigger_time="-1.0" 
@@ -40,6 +40,7 @@
     <capacity value="2" source="rank" source_value="1.0" />
     <capacity value="3" source="rank" source_value="2.0" />
     <capacity value="4" source="rank" source_value="3.0" />
+    <addon_model filename="rpg7back.xml" />
 
     <hud_icon filename="rpg-7.png" />
     <commonness value="0.2" />

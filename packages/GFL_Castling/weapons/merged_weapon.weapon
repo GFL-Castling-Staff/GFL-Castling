@@ -21446,7 +21446,7 @@
 </weapon>
 
 <weapon key="gkw_pp19mod3.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification accuracy_factor="0.9" barrel_offset="0.32" class="0" magazine_size="64" name="PP-19 Bizon(MOD3)" projectile_speed="110" retrigger_time="0.08" suppressed="0" sustained_fire_diminish_rate="2.8" sustained_fire_grow_step="0.5" spread_range="0.2" stab_enabled="1" stance_accuracy_rate="2.0" carry_in_two_hands="0" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
+	<specification accuracy_factor="0.9" barrel_offset="0.3" class="0" magazine_size="64" name="PP-19 Bizon(MOD3)" projectile_speed="110" retrigger_time="0.08" suppressed="0" sustained_fire_diminish_rate="2.8" sustained_fire_grow_step="0.5" spread_range="0.2" stab_enabled="1" stance_accuracy_rate="2.0" carry_in_two_hands="0" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
 	<animation state_key="hold_casual" animation_key="dancing, kazachok"/>
 	<inventory buy_price="190.0" sell_price="190.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -21457,7 +21457,7 @@
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_smg_pp19_mod3.xml"/>
 	<hud_icon filename="gkw_pp19mod3.png"/>
-	<weak_hand_hold offset="0.15"/>
+	<weak_hand_hold offset="0.25"/>
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="1.65" kill_probability_offset_on_successful_hit="3.0" kill_decay_start_time="0.25" kill_decay_end_time="0.5"/>
 	</projectile>
@@ -22890,7 +22890,7 @@
 	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
 	<animation state_key="hold_on_wall" animation_key="still"/>
 	<animation state_key="celebrate_shoot" animation_key="celebrating, shooting"/>
-	<animation state_key="reload" animation_key="reloading, magazine rifle 1.2"/>
+	<animation state_key="reload" animation_key="reloading, magazine rifle 1.5"/>
 	<animation state_key="stabbing" animation_key="melee, quick knife"/>
 	<animation state_key="stabbing" animation_key="pistol whip 3"/>
 	<sound key="fire" fileref="PPSH_Fire_FromCOD17.wav" pitch_variety="0.05" volume="1.1"/>
@@ -23264,12 +23264,12 @@
 	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
 	<animation state_key="hold_on_wall" animation_key="still"/>
 	<animation state_key="celebrate_shoot" animation_key="celebrating, shooting"/>
-	<animation state_key="reload" animation_key="reloading, magazine rifle 1.2"/>
+	<animation state_key="reload" animation_key="reloading, magazine rifle 1.5"/>
 	<animation state_key="stabbing" animation_key="melee, quick knife"/>
 	<animation state_key="stabbing" animation_key="pistol whip 3"/>
 	<sound key="fire" fileref="kp31_fire_FromBF5.wav" pitch_variety="0.05" volume="1.1"/>
-	<sound key="magazine_out" fileref="PPSH_mgz_out_FromCOD17.wav" volume="0.9"/>
-	<sound key="magazine_in" fileref="PPSH_mgz_in_FromCOD17.wav" volume="0.9"/>
+	<sound key="magazine_out" fileref="kp31_mgz_out_FromINS.wav" volume="0.9"/>
+	<sound key="magazine_in" fileref="kp31_mgz_in_FromINS.wav" volume="0.9"/>
 	<sound key="cycle" fileref="kp31_cycle_FromINS.wav" volume="0.8"/>
 	<sound key="cycle" fileref="kp31_cycle_FromINS.wav" volume="0.8"/>
 	<sound key="cycle" fileref="KP31_AGREE_JP.wav" volume="0.8" pitch_variety="0"/>
@@ -44423,6 +44423,38 @@
 	<animation state_key="celebrate_shoot" animation_key="celebrating, shooting"/>
 	<animation state_key="stabbing" animation_key="melee, quick knife"/>
 	<animation state_key="stabbing" animation_key="pistol whip 3"/>
+</weapon>
+
+<weapon on_ground_up="0 0 1" drop_count_factor_on_death="0.0" drop_count_factor_on_player_death="0.0" key="kcco_rpg7.weapon">
+	<tag name="bazooka"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="0.5" magazine_size="1" can_shoot_standing="1" can_shoot_crouching="1" suppressed="0" name="RPG-7" class="3" reload_one_at_a_time="1" sight_range_modifier="1.5" projectile_speed="60.0" slot="1" projectiles_per_shot="1"/>
+	<animation key="recoil" animation_key="recoil, law"/>
+	<animation key="cycle" animation_key="Brifle1"/>
+	<animation key="reload" animation_key="AT4Reload"/>
+	<animation key="hold" animation_key="still, with law"/>
+	<animation key="hold_on_wall" animation_key="still, with law"/>
+	<sound key="fire" fileref="rpg-7_shot.wav" volume="0.8"/>
+	<sound key="cycle" fileref="sniper_cycle.wav"/>
+	<sound key="magazine_out" fileref="sniper_clip_out.wav"/>
+	<sound key="magazine_in" fileref="sniper_clip_in.wav"/>
+	<sound key="cycle_out" fileref="sniper_cycle_out.wav"/>
+	<sound key="cycle_in" fileref="sniper_cycle_in.wav"/>
+	<sound class="impact" fileref="rifle_drop.wav"/>
+	<model filename="rpg-7.xml"/>
+	<ballistics near_far_distance="1000.0" speed_estimation_near="60.0" speed_estimation_far="60.0" max_speed="100.0" randomness="0.0"/>
+	<projectile file="rpg-7.projectile"/>
+	<weak_hand_hold offset="0.3"/>
+	<capacity value="1" source="rank" source_value="0.0"/>
+	<capacity value="2" source="rank" source_value="1.0"/>
+	<capacity value="3" source="rank" source_value="2.0"/>
+	<capacity value="4" source="rank" source_value="3.0"/>
+	<addon_model filename="rpg7back.xml"/>
+	<hud_icon filename="rpg-7.png"/>
+	<commonness value="0.2"/>
+	<inventory encumbrance="5.0" price="3.0"/>
+	<effect class="muzzle" ref="LawMuzzle"/>
+	<effect class="muzzle" ref="UpDust"/>
+	<modifier class="speed" value="-0.2"/>
 </weapon>
 
 <weapon key="parw_streletplus.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">

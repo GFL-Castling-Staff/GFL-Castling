@@ -454,8 +454,12 @@
 		<resources clear_weapons="1" clear_vehicles="1" clear_calls="1" clear_carry_items="1" clear_grenades="1">
 			<weapon key="kcco_ar.weapon" enabled="1" />
 			<carry_item key="kcco_sg.carry_item" enabled="1" />
+			<weapon key="kcco_rpg7.weapon" enabled="1" />
 			<projectile key="kcco_smartgrenade_1.projectile" enabled="1.0" />
 		</resources>
+		<item_class_existence_config>
+			<item_class_existence class="weapon" slot="1" probability="0.1" />
+		</item_class_existence_config>		
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="0.0" max="1.05" />
 		</attribute_config>
@@ -467,12 +471,21 @@
 		<models file="kcco_human_basic.models" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_carry_items="1" clear_grenades="1">
 			<weapon key="kcco_ar_2.weapon" enabled="1" />
+			<weapon key="kcco_rpg7.weapon" enabled="1" />
 			<carry_item key="kcco_ar.carry_item" enabled="1" />
 			<projectile key="kcco_smartgrenade_1.projectile" enabled="1.0" />
+			<call key="kcco_assault.call" />			
 		</resources>
+		<item_class_existence_config>
+			<item_class_existence class="weapon" slot="1" probability="0.25" />
+		</item_class_existence_config>				
 		<attribute_config class="xp">
-			<attribute weight="1.0" min="0.5" max="3.8" />
+			<attribute weight="1.0" min="0.5" max="1.9" />
 		</attribute_config>
+		<attribute_config class="rp">
+			<attribute weight="1.0" min="500" max="500" />
+			<attribute weight="4.0" min="0" max="250" />
+		</attribute_config>				
 	</soldier>
 	<soldier name="kcco_ar_human_elite" spawn_score="0.3" copy_from="default_bot" clear_grenades="1">
 		<ai filename="kcco_elite.ai" />
@@ -480,12 +493,22 @@
 		<models file="kcco_human_commander.models" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_carry_items="1" clear_grenades="1">
 			<weapon key="kcco_ar_2.weapon" enabled="1" />
+			<weapon key="kcco_rpg7.weapon" enabled="1" />
 			<carry_item key="vest_15hp_elite.carry_item" enabled="1" />
 			<projectile key="kcco_ap_grenade.projectile" enabled="1.0" />
+			<call key="kcco_assault.call" />			
+			<call key="kcco_zircon.call" />
 		</resources>
+		<item_class_existence_config>
+			<item_class_existence class="weapon" slot="1" probability="0.75" />
+		</item_class_existence_config>
 		<attribute_config class="xp">
-			<attribute weight="1.0" min="0.5" max="3.8" />
+			<attribute weight="1.0" min="1.9" max="3.1" />
 		</attribute_config>
+		<attribute_config class="rp">
+			<attribute weight="1.0" min="1000" max="1000" />
+			<attribute weight="4.0" min="300" max="600" />
+		</attribute_config>				
 	</soldier>
 	<!--赤铁矿通讯兵-->
 	<soldier name="kcco_ar_human_tel" spawn_score="0.15" copy_from="default_bot">
@@ -497,11 +520,21 @@
 			<weapon key="kcco_tracer_dart_accurate.weapon" enabled="1" /> 
 			<carry_item key="vest_15hp_elite.carry_item" enabled="1" />
 			<projectile key="kcco_tracer_dart_r.projectile" enabled="1.0" />
-			<projectile key="kcco_tracer_dart_a.projectile" enabled="1.0" />		
+			<projectile key="kcco_tracer_dart_a.projectile" enabled="1.0" />	
+			<call key="kcco_zircon.call" />
+			<call key="kcco_assault.call" />
 		</resources>
+		<item_class_existence_config>
+			<item_class_existence class="weapon" slot="1" probability="0.75" />
+			<item_class_existence class="grenade" slot="0" probability="1.0" />
+		</item_class_existence_config>		
 		<attribute_config class="xp">
-			<attribute weight="1.0" min="0.5" max="3.8" />
+			<attribute weight="1.0" min="1.0" max="4.0" />
 		</attribute_config>
+		<attribute_config class="rp">
+			<attribute weight="1.0" min="1000" max="2000" />
+			<attribute weight="0.5" min="3000" max="4000" />
+		</attribute_config>		
 	</soldier>	
 	<!-- sg -->
 	<soldier name="kcco_sg" spawn_score="1.5" copy_from="default_bot">
@@ -509,8 +542,12 @@
 		<ai filename="eod.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_calls="1" clear_carry_items="1">
 			<weapon key="kcco_sg.weapon" enabled="1" />
+			<weapon key="kcco_rpg7.weapon" enabled="1" />
 			<carry_item key="kcco_sg.carry_item" enabled="1" />
 		</resources>
+		<item_class_existence_config>
+			<item_class_existence class="weapon" slot="1" probability="0.1" />
+		</item_class_existence_config>		
 	</soldier>
 	<!-- mg -->
 	<soldier name="kcco_mg" spawn_score="0.5" copy_from="default_bot">
@@ -663,6 +700,8 @@
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="kccow_tactical_sniper_rf.weapon" enabled="1" />
 			<carry_item key="vest_15hp_elite.carry_item" />
+			<call key="kcco_zircon.call" />
+			<call key="kcco_assault.call" />			
 		</resources>
 		<item_class_existence_config>
 			<item_class_existence class="carry_item" slot="1" probability="1" />
@@ -672,6 +711,9 @@
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="0.01" max="0.01" />
 		</attribute_config>
+		<attribute_config class="rp">
+			<attribute weight="1.0" min="1500" max="2000" />
+		</attribute_config>				
 	</soldier>
 	<!-- KCCO石英小队精英突击兵 -->
 	<soldier name="kcco_quartz_ranger" spawn_score="0.05" copy_from="default_bot">
@@ -689,6 +731,8 @@
 			<call key="kcco_Hephaestus.call" />
 			<call key="kcco_argo_puppis.call" />
 			<call key="kcco_argo_carina.call" />
+			<call key="kcco_zircon.call" />
+			<call key="kcco_assault.call" />			
 		</resources>
 		<item_class_existence_config>
 			<item_class_existence class="carry_item" slot="1" probability="1" />
@@ -698,6 +742,9 @@
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="0.01" max="0.01" />
 		</attribute_config>
+		<attribute_config class="rp">
+			<attribute weight="1.0" min="3000" max="3000" />
+		</attribute_config>						
 	</soldier>
 	<!-- store -->
 	<!-- <soldier name="default_hg" spawn_score="0.0">
