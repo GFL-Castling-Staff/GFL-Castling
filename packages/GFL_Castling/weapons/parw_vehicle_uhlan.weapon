@@ -68,20 +68,15 @@
         <projectile file="bullet_paradeus.projectile">
             <result class="hit" kill_probability="2.0" kill_decay_start_time="2.682" kill_decay_end_time="5.7" />
         </projectile>
-        <!-- Scoring for target priority. Distance is between 0 and 1 based on range; direction is between 0 and 1 based on whether its near the barrel; squad_command is between 0 and on based on how close to the player's command order is, and base_score is a weight.. -->
-        <!-- These all add together and the highest 'score' is the new target, targets are rescanned every 2.5 seconds to see if a new higher-score target is in sight-range. -->
-        <!-- You must define a blank tag at the top of the list to handle all cases where the vehicle is fighting something "undefined", which is what common infantry might best fit under. -->
         <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5" />
         <target_factors tag="heavy_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0" />
         <target_factors tag="apc" distance="1.0" direction="0.0" squad_command="1.0" base_score="6.0" />
         <target_factors tag="light_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="5.0" />
         <target_factors tag="defensive_at" distance="1.0" direction="0.0" squad_command="1.0" base_score="5.5" />
         <target_factors tag="tactical" distance="1.0" direction="0.0" squad_command="1.0" base_score="7.0" />
-        <!-- important non combat player-only vehicles -->
         <target_factors tag="bazooka" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.5" />
         <target_factors tag="punchme" distance="1.0" direction="0.0" squad_command="1.0" base_score="30.0" />
         <effect class="muzzle" ref="muzzle_uhlan" />
-        <!-- <effect class="muzzle" ref="BigMuzzle" /> -->
         <sound class="operation" key="fire" fileref="uhlan_fire.wav" volume="0"/>
     </weapon>
     <weapon key="uhlan_rocket">
