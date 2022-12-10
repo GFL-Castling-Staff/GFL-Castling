@@ -2,7 +2,7 @@
 <weapon key="gkw_pp19mod3.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
   <specification 
     accuracy_factor="0.9"
-		barrel_offset="0.32" 
+		barrel_offset="0.3" 
 		class="0"
 		magazine_size="64" 
 		name="PP-19 Bizon(MOD3)" 
@@ -28,7 +28,7 @@
   <sound class="impact" fileref="rifle_drop.wav" />
   <model filename="gkw_smg_pp19_mod3.xml" />
   <hud_icon filename="gkw_pp19mod3.png" />
-  <weak_hand_hold offset="0.15"/>
+  <weak_hand_hold offset="0.25"/>
   <projectile file="bullet.projectile">
     <result class="hit" kill_probability="1.65" kill_probability_offset_on_successful_hit="3.0" kill_decay_start_time="0.25" kill_decay_end_time="0.5"/>
   </projectile>

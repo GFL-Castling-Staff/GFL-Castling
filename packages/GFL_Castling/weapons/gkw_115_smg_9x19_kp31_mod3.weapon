@@ -37,12 +37,12 @@
 	  <animation key="recoil" stance_key="prone" animation_key="recoil3, prone" />
 	  <animation state_key="hold_on_wall" animation_key="still" />
     <animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
-    <animation state_key="reload" animation_key="reloading, magazine rifle 1.2" />
+    <animation state_key="reload" animation_key="reloading, magazine rifle 1.5" />
 	  <animation state_key="stabbing" animation_key="melee, quick knife" />
 	  <animation state_key="stabbing" animation_key="pistol whip 3" />
     <sound key="fire" fileref="kp31_fire_FromBF5.wav" pitch_variety="0.05" volume="1.1" />
-    <sound key="magazine_out" fileref="PPSH_mgz_out_FromCOD17.wav" volume="0.9" />
-    <sound key="magazine_in" fileref="PPSH_mgz_in_FromCOD17.wav" volume="0.9" />
+    <sound key="magazine_out" fileref="kp31_mgz_out_FromINS.wav" volume="0.9" />
+    <sound key="magazine_in" fileref="kp31_mgz_in_FromINS.wav" volume="0.9" />
     <sound key="cycle" fileref="kp31_cycle_FromINS.wav" volume="0.8" />
     <sound key="cycle" fileref="kp31_cycle_FromINS.wav" volume="0.8" />
     <sound key="cycle" fileref="KP31_AGREE_JP.wav" volume="0.8" pitch_variety="0"/>

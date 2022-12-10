@@ -429,7 +429,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.m_mapInfo.m_path = "media/packages/GFL_Castling/maps/map105_2";
 		stage.m_mapInfo.m_id = "map105_2";
 
-		stage.m_maxSoldiers = 120;
+		stage.m_maxSoldiers = 150;
 		stage.m_soldierCapacityModel = "constant";
 		stage.m_playerAiCompensation = 3;
         stage.m_playerAiReduction = 0;
@@ -437,7 +437,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.m_fogOffset= 28;
 		stage.m_fogRange= 28.5;
 		stage.m_minRandomCrates = 1; 
-		stage.m_maxRandomCrates = 3;
+		stage.m_maxRandomCrates = 5;
 
 		stage.m_defenseWinTime = 360; 
 		stage.m_defenseWinTimeMode = "custom";
@@ -464,7 +464,14 @@ class StageConfiguratorInvasion : StageConfigurator {
 			f.m_capacityMultiplier = 1.3;
 			stage.m_factions.insertLast(f);                                    
 		}
+		{
+			XmlElement command("command");
+			command.setStringAttribute("class", "faction_resources");
+			command.setIntAttribute("faction_id", 0);
+			addFactionResourceElements(command, "vehicle", array<string> = {"sf_jupiter_destroy.vehicle"}, true);
 
+			stage.m_extraCommands.insertLast(command);
+		}        
 		// metadata
 		stage.m_primaryObjective = "koth";
 		stage.m_kothTargetBase = "All SF Base";

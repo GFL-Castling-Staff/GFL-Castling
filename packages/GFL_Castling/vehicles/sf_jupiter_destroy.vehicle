@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vehicle name="" map_view_atlas_index="-1" usable_for_cover="1" owner="faction" allow_owner_to_use_only="1" allow_character_leave_request="0" character_leave_request_mode="friendly" key="sf_jupiter_destroy.vehicle" respawn_time="100000" existence="one_per_faction" >
+
+	<tire_set offset="1.5 0.0 1.5" radius="0.65" />
+	<tire_set offset="1.5 0.0 -1.5" radius="0.65" />
+	
+	<modifier class="blast_range" value="-100.0" />
+    <modifier class="blast_damage" value="-100.0" />
+
+	<control max_speed="3.0" acceleration="1.0" max_reverse_speed="1.0" max_rotation="0.8" max_water_depth="1.0" />
+
+	<physics 
+		blast_damage_threshold="100.0" 
+		max_health="10000.0" 
+		mass="9999.5" 
+		extent="2.2 4.0 4.2" 
+		offset="0 0.0 0" 
+		top_offset="0 2 0" 
+		collision_model_pos="0 0.7 0" 
+		collision_model_extent="2 4.8 3" 
+		visual_offset="0 0.0 0" 
+		collision_response_factor="0.2" 
+		blast_push_threshold="10.0" 
+		vehicle_collision_damage_factor="2.0" 
+	/>
+	
+	<visual class="chassis" mesh_filename="Jupiter_base_2.mesh" texture_filename="Jupiter.png" max_tilt="0"/>
+	<visual class="chassis" key="broken" mesh_filename="Jupiter_base_2.mesh" texture_filename="Jupiter.png" max_tilt="0"/>
+	
+	<visual offset="0 0.24 0" class="turret" turret_index="0" mesh_filename="Jupiter_turret_2.mesh" texture_filename="Jupiter.png" />
+	<visual offset="0 0.24 0" class="turret" key="broken" turret_index="0" mesh_filename="Jupiter_turret_2.mesh" texture_filename="Jupiter.png" />	
+	
+	<sound key="slide" filename="slide_noise.wav" />
+	<sound key="squeal" filename="tire_squeal.wav" />
+	<sound key="ignition" filename="truck_ignition.wav" />
+	<sound key="hit" filename="car_hit1.wav" />
+	<sound key="hit" filename="car_hit2.wav" />
+	<sound key="hit" filename="car_hit3.wav" />
+
+	<effect event_key="idle_chassis" ref="SmallSmokeVehicle" offset="0.0 0.8 0.0" />
+	<effect event_key="idle_chassis" ref="SmallSmokeVehicle" offset="0.0 4.96 0.0" />
+	<effect event_key="idle_chassis" ref="SmallFireRepeat" offset="0.0 4.64 0.0" />
+	<effect event_key="idle_chassis" ref="MediumSmokeVehicle" offset="0.0 2.64 2.0" /> 
+</vehicle>
