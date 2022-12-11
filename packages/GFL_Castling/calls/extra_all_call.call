@@ -5,7 +5,10 @@
 	<call file="map_all_call.call" />
     <call file="structure_all_call.call" />
     <call file="experiment_all_call.call"/>
-	<call file="spawn_in_base.call"/>
+	<call file="spawn_in_base_sf.call"/>
+    <call file="spawn_in_base_kcco.call"/>
+    <call file="spawn_in_base_para.call"/>
+
     <call file="skydive_event.call"/>
 
     

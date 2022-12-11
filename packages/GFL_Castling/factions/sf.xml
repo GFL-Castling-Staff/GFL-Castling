@@ -468,11 +468,16 @@
 			<carry_item key="vest_15hp_elite.carry_item" enabled="1" />
 			<weapon key="cover_deploy.weapon" enabled="1"/>
 			<projectile key="sf_ap_grenade.projectile" enabled="1" />
+			<call key="sf_assault.call" />
 		</resources>
 		<item_class_existence_config>
 			<item_class_existence class="weapon" slot="1" probability="0.1" />
 			<item_class_existence class="grenade" slot="0" probability="1.0" />
-		</item_class_existence_config>		
+		</item_class_existence_config>	
+		<attribute_config class="rp">
+			<attribute weight="1.0" min="100.0" max="100.0" />
+			<attribute weight="0.3" min="300.0" max="500.0" />
+		</attribute_config>			
 	</soldier>
 	<!-- ripper -->
 	<soldier name="sf_ripper" spawn_score="3.0" copy_from="default_spawn_ai">
@@ -485,7 +490,7 @@
 		</resources>
 		<item_class_existence_config>
 			<item_class_existence class="weapon" slot="1" probability="0.3" />
-			<item_class_existence class="grenade" slot="0" probability="0.25" />
+			<item_class_existence class="grenade" slot="0" probability="0.5" />
 		</item_class_existence_config>			
 	</soldier>
 	<soldier name="sf_ripper_swap" spawn_score="1.0" copy_from="default_spawn_ai">
@@ -495,11 +500,16 @@
 			<weapon key="sfw_ripper_swap.weapon" enabled="1"/>
 			<carry_item key="vest_15hp_elite_2" enabled="1" />
 			<projectile key="sf_ap_grenade.projectile" enabled="1" />
+			<call key="sf_assault.call" />
 		</resources>
 		<item_class_existence_config>
 			<item_class_existence class="weapon" slot="1" probability="0.5" />
-			<item_class_existence class="grenade" slot="0" probability="0.75" />
-		</item_class_existence_config>			
+			<item_class_existence class="grenade" slot="0" probability="1.0" />
+		</item_class_existence_config>	
+		<attribute_config class="rp">
+			<attribute weight="1.0" min="100.0" max="100.0" />
+			<attribute weight="0.3" min="300.0" max="500.0" />
+		</attribute_config>
 	</soldier>
 	<!-- guard -->
 	<soldier name="sf_guard" spawn_score="3.0" copy_from="default_spawn_ai">
@@ -543,7 +553,12 @@
 		<resources clear_weapons="1" clear_calls="1">
 			<weapon key="sfw_jaeger_swap.weapon" enabled="1"/>
 			<carry_item key="vest_15hp_elite.carry_item" enabled="1" />
+			<call key="sf_assault.call" />
 		</resources>
+		<attribute_config class="rp">
+			<attribute weight="1.0" min="100.0" max="100.0" />
+			<attribute weight="0.3" min="300.0" max="500.0" />
+		</attribute_config>		
 	</soldier>
 	<!-- striker -->
 	<soldier name="sf_striker" spawn_score="2.5" copy_from="default_spawn_ai">
@@ -562,7 +577,12 @@
 			<weapon key="sfw_striker_swap.weapon" enabled="1"/>
 			<carry_item key="vest_15hp_elite.carry_item" enabled="1" />
 			<projectile key="sf_ap_mine.projectile" enabled="1.0" />
+			<call key="sf_assault.call" />
 		</resources>
+		<attribute_config class="rp">
+			<attribute weight="1.0" min="100.0" max="100.0" />
+			<attribute weight="0.3" min="300.0" max="500.0" />
+		</attribute_config>				
 	</soldier>
 	<!-- nemeum 钢狮 -->
 	<soldier name="sfw_nemeum" spawn_score="0.7" copy_from="default_spawn_ai">
@@ -721,7 +741,7 @@
 			<weapon key="sfw_hunter.weapon" enabled="1"/>
 			<call key="sf_destroyer.call" />
 			<call key="sf_jaguar.call" />
-			<call key="sf_jupiter.call" />
+			<call key="sf_assualt.call" />
 			<projectile key="sf_emp_mine.projectile"/>
 			<carry_item key="vest_50hp_enforcer.carry_item" enabled="1" />
 		</resources>
@@ -744,6 +764,7 @@
 		<ai filename="sf_architect.ai" />
 		<resources clear_vehicles="1" clear_weapons="1" clear_calls="1" clear_carry_items="1">
 			<call key="sf_jupiter.call" />
+			<call key="sf_assualt.call" />
 			<weapon key="sfw_architect.weapon" enabled="1"/>
 			<weapon key="sfw_architect_at.weapon" enabled="1"/>
 			<carry_item key="vest_40hp.carry_item" enabled="1" />
@@ -769,6 +790,7 @@
 			<call key="sf_destroyer.call" />
 			<call key="sf_jaguar.call" />
 			<call key="sf_jupiter.call" />
+			<call key="sf_assualt.call" />
 			<weapon key="sfw_Intruder.weapon" enabled="1"/>
 			<carry_item key="vest_40hp.carry_item" enabled="1" />
 		</resources>
@@ -793,6 +815,7 @@
 			<call key="sf_destroyer.call" />
 			<call key="sf_jaguar.call" />
 			<call key="sf_jupiter.call" />
+			<call key="sf_assualt.call" />
 			<weapon key="sfw_dreamer.weapon" enabled="1"/>
 			<carry_item key="vest_40hp.carry_item" enabled="1" />
 		</resources>
@@ -817,6 +840,7 @@
 		<resources clear_vehicles="1" clear_weapons="1" clear_calls="1" clear_carry_items="1">
 			<call key="sf_destroyer.call" />
 			<call key="sf_jaguar.call" />
+			<call key="sf_assualt.call" />
 			<weapon key="sfw_alchemist.weapon" enabled="1"/>
 			<carry_item key="vest_50hp_enforcer.carry_item" enabled="1" />
 		</resources>
@@ -841,6 +865,7 @@
 		<resources clear_vehicles="1" clear_weapons="1" clear_calls="1" clear_carry_items="1">
 			<call key="sf_jaguar.call" />
 			<call key="sf_destroyer.call" />
+			<call key="sf_assualt.call" />
 			<weapon key="sfw_gager.weapon" enabled="1"/>
 			<carry_item key="vest_50hp_enforcer.carry_item" enabled="1" />
 		</resources>
@@ -864,6 +889,7 @@
 		<ai filename="eod.ai" />
 		<resources clear_vehicles="1" clear_weapons="1" clear_calls="1" clear_carry_items="1">
 			<call key="sf_jaguar.call" />
+			<call key="sf_assualt.call" />
 			<weapon key="sfw_excutioner_1.weapon" enabled="1"/>
 			<carry_item key="vest_50hp_enforcer.carry_item" enabled="1" />
 		</resources>
@@ -891,6 +917,7 @@
 		<ai filename="excutioner.ai" />
 		<resources clear_vehicles="1" clear_weapons="1" clear_calls="1" clear_carry_items="1">
 			<call key="sf_jaguar.call" />
+			<call key="sf_assualt.call" />
 			<weapon key="sfw_excutioner_2.weapon" enabled="1"/>
 			<carry_item key="vest_50hp_enforcer.carry_item" enabled="1" />
 		</resources>
@@ -917,6 +944,7 @@
 			<call key="sf_destroyer.call" />
 			<call key="sf_jaguar.call" />
 			<call key="sf_jupiter.call" />
+			<call key="sf_assualt.call" />
 			<carry_item key="sf_m16a1.carry_item" enabled="1" />
 		</resources>
 		<attribute_config class="xp">
@@ -945,6 +973,7 @@
 			<call key="sf_destroyer.call" />
 			<call key="sf_jaguar.call" />
 			<call key="sf_jupiter.call" />
+			<call key="sf_assualt.call" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="600.0" max="800.05" />
@@ -968,9 +997,9 @@
 		<resources clear_vehicles="1" clear_weapons="1" clear_calls="1" clear_carry_items="1">
 			<weapon key="sfw_destroyer.weapon" enabled="1"/>
 			<carry_item key="vest_40hp.carry_item" enabled="1" />
-			<call key="sf_destroyer.call" />
+			<call key="sf_assualt.call" />
 			<call key="sf_jaguar.call" />
-			<call key="sf_jupiter.call" />
+			<call key="sf_jupiter.call" />			
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="300.0" max="300.05" />
@@ -1027,6 +1056,7 @@
 			<call key="sf_destroyer.call" />
 			<call key="sf_jaguar.call" />
 			<call key="sf_jupiter.call" />
+			<call key="sf_assualt.call" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="500.0" max="500.05" />
@@ -1055,6 +1085,7 @@
 			<weapon key="sfw_scarecrow.weapon" enabled="1"/>
 			<carry_item key="vest_40hp.carry_item" enabled="1" />
 			<call key="sf_jaguar.call" />
+			<call key="sf_assualt.call" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="500.0" max="500.05" />
