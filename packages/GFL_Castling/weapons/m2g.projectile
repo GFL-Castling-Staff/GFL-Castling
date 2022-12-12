@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<projectile key="ASW_A10_rocket.projectile" slot="2" pulldown_in_air="0.0">
+<projectile class="grenade" name="rocket" slot="2" pulldown_in_air="0.5" radius="0.4">
     <tag name="rocket"/>
+	
+    <result class="blast" damage="25" radius="3.0" decal="1" push="0.8" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
     <trigger class="impact" />
     <rotation class="motion" />
-    <model mesh_filename="m202_rocket.xml"/>
-    <result class="blast" radius="6.0" character_state="death" damage="3" push="0.4" decal="1" faction_compare="not_equal" damage_origin_vehicle="0"/>
-	<trigger class="impact"/>
+    <model mesh_filename="law_rocket.xml" />
+
     <commonness value="0.0" />
 
-    <sound class="result" key="other" fileref="explosion_RPG_FromSQUAD_1.wav" volume="1.5" />
-    <sound class="result" key="other" fileref="explosion_RPG_FromSQUAD_2.wav" volume="1.5" />
+    <sound class="result" key="other" fileref="explosion_RPG_FromSQUAD_1.wav" volume="2.9" />
+    <sound class="result" key="other" fileref="explosion_RPG_FromSQUAD_2.wav" volume="2.9" />
 
     <sound class="result" key="vehicle" copy="other" />    
     <sound class="result" key="vehicle" tag="metal_heavy" fileref="blast_metal_hit_01.wav" pitch_variety="0.2" volume="0.8" />
@@ -33,19 +34,16 @@
     <effect class="result" key="terrain" ref="Shine" lighting="0" />
     <effect class="result" key="terrain" ref="Godray" lighting="0" />
     <effect class="result" key="terrain" ref="ShadowSmoke" shadow="1" />
-	<effect class="result" key="terrain" ref="woosh" post_processing="0" shadow="0" />  
-    <effect class="result" type="splat_map" surface_tag="" size="5.0" atlas_index="0" layer="1" />
-    <effect class="result" type="splat_map" surface_tag="" size="6.5" atlas_index="4" layer="0" />
-    <effect class="result" type="splat_map" surface_tag="" size="8.0" atlas_index="0" layer="2" additive="0" /> <!-- remove top snow everywhere -->
+    <effect class="result" type="splat_map" surface_tag="" size="3.0" atlas_index="0" layer="1" />
+    <effect class="result" type="splat_map" surface_tag="" size="4.5" atlas_index="4" layer="0" />
+    <effect class="result" type="splat_map" surface_tag="" size="5.5" atlas_index="0" layer="2" additive="0" /> <!-- remove top snow everywhere -->
 
     <effect class="result" key="other" ref="SmokeTop" post_processing="1" />
     <effect class="result" key="other" ref="Smoke" post_processing="1" />
     <effect class="result" key="other" ref="Shine" lighting="0" />
     <effect class="result" key="other" ref="Godray" lighting="0" />
     <effect class="result" key="other" ref="ShadowSmoke" shadow="1" />
-	<effect class="result" key="other" ref="woosh" post_processing="0" shadow="0" />  
-	<effect class="result" key="other" ref="woosh" post_processing="0" shadow="0" />  
-	
+
     <effect class="result" key="static_object" copy="terrain" />
     <effect class="result" key="vehicle" copy="terrain" />     
     <effect class="result" key="character" copy="terrain" />

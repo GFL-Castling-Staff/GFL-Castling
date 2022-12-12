@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projectile class="grenade" key="ASW_AC130_NTW.projectile" name="AP bullet" slot="1" pulldown_in_air="4">
-    <result class="blast" radius="4.0" damage="20" push="1" decal="0" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0" />
+    <result class="blast" radius="4.0" damage="15" push="1" decal="0" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0" />
     <rotation class="motion" />
     <trigger class="impact"/>
     <sound class="result" key="terrain" fileref="ricochet1.wav" />
@@ -83,6 +83,6 @@
     <effect class="result" type="splat_map" surface_tag="" size="4.5" atlas_index="4" layer="0" />
     <effect class="result" type="splat_map" surface_tag="" size="5.0" atlas_index="0" layer="2" additive="0" />
 
-    <trail probability="1.0" />
+    <trail probability="0.0" />
 
 </projectile>

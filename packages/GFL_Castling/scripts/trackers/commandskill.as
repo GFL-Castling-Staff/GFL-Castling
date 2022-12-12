@@ -490,6 +490,11 @@ class CommandSkill : Tracker {
                     m_modifer.setCooldownReduction(0.8);
                 }
 
+                if (startsWith(c_armorType,'god_vest.carry_item')){
+                    m_modifer.setCooldownReduction(0.1);
+                    m_modifer.setCooldownMinus(10.0);
+                }
+
                 if (AR_grenade_AntiArmor.find(c_weaponType)> -1){
                     excuteAntiArmorskill(cId,senderId,m_modifer,c_weaponType);
                     return;        
@@ -652,7 +657,7 @@ class CommandSkill : Tracker {
     void addCoolDown(string key,float time,int cId,SkillModifer@ modifer,string charge_mode="normal",bool alert =true){
         float cdr=modifer.m_cdr;
         float cdm=modifer.m_cdm;
-        SkillTrigger@ cooldown = SkillTrigger(cId,max((time*cdr-cdm),0.0),key,charge_mode,alert);
+        SkillTrigger@ cooldown = SkillTrigger(cId,max((time*cdr-cdm),0.1),key,charge_mode,alert);
         cooldown.setSkillInfo(modifer);
         SkillArray.insertLast(cooldown);
     }
@@ -2819,7 +2824,7 @@ class CommandSkill : Tracker {
                     TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
                     tasker.add(DelayAirstrikeRequest(m_metagame,2.0,characterId,factionid,stringToVector3(target),"a10_rocket_strafe",true));
                     tasker.add(DelayAirstrikeRequest(m_metagame,3.0,characterId,factionid,stringToVector3(target),"a10_strafe"));
-                    addCoolDown("MG4MOD3",60,characterId,modifer);
+                    addCoolDown("MG4MOD3",90,characterId,modifer);
                 }
             }
         }

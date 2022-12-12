@@ -220,7 +220,7 @@ class call_event : Tracker {
                             }
                         }
                         else {
-                            m_cooldown.insertLast(Call_Cooldown(playerName,playerId,120.0,"bombardment"));
+                            m_cooldown.insertLast(Call_Cooldown(playerName,playerId,90.0,"bombardment"));
                             // m_cooldown.insertLast(Call_Cooldown(playerName,playerId,5.0,"bombardment"));
                             playSoundAtLocation(m_metagame,"kcco_dn_1.wav",factionId,position,1.5);
                             sendFactionMessageKey(m_metagame,factionId,"bombcallstarthint");

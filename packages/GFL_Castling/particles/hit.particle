@@ -223,3 +223,77 @@ particle_system hitGround_20mm
 	alpha -0.5
     }
 }
+
+particle_system hitGround_80mm
+{
+	quota 1000
+	material Piece
+	particle_width 0.15
+	particle_height 0.15
+	cull_each false
+	renderer billboard
+	billboard_type point
+	emitter Point
+	{
+		angle 45
+		position 0.0 0.0 0.0
+        colour 0.7 0.7 0.7 1
+		direction	0 0 0
+		emission_rate	500
+		velocity_min 15
+		velocity_max 20
+		time_to_live_min	0.6
+		time_to_live_max	0.9
+        duration 0.1
+	}
+    affector LinearForce
+    {
+        force_vector      0 -40 0
+        force_application add
+    }	
+	affector Scaler
+	{
+		rate	0.4
+	}
+    affector ColourFader
+    {
+		alpha -0.5
+    }
+}
+
+particle_system hitGround_30mm
+{
+	quota 2000
+	material Piece
+	particle_width 0.08
+	particle_height 0.08
+	cull_each false
+	renderer billboard
+	billboard_type point
+	emitter Point
+	{
+		angle 15
+		position 0.0 0.0 0.0
+        colour 0.7 0.7 0.7 1
+		direction	0 0 0
+		emission_rate	300
+		velocity_min 6
+		velocity_max 12
+		time_to_live_min	0.7
+		time_to_live_max	0.75
+        duration 0.1
+	}
+    affector LinearForce
+    {
+        force_vector      0 -25 0
+        force_application add
+    }	
+	affector Scaler
+	{
+		rate	0.4
+	}
+    affector ColourFader
+    {
+		alpha -0.5
+    }
+}

@@ -108,7 +108,7 @@ class GFLairstrike : Tracker {
 
                 switch(Airstrike_strafe[a].m_straferkey){
                     case 0:{//A10 单次 锁人扫射
-                        _log("A10 strafe activated");
+                        // _log("A10 strafe activated");
 
                         //扫射位置偏移单位向量 与 扫射位置偏移单位距离
                         Vector3 strike_vector = getAimUnitVector(1,start_pos,end_pos); 
@@ -146,7 +146,7 @@ class GFLairstrike : Tracker {
                                 float rand_x = rand(-strike_rand,strike_rand);
                                 float rand_y = rand(-strike_rand,strike_rand);
                                 
-                                CreateDirectProjectile(m_metagame,startPos,endPos.add(Vector3(rand_x,0,rand_y)),"ASW_A10_strafe.projectile",cid,fid,180);           
+                                CreateDirectProjectile(m_metagame,startPos,endPos.add(Vector3(rand_x,0,rand_y)),"ASW_A10_strafe.projectile",cid,fid,150);           
                             } 
                         }                               
                         Airstrike_strafe.removeAt(a);
@@ -261,7 +261,7 @@ class GFLairstrike : Tracker {
                         break;
                     }
                     case 3:{//A10 单次 带火箭弹 锁人扫射
-                        _log("A10 strafe activated");
+                        // _log("A10 strafe activated");
 
                         //扫射位置偏移单位向量 与 扫射位置偏移单位距离
                         Vector3 strike_vector = getAimUnitVector(1,start_pos,end_pos); 
@@ -280,19 +280,16 @@ class GFLairstrike : Tracker {
                         //最终弹头随机程度
                         float strike_rand = 3.0;
 
-                        CreateDirectProjectile(m_metagame,startPos.add(getMultiplicationVector(strike_vector,Vector3(-50,0,-50))),s_pos.add(Vector3(0,20,0)),"a10_warthog_shadow.projectile",cid,fid,70);                                         
-                        for(int i=1;i<=12;i++){
+                        CreateDirectProjectile(m_metagame,startPos.add(getMultiplicationVector(strike_vector,Vector3(-50,0,-50))),s_pos.add(Vector3(0,20,0)),"a10_warthog_shadow.projectile",cid,fid,70);    
+                                                            
+                        for(int i=1;i<=6;i++){
                             float rand_x = rand(-12,12);
                             float rand_y = rand(-12,12);
                             
-                            CreateDirectProjectile(m_metagame,startPos,start_pos.add(Vector3(rand_x,0,rand_y)),"ASW_A10_rocket.projectile",cid,fid,240);                              
+                            CreateDirectProjectile(m_metagame,startPos,start_pos.add(Vector3(rand_x,0,rand_y)),"ASW_A10_rocket.projectile",cid,fid,80);                              
                         }                            
                         
                         startPos = startPos.add(getMultiplicationVector(strike_vector,Vector3(-30,0,-30)));
-
-                        array<string> Voice={
-                        "a10_fire_FromWARTHUNDER.wav",
-                        };
                                                 
                         for(int i=0;i<=strike_time;i++){
                             //水平偏移
@@ -300,13 +297,12 @@ class GFLairstrike : Tracker {
                             endPos = endPos.add(getMultiplicationVector(strike_vector,Vector3(strike_didis,0,strike_didis)));
                             //垂直偏移，先快后慢
                             startPos = startPos.add(Vector3(0,-20*(sqrt(float(1/strike_time)*i)),0));
-                            //每单轮扫射生成12次对点扫射
                             for(int j=1;j<=6;j++)
                             {
                                 float rand_x = rand(-strike_rand,strike_rand);
                                 float rand_y = rand(-strike_rand,strike_rand);
                                 
-                                CreateDirectProjectile(m_metagame,startPos,endPos.add(Vector3(rand_x,0,rand_y)),"ASW_A10_strafe.projectile",cid,fid,180);           
+                                CreateDirectProjectile(m_metagame,startPos,endPos.add(Vector3(rand_x,0,rand_y)),"ASW_A10_strafe.projectile",cid,fid,150);           
                             } 
                         }                               
                         Airstrike_strafe.removeAt(a);
@@ -329,7 +325,7 @@ class GFLairstrike : Tracker {
                             float rand_dis = rand(-strike_rand,strike_rand);
                             float rand_x = rand_dis*cos(rand_angle);
                             float rand_y = rand_dis*sin(rand_angle);
-                            CreateDirectProjectile(m_metagame,start_pos,end_pos.add(Vector3(rand_x,0,rand_y)),"ASW_AC130_NTW.projectile",cid,fid,255);
+                            CreateDirectProjectile(m_metagame,start_pos,end_pos.add(Vector3(rand_x,0,rand_y)),"ASW_AC130_NTW.projectile",cid,fid,150);
                         }
                         Airstrike_strafe.removeAt(a);
                         break;                        
@@ -361,7 +357,7 @@ class GFLairstrike : Tracker {
                                 rand_x1 = rand(-strike_rand,strike_rand);
                                 rand_y1 = rand(-strike_rand,strike_rand);
                                 
-                                CreateDirectProjectile(m_metagame,start_pos,c_pos.add(Vector3(rand_x1,0,rand_y1)),"ASW_A10_strafe.projectile",cid,fid,240);           
+                                CreateDirectProjectile(m_metagame,start_pos,c_pos.add(Vector3(rand_x1,0,rand_y1)),"ASW_A10_strafe.projectile",cid,fid,100);           
                             } 
                         }                               
                         Airstrike_strafe.removeAt(a);
@@ -425,11 +421,12 @@ class GFLairstrike : Tracker {
                         //每单轮扫射8发
                         for(int j=1;j<=8;j++)
                         {
+                            float rand_dis = rand(-strike_rand,strike_rand);
                             float rand_angle = rand(-3.14,3.14);
-                            float rand_x1 = strike_rand*cos(rand_angle);
-                            float rand_y1 = strike_rand*sin(rand_angle);                            
+                            float rand_x1 = rand_dis*cos(rand_angle);
+                            float rand_y1 = rand_dis*sin(rand_angle);                            
                             
-                            CreateDirectProjectile(m_metagame,start_pos,end_pos.add(Vector3(rand_x1,0,rand_y1)),"ASW_A10_strafe.projectile",cid,fid,180);           
+                            CreateDirectProjectile(m_metagame,start_pos,end_pos.add(Vector3(rand_x1,0,rand_y1)),"ASW_A10_strafe.projectile",cid,fid,90);           
                         } 
                         Airstrike_strafe.removeAt(a);
                         break;                        
@@ -455,7 +452,7 @@ class GFLairstrike : Tracker {
                         Vector3 c_pos = end_pos.add(getMultiplicationVector(strike_vector,Vector3(-36,0,-36)));
                         Vector3 s_pos = end_pos.add(getMultiplicationVector(strike_vector,Vector3(36,0,36)));
                         //依据扫射位置偏移单位距离而设置的扫射次数
-                        int strike_time = int(getAimUnitDistance(1,c_pos,s_pos)/strike_didis);
+                        int strike_time = 6;
                         //弹头起始扫射位置与终止扫射位置
                         Vector3 startPos = c_pos.add(pos_offset);
                         Vector3 endPos = c_pos;
