@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projectile class="grenade" name="" key="warrior_fairy_arrow.projectile" slot="2" pulldown_in_air="30">
-    <result class="blast" damage="3" radius="10.0" decal="1" push="0.3" character_state="wound" faction_compare="not_equal" damage_origin_vehicle="0"/>
+    <result class="blast" damage="5.0" radius="12.0" decal="1" push="0.3" character_state="wound" faction_compare="not_equal" damage_origin_vehicle="0"/>
     <trigger class="time" time_to_live="3.0"/>
 	<collision class="sticky" />
     <rotation class="motion" />

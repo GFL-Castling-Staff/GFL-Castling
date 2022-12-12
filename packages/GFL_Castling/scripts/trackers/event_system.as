@@ -513,7 +513,7 @@ void excuteRampageFairyAC130(GameMode@ metagame,GFL_event@ eventinfo){
             ac130_jud_confused++;
             if(ac130_jud_confused>=5){
                 ac130_jud_confused = 0;
-                playSoundAtLocation(metagame,"AUHarbi_voiSelBate.wav",eventinfo.m_factionid,eventinfo.m_pos,3.5);
+                playSoundAtLocation(metagame,AC130NoTargetVoice,eventinfo.m_factionid,eventinfo.m_pos,3.5);
             }
             else playRandomSoundArray(metagame,AC130NoTargetVoice,eventinfo.m_factionid,eventinfo.m_pos.toString(),3.5);
 
@@ -535,18 +535,19 @@ void excuteWarriorFariyApache(GameMode@ metagame,GFL_event@ eventinfo){
     eventinfo.m_time=1.0;
     Vector3 aimPos = eventinfo.m_pos.add(Vector3(10.0*cos(eventinfo.m_randseed),40,10.0*sin(eventinfo.m_randseed)));
 
-    if(eventinfo.m_phase==1){
-        
+    if(eventinfo.m_phase==6){
         insertCommonStrike(eventinfo.m_characterId,eventinfo.m_factionid,"apache_bait",aimPos,eventinfo.m_pos);
+    }
+
+    else if(eventinfo.m_phase==1){
         sendFactionMessageKey(metagame,eventinfo.m_factionid,"warriorfight");
         apache_javelin_luckyvehicleid  = getNearByEnemyVehicle(metagame,eventinfo.m_factionid,eventinfo.m_pos,20);
         if(apache_javelin_luckyvehicleid!=-1)playSoundAtLocation(metagame,"javelin_locked.wav",eventinfo.m_factionid,eventinfo.m_pos,1.0);//锁定载具成功
         else	playSoundAtLocation(metagame,"javelin_lock_fail.wav",eventinfo.m_factionid,eventinfo.m_pos,1.0);//未锁定载具
-
         Apache_Javelin_list.insertLast(Apache_Javelin_lister(eventinfo.m_characterId,eventinfo.m_factionid,apache_javelin_luckyvehicleid,eventinfo.m_pos));
-
     }
-    else if(eventinfo.m_phase==4){
+
+    else if(eventinfo.m_phase==3){
 
         int m_fnum = metagame.getFactionCount();
         int max_check = 6;  // 最多扫描6个人
@@ -601,7 +602,8 @@ void excuteWarriorFariyApache(GameMode@ metagame,GFL_event@ eventinfo){
             }        
         }
     }
-    else if(eventinfo.m_phase==6){
+
+    else if(eventinfo.m_phase==4){
         if(Apache_Javelin_list.length()>0){
             for (uint a=0;a<Apache_Javelin_list.length();a++){
                 if((Apache_Javelin_list[a].m_characterId==eventinfo.m_characterId)&&(Apache_Javelin_list[a].m_factionid==eventinfo.m_factionid)){//在序列中如果能找到
