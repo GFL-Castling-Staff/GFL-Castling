@@ -418,8 +418,8 @@ class GFLairstrike : Tracker {
                         //最终弹头随机程度
                         float strike_rand = 2;
                                                 
-                        //每单轮扫射8发
-                        for(int j=1;j<=8;j++)
+                        //每单轮扫射3发
+                        for(int j=1;j<=3;j++)
                         {
                             float rand_dis = rand(-strike_rand,strike_rand);
                             float rand_angle = rand(-3.14,3.14);
