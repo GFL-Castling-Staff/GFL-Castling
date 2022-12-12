@@ -523,6 +523,8 @@
 			<projectile key="kcco_tracer_dart_a.projectile" enabled="1.0" />	
 			<call key="kcco_zircon.call" />
 			<call key="kcco_assault.call" />
+			<call key="kcco_deploy_coeus.call" />
+			<call key="kcco_deploy_typhon.call" />			
 		</resources>
 		<item_class_existence_config>
 			<item_class_existence class="weapon" slot="1" probability="0.75" />

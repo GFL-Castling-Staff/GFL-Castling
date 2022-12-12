@@ -1622,14 +1622,25 @@ class StageConfiguratorInvasion : StageConfigurator {
         
 		stage.m_soldierCapacityVariance = 0.45;                                                       
 
-//		stage.addTracker(PeacefulLastBase(m_metagame, 0));
         stage.addTracker(AttackDefenseHandlerMap1_2(m_metagame, 0));   // we use this instead of peacefullastbase for map1_2
 		stage.addTracker(CommsCapacityHandler(m_metagame));
 
 		stage.m_minRandomCrates = 4; 
 		stage.m_maxRandomCrates = 6;
 		array<int> FactionIndex = getRandomEnemyList();
+		{
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "sf_assault.call", "sf_assault_sub.call", array<string> = {""}, false,true,false,"infantry"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_assault.call", "kcco_assault_sub.call", array<string> = {""}, false,true,false,"infantry"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_zircon.call", "kcco_zircon_sub.call", array<string> = {""}, false,true,false,"infantry"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_assault.call", "para_assault_sub.call", array<string> = {""}, false,true,false,"infantry"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_eod.call", "para_eod_sub.call", array<string> = {""}, false,true,false,"infantry"));
 
+		}
+
+		{
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_deploy_coeus.call", "kcco_deploy_coeus_sub.call", array<string> = {""}, false,true,false,"vehicle"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_deploy_typhon.call", "kcco_deploy_typhon_sub.call", array<string> = {""}, false,true,false,"vehicle"));	
+		}
 		{
 			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0, 0.6, 0.15));   
 			f.m_overCapacity = 0;
