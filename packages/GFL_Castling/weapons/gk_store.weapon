@@ -8,6 +8,7 @@
 	/>
     <model mesh_filename="deploy_boxi.mesh" texture_filename="box.png" />
     <hud_icon filename="HG.png" />
+    <modifier class="detectability" value="+0.5" />
 </weapon>
 <weapon file="deployable.base_weapon" key="deployable_hvy_store.weapon" radius="0.25" >
     <specification
@@ -17,6 +18,7 @@
 	/>
     <model mesh_filename="deploy_boxi.mesh" texture_filename="box2.png" />
     <hud_icon filename="HVY.png" />
+    <modifier class="detectability" value="+0.5" />
 </weapon>
 <weapon file="deployable.base_weapon" key="ogas.weapon" radius="0.25" >
     <specification
