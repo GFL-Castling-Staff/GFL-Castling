@@ -44,7 +44,6 @@
         <result class="blast"  damage="10.0" radius="8" decal="1" push="0.5" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
     </projectile>
     <weak_hand_hold offset="0.3" />
-    <commonness value="0.00001"  />
     <hud_icon filename="88rocket.png" />
     <effect class="muzzle" ref="LawMuzzle" />
     <effect class="muzzle" ref="UpDust" />
