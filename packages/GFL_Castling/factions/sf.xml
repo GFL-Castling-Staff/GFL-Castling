@@ -451,12 +451,13 @@
 		<resources clear_weapons="1" clear_calls="1">
 			<weapon key="sfw_vespid.weapon" enabled="1"/>
 			<carry_item key="sf_ar.carry_item" enabled="1" />
-			<weapon key="cover_deploy.weapon" enabled="1"/>
+			<weapon key="cover_deploy_enemy.weapon" enabled="1"/>
 			<weapon key="cover_deploy_2.weapon" enabled="1"/>	
+			<weapon key="sfw_m2g.weapon" enabled="1"/>
 			<projectile key="sf_ap_grenade.projectile" enabled="1" />
 		</resources>
 		<item_class_existence_config>
-			<item_class_existence class="weapon" slot="1" probability="0.3" />
+			<item_class_existence class="weapon" slot="1" probability="0.4" />
 			<item_class_existence class="grenade" slot="0" probability="0.5" />
 		</item_class_existence_config>
 	</soldier>
@@ -466,12 +467,13 @@
 		<resources clear_weapons="1" clear_calls="1">
 			<weapon key="sfw_vespid_swap.weapon" enabled="1"/>
 			<carry_item key="vest_15hp_elite.carry_item" enabled="1" />
-			<weapon key="cover_deploy.weapon" enabled="1"/>
+			<weapon key="cover_deploy_enemy.weapon" enabled="1"/>
+			<weapon key="sfw_m2g.weapon" enabled="1"/>
 			<projectile key="sf_ap_grenade.projectile" enabled="1" />
 			<call key="sf_assault.call" />
 		</resources>
 		<item_class_existence_config>
-			<item_class_existence class="weapon" slot="1" probability="0.1" />
+			<item_class_existence class="weapon" slot="1" probability="0.75" />
 			<item_class_existence class="grenade" slot="0" probability="1.0" />
 		</item_class_existence_config>	
 		<attribute_config class="rp">
@@ -485,11 +487,12 @@
 		<ai filename="default.ai" />
 		<resources clear_weapons="1" clear_calls="1">
 			<weapon key="sfw_ripper.weapon" enabled="1"/>
+			<weapon key="sfw_m2g.weapon" enabled="1"/>
 			<carry_item key="sf_ar_1" enabled="1" />
 			<projectile key="sf_ap_grenade.projectile" enabled="1" />
 		</resources>
 		<item_class_existence_config>
-			<item_class_existence class="weapon" slot="1" probability="0.3" />
+			<item_class_existence class="weapon" slot="1" probability="0.2" />
 			<item_class_existence class="grenade" slot="0" probability="0.5" />
 		</item_class_existence_config>			
 	</soldier>
@@ -498,12 +501,13 @@
 		<ai filename="elite.ai" />
 		<resources clear_weapons="1" clear_calls="1">
 			<weapon key="sfw_ripper_swap.weapon" enabled="1"/>
+			<weapon key="sfw_m2g.weapon" enabled="1"/>
 			<carry_item key="vest_15hp_elite_2" enabled="1" />
 			<projectile key="sf_ap_grenade.projectile" enabled="1" />
 			<call key="sf_assault.call" />
 		</resources>
 		<item_class_existence_config>
-			<item_class_existence class="weapon" slot="1" probability="0.5" />
+			<item_class_existence class="weapon" slot="1" probability="0.4" />
 			<item_class_existence class="grenade" slot="0" probability="1.0" />
 		</item_class_existence_config>	
 		<attribute_config class="rp">
@@ -517,7 +521,7 @@
 		<resources clear_weapons="1" clear_calls="1">
 			<weapon key="sfw_guard.weapon" enabled="1"/>
 			<carry_item key="vest_15hp_elite_5" enabled="1" />
-			<weapon key="cover_deploy.weapon" enabled="1"/>
+			<weapon key="cover_deploy_enemy.weapon" enabled="1"/>
 			<weapon key="cover_deploy_2.weapon" enabled="1"/>
 			<projectile key="sf_ap_mine.projectile" enabled="1.0" />
 		</resources>
@@ -530,7 +534,7 @@
 		<resources clear_weapons="1" clear_calls="1">
 			<weapon key="sfw_guard_swap.weapon" enabled="1"/>
 			<carry_item key="vest_15hp_elite.carry_item" enabled="1" />
-			<weapon key="cover_deploy.weapon" enabled="1"/>
+			<weapon key="cover_deploy_enemy.weapon" enabled="1"/>
 			<weapon key="cover_deploy_2.weapon" enabled="1"/>
 			<projectile key="sf_ap_mine.projectile" enabled="1.0" />
 		</resources>
@@ -575,6 +579,7 @@
 		<model filename="sfd_striker_swap_from_dusk.xml" />
 		<resources clear_weapons="1" clear_calls="1">
 			<weapon key="sfw_striker_swap.weapon" enabled="1"/>
+			<weapon key="sfw_m2g.weapon" enabled="1"/>
 			<carry_item key="vest_15hp_elite.carry_item" enabled="1" />
 			<projectile key="sf_ap_mine.projectile" enabled="1.0" />
 			<call key="sf_assault.call" />
@@ -582,7 +587,10 @@
 		<attribute_config class="rp">
 			<attribute weight="1.0" min="100.0" max="100.0" />
 			<attribute weight="0.3" min="300.0" max="500.0" />
-		</attribute_config>				
+		</attribute_config>			
+		<item_class_existence_config>
+			<item_class_existence class="weapon" slot="1" probability="0.25" />
+		</item_class_existence_config>				
 	</soldier>
 	<!-- nemeum 钢狮 -->
 	<soldier name="sfw_nemeum" spawn_score="0.7" copy_from="default_spawn_ai">
