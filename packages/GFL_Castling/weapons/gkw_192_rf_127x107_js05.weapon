@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapon file="heavy_anti_materiel_rifle.animation_base" key="gkw_js05.weapon">
-
-
     <!--Weapon specifications-->
-    
     <specification 
 	retrigger_time="-1" 
 	accuracy_factor="1" 
@@ -18,21 +15,16 @@
 	class="2"
 	burst_shot="1" 
 	reload_one_at_a_time="0" 
-	sight_range_modifier="3.5"
+	sight_range_modifier="2.25" 
 	projectile_speed="230.21" 
 	barrel_offset="0.4" 
 	projectiles_per_shot="4" />
-    <inventory  buy_price="300.0" sell_price="200.0" />	
-	<!--Animations-->
-	
-
-
+    <inventory  buy_price="300.0" sell_price="200.0" />
+    <!--Animations-->
     <animation key="cycle" animation_key="Brifle1.8" />
-	<animation key="cycle" stance_key="prone" animation_key="Brifle1.8p" />	
-    <animation key="reload" animation_key="reloading, magazine rifle 2.1" />		
-	
-	<!--Sounds-->
-	
+    <animation key="cycle" stance_key="prone" animation_key="Brifle1.8p" />
+    <animation key="reload" animation_key="reloading, magazine rifle 2.1" />
+    <!--Sounds-->
     <sound key="fire" fileref="js05_fire_FromCOD14.wav" pitch_variety="0.05" volume="1.7" />
     <sound key="cycle" fileref="js05_cycle_FromCOD17.wav" volume="0.6" />
     <sound key="magazine_out" fileref="js05_mgz_out_FromCOD17.wav" volume="0.7" />
@@ -40,30 +32,23 @@
     <sound key="cycle_out" fileref="js05_cycle_out_FromCOD17.wav" volume="0.6" />
     <sound key="cycle_in" fileref="js05_cycle_in_FromCOD17.wav" volume="0.6" />
     <sound class="impact" fileref="rifle_drop.wav" />
-   
-	<!--Model, Icon, Cost-->
-   
+    <!--Model, Icon, Cost-->
     <model filename="gkw_rf_js05.xml" />
     <hud_icon filename="gkw_js05.png" />
-
     <!-- <inventory  price="4.0" /> -->
-	
-	<!--Ballistics-->
-	
-
+    <!--Ballistics-->
     <weak_hand_hold offset="0.3" />
     <projectile file="ntw.projectile" >
-          <result class="blast" damage="10.0" radius="2.5" decal="1" push="0.6" character_state="death" faction_compare="not_equal" />
+        <result class="blast" damage="10.0" radius="2.5" decal="1" push="0.6" character_state="death" faction_compare="not_equal" />
     </projectile>
-
     <!--Accuracy, Movement speed-->
     <stance state_key="running" accuracy="0.9" />
-	<stance state_key="walking" accuracy="0.9" />
+    <stance state_key="walking" accuracy="0.9" />
     <stance state_key="crouch_moving" accuracy="1.1" />
     <stance state_key="prone_moving" accuracy="1.1" />
     <stance state_key="standing" accuracy="1.1"/>
     <stance state_key="crouching" accuracy="1.1" />
     <stance state_key="prone" accuracy="1.1" />
-    <stance state_key="over_wall" accuracy="1.1" /> 
-    <modifier class="speed" value="-0.1" />  
+    <stance state_key="over_wall" accuracy="1.1" />
+    <modifier class="speed" value="-0.15" />
 </weapon>

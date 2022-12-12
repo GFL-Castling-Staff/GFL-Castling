@@ -16,7 +16,7 @@
 	name="PTRD-41" 
 	class="4" 
 	reload_one_at_a_time="0" 
-	sight_range_modifier="3.5" 
+	sight_range_modifier="2.25" 
 	projectile_speed="240" 
 	barrel_offset="1.2" 
 	projectiles_per_shot="2"
@@ -50,6 +50,8 @@
 		/>
     </projectile>
     <!--Accuracy, Movement speed-->
+    <modifier class="speed" value="-0.15" />
+
     <stance state_key="running" accuracy="1" />
     <stance state_key="walking" accuracy="1" />
     <stance state_key="crouch_moving" accuracy="1" />

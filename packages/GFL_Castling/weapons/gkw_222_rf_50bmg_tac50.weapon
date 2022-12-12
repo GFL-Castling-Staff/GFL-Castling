@@ -17,7 +17,7 @@
 	name="TAC-50" 
 	class="2"
 	reload_one_at_a_time="0" 
-	sight_range_modifier="3.2" 
+	sight_range_modifier="2.25" 
 	projectile_speed="230.85" 
 	barrel_offset="0.57" 
 	projectiles_per_shot="4" />
@@ -71,5 +71,5 @@
     <stance state_key="crouching" accuracy="1.1" />
     <stance state_key="prone" accuracy="1.1" />
     <stance state_key="over_wall" accuracy="1.1" /> 
-    <modifier class="speed" value="-0.1" />  
+    <modifier class="speed" value="-0.15" />
 </weapon>

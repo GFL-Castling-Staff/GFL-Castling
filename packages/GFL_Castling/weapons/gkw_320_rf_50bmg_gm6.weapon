@@ -17,7 +17,7 @@
 	name="GM6 Lynx" 
 	class="4" 
 	reload_one_at_a_time="0" 
-	sight_range_modifier="3.0" 
+	sight_range_modifier="2.25" 
 	projectile_speed="231.49" 
 	barrel_offset="0.4" 
 	projectiles_per_shot="1"
@@ -61,5 +61,5 @@
     <stance state_key="crouching" accuracy="1" />
     <stance state_key="prone" accuracy="1" />
     <stance state_key="over_wall" accuracy="1.0" />
-    <modifier class="speed" value="-0.1" /> 
+    <modifier class="speed" value="-0.15" />
 </weapon>

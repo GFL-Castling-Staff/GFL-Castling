@@ -14,7 +14,7 @@
 	name="DSR-50-[Highest Bidder]" 
 	class="2"
 	reload_one_at_a_time="0" 
-	sight_range_modifier="3.2" 
+	sight_range_modifier="2.25" 
 	projectile_speed="240" 
 	barrel_offset="1.4" 
 	projectiles_per_shot="5" />
@@ -48,6 +48,8 @@
         faction_compare="not_equal"
 		/>
     </projectile>
+    <modifier class="speed" value="-0.2" />
+
     <!--Accuracy, Movement speed-->
     <stance state_key="running" accuracy="1.1" />
     <stance state_key="walking" accuracy="1.1" />
@@ -57,5 +59,4 @@
     <stance state_key="crouching" accuracy="1.1" />
     <stance state_key="prone" accuracy="1.1" />
     <stance state_key="over_wall" accuracy="1.1" />
-    <modifier class="speed" value="-0.1" />
 </weapon>

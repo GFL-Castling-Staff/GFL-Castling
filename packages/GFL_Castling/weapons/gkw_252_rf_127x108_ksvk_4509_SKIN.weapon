@@ -18,7 +18,7 @@
 	name="KSVK-[The Truman Traveller]" 
 	class="2"
 	reload_one_at_a_time="0" 
-	sight_range_modifier="4" 
+	sight_range_modifier="2.25" 
 	projectile_speed="242.47" 
 	barrel_offset="0.6" 
 	projectiles_per_shot="4" />
@@ -105,7 +105,8 @@
         <result class="blast" damage="10.0" radius="2.5" decal="1" push="0.6" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0" />
     </projectile>
     <!--Accuracy, Movement speed-->
-    
+    <modifier class="speed" value="-0.15" />
+
     <stance state_key="running" accuracy="1.0" />   
 	<stance state_key="walking" accuracy="1.0" />
     <stance state_key="crouch_moving" accuracy="1.0" />
