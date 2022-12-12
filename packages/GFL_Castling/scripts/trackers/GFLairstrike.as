@@ -426,7 +426,7 @@ class GFLairstrike : Tracker {
                             float rand_x1 = rand_dis*cos(rand_angle);
                             float rand_y1 = rand_dis*sin(rand_angle);                            
                             
-                            CreateDirectProjectile(m_metagame,start_pos,end_pos.add(Vector3(rand_x1,0,rand_y1)),"ASW_A10_strafe.projectile",cid,fid,90);           
+                            CreateDirectProjectile(m_metagame,start_pos,end_pos.add(Vector3(rand_x1,0,rand_y1)),"ASW_heli_strafe.projectile",cid,fid,90);           
                         } 
                         Airstrike_strafe.removeAt(a);
                         break;                        

@@ -436,8 +436,8 @@ void excuteRampageFairyAC130(GameMode@ metagame,GFL_event@ eventinfo){
     }
 
     int luckyGuyid;
-    float searchrange_nearby = 30.0f;
-    float searchrange_origin = 75.0f;
+    float searchrange_nearby = 15.0f;
+    float searchrange_origin = 60.0f;
 
     // 随机索敌
     // luckyGuyid = getNearbyRandomLuckyGuyId(metagame,eventinfo.m_factionid,ac130_pre_pos,searchrange_origin);
@@ -510,12 +510,14 @@ void excuteRampageFairyAC130(GameMode@ metagame,GFL_event@ eventinfo){
         else if(ac130_voice_interval<=0){
             
             ac130_voice_interval = 2;
-            ac130_jud_confused++;
-            if(ac130_jud_confused>=5){
-                ac130_jud_confused = 0;
-                playSoundAtLocation(metagame,AC130NoTargetVoice,eventinfo.m_factionid,eventinfo.m_pos,3.5);
-            }
-            else playRandomSoundArray(metagame,AC130NoTargetVoice,eventinfo.m_factionid,eventinfo.m_pos.toString(),3.5);
+            // ac130_jud_confused++;
+            // if(ac130_jud_confused>=5){
+            //     ac130_jud_confused = 0;
+            //     playSoundAtLocation(metagame,AC130NoTargetVoice,eventinfo.m_factionid,eventinfo.m_pos.toString(),3.5);
+            // }
+            // else playRandomSoundArray(metagame,AC130NoTargetVoice,eventinfo.m_factionid,eventinfo.m_pos.toString(),3.5);
+
+            playRandomSoundArray(metagame,AC130NoTargetVoice,eventinfo.m_factionid,eventinfo.m_pos.toString(),3.5);
 
         }        
     }
@@ -589,6 +591,8 @@ void excuteWarriorFariyApache(GameMode@ metagame,GFL_event@ eventinfo){
             }
             if((jud_num>=max_num) || (jud_check>=max_check))break;
         }         
+
+        playSoundAtLocation(metagame,"30mm_strafe.wav",eventinfo.m_factionid,eventinfo.m_pos,1.0);
 
         for (uint i0=1;i0<=3;i0++){
             for (uint i1=0;i1<apache_affectedCharacter.length();i1++)	{

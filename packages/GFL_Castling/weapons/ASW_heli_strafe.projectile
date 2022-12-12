@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<projectile key="ASW_heli_strafe.projectile" slot="2" pulldown_in_air="0.0">
+    <result class="blast" damage="4.0" radius="3.0" decal="1" push="0.3" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+    <trail probability="1.0" key="BulletMgTrail" />
+
+    <effect class="result" key="terrain" ref="hitGround_20mm" use_surface_color="1" />
+    <effect class="result" key="terrain" ref="BulletImpactDust4" />
+    <effect class="result" key="terrain" ref="BulletImpactDust5" />
+    <effect class="result" key="terrain" ref="BulletImpactDust6" />   
+
+    <effect class="result" key="vehicle" ref="hitMetal" />
+    <effect class="result" key="vehicle" ref="hitMetal_1" />
+    <effect class="result" key="shield" ref="hitMetal" />
+    <effect class="result" key="shield" ref="hitMetal_1" />
+
+    <effect class="result" key="static_object" copy="terrain"/> 
+	<effect class="result" key="vehicle" copy="terrain"/>
+
+    <effect class="result" key="terrain" ref="LowDust"/>
+
+    <effect class="result" key="character" ref="BloodSplat50Cal" lighting="1" post_processing="0"/>
+
+    <effect class="result" type="splat_map" surface_tag="" size="2.0" atlas_index="0" layer="1" />
+    <effect class="result" type="splat_map" surface_tag="" size="3.0" atlas_index="4" layer="0" />
+    <effect class="result" type="splat_map" surface_tag="" size="4.0" atlas_index="0" layer="2" additive="0" />
+    <model mesh_filename="paw20_round.xml" />
+    <trigger class="impact" />
+    <rotation class="motion" />
+    <sound class="result" key="other" fileref="apache_bullet_hit_layer_1.wav" volume="2.0" />
+    <sound class="result" key="other" fileref="apache_bullet_hit_layer_2.wav" volume="2.0" />
+    <sound class="result" key="other" fileref="apache_bullet_hit_layer_3.wav" volume="2.0" />
+    <sound class="result" key="other" fileref="apache_bullet_hit_layer_4.wav" volume="2.0" />
+    <sound class="result" key="terrain" copy="other" />
+    <sound class="result" key="static_object" copy="other" />
+    <sound class="result" key="vehicle" copy="other" />
+    <sound class="result" key="character" copy="other" />
+</projectile>
