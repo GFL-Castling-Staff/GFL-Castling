@@ -4,16 +4,16 @@
     <specification 
     retrigger_time="-1.0" 
     accuracy_factor="2.0" 
-    sustained_fire_grow_step="0.1" 
-    sustained_fire_diminish_rate="2.0" 
+    sustained_fire_grow_step="3.0" 
+    sustained_fire_diminish_rate="3.0" 
     magazine_size="5" 
     can_shoot_standing="1" 
     suppressed="0" 
     name="Mosin-Nagant M1891" 
     class="2" 
     reload_one_at_a_time="1" 
-    sight_range_modifier="3" 
-    projectile_speed="205.95" 
+    sight_range_modifier="1.25" 
+    projectile_speed="200" 
     barrel_offset="0.4" 
     projectiles_per_shot="4" />
 
@@ -21,9 +21,10 @@
     <capacity value="1" source="rank" source_value="0.0" />
     <commonness value="0.2" in_stock="0" can_respawn_with="1" />
 
-    <animation key="cycle" animation_key="Brifle0.8" />
-	<animation key="cycle" stance_key="prone" animation_key="Brifle0.8p" />	
-    <animation key="reload" animation_key="reloading, oaat" />	
+    <animation key="cycle" animation_key="Brifle1.5" />
+	<animation key="cycle" stance_key="prone" animation_key="Brifle1.0p" />	
+    <animation key="cycle" stance_key="over_wall" animation_key="Brifle1.0" />	
+    <animation key="reload" animation_key="reloading, oaat" />
 	
 	<sound key="fire" fileref="m1891_fire_FromCOD14.wav" volume="1.6" />  
 	<sound key="cycle" fileref="m1891_cycle_FromSQUAD.wav" volume="0.6" /> 
@@ -36,15 +37,15 @@
     <hud_icon filename="gkw_m1891.png" />
     
     <weak_hand_hold offset="0.3" />
-    <projectile file="bullet.projectile" can_be_detected_by_footmen="0">
-        <result class="hit" kill_probability="2.0" kill_probability_offset_on_successful_hit="3.5" kill_decay_start_time="1.895" kill_decay_end_time="3.158"/>
+    <projectile file="bullet.projectile">
+        <result class="hit" kill_probability="3.5" kill_probability_offset_on_successful_hit="0.75" kill_decay_start_time="1.895" kill_decay_end_time="3.158"/>
     </projectile>
-    <stance state_key="running" accuracy="1.2" />
-	<stance state_key="walking" accuracy="1.2" />
-    <stance state_key="crouch_moving" accuracy="1.2" />
-    <stance state_key="prone_moving" accuracy="1.2" />
-    <stance state_key="standing" accuracy="1.2" />
-    <stance state_key="crouching" accuracy="1.2" />
-    <stance state_key="prone" accuracy="1.5" />
-    <stance state_key="over_wall" accuracy="1.5" />
+    <stance state_key="running" accuracy="1.0" />
+	<stance state_key="walking" accuracy="1.0" />
+    <stance state_key="crouch_moving" accuracy="1.0" />
+    <stance state_key="prone_moving" accuracy="1.0" />
+    <stance state_key="standing" accuracy="1.0" />
+    <stance state_key="crouching" accuracy="1.0" />
+    <stance state_key="prone" accuracy="1.0" />
+    <stance state_key="over_wall" accuracy="1.0" />
 </weapon>
