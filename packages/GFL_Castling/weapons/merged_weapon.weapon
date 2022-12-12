@@ -1061,12 +1061,12 @@
 	<animation state_key="recoil" animation_key="recoil, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil2, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil3, hip fire"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil1"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil2"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil3"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil1"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil2"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil3"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
 	<animation state_key="hold" animation_key="hold, lmg"/>
 	<animation state_key="running" animation_key="running, line infantry"/>
 	<animation state_key="walking" animation_key="walking, hip fire"/>
@@ -1115,12 +1115,12 @@
 	<animation state_key="recoil" animation_key="recoil, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil2, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil3, hip fire"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil1"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil2"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil3"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil1"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil2"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil3"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
 	<animation state_key="hold" animation_key="still, heavy weapon"/>
 	<animation state_key="running" animation_key="running, line infantry"/>
 	<animation state_key="walking" animation_key="walking, heavy weapon"/>
@@ -2404,7 +2404,7 @@
 </weapon>
 
 <weapon key="gkw_kord.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.7" accuracy_factor="1.0" class="2" magazine_size="50" name="Kord" projectile_speed="200" retrigger_time="-1" suppressed="0" projectiles_per_shot="3" sustained_fire_diminish_rate="35" sustained_fire_grow_step="5.0" sight_range_modifier="1.0" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" slot="0"/>
+	<specification barrel_offset="0.7" accuracy_factor="1.0" class="2" magazine_size="50" name="Kord" last_burst_retrigger_time="-1" projectile_speed="200" retrigger_time="-1" suppressed="0" projectiles_per_shot="3" sustained_fire_diminish_rate="35" sustained_fire_grow_step="5.0" sight_range_modifier="1.0" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" slot="0"/>
 	<next_in_chain key="gkw_kord_skill.weapon" share_ammo="0"/>
 	<animation key="reload" animation_key="reloading, Machine gun 2.0"/>
 	<animation state_key="hold_casual" animation_key="dancing, kazachok"/>
@@ -2442,16 +2442,10 @@
 	<target_factors tag="melee" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
 	<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
 	<target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
-	<animation state_key="recoil" animation_key="recoil, hip fire"/>
-	<animation state_key="recoil" animation_key="recoil2, hip fire"/>
-	<animation state_key="recoil" animation_key="recoil3, hip fire"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil1"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil2"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil3"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
-	<animation state_key="hold" animation_key="hold, lmg"/>
+	<animation state_key="recoil" animation_key="recoil_hip_unlimit"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil_unlimit"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil_prone_unlimit"/>
+	<animation state_key="hold" animation_key="hold, hip fire"/>
 	<animation state_key="running" animation_key="running, line infantry"/>
 	<animation state_key="walking" animation_key="walking, hip fire"/>
 	<animation state_key="walking_backwards" animation_key="walking backwards, hip fire"/>
@@ -2461,7 +2455,7 @@
 </weapon>
 
 <weapon key="gkw_kord_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.5" accuracy_factor="0.6" class="2" spread_range="0.15" stance_accuracy_rate="0.8" magazine_size="150" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" name="Kord-[High Pressure Assault]" projectile_speed="200" retrigger_time="-1" suppressed="0" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="3.0" sight_range_modifier="1.8" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
+	<specification barrel_offset="0.5" accuracy_factor="0.6" class="2" spread_range="0.15" stance_accuracy_rate="0.8" magazine_size="150" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" name="Kord-[High Pressure Assault]" last_burst_retrigger_time="-1" projectile_speed="200" retrigger_time="-1" suppressed="0" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="3.0" sight_range_modifier="1.8" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" slot="0"/>
 	<next_in_chain key="gkw_kord.weapon" share_ammo="0"/>
 	<animation key="reload" animation_key="reloading, Machine gun 4"/>
 	<animation key="cycle" animation_key="cycle_2h_hip_600rpm"/>
@@ -2499,15 +2493,9 @@
 	<target_factors tag="melee" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
 	<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
 	<target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
-	<animation state_key="recoil" animation_key="recoil, hip fire"/>
-	<animation state_key="recoil" animation_key="recoil2, hip fire"/>
-	<animation state_key="recoil" animation_key="recoil3, hip fire"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil1"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil2"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil3"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
+	<animation state_key="recoil" animation_key="recoil_hip_unlimit"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil_unlimit"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil_prone_unlimit"/>
 	<animation state_key="hold" animation_key="still, heavy weapon"/>
 	<animation state_key="running" animation_key="running, line infantry"/>
 	<animation state_key="walking" animation_key="walking, heavy weapon"/>
@@ -2518,7 +2506,7 @@
 </weapon>
 
 <weapon key="gkw_kord_5102.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.7" accuracy_factor="1.0" class="2" magazine_size="50" name="Kord-[Dead Silent Dancer]" projectile_speed="200" retrigger_time="-1" suppressed="0" projectiles_per_shot="3" sustained_fire_diminish_rate="35" sustained_fire_grow_step="5.0" sight_range_modifier="1.0" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" slot="0"/>
+	<specification barrel_offset="0.7" accuracy_factor="1.0" class="2" magazine_size="50" name="Kord-[Dead Silent Dancer]" last_burst_retrigger_time="-1" projectile_speed="200" retrigger_time="-1" suppressed="0" projectiles_per_shot="3" sustained_fire_diminish_rate="35" sustained_fire_grow_step="5.0" sight_range_modifier="1.0" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" slot="0"/>
 	<next_in_chain key="gkw_kord_5102_skill.weapon" share_ammo="0"/>
 	<animation key="reload" animation_key="reloading, Machine gun 2.0"/>
 	<animation state_key="hold_casual" animation_key="dancing, kazachok"/>
@@ -2559,12 +2547,12 @@
 	<animation state_key="recoil" animation_key="recoil, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil2, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil3, hip fire"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil1"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil2"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil3"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil1"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil2"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil3"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
 	<animation state_key="hold" animation_key="hold, lmg"/>
 	<animation state_key="running" animation_key="running, line infantry"/>
 	<animation state_key="walking" animation_key="walking, hip fire"/>
@@ -2575,7 +2563,7 @@
 </weapon>
 
 <weapon key="gkw_kord_5102_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.5" accuracy_factor="0.6" class="2" spread_range="0.15" stance_accuracy_rate="0.8" magazine_size="150" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" name="Kord-[Dead Silent Dancer]-[High Pressure Assault]" projectile_speed="200" retrigger_time="-1" suppressed="0" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="3.0" sight_range_modifier="1.8" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
+	<specification barrel_offset="0.5" accuracy_factor="0.6" class="2" spread_range="0.15" stance_accuracy_rate="0.8" magazine_size="150" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" name="Kord-[Dead Silent Dancer]-[High Pressure Assault]" last_burst_retrigger_time="-1" projectile_speed="200" retrigger_time="-1" suppressed="0" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="3.0" sight_range_modifier="1.8" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" slot="0"/>
 	<next_in_chain key="gkw_kord_5102.weapon" share_ammo="0"/>
 	<animation key="reload" animation_key="reloading, Machine gun 4"/>
 	<animation key="cycle" animation_key="cycle_2h_hip_600rpm"/>
@@ -2616,12 +2604,12 @@
 	<animation state_key="recoil" animation_key="recoil, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil2, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil3, hip fire"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil1"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil2"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil3"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil1"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil2"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil3"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
 	<animation state_key="hold" animation_key="still, heavy weapon"/>
 	<animation state_key="running" animation_key="running, line infantry"/>
 	<animation state_key="walking" animation_key="walking, heavy weapon"/>
@@ -4342,12 +4330,12 @@
 	<animation state_key="recoil" animation_key="recoil, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil2, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil3, hip fire"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil1"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil2"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil3"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil1"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil2"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil3"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
 	<animation state_key="hold" animation_key="hold, lmg"/>
 	<animation state_key="running" animation_key="running, line infantry"/>
 	<animation state_key="walking" animation_key="walking, hip fire"/>
@@ -4440,12 +4428,12 @@
 	<animation state_key="recoil" animation_key="recoil, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil2, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil3, hip fire"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil1"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil2"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil3"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil1"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil2"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil3"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
 	<animation state_key="hold" animation_key="still, heavy weapon"/>
 	<animation state_key="running" animation_key="running, line infantry"/>
 	<animation state_key="walking" animation_key="walking, heavy weapon"/>
@@ -4492,12 +4480,12 @@
 	<animation state_key="recoil" animation_key="recoil, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil2, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil3, hip fire"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil1"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil2"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil3"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil1"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil2"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil3"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
 	<animation state_key="hold" animation_key="hold, lmg"/>
 	<animation state_key="running" animation_key="running, line infantry"/>
 	<animation state_key="walking" animation_key="walking, hip fire"/>
@@ -4544,12 +4532,12 @@
 	<animation state_key="recoil" animation_key="recoil, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil2, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil3, hip fire"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil1"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil2"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil3"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil1"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil2"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil3"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
 	<animation state_key="hold" animation_key="still, heavy weapon"/>
 	<animation state_key="running" animation_key="running, line infantry"/>
 	<animation state_key="walking" animation_key="walking, heavy weapon"/>
@@ -4596,12 +4584,12 @@
 	<animation state_key="recoil" animation_key="recoil, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil2, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil3, hip fire"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil1"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil2"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil3"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil1"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil2"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil3"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
 	<animation state_key="hold" animation_key="hold, lmg"/>
 	<animation state_key="running" animation_key="running, line infantry"/>
 	<animation state_key="walking" animation_key="walking, hip fire"/>
@@ -4649,12 +4637,12 @@
 	<animation state_key="recoil" animation_key="recoil, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil2, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil3, hip fire"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil1"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil2"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil3"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil1"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil2"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil3"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
 	<animation state_key="hold" animation_key="hold, lmg"/>
 	<animation state_key="running" animation_key="running, line infantry"/>
 	<animation state_key="walking" animation_key="walking, hip fire"/>
@@ -4701,12 +4689,12 @@
 	<animation state_key="recoil" animation_key="recoil, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil2, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil3, hip fire"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil1"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil2"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil3"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil1"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil2"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil3"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
 	<animation state_key="hold" animation_key="hold, lmg"/>
 	<animation state_key="running" animation_key="running, line infantry"/>
 	<animation state_key="walking" animation_key="walking, hip fire"/>
@@ -4752,12 +4740,12 @@
 	<animation state_key="recoil" animation_key="recoil, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil2, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil3, hip fire"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil1"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil2"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil3"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil1"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil2"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil3"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
 	<animation state_key="hold" animation_key="still, heavy weapon"/>
 	<animation state_key="running" animation_key="running, line infantry"/>
 	<animation state_key="walking" animation_key="walking, heavy weapon"/>
@@ -7592,12 +7580,12 @@
 	<animation state_key="recoil" animation_key="recoil, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil2, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil3, hip fire"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil1"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil2"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil3"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil1"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil2"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil3"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
 	<animation state_key="hold" animation_key="hold, lmg"/>
 	<animation state_key="running" animation_key="running, line infantry"/>
 	<animation state_key="walking" animation_key="walking, hip fire"/>
@@ -7643,12 +7631,12 @@
 	<animation state_key="recoil" animation_key="recoil, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil2, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil3, hip fire"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil1"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil2"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil3"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil1"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil2"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil3"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
 	<animation state_key="hold" animation_key="still, heavy weapon"/>
 	<animation state_key="running" animation_key="running, line infantry"/>
 	<animation state_key="walking" animation_key="walking, heavy weapon"/>
@@ -7786,12 +7774,12 @@
 	<animation state_key="recoil" animation_key="recoil, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil2, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil3, hip fire"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil1"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil2"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil3"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil1"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil2"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil3"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
 	<animation state_key="hold" animation_key="hold, lmg"/>
 	<animation state_key="running" animation_key="running, line infantry"/>
 	<animation state_key="walking" animation_key="walking, hip fire"/>
@@ -7837,12 +7825,12 @@
 	<animation state_key="recoil" animation_key="recoil, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil2, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil3, hip fire"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil1"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil2"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil3"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil1"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil2"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil3"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
 	<animation state_key="hold" animation_key="hold, lmg"/>
 	<animation state_key="running" animation_key="running, line infantry"/>
 	<animation state_key="walking" animation_key="walking, hip fire"/>
@@ -7889,12 +7877,12 @@
 	<animation state_key="recoil" animation_key="recoil, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil2, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil3, hip fire"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil1"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil2"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil3"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil1"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil2"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil3"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
 	<animation state_key="hold" animation_key="still, heavy weapon"/>
 	<animation state_key="running" animation_key="running, line infantry"/>
 	<animation state_key="walking" animation_key="walking, heavy weapon"/>
@@ -7940,12 +7928,12 @@
 	<animation state_key="recoil" animation_key="recoil, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil2, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil3, hip fire"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil1"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil2"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil3"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil1"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil2"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil3"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
 	<animation state_key="hold" animation_key="hold, lmg"/>
 	<animation state_key="running" animation_key="running, line infantry"/>
 	<animation state_key="walking" animation_key="walking, hip fire"/>
@@ -7990,12 +7978,12 @@
 	<animation state_key="recoil" animation_key="recoil, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil2, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil3, hip fire"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil1"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil2"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil3"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil1"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil2"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil3"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
 	<animation state_key="hold" animation_key="still, heavy weapon"/>
 	<animation state_key="running" animation_key="running, line infantry"/>
 	<animation state_key="walking" animation_key="walking, heavy weapon"/>
@@ -9104,12 +9092,12 @@
 	<animation state_key="recoil" animation_key="recoil, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil2, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil3, hip fire"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil1"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil2"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil3"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil1"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil2"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil3"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
 	<animation state_key="hold" animation_key="hold, lmg"/>
 	<animation state_key="running" animation_key="running, line infantry"/>
 	<animation state_key="walking" animation_key="walking, hip fire"/>
@@ -9157,12 +9145,12 @@
 	<animation state_key="recoil" animation_key="recoil, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil2, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil3, hip fire"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil1"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil2"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil3"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil1"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil2"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil3"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
 	<animation state_key="hold" animation_key="still, heavy weapon"/>
 	<animation state_key="running" animation_key="running, line infantry"/>
 	<animation state_key="walking" animation_key="walking, heavy weapon"/>
@@ -11855,12 +11843,12 @@
 	<animation state_key="recoil" animation_key="recoil, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil2, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil3, hip fire"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil1"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil2"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil3"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil1"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil2"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil3"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
 	<animation state_key="hold" animation_key="hold, lmg"/>
 	<animation state_key="running" animation_key="running, line infantry"/>
 	<animation state_key="walking" animation_key="walking, hip fire"/>
@@ -11906,12 +11894,12 @@
 	<animation state_key="recoil" animation_key="recoil, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil2, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil3, hip fire"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil1"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil2"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil3"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil1"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil2"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil3"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
 	<animation state_key="hold" animation_key="still, heavy weapon"/>
 	<animation state_key="running" animation_key="running, line infantry"/>
 	<animation state_key="walking" animation_key="walking, heavy weapon"/>
@@ -13271,12 +13259,12 @@
 	<animation state_key="recoil" animation_key="recoil, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil2, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil3, hip fire"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil1"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil2"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil3"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil1"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil2"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil3"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
 	<animation state_key="hold" animation_key="hold, lmg"/>
 	<animation state_key="running" animation_key="running, line infantry"/>
 	<animation state_key="walking" animation_key="walking, hip fire"/>
@@ -13326,12 +13314,12 @@
 	<animation state_key="recoil" animation_key="recoil, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil2, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil3, hip fire"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil1"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil2"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil3"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil1"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil2"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil3"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
 	<animation state_key="hold" animation_key="still, heavy weapon"/>
 	<animation state_key="running" animation_key="running, line infantry"/>
 	<animation state_key="walking" animation_key="walking, heavy weapon"/>
@@ -13979,12 +13967,12 @@
 	<animation state_key="recoil" animation_key="recoil, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil2, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil3, hip fire"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil1"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil2"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil3"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil1"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil2"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil3"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
 	<animation state_key="hold" animation_key="hold, lmg"/>
 	<animation state_key="running" animation_key="running, line infantry"/>
 	<animation state_key="walking" animation_key="walking, hip fire"/>
@@ -14031,12 +14019,12 @@
 	<animation state_key="recoil" animation_key="recoil, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil2, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil3, hip fire"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil1"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil2"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil3"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil1"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil2"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil3"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
 	<animation state_key="hold" animation_key="still, heavy weapon"/>
 	<animation state_key="running" animation_key="running, line infantry"/>
 	<animation state_key="walking" animation_key="walking, heavy weapon"/>
@@ -16391,12 +16379,12 @@
 	<animation state_key="recoil" animation_key="recoil, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil2, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil3, hip fire"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil1"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil2"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil3"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil1"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil2"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil3"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
 	<animation state_key="hold" animation_key="hold, lmg"/>
 	<animation state_key="running" animation_key="running, line infantry"/>
 	<animation state_key="walking" animation_key="walking, hip fire"/>
@@ -21990,12 +21978,12 @@
 	<animation state_key="recoil" animation_key="recoil, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil2, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil3, hip fire"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil1"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil2"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil3"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil1"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil2"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil3"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
 	<animation state_key="hold" animation_key="hold, lmg"/>
 	<animation state_key="running" animation_key="running, line infantry"/>
 	<animation state_key="walking" animation_key="walking, hip fire"/>
@@ -22050,12 +22038,12 @@
 	<animation state_key="recoil" animation_key="recoil, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil2, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil3, hip fire"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil1"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil2"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil3"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil1"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil2"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil3"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
 	<animation state_key="hold" animation_key="still, heavy weapon"/>
 	<animation state_key="running" animation_key="running, line infantry"/>
 	<animation state_key="walking" animation_key="walking, heavy weapon"/>
@@ -22370,7 +22358,7 @@
 </weapon>
 
 <weapon key="gkw_m14mod3_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="0.75" sustained_fire_diminish_rate="3.0" magazine_size="20" can_shoot_standing="1" suppressed="0" name="M14(MOD3)-[Clear Fighting Spirit]" class="2" burst_shots="1" reload_one_at_a_time="0" sight_range_modifier="2.35" stance_accuracy_rate="2.0" projectile_speed="200" barrel_offset="0.6" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="0.75" sustained_fire_diminish_rate="3.0" magazine_size="20" can_shoot_standing="1" suppressed="0" name="M14(MOD3)-[Clear Fighting Spirit]" class="2" burst_shots="1" reload_one_at_a_time="0" sight_range_modifier="2.35" last_burst_retrigger_time="-1" stance_accuracy_rate="2.0" projectile_speed="200" barrel_offset="0.6" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<inventory buy_price="100.0" sell_price="100.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -29086,12 +29074,12 @@
 	<animation state_key="recoil" animation_key="recoil, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil2, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil3, hip fire"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil1"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil2"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil3"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil1"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil2"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil3"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
 	<animation state_key="hold" animation_key="hold, lmg"/>
 	<animation state_key="running" animation_key="running, line infantry"/>
 	<animation state_key="walking" animation_key="walking, hip fire"/>
@@ -29138,12 +29126,12 @@
 	<animation state_key="recoil" animation_key="recoil, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil2, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil3, hip fire"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil1"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil2"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil3"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil1"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil2"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil3"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
 	<animation state_key="hold" animation_key="still, heavy weapon"/>
 	<animation state_key="running" animation_key="running, line infantry"/>
 	<animation state_key="walking" animation_key="walking, heavy weapon"/>
@@ -32104,12 +32092,12 @@
 	<animation state_key="recoil" animation_key="recoil, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil2, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil3, hip fire"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil1"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil2"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil3"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil1"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil2"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil3"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
 	<animation state_key="hold" animation_key="hold, lmg"/>
 	<animation state_key="running" animation_key="running, line infantry"/>
 	<animation state_key="walking" animation_key="walking, hip fire"/>
@@ -36304,12 +36292,12 @@
 	<animation state_key="recoil" animation_key="recoil, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil2, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil3, hip fire"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil1"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil2"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil3"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil1"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil2"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil3"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
 	<animation state_key="hold" animation_key="hold, lmg"/>
 	<animation state_key="running" animation_key="running, line infantry"/>
 	<animation state_key="walking" animation_key="walking, hip fire"/>
@@ -36364,12 +36352,12 @@
 	<animation state_key="recoil" animation_key="recoil, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil2, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil3, hip fire"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil1"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil2"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil3"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil1"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil2"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil3"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
 	<animation state_key="hold" animation_key="still, heavy weapon"/>
 	<animation state_key="running" animation_key="running, line infantry"/>
 	<animation state_key="walking" animation_key="walking, heavy weapon"/>
@@ -38213,12 +38201,12 @@
 	<animation state_key="recoil" animation_key="recoil, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil2, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil3, hip fire"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil1"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil2"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil3"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil1"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil2"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil3"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
 	<animation state_key="hold" animation_key="hold, lmg"/>
 	<animation state_key="running" animation_key="running, line infantry"/>
 	<animation state_key="walking" animation_key="walking, hip fire"/>
