@@ -22,7 +22,7 @@
         <inventory  buy_price="45.0" sell_price="45.0" />
         <animation key="cycle" animation_key="cycle_2h_hip_300rpm"/>
         <animation key="cycle" stance_key="prone" animation_key="cycle_2h_rifle_400rpm_prone"/>
-        <animation key="cycle" stance_key="overwall" animation_key="cycle_2h_rifle_400rpm"/>
+        <animation key="cycle" stance_key="over_wall" animation_key="cycle_2h_rifle_400rpm"/>
         <!--Sounds-->
         <sound key="fire" fileref="kord_fire_FromEFT.wav" pitch_variety="0.05" volume="1.3" />
         <sound key="magazine_out" fileref="kord_mgz_out_FromSQUAD.wav" volume="0.7" />
@@ -73,7 +73,7 @@
         <animation key="reload" animation_key="reloading, Machine gun 4" />
         <animation key="cycle" animation_key="cycle_2h_hip_600rpm"/>
         <animation key="cycle" stance_key="prone" animation_key="cycle_2h_rifle_750rpm_prone"/>
-        <animation key="cycle" stance_key="overwall" animation_key="cycle_2h_rifle_750rpm"/>
+        <animation key="cycle" stance_key="over_wall" animation_key="cycle_2h_rifle_750rpm"/>
         <animation state_key="hold_casual" animation_key="dancing, kazachok" />
         <inventory buy_price="45.0" sell_price="45.0" />
         <!--Sounds-->

@@ -46,7 +46,7 @@
         <stance state_key="standing" accuracy="0.85" />
         <stance state_key="crouching" accuracy="0.9" />
         <stance state_key="prone" accuracy="1.0" />
-        <stance state_key="overwall" accuracy="1" />
+        <stance state_key="over_wall" accuracy="1" />
         <modifier class="speed" value="0.05"/>
         <tag name="rifle"/>
         <inventory encumbrance="20.0" buy_price="1.0" sell_price="0.0"/>
@@ -116,7 +116,7 @@
         <stance state_key="standing" accuracy="0.45" />
         <stance state_key="crouching" accuracy="0.85" />
         <stance state_key="prone" accuracy="1.0" />
-        <stance state_key="overwall" accuracy="1.0" />
+        <stance state_key="over_wall" accuracy="1.0" />
 
         <modifier class="hit_success_probability" value="0.3"/>
         <modifier class="speed" value="-0.35"/>
@@ -138,7 +138,7 @@
         <animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
         <animation key="cycle" animation_key="cycle_2h_rifle_300rpm"/>
         <animation key="cycle" stance_key="prone" animation_key="cycle_2h_rifle_400rpm_prone"/>
-        <animation key="cycle" stance_key="overwall" animation_key="cycle_2h_rifle_400rpm"/>
+        <animation key="cycle" stance_key="over_wall" animation_key="cycle_2h_rifle_400rpm"/>
 
         <animation state_key="celebrate_shoot" animation_key="celebrating, shooting"/>
         <animation state_key="stabbing" animation_key="melee, quick knife"/>
