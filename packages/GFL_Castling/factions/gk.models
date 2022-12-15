@@ -1795,5 +1795,17 @@
     </model>      
     <model filename="gkd_smg_f1_mod3.xml">
         <requirement class="weapon" key="gkw_f1mod3.weapon" slot="0" />
-    </model>                    
+    </model>                
+    <model filename="gkd_ar_asval_2907.xml">
+        <requirement class="weapon" key="gkw_asval_2907.weapon" slot="0" />
+    </model>
+    <model filename="gkd_ar_asval_2907.xml">
+        <requirement class="weapon" key="gkw_asval_2907_skill.weapon" slot="0" />
+    </model>
+    <model filename="gkd_ar_asval_2907.xml">
+        <requirement class="weapon" key="gkw_asvalmod3_2907.weapon" slot="0" />
+    </model>
+    <model filename="gkd_ar_asval_2907.xml">
+        <requirement class="weapon" key="gkw_asvalmod3_2907_skill.weapon" slot="0" />
+    </model>            
 </models>
