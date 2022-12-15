@@ -2,8 +2,8 @@
 <vehicle name="Degeyter I" 
 	key="rubber_boat.vehicle" 
 	map_view_atlas_index="4"
-	respawn_time="60" 
-	time_to_live_unsteerable="495" 
+	respawn_time="90" 
+	time_to_live_unsteerable="60" 
 	character_leave_request_mode="friendly"  >
 	
 	<tag name="metal_thin" />

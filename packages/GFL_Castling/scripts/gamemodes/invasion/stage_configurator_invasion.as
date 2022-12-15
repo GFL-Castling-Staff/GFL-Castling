@@ -1166,15 +1166,29 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.m_mapInfo.m_path = "media/packages/GFL_Castling/maps/map6_c";
 		stage.m_mapInfo.m_id = "map6";
 
-		stage.m_maxSoldiers = 15 * 5;                                             // was 17*7 in 1.65
+		stage.m_maxSoldiers = 15 * 6;                                             // was 17*7 in 1.65
 		stage.m_playerAiCompensation = 2 + m_playerAiCompensation_offset;                                         // was 7 (test4)
         stage.m_playerAiReduction = 2;                                            // was 3 (test2)
     	stage.addTracker(jupiter(m_metagame,30));
 		stage.addTracker(PeacefulLastBase(m_metagame, 0));
 		stage.addTracker(CommsCapacityHandler(m_metagame));
 
-		stage.m_minRandomCrates = 4; 
-		stage.m_maxRandomCrates = 8;
+		stage.m_minRandomCrates = 3; 
+		stage.m_maxRandomCrates = 5;
+
+		{
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "sf_assault.call", "sf_assault_sub.call", array<string> = {""}, false,true,false,"infantry"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_assault.call", "kcco_assault_sub.call", array<string> = {""}, false,true,false,"infantry"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_zircon.call", "kcco_zircon_sub.call", array<string> = {""}, false,true,false,"infantry"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_assault.call", "para_assault_sub.call", array<string> = {""}, false,true,false,"infantry"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_eod.call", "para_eod_sub.call", array<string> = {""}, false,true,false,"infantry"));
+
+		}
+
+		{
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_deploy_coeus.call", "kcco_deploy_coeus_sub.call", array<string> = {""}, false,true,false,"vehicle"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_deploy_typhon.call", "kcco_deploy_typhon_sub.call", array<string> = {""}, false,true,false,"vehicle"));	
+		}
 
 		{
 			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0, 0.4, 0.15)); 
