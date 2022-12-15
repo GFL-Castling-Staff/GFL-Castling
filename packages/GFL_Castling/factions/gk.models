@@ -1041,9 +1041,6 @@
     <model filename="gkd_smg_ppsh41.xml">
         <requirement class="weapon" key="gkw_ppsh41.weapon" slot="0" />
     </model>
-    <model filename="gkd_smg_ppsh41.xml">
-        <requirement class="weapon" key="gkw_ppsh41_only.weapon" slot="0" />
-    </model>
     <model filename="gkd_smg_ro635.xml">
         <requirement class="weapon" key="gkw_ro635.weapon" slot="0" />
     </model>
@@ -1808,4 +1805,10 @@
     <model filename="gkd_ar_asval_2907.xml">
         <requirement class="weapon" key="gkw_asvalmod3_2907_skill.weapon" slot="0" />
     </model>            
+    <model filename="gkd_smg_ppsh41_602.xml">
+        <requirement class="weapon" key="gkw_ppsh41_602.weapon" slot="0" />
+    </model>
+    <model filename="gkd_smg_ppsh41_602.xml">
+        <requirement class="weapon" key="gkw_ppsh41mod3_602.weapon" slot="0" />
+    </model>    
 </models>

@@ -888,6 +888,7 @@ class BasicCommandHandler : Tracker {
 		} else if (checkCommand(message,"givetestweapon")){
 			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
 			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_asval_2907.weapon");
+			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_ppsh41_602.weapon");
 
 		} else if (checkCommand(message,"admintest")){
 			ProfileSave(m_metagame);

@@ -121,6 +121,8 @@ class kill_event : Tracker {
         // SMG——4kills
         {"gkw_ppsh41.weapon",4},
         {"gkw_ppsh41mod3.weapon",4},
+        {"gkw_ppsh41_602.weapon",4},
+        {"gkw_ppsh41mod3_602.weapon",4},
         {"gkw_mp7.weapon",4},
         {"gkw_mp7_6806.weapon",4},
         {"gkw_idw.weapon",4},
