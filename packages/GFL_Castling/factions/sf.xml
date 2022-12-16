@@ -529,7 +529,7 @@
 			<item_class_existence class="weapon" slot="1" probability="0.5" />
 		</item_class_existence_config>		
 	</soldier>
-	<soldier name="sf_guard_swap" spawn_score="1.0" copy_from="default_spawn_ai">
+	<soldier name="sf_guard_swap" spawn_score="0.0" copy_from="default_spawn_ai">
 		<ai filename="shield.ai" />
 		<resources clear_weapons="1" clear_calls="1">
 			<weapon key="sfw_guard_swap.weapon" enabled="1"/>

@@ -118,6 +118,7 @@ class kill_event : Tracker {
         {"gkw_saf.weapon",3},
         {"gkw_f1.weapon",3},
         {"gkw_f1mod3.weapon",3},
+        {"gkw_emp35.weapon",3},
 
         // SMG——4kills
         {"gkw_ppsh41.weapon",4},

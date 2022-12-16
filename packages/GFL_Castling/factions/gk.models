@@ -1837,5 +1837,9 @@
     </model>
     <model filename="gkd_rf_generalliu_5101.xml">
         <requirement class="weapon" key="gkw_liu_5101_skill.weapon" slot="0" />
-    </model>    
+    </model>
+    
+    <model filename="gkd_smg_erma.xml">
+        <requirement class="weapon" key="gkw_emp35.weapon" slot="0" />
+    </model>        
 </models>
