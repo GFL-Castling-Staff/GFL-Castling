@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<weapon key="gkw_pa15_3701.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+<weapon key="gkw_pa15_4202.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol" />
 	<!--Weapon specifications-->
 	<specification
@@ -10,7 +10,7 @@
 	magazine_size="15"
 	carry_in_two_hands="0"
 	suppressed="0"
-	name="MAB PA-15-[Highschool Heartbeat Story]"
+	name="MAB PA-15-[Marvellous Herb Cake]"
 	class="0"
 	slot="0"
 	reload_one_at_a_time="0"
@@ -49,7 +49,7 @@
 	<sound key="cycle" fileref="pa15_cycle_FromCOD16.wav" volume="0.8" />
 	<!--Model, Icon, Cost-->
 	<model filename="gkw_hg_pa15.xml" />
-	<hud_icon filename="gkw_pa15_3701.png" />
+	<hud_icon filename="gkw_pa15_4202.png" />
 	<!--Ballistics-->
 	<weak_hand_hold offset="0.1" />
 	<projectile file="bullet.projectile">
