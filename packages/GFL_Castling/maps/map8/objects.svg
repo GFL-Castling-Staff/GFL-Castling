@@ -29,11 +29,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.84290791"
-     inkscape:cx="-1063.1414"
-     inkscape:cy="1891.6365"
+     inkscape:zoom="1.6858158"
+     inkscape:cx="1564.171"
+     inkscape:cy="1016.3921"
      inkscape:document-units="px"
-     inkscape:current-layer="layer10"
+     inkscape:current-layer="layer57"
      showgrid="true"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
@@ -10472,6 +10472,16 @@
          in2="BackgroundImage"
          id="feBlend11086-40-8-26-3-5-92-73-0" />
     </filter>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient7716"
+       id="linearGradient94302-1"
+       x1="1220.8148"
+       y1="1134.6761"
+       x2="1220.4055"
+       y2="1137.4937"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-1569.5213,-2435.1863)" />
   </defs>
   <metadata
      id="metadata7">
@@ -16265,7 +16275,7 @@ key = mortar_ammunition_crates.vehicle;</desc>
        height="50.507629"
        width="77.781746"
        id="rect9344-6-8-0-4"
-       style="fill:#fdffb0;fill-opacity:1;fill-rule:nonzero;stroke:#014c50;stroke-width:5;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;display:inline;enable-background:new">
+       style="fill:#fdffb0;fill-opacity:1;fill-rule:nonzero;stroke:#18b7c0;stroke-width:5;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;display:inline;enable-background:new">
       <desc
          id="desc9346-4-7-4-8">day_color = fill; 
 night_color = stroke; 
@@ -16427,7 +16437,8 @@ separator_top_texture_scale = 0.6 0.6;
 separator_top_texture_atlas_cell = 6 5 16 16  0.015625  0.015625; 
 separator_color = #938c7d; 
 separator_over_height = 1.7; 
-separator_depth = 0.7;</desc>
+separator_depth = 0.7;
+climbable = 0;</desc>
     </rect>
     <rect
        style="display:inline;fill:#d2d2d2;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:5;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;enable-background:new"
@@ -16442,7 +16453,7 @@ separator_depth = 0.7;</desc>
 static_object_type_key=security_fence.static_object;
 color = 1.0 1.0 1.0 1.0;
 depth = -1.0;
-height = 3.5;
+height = 4.5;
 side_texture = fence_atlas1.png;
 side_texture_scale = 1.25 1.25;
 side_texture_atlas_cell = 1 0 4 4 0.015625;
@@ -16457,7 +16468,7 @@ separator_over_height = 0.1;
 separator_depth = 0.2;
 penetrability = 1.0;
 see_through = 1;
-climb_type = 1;
+climbable = 0;
 hack1 = 1;</desc>
     </rect>
   </g>
@@ -16482,7 +16493,7 @@ visible_in_menu = 0;
   </g>
   <g
      sodipodi:insensitive="true"
-     style="display:inline"
+     style="display:none"
      inkscape:label="dirt"
      id="layer4"
      inkscape:groupmode="layer">
@@ -17028,7 +17039,7 @@ visible_in_menu = 0;
        transform="matrix(-0.99711768,0.07587049,-0.07587049,-0.99711768,1379.1967,443.75083)" />
   </g>
   <g
-     style="display:inline"
+     style="display:none"
      inkscape:label="alpha_sand"
      id="layer6"
      inkscape:groupmode="layer"
@@ -18906,7 +18917,8 @@ top_material = terrain;</desc>
      style="display:inline"
      inkscape:label="offroad"
      id="layer25"
-     inkscape:groupmode="layer">
+     inkscape:groupmode="layer"
+     sodipodi:insensitive="true">
     <path
        inkscape:label="#path11338"
        sodipodi:nodetypes="cssssssssssssssssc"
@@ -28934,16 +28946,6 @@ key = gas_tank.vehicle;</desc>
            id="desc11203-1-7-7-5-9-3-64-6">template = SandbagWall1;</desc>
       </path>
       <path
-         sodipodi:nodetypes="ccccccccccccc"
-         inkscape:label=""
-         inkscape:connector-curvature="0"
-         id="wall40-7-1-1-9-52-0-00"
-         d="m 1092.8225,896.51641 -5.6419,7.69435 -10.885,-0.97176 -11.8222,-1.05543 -7.1723,14.44406 -19.2659,2.27914 -13.9207,-6.36966 -14.4054,-8.08015 -12.76502,-7.0083 -6.33671,-11.07996 -6.33672,-11.07997 4.90086,-11.97749 4.90085,-11.97749"
-         style="display:inline;fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;enable-background:new">
-        <desc
-           id="desc11203-1-7-7-5-9-3-45">template = SandbagWall3;</desc>
-      </path>
-      <path
          sodipodi:nodetypes="cccccc"
          inkscape:label=""
          inkscape:connector-curvature="0"
@@ -29076,7 +29078,7 @@ separator_at_end = 0;</desc>
          inkscape:label=""
          inkscape:connector-curvature="0"
          id="wall40-7-1-1-9-52-0-00-8"
-         d="m 1092.8223,896.5166 -5.6419,7.69435 -10.885,-0.97176 -11.8222,-1.05543 -7.1723,14.44406 -19.2659,2.27914 -13.9207,-6.36966 -14.4054,-8.08015 -12.76502,-7.0083 -6.33671,-11.07996 -6.33672,-11.07997 4.90086,-11.97749 4.90085,-11.97749"
+         d="m 1092.8223,896.5166 -5.6419,7.69435 -10.885,-0.97176 -11.8222,-1.05543 -7.1723,14.44406 -19.2659,2.27914 -13.9207,-6.36966 -14.4054,-8.08015 -12.76502,-7.0083 -6.33671,-11.07996 -6.33672,-11.07997 -2.01998,-10.50943 5.73974,-13.02611"
          style="display:inline;fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;enable-background:new">
         <desc
            id="desc11203-1-7-7-5-9-3-45-8">template = WireWall;</desc>
@@ -29100,6 +29102,48 @@ separator_at_end = 0;</desc>
          style="display:inline;fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;enable-background:new">
         <desc
            id="desc11203-1-7-7-5-9-3-4-8-8-9-88-2-2">template = WireWall;</desc>
+      </path>
+      <path
+         sodipodi:nodetypes="ccc"
+         inkscape:label=""
+         inkscape:connector-curvature="0"
+         id="wall40-7-1-1-9-52-0-09-8-4-6"
+         d="m 992.31838,842.65487 -3.16408,3.3979 -1.07041,5.97308"
+         style="display:inline;fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;enable-background:new">
+        <desc
+           id="desc11203-1-7-7-5-9-3-4-8-8-6">template = SandbagWall1; merge = 1;</desc>
+      </path>
+      <path
+         sodipodi:nodetypes="ccc"
+         inkscape:label=""
+         inkscape:connector-curvature="0"
+         id="wall40-7-1-1-9-52-0-09-8-4-2-9"
+         d="m 1000.7121,851.03073 0.7696,-5.24655 -2.34516,-4.75518"
+         style="display:inline;fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;enable-background:new">
+        <desc
+           id="desc11203-1-7-7-5-9-3-4-8-8-9-1">template = SandbagWall1; merge = 1;</desc>
+      </path>
+      <path
+         sodipodi:nodetypes="cc"
+         inkscape:label=""
+         inkscape:connector-curvature="0"
+         id="wall40-7-1-1-9-52-0-09-8-4-2-8-0"
+         d="m 999.27391,841.76455 -6.95553,0.89032"
+         style="display:inline;fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;enable-background:new">
+        <desc
+           id="desc11203-1-7-7-5-9-3-4-8-8-9-8-09">template = SandbagWall1; merge = 1; height = 0.8;
+separator_at_start =0;
+separator_at_end = 0;</desc>
+      </path>
+      <path
+         sodipodi:nodetypes="ccccccccccccc"
+         inkscape:label=""
+         inkscape:connector-curvature="0"
+         id="wall40-7-1-1-9-52-0-00-8-1"
+         d="m 1092.8222,896.5166 -5.6419,7.69435 -10.885,-0.97176 -11.8222,-1.05543 -7.1723,14.44406 -19.2659,2.27914 -13.9207,-6.36966 -14.4054,-8.08015 -12.76501,-7.0083 -6.33671,-11.07996 -6.33672,-11.07997 -2.01998,-10.50943 5.73974,-13.02611"
+         style="display:inline;fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;enable-background:new">
+        <desc
+           id="desc11203-1-7-7-5-9-3-45-8-8">template = SandbagWall3;</desc>
       </path>
     </g>
     <g
@@ -37376,6 +37420,24 @@ top_material = terrain;</desc>
         <desc
            id="desc19397-9-7-5-2-1">type = stash;</desc>
       </rect>
+      <rect
+         transform="matrix(0.91461525,0.4043253,-0.4043253,0.91461525,0,0)"
+         inkscape:label="#ladder"
+         y="407.86075"
+         x="1286.3845"
+         height="1.2181376"
+         width="4.0621076"
+         id="rect7651-13-5-8-6-4-4-7-3-9-0-3-2-4-6-2-5-4-1"
+         style="display:inline;opacity:0.79775277;fill:#2cffe7;fill-opacity:1;fill-rule:nonzero;stroke:none;enable-background:new" />
+      <rect
+         transform="matrix(0.91461525,0.4043253,-0.4043253,0.91461525,0,0)"
+         inkscape:label="#ladder"
+         y="409.10928"
+         x="1321.9313"
+         height="1.2181376"
+         width="4.0621076"
+         id="rect7651-13-5-8-6-4-4-7-3-9-0-3-2-4-6-2-5-4-1-2"
+         style="display:inline;opacity:0.79775277;fill:#2cffe7;fill-opacity:1;fill-rule:nonzero;stroke:none;enable-background:new" />
     </g>
     <g
        style="display:inline"
@@ -38263,32 +38325,6 @@ tag = trans_truck;</desc>
            id="desc26444-1-6">type = vehicle; tag = tow;</desc>
       </rect>
       <rect
-         transform="matrix(0.14799808,0.98898765,-0.98898765,0.14799808,0,0)"
-         inkscape:label=""
-         y="-1214.5166"
-         x="1235.3113"
-         height="7.3961515"
-         width="3.982286"
-         id="spawn1-70-2-8-17-7-3-7-1-2"
-         style="display:inline;fill:#112b00;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:11.99999903, 11.99999903;stroke-dashoffset:4.59999895;stroke-opacity:1;enable-background:new">
-        <desc
-           id="desc7082-9-86-1-4-6-8-7-7-6">type = vehicle;
-tag = truck;</desc>
-      </rect>
-      <rect
-         transform="matrix(0.74356266,0.66866627,-0.66866627,0.74356266,0,0)"
-         inkscape:label=""
-         y="-155.13834"
-         x="1676.3284"
-         height="7.3961515"
-         width="3.982286"
-         id="spawn1-70-2-8-17-7"
-         style="display:inline;fill:#007cff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:11.99999873, 11.99999873;stroke-dashoffset:4.59999895;stroke-opacity:1;enable-background:new">
-        <desc
-           id="desc7082-9-86-1-4-1">type = vehicle;
-tag = jeep;</desc>
-      </rect>
-      <rect
          transform="matrix(0.74356266,0.66866627,-0.66866627,0.74356266,0,0)"
          inkscape:label=""
          y="250.62233"
@@ -38342,19 +38378,6 @@ tag = apc;</desc>
            id="desc41621">type = vehicle;
 key = radio_jammer.vehicle;
 </desc>
-      </rect>
-      <rect
-         transform="matrix(-0.81444964,0.58023425,-0.58023425,-0.81444964,0,0)"
-         inkscape:label=""
-         y="-1686.0493"
-         x="-500.85147"
-         height="7.3961515"
-         width="3.982286"
-         id="spawn1-70-1-4-9-17-2-25-2-6-1-1"
-         style="display:inline;fill:#ffd5d5;fill-opacity:1;stroke:#ff00ff;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:12.00000025, 12.00000025;stroke-dashoffset:4.5999999;stroke-opacity:1;enable-background:new">
-        <desc
-           id="desc7082-9-7-0-4-4-3-3-9-2-1-0">type = vehicle; 
-key = mobile_armory.vehicle;</desc>
       </rect>
       <rect
          transform="matrix(0.22535729,-0.97427619,0.97427619,0.22535729,0,0)"
@@ -39163,20 +39186,6 @@ tag = tank;</desc>
 key = water_tower.vehicle;</desc>
       </rect>
       <rect
-         transform="matrix(0.99330778,-0.11549739,0.11549739,0.99330778,0,0)"
-         inkscape:label=""
-         y="686.74707"
-         x="829.40967"
-         height="7.3961515"
-         width="3.982286"
-         id="spawn1-70-1-4-9-17-2-1-3-3-9-3-7-8-9"
-         style="display:inline;fill:#ac9393;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:12.00000222, 12.00000222;stroke-dashoffset:4.60000086;stroke-opacity:1;enable-background:new">
-        <desc
-           id="desc7082-9-7-0-4-4-3-9-4-4-5-2-9-3-4">type = vehicle;
-key = cargo_truck.vehicle;
-</desc>
-      </rect>
-      <rect
          transform="matrix(0.99966256,0.02597644,-0.02597644,0.99966256,0,0)"
          rx="4.1992183"
          inkscape:label=""
@@ -39197,22 +39206,6 @@ key = radio_jammer.vehicle;
          rx="4.1992183"
          inkscape:label=""
          ry="3.5156248"
-         y="800.40997"
-         x="1092.5294"
-         height="8.4813709"
-         width="8.3984365"
-         id="spawn7200-1-1-2-7-4-4-2-0"
-         style="display:inline;fill:#00ffff;fill-opacity:1;fill-rule:nonzero;stroke:none;enable-background:new">
-        <desc
-           id="desc7204-7-7-2-6-8-5-1-2">type = vehicle;
-key = radio_jammer.vehicle;
-</desc>
-      </rect>
-      <rect
-         transform="matrix(0.99966256,0.02597644,-0.02597644,0.99966256,0,0)"
-         rx="4.1992183"
-         inkscape:label=""
-         ry="3.5156248"
          y="989.23859"
          x="1406.8735"
          height="8.4813709"
@@ -39221,6 +39214,47 @@ key = radio_jammer.vehicle;
          style="display:inline;fill:#00ffff;fill-opacity:1;fill-rule:nonzero;stroke:none;enable-background:new">
         <desc
            id="desc7204-7-7-2-6-8-5-1-8">type = vehicle;
+key = radio_jammer.vehicle;
+</desc>
+      </rect>
+      <rect
+         transform="matrix(-0.97578009,0.21875379,-0.21875379,-0.97578009,0,0)"
+         inkscape:label=""
+         y="-1044.4591"
+         x="-787.47919"
+         height="2.7343748"
+         width="2.7343748"
+         id="spawn6969-30-8"
+         style="display:inline;enable-background:new;fill:#00ff00;fill-opacity:1;fill-rule:nonzero;stroke:#800000;stroke-width:1.79999995;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1">
+        <desc
+           id="desc26444-1-9">type = vehicle; tag = tow;</desc>
+      </rect>
+      <rect
+         style="display:inline;fill:#aaaaaa;fill-opacity:1;fill-rule:nonzero;stroke:url(#linearGradient94302-1);stroke-width:1.79999995;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;enable-background:new"
+         id="spawn6969-30-1-3-3-3-3-3-1-4-7-9-6"
+         width="5.8257046"
+         height="6.2707825"
+         x="-351.17197"
+         y="-1302.6832"
+         inkscape:label=""
+         transform="matrix(-0.82402609,0.56655186,-0.56655186,-0.82402609,0,0)">
+        <desc
+           id="desc26444-1-9-6-5-7-4-4-5-7-4-9-1">type = vehicle; 
+tag = mortar_deploy;</desc>
+      </rect>
+      <rect
+         style="display:inline;fill:#ffff00;fill-opacity:1;fill-rule:nonzero;stroke:#0000ff;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:7;stroke-opacity:1;enable-background:new"
+         id="spawn7200-1-1-2-7-1-4-4"
+         width="8.3984365"
+         height="8.4813709"
+         x="874.62988"
+         y="-1068.5103"
+         ry="3.5156248"
+         inkscape:label=""
+         rx="4.1992183"
+         transform="matrix(-0.00976398,0.99995233,-0.99995233,-0.00976398,0,0)">
+        <desc
+           id="desc7204-7-7-2-6-7-0">type = vehicle;
 key = radio_jammer.vehicle;
 </desc>
       </rect>
