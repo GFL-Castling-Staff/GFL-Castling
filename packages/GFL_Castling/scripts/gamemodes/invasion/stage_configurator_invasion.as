@@ -185,6 +185,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		// addStage(setupStage105()); 		  // map105_2 shockzone by diling
 		// addStage(setupStage1_rust());          // map2_?
 		// addStage(setupStageRace());          // DEJAHU
+
 		addStage(setupStage1());          // map2
 		addStage(setupStage7());          // map6c by diling
 		addStage(setupStage20());

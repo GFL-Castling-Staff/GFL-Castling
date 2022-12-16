@@ -1,6 +1,6 @@
 particle_system AcidCloud
 {
-	quota	200
+	quota	1500
 	material	AcidCloud
 	particle_width	1.5
 	particle_height	1.5
@@ -20,8 +20,8 @@ particle_system AcidCloud
 		velocity	0.6
 		velocity_min	0.3
 		velocity_max	0.4
-		time_to_live_min	2
-		time_to_live_max	5
+		time_to_live_min	4
+		time_to_live_max	4
 		duration	0.06
 		duration_min	0.04
 		duration_max	0.06

@@ -1317,7 +1317,7 @@ class GFLskill : Tracker {
 				if (character !is null) {
 					Vector3 grenade_pos = stringToVector3(event.getStringAttribute("position"));
 					int factionid = character.getIntAttribute("faction_id");
-					DOT_track.insertLast(DOT_tracker(characterId,factionid,grenade_pos,2.0,"elenusis_acid_bomb_spawn.projectile",5));
+					DOT_track.insertLast(DOT_tracker(characterId,factionid,grenade_pos,1.0,"elenusis_acid_bomb_spawn.projectile",10));
 				}
 				break;			
 			}
@@ -1607,7 +1607,7 @@ class Javelin_lister{
 class DOT_tracker{
     int m_characterId;
 	int m_numtime;
-	float m_time=0;
+	float m_time=0.05;
 	float m_time_interval;
 	int m_factionid;
 	string m_projectile;

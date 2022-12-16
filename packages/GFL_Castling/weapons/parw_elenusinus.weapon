@@ -126,7 +126,7 @@
 	class="0"
 	projectile_speed="100.0"
 	use_basic_muzzle_smoke_effect="0"
-	barrel_offset_3d="0 0.5 2.0"
+	barrel_offset_3d="0 0.5 2.3"
 	cooldown_start="1.0"
 	cooldown_end="0.0"/>
 	<sound key="fire" fileref="1130_fire_FromSAM3.wav" pitch_variety="0.05" volume="0.8"/>
@@ -184,7 +184,7 @@
     <effect class="muzzle" ref="LawMuzzle" />
     <effect class="muzzle" ref="UpDust" />
 
-    <sound key="fire" fileref="noxe_shot.wav" volume="0.5" pitch_variety="0.0" />
+    <sound key="fire" fileref="noxe_shot.wav" volume="0.8" pitch_variety="0.0" />
 
 
 </weapon>
