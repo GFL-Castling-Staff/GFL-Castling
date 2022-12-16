@@ -29,6 +29,8 @@ dictionary itemDropFileIndex = {
     {"upgrade_vz61.carry_item",8},      // vz61
     {"upgrade_m1903_1.carry_item",9},      // 太太
     {"upgrade_m1903_2.carry_item",10},      // 太太
+    {"upgrade_fn49.carry_item",11},      // FN49
+    {"upgrade_9a91.carry_item",12},      // 9A91
 
     {"666",0}
 };
@@ -47,6 +49,8 @@ dictionary itemDropKeyIndex = {
     {"vz61",8},                         // vz61
     {"m1903_1",9},                      // m1903
     {"m1903_2",10},                     // m1903
+    {"fn49",11},                        // fn49
+    {"9a91",12},                        // 9a91
 
     {"666",0}
 };
@@ -216,7 +220,33 @@ class ItemDropEvent : Tracker {
                         playPrivateSound(m_metagame,"sfx_equip.wav",pId);
                     }
                     break;
-                }                                                
+                }   
+                case 11:{
+                    if(checkQueue(pId,"fn49")){
+                        addItemInBackpack(m_metagame,cId,"carry_item","upgrade_fn49.carry_item");
+                        sendPrivateMessageKey(m_metagame, pId, "onlyonequeue_common");
+                        playPrivateSound(m_metagame,"sfx_failed.wav",pId);
+                    }
+                    else{
+                        startQueue(pId,"fn49");
+                        sendPrivateMessageKey(m_metagame, pId, "upgrade_common");
+                        playPrivateSound(m_metagame,"sfx_equip.wav",pId);
+                    }
+                    break;
+                }     
+                case 12:{
+                    if(checkQueue(pId,"9a91")){
+                        addItemInBackpack(m_metagame,cId,"carry_item","upgrade_9a91.carry_item");
+                        sendPrivateMessageKey(m_metagame, pId, "onlyonequeue_common");
+                        playPrivateSound(m_metagame,"sfx_failed.wav",pId);
+                    }
+                    else{
+                        startQueue(pId,"9a91");
+                        sendPrivateMessageKey(m_metagame, pId, "upgrade_common");
+                        playPrivateSound(m_metagame,"sfx_equip.wav",pId);
+                    }
+                    break;
+                }                                                                                  
                 default:{
                     if (checkQueue(pId,"mod3")){
                         string outputItem = string(MOD3craftList[itemKey]);
@@ -296,7 +326,27 @@ class ItemDropEvent : Tracker {
                         addItemInBackpack(m_metagame,cId,"weapon","gkw_m1903_exp.weapon");
                         m_craftQueue.removeAt(findQueueIndex(pId,"m1903_2"));
                         playPrivateSound(m_metagame,"digimind_sfx2.wav",pId);
-                    }                                                            
+                    }        
+                    else if (checkQueue(pId,"fn49") && (itemKey=="gkw_fn49.weapon")){
+                        addItemInBackpack(m_metagame,cId,"weapon","gkw_fn49mod3.weapon");
+                        m_craftQueue.removeAt(findQueueIndex(pId,"fn49"));
+                        playPrivateSound(m_metagame,"digimind_sfx2.wav",pId);
+                    }                                        
+                    else if (checkQueue(pId,"fn49") && (itemKey=="gkw_fn49_4709.weapon")){
+                        addItemInBackpack(m_metagame,cId,"weapon","gkw_fn49mod3_4709.weapon");
+                        m_craftQueue.removeAt(findQueueIndex(pId,"fn49"));
+                        playPrivateSound(m_metagame,"digimind_sfx2.wav",pId);
+                    }           
+                    else if (checkQueue(pId,"9a91") && (itemKey=="gkw_9a91.weapon" || itemKey=="gkw_9a91_skill.weapon" )){
+                        addItemInBackpack(m_metagame,cId,"weapon","gkw_9a91_only.weapon");
+                        m_craftQueue.removeAt(findQueueIndex(pId,"9a91"));
+                        playPrivateSound(m_metagame,"digimind_sfx2.wav",pId);
+                    }   
+                    else if (checkQueue(pId,"9a91") && (itemKey=="gkw_9a91_1302.weapon" || itemKey=="gkw_9a91_1302_skill.weapon" )){
+                        addItemInBackpack(m_metagame,cId,"weapon","gkw_9a91_1302_only.weapon");
+                        m_craftQueue.removeAt(findQueueIndex(pId,"9a91"));
+                        playPrivateSound(m_metagame,"digimind_sfx2.wav",pId);
+                    }                                                                              
                     break;
                 }
             }
@@ -517,7 +567,19 @@ class ItemDropEvent : Tracker {
                                 playPrivateSound(m_metagame,"sfx_returnback.wav",pId);
                                 sendPrivateMessageKey(m_metagame, pId, "quest_timeout");
                                 break;
-                            }                                                                                    
+                            }                    
+                            case 11:{ 
+                                addItemInBackpack(m_metagame,cId,"carry_item","upgrade_fn49.carry_item");
+                                playPrivateSound(m_metagame,"sfx_returnback.wav",pId);
+                                sendPrivateMessageKey(m_metagame, pId, "quest_timeout");
+                                break;
+                            }
+                            case 12:{ 
+                                addItemInBackpack(m_metagame,cId,"carry_item","upgrade_9a91.carry_item");
+                                playPrivateSound(m_metagame,"sfx_returnback.wav",pId);
+                                sendPrivateMessageKey(m_metagame, pId, "quest_timeout");
+                                break;
+                            }                                                                                                                        
                             default:
                                 break;
                         }                                      

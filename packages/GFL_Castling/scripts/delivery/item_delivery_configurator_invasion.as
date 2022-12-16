@@ -567,6 +567,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		ScoredResource("upgrade_vz61.carry_item", "carry_item", 0.1f),
 		ScoredResource("upgrade_m1903_1.carry_item", "carry_item", 0.1f),
 		ScoredResource("upgrade_m1903_2.carry_item", "carry_item", 0.1f),
+		ScoredResource("upgrade_9a91.carry_item", "carry_item", 0.1f),
 
 		ScoredResource("RO365_Ant_Doll.carry_item", "carry_item", 5.0f,2),
 		ScoredResource("RO365_Ant_Doll.carry_item", "carry_item", 25.0f),
@@ -626,6 +627,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		ScoredResource("upgrade_g41.carry_item", "carry_item", 0.1f),
 		ScoredResource("upgrade_fg42.carry_item", "carry_item", 0.1f),
 		ScoredResource("upgrade_vz61.carry_item", "carry_item", 0.1f),
+		ScoredResource("upgrade_9a91.carry_item", "carry_item", 0.1f),
 		ScoredResource("upgrade_m1903_1.carry_item", "carry_item", 0.1f),
 		ScoredResource("upgrade_m1903_2.carry_item", "carry_item", 0.1f)
 			}
@@ -651,6 +653,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		ScoredResource("upgrade_vz61.carry_item", "carry_item", 0.1f),
 		ScoredResource("upgrade_m1903_1.carry_item", "carry_item", 0.1f),
 		ScoredResource("upgrade_m1903_2.carry_item", "carry_item", 0.1f),
+		ScoredResource("upgrade_9a91.carry_item", "carry_item", 0.1f),
 		ScoredResource("RO365_Ant_Doll.carry_item", "carry_item", 15.0f),
 		ScoredResource("wild_gifts.carry_item", "carry_item", 7.5f, 20),
 		ScoredResource("snow_gifts.carry_item", "carry_item", 7.5f, 20),
@@ -729,6 +732,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		ScoredResource("ange_street.carry_item", "carry_item", 1.0f),
 		ScoredResource("gkw_kccoar.weapon","weapon",0.7f),
 		ScoredResource("upgrade_m1.carry_item","carry_item",0.5f),
+		ScoredResource("upgrade_fn49.carry_item","carry_item",1.0f),
 
 		ScoredResource("dandelion.carry_item", "carry_item", 1.0f),
 		ScoredResource("dima.carry_item", "carry_item", 1.0f),
@@ -1745,7 +1749,8 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		ScoredResource("upgrade_fg42.carry_item", "carry_item", 0.01f),
 		ScoredResource("upgrade_vz61.carry_item", "carry_item", 0.01f),
 		ScoredResource("upgrade_m1903_1.carry_item", "carry_item", 0.01f),
-		ScoredResource("upgrade_m1903_2.carry_item", "carry_item", 0.01f),				
+		ScoredResource("upgrade_m1903_2.carry_item", "carry_item", 0.01f),	
+		ScoredResource("upgrade_9a91.carry_item", "carry_item", 0.01f),			
 		ScoredResource("gkw_cms_6403.weapon", "weapon", 0.6f),
 		ScoredResource("gkw_kord_5102.weapon", "weapon", 0.6f),
 		ScoredResource("gkw_mdr_2603.weapon", "weapon", 0.6f),
