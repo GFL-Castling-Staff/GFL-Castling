@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapons>
-    <weapon key="gkw_pkp.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+    <weapon key="gkw_pkp_4203.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
         <specification 
         barrel_offset="0.5"
         retrigger_time="0.0923"
@@ -10,7 +10,7 @@
         magazine_size="100"
         suppressed="0"
         stance_accuracy_rate="0.5"
-        name="PKP Pecheneg"
+        name="PKP Pecheneg-[Bamboo's Pride]"
         class="0"
         projectile_speed="206"
         sight_range_modifier="1.5"
@@ -23,15 +23,15 @@
         <animation state_key="hold_casual" animation_key="dancing, kazachok"/>
         <animation key="reload" animation_key="reloading, Machine gun 2.0"/>
         <inventory encumbrance="20.0" buy_price="40.0" sell_price="40.0"/>
-        <next_in_chain key="gkw_pkp_skill.weapon" share_ammo="1"/>
+        <next_in_chain key="gkw_pkp_4203_skill.weapon" share_ammo="1"/>
         <sound key="fire" fileref="pkp_fire_FromINS.wav" pitch_variety="0.05" volume="1.1"/>
         <sound key="magazine_out" fileref="pkp_mgz_out_FromINS.wav" volume="0.8"/>
         <sound key="magazine_in" fileref="pkp_mgz_in_FromINS.wav" volume="0.8"/>
         <sound key="cycle" fileref="pkp_cycle_FromINS.wav" volume="1.0"/>
         <sound class="impact" fileref="rifle_drop.wav"/>
-        <model filename="gkw_mg_pkp.xml"/>
-        <commonness value="0.2" in_stock="0" can_respawn_with="1"/>
-        <hud_icon filename="gkw_pkp.png"/>
+        <model filename="gkw_mg_pkp_4203.xml"/>
+        <commonness value="0" in_stock="0" can_respawn_with="1"/>
+        <hud_icon filename="gkw_pkp_4203.png"/>
         <projectile file="bullet.projectile">
             <result class="hit" kill_probability="2.0" kill_probability_offset_on_successful_hit="1.0" kill_decay_start_time="1.5" kill_decay_end_time="1.6"/>
         </projectile>
@@ -71,7 +71,7 @@
         <target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
     </weapon>
     
-    <weapon key="gkw_pkp_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+    <weapon key="gkw_pkp_4203_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
         <specification 
         barrel_offset="0.5"
         retrigger_time="0.0923"
@@ -81,7 +81,7 @@
         magazine_size="100"
         stance_accuracy_rate="0.5"
         suppressed="0"
-        name="PKP Pecheneg-[Ultimatum]"
+        name="PKP Pecheneg-[Bamboo's Pride]-[Ultimatum]"
         class="0"
         projectile_speed="220"
         sight_range_modifier="1.5"
@@ -95,15 +95,15 @@
         <animation state_key="hold_casual" animation_key="dancing, kazachok"/>
         <animation key="reload" animation_key="reloading, Machine gun 1.6"/>
         <inventory encumbrance="20.0" buy_price="40.0" sell_price="40.0"/>
-        <next_in_chain key="gkw_pkp.weapon" share_ammo="1"/>
+        <next_in_chain key="gkw_pkp_4203.weapon" share_ammo="1"/>
         <sound key="fire" fileref="pkp_fire_FromINS.wav" pitch_variety="0.05" volume="1.1"/>
         <sound key="magazine_out" fileref="pkp_mgz_out_FromINS.wav" volume="0.8"/>
         <sound key="magazine_in" fileref="pkp_mgz_in_FromINS.wav" volume="0.8"/>
         <sound key="cycle" fileref="pkp_cycle_FromINS.wav" volume="1.0"/>
         <sound class="impact" fileref="rifle_drop.wav"/>
-        <model filename="gkw_mg_pkp.xml"/>
+        <model filename="gkw_mg_pkp_4203.xml"/>
         <commonness value="0" in_stock="0" can_respawn_with="1"/>
-        <hud_icon filename="gkw_pkp_skill.png"/>
+        <hud_icon filename="gkw_pkp_4203.png"/>
         <projectile file="bullet.projectile">
             <result class="hit" kill_probability="2.0" kill_probability_offset_on_successful_hit="1.15" kill_decay_start_time="1.5" kill_decay_end_time="1.6"/>
         </projectile>

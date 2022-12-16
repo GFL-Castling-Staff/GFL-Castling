@@ -1816,5 +1816,11 @@
     </model>
     <model filename="gkd_smg_sr3mp_4101.xml">
         <requirement class="weapon" key="gkw_sr3mp_4101_skill.weapon" slot="0" />
-    </model>    
+    </model>   
+    <model filename="gkd_mg_pkp_4203.xml">
+        <requirement class="weapon" key="gkw_pkp_4203.weapon" slot="0" />
+    </model>
+    <model filename="gkd_mg_pkp_4203.xml">
+        <requirement class="weapon" key="gkw_pkp_4203_skill.weapon" slot="0" />
+    </model>       
 </models>
