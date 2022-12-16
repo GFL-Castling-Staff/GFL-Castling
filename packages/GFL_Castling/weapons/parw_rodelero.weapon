@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapon file="paradeus.base_weapon" key="parw_rodelero.weapon">
     <tag name="autorifle" />
-    <specification retrigger_time="0.05" accuracy_factor="1.0" sustained_fire_grow_step="0.40" sustained_fire_diminish_rate="1.2" magazine_size="4" can_shoot_standing="1" suppressed="0" name="Rodelero" class="0" projectile_speed="120.0" />
+    <specification retrigger_time="0.05" accuracy_factor="1.0" sustained_fire_grow_step="0.40" sustained_fire_diminish_rate="1.2" magazine_size="4" can_shoot_standing="1" suppressed="0" name="Rodelero" class="0" projectile_speed="120.0" barrel_offset="0.6" />
     <animation state_key="recoil" animation_key="recoil2, dreamer" />
     <animation key="recoil" stance_key="over_wall" animation_key="recoil2, dreamer" />
     <animation key="recoil" stance_key="crouching" animation_key="recoil2, dreamer" />
-    <animation key="reload" animation_key="reloading, magazine rifle 0.9" />
+    <animation key="reload" animation_key="reloading, dreamer1.0" />
     <animation state_key="walking" animation_key="walking, dreamer" />
     <animation state_key="walking_backwards" animation_key="walking backwards, dreamer" />
     <animation state_key="running" animation_key="rush, dreamer" />

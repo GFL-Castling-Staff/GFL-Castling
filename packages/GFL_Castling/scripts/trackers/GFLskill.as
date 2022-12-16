@@ -161,6 +161,8 @@ dictionary gameSkillIndex = {
 
         {"spawn_lightning_storm_1_min",37},
 
+		{"para_acid",38},
+
         // 下面这行是用来占位的，在这之上添加新的技能key和index即可
         {"666",-1}
 };
@@ -192,6 +194,8 @@ class GFLskill : Tracker {
 	protected array<UZI_tracker@> UZI_track;
 	protected array<Vector_tracker@> Vector_track;
 	protected array<Javelin_lister@> Javelin_list;
+	protected array<DOT_tracker@> DOT_track;
+
 
 	// --------------------------------------------
 	protected void handleResultEvent(const XmlElement@ event) {
@@ -1307,6 +1311,16 @@ class GFLskill : Tracker {
 				break;
 			}
 
+			case 38: {// para acid
+				int characterId = event.getIntAttribute("character_id");
+				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+				if (character !is null) {
+					Vector3 grenade_pos = stringToVector3(event.getStringAttribute("position"));
+					int factionid = character.getIntAttribute("faction_id");
+					DOT_track.insertLast(DOT_tracker(characterId,factionid,grenade_pos,2.0,"elenusis_acid_bomb_spawn.projectile",5));
+				}
+				break;			
+			}
             default:
                 break;
 		}
@@ -1478,7 +1492,27 @@ class GFLskill : Tracker {
 					}
 				}			
 			}
-		}				
+		}			
+		if(DOT_track.length()>0){
+			for (uint a=0;a<DOT_track.length();a++){
+				DOT_track[a].m_time-=time;
+				if(DOT_track[a].m_time<0){
+					string c = 
+						"<command class='create_instance'" +
+						" faction_id='"+ DOT_track[a].m_factionid +"'" +
+						" instance_class='grenade'" +
+						" instance_key='" + DOT_track[a].m_projectile +"'" +
+						" position='" + DOT_track[a].m_pos.toString() + "'"+
+						" character_id='" + DOT_track[a].m_characterId + "' />";
+					m_metagame.getComms().send(c);		
+					DOT_track[a].m_numtime--;
+					DOT_track[a].m_time=DOT_track[a].m_time_interval;
+					if (DOT_track[a].m_numtime<1){
+						DOT_track.removeAt(a);
+					}
+				}
+			}
+		}			
 	}
 	
 	bool hasEnded() const {
@@ -1567,5 +1601,23 @@ class Javelin_lister{
 		m_factionid = factionid;
 		m_vehicleid = vehicleid;
 		m_pos = pos;
+	}
+}
+
+class DOT_tracker{
+    int m_characterId;
+	int m_numtime;
+	float m_time=0;
+	float m_time_interval;
+	int m_factionid;
+	string m_projectile;
+	Vector3 m_pos;
+	DOT_tracker(int characterId,int factionid,Vector3 pos,float time,string projectile,int num){
+		m_characterId = characterId;
+		m_factionid= factionid;
+		m_pos= pos;
+		m_projectile=projectile;
+		m_time_interval=time;
+		m_numtime = num;
 	}
 }
