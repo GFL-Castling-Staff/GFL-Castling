@@ -362,6 +362,7 @@ dictionary commandSkillIndex = {
 
         //汤普森
         {"gkw_thompson.weapon",49},
+        {"gkw_thompson_5703.weapon",49},
 
         //燃烧链接 UZI
         {"gkw_uzimod3.weapon",50},

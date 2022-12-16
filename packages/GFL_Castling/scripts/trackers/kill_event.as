@@ -86,6 +86,7 @@ class kill_event : Tracker {
         {"gkw_js9.weapon",3},
         {"gkw_js9_4702.weapon",3},
         {"gkw_thompson.weapon",3},
+        {"gkw_thompson_5703.weapon",3},
         {"gkw_uzi.weapon",3},
         {"gkw_uzimod3.weapon",3},
         {"gkw_uzimod3_skill.weapon",3},
