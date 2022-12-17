@@ -2,7 +2,7 @@
 <projectiles>
     <projectile class="grenade" name="M24 Anti-Tank grenade" key="hand_atgrenade.projectile" slot="0" radius="0.2" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" pulldown_in_air="20">
         <tag name="grenade" />
-		<result class="notify_script" key="spawn_lightning_storm_1_min" />
+        <result class="blast" radius="6.0" damage="25.0" push="0.6" decal="1" character_state="wound" faction_compare="not_equal" />
         <trigger class="impact">
             <collider class="terrain" enabled="1" />
             <collider class="static_object" enabled="1" />

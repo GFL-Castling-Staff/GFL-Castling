@@ -17597,8 +17597,8 @@
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<animation key="cycle" animation_key="Brifle1.5"/>
-	<animation key="cycle" stance_key="prone" animation_key="Brifle1.0p"/>
-	<animation key="cycle" stance_key="over_wall" animation_key="Brifle1.0"/>
+	<animation key="cycle" stance_key="prone" animation_key="Brifle1p"/>
+	<animation key="cycle" stance_key="over_wall" animation_key="Brifle1"/>
 	<animation key="reload" animation_key="reloading, oaat"/>
 	<sound key="fire" fileref="m1891_fire_FromCOD14.wav" volume="1.6"/>
 	<sound key="cycle" fileref="m1891_cycle_FromSQUAD.wav" volume="0.6"/>
@@ -20371,10 +20371,10 @@
 </weapon>
 
 <weapon key="gkw_scarh.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="1.4" magazine_size="20" can_shoot_standing="1" suppressed="1" name="FN SCAR-H" class="4" burst_shots="1" last_burst_retrigger_time="0.125" reload_one_at_a_time="0" sight_range_modifier="2.0" stance_accuracy_rate="1.0" projectile_speed="200" barrel_offset="0.55" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="1.4" magazine_size="20" can_shoot_standing="1" suppressed="0" name="FN SCAR-H" class="4" burst_shots="1" last_burst_retrigger_time="0.125" reload_one_at_a_time="0" sight_range_modifier="2.0" stance_accuracy_rate="1.0" projectile_speed="200" barrel_offset="0.55" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<inventory buy_price="50.0" sell_price="50.0"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.8"/>
-	<sound key="fire" fileref="scar762_fire_FromCOD19.wav" pitch_variety="0.05" volume="1"/>
+	<sound key="fire" fileref="scar_fire_FromPUBG.wav" pitch_variety="0.05" volume="1"/>
 	<sound key="magazine_out" fileref="scar_mgz_out_FromCOD16.wav" volume="0.5"/>
 	<sound key="magazine_in" fileref="scar_mgz_in_FromCOD16.wav" volume="0.5"/>
 	<sound key="cycle" fileref="scar_cycle_FromCOD19.wav" volume="0.5"/>
@@ -24333,7 +24333,7 @@
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
 	<next_in_chain key="gkw_m1891mod3_skill.weapon" share_ammo="0"/>
-	<animation key="cycle" animation_key="Brifle1.2"/>
+	<animation key="cycle" animation_key="Brifle1.3"/>
 	<animation key="cycle" stance_key="prone" animation_key="Brifle0.8p"/>
 	<animation key="cycle" stance_key="over_wall" animation_key="Brifle0.8"/>
 	<animation key="reload" animation_key="reloading, oaat"/>

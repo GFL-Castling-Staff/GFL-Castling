@@ -8,7 +8,7 @@
 	sustained_fire_diminish_rate="1.4" 
 	magazine_size="20" 
 	can_shoot_standing="1" 
-	suppressed="1" 
+	suppressed="0" 
 	name="FN SCAR-H" 
 	class="4" 
 	burst_shots="1"
@@ -23,7 +23,7 @@
     <inventory buy_price="50.0" sell_price="50.0" />
     <animation key="reload" animation_key="reloading, magazine rifle 1.8" />
     <!--Sounds-->
-    <sound key="fire" fileref="scar762_fire_FromCOD19.wav" pitch_variety="0.05" volume="1" />
+    <sound key="fire" fileref="scar_fire_FromPUBG.wav" pitch_variety="0.05" volume="1" />
     <sound key="magazine_out" fileref="scar_mgz_out_FromCOD16.wav" volume="0.5" />
     <sound key="magazine_in" fileref="scar_mgz_in_FromCOD16.wav" volume="0.5" />
     <sound key="cycle" fileref="scar_cycle_FromCOD19.wav" volume="0.5" />
