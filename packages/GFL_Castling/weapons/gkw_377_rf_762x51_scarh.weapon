@@ -24,9 +24,9 @@
     <animation key="reload" animation_key="reloading, magazine rifle 1.8" />
     <!--Sounds-->
     <sound key="fire" fileref="scar762_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.2" />
-    <sound key="magazine_out" fileref="scar_mgz_out_FromCOD16.wav" volume="0.5" />
-    <sound key="magazine_in" fileref="scar_mgz_in_FromCOD16.wav" volume="0.5" />
-    <sound key="cycle" fileref="scar_cycle_FromCOD19.wav" volume="0.5" />
+    <sound key="magazine_out" fileref="scar_mgz_out_FromCOD16.wav" volume="0.6" />
+    <sound key="magazine_in" fileref="scar_mgz_in_FromCOD16.wav" volume="0.6" />
+    <sound key="cycle" fileref="scar_cycle_FromCOD19.wav" volume="0.7" />
     <sound class="impact" fileref="rifle_drop.wav" />
     <!--Model, Icon, Cost-->
     <model filename="gkw_rf_scarh.xml" />

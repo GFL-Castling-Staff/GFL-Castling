@@ -14,9 +14,9 @@
 		sustained_fire_grow_step="0.27"/>
     <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
     <inventory  buy_price="10.0" sell_price="10.0" />
-    <sound key="fire" fileref="ar18_fire_FromCOD19.wav" pitch_variety="0.05" volume="1" />
-    <sound key="magazine_out" fileref="ar18_mgz_out_FromCOD19.wav" volume="0.8" />
-    <sound key="magazine_in" fileref="ar18_mgz_in_FromCOD19.wav" volume="0.8" />
+    <sound key="fire" fileref="ar18_fire_FromCOD19.wav" pitch_variety="0.05" volume="1.3" />
+    <sound key="magazine_out" fileref="ar18_mgz_out_FromCOD19.wav" volume="0.7" />
+    <sound key="magazine_in" fileref="ar18_mgz_in_FromCOD19.wav" volume="0.7" />
     <sound key="cycle" fileref="ar18_cycle_FromCOD19.wav" volume="0.8" />
     <sound class="impact" fileref="rifle_drop.wav" />
     <model filename="gkw_ar_ar18.xml" />
