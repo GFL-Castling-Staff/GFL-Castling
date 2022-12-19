@@ -23,7 +23,7 @@
 	</weapon>
 	<weapon key="Motar_cannon.weapon">
 		<tag name="bazooka"/>
-		<specification retrigger_time="0.2" accuracy_factor="0.64" sight_range_modifier="2.35" ai_sight_range_modifier="1.05" sight_height_offset="45" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="0" suppressed="0" name="M2 Mortar" class="0" projectile_speed="100.0" barrel_offset="0.6" projectiles_per_shot="1" spread_range="0.1" sustained_fire_grow_step="0.0125" sustained_fire_diminish_rate="0.006" cooldown_start="0.03" cooldown_end="0.0"/>
+		<specification retrigger_time="0.2" accuracy_factor="0.64" sight_range_modifier="2.2" ai_sight_range_modifier="1.0" sight_height_offset="45" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="0" suppressed="0" name="M2 Mortar" class="0" projectile_speed="100.0" barrel_offset="0.6" projectiles_per_shot="1" spread_range="0.1" sustained_fire_grow_step="0.0125" sustained_fire_diminish_rate="0.006" cooldown_start="0.03" cooldown_end="0.0"/>
 		<sound key="fire" fileref="m2_fire_FromREALLIFE.wav" pitch_variety="0.1" volume="1.2"/>
 		<sound key="magazine_out" fileref="portable_mortar_reload.wav" volume="0.7"/>
 		<sound key="magazine_in" fileref="dry_fire.wav" volume="0.7"/>
@@ -34,25 +34,25 @@
 		<capacity value="1" source="rank" source_value="0.0"/>
 		<weak_hand_hold offset="0.3"/>
 		<projectile file="portable_mortar.projectile" pulldown_in_air="30">
-		<result class="blast" radius="8.0" damage="10.0" push="1.0" decal="1" faction_compare="not_equal" damage_origin_vehicle="0" tweak_factor="1.60"/>
-		<effect class="result" type="splat_map" surface_tag="" size="3.0" atlas_index="0" layer="1"/>
-		<effect class="result" type="splat_map" surface_tag="" size="5.0" atlas_index="4" layer="0"/>
-		<effect class="result" type="splat_map" surface_tag="" size="6.0" atlas_index="0" layer="2" additive="0"/>
-		<effect class="result" key="static_object" copy="terrain"/>
-		<effect class="result" key="vehicle" copy="terrain"/>
-		<effect class="result" key="character" copy="terrain"/>
-		<effect class="result" type="splat_map" surface_tag="" size="3.0" atlas_index="0" layer="1"/>
-		<effect class="result" type="splat_map" surface_tag="" size="5.0" atlas_index="4" layer="0"/>
-		<effect class="result" type="splat_map" surface_tag="" size="6.0" atlas_index="0" layer="2" additive="0"/>
-		<effect class="result" key="terrain" ref="NavalSmokeTop1" post_processing="1"/>
-		<effect class="result" key="terrain" ref="woosh1" post_processing="0" shadow="0"/>
-		<effect class="result" key="terrain" ref="ShadowSmoke" shadow="1"/>
-		<effect class="result" key="other" ref="Shine" lighting="0"/>
-		<effect class="result" key="static_object" copy="terrain"/>
-		<effect class="result" key="vehicle" copy="terrain"/>
-		<effect class="result" key="character" copy="terrain"/>
-		<effect class="activated" ref="Propulsion_gl"/>
-		<trail probability="1.0" key="FlamethrowerTrail"/>
+			<result class="blast" radius="5.0" damage="10.0" push="1.0" decal="1" faction_compare="not_equal" damage_origin_vehicle="0" tweak_factor="1.60"/>
+			<effect class="result" type="splat_map" surface_tag="" size="3.0" atlas_index="0" layer="1"/>
+			<effect class="result" type="splat_map" surface_tag="" size="5.0" atlas_index="4" layer="0"/>
+			<effect class="result" type="splat_map" surface_tag="" size="6.0" atlas_index="0" layer="2" additive="0"/>
+			<effect class="result" key="static_object" copy="terrain"/>
+			<effect class="result" key="vehicle" copy="terrain"/>
+			<effect class="result" key="character" copy="terrain"/>
+			<effect class="result" type="splat_map" surface_tag="" size="3.0" atlas_index="0" layer="1"/>
+			<effect class="result" type="splat_map" surface_tag="" size="5.0" atlas_index="4" layer="0"/>
+			<effect class="result" type="splat_map" surface_tag="" size="6.0" atlas_index="0" layer="2" additive="0"/>
+			<effect class="result" key="terrain" ref="NavalSmokeTop1" post_processing="1"/>
+			<effect class="result" key="terrain" ref="ct_woosh_small" post_processing="0" shadow="0"/>
+			<effect class="result" key="terrain" ref="ShadowSmoke" shadow="1"/>
+			<effect class="result" key="other" ref="Shine" lighting="0"/>
+			<effect class="result" key="static_object" copy="terrain"/>
+			<effect class="result" key="vehicle" copy="terrain"/>
+			<effect class="result" key="character" copy="terrain"/>
+			<effect class="activated" ref="Propulsion_gl"/>
+			<trail probability="1.0" key="FlamethrowerTrail"/>
 		</projectile>
 		<ballistics near_far_distance="1.0" speed_estimation_near="40.0" speed_estimation_far="48.0" max_speed="100.0" randomness="0.05"/>
 		<effect class="muzzle" ref="coeus"/>
