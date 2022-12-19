@@ -23,7 +23,7 @@ owner="faction"
 	<tire_set offset="0.08 0.0 2.56" radius="0.5" />
 	<tire_set offset="3.0 0.0 -2.65" radius="0.5" />
 	<modifier class="blast_damage" value="-1.5" />
-	<modifier class="blast_range" value="-1.0" />
+	<modifier class="blast_range" value="+1.5" />
 	<control max_speed="18.0" acceleration="5.0" max_reverse_speed="10.0"	max_limiter_speed="3.0"	max_rotation="1.0" max_water_depth="2.0" steer_smoothening="0.9" min_health_to_steer="10" tracked="1" gears="1"/>
 	<physics max_health="80" mass="100" broken_mass="100" extent="3.2 0.0 3.2" offset="0 0.0 0" top_offset="0 2 0" collision_model_pos="0 1.2 0" collision_model_extent="0.8 0.8 0.8" visual_offset="0 0.65 0" collision_response_factor="0.2" blast_push_threshold="10.0" vehicle_collision_damage_factor="1.0" blast_damage_threshold="2.0"
 	/>
