@@ -28,7 +28,7 @@ class kill_event : Tracker {
         //rpScale = rp_multiplier;
 		m_metagame.getComms().send("<command class='set_metagame_event' name='character_kill' enabled='1' />");
         m_difficulty=m_userSettings.m_GlobalDifficulty;
-        m_droprate_offset= m_difficulty* 0.05;
+        m_droprate_offset= m_difficulty* 0.01;
 	}
     
     dictionary healOnKillWeaponList = {
@@ -235,7 +235,7 @@ class kill_event : Tracker {
                     }
                 }
                 else if(reward_pool_key=="rare"){
-                    if(rand(0.0f,1.0f) <= (0.2f+ m_droprate_offset)){
+                    if(rand(0.0f,1.0f) <= (0.3f+ m_droprate_offset)){
 						ScoredResource@ r = getRandomScoredResource(reward_pool_rare);
                         string c = 
                             "<command class='create_instance'" +
