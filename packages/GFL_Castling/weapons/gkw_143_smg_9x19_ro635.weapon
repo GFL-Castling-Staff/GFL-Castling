@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <weapon key="gkw_ro635.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
     <tag name="smg" />
     <!--Weapon specifications-->
@@ -19,6 +20,7 @@
 		sustained_fire_grow_step="0.2"
         stab_enabled="1" />
     <!--Animations-->
+    <commonness value="0.2" in_stock="1" can_respawn_with="1" />
     <animation state_key="recoil" animation_key="recoil, pistol 2" />
     <animation state_key="recoil" stance_key="prone" animation_key="recoil, smg1, prone" />
     <animation state_key="recoil" stance_key="over_wall" animation_key="recoil, overwall pistol" />
@@ -62,9 +64,8 @@
     <sound key="cycle" fileref="RO635Mod_SKILL3_JP.wav" volume="1.4" pitch_variety="0"/>
     <sound class="impact" fileref="rifle_drop.wav" />
     <!--Model, Icon, Cost-->
-    <model filename="gkw_smg_ro635_mod3.xml" />
-    <hud_icon filename="gkw_ro635mod3.png" />
-    <commonness value="0.2" in_stock="0" can_respawn_with="1" />
+    <model filename="gkw_smg_ro635.xml" />
+    <hud_icon filename="gkw_ro635.png" />
     <inventory encumbrance="12.0" buy_price="63.5" sell_price="63.5"/>
     <capacity value="1" source="rank" source_value="0.0" />
     <!--Ballistics-->
