@@ -1,0 +1,21 @@
+<vehicle name="" key="smoke_grenade_v.vehicle" map_view_atlas_index="18" allow_ai_to_use="0" should_be_destroyed="0" usable_for_cover="0" respawn_time="36000" time_to_live="12.5" >
+	<tire_set offset="0.1 0.0 0.1" radius="0.1" />
+	<tire_set offset="0.1 0.0 -0.1" radius="0.1" />
+
+	<control max_speed="1" acceleration="1" max_reverse_speed="1.0" max_rotation="0.8" max_water_depth="1.9" />
+
+	<physics 
+	max_health="1.0" 
+	blast_damage_threshold="10000.0"
+	mass="10000.0" 
+	extent="0.2 0.0 0.2" 
+	offset="0 0.0 0" 
+	top_offset="0 0.1 0" 
+	collision_model_pos="0 40.0 0" 
+	collision_model_extent="12.0 0.0 12.0" 
+	visual_offset="0 0.0 0" 
+	collision_response_factor="0.0" 
+	blast_push_threshold="1000.0" 
+	vehicle_collision_damage_factor="0.0" /> 
+  
+</vehicle>
