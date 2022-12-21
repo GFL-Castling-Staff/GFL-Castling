@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<projectile class="grenade" name="" slot="0" radius="0.0" key="smoke_grenade_v_effect.projectile" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" >
+
+    <result class="blast" radius="0.0" damage="0.0" decal="0" character_state="none" />
+    <trigger class="time" time_to_live="10.0" />
+    <rotation class="random" />
+
+    <commonness value="0.0" can_respawn_with="0" in_stock="0"/>
+
+    <effect class="activated" ref="SmokeGrenade" />
+
+</projectile>

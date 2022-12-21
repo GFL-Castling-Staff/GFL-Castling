@@ -106,6 +106,11 @@
 		<trigger class="destroy" />
 		<result class="spawn" instance_class="visual_item" instance_key="burning_piece_truck5.visual_item" min_amount="2" max_amount="3" offset="0 2.0 0" position_spread="1.5 1.5" direction_spread="0.05 0.2" />
 	</event>
+ 	<event>
+		<trigger class="destroy" />
+    <result class="spawn" instance_class="projectile" instance_key="smoke_grenade_v.projectile" min_amount="3" max_amount="3" offset="0 3.0 0" position_spread="1 1" direction_spread="0.5 0.1" />
+  </event>  	
+	
 	<event>
 		<trigger class="cleanup" />
 		<result class="spawn" instance_class="visual_item" instance_key="burning_piece_cleanup.visual_item" min_amount="20" max_amount="30" offset="0 2.0 0" position_spread="1.5 1.5" direction_spread="0.1 0.1" />
