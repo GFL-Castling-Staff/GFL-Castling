@@ -16,7 +16,7 @@
 	projectile_speed="100"
 	barrel_offset="0.5"
 	projectiles_per_shot="1"
-	spread_range="0.1"
+	spread_range="0.2"
 	stab_enabled="1"
 	carry_in_two_hands="1"
 	burst_shots="1"
@@ -36,7 +36,7 @@
 	<hud_icon filename="gkw_aa12only_skill.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="aa12_only.projectile">
-		<result class="blast" radius="3" damage="2.1" push="0.3" decal="1" faction_compare="not_equal"/>
+		<result class="blast" radius="3.5" damage="4.1" push="0.3" decal="1" faction_compare="not_equal"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.7"/>
 	<stance state_key="walking" accuracy="0.8"/>
@@ -92,10 +92,11 @@
 	sight_range_modifier="0.8"
 	projectile_speed="100"
 	barrel_offset="0.5"
-	projectiles_per_shot="6"
+	projectiles_per_shot="10"
 	stab_enabled="1"
 	carry_in_two_hands="1"
 	burst_shots="1"
+	spread_range="0.3"
 	last_burst_retrigger_time="-1"
 	slot="0"
 	use_basic_muzzle_smoke_effect="0"/>
