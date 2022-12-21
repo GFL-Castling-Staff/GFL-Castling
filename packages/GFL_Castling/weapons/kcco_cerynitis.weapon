@@ -25,23 +25,23 @@ key="kccow_cerynitis.weapon">
 	reload_one_at_a_time="0"
 	sight_range_modifier="1.0" 
 	projectile_speed="60.0" 
-	carry_in_two_hands="0" 
+	carry_in_two_hands="1" 
 	projectiles_per_shot="1" 
 	slot="0" 
     use_basic_muzzle_smoke_effect="0"
-    barrel_offset_3d="0 0.2 1.0"
+    barrel_offset_3d="0 0 1.3"
 	stab_enabled="0"/>
     <!--Animations-->
-    <animation state_key="recoil"	animation_key="recoil, pistol dual 1" />
-    <animation state_key="recoil"	animation_key="recoil, pistol dual 2" />
-    <animation state_key="reload"	animation_key="recoil, pistol dual 1" />
-    <animation state_key="hold"	animation_key="still, pistol dual" />
-    <animation state_key="hold_casual"	animation_key="still, pistol dual" />
-    <animation state_key="hold_on_wall"	animation_key="still, pistol dual" />
-    <animation state_key="walking"	animation_key="walking, pistol dual" />
-    <animation state_key="stabbing" animation_key="recoil, pistol dual 1" />
-    <animation state_key="running"	animation_key="walking, pistol dual" />
-    <animation state_key="crouching"	animation_key="still, pistol dual" />
+    <animation state_key="recoil"	animation_key="recoil, cet" />
+    <animation state_key="recoil"	animation_key="recoil, cet 2" />
+    <animation state_key="reload"	animation_key="still, cet" />
+    <animation state_key="hold"	animation_key="still, cet" />
+    <animation state_key="hold_casual"	animation_key="still, cet" />
+    <animation state_key="hold_on_wall"	animation_key="still, cet" />
+    <animation state_key="walking"	animation_key="walking, cet" />
+    <animation state_key="stabbing" animation_key="still, cet" />
+    <animation state_key="running"	animation_key="walking, cet" />
+    <animation state_key="crouching"	animation_key="still, cet" />
     <!--Sounds-->
     <sound key="fire" fileref="cerynitis_fire_FromBF2042.wav" pitch_variety="0.05" volume="1.7" />
     <sound key="magazine_out" fileref="m1911_mgz_out_FromINS.wav" volume="0.8" />
@@ -104,23 +104,23 @@ key="kccow_cerynitis_swap.weapon">
 	reload_one_at_a_time="0"
 	sight_range_modifier="1.2" 
 	projectile_speed="70.0" 
-	carry_in_two_hands="0" 
+	carry_in_two_hands="1" 
 	projectiles_per_shot="1" 
 	slot="0" 
     use_basic_muzzle_smoke_effect="0"
-    barrel_offset_3d="0 0.2 1.0"
+    barrel_offset_3d="0 0 1.3"
 	stab_enabled="0"/>
     <!--Animations-->
-    <animation state_key="recoil"	animation_key="recoil, pistol dual 1" />
-    <animation state_key="recoil"	animation_key="recoil, pistol dual 2" />
-    <animation state_key="reload"	animation_key="recoil, pistol dual 1" />
-    <animation state_key="hold"	animation_key="still, pistol dual" />
-    <animation state_key="hold_casual"	animation_key="still, pistol dual" />
-    <animation state_key="hold_on_wall"	animation_key="still, pistol dual" />
-    <animation state_key="walking"	animation_key="walking, pistol dual" />
-    <animation state_key="stabbing" animation_key="recoil, pistol dual 1" />
-    <animation state_key="running"	animation_key="walking, pistol dual" />
-    <animation state_key="crouching"	animation_key="still, pistol dual" />
+    <animation state_key="recoil"	animation_key="recoil, cet" />
+    <animation state_key="recoil"	animation_key="recoil, cet 2" />
+    <animation state_key="reload"	animation_key="still, cet" />
+    <animation state_key="hold"	animation_key="still, cet" />
+    <animation state_key="hold_casual"	animation_key="still, cet" />
+    <animation state_key="hold_on_wall"	animation_key="still, cet" />
+    <animation state_key="walking"	animation_key="walking, cet" />
+    <animation state_key="stabbing" animation_key="still, cet" />
+    <animation state_key="running"	animation_key="walking, cet" />
+    <animation state_key="crouching"	animation_key="still, cet" />
     <!--Sounds-->
     <sound key="fire" fileref="cerynitis_fire_FromBF2042.wav" pitch_variety="0.05" volume="1.7" />
     <sound key="magazine_out" fileref="m1911_mgz_out_FromINS.wav" volume="0.8" />

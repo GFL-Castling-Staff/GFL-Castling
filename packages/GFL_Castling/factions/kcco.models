@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <models>
 	<model filename="kccod_human.xml" />
-	<model filename="kccod_cerynitis_remake.xml">
+	<model filename="kccod_cerynitis.xml">
 		<requirement class="weapon" slot="0" key="kccow_cerynitis.weapon"/>
 	</model>
+	<model filename="kccod_cerynitis_remake.xml">
+		<requirement class="weapon" slot="0" key="kccow_cerynitis_swap.weapon"/>
+	</model>	
 	<model filename="kccod_dactyl.xml">
 		<requirement class="weapon" slot="0" key="kccow_dactyl.weapon"/>
 	</model>
