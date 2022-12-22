@@ -14888,6 +14888,14 @@
 	<commonness value="0.0" in_stock="1" can_respawn_with="0"/>
 </carry_item>
 
+<carry_item name="Imprint Equipment Contract" key="equip_only_ticket.carry_item" time_to_live_out_in_the_open="90.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="1.0" player_death_drop_owner_lock_time="90.0">
+	<capacity value="1" source="rank" source_value="0.0"/>
+	<inventory buy_price="500000" sell_price="0" encumbrance="-0.5"/>
+	<commonness value="0.0" in_stock="0" can_respawn_with="0"/>
+	<model mesh_filename="equipment_contract.xml"/>
+	<hud_icon filename="hud_special_ticket_2.png"/>
+</carry_item>
+
 <carry_item time_to_live_out_in_the_open="90.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="1.0" name="T-Doll Contract" key="dollcraft.carry_item">
 	<capacity value="100" source="rank" source_value="0.0"/>
 	<hud_icon filename="hud_dollcraft.png"/>

@@ -749,8 +749,6 @@ class BasicCommandHandler : Tracker {
 		} else if (checkCommand(message, "dog")) {
 			spawnInstanceNearPlayer(senderId, "dog", "soldier", 0);    	
 		} else if (checkCommand(message, "gb1")) {
-			spawnInstanceNearPlayer(senderId, "upgrade_aa12.carry_item", "carry_item", 0);
-			spawnInstanceNearPlayer(senderId, "upgrade_type88.carry_item", "carry_item", 0);
 			spawnInstanceNearPlayer(senderId, "complete_box.carry_item", "carry_item", 0);
 			spawnInstanceNearPlayer(senderId, "complete_box.carry_item", "carry_item", 0);
 			spawnInstanceNearPlayer(senderId, "complete_box.carry_item", "carry_item", 0);
@@ -760,7 +758,11 @@ class BasicCommandHandler : Tracker {
 		} else if (checkCommand(message, "gb3")) {
 			spawnInstanceNearPlayer(senderId, "firecontrol.carry_item", "carry_item", 0);        
 			spawnInstanceNearPlayer(senderId, "firecontrol.carry_item", "carry_item", 0);        
-			spawnInstanceNearPlayer(senderId, "firecontrol.carry_item", "carry_item", 0);        
+			spawnInstanceNearPlayer(senderId, "firecontrol.carry_item", "carry_item", 0);       
+		} else if (checkCommand(message, "gb4")) {
+			spawnInstanceNearPlayer(senderId, "equip_only_ticket.carry_item", "carry_item", 0);        
+			spawnInstanceNearPlayer(senderId, "equip_only_ticket.carry_item", "carry_item", 0);        
+			spawnInstanceNearPlayer(senderId, "equip_only_ticket.carry_item", "carry_item", 0);   			 
 		} else if (checkCommand(message, "cb1")) {
 			spawnInstanceNearPlayer(senderId, "gift_box_community_1.carry_item", "carry_item", 0); 
             spawnInstanceNearPlayer(senderId, "gift_box_community_1.carry_item", "carry_item", 0);
@@ -772,31 +774,7 @@ class BasicCommandHandler : Tracker {
             spawnInstanceNearPlayer(senderId, "sf_box.carry_item", "carry_item", 0);
             spawnInstanceNearPlayer(senderId, "sf_box.carry_item", "carry_item", 0);
             spawnInstanceNearPlayer(senderId, "sf_box.carry_item", "carry_item", 0);
-            spawnInstanceNearPlayer(senderId, "sf_box.carry_item", "carry_item", 0);                      
-        } else if (checkCommand(message, "cb3")) {
-			spawnInstanceNearPlayer(senderId, "gift_box_community_3.carry_item", "carry_item", 0);
-            spawnInstanceNearPlayer(senderId, "gift_box_community_3.carry_item", "carry_item", 0);
-            spawnInstanceNearPlayer(senderId, "gift_box_community_3.carry_item", "carry_item", 0);
-            spawnInstanceNearPlayer(senderId, "gift_box_community_3.carry_item", "carry_item", 0);
-            spawnInstanceNearPlayer(senderId, "gift_box_community_3.carry_item", "carry_item", 0);  
-        } else if (checkCommand(message, "cb4")) {
-			spawnInstanceNearPlayer(senderId, "gift_box_community_4.carry_item", "carry_item", 0);
-            spawnInstanceNearPlayer(senderId, "gift_box_community_4.carry_item", "carry_item", 0);
-            spawnInstanceNearPlayer(senderId, "gift_box_community_4.carry_item", "carry_item", 0);
-            spawnInstanceNearPlayer(senderId, "gift_box_community_4.carry_item", "carry_item", 0);
-            spawnInstanceNearPlayer(senderId, "gift_box_community_4.carry_item", "carry_item", 0);  
-        } else if (checkCommand(message, "cb5")) {
-			spawnInstanceNearPlayer(senderId, "gift_box_community_5.carry_item", "carry_item", 0); 
-            spawnInstanceNearPlayer(senderId, "gift_box_community_5.carry_item", "carry_item", 0);
-            spawnInstanceNearPlayer(senderId, "gift_box_community_5.carry_item", "carry_item", 0);
-            spawnInstanceNearPlayer(senderId, "gift_box_community_5.carry_item", "carry_item", 0);
-            spawnInstanceNearPlayer(senderId, "gift_box_community_5.carry_item", "carry_item", 0);                                                     
-        } else if (checkCommand(message, "cb6")) {
-			spawnInstanceNearPlayer(senderId, "gift_box_community_6.carry_item", "carry_item", 0); 
-            spawnInstanceNearPlayer(senderId, "gift_box_community_6.carry_item", "carry_item", 0);
-            spawnInstanceNearPlayer(senderId, "gift_box_community_6.carry_item", "carry_item", 0);
-            spawnInstanceNearPlayer(senderId, "gift_box_community_6.carry_item", "carry_item", 0);
-            spawnInstanceNearPlayer(senderId, "gift_box_community_6.carry_item", "carry_item", 0);   			
+            spawnInstanceNearPlayer(senderId, "sf_box.carry_item", "carry_item", 0);                        			
 		} else  if(checkCommand(message, "kill_rt")) {
 			destroyAllEnemyVehicles("radar_tower.vehicle");
 		} else  if(checkCommand(message, "kill_own_rt")) {

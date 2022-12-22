@@ -37,6 +37,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		setupStuffEasterEgg();
 		setupSupplyBox();
 		setupGiftHalloween();
+		setupEquipOnly();
 	}
 
 	// --------------------------------------------
@@ -174,6 +175,30 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 			ItemDeliveryObjective(m_metagame, 0, deliveryList, m_itemDeliveryOrganizer, null, "", "", "", -1 /* loop */, rewarder)
 			);
 	}
+
+	protected void setupEquipOnly() {
+		array<Resource@> deliveryList = {
+			 Resource("equip_only_ticket.carry_item", "carry_item")
+		};
+		array<array<ScoredResource@>> rewardPasses = {
+			{
+		ScoredResource("upgrade_g41.carry_item", "carry_item", 0.1f),
+		ScoredResource("upgrade_fg42.carry_item", "carry_item", 0.1f),
+		ScoredResource("upgrade_vz61.carry_item", "carry_item", 0.1f),
+		ScoredResource("upgrade_m1903_1.carry_item", "carry_item", 0.1f),
+		ScoredResource("upgrade_m1903_2.carry_item", "carry_item", 0.1f),
+		ScoredResource("upgrade_9a91.carry_item", "carry_item", 0.1f)
+			}
+		};
+		processRewardPasses(rewardPasses);
+		
+		GiftItemDeliveryRandomRewarder@ rewarder = GiftItemDeliveryRandomRewarder(m_metagame, rewardPasses);
+
+		m_itemDeliveryOrganizer.addObjective(
+			ItemDeliveryObjective(m_metagame, 0, deliveryList, m_itemDeliveryOrganizer, null, "", "", "", -1 /* loop */, rewarder)
+			);
+	}
+
 	// ScoredResource("key", "class", 00.0f)
 	protected void setupGift1() {
 		array<Resource@> deliveryList = {
@@ -562,19 +587,14 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 
 		array<array<ScoredResource@>> rewardPasses = {
 			{
-		ScoredResource("upgrade_g41.carry_item", "carry_item", 0.1f),
-		ScoredResource("upgrade_fg42.carry_item", "carry_item", 0.1f),
-		ScoredResource("upgrade_vz61.carry_item", "carry_item", 0.1f),
-		ScoredResource("upgrade_m1903_1.carry_item", "carry_item", 0.1f),
-		ScoredResource("upgrade_m1903_2.carry_item", "carry_item", 0.1f),
-		ScoredResource("upgrade_9a91.carry_item", "carry_item", 0.1f),
+		ScoredResource("equip_only_ticket.carry_item", "carry_item", 1.0f),
 
 		ScoredResource("RO365_Ant_Doll.carry_item", "carry_item", 5.0f,2),
 		ScoredResource("RO365_Ant_Doll.carry_item", "carry_item", 25.0f),
-		ScoredResource("city_gifts.carry_item", "carry_item", 9.5f, 10),
-		ScoredResource("wild_gifts.carry_item", "carry_item", 10.0f, 10),
-		ScoredResource("snow_gifts.carry_item", "carry_item", 10.0f, 10),
-		ScoredResource("forest_gifts.carry_item", "carry_item", 10.0f, 10),	
+		ScoredResource("city_gifts.carry_item", "carry_item", 9.25f, 10),
+		ScoredResource("wild_gifts.carry_item", "carry_item", 9.25f, 10),
+		ScoredResource("snow_gifts.carry_item", "carry_item", 9.25f, 10),
+		ScoredResource("forest_gifts.carry_item", "carry_item", 9.25f, 10),	
 		ScoredResource("city_gifts.carry_item", "carry_item", 10.0f, 20),
 		ScoredResource("wild_gifts.carry_item", "carry_item", 10.0f, 20),
 		ScoredResource("snow_gifts.carry_item", "carry_item", 10.0f, 20),
@@ -624,12 +644,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		ScoredResource("gkw_iws2000.weapon", "weapon", 0.5f),
 		ScoredResource("gkw_sat8.weapon", "weapon", 0.5f),
 		ScoredResource("gkw_rfb.weapon", "weapon", 0.5f),
-		ScoredResource("upgrade_g41.carry_item", "carry_item", 0.1f),
-		ScoredResource("upgrade_fg42.carry_item", "carry_item", 0.1f),
-		ScoredResource("upgrade_vz61.carry_item", "carry_item", 0.1f),
-		ScoredResource("upgrade_9a91.carry_item", "carry_item", 0.1f),
-		ScoredResource("upgrade_m1903_1.carry_item", "carry_item", 0.1f),
-		ScoredResource("upgrade_m1903_2.carry_item", "carry_item", 0.1f)
+		ScoredResource("equip_only_ticket.carry_item", "carry_item", 0.08f)
 			}
 		};
 		processRewardPasses(rewardPasses);
@@ -648,12 +663,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 
 		array<array<ScoredResource@>> rewardPasses = {
 			{
-		ScoredResource("upgrade_g41.carry_item", "carry_item", 0.1f),
-		ScoredResource("upgrade_fg42.carry_item", "carry_item", 0.1f),
-		ScoredResource("upgrade_vz61.carry_item", "carry_item", 0.1f),
-		ScoredResource("upgrade_m1903_1.carry_item", "carry_item", 0.1f),
-		ScoredResource("upgrade_m1903_2.carry_item", "carry_item", 0.1f),
-		ScoredResource("upgrade_9a91.carry_item", "carry_item", 0.1f),
+		ScoredResource("equip_only_ticket.carry_item", "carry_item", 0.5f),
 		ScoredResource("RO365_Ant_Doll.carry_item", "carry_item", 15.0f),
 		ScoredResource("wild_gifts.carry_item", "carry_item", 7.5f, 20),
 		ScoredResource("snow_gifts.carry_item", "carry_item", 7.5f, 20),
@@ -687,6 +697,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		ScoredResource("lottery.carry_item", "carry_item", 15.0f,3),
 		ScoredResource("lottery.carry_item", "carry_item", 20.0f,2),
 		ScoredResource("core_mask.carry_item", "carry_item", 5.0f,1),
+		ScoredResource("equip_only_ticket.carry_item", "carry_item", 0.5f),
 		ScoredResource("lottery.carry_item", "carry_item", 30.0f,1)
 			},
 			{
@@ -1127,20 +1138,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 	// --------------------------------------------
 	array<Resource@>@ getUnlockWeaponList2() const {
 		array<Resource@> list;
-
-		list.push_back(Resource("mp5sd.weapon", "weapon"));
-//		list.push_back(Resource("beretta_m9.weapon", "weapon"));
-		list.push_back(Resource("scorpion-evo.weapon", "weapon"));
-//		list.push_back(Resource("glock17.weapon", "weapon"));
-		list.push_back(Resource("qcw-05.weapon", "weapon"));
-//		list.push_back(Resource("pb.weapon", "weapon"));    
-//    list.push_back(Resource("vest_blackops.carry_item", "carry_item")); 
-		list.push_back(MultiGroupResource("vest_blackops.carry_item", "carry_item", array<string> = {"default", "supply"}));
-		list.push_back(Resource("apr.weapon", "weapon")); 
-//		list.push_back(Resource("mk23.weapon", "weapon")); 
-		list.push_back(MultiGroupResource("mk23.weapon", "weapon", array<string> = {"default", "supply"})); 
-		list.push_back(MultiGroupResource("shuriken.projectile", "projectile", array<string> = {"supply"})); 
-		list.push_back(MultiGroupResource("kunai.projectile", "projectile", array<string> = {"supply"}));                        
+                      
 		 
 		return list;
 	}
@@ -1745,12 +1743,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 
 		array<array<ScoredResource@>> rewardPasses = {
 			{
-		ScoredResource("upgrade_g41.carry_item", "carry_item", 0.01f),
-		ScoredResource("upgrade_fg42.carry_item", "carry_item", 0.01f),
-		ScoredResource("upgrade_vz61.carry_item", "carry_item", 0.01f),
-		ScoredResource("upgrade_m1903_1.carry_item", "carry_item", 0.01f),
-		ScoredResource("upgrade_m1903_2.carry_item", "carry_item", 0.01f),	
-		ScoredResource("upgrade_9a91.carry_item", "carry_item", 0.01f),			
+		ScoredResource("equip_only_ticket.carry_item", "carry_item", 0.025f),	
 		ScoredResource("gkw_cms_6403.weapon", "weapon", 0.6f),
 		ScoredResource("gkw_kord_5102.weapon", "weapon", 0.6f),
 		ScoredResource("gkw_mdr_2603.weapon", "weapon", 0.6f),
