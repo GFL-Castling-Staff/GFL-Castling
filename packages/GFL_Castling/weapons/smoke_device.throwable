@@ -1,15 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<projectile class="grenade" name="smoke grenade" key="smoke_grenade_v_detect.projectile" slot="0" use_time_to_live="1" pulldown_in_air="9000.0" time_to_live="6" radius="0.3" blast_damage_threshold="1.9">
-
-    <result class="spawn" instance_class="projectile" instance_key="smoke_grenade_v.projectile" min_amount="2" max_amount="2" offset="0 0.2 0" position_spread="1 1" direction_spread="0.3 0.1" />
-	<collision class="sticky" />
-	<trigger class="remote_detonate" />
+<projectile 
+class="grenade" 
+name="Smoke Device" 
+key="smoke_device.projectile" 
+slot="0" 
+on_ground_up="0 1 0" 
+can_be_disarmed="1" 
+can_be_detected_by_driver="0" 
+pulldown_in_air="15"
+time_to_live_out_in_the_open="45.0" 
+>
+    <result class="spawn" instance_class="projectile" instance_key="smoke_grenade_v.projectile" min_amount="3" max_amount="3" offset="0 0.2 0" position_spread="1 1" direction_spread="0.3 0.1" />
+    <collision class="sticky" />
+    <trigger class="remote_detonate" />
 
     <rotation class="random" />
 
-    <model />
+    <model mesh_filename="c4.mesh" texture_filename="smoke_device.png" />
+    <hud_icon filename="hud_sd.png" />
 
-        <sound class="result" key="other" fileref="smokelauncher_fire_FromCOD16.wav" volume="1" />
+        <sound class="result" key="other" fileref="smokelauncher_fire_FromCOD16.wav" volume="3" />
         <sound class="result" key="terrain" copy="other" />
         <sound class="result" key="static_object" copy="other" />
         <sound class="result" key="vehicle" copy="other" />
@@ -32,4 +42,5 @@
     <inventory encumbrance="3.0" price="2.0" />
 
     <effect class="activated" ref="TracerFlash_green" />
+	
 </projectile>
