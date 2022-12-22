@@ -14,7 +14,7 @@
 	name="AGS-30 Atlant" 
 	projectile_speed="120" 
 	retrigger_time="0.15" 
-    last_burst_retrigger_time ="-1"
+    last_burst_retrigger_time ="0.3"
     burst_shots="3"
 	suppressed="1" 
 	sustained_fire_diminish_rate="1.5" 
@@ -63,7 +63,7 @@
     <target_factors tag="shield" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
 </weapon>
 <weapon key="gkw_hvy_ags30_fix.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification accuracy_factor="0.84" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="0" class="4" sight_range_modifier="1.75" slot="0" magazine_size="30" name="AGS-30 Atlant" projectile_speed="120" retrigger_time="0.15" last_burst_retrigger_time="-1" burst_shots="3" suppressed="1" barrel_offset_3d="0 0.1 1.2" sustained_fire_diminish_rate="1.2" sustained_fire_grow_step="0.8" stance_accuracy_rate="0.8" carry_in_two_hands="0" spread_range="0.064"/>
+	<specification accuracy_factor="0.84" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="0" class="4" sight_range_modifier="1.75" slot="0" magazine_size="30" name="AGS-30 Atlant" projectile_speed="120" retrigger_time="0.15" last_burst_retrigger_time="0.25" burst_shots="3" suppressed="1" barrel_offset_3d="0 0.1 1.2" sustained_fire_diminish_rate="1.2" sustained_fire_grow_step="0.8" stance_accuracy_rate="0.8" carry_in_two_hands="0" spread_range="0.064"/>
 	<next_in_chain key="gkw_hvy_ags30.weapon" share_ammo="0"/>
 	<inventory encumbrance="50.0" buy_price="450.0" sell_price="450.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
