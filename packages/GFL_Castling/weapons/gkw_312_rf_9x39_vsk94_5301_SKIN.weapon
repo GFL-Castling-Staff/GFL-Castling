@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<weapon file="designated_marksman_rifle.animation_base" key="gkw_vsk94.weapon">
+<weapon file="designated_marksman_rifle.animation_base" key="gkw_vsk94_5301.weapon">
     <!--Weapon specifications-->
     <specification 
 	retrigger_time="-1.0" 
@@ -9,7 +9,7 @@
 	magazine_size="20" 
 	can_shoot_standing="1" 
 	suppressed="1" 
-	name="VSK-94" 
+	name="VSK-94-[Christmas Eve Detective]" 
 	class="4" 
 	burst_shots="1"
 	last_burst_retrigger_time="0.083"
@@ -22,6 +22,7 @@
     <animation state_key="hold_casual" animation_key="dancing, kazachok" />
     <inventory encumbrance="20.0" buy_price="94.0" sell_price="94.0" />
     <animation key="reload" animation_key="reloading, magazine rifle 1.8" />
+    <commonness value="0" in_stock="0" can_respawn_with="1"/>
     <!--Sounds-->
     <sound key="fire" fileref="vsk_fire_FromBFBC1.wav" pitch_variety="0.05" volume="1.2" />
     <sound key="magazine_out" fileref="sr3mp_mgz_out_FromBFBC1.wav" volume="0.7" />
@@ -30,7 +31,7 @@
     <sound class="impact" fileref="rifle_drop.wav" />
     <!--Model, Icon, Cost-->
     <model filename="gkw_rf_vsk94.xml" />
-    <hud_icon filename="gkw_vsk94.png" />
+    <hud_icon filename="gkw_vsk94_5301.png" />
     <!--Ballistics-->
     <weak_hand_hold offset="0.3" />
     <projectile file="bullet.projectile" can_be_detected_by_footmen="0">
