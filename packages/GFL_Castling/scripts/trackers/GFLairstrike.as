@@ -416,7 +416,7 @@ class GFLairstrike : Tracker {
                     }                    
                     case 11:{//勇士妖精 机枪扫射
                         //最终弹头随机程度
-                        float strike_rand = 2;
+                        float strike_rand = 1.5;
                                                 
                         //每单轮扫射3发
                         for(int j=1;j<=3;j++)

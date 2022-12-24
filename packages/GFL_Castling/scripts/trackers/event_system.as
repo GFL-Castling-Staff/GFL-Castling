@@ -541,7 +541,7 @@ int apache_javelin_luckyvehicleid = -1;
 array<Apache_Javelin_lister@> Apache_Javelin_list;
 
 void excuteWarriorFariyApache(GameMode@ metagame,GFL_event@ eventinfo){
-    eventinfo.m_time=0.33;
+    eventinfo.m_time=0.5;
     Vector3 aimPos = eventinfo.m_pos.add(Vector3(10.0*cos(eventinfo.m_randseed),40,10.0*sin(eventinfo.m_randseed)));
 
     if(eventinfo.m_phase==18){
@@ -614,21 +614,26 @@ void excuteWarriorFariyApache(GameMode@ metagame,GFL_event@ eventinfo){
     //     }
     // }
 
-    else if(eventinfo.m_phase==9){
+    else if(eventinfo.m_phase==6){
         playSoundAtLocation(metagame,"30mm_strafe.wav",eventinfo.m_factionid,eventinfo.m_pos,1.0);
     }
 
-    else if(eventinfo.m_phase>=9){
+    else if(eventinfo.m_phase>=6){
         int luckyGuyid = getNearbyRandomLuckyGuyId(metagame,eventinfo.m_factionid,eventinfo.m_pos,30.0f);
         if(luckyGuyid!=-1){
             const XmlElement@ luckyGuy = getCharacterInfo(metagame, luckyGuyid);
             Vector3 luckyGuyPos = stringToVector3(luckyGuy.getStringAttribute("position"));
-            insertCommonStrike(eventinfo.m_characterId,eventinfo.m_factionid,"apache_mg",aimPos,luckyGuyPos);                        
+            DelayCommonCallRequest@ shot = DelayCommonCallRequest(metagame,0.05,eventinfo.m_characterId,eventinfo.m_factionid,"apache_mg",aimPos,luckyGuyPos);
+            TaskSequencer@ tasker = metagame.getTaskManager().newTaskSequencer();
+            tasker.add(shot);
+            tasker.add(shot);
+            tasker.add(shot);
+            tasker.add(shot);
         }
     }
 
 
-    else if(eventinfo.m_phase==12){
+    else if(eventinfo.m_phase==8){
         if(Apache_Javelin_list.length()>0){
             for (uint a=0;a<Apache_Javelin_list.length();a++){
                 if((Apache_Javelin_list[a].m_characterId==eventinfo.m_characterId)&&(Apache_Javelin_list[a].m_factionid==eventinfo.m_factionid)){//在序列中如果能找到
@@ -651,7 +656,7 @@ void excuteWarriorFariyApache(GameMode@ metagame,GFL_event@ eventinfo){
         }
     }
     eventinfo.m_phase++;
-    if(eventinfo.m_phase>=18){
+    if(eventinfo.m_phase>=12){
         eventinfo.m_enable=false;
     }
 }
