@@ -360,6 +360,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		ScoredResource("gkw_pa15_4202.weapon", "weapon", 1.0f),
 		ScoredResource("gkw_pa15_5802.weapon", "weapon", 1.0f),
 		ScoredResource("gkw_thompson_5703.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_m1903_302.weapon", "weapon", 1.0f),
 
 		ScoredResource("gkw_m870_3803.weapon", "weapon", 1.0f)
 			}
@@ -521,17 +522,18 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 
 		array<array<ScoredResource@>> rewardPasses = {
 			{
-		ScoredResource("gkw_cz75_1604.weapon", "weapon", 0.45f),
-		ScoredResource("gkw_m1895_5309.weapon", "weapon", 0.45f),
-		ScoredResource("gkw_fp6_2804.weapon", "weapon", 0.45f),
-		ScoredResource("gkw_hk21_4002.weapon", "weapon", 0.45f),
-		ScoredResource("gkw_vp1915_6604.weapon", "weapon", 0.45f),
-		ScoredResource("gkw_type89_6601.weapon", "weapon", 0.45f),
-		ScoredResource("gkw_python_6603.weapon", "weapon", 0.45f),
-		ScoredResource("gkw_lewis_4001.weapon", "weapon", 0.45f),
-		ScoredResource("gkw_fnc_6608.weapon", "weapon", 0.45f),
-		ScoredResource("gkw_sacr_5303.weapon", "weapon", 0.45f),
-		ScoredResource("gkw_hs2000_5304.weapon", "weapon", 0.45f)    
+		ScoredResource("gkw_cz75_1604.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_m1895_5309.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_fp6_2804.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_hk21_4002.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_vp1915_6604.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_type89_6601.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_python_6603.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_lewis_4001.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_fnc_6608.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_sacr_5303.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_m1903_302.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_hs2000_5304.weapon", "weapon", 1.0f)    
 			},
 			{
 		ScoredResource("snow_gifts.carry_item", "carry_item", 1.0f, 40),

@@ -387,7 +387,17 @@ class ItemDropEvent : Tracker {
                         addItemInBackpack(m_metagame,cId,"weapon","gkw_m1903_exp.weapon");
                         m_craftQueue.removeAt(findQueueIndex(pId,"m1903_2"));
                         playPrivateSound(m_metagame,"digimind_sfx2.wav",pId);
-                    }        
+                    }
+                    else if (checkQueue(pId,"m1903_1") && (itemKey=="gkw_m1903_302.weapon")){
+                        addItemInBackpack(m_metagame,cId,"weapon","gkw_m1903_302_only.weapon");
+                        m_craftQueue.removeAt(findQueueIndex(pId,"m1903_1"));
+                        playPrivateSound(m_metagame,"digimind_sfx2.wav",pId);
+                    }
+                    else if (checkQueue(pId,"m1903_2") && (itemKey=="gkw_m1903_302.weapon")){
+                        addItemInBackpack(m_metagame,cId,"weapon","gkw_m1903_302_exp.weapon");
+                        m_craftQueue.removeAt(findQueueIndex(pId,"m1903_2"));
+                        playPrivateSound(m_metagame,"digimind_sfx2.wav",pId);
+                    }                    
                     else if (checkQueue(pId,"fn49") && (itemKey=="gkw_fn49.weapon")){
                         addItemInBackpack(m_metagame,cId,"weapon","gkw_fn49mod3.weapon");
                         m_craftQueue.removeAt(findQueueIndex(pId,"fn49"));
