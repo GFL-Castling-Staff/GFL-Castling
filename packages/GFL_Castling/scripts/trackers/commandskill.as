@@ -319,6 +319,7 @@ dictionary commandSkillIndex = {
         {"gkw_stenmod3.weapon",38},
         {"gkw_sterling.weapon",38},
         {"gkw_saf.weapon",38},
+        {"gkw_saf_6607.weapon",38},
 
 
         // 炼金术师 大限
@@ -2775,7 +2776,7 @@ class CommandSkill : Tracker {
                             CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"grenade_english.projectile",characterId,factionid,30.0,3.0);
                         }                        
                     }       
-                    else if(weaponname=="gkw_saf.weapon") {
+                    else if(weaponname=="gkw_saf.weapon" || weaponname=="gkw_saf_6607.weapon") {
                         array<string> Voice={
                             "SAF_SKILL1_JP.wav",
                             "SAF_SKILL2_JP.wav",
