@@ -157,6 +157,7 @@ dictionary commandSkillIndex = {
         {"gkw_uzi.weapon",2},
         {"gkw_mp40.weapon",2},
         {"gkw_kp31mod3.weapon",2},
+        {"gkw_kp31mod3_310.weapon",2},
 
         // FF_JUSTICE
         {"ff_justice.weapon",3},
@@ -863,7 +864,7 @@ class CommandSkill : Tracker {
                         };
                         playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
                     }
-                    if(weaponname=="gkw_kp31mod3.weapon") {
+                    if(weaponname=="gkw_kp31mod3.weapon" || weaponname=="gkw_kp31mod3_310.weapon") {
                         array<string> Voice={
                             "KP31_SKILL1_JP.wav",
                             "KP31_SKILL2_JP.wav",
@@ -883,7 +884,7 @@ class CommandSkill : Tracker {
                 }
             }
         }
-        if(weaponname=="gkw_kp31mod3.weapon"){
+        if(weaponname=="gkw_kp31mod3.weapon" || weaponname=="gkw_kp31mod3_310.weapon"){
             addCoolDown("FIRENADE",12,characterId,modifer);
         }
         else{
