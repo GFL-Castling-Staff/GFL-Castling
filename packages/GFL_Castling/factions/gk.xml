@@ -207,6 +207,7 @@
 	<soldier name="default" spawn_score="0.0" firstnames_file="gk_first.name" lastnames_file="gk_last.name">
 		<character filename="default_gk_pmc.text_lines">
 			<parameter class="encumbrance" low="20.0" high="80.0" />
+			<parameter class="skydiving_gravity" value="-20.0" />
 		</character>
 		<ai filename="default.ai" />
 		<model file="gkd_xxv_idwmod.xml" />
@@ -257,6 +258,7 @@
 	<soldier name="default_spawn_ai" spawn_score="0.0" copy_from="default">
 		<character filename="default_gk_pmc.text_lines">
 			<parameter class="default_squad_config_index" value="0" />
+			<parameter class="skydiving_gravity" value="-30.0" />
 		</character>
 		<ai filename="default.ai" />
 		<model file="gkd_xxv_idwmod.xml" />
@@ -415,9 +417,6 @@
 		</character>
 		<resources file="gk_elite.resources">
 			<weapon key="gkw_idw.weapon" />
-			<weapon key="gkw_idw_2108.weapon" />
-			<weapon key="gkw_idw_3205.weapon" />
-			<weapon key="gkw_idw_4908.weapon" />
 			<weapon key="gkw_idwmod3.weapon" />
 			<carry_item key="exo_t4.carry_item" />
 		</resources>

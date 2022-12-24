@@ -413,3 +413,47 @@ class DelayAntiTankSnipeRequest :Task{
 		return false;
 	}
 }
+
+class DelaySpawnSoldier : Task {
+    protected GameMode@ m_metagame;
+	protected float m_time;
+    protected int m_faction_id;
+	protected float m_timeLeft;
+	protected array<Spawn_request@> m_soldier;
+	protected float m_spread_x;
+	protected float m_spread_y;
+	protected Vector3 m_pos;
+
+	DelaySpawnSoldier(GameMode@ metagame, float time,int fId, array<Spawn_request@> spawn_soldier,Vector3 pos1,float spreadX = 0.0,float spreadY = 0.0) {
+		@m_metagame = metagame;
+		m_time = time;
+		m_faction_id =fId;
+		m_pos=pos1;
+		m_soldier=spawn_soldier;
+		m_spread_x = spreadX;
+		m_spread_y = spreadY;
+	}
+
+    void start() {
+		m_timeLeft=m_time;
+	}
+
+    void update(float time) {
+		m_timeLeft -= time;
+		if (m_timeLeft < 0)
+		{
+			for(uint i=0;i<m_soldier.length();i++){
+				Spawn_request@ foo = m_soldier[i];
+				spawnSoldier(m_metagame,foo.m_num,m_faction_id,m_pos,foo.m_type,m_spread_x,m_spread_y);
+			}
+		}
+
+	}
+
+    bool hasEnded() const {
+		if (m_timeLeft < 0) {
+			return true;
+		}
+		return false;
+	}
+}

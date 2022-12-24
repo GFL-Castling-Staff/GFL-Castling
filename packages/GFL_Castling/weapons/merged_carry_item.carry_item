@@ -14808,6 +14808,14 @@
 	<commonness value="0.0" in_stock="0" can_respawn_with="0"/>
 </carry_item>
 
+<carry_item name="Imprint Equipment Contract" key="equip_only_ticket.carry_item" time_to_live_out_in_the_open="90.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="1.0" player_death_drop_owner_lock_time="90.0">
+	<capacity value="1" source="rank" source_value="0.0"/>
+	<inventory buy_price="500000" sell_price="0" encumbrance="-0.5"/>
+	<commonness value="0.0" in_stock="0" can_respawn_with="0"/>
+	<model mesh_filename="equipment_contract.xml"/>
+	<hud_icon filename="hud_special_ticket_2.png"/>
+</carry_item>
+
 <carry_item name="Acceleration Coil" key="upgrade_type88.carry_item" time_to_live_out_in_the_open="90" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="1.0" player_death_drop_owner_lock_time="90.0">
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<hud_icon filename="hud_88type_upgrade.png"/>
@@ -14880,6 +14888,62 @@
 	<commonness value="0.0" in_stock="1" can_respawn_with="0"/>
 </carry_item>
 
+<carry_item name="Arisaka Armor-Piercing Rounds" key="upgrade_4type.carry_item" time_to_live_out_in_the_open="90" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="1.0" player_death_drop_owner_lock_time="90.0">
+	<capacity value="1" source="rank" source_value="0.0"/>
+	<hud_icon filename="hud_4type_upgrade.png"/>
+	<inventory encumbrance="-1.0" buy_price="750000" sell_price="0"/>
+	<model mesh_filename="vestexo.xml"/>
+	<commonness value="0.0" in_stock="1" can_respawn_with="0"/>
+</carry_item>
+
+<carry_item name="SB 2.5-10x56" key="upgrade_wa2000.carry_item" time_to_live_out_in_the_open="90" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="1.0" player_death_drop_owner_lock_time="90.0">
+	<capacity value="1" source="rank" source_value="0.0"/>
+	<hud_icon filename="hud_wa2000_upgrade.png"/>
+	<inventory encumbrance="-1.0" buy_price="750000" sell_price="0"/>
+	<model mesh_filename="vestexo.xml"/>
+	<commonness value="0.0" in_stock="1" can_respawn_with="0"/>
+</carry_item>
+
+<carry_item name="PT2 Adjustable Stock" key="upgrade_pkp.carry_item" time_to_live_out_in_the_open="90" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="1.0" player_death_drop_owner_lock_time="90.0">
+	<capacity value="1" source="rank" source_value="0.0"/>
+	<hud_icon filename="hud_pkp_upgrade.png"/>
+	<inventory encumbrance="-1.0" buy_price="750000" sell_price="0"/>
+	<model mesh_filename="vestexo.xml"/>
+	<commonness value="0.0" in_stock="1" can_respawn_with="0"/>
+</carry_item>
+
+<carry_item name="SR3 Special Suppressor" key="upgrade_sr3mp.carry_item" time_to_live_out_in_the_open="90" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="1.0" player_death_drop_owner_lock_time="90.0">
+	<capacity value="1" source="rank" source_value="0.0"/>
+	<hud_icon filename="hud_sr3mp_upgrade.png"/>
+	<inventory encumbrance="-1.0" buy_price="750000" sell_price="0"/>
+	<model mesh_filename="vestexo.xml"/>
+	<commonness value="0.0" in_stock="1" can_respawn_with="0"/>
+</carry_item>
+
+<carry_item name="MK318 MODX" key="upgrade_scarl.carry_item" time_to_live_out_in_the_open="90" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="1.0" player_death_drop_owner_lock_time="90.0">
+	<capacity value="1" source="rank" source_value="0.0"/>
+	<hud_icon filename="testing.png"/>
+	<inventory encumbrance="-1.0" buy_price="750000" sell_price="0"/>
+	<model mesh_filename="vestexo.xml"/>
+	<commonness value="0.0" in_stock="1" can_respawn_with="0"/>
+</carry_item>
+
+<carry_item name="M948_MODX" key="upgrade_scarh.carry_item" time_to_live_out_in_the_open="90" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="1.0" player_death_drop_owner_lock_time="90.0">
+	<capacity value="1" source="rank" source_value="0.0"/>
+	<hud_icon filename="testing.png"/>
+	<inventory encumbrance="-1.0" buy_price="750000" sell_price="0"/>
+	<model mesh_filename="vestexo.xml"/>
+	<commonness value="0.0" in_stock="1" can_respawn_with="0"/>
+</carry_item>
+
+<carry_item name="7N14" key="upgrade_svd.carry_item" time_to_live_out_in_the_open="90" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="1.0" player_death_drop_owner_lock_time="90.0">
+	<capacity value="1" source="rank" source_value="0.0"/>
+	<hud_icon filename="hud_svd_upgrade.png"/>
+	<inventory encumbrance="-1.0" buy_price="750000" sell_price="0"/>
+	<model mesh_filename="vestexo.xml"/>
+	<commonness value="0.0" in_stock="1" can_respawn_with="0"/>
+</carry_item>
+
 <carry_item name="Fire Selector" key="upgrade_fn49.carry_item" time_to_live_out_in_the_open="90" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="1.0" player_death_drop_owner_lock_time="90.0">
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<hud_icon filename="hud_fn49_upgrade.png"/>
@@ -14888,12 +14952,36 @@
 	<commonness value="0.0" in_stock="1" can_respawn_with="0"/>
 </carry_item>
 
-<carry_item name="Imprint Equipment Contract" key="equip_only_ticket.carry_item" time_to_live_out_in_the_open="90.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="1.0" player_death_drop_owner_lock_time="90.0">
+<carry_item name="M2 Bipod" key="upgrade_m14.carry_item" time_to_live_out_in_the_open="90" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="1.0" player_death_drop_owner_lock_time="90.0">
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<inventory buy_price="500000" sell_price="0" encumbrance="-0.5"/>
-	<commonness value="0.0" in_stock="0" can_respawn_with="0"/>
-	<model mesh_filename="equipment_contract.xml"/>
-	<hud_icon filename="hud_special_ticket_2.png"/>
+	<hud_icon filename="hud_m14_upgrade.png"/>
+	<inventory encumbrance="-1.0" buy_price="50000" sell_price="0"/>
+	<model mesh_filename="vestexo.xml"/>
+	<commonness value="0.0" in_stock="1" can_respawn_with="0"/>
+</carry_item>
+
+<carry_item name="12GA Flechette Shells" key="upgrade_m1897.carry_item" time_to_live_out_in_the_open="90" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="1.0" player_death_drop_owner_lock_time="90.0">
+	<capacity value="1" source="rank" source_value="0.0"/>
+	<hud_icon filename="hud_m1897_upgrade.png"/>
+	<inventory encumbrance="-1.0" buy_price="50000" sell_price="0"/>
+	<model mesh_filename="vestexo.xml"/>
+	<commonness value="0.0" in_stock="1" can_respawn_with="0"/>
+</carry_item>
+
+<carry_item name="7.92 KURZ" key="upgrade_stg44.carry_item" time_to_live_out_in_the_open="90" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="1.0" player_death_drop_owner_lock_time="90.0">
+	<capacity value="1" source="rank" source_value="0.0"/>
+	<hud_icon filename="hud_stg44_upgrade.png"/>
+	<inventory encumbrance="-1.0" buy_price="50000" sell_price="0"/>
+	<model mesh_filename="vestexo.xml"/>
+	<commonness value="0.0" in_stock="1" can_respawn_with="0"/>
+</carry_item>
+
+<carry_item name="G3 Improved Barrel Group" key="upgrade_g3.carry_item" time_to_live_out_in_the_open="90" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="1.0" player_death_drop_owner_lock_time="90.0">
+	<capacity value="1" source="rank" source_value="0.0"/>
+	<hud_icon filename="hud_g3_upgrade.png"/>
+	<inventory encumbrance="-1.0" buy_price="25000" sell_price="0"/>
+	<model mesh_filename="vestexo.xml"/>
+	<commonness value="0.0" in_stock="1" can_respawn_with="0"/>
 </carry_item>
 
 <carry_item time_to_live_out_in_the_open="90.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="1.0" name="T-Doll Contract" key="dollcraft.carry_item">

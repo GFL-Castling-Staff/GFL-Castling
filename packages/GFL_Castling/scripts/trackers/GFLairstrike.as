@@ -403,7 +403,7 @@ class GFLairstrike : Tracker {
                             float rand_x1 = rand_dis*cos(rand_angle);
                             float rand_y1 = rand_dis*sin(rand_angle);                            
                             
-                            CreateDirectProjectile(m_metagame,start_pos,end_pos.add(Vector3(rand_x1,0,rand_y1)),"bullet_fairy.projectile",cid,fid,180);           
+                            CreateDirectProjectile(m_metagame,start_pos,end_pos.add(Vector3(rand_x1,0,rand_y1)),"bullet_fairy.projectile",cid,fid,100);           
                         } 
                         Airstrike_strafe.removeAt(a);
                         break;
@@ -429,7 +429,7 @@ class GFLairstrike : Tracker {
                             CreateDirectProjectile(m_metagame,start_pos,end_pos.add(Vector3(rand_x1,0,rand_y1)),"ASW_heli_strafe.projectile",cid,fid,90);           
                         } 
                         Airstrike_strafe.removeAt(a);
-                        break;                        
+                        break;
                     }                    
                     case 12:{//勇士妖精 标枪导弹
                         CreateDirectProjectile(m_metagame,start_pos,end_pos,"javelin_rocket_3.projectile",cid,fid,200);	

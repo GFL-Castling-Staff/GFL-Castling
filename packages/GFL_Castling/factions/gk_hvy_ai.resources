@@ -1,20 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources clear_weapons="1" clear_carry_items="1">
-	<!-- <weapon key="gkw_idw.weapon" /> -->
-	<!--<weapon key="gkw_hvy_ags30.weapon" />-->
+<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 	<weapon key="gkw_hvy_mk153.weapon" />
-	<weapon key="gkw_type100_banzai.weapon" />
 	<weapon key="gkw_hvy_at4.weapon" />
-	<weapon key="target.weapon" />
-	<weapon key="gkr_bbs.weapon" />
 	<weapon key="gkw_hvy_qlz04_ai.weapon" />
 	<weapon key="gkw_hvy_m2_ai.weapon" />
-	<weapon key="medikit.weapon" />
-	<weapon key="gkw_88rocker.weapon"/>
-	<projectile key="c4.projectile" />
-
-	<weapon key="gkw_consume_at4.weapon" />
-
-	<carry_item key="exo_t4.carry_item"/>
+	<weapon key="gkw_consume_at4.weapon"/>
+	<weapon key="gkw_consume_m202.weapon"/>
+    <projectile key="hand_atgrenade.projectile" />
+    <projectile key="at_mine.projectile" />
 	<carry_item key="exo_t5_16lab.carry_item"/>
 </resources>

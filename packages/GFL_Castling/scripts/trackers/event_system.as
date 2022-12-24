@@ -229,10 +229,17 @@ void excuteYaoren(GameMode@ metagame,GFL_event@ eventinfo){
         "<command class='create_instance'" +
         " faction_id='"+ eventinfo.m_factionid +"'" +
         " instance_class='vehicle'" +
-        " instance_key='sg1hg1mg2_landing.vehicle' " +
+        " instance_key='osprey_enter' " +
         " character_id='" + eventinfo.m_characterId +"'" +
         " position='" + (eventinfo.m_pos.add(Vector3(0,50,0))).toString() + "' />";
         metagame.getComms().send(c);
+        TaskSequencer@ tasker = metagame.getTaskManager().newTaskSequencer();
+        array<Spawn_request@> spawn_soldier =
+        {
+            Spawn_request("Task_MG",5),
+            Spawn_request("Task_SG",3)
+        };        
+        tasker.add(DelaySpawnSoldier(metagame,6.0,eventinfo.m_factionid,spawn_soldier,eventinfo.m_pos,3.0,3.0));        
     }
     eventinfo.m_phase++;
     if(eventinfo.m_phase>=10){
@@ -534,10 +541,10 @@ int apache_javelin_luckyvehicleid = -1;
 array<Apache_Javelin_lister@> Apache_Javelin_list;
 
 void excuteWarriorFariyApache(GameMode@ metagame,GFL_event@ eventinfo){
-    eventinfo.m_time=1.0;
+    eventinfo.m_time=0.33;
     Vector3 aimPos = eventinfo.m_pos.add(Vector3(10.0*cos(eventinfo.m_randseed),40,10.0*sin(eventinfo.m_randseed)));
 
-    if(eventinfo.m_phase==6){
+    if(eventinfo.m_phase==18){
         insertCommonStrike(eventinfo.m_characterId,eventinfo.m_factionid,"apache_bait",aimPos,eventinfo.m_pos);
     }
 
@@ -549,65 +556,79 @@ void excuteWarriorFariyApache(GameMode@ metagame,GFL_event@ eventinfo){
         Apache_Javelin_list.insertLast(Apache_Javelin_lister(eventinfo.m_characterId,eventinfo.m_factionid,apache_javelin_luckyvehicleid,eventinfo.m_pos));
     }
 
-    else if(eventinfo.m_phase==3){
+    // else if(eventinfo.m_phase==3){
 
-        int m_fnum = metagame.getFactionCount();
-        int max_check = 6;  // 最多扫描6个人
-        int jud_check = 0;
-        int max_num = 3;    // 最多记录3个精英
-        int jud_num = 0;
+    //     int m_fnum = metagame.getFactionCount();
+    //     int max_check = 6;  // 最多扫描6个人
+    //     int jud_check = 0;
+    //     int max_num = 3;    // 最多记录3个精英
+    //     int jud_num = 0;
 
-        array<const XmlElement@> apache_affectedCharacter;
-        for(int i=0;i<m_fnum;i++) 
-            if(i!=eventinfo.m_factionid) {
+    //     array<const XmlElement@> apache_affectedCharacter;
+    //     for(int i=0;i<m_fnum;i++) 
+    //         if(i!=eventinfo.m_factionid) {
 
-            array<const XmlElement@> affectedCharacter2;
-            affectedCharacter2 = getCharactersNearPosition(metagame,eventinfo.m_pos,i,20.0f);
+    //         array<const XmlElement@> affectedCharacter2;
+    //         affectedCharacter2 = getCharactersNearPosition(metagame,eventinfo.m_pos,i,20.0f);
 
-            // 优先扫描精英
-            if (affectedCharacter2 !is null){
-                for(uint x=0;x<affectedCharacter2.length();x++){
-                    int cidd = affectedCharacter2[x].getIntAttribute("id");
-                    const XmlElement@ possibleElitecharacter = getCharacterInfo(metagame,cidd);
-                    string soldier_name = possibleElitecharacter.getStringAttribute("soldier_group_name");
-                    max_check++;
-                    if(eliteEnemyName.find(soldier_name)> -1){
-                        apache_affectedCharacter.insertLast(affectedCharacter2[x]);
-                        jud_num++;
-                        if((jud_num>=max_num) || (jud_check>=max_check))break;                                      
-                    }
-                    if((jud_num>=max_num) || (jud_check>=max_check))break; 
-                }
-            }
-            if((jud_num>=max_num) || (jud_check>=max_check))break;
+    //         // 优先扫描精英
+    //         if (affectedCharacter2 !is null){
+    //             for(uint x=0;x<affectedCharacter2.length();x++){
+    //                 int cidd = affectedCharacter2[x].getIntAttribute("id");
+    //                 const XmlElement@ possibleElitecharacter = getCharacterInfo(metagame,cidd);
+    //                 string soldier_name = possibleElitecharacter.getStringAttribute("soldier_group_name");
+    //                 max_check++;
+    //                 if(eliteEnemyName.find(soldier_name)> -1){
+    //                     apache_affectedCharacter.insertLast(affectedCharacter2[x]);
+    //                     jud_num++;
+    //                     if((jud_num>=max_num) || (jud_check>=max_check))break;                                      
+    //                 }
+    //                 if((jud_num>=max_num) || (jud_check>=max_check))break; 
+    //             }
+    //         }
+    //         if((jud_num>=max_num) || (jud_check>=max_check))break;
 
-            // 如果精英数量少于3个，则继续选择其他敌人，满额为止
-            else if (affectedCharacter2 !is null){
-                for(uint x=0;x<affectedCharacter2.length();x++){
-                    apache_affectedCharacter.insertLast(affectedCharacter2[x]);
-                    jud_num++;  max_check++;
-                    if((jud_num>=max_num) || (jud_check>=max_check))break;                                      
-                }
-            }
-            if((jud_num>=max_num) || (jud_check>=max_check))break;
-        }         
+    //         // 如果精英数量少于3个，则继续选择其他敌人，满额为止
+    //         else if (affectedCharacter2 !is null){
+    //             for(uint x=0;x<affectedCharacter2.length();x++){
+    //                 apache_affectedCharacter.insertLast(affectedCharacter2[x]);
+    //                 jud_num++;  max_check++;
+    //                 if((jud_num>=max_num) || (jud_check>=max_check))break;                                      
+    //             }
+    //         }
+    //         if((jud_num>=max_num) || (jud_check>=max_check))break;
+    //     }         
 
+    //     playSoundAtLocation(metagame,"30mm_strafe.wav",eventinfo.m_factionid,eventinfo.m_pos,1.0);
+
+    //     for (uint i0=1;i0<=3;i0++){
+    //         for (uint i1=0;i1<apache_affectedCharacter.length();i1++)	{
+    //             int luckyoneid = apache_affectedCharacter[i1].getIntAttribute("id");
+    //             const XmlElement@ luckyoneC = getCharacterInfo(metagame, luckyoneid);
+    //             if ((luckyoneC.getIntAttribute("id")!=-1)){
+    //                 string luckyonepos = luckyoneC.getStringAttribute("position");
+    //                 Vector3 luckyoneposV = stringToVector3(luckyonepos);
+    //                 insertCommonStrike(eventinfo.m_characterId,eventinfo.m_factionid,"apache_mg",aimPos,luckyoneposV);
+    //             }				
+    //         }        
+    //     }
+    // }
+
+    else if(eventinfo.m_phase==9){
         playSoundAtLocation(metagame,"30mm_strafe.wav",eventinfo.m_factionid,eventinfo.m_pos,1.0);
+    }
 
-        for (uint i0=1;i0<=3;i0++){
-            for (uint i1=0;i1<apache_affectedCharacter.length();i1++)	{
-                int luckyoneid = apache_affectedCharacter[i1].getIntAttribute("id");
-                const XmlElement@ luckyoneC = getCharacterInfo(metagame, luckyoneid);
-                if ((luckyoneC.getIntAttribute("id")!=-1)){
-                    string luckyonepos = luckyoneC.getStringAttribute("position");
-                    Vector3 luckyoneposV = stringToVector3(luckyonepos);
-                    insertCommonStrike(eventinfo.m_characterId,eventinfo.m_factionid,"apache_mg",aimPos,luckyoneposV);
-                }				
-            }        
+    else if(eventinfo.m_phase>=9){
+        int luckyGuyid = getNearbyRandomLuckyGuyId(metagame,eventinfo.m_factionid,eventinfo.m_pos,30.0f);
+        if(luckyGuyid!=-1){
+            const XmlElement@ luckyGuy = getCharacterInfo(metagame, luckyGuyid);
+            Vector3 luckyGuyPos = stringToVector3(luckyGuy.getStringAttribute("position"));
+            insertCommonStrike(eventinfo.m_characterId,eventinfo.m_factionid,"apache_mg",aimPos,luckyGuyPos);                        
         }
     }
 
-    else if(eventinfo.m_phase==4){
+
+    else if(eventinfo.m_phase==12){
         if(Apache_Javelin_list.length()>0){
             for (uint a=0;a<Apache_Javelin_list.length();a++){
                 if((Apache_Javelin_list[a].m_characterId==eventinfo.m_characterId)&&(Apache_Javelin_list[a].m_factionid==eventinfo.m_factionid)){//在序列中如果能找到
@@ -630,7 +651,7 @@ void excuteWarriorFariyApache(GameMode@ metagame,GFL_event@ eventinfo){
         }
     }
     eventinfo.m_phase++;
-    if(eventinfo.m_phase>=7){
+    if(eventinfo.m_phase>=18){
         eventinfo.m_enable=false;
     }
 }

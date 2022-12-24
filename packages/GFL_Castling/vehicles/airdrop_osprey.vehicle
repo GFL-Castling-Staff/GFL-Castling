@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vehicles>
+    <vehicle name="" map_view_atlas_index="18" respawn_time="0" time_to_live="3.0" key="osprey_exit" >
+        <tire_set offset="0.68 0.0 1.24" radius="0.32" />
+        <tire_set offset="0.68 0.0 -1.24" radius="0.32" />
+        <control max_speed="50.0" acceleration="10.0" max_reverse_speed="5.0" max_rotation="1.628" max_water_depth="0.0" can_steer_in_water="0" can_steer_on_ground="0" gears="1" />
+        <physics max_health="0.0" mass="10000.0" extent="1.496 0.0 2.728" offset="0 0.16 0" collision_model_pos="0 20.0 0" collision_model_extent="0 0 0" visual_offset="0 0.7 -0.96" gravity="20" remove_collision_threshold="10.0" collision_response_factor="0.0" preserve_motion_on_impact_factor="0.0"/>
+        <visual class="chassis" mesh_filename="Osprey_Hovering.mesh" texture_filename="Ospray_Body.png" />
+        <sound key="hit" filename="rubber_boat_hit1.wav" />
+        <sound key="hit" filename="rubber_boat_hit2.wav" />
+        <sound key="hit" filename="rubber_boat_hit3.wav" />
+    </vehicle>
+    <vehicle name="" map_view_atlas_index="18" respawn_time="0" time_to_live="5.0" key="osprey_landing">
+        <tire_set offset="0.68 0.0 1.24" radius="0.32" />
+        <tire_set offset="0.68 0.0 -1.24" radius="0.32" />
+        <control max_speed="50.0" acceleration="10.0" max_reverse_speed="5.0" max_rotation="1.628" max_water_depth="0.0" can_steer_in_water="0" can_steer_on_ground="0" gears="1" />
+        <physics max_health="0.0" mass="10000.0" extent="1.496 0.0 2.728" offset="0 0.16 0" collision_model_pos="0 20.0 0" collision_model_extent="0 0 0" visual_offset="0 0.7 -0.96" gravity="0" remove_collision_threshold="10.0" collision_response_factor="0.0" preserve_motion_on_impact_factor="0.0"/>
+        <visual class="chassis" mesh_filename="Osprey_Hovering.mesh" texture_filename="Ospray_Body.png" />
+        <sound key="hit" filename="rubber_boat_hit1.wav" />
+        <sound key="hit" filename="rubber_boat_hit2.wav" />
+        <sound key="hit" filename="rubber_boat_hit3.wav" />
+        <event>
+            <trigger class="destroy" />
+            <result class="spawn" instance_class="vehicle" instance_key="osprey_exit" min_amount="1" max_amount="1" offset="0 0.0 0" position_spread="0 0" direction_spread="0 0" />
+        </event>
+    </vehicle>
+    <vehicle name="" map_view_atlas_index="18" respawn_time="0" time_to_live="3.0" key="osprey_enter">
+        <tire_set offset="0.68 0.0 1.24" radius="0.32" />
+        <tire_set offset="0.68 0.0 -1.24" radius="0.32" />
+        <control max_speed="50.0" acceleration="10.0" max_reverse_speed="5.0" max_rotation="1.628" max_water_depth="0.0" can_steer_in_water="0" can_steer_on_ground="0" gears="1" />
+        <physics max_health="0.0" mass="10000.0" extent="1.496 0.0 2.728" offset="0 0.16 0" collision_model_pos="0 20.0 0" collision_model_extent="0 0 0" visual_offset="0 0.7 -0.96" gravity="-10" remove_collision_threshold="10.0" collision_response_factor="0.0" preserve_motion_on_impact_factor="0.0"/>
+        <visual class="chassis" mesh_filename="Osprey_Hovering.mesh" texture_filename="Ospray_Body.png" />
+        <sound key="hit" filename="rubber_boat_hit1.wav" />
+        <sound key="hit" filename="rubber_boat_hit2.wav" />
+        <sound key="hit" filename="rubber_boat_hit3.wav" />
+        <event>
+            <trigger class="destroy" />
+            <result class="spawn" instance_class="vehicle" instance_key="osprey_landing" min_amount="1" max_amount="1" offset="0 0.0 0" position_spread="0 0" direction_spread="0 0" />
+        </event>
+    </vehicle>    
+</vehicles>

@@ -1,6 +1,7 @@
 #include "query_helpers2.as"
 #include "helpers.as"
 #include "GFLplayerlist.as"
+#include "Spawn_request.as"
 
 //别抄了学不会的，有需求请联系 冥府乌鸦NetherCrow 为你解惑，不识趣的不建议来。
 //Credit: NetherCrow & Castling Staff
@@ -228,6 +229,21 @@ void spawnSoldier(Metagame@ metagame, uint count, uint factionId, string positio
 	}
 }
 
+void spawnSoldier(Metagame@ metagame, uint count, uint factionId, Vector3 position, string instanceKey,float spreadX,float spreadY) {
+	for (uint i = 0; i < count; ++i) {
+		Vector3 position_dummy = getRandomOffsetVector(position,spreadX,spreadY);
+		metagame.getComms().send(
+		"<command " +
+		" class='create_instance' " + 
+		" faction_id='" + factionId + "' " +
+		" position='" + position_dummy.toString() + "' " + 
+		" offset='0 0 0' " +
+		" instance_class='soldier' " + 
+		" instance_key='" + instanceKey + "'> " + 
+		"</command>");
+	}
+}
+
 float getAimOrientation4(Vector3 s_pos, Vector3 e_pos) {
 	float dx = e_pos.m_values[0]-s_pos.m_values[0];
 	float dy = e_pos.m_values[2]-s_pos.m_values[2];
@@ -402,6 +418,12 @@ Vector3 getAimUnitPosition(Vector3 s_pos, Vector3 e_pos, float scale) {
 Vector3 getRandomOffsetVector(Vector3 pos,float strike_rand){
 	float rand_x = rand(-strike_rand,strike_rand);
 	float rand_z = rand(-strike_rand,strike_rand);
+	return pos.add(Vector3(rand_x,0,rand_z));
+}
+
+Vector3 getRandomOffsetVector(Vector3 pos,float strike_randX,float strike_randY){
+	float rand_x = rand(-strike_randX,strike_randX);
+	float rand_z = rand(-strike_randY,strike_randY);
 	return pos.add(Vector3(rand_x,0,rand_z));
 }
 
@@ -667,13 +689,13 @@ int getNearbyRandomLuckyGuyId(GameMode@ metagame, int factionid, Vector3 pos, fl
 		}
                 
     if (affectedCharacter.length()>0) {
-        _log("Luckyguy locate successful");
+        // _log("Luckyguy locate successful");
         uint luckyGuyindex = rand(0,affectedCharacter.length()-1);
         uint luckyGuyid = affectedCharacter[luckyGuyindex].getIntAttribute("id");
         return luckyGuyid;
     }         
 	else {
-		_log("Luckyguy locate failed");
+		// _log("Luckyguy locate failed");
 		return -1;
 	}
 }

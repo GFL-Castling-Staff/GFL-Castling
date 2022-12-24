@@ -49,10 +49,10 @@ class ManualCallTask{
 }
 
 class ManualCall : Tracker {
-	protected Metagame@ m_metagame;
+	protected GameMode@ m_metagame;
     protected int m_DummyCallID=0;
 	// --------------------------------------------
-	ManualCall(Metagame@ metagame) {
+	ManualCall(GameMode@ metagame) {
 		@m_metagame = @metagame;
 	}
 
@@ -63,7 +63,6 @@ class ManualCall : Tracker {
     protected void handleResultEvent(const XmlElement@ event) {
         string EventKeyGet = event.getStringAttribute("key");	
         if(EventKeyGet == "fc_medic"){
-            //_log("getEventFc");
             int characterId = event.getIntAttribute("character_id");
             const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
             if (character !is null) {
@@ -85,10 +84,9 @@ class ManualCall : Tracker {
                         "<command class='create_instance'" +
                         " faction_id='"+ Faction +"'" +
                         " instance_class='vehicle'" +
-                        " instance_key='medic_landing.vehicle' " +
+                        " instance_key='osprey_enter' " +
                         " character_id='" + characterId +"'" +
                         " position='" + target.toString() + "' />";
-                        //m_metagame.getComms().send(c);
                         ManualCallTask@ FairyRequest = ManualCallTask(characterId,c,8.0,Faction,target,"medic_call");
                         FairyRequest.setIconTypeKey("call_marker_drop");
                         FairyRequest.setIndex(4);
@@ -97,10 +95,9 @@ class ManualCall : Tracker {
                         m_DummyCallID++;                        
                         CallTaskArray.insertLast(FairyRequest);
                         addCastlingMarker(FairyRequest);
-                        _log("QueueLegeth:"+CallTaskArray.length());
+                        // _log("QueueLegeth:"+CallTaskArray.length());
                         sendFactionMessageKey(m_metagame,Faction,"Request trauma team support!");
                         sendFactionMessageKey(m_metagame,Faction,"Receive, transport aircraft is maneuvering");
-                        //_log("Add Call Task Success");
                     }
                 }
             }
@@ -127,7 +124,7 @@ class ManualCall : Tracker {
                         "<command class='create_instance'" +
                         " faction_id='"+ Faction +"'" +
                         " instance_class='vehicle'" +
-                        " instance_key='sg1hg1mg2_landing.vehicle' " +
+                        " instance_key='osprey_enter' " +
                         " character_id='" + characterId +"'" +
                         " position='" + target.toString() + "' />";
                         ManualCallTask@ FairyRequest = ManualCallTask(characterId,c,8.0,Faction,target,"mgsg_call");
@@ -167,7 +164,7 @@ class ManualCall : Tracker {
                         "<command class='create_instance'" +
                         " faction_id='"+ Faction +"'" +
                         " instance_class='vehicle'" +
-                        " instance_key='hvy_landing.vehicle' " +
+                        " instance_key='osprey_enter' " +
                         " character_id='" + characterId +"'" +
                         " position='" + target.toString() + "' />";
                         ManualCallTask@ FairyRequest = ManualCallTask(characterId,c,8.0,Faction,target,"hvy_call");
@@ -313,12 +310,46 @@ class ManualCall : Tracker {
 			CallTaskArray[0].m_time -= time;
 			if(CallTaskArray[0].m_time < 0.0)
 			{
-                if(CallTaskArray[0].CallType=="medic_call" || CallTaskArray[0].CallType=="mgsg_call" || CallTaskArray[0].CallType=="hvy_call"){
+                if(CallTaskArray[0].CallType=="medic_call"){
                     playSoundAtLocation(m_metagame,"osprey.wav",CallTaskArray[0].m_factions,CallTaskArray[0].m_pos,7.0f);
                     m_metagame.getComms().send(CallTaskArray[0].Callkey);
                     removeCastlingMarker(CallTaskArray[0]);
                     sendFactionMessageKey(m_metagame,CallTaskArray[0].m_factions,"Echelon enter the battlefield");
+                    TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                    array<Spawn_request@> spawn_soldier =
+                    {
+                        Spawn_request("Task_Medic",6)
+                    };
+                    tasker.add(DelaySpawnSoldier(m_metagame,6.0,CallTaskArray[0].m_factions,spawn_soldier,CallTaskArray[0].m_pos.add(Vector3(0,-50,0)),3.0,3.0));
                 }
+
+                if(CallTaskArray[0].CallType=="mgsg_call"){
+                    playSoundAtLocation(m_metagame,"osprey.wav",CallTaskArray[0].m_factions,CallTaskArray[0].m_pos,7.0f);
+                    m_metagame.getComms().send(CallTaskArray[0].Callkey);
+                    removeCastlingMarker(CallTaskArray[0]);
+                    sendFactionMessageKey(m_metagame,CallTaskArray[0].m_factions,"Echelon enter the battlefield");
+                    TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                    array<Spawn_request@> spawn_soldier =
+                    {
+                        Spawn_request("Task_MG",5),
+                        Spawn_request("Task_SG",3)
+                    };
+                    tasker.add(DelaySpawnSoldier(m_metagame,6.0,CallTaskArray[0].m_factions,spawn_soldier,CallTaskArray[0].m_pos.add(Vector3(0,-50,0)),3.0,3.0));
+                }
+
+                if(CallTaskArray[0].CallType=="hvy_call"){
+                    playSoundAtLocation(m_metagame,"osprey.wav",CallTaskArray[0].m_factions,CallTaskArray[0].m_pos,7.0f);
+                    m_metagame.getComms().send(CallTaskArray[0].Callkey);
+                    removeCastlingMarker(CallTaskArray[0]);
+                    sendFactionMessageKey(m_metagame,CallTaskArray[0].m_factions,"Echelon enter the battlefield");
+                    TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                    array<Spawn_request@> spawn_soldier =
+                    {
+                        Spawn_request("default_hvy",6)
+                    };
+                    tasker.add(DelaySpawnSoldier(m_metagame,6.0,CallTaskArray[0].m_factions,spawn_soldier,CallTaskArray[0].m_pos.add(Vector3(0,-50,0)),3.0,3.0));
+                }
+
                 if(CallTaskArray[0].CallType=="target_call"){
                     playSoundAtLocation(m_metagame,"hello.wav",CallTaskArray[0].m_factions,CallTaskArray[0].m_pos,3.0f);
                     m_metagame.getComms().send(CallTaskArray[0].Callkey);
