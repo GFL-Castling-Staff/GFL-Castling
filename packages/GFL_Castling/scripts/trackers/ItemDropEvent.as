@@ -31,6 +31,10 @@ dictionary itemDropFileIndex = {
     {"upgrade_m1903_2.carry_item",10},      // 太太
     {"upgrade_fn49.carry_item",11},      // FN49
     {"upgrade_9a91.carry_item",12},      // 9A91
+    {"upgrade_m14.carry_item",13},
+    {"upgrade_g3.carry_item",14},
+    {"upgrade_m1897.carry_item",15},
+    {"upgrade_stg44.carry_item",16},
 
     {"666",0}
 };
@@ -51,6 +55,10 @@ dictionary itemDropKeyIndex = {
     {"m1903_2",10},                     // m1903
     {"fn49",11},                        // fn49
     {"9a91",12},                        // 9a91
+    {"m14",13},
+    {"g3",14},
+    {"m1897",15},
+    {"stg44",16},
 
     {"666",0}
 };
@@ -246,7 +254,60 @@ class ItemDropEvent : Tracker {
                         playPrivateSound(m_metagame,"sfx_equip.wav",pId);
                     }
                     break;
-                }                                                                                  
+                }
+                case 13:{
+                    if(checkQueue(pId,"m14")){
+                        addItemInBackpack(m_metagame,cId,"carry_item","upgrade_m14.carry_item");
+                        sendPrivateMessageKey(m_metagame, pId, "onlyonequeue_common");
+                        playPrivateSound(m_metagame,"sfx_failed.wav",pId);
+                    }
+                    else{
+                        startQueue(pId,"m14");
+                        sendPrivateMessageKey(m_metagame, pId, "upgrade_common");
+                        playPrivateSound(m_metagame,"sfx_equip.wav",pId);
+                    }
+                    break;
+                }
+                case 14:{
+                    if(checkQueue(pId,"g3")){
+                        addItemInBackpack(m_metagame,cId,"carry_item","upgrade_g3.carry_item");
+                        sendPrivateMessageKey(m_metagame, pId, "onlyonequeue_common");
+                        playPrivateSound(m_metagame,"sfx_failed.wav",pId);
+                    }
+                    else{
+                        startQueue(pId,"g3");
+                        sendPrivateMessageKey(m_metagame, pId, "upgrade_common");
+                        playPrivateSound(m_metagame,"sfx_equip.wav",pId);
+                    }
+                    break;
+                }             
+                case 15:{
+                    if(checkQueue(pId,"m1897")){
+                        addItemInBackpack(m_metagame,cId,"carry_item","upgrade_m1897.carry_item");
+                        sendPrivateMessageKey(m_metagame, pId, "onlyonequeue_common");
+                        playPrivateSound(m_metagame,"sfx_failed.wav",pId);
+                    }
+                    else{
+                        startQueue(pId,"m1897");
+                        sendPrivateMessageKey(m_metagame, pId, "upgrade_common");
+                        playPrivateSound(m_metagame,"sfx_equip.wav",pId);
+                    }
+                    break;
+                }
+                case 16:{
+                    if(checkQueue(pId,"stg44")){
+                        addItemInBackpack(m_metagame,cId,"carry_item","upgrade_stg44.carry_item");
+                        sendPrivateMessageKey(m_metagame, pId, "onlyonequeue_common");
+                        playPrivateSound(m_metagame,"sfx_failed.wav",pId);
+                    }
+                    else{
+                        startQueue(pId,"stg44");
+                        sendPrivateMessageKey(m_metagame, pId, "upgrade_common");
+                        playPrivateSound(m_metagame,"sfx_equip.wav",pId);
+                    }
+                    break;
+                }   
+
                 default:{
                     if (checkQueue(pId,"mod3")){
                         string outputItem = string(MOD3craftList[itemKey]);
@@ -346,7 +407,32 @@ class ItemDropEvent : Tracker {
                         addItemInBackpack(m_metagame,cId,"weapon","gkw_9a91_1302_only.weapon");
                         m_craftQueue.removeAt(findQueueIndex(pId,"9a91"));
                         playPrivateSound(m_metagame,"digimind_sfx2.wav",pId);
-                    }                                                                              
+                    }
+                    else if (checkQueue(pId,"m14") && (itemKey=="gkw_m14.weapon")){
+                        addItemInBackpack(m_metagame,cId,"weapon","gkw_m14mod3.weapon");
+                        m_craftQueue.removeAt(findQueueIndex(pId,"m14"));
+                        playPrivateSound(m_metagame,"digimind_sfx2.wav",pId);
+                    }
+                    else if (checkQueue(pId,"g3") && (itemKey=="gkw_g3.weapon")){
+                        addItemInBackpack(m_metagame,cId,"weapon","gkw_g3mod3.weapon");
+                        m_craftQueue.removeAt(findQueueIndex(pId,"g3"));
+                        playPrivateSound(m_metagame,"digimind_sfx2.wav",pId);
+                    }
+                    else if (checkQueue(pId,"g3") && (itemKey=="gkw_g3_1303.weapon")){
+                        addItemInBackpack(m_metagame,cId,"weapon","gkw_g3mod3_1303.weapon");
+                        m_craftQueue.removeAt(findQueueIndex(pId,"g3"));
+                        playPrivateSound(m_metagame,"digimind_sfx2.wav",pId);
+                    }
+                    else if (checkQueue(pId,"m1897") && (itemKey=="gkw_m1897.weapon" || itemKey=="gkw_m1897_skill.weapon")){
+                        addItemInBackpack(m_metagame,cId,"weapon","gkw_m1897mod3.weapon");
+                        m_craftQueue.removeAt(findQueueIndex(pId,"m1897"));
+                        playPrivateSound(m_metagame,"digimind_sfx2.wav",pId);
+                    }         
+                    else if (checkQueue(pId,"stg44") && (itemKey=="gkw_stg44.weapon")){
+                        addItemInBackpack(m_metagame,cId,"weapon","gkw_stg44mod3.weapon");
+                        m_craftQueue.removeAt(findQueueIndex(pId,"stg44"));
+                        playPrivateSound(m_metagame,"digimind_sfx2.wav",pId);
+                    }                               
                     break;
                 }
             }
@@ -579,7 +665,31 @@ class ItemDropEvent : Tracker {
                                 playPrivateSound(m_metagame,"sfx_returnback.wav",pId);
                                 sendPrivateMessageKey(m_metagame, pId, "quest_timeout");
                                 break;
-                            }                                                                                                                        
+                            }   
+                            case 13:{ 
+                                addItemInBackpack(m_metagame,cId,"carry_item","upgrade_m14.carry_item");
+                                playPrivateSound(m_metagame,"sfx_returnback.wav",pId);
+                                sendPrivateMessageKey(m_metagame, pId, "quest_timeout");
+                                break;
+                            }
+                            case 14:{ 
+                                addItemInBackpack(m_metagame,cId,"carry_item","upgrade_g3.carry_item");
+                                playPrivateSound(m_metagame,"sfx_returnback.wav",pId);
+                                sendPrivateMessageKey(m_metagame, pId, "quest_timeout");
+                                break;
+                            }
+                            case 15:{ 
+                                addItemInBackpack(m_metagame,cId,"carry_item","upgrade_m1897.carry_item");
+                                playPrivateSound(m_metagame,"sfx_returnback.wav",pId);
+                                sendPrivateMessageKey(m_metagame, pId, "quest_timeout");
+                                break;
+                            }     
+                            case 16:{ 
+                                addItemInBackpack(m_metagame,cId,"carry_item","upgrade_stg44.carry_item");
+                                playPrivateSound(m_metagame,"sfx_returnback.wav",pId);
+                                sendPrivateMessageKey(m_metagame, pId, "quest_timeout");
+                                break;
+                            }                                                   
                             default:
                                 break;
                         }                                      
