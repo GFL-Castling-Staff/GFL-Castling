@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<weapon file="designated_marksman_rifle.animation_base" key="gkw_wa2000.weapon">
+<weapon file="designated_marksman_rifle.animation_base" key="gkw_wa2000_306.weapon">
     <!--Weapon specifications-->
     <specification 
 	retrigger_time="-1.0" 
@@ -9,7 +9,7 @@
 	magazine_size="6" 
 	can_shoot_standing="1" 
 	suppressed="0" 
-	name="WA2000" 
+	name="WA2000-[Date in the Snow]" 
 	class="4" 
 	burst_shots="1"
 	last_burst_retrigger_time="0.333"
@@ -29,9 +29,11 @@
     <sound key="magazine_out" fileref="wa2000_mgz_out_FromCOD6R.wav" volume="0.6" />
     <sound key="magazine_in" fileref="wa2000_mgz_in_FromCOD6R.wav" volume="0.6"/>
     <sound class="impact" fileref="rifle_drop.wav" />
+    <commonness value="0" in_stock="0" can_respawn_with="1"/>
+
     <!--Model, Icon, Cost-->
     <model filename="gkw_rf_wa2000.xml" />
-    <hud_icon filename="gkw_wa2000.png" />
+    <hud_icon filename="gkw_wa2000_306.png" />
     <!--Ballistics-->
     <weak_hand_hold offset="0.3" />
     <projectile file="bullet.projectile">
