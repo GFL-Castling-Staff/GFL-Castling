@@ -23,7 +23,7 @@ ai_stop_to_fight="1"
 	<modifier class="blast_damage" value="-1.0" />
 	<modifier class="blast_range" value="+1.5" />
 	<control max_speed="15.0" acceleration="5.0" max_reverse_speed="10.0"	max_limiter_speed="3.0"	max_rotation="1.0"	max_water_depth="2.0" steer_smoothening="0.9" min_health_to_steer="10"  tracked="1" gears="1"/>
-	<physics max_health="50" mass="100" broken_mass="100" extent="3.2 0.0 3.2" offset="0 0.0 0" top_offset="0 2 0" collision_model_pos="0 1.2 0" collision_model_extent="0.8 0.8 0.8" visual_offset="0 0.65 0" collision_response_factor="0.2" blast_push_threshold="10.0" vehicle_collision_damage_factor="2.0" blast_damage_threshold="1.0"/>
+	<physics max_health="50" mass="100" broken_mass="100" extent="3.2 0.0 3.2" offset="0 0.0 0" top_offset="0 6 0" collision_model_pos="0 1.2 0" collision_model_extent="1.5 5.0 1.5" visual_offset="0 0.65 0" collision_response_factor="0.2" blast_push_threshold="10.0" vehicle_collision_damage_factor="2.0" blast_damage_threshold="1.0"/>
 	<turret offset="0 0.96 0" weapon_key="parw_elenusinus_0_cannon.weapon" weapon_offset="0.0 1.56 2.0" weapon_recoil="0.3" physics_recoil="0.05"  max_rotation_step="0.0001" rotation="0" rotation_range="1.6" />
 	<turret offset="0 0 0" weapon_key="parw_elenusinus_mg.weapon" weapon_offset="-1.0 0.25 -1.2" weapon_recoil="0.02" physics_recoil="0.0" max_rotation_step="0.005" rotation="0" rotation_range="0" parent_turret_index="0" />
 	<turret offset="0 0 0" weapon_key="parw_elenusinus_mg.weapon" weapon_offset="1.0 0.25 -1.2" weapon_recoil="0.02" physics_recoil="0.0" max_rotation_step="0.005" rotation="0" rotation_range="0" parent_turret_index="0" />
