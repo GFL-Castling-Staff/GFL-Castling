@@ -96,6 +96,8 @@ class kill_event : Tracker {
         {"gkw_pp19mod3.weapon",3},
         {"gkw_mab38.weapon",3},
         {"gkw_mab38mod3.weapon",3},
+        {"gkw_mab38_oc.weapon",3},
+        {"gkw_mab38mod3_oc.weapon",3},        
         {"gkw_klin.weapon",3},
         {"gkw_mp40.weapon",3},
         {"gkw_mp5.weapon",3},

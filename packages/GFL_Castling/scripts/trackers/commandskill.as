@@ -262,6 +262,7 @@ dictionary commandSkillIndex = {
         {"gkw_ump9_409.weapon",27},
         {"gkw_ump9_536.weapon",27},
         {"gkw_mab38.weapon",27},
+        {"gkw_mab38_oc.weapon",27},
         {"gkw_64type.weapon",27},
         {"gkw_m16a1.weapon",27},
         {"gkw_m16a1_533.weapon",27},
@@ -270,6 +271,7 @@ dictionary commandSkillIndex = {
         {"gkw_ump9mod3.weapon",28},
 
         {"gkw_mab38mod3.weapon",29},
+        {"gkw_mab38mod3_oc.weapon",29},
         // AK12冰沙时代
         // {"gkw_ak12_2402.weapon",30},
         // {"gkw_ak12_2402_skill.weapon",30},
@@ -2443,7 +2445,7 @@ class CommandSkill : Tracker {
                         playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
                         addCoolDown("Flashbang",16,characterId,modifer);
                     }
-                    if(weaponname=="gkw_mab38.weapon") {
+                    if(weaponname=="gkw_mab38.weapon" || weaponname=="gkw_mab38_oc.weapon") {
                         array<string> Voice={
                             "mab38_skilll1.wav",
                             "mab38_skilll2.wav",

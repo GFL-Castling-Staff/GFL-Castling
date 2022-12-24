@@ -1541,6 +1541,12 @@
     <model filename="gkd_smg_mab38_mod3_from_gua.xml">
         <requirement class="weapon" key="gkw_mab38.weapon" slot="0" />
     </model>
+    <model filename="gkd_smg_mab38_skin.xml">
+        <requirement class="weapon" key="gkw_mab38mod3_oc.weapon" slot="0" />
+    </model>
+    <model filename="gkd_smg_mab38_skin.xml">
+        <requirement class="weapon" key="gkw_mab38_oc.weapon" slot="0" />
+    </model>    
     <model filename="gkd_smg_cms.xml">
         <requirement class="weapon" key="gkw_cms.weapon" slot="0" />
     </model>
