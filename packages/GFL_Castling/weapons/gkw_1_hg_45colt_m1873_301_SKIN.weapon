@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<weapon key="gkw_m1873mod3.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+<weapon key="gkw_m1873_301.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
     <specification 
     retrigger_time="-1"
     last_burst_retrigger_time="0.1"
-    accuracy_factor="0.93"
-    sustained_fire_grow_step="2.0"
+    accuracy_factor="0.85"
+    sustained_fire_grow_step="3.0"
     sustained_fire_diminish_rate="1.5"
     magazine_size="6"
     carry_in_two_hands="0"
     suppressed="0"
-    name="Colt M1873(MOD3)"
+    name="Colt M1873-[Wish Upon A Star]"
     class="1"
     reload_one_at_a_time="1"
     sight_range_modifier="1.0"
@@ -48,12 +48,12 @@
     <sound key="reload_one" fileref="m1873_reload_FromCOD17.wav"/>
     <effect class="muzzle" ref="ejection_556"/>
     <model filename="gkw_hg_m1873.xml"/>
-    <hud_icon filename="gkw_m1873mod3.png"/>
+    <hud_icon filename="gkw_m1873_301.png"/>
     <weak_hand_hold offset="0.1"/>
     <projectile file="bullet.projectile">
-        <result class="hit" kill_probability="2.2" kill_probability_offset_on_successful_hit="10.0" kill_decay_start_time="0.22" kill_decay_end_time="0.4"/>
+        <result class="hit" kill_probability="2.2" kill_probability_offset_on_successful_hit="8.0" kill_decay_start_time="0.22" kill_decay_end_time="0.4"/>
     </projectile>
-    <stance state_key="running" accuracy="0.85"/>
+    <stance state_key="running" accuracy="0.8"/>
     <stance state_key="walking" accuracy="0.85"/>
     <stance state_key="crouch_moving" accuracy="0.85"/>
     <stance state_key="standing" accuracy="0.9"/>
@@ -61,9 +61,9 @@
     <stance state_key="prone" accuracy="0.9"/>
     <stance state_key="prone_moving" accuracy="0.85"/>
     <stance state_key="over_wall" accuracy="0.9"/>
-    <modifier class="speed" value="1.15"/>
+    <modifier class="speed" value="1.0"/>
     <tag name="pistol"/>
-    <commonness value="0.001" in_stock="0" can_respawn_with="1"/>
+    <commonness value="0.0" in_stock="0" can_respawn_with="1"/>
     <capacity value="1" source="rank" source_value="0.0"/>
     <target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
     <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>

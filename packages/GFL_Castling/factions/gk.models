@@ -1685,6 +1685,9 @@
     <model filename="gkd_smg_saf_6607.xml">
         <requirement class="weapon" key="gkw_saf_6607.weapon" slot="0" />
     </model>    
+    <model filename="gkd_smg_saf_6607_gua.xml">
+        <requirement class="weapon" key="gkw_saf_6607.weapon" slot="0" />
+    </model>        
     <model filename="gkd_smg_sten.xml">
         <requirement class="weapon" key="gkw_sten.weapon" slot="0" />
     </model>
@@ -1810,7 +1813,13 @@
     </model>    
     <model filename="gkd_hg_m1873_mod3.xml">
         <requirement class="weapon" key="gkw_m1873mod3.weapon" slot="0" />
-    </model>      
+    </model>  
+    <model filename="gkd_hg_m1873_301.xml">
+        <requirement class="weapon" key="gkw_m1873_301.weapon" slot="0" />
+    </model>    
+    <model filename="gkd_hg_m1873_301.xml">
+        <requirement class="weapon" key="gkw_m1873mod3_301.weapon" slot="0" />
+    </model>              
     <model filename="gkd_rf_gepardm1.xml">
         <requirement class="weapon" key="gkw_gepardm1.weapon" slot="0" />
     </model>    
