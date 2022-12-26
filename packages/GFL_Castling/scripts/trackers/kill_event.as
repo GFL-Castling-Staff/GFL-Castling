@@ -114,6 +114,7 @@ class kill_event : Tracker {
         {"ff_ripper_swap.weapon",3},
         {"gkw_sterling.weapon",3},
         {"gkw_tmp.weapon",3},
+        {"gkw_tmp_2807.weapon",3},
         {"gkw_ar57_skill.weapon",3},
         {"gkw_sten.weapon",3},
         {"gkw_stenmod3.weapon",3},

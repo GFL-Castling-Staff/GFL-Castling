@@ -861,6 +861,18 @@
     <model filename="gkd_rf_m14mod3.xml">
         <requirement class="weapon" key="gkw_m14mod3.weapon" slot="0" />
     </model>
+    <model filename="gkd_rf_m14mod3.xml">
+        <requirement class="weapon" key="gkw_m14mod3_skill.weapon" slot="0" />
+    </model>
+    <model filename="gkd_rf_m14_303.xml">
+        <requirement class="weapon" key="gkw_m14_303.weapon" slot="0" />
+    </model>
+    <model filename="gkd_rf_m14_303.xml">
+        <requirement class="weapon" key="gkw_m14mod3_303.weapon" slot="0" />
+    </model>
+    <model filename="gkd_rf_m14_303.xml">
+        <requirement class="weapon" key="gkw_m14mod3_303_skill.weapon" slot="0" />
+    </model>    
     <model filename="gkd_rf_m1903.xml">
         <requirement class="weapon" key="gkw_m1903.weapon" slot="0" />
     </model>
@@ -1280,9 +1292,6 @@
     </model>
     <model filename="gkd_hg_cz100.xml">
         <requirement class="weapon" key="gkw_cz100.weapon" slot="0" />
-    </model>
-    <model filename="gkd_rf_m14mod3.xml">
-        <requirement class="weapon" key="gkw_m14mod3_skill.weapon" slot="0" />
     </model>
     <model filename="gkd_smg_sp9.xml">
         <requirement class="weapon" key="gkw_sp9.weapon" slot="0" />
@@ -1895,5 +1904,38 @@
     </model>
     <model filename="gkd_hg_tt33.xml">
         <requirement class="weapon" key="gkw_tt33.weapon" slot="0" />
-    </model>                                                                    
+    </model>           
+    <model filename="gkd_hg_tt33_3204.xml">
+        <requirement class="weapon" key="gkw_tt33_3204.weapon" slot="0" />
+    </model>   
+    <model filename="gkd_ar_r5_5302.xml">
+        <requirement class="weapon" key="gkw_r5_5302.weapon" slot="0" />
+    </model>
+    <model filename="gkd_ar_r5_5302.xml">
+        <requirement class="weapon" key="gkw_r5_5302_skill.weapon" slot="0" />
+    </model> 
+    <model filename="gkd_mg_pm1910_5307.xml">
+        <requirement class="weapon" key="gkw_pm1910_5307.weapon" slot="0" />
+    </model>                       
+    <model filename="gkd_rf_delisle_7801.xml">
+        <requirement class="weapon" key="gkw_delisle_7801.weapon" slot="0" />
+    </model>        
+    <model filename="gkd_rf_gepardm1_4006.xml">
+        <requirement class="weapon" key="gkw_gepardm1_4006.weapon" slot="0" />
+    </model>    
+    <model filename="gkd_rf_gepardm1_4006.xml">
+        <requirement class="weapon" key="gkw_gepardm1mod3_4006.weapon" slot="0" />
+    </model>              
+    <model filename="gkd_rf_ksvk_7807.xml">
+        <requirement class="weapon" key="gkw_ksvk_7807.weapon" slot="0" />
+    </model>
+    <model filename="gkd_rf_ksvk_7807.xml">
+        <requirement class="weapon" key="gkw_ksvkmod3_7807.weapon" slot="0" />
+    </model>
+    <model filename="gkd_rf_ksvk_7807.xml">
+        <requirement class="weapon" key="gkw_ksvkmod3_7807_skill.weapon" slot="0" />
+    </model>                
+    <model filename="gkd_smg_tmp_2807.xml">
+        <requirement class="weapon" key="gkw_tmp_2807.weapon" slot="0" />
+    </model>                       
 </models>
