@@ -62,8 +62,10 @@ dictionary MOD3craftList = {
     {"gkw_ksvk_3805.weapon","gkw_ksvkmod3_3805.weapon"},
     {"gkw_ksvk_4509.weapon","gkw_ksvkmod3_4509.weapon"},
     {"gkw_ksvk_5504.weapon","gkw_ksvkmod3_5504.weapon"},
+    {"gkw_ksvk_7807.weapon","gkw_ksvkmod3_7807.weapon"},
 
     {"gkw_m14.weapon","gkw_m14mod3.weapon"},
+    {"gkw_m14_303.weapon","gkw_m14mod3_303.weapon"},
     {"gkw_m1891.weapon","gkw_m1891mod3.weapon"},
     
     {"gkw_ntw20.weapon","gkw_ntw20mod3.weapon"},
@@ -158,6 +160,7 @@ dictionary MOD3craftList = {
     {"gkw_m1873.weapon","gkw_m1873mod3.weapon"},
     {"gkw_m1873_301.weapon","gkw_m1873mod3_301.weapon"},
     {"gkw_gepardm1.weapon","gkw_gepardm1mod3.weapon"},
+    {"gkw_gepardm1_4006.weapon","gkw_gepardm1mod3_4006.weapon"},
     {"gkw_f1.weapon","gkw_f1mod3.weapon"},
 
     {"666","-1"}
