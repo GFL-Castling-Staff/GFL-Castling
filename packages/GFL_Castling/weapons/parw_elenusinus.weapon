@@ -52,7 +52,7 @@
     <target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="7.0" />
     <target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0" />
     <target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0" />
-	<shield offset="2.4 0.5 0.0" extent="3.0 3.0 1.0" usable_for_cover="0"/>
+	<shield offset="6.4 0.5 0.0" extent="3.6 3.0 1.5" usable_for_cover="0"/>
 </weapon>
 <weapon on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0" key="parw_elenusinus_0_cannon.weapon">
     <tag name="elite" />
@@ -106,7 +106,7 @@
     <target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="7.0" />
     <target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0" />
     <target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0" />
-	<shield offset="2.4 0.5 0.0" extent="3.0 3.0 1.0" usable_for_cover="0"/>
+	<shield offset="2.4 0.5 0.0" extent="3.6 3.0 1.5" usable_for_cover="0"/>
 </weapon>
 <weapon key="parw_elenusinus_mg.weapon">
 	<specification 
@@ -160,7 +160,7 @@
     suppressed="0" 
     name="Para" 
     class="0" 
-    projectile_speed="100.0" 
+    projectile_speed="40.0" 
     slot="2" 
     barrel_offset_3d="0 0 0"
     projectiles_per_shot="1"
