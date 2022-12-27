@@ -5,12 +5,12 @@
 	retrigger_time="-1"
 	last_burst_retrigger_time="0.1"
 	accuracy_factor="1.0"
-	sustained_fire_grow_step="0.2"
-	sustained_fire_diminish_rate="1.4"
-	magazine_size="15"
+	sustained_fire_grow_step="0.4"
+	sustained_fire_diminish_rate="2.0"
+	magazine_size="20"
 	suppressed="0"
-	name="Beretta PX4 Storm"
-	class="4"
+	name="Beretta Px4 Storm-[Queen of Christmas Morning]"
+	class="2"
 	reload_one_at_a_time="0"
 	sight_range_modifier="1.0"
 	projectile_speed="105"
@@ -18,12 +18,13 @@
 	burst_shots="1"
      />
     <!--Animations-->
-    <inventory buy_price="33.0" sell_price="33.0" />
+    <inventory buy_price="50.0" sell_price="50.0" />
     <!--Sounds-->
-    <sound key="fire" fileref="m9_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.1"/>
-	<sound key="magazine_out" fileref="tt33_mgz_out_FromSQUAD.wav" volume="0.6"/>
-	<sound key="magazine_in" fileref="tt33_mgz_in_FromSQUAD.wav" volume="0.6"/>
-	<sound key="cycle" fileref="tt33_cycle_FromSQUAD.wav" volume="0.6"/>
+    <commonness value="0" in_stock="0" can_respawn_with="1"/>
+    <sound key="fire" fileref="px4_fire_FromDIVISION2.wav" pitch_variety="0.05" volume="1.1"/>
+	<sound key="magazine_out" fileref="px4_mgz_out_FromCOD4R.wav" volume="0.8"/>
+	<sound key="magazine_in" fileref="px4_mgz_in_FromCOD4R.wav" volume="0.8"/>
+	<sound key="cycle" fileref="px4_cycle_FromCOD4R.wav" volume="0.8"/>
     <!--Model, Icon, Cost-->
     <model filename="gkw_hg_m9.xml" />
     <hud_icon filename="gkw_px4_2801.png" />
@@ -32,8 +33,8 @@
     <weak_hand_hold offset="0.1" />
     <projectile file="bullet.projectile">
         <result class="hit"
-		kill_probability="1.5"
-		kill_probability_offset_on_successful_hit="3.5"
+		kill_probability="1.6"
+		kill_probability_offset_on_successful_hit="3.25"
 		kill_decay_start_time="0.3"
 		kill_decay_end_time="0.35"  />
     </projectile>
