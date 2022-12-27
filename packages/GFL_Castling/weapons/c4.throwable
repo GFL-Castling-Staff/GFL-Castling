@@ -7,7 +7,6 @@ slot="0"
 on_ground_up="0 1 0" 
 can_be_disarmed="1" 
 can_be_detected_by_driver="0" 
-pulldown_in_air="50"
 time_to_live_out_in_the_open="45.0" 
 >
     <result class="blast" radius="9.1" damage="30" push="0.75" decal="1" character_state="death" />
@@ -19,7 +18,7 @@ time_to_live_out_in_the_open="45.0"
     <model mesh_filename="c4.mesh" texture_filename="c4.png" />
     <hud_icon filename="hud_c4.png" />
 
-    <throwable curve_height="2.0" near_far_distance="2.0" speed_estimation_near="15.0" speed_estimation_far="15.0" max_speed="15.0" randomness="0.01" />
+    <throwable curve_height="2.0" near_far_distance="2.0" speed_estimation_near="5.0" speed_estimation_far="5.0" max_speed="5.0" randomness="0.01" />
 
     <commonness value="0.0" can_respawn_with="1" />
     <inventory encumbrance="4.0" price="5.0" />
