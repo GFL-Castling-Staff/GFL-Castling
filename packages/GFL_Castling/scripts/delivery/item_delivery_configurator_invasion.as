@@ -38,6 +38,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		setupSupplyBox();
 		setupGiftHalloween();
 		setupEquipOnly();
+		setupSkinBox();
 	}
 
 	// --------------------------------------------
@@ -68,6 +69,14 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		_log("adding supply reward box", 1);
 	}
 
+	protected void setupSkinBox(){
+		setupskinbox1();
+		setupskinbox2();
+		setupskinbox3();
+		setupskinbox4();
+		setupskinbox5();
+		_log("adding skin theme box", 1);
+	}
 	// ----------------------------------------------------
 	protected void setupLaptopUnlocks() {
 		_log("adding laptop unlocks", 1);
@@ -1806,4 +1815,190 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 			ItemDeliveryObjective(m_metagame, 0, deliveryList, m_itemDeliveryOrganizer, null, "", "", "", -1 /* loop */, rewarder)
 			);
 	}	
+
+	protected void setupskinbox1() {
+		// 泳装
+		array<Resource@> deliveryList = {
+			 Resource("gki_skinbox_swimsuit.carry_item", "carry_item")
+		};
+		array<array<ScoredResource@>> rewardPasses = {
+			{
+		ScoredResource("gkw_ak12_2402.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_ak74m_7305.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_ameli_2409.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_fn49_4709.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_fn57_1109.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_fal_2406.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_g41_2401.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_iws2000_7308.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_js9_4702.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_ltlx7000_6101.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_m1_1106.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_m37_1105.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_p38_2401.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_spas12_2408.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_QBZ95_1102.weapon","weapon",1.0f)
+			}
+		};
+		processRewardPasses(rewardPasses);
+		
+		GiftItemDeliveryRandomRewarder@ rewarder = GiftItemDeliveryRandomRewarder(m_metagame, rewardPasses);
+
+		m_itemDeliveryOrganizer.addObjective(
+			ItemDeliveryObjective(m_metagame, 0, deliveryList, m_itemDeliveryOrganizer, null, "", "", "", -1 /* loop */, rewarder)
+			);
+	}
+	protected void setupskinbox2() {
+		// 白情
+		array<Resource@> deliveryList = {
+			 Resource("gki_skinbox_wedding.carry_item", "carry_item")
+		};
+		array<array<ScoredResource@>> rewardPasses = {
+			{
+		ScoredResource("gkw_mp5_1903.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_sv98_1906.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_vector_1901.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_webley_5601.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_aps_4306.weapon","weapon",1.0f)
+			}
+		};
+		processRewardPasses(rewardPasses);
+		
+		GiftItemDeliveryRandomRewarder@ rewarder = GiftItemDeliveryRandomRewarder(m_metagame, rewardPasses);
+
+		m_itemDeliveryOrganizer.addObjective(
+			ItemDeliveryObjective(m_metagame, 0, deliveryList, m_itemDeliveryOrganizer, null, "", "", "", -1 /* loop */, rewarder)
+			);
+	}	
+	protected void setupskinbox3() {
+		// 万圣
+		array<Resource@> deliveryList = {
+			 Resource("gki_skinbox_halloween.carry_item", "carry_item")
+		};
+		array<array<ScoredResource@>> rewardPasses = {
+			{
+		ScoredResource("gkw_g11_9.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_liu_5101.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_iws2000_1403.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_kord_5102.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_ksvk_3805.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_m870_3803.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_mdr_2603.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_mg42_7606.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_mk23_8.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_mp5_3.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_sat8_2601.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_supersass_1407.weapon", "weapon", 1.0f),
+
+
+		ScoredResource("gkw_cms_6403.weapon","weapon",1.0f)
+			}
+		};
+		processRewardPasses(rewardPasses);
+		
+		GiftItemDeliveryRandomRewarder@ rewarder = GiftItemDeliveryRandomRewarder(m_metagame, rewardPasses);
+
+		m_itemDeliveryOrganizer.addObjective(
+			ItemDeliveryObjective(m_metagame, 0, deliveryList, m_itemDeliveryOrganizer, null, "", "", "", -1 /* loop */, rewarder)
+			);
+	}
+	protected void setupskinbox4() {
+		// 春节
+		array<Resource@> deliveryList = {
+			 Resource("gki_skinbox_springfes.carry_item", "carry_item")
+		};
+		array<array<ScoredResource@>> rewardPasses = {
+			{
+		ScoredResource("gkw_ak74u_3002.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_aps_6808.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_art556_1803.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_augpara_5503.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_coltdefender_5505.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_dsr50_1801.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_hs50_6805.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_kolibri_6802.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_ksvk_5504.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_lwmmg_1808.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_m590_1806.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_m99_404.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_mg36_4205.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_mk23_1805.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_mp5_1205.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_mp5_3006.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_mp7_6806.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_nz75_403.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_pkp_4203.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_sat8_1802.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_spp1_4207.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_svd_5506.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_t91_4206.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_tkb408_6804.weapon", "weapon", 1.0f),
+
+
+		ScoredResource("gkw_QBZ95_405.weapon","weapon",1.0f)
+			}
+		};
+		processRewardPasses(rewardPasses);
+		
+		GiftItemDeliveryRandomRewarder@ rewarder = GiftItemDeliveryRandomRewarder(m_metagame, rewardPasses);
+
+		m_itemDeliveryOrganizer.addObjective(
+			ItemDeliveryObjective(m_metagame, 0, deliveryList, m_itemDeliveryOrganizer, null, "", "", "", -1 /* loop */, rewarder)
+			);
+	}
+	protected void setupskinbox5() {
+		// 圣诞
+		array<Resource@> deliveryList = {
+			 Resource("gki_skinbox_santa.carry_item", "carry_item")
+		};
+		array<array<ScoredResource@>> rewardPasses = {
+			{
+		ScoredResource("gkw_art556_2803.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_brenten_7809.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_cx4_6606.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_cz75_1604.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_delisle_7801.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_fnc_6608.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_fp6_2804.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_gepardm1_4006.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_hk21_4002.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_hs2000_5304.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_kp31_310.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_ksvk_7807.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_lewis_4001.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_lusa_7802.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_m14_303.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_m1873_301.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_m1895_5309.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_m1903_302.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_m1918_1606.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_ntw20_307.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_p90_2802.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_honeybadger_4005.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_pm1910_5307.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_px4_2801.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_python_6603.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_r5_5302.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_rfb_1601.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_sacr_5303.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_saf_6607.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_tmp_2807.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_type89_6601.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_type100_4004.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_vp1915_6604.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_vsk94_5301.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_wa2000_306.weapon", "weapon", 1.0f),
+
+
+		ScoredResource("gkw_ameli_1605.weapon","weapon",1.0f)
+			}
+		};
+		processRewardPasses(rewardPasses);
+		
+		GiftItemDeliveryRandomRewarder@ rewarder = GiftItemDeliveryRandomRewarder(m_metagame, rewardPasses);
+
+		m_itemDeliveryOrganizer.addObjective(
+			ItemDeliveryObjective(m_metagame, 0, deliveryList, m_itemDeliveryOrganizer, null, "", "", "", -1 /* loop */, rewarder)
+			);
+	}			
 }

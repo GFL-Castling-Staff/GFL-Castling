@@ -46,7 +46,7 @@
     <sound key="magazine_in" fileref="pm1910_mgz_in_FromBF1.wav" volume="0.6" />
     <sound key="cycle" fileref="pm1910_cycle_FromBF1.wav" volume="0.6" />
     <sound class="impact" fileref="rifle_drop.wav" />
-    <model filename="gkw_mg_ameli.xml" />
+    <model filename="gkw_mg_pm1910.xml" />
     <hud_icon filename="gkw_pm1910_5307.png" />
     <projectile file="bullet.projectile">
         <result class="hit" kill_probability="4.0" kill_probability_offset_on_successful_hit="2.5" kill_decay_start_time="3.394" kill_decay_end_time="5.657" />
