@@ -6,10 +6,10 @@
 		barrel_offset="0.5" 
 		class="0"
     slot="0" 
-		magazine_size="20" 
+    magazine_size="30"
 		name="GK-Destroyer" 
-    projectile_speed="65" 
-    retrigger_time="0.3"
+    projectile_speed="80" 
+    retrigger_time="0.2"
 		suppressed="0" 
     projectiles_per_shot="2"
     burst_shots="1"
@@ -17,7 +17,8 @@
     can_shoot_standing="1" 
     can_shoot_crouching="0"
     can_shoot_prone="0"
-		sustained_fire_diminish_rate="1.0"
+    spread_range="0.25"
+		sustained_fire_diminish_rate="2.0"
 		sustained_fire_grow_step="0.5" />
 
     <inventory encumbrance="20.0" buy_price="648.0" sell_price="324.0"/>
@@ -44,7 +45,6 @@
     <animation state_key="stabbing" animation_key="pistol whip" />
     <animation state_key="stabbing" animation_key="pistol whip 2" />
     <animation state_key="stabbing" animation_key="pistol whip 3" />
-
     <sound key="fire" fileref="destroyer_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.8" />
     <sound key="magazine_out" fileref="ags30_mgz_out_FromBF1.wav" volume="0.9" />
     <sound key="magazine_in" fileref="ags30_mgz_in_FromBF1.wav" volume="0.9" />
@@ -58,7 +58,7 @@
 
     <weak_hand_hold offset="0.2" />
     <projectile file="standard_agl.projectile">
-        <result class="blast"  damage="3.0"  radius="4.5" decal="1" push="0.4" character_state="death" faction_compare="not_equal"/> 
+      <result class="blast" damage="4.1" radius="5.5" decal="1" push="0.4" character_state="death" faction_compare="not_equal"/>
     </projectile>
      
     <stance state_key="running" accuracy="0.5" />

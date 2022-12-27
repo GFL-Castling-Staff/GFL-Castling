@@ -405,6 +405,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		ScoredResource("ff_hunter.weapon", "weapon", 1.0f),
 		ScoredResource("ff_excutioner_1.weapon", "weapon", 1.0f),
 		ScoredResource("ff_parw_alina.weapon", "weapon", 1.0f),
+		ScoredResource("ff_destroyer_skin.weapon", "weapon", 1.0f),
 		ScoredResource("ff_Intruder.weapon", "weapon", 1.0f),
 		ScoredResource("ff_parw_nyto_black.weapon", "weapon", 1.0f),
 		ScoredResource("ff_justice.weapon", "weapon", 1.0f),
@@ -1267,6 +1268,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 				ScoredResource("gkw_k5.weapon", "weapon", 0.3f),
 				ScoredResource("gkw_type80.weapon", "weapon", 0.3f),
 				ScoredResource("gkw_m1873.weapon", "weapon", 0.3f),
+				ScoredResource("gkw_nova.weapon", "weapon", 0.3f),
 
 
 				ScoredResource("gkw_type89.weapon", "weapon", 0.2f),
@@ -1669,6 +1671,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 				ScoredResource("gkw_m37.weapon", "weapon", 0.3f),
 				ScoredResource("gkw_m590.weapon", "weapon", 0.3f),
 				ScoredResource("gkw_hawk97.weapon", "weapon", 0.3f),
+				ScoredResource("gkw_nova.weapon", "weapon", 0.3f),
 
 				ScoredResource("gkw_aa12.weapon", "weapon", 0.2f),
 				ScoredResource("gkw_caws.weapon", "weapon", 0.2f),

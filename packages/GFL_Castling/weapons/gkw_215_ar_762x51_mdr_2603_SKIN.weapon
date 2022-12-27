@@ -14,6 +14,7 @@
         <model filename="gkw_ar_mdr.xml" />
         <hud_icon filename="gkw_mdr_2603.png" />
         <weak_hand_hold offset="0.2" />
+        <commonness can_respawn_with="1" in_stock="0" value="0" />
         <projectile file="bullet.projectile">
             <result class="hit" kill_decay_end_time="2.813" kill_decay_start_time="1.688" kill_probability="1.9" kill_probability_offset_on_successful_hit="1.6" />
         </projectile>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon key="ff_destroyer_skin.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+	<specification 
+  accuracy_factor="0.95"
+  barrel_offset="0.5"
+  class="0"
+  slot="0"
+  magazine_size="30"
+  name="GK-Destroyer Xmas"
+  projectile_speed="80"
+  retrigger_time="0.2"
+  suppressed="0"
+  projectiles_per_shot="2"
+  burst_shots="1"
+  carry_in_two_hands="0"
+  can_shoot_standing="1"
+  can_shoot_crouching="0"
+  can_shoot_prone="0"
+  spread_range="0.25"
+  sustained_fire_diminish_rate="2.0"
+  sustained_fire_grow_step="0.5"/>
+	<inventory encumbrance="20.0" buy_price="648.0" sell_price="324.0"/>
+	<animation state_key="recoil" animation_key="recoil, destroyer"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil, destroyer"/>
+	<animation state_key="reload" animation_key="reloading, A DG 1.0"/>
+	<animation state_key="reload" animation_key="reloading2, A DG 1.0"/>
+	<animation state_key="hold" animation_key="still, destroyer"/>
+	<animation state_key="hold_casual" animation_key="still, instructor"/>
+	<animation state_key="hold_on_wall" animation_key="still, destroyer"/>
+	<animation state_key="still_against_wall" animation_key="still, destroyer"/>
+  <animation state_key="crouching"			animation_key="walking,jaguar" />
+	<animation state_key="running" animation_key="walking,jaguar"/>
+	<animation state_key="walking" animation_key="walking,jaguar"/>
+	<animation state_key="walking_backwards" animation_key="walking,jaguar"/>
+	<animation state_key="stabbing" animation_key="pistol whip"/>
+	<animation state_key="stabbing" animation_key="pistol whip 2"/>
+	<animation state_key="stabbing" animation_key="pistol whip 3"/>
+	<sound key="fire" fileref="destroyer_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.8"/>
+	<sound key="magazine_out" fileref="ags30_mgz_out_FromBF1.wav" volume="0.9"/>
+	<sound key="magazine_in" fileref="ags30_mgz_in_FromBF1.wav" volume="0.9"/>
+	<sound key="cycle" fileref="ags30_cycle_FromCOD6R.wav" volume="0.9"/>
+	<sound class="impact" fileref="rifle_drop.wav"/>
+	<model filename=""/>
+	<hud_icon filename="sfw_destroyer.png"/>
+	<ballistics curve_height="3.0" near_far_distance="16.0" speed_estimation_near="10.0" speed_estimation_far="16.0" max_speed="47.0" randomness="0.0" tweak_factor="1.55"/>
+	<weak_hand_hold offset="0.2"/>
+	<projectile file="standard_agl.projectile">
+    <result class="blast" damage="4.1" radius="5.5" decal="1" push="0.4" character_state="death" faction_compare="not_equal"/>
+	</projectile>
+	<stance state_key="running" accuracy="0.5"/>
+	<stance state_key="walking" accuracy="0.5"/>
+	<stance state_key="crouch_moving" accuracy="0.75"/>
+	<stance state_key="prone_moving" accuracy="0.75"/>
+	<stance state_key="standing" accuracy="0.9"/>
+	<stance state_key="crouching" accuracy="0.9"/>
+	<stance state_key="prone" accuracy="1"/>
+	<stance state_key="over_wall" accuracy="1"/>
+	<modifier class="speed" value="-0.2"/>
+	<tag name="elite"/>
+	<commonness value="0.0000001" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="17.0" buy_price="328.0" sell_price="328.0"/>
+	<capacity value="0" source="rank" source_value="0.0"/>
+	<capacity value="1" source="rank" source_value="39.633"/>
+</weapon>

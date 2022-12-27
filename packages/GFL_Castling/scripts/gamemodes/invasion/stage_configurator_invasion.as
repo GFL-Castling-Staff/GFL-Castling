@@ -186,11 +186,13 @@ class StageConfiguratorInvasion : StageConfigurator {
 		// addStage(setupStage105()); 		  // map105_2 shockzone by diling
 		// addStage(setupStage1_rust());          // map2_?
 		// addStage(setupStageRace());          // DEJAHU
-
 		addStage(setupStage1());          // map2
+		addStage(setupStage10());         // map10
+		addStage(setupStageXmas()); 
 		addStage(setupStage7());          // map6c by diling
 		addStage(setupStage20());
 		addStage(setupStage6());          // map5
+		addStage(setupStage13());         // map16
 		addStage(setupStage8());          // map8
 		addStage(setupStage2());          // map4 c
 		addStage(setupStage103()); 		  // map103 Palo Island by diling
@@ -200,21 +202,19 @@ class StageConfiguratorInvasion : StageConfigurator {
 		addStage(setupStage107());		  // chapter1 by diling
 		addStage(setupStage109());		  // chapter2 by diling
 		addStage(setupStage12());         // map14
-		addStage(setupStage10());         // map10
 		addStage(setupStage106());		  // map106 E30 Route by diling
 		addStage(setupStage17());         // map17
-		addStage(setupStage13());         // map16
 		addStage(setupStage15());         // map1_2
 		addStage(setupStage3());		  // map3 c
 		addStage(setupFinalStage1());     // map11
 		addStage(setupStage104()); 		  // map105_1 zoneAttack by diling
 		addStage(setupStage105()); 		  // map105_2 shockzone by diling
+		addStage(setupStage16());         // map8_2
 		// addStage(setupDeadZone());
 		// addStage(setupStage14());         // map6_2
 		// addStage(setupStage5());          // map1
 		addStage(setupStage108());		  // xiaoxieshen by diling
 		// addStage(setupStage11());         // map13
-		addStage(setupStage16());         // map8_2
 		addStage(setupStage19());		  // map18    
 		addStage(setupStage4());          // map7
 	}
@@ -846,6 +846,70 @@ class StageConfiguratorInvasion : StageConfigurator {
 		
 		return stage;
 	}	
+
+	protected Stage@ setupStageXmas() {
+		Stage@ stage = createStage();
+		stage.m_mapInfo.m_name = "A Snowy Night Capriccio";
+		stage.m_mapInfo.m_path = "media/packages/GFL_Castling/maps/mapxmas";
+		stage.m_mapInfo.m_id = "mapxmas";
+		
+		stage.m_includeLayers.insertLast("layer1.invasion"); 
+
+		stage.addTracker(PeacefulLastBase(m_metagame, 0));
+		stage.addTracker(CommsCapacityHandler(m_metagame));
+		stage.m_maxSoldiers = 12 * 10;                                             // was 12*7 in 1.65, 1 base added
+
+		stage.m_soldierCapacityVariance = 0.3;
+		stage.m_playerAiCompensation = 2 + m_playerAiCompensation_offset;                                         // was 4 (1.82)
+        stage.m_playerAiReduction = 2;                                          // was 2 (test3)    
+
+		stage.m_minRandomCrates = 2; 
+		stage.m_maxRandomCrates = 4;
+		{
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "sf_assault.call", "sf_assault_sub.call", array<string> = {""}, false,true,false,"infantry"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_assault.call", "kcco_assault_sub.call", array<string> = {""}, false,true,false,"infantry"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_zircon.call", "kcco_zircon_sub.call", array<string> = {""}, false,true,false,"infantry"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_assault.call", "para_assault_sub.call", array<string> = {""}, false,true,false,"infantry"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_eod.call", "para_eod_sub.call", array<string> = {""}, false,true,false,"infantry"));
+
+		}
+
+		{
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_deploy_coeus.call", "kcco_deploy_coeus_sub.call", array<string> = {""}, false,true,false,"vehicle"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_deploy_typhon.call", "kcco_deploy_typhon_sub.call", array<string> = {""}, false,true,false,"vehicle"));	
+		}	
+		{
+			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0));                                                  
+			f.m_capacityOffset = 0; 
+			f.m_capacityMultiplier = 1.0;
+			f.m_bases = 1;
+			stage.m_factions.insertLast(f);
+		}
+		{
+			Faction f(getFactionConfigs()[getRandomEnemyIndex()], createCommanderAiCommand(1));
+			f.m_overCapacity = 50;                                               // was 30 (test2)
+			f.m_capacityOffset = 8;                                                 // was 5 (1.81)
+			stage.m_factions.insertLast(f);                                         // was 0 in 1.65
+		}
+		{
+			XmlElement command("command");
+			command.setStringAttribute("class", "faction_resources");
+			command.setIntAttribute("faction_id", 0);
+			addFactionResourceElements(command, "vehicle", array<string> = {"default_car_1.vehicle","default_car_2.vehicle","default_car_3.vehicle"}, true);
+			stage.m_extraCommands.insertLast(command);
+			command.setIntAttribute("faction_id", 1);
+			stage.m_extraCommands.insertLast(command);
+		}		
+
+		// metadata
+		stage.m_primaryObjective = "capture";
+
+		setDefaultAttackBreakTimes(stage);
+		// setReduceDefenseForFinalAttack(stage, 0.1); // use this for final attack boost if needed for friendlies
+		
+		return stage;
+	}
+
 	protected Stage@ setupStage1() {
 		Stage@ stage = createStage();
 		stage.m_mapInfo.m_name = "Keepsake Bay";
