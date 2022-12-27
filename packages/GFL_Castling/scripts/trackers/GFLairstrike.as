@@ -282,7 +282,7 @@ class GFLairstrike : Tracker {
 
                         CreateDirectProjectile(m_metagame,startPos.add(getMultiplicationVector(strike_vector,Vector3(-50,0,-50))),s_pos.add(Vector3(0,20,0)),"a10_warthog_shadow.projectile",cid,fid,70);    
                                                             
-                        for(int i=1;i<=6;i++){
+                        for(int i=1;i<=12;i++){
                             float rand_x = rand(-12,12);
                             float rand_y = rand(-12,12);
                             
@@ -290,6 +290,7 @@ class GFLairstrike : Tracker {
                         }                            
                         
                         startPos = startPos.add(getMultiplicationVector(strike_vector,Vector3(-30,0,-30)));
+                        playSoundAtLocation(m_metagame,"a10_fire_FromWARTHUNDER.wav",fid,end_pos,2.2);
                                                 
                         for(int i=0;i<=strike_time;i++){
                             //水平偏移

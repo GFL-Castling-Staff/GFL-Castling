@@ -403,6 +403,16 @@ Vector3 getAimUnitVector(float scale, Vector3 s_pos, Vector3 e_pos) {
 	return Vector3(dx*scale/ds,0,dy*scale/ds);
 }
 
+//此处angle用弧度制
+Vector3 getRotatedVector(float angle, Vector3 c_pos) {
+    float ds = sqrt(c_pos.m_values[0]*c_pos.m_values[0]+c_pos.m_values[2]*c_pos.m_values[2]);
+    if(ds<=0.000005f) {ds=0.000005f;c_pos.m_values[0]=0.000004f;c_pos.m_values[2]=0.000003f;}
+	float ori_angle = acos(c_pos.m_values[0]/ds);
+	float ex = ds*cos(ori_angle+angle);
+	float ey = ds*sin(ori_angle+angle);	
+	return Vector3(ex,0,ey);
+}
+
 Vector3 getVerticalUnitVector(Vector3 given_vector) {
 	return Vector3((-1.0)*given_vector.m_values[2],given_vector.m_values[1],given_vector.m_values[0]);
 }

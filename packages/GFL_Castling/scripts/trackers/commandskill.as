@@ -323,7 +323,6 @@ dictionary commandSkillIndex = {
         {"gkw_saf.weapon",38},
         {"gkw_saf_6607.weapon",38},
 
-
         // 炼金术师 大限
         {"ff_alchemist.weapon",39},
         {"ff_alchemist_skill.weapon",39},
@@ -436,6 +435,9 @@ dictionary commandSkillIndex = {
 
         {"gkw_f1.weapon",54},
         {"gkw_f1mod3.weapon",54},
+
+        // 波波沙机甲，先暂定为打烟，做不做维修效果另说
+        {"gkr_bbs.weapon",55},
 
         // 下面这行是用来占位的，在这之上添加新的枪和index即可
         {"666",-1}
@@ -573,6 +575,7 @@ class CommandSkill : Tracker {
                     case 52:{excuteCarcano1938(cId,senderId,m_modifer);break;}
                     case 53:{excuteSniperSkill_Pos(cId,senderId,m_modifer,c_weaponType);break;}
                     case 54:{excuteF1skill(cId,senderId,m_modifer);break;}
+                    case 55:{excuteBBSRobotskill(cId,senderId,m_modifer);break;}
 
                     default:
                         break;
@@ -3022,7 +3025,7 @@ class CommandSkill : Tracker {
                         CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"hand_88grenade.projectile",characterId,factionid,40);
                     }
                     else{
-                        CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"hand_88grenade.projectile",characterId,factionid,30.0,5.0);
+                        CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"hand_88grenade.projectile",characterId,factionid,40.0,5.0);
                     }
                 }
             }
@@ -3195,7 +3198,7 @@ class CommandSkill : Tracker {
                     }
                 }
 
-                addCoolDown("CZ75",25,characterId,modifer);
+                addCoolDown("CZ75",15,characterId,modifer);
             }
             
         }    
@@ -3671,5 +3674,52 @@ class CommandSkill : Tracker {
                 }
             }
         }
-    }        
+    }    
+    void excuteBBSRobotskill(int characterId,int playerId,SkillModifer@ modifer){
+        bool ExistQueue = false;
+        int j=-1;
+        for (uint i=0;i<SkillArray.length();i++){
+            if (InCooldown(characterId,modifer,SkillArray[i]) && SkillArray[i].m_weapontype=="BBS_ROBOT") {
+                ExistQueue=true;
+                j=i;
+            }
+        }
+        if (ExistQueue){
+            dictionary a;
+            a["%time"] = ""+SkillArray[j].m_time;
+            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            _log("skill cooldown" + SkillArray[j].m_time);
+            return;
+        }
+
+        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+        if (character !is null) {
+            const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+            if (player !is null){
+                if (player.hasAttribute("aim_target")) {
+                    string target = player.getStringAttribute("aim_target");
+                    Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
+                    int factionid = character.getIntAttribute("faction_id");
+                    array<string> Voice={
+                        "smokelauncher_fire_FromCOD16.wav",
+                    };
+                    playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+                    playSoundAtLocation(m_metagame,"grenade_throw1.wav",factionid,c_pos,1.0);
+                    playAnimationKey(m_metagame,characterId,"air thrust",false,true);
+
+                    Vector3 strike_vector = getAimUnitVector(4,c_pos,stringToVector3(target)); 
+                    Vector3 strike_posofffset_1 = getRotatedVector(1.046,strike_vector);
+                    Vector3 strike_posofffset_2 = getRotatedVector(-1.046,strike_vector);
+
+                    c_pos=c_pos.add(Vector3(0,3,0));
+
+                    CreateProjectile_H(m_metagame,c_pos,c_pos.add(strike_posofffset_1),"smoke_grenade_bbs_skill.projectile",characterId,factionid,26.0,4.0);
+                    CreateProjectile_H(m_metagame,c_pos,c_pos.add(strike_vector),"smoke_grenade_bbs_skill.projectile",characterId,factionid,26.0,4.0);
+                    CreateProjectile_H(m_metagame,c_pos,c_pos.add(strike_posofffset_2),"smoke_grenade_bbs_skill.projectile",characterId,factionid,26.0,4.0);
+                    
+                    addCoolDown("BBS_ROBOT",15,characterId,modifer);
+                }
+            }
+        }
+    }       
 }

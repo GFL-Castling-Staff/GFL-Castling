@@ -4,7 +4,7 @@
     <trigger class="impact" />
     <rotation class="motion" />
     <model mesh_filename="m202_rocket.xml"/>
-    <result class="blast" radius="6.0" character_state="death" damage="3" push="0.4" decal="1" faction_compare="not_equal" damage_origin_vehicle="0"/>
+    <result class="blast" radius="6.0" character_state="death" damage="4" push="0.4" decal="1" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	<trigger class="impact"/>
     <commonness value="0.0" />
 

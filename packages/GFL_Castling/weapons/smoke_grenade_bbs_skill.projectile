@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<projectile class="grenade" name="smoke grenade" key="smoke_grenade_bbs_skill.projectile" slot="0" use_time_to_live="1" pulldown_in_air="9000.0" time_to_live="6" radius="0.3" blast_damage_threshold="1.9">
+
+    <result class="spawn" instance_class="projectile" instance_key="smoke_grenade_v.projectile" min_amount="1" max_amount="1" offset="0 0.2 0" position_spread="1 1" direction_spread="0.3 0.1" />
+	<collision class="sticky" />
+    <trigger class="impact">
+        <collider class="character" enabled="1" faction_compare="not_equal"/>
+    </trigger>
+    <rotation class="random" />
+
+    <model />
+
+        <sound class="result" key="other" fileref="smokelauncher_fire_FromCOD16.wav" volume="1" />
+        <sound class="result" key="terrain" copy="other" />
+        <sound class="result" key="static_object" copy="other" />
+        <sound class="result" key="vehicle" copy="other" />
+        <sound class="result" key="character" copy="other" />
+    <effect class="result" key="terrain" ref="ShadowSmoke" shadow="1" />
+    <effect class="result" key="terrain" ref="NavalSmokeUp1" post_processing="1" />
+    <effect class="result" key="terrain" ref="NavalSmokeUp2" post_processing="1" />
+    <effect class="result" key="terrain" ref="NavalSmokeTop1" post_processing="1" />
+    <effect class="result" key="terrain" ref="NavalSmokeTop2" post_processing="1" />
+    <effect class="result" key="terrain" ref="NavalSmokeTop3" post_processing="1" />
+    <effect class="result" key="terrain" ref="NavalSmoke1" post_processing="1" />
+    <effect class="result" key="terrain" ref="NavalSmoke2" post_processing="1" />
+    <effect class="result" key="terrain" ref="NavalSmoke3" post_processing="1" />
+    
+    <!-- <throwable curve_height="5.0" near_far_distance="5.0" speed_estimation_near="9.0" speed_estimation_far="15.0" max_speed="13.0" randomness="0.07" /> -->
+    <!-- <throwable curve_height="6.0" near_far_distance="5.0" speed_estimation_near="20.0" speed_estimation_far="17.0" max_speed="11.0" randomness="0.07" /> -->
+    <!-- projectile slot 0 is used for hand grenade items currently -->
+    <!-- bound to change -->
+    <commonness value="0.0" />
+    <inventory encumbrance="3.0" price="2.0" />
+
+    <effect class="activated" ref="TracerFlash_green" />
+</projectile>
