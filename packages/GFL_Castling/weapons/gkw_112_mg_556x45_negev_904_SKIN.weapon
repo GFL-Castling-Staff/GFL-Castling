@@ -48,7 +48,7 @@
         <stance state_key="prone" accuracy="1.4"/>
         <stance state_key="over_wall" accuracy="1.55"/>
         <tag name="machine gun"/>
-        <commonness value="0.2" in_stock="0" can_respawn_with="1"/>
+        <commonness value="0" in_stock="0" can_respawn_with="1"/>
         <capacity value="1" source="rank" source_value="0.0"/>
         <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
         <target_factors tag="smg" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
