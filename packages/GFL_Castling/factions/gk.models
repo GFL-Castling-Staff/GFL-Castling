@@ -1949,5 +1949,8 @@
     </model>    
     <model filename="gkd_hg_px4_2801.xml">
         <requirement class="weapon" key="gkw_px4_2801.weapon" slot="0" />
-    </model>        
+    </model>
+    <model filename="gkd_smg_cx4_6606.xml">
+        <requirement class="weapon" key="gkw_cx4_6606.weapon" slot="0" />
+    </model>    
 </models>
