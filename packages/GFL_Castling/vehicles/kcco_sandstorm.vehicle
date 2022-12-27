@@ -46,8 +46,6 @@
 	<turret offset="+1.12 2.0 0.2" weapon_key="kcco_vehicle_sandstorm.weapon" weapon_offset="0.0 0.0 0.0" weapon_recoil="0.0" physics_recoil="0.08" max_rotation_step="0.000005" rotation="-0.14" rotation_range="0.4" parent_turret_index="0"/>
 	<turret offset="-1.40 1.85 0.2" weapon_key="kcco_vehicle_sandstorm.weapon" weapon_offset="0.0 0.0 0.0" weapon_recoil="0.0" physics_recoil="0.08" max_rotation_step="0.000005" rotation="0.16" rotation_range="0.4" parent_turret_index="0"/>
 	<turret offset="+1.40 1.85 0.2" weapon_key="kcco_vehicle_sandstorm.weapon" weapon_offset="0.0 0.0 0.0" weapon_recoil="0.0" physics_recoil="0.08" max_rotation_step="0.000005" rotation="-0.18" rotation_range="0.4" parent_turret_index="0"/>
-	<turret offset="1.0 4.8 0.5" weapon_key="vehicle_smoke_spawner.weapon" weapon_offset="0 0 0" weapon_recoil="-1.0" rotation="0.0"  max_rotation_step="0.5"  rotation_range="6.30"/>
-	<turret offset="-1.0 4.8 0.5" weapon_key="vehicle_smoke_spawner.weapon" weapon_offset="0 0 0" weapon_recoil="-1.0" rotation="0.0"  max_rotation_step="0.5"  rotation_range="6.30"/>
 	<visual class="chassis" mesh_filename="sandstorm_base.mesh" texture_filename="sandstorm_texture.png" offset="0.0 -0.8 0.0" max_tilt="-0.08" />
 	<visual class="chassis" key="broken" mesh_filename="sandstorm_base.mesh" texture_filename="tank_2_broken.png" offset="0.0 -2.8 0.0"/>
 	<visual class="turret" turret_index="0" mesh_filename="sandstorm_turret.mesh" texture_filename="sandstorm_texture.png" />
@@ -61,8 +59,6 @@
 		<turret index="4" />
 		<turret index="5" />
 		<turret index="6" />
-		<turret index="7" />
-		<turret index="8" />
 	</character_slot>
 	<rev_sound filename="tank_rev0.wav" low_pitch="0.4" high_pitch="0.5" low_rev="0.0" high_rev="1.0" volume="0.9" />
 	<rev_sound filename="tank_rev0_b.wav" low_pitch="0.6" high_pitch="0.7" low_rev="0.0" high_rev="1.0" volume="0.6" />
