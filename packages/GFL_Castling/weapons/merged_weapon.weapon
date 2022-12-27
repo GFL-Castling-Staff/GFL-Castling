@@ -49543,7 +49543,7 @@
 	<weak_hand_hold offset="0.4"/>
 	<projectile file="bullet_ai.projectile" radius="1.0">
 	<model filename="agl.xml"/>
-	<result class="blast" radius="3.2" damage="2.5" push="0.1" decal="1" faction_compare="not_equal" damage_origin_vehicle="0"/>
+	<result class="blast" radius="3.2" damage="3.1" push="0.1" decal="1" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	<effect class="result" key="terrain" ref="SmokeBurst" post_processing="1"/>
 	<effect class="result" key="terrain" ref="Shine" lighting="0"/>
 	<effect class="result" key="terrain" ref="HitTankSparks" lighting="0"/>
