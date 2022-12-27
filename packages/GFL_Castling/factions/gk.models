@@ -1937,5 +1937,11 @@
     </model>                
     <model filename="gkd_smg_tmp_2807.xml">
         <requirement class="weapon" key="gkw_tmp_2807.weapon" slot="0" />
-    </model>                       
+    </model>    
+    <model filename="gkd_sg_nova.xml">
+        <requirement class="weapon" key="gkw_nova.weapon" slot="0" />
+    </model>
+    <model filename="gkd_sg_nova.xml">
+        <requirement class="weapon" key="gkw_nova_skill.weapon" slot="0" />
+    </model>    
 </models>
