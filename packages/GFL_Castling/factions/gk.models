@@ -1502,6 +1502,9 @@
     <model filename="sfd_destroyer.xml">
         <requirement class="weapon" key="ff_destroyer.weapon" slot="0" />
     </model>
+    <model filename="sfd_destroyer_skin_from_gua.xml">
+        <requirement class="weapon" key="ff_destroyer_skin.weapon" slot="0" />
+    </model>    
     <model filename="sfd_ouroboros.xml">
         <requirement class="weapon" key="ff_weaver.weapon" slot="0" />
     </model>

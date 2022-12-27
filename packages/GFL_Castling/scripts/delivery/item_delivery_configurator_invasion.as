@@ -405,6 +405,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		ScoredResource("ff_hunter.weapon", "weapon", 1.0f),
 		ScoredResource("ff_excutioner_1.weapon", "weapon", 1.0f),
 		ScoredResource("ff_parw_alina.weapon", "weapon", 1.0f),
+		ScoredResource("ff_destroyer_skin.weapon", "weapon", 1.0f),
 		ScoredResource("ff_Intruder.weapon", "weapon", 1.0f),
 		ScoredResource("ff_parw_nyto_black.weapon", "weapon", 1.0f),
 		ScoredResource("ff_justice.weapon", "weapon", 1.0f),
