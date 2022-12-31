@@ -42,10 +42,10 @@
     <animation state_key="reload"	animation_key="reloading, A OHG 0.75" />
     <animation state_key="reload"	animation_key="reloading2, A OHG 0.75" />
     <effect class="muzzle" ref="ejection_9mm" />
-    <sound key="fire" fileref="lusa_fire_FromINS.wav" pitch_variety="0.05" volume="1.0" />
-    <sound key="magazine_out" fileref="lusa_mgz_out_FromINS.wav" volume="0.5" />
-    <sound key="magazine_in" fileref="lusa_mgz_in_FromINS.wav" volume="0.5" />
-    <sound key="cycle" fileref="lusa_cycle_FromINS.wav" volume="0.5" />
+    <sound key="fire" fileref="lusa_fire_FromCOD17.wav" pitch_variety="0.05" volume="1.1" />
+    <sound key="magazine_out" fileref="lusa_mgz_out_FromCOD17.wav" volume="0.5" />
+    <sound key="magazine_in" fileref="lusa_mgz_in_FromCOD17.wav" volume="0.5" />
+    <sound key="cycle" fileref="lusa_cycle_FromCOD17.wav" volume="0.5" />
     <sound class="impact" fileref="rifle_drop.wav" />
     <model filename="gkw_smg_lusa_7802.xml"/>
     <hud_icon filename="gkw_lusa_7802.png"/>
