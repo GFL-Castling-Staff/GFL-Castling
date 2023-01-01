@@ -25,8 +25,8 @@
 
     <animation state_key="recoil"	animation_key="recoil, destroyer" />
     <animation state_key="recoil" stance_key="over_wall" animation_key="recoil, destroyer" />
-    <animation state_key="reload"	animation_key="reloading, A DG 1.0" />
-    <animation state_key="reload"	animation_key="reloading2, A DG 1.0" />
+    <animation state_key="reload"	animation_key="reloading, A DG 2.0" />
+    <animation state_key="reload"	animation_key="reloading2, A DG 2.0" />
     <animation state_key="hold"					animation_key="still, destroyer" />
     <animation state_key="hold_casual"			animation_key="still, instructor" />
     <animation state_key="hold_on_wall"			animation_key="still, destroyer" />
@@ -58,7 +58,7 @@
 
     <weak_hand_hold offset="0.2" />
     <projectile file="standard_agl.projectile">
-      <result class="blast" damage="4.1" radius="5.5" decal="1" push="0.0" character_state="death" faction_compare="not_equal"/>
+      <result class="blast" damage="4.0" radius="5.5" decal="1" push="0.0" character_state="death" faction_compare="not_equal"/>
     </projectile>
      
     <stance state_key="running" accuracy="0.5" />
