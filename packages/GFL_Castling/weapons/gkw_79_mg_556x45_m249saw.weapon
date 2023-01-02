@@ -11,7 +11,7 @@
     name="M249 SAW" 
     class="0" 
     projectile_speed="260" 
-    sight_range_modifier="1.75"/>
+    sight_range_modifier="1.0"/>
     <animation key="reload" animation_key="reloading, Machine gun 4" />
     <inventory buy_price="49.0" sell_price="49.0" />
     <sound key="fire" fileref="m249_fire_FromCOD16.wav" pitch_variety="0.05" volume="0.8" />

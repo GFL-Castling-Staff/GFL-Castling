@@ -13,7 +13,7 @@
         class="0" 
         projectile_speed="225" 
         spread_range="0.25"
-        sight_range_modifier="1.75"
+        sight_range_modifier="1.5"
         can_shoot_standing="1" 
         />
         <animation key="reload" animation_key="reloading, Machine gun 4" />
@@ -63,7 +63,7 @@
         class="0" 
         projectile_speed="225" 
         spread_range="0.05"
-        sight_range_modifier="2.5"
+        sight_range_modifier="1.75"
         />
         <animation key="reload" animation_key="reloading, Machine gun 4" />
         
