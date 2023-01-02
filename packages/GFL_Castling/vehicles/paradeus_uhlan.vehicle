@@ -42,7 +42,7 @@
 	offset="0.0 -0.1 0.0" 
 	top_offset="0 7.5 -1.5" 
 	collision_model_pos="0 0.6 0.1" 
-	collision_model_extent="4.0 6.0 6.5" 
+	collision_model_extent="4.0 3.2 6.5" 
 	visual_offset="0 0.2 0.0" />
     <modifier class="blast_damage" value="-3.0" />
     <!-- one weapon per turret so that only one soldier controls the turret orientation -->
@@ -67,8 +67,8 @@
     <!-- class="track" dont work -->
     <visual class="chassis" mesh_filename="Uhlan_body.mesh" texture_filename="none_black.png" key="broken" />
     <visual class="turret" turret_index="0" mesh_filename="Uhlan_turret.mesh" texture_filename="none_black.png" key="broken"/>
-    <character_slot type="driver" position="1.1 0.5 -2.3" seat_position="0 1.0 -0.5" rotation="0" exit_rotation="-3.14" hiding="1" animation_id="36" />
-    <character_slot type="gunner" position="-1.1 0.5 -2.3" seat_position="0 1.0 -1.5" rotation="0" exit_rotation="-3.14" hiding="1" animation_id="37">
+    <character_slot type="driver" position="1.1 0.5 -2.3" seat_position="0 -0.8 -0.5" rotation="0" exit_rotation="-3.14" hiding="1" animation_id="36" />
+    <character_slot type="gunner" position="-1.1 0.5 -2.3" seat_position="0 -0.8 -1.5" rotation="0" exit_rotation="-3.14" hiding="1" animation_id="37">
         <turret index="0" />
         <turret index="1" />
         <turret index="2" />
@@ -102,17 +102,13 @@
     <effect event_key="destroyed" ref="SmallFireRepeat" offset="0.0 2.4 -3.1" />
     <effect event_key="destroy" key="other" ref="woosh" post_processing="0" shadow="0" />
     <effect event_key="cleanup" key="other" ref="woosh" post_processing="0" shadow="0" />
-    <event key="receive_damage_xp_reward">
-        <trigger class="receive_damage" />
-        <result class="reward" xp="0.0100" />
-    </event>
     <event key="spot_rp_reward">
         <trigger class="spot" />
         <result class="reward" rp="150.0" />
     </event>
     <event key="destroy_rp_reward">
         <trigger class="destroy" />
-        <result class="reward" rp="800.0" />
+        <result class="reward" rp="1000.0" />
     </event>
     <event>
         <trigger class="destroy" />
@@ -133,9 +129,5 @@
     <event>
         <trigger class="cleanup" />
         <result class="spawn" instance_class="visual_item" instance_key="burning_piece_cleanup.visual_item" min_amount="20" max_amount="30" offset="0 2.0 0" position_spread="1.5 1.5" direction_spread="0.1 0.1" />
-    </event>
-    <event>
-        <trigger class="cleanup" />
-        <result class="spawn" instance_class="projectile" instance_key="debri_stun" min_amount="1" max_amount="1" offset="0 3.0 0" position_spread="0.0 0.0" direction_spread="0.0 0.0" />
     </event>
 </vehicle>

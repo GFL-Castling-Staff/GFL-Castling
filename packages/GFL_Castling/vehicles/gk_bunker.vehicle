@@ -29,9 +29,6 @@
 	
 	
 	<visual offset="0 -0.4 0" class="turret" turret_index="0" mesh_filename="fin_bunker_turret.mesh" texture_filename="deployable_mg.png" />
-	<!-- <visual offset="0.1 0.76 0" class="turret" turret_index="1" mesh_filename="deployable_mg1.mesh" texture_filename="deployable_mg.png" /> -->
-	<!-- <visual offset="0.1 0.76 0" class="turret" turret_index="2" mesh_filename="deployable_mg1.mesh" texture_filename="deployable_mg.png" /> -->
-	<!-- <visual offset="0.1 0.76 0" class="turret" turret_index="3" mesh_filename="deployable_mg1.mesh" texture_filename="deployable_mg.png" /> -->
 	<visual class="chassis" mesh_filename="fin_bunker_base.mesh" texture_filename="deployable_mg.png" />
 	<visual class="chassis" key="broken" mesh_filename="fin_bunker_base.mesh" texture_filename="humvee_broken.png" />
 	<character_slot type="gunner" attached_on_turret="1" seat_position="0.0 0.0 -0.8" enter_position="0 0 -2.0" rotation="0" exit_rotation="-1.57" hiding="1" animation_key="tank mg still">
@@ -52,23 +49,6 @@
 		<!-- <turret index="12" /> -->
 	</character_slot>
 
-
-	<!--
-	<character_slot type="passenger" attached_on_turret="0" seat_position="0.0 0.0 2.0" enter_position="0 0 4.2" rotation="0.54" rotation_range="2.15" exit_rotation="-1.57" hiding="0" animation_key="tank mg still">
-	<state class="entering" animation_key="crouching forwards short, no weapon" position="0 0 4.2" rotation="0" />
-	<state class="leaving" animation_key="crouching forwards short, no weapon" position="0 0 4.2" rotation="3.14" />
-	</character_slot>
-	
-	<character_slot type="passenger" attached_on_turret="0" seat_position="1.2 0.0 -1.0" enter_position="4.0 0 -1.6" rotation="2.64" rotation_range="2.15" exit_rotation="-1.57" hiding="0" animation_key="tank mg still">
-	<state class="entering" animation_key="crouching forwards short, no weapon" position="4.0 0 -1.6" rotation="0" />
-	<state class="leaving" animation_key="crouching forwards short, no weapon" position="4.0 0 -1.6" rotation="3.14" />
-	</character_slot>
-	
-	<character_slot type="passenger" attached_on_turret="0" seat_position="-1.2 0.0 -1.0" enter_position="-4.0 0 -1.6" rotation="-1.57" rotation_range="2.15" exit_rotation="-1.57" hiding="0" animation_key="tank mg still">
-	<state class="entering" animation_key="crouching forwards short, no weapon" position="-4.0 0 -1.6" rotation="0" />
-	<state class="leaving" animation_key="crouching forwards short, no weapon" position="-4.0 0 -1.6" rotation="3.14" />
-	</character_slot>
-	-->
 	<!-- sound handling -->
 	<rev_sound filename="truck_rev0.wav" low_pitch="0.95" high_pitch="1.05" low_rev="0.0" high_rev="0.2" volume="1.0" />
 	<rev_sound filename="truck_rev3.wav" low_pitch="0.7" high_pitch="1.0" low_rev="0.05" high_rev="0.7" volume="1.0" />

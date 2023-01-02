@@ -17,15 +17,12 @@
 	ai_abandon_when_unsteerable="0"
 	ai_stop_to_fight="0" 
 	>
-
 	<tag name="metal_heavy" />
 	<tag name="guntruck" />
 	<tag name="apc" />
-  	<tag name="light_combat" />
-
+	<tag name="light_combat" />
 	<tire_set offset="0.96 0 1.068" radius="0.48" />
 	<tire_set offset="0.96 0 -1.068" radius="0.48" />
-
 	<control 
 	max_speed="28" 
 	acceleration="8.0" 
@@ -34,10 +31,8 @@
 	max_rotation="0.75" 
 	max_water_depth="2.0" 
 	steer_smoothening="0.85" />
-
-
 	<physics 
-	max_health="30.0" 
+	max_health="50.0" 
 	mass="15.0" 
 	extent="1.96 0.0 3.84" 
 	offset="0 0.0 0" 
@@ -47,38 +42,27 @@
 	collision_model_extent="2.56 2.0 4.0" 
 	visual_offset="0 0.12 0.0" 
 	friction_offset="0.05"
-	drag_offset="-0.05" /> 
-
+	drag_offset="-0.05" />
 	<modifier class="blast_damage" value="-0.5" />
-
 	<sky_diving chute_offset="0 2.75 0.0" trigger_height="20.0" gravity="-10" mesh_filename="chute_large.mesh" texture_filename="chute.png" />
-
 	<turret offset="0 1.88 -0.2" weapon_key="chara_mg.weapon" weapon_offset="0.45 0.85 0.0" weapon_recoil="-1.0" max_rotation_step="0.0053" />
-
 	<turret offset="0 1.88 -0.2" weapon_key="chiara_breath.weapon" weapon_offset="-0.45 0.85 -1.0" weapon_recoil="-1.0" rotation="0.6"  max_rotation_step="0.0053"  rotation_range="6.30"/>
 	<turret offset="0 1.88 -0.2" weapon_key="chiara_breath.weapon" weapon_offset="-0.45 0.85 -1.0" weapon_recoil="-1.0" rotation="-1.2" max_rotation_step="0.0053"  rotation_range="6.30"/>
 	<turret offset="0 1.88 -0.2" weapon_key="chiara_breath.weapon" weapon_offset="-0.45 0.85 -1.0" weapon_recoil="-1.0" rotation="1.8"  max_rotation_step="0.0053"  rotation_range="6.30"/>
-		<visual  offset="0 -2.0 0.0" class="turret" turret_index="0" mesh_filename="chara_turret.mesh" texture_filename="chara.png" />
-		<!-- <visual  offset="0 0 0.28" class="turret" turret_index="0" key="broken" mesh_filename="chara_turret.mesh" texture_filename="humvee_broken.png" /> -->
-
-
+	<visual  offset="0 -2.0 0.0" class="turret" turret_index="0" mesh_filename="chara_turret.mesh" texture_filename="chara.png" />
+	<!-- <visual  offset="0 0 0.28" class="turret" turret_index="0" key="broken" mesh_filename="chara_turret.mesh" texture_filename="humvee_broken.png" /> -->
 	<visual class="chassis" mesh_filename="chara_base.mesh" texture_filename="chara.png" />
 	<visual class="chassis" key="broken" mesh_filename="chara_ruin.mesh" texture_filename="humvee_broken.png" />
-
 	<!-- <visual class="tire" mesh_filename="Pierre_Wheel.mesh" texture_filename="Pierre_Track.png" /> -->
-
-	
 	<character_slot type="driver" position="0.8 0.48 0.4" rotation="0" exit_rotation="1.57" hiding="1" animation_id="36" />
 	<character_slot type="gunner" seat_position="0.0 0.78 -0.25" enter_position="0 0 -2.72" rotation="0" exit_rotation="-1.57" hiding="1" animation_key="tank mg still" marker_offset="0 1.2 0">
-		<turret index="0" /> <turret index="1" /><turret index="2" /><turret index="3" />
+		<turret index="0" />
+		<turret index="1" />
+		<turret index="2" />
+		<turret index="3" />
 	</character_slot>
-
-
 	<item_container class="stash" offset="0.0 0.78 -0.25" soldier_group="default_hvy"/>
 	<spawn_point />
-	
-
-
 	<!-- sound handling -->
 	<!--
 	<rev_sound filename="jeep_rev0.wav" low_pitch="0.8" high_pitch="1.0" low_rev="0.0" high_rev="0.2" volume="0.8" />
@@ -87,73 +71,66 @@
 	<rev_sound filename="jeep2_rev0.wav" low_pitch="0.8" high_pitch="1.0" low_rev="0.0" high_rev="0.3" volume="0.8" />
 	<rev_sound filename="jeep2_rev2.wav" low_pitch="0.6" high_pitch="1.0" low_rev="0.1" high_rev="0.7" volume="0.65" />
 	<rev_sound filename="jeep2_rev3.wav" low_pitch="0.8" high_pitch="1.0" low_rev="0.5" high_rev="1.0" volume="0.8" />
-	
 	<effect event_key="slide" type="splat_map" surface_tag="road" size="2.0" atlas_index="5" layer="0" />
 	<effect event_key="slide_hard" type="splat_map" surface_tag="road" size="2.0" atlas_index="5" layer="0" />
 	<effect event_key="slide" type="splat_map" surface_tag="dirt" size="1.0" atlas_index="2" layer="1" />
 	<effect event_key="slide" type="particle" key="terrain" surface_tag="dirt" ref="Burst" use_surface_color="1" />
-
 	<effect event_key="health" value="12.0" ref="SmallSmokeVehicle" offset="0 1.28 0" />
 	<effect event_key="health" value="6.0" ref="SmallSmokeVehicle" offset="0 1.28 0" />
 	<effect event_key="health" value="6.0" ref="BrokenSparkle" post_processing="0" offset="0 0.8 0" />
 	<effect event_key="destroyed" ref="SmallSmokeVehicle" offset="0.0 1.68 0" />
-	<effect event_key="destroyed" ref="SmallSmokeVehicle" offset="0 1.28 0" />  
-	<effect event_key="destroyed" ref="SmallFireRepeat" offset="0 1.76 0" /> 
-	<effect event_key="destroy" key="other" ref="woosh" post_processing="0" shadow="0" />   
-	<effect event_key="cleanup" key="other" ref="woosh" post_processing="0" shadow="0" />   
-
+	<effect event_key="destroyed" ref="SmallSmokeVehicle" offset="0 1.28 0" />
+	<effect event_key="destroyed" ref="SmallFireRepeat" offset="0 1.76 0" />
+	<effect event_key="destroy" key="other" ref="woosh" post_processing="0" shadow="0" />
+	<effect event_key="cleanup" key="other" ref="woosh" post_processing="0" shadow="0" />
 	<sound key="slide" filename="slide_noise.wav" />
 	<sound key="squeal" filename="tire_squeal.wav" />
-	<sound key="turret_rotation" filename="turret_rotation2.wav" />  
+	<sound key="turret_rotation" filename="turret_rotation2.wav" />
 	<sound key="ignition" filename="truck_ignition.wav" />
-	<sound key="horn" filename="horn_jeep.wav" />   
+	<sound key="horn" filename="horn_jeep.wav" />
 	<sound key="hit" filename="car_hit1.wav" />
 	<sound key="hit" filename="car_hit2.wav" />
 	<sound key="hit" filename="car_hit3.wav" />
-	<sound key="destroy" filename="vehicle_explosion_1.wav" />   
-	<sound key="cleanup" filename="vehicle_explosion_1.wav" />   
-
+	<sound key="destroy" filename="vehicle_explosion_1.wav" />
+	<sound key="cleanup" filename="vehicle_explosion_1.wav" />
 	<event key="receive_damage_xp_reward">
 		<trigger class="receive_damage" />
 		<result class="reward" xp="0.0090" />
 	</event>
-  
 	<event key="spot_rp_reward">
 		<trigger class="spot" />
 		<result class="reward" rp="40.0" />
 	</event>
-  
 	<event>
 		<trigger class="destroy" />
-  	<result class="spawn" instance_class="visual_item" instance_key="burning_piece_truck1.visual_item" min_amount="1" max_amount="3" offset="0 2.0 0" position_spread="1.5 1.5" direction_spread="0.1 0.2" />
+		<result class="spawn" instance_class="visual_item" instance_key="burning_piece_truck1.visual_item" min_amount="1" max_amount="3" offset="0 2.0 0" position_spread="1.5 1.5" direction_spread="0.1 0.2" />
 	</event>
 	<event>
-		<trigger class="destroy" />  	
-    <result class="spawn" instance_class="visual_item" instance_key="burning_piece_truck2.visual_item" min_amount="2" max_amount="4" offset="0 2.0 0" position_spread="1.5 1.5" direction_spread="0.15 0.35" />
-	</event>
-  <event>
-		<trigger class="destroy" />		
-    <result class="spawn" instance_class="visual_item" instance_key="burning_piece_truck3.visual_item" min_amount="1" max_amount="2" offset="0 2.0 0" position_spread="1.5 1.5" direction_spread="0.1 0.18" />
-	</event>
-  <event>
-		<trigger class="destroy" />		
-    <result class="spawn" instance_class="visual_item" instance_key="burning_piece_truck4.visual_item" min_amount="1" max_amount="3" offset="0 2.0 0" position_spread="1.5 1.5" direction_spread="0.1 0.15" />
-	</event>
-  <event>
-		<trigger class="destroy" />		
-    <result class="spawn" instance_class="visual_item" instance_key="burning_piece_truck5.visual_item" min_amount="2" max_amount="3" offset="0 2.0 0" position_spread="1.5 1.5" direction_spread="0.05 0.2" />
-	</event> 
- 	<event>
 		<trigger class="destroy" />
-    <result class="spawn" instance_class="projectile" instance_key="smoke_grenade_v.projectile" min_amount="3" max_amount="3" offset="0 3.0 0" position_spread="1 1" direction_spread="0.5 0.1" />
-  </event>  
-
-  <event>
-		<trigger class="cleanup" />		
-    <result class="spawn" instance_class="visual_item" instance_key="burning_piece_cleanup.visual_item" min_amount="20" max_amount="30" offset="0 2.0 0" position_spread="1.5 1.5" direction_spread="0.1 0.1" /> 
-  </event>    
- 	<event>
+		<result class="spawn" instance_class="visual_item" instance_key="burning_piece_truck2.visual_item" min_amount="2" max_amount="4" offset="0 2.0 0" position_spread="1.5 1.5" direction_spread="0.15 0.35" />
+	</event>
+	<event>
+		<trigger class="destroy" />
+		<result class="spawn" instance_class="visual_item" instance_key="burning_piece_truck3.visual_item" min_amount="1" max_amount="2" offset="0 2.0 0" position_spread="1.5 1.5" direction_spread="0.1 0.18" />
+	</event>
+	<event>
+		<trigger class="destroy" />
+		<result class="spawn" instance_class="visual_item" instance_key="burning_piece_truck4.visual_item" min_amount="1" max_amount="3" offset="0 2.0 0" position_spread="1.5 1.5" direction_spread="0.1 0.15" />
+	</event>
+	<event>
+		<trigger class="destroy" />
+		<result class="spawn" instance_class="visual_item" instance_key="burning_piece_truck5.visual_item" min_amount="2" max_amount="3" offset="0 2.0 0" position_spread="1.5 1.5" direction_spread="0.05 0.2" />
+	</event>
+	<event>
+		<trigger class="destroy" />
+		<result class="spawn" instance_class="projectile" instance_key="smoke_grenade_v.projectile" min_amount="3" max_amount="3" offset="0 3.0 0" position_spread="1 1" direction_spread="0.5 0.1" />
+	</event>
+	<event>
 		<trigger class="cleanup" />
-    <result class="spawn" instance_class="projectile" instance_key="debri_stun" min_amount="1" max_amount="1" offset="0 3.0 0" position_spread="0.0 0.0" direction_spread="0.0 0.0" />
-  </event>   
+		<result class="spawn" instance_class="visual_item" instance_key="burning_piece_cleanup.visual_item" min_amount="20" max_amount="30" offset="0 2.0 0" position_spread="1.5 1.5" direction_spread="0.1 0.1" />
+	</event>
+	<event>
+		<trigger class="cleanup" />
+		<result class="spawn" instance_class="projectile" instance_key="debri_stun" min_amount="1" max_amount="1" offset="0 3.0 0" position_spread="0.0 0.0" direction_spread="0.0 0.0" />
+	</event>
 </vehicle>

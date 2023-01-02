@@ -15858,10 +15858,10 @@
 	<animation key="reload" animation_key="reloading, Machine gun 2.0"/>
 	<inventory encumbrance="20.0" buy_price="40.0" sell_price="40.0"/>
 	<next_in_chain key="gkw_pkp_skill.weapon" share_ammo="1"/>
-	<sound key="fire" fileref="pkp_fire_FromINS.wav" pitch_variety="0.05" volume="1.1"/>
-	<sound key="magazine_out" fileref="pkp_mgz_out_FromINS.wav" volume="0.8"/>
-	<sound key="magazine_in" fileref="pkp_mgz_in_FromINS.wav" volume="0.8"/>
-	<sound key="cycle" fileref="pkp_cycle_FromINS.wav" volume="1.0"/>
+	<sound key="fire" fileref="qjy80_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.1"/>
+	<sound key="magazine_out" fileref="qjy80_mgz_out_FromCOD16.wav" volume="0.6"/>
+	<sound key="magazine_in" fileref="qjy80_mgz_in_FromCOD16.wav" volume="0.6"/>
+	<sound key="cycle" fileref="qjy80_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_mg_pkp.xml"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
@@ -15911,10 +15911,10 @@
 	<animation key="reload" animation_key="reloading, Machine gun 1.6"/>
 	<inventory encumbrance="20.0" buy_price="40.0" sell_price="40.0"/>
 	<next_in_chain key="gkw_pkp.weapon" share_ammo="1"/>
-	<sound key="fire" fileref="pkp_fire_FromINS.wav" pitch_variety="0.05" volume="1.1"/>
-	<sound key="magazine_out" fileref="pkp_mgz_out_FromINS.wav" volume="0.8"/>
-	<sound key="magazine_in" fileref="pkp_mgz_in_FromINS.wav" volume="0.8"/>
-	<sound key="cycle" fileref="pkp_cycle_FromINS.wav" volume="1.0"/>
+	<sound key="fire" fileref="qjy80_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.1"/>
+	<sound key="magazine_out" fileref="qjy80_mgz_out_FromCOD16.wav" volume="0.6"/>
+	<sound key="magazine_in" fileref="qjy80_mgz_in_FromCOD16.wav" volume="0.6"/>
+	<sound key="cycle" fileref="qjy80_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_mg_pkp.xml"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
@@ -15965,10 +15965,10 @@
 	<animation key="reload" animation_key="reloading, Machine gun 2.0"/>
 	<inventory encumbrance="20.0" buy_price="40.0" sell_price="40.0"/>
 	<next_in_chain key="gkw_pkp_4203_skill.weapon" share_ammo="1"/>
-	<sound key="fire" fileref="pkp_fire_FromINS.wav" pitch_variety="0.05" volume="1.1"/>
-	<sound key="magazine_out" fileref="pkp_mgz_out_FromINS.wav" volume="0.8"/>
-	<sound key="magazine_in" fileref="pkp_mgz_in_FromINS.wav" volume="0.8"/>
-	<sound key="cycle" fileref="pkp_cycle_FromINS.wav" volume="1.0"/>
+	<sound key="fire" fileref="qjy80_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.1"/>
+	<sound key="magazine_out" fileref="qjy80_mgz_out_FromCOD16.wav" volume="0.6"/>
+	<sound key="magazine_in" fileref="qjy80_mgz_in_FromCOD16.wav" volume="0.6"/>
+	<sound key="cycle" fileref="qjy80_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_mg_pkp_4203.xml"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
@@ -16018,10 +16018,10 @@
 	<animation key="reload" animation_key="reloading, Machine gun 1.6"/>
 	<inventory encumbrance="20.0" buy_price="40.0" sell_price="40.0"/>
 	<next_in_chain key="gkw_pkp_4203.weapon" share_ammo="1"/>
-	<sound key="fire" fileref="pkp_fire_FromINS.wav" pitch_variety="0.05" volume="1.1"/>
-	<sound key="magazine_out" fileref="pkp_mgz_out_FromINS.wav" volume="0.8"/>
-	<sound key="magazine_in" fileref="pkp_mgz_in_FromINS.wav" volume="0.8"/>
-	<sound key="cycle" fileref="pkp_cycle_FromINS.wav" volume="1.0"/>
+	<sound key="fire" fileref="qjy80_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.1"/>
+	<sound key="magazine_out" fileref="qjy80_mgz_out_FromCOD16.wav" volume="0.6"/>
+	<sound key="magazine_in" fileref="qjy80_mgz_in_FromCOD16.wav" volume="0.6"/>
+	<sound key="cycle" fileref="qjy80_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_mg_pkp_4203.xml"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
@@ -22285,10 +22285,10 @@
 	<animation state_key="reload" animation_key="reloading, A OHG 0.75"/>
 	<animation state_key="reload" animation_key="reloading2, A OHG 0.75"/>
 	<effect class="muzzle" ref="ejection_9mm"/>
-	<sound key="fire" fileref="lusa_fire_FromINS.wav" pitch_variety="0.05" volume="1.0"/>
-	<sound key="magazine_out" fileref="lusa_mgz_out_FromINS.wav" volume="0.5"/>
-	<sound key="magazine_in" fileref="lusa_mgz_in_FromINS.wav" volume="0.5"/>
-	<sound key="cycle" fileref="lusa_cycle_FromINS.wav" volume="0.5"/>
+	<sound key="fire" fileref="lusa_fire_FromCOD17.wav" pitch_variety="0.05" volume="1.1"/>
+	<sound key="magazine_out" fileref="lusa_mgz_out_FromCOD17.wav" volume="0.5"/>
+	<sound key="magazine_in" fileref="lusa_mgz_in_FromCOD17.wav" volume="0.5"/>
+	<sound key="cycle" fileref="lusa_cycle_FromCOD17.wav" volume="0.5"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_smg_lusa_7802.xml"/>
 	<hud_icon filename="gkw_lusa_7802.png"/>
@@ -42860,8 +42860,8 @@
 	<inventory encumbrance="20.0" buy_price="648.0" sell_price="324.0"/>
 	<animation state_key="recoil" animation_key="recoil, destroyer"/>
 	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil, destroyer"/>
-	<animation state_key="reload" animation_key="reloading, A DG 1.0"/>
-	<animation state_key="reload" animation_key="reloading2, A DG 1.0"/>
+	<animation state_key="reload" animation_key="reloading, A DG 2.0"/>
+	<animation state_key="reload" animation_key="reloading2, A DG 2.0"/>
 	<animation state_key="hold" animation_key="still, destroyer"/>
 	<animation state_key="hold_casual" animation_key="still, instructor"/>
 	<animation state_key="hold_on_wall" animation_key="still, destroyer"/>
@@ -42885,7 +42885,7 @@
 	<ballistics curve_height="3.0" near_far_distance="16.0" speed_estimation_near="10.0" speed_estimation_far="16.0" max_speed="47.0" randomness="0.0" tweak_factor="1.55"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile file="standard_agl.projectile">
-	<result class="blast" damage="4.1" radius="5.5" decal="1" push="0.4" character_state="death" faction_compare="not_equal"/>
+	<result class="blast" damage="4.0" radius="5.5" decal="1" push="0.0" character_state="death" faction_compare="not_equal"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.5"/>
 	<stance state_key="walking" accuracy="0.5"/>
@@ -42908,8 +42908,8 @@
 	<inventory encumbrance="20.0" buy_price="648.0" sell_price="324.0"/>
 	<animation state_key="recoil" animation_key="recoil, destroyer"/>
 	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil, destroyer"/>
-	<animation state_key="reload" animation_key="reloading, A DG 1.0"/>
-	<animation state_key="reload" animation_key="reloading2, A DG 1.0"/>
+	<animation state_key="reload" animation_key="reloading, A DG 2.0"/>
+	<animation state_key="reload" animation_key="reloading2, A DG 2.0"/>
 	<animation state_key="hold" animation_key="still, destroyer"/>
 	<animation state_key="hold_casual" animation_key="still, instructor"/>
 	<animation state_key="hold_on_wall" animation_key="still, destroyer"/>
@@ -42931,7 +42931,7 @@
 	<ballistics curve_height="3.0" near_far_distance="16.0" speed_estimation_near="10.0" speed_estimation_far="16.0" max_speed="47.0" randomness="0.0" tweak_factor="1.55"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile file="standard_agl.projectile">
-	<result class="blast" damage="4.1" radius="5.5" decal="1" push="0.4" character_state="death" faction_compare="not_equal"/>
+	<result class="blast" damage="4.0" radius="5.5" decal="1" push="0.0" character_state="death" faction_compare="not_equal"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.5"/>
 	<stance state_key="walking" accuracy="0.5"/>
@@ -50179,6 +50179,7 @@
 	<target_factors tag="tactical" distance="1.0" direction="0.0" squad_command="1.0" base_score="7.0"/>
 	<target_factors tag="bazooka" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.5"/>
 	<target_factors tag="punchme" distance="1.0" direction="0.0" squad_command="1.0" base_score="30.0"/>
+	<effect class="muzzle" ref="sawsnone"/>
 </weapon>
 
 <weapon key="typhoon_main_cannon_sound">
@@ -50199,16 +50200,57 @@
 	<target_factors tag="tactical" distance="1.0" direction="0.0" squad_command="1.0" base_score="7.0"/>
 	<target_factors tag="bazooka" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.5"/>
 	<target_factors tag="punchme" distance="1.0" direction="0.0" squad_command="1.0" base_score="30.0"/>
+	<effect class="muzzle" ref="sawsnone"/>
 </weapon>
 
 <weapon key="typhoon_charged_laser1">
+	<specification retrigger_time="0.2" accuracy_factor="2.0" sustained_fire_grow_step="0.06" sustained_fire_diminish_rate="0.1" sight_range_modifier="2.0" ai_sight_range_modifier="1.0" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="0" suppressed="0" name="Tank cannon" class="0" projectile_speed="220.0" slot="2" barrel_offset_3d="-20.0 0.7 3.5" projectiles_per_shot="1" spread_range="0.0" cooldown_start="0.4" cooldown_end="0.0" use_basic_muzzle_smoke_effect="0"/>
+	<model filename=""/>
+	<hud_icon filename="typhoon_main_cannon.png"/>
+	<commonness value="0.0"/>
+	<sound key="fire" fileref="static.wav" volume="0.0"/>
+	<projectile file="typhoon_laser.projectile" pulldown_in_air="0.5">
+	<result class="blast" damage="15.0" radius="8" decal="1" push="0.0" character_state="death" damage_origin_vehicle="0" faction_compare="not_equal"/>
+	<trail probability="1.0" key="laser_tifeng"/>
+	<effect class="result" key="vehicle" tag="metal_heavy" ref="HitTank" lighting="1"/>
+	<effect class="result" key="vehicle" tag="metal_heavy" ref="HitTankSparks"/>
+	<effect class="result" key="vehicle" tag="metal_heavy" ref="SmokeBurst" post_processing="1"/>
+	<effect class="result" key="vehicle" tag="metal_heavy" ref="BurstShine" lighting="0"/>
+	<effect class="result" key="vehicle" tag="metal_heavy" ref="Godray" lighting="0"/>
+	<effect class="result" key="terrain" ref="BigBurst" use_surface_color="1"/>
+	<effect class="result" key="terrain" ref="SmokeTop" post_processing="1"/>
+	<effect class="result" key="terrain" ref="Smoke" post_processing="1"/>
+	<effect class="result" key="terrain" ref="Shine" lighting="0"/>
+	<effect class="result" key="terrain" ref="Godray" lighting="0"/>
+	<effect class="result" key="terrain" ref="ShadowSmoke" shadow="1"/>
+	<effect class="result" key="terrain" ref="woosh" post_processing="0" shadow="0"/>
+	<effect class="result" type="splat_map" surface_tag="" size="5.0" atlas_index="0" layer="1"/>
+	<effect class="result" type="splat_map" surface_tag="" size="7.0" atlas_index="4" layer="0"/>
+	<effect class="result" type="splat_map" surface_tag="" size="9.0" atlas_index="0" layer="2" additive="0"/>
+	<effect class="result" key="static_object" copy="terrain"/>
+	<effect class="result" key="vehicle" copy="terrain"/>
+	<effect class="result" key="character" copy="terrain"/>
+	<effect class="result" key="other" copy="terrain"/>
+	</projectile>
+	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
+	<target_factors tag="heavy_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0"/>
+	<target_factors tag="apc" distance="1.0" direction="0.0" squad_command="1.0" base_score="6.0"/>
+	<target_factors tag="light_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="5.0"/>
+	<target_factors tag="defensive_at" distance="1.0" direction="0.0" squad_command="1.0" base_score="5.5"/>
+	<target_factors tag="tactical" distance="1.0" direction="0.0" squad_command="1.0" base_score="7.0"/>
+	<target_factors tag="bazooka" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.5"/>
+	<target_factors tag="punchme" distance="1.0" direction="0.0" squad_command="1.0" base_score="30.0"/>
+	<effect class="muzzle" ref="sawsnone"/>
+</weapon>
+
+<weapon key="typhoon_main_cannon_sound2">
 	<specification retrigger_time="6" accuracy_factor="2.0" sustained_fire_grow_step="0.0" sustained_fire_diminish_rate="1.0" sight_range_modifier="2.0" ai_sight_range_modifier="1.0" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="0" suppressed="0" name="Tank cannon" class="0" projectile_speed="220.0" slot="2" barrel_offset_3d="-20.0 0.7 3.5" projectiles_per_shot="1" spread_range="0.0" use_basic_muzzle_smoke_effect="0"/>
 	<model filename=""/>
 	<hud_icon filename="typhoon_main_cannon.png"/>
 	<commonness value="0.0"/>
 	<sound key="fire" fileref="typhon_fire_FromHALO4.wav" pitch_variety="0.05" volume="3.5"/>
 	<projectile file="typhoon_laser.projectile" pulldown_in_air="0.5">
-	<result class="blast" damage="30.5" radius="8" decal="1" push="1.0" character_state="death" damage_origin_vehicle="0" faction_compare="not_equal"/>
+	<result class="blast" damage="1.0" radius="8" decal="1" push="1.5" character_state="wound" damage_origin_vehicle="0" faction_compare="not_equal"/>
 	<trail probability="1.0" key="laser_tifeng"/>
 	<sound class="result" key="other" fileref="explosion_Large_FromSQUAD_1.wav" volume="2.9"/>
 	<sound class="result" key="other" fileref="explosion_Large_FromSQUAD_2.wav" volume="2.9"/>
@@ -50216,25 +50258,6 @@
 	<sound class="result" key="static_object" copy="other"/>
 	<sound class="result" key="vehicle" copy="other"/>
 	<sound class="result" key="character" copy="other"/>
-	<effect class="result" key="vehicle" tag="metal_heavy" ref="HitTank" lighting="1"/>
-	<effect class="result" key="vehicle" tag="metal_heavy" ref="HitTankSparks"/>
-	<effect class="result" key="vehicle" tag="metal_heavy" ref="SmokeBurst" post_processing="1"/>
-	<effect class="result" key="vehicle" tag="metal_heavy" ref="BurstShine" lighting="0"/>
-	<effect class="result" key="vehicle" tag="metal_heavy" ref="Godray" lighting="0"/>
-	<effect class="result" key="terrain" ref="BigBurst" use_surface_color="1"/>
-	<effect class="result" key="terrain" ref="SmokeTop" post_processing="1"/>
-	<effect class="result" key="terrain" ref="Smoke" post_processing="1"/>
-	<effect class="result" key="terrain" ref="Shine" lighting="0"/>
-	<effect class="result" key="terrain" ref="Godray" lighting="0"/>
-	<effect class="result" key="terrain" ref="ShadowSmoke" shadow="1"/>
-	<effect class="result" key="terrain" ref="woosh" post_processing="0" shadow="0"/>
-	<effect class="result" type="splat_map" surface_tag="" size="3.0" atlas_index="0" layer="1"/>
-	<effect class="result" type="splat_map" surface_tag="" size="5.0" atlas_index="4" layer="0"/>
-	<effect class="result" type="splat_map" surface_tag="" size="6.0" atlas_index="0" layer="2" additive="0"/>
-	<effect class="result" key="static_object" copy="terrain"/>
-	<effect class="result" key="vehicle" copy="terrain"/>
-	<effect class="result" key="character" copy="terrain"/>
-	<effect class="result" key="other" copy="terrain"/>
 	</projectile>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
 	<target_factors tag="heavy_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0"/>
@@ -50244,96 +50267,7 @@
 	<target_factors tag="tactical" distance="1.0" direction="0.0" squad_command="1.0" base_score="7.0"/>
 	<target_factors tag="bazooka" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.5"/>
 	<target_factors tag="punchme" distance="1.0" direction="0.0" squad_command="1.0" base_score="30.0"/>
-</weapon>
-
-<weapon key="typhoon_charged_laser2">
-	<specification retrigger_time="6" accuracy_factor="2.0" sustained_fire_grow_step="0.0" sustained_fire_diminish_rate="1.0" sight_range_modifier="2.0" ai_sight_range_modifier="1.0" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="0" suppressed="0" name="Tank cannon" class="0" projectile_speed="220.0" slot="2" barrel_offset_3d="-20.0 0.7 3.5" projectiles_per_shot="1" spread_range="0.0" use_basic_muzzle_smoke_effect="0"/>
-	<model filename=""/>
-	<hud_icon filename="typhoon_main_cannon.png"/>
-	<commonness value="0.0"/>
-	<sound key="fire" fileref="typhon_fire_FromHALO4.wav" pitch_variety="0.05" volume="3.5"/>
-	<projectile file="typhoon_laser.projectile" pulldown_in_air="1.0">
-	<result class="blast" damage="30.5" radius="8" decal="1" push="1.0" character_state="death" damage_origin_vehicle="0" faction_compare="not_equal"/>
-	<trail probability="1.0" key="laser_tifeng"/>
-	<sound class="result" key="other" fileref="explosion_Large_FromSQUAD_1.wav" volume="2.9"/>
-	<sound class="result" key="other" fileref="explosion_Large_FromSQUAD_2.wav" volume="2.9"/>
-	<sound class="result" key="terrain" copy="other"/>
-	<sound class="result" key="static_object" copy="other"/>
-	<sound class="result" key="vehicle" copy="other"/>
-	<sound class="result" key="character" copy="other"/>
-	<effect class="result" key="vehicle" tag="metal_heavy" ref="HitTank" lighting="1"/>
-	<effect class="result" key="vehicle" tag="metal_heavy" ref="HitTankSparks"/>
-	<effect class="result" key="vehicle" tag="metal_heavy" ref="SmokeBurst" post_processing="1"/>
-	<effect class="result" key="vehicle" tag="metal_heavy" ref="BurstShine" lighting="0"/>
-	<effect class="result" key="vehicle" tag="metal_heavy" ref="Godray" lighting="0"/>
-	<effect class="result" key="terrain" ref="BigBurst" use_surface_color="1"/>
-	<effect class="result" key="terrain" ref="SmokeTop" post_processing="1"/>
-	<effect class="result" key="terrain" ref="Smoke" post_processing="1"/>
-	<effect class="result" key="terrain" ref="Shine" lighting="0"/>
-	<effect class="result" key="terrain" ref="Godray" lighting="0"/>
-	<effect class="result" key="terrain" ref="ShadowSmoke" shadow="1"/>
-	<effect class="result" key="terrain" ref="woosh" post_processing="0" shadow="0"/>
-	<effect class="result" type="splat_map" surface_tag="" size="3.0" atlas_index="0" layer="1"/>
-	<effect class="result" type="splat_map" surface_tag="" size="5.0" atlas_index="4" layer="0"/>
-	<effect class="result" type="splat_map" surface_tag="" size="6.0" atlas_index="0" layer="2" additive="0"/>
-	<effect class="result" key="static_object" copy="terrain"/>
-	<effect class="result" key="vehicle" copy="terrain"/>
-	<effect class="result" key="character" copy="terrain"/>
-	<effect class="result" key="other" copy="terrain"/>
-	</projectile>
-	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
-	<target_factors tag="heavy_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0"/>
-	<target_factors tag="apc" distance="1.0" direction="0.0" squad_command="1.0" base_score="6.0"/>
-	<target_factors tag="light_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="5.0"/>
-	<target_factors tag="defensive_at" distance="1.0" direction="0.0" squad_command="1.0" base_score="5.5"/>
-	<target_factors tag="tactical" distance="1.0" direction="0.0" squad_command="1.0" base_score="7.0"/>
-	<target_factors tag="bazooka" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.5"/>
-	<target_factors tag="punchme" distance="1.0" direction="0.0" squad_command="1.0" base_score="30.0"/>
-</weapon>
-
-<weapon key="typhoon_charged_laser3">
-	<specification retrigger_time="6" accuracy_factor="2.0" sustained_fire_grow_step="0.0" sustained_fire_diminish_rate="1.0" sight_range_modifier="2.0" ai_sight_range_modifier="1.0" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="0" suppressed="0" name="Tank cannon" class="0" projectile_speed="220.0" slot="2" barrel_offset_3d="-20.0 0.7 3.5" projectiles_per_shot="1" spread_range="0.0" use_basic_muzzle_smoke_effect="0"/>
-	<model filename=""/>
-	<hud_icon filename="typhoon_main_cannon.png"/>
-	<commonness value="0.0"/>
-	<sound key="fire" fileref="typhon_fire_FromHALO4.wav" pitch_variety="0.05" volume="3.5"/>
-	<projectile file="typhoon_laser.projectile" pulldown_in_air="2.0">
-	<result class="blast" damage="50.0" radius="8" decal="1" push="1.0" character_state="death" damage_origin_vehicle="0" faction_compare="not_equal"/>
-	<trail probability="1.0" key="laser_tifeng"/>
-	<sound class="result" key="other" fileref="explosion_Large_FromSQUAD_1.wav" volume="2.9"/>
-	<sound class="result" key="other" fileref="explosion_Large_FromSQUAD_2.wav" volume="2.9"/>
-	<sound class="result" key="terrain" copy="other"/>
-	<sound class="result" key="static_object" copy="other"/>
-	<sound class="result" key="vehicle" copy="other"/>
-	<sound class="result" key="character" copy="other"/>
-	<effect class="result" key="vehicle" tag="metal_heavy" ref="HitTank" lighting="1"/>
-	<effect class="result" key="vehicle" tag="metal_heavy" ref="HitTankSparks"/>
-	<effect class="result" key="vehicle" tag="metal_heavy" ref="SmokeBurst" post_processing="1"/>
-	<effect class="result" key="vehicle" tag="metal_heavy" ref="BurstShine" lighting="0"/>
-	<effect class="result" key="vehicle" tag="metal_heavy" ref="Godray" lighting="0"/>
-	<effect class="result" key="terrain" ref="BigBurst" use_surface_color="1"/>
-	<effect class="result" key="terrain" ref="SmokeTop" post_processing="1"/>
-	<effect class="result" key="terrain" ref="Smoke" post_processing="1"/>
-	<effect class="result" key="terrain" ref="Shine" lighting="0"/>
-	<effect class="result" key="terrain" ref="Godray" lighting="0"/>
-	<effect class="result" key="terrain" ref="ShadowSmoke" shadow="1"/>
-	<effect class="result" key="terrain" ref="woosh" post_processing="0" shadow="0"/>
-	<effect class="result" type="splat_map" surface_tag="" size="3.0" atlas_index="0" layer="1"/>
-	<effect class="result" type="splat_map" surface_tag="" size="5.0" atlas_index="4" layer="0"/>
-	<effect class="result" type="splat_map" surface_tag="" size="6.0" atlas_index="0" layer="2" additive="0"/>
-	<effect class="result" key="static_object" copy="terrain"/>
-	<effect class="result" key="vehicle" copy="terrain"/>
-	<effect class="result" key="character" copy="terrain"/>
-	<effect class="result" key="other" copy="terrain"/>
-	</projectile>
-	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
-	<target_factors tag="heavy_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0"/>
-	<target_factors tag="apc" distance="1.0" direction="0.0" squad_command="1.0" base_score="6.0"/>
-	<target_factors tag="light_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="5.0"/>
-	<target_factors tag="defensive_at" distance="1.0" direction="0.0" squad_command="1.0" base_score="5.5"/>
-	<target_factors tag="tactical" distance="1.0" direction="0.0" squad_command="1.0" base_score="7.0"/>
-	<target_factors tag="bazooka" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.5"/>
-	<target_factors tag="punchme" distance="1.0" direction="0.0" squad_command="1.0" base_score="30.0"/>
+	<effect class="muzzle" ref="sawsnone"/>
 </weapon>
 
 <weapon key="typhoon_main_cannon_2">
