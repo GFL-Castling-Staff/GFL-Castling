@@ -393,3 +393,95 @@ particle_system Bullet_Burnout_20mm
         rotation_range_end 360
     }      
 }
+
+particle_system HE_burstShine
+{
+	quota	200
+	material	BurstShine
+	particle_width	1.5
+	particle_height	1.5
+	sorted	false
+	billboard_type	point
+	
+	emitter Point
+	{
+		angle	90
+		colour	1 0.9 0.9 1
+		colour_range_start	0.6 0.6 0.3 1
+		colour_range_end	0.6 0.6 0.4 1
+		direction	0 0 0
+		emission_rate	50
+		position	0 0.2 0.1
+		velocity	0
+		time_to_live	0.25
+		duration	0.05
+	}
+	
+	affector ColourFader2
+	{
+		red1	-0.1
+		green1	-1.5
+		blue1	-3
+		alpha1	-6
+		state_change 0.15
+		red2	-0.1
+		green2	-1.5
+		blue2	-3
+		alpha2	-6
+	}
+	
+	affector Scaler
+	{
+		rate	-2
+	}
+}
+
+particle_system HE_burstSmoke
+{
+	quota	1000
+	material	Dust3
+	particle_width	0.1
+	particle_height	0.1
+	cull_each	false
+	renderer	billboard
+	billboard_type	point
+
+	emitter Point
+	{
+		angle	360
+		colour_range_start	1 1 1 0.2
+		colour_range_end	1 1 1 0.8
+		direction	0 1 0
+		emission_rate	1500
+		position	0 0 0
+		velocity	1.5
+		velocity_min	1.0
+		velocity_max	2.0
+		time_to_live	2
+		time_to_live_min	1.5
+		time_to_live_max	2
+		duration	0.1
+	}
+
+	affector Scaler
+	{
+		rate	5.0
+	}
+
+	affector Rotator
+	{
+		rotation_speed_range_start	-45
+		rotation_speed_range_end	45
+		rotation_range_start	0
+		rotation_range_end	360
+	}
+
+
+	affector ColourFader
+	{
+		red	1
+		green	1
+		blue	1
+		alpha	-1
+	}
+}

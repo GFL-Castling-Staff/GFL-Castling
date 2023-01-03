@@ -297,3 +297,47 @@ particle_system hitGround_30mm
 		alpha -0.5
     }
 }
+
+particle_system hitGroundHEspark
+{
+	quota	300
+	material	FlareSparkle
+	particle_width	0.2
+	particle_height	0.2
+	cull_each	false
+	renderer	billboard
+	billboard_type	point
+
+	emitter Box
+	{
+		angle 180
+		colour_range_start	1 1 0 1
+		colour_range_end	1 1 0.5 1
+		direction	0 0 0
+		emission_rate	1200
+        duration 		0.1
+		position	0 0 0
+		velocity	15
+		velocity_min	15
+		velocity_max	20
+		time_to_live	0.3
+		time_to_live_min	0.1
+		time_to_live_max	0.2
+		width	0.2
+		height	0.0
+		depth	0.2
+	}
+
+	affector Scaler
+	{
+		rate	-0.8
+	}
+	
+	affector ColourFader
+	{
+		red		-3
+		green	-3
+		blue	0
+		alpha	0
+	}
+}
