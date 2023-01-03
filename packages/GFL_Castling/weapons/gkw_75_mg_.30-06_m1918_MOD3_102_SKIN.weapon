@@ -1,92 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapons>
-    <weapon file="two_hands_ar.animation_base" key="gkw_m1918mod3_102.weapon">
-
-        <specification barrel_offset="0.5" 
-        retrigger_time="0.0923" 
-        accuracy_factor="0.98" 
-        sustained_fire_grow_step="0.45" 
-        sustained_fire_diminish_rate="2.7" 
+    <weapon key="gkw_m1918mod3_102.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+        <specification 
+        barrel_offset="0.5" 
+        retrigger_time="-1" 
+        accuracy_factor="0.85" 
+        sustained_fire_grow_step="0.65" 
+        sustained_fire_diminish_rate="3.0" 
+        spread_range="0.1"
         magazine_size="20" 
         suppressed="0" 
         name="M1918(MOD3)-[Bunny Girl]" 
-        class="0" 
-        projectile_speed="244.76" 
-        sight_range_modifier="1.8"/>
-
-
+        class="2" 
+        stab_enabled="1"
+        stance_accuracy_rate="3.0"
+        projectile_speed="200"
+        sight_range_modifier="1.75"/>
         <animation key="reload" animation_key="reloading, Machine gun 0.6" />
-        <inventory buy_price="120.0" sell_price="120.0" />
-        <commonness value="0" in_stock="0" can_respawn_with="1" />
+        <inventory encumbrance="20.0" buy_price="191.8" sell_price="191.8" />
         <next_in_chain key="gkw_m1918mod3_102_skill.weapon" share_ammo="1" />
-        <capacity value="1" source="rank" source_value="0.0" />
+        <commonness value="0.2" in_stock="1" can_respawn_with="1" />
         <sound key="fire" fileref="m1918_fire_FromWF.wav" pitch_variety="0.05" volume="1.2" />
-	    <sound key="magazine_out" fileref="m1918_mgz_out_FromRS2V.wav" volume="0.6" />
-	    <sound key="magazine_in" fileref="m1918_mgz_in_FromRS2V.wav" volume="0.6" />
-	    <sound key="cycle" fileref="m1918_cycle_FromRS2V.wav" volume="0.6" />
-	    <sound class="impact" fileref="rifle_drop.wav" />
-	    <model filename="gkw_mg_m1918_mod3.xml" />
-
-
+        <sound key="magazine_out" fileref="m1918_mgz_out_FromRS2V.wav" volume="0.6" />
+        <sound key="magazine_in" fileref="m1918_mgz_in_FromRS2V.wav" volume="0.6" />
+        <sound key="cycle" fileref="m1918_cycle_FromRS2V.wav" volume="0.6" />
+        <sound class="impact" fileref="rifle_drop.wav" />
+        <model filename="gkw_mg_m1918_mod3.xml" />
         <hud_icon filename="gkw_m1918_102.png" />
-
         <projectile file="bullet.projectile">
-            <result class="hit" kill_probability="2.2" kill_probability_offset_on_successful_hit="1.8" kill_decay_start_time="1.147" kill_decay_end_time="1.912" />
+            <result class="hit" kill_probability="3.006" kill_probability_offset_on_successful_hit="2.0" kill_decay_start_time="1.147" kill_decay_end_time="1.912" />
         </projectile>
         <effect class="muzzle" ref="ejection_76251" />
-        <stance state_key="running" accuracy="0.6" />
+        <stance state_key="running" accuracy="0.4" />
+        <stance state_key="walking" accuracy="0.5" />
         <stance state_key="crouch_moving" accuracy="0.6" />
         <stance state_key="prone_moving" accuracy="0.6" />
-        <stance state_key="standing" accuracy="0.85" />
-        <stance state_key="crouching" accuracy="1" />
-        <stance state_key="prone" accuracy="1.2" />
-        <stance state_key="over_wall" accuracy="1.2" />
-        <modifier class="speed" value="0.2" />
-
+        <stance state_key="standing" accuracy="0.8" />
+        <stance state_key="crouching" accuracy="0.95" />
+        <stance state_key="prone" accuracy="1.15" />
+        <stance state_key="over_wall" accuracy="1.15" />
+        <modifier class="speed" value="0" />
+        <tag name="autorifle"/>
+        <animation state_key="recoil" animation_key="recoil_unlimit"/>
+        <animation state_key="recoil" stance_key="over_wall" animation_key="recoil_unlimit"/>
+        <animation state_key="recoil" stance_key="prone" animation_key="recoil_prone_unlimit"/>
+        <animation key="cycle" animation_key="cycle_2h_rifle_300rpm"/>
+        <animation key="cycle" stance_key="crouching" animation_key="cycle_2h_rifle_400rpm"/>
+        <animation key="cycle" stance_key="prone" animation_key="cycle_2h_rifle_450rpm_prone"/>
+        <animation key="cycle" stance_key="over_wall" animation_key="cycle_2h_rifle_450rpm"/>        
+        <animation state_key="hold_on_wall" animation_key="still"/>
+        <animation state_key="celebrate_shoot" animation_key="celebrating, shooting"/>
+        <animation state_key="stabbing" animation_key="melee, quick knife"/>
+        <animation state_key="stabbing" animation_key="pistol whip 3"/>
+        <stance state_key="walking" accuracy="0.675"/>
+        <target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
+        <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
+        <target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
+        <target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
+        <target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0"/>
+        <target_factors tag="commander" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0"/>         
     </weapon>
-    <weapon file="two_hands_ar.animation_base" key="gkw_m1918mod3_102_skill.weapon">
-
+    <weapon key="gkw_m1918mod3_102_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
         <specification 
         barrel_offset="0.5" 
-        retrigger_time="0.0923" 
-        accuracy_factor="0.98" 
-        sustained_fire_grow_step="0.45" 
-        sustained_fire_diminish_rate="2.9" 
+        retrigger_time="-1" 
+        accuracy_factor="0.85" 
+        spread_range="0.1"
+        sustained_fire_grow_step="0.65" 
+        sustained_fire_diminish_rate="3.0" 
         magazine_size="20" 
         suppressed="0" 
         name="M1918(MOD3)-[Bunny Girl]-[Battlefield Magic]" 
-        class="0" 
-        projectile_speed="244.76"
-        sight_range_modifier="2.25"/>
-
-
+        class="2" 
+        stab_enabled="1"
+        projectile_speed="200"
+        sight_range_modifier="1.75"/>
         <animation key="reload" animation_key="reloading, Machine gun 0.6" />
-        <inventory buy_price="120.0" sell_price="120.0" />
+        <inventory encumbrance="20.0" buy_price="191.8" sell_price="191.8" />
         <commonness value="0" in_stock="0" can_respawn_with="1" />
         <next_in_chain key="gkw_m1918mod3_102.weapon" share_ammo="1" />
-        <capacity value="1" source="rank" source_value="0.0" />
-        	    <sound key="fire" fileref="m1918_fire_FromRS2V.wav" pitch_variety="0.05" volume="1.2" />
-	    <sound key="magazine_out" fileref="m1918_mgz_out_FromRS2V.wav" volume="0.6" />
-	    <sound key="magazine_in" fileref="m1918_mgz_in_FromRS2V.wav" volume="0.6" />
-	    <sound key="cycle" fileref="m1918_cycle_FromRS2V.wav" volume="0.6" />
-	    <sound class="impact" fileref="rifle_drop.wav" />
-	    <model filename="gkw_mg_m1918_mod3.xml" />
-
-
+        <sound key="fire" fileref="m1918_fire_FromRS2V.wav" pitch_variety="0.05" volume="1.2" />
+        <sound key="magazine_out" fileref="m1918_mgz_out_FromRS2V.wav" volume="0.6" />
+        <sound key="magazine_in" fileref="m1918_mgz_in_FromRS2V.wav" volume="0.6" />
+        <sound key="cycle" fileref="m1918_cycle_FromRS2V.wav" volume="0.6" />
+        <sound class="impact" fileref="rifle_drop.wav" />
+        <model filename="gkw_mg_m1918_mod3.xml" />
         <hud_icon filename="gkw_m1918_102.png" />
-
         <projectile file="bullet.projectile">
-            <result class="hit" kill_probability="2.4" kill_probability_offset_on_successful_hit="3.0" kill_decay_start_time="1.147" kill_decay_end_time="1.912" />
+            <result class="hit" kill_probability="3.006" kill_probability_offset_on_successful_hit="2.85" kill_decay_start_time="1.147" kill_decay_end_time="1.912" />
+            <trail probability="1.0" key="BulletApTrail"/>
         </projectile>
         <effect class="muzzle" ref="ejection_76251" />
-        <stance state_key="running" accuracy="0.85" />
-        <stance state_key="crouch_moving" accuracy="0.85" />
-        <stance state_key="prone_moving" accuracy="0.85" />
-        <stance state_key="standing" accuracy="0.85" />
-        <stance state_key="crouching" accuracy="1" />
-        <stance state_key="prone" accuracy="1.2" />
-        <stance state_key="over_wall" accuracy="1.2" />
+        <stance state_key="running" accuracy="0.4" />
+        <stance state_key="walking" accuracy="0.5" />
+        <stance state_key="crouch_moving" accuracy="0.6" />
+        <stance state_key="prone_moving" accuracy="0.6" />
+        <stance state_key="standing" accuracy="0.8" />
+        <stance state_key="crouching" accuracy="0.95" />
+        <stance state_key="prone" accuracy="1.15" />
+        <stance state_key="over_wall" accuracy="1.15" />
         <modifier class="speed" value="-0.2" />
-        <modifier class="hit_success_probability" value="+0.2" />
+        <modifier class="hit_success_probability" value="+0.3" />
+        <tag name="autorifle"/>
+        <animation state_key="recoil" animation_key="recoil_unlimit"/>
+        <animation state_key="recoil" stance_key="over_wall" animation_key="recoil_unlimit"/>
+        <animation state_key="recoil" stance_key="prone" animation_key="recoil_prone_unlimit"/>
+        <animation key="cycle" animation_key="cycle_2h_rifle_500rpm"/>
+        <animation key="cycle" stance_key="crouching" animation_key="cycle_2h_rifle_600rpm"/>
+        <animation key="cycle" stance_key="prone" animation_key="cycle_2h_rifle_750rpm_prone"/>
+        <animation key="cycle" stance_key="over_wall" animation_key="cycle_2h_rifle_750rpm"/>       
+        <animation state_key="hold_on_wall" animation_key="still"/>
+        <animation state_key="celebrate_shoot" animation_key="celebrating, shooting"/>
+        <animation state_key="stabbing" animation_key="melee, quick knife"/>
+        <animation state_key="stabbing" animation_key="pistol whip 3"/>
+        <target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
+        <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
+        <target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
+        <target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
+        <target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0"/>
+        <target_factors tag="commander" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0"/> 
     </weapon>
 </weapons>
