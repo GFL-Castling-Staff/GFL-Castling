@@ -36,7 +36,7 @@
         <hud_icon filename="gkw_lwmmg.png"/>
         <projectile file="bullet.projectile">
             <result class="hit" kill_probability="2.4" kill_probability_offset_on_successful_hit="2" kill_decay_start_time="2.135" kill_decay_end_time="4.245"/>
-            <trail probability="1.0" key="bullet_new_he"/>
+            <trail probability="1.0" key="bullet_new_deep"/>
         </projectile>
         <effect class="muzzle" ref="ejection_76251"/>
         <stance state_key="running" accuracy="0.4"/>

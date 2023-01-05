@@ -1,5 +1,5 @@
 
-particle_system fire_newtest_muzzle
+particle_system muzzle_big_yellow
 {
 	quota	50
 	material	fire_newtest
@@ -59,7 +59,7 @@ material fire_newtest {
 			fog_override true
 
 			texture_unit {
-				texture fire_newtest_muzzle.png
+				texture muzzle_big_yellow.png
 			}
 		}
 	}

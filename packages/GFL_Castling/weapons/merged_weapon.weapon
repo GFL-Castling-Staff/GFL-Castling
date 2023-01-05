@@ -4987,7 +4987,7 @@
 
 <weapon key="gkw_m2hb_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<specification barrel_offset="0.5" accuracy_factor="0.6" class="2" magazine_size="250" name="Browning M2HB-[Terminating Barrage]" spread_range="0.15" projectile_speed="200" retrigger_time="-1" suppressed="0" sustained_fire_diminish_rate="1.5" sustained_fire_grow_step="1.0" sight_range_modifier="1.3" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1"/>
-	<inventory buy_price="60.0" sell_price="60.0"/>
+	<inventory encumbrance="30.0" buy_price="60.0" sell_price="60.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<animation key="reload" animation_key="reloading, Machine gun 4"/>
 	<next_in_chain key="gkw_m2hb.weapon" share_ammo="1"/>
@@ -5003,6 +5003,7 @@
 	<trail probability="1.0" key="BulletApTrail"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_50BMG"/>
+	<effect class="muzzle" ref="muzzle_big_yellow"/>
 	<stance state_key="running" accuracy="0.3"/>
 	<stance state_key="walking" accuracy="0.35"/>
 	<stance state_key="crouch_moving" accuracy="0.3"/>
@@ -5041,6 +5042,7 @@
 	<hud_icon filename="gkw_m249.png"/>
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="1.9" kill_probability_offset_on_successful_hit="1.5" kill_decay_start_time="1.967" kill_decay_end_time="3.279"/>
+	<trail probability="1.0" key="bullet_new_deep"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_76251"/>
 	<stance state_key="running" accuracy="0.3"/>
@@ -5052,6 +5054,7 @@
 	<stance state_key="prone" accuracy="1.0"/>
 	<stance state_key="over_wall" accuracy="1.0"/>
 	<tag name="machine gun"/>
+	<addon_model filename="kcco_ammopack.xml"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
@@ -8683,7 +8686,7 @@
 </weapon>
 
 <weapon key="gkw_dp28_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="5.0" sustained_fire_diminish_rate="1.0" magazine_size="7" spread_range="0.1" sight_range_modifier="1.85" reload_one_at_a_time="1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" suppressed="0" barrel_offset="0.6" name="DP-28-Kulakov" class="0" projectile_speed="80" slot="0" projectiles_per_shot="1"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="5.0" sustained_fire_diminish_rate="1.0" magazine_size="7" spread_range="0.1" sight_range_modifier="1.85" reload_one_at_a_time="1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" suppressed="0" barrel_offset="0.6" name="DP-28-Kulakov" class="2" projectile_speed="80" slot="0" projectiles_per_shot="1"/>
 	<inventory encumbrance="30.0" buy_price="28.0" sell_price="28.0"/>
 	<next_in_chain key="gkw_dp28.weapon" share_ammo="0"/>
 	<animation key="recoil" animation_key="recoil1, big"/>
@@ -8723,7 +8726,7 @@
 	<specification barrel_offset="0.5" retrigger_time="-1" accuracy_factor="1.0" sustained_fire_grow_step="0.35" sustained_fire_diminish_rate="2.1" magazine_size="100" name="M60" class="2" projectile_speed="180" sight_range_modifier="1.3" spread_range="" stab_enabled="1" carry_in_two_hands="1" stance_accuracy_rate="1.5" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" slot="0"/>
 	<animation key="reload" animation_key="reloading, Machine gun 1.6"/>
 	<inventory encumbrance="30.0" buy_price="60.0" sell_price="60.0"/>
-	<sound key="fire" fileref="m60_fire_FromRS2V.wav" pitch_variety="0.05" volume="1"/>
+	<sound key="fire" fileref="m60_fire_FromRS2V.wav" pitch_variety="0.05" volume="1.3"/>
 	<sound key="magazine_out" fileref="m60_mgz_out_FromCOD17.wav" volume="0.8"/>
 	<sound key="magazine_in" fileref="m60_mgz_in_FromCOD17.wav" volume="0.8"/>
 	<sound key="cycle" fileref="m60_cycle_FromFC5.wav" volume="0.8"/>
@@ -8732,7 +8735,7 @@
 	<hud_icon filename="gkw_m60.png"/>
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="2.1" kill_probability_offset_on_successful_hit="1.5" kill_decay_start_time="1" kill_decay_end_time="1"/>
-	<trail probability="1.0" key="bullet_new_he"/>
+	<trail probability="1.0" key="bullet_new_deep"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_76251"/>
 	<stance state_key="running" accuracy="0.3"/>
@@ -8752,7 +8755,7 @@
 	<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
 	<target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
 	<animation state_key="hold" animation_key="hold, lmg"/>
-	<animation state_key="running" animation_key="running, line infantry"/>
+	<animation state_key="running" animation_key="running, bayonet"/>
 	<animation state_key="walking" animation_key="walking, hip fire"/>
 	<animation state_key="walking_backwards" animation_key="walking backwards, hip fire"/>
 	<animation state_key="celebrate_shoot" animation_key="celebrating, shooting"/>
@@ -13106,7 +13109,7 @@
 	<hud_icon filename="gkw_lwmmg.png"/>
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="2.4" kill_probability_offset_on_successful_hit="2" kill_decay_start_time="2.135" kill_decay_end_time="4.245"/>
-	<trail probability="1.0" key="bullet_new_he"/>
+	<trail probability="1.0" key="bullet_new_deep"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_76251"/>
 	<stance state_key="running" accuracy="0.4"/>
@@ -15495,7 +15498,7 @@
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_mg_mg338.xml"/>
 	<hud_icon filename="gkw_mg338_skill.png"/>
-	<effect class="muzzle" ref="fire_newtest_muzzle"/>
+	<effect class="muzzle" ref="muzzle_big_yellow"/>
 	<projectile file="bullet_he.projectile">
 	<result class="blast" damage="2.5" radius="2.5" decal="1" push="0.3" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	</projectile>
@@ -15630,7 +15633,7 @@
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_ar_galil_mod3_from_gua.xml"/>
 	<hud_icon filename="gkw_galilmod3_skill.png"/>
-	<effect class="muzzle" ref="fire_newtest_muzzle"/>
+	<effect class="muzzle" ref="muzzle_big_yellow"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="2.2" kill_probability_offset_on_successful_hit="2.8" kill_decay_start_time="1.129" kill_decay_end_time="1.881"/>
@@ -18244,7 +18247,7 @@
 </weapon>
 
 <weapon key="gkw_m1919a4.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.5" retrigger_time="-1" accuracy_factor="0.6" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="3.0" spread_range="0.15" magazine_size="100" suppressed="0" name="Browning M1919A4" class="2" projectile_speed="190" sight_range_modifier="1.3" stab_enabled="1" stance_accuracy_rate="1.0" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" slot="0"/>
+	<specification barrel_offset="0.6" retrigger_time="-1" accuracy_factor="0.6" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="3.0" spread_range="0.15" magazine_size="100" suppressed="0" name="Browning M1919A4" class="2" projectile_speed="190" sight_range_modifier="1.3" stab_enabled="1" stance_accuracy_rate="1.0" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" slot="0"/>
 	<next_in_chain key="gkw_m1919a4_skill.weapon" share_ammo="0"/>
 	<animation key="reload" animation_key="reloading, Machine gun 2.4"/>
 	<inventory encumbrance="30.0" buy_price="19.0" sell_price="19.0"/>
@@ -18293,7 +18296,7 @@
 </weapon>
 
 <weapon key="gkw_m1919a4_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.5" retrigger_time="-1" accuracy_factor="0.6" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="3.0" magazine_size="250" suppressed="0" name="Browning M1919A4-[Hunting Impulse]" class="2" projectile_speed="180" spread_range="0.1" sight_range_modifier="1.5" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1"/>
+	<specification barrel_offset="0.6" retrigger_time="-1" accuracy_factor="0.6" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="3.0" magazine_size="250" suppressed="0" name="Browning M1919A4-[Hunting Impulse]" class="2" projectile_speed="180" spread_range="0.1" sight_range_modifier="1.5" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1"/>
 	<next_in_chain key="gkw_m1919a4.weapon" share_ammo="0"/>
 	<animation key="reload" animation_key="reloading, Machine gun 2.4"/>
 	<inventory encumbrance="30.0" buy_price="19.0" sell_price="19.0"/>
@@ -18311,6 +18314,7 @@
 	</projectile>
 	<modifier class="speed" value="-0.15"/>
 	<effect class="muzzle" ref="ejection_76251"/>
+	<effect class="muzzle" ref="muzzle_big_yellow"/>
 	<stance state_key="running" accuracy="0.3"/>
 	<stance state_key="walking" accuracy="0.35"/>
 	<stance state_key="crouch_moving" accuracy="0.5"/>
@@ -23946,7 +23950,7 @@
 	<hud_icon filename="gkw_ar15mod3.png"/>
 	<commonness value="0.01" in_stock="0" can_respawn_with="1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<effect class="muzzle" ref="fire_newtest_muzzle"/>
+	<effect class="muzzle" ref="muzzle_big_yellow"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="2.2" kill_probability_offset_on_successful_hit="4.0" kill_decay_start_time="1.292" kill_decay_end_time="2.154"/>
@@ -25221,7 +25225,7 @@
 	<hud_icon filename="gkw_lwmmgmod3.png"/>
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="2.55" kill_probability_offset_on_successful_hit="3.5" kill_decay_start_time="2.135" kill_decay_end_time="4.245"/>
-	<trail probability="1.0" key="bullet_new_he"/>
+	<trail probability="1.0" key="bullet_new_deep"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_76251"/>
 	<stance state_key="running" accuracy="0.4"/>
@@ -32079,7 +32083,7 @@
 	<hud_icon filename="gkw_lwmmg_1808.png"/>
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="2.4" kill_probability_offset_on_successful_hit="2" kill_decay_start_time="2.135" kill_decay_end_time="4.245"/>
-	<trail probability="1.0" key="bullet_new_he"/>
+	<trail probability="1.0" key="bullet_new_deep"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_76251"/>
 	<stance state_key="running" accuracy="0.4"/>
@@ -38041,7 +38045,7 @@
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_ar_ar15_532.xml"/>
 	<hud_icon filename="gkw_ar15_532.png"/>
-	<effect class="muzzle" ref="fire_newtest_muzzle"/>
+	<effect class="muzzle" ref="muzzle_big_yellow"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="2.2" kill_probability_offset_on_successful_hit="4.0" kill_decay_start_time="1.292" kill_decay_end_time="2.154"/>
@@ -38162,7 +38166,7 @@
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_ar_ar15mod3.xml"/>
 	<hud_icon filename="gkw_ar15_30001.png"/>
-	<effect class="muzzle" ref="fire_newtest_muzzle"/>
+	<effect class="muzzle" ref="muzzle_big_yellow"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="2.2" kill_probability_offset_on_successful_hit="4.0" kill_decay_start_time="1.292" kill_decay_end_time="2.154"/>
@@ -39301,7 +39305,7 @@
 	<hud_icon filename="gkw_lwmmg_1808.png"/>
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="2.55" kill_probability_offset_on_successful_hit="3.5" kill_decay_start_time="2.135" kill_decay_end_time="4.245"/>
-	<trail probability="1.0" key="bullet_new_he"/>
+	<trail probability="1.0" key="bullet_new_deep"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_76251"/>
 	<stance state_key="running" accuracy="0.4"/>

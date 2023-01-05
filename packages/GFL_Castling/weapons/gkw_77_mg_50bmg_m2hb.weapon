@@ -91,7 +91,7 @@
         can_shoot_standing="1"
         can_shoot_crouching="1"
         can_shoot_prone="1"/>
-        <inventory buy_price="60.0" sell_price="60.0"/>
+        <inventory encumbrance="30.0" buy_price="60.0" sell_price="60.0"/>
         <commonness value="0" in_stock="0" can_respawn_with="1"/>
         <animation key="reload" animation_key="reloading, Machine gun 4"/>
         <next_in_chain key="gkw_m2hb.weapon" share_ammo="1"/>
@@ -107,6 +107,7 @@
             <trail probability="1.0" key="BulletApTrail"/>
         </projectile>
         <effect class="muzzle" ref="ejection_50BMG"/>
+        <effect class="muzzle" ref="muzzle_big_yellow"/>
         <stance state_key="running" accuracy="0.3"/>
         <stance state_key="walking" accuracy="0.35"/>
         <stance state_key="crouch_moving" accuracy="0.3"/>

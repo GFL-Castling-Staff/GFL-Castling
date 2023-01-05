@@ -2,7 +2,7 @@
 <weapons>
     <weapon key="gkw_m1919a4.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
         <specification 
-        barrel_offset="0.5"
+        barrel_offset="0.6"
         retrigger_time="-1"
         accuracy_factor="0.6"
         sustained_fire_grow_step="1.0"
@@ -72,7 +72,7 @@
     
     <weapon key="gkw_m1919a4_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
         <specification 
-        barrel_offset="0.5"
+        barrel_offset="0.6"
         retrigger_time="-1"
         accuracy_factor="0.6"
         sustained_fire_grow_step="1.0"
@@ -108,6 +108,7 @@
         </projectile>
         <modifier class="speed" value="-0.15"/>
         <effect class="muzzle" ref="ejection_76251"/>
+        <effect class="muzzle" ref="muzzle_big_yellow"/>
         <stance state_key="running" accuracy="0.3"/>
         <stance state_key="walking" accuracy="0.35"/>
         <stance state_key="crouch_moving" accuracy="0.5"/>
