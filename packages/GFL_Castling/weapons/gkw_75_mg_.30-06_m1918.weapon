@@ -102,6 +102,7 @@
         <modifier class="speed" value="-0.2" />
         <modifier class="hit_success_probability" value="+0.3" />
         <tag name="autorifle"/>
+        <effect class="muzzle" ref="muzzle_yellow"/>
         <animation state_key="recoil" animation_key="recoil_unlimit"/>
         <animation state_key="recoil" stance_key="over_wall" animation_key="recoil_unlimit"/>
         <animation state_key="recoil" stance_key="prone" animation_key="recoil_prone_unlimit"/>

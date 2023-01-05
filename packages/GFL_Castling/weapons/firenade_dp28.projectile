@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projectile class="grenade" name="flame grenade" slot="2" key="firenade_dp28.projectile" radius="0.15" pulldown_in_air="26">
     <tag name="grenade" />
-
+    
+    <trigger class="impact">
+        <collider class="character" enabled="1" faction_compare="not_equal"/>
+    </trigger>
 
     <!-- <event> -->
     <trigger class="time" time_to_live="0.0" />
