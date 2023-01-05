@@ -6,7 +6,7 @@
         accuracy_factor="0.9"
         class="0"
         magazine_size="250"
-        name="M2HB"
+        name="Browning M2HB"
         projectile_speed="200"
         retrigger_time="0.109"
         suppressed="0"
@@ -46,7 +46,6 @@
         <stance state_key="crouching" accuracy="0.75"/>
         <stance state_key="prone" accuracy="1.0"/>
         <stance state_key="over_wall" accuracy="1.0"/>
-        <modifier class="speed" value="-0.15"/>
         <tag name="machine gun"/>
         <capacity value="1" source="rank" source_value="0.0"/>
         <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
@@ -77,7 +76,7 @@
         accuracy_factor="0.6"
         class="2"
         magazine_size="250"
-        name="M2HB-[Terminating Barrage]"
+        name="Browning M2HB-[Terminating Barrage]"
         spread_range="0.15"
         projectile_speed="200"
         retrigger_time="-1"
