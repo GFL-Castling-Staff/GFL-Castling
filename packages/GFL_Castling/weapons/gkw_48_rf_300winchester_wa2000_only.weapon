@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapons>
+<weapon file="designated_marksman_rifle.animation_base" key="gkw_wa2000_only.weapon">
+    <!--Weapon specifications-->
+    <specification 
+	retrigger_time="-1.0" 
+	accuracy_factor="1" 
+	sustained_fire_grow_step="1.0" 
+	sustained_fire_diminish_rate="3.0"
+    spread_range="0.03" 
+	magazine_size="15" 
+	can_shoot_standing="1" 
+	suppressed="0" 
+	name="Walther WA2000-[SB 2.5-10x56]" 
+	class="4" 
+	burst_shots="1"
+	last_burst_retrigger_time="0.33"
+	reload_one_at_a_time="0" 
+	sight_range_modifier="2.5" 
+    stance_accuracy_rate="1.5"
+	projectile_speed="200" 
+	barrel_offset="0.4" 
+	projectiles_per_shot="1" />
+    <!--Animations-->
+    <inventory encumbrance="20.0" buy_price="200.0" sell_price="200.0" />
+    <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
+    <next_in_chain key="gkw_wa2000_only_skill.weapon" share_ammo="1"/>
+    <!--Sounds-->
+    <commonness value="0" in_stock="0" can_respawn_with="1"/>
+    <sound key="fire" fileref="wa2000_fire_FromCOD17.wav" volume="1.4" />
+    <sound key="cycle" fileref="wa2000_cycle_FromCOD6R.wav" volume="0.6"/>
+    <sound key="cycle_in" fileref="wa2000_cycle_FromCOD6R.wav" volume="0.6"/>
+    <sound key="magazine_out" fileref="wa2000_mgz_out_FromCOD6R.wav" volume="0.6" />
+    <sound key="magazine_in" fileref="wa2000_mgz_in_FromCOD6R.wav" volume="0.6"/>
+    <sound class="impact" fileref="rifle_drop.wav" />
+    <!--Model, Icon, Cost-->
+    <model filename="gkw_rf_wa2000.xml" />
+    <hud_icon filename="gkw_wa2000_only.png" />
+    <!--Ballistics-->
+    <weak_hand_hold offset="0.3" />
+    <projectile file="bullet.projectile">
+        <result class="hit" 
+        kill_probability="3.0"
+        kill_probability_offset_on_successful_hit="10.0" 
+        kill_decay_start_time="1.0" 
+        kill_decay_end_time="1.5" />
+        <trail probability="1.0" key="BulletApTrail"/>
+    </projectile>
+    <!--Accuracy, Movement speed-->
+	<stance state_key="running" accuracy="0.3" />
+	<stance state_key="walking" accuracy="0.6" />
+	<stance state_key="crouch_moving" accuracy="0.6" />
+	<stance state_key="standing" accuracy="0.95" />
+	<stance state_key="crouching" accuracy="1.0" />
+	<stance state_key="prone" accuracy="1.1" /> 
+	<stance state_key="prone_moving" accuracy="0.6" />
+	<stance state_key="over_wall" accuracy="1.1" />		
+    <modifier class="detectability" value="-0.1" />
+    <modifier class="speed" value="0" />
+</weapon>
+<weapon file="designated_marksman_rifle.animation_base" key="gkw_wa2000_only_skill.weapon">
+    <!--Weapon specifications-->
+    <specification 
+	retrigger_time="-1.0" 
+	accuracy_factor="1" 
+	sustained_fire_grow_step="1.0" 
+	sustained_fire_diminish_rate="3.0"
+    spread_range="0.03" 
+	magazine_size="15" 
+	can_shoot_standing="1" 
+	suppressed="0" 
+	name="Walther WA2000-[SB 2.5-10x56]-[Assault Focus]" 
+	class="2" 
+	burst_shots="1"
+	last_burst_retrigger_time="-1"
+	reload_one_at_a_time="0" 
+	sight_range_modifier="2.5" 
+    stance_accuracy_rate="1.5"
+	projectile_speed="200" 
+	barrel_offset="0.4" 
+	projectiles_per_shot="1" />
+    <!--Animations-->
+    <inventory encumbrance="20.0" buy_price="200.0" sell_price="200.0" />
+    <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
+    <next_in_chain key="gkw_wa2000_only.weapon" share_ammo="1"/>
+    <!--Sounds-->
+    <commonness value="0" in_stock="0" can_respawn_with="1"/>
+    <sound key="fire" fileref="wa2000_fire_FromCSOL.wav" volume="0.7" />
+    <sound key="cycle" fileref="wa2000_cycle_FromCOD6R.wav" volume="0.6"/>
+    <sound key="cycle_in" fileref="wa2000_cycle_FromCOD6R.wav" volume="0.6"/>
+    <sound key="magazine_out" fileref="wa2000_mgz_out_FromCOD6R.wav" volume="0.6" />
+    <sound key="magazine_in" fileref="wa2000_mgz_in_FromCOD6R.wav" volume="0.6"/>
+    <sound class="impact" fileref="rifle_drop.wav" />
+    <!--Model, Icon, Cost-->
+    <model filename="gkw_rf_wa2000.xml" />
+    <hud_icon filename="gkw_wa2000_only.png" />
+    <!--Ballistics-->
+    <weak_hand_hold offset="0.3" />
+    <projectile file="bullet.projectile">
+        <result class="hit" 
+        kill_probability="10.0"
+        kill_probability_offset_on_successful_hit="3.0"
+        kill_decay_start_time="1.0" 
+        kill_decay_end_time="1.5" />
+        <trail probability="1.0" key="bullet_thick_long"/>
+    </projectile>
+    <!--Accuracy, Movement speed-->
+	<stance state_key="running" accuracy="0.3" />
+	<stance state_key="walking" accuracy="0.6" />
+	<stance state_key="crouch_moving" accuracy="0.6" />
+	<stance state_key="standing" accuracy="0.95" />
+	<stance state_key="crouching" accuracy="1.0" />
+	<stance state_key="prone" accuracy="1.1" /> 
+	<stance state_key="prone_moving" accuracy="0.6" />
+	<stance state_key="over_wall" accuracy="1.1" />		
+    <modifier class="detectability" value="-0.1" />
+    <modifier class="speed" value="0" />
+    <animation key="cycle" animation_key="cycle_2h_rifle_180rpm"/>
+    <animation key="cycle" stance_key="prone" animation_key="cycle_2h_rifle_180rpm_prone"/>
+    <animation key="cycle" stance_key="over_wall" animation_key="cycle_2h_rifle_180rpm"/>
+</weapon>
+</weapons>

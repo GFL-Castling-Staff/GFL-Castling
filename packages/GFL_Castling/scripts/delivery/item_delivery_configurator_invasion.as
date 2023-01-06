@@ -196,6 +196,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		ScoredResource("upgrade_vz61.carry_item", "carry_item", 0.1f),
 		ScoredResource("upgrade_m1903_1.carry_item", "carry_item", 0.1f),
 		ScoredResource("upgrade_m1903_2.carry_item", "carry_item", 0.1f),
+		ScoredResource("upgrade_wa2000.carry_item", "carry_item", 0.1f),
 		ScoredResource("upgrade_9a91.carry_item", "carry_item", 0.1f)
 			}
 		};

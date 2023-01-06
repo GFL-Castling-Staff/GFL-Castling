@@ -972,6 +972,18 @@
     <model filename="gkd_rf_wa2000_306.xml">
         <requirement class="weapon" key="gkw_wa2000_306.weapon" slot="0" />
     </model>
+    <model filename="gkd_rf_wa2000.xml">
+        <requirement class="weapon" key="gkw_wa2000_only.weapon" slot="0" />
+    </model>
+    <model filename="gkd_rf_wa2000_306.xml">
+        <requirement class="weapon" key="gkw_wa2000_306_only.weapon" slot="0" />
+    </model>    
+    <model filename="gkd_rf_wa2000.xml">
+        <requirement class="weapon" key="gkw_wa2000_only_skill.weapon" slot="0" />
+    </model>
+    <model filename="gkd_rf_wa2000_306.xml">
+        <requirement class="weapon" key="gkw_wa2000_306_only_skill.weapon" slot="0" />
+    </model>    
     <model filename="gkd_sg_aa12.xml">
         <requirement class="weapon" key="gkw_aa12.weapon" slot="0" />
     </model>
