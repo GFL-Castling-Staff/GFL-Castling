@@ -4,7 +4,7 @@
         <trigger class="impact">
             <collider class="terrain" enabled="0" />
             <collider class="static_object" enabled="0" />
-            <collider class="vehicle" enabled="0" />
+            <collider class="vehicle" enabled="1" />
             <collider class="character" enabled="1" faction_compare="equal"/>
         </trigger>
         <result class="notify_script" key="share_reward_1" />
@@ -23,7 +23,7 @@
         <trigger class="impact">
             <collider class="terrain" enabled="0" />
             <collider class="static_object" enabled="0" />
-            <collider class="vehicle" enabled="0" />
+            <collider class="vehicle" enabled="1" />
             <collider class="character" enabled="1" faction_compare="equal"/>
         </trigger>
         <result class="notify_script" key="share_reward_2" />
@@ -42,7 +42,7 @@
         <trigger class="impact">
             <collider class="terrain" enabled="0" />
             <collider class="static_object" enabled="0" />
-            <collider class="vehicle" enabled="0" />
+            <collider class="vehicle" enabled="1" />
             <collider class="character" enabled="1" faction_compare="equal"/>
         </trigger>
         <result class="notify_script" key="share_reward_3" />
@@ -61,7 +61,7 @@
         <trigger class="impact">
             <collider class="terrain" enabled="0" />
             <collider class="static_object" enabled="0" />
-            <collider class="vehicle" enabled="0" />
+            <collider class="vehicle" enabled="1" />
             <collider class="character" enabled="1" faction_compare="equal"/>
         </trigger>
         <result class="notify_script" key="share_reward_4" />
@@ -80,7 +80,7 @@
         <trigger class="impact">
             <collider class="terrain" enabled="0" />
             <collider class="static_object" enabled="0" />
-            <collider class="vehicle" enabled="0" />
+            <collider class="vehicle" enabled="1" />
             <collider class="character" enabled="1" faction_compare="equal"/>
         </trigger>
         <result class="notify_script" key="share_reward_5" />
@@ -99,7 +99,7 @@
         <trigger class="impact">
             <collider class="terrain" enabled="0" />
             <collider class="static_object" enabled="0" />
-            <collider class="vehicle" enabled="0" />
+            <collider class="vehicle" enabled="1" />
             <collider class="character" enabled="1" faction_compare="equal"/>
         </trigger>
         <result class="notify_script" key="share_reward_6" />
@@ -118,7 +118,7 @@
         <trigger class="impact">
             <collider class="terrain" enabled="0" />
             <collider class="static_object" enabled="0" />
-            <collider class="vehicle" enabled="0" />
+            <collider class="vehicle" enabled="1" />
             <collider class="character" enabled="1" faction_compare="equal"/>
         </trigger>
         <result class="notify_script" key="share_reward_7" />
@@ -137,7 +137,7 @@
         <trigger class="impact">
             <collider class="terrain" enabled="0" />
             <collider class="static_object" enabled="0" />
-            <collider class="vehicle" enabled="0" />
+            <collider class="vehicle" enabled="1" />
             <collider class="character" enabled="1" faction_compare="equal"/>
         </trigger>
         <result class="notify_script" key="share_reward_8" />
@@ -156,7 +156,7 @@
         <trigger class="impact">
             <collider class="terrain" enabled="0" />
             <collider class="static_object" enabled="0" />
-            <collider class="vehicle" enabled="0" />
+            <collider class="vehicle" enabled="1" />
             <collider class="character" enabled="1" faction_compare="equal"/>
         </trigger>
         <result class="notify_script" key="share_reward_9" />
@@ -175,7 +175,7 @@
         <trigger class="impact">
             <collider class="terrain" enabled="0" />
             <collider class="static_object" enabled="0" />
-            <collider class="vehicle" enabled="0" />
+            <collider class="vehicle" enabled="1" />
             <collider class="character" enabled="1" faction_compare="equal"/>
         </trigger>
         <result class="notify_script" key="share_reward_10" />
@@ -194,7 +194,7 @@
         <trigger class="impact">
             <collider class="terrain" enabled="0" />
             <collider class="static_object" enabled="0" />
-            <collider class="vehicle" enabled="0" />
+            <collider class="vehicle" enabled="1" />
             <collider class="character" enabled="1" faction_compare="equal"/>
         </trigger>
         <result class="notify_script" key="share_reward_11" />
@@ -213,7 +213,7 @@
         <trigger class="impact">
             <collider class="terrain" enabled="0" />
             <collider class="static_object" enabled="0" />
-            <collider class="vehicle" enabled="0" />
+            <collider class="vehicle" enabled="1" />
             <collider class="character" enabled="1" faction_compare="equal"/>
         </trigger>
         <result class="notify_script" key="share_reward_12" />
@@ -232,7 +232,7 @@
         <trigger class="impact">
             <collider class="terrain" enabled="0" />
             <collider class="static_object" enabled="0" />
-            <collider class="vehicle" enabled="0" />
+            <collider class="vehicle" enabled="1" />
             <collider class="character" enabled="1" faction_compare="equal"/>
         </trigger>
         <result class="notify_script" key="share_reward_13" />
@@ -251,7 +251,7 @@
         <trigger class="impact">
             <collider class="terrain" enabled="0" />
             <collider class="static_object" enabled="0" />
-            <collider class="vehicle" enabled="0" />
+            <collider class="vehicle" enabled="1" />
             <collider class="character" enabled="1" faction_compare="equal"/>
         </trigger>
         <result class="notify_script" key="share_reward_14" />
@@ -270,7 +270,7 @@
         <trigger class="impact">
             <collider class="terrain" enabled="0" />
             <collider class="static_object" enabled="0" />
-            <collider class="vehicle" enabled="0" />
+            <collider class="vehicle" enabled="1" />
             <collider class="character" enabled="1" faction_compare="equal"/>
         </trigger>
         <result class="notify_script" key="share_reward_15" />
@@ -289,7 +289,7 @@
         <trigger class="impact">
             <collider class="terrain" enabled="0" />
             <collider class="static_object" enabled="0" />
-            <collider class="vehicle" enabled="0" />
+            <collider class="vehicle" enabled="1" />
             <collider class="character" enabled="1" faction_compare="equal"/>
         </trigger>
         <result class="notify_script" key="share_reward_16" />
@@ -308,7 +308,7 @@
         <trigger class="impact">
             <collider class="terrain" enabled="0" />
             <collider class="static_object" enabled="0" />
-            <collider class="vehicle" enabled="0" />
+            <collider class="vehicle" enabled="1" />
             <collider class="character" enabled="1" faction_compare="equal"/>
         </trigger>
         <result class="notify_script" key="share_reward_17" />
@@ -327,7 +327,7 @@
         <trigger class="impact">
             <collider class="terrain" enabled="0" />
             <collider class="static_object" enabled="0" />
-            <collider class="vehicle" enabled="0" />
+            <collider class="vehicle" enabled="1" />
             <collider class="character" enabled="1" faction_compare="equal"/>
         </trigger>
         <result class="notify_script" key="share_reward_18" />
@@ -346,7 +346,7 @@
         <trigger class="impact">
             <collider class="terrain" enabled="0" />
             <collider class="static_object" enabled="0" />
-            <collider class="vehicle" enabled="0" />
+            <collider class="vehicle" enabled="1" />
             <collider class="character" enabled="1" faction_compare="equal"/>
         </trigger>
         <result class="notify_script" key="share_reward_19" />
@@ -365,7 +365,7 @@
         <trigger class="impact">
             <collider class="terrain" enabled="0" />
             <collider class="static_object" enabled="0" />
-            <collider class="vehicle" enabled="0" />
+            <collider class="vehicle" enabled="1" />
             <collider class="character" enabled="1" faction_compare="equal"/>
         </trigger>
         <result class="notify_script" key="share_reward_20" />
@@ -384,7 +384,7 @@
         <trigger class="impact">
             <collider class="terrain" enabled="0" />
             <collider class="static_object" enabled="0" />
-            <collider class="vehicle" enabled="0" />
+            <collider class="vehicle" enabled="1" />
             <collider class="character" enabled="1" faction_compare="equal"/>
         </trigger>
         <result class="notify_script" key="share_reward_21" />
@@ -403,7 +403,7 @@
         <trigger class="impact">
             <collider class="terrain" enabled="0" />
             <collider class="static_object" enabled="0" />
-            <collider class="vehicle" enabled="0" />
+            <collider class="vehicle" enabled="1" />
             <collider class="character" enabled="1" faction_compare="equal"/>
         </trigger>
         <result class="notify_script" key="share_reward_22" />
@@ -422,7 +422,7 @@
         <trigger class="impact">
             <collider class="terrain" enabled="0" />
             <collider class="static_object" enabled="0" />
-            <collider class="vehicle" enabled="0" />
+            <collider class="vehicle" enabled="1" />
             <collider class="character" enabled="1" faction_compare="equal"/>
         </trigger>
         <result class="notify_script" key="share_reward_23" />
@@ -441,7 +441,7 @@
         <trigger class="impact">
             <collider class="terrain" enabled="0" />
             <collider class="static_object" enabled="0" />
-            <collider class="vehicle" enabled="0" />
+            <collider class="vehicle" enabled="1" />
             <collider class="character" enabled="1" faction_compare="equal"/>
         </trigger>
         <result class="notify_script" key="share_reward_24" />
@@ -460,7 +460,7 @@
         <trigger class="impact">
             <collider class="terrain" enabled="0" />
             <collider class="static_object" enabled="0" />
-            <collider class="vehicle" enabled="0" />
+            <collider class="vehicle" enabled="1" />
             <collider class="character" enabled="1" faction_compare="equal"/>
         </trigger>
         <result class="notify_script" key="share_reward_25" />
@@ -479,7 +479,7 @@
         <trigger class="impact">
             <collider class="terrain" enabled="0" />
             <collider class="static_object" enabled="0" />
-            <collider class="vehicle" enabled="0" />
+            <collider class="vehicle" enabled="1" />
             <collider class="character" enabled="1" faction_compare="equal"/>
         </trigger>
         <result class="notify_script" key="share_reward_26" />
@@ -498,7 +498,7 @@
         <trigger class="impact">
             <collider class="terrain" enabled="0" />
             <collider class="static_object" enabled="0" />
-            <collider class="vehicle" enabled="0" />
+            <collider class="vehicle" enabled="1" />
             <collider class="character" enabled="1" faction_compare="equal"/>
         </trigger>
         <result class="notify_script" key="share_reward_27" />
@@ -517,7 +517,7 @@
         <trigger class="impact">
             <collider class="terrain" enabled="0" />
             <collider class="static_object" enabled="0" />
-            <collider class="vehicle" enabled="0" />
+            <collider class="vehicle" enabled="1" />
             <collider class="character" enabled="1" faction_compare="equal"/>
         </trigger>
         <result class="notify_script" key="share_reward_28" />
@@ -536,7 +536,7 @@
         <trigger class="impact">
             <collider class="terrain" enabled="0" />
             <collider class="static_object" enabled="0" />
-            <collider class="vehicle" enabled="0" />
+            <collider class="vehicle" enabled="1" />
             <collider class="character" enabled="1" faction_compare="equal"/>
         </trigger>
         <result class="notify_script" key="share_reward_29" />
@@ -555,7 +555,7 @@
         <trigger class="impact">
             <collider class="terrain" enabled="0" />
             <collider class="static_object" enabled="0" />
-            <collider class="vehicle" enabled="0" />
+            <collider class="vehicle" enabled="1" />
             <collider class="character" enabled="1" faction_compare="equal"/>
         </trigger>
         <result class="notify_script" key="share_reward_30" />
@@ -574,7 +574,7 @@
         <trigger class="impact">
             <collider class="terrain" enabled="0" />
             <collider class="static_object" enabled="0" />
-            <collider class="vehicle" enabled="0" />
+            <collider class="vehicle" enabled="1" />
             <collider class="character" enabled="1" faction_compare="equal"/>
         </trigger>
         <result class="notify_script" key="share_reward_31" />
@@ -593,7 +593,7 @@
         <trigger class="impact">
             <collider class="terrain" enabled="0" />
             <collider class="static_object" enabled="0" />
-            <collider class="vehicle" enabled="0" />
+            <collider class="vehicle" enabled="1" />
             <collider class="character" enabled="1" faction_compare="equal"/>
         </trigger>
         <result class="notify_script" key="share_reward_32" />
@@ -612,7 +612,7 @@
         <trigger class="impact">
             <collider class="terrain" enabled="0" />
             <collider class="static_object" enabled="0" />
-            <collider class="vehicle" enabled="0" />
+            <collider class="vehicle" enabled="1" />
             <collider class="character" enabled="1" faction_compare="equal"/>
         </trigger>
         <result class="notify_script" key="share_reward_33" />
@@ -631,7 +631,7 @@
         <trigger class="impact">
             <collider class="terrain" enabled="0" />
             <collider class="static_object" enabled="0" />
-            <collider class="vehicle" enabled="0" />
+            <collider class="vehicle" enabled="1" />
             <collider class="character" enabled="1" faction_compare="equal"/>
         </trigger>
         <result class="notify_script" key="share_reward_34" />
@@ -650,7 +650,7 @@
         <trigger class="impact">
             <collider class="terrain" enabled="0" />
             <collider class="static_object" enabled="0" />
-            <collider class="vehicle" enabled="0" />
+            <collider class="vehicle" enabled="1" />
             <collider class="character" enabled="1" faction_compare="equal"/>
         </trigger>
         <result class="notify_script" key="share_reward_35" />
@@ -669,7 +669,7 @@
         <trigger class="impact">
             <collider class="terrain" enabled="0" />
             <collider class="static_object" enabled="0" />
-            <collider class="vehicle" enabled="0" />
+            <collider class="vehicle" enabled="1" />
             <collider class="character" enabled="1" faction_compare="equal"/>
         </trigger>
         <result class="notify_script" key="share_reward_36" />
@@ -688,7 +688,7 @@
         <trigger class="impact">
             <collider class="terrain" enabled="0" />
             <collider class="static_object" enabled="0" />
-            <collider class="vehicle" enabled="0" />
+            <collider class="vehicle" enabled="1" />
             <collider class="character" enabled="1" faction_compare="equal"/>
         </trigger>
         <result class="notify_script" key="share_reward_37" />
@@ -707,7 +707,7 @@
         <trigger class="impact">
             <collider class="terrain" enabled="0" />
             <collider class="static_object" enabled="0" />
-            <collider class="vehicle" enabled="0" />
+            <collider class="vehicle" enabled="1" />
             <collider class="character" enabled="1" faction_compare="equal"/>
         </trigger>
         <result class="notify_script" key="share_reward_38" />
@@ -726,7 +726,7 @@
         <trigger class="impact">
             <collider class="terrain" enabled="0" />
             <collider class="static_object" enabled="0" />
-            <collider class="vehicle" enabled="0" />
+            <collider class="vehicle" enabled="1" />
             <collider class="character" enabled="1" faction_compare="equal"/>
         </trigger>
         <result class="notify_script" key="share_reward_39" />
@@ -745,7 +745,7 @@
         <trigger class="impact">
             <collider class="terrain" enabled="0" />
             <collider class="static_object" enabled="0" />
-            <collider class="vehicle" enabled="0" />
+            <collider class="vehicle" enabled="1" />
             <collider class="character" enabled="1" faction_compare="equal"/>
         </trigger>
         <result class="notify_script" key="share_reward_40" />
@@ -764,7 +764,7 @@
         <trigger class="impact">
             <collider class="terrain" enabled="0" />
             <collider class="static_object" enabled="0" />
-            <collider class="vehicle" enabled="0" />
+            <collider class="vehicle" enabled="1" />
             <collider class="character" enabled="1" faction_compare="equal"/>
         </trigger>
         <result class="notify_script" key="share_reward_41" />
@@ -783,7 +783,7 @@
         <trigger class="impact">
             <collider class="terrain" enabled="0" />
             <collider class="static_object" enabled="0" />
-            <collider class="vehicle" enabled="0" />
+            <collider class="vehicle" enabled="1" />
             <collider class="character" enabled="1" faction_compare="equal"/>
         </trigger>
         <result class="notify_script" key="share_reward_42" />
@@ -802,7 +802,7 @@
         <trigger class="impact">
             <collider class="terrain" enabled="0" />
             <collider class="static_object" enabled="0" />
-            <collider class="vehicle" enabled="0" />
+            <collider class="vehicle" enabled="1" />
             <collider class="character" enabled="1" faction_compare="equal"/>
         </trigger>
         <result class="notify_script" key="share_reward_43" />
@@ -821,7 +821,7 @@
         <trigger class="impact">
             <collider class="terrain" enabled="0" />
             <collider class="static_object" enabled="0" />
-            <collider class="vehicle" enabled="0" />
+            <collider class="vehicle" enabled="1" />
             <collider class="character" enabled="1" faction_compare="equal"/>
         </trigger>
         <result class="notify_script" key="share_reward_44" />
@@ -840,7 +840,7 @@
         <trigger class="impact">
             <collider class="terrain" enabled="0" />
             <collider class="static_object" enabled="0" />
-            <collider class="vehicle" enabled="0" />
+            <collider class="vehicle" enabled="1" />
             <collider class="character" enabled="1" faction_compare="equal"/>
         </trigger>
         <result class="notify_script" key="share_reward_45" />
@@ -859,7 +859,7 @@
         <trigger class="impact">
             <collider class="terrain" enabled="0" />
             <collider class="static_object" enabled="0" />
-            <collider class="vehicle" enabled="0" />
+            <collider class="vehicle" enabled="1" />
             <collider class="character" enabled="1" faction_compare="equal"/>
         </trigger>
         <result class="notify_script" key="share_reward_46" />
@@ -878,7 +878,7 @@
         <trigger class="impact">
             <collider class="terrain" enabled="0" />
             <collider class="static_object" enabled="0" />
-            <collider class="vehicle" enabled="0" />
+            <collider class="vehicle" enabled="1" />
             <collider class="character" enabled="1" faction_compare="equal"/>
         </trigger>
         <result class="notify_script" key="share_reward_47" />
@@ -897,7 +897,7 @@
         <trigger class="impact">
             <collider class="terrain" enabled="0" />
             <collider class="static_object" enabled="0" />
-            <collider class="vehicle" enabled="0" />
+            <collider class="vehicle" enabled="1" />
             <collider class="character" enabled="1" faction_compare="equal"/>
         </trigger>
         <result class="notify_script" key="share_reward_48" />
@@ -916,7 +916,7 @@
         <trigger class="impact">
             <collider class="terrain" enabled="0" />
             <collider class="static_object" enabled="0" />
-            <collider class="vehicle" enabled="0" />
+            <collider class="vehicle" enabled="1" />
             <collider class="character" enabled="1" faction_compare="equal"/>
         </trigger>
         <result class="notify_script" key="share_reward_49" />
@@ -930,5 +930,24 @@
         <sound class="result" key="static_object" copy="other" />
         <sound class="result" key="vehicle" copy="other" />
         <sound class="result" key="character" copy="other" />
-    </projectile>     
+    </projectile>
+    <projectile class="grenade" name="416 grenade" key="416_grenade.drop_reward" slot="0" on_ground_up="0 1 0" radius="0.25" can_be_disarmed="0" time_to_live_out_in_the_open="0.0" use_time_to_live="1" time_to_live="90" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" >
+        <trigger class="impact">
+            <collider class="terrain" enabled="0" />
+            <collider class="static_object" enabled="0" />
+            <collider class="vehicle" enabled="1" />
+            <collider class="character" enabled="1" faction_compare="equal"/>
+        </trigger>
+        <result class="notify_script" key="share_reward_50" />
+		<model mesh_filename="416_40mm.xml"/>
+        <hud_icon filename="testing.png" />
+        <commonness value="1" in_stock="1" can_respawn_with="1" />
+        <inventory encumbrance="4.0" price="5.0" />
+        <capacity value="1" source="rank" source_value="0.0" />
+        <sound class="result" key="other" fileref="holy_suck.wav" volume="2.9" />
+        <sound class="result" key="terrain" copy="other" />
+        <sound class="result" key="static_object" copy="other" />
+        <sound class="result" key="vehicle" copy="other" />
+        <sound class="result" key="character" copy="other" />
+    </projectile>    
 </projectiles>

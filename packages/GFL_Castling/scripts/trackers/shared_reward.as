@@ -61,6 +61,7 @@ dictionary SharedRewardList = {
         {"share_reward_47",47},
         // {"share_reward_48",48},
         {"share_reward_49",49},
+        {"share_reward_50",50},
 
         // foobar
         {"666",-1}
@@ -131,6 +132,7 @@ class SharedReward : Tracker {
             //case 48: {addRangeItemInBackpack(m_metagame,0,"carry_item","comic_book.carry_item",m_pos,40.0);break;}
 
             case 49: {addRangeItemInBackpack(m_metagame,0,"carry_item","ct_gift_halloween.carry_item",m_pos,40.0);break;}
+            case 50: {addRangeItemInBackpack(m_metagame,0,"carry_item","416_grenade.carry_item",m_pos,40.0);break;}
 
             
             default:
