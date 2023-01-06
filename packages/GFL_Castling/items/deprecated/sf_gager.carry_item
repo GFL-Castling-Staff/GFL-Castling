@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <carry_items>
-	<carry_item key="sf_gager.carry_item" time_to_live_out_in_the_open="15" name="Gager" transform_on_consume="gager_1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="sf_gager.carry_item" time_to_live_out_in_the_open="0" name="Gager" transform_on_consume="gager_1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="sfd_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -17,7 +17,7 @@
         <modifier class="hit_success_probability" value="-1.2" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="gager_1" time_to_live_out_in_the_open="15" name="Gager" transform_on_consume="gager_2" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="gager_1" time_to_live_out_in_the_open="0" name="Gager" transform_on_consume="gager_2" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="sfd_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -34,7 +34,7 @@
         <modifier class="hit_success_probability" value="-1.2" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="gager_2" time_to_live_out_in_the_open="15" name="Gager" transform_on_consume="gager_3" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="gager_2" time_to_live_out_in_the_open="0" name="Gager" transform_on_consume="gager_3" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="sfd_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -51,7 +51,7 @@
         <modifier class="hit_success_probability" value="-1.2" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="gager_3" time_to_live_out_in_the_open="15" name="Gager" transform_on_consume="gager_4" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="gager_3" time_to_live_out_in_the_open="0" name="Gager" transform_on_consume="gager_4" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="sfd_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -68,7 +68,7 @@
         <modifier class="hit_success_probability" value="-1.2" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="gager_4" time_to_live_out_in_the_open="15" name="Gager" transform_on_consume="gager_5" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="gager_4" time_to_live_out_in_the_open="0" name="Gager" transform_on_consume="gager_5" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="sfd_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -85,7 +85,7 @@
         <modifier class="hit_success_probability" value="-1.2" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="gager_5" time_to_live_out_in_the_open="15" name="Gager" transform_on_consume="gager_6" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="gager_5" time_to_live_out_in_the_open="0" name="Gager" transform_on_consume="gager_6" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="sfd_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -102,7 +102,7 @@
         <modifier class="hit_success_probability" value="-1.2" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="gager_6" time_to_live_out_in_the_open="15" name="Gager" transform_on_consume="gager_7" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="gager_6" time_to_live_out_in_the_open="0" name="Gager" transform_on_consume="gager_7" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="sfd_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -119,7 +119,7 @@
         <modifier class="hit_success_probability" value="-1.2" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="gager_7" time_to_live_out_in_the_open="15" name="Gager" transform_on_consume="gager_8" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="gager_7" time_to_live_out_in_the_open="0" name="Gager" transform_on_consume="gager_8" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="sfd_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -136,7 +136,7 @@
         <modifier class="hit_success_probability" value="-1.2" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="gager_8" time_to_live_out_in_the_open="15" name="Gager" transform_on_consume="gager_9" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="gager_8" time_to_live_out_in_the_open="0" name="Gager" transform_on_consume="gager_9" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="sfd_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -153,7 +153,7 @@
         <modifier class="hit_success_probability" value="-1.2" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="gager_9" time_to_live_out_in_the_open="15" name="Gager" transform_on_consume="gager_10" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="gager_9" time_to_live_out_in_the_open="0" name="Gager" transform_on_consume="gager_10" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="sfd_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -170,7 +170,7 @@
         <modifier class="hit_success_probability" value="-1.2" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="gager_10" time_to_live_out_in_the_open="15" name="Gager" transform_on_consume="gager_11" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="gager_10" time_to_live_out_in_the_open="0" name="Gager" transform_on_consume="gager_11" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="sfd_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -187,7 +187,7 @@
         <modifier class="hit_success_probability" value="-1.2" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="gager_11" time_to_live_out_in_the_open="15" name="Gager" transform_on_consume="gager_12" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="gager_11" time_to_live_out_in_the_open="0" name="Gager" transform_on_consume="gager_12" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="sfd_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -204,7 +204,7 @@
         <modifier class="hit_success_probability" value="-1.2" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="gager_12" time_to_live_out_in_the_open="15" name="Gager" transform_on_consume="gager_13" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="gager_12" time_to_live_out_in_the_open="0" name="Gager" transform_on_consume="gager_13" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="sfd_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -221,7 +221,7 @@
         <modifier class="hit_success_probability" value="-1.2" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="gager_13" time_to_live_out_in_the_open="15" name="Gager" transform_on_consume="gager_14" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="gager_13" time_to_live_out_in_the_open="0" name="Gager" transform_on_consume="gager_14" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="sfd_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -238,7 +238,7 @@
         <modifier class="hit_success_probability" value="-1.2" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="gager_14" time_to_live_out_in_the_open="15" name="Gager" transform_on_consume="gager_15" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="gager_14" time_to_live_out_in_the_open="0" name="Gager" transform_on_consume="gager_15" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="sfd_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -255,7 +255,7 @@
         <modifier class="hit_success_probability" value="-1.2" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="gager_15" time_to_live_out_in_the_open="15" name="Gager" transform_on_consume="gager_16" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="gager_15" time_to_live_out_in_the_open="0" name="Gager" transform_on_consume="gager_16" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="sfd_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -272,7 +272,7 @@
         <modifier class="hit_success_probability" value="-1.2" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="gager_16" time_to_live_out_in_the_open="15" name="Gager" transform_on_consume="gager_17" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="gager_16" time_to_live_out_in_the_open="0" name="Gager" transform_on_consume="gager_17" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="sfd_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -289,7 +289,7 @@
         <modifier class="hit_success_probability" value="-1.2" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="gager_17" time_to_live_out_in_the_open="15" name="Gager" transform_on_consume="gager_18" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="gager_17" time_to_live_out_in_the_open="0" name="Gager" transform_on_consume="gager_18" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="sfd_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -306,7 +306,7 @@
         <modifier class="hit_success_probability" value="-1.2" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="gager_18" time_to_live_out_in_the_open="15" name="Gager" transform_on_consume="gager_19" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="gager_18" time_to_live_out_in_the_open="0" name="Gager" transform_on_consume="gager_19" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="sfd_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -323,7 +323,7 @@
         <modifier class="hit_success_probability" value="-1.2" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="gager_19" time_to_live_out_in_the_open="15" name="Gager" transform_on_consume="gager_20" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="gager_19" time_to_live_out_in_the_open="0" name="Gager" transform_on_consume="gager_20" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="sfd_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -340,7 +340,7 @@
         <modifier class="hit_success_probability" value="-1.2" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="gager_20" time_to_live_out_in_the_open="15" name="Gager" transform_on_consume="gager_21" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="gager_20" time_to_live_out_in_the_open="0" name="Gager" transform_on_consume="gager_21" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="sfd_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -357,7 +357,7 @@
         <modifier class="hit_success_probability" value="-1.2" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="gager_21" time_to_live_out_in_the_open="15" name="Gager" transform_on_consume="gager_22" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="gager_21" time_to_live_out_in_the_open="0" name="Gager" transform_on_consume="gager_22" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="sfd_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -374,7 +374,7 @@
         <modifier class="hit_success_probability" value="-1.2" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="gager_22" time_to_live_out_in_the_open="15" name="Gager" transform_on_consume="gager_23" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="gager_22" time_to_live_out_in_the_open="0" name="Gager" transform_on_consume="gager_23" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="sfd_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -391,7 +391,7 @@
         <modifier class="hit_success_probability" value="-1.2" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="gager_23" time_to_live_out_in_the_open="15" name="Gager" transform_on_consume="gager_24" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="gager_23" time_to_live_out_in_the_open="0" name="Gager" transform_on_consume="gager_24" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="sfd_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -408,7 +408,7 @@
         <modifier class="hit_success_probability" value="-1.2" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="gager_24" time_to_live_out_in_the_open="15" name="Gager" transform_on_consume="gager_25" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="gager_24" time_to_live_out_in_the_open="0" name="Gager" transform_on_consume="gager_25" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="sfd_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -425,7 +425,7 @@
         <modifier class="hit_success_probability" value="-1.2" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="gager_25" time_to_live_out_in_the_open="15" name="Gager" transform_on_consume="gager_26" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="gager_25" time_to_live_out_in_the_open="0" name="Gager" transform_on_consume="gager_26" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="sfd_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -442,7 +442,7 @@
         <modifier class="hit_success_probability" value="-1.2" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="gager_26" time_to_live_out_in_the_open="15" name="Gager" transform_on_consume="gager_27" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="gager_26" time_to_live_out_in_the_open="0" name="Gager" transform_on_consume="gager_27" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="sfd_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -459,7 +459,7 @@
         <modifier class="hit_success_probability" value="-1.2" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="gager_27" time_to_live_out_in_the_open="15" name="Gager" transform_on_consume="gager_28" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="gager_27" time_to_live_out_in_the_open="0" name="Gager" transform_on_consume="gager_28" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="sfd_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -476,7 +476,7 @@
         <modifier class="hit_success_probability" value="-1.2" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="gager_28" time_to_live_out_in_the_open="15" name="Gager" transform_on_consume="gager_29" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="gager_28" time_to_live_out_in_the_open="0" name="Gager" transform_on_consume="gager_29" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="sfd_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -493,7 +493,7 @@
         <modifier class="hit_success_probability" value="-1.2" />
         <modifier class="detectability" value="0.0" />
 	</carry_item>
-	<carry_item key="gager_29" time_to_live_out_in_the_open="15" name="Gager" transform_on_consume="gager_30" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="gager_29" time_to_live_out_in_the_open="0" name="Gager" transform_on_consume="gager_30" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="sfd_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="1" in_stock="1" can_respawn_with="1"/>

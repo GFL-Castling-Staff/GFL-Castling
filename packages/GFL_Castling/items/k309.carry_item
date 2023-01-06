@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <carry_items>
-	<carry_item key="K309.carry_item" time_to_live_out_in_the_open="15" name="[Protective Armour]" transform_on_consume="K309_1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="K309.carry_item" time_to_live_out_in_the_open="0" name="[Protective Armour]" transform_on_consume="K309_1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="commander_k.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="0.001" in_stock="0" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="30"/>
-		<model mesh_filename="vestexo.xml"/>
+		<model />
 		<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
 		<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
 		<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
@@ -17,12 +17,12 @@
 		<modifier class="detectability" value="0.2" />
 		<modifier class="hit_success_probability" value="-1.2" />
 	</carry_item>
-	<carry_item key="K309_1" time_to_live_out_in_the_open="15" name="[Protective Armour]" transform_on_consume="K309_2" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="K309_1" time_to_live_out_in_the_open="0" name="[Protective Armour]" transform_on_consume="K309_2" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="commander_k_14.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="0.001" in_stock="0" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="30"/>
-		<model mesh_filename="vestexo.xml"/>
+		<model />
 		<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
 		<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
 		<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
@@ -34,12 +34,12 @@
 		<modifier class="detectability" value="0.2" />
 		<modifier class="hit_success_probability" value="-1.2" />
 	</carry_item>
-	<carry_item key="K309_2" time_to_live_out_in_the_open="15" name="[Protective Armour]" transform_on_consume="K309_3" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="K309_2" time_to_live_out_in_the_open="0" name="[Protective Armour]" transform_on_consume="K309_3" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="commander_k_13.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="0.001" in_stock="0" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="30"/>
-		<model mesh_filename="vestexo.xml"/>
+		<model />
 		<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
 		<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
 		<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
@@ -51,12 +51,12 @@
 		<modifier class="detectability" value="0.2" />
 		<modifier class="hit_success_probability" value="-1.2" />
 	</carry_item>
-	<carry_item key="K309_3" time_to_live_out_in_the_open="15" name="[Protective Armour]" transform_on_consume="K309_4" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="K309_3" time_to_live_out_in_the_open="0" name="[Protective Armour]" transform_on_consume="K309_4" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="commander_k_12.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="0.001" in_stock="0" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="30"/>
-		<model mesh_filename="vestexo.xml"/>
+		<model />
 		<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
 		<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
 		<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
@@ -68,12 +68,12 @@
 		<modifier class="detectability" value="0.2" />
 		<modifier class="hit_success_probability" value="-1.2" />
 	</carry_item>
-	<carry_item key="K309_4" time_to_live_out_in_the_open="15" name="[Protective Armour]" transform_on_consume="K309_5" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="K309_4" time_to_live_out_in_the_open="0" name="[Protective Armour]" transform_on_consume="K309_5" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="commander_k_11.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="0.001" in_stock="0" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="30"/>
-		<model mesh_filename="vestexo.xml"/>
+		<model />
 		<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
 		<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
 		<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
@@ -85,12 +85,12 @@
 		<modifier class="detectability" value="0.2" />
 		<modifier class="hit_success_probability" value="-1.2" />
 	</carry_item>
-	<carry_item key="K309_5" time_to_live_out_in_the_open="15" name="[Protective Armour]" transform_on_consume="K309_6" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="K309_5" time_to_live_out_in_the_open="0" name="[Protective Armour]" transform_on_consume="K309_6" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="commander_k_10.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="0.001" in_stock="0" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="30"/>
-		<model mesh_filename="vestexo.xml"/>
+		<model />
 		<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
 		<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
 		<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
@@ -102,12 +102,12 @@
 		<modifier class="detectability" value="0.2" />
 		<modifier class="hit_success_probability" value="-1.2" />
 	</carry_item>
-	<carry_item key="K309_6" time_to_live_out_in_the_open="15" name="[Protective Armour]" transform_on_consume="K309_7" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="K309_6" time_to_live_out_in_the_open="0" name="[Protective Armour]" transform_on_consume="K309_7" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="commander_k_9.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="0.001" in_stock="0" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="30"/>
-		<model mesh_filename="vestexo.xml"/>
+		<model />
 		<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
 		<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
 		<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
@@ -119,12 +119,12 @@
 		<modifier class="detectability" value="0.2" />
 		<modifier class="hit_success_probability" value="-1.2" />
 	</carry_item>
-	<carry_item key="K309_7" time_to_live_out_in_the_open="15" name="[Protective Armour]" transform_on_consume="K309_8" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="K309_7" time_to_live_out_in_the_open="0" name="[Protective Armour]" transform_on_consume="K309_8" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="commander_k_8.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="0.001" in_stock="0" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="30"/>
-		<model mesh_filename="vestexo.xml"/>
+		<model />
 		<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
 		<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
 		<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
@@ -136,12 +136,12 @@
 		<modifier class="detectability" value="0.2" />
 		<modifier class="hit_success_probability" value="-1.2" />
 	</carry_item>
-	<carry_item key="K309_8" time_to_live_out_in_the_open="15" name="[Protective Armour]" transform_on_consume="K309_9" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="K309_8" time_to_live_out_in_the_open="0" name="[Protective Armour]" transform_on_consume="K309_9" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="commander_k_7.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="0.001" in_stock="0" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="30"/>
-		<model mesh_filename="vestexo.xml"/>
+		<model />
 		<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
 		<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
 		<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
@@ -153,12 +153,12 @@
 		<modifier class="detectability" value="0.2" />
 		<modifier class="hit_success_probability" value="-1.2" />
 	</carry_item>
-	<carry_item key="K309_9" time_to_live_out_in_the_open="15" name="[Protective Armour]" transform_on_consume="K309_10" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="K309_9" time_to_live_out_in_the_open="0" name="[Protective Armour]" transform_on_consume="K309_10" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="commander_k_6.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="0.001" in_stock="0" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="30"/>
-		<model mesh_filename="vestexo.xml"/>
+		<model />
 		<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
 		<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
 		<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
@@ -170,12 +170,12 @@
 		<modifier class="detectability" value="0.2" />
 		<modifier class="hit_success_probability" value="-1.2" />
 	</carry_item>
-	<carry_item key="K309_10" time_to_live_out_in_the_open="15" name="[Protective Armour]" transform_on_consume="K309_11" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="K309_10" time_to_live_out_in_the_open="0" name="[Protective Armour]" transform_on_consume="K309_11" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="commander_k_5.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="0.001" in_stock="0" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="30"/>
-		<model mesh_filename="vestexo.xml"/>
+		<model />
 		<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
 		<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
 		<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
@@ -187,12 +187,12 @@
 		<modifier class="detectability" value="0.2" />
 		<modifier class="hit_success_probability" value="-1.2" />
 	</carry_item>
-	<carry_item key="K309_11" time_to_live_out_in_the_open="15" name="[Protective Armour]" transform_on_consume="K309_12" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="K309_11" time_to_live_out_in_the_open="0" name="[Protective Armour]" transform_on_consume="K309_12" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="commander_k_4.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="0.001" in_stock="0" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="30"/>
-		<model mesh_filename="vestexo.xml"/>
+		<model />
 		<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
 		<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
 		<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
@@ -204,12 +204,12 @@
 		<modifier class="detectability" value="0.2" />
 		<modifier class="hit_success_probability" value="-1.2" />
 	</carry_item>
-	<carry_item key="K309_12" time_to_live_out_in_the_open="15" name="[Protective Armour]" transform_on_consume="K309_13" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="K309_12" time_to_live_out_in_the_open="0" name="[Protective Armour]" transform_on_consume="K309_13" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="commander_k_3.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="0.001" in_stock="0" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="30"/>
-		<model mesh_filename="vestexo.xml"/>
+		<model />
 		<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
 		<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
 		<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
@@ -221,12 +221,12 @@
 		<modifier class="detectability" value="0.2" />
 		<modifier class="hit_success_probability" value="-1.2" />
 	</carry_item>
-	<carry_item key="K309_13" time_to_live_out_in_the_open="15" name="[Protective Armour]" transform_on_consume="K309_14" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="K309_13" time_to_live_out_in_the_open="0" name="[Protective Armour]" transform_on_consume="K309_14" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="commander_k_2.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="0.001" in_stock="0" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="30"/>
-		<model mesh_filename="vestexo.xml"/>
+		<model />
 		<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
 		<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
 		<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
@@ -238,12 +238,12 @@
 		<modifier class="detectability" value="0.2" />
 		<modifier class="hit_success_probability" value="-1.2" />
 	</carry_item>
-	<carry_item key="K309_14" time_to_live_out_in_the_open="15" name="[Protective Armour]" transform_on_consume="K309_15" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="K309_14" time_to_live_out_in_the_open="0" name="[Protective Armour]" transform_on_consume="K309_15" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="commander_k_1.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="0.001" in_stock="0" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="30"/>
-		<model mesh_filename="vestexo.xml"/>
+		<model />
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="wound"  />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
@@ -255,12 +255,12 @@
 		<modifier class="detectability" value="0.2" />
 		<modifier class="hit_success_probability" value="-1.2" />
 		</carry_item>
-	<carry_item key="K309_15" time_to_live_out_in_the_open="15" name="[Protective Armour]" transform_on_consume="K309_16" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<carry_item key="K309_15" time_to_live_out_in_the_open="0" name="[Protective Armour]" transform_on_consume="K309_16" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="commander_k_0.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
 		<commonness value="0.001" in_stock="0" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="30"/>
-		<model mesh_filename="vestexo.xml"/>
+		<model />
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>

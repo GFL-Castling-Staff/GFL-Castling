@@ -4,7 +4,7 @@
         <hud_icon filename="arm_exo_mp5.png" />
         <capacity value="1" source="rank" source_value="0.0" />
         <inventory encumbrance="0" price="0" />
-        <model mesh_filename="vestexo.xml" />
+        <model  />
         <commonness value="0.0" in_stock="0" can_respawn_with="0" />
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
@@ -21,7 +21,7 @@
         <hud_icon filename="arm_exo_g36c.png" />
         <capacity value="1" source="rank" source_value="0.0" />
         <inventory encumbrance="0" price="0" />
-        <model mesh_filename="vestexo.xml" />
+        <model  />
         <commonness value="0.0" in_stock="0" can_respawn_with="0" />
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
@@ -38,7 +38,7 @@
         <hud_icon filename="arm_exo_thompson.png" />
         <capacity value="1" source="rank" source_value="0.0" />
         <inventory encumbrance="0" price="0" />
-        <model mesh_filename="vestexo.xml" />
+        <model  />
         <commonness value="0.0" in_stock="0" can_respawn_with="0" />
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />

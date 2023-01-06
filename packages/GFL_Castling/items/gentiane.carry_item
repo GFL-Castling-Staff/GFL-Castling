@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <carry_items>
-    <carry_item key="gentiane.carry_item" time_to_live_out_in_the_open="15" name="Gentiane" transform_on_consume="gentiane_1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+    <carry_item key="gentiane.carry_item" time_to_live_out_in_the_open="0" name="Gentiane" transform_on_consume="gentiane_1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
         <hud_icon filename="gentiane_9.png"/>
         <capacity value="1" source="rank" source_value="0"/>
         <commonness value="0" in_stock="0" can_respawn_with="1"/>
         <inventory encumbrance="100" price="30"/>
-        <model mesh_filename="vestexo.xml"/>
+        <model />
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
@@ -17,12 +17,12 @@
         <modifier class="hit_success_probability" value="-1.2" />
         <modifier class="detectability" value="-0.05" />
     </carry_item>
-    <carry_item key="gentiane_1" time_to_live_out_in_the_open="15" name="Gentiane" transform_on_consume="gentiane_2" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+    <carry_item key="gentiane_1" time_to_live_out_in_the_open="0" name="Gentiane" transform_on_consume="gentiane_2" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
         <hud_icon filename="gentiane_8.png"/>
         <capacity value="1" source="rank" source_value="0"/>
         <commonness value="0" in_stock="0" can_respawn_with="1"/>
         <inventory encumbrance="100" price="30"/>
-        <model mesh_filename="vestexo.xml"/>
+        <model />
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
@@ -34,12 +34,12 @@
         <modifier class="hit_success_probability" value="-1.1" />
         <modifier class="detectability" value="-0.05" />
     </carry_item>
-    <carry_item key="gentiane_2" time_to_live_out_in_the_open="15" name="Gentiane" transform_on_consume="gentiane_3" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+    <carry_item key="gentiane_2" time_to_live_out_in_the_open="0" name="Gentiane" transform_on_consume="gentiane_3" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
         <hud_icon filename="gentiane_7.png"/>
         <capacity value="1" source="rank" source_value="0"/>
         <commonness value="0" in_stock="0" can_respawn_with="1"/>
         <inventory encumbrance="100" price="30"/>
-        <model mesh_filename="vestexo.xml"/>
+        <model />
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
@@ -51,12 +51,12 @@
         <modifier class="hit_success_probability" value="-1.1" />
         <modifier class="detectability" value="-0.05" />
     </carry_item>
-    <carry_item key="gentiane_3" time_to_live_out_in_the_open="15" name="Gentiane" transform_on_consume="gentiane_4" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+    <carry_item key="gentiane_3" time_to_live_out_in_the_open="0" name="Gentiane" transform_on_consume="gentiane_4" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
         <hud_icon filename="gentiane_6.png"/>
         <capacity value="1" source="rank" source_value="0"/>
         <commonness value="0" in_stock="0" can_respawn_with="1"/>
         <inventory encumbrance="100" price="30"/>
-        <model mesh_filename="vestexo.xml"/>
+        <model />
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
@@ -68,12 +68,12 @@
         <modifier class="hit_success_probability" value="-1.1" />
         <modifier class="detectability" value="-0.05" />
     </carry_item>
-    <carry_item key="gentiane_4" time_to_live_out_in_the_open="15" name="Gentiane" transform_on_consume="gentiane_5" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+    <carry_item key="gentiane_4" time_to_live_out_in_the_open="0" name="Gentiane" transform_on_consume="gentiane_5" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
         <hud_icon filename="gentiane_5.png"/>
         <capacity value="1" source="rank" source_value="0"/>
         <commonness value="0" in_stock="0" can_respawn_with="1"/>
         <inventory encumbrance="100" price="30"/>
-        <model mesh_filename="vestexo.xml"/>
+        <model />
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
@@ -85,12 +85,12 @@
         <modifier class="hit_success_probability" value="-1.1" />
         <modifier class="detectability" value="-0.05" />
     </carry_item>
-    <carry_item key="gentiane_5" time_to_live_out_in_the_open="15" name="Gentiane" transform_on_consume="gentiane_6" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+    <carry_item key="gentiane_5" time_to_live_out_in_the_open="0" name="Gentiane" transform_on_consume="gentiane_6" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
         <hud_icon filename="gentiane_4.png"/>
         <capacity value="1" source="rank" source_value="0"/>
         <commonness value="0" in_stock="0" can_respawn_with="1"/>
         <inventory encumbrance="100" price="30"/>
-        <model mesh_filename="vestexo.xml"/>
+        <model />
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
@@ -102,12 +102,12 @@
         <modifier class="hit_success_probability" value="-1.1" />
         <modifier class="detectability" value="-0.05" />
     </carry_item>
-    <carry_item key="gentiane_6" time_to_live_out_in_the_open="15" name="Gentiane" transform_on_consume="gentiane_7" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+    <carry_item key="gentiane_6" time_to_live_out_in_the_open="0" name="Gentiane" transform_on_consume="gentiane_7" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
         <hud_icon filename="gentiane_3.png"/>
         <capacity value="1" source="rank" source_value="0"/>
         <commonness value="0" in_stock="0" can_respawn_with="1"/>
         <inventory encumbrance="100" price="30"/>
-        <model mesh_filename="vestexo.xml"/>
+        <model />
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
@@ -119,12 +119,12 @@
         <modifier class="hit_success_probability" value="-1.1" />
         <modifier class="detectability" value="-0.05" />
     </carry_item>
-    <carry_item key="gentiane_7" time_to_live_out_in_the_open="15" name="Gentiane" transform_on_consume="gentiane_8" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+    <carry_item key="gentiane_7" time_to_live_out_in_the_open="0" name="Gentiane" transform_on_consume="gentiane_8" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
         <hud_icon filename="gentiane_2.png"/>
         <capacity value="1" source="rank" source_value="0"/>
         <commonness value="0" in_stock="0" can_respawn_with="1"/>
         <inventory encumbrance="100" price="30"/>
-        <model mesh_filename="vestexo.xml"/>
+        <model />
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
@@ -136,12 +136,12 @@
         <modifier class="hit_success_probability" value="-1.1" />
         <modifier class="detectability" value="-0.05" />
     </carry_item>
-    <carry_item key="gentiane_8" time_to_live_out_in_the_open="15" name="Gentiane-Overrun!-" transform_on_consume="gentiane_9" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+    <carry_item key="gentiane_8" time_to_live_out_in_the_open="0" name="Gentiane-Overrun!-" transform_on_consume="gentiane_9" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
         <hud_icon filename="gentiane_1.png"/>
         <capacity value="1" source="rank" source_value="0"/>
         <commonness value="0" in_stock="0" can_respawn_with="1"/>
         <inventory encumbrance="100" price="30"/>
-        <model mesh_filename="vestexo.xml"/>
+        <model />
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="wound"  />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
@@ -153,12 +153,12 @@
         <modifier class="hit_success_probability" value="-1.1" />
         <modifier class="detectability" value="-0.05" />
     </carry_item>
-    <carry_item key="gentiane_9" time_to_live_out_in_the_open="15" name="Gentiane-Overrun!-" transform_on_consume="gentiane_10" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+    <carry_item key="gentiane_9" time_to_live_out_in_the_open="0" name="Gentiane-Overrun!-" transform_on_consume="gentiane_10" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
         <hud_icon filename="gentiane_0.png"/>
         <capacity value="1" source="rank" source_value="0"/>
         <commonness value="0" in_stock="0" can_respawn_with="1"/>
         <inventory encumbrance="100" price="30"/>
-        <model mesh_filename="vestexo.xml"/>
+        <model />
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>

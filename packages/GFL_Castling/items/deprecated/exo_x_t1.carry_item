@@ -3,7 +3,7 @@
     <carry_item file="exo.base_carry_item" key="exo_x_t1.carry_item" name="Lightweight High-output Exo Mk.I"  transform_on_consume="exo_x_t1_1"   >
         <hud_icon filename="exo_x_t1_2.png" />
         <inventory price="1" />
-        <model mesh_filename="vestexo.xml" />
+        <model  />
         <modifier class="speed" value="0.3" />
 		<modifier class="hit_success_probability" value="-1" />
 	    <modifier class="detectability" value="-0.1" />

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <carry_items>
-    <carry_item key="vest_40hp.carry_item" time_to_live_out_in_the_open="15" name="40HP Vest" transform_on_consume="vest_40hp_1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+    <carry_item key="vest_40hp.carry_item" time_to_live_out_in_the_open="0" name="40HP Vest" transform_on_consume="vest_40hp_1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
         <hud_icon filename="testing.png"/>
         <capacity value="1" source="rank" source_value="0"/>
         <commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -17,7 +17,7 @@
         <modifier class="hit_success_probability" value="-1.0" />
         <modifier class="detectability" value="0.0" />
     </carry_item>
-    <carry_item key="vest_40hp_1" time_to_live_out_in_the_open="15" name="40HP Vest" transform_on_consume="vest_40hp_2" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+    <carry_item key="vest_40hp_1" time_to_live_out_in_the_open="0" name="40HP Vest" transform_on_consume="vest_40hp_2" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
         <hud_icon filename="testing.png"/>
         <capacity value="1" source="rank" source_value="0"/>
         <commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -34,7 +34,7 @@
         <modifier class="hit_success_probability" value="-1.0" />
         <modifier class="detectability" value="0.0" />
     </carry_item>
-    <carry_item key="vest_40hp_2" time_to_live_out_in_the_open="15" name="40HP Vest" transform_on_consume="vest_40hp_3" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+    <carry_item key="vest_40hp_2" time_to_live_out_in_the_open="0" name="40HP Vest" transform_on_consume="vest_40hp_3" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
         <hud_icon filename="testing.png"/>
         <capacity value="1" source="rank" source_value="0"/>
         <commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -51,7 +51,7 @@
         <modifier class="hit_success_probability" value="-1.0" />
         <modifier class="detectability" value="0.0" />
     </carry_item>
-    <carry_item key="vest_40hp_3" time_to_live_out_in_the_open="15" name="40HP Vest" transform_on_consume="vest_40hp_4" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+    <carry_item key="vest_40hp_3" time_to_live_out_in_the_open="0" name="40HP Vest" transform_on_consume="vest_40hp_4" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
         <hud_icon filename="testing.png"/>
         <capacity value="1" source="rank" source_value="0"/>
         <commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -68,7 +68,7 @@
         <modifier class="hit_success_probability" value="-1.0" />
         <modifier class="detectability" value="0.0" />
     </carry_item>
-    <carry_item key="vest_40hp_4" time_to_live_out_in_the_open="15" name="40HP Vest" transform_on_consume="vest_40hp_5" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+    <carry_item key="vest_40hp_4" time_to_live_out_in_the_open="0" name="40HP Vest" transform_on_consume="vest_40hp_5" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
         <hud_icon filename="testing.png"/>
         <capacity value="1" source="rank" source_value="0"/>
         <commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -85,7 +85,7 @@
         <modifier class="hit_success_probability" value="-1.0" />
         <modifier class="detectability" value="0.0" />
     </carry_item>
-    <carry_item key="vest_40hp_5" time_to_live_out_in_the_open="15" name="40HP Vest" transform_on_consume="vest_40hp_6" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+    <carry_item key="vest_40hp_5" time_to_live_out_in_the_open="0" name="40HP Vest" transform_on_consume="vest_40hp_6" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
         <hud_icon filename="testing.png"/>
         <capacity value="1" source="rank" source_value="0"/>
         <commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -102,7 +102,7 @@
         <modifier class="hit_success_probability" value="-1.0" />
         <modifier class="detectability" value="0.0" />
     </carry_item>
-    <carry_item key="vest_40hp_6" time_to_live_out_in_the_open="15" name="40HP Vest" transform_on_consume="vest_40hp_7" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+    <carry_item key="vest_40hp_6" time_to_live_out_in_the_open="0" name="40HP Vest" transform_on_consume="vest_40hp_7" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
         <hud_icon filename="testing.png"/>
         <capacity value="1" source="rank" source_value="0"/>
         <commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -119,7 +119,7 @@
         <modifier class="hit_success_probability" value="-1.0" />
         <modifier class="detectability" value="0.0" />
     </carry_item>
-    <carry_item key="vest_40hp_7" time_to_live_out_in_the_open="15" name="40HP Vest" transform_on_consume="vest_40hp_8" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+    <carry_item key="vest_40hp_7" time_to_live_out_in_the_open="0" name="40HP Vest" transform_on_consume="vest_40hp_8" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
         <hud_icon filename="testing.png"/>
         <capacity value="1" source="rank" source_value="0"/>
         <commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -136,7 +136,7 @@
         <modifier class="hit_success_probability" value="-1.0" />
         <modifier class="detectability" value="0.0" />
     </carry_item>
-    <carry_item key="vest_40hp_8" time_to_live_out_in_the_open="15" name="40HP Vest" transform_on_consume="vest_40hp_9" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+    <carry_item key="vest_40hp_8" time_to_live_out_in_the_open="0" name="40HP Vest" transform_on_consume="vest_40hp_9" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
         <hud_icon filename="testing.png"/>
         <capacity value="1" source="rank" source_value="0"/>
         <commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -153,7 +153,7 @@
         <modifier class="hit_success_probability" value="-1.0" />
         <modifier class="detectability" value="0.0" />
     </carry_item>
-    <carry_item key="vest_40hp_9" time_to_live_out_in_the_open="15" name="40HP Vest" transform_on_consume="vest_40hp_10" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+    <carry_item key="vest_40hp_9" time_to_live_out_in_the_open="0" name="40HP Vest" transform_on_consume="vest_40hp_10" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
         <hud_icon filename="testing.png"/>
         <capacity value="1" source="rank" source_value="0"/>
         <commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -170,7 +170,7 @@
         <modifier class="hit_success_probability" value="-1.0" />
         <modifier class="detectability" value="0.0" />
     </carry_item>
-    <carry_item key="vest_40hp_10" time_to_live_out_in_the_open="15" name="40HP Vest" transform_on_consume="vest_40hp_11" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+    <carry_item key="vest_40hp_10" time_to_live_out_in_the_open="0" name="40HP Vest" transform_on_consume="vest_40hp_11" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
         <hud_icon filename="testing.png"/>
         <capacity value="1" source="rank" source_value="0"/>
         <commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -187,7 +187,7 @@
         <modifier class="hit_success_probability" value="-1.0" />
         <modifier class="detectability" value="0.0" />
     </carry_item>
-    <carry_item key="vest_40hp_11" time_to_live_out_in_the_open="15" name="40HP Vest" transform_on_consume="vest_40hp_12" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+    <carry_item key="vest_40hp_11" time_to_live_out_in_the_open="0" name="40HP Vest" transform_on_consume="vest_40hp_12" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
         <hud_icon filename="testing.png"/>
         <capacity value="1" source="rank" source_value="0"/>
         <commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -204,7 +204,7 @@
         <modifier class="hit_success_probability" value="-1.0" />
         <modifier class="detectability" value="0.0" />
     </carry_item>
-    <carry_item key="vest_40hp_12" time_to_live_out_in_the_open="15" name="40HP Vest" transform_on_consume="vest_40hp_13" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+    <carry_item key="vest_40hp_12" time_to_live_out_in_the_open="0" name="40HP Vest" transform_on_consume="vest_40hp_13" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
         <hud_icon filename="testing.png"/>
         <capacity value="1" source="rank" source_value="0"/>
         <commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -221,7 +221,7 @@
         <modifier class="hit_success_probability" value="-1.0" />
         <modifier class="detectability" value="0.0" />
     </carry_item>
-    <carry_item key="vest_40hp_13" time_to_live_out_in_the_open="15" name="40HP Vest" transform_on_consume="vest_40hp_14" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+    <carry_item key="vest_40hp_13" time_to_live_out_in_the_open="0" name="40HP Vest" transform_on_consume="vest_40hp_14" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
         <hud_icon filename="testing.png"/>
         <capacity value="1" source="rank" source_value="0"/>
         <commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -238,7 +238,7 @@
         <modifier class="hit_success_probability" value="-1.0" />
         <modifier class="detectability" value="0.0" />
     </carry_item>
-    <carry_item key="vest_40hp_14" time_to_live_out_in_the_open="15" name="40HP Vest" transform_on_consume="vest_40hp_15" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+    <carry_item key="vest_40hp_14" time_to_live_out_in_the_open="0" name="40HP Vest" transform_on_consume="vest_40hp_15" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
         <hud_icon filename="testing.png"/>
         <capacity value="1" source="rank" source_value="0"/>
         <commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -255,7 +255,7 @@
         <modifier class="hit_success_probability" value="-1.0" />
         <modifier class="detectability" value="0.0" />
     </carry_item>
-    <carry_item key="vest_40hp_15" time_to_live_out_in_the_open="15" name="40HP Vest" transform_on_consume="vest_40hp_16" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+    <carry_item key="vest_40hp_15" time_to_live_out_in_the_open="0" name="40HP Vest" transform_on_consume="vest_40hp_16" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
         <hud_icon filename="testing.png"/>
         <capacity value="1" source="rank" source_value="0"/>
         <commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -272,7 +272,7 @@
         <modifier class="hit_success_probability" value="-1.0" />
         <modifier class="detectability" value="0.0" />
     </carry_item>
-    <carry_item key="vest_40hp_16" time_to_live_out_in_the_open="15" name="40HP Vest" transform_on_consume="vest_40hp_17" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+    <carry_item key="vest_40hp_16" time_to_live_out_in_the_open="0" name="40HP Vest" transform_on_consume="vest_40hp_17" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
         <hud_icon filename="testing.png"/>
         <capacity value="1" source="rank" source_value="0"/>
         <commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -289,7 +289,7 @@
         <modifier class="hit_success_probability" value="-1.0" />
         <modifier class="detectability" value="0.0" />
     </carry_item>
-    <carry_item key="vest_40hp_17" time_to_live_out_in_the_open="15" name="40HP Vest" transform_on_consume="vest_40hp_18" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+    <carry_item key="vest_40hp_17" time_to_live_out_in_the_open="0" name="40HP Vest" transform_on_consume="vest_40hp_18" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
         <hud_icon filename="testing.png"/>
         <capacity value="1" source="rank" source_value="0"/>
         <commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -306,7 +306,7 @@
         <modifier class="hit_success_probability" value="-1.0" />
         <modifier class="detectability" value="0.0" />
     </carry_item>
-    <carry_item key="vest_40hp_18" time_to_live_out_in_the_open="15" name="40HP Vest" transform_on_consume="vest_40hp_19" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+    <carry_item key="vest_40hp_18" time_to_live_out_in_the_open="0" name="40HP Vest" transform_on_consume="vest_40hp_19" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
         <hud_icon filename="testing.png"/>
         <capacity value="1" source="rank" source_value="0"/>
         <commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -323,7 +323,7 @@
         <modifier class="hit_success_probability" value="-1.0" />
         <modifier class="detectability" value="0.0" />
     </carry_item>
-    <carry_item key="vest_40hp_19" time_to_live_out_in_the_open="15" name="40HP Vest" transform_on_consume="vest_40hp_20" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+    <carry_item key="vest_40hp_19" time_to_live_out_in_the_open="0" name="40HP Vest" transform_on_consume="vest_40hp_20" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
         <hud_icon filename="testing.png"/>
         <capacity value="1" source="rank" source_value="0"/>
         <commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -340,7 +340,7 @@
         <modifier class="hit_success_probability" value="-1.0" />
         <modifier class="detectability" value="0.0" />
     </carry_item>
-    <carry_item key="vest_40hp_20" time_to_live_out_in_the_open="15" name="40HP Vest" transform_on_consume="vest_40hp_21" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+    <carry_item key="vest_40hp_20" time_to_live_out_in_the_open="0" name="40HP Vest" transform_on_consume="vest_40hp_21" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
         <hud_icon filename="testing.png"/>
         <capacity value="1" source="rank" source_value="0"/>
         <commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -357,7 +357,7 @@
         <modifier class="hit_success_probability" value="-1.0" />
         <modifier class="detectability" value="0.0" />
     </carry_item>
-    <carry_item key="vest_40hp_21" time_to_live_out_in_the_open="15" name="40HP Vest" transform_on_consume="vest_40hp_22" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+    <carry_item key="vest_40hp_21" time_to_live_out_in_the_open="0" name="40HP Vest" transform_on_consume="vest_40hp_22" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
         <hud_icon filename="testing.png"/>
         <capacity value="1" source="rank" source_value="0"/>
         <commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -374,7 +374,7 @@
         <modifier class="hit_success_probability" value="-1.0" />
         <modifier class="detectability" value="0.0" />
     </carry_item>
-    <carry_item key="vest_40hp_22" time_to_live_out_in_the_open="15" name="40HP Vest" transform_on_consume="vest_40hp_23" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+    <carry_item key="vest_40hp_22" time_to_live_out_in_the_open="0" name="40HP Vest" transform_on_consume="vest_40hp_23" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
         <hud_icon filename="testing.png"/>
         <capacity value="1" source="rank" source_value="0"/>
         <commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -391,7 +391,7 @@
         <modifier class="hit_success_probability" value="-1.0" />
         <modifier class="detectability" value="0.0" />
     </carry_item>
-    <carry_item key="vest_40hp_23" time_to_live_out_in_the_open="15" name="40HP Vest" transform_on_consume="vest_40hp_24" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+    <carry_item key="vest_40hp_23" time_to_live_out_in_the_open="0" name="40HP Vest" transform_on_consume="vest_40hp_24" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
         <hud_icon filename="testing.png"/>
         <capacity value="1" source="rank" source_value="0"/>
         <commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -408,7 +408,7 @@
         <modifier class="hit_success_probability" value="-1.0" />
         <modifier class="detectability" value="0.0" />
     </carry_item>
-    <carry_item key="vest_40hp_24" time_to_live_out_in_the_open="15" name="40HP Vest" transform_on_consume="vest_40hp_25" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+    <carry_item key="vest_40hp_24" time_to_live_out_in_the_open="0" name="40HP Vest" transform_on_consume="vest_40hp_25" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
         <hud_icon filename="testing.png"/>
         <capacity value="1" source="rank" source_value="0"/>
         <commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -425,7 +425,7 @@
         <modifier class="hit_success_probability" value="-1.0" />
         <modifier class="detectability" value="0.0" />
     </carry_item>
-    <carry_item key="vest_40hp_25" time_to_live_out_in_the_open="15" name="40HP Vest" transform_on_consume="vest_40hp_26" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+    <carry_item key="vest_40hp_25" time_to_live_out_in_the_open="0" name="40HP Vest" transform_on_consume="vest_40hp_26" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
         <hud_icon filename="testing.png"/>
         <capacity value="1" source="rank" source_value="0"/>
         <commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -442,7 +442,7 @@
         <modifier class="hit_success_probability" value="-1.0" />
         <modifier class="detectability" value="0.0" />
     </carry_item>
-    <carry_item key="vest_40hp_26" time_to_live_out_in_the_open="15" name="40HP Vest" transform_on_consume="vest_40hp_27" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+    <carry_item key="vest_40hp_26" time_to_live_out_in_the_open="0" name="40HP Vest" transform_on_consume="vest_40hp_27" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
         <hud_icon filename="testing.png"/>
         <capacity value="1" source="rank" source_value="0"/>
         <commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -459,7 +459,7 @@
         <modifier class="hit_success_probability" value="-1.0" />
         <modifier class="detectability" value="0.0" />
     </carry_item>
-    <carry_item key="vest_40hp_27" time_to_live_out_in_the_open="15" name="40HP Vest" transform_on_consume="vest_40hp_28" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+    <carry_item key="vest_40hp_27" time_to_live_out_in_the_open="0" name="40HP Vest" transform_on_consume="vest_40hp_28" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
         <hud_icon filename="testing.png"/>
         <capacity value="1" source="rank" source_value="0"/>
         <commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -476,7 +476,7 @@
         <modifier class="hit_success_probability" value="-1.0" />
         <modifier class="detectability" value="0.0" />
     </carry_item>
-    <carry_item key="vest_40hp_28" time_to_live_out_in_the_open="15" name="40HP Vest" transform_on_consume="vest_40hp_29" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+    <carry_item key="vest_40hp_28" time_to_live_out_in_the_open="0" name="40HP Vest" transform_on_consume="vest_40hp_29" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
         <hud_icon filename="testing.png"/>
         <capacity value="1" source="rank" source_value="0"/>
         <commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -493,7 +493,7 @@
         <modifier class="hit_success_probability" value="-1.0" />
         <modifier class="detectability" value="0.0" />
     </carry_item>
-    <carry_item key="vest_40hp_29" time_to_live_out_in_the_open="15" name="40HP Vest" transform_on_consume="vest_40hp_30" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+    <carry_item key="vest_40hp_29" time_to_live_out_in_the_open="0" name="40HP Vest" transform_on_consume="vest_40hp_30" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
         <hud_icon filename="testing.png"/>
         <capacity value="1" source="rank" source_value="0"/>
         <commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -510,7 +510,7 @@
         <modifier class="hit_success_probability" value="-1.0" />
         <modifier class="detectability" value="0.0" />
     </carry_item>
-    <carry_item key="vest_40hp_30" time_to_live_out_in_the_open="15" name="40HP Vest" transform_on_consume="vest_40hp_31" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+    <carry_item key="vest_40hp_30" time_to_live_out_in_the_open="0" name="40HP Vest" transform_on_consume="vest_40hp_31" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
         <hud_icon filename="testing.png"/>
         <capacity value="1" source="rank" source_value="0"/>
         <commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -527,7 +527,7 @@
         <modifier class="hit_success_probability" value="-1.0" />
         <modifier class="detectability" value="0.0" />
     </carry_item>
-    <carry_item key="vest_40hp_31" time_to_live_out_in_the_open="15" name="40HP Vest" transform_on_consume="vest_40hp_32" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+    <carry_item key="vest_40hp_31" time_to_live_out_in_the_open="0" name="40HP Vest" transform_on_consume="vest_40hp_32" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
         <hud_icon filename="testing.png"/>
         <capacity value="1" source="rank" source_value="0"/>
         <commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -544,7 +544,7 @@
         <modifier class="hit_success_probability" value="-1.0" />
         <modifier class="detectability" value="0.0" />
     </carry_item>
-    <carry_item key="vest_40hp_32" time_to_live_out_in_the_open="15" name="40HP Vest" transform_on_consume="vest_40hp_33" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+    <carry_item key="vest_40hp_32" time_to_live_out_in_the_open="0" name="40HP Vest" transform_on_consume="vest_40hp_33" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
         <hud_icon filename="testing.png"/>
         <capacity value="1" source="rank" source_value="0"/>
         <commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -561,7 +561,7 @@
         <modifier class="hit_success_probability" value="-1.0" />
         <modifier class="detectability" value="0.0" />
     </carry_item>
-    <carry_item key="vest_40hp_33" time_to_live_out_in_the_open="15" name="40HP Vest" transform_on_consume="vest_40hp_34" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+    <carry_item key="vest_40hp_33" time_to_live_out_in_the_open="0" name="40HP Vest" transform_on_consume="vest_40hp_34" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
         <hud_icon filename="testing.png"/>
         <capacity value="1" source="rank" source_value="0"/>
         <commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -578,7 +578,7 @@
         <modifier class="hit_success_probability" value="-1.0" />
         <modifier class="detectability" value="0.0" />
     </carry_item>
-    <carry_item key="vest_40hp_34" time_to_live_out_in_the_open="15" name="40HP Vest" transform_on_consume="vest_40hp_35" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+    <carry_item key="vest_40hp_34" time_to_live_out_in_the_open="0" name="40HP Vest" transform_on_consume="vest_40hp_35" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
         <hud_icon filename="testing.png"/>
         <capacity value="1" source="rank" source_value="0"/>
         <commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -595,7 +595,7 @@
         <modifier class="hit_success_probability" value="-1.0" />
         <modifier class="detectability" value="0.0" />
     </carry_item>
-    <carry_item key="vest_40hp_35" time_to_live_out_in_the_open="15" name="40HP Vest" transform_on_consume="vest_40hp_36" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+    <carry_item key="vest_40hp_35" time_to_live_out_in_the_open="0" name="40HP Vest" transform_on_consume="vest_40hp_36" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
         <hud_icon filename="testing.png"/>
         <capacity value="1" source="rank" source_value="0"/>
         <commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -612,7 +612,7 @@
         <modifier class="hit_success_probability" value="-1.0" />
         <modifier class="detectability" value="0.0" />
     </carry_item>
-    <carry_item key="vest_40hp_36" time_to_live_out_in_the_open="15" name="40HP Vest" transform_on_consume="vest_40hp_37" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+    <carry_item key="vest_40hp_36" time_to_live_out_in_the_open="0" name="40HP Vest" transform_on_consume="vest_40hp_37" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
         <hud_icon filename="testing.png"/>
         <capacity value="1" source="rank" source_value="0"/>
         <commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -629,7 +629,7 @@
         <modifier class="hit_success_probability" value="-1.0" />
         <modifier class="detectability" value="0.0" />
     </carry_item>
-    <carry_item key="vest_40hp_37" time_to_live_out_in_the_open="15" name="40HP Vest" transform_on_consume="vest_40hp_38" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+    <carry_item key="vest_40hp_37" time_to_live_out_in_the_open="0" name="40HP Vest" transform_on_consume="vest_40hp_38" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
         <hud_icon filename="testing.png"/>
         <capacity value="1" source="rank" source_value="0"/>
         <commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -646,7 +646,7 @@
         <modifier class="hit_success_probability" value="-1.0" />
         <modifier class="detectability" value="0.0" />
     </carry_item>
-    <carry_item key="vest_40hp_38" time_to_live_out_in_the_open="15" name="40HP Vest" transform_on_consume="vest_40hp_39" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+    <carry_item key="vest_40hp_38" time_to_live_out_in_the_open="0" name="40HP Vest" transform_on_consume="vest_40hp_39" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
         <hud_icon filename="testing.png"/>
         <capacity value="1" source="rank" source_value="0"/>
         <commonness value="1" in_stock="1" can_respawn_with="1"/>
@@ -663,7 +663,7 @@
         <modifier class="hit_success_probability" value="-1.0" />
         <modifier class="detectability" value="0.0" />
     </carry_item>
-    <carry_item key="vest_40hp_39" time_to_live_out_in_the_open="15" name="40HP Vest" transform_on_consume="vest_40hp_40" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+    <carry_item key="vest_40hp_39" time_to_live_out_in_the_open="0" name="40HP Vest" transform_on_consume="vest_40hp_40" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
         <hud_icon filename="testing.png"/>
         <capacity value="1" source="rank" source_value="0"/>
         <commonness value="1" in_stock="1" can_respawn_with="1"/>
