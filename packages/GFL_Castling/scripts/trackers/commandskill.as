@@ -433,6 +433,8 @@ dictionary commandSkillIndex = {
         {"gkw_m82a1_skill.weapon",53},
         {"gkw_gepardm1.weapon",53},
         {"gkw_gepardm1mod3.weapon",53},
+        {"gkw_gepardm1_4006.weapon",53},
+        {"gkw_gepardm1mod3_4006.weapon",53},
 
         {"gkw_f1.weapon",54},
         {"gkw_f1mod3.weapon",54},
@@ -3282,13 +3284,13 @@ class CommandSkill : Tracker {
                 tasker.add(DelayAntiTankSnipeRequest(m_metagame,2.5,characterId,factionid,"snipe_blast_30.projectile",c_pos.add(Vector3(0,0.5,0)),s_pos));
                 addCoolDown("sniper",45,characterId,modifer);
             }   
-            else if (weapon_name == "gkw_gepardm1.weapon"){
+            else if (weapon_name == "gkw_gepardm1.weapon" || weapon_name == "gkw_gepardm1_4006.weapon" ){
                 playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 2.5s",false);
                 TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
                 tasker.add(DelayAntiTankSnipeRequest(m_metagame,2.5,characterId,factionid,"snipe_blast_30.projectile",c_pos.add(Vector3(0,0.5,0)),s_pos));
                 addCoolDown("sniper",45,characterId,modifer);
             } 
-            else if (weapon_name == "gkw_gepardm1mod3.weapon"){
+            else if (weapon_name == "gkw_gepardm1mod3.weapon"|| weapon_name == "gkw_gepardm1mod3_4006.weapon"){
                 playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 2.5s",false);
                 TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
                 tasker.add(DelayAntiTankSnipeRequest(m_metagame,2.5,characterId,factionid,"snipe_blast_30.projectile",c_pos.add(Vector3(0,0.5,0)),s_pos));
