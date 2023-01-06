@@ -417,7 +417,7 @@
 </weapon>
 
 <weapon key="gkw_fg42.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.6" retrigger_time="-1" accuracy_factor="0.98" sustained_fire_grow_step="0.6" sustained_fire_diminish_rate="2.8" spread_range="0.3" magazine_size="20" stance_accuracy_rate="0.8" suppressed="0" name="FG42" class="2" projectile_speed="200" sight_range_modifier="1.5" slot="0" reload_one_at_a_time="1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" carry_in_two_hands="1" stab_enabled="1"/>
+	<specification barrel_offset="0.6" retrigger_time="-1" accuracy_factor="0.98" sustained_fire_grow_step="0.4" sustained_fire_diminish_rate="2.8" spread_range="0.3" magazine_size="20" stance_accuracy_rate="0.8" suppressed="0" name="FG42" class="1" projectile_speed="200" sight_range_modifier="1.5" slot="0" reload_one_at_a_time="1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" carry_in_two_hands="1" stab_enabled="1"/>
 	<animation key="reload" animation_key="reloading, clip fg42"/>
 	<inventory encumbrance="20.0" buy_price="42.0" sell_price="42.0"/>
 	<next_in_chain key="gkw_fg42_skill.weapon" share_ammo="1"/>
@@ -523,7 +523,7 @@
 
 <weapon on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0" key="gkw_fg42_only.weapon">
 	<tag name="machine gun"/>
-	<specification barrel_offset="0.6" retrigger_time="-1" accuracy_factor="1.0" sustained_fire_grow_step="0.6" sustained_fire_diminish_rate="4.2" spread_range="0.25" magazine_size="20" stance_accuracy_rate="1.1" suppressed="0" name="FG42-[Scoped ZFG42]" class="0" projectile_speed="220" sight_range_modifier="2.0" slot="0" reload_one_at_a_time="1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" carry_in_two_hands="1" stab_range="4.5" stab_enabled="1"/>
+	<specification barrel_offset="0.6" retrigger_time="-1" accuracy_factor="1.0" sustained_fire_grow_step="0.4" sustained_fire_diminish_rate="4.2" spread_range="0.25" magazine_size="20" stance_accuracy_rate="1.1" suppressed="0" name="FG42-[Scoped ZFG42]" class="1" projectile_speed="220" sight_range_modifier="2.0" slot="0" reload_one_at_a_time="1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" carry_in_two_hands="1" stab_range="4.5" stab_enabled="1"/>
 	<animation key="recoil" animation_key="recoil1"/>
 	<animation key="recoil" animation_key="recoil2"/>
 	<animation key="recoil" animation_key="recoil3"/>
@@ -2142,7 +2142,7 @@
 </weapon>
 
 <weapon key="gkw_m870.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="0.85" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="3.6" magazine_size="8" can_shoot_standing="1" suppressed="0" name="Remington Model 870" class="2" reload_one_at_a_time="1" sight_range_modifier="1" projectile_speed="96" barrel_offset="0.4" projectiles_per_shot="14" spread_range="0.20" stance_accuracy_rate="2.0" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0" use_basic_muzzle_smoke_effect="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="0.85" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="3.6" magazine_size="8" can_shoot_standing="1" suppressed="0" name="Remington Model 870" class="1" reload_one_at_a_time="1" sight_range_modifier="1" projectile_speed="96" barrel_offset="0.4" projectiles_per_shot="14" spread_range="0.20" stance_accuracy_rate="2.0" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0" use_basic_muzzle_smoke_effect="0"/>
 	<inventory buy_price="66.0" sell_price="66.0"/>
 	<animation state_key="cycle" animation_key="Pshotgun0.5"/>
 	<animation state_key="cycle" stance_key="prone" animation_key="Pshotgun0.5p"/>
@@ -2566,7 +2566,7 @@
 </weapon>
 
 <weapon key="gkw_kord.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.7" accuracy_factor="1.0" class="2" magazine_size="50" name="Kord" last_burst_retrigger_time="-1" projectile_speed="200" retrigger_time="-1" suppressed="0" projectiles_per_shot="3" sustained_fire_diminish_rate="35" sustained_fire_grow_step="5.0" sight_range_modifier="1.0" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" slot="0"/>
+	<specification barrel_offset="0.7" accuracy_factor="1.0" class="1" magazine_size="50" name="Kord" last_burst_retrigger_time="-1" projectile_speed="200" retrigger_time="-1" suppressed="0" projectiles_per_shot="3" sustained_fire_diminish_rate="35" sustained_fire_grow_step="5.0" sight_range_modifier="1.0" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" slot="0"/>
 	<next_in_chain key="gkw_kord_skill.weapon" share_ammo="0"/>
 	<animation key="reload" animation_key="reloading, Machine gun 2.0"/>
 	<animation state_key="hold_casual" animation_key="dancing, kazachok"/>
@@ -2617,7 +2617,7 @@
 </weapon>
 
 <weapon key="gkw_kord_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.7" accuracy_factor="0.6" class="2" spread_range="0.15" stance_accuracy_rate="0.8" magazine_size="150" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" name="Kord-[High Pressure Assault]" last_burst_retrigger_time="-1" projectile_speed="200" retrigger_time="-1" suppressed="0" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="3.0" sight_range_modifier="1.8" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" slot="0"/>
+	<specification barrel_offset="0.7" accuracy_factor="0.6" class="1" spread_range="0.15" stance_accuracy_rate="0.8" magazine_size="150" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" name="Kord-[High Pressure Assault]" last_burst_retrigger_time="-1" projectile_speed="200" retrigger_time="-1" suppressed="0" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="3.0" sight_range_modifier="1.8" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" slot="0"/>
 	<next_in_chain key="gkw_kord.weapon" share_ammo="0"/>
 	<animation key="reload" animation_key="reloading, Machine gun 4"/>
 	<animation key="cycle" animation_key="cycle_2h_hip_600rpm"/>
@@ -2668,7 +2668,7 @@
 </weapon>
 
 <weapon key="gkw_kord_5102.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.7" accuracy_factor="1.0" class="2" magazine_size="50" name="Kord-[Dead Silent Dancer]" last_burst_retrigger_time="-1" projectile_speed="200" retrigger_time="-1" suppressed="0" projectiles_per_shot="3" sustained_fire_diminish_rate="35" sustained_fire_grow_step="5.0" sight_range_modifier="1.0" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" slot="0"/>
+	<specification barrel_offset="0.7" accuracy_factor="1.0" class="1" magazine_size="50" name="Kord-[Dead Silent Dancer]" last_burst_retrigger_time="-1" projectile_speed="200" retrigger_time="-1" suppressed="0" projectiles_per_shot="3" sustained_fire_diminish_rate="35" sustained_fire_grow_step="5.0" sight_range_modifier="1.0" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" slot="0"/>
 	<next_in_chain key="gkw_kord_5102_skill.weapon" share_ammo="0"/>
 	<animation key="reload" animation_key="reloading, Machine gun 2.0"/>
 	<animation state_key="hold_casual" animation_key="dancing, kazachok"/>
@@ -2719,7 +2719,7 @@
 </weapon>
 
 <weapon key="gkw_kord_5102_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.7" accuracy_factor="0.6" class="2" spread_range="0.15" stance_accuracy_rate="0.8" magazine_size="150" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" name="Kord-[Dead Silent Dancer]-[High Pressure Assault]" last_burst_retrigger_time="-1" projectile_speed="200" retrigger_time="-1" suppressed="0" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="3.0" sight_range_modifier="1.8" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" slot="0"/>
+	<specification barrel_offset="0.7" accuracy_factor="0.6" class="1" spread_range="0.15" stance_accuracy_rate="0.8" magazine_size="150" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" name="Kord-[Dead Silent Dancer]-[High Pressure Assault]" last_burst_retrigger_time="-1" projectile_speed="200" retrigger_time="-1" suppressed="0" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="3.0" sight_range_modifier="1.8" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" slot="0"/>
 	<next_in_chain key="gkw_kord_5102.weapon" share_ammo="0"/>
 	<animation key="reload" animation_key="reloading, Machine gun 4"/>
 	<animation key="cycle" animation_key="cycle_2h_hip_600rpm"/>
@@ -4991,7 +4991,7 @@
 </weapon>
 
 <weapon key="gkw_m2hb_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.5" accuracy_factor="0.6" class="2" magazine_size="250" name="Browning M2HB-[Terminating Barrage]" spread_range="0.15" projectile_speed="200" retrigger_time="-1" suppressed="0" sustained_fire_diminish_rate="1.5" sustained_fire_grow_step="1.0" sight_range_modifier="1.3" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1"/>
+	<specification barrel_offset="0.5" accuracy_factor="0.6" class="1" magazine_size="250" name="Browning M2HB-[Terminating Barrage]" spread_range="0.15" projectile_speed="200" retrigger_time="-1" suppressed="0" sustained_fire_diminish_rate="1.5" sustained_fire_grow_step="1.0" sight_range_modifier="1.3" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1"/>
 	<inventory encumbrance="30.0" buy_price="60.0" sell_price="60.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<animation key="reload" animation_key="reloading, Machine gun 4"/>
@@ -5035,7 +5035,7 @@
 </weapon>
 
 <weapon key="gkw_m249saw.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.5" retrigger_time="-1" accuracy_factor="0.98" sustained_fire_grow_step="0.3" sustained_fire_diminish_rate="2.1" spread_range="0.2" stance_accuracy_rate="1.5" magazine_size="500" suppressed="0" name="M249 SAW" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" class="2" projectile_speed="190" sight_range_modifier="1.2" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
+	<specification barrel_offset="0.5" retrigger_time="-1" accuracy_factor="0.98" sustained_fire_grow_step="0.3" sustained_fire_diminish_rate="2.1" spread_range="0.2" stance_accuracy_rate="1.5" magazine_size="500" suppressed="0" name="M249 SAW" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" class="1" projectile_speed="190" sight_range_modifier="1.2" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
 	<animation key="reload" animation_key="reloading, Machine gun 4"/>
 	<inventory encumbrance="30.0" buy_price="49.0" sell_price="49.0"/>
 	<sound key="fire" fileref="m249_fire_FromCOD16.wav" pitch_variety="0.05" volume="0.8"/>
@@ -7034,7 +7034,7 @@
 </weapon>
 
 <weapon key="gkw_wa2000_only_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="3.0" spread_range="0.03" magazine_size="15" can_shoot_standing="1" suppressed="0" name="Walther WA2000-[SB 2.5-10x56]-[Assault Focus]" class="2" burst_shots="1" last_burst_retrigger_time="-1" reload_one_at_a_time="0" sight_range_modifier="2.5" stance_accuracy_rate="1.5" projectile_speed="200" barrel_offset="0.4" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="3.0" spread_range="0.03" magazine_size="15" can_shoot_standing="1" suppressed="0" name="Walther WA2000-[SB 2.5-10x56]-[Assault Focus]" class="1" burst_shots="1" last_burst_retrigger_time="-1" reload_one_at_a_time="0" sight_range_modifier="2.5" stance_accuracy_rate="1.5" projectile_speed="200" barrel_offset="0.4" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<inventory encumbrance="20.0" buy_price="200.0" sell_price="200.0"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
 	<next_in_chain key="gkw_wa2000_only.weapon" share_ammo="1"/>
@@ -7138,7 +7138,7 @@
 </weapon>
 
 <weapon key="gkw_wa2000_306_only_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="3.0" spread_range="0.03" magazine_size="15" can_shoot_standing="1" suppressed="0" name="Walther WA2000-[SB 2.5-10x56]-[Date in the Snow]-[Assault Focus]" class="2" burst_shots="1" last_burst_retrigger_time="-1" reload_one_at_a_time="0" sight_range_modifier="2.5" stance_accuracy_rate="1.5" projectile_speed="200" barrel_offset="0.4" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="3.0" spread_range="0.03" magazine_size="15" can_shoot_standing="1" suppressed="0" name="Walther WA2000-[SB 2.5-10x56]-[Date in the Snow]-[Assault Focus]" class="1" burst_shots="1" last_burst_retrigger_time="-1" reload_one_at_a_time="0" sight_range_modifier="2.5" stance_accuracy_rate="1.5" projectile_speed="200" barrel_offset="0.4" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<inventory encumbrance="20.0" buy_price="200.0" sell_price="200.0"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
 	<next_in_chain key="gkw_wa2000_306_only.weapon" share_ammo="1"/>
@@ -8941,7 +8941,7 @@
 </weapon>
 
 <weapon key="gkw_m60.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.5" retrigger_time="-1" accuracy_factor="1.0" sustained_fire_grow_step="0.35" sustained_fire_diminish_rate="2.1" magazine_size="100" name="M60" class="2" projectile_speed="180" sight_range_modifier="1.3" spread_range="" stab_enabled="1" carry_in_two_hands="1" stance_accuracy_rate="1.5" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" slot="0"/>
+	<specification barrel_offset="0.5" retrigger_time="-1" accuracy_factor="1.0" sustained_fire_grow_step="0.35" sustained_fire_diminish_rate="2.1" magazine_size="100" name="M60" class="1" projectile_speed="180" sight_range_modifier="1.3" spread_range="" stab_enabled="1" carry_in_two_hands="1" stance_accuracy_rate="1.5" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" slot="0"/>
 	<animation key="reload" animation_key="reloading, Machine gun 1.6"/>
 	<inventory encumbrance="30.0" buy_price="60.0" sell_price="60.0"/>
 	<sound key="fire" fileref="m60_fire_FromRS2V.wav" pitch_variety="0.05" volume="1.3"/>
@@ -8990,7 +8990,7 @@
 </weapon>
 
 <weapon key="gkw_m1918.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.5" retrigger_time="-1" accuracy_factor="0.8" sustained_fire_grow_step="0.65" sustained_fire_diminish_rate="2.4" spread_range="0.1" magazine_size="20" suppressed="0" name="M1918" class="2" stab_enabled="1" stance_accuracy_rate="2.0" projectile_speed="200" sight_range_modifier="1.5"/>
+	<specification barrel_offset="0.5" retrigger_time="-1" accuracy_factor="0.8" sustained_fire_grow_step="0.65" sustained_fire_diminish_rate="2.4" spread_range="0.1" magazine_size="20" suppressed="0" name="M1918" class="1" stab_enabled="1" stance_accuracy_rate="2.0" projectile_speed="200" sight_range_modifier="1.5"/>
 	<animation key="reload" animation_key="reloading, Machine gun 0.8"/>
 	<inventory encumbrance="20.0" buy_price="19.18" sell_price="19.18"/>
 	<next_in_chain key="gkw_m1918_skill.weapon" share_ammo="1"/>
@@ -9037,7 +9037,7 @@
 </weapon>
 
 <weapon key="gkw_m1918_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.5" retrigger_time="-1" accuracy_factor="0.8" spread_range="0.15" sustained_fire_grow_step="0.65" sustained_fire_diminish_rate="2.4" magazine_size="20" suppressed="0" name="M1918-[Damage Focus MG]" class="2" stab_enabled="1" projectile_speed="200" sight_range_modifier="1.5"/>
+	<specification barrel_offset="0.5" retrigger_time="-1" accuracy_factor="0.8" spread_range="0.15" sustained_fire_grow_step="0.65" sustained_fire_diminish_rate="2.4" magazine_size="20" suppressed="0" name="M1918-[Damage Focus MG]" class="1" stab_enabled="1" projectile_speed="200" sight_range_modifier="1.5"/>
 	<animation key="reload" animation_key="reloading, Machine gun 0.8"/>
 	<inventory encumbrance="20.0" buy_price="19.18" sell_price="19.18"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
@@ -12435,7 +12435,7 @@
 </weapon>
 
 <weapon key="gkw_ltlx7000.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="0.9" sustained_fire_grow_step="0.8" sustained_fire_diminish_rate="2" magazine_size="7" can_shoot_standing="1" suppressed="0" name="Beretta LTLX 7000" class="2" reload_one_at_a_time="1" sight_range_modifier="1.0" projectile_speed="100" barrel_offset="0.4" projectiles_per_shot="15" spread_range="0.2" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0" use_basic_muzzle_smoke_effect="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="0.9" sustained_fire_grow_step="0.8" sustained_fire_diminish_rate="2" magazine_size="7" can_shoot_standing="1" suppressed="0" name="Beretta LTLX 7000" class="1" reload_one_at_a_time="1" sight_range_modifier="1.0" projectile_speed="100" barrel_offset="0.4" projectiles_per_shot="15" spread_range="0.2" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0" use_basic_muzzle_smoke_effect="0"/>
 	<inventory buy_price="50.0" sell_price="50.0"/>
 	<next_in_chain key="gkw_ltlx7000_skill.weapon" share_ammo="1"/>
 	<animation state_key="cycle" animation_key="Pshotgun0.5"/>
@@ -12492,7 +12492,7 @@
 </weapon>
 
 <weapon key="gkw_ltlx7000_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="0.8" sustained_fire_diminish_rate="2" magazine_size="7" can_shoot_standing="1" suppressed="0" name="Beretta LTLX 7000-[Opposites Repel]" class="2" reload_one_at_a_time="1" sight_range_modifier="1.0" projectile_speed="100" barrel_offset="0.4" projectiles_per_shot="6" spread_range="0.2" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0" use_basic_muzzle_smoke_effect="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="0.8" sustained_fire_diminish_rate="2" magazine_size="7" can_shoot_standing="1" suppressed="0" name="Beretta LTLX 7000-[Opposites Repel]" class="1" reload_one_at_a_time="1" sight_range_modifier="1.0" projectile_speed="100" barrel_offset="0.4" projectiles_per_shot="6" spread_range="0.2" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0" use_basic_muzzle_smoke_effect="0"/>
 	<commonness value="0" in_stock="0"/>
 	<inventory buy_price="50.0" sell_price="50.0"/>
 	<next_in_chain key="gkw_ltlx7000.weapon" share_ammo="1"/>
@@ -13315,7 +13315,7 @@
 </weapon>
 
 <weapon key="gkw_lwmmg.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.5" retrigger_time="-1" accuracy_factor="0.7" sustained_fire_grow_step="0.5" sustained_fire_diminish_rate="3.5" magazine_size="100" suppressed="0" name="LWMMG" class="2" projectile_speed="210" spread_range="0.16" stance_accuracy_rate="2.0" sight_range_modifier="1.6" can_shoot_standing="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_crouching="1" can_shoot_prone="1" slot="0"/>
+	<specification barrel_offset="0.5" retrigger_time="-1" accuracy_factor="0.7" sustained_fire_grow_step="0.5" sustained_fire_diminish_rate="3.5" magazine_size="100" suppressed="0" name="LWMMG" class="1" projectile_speed="210" spread_range="0.16" stance_accuracy_rate="2.0" sight_range_modifier="1.6" can_shoot_standing="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_crouching="1" can_shoot_prone="1" slot="0"/>
 	<animation key="reload" animation_key="reloading, Machine gun 2.0"/>
 	<inventory encumbrance="30.0" buy_price="100.0" sell_price="100.0"/>
 	<commonness value="0.2" in_stock="1" can_respawn_with="1"/>
@@ -13365,7 +13365,7 @@
 </weapon>
 
 <weapon key="gkw_lwmmg_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.5" retrigger_time="-1" accuracy_factor="0.7" sustained_fire_grow_step="0.8" sustained_fire_diminish_rate="3.5" magazine_size="200" suppressed="0" name="LWMMG-[Hunting Impulse]" class="2" projectile_speed="210" spread_range="0.16" sight_range_modifier="1.6" can_shoot_crouching="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_standing="1" can_shoot_prone="1" slot="0"/>
+	<specification barrel_offset="0.5" retrigger_time="-1" accuracy_factor="0.7" sustained_fire_grow_step="0.8" sustained_fire_diminish_rate="3.5" magazine_size="200" suppressed="0" name="LWMMG-[Hunting Impulse]" class="1" projectile_speed="210" spread_range="0.16" sight_range_modifier="1.6" can_shoot_crouching="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_standing="1" can_shoot_prone="1" slot="0"/>
 	<animation key="reload" animation_key="reloading, Machine gun 4"/>
 	<inventory encumbrance="30.0" buy_price="100.0" sell_price="100.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
@@ -13376,7 +13376,7 @@
 	<sound key="cycle" fileref="lwmmg_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_mg_lwmmg_from_melondove.xml"/>
-	<hud_icon filename="gkw_lwmmg.png"/>
+	<hud_icon filename="gkw_lwmmg_skill.png"/>
 	<projectile file="bullet_he.projectile">
 	<result class="blast" damage="2.1" radius="2.5" decal="1" push="0.2" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	<trail probability="1.0" key="BulletApTrail_ct"/>
@@ -18472,7 +18472,7 @@
 </weapon>
 
 <weapon key="gkw_m1919a4.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.6" retrigger_time="-1" accuracy_factor="0.6" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="3.0" spread_range="0.15" magazine_size="100" suppressed="0" name="Browning M1919A4" class="2" projectile_speed="190" sight_range_modifier="1.3" stab_enabled="1" stance_accuracy_rate="1.0" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" slot="0"/>
+	<specification barrel_offset="0.6" retrigger_time="-1" accuracy_factor="0.6" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="3.0" spread_range="0.15" magazine_size="100" suppressed="0" name="Browning M1919A4" class="1" projectile_speed="190" sight_range_modifier="1.3" stab_enabled="1" stance_accuracy_rate="1.0" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" slot="0"/>
 	<next_in_chain key="gkw_m1919a4_skill.weapon" share_ammo="0"/>
 	<animation key="reload" animation_key="reloading, Machine gun 2.4"/>
 	<inventory encumbrance="30.0" buy_price="19.0" sell_price="19.0"/>
@@ -18521,7 +18521,7 @@
 </weapon>
 
 <weapon key="gkw_m1919a4_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.6" retrigger_time="-1" accuracy_factor="0.6" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="3.0" magazine_size="250" suppressed="0" name="Browning M1919A4-[Hunting Impulse]" class="2" projectile_speed="180" spread_range="0.1" sight_range_modifier="1.5" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1"/>
+	<specification barrel_offset="0.6" retrigger_time="-1" accuracy_factor="0.6" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="3.0" magazine_size="250" suppressed="0" name="Browning M1919A4-[Hunting Impulse]" class="1" projectile_speed="180" spread_range="0.1" sight_range_modifier="1.5" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1"/>
 	<next_in_chain key="gkw_m1919a4.weapon" share_ammo="0"/>
 	<animation key="reload" animation_key="reloading, Machine gun 2.4"/>
 	<inventory encumbrance="30.0" buy_price="19.0" sell_price="19.0"/>
@@ -19053,7 +19053,7 @@
 </weapon>
 
 <weapon key="gkw_spas15.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="0.1667" accuracy_factor="1.0" sustained_fire_grow_step="0.7" sustained_fire_diminish_rate="1.7" magazine_size="8" can_shoot_standing="1" suppressed="0" name="SPAS-15" class="2" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="100" barrel_offset="0.4" projectiles_per_shot="8" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0" use_basic_muzzle_smoke_effect="0"/>
+	<specification retrigger_time="0.1667" accuracy_factor="1.0" sustained_fire_grow_step="0.7" sustained_fire_diminish_rate="1.7" magazine_size="8" can_shoot_standing="1" suppressed="0" name="SPAS-15" class="1" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="100" barrel_offset="0.4" projectiles_per_shot="8" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0" use_basic_muzzle_smoke_effect="0"/>
 	<inventory encumbrance="10.0" buy_price="86" sell_price="86"/>
 	<next_in_chain key="gkw_spas15_skill.weapon" share_ammo="1"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
@@ -21546,7 +21546,7 @@
 </weapon>
 
 <weapon key="gkw_m14mod3_303_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="0.75" sustained_fire_diminish_rate="3.0" magazine_size="20" can_shoot_standing="1" suppressed="0" name="M14(MOD3)--[Xmas Parade]-[Clear Fighting Spirit]" class="2" burst_shots="1" reload_one_at_a_time="0" sight_range_modifier="2.35" last_burst_retrigger_time="-1" stance_accuracy_rate="2.0" projectile_speed="200" barrel_offset="0.6" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="0.75" sustained_fire_diminish_rate="3.0" magazine_size="20" can_shoot_standing="1" suppressed="0" name="M14(MOD3)--[Xmas Parade]-[Clear Fighting Spirit]" class="1" burst_shots="1" reload_one_at_a_time="0" sight_range_modifier="2.35" last_burst_retrigger_time="-1" stance_accuracy_rate="2.0" projectile_speed="200" barrel_offset="0.6" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<inventory buy_price="100.0" sell_price="100.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -22136,7 +22136,7 @@
 </weapon>
 
 <weapon key="gkw_nova.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="0.85" sustained_fire_grow_step="4.0" sustained_fire_diminish_rate="4.8" magazine_size="5" can_shoot_standing="1" suppressed="0" name="Benelli Nova" class="2" reload_one_at_a_time="1" sight_range_modifier="1" projectile_speed="96" barrel_offset="0.4" projectiles_per_shot="14" spread_range="0.20" stance_accuracy_rate="2.0" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0" use_basic_muzzle_smoke_effect="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="0.85" sustained_fire_grow_step="4.0" sustained_fire_diminish_rate="4.8" magazine_size="5" can_shoot_standing="1" suppressed="0" name="Benelli Nova" class="1" reload_one_at_a_time="1" sight_range_modifier="1" projectile_speed="96" barrel_offset="0.4" projectiles_per_shot="14" spread_range="0.20" stance_accuracy_rate="2.0" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0" use_basic_muzzle_smoke_effect="0"/>
 	<inventory buy_price="66.0" sell_price="66.0"/>
 	<next_in_chain key="gkw_nova_skill.weapon" share_ammo="1"/>
 	<animation state_key="cycle" animation_key="Pshotgun0.5"/>
@@ -22194,7 +22194,7 @@
 </weapon>
 
 <weapon key="gkw_nova_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="0.85" sustained_fire_grow_step="4.0" sustained_fire_diminish_rate="4.8" magazine_size="5" can_shoot_standing="1" suppressed="0" name="Benelli Nova" class="2" reload_one_at_a_time="1" sight_range_modifier="1" projectile_speed="96" barrel_offset="0.4" projectiles_per_shot="14" spread_range="0.20" stance_accuracy_rate="2.0" can_shoot_crouching="0" can_shoot_prone="0" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0" use_basic_muzzle_smoke_effect="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="0.85" sustained_fire_grow_step="4.0" sustained_fire_diminish_rate="4.8" magazine_size="5" can_shoot_standing="1" suppressed="0" name="Benelli Nova" class="1" reload_one_at_a_time="1" sight_range_modifier="1" projectile_speed="96" barrel_offset="0.4" projectiles_per_shot="14" spread_range="0.20" stance_accuracy_rate="2.0" can_shoot_crouching="0" can_shoot_prone="0" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0" use_basic_muzzle_smoke_effect="0"/>
 	<inventory buy_price="66.0" sell_price="66.0"/>
 	<next_in_chain key="gkw_nova.weapon" share_ammo="1"/>
 	<animation state_key="cycle" animation_key="Pshotgun0.7"/>
@@ -22307,7 +22307,7 @@
 </weapon>
 
 <weapon key="gkw_cx4_6606.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification accuracy_factor="0.98" barrel_offset="0.4" class="2" magazine_size="30" name="Beretta Cx4 Storm-[Marvellous Poolside Christmas Encounter]" projectile_speed="100" retrigger_time="-1" suppressed="0" sight_range_modifier="1" sustained_fire_diminish_rate="1.8" sustained_fire_grow_step="0.5" stab_enabled="1" carry_in_two_hands="1" spread_range="0.12" stance_accuracy_rate="2.0" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
+	<specification accuracy_factor="0.98" barrel_offset="0.4" class="1" magazine_size="30" name="Beretta Cx4 Storm-[Marvellous Poolside Christmas Encounter]" projectile_speed="100" retrigger_time="-1" suppressed="0" sight_range_modifier="1" sustained_fire_diminish_rate="1.8" sustained_fire_grow_step="0.5" stab_enabled="1" carry_in_two_hands="1" spread_range="0.12" stance_accuracy_rate="2.0" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
 	<inventory encumbrance="5.0" buy_price="59.0" sell_price="59.0"/>
 	<sound key="fire" fileref="cx4_fire_FromCOD12.wav" pitch_variety="0.05" volume="1.1"/>
 	<sound key="magazine_out" fileref="cx4_mgz_out_FromCOD12.wav" volume="0.6"/>
@@ -25436,7 +25436,7 @@
 </weapon>
 
 <weapon key="gkw_lwmmgmod3.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.5" retrigger_time="-1" accuracy_factor="0.75" sustained_fire_grow_step="0.5" sustained_fire_diminish_rate="5.5" magazine_size="100" suppressed="0" name="LWMMG(MOD3)" class="2" projectile_speed="210" spread_range="0.13" stance_accuracy_rate="2.0" sight_range_modifier="2.0" can_shoot_standing="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_crouching="1" can_shoot_prone="1" slot="0"/>
+	<specification barrel_offset="0.5" retrigger_time="-1" accuracy_factor="0.75" sustained_fire_grow_step="0.5" sustained_fire_diminish_rate="5.5" magazine_size="100" suppressed="0" name="LWMMG(MOD3)" class="1" projectile_speed="210" spread_range="0.13" stance_accuracy_rate="2.0" sight_range_modifier="2.0" can_shoot_standing="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_crouching="1" can_shoot_prone="1" slot="0"/>
 	<animation key="reload" animation_key="reloading, Machine gun 2.0"/>
 	<inventory encumbrance="30.0" buy_price="300.0" sell_price="300.0"/>
 	<commonness value="0.00001" in_stock="0" can_respawn_with="1"/>
@@ -25490,7 +25490,7 @@
 </weapon>
 
 <weapon key="gkw_lwmmgmod3_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.5" retrigger_time="-1" accuracy_factor="0.75" sustained_fire_grow_step="0.5" sustained_fire_diminish_rate="5.5" magazine_size="200" suppressed="0" name="LWMMG(MOD3)-[Shining Barrier]" class="2" projectile_speed="210" spread_range="0.13" sight_range_modifier="2.0" can_shoot_crouching="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_standing="1" can_shoot_prone="1" slot="0"/>
+	<specification barrel_offset="0.5" retrigger_time="-1" accuracy_factor="0.75" sustained_fire_grow_step="0.5" sustained_fire_diminish_rate="5.5" magazine_size="200" suppressed="0" name="LWMMG(MOD3)-[Shining Barrier]" class="1" projectile_speed="210" spread_range="0.13" sight_range_modifier="2.0" can_shoot_crouching="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_standing="1" can_shoot_prone="1" slot="0"/>
 	<animation key="reload" animation_key="reloading, Machine gun 4"/>
 	<inventory encumbrance="30.0" buy_price="300.0" sell_price="300.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
@@ -25501,7 +25501,7 @@
 	<sound key="cycle" fileref="lwmmg_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_mg_lwmmg_mod3_from_melondove.xml"/>
-	<hud_icon filename="gkw_lwmmgmod3.png"/>
+	<hud_icon filename="gkw_lwmmgmod3_skill.png"/>
 	<projectile file="bullet_he.projectile">
 	<result class="blast" damage="3.1" radius="2.75" decal="1" push="0.2" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	<trail probability="1.0" key="BulletApTrail_ct"/>
@@ -25851,7 +25851,7 @@
 </weapon>
 
 <weapon key="gkw_m14mod3_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="0.75" sustained_fire_diminish_rate="3.0" magazine_size="20" can_shoot_standing="1" suppressed="0" name="M14(MOD3)-[Clear Fighting Spirit]" class="2" burst_shots="1" reload_one_at_a_time="0" sight_range_modifier="2.35" last_burst_retrigger_time="-1" stance_accuracy_rate="2.0" projectile_speed="200" barrel_offset="0.6" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="0.75" sustained_fire_diminish_rate="3.0" magazine_size="20" can_shoot_standing="1" suppressed="0" name="M14(MOD3)-[Clear Fighting Spirit]" class="1" burst_shots="1" reload_one_at_a_time="0" sight_range_modifier="2.35" last_burst_retrigger_time="-1" stance_accuracy_rate="2.0" projectile_speed="200" barrel_offset="0.6" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<inventory buy_price="100.0" sell_price="100.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -26170,7 +26170,7 @@
 </weapon>
 
 <weapon key="gkw_m1918mod3.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.5" retrigger_time="-1" accuracy_factor="0.85" sustained_fire_grow_step="0.65" sustained_fire_diminish_rate="3.0" spread_range="0.1" magazine_size="20" suppressed="0" name="M1918(MOD3)" class="2" stab_enabled="1" stance_accuracy_rate="3.0" projectile_speed="200" sight_range_modifier="1.75"/>
+	<specification barrel_offset="0.5" retrigger_time="-1" accuracy_factor="0.85" sustained_fire_grow_step="0.65" sustained_fire_diminish_rate="3.0" spread_range="0.1" magazine_size="20" suppressed="0" name="M1918(MOD3)" class="1" stab_enabled="1" stance_accuracy_rate="3.0" projectile_speed="200" sight_range_modifier="1.75"/>
 	<animation key="reload" animation_key="reloading, Machine gun 0.6"/>
 	<inventory encumbrance="20.0" buy_price="191.8" sell_price="191.8"/>
 	<next_in_chain key="gkw_m1918mod3_skill.weapon" share_ammo="1"/>
@@ -26217,7 +26217,7 @@
 </weapon>
 
 <weapon key="gkw_m1918mod3_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.5" retrigger_time="-1" accuracy_factor="0.85" spread_range="0.1" sustained_fire_grow_step="0.65" sustained_fire_diminish_rate="3.0" magazine_size="20" suppressed="0" name="M1918(MOD3)-[Battlefield Magic]" class="2" stab_enabled="1" projectile_speed="200" sight_range_modifier="1.75"/>
+	<specification barrel_offset="0.5" retrigger_time="-1" accuracy_factor="0.85" spread_range="0.1" sustained_fire_grow_step="0.65" sustained_fire_diminish_rate="3.0" magazine_size="20" suppressed="0" name="M1918(MOD3)-[Battlefield Magic]" class="1" stab_enabled="1" projectile_speed="200" sight_range_modifier="1.75"/>
 	<animation key="reload" animation_key="reloading, Machine gun 0.6"/>
 	<inventory encumbrance="20.0" buy_price="191.8" sell_price="191.8"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
@@ -32294,7 +32294,7 @@
 </weapon>
 
 <weapon key="gkw_lwmmg_1808.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.5" retrigger_time="-1" accuracy_factor="0.7" sustained_fire_grow_step="0.5" sustained_fire_diminish_rate="3.5" magazine_size="100" suppressed="0" name="LWMMG-[Yellow Star-thistle]" class="2" projectile_speed="210" spread_range="0.16" stance_accuracy_rate="2.0" sight_range_modifier="1.6" can_shoot_standing="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_crouching="1" can_shoot_prone="1" slot="0"/>
+	<specification barrel_offset="0.5" retrigger_time="-1" accuracy_factor="0.7" sustained_fire_grow_step="0.5" sustained_fire_diminish_rate="3.5" magazine_size="100" suppressed="0" name="LWMMG-[Yellow Star-thistle]" class="1" projectile_speed="210" spread_range="0.16" stance_accuracy_rate="2.0" sight_range_modifier="1.6" can_shoot_standing="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_crouching="1" can_shoot_prone="1" slot="0"/>
 	<commonness value="0" in_stock="0"/>
 	<animation key="reload" animation_key="reloading, Machine gun 2.0"/>
 	<inventory encumbrance="30.0" buy_price="100.0" sell_price="100.0"/>
@@ -32344,7 +32344,7 @@
 </weapon>
 
 <weapon key="gkw_lwmmg_skill_1808.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.5" retrigger_time="-1" accuracy_factor="0.7" sustained_fire_grow_step="0.8" sustained_fire_diminish_rate="3.5" magazine_size="200" suppressed="0" name="LWMMG-[Yellow Star-thistle]-[Hunting Impulse]" class="2" projectile_speed="210" spread_range="0.16" sight_range_modifier="1.6" can_shoot_crouching="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_standing="1" can_shoot_prone="1" slot="0"/>
+	<specification barrel_offset="0.5" retrigger_time="-1" accuracy_factor="0.7" sustained_fire_grow_step="0.8" sustained_fire_diminish_rate="3.5" magazine_size="200" suppressed="0" name="LWMMG-[Yellow Star-thistle]-[Hunting Impulse]" class="1" projectile_speed="210" spread_range="0.16" sight_range_modifier="1.6" can_shoot_crouching="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_standing="1" can_shoot_prone="1" slot="0"/>
 	<commonness value="0" in_stock="0"/>
 	<animation key="reload" animation_key="reloading, Machine gun 4"/>
 	<inventory encumbrance="30.0" buy_price="100.0" sell_price="100.0"/>
@@ -32815,7 +32815,7 @@
 </weapon>
 
 <weapon key="gkw_m1918_102.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.5" retrigger_time="-1" accuracy_factor="0.8" sustained_fire_grow_step="0.65" sustained_fire_diminish_rate="2.4" spread_range="0.1" magazine_size="20" suppressed="0" name="M1918-[Bunny Girl]" class="2" stab_enabled="1" stance_accuracy_rate="2.0" projectile_speed="200" sight_range_modifier="1.5"/>
+	<specification barrel_offset="0.5" retrigger_time="-1" accuracy_factor="0.8" sustained_fire_grow_step="0.65" sustained_fire_diminish_rate="2.4" spread_range="0.1" magazine_size="20" suppressed="0" name="M1918-[Bunny Girl]" class="1" stab_enabled="1" stance_accuracy_rate="2.0" projectile_speed="200" sight_range_modifier="1.5"/>
 	<animation key="reload" animation_key="reloading, Machine gun 0.8"/>
 	<inventory encumbrance="20.0" buy_price="19.18" sell_price="19.18"/>
 	<next_in_chain key="gkw_m1918_102_skill.weapon" share_ammo="1"/>
@@ -32862,7 +32862,7 @@
 </weapon>
 
 <weapon key="gkw_m1918_102_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.5" retrigger_time="-1" accuracy_factor="0.8" spread_range="0.15" sustained_fire_grow_step="0.65" sustained_fire_diminish_rate="2.4" magazine_size="20" suppressed="0" name="M1918-[Bunny Girl]-[Damage Focus MG]" class="2" stab_enabled="1" projectile_speed="200" sight_range_modifier="1.5"/>
+	<specification barrel_offset="0.5" retrigger_time="-1" accuracy_factor="0.8" spread_range="0.15" sustained_fire_grow_step="0.65" sustained_fire_diminish_rate="2.4" magazine_size="20" suppressed="0" name="M1918-[Bunny Girl]-[Damage Focus MG]" class="1" stab_enabled="1" projectile_speed="200" sight_range_modifier="1.5"/>
 	<animation key="reload" animation_key="reloading, Machine gun 0.8"/>
 	<inventory encumbrance="20.0" buy_price="19.18" sell_price="19.18"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
@@ -32911,7 +32911,7 @@
 </weapon>
 
 <weapon key="gkw_m1918_806.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.5" retrigger_time="-1" accuracy_factor="0.8" sustained_fire_grow_step="0.65" sustained_fire_diminish_rate="2.4" spread_range="0.1" magazine_size="20" suppressed="0" name="M1918-[Tender Nocturne]" class="2" stab_enabled="1" stance_accuracy_rate="2.0" projectile_speed="200" sight_range_modifier="1.5"/>
+	<specification barrel_offset="0.5" retrigger_time="-1" accuracy_factor="0.8" sustained_fire_grow_step="0.65" sustained_fire_diminish_rate="2.4" spread_range="0.1" magazine_size="20" suppressed="0" name="M1918-[Tender Nocturne]" class="1" stab_enabled="1" stance_accuracy_rate="2.0" projectile_speed="200" sight_range_modifier="1.5"/>
 	<animation key="reload" animation_key="reloading, Machine gun 0.8"/>
 	<inventory encumbrance="20.0" buy_price="19.18" sell_price="19.18"/>
 	<next_in_chain key="gkw_m1918_806_skill.weapon" share_ammo="1"/>
@@ -32958,7 +32958,7 @@
 </weapon>
 
 <weapon key="gkw_m1918_806_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.5" retrigger_time="-1" accuracy_factor="0.8" spread_range="0.15" sustained_fire_grow_step="0.65" sustained_fire_diminish_rate="2.4" magazine_size="20" suppressed="0" name="M1918-[Tender Nocturne]-[Damage Focus MG]" class="2" stab_enabled="1" projectile_speed="200" sight_range_modifier="1.5"/>
+	<specification barrel_offset="0.5" retrigger_time="-1" accuracy_factor="0.8" spread_range="0.15" sustained_fire_grow_step="0.65" sustained_fire_diminish_rate="2.4" magazine_size="20" suppressed="0" name="M1918-[Tender Nocturne]-[Damage Focus MG]" class="1" stab_enabled="1" projectile_speed="200" sight_range_modifier="1.5"/>
 	<animation key="reload" animation_key="reloading, Machine gun 0.8"/>
 	<inventory encumbrance="20.0" buy_price="19.18" sell_price="19.18"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
@@ -33007,7 +33007,7 @@
 </weapon>
 
 <weapon key="gkw_m1918_1606.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.5" retrigger_time="-1" accuracy_factor="0.8" sustained_fire_grow_step="0.65" sustained_fire_diminish_rate="2.4" spread_range="0.1" magazine_size="20" suppressed="0" name="M1918-[The Christmas You Wished For]" class="2" stab_enabled="1" stance_accuracy_rate="2.0" projectile_speed="200" sight_range_modifier="1.5"/>
+	<specification barrel_offset="0.5" retrigger_time="-1" accuracy_factor="0.8" sustained_fire_grow_step="0.65" sustained_fire_diminish_rate="2.4" spread_range="0.1" magazine_size="20" suppressed="0" name="M1918-[The Christmas You Wished For]" class="1" stab_enabled="1" stance_accuracy_rate="2.0" projectile_speed="200" sight_range_modifier="1.5"/>
 	<animation key="reload" animation_key="reloading, Machine gun 0.8"/>
 	<inventory encumbrance="20.0" buy_price="19.18" sell_price="19.18"/>
 	<next_in_chain key="gkw_m1918_1606_skill.weapon" share_ammo="1"/>
@@ -33054,7 +33054,7 @@
 </weapon>
 
 <weapon key="gkw_m1918_1606_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.5" retrigger_time="-1" accuracy_factor="0.8" spread_range="0.15" sustained_fire_grow_step="0.65" sustained_fire_diminish_rate="2.4" magazine_size="20" suppressed="0" name="M1918-[The Christmas You Wished For]-[Damage Focus MG]" class="2" stab_enabled="1" projectile_speed="200" sight_range_modifier="1.5"/>
+	<specification barrel_offset="0.5" retrigger_time="-1" accuracy_factor="0.8" spread_range="0.15" sustained_fire_grow_step="0.65" sustained_fire_diminish_rate="2.4" magazine_size="20" suppressed="0" name="M1918-[The Christmas You Wished For]-[Damage Focus MG]" class="1" stab_enabled="1" projectile_speed="200" sight_range_modifier="1.5"/>
 	<animation key="reload" animation_key="reloading, Machine gun 0.8"/>
 	<inventory encumbrance="20.0" buy_price="19.18" sell_price="19.18"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
@@ -34899,7 +34899,7 @@
 </weapon>
 
 <weapon key="gkw_ltlx7000_6702.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="0.9" sustained_fire_grow_step="0.8" sustained_fire_diminish_rate="2" magazine_size="7" can_shoot_standing="1" suppressed="0" name="Beretta LTLX 7000-[Dancing Shrine Maiden]" class="2" reload_one_at_a_time="1" sight_range_modifier="1.0" projectile_speed="100" barrel_offset="0.4" projectiles_per_shot="15" spread_range="0.2" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0" use_basic_muzzle_smoke_effect="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="0.9" sustained_fire_grow_step="0.8" sustained_fire_diminish_rate="2" magazine_size="7" can_shoot_standing="1" suppressed="0" name="Beretta LTLX 7000-[Dancing Shrine Maiden]" class="1" reload_one_at_a_time="1" sight_range_modifier="1.0" projectile_speed="100" barrel_offset="0.4" projectiles_per_shot="15" spread_range="0.2" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0" use_basic_muzzle_smoke_effect="0"/>
 	<commonness value="0" in_stock="0"/>
 	<inventory buy_price="50.0" sell_price="50.0"/>
 	<next_in_chain key="gkw_ltlx7000_6702_skill.weapon" share_ammo="1"/>
@@ -34956,7 +34956,7 @@
 </weapon>
 
 <weapon key="gkw_ltlx7000_6702_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="0.8" sustained_fire_diminish_rate="2" magazine_size="7" can_shoot_standing="1" suppressed="0" name="Beretta LTLX 7000-[Dancing Shrine Maiden]-[Opposites Repel]" class="2" reload_one_at_a_time="1" sight_range_modifier="1.0" projectile_speed="100" barrel_offset="0.4" projectiles_per_shot="6" spread_range="0.2" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0" use_basic_muzzle_smoke_effect="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="0.8" sustained_fire_diminish_rate="2" magazine_size="7" can_shoot_standing="1" suppressed="0" name="Beretta LTLX 7000-[Dancing Shrine Maiden]-[Opposites Repel]" class="1" reload_one_at_a_time="1" sight_range_modifier="1.0" projectile_speed="100" barrel_offset="0.4" projectiles_per_shot="6" spread_range="0.2" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0" use_basic_muzzle_smoke_effect="0"/>
 	<commonness value="0" in_stock="0"/>
 	<inventory buy_price="50.0" sell_price="50.0"/>
 	<next_in_chain key="gkw_ltlx7000_6702.weapon" share_ammo="1"/>
@@ -35828,7 +35828,7 @@
 </weapon>
 
 <weapon key="gkw_ltlx7000_6101.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="0.9" sustained_fire_grow_step="0.8" sustained_fire_diminish_rate="2" magazine_size="7" can_shoot_standing="1" suppressed="0" name="Beretta LTLX 7000-[Night-Tide Invitation]" class="2" reload_one_at_a_time="1" sight_range_modifier="1.0" projectile_speed="100" barrel_offset="0.4" projectiles_per_shot="15" spread_range="0.2" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0" use_basic_muzzle_smoke_effect="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="0.9" sustained_fire_grow_step="0.8" sustained_fire_diminish_rate="2" magazine_size="7" can_shoot_standing="1" suppressed="0" name="Beretta LTLX 7000-[Night-Tide Invitation]" class="1" reload_one_at_a_time="1" sight_range_modifier="1.0" projectile_speed="100" barrel_offset="0.4" projectiles_per_shot="15" spread_range="0.2" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0" use_basic_muzzle_smoke_effect="0"/>
 	<commonness value="0" in_stock="0"/>
 	<inventory buy_price="50.0" sell_price="50.0"/>
 	<next_in_chain key="gkw_ltlx7000_6101_skill.weapon" share_ammo="1"/>
@@ -35885,7 +35885,7 @@
 </weapon>
 
 <weapon key="gkw_ltlx7000_6101_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="0.8" sustained_fire_diminish_rate="2" magazine_size="7" can_shoot_standing="1" suppressed="0" name="Beretta LTLX 7000-[Night-Tide Invitation]-[Opposites Repel]" class="2" reload_one_at_a_time="1" sight_range_modifier="1.0" projectile_speed="100" barrel_offset="0.4" projectiles_per_shot="6" spread_range="0.2" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0" use_basic_muzzle_smoke_effect="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="0.8" sustained_fire_diminish_rate="2" magazine_size="7" can_shoot_standing="1" suppressed="0" name="Beretta LTLX 7000-[Night-Tide Invitation]-[Opposites Repel]" class="1" reload_one_at_a_time="1" sight_range_modifier="1.0" projectile_speed="100" barrel_offset="0.4" projectiles_per_shot="6" spread_range="0.2" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0" use_basic_muzzle_smoke_effect="0"/>
 	<commonness value="0" in_stock="0"/>
 	<inventory buy_price="50.0" sell_price="50.0"/>
 	<next_in_chain key="gkw_ltlx7000_6101.weapon" share_ammo="1"/>
@@ -39517,7 +39517,7 @@
 </weapon>
 
 <weapon key="gkw_lwmmgmod3_1808.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.5" retrigger_time="-1" accuracy_factor="0.75" sustained_fire_grow_step="0.5" sustained_fire_diminish_rate="5.5" magazine_size="100" suppressed="0" name="LWMMG(MOD3)-[Yellow Star-thistle]" class="2" projectile_speed="210" spread_range="0.13" stance_accuracy_rate="2.0" sight_range_modifier="2.0" can_shoot_standing="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_crouching="1" can_shoot_prone="1" slot="0"/>
+	<specification barrel_offset="0.5" retrigger_time="-1" accuracy_factor="0.75" sustained_fire_grow_step="0.5" sustained_fire_diminish_rate="5.5" magazine_size="100" suppressed="0" name="LWMMG(MOD3)-[Yellow Star-thistle]" class="1" projectile_speed="210" spread_range="0.13" stance_accuracy_rate="2.0" sight_range_modifier="2.0" can_shoot_standing="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_crouching="1" can_shoot_prone="1" slot="0"/>
 	<animation key="reload" animation_key="reloading, Machine gun 2.0"/>
 	<inventory encumbrance="30.0" buy_price="300.0" sell_price="300.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
@@ -39571,7 +39571,7 @@
 </weapon>
 
 <weapon key="gkw_lwmmgmod3_1808_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.5" retrigger_time="-1" accuracy_factor="0.75" sustained_fire_grow_step="0.5" sustained_fire_diminish_rate="5.5" magazine_size="200" suppressed="0" name="LWMMG(MOD3)-[Yellow Star-thistle]-[Shining Barrier]" class="2" projectile_speed="210" spread_range="0.13" sight_range_modifier="2.0" can_shoot_crouching="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_standing="1" can_shoot_prone="1" slot="0"/>
+	<specification barrel_offset="0.5" retrigger_time="-1" accuracy_factor="0.75" sustained_fire_grow_step="0.5" sustained_fire_diminish_rate="5.5" magazine_size="200" suppressed="0" name="LWMMG(MOD3)-[Yellow Star-thistle]-[Shining Barrier]" class="1" projectile_speed="210" spread_range="0.13" sight_range_modifier="2.0" can_shoot_crouching="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_standing="1" can_shoot_prone="1" slot="0"/>
 	<animation key="reload" animation_key="reloading, Machine gun 4"/>
 	<inventory encumbrance="30.0" buy_price="300.0" sell_price="300.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
@@ -39681,7 +39681,7 @@
 </weapon>
 
 <weapon key="gkw_m1918mod3_102.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.5" retrigger_time="-1" accuracy_factor="0.85" sustained_fire_grow_step="0.65" sustained_fire_diminish_rate="3.0" spread_range="0.1" magazine_size="20" suppressed="0" name="M1918(MOD3)-[Bunny Girl]" class="2" stab_enabled="1" stance_accuracy_rate="3.0" projectile_speed="200" sight_range_modifier="1.75"/>
+	<specification barrel_offset="0.5" retrigger_time="-1" accuracy_factor="0.85" sustained_fire_grow_step="0.65" sustained_fire_diminish_rate="3.0" spread_range="0.1" magazine_size="20" suppressed="0" name="M1918(MOD3)-[Bunny Girl]" class="1" stab_enabled="1" stance_accuracy_rate="3.0" projectile_speed="200" sight_range_modifier="1.75"/>
 	<animation key="reload" animation_key="reloading, Machine gun 0.6"/>
 	<inventory encumbrance="20.0" buy_price="191.8" sell_price="191.8"/>
 	<next_in_chain key="gkw_m1918mod3_102_skill.weapon" share_ammo="1"/>
@@ -39728,7 +39728,7 @@
 </weapon>
 
 <weapon key="gkw_m1918mod3_102_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.5" retrigger_time="-1" accuracy_factor="0.85" spread_range="0.1" sustained_fire_grow_step="0.65" sustained_fire_diminish_rate="3.0" magazine_size="20" suppressed="0" name="M1918(MOD3)-[Bunny Girl]-[Battlefield Magic]" class="2" stab_enabled="1" projectile_speed="200" sight_range_modifier="1.75"/>
+	<specification barrel_offset="0.5" retrigger_time="-1" accuracy_factor="0.85" spread_range="0.1" sustained_fire_grow_step="0.65" sustained_fire_diminish_rate="3.0" magazine_size="20" suppressed="0" name="M1918(MOD3)-[Bunny Girl]-[Battlefield Magic]" class="1" stab_enabled="1" projectile_speed="200" sight_range_modifier="1.75"/>
 	<animation key="reload" animation_key="reloading, Machine gun 0.6"/>
 	<inventory encumbrance="20.0" buy_price="191.8" sell_price="191.8"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
@@ -39777,7 +39777,7 @@
 </weapon>
 
 <weapon key="gkw_m1918mod3_806.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.5" retrigger_time="-1" accuracy_factor="0.85" sustained_fire_grow_step="0.65" sustained_fire_diminish_rate="3.0" spread_range="0.1" magazine_size="20" suppressed="0" name="M1918(MOD3)-[Tender Nocturne]" class="2" stab_enabled="1" stance_accuracy_rate="3.0" projectile_speed="200" sight_range_modifier="1.75"/>
+	<specification barrel_offset="0.5" retrigger_time="-1" accuracy_factor="0.85" sustained_fire_grow_step="0.65" sustained_fire_diminish_rate="3.0" spread_range="0.1" magazine_size="20" suppressed="0" name="M1918(MOD3)-[Tender Nocturne]" class="1" stab_enabled="1" stance_accuracy_rate="3.0" projectile_speed="200" sight_range_modifier="1.75"/>
 	<animation key="reload" animation_key="reloading, Machine gun 0.6"/>
 	<inventory encumbrance="20.0" buy_price="191.8" sell_price="191.8"/>
 	<next_in_chain key="gkw_m1918mod3_806_skill.weapon" share_ammo="1"/>
@@ -39824,7 +39824,7 @@
 </weapon>
 
 <weapon key="gkw_m1918mod3_806_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.5" retrigger_time="-1" accuracy_factor="0.85" spread_range="0.1" sustained_fire_grow_step="0.65" sustained_fire_diminish_rate="3.0" magazine_size="20" suppressed="0" name="M1918(MOD3)-[Tender Nocturne]-[Battlefield Magic]" class="2" stab_enabled="1" projectile_speed="200" sight_range_modifier="1.75"/>
+	<specification barrel_offset="0.5" retrigger_time="-1" accuracy_factor="0.85" spread_range="0.1" sustained_fire_grow_step="0.65" sustained_fire_diminish_rate="3.0" magazine_size="20" suppressed="0" name="M1918(MOD3)-[Tender Nocturne]-[Battlefield Magic]" class="1" stab_enabled="1" projectile_speed="200" sight_range_modifier="1.75"/>
 	<animation key="reload" animation_key="reloading, Machine gun 0.6"/>
 	<inventory encumbrance="20.0" buy_price="191.8" sell_price="191.8"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
@@ -39873,7 +39873,7 @@
 </weapon>
 
 <weapon key="gkw_m1918mod3_1606.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.5" retrigger_time="-1" accuracy_factor="0.85" sustained_fire_grow_step="0.65" sustained_fire_diminish_rate="3.0" spread_range="0.1" magazine_size="20" suppressed="0" name="M1918(MOD3)-[The Christmas You Wished For]" class="2" stab_enabled="1" stance_accuracy_rate="3.0" projectile_speed="200" sight_range_modifier="1.75"/>
+	<specification barrel_offset="0.5" retrigger_time="-1" accuracy_factor="0.85" sustained_fire_grow_step="0.65" sustained_fire_diminish_rate="3.0" spread_range="0.1" magazine_size="20" suppressed="0" name="M1918(MOD3)-[The Christmas You Wished For]" class="1" stab_enabled="1" stance_accuracy_rate="3.0" projectile_speed="200" sight_range_modifier="1.75"/>
 	<animation key="reload" animation_key="reloading, Machine gun 0.6"/>
 	<inventory encumbrance="20.0" buy_price="191.8" sell_price="191.8"/>
 	<next_in_chain key="gkw_m1918mod3_1606_skill.weapon" share_ammo="1"/>
@@ -39920,7 +39920,7 @@
 </weapon>
 
 <weapon key="gkw_m1918mod3_1606_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.5" retrigger_time="-1" accuracy_factor="0.85" spread_range="0.1" sustained_fire_grow_step="0.65" sustained_fire_diminish_rate="3.0" magazine_size="20" suppressed="0" name="M1918(MOD3)-[The Christmas You Wished For]-[Battlefield Magic]" class="2" stab_enabled="1" projectile_speed="200" sight_range_modifier="1.75"/>
+	<specification barrel_offset="0.5" retrigger_time="-1" accuracy_factor="0.85" spread_range="0.1" sustained_fire_grow_step="0.65" sustained_fire_diminish_rate="3.0" magazine_size="20" suppressed="0" name="M1918(MOD3)-[The Christmas You Wished For]-[Battlefield Magic]" class="1" stab_enabled="1" projectile_speed="200" sight_range_modifier="1.75"/>
 	<animation key="reload" animation_key="reloading, Machine gun 0.6"/>
 	<inventory encumbrance="20.0" buy_price="191.8" sell_price="191.8"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
