@@ -19,9 +19,9 @@
     <animation key="reload" animation_key="reloading, magazine rifle 1.5" />
     <next_in_chain key="gkw_a545_skill.weapon" share_ammo="1" />
     <inventory buy_price="45.0" sell_price="45.0" />
-    <sound key="fire" fileref="ak74m_fire_FromBF3.wav" pitch_variety="0.05" volume="1.2" />
-    <sound key="magazine_out" fileref="ak74_mgz_out_FromCOD16.wav" volume="0.5" />
-    <sound key="magazine_in" fileref="ak74_mgz_in_FromCOD16.wav" volume="0.5" />
+    <sound key="fire" fileref="a545_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.2" />
+    <sound key="magazine_out" fileref="a545_mgz_out_FromCOD17.wav" volume="0.5" />
+    <sound key="magazine_in" fileref="a545_mgz_in_FromCOD17.wav" volume="0.5" />
     <sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.5" />
     <sound class="impact" fileref="rifle_drop.wav" />
     <model filename="gkw_ar_a545.xml" />
