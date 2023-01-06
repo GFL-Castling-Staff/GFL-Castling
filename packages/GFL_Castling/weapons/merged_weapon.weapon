@@ -430,6 +430,7 @@
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="1.95" kill_probability_offset_on_successful_hit="1.6" kill_decay_start_time="2.432" kill_decay_end_time="4.054"/>
 	</projectile>
+	<effect class="muzzle" ref="ejection_76251"/>
 	<commonness value="0.2" in_stock="1" can_respawn_with="1"/>
 	<stance state_key="running" accuracy="0.35"/>
 	<stance state_key="walking" accuracy="0.45"/>
@@ -485,6 +486,8 @@
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="2.2" kill_probability_offset_on_successful_hit="2.5" kill_decay_start_time="2.432" kill_decay_end_time="4.054"/>
 	</projectile>
+	<effect class="muzzle" ref="ejection_76251"/>
+	<effect class="muzzle" ref="muzzle_small_yellow"/>
 	<stance state_key="running" accuracy="0.5"/>
 	<stance state_key="walking" accuracy="0.65"/>
 	<stance state_key="crouch_moving" accuracy="0.75"/>
@@ -564,6 +567,7 @@
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="2.1" kill_probability_offset_on_successful_hit="1.75" kill_decay_start_time="2.432" kill_decay_end_time="4.054"/>
 	</projectile>
+	<effect class="muzzle" ref="ejection_76251"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<stance state_key="running" accuracy="0.5"/>
 	<stance state_key="walking" accuracy="0.65"/>
@@ -618,6 +622,8 @@
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="2.5" kill_probability_offset_on_successful_hit="2.7" kill_decay_start_time="2.432" kill_decay_end_time="4.054"/>
 	</projectile>
+	<effect class="muzzle" ref="ejection_76251"/>
+	<effect class="muzzle" ref="muzzle_small_yellow"/>
 	<stance state_key="running" accuracy="0.6"/>
 	<stance state_key="walking" accuracy="0.7"/>
 	<stance state_key="crouch_moving" accuracy="0.85"/>
@@ -1850,6 +1856,7 @@
 	<weak_hand_hold offset="0.2"/>
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="1.5" kill_probability_offset_on_successful_hit="2.5" kill_decay_start_time="0.25" kill_decay_end_time="0.5"/>
+	<trail probability="1.0" key="bullet_short"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_9mm"/>
 	<stance state_key="running" accuracy="0.4"/>
@@ -1904,6 +1911,7 @@
 	<weak_hand_hold offset="0.2"/>
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="1.5" kill_probability_offset_on_successful_hit="2.5" kill_decay_start_time="0.25" kill_decay_end_time="0.5"/>
+	<trail probability="1.0" key="bullet_short"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_9mm"/>
 	<stance state_key="running" accuracy="0.4"/>
@@ -1958,6 +1966,7 @@
 	<weak_hand_hold offset="0.2"/>
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="1.41" kill_probability_offset_on_successful_hit="5.5" kill_decay_start_time="0.23" kill_decay_end_time="0.5"/>
+	<trail probability="1.0" key="bullet_short"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_9mm"/>
 	<stance state_key="running" accuracy="0.45"/>
@@ -2012,6 +2021,7 @@
 	<weak_hand_hold offset="0.2"/>
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="1.41" kill_probability_offset_on_successful_hit="5.5" kill_decay_start_time="0.23" kill_decay_end_time="0.5"/>
+	<trail probability="1.0" key="bullet_short"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_9mm"/>
 	<stance state_key="running" accuracy="0.45"/>
@@ -3086,6 +3096,7 @@
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="2.4" kill_probability_offset_on_successful_hit="13.5" kill_decay_start_time="0.895" kill_decay_end_time="1.659"/>
 	</projectile>
+	<effect class="muzzle" ref="ejection_76251"/>
 	<stance state_key="running" accuracy="0.1"/>
 	<stance state_key="walking" accuracy="0.5"/>
 	<stance state_key="crouch_moving" accuracy="0.5"/>
@@ -3134,6 +3145,7 @@
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="7.5" kill_probability_offset_on_successful_hit="13.5" kill_decay_start_time="0.895" kill_decay_end_time="1.659"/>
 	</projectile>
+	<effect class="muzzle" ref="ejection_76251"/>
 	<stance state_key="running" accuracy="0.3"/>
 	<stance state_key="walking" accuracy="0.7"/>
 	<stance state_key="crouch_moving" accuracy="0.65"/>
@@ -3180,6 +3192,7 @@
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="1.6" kill_probability_offset_on_successful_hit="5.0" kill_decay_start_time="0.5" kill_decay_end_time="0.6"/>
 	</projectile>
+	<effect class="muzzle" ref="ejection_9mm"/>
 	<stance state_key="running" accuracy="0.6"/>
 	<stance state_key="walking" accuracy="0.6"/>
 	<stance state_key="standing" accuracy="0.7"/>
@@ -3229,6 +3242,7 @@
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="2.4" kill_probability_offset_on_successful_hit="13.5" kill_decay_start_time="0.895" kill_decay_end_time="1.659"/>
 	</projectile>
+	<effect class="muzzle" ref="ejection_76251"/>
 	<stance state_key="running" accuracy="0.1"/>
 	<stance state_key="walking" accuracy="0.5"/>
 	<stance state_key="crouch_moving" accuracy="0.5"/>
@@ -3275,6 +3289,7 @@
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="1.6" kill_probability_offset_on_successful_hit="5.0" kill_decay_start_time="0.5" kill_decay_end_time="0.6"/>
 	</projectile>
+	<effect class="muzzle" ref="ejection_9mm"/>
 	<stance state_key="running" accuracy="0.6"/>
 	<stance state_key="walking" accuracy="0.6"/>
 	<stance state_key="standing" accuracy="0.7"/>
@@ -3324,6 +3339,7 @@
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="7.5" kill_probability_offset_on_successful_hit="13.5" kill_decay_start_time="0.895" kill_decay_end_time="1.659"/>
 	</projectile>
+	<effect class="muzzle" ref="ejection_76251"/>
 	<stance state_key="running" accuracy="0.3"/>
 	<stance state_key="walking" accuracy="0.7"/>
 	<stance state_key="crouch_moving" accuracy="0.65"/>
@@ -6898,6 +6914,7 @@
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="3.0" kill_probability_offset_on_successful_hit="7.0" kill_decay_start_time="1.824" kill_decay_end_time="3.04"/>
 	</projectile>
+	<effect class="muzzle" ref="ejection_76251"/>
 	<stance state_key="running" accuracy="0.1"/>
 	<stance state_key="walking" accuracy="0.5"/>
 	<stance state_key="crouch_moving" accuracy="0.5"/>
@@ -6946,6 +6963,7 @@
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="3.0" kill_probability_offset_on_successful_hit="7.0" kill_decay_start_time="1.824" kill_decay_end_time="3.04"/>
 	</projectile>
+	<effect class="muzzle" ref="ejection_76251"/>
 	<stance state_key="running" accuracy="0.1"/>
 	<stance state_key="walking" accuracy="0.5"/>
 	<stance state_key="crouch_moving" accuracy="0.5"/>
@@ -6995,6 +7013,7 @@
 	<result class="hit" kill_probability="3.0" kill_probability_offset_on_successful_hit="10.0" kill_decay_start_time="1.0" kill_decay_end_time="1.5"/>
 	<trail probability="1.0" key="BulletApTrail_ct"/>
 	</projectile>
+	<effect class="muzzle" ref="ejection_76251"/>
 	<stance state_key="running" accuracy="0.3"/>
 	<stance state_key="walking" accuracy="0.6"/>
 	<stance state_key="crouch_moving" accuracy="0.6"/>
@@ -7044,6 +7063,8 @@
 	<result class="hit" kill_probability="10.0" kill_probability_offset_on_successful_hit="3.0" kill_decay_start_time="1.0" kill_decay_end_time="1.5"/>
 	<trail probability="1.0" key="bullet_thick_long"/>
 	</projectile>
+	<effect class="muzzle" ref="muzzle_yellow"/>
+	<effect class="muzzle" ref="ejection_76251"/>
 	<stance state_key="running" accuracy="0.3"/>
 	<stance state_key="walking" accuracy="0.6"/>
 	<stance state_key="crouch_moving" accuracy="0.6"/>
@@ -7096,6 +7117,7 @@
 	<result class="hit" kill_probability="3.0" kill_probability_offset_on_successful_hit="10.0" kill_decay_start_time="1.0" kill_decay_end_time="1.5"/>
 	<trail probability="1.0" key="BulletApTrail_ct"/>
 	</projectile>
+	<effect class="muzzle" ref="ejection_76251"/>
 	<stance state_key="running" accuracy="0.3"/>
 	<stance state_key="walking" accuracy="0.6"/>
 	<stance state_key="crouch_moving" accuracy="0.6"/>
@@ -7145,6 +7167,8 @@
 	<result class="hit" kill_probability="10.0" kill_probability_offset_on_successful_hit="3.0" kill_decay_start_time="1.0" kill_decay_end_time="1.5"/>
 	<trail probability="1.0" key="bullet_thick_long"/>
 	</projectile>
+	<effect class="muzzle" ref="muzzle_yellow"/>
+	<effect class="muzzle" ref="ejection_76251"/>
 	<stance state_key="running" accuracy="0.3"/>
 	<stance state_key="walking" accuracy="0.6"/>
 	<stance state_key="crouch_moving" accuracy="0.6"/>
@@ -9922,6 +9946,7 @@
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="2.4" kill_probability_offset_on_successful_hit="4.5" kill_decay_start_time="0.964" kill_decay_end_time="1.607"/>
 	</projectile>
+	<effect class="muzzle" ref="ejection_76251"/>
 	<stance state_key="running" accuracy="0.1"/>
 	<stance state_key="walking" accuracy="0.5"/>
 	<stance state_key="crouch_moving" accuracy="0.5"/>
@@ -9984,6 +10009,7 @@
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="2.4" kill_probability_offset_on_successful_hit="3.5" kill_decay_start_time="0.825" kill_decay_end_time="1.375"/>
 	</projectile>
+	<effect class="muzzle" ref="ejection_76251"/>
 	<stance state_key="running" accuracy="0.1"/>
 	<stance state_key="walking" accuracy="0.5"/>
 	<stance state_key="crouch_moving" accuracy="0.5"/>
@@ -13428,6 +13454,7 @@
 	<weak_hand_hold offset="0.2"/>
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="1.6" kill_probability_offset_on_successful_hit="3.0" kill_decay_start_time="0.28" kill_decay_end_time="0.47"/>
+	<trail probability="1.0" key="bullet_short"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_9mm"/>
 	<stance state_key="running" accuracy="0.43"/>
@@ -13511,6 +13538,7 @@
 	<weak_hand_hold offset="0.2"/>
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="1.65" kill_probability_offset_on_successful_hit="4.1" kill_decay_start_time="0.27" kill_decay_end_time="0.55"/>
+	<trail probability="1.0" key="bullet_short"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_9mm"/>
 	<stance state_key="running" accuracy="0.43"/>
@@ -13564,6 +13592,7 @@
 	<weak_hand_hold offset="0.2"/>
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="1.6" kill_probability_offset_on_successful_hit="3.0" kill_decay_start_time="0.28" kill_decay_end_time="0.47"/>
+	<trail probability="1.0" key="bullet_short"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_9mm"/>
 	<stance state_key="running" accuracy="0.43"/>
@@ -13647,6 +13676,7 @@
 	<weak_hand_hold offset="0.2"/>
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="1.65" kill_probability_offset_on_successful_hit="4.1" kill_decay_start_time="0.27" kill_decay_end_time="0.55"/>
+	<trail probability="1.0" key="bullet_short"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_9mm"/>
 	<stance state_key="running" accuracy="0.43"/>
@@ -35495,6 +35525,7 @@
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="2.4" kill_probability_offset_on_successful_hit="4.5" kill_decay_start_time="0.964" kill_decay_end_time="1.607"/>
 	</projectile>
+	<effect class="muzzle" ref="ejection_76251"/>
 	<stance state_key="running" accuracy="0.1"/>
 	<stance state_key="walking" accuracy="0.5"/>
 	<stance state_key="crouch_moving" accuracy="0.5"/>
@@ -51208,3 +51239,4 @@
 </weapon>
 
 </weapons>
+

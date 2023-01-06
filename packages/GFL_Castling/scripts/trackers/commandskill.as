@@ -583,6 +583,37 @@ class CommandSkill : Tracker {
                 }
             }
         }
+
+        if (checkCommand(message,"redeploy") || message=="/re"){
+            for(uint a=0;a<DontSpamingYourFuckingSkillWhileCoolDownBro.length();a++){
+                if(DontSpamingYourFuckingSkillWhileCoolDownBro[a].m_playerid==senderId) return;
+            }
+            DontSpamingYourFuckingSkillWhileCoolDownBro.insertLast(SpamAvoider(senderId));     
+            const XmlElement@ info = getPlayerInfo(m_metagame, senderId);
+			if (info !is null) {
+                int cId = info.getIntAttribute("character_id");
+                string pname = info.getStringAttribute("name");
+                SkillModifer@ m_modifer=SkillModifer(senderId,pname);
+
+                bool ExistQueue = false;
+                int j =-1;
+                for (uint i=0;i<SkillArray.length();i++){
+                    if (InCooldown(cId,m_modifer,SkillArray[i],true) && SkillArray[i].m_weapontype=="REDEPLOY") {
+                        ExistQueue=true;
+                        j=i;
+                    }
+                }
+                if (ExistQueue){
+                    dictionary a;
+                    a["%time"] = ""+SkillArray[j].m_time;
+                    sendPrivateMessageKey(m_metagame,senderId,"redeploycooldownhint",a);
+                    return;
+                }
+
+                killCharacter(m_metagame, cId, true);
+                addCoolDown("REDEPLOY",120,cId,m_modifer);
+            }                   
+        }
     }
 	protected void handleMatchEndEvent(const XmlElement@ event) {
         m_ended=true;
@@ -623,6 +654,11 @@ class CommandSkill : Tracker {
             for (uint a=0;a<SkillArray.length();a++){
                 SkillArray[a].m_time-=time;
                 if(SkillArray[a].m_time<0){
+                    if(SkillArray[a].m_weapontype =="REDEPLOY"){
+                        sendFactionMessageKeySaidAsCharacter(m_metagame,0,SkillArray[a].m_character_id,"redeploycooldowndone");
+                        SkillArray.removeAt(a);
+                        continue;
+                    }
                     if(SkillArray[a].m_charge_mode=="normal"){
                         if(SkillArray[a].m_alert){
                             playPrivateSound(m_metagame,"skilldone.wav",SkillArray[a].m_skillInfo.m_player_id);
@@ -757,7 +793,7 @@ class CommandSkill : Tracker {
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
             sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
-            _log("skill cooldown" + SkillArray[j].m_time);
+            //_log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
         addCoolDown("AN94",120,characterId,modifer);
@@ -789,7 +825,7 @@ class CommandSkill : Tracker {
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
             sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
-            _log("skill cooldown" + SkillArray[j].m_time);
+            //_log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
         addCoolDown("AK12SE",120,characterId,modifer);
@@ -816,7 +852,7 @@ class CommandSkill : Tracker {
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
             sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
-            _log("skill cooldown" + SkillArray[j].m_time);
+            //_log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
@@ -1002,7 +1038,7 @@ class CommandSkill : Tracker {
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
             sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
-            _log("skill cooldown" + SkillArray[j].m_time);
+            //_log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
         addCoolDown("FF_JUDGE",40,characterId,modifer);
@@ -1039,7 +1075,7 @@ class CommandSkill : Tracker {
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
             sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
-            _log("skill cooldown" + SkillArray[j].m_time);
+            //_log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
         addCoolDown("P22",12,characterId,modifer);
@@ -1077,7 +1113,7 @@ class CommandSkill : Tracker {
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
             sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
-            _log("skill cooldown" + SkillArray[j].m_time);
+            //_log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
         addCoolDown("HS2000",12,characterId,modifer);
@@ -1115,7 +1151,7 @@ class CommandSkill : Tracker {
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
             sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
-            _log("skill cooldown" + SkillArray[j].m_time);
+            //_log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
         addCoolDown("MP5",29,characterId,modifer);
@@ -1163,7 +1199,7 @@ class CommandSkill : Tracker {
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
             sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
-            _log("skill cooldown" + SkillArray[j].m_time);
+            //_log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
         addCoolDown("MP5MOD3",29,characterId,modifer);
@@ -1210,7 +1246,7 @@ class CommandSkill : Tracker {
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
             sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
-            _log("skill cooldown" + SkillArray[j].m_time);
+            //_log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
         addCoolDown("M1928A1",25,characterId,modifer);
@@ -1511,7 +1547,7 @@ class CommandSkill : Tracker {
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
             sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
-            _log("skill cooldown" + SkillArray[j].m_time);
+            //_log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
@@ -1552,7 +1588,7 @@ class CommandSkill : Tracker {
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
             sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
-            _log("skill cooldown" + SkillArray[j].m_time);
+            //_log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
@@ -1594,14 +1630,14 @@ class CommandSkill : Tracker {
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
             sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
-            _log("skill cooldown" + SkillArray[j].m_time);
+            //_log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
         if (ExistQueue && mod3 && SkillArray[j].m_charge>3){
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
             sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
-            _log("skill cooldown" + SkillArray[j].m_time);
+            //_log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
@@ -1659,7 +1695,7 @@ class CommandSkill : Tracker {
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
             sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
-            _log("skill cooldown" + SkillArray[j].m_time);
+            //_log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
@@ -1747,7 +1783,7 @@ class CommandSkill : Tracker {
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
             sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
-            _log("skill cooldown" + SkillArray[j].m_time);
+            //_log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
@@ -1758,7 +1794,7 @@ class CommandSkill : Tracker {
                     string target = player.getStringAttribute("aim_target");
                     Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
                     int factionid = character.getIntAttribute("faction_id");
-                    _log("AA grenade ar spotted");
+                    // _log("AA grenade ar spotted");
                     if(weaponname=="gkw_stg44.weapon") {
                         array<string> Voice={
                             "STG44_ATTACK_JP.wav"
@@ -1808,7 +1844,7 @@ class CommandSkill : Tracker {
                     dictionary a;
                     a["%time"] = ""+SkillArray[j].m_time;
                     sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
-                    _log("skill cooldown" + SkillArray[j].m_time);
+                    //_log("skill cooldown" + SkillArray[j].m_time);
                     return;
                 }
                 if(SkillArray[j].m_charge <3){
@@ -1851,7 +1887,7 @@ class CommandSkill : Tracker {
                     dictionary a;
                     a["%time"] = ""+SkillArray[j].m_time;
                     sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
-                    _log("skill cooldown" + SkillArray[j].m_time);
+                    //_log("skill cooldown" + SkillArray[j].m_time);
                     return;
                 }
                 if(SkillArray[j].m_charge <3){
@@ -1897,7 +1933,7 @@ class CommandSkill : Tracker {
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
             sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
-            _log("skill cooldown" + SkillArray[j].m_time);
+            //_log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
         addCoolDown("M870",30,characterId,modifer);
@@ -1933,7 +1969,7 @@ class CommandSkill : Tracker {
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
             sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
-            _log("skill cooldown" + SkillArray[j].m_time);
+            //_log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
@@ -1997,7 +2033,7 @@ class CommandSkill : Tracker {
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
             sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
-            _log("skill cooldown" + SkillArray[j].m_time);
+            //_log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
@@ -2038,7 +2074,7 @@ class CommandSkill : Tracker {
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
             sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
-            _log("skill cooldown" + SkillArray[j].m_time);
+            //_log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
@@ -2135,7 +2171,7 @@ class CommandSkill : Tracker {
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
             sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
-            _log("skill cooldown" + SkillArray[j].m_time);
+            //_log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
@@ -2185,7 +2221,7 @@ class CommandSkill : Tracker {
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
             sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
-            _log("skill cooldown" + SkillArray[j].m_time);
+            //_log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
@@ -2227,7 +2263,7 @@ class CommandSkill : Tracker {
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
             sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
-            _log("skill cooldown" + SkillArray[j].m_time);
+            //_log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
@@ -2272,7 +2308,7 @@ class CommandSkill : Tracker {
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
             sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
-            _log("skill cooldown" + SkillArray[j].m_time);
+            //_log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
@@ -2330,7 +2366,7 @@ class CommandSkill : Tracker {
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
             sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
-            _log("skill cooldown" + SkillArray[j].m_time);
+            //_log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
@@ -2375,7 +2411,7 @@ class CommandSkill : Tracker {
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
             sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
-            _log("skill cooldown" + SkillArray[j].m_time);
+            //_log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
         addCoolDown("FO12",60,characterId,modifer);
@@ -2404,7 +2440,7 @@ class CommandSkill : Tracker {
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
             sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
-            _log("skill cooldown" + SkillArray[j].m_time);
+            //_log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
@@ -2507,7 +2543,7 @@ class CommandSkill : Tracker {
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
             sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
-            _log("skill cooldown" + SkillArray[j].m_time);
+            //_log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
@@ -2552,7 +2588,7 @@ class CommandSkill : Tracker {
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
             sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
-            _log("skill cooldown" + SkillArray[j].m_time);
+            //_log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
@@ -2600,7 +2636,7 @@ class CommandSkill : Tracker {
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
             sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
-            _log("skill cooldown" + SkillArray[j].m_time);
+            //_log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
@@ -2654,7 +2690,7 @@ class CommandSkill : Tracker {
                     dictionary a;
                     a["%time"] = ""+SkillArray[j].m_time;
                     sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
-                    _log("skill cooldown" + SkillArray[j].m_time);
+                    //_log("skill cooldown" + SkillArray[j].m_time);
                     return;
                 }
                 if(SkillArray[j].m_charge <3){
@@ -2701,7 +2737,7 @@ class CommandSkill : Tracker {
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
             sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
-            _log("skill cooldown" + SkillArray[j].m_time);
+            //_log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
@@ -2818,7 +2854,7 @@ class CommandSkill : Tracker {
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
             sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
-            _log("skill cooldown" + SkillArray[j].m_time);
+            //_log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
@@ -2859,7 +2895,7 @@ class CommandSkill : Tracker {
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
             sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
-            _log("skill cooldown" + SkillArray[j].m_time);
+            //_log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
         addCoolDown("Liushi",300,characterId,modifer);
@@ -2956,7 +2992,7 @@ class CommandSkill : Tracker {
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
             sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
-            _log("skill cooldown" + SkillArray[j].m_time);
+            //_log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
         addCoolDown("FF_ALCHEMIST",25,characterId,modifer);
@@ -2985,14 +3021,14 @@ class CommandSkill : Tracker {
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
             sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
-            _log("skill cooldown" + SkillArray[j].m_time);
+            //_log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
         if (ExistQueue && mod3 && SkillArray[j].m_charge>3){
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
             sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
-            _log("skill cooldown" + SkillArray[j].m_time);
+            //_log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
@@ -3045,7 +3081,7 @@ class CommandSkill : Tracker {
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
             sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
-            _log("skill cooldown" + SkillArray[j].m_time);
+            //_log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
@@ -3098,7 +3134,7 @@ class CommandSkill : Tracker {
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
             sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
-            _log("skill cooldown" + SkillArray[j].m_time);
+            //_log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
@@ -3528,7 +3564,7 @@ class CommandSkill : Tracker {
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
             sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
-            _log("skill cooldown" + SkillArray[j].m_time);
+            //_log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
@@ -3566,7 +3602,7 @@ class CommandSkill : Tracker {
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
             sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
-            _log("skill cooldown" + SkillArray[j].m_time);
+            //_log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
 
@@ -3604,7 +3640,7 @@ class CommandSkill : Tracker {
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
             sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
-            _log("skill cooldown" + SkillArray[j].m_time);
+            //_log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
@@ -3650,7 +3686,7 @@ class CommandSkill : Tracker {
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
             sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
-            _log("skill cooldown" + SkillArray[j].m_time);
+            //_log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
@@ -3689,7 +3725,7 @@ class CommandSkill : Tracker {
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
             sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
-            _log("skill cooldown" + SkillArray[j].m_time);
+            //_log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
 
