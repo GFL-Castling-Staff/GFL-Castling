@@ -65,10 +65,13 @@
     <animation key="cycle" animation_key="Brifle1"/>
     <animation state_key="reload" animation_key="reloading, mgl, one at a time" />
 
-    <sound key="fire" fileref="kulakov_shot.wav" volume="1.5"/>
+    <sound key="fire" fileref="kulakov_Fire_FromCOD16.wav" volume="1.0"/>
     <sound key="magazine_out" fileref="m79_clip_out.wav" volume="0.8" />
     <sound key="magazine_in" fileref="mossberg500_reload.wav" volume="0.8"/>
     <sound key="reload_one" fileref="m79_reload.wav" />
+    <sound key="cycle_out" fileref="m1891_cycle_out_FromSQUAD.wav" volume="0.6" />  
+	<sound key="cycle_in" fileref="m1891_cycle_in_FromSQUAD.wav" volume="0.6" />  
+    <sound key="cycle" fileref="m1891_cycle_FromSQUAD.wav" volume="0.6" /> 
     <sound class="impact" fileref="rifle_drop.wav"/>
     <model filename="gkw_kulakov.xml"/>
 
