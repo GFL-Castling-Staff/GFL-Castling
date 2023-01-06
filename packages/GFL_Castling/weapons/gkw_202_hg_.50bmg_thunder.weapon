@@ -70,7 +70,7 @@
 	<weak_hand_hold offset="0.1" />
 	<projectile file="ntw.projectile">
         <result class="blast" damage="8.1" radius="4.5" decal="1" push="0.5" character_state="death" faction_compare="not_equal"/>
-        <trail probability="1.0" key="BulletApTrail" />
+        <trail probability="1.0" key="BulletApTrail_ct" />
         <effect class="result" key="terrain" ref="BigBurst" use_surface_color="1" />
         <effect class="result" key="terrain" ref="SmokeTop" post_processing="1" />
         <effect class="result" key="terrain" ref="Smoke" post_processing="1" />

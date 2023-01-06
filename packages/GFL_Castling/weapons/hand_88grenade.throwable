@@ -5,7 +5,7 @@
         <result class="spawn" instance_class="projectile" instance_key="hand_88grenade_sub.projectile" min_amount="6" max_amount="6" offset="0 1.2 0" position_spread="0.3 0.3" direction_spread="0.1 0.1" />
         <trigger class="impact"/>
         <rotation class="random" />
-        <trail probability="0.0" key="BulletApTrail" />
+        <trail probability="0.0" key="BulletApTrail_ct" />
         <model mesh_filename="anti_heavy_armor_grenade.xml" />
         <hud_icon filename="88r.png" />
         <!-- <throwable curve_height="5.0" near_far_distance="5.0" speed_estimation_near="9.0" speed_estimation_far="15.0" max_speed="13.0" randomness="0.07" /> -->

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projectile key="ASW_A10_strafe.projectile" slot="2" pulldown_in_air="0.0">
     <result class="blast" damage="3.1" radius="4.0" decal="1" push="0.3" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
-    <trail probability="1.0" key="BulletApTrail" />
+    <trail probability="1.0" key="BulletApTrail_ct" />
 
     <effect class="result" key="terrain" ref="hitGround_30mm" use_surface_color="1" />
     <effect class="result" key="terrain" ref="BulletImpactDust4" />

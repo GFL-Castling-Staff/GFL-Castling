@@ -30,16 +30,17 @@
 	<hud_icon filename="gkw_m1a1.png"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="2.4" kill_probability_offset_on_successful_hit="3.5" kill_decay_start_time="0.825" kill_decay_end_time="1.375"/>
+		<result class="hit" kill_probability="2.4" kill_probability_offset_on_successful_hit="3.5" kill_decay_start_time="0.825" kill_decay_end_time="1.375"/>
 	</projectile>
+	<effect class="muzzle" ref="ejection_76251" />
 	<stance state_key="running" accuracy="0.1" />
-    <stance state_key="walking" accuracy="0.5" />
-    <stance state_key="crouch_moving" accuracy="0.5" />
-    <stance state_key="prone_moving" accuracy="0.6" />
-    <stance state_key="standing" accuracy="0.85" />
-    <stance state_key="crouching" accuracy="0.9" />
-    <stance state_key="prone" accuracy="1.0" />
-    <stance state_key="over_wall" accuracy="1" />
+	<stance state_key="walking" accuracy="0.5" />
+	<stance state_key="crouch_moving" accuracy="0.5" />
+	<stance state_key="prone_moving" accuracy="0.6" />
+	<stance state_key="standing" accuracy="0.85" />
+	<stance state_key="crouching" accuracy="0.9" />
+	<stance state_key="prone" accuracy="1.0" />
+	<stance state_key="over_wall" accuracy="1" />
 	<tag name="rifle"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
@@ -54,7 +55,7 @@
 	<animation state_key="stabbing" animation_key="melee, quick knife"/>
 	<animation state_key="stabbing" animation_key="pistol whip 3"/>
 	<modifier class="speed" value="0.0"/>
-    <modifier class="detectability" value="-0.1"/>
+	<modifier class="detectability" value="-0.1"/>
 	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
 	<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>

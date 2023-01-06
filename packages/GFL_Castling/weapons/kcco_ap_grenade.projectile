@@ -5,7 +5,7 @@
         <result class="spawn" instance_class="projectile" instance_key="blast_shard_rad5_low.projectile" min_amount="6" max_amount="6" offset="0 1.5 0" position_spread="0 0" direction_spread="0.0 0.0" />
         <trigger class="impact"/>
         <rotation class="random" />
-        <trail probability="0.0" key="BulletApTrail" />
+        <trail probability="0.0" key="BulletApTrail_ct" />
         <model mesh_filename="kcco_grenade_3.xml" />
         <hud_icon filename="88r.png" />
         <throwable curve_height="8.0" near_far_distance="10.0" speed_estimation_near="25" speed_estimation_far="30.0" max_speed="50.0" randomness="0.07" tweak_factor="1.75"/>

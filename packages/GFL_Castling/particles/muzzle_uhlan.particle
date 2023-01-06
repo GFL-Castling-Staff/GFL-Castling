@@ -48,8 +48,10 @@ particle_system muzzle_uhlan
 		time5	1
 	}
 }
-material muzzle_uhlan {
-        receive_shadows off
+
+material muzzle_uhlan
+{
+	receive_shadows off
 	technique {
 		pass {
 			lighting off

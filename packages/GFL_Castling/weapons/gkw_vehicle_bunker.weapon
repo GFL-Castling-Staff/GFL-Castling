@@ -83,7 +83,7 @@
 
     <projectile file="bullet_ai.projectile">
         <result class="blast" damage="2.0"  radius="3.0" decal="1" push="0.3" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
-        <trail probability="1.0" key="BulletApTrail" />
+        <trail probability="1.0" key="BulletApTrail_ct" />
         <effect class="result" key="terrain" ref="BigBurst" use_surface_color="1" />
         <effect class="result" key="terrain" ref="LowDust"/>
         <effect class="result" key="terrain" ref="Shine" lighting="0" />

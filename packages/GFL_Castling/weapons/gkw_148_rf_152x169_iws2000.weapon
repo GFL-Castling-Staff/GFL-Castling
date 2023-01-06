@@ -109,7 +109,7 @@
             character_state="death"
             faction_compare="not_equal"
             />
-            <trail probability="1.0" key="BulletApTrail"/>
+            <trail probability="1.0" key="BulletApTrail_ct"/>
         </projectile>
         <modifier class="speed" value="-0.15" />
 

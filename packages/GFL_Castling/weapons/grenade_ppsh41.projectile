@@ -6,7 +6,7 @@
         <collider class="character" enabled="1" faction_compare="not_equal"/>
     </trigger>
     <rotation class="random" />
-	<!-- <trail probability="1.0" key="BulletApTrail" /> -->
+	<!-- <trail probability="1.0" key="BulletApTrail_ct" /> -->
     <model mesh_filename="grenade_rgd_33.mesh" texture_filename="grenade_rgd_33.png" />
     <hud_icon filename="88r.png" />
 

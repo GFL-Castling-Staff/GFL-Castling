@@ -1,8 +1,8 @@
 
 particle_system muzzle_yellow
 {
-	quota	100
-	material	flame_yellow
+	quota	200
+	material flame_yellow
 	particle_width	2.0
 	particle_height	3.5
 	cull_each	false
@@ -49,8 +49,10 @@ particle_system muzzle_yellow
 		time5	1
 	}
 }
-material flame_yellow {
-        receive_shadows off
+
+material flame_yellow
+{
+	receive_shadows off
 	technique {
 		pass {
 			lighting off

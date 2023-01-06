@@ -6,7 +6,7 @@
     <trigger class="time" time_to_live="2.5"/>
 
     <rotation class="random" />
-	<trail probability="0.0" key="BulletApTrail" />
+	<trail probability="0.0" key="BulletApTrail_ct" />
     <model mesh_filename="parw_grenade.xml" />
     <hud_icon filename="grenade.png" />
 

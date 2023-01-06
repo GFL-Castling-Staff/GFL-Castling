@@ -104,7 +104,7 @@
         <hud_icon filename="gkw_m2hb_skill.png"/>
         <projectile file="bullet_he.projectile">
             <result class="blast" damage="2.1" radius="3.0" decal="1" push="0.3" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
-            <trail probability="1.0" key="BulletApTrail"/>
+            <trail probability="1.0" key="BulletApTrail_ct"/>
         </projectile>
         <effect class="muzzle" ref="ejection_50BMG"/>
         <effect class="muzzle" ref="muzzle_big_yellow"/>

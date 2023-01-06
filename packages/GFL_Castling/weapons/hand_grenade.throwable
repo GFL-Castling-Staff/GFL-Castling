@@ -5,7 +5,7 @@
         <result class="spawn" instance_class="projectile" instance_key="blast_shard_rad5.projectile" min_amount="8" max_amount="12" offset="0 0 0" position_spread="0.0 0.0" direction_spread="0.0 0.0" />
         <trigger class="time" time_to_live="1.72"/>
         <rotation class="random" />
-        <trail probability="0.0" key="BulletApTrail" />
+        <trail probability="0.0" key="BulletApTrail_ct" />
         <model mesh_filename="grenade_rgd_5.mesh" texture_filename="grenade_rgd_5.png" />
         <hud_icon filename="hud_grenade_old.png" />
         <throwable curve_height="4.0" near_far_distance="5.0" speed_estimation_near="60.0" speed_estimation_far="60.0" max_speed="180.0" randomness="0.07"  tweak_factor="1.775"/>

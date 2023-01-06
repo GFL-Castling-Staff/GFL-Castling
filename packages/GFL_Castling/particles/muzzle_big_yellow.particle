@@ -2,7 +2,7 @@
 particle_system muzzle_big_yellow
 {
 	quota	50
-	material	fire_newtest
+	material	muzzle_big_yellow
 	particle_width	1.4
 	particle_height	4.0
 	cull_each	false
@@ -49,8 +49,8 @@ particle_system muzzle_big_yellow
 		time5	1
 	}
 }
-material fire_newtest {
-        receive_shadows off
+material muzzle_big_yellow {
+	receive_shadows off
 	technique {
 		pass {
 			lighting off

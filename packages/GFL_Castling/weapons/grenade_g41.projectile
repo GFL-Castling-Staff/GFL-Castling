@@ -41,7 +41,7 @@
     <result class="spawn" instance_class="projectile" instance_key="grenade_g41_scan.projectile" min_amount="1" max_amount="1" offset="0 1 0" position_spread="0 0" direction_spread="0 0" />
     <trigger class="time" time_to_live="1.5"/>
     <rotation class="random" />
-    <trail probability="0.0" key="BulletApTrail" />
+    <trail probability="0.0" key="BulletApTrail_ct" />
     <model mesh_filename="gki_g41_deco.xml" />
     <hud_icon filename="hud_g41_upgrade.png" />
     <commonness value="0.8" />

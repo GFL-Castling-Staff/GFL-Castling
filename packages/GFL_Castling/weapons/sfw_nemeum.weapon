@@ -52,7 +52,7 @@
     <!-- <weak_hand_hold offset="0.1" /> -->
     <projectile file="bullet_sf.projectile">
         <result class="blast" radius="2.0" damage="4.0" decal="1" push="0.15" character_state="death" faction_compare="not_equal"/>
-        <trail probability="1.0" key="BulletApTrail" />
+        <trail probability="1.0" key="BulletApTrail_ct" />
     </projectile>
 	
     <!--Accuracy, Movement speed-->

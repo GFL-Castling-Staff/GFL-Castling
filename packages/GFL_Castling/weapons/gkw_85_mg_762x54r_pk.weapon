@@ -98,7 +98,7 @@
         <hud_icon filename="gkw_pk_skill.png" />
         <projectile file="bullet_he.projectile">
             <result class="blast" damage="2.0" radius="2.5" decal="1" push="0.2" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
-            <trail probability="1.0" key="BulletApTrail" />
+            <trail probability="1.0" key="BulletApTrail_ct" />
         </projectile>
         <effect class="muzzle" ref="ejection_76251" />
         <shield offset="-0.60 0.0 -0.2" extent="0.8 1.5 2.4" usable_for_cover="0" />

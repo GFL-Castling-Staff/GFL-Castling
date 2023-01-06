@@ -990,7 +990,7 @@
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="bullet_iwsAPFSDS.projectile">
 	<result class="blast" damage="18" radius="3.0" decal="1" push="1.0" character_state="death" faction_compare="not_equal"/>
-	<trail probability="1.0" key="BulletApTrail"/>
+	<trail probability="1.0" key="BulletApTrail_ct"/>
 	</projectile>
 	<modifier class="speed" value="-0.15"/>
 	<stance state_key="running" accuracy="1"/>
@@ -1092,7 +1092,7 @@
 	<hud_icon filename="gkw_aek999_skill.png"/>
 	<projectile file="bullet.projectile" can_be_detected_by_footmen="0">
 	<result class="hit" kill_probability="2.0" kill_probability_offset_on_successful_hit="1.85" kill_decay_start_time="3.273" kill_decay_end_time="5.455"/>
-	<trail probability="1.0" key="BulletApTrail"/>
+	<trail probability="1.0" key="BulletApTrail_ct"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.6"/>
 	<stance state_key="walking" accuracy="0.6"/>
@@ -2634,7 +2634,7 @@
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<projectile file="bullet_he.projectile">
 	<result class="blast" damage="3.0" radius="3.0" decal="1" push="0.3" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
-	<trail probability="1.0" key="BulletApTrail"/>
+	<trail probability="1.0" key="BulletApTrail_ct"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_50BMG"/>
 	<stance state_key="running" accuracy="0.3"/>
@@ -2736,7 +2736,7 @@
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<projectile file="bullet_he.projectile">
 	<result class="blast" damage="3.0" radius="3.0" decal="1" push="0.3" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
-	<trail probability="1.0" key="BulletApTrail"/>
+	<trail probability="1.0" key="BulletApTrail_ct"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_50BMG"/>
 	<stance state_key="running" accuracy="0.3"/>
@@ -3516,7 +3516,7 @@
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="bullet.projectile" can_be_detected_by_footmen="0">
 	<result class="hit" kill_probability="2.5" kill_probability_offset_on_successful_hit="12" kill_decay_start_time="2.195" kill_decay_end_time="3.659"/>
-	<trail probability="1.0" key="BulletApTrail"/>
+	<trail probability="1.0" key="BulletApTrail_ct"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.1"/>
 	<stance state_key="walking" accuracy="0.5"/>
@@ -5000,7 +5000,7 @@
 	<hud_icon filename="gkw_m2hb_skill.png"/>
 	<projectile file="bullet_he.projectile">
 	<result class="blast" damage="2.1" radius="3.0" decal="1" push="0.3" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
-	<trail probability="1.0" key="BulletApTrail"/>
+	<trail probability="1.0" key="BulletApTrail_ct"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_50BMG"/>
 	<effect class="muzzle" ref="muzzle_big_yellow"/>
@@ -6993,7 +6993,7 @@
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="3.0" kill_probability_offset_on_successful_hit="10.0" kill_decay_start_time="1.0" kill_decay_end_time="1.5"/>
-	<trail probability="1.0" key="BulletApTrail"/>
+	<trail probability="1.0" key="BulletApTrail_ct"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.3"/>
 	<stance state_key="walking" accuracy="0.6"/>
@@ -7094,7 +7094,7 @@
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="3.0" kill_probability_offset_on_successful_hit="10.0" kill_decay_start_time="1.0" kill_decay_end_time="1.5"/>
-	<trail probability="1.0" key="BulletApTrail"/>
+	<trail probability="1.0" key="BulletApTrail_ct"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.3"/>
 	<stance state_key="walking" accuracy="0.6"/>
@@ -7792,7 +7792,7 @@
 	<weak_hand_hold offset="0.2"/>
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="2.2" kill_probability_offset_on_successful_hit="2.3" kill_decay_start_time="1.933" kill_decay_end_time="3.222"/>
-	<trail probability="1.0" key="BulletApTrail"/>
+	<trail probability="1.0" key="BulletApTrail_ct"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_556"/>
 	<stance state_key="running" accuracy="0.65"/>
@@ -9035,7 +9035,7 @@
 	<hud_icon filename="gkw_m1918_skill.png"/>
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="3.006" kill_probability_offset_on_successful_hit="2.0" kill_decay_start_time="1.147" kill_decay_end_time="1.912"/>
-	<trail probability="1.0" key="BulletApTrail"/>
+	<trail probability="1.0" key="BulletApTrail_ct"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_76251"/>
 	<stance state_key="running" accuracy="0.3"/>
@@ -13361,7 +13361,7 @@
 	<hud_icon filename="gkw_lwmmg.png"/>
 	<projectile file="bullet_he.projectile">
 	<result class="blast" damage="2.1" radius="2.5" decal="1" push="0.2" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
-	<trail probability="1.0" key="BulletApTrail"/>
+	<trail probability="1.0" key="BulletApTrail_ct"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_76251"/>
 	<stance state_key="running" accuracy="0.65"/>
@@ -14891,7 +14891,7 @@
 	<weak_hand_hold offset="0.1"/>
 	<projectile file="ntw.projectile">
 	<result class="blast" damage="8.1" radius="4.5" decal="1" push="0.5" character_state="death" faction_compare="not_equal"/>
-	<trail probability="1.0" key="BulletApTrail"/>
+	<trail probability="1.0" key="BulletApTrail_ct"/>
 	<effect class="result" key="terrain" ref="BigBurst" use_surface_color="1"/>
 	<effect class="result" key="terrain" ref="SmokeTop" post_processing="1"/>
 	<effect class="result" key="terrain" ref="Smoke" post_processing="1"/>
@@ -16335,7 +16335,7 @@
 	<hud_icon filename="gkw_pk_skill.png"/>
 	<projectile file="bullet_he.projectile">
 	<result class="blast" damage="2.0" radius="2.5" decal="1" push="0.2" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
-	<trail probability="1.0" key="BulletApTrail"/>
+	<trail probability="1.0" key="BulletApTrail_ct"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_76251"/>
 	<shield offset="-0.60 0.0 -0.2" extent="0.8 1.5 2.4" usable_for_cover="0"/>
@@ -17710,7 +17710,7 @@
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="2.4" kill_probability_offset_on_successful_hit="3.0" kill_decay_start_time="1.14514" kill_decay_end_time="1.919810"/>
-	<trail probability="1.0" key="BulletApTrail"/>
+	<trail probability="1.0" key="BulletApTrail_ct"/>
 	</projectile>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<effect class="muzzle" ref="ejection_76251"/>
@@ -18273,7 +18273,7 @@
 	<weak_hand_hold offset="0.2"/>
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="2.0" kill_probability_offset_on_successful_hit="2.2" kill_decay_start_time="1.933" kill_decay_end_time="3.222"/>
-	<trail probability="1.0" key="BulletApTrail"/>
+	<trail probability="1.0" key="BulletApTrail_ct"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_556"/>
 	<stance state_key="running" accuracy="0.65"/>
@@ -18512,7 +18512,7 @@
 	<hud_icon filename="gkw_m1919a4_skill.png"/>
 	<projectile file="bullet_he.projectile">
 	<result class="blast" damage="2.1" radius="2.5" decal="1" push="0.15" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
-	<trail probability="1.0" key="BulletApTrail"/>
+	<trail probability="1.0" key="BulletApTrail_ct"/>
 	</projectile>
 	<modifier class="speed" value="-0.15"/>
 	<effect class="muzzle" ref="ejection_76251"/>
@@ -21539,7 +21539,7 @@
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="4.5" kill_probability_offset_on_successful_hit="4.5" kill_decay_start_time="0.974" kill_decay_end_time="1.624"/>
-	<trail probability="1.0" key="BulletApTrail"/>
+	<trail probability="1.0" key="BulletApTrail_ct"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.3"/>
 	<stance state_key="walking" accuracy="0.4"/>
@@ -23857,7 +23857,7 @@
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="bullet.projectile" can_be_detected_by_footmen="0">
 	<result class="hit" kill_probability="2.7" kill_probability_offset_on_successful_hit="15" kill_decay_start_time="2.195" kill_decay_end_time="3.659"/>
-	<trail probability="1.0" key="BulletApTrail"/>
+	<trail probability="1.0" key="BulletApTrail_ct"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.1"/>
 	<stance state_key="walking" accuracy="0.5"/>
@@ -23909,7 +23909,7 @@
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="bullet.projectile">
 	<result class="blast" damage="1.1" radius="2.0" push="0.02" charater_state="death" faction_compare="not_equal"/>
-	<trail probability="1.0" key="BulletApTrail"/>
+	<trail probability="1.0" key="BulletApTrail_ct"/>
 	</projectile>
 	<stance state_key="running" accuracy="1.1"/>
 	<stance state_key="walking" accuracy="1.1"/>
@@ -25481,7 +25481,7 @@
 	<hud_icon filename="gkw_lwmmgmod3.png"/>
 	<projectile file="bullet_he.projectile">
 	<result class="blast" damage="3.1" radius="2.75" decal="1" push="0.2" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
-	<trail probability="1.0" key="BulletApTrail"/>
+	<trail probability="1.0" key="BulletApTrail_ct"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_76251"/>
 	<stance state_key="running" accuracy="0.65"/>
@@ -25844,7 +25844,7 @@
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="4.5" kill_probability_offset_on_successful_hit="4.5" kill_decay_start_time="0.974" kill_decay_end_time="1.624"/>
-	<trail probability="1.0" key="BulletApTrail"/>
+	<trail probability="1.0" key="BulletApTrail_ct"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.3"/>
 	<stance state_key="walking" accuracy="0.4"/>
@@ -26208,7 +26208,7 @@
 	<hud_icon filename="gkw_m1918mod3_skill.png"/>
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="3.006" kill_probability_offset_on_successful_hit="2.85" kill_decay_start_time="1.147" kill_decay_end_time="1.912"/>
-	<trail probability="1.0" key="BulletApTrail"/>
+	<trail probability="1.0" key="BulletApTrail_ct"/>
 	</projectile>
 	<effect class="muzzle" ref="muzzle_yellow"/>
 	<effect class="muzzle" ref="ejection_76251"/>
@@ -30559,7 +30559,7 @@
 	<weak_hand_hold offset="0.2"/>
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="2.2" kill_probability_offset_on_successful_hit="2.3" kill_decay_start_time="1.933" kill_decay_end_time="3.222"/>
-	<trail probability="1.0" key="BulletApTrail"/>
+	<trail probability="1.0" key="BulletApTrail_ct"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_556"/>
 	<stance state_key="running" accuracy="0.65"/>
@@ -32336,7 +32336,7 @@
 	<hud_icon filename="gkw_lwmmg_1808.png"/>
 	<projectile file="bullet_he.projectile">
 	<result class="blast" damage="2.1" radius="2.5" decal="1" push="0.2" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
-	<trail probability="1.0" key="BulletApTrail"/>
+	<trail probability="1.0" key="BulletApTrail_ct"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_76251"/>
 	<stance state_key="running" accuracy="0.65"/>
@@ -32853,7 +32853,7 @@
 	<hud_icon filename="gkw_m1918_102.png"/>
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="3.006" kill_probability_offset_on_successful_hit="2.0" kill_decay_start_time="1.147" kill_decay_end_time="1.912"/>
-	<trail probability="1.0" key="BulletApTrail"/>
+	<trail probability="1.0" key="BulletApTrail_ct"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_76251"/>
 	<stance state_key="running" accuracy="0.3"/>
@@ -32949,7 +32949,7 @@
 	<hud_icon filename="gkw_m1918_806.png"/>
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="3.006" kill_probability_offset_on_successful_hit="2.0" kill_decay_start_time="1.147" kill_decay_end_time="1.912"/>
-	<trail probability="1.0" key="BulletApTrail"/>
+	<trail probability="1.0" key="BulletApTrail_ct"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_76251"/>
 	<stance state_key="running" accuracy="0.3"/>
@@ -33045,7 +33045,7 @@
 	<hud_icon filename="gkw_m1918_1606.png"/>
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="3.006" kill_probability_offset_on_successful_hit="2.0" kill_decay_start_time="1.147" kill_decay_end_time="1.912"/>
-	<trail probability="1.0" key="BulletApTrail"/>
+	<trail probability="1.0" key="BulletApTrail_ct"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_76251"/>
 	<stance state_key="running" accuracy="0.3"/>
@@ -33898,7 +33898,7 @@
 	<weak_hand_hold offset="0.1"/>
 	<projectile file="ntw.projectile">
 	<result class="blast" damage="8.1" radius="4.5" decal="1" push="0.5" character_state="death" faction_compare="not_equal"/>
-	<trail probability="1.0" key="BulletApTrail"/>
+	<trail probability="1.0" key="BulletApTrail_ct"/>
 	<effect class="result" key="terrain" ref="BigBurst" use_surface_color="1"/>
 	<effect class="result" key="terrain" ref="SmokeTop" post_processing="1"/>
 	<effect class="result" key="terrain" ref="Smoke" post_processing="1"/>
@@ -35415,7 +35415,7 @@
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="bullet_iwsAPFSDS.projectile">
 	<result class="blast" damage="18" radius="3.0" decal="1" push="1.0" character_state="death" faction_compare="not_equal"/>
-	<trail probability="1.0" key="BulletApTrail"/>
+	<trail probability="1.0" key="BulletApTrail_ct"/>
 	</projectile>
 	<modifier class="speed" value="-0.15"/>
 	<stance state_key="running" accuracy="1"/>
@@ -35562,7 +35562,7 @@
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="bullet.projectile" can_be_detected_by_footmen="0">
 	<result class="hit" kill_probability="2.5" kill_probability_offset_on_successful_hit="12" kill_decay_start_time="2.195" kill_decay_end_time="3.659"/>
-	<trail probability="1.0" key="BulletApTrail"/>
+	<trail probability="1.0" key="BulletApTrail_ct"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.1"/>
 	<stance state_key="walking" accuracy="0.5"/>
@@ -35614,7 +35614,7 @@
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="bullet.projectile" can_be_detected_by_footmen="0">
 	<result class="hit" kill_probability="2.5" kill_probability_offset_on_successful_hit="12" kill_decay_start_time="2.195" kill_decay_end_time="3.659"/>
-	<trail probability="1.0" key="BulletApTrail"/>
+	<trail probability="1.0" key="BulletApTrail_ct"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.1"/>
 	<stance state_key="walking" accuracy="0.5"/>
@@ -39561,7 +39561,7 @@
 	<hud_icon filename="gkw_lwmmg_1808.png"/>
 	<projectile file="bullet_he.projectile">
 	<result class="blast" damage="3.1" radius="2.75" decal="1" push="0.2" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
-	<trail probability="1.0" key="BulletApTrail"/>
+	<trail probability="1.0" key="BulletApTrail_ct"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_76251"/>
 	<stance state_key="running" accuracy="0.65"/>
@@ -39718,7 +39718,7 @@
 	<hud_icon filename="gkw_m1918_102.png"/>
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="3.006" kill_probability_offset_on_successful_hit="2.85" kill_decay_start_time="1.147" kill_decay_end_time="1.912"/>
-	<trail probability="1.0" key="BulletApTrail"/>
+	<trail probability="1.0" key="BulletApTrail_ct"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_76251"/>
 	<effect class="muzzle" ref="muzzle_yellow"/>
@@ -39814,7 +39814,7 @@
 	<hud_icon filename="gkw_m1918_806.png"/>
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="3.006" kill_probability_offset_on_successful_hit="2.85" kill_decay_start_time="1.147" kill_decay_end_time="1.912"/>
-	<trail probability="1.0" key="BulletApTrail"/>
+	<trail probability="1.0" key="BulletApTrail_ct"/>
 	</projectile>
 	<effect class="muzzle" ref="muzzle_yellow"/>
 	<effect class="muzzle" ref="ejection_76251"/>
@@ -39910,7 +39910,7 @@
 	<hud_icon filename="gkw_m1918_1606.png"/>
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="3.006" kill_probability_offset_on_successful_hit="2.85" kill_decay_start_time="1.147" kill_decay_end_time="1.912"/>
-	<trail probability="1.0" key="BulletApTrail"/>
+	<trail probability="1.0" key="BulletApTrail_ct"/>
 	</projectile>
 	<effect class="muzzle" ref="muzzle_yellow"/>
 	<effect class="muzzle" ref="ejection_76251"/>
@@ -41599,7 +41599,7 @@
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="bullet.projectile" can_be_detected_by_footmen="0">
 	<result class="hit" kill_probability="2.7" kill_probability_offset_on_successful_hit="15" kill_decay_start_time="2.195" kill_decay_end_time="3.659"/>
-	<trail probability="1.0" key="BulletApTrail"/>
+	<trail probability="1.0" key="BulletApTrail_ct"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.1"/>
 	<stance state_key="walking" accuracy="0.5"/>
@@ -41651,7 +41651,7 @@
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="bullet.projectile">
 	<result class="blast" damage="1.1" radius="2.0" push="0.02" charater_state="death" faction_compare="not_equal"/>
-	<trail probability="1.0" key="BulletApTrail"/>
+	<trail probability="1.0" key="BulletApTrail_ct"/>
 	</projectile>
 	<stance state_key="running" accuracy="1.1"/>
 	<stance state_key="walking" accuracy="1.1"/>
@@ -41703,7 +41703,7 @@
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="bullet.projectile" can_be_detected_by_footmen="0">
 	<result class="hit" kill_probability="2.7" kill_probability_offset_on_successful_hit="15" kill_decay_start_time="2.195" kill_decay_end_time="3.659"/>
-	<trail probability="1.0" key="BulletApTrail"/>
+	<trail probability="1.0" key="BulletApTrail_ct"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.1"/>
 	<stance state_key="walking" accuracy="0.5"/>
@@ -41755,7 +41755,7 @@
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="bullet.projectile">
 	<result class="blast" damage="1.1" radius="2.0" push="0.02" charater_state="death" faction_compare="not_equal"/>
-	<trail probability="1.0" key="BulletApTrail"/>
+	<trail probability="1.0" key="BulletApTrail_ct"/>
 	</projectile>
 	<stance state_key="running" accuracy="1.1"/>
 	<stance state_key="walking" accuracy="1.1"/>
@@ -42004,7 +42004,7 @@
 	<weak_hand_hold offset="0.2"/>
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_decay_end_time="3.222" kill_decay_start_time="1.933" kill_probability="2.0" kill_probability_offset_on_successful_hit="2.2"/>
-	<trail key="BulletApTrail" probability="1.0"/>
+	<trail key="BulletApTrail_ct" probability="1.0"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_556"/>
 	<stance state_key="running" accuracy="0.65"/>
@@ -45345,7 +45345,7 @@
 	<hud_icon filename="sfw_nemeum.png"/>
 	<projectile file="bullet_sf.projectile">
 	<result class="blast" radius="2.0" damage="4.0" decal="1" push="0.15" character_state="death" faction_compare="not_equal"/>
-	<trail probability="1.0" key="BulletApTrail"/>
+	<trail probability="1.0" key="BulletApTrail_ct"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.8"/>
 	<stance state_key="walking" accuracy="0.8"/>
@@ -49613,7 +49613,7 @@
 	<commonness value="0.0"/>
 	<projectile file="bullet_ai.projectile">
 	<result class="blast" damage="2.0" radius="3.0" decal="1" push="0.3" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
-	<trail probability="1.0" key="BulletApTrail"/>
+	<trail probability="1.0" key="BulletApTrail_ct"/>
 	<effect class="result" key="terrain" ref="BigBurst" use_surface_color="1"/>
 	<effect class="result" key="terrain" ref="LowDust"/>
 	<effect class="result" key="terrain" ref="Shine" lighting="0"/>
@@ -51208,4 +51208,3 @@
 </weapon>
 
 </weapons>
-

@@ -5,7 +5,7 @@
     <trigger class="time" time_to_live="1.5"/>
 
     <rotation class="random" />
-	<trail probability="0.0" key="BulletApTrail" />
+	<trail probability="0.0" key="BulletApTrail_ct" />
     <model mesh_filename="kcco_grenade_1.xml" />
     <hud_icon filename="88r.png" />
 
