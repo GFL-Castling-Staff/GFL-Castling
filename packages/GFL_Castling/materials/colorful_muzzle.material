@@ -1,0 +1,63 @@
+material muzzle_skyblue {
+	receive_shadows off
+	technique {
+		pass {
+			lighting off
+			depth_write off
+			scene_blend add
+			fog_override true
+
+			texture_unit {
+				texture muzzle_skyblue.png
+			}
+		}
+	}
+}
+
+material muzzle_orange {
+	receive_shadows off
+	technique {
+		pass {
+			lighting off
+			depth_write off
+			scene_blend add
+			fog_override true
+
+			texture_unit {
+				texture muzzle_orange.png
+			}
+		}
+	}
+}
+
+material muzzle_red_light {
+	receive_shadows off
+	technique {
+		pass {
+			lighting off
+			depth_write off
+			scene_blend add
+			fog_override true
+
+			texture_unit {
+				texture muzzle_red_light.png
+			}
+		}
+	}
+}
+
+material muzzle_deepyellow {
+	receive_shadows off
+	technique {
+		pass {
+			lighting off
+			depth_write off
+			scene_blend add
+			fog_override true
+
+			texture_unit {
+				texture muzzle_deepyellow.png
+			}
+		}
+	}
+}

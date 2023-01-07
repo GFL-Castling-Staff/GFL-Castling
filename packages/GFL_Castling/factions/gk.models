@@ -756,6 +756,9 @@
     <model filename="gkd_mg_rpd.xml">
         <requirement class="weapon" key="gkw_rpd.weapon" slot="0" />
     </model>
+    <model filename="gkd_mg_rpd.xml">
+        <requirement class="weapon" slot="0" key="gkw_rpd_skill.weapon"/>
+    </model>
     <model filename="gkd_mg_rpk16.xml">
         <requirement class="weapon" key="gkw_rpk16.weapon" slot="0" />
     </model>

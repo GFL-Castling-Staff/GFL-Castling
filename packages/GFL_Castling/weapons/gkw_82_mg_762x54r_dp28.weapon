@@ -30,6 +30,7 @@
         <trail probability="1.0" key="BulletMgTrail"/>
     </projectile>
     <effect class="muzzle" ref="ejection_76251" />
+    <effect class="muzzle" ref="muzzle_skyblue"/>
     <stance state_key="running" accuracy="0.4" />
     <stance state_key="walking" accuracy="0.5" />
     <stance state_key="crouch_moving" accuracy="0.6" />

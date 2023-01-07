@@ -112,6 +112,7 @@
             <trail probability="1.0" key="BulletApTrail_ct"/>
         </projectile>
         <effect class="muzzle" ref="ejection_76251"/>
+        <effect class="muzzle" ref="muzzle_orange"/>
         <stance state_key="running" accuracy="0.65"/>
         <stance state_key="crouch_moving" accuracy="0.65"/>
         <stance state_key="prone_moving" accuracy="0.65"/>
