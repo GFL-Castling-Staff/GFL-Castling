@@ -39,6 +39,7 @@
             <trail probability="1.0" key="BulletMgTrail" />
         </projectile>
         <effect class="muzzle" ref="ejection_556"/>
+        <effect class="muzzle" ref="muzzle_skyblue"/>
         <stance state_key="running" accuracy="0.3"/>
         <stance state_key="walking" accuracy="0.35"/>
         <stance state_key="standing" accuracy="0.4"/>
@@ -113,6 +114,7 @@
             <trail probability="1.0" key="BulletMgTrail" />
         </projectile>
         <effect class="muzzle" ref="ejection_556"/>
+        <effect class="muzzle" ref="muzzle_skyblue"/>
         <stance state_key="running" accuracy="0.3"/>
         <stance state_key="walking" accuracy="0.35"/>
         <stance state_key="standing" accuracy="0.4"/>
@@ -186,6 +188,7 @@
             <trail probability="1.0" key="BulletMgTrail" />
         </projectile>
         <effect class="muzzle" ref="ejection_556"/>
+        <effect class="muzzle" ref="muzzle_skyblue"/>
         <stance state_key="running" accuracy="0.3"/>
         <stance state_key="walking" accuracy="0.35"/>
         <stance state_key="standing" accuracy="0.4"/>
@@ -259,6 +262,7 @@
             <trail probability="1.0" key="BulletMgTrail" />
         </projectile>
         <effect class="muzzle" ref="ejection_556"/>
+        <effect class="muzzle" ref="muzzle_skyblue"/>
         <stance state_key="running" accuracy="0.3"/>
         <stance state_key="walking" accuracy="0.35"/>
         <stance state_key="standing" accuracy="0.4"/>
