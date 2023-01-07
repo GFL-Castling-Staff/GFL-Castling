@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapon file="bolt_action_rifle.animation_base" key="gkw_carcano1891.weapon">
-
-
     <!--Weapon specifications-->
-    
     <specification 
 	retrigger_time="-1.0" 
 	accuracy_factor="1.0" 
@@ -20,36 +17,24 @@
 	barrel_offset="0.4" 
     stab_range="4.5"
 	projectiles_per_shot="4" />
-    <inventory  buy_price="8.0" sell_price="8.0" />
-	<!--Animations-->
-	
-
-
+    <inventory encumbrance="20.0" buy_price="8.0" sell_price="8.0" />
+    <!--Animations-->
     <animation key="cycle" animation_key="Brifle1.1" />
-	<animation key="cycle" stance_key="prone" animation_key="Brifle1.1p" />	
+    <animation key="cycle" stance_key="prone" animation_key="Brifle1.1p" />
     <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
-	
-	<!--Sounds-->
-	
+    <!--Sounds-->
     <sound key="fire" fileref="carcano1891_fire_FromBF1.wav" pitch_variety="0.05" volume="1.6" />
     <sound key="cycle" fileref="carcano_cycle_FromBF5.wav" volume="0.5"/>
-      <!-- <sound key="magazine_out" fileref="" volume="1"/> -->
+    <!-- <sound key="magazine_out" fileref="" volume="1"/> -->
     <sound key="magazine_out" fileref="carcano_mgz_out_FromBF5.wav" volume="0.6" />
     <sound key="magazine_in" fileref="carcano_mgz_in_FromBF5.wav" volume="0.6" />
     <sound key="cycle_out" fileref="carcano_cycle_out_FromBF5.wav"  volume="0.6"/>
-    <sound key="cycle_in" fileref="carcano_cycle_in_FromBF5.wav"  volume="0.6"/> 
+    <sound key="cycle_in" fileref="carcano_cycle_in_FromBF5.wav"  volume="0.6"/>
     <sound class="impact" fileref="rifle_drop.wav" volume="1"/>
-   
-	<!--Model, Icon, Cost-->
-   
+    <!--Model, Icon, Cost-->
     <model filename="gkw_rf_carcano1891.xml" />
     <hud_icon filename="gkw_carcano1891.png" />
-
-
-	
-	<!--Ballistics-->
-	
-    
+    <!--Ballistics-->
     <weak_hand_hold offset="0.3" />
     <projectile file="bullet.projectile">
         <result class="hit" 
@@ -58,11 +43,9 @@
         kill_decay_start_time="1.448" 
         kill_decay_end_time="2.414" />
     </projectile>
-    
     <!--Accuracy, Movement speed-->
-    
-	<stance state_key="running" accuracy="1.2" />
-	<stance state_key="walking" accuracy="1.2" />
+    <stance state_key="running" accuracy="1.2" />
+    <stance state_key="walking" accuracy="1.2" />
     <stance state_key="crouch_moving" accuracy="1.2" />
     <stance state_key="prone_moving" accuracy="1.2" />
     <stance state_key="standing" accuracy="1.2" />

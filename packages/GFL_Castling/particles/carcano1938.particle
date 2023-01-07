@@ -1,0 +1,269 @@
+
+material alpha_blend_base{
+	receive_shadows off
+	technique{
+		pass{
+			lighting off
+			fog_override true
+			depth_write off
+			scene_blend alpha_blend
+		}
+	}
+}
+
+material add_base{
+	receive_shadows off
+	technique{
+		pass{
+			lighting off
+			fog_override true
+			depth_write off
+			scene_blend add
+		}
+	}
+}
+
+material maschera : alpha_blend_base
+{
+    technique
+    {
+        pass
+        {
+            depth_write on
+            depth_check on
+            depth_func always_pass
+            texture_unit
+            {
+                texture maschera.png
+            }
+        }
+    }
+}
+
+material tuan_7_23_add : add_base
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture tuan_7_23_add.png
+            }
+        }
+    }
+}
+
+material quan_7_17 : add_base
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture quan_7_17.png
+            }
+        }
+    }
+}
+
+particle_system carcano_charge01 //文字 
+{
+	quota 10
+	material maschera
+	particle_width 2.7
+	particle_height 0.54
+	renderer billboard
+	billboard_rotation_type vertex
+	billboard_type point
+	emitter Point
+	{
+		angle 0
+		colour 0.64 0.378 0.578 1
+		direction 0 1 0
+		emission_rate 10
+		position 0 1 0
+		velocity 0.0001
+		time_to_live 1.0
+		duration 0.1
+	}
+
+	affector ColourInterpolator
+	{
+		colour0	0.64 0.378 0.578 0
+		time0	0.1
+		colour1	0.64 0.378 0.578 1
+		time1	0.3
+		colour2	0.64 0.378 0.578 1
+		time2	0.8
+		colour3	0.64 0.378 0.578 0.3
+		time3	1
+	}
+}
+
+particle_system carcano_charge02 
+{
+	quota 10
+	material quan_7_17
+	particle_width 2.2
+	particle_height 2.2
+	renderer billboard
+	billboard_rotation_type vertex
+	billboard_type point
+	emitter Point   
+	{
+		angle 0
+		colour 0.902 0.242 0.539 1
+		direction 0 1 0
+		emission_rate 10
+		position 0 1 0
+		velocity 0.0001
+		time_to_live 1.0
+		duration 0.1
+	}
+
+	affector ColourFader
+	{
+		red	0
+		green	0
+		blue	0
+		alpha	-0.5
+	}
+
+	affector Rotator
+	{
+		rotation_speed_range_start	180
+		rotation_speed_range_end	180
+		rotation_range_start 0
+		rotation_range_end	360
+	}
+
+    affector Scaler 
+    {
+        rate 0.3
+    }
+}
+
+particle_system carcano_charge03
+{
+	quota 10
+	material tuan_7_23_add
+	particle_width 2
+	particle_height 2
+	renderer billboard
+	billboard_rotation_type vertex
+	billboard_type oriented_common
+	common_direction 0 1 0
+	common_up_vector 0 0 1
+	emitter Point
+	{
+		angle 0
+		colour 0.64 0.378 0.578 1
+		direction 0 1 0
+		emission_rate 10
+		position 0 1 0
+		velocity 0.0001
+		time_to_live 1.0
+		duration 0.1
+	}
+
+	affector ColourInterpolator
+	{
+		colour0	0.64 0.378 0.578 0.3
+		time0	0.1
+		colour1	0.64 0.378 0.578 1
+		time1	0.3
+		colour2	0.64 0.378 0.578 1
+		time2	0.8
+		colour3	0.64 0.378 0.578 0.3
+		time3	1
+	}
+}
+
+particle_system carcano_charge04 //圈
+{
+	quota 10
+	material quan_xulie_1000ms
+	particle_width 1.3
+	particle_height 1.3
+	renderer billboard
+	billboard_type point
+	emitter Point
+	{
+		angle 0
+		colour 0.64 0.378 0.578 0.5
+		direction 0 1 0
+		emission_rate 10
+		position 0 1 0
+		velocity 0.0001
+		time_to_live 1.0
+		duration 0.1
+	}
+
+	affector ColourFader
+	{
+		red	-0.5
+		green	-0.5
+		blue	-0.5
+		alpha	-0.5
+	}
+}
+
+particle_system carcano_charge05
+{
+	quota 50
+	material xulie_xiantiao_1000ms
+	particle_width 1.5
+	particle_height 1.5
+	renderer billboard
+	billboard_type point
+	emitter Box
+	{
+		angle 0
+		colour 0.64 0.378 0.578 1
+		direction 0 1 0
+		emission_rate 30
+		position 0 1 0
+		velocity 0.0001
+		time_to_live 1.2
+		duration 0.1
+        width	0.8
+		height	0.3
+		depth	0.1
+	}
+}
+
+particle_system carcano_charge06 
+{
+	quota 10
+	material cross_light_red
+	particle_width 2.0
+	particle_height 2.0
+	renderer billboard
+	billboard_type point
+	emitter Point   
+	{
+		angle 0
+		colour 0.3 1 1 1
+		direction 0 1 0
+		emission_rate 10
+		position 0 1 0
+		velocity 0.0001
+		time_to_live 1.0
+		duration 0.1
+	}
+
+	affector ColourFader2
+	{
+		red1 	0
+		green1 	0
+		bule1 	0
+		alpha1 	0
+		red2 	-3
+		green2	-3
+		blue2	-3
+		alpha2	-3
+		state_change 0.33
+	}
+}

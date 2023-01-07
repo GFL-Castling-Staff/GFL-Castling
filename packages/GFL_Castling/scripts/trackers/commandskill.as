@@ -3527,7 +3527,7 @@ class CommandSkill : Tracker {
                             TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
                             tasker.add(DelayAntiPersonSnipeRequest(m_metagame,2.5,characterId,factionid,"snipe_hit_kennedy.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
                             sendFactionMessageKeySaidAsCharacter(m_metagame,0,characterId,"carcano_1938_skill_fire");
-                            addCoolDown("sniper",30,characterId,modifer);
+                            addCoolDown("sniper",10,characterId,modifer);
                             array<string> Voice={
                             "Carcano1938_SKILL1_JP.wav",
                             "Carcano1938_SKILL2_JP.wav",

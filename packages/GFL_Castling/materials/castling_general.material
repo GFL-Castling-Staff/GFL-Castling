@@ -1,4 +1,26 @@
+material alpha_blend_base{
+	receive_shadows off
+	technique{
+		pass{
+			lighting off
+			fog_override true
+			depth_write off
+			scene_blend alpha_blend
+		}
+	}
+}
 
+material add_base{
+	receive_shadows off
+	technique{
+		pass{
+			lighting off
+			fog_override true
+			depth_write off
+			scene_blend add
+		}
+	}
+}
 
 material common_shine
 {
@@ -120,6 +142,56 @@ material common_burnout
             {
                 texture ct_burnout.png
 				tex_address_mode clamp
+            }
+        }
+    }
+}
+
+
+//十字光中心红晕
+
+material cross_light_red : add_base
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture cross_light_red.png
+            }
+        }
+    }
+}
+
+//通用圈序列
+
+material quan_xulie_1000ms : add_base
+{   
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                anim_texture quan_xulie.png 16 1
+            }
+        }
+    }
+}
+
+//通用线条序列 转90
+
+material xulie_xiantiao_1000ms : add_base
+{   
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                anim_texture xulie_xiantiao.png 9 1
+				rotate 90
             }
         }
     }

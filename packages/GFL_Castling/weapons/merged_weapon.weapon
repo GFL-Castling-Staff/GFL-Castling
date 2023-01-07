@@ -5084,10 +5084,10 @@
 </weapon>
 
 <weapon key="gkw_rpd.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.5" retrigger_time="0.0923" accuracy_factor="1.0" sustained_fire_grow_step="0.4" sustained_fire_diminish_rate="1.7" magazine_size="100" suppressed="0" name="RPD" class="0" projectile_speed="210" sight_range_modifier="1.3" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" slot="0"/>
+	<specification barrel_offset="0.5" retrigger_time="0.0923" accuracy_factor="0.85" sustained_fire_grow_step="0.65" sustained_fire_diminish_rate="1.5" spread_range="0.25" stance_accuracy_rate="1.0" magazine_size="100" suppressed="0" name="RPD" class="0" projectile_speed="185" sight_range_modifier="1.3" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" slot="0"/>
 	<animation state_key="hold_casual" animation_key="dancing, kazachok"/>
 	<animation key="reload" animation_key="reloading, Machine gun 1.6"/>
-	<inventory buy_price="16.0" sell_price="16.0"/>
+	<inventory encumbrance="30.0" buy_price="44.0" sell_price="44.0"/>
 	<next_in_chain key="gkw_rpd_skill.weapon" share_ammo="1"/>
 	<sound key="fire" fileref="rpd_fire_FromRS2V.wav" pitch_variety="0.02" volume="1.1"/>
 	<sound key="magazine_out" fileref="rpd_mgz_out_FromCOD17.wav" volume="0.45"/>
@@ -5097,20 +5097,21 @@
 	<model filename="gkw_mg_rpd.xml"/>
 	<hud_icon filename="gkw_rpd.png"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="1.9" kill_probability_offset_on_successful_hit="1.75" kill_decay_start_time="1.959" kill_decay_end_time="3.266"/>
+	<result class="hit" kill_probability="2.0" kill_probability_offset_on_successful_hit="1.75" kill_decay_start_time="1.959" kill_decay_end_time="3.266"/>
+	<trail probability="1.0" key="bullet_new_deep"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_76251"/>
-	<stance state_key="running" accuracy="0.5"/>
-	<stance state_key="walking" accuracy="0.6"/>
-	<stance state_key="crouch_moving" accuracy="0.8"/>
-	<stance state_key="prone_moving" accuracy="0.8"/>
+	<stance state_key="running" accuracy="0.7"/>
+	<stance state_key="walking" accuracy="0.75"/>
+	<stance state_key="crouch_moving" accuracy="0.6"/>
+	<stance state_key="prone_moving" accuracy="0.6"/>
 	<stance state_key="standing" accuracy="0.75"/>
-	<stance state_key="crouching" accuracy="0.85"/>
+	<stance state_key="crouching" accuracy="0.9"/>
 	<stance state_key="prone" accuracy="1.0"/>
 	<stance state_key="over_wall" accuracy="1.0"/>
 	<tag name="machine gun"/>
+	<modifier class="speed" value="0.1"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
-	<inventory encumbrance="30.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
 	<target_factors tag="smg" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
@@ -5136,10 +5137,10 @@
 </weapon>
 
 <weapon key="gkw_rpd_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.5" retrigger_time="0.0923" accuracy_factor="0.99" sustained_fire_grow_step="0.1" sustained_fire_diminish_rate="1.7" magazine_size="100" suppressed="0" name="RPD-[Damage Focus MG]" class="0" projectile_speed="210" sight_range_modifier="1.5" can_shoot_crouching="0" can_shoot_prone="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_standing="0" slot="0"/>
+	<specification barrel_offset="0.5" retrigger_time="0.0923" accuracy_factor="1.0" sustained_fire_grow_step="0.65" sustained_fire_diminish_rate="3.0" spread_range="0.2" magazine_size="100" suppressed="0" name="RPD-[Damage Focus MG]" class="0" projectile_speed="200" sight_range_modifier="1.5" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
 	<animation state_key="hold_casual" animation_key="dancing, kazachok"/>
-	<animation key="reload" animation_key="reloading, Machine gun 1.6"/>
-	<inventory buy_price="16.0" sell_price="16.0"/>
+	<animation key="reload" animation_key="reloading, Machine gun 1.2"/>
+	<inventory encumbrance="30.0" buy_price="44.0" sell_price="44.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<next_in_chain key="gkw_rpd.weapon" share_ammo="1"/>
 	<sound key="fire" fileref="rpdskill_Fire_FromCOD17.wav" pitch_variety="0.02" volume="1.1"/>
@@ -5150,17 +5151,20 @@
 	<model filename="gkw_mg_rpd.xml"/>
 	<hud_icon filename="gkw_rpd_skill.png"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="2.25" kill_probability_offset_on_successful_hit="2.5" kill_decay_start_time="1.959" kill_decay_end_time="3.266"/>
+	<result class="hit" kill_probability="2.44" kill_probability_offset_on_successful_hit="2.44" kill_decay_start_time="1.959" kill_decay_end_time="3.266"/>
+	<trail probability="1.0" key="BulletApTrail_ct"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_76251"/>
-	<stance state_key="running" accuracy="1.6"/>
-	<stance state_key="crouch_moving" accuracy="1.6"/>
-	<stance state_key="prone_moving" accuracy="1.6"/>
-	<stance state_key="standing" accuracy="1.6"/>
-	<stance state_key="crouching" accuracy="1.8"/>
-	<stance state_key="prone" accuracy="1.8"/>
-	<stance state_key="over_wall" accuracy="1.8"/>
-	<modifier class="speed" value="-0.25"/>
+	<effect class="muzzle" ref="muzzle_red_light"/>
+	<stance state_key="running" accuracy="0.7"/>
+	<stance state_key="walking" accuracy="0.75"/>
+	<stance state_key="crouch_moving" accuracy="0.6"/>
+	<stance state_key="prone_moving" accuracy="0.6"/>
+	<stance state_key="standing" accuracy="0.75"/>
+	<stance state_key="crouching" accuracy="0.9"/>
+	<stance state_key="prone" accuracy="1.0"/>
+	<stance state_key="over_wall" accuracy="1.0"/>
+	<modifier class="speed" value="-0.45"/>
 	<tag name="machine gun"/>
 	<inventory encumbrance="30.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -5188,9 +5192,9 @@
 </weapon>
 
 <weapon key="gkw_mg42.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.5" retrigger_time="0.046" accuracy_factor="0.5" stance_accuracy_rate="0.75" sustained_fire_grow_step="0.8" sustained_fire_diminish_rate="4.0" magazine_size="50" suppressed="0" name="MG42" class="0" projectile_speed="180" sight_range_modifier="1.3" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" slot="0"/>
+	<specification barrel_offset="0.5" retrigger_time="0.046" accuracy_factor="0.85" stance_accuracy_rate="0.75" sustained_fire_grow_step="0.8" sustained_fire_diminish_rate="4.0" spread_range="0.3" magazine_size="50" suppressed="0" name="MG42" class="0" projectile_speed="180" sight_range_modifier="1.3" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" slot="0"/>
 	<animation key="reload" animation_key="reloading, Machine gun 1.6"/>
-	<inventory buy_price="42.0" sell_price="42.0"/>
+	<inventory encumbrance="30.0" buy_price="42.0" sell_price="42.0"/>
 	<next_in_chain key="gkw_mg42_skill.weapon" share_ammo="0"/>
 	<sound key="fire" fileref="mg42_fire_FromHELLLETLOOSE.wav" pitch_variety="0.05" volume="1.3"/>
 	<sound key="magazine_out" fileref="mg42_mgz_out_FromHELLLETLOOSE.wav" volume="1"/>
@@ -5200,18 +5204,18 @@
 	<model filename="gkw_mg_mg42.xml"/>
 	<hud_icon filename="gkw_mg42.png"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="2.0" kill_probability_offset_on_successful_hit="0.5" kill_decay_start_time="2.432" kill_decay_end_time="4.054"/>
+	<result class="hit" kill_probability="2.3" kill_probability_offset_on_successful_hit="0.5" kill_decay_start_time="2.432" kill_decay_end_time="4.054"/>
+	<trail probability="1.0" key="bullet_new_deep"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_76251"/>
 	<stance state_key="running" accuracy="0.4"/>
 	<stance state_key="walking" accuracy="0.6"/>
 	<stance state_key="crouch_moving" accuracy="1"/>
-	<stance state_key="prone_moving" accuracy="1.2"/>
+	<stance state_key="prone_moving" accuracy="1.0"/>
 	<stance state_key="standing" accuracy="0.8"/>
-	<stance state_key="crouching" accuracy="1.6"/>
-	<stance state_key="prone" accuracy="2.0"/>
-	<stance state_key="over_wall" accuracy="2.0"/>
-	<modifier class="speed" value="-0.1"/>
+	<stance state_key="crouching" accuracy="1.0"/>
+	<stance state_key="prone" accuracy="1.3"/>
+	<stance state_key="over_wall" accuracy="1.3"/>
 	<tag name="machine gun"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="30.0" buy_price="1.0" sell_price="0.0"/>
@@ -5240,9 +5244,9 @@
 </weapon>
 
 <weapon key="gkw_mg42_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.5" retrigger_time="0.046" accuracy_factor="0.95" sustained_fire_grow_step="1.2" sustained_fire_diminish_rate="27" magazine_size="250" suppressed="0" projectiles_per_shot="3" name="MG42-[Damage Focus MG]" class="0" projectile_speed="180" sight_range_modifier="1.3" can_shoot_standing="0" can_shoot_crouching="0" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_prone="1" slot="0"/>
+	<specification barrel_offset="0.5" retrigger_time="0.046" accuracy_factor="0.95" sustained_fire_grow_step="1.2" sustained_fire_diminish_rate="27" magazine_size="250" suppressed="0" projectiles_per_shot="3" name="MG42-[Damage Focus MG]" class="0" projectile_speed="180" sight_range_modifier="1.5" can_shoot_standing="0" can_shoot_crouching="0" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_prone="1" slot="0"/>
 	<animation key="reload" animation_key="reloading, Machine gun 4"/>
-	<inventory buy_price="42.0" sell_price="42.0"/>
+	<inventory encumbrance="30.0" buy_price="42.0" sell_price="42.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<next_in_chain key="gkw_mg42.weapon" share_ammo="0"/>
 	<sound key="fire" fileref="mg42skill_fire_FromFC5.wav" pitch_variety="0.05" volume="1.2"/>
@@ -5255,6 +5259,7 @@
 	<effect class="muzzle" ref="muzzle_yellow"/>
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="2.4" kill_decay_start_time="2.432" kill_decay_end_time="4.054"/>
+	<trail probability="1.0" key="BulletMgTrail"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_76251"/>
 	<stance state_key="running" accuracy="1"/>
@@ -5293,9 +5298,9 @@
 </weapon>
 
 <weapon key="gkw_mg42_7606.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.5" retrigger_time="0.046" accuracy_factor="0.5" stance_accuracy_rate="0.75" sustained_fire_grow_step="0.8" sustained_fire_diminish_rate="4.0" magazine_size="50" suppressed="0" name="MG42-[Witch in Apprenticeship]" class="0" projectile_speed="180" sight_range_modifier="1.3" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" slot="0"/>
+	<specification barrel_offset="0.5" retrigger_time="0.046" accuracy_factor="0.85" stance_accuracy_rate="0.75" sustained_fire_grow_step="0.8" sustained_fire_diminish_rate="4.0" spread_range="0.3" magazine_size="50" suppressed="0" name="MG42-[Witch in Apprenticeship]" class="0" projectile_speed="180" sight_range_modifier="1.3" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" slot="0"/>
 	<animation key="reload" animation_key="reloading, Machine gun 1.6"/>
-	<inventory buy_price="42.0" sell_price="42.0"/>
+	<inventory encumbrance="30.0" buy_price="42.0" sell_price="42.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<next_in_chain key="gkw_mg42_7606_skill.weapon" share_ammo="0"/>
 	<sound key="fire" fileref="mg42_fire_FromHELLLETLOOSE.wav" pitch_variety="0.05" volume="1.3"/>
@@ -5306,20 +5311,19 @@
 	<model filename="gkw_mg_mg42.xml"/>
 	<hud_icon filename="gkw_mg42_7606.png"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="2.0" kill_probability_offset_on_successful_hit="0.5" kill_decay_start_time="2.432" kill_decay_end_time="4.054"/>
+	<result class="hit" kill_probability="2.3" kill_probability_offset_on_successful_hit="0.5" kill_decay_start_time="2.432" kill_decay_end_time="4.054"/>
+	<trail probability="1.0" key="bullet_new_deep"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_76251"/>
 	<stance state_key="running" accuracy="0.4"/>
 	<stance state_key="walking" accuracy="0.6"/>
 	<stance state_key="crouch_moving" accuracy="1"/>
-	<stance state_key="prone_moving" accuracy="1.2"/>
+	<stance state_key="prone_moving" accuracy="1.0"/>
 	<stance state_key="standing" accuracy="0.8"/>
-	<stance state_key="crouching" accuracy="1.6"/>
-	<stance state_key="prone" accuracy="2.0"/>
-	<stance state_key="over_wall" accuracy="2.0"/>
-	<modifier class="speed" value="-0.1"/>
+	<stance state_key="crouching" accuracy="1.0"/>
+	<stance state_key="prone" accuracy="1.3"/>
+	<stance state_key="over_wall" accuracy="1.3"/>
 	<tag name="machine gun"/>
-	<inventory encumbrance="30.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
 	<target_factors tag="smg" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
@@ -5345,9 +5349,9 @@
 </weapon>
 
 <weapon key="gkw_mg42_7606_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.5" retrigger_time="0.046" accuracy_factor="0.95" sustained_fire_grow_step="1.2" sustained_fire_diminish_rate="27" magazine_size="250" suppressed="0" projectiles_per_shot="3" name="MG42-[Witch in Apprenticeship]-[Damage Focus MG]" class="0" projectile_speed="180" sight_range_modifier="1.3" can_shoot_standing="0" can_shoot_crouching="0" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_prone="1" slot="0"/>
+	<specification barrel_offset="0.5" retrigger_time="0.046" accuracy_factor="0.95" sustained_fire_grow_step="1.2" sustained_fire_diminish_rate="27" magazine_size="250" suppressed="0" projectiles_per_shot="3" name="MG42-[Witch in Apprenticeship]-[Damage Focus MG]" class="0" projectile_speed="180" sight_range_modifier="1.5" can_shoot_standing="0" can_shoot_crouching="0" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_prone="1" slot="0"/>
 	<animation key="reload" animation_key="reloading, Machine gun 4"/>
-	<inventory buy_price="42.0" sell_price="42.0"/>
+	<inventory encumbrance="30.0" buy_price="42.0" sell_price="42.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<next_in_chain key="gkw_mg42_7606.weapon" share_ammo="0"/>
 	<sound key="fire" fileref="mg42skill_fire_FromFC5.wav" pitch_variety="0.05" volume="1.2"/>
@@ -5360,6 +5364,7 @@
 	<effect class="muzzle" ref="muzzle_yellow"/>
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="2.4" kill_decay_start_time="2.432" kill_decay_end_time="4.054"/>
+	<trail probability="1.0" key="BulletMgTrail"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_76251"/>
 	<stance state_key="running" accuracy="1"/>
@@ -5372,7 +5377,6 @@
 	<stance state_key="over_wall" accuracy="1.9"/>
 	<modifier class="speed" value="-0.42"/>
 	<tag name="machine gun"/>
-	<inventory encumbrance="30.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
 	<target_factors tag="smg" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
@@ -5398,9 +5402,9 @@
 </weapon>
 
 <weapon key="gkw_mg34.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.5" retrigger_time="0.075" accuracy_factor="0.9" sustained_fire_grow_step="0.5" sustained_fire_diminish_rate="1.8" magazine_size="75" suppressed="0" name="MG34" class="0" projectile_speed="215" sight_range_modifier="1.3" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" slot="0"/>
+	<specification barrel_offset="0.5" retrigger_time="0.075" accuracy_factor="0.9" sustained_fire_grow_step="0.6" sustained_fire_diminish_rate="2.4" spread_range="0.3" magazine_size="75" suppressed="0" name="MG34" class="0" projectile_speed="215" sight_range_modifier="1.3" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" slot="0"/>
 	<animation key="reload" animation_key="reloading, Machine gun 1.6"/>
-	<inventory buy_price="16.0" sell_price="16.0"/>
+	<inventory encumbrance="30.0" buy_price="34.0" sell_price="34.0"/>
 	<next_in_chain key="gkw_mg34_skill.weapon" share_ammo="1"/>
 	<commonness value="0.2" in_stock="1" can_respawn_with="1"/>
 	<sound key="fire" fileref="mg34_fire_FromBF5.wav" pitch_variety="0.05" volume="1"/>
@@ -5414,14 +5418,14 @@
 	<result class="hit" kill_probability="2.05" kill_probability_offset_on_successful_hit="1.0" kill_decay_start_time="2.432" kill_decay_end_time="4.054"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_76251"/>
-	<stance state_key="running" accuracy="0.1"/>
-	<stance state_key="walking" accuracy="0.1"/>
+	<stance state_key="running" accuracy="0.3"/>
+	<stance state_key="walking" accuracy="0.3"/>
 	<stance state_key="crouch_moving" accuracy="1"/>
 	<stance state_key="prone_moving" accuracy="1.2"/>
 	<stance state_key="standing" accuracy="0.7"/>
-	<stance state_key="crouching" accuracy="1.7"/>
-	<stance state_key="prone" accuracy="1.95"/>
-	<stance state_key="over_wall" accuracy="1.95"/>
+	<stance state_key="crouching" accuracy="0.9"/>
+	<stance state_key="prone" accuracy="1.0"/>
+	<stance state_key="over_wall" accuracy="1.0"/>
 	<modifier class="speed" value="0.1"/>
 	<tag name="machine gun"/>
 	<inventory encumbrance="30.0" buy_price="1.0" sell_price="0.0"/>
@@ -5450,9 +5454,9 @@
 </weapon>
 
 <weapon key="gkw_mg34_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.5" retrigger_time="0.075" accuracy_factor="0.98" sustained_fire_grow_step="0.2" sustained_fire_diminish_rate="1.8" magazine_size="75" suppressed="0" name="MG34-[Damage Focus MG]" class="0" projectile_speed="215" sight_range_modifier="1.3" can_shoot_crouching="1" can_shoot_prone="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_standing="0" slot="0"/>
+	<specification barrel_offset="0.5" retrigger_time="0.075" accuracy_factor="0.98" sustained_fire_grow_step="0.6" sustained_fire_diminish_rate="5.4" magazine_size="75" suppressed="0" name="MG34-[Damage Focus MG]" class="0" projectile_speed="215" sight_range_modifier="1.3" can_shoot_crouching="1" can_shoot_prone="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_standing="0" slot="0"/>
 	<animation key="reload" animation_key="reloading, Machine gun 1.6"/>
-	<inventory buy_price="16.0" sell_price="16.0"/>
+	<inventory encumbrance="30.0" buy_price="34.0" sell_price="34.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<next_in_chain key="gkw_mg34.weapon" share_ammo="1"/>
 	<sound key="fire" fileref="mg34skill_fire_FromCOD16.wav" pitch_variety="0.05" volume="0.8"/>
@@ -8863,6 +8867,7 @@
 	<trail probability="1.0" key="BulletMgTrail"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_76251"/>
+	<effect class="muzzle" ref="muzzle_skyblue"/>
 	<stance state_key="running" accuracy="0.4"/>
 	<stance state_key="walking" accuracy="0.5"/>
 	<stance state_key="crouch_moving" accuracy="0.6"/>
@@ -9358,6 +9363,7 @@
 	<trail probability="1.0" key="BulletMgTrail"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_556"/>
+	<effect class="muzzle" ref="muzzle_skyblue"/>
 	<stance state_key="running" accuracy="0.3"/>
 	<stance state_key="walking" accuracy="0.35"/>
 	<stance state_key="standing" accuracy="0.4"/>
@@ -9414,6 +9420,7 @@
 	<trail probability="1.0" key="BulletMgTrail"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_556"/>
+	<effect class="muzzle" ref="muzzle_skyblue"/>
 	<stance state_key="running" accuracy="0.3"/>
 	<stance state_key="walking" accuracy="0.35"/>
 	<stance state_key="standing" accuracy="0.4"/>
@@ -9469,6 +9476,7 @@
 	<trail probability="1.0" key="BulletMgTrail"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_556"/>
+	<effect class="muzzle" ref="muzzle_skyblue"/>
 	<stance state_key="running" accuracy="0.3"/>
 	<stance state_key="walking" accuracy="0.35"/>
 	<stance state_key="standing" accuracy="0.4"/>
@@ -9524,6 +9532,7 @@
 	<trail probability="1.0" key="BulletMgTrail"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_556"/>
+	<effect class="muzzle" ref="muzzle_skyblue"/>
 	<stance state_key="running" accuracy="0.3"/>
 	<stance state_key="walking" accuracy="0.35"/>
 	<stance state_key="standing" accuracy="0.4"/>
@@ -9605,7 +9614,7 @@
 
 <weapon key="gkw_carcano1891.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="0" sustained_fire_diminish_rate="0.8" magazine_size="6" can_shoot_standing="1" suppressed="0" name="Carcano M1891" class="2" reload_one_at_a_time="0" sight_range_modifier="2.8" projectile_speed="210.64" barrel_offset="0.4" stab_range="4.5" projectiles_per_shot="4" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
-	<inventory buy_price="8.0" sell_price="8.0"/>
+	<inventory encumbrance="20.0" buy_price="8.0" sell_price="8.0"/>
 	<animation key="cycle" animation_key="Brifle1.1"/>
 	<animation key="cycle" stance_key="prone" animation_key="Brifle1.1p"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
@@ -9670,7 +9679,7 @@
 	<hud_icon filename="gkw_carcano1938.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="2.5" kill_probability_offset_on_successful_hit="8" kill_decay_start_time="1.448" kill_decay_end_time="2.414"/>
+	<result class="hit" kill_probability="4.6" kill_probability_offset_on_successful_hit="10" kill_decay_start_time="1.448" kill_decay_end_time="2.414"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.3"/>
 	<stance state_key="walking" accuracy="0.65"/>
@@ -13382,6 +13391,7 @@
 	<trail probability="1.0" key="BulletApTrail_ct"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_76251"/>
+	<effect class="muzzle" ref="muzzle_orange"/>
 	<stance state_key="running" accuracy="0.65"/>
 	<stance state_key="crouch_moving" accuracy="0.65"/>
 	<stance state_key="prone_moving" accuracy="0.65"/>
@@ -16272,10 +16282,10 @@
 </weapon>
 
 <weapon key="gkw_pk.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.5" retrigger_time="0.0923" accuracy_factor="0.98" sustained_fire_grow_step="0.8" sustained_fire_diminish_rate="1.0" magazine_size="100" suppressed="0" stance_accuracy_rate="0.5" name="PK" class="0" projectile_speed="206" sight_range_modifier="1.3" slot="0" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" carry_in_two_hands="1" stab_enabled="1"/>
+	<specification barrel_offset="0.5" retrigger_time="0.0923" accuracy_factor="0.98" sustained_fire_grow_step="0.8" sustained_fire_diminish_rate="1.0" spread_range="0.3" magazine_size="100" suppressed="0" stance_accuracy_rate="1.0" name="PK" class="0" projectile_speed="200" sight_range_modifier="1.3" slot="0" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" carry_in_two_hands="1" stab_enabled="1"/>
 	<animation state_key="hold_casual" animation_key="dancing, kazachok"/>
-	<animation key="reload" animation_key="reloading, Machine gun 2.0"/>
-	<inventory buy_price="45.0" sell_price="45.0"/>
+	<animation key="reload" animation_key="reloading, Machine gun 1.6"/>
+	<inventory encumbrance="30.0" buy_price="45.0" sell_price="45.0"/>
 	<next_in_chain key="gkw_pk_skill.weapon" share_ammo="0"/>
 	<sound key="fire" fileref="qjy80_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.1"/>
 	<sound key="magazine_out" fileref="qjy80_mgz_out_FromCOD16.wav" volume="0.6"/>
@@ -16286,7 +16296,8 @@
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<hud_icon filename="gkw_pk.png"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="2.0" kill_probability_offset_on_successful_hit="1.0" kill_decay_start_time="1.5" kill_decay_end_time="1.6"/>
+	<result class="hit" kill_probability="2.3" kill_probability_offset_on_successful_hit="1.2" kill_decay_start_time="1.5" kill_decay_end_time="1.6"/>
+	<trail probability="1.0" key="bullet_new_deep"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_76251"/>
 	<stance state_key="running" accuracy="0.5"/>
@@ -16297,7 +16308,6 @@
 	<stance state_key="prone" accuracy="1.2"/>
 	<stance state_key="prone_moving" accuracy="0.5"/>
 	<stance state_key="over_wall" accuracy="1.2"/>
-	<modifier class="speed" value="-0.1"/>
 	<tag name="machine gun"/>
 	<inventory encumbrance="20.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -16329,7 +16339,7 @@
 
 <weapon key="gkw_pk_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="machine gun"/>
-	<specification barrel_offset_3d="0 0.1 1.2" retrigger_time="0.0923" accuracy_factor="0.98" sustained_fire_grow_step="0" sustained_fire_diminish_rate="1.0" magazine_size="250" stance_accuracy_rate="0.5" suppressed="0" name="PK-[Terminating Barrage]" class="0" projectile_speed="220" sight_range_modifier="1.5" slot="0" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="0" carry_in_two_hands="0" stab_enabled="0"/>
+	<specification barrel_offset_3d="0 0.1 1.2" retrigger_time="0.0923" accuracy_factor="0.98" spread_range="0.2" sustained_fire_grow_step="0.8" sustained_fire_diminish_rate="1.0" magazine_size="250" stance_accuracy_rate="1.0" suppressed="0" name="PK-[Terminating Barrage]" class="0" projectile_speed="190" sight_range_modifier="1.75" slot="0" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="0" carry_in_two_hands="0" stab_enabled="0"/>
 	<animation state_key="hold_casual" animation_key="crouch, pistol dual"/>
 	<animation state_key="recoil" animation_key="recoil, pistol dual 1"/>
 	<animation key="recoil" stance_key="over_wall" animation_key="recoil, pistol dual 1"/>
@@ -16345,7 +16355,7 @@
 	<animation state_key="prone, moving forwards" animation_key="crouch, pistol dual"/>
 	<animation state_key="stabbing" animation_key="crouch, pistol dual"/>
 	<animation key="reload" animation_key="reloadingPK"/>
-	<inventory buy_price="45.0" sell_price="45.0"/>
+	<inventory encumbrance="50.0" buy_price="45.0" sell_price="45.0"/>
 	<next_in_chain key="gkw_pk.weapon" share_ammo="0"/>
 	<sound key="fire" fileref="qjy80_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.1"/>
 	<sound key="magazine_out" fileref="qjy80_mgz_out_FromCOD16.wav" volume="0.6"/>
@@ -16357,17 +16367,18 @@
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<hud_icon filename="gkw_pk_skill.png"/>
 	<projectile file="bullet_he.projectile">
-	<result class="blast" damage="2.0" radius="2.5" decal="1" push="0.2" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+	<result class="blast" damage="2.1" radius="2.5" decal="1" push="0.2" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	<trail probability="1.0" key="BulletApTrail_ct"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_76251"/>
+	<effect class="muzzle" ref="muzzle_red_light"/>
 	<shield offset="-0.60 0.0 -0.2" extent="0.8 1.5 2.4" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
-	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
-	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
-	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
 	<stance state_key="running" accuracy="1.0"/>
 	<stance state_key="walking" accuracy="1.0"/>
 	<stance state_key="crouch_moving" accuracy="1.0"/>
@@ -25507,6 +25518,7 @@
 	<trail probability="1.0" key="BulletApTrail_ct"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_76251"/>
+	<effect class="muzzle" ref="muzzle_orange"/>
 	<stance state_key="running" accuracy="0.65"/>
 	<stance state_key="crouch_moving" accuracy="0.65"/>
 	<stance state_key="prone_moving" accuracy="0.65"/>
@@ -29376,6 +29388,7 @@
 	<trail probability="1.0" key="BulletMgTrail"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_556"/>
+	<effect class="muzzle" ref="muzzle_skyblue"/>
 	<stance state_key="running" accuracy="0.3"/>
 	<stance state_key="walking" accuracy="0.35"/>
 	<stance state_key="standing" accuracy="0.4"/>
@@ -29432,6 +29445,7 @@
 	<trail probability="1.0" key="BulletMgTrail"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_556"/>
+	<effect class="muzzle" ref="muzzle_skyblue"/>
 	<stance state_key="running" accuracy="0.3"/>
 	<stance state_key="walking" accuracy="0.35"/>
 	<stance state_key="standing" accuracy="0.4"/>
@@ -29487,6 +29501,7 @@
 	<trail probability="1.0" key="BulletMgTrail"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_556"/>
+	<effect class="muzzle" ref="muzzle_skyblue"/>
 	<stance state_key="running" accuracy="0.3"/>
 	<stance state_key="walking" accuracy="0.35"/>
 	<stance state_key="standing" accuracy="0.4"/>
@@ -29542,6 +29557,7 @@
 	<trail probability="1.0" key="BulletMgTrail"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_556"/>
+	<effect class="muzzle" ref="muzzle_skyblue"/>
 	<stance state_key="running" accuracy="0.3"/>
 	<stance state_key="walking" accuracy="0.35"/>
 	<stance state_key="standing" accuracy="0.4"/>
@@ -29594,6 +29610,7 @@
 	<trail probability="1.0" key="BulletMgTrail"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_556"/>
+	<effect class="muzzle" ref="muzzle_skyblue"/>
 	<stance state_key="running" accuracy="0.3"/>
 	<stance state_key="walking" accuracy="0.35"/>
 	<stance state_key="standing" accuracy="0.4"/>
@@ -29650,6 +29667,7 @@
 	<trail probability="1.0" key="BulletMgTrail"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_556"/>
+	<effect class="muzzle" ref="muzzle_skyblue"/>
 	<stance state_key="running" accuracy="0.3"/>
 	<stance state_key="walking" accuracy="0.35"/>
 	<stance state_key="standing" accuracy="0.4"/>
@@ -29705,6 +29723,7 @@
 	<trail probability="1.0" key="BulletMgTrail"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_556"/>
+	<effect class="muzzle" ref="muzzle_skyblue"/>
 	<stance state_key="running" accuracy="0.3"/>
 	<stance state_key="walking" accuracy="0.35"/>
 	<stance state_key="standing" accuracy="0.4"/>
@@ -29760,6 +29779,7 @@
 	<trail probability="1.0" key="BulletMgTrail"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_556"/>
+	<effect class="muzzle" ref="muzzle_skyblue"/>
 	<stance state_key="running" accuracy="0.3"/>
 	<stance state_key="walking" accuracy="0.35"/>
 	<stance state_key="standing" accuracy="0.4"/>
@@ -32362,6 +32382,7 @@
 	<trail probability="1.0" key="BulletApTrail_ct"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_76251"/>
+	<effect class="muzzle" ref="muzzle_orange"/>
 	<stance state_key="running" accuracy="0.65"/>
 	<stance state_key="crouch_moving" accuracy="0.65"/>
 	<stance state_key="prone_moving" accuracy="0.65"/>
@@ -39588,6 +39609,7 @@
 	<trail probability="1.0" key="BulletApTrail_ct"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_76251"/>
+	<effect class="muzzle" ref="muzzle_orange"/>
 	<stance state_key="running" accuracy="0.65"/>
 	<stance state_key="crouch_moving" accuracy="0.65"/>
 	<stance state_key="prone_moving" accuracy="0.65"/>
