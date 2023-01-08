@@ -8,6 +8,7 @@
 #include "task_sequencer.as"
 #include "GFLhelpers.as"
 #include "event_system.as"
+#include "save_system.as"
 
 // 目前正在播放的点歌机中的歌曲剩余时间
 
@@ -875,7 +876,34 @@ class BasicCommandHandler : Tracker {
 			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_pa15_5802.weapon");		
 
 		} else if (checkCommand(message,"admintest")){
-			ProfileSave(m_metagame);
+			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
+			string sid = playerInfo.getStringAttribute("profile_hash");
+			string name = playerInfo.getStringAttribute("name");
+			player_data@ meplayer = player_data(name,sid);
+			meplayer.setCoreNumber(150);
+
+
+			Tdoll_Information@ waifu = Tdoll_Information(56);
+			waifu.addSkinIndex(531);
+			waifu.addType("mod3");
+			waifu.enable();
+
+			Tdoll_Information@ waifu1 = Tdoll_Information(112);
+			waifu1.addSkinIndex(904);
+			waifu1.addSkinIndex(3202);
+			waifu1.enable();
+
+			Tdoll_Information@ waifu2 = Tdoll_Information(337);
+			waifu2.addSkinIndex(6202);
+			waifu2.addSkinIndex(7801);
+			waifu2.enable();
+
+			meplayer.addInfo(waifu);
+			meplayer.addInfo(waifu1);
+			meplayer.addInfo(waifu2);
+
+			PlayerProfileSave(m_metagame,meplayer);
+
 		} else if (checkCommand(message,"1919test")){
 			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
 			addMutilItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"carry_item","complete_box.carry_item",20);  			            			
