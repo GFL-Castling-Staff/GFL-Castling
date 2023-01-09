@@ -24,7 +24,7 @@
         <hud_icon filename="uhlan_main_cannon.png" />
         <commonness value="0.0" />
         <projectile file="bullet_paradeus.projectile">
-            <result class="blast"  damage="4"  radius="2.2" decal="1" push="0.5" character_state="death" 	faction_compare="not_equal"/>
+            <result class="blast"  damage="4"  radius="2.2" decal="1" push="0.5" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
         </projectile>
         <!-- Scoring for target priority. Distance is between 0 and 1 based on range; direction is between 0 and 1 based on whether its near the barrel; squad_command is between 0 and on based on how close to the player's command order is, and base_score is a weight.. -->
         <!-- These all add together and the highest 'score' is the new target, targets are rescanned every 2.5 seconds to see if a new higher-score target is in sight-range. -->
@@ -110,6 +110,7 @@
             decal="1"
             damage_origin_vehicle="0"
             faction_compare="not_equal"
+            damage_origin_vehicle="0"
             />
         </projectile>
         <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5" />
