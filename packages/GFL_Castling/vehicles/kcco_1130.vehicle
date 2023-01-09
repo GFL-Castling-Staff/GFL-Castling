@@ -12,7 +12,7 @@
 
     <visual class="turret" turret_index="0" mesh_filename="KCCO1130.mesh" texture_filename="KCCO1130_Base_color.png" />
     <visual class="turret" turret_index="0" key="broken" mesh_filename="KCCO1130.mesh" texture_filename="humvee_broken.png" />
-	<visual class="chassis" mesh_filename="" texture_filename="Mortar_Texture.png" />
+	<visual class="chassis" mesh_filename="" texture_filename="KCCO1130_Base_color.png" />
 	<visual class="chassis" key="broken" mesh_filename="" texture_filename="humvee_broken.png" />
     <character_slot type="gunner" position="0 0.7 0" rotation="0" exit_rotation="3.14" hiding="1" animation_id="37">
         <turret index="0" />
