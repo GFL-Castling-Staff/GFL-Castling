@@ -32,11 +32,11 @@ owner="faction"
 	<turret offset="0 0 0" weapon_key="elenusis_acid_cannon.weapon" weapon_offset="0.0 1.0 2.0" weapon_recoil="0.0" physics_recoil="0.0"  max_rotation_step="0.0001" rotation="0" rotation_range="0" parent_turret_index="0" />
 	<turret offset="0 0 0" weapon_key="parw_elenusinus_mg.weapon" weapon_offset="-1.0 0.25 -1.2" weapon_recoil="0.0" physics_recoil="0.0" max_rotation_step="0.005" rotation="0" rotation_range="0" parent_turret_index="0" />
 	<turret offset="0 0 0" weapon_key="parw_elenusinus_mg.weapon" weapon_offset="1.0 0.25 -1.2" weapon_recoil="0.0" physics_recoil="0.0" max_rotation_step="0.005" rotation="0" rotation_range="0" parent_turret_index="0" />
-	<visual offset="0 1.05 0" class="turret" turret_index="0" mesh_filename="Elenusinus_1_turret.mesh" texture_filename="Eleusinus_Turret.png" />
+	<visual offset="0 1.05 0" class="turret" turret_index="0" mesh_filename="Elenusinus_1_turret.mesh" texture_filename="Eleusinus_Base.jpg" />
 	<visual offset="0 1.05 0" key="broken" class="turret" turret_index="0" mesh_filename="Elenusinus_1_turret.mesh" texture_filename="humvee_broken.png" />
 	<visual class="tire" mesh_filename="car1_wheel.mesh" texture_filename="sedan_albedo.jpg" />
 
-	<visual class="chassis" mesh_filename="Elenusinus_base.mesh" texture_filename="Eleusinus_Base.png" />
+	<visual class="chassis" mesh_filename="Elenusinus_base.mesh" texture_filename="Eleusinus_Base.jpg" />
 	<visual class="chassis" key="broken" mesh_filename="Elenusinus_base.mesh" texture_filename="humvee_broken.png" />
 	<character_slot type="driver" position="0.0 0.0 1.0" rotation="0" exit_rotation="0" hiding="1" animation_id="36" />
 	<character_slot type="gunner" attached_on_turret="1" seat_position="0.0 0.0 -0.8" enter_position="0 0 -2.0" rotation="0" exit_rotation="-1.57" hiding="1" animation_key="tank mg still">
