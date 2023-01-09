@@ -30,8 +30,8 @@
     12<turret offset="0 0.0 0.0" weapon_key="parw_sentrytower_moth_mg.weapon" weapon_offset="0.6 1.8 -9.2" parent_turret_index="5" weapon_recoil="0.0" physics_recoil="0.0" rotation="0" rotation_range="0"/>
     13<turret offset="0 0.0 0.0" weapon_key="parw_sentrytower_moth_mg.weapon" weapon_offset="-0.6 1.8 -9.2" parent_turret_index="5" weapon_recoil="0.0" physics_recoil="0.0" rotation="0" rotation_range="0"/>
 	
-	<visual class="chassis" mesh_filename="Sentry_Tower.mesh" texture_filename="Sentry_Tower_Texture.png"/>
-	<visual class="chassis" key="broken" mesh_filename="Sentry_Tower.mesh" texture_filename="Sentry_Tower_Texture_repairing.png" />
+	<visual class="chassis" mesh_filename="Sentry_Tower.mesh" texture_filename="Sentry_Tower_Texture.jpg"/>
+	<visual class="chassis" key="broken" mesh_filename="Sentry_Tower.mesh" texture_filename="Sentry_Tower_Texture_broken.jpg" />
 	
     <character_slot type="gunner" position="0 0.7 -1.5" rotation="0" exit_rotation="3.14" hiding="1" animation_id="37" seat_position="0.0 9.0 1.0">
 		<turret index="0" />

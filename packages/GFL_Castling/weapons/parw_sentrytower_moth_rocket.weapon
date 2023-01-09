@@ -17,7 +17,7 @@
 	<sound key="cycle_out" fileref="sniper_cycle_out.wav"/>
 	<sound key="cycle_in" fileref="sniper_cycle_in.wav"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
-	<model mesh_filename="Sentry_Moth.mesh" texture_filename="2Sentry_Moth_Texture.png"/>
+	<model mesh_filename="Sentry_Moth.mesh" texture_filename="Sentry_Moth_Base_color.jpg"/>
 	<ballistics near_far_distance="1000.0" speed_estimation_near="50.0" speed_estimation_far="50.0" max_speed="125.0" randomness="0.0"/>
 	<projectile file="at4.projectile">
 	<result class="blast" damage="6.0" radius="3.5" decal="1" push="0.75" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
