@@ -22,13 +22,13 @@
     <turret offset="0 0.0 0.0" weapon_key="Compass_mg.weapon" weapon_offset="0.8 1.40 0.0" parent_turret_index="0" weapon_recoil="0.05" physics_recoil="0.0" max_rotation_step="0.0003" rotation="3.1" rotation_range="6.28" damage_origin_vehicle="0"/>
     <turret offset="0 0.0 0.0" weapon_key="Compass_mg.weapon" weapon_offset="-0.8 0.9 0.0" parent_turret_index="0" weapon_recoil="0.05" physics_recoil="0.0" max_rotation_step="0.0003" rotation="-2.8" rotation_range="6.28"/>
     <turret offset="0 0.0 0.0" weapon_key="Compass_mg.weapon" weapon_offset="-0.8 1.40 0.0" parent_turret_index="0" weapon_recoil="0.05" physics_recoil="0.0" max_rotation_step="0.0003" rotation="-2.8" rotation_range="6.28" damage_origin_vehicle="0"/>
-    <visual offset="0 0.0 0" class="turret" turret_index="0" mesh_filename="Compass_turret.mesh" texture_filename="Compass_BaseColor.png" />
-    <visual offset="0 0.0 0" class="turret" turret_index="1" mesh_filename="deployable_mg1.mesh" texture_filename="Compass_BaseColor.png" />
-    <visual offset="0 0.0 0" class="turret" turret_index="2" mesh_filename="deployable_mg1.mesh" texture_filename="Compass_BaseColor.png" />
-    <visual offset="0 0.0 0" class="turret" turret_index="3" mesh_filename="deployable_mg1.mesh" texture_filename="Compass_BaseColor.png" />
-    <visual offset="0 0.0 0" class="turret" turret_index="4" mesh_filename="deployable_mg1.mesh" texture_filename="Compass_BaseColor.png" />
+    <visual offset="0 0.0 0" class="turret" turret_index="0" mesh_filename="Compass_turret.mesh" texture_filename="Compass_BaseColor.jpg" />
+    <visual offset="0 0.0 0" class="turret" turret_index="1" mesh_filename="deployable_mg1.mesh" texture_filename="Compass_BaseColor.jpg" />
+    <visual offset="0 0.0 0" class="turret" turret_index="2" mesh_filename="deployable_mg1.mesh" texture_filename="Compass_BaseColor.jpg" />
+    <visual offset="0 0.0 0" class="turret" turret_index="3" mesh_filename="deployable_mg1.mesh" texture_filename="Compass_BaseColor.jpg" />
+    <visual offset="0 0.0 0" class="turret" turret_index="4" mesh_filename="deployable_mg1.mesh" texture_filename="Compass_BaseColor.jpg" />
     <visual offset="0 3.2 0" class="turret" key="broken" mesh_filename="Compass_turret.mesh" texture_filename="humvee_broken.png" />
-    <visual class="chassis" mesh_filename="Compass_body.mesh" texture_filename="Compass_BaseColor.png" />
+    <visual class="chassis" mesh_filename="Compass_body.mesh" texture_filename="Compass_BaseColor.jpg" />
     <character_slot type="gunner" attached_on_turret="0" seat_position="0.0 0.1 -0.0" enter_position="0 0 -1.5" rotation="0" exit_rotation="-1.57" hiding="1" animation_key="tank mg still">
         <turret index="0" />
         <turret index="1" />
