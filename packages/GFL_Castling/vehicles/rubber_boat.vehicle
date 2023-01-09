@@ -41,10 +41,10 @@
 
 	<modifier class="blast_damage" value="-0.6" />
 
-	<visual  offset="0 0 0.24" class="turret" turret_index="0" mesh_filename="Crusher_turret.mesh" texture_filename="Crasher_Base_color.png" />
+	<visual  offset="0 0 0.24" class="turret" turret_index="0" mesh_filename="Crusher_turret.mesh" texture_filename="Crasher_Base_color.jpg" />
 	<visual  offset="0 0 0.24" class="turret" turret_index="0" key="broken" mesh_filename="Crusher_turret.mesh" texture_filename="humvee_broken.png" />
 
-    <visual class="chassis" mesh_filename="Crusher_body.mesh" texture_filename="Crasher_Base_color.png" />
+    <visual class="chassis" mesh_filename="Crusher_body.mesh" texture_filename="Crasher_Base_color.jpg" />
     <visual class="chassis" key="broken" mesh_filename="Crusher_body.mesh" texture_filename="humvee_broken.png" />
 
 	<visual class="tire" mesh_filename="" texture_filename="" />
