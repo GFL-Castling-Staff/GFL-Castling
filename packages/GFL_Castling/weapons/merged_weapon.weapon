@@ -50293,7 +50293,7 @@
 
 <weapon key="Jupiter_main_cannon.weapon">
 	<specification retrigger_time="9.6" accuracy_factor="1" sustained_fire_grow_step="1.2" sustained_fire_diminish_rate="0.6" sight_range_modifier="3.0" ai_sight_range_modifier="1.0" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="0" suppressed="0" name="Bunker Hornet" class="0" projectile_speed="180.0" slot="2" barrel_offset_3d="0.0 3.5 5.0" projectiles_per_shot="1" sight_height_offset="2.0"/>
-	<model mesh_filename="Jupiter_cannon_2.mesh" texture_filename="Jupiter.png"/>
+	<model mesh_filename="Jupiter_cannon_2.mesh" texture_filename="Jupiter.jpg"/>
 	<hud_icon filename="hud_hornet.png"/>
 	<commonness value="0.0"/>
 	<weak_hand_hold offset="0.2"/>
