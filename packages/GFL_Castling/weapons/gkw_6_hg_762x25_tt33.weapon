@@ -20,10 +20,10 @@
     <!--Animations-->
     <inventory buy_price="33.0" sell_price="33.0" />
     <!--Sounds-->
-    <sound key="fire" fileref="tt33_fire_FromCOD9.wav" pitch_variety="0.05" volume="1.2"/>
-	<sound key="magazine_out" fileref="tt33_mgz_out_FromSQUAD.wav" volume="0.6"/>
-	<sound key="magazine_in" fileref="tt33_mgz_in_FromSQUAD.wav" volume="0.6"/>
-	<sound key="cycle" fileref="tt33_cycle_FromSQUAD.wav" volume="0.6"/>
+    <sound key="fire" fileref="tt33_fire_FromCOD9.wav" pitch_variety="0.05" volume="1.6"/>
+	<sound key="magazine_out" fileref="tt33_mgz_out_FromSQUAD.wav" volume="0.9"/>
+	<sound key="magazine_in" fileref="tt33_mgz_in_FromSQUAD.wav" volume="0.9"/>
+	<sound key="cycle" fileref="tt33_cycle_FromSQUAD.wav" volume="0.9"/>
     <!--Model, Icon, Cost-->
     <model filename="gkw_hg_m9.xml" />
     <hud_icon filename="gkw_tt33.png" />
