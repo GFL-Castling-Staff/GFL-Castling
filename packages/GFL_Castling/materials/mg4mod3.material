@@ -1,0 +1,112 @@
+material broken_particle_01
+{
+	receive_shadows off
+    technique
+    {
+        pass
+        {
+            lighting off
+            scene_blend add
+            depth_write off
+			fog_override true
+            texture_unit
+            {
+                texture broken_particle_01.png
+            }
+        }
+    }
+}
+material broken_particle_02
+{
+	receive_shadows off
+    technique
+    {
+        pass
+        {
+            lighting off
+            scene_blend add
+            depth_write off
+			fog_override true
+            texture_unit
+            {
+                texture broken_particle_02.png
+            }
+        }
+    }
+}
+
+material broken_particle_03
+{
+	receive_shadows off
+    technique
+    {
+        pass
+        {
+            lighting off
+            scene_blend add
+            depth_write off
+			fog_override true
+            texture_unit
+            {
+                texture broken_particle_03.png
+            }
+        }
+    }
+}
+material hollow_blast_smoke_01 	//空心爆炸溅射烟雾
+{
+	receive_shadows off
+    technique
+    {
+        pass
+        {
+            lighting off
+            scene_blend add
+            depth_write off
+			fog_override true
+            texture_unit
+            {
+                texture hollow_blast_smoke_01.png
+            }
+        }
+    }
+}
+
+material spread_line
+{
+	receive_shadows off
+    technique
+    {
+        pass
+        {
+            lighting off
+			emissive 1 1 1 1
+            scene_blend alpha_blend
+            depth_write off
+			fog_override true
+			
+            texture_unit
+            {
+                texture R_point_01.png
+            }
+        }
+    }
+}
+material explosion_smoke_02 	//爆炸溅射烟雾
+{
+	receive_shadows off
+    technique
+    {
+        pass
+        {
+            lighting off
+            scene_blend add
+            depth_write off
+			fog_override true
+            texture_unit
+            {
+                texture explosion_smoke_02.png
+            }
+        }
+    }
+}

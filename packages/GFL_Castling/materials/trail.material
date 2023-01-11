@@ -450,3 +450,24 @@ material bullet_thick
         }
     }
 }
+
+material laser_mg4mod3_purple
+{
+    receive_shadows off
+    technique 
+    {
+        pass 
+        {
+            lighting off
+            fog_override true
+
+            depth_write off
+            scene_blend add
+
+            texture_unit 
+            {
+                texture laser_mg4mod3_purple.png
+            }
+        }
+    }
+}

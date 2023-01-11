@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<projectile class="bullet" name="default" slot="1" time_to_live="1.0" pulldown_in_air="10">
+    <result class="hit" damage_origin_vehicle="0" />
+    <trigger class="impact" />
+    <rotation class="motion" />
+
+    <sound class="result" key="terrain" fileref="ricochet1.wav" />
+    <sound class="result" key="terrain" fileref="ricochet2.wav" />
+    <sound class="result" key="terrain" fileref="ricochet3.wav" />
+    <sound class="result" key="terrain" fileref="ricochet4.wav" />
+
+    <sound class="result" key="shield" file="metal_hit_1.wav" pitch_variety="0.2" volume="1.0" />
+    <sound class="result" key="shield" file="metal_hit_2.wav" pitch_variety="0.2" volume="1.0" /> 
+    <sound class="result" key="shield" file="metal_hit_3.wav" pitch_variety="0.2" volume="1.0" /> 
+    <sound class="result" key="shield" file="metal_hit_4.wav" pitch_variety="0.2" volume="1.0" /> 
+    <sound class="result" key="shield" file="metal_hit_5.wav" pitch_variety="0.2" volume="1.0" /> 
+    <sound class="result" key="shield" file="metal_hit_6.wav" pitch_variety="0.2" volume="1.0" /> 
+    
+    <sound class="result" key="character"  fileref="impact_body2.wav" pitch_variety="0.4" volume="0.7" />
+    <sound class="result" key="character"  fileref="impact_body3.wav" pitch_variety="0.4" volume="0.7" />
+    <sound class="result" key="character"  fileref="impact_body4.wav" pitch_variety="0.4" volume="0.7" />
+    <sound class="result" key="character"  fileref="impact_body3.wav" pitch_variety="0.4" volume="0.7" />
+    <sound class="result" key="character" tag="meat_man" fileref="impact_body4.wav" pitch_variety="0.4" volume="0.7" />
+	
+    <sound class="result" key="character" tag="metal_man" file="metal_hit_1.wav" pitch_variety="0.2" volume="1.0" />
+    <sound class="result" key="character" tag="metal_man" file="metal_hit_2.wav" pitch_variety="0.2" volume="1.0" /> 
+    <sound class="result" key="character" tag="metal_man" file="metal_hit_3.wav" pitch_variety="0.2" volume="1.0" /> 
+    <sound class="result" key="character" tag="metal_man" file="metal_hit_4.wav" pitch_variety="0.2" volume="1.0" /> 
+    <sound class="result" key="character" tag="metal_man" file="metal_hit_5.wav" pitch_variety="0.2" volume="1.0" /> 
+    <sound class="result" key="character" tag="metal_man" file="metal_hit_6.wav" pitch_variety="0.2" volume="1.0" /> 
+
+
+    <sound class="result" key="vehicle" copy="terrain" />
+
+    <sound class="result" key="vehicle" tag="metal_thin" file="metal_thin_01.wav" pitch_variety="0.3" volume="0.5" />
+    <sound class="result" key="vehicle" tag="metal_thin" file="metal_thin_02.wav" pitch_variety="0.3" volume="0.5" />
+    <sound class="result" key="vehicle" tag="metal_thin" file="metal_thin_03.wav" pitch_variety="0.3" volume="0.5" />
+    <sound class="result" key="vehicle" tag="metal_thin" file="metal_thin_04.wav" pitch_variety="0.3" volume="0.5" />
+    <sound class="result" key="vehicle" tag="metal_thin" file="metal_thin_05.wav" pitch_variety="0.3" volume="0.5" />  
+    
+    <sound class="result" key="vehicle" tag="deco_car" file="metal_thin_06.wav" pitch_variety="0.3" volume="0.6" />    
+    <sound class="result" key="vehicle" tag="deco_car" file="metal_thin_07.wav" pitch_variety="0.3" volume="0.6" />
+    <sound class="result" key="vehicle" tag="deco_car" file="metal_thin_06.wav" pitch_variety="0.3" volume="0.6" />    
+    <sound class="result" key="vehicle" tag="deco_car" file="metal_thin_07.wav" pitch_variety="0.3" volume="0.8" />    
+    <sound class="result" key="vehicle" tag="deco_car" file="metal_thin_06.wav" pitch_variety="0.3" volume="0.5" />    
+    <sound class="result" key="vehicle" tag="deco_car" file="metal_thin_07.wav" pitch_variety="0.3" volume="0.5" />    
+    <sound class="result" key="vehicle" tag="deco_car" file="metal_thin_08.wav" pitch_variety="0.3" volume="0.7" />
+    <sound class="result" key="vehicle" tag="deco_car" file="metal_thin_08.wav" pitch_variety="0.3" volume="0.8" />
+
+    <sound class="result" key="vehicle" tag="metal_heavy" file="metal_heavy_01.wav" pitch_variety="0.3" volume="0.5" />
+    <sound class="result" key="vehicle" tag="metal_heavy" file="metal_heavy_02.wav" pitch_variety="0.3" volume="0.5" /> 
+    <sound class="result" key="vehicle" tag="metal_heavy" file="metal_heavy_03.wav" pitch_variety="0.3" volume="0.5" />       
+    
+    <sound class="result" key="vehicle" tag="sandbag" file="barrier_bullet_01.wav" pitch_variety="0.3" volume="0.8" />  
+    <sound class="result" key="vehicle" tag="sandbag" file="barrier_bullet_02.wav" pitch_variety="0.3" volume="0.8" /> 
+    <sound class="result" key="vehicle" tag="sandbag" file="barrier_bullet_03.wav" pitch_variety="0.3" volume="0.4" /> 
+    
+    <sound class="result" key="vehicle" tag="metal_dumpster" file="dumpster_bullet_01.wav" pitch_variety="0.4" volume="0.6" />  
+    <sound class="result" key="vehicle" tag="metal_dumpster" file="dumpster_bullet_01.wav" pitch_variety="0.4" volume="0.5" />    
+    <sound class="result" key="vehicle" tag="metal_dumpster" file="dumpster_bullet_02.wav" pitch_variety="0.4" volume="0.8" />              
+
+    <sound class="result" key="static_object" copy="terrain" />
+    
+    <effect class="result" key="terrain" ref="hitGround" use_surface_color="1" />
+    <effect class="result" key="terrain" ref="BulletImpactDust4" />
+    <effect class="result" key="terrain" ref="BulletImpactDust5" />
+    <effect class="result" key="terrain" ref="BulletImpactDust6" />
+
+    <effect class="result" key="vehicle" ref="hitMetal" />
+    <effect class="result" key="vehicle" ref="hitMetal_1" />
+
+    <effect class="result" key="other" ref="BulletImpact" />
+    <effect class="result" key="vehicle" ref="BulletImpact" />
+    <effect class="result" key="terrain" ref="BulletImpact" />
+    <effect class="result" key="character" ref="BulletImpact" />
+    <effect class="result" key="shield" ref="BulletImpact" />
+
+    <effect class="result" key="terrain" ref="Bullet_Burnout"/>
+    <effect class="result" key="static_object" copy="terrain" />
+
+    <effect class="result" key="shield" ref="hitMetal" />
+    <effect class="result" key="shield" ref="hitMetal_1" />
+    <effect class="result" key="shield" ref="mg4_blast_shine_center" />
+    <effect class="result" key="shield" ref="mg4_blast_shine_center_hollow" />
+
+    <effect class="result" key="terrain" ref="mg4_blast_shine_center" />
+    <effect class="result" key="terrain" ref="mg4_blast_shine_center_hollow" />
+
+    <effect class="result" key="character" ref="mg4_blast_broken_particle_01" />
+    <effect class="result" key="character" ref="mg4_blast_broken_particle_02" />
+    <effect class="result" key="character" ref="mg4_blast_broken_particle_03" />
+    <effect class="result" key="character" ref="mg4_blast_linear_shine" />
+    <effect class="result" key="character" ref="mg4_blast_shine_center" />
+    <effect class="result" key="character" ref="mg4_blast_shine_center_hollow" />
+
+    <effect class="result" key="vehicle" copy="character" />
+
+    <trail probability="1.0" key="laser_mg4mod3"/>
+
+</projectile>

@@ -1,0 +1,249 @@
+//紫色标准
+particle_system mg4_blast_shine_center_hollow		//高射速枪中心中空爆炸辉光
+{
+	quota 1000
+	material hollow_blast_smoke_01
+	particle_width 0.1
+	particle_height 0.1
+	renderer billboard
+	billboard_rotation_type vertex
+	billboard_type point
+	
+	emitter Point
+	{
+		angle 0
+		colour 1 0 1 1
+		direction 0 1 0
+		emission_rate 30
+		position 0 0 0
+		velocity 0
+		time_to_live 0.12
+		duration 0.05
+	}
+	
+	affector ColourFader2
+	{
+		red1	3
+		green1	3
+		blue1	3
+		alpha1	3
+		red2	-1
+		green2	-10
+		blue2	-1
+		alpha2	-10
+		state_change 0.02
+	}
+	affector Scaler
+	{
+		rate 30
+	}
+	affector Rotator
+	{
+		rotation_speed_range_start -60
+		rotation_speed_range_end 60
+		rotation_range_start 0
+		rotation_range_end 360
+	}
+}
+particle_system mg4_blast_shine_center		//高射速枪中心爆炸辉光
+{
+	quota 1000
+	material explosion_smoke_02
+	particle_width 0.1
+	particle_height 0.1
+	renderer billboard
+	billboard_rotation_type vertex
+	billboard_type point
+	
+	emitter Point
+	{
+		angle 0
+		colour 1 0 1 1
+		direction 0 1 0
+		emission_rate 60
+		position 0 0 0
+		velocity 0
+		time_to_live 0.08
+		duration 0.05
+	}
+	
+	affector ColourFader2
+	{
+		red1	10
+		green1	10
+		blue1	10
+		alpha1	10
+		red2	-2
+		green2	-10
+		blue2	-2
+		alpha2	-10
+		state_change 0.03
+	}
+	affector Scaler
+	{
+		rate 30
+	}
+	affector Rotator
+	{
+		rotation_speed_range_start -60
+		rotation_speed_range_end 60
+		rotation_range_start 0
+		rotation_range_end 360
+	}
+}
+particle_system mg4_blast_linear_shine		//高射速枪中心爆炸线性光
+{
+	quota 1000
+	material spread_line
+	particle_width 0.03
+	particle_height 2.5
+	renderer billboard
+	billboard_rotation_type vertex
+	billboard_type point
+	billboard_type oriented_self
+	emitter Point
+	{
+		angle 180
+		colour 0.5 0.5 0.5 0.5
+		direction 0 1 0
+		emission_rate 60
+		position 0 0 0
+		velocity 10
+		time_to_live 0.12
+		duration 0.15
+	}
+	
+	affector ColourFader2
+	{
+		red1	10
+		green1	10
+		blue1	10
+		alpha1	10
+		red2	-10
+		green2	-10
+		blue2	-10
+		alpha2	-10
+		state_change 0.02
+	}
+	affector Scaler
+	{
+		rate 1
+	}
+}
+
+particle_system mg4_blast_broken_particle_01		//破碎碎片飞溅特效
+{
+	quota 1000
+	material broken_particle_01
+	particle_width 0.3
+	particle_height 0.3
+	renderer billboard
+	billboard_rotation_type vertex
+	billboard_type point
+	billboard_type oriented_self
+	
+	emitter Point
+	{
+		angle 180
+		colour 1 0 1 1
+		direction 0 1 0
+		emission_rate 60
+		position 0 0 0
+		velocity 5
+		time_to_live 0.23
+		time_to_live_min 0.22
+		time_to_live_max 0.26
+		duration 0.15
+	}
+	
+	affector ColourFader
+	{
+		red	3
+		green	0
+		blue	3
+		alpha	3
+	}
+	affector Scaler
+	{
+		rate 2
+	}
+}
+particle_system mg4_blast_broken_particle_02	//破碎碎片飞溅特效
+{
+	quota 1000
+	material broken_particle_02
+	particle_width 0.3
+	particle_height 0.3
+	renderer billboard
+	billboard_rotation_type vertex
+	billboard_type oriented_self
+	
+	emitter Point
+	{
+		angle 180
+		colour 1 0 1 1
+		direction 0 1 0
+		emission_rate 60
+		position 0 0 0
+		velocity 5
+		time_to_live 0.2
+		time_to_live_min 0.22
+		time_to_live_max 0.26
+		duration 0.15
+	}
+	
+	affector ColourFader
+	{
+		red	3
+		green	0
+		blue	3
+		alpha	3
+	}
+	affector Scaler
+	{
+		rate 2
+	}
+
+}
+particle_system mg4_blast_broken_particle_03		//破碎碎片飞溅特效
+{
+	quota 1000
+	material broken_particle_03
+	particle_width 0.3
+	particle_height 0.3
+	renderer billboard
+	billboard_rotation_type vertex
+	billboard_type oriented_self
+	
+	emitter Point
+	{
+		angle 180
+		colour 1 0 1 1
+		direction 0 1 0
+		emission_rate 80
+		position 0 0 0
+		velocity 5
+		time_to_live 0.2
+		time_to_live_min 0.22
+		time_to_live_max 0.26
+		duration 0.1
+	}
+	affector ColourFader
+	{
+		red	3
+		green	0
+		blue	3
+		alpha	3
+	}
+	affector Scaler
+	{
+		rate 2
+	}
+	affector Rotator
+	{
+		rotation_speed_range_start -60
+		rotation_speed_range_end 60
+		rotation_range_start 0
+		rotation_range_end 360
+	}
+}
