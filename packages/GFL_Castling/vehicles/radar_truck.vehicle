@@ -1,4 +1,5 @@
-<vehicle file="vehicle_base.vehicle" name="Spawn truck" key="radar_truck.vehicle" respawn_time="180" existence="one_per_faction" protectors="5" soldier_capacity_offset="5" map_view_atlas_index="3">
+<?xml version="1.0" encoding="utf-8"?>
+<vehicle file="vehicle_base.vehicle" name="Spawn truck" key="radar_truck.vehicle" respawn_time="180" existence="one_per_faction" protectors="5" soldier_capacity_offset="10" map_view_atlas_index="3">
 	<tag name="metal_heavy" />
 	<tag name="tactical" />    
   
@@ -15,7 +16,7 @@
 	steer_smoothening="0.7" />
 
 	<physics 
-	max_health="10.0" 
+	max_health="30.0" 
 	mass="40.0"
     broken_mass="20"
     remove_collision_threshold="0.2"	

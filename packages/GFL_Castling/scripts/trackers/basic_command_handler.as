@@ -866,7 +866,9 @@ class BasicCommandHandler : Tracker {
 		} else  if(checkCommand(message, "spawn my")) {
 			spawnInstanceNearPlayer(senderId, "par_elenusinus.vehicle", "vehicle", 1); 		
 		} else  if(checkCommand(message, "spawn aks")) {
-			spawnInstanceNearPlayer(senderId, "par_aceso.vehicle", "vehicle", 1); 						
+			spawnInstanceNearPlayer(senderId, "par_aceso.vehicle", "vehicle", 1);
+		} else  if(checkCommand(message, "spawn pickup")) {
+			spawnInstanceNearPlayer(senderId, "wastelander.vehicle", "vehicle", 1);			 						
 		} else if (checkCommand(message,"givetestweapon")){
 			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
 			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_kp31_310.weapon");
