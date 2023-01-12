@@ -32,7 +32,7 @@
         <sound key="fire" fileref="kord_fire_FromEFT.wav" pitch_variety="0.05" volume="1.3"/>
         <sound key="magazine_out" fileref="kord_mgz_out_FromSQUAD.wav" volume="0.7"/>
         <sound key="magazine_in" fileref="kord_mgz_in_FromSQUAD.wav" volume="0.7"/>
-        <sound key="cycle" fileref="kord_cycle_FromSQUAD.wav" volume="0.55"/>
+        <sound key="cycle_out" fileref="kord_cycle_FromSQUAD.wav" volume="0.55"/>
         <sound class="impact" fileref="rifle_drop.wav"/>
         <model filename="gkw_mg_kord.xml"/>
         <hud_icon filename="gkw_kord.png"/>
@@ -104,7 +104,7 @@
         <sound key="fire" fileref="kord_fire_FromEFT.wav" pitch_variety="0.05" volume="1.3"/>
         <sound key="magazine_out" fileref="kord_mgz_out_FromSQUAD.wav" volume="0.7"/>
         <sound key="magazine_in" fileref="kord_mgz_in_FromSQUAD.wav" volume="0.7"/>
-        <sound key="cycle" fileref="kord_cycle_FromSQUAD.wav" volume="0.55"/>
+        <sound key="cycle_out" fileref="kord_cycle_FromSQUAD.wav" volume="0.55"/>
         <sound class="impact" fileref="rifle_drop.wav"/>
         <model filename="gkw_mg_kord.xml"/>
         <hud_icon filename="gkw_kord_skill.png"/>

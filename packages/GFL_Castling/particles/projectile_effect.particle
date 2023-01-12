@@ -64,21 +64,18 @@ particle_system at_bullet_smoke_trail
 	common_direction 0 1 0
 	common_up_vector 0 0 1
 	
-	emitter Box
+	emitter Point
 	{
 		angle 0
 		colour 1 1 1 0.3
 		direction 0 1 0
 		emission_rate 10
 		position 0 0 0
-		velocity_min 0.1
-		velocity_max 10
+		velocity 0.0001
 		time_to_live 0.6
 		duration 0.1
-		width 0.1
-		height 0.1
-		depth 3
 	}
+	
 	affector Scaler
 	{
 		rate -1 
