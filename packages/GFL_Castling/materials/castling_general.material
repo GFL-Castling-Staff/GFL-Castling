@@ -196,3 +196,20 @@ material xulie_xiantiao_1000ms : add_base
         }
     }
 }
+
+material at_bullet_smoke_trail : alpha_blend_base
+{   
+    technique
+	{
+		pass
+		{
+			texture_unit
+			{
+				texture at_bullet_smoke_trail.png 	
+				wave_xform scale_y sine 1 0.3 -0.2 0.5 
+				//正弦波 变换Y
+				tex_address_mode clamp
+			}
+		}
+	}
+}

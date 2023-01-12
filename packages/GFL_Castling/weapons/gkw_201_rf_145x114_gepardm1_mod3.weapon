@@ -49,6 +49,7 @@
         faction_compare="not_equal"
 		/>
     </projectile>
+    <effect class="muzzle" ref="at_bullet_smoke_trail" lighting="0"/> 
     <!--Accuracy, Movement speed-->
     <stance state_key="running" accuracy="1" />
     <stance state_key="walking" accuracy="1" />

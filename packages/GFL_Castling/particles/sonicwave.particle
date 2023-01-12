@@ -7,31 +7,33 @@ particle_system sonicwave {
 	renderer	billboard
 	billboard_type	point
 
-	 emitter Point 
-        {
-
+	emitter Point 
+	{
 		colour	0.9 0.9 0.9 0.3
-    	position 0 0 0
+		position 0 0 0
 		direction	1 0 0
 		emission_rate	30
 		time_to_live	0.75
 		duration	1.0
 		duration_min	1.0
 		duration_max	1.2    
+	}
 
-}
-	affector Scaler {
+	affector Scaler 
+	{
 		rate	3.5
 	}
 
-	affector Rotator {
+	affector Rotator 
+	{
 		rotation_speed_range_start	-15
 		rotation_speed_range_end	100
 		rotation_range_start	0
 		rotation_range_end	360
 	}
 
-	affector LinearForce {
+	affector LinearForce 
+	{
 		force_vector 0 2 0
 		force_application add
 	}
