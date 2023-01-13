@@ -26,7 +26,7 @@
 		<inventory encumbrance="20.0" buy_price="42.0" sell_price="42.0"/>
 		<next_in_chain key="gkw_fg42_skill.weapon" share_ammo="1"/>
 		<sound key="fire" fileref="fg42_fire_FromPOSTSCRIPTUM.wav" pitch_variety="0.05" volume="1.15"/>
-		<sound key="cycle" fileref="fg42_cycle_FromPOSTSCRIPTUM.wav" volume="0.75"/>
+		<sound key="cycle_out" fileref="fg42_cycle_FromPOSTSCRIPTUM.wav" volume="0.75"/>
 		<sound key="reload_one" fileref="clip_push.wav" volume="1.0"/>
 		<sound class="impact" fileref="rifle_drop.wav"/>
 		<model filename="gkw_mg_fg42.xml"/>
@@ -96,7 +96,7 @@
 		<sound key="fire" fileref="fg42skill_fire_FromZA4.wav" pitch_variety="0.05" volume="0.9" />
 		<sound key="magazine_out" fileref="fg42_mgz_out_FromPOSTSCRIPTUM.wav" volume="0.65" />
 		<sound key="magazine_in" fileref="fg42_mgz_in_FromPOSTSCRIPTUM.wav" volume="0.65" />
-		<sound key="cycle_out" fileref="fg42_cycle_FromPOSTSCRIPTUM.wav" volume="0.65" />
+		<sound key="cycle" fileref="fg42_cycle_FromPOSTSCRIPTUM.wav" volume="0.65" />
 		<sound class="impact" fileref="rifle_drop.wav" />
 		<model filename="gkw_mg_fg42.xml" />
 		<hud_icon filename="gkw_fg42_skill.png" />

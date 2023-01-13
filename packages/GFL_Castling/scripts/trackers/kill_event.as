@@ -344,9 +344,19 @@ class kill_event : Tracker {
                 int j = findKillCountIndex(characterId,"carcano");
                 if(j>=0){
                     KillCountArray[j].add();
+                    string c_pos = getStringPosFromCharacterId(m_metagame,characterId);
+                    if(c_pos != "")
+                    {
+                        spawnStaticProjectile(m_metagame,"test_particle.projectile",c_pos,characterId,factionId);
+                    }
                 }
                 else{
                     KillCountArray.insertLast(kill_count(characterId,1,"carcano"));
+                    string c_pos = getStringPosFromCharacterId(m_metagame,characterId);
+                    if(c_pos != "")
+                    {
+                        spawnStaticProjectile(m_metagame,"test_particle.projectile",c_pos,characterId,factionId);
+                    }                    
                 }
             }
 

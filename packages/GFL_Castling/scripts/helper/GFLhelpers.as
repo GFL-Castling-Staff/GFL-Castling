@@ -792,3 +792,55 @@ void updateMapViewPic(Metagame@ metagame,string pic){
 	metagame.getComms().send(command);
 }
 
+Vector3 getVectorPosFromCharacterId(Metagame@ metagame,int character_id)
+{
+	Vector3 output = Vector3(0,0,0);
+	const XmlElement@ characterinfo = getCharacterInfo(metagame, character_id);
+	if (characterinfo !is null){
+		string c_pos = characterinfo.getStringAttribute("position");
+		output = stringToVector3(c_pos);
+	}
+	return output;
+}
+
+string getStringPosFromCharacterId(Metagame@ metagame,int character_id)
+{
+	string output = "";
+	const XmlElement@ characterinfo = getCharacterInfo(metagame, character_id);
+	if (characterinfo !is null){
+		output = characterinfo.getStringAttribute("position");
+	}
+	return output;
+}
+
+void spawnStaticProjectile(Metagame@ metagame,string key,Vector3 pos,int characterId,int factionId)
+{
+	string m_pos = pos.toString();
+
+	XmlElement command("command");
+	command.setStringAttribute("class", "create_instance");
+	command.setIntAttribute("character_id", characterId);
+	command.setIntAttribute("faction_id", factionId);
+
+	command.setStringAttribute("instance_class", "grenade");
+	command.setStringAttribute("instance_key", key);	
+	command.setStringAttribute("position", m_pos);	
+	command.setStringAttribute("offset", "0 0 0");	
+
+	metagame.getComms().send(command);
+}
+
+void spawnStaticProjectile(Metagame@ metagame,string key,string pos,int characterId,int factionId)
+{
+	XmlElement command("command");
+	command.setStringAttribute("class", "create_instance");
+	command.setIntAttribute("character_id", characterId);
+	command.setIntAttribute("faction_id", factionId);
+
+	command.setStringAttribute("instance_class", "grenade");
+	command.setStringAttribute("instance_key", key);	
+	command.setStringAttribute("position", pos);	
+	command.setStringAttribute("offset", "0 0 0");	
+	
+	metagame.getComms().send(command);
+}

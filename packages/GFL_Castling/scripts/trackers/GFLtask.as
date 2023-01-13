@@ -298,6 +298,7 @@ class DelayAntiPersonSnipeRequest :Task{
     protected int m_character_id;
     protected int m_faction_id;
 	protected int m_target_id;
+	protected string m_bullet_key="sniper_bullet.projectile";
 	protected float m_timeLeft;
 	protected Vector3 m_pos_1;
 	protected Vector3 m_pos_2;
@@ -316,6 +317,11 @@ class DelayAntiPersonSnipeRequest :Task{
 		m_target_id = target;
 	}
 
+	void setKey(string key)
+	{
+		m_bullet_key = key;
+	}
+
 	void start() {
 		m_timeLeft=m_time;
 	}
@@ -329,7 +335,7 @@ class DelayAntiPersonSnipeRequest :Task{
 			if (characterinfo !is null){
 				m_pos_2 = stringToVector3(characterinfo.getStringAttribute("position"));
 				float dis = getFlatPositionDistance(m_pos_1,m_pos_2);
-				CreateDirectProjectile(m_metagame,m_pos_1,m_pos_2,"sniper_bullet.projectile",m_character_id,m_faction_id,float(max(dis/0.2,40.0)));
+				CreateDirectProjectile(m_metagame,m_pos_1,m_pos_2,m_bullet_key,m_character_id,m_faction_id,float(max(dis/0.2,40.0)));
 				playSoundAtLocation(m_metagame,"BT_rifle.wav",m_faction_id,m_pos_1,2.0);
 				m_shoot = true;
 			}

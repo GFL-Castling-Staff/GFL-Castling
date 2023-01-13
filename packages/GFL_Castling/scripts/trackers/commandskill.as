@@ -3523,11 +3523,13 @@ class CommandSkill : Tracker {
                         if (closestIndex >= 0){
                             KillCountArray[index].m_killnum -= 6;
                             int target_id = affectedCharacter[closestIndex].getIntAttribute("id");
-                            playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 2.5s",false);
+                            playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 1.5s",false);
                             TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
-                            tasker.add(DelayAntiPersonSnipeRequest(m_metagame,2.5,characterId,factionid,"snipe_hit_kennedy.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
+                            DelayAntiPersonSnipeRequest@ snipe_quest = DelayAntiPersonSnipeRequest(m_metagame,1.5,characterId,factionid,"snipe_hit_kennedy.projectile",c_pos.add(Vector3(0,0.5,0)),target_id);
+                            snipe_quest.setKey("sniper_bullet_carcano.projectile");
+                            tasker.add(snipe_quest);
                             sendFactionMessageKeySaidAsCharacter(m_metagame,0,characterId,"carcano_1938_skill_fire");
-                            addCoolDown("sniper",10,characterId,modifer);
+                            addCoolDown("sniper",5,characterId,modifer);
                             array<string> Voice={
                             "Carcano1938_SKILL1_JP.wav",
                             "Carcano1938_SKILL2_JP.wav",

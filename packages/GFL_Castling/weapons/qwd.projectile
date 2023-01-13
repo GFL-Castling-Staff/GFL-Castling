@@ -53,7 +53,7 @@
 
     <effect class="result" key="static_object" copy="terrain" />
     <effect class="result" key="character" copy="terrain" />
-	-<effect class="activated" ref="sonicwave" /> -
+	<effect class="activated" ref="sonicwave" />
 
 	<!---<effect class="result" ref="SmokePropulsionEnd" /> -->
 	<effect class="result" key="terrain" ref="FlamePropulsionEnd" lighting="0" /> 

@@ -1,5 +1,6 @@
-particle_system sonicwave {
-	quota	500
+particle_system sonicwave 
+{
+	quota	100
 	material woosh
 	particle_width	0.6
 	particle_height	0.6
@@ -36,6 +37,41 @@ particle_system sonicwave {
 	{
 		force_vector 0 2 0
 		force_application add
+	}
+        
+}
+
+particle_system sonicwave_sniper
+{
+	quota	100
+	material woosh
+	particle_width	3.0
+	particle_height	3.0
+	cull_each	false
+	renderer	billboard
+	billboard_type	point
+
+	emitter Point 
+	{
+		colour	0.9 0.9 0.9 0.5
+		position 0 0 0
+		direction	1 0 0
+		emission_rate	100
+		time_to_live	1.0
+		duration	3.0
+	}
+
+	affector Scaler 
+	{
+		rate	-6
+	}
+
+	affector Rotator 
+	{
+		rotation_speed_range_start	0
+		rotation_speed_range_end	0
+		rotation_range_start	0
+		rotation_range_end	360
 	}
         
 }
