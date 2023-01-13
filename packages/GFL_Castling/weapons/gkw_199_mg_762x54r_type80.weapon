@@ -7,6 +7,7 @@
         accuracy_factor="1.0" 
         sustained_fire_grow_step="0.8" 
         sustained_fire_diminish_rate="1.0"
+        spread_range="0.25"
         magazine_size="100" 
         suppressed="0" 
         stance_accuracy_rate="0.7"
@@ -22,7 +23,7 @@
         stab_enabled="1"
         />
         <animation key="reload" animation_key="reloading, Machine gun 2.0" />
-        <inventory buy_price="40.0" sell_price="40.0" />
+        <inventory encumbrance="20.0" buy_price="80.0" sell_price="80.0" />
         <next_in_chain key="gkw_type80_skill.weapon" share_ammo="1" />
         <sound key="fire" fileref="qjy80_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.1" />
         <sound key="magazine_out" fileref="qjy80_mgz_out_FromCOD16.wav" volume="0.6" />
@@ -33,8 +34,9 @@
         <commonness value="0.2" in_stock="0" can_respawn_with="1" />
         <hud_icon filename="gkw_80type.png" />
         <projectile file="bullet.projectile">
-            <result class="hit" kill_probability="2.0" kill_probability_offset_on_successful_hit="1.0" kill_decay_start_time="1.5" kill_decay_end_time="1.6" />
+            <result class="hit" kill_probability="2.4" kill_probability_offset_on_successful_hit="1.0" kill_decay_start_time="1.5" kill_decay_end_time="1.6" />
         </projectile>
+        <effect class="muzzle" ref="ejection_76251" />
         <stance state_key="running" accuracy="0.3" />
         <stance state_key="walking" accuracy="0.4" />
         <stance state_key="crouch_moving" accuracy="0.65" />
@@ -49,25 +51,26 @@
         barrel_offset="0.5" 
         retrigger_time="0.08" 
         accuracy_factor="1.0" 
-        sustained_fire_grow_step="0" 
+        sustained_fire_grow_step="0.8" 
         sustained_fire_diminish_rate="1.0"
+        spread_range="0.2"
         magazine_size="100" 
         stance_accuracy_rate="0.5"
         suppressed="0" 
         name="Type 80 GPMG-[Damage Focus MG]" 
         class="0" 
         projectile_speed="220" 
-        sight_range_modifier="2.5"
+        sight_range_modifier="1.5"
         slot="0"
         can_shoot_standing="0" 
-        can_shoot_crouching="0"
+        can_shoot_crouching="1"
         can_shoot_prone="1"
         carry_in_two_hands="1"
         projectiles_per_shot="1"
         stab_enabled="1"
         />
         <animation key="reload" animation_key="reloading, Machine gun 2.0" />
-        <inventory  buy_price="40.0" sell_price="40.0" />
+        <inventory encumbrance="20.0" buy_price="80.0" sell_price="80.0" />
         <next_in_chain key="gkw_type80.weapon" share_ammo="1" />
         <sound key="fire" fileref="qjy80_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.1" />
         <sound key="magazine_out" fileref="qjy80_mgz_out_FromCOD16.wav" volume="0.6" />
@@ -78,9 +81,11 @@
         <commonness value="0" in_stock="0" can_respawn_with="1" />
         <hud_icon filename="gkw_80type_skill.png" />
         <projectile file="bullet.projectile">
-            <result class="hit" kill_probability="2.0" kill_probability_offset_on_successful_hit="1.85" kill_decay_start_time="1.5" kill_decay_end_time="1.6" />
+            <result class="hit" kill_probability="2.4" kill_probability_offset_on_successful_hit="1.85" kill_decay_start_time="1.5" kill_decay_end_time="1.6" />
             <trail probability="1.0" key="BulletMgTrail" />
         </projectile>
+        <effect class="muzzle" ref="ejection_76251" />
+        <effect class="muzzle" ref="muzzle_red_light" />
         <stance state_key="running" accuracy="1.3" />
         <stance state_key="walking" accuracy="1.3" />
         <stance state_key="crouch_moving" accuracy="1.3" />

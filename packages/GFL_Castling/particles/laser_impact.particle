@@ -122,7 +122,7 @@ particle_system Laser_Burnout_on_staticobject
     }        
 }
 
-particle_system Laser_ImpackShine
+particle_system Laser_ImpactShine
 {
 	quota 400
 	material	common_shine
@@ -236,7 +236,7 @@ particle_system Laser_ImpactBeam_Red
 
 }
 
-particle_system Laser_ImpackShine_Red
+particle_system Laser_ImpactShine_Red
 {
 	quota 400
 	material	common_shine
@@ -342,7 +342,7 @@ particle_system Laser_ImpactBeam_White
 
 }
 
-particle_system Laser_ImpackShine_Blue
+particle_system Laser_ImpactShine_Blue
 {
 	quota 400
 	material	common_shine
