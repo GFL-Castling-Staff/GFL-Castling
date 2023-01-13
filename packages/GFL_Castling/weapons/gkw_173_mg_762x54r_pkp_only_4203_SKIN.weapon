@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapons>
-    <weapon key="gkw_pkp_4203.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+    <weapon key="gkw_pkp_4203_only.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
         <specification 
         barrel_offset="0.5"
-        retrigger_time="0.0923"
+        retrigger_time="0.08"
         accuracy_factor="0.98"
         sustained_fire_grow_step="1.5"
         sustained_fire_diminish_rate="1.5"
-        spread_range="0.25"
-        magazine_size="100"
+        spread_range="0.18"
+        magazine_size="200"
         suppressed="0"
-        stance_accuracy_rate="0.5"
-        name="PKP Pecheneg-[Bamboo's Pride]"
+        stance_accuracy_rate="1.0"
+        name="PKP Pecheneg-[PT2 Adjustable Stock]-[Bamboo's Pride]"
         class="0"
         projectile_speed="206"
-        sight_range_modifier="1.5"
+        sight_range_modifier="1.8"
         slot="0"
         can_shoot_standing="1"
         can_shoot_crouching="1"
@@ -23,8 +23,8 @@
         stab_enabled="1"/>
         <animation state_key="hold_casual" animation_key="dancing, kazachok"/>
         <animation key="reload" animation_key="reloading, Machine gun 2.0"/>
-        <inventory encumbrance="20.0" buy_price="40.0" sell_price="40.0"/>
-        <next_in_chain key="gkw_pkp_4203_skill.weapon" share_ammo="1"/>
+        <inventory encumbrance="20.0" buy_price="150.0" sell_price="150.0"/>
+        <next_in_chain key="gkw_pkp_4203_only_skill.weapon" share_ammo="1"/>
         <sound key="fire" fileref="qjy80_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.1" />
         <sound key="magazine_out" fileref="qjy80_mgz_out_FromCOD16.wav" volume="0.6" />
         <sound key="magazine_in" fileref="qjy80_mgz_in_FromCOD16.wav" volume="0.6" />
@@ -34,14 +34,14 @@
         <commonness value="0" in_stock="0" can_respawn_with="1"/>
         <hud_icon filename="gkw_pkp_4203.png"/>
         <projectile file="bullet.projectile">
-            <result class="hit" kill_probability="2.4" kill_probability_offset_on_successful_hit="1.0" kill_decay_start_time="1.5" kill_decay_end_time="1.6"/>
+            <result class="hit" kill_probability="2.4" kill_probability_offset_on_successful_hit="1.75" kill_decay_start_time="1.5" kill_decay_end_time="1.6"/>
             <trail probability="1.0" key="bullet_new_deep"/>
         </projectile>
-        <stance state_key="running" accuracy="0.5"/>
-        <stance state_key="walking" accuracy="0.55"/>
-        <stance state_key="crouch_moving" accuracy="0.65"/>
-        <stance state_key="standing" accuracy="0.6"/>
-        <stance state_key="crouching" accuracy="0.8"/>
+        <stance state_key="running" accuracy="0.6"/>
+        <stance state_key="walking" accuracy="0.65"/>
+        <stance state_key="crouch_moving" accuracy="0.7"/>
+        <stance state_key="standing" accuracy="0.85"/>
+        <stance state_key="crouching" accuracy="0.9"/>
         <stance state_key="prone" accuracy="1.2"/>
         <stance state_key="prone_moving" accuracy="0.5"/>
         <stance state_key="over_wall" accuracy="1.2"/>
@@ -73,20 +73,20 @@
         <target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
     </weapon>
     
-    <weapon key="gkw_pkp_4203_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+    <weapon key="gkw_pkp_4203_only_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
         <specification 
         barrel_offset="0.5"
         retrigger_time="-1"
         accuracy_factor="1.0"
         sustained_fire_grow_step="1.5"
         sustained_fire_diminish_rate="20.0"
-        magazine_size="100"
-        stance_accuracy_rate="0.5"
+        magazine_size="200"
+        stance_accuracy_rate="1.0"
         suppressed="0"
-        name="PKP Pecheneg-[Bamboo's Pride]-[Ultimatum]"
+        name="PKP Pecheneg-[PT2 Adjustable Stock]-[Bamboo's Pride]-[Ultimatum]"
         class="1"
         projectile_speed="220"
-        sight_range_modifier="1.5"
+        sight_range_modifier="1.8"
         slot="0"
         can_shoot_standing="1"
         can_shoot_crouching="1"
@@ -96,8 +96,8 @@
         stab_enabled="1"/>
         <animation state_key="hold_casual" animation_key="dancing, kazachok"/>
         <animation key="reload" animation_key="reloading, Machine gun 2.0"/>
-        <inventory encumbrance="20.0" buy_price="40.0" sell_price="40.0"/>
-        <next_in_chain key="gkw_pkp_4203.weapon" share_ammo="1"/>
+        <inventory encumbrance="20.0" buy_price="150.0" sell_price="150.0"/>
+        <next_in_chain key="gkw_pkp_4203_only.weapon" share_ammo="1"/>
         <sound key="fire" fileref="pkp_fire_FromINS.wav" pitch_variety="0.05" volume="1.1" />
         <sound key="magazine_out" fileref="qjy80_mgz_out_FromCOD16.wav" volume="0.6" />
         <sound key="magazine_in" fileref="qjy80_mgz_in_FromCOD16.wav" volume="0.6" />
@@ -107,7 +107,7 @@
         <commonness value="0" in_stock="0" can_respawn_with="1"/>
         <hud_icon filename="gkw_pkp_4203.png"/>
         <projectile file="bullet.projectile">
-            <result class="hit" kill_probability="2.4" kill_probability_offset_on_successful_hit="1.15" kill_decay_start_time="1.5" kill_decay_end_time="1.6"/>
+            <result class="hit" kill_probability="2.4" kill_probability_offset_on_successful_hit="1.75" kill_decay_start_time="1.5" kill_decay_end_time="1.6"/>
             <trail probability="1.0" key="BulletApTrail_ct"/>
         </projectile>
         <stance state_key="running" accuracy="1.3"/>
@@ -118,7 +118,7 @@
         <stance state_key="prone" accuracy="1.3"/>
         <stance state_key="prone_moving" accuracy="1.3"/>
         <stance state_key="over_wall" accuracy="1.3"/>
-        <modifier class="speed" value="-0.3"/>
+        <modifier class="speed" value="-0.1"/>
         <tag name="machine gun"/>
         <capacity value="1" source="rank" source_value="0.0"/>
 
@@ -135,8 +135,8 @@
         <animation state_key="stabbing" animation_key="melee, quick knife"/>
         <animation state_key="stabbing" animation_key="pistol whip 3"/>
 
-        <animation key="cycle" animation_key="cycle_2h_hip_500rpm"/>
-        <animation key="cycle" stance_key="crouching" animation_key="cycle_2h_rifle_600rpm"/>
+        <animation key="cycle" animation_key="cycle_2h_hip_600rpm"/>
+        <animation key="cycle" stance_key="crouching" animation_key="cycle_2h_rifle_750rpm"/>
         <animation key="cycle" stance_key="prone" animation_key="cycle_2h_rifle_800rpm_prone"/>
         <animation key="cycle" stance_key="over_wall" animation_key="cycle_2h_rifle_800rpm"/>
 
