@@ -8,9 +8,9 @@
 	<weak_hand_hold offset="0.3"/>
 	<sound key="fire" fileref="type4_fire_FromCOD14.wav" pitch_variety="0.05" volume="1.2"/>
 	<sound key="cycle" fileref="type4_cycle_FromCOD14.wav" volume="0.4"/>
-	<sound key="magazine_out" fileref="rifle_02_m1_garand_ping.wav" volume="1"/>
-	<sound key="magazine_in" fileref="type4_cycle_FromCOD14.wav" volume="0.4"/>
-	<sound key="last_ammo" fileref="type4_ping_FromCOD14.wav" volume="0.75" />
+	<sound key="reload_one" fileref="m1garand_reload_one_FromPOSTSCRIPTUM.wav" volume="0.6" />
+
+	<sound key="last_ammo" fileref="type4_ping_FromCOD14.wav" volume="1.0" />
 	<model filename="gkw_rf_4type.xml"/>
 	<hud_icon filename="gkw_4type.png"/>
 	<inventory encumbrance="10.0" price="5.0"/>

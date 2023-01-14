@@ -43,6 +43,7 @@
         kill_probability="2.0"
         kill_decay_start_time="0.15" 
         kill_decay_end_time="0.7" />
+        <trail probability="1.0" key="bullet_buckshot"/>
     </projectile>
     <!--Accuracy, Movement speed-->
     <modifier class="hit_success_probability" value="-0.4" />
@@ -98,6 +99,7 @@
         kill_probability="2.0"
         kill_decay_start_time="0.176" 
         kill_decay_end_time="0.82" />
+        <trail probability="1.0" key="bullet_buckshot"/>
     </projectile>
     <!--Accuracy, Movement speed-->
     <modifier class="hit_success_probability" value="-0.4" />

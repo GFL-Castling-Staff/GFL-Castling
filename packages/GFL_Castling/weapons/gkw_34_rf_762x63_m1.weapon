@@ -38,7 +38,7 @@
 	<animation state_key="stabbing"	animation_key="melee, bayonet_6hp" />
 	<commonness value="0.2" in_stock="0" can_respawn_with="1" />
     <weak_hand_hold offset="0.3" />
-    <sound key="fire" fileref="m1garand_fire_FromPOSTSCRIPTUM.wav" pitch_variety="0.05" volume="1.4"/>
+    <sound key="fire" fileref="m1garand_fire_FromPOSTSCRIPTUM.wav" pitch_variety="0.05" volume="1.6"/>
 	
 	<sound key="cycle" fileref="m1garand_cycle_FromPOSTSCRIPTUM.wav" volume="0.6" />
     <sound key="cycle" fileref="m1garand_cycle_FromPOSTSCRIPTUM.wav" volume="0.6" />
@@ -54,8 +54,8 @@
 	<sound key="cycle" fileref="m1garand_cycle_FromPOSTSCRIPTUM.wav" volume="0.6" />
     <sound key="cycle" fileref="m1garand_cycle_FromPOSTSCRIPTUM.wav" volume="0.6" />
 
-    <sound key="magazine_out" fileref="m1garand_mgz_out_FromPOSTSCRIPTUM.wav" volume="0.6" />
-    <sound key="magazine_in" fileref="m1garand_mgz_in_FromPOSTSCRIPTUM.wav" volume="0.6" />
+	<sound key="reload_one" fileref="m1garand_reload_one_FromPOSTSCRIPTUM.wav" volume="0.6" />
+
     <sound key="last_ammo" fileref="rifle_02_m1_garand_ping.wav" pitch_variety="0.0" volume="2.0" />
 	<sound key="stab" fileref="dagger_swing1_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
 	<sound key="stab" fileref="dagger_swing2_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
