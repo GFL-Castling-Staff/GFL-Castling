@@ -6,7 +6,6 @@
     <trigger class="time" time_to_live="5.0"/>
     <collision class="bounce"/>
     <rotation class="random" />
-    <trail probability="0.0" key="BulletApTrail_ct" />
     <model mesh_filename="golyatplg.xml" />
     <hud_icon filename="hud_glorianade.png" />
 
