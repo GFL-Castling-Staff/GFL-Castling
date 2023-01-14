@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<projectiles>
+    <projectile class="grenade" name="" key="particle_carcano_killstreak.projectile" slot="2" radius="0.01">
+        <result class="blast" radius="0.1" damage="0.0" decal="0" push="0.0" character_state="none" make_vehicle_hit_sound="0" />
+        <trigger class="time" time_to_live="0.01"/>
+        <rotation class="none" />
+        <model />
+        <hud_icon filename="testing.png" />
+        <commonness value="0" />
+        <inventory encumbrance="1.0" price="5.0" />
+        <capacity value="1" source="rank" source_value="0.0" />
+        <effect class="result" key="terrain" ref="carcano_charge01" lighting="0" />
+        <effect class="result" key="terrain" ref="carcano_charge02" lighting="0" />
+        <effect class="result" key="terrain" ref="carcano_charge03" lighting="0" />
+        <effect class="result" key="terrain" ref="carcano_charge04" />
+        <effect class="result" key="terrain" ref="carcano_charge05" />
+        <effect class="result" key="terrain" ref="carcano_charge06" />
+        <effect class="result" key="static_object" copy="terrain" />
+        <effect class="result" key="vehicle" copy="terrain" />
+        <effect class="result" key="character" copy="terrain" />
+        <effect class="result" key="other" copy="terrain" />
+    </projectile>
+</projectiles>

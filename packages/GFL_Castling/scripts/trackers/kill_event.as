@@ -347,7 +347,7 @@ class kill_event : Tracker {
                     string c_pos = getStringPosFromCharacterId(m_metagame,characterId);
                     if(c_pos != "")
                     {
-                        spawnStaticProjectile(m_metagame,"test_particle.projectile",c_pos,characterId,factionId);
+                        spawnStaticProjectile(m_metagame,"particle_carcano_killstreak.projectile",c_pos,characterId,factionId);
                     }
                 }
                 else{
@@ -355,7 +355,7 @@ class kill_event : Tracker {
                     string c_pos = getStringPosFromCharacterId(m_metagame,characterId);
                     if(c_pos != "")
                     {
-                        spawnStaticProjectile(m_metagame,"test_particle.projectile",c_pos,characterId,factionId);
+                        spawnStaticProjectile(m_metagame,"particle_carcano_killstreak.projectile",c_pos,characterId,factionId);
                     }                    
                 }
             }
