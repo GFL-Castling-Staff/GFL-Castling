@@ -16088,6 +16088,7 @@
 	<result class="hit" kill_probability="2.4" kill_probability_offset_on_successful_hit="1.0" kill_decay_start_time="1.5" kill_decay_end_time="1.6"/>
 	<trail probability="1.0" key="bullet_new_deep"/>
 	</projectile>
+	<effect class="muzzle" ref="ejection_76251"/>
 	<stance state_key="running" accuracy="0.5"/>
 	<stance state_key="walking" accuracy="0.55"/>
 	<stance state_key="crouch_moving" accuracy="0.65"/>
@@ -16142,6 +16143,7 @@
 	<result class="hit" kill_probability="2.4" kill_probability_offset_on_successful_hit="1.15" kill_decay_start_time="1.5" kill_decay_end_time="1.6"/>
 	<trail probability="1.0" key="BulletApTrail_ct"/>
 	</projectile>
+	<effect class="muzzle" ref="ejection_76251"/>
 	<stance state_key="running" accuracy="1.3"/>
 	<stance state_key="walking" accuracy="1.3"/>
 	<stance state_key="crouch_moving" accuracy="1.3"/>
@@ -16151,6 +16153,7 @@
 	<stance state_key="prone_moving" accuracy="1.3"/>
 	<stance state_key="over_wall" accuracy="1.3"/>
 	<modifier class="speed" value="-0.3"/>
+	<modifier class="hit_success_probability" value="+0.2"/>
 	<tag name="machine gun"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<animation state_key="recoil" animation_key="recoil_hip_unlimit"/>
@@ -16200,6 +16203,7 @@
 	<result class="hit" kill_probability="2.4" kill_probability_offset_on_successful_hit="1.0" kill_decay_start_time="1.5" kill_decay_end_time="1.6"/>
 	<trail probability="1.0" key="bullet_new_deep"/>
 	</projectile>
+	<effect class="muzzle" ref="ejection_76251"/>
 	<stance state_key="running" accuracy="0.5"/>
 	<stance state_key="walking" accuracy="0.55"/>
 	<stance state_key="crouch_moving" accuracy="0.65"/>
@@ -16254,6 +16258,7 @@
 	<result class="hit" kill_probability="2.4" kill_probability_offset_on_successful_hit="1.15" kill_decay_start_time="1.5" kill_decay_end_time="1.6"/>
 	<trail probability="1.0" key="BulletApTrail_ct"/>
 	</projectile>
+	<effect class="muzzle" ref="ejection_76251"/>
 	<stance state_key="running" accuracy="1.3"/>
 	<stance state_key="walking" accuracy="1.3"/>
 	<stance state_key="crouch_moving" accuracy="1.3"/>
@@ -16263,6 +16268,7 @@
 	<stance state_key="prone_moving" accuracy="1.3"/>
 	<stance state_key="over_wall" accuracy="1.3"/>
 	<modifier class="speed" value="-0.3"/>
+	<modifier class="hit_success_probability" value="+0.2"/>
 	<tag name="machine gun"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<animation state_key="recoil" animation_key="recoil_hip_unlimit"/>
@@ -16312,6 +16318,7 @@
 	<result class="hit" kill_probability="2.4" kill_probability_offset_on_successful_hit="1.75" kill_decay_start_time="1.5" kill_decay_end_time="1.6"/>
 	<trail probability="1.0" key="bullet_new_deep"/>
 	</projectile>
+	<effect class="muzzle" ref="ejection_76251"/>
 	<stance state_key="running" accuracy="0.6"/>
 	<stance state_key="walking" accuracy="0.65"/>
 	<stance state_key="crouch_moving" accuracy="0.7"/>
@@ -16366,6 +16373,7 @@
 	<result class="hit" kill_probability="2.4" kill_probability_offset_on_successful_hit="1.75" kill_decay_start_time="1.5" kill_decay_end_time="1.6"/>
 	<trail probability="1.0" key="BulletApTrail_ct"/>
 	</projectile>
+	<effect class="muzzle" ref="ejection_76251"/>
 	<stance state_key="running" accuracy="1.3"/>
 	<stance state_key="walking" accuracy="1.3"/>
 	<stance state_key="crouch_moving" accuracy="1.3"/>
@@ -16375,6 +16383,7 @@
 	<stance state_key="prone_moving" accuracy="1.3"/>
 	<stance state_key="over_wall" accuracy="1.3"/>
 	<modifier class="speed" value="-0.1"/>
+	<modifier class="hit_success_probability" value="+0.2"/>
 	<tag name="machine gun"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<animation state_key="recoil" animation_key="recoil_hip_unlimit"/>
@@ -16424,6 +16433,7 @@
 	<result class="hit" kill_probability="2.4" kill_probability_offset_on_successful_hit="1.75" kill_decay_start_time="1.5" kill_decay_end_time="1.6"/>
 	<trail probability="1.0" key="bullet_new_deep"/>
 	</projectile>
+	<effect class="muzzle" ref="ejection_76251"/>
 	<stance state_key="running" accuracy="0.6"/>
 	<stance state_key="walking" accuracy="0.65"/>
 	<stance state_key="crouch_moving" accuracy="0.7"/>
@@ -16478,6 +16488,7 @@
 	<result class="hit" kill_probability="2.4" kill_probability_offset_on_successful_hit="1.75" kill_decay_start_time="1.5" kill_decay_end_time="1.6"/>
 	<trail probability="1.0" key="BulletApTrail_ct"/>
 	</projectile>
+	<effect class="muzzle" ref="ejection_76251"/>
 	<stance state_key="running" accuracy="1.3"/>
 	<stance state_key="walking" accuracy="1.3"/>
 	<stance state_key="crouch_moving" accuracy="1.3"/>
@@ -16487,6 +16498,7 @@
 	<stance state_key="prone_moving" accuracy="1.3"/>
 	<stance state_key="over_wall" accuracy="1.3"/>
 	<modifier class="speed" value="-0.1"/>
+	<modifier class="hit_success_probability" value="+0.2"/>
 	<tag name="machine gun"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<animation state_key="recoil" animation_key="recoil_hip_unlimit"/>
@@ -23541,7 +23553,7 @@
 	<model filename="gkw_hvy_at4.xml"/>
 	<ballistics near_far_distance="1000.0" speed_estimation_near="100.0" speed_estimation_far="100.0" max_speed="125.0" randomness="0.0"/>
 	<projectile file="at4.projectile">
-	<result class="blast" damage="40" radius="2.0" decal="1" push="0.75" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+	<result class="blast" damage="40" radius="3.5" decal="1" push="0.75" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	</projectile>
 	<weak_hand_hold offset="0.3"/>
 	<commonness value="0.00001"/>
@@ -23862,7 +23874,7 @@
 	<model filename="gkw_hvy_at4.xml"/>
 	<ballistics near_far_distance="1000.0" speed_estimation_near="120.0" speed_estimation_far="120.0" max_speed="125.0" randomness="0.0"/>
 	<projectile file="at4.projectile">
-	<result class="blast" damage="40" radius="2.0" decal="1" push="0.75" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+	<result class="blast" damage="40" radius="3.5" decal="1" push="0.75" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	</projectile>
 	<weak_hand_hold offset="0.3"/>
 	<hud_icon filename="gkw_at4.png"/>
