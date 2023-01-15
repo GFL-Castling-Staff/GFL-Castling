@@ -1,4 +1,4 @@
- particle_system TracerFlash
+particle_system TracerFlash
 {
 	quota	100
 	material	FlareFlash
@@ -91,3 +91,48 @@
 }
 
 
+particle_system TracerFlash_Quick
+{
+	quota	100
+	material	FlareFlash
+	particle_width	3.0
+	particle_height	3.0
+	cull_each	false
+	renderer	billboard
+	billboard_type	point
+
+	emitter Ellipsoid
+	{
+		angle	180
+		colour	1 0.1 0.1 0.8
+
+		direction	0 1 0
+		emission_rate	2
+		position	0 0.2 0
+		velocity	0
+		time_to_live	1.0
+
+		duration 8000
+
+		repeat_delay_min	0
+		repeat_delay_max	0
+
+		width	0
+		height	0
+		depth	0
+
+	}
+
+	affector ColourFader
+	{
+		red	-1.3
+		green	-1.3
+		blue	-1.3
+		alpha	-1.3
+	}
+
+	affector Scaler
+	{
+		rate	0.2
+	}
+}

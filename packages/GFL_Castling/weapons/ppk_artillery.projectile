@@ -25,9 +25,6 @@
     <effect class="result" key="terrain" tag="ice" ref="Godray" lighting="0" />
     <effect class="result" key="terrain" tag="ice" ref="ShadowSmoke" shadow="1" />
     <effect class="result" key="terrain" tag="ice" ref="woosh" post_processing="0" shadow="0" />      
-<!--    <effect class="result" type="splat_map" surface_tag="ice" size="3.0" atlas_index="0" layer="1" />   -->
-    <effect class="result" type="splat_map" surface_tag="ice" size="5.5" atlas_index="4" layer="0" />
-<!--    <effect class="result" type="splat_map" surface_tag="ice" size="7.0" atlas_index="0" layer="2" additive="0" /> --> <!-- remove top snow everywhere -->   
     
     <effect class="result" key="terrain" ref="BigBurst" use_surface_color="1" />
     <effect class="result" key="terrain" ref="SmokeTop" post_processing="1" />
@@ -50,5 +47,6 @@
     <effect class="result" key="static_object" copy="other" />
     <effect class="result" key="vehicle" copy="other" />
     <effect class="result" key="character" copy="other" />
+    
 	<trail probability="1.0" key="BulletApTrail_ct"/>
 </projectile>

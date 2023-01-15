@@ -2,7 +2,7 @@
 <projectiles>
     <projectile class="grenade" name="RGD-5 Offensive grenade" key="hand_grenade.projectile" slot="0" radius="0.25" drop_count_factor_on_death="0.3" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="30" drop_count_limit_in_range="3">
         <tag name="grenade" />
-        <result class="spawn" instance_class="projectile" instance_key="blast_shard_rad5.projectile" min_amount="8" max_amount="12" offset="0 0 0" position_spread="0.0 0.0" direction_spread="0.0 0.0" />
+        <result class="spawn" instance_class="projectile" instance_key="blast_shard_rad5_low.projectile" min_amount="8" max_amount="12" offset="0 0 0" position_spread="0.0 0.0" direction_spread="0.0 0.0" />
         <trigger class="time" time_to_live="1.72"/>
         <rotation class="random" />
         <trail probability="0.0" key="BulletApTrail_ct" />

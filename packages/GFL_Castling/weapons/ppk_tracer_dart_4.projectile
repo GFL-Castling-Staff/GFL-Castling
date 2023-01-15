@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projectile class="grenade" name="tracer dart" key="ppk_tracer_dart_4.projectile" slot="0" on_ground_up="0 1 0" can_be_disarmed="0" can_be_detected_by_driver="0" time_to_live_out_in_the_open="0.0" drop_count_factor_on_death="0.0" drop_count_factor_on_player_death="0.0" pulldown_in_air="1.0" radius="0.1">
-    <result class="spawn" instance_class="projectile" instance_key="artillery_shell_50ja.projectile"  min_amount="2" max_amount="2" offset="0 40 0" position_spread="3.0 3.0" direction_spread="0.16 0.16" />    
+    <result class="spawn" instance_class="projectile" instance_key="artillery_shell_50ja.projectile"  min_amount="4" max_amount="4" offset="0 40 0" position_spread="2.0 2.0" direction_spread="0.15 0.15" />    
     <collision class="sticky" />
-    <trigger class="time" time_to_live="1.0"/>
+    <trigger class="time" time_to_live="6.0"/>
     <rotation class="motion" />
     
     <model mesh_filename="paw20_round.xml" />

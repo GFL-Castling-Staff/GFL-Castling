@@ -142,9 +142,9 @@
     <effect class="result" key="character" copy="other" />
 	<trail probability="1.0" key="BulletApTrail_ct"/>
 </projectile>
-<projectile class="grenade" name="" slot="2" key="artillery_shell_50ja.projectile" pulldown_in_air="30">
-    <result class="spawn" instance_class="grenade" instance_key="blast_heavy_rad15_damage20.projectile" min_amount="1" max_amount="1" offset="0 3 0" position_spread="0 0" direction_spread="0 0" />
-    <trigger class="time" time_to_live="5.0"/>
+<projectile class="grenade" name="" slot="2" on_ground_up="0 1 0" key="artillery_shell_50ja.projectile" pulldown_in_air="30" radius="0.5">
+    <result class="spawn" instance_class="grenade" instance_key="blast_heavy_rad10_damage15.projectile" min_amount="1" max_amount="1" offset="0 3 0" position_spread="0 0" direction_spread="0 0" />
+    <trigger class="time" time_to_live="3.0"/>
     <rotation class="motion" />
     <collision class="bounce"/>
     <model mesh_filename="shell_sc50ja.xml" />

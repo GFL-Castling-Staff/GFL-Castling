@@ -167,7 +167,7 @@
         time_to_live_out_in_the_open="0.0" 
         pulldown_in_air="-5.0"
         >
-        <rotation class="ramdon" />
+        <rotation class="random" />
         <trigger class="time" time_to_live="0.5"/>
 
         <result 
