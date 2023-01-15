@@ -92,6 +92,9 @@
 	<text key="Med Bandage" text="绷带包"/>
 	<text key="M202 Air-Burst rocket launcher" text="M202“闪光”防空火箭发射器"/>
 	<text key="Smoke Device" text="烟雾发生器"/>
+	<text key="Grief Lantern" text="捣蛋灯笼"/>
+
+	
 
 	<text key="G&amp;K Skin GiftBox - Halloween Theme" text="G&amp;K 主题皮肤礼盒 - 万圣"/>
 	<text key="G&amp;K Skin GiftBox - Spring Festival Theme" text="G&amp;K 主题皮肤礼盒 - 春节"/>
@@ -661,6 +664,7 @@
 	<text key="Thunder.50 BMG" text="Thunder.50 BMG 雷电大口径手枪"/>
 	<text key="M1A1 Carbine" text="M1A1卡宾枪"/>
 	<text key="Erma EMP-35" text="埃尔玛EMP-35冲锋枪"/>
+	<text key="Remington Model 870" text="雷明顿Model 870霰弹枪"/>
 
 	
 
@@ -811,14 +815,13 @@
 	<text key="TAR-21 [Night at the Bar]" text="TAR-21 [酒吧之夜]"/>
 	<text key="TAR-21 [Night at the Bar]-[Charge Focus]" text="TAR-21 [酒吧之夜]-[冲锋专注]"/>
 	<text key="Thunder.50 BMG-[Renoirs Crow]" text="Thunder.50 BMG 雷电大口径手枪-[莉诺尔的乌鸦]"/>
-	<text key="M870-[Pumpkin Fortification]" text="M870-[南瓜堡垒]"/>
+	<text key="Remington Model 870-[Pumpkin Fortification]" text="雷明顿Model 870霰弹枪-[南瓜堡垒]"/>
 	<text key="AA-12-[Smokeless Lollipop]" text="AA-12-[无烟棒棒糖]"/>
 	<text key="AA-12-[Smokeless Lollipop]-[Ketonemia]" text="AA-12-[无烟棒棒糖]-[酮血症]"/>
 	<text key="SPAS-12-[The Fruits of Summer]" text="弗兰基SPAS-12战斗霰弹枪-[盛夏的果实]"/>
 	<text key="SPAS-12-[The Fruits of Summer]-[Damage Focus SG]" text="弗兰基SPAS-12战斗霰弹枪-[盛夏的果实]-[火力专注SG]"/>
 	<text key="SPAS-12-[Goblin Huntress]" text="弗兰基SPAS-12战斗霰弹枪-[哥布林猎手]"/>
 	<text key="SPAS-12-[Goblin Huntress]-[Damage Focus SG]" text="弗兰基SPAS-12战斗霰弹枪-[哥布林猎手]-[火力专注SG]"/>
-	<text key="M870-[Pumpkin Fortification]" text="M870-[南瓜堡垒]"/>
 	<text key="G41-[Beach Punk 2064]" text="G41-[沙滩朋克2064]"/>
 	<text key="G41-[Beach Punk 2064]-[Damage Focus T]" text="G41-[沙滩朋克2064]-[火力专注T]"/>
 	<text key="G41-[Universal Express]" text="G41-[寰宇特急]"/>
@@ -1354,6 +1357,20 @@
 
 	<text key="* complete &#37;target_count Stages" text="* 获得 &#37;target_count 次关卡胜利" />
 
+
+	<text key="shock_zone_entry_phase1" text=
+"KCCO正在攻击我们的侧翼，前进基地已经沦陷！
+他们的目标是s09区，我们必须想办法重新打通与
+s09区的通道,并确保那里的格里芬人员及时撤退。
+  首先，我们必须清理东翼反扑的铁血残部！"/>
+
+  <text key="shock_zone_entry_phase2" text=
+  "反扑的铁血已经被击退，E30公路重新打通，但KCCO也开始在我们侧翼集结兵力了。我们必须为其他人的撤离争取时间——死守所有阵地！"/>
 	
+  <text key="shock_zone_entry_phase3" text=
+  "我们已经控制了所有的关键节点，坚守这里！让我们后方的人形梯队安全撤离！"/>
+
+  <text key="shock_zone_entry_phase4" text=
+  "人形梯队已经撤离了九成，我们很快就可以——那是什么？绿光？立刻寻找掩体！那是————"/>
 
 </translation>

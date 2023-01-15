@@ -43,6 +43,8 @@
     <effect class="result" key="static_object" copy="terrain" />
     <effect class="result" key="character" copy="terrain" /> 
     <effect class="result" key="vehicle" copy="terrain" /> 
+    <effect class="activated" ref="SatchelSparkle" />
+    <effect class="activated" ref="SatchelFlash" />
 </projectile>
 <projectile class="grenade" name="Grenade" key="grenade_pp19_sub.projectile" slot="0" radius="0.25" pulldown_in_air="40">
 
@@ -87,5 +89,7 @@
     <effect class="result" key="static_object" copy="terrain" />
     <effect class="result" key="character" copy="terrain" /> 
     <effect class="result" key="vehicle" copy="terrain" /> 
+    <effect class="activated" ref="SatchelSparkle" />
+    <effect class="activated" ref="SatchelFlash" />
 </projectile>
 </projectiles>

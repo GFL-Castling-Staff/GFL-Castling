@@ -70,6 +70,11 @@ class map105_Phase : Tracker {
 	// --------------------------------------------
 	void load(const XmlElement@ root) {
 	}
+
+	protected void handlePlayerConnectEvent(const XmlElement@ event) {
+		
+	}
+	
 };
 
 class map105_Phase1 : map105_Phase {
@@ -89,6 +94,11 @@ class map105_Phase1 : map105_Phase {
 	protected void handleBaseOwnerChangeEvent(const XmlElement@ event) {
 		refresh();
     }
+
+	protected void handlePlayerConnectEvent(const XmlElement@ event) {
+		int m_player_id =  event.getIntAttribute("player_id");
+		notify(m_metagame, "shock_zone_entry_phase1", dictionary(), "misc", m_player_id, false, "", 1.0);
+	}
 
 	protected void refresh() {
 		array<const XmlElement@> baseList = getBases(m_metagame);

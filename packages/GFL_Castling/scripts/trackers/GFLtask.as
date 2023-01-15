@@ -18,25 +18,90 @@ class VestRecoverTask : Task {
     protected int m_character_id;
 	protected float m_timeLeft;
     protected int m_numLeft;
+	protected int m_heal_layer;
+
+	VestRecoverTask(Metagame@ metagame, float internal, int cId,int heal_time,int heal_layer)
+	{
+		@m_metagame = metagame;
+		m_time = internal;
+		m_character_id = cId;
+		m_num = heal_time;
+		m_heal_layer = heal_layer;
+	}
+
 
     void start() {
 		m_timeLeft=m_time;
-		m_numLeft=1;
+		m_numLeft = m_num;
 	}
 
     void update(float time) {
 		m_timeLeft -= time;
 		if (m_timeLeft < 0)
 		{
-			_log("timeplayed:"+ m_numLeft);
-			m_numLeft++;
+			healCharacter(m_metagame,m_character_id,m_heal_layer);
+			m_numLeft--;
 			m_timeLeft=m_time;
 		}
 
 	}
 
     bool hasEnded() const {
-		if (m_numLeft >= m_num) {
+		if (m_numLeft <= 0) {
+			return true;
+		}
+		return false;
+	}
+}
+
+class AOEVestRecoverTask : Task {
+    protected Metagame@ m_metagame;
+	protected float m_time;
+    protected int m_num;
+	protected float m_timeLeft;
+    protected int m_numLeft;
+	protected int m_heal_layer;
+	protected int m_faction_id;
+	protected float m_radius;
+	protected Vector3@ m_pos;
+
+	AOEVestRecoverTask(Metagame@ metagame, float internal, Vector3 pos,int heal_time,int heal_layer,int fid,float radius)
+	{
+		@m_metagame = metagame;
+		m_time = internal;
+		m_pos = pos;
+		m_num = heal_time;
+		m_heal_layer = heal_layer;
+		m_faction_id = fid;
+		m_radius = radius;
+	}
+
+
+
+    void start() {
+		m_timeLeft=m_time;
+		m_numLeft = m_num;
+	}
+
+    void update(float time) {
+		m_timeLeft -= time;
+		if (m_timeLeft < 0)
+		{
+			array<const XmlElement@> affectedCharacter = getCharactersNearPosition(m_metagame,m_pos,m_faction_id,m_radius);
+			if (affectedCharacter !is null){
+                for(uint x=0;x<affectedCharacter.length();x++){
+					int soldierId = affectedCharacter[x].getIntAttribute("id");
+					healCharacter(m_metagame,soldierId,m_heal_layer);
+                }
+            }
+			m_numLeft--;
+			m_timeLeft=m_time;
+		}
+
+	}
+
+    bool hasEnded() const {
+		if (m_numLeft <= 0) {
 			return true;
 		}
 		return false;

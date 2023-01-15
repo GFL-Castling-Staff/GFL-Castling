@@ -625,6 +625,24 @@ array<const XmlElement@>@ getCharactersNearPosition(const Metagame@ metagame, co
 	}
 }
 
+array<const XmlElement@>@ getCharactersNearPosition2(const Metagame@ metagame, const Vector3@ position,float range = 80.0f) {
+	array<const XmlElement@> characters;
+
+	XmlElement@ query = XmlElement(
+		makeQuery(metagame, array<dictionary> = {
+			dictionary = { {"TagName", "data"}, {"class", "characters"}, 
+						   {"position", position.toString()}, {"range", range} } }));
+
+	const XmlElement@ doc = metagame.getComms().query(query);
+	if (doc !is null) {
+		characters = doc.getElementsByTagName("character");
+		return characters;
+	} else {
+		array<const XmlElement@> empty;
+		return @empty;
+	}
+}
+
 // --------------------------------------------------------
 array<const XmlElement@>@ getCharactersNearVehicle(const Metagame@ metagame, int vehicleId, int factionId) {
 	array<const XmlElement@>@ characters;

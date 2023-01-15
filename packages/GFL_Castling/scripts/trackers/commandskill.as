@@ -1602,7 +1602,9 @@ class CommandSkill : Tracker {
                     Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
                     int factionid = character.getIntAttribute("faction_id");
                     array<string> Voice={
-                        "STG44_SKILL1_JP.wav"                     
+                        "STG44Mod_SKILL1_JP.wav",
+                        "STG44Mod_SKILL2_JP.wav",
+                        "STG44Mod_SKILL3_JP.wav"
                     };
                     playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
                     playAnimationKey(m_metagame,characterId,"recoil1, big",true,false);

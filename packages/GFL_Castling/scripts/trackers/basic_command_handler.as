@@ -540,8 +540,13 @@ class BasicCommandHandler : Tracker {
 			if (playerInfo is null) return;
 			int characterId= playerInfo.getIntAttribute("character_id");
 			int factionId= playerInfo.getIntAttribute("faction_id");
-			string target = playerInfo.getStringAttribute("aim_target");			
-			GFL_event_array.insertLast(GFL_event(characterId,factionId,2,stringToVector3(target),1.0,-1.0));
+			const XmlElement@ characterInfo = getCharacterInfo(m_metagame, playerInfo.getIntAttribute("character_id"));
+			Vector3 pos = stringToVector3(characterInfo.getStringAttribute("position"));
+			getCharactersNearPosition2(m_metagame,pos,15.0f);
+			notify(m_metagame, "shock_zone_entry_phase1", dictionary(), "misc", senderId, false, "Side Collapse", 1.0,10.0);
+			notify(m_metagame, "shock_zone_entry_phase2", dictionary(), "misc", senderId, false, "Side Collapse", 1.0,7.0);
+			notify(m_metagame, "shock_zone_entry_phase3", dictionary(), "misc", senderId, false, "Side Collapse", 1.0,5.0);
+			notify(m_metagame, "shock_zone_entry_phase4", dictionary(), "misc", senderId, false, "Side Collapse", 1.0,3.0);
 		}
 		// it's a silent server command, check which one
 		if (checkCommand(message, "test2")) {
