@@ -312,6 +312,9 @@ class kill_event : Tracker {
                 if(startsWith(c_armorType,"srexo_t6")){
                     updateHealByKillEvent(characterId,factionId,4,30,"vest");
                 }
+                if(startsWith(c_armorType,"tms_t6")){
+                    updateHealByKillEvent(characterId,factionId,4,30,"vest");
+                }                
                 updateHealByKillEvent(characterId,factionId,int(healOnKillWeaponList[c_weaponType]),15);
             }
 

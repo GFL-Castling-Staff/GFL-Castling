@@ -20,6 +20,7 @@ class GFL_playerlist{
     string m_weapon3key;    //投掷物key
     string m_vestkey;       //甲key
     string m_itemkey;       //掉落物key
+
     string m_pos;
     string m_old_pos;
     int m_rp;
@@ -60,38 +61,45 @@ class GFL_playerlist_system : Tracker {
         m_time -= time;
         if(m_time<0){
             m_time = refresh_time;
+            refresh();
+        }
+    }
 
-            while(GFL_playerlist_array.length()>0){        
-                int index_last = GFL_playerlist_array.length() -1;
-                GFL_playerlist@ player = GFL_playerlist_array[index_last];
-                GiveRP(m_metagame,player.m_characterid,player.m_rp);
-                GiveXP(m_metagame,player.m_characterid,player.m_xp);
-                GFL_playerlist_array.removeLast();
-            }            
-            
-            array<const XmlElement@> nowPlayers = getPlayers(m_metagame);
-            if (nowPlayers !is null){
+    void refresh(){
+        while(GFL_playerlist_array.length()>0){        
+            int index_last = GFL_playerlist_array.length() -1;
+            GFL_playerlist@ player = GFL_playerlist_array[index_last];
+            GiveRP(m_metagame,player.m_characterid,player.m_rp);
+            GiveXP(m_metagame,player.m_characterid,player.m_xp);
+            GFL_playerlist_array.removeLast();
+        }            
+        
+        array<const XmlElement@> nowPlayers = getPlayers(m_metagame);
+        if (nowPlayers !is null){
 
-                // 彻底删除一次并全部重新更新
-                for(uint i=0;i<nowPlayers.length();i++){
+            // 彻底删除一次并全部重新更新
+            for(uint i=0;i<nowPlayers.length();i++){
 
-                    int cid = nowPlayers[i].getIntAttribute("character_id");
-                    int pid = nowPlayers[i].getIntAttribute("player_id");
-                    const XmlElement@ targetCharacter = getCharacterInfo2(m_metagame,cid);
+                int cid = nowPlayers[i].getIntAttribute("character_id");
+                int pid = nowPlayers[i].getIntAttribute("player_id");
+                const XmlElement@ targetCharacter = getCharacterInfo2(m_metagame,cid);
 
-                    if(targetCharacter !is null){
-                        string pos = targetCharacter.getStringAttribute("position");
-                        array<const XmlElement@>@ equipment = targetCharacter.getElementsByTagName("item");
-                        if(equipment !is null && equipment.length() >=5){
-                        	{
-	                            string w1 = equipment[0].getStringAttribute("key");
-	                            string w2 = equipment[1].getStringAttribute("key");
-	                            string w3 = equipment[2].getStringAttribute("key");
-	                            string w4 = equipment[3].getStringAttribute("key");
-	                            string w5 = equipment[4].getStringAttribute("key");
-	                            GFL_playerlist@ new_player = GFL_playerlist(cid, pid, w1, w2, w3, w4, w5, 0,pos); 
-	                            GFL_playerlist_array.insertLast(new_player);
-	                        }
+                if(targetCharacter !is null){
+                    string pos = targetCharacter.getStringAttribute("position");
+                    array<const XmlElement@>@ equipment = targetCharacter.getElementsByTagName("item");
+                    if(equipment !is null && equipment.length() >=5){
+                        {
+                            string w1 = equipment[0].getStringAttribute("key");
+                            string w2 = equipment[1].getStringAttribute("key");
+                            string w3 = equipment[2].getStringAttribute("key");
+                            string w4 = equipment[3].getStringAttribute("key");
+                            string w5 = equipment[4].getStringAttribute("key");
+                            GFL_playerlist@ new_player = GFL_playerlist(cid, pid, w1, w2, w3, w4, w5, 0,pos); 
+                            GFL_playerlist_array.insertLast(new_player);
+                            if (startsWith(w4,'srexo_t6'))
+                            {   
+                                healCharacter(m_metagame,cid,2);
+                            }
                         }
                     }
                 }
