@@ -1929,6 +1929,12 @@
     <model filename="gkd_rf_scarh.xml">
         <requirement class="weapon" key="gkw_scarh.weapon" slot="0" />
     </model>
+    <model filename="gkd_ar_scarl.xml">
+        <requirement class="weapon" key="gkw_scarl_only.weapon" slot="0" />
+    </model>    
+    <model filename="gkd_rf_scarh.xml">
+        <requirement class="weapon" key="gkw_scarh_only.weapon" slot="0" />
+    </model>
     <model filename="gkd_hg_tt33.xml">
         <requirement class="weapon" key="gkw_tt33.weapon" slot="0" />
     </model>           
