@@ -1,0 +1,101 @@
+<vehicle name="" key="racing_car2.vehicle" map_view_atlas_index="19" respawn_time="60" allow_ai_to_use="0">
+	<tire_set offset="0.776 0.0 0.832" radius="0.408" />
+	<tire_set offset="0.776 0.0 -0.832" radius="0.408" />
+
+	<control max_speed="36.0" acceleration="9.8" max_reverse_speed="14.0" max_rotation="0.7" max_water_depth="1.0" steer_smoothening="0.8" />
+
+	<physics max_health="20.0" mass="20.0" extent="1.152 0.0 2.432" offset="0 0.0 0" top_offset="0 1.28 0" collision_model_pos="0 0.32 0.0" collision_model_extent="1.792 0.832 3.072" visual_offset="0 0.0 0.0" preserve_motion_on_impact_factor="1.0" collision_softness="1.0" collision_response_factor="1.0" destroy_on_top_hit="1" destroy_on_top_hit_time="1.0" top_hit_tracking_time="1.4" gravity="-39" />
+
+	<visual class="chassis" mesh_filename="racing_car.mesh" texture_filename="racing_car_orange2.png" />
+	<visual class="chassis" key="broken" mesh_filename="racing_car_broken.mesh" texture_filename="racing_car_orange2_broken.png" />
+	<visual class="tire" mesh_filename="racing_car_wheel.mesh" texture_filename="racing_car_orange2.png" />
+
+	<character_slot type="driver" position="0.352 -0.05 -0.2" rotation="0" exit_rotation="1.57" hiding="0" animation_id="36" marker_offset="0 0.35 0.2" />
+	<character_slot type="passenger" position="-0.352 -0.05 -0.2" rotation="-1.57" exit_rotation="-1.57" hiding="0" animation_id="37" marker_offset="0 0.35 0.2" />
+
+
+	<!-- sound handling -->
+	<!--
+	<rev_sound filename="jeep_rev0.wav" low_pitch="0.8" high_pitch="1.0" low_rev="0.0" high_rev="0.2" volume="0.8" />
+	<rev_sound filename="jeep_rev1.wav" low_pitch="0.5" high_pitch="1.1" low_rev="0.1" high_rev="1.0" volume="1.0" />
+	-->
+	<rev_sound filename="jeep2_rev0.wav" low_pitch="0.8" high_pitch="1.0" low_rev="0.0" high_rev="0.3" volume="0.8" />
+	<rev_sound filename="jeep2_rev2.wav" low_pitch="0.4" high_pitch="1.5" low_rev="0.1" high_rev="0.7" volume="1.0" />
+	<rev_sound filename="jeep2_rev3.wav" low_pitch="0.6" high_pitch="1.7" low_rev="0.5" high_rev="1.0" volume="0.8" />
+
+	<sound key="slide" filename="slide_noise.wav" />
+	<sound key="squeal" filename="tire_squeal.wav" />
+	<sound key="ignition" filename="jeep2_ignition.wav" low_pitch="0.5" high_pitch="0.6" />
+	<sound key="horn" filename="horn_jeep.wav" />    
+	<sound key="hit" filename="car_hit1.wav" />
+	<sound key="hit" filename="car_hit2.wav" />
+	<sound key="hit" filename="car_hit3.wav" />
+	<sound key="destroy" filename="vehicle_explosion_1.wav" />  
+	<sound key="cleanup" filename="vehicle_explosion_1.wav" />  
+  
+
+	<effect event_key="slide" type="splat_map" surface_tag="road" size="2.0" atlas_index="5" layer="0" />
+	<effect event_key="slide_hard" type="splat_map" surface_tag="road" size="2.0" atlas_index="5" layer="0" />
+	<!-- <effect event_key="slide_hard" type="splat_map" surface_tag="road" size="0.5" atlas_index="2" layer="0" /> -->
+
+	<effect event_key="slide" type="splat_map" surface_tag="dirt" size="1.0" atlas_index="2" layer="1" />
+	<effect event_key="slide" type="particle" key="terrain" surface_tag="dirt" ref="Burst" use_surface_color="1" />
+	<!-- <effect event_key="slide_hard" type="particle" key="terrain" ref="Burst" use_surface_color="1" /> -->
+
+ 
+        <effect event_key="destroyed" ref="SmallSmokeVehicle" offset="0.4 1.7 1.9" />
+        <effect event_key="destroyed" ref="SmallFireRepeat" offset="0.4 1.1 1.9" />
+        <effect event_key="destroy" key="other" ref="woosh" post_processing="0" shadow="0" />   
+        <effect event_key="cleanup" key="other" ref="woosh" post_processing="0" shadow="0" />         
+
+
+<!--
+        <effect event_key="drive_chassis" ref="Propulsion" offset="0.32 0.4 -1.84" />
+-->
+
+<!--        <effect event_key="destroyed" ref="BurstRepeat" bind="0" />
+        <effect event_key="destroyed" ref="BurstRepeat" bind="1" />
+-->
+
+	<event>
+		<trigger class="destroy" />
+  	<result class="spawn" instance_class="visual_item" instance_key="burning_piece_jeep1.visual_item" min_amount="1" max_amount="3" offset="0 1.6 0" position_spread="1.5 1.5" direction_spread="0.15 0.3" />
+	</event>
+	<event>
+		<trigger class="destroy" />  	
+    <result class="spawn" instance_class="visual_item" instance_key="burning_piece_jeep2.visual_item" min_amount="0" max_amount="1" offset="0 1.6 0" position_spread="1.5 1.5" direction_spread="0.1 0.3" />
+	</event>
+  <event>
+		<trigger class="destroy" />		
+    <result class="spawn" instance_class="visual_item" instance_key="burning_piece_jeep3.visual_item" min_amount="1" max_amount="2" offset="0 1.6 0" position_spread="1.5 1.5" direction_spread="0.1 0.25" />
+	</event>
+  <event>
+		<trigger class="destroy" />		
+    <result class="spawn" instance_class="visual_item" instance_key="burning_piece_jeep4.visual_item" min_amount="1" max_amount="3" offset="0 1.6 0" position_spread="1.5 1.5" direction_spread="0.15 0.25" />
+	</event>
+  <event>
+		<trigger class="destroy" />		
+    <result class="spawn" instance_class="visual_item" instance_key="burning_piece_jeep5.visual_item" min_amount="2" max_amount="3" offset="0 1.6 0" position_spread="1.5 1.5" direction_spread="0.1 0.3" />
+	</event>
+  <event>
+		<trigger class="destroy" />		
+    <result class="spawn" instance_class="visual_item" instance_key="burning_piece_jeep6.visual_item" min_amount="2" max_amount="3" offset="0 1.6 0" position_spread="1.5 1.5" direction_spread="0.1 0.2" /> 
+  </event>
+  
+<!--  <event>
+		<trigger class="destroy" />		
+    <result class="spawn" instance_class="visual_item" instance_key="burning_piece_cleanup.visual_item" min_amount="20" max_amount="30" offset="0 1.6 0" position_spread="1.5 1.5" direction_spread="0.1 0.1" /> 
+  </event>      
+-->
+  
+  <event>
+		<trigger class="cleanup" />		
+    <result class="spawn" instance_class="visual_item" instance_key="burning_piece_cleanup.visual_item" min_amount="20" max_amount="30" offset="0 2.0 0" position_spread="1.5 1.5" direction_spread="0.1 0.1" /> 
+  </event>    
+
+ 	<event>
+		<trigger class="cleanup" />
+    <result class="spawn" instance_class="projectile" instance_key="debri_stun" min_amount="1" max_amount="1" offset="0 3.0 0" position_spread="0.0 0.0" direction_spread="0.0 0.0" />
+  </event>  
+  
+</vehicle>
