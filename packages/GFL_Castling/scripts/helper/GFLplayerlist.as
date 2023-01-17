@@ -98,7 +98,7 @@ class GFL_playerlist_system : Tracker {
                             GFL_playerlist_array.insertLast(new_player);
                             if (startsWith(w4,'srexo_t6'))
                             {   
-                                healCharacter(m_metagame,cid,2);
+                                healCharacter(m_metagame,cid,1);
                             }
                         }
                     }
