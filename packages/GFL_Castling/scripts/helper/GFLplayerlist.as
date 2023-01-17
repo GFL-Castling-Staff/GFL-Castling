@@ -92,8 +92,8 @@ class GFL_playerlist_system : Tracker {
                             string w1 = equipment[0].getStringAttribute("key");
                             string w2 = equipment[1].getStringAttribute("key");
                             string w3 = equipment[2].getStringAttribute("key");
-                            string w4 = equipment[3].getStringAttribute("key");
-                            string w5 = equipment[4].getStringAttribute("key");
+                            string w4 = equipment[4].getStringAttribute("key");
+                            string w5 = equipment[3].getStringAttribute("key");
                             GFL_playerlist@ new_player = GFL_playerlist(cid, pid, w1, w2, w3, w4, w5, 0,pos); 
                             GFL_playerlist_array.insertLast(new_player);
                             if (startsWith(w4,'srexo_t6'))
