@@ -39,6 +39,7 @@ dictionary itemDropFileIndex = {
     {"upgrade_pkp.carry_item",18},
     {"upgrade_scarl.carry_item",19},
     {"upgrade_scarh.carry_item",20},
+    {"upgrade_cso.carry_item",21},
 
     {"666",0}
 };
@@ -67,6 +68,7 @@ dictionary itemDropKeyIndex = {
     {"pkp",18},
     {"scarl",19},
     {"scarh",20},
+    {"cso",21},
 
     {"666",0}
 };
@@ -367,6 +369,19 @@ class ItemDropEvent : Tracker {
                     }
                     break;
                 }
+                case 21:{
+                    if(checkQueue(pId,"cso")){
+                        addItemInBackpack(m_metagame,cId,"carry_item","upgrade_cso.carry_item");
+                        sendPrivateMessageKey(m_metagame, pId, "onlyonequeue_common");
+                        playPrivateSound(m_metagame,"sfx_failed.wav",pId);
+                    }
+                    else{
+                        startQueue(pId,"cso");
+                        sendPrivateMessageKey(m_metagame, pId, "upgrade_common");
+                        playPrivateSound(m_metagame,"sfx_equip.wav",pId);
+                    }
+                    break;
+                }
 
                 default:{
                     if (checkQueue(pId,"mod3")){
@@ -533,6 +548,16 @@ class ItemDropEvent : Tracker {
                         m_craftQueue.removeAt(findQueueIndex(pId,"scarh"));
                         playPrivateSound(m_metagame,"digimind_sfx2.wav",pId);
                     }
+                    else if (checkQueue(pId,"cso") && (itemKey=="gkw_svd.weapon" || itemKey=="gkw_svd_skill.weapon")){
+                        addItemInBackpack(m_metagame,cId,"weapon","gkw_svdex.weapon");
+                        m_craftQueue.removeAt(findQueueIndex(pId,"cso"));
+                        playPrivateSound(m_metagame,"digimind_sfx2.wav",pId);
+                    }                    
+                    else if (checkQueue(pId,"cso") && (itemKey=="gkw_svd_5506.weapon" || itemKey=="gkw_svd_5506_skill.weapon")){
+                        addItemInBackpack(m_metagame,cId,"weapon","gkw_svdex_5506.weapon");
+                        m_craftQueue.removeAt(findQueueIndex(pId,"cso"));
+                        playPrivateSound(m_metagame,"digimind_sfx2.wav",pId);
+                    }                           
                     break;
                 }
             }
@@ -813,7 +838,13 @@ class ItemDropEvent : Tracker {
                                 playPrivateSound(m_metagame,"sfx_returnback.wav",pId);
                                 sendPrivateMessageKey(m_metagame, pId, "quest_timeout");
                                 break;
-                            }                                                                                 
+                            }                 
+                            case 21:{ 
+                                addItemInBackpack(m_metagame,cId,"carry_item","upgrade_cso.carry_item");
+                                playPrivateSound(m_metagame,"sfx_returnback.wav",pId);
+                                sendPrivateMessageKey(m_metagame, pId, "quest_timeout");
+                                break;
+                            }                                                                                              
                             default:
                                 break;
                         }                                      
