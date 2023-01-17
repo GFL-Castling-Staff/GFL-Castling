@@ -442,6 +442,9 @@ dictionary commandSkillIndex = {
         // 波波沙机甲，先暂定为打烟，做不做维修效果另说
         {"gkr_bbs.weapon",55},
 
+        {"gkw_svdex.weapon",56},
+        {"gkw_svdex_5506.weapon",56},
+
         // 下面这行是用来占位的，在这之上添加新的枪和index即可
         {"666",-1}
 };
@@ -579,6 +582,7 @@ class CommandSkill : Tracker {
                     case 53:{excuteSniperSkill_Pos(cId,senderId,m_modifer,c_weaponType);break;}
                     case 54:{excuteF1skill(cId,senderId,m_modifer);break;}
                     case 55:{excuteBBSRobotskill(cId,senderId,m_modifer);break;}
+                    case 56:{excuteSVDEXskill(cId,senderId,m_modifer);break;}
 
                     default:
                         break;
@@ -2398,6 +2402,48 @@ class CommandSkill : Tracker {
                         CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"40mm_g3mod3.projectile",characterId,factionid,45.0,6.0);
                     }
                     addCoolDown("G3MOD3",20,characterId,modifer);
+                }
+            }
+        }
+    }    
+    void excuteSVDEXskill(int characterId,int playerId,SkillModifer@ modifer){
+        bool ExistQueue = false;
+        int j=-1;
+        for (uint i=0;i<SkillArray.length();i++){
+            if (InCooldown(characterId,modifer,SkillArray[i]) && SkillArray[i].m_weapontype=="SVDEX") {
+                ExistQueue=true;
+                j=i;
+            }
+        }
+        if (ExistQueue){
+            dictionary a;
+            a["%time"] = ""+SkillArray[j].m_time;
+            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            //_log("skill cooldown" + SkillArray[j].m_time);
+            return;
+        }
+        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+        if (character !is null) {
+            const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+            if (player !is null){
+                if (player.hasAttribute("aim_target")) {
+                    string target = player.getStringAttribute("aim_target");
+                    Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
+                    int factionid = character.getIntAttribute("faction_id");
+                    array<string> Voice={
+                        "",
+                    };
+                    playSoundAtLocation(m_metagame,"416mod3skill_Fire_FromL4D2.wav",factionid,c_pos,1.0);
+                    playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+                    playAnimationKey(m_metagame,characterId,"recoil1, big",true,false);
+                    c_pos=c_pos.add(Vector3(0,1,0));
+                    if (checkFlatRange(c_pos,stringToVector3(target),15)){
+                        CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"std_aa_grenade.projectile",characterId,factionid,60);
+                    }
+                    else{
+                        CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"std_aa_grenade.projectile",characterId,factionid,45.0,6.0);
+                    }
+                    addCoolDown("SVDEX",12,characterId,modifer);
                 }
             }
         }
