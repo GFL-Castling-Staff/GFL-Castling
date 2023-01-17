@@ -3423,6 +3423,7 @@
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="2.0" kill_probability_offset_on_successful_hit="4.0" kill_decay_start_time="1.735" kill_decay_end_time="2.892"/>
 	</projectile>
+	<effect class="muzzle" ref="ejection_76251"/>
 	<stance state_key="running" accuracy="0.5"/>
 	<stance state_key="walking" accuracy="0.6"/>
 	<stance state_key="crouch_moving" accuracy="0.6"/>
@@ -3470,7 +3471,9 @@
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="2.0" kill_probability_offset_on_successful_hit="2.5" kill_decay_start_time="1.735" kill_decay_end_time="2.892"/>
+	<trail probability="1.0" key="BulletApTrail_ct"/>
 	</projectile>
+	<effect class="muzzle" ref="ejection_76251"/>
 	<stance state_key="running" accuracy="1.1"/>
 	<stance state_key="walking" accuracy="1.1"/>
 	<stance state_key="crouch_moving" accuracy="1.1"/>
@@ -3520,6 +3523,7 @@
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="2.0" kill_probability_offset_on_successful_hit="4.0" kill_decay_start_time="1.735" kill_decay_end_time="2.892"/>
 	</projectile>
+	<effect class="muzzle" ref="ejection_76251"/>
 	<stance state_key="running" accuracy="0.5"/>
 	<stance state_key="walking" accuracy="0.6"/>
 	<stance state_key="crouch_moving" accuracy="0.6"/>
@@ -3566,7 +3570,9 @@
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="2.0" kill_probability_offset_on_successful_hit="2.5" kill_decay_start_time="1.735" kill_decay_end_time="2.892"/>
+	<trail probability="1.0" key="BulletApTrail_ct"/>
 	</projectile>
+	<effect class="muzzle" ref="ejection_76251"/>
 	<stance state_key="running" accuracy="1.1"/>
 	<stance state_key="walking" accuracy="1.1"/>
 	<stance state_key="crouch_moving" accuracy="1.1"/>
@@ -3599,11 +3605,11 @@
 </weapon>
 
 <weapon key="gkw_svdex.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="0.24" accuracy_factor="1" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="2.5" spread_range="0.15" magazine_size="20" can_shoot_standing="1" suppressed="0" name="SVD-EX" class="0" burst_shots="1" reload_one_at_a_time="0" sight_range_modifier="1.5" projectile_speed="210" barrel_offset="0.4" stance_accuracy_rate="1.5" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" last_burst_retrigger_time="-1" slot="0"/>
+	<specification retrigger_time="0.35" accuracy_factor="1" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="3.5" spread_range="0.15" magazine_size="20" can_shoot_standing="1" suppressed="0" name="SVD-EX" class="0" burst_shots="1" reload_one_at_a_time="0" sight_range_modifier="1.5" projectile_speed="210" barrel_offset="0.4" stance_accuracy_rate="1.5" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" last_burst_retrigger_time="-1" slot="0"/>
 	<inventory buy_price="300.0" sell_price="300.0"/>
 	<animation state_key="hold_casual" animation_key="dancing, kazachok"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
-	<sound key="fire" fileref="svd_fire_FromCSOL.wav" pitch_variety="0.02" volume="0.8"/>
+	<sound key="fire" fileref="svd_fire_FromCSOL.wav" pitch_variety="0.02" volume="0.9"/>
 	<sound key="magazine_out" fileref="svd_mgz_out_FromCOD16.wav" volume="0.8"/>
 	<sound key="magazine_in" fileref="svd_mgz_in_FromSQUAD.wav" volume="0.8"/>
 	<sound key="cycle" fileref="svd_cycle_FromSQUAD.wav" volume="0.8"/>
@@ -3612,8 +3618,11 @@
 	<hud_icon filename="gkw_svd.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="5.0" kill_probability_offset_on_successful_hit="4.0" kill_decay_start_time="1.735" kill_decay_end_time="2.892"/>
+	<result class="hit" kill_probability="5.0" kill_probability_offset_on_successful_hit="7.0" kill_decay_start_time="1.735" kill_decay_end_time="2.892"/>
+	<trail probability="1.0" key="bullet_thick_long"/>
 	</projectile>
+	<effect class="muzzle" ref="ejection_76251"/>
+	<effect class="muzzle" ref="at_bullet_smoke_trail" lighting="0"/>
 	<stance state_key="running" accuracy="0.5"/>
 	<stance state_key="walking" accuracy="0.6"/>
 	<stance state_key="crouch_moving" accuracy="0.6"/>
@@ -3645,12 +3654,12 @@
 </weapon>
 
 <weapon key="gkw_svdex_5506.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="0.24" accuracy_factor="1" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="2.5" spread_range="0.15" magazine_size="20" can_shoot_standing="1" suppressed="0" name="SVD-EX-[Camellia's Vigil]" class="0" burst_shots="1" reload_one_at_a_time="0" sight_range_modifier="1.5" projectile_speed="210" barrel_offset="0.4" stance_accuracy_rate="1.5" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" last_burst_retrigger_time="-1" slot="0"/>
+	<specification retrigger_time="0.35" accuracy_factor="1" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="3.5" spread_range="0.15" magazine_size="20" can_shoot_standing="1" suppressed="0" name="SVD-EX-[Camellia's Vigil]" class="0" burst_shots="1" reload_one_at_a_time="0" sight_range_modifier="1.5" projectile_speed="210" barrel_offset="0.4" stance_accuracy_rate="1.5" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" last_burst_retrigger_time="-1" slot="0"/>
 	<inventory buy_price="300.0" sell_price="300.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<animation state_key="hold_casual" animation_key="dancing, kazachok"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
-	<sound key="fire" fileref="svd_fire_FromCSOL.wav" pitch_variety="0.02" volume="0.8"/>
+	<sound key="fire" fileref="svd_fire_FromCSOL.wav" pitch_variety="0.02" volume="0.9"/>
 	<sound key="magazine_out" fileref="svd_mgz_out_FromCOD16.wav" volume="0.8"/>
 	<sound key="magazine_in" fileref="svd_mgz_in_FromSQUAD.wav" volume="0.8"/>
 	<sound key="cycle" fileref="svd_cycle_FromSQUAD.wav" volume="0.8"/>
@@ -3659,8 +3668,11 @@
 	<hud_icon filename="gkw_svd_5506.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="5.0" kill_probability_offset_on_successful_hit="4.0" kill_decay_start_time="1.735" kill_decay_end_time="2.892"/>
+	<result class="hit" kill_probability="5.0" kill_probability_offset_on_successful_hit="7.0" kill_decay_start_time="1.735" kill_decay_end_time="2.892"/>
+	<trail probability="1.0" key="bullet_thick_long"/>
 	</projectile>
+	<effect class="muzzle" ref="ejection_76251"/>
+	<effect class="muzzle" ref="at_bullet_smoke_trail" lighting="0"/>
 	<stance state_key="running" accuracy="0.5"/>
 	<stance state_key="walking" accuracy="0.6"/>
 	<stance state_key="crouch_moving" accuracy="0.6"/>
@@ -21810,7 +21822,7 @@
 	<hud_icon filename="gkw_scarl_only.png"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="1.8" kill_probability_offset_on_successful_hit="5.2" kill_decay_start_time="0.788" kill_decay_end_time="1.32"/>
+	<result class="hit" kill_probability="1.85" kill_probability_offset_on_successful_hit="3.5" kill_decay_start_time="0.788" kill_decay_end_time="1.32"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_556"/>
 	<stance state_key="running" accuracy="0.6"/>
@@ -25892,11 +25904,12 @@
 </weapon>
 
 <weapon key="gkw_g11mod3.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification accuracy_factor="0.98" barrel_offset="0.2" class="0" magazine_size="50" name="G11(MOD3)" projectile_speed="270" retrigger_time="0.12" suppressed="0" sustained_fire_diminish_rate="2.0" sustained_fire_grow_step="0.1" sight_range_modifier="1.5" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
+	<specification accuracy_factor="0.98" barrel_offset="0.2" class="0" magazine_size="50" name="G11(MOD3)" projectile_speed="210" retrigger_time="0.12" suppressed="0" sustained_fire_diminish_rate="2.0" sustained_fire_grow_step="0.1" sight_range_modifier="1.5" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
 	<next_in_chain key="gkw_g11mod3_skill.weapon" share_ammo="1"/>
-	<animation key="reload" animation_key="reloading, magazine rifle 1.5"/>
+	<animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
 	<animation state_key="stabbing" animation_key="melee, bayonet"/>
 	<inventory buy_price="300.0" sell_price="300.0"/>
+	<commonness value="0.0001" in_stock="0"/>
 	<sound key="fire" fileref="g11_fire_FromCOD17.wav" pitch_variety="0" volume="1"/>
 	<sound key="magazine_out" fileref="g11_mgz_out_FromCOD17.wav" volume="0.8"/>
 	<sound key="magazine_in" fileref="g11_mgz_in_FromCOD7.wav" volume="0.8"/>
@@ -25907,7 +25920,7 @@
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="1.9" kill_probability_offset_on_successful_hit="3.0" kill_decay_start_time="0.876" kill_decay_end_time="1.46"/>
+	<result class="hit" kill_probability="2.3" kill_probability_offset_on_successful_hit="3.0" kill_decay_start_time="0.876" kill_decay_end_time="1.46"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.8"/>
 	<stance state_key="walking" accuracy="0.8"/>
@@ -25920,7 +25933,6 @@
 	<modifier class="detectability" value="0"/>
 	<modifier class="speed" value="0.1"/>
 	<tag name="autorifle"/>
-	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<animation key="recoil" animation_key="recoil1"/>
 	<animation key="recoil" animation_key="recoil2"/>
@@ -25941,10 +25953,10 @@
 </weapon>
 
 <weapon key="gkw_g11mod3_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification accuracy_factor="0.98" barrel_offset="0.23" class="4" magazine_size="50" name="G11(MOD3)-[Stance of the Assaulter]" projectile_speed="270" retrigger_time="0.02" suppressed="0" sustained_fire_diminish_rate="2.2" sustained_fire_grow_step="0.2" burst_shots="3" last_burst_retrigger_time="-1" sight_range_modifier="1.5" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<specification accuracy_factor="0.98" barrel_offset="0.23" class="4" magazine_size="50" name="G11(MOD3)-[Stance of the Assaulter]" projectile_speed="210" retrigger_time="0.02" suppressed="0" sustained_fire_diminish_rate="2.2" sustained_fire_grow_step="0.2" burst_shots="3" projectiles_per_shot="2" last_burst_retrigger_time="-1" sight_range_modifier="1.5" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<next_in_chain key="gkw_g11mod3.weapon" share_ammo="1"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
-	<animation key="reload" animation_key="reloading, magazine rifle 1.8"/>
+	<animation key="reload" animation_key="reloading, magazine rifle 1.5"/>
 	<animation state_key="stabbing" animation_key="melee, bayonet"/>
 	<inventory buy_price="300.0" sell_price="300.0"/>
 	<sound key="fire" fileref="g11skill_fire_FromCF.wav" pitch_variety="0" volume="1"/>
@@ -25957,7 +25969,7 @@
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="1.9" kill_probability_offset_on_successful_hit="1.5" kill_decay_start_time="0.976" kill_decay_end_time="1.46"/>
+	<result class="hit" kill_probability="1.9" kill_probability_offset_on_successful_hit="1.9" kill_decay_start_time="0.976" kill_decay_end_time="1.46"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.8"/>
 	<stance state_key="walking" accuracy="0.8"/>
@@ -38070,9 +38082,9 @@
 </weapon>
 
 <weapon key="gkw_g11mod3_9.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification accuracy_factor="0.98" barrel_offset="0.2" class="0" magazine_size="50" name="G11(MOD3)-[Zombie NEET]" projectile_speed="270" retrigger_time="0.12" suppressed="0" sustained_fire_diminish_rate="2.0" sustained_fire_grow_step="0.1" sight_range_modifier="1.5" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
+	<specification accuracy_factor="0.98" barrel_offset="0.2" class="0" magazine_size="50" name="G11(MOD3)-[Zombie NEET]" projectile_speed="210" retrigger_time="0.12" suppressed="0" sustained_fire_diminish_rate="2.0" sustained_fire_grow_step="0.1" sight_range_modifier="1.5" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
 	<next_in_chain key="gkw_g11mod3_skill_9.weapon" share_ammo="1"/>
-	<animation key="reload" animation_key="reloading, magazine rifle 1.5"/>
+	<animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
 	<animation state_key="stabbing" animation_key="melee, bayonet"/>
 	<inventory buy_price="300.0" sell_price="300.0"/>
 	<commonness value="0" in_stock="0"/>
@@ -38086,7 +38098,7 @@
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="1.9" kill_probability_offset_on_successful_hit="3.0" kill_decay_start_time="0.876" kill_decay_end_time="1.46"/>
+	<result class="hit" kill_probability="2.3" kill_probability_offset_on_successful_hit="3.0" kill_decay_start_time="0.876" kill_decay_end_time="1.46"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.8"/>
 	<stance state_key="walking" accuracy="0.8"/>
@@ -38119,10 +38131,10 @@
 </weapon>
 
 <weapon key="gkw_g11mod3_skill_9.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification accuracy_factor="0.98" barrel_offset="0.23" class="4" magazine_size="50" name="G11(MOD3)-[Zombie NEET]-[Stance of the Assaulter]" projectile_speed="270" retrigger_time="0.02" suppressed="0" sustained_fire_diminish_rate="2.2" sustained_fire_grow_step="0.2" burst_shots="3" last_burst_retrigger_time="-1" sight_range_modifier="1.5" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<specification accuracy_factor="0.98" barrel_offset="0.23" class="4" magazine_size="50" name="G11(MOD3)-[Zombie NEET]-[Stance of the Assaulter]" projectile_speed="270" retrigger_time="0.02" suppressed="0" sustained_fire_diminish_rate="2.2" sustained_fire_grow_step="0.2" burst_shots="3" projectiles_per_shot="2" last_burst_retrigger_time="-1" sight_range_modifier="1.5" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<next_in_chain key="gkw_g11mod3_9.weapon" share_ammo="1"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
-	<animation key="reload" animation_key="reloading, magazine rifle 1.8"/>
+	<animation key="reload" animation_key="reloading, magazine rifle 1.5"/>
 	<animation state_key="stabbing" animation_key="melee, bayonet"/>
 	<inventory buy_price="300.0" sell_price="300.0"/>
 	<sound key="fire" fileref="g11skill_fire_FromCF.wav" pitch_variety="0" volume="1"/>
@@ -38131,11 +38143,11 @@
 	<sound key="cycle" fileref="g11_cycle_FromCOD7.wav" volume="0.8"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_ar_g11_9.xml"/>
-	<hud_icon filename="gkw_g11_538_skill.png"/>
+	<hud_icon filename="gkw_g11_9.png"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="1.9" kill_probability_offset_on_successful_hit="1.5" kill_decay_start_time="0.976" kill_decay_end_time="1.46"/>
+	<result class="hit" kill_probability="1.9" kill_probability_offset_on_successful_hit="1.9" kill_decay_start_time="0.976" kill_decay_end_time="1.46"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.8"/>
 	<stance state_key="walking" accuracy="0.8"/>
@@ -38168,9 +38180,9 @@
 </weapon>
 
 <weapon key="gkw_g11mod3_538.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification accuracy_factor="0.98" barrel_offset="0.2" class="0" magazine_size="50" name="G11(MOD3)-[Courage Seeking Rex Rabbit]" projectile_speed="270" retrigger_time="0.12" suppressed="0" sustained_fire_diminish_rate="2.0" sustained_fire_grow_step="0.1" sight_range_modifier="1.5" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
+	<specification accuracy_factor="0.98" barrel_offset="0.2" class="0" magazine_size="50" name="G11(MOD3)-[Courage Seeking Rex Rabbit]" projectile_speed="210" retrigger_time="0.12" suppressed="0" sustained_fire_diminish_rate="2.0" sustained_fire_grow_step="0.1" sight_range_modifier="1.5" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
 	<next_in_chain key="gkw_g11mod3_skill_538.weapon" share_ammo="1"/>
-	<animation key="reload" animation_key="reloading, magazine rifle 1.5"/>
+	<animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
 	<animation state_key="stabbing" animation_key="melee, bayonet"/>
 	<inventory buy_price="300.0" sell_price="300.0"/>
 	<commonness value="0" in_stock="0"/>
@@ -38184,7 +38196,7 @@
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="1.9" kill_probability_offset_on_successful_hit="3.0" kill_decay_start_time="0.876" kill_decay_end_time="1.46"/>
+	<result class="hit" kill_probability="2.3" kill_probability_offset_on_successful_hit="3.0" kill_decay_start_time="0.876" kill_decay_end_time="1.46"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.8"/>
 	<stance state_key="walking" accuracy="0.8"/>
@@ -38217,10 +38229,10 @@
 </weapon>
 
 <weapon key="gkw_g11mod3_skill_538.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification accuracy_factor="0.98" barrel_offset="0.23" class="4" magazine_size="55" name="G11(MOD3)-[Courage Seeking Rex Rabbit]-[Stance of the Assaulter]" projectile_speed="270" retrigger_time="0.02" suppressed="0" sustained_fire_diminish_rate="2.2" sustained_fire_grow_step="0.2" burst_shots="3" last_burst_retrigger_time="-1" sight_range_modifier="1.5" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<specification accuracy_factor="0.98" barrel_offset="0.23" class="4" magazine_size="50" name="G11(MOD3)-[Courage Seeking Rex Rabbit]-[Stance of the Assaulter]" projectile_speed="210" retrigger_time="0.02" suppressed="0" sustained_fire_diminish_rate="2.2" sustained_fire_grow_step="0.2" burst_shots="3" projectiles_per_shot="2" last_burst_retrigger_time="-1" sight_range_modifier="1.5" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<next_in_chain key="gkw_g11mod3_538.weapon" share_ammo="1"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
-	<animation key="reload" animation_key="reloading, magazine rifle 1.8"/>
+	<animation key="reload" animation_key="reloading, magazine rifle 1.5"/>
 	<animation state_key="stabbing" animation_key="melee, bayonet"/>
 	<inventory buy_price="300.0" sell_price="300.0"/>
 	<sound key="fire" fileref="g11skill_fire_FromCF.wav" pitch_variety="0" volume="1"/>
@@ -38229,11 +38241,11 @@
 	<sound key="cycle" fileref="g11_cycle_FromCOD7.wav" volume="0.8"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_ar_g11_538.xml"/>
-	<hud_icon filename="gkw_g11_538_skill.png"/>
+	<hud_icon filename="gkw_g11_538.png"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="1.9" kill_probability_offset_on_successful_hit="1.5" kill_decay_start_time="0.976" kill_decay_end_time="1.46"/>
+	<result class="hit" kill_probability="1.9" kill_probability_offset_on_successful_hit="1.9" kill_decay_start_time="0.976" kill_decay_end_time="1.46"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.8"/>
 	<stance state_key="walking" accuracy="0.8"/>
