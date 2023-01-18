@@ -22,7 +22,7 @@
 	projectile_speed="242.47" 
 	barrel_offset="0.6" 
 	projectiles_per_shot="4" />
-    <inventory  buy_price="300.0" sell_price="200.0" />	
+    <inventory encumbrance="10.0" buy_price="300.0" sell_price="200.0" />	
 	<!--Animations-->
 	
 
@@ -90,7 +90,7 @@
     <hud_icon filename="gkw_ksvk_5504.png" />
     <commonness value="0" in_stock="0" />
 
-    <!-- <inventory  price="4.0" /> -->
+    <!-- <inventory encumbrance="10.0" price="4.0" /> -->
 	
 	<!--Ballistics-->
 	

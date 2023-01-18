@@ -18,7 +18,7 @@
     stance_accuracy_rate="0.9"
 	projectiles_per_shot="11"
 	 />
-    <inventory  buy_price="50.0" sell_price="50.0" />
+    <inventory encumbrance="10.0" buy_price="50.0" sell_price="50.0" />
     <commonness value="0" in_stock="0" />
     <!--Animations-->
     <animation state_key="cycle" animation_key="Pshotgun0.5" />

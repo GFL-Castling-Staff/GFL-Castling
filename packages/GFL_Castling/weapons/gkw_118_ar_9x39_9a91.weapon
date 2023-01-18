@@ -16,7 +16,7 @@
         sight_range_modifier="1.2" />
         <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
         <animation state_key="hold_casual" animation_key="dancing, kazachok" />
-        <inventory  buy_price="10.0" sell_price="10.0" />
+        <inventory encumbrance="10.0" buy_price="10.0" sell_price="10.0" />
         <next_in_chain key="gkw_9a91_skill.weapon" share_ammo="1" />
         <sound key="fire" fileref="9a91_fire_FromBFBC2.wav" pitch_variety="0.05" volume="1.5" />
         <sound key="magazine_out" fileref="sr3mp_mgz_out_FromBFBC1.wav" volume="0.7" />
@@ -56,7 +56,7 @@
         sight_range_modifier="1.5"/>
         <animation key="reload" animation_key="reloading, magazine rifle 1.5" />
         <animation state_key="hold_casual" animation_key="dancing, kazachok" />
-        <inventory  buy_price="10.0" sell_price="10.0" />
+        <inventory encumbrance="10.0" buy_price="10.0" sell_price="10.0" />
         <next_in_chain key="gkw_9a91.weapon" share_ammo="1" />
         <commonness value="0" in_stock="0" can_respawn_with="1" />
         <sound key="fire" fileref="9a91skill_fire_FromSURVARIUM.wav" pitch_variety="0.05" volume="1.2" />

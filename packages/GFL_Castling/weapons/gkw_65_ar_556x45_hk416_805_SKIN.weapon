@@ -14,7 +14,7 @@
     sustained_fire_diminish_rate="1.8"
     sustained_fire_grow_step="0.3"/>
     <!--Animations-->
-    <inventory  buy_price="7.0" sell_price="7.0" />
+    <inventory encumbrance="10.0" buy_price="7.0" sell_price="7.0" />
     <commonness value="0" in_stock="0" />
     <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
     <!--Sounds-->

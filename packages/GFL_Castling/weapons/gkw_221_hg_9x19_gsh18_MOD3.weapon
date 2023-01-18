@@ -20,7 +20,7 @@
      />
     <!--Animations-->
     <animation state_key="hold_casual" animation_key="dancing, kazachok" />
-    <inventory  buy_price="150.0" sell_price="150.0" />
+    <inventory encumbrance="10.0" buy_price="150.0" sell_price="150.0" />
     <next_in_chain key="gkw_medical_agl_hg.weapon" share_ammo="0" />
     <!--Sounds-->
     <sound key="fire" fileref="gsh18sd_fire_FromR6S.wav" pitch_variety="0.05" volume="2" />

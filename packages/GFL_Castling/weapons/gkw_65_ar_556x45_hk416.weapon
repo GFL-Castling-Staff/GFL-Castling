@@ -16,7 +16,7 @@
     sight_range_modifier="1.1"
     />
     <!--Animations-->
-    <inventory  buy_price="8.0" sell_price="8.0" />
+    <inventory encumbrance="10.0" buy_price="8.0" sell_price="8.0" />
     <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
     <!--Sounds-->
     <sound key="fire" fileref="hk416_fire_FromBFH.wav" pitch_variety="0.05" volume="0.8" />

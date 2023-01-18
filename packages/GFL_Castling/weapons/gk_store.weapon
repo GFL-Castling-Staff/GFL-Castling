@@ -26,7 +26,7 @@
     spawn_instance_class="vehicle" 
     spawn_instance_key="ogas_pulse_generator.vehicle" 
     />
-    <inventory  buy_price="1500.0" sell_price="1500.0" />
+    <inventory encumbrance="10.0" buy_price="1500.0" sell_price="1500.0" />
     <capacity value="0" source="rank" source_value="0.0" />
     <capacity value="1" source="rank" source_value="0.5" />
     <commonness  can_respawn_with="0" />

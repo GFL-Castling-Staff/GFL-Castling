@@ -18,7 +18,7 @@
 	burst_shots="1"
      />
 	<!--Animations-->
-	<inventory  buy_price="6.0" sell_price="6.0" />
+	<inventory encumbrance="10.0" buy_price="6.0" sell_price="6.0" />
 	<commonness in_stock="0" />
 	<!--Sounds-->
 	<sound key="fire" fileref="p22_fire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.2" />

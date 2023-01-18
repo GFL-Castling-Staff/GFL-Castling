@@ -20,7 +20,7 @@
 	projectiles_per_shot="1"
 	burst_shots="1"
      />
-    <inventory  buy_price="3.0" sell_price="3.0" />
+    <inventory encumbrance="10.0" buy_price="3.0" sell_price="3.0" />
     <!--Animations-->
     <animation state_key="recoil" animation_key="recoil, pistol" />
     <animation state_key="recoil" stance_key="prone" animation_key="recoil, pistol, prone" />

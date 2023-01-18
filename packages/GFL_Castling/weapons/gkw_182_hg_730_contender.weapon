@@ -38,7 +38,7 @@
 	<animation state_key="changing_weapon_in" 	animation_key="change weapon in, single hand carry" />
 	<animation state_key="stabbing" 			animation_key="pistol whip" />
 	<animation state_key="stabbing" 			animation_key="pistol whip 3" />
-	<inventory  buy_price="7.0" sell_price="7.0" />
+	<inventory encumbrance="10.0" buy_price="7.0" sell_price="7.0" />
 	<sound key="fire" fileref="contender_fire_FromWF.wav" volume="1.5" pitch_variety="0.05" />
 	<sound key="magazine_out" fileref="revolver_magazine_out.wav" volume="1" />
 	<sound key="magazine_in" fileref="revolver_magazine_in.wav" volume="1" />

@@ -15,7 +15,7 @@
 		sight_range_modifier="1" />
     <animation state_key="hold_casual" animation_key="dancing, kazachok" />
     <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
-    <inventory  buy_price="8.0" sell_price="8.0" />
+    <inventory encumbrance="10.0" buy_price="8.0" sell_price="8.0" />
     <sound key="fire" fileref="type64_fire_FromWF.wav" pitch_variety="0.05" volume="1.1" />
     <sound key="magazine_out" fileref="type79_mgz_out_FromBF2.wav" volume="0.8" />
     <sound key="magazine_in" fileref="type79_mgz_in_FromBF2.wav" volume="0.8" />

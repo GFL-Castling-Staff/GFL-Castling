@@ -18,7 +18,7 @@
 	projectiles_per_shot="18"
 	spread_range="0.2"
 	 />
-    <inventory  buy_price="20.0" sell_price="20.0" />
+    <inventory encumbrance="10.0" buy_price="20.0" sell_price="20.0" />
     <!--Animations-->
     <commonness value="0.2" can_respawn_with="1" in_stock="0" />
     <animation state_key="cycle" animation_key="Pshotgun0.5" />

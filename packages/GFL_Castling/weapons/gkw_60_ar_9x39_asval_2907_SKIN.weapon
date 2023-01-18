@@ -16,7 +16,7 @@
 		sight_range_modifier="1.5" />
         <animation state_key="hold_casual" animation_key="dancing, kazachok" />
         <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
-        <inventory  buy_price="30.0" sell_price="30.0" />
+        <inventory encumbrance="10.0" buy_price="30.0" sell_price="30.0" />
         <commonness value="0" in_stock="0" can_respawn_with="1" />
         <next_in_chain key="gkw_asval_2907_skill.weapon" share_ammo="1" />
         <sound key="fire" fileref="asval_fire_FromFC6.wav" pitch_variety="0.05" volume="0.9" />
@@ -56,7 +56,7 @@
         sight_range_modifier="2.0" />
         <animation state_key="hold_casual" animation_key="dancing, kazachok" />
         <animation key="reload" animation_key="reloading, magazine rifle 1.5" />
-        <inventory  buy_price="30.0" sell_price="30.0" />
+        <inventory encumbrance="10.0" buy_price="30.0" sell_price="30.0" />
         <commonness value="0" in_stock="0" can_respawn_with="1" />
         <next_in_chain key="gkw_asval_2907.weapon" share_ammo="1" />
         <sound key="fire" fileref="asvalskill_fire_FromCOD16.wav" pitch_variety="0.05" volume="1" />

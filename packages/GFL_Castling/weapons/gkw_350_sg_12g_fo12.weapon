@@ -19,7 +19,7 @@
         projectiles_per_shot="18"
         spread_range="0.25"
         />
-        <inventory  buy_price="180.0" sell_price="60.0" />
+        <inventory encumbrance="10.0" buy_price="180.0" sell_price="60.0" />
         <!--Animations-->
         <next_in_chain key="gkw_fo12_skill.weapon" share_ammo="0" />
         <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
@@ -68,7 +68,7 @@
         projectiles_per_shot="18"
         spread_range="0.25"
         />
-        <inventory  buy_price="180.0" sell_price="60.0" />
+        <inventory encumbrance="10.0" buy_price="180.0" sell_price="60.0" />
         <!--Animations-->
         <next_in_chain key="gkw_fo12.weapon" share_ammo="0" />
         <animation key="reload" animation_key="reloading, magazine rifle 2.1" />

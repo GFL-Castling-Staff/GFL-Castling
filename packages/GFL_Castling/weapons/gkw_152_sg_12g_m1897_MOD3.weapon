@@ -20,7 +20,7 @@
         spread_range="0.3"
         stance_accuracy_rate="2.0"
         />
-        <inventory  buy_price="189.7" sell_price="189.7" />
+        <inventory encumbrance="10.0" buy_price="189.7" sell_price="189.7" />
         <commonness value="0.0001" in_stock="0" can_respawn_with="1" />
         <next_in_chain key="gkw_m1897mod3_skill.weapon" share_ammo="0"/>
         <!--Animations-->
@@ -75,7 +75,7 @@
         projectiles_per_shot="10"
         spread_range="0.3"
         />
-        <inventory  buy_price="120.0" sell_price="120.0" />
+        <inventory encumbrance="10.0" buy_price="120.0" sell_price="120.0" />
         <commonness value="0" in_stock="0" can_respawn_with="1" />
         <next_in_chain key="gkw_m1897mod3.weapon" share_ammo="0"/>
         <!--Animations-->

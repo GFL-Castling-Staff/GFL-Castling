@@ -74,7 +74,7 @@
         projectiles_per_shot="8"
         spread_range="0.3"
         />
-        <inventory  buy_price="20.0" sell_price="10.0" />
+        <inventory encumbrance="10.0" buy_price="20.0" sell_price="10.0" />
         <commonness value="0" in_stock="0" can_respawn_with="1" />
         <next_in_chain key="gkw_m1897.weapon" share_ammo="0"/>
         <!--Animations-->

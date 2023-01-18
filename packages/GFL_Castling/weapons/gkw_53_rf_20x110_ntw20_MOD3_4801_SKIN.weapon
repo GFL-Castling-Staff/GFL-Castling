@@ -130,7 +130,7 @@
         <hud_icon filename="gkw_ntw20_4801.png" />
         <capacity value="1" source="rank" source_value="0.0" />
         <commonness value="0" in_stock="0" can_respawn_with="1" />
-        <!-- <inventory  price="4.0" /> -->
+        <!-- <inventory encumbrance="10.0" price="4.0" /> -->
         <!--Ballistics-->
         <weak_hand_hold offset="0.3" />
         <projectile file="ntw.projectile" >

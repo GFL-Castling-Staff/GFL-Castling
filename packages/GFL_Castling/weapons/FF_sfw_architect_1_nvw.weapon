@@ -17,7 +17,7 @@
   projectile_speed="120" 
   slot="0" 
   projectiles_per_shot="1" />
-  <inventory  buy_price="500.0" sell_price="250.0" />
+  <inventory encumbrance="10.0" buy_price="500.0" sell_price="250.0" />
 <next_in_chain key="ff_architect_nvw.weapon" share_ammo="0" />
 
     <animation key="recoil" animation_key="recoil, law" />

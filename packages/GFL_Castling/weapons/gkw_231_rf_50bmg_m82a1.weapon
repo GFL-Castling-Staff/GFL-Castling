@@ -22,7 +22,7 @@
 	last_burst_retrigger_time="0.25"
 	burst_shots="1"
 	/>
-		<inventory  buy_price="300.0" sell_price="200.0" />
+		<inventory encumbrance="10.0" buy_price="300.0" sell_price="200.0" />
 		<!--Animations-->
 		<next_in_chain key="gkw_m82a1_skill.weapon" share_ammo="1" />
 		<animation key="reload" animation_key="reloading, magazine rifle 2.1" />
@@ -72,7 +72,7 @@
 	last_burst_retrigger_time="0.25"
 	burst_shots="1"
 	/>
-		<inventory  buy_price="300.0" sell_price="200.0" />
+		<inventory encumbrance="10.0" buy_price="300.0" sell_price="200.0" />
 		<!--Animations-->
 		<next_in_chain key="gkw_m82a1.weapon" share_ammo="1" />
 		<animation key="reload" animation_key="reloading, magazine rifle 2.1" />

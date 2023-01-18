@@ -24,7 +24,7 @@
 
 	<next_in_chain key="gkw_supersassmod3_1407.weapon" share_ammo="0" />
 	<!--Animations-->
-    <inventory  buy_price="120.0" sell_price="120.0" />
+    <inventory encumbrance="10.0" buy_price="120.0" sell_price="120.0" />
     <commonness value="0" in_stock="0" />
 
     <animation key="reload" animation_key="magBrifleRSASS" />

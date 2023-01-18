@@ -18,7 +18,7 @@
         <next_in_chain key="gkw_akalfa_skill.weapon" share_ammo="1" />
         <animation state_key="hold_casual"			animation_key="dancing, kazachok" />
         <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
-        <inventory  buy_price="8.0" sell_price="8.0" />
+        <inventory encumbrance="10.0" buy_price="8.0" sell_price="8.0" />
         <sound key="fire" fileref="akalfa_fire_FromWF.wav" pitch_variety="0.02" volume="1.1" />
         <sound key="magazine_out" fileref="akalfa_mgz_out_FromWF.wav" volume="0.6" />
         <sound key="magazine_in" fileref="akalfa_mgz_in_FromWF.wav" volume="0.6" />
@@ -59,7 +59,7 @@
         <commonness value="0" in_stock="0" />
         <animation state_key="hold_casual"			animation_key="dancing, kazachok" />
         <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
-        <inventory  buy_price="8.0" sell_price="8.0"/>
+        <inventory encumbrance="10.0" buy_price="8.0" sell_price="8.0"/>
         <sound key="fire" fileref="akalfa_fire_FromWF.wav" pitch_variety="0.02" volume="1.1" />
         <sound key="magazine_out" fileref="akalfa_mgz_out_FromWF.wav" volume="0.6" />
         <sound key="magazine_in" fileref="akalfa_mgz_in_FromWF.wav" volume="0.6" />

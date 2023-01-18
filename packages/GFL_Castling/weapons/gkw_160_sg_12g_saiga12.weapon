@@ -21,7 +21,7 @@
 	last_burst_retrigger_time="0.2"
 	spread_range="0.15"
 	 />
-    <inventory  buy_price="60.0" sell_price="60.0" />
+    <inventory encumbrance="10.0" buy_price="60.0" sell_price="60.0" />
     <next_in_chain key="gkw_saiga12_skill.weapon" share_ammo="1" />
     <!--Animations-->
     <animation key="reload" animation_key="reloading, magazine rifle 1.2" />

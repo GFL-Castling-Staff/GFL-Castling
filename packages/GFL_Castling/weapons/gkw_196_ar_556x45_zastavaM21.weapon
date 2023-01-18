@@ -16,7 +16,7 @@
 		sustained_fire_grow_step="0.3" />
     <next_in_chain key="gkw_zasm21_skill.weapon" share_ammo="0" />
     <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
-    <inventory  buy_price="8.0" sell_price="8.0" />
+    <inventory encumbrance="10.0" buy_price="8.0" sell_price="8.0" />
     <sound key="fire" fileref="zastavam21_fire_FromCF.wav" pitch_variety="0.05" volume="1.25" />
     <sound key="magazine_out" fileref="zastavam21_mgz_out_FromEFT.wav" volume="0.9" />
     <sound key="magazine_in" fileref="zastavam21_mgz_in_FromEFT.wav" volume="0.9" />
@@ -81,7 +81,7 @@
     <next_in_chain key="gkw_zasm21.weapon" share_ammo="0" />
     <animation key="reload" animation_key="reloading, magazine rifle 1.8" />
     <animation state_key="next_in_chain_in" animation_key="change weapon in 416" />
-    <inventory  buy_price="8.0" sell_price="8.0" />
+    <inventory encumbrance="10.0" buy_price="8.0" sell_price="8.0" />
     <commonness value="0" in_stock="0" />
     <ballistics curve_height="3.0" near_far_distance="16.0" speed_estimation_near="10.0" speed_estimation_far="16.0" max_speed="47.0" randomness="0.0" tweak_factor="1.55" />
     <sound key="fire" fileref="gp25_fire_FromSQUAD.wav" pitch_variety="0.05" volume="1.2" />
