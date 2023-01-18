@@ -557,7 +557,17 @@ class ItemDropEvent : Tracker {
                         addItemInBackpack(m_metagame,cId,"weapon","gkw_svdex_5506.weapon");
                         m_craftQueue.removeAt(findQueueIndex(pId,"cso"));
                         playPrivateSound(m_metagame,"digimind_sfx2.wav",pId);
-                    }                           
+                    }   
+                    else if (checkQueue(pId,"cso") && (itemKey=="gkw_ak47.weapon" || itemKey=="gkw_ak47_skill.weapon")){
+                        addItemInBackpack(m_metagame,cId,"weapon","gkw_ak47_60r.weapon");
+                        m_craftQueue.removeAt(findQueueIndex(pId,"cso"));
+                        playPrivateSound(m_metagame,"digimind_sfx2.wav",pId);
+                    }
+                    else if (checkQueue(pId,"cso") && (itemKey=="gkw_ak47_501.weapon" || itemKey=="gkw_ak47_501_skill.weapon")){
+                        addItemInBackpack(m_metagame,cId,"weapon","gkw_ak47_60r_501.weapon");
+                        m_craftQueue.removeAt(findQueueIndex(pId,"cso"));
+                        playPrivateSound(m_metagame,"digimind_sfx2.wav",pId);
+                    }                    
                     break;
                 }
             }
