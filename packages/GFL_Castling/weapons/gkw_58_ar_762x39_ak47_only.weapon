@@ -15,6 +15,7 @@
         spread_range="0.2" 
 		sustained_fire_diminish_rate="2" 
 		sustained_fire_grow_step="0.7" />
+        <commonness value="0" in_stock="0" />
         <animation state_key="hold_casual" animation_key="dancing, kazachok" />
         <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
         <inventory encumbrance="30.0" buy_price="160.0" sell_price="160.0" />
