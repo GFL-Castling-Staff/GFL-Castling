@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<weapon file="lmg_mg.animation_base" key="gkw_hk21_4002.weapon">
+<weapon file="lmg_mg.animation_base" key="gkw_hk21.weapon">
     <specification 
 		accuracy_factor="0.95" 
 		barrel_offset="0.5" 
 		class="0"
         slot="0" 
 		magazine_size="100" 
-		name="HK21-[Silver Fox's 1/9 Platform]" 
+		name="HK21" 
 		projectile_speed="230" 
 		retrigger_time="0.075" 
 		suppressed="0" 
@@ -29,8 +29,8 @@
     <sound key="magazine_in" fileref="hk21_mgz_in_FromFC6.wav" volume="0.8" />
     <sound key="cycle" fileref="g3_cycle_FromCOD17.wav" volume="0.4" />
     <sound class="impact" fileref="rifle_drop.wav" />
-    <model filename="gkw_hk21_4002_From_melondove.xml" />
-    <hud_icon filename="gkw_hk21_4002.png" />
+    <model filename="gkw_hk21_melondove.xml" />
+    <hud_icon filename="gkw_hk21.png" />
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet.projectile">
         <result class="hit" kill_probability="2.25" kill_probability_offset_on_successful_hit="1.5" kill_decay_start_time="1.967" kill_decay_end_time="3.279" />
