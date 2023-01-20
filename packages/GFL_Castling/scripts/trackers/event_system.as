@@ -38,6 +38,9 @@ dictionary GFL_Event_Index = {
         // 天气系统——闪电风暴
         {"lightning_storm",9},
 
+        // 特工HK416奶包系统
+        {"hk416_medicaid",10},
+
         // 下面这行是用来占位的，在这之上添加新的即可
         {"666",-1}
 };
@@ -84,6 +87,7 @@ class GFL_event_system : Tracker {
                             case 7:{excuteBombFairy(m_metagame,GFL_event_array[a]);break;}
                             // case 8:{excuteIonStormFairy(m_metagame,GFL_event_array[a]);break;}
                             case 9:{excuteLightningStorm(m_metagame,GFL_event_array[a]);break;}
+                            case 10:{excuteHK416Healevent(m_metagame,GFL_event_array[a]);break;}
 
                             default:
                                 break;
@@ -632,7 +636,6 @@ void excuteWarriorFariyApache(GameMode@ metagame,GFL_event@ eventinfo){
         }
     }
 
-
     else if(eventinfo.m_phase==8){
         if(Apache_Javelin_list.length()>0){
             for (uint a=0;a<Apache_Javelin_list.length();a++){
@@ -659,6 +662,17 @@ void excuteWarriorFariyApache(GameMode@ metagame,GFL_event@ eventinfo){
     if(eventinfo.m_phase>=12){
         eventinfo.m_enable=false;
     }
+}
+
+void excuteHK416Healevent(GameMode@ metagame,GFL_event@ eventinfo){
+    eventinfo.m_time=2.0;
+    CreateDirectProjectile(metagame,eventinfo.m_pos,eventinfo.m_pos.add(Vector3(0,1,0)),"medical_agl_call.projectile",eventinfo.m_characterId,eventinfo.m_factionid,10); 
+    healRangedCharacters(metagame,eventinfo.m_pos,eventinfo.m_factionid,10,4);
+    // healRangedCharacters(Metagame@ metagame,Vector3 pos,int faction_id,float range,int healnum)
+    eventinfo.m_phase++;
+    if(eventinfo.m_phase>11){
+        eventinfo.m_enable=false;
+    }        
 }
 
 class Apache_Javelin_lister{

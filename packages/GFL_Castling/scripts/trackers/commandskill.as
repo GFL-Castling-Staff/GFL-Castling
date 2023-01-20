@@ -128,7 +128,8 @@ array<string> AR_grenade_AntiPersonal = {
     "gkw_stg44.weapon",
     "gkw_famas.weapon",
     "gkw_k11_ar.weapon",
-    "gkw_k11_20mm_impact.weapon"
+    "gkw_k11_20mm_impact.weapon",
+    "gkw_hk416_agent.weapon"
 };
 
 // 列举枪对应的脚本技能编号。注意字典的值为了配合后面的只能用uint，不可用string，float等    
@@ -445,6 +446,10 @@ dictionary commandSkillIndex = {
         {"gkw_svdex.weapon",56},
         {"gkw_svdex_5506.weapon",56},
 
+        // 特工416奶箱
+        {"gkw_hk416_agent_he.weapon",57},
+        {"gkw_hk416_agent_sticky.weapon",57},
+
         // 下面这行是用来占位的，在这之上添加新的枪和index即可
         {"666",-1}
 };
@@ -583,6 +588,7 @@ class CommandSkill : Tracker {
                     case 54:{excuteF1skill(cId,senderId,m_modifer);break;}
                     case 55:{excuteBBSRobotskill(cId,senderId,m_modifer);break;}
                     case 56:{excuteSVDEXskill(cId,senderId,m_modifer);break;}
+                    case 57:{excuteHK416Agentskill(cId,senderId,m_modifer);break;}
 
                     default:
                         break;
@@ -3810,5 +3816,50 @@ class CommandSkill : Tracker {
                 }
             }
         }
-    }       
+    }    
+    void excuteHK416Agentskill(int characterId,int playerId,SkillModifer@ modifer){
+        bool ExistQueue = false;
+        int j=-1;
+        for (uint i=0;i<SkillArray.length();i++){
+            if (InCooldown(characterId,modifer,SkillArray[i]) && SkillArray[i].m_weapontype=="HK416AGENT") {
+                ExistQueue=true;
+                j=i;
+            }
+        }
+        if (ExistQueue){
+            dictionary a;
+            a["%time"] = ""+SkillArray[j].m_time;
+            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            return;
+        }
+        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+        if (character !is null) {
+            const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+            if (player !is null){
+                if (player.hasAttribute("aim_target")) {
+                   _log("hk416 agent recieved");
+                    string target = player.getStringAttribute("aim_target");
+                    Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
+                    int factionid = character.getIntAttribute("faction_id");
+                    c_pos=c_pos.add(Vector3(0,1,0));
+
+                    if (checkFlatRange(c_pos,stringToVector3(target),15)){
+                        CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"medicaid_hk416_agent.projectile",characterId,factionid,30);
+                    }
+                    else{
+                        CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"medicaid_hk416_agent.projectile",characterId,factionid,26.0,6.0);
+                    }
+                    array<string> Voice={
+                    "HK416_Skill1.wav",
+                    "HK416_Skill2.wav",
+                    "HK416_Skill3.wav"
+                    };
+                    playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+                    addCoolDown("HK416AGENT",30,characterId,modifer);
+                }
+            }
+        }
+
+    }
+  
 }

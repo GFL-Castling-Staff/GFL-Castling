@@ -4,7 +4,7 @@
     <result class="blast" radius="6.0" damage="0.0" push="0.0" decal="0" character_state="unwound" faction_compare="equal" />
     <trigger class="impact" />
     <rotation class="motion" />
-    <model mesh_filename="agl.xml" />
+    <model />
 
     <commonness value="0.0" />
 
@@ -33,7 +33,5 @@
     <effect class="result" key="static_object" copy="terrain" />
     <effect class="result" key="vehicle" copy="terrain" />     
     <effect class="result" key="character" copy="terrain" />
-
-    <effect class="activated" ref="Propulsion_gl" />
 
 </projectile>
