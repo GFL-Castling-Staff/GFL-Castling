@@ -667,7 +667,7 @@ void excuteWarriorFariyApache(GameMode@ metagame,GFL_event@ eventinfo){
 void excuteHK416Healevent(GameMode@ metagame,GFL_event@ eventinfo){
     eventinfo.m_time=2.0;
     CreateDirectProjectile(metagame,eventinfo.m_pos,eventinfo.m_pos.add(Vector3(0,1,0)),"medical_agl_call.projectile",eventinfo.m_characterId,eventinfo.m_factionid,10); 
-    healRangedCharacters(metagame,eventinfo.m_pos,eventinfo.m_factionid,10,4);
+    healRangedCharacters(metagame,eventinfo.m_pos,eventinfo.m_factionid,10,3);
     // healRangedCharacters(Metagame@ metagame,Vector3 pos,int faction_id,float range,int healnum)
     eventinfo.m_phase++;
     if(eventinfo.m_phase>11){
