@@ -1021,7 +1021,7 @@
 </weapon>
 
 <weapon key="gkw_aek999.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.5" retrigger_time="0.0923" accuracy_factor="1" sustained_fire_grow_step="0.3" sustained_fire_diminish_rate="1.8" magazine_size="200" suppressed="1" name="AEK-999 Barsuk" class="0" projectile_speed="210" sight_range_modifier="1.5" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" slot="0"/>
+	<specification barrel_offset="0.5" retrigger_time="0.0923" accuracy_factor="1" sustained_fire_grow_step="0.3" sustained_fire_diminish_rate="1.8" magazine_size="100" suppressed="1" name="AEK-999 Barsuk" class="0" projectile_speed="210" sight_range_modifier="1.5" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" slot="0"/>
 	<animation state_key="hold_casual" animation_key="dancing, kazachok"/>
 	<animation key="reload" animation_key="reloading, Machine gun 1.6"/>
 	<inventory buy_price="45.0" sell_price="45.0"/>
@@ -1034,7 +1034,7 @@
 	<model filename="gkw_mg_aek999.xml"/>
 	<hud_icon filename="gkw_aek999.png"/>
 	<projectile file="bullet.projectile" can_be_detected_by_footmen="0">
-	<result class="hit" kill_probability="2.0" kill_probability_offset_on_successful_hit="0.8" kill_decay_start_time="3.273" kill_decay_end_time="5.455"/>
+	<result class="hit" kill_probability="2.4" kill_probability_offset_on_successful_hit="1.0" kill_decay_start_time="3.273" kill_decay_end_time="5.455"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.6"/>
 	<stance state_key="walking" accuracy="0.6"/>
@@ -1045,7 +1045,6 @@
 	<stance state_key="prone" accuracy="1.8"/>
 	<stance state_key="over_wall" accuracy="1.8"/>
 	<modifier class="detectability" value="-0.1"/>
-	<modifier class="speed" value="-0.1"/>
 	<tag name="machine gun"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="30.0" buy_price="1.0" sell_price="0.0"/>
@@ -1074,7 +1073,7 @@
 </weapon>
 
 <weapon key="gkw_aek999_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.5" retrigger_time="0.0923" accuracy_factor="1" sustained_fire_grow_step="0.1" sustained_fire_diminish_rate="1.8" magazine_size="210" suppressed="1" name="AEK-999 Barsuk-[Hunting Impulse N]" class="0" projectile_speed="180" sight_range_modifier="2.5" can_shoot_crouching="1" can_shoot_prone="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_standing="0" slot="0"/>
+	<specification barrel_offset="0.5" retrigger_time="0.08" accuracy_factor="1" sustained_fire_grow_step="0.3" sustained_fire_diminish_rate="2.4" magazine_size="210" suppressed="1" name="AEK-999 Barsuk-[Hunting Impulse N]" class="0" projectile_speed="180" sight_range_modifier="2.0" can_shoot_crouching="1" can_shoot_prone="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_standing="0" slot="0"/>
 	<animation state_key="hold_casual" animation_key="dancing, kazachok"/>
 	<animation key="reload" animation_key="reloading, Machine gun 2.0"/>
 	<inventory buy_price="45.0" sell_price="45.0"/>
@@ -1088,7 +1087,7 @@
 	<model filename="gkw_mg_aek999.xml"/>
 	<hud_icon filename="gkw_aek999_skill.png"/>
 	<projectile file="bullet.projectile" can_be_detected_by_footmen="0">
-	<result class="hit" kill_probability="2.0" kill_probability_offset_on_successful_hit="1.85" kill_decay_start_time="3.273" kill_decay_end_time="5.455"/>
+	<result class="hit" kill_probability="2.4" kill_probability_offset_on_successful_hit="2.3" kill_decay_start_time="3.273" kill_decay_end_time="5.455"/>
 	<trail probability="1.0" key="BulletApTrail_ct"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.6"/>
@@ -15351,9 +15350,9 @@
 </weapon>
 
 <weapon key="gkw_mg5.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.55" retrigger_time="0.09375" accuracy_factor="0.65" sustained_fire_grow_step="0.25" sustained_fire_diminish_rate="1.0" stance_accuracy_rate="1.0" magazine_size="200" suppressed="0" name="MG5" class="0" projectile_speed="160" spread_range="0.15" sight_range_modifier="1.3" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" slot="0"/>
-	<animation key="reload" animation_key="reloading, Machine gun 2.8"/>
-	<inventory buy_price="80.0" sell_price="80.0"/>
+	<specification barrel_offset="0.55" retrigger_time="0.09375" accuracy_factor="0.85" sustained_fire_grow_step="0.5" sustained_fire_diminish_rate="2.0" stance_accuracy_rate="1.0" magazine_size="200" suppressed="0" name="MG5" class="0" projectile_speed="160" spread_range="0.15" sight_range_modifier="1.3" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" slot="0"/>
+	<animation key="reload" animation_key="reloading, Machine gun 2.0"/>
+	<inventory encumbrance="20.0" buy_price="80.0" sell_price="80.0"/>
 	<next_in_chain key="gkw_mg5_skill.weapon" share_ammo="1"/>
 	<sound key="fire" fileref="mg5_fire_FromARMA3.wav" pitch_variety="0.05" volume="1"/>
 	<sound key="magazine_out" fileref="mg5_mgz_out_FromCOD16.wav" volume="0.8"/>
@@ -15373,17 +15372,17 @@
 	<model filename="gkw_mg_mg5.xml"/>
 	<hud_icon filename="gkw_mg5.png"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="2.3" kill_probability_offset_on_successful_hit="1.7" kill_decay_start_time="1.0" kill_decay_end_time="1.1"/>
+	<result class="hit" kill_probability="2.25" kill_probability_offset_on_successful_hit="1.7" kill_decay_start_time="1.0" kill_decay_end_time="1.1"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_76251"/>
-	<stance state_key="running" accuracy="0.1"/>
-	<stance state_key="walking" accuracy="0.2"/>
-	<stance state_key="crouch_moving" accuracy="0.45"/>
-	<stance state_key="prone_moving" accuracy="0.7"/>
-	<stance state_key="standing" accuracy="0.3"/>
-	<stance state_key="crouching" accuracy="0.75"/>
-	<stance state_key="prone" accuracy="1.2"/>
-	<stance state_key="over_wall" accuracy="1.3"/>
+	<stance state_key="running" accuracy="0.3"/>
+	<stance state_key="walking" accuracy="0.4"/>
+	<stance state_key="crouch_moving" accuracy="0.5"/>
+	<stance state_key="prone_moving" accuracy="0.5"/>
+	<stance state_key="standing" accuracy="0.6"/>
+	<stance state_key="crouching" accuracy="0.85"/>
+	<stance state_key="prone" accuracy="1.0"/>
+	<stance state_key="over_wall" accuracy="1.0"/>
 	<tag name="machine gun"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="30.0" buy_price="1.0" sell_price="0.0"/>
@@ -15412,7 +15411,7 @@
 </weapon>
 
 <weapon key="gkw_mg5_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.55" retrigger_time="0.075" accuracy_factor="0.8" sustained_fire_grow_step="0.25" sustained_fire_diminish_rate="1.0" stance_accuracy_rate="1.0" spread_range="0.15" magazine_size="200" suppressed="0" name="MG5-[Terminating Barrage]" class="0" projectile_speed="150" sight_range_modifier="1.75" can_shoot_standing="0" can_shoot_crouching="0" can_shoot_prone="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
+	<specification barrel_offset="0.55" retrigger_time="0.075" accuracy_factor="0.8" sustained_fire_grow_step="0.25" sustained_fire_diminish_rate="1.0" stance_accuracy_rate="1.0" spread_range="0.15" magazine_size="200" suppressed="0" name="MG5-[Terminating Barrage]" class="0" projectile_speed="150" sight_range_modifier="1.75" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
 	<animation key="reload" animation_key="reloading, Machine gun 2.8"/>
 	<inventory buy_price="80.0" sell_price="80.0"/>
 	<commonness value="0" in_stock="0"/>
@@ -15428,16 +15427,16 @@
 	<model filename="gkw_mg_mg5.xml"/>
 	<hud_icon filename="gkw_mg5_skill.png"/>
 	<projectile file="bullet_he.projectile">
-	<result class="blast" damage="2.0" radius="2.5" decal="1" push="0.3" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+	<result class="blast" damage="2.1" radius="2.8" decal="1" push="0.3" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	</projectile>
 	<effect class="muzzle" ref="muzzle_small_yellow"/>
 	<effect class="muzzle" ref="ejection_76251"/>
-	<stance state_key="running" accuracy="0.1"/>
-	<stance state_key="walking" accuracy="0.3"/>
-	<stance state_key="crouch_moving" accuracy="0.45"/>
-	<stance state_key="prone_moving" accuracy="0.7"/>
-	<stance state_key="standing" accuracy="0.3"/>
-	<stance state_key="crouching" accuracy="0.75"/>
+	<stance state_key="running" accuracy="0.3"/>
+	<stance state_key="walking" accuracy="0.4"/>
+	<stance state_key="crouch_moving" accuracy="0.5"/>
+	<stance state_key="prone_moving" accuracy="0.5"/>
+	<stance state_key="standing" accuracy="0.6"/>
+	<stance state_key="crouching" accuracy="0.85"/>
 	<stance state_key="prone" accuracy="1.0"/>
 	<stance state_key="over_wall" accuracy="1.0"/>
 	<modifier class="speed" value="-0.2"/>
@@ -20832,7 +20831,7 @@
 </weapon>
 
 <weapon key="gkw_m1887.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="0.75" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="1.3" magazine_size="6" can_shoot_standing="1" suppressed="0" name="Winchester Model 1887" class="1" reload_one_at_a_time="1" sight_range_modifier="1" projectile_speed="80" barrel_offset="0.3" projectiles_per_shot="8" stab_enabled="1" carry_in_two_hands="0" burst_shots="1" last_burst_retrigger_time="0.3" slot="0" use_basic_muzzle_smoke_effect="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="0.75" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="3.0" magazine_size="6" can_shoot_standing="1" suppressed="0" name="Winchester Model 1887" spread_range="0.2" class="1" reload_one_at_a_time="1" sight_range_modifier="1" projectile_speed="100" barrel_offset="0.3" projectiles_per_shot="8" stab_enabled="1" carry_in_two_hands="0" burst_shots="1" last_burst_retrigger_time="0.3" slot="0" use_basic_muzzle_smoke_effect="0"/>
 	<inventory encumbrance="10.0" buy_price="20.0" sell_price="10.0"/>
 	<animation state_key="cycle" animation_key="recoil,m1887"/>
 	<animation key="reload" animation_key="RevolverReload"/>
@@ -20845,6 +20844,7 @@
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="2.2" kill_probability_offset_on_successful_hit="1.0" kill_decay_start_time="0.175" kill_decay_end_time="0.700"/>
+	<trail probability="1.0" key="bullet_buckshot"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.5"/>
 	<stance state_key="walking" accuracy="0.6"/>
@@ -23274,6 +23274,61 @@
 	<target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
 	<target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0"/>
 	<target_factors tag="commander" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0"/>
+</weapon>
+
+<weapon key="gkw_hk21.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+	<specification accuracy_factor="0.95" barrel_offset="0.5" class="0" slot="0" magazine_size="100" name="HK21" projectile_speed="230" retrigger_time="0.075" suppressed="0" stance_accuracy_rate="0.75" sustained_fire_grow_step="0.75" sustained_fire_diminish_rate="1.75" spread_range="0.25" sight_range_modifier="1.35" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" carry_in_two_hands="1" stab_enabled="1"/>
+	<commonness in_stock="0" value="0"/>
+	<animation state_key="reload" animation_key="reloading, Machine gun 1.6"/>
+	<inventory encumbrance="10.0" buy_price="21.0" sell_price="21.0"/>
+	<sound key="fire" fileref="hk21_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.25"/>
+	<sound key="magazine_out" fileref="hk21_mgz_out_FromFC6.wav" volume="0.8"/>
+	<sound key="magazine_in" fileref="hk21_mgz_in_FromFC6.wav" volume="0.8"/>
+	<sound key="cycle" fileref="g3_cycle_FromCOD17.wav" volume="0.4"/>
+	<sound class="impact" fileref="rifle_drop.wav"/>
+	<model filename="gkw_hk21_melondove.xml"/>
+	<hud_icon filename="gkw_hk21.png"/>
+	<weak_hand_hold offset="0.2"/>
+	<projectile file="bullet.projectile">
+	<result class="hit" kill_probability="2.25" kill_probability_offset_on_successful_hit="1.5" kill_decay_start_time="1.967" kill_decay_end_time="3.279"/>
+	</projectile>
+	<effect class="muzzle" ref="ejection_76251"/>
+	<stance state_key="running" accuracy="0.3"/>
+	<stance state_key="walking" accuracy="0.5"/>
+	<stance state_key="crouch_moving" accuracy="0.8"/>
+	<stance state_key="prone_moving" accuracy="0.8"/>
+	<stance state_key="standing" accuracy="0.85"/>
+	<stance state_key="crouching" accuracy="0.9"/>
+	<stance state_key="prone" accuracy="1"/>
+	<stance state_key="over_wall" accuracy="1"/>
+	<modifier class="speed" value="0.1"/>
+	<tag name="machine gun"/>
+	<inventory encumbrance="20.0" buy_price="1.0" sell_price="0.0"/>
+	<capacity value="1" source="rank" source_value="0.0"/>
+	<animation state_key="recoil" animation_key="recoil, hip fire"/>
+	<animation state_key="recoil" animation_key="recoil2, hip fire"/>
+	<animation state_key="recoil" animation_key="recoil3, hip fire"/>
+	<animation key="recoil" stance_key="over_wall" animation_key="recoil1"/>
+	<animation key="recoil" stance_key="over_wall" animation_key="recoil2"/>
+	<animation key="recoil" stance_key="over_wall" animation_key="recoil3"/>
+	<animation key="recoil" stance_key="crouching" animation_key="recoil1"/>
+	<animation key="recoil" stance_key="crouching" animation_key="recoil2"/>
+	<animation key="recoil" stance_key="crouching" animation_key="recoil3"/>
+	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
+	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
+	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
+	<animation state_key="hold" animation_key="hold, lmg"/>
+	<animation state_key="hold_on_wall" animation_key="still"/>
+	<animation state_key="walking" animation_key="walking, hip fire"/>
+	<animation state_key="walking_backwards" animation_key="walking backwards, hip fire"/>
+	<animation state_key="celebrate_shoot" animation_key="celebrating, shooting"/>
+	<animation state_key="stabbing" animation_key="melee, quick knife"/>
+	<animation state_key="stabbing" animation_key="pistol whip 3"/>
+	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
+	<target_factors tag="smg" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
+	<target_factors tag="melee" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
+	<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
+	<target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
 </weapon>
 
 <weapon key="target.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
@@ -32485,7 +32540,7 @@
 </weapon>
 
 <weapon key="gkw_hk21_4002.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification accuracy_factor="0.95" barrel_offset="0.5" class="0" slot="0" magazine_size="100" name="HK21-[Silver Fox's 1/9 Platform]" projectile_speed="230" retrigger_time="0.075" suppressed="0" stance_accuracy_rate="0.5" sustained_fire_grow_step="0.75" sustained_fire_diminish_rate="1.75" sight_range_modifier="1.35" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" carry_in_two_hands="1" stab_enabled="1"/>
+	<specification accuracy_factor="0.95" barrel_offset="0.5" class="0" slot="0" magazine_size="100" name="HK21-[Silver Fox's 1/9 Platform]" projectile_speed="230" retrigger_time="0.075" suppressed="0" stance_accuracy_rate="0.75" sustained_fire_grow_step="0.75" sustained_fire_diminish_rate="1.75" spread_range="0.25" sight_range_modifier="1.35" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" carry_in_two_hands="1" stab_enabled="1"/>
 	<commonness in_stock="0" value="0"/>
 	<animation state_key="reload" animation_key="reloading, Machine gun 1.6"/>
 	<inventory encumbrance="10.0" buy_price="21.0" sell_price="21.0"/>
@@ -32498,7 +32553,7 @@
 	<hud_icon filename="gkw_hk21_4002.png"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="2.4" kill_probability_offset_on_successful_hit="1.25" kill_decay_start_time="1.967" kill_decay_end_time="3.279"/>
+	<result class="hit" kill_probability="2.25" kill_probability_offset_on_successful_hit="1.5" kill_decay_start_time="1.967" kill_decay_end_time="3.279"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_76251"/>
 	<stance state_key="running" accuracy="0.3"/>
@@ -32509,7 +32564,7 @@
 	<stance state_key="crouching" accuracy="0.9"/>
 	<stance state_key="prone" accuracy="1"/>
 	<stance state_key="over_wall" accuracy="1"/>
-	<modifier class="speed" value="0.15"/>
+	<modifier class="speed" value="0.1"/>
 	<tag name="machine gun"/>
 	<inventory encumbrance="20.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -45677,19 +45732,20 @@
 	<tag name="mecha"/>
 	<tag name="antiarmor"/>
 	<tag name="metal_heavy"/>
-	<specification retrigger_time="0.2" accuracy_factor="0.75" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="0.9" magazine_size="5" can_shoot_standing="1" can_shoot_crouching="0" can_shoot_prone="0" suppressed="0" name="SF-Manticore" class="4" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="135" carry_in_two_hands="0" stab_enabled="1" burst_shots="3" barrel_offset="0.1" barrel_offset_3d="5.0 1.0 0.1"/>
-	<animation state_key="recoil" animation_key="recoil, hydra and manticore"/>
-	<animation state_key="recoil" stance_key="prone" animation_key="recoil, hydra and manticore"/>
-	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil, hydra and manticore"/>
-	<animation state_key="hold" animation_key="still, hydra and manticore"/>
-	<animation state_key="hold_on_wall" animation_key="still, hydra and manticore"/>
-	<animation state_key="hold_casual" animation_key="still, hydra and manticore"/>
+	<specification retrigger_time="0.1" accuracy_factor="0.75" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="2.5" magazine_size="200" can_shoot_standing="1" can_shoot_crouching="0" can_shoot_prone="0" suppressed="0" name="SF-Manticore" class="0" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="135" carry_in_two_hands="1" stab_enabled="1" barrel_offset="0.2"/>
+	<animation state_key="recoil" animation_key="recoil 3, hydra and manticore"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil 3, hydra and manticore"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil 3, hydra and manticore"/>
+	.>
+	<animation state_key="hold" animation_key="still 1, hydra and manticore"/>
+	<animation state_key="hold_on_wall" animation_key="still 1, hydra and manticore"/>
+	<animation state_key="hold_casual" animation_key="still 1, hydra and manticore"/>
 	<animation state_key="still_against_wall" animation_key="still, hydra and manticore"/>
-	<animation state_key="walking" animation_key="walking, hydra and manticore"/>
-	<animation state_key="running" animation_key="running, hydra and manticore"/>
-	<animation state_key="crouching" animation_key="still, hydra and manticore"/>
-	<animation state_key="crouch_moving" animation_key="walking, hydra and manticore"/>
-	<animation state_key="crouch_moving_backwards" animation_key="walking, hydra and manticore"/>
+	<animation state_key="walking" animation_key="walking 1, hydra and manticore"/>
+	<animation state_key="running" animation_key="running 1, hydra and manticore"/>
+	<animation state_key="crouching" animation_key="still 1, hydra and manticore"/>
+	<animation state_key="crouch_moving" animation_key="walking 1, hydra and manticore"/>
+	<animation state_key="crouch_moving_backwards" animation_key="walking 1, hydra and manticore"/>
 	<animation state_key="reload" animation_key="reload, hydra and manticore"/>
 	<animation key="stabbing" animation_key="stabbing, hydra and manticore"/>
 	<sound key="fire" fileref="Manticore_fire_FromSQUAD.wav" volume="1.8"/>
@@ -45709,8 +45765,8 @@
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<projectile file="qwd.projectile">
 	</projectile>
-	<stance state_key="running" accuracy="0.3"/>
-	<stance state_key="walking" accuracy="0.675"/>
+	<stance state_key="running" accuracy="0.8"/>
+	<stance state_key="walking" accuracy="0.8"/>
 	<stance state_key="crouch_moving" accuracy="0.75"/>
 	<stance state_key="prone_moving" accuracy="0.3"/>
 	<stance state_key="standing" accuracy="0.8"/>
@@ -47404,11 +47460,10 @@
 <weapon key="kccow_hydra.weapon" time_to_live_out_in_the_open="0" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0">
 	<tag name="antiarmor"/>
 	<tag name="mecha"/>
-	<specification retrigger_time="0.2" accuracy_factor="0.75" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="0.9" magazine_size="7" can_shoot_standing="1" can_shoot_crouching="0" can_shoot_prone="0" suppressed="0" name="Code:Hydra" class="4" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="150" carry_in_two_hands="0" projectiles_per_shot="1" stab_enabled="1" burst_shots="4" barrel_offset="0.1" barrel_offset_3d="5.0 1.0 0.1"/>
+	<specification retrigger_time="0.1" accuracy_factor="0.9" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="4.0" magazine_size="200" can_shoot_standing="1" can_shoot_crouching="0" can_shoot_prone="0" suppressed="0" name="Code:Hydra" class="0" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="150" carry_in_two_hands="1" barrel_offset="0.2" projectiles_per_shot="1" stab_enabled="1"/>
 	<commonness value="0.000000001" in_stock="1"/>
 	<animation state_key="recoil" animation_key="recoil, hydra and manticore"/>
-	<animation state_key="recoil" stance_key="prone" animation_key="recoil, hydra and manticore"/>
-	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil, hydra and manticore"/>
+	<animation state_key="recoil" animation_key="recoil 2, hydra and manticore"/>
 	<animation state_key="hold" animation_key="still, hydra and manticore"/>
 	<animation state_key="hold_on_wall" animation_key="still, hydra and manticore"/>
 	<animation state_key="hold_casual" animation_key="still, hydra and manticore"/>
@@ -47437,15 +47492,15 @@
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
 	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
 	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
-	<stance state_key="running" accuracy="0.3"/>
-	<stance state_key="walking" accuracy="0.675"/>
+	<stance state_key="running" accuracy="0.8"/>
+	<stance state_key="walking" accuracy="0.8"/>
 	<stance state_key="crouch_moving" accuracy="0.75"/>
 	<stance state_key="prone_moving" accuracy="0.3"/>
 	<stance state_key="standing" accuracy="0.8"/>
 	<stance state_key="crouching" accuracy="0.85"/>
 	<stance state_key="prone" accuracy="0.94"/>
 	<modifier class="speed" value="-0.6"/>
-	<modifier class="hit_success_probability" value="-0.2"/>
+	<modifier class="hit_success_probability" value="-0.1"/>
 	<inventory encumbrance="0.0" price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<stance state_key="over_wall" accuracy="1"/>
@@ -47808,6 +47863,7 @@
 	<commonness value="0.00001" can_respawn_with="1" in_stock="1"/>
 	<inventory encumbrance="11.0" price="0.0"/>
 	<modifier class="speed" value="-0.5"/>
+	<modifier class="hit_success_probability" value="0.2"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
 	<target_factors tag="heavy_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0"/>
 	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="5.0"/>

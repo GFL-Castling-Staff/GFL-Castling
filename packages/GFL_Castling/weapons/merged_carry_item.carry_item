@@ -2553,7 +2553,7 @@
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
-	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="hit_success_probability" value="-1.15"/>
 	<modifier class="detectability" value="-0.35"/>
 	<modifier class="night_detectability" value="-0.1"/>
 	<modifier class="speed" value="0.15"/>
@@ -2572,7 +2572,7 @@
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="hit_success_probability" value="-1.15"/>
 	<modifier class="detectability" value="-0.35"/>
 	<modifier class="night_detectability" value="-0.1"/>
 	<modifier class="speed" value="0.15"/>
@@ -2591,7 +2591,7 @@
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="hit_success_probability" value="-1.15"/>
 	<modifier class="detectability" value="-0.35"/>
 	<modifier class="night_detectability" value="-0.1"/>
 	<modifier class="speed" value="0.15"/>
@@ -2610,7 +2610,7 @@
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="hit_success_probability" value="-1.15"/>
 	<modifier class="detectability" value="-0.35"/>
 	<modifier class="night_detectability" value="-0.1"/>
 	<modifier class="speed" value="0.15"/>
@@ -2629,7 +2629,7 @@
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="hit_success_probability" value="-1.15"/>
 	<modifier class="detectability" value="-0.35"/>
 	<modifier class="night_detectability" value="-0.1"/>
 	<modifier class="speed" value="0.15"/>
@@ -2648,7 +2648,7 @@
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="wound"/>
-	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="hit_success_probability" value="-1.15"/>
 	<modifier class="detectability" value="-0.35"/>
 	<modifier class="night_detectability" value="-0.1"/>
 	<modifier class="speed" value="0.15"/>
@@ -2672,7 +2672,7 @@
 	<modifier class="melee_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="unwound" output_character_state="unwound" consumes_item="0"/>
-	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="hit_success_probability" value="-1.15"/>
 	<modifier class="detectability" value="-0.35"/>
 	<modifier class="night_detectability" value="-0.1"/>
 	<modifier class="speed" value="0.15"/>
@@ -3471,7 +3471,7 @@
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
-	<modifier class="hit_success_probability" value="-0.5"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
 	<modifier class="detectability" value="-0.3"/>
 	<modifier class="speed" value="0.45"/>
 </carry_item>
@@ -3489,7 +3489,7 @@
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="hit_success_probability" value="-0.5"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
 	<modifier class="detectability" value="-0.3"/>
 	<modifier class="speed" value="0.45"/>
 </carry_item>
@@ -3507,7 +3507,7 @@
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="hit_success_probability" value="-0.5"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
 	<modifier class="detectability" value="-0.3"/>
 	<modifier class="speed" value="0.45"/>
 </carry_item>
@@ -3525,7 +3525,7 @@
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="hit_success_probability" value="-0.5"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
 	<modifier class="detectability" value="-0.3"/>
 	<modifier class="speed" value="0.45"/>
 </carry_item>
@@ -3543,7 +3543,7 @@
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="wound"/>
-	<modifier class="hit_success_probability" value="-0.5"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
 	<modifier class="detectability" value="-0.3"/>
 	<modifier class="speed" value="0.45"/>
 </carry_item>
@@ -3566,7 +3566,7 @@
 	<modifier class="melee_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="unwound" output_character_state="unwound" consumes_item="0"/>
-	<modifier class="hit_success_probability" value="-0.5"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
 	<modifier class="detectability" value="-0.3"/>
 	<modifier class="speed" value="0.45"/>
 </carry_item>
@@ -17779,11 +17779,11 @@
 	<modifier class="detectability" value="1.0"/>
 </carry_item>
 
-<carry_item key="vest_qwd.carry_item" time_to_live_out_in_the_open="0" name="Manticore Armor" transform_on_consume="vest_qwd_1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+<carry_item key="vest_80hp.carry_item" time_to_live_out_in_the_open="0" transform_on_consume="vest_80hp_1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 	<hud_icon filename="testing.png"/>
 	<capacity value="1" source="rank" source_value="0"/>
-	<commonness value="1" in_stock="1" can_respawn_with="1"/>
-	<inventory encubrance="100" price="1"/>
+	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
 	<model/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
 	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -17792,16 +17792,16 @@
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="detectability" value="0.5"/>
 	<modifier class="speed" value="0.0"/>
-	<modifier class="hit_success_probability" value="-1.5"/>
-	<modifier class="detectability" value="1.0"/>
 </carry_item>
 
-<carry_item key="vest_qwd_1" time_to_live_out_in_the_open="0" name="Manticore Armor" transform_on_consume="vest_qwd_2" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+<carry_item key="vest_80hp_1" time_to_live_out_in_the_open="0" transform_on_consume="vest_80hp_2" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 	<hud_icon filename="testing.png"/>
 	<capacity value="1" source="rank" source_value="0"/>
-	<commonness value="1" in_stock="1" can_respawn_with="1"/>
-	<inventory encubrance="100" price="1"/>
+	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
 	<model/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
 	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -17810,16 +17810,16 @@
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="detectability" value="0.5"/>
 	<modifier class="speed" value="0.0"/>
-	<modifier class="hit_success_probability" value="-1.5"/>
-	<modifier class="detectability" value="1.0"/>
 </carry_item>
 
-<carry_item key="vest_qwd_2" time_to_live_out_in_the_open="0" name="Manticore Armor" transform_on_consume="vest_qwd_3" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+<carry_item key="vest_80hp_2" time_to_live_out_in_the_open="0" transform_on_consume="vest_80hp_3" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 	<hud_icon filename="testing.png"/>
 	<capacity value="1" source="rank" source_value="0"/>
-	<commonness value="1" in_stock="1" can_respawn_with="1"/>
-	<inventory encubrance="100" price="1"/>
+	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
 	<model/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
 	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -17828,16 +17828,16 @@
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="detectability" value="0.5"/>
 	<modifier class="speed" value="0.0"/>
-	<modifier class="hit_success_probability" value="-1.5"/>
-	<modifier class="detectability" value="1.0"/>
 </carry_item>
 
-<carry_item key="vest_qwd_3" time_to_live_out_in_the_open="0" name="Manticore Armor" transform_on_consume="vest_qwd_4" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+<carry_item key="vest_80hp_3" time_to_live_out_in_the_open="0" transform_on_consume="vest_80hp_4" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 	<hud_icon filename="testing.png"/>
 	<capacity value="1" source="rank" source_value="0"/>
-	<commonness value="1" in_stock="1" can_respawn_with="1"/>
-	<inventory encubrance="100" price="1"/>
+	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
 	<model/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
 	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -17846,16 +17846,16 @@
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="detectability" value="0.5"/>
 	<modifier class="speed" value="0.0"/>
-	<modifier class="hit_success_probability" value="-1.5"/>
-	<modifier class="detectability" value="1.0"/>
 </carry_item>
 
-<carry_item key="vest_qwd_4" time_to_live_out_in_the_open="0" name="Manticore Armor" transform_on_consume="vest_qwd_5" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+<carry_item key="vest_80hp_4" time_to_live_out_in_the_open="0" transform_on_consume="vest_80hp_5" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 	<hud_icon filename="testing.png"/>
 	<capacity value="1" source="rank" source_value="0"/>
-	<commonness value="1" in_stock="1" can_respawn_with="1"/>
-	<inventory encubrance="100" price="1"/>
+	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
 	<model/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
 	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -17864,16 +17864,16 @@
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="detectability" value="0.5"/>
 	<modifier class="speed" value="0.0"/>
-	<modifier class="hit_success_probability" value="-1.5"/>
-	<modifier class="detectability" value="1.0"/>
 </carry_item>
 
-<carry_item key="vest_qwd_5" time_to_live_out_in_the_open="0" name="Manticore Armor" transform_on_consume="vest_qwd_6" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+<carry_item key="vest_80hp_5" time_to_live_out_in_the_open="0" transform_on_consume="vest_80hp_6" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 	<hud_icon filename="testing.png"/>
 	<capacity value="1" source="rank" source_value="0"/>
-	<commonness value="1" in_stock="1" can_respawn_with="1"/>
-	<inventory encubrance="100" price="1"/>
+	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
 	<model/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
 	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -17882,16 +17882,16 @@
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="detectability" value="0.5"/>
 	<modifier class="speed" value="0.0"/>
-	<modifier class="hit_success_probability" value="-1.3"/>
-	<modifier class="detectability" value="1.0"/>
 </carry_item>
 
-<carry_item key="vest_qwd_6" time_to_live_out_in_the_open="0" name="Manticore Armor" transform_on_consume="vest_qwd_7" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+<carry_item key="vest_80hp_6" time_to_live_out_in_the_open="0" transform_on_consume="vest_80hp_7" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 	<hud_icon filename="testing.png"/>
 	<capacity value="1" source="rank" source_value="0"/>
-	<commonness value="1" in_stock="1" can_respawn_with="1"/>
-	<inventory encubrance="100" price="1"/>
+	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
 	<model/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
 	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -17900,16 +17900,16 @@
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="detectability" value="0.5"/>
 	<modifier class="speed" value="0.0"/>
-	<modifier class="hit_success_probability" value="-1.3"/>
-	<modifier class="detectability" value="1.0"/>
 </carry_item>
 
-<carry_item key="vest_qwd_7" time_to_live_out_in_the_open="0" name="Manticore Armor" transform_on_consume="vest_qwd_8" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+<carry_item key="vest_80hp_7" time_to_live_out_in_the_open="0" transform_on_consume="vest_80hp_8" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 	<hud_icon filename="testing.png"/>
 	<capacity value="1" source="rank" source_value="0"/>
-	<commonness value="1" in_stock="1" can_respawn_with="1"/>
-	<inventory encubrance="100" price="1"/>
+	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
 	<model/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
 	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -17918,16 +17918,16 @@
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="detectability" value="0.5"/>
 	<modifier class="speed" value="0.0"/>
-	<modifier class="hit_success_probability" value="-1.3"/>
-	<modifier class="detectability" value="1.0"/>
 </carry_item>
 
-<carry_item key="vest_qwd_8" time_to_live_out_in_the_open="0" name="Manticore Armor" transform_on_consume="vest_qwd_9" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+<carry_item key="vest_80hp_8" time_to_live_out_in_the_open="0" transform_on_consume="vest_80hp_9" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 	<hud_icon filename="testing.png"/>
 	<capacity value="1" source="rank" source_value="0"/>
-	<commonness value="1" in_stock="1" can_respawn_with="1"/>
-	<inventory encubrance="100" price="1"/>
+	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
 	<model/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
 	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -17936,16 +17936,16 @@
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="detectability" value="0.5"/>
 	<modifier class="speed" value="0.0"/>
-	<modifier class="hit_success_probability" value="-1.3"/>
-	<modifier class="detectability" value="1.0"/>
 </carry_item>
 
-<carry_item key="vest_qwd_9" time_to_live_out_in_the_open="0" name="Manticore Armor" transform_on_consume="vest_qwd_10" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+<carry_item key="vest_80hp_9" time_to_live_out_in_the_open="0" transform_on_consume="vest_80hp_10" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 	<hud_icon filename="testing.png"/>
 	<capacity value="1" source="rank" source_value="0"/>
-	<commonness value="1" in_stock="1" can_respawn_with="1"/>
-	<inventory encubrance="100" price="1"/>
+	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
 	<model/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
 	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -17954,16 +17954,16 @@
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="detectability" value="0.5"/>
 	<modifier class="speed" value="0.0"/>
-	<modifier class="hit_success_probability" value="-1.3"/>
-	<modifier class="detectability" value="1.0"/>
 </carry_item>
 
-<carry_item key="vest_qwd_10" time_to_live_out_in_the_open="0" name="Manticore Armor" transform_on_consume="vest_qwd_11" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+<carry_item key="vest_80hp_10" time_to_live_out_in_the_open="0" transform_on_consume="vest_80hp_11" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 	<hud_icon filename="testing.png"/>
 	<capacity value="1" source="rank" source_value="0"/>
-	<commonness value="1" in_stock="1" can_respawn_with="1"/>
-	<inventory encubrance="100" price="1"/>
+	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
 	<model/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
 	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -17972,16 +17972,16 @@
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="detectability" value="0.5"/>
 	<modifier class="speed" value="0.0"/>
-	<modifier class="hit_success_probability" value="-1.3"/>
-	<modifier class="detectability" value="1.0"/>
 </carry_item>
 
-<carry_item key="vest_qwd_11" time_to_live_out_in_the_open="0" name="Manticore Armor" transform_on_consume="vest_qwd_12" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+<carry_item key="vest_80hp_11" time_to_live_out_in_the_open="0" transform_on_consume="vest_80hp_12" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 	<hud_icon filename="testing.png"/>
 	<capacity value="1" source="rank" source_value="0"/>
-	<commonness value="1" in_stock="1" can_respawn_with="1"/>
-	<inventory encubrance="100" price="1"/>
+	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
 	<model/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
 	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -17990,16 +17990,16 @@
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="detectability" value="0.5"/>
 	<modifier class="speed" value="0.0"/>
-	<modifier class="hit_success_probability" value="-1.3"/>
-	<modifier class="detectability" value="1.0"/>
 </carry_item>
 
-<carry_item key="vest_qwd_12" time_to_live_out_in_the_open="0" name="Manticore Armor" transform_on_consume="vest_qwd_13" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+<carry_item key="vest_80hp_12" time_to_live_out_in_the_open="0" transform_on_consume="vest_80hp_13" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 	<hud_icon filename="testing.png"/>
 	<capacity value="1" source="rank" source_value="0"/>
-	<commonness value="1" in_stock="1" can_respawn_with="1"/>
-	<inventory encubrance="100" price="1"/>
+	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
 	<model/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
 	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -18008,16 +18008,16 @@
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="detectability" value="0.5"/>
 	<modifier class="speed" value="0.0"/>
-	<modifier class="hit_success_probability" value="-1.3"/>
-	<modifier class="detectability" value="1.0"/>
 </carry_item>
 
-<carry_item key="vest_qwd_13" time_to_live_out_in_the_open="0" name="Manticore Armor" transform_on_consume="vest_qwd_14" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+<carry_item key="vest_80hp_13" time_to_live_out_in_the_open="0" transform_on_consume="vest_80hp_14" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 	<hud_icon filename="testing.png"/>
 	<capacity value="1" source="rank" source_value="0"/>
-	<commonness value="1" in_stock="1" can_respawn_with="1"/>
-	<inventory encubrance="100" price="1"/>
+	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
 	<model/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
 	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -18026,16 +18026,16 @@
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="detectability" value="0.5"/>
 	<modifier class="speed" value="0.0"/>
-	<modifier class="hit_success_probability" value="-1.3"/>
-	<modifier class="detectability" value="1.0"/>
 </carry_item>
 
-<carry_item key="vest_qwd_14" time_to_live_out_in_the_open="0" name="Manticore Armor" transform_on_consume="vest_qwd_15" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+<carry_item key="vest_80hp_14" time_to_live_out_in_the_open="0" transform_on_consume="vest_80hp_15" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 	<hud_icon filename="testing.png"/>
 	<capacity value="1" source="rank" source_value="0"/>
-	<commonness value="1" in_stock="1" can_respawn_with="1"/>
-	<inventory encubrance="100" price="1"/>
+	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
 	<model/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
 	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -18044,16 +18044,16 @@
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="detectability" value="0.5"/>
 	<modifier class="speed" value="0.0"/>
-	<modifier class="hit_success_probability" value="-1.3"/>
-	<modifier class="detectability" value="1.0"/>
 </carry_item>
 
-<carry_item key="vest_qwd_15" time_to_live_out_in_the_open="0" name="Manticore Armor" transform_on_consume="vest_qwd_16" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+<carry_item key="vest_80hp_15" time_to_live_out_in_the_open="0" transform_on_consume="vest_80hp_16" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 	<hud_icon filename="testing.png"/>
 	<capacity value="1" source="rank" source_value="0"/>
-	<commonness value="1" in_stock="1" can_respawn_with="1"/>
-	<inventory encubrance="100" price="1"/>
+	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
 	<model/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
 	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -18062,16 +18062,16 @@
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="detectability" value="0.5"/>
 	<modifier class="speed" value="0.0"/>
-	<modifier class="hit_success_probability" value="-1.3"/>
-	<modifier class="detectability" value="1.0"/>
 </carry_item>
 
-<carry_item key="vest_qwd_16" time_to_live_out_in_the_open="0" name="Manticore Armor" transform_on_consume="vest_qwd_17" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+<carry_item key="vest_80hp_16" time_to_live_out_in_the_open="0" transform_on_consume="vest_80hp_17" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 	<hud_icon filename="testing.png"/>
 	<capacity value="1" source="rank" source_value="0"/>
-	<commonness value="1" in_stock="1" can_respawn_with="1"/>
-	<inventory encubrance="100" price="1"/>
+	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
 	<model/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
 	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -18080,16 +18080,16 @@
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="detectability" value="0.5"/>
 	<modifier class="speed" value="0.0"/>
-	<modifier class="hit_success_probability" value="-1.3"/>
-	<modifier class="detectability" value="1.0"/>
 </carry_item>
 
-<carry_item key="vest_qwd_17" time_to_live_out_in_the_open="0" name="Manticore Armor" transform_on_consume="vest_qwd_18" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+<carry_item key="vest_80hp_17" time_to_live_out_in_the_open="0" transform_on_consume="vest_80hp_18" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 	<hud_icon filename="testing.png"/>
 	<capacity value="1" source="rank" source_value="0"/>
-	<commonness value="1" in_stock="1" can_respawn_with="1"/>
-	<inventory encubrance="100" price="1"/>
+	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
 	<model/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
 	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -18098,16 +18098,16 @@
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="detectability" value="0.5"/>
 	<modifier class="speed" value="0.0"/>
-	<modifier class="hit_success_probability" value="-1.3"/>
-	<modifier class="detectability" value="1.0"/>
 </carry_item>
 
-<carry_item key="vest_qwd_18" time_to_live_out_in_the_open="0" name="Manticore Armor" transform_on_consume="vest_qwd_19" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+<carry_item key="vest_80hp_18" time_to_live_out_in_the_open="0" transform_on_consume="vest_80hp_19" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 	<hud_icon filename="testing.png"/>
 	<capacity value="1" source="rank" source_value="0"/>
-	<commonness value="1" in_stock="1" can_respawn_with="1"/>
-	<inventory encubrance="100" price="1"/>
+	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
 	<model/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
 	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -18116,16 +18116,16 @@
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="detectability" value="0.5"/>
 	<modifier class="speed" value="0.0"/>
-	<modifier class="hit_success_probability" value="-1.3"/>
-	<modifier class="detectability" value="1.0"/>
 </carry_item>
 
-<carry_item key="vest_qwd_19" time_to_live_out_in_the_open="0" name="Manticore Armor" transform_on_consume="vest_qwd_20" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+<carry_item key="vest_80hp_19" time_to_live_out_in_the_open="0" transform_on_consume="vest_80hp_20" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 	<hud_icon filename="testing.png"/>
 	<capacity value="1" source="rank" source_value="0"/>
-	<commonness value="1" in_stock="1" can_respawn_with="1"/>
-	<inventory encubrance="100" price="1"/>
+	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
 	<model/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
 	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -18134,34 +18134,16 @@
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="detectability" value="0.5"/>
 	<modifier class="speed" value="0.0"/>
-	<modifier class="hit_success_probability" value="-1.3"/>
-	<modifier class="detectability" value="1.0"/>
 </carry_item>
 
-<carry_item key="vest_qwd_20" time_to_live_out_in_the_open="0" name="Manticore Armor" transform_on_consume="vest_qwd_21" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+<carry_item key="vest_80hp_20" time_to_live_out_in_the_open="0" transform_on_consume="vest_80hp_21" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 	<hud_icon filename="testing.png"/>
 	<capacity value="1" source="rank" source_value="0"/>
-	<commonness value="1" in_stock="1" can_respawn_with="1"/>
-	<inventory encubrance="100" price="1"/>
-	<model/>
-	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="stun"/>
-	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
-	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
-	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="stun"/>
-	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
-	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
-	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
-	<modifier class="speed" value="0.0"/>
-	<modifier class="hit_success_probability" value="-1.3"/>
-	<modifier class="detectability" value="1.0"/>
-</carry_item>
-
-<carry_item key="vest_qwd_21" time_to_live_out_in_the_open="0" name="Manticore Armor" transform_on_consume="vest_qwd_22" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
-	<hud_icon filename="testing.png"/>
-	<capacity value="1" source="rank" source_value="0"/>
-	<commonness value="1" in_stock="1" can_respawn_with="1"/>
-	<inventory encubrance="100" price="1"/>
+	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
 	<model/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
 	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -18170,16 +18152,16 @@
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="detectability" value="0.5"/>
 	<modifier class="speed" value="0.0"/>
-	<modifier class="hit_success_probability" value="-1.3"/>
-	<modifier class="detectability" value="1.0"/>
 </carry_item>
 
-<carry_item key="vest_qwd_22" time_to_live_out_in_the_open="0" name="Manticore Armor" transform_on_consume="vest_qwd_23" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+<carry_item key="vest_80hp_21" time_to_live_out_in_the_open="0" transform_on_consume="vest_80hp_22" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 	<hud_icon filename="testing.png"/>
 	<capacity value="1" source="rank" source_value="0"/>
-	<commonness value="1" in_stock="1" can_respawn_with="1"/>
-	<inventory encubrance="100" price="1"/>
+	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
 	<model/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
 	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -18188,16 +18170,16 @@
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="detectability" value="0.5"/>
 	<modifier class="speed" value="0.0"/>
-	<modifier class="hit_success_probability" value="-1.3"/>
-	<modifier class="detectability" value="1.0"/>
 </carry_item>
 
-<carry_item key="vest_qwd_23" time_to_live_out_in_the_open="0" name="Manticore Armor" transform_on_consume="vest_qwd_24" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+<carry_item key="vest_80hp_22" time_to_live_out_in_the_open="0" transform_on_consume="vest_80hp_23" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 	<hud_icon filename="testing.png"/>
 	<capacity value="1" source="rank" source_value="0"/>
-	<commonness value="1" in_stock="1" can_respawn_with="1"/>
-	<inventory encubrance="100" price="1"/>
+	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
 	<model/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
 	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -18206,16 +18188,16 @@
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="detectability" value="0.5"/>
 	<modifier class="speed" value="0.0"/>
-	<modifier class="hit_success_probability" value="-1.3"/>
-	<modifier class="detectability" value="1.0"/>
 </carry_item>
 
-<carry_item key="vest_qwd_24" time_to_live_out_in_the_open="0" name="Manticore Armor" transform_on_consume="vest_qwd_25" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+<carry_item key="vest_80hp_23" time_to_live_out_in_the_open="0" transform_on_consume="vest_80hp_24" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 	<hud_icon filename="testing.png"/>
 	<capacity value="1" source="rank" source_value="0"/>
-	<commonness value="1" in_stock="1" can_respawn_with="1"/>
-	<inventory encubrance="100" price="1"/>
+	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
 	<model/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
 	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -18224,16 +18206,16 @@
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="detectability" value="0.5"/>
 	<modifier class="speed" value="0.0"/>
-	<modifier class="hit_success_probability" value="-1.3"/>
-	<modifier class="detectability" value="1.0"/>
 </carry_item>
 
-<carry_item key="vest_qwd_25" time_to_live_out_in_the_open="0" name="Manticore Armor" transform_on_consume="vest_qwd_26" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+<carry_item key="vest_80hp_24" time_to_live_out_in_the_open="0" transform_on_consume="vest_80hp_25" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 	<hud_icon filename="testing.png"/>
 	<capacity value="1" source="rank" source_value="0"/>
-	<commonness value="1" in_stock="1" can_respawn_with="1"/>
-	<inventory encubrance="100" price="1"/>
+	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
 	<model/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
 	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -18242,16 +18224,16 @@
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="detectability" value="0.5"/>
 	<modifier class="speed" value="0.0"/>
-	<modifier class="hit_success_probability" value="-1.3"/>
-	<modifier class="detectability" value="1.0"/>
 </carry_item>
 
-<carry_item key="vest_qwd_26" time_to_live_out_in_the_open="0" name="Manticore Armor" transform_on_consume="vest_qwd_27" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+<carry_item key="vest_80hp_25" time_to_live_out_in_the_open="0" transform_on_consume="vest_80hp_26" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 	<hud_icon filename="testing.png"/>
 	<capacity value="1" source="rank" source_value="0"/>
-	<commonness value="1" in_stock="1" can_respawn_with="1"/>
-	<inventory encubrance="100" price="1"/>
+	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
 	<model/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
 	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -18260,16 +18242,16 @@
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="detectability" value="0.5"/>
 	<modifier class="speed" value="0.0"/>
-	<modifier class="hit_success_probability" value="-1.3"/>
-	<modifier class="detectability" value="1.0"/>
 </carry_item>
 
-<carry_item key="vest_qwd_27" time_to_live_out_in_the_open="0" name="Manticore Armor" transform_on_consume="vest_qwd_28" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+<carry_item key="vest_80hp_26" time_to_live_out_in_the_open="0" transform_on_consume="vest_80hp_27" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 	<hud_icon filename="testing.png"/>
 	<capacity value="1" source="rank" source_value="0"/>
-	<commonness value="1" in_stock="1" can_respawn_with="1"/>
-	<inventory encubrance="100" price="1"/>
+	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
 	<model/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
 	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -18278,16 +18260,16 @@
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="detectability" value="0.5"/>
 	<modifier class="speed" value="0.0"/>
-	<modifier class="hit_success_probability" value="-1.3"/>
-	<modifier class="detectability" value="1.0"/>
 </carry_item>
 
-<carry_item key="vest_qwd_28" time_to_live_out_in_the_open="0" name="Manticore Armor" transform_on_consume="vest_qwd_29" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+<carry_item key="vest_80hp_27" time_to_live_out_in_the_open="0" transform_on_consume="vest_80hp_28" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 	<hud_icon filename="testing.png"/>
 	<capacity value="1" source="rank" source_value="0"/>
-	<commonness value="1" in_stock="1" can_respawn_with="1"/>
-	<inventory encubrance="100" price="1"/>
+	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
 	<model/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
 	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -18296,16 +18278,16 @@
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="detectability" value="0.5"/>
 	<modifier class="speed" value="0.0"/>
-	<modifier class="hit_success_probability" value="-1.3"/>
-	<modifier class="detectability" value="1.0"/>
 </carry_item>
 
-<carry_item key="vest_qwd_29" time_to_live_out_in_the_open="0" name="Manticore Armor" transform_on_consume="vest_qwd_30" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+<carry_item key="vest_80hp_28" time_to_live_out_in_the_open="0" transform_on_consume="vest_80hp_29" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 	<hud_icon filename="testing.png"/>
 	<capacity value="1" source="rank" source_value="0"/>
-	<commonness value="1" in_stock="1" can_respawn_with="1"/>
-	<inventory encubrance="100" price="1"/>
+	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
 	<model/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
 	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -18314,16 +18296,16 @@
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="detectability" value="0.5"/>
 	<modifier class="speed" value="0.0"/>
-	<modifier class="hit_success_probability" value="-1.3"/>
-	<modifier class="detectability" value="1.0"/>
 </carry_item>
 
-<carry_item key="vest_qwd_30" time_to_live_out_in_the_open="0" name="Manticore Armor" transform_on_consume="vest_qwd_31" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+<carry_item key="vest_80hp_29" time_to_live_out_in_the_open="0" transform_on_consume="vest_80hp_30" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 	<hud_icon filename="testing.png"/>
 	<capacity value="1" source="rank" source_value="0"/>
-	<commonness value="1" in_stock="1" can_respawn_with="1"/>
-	<inventory encubrance="100" price="1"/>
+	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
 	<model/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
 	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -18332,16 +18314,16 @@
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="detectability" value="0.5"/>
 	<modifier class="speed" value="0.0"/>
-	<modifier class="hit_success_probability" value="-1.3"/>
-	<modifier class="detectability" value="1.0"/>
 </carry_item>
 
-<carry_item key="vest_qwd_31" time_to_live_out_in_the_open="0" name="Manticore Armor" transform_on_consume="vest_qwd_32" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+<carry_item key="vest_80hp_30" time_to_live_out_in_the_open="0" transform_on_consume="vest_80hp_31" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 	<hud_icon filename="testing.png"/>
 	<capacity value="1" source="rank" source_value="0"/>
-	<commonness value="1" in_stock="1" can_respawn_with="1"/>
-	<inventory encubrance="100" price="1"/>
+	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
 	<model/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
 	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -18350,16 +18332,16 @@
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="detectability" value="0.5"/>
 	<modifier class="speed" value="0.0"/>
-	<modifier class="hit_success_probability" value="-1.3"/>
-	<modifier class="detectability" value="1.0"/>
 </carry_item>
 
-<carry_item key="vest_qwd_32" time_to_live_out_in_the_open="0" name="Manticore Armor" transform_on_consume="vest_qwd_33" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+<carry_item key="vest_80hp_31" time_to_live_out_in_the_open="0" transform_on_consume="vest_80hp_32" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 	<hud_icon filename="testing.png"/>
 	<capacity value="1" source="rank" source_value="0"/>
-	<commonness value="1" in_stock="1" can_respawn_with="1"/>
-	<inventory encubrance="100" price="1"/>
+	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
 	<model/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
 	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -18368,16 +18350,16 @@
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="detectability" value="0.5"/>
 	<modifier class="speed" value="0.0"/>
-	<modifier class="hit_success_probability" value="-1.3"/>
-	<modifier class="detectability" value="1.0"/>
 </carry_item>
 
-<carry_item key="vest_qwd_33" time_to_live_out_in_the_open="0" name="Manticore Armor" transform_on_consume="vest_qwd_34" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+<carry_item key="vest_80hp_32" time_to_live_out_in_the_open="0" transform_on_consume="vest_80hp_33" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 	<hud_icon filename="testing.png"/>
 	<capacity value="1" source="rank" source_value="0"/>
-	<commonness value="1" in_stock="1" can_respawn_with="1"/>
-	<inventory encubrance="100" price="1"/>
+	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
 	<model/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
 	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -18386,16 +18368,16 @@
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="detectability" value="0.5"/>
 	<modifier class="speed" value="0.0"/>
-	<modifier class="hit_success_probability" value="-1.3"/>
-	<modifier class="detectability" value="1.0"/>
 </carry_item>
 
-<carry_item key="vest_qwd_34" time_to_live_out_in_the_open="0" name="Manticore Armor" transform_on_consume="vest_qwd_35" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+<carry_item key="vest_80hp_33" time_to_live_out_in_the_open="0" transform_on_consume="vest_80hp_34" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 	<hud_icon filename="testing.png"/>
 	<capacity value="1" source="rank" source_value="0"/>
-	<commonness value="1" in_stock="1" can_respawn_with="1"/>
-	<inventory encubrance="100" price="1"/>
+	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
 	<model/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
 	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -18404,16 +18386,16 @@
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="detectability" value="0.5"/>
 	<modifier class="speed" value="0.0"/>
-	<modifier class="hit_success_probability" value="-1.3"/>
-	<modifier class="detectability" value="1.0"/>
 </carry_item>
 
-<carry_item key="vest_qwd_35" time_to_live_out_in_the_open="0" name="Manticore Armor" transform_on_consume="vest_qwd_36" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+<carry_item key="vest_80hp_34" time_to_live_out_in_the_open="0" transform_on_consume="vest_80hp_35" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 	<hud_icon filename="testing.png"/>
 	<capacity value="1" source="rank" source_value="0"/>
-	<commonness value="1" in_stock="1" can_respawn_with="1"/>
-	<inventory encubrance="100" price="1"/>
+	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
 	<model/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
 	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -18422,16 +18404,16 @@
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="detectability" value="0.5"/>
 	<modifier class="speed" value="0.0"/>
-	<modifier class="hit_success_probability" value="-1.3"/>
-	<modifier class="detectability" value="1.0"/>
 </carry_item>
 
-<carry_item key="vest_qwd_36" time_to_live_out_in_the_open="0" name="Manticore Armor" transform_on_consume="vest_qwd_37" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+<carry_item key="vest_80hp_35" time_to_live_out_in_the_open="0" transform_on_consume="vest_80hp_36" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 	<hud_icon filename="testing.png"/>
 	<capacity value="1" source="rank" source_value="0"/>
-	<commonness value="1" in_stock="1" can_respawn_with="1"/>
-	<inventory encubrance="100" price="1"/>
+	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
 	<model/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
 	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -18440,16 +18422,16 @@
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="detectability" value="0.5"/>
 	<modifier class="speed" value="0.0"/>
-	<modifier class="hit_success_probability" value="-1.3"/>
-	<modifier class="detectability" value="1.0"/>
 </carry_item>
 
-<carry_item key="vest_qwd_37" time_to_live_out_in_the_open="0" name="Manticore Armor" transform_on_consume="vest_qwd_38" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+<carry_item key="vest_80hp_36" time_to_live_out_in_the_open="0" transform_on_consume="vest_80hp_37" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 	<hud_icon filename="testing.png"/>
 	<capacity value="1" source="rank" source_value="0"/>
-	<commonness value="1" in_stock="1" can_respawn_with="1"/>
-	<inventory encubrance="100" price="1"/>
+	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
 	<model/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
 	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -18458,16 +18440,16 @@
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="detectability" value="0.5"/>
 	<modifier class="speed" value="0.0"/>
-	<modifier class="hit_success_probability" value="-1.3"/>
-	<modifier class="detectability" value="1.0"/>
 </carry_item>
 
-<carry_item key="vest_qwd_38" time_to_live_out_in_the_open="0" name="Manticore Armor" transform_on_consume="vest_qwd_39" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+<carry_item key="vest_80hp_37" time_to_live_out_in_the_open="0" transform_on_consume="vest_80hp_38" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 	<hud_icon filename="testing.png"/>
 	<capacity value="1" source="rank" source_value="0"/>
-	<commonness value="1" in_stock="1" can_respawn_with="1"/>
-	<inventory encubrance="100" price="1"/>
+	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
 	<model/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
 	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -18476,27 +18458,765 @@
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="detectability" value="0.5"/>
 	<modifier class="speed" value="0.0"/>
-	<modifier class="hit_success_probability" value="-1.3"/>
-	<modifier class="detectability" value="1.0"/>
 </carry_item>
 
-<carry_item key="vest_qwd_39" time_to_live_out_in_the_open="0" name="Manticore Armor" transform_on_consume="vest_qwd_40" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+<carry_item key="vest_80hp_38" time_to_live_out_in_the_open="0" transform_on_consume="vest_80hp_39" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 	<hud_icon filename="testing.png"/>
 	<capacity value="1" source="rank" source_value="0"/>
-	<commonness value="1" in_stock="1" can_respawn_with="1"/>
-	<inventory encubrance="100" price="1"/>
+	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
 	<model/>
-	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="death"/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
 	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
-	<modifier class="melee_hit_result" input_character_state="death" output_character_state="death"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="detectability" value="0.5"/>
 	<modifier class="speed" value="0.0"/>
-	<modifier class="hit_success_probability" value="-1.3"/>
-	<modifier class="detectability" value="1.0"/>
+</carry_item>
+
+<carry_item key="vest_80hp_39" time_to_live_out_in_the_open="0" transform_on_consume="vest_80hp_40" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="detectability" value="0.5"/>
+	<modifier class="speed" value="0.0"/>
+</carry_item>
+
+<carry_item key="vest_80hp_40" time_to_live_out_in_the_open="0" transform_on_consume="vest_80hp_41" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="detectability" value="0.5"/>
+	<modifier class="speed" value="0.0"/>
+</carry_item>
+
+<carry_item key="vest_80hp_41" time_to_live_out_in_the_open="0" transform_on_consume="vest_80hp_42" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="detectability" value="0.5"/>
+	<modifier class="speed" value="0.0"/>
+</carry_item>
+
+<carry_item key="vest_80hp_42" time_to_live_out_in_the_open="0" transform_on_consume="vest_80hp_43" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="detectability" value="0.5"/>
+	<modifier class="speed" value="0.0"/>
+</carry_item>
+
+<carry_item key="vest_80hp_43" time_to_live_out_in_the_open="0" transform_on_consume="vest_80hp_44" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="detectability" value="0.5"/>
+	<modifier class="speed" value="0.0"/>
+</carry_item>
+
+<carry_item key="vest_80hp_44" time_to_live_out_in_the_open="0" transform_on_consume="vest_80hp_45" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="detectability" value="0.5"/>
+	<modifier class="speed" value="0.0"/>
+</carry_item>
+
+<carry_item key="vest_80hp_45" time_to_live_out_in_the_open="0" transform_on_consume="vest_80hp_46" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="detectability" value="0.5"/>
+	<modifier class="speed" value="0.0"/>
+</carry_item>
+
+<carry_item key="vest_80hp_46" time_to_live_out_in_the_open="0" transform_on_consume="vest_80hp_47" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="detectability" value="0.5"/>
+	<modifier class="speed" value="0.0"/>
+</carry_item>
+
+<carry_item key="vest_80hp_47" time_to_live_out_in_the_open="0" transform_on_consume="vest_80hp_48" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="detectability" value="0.5"/>
+	<modifier class="speed" value="0.0"/>
+</carry_item>
+
+<carry_item key="vest_80hp_48" time_to_live_out_in_the_open="0" transform_on_consume="vest_80hp_49" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="detectability" value="0.5"/>
+	<modifier class="speed" value="0.0"/>
+</carry_item>
+
+<carry_item key="vest_80hp_49" time_to_live_out_in_the_open="0" transform_on_consume="vest_80hp_50" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="detectability" value="0.5"/>
+	<modifier class="speed" value="0.0"/>
+</carry_item>
+
+<carry_item key="vest_80hp_50" time_to_live_out_in_the_open="0" transform_on_consume="vest_80hp_51" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="detectability" value="0.5"/>
+	<modifier class="speed" value="0.0"/>
+</carry_item>
+
+<carry_item key="vest_80hp_51" time_to_live_out_in_the_open="0" transform_on_consume="vest_80hp_52" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="detectability" value="0.5"/>
+	<modifier class="speed" value="0.0"/>
+</carry_item>
+
+<carry_item key="vest_80hp_52" time_to_live_out_in_the_open="0" transform_on_consume="vest_80hp_53" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="detectability" value="0.5"/>
+	<modifier class="speed" value="0.0"/>
+</carry_item>
+
+<carry_item key="vest_80hp_53" time_to_live_out_in_the_open="0" transform_on_consume="vest_80hp_54" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="detectability" value="0.5"/>
+	<modifier class="speed" value="0.0"/>
+</carry_item>
+
+<carry_item key="vest_80hp_54" time_to_live_out_in_the_open="0" transform_on_consume="vest_80hp_55" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="detectability" value="0.5"/>
+	<modifier class="speed" value="0.0"/>
+</carry_item>
+
+<carry_item key="vest_80hp_55" time_to_live_out_in_the_open="0" transform_on_consume="vest_80hp_56" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="detectability" value="0.5"/>
+	<modifier class="speed" value="0.0"/>
+</carry_item>
+
+<carry_item key="vest_80hp_56" time_to_live_out_in_the_open="0" transform_on_consume="vest_80hp_57" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="detectability" value="0.5"/>
+	<modifier class="speed" value="0.0"/>
+</carry_item>
+
+<carry_item key="vest_80hp_57" time_to_live_out_in_the_open="0" transform_on_consume="vest_80hp_58" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="detectability" value="0.5"/>
+	<modifier class="speed" value="0.0"/>
+</carry_item>
+
+<carry_item key="vest_80hp_58" time_to_live_out_in_the_open="0" transform_on_consume="vest_80hp_59" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="detectability" value="0.5"/>
+	<modifier class="speed" value="0.0"/>
+</carry_item>
+
+<carry_item key="vest_80hp_59" time_to_live_out_in_the_open="0" transform_on_consume="vest_80hp_60" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="detectability" value="0.5"/>
+	<modifier class="speed" value="0.0"/>
+</carry_item>
+
+<carry_item key="vest_80hp_60" time_to_live_out_in_the_open="0" transform_on_consume="vest_80hp_61" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="detectability" value="0.5"/>
+	<modifier class="speed" value="0.0"/>
+</carry_item>
+
+<carry_item key="vest_80hp_61" time_to_live_out_in_the_open="0" transform_on_consume="vest_80hp_62" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="detectability" value="0.5"/>
+	<modifier class="speed" value="0.0"/>
+</carry_item>
+
+<carry_item key="vest_80hp_62" time_to_live_out_in_the_open="0" transform_on_consume="vest_80hp_63" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="detectability" value="0.5"/>
+	<modifier class="speed" value="0.0"/>
+</carry_item>
+
+<carry_item key="vest_80hp_63" time_to_live_out_in_the_open="0" transform_on_consume="vest_80hp_64" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="detectability" value="0.5"/>
+	<modifier class="speed" value="0.0"/>
+</carry_item>
+
+<carry_item key="vest_80hp_64" time_to_live_out_in_the_open="0" transform_on_consume="vest_80hp_65" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="detectability" value="0.5"/>
+	<modifier class="speed" value="0.0"/>
+</carry_item>
+
+<carry_item key="vest_80hp_65" time_to_live_out_in_the_open="0" transform_on_consume="vest_80hp_66" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="detectability" value="0.5"/>
+	<modifier class="speed" value="0.0"/>
+</carry_item>
+
+<carry_item key="vest_80hp_66" time_to_live_out_in_the_open="0" transform_on_consume="vest_80hp_67" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="detectability" value="0.5"/>
+	<modifier class="speed" value="0.0"/>
+</carry_item>
+
+<carry_item key="vest_80hp_67" time_to_live_out_in_the_open="0" transform_on_consume="vest_80hp_68" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="detectability" value="0.5"/>
+	<modifier class="speed" value="0.0"/>
+</carry_item>
+
+<carry_item key="vest_80hp_68" time_to_live_out_in_the_open="0" transform_on_consume="vest_80hp_69" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="detectability" value="0.5"/>
+	<modifier class="speed" value="0.0"/>
+</carry_item>
+
+<carry_item key="vest_80hp_69" time_to_live_out_in_the_open="0" transform_on_consume="vest_80hp_70" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="detectability" value="0.5"/>
+	<modifier class="speed" value="0.0"/>
+</carry_item>
+
+<carry_item key="vest_80hp_70" time_to_live_out_in_the_open="0" transform_on_consume="vest_80hp_71" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="detectability" value="0.5"/>
+	<modifier class="speed" value="0.0"/>
+</carry_item>
+
+<carry_item key="vest_80hp_71" time_to_live_out_in_the_open="0" transform_on_consume="vest_80hp_72" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="detectability" value="0.5"/>
+	<modifier class="speed" value="0.0"/>
+</carry_item>
+
+<carry_item key="vest_80hp_72" time_to_live_out_in_the_open="0" transform_on_consume="vest_80hp_73" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="detectability" value="0.5"/>
+	<modifier class="speed" value="0.0"/>
+</carry_item>
+
+<carry_item key="vest_80hp_73" time_to_live_out_in_the_open="0" transform_on_consume="vest_80hp_74" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="detectability" value="0.5"/>
+	<modifier class="speed" value="0.0"/>
+</carry_item>
+
+<carry_item key="vest_80hp_74" time_to_live_out_in_the_open="0" transform_on_consume="vest_80hp_75" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="detectability" value="0.5"/>
+	<modifier class="speed" value="0.0"/>
+</carry_item>
+
+<carry_item key="vest_80hp_75" time_to_live_out_in_the_open="0" transform_on_consume="vest_80hp_76" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="detectability" value="0.5"/>
+	<modifier class="speed" value="0.0"/>
+</carry_item>
+
+<carry_item key="vest_80hp_76" time_to_live_out_in_the_open="0" transform_on_consume="vest_80hp_77" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="detectability" value="0.5"/>
+	<modifier class="speed" value="0.0"/>
+</carry_item>
+
+<carry_item key="vest_80hp_77" time_to_live_out_in_the_open="0" transform_on_consume="vest_80hp_78" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="detectability" value="0.5"/>
+	<modifier class="speed" value="0.0"/>
+</carry_item>
+
+<carry_item key="vest_80hp_78" time_to_live_out_in_the_open="0" transform_on_consume="vest_80hp_79" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="detectability" value="0.5"/>
+	<modifier class="speed" value="0.0"/>
+</carry_item>
+
+<carry_item key="vest_80hp_79" time_to_live_out_in_the_open="0" transform_on_consume="vest_80hp_80" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="detectability" value="0.5"/>
+	<modifier class="speed" value="0.0"/>
 </carry_item>
 
 <carry_item key="vest_15hp_elite.carry_item" time_to_live_out_in_the_open="0" name="Elite Vest" transform_on_consume="vest_15hp_elite_1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">

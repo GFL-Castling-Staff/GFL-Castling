@@ -3,30 +3,28 @@
 	<tag name="antiarmor" />
 	<tag name="mecha" />
 	<specification 
-	  retrigger_time="0.2" 
-	  accuracy_factor="0.75" 
+	  retrigger_time="0.1" 
+	  accuracy_factor="0.9" 
 	  sustained_fire_grow_step="2.0" 
-	  sustained_fire_diminish_rate="0.9" 
-	  magazine_size="7" 
+	  sustained_fire_diminish_rate="4.0" 
+	  magazine_size="200" 
 	  can_shoot_standing="1" 
 	  can_shoot_crouching="0"
 	  can_shoot_prone="0"
 	  suppressed="0" 
 	  name="Code:Hydra" 
-	  class="4" 
+	  class="0" 
 	  reload_one_at_a_time="0"
 	  sight_range_modifier="1.0" 
 	  projectile_speed="150" 
-	  carry_in_two_hands="0" 
+	  carry_in_two_hands="1" 
+	  barrel_offset="0"
 	  projectiles_per_shot="1" 
 	  stab_enabled="1"
-	  burst_shots="4"
-	  barrel_offset="0.1"
-	  barrel_offset_3d="5.0 1.0 0.1"/>
+	  />
 	<commonness value="0.000000001" in_stock="1" />
 	<animation state_key="recoil"	animation_key="recoil, hydra and manticore" />
-	<animation state_key="recoil" stance_key="prone" animation_key="recoil, hydra and manticore" />
-	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil, hydra and manticore" />
+	<animation state_key="recoil"	animation_key="recoil 2, hydra and manticore" />
 	<animation state_key="hold" animation_key="still, hydra and manticore" />
 	<animation state_key="hold_on_wall" animation_key="still, hydra and manticore" />
 	<animation state_key="hold_casual" animation_key="still, hydra and manticore" />
@@ -58,8 +56,8 @@
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0" />
 	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
 	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
-	<stance state_key="running" accuracy="0.3" />
-	<stance state_key="walking" accuracy="0.675" />
+	<stance state_key="running" accuracy="0.8" />
+	<stance state_key="walking" accuracy="0.8" />
 	<stance state_key="crouch_moving" accuracy="0.75" />
 	<stance state_key="prone_moving" accuracy="0.3" />
 	<stance state_key="standing" accuracy="0.8" />
