@@ -157,11 +157,20 @@ dictionary gameSkillIndex = {
 		// 利贝罗勒
         {"mle_skill_heal",35},
 
+		// 生成孤儿号
         {"spawn_mortar_truck",36},
 
+		// 生成一分钟闪电风暴
         {"spawn_lightning_storm_1_min",37},
 
+		// 生成腐蚀区域
 		{"para_acid",38},
+
+		// 格里芬奶包回甲
+		{"gk_medaid_hk416",39},
+
+		// 白教回甲
+		{"para_recover",40},
 
         // 下面这行是用来占位的，在这之上添加新的技能key和index即可
         {"666",-1}
@@ -1296,7 +1305,7 @@ class GFLskill : Tracker {
 				break;
 			}
 
-			case 37:{
+			case 37:{ 	// 生成一分钟闪电风暴
 				int characterId = event.getIntAttribute("character_id");
 				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
 				int factionId = character.getIntAttribute("faction_id");
@@ -1320,6 +1329,17 @@ class GFLskill : Tracker {
 					DOT_track.insertLast(DOT_tracker(characterId,factionid,grenade_pos,1.0,"elenusis_acid_bomb_spawn.projectile",10));
 				}
 				break;			
+			}
+
+			case 39: {// hk416 medic aid
+				int characterId = event.getIntAttribute("character_id");
+				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+				if (character !is null) {
+					Vector3 grenade_pos = stringToVector3(event.getStringAttribute("position"));
+					int factionid = character.getIntAttribute("faction_id");
+                    GFL_event_array.insertLast(GFL_event(characterId,factionid,int(GFL_Event_Index["hk416_medicaid"]),grenade_pos));
+				}
+				break;		
 			}
             default:
                 break;
