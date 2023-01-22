@@ -1,11 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<projectile class="grenade" name="30mm" slot="1" pulldown_in_air="26.0" radius="1.5" key="para_heal_skill.projectile">
+<projectile class="grenade" name="Paradeus Commando Heal Skill" slot="0" pulldown_in_air="26.0" radius="1.5" key="para_heal_skill.projectile" drop_count_factor_on_death="0" >
     <tag name="grenade"/>
     <result class="notify_script" key="para_heal" />
-    <trigger class="time" time_to_live="0" />
+    <trigger class="time" time_to_live="0.01" />
     <rotation class="motion" />
-    <model />
+	<hud_icon filename="grenade.png" />
 
+    <model />
+	
+    <throwable curve_height="7.0" near_far_distance="5.0" speed_estimation_near="15.0" speed_estimation_far="30.0" max_speed="30.0" randomness="0.07" />
+
+    <commonness value="2.0" in_stock="1" can_respawn_with="1"/>
+    <inventory encumbrance="3.0" price="5.0" />
+    <capacity value="8" source="rank" source_value="0.0" />
+    <capacity value="12" source="rank" source_value="6.48" />
+    <capacity value="16" source="rank" source_value="11.45" />
+    <capacity value="20" source="rank" source_value="23.33" />
+	
     <commonness value="0.0" />
 
     <sound class="result" key="other" fileref="stim_hit.wav" />

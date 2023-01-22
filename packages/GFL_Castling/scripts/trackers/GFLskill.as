@@ -1348,7 +1348,7 @@ class GFLskill : Tracker {
 				if (character !is null) {
 					Vector3 grenade_pos = stringToVector3(event.getStringAttribute("position"));
 					int factionid = character.getIntAttribute("faction_id");
-					healRangedCharacters(m_metagame,grenade_pos,factionid,10,5);
+					healRangedCharacters(m_metagame,grenade_pos,factionid,12,5,"para_heal");
 				}
 				break;			
 			}

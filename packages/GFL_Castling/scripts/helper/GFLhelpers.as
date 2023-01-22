@@ -778,9 +778,23 @@ void healCharacter(Metagame@ metagame,int characterId,int healnum) {
 	metagame.getComms().send(c);
 }
 
-void healRangedCharacters(Metagame@ metagame,Vector3 pos,int faction_id,float range,int healnum) {
+void healRangedCharacters(Metagame@ metagame,Vector3 pos,int faction_id,float range,int healnum,string special_key="none",int healcount=-1) {
 	array<const XmlElement@>@ characters = getCharactersNearPosition(metagame, pos, faction_id, range);
-	for (uint i = 0; i < characters.length; i++) {
+	if(healcount==-1) {
+		_log("No special heal count requirement.");
+		healcount = characters.length;
+	} else if (healcount>=characters.length) {
+		healcount = characters.length;
+	}
+	for (uint i = 0; i < healcount; i++) {
+		int luckyhealguyid = characters[i].getIntAttribute("id");
+		if (special_key=="para_heal"){
+			const XmlElement@ luckyhealguyC = getCharacterInfo(metagame, luckyhealguyid);
+			Vector3 c_pos = stringToVector3(luckyhealguyC.getStringAttribute("position"));
+			CreateDirectProjectile(metagame,c_pos.add(Vector3(0,0.1,0)),c_pos,"para_heal_effect_on_target.projectile",-1,faction_id,10);
+		} else {
+			_log("No special heal requirement.");
+		}
 		healCharacter(metagame,characters[i].getIntAttribute("id"),healnum);
 	}	
 }
