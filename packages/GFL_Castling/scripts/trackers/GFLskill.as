@@ -170,7 +170,7 @@ dictionary gameSkillIndex = {
 		{"gk_medaid_hk416",39},
 
 		// 白教回甲
-		{"para_recover",40},
+		{"para_heal",40},
 
         // 下面这行是用来占位的，在这之上添加新的技能key和index即可
         {"666",-1}
@@ -1339,8 +1339,20 @@ class GFLskill : Tracker {
 					int factionid = character.getIntAttribute("faction_id");
                     GFL_event_array.insertLast(GFL_event(characterId,factionid,int(GFL_Event_Index["hk416_medicaid"]),grenade_pos));
 				}
-				break;		
+				break;	
 			}
+
+			case 40: {// paradeus heal skill for commando
+				int characterId = event.getIntAttribute("character_id");
+				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+				if (character !is null) {
+					Vector3 grenade_pos = stringToVector3(event.getStringAttribute("position"));
+					int factionid = character.getIntAttribute("faction_id");
+					healRangedCharacters(m_metagame,grenade_pos,factionid,10,5);
+				}
+				break;			
+			}
+
             default:
                 break;
 		}

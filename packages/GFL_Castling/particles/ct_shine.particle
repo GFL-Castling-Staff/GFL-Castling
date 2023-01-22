@@ -116,3 +116,42 @@ particle_system Ct_Shine_Blood
 		rate	1
 	}
 }
+
+particle_system Ct_Shine_Para_Heal
+{
+	quota	500
+	material	Shine
+	particle_width	3
+	particle_height	3
+	cull_each	false
+	renderer	billboard
+	billboard_type	point
+
+	emitter Cylinder
+	{
+		angle	90
+		colour	0 0.54 0 1
+		direction	0 1 0
+		emission_rate	100
+		position	0 0 0
+		velocity	0
+		time_to_live	1
+		duration	0.05
+		width	1
+		height	1
+		depth	1
+	}
+
+	affector ColourFader
+	{
+		red	-0.7
+		green	-0.7
+		blue	-0.7
+		alpha	0
+	}
+
+	affector Scaler
+	{
+		rate	1
+	}
+}
