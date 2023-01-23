@@ -110,8 +110,14 @@
   <parameter class="celebrating_stab_probability" value="1.0" /> 
   <parameter class="willingness_to_charge" value="0.0" />
   <parameter class="stab_range" value="3.5" />
-  <parameter class="check_vehicles_while_fire_open_interval" value="10.0" />  
+  <parameter class="check_vehicles_while_fire_open_interval" value="1.0" />  
   
   <parameter class="reaction_time_after_choosing_target" value="-1.0" />
+
+  <parameter class="stationary_weapon_consider_leave_after_no_enemies_time" value="300.0" />
+  <parameter class="max_distance_to_leader_while_in_stationary_weapon" value="50.0" />
+
+  
+
 
 </ai>

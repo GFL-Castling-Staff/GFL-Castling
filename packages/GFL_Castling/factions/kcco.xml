@@ -656,12 +656,14 @@
 	<soldier name="kcco_Hydra" firstnames="KCCO-LIGHT ARMORED UNIT-" lastnames_file="qwd_last.name" squad_size_xp_cap="0.0" spawn_score="0.25">
 		<models file="kcco_qwd.models" />
 		<character filename="qwd.character" />
-		<ai filename="hydra.ai" />
+		<ai filename="kcco_hydra.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="kccow_hydra.weapon" enabled="1" />
+			<weapon key="kccow_hydra_at.weapon" enabled="1" />
 			<carry_item key="vest_80hp_30" />
 		</resources>
 		<item_class_existence_config>
+			<item_class_existence class="weapon" slot="1" probability="1.0" />
 			<!-- wearables -->
 			<item_class_existence class="carry_item" slot="1" probability="1" />
 			<!-- note, always backpack items -->

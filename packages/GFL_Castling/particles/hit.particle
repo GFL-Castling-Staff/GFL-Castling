@@ -374,7 +374,7 @@ particle_system MechaCrash
 
 	affector Scaler
 	{
-		rate	20
+		rate	15
 	}
 
 	affector Rotator
@@ -390,6 +390,6 @@ particle_system MechaCrash
 		red		0
 		green	0
 		blue	0
-		alpha	-1.5
+		alpha	-2.0
 	} 
 }
