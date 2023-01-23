@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projectile class="grenade" name="smoke grenade" key="smoke_grenade_bbs_skill.projectile" slot="0" use_time_to_live="1" pulldown_in_air="9000.0" time_to_live="6" radius="0.3" blast_damage_threshold="1.9">
 
-    <result class="spawn" instance_class="projectile" instance_key="smoke_grenade_v.projectile" min_amount="1" max_amount="1" offset="0 0.2 0" position_spread="1 1" direction_spread="0.3 0.1" />
+    <result class="spawn" instance_class="projectile" instance_key="smoke_grenade_v.projectile" min_amount="2" max_amount="2" offset="0 0.2 0" position_spread="1 1" direction_spread="0.3 0.1" />
 	<collision class="sticky" />
     <trigger class="impact">
         <collider class="character" enabled="1" faction_compare="not_equal"/>
