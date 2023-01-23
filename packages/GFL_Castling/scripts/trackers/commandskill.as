@@ -3421,7 +3421,7 @@ class CommandSkill : Tracker {
 
                 if (closestIndex >= 0){
                     int target_id = affectedCharacter[closestIndex].getIntAttribute("id");
-                    if (weapon_name == "gkw_m1.weapon" || weapon_name=="gkw_m1_1106.weapon" || weapon_name=="gkw_m1_sf.weapon" || weapon_name== "gkw_m1_1106_sf.weapon"){
+                    if (weapon_name == "gkw_m1.weapon" || weapon_name=="gkw_m1_1106.weapon" || weapon_name=="gkw_m1_sf.weapon" || weapon_name== "gkw_m1_1106_sf.weapon" || weapon_name=="gkw_m1_sf_skill.weapon" || weapon_name=="gkw_m1_1106_sf_skill.weapon"){
                         playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 2s",false);
                         TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
                         tasker.add(DelayAntiPersonSnipeRequest(m_metagame,2.0,characterId,factionid,"snipe_hit_40.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
