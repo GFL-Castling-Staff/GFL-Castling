@@ -12,9 +12,6 @@
 	<sound key="footstep" fileref="qwd_walk1.wav" volume="0.9" />
 	<parameter class="can_use_vehicles" value="0" /> 
 
-
-
-
 	<animation state_key="hold"  animation_key="still, hydra and manticore" />
 	<animation state_key="hold_on_wall"  animation_key="still, hydra and manticore" />
 	<animation key="still" target_key="still, hydra and manticore" />
