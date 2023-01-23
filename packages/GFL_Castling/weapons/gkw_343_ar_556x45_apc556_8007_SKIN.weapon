@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<weapon file="two_hands_ar.animation_base" key="gkw_apc556.weapon">
+<weapon file="two_hands_ar.animation_base" key="gkw_apc556_8007.weapon">
     <specification 
 		accuracy_factor="0.98" 
 		barrel_offset="0.4" 
 		class="0"
         slot="0" 
 		magazine_size="30" 
-		name="APC556" 
+		name="APC556-[Ballad of MuLan]" 
         sight_range_modifier="1.25"
 		projectile_speed="200" 
 		retrigger_time="0.1" 
@@ -14,6 +14,7 @@
 		sustained_fire_diminish_rate="1.8" 
 		sustained_fire_grow_step="0.2"/>
     <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
+    <commonness value="0" in_stock="0" can_respawn_with="1" />
     <inventory encumbrance="10.0" buy_price="8.0" sell_price="8.0" />
     <sound key="fire" fileref="apc556_fire_FromREALLIFE.wav" pitch_variety="0.05" volume="0.8" />
     <sound key="magazine_out" fileref="apc556_mgz_out_FromWF.wav" volume="1" />
@@ -21,7 +22,7 @@
     <sound key="cycle" fileref="apc556_cycle_FromWF.wav" volume="1" />
     <sound class="impact" fileref="rifle_drop.wav" />
     <model filename="gkw_ar_apc556.xml" />
-    <hud_icon filename="gkw_apc556.png" />
+    <hud_icon filename="gkw_apc556_8007.png" />
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet.projectile">
         <result class="hit"  kill_probability="1.85" kill_probability_offset_on_successful_hit="1.5" kill_decay_start_time="0.621" kill_decay_end_time="1.035" />
@@ -33,6 +34,6 @@
     <stance state_key="prone_moving" accuracy="0.9" />
     <stance state_key="standing" accuracy="0.9" />
     <stance state_key="crouching" accuracy="0.95" />
-    <stance state_key="prone" accuracy="1" />
+    <stance state_key="prone" accuracy="1.0" />
     <modifier class="detectability" value="0.0" />
 </weapon>
