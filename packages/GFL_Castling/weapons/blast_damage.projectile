@@ -111,7 +111,7 @@
         <capacity value="1" source="rank" source_value="0.0" />
     </projectile>
     <projectile class="grenade" name="" key="blast_heavy_rad10_damage15.projectile" slot="2" radius="0.05">
-        <result class="blast" radius="10.0" damage="15.0" push="1.0" decal="1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+        <result class="blast" radius="10.0" damage="15.1" push="1.0" decal="1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
         <trigger class="time" time_to_live="0.0"/>
         <rotation class="random" />
         <model mesh_filename="" />

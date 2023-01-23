@@ -295,8 +295,11 @@ class kill_event : Tracker {
                 if(c_weaponType=="gkw_ppkmod3.weapon" || c_weaponType =="gkw_ppkmod3_3905.weapon"){
                     int i = findSkillIndex(characterId,"PPKMOD3");
                     if(i >=0){
-                        SkillArray[i].m_time-=2.0;
-                    }    
+                        SkillArray[i].m_time-=1.0;
+                        if(KillerWeaponKey=="gkw_ppkmod3.weapon" || KillerWeaponKey=="gkw_ppkmod3_3905.weapon"){
+                            SkillArray[i].m_time-=1.0;
+                        }
+                    }
                 }
                 if(startsWith(c_armorType,'acbp_t6')){
                     int i = findSkillIndex(characterId);

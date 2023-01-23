@@ -331,8 +331,8 @@ class ManualCall : Tracker {
                     TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
                     array<Spawn_request@> spawn_soldier =
                     {
-                        Spawn_request("Task_MG",5),
-                        Spawn_request("Task_SG",3)
+                        Spawn_request("Task_MG",3),
+                        Spawn_request("Task_SG",2)
                     };
                     tasker.add(DelaySpawnSoldier(m_metagame,6.0,CallTaskArray[0].m_factions,spawn_soldier,CallTaskArray[0].m_pos.add(Vector3(0,-50,0)),3.0,3.0));
                 }
