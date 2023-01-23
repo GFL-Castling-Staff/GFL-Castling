@@ -446,8 +446,11 @@
 		<ai filename="commander.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="parw_commander.weapon" enabled="1" />
-			<carry_item key="pard_sg.carry_item" />
+			<projectile key="para_heal_skill.projectile" enabled="1" probability="1.0" />			
+			<carry_item key="vest_15hp_elite.carry_item" />
 			<call key="pard_zombie.call" />
+			<call key="para_assault.call" />
+			<call key="para_eod.call" />
 			<attribute_config class="xp">
 				<attribute weight="1.0" min="20.0" max="25.6" />
 			</attribute_config>

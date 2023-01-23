@@ -1,5 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <carry_items>
+	<carry_item key="pard_infected_rampage" time_to_live_out_in_the_open="0" name="Rampaged EILD" transform_on_consume="pard_infected.carry_item" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+		<hud_icon filename="pard_ar.png"/>
+		<capacity value="1" source="rank" source_value="0"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
+		<inventory encumbrance="100" price="1"/>
+		<model />
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
+        <modifier class="speed" value="1.5" />
+        <modifier class="hit_success_probability" value="-0.8" />
+        <modifier class="detectability" value="2.5" />
+	</carry_item>
 	<carry_item key="pard_infected.carry_item" time_to_live_out_in_the_open="0" name="EILD" transform_on_consume="pard_infected_1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="pard_ar.png"/>
 		<capacity value="1" source="rank" source_value="0"/>

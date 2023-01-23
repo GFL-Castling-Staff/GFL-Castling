@@ -12,6 +12,8 @@
     name="Pard-Commander"
     class="0"
     projectile_speed="150"
+	sight_range_modifier="1.8"
+    ai_sight_range_modifier="1.05"
     barrel_offset="0.4"/>
 	<animation key="recoil" animation_key="recoil1"/>
 	<animation key="recoil" animation_key="recoil2"/>
