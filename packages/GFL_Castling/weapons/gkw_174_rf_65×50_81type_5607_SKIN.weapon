@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon key="gkw_type81_5607.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+    <specification 
+	  retrigger_time="-1.0" 
+	  accuracy_factor="1.0" 
+	  sustained_fire_grow_step="2.0" 
+	  sustained_fire_diminish_rate="2.0" 
+	  magazine_size="5" 
+	  can_shoot_standing="1" 
+	  suppressed="0" 
+	  name="Type 81 Carbine-[Peony Companion]"
+	  class="2" 
+      slot="0"
+      carry_in_two_hands="1"
+	  reload_one_at_a_time="1" 
+	  sight_range_modifier="2.0" 
+	  projectile_speed="200" 
+	  barrel_offset="0.65" 
+	  projectiles_per_shot="4" 
+      burst_shots="1"
+      stab_enabled="1" />
+    <commonness value="0" in_stock="0" can_respawn_with="1" />
+    <inventory encumbrance="20.0" buy_price="8.1" sell_price="8.1"/>
+    <capacity value="1" source="rank" source_value="0.0" />
+    <animation key="cycle" animation_key="Brifle1" />
+    <animation key="cycle" stance_key="prone" animation_key="Brifle1p" />
+    <animation key="reload" animation_key="reloading, clip" />
+    <animation key="recoil"  animation_key="recoil1" />
+    <animation key="recoil"  animation_key="recoil2" />
+    <animation key="recoil"  animation_key="recoil3" />
+    <animation key="recoil" stance_key="prone" animation_key="recoil1, prone" />
+    <animation key="recoil" stance_key="prone" animation_key="recoil2, prone" />
+    <animation key="recoil" stance_key="prone" animation_key="recoil3, prone" />
+    <animation state_key="walking" animation_key="walking, hip fire" />
+    <animation state_key="walking_backwards" animation_key="walking backwards, hip fire" />
+    <animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
+    <animation state_key="stabbing" animation_key="melee, quick knife" />
+    <animation state_key="stabbing" animation_key="pistol whip 3" />
+    <sound key="fire" fileref="type88_fire_FromBF1.wav" pitch_variety="0.05" volume="1.2" />
+    <sound key="cycle" fileref="type88original_cycle_FromBF1.wav" volume="0.45"/>
+    <sound key="reload_one" fileref="type88_reload_FromBF1.wav" volume="0.45" />
+    <sound key="cycle_out" fileref="type88_cycle_out_FromBF1.wav"  volume="0.45"/>
+    <sound key="cycle_in" fileref="type88_cycle_in_FromBF1.wav"  volume="0.45"/>
+    <sound class="impact" fileref="rifle_drop.wav" volume="1"/>
+    <model filename="gkw_rf_88type.xml" />
+    <hud_icon filename="gkw_type81_5607.png" />
+    <capacity value="1" source="rank" source_value="0.0" />
+    <weak_hand_hold offset="0.3" />
+    <projectile file="bullet.projectile">
+        <result class="hit" 
+        kill_probability="2.2"
+        kill_probability_offset_on_successful_hit="3.5" 
+        kill_decay_start_time="1.448" 
+        kill_decay_end_time="2.414" />
+    </projectile>
+    <stance state_key="running" accuracy="1" />
+    <stance state_key="walking" accuracy="1" />
+    <stance state_key="crouch_moving" accuracy="1" />
+    <stance state_key="prone_moving" accuracy="1" />
+    <stance state_key="standing" accuracy="1"/>
+    <stance state_key="crouching" accuracy="1" />
+    <stance state_key="prone" accuracy="1" />
+    <stance state_key="over_wall" accuracy="1" />
+    <target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0" />
+    <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5" />
+    <target_factors tag="shotgun" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0" />
+    <target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0" />
+    <target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0" />
+    <target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0" />
+</weapon>
