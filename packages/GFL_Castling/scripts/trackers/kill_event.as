@@ -125,6 +125,8 @@ class kill_event : Tracker {
         {"gkw_f1mod3.weapon",3},
         {"gkw_emp35.weapon",3},
         {"gkw_emp35_8003.weapon",3},
+        {"gkw_type79.weapon",3},
+        {"gkw_type79_1402.weapon",3},
 
         // SMG——4kills
         {"gkw_ppsh41.weapon",4},
@@ -146,7 +148,6 @@ class kill_event : Tracker {
         {"gkw_kp31mod3.weapon",4},
         {"gkw_kp31_310.weapon",4},
         {"gkw_kp31mod3_310.weapon",4},
-        {"gkw_type79.weapon",4},
         {"gkw_p90.weapon",4},
         {"gkw_p90_2802.weapon",4},
         {"gkw_augpara.weapon",4},
