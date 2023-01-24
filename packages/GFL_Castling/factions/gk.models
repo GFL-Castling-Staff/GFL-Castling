@@ -1876,7 +1876,13 @@
     </model>           
     <model filename="gkd_ar_a545_d.xml">
         <requirement class="weapon" key="gkw_a545_skill.weapon" slot="0" />
-    </model>   
+    </model>
+    <model filename="gkd_ar_a545_6803.xml">
+        <requirement class="weapon" key="gkw_a545_6803.weapon" slot="0" />
+    </model>           
+    <model filename="gkd_ar_a545_6803.xml">
+        <requirement class="weapon" key="gkw_a545_6803_skill.weapon" slot="0" />
+    </model>     
     <model filename="gkd_ar_ar18.xml">
         <requirement class="weapon" key="gkw_ar18.weapon" slot="0" />
     </model>          
