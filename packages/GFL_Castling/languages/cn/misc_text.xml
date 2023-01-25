@@ -240,7 +240,7 @@
 	<text key="Code:Centaurus" text="Code:Centaurus “肯陶罗斯”斥候人形"/>
 	<text key="Code:Dactyl" text="Code:Dactyl “指灵”自走布雷机"/>
 	<text key="Code:Orthros" text="Code:Orthros “欧特鲁斯”异形作战机甲"/> 
-	<text key="Code:Teslatrooper" text="Code:Teslatrooper “弥诺陶洛斯”巨型机甲"/>
+	<text key="Code:Minotauros" text="Code:Minotauros “弥诺陶洛斯”巨型机甲"/>
 	<text key="Typhon" text="提丰-Typhon 电磁坦克"/>
 	<text key="Coeus" text="奎乌-Coeus 重装步战车"/>
 	<text key="Crius" text="克利俄斯-Crius 火力打击平台"/>
@@ -252,15 +252,15 @@
 	<text key="Doppelsoldner-Rocket" text="Doppelsoldner “巨剑士”作战机甲 榴弹模式"/>
 	<text key="Doppelsoldner-MG" text="Doppelsoldner “巨剑士”作战机甲 机炮模式"/>
 	<text key="Roarer" text="Roarer “角斗士”作战机甲"/>
-	<text key="Thunder" text="Thunder “侦察士”巨像"/>
+	<text key="Patroler" text="Patroler “侦察士”巨像"/>
 	<text key="Germ" text="Germ “加尔姆”犬型合成单位"/>
 	<text key="Infected" text="Infected “受洗者”"/>
 	<text key="Narciss" text="Narciss 娜希斯"/>
 	<text key="Nimogen" text="Nimogen 妮莫金"/>
 	<text key="Adeline" text="Adeline 黑涅托"/>
 	<text key="E.I.L.D. Smasher" text="E.I.L.D. Smasher 感染头目"/>
-	<text key="Nyto-Eagleyes" text="Nyto-Eagleyes 涅托-鹰眼"/>
-	<text key="Nyto-Patrol" text="Nyto-Patrol 涅托-巡卫"/>
+	<text key="Nyto-HawkEyes" text="Nyto-HawkEyes 涅托-鹰眼"/>
+	<text key="Nyto-Patroller" text="Nyto-Patroller 涅托-巡卫"/>
 	<text key="Nyto-Wrath" text="Nyto-Wrath 涅托-怒锤"/>
 	<text key="Police" text="Police 警备士"/>
 	<text key="Rodelero" text="Rodelero 剑盾士"/>
@@ -639,6 +639,7 @@
 	<text key="M240L-[Heart of the Paladin]" text="M240L-[帕拉丁之心]"/>
 
 	<text key="QBU-88-[Rushing Cloud]" text="QBU-88-[乱石崩云]"/>
+
 	<text key="Carcano M1891" text="卡尔卡诺栓动步枪 M1891"/>
 	<text key="Carcano M91/38" text="卡尔卡诺栓动步枪 M91/38"/>
 
@@ -666,10 +667,14 @@
 	<text key="Thunder.50 BMG" text="Thunder.50 BMG 雷电大口径手枪"/>
 	<text key="M1A1 Carbine" text="M1A1卡宾枪"/>
 	<text key="Erma EMP-35" text="埃尔玛EMP-35冲锋枪"/>
+
+	
 	<text key="Remington Model 870" text="雷明顿Model 870霰弹枪"/>
 
 	<text key="AK-47 60R" text="旋风AK-47"/>
 	<text key="AK-47 60R-[Lord of War]" text="旋风AK-47-[战争之王]"/>
+	<text key="Type 81 Carbine" text="八一式马步枪"/>
+
 	
 
 	
@@ -926,6 +931,20 @@
 	<text key="Brenten-[Fluffy Berry Tart]" text="布伦·坦半自动手枪-[绒绒草莓挞]"/>
 	<text key="Lusa-[Winter Deer latté]" text="卢萨冲锋枪-[冬鹿拿铁]"/>	
 	<text key="PM1910-[Queen's Tower Party]" text="PM1910-[女王的高塔派对]"/>	
+	<text key="APC556-[Ballad of MuLan]" text="APC556-[木兰谣]"/>	
+	<text key="A-545-[Bloom of the Drunken Tea]" text="A-545-[醉茗咲]"/>	
+	<text key="A-545-[Bloom of the Drunken Tea]-[Booze Formation]" text="A-545-[醉茗咲]-[豪饮战阵]"/>	
+	<text key="QBZ-191-[Lone Pine Walker]" text="QBZ-191-[孤松行]"/>	
+	<text key="QBU-88-[Dance of the Trumpet Vine]" text="QBU-88-[舞凌霄]-[乱石崩云]"/>
+	<text key="QBU-88-[Dance of the Trumpet Vine]-[Rushing Cloud]" text="QBU-88-[舞凌霄]-[乱石崩云]"/>
+	<text key="Type 81 Carbine-[Peony Companion]" text="八一式马步枪-[鹿韭旅伴]"/>
+	<text key="Erma EMP-35-[An Xiang Ying]" text="埃尔玛EMP-35冲锋枪-[暗香盈]"/>
+	<text key="DP-28-[Zhao Yan Wan]" text="捷格加廖夫DP-28步兵机枪-[朝颜蔓]"/>
+	<text key="DP-28-[Zhao Yan Wan]-Kulakov" text="捷格加廖夫DP-28步兵机枪-[朝颜蔓]-燃烧榴弹发射器"/>
+	<text key="Type 79 SMG-[Fox of Green Hill]" text="79式冲锋枪-[青丘狐]"/>
+
+	
+	
 
 	
 	

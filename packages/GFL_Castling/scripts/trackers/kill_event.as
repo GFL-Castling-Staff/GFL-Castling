@@ -124,6 +124,9 @@ class kill_event : Tracker {
         {"gkw_f1.weapon",3},
         {"gkw_f1mod3.weapon",3},
         {"gkw_emp35.weapon",3},
+        {"gkw_emp35_8003.weapon",3},
+        {"gkw_type79.weapon",3},
+        {"gkw_type79_1402.weapon",3},
 
         // SMG——4kills
         {"gkw_ppsh41.weapon",4},
@@ -145,7 +148,6 @@ class kill_event : Tracker {
         {"gkw_kp31mod3.weapon",4},
         {"gkw_kp31_310.weapon",4},
         {"gkw_kp31mod3_310.weapon",4},
-        {"gkw_type79.weapon",4},
         {"gkw_p90.weapon",4},
         {"gkw_p90_2802.weapon",4},
         {"gkw_augpara.weapon",4},
@@ -295,8 +297,11 @@ class kill_event : Tracker {
                 if(c_weaponType=="gkw_ppkmod3.weapon" || c_weaponType =="gkw_ppkmod3_3905.weapon"){
                     int i = findSkillIndex(characterId,"PPKMOD3");
                     if(i >=0){
-                        SkillArray[i].m_time-=2.0;
-                    }    
+                        SkillArray[i].m_time-=1.0;
+                        if(KillerWeaponKey=="gkw_ppkmod3.weapon" || KillerWeaponKey=="gkw_ppkmod3_3905.weapon"){
+                            SkillArray[i].m_time-=1.0;
+                        }
+                    }
                 }
                 if(startsWith(c_armorType,'acbp_t6')){
                     int i = findSkillIndex(characterId);

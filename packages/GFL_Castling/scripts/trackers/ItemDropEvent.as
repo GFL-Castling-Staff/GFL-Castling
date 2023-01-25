@@ -705,6 +705,24 @@ class ItemDropEvent : Tracker {
                 }
             }
         }
+
+		if (!m_metagame.getAdminManager().isAdmin(sender, senderId)) {
+			return;
+		}
+
+        if(checkCommand(message,"give")){
+            string s = message.substr(message.findFirst(" ")+1);
+            const XmlElement@ player = getPlayerInfo(m_metagame,senderId);
+            if (player !is null) {
+                int cId=player.getIntAttribute("character_id");
+                string itemKey= getGFLkey(s);
+                addItemInBackpack(m_metagame,cId,"weapon",itemKey);
+                dictionary a;
+                a["%doll_name"] = getResourceName(m_metagame, itemKey, "weapon");                    
+                sendPrivateMessageKey(m_metagame, senderId, "truemask_success",a);
+                playPrivateSound(m_metagame,"sfx_big.wav",senderId);                           
+            }
+        }                
     }
 	bool hasEnded() const {
 		// always on

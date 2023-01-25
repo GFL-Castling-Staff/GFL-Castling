@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon file="two_hands_ar.animation_base" key="gkw_qbz191_7702.weapon">
+    <specification 
+		accuracy_factor="0.98" 
+		barrel_offset="0.5" 
+		class="0"
+        slot="0" 
+		magazine_size="30" 
+		name="QBZ-191-[Lone Pine Walker]" 
+		projectile_speed="200" 
+		retrigger_time="0.08" 
+        sight_range_modifier="1.5"
+		suppressed="0" 
+		sustained_fire_diminish_rate="2.5" 
+		sustained_fire_grow_step="0.3" />
+    <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
+    <inventory encumbrance="10.0" buy_price="70.0" sell_price="70.0" />
+    <commonness value="0" in_stock="0" can_respawn_with="1"/>
+    <sound key="fire" fileref="qbz191_fire_FromWF.wav" pitch_variety="0.05" volume="1.2" />
+    <sound key="magazine_out" fileref="qbz191_mgz_out_FromCOD15.wav" volume="0.5" />
+    <sound key="magazine_in" fileref="qbz191_mgz_in_FromCOD15.wav" volume="0.5" />
+    <sound key="cycle" fileref="qbz191_cycle_FromCOD16.wav" volume="0.45" />
+    <sound class="impact" fileref="rifle_drop.wav" />
+    <model filename="gkw_ar_qbz191.xml" />
+    <hud_icon filename="gkw_qbz191_7702.png" />
+    <weak_hand_hold offset="0.2" />
+    <projectile file="bullet.projectile">
+        <result class="hit" kill_probability="2.0" kill_probability_offset_on_successful_hit="1.5" kill_decay_start_time="0.621" kill_decay_end_time="1.035" />
+    </projectile>
+    <stance state_key="running" accuracy="0.8" />
+    <stance state_key="walking" accuracy="0.8" />
+    <stance state_key="crouch_moving" accuracy="0.85" />
+    <stance state_key="prone_moving" accuracy="0.85" />
+    <stance state_key="standing" accuracy="0.9" />
+    <stance state_key="crouching" accuracy="0.95" />
+    <stance state_key="prone" accuracy="1" />
+    <modifier class="detectability" value="0.0" />
+</weapon>

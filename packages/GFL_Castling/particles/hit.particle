@@ -341,3 +341,55 @@ particle_system hitGroundHEspark
 		alpha	0
 	}
 }
+
+particle_system MechaCrash
+{
+	quota	200
+	material	BloodExplosion
+	particle_width	0.7
+	particle_height	0.7
+	cull_each	false
+	renderer	billboard
+	billboard_type	point
+
+	emitter Point
+	{
+		angle	0
+
+		colour_range_start	0.5 0.4 0.4 0.7
+		colour_range_end	0.5 0.4 0.4 1
+		direction	0 1 0
+		emission_rate	21
+		position	0 0.2 0
+		velocity	0.6
+		velocity_min	0.3
+		velocity_max	0.4
+		time_to_live_min	1.0
+		time_to_live_max	1.5
+		duration	0.05
+		duration_min	0.04
+		duration_max	0.06
+
+	}
+
+	affector Scaler
+	{
+		rate	15
+	}
+
+	affector Rotator
+	{
+		rotation_speed_range_start	-10
+		rotation_speed_range_end	10
+		rotation_range_start	-10
+		rotation_range_end	10
+	}
+
+	affector ColourFader
+	{
+		red		0
+		green	0
+		blue	0
+		alpha	-2.0
+	} 
+}

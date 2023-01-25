@@ -5,8 +5,8 @@
 	<tag name="metal_heavy" />
 
     <specification 
-	  retrigger_time="0.1" 
-	  accuracy_factor="0.75" 
+	retrigger_time="0.5" 
+	accuracy_factor="0.75" 
 	  sustained_fire_grow_step="1.0" 
 	  sustained_fire_diminish_rate="2.5" 
 	  magazine_size="200" 
@@ -15,13 +15,14 @@
 	  can_shoot_prone="0"
 	  suppressed="0" 
 	  name="SF-Manticore" 
-	  class="0" 
+	  class="4" 
 	  reload_one_at_a_time="0"
 	  sight_range_modifier="1.0" 
 	  projectile_speed="135" 
 	  carry_in_two_hands="1"  
 	  stab_enabled="1"
-	  barrel_offset="0"
+	  barrel_offset="0.5"
+	  burst_shots="3"/>
 	  />
 
 	  <animation state_key="recoil"	animation_key="recoil 3, hydra and manticore" />

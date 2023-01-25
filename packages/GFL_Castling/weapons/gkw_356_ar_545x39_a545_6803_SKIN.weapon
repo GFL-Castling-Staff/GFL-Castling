@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapons>
+<weapon file="two_hands_ar.animation_base" key="gkw_a545_6803.weapon">
+    <specification 
+		accuracy_factor="0.99" 
+		barrel_offset="0.3" 
+		class="0"
+        slot="0" 
+		magazine_size="40" 
+		name="A-545-[Bloom of the Drunken Tea]" 
+		projectile_speed="160" 
+		retrigger_time="0.2" 
+		suppressed="0" 
+		sustained_fire_diminish_rate="1.8"
+        sight_range_modifier="1.75" 
+		sustained_fire_grow_step="0.4" />
+    <animation state_key="hold_casual" animation_key="dancing, kazachok" />
+    <animation key="reload" animation_key="reloading, magazine rifle 1.5" />
+    <commonness value="0" in_stock="0" can_respawn_with="1"/>
+    <next_in_chain key="gkw_a545_6803_skill.weapon" share_ammo="1" />
+    <inventory buy_price="45.0" sell_price="45.0" />
+    <sound key="fire" fileref="a545_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.2" />
+    <sound key="magazine_out" fileref="a545_mgz_out_FromCOD17.wav" volume="0.5" />
+    <sound key="magazine_in" fileref="a545_mgz_in_FromCOD17.wav" volume="0.5" />
+    <sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.5" />
+    <sound class="impact" fileref="rifle_drop.wav" />
+    <model filename="gkw_ar_a545.xml" />
+    <hud_icon filename="gkw_a545_6803.png" />
+    <weak_hand_hold offset="0.2" />
+    <projectile file="bullet.projectile">
+        <result class="hit"  kill_probability="2.1" kill_probability_offset_on_successful_hit="5.0" kill_decay_start_time="0.881" kill_decay_end_time="1.469" />
+        <trail probability="1.0"/>
+    </projectile>
+    <effect class="muzzle" ref="ejection_556" />
+    <stance state_key="running" accuracy="0.55" />
+    <stance state_key="walking" accuracy="0.8" />
+    <stance state_key="crouch_moving" accuracy="0.85" />
+    <stance state_key="prone_moving" accuracy="0.85" />
+    <stance state_key="standing" accuracy="0.9" />
+    <stance state_key="crouching" accuracy="0.95" />
+    <stance state_key="prone" accuracy="1" />
+    <modifier class="detectability" value="0.0" />
+</weapon>
+<weapon file="two_hands_ar.animation_base" key="gkw_a545_6803_skill.weapon">
+    <specification 
+		accuracy_factor="0.99" 
+		barrel_offset="0.3" 
+		class="0"
+        slot="0" 
+		magazine_size="40" 
+		name="A-545-[Bloom of the Drunken Tea]-[Booze Formation]" 
+		projectile_speed="160" 
+		retrigger_time="0.0667" 
+		suppressed="0" 
+		sustained_fire_diminish_rate="1.35"
+        sight_range_modifier="1.1" 
+		sustained_fire_grow_step="0.17" />
+    <animation state_key="hold_casual" animation_key="dancing, kazachok" />
+    <animation key="reload" animation_key="reloading, magazine rifle 1.5" />
+    <commonness value="0" in_stock="0" can_respawn_with="1"/>
+    <inventory buy_price="45.0" sell_price="45.0" />
+    <next_in_chain key="gkw_a545_6803.weapon" share_ammo="1" />
+    <sound key="fire" fileref="ak74m_fire_FromBF3.wav" pitch_variety="0.05" volume="1.2" />
+    <sound key="magazine_out" fileref="ak74_mgz_out_FromCOD16.wav" volume="0.5" />
+    <sound key="magazine_in" fileref="ak74_mgz_in_FromCOD16.wav" volume="0.5" />
+    <sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.5" />
+    <sound class="impact" fileref="rifle_drop.wav" />
+    <model filename="gkw_ar_a545.xml" />
+    <hud_icon filename="gkw_a545_6803.png" />
+    <weak_hand_hold offset="0.2" />
+    <projectile file="bullet.projectile">
+        <result class="hit"  kill_probability="2.0" kill_probability_offset_on_successful_hit="3.0" kill_decay_start_time="0.881" kill_decay_end_time="1.469" />
+        <trail probability="1.0"/>
+    </projectile>
+    <effect class="muzzle" ref="ejection_556" />
+    <stance state_key="running" accuracy="0.55" />
+    <stance state_key="walking" accuracy="0.8" />
+    <stance state_key="crouch_moving" accuracy="0.85" />
+    <stance state_key="prone_moving" accuracy="0.85" />
+    <stance state_key="standing" accuracy="0.9" />
+    <stance state_key="crouching" accuracy="0.95" />
+    <stance state_key="prone" accuracy="1" />
+    <modifier class="detectability" value="0.15" />
+</weapon>
+</weapons>

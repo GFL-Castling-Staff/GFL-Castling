@@ -19,8 +19,8 @@
   <parameter class="monitor_enemies_to_stab_while_peace" value="2.0" />
   <parameter class="crouching_near_leader_rejoin_range" value="12.0" />
   <parameter class="grenade_monitor_range" value="15.0" />
-  <parameter class="leader_sight_range" value="35.0" />
-  <parameter class="team_member_sight_range" value="30.0" />
+  <parameter class="leader_sight_range" value="32.0" />
+  <parameter class="team_member_sight_range" value="27.0" />
   <parameter class="strike_frequency_time" value="60.0" />
   <parameter class="global_separation_radius_factor" value="1.5" />
   <parameter class="prefer_roofs_probability" value="0.5" />
@@ -37,7 +37,7 @@
   <parameter class="choose_enemy_min_dot_range_offset" value="1.125" />
 
   <parameter class="sight_range_muzzle_factor" value="1.7" />
-  <parameter class="max_sight_range_with_muzzle" value="40.0" />
+  <parameter class="max_sight_range_with_muzzle" value="36.0" />
 
   <parameter class="active_guarding_probability" value="0.5" />
   <parameter class="leading_inspect_alarm_spread_out_distance" value="25.0" />
@@ -110,8 +110,14 @@
   <parameter class="celebrating_stab_probability" value="1.0" /> 
   <parameter class="willingness_to_charge" value="0.0" />
   <parameter class="stab_range" value="3.5" />
-  <parameter class="check_vehicles_while_fire_open_interval" value="10.0" />  
+  <parameter class="check_vehicles_while_fire_open_interval" value="1.0" />  
   
   <parameter class="reaction_time_after_choosing_target" value="-1.0" />
+
+  <parameter class="stationary_weapon_consider_leave_after_no_enemies_time" value="300.0" />
+  <parameter class="max_distance_to_leader_while_in_stationary_weapon" value="50.0" />
+
+  
+
 
 </ai>

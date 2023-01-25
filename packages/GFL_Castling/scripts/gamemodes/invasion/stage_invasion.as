@@ -262,17 +262,18 @@ class Stage {
 	// --------------------------------------------
 	protected void appendScene(XmlElement@ mapConfig) const {
 		XmlElement scene("scene");
-		scene.setStringAttribute("filename", "scene.xml");
+		appendCamera(scene);
+		appendFog(scene);
 		mapConfig.appendChild(scene); 
 	}
 
 	// --------------------------------------------
 	protected void appendCamera(XmlElement@ scene) const {
 		XmlElement camera("camera");
-		camera.setStringAttribute("direction", "-0.3 -1.7 1.0");
-		camera.setFloatAttribute("distance", 36.0);
-		camera.setFloatAttribute("far_clip", 95.0);
-		camera.setFloatAttribute("shadow_far_clip", 80.0);
+		camera.setStringAttribute("direction", "-0.3 -1.9 1.0");
+		camera.setFloatAttribute("distance", 32.0);
+		camera.setFloatAttribute("far_clip", 150.0);
+		camera.setFloatAttribute("shadow_far_clip", 120.0);
 		scene.appendChild(camera);
 	}
 

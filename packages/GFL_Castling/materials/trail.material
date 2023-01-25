@@ -471,3 +471,24 @@ material laser_mg4mod3_purple
         }
     }
 }
+
+material laser_hydra
+{
+    receive_shadows off
+    technique 
+    {
+        pass 
+        {
+            lighting off
+            fog_override true
+
+            depth_write off
+            scene_blend add
+
+            texture_unit 
+            {
+                texture laser_hydra.png
+            }
+        }
+    }
+}
