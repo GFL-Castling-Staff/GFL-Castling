@@ -18,13 +18,12 @@
         <animation state_key="hold_casual" animation_key="dancing, kazachok" />
         <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
         <inventory encumbrance="20.0" buy_price="256.0" sell_price="256.0" />
-        <next_in_chain key="gkw_ak47_skill.weapon" share_ammo="1" />
         <sound key="fire" fileref="type56ar_fire_FromCOD17.wav" pitch_variety="0.05" volume="1.3" />
         <sound key="magazine_out" fileref="ak12_mgz_out_FromCOD16.wav" volume="0.6" />
         <sound key="magazine_in" fileref="ak12_mgz_in_FromCOD16.wav" volume="0.6" />
         <sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6" />
         <sound class="impact" fileref="rifle_drop.wav" />
-        <model filename="gkw_56-1typemod3.xml" />
+        <model filename="gkw_ar_type56-1mod3.xml" />
         <hud_icon filename="gkw_56-1typemod3.png" />
         <commonness value="0.00001" in_stock="0" can_respawn_with="1" />
         <weak_hand_hold offset="0.2" />
