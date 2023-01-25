@@ -129,6 +129,8 @@ array<string> AR_grenade_AntiPersonal = {
     "gkw_famas.weapon",
     "gkw_k11_ar.weapon",
     "gkw_k11_20mm_impact.weapon",
+    "gkw_56-1type.weapon",
+    "gkw_56-1typemod3.weapon",
     "gkw_hk416_agent.weapon"
 };
 

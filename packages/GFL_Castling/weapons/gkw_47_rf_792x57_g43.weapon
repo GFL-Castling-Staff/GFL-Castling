@@ -22,7 +22,8 @@
     <commonness value="0.2" in_stock="1" can_respawn_with="1" />
     <animation state_key="reload" animation_key="reloading, magazine rifle 1.2" />
     <!--Sounds-->
-    <sound key="fire" fileref="g43_fire_FromPOSTSCRIPTUM.wav" pitch_variety="0.01" volume="1.4" />
+    <!-- <sound key="fire" fileref="g43_fire_FromPOSTSCRIPTUM.wav" pitch_variety="0.01" volume="1.4" /> -->
+    <sound key="fire" fileref="g43_fire_FromCOD18.wav" pitch_variety="0.01" volume="1.0" />
     <sound key="cycle" fileref="g43_cycle_FromBF5.wav" volume="0.7"/>
     <sound key="magazine_out" fileref="g43_mgz_out_FromBF5.wav" volume="0.6" />
     <sound key="magazine_in" fileref="g43_mgz_in_FromBF5.wav" volume="0.6" />

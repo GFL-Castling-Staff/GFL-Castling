@@ -548,11 +548,11 @@ void excuteWarriorFariyApache(GameMode@ metagame,GFL_event@ eventinfo){
     eventinfo.m_time=0.5;
     Vector3 aimPos = eventinfo.m_pos.add(Vector3(10.0*cos(eventinfo.m_randseed),40,10.0*sin(eventinfo.m_randseed)));
 
-    if(eventinfo.m_phase==18){
+    if(eventinfo.m_phase==12){
         insertCommonStrike(eventinfo.m_characterId,eventinfo.m_factionid,"apache_bait",aimPos,eventinfo.m_pos);
     }
 
-    else if(eventinfo.m_phase==1){
+    if(eventinfo.m_phase==1){
         sendFactionMessageKey(metagame,eventinfo.m_factionid,"warriorfight");
         apache_javelin_luckyvehicleid  = getNearByEnemyVehicle(metagame,eventinfo.m_factionid,eventinfo.m_pos,20);
         if(apache_javelin_luckyvehicleid!=-1)playSoundAtLocation(metagame,"javelin_locked.wav",eventinfo.m_factionid,eventinfo.m_pos,1.0);//锁定载具成功
@@ -618,11 +618,11 @@ void excuteWarriorFariyApache(GameMode@ metagame,GFL_event@ eventinfo){
     //     }
     // }
 
-    else if(eventinfo.m_phase==6){
+    if(eventinfo.m_phase==6){
         playSoundAtLocation(metagame,"30mm_strafe.wav",eventinfo.m_factionid,eventinfo.m_pos,1.0);
     }
 
-    else if(eventinfo.m_phase>=6){
+    if(eventinfo.m_phase>=6){
         int luckyGuyid = getNearbyRandomLuckyGuyId(metagame,eventinfo.m_factionid,eventinfo.m_pos,30.0f);
         if(luckyGuyid!=-1){
             const XmlElement@ luckyGuy = getCharacterInfo(metagame, luckyGuyid);
@@ -636,7 +636,7 @@ void excuteWarriorFariyApache(GameMode@ metagame,GFL_event@ eventinfo){
         }
     }
 
-    else if(eventinfo.m_phase==8){
+    if(eventinfo.m_phase==8){
         if(Apache_Javelin_list.length()>0){
             for (uint a=0;a<Apache_Javelin_list.length();a++){
                 if((Apache_Javelin_list[a].m_characterId==eventinfo.m_characterId)&&(Apache_Javelin_list[a].m_factionid==eventinfo.m_factionid)){//在序列中如果能找到
