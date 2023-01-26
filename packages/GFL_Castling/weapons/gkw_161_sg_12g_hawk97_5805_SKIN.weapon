@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- 体素模型由YABA提供 -->
-<weapon file="two_hands_sg.animation_base" key="gkw_hawk97.weapon">
+<!-- 体素模型由FA提供 -->
+<weapon file="two_hands_sg.animation_base" key="gkw_hawk97_5805.weapon">
     <!--Weapon specifications-->
     <specification 
 	retrigger_time="-1.0" 
@@ -11,7 +11,7 @@
     stance_accuracy_rate="0.5"
 	can_shoot_standing="1" 
 	suppressed="0" 
-	name="Hawk Type 97" 
+	name="Hawk Type 97-[Drunken Petals Underfoot]" 
 	class="1" 
     spread_range="0.35"
 	reload_one_at_a_time="1"
@@ -35,7 +35,7 @@
     <sound class="impact" fileref="rifle_drop.wav" />
     <!--Model, Icon, Cost-->
     <model filename="gkw_sg_type97.xml" />
-    <hud_icon filename="gkw_97types.png" />
+    <hud_icon filename="gkw_97types_5805.png" />
     <!--Ballistics-->
     <weak_hand_hold offset="0.3" />
     <projectile file="bullet.projectile">
