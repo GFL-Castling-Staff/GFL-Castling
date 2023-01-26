@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<projectile class="bullet" name="AP bullet" key="bullet_56typer_mod3.projectile" slot="1" pulldown_in_air="4">
+<projectile>
     <result class="spawn" instance_class="grenade" instance_key="blast_shard_rad3.projectile" min_amount="8" max_amount="8" offset="0 1 0" position_spread="0.15 0.15" direction_spread="0 0" />
     <trigger class="impact" />
     <rotation class="motion" />
@@ -82,12 +82,13 @@
     <effect class="result" key="character" ref="BulletImpact" />
     <effect class="result" key="shield" ref="BulletImpact" />
 
-    <effect class="result" key="static_object" copy="terrain" />
 
     <effect class="result" key="terrain" ref="Laser_Burnout"/>
     <effect class="result" key="static_object" ref="Laser_Burnout_on_staticobject"/>
     <effect class="result" key="terrain" ref="Laser_ImpackSmoke"/>
     <effect class="result" key="static_object" ref="Laser_ImpackSmoke"/>
+
+    <effect class="result" key="other" copy="terrain" />
 
 	<effect class="activated" ref="DragonPropulsion" lighting="0" />   
 
