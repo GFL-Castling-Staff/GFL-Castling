@@ -20,7 +20,8 @@
 	barrel_offset="0.5" 
 	projectiles_per_shot="8"
 	/>
-    <inventory buy_price="97.0" sell_price="97.0" />
+    <inventory buy_price="9.7" sell_price="9.7" />
+    <commonness value="0.2" in_stock="1" can_respawn_with="1" />
     <!--Animations-->
     <animation state_key="cycle" animation_key="Pshotgun0.5" />
     <animation state_key="cycle" stance_key="prone" animation_key="Pshotgun0.5p" />

@@ -36,6 +36,7 @@
     <!--Model, Icon, Cost-->
     <model filename="gkw_sg_type97.xml" />
     <hud_icon filename="gkw_97typesmod3.png" />
+    <commonness value="0" in_stock="0" can_respawn_with="1" />
     <!--Ballistics-->
     <weak_hand_hold offset="0.3" />
     <projectile file="bullet.projectile">

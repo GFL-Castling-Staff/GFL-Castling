@@ -144,6 +144,7 @@ class kill_event : Tracker {
         {"gkw_idwmod3_3205.weapon",4},
         {"gkw_idwmod3_4908.weapon",4},
         {"gkw_64type.weapon",4},
+        {"gkw_64typemod3.weapon",4},
         {"gkw_kp31.weapon",4},
         {"gkw_kp31mod3.weapon",4},
         {"gkw_kp31_310.weapon",4},

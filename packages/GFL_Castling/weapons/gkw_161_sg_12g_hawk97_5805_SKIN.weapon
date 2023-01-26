@@ -20,7 +20,7 @@
 	barrel_offset="0.5" 
 	projectiles_per_shot="8"
 	/>
-    <inventory buy_price="97.0" sell_price="97.0" />
+    <inventory buy_price="9.7" sell_price="9.7" />
     <!--Animations-->
     <animation state_key="cycle" animation_key="Pshotgun0.5" />
     <animation state_key="cycle" stance_key="prone" animation_key="Pshotgun0.5p" />
@@ -36,6 +36,7 @@
     <!--Model, Icon, Cost-->
     <model filename="gkw_sg_type97.xml" />
     <hud_icon filename="gkw_97types_5805.png" />
+    <commonness value="0" in_stock="0" can_respawn_with="1" />
     <!--Ballistics-->
     <weak_hand_hold offset="0.3" />
     <projectile file="bullet.projectile">

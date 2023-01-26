@@ -457,6 +457,8 @@ dictionary commandSkillIndex = {
         {"gkw_emp35.weapon",58},
         {"gkw_emp35_8003.weapon",58},
 
+        {"gkw_64typemod3.weapon",59},
+
         // 下面这行是用来占位的，在这之上添加新的枪和index即可
         {"666",-1}
 };
@@ -597,6 +599,7 @@ class CommandSkill : Tracker {
                     case 56:{excuteSVDEXskill(cId,senderId,m_modifer);break;}
                     case 57:{excuteHK416Agentskill(cId,senderId,m_modifer);break;}
                     case 58:{excuteErmaskill(cId,senderId,m_modifer);break;}
+                    case 59:{excute64typemod3Skill(cId,senderId,m_modifer);break;}
 
                     default:
                         break;
@@ -3905,5 +3908,55 @@ class CommandSkill : Tracker {
         }
 
     }
-  
+
+    void excute64typemod3Skill(int characterId,int playerId,SkillModifer@ modifer){
+        bool ExistQueue = false;
+        int j=-1;
+        for (uint i=0;i<SkillArray.length();i++){
+            if (InCooldown(characterId,modifer,SkillArray[i]) && SkillArray[i].m_weapontype=="64type") {
+                ExistQueue=true;
+                j=i;
+            }
+        }
+        if (ExistQueue){
+            dictionary a;
+            a["%time"] = ""+SkillArray[j].m_time;
+            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            return;
+        }
+        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+        if (character !is null) {
+            const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+            if (player !is null){
+                if (player.hasAttribute("aim_target")) {
+                    string target = player.getStringAttribute("aim_target");
+                    Vector3 aim_pos = stringToVector3(target);
+                    Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
+                    int factionid = character.getIntAttribute("faction_id");
+                    array<string> Voice={
+                        "64typeMod_SKILL1_JP.wav",
+                        "64typeMod_SKILL2_JP.wav",
+                        "64typeMod_SKILL3_JP.wav"
+                    };
+                    playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+                    playAnimationKey(m_metagame,characterId,"throwing, upside",true,true);
+                    playSoundAtLocation(m_metagame,"grenade_throw1.wav",factionid,c_pos,1.0);
+                    c_pos=c_pos.add(Vector3(0,1,0));
+                    if (checkFlatRange(c_pos,aim_pos,10)){
+                        CreateDirectProjectile(m_metagame,c_pos,aim_pos,"skill_flashbang.projectile",characterId,factionid,60);
+                    }
+                    else{
+                        CreateProjectile_H(m_metagame,c_pos,aim_pos,"skill_flashbang.projectile",characterId,factionid,60.0,6.0);
+                    }
+                    TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                    array<Spawn_request@> spawn_soldier =
+                    {
+                        Spawn_request("GK_target",1)
+                    };    
+                    tasker.add(DelaySpawnSoldier(m_metagame,2.0,eventinfo.factionid,spawn_soldier,aim_pos,0,0));  
+                    addCoolDown("64type",20,characterId,modifer);
+                }
+            }
+        }
+    }
 }
