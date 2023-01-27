@@ -459,6 +459,9 @@ dictionary commandSkillIndex = {
 
         {"gkw_64typemod3.weapon",59},
 
+        {"gkw_zasm21.weapon",60},
+        {"gkw_zasm21_2104.weapon",60},
+
         // 下面这行是用来占位的，在这之上添加新的枪和index即可
         {"666",-1}
 };
@@ -600,6 +603,7 @@ class CommandSkill : Tracker {
                     case 57:{excuteHK416Agentskill(cId,senderId,m_modifer);break;}
                     case 58:{excuteErmaskill(cId,senderId,m_modifer);break;}
                     case 59:{excute64typemod3Skill(cId,senderId,m_modifer);break;}
+                    case 60:{excuteZasM21Skill(cId,senderId,m_modifer);break;}
 
                     default:
                         break;
@@ -3953,10 +3957,79 @@ class CommandSkill : Tracker {
                     {
                         Spawn_request("GK_target",1)
                     };    
-                    tasker.add(DelaySpawnSoldier(m_metagame,2.0,eventinfo.factionid,spawn_soldier,aim_pos,0,0));  
+                    tasker.add(DelaySpawnSoldier(m_metagame,2.0,factionid,spawn_soldier,aim_pos,0,0));  
                     addCoolDown("64type",20,characterId,modifer);
                 }
             }
         }
     }
+
+    void excuteZasM21Skill(int characterId,int playerId,SkillModifer@ modifer){
+        bool ExistQueue = false;
+        int j=-1;
+        for (uint i=0;i<SkillArray.length();i++){
+            if (InCooldown(characterId,modifer,SkillArray[i]) && SkillArray[i].m_weapontype=="zasm21") {
+                ExistQueue=true;
+                j=i;
+            }
+        }
+        if (ExistQueue){
+            dictionary a;
+            a["%time"] = ""+SkillArray[j].m_time;
+            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            //_log("skill cooldown" + SkillArray[j].m_time);
+            return;
+        }
+        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+        if (character !is null) {
+            const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+            if (player !is null){
+                if (player.hasAttribute("aim_target")) {
+                    string target = player.getStringAttribute("aim_target");
+                    Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
+                    Vector3 aim_pos= stringToVector3(target);
+                    int factionid = character.getIntAttribute("faction_id");
+                    array<string> Voice={
+                        "ZastavaM21_SKILL1_JP.wav",
+                        "ZastavaM21_SKILL2_JP.wav",
+                        "ZastavaM21_SKILL3_JP.wav"
+                    };
+                    playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+                    playAnimationKey(m_metagame,characterId,"recoil1, big",true,false);
+                    c_pos=c_pos.add(Vector3(0,1,0));
+                    if (checkFlatRange(c_pos,aim_pos,10)){
+                        CreateDirectProjectile(m_metagame,c_pos,aim_pos,"std_aa_grenade.projectile",characterId,factionid,45);
+                    }
+                    else{
+                        CreateProjectile_H(m_metagame,c_pos,aim_pos,"std_aa_grenade.projectile",characterId,factionid,45.0,3.5);
+                    }
+                    int affectedNumber =0;
+                    //获取技能影响的敌人数量
+                    array<int> enemyfaction = {0,1,2,3,4};
+                    for(int i =0;i<4;i++){
+                        if (enemyfaction[i] ==factionid){
+                            enemyfaction.removeAt(i);
+                        }
+                    }
+                    int n=enemyfaction.length-1;
+                    for(int i=0;i<n;i++){
+                        array<const XmlElement@> affectedCharacter = getCharactersNearPosition(m_metagame,aim_pos,enemyfaction[i],5.0f);
+                        affectedNumber += affectedCharacter.length;
+                    }
+
+                    if(affectedNumber < 1)
+                    {
+                        affectedNumber=1;
+                    }
+
+                    Airstrike_strafer@ new_strike = Airstrike_strafer(characterId,factionid,16,c_pos,aim_pos);
+                    new_strike.setNum(affectedNumber);
+                    DelayDetailedCallRequest@ shot = DelayDetailedCallRequest(m_metagame,3.0,new_strike);
+                    TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                    tasker.add(shot);
+                    addCoolDown("zasm21",20,characterId,modifer);
+                }
+            }
+        }
+    }    
 }

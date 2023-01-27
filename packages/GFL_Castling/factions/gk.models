@@ -1395,14 +1395,8 @@
     <model filename="gkd_ar_zasm21_from_DUSK.xml">
         <requirement class="weapon" key="gkw_zasm21.weapon" slot="0" />
     </model>
-    <model filename="gkd_ar_zasm21_from_DUSK.xml">
-        <requirement class="weapon" key="gkw_zasm21_skill.weapon" slot="0" />
-    </model>
     <model filename="gkd_zasm21_2104_from_DUSK.xml">
         <requirement class="weapon" key="gkw_zasm21_2104.weapon" slot="0" />
-    </model>
-    <model filename="gkd_zasm21_2104_from_DUSK.xml">
-        <requirement class="weapon" key="gkw_zasm21_skill_2104.weapon" slot="0" />
     </model>
     <model filename="gkd_hg_pa15_from_Lindemann.xml">
         <requirement class="weapon" key="gkw_pa15.weapon" slot="0" />
@@ -2085,9 +2079,9 @@
     </model>     -->
 
     <model filename="gkd_smg_type64.xml">
-        <requirement class="weapon" key="gkw_type64.weapon" slot="0" />
+        <requirement class="weapon" key="gkw_64type.weapon" slot="0" />
     </model>      
     <model filename="gkd_smg_type64mod3.xml">
-        <requirement class="weapon" key="gkw_type64mod3.weapon" slot="0" />
+        <requirement class="weapon" key="gkw_64typemod3.weapon" slot="0" />
     </model>          
 </models>

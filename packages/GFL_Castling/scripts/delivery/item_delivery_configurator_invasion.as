@@ -763,7 +763,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 			);
 	}
 
-	{
+	
 
 		
 		protected void setupGucard() {
@@ -1012,7 +1012,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 				);
 		}
 
-	}
+	
 	// ----------------------------------------------------  
 	protected void setupEnemyWeaponUnlocks() {
 		array<ItemDeliveryObjective@> objectives = createEnemyWeaponDeliveryObjectives();
