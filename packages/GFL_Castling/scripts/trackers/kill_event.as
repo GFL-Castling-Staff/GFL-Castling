@@ -200,12 +200,15 @@ class kill_event : Tracker {
         if (killstoheal<=0) return;
         uint jud=0;
         for(uint a=0;a<HealOnKill_track.length();a++)
+        {
             if(HealOnKill_track[a].m_characterId==characterid && HealOnKill_track[a].m_type == type ){
                 HealOnKill_track[a].current_kills++;
                 HealOnKill_track[a].m_numtime = timeaddafterkill;
                 jud = 1;
                 break;
             }
+        }
+
         if(jud==0)HealOnKill_track.insertLast(HealOnKill_tracker(characterid,factionid,killstoheal,timeaddafterkill,type)); 
     }
 
@@ -295,7 +298,7 @@ class kill_event : Tracker {
             //只查询我方杀敌
             if (factionId==0 && characterId > 0){
                 string c_weaponType = getPlayerWeaponFromList(playerId,0);
-                string c_armorType = getPlayerWeaponFromList(playerId,4);
+                string c_armorType = getPlayerWeaponFromList(playerId,3);
                 if(c_weaponType=="gkw_ppkmod3.weapon" || c_weaponType =="gkw_ppkmod3_3905.weapon"){
                     int i = findSkillIndex(characterId,"PPKMOD3");
                     if(i >=0){

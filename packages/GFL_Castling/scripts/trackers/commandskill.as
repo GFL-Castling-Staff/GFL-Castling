@@ -3997,12 +3997,7 @@ class CommandSkill : Tracker {
                     playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
                     playAnimationKey(m_metagame,characterId,"recoil1, big",true,false);
                     c_pos=c_pos.add(Vector3(0,1,0));
-                    if (checkFlatRange(c_pos,aim_pos,10)){
-                        CreateDirectProjectile(m_metagame,c_pos,aim_pos,"std_aa_grenade.projectile",characterId,factionid,45);
-                    }
-                    else{
-                        CreateProjectile_H(m_metagame,c_pos,aim_pos,"std_aa_grenade.projectile",characterId,factionid,45.0,3.5);
-                    }
+
                     int affectedNumber =0;
                     //获取技能影响的敌人数量
                     array<int> enemyfaction = {0,1,2,3,4};
@@ -4022,11 +4017,17 @@ class CommandSkill : Tracker {
                         affectedNumber=1;
                     }
 
-                    Airstrike_strafer@ new_strike = Airstrike_strafer(characterId,factionid,16,c_pos,aim_pos);
+                    Airstrike_strafer@ new_strike = Airstrike_strafer(characterId,factionid,16,c_pos.add(Vector3(0,50,0)),aim_pos);
                     new_strike.setNum(affectedNumber);
-                    DelayDetailedCallRequest@ shot = DelayDetailedCallRequest(m_metagame,3.0,new_strike);
+                    DelayDetailedCallRequest@ shot = DelayDetailedCallRequest(m_metagame,2.0,new_strike);
                     TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
                     tasker.add(shot);
+                    if (checkFlatRange(c_pos,aim_pos,10)){
+                        CreateDirectProjectile(m_metagame,c_pos,aim_pos,"std_aa_grenade.projectile",characterId,factionid,45);
+                    }
+                    else{
+                        CreateProjectile_H(m_metagame,c_pos,aim_pos,"std_aa_grenade.projectile",characterId,factionid,45.0,3.5);
+                    }
                     addCoolDown("zasm21",20,characterId,modifer);
                 }
             }

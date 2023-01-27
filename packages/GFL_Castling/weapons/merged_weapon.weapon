@@ -20490,8 +20490,8 @@
 	<modifier class="hit_success_probability" value="-0.4"/>
 </weapon>
 
-<weapon key="gkw_hawk97mod3.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="0.9" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="4.5" magazine_size="6" stance_accuracy_rate="0.75" can_shoot_standing="1" suppressed="0" name="Hawk Type 97(MOD3)" class="1" spread_range="0.35" reload_one_at_a_time="1" sight_range_modifier="1.2" projectile_speed="97" barrel_offset="0.5" projectiles_per_shot="8" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0" use_basic_muzzle_smoke_effect="0"/>
+<weapon key="gkw_hawk97mod3_5805.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+	<specification retrigger_time="-1.0" accuracy_factor="0.9" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="4.5" magazine_size="6" stance_accuracy_rate="0.75" can_shoot_standing="1" suppressed="0" name="Hawk Type 97(MOD3)-[Drunken Petals Underfoot]" class="1" spread_range="0.35" reload_one_at_a_time="1" sight_range_modifier="1.2" projectile_speed="97" barrel_offset="0.5" projectiles_per_shot="8" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0" use_basic_muzzle_smoke_effect="0"/>
 	<inventory buy_price="297.0" sell_price="297.0"/>
 	<animation state_key="cycle" animation_key="Pshotgun0.3"/>
 	<animation state_key="cycle" stance_key="prone" animation_key="Pshotgun0.3p"/>
@@ -20504,7 +20504,7 @@
 	<sound key="reload_one" fileref="sg4_reload_FromREALLIFE.wav" volume="0.5"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_sg_type97.xml"/>
-	<hud_icon filename="gkw_97typesmod3.png"/>
+	<hud_icon filename="gkw_97types_5805.png"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="bullet.projectile">
