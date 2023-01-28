@@ -12026,7 +12026,7 @@
 
 <weapon key="gkw_pa15_4202.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
-	<specification retrigger_time="0.3" accuracy_factor="0.95" sustained_fire_grow_step="1.5" sustained_fire_diminish_rate="0.5" magazine_size="15" carry_in_two_hands="0" suppressed="0" name="MAB PA-15-[Marvellous Herb Cake]" class="0" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="115" projectiles_per_shot="1" burst_shots="1" stab_enabled="1"/>
+	<specification retrigger_time="0.3" accuracy_factor="0.95" sustained_fire_grow_step="1.5" sustained_fire_diminish_rate="0.5" magazine_size="15" carry_in_two_hands="0" suppressed="0" name="MAB PA-15-[Larkspur's Allure]" class="0" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="115" projectiles_per_shot="1" burst_shots="1" stab_enabled="1"/>
 	<animation state_key="recoil" animation_key="recoil, pistol 2"/>
 	<animation state_key="recoil" stance_key="prone" animation_key="recoil, pistol, prone"/>
 	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil, overwall pistol"/>
@@ -12055,6 +12055,59 @@
 	<sound key="cycle" fileref="pa15_cycle_FromCOD16.wav" volume="0.8"/>
 	<model filename="gkw_hg_pa15.xml"/>
 	<hud_icon filename="gkw_pa15_4202.png"/>
+	<weak_hand_hold offset="0.1"/>
+	<projectile file="bullet.projectile">
+	<result class="hit" kill_probability="1.6" kill_probability_offset_on_successful_hit="5" kill_decay_start_time="0.5" kill_decay_end_time="0.6"/>
+	</projectile>
+	<effect class="muzzle" ref="ejection_9mm"/>
+	<stance state_key="running" accuracy="0.8"/>
+	<stance state_key="walking" accuracy="0.85"/>
+	<stance state_key="crouch_moving" accuracy="0.8"/>
+	<stance state_key="prone_moving" accuracy="0.8"/>
+	<stance state_key="standing" accuracy="0.9"/>
+	<stance state_key="crouching" accuracy="0.95"/>
+	<stance state_key="prone" accuracy="1"/>
+	<stance state_key="over_wall" accuracy="1"/>
+	<modifier class="speed" value="+1.0"/>
+	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
+	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
+	<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
+	<target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
+	<target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0"/>
+	<target_factors tag="commander" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0"/>
+</weapon>
+
+<weapon key="gkw_pa15_4402.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+	<tag name="pistol"/>
+	<specification retrigger_time="0.3" accuracy_factor="0.95" sustained_fire_grow_step="1.5" sustained_fire_diminish_rate="0.5" magazine_size="15" carry_in_two_hands="0" suppressed="0" name="MAB PA-15-[Marvellous Herb Cake]" class="0" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="115" projectiles_per_shot="1" burst_shots="1" stab_enabled="1"/>
+	<animation state_key="recoil" animation_key="recoil, pistol 2"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil, pistol, prone"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil, overwall pistol"/>
+	<animation state_key="reload" animation_key="reloading, SA OHG 0.5"/>
+	<animation state_key="reload" animation_key="reloading2, SA OHG 0.5"/>
+	<animation state_key="hold" animation_key="still, pistol 2"/>
+	<animation state_key="hold_casual" animation_key="hold_casual, pistol 2"/>
+	<animation state_key="hold_on_wall" animation_key="hold, overwall pistol"/>
+	<animation state_key="still_against_wall" animation_key="hold_casual, pistol 4"/>
+	<animation state_key="running" animation_key="running, pistol 2"/>
+	<animation state_key="walking" animation_key="walking, pistol 2"/>
+	<animation state_key="walking_backwards" animation_key="walking backwards, pistol"/>
+	<animation state_key="crouching" animation_key="crouch, pistol 2"/>
+	<animation state_key="crouch_moving" animation_key="crouching forwards, single hand carry"/>
+	<animation state_key="crouch_moving_backwards" animation_key="crouching backwards, pistol 2"/>
+	<animation state_key="prone_still" animation_key="prone_still, pistol"/>
+	<animation state_key="changing_weapon_in" animation_key="change weapon in, single hand carry"/>
+	<animation state_key="stabbing" animation_key="pistol whip"/>
+	<animation state_key="stabbing" animation_key="pistol whip 3"/>
+	<commonness value="0" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="5.0" buy_price="15.0" sell_price="15.0"/>
+	<capacity value="1" source="rank" source_value="0.0"/>
+	<sound key="fire" fileref="pa15_fire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.2"/>
+	<sound key="magazine_out" fileref="pa15_mgz_out_FromCOD16.wav" volume="0.8"/>
+	<sound key="magazine_in" fileref="pa15_mgz_in_FromCOD16.wav" volume="0.8"/>
+	<sound key="cycle" fileref="pa15_cycle_FromCOD16.wav" volume="0.8"/>
+	<model filename="gkw_hg_pa15.xml"/>
+	<hud_icon filename="gkw_pa15_4402.png"/>
 	<weak_hand_hold offset="0.1"/>
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="1.6" kill_probability_offset_on_successful_hit="5" kill_decay_start_time="0.5" kill_decay_end_time="0.6"/>
