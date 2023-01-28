@@ -24720,6 +24720,199 @@
 	<animation state_key="stabbing" animation_key="melee, bayonet_6hp"/>
 </weapon>
 
+<weapon key="gkw_56typer_5508.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="2.5" sustained_fire_diminish_rate="2.5" magazine_size="10" can_shoot_standing="1" suppressed="0" name="Type 56-[Pink Pear Blossom]" spread_range="0.28" class="4" burst_shots="1" last_burst_retrigger_time="0.33" reload_one_at_a_time="1" sight_range_modifier="2.0" projectile_speed="180" barrel_offset="0.6" projectiles_per_shot="1" stance_accuracy_rate="1.0" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<inventory encumbrance="20.0" buy_price="5.6" sell_price="5.6"/>
+	<next_in_chain key="gkw_56typer_5508_skill.weapon" share_ammo="1"/>
+	<animation key="reload" animation_key="reloading, clip"/>
+	<sound key="fire" fileref="type56r_fire_FromCOD16.wav" pitch_variety="0.03" volume="1.1"/>
+	<sound key="reload_one" fileref="type56r_reload_FromSQUAD.wav" volume="0.75"/>
+	<sound key="cycle" fileref="type56r_cycle_FromCOD16.wav" volume="1.0"/>
+	<sound class="impact" fileref="rifle_drop.wav"/>
+	<model filename="gkw_rf_56typer.xml"/>
+	<hud_icon filename="gkw_56typer_5508.png"/>
+	<commonness value="0" in_stock="0" can_respawn_with="1"/>
+	<effect class="muzzle" ref="ejection_76239"/>
+	<weak_hand_hold offset="0.3"/>
+	<projectile file="bullet.projectile">
+	<result class="hit" kill_probability="2.3" kill_probability_offset_on_successful_hit="4.5" kill_decay_start_time="0.974" kill_decay_end_time="1.624"/>
+	</projectile>
+	<stance state_key="running" accuracy="0.1"/>
+	<stance state_key="walking" accuracy="0.5"/>
+	<stance state_key="crouch_moving" accuracy="0.5"/>
+	<stance state_key="prone_moving" accuracy="0.6"/>
+	<stance state_key="standing" accuracy="0.85"/>
+	<stance state_key="crouching" accuracy="0.9"/>
+	<stance state_key="prone" accuracy="1.0"/>
+	<stance state_key="over_wall" accuracy="1"/>
+	<modifier class="speed" value="0"/>
+	<tag name="rifle"/>
+	<capacity value="1" source="rank" source_value="0.0"/>
+	<modifier class="detectability" value="-0.1"/>
+	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
+	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
+	<target_factors tag="shotgun" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
+	<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
+	<target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
+	<target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
+	<animation key="recoil" animation_key="recoil1"/>
+	<animation key="recoil" animation_key="recoil2"/>
+	<animation key="recoil" animation_key="recoil3"/>
+	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
+	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
+	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
+	<animation state_key="celebrate_shoot" animation_key="celebrating, shooting"/>
+	<animation state_key="stabbing" animation_key="melee, quick knife"/>
+	<animation state_key="stabbing" animation_key="pistol whip 3"/>
+</weapon>
+
+<weapon key="gkw_56typer_5508_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="1.5" sustained_fire_diminish_rate="3.0" magazine_size="10" can_shoot_standing="1" suppressed="0" name="Type 56-[Pink Pear Blossom]-[Guerrilla Focus]" spread_range="0.2" class="4" burst_shots="1" last_burst_retrigger_time="0.125" reload_one_at_a_time="1" sight_range_modifier="1.25" projectile_speed="200" barrel_offset="0.6" projectiles_per_shot="1" stance_accuracy_rate="1.0" stab_enabled="1" stab_range="4.5" carry_in_two_hands="1" slot="0"/>
+	<inventory encumbrance="20.0" buy_price="5.6" sell_price="5.6"/>
+	<animation key="reload" animation_key="reloading, clip"/>
+	<next_in_chain key="gkw_56typer_5508.weapon" share_ammo="1"/>
+	<sound key="fire" fileref="type56r_fire_FromCOD16.wav" pitch_variety="0.03" volume="1.1"/>
+	<sound key="reload_one" fileref="type56r_reload_FromSQUAD.wav" volume="0.75"/>
+	<sound key="cycle" fileref="type56r_cycle_FromCOD16.wav" volume="1.0"/>
+	<sound class="impact" fileref="rifle_drop.wav"/>
+	<model filename="gkw_rf_56typer_skill.xml"/>
+	<hud_icon filename="gkw_56typer_5508.png"/>
+	<commonness value="0" in_stock="0" can_respawn_with="1"/>
+	<effect class="muzzle" ref="ejection_76239"/>
+	<weak_hand_hold offset="0.3"/>
+	<projectile file="bullet.projectile">
+	<result class="hit" kill_probability="2.3" kill_probability_offset_on_successful_hit="3" kill_decay_start_time="0.974" kill_decay_end_time="1.624"/>
+	</projectile>
+	<stance state_key="running" accuracy="0.7"/>
+	<stance state_key="walking" accuracy="0.7"/>
+	<stance state_key="crouch_moving" accuracy="0.7"/>
+	<stance state_key="prone_moving" accuracy="0.7"/>
+	<stance state_key="standing" accuracy="0.7"/>
+	<stance state_key="crouching" accuracy="0.7"/>
+	<stance state_key="prone" accuracy="1.0"/>
+	<stance state_key="over_wall" accuracy="1.0"/>
+	<modifier class="speed" value="0.15"/>
+	<tag name="rifle"/>
+	<capacity value="1" source="rank" source_value="0.0"/>
+	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
+	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
+	<target_factors tag="shotgun" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
+	<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
+	<target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
+	<target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
+	<sound key="stab" fileref="dagger_swing1_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab" fileref="dagger_swing2_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab" fileref="dagger_swing3_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab_hit" fileref="blade_impact_01_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
+	<sound key="stab_hit" fileref="blade_impact_02_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
+	<sound key="stab_hit" fileref="blade_impact_03_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
+	<sound key="stab_hit" fileref="blade_impact_04_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
+	<animation key="recoil" animation_key="recoil1"/>
+	<animation key="recoil" animation_key="recoil2"/>
+	<animation key="recoil" animation_key="recoil3"/>
+	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
+	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
+	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
+	<animation state_key="celebrate_shoot" animation_key="celebrating, shooting"/>
+	<animation state_key="stabbing" animation_key="melee, bayonet_6hp"/>
+</weapon>
+
+<weapon key="gkw_56typermod3_5508.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="2.5" sustained_fire_diminish_rate="2.5" magazine_size="10" can_shoot_standing="1" suppressed="0" name="Type 56(MOD3)-[Pink Pear Blossom]" spread_range="0.2" class="4" burst_shots="1" last_burst_retrigger_time="0.33" reload_one_at_a_time="1" sight_range_modifier="2.35" projectile_speed="180" barrel_offset="0.6" projectiles_per_shot="1" stance_accuracy_rate="2.0" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<inventory encumbrance="20.0" buy_price="56" sell_price="56"/>
+	<next_in_chain key="gkw_56typermod3_5508_skill.weapon" share_ammo="1"/>
+	<animation key="reload" animation_key="reloading, clip"/>
+	<sound key="fire" fileref="type56r_fire_FromCOD16.wav" pitch_variety="0.03" volume="1.1"/>
+	<sound key="reload_one" fileref="type56r_reload_FromSQUAD.wav" volume="0.75"/>
+	<sound key="cycle" fileref="type56r_cycle_FromCOD16.wav" volume="1.0"/>
+	<sound class="impact" fileref="rifle_drop.wav"/>
+	<model filename="gkw_rf_56typermod3.xml"/>
+	<hud_icon filename="gkw_56typer_5508.png"/>
+	<commonness value="0" in_stock="0" can_respawn_with="1"/>
+	<effect class="muzzle" ref="ejection_76239"/>
+	<weak_hand_hold offset="0.3"/>
+	<projectile file="bullet_56typer_mod3.projectile">
+	</projectile>
+	<stance state_key="running" accuracy="0.1"/>
+	<stance state_key="walking" accuracy="0.5"/>
+	<stance state_key="crouch_moving" accuracy="0.5"/>
+	<stance state_key="standing" accuracy="0.95"/>
+	<stance state_key="crouching" accuracy="1.0"/>
+	<stance state_key="prone" accuracy="1.1"/>
+	<stance state_key="prone_moving" accuracy="0.6"/>
+	<stance state_key="over_wall" accuracy="1.1"/>
+	<modifier class="speed" value="0"/>
+	<tag name="rifle"/>
+	<capacity value="1" source="rank" source_value="0.0"/>
+	<modifier class="detectability" value="-0.15"/>
+	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
+	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
+	<target_factors tag="shotgun" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
+	<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
+	<target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
+	<target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
+	<animation key="recoil" animation_key="recoil1"/>
+	<animation key="recoil" animation_key="recoil2"/>
+	<animation key="recoil" animation_key="recoil3"/>
+	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
+	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
+	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
+	<animation state_key="celebrate_shoot" animation_key="celebrating, shooting"/>
+	<animation state_key="stabbing" animation_key="melee, quick knife"/>
+	<animation state_key="stabbing" animation_key="pistol whip 3"/>
+</weapon>
+
+<weapon key="gkw_56typermod3_5508_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="1.5" sustained_fire_diminish_rate="4.5" magazine_size="10" can_shoot_standing="1" suppressed="0" name="Type 56(MOD3)-[Pink Pear Blossom]-[Glorious Disengagement]" spread_range="0.2" class="4" burst_shots="1" last_burst_retrigger_time="0.08" reload_one_at_a_time="1" sight_range_modifier="1.4" projectile_speed="200" barrel_offset="0.6" projectiles_per_shot="1" stance_accuracy_rate="2.0" stab_enabled="1" stab_range="5.0" carry_in_two_hands="1" slot="0"/>
+	<inventory encumbrance="20.0" buy_price="56" sell_price="56"/>
+	<animation key="reload" animation_key="reloading, clip 10"/>
+	<next_in_chain key="gkw_56typermod3_5508.weapon" share_ammo="1"/>
+	<sound key="fire" fileref="type56r_fire_FromCOD16.wav" pitch_variety="0.03" volume="1.1"/>
+	<sound key="reload_one" fileref="type56r_reload_FromSQUAD.wav" volume="0.75"/>
+	<sound key="cycle" fileref="type56r_cycle_FromCOD16.wav" volume="1.0"/>
+	<sound class="impact" fileref="rifle_drop.wav"/>
+	<model filename="gkw_rf_56typermod3_skill.xml"/>
+	<hud_icon filename="gkw_56typer_5508.png"/>
+	<commonness value="0" in_stock="0" can_respawn_with="1"/>
+	<effect class="muzzle" ref="ejection_76239"/>
+	<weak_hand_hold offset="0.3"/>
+	<projectile file="bullet.projectile">
+	<result class="hit" kill_probability="2.45" kill_probability_offset_on_successful_hit="5.5" kill_decay_start_time="0.974" kill_decay_end_time="1.624"/>
+	</projectile>
+	<stance state_key="running" accuracy="0.7"/>
+	<stance state_key="walking" accuracy="0.7"/>
+	<stance state_key="crouch_moving" accuracy="0.7"/>
+	<stance state_key="prone_moving" accuracy="0.7"/>
+	<stance state_key="standing" accuracy="0.7"/>
+	<stance state_key="crouching" accuracy="0.7"/>
+	<stance state_key="prone" accuracy="1.0"/>
+	<stance state_key="over_wall" accuracy="1.0"/>
+	<modifier class="speed" value="0.15"/>
+	<tag name="rifle"/>
+	<capacity value="1" source="rank" source_value="0.0"/>
+	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
+	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
+	<target_factors tag="shotgun" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
+	<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
+	<target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
+	<target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
+	<sound key="stab" fileref="dagger_swing1_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab" fileref="dagger_swing2_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab" fileref="dagger_swing3_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab_hit" fileref="blade_impact_01_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
+	<sound key="stab_hit" fileref="blade_impact_02_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
+	<sound key="stab_hit" fileref="blade_impact_03_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
+	<sound key="stab_hit" fileref="blade_impact_04_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
+	<animation key="recoil" animation_key="recoil1"/>
+	<animation key="recoil" animation_key="recoil2"/>
+	<animation key="recoil" animation_key="recoil3"/>
+	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
+	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
+	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
+	<animation state_key="celebrate_shoot" animation_key="celebrating, shooting"/>
+	<animation state_key="stabbing" animation_key="melee, bayonet_6hp"/>
+</weapon>
+
 <weapon key="gkw_64type.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<specification accuracy_factor="0.8" barrel_offset="0.4" class="0" slot="0" magazine_size="30" name="Type 64 SMG" projectile_speed="110" retrigger_time="0.05" suppressed="1" spread_range="0.3" sustained_fire_diminish_rate="2.35" sustained_fire_grow_step="0.15" sight_range_modifier="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 0.9"/>
@@ -24830,6 +25023,121 @@
 	<animation state_key="reload" animation_key="reloading, magazine rifle 0.9"/>
 	<animation state_key="stabbing" animation_key="melee, quick knife"/>
 	<animation state_key="stabbing" animation_key="pistol whip 3"/>
+</weapon>
+
+<weapon drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" key="gkw_mg36_4903.weapon" on_ground_up="0 0 1" time_to_live_out_in_the_open="0">
+	<tag name="autorifle"/>
+	<specification accuracy_factor="0.98" barrel_offset="0.4" carry_in_two_hands="1" class="0" magazine_size="100" name="MG36-[Crimson Mallow]" projectile_speed="247.51" retrigger_time="0.08" sight_range_modifier="1.3" slot="0" stab_enabled="1" suppressed="0" sustained_fire_diminish_rate="1.9" sustained_fire_grow_step="0.3"/>
+	<next_in_chain key="gkw_mg36_4903_skill.weapon" share_ammo="0"/>
+	<commonness can_respawn_with="1" in_stock="0" value="0"/>
+	<inventory buy_price="36.0" encumbrance="10.0" sell_price="36.0"/>
+	<capacity source="rank" source_value="0" value="1"/>
+	<animation state_key="hold_casual"/>
+	<animation key="reload" animation_key="reloading, magazine rifle 1.5"/>
+	<animation key="recoil" animation_key="recoil1"/>
+	<animation key="recoil" animation_key="recoil2"/>
+	<animation key="recoil" animation_key="recoil3"/>
+	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
+	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
+	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
+	<animation state_key="hold_on_wall" animation_key="still"/>
+	<animation state_key="celebrate_shoot" animation_key="celebrating, shooting"/>
+	<animation state_key="stabbing" animation_key="melee, quick knife"/>
+	<animation state_key="stabbing" animation_key="pistol whip 3"/>
+	<sound key="fire" fileref="mg36_Fire_FromCOD16.wav" pitch_variety="0.05" volume="1.1"/>
+	<sound key="magazine_out" fileref="mg36_mgz_out_FromCOD16.wav" volume="0.5"/>
+	<sound key="magazine_in" fileref="mg36_mgz_in_FromCOD16.wav" volume="0.5"/>
+	<sound key="cycle" fileref="mg36_cycle_FromCOD16.wav" volume="0.7"/>
+	<sound class="impact" fileref="rifle_drop.wav"/>
+	<model filename="gkw_mg_mg36.xml"/>
+	<hud_icon filename="gkw_mg36_4903.png"/>
+	<weak_hand_hold offset="0.2"/>
+	<projectile file="bullet.projectile">
+	<result class="hit" kill_probability="1.85" kill_probability_offset_on_successful_hit="1.5" kill_decay_start_time="1.933" kill_decay_end_time="3.222"/>
+	</projectile>
+	<effect class="muzzle" ref="ejection_556"/>
+	<stance accuracy="0.65" state_key="running"/>
+	<stance accuracy="0.75" state_key="walking"/>
+	<stance accuracy="0.85" state_key="crouch_moving"/>
+	<stance accuracy="0.85" state_key="prone_moving"/>
+	<stance accuracy="0.95" state_key="standing"/>
+	<stance accuracy="0.95" state_key="crouching"/>
+	<stance accuracy="1" state_key="prone"/>
+	<modifier class="detectability" value="-0.1"/>
+	<modifier class="speed" value="0.2"/>
+	<target_factors base_score="0.0" direction="0.0" distance="1.0" squad_command="1.0" tag="mecha"/>
+	<target_factors base_score="1.0" direction="0.0" distance="1.0" squad_command="1.0" tag=""/>
+	<target_factors base_score="3.0" direction="0.0" distance="1.0" squad_command="1.0" tag="elite"/>
+	<target_factors base_score="2.0" direction="0.0" distance="1.0" squad_command="1.0" tag="antiarmor"/>
+	<target_factors base_score="4.0" direction="0.0" distance="1.0" squad_command="1.0" tag="rifle"/>
+	<target_factors base_score="4.0" direction="0.0" distance="1.0" squad_command="1.0" tag="commander"/>
+</weapon>
+
+<weapon drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" key="gkw_mg36_4903_skill.weapon" on_ground_up="0 0 1" time_to_live_out_in_the_open="0">
+	<tag name="machine gun"/>
+	<specification accuracy_factor="0.98" barrel_offset="0" class="0" magazine_size="-1" name="MG36-[Crimson Mallow]" projectile_speed="10" retrigger_time="0.5" stab_range="5" sight_range_modifier="1.0" use_basic_muzzle_smoke_effect="0" slot="0" stab_enabled="1" suppressed="0" sustained_fire_diminish_rate="3.0" sustained_fire_grow_step="1.5" can_shoot_standing="1" can_shoot_crouching="0" can_shoot_prone="0" carry_in_two_hands="0"/>
+	<next_in_chain key="gkw_mg36_4903.weapon" share_ammo="0"/>
+	<commonness can_respawn_with="1" in_stock="0" value="0"/>
+	<inventory buy_price="36.0" encumbrance="10.0" sell_price="36.0"/>
+	<capacity source="rank" source_value="0" value="1"/>
+	<animation state_key="recoil" animation_key="melee, gunto"/>
+	<animation state_key="recoil" animation_key="melee, gunto slash"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="melee, prone sword"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="melee, gunto swing"/>
+	<animation state_key="stabbing" animation_key="melee, gunto whip"/>
+	<animation state_key="recoil" animation_key="melee, gunto slash"/>
+	<animation state_key="hold" animation_key="hold, gunto"/>
+	<animation state_key="hold_casual" animation_key="relaxed, gunto"/>
+	<animation state_key="hold_on_wall" animation_key="hold on wall, gunto"/>
+	<animation state_key="running" animation_key="running, gunto"/>
+	<animation state_key="walking" animation_key="walking, ninjato"/>
+	<animation state_key="crouching" animation_key="crouch, ninjato"/>
+	<animation state_key="crouch_moving" animation_key="crouching forwards, ninjato"/>
+	<animation state_key="crouch_moving_backwards" animation_key="crouching backwards, ninjato"/>
+	<animation state_key="prone_still" animation_key="prone still, ninjato"/>
+	<animation state_key="prone_moving" animation_key="prone moving, ninjato"/>
+	<animation state_key="walking_backwards" animation_key="walking backwards, ninjato"/>
+	<animation state_key="changing_weapon_in" animation_key="change weapon in, sword"/>
+	<animation state_key="changing_weapon_out" animation_key="change weapon out, sword"/>
+	<animation state_key="reload" animation_key="still, ninjato"/>
+	<sound class="impact" fileref="rifle_drop.wav"/>
+	<model filename="mg36_katana.xml"/>
+	<hud_icon filename="gkw_mg36_4903.png"/>
+	<weak_hand_hold offset="0.2"/>
+	<projectile file="teal.projectile">
+	<result class="blast" radius="3" damage="6.0" decal="0" push="0.6" character_state="death" faction_compare="not_equal" make_vehicle_hit_sound="0"/>
+	</projectile>
+	<effect class="muzzle" ref="sawsnone"/>
+	<stance state_key="running" accuracy="1"/>
+	<stance state_key="walking" accuracy="1"/>
+	<stance state_key="crouch_moving" accuracy="1"/>
+	<stance state_key="standing" accuracy="1"/>
+	<stance state_key="crouching" accuracy="1"/>
+	<stance state_key="prone" accuracy="1"/>
+	<stance state_key="prone_moving" accuracy="1"/>
+	<stance state_key="over_wall" accuracy="1"/>
+	<modifier class="speed" value="0.4"/>
+	<modifier class="hit_success_probability" value="-0.1"/>
+	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
+	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
+	<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
+	<target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
+	<target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0"/>
+	<target_factors tag="commander" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0"/>
+	<sound key="stab" fileref="melee_swing_nothing1_fromFO4.wav" pitch_variety="0.05" volume="2.5"/>
+	<sound key="stab" fileref="melee_swing_nothing2_fromFO4.wav" pitch_variety="0.05" volume="2.5"/>
+	<sound key="stab" fileref="melee_swing_nothing3_fromFO4.wav" pitch_variety="0.05" volume="2.5"/>
+	<sound key="stab" fileref="melee_swing_nothing4_fromFO4.wav" pitch_variety="0.05" volume="2.5"/>
+	<sound key="fire" fileref="melee_swing_nothing1_fromFO4.wav" pitch_variety="0.05" volume="2.5"/>
+	<sound key="fire" fileref="melee_swing_nothing2_fromFO4.wav" pitch_variety="0.05" volume="2.5"/>
+	<sound key="fire" fileref="melee_swing_nothing3_fromFO4.wav" pitch_variety="0.05" volume="2.5"/>
+	<sound key="fire" fileref="melee_swing_nothing4_fromFO4.wav" pitch_variety="0.05" volume="2.5"/>
+	<sound key="stab_hit" fileref="melee_impact_flesh1_fromFO4.wav" pitch_variety="0.05" volume="2.5"/>
+	<sound key="stab_hit" fileref="melee_impact_flesh2_fromFO4.wav" pitch_variety="0.05" volume="2.5"/>
+	<sound key="stab_hit" fileref="melee_impact_flesh3_fromFO4.wav" pitch_variety="0.05" volume="1.0"/>
+	<sound key="stab_hit_any" fileref="melee_impact_flesh1_fromFO4.wav" pitch_variety="0.05" volume="1.6"/>
+	<sound key="stab_hit_any" fileref="melee_impact_flesh2_fromFO4.wav" pitch_variety="0.05" volume="1.6"/>
+	<sound key="stab_hit_any" fileref="melee_impact_flesh3_fromFO4.wav" pitch_variety="0.05" volume="1.6"/>
 </weapon>
 
 <weapon key="target.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
@@ -43912,7 +44220,7 @@
 	<tag name="autorifle"/>
 	<specification accuracy_factor="0.98" barrel_offset="0.4" carry_in_two_hands="1" class="0" magazine_size="100" name="MG36-[Crimson Mallow]" projectile_speed="247.51" retrigger_time="0.08" sight_range_modifier="1.3" slot="0" stab_enabled="1" suppressed="0" sustained_fire_diminish_rate="1.9" sustained_fire_grow_step="0.3"/>
 	<next_in_chain key="gkw_mg36_4205_skill.weapon" share_ammo="1"/>
-	<commonness can_respawn_with="1" in_stock="0" value="0.2"/>
+	<commonness can_respawn_with="1" in_stock="0" value="0"/>
 	<inventory buy_price="36.0" encumbrance="10.0" sell_price="36.0"/>
 	<capacity source="rank" source_value="0" value="1"/>
 	<animation state_key="hold_casual"/>
