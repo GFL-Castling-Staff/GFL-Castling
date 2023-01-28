@@ -1253,7 +1253,7 @@ class GFLskill : Tracker {
 
 			case 35: {// LBLL
 				Vector3 grenade_pos = stringToVector3(event.getStringAttribute("position"));
-				int lbll_cid = event.getStringAttribute("character_id");
+				int lbll_cid = event.getIntAttribute("character_id");
 				healCharacter(m_metagame,lbll_cid,2);
 				int factionid = 0;
 				array<const XmlElement@>@ affectedCharacter = getCharactersNearPosition(m_metagame, grenade_pos, factionid, 2.5f);

@@ -1,0 +1,320 @@
+material MenuSystemFillPanel_ForceDepth {
+	receive_shadows off
+	technique Basic {
+		pass Basic {
+			fog_override true
+			scene_blend alpha_blend
+			texture_unit Image {
+				texture menu_bg.png
+			}
+   			depth_write on
+     		depth_check on
+     		depth_func always_pass
+		} 
+	}
+}
+
+material MenuSystemRenderArea_ForceDepth {
+	receive_shadows off
+	technique Basic {
+		pass Basic {
+			fog_override true
+			scene_blend alpha_blend
+			texture_unit Image {
+				texture none.png
+			}
+   			depth_write on
+     		depth_check on
+     		depth_func always_pass
+		} 
+	}
+}
+
+material MenuSystemBackground_ForceDepth {
+	receive_shadows off
+	technique Basic {
+		pass Basic {
+			fog_override true
+			scene_blend alpha_blend
+			texture_unit Image {
+				texture menusystem_bar.png
+			}
+   			depth_write off
+     		depth_check on
+     		depth_func always_pass
+		} 
+	}
+}
+
+material MenuSystemTopPanel_ForceDepth : MenuSystemBackground_ForceDepth {
+	technique Basic {
+		pass Basic {
+			texture_unit Image {
+				texture menusystem_bar_ct.png
+			}
+		} 
+	}
+}
+
+material MenuSystemBottomPanel_ForceDepth : MenuSystemBackground_ForceDepth {
+	technique Basic {
+		pass Basic {
+			texture_unit Image {
+				texture menusystem_bar_ct.png
+			}
+		} 
+	}
+}
+
+material MenuSystemControlBase_ForceDepth {
+	receive_shadows off
+	technique Basic {
+		pass Basic {
+			fog_override true
+			scene_blend alpha_blend
+			texture_unit Content {
+				texture menusystem_control_background.png
+			}
+
+   			depth_write off
+     		depth_check on
+     		depth_func equal
+		}
+	}
+}
+  
+material MenuSystemControlBackground_ForceDepth : MenuSystemControlBase_ForceDepth {
+	technique Basic {
+		pass Basic {
+			texture_unit Content {
+				texture menusystem_control_background.png
+			}
+		}
+	}
+}
+
+material MenuSystemControlFocusBackground_ForceDepth : MenuSystemControlBase_ForceDepth {
+	technique Basic {
+		pass Basic {
+			texture_unit Content {
+				texture menusystem_control_focus_background.png
+			}
+		}
+	}
+}
+  
+material MenuSystemControlAlertBackground_ForceDepth : MenuSystemControlBase_ForceDepth {
+	technique Basic {
+		pass Basic {
+			texture_unit Content {
+				texture menusystem_control_alert_background.png
+			}
+		}
+	}
+}
+
+material MenuSystemControlFocusAlertBackground_ForceDepth : MenuSystemControlBase_ForceDepth {
+	technique Basic {
+		pass Basic {
+			texture_unit Content {
+				texture menusystem_control_focus_alert_background.png
+			}
+		}
+	}
+}
+
+material MenuSystemControlSelectedBackground_ForceDepth : MenuSystemControlBase_ForceDepth {
+	technique Basic {
+		pass Basic {
+			texture_unit Content {
+				texture menusystem_control_selected_background.png
+			}
+		}
+	}
+}
+
+material MenuSystemControlInvisibleBackground_ForceDepth : MenuSystemControlBase_ForceDepth {
+	technique Basic {
+		pass Basic {
+			texture_unit Content {
+				texture none.png
+			}
+		}
+	}
+}
+
+material MenuSystemGameTitle
+  {
+	receive_shadows off
+	technique
+	{
+	  pass
+	  {
+	fog_override true
+	scene_blend alpha_blend
+		texture_unit {
+		  texture menu_title.png 2d 0
+	  tex_address_mode clamp
+		  filtering trilinear
+		}
+	  } 
+	}
+  }
+
+
+material MenuSystemAd
+  {
+	receive_shadows off
+	technique
+	{
+	  pass
+	  {
+	fog_override true
+	scene_blend alpha_blend
+		texture_unit {
+		  texture menusystem_ad2.png 2d 0
+	  tex_address_mode clamp
+		  filtering trilinear
+		}
+	  } 
+	}
+  }
+
+
+material MenuSystemSocmeIcon
+  {
+	receive_shadows off
+	technique Basic
+	{
+	  pass Basic
+	  {
+	fog_override true
+	scene_blend alpha_blend
+		texture_unit Image {
+		  texture menu_discord.png 2d 0
+	  tex_address_mode clamp
+		  filtering trilinear
+	  scale 0.9 0.9
+		}
+	  } 
+	}
+  }
+
+material MenuSystemSocmeIconFocus : MenuSystemSocmeIcon
+  {
+	technique Basic
+	{
+	  pass Basic
+	  {
+		texture_unit Image {
+	  scale 1.0 1.0
+		}
+	  } 
+	}
+  }
+
+
+material MenuSystemControlSlider
+  {
+	receive_shadows off
+	technique
+	{
+	  pass
+	  {
+	fog_override true
+	scene_blend alpha_blend
+		texture_unit {
+		  texture menusystem_slider.png
+		}
+	  } 
+	}
+  }
+  
+material CampaignStatsMenuViewBackgroundImage {
+	receive_shadows off
+	technique Basic {
+		pass Basic {
+			lighting off
+			fog_override true none
+
+			texture_unit Image {
+				texture glow1.png
+								tex_address_mode clamp
+					wave_xform scale_x sine 0.9 0.2 0.0 0.1
+					wave_xform scale_y sine 0.9 0.2 0.0 0.1
+				rotate_anim 0.05
+			}
+
+			texture_unit Image {
+				texture glow2.png
+								tex_address_mode clamp
+					wave_xform scale_x sine 0.9 0.1 0.0 0.1
+					wave_xform scale_y sine 0.9 0.1 0.0 0.1
+				rotate_anim -0.03
+				colour_op add
+			}
+
+			scene_blend add
+		} 
+	}
+}
+
+
+material CampaignStatsMenuViewImage {
+	receive_shadows off
+	technique Basic {
+		pass Basic {
+			lighting off
+			fog_override true none
+
+			texture_unit Image {
+				texture hud_badge_kill_combo1.png
+				tex_address_mode clamp
+				filtering trilinear
+			}
+			scene_blend alpha_blend
+		} 
+	}
+}
+
+
+
+material JournalMenuViewImage {
+	receive_shadows off
+	technique Basic {
+		pass Basic {
+			lighting off
+			fog_override true none
+
+			texture_unit Image {
+				texture hud_badge_kill_combo1.png
+				tex_address_mode clamp
+				filtering trilinear
+			}
+			scene_blend alpha_blend
+		} 
+	}
+}
+
+
+material TrophyViewBackground_ForceDepth : MenuSystemRenderArea_ForceDepth {
+	technique Basic {
+		pass Basic {
+			texture_unit Image {
+				texture menusystem_bar.png
+			}
+		} 
+	}
+}
+
+material StickyControlsViewBackground_ForceDepth : MenuSystemRenderArea_ForceDepth {
+	receive_shadows off
+	technique Basic {
+		pass Basic {
+			texture_unit Image {
+				texture menusystem_bar.png
+			}
+		} 
+	}
+}
+

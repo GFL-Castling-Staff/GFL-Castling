@@ -43,6 +43,8 @@ class kill_event : Tracker {
         {"ff_gager_1.weapon",3},
         {"gkw_type100_skill.weapon",3},
         {"gkw_type100_4004_skill.weapon",3},
+        {"gkw_mg36_4903_skill.weapon",3},
+
 
         // 近战定位HG
         {"gkw_m1911_mod3.weapon",3},
@@ -202,9 +204,10 @@ class kill_event : Tracker {
         {"666",-1}
     };
     dictionary meleeWeaponList ={
-        {"ff_excutioner_2.weapon",4},
-        {"ff_parw_alina.weapon",4},
-        {"ff_gager_1.weapon",4},
+        {"ff_excutioner_2.weapon",3},
+        {"ff_parw_alina.weapon",3},
+        {"ff_gager_1.weapon",3},
+        {"gkw_mg36_4903_skill.weapon",3},
         {"666",-1}
     };
     protected void updateHealByKillEvent(int characterid,int factionid,int killstoheal,int timeaddafterkill,string type="weapon"){
