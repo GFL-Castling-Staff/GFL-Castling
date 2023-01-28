@@ -409,6 +409,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		ScoredResource("gkw_g36_6807.weapon", "weapon", 1.0f),
 		ScoredResource("gkw_ots14_1203.weapon", "weapon", 1.0f),
 		ScoredResource("gkw_dp28_8008.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_lewis_5501.weapon", "weapon", 1.0f),
 
 		ScoredResource("gkw_m870_3803.weapon", "weapon", 1.0f)
 			}
@@ -1926,6 +1927,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		ScoredResource("gkw_g36_6807.weapon", "weapon", 1.0f),
 		ScoredResource("gkw_ots14_1203.weapon", "weapon", 1.0f),
 		ScoredResource("gkw_dp28_8008.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_lewis_5501.weapon", "weapon", 1.0f),
 
 		ScoredResource("gkw_QBZ95_405.weapon","weapon",1.0f)
 			}
