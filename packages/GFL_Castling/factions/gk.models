@@ -602,7 +602,13 @@
     </model>
     <model filename="gkd_mg_dp28.xml">
         <requirement class="weapon" key="gkw_dp28_skill.weapon" slot="0" />
-    </model>    
+    </model>
+    <model filename="gkd_mg_dp28_8008.xml">
+        <requirement class="weapon" key="gkw_dp28_8008.weapon" slot="0" />
+    </model>
+    <model filename="gkd_mg_dp28_8008.xml">
+        <requirement class="weapon" key="gkw_dp28_8008_skill.weapon" slot="0" />
+    </model>
     <model filename="gkd_mg_fg42.xml">
         <requirement class="weapon" key="gkw_fg42.weapon" slot="0" />
     </model>
