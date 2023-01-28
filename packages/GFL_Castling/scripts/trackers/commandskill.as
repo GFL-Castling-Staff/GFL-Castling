@@ -4017,16 +4017,12 @@ class CommandSkill : Tracker {
                     }
                     int n=enemyfaction.length-1;
                     for(int i=0;i<n;i++){
-                        array<const XmlElement@> affectedCharacter = getCharactersNearPosition(m_metagame,aim_pos,enemyfaction[i],5.0f);
+                        array<const XmlElement@> affectedCharacter = getCharactersNearPosition(m_metagame,aim_pos,enemyfaction[i],10.0f);
                         affectedNumber += affectedCharacter.length;
                     }
 
-                    if(affectedNumber < 1)
-                    {
-                        affectedNumber=1;
-                    }
-
                     Airstrike_strafer@ new_strike = Airstrike_strafer(characterId,factionid,16,c_pos.add(Vector3(0,50,0)),aim_pos);
+                    affectedNumber+=3;
                     new_strike.setNum(affectedNumber);
                     DelayDetailedCallRequest@ shot = DelayDetailedCallRequest(m_metagame,2.0,new_strike);
                     TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
