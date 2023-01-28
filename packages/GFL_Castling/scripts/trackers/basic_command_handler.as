@@ -884,6 +884,7 @@ class BasicCommandHandler : Tracker {
 			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_pa15_4202.weapon");
 			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_pa15_5802.weapon");		
 			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_hk416_agent.weapon");			
+			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","sfw_m2g.weapon");			
 		} else if (checkCommand(message,"admintest")){
 			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
 			string sid = playerInfo.getStringAttribute("profile_hash");
