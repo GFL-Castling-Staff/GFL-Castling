@@ -100,11 +100,15 @@ dictionary MOD3craftList = {
     {"gkw_ro635.weapon","gkw_ro635mod3.weapon"},
 
     {"gkw_ump9.weapon","gkw_ump9mod3.weapon"},
+    {"gkw_ump9_6704.weapon","gkw_ump9mod3_6704.weapon"},
+    {"gkw_ump9_6704_skill.weapon","gkw_ump9mod3_6704.weapon"},
 
     {"gkw_ump45.weapon","gkw_ump45mod3.weapon"},
     {"gkw_ump45_410.weapon","gkw_ump45mod3_410.weapon"},
     {"gkw_ump45_535.weapon","gkw_ump45mod3_535.weapon"},
     {"gkw_ump45_3403.weapon","gkw_ump45mod3_3403.weapon"},
+    {"gkw_ump45_5405.weapon","gkw_ump45mod3_5405.weapon"},
+    {"gkw_ump45_5405_skill.weapon","gkw_ump45mod3_5405.weapon"},
 
     {"gkw_uzi.weapon","gkw_uzimod3.weapon"},
     {"gkw_ak15.weapon","gkw_ak15mod3.weapon"},

@@ -71,6 +71,17 @@ class kill_event : Tracker {
         {"gkw_ump45mod3_410.weapon",3},
         {"gkw_ump45mod3_535.weapon",3},
         {"gkw_ump45mod3_3403.weapon",3},
+
+        {"gkw_ump45_5405.weapon",3},
+        {"gkw_ump45mod3_5405.weapon",3},
+        {"gkw_ump45_5405_skill.weapon",3},
+        {"gkw_ump45mod3_5405_skill.weapon",3},
+
+        {"gkw_ump9_6704.weapon",3},
+        {"gkw_ump9mod3_6704.weapon",3},
+        {"gkw_ump9_6704_skill.weapon",3},
+        {"gkw_ump9mod3_6704_skill.weapon",3},
+        
         {"gkw_pps43.weapon",3},
         {"gkw_m3.weapon",3},
         {"gkw_type100.weapon",3},

@@ -2083,5 +2083,34 @@
     </model>      
     <model filename="gkd_smg_type64mod3.xml">
         <requirement class="weapon" key="gkw_64typemod3.weapon" slot="0" />
-    </model>          
+    </model>
+
+    <model filename="gkd_smg_ump9_6704.xml">
+        <requirement class="weapon" key="gkw_ump9_6704.weapon" slot="0" />
+    </model>
+    <model filename="gkd_smg_ump9_6704_fox.xml">
+        <requirement class="weapon" key="gkw_ump9_6704_skill.weapon" slot="0" />
+    </model>
+
+    <model filename="gkd_smg_ump9_6704.xml">
+        <requirement class="weapon" key="gkw_ump9mod3_6704.weapon" slot="0" />
+    </model>
+    <model filename="gkd_smg_ump9_6704_fox.xml">
+        <requirement class="weapon" key="gkw_ump9mod3_6704_skill.weapon" slot="0" />
+    </model>
+
+    <model filename="gkd_smg_ump45_5405.xml">
+        <requirement class="weapon" key="gkw_ump45_5405.weapon" slot="0" />
+    </model>
+    <model filename="gkd_smg_ump45_5405_fox.xml">
+        <requirement class="weapon" key="gkw_ump45_5405_skill.weapon" slot="0" />
+    </model>
+
+    <model filename="gkd_smg_ump45_5405.xml">
+        <requirement class="weapon" key="gkw_ump45mod3_5405.weapon" slot="0" />
+    </model>
+    <model filename="gkd_smg_ump45_5405_fox.xml">
+        <requirement class="weapon" key="gkw_ump45mod3_5405_skill.weapon" slot="0" />
+    </model>
+
 </models>

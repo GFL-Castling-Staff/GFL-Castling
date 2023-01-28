@@ -212,7 +212,9 @@ dictionary commandSkillIndex = {
         {"gkw_ump45.weapon",14},
         {"gkw_ump45_535.weapon",14},
         {"gkw_ump45_410.weapon",14},      
-        {"gkw_ump45_3403.weapon",14},      
+        {"gkw_ump45_3403.weapon",14},
+        {"gkw_ump45_5405.weapon",14},
+        {"gkw_ump45_5405_skill.weapon",14},
 
         // M870
         {"gkw_m870.weapon",15},
@@ -265,6 +267,9 @@ dictionary commandSkillIndex = {
         {"gkw_ump9.weapon",27},
         {"gkw_ump9_409.weapon",27},
         {"gkw_ump9_536.weapon",27},
+        {"gkw_ump9_6704.weapon",27},
+        {"gkw_ump9_6704_skill.weapon",27},
+
         {"gkw_mab38.weapon",27},
         {"gkw_mab38_oc.weapon",27},
         {"gkw_64type.weapon",27},
@@ -273,6 +278,8 @@ dictionary commandSkillIndex = {
         {"gkw_m9.weapon",27},
 
         {"gkw_ump9mod3.weapon",28},
+        {"gkw_ump9mod3_6704.weapon",28},
+        {"gkw_ump9mod3_6704_skill.weapon",28},
 
         {"gkw_mab38mod3.weapon",29},
         {"gkw_mab38mod3_oc.weapon",29},
@@ -362,6 +369,8 @@ dictionary commandSkillIndex = {
         {"gkw_ump45mod3_535.weapon",47},
         {"gkw_ump45mod3_410.weapon",47},
         {"gkw_ump45mod3_3403.weapon",47},
+        {"gkw_ump45mod3_5405.weapon",47},
+        {"gkw_ump45mod3_5405_skill.weapon",47},
 
         // 衔尾蛇
         {"ff_weaver.weapon",48},
@@ -2545,7 +2554,7 @@ class CommandSkill : Tracker {
                         playSoundAtLocation(m_metagame,"grenade_throw1.wav",factionid,c_pos,1.0);
                         addCoolDown("Flashbang",16,characterId,modifer);
                     }
-                    if(weaponname=="gkw_ump9.weapon" || weaponname=="gkw_ump9_409.weapon" || weaponname=="gkw_ump9_536.weapon") {
+                    if(weaponname=="gkw_ump9.weapon" || weaponname=="gkw_ump9_409.weapon" || weaponname=="gkw_ump9_536.weapon" || weaponname=="gkw_ump9_6704.weapon" || weaponname=="gkw_ump9_6704_skill.weapon") {
                         array<string> Voice={
                             "UMP9_skill1.wav",
                             "UMP9_skill2.wav",
