@@ -341,9 +341,9 @@ array<string> unlockable_vehicles = {
 	"deco_pickup_green.vehicle",
 	"deco_pickup_khaki.vehicle",
 
-	"dumpster.vehicle"
-	"cover1.vehicle"
-	"cover2.vehicle"
+	"dumpster.vehicle",
+	"cover1.vehicle",
+	"cover2.vehicle",
 	"shelter.vehicle"
 };
 
