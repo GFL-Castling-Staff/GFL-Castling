@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projectile class="grenade" name="artillery shell" slot="2" key="artillery_airstrike_fairies_old.projectile" >
-    <result class="spawn" instance_class="projectile" instance_key="artillery_airstrike_fairies_s.projectile" min_amount="16" max_amount="16" offset="0 1 0" position_spread="0.8 0.8" direction_spread="0.3 0.3" />
+    <result class="spawn" instance_class="projectile" instance_key="artillery_airstrike_fairies_s.projectile" min_amount="16" max_amount="16" offset="0 1 0" position_spread="0.8 1.0" direction_spread="0.3 0.3" />
     <trigger class="time" time_to_live="1.15" />
     <rotation class="motion" />
     <model mesh_filename="gk_airstrike_shell.xml" />

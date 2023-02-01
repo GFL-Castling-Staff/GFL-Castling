@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projectile>
-    <result class="spawn" instance_class="grenade" instance_key="blast_shard_rad3.projectile" min_amount="8" max_amount="8" offset="0 1 0" position_spread="0.15 0.15" direction_spread="0 0" />
+    <result class="spawn" instance_class="grenade" instance_key="blast_shard_rad3.projectile" min_amount="8" max_amount="8" offset="0 1 0" position_spread="0.15 0" direction_spread="0 0" />
     <trigger class="impact" />
     <rotation class="motion" />
 
