@@ -32,9 +32,9 @@
 		collision_model_pos="0 0.7 0" 
 		collision_model_extent="2 4.8 3" 
 		visual_offset="0 0.0 0" 
-		collision_response_factor="0.2" 
+		collision_response_factor="0" 
 		blast_push_threshold="10.0" 
-		vehicle_collision_damage_factor="2.0" 
+		vehicle_collision_damage_factor="0.0" 
 	/>
 	
 	<turret offset="0 0.0 0.0" weapon_key="Jupiter_main_cannon.weapon" weapon_offset="0.0 0.0 0.0" weapon_recoil="3.2" physics_recoil="0.0" max_rotation_step="0.000018" />	

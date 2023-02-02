@@ -2,13 +2,13 @@
 <vehicle file="vehicle_base.vehicle" 	
 	name="Pierre II" 
 	key="pierre.vehicle" 
-	respawn_time="90" 
-	time_to_live_unsteerable="125" 
+	respawn_time="180" 
+	time_to_live_unsteerable="175" 
 	map_view_atlas_index="47" 
 	reserves_spawn_point="1" 
 	minimum_fill_requirement="1.0" 
-	max_character_collision_speed_on_normal="12"
-	max_character_collision_speed="13"
+	max_character_collision_speed_on_normal="18"
+	max_character_collision_speed="18"
 	character_leave_request_mode="friendly" 
 	existence="one_per_faction"
 	allow_ai_to_use="1"
@@ -24,10 +24,11 @@
 	<tire_set offset="0.96 0 -1.068" radius="0.48" />
 	<control 
 	max_speed="28" 
+	max_limiter_speed="15"
 	acceleration="8.0" 
 	max_reverse_speed="24.0" 
 	min_health_to_steer="1.5" 
-	max_rotation="1.0" 
+	max_rotation="0.5" 
 	max_water_depth="2.0" 
 	steer_smoothening="0.85" />
 	<modifier class="blast_damage" value="-1.0" />
@@ -121,10 +122,6 @@
 		<trigger class="destroy" />
 		<result class="spawn" instance_class="visual_item" instance_key="burning_piece_truck5.visual_item" min_amount="2" max_amount="3" offset="0 2.0 0" position_spread="1.5 1.5" direction_spread="0.05 0.2" />
 	</event>
-	<!-- <event>
-		<trigger class="destroy" />
-		<result class="spawn" instance_class="projectile" instance_key="smoke_grenade_v.projectile" min_amount="3" max_amount="3" offset="0 3.0 0" position_spread="1 1" direction_spread="0.5 0.1" />
-	</event> -->
 	<event>
 		<trigger class="cleanup" />
 		<result class="spawn" instance_class="visual_item" instance_key="burning_piece_cleanup.visual_item" min_amount="20" max_amount="30" offset="0 2.0 0" position_spread="1.5 1.5" direction_spread="0.1 0.1" />
