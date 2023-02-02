@@ -20,7 +20,7 @@
 	max_reverse_speed="35.0" 
 	min_health_to_steer="0" 
 	max_rotation="1.0" 
-	max_water_depth="6.3" 
+	max_water_depth="0.3" 
 	can_steer_in_water="1"
 	can_steer_on_ground="1"
 	steer_smoothening="0.5" />
@@ -30,7 +30,7 @@
 	mass="30.0" 
 	broken_mass="10.0" 
 	gravity="-40"
-	gravity_in_water="-10"
+	gravity_in_water="-20"
 	blast_damage_threshold="0.5"
 	extent="1.87 0.0 3.41" 
 	offset="0 0.2 0" 
