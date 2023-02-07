@@ -55,8 +55,8 @@
 	<parameter class="guard_wait_time_min" value="5.0" />
 	<parameter class="guard_wait_time_max" value="15.0" />
 	<parameter class="guard_steps" value="2" />
-	<parameter class="wait_time" value="1.0" />
-	<parameter class="wait_time_variance" value="0" />
+	<parameter class="wait_time" value="1.5" />
+	<parameter class="wait_time_variance" value="0.5" />
 	<parameter class="burst_time" value="1.0" />
 	<parameter class="burst_time_variance" value="0.0" />
 	<parameter class="in_vehicle_burst_time" value="1.0" />
@@ -90,7 +90,7 @@
 	<parameter class="deployment_area_utilization_factor" value="0.4" />
 	<parameter class="deployment_max_position_pick_attempts" value="2" />
 	<parameter class="fighting_approach_alarm_max_soldiers" value="12" /> 
-	<parameter class="accuracy_offset" value="0.02" /> 
+	<parameter class="accuracy_offset" value="0.07" /> 
 	<parameter class="grenade_throw_hold_time" value="0.5" />
 	<parameter class="using_cover_min_time" value="0.0" />
 	<parameter class="using_cover_max_time" value="0.0" />

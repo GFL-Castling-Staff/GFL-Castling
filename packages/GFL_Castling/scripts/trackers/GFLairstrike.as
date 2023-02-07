@@ -133,10 +133,6 @@ class GFLairstrike : Tracker {
 
                         CreateDirectProjectile(m_metagame,startPos.add(getMultiplicationVector(strike_vector,Vector3(-40,0,-40))),s_pos.add(Vector3(0,20,0)),"a10_warthog_shadow.projectile",cid,fid,70);                                         
                         startPos = startPos.add(getMultiplicationVector(strike_vector,Vector3(-30,0,-30)));
-
-                        array<string> Voice={
-                        "a10_fire_FromWARTHUNDER.wav",
-                        };
                                                 
                         for(int i=0;i<=strike_time;i++){
                             //水平偏移
@@ -170,10 +166,6 @@ class GFLairstrike : Tracker {
                         //弹头起始扫射位置与终止扫射位置
                         Vector3 startPos = c_pos.add(pos_offset);
                         Vector3 endPos = c_pos;
-
-                        array<string> Voice={
-                        "a10_fire_FromWARTHUNDER.wav",
-                        };   
 
                         for(int i=0;i<=strike_time;i++){
                             //水平偏移
