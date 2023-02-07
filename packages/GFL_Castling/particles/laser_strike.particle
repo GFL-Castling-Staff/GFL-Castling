@@ -1,0 +1,192 @@
+credit: RST
+2023.2.6
+adapted by NetherCrow for Castling use only
+
+particle_system ppk_laser_strike_result_laser
+{
+	quota 75
+	material laser_beam
+	particle_width 2.5
+	particle_height 100
+	renderer billboard
+	billboard_type oriented_common
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 0 0 1
+	iteration_interval 0.01
+	
+	emitter Point
+	{
+		angle 0
+		colour 0 0 0 0
+		direction 0 1 0
+		emission_rate 50
+		position 0 0 0
+		velocity 0.0001
+		time_to_live 0.15
+		duration 0.1
+	}
+	affector Scaler
+	{
+		rate -20
+	}
+		affector Rotator
+	{
+		rotation_speed_range_start	0
+		rotation_speed_range_end	0
+		rotation_range_start	0
+		rotation_range_end	0
+	}
+	affector ColourInterpolator
+	{
+		time0 0
+		colour0 1 1 0.8 1
+		time1 0.8
+		colour1 1 0.5 0.5 1
+		time2 1
+		colour2 0 0 0 0
+	}
+}
+particle_system ppk_laser_strike_result_center
+{
+	quota 75
+	material explosion_smoke_04_bw_laser
+	particle_width 6
+	particle_height 6
+	renderer billboard
+	billboard_type perpendicular_common
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 0 0 1
+	iteration_interval 0
+	
+	emitter Point
+	{
+		angle 0
+		colour 0 0 0 0
+		direction 0 1 0
+		emission_rate 10
+		position 0 0 0
+		velocity 0.0001
+		time_to_live 0.3
+		duration 0.1
+	}
+	affector Scaler
+	{
+		rate -10
+	}
+	affector ColourInterpolator
+	{
+		time0 0
+		colour0 1 1 0.8 1
+		time1 0.8
+		colour1 1 0.5 0.5 1
+		time2 1
+		colour2 0 0 0 0
+	}
+}
+particle_system ppk_laser_strike_result_smoke
+{
+	quota 1000
+	material wand_smoke
+	particle_width 2.5
+	particle_height 2.5
+	renderer billboard
+	billboard_type point
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 0 0 1
+	iteration_interval 0
+	
+	emitter Ring
+	{
+		angle 0
+		colour 0 0 0 0
+		direction 0 1 0
+		emission_rate 70
+		position 0 0 0
+		velocity 0.0001
+		time_to_live 2.5
+		duration 0.1
+        depth 0.1
+        height 5
+        width 5
+        inner_height 0.1
+        inner_width 0.1
+	}
+	affector Scaler
+	{
+		rate 1
+	}
+	affector ColourInterpolator
+	{
+		time0 0
+		colour0 1 1 1 0.1
+		time1 0.5
+		colour1 1 1 1 0.03
+		time2 1
+		colour2 0 0 0 0
+	}
+    affector LinearForce{
+		force_vector 0 4 0
+		force_application add
+	}
+}
+
+material alpha_blend_base{
+	receive_shadows off
+	technique{
+		pass{
+			lighting off
+			fog_override true
+			depth_write off
+			scene_blend alpha_blend
+		}
+	}
+}
+
+material add_base{
+	receive_shadows off
+	technique{
+		pass{
+			lighting off
+			fog_override true
+			depth_write off
+			scene_blend add
+		}
+	}
+}
+
+material laser_beam : add_base
+{   
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture laser_beam.png 	
+            }
+        }
+    }
+}
+
+material explosion_smoke_04_bw_laser : add_base
+{   
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture explosion_smoke_04_bw.png 	
+                rotate_anim 0.1
+                tex_address_mode border
+                tex_border_colour 0 0 0 0
+            }
+        }
+    }
+}

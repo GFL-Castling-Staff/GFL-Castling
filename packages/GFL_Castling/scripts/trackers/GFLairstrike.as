@@ -155,7 +155,7 @@ class GFLairstrike : Tracker {
                     case 1:{//离子炮 单次 锁人扫射
                         //扫射位置偏移单位向量 与 扫射位置偏移单位距离
                         Vector3 strike_vector = getAimUnitVector(1,start_pos,end_pos); 
-                        float strike_didis = 0.5;
+                        float strike_didis = 1.0;
                         //扫射起点 从弹头终点指向弹头起点的位置 
                         Vector3 pos_offset = Vector3(0,60,0);
                         //扫射终点的起点与终点（就生成弹头的终点的起始位置与终止位置）
@@ -562,7 +562,7 @@ class Airstrike_strafer{
 
 //这下面写空袭插入函数，与上面的脚本技能函数做区别。
 void insertLockOnStrafeAirstrike(GameMode@ metagame,string airstrikekey,int characterId,int factionid,Vector3 pos){
-    _log("strafe insert successful");	
+    // _log("strafe insert successful");	
 
     float rand_angle = rand(-3.14,3.14);
     float rand_x = 2*cos(rand_angle);
