@@ -498,6 +498,11 @@ class ItemDropEvent : Tracker {
                         m_craftQueue.removeAt(findQueueIndex(pId,"m14"));
                         playPrivateSound(m_metagame,"digimind_sfx2.wav",pId);
                     }
+                    else if (checkQueue(pId,"m14") && (itemKey=="gkw_m14_303.weapon")){
+                        addItemInBackpack(m_metagame,cId,"weapon","gkw_m14mod3_303.weapon");
+                        m_craftQueue.removeAt(findQueueIndex(pId,"m14"));
+                        playPrivateSound(m_metagame,"digimind_sfx2.wav",pId);
+                    }                    
                     else if (checkQueue(pId,"g3") && (itemKey=="gkw_g3.weapon")){
                         addItemInBackpack(m_metagame,cId,"weapon","gkw_g3mod3.weapon");
                         m_craftQueue.removeAt(findQueueIndex(pId,"g3"));
