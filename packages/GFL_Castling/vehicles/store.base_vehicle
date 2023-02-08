@@ -4,7 +4,7 @@
     <tire_set offset="1.0 0.0 0.5" radius="0.65" />
     <tire_set offset="1.0 0.0 -0.5" radius="0.65" />
     <control max_speed="1" acceleration="1" max_reverse_speed="1.0" max_rotation="0.8" max_water_depth="1.9" />
-    <physics max_health="20" mass="1000.0" extent="2.8 0.0 1.5" offset="0 0.0 0" top_offset="0 2 0" collision_model_pos="0 0.2 0" collision_model_extent="2.8 2.0 1.5" visual_offset="0 0.75 0" collision_response_factor="0.2" blast_push_threshold="1000.0" vehicle_collision_damage_factor="50.0" />
+    <physics max_health="20" mass="1000.0" extent="2.8 0.0 1.5" offset="0 0.0 0" top_offset="0 2 0" collision_model_pos="0 0.2 0" collision_model_extent="2.8 2.0 1.5" visual_offset="0 0.75 0" collision_response_factor="0" preserve_motion_on_impact_factor="0.3" blast_push_threshold="1000.0" vehicle_collision_damage_factor="50.0" />
     <modifier class="blast_damage" value="-2.0" />
     <sound key="hit" filename="barrier_impact1.wav" />
     <sound key="hit" filename="barrier_impact2.wav" />

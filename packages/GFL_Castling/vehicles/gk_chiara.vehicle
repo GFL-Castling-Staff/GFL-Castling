@@ -2,18 +2,18 @@
 <vehicle file="vehicle_base.vehicle" 	
 	name="Chiara IV" 
 	key="chiara.vehicle"
-	respawn_time="60" 
-	time_to_live_unsteerable="125" 
+	respawn_time="180" 
+	time_to_live_unsteerable="175" 
 	map_view_atlas_index="26" 
 	reserves_spawn_point="1" 
 	minimum_fill_requirement="1.0" 
-	max_character_collision_speed_on_normal="12"
-	max_character_collision_speed="13"
+	max_character_collision_speed_on_normal="18"
+	max_character_collision_speed="18"
 	character_leave_request_mode="friendly" 
 	existence="one_per_faction"
 	allow_ai_to_use="1"
 	allow_owner_to_use_only="1"
-	ai_driver_turns_to_target="1"
+	ai_driver_turns_to_target="0"
 	ai_abandon_when_unsteerable="0"
 	ai_stop_to_fight="0" 
 	>
@@ -25,12 +25,13 @@
 	<tire_set offset="0.96 0 -1.068" radius="0.48" />
 	<control 
 	max_speed="28" 
+	max_limiter_speed="16"
 	acceleration="8.0" 
 	max_reverse_speed="24.0" 
 	min_health_to_steer="1.5" 
 	max_rotation="0.75" 
 	max_water_depth="2.0" 
-	steer_smoothening="0.85" />
+	steer_smoothening="0.5" />
 	<physics 
 	max_health="50.0" 
 	mass="15.0" 

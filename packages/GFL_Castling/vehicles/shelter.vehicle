@@ -14,7 +14,7 @@
 	collision_model_extent="10.0 2.4 1.0" 
 	visual_offset="0 0.6 0.4" 
 	collision_response_factor="0.2" 
-	blast_push_threshold="0.2" 
+	blast_push_threshold="1.0" 
 	vehicle_collision_damage_factor="2.0" />     
     <modifier class="blast_damage" value="-5.0" />
     <sound key="hit" filename="barrier_impact1.wav" />

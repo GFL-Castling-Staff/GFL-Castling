@@ -213,3 +213,18 @@ material at_bullet_smoke_trail : alpha_blend_base
 		}
 	}
 }
+
+material hit_marker_1 : alpha_blend_base
+{   
+    technique
+	{
+		pass
+		{
+			depth_func always_pass
+			texture_unit
+			{
+				texture hit_marker_1.png 	
+			}
+		}
+	}
+}

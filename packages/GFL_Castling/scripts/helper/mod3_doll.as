@@ -23,8 +23,10 @@ dictionary MOD3craftList = {
 
     {"gkw_g36.weapon","gkw_g36mod3.weapon"},
     {"gkw_g36_1507.weapon","gkw_g36mod3_1507.weapon"},
+    {"gkw_g36_6807.weapon","gkw_g36mod3_6807.weapon"},
     {"gkw_g36_skill.weapon","gkw_g36mod3.weapon"},
     {"gkw_g36_1507_skill.weapon","gkw_g36mod3_1507.weapon"},
+    {"gkw_g36_6807_skill.weapon","gkw_g36mod3_6807.weapon"},
 
     {"gkw_m4a1.weapon","gkw_m4a1mod3.weapon"},
     {"gkw_m4a1_530.weapon","gkw_m4a1mod3_530.weapon"},
@@ -100,11 +102,15 @@ dictionary MOD3craftList = {
     {"gkw_ro635.weapon","gkw_ro635mod3.weapon"},
 
     {"gkw_ump9.weapon","gkw_ump9mod3.weapon"},
+    {"gkw_ump9_6704.weapon","gkw_ump9mod3_6704.weapon"},
+    {"gkw_ump9_6704_skill.weapon","gkw_ump9mod3_6704.weapon"},
 
     {"gkw_ump45.weapon","gkw_ump45mod3.weapon"},
     {"gkw_ump45_410.weapon","gkw_ump45mod3_410.weapon"},
     {"gkw_ump45_535.weapon","gkw_ump45mod3_535.weapon"},
     {"gkw_ump45_3403.weapon","gkw_ump45mod3_3403.weapon"},
+    {"gkw_ump45_5405.weapon","gkw_ump45mod3_5405.weapon"},
+    {"gkw_ump45_5405_skill.weapon","gkw_ump45mod3_5405.weapon"},
 
     {"gkw_uzi.weapon","gkw_uzimod3.weapon"},
     {"gkw_ak15.weapon","gkw_ak15mod3.weapon"},
@@ -150,6 +156,7 @@ dictionary MOD3craftList = {
     {"gkw_sten.weapon","gkw_stenmod3.weapon"},
 
     {"gkw_hawk97.weapon","gkw_hawk97mod3.weapon"},
+    {"gkw_hawk97_5805.weapon","gkw_hawk97mod3_5805.weapon"},
     {"gkw_type80.weapon","gkw_type80mod3.weapon"},
     {"gkw_type80_skill.weapon","gkw_type80mod3.weapon"},
     {"gkw_mp443.weapon","gkw_mp443mod3.weapon"},
@@ -163,6 +170,14 @@ dictionary MOD3craftList = {
     {"gkw_gepardm1_4006.weapon","gkw_gepardm1mod3_4006.weapon"},
     {"gkw_f1.weapon","gkw_f1mod3.weapon"},
     {"gkw_c96.weapon","gkw_c96mod3.weapon"},
+    {"gkw_56-1type.weapon","gkw_56-1typemod3.weapon"},
+
+    {"gkw_56typer.weapon","gkw_56typermod3.weapon"},
+    {"gkw_56typer_5508.weapon","gkw_56typermod3_5508.weapon"},
+    {"gkw_56typer_skill.weapon","gkw_56typermod3.weapon"},
+    {"gkw_56typer_5508_skill.weapon","gkw_56typermod3_5508.weapon"},
+
+    {"gkw_64type.weapon","gkw_64typemod3.weapon"},
 
     {"666","-1"}
 };

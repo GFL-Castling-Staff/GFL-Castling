@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapons>
+<weapon key="gkw_56typer.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+	<specification 
+    retrigger_time="-1.0"
+    accuracy_factor="1"
+    sustained_fire_grow_step="2.5"
+    sustained_fire_diminish_rate="2.5"
+    magazine_size="10"
+    can_shoot_standing="1"
+    suppressed="0"
+    name="Type 56"
+	spread_range="0.28"
+    class="4"
+    burst_shots="1"
+    last_burst_retrigger_time="0.33"
+    reload_one_at_a_time="1"
+    sight_range_modifier="2.0"
+    projectile_speed="180"
+    barrel_offset="0.6"
+    projectiles_per_shot="1"
+    stance_accuracy_rate="1.0"
+    stab_enabled="1"
+    carry_in_two_hands="1"
+    slot="0"/>
+	<inventory encumbrance="20.0" buy_price="5.6" sell_price="5.6"/>
+	<next_in_chain key="gkw_56typer_skill.weapon" share_ammo="1" />
+	<animation key="reload" animation_key="reloading, clip"/>
+	<sound key="fire" fileref="type56r_fire_FromCOD16.wav" pitch_variety="0.03" volume="1.1"/>
+	<sound key="reload_one" fileref="type56r_reload_FromSQUAD.wav" volume="0.75"/>
+	<sound key="cycle" fileref="type56r_cycle_FromCOD16.wav" volume="1.0"/>
+	<sound class="impact" fileref="rifle_drop.wav"/>
+	<model filename="gkw_rf_56typer.xml"/>
+	<hud_icon filename="gkw_56typer.png"/>
+	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
+	<effect class="muzzle" ref="ejection_76239"/>
+	<weak_hand_hold offset="0.3"/>
+	<projectile file="bullet.projectile">
+        <result class="hit" kill_probability="2.3" kill_probability_offset_on_successful_hit="4.5" kill_decay_start_time="0.974" kill_decay_end_time="1.624"/>
+	</projectile>
+	<stance state_key="running" accuracy="0.1" />
+    <stance state_key="walking" accuracy="0.5" />
+    <stance state_key="crouch_moving" accuracy="0.5" />
+    <stance state_key="prone_moving" accuracy="0.6" />
+    <stance state_key="standing" accuracy="0.85" />
+    <stance state_key="crouching" accuracy="0.9" />
+    <stance state_key="prone" accuracy="1.0" />
+    <stance state_key="over_wall" accuracy="1" />
+	<modifier class="speed" value="0"/>
+	<tag name="rifle"/>
+	<capacity value="1" source="rank" source_value="0.0"/>
+    <modifier class="detectability" value="-0.1"/>
+	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
+	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
+	<target_factors tag="shotgun" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
+	<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
+	<target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
+	<target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
+	<animation key="recoil" animation_key="recoil1"/>
+	<animation key="recoil" animation_key="recoil2"/>
+	<animation key="recoil" animation_key="recoil3"/>
+	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
+	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
+	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
+	<animation state_key="celebrate_shoot" animation_key="celebrating, shooting"/>
+	<animation state_key="stabbing" animation_key="melee, quick knife"/>
+	<animation state_key="stabbing" animation_key="pistol whip 3"/>
+</weapon>
+<weapon key="gkw_56typer_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+	<specification 
+    retrigger_time="-1.0"
+    accuracy_factor="1"
+    sustained_fire_grow_step="1.5"
+    sustained_fire_diminish_rate="3.0"
+    magazine_size="10"
+    can_shoot_standing="1"
+    suppressed="0"
+    name="Type 56-[Guerrilla Focus]"
+	spread_range="0.2"
+    class="4"
+    burst_shots="1"
+    last_burst_retrigger_time="0.125"
+    reload_one_at_a_time="1"
+    sight_range_modifier="1.25"
+    projectile_speed="200"
+    barrel_offset="0.6"
+    projectiles_per_shot="1"
+    stance_accuracy_rate="1.0"
+    stab_enabled="1"
+	stab_range="4.5"
+    carry_in_two_hands="1"
+    slot="0"/>
+	<inventory encumbrance="20.0" buy_price="5.6" sell_price="5.6"/>
+	<animation key="reload" animation_key="reloading, clip"/>
+	<next_in_chain key="gkw_56typer.weapon" share_ammo="1" />
+	<sound key="fire" fileref="type56r_fire_FromCOD16.wav" pitch_variety="0.03" volume="1.1"/>
+	<sound key="reload_one" fileref="type56r_reload_FromSQUAD.wav" volume="0.75"/>
+	<sound key="cycle" fileref="type56r_cycle_FromCOD16.wav" volume="1.0"/>
+	<sound class="impact" fileref="rifle_drop.wav"/>
+	<model filename="gkw_rf_56typer_skill.xml"/>
+	<hud_icon filename="gkw_56typer_skill.png"/>
+	<commonness value="0" in_stock="0" can_respawn_with="1"/>
+	<effect class="muzzle" ref="ejection_76239"/>
+	<weak_hand_hold offset="0.3"/>
+	<projectile file="bullet.projectile">
+        <result class="hit" kill_probability="2.3" kill_probability_offset_on_successful_hit="3" kill_decay_start_time="0.974" kill_decay_end_time="1.624"/>
+	</projectile>
+	<stance state_key="running" accuracy="0.7" />
+    <stance state_key="walking" accuracy="0.7" />
+    <stance state_key="crouch_moving" accuracy="0.7" />
+    <stance state_key="prone_moving" accuracy="0.7" />
+    <stance state_key="standing" accuracy="0.7" />
+    <stance state_key="crouching" accuracy="0.7" />
+    <stance state_key="prone" accuracy="1.0" />
+    <stance state_key="over_wall" accuracy="1.0" />
+	<modifier class="speed" value="0.15"/>
+	<tag name="rifle"/>
+	<capacity value="1" source="rank" source_value="0.0"/>
+	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
+	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
+	<target_factors tag="shotgun" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
+	<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
+	<target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
+	<target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
+	<sound key="stab" fileref="dagger_swing1_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab" fileref="dagger_swing2_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab" fileref="dagger_swing3_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab_hit" fileref="blade_impact_01_fromESV.wav" pitch_variety="0.05" volume="2.0" />
+	<sound key="stab_hit" fileref="blade_impact_02_fromESV.wav" pitch_variety="0.05" volume="2.0" />
+	<sound key="stab_hit" fileref="blade_impact_03_fromESV.wav" pitch_variety="0.05" volume="2.0" />
+	<sound key="stab_hit" fileref="blade_impact_04_fromESV.wav" pitch_variety="0.05" volume="2.0" />
+	<animation key="recoil" animation_key="recoil1"/>
+	<animation key="recoil" animation_key="recoil2"/>
+	<animation key="recoil" animation_key="recoil3"/>
+	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
+	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
+	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
+	<animation state_key="celebrate_shoot" animation_key="celebrating, shooting"/>
+	<animation state_key="stabbing"	animation_key="melee, bayonet_6hp" />
+
+</weapon>
+</weapons>

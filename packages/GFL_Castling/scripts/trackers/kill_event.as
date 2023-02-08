@@ -43,6 +43,8 @@ class kill_event : Tracker {
         {"ff_gager_1.weapon",3},
         {"gkw_type100_skill.weapon",3},
         {"gkw_type100_4004_skill.weapon",3},
+        {"gkw_mg36_4903_skill.weapon",3},
+
 
         // 近战定位HG
         {"gkw_m1911_mod3.weapon",3},
@@ -71,6 +73,17 @@ class kill_event : Tracker {
         {"gkw_ump45mod3_410.weapon",3},
         {"gkw_ump45mod3_535.weapon",3},
         {"gkw_ump45mod3_3403.weapon",3},
+
+        {"gkw_ump45_5405.weapon",3},
+        {"gkw_ump45mod3_5405.weapon",3},
+        {"gkw_ump45_5405_skill.weapon",3},
+        {"gkw_ump45mod3_5405_skill.weapon",3},
+
+        {"gkw_ump9_6704.weapon",3},
+        {"gkw_ump9mod3_6704.weapon",3},
+        {"gkw_ump9_6704_skill.weapon",3},
+        {"gkw_ump9mod3_6704_skill.weapon",3},
+        
         {"gkw_pps43.weapon",3},
         {"gkw_m3.weapon",3},
         {"gkw_type100.weapon",3},
@@ -144,6 +157,7 @@ class kill_event : Tracker {
         {"gkw_idwmod3_3205.weapon",4},
         {"gkw_idwmod3_4908.weapon",4},
         {"gkw_64type.weapon",4},
+        {"gkw_64typemod3.weapon",4},
         {"gkw_kp31.weapon",4},
         {"gkw_kp31mod3.weapon",4},
         {"gkw_kp31_310.weapon",4},
@@ -177,7 +191,8 @@ class kill_event : Tracker {
         {"gkw_g36c_mod3_skill.weapon",5},
         {"gkw_x95.weapon",5},
         {"gkw_ar57.weapon",5},
-
+        {"gkw_hawk97mod3.weapon",5},
+        {"gkw_hawk97mod3_5805.weapon",5},
 
         //其他
 
@@ -189,21 +204,25 @@ class kill_event : Tracker {
         {"666",-1}
     };
     dictionary meleeWeaponList ={
-        {"ff_excutioner_2.weapon",4},
-        {"ff_parw_alina.weapon",4},
-        {"ff_gager_1.weapon",4},
+        {"ff_excutioner_2.weapon",3},
+        {"ff_parw_alina.weapon",3},
+        {"ff_gager_1.weapon",3},
+        {"gkw_mg36_4903_skill.weapon",3},
         {"666",-1}
     };
     protected void updateHealByKillEvent(int characterid,int factionid,int killstoheal,int timeaddafterkill,string type="weapon"){
         if (killstoheal<=0) return;
         uint jud=0;
         for(uint a=0;a<HealOnKill_track.length();a++)
+        {
             if(HealOnKill_track[a].m_characterId==characterid && HealOnKill_track[a].m_type == type ){
                 HealOnKill_track[a].current_kills++;
                 HealOnKill_track[a].m_numtime = timeaddafterkill;
                 jud = 1;
                 break;
             }
+        }
+
         if(jud==0)HealOnKill_track.insertLast(HealOnKill_tracker(characterid,factionid,killstoheal,timeaddafterkill,type)); 
     }
 
@@ -293,7 +312,7 @@ class kill_event : Tracker {
             //只查询我方杀敌
             if (factionId==0 && characterId > 0){
                 string c_weaponType = getPlayerWeaponFromList(playerId,0);
-                string c_armorType = getPlayerWeaponFromList(playerId,4);
+                string c_armorType = getPlayerWeaponFromList(playerId,3);
                 if(c_weaponType=="gkw_ppkmod3.weapon" || c_weaponType =="gkw_ppkmod3_3905.weapon"){
                     int i = findSkillIndex(characterId,"PPKMOD3");
                     if(i >=0){
@@ -319,6 +338,10 @@ class kill_event : Tracker {
                 }
                 if(startsWith(c_armorType,"tms_t6")){
                     updateHealByKillEvent(characterId,factionId,4,30,"vest");
+                    if (c_weaponType=="gkw_hawk97mod3.weapon" || c_weaponType =="gkw_hawk97mod3_5805.weapon")
+                    {
+                        updateHealByKillEvent(characterId,factionId,4,30,"vest");
+                    }
                 }                
                 updateHealByKillEvent(characterId,factionId,int(healOnKillWeaponList[c_weaponType]),15);
             }

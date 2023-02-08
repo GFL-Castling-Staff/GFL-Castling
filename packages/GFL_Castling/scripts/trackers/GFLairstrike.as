@@ -78,6 +78,8 @@ dictionary airstrikeIndex = {
         // 炮击妖精 155mm航弹
         {"bomb_155",15},
 
+        {"zasm21",16},
+
         // 下面这行是用来占位的，在这之上添加新的即可
         {"666",-1}
 };
@@ -104,7 +106,9 @@ class GFLairstrike : Tracker {
                 int cid = Airstrike_strafe[a].m_characterId;
                 int fid = Airstrike_strafe[a].m_factionid;
                 Vector3 start_pos = Airstrike_strafe[a].m_c_pos;
-                Vector3 end_pos = Airstrike_strafe[a].m_s_pos;               
+                Vector3 end_pos = Airstrike_strafe[a].m_s_pos;        
+                int specialnum = Airstrike_strafe[a].m_specialnum;
+                string specialkey = Airstrike_strafe[a].m_specialkey;
 
                 switch(Airstrike_strafe[a].m_straferkey){
                     case 0:{//A10 单次 锁人扫射
@@ -129,10 +133,6 @@ class GFLairstrike : Tracker {
 
                         CreateDirectProjectile(m_metagame,startPos.add(getMultiplicationVector(strike_vector,Vector3(-40,0,-40))),s_pos.add(Vector3(0,20,0)),"a10_warthog_shadow.projectile",cid,fid,70);                                         
                         startPos = startPos.add(getMultiplicationVector(strike_vector,Vector3(-30,0,-30)));
-
-                        array<string> Voice={
-                        "a10_fire_FromWARTHUNDER.wav",
-                        };
                                                 
                         for(int i=0;i<=strike_time;i++){
                             //水平偏移
@@ -166,10 +166,6 @@ class GFLairstrike : Tracker {
                         //弹头起始扫射位置与终止扫射位置
                         Vector3 startPos = c_pos.add(pos_offset);
                         Vector3 endPos = c_pos;
-
-                        array<string> Voice={
-                        "a10_fire_FromWARTHUNDER.wav",
-                        };   
 
                         for(int i=0;i<=strike_time;i++){
                             //水平偏移
@@ -501,7 +497,21 @@ class GFLairstrike : Tracker {
                         playSoundAtLocation(m_metagame,"kcco_dn_3.wav",fid,start_pos,2.0);
                         Airstrike_strafe.removeAt(a);
                         break;                        
-                    }                                                                 
+                    }
+                    case 16:{                        
+                        float strike_rand=2.0;
+                        playSoundAtLocation(m_metagame,"ks23skill_fire_FromBORDERLAND3.wav",fid,end_pos,1.5);
+                        for(int j=1;j<=specialnum;j++)
+                        {
+                            float rand_angle = rand(-3.14,3.14);
+                            float rand_dis = rand(-strike_rand,strike_rand);
+                            float rand_x = rand_dis*cos(rand_angle);
+                            float rand_y = rand_dis*sin(rand_angle);
+                            CreateDirectProjectile(m_metagame,start_pos,end_pos.add(Vector3(rand_x,0,rand_y)),"grenade_zasm21_sub.projectile",cid,fid,170);
+                        }
+                        Airstrike_strafe.removeAt(a);
+                        break;                        
+                    }                    
                     default:
                         break;
                 }
@@ -529,6 +539,8 @@ class Airstrike_strafer{
     int m_straferkey;
     Vector3 m_c_pos;
     Vector3 m_s_pos;
+    string m_specialkey;
+    int m_specialnum;
 	Airstrike_strafer(int characterId,int factionid,int straferkey,Vector3 c_pos,Vector3 s_pos)
 	{
 		m_characterId = characterId;
@@ -537,6 +549,15 @@ class Airstrike_strafer{
 		m_c_pos = c_pos;
 		m_s_pos = s_pos;
 	}
+
+    void setKey(string a)
+    {
+        m_specialkey = a;
+    }
+    void setNum(int a)
+    {
+        m_specialnum = a;
+    }    
 }
 
 //这下面写空袭插入函数，与上面的脚本技能函数做区别。
@@ -601,4 +622,8 @@ void insertCommonStrike(int characterId,int factionid,int straferkey,Vector3 c_p
 
 void insertCommonStrike(int characterId,int factionid,string straferkey,Vector3 c_pos,Vector3 s_pos){
     Airstrike_strafe.insertLast(Airstrike_strafer(characterId,factionid,int(airstrikeIndex[straferkey]),c_pos,s_pos));
+}
+
+void insertDetailedStrike(Airstrike_strafer@ a){
+    Airstrike_strafe.insertLast(a);
 }

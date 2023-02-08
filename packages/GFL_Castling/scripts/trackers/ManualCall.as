@@ -357,7 +357,7 @@ class ManualCall : Tracker {
                     sendFactionMessageKey(m_metagame,CallTaskArray[0].m_factions,"Targetdrone,Unlock!");
                 }
                 if(CallTaskArray[0].CallType=="rescue_call" || CallTaskArray[0].CallType=="repair_call"){
-                    playSoundAtLocation(m_metagame,"woosh1.wav",CallTaskArray[0].m_factions,CallTaskArray[0].m_pos,3.0f);
+                    playSoundAtLocation(m_metagame,"woosh1.wav",CallTaskArray[0].m_factions,CallTaskArray[0].m_pos,2.5f);
                     m_metagame.getComms().send(CallTaskArray[0].Callkey);
                     removeCastlingMarker(CallTaskArray[0]);
                     sendFactionMessageKey(m_metagame,CallTaskArray[0].m_factions,"Confirm, data reception is normal");

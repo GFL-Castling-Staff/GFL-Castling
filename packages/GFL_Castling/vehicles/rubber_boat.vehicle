@@ -15,18 +15,22 @@
 
 	<control 
 	max_speed="40.0" 
+	max_limiter_speed="20.0"
 	acceleration="10.0" 
 	max_reverse_speed="35.0" 
 	min_health_to_steer="0" 
 	max_rotation="1.0" 
-	max_water_depth="6.3" 
-	steer_smoothening="0.8" />
+	max_water_depth="0.3" 
+	can_steer_in_water="1"
+	can_steer_on_ground="1"
+	steer_smoothening="0.5" />
 
 	<physics 
 	max_health="29" 
 	mass="30.0" 
 	broken_mass="10.0" 
 	gravity="-40"
+	gravity_in_water="-20"
 	blast_damage_threshold="0.5"
 	extent="1.87 0.0 3.41" 
 	offset="0 0.2 0" 
@@ -69,14 +73,13 @@
 	<sound key="hit" filename="rubber_boat_hit2.wav" />  
 	<sound key="hit" filename="rubber_boat_hit3.wav" />  
   
-
-	<event key="receive_damage_xp_reward">
-		<trigger class="receive_damage" />
-		<result class="reward" xp="0.0010" />
-	</event>
-  
 	<event key="spot_rp_reward">
 		<trigger class="spot" />
-		<result class="reward" rp="10.0" />
+		<result class="reward" rp="50.0" />
+	</event>
+	
+	<event key="destroy_rp_reward">
+		<trigger class="destroy" />
+		<result class="reward" rp="300.0" />
 	</event>
 </vehicle>

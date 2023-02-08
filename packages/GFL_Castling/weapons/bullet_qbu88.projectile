@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projectile class="bullet" key="qbu88.projectile" name="AP bullet" slot="1" pulldown_in_air="10">
-    <result class="spawn" instance_class="grenade" instance_key="blast_shard_rad5_low.projectile" min_amount="7" max_amount="7" offset="0 1 0" position_spread="0.3 0.3" direction_spread="0 0" />
+    <result class="spawn" instance_class="grenade" instance_key="blast_shard_rad5_low.projectile" min_amount="7" max_amount="7" offset="0 1 0" position_spread="0.3 0" direction_spread="0 0" />
     <rotation class="motion" />
     <trigger class="impact"/>
     <sound class="result" key="terrain" fileref="ricochet1.wav" />

@@ -88,7 +88,15 @@ class map105_Phase1 : map105_Phase {
 		m_metagame.getComms().send(
 			"<command class='soldier_ai' faction='2'>" + 
 			"  <parameter class='willingness_to_charge' value='0.7' />" +
-			"</command>");		
+			"</command>");
+
+		array<const XmlElement@> players = getPlayers(m_metagame);
+		for (uint i = 0; i < players.size(); ++i) {
+			const XmlElement@ player = players[i];
+			int player_id = player.getIntAttribute("player_id");
+			notify(m_metagame, "shock_zone_entry_phase1", dictionary(), "misc", player_id, false, "", 1.0);
+		}
+
 	}
 	
 	protected void handleBaseOwnerChangeEvent(const XmlElement@ event) {
@@ -134,7 +142,12 @@ class map105_Phase2 : map105_Phase {
 		m_metagame.getComms().send(
 			"<command class='soldier_ai' faction='2'>" + 
 			"  <parameter class='willingness_to_charge' value='1.0' />" +
-			"</command>");		
+			"</command>");	
+	}
+
+	protected void handlePlayerConnectEvent(const XmlElement@ event) {
+		int m_player_id =  event.getIntAttribute("player_id");
+		notify(m_metagame, "shock_zone_entry_phase2", dictionary(), "misc", m_player_id, false, "", 1.0);
 	}
 
 	protected void handleFactionLoseEvent(const XmlElement@ event) {

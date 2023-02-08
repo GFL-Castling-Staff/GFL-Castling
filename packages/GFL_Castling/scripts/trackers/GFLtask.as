@@ -356,6 +356,38 @@ class DelayCommonCallRequest :Task{
 	}
 }
 
+class DelayDetailedCallRequest :Task{
+	protected GameMode@ m_metagame;
+	protected float m_time;
+	protected float m_timeLeft;
+	protected Airstrike_strafer@ m_strike;
+
+	DelayDetailedCallRequest(GameMode@ metagame, float time, Airstrike_strafer@ strike) {
+		@m_metagame = metagame;
+		m_time = time;
+		@m_strike = @strike;
+	}
+
+	void start() {
+		m_timeLeft=m_time;
+	}
+
+	void update(float time) {
+		m_timeLeft -= time;
+		if (m_timeLeft < 0)
+		{
+			insertDetailedStrike(m_strike);
+		}
+	}
+
+    bool hasEnded() const {
+		if (m_timeLeft < 0) {
+			return true;
+		}
+		return false;
+	}
+}
+
 class DelayAntiPersonSnipeRequest :Task{
 	protected GameMode@ m_metagame;
 	protected float m_time;

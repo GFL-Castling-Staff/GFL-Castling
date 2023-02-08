@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <character filename="kcco.text_lines">
     <tag name="metal_man" />
-    <sound key="death" fileref="bot_die1.wav" volume="0.25" />
-    <sound key="death" fileref="bot_die2.wav" volume="0.25" />
-    <sound key="death" fileref="bot_die3.wav" volume="0.25" />
+    <sound key="death" fileref="kill_sound_kcco_bot01.wav" volume="0.70" pitch_variety="0.025" />
+    <sound key="death" fileref="kill_sound_kcco_bot02.wav" volume="0.70" pitch_variety="0.025"/>
+    <sound key="death" fileref="kill_sound_kcco_bot03.wav" volume="0.70" pitch_variety="0.025"/>
 </character>

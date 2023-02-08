@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projectile class="grenade" name="artillery shell" slot="2" pulldown_in_air="2" key="artillery_bomb.projectile" >
-    <result class="spawn" instance_class="projectile" instance_key="artillery_shell_fairies_105.projectile" min_amount="8" max_amount="10" offset="0 1 0" position_spread="18 18" direction_spread="0 0" />
+    <result class="spawn" instance_class="projectile" instance_key="artillery_shell_fairies_105.projectile" min_amount="8" max_amount="10" offset="0 1 0" position_spread="18 10" direction_spread="0 0" />
     <trigger class="time" time_to_live="0.0"/>
     <rotation class="motion" />
     <model />
