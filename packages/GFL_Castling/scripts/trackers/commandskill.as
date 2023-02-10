@@ -471,6 +471,8 @@ dictionary commandSkillIndex = {
         {"gkw_zasm21.weapon",60},
         {"gkw_zasm21_2104.weapon",60},
 
+        {"gkw_c96mod3.weapon",61},
+
         // 下面这行是用来占位的，在这之上添加新的枪和index即可
         {"666",-1}
 };
@@ -613,6 +615,7 @@ class CommandSkill : Tracker {
                     case 58:{excuteErmaskill(cId,senderId,m_modifer);break;}
                     case 59:{excute64typemod3Skill(cId,senderId,m_modifer);break;}
                     case 60:{excuteZasM21Skill(cId,senderId,m_modifer);break;}
+                    case 61:{excuteC96MODSkill(cId,senderId,m_modifer);break;}
 
                     default:
                         break;
@@ -4037,5 +4040,43 @@ class CommandSkill : Tracker {
                 }
             }
         }
-    }    
+    }
+    void excuteC96MODSkill(int characterId,int playerId,SkillModifer@ modifer){
+        bool ExistQueue = false;
+        int j=-1;
+        for (uint i=0;i<SkillArray.length();i++){
+            if (InCooldown(characterId,modifer,SkillArray[i]) && SkillArray[i].m_weapontype=="C96") {
+                ExistQueue=true;
+                j=i;
+            }
+        }
+        if (ExistQueue){
+            dictionary a;
+            a["%time"] = ""+SkillArray[j].m_time;
+            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            return;
+        }
+        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+        if (character !is null) {
+            const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+            if (player !is null){
+                if (player.hasAttribute("aim_target")) {
+                    string target = player.getStringAttribute("aim_target");
+                    Vector3 aim_pos = stringToVector3(target);
+                    aim_pos = aim_pos.add(Vector3(0,8,0));
+                    Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
+                    int factionid = character.getIntAttribute("faction_id");
+                    array<string> Voice={
+                        "64typeMod_SKILL1_JP.wav"
+                    };
+                    playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+                    playAnimationKey(m_metagame,characterId,"air thrust",false,true);
+                    playSoundAtLocation(m_metagame,"grenade_throw1.wav",factionid,c_pos,1.0);
+                    c_pos=c_pos.add(Vector3(0,1,0));
+                    CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"skill_c96_flare.projectile",characterId,factionid,75);
+                    addCoolDown("C96",120,characterId,modifer);
+                }
+            }
+        }
+    }        
 }
