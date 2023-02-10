@@ -75,34 +75,30 @@ class GFL_playerlist_system : Tracker {
         }            
         
         array<const XmlElement@> nowPlayers = getPlayers(m_metagame);
-        if (nowPlayers !is null){
+        if (nowPlayers is null){return;}
 
-            // 彻底删除一次并全部重新更新
-            for(uint i=0;i<nowPlayers.length();i++){
+        // 彻底删除一次并全部重新更新
+        for(uint i=0;i<nowPlayers.length();i++){
 
-                int cid = nowPlayers[i].getIntAttribute("character_id");
-                int pid = nowPlayers[i].getIntAttribute("player_id");
-                const XmlElement@ targetCharacter = getCharacterInfo2(m_metagame,cid);
+            int cid = nowPlayers[i].getIntAttribute("character_id");
+            int pid = nowPlayers[i].getIntAttribute("player_id");
+            const XmlElement@ targetCharacter = getCharacterInfo2(m_metagame,cid);
 
-                if(targetCharacter !is null){
-                    string pos = targetCharacter.getStringAttribute("position");
-                    array<const XmlElement@>@ equipment = targetCharacter.getElementsByTagName("item");
-                    if(equipment !is null && equipment.length() >=5){
-                        {
-                            string w1 = equipment[0].getStringAttribute("key");
-                            string w2 = equipment[1].getStringAttribute("key");
-                            string w3 = equipment[2].getStringAttribute("key");
-                            string w4 = equipment[4].getStringAttribute("key");
-                            string w5 = equipment[3].getStringAttribute("key");
-                            GFL_playerlist@ new_player = GFL_playerlist(cid, pid, w1, w2, w3, w4, w5, 0,pos); 
-                            GFL_playerlist_array.insertLast(new_player);
-                            if (startsWith(w4,'srexo_t6'))
-                            {   
-                                healCharacter(m_metagame,cid,1);
-                            }
-                        }
-                    }
-                }
+            if(targetCharacter is null){continue;}
+            string pos = targetCharacter.getStringAttribute("position");
+            array<const XmlElement@>@ equipment = targetCharacter.getElementsByTagName("item");
+            if(equipment is null){continue;}
+                
+            string w1 = equipment[0].getStringAttribute("key");
+            string w2 = equipment[1].getStringAttribute("key");
+            string w3 = equipment[2].getStringAttribute("key");
+            string w4 = equipment[4].getStringAttribute("key");
+            string w5 = equipment[3].getStringAttribute("key");
+            GFL_playerlist@ new_player = GFL_playerlist(cid, pid, w1, w2, w3, w4, w5, 0,pos); 
+            GFL_playerlist_array.insertLast(new_player);
+            if (startsWith(w4,'srexo_t6'))
+            {   
+                healCharacter(m_metagame,cid,1);
             }
         }
     }
@@ -128,27 +124,25 @@ class GFL_playerlist_system : Tracker {
 }
 
 int getPlayerCidFromList(int playerid) {
-    if(GFL_playerlist_array.length()>0){
-        for(uint i=0;i<GFL_playerlist_array.length();i++){
-            if(GFL_playerlist_array[i].m_playerid == playerid)
-                return GFL_playerlist_array[i].m_characterid;
-        }
+    if(GFL_playerlist_array.length()<=0){return -1;}
+    for(uint i=0;i<GFL_playerlist_array.length();i++){
+        if(GFL_playerlist_array[i].m_playerid == playerid)
+            return GFL_playerlist_array[i].m_characterid;
     }
     return -1;
 }
 
 string getPlayerWeaponFromList(int playerid, int weaponnum) {
-    if(GFL_playerlist_array.length()>0){
-        for(uint i=0;i<GFL_playerlist_array.length();i++){
-            if(GFL_playerlist_array[i].m_playerid == playerid){
-                switch(weaponnum){
-                    case 0:{return GFL_playerlist_array[i].m_weapon1key;}
-                    case 1:{return GFL_playerlist_array[i].m_weapon2key;}
-                    case 2:{return GFL_playerlist_array[i].m_weapon3key;}
-                    case 3:{return GFL_playerlist_array[i].m_vestkey;}
-                    case 4:{return GFL_playerlist_array[i].m_itemkey;}
-                    default:{return "-nan-";}
-                }
+    if(GFL_playerlist_array.length()<=0){return "-nan-";}
+    for(uint i=0;i<GFL_playerlist_array.length();i++){
+        if(GFL_playerlist_array[i].m_playerid == playerid){
+            switch(weaponnum){
+                case 0:{return GFL_playerlist_array[i].m_weapon1key;}
+                case 1:{return GFL_playerlist_array[i].m_weapon2key;}
+                case 2:{return GFL_playerlist_array[i].m_weapon3key;}
+                case 3:{return GFL_playerlist_array[i].m_vestkey;}
+                case 4:{return GFL_playerlist_array[i].m_itemkey;}
+                default:{return "-nan-";}
             }
         }
     }
@@ -156,34 +150,31 @@ string getPlayerWeaponFromList(int playerid, int weaponnum) {
 }
 
 bool checkIdle(int playerid){
-    if(GFL_playerlist_array.length()>0){
-        for(uint i=0;i<GFL_playerlist_array.length();i++){
-            if(GFL_playerlist_array[i].m_playerid == playerid){
-                if (GFL_playerlist_array[i].m_pos == GFL_playerlist_array[i].m_old_pos){
-                    return true;
-                }
-            }    
+    if(GFL_playerlist_array.length()<=0){return false;}
+    for(uint i=0;i<GFL_playerlist_array.length();i++){
+        if(GFL_playerlist_array[i].m_playerid != playerid){continue;}
+        if (GFL_playerlist_array[i].m_pos == GFL_playerlist_array[i].m_old_pos){
+            return true;
         }
     }
     return false;
 }
 
 void givePlayerRPcount(int playerid,int rp_count){
-    if(GFL_playerlist_array.length()>0){
-        for(uint i=0;i<GFL_playerlist_array.length();i++){
-            if(GFL_playerlist_array[i].m_playerid == playerid){
-                GFL_playerlist_array[i].m_rp +=rp_count;
-            }
+    if(GFL_playerlist_array.length()<=0){return;}
+    for(uint i=0;i<GFL_playerlist_array.length();i++){
+        if(GFL_playerlist_array[i].m_playerid == playerid){
+            GFL_playerlist_array[i].m_rp +=rp_count;
         }
-    }    
+    }
+    
 }
 
 void givePlayerXPcount(int playerid,float xp_count){
-    if(GFL_playerlist_array.length()>0){
-        for(uint i=0;i<GFL_playerlist_array.length();i++){
-            if(GFL_playerlist_array[i].m_playerid == playerid){
-                GFL_playerlist_array[i].m_xp +=xp_count;
-            }
+    if(GFL_playerlist_array.length()<=0){return;}
+    for(uint i=0;i<GFL_playerlist_array.length();i++){
+        if(GFL_playerlist_array[i].m_playerid == playerid){
+            GFL_playerlist_array[i].m_xp +=xp_count;
         }
-    }    
+    }
 }
