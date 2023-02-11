@@ -127,24 +127,6 @@
 		<effect class="muzzle" ref="UpDust" />
 		<sound key="fire" fileref="hornet_shot.wav" volume="0.5" />
 	</weapon>
-	<weapon key="Jupiter_airstrike_warning.weapon">
-		<specification retrigger_time="1.0" accuracy_factor="1" sustained_fire_grow_step="1.2" sustained_fire_diminish_rate="0.6" sight_range_modifier="2.2" ai_sight_range_modifier="100.0" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="0" suppressed="0" name="Bunker Hornet" class="0" projectile_speed="2000.0" slot="2" barrel_offset_3d="0.4 0.1 0.4" projectiles_per_shot="1" sight_height_offset="2.0" />
-		<model mesh_filename="" texture_filename="" />
-		<hud_icon filename="hud_hornet.png" />
-		<commonness value="0.0" />
-		<ballistics near_far_distance="0" speed_estimation_near="200.0" speed_estimation_far="200.0" max_speed="200" randomness="0.0" curve_height="10" tweak_factor="2.5" />
-		<weak_hand_hold offset="0.2" />
-		<projectile file="jupiter_airstrike_warning_s.projectile" />
-		<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5" />
-		<target_factors tag="heavy_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="10.0" />
-		<target_factors tag="apc" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0" />
-		<target_factors tag="light_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="6.0" />
-		<target_factors tag="defensive_at" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.5" />
-		<target_factors tag="tactical" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0" />
-		<!-- important non combat player-only vehicles -->
-		<target_factors tag="bazooka" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0" />
-		<sound key="fire" fileref="hornet_shot.wav" volume="0.5" />
-	</weapon>
 	<weapon key="Jupiter_airstrike.weapon">
 		<specification retrigger_time="1.0" accuracy_factor="1" sustained_fire_grow_step="1.2" sustained_fire_diminish_rate="0.6" sight_range_modifier="20.2" ai_sight_range_modifier="100.0" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="0" suppressed="0" name="Bunker Hornet" class="0" projectile_speed="2000.0" slot="2" barrel_offset_3d="0.4 0.1 0.4" projectiles_per_shot="1" sight_height_offset="2.0" />
 		<model mesh_filename="" texture_filename="" />

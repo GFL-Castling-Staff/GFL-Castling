@@ -2464,7 +2464,9 @@ class CommandSkill : Tracker {
                     Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
                     int factionid = character.getIntAttribute("faction_id");
                     array<string> Voice={
-                        "",
+                        "SVD_SKILL1_JP.wav",
+                        "SVD_MEET_JP.wav",
+                        "SVD_SKILL2_JP.wav"
                     };
                     playSoundAtLocation(m_metagame,"416mod3skill_Fire_FromL4D2.wav",factionid,c_pos,1.0);
                     playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);

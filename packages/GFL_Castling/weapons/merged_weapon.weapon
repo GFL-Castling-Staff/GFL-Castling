@@ -555,6 +555,60 @@
 	<target_factors tag="commander" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0"/>
 </weapon>
 
+<weapon key="gkw_ump45mod3.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+	<tag name="smg"/>
+	<specification accuracy_factor="0.92" barrel_offset="0.45" class="0" slot="0" magazine_size="25" carry_in_two_hands="1" name="UMP45(MOD3)" projectile_speed="100" retrigger_time="0.085" suppressed="1" burst_shots="1" sustained_fire_diminish_rate="3.6" sustained_fire_grow_step="0.4" stab_enabled="1"/>
+	<commonness value="0.00001" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="2.0" buy_price="145.0" sell_price="145.0"/>
+	<capacity value="1" source="rank" source_value="0.0"/>
+	<animation key="recoil" animation_key="recoil1"/>
+	<animation key="recoil" animation_key="recoil2"/>
+	<animation key="recoil" animation_key="recoil3"/>
+	<animation key="recoil" stance_key="over_wall" animation_key="recoil1"/>
+	<animation key="recoil" stance_key="over_wall" animation_key="recoil2"/>
+	<animation key="recoil" stance_key="over_wall" animation_key="recoil3"/>
+	<animation key="recoil" stance_key="crouching" animation_key="recoil1"/>
+	<animation key="recoil" stance_key="crouching" animation_key="recoil2"/>
+	<animation key="recoil" stance_key="crouching" animation_key="recoil3"/>
+	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
+	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
+	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
+	<animation state_key="hold_on_wall" animation_key="still"/>
+	<animation state_key="celebrate_shoot" animation_key="celebrating, shooting"/>
+	<animation state_key="reload" animation_key="reloading, magazine rifle 0.9"/>
+	<animation state_key="stabbing" animation_key="melee, quick knife"/>
+	<animation state_key="stabbing" animation_key="pistol whip 3"/>
+	<sound key="fire" fileref="ump45_fire_FromBF4.wav" pitch_variety="0.05" volume="1.2"/>
+	<sound key="magazine_out" fileref="ump45_mgz_out_FromCOD16.wav" volume="0.4"/>
+	<sound key="magazine_in" fileref="ump45_mgz_in_FromCOD16.wav" volume="0.4"/>
+	<sound key="cycle" fileref="ump45_cycle_FromCOD16.wav" volume="0.4"/>
+	<sound class="impact" fileref="rifle_drop.wav" volume="1"/>
+	<model filename="gkw_smg_ump45.xml"/>
+	<hud_icon filename="gkw_ump45mod3.png"/>
+	<weak_hand_hold offset="0.2"/>
+	<projectile file="bullet.projectile" can_be_detected_by_footmen="0">
+	<result class="hit" kill_probability="1.55" kill_probability_offset_on_successful_hit="5.0" kill_decay_start_time="0.3" kill_decay_end_time="0.62"/>
+	</projectile>
+	<effect class="muzzle" ref="ejection_9mm"/>
+	<stance state_key="running" accuracy="0.65"/>
+	<stance state_key="walking" accuracy="0.65"/>
+	<stance state_key="standing" accuracy="0.65"/>
+	<stance state_key="crouching" accuracy="0.9"/>
+	<stance state_key="crouch_moving" accuracy="0.65"/>
+	<stance state_key="prone" accuracy="0.88"/>
+	<stance state_key="prone_moving" accuracy="0.65"/>
+	<stance state_key="over_wall" accuracy="0.88"/>
+	<modifier class="hit_success_probability" value="-0.25"/>
+	<modifier class="speed" value="0.3"/>
+	<shield offset="-0.05 0.0 0.05" extent="0.15 0.3 0.4" usable_for_cover="0"/>
+	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
+	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
+	<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
+	<target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
+	<target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0"/>
+	<target_factors tag="commander" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0"/>
+</weapon>
+
 <weapon key="gkw_ump45_5405.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="smg"/>
 	<specification accuracy_factor="0.9" barrel_offset="0.45" class="0" slot="0" magazine_size="25" carry_in_two_hands="1" name="UMP45-[Lonely Traveller of Eternity]" projectile_speed="100" retrigger_time="0.1" suppressed="1" burst_shots="1" sustained_fire_diminish_rate="3.0" sustained_fire_grow_step="0.4" stab_enabled="1"/>
@@ -1632,7 +1686,7 @@
 	<animation state_key="hold_casual" animation_key="dancing, kazachok"/>
 	<animation key="reload" animation_key="reloading, Machine gun 1.6"/>
 	<inventory buy_price="45.0" sell_price="45.0"/>
-	<next_in_chain key="gkw_aek999_skill.weapon" share_ammo="1"/>
+	<next_in_chain key="gkw_aek999_skill.weapon" share_ammo="0"/>
 	<sound key="fire" fileref="aek999_fire_FromCF.wav" pitch_variety="0.05" volume="1"/>
 	<sound key="magazine_out" fileref="qjy80_mgz_out_FromCOD16.wav" volume="0.6"/>
 	<sound key="magazine_in" fileref="qjy80_mgz_in_FromCOD16.wav" volume="0.6"/>
@@ -1684,7 +1738,7 @@
 	<animation state_key="hold_casual" animation_key="dancing, kazachok"/>
 	<animation key="reload" animation_key="reloading, Machine gun 2.0"/>
 	<inventory buy_price="45.0" sell_price="45.0"/>
-	<next_in_chain key="gkw_aek999.weapon" share_ammo="1"/>
+	<next_in_chain key="gkw_aek999.weapon" share_ammo="0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<sound key="fire" fileref="aek999skill_fire_FromCOD16.wav" pitch_variety="0.05" volume="1"/>
 	<sound key="magazine_out" fileref="qjy80_mgz_out_FromCOD16.wav" volume="0.6"/>
@@ -26276,7 +26330,7 @@
 </weapon>
 
 <weapon key="gkw_hvy_m2.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1" accuracy_factor="0.85" sight_range_modifier="5" sight_height_offset="4.9" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="0.3" magazine_size="1" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="0" suppressed="0" name="M2 Mortar" class="0" projectile_speed="100.0" barrel_offset="0.6" projectiles_per_shot="1" spread_range="0.05" slot="0"/>
+	<specification retrigger_time="-1" accuracy_factor="0.95" sight_range_modifier="4" sight_height_offset="6.0" sustained_fire_grow_step="6.0" sustained_fire_diminish_rate="2.0" magazine_size="1" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="0" suppressed="0" name="M2 Mortar" class="0" projectile_speed="100.0" barrel_offset="0.6" projectiles_per_shot="1" spread_range="0.05" slot="0"/>
 	<next_in_chain key="gkw_m2_m1a1.weapon" share_ammo="0"/>
 	<animation state_key="recoil" animation_key="recoil, portable mortar"/>
 	<animation state_key="crouching" animation_key="crouch, still, portable mortar"/>
@@ -26304,15 +26358,15 @@
 	<ballistics near_far_distance="1.0" speed_estimation_near="20.0" speed_estimation_far="40.0" max_speed="100.0" randomness="0.05" curve_height="20"/>
 	<effect class="muzzle" ref="MusketMuzzle"/>
 	<effect class="muzzle" ref="UpDust"/>
-	<stance state_key="running" accuracy="0.3"/>
-	<stance state_key="walking" accuracy="0.4"/>
-	<stance state_key="crouch_moving" accuracy="0.3"/>
-	<stance state_key="prone_moving" accuracy="0.1"/>
-	<stance state_key="standing" accuracy="0.5"/>
+	<stance state_key="running" accuracy="1.0"/>
+	<stance state_key="walking" accuracy="1.0"/>
+	<stance state_key="crouch_moving" accuracy="1.0"/>
+	<stance state_key="prone_moving" accuracy="1.0"/>
+	<stance state_key="standing" accuracy="1.0"/>
 	<stance state_key="crouching" accuracy="1.0"/>
 	<stance state_key="prone" accuracy="1.0"/>
 	<stance state_key="over_wall" accuracy="1"/>
-	<modifier class="speed" value="-3.0"/>
+	<modifier class="speed" value="-5.0"/>
 	<tag name="bazooka"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
 	<target_factors tag="heavy_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0"/>
@@ -28176,7 +28230,7 @@
 	<modifier class="speed" value="0.35"/>
 	<modifier class="hit_success_probability" value="-0.2"/>
 	<tag name="smg"/>
-	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
+	<commonness value="0.00001" in_stock="0" can_respawn_with="1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
@@ -38623,8 +38677,8 @@
 </weapon>
 
 <weapon key="gkw_aa12_4401_only_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="0.167" accuracy_factor="0.8" sustained_fire_grow_step="2.1" sustained_fire_diminish_rate="0.45" magazine_size="20" can_shoot_standing="1" suppressed="0" name="AA-12-[Smokeless Lollipop]-[Dragon Breath Round]" class="0" reload_one_at_a_time="0" sight_range_modifier="0.8" projectile_speed="100" barrel_offset="0.5" projectiles_per_shot="10" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" spread_range="0.3" last_burst_retrigger_time="-1" slot="0" use_basic_muzzle_smoke_effect="0"/>
-	<animation key="reload" animation_key="reloading, magazine rifle 3.0"/>
+	<specification retrigger_time="0.167" accuracy_factor="0.8" sustained_fire_grow_step="2.1" sustained_fire_diminish_rate="0.45" magazine_size="20" can_shoot_standing="1" suppressed="0" name="AA-12-[Smokeless Lollipop]-[Dragon Breath Round]" class="0" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="100" barrel_offset="0.5" projectiles_per_shot="8" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" spread_range="0.2" last_burst_retrigger_time="-1" slot="0" use_basic_muzzle_smoke_effect="0"/>
+	<animation key="reload" animation_key="reloading, magazine rifle 1.8"/>
 	<next_in_chain key="gkw_aa12_4401_only.weapon" share_ammo="0"/>
 	<sound key="fire" fileref="aa12_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.2"/>
 	<sound key="magazine_out" fileref="aa12_mgz_out_FromCOD16.wav" volume="0.45"/>
@@ -38637,7 +38691,7 @@
 	<hud_icon filename="gkw_aa12only_skill.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="dragons_breath2.projectile">
-	<result class="blast" radius="1.8" damage="0.1" push="0.0" decal="1" faction_compare="not_equal"/>
+	<result class="blast" radius="2.5" damage="1.1" push="0.0" decal="1" faction_compare="not_equal"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.5"/>
 	<stance state_key="walking" accuracy="0.7"/>
@@ -45216,8 +45270,8 @@
 </weapon>
 
 <weapon key="gkw_aa12_only_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="0.167" accuracy_factor="0.8" sustained_fire_grow_step="2.1" sustained_fire_diminish_rate="0.45" magazine_size="20" can_shoot_standing="1" suppressed="0" name="AA-12-[Dragon Breath Round]" class="0" reload_one_at_a_time="0" sight_range_modifier="0.8" projectile_speed="100" barrel_offset="0.5" projectiles_per_shot="10" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" spread_range="0.3" last_burst_retrigger_time="-1" slot="0" use_basic_muzzle_smoke_effect="0"/>
-	<animation key="reload" animation_key="reloading, magazine rifle 3.0"/>
+	<specification retrigger_time="0.167" accuracy_factor="0.8" sustained_fire_grow_step="2.1" sustained_fire_diminish_rate="0.45" magazine_size="20" can_shoot_standing="1" suppressed="0" name="AA-12-[Dragon Breath Round]" class="0" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="100" barrel_offset="0.5" projectiles_per_shot="8" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" spread_range="0.2" last_burst_retrigger_time="-1" slot="0" use_basic_muzzle_smoke_effect="0"/>
+	<animation key="reload" animation_key="reloading, magazine rifle 1.8"/>
 	<next_in_chain key="gkw_aa12_only.weapon" share_ammo="0"/>
 	<sound key="fire" fileref="aa12_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.2"/>
 	<sound key="magazine_out" fileref="aa12_mgz_out_FromCOD16.wav" volume="0.45"/>
@@ -45230,7 +45284,7 @@
 	<hud_icon filename="gkw_aa12only_skill.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="dragons_breath2.projectile">
-	<result class="blast" radius="1.8" damage="0.1" push="0.0" decal="1" faction_compare="not_equal"/>
+	<result class="blast" radius="2.5" damage="1.1" push="0.0" decal="1" faction_compare="not_equal"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.5"/>
 	<stance state_key="walking" accuracy="0.7"/>
@@ -49697,7 +49751,7 @@
 	<model filename=""/>
 	<hud_icon filename="kccow_qwd.png"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="1.0" pulldown_in_air="0">
-	<result class="blast" radius="3.0" damage="1.0" push="0.2" decal="1" character_state="death" faction_compare="not_equal"/>
+	<result class="blast" radius="2.0" damage="1.0" push="0.2" decal="1" character_state="death" faction_compare="not_equal"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<sound class="result" key="terrain" fileref="ricochet1.wav"/>
@@ -53306,24 +53360,6 @@
 	<sound key="fire" fileref="hornet_shot.wav" volume="0.5"/>
 </weapon>
 
-<weapon key="Jupiter_airstrike_warning.weapon">
-	<specification retrigger_time="1.0" accuracy_factor="1" sustained_fire_grow_step="1.2" sustained_fire_diminish_rate="0.6" sight_range_modifier="2.2" ai_sight_range_modifier="100.0" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="0" suppressed="0" name="Bunker Hornet" class="0" projectile_speed="2000.0" slot="2" barrel_offset_3d="0.4 0.1 0.4" projectiles_per_shot="1" sight_height_offset="2.0"/>
-	<model mesh_filename="" texture_filename=""/>
-	<hud_icon filename="hud_hornet.png"/>
-	<commonness value="0.0"/>
-	<ballistics near_far_distance="0" speed_estimation_near="200.0" speed_estimation_far="200.0" max_speed="200" randomness="0.0" curve_height="10" tweak_factor="2.5"/>
-	<weak_hand_hold offset="0.2"/>
-	<projectile file="jupiter_airstrike_warning_s.projectile"/>
-	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
-	<target_factors tag="heavy_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="10.0"/>
-	<target_factors tag="apc" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0"/>
-	<target_factors tag="light_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="6.0"/>
-	<target_factors tag="defensive_at" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.5"/>
-	<target_factors tag="tactical" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0"/>
-	<target_factors tag="bazooka" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
-	<sound key="fire" fileref="hornet_shot.wav" volume="0.5"/>
-</weapon>
-
 <weapon key="Jupiter_airstrike.weapon">
 	<specification retrigger_time="1.0" accuracy_factor="1" sustained_fire_grow_step="1.2" sustained_fire_diminish_rate="0.6" sight_range_modifier="20.2" ai_sight_range_modifier="100.0" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="0" suppressed="0" name="Bunker Hornet" class="0" projectile_speed="2000.0" slot="2" barrel_offset_3d="0.4 0.1 0.4" projectiles_per_shot="1" sight_height_offset="2.0"/>
 	<model mesh_filename="" texture_filename=""/>
@@ -53471,25 +53507,6 @@
 	<target_factors tag="bazooka" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.5"/>
 	<target_factors tag="punchme" distance="1.0" direction="0.0" squad_command="1.0" base_score="30.0"/>
 	<effect class="muzzle" ref="sawsnone"/>
-</weapon>
-
-<weapon key="typhoon_main_cannon_2">
-	<specification retrigger_time="0.01" accuracy_factor="2.0" sustained_fire_grow_step="0.0" sustained_fire_diminish_rate="1.0" sight_range_modifier="2.0" ai_sight_range_modifier="1.0" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="0" suppressed="0" name="Tank cannon" class="0" projectile_speed="220.0" slot="2" barrel_offset_3d="-20.0 0.7 3.5" projectiles_per_shot="1" spread_range="0.0" use_basic_muzzle_smoke_effect="0"/>
-	<model mesh_filename=""/>
-	<hud_icon filename="typhoon_main_cannon.png"/>
-	<commonness value="0.0"/>
-	<sound key="fire" fileref="Typhon_fire_fromDOOM4.wav" pitch_variety="0.05" volume="0.1"/>
-	<projectile file="typhoon_laser.projectile">
-	<result class="hit" kill_probability="1.5" kill_decay_start_time="2.682" kill_decay_end_time="5.7"/>
-	</projectile>
-	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
-	<target_factors tag="heavy_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0"/>
-	<target_factors tag="apc" distance="1.0" direction="0.0" squad_command="1.0" base_score="6.0"/>
-	<target_factors tag="light_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="5.0"/>
-	<target_factors tag="defensive_at" distance="1.0" direction="0.0" squad_command="1.0" base_score="5.5"/>
-	<target_factors tag="tactical" distance="1.0" direction="0.0" squad_command="1.0" base_score="7.0"/>
-	<target_factors tag="bazooka" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.5"/>
-	<target_factors tag="punchme" distance="1.0" direction="0.0" squad_command="1.0" base_score="30.0"/>
 </weapon>
 
 <weapon key="coeus_cannon">
@@ -54220,7 +54237,7 @@
 	<commonness value="0.0"/>
 	<ballistics curve_height="10.0" near_far_distance="0.0" speed_estimation_near="0.0" speed_estimation_far="58.0" max_speed="42.0" randomness="0.0" tweak_factor="1.2"/>
 	<projectile file="hornet.projectile">
-	<result class="blast" radius="6.0" damage="20.0" push="0.75" decal="1" damage_origin_vehicle="0"/>
+	<result class="blast" radius="4.0" damage="20.0" push="0.75" decal="1" damage_origin_vehicle="0" faction_compare="not_equal"/>
 	</projectile>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
 	<target_factors tag="heavy_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
@@ -54228,7 +54245,7 @@
 	<target_factors tag="shotgun" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
 	<effect class="muzzle" ref="LawMuzzle"/>
 	<effect class="muzzle" ref="UpDust"/>
-	<sound key="fire" fileref="hornet_shot.wav" volume="0.5"/>
+	<sound key="fire" fileref="hornet_shot.wav" volume="0.75"/>
 </weapon>
 
 <weapon key="all_vehicles_wheelchair_shield.weapon">
