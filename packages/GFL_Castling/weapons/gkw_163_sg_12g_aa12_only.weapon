@@ -89,18 +89,18 @@
 	name="AA-12-[Dragon Breath Round]"
 	class="0"
 	reload_one_at_a_time="0"
-	sight_range_modifier="0.8"
+	sight_range_modifier="1.0"
 	projectile_speed="100"
 	barrel_offset="0.5"
-	projectiles_per_shot="10"
+	projectiles_per_shot="8"
 	stab_enabled="1"
 	carry_in_two_hands="1"
 	burst_shots="1"
-	spread_range="0.3"
+	spread_range="0.2"
 	last_burst_retrigger_time="-1"
 	slot="0"
 	use_basic_muzzle_smoke_effect="0"/>
-	<animation key="reload" animation_key="reloading, magazine rifle 3.0"/>
+	<animation key="reload" animation_key="reloading, magazine rifle 1.8"/>
 	<next_in_chain key="gkw_aa12_only.weapon" share_ammo="0" />
 	<sound key="fire" fileref="aa12_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.2" />
     <sound key="magazine_out" fileref="aa12_mgz_out_FromCOD16.wav" volume="0.45" />
@@ -113,7 +113,7 @@
 	<hud_icon filename="gkw_aa12only_skill.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="dragons_breath2.projectile">
-		<result class="blast" radius="1.8" damage="0.1" push="0.0" decal="1" faction_compare="not_equal"/>
+		<result class="blast" radius="2.5" damage="1.1" push="0.0" decal="1" faction_compare="not_equal"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.5"/>
 	<stance state_key="walking" accuracy="0.7"/>
