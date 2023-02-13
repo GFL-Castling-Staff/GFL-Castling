@@ -20,7 +20,7 @@
     <!-- projectile slot 0 is used for hand grenade items currently -->
     <!-- bound to change -->
     <commonness value="0.0" />
-    <inventory encumbrance="20.0" price="75.0" />
+    <inventory encumbrance="20.0" buy_price="75.0" sell_price="0.0" />
     <capacity value="2" source="rank" source_value="4.002" />
 
     <sound class="result" key="other" fileref="explosion_Large_FromSQUAD_1.wav" volume="2" />
@@ -86,7 +86,7 @@
     <!-- projectile slot 0 is used for hand grenade items currently -->
     <!-- bound to change -->
     <commonness value="0.0" />
-    <inventory encumbrance="20.0" price="74.9" />
+    <inventory encumbrance="20.0" buy_price="74.9" sell_price="0.0" />
     <capacity value="2" source="rank" source_value="1.0" />
     <capacity value="3" source="rank" source_value="2.0" />
     <capacity value="4" source="rank" source_value="3.0" />

@@ -8,14 +8,11 @@
         <trail probability="0.0" key="BulletApTrail_ct" />
         <model mesh_filename="anti_heavy_armor_grenade.xml" />
         <hud_icon filename="88r.png" />
-        <!-- <throwable curve_height="5.0" near_far_distance="5.0" speed_estimation_near="9.0" speed_estimation_far="15.0" max_speed="13.0" randomness="0.07" /> -->
-        <!-- <throwable curve_height="6.0" near_far_distance="5.0" speed_estimation_near="20.0" speed_estimation_far="17.0" max_speed="11.0" randomness="0.07" /> -->
-        <!-- <throwable curve_height="8.0" near_far_distance="10.0" speed_estimation_near="30" speed_estimation_far="40.0" max_speed="100.0" randomness="0.07" tweak_factor="1.75"/> -->
         <throwable curve_height="11.8" near_far_distance="10.0" speed_estimation_near="80" speed_estimation_far="100.0" max_speed="1750.0" randomness="0.07" tweak_factor="1.775"/>
         <!-- projectile slot 0 is used for hand grenade items currently -->
         <!-- bound to change -->
         <commonness value="2.0" />
-        <inventory encumbrance="10.0" price="5.0" />
+        <inventory encumbrance="10.0" buy_price="8.0" sell_price="0.0" />
         <capacity value="6" source="rank" source_value="0.0" />
         <capacity value="8" source="rank" source_value="4.622" />
         <capacity value="10" source="rank" source_value="34.833" />
@@ -29,14 +26,12 @@
         <effect class="result" key="terrain" ref="Smoke" post_processing="1" />
         <effect class="result" key="terrain" ref="Shine" lighting="0" />
         <effect class="result" key="terrain" ref="Godray" lighting="0" />
-        <!-- <effect class="result" key="terrain" ref="ShadowSmoke" shadow="1" /> -->
         <effect class="result" type="splat_map" surface_tag="" size="3.0" atlas_index="0" layer="1" />
         <effect class="result" type="splat_map" surface_tag="" size="4.0" atlas_index="4" layer="0" />
         <effect class="result" type="splat_map" surface_tag="" size="5.0" atlas_index="0" layer="2" additive="0" />
         <effect class="result" key="other" ref="Smoke" post_processing="1" />
         <effect class="result" key="other" ref="Shine" lighting="0" />
         <effect class="result" key="other" ref="Godray" lighting="0" />
-        <!-- <effect class="result" key="other" ref="ShadowSmoke" shadow="1" /> -->
         <effect class="result" key="static_object" copy="terrain" />
         <effect class="result" key="character" copy="terrain" />
         <effect class="result" key="vehicle" copy="terrain" />

@@ -15,7 +15,7 @@
         <!-- HUD provived by Bad Goose  -->
         <throwable curve_height="8.0" near_far_distance="8.0" speed_estimation_near="45.0" speed_estimation_far="75.0" max_speed="150.0" randomness="0.4" tweak_factor="1.5"/>
         <commonness value="0.2" />
-        <inventory encumbrance="10.0" price="15.0" />
+        <inventory encumbrance="20.0" buy_price="25.0" sell_price="0.0" />
         <capacity value="2" source="rank" source_value="0.0" />
         <capacity value="4" source="rank" source_value="3.0" />
         <capacity value="6" source="rank" source_value="10.0" />
