@@ -1,0 +1,151 @@
+particle_system jupiter_warning_border
+{
+	quota 50
+	material juptier_red_quan
+	particle_width 30
+	particle_height 30
+	renderer billboard
+	billboard_type perpendicular_common
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 0 0 1
+	
+	emitter Point
+	{
+		angle 0
+		direction 0 1 0
+        colour  1 0.3 0.3 1
+		emission_rate 11
+		position 0 0 0
+		velocity 0.001
+		time_to_live 8
+		duration 0.1
+	}
+
+}
+
+particle_system jupiter_warning_close
+{
+	quota 50
+	material juptier_red_quan
+	particle_width 30
+	particle_height 30
+	renderer billboard
+	billboard_type perpendicular_common
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 0 0 1
+	
+	emitter Point
+	{
+		angle 0
+		colour 1 0.3 0.3 1
+		direction 0 1 0
+		emission_rate 11
+		position 0 0 0
+		velocity 0.001
+		time_to_live 8
+		duration 0.1
+	}
+
+	affector Scaler
+	{
+		rate -3.75
+	}
+}
+
+particle_system jupiter_warning_aim
+{
+	quota 30
+	material juptier_aim
+	particle_width 20
+	particle_height 20
+	renderer billboard
+	billboard_type perpendicular_common
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 0 0 1
+	
+	emitter Point
+	{
+		angle 0
+		direction 0 1 0
+        colour  1 0.3 0.3 1
+		emission_rate 11
+		position 0 0 0
+		velocity 0.001
+		time_to_live 8
+		duration 0.1
+	}
+
+	affector Scaler
+	{
+		rate -1.875
+	}
+
+	affector Rotator
+	{
+		rotation_speed_range_start	45
+		rotation_speed_range_end	45
+		rotation_range_start 0
+		rotation_range_end 0
+	}
+
+}
+
+material alpha_blend_base{
+	receive_shadows off
+	technique{
+		pass{
+			lighting off
+			fog_override true
+			depth_write off
+			scene_blend alpha_blend
+		}
+	}
+}
+
+material add_base{
+	receive_shadows off
+	technique{
+		pass{
+			lighting off
+			fog_override true
+			depth_write off
+			scene_blend add
+		}
+	}
+}
+
+material juptier_red_quan : alpha_blend_base
+{   
+    technique
+    {
+        pass
+        {
+            depth_func always_pass
+            texture_unit
+            {
+                texture buff_dm_quan.png 	
+            }
+        }
+    }
+}
+
+material juptier_aim : alpha_blend_base
+{   
+    technique
+    {
+        pass
+        {
+            depth_func always_pass
+            texture_unit
+            {
+                texture quan_7_15.png 	
+            }
+        }
+    }
+}

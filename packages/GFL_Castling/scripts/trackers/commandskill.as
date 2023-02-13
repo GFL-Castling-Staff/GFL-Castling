@@ -184,69 +184,70 @@ class CommandSkill : Tracker {
                 return;        
             }
 
-            switch(int(commandSkillIndex[c_weaponType]))
-            {
-                case 0:{break;}
-                case 1:{excuteAN94skill(cId,senderId,m_modifer);break;}
-                case 2:{excuteFirenadeskill(cId,senderId,m_modifer,c_weaponType);break;}
-                case 3:{excuteJusticeskill(cId,senderId,m_modifer);break;}
-                case 4:{excuteMP5skill(cId,senderId,m_modifer);break;}
-                case 5:{excuteMP5MOD3skill(cId,senderId,m_modifer);break;}
-                case 6:{excuteP22skill(cId,senderId,m_modifer);break;}
-                case 7:{excuteHS2000skill(cId,senderId,m_modifer);break;}
-                case 8:{excuteIntruderskill(cId,senderId,m_modifer);break;}
-                case 9:{excuteAgentskill(cId,senderId,m_modifer);break;}
-                case 10:{excuteDestroyerskill(cId,senderId,m_modifer);break;}
-                case 11:{excuteExcutionerskill(cId,senderId,m_modifer);break;}
-                case 12:{excuteBaibaoziskill(cId,senderId,m_modifer);break;}
-                case 13:{excuteG3mod3skill(cId,senderId,m_modifer);break;}
-                case 14:{excuteUMP45skill(cId,senderId,m_modifer);break;}
-                case 15:{excuteM870skill(cId,senderId,m_modifer);break;}
-                case 16:{excutePP19skill(cId,senderId,m_modifer);break;}
-                case 17:{excutePP19skill(cId,senderId,m_modifer,true);break;}
-                case 18:{excuteAK15MOD3skill(cId,senderId,m_modifer);break;}
-                case 19:{excuteXM8MOD3skill(cId,senderId,m_modifer);break;}
-                case 20:{excuteStg44MOD3skill(cId,senderId,m_modifer);break;}
-                case 21:{excuteWerlodskill(cId,senderId,m_modifer,true);break;}
-                case 22:{excuteFnFalskill(cId,senderId,m_modifer);break;}
-                case 23:{excuteM4SOPMODIIMOD3skill(cId,senderId,m_modifer);break;}
-                case 24:{excutePPSH41skill(cId,senderId,m_modifer);break;}
-                case 25:{excutePPSH41skill(cId,senderId,m_modifer,true);break;}
-                case 26:{excuteFO12skill(cId,senderId,m_modifer);break;}
-                case 27:{excuteFlashbangskill(cId,senderId,m_modifer,c_weaponType);break;}
-                case 28:{excuteUMP9skill(cId,senderId,m_modifer);break;}
-                case 29:{excuteMab38skill(cId,senderId,m_modifer);break;}
-                // case 30:{excuteAK12SEskill(cId,senderId,m_modifer);break;}
-                case 31:{excutePPKMOD3skill(cId,senderId,m_modifer);break;}
-                case 32:{excuteMLEskill(cId,senderId,m_modifer);break;}
-                case 33:{excuteMG4MOD3skill(cId,senderId,m_modifer);break;}
-                case 34:{excuteLiuRFskill(cId,senderId,m_modifer);break;}
-                case 35:{excuteSAT8skill(cId,senderId,m_modifer);break;}
-                case 36:{excuteHK416mod3skill(cId,senderId,m_modifer);break;}
-                case 37:{excuteHK416mod3skill(cId,senderId,m_modifer,true);break;}
-                case 38:{excuteGrenadeSkill(cId,senderId,m_modifer,c_weaponType);break;}
-                case 39:{excuteAlchemistskill(cId,senderId,m_modifer);break;}
-                case 40:{excute88typeskill(cId,senderId,m_modifer);break;}
-                case 41:{excute88typeskill(cId,senderId,m_modifer,true);break;}
-                case 42:{excute88typeGUNDAMskill(cId,senderId,m_modifer);break;}
-                case 43:{excuteM200skill(cId,senderId,m_modifer);break;}
-                case 44:{excuteCZ75skill(cId,senderId,m_modifer);break;}
-                // case 45:{excutSuperSASSSkill(cId,senderId,m_modifer);break;}
-                case 46:{excuteG41Onlyskill(cId,senderId,m_modifer);break;}
-                case 47:{excuteUMP45MOD3skill(cId,senderId,m_modifer);break;}
-                case 48:{excuteWeaverskill(cId,senderId,m_modifer);break;}
-                case 49:{excuteM1928A1skill(cId,senderId,m_modifer);break;}
-                case 50:{excuteUZImod3skill(cId,senderId,m_modifer);break;}
-                case 51:{excuteSniperSkill_Antiperson(cId,senderId,m_modifer,c_weaponType);break;}
-                case 52:{excuteCarcano1938(cId,senderId,m_modifer);break;}
-                case 53:{excuteSniperSkill_Pos(cId,senderId,m_modifer,c_weaponType);break;}
-                case 54:{excuteF1skill(cId,senderId,m_modifer);break;}
-                case 55:{excuteBBSRobotskill(cId,senderId,m_modifer);break;}
-                case 56:{excuteSVDEXskill(cId,senderId,m_modifer);break;}
-                case 57:{excuteHK416Agentskill(cId,senderId,m_modifer);break;}
-                case 58:{excuteErmaskill(cId,senderId,m_modifer);break;}
-                case 59:{excute64typemod3Skill(cId,senderId,m_modifer);break;}
-                case 60:{excuteZasM21Skill(cId,senderId,m_modifer);break;}
+                switch(int(commandSkillIndex[c_weaponType]))
+                {
+                    case 0:{break;}
+                    case 1:{excuteAN94skill(cId,senderId,m_modifer);break;}
+                    case 2:{excuteFirenadeskill(cId,senderId,m_modifer,c_weaponType);break;}
+                    case 3:{excuteJusticeskill(cId,senderId,m_modifer);break;}
+                    case 4:{excuteMP5skill(cId,senderId,m_modifer);break;}
+                    case 5:{excuteMP5MOD3skill(cId,senderId,m_modifer);break;}
+                    case 6:{excuteP22skill(cId,senderId,m_modifer);break;}
+                    case 7:{excuteHS2000skill(cId,senderId,m_modifer);break;}
+                    case 8:{excuteIntruderskill(cId,senderId,m_modifer);break;}
+                    case 9:{excuteAgentskill(cId,senderId,m_modifer);break;}
+                    case 10:{excuteDestroyerskill(cId,senderId,m_modifer);break;}
+                    case 11:{excuteExcutionerskill(cId,senderId,m_modifer);break;}
+                    case 12:{excuteBaibaoziskill(cId,senderId,m_modifer);break;}
+                    case 13:{excuteG3mod3skill(cId,senderId,m_modifer);break;}
+                    case 14:{excuteUMP45skill(cId,senderId,m_modifer);break;}
+                    case 15:{excuteM870skill(cId,senderId,m_modifer);break;}
+                    case 16:{excutePP19skill(cId,senderId,m_modifer);break;}
+                    case 17:{excutePP19skill(cId,senderId,m_modifer,true);break;}
+                    case 18:{excuteAK15MOD3skill(cId,senderId,m_modifer);break;}
+                    case 19:{excuteXM8MOD3skill(cId,senderId,m_modifer);break;}
+                    case 20:{excuteStg44MOD3skill(cId,senderId,m_modifer);break;}
+                    case 21:{excuteWerlodskill(cId,senderId,m_modifer,true);break;}
+                    case 22:{excuteFnFalskill(cId,senderId,m_modifer);break;}
+                    case 23:{excuteM4SOPMODIIMOD3skill(cId,senderId,m_modifer);break;}
+                    case 24:{excutePPSH41skill(cId,senderId,m_modifer);break;}
+                    case 25:{excutePPSH41skill(cId,senderId,m_modifer,true);break;}
+                    case 26:{excuteFO12skill(cId,senderId,m_modifer);break;}
+                    case 27:{excuteFlashbangskill(cId,senderId,m_modifer,c_weaponType);break;}
+                    case 28:{excuteUMP9skill(cId,senderId,m_modifer);break;}
+                    case 29:{excuteMab38skill(cId,senderId,m_modifer);break;}
+                    // case 30:{excuteAK12SEskill(cId,senderId,m_modifer);break;}
+                    case 31:{excutePPKMOD3skill(cId,senderId,m_modifer);break;}
+                    case 32:{excuteMLEskill(cId,senderId,m_modifer);break;}
+                    case 33:{excuteMG4MOD3skill(cId,senderId,m_modifer);break;}
+                    case 34:{excuteLiuRFskill(cId,senderId,m_modifer);break;}
+                    case 35:{excuteSAT8skill(cId,senderId,m_modifer);break;}
+                    case 36:{excuteHK416mod3skill(cId,senderId,m_modifer);break;}
+                    case 37:{excuteHK416mod3skill(cId,senderId,m_modifer,true);break;}
+                    case 38:{excuteGrenadeSkill(cId,senderId,m_modifer,c_weaponType);break;}
+                    case 39:{excuteAlchemistskill(cId,senderId,m_modifer);break;}
+                    case 40:{excute88typeskill(cId,senderId,m_modifer);break;}
+                    case 41:{excute88typeskill(cId,senderId,m_modifer,true);break;}
+                    case 42:{excute88typeGUNDAMskill(cId,senderId,m_modifer);break;}
+                    case 43:{excuteM200skill(cId,senderId,m_modifer);break;}
+                    case 44:{excuteCZ75skill(cId,senderId,m_modifer);break;}
+                    // case 45:{excutSuperSASSSkill(cId,senderId,m_modifer);break;}
+                    case 46:{excuteG41Onlyskill(cId,senderId,m_modifer);break;}
+                    case 47:{excuteUMP45MOD3skill(cId,senderId,m_modifer);break;}
+                    case 48:{excuteWeaverskill(cId,senderId,m_modifer);break;}
+                    case 49:{excuteM1928A1skill(cId,senderId,m_modifer);break;}
+                    case 50:{excuteUZImod3skill(cId,senderId,m_modifer);break;}
+                    case 51:{excuteSniperSkill_Antiperson(cId,senderId,m_modifer,c_weaponType);break;}
+                    case 52:{excuteCarcano1938(cId,senderId,m_modifer);break;}
+                    case 53:{excuteSniperSkill_Pos(cId,senderId,m_modifer,c_weaponType);break;}
+                    case 54:{excuteF1skill(cId,senderId,m_modifer);break;}
+                    case 55:{excuteBBSRobotskill(cId,senderId,m_modifer);break;}
+                    case 56:{excuteSVDEXskill(cId,senderId,m_modifer);break;}
+                    case 57:{excuteHK416Agentskill(cId,senderId,m_modifer);break;}
+                    case 58:{excuteErmaskill(cId,senderId,m_modifer);break;}
+                    case 59:{excute64typemod3Skill(cId,senderId,m_modifer);break;}
+                    case 60:{excuteZasM21Skill(cId,senderId,m_modifer);break;}
+                    case 61:{excuteC96MODSkill(cId,senderId,m_modifer);break;}
 
                 default:
                     break;
@@ -2091,7 +2092,9 @@ class CommandSkill : Tracker {
                     Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
                     int factionid = character.getIntAttribute("faction_id");
                     array<string> Voice={
-                        "",
+                        "SVD_SKILL1_JP.wav",
+                        "SVD_MEET_JP.wav",
+                        "SVD_SKILL2_JP.wav"
                     };
                     playSoundAtLocation(m_metagame,"416mod3skill_Fire_FromL4D2.wav",factionid,c_pos,1.0);
                     playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
@@ -3667,5 +3670,43 @@ class CommandSkill : Tracker {
                 }
             }
         }
-    }    
+    }
+    void excuteC96MODSkill(int characterId,int playerId,SkillModifer@ modifer){
+        bool ExistQueue = false;
+        int j=-1;
+        for (uint i=0;i<SkillArray.length();i++){
+            if (InCooldown(characterId,modifer,SkillArray[i]) && SkillArray[i].m_weapontype=="C96") {
+                ExistQueue=true;
+                j=i;
+            }
+        }
+        if (ExistQueue){
+            dictionary a;
+            a["%time"] = ""+SkillArray[j].m_time;
+            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            return;
+        }
+        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+        if (character !is null) {
+            const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+            if (player !is null){
+                if (player.hasAttribute("aim_target")) {
+                    string target = player.getStringAttribute("aim_target");
+                    Vector3 aim_pos = stringToVector3(target);
+                    Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
+                    aim_pos = aim_pos.add(Vector3(0,12,0));
+                    int factionid = character.getIntAttribute("faction_id");
+                    array<string> Voice={
+                        "64typeMod_SKILL1_JP.wav"
+                    };
+                    playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+                    playAnimationKey(m_metagame,characterId,"air thrust",false,false);
+                    playSoundAtLocation(m_metagame,"grenade_throw1.wav",factionid,c_pos,1.0);
+                    c_pos=c_pos.add(Vector3(0,2.25,0));
+                    CreateDirectProjectile_T(m_metagame,c_pos,aim_pos,"skill_c96_flare.projectile",characterId,factionid,1.5);
+                    addCoolDown("C96",120,characterId,modifer);
+                }
+            }
+        }
+    }        
 }

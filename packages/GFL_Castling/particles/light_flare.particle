@@ -1,0 +1,359 @@
+author：RST
+
+未经授权不可复用、修改使用
+
+particle_system LightShell_activated_01
+{
+	quota 300
+	material pump_flare_03_01
+	particle_width 3
+	particle_height 3
+	renderer billboard
+	billboard_type point
+	billboard_origin center
+	billboard_rotation_type vertex
+	iteration_interval 0.01
+
+	emitter Point
+	{
+		angle 0
+		colour 0 0 0 0
+		direction 0 1 0
+		emission_rate 80
+		position 0 0 0
+		velocity 0.0001
+		time_to_live 0.1
+		duration 20
+	}
+	affector Scaler
+	{
+		rate 0
+	}
+		affector Rotator
+	{
+		rotation_speed_range_start	-45
+		rotation_speed_range_end	45
+		rotation_range_start	0
+		rotation_range_end	360
+	}
+	affector ColourInterpolator
+	{
+		time0 0
+		colour0 0.1 0.03 0.05 0
+		time1 0.7
+		colour1 0.1 0.03 0.05 0
+		time2 1
+		colour2 0 0 0 0
+	}
+	affector LinearForce{
+		force_vector 0 0 0
+		force_application add
+	}
+	affector DirectionRandomiser 
+	{
+		randomness 0
+		scope 0
+		keep_velocity false
+	}
+}
+
+particle_system LightShell_activated_02
+{
+	quota 300
+	material point_soft_edge_100_pass
+	particle_width 40
+	particle_height 40
+	renderer billboard
+	billboard_type point
+	billboard_origin center
+	billboard_rotation_type vertex
+	iteration_interval 0.005
+
+	emitter Point
+	{
+		angle 0
+		colour 0 0 0 0
+		direction 0 1 0
+		emission_rate 30
+		position 0 0 0
+		velocity 0.0001
+		time_to_live 0.3
+		duration 20
+	}
+	affector Scaler
+	{
+		rate 0
+	}
+		affector Rotator
+	{
+		rotation_speed_range_start	0
+		rotation_speed_range_end	0
+		rotation_range_start	0
+		rotation_range_end	0
+	}
+	affector ColourInterpolator
+	{
+		time0 0
+		colour0 0.03 0.02 0.015 0
+		time1 0.7
+		colour1 0.03 0.02 0.015 0
+		time2 1
+		colour2 0 0 0 0
+	}
+	affector LinearForce{
+		force_vector 0 0 0
+		force_application add
+	}
+	affector DirectionRandomiser 
+	{
+		randomness 0
+		scope 0
+		keep_velocity false
+	}
+}
+particle_system LightShell_activated_03	//放射光
+{
+	quota 300
+	material RainbowWave_pass
+	particle_width 30
+	particle_height 30
+	renderer billboard
+	billboard_type point
+	billboard_origin center
+	billboard_rotation_type vertex
+	iteration_interval 0.01
+
+	emitter Point
+	{
+		angle 0
+		colour 0 0 0 0
+		direction 0 1 0
+		emission_rate 20
+		position 0 0 0
+		velocity 0.0001
+		time_to_live 0.3
+		duration 20
+	}
+	affector Scaler
+	{
+		rate 0
+	}
+		affector Rotator
+	{
+		rotation_speed_range_start	0
+		rotation_speed_range_end	0
+		rotation_range_start	0
+		rotation_range_end	180
+	}
+	affector ColourInterpolator
+	{
+		time0 0
+		colour0 0.05 0.05 0.05 0.05
+		time1 0.7
+		colour1 0.05 0.05 0.05 0.05
+		time2 1
+		colour2 0 0 0 0
+	}
+	affector LinearForce{
+		force_vector 0 0 0
+		force_application add
+	}
+	affector DirectionRandomiser 
+	{
+		randomness 0
+		scope 0
+		keep_velocity false
+	}
+}
+particle_system LightShell_activated_04 	//镜头光晕
+{
+	quota 300
+	material lens_35mm_pass
+	particle_width 40
+	particle_height 40
+	renderer billboard
+	billboard_type point
+	billboard_origin center
+	billboard_rotation_type vertex
+	iteration_interval 0.005
+
+	emitter Point
+	{
+		angle 0
+		colour 0 0 0 0
+		direction 0 1 0
+		emission_rate 20
+		position 0 0 0
+		velocity 0.0001
+		time_to_live 0.3
+		duration 20
+	}
+	affector Scaler
+	{
+		rate 0
+	}
+		affector Rotator
+	{
+		rotation_speed_range_start	0
+		rotation_speed_range_end	0
+		rotation_range_start	30
+		rotation_range_end	30
+	}
+	affector ColourInterpolator
+	{
+		time0 0
+		colour0 0.2 0.2 0.2 0.2
+		time1 0.7
+		colour1 0.2 0.2 0.2 0.2
+		time2 1
+		colour2 0 0 0 0
+	}
+	affector LinearForce{
+		force_vector 0 0 0
+		force_application add
+	}
+	affector DirectionRandomiser 
+	{
+		randomness 0
+		scope 0
+		keep_velocity false
+	}
+}
+
+particle_system LightShell_activated_smoke
+{
+	quota 300
+	material wand_smoke
+	particle_width 0.5
+	particle_height 0.5
+	renderer billboard
+	billboard_type point
+	billboard_origin center
+	billboard_rotation_type vertex
+	iteration_interval 0.01
+
+	emitter Point
+	{
+		angle 0
+		colour 0 0 0 0
+		direction 0 1 0
+		emission_rate 50
+		position 0 0 0
+		velocity_min 2
+		velocity_max 3
+		time_to_live 1.2
+		duration 20
+	}
+	affector Scaler
+	{
+		rate 2
+	}
+		affector Rotator
+	{
+		rotation_speed_range_start	40
+		rotation_speed_range_end	130
+		rotation_range_start	0
+		rotation_range_end	360
+	}
+	affector ColourInterpolator
+	{
+		time0 0
+		colour0 0.5 0.0 0.0 0.5
+		time1 0.7
+		colour1 0.5 0.5 0.5 0.3
+		time2 1
+		colour2 0 0 0 0
+	}
+	affector LinearForce{
+		force_vector 3 12 3
+		force_application add
+	}
+	affector DirectionRandomiser 
+	{
+		randomness 10
+		scope 20
+		keep_velocity false
+	}
+}
+
+
+--------------------------------------material-----------------------------------
+material alpha_blend_base{
+	receive_shadows off
+	technique{
+		pass{
+			lighting off
+			fog_override true
+			depth_write off
+			scene_blend alpha_blend
+		}
+	}
+}
+
+material add_base{
+	receive_shadows off
+	technique{
+		pass{
+			lighting off
+			fog_override true
+			depth_write off
+			scene_blend add
+		}
+	}
+}
+
+material explosion_smoke_04 : add_base
+{   
+    technique{
+    pass{
+        texture_unit{
+            texture explosion_smoke_04.png 	
+}}}}
+material point_soft_edge_100 : add_base
+{   
+    technique{
+    pass{
+        texture_unit{
+            texture point_soft_edge_100.png 	
+}}}}
+material point_soft_edge_100_pass : add_base
+{   
+    technique{
+    pass{
+		depth_func always_pass
+        texture_unit{
+            texture point_soft_edge_100.png 	
+}}}}
+material pump_flare_03_01 : add_base
+{   
+    technique{
+    pass{
+        texture_unit{
+            texture pump_flare_03_01.png 	
+}}}}
+material wand_smoke : alpha_blend_base
+{   
+    technique{
+    pass{
+        texture_unit{
+            texture wand_smoke.png 	
+}}}}
+material RainbowWave_pass : add_base
+{   
+    technique{
+    pass{
+		depth_func always_pass
+        texture_unit{
+            texture RainbowWave.png 	
+}}}}
+material lens_35mm_pass : add_base
+{   
+    technique{
+    pass{
+		depth_func always_pass
+        texture_unit{
+            texture lens_35mm.png 	
+			wave_xform rotate sine 0 0.1 0 0.1
+			tex_address_mode border	
+			tex_border_colour 0 0 0 0
+}}}}

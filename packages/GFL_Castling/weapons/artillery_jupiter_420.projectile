@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projectile class="grenade" name="artillery shell" slot="1" pulldown_in_air="1.0" key="artillery_jupiter_420.projectile" >
     <tag name="rocket"/>
-    <result class="blast" radius="15.0" damage="20" push="1.0" decal="1" faction_compare="not_equal"/>
+    <result class="blast" radius="15.0" damage="30" push="1.0" decal="1" faction_compare="not_equal"/>
     <trigger class="impact" />
     <rotation class="motion" />
     <model mesh_filename="mortar_shell.xml" /> 

@@ -71,14 +71,15 @@ class jupiter: Tracker {
 			else	jud_fire = 0;
 		}
 
-		int circle = 8;	//警示烟雾数量
+		// int circle = 8;	//警示烟雾数量
 
-		for(int i=0;i<circle;i++){
-			CreateProjectile(m_metagame,c_pos.add(Vector3(radd*sin(i*3.14/circle*2),6,radd*cos(i*3.14/circle*2))),c_pos.add(Vector3(radd*sin(i*3.14/circle*2),0,radd*cos(i*3.14/circle*2))),"jupiter_airstrike_warning_s.projectile",-1,m_faction,120,100);
-		}
-		
+		// for(int i=0;i<circle;i++){
+		// 	CreateProjectile(m_metagame,c_pos.add(Vector3(radd*sin(i*3.14/circle*2),6,radd*cos(i*3.14/circle*2))),c_pos.add(Vector3(radd*sin(i*3.14/circle*2),0,radd*cos(i*3.14/circle*2))),"jupiter_airstrike_warning_s.projectile",-1,m_faction,120,100);
+		// }
+
+		spawnStaticProjectile(m_metagame,"jupiter_airstrike_warning.projectile",c_pos,-1,m_faction);
 		playSoundAtLocation(m_metagame,"Jupiter_warning_form_aigei_com.wav",0,c_pos,1.0);
-		m_delaytime=6.0;
+		m_delaytime=7.5;
 		m_strike=true;
 		m_pos=c_pos;
 	}
