@@ -538,6 +538,21 @@ array<const XmlElement@>@ getHitboxes(const Metagame@ metagame) {
 	}
 }
 
+array<const XmlElement@>@ getVehiclePoint(const Metagame@ metagame) {
+	XmlElement@ query = XmlElement(
+		makeQuery(metagame, array<dictionary> = {
+			dictionary = { {"TagName", "data"}, {"class", "spawns"} } }));
+	
+	const XmlElement@ doc = metagame.getComms().query(query);
+	if (doc !is null) {
+		array<const XmlElement@> hitboxes = doc.getElementsByTagName("spawn");
+		return hitboxes;
+	} else {
+		array<const XmlElement@> empty;
+		return @empty;
+	}
+}
+
 // -------------------------------------------------------
 array<const XmlElement@>@ getArmoryHitboxes(const Metagame@ metagame, int factionId) {
 	XmlElement@ query = XmlElement(

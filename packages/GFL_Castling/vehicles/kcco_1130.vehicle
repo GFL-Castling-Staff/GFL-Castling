@@ -38,10 +38,6 @@
     <effect event_key="destroyed" ref="SmallFireRepeat" offset="0.0 2.2 0.3" />
     <effect event_key="destroy" key="other" ref="woosh" post_processing="0" shadow="0" />
     <effect event_key="cleanup" key="other" ref="woosh" post_processing="0" shadow="0" />
-    <event key="receive_damage_xp_reward">
-        <trigger class="receive_damage" />
-        <result class="reward" xp="0.0200" />
-    </event>
     <event key="spot_rp_reward">
         <trigger class="spot" />
         <result class="reward" rp="50.0" />

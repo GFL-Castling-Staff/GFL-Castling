@@ -885,6 +885,7 @@ class BasicCommandHandler : Tracker {
 
 		} else if (checkCommand(message,"admintest")){
 			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
+			int cid = playerInfo.getIntAttribute("character_id");
 			string sid = playerInfo.getStringAttribute("profile_hash");
 			string name = playerInfo.getStringAttribute("name");
 			player_data@ meplayer = player_data(name,sid);
@@ -911,6 +912,7 @@ class BasicCommandHandler : Tracker {
 			meplayer.addInfo(waifu2);
 
 			PlayerProfileSave(m_metagame,meplayer);
+			const XmlElement@ general = getGeneralInfo(m_metagame);
 
 		} else if (checkCommand(message,"1919test")){
 			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
