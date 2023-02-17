@@ -483,7 +483,7 @@
 	</soldier>
 	<!-- ripper -->
 	<soldier name="sf_ripper" spawn_score="3.0" copy_from="default_spawn_ai">
-		<model filename="sf_ripper_halloween.xml" />
+		<model filename="sfd_ripper.xml" />
 		<ai filename="default.ai" />
 		<resources clear_weapons="1" clear_calls="1">
 			<weapon key="sfw_ripper.weapon" enabled="1"/>
@@ -497,7 +497,7 @@
 		</item_class_existence_config>			
 	</soldier>
 	<soldier name="sf_ripper_swap" spawn_score="1.0" copy_from="default_spawn_ai">
-		<model filename="sf_ripper_halloween.xml" />
+		<model filename="sfd_ripper_swap_from_dusk.xml" />
 		<ai filename="elite.ai" />
 		<resources clear_weapons="1" clear_calls="1">
 			<weapon key="sfw_ripper_swap.weapon" enabled="1"/>
@@ -545,7 +545,7 @@
 	<!-- jaeger -->
 	<soldier name="sf_jaeger" spawn_score="2.0" copy_from="default_spawn_ai">
 		<ai filename="sniper.ai" />
-		<model filename="sfd_jaeger_christmas.xml" />
+		<model filename="sfd_jaeger.xml" />
 		<resources clear_weapons="1" clear_calls="1">
 			<weapon key="sfw_jaeger.weapon" enabled="1"/>
 			<carry_item key="sf_ar.carry_item" enabled="1" />

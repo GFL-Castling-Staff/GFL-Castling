@@ -4,12 +4,12 @@
 	<model filename="sfd_guard_swap_from_dusk.xml"><requirement class="weapon" slot="0" key="sfw_guard_swap.weapon"/></model>
 
 	<model filename="sfd_jaeger.xml"><requirement class="weapon" slot="0" key="sfw_jaeger.weapon"/></model>
-	<model filename="sfd_jaeger_christmas.xml"><requirement class="weapon" slot="0" key="sfw_jaeger.weapon"/></model>
+	<!-- <model filename="sfd_jaeger_christmas.xml"><requirement class="weapon" slot="0" key="sfw_jaeger.weapon"/></model> -->
 
 	<model filename="sfd_vespid.xml"><requirement class="weapon" slot="0" key="sfw_vespid.weapon"/></model>
 	<model filename="sfd_striker.xml"><requirement class="weapon" slot="0" key="sfw_striker.weapon"/></model>
-	<!-- <model filename="sfd_ripper.xml"><requirement class="weapon" slot="0" key="sfw_ripper.weapon"/></model> -->
-	<model filename="sf_ripper_halloween.xml"><requirement class="weapon" slot="0" key="sfw_ripper.weapon"/></model>
+	<model filename="sfd_ripper.xml"><requirement class="weapon" slot="0" key="sfw_ripper.weapon"/></model>
+	<!-- <model filename="sf_ripper_halloween.xml"><requirement class="weapon" slot="0" key="sfw_ripper.weapon"/></model> -->
 
 	<model filename="sfd_boss_architect.xml"><requirement class="weapon" slot="0" key="sfw_boss_architect.weapon"/></model>
 	<model filename="sfd_boss_hunter.xml"><requirement class="weapon" slot="0" key="sfw_hunter.weapon"/></model>
@@ -37,8 +37,8 @@
 	<!-- <model filename="sfd_dinergate_christmas2_from_SAIWA.xml"><requirement class="weapon" slot="0" key="sfw_dinergate.weapon"/></model>
 	<model filename="sfd_dinergate_christmas_from_SAIWA.xml"><requirement class="weapon" slot="0" key="sfw_dinergate.weapon"/></model> -->
 	<model filename="sfd_tarantula.xml"><requirement class="weapon" slot="0" key="sfw_tarantula.weapon"/></model>
-	<!-- <model filename="sfd_ripper_swap_from_dusk.xml"><requirement class="weapon" slot="0" key="sfw_ripper_swap.weapon"/></model> -->
-	<model filename="sf_ripper_halloween.xml"><requirement class="weapon" slot="0" key="sfw_ripper_swap.weapon"/></model>
+	<model filename="sfd_ripper_swap_from_dusk.xml"><requirement class="weapon" slot="0" key="sfw_ripper_swap.weapon"/></model>
+	<!-- <model filename="sf_ripper_halloween.xml"><requirement class="weapon" slot="0" key="sfw_ripper_swap.weapon"/></model> -->
 
 	<model filename="sfd_jaeger_swap_from_dusk.xml"><requirement class="weapon" slot="0" key="sfw_jaeger_swap.weapon"/></model>
 	<model filename="sfd_vespid_swap_from_dusk.xml"><requirement class="weapon" slot="0" key="sfw_vespid_swap.weapon"/></model>

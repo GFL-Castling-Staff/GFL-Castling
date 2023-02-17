@@ -2477,7 +2477,7 @@
 
 <weapon key="gkw_ppsh41.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="smg"/>
-	<specification accuracy_factor="0.9" barrel_offset="0.4" class="0" slot="0" magazine_size="71" carry_in_two_hands="1" name="PPSH-41" projectile_speed="125" retrigger_time="0.06" suppressed="0" burst_shots="1" sustained_fire_grow_step="-0.18" sustained_fire_diminish_rate="-2.2" spread_range="0.5" stance_accuracy_rate="1.0" stab_enabled="1"/>
+	<specification accuracy_factor="0.9" barrel_offset="0.4" class="0" slot="0" magazine_size="71" carry_in_two_hands="1" name="PPSH-41" projectile_speed="125" retrigger_time="0.06" suppressed="0" burst_shots="1" sustained_fire_grow_step="-0.25" sustained_fire_diminish_rate="-1.5" spread_range="0.3" stance_accuracy_rate="1.0" stab_enabled="1"/>
 	<commonness value="0.2" in_stock="1" can_respawn_with="1"/>
 	<inventory encumbrance="15.0" buy_price="5.0" sell_price="5.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -2532,7 +2532,7 @@
 
 <weapon key="gkw_ppsh41_602.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="smg"/>
-	<specification accuracy_factor="0.9" barrel_offset="0.4" class="0" slot="0" magazine_size="71" carry_in_two_hands="1" name="PPSH-41-[Far Side of a Balloon]" projectile_speed="125" retrigger_time="0.06" suppressed="0" burst_shots="1" sustained_fire_grow_step="-0.18" sustained_fire_diminish_rate="-2.2" spread_range="0.5" stance_accuracy_rate="1.0" stab_enabled="1"/>
+	<specification accuracy_factor="0.9" barrel_offset="0.4" class="0" slot="0" magazine_size="71" carry_in_two_hands="1" name="PPSH-41-[Far Side of a Balloon]" projectile_speed="125" retrigger_time="0.06" suppressed="0" burst_shots="1" sustained_fire_grow_step="-0.25" sustained_fire_diminish_rate="-1.5" spread_range="0.3" stance_accuracy_rate="1.0" stab_enabled="1"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="15.0" buy_price="5.0" sell_price="5.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -2587,7 +2587,7 @@
 
 <weapon key="gkw_ppsh41mod3.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="smg"/>
-	<specification accuracy_factor="0.95" barrel_offset="0.4" class="0" slot="0" magazine_size="71" carry_in_two_hands="1" name="PPSH-41 (MOD3)" projectile_speed="125" retrigger_time="0.054" suppressed="0" burst_shots="1" sustained_fire_grow_step="-0.18" sustained_fire_diminish_rate="-2.2" spread_range="0.5" stance_accuracy_rate="1.5" sight_range_modifier="1.25" stab_enabled="1"/>
+	<specification accuracy_factor="0.95" barrel_offset="0.4" class="0" slot="0" magazine_size="71" carry_in_two_hands="1" name="PPSH-41 (MOD3)" projectile_speed="125" retrigger_time="0.054" suppressed="0" burst_shots="1" sustained_fire_grow_step="-0.25" sustained_fire_diminish_rate="-1.5" spread_range="0.3" stance_accuracy_rate="1.5" sight_range_modifier="1.25" stab_enabled="1"/>
 	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="2.0" buy_price="250.0" sell_price="250.0"/>
 	<capacity value="1" source="rank" source_value="0"/>
@@ -2642,7 +2642,7 @@
 
 <weapon key="gkw_ppsh41mod3_602.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="smg"/>
-	<specification accuracy_factor="0.95" barrel_offset="0.4" class="0" slot="0" magazine_size="71" carry_in_two_hands="1" name="PPSH-41(MOD3)-[Far Side of a Balloon]" projectile_speed="125" retrigger_time="0.054" suppressed="0" burst_shots="1" sustained_fire_grow_step="-0.18" sustained_fire_diminish_rate="-2.2" spread_range="0.5" stance_accuracy_rate="1.5" sight_range_modifier="1.25" stab_enabled="1"/>
+	<specification accuracy_factor="0.95" barrel_offset="0.4" class="0" slot="0" magazine_size="71" carry_in_two_hands="1" name="PPSH-41(MOD3)-[Far Side of a Balloon]" projectile_speed="125" retrigger_time="0.054" suppressed="0" burst_shots="1" sustained_fire_grow_step="-0.25" sustained_fire_diminish_rate="-1.5" spread_range="0.3" stance_accuracy_rate="1.5" sight_range_modifier="1.25" stab_enabled="1"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="2.0" buy_price="250.0" sell_price="250.0"/>
 	<capacity value="1" source="rank" source_value="0"/>
@@ -29728,7 +29728,6 @@
 	<stance state_key="standing" accuracy="0.85"/>
 	<stance state_key="crouching" accuracy="1.45"/>
 	<stance state_key="prone" accuracy="1.45"/>
-	<modifier class="detectability" value="0.2"/>
 	<modifier class="hit_success_probability" value="-0.25"/>
 	<modifier class="speed" value="0.35"/>
 	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
@@ -44105,7 +44104,6 @@
 	<stance state_key="standing" accuracy="0.85"/>
 	<stance state_key="crouching" accuracy="1.45"/>
 	<stance state_key="prone" accuracy="1.45"/>
-	<modifier class="detectability" value="0.2"/>
 	<modifier class="hit_success_probability" value="-0.25"/>
 	<modifier class="speed" value="0.1"/>
 	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
@@ -50975,7 +50973,7 @@
 
 <weapon key="parw_rodelero.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="autorifle"/>
-	<specification retrigger_time="0.05" accuracy_factor="1.0" sustained_fire_grow_step="0.40" sustained_fire_diminish_rate="1.2" magazine_size="4" can_shoot_standing="1" suppressed="0" name="Rodelero" class="0" projectile_speed="120.0" barrel_offset="0.6"/>
+	<specification retrigger_time="0.05" accuracy_factor="1.0" sustained_fire_grow_step="0.40" sustained_fire_diminish_rate="1.2" magazine_size="3" can_shoot_standing="1" suppressed="0" name="Rodelero" class="0" projectile_speed="120.0" barrel_offset="0.6"/>
 	<animation state_key="recoil" animation_key="recoil2, dreamer"/>
 	<animation key="recoil" stance_key="over_wall" animation_key="recoil2, dreamer"/>
 	<animation key="recoil" stance_key="crouching" animation_key="recoil2, dreamer"/>
@@ -50998,7 +50996,7 @@
 	<model filename="parw_rodelero.xml"/>
 	<hud_icon filename="parw_rodelero.png"/>
 	<projectile file="bullet_paradeus.projectile">
-	<result class="blast" damage="1.0" radius="1.5" decal="1" push="0" character_state="death" faction_compare="not_equal"/>
+	<result class="blast" damage="1.1" radius="1.5" decal="1" push="0" character_state="death" faction_compare="not_equal"/>
 	<trigger class="impact"/>
 	<trail probability="1.0" key="laser_tiaotiao"/>
 	</projectile>
@@ -51011,6 +51009,7 @@
 	<stance state_key="crouching" accuracy="1.0"/>
 	<stance state_key="prone" accuracy="1.0"/>
 	<stance state_key="over_wall" accuracy="1.0"/>
+	<modifier class="hit_success_probability" value="-0.2"/>
 	<commonness value="0.0001" in_stock="1" can_respawn_with="1"/>
 	<inventory encumbrance="0.0" price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>

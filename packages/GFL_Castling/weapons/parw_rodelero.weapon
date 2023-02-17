@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapon file="paradeus.base_weapon" key="parw_rodelero.weapon">
     <tag name="autorifle" />
-    <specification retrigger_time="0.05" accuracy_factor="1.0" sustained_fire_grow_step="0.40" sustained_fire_diminish_rate="1.2" magazine_size="4" can_shoot_standing="1" suppressed="0" name="Rodelero" class="0" projectile_speed="120.0" barrel_offset="0.6" />
+    <specification retrigger_time="0.05" accuracy_factor="1.0" sustained_fire_grow_step="0.40" sustained_fire_diminish_rate="1.2" magazine_size="3" can_shoot_standing="1" suppressed="0" name="Rodelero" class="0" projectile_speed="120.0" barrel_offset="0.6" />
     <animation state_key="recoil" animation_key="recoil2, dreamer" />
     <animation key="recoil" stance_key="over_wall" animation_key="recoil2, dreamer" />
     <animation key="recoil" stance_key="crouching" animation_key="recoil2, dreamer" />
@@ -24,7 +24,7 @@
     <model filename="parw_rodelero.xml" />
     <hud_icon filename="parw_rodelero.png" />
     <projectile file="bullet_paradeus.projectile">
-        <result class="blast" damage="1.0" radius="1.5" decal="1" push="0" character_state="death" faction_compare="not_equal"/>
+        <result class="blast" damage="1.1" radius="1.5" decal="1" push="0" character_state="death" faction_compare="not_equal"/>
         <trigger class="impact" />
         <trail probability="1.0" key="laser_tiaotiao" />
     </projectile>
@@ -37,4 +37,5 @@
     <stance state_key="crouching" accuracy="1.0"/>
     <stance state_key="prone" accuracy="1.0"/>
     <stance state_key="over_wall" accuracy="1.0"/>
+    <modifier class="hit_success_probability" value="-0.2"/>
 </weapon>
