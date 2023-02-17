@@ -3674,6 +3674,79 @@ class CommandSkill : Tracker {
         }
 
     }
+
+    void excuteMosinNagant(int characterId,int playerId,SkillModifer@ modifer){
+        bool ExistQueue = false;
+        int j=-1;
+        for (uint i=0;i<SkillArray.length();i++){
+            if (InCooldown(characterId,modifer,SkillArray[i]) && SkillArray[i].m_weapontype=="sniper") {
+                ExistQueue=true;
+                j=i;
+            }
+        }
+        if (ExistQueue){
+            dictionary a;
+            a["%time"] = ""+SkillArray[j].m_time;
+            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            return;
+        }
+        const XmlElement@ characterinfo = getCharacterInfo(m_metagame, characterId);
+        const XmlElement@ playerinfo = getPlayerInfo(m_metagame, playerId);
+        if (!playerinfo.hasAttribute("aim_target")) return;
+        string target = playerinfo.getStringAttribute("aim_target");
+        Vector3 c_pos = stringToVector3(characterinfo.getStringAttribute("position"));
+        Vector3 s_pos = stringToVector3(target);
+        int factionid = characterinfo.getIntAttribute("faction_id");
+
+        int m_fnum = m_metagame.getFactionCount();
+        array<const XmlElement@> affectedCharacter;
+        for(int i=0;i<m_fnum;i++) {
+            if(i!=factionid) {
+                array<const XmlElement@> affectedCharacter2;
+                affectedCharacter2 = getCharactersNearPosition(m_metagame,s_pos,i,5.0f);
+                if (affectedCharacter2 !is null){
+                    for(uint x=0;x<affectedCharacter2.length();x++){
+                        affectedCharacter.insertLast(affectedCharacter2[x]);
+                    }
+                }
+            }
+        }
+
+        if (affectedCharacter !is null && affectedCharacter.length > 0){
+            int closestIndex = -1;
+            float closestDistance = -1.0f;                
+            for(uint i=0;i<affectedCharacter.length();i++){
+                float distance = getPositionDistance(c_pos, stringToVector3(affectedCharacter[i].getStringAttribute("position")));
+                if (distance < closestDistance || closestDistance < 0.0){
+                    closestDistance = distance;
+                    closestIndex = i;
+                }
+            }
+
+            if (closestIndex >= 0){
+                KillCountArray[index].m_killnum -= 6;
+                int target_id = affectedCharacter[closestIndex].getIntAttribute("id");
+                playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 1.5s",false);
+                TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                DelayAntiPersonSnipeRequest@ snipe_quest = DelayAntiPersonSnipeRequest(m_metagame,1.5,characterId,factionid,"snipe_hit_kennedy.projectile",c_pos.add(Vector3(0,0.5,0)),target_id);
+                snipe_quest.setKey("sniper_bullet_carcano.projectile");
+                tasker.add(snipe_quest);
+                sendFactionMessageKeySaidAsCharacter(m_metagame,0,characterId,"carcano_1938_skill_fire");
+                addCoolDown("sniper",5,characterId,modifer);
+                array<string> Voice={
+                "Carcano1938_SKILL1_JP.wav",
+                "Carcano1938_SKILL2_JP.wav",
+                "Carcano1938_SKILL3_JP.wav"
+                };
+                playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1.0);                            
+            }
+        }
+        else{
+            sendFactionMessageKeySaidAsCharacter(m_metagame,0,characterId,"snipe_skill_notfound");
+            addCoolDown("sniper",3,characterId,modifer,"normal",false);
+        }  
+    }
+
     void excuteG41Onlyskill(int characterId,int playerId,SkillModifer@ modifer){
         bool ExistQueue = false;
         int j=-1;
