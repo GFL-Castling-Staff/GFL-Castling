@@ -488,11 +488,11 @@
 		<resources clear_weapons="1" clear_calls="1">
 			<weapon key="sfw_ripper.weapon" enabled="1"/>
 			<weapon key="sfw_m2g.weapon" enabled="1"/>
-			<carry_item key="sf_ar_1" enabled="1" />
+			<carry_item key="sf_ar.carry_item" enabled="1" />
 			<projectile key="sf_ap_grenade.projectile" enabled="1" />
 		</resources>
 		<item_class_existence_config>
-			<item_class_existence class="weapon" slot="1" probability="0.2" />
+			<item_class_existence class="weapon" slot="1" probability="0.3" />
 			<item_class_existence class="grenade" slot="0" probability="0.5" />
 		</item_class_existence_config>			
 	</soldier>
@@ -502,12 +502,12 @@
 		<resources clear_weapons="1" clear_calls="1">
 			<weapon key="sfw_ripper_swap.weapon" enabled="1"/>
 			<weapon key="sfw_m2g.weapon" enabled="1"/>
-			<carry_item key="vest_15hp_elite_2" enabled="1" />
+			<carry_item key="vest_15hp_elite.carry_item" enabled="1" />
 			<projectile key="sf_ap_grenade.projectile" enabled="1" />
 			<call key="sf_assault.call" />
 		</resources>
 		<item_class_existence_config>
-			<item_class_existence class="weapon" slot="1" probability="0.4" />
+			<item_class_existence class="weapon" slot="1" probability="0.6" />
 			<item_class_existence class="grenade" slot="0" probability="1.0" />
 		</item_class_existence_config>	
 		<attribute_config class="rp">
@@ -533,7 +533,7 @@
 		<ai filename="shield.ai" />
 		<resources clear_weapons="1" clear_calls="1">
 			<weapon key="sfw_guard_swap.weapon" enabled="1"/>
-			<carry_item key="vest_15hp_elite.carry_item" enabled="1" />
+			<carry_item key="vest_40hp_21" enabled="1" />
 			<weapon key="cover_deploy_enemy.weapon" enabled="1"/>
 			<weapon key="cover_deploy_2.weapon" enabled="1"/>
 			<projectile key="sf_ap_mine.projectile" enabled="1.0" />
