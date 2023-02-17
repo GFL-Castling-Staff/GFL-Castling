@@ -137,7 +137,6 @@
         <stance state_key="standing" accuracy="0.85" />
         <stance state_key="crouching" accuracy="1.45" />
         <stance state_key="prone" accuracy="1.45" />
-        <modifier class="detectability" value="0.2" />
         <modifier class="hit_success_probability" value="-0.25" />
         <modifier class="speed" value="0.35" />
         <target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0" />
