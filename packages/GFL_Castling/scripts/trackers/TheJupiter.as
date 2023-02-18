@@ -79,7 +79,7 @@ class jupiter: Tracker {
 
 		spawnStaticProjectile(m_metagame,"jupiter_airstrike_warning.projectile",c_pos,-1,m_faction);
 		playSoundAtLocation(m_metagame,"Jupiter_warning_form_aigei_com.wav",0,c_pos,1.0);
-		m_delaytime=7.5;
+		m_delaytime=7.0;
 		m_strike=true;
 		m_pos=c_pos;
 	}
