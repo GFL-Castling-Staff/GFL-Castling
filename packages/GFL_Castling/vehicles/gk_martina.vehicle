@@ -42,6 +42,9 @@
 	collision_response_factor="0.35"
 	visual_offset="0 0.12 -0.08" 
 	friction_offset="0.05"
+	destroy_on_top_hit="1"
+	destroy_on_top_hit_time="2.0"
+	gravity="-70"
 	drag_offset="-0.05" />
 	<sky_diving chute_offset="0 2.55 0.0" trigger_height="20.0" gravity="-10" mesh_filename="chute_large.mesh" texture_filename="chute.png" />
 	<visual class="chassis" mesh_filename="jeep_base.mesh" texture_filename="jeep.png" />

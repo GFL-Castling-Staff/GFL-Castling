@@ -43,6 +43,9 @@
 	collision_model_extent="2.56 2.0 4.0" 
 	visual_offset="0 0.12 0.0" 
 	friction_offset="0.05"
+	destroy_on_top_hit="1"
+	destroy_on_top_hit_time="2.0"
+	gravity="-70"
 	drag_offset="-0.05" />
 	<modifier class="blast_damage" value="-0.5" />
 	<sky_diving chute_offset="0 2.75 0.0" trigger_height="20.0" gravity="-10" mesh_filename="chute_large.mesh" texture_filename="chute.png" />
