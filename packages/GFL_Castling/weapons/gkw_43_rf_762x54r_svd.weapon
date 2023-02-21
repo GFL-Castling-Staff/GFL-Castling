@@ -10,7 +10,7 @@
 	magazine_size="10" 
 	can_shoot_standing="1" 
 	suppressed="0" 
-	name="SVD" 
+	name="Dragunov SVD" 
 	class="4" 
 	burst_shots="1"
 	last_burst_retrigger_time="0.125"
@@ -23,7 +23,7 @@
     <inventory encumbrance="10.0" buy_price="40.0" sell_price="40.0" />
     <next_in_chain key="gkw_svd_skill.weapon" share_ammo="1"/>
     <!--Animations-->
-    <animation state_key="hold_casual"			animation_key="dancing, kazachok" />
+    <animation state_key="hold_casual" animation_key="dancing, kazachok" />
     <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
     <!--Sounds-->
     <sound key="fire" fileref="svd_fire_FromSURVARIUM.wav" pitch_variety="0.05" volume="1.2" />
@@ -64,7 +64,7 @@
 	magazine_size="10" 
 	can_shoot_standing="1" 
 	suppressed="0" 
-	name="SVD-[Assault Focus]" 
+	name="Dragunov SVD-[Assault Focus]" 
 	class="4" 
 	burst_shots="1"
 	last_burst_retrigger_time="0.1"
