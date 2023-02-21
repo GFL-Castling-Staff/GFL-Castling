@@ -1,22 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <calls>
-	<call key="sf_trooper.call" initiation_comment1="Reinforcements" initiation_comment2="" acknowledge_comment="Roger" launch_comment="" notify_metagame="1">
+	<call key="sf_trooper.call" radio_view_text="Reinforcements - Paratrooper Squad" initiation_comment="Requesting 20 paratroopers" acknowledge_comment="Roger" launch_comment="" notify_metagame="1">
 		<round instances="2" instance_class="soldier" instance_key="sf_striker_swap" instance_spread="10 15 10" common_spread="0 0 0" launch_time="3.0" spawn_time="6.0">
 			<effect class="launch" ref="ShadowAirplaneFlyby" shadow="1" />
 			<sound class="launch" fileref="plane_flyby.wav" />
 		</round>
-		<round instances="4" instance_class="soldier" instance_key="sf_striker" instance_spread="10 15 10" common_spread="0 0 0" launch_time="3.0" spawn_time="6.0">
+		<round instances="2" instance_class="soldier" instance_key="sf_striker" instance_spread="10 15 10" common_spread="0 0 0" launch_time="3.0" spawn_time="6.0">
 		</round>
-		<round instances="3" instance_class="soldier" instance_key="sf_vespid_swap" instance_spread="10 15 10" common_spread="0 0 0" launch_time="3.0" spawn_time="6.0">
+		<round instances="2" instance_class="soldier" instance_key="sf_vespid_swap" instance_spread="10 15 10" common_spread="0 0 0" launch_time="3.0" spawn_time="6.0">
 		</round>
 		<round instances="6" instance_class="soldier" instance_key="sf_vespid" instance_spread="10 15 10" common_spread="0 0 0" launch_time="3.0" spawn_time="6.0">
 		</round>		
-		<round instances="3" instance_class="soldier" instance_key="sf_ripper" instance_spread="10 15 10" common_spread="0 0 0" launch_time="3.0" spawn_time="6.0">
+		<round instances="2" instance_class="soldier" instance_key="sf_ripper" instance_spread="10 15 10" common_spread="0 0 0" launch_time="3.0" spawn_time="6.0">
 		</round>		
 		<round instances="6" instance_class="soldier" instance_key="sf_ripper_swap" instance_spread="10 15 10" common_spread="0 0 0" launch_time="3.0" spawn_time="6.0">
 		</round>								
 		<hud_icon filename="call_Airborne_architect.png" />
 		<capacity value="100" source="rank" source_value="0.0" />
-		<inventory encumbrance="0.0" price="200.0" />
+		<inventory encumbrance="0.0" price="500.0" />
 	</call>
+	<call key="sf_trooper_small_assault.call" radio_view_text="Reinforcements - Paratrooper assault" initiation_comment="Requesting assault paratroopers" acknowledge_comment="Roger" launch_comment="" notify_metagame="1">
+		<round instances="3" instance_class="soldier" instance_key="sf_striker" instance_spread="10 15 10" common_spread="0 0 0" launch_time="3.0" spawn_time="3.0">
+			<effect class="launch" ref="ShadowAirplaneFlyby" shadow="1" />
+			<sound class="launch" fileref="plane_flyby.wav" />
+		</round>
+		<round instances="3" instance_class="soldier" instance_key="sf_ripper" instance_spread="10 15 10" common_spread="0 0 0" launch_time="3.0" spawn_time="3.0">
+		</round>
+		<hud_icon filename="call_Airborne_architect.png" />
+		<capacity value="100" source="rank" source_value="0.0" />
+		<inventory encumbrance="0.0" price="100.0" />
+	</call>	
+	<call key="sf_trooper_small_scout.call" radio_view_text="Reinforcements - Paratrooper scout" initiation_comment="Requesting scout paratroopers" acknowledge_comment="Roger" launch_comment="" notify_metagame="1">
+		<round instances="3" instance_class="soldier" instance_key="sf_jaeger" instance_spread="10 15 10" common_spread="0 0 0" launch_time="3.0" spawn_time="3.0">
+			<effect class="launch" ref="ShadowAirplaneFlyby" shadow="1" />
+			<sound class="launch" fileref="plane_flyby.wav" />
+		</round>
+		<round instances="3" instance_class="soldier" instance_key="sf_vespid" instance_spread="10 15 10" common_spread="0 0 0" launch_time="3.0" spawn_time="3.0">
+		</round>
+		<hud_icon filename="call_Airborne_architect.png" />
+		<capacity value="100" source="rank" source_value="0.0" />
+		<inventory encumbrance="0.0" price="100.0" />
+	</call>		
 </calls>

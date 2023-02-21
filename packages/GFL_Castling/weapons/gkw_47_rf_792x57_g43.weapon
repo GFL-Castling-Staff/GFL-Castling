@@ -43,7 +43,8 @@
         kill_decay_end_time="1.933" />
     </projectile>
     <!--Accuracy, Movement speed-->
-    <stance state_key="walking" accuracy="0.3" />
+    <stance state_key="running" accuracy="0.3" />
+    <stance state_key="walking" accuracy="0.5" />
     <stance state_key="crouch_moving" accuracy="0.65" />
     <stance state_key="prone_moving" accuracy="0.7" />
     <stance state_key="standing" accuracy="0.85"/>
