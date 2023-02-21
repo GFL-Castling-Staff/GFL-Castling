@@ -4,7 +4,7 @@
 	name="Amos" 
 	key="armored_truck.vehicle" 
 	time_to_live_unsteerable="360" 
-	respawn_time="480" 
+	respawn_time="300" 
 	map_view_atlas_index="2" 
 	max_character_collision_speed="20" 
 	max_character_collision_speed_on_normal="20" 
@@ -45,7 +45,7 @@
 		tracked="1"
 		gears="1"/>
     <physics 
-		max_health="150.0"
+		max_health="200.0"
 		mass="2000.0"
 		gravity="-80"
 		broken_mass="2000"
