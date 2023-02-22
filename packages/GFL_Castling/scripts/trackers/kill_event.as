@@ -356,10 +356,13 @@ class kill_event : Tracker {
                     updateHealByKillEvent(characterId,factionId,4,30,"vest",kill_to_heal_scale);
                 }
                 if(startsWith(c_armorType,"tms_t6")){
-                    updateHealByKillEvent(characterId,factionId,4,30,"vest",kill_to_heal_scale);
                     if (c_weaponType=="gkw_hawk97mod3.weapon" || c_weaponType =="gkw_hawk97mod3_5805.weapon")
                     {
-                        updateHealByKillEvent(characterId,factionId,4,30,"vest",);
+                        updateHealByKillEvent(characterId,factionId,4,30,"vest",kill_to_heal_scale+1);
+                    }
+                    else
+                    {
+                        updateHealByKillEvent(characterId,factionId,4,30,"vest",kill_to_heal_scale);
                     }
                 }
                 updateHealByKillEvent(characterId,factionId,int(healOnKillWeaponList[c_weaponType]),15,"weapon",kill_to_heal_scale);
