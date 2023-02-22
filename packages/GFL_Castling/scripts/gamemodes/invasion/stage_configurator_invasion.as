@@ -16,6 +16,8 @@
 #include "TheJupiter.as"
 #include "spawn_in_base_call_handler.as"
 #include "call_sort.as"
+#include "deadzone_hack.as"
+
 
 // ------------------------------------------------------------------------------------------------
 class StageConfiguratorInvasion : StageConfigurator {
@@ -183,7 +185,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 	// ------------------------------------------------------------------------------------------------
 	protected void setupNormalStages() {
-		// addStage(setupStage105()); 		  // map105_2 shockzone by diling
+		addStage(setupDeadZone());
 		// addStage(setupStage1_rust());          // map2_?
 		// addStage(setupStageRace());          // DEJAHU
 		addStage(setupStage1());          // map2
@@ -516,13 +518,13 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.m_playerAiCompensation = 3;
         stage.m_playerAiReduction = 0;
 		stage.m_finalBattle = true;
-		stage.m_fogOffset= 28;
-		stage.m_fogRange= 28.5;
+		stage.m_fogOffset= 34;
+		stage.m_fogRange= 30;
 		stage.m_minRandomCrates = 1; 
 		stage.m_maxRandomCrates = 3;
 		
 		stage.m_primaryObjective = "phases";
-
+		stage.addTracker(DeadZoneHack(m_metagame));
 
 		{
 			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0, 0.6, 0.2));                                            
@@ -539,14 +541,14 @@ class StageConfiguratorInvasion : StageConfigurator {
 			stage.m_factions.insertLast(f);                                                                
 		}
 		{
-			Faction f(FactionConfig(2, "eild.xml", "E.I.L.D.", "0.3 0.17 0.11", "eild.xml"), createCommanderAiCommand(2, 0.80, 0.20));             
+			Faction f(FactionConfig(2, "eild.xml", "E.I.L.D.", "0.3 0.17 0.11", "eild.xml"), createCommanderAiCommand(2, 0.80, 0.20,false));             
 			f.m_overCapacity = 70;
             f.m_capacityOffset = 80;
 			f.m_capacityMultiplier = 0.001;
 			stage.m_factions.insertLast(f);                                    
 		}
 		{
-			Faction f(FactionConfig(3, "sf.xml", "S.F.", "0.91 0.11 0.20", "sf.xml"), createCommanderAiCommand(3, 0.75, 0.15));             
+			Faction f(FactionConfig(3, "sf.xml", "S.F.", "0.91 0.11 0.20", "sf.xml"), createCommanderAiCommand(3, 0.9, 0.1,false));
 			f.m_overCapacity = 70;                                             
             f.m_capacityOffset = 40;
 			f.m_capacityMultiplier = 0.001;
@@ -572,9 +574,8 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 		// metadata
 		stage.m_primaryObjective = "koth";
-		stage.m_kothTargetBase = "All SF Base";
+		stage.m_kothTargetBase = "Escape";
 
-		
 		return stage;
 	} 	
 	protected Stage@ setupStage106(){

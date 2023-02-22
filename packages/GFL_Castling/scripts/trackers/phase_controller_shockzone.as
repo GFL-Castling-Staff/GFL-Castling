@@ -39,7 +39,7 @@ class map105_Phase : Tracker {
 		m_metagame.getComms().send(
 			"<command class='soldier_ai' faction='2'>" + 
 			"  <parameter class='willingness_to_charge' value='0.5' />" +
-			"</command>");		
+			"</command>");
 	}
 
 	// --------------------------------------------
