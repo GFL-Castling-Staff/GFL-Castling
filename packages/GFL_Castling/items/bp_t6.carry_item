@@ -14,7 +14,7 @@
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0" />
         <modifier class="speed" value="0.1" />
-        <modifier class="detectability" value="0.2" />
+        <modifier class="detectability" value="0.1" />
         <modifier class="hit_success_probability" value="-1.3" /> 
 	</carry_item>
 	<carry_item key="bp_t6_1" time_to_live_out_in_the_open="0" name="16LAB Nano Reinforced Armor Plate" transform_on_consume="bp_t6_2" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
@@ -31,7 +31,7 @@
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
 		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
         <modifier class="speed" value="0.1" />
-        <modifier class="detectability" value="0.2" />
+        <modifier class="detectability" value="0.1" />
         <modifier class="hit_success_probability" value="-1.3" /> 
 	</carry_item>
 	<carry_item key="bp_t6_2" time_to_live_out_in_the_open="0" name="16LAB Nano Reinforced Armor Plate" transform_on_consume="bp_t6_3" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
@@ -48,7 +48,7 @@
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0" />
         <modifier class="speed" value="0.1" />
-        <modifier class="detectability" value="0.2" />
+        <modifier class="detectability" value="0.1" />
         <modifier class="hit_success_probability" value="-1.3" /> 
 	</carry_item>
 	<carry_item key="bp_t6_3" time_to_live_out_in_the_open="0" name="16LAB Nano Reinforced Armor Plate" transform_on_consume="bp_t6_4" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
@@ -65,7 +65,7 @@
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
 		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
         <modifier class="speed" value="0.1" />
-        <modifier class="detectability" value="0.2" />
+        <modifier class="detectability" value="0.1" />
         <modifier class="hit_success_probability" value="-1.3" /> 
 	</carry_item>
 	<carry_item key="bp_t6_4" time_to_live_out_in_the_open="0" name="16LAB Nano Reinforced Armor Plate" transform_on_consume="bp_t6_5" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
@@ -82,7 +82,7 @@
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0" />
         <modifier class="speed" value="0.1" />
-        <modifier class="detectability" value="0.2" />
+        <modifier class="detectability" value="0.1" />
         <modifier class="hit_success_probability" value="-1.3" /> 
 	</carry_item>
 	<carry_item key="bp_t6_5" time_to_live_out_in_the_open="0" name="16LAB Nano Reinforced Armor Plate" transform_on_consume="bp_t6_6" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
@@ -99,7 +99,7 @@
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
 		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
         <modifier class="speed" value="0.1" />
-        <modifier class="detectability" value="0.2" />
+        <modifier class="detectability" value="0.1" />
         <modifier class="hit_success_probability" value="-1.3" /> 
 	</carry_item>
 	<carry_item key="bp_t6_6" time_to_live_out_in_the_open="0" name="16LAB Nano Reinforced Armor Plate" transform_on_consume="bp_t6_7" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
@@ -116,7 +116,7 @@
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0" />
         <modifier class="speed" value="0.1" />
-        <modifier class="detectability" value="0.2" />
+        <modifier class="detectability" value="0.1" />
         <modifier class="hit_success_probability" value="-1.3" /> 
 	</carry_item>
 	<carry_item key="bp_t6_7" time_to_live_out_in_the_open="0" name="16LAB Nano Reinforced Armor Plate" transform_on_consume="bp_t6_8" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
@@ -133,7 +133,7 @@
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
 		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
         <modifier class="speed" value="0.1" />
-        <modifier class="detectability" value="0.2" />
+        <modifier class="detectability" value="0.1" />
         <modifier class="hit_success_probability" value="-1.3" /> 
 	</carry_item>
 	<carry_item key="bp_t6_8" time_to_live_out_in_the_open="0" name="16LAB Nano Reinforced Armor Plate" transform_on_consume="bp_t6_9" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
@@ -150,7 +150,7 @@
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0" />
         <modifier class="speed" value="0.1" />
-        <modifier class="detectability" value="0.2" />
+        <modifier class="detectability" value="0.1" />
         <modifier class="hit_success_probability" value="-1.3" /> 
 	</carry_item>
 	<carry_item key="bp_t6_9" time_to_live_out_in_the_open="0" name="16LAB Nano Reinforced Armor Plate" transform_on_consume="bp_t6_10" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
@@ -167,7 +167,7 @@
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
 		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
         <modifier class="speed" value="0.1" />
-        <modifier class="detectability" value="0.2" />
+        <modifier class="detectability" value="0.1" />
         <modifier class="hit_success_probability" value="-1.3" /> 
 	</carry_item>
 	<carry_item key="bp_t6_10" time_to_live_out_in_the_open="0" name="16LAB Nano Reinforced Armor Plate" transform_on_consume="bp_t6_11" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
@@ -184,7 +184,7 @@
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0" />
         <modifier class="speed" value="0.1" />
-        <modifier class="detectability" value="0.2" />
+        <modifier class="detectability" value="0.1" />
         <modifier class="hit_success_probability" value="-1.3" /> 
 	</carry_item>
 	<carry_item key="bp_t6_11" time_to_live_out_in_the_open="0" name="16LAB Nano Reinforced Armor Plate" transform_on_consume="bp_t6_12" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
@@ -201,7 +201,7 @@
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
 		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
         <modifier class="speed" value="0.1" />
-        <modifier class="detectability" value="0.2" />
+        <modifier class="detectability" value="0.1" />
         <modifier class="hit_success_probability" value="-1.3" /> 
 	</carry_item>
 	<carry_item key="bp_t6_12" time_to_live_out_in_the_open="0" name="16LAB Nano Reinforced Armor Plate" transform_on_consume="bp_t6_13" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
@@ -218,7 +218,7 @@
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0" />
         <modifier class="speed" value="0.1" />
-        <modifier class="detectability" value="0.2" />
+        <modifier class="detectability" value="0.1" />
         <modifier class="hit_success_probability" value="-1.3" /> 
 	</carry_item>
 	<carry_item key="bp_t6_13" time_to_live_out_in_the_open="0" name="16LAB Nano Reinforced Armor Plate" transform_on_consume="bp_t6_14" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
@@ -235,7 +235,7 @@
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
 		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
         <modifier class="speed" value="0.1" />
-        <modifier class="detectability" value="0.2" />
+        <modifier class="detectability" value="0.1" />
         <modifier class="hit_success_probability" value="-1.3" /> 
 	</carry_item>
 	<carry_item key="bp_t6_14" time_to_live_out_in_the_open="0" name="16LAB Nano Reinforced Armor Plate" transform_on_consume="bp_t6_15" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
@@ -252,7 +252,7 @@
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="wound" />
         <modifier class="speed" value="0.1" />
-        <modifier class="detectability" value="0.2" />
+        <modifier class="detectability" value="0.1" />
         <modifier class="hit_success_probability" value="-1.3" /> 
 	</carry_item>
 	<carry_item key="bp_t6_15" time_to_live_out_in_the_open="0" name="16LAB Nano Reinforced Armor Plate" transform_on_consume="bp_t6_16" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
@@ -274,7 +274,7 @@
         <modifier class="melee_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
         <modifier class="melee_hit_result" input_character_state="unwound" output_character_state="unwound" consumes_item="0"/>    
         <modifier class="speed" value="0.1" />
-        <modifier class="detectability" value="0.2" />
+        <modifier class="detectability" value="0.1" />
         <modifier class="hit_success_probability" value="-1.3" /> 
 	</carry_item>
 </carry_items>

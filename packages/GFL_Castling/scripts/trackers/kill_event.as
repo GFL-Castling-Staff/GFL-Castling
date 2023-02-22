@@ -210,13 +210,13 @@ class kill_event : Tracker {
         {"gkw_mg36_4903_skill.weapon",3},
         {"666",-1}
     };
-    protected void updateHealByKillEvent(int characterid,int factionid,int killstoheal,int timeaddafterkill,string type="weapon"){
+    protected void updateHealByKillEvent(int characterid,int factionid,int killstoheal,int timeaddafterkill,string type="weapon",int killadd=1){
         if (killstoheal<=0) return;
         uint jud=0;
         for(uint a=0;a<HealOnKill_track.length();a++)
         {
             if(HealOnKill_track[a].m_characterId==characterid && HealOnKill_track[a].m_type == type ){
-                HealOnKill_track[a].current_kills++;
+                HealOnKill_track[a].current_kills+= killadd;
                 HealOnKill_track[a].m_numtime = timeaddafterkill;
                 jud = 1;
                 break;
@@ -313,6 +313,16 @@ class kill_event : Tracker {
             if (factionId==0 && characterId > 0){
                 string c_weaponType = getPlayerWeaponFromList(playerId,0);
                 string c_armorType = getPlayerWeaponFromList(playerId,3);
+                int kill_to_heal_scale = 1;
+                if(reward_pool_key=="rare" || reward_pool_key=="elite")
+                {
+                    kill_to_heal_scale = 2;
+                }
+                if(reward_pool_key=="boss")
+                {
+                    kill_to_heal_scale = 5;
+                }
+
                 if(c_weaponType=="gkw_ppkmod3.weapon" || c_weaponType =="gkw_ppkmod3_3905.weapon"){
                     int i = findSkillIndex(characterId,"PPKMOD3");
                     if(i >=0){
@@ -323,27 +333,36 @@ class kill_event : Tracker {
                     }
                 }
                 if(startsWith(c_armorType,'acbp_t6')){
+                    float scale = 1.0;
+                    if(reward_pool_key=="rare" || reward_pool_key=="elite")
+                    {
+                        scale = 2.0;
+                    }
+                    if(reward_pool_key=="boss")
+                    {
+                        scale = 4.0;
+                    }
                     int i = findSkillIndex(characterId);
                     if(i >=0){
                         if(SkillArray[i].m_time >=30.0){
-                            SkillArray[i].m_time-=1.0;
+                            SkillArray[i].m_time-=1.0 *scale;
                         }
                         else{
-                            SkillArray[i].m_time-=0.5;
+                            SkillArray[i].m_time-=0.5 *scale;
                         }
-                    }    
+                    }
                 }
                 if(startsWith(c_armorType,"srexo_t6")){
-                    updateHealByKillEvent(characterId,factionId,4,30,"vest");
+                    updateHealByKillEvent(characterId,factionId,4,30,"vest",kill_to_heal_scale);
                 }
                 if(startsWith(c_armorType,"tms_t6")){
-                    updateHealByKillEvent(characterId,factionId,4,30,"vest");
+                    updateHealByKillEvent(characterId,factionId,4,30,"vest",kill_to_heal_scale);
                     if (c_weaponType=="gkw_hawk97mod3.weapon" || c_weaponType =="gkw_hawk97mod3_5805.weapon")
                     {
-                        updateHealByKillEvent(characterId,factionId,4,30,"vest");
+                        updateHealByKillEvent(characterId,factionId,4,30,"vest",);
                     }
-                }                
-                updateHealByKillEvent(characterId,factionId,int(healOnKillWeaponList[c_weaponType]),15);
+                }
+                updateHealByKillEvent(characterId,factionId,int(healOnKillWeaponList[c_weaponType]),15,"weapon",kill_to_heal_scale);
             }
 
             if(SFbossList.find(Solider_Name)>-1 && characterId > 0){
