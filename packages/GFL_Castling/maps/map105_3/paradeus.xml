@@ -447,7 +447,7 @@
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="parw_commander.weapon" enabled="1" />
 			<carry_item key="pard_sg.carry_item" />
-			<call key="pard_zombie.call" />
+			<call file="pard_zombie.call" />
 			<attribute_config class="xp">
 				<attribute weight="1.0" min="20.0" max="25.6" />
 			</attribute_config>
@@ -511,7 +511,7 @@
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="parw_alina.weapon" enabled="1" />
 			<carry_item key="vest_40hp.carry_item" />
-			<call key="pard_zombie.call" />
+			<call file="pard_zombie.call" />
 			<attribute_config class="xp">
 				<attribute weight="1.0" min="330.0" max="350.833" />
 			</attribute_config>
@@ -532,7 +532,7 @@
 			<weapon key="parw_teal.weapon" enabled="1" />
 			<model filename="pard_teal.xml" />
 			<carry_item key="vest_50hp_tank.carry_item" />
-			<call key="pard_zombie.call" />
+			<call file="pard_zombie.call" />
 			<attribute_config class="xp">
 				<attribute weight="1.0" min="350.0" max="450.833" />
 			</attribute_config>
@@ -548,7 +548,7 @@
 			<weapon key="parw_eagleyes.weapon" enabled="1" />
 			<model filename="pard_eagleyes.xml" />
 			<carry_item key="vest_40hp.carry_item" />
-			<call key="pard_zombie.call" />
+			<call file="pard_zombie.call" />
 			<attribute_config class="xp">
 				<attribute weight="1.0" min="350.0" max="450.833" />
 			</attribute_config>
@@ -564,7 +564,7 @@
 			<weapon key="parw_vanguard.weapon" enabled="1" />
 			<model filename="pard_vanguard.xml" />
 			<carry_item key="vest_40hp.carry_item" />
-			<call key="pard_zombie.call" />
+			<call file="pard_zombie.call" />
 			<attribute_config class="xp">
 				<attribute weight="1.0" min="350.0" max="450.833" />
 			</attribute_config>
@@ -599,7 +599,7 @@
 			<weapon key="parw_nimogen.weapon" enabled="1" />
 			<model filename="pard_nimogen.xml" />
 			<carry_item key="pard_nyto.carry_item" />
-			<call key="pard_zombie.call" />
+			<call file="pard_zombie.call" />
 			<attribute_config class="xp">
 				<attribute weight="1.0" min="350.0" max="450.833" />
 			</attribute_config>
@@ -631,7 +631,7 @@
 			<weapon key="parw_nyto_black.weapon" enabled="1" />
 			<model filename="pard_boss_nyto_black.xml" />
 			<carry_item key="vest_40hp.carry_item" />
-			<call key="pard_zombie.call" />
+			<call file="pard_zombie.call" />
 			<attribute_config class="xp">
 				<attribute weight="1.0" min="330.0" max="350.833" />
 			</attribute_config>
