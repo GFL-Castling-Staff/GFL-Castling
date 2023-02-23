@@ -3,7 +3,7 @@
     <tag name="autorifle" />
     <specification 
     retrigger_time="0.1"
-    accuracy_factor="1.0"
+    accuracy_factor="0.97"
     sustained_fire_grow_step="1.0"
     sustained_fire_diminish_rate="2.5"
     magazine_size="30"
@@ -25,7 +25,7 @@
     <animation state_key="crouching" animation_key="crouch, hold, hip fire" />
     <animation state_key="crouch_moving" animation_key="crouching forwards, hip fire" />
     <animation state_key="walking_backwards" animation_key="walking backwards, hip fire" />
-    <animation state_key="reload" animation_key="reloading, microgun" volume="0.7" />
+    <animation state_key="reload" animation_key="reloading, magazine rifle 1.5" />
     <animation state_key="hold_on_wall" animation_key="hold, hip fire" />
     <animation state_key="still_against_wall" animation_key="hold, hip fire" />
     <animation state_key="walking" animation_key="walking, hip fire" />
@@ -41,13 +41,13 @@
     <projectile file="bullet_paradeus.projectile">
         <result class="hit" kill_probability="1.75" kill_decay_start_time="0.7" kill_decay_end_time="0.7" />
     </projectile>
-    <stance state_key="running" accuracy="1.0"/>
-    <stance state_key="walking" accuracy="1.0"/>
-    <stance state_key="crouch_moving" accuracy="1.0"/>
-    <stance state_key="prone_moving" accuracy="1.0"/>
-    <stance state_key="standing" accuracy="1.0"/>
-    <stance state_key="crouching" accuracy="1.0"/>
-    <stance state_key="prone" accuracy="1.0"/>
-    <stance state_key="over_wall" accuracy="1.0"/>
-    <modifier class="speed" value="0" />
+	<stance state_key="running" accuracy="0.3" />
+	<stance state_key="walking" accuracy="0.675" />
+	<stance state_key="crouch_moving" accuracy="0.75" />
+	<stance state_key="standing" accuracy="0.85" />
+	<stance state_key="crouching" accuracy="0.9" />
+	<stance state_key="prone" accuracy="0.95" />
+	<stance state_key="prone_moving" accuracy="0.3" />
+	<stance state_key="over_wall" accuracy="1" />
+    <modifier class="speed" value="-0.1" />
 </weapon>

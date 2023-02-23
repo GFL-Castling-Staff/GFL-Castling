@@ -29,4 +29,12 @@
     <result class="hit" kill_probability="1.5" kill_decay_start_time="0.3" kill_decay_end_time="0.6" />
   </projectile>
   <modifier class="speed" value="0" />
+  <stance state_key="running" accuracy="0.3" />
+	<stance state_key="walking" accuracy="0.675" />
+	<stance state_key="crouch_moving" accuracy="0.75" />
+	<stance state_key="standing" accuracy="0.85" />
+	<stance state_key="crouching" accuracy="0.9" />
+	<stance state_key="prone" accuracy="0.95" />
+	<stance state_key="prone_moving" accuracy="0.3" />
+	<stance state_key="over_wall" accuracy="1" />
 </weapon>
