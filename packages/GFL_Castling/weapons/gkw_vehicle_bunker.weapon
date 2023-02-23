@@ -4,9 +4,9 @@
     <specification 
     slot="2" 
     retrigger_time="0.072"
-	accuracy_factor="0.80" 
-	spread_range ="0.9"
-	sustained_fire_grow_step="0.0" 
+	accuracy_factor="0.95" 
+	spread_range ="0.3"
+	sustained_fire_grow_step="0.3" 
 	sustained_fire_diminish_rate="2.0" 
     sight_range_modifier="1.8"
     ai_sight_range_modifier="1.05"
@@ -18,13 +18,6 @@
     class="0" 
     projectile_speed="180.0" />
     
-    <animation key="recoil" animation_key="recoil1" />
-    <animation key="recoil" animation_key="recoil2" />
-    <animation key="recoil" animation_key="recoil3" />
-    <animation key="reload" animation_key="reloading, Machine gun 2.0" />
-    <animation key="hold" animation_key="still, heavy weapon" />
-    <animation key="hold_on_wall" animation_key="still" />
-    <animation key="walking" animation_key="walking, heavy weapon" />
     <sound key="fire" fileref="minigun_From_payday2.wav" pitch_variety="0.05" volume="0.1" />
     <sound key="magazine_out" fileref="mg_clip_out.wav" />
     <sound key="magazine_in" fileref="mg_clip_in.wav" />
@@ -34,75 +27,11 @@
 
     <hud_icon filename="gkw_v_LM5.png" />
     <commonness value="0.0" />
-
-
     <weak_hand_hold offset="0.4" />
     <projectile file="bullet_ai.projectile">
-        <result class="hit"  kill_probability="1.45" kill_decay_start_time="2.00" kill_decay_end_time="3.60" />
+        <result class="hit"  kill_probability="3.0"  kill_decay_start_time="2.00" kill_decay_end_time="3.60" />
     </projectile>
-    
-<!-- front plate-mid -->    
-    <shield offset="0.3 -0.6 0" extent="0.2 0.8 0.3" usable_for_cover="0" />    
-    
 </weapon>
-
-<weapon key="bunker_base_mg.weapon">
-
-  <specification 
-	barrel_offset="0.5" 
-	retrigger_time="0.120" 	
-	spread_range="0.15"
-	magazine_size="-1" 
-	suppressed="0" 
-	name="Bunker MG2" 
-	class="0" 
-	projectile_speed="180" 
-	sight_range_modifier="1.6"
-	ai_sight_range_modifier="1.05"
-	can_shoot_standing="0" 
-	can_shoot_crouching="0"
-	can_shoot_prone="1"
-  />
-
-    <animation key="recoil" animation_key="recoil1" />
-    <animation key="recoil" animation_key="recoil2" />
-    <animation key="recoil" animation_key="recoil3" />
-    <animation key="reload" animation_key="reloading, Machine gun 2.0" />
-    <animation key="hold" animation_key="still, heavy weapon" />
-    <animation key="hold_on_wall" animation_key="still" />
-    <animation key="walking" animation_key="walking, heavy weapon" />
-    <sound key="fire" fileref="m2hbskill_fire_FromCOD16.wav" pitch_variety="0.05" volume="2.1" />
-    <sound key="magazine_out" fileref="m2hb_mgz_out_FromSQUAD.wav" volume="2" />
-    <sound key="magazine_in" fileref="m2hb_mgz_in_FromSQUAD.wav" volume="2" />
-    <sound key="cycle" fileref="m2hb_cycle_FromSQUAD.wav" volume="2" />
-    <sound class="impact" fileref="rifle_drop.wav" />
-    <model filename="" />
-
-    <hud_icon filename="gkw_v_LM5.png" />
-    <commonness value="0.0" />
-
-    <projectile file="bullet_ai.projectile">
-        <result class="blast" damage="2.0"  radius="3.0" decal="1" push="0.3" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
-        <trail probability="1.0" key="BulletApTrail_ct" />
-        <effect class="result" key="terrain" ref="BigBurst" use_surface_color="1" />
-        <effect class="result" key="terrain" ref="LowDust"/>
-        <effect class="result" key="terrain" ref="Shine" lighting="0" />
-        <effect class="result" key="terrain" ref="Godray" lighting="0" />
-        <effect class="result" key="static_object" copy="terrain"/>
-        <effect class="result" key="vehicle" copy="terrain"/>
-    </projectile>
-       <stance state_key="running" accuracy="0.6" />
-
-    <stance state_key="crouch_moving" accuracy="0.6" />
-    <stance state_key="prone_moving" accuracy="0.6" />
-    <stance state_key="standing" accuracy="0.6" />
-    <stance state_key="crouching" accuracy="0.8" />
-    <stance state_key="prone" accuracy="1" />
-    <stance state_key="over_wall" accuracy="1" />  
-    <modifier class="speed" value="-0.3" /> 
-
-</weapon>
-
 
 <weapon key="bunker_rocket0.weapon">
     <specification 
@@ -122,13 +51,6 @@
     class="0" 
     projectile_speed="180.0" />
     
-    <animation key="recoil" animation_key="recoil1" />
-    <animation key="recoil" animation_key="recoil2" />
-    <animation key="recoil" animation_key="recoil3" />
-    <animation key="reload" animation_key="reloading, Machine gun 2.0" />
-    <animation key="hold" animation_key="still, heavy weapon" />
-    <animation key="hold_on_wall" animation_key="still" />
-    <animation key="walking" animation_key="walking, heavy weapon" />
     <sound key="fire" fileref="at4_fire_FromCOD16StrelaP.wav" pitch_variety="0.05"/>
     <sound key="magazine_out" fileref="mg_clip_out.wav" />
     <sound key="magazine_in" fileref="mg_clip_in.wav" />
