@@ -26486,7 +26486,7 @@
 	<animation state_key="running" animation_key="crouch, still, portable mortar"/>
 	<animation state_key="walking" animation_key="crouch, still, portable mortar"/>
 	<animation state_key="walking_backwards" animation_key="crouch, still, portable mortar"/>
-	<sound key="fire" fileref="GeneralPurposeMortar_fire_FromSQUAD.wav" pitch_variety="0.1" volume="1.2"/>
+	<sound key="fire" fileref="GeneralPurposeMortar_fire_FromSQUAD.wav" pitch_variety="0.1" volume="1.6"/>
 	<sound key="magazine_out" fileref="portable_mortar_reload.wav" volume="0.7"/>
 	<sound key="magazine_in" fileref="dry_fire.wav" volume="0.7"/>
 	<sound key="cycle" fileref="portable_mortar_reload.wav" volume="0.7"/>
@@ -26494,7 +26494,7 @@
 	<inventory encumbrance="50.0" buy_price="500.0" sell_price="500.0"/>
 	<commonness value="0.2" in_stock="1" can_respawn_with="1"/>
 	<model filename="gkw_hvy_2b14.xml"/>
-	<hud_icon filename="gkw_m2.png"/>
+	<hud_icon filename="gkw_2b14.png"/>
 	<capacity value="0" source="rank" source_value="0.0"/>
 	<capacity value="1" source="rank" source_value="3.28"/>
 	<weak_hand_hold offset="0.3"/>
@@ -26520,7 +26520,7 @@
 </weapon>
 
 <weapon key="gkw_hvy_2b14_pdw.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="0.2" accuracy_factor="1.0" sustained_fire_grow_step="0.2" sustained_fire_diminish_rate="1.4" magazine_size="15" suppressed="0" name="Tokarev 33" class="0" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="105" projectiles_per_shot="1" burst_shots="1" stab_enabled="1" carry_in_two_hands="0" last_burst_retrigger_time="-1" slot="0"/>
+	<specification retrigger_time="0.2" accuracy_factor="1.0" sustained_fire_grow_step="0.2" sustained_fire_diminish_rate="1.4" magazine_size="15" suppressed="0" name="Tokarev 33(2B14)" class="0" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="105" projectiles_per_shot="1" burst_shots="1" stab_enabled="1" carry_in_two_hands="0" last_burst_retrigger_time="-1" slot="0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<next_in_chain key="gkw_hvy_2b14.weapon" share_ammo="0"/>
 	<inventory encumbrance="50.0" buy_price="500.0" sell_price="500.0"/>
@@ -51175,7 +51175,7 @@
 <weapon key="parw_commander.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="rifle"/>
 	<tag name="commander"/>
-	<specification retrigger_time="1.0" accuracy_factor="1.0" sustained_fire_grow_step="0.4" sustained_fire_diminish_rate="1.2" magazine_size="5" suppressed="1" name="Pard-Murat" class="0" projectile_speed="150" barrel_offset="0.4"/>
+	<specification retrigger_time="1.0" accuracy_factor="1.0" sustained_fire_grow_step="0.4" sustained_fire_diminish_rate="1.2" magazine_size="5" suppressed="1" name="Pard-Murat" class="0" projectile_speed="150" sight_range_modifier="1.8" ai_sight_range_modifier="1.05" barrel_offset="0.4"/>
 	<animation key="recoil" animation_key="recoil1"/>
 	<animation key="recoil" animation_key="recoil2"/>
 	<animation key="recoil" animation_key="recoil3"/>

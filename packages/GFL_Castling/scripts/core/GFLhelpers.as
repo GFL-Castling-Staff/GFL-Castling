@@ -734,9 +734,9 @@ void healCharacter(Metagame@ metagame,int characterId,int healnum) {
 	metagame.getComms().send(c);
 }
 
-void healRangedCharacters(Metagame@ metagame,Vector3 pos,int faction_id,float range,int healnum,string special_key="none",int healcount=-1) {
+void healRangedCharacters(Metagame@ metagame,Vector3 pos,int faction_id,float range,int healnum,string special_key="none",uint healcount=0) {
 	array<const XmlElement@>@ characters = getCharactersNearPosition(metagame, pos, faction_id, range);
-	if(healcount==-1) {
+	if(healcount==0) {
 		_log("No special heal count requirement.");
 		healcount = characters.length;
 	} else if (healcount>=characters.length) {
