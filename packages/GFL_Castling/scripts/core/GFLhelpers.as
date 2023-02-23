@@ -821,3 +821,13 @@ void spawnStaticProjectile(Metagame@ metagame,string key,string pos,int characte
 	
 	metagame.getComms().send(command);
 }
+
+void setSpawnScore(Metagame@ metagame,int fId,string name,float spawnScore)
+{
+	XmlElement command("command");
+	command.setStringAttribute("class", "faction");
+	command.setIntAttribute("faction_id", fId);
+	command.setStringAttribute("soldier_group_name", name);
+	command.setFloatAttribute("spawn_score", spawnScore);
+	metagame.getComms().send(command);
+}

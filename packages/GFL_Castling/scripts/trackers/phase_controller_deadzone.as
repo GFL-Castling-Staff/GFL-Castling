@@ -36,10 +36,17 @@ class map_DeadZone_Phase : Tracker {
 		f1.setIntAttribute("disable_enemy_spawnpoints_soldier_count_offset", -100);
 		command.appendChild(f1);
 		m_metagame.getComms().send(command);
-		m_metagame.getComms().send("<command class='commander_ai' faction='0' base_defense='0.6' border_defense='0.3' attack_start_spread='0' attack_target_spread='0' />");
+		m_metagame.getComms().send("<command class='commander_ai' faction='0' base_defense='0.6' border_defense='0.3'/>");
 		m_metagame.getComms().send("<command class='commander_ai' faction='1' base_defense='0.2' border_defense='0.1' attack_start_spread='0' attack_target_spread='0' attack_target_base_key='Crash part' />");
-		m_metagame.getComms().send("<command class='commander_ai' faction='2' base_defense='0.6' border_defense='0.4' attack_start_spread='0' attack_target_spread='0' />");
-		m_metagame.getComms().send("<command class='commander_ai' faction='3' base_defense='0.6' border_defense='0.4' attack_start_spread='0' attack_target_spread='0'  />");
+		m_metagame.getComms().send("<command class='commander_ai' faction='2' base_defense='0.6' border_defense='0.4'/>");
+		m_metagame.getComms().send("<command class='commander_ai' faction='3' base_defense='0.6' border_defense='0.4'/>");
+		setSpawnScore(m_metagame,1,"eagleyes",0);
+		setSpawnScore(m_metagame,1,"teal",0);
+		setSpawnScore(m_metagame,1,"vanguard",0);
+		setSpawnScore(m_metagame,1,"wrath",0);
+		setSpawnScore(m_metagame,1,"Nimogen",0);
+		setSpawnScore(m_metagame,1,"Narciss",0);
+		setSpawnScore(m_metagame,1,"Thunder",0);
 	}
 
 	// --------------------------------------------
