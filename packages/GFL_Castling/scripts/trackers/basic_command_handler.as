@@ -874,6 +874,8 @@ class BasicCommandHandler : Tracker {
 			spawnInstanceNearPlayer(senderId, "par_aceso.vehicle", "vehicle", 1);
 		} else  if(checkCommand(message, "spawn pickup")) {
 			spawnInstanceNearPlayer(senderId, "wastelander.vehicle", "vehicle", 1);			 						
+		} else  if(checkCommand(message, "tph")) {
+			spawnInstanceNearPlayer(senderId, "para_heal_skill.projectile", "projectile", 0);			 						
 		} else if (checkCommand(message,"givetestweapon")){
 			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
 			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_m870_3803.weapon");
@@ -881,8 +883,8 @@ class BasicCommandHandler : Tracker {
 			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_saf_6607.weapon");
 			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_pa15_4202.weapon");
 			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_pa15_5802.weapon");		
-			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_hk416_agent.weapon");		
-
+			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_hk416_agent.weapon");			
+			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","sfw_m2g.weapon");			
 		} else if (checkCommand(message,"admintest")){
 			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
 			int cid = playerInfo.getIntAttribute("character_id");

@@ -2,6 +2,7 @@
 #include "helpers.as"
 #include "GFLplayerlist.as"
 #include "Spawn_request.as"
+#include "GFLparameters.as"
 
 //别抄了学不会的，有需求请联系 冥府乌鸦NetherCrow 为你解惑，不识趣的不建议来。
 //Credit: NetherCrow & Castling Staff
@@ -36,28 +37,28 @@ void playRandomSoundArray(const Metagame@ metagame, array<string> arrays, int fa
 
 void editPlayerVest(const Metagame@ metagame, int characterId, string Itemkey, uint numVests){
 	if (numVests < 1) return;
-		XmlElement c("command");
-			c.setStringAttribute("class", "update_inventory");
-			c.setIntAttribute("character_id", characterId);
-			c.setIntAttribute("container_type_id", numVests); 
-			XmlElement item("item");
-			item.setStringAttribute("class", "carry_item");
-			item.setStringAttribute("key", Itemkey);
-			c.appendChild(item);
-		metagame.getComms().send(c);
+	XmlElement c("command");
+		c.setStringAttribute("class", "update_inventory");
+		c.setIntAttribute("character_id", characterId);
+		c.setIntAttribute("container_type_id", numVests); 
+		XmlElement item("item");
+		item.setStringAttribute("class", "carry_item");
+		item.setStringAttribute("key", Itemkey);
+		c.appendChild(item);
+	metagame.getComms().send(c);
 }
 
 void editPlayerNade(const Metagame@ metagame, int characterId, string Itemkey, uint numVests){
 	if (numVests < 1) return;
-		XmlElement c("command");
-			c.setStringAttribute("class", "update_inventory");
-			c.setIntAttribute("character_id", characterId);
-			c.setIntAttribute("container_type_id", numVests); 
-			XmlElement item("item");
-			item.setStringAttribute("class", "projectile");
-			item.setStringAttribute("key", Itemkey);
-			c.appendChild(item);
-		metagame.getComms().send(c);
+	XmlElement c("command");
+		c.setStringAttribute("class", "update_inventory");
+		c.setIntAttribute("character_id", characterId);
+		c.setIntAttribute("container_type_id", numVests); 
+		XmlElement item("item");
+		item.setStringAttribute("class", "projectile");
+		item.setStringAttribute("key", Itemkey);
+		c.appendChild(item);
+	metagame.getComms().send(c);
 }
 
 string getPlayerEquipmentKey(const Metagame@ metagame, int characterId, uint slot){
@@ -161,22 +162,19 @@ void addItemInStash(Metagame@ metagame, int characterId, string ItemType, string
 
 void addRangeItemInBackpack(Metagame@ metagame, int factionId, string ItemType, string ItemKey,Vector3 pos,float range){
 	array<int> player_cId;
-	if (GFL_playerlist_array.length()>0){
-		_log("playerlist get.");
-		for(uint i=0;i<GFL_playerlist_array.length();i++){
-			player_cId.insertLast(GFL_playerlist_array[i].m_characterid);
-		}
-		array<const XmlElement@> affectedCharacter = getCharactersNearPosition(metagame,pos,factionId,range);
-		if (affectedCharacter !is null){
-			for(uint i=0;i<affectedCharacter.length();i++){
-				int cId = affectedCharacter[i].getIntAttribute("id");
-				if(player_cId.find(cId)>=0){
-					addItemInBackpack(metagame,cId,ItemType,ItemKey);
-				}
-			}
+	if (GFL_playerlist_array.length()<=0){return;}
+	_log("playerlist get.");
+	for(uint i=0;i<GFL_playerlist_array.length();i++){
+		player_cId.insertLast(GFL_playerlist_array[i].m_characterid);
+	}
+	array<const XmlElement@> affectedCharacter = getCharactersNearPosition(metagame,pos,factionId,range);
+	if (affectedCharacter is null){return;}
+	for(uint i=0;i<affectedCharacter.length();i++){
+		int cId = affectedCharacter[i].getIntAttribute("id");
+		if(player_cId.find(cId)>=0){
+			addItemInBackpack(metagame,cId,ItemType,ItemKey);
 		}
 	}
-
 }
 
 bool checkCommandAlter(string message, string target, string target1) {
@@ -300,96 +298,37 @@ float getAimUnitDistance(float scale, Vector3 s_pos, Vector3 e_pos) {
 	return scale*ds;
 }
 
-array<string> unlockable_vehicles = {
-	"deco_car1_brown.vehicle",
-	"deco_car1_blue.vehicle",
-	"deco_car1_yellow.vehicle",
-	"deco_car1_black.vehicle",
-	"deco_car1_white.vehicle",
-	"deco_car1_red.vehicle",
-	"deco_car1_pink.vehicle",
-	"deco_car1_green.vehicle",
-
-	"deco_car2_red.vehicle",
-	"deco_car2_green.vehicle",
-	"deco_car2_yellow.vehicle",
-	"deco_car2_white.vehicle",
-	"deco_car2_silver.vehicle",
-	"deco_car2_grey.vehicle",
-	"deco_car2_brown.vehicle",
-	"deco_car2_blue.vehicle",
-	"deco_car2_black.vehicle",
-
-	"deco_car3_sky.vehicle",
-	"deco_car3_green.vehicle",
-	"deco_car3_blue.vehicle",
-	"deco_car3_red.vehicle",
-	"deco_car3_yellow.vehicle",
-	"deco_car3_black.vehicle",
-
-	"deco_van_blue.vehicle",
-	"deco_van_khaki.vehicle",
-	"deco_van_sky.vehicle",
-	"deco_van_brown.vehicle",
-	"deco_van_yellow.vehicle",
-	"deco_van_red.vehicle",
-	"deco_van_green.vehicle",
-
-	"deco_pickup_red.vehicle",
-	"deco_pickup_yellow.vehicle",
-	"deco_pickup_blue.vehicle",
-	"deco_pickup_green.vehicle",
-	"deco_pickup_khaki.vehicle",
-
-	"dumpster.vehicle",
-	"cover1.vehicle",
-	"cover2.vehicle",
-	"shelter.vehicle"
-};
-
-array<string> vip_vehicles = {
-	"mobile_armory.vehicle", 		// 军械车
-	"armored_truck.vehicle",		// 艾莫号
-	"ogas_pulse_generator.vehicle",	// OGAS干扰仪
-	"radio_jammer.vehicle",
-	"radio_jammer2.vehicle"
-};
-
 int getAmosPosition(Metagame@ metagame, uint ownerid, Vector3 judgePos, float radius) {
 	
 	array<const XmlElement@>@ vehicles = getAllVehicles(metagame, 0);
 	for(uint i=0;i<vehicles.length();i++){
 		Vector3 vehiclePos = stringToVector3(vehicles[i].getStringAttribute("position"));
-		if(getAimUnitDistance(1.0,judgePos,vehiclePos)<=radius){
-			int vehicleid = vehicles[i].getIntAttribute("id");
-			const XmlElement@ vehicleInfo = getVehicleInfo(metagame, vehicleid);
-			if(vehicleInfo !is null)  //Vip载具存在
-				if(vip_vehicles.find(vehicleInfo.getStringAttribute("key"))!=-1)
-					return 1;
-		}
-	}
+		if(getAimUnitDistance(1.0,judgePos,vehiclePos)>radius){continue;} //载具在查询范围外
 
+		int vehicleid = vehicles[i].getIntAttribute("id");
+		const XmlElement@ vehicleInfo = getVehicleInfo(metagame, vehicleid);
+		if(vehicleInfo is null){continue;}  //载具不存在
+		if(vip_vehicles.find(vehicleInfo.getStringAttribute("key"))==-1){continue;} //载具不是VIP载具
+		return 1;
+	}
 	return -1;	
 }
 
 int getNearByEnemyVehicle(Metagame@ metagame, uint ownerid, Vector3 judgePos, float radius) {
 	for(uint f=0;f<4;f++){
-		if(f<10){
-			array<const XmlElement@>@ vehicles = getAllVehicles(metagame, f);
-			for(uint i=0;i<vehicles.length();i++){
-				Vector3 vehiclePos = stringToVector3(vehicles[i].getStringAttribute("position"));
-				if(getAimUnitDistance(1.0,judgePos,vehiclePos)<=radius){
-					int vehicleid = vehicles[i].getIntAttribute("id");
-					const XmlElement@ vehicleInfo = getVehicleInfo(metagame, vehicleid);
-					if((vehicleInfo !is null)  //载具存在
-						&&(vehicleInfo.getIntAttribute("health")!=0)  //载具未被击毁
-						//&&(vehicleInfo.getIntAttribute("owner_id")!=ownerid)   //载具正在被我方阵营使用
-						&&(unlockable_vehicles.find(vehicleInfo.getStringAttribute("key"))==-1)){  //载具不是中立地图物件
-						_log("Get vehicle id successful.");
-						return vehicleid;
-					}
-				}
-			}
+		if(f>=5){return -1;}
+		array<const XmlElement@>@ vehicles = getAllVehicles(metagame, f);
+		for(uint i=0;i<vehicles.length();i++){
+			Vector3 vehiclePos = stringToVector3(vehicles[i].getStringAttribute("position"));
+			if(getAimUnitDistance(1.0,judgePos,vehiclePos)>radius){continue;} //载具在查询范围外
+
+			int vehicleid = vehicles[i].getIntAttribute("id");
+			const XmlElement@ vehicleInfo = getVehicleInfo(metagame, vehicleid);
+			if(vehicleInfo is null){continue;}  //载具不存在
+			if(vehicleInfo.getIntAttribute("health")==0){continue;}  //载具被击毁
+			if(unlockable_vehicles.find(vehicleInfo.getStringAttribute("key"))==-1) //载具是中立地图物件
+			_log("Get vehicle id successful.");
+			return vehicleid;			
 		}		
 	}
 	return -1;
@@ -795,9 +734,30 @@ void healCharacter(Metagame@ metagame,int characterId,int healnum) {
 	metagame.getComms().send(c);
 }
 
-void healRangedCharacters(Metagame@ metagame,Vector3 pos,int faction_id,float range,int healnum) {
+void healRangedCharacters(Metagame@ metagame,Vector3 pos,int faction_id,float range,int healnum,string special_key="none",int healcount=-1) {
 	array<const XmlElement@>@ characters = getCharactersNearPosition(metagame, pos, faction_id, range);
-	for (uint i = 0; i < characters.length; i++) {
+	if(healcount==-1) {
+		_log("No special heal count requirement.");
+		healcount = characters.length;
+	} else if (healcount>=characters.length) {
+		healcount = characters.length;
+	}
+	for (uint i = 0; i < healcount; i++) {
+		int luckyhealguyid = characters[i].getIntAttribute("id");
+		switch(int(specialHealIndex[special_key]))
+		{
+			case 1: {
+				const XmlElement@ luckyhealguyC = getCharacterInfo(metagame, luckyhealguyid);
+				Vector3 c_pos = stringToVector3(luckyhealguyC.getStringAttribute("position"));
+				CreateDirectProjectile(metagame,c_pos.add(Vector3(0,0.1,0)),c_pos,"para_heal_effect_on_target.projectile",-1,faction_id,10);				
+				break;
+			}
+
+			default: {
+				_log("No special heal requirement.");
+				break;
+			}
+		} 
 		healCharacter(metagame,characters[i].getIntAttribute("id"),healnum);
 	}	
 }

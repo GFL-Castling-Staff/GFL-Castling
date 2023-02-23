@@ -1,0 +1,1150 @@
+// 在这里存放所有的参数数据，方便后面的修改与维护
+
+// parameters for "GFLhelpers.as":
+
+    array<string> unlockable_vehicles = {
+        "deco_car1_brown.vehicle",
+        "deco_car1_blue.vehicle",
+        "deco_car1_yellow.vehicle",
+        "deco_car1_black.vehicle",
+        "deco_car1_white.vehicle",
+        "deco_car1_red.vehicle",
+        "deco_car1_pink.vehicle",
+        "deco_car1_green.vehicle",
+
+        "deco_car2_red.vehicle",
+        "deco_car2_green.vehicle",
+        "deco_car2_yellow.vehicle",
+        "deco_car2_white.vehicle",
+        "deco_car2_silver.vehicle",
+        "deco_car2_grey.vehicle",
+        "deco_car2_brown.vehicle",
+        "deco_car2_blue.vehicle",
+        "deco_car2_black.vehicle",
+
+        "deco_car3_sky.vehicle",
+        "deco_car3_green.vehicle",
+        "deco_car3_blue.vehicle",
+        "deco_car3_red.vehicle",
+        "deco_car3_yellow.vehicle",
+        "deco_car3_black.vehicle",
+
+        "deco_van_blue.vehicle",
+        "deco_van_khaki.vehicle",
+        "deco_van_sky.vehicle",
+        "deco_van_brown.vehicle",
+        "deco_van_yellow.vehicle",
+        "deco_van_red.vehicle",
+        "deco_van_green.vehicle",
+
+        "deco_pickup_red.vehicle",
+        "deco_pickup_yellow.vehicle",
+        "deco_pickup_blue.vehicle",
+        "deco_pickup_green.vehicle",
+        "deco_pickup_khaki.vehicle",
+
+        "dumpster.vehicle",
+        "cover1.vehicle",
+        "cover2.vehicle",
+        "shelter.vehicle"
+    };
+
+    array<string> vip_vehicles = {
+        "mobile_armory.vehicle", 		// 军械车
+        "armored_truck.vehicle",		// 艾莫号
+        "ogas_pulse_generator.vehicle",	// OGAS干扰仪
+        "radio_jammer.vehicle",
+        "radio_jammer2.vehicle"
+    };
+
+    dictionary specialHealIndex = {
+            // 空需求
+            {"",-1},
+
+            // 白教指挥士回血
+            {"para_heal",1},
+
+            // 下面这行是用来占位的，在这之上添加新的即可
+            {"666",-1}
+    };    
+
+
+// parameters for "ItemDropEvent.as":
+
+    dictionary itemDropFileIndex = {
+        // 空
+        {"",0},
+
+        {"firecontrol.carry_item",1},       // 火控核心
+        {"core_mask.carry_item",2},         // 真核面具  
+        {"upgrade_type88.carry_item",3},    // 汉阳造加速线圈
+        {"upgrade_aa12.carry_item",4},      // AA12独头弹
+        {"upgrade_m1.carry_item",5},      // M1加兰德弹鼓
+        {"upgrade_fg42.carry_item",6},      // FG42
+        {"upgrade_g41.carry_item",7},      // G41
+        {"upgrade_vz61.carry_item",8},      // vz61
+        {"upgrade_m1903_1.carry_item",9},      // 太太
+        {"upgrade_m1903_2.carry_item",10},      // 太太
+        {"upgrade_fn49.carry_item",11},      // FN49
+        {"upgrade_9a91.carry_item",12},      // 9A91
+        {"upgrade_m14.carry_item",13},
+        {"upgrade_g3.carry_item",14},
+        {"upgrade_m1897.carry_item",15},
+        {"upgrade_stg44.carry_item",16},
+        {"upgrade_wa2000.carry_item",17},
+        {"upgrade_pkp.carry_item",18},
+        {"upgrade_scarl.carry_item",19},
+        {"upgrade_scarh.carry_item",20},
+        {"upgrade_cso.carry_item",21},
+
+        {"666",0}
+    };
+
+    dictionary itemDropKeyIndex = {
+        // 空
+        {"",0},
+
+        {"mod3",1},                         // 火控核心
+        {"truecore",2},                     // 真核面具  
+        {"type88",3},                       // 汉阳造加速线圈
+        {"aa12",4},                         // AA12独头弹
+        {"m1garand",5},                     // M1加兰德弹鼓
+        {"fg42",6},                         // FG42
+        {"g41",7},                          // G41
+        {"vz61",8},                         // vz61
+        {"m1903_1",9},                      // m1903
+        {"m1903_2",10},                     // m1903
+        {"fn49",11},                        // fn49
+        {"9a91",12},                        // 9a91
+        {"m14",13},
+        {"g3",14},
+        {"m1897",15},
+        {"stg44",16},
+        {"wa2000",17},
+        {"pkp",18},
+        {"scarl",19},
+        {"scarh",20},
+        {"cso",21},
+
+        {"666",0}
+    };
+
+    string getGFLkey(string num) {
+        string key = string(tdoll_index[num]);
+        if (key!=""){
+            return key;
+        } 
+        else return "";
+    }
+
+    dictionary tdoll_index = {
+        {"1","gkw_m1873.weapon"},
+        {"2","gkw_m1911.weapon"},
+        {"3","gkw_m9.weapon"},
+        {"4","gkw_python.weapon"},
+        {"5","gkw_m1895.weapon"},
+        {"6","gkw_tt33.weapon"},
+        // {"7","gkw_aps.weapon"},
+        {"8",""},
+        {"9",""},
+        {"10","gkw_ppk.weapon"},
+        {"11",""},
+        {"12","gkw_c96.weapon"},
+        {"13",""},
+        {"14",""},
+        {"15",""},
+        {"16","gkw_thompson.weapon"},
+        {"17","gkw_m3.weapon"},
+        {"18",""},
+        {"19",""},
+        {"20","gkw_vector.weapon"},
+        {"21","gkw_ppsh41.weapon"},
+        {"22","gkw_pps43.weapon"},
+        {"23","gkw_pp90.weapon"},
+        {"24",""},
+        {"25","gkw_mp40.weapon"},
+        {"26","gkw_mp5.weapon"},
+        {"27","gkw_vz61.weapon"},
+        {"28","gkw_mp7.weapon"},
+        {"29","gkw_sten.weapon"},
+        {"31","gkw_mab38.weapon"},
+        {"32","gkw_uzi.weapon"},
+        {"33",""},
+        {"34","gkw_m1.weapon"},
+        {"35","gkw_m1a1.weapon"},
+        {"36","gkw_m1903.weapon"},
+        {"37","gkw_m14.weapon"},
+        {"38","gkw_m21.weapon"},
+        {"39","gkw_m1891.weapon"},
+        {"40",""},
+        {"41",""},
+        {"42","gkw_ptrd.weapon"},
+        {"43","gkw_svd.weapon"},
+        {"44","gkw_sv98.weapon"},
+        {"46","gkw_98k.weapon"},
+        {"47","gkw_g43.weapon"},
+        {"48","gkw_wa2000.weapon"},
+        {"49","gkw_56typer.weapon"},
+        {"50","gkw_mlemk1.weapon"},
+        {"51","gkw_fn49.weapon"},
+        {"52",""},
+        {"53","gkw_ntw20.weapon"},
+        {"54","gkw_m16a1.weapon"},
+        {"55","gkw_m4a1.weapon"},
+        {"56","gkw_m4sopmodii.weapon"},
+        {"57","gkw_ar15.weapon"},
+        {"58","gkw_ak47.weapon"},
+        {"59","gkw_ak74u.weapon"},
+        {"60","gkw_asval.weapon"},
+        {"61","gkw_stg44.weapon"},
+        {"62","gkw_g41.weapon"},
+        {"63","gkw_g3.weapon"},
+        {"64","gkw_g36.weapon"},
+        {"65","gkw_hk416.weapon"},
+        {"66","gkw_56-1type.weapon"},
+        {"68",""},
+        {"69","gkw_famas.weapon"},
+        {"70","gkw_fnc.weapon"},
+        {"71","gkw_galil.weapon"},
+        {"72","gkw_tar21.weapon"},
+        {"73",""},
+        {"74",""},
+        {"75","gkw_m1918.weapon"},
+        {"77","gkw_m2hb.weapon"},
+        {"78","gkw_m60.weapon"},
+        {"79","gkw_m249saw.weapon"},
+        {"80","gkw_m1919a4.weapon"},
+        {"81","gkw_lwmmg.weapon"},
+        {"82","gkw_dp28.weapon"},
+        {"84","gkw_rpd.weapon"},
+        {"85","gkw_pk.weapon"},
+        {"86","gkw_mg42.weapon"},
+        {"87","gkw_mg34.weapon"},
+        {"88",""},
+        {"89",""},
+        {"90",""},
+        {"91","gkw_mp446.weapon"},
+        {"92",""},
+        {"93","gkw_idw.weapon"},
+        {"94","gkw_64type.weapon"},
+        {"95","gkw_88type.weapon"},
+        {"96","gkw_grizzly.weapon"},
+        {"97","gkw_m950a.weapon"},
+        // {"98","gkw_spp1.weapon"},
+        {"99","gkw_mk23.weapon"},
+        {"100","gkw_p7.weapon"},
+        {"101","gkw_ump9.weapon"},
+        {"102","gkw_ump40.weapon"},
+        {"103","gkw_ump45.weapon"},
+        {"104","gkw_g36c.weapon"},
+        {"105",""},
+        {"106","gkw_fal.weapon"},
+        {"107","gkw_f2000.weapon"},
+        {"108",""},
+        {"109","gkw_mg5.weapon"},
+        {"110","gkw_fg42.weapon"},
+        {"111",""},
+        {"112","gkw_negev.weapon"},
+        {"113",""},
+        {"114","gkw_welrod.weapon"},
+        {"115","gkw_kp31.weapon"},
+        {"116",""},
+        {"117","gkw_psg1.weapon"},
+        {"118","gkw_9a91.weapon"},
+        {"119","gkw_ots14.weapon"},
+        {"120","gkw_arx160.weapon"},
+        {"121","gkw_mk48.weapon"},
+        {"122","gkw_g11.weapon"},
+        // {"123","gkw_p99.weapon"},
+        {"124","gkw_supersass.weapon"},
+        {"125","gkw_mg4.weapon"},
+        {"126","gkw_nz75.weapon"},
+        {"127","gkw_type79.weapon"},
+        {"128","gkw_m99.weapon"},
+        {"129","gkw_QBZ95.weapon"},
+        {"130","gkw_QBZ97.weapon"},
+        {"131",""},
+        {"132",""},
+        {"133",""},
+        {"134",""},
+        {"135","gkw_sr3mp.weapon"},
+        {"136","gkw_pp19.weapon"},
+        {"137",""},
+        {"138",""},
+        {"139","gkw_brenten.weapon"},
+        {"140",""},
+        {"141",""},
+        {"142","gkw_fn57.weapon"},
+        {"143","gkw_ro635.weapon"},
+        {"144",""},
+        {"145",""},
+        {"146","gkw_g28.weapon"},
+        {"147",""},
+        {"148","gkw_iws2000.weapon"},
+        {"149","gkw_aek999.weapon"},
+        {"150",""},
+        {"151","gkw_m1887.weapon"},
+        {"152","gkw_m1897.weapon"},
+        {"153","gkw_m37.weapon"},
+        {"154","gkw_m500.weapon"},
+        {"155","gkw_m590.weapon"},
+        {"156","gkw_supershorty.weapon"},
+        {"157","gkw_ksg.weapon"},
+        {"158","gkw_ks23.weapon"},
+        {"159",""},
+        {"160","gkw_saiga12.weapon"},
+        {"161","gkw_hawk97.weapon"},
+        {"162","gkw_spas12.weapon"},
+        {"163","gkw_aa12.weapon"},
+        {"164","gkw_fp6.weapon"},
+        {"165","gkw_m1014.weapon"},
+        {"166","gkw_cz75.weapon"},
+        {"167",""},
+        {"168",""},
+        {"169",""},
+        {"170","gkw_ash127.weapon"},
+        {"171","gkw_ribeyrolles.weapon"},
+        {"172","gkw_rfb.weapon"},
+        {"173","gkw_pkp.weapon"},
+        {"174","gkw_type81.weapon"},
+        {"175","gkw_art556.weapon"},
+        {"176","gkw_tmp.weapon"},
+        {"177","gkw_klin.weapon"},
+        {"178","gkw_f1.weapon"},
+        {"179","gkw_dsr50.weapon"},
+        {"180",""},
+        {"181","gkw_t91.weapon"},
+        {"182",""},
+        {"183","gkw_contender.weapon"},
+        {"184",""},
+        {"185","gkw_ameli.weapon"},
+        {"186","gkw_p226.weapon"},
+        {"187",""},
+        {"188","gkw_sat8.weapon"},
+        {"189","gkw_usas12.weapon"},
+        {"190",""},
+        {"191",""},
+        {"192","gkw_js05.weapon"},
+        {"193",""},
+        {"194","gkw_k2.weapon"},
+        {"195",""},
+        {"196","gkw_zasm21.weapon"},
+        {"197","gkw_carcano1891.weapon"},
+        {"198","gkw_carcano1938.weapon"},
+        {"199","gkw_type80.weapon"},
+        {"200","gkw_xm3.weapon"},
+        {"201","gkw_gepardm1.weapon"},
+        {"202","gkw_thunder.weapon"},
+        {"203","gkw_honeybadger.weapon"},
+        {"204","gkw_ballista.weapon"},
+        {"205","gkw_an94.weapon"},
+        {"206","gkw_ak12.weapon"},
+        {"207",""},
+        {"208","gkw_hk21.weapon"},
+        {"209",""},
+        {"210",""},
+        {"211","gkw_srs.weapon"},
+        {"212","gkw_k5.weapon"},
+        {"213","gkw_cms.weapon"},
+        {"214",""},
+        {"215","gkw_mdr.weapon"},
+        {"216","gkw_xm8.weapon"},
+        {"217",""},
+        {"218",""},
+        {"219",""},
+        {"220","gkw_mp443.weapon"},
+        {"221","gkw_gsh18.weapon"},
+        {"222","gkw_tac50.weapon"},
+        {"223",""},
+        {"224","gkw_pm06.weapon"},
+        {"225",""},
+        {"226",""},
+        {"227",""},
+        {"228","gkw_type100.weapon"},
+        {"229","gkw_m870.weapon"},
+        {"230","gkw_obr.weapon"},
+        {"231","gkw_m82a1.weapon"},
+        {"232",""},
+        {"233",""},
+        {"234","gkw_js9.weapon"},
+        {"235",""},
+        {"236","gkw_k11_ar.weapon"},
+        {"237",""},
+        {"238","gkw_qjy88.weapon"},
+        {"239",""},
+        {"240","gkw_mk46.weapon"},
+        {"241",""},
+        {"242","gkw_p22.weapon"},
+        {"243",""},
+        {"244",""},
+        {"245","gkw_p90.weapon"},
+        {"247","gkw_k31.weapon"},
+        {"248","gkw_Jericho.weapon"},
+        {"249",""},
+        {"250","gkw_hs2000.weapon"},
+        {"251","gkw_x95.weapon"},
+        {"252","gkw_ksvk.weapon"},
+        {"253","gkw_lewis.weapon"},
+        {"254",""},
+        {"255",""},
+        {"256",""},
+        {"257","gkw_m200.weapon"},
+        {"258",""},
+        {"259",""},
+        {"260","gkw_pa15.weapon"},
+        {"261","gkw_qbu88.weapon"},
+        {"262",""},
+        {"263","gkw_mg36.weapon"},
+        {"264",""},
+        {"265",""},
+        {"266","gkw_r93.weapon"},
+        {"267",""},
+        {"268",""},
+        {"269",""},
+        {"270","gkw_4type.weapon"},
+        {"271",""},
+        {"272","gkw_desert_eagle_s.weapon"},
+        {"273",""},
+        {"274","gkw_acr.weapon"},
+        {"275",""},
+        {"276","gkw_kord.weapon"},
+        {"277",""},
+        {"278",""},
+        {"279",""},
+        {"280",""},
+        {"281","gkw_caws.weapon"},
+        {"282","gkw_dp12.weapon"},
+        {"283","gkw_liberator.weapon"},
+        {"284",""},
+        {"285","gkw_c93.weapon"},
+        {"286",""},
+        {"287","gkw_sig556.weapon"},
+        {"288",""},
+        {"289","gkw_r5.weapon"},
+        {"290","gkw_type89.weapon"},
+        {"291",""},
+        {"292","gkw_rpk16.weapon"},
+        {"293","gkw_ak15.weapon"},
+        {"294","gkw_webley.weapon"},
+        // {"295","gkw_cf05.weapon"},
+        {"296","gkw_sl8.weapon"},
+        {"297",""},
+        {"298",""},
+        {"299",""},
+        {"300",""},
+        {"301",""},
+        {"302",""},
+        {"303","gkw_hp35.weapon"},
+        {"304","gkw_saf.weapon"},
+        {"305",""},
+        {"306","gkw_akalfa.weapon"},
+        {"307",""},
+        {"308","gkw_c14.weapon"},
+        {"309",""},
+        {"310",""},
+        {"311",""},
+        {"312","gkw_vsk94.weapon"},
+        {"313","gkw_sacr.weapon"},
+        {"314",""},
+        {"315","gkw_augpara.weapon"},
+        {"316","gkw_liu.weapon"},
+        {"317","gkw_m1908.weapon"},
+        {"318","gkw_vhs.weapon"},
+        {"319",""},
+        {"320","gkw_gm6.weapon"},
+        {"321",""},
+        {"322","gkw_qsb91.weapon"},
+        {"323","gkw_ltlx7000.weapon"},
+        {"324","gkw_m6asw.weapon"},
+        {"325",""},
+        {"326",""},
+        {"327",""},
+        {"328","gkw_ar57.weapon"},
+        {"329","gkw_svch.weapon"},
+        {"330","gkw_fx05.weapon"},
+        {"331","gkw_kolibri.weapon"},
+        {"332",""},
+        {"333","gkw_vp1915.weapon"},
+        {"334",""},
+        {"335",""},
+        {"336",""},
+        {"337","gkw_delisle.weapon"},
+        {"338","gkw_sigmcx.weapon"},
+        {"339","gkw_rpk203.weapon"},
+        {"340","gkw_tkb408.weapon"},
+        {"341","gkw_sp9.weapon"},
+        {"342",""},
+        {"343","gkw_apc556.weapon"},
+        {"344","gkw_fara83.weapon"},
+        {"345","gkw_mg338.weapon"},
+        {"346","gkw_cz100.weapon"},
+        {"347",""},
+        {"348","gkw_hs50.weapon"},
+        {"349","gkw_ak74m.weapon"},
+        {"350","gkw_fo12.weapon"},
+        {"351",""},
+        {"352","gkw_nova.weapon"},
+        {"353",""},
+        {"354",""},
+        {"355",""},
+        {"356","gkw_a545.weapon"},
+        {"357",""},
+        {"358",""},
+        {"359","gkw_sterling.weapon"},
+        {"360",""},
+        {"361","gkw_qbz191.weapon"},
+        {"362",""},
+        {"363",""},
+        {"364",""},
+        {"365",""},
+        {"366","gkw_spas15.weapon"},
+        {"367","gkw_mk3a1.weapon"},
+        {"368",""},
+        {"369",""},
+        {"370",""},
+        {"371",""},
+        {"372","gkw_ar18.weapon"},
+        {"373",""},
+        {"374","gkw_m240l.weapon"},
+        {"375",""},
+        {"376","gkw_emp35.weapon"},
+        {"377","gkw_scarh.weapon"},
+        {"378","gkw_scarl.weapon"},
+
+        {"-1",""}
+
+    };
+
+    dictionary MOD3craftList = {
+        {"",""},
+
+        {"gkw_hk416.weapon","gkw_hk416mod3.weapon"},
+        {"gkw_hk416_537.weapon","gkw_hk416_537_mod3.weapon"},
+        {"gkw_hk416_3401.weapon","gkw_hk416_3401_mod3.weapon"},
+        {"gkw_hk416_6505.weapon","gkw_hk416_6505_mod3.weapon"},
+        {"gkw_hk416_805.weapon","gkw_hk416mod3_805.weapon"},
+
+        {"gkw_g11.weapon","gkw_g11mod3.weapon"},
+        {"gkw_g11_9.weapon","gkw_g11mod3_9.weapon"},
+        {"gkw_g11_538.weapon","gkw_g11mod3_538.weapon"},
+        {"gkw_g3.weapon","gkw_g3mod3.weapon"},
+        {"gkw_g3_1303.weapon","gkw_g3mod3_1303.weapon"},
+        {"gkw_ar15.weapon","gkw_ar15mod3.weapon"},
+        {"gkw_ar15_532.weapon","gkw_ar15mod3_532.weapon"},
+        {"gkw_ar15_30001.weapon","gkw_ar15mod3_30001.weapon"},
+
+        {"gkw_asval.weapon","gkw_asvalmod3.weapon"},
+        {"gkw_asval_2907.weapon","gkw_asvalmod3_2907.weapon"},
+        {"gkw_asval_skill.weapon","gkw_asvalmod3.weapon"},
+        {"gkw_asval_2907_skill.weapon","gkw_asvalmod3_2907.weapon"},
+
+        {"gkw_g36.weapon","gkw_g36mod3.weapon"},
+        {"gkw_g36_1507.weapon","gkw_g36mod3_1507.weapon"},
+        {"gkw_g36_6807.weapon","gkw_g36mod3_6807.weapon"},
+        {"gkw_g36_skill.weapon","gkw_g36mod3.weapon"},
+        {"gkw_g36_1507_skill.weapon","gkw_g36mod3_1507.weapon"},
+        {"gkw_g36_6807_skill.weapon","gkw_g36mod3_6807.weapon"},
+
+        {"gkw_m4a1.weapon","gkw_m4a1mod3.weapon"},
+        {"gkw_m4a1_530.weapon","gkw_m4a1mod3_530.weapon"},
+        {"gkw_m4a1_skill.weapon","gkw_m4a1mod3.weapon"},
+        {"gkw_m4a1_530_skill.weapon","gkw_m4a1mod3_530.weapon"},
+
+        {"gkw_m4sopmodii.weapon","gkw_m4sopmodiimod3.weapon"},
+        {"gkw_m4sopmodii_531.weapon","gkw_m4sopmodiimod3_531.weapon"},
+        {"gkw_m4sopmodii_551.weapon","gkw_m4sopmodiimod3_551.weapon"},
+        {"gkw_stg44.weapon","gkw_stg44mod3.weapon"},
+        {"gkw_gsh18.weapon","gkw_gsh18mod3.weapon"},
+        {"gkw_gsh18_523.weapon","gkw_gsh18mod3_523.weapon"},
+        {"gkw_m1911.weapon","gkw_m1911_mod3.weapon"},
+        {"gkw_m1895.weapon","gkw_m1895mod3.weapon"},
+        {"gkw_m1895_5309.weapon","gkw_m1895mod3_5309.weapon"},
+        {"gkw_m1895_7107.weapon","gkw_m1895mod3_7107.weapon"},
+
+        {"gkw_m1918.weapon","gkw_m1918mod3.weapon"},
+        {"gkw_m1918_102.weapon","gkw_m1918mod3_102.weapon"},
+        {"gkw_m1918_806.weapon","gkw_m1918mod3_806.weapon"},
+        {"gkw_m1918_1606.weapon","gkw_m1918mod3_1606.weapon"},
+        {"gkw_m1918_skill.weapon","gkw_m1918mod3.weapon"},
+        {"gkw_m1918_102_skill.weapon","gkw_m1918mod3_102.weapon"},
+        {"gkw_m1918_806_skill.weapon","gkw_m1918mod3_806.weapon"},
+        {"gkw_m1918_1606_skill.weapon","gkw_m1918mod3_1606.weapon"},
+
+        {"gkw_88type.weapon","gkw_88typemod3.weapon"},
+        
+        {"gkw_mg4.weapon","gkw_mg4mod3.weapon"},
+        {"gkw_mg4_703.weapon","gkw_mg4mod3_703.weapon"},
+        {"gkw_mg4_oc.weapon","gkw_mg4mod3_oc.weapon"},
+
+        {"gkw_ksvk.weapon","gkw_ksvkmod3.weapon"},
+        {"gkw_ksvk_3405.weapon","gkw_ksvkmod3_3405.weapon"},
+        {"gkw_ksvk_3805.weapon","gkw_ksvkmod3_3805.weapon"},
+        {"gkw_ksvk_4509.weapon","gkw_ksvkmod3_4509.weapon"},
+        {"gkw_ksvk_5504.weapon","gkw_ksvkmod3_5504.weapon"},
+        {"gkw_ksvk_7807.weapon","gkw_ksvkmod3_7807.weapon"},
+
+        {"gkw_m14.weapon","gkw_m14mod3.weapon"},
+        {"gkw_m14_303.weapon","gkw_m14mod3_303.weapon"},
+        {"gkw_m1891.weapon","gkw_m1891mod3.weapon"},
+        
+        {"gkw_ntw20.weapon","gkw_ntw20mod3.weapon"},
+        {"gkw_ntw20_307.weapon","gkw_ntw20mod3_307.weapon"},
+        {"gkw_ntw20_4801.weapon","gkw_ntw20mod3_4801.weapon"},
+
+        {"gkw_supersass.weapon","gkw_supersassmod3.weapon"},
+        {"gkw_supersass_1407.weapon","gkw_supersassmod3_1407.weapon"},
+
+        {"gkw_sv98.weapon","gkw_sv98mod3.weapon"},
+        {"gkw_sv98_502.weapon","gkw_sv98mod3_502.weapon"},
+        {"gkw_sv98_1906.weapon","gkw_sv98mod3_1906.weapon"},
+
+        {"gkw_g36c.weapon","gkw_g36c_mod3.weapon"},
+        {"gkw_idw.weapon","gkw_idwmod3.weapon"},
+        {"gkw_idw_2108.weapon","gkw_idwmod3_2108.weapon"},
+        {"gkw_idw_3205.weapon","gkw_idwmod3_3205.weapon"},
+        {"gkw_idw_4908.weapon","gkw_idwmod3_4908.weapon"},
+
+        {"gkw_kp31.weapon","gkw_kp31mod3.weapon"},
+        {"gkw_kp31_310.weapon","gkw_kp31mod3_310.weapon"},
+
+        {"gkw_mp5.weapon","gkw_mp5mod3.weapon"},
+        {"gkw_mp5_1205.weapon","gkw_mp5mod3_1205.weapon"},
+        {"gkw_mp5_1903.weapon","gkw_mp5mod3_1903.weapon"},
+        {"gkw_mp5_3.weapon","gkw_mp5mod3_3.weapon"},
+        {"gkw_mp5_3006.weapon","gkw_mp5mod3_3006.weapon"},
+
+        {"gkw_pp19.weapon","gkw_pp19mod3.weapon"},
+        {"gkw_ppsh41.weapon","gkw_ppsh41mod3.weapon"},
+        {"gkw_ppsh41_602.weapon","gkw_ppsh41mod3_602.weapon"},
+        {"gkw_ro635.weapon","gkw_ro635mod3.weapon"},
+
+        {"gkw_ump9.weapon","gkw_ump9mod3.weapon"},
+        {"gkw_ump9_6704.weapon","gkw_ump9mod3_6704.weapon"},
+        {"gkw_ump9_6704_skill.weapon","gkw_ump9mod3_6704.weapon"},
+
+        {"gkw_ump45.weapon","gkw_ump45mod3.weapon"},
+        {"gkw_ump45_410.weapon","gkw_ump45mod3_410.weapon"},
+        {"gkw_ump45_535.weapon","gkw_ump45mod3_535.weapon"},
+        {"gkw_ump45_3403.weapon","gkw_ump45mod3_3403.weapon"},
+        {"gkw_ump45_5405.weapon","gkw_ump45mod3_5405.weapon"},
+        {"gkw_ump45_5405_skill.weapon","gkw_ump45mod3_5405.weapon"},
+
+        {"gkw_uzi.weapon","gkw_uzimod3.weapon"},
+        {"gkw_ak15.weapon","gkw_ak15mod3.weapon"},
+        {"gkw_ak15_blm.weapon","gkw_ak15mod3_blm.weapon"},
+
+        {"gkw_ribeyrolles.weapon","gkw_ribeyrollesmod3.weapon"},
+        {"gkw_welrod.weapon","gkw_welrodmod3.weapon"},
+        {"gkw_welrod_411.weapon","gkw_welrodmod3_411.weapon"},
+        {"gkw_welrod_2103.weapon","gkw_welrodmod3_2103.weapon"},
+
+        {"gkw_lwmmg.weapon","gkw_lwmmgmod3.weapon"},
+        {"gkw_lwmmg_1808.weapon","gkw_lwmmgmod3_1808.weapon"},
+        {"gkw_lwmmg_skill.weapon","gkw_lwmmgmod3.weapon"},
+        {"gkw_lwmmg_1808_skill.weapon","gkw_lwmmgmod3_1808.weapon"},
+
+        {"gkw_an94.weapon","gkw_an94_mod3.weapon"},
+        {"gkw_an94_3303.weapon","gkw_an94mod3_3303.weapon"},
+        {"gkw_an94_blm.weapon","gkw_an94mod3_blm.weapon"},
+        {"gkw_an94_skill.weapon","gkw_an94_mod3.weapon"},
+        {"gkw_an94_3303_skill.weapon","gkw_an94mod3_3303.weapon"},
+        {"gkw_an94_blm_skill.weapon","gkw_an94mod3_blm.weapon"},
+
+        {"gkw_xm8.weapon","gkw_xm8_mod3.weapon"},
+        {"gkw_mab38.weapon","gkw_mab38mod3.weapon"},
+        {"gkw_mab38_oc.weapon","gkw_mab38mod3_oc.weapon"},
+        {"gkw_galil.weapon","gkw_galilmod3.weapon"},
+        {"gkw_ppk.weapon","gkw_ppkmod3.weapon"},
+        {"gkw_ppk_3905.weapon","gkw_ppkmod3_3905.weapon"},
+        {"gkw_m500.weapon","gkw_m500mod3.weapon"},
+        {"gkw_m500_3707.weapon","gkw_m500mod3_3707.weapon"},
+
+        {"gkw_m950a.weapon","gkw_m950amod3.weapon"},
+        {"gkw_m950a_702.weapon","gkw_m950amod3_702.weapon"},
+
+        {"gkw_m1897.weapon","gkw_m1897mod3.weapon"},
+        {"gkw_mp446.weapon","gkw_mp446mod3.weapon"},
+        {"gkw_xm3.weapon","gkw_xm3mod3.weapon"},
+        {"gkw_xm3_skill.weapon","gkw_xm3mod3.weapon"},
+
+        {"gkw_fn49.weapon","gkw_fn49mod3.weapon"},
+        {"gkw_fn49_4709.weapon","gkw_fn49mod3_4709.weapon"},
+
+        {"gkw_sten.weapon","gkw_stenmod3.weapon"},
+
+        {"gkw_hawk97.weapon","gkw_hawk97mod3.weapon"},
+        {"gkw_hawk97_5805.weapon","gkw_hawk97mod3_5805.weapon"},
+        {"gkw_type80.weapon","gkw_type80mod3.weapon"},
+        {"gkw_type80_skill.weapon","gkw_type80mod3.weapon"},
+        {"gkw_mp443.weapon","gkw_mp443mod3.weapon"},
+
+        {"gkw_98k.weapon","gkw_98kmod3.weapon"},
+        {"gkw_obr.weapon","gkw_obrmod3.weapon"},
+
+        {"gkw_m1873.weapon","gkw_m1873mod3.weapon"},
+        {"gkw_m1873_301.weapon","gkw_m1873mod3_301.weapon"},
+        {"gkw_gepardm1.weapon","gkw_gepardm1mod3.weapon"},
+        {"gkw_gepardm1_4006.weapon","gkw_gepardm1mod3_4006.weapon"},
+        {"gkw_f1.weapon","gkw_f1mod3.weapon"},
+        {"gkw_c96.weapon","gkw_c96mod3.weapon"},
+        {"gkw_56-1type.weapon","gkw_56-1typemod3.weapon"},
+
+        {"gkw_56typer.weapon","gkw_56typermod3.weapon"},
+        {"gkw_56typer_5508.weapon","gkw_56typermod3_5508.weapon"},
+        {"gkw_56typer_skill.weapon","gkw_56typermod3.weapon"},
+        {"gkw_56typer_5508_skill.weapon","gkw_56typermod3_5508.weapon"},
+
+        {"gkw_64type.weapon","gkw_64typemod3.weapon"},
+
+        {"666","-1"}
+    };
+
+    dictionary Tier6VestIndex = {
+        // 空
+        {"",0},
+
+        {"exchange_t6_ticket_1",1},
+        {"exchange_t6_ticket_2",2}, 
+        {"exchange_t6_ticket_3",3}, 
+        {"exchange_t6_ticket_4",4},     
+        {"exchange_t6_ticket_5",5}, 
+        {"exchange_t6_ticket_6",6}, 
+        {"exchange_t6_ticket_7",7}, 
+        {"exchange_t6_ticket_8",8}, 
+        {"exchange_t6_ticket_9",9}, 
+        {"exchange_t6_ticket_10",10}, 
+        {"exchange_t6_ticket_11",11}, 
+        {"exchange_t6_ticket_12",12}, 
+        {"exchange_t6_ticket_13",13}, 
+
+        {"666",0}
+    };
+
+
+// parameters for "ServerHelper.as":
+
+    dictionary lv120dict={
+        {"DUSK",361.0},
+        {"M14MOD3",431.0},
+        {"MOQIAN",561.0},
+        {"PENGLAISI",621.0},
+        {"WOSHIEOE1999",661.0},
+        {"VIVI",710.0},
+        {"MELONDOVE",761.0},
+        {"LAPPLAND",811.0},
+        {"AK12",811.0},
+        {"HUIR",861.0},
+        {"ALIEN",911.0},
+        {"SAIWA",961.0},
+        {"ASANONANA",1011.0},
+        {"IAQS",1111.0},
+        {"WHITE",1161.0},
+        {"MAPPLE",1261.0},
+        {"TEST310",1311.0},
+        {"TONYZSZ",1361.0},
+        {"MAJOR_KAI",1411.0},
+        {"AMEMLIKY",1461.0},
+        {"AACCBB",1511.0},
+        {"HOW",1561.0},
+        {"CHADOFCHANS",1611.0},
+        {"AURORA_ZERO",1661.0},
+        {"ANGELICA",1711.0},
+        {"D_GAODIAO",1761.0},
+        {"DD",1811.0},
+        {"HASUMI",1861.0},
+        {"KUAT",1911.0},
+        {"MYA",1961.0},
+        {"HOSIAYA",2011.0},
+        {"ATID",2061.0},
+        {"FUYU",2111.0},
+        {"FNF",2161.0},
+        {"SALTFISHFIELD",2211.0},
+        {"STALINA",2261.0},
+        {"SUIGETSU",2311.0},
+        {"TMP.1",2361.0},
+        {"YORIKO",2411.0},
+        {"YOUYUE",2461.0},
+        {"CAP.DAHUA",2511.0},
+        {"GANDURO",2561.0},
+        {"DILING",2611.0},
+        {"O_OLONICERA",2711.0},
+        {"JLK941",2761.0},
+        {"ROYI",2811.0},
+        {"MIRRORWAVE",2861.0},
+        {"PIG744",2911.0},
+        {"CAT HEAD",2961.0},
+        {"HUALIN",3011.0},
+        {"NEKO_CUP",3061.0},
+        {"EISEN",3110.0},
+        {"NETHER_CROW",761.0}
+    };
+
+
+// parameters for "commandskill.as":
+
+    // 反装甲榴弹AR，杀伤大范围小
+    array<string> AR_grenade_AntiArmor = {
+        "gkw_arx160.weapon",
+        "gkw_xm8.weapon",
+        "gkw_g3.weapon",
+        "gkw_m4sopmodii_531.weapon",
+        "gkw_m4sopmodii_551.weapon",
+        "gkw_m4sopmodii.weapon",
+        "gkw_hk416.weapon",
+        "gkw_hk416_6505.weapon",
+        "gkw_hk416_537.weapon",
+        "gkw_hk416_805.weapon",
+        "gkw_hk416_3401.weapon"
+    };
+
+    // 反人员榴弹AR，杀伤小范围大
+    array<string> AR_grenade_AntiPersonal = {
+        "gkw_stg44.weapon",
+        "gkw_famas.weapon",
+        "gkw_k11_ar.weapon",
+        "gkw_k11_20mm_impact.weapon",
+        "gkw_56-1type.weapon",
+        "gkw_56-1typemod3.weapon",
+        "gkw_hk416_agent.weapon"
+    };
+
+    // 列举枪对应的脚本技能编号。注意字典的值为了配合后面的只能用uint，不可用string，float等    
+    dictionary commandSkillIndex = {
+
+        // 空武器
+        {"",0},
+
+        // AN94MOD3
+        {"gkw_an94_mod3.weapon",1},
+        {"gkw_an94_mod3_skill.weapon",1},
+        {"gkw_an94mod3_3303.weapon",1},
+        {"gkw_an94mod3_3303_skill.weapon",1},
+        {"gkw_an94mod3_blm.weapon",1},
+        {"gkw_an94mod3_blm_skill.weapon",1},
+
+        // SMG燃烧弹
+        {"gkw_vector.weapon",2},
+        {"gkw_vector_549.weapon",2},
+        {"gkw_vector_549_skill.weapon",2},
+        {"gkw_vector_1901.weapon",2},
+
+        {"gkw_vz61.weapon",2},
+        {"gkw_vz61_only.weapon",2},
+        {"gkw_klin.weapon",2},
+        {"gkw_uzi.weapon",2},
+        {"gkw_mp40.weapon",2},
+        {"gkw_kp31mod3.weapon",2},
+        {"gkw_kp31mod3_310.weapon",2},
+
+        // FF_JUSTICE
+        {"ff_justice.weapon",3},
+
+        // MP5
+        {"gkw_mp5.weapon",4},
+        {"gkw_mp5_3.weapon",4},
+        {"gkw_mp5_1205.weapon",4},
+        {"gkw_mp5_1903.weapon",4},
+        {"gkw_mp5_3006.weapon",4},
+
+        // MP5MOD3
+        {"gkw_mp5mod3.weapon",5},
+        {"gkw_mp5mod3_3.weapon",5},
+        {"gkw_mp5mod3_1205.weapon",5},
+        {"gkw_mp5mod3_1903.weapon",5},
+        {"gkw_mp5mod3_3006.weapon",5},
+
+        // P22
+        {"gkw_p22.weapon",6},
+
+        // HS2000
+        {"gkw_hs2000.weapon",7},
+        {"gkw_hs2000_5304.weapon",7},
+
+        // FF_INTRUDER
+        {"ff_Intruder.weapon",8},
+
+        // FF_AGENT
+        {"ff_agent.weapon",9},
+
+        // FF_DESTROYER
+        {"ff_destroyer.weapon",10},
+        {"ff_destroyer_skin.weapon",10},
+
+        // FF_EXCUTIONER
+        {"ff_excutioner_2.weapon",11},
+
+        // FF_BAIBAOZI
+        {"ff_parw_alina.weapon",12},
+
+        // G3 Mod3
+        {"gkw_g3mod3.weapon",13},
+        {"gkw_g3mod3_1303.weapon",13},
+        {"gkw_g3mod3_skill.weapon",13},
+        {"gkw_g3mod3_1303_skill.weapon",13},
+
+        // UMP45
+        {"gkw_ump45.weapon",14},
+        {"gkw_ump45_535.weapon",14},
+        {"gkw_ump45_410.weapon",14},      
+        {"gkw_ump45_3403.weapon",14},
+        {"gkw_ump45_5405.weapon",14},
+        {"gkw_ump45_5405_skill.weapon",14},
+
+        // M870
+        {"gkw_m870.weapon",15},
+        {"gkw_m870_3803.weapon",15},
+
+        // PP19
+        {"gkw_pp19.weapon",16},
+
+        // PP19MOD3
+        {"gkw_pp19mod3.weapon",17},
+
+        // AK15MOD3
+        {"gkw_ak15mod3.weapon",18},
+        {"gkw_ak15mod3_skill.weapon",18},
+        {"gkw_ak15mod3_blm.weapon",18},
+        {"gkw_ak15mod3_blm_skill.weapon",18},
+        // XM8MOD3
+        {"gkw_xm8_mod3.weapon",19},
+
+        // STG44MOD3
+        {"gkw_stg44mod3.weapon",20},
+
+        // WERLODMOD3
+        {"gkw_welrodmod3.weapon",21},
+        {"gkw_welrodmod3_411.weapon",21},
+        {"gkw_welrodmod3_2103.weapon",21},
+
+        // FAL
+        {"gkw_fal.weapon",22},
+        {"gkw_fal_2406.weapon",22},
+        {"gkw_fal_308.weapon",22},
+
+        // M4SOPMODIIMOD3
+        {"gkw_m4sopmodiimod3.weapon",23},
+        {"gkw_m4sopmodiimod3_531.weapon",23},
+        {"gkw_m4sopmodiimod3_551.weapon",23},
+
+        // PPSH41, PPSH41MOD3
+        {"gkw_ppsh41.weapon",24},
+        {"gkw_ppsh41_602.weapon",24},
+        {"gkw_ppsh41mod3.weapon",25},
+        {"gkw_ppsh41mod3_602.weapon",25},
+
+        // fo-12
+        {"gkw_fo12.weapon",26},
+        {"gkw_fo12_skill.weapon",26},
+
+        // Flashbang
+        {"gkw_type79.weapon",27},
+        {"gkw_ump9.weapon",27},
+        {"gkw_ump9_409.weapon",27},
+        {"gkw_ump9_536.weapon",27},
+        {"gkw_ump9_6704.weapon",27},
+        {"gkw_ump9_6704_skill.weapon",27},
+
+        {"gkw_mab38.weapon",27},
+        {"gkw_mab38_oc.weapon",27},
+        {"gkw_64type.weapon",27},
+        {"gkw_m16a1.weapon",27},
+        {"gkw_m16a1_533.weapon",27},
+        {"gkw_m9.weapon",27},
+
+        {"gkw_ump9mod3.weapon",28},
+        {"gkw_ump9mod3_6704.weapon",28},
+        {"gkw_ump9mod3_6704_skill.weapon",28},
+
+        {"gkw_mab38mod3.weapon",29},
+        {"gkw_mab38mod3_oc.weapon",29},
+        // AK12冰沙时代
+        // {"gkw_ak12_2402.weapon",30},
+        // {"gkw_ak12_2402_skill.weapon",30},
+
+        {"gkw_ppkmod3.weapon",31},
+        {"gkw_ppkmod3_3905.weapon",31},
+
+        //利贝罗勒
+        {"gkw_ribeyrollesmod3.weapon",32},
+        {"gkw_ribeyrollesmod3_skill.weapon",32},
+
+        //MG4
+        {"gkw_mg4mod3.weapon",33},
+        {"gkw_mg4mod3_skill.weapon",33},
+        {"gkw_mg4mod3_703.weapon",33},
+        {"gkw_mg4mod3_703_skill.weapon",33},
+        {"gkw_mg4mod3_oc.weapon",33},
+        {"gkw_mg4mod3_oc_skill.weapon",33},
+
+        //Liu RF
+        {"gkw_liu.weapon",34},
+        {"gkw_liu_skill.weapon",34},
+        {"gkw_liu_5101.weapon",34},
+        {"gkw_liu_5101_skill.weapon",34},
+
+        //sat8
+        {"gkw_sat8.weapon",35},
+        {"gkw_sat8_1802.weapon",35},
+        {"gkw_sat8_2601.weapon",35},
+
+        // HK416MOD3
+        {"gkw_hk416mod3.weapon",36},
+        {"gkw_hk416mod3_skill.weapon",36},
+        {"gkw_hk416_537_mod3.weapon",36},
+        {"gkw_hk416_537_mod3_skill.weapon",36},
+        {"gkw_hk416_6505_mod3.weapon",36},
+        {"gkw_hk416_6505_mod3_skill.weapon",36},
+        {"gkw_hk416mod3_805.weapon",36},
+        {"gkw_hk416mod3_805_skill.weapon",36},
+
+        {"gkw_hk416_3401_mod3.weapon",37},
+        {"gkw_hk416_3401_mod3_skill.weapon",37},
+
+        // SMG 手雷
+        {"gkw_m3.weapon",38},
+        {"gkw_sten.weapon",38},
+        {"gkw_stenmod3.weapon",38},
+        {"gkw_sterling.weapon",38},
+        {"gkw_saf.weapon",38},
+        {"gkw_saf_6607.weapon",38},
+
+        // 炼金术师 大限
+        {"ff_alchemist.weapon",39},
+        {"ff_alchemist_skill.weapon",39},
+
+        // 汉阳造88式，88雷(普通一颗雷，mod3三颗充能雷)
+        {"gkw_88type.weapon",40},
+        {"gkw_88typemod3.weapon",41},
+        {"gkw_88typemod3_skill.weapon",41},
+
+        // 汉阳造高达，攻顶火箭
+        {"gkw_88typemod3_6503.weapon",42},        
+        {"gkw_88typemod3_6503_skill.weapon",42},   
+
+        // M200 无言杀意
+        {"gkw_m200.weapon",43},        
+        {"gkw_m200_560.weapon",43},        
+        {"gkw_m200_4502.weapon",43},        
+
+        // CZ75 
+        {"gkw_cz75.weapon",44},
+        {"gkw_cz75_1604.weapon",44},
+
+        // G41_only
+        {"gkw_g41_only.weapon",46},
+        {"gkw_g41_only_skill.weapon",46},
+        {"gkw_g41_2401_only.weapon",46},
+        {"gkw_g41_2401_only_skill.weapon",46},
+        {"gkw_g41_7406_only.weapon",46},
+        {"gkw_g41_7406_only_skill.weapon",46},
+
+        // UMP45MOD3
+        {"gkw_ump45mod3.weapon",47},
+        {"gkw_ump45mod3_535.weapon",47},
+        {"gkw_ump45mod3_410.weapon",47},
+        {"gkw_ump45mod3_3403.weapon",47},
+        {"gkw_ump45mod3_5405.weapon",47},
+        {"gkw_ump45mod3_5405_skill.weapon",47},
+
+        // 衔尾蛇
+        {"ff_weaver.weapon",48},
+        {"ff_weaver_1.weapon",48},
+
+        //汤普森
+        {"gkw_thompson.weapon",49},
+        {"gkw_thompson_5703.weapon",49},
+
+        //燃烧链接 UZI
+        {"gkw_uzimod3.weapon",50},
+        {"gkw_uzimod3_skill.weapon",50},
+
+        //瞄准射击 锁人版
+        {"gkw_m1903.weapon",51},
+        {"gkw_m1903_only.weapon",51},
+        {"gkw_m1903_exp.weapon",51},
+        {"gkw_m1903_302.weapon",51},
+        {"gkw_m1903_302_only.weapon",51},
+        {"gkw_m1903_302_exp.weapon",51},        
+        {"gkw_m1.weapon",51},
+        {"gkw_m1_1106.weapon",51},
+        {"gkw_m1_sf.weapon",51},
+        {"gkw_m1_sf_skill.weapon",51},
+        {"gkw_m1_sf_1106.weapon",51},
+        {"gkw_m1_sf_1106_skill.weapon",51},
+        {"gkw_m1891.weapon",51},
+        {"gkw_m21.weapon",51},
+        {"gkw_psg1.weapon",51},
+        {"gkw_qbu88.weapon",51},
+        {"gkw_qbu88_skill.weapon",51},
+        {"gkw_qbu88_5502.weapon",51},
+        {"gkw_qbu88_5502_skill.weapon",51},        
+        {"gkw_sv98.weapon",51},
+        {"gkw_sv98_502.weapon",51},
+        {"gkw_sv98_1906.weapon",51},
+
+        {"gkw_sv98mod3.weapon",51},
+        {"gkw_sv98mod3_502.weapon",51},
+        {"gkw_sv98mod3_1906.weapon",51},
+        {"gkw_sv98mod3_skill.weapon",51},
+        {"gkw_sv98mod3_502_skill.weapon",51},
+        {"gkw_sv98mod3_1906_skill.weapon",51},
+
+        {"gkw_supersass.weapon",51},
+        {"gkw_supersass_1407.weapon",51},
+        {"gkw_supersassmod3.weapon",51},
+        {"gkw_supersassmod3_1407.weapon",51},        
+        {"gkw_supersassmod3_skill.weapon",51},
+        {"gkw_supersassmod3_1407_skill.weapon",51},
+
+        {"gkw_thunder.weapon",51},
+        {"gkw_thunder_2206.weapon",51},
+
+        {"gkw_98k.weapon",51},
+        {"gkw_98k_skill.weapon",51},
+        {"gkw_98kmod3.weapon",51},
+        {"gkw_98kmod3_skill.weapon",51},
+
+        //墨尔斯假面 乐
+        {"gkw_carcano1938.weapon",52},
+
+        //瞄准射击 坐标版
+        {"gkw_m99.weapon",53},
+        {"gkw_m99_1701.weapon",53},
+        {"gkw_m99_3304.weapon",53},
+        {"gkw_m99_404.weapon",53},
+        {"gkw_ptrd.weapon",53},
+
+        // 这几位都要重做
+        {"gkw_tac50.weapon",53},
+        {"gkw_gm6.weapon",53},
+        {"gkw_m82a1.weapon",53},
+        {"gkw_m82a1_skill.weapon",53},
+        {"gkw_gepardm1.weapon",53},
+        {"gkw_gepardm1mod3.weapon",53},
+        {"gkw_gepardm1_4006.weapon",53},
+        {"gkw_gepardm1mod3_4006.weapon",53},
+
+        {"gkw_f1.weapon",54},
+        {"gkw_f1mod3.weapon",54},
+
+        // 波波沙机甲，先暂定为打烟，做不做维修效果另说
+        {"gkr_bbs.weapon",55},
+
+        {"gkw_svdex.weapon",56},
+        {"gkw_svdex_5506.weapon",56},
+
+        // 特工416奶箱
+        {"gkw_hk416_agent_he.weapon",57},
+        {"gkw_hk416_agent_sticky.weapon",57},
+
+        {"gkw_emp35.weapon",58},
+        {"gkw_emp35_8003.weapon",58},
+
+        {"gkw_64typemod3.weapon",59},
+
+        {"gkw_zasm21.weapon",60},
+        {"gkw_zasm21_2104.weapon",60},
+
+        // 下面这行是用来占位的，在这之上添加新的枪和index即可
+        {"666",-1}
+    };

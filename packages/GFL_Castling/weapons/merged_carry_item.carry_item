@@ -10990,6 +10990,44 @@
 	<modifier class="detectability" value="0.5"/>
 </carry_item>
 
+<carry_item key="pard_ar_charged_2" time_to_live_out_in_the_open="0" name="Charged Standard paradeus Force Armor" transform_on_consume="pard_ar_charged_1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="pard_ar.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="1" in_stock="1" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="speed" value="0.8"/>
+	<modifier class="hit_success_probability" value="-1.5"/>
+	<modifier class="detectability" value="0.2"/>
+	<addon_model filename="pard_chargedvest.xml"/>
+</carry_item>
+
+<carry_item key="pard_ar_charged_1" time_to_live_out_in_the_open="0" name="Charged Standard paradeus Force Armor" transform_on_consume="pard_ar.carry_item" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="pard_ar.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="1" in_stock="1" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="speed" value="0.8"/>
+	<modifier class="hit_success_probability" value="-1.5"/>
+	<modifier class="detectability" value="0.2"/>
+	<addon_model filename="pard_chargedvest.xml"/>
+</carry_item>
+
 <carry_item key="pard_ar.carry_item" time_to_live_out_in_the_open="0" name="Standard paradeus Force Armor" transform_on_consume="pard_ar_1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 	<hud_icon filename="pard_ar.png"/>
 	<capacity value="1" source="rank" source_value="0"/>
@@ -12021,11 +12059,49 @@
 	<modifier class="detectability" value="3.0"/>
 </carry_item>
 
+<carry_item key="pard_sg_charged_2" time_to_live_out_in_the_open="0" name="Charged Armed paradeus Force Armor" transform_on_consume="pard_sg_charged_1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="pard_ar.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="1" in_stock="1" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="speed" value="0.8"/>
+	<modifier class="hit_success_probability" value="-1.5"/>
+	<modifier class="detectability" value="0.7"/>
+	<addon_model filename="pard_chargedvest.xml"/>
+</carry_item>
+
+<carry_item key="pard_sg_charged_1" time_to_live_out_in_the_open="0" name="Charged Armed paradeus Force Armor" transform_on_consume="pard_sg.carry_item" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="pard_ar.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="1" in_stock="1" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="speed" value="0.8"/>
+	<modifier class="hit_success_probability" value="-1.5"/>
+	<modifier class="detectability" value="1"/>
+	<addon_model filename="pard_chargedvest.xml"/>
+</carry_item>
+
 <carry_item key="pard_sg.carry_item" time_to_live_out_in_the_open="0" name="Armed paradeus Force Armor" transform_on_consume="pard_sg_1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 	<hud_icon filename="pard_sg.png"/>
 	<capacity value="1" source="rank" source_value="0"/>
 	<commonness value="1" in_stock="1" can_respawn_with="1"/>
-	<inventory encumbrance="100" price="1"/>
+	<inventory encumbrance="100" price="0.7"/>
 	<model/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
 	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
@@ -13068,6 +13144,44 @@
 	<modifier class="speed" value="0.0"/>
 	<modifier class="hit_success_probability" value="-0.6"/>
 	<modifier class="detectability" value="0.0"/>
+</carry_item>
+
+<carry_item key="pard_infected_rampage2" time_to_live_out_in_the_open="0" name="Rampaged EILD" transform_on_consume="pard_infected_rampage1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="pard_ar.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="1" in_stock="1" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="speed" value="1.6"/>
+	<modifier class="hit_success_probability" value="-0.8"/>
+	<modifier class="detectability" value="2.5"/>
+	<addon_model filename="pard_chargedvest_zombie.xml"/>
+</carry_item>
+
+<carry_item key="pard_infected_rampage1" time_to_live_out_in_the_open="0" name="Rampaged EILD" transform_on_consume="pard_infected.carry_item" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="pard_ar.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="1" in_stock="1" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="1"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="speed" value="1.5"/>
+	<modifier class="hit_success_probability" value="-0.8"/>
+	<modifier class="detectability" value="2.5"/>
+	<addon_model filename="pard_chargedvest_zombie.xml"/>
 </carry_item>
 
 <carry_item key="pard_infected.carry_item" time_to_live_out_in_the_open="0" name="EILD" transform_on_consume="pard_infected_1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
@@ -19499,6 +19613,333 @@
 </carry_item>
 
 <carry_item key="vest_15hp_elite_14" time_to_live_out_in_the_open="0" name="Elite Vest" transform_on_consume="vest_15hp_elite_15" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="1" in_stock="1" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="50"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="death"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="death"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
+	<modifier class="speed" value="0.0"/>
+	<modifier class="detectability" value="0.3"/>
+	<modifier class="hit_success_probability" value="-0.8"/>
+</carry_item>
+
+<carry_item key="para_vest_15hp_elite_0_2" time_to_live_out_in_the_open="0" name="Charged Paradeus Elite Vest" transform_on_consume="para_vest_15hp_elite_0_1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="1" in_stock="1" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="50"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="speed" value="0.8"/>
+	<modifier class="detectability" value="0.3"/>
+	<modifier class="hit_success_probability" value="-1.6"/>
+	<addon_model filename="pard_chargedvest.xml"/>
+</carry_item>
+
+<carry_item key="para_vest_15hp_elite_0_1" time_to_live_out_in_the_open="0" name="Charged Paradeus Elite Vest" transform_on_consume="para_vest_15hp_elite_0_0" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="1" in_stock="1" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="50"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="speed" value="0.8"/>
+	<modifier class="detectability" value="0.6"/>
+	<modifier class="hit_success_probability" value="-1.5"/>
+	<addon_model filename="pard_chargedvest.xml"/>
+</carry_item>
+
+<carry_item key="para_vest_15hp_elite_0_0" time_to_live_out_in_the_open="0" name="Charged Paradeus Elite Vest" transform_on_consume="para_vest_15hp_elite.carry_item" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="1" in_stock="1" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="50"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="speed" value="0.6"/>
+	<modifier class="detectability" value="0.6"/>
+	<modifier class="hit_success_probability" value="-1.3"/>
+	<addon_model filename="pard_chargedvest.xml"/>
+</carry_item>
+
+<carry_item key="para_vest_15hp_elite.carry_item" time_to_live_out_in_the_open="0" name="Paradeus Elite Vest" transform_on_consume="para_vest_15hp_elite_1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="1" in_stock="1" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="50"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="speed" value="0.0"/>
+	<modifier class="detectability" value="0.3"/>
+	<modifier class="hit_success_probability" value="-0.8"/>
+</carry_item>
+
+<carry_item key="para_vest_15hp_elite_1" time_to_live_out_in_the_open="0" name="Paradeus Elite Vest" transform_on_consume="para_vest_15hp_elite_2" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="1" in_stock="1" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="50"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="speed" value="0.0"/>
+	<modifier class="detectability" value="0.3"/>
+	<modifier class="hit_success_probability" value="-0.8"/>
+</carry_item>
+
+<carry_item key="para_vest_15hp_elite_2" time_to_live_out_in_the_open="0" name="Paradeus Elite Vest" transform_on_consume="para_vest_15hp_elite_3" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="1" in_stock="1" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="50"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="speed" value="0.0"/>
+	<modifier class="detectability" value="0.3"/>
+	<modifier class="hit_success_probability" value="-0.8"/>
+</carry_item>
+
+<carry_item key="para_vest_15hp_elite_3" time_to_live_out_in_the_open="0" name="Paradeus Elite Vest" transform_on_consume="para_vest_15hp_elite_4" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="1" in_stock="1" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="50"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="speed" value="0.0"/>
+	<modifier class="detectability" value="0.3"/>
+	<modifier class="hit_success_probability" value="-0.8"/>
+</carry_item>
+
+<carry_item key="para_vest_15hp_elite_4" time_to_live_out_in_the_open="0" name="Paradeus Elite Vest" transform_on_consume="para_vest_15hp_elite_5" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="1" in_stock="1" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="50"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="speed" value="0.0"/>
+	<modifier class="detectability" value="0.3"/>
+	<modifier class="hit_success_probability" value="-0.8"/>
+</carry_item>
+
+<carry_item key="para_vest_15hp_elite_5" time_to_live_out_in_the_open="0" name="Paradeus Elite Vest" transform_on_consume="para_vest_15hp_elite_6" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="1" in_stock="1" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="50"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="speed" value="0.0"/>
+	<modifier class="detectability" value="0.3"/>
+	<modifier class="hit_success_probability" value="-0.8"/>
+</carry_item>
+
+<carry_item key="para_vest_15hp_elite_6" time_to_live_out_in_the_open="0" name="Paradeus Elite Vest" transform_on_consume="para_vest_15hp_elite_7" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="1" in_stock="1" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="50"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="speed" value="0.0"/>
+	<modifier class="detectability" value="0.3"/>
+	<modifier class="hit_success_probability" value="-0.8"/>
+</carry_item>
+
+<carry_item key="para_vest_15hp_elite_7" time_to_live_out_in_the_open="0" name="Paradeus Elite Vest" transform_on_consume="para_vest_15hp_elite_8" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="1" in_stock="1" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="50"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="speed" value="0.0"/>
+	<modifier class="detectability" value="0.3"/>
+	<modifier class="hit_success_probability" value="-0.8"/>
+</carry_item>
+
+<carry_item key="para_vest_15hp_elite_8" time_to_live_out_in_the_open="0" name="Paradeus Elite Vest" transform_on_consume="para_vest_15hp_elite_9" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="1" in_stock="1" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="50"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="speed" value="0.0"/>
+	<modifier class="detectability" value="0.3"/>
+	<modifier class="hit_success_probability" value="-0.8"/>
+</carry_item>
+
+<carry_item key="para_vest_15hp_elite_9" time_to_live_out_in_the_open="0" name="Paradeus Elite Vest" transform_on_consume="para_vest_15hp_elite_10" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="1" in_stock="1" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="50"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="speed" value="0.0"/>
+	<modifier class="detectability" value="0.3"/>
+	<modifier class="hit_success_probability" value="-0.8"/>
+</carry_item>
+
+<carry_item key="para_vest_15hp_elite_10" time_to_live_out_in_the_open="0" name="Paradeus Elite Vest" transform_on_consume="para_vest_15hp_elite_11" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="1" in_stock="1" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="50"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="stun"/>
+	<modifier class="speed" value="0.0"/>
+	<modifier class="detectability" value="0.3"/>
+	<modifier class="hit_success_probability" value="-0.8"/>
+</carry_item>
+
+<carry_item key="para_vest_15hp_elite_11" time_to_live_out_in_the_open="0" name="Paradeus Elite Vest" transform_on_consume="para_vest_15hp_elite_12" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="1" in_stock="1" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="50"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="speed" value="0.0"/>
+	<modifier class="detectability" value="0.3"/>
+	<modifier class="hit_success_probability" value="-0.8"/>
+</carry_item>
+
+<carry_item key="para_vest_15hp_elite_12" time_to_live_out_in_the_open="0" name="Paradeus Elite Vest" transform_on_consume="para_vest_15hp_elite_13" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="1" in_stock="1" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="50"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="speed" value="0.0"/>
+	<modifier class="detectability" value="0.3"/>
+	<modifier class="hit_success_probability" value="-0.8"/>
+</carry_item>
+
+<carry_item key="para_vest_15hp_elite_13" time_to_live_out_in_the_open="0" name="Paradeus Elite Vest" transform_on_consume="para_vest_15hp_elite_14" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+	<hud_icon filename="testing.png"/>
+	<capacity value="1" source="rank" source_value="0"/>
+	<commonness value="1" in_stock="1" can_respawn_with="1"/>
+	<inventory encumbrance="100" price="50"/>
+	<model/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+	<modifier class="melee_hit_result" input_character_state="death" output_character_state="wound"/>
+	<modifier class="speed" value="0.0"/>
+	<modifier class="detectability" value="0.3"/>
+	<modifier class="hit_success_probability" value="-0.8"/>
+</carry_item>
+
+<carry_item key="para_vest_15hp_elite_14" time_to_live_out_in_the_open="0" name="Paradeus Elite Vest" transform_on_consume="para_vest_15hp_elite_15" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 	<hud_icon filename="testing.png"/>
 	<capacity value="1" source="rank" source_value="0"/>
 	<commonness value="1" in_stock="1" can_respawn_with="1"/>
