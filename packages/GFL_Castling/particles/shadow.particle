@@ -1,0 +1,250 @@
+author: RST
+2023.2.6
+未经授权不可复用、修改使用、仅用于helldiver mod
+阴影系列粒子特效，包括飞机投影，烟雾投影等
+
+import real_up_smoke_1 from "real_blast_effect.particle"
+
+
+particle_system shadow_real_up_smoke : real_up_smoke_1  //舍弃
+{
+    quota 300
+    particle_width 10
+	particle_height 10
+	material Shadow_smoke
+    emitter Ring
+	{
+		angle 30
+		colour 1 1 1 1
+		direction 0 1 0
+		emission_rate 50
+		position 0 0 0
+		velocity_min 0.1
+		velocity_max 0.1
+		time_to_live_min 1.5
+		time_to_live_max 2.0
+		duration 0.1
+        width 3
+		height 3
+		depth 1
+		inner_width 0.01
+		inner_height 0.01
+	}
+	affector Scaler
+	{
+		rate 1
+	}
+	affector ColourInterpolator
+	{
+		time0 0
+		colour0 0 0 0 0
+		time1 0.5
+		colour1 0 0 0 0
+		time2 1
+		colour2 0 0 0 0
+	}
+    affector LinearForce{
+		force_vector 0 1 0
+		force_application add
+	}
+	affector Rotator
+	{
+		rotation_speed_range_start	30
+		rotation_speed_range_end	-30
+		rotation_range_start	0
+		rotation_range_end	360
+    }
+}
+particle_system shadow_real_up_smoke_leave : shadow_real_up_smoke
+{
+    particle_width 20
+	particle_height 15
+    material Tex_Smoke17C_real
+    billboard_type perpendicular_common
+    billboard_origin center_right
+    emitter Ring
+	{
+		angle 30
+		colour 0 0 0 0
+		direction 0 1 0
+		emission_rate 10
+		position 1 -0.1 -3
+		velocity 0.00001
+		time_to_live 4
+		duration 0.1
+	}
+    affector Scaler
+	{
+		rate 0.5
+	}
+	affector ColourInterpolator
+	{
+		time0 0
+		colour0 0.25 0.25 0.25 0.3
+		time1 0.4
+		colour1 0.15 0.15 0.15 0.65
+		time2 1
+		colour2 0 0 0 0.1
+	}
+    affector LinearForce{
+		force_vector 0 0 0
+		force_application add
+	}
+    affector Rotator
+	{
+		rotation_speed_range_start	5
+		rotation_speed_range_end	5
+		rotation_range_start	120
+		rotation_range_end 90
+    }
+}
+particle_system shadow_real_up_smoke_leave_2 : shadow_real_up_smoke
+{
+    particle_width 14
+	particle_height 14
+    material Tex_Smoke17C_real
+    billboard_type perpendicular_common
+    billboard_origin center
+    emitter Ring
+	{
+		angle 30
+		colour 0 0 0 0
+		direction 0 1 0
+		emission_rate 10
+		position 0 0 0
+		velocity 0.00001
+		time_to_live 4
+		duration 0.1
+	}
+    affector Scaler
+	{
+		rate 2
+	}
+	affector ColourInterpolator
+	{
+		time0 0
+		colour0 0.25 0.25 0.25 0.3
+		time1 0.4
+		colour1 0.15 0.15 0.15 0.65
+		time2 1
+		colour2 0 0 0 0.1
+	}
+    affector LinearForce{
+		force_vector 0 0 0
+		force_application add
+	}
+    affector Rotator
+	{
+		rotation_speed_range_start	5
+		rotation_speed_range_end	5
+		rotation_range_start	120
+		rotation_range_end 90
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+material ShadowIntegrated {
+	receive_shadows off
+	technique Basic {
+		shadow_caster_material ShadowIntegrated2
+		pass Basic {
+			lighting off
+			colour_write off
+			depth_write off
+			cull_hardware none
+			cull_software none
+		} 
+	}
+}
+
+material ShadowIntegrated2 {
+	transparency_casts_shadows on
+	technique ShadersShadows {
+		pass Basic {
+			lighting off
+			fog_override true none
+
+			vertex_program_ref AlphaCasterVP {
+			}
+ 
+			fragment_program_ref AlphaCasterFP {
+			}
+
+            alpha_rejection greater 1
+			texture_unit Basic {
+				//texture shadowplant3.png
+				tex_address_mode clamp
+			}
+		}
+	}
+}
+
+material ShadowSimple {
+	transparency_casts_shadows on
+	receive_shadows off
+	technique NoShaders {
+		pass Basic {
+			lighting off
+			colour_write off
+			depth_write off
+			cull_hardware none
+			cull_software none
+            alpha_rejection greater 1
+			texture_unit Basic {
+				//texture shadowplant3.png
+				tex_address_mode clamp
+			}
+		} 
+	}
+}
+//--------------------------------------------------------------------------------------
+material Shadow_smokeIntegrated : ShadowIntegrated {
+	technique Basic {
+		shadow_caster_material Shadow_smokeIntegrated2
+	}
+}
+
+material Shadow_smokeIntegrated2 : ShadowIntegrated2 {
+	technique ShadersShadows {
+		pass Basic {	
+			texture_unit Basic {
+			    tex_address_mode clamp
+                texture Tex_Smoke09C.png
+                filtering trilinear
+                //scale 1 1
+			}
+		}
+	}
+}
+
+material alpha_blend_base{
+	receive_shadows off
+	transparency_casts_shadows on
+	technique{
+		pass{
+			lighting off
+			fog_override true
+			depth_write off
+			scene_blend alpha_blend
+		}
+	}
+}
+material Tex_Smoke09C_smoke : alpha_blend_base
+{   
+    technique{
+    pass{
+        depth_func less
+        texture_unit{
+            texture Tex_Smoke09C.png 	
+}}}}
+

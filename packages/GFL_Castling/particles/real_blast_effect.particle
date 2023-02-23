@@ -1,0 +1,911 @@
+author: RST
+modified：
+2023.2.2
+授权于《异向易位》少前mod使用和修改使用
+拟真系列粒子特效
+
+	<effect class="result" key="terrain" ref="real_ground_crater" lighting="1" post_processing="1"/>
+	<effect class="result" key="terrain" ref="real_up_dust_beam" lighting="1" post_processing="0"/>
+	<effect class="result" key="terrain" ref="real_up_dust_spread" lighting="1" post_processing="0"/>
+	<effect class="result" key="terrain" ref="real_up_dust_stone" lighting="1" post_processing="1"/>
+	<effect class="result" key="terrain" ref="real_up_smoke_1" lighting="1" post_processing="0"/>
+	<effect class="result" key="terrain" ref="shadow_real_up_smoke_leave" lighting="1" post_processing="1"/>
+	<effect class="result" key="terrain" ref="shadow_real_up_smoke_leave_2" lighting="1" post_processing="1"/>
+	<effect class="result" key="terrain" ref="real_up_smoke_beam" lighting="1" post_processing="0"/>
+	<effect class="result" key="terrain" ref="real_up_impact_spread" lighting="1" post_processing="0"/>
+	<effect class="result" key="terrain" ref="real_up_impact_spark" lighting="1" post_processing="0"/>
+	<effect class="result" key="terrain" ref="real_up_impact_spark_2" lighting="1" post_processing="0"/>
+	<effect class="result" key="terrain" ref="real_up_impact_spark_1" lighting="1" post_processing="0"/>
+	<effect class="result" key="terrain" ref="real_smoke_1" lighting="1" post_processing="1"/>
+	<effect class="result" key="terrain" ref="real_firesmoke_1" lighting="0" post_processing="0"/>
+	<effect class="result" key="terrain" ref="real_firesmoke_2" lighting="0" post_processing="0"/>
+	<effect class="result" key="terrain" ref="real_center_short_light" lighting="0" post_processing="0"/> 
+	<effect class="result" key="terrain" ref="real_center_ambient_light" lighting="0" post_processing="0"/> 
+	
+	<effect class="result" key="other" copy="terrain"/>
+	<effect class="result" key="static_object" copy="terrain" />
+	<effect class="result" key="character" copy="terrain" />
+	<effect class="result" key="shield" copy="terrain" />			
+	<effect class="result" key="vehicle" copy="terrain" />			
+	<effect class="result" key="vehicle" tag="sandbag" copy="terrain" use_surface_color="0" />
+	<effect class="result" key="vehicle" tag="deco_car" copy="terrain" use_surface_color="0" />
+	<effect class="result" key="vehicle" tag="metal_thin" copy="terrain" use_surface_color="0" />
+	<effect class="result" key="vehicle" tag="metal_heavy" copy="terrain" use_surface_color="0" />
+	<effect class="result" key="vehicle" tag="metal_dumpster" copy="terrain" use_surface_color="0" />
+
+particle_system real_smoke_1
+{
+	quota 350
+	material Tex_Smoke17C_real
+	particle_width 7
+	particle_height 10
+	renderer billboard
+	billboard_type point
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 0.3 1
+	common_up_vector 0 1 1
+	iteration_interval 0
+	
+	emitter Point
+	{
+		angle 10
+		colour 1 1 1 1
+		direction 0 1 0
+		emission_rate 20
+		position 0 4 0
+		velocity_min 0.001
+		velocity_max 0.1
+		time_to_live 3.5
+		duration 0.1
+	}
+	affector Scaler
+	{
+		rate 2
+	}
+		affector Rotator
+	{
+		rotation_speed_range_start	2
+		rotation_speed_range_end	-2
+		rotation_range_start	0
+		rotation_range_end	0
+	}
+	affector ColourInterpolator
+	{
+		time0 0
+		colour0 0.4 0.4 0.4 1
+		time1 0.5
+		colour1 0.3 0.3 0.3 1
+		time2 1
+		colour2 1 1 1 0
+	}
+	affector LinearForce{
+		force_vector 0 0.3 0
+		force_application add
+	}
+}
+particle_system real_firesmoke_1
+{
+	quota 350
+	material Tex_FireSmoke_real_01
+	particle_width 9
+	particle_height 11
+	renderer billboard
+	billboard_type point
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 0.3 1
+	common_up_vector 0 1 1
+	iteration_interval 0
+	
+	emitter Point
+	{
+		angle 0
+		colour 1 1 1 1
+		direction 0 1 0
+		emission_rate 10
+		position 0 4 0
+		velocity_min 0.001
+		velocity_max 0.1
+		time_to_live 2
+		duration 0.1
+	}
+	affector Scaler
+	{
+		rate 4
+	}
+	affector ColourInterpolator
+	{
+		time0 0
+		colour0 1 1 1 1
+		time1 0.5
+		colour1 0.7 0.7 0.7 1
+		time2 1
+		colour2 0 0 0 0
+	}
+	affector LinearForce{
+		force_vector 0 0.3 0
+		force_application add
+	}
+}
+particle_system real_firesmoke_2
+{
+	quota 350
+	material Tex_FireSmoke_real_02
+	particle_width 8
+	particle_height 9
+	renderer billboard
+	billboard_type point
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 0.3 1
+	common_up_vector 0 1 1
+	iteration_interval 0
+	
+	emitter Point
+	{
+		angle 0
+		colour 1 1 1 1
+		direction 0 1 0
+		emission_rate 10
+		position 0 2 0
+		velocity_min 0.001
+		velocity_max 0.1
+		time_to_live 1
+		duration 0.1
+	}
+	affector Scaler
+	{
+		rate 0
+	}
+	affector ColourInterpolator
+	{
+		time0 0
+		colour0 0.7 0.7 0.7 1
+		time1 1
+		colour1 0 0 0 1
+	}
+}
+particle_system real_up_dust_beam
+{
+	quota 100
+	material Tex_Spark06A
+	particle_width 5
+	particle_height 5
+	renderer billboard
+	billboard_type oriented_self
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 0 0 1
+	iteration_interval 0
+	accurate_facing on
+
+	emitter Point
+	{
+		angle 40
+		colour 1 1 1 1
+		direction 0 1 0
+		emission_rate 60
+		position 0 -3 0
+		velocity_min 5
+		velocity_max 10
+		time_to_live 1.2
+		duration 0.1
+	}
+	affector Scaler
+	{
+		rate 20
+	}
+	affector ColourInterpolator
+	{
+		time0 0
+		colour0 1 1 1 1
+		time1 0.5
+		colour1 1 1 1 1
+		time2 1
+		colour2 0.5 0.5 0.5 0
+	}
+	affector LinearForce{
+		force_vector 0 -1 0
+		force_application add
+	}
+}
+particle_system real_up_dust_spread
+{
+	quota 1000
+	material Tex_Glow16A_pass
+	particle_width 5
+	particle_height 5
+	renderer billboard
+	billboard_type perpendicular_common
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 0 0 1
+	iteration_interval 0
+	accurate_facing on
+
+	emitter Point
+	{
+		angle 10
+		colour 1 1 1 1
+		direction 0 1 0
+		emission_rate 30
+		position 0 0 0
+		velocity_min 10
+		velocity_min 15
+		time_to_live 3
+		duration 0.1
+	}
+	affector Scaler
+	{
+		rate 5
+	}
+	affector ColourInterpolator
+	{
+		time0 0
+		colour0 0.5 0.5 0.5 1
+		time1 0.5
+		colour1 0.4 0.4 0.4 1
+		time2 1
+		colour2 0.3 0.3 0.3 0
+	}
+	affector LinearForce{
+		force_vector 0 -15 0
+		force_application add
+	}
+	affector Rotator
+	{
+		rotation_speed_range_start	10
+		rotation_speed_range_end	-10
+		rotation_range_start	0
+		rotation_range_end	360
+	}
+	affector DeflectorPlane 
+	{
+		plane_point 0 4 0
+		plane_normal 0 1 0 
+		bounce 0.2
+	}
+}
+particle_system real_up_impact_spread
+{
+	quota 1000
+	material Tex_Diffusion01A_real
+	particle_width 3
+	particle_height 3
+	renderer billboard
+	billboard_type perpendicular_common
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 0 0 1
+	iteration_interval 0
+
+	emitter Point
+	{
+		angle 0
+		colour 1 1 1 1
+		direction 0 1 0
+		emission_rate 30
+		position 0 0 0
+		velocity 0.0001
+		time_to_live 0.3
+		duration 0.1
+	}
+	affector Scaler
+	{
+		rate 120
+	}
+	affector ColourInterpolator
+	{
+		time0 0
+		colour0 0.5 0.5 0.5 1
+		time1 0.5
+		colour1 0.5 0.5 0.5 0.5
+		time2 1
+		colour2 0.4 0.4 0.4 0
+	}
+	affector Rotator
+	{
+		rotation_speed_range_start	10
+		rotation_speed_range_end	-10
+		rotation_range_start	0
+		rotation_range_end	360
+	}
+}
+particle_system real_up_impact_spark		//火花
+{
+	quota 1000
+	material Tex_Spark05A_pass
+	particle_width 3
+	particle_height 3
+	renderer billboard
+	billboard_type perpendicular_common
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 0 0 1
+	iteration_interval 0
+
+	emitter Point
+	{
+		angle 0
+		colour 1 1 1 1
+		direction 0 1 0
+		emission_rate 30
+		position 0 0 0
+		velocity 0.0001
+		time_to_live 0.3
+		duration 0.1
+	}
+	affector Scaler
+	{
+		rate 200
+	}
+	affector ColourInterpolator
+	{
+		time0 0
+		colour0 1 1 1 1
+		time1 0.5
+		colour1 1 1 1 0.1
+		time2 1
+		colour2 0.4 0.4 0.4 0
+	}
+	affector Rotator
+	{
+		rotation_speed_range_start	10
+		rotation_speed_range_end	-10
+		rotation_range_start	0
+		rotation_range_end	360
+	}
+}
+particle_system real_up_impact_spark_1
+{
+	quota 1200
+	material Tex_Spark17A
+	particle_width 2
+	particle_height 3
+	renderer billboard
+	billboard_type oriented_self
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 0 0 1
+	iteration_interval 0
+
+	emitter Point
+	{
+		angle 90
+		colour 1 1 1 1
+		direction 0 1 0
+		emission_rate 100
+		position 0 0 0
+		velocity_min 80
+		velocity_max 120
+		time_to_live 0.12
+		duration 0.1
+	}
+	affector ColourInterpolator
+	{
+		time0 0
+		colour0 1 1 1 1
+		time1 0.5
+		colour1 0.5 0.5 0.5 0.7
+		time2 1
+		colour2 1 1 1 1
+	}
+}
+particle_system real_up_impact_spark_2 : real_up_impact_spark_1
+{
+	material Tex_Spark18A
+}
+particle_system real_up_dust_stone
+{
+	quota 1000
+	material wand_stone_06_pass
+	particle_width 0.6
+	particle_height 0.6
+	renderer billboard
+	billboard_type perpendicular_common
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 0 0 1
+	iteration_interval 0
+
+	emitter Point
+	{
+		angle 30
+		colour 1 1 1 1
+		direction 0 1 0
+		emission_rate 100
+		position 0 0 0
+		velocity_min 16
+		velocity_min 20
+		time_to_live 3.5
+		duration 0.1
+	}
+	affector ColourInterpolator
+	{
+		time0 0
+		colour0 0.7 0.7 0.7 1
+		time1 0.5
+		colour1 0.5 0.5 0.5 1
+		time2 1
+		colour2 0.5 0.5 0.5 0
+	}
+	affector LinearForce{
+		force_vector 0 -16 0
+		force_application add
+	}
+	affector Scaler
+	{
+		rate -0.1
+	}
+	affector Rotator
+	{
+		rotation_speed_range_start	30
+		rotation_speed_range_end	90
+		rotation_range_start	0
+		rotation_range_end	360
+	}
+	affector DeflectorPlane 
+	{
+		plane_point 0 4 0
+		plane_normal 0 1 0 
+		bounce 0.4
+	}
+}
+
+particle_system real_ground_crater
+{
+	quota 350
+	material Tex_Decal07F_Diffuse_3
+	particle_width 10
+	particle_height 10
+	renderer billboard
+	billboard_type perpendicular_common
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 0 0 1
+	iteration_interval 0
+
+	emitter Point
+	{
+		angle 40
+		colour 1 1 1 1
+		direction 0 1 0300
+		emission_rate 10
+		position 0 0 0
+		velocity 0.0001
+		time_to_live 4
+		duration 0.1
+	}
+	affector ColourInterpolator
+	{
+		time0 0
+		colour0 1 1 1 1
+		time1 0.5
+		colour1 1 1 1 1
+		time2 1
+		colour2 0.5 0.5 0.5 0
+	}
+}
+particle_system real_up_smoke_1
+{
+	quota 1000
+	material Tex_Smoke09G_real
+	particle_width 8
+	particle_height 8
+	renderer billboard
+	billboard_type perpendicular_common
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 0 0 1
+	iteration_interval 0
+
+	emitter Ring
+	{
+		angle 40
+		colour 1 1 1 1
+		direction 0 1 0
+		emission_rate 30
+		position 0 3 0
+		velocity_min 1
+		velocity_max 2
+		time_to_live 2
+		duration 1
+		width 2
+		height 2
+		depth 10
+		inner_width 0.3
+		inner_height 0.3
+	}
+	affector Scaler
+	{
+		rate 2
+	}
+	affector ColourInterpolator
+	{
+		time0 0
+		colour0 1 1 1 0.6
+		time1 0.5
+		colour1 1 1 1 0.6
+		time2 1
+		colour2 0.5 0.5 0.5 0
+	}
+	affector LinearForce{
+		force_vector 0 5 0
+		force_application add
+	}
+	affector Rotator
+	{
+		rotation_speed_range_start	5
+		rotation_speed_range_end	-5
+		rotation_range_start	0
+		rotation_range_end	360
+	}
+}
+particle_system real_up_smoke_beam
+{
+	quota 1000
+	material TEX_boomachi_02_real
+	particle_width 8
+	particle_height 10
+	renderer billboard
+	billboard_type oriented_self
+	billboard_origin bottom_center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 0 0 1
+	iteration_interval 0
+
+	emitter Box
+	{
+		angle 10
+		colour 1 1 1 1
+		direction 0 1 0
+		emission_rate 15
+		position 0 -3 0
+		velocity_min 0.1
+		velocity_max 3
+		time_to_live 0.9
+		duration 0.3
+		width 3
+		height 3
+		depth 0.1
+	}
+	affector Scaler
+	{
+		rate 15
+	}
+	affector ColourInterpolator
+	{
+		time0 0
+		colour0 0.2 0.2 0.2 0.8
+		time1 0.5
+		colour1 0.3 0.3 0.3 0.3
+		time2 1
+		colour2 0.4 0.4 0.4 0
+	}
+}
+particle_system real_center_short_light
+{
+	quota 500
+	material point_soft_edge_100_pass
+	particle_width 50
+	particle_height 50
+	renderer billboard
+	billboard_type point
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 0 0 1
+	iteration_interval 0
+
+	emitter Point
+	{
+		angle 0
+		colour 1 1 1 1
+		direction 0 1 0
+		emission_rate 10
+		position 0 0 0
+		velocity_min 0.1
+		velocity_max 3
+		time_to_live 0.2
+		duration 0.1
+	}
+	affector Scaler
+	{
+		rate -200
+	}
+	affector ColourInterpolator
+	{
+		time0 0
+		colour0 0.5 0.15 0 0
+		time1 0.5
+		colour1 0.5 0.15 0 0
+		time2 1
+		colour2 0 0 0 0
+	}
+}
+particle_system real_center_ambient_light
+{
+	quota 500
+	material point_soft_edge_100_pass
+	particle_width 20
+	particle_height 25
+	renderer billboard
+	billboard_type point
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 0 0 1
+	iteration_interval 0
+
+	emitter Point
+	{
+		angle 0
+		colour 0 0 0 0
+		direction 0 1 0
+		emission_rate 10
+		position 0 0 0
+		velocity_min 0.1
+		velocity_max 3
+		time_to_live 3
+		duration 0.1
+	}
+	affector Scaler
+	{
+		rate 0
+	}
+	affector ColourInterpolator
+	{
+		time0 0
+		colour0 0.5 0.15 0 0
+		time1 0.1
+		colour1 0.5 0.15 0 0
+		time2 1
+		colour2 0 0 0 0
+	}
+}
+
+
+
+--------------------------------------material-----------------------------------
+material alpha_blend_base_real{
+	receive_shadows off
+	transparency_casts_shadows on
+	technique{
+		pass{
+			lighting off
+			fog_override true
+			depth_write off
+			scene_blend alpha_blend
+		}
+	}
+}
+material add_base_real{
+	receive_shadows off
+	technique{
+		pass{
+			lighting off
+			fog_override true
+			depth_write off
+			scene_blend add
+		}
+	}
+}
+material diy_base{
+	receive_shadows off
+	technique{
+		pass{
+			lighting off
+			fog_override true
+			depth_write off
+		}
+	}
+}
+material explosion_smoke_05_bw : add_base_real
+{   
+    technique{
+    pass{
+        texture_unit{
+            texture explosion_smoke_05_bw.png 	
+}}}}
+material TEX_boomachi_03 : alpha_blend_base_real
+{   
+    technique{
+    pass{
+        texture_unit{
+            texture TEX_boomachi_03.png 	
+}}}}
+material Tex_0147_1 : alpha_blend_base_real
+{   
+    technique{
+    pass{
+        texture_unit{
+            texture Tex_0147_1.png 	
+}}}}
+material Tex_Smoke17C_real : alpha_blend_base_real
+{   
+    technique{
+    pass{
+		scene_blend alpha_blend 
+        texture_unit{
+            texture Tex_Smoke17C.png 	
+			scroll_anim 0 -0.2
+			tex_address_mode wrap
+		}
+		texture_unit{
+            texture Tex_Smoke17C.png 
+			colour_op_ex modulate src_texture src_current
+			alpha_op_ex modulate src_texture src_current
+			scroll_anim 0.1 -0.1
+			rotate 180
+			tex_address_mode wrap
+			tex_border_colour 0 0 0 0
+		}
+		texture_unit{
+			texture Tex_Smoke09G.png
+			colour_op_ex source2 src_texture src_current
+			alpha_op_ex modulate src_texture src_current
+			tex_address_mode wrap
+		}
+	}
+}}
+material Tex_Spark06A : alpha_blend_base_real
+{   
+    technique{
+    pass{
+        texture_unit{
+            texture Tex_Spark06A.png 	
+}}}}
+material Tex_Spark17A : alpha_blend_base_real
+{   
+    technique{
+    pass{
+        texture_unit{
+            texture Tex_Spark17A.png 	
+}}}}
+material Tex_Spark18A : alpha_blend_base_real
+{   
+    technique{
+    pass{
+        texture_unit{
+            texture Tex_Spark17A.png 	
+}}}}
+material Tex_Spark05A_pass : alpha_blend_base_real
+{   
+    technique{
+    pass{
+		depth_func always_pass
+        texture_unit{
+            texture Tex_Spark05A.png 	
+}}}}
+material Tex_Decal07F_Diffuse_3 : alpha_blend_base_real
+{   
+    technique{
+    pass{
+		depth_func less
+        texture_unit{
+            texture Tex_Decal07F_Diffuse_3.png 	
+}}}}
+material Tex_Diffusion01A_real : alpha_blend_base_real
+{   
+    technique{
+    pass{
+        texture_unit{
+            texture Tex_Diffusion01A.png 	
+}}}}
+material Tex_Glow16A_pass : alpha_blend_base_real
+{   
+    technique{
+    pass{
+		depth_func always_pass
+        texture_unit{
+            texture Tex_Glow16A.png 	
+}}}}
+material Tex_Smoke09C : alpha_blend_base_real
+{   
+    technique{
+    pass{
+        texture_unit{
+            texture Tex_Smoke09C.png 	
+}}}}
+material wand_stone_06_pass : alpha_blend_base_real
+{   
+    technique{
+    pass{
+		depth_func always_pass
+        texture_unit{
+            texture wand_stone_06.png 	
+}}}}
+material TEX_boomachi_02_real : alpha_blend_base_real
+{   
+    technique{
+    pass{
+        texture_unit{
+            texture TEX_cloud_02.png 	
+			scroll_anim 0 -1
+			tex_address_mode wrap
+		}
+        texture_unit{
+            texture TEX_boomachi_02.png 	
+			colour_op_ex source2 src_texture src_current
+			alpha_op_ex modulate src_texture src_current
+
+		}
+
+}}}
+material Tex_Smoke09G_real : alpha_blend_base_real
+{   
+    technique{
+    pass{
+		separate_scene_blend alpha_blend alpha_blend
+        texture_unit{
+            texture Tex_Smoke09G.png 	
+			scroll_anim 0 0
+			rotate_anim 0.05
+			tex_address_mode wrap
+		}
+		texture_unit{
+            texture Tex_Smoke09G.png 
+			colour_op_ex modulate src_texture src_current
+			alpha_op_ex modulate src_texture src_current
+			scroll_anim 0 -0.05
+			rotate 180
+			tex_address_mode wrap
+			tex_border_colour 0 0 0 0
+		}
+	}
+}}
+material Tex_FireSmoke_real_01 : add_base_real
+{   
+    technique{
+    pass{
+		scene_blend colour_blend
+        texture_unit{
+            texture Tex_Fire05F.png 	
+			scroll_anim 0.1 -0.5
+			tex_address_mode wrap
+		}
+        texture_unit{
+            texture Tex_Fire05E.png 	
+			scroll_anim 0.05 -0.3
+			tex_address_mode wrap
+		}
+		texture_unit{
+			texture Tex_Smoke09A.png
+			colour_op modulate 
+			tex_address_mode wrap
+		}
+	}
+}}
+material Tex_FireSmoke_real_02 : add_base_real
+{   
+    technique{
+    pass{
+		scene_blend add
+        texture_unit{
+            texture Tex_Fire05F.png 	
+			scroll_anim 0.1 -0.5
+			tex_address_mode wrap
+		}
+        texture_unit{
+            texture Tex_Fire05E.png 	
+			scroll_anim 0.05 -0.3
+			tex_address_mode wrap
+		}
+		texture_unit{
+			texture Tex_Smoke09A.png
+			colour_op modulate 
+			tex_address_mode wrap
+		}
+	}
+}}
+
