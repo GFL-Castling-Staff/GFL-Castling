@@ -29,7 +29,7 @@
 	<hud_icon filename="testing.png"/>
 	<weak_hand_hold offset="0.1"/>
 	<projectile file="bullet.projectile">
-		<result class="hit" kill_probability="1.55" kill_probability_offset_on_successful_hit="0.4" kill_decay_start_time="0.313" kill_decay_end_time="0.522"/>
+		<result class="hit" kill_probability="1.65" kill_probability_offset_on_successful_hit="0.4" kill_decay_start_time="0.313" kill_decay_end_time="0.522"/>
 	</projectile>
 	<tag name="pistol"/>
     <capacity value="0" source="rank" source_value="0.0"/>
