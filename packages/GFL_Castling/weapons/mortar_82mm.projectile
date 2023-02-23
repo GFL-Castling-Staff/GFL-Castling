@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projectile class="grenade" name="82mm mortar" slot="1" pulldown_in_air="30" key="mortar_82mm.projectile">
     <tag name="rocket"/>
-    <result class="spawn" instance_class="projectile" instance_key="blast_heavy_rad8_damage4.projectile" min_amount="10" max_amount="10" offset="0 2.0 0" position_spread="1.0 0" direction_spread="0 0"  damage_origin_vehicle="0"/>
+    <result class="spawn" instance_class="projectile" instance_key="blast_heavy_rad10_damage4.projectile" min_amount="10" max_amount="10" offset="0 2.0 0" position_spread="2.5 0" direction_spread="0 0"  damage_origin_vehicle="0"/>
     <trigger class="impact"/>
     <rotation class="motion" />
     <model mesh_filename="mortar.xml" />

@@ -38,8 +38,8 @@ class map_DeadZone_Phase : Tracker {
 		m_metagame.getComms().send(command);
 		m_metagame.getComms().send("<command class='commander_ai' faction='0' base_defense='0.6' border_defense='0.3' attack_start_spread='0' attack_target_spread='0' />");
 		m_metagame.getComms().send("<command class='commander_ai' faction='1' base_defense='0.2' border_defense='0.1' attack_start_spread='0' attack_target_spread='0' attack_target_base_key='Crash part' />");
-		m_metagame.getComms().send("<command class='commander_ai' faction='2' base_defense='0.6' border_defense='0.35' attack_start_spread='0' attack_target_spread='0' />");
-		m_metagame.getComms().send("<command class='commander_ai' faction='3' base_defense='0.6' border_defense='0.35' attack_start_spread='0' attack_target_spread='0'  />");
+		m_metagame.getComms().send("<command class='commander_ai' faction='2' base_defense='0.6' border_defense='0.4' attack_start_spread='0' attack_target_spread='0' />");
+		m_metagame.getComms().send("<command class='commander_ai' faction='3' base_defense='0.6' border_defense='0.4' attack_start_spread='0' attack_target_spread='0'  />");
 	}
 
 	// --------------------------------------------
