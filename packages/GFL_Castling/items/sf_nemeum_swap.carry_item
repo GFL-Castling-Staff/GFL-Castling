@@ -14,7 +14,7 @@
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
         <modifier class="speed" value="-0.1" />
-        <modifier class="hit_success_probability" value="-1.4" />
+        <modifier class="hit_success_probability" value="-1.2" />
         <modifier class="detectability" value="0.5" />
 	</carry_item>
 	<carry_item key="sf_nemeum_swap_1" time_to_live_out_in_the_open="0" name="Nemeum Armor Plate" transform_on_consume="sf_nemeum_swap_2" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
@@ -31,7 +31,7 @@
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
         <modifier class="speed" value="-0.1" />
-        <modifier class="hit_success_probability" value="-1.4" />
+        <modifier class="hit_success_probability" value="-1.2" />
         <modifier class="detectability" value="0.5" />
 	</carry_item>
 	<carry_item key="sf_nemeum_swap_2" time_to_live_out_in_the_open="0" name="Nemeum Armor Plate" transform_on_consume="sf_nemeum_swap_3" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
@@ -48,7 +48,7 @@
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
         <modifier class="speed" value="-0.1" />
-        <modifier class="hit_success_probability" value="-1.4" />
+        <modifier class="hit_success_probability" value="-1.2" />
         <modifier class="detectability" value="0.5" />
 	</carry_item>
 	<carry_item key="sf_nemeum_swap_3" time_to_live_out_in_the_open="0" name="Nemeum Armor Plate" transform_on_consume="sf_nemeum_swap_4" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
@@ -65,7 +65,7 @@
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
         <modifier class="speed" value="-0.1" />
-        <modifier class="hit_success_probability" value="-1.4" />
+        <modifier class="hit_success_probability" value="-1.2" />
         <modifier class="detectability" value="0.5" />
 	</carry_item>
 	<carry_item key="sf_nemeum_swap_4" time_to_live_out_in_the_open="0" name="Nemeum Armor Plate" transform_on_consume="sf_nemeum.carry_item" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
@@ -82,7 +82,7 @@
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
         <modifier class="speed" value="-0.1" />
-        <modifier class="hit_success_probability" value="-1.4" />
+        <modifier class="hit_success_probability" value="-1.2" />
         <modifier class="detectability" value="0.5" />
 	</carry_item>
 </carry_items>

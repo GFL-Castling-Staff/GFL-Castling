@@ -136,6 +136,11 @@ dictionary commandSkillIndex = {
         {"gkw_fal.weapon",22},
         {"gkw_fal_2406.weapon",22},
         {"gkw_fal_308.weapon",22},
+        {"gkw_fal_only.weapon",22},
+        {"gkw_fal_308_only.weapon",22},
+        {"gkw_fal_2406_only.weapon",22},
+
+        
 
         // M4SOPMODIIMOD3
         {"gkw_m4sopmodiimod3.weapon",23},
