@@ -17,7 +17,7 @@
 		<inventory encumbrance="0.0" price="300.0" />
 	</call>    
 
-	<call key="para_eod.call" radio_view_text="EOD Infanry" initiation_comment1="Request Police Assemble" acknowledge_comment="Roger" notify_metagame="1" consume_rp="0" show_target_marker="0">
+	<call key="para_eod.call" radio_view_text="EOD Infanry" initiation_comment1="Request Sentinel Assemble" acknowledge_comment="Roger" notify_metagame="1" consume_rp="0" show_target_marker="0">
 		<tag name="reinforcements" />
 		<hud_icon filename="call_Airbone_Traumateam.png" />
 		<capacity value="0" source="rank" source_value="0.0" />

@@ -751,6 +751,7 @@
 			<call key="kcco_argo_puppis.call" />
 			<call key="kcco_argo_carina.call" />
 			<call key="kcco_zircon.call" />
+			<call key="kcco_zircon_1.call" />
 			<call key="kcco_assault.call" />			
 		</resources>
 		<item_class_existence_config>
@@ -759,50 +760,54 @@
 			<item_class_existence class="carry_item" slot="0" probability="0.001" />
 		</item_class_existence_config>
 		<attribute_config class="xp">
-			<attribute weight="1.0" min="0.01" max="0.01" />
+			<attribute weight="1.0" min="100" max="100" />
 		</attribute_config>
 		<attribute_config class="rp">
 			<attribute weight="1.0" min="3000" max="3000" />
 		</attribute_config>						
 	</soldier>
-	<!-- store -->
-	<!-- <soldier name="default_hg" spawn_score="0.0">
-		<resources file="gk_hg.resources" />
+	<!-- KCCO锆石小队指挥官 -->
+	<soldier name="kcco_zircon_squadleader" spawn_score="0.05" copy_from="default_bot">
+		<character filename="default_kcco_human.character" >
+			<animation key="stunned" target_key="stunned_sit 1.0" />
+			<parameter class="being_stunned_steer_amount" value="-0.8" />
+			<animation key="dive" target_key="tactial roll" />
+			<animation key="prone" target_key="crouch still" />
+			<animation key="prone, without weapon, 63" target_key="crouch still" />
+			<animation key="prone, moving forwards" target_key="crouch still" />
+			<animation key="leaving prone" target_key="crouch to stand" />
+			<animation key="going prone" target_key="crouch still" />
+			<parameter class="diving_steer_amount" value="0.6" />
+			<parameter class="diving_steer_amount_sliding_with_friction" value="0.05" />
+			<parameter class="diving_steer_amount_push" value="0.05" />
+			<parameter class="diving_steer_amount_jump" value="0.05" />
+			<parameter class="prone_moving_steer_amount" value="0" />
+			<parameter class="prone_moving_max_dot_to_move" value="0.1" />
+		</character>
+		<model filename="kccod_human_5.xml" />
+		<ai filename="kcco_human_smg.ai" />
+		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
+			<weapon key="kcco_pkp.weapon" enabled="1" />
+			<carry_item key="vest_50hp_tank.carry_item" />
+			<call key="kcco_argo_vela.call" />
+			<call key="kcco_Hephaestus.call" />
+			<call key="kcco_argo_puppis.call" />
+			<call key="kcco_argo_carina.call" />
+			<call key="kcco_quartz.call" />
+			<call key="kcco_assault.call" />			
+		</resources>
+		<item_class_existence_config>
+			<item_class_existence class="carry_item" slot="1" probability="1" />
+			<!-- note, always backpack items -->
+			<item_class_existence class="carry_item" slot="0" probability="0.001" />
+		</item_class_existence_config>
 		<attribute_config class="xp">
-			<attribute weight="1.0" min="0.0" max="0.05" />
+			<attribute weight="1.0" min="100" max="100" />
 		</attribute_config>
+		<attribute_config class="rp">
+			<attribute weight="1.0" min="3000" max="3000" />
+		</attribute_config>						
 	</soldier>
-	<soldier name="default_sg" spawn_score="0.0">
-		<resources file="gk_sg.resources" />
-		<attribute_config class="xp">
-			<attribute weight="1.0" min="0.0" max="0.05" />
-		</attribute_config>
-	</soldier>
-	<soldier name="default_smg" spawn_score="0.0">
-		<resources file="gk_smg.resources" />
-		<attribute_config class="xp">
-			<attribute weight="1.0" min="0.0" max="0.05" />
-		</attribute_config>
-	</soldier>
-	<soldier name="default_ar" spawn_score="0.0">
-		<resources file="gk_ar.resources" />
-		<attribute_config class="xp">
-			<attribute weight="1.0" min="0.0" max="0.05" />
-		</attribute_config>
-	</soldier>
-	<soldier name="default_rf" spawn_score="0.0">
-		<resources file="gk_rf.resources" />
-		<attribute_config class="xp">
-			<attribute weight="1.0" min="0.0" max="0.05" />
-		</attribute_config>
-	</soldier>
-	<soldier name="default_mg" spawn_score="0.0">
-		<resources file="gk_mg.resources" />
-		<attribute_config class="xp">
-			<attribute weight="1.0" min="0.0" max="0.05" />
-		</attribute_config>
-	</soldier> -->
-	<!-- icecream group -->
 	<soldier name="icecream" spawn_score="0.0">
 		<resources file="icecream.resources" />
 		<attribute_config class="xp">
