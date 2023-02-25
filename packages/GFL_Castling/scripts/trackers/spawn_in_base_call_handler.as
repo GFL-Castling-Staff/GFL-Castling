@@ -168,7 +168,7 @@ class SpawnInBaseCallHandler : Tracker {
 					command.setIntAttribute("faction_id", factionId);
 					command.setIntAttribute("character_id", callerId);
 					m_metagame.getComms().send(command);
-					_log("生成call 坐标"+ targetPosition.toString());
+					// _log("生成call 坐标"+ targetPosition.toString());
 				} else {
 					// denied, no acceptable base found
 					sendFactionMessageKey(m_metagame, factionId, "spawn_in_base_call, denied, key=" + m_listenCallKey);

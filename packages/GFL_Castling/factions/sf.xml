@@ -646,7 +646,7 @@
 			<carry_item key="sf_lightmecha.carry_item" enabled="1" />
 		</resources>
 	</soldier>
-	<soldier name="sfw_prowler_sweap" spawn_score="1.0" copy_from="default_spawn_ai">
+	<soldier name="sfw_prowler_swap" spawn_score="1.0" copy_from="default_spawn_ai">
 		<character filename="sf_lightmecha.character"/>
 		<ai filename="eod_mecha.ai" >
 			<parameter class="burst_time" value="0.5" />
