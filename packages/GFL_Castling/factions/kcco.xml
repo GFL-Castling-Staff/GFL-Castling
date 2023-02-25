@@ -748,14 +748,13 @@
 	<soldier name="kcco_zircon_squadleader" spawn_score="0.05" copy_from="default_bot">
 		<character filename="default_kcco_human.character" >
 			<animation key="stunned" target_key="stunned_sit 1.0" />
-			<parameter class="being_stunned_steer_amount" value="-0.8" />
 			<animation key="dive" target_key="tactial roll" />
 			<animation key="prone" target_key="crouch still" />
 			<animation key="prone, without weapon, 63" target_key="crouch still" />
 			<animation key="prone, moving forwards" target_key="crouch still" />
 			<animation key="leaving prone" target_key="crouch to stand" />
 			<animation key="going prone" target_key="crouch still" />
-			<parameter class="diving_steer_amount" value="0.6" />
+			<parameter class="diving_steer_amount" value="0.75" />
 			<parameter class="diving_steer_amount_sliding_with_friction" value="0.05" />
 			<parameter class="diving_steer_amount_push" value="0.05" />
 			<parameter class="diving_steer_amount_jump" value="0.05" />

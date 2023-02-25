@@ -3,7 +3,7 @@
 	<tag name="mg"/>
 	<tag name="elite"/>
 	<specification 
-    barrel_offset="0.5"
+    barrel_offset="0.8"
     retrigger_time="0.0923"
     accuracy_factor="0.98"
     sustained_fire_grow_step="0.6"
@@ -11,10 +11,10 @@
     magazine_size="100"
     suppressed="0"
     stance_accuracy_rate="0.5"
-    name="KCCO Quartz Gunner"
+    name="KCCO Zircon Leader"
     class="0"
     projectile_speed="220"
-    sight_range_modifier="2.25"
+    sight_range_modifier="1.2"
     slot="0"
     can_shoot_standing="0"
     can_shoot_crouching="0"
@@ -40,8 +40,8 @@
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="kccow_pkm.xml"/>
 	<hud_icon filename="gkw_pkp.png"/>
-	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="2.0" kill_probability_offset_on_successful_hit="1.5" kill_decay_start_time="1.5" kill_decay_end_time="1.6"/>
+	<projectile file="bullet_kcco.projectile">
+		<result class="hit" kill_probability="2.0" kill_probability_offset_on_successful_hit="1.5" kill_decay_start_time="1.5" kill_decay_end_time="1.6"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.5"/>
 	<stance state_key="walking" accuracy="0.55"/>
@@ -51,7 +51,7 @@
 	<stance state_key="prone" accuracy="1.2"/>
 	<stance state_key="prone_moving" accuracy="0.5"/>
 	<stance state_key="over_wall" accuracy="1.2"/>
-	<modifier class="speed" value="-0.1"/>
+	<modifier class="speed" value="0.25"/>
 	<tag name="machine gun"/>
 	<inventory encumbrance="20.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>

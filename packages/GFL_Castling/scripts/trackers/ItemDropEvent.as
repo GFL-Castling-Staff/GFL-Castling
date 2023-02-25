@@ -6,6 +6,8 @@
 #include "query_helpers2.as"
 #include "GFLhelpers.as"
 #include "GFLparameters.as"
+#include "mod3_doll.as"
+#include "girl_index.as"
 
 //id
 // 0 drop

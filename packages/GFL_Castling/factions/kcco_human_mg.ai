@@ -9,13 +9,13 @@
 
   <parameter class="force_comparison_multiplier_to_call_reinforcements" value="2.0" />
 
-  <parameter class="burst_time" value="1.0" />
-  <parameter class="burst_time_variance" value="0" />
-  <parameter class="longer_burst_time" value="1.5" />
-  <parameter class="longer_burst_time_variance" value="0" />
-  <parameter class="choose_enemy_time" value="0.15" />
-  <parameter class="wait_time" value="1.0" />
-  <parameter class="wait_time_variance" value="0" />
+  <parameter class="burst_time" value="3.0" />
+  <parameter class="burst_time_variance" value="1.0" />
+  <parameter class="longer_burst_time" value="3.0" />
+  <parameter class="longer_burst_time_variance" value="1.0" />
+  <parameter class="choose_enemy_time" value="0.5" />
+  <parameter class="wait_time" value="3.0" />
+  <parameter class="wait_time_variance" value="1.0" />
   <parameter class="cover_status_recheck_time" value="0.5" />
 
   <parameter class="leading_inspect_alarm_spread_out_distance" value="60.0" />
