@@ -38,7 +38,7 @@
 	<sound key="magazine_in" fileref="qjy80_mgz_in_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="qjy80_cycle_FromCOD16.wav" volume="0.6"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
-	<model filename="gkw_mg_pkp.xml"/>
+	<model filename="kccow_pkm.xml"/>
 	<hud_icon filename="gkw_pkp.png"/>
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="2.0" kill_probability_offset_on_successful_hit="1.5" kill_decay_start_time="1.5" kill_decay_end_time="1.6"/>

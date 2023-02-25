@@ -15,8 +15,8 @@
 array<string> eliteEnemyName = {
 
 	// sf
-    "sf_hunter",
-    "sf_architect",
+    "sfw_hunter",
+    "sfw_architect",
     "sfw_Intruder",
     "sfw_Dreamer",
     "sfw_Alchemist",
