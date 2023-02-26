@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapon file="two_hands_ar.animation_base" key="gkw_stg44mod3.weapon">
     <specification 
-		accuracy_factor="0.9" 
-		barrel_offset="0.4" 
+		accuracy_factor="0.98" 
+		barrel_offset="0.6" 
 		class="0"
         slot="0" 
-		magazine_size="35" 
-		name="StG44(MOD3)" 
-		projectile_speed="225" 
-		retrigger_time="0.109" 
+		magazine_size="30" 
+		name="Sturmgewehr 44(MOD3)" 
+		projectile_speed="200" 
+		retrigger_time="0.1" 
 		suppressed="0" 
-		sustained_fire_diminish_rate="2" 
-		sustained_fire_grow_step="0.4"
-		sight_range_modifier="2.3" />
+		sustained_fire_diminish_rate="1.8" 
+		sustained_fire_grow_step="0.35"
+		sight_range_modifier="2.0" />
     <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
-    <inventory buy_price="180.0" sell_price="180.0" />
+    <inventory encumbrance="10.0" buy_price="180.0" sell_price="180.0" />
     <commonness value="0.0001" in_stock="0" can_respawn_with="1" />
     <sound key="fire" fileref="stg44_fire_FromPOSTSCRIPTUM.wav" pitch_variety="0.05" volume="1.2" />
     <sound key="magazine_out" fileref="stg44_mgz_out_FromPOSTSCRIPTUM.wav" volume="0.7" />
@@ -30,12 +30,13 @@
     </projectile>
     <effect class="muzzle" ref="ejection_76251" />
     <stance state_key="running" accuracy="0.5" />
-    <stance state_key="walking" accuracy="0.85" />
+    <stance state_key="walking" accuracy="0.7" />
     <stance state_key="crouch_moving" accuracy="0.9" />
     <stance state_key="prone_moving" accuracy="0.9" />
-    <stance state_key="standing" accuracy="0.9" />
+    <stance state_key="standing" accuracy="0.85" />
     <stance state_key="crouching" accuracy="0.9" />
     <stance state_key="prone" accuracy="1" />
+    <stance state_key="over_wall" accuracy="1" />
     <modifier class="detectability" value="0.0" />
-    <modifier class="speed" value="0.05"/>
+    <modifier class="speed" value="0.1"/>
 </weapon>
