@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapons>
-    <weapon file="heavy_mg_standing.animation_base" key="gkw_mg3.weapon">
+    <weapon file="heavy_mg_standing.animation_base" key="gkw_mg3_3806.weapon">
         <specification 
         barrel_offset="0.65" 
         retrigger_time="0.0666" 
@@ -11,14 +11,14 @@
         spread_range="0.28"
         magazine_size="100" 
         suppressed="0" 
-        name="MG3" 
+        name="MG3-[Full Moon's Gaze]" 
         class="0" 
         projectile_speed="200" 
         sight_range_modifier="1.3"/>
         <animation key="reload" animation_key="reloading, Machine gun 2.0" />
         <animation state_key="next_in_chain_out" animation_key="open tripod"/>
         <inventory encumbrance="30.0" buy_price="30.0" sell_price="30.0" />
-        <next_in_chain key="gkw_mg3_skill.weapon" share_ammo="1" />
+        <next_in_chain key="gkw_mg3_3806_skill.weapon" share_ammo="1" />
         <commonness value="0.2" in_stock="0" can_respawn_with="1" />
         <sound key="fire" fileref="mg3_fire_FormWF.wav" pitch_variety="0.05" volume="1" />
         <sound key="magazine_out" fileref="mg3_mgz_out_FormSQUAD.wav" volume="1.0" />
@@ -26,7 +26,7 @@
         <sound key="cycle" fileref="mg3_cycle_FormSQUAD.wav" volume="1.0" />
         <sound class="impact" fileref="rifle_drop.wav" />
         <model filename="gkw_mg_mg3_n.xml" />
-        <hud_icon filename="gkw_mg3.png" />
+        <hud_icon filename="gkw_mg3_3806.png" />
         <projectile file="bullet.projectile">
             <result class="hit" kill_probability="2.1" kill_probability_offset_on_successful_hit="0.6" kill_decay_start_time="2.432" kill_decay_end_time="4.054" />
             <trail probability="1.0" key="bullet_new_deep"/>
@@ -41,7 +41,7 @@
         <stance state_key="prone_moving" accuracy="1.0" />
         <stance state_key="over_wall" accuracy="1.0" />
     </weapon>
-    <weapon file="heavy_mg.animation_base" key="gkw_mg3_skill.weapon">
+    <weapon file="heavy_mg.animation_base" key="gkw_mg3_3806_skill.weapon">
         <specification 
         barrel_offset="0.65" 
         retrigger_time="0.05" 
@@ -51,7 +51,7 @@
         spread_range="0.15"
         magazine_size="100" 
         suppressed="0" 
-        name="MG3-[Lock and Load]" 
+        name="MG3-[Full Moon's Gaze]-[Lock and Load]" 
         class="0" 
         projectile_speed="215" 
         sight_range_modifier="1.5"
@@ -62,14 +62,14 @@
         <animation state_key="next_in_chain_out" animation_key="close tripod"/>
         <inventory encumbrance="30.0" buy_price="30.0" sell_price="30.0" />
         <commonness value="0" in_stock="0" can_respawn_with="1" />
-        <next_in_chain key="gkw_mg3.weapon" share_ammo="1" />
+        <next_in_chain key="gkw_mg3_3806.weapon" share_ammo="1" />
         <sound key="fire" fileref="mg3_fire_FormCSOL.wav" pitch_variety="0.05" volume="0.75" />
         <sound key="magazine_out" fileref="mg3_mgz_out_FormSQUAD.wav" volume="1.0" />
         <sound key="magazine_in" fileref="mg3_mgz_in_FormSQUAD.wav" volume="1.0" />
         <sound key="cycle" fileref="mg3_cycle_FormSQUAD.wav" volume="1.0" />
         <sound class="impact" fileref="rifle_drop.wav" />
         <model filename="gkw_mg_mg3.xml" />
-        <hud_icon filename="gkw_mg3_skill.png" />
+        <hud_icon filename="gkw_mg3_3806.png" />
         <projectile file="bullet.projectile">
             <result class="hit" kill_probability="2.1" kill_probability_offset_on_successful_hit="3.5" kill_decay_start_time="2.432" kill_decay_end_time="4.054" />
             <trail probability="1.0" key="BulletApTrail_ct"/>
