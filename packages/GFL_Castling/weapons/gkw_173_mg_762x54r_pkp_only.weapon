@@ -30,7 +30,7 @@
         <sound key="magazine_in" fileref="qjy80_mgz_in_FromCOD16.wav" volume="0.6" />
         <sound key="cycle" fileref="qjy80_cycle_FromCOD16.wav" volume="0.6" />
         <sound class="impact" fileref="rifle_drop.wav"/>
-        <model filename="gkw_mg_pkp_n.xml"/>
+        <model filename="gkw_mg_pkp_only_n.xml"/>
         <commonness value="0" in_stock="0" can_respawn_with="1"/>
         <hud_icon filename="gkw_pkp_only.png"/>
         <projectile file="bullet.projectile">
@@ -104,7 +104,7 @@
         <sound key="magazine_in" fileref="qjy80_mgz_in_FromCOD16.wav" volume="0.6" />
         <sound key="cycle_out" fileref="qjy80_cycle_FromCOD16.wav" volume="0.6" />
         <sound class="impact" fileref="rifle_drop.wav"/>
-        <model filename="gkw_mg_pkp.xml"/>
+        <model filename="gkw_mg_pkp_only.xml"/>
         <commonness value="0" in_stock="0" can_respawn_with="1"/>
         <hud_icon filename="gkw_pkp_only_skill.png"/>
         <projectile file="bullet.projectile">

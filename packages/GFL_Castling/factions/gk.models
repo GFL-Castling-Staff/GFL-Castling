@@ -2163,4 +2163,11 @@
     <model filename="gkd_hvy_2b14_3.xml">
         <requirement class="weapon" key="gkw_hvy_2b14_pdw.weapon" slot="0" />
     </model>
+
+    <model filename="gkd_mg_mg3.xml">
+        <requirement class="weapon" key="gkw_mg3.weapon" slot="0" />
+    </model>
+    <model filename="gkd_mg_mg3.xml">
+        <requirement class="weapon" key="gkw_mg3_skill.weapon" slot="0" />
+    </model>
 </models>
