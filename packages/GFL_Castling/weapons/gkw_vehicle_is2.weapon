@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapons>
+    <weapon key="vehicle_is2_122mm.weapon">
+        <specification 
+        retrigger_time="7.5" 
+        accuracy_factor="0.9" 
+        spread_range="0.3"
+        sustained_fire_grow_step="5.0" 
+        sustained_fire_diminish_rate="0.5" 
+        sight_range_modifier="1.5"
+        ai_sight_range_modifier="1.0"
+        magazine_size="-1" 
+        can_shoot_standing="0" 
+        can_shoot_crouching="0" 
+        suppressed="0" 
+        name="Tank 122mm" 
+        class="0" 
+        projectile_speed="200.0" 
+        slot="2" 
+        barrel_offset="5.3" 
+        projectiles_per_shot="1" />
+        <model mesh_filename="is2_m1895_cannon.mesh" texture_filename="is2_m1895_main.jpg" />
+        <hud_icon filename="gkw_v_LM5.png" />
+        <commonness value="0.0"/>
+        <projectile file="cannon_is2_122mm.projectile">
+        </projectile>
+        <target_factors tag="" distance="1.0" direction="0.0" squad_command="10.0" base_score="0.5" />
+        <target_factors tag="heavy_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0" />
+        <target_factors tag="light_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="6.0" />
+        <target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="5.0" />
+        <target_factors tag="shield" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0" />
+        <effect class="muzzle" ref="coeus" />
+        <effect class="muzzle" ref="coeusphere" />
+        <effect class="muzzle" ref="coeusmuzzle" lighting="0" />
+        <sound class="operation" key="fire" fileref="is2_cannon_d25t_fire.wav" pitch_variety="0.05" volume="1.0"/>
+    </weapon>
+    <weapon key="vehicle_is2_dshk.weapon"
+    ai_burst_time="0.6" 
+    ai_burst_time_variance="0.24" 
+    ai_burst_wait_time="0.5" 
+    ai_burst_wait_time_variance="0.2">
+        <specification 
+        slot="2" 
+        retrigger_time="0.12"
+        accuracy_factor="0.9" 
+        sustained_fire_grow_step="1.0"
+        sustained_fire_diminish_rate="3.0"
+        sight_range_modifier="2.0"
+        ai_sight_range_modifier="1.00"
+        magazine_size="-1" 
+        can_shoot_standing="0" 
+        can_shoot_crouching="0" 
+        suppressed="0" 
+        name="Tank Dshk" 
+        class="0" 
+        projectile_speed="160.0" />
+        <sound key="fire" fileref="kord_fire_FromEFT.wav" pitch_variety="0.05" volume="1.3"/>
+        <model filename="" />
+        <hud_icon filename="gkw_v_LM5.png" />
+        <commonness value="0.0" />
+        <weak_hand_hold offset="0.4" />
+        <projectile file="bullet_ai.projectile">
+            <result class="blast" damage="4.0" radius="3.5" decal="1" push="0.2" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+            <effect class="result" key="terrain" ref="hitGround" use_surface_color="1" />
+            <effect class="result" key="terrain" ref="BulletImpactDust1" />
+            <effect class="result" key="terrain" ref="BulletImpactDust2" />
+            <effect class="result" key="terrain" ref="BulletImpactDust3" />
+            <effect class="result" key="terrain" ref="BigBurst" use_surface_color="1" />
+            <effect class="result" key="terrain" ref="LowDust"/>
+            <effect class="result" key="terrain" ref="Shine" lighting="0" />
+            <effect class="result" key="terrain" ref="Godray" lighting="0" />
+            <effect class="result" key="vehicle" ref="Burst" use_surface_color="1" />
+            <effect class="result" key="vehicle" ref="hitMetal" />
+            <effect class="result" key="vehicle" ref="hitMetal_1" />
+            <effect class="result" key="vehicle" ref="Shine" lighting="0" />
+            <effect class="result" key="vehicle" ref="Godray" lighting="0" />
+            <effect class="result" key="other" ref="BulletImpact" />
+            <effect class="result" key="vehicle" ref="BulletImpact" />
+            <effect class="result" key="terrain" ref="BulletImpact" />
+            <effect class="result" key="character" ref="BulletImpact" />
+            <effect class="result" key="shield" ref="BulletImpact" />
+            <effect class="result" key="character" ref="common_hit_effect_1" lighting="0"/>
+            <effect class="result" key="character" ref="common_hit_effect_2" lighting="0" />
+            <effect class="result" key="terrain" ref="Bullet_Burnout"/>
+            <effect class="result" key="static_object" copy="terrain" />
+            <effect class="result" key="shield" ref="hitMetal" />
+            <effect class="result" key="shield" ref="hitMetal_1" />
+            <trail probability="1.0" key="BulletMgTrail"/>
+        </projectile>
+    </weapon>
+    <weapon key="vehicle_is2_dt.weapon"
+    ai_burst_time="0.4" 
+    ai_burst_time_variance="0.2" 
+    ai_burst_wait_time="1.0" 
+    ai_burst_wait_time_variance="0.2">
+        <specification 
+        slot="2" 
+        retrigger_time="0.1" 
+        accuracy_factor="0.86" 
+        sustained_fire_grow_step="0.5" 
+        sustained_fire_diminish_rate="2.5" 
+        sight_range_modifier="2.0"
+        ai_sight_range_modifier="1.00"
+        magazine_size="-1" 
+        can_shoot_standing="0" 
+        can_shoot_crouching="0" 
+        suppressed="0" 
+        name="Tank DT" 
+        class="0" 
+        projectile_speed="160.0" />
+        <sound key="fire" fileref="dp28_fire_FromRS2V.wav" pitch_variety="0.05" volume="1.3"/>
+        <model filename="" />
+        <hud_icon filename="gkw_v_LM5.png" />
+        <commonness value="0.0" />
+        <weak_hand_hold offset="0.4" />
+        <projectile file="bullet_ai.projectile">
+            <result class="hit" kill_probability="2.4" kill_probability_offset_on_successful_hit="1.0" kill_decay_start_time="1.714" kill_decay_end_time="2.857" />
+            <trail probability="1.0" key="BulletMgTrail"/>
+        </projectile>
+    </weapon>    
+</weapons>
