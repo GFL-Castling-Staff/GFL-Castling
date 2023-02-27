@@ -533,7 +533,7 @@
 	<hud_icon filename="gkw_ump45.png"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="1.45" kill_probability_offset_on_successful_hit="4.5" kill_decay_start_time="0.3" kill_decay_end_time="0.62"/>
+	<result class="hit" kill_probability="1.5" kill_probability_offset_on_successful_hit="4.5" kill_decay_start_time="0.3" kill_decay_end_time="0.62"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_9mm"/>
 	<stance state_key="running" accuracy="0.5"/>
@@ -587,7 +587,7 @@
 	<hud_icon filename="gkw_ump45mod3.png"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile file="bullet.projectile" can_be_detected_by_footmen="0">
-	<result class="hit" kill_probability="1.55" kill_probability_offset_on_successful_hit="5.0" kill_decay_start_time="0.3" kill_decay_end_time="0.62"/>
+	<result class="hit" kill_probability="1.65" kill_probability_offset_on_successful_hit="5.0" kill_decay_start_time="0.3" kill_decay_end_time="0.62"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_9mm"/>
 	<stance state_key="running" accuracy="0.65"/>
@@ -642,7 +642,7 @@
 	<hud_icon filename="gkw_ump45_5405.png"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="1.45" kill_probability_offset_on_successful_hit="4.5" kill_decay_start_time="0.3" kill_decay_end_time="0.62"/>
+	<result class="hit" kill_probability="1.5" kill_probability_offset_on_successful_hit="4.5" kill_decay_start_time="0.3" kill_decay_end_time="0.62"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_9mm"/>
 	<stance state_key="running" accuracy="0.5"/>
@@ -698,7 +698,7 @@
 	<hud_icon filename="gkw_ump45_5405.png"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="1.45" kill_probability_offset_on_successful_hit="4.5" kill_decay_start_time="0.3" kill_decay_end_time="0.62"/>
+	<result class="hit" kill_probability="1.5" kill_probability_offset_on_successful_hit="4.5" kill_decay_start_time="0.3" kill_decay_end_time="0.62"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_9mm"/>
 	<stance state_key="running" accuracy="0.5"/>
@@ -753,7 +753,7 @@
 	<hud_icon filename="gkw_ump45_5405.png"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile file="bullet.projectile" can_be_detected_by_footmen="0">
-	<result class="hit" kill_probability="1.55" kill_probability_offset_on_successful_hit="5.0" kill_decay_start_time="0.3" kill_decay_end_time="0.62"/>
+	<result class="hit" kill_probability="1.65" kill_probability_offset_on_successful_hit="5.0" kill_decay_start_time="0.3" kill_decay_end_time="0.62"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_9mm"/>
 	<stance state_key="running" accuracy="0.65"/>
@@ -809,7 +809,7 @@
 	<hud_icon filename="gkw_ump45_5405.png"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile file="bullet.projectile" can_be_detected_by_footmen="0">
-	<result class="hit" kill_probability="1.55" kill_probability_offset_on_successful_hit="5.0" kill_decay_start_time="0.3" kill_decay_end_time="0.62"/>
+	<result class="hit" kill_probability="1.65" kill_probability_offset_on_successful_hit="5.0" kill_decay_start_time="0.3" kill_decay_end_time="0.62"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_9mm"/>
 	<stance state_key="running" accuracy="0.65"/>
@@ -1389,7 +1389,7 @@
 </weapon>
 
 <weapon key="gkw_supersass.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="0.5" sustained_fire_diminish_rate="1.4" magazine_size="20" can_shoot_standing="1" suppressed="1" name="Super SASS" class="4" burst_shots="1" last_burst_retrigger_time="0.125" reload_one_at_a_time="0" sight_range_modifier="2.8" projectile_speed="230.5" barrel_offset="0.4" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="0.5" sustained_fire_diminish_rate="1.4" spread_range="0.25" magazine_size="20" can_shoot_standing="1" suppressed="1" name="Super SASS" class="4" burst_shots="1" last_burst_retrigger_time="0.125" reload_one_at_a_time="0" sight_range_modifier="2.0" projectile_speed="230.5" barrel_offset="0.4" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<inventory encumbrance="10.0" buy_price="12.0" sell_price="12.0"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.8"/>
 	<sound key="fire" fileref="sass_fire_FromCOD13.wav" pitch_variety="0.01" volume="1.1"/>
@@ -1563,7 +1563,7 @@
 	<hud_icon filename="gkw_fn57.png"/>
 	<weak_hand_hold offset="0.1"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="2.00" kill_probability_offset_on_successful_hit="1.15" kill_decay_start_time="0.138" kill_decay_end_time="0.231"/>
+	<result class="hit" kill_probability="2.00" kill_probability_offset_on_successful_hit="4.3" kill_decay_start_time="0.236" kill_decay_end_time="0.3"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.8"/>
 	<stance state_key="walking" accuracy="0.85"/>
@@ -2508,17 +2508,17 @@
 	<hud_icon filename="gkw_ppsh41.png"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="1.5" kill_probability_offset_on_successful_hit="2.5" kill_decay_start_time="0.25" kill_decay_end_time="0.5"/>
+	<result class="hit" kill_probability="1.7" kill_probability_offset_on_successful_hit="2.25" kill_decay_start_time="0.3" kill_decay_end_time="0.5"/>
 	<trail probability="1.0" key="bullet_short"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_9mm"/>
-	<stance state_key="running" accuracy="0.4"/>
-	<stance state_key="walking" accuracy="0.45"/>
-	<stance state_key="standing" accuracy="0.6"/>
+	<stance state_key="running" accuracy="0.6"/>
+	<stance state_key="walking" accuracy="0.7"/>
+	<stance state_key="standing" accuracy="0.7"/>
 	<stance state_key="crouching" accuracy="0.8"/>
-	<stance state_key="crouch_moving" accuracy="0.5"/>
-	<stance state_key="prone" accuracy="0.1"/>
-	<stance state_key="prone_moving" accuracy="0.1"/>
+	<stance state_key="crouch_moving" accuracy="0.7"/>
+	<stance state_key="prone" accuracy="0.7"/>
+	<stance state_key="prone_moving" accuracy="0.7"/>
 	<stance state_key="over_wall" accuracy="0.8"/>
 	<modifier class="hit_success_probability" value="-0.2"/>
 	<modifier class="speed" value="-0.1"/>
@@ -2563,17 +2563,17 @@
 	<hud_icon filename="gkw_ppsh41_602.png"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="1.5" kill_probability_offset_on_successful_hit="2.5" kill_decay_start_time="0.25" kill_decay_end_time="0.5"/>
+	<result class="hit" kill_probability="1.7" kill_probability_offset_on_successful_hit="2.25" kill_decay_start_time="0.3" kill_decay_end_time="0.5"/>
 	<trail probability="1.0" key="bullet_short"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_9mm"/>
-	<stance state_key="running" accuracy="0.4"/>
-	<stance state_key="walking" accuracy="0.45"/>
-	<stance state_key="standing" accuracy="0.6"/>
+	<stance state_key="running" accuracy="0.6"/>
+	<stance state_key="walking" accuracy="0.7"/>
+	<stance state_key="standing" accuracy="0.7"/>
 	<stance state_key="crouching" accuracy="0.8"/>
-	<stance state_key="crouch_moving" accuracy="0.5"/>
-	<stance state_key="prone" accuracy="0.1"/>
-	<stance state_key="prone_moving" accuracy="0.1"/>
+	<stance state_key="crouch_moving" accuracy="0.7"/>
+	<stance state_key="prone" accuracy="0.7"/>
+	<stance state_key="prone_moving" accuracy="0.7"/>
 	<stance state_key="over_wall" accuracy="0.8"/>
 	<modifier class="hit_success_probability" value="-0.2"/>
 	<modifier class="speed" value="-0.1"/>
@@ -2618,17 +2618,17 @@
 	<hud_icon filename="gkw_ppsh41mod3.png"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="1.41" kill_probability_offset_on_successful_hit="5.5" kill_decay_start_time="0.23" kill_decay_end_time="0.5"/>
+	<result class="hit" kill_probability="1.75" kill_probability_offset_on_successful_hit="3.5" kill_decay_start_time="0.38" kill_decay_end_time="0.5"/>
 	<trail probability="1.0" key="bullet_short"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_9mm"/>
-	<stance state_key="running" accuracy="0.45"/>
-	<stance state_key="walking" accuracy="0.5"/>
-	<stance state_key="standing" accuracy="0.6"/>
+	<stance state_key="running" accuracy="0.6"/>
+	<stance state_key="walking" accuracy="0.7"/>
+	<stance state_key="standing" accuracy="0.7"/>
 	<stance state_key="crouching" accuracy="0.8"/>
-	<stance state_key="crouch_moving" accuracy="0.5"/>
-	<stance state_key="prone" accuracy="0.1"/>
-	<stance state_key="prone_moving" accuracy="0.1"/>
+	<stance state_key="crouch_moving" accuracy="0.7"/>
+	<stance state_key="prone" accuracy="0.7"/>
+	<stance state_key="prone_moving" accuracy="0.7"/>
 	<stance state_key="over_wall" accuracy="0.8"/>
 	<modifier class="hit_success_probability" value="-0.2"/>
 	<modifier class="speed" value="0"/>
@@ -2673,17 +2673,17 @@
 	<hud_icon filename="gkw_ppsh41_602.png"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="1.41" kill_probability_offset_on_successful_hit="5.5" kill_decay_start_time="0.23" kill_decay_end_time="0.5"/>
+	<result class="hit" kill_probability="1.75" kill_probability_offset_on_successful_hit="3.5" kill_decay_start_time="0.38" kill_decay_end_time="0.5"/>
 	<trail probability="1.0" key="bullet_short"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_9mm"/>
-	<stance state_key="running" accuracy="0.45"/>
-	<stance state_key="walking" accuracy="0.5"/>
-	<stance state_key="standing" accuracy="0.6"/>
+	<stance state_key="running" accuracy="0.6"/>
+	<stance state_key="walking" accuracy="0.7"/>
+	<stance state_key="standing" accuracy="0.7"/>
 	<stance state_key="crouching" accuracy="0.8"/>
-	<stance state_key="crouch_moving" accuracy="0.5"/>
-	<stance state_key="prone" accuracy="0.1"/>
-	<stance state_key="prone_moving" accuracy="0.1"/>
+	<stance state_key="crouch_moving" accuracy="0.7"/>
+	<stance state_key="prone" accuracy="0.7"/>
+	<stance state_key="prone_moving" accuracy="0.7"/>
 	<stance state_key="over_wall" accuracy="0.8"/>
 	<modifier class="hit_success_probability" value="-0.2"/>
 	<modifier class="speed" value="0"/>
@@ -3483,7 +3483,7 @@
 </weapon>
 
 <weapon key="gkw_sl8.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="0.6" sustained_fire_diminish_rate="1.5" magazine_size="10" can_shoot_standing="1" suppressed="0" name="SL8" class="4" burst_shots="1" last_burst_retrigger_time="0.125" reload_one_at_a_time="0" sight_range_modifier="2.8" projectile_speed="245.74" barrel_offset="0.4" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="0.6" sustained_fire_diminish_rate="1.5" magazine_size="10" spread_range="0.28" can_shoot_standing="1" suppressed="0" name="SL8" class="4" burst_shots="1" last_burst_retrigger_time="0.125" reload_one_at_a_time="0" sight_range_modifier="2.8" projectile_speed="245.74" barrel_offset="0.4" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<inventory encumbrance="10.0" buy_price="10.0" sell_price="10.0"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
 	<sound key="fire" fileref="sl8_fire_FromWF.wav" volume="1.1"/>
@@ -3588,7 +3588,7 @@
 </weapon>
 
 <weapon key="gkw_vsk94.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="0.6" sustained_fire_diminish_rate="1.8" magazine_size="20" can_shoot_standing="1" suppressed="1" name="VSK-94" class="4" burst_shots="1" last_burst_retrigger_time="0.083" reload_one_at_a_time="0" sight_range_modifier="2.0" projectile_speed="145" barrel_offset="0.4" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="0.6" sustained_fire_diminish_rate="1.8" magazine_size="20" spread_range="0.28" can_shoot_standing="1" suppressed="1" name="VSK-94" class="4" burst_shots="1" last_burst_retrigger_time="0.083" reload_one_at_a_time="0" sight_range_modifier="2.0" projectile_speed="145" barrel_offset="0.4" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<animation state_key="hold_casual" animation_key="dancing, kazachok"/>
 	<inventory encumbrance="20.0" buy_price="94.0" sell_price="94.0"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.8"/>
@@ -3636,7 +3636,7 @@
 </weapon>
 
 <weapon key="gkw_vsk94_5301.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="0.6" sustained_fire_diminish_rate="1.8" magazine_size="20" can_shoot_standing="1" suppressed="1" name="VSK-94-[Christmas Eve Detective]" class="4" burst_shots="1" last_burst_retrigger_time="0.083" reload_one_at_a_time="0" sight_range_modifier="2.0" projectile_speed="145" barrel_offset="0.4" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="0.6" sustained_fire_diminish_rate="1.8" magazine_size="20" spread_range="0.28" can_shoot_standing="1" suppressed="1" name="VSK-94-[Christmas Eve Detective]" class="4" burst_shots="1" last_burst_retrigger_time="0.083" reload_one_at_a_time="0" sight_range_modifier="2.0" projectile_speed="145" barrel_offset="0.4" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<animation state_key="hold_casual" animation_key="dancing, kazachok"/>
 	<inventory encumbrance="20.0" buy_price="94.0" sell_price="94.0"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.8"/>
@@ -4021,7 +4021,7 @@
 </weapon>
 
 <weapon key="gkw_m14.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="1.6" magazine_size="20" can_shoot_standing="1" suppressed="0" name="M14" class="4" burst_shots="1" last_burst_retrigger_time="0.125" reload_one_at_a_time="0" sight_range_modifier="1.25" projectile_speed="180" barrel_offset="0.6" projectiles_per_shot="1" stance_accuracy_rate="1.25" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="1.6" magazine_size="20" spread_range="0.28" can_shoot_standing="1" suppressed="0" name="M14" class="4" burst_shots="1" last_burst_retrigger_time="0.125" reload_one_at_a_time="0" sight_range_modifier="1.25" projectile_speed="180" barrel_offset="0.6" projectiles_per_shot="1" stance_accuracy_rate="1.25" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<inventory encumbrance="20.0" buy_price="14.0" sell_price="14.0"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.8"/>
 	<sound key="fire" fileref="m14_fire_FromDAYSGONE.wav" pitch_variety="0.01" volume="1.6"/>
@@ -4067,7 +4067,7 @@
 </weapon>
 
 <weapon key="gkw_svd.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="1.5" magazine_size="10" can_shoot_standing="1" suppressed="0" name="SVD" class="4" burst_shots="1" last_burst_retrigger_time="0.125" reload_one_at_a_time="0" sight_range_modifier="2.8" projectile_speed="226.6" barrel_offset="0.4" stance_accuracy_rate="1.0" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="1.5" magazine_size="10" can_shoot_standing="1" suppressed="0" name="Dragunov SVD" class="4" spread_range="0.27" burst_shots="1" last_burst_retrigger_time="0.125" reload_one_at_a_time="0" sight_range_modifier="2.8" projectile_speed="226.6" barrel_offset="0.4" stance_accuracy_rate="1.0" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<inventory encumbrance="10.0" buy_price="40.0" sell_price="40.0"/>
 	<next_in_chain key="gkw_svd_skill.weapon" share_ammo="1"/>
 	<animation state_key="hold_casual" animation_key="dancing, kazachok"/>
@@ -4081,7 +4081,7 @@
 	<hud_icon filename="gkw_svd.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="2.0" kill_probability_offset_on_successful_hit="4.0" kill_decay_start_time="1.735" kill_decay_end_time="2.892"/>
+	<result class="hit" kill_probability="2.3" kill_probability_offset_on_successful_hit="4.0" kill_decay_start_time="1.735" kill_decay_end_time="2.892"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_76251"/>
 	<stance state_key="running" accuracy="0.5"/>
@@ -4115,7 +4115,7 @@
 </weapon>
 
 <weapon key="gkw_svd_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="0" sustained_fire_diminish_rate="1.5" magazine_size="10" can_shoot_standing="1" suppressed="0" name="SVD-[Assault Focus]" class="4" burst_shots="1" last_burst_retrigger_time="0.1" reload_one_at_a_time="0" sight_range_modifier="3.0" projectile_speed="230" barrel_offset="0.4" stance_accuracy_rate="1.0" projectiles_per_shot="2" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="30.0" magazine_size="10" can_shoot_standing="1" suppressed="0" name="Dragunov SVD-[Assault Focus]" class="4" burst_shots="1" last_burst_retrigger_time="0.1" reload_one_at_a_time="0" sight_range_modifier="3.0" projectile_speed="230" barrel_offset="0.4" stance_accuracy_rate="1.0" projectiles_per_shot="2" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<inventory encumbrance="10.0" buy_price="40.0" sell_price="40.0"/>
 	<next_in_chain key="gkw_svd.weapon" share_ammo="1"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
@@ -4130,7 +4130,7 @@
 	<hud_icon filename="gkw_svd_skill.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="2.0" kill_probability_offset_on_successful_hit="2.5" kill_decay_start_time="1.735" kill_decay_end_time="2.892"/>
+	<result class="hit" kill_probability="2.3" kill_probability_offset_on_successful_hit="2.5" kill_decay_start_time="1.735" kill_decay_end_time="2.892"/>
 	<trail probability="1.0" key="BulletApTrail_ct"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_76251"/>
@@ -4142,7 +4142,7 @@
 	<stance state_key="prone" accuracy="1.1"/>
 	<stance state_key="prone_moving" accuracy="1.1"/>
 	<stance state_key="over_wall" accuracy="1"/>
-	<modifier class="speed" value="-0.5"/>
+	<modifier class="speed" value="-0.3"/>
 	<modifier class="hit_success_probability" value="+0.3"/>
 	<tag name="rifle"/>
 	<inventory encumbrance="20.0" buy_price="1.0" sell_price="0.0"/>
@@ -4166,7 +4166,7 @@
 </weapon>
 
 <weapon key="gkw_svd_5506.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="1.5" magazine_size="10" can_shoot_standing="1" suppressed="0" name="SVD-[Camellia's Vigil]" class="4" burst_shots="1" last_burst_retrigger_time="0.125" reload_one_at_a_time="0" sight_range_modifier="2.8" projectile_speed="226.6" barrel_offset="0.4" stance_accuracy_rate="1.0" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="1.5" magazine_size="10" can_shoot_standing="1" suppressed="0" name="Dragunov SVD-[Camellia's Vigil]" class="4" spread_range="0.27" burst_shots="1" last_burst_retrigger_time="0.125" reload_one_at_a_time="0" sight_range_modifier="2.8" projectile_speed="226.6" barrel_offset="0.4" stance_accuracy_rate="1.0" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<inventory encumbrance="10.0" buy_price="40.0" sell_price="40.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<next_in_chain key="gkw_svd_5506_skill.weapon" share_ammo="1"/>
@@ -4181,7 +4181,7 @@
 	<hud_icon filename="gkw_svd_5506.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="2.0" kill_probability_offset_on_successful_hit="4.0" kill_decay_start_time="1.735" kill_decay_end_time="2.892"/>
+	<result class="hit" kill_probability="2.3" kill_probability_offset_on_successful_hit="4.0" kill_decay_start_time="1.735" kill_decay_end_time="2.892"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_76251"/>
 	<stance state_key="running" accuracy="0.5"/>
@@ -4214,7 +4214,7 @@
 </weapon>
 
 <weapon key="gkw_svd_5506_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="0" sustained_fire_diminish_rate="1.5" magazine_size="10" can_shoot_standing="1" suppressed="0" name="SVD-[Camellia's Vigil]-[Assault Focus]" class="4" burst_shots="1" last_burst_retrigger_time="0.1" reload_one_at_a_time="0" sight_range_modifier="3.0" projectile_speed="230" barrel_offset="0.4" stance_accuracy_rate="1.0" projectiles_per_shot="2" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="30.0" magazine_size="10" can_shoot_standing="1" suppressed="0" name="Dragunov SVD-[Camellia's Vigil]-[Assault Focus]" class="4" burst_shots="1" last_burst_retrigger_time="0.1" reload_one_at_a_time="0" sight_range_modifier="3.0" projectile_speed="230" barrel_offset="0.4" stance_accuracy_rate="1.0" projectiles_per_shot="2" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<inventory encumbrance="10.0" buy_price="40.0" sell_price="40.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<next_in_chain key="gkw_svd_5506.weapon" share_ammo="1"/>
@@ -4229,7 +4229,7 @@
 	<hud_icon filename="gkw_svd_5506.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="2.0" kill_probability_offset_on_successful_hit="2.5" kill_decay_start_time="1.735" kill_decay_end_time="2.892"/>
+	<result class="hit" kill_probability="2.3" kill_probability_offset_on_successful_hit="2.5" kill_decay_start_time="1.735" kill_decay_end_time="2.892"/>
 	<trail probability="1.0" key="BulletApTrail_ct"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_76251"/>
@@ -4241,7 +4241,7 @@
 	<stance state_key="prone" accuracy="1.1"/>
 	<stance state_key="prone_moving" accuracy="1.1"/>
 	<stance state_key="over_wall" accuracy="1"/>
-	<modifier class="speed" value="-0.5"/>
+	<modifier class="speed" value="-0.3"/>
 	<modifier class="hit_success_probability" value="+0.3"/>
 	<tag name="rifle"/>
 	<inventory encumbrance="20.0" buy_price="1.0" sell_price="0.0"/>
@@ -4265,7 +4265,7 @@
 </weapon>
 
 <weapon key="gkw_svdex.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="0.35" accuracy_factor="1" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="3.5" spread_range="0.15" magazine_size="20" can_shoot_standing="1" suppressed="0" name="SVD-EX" class="0" burst_shots="1" reload_one_at_a_time="0" sight_range_modifier="1.5" projectile_speed="210" barrel_offset="0.4" stance_accuracy_rate="1.5" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" last_burst_retrigger_time="-1" slot="0"/>
+	<specification retrigger_time="0.35" accuracy_factor="1" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="3.5" spread_range="0.15" magazine_size="20" can_shoot_standing="1" suppressed="0" name="Dragunov SVD-EX" class="0" burst_shots="1" reload_one_at_a_time="0" sight_range_modifier="1.5" projectile_speed="210" barrel_offset="0.4" stance_accuracy_rate="1.5" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" last_burst_retrigger_time="-1" slot="0"/>
 	<inventory buy_price="300.0" sell_price="300.0"/>
 	<animation state_key="hold_casual" animation_key="dancing, kazachok"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
@@ -4314,7 +4314,7 @@
 </weapon>
 
 <weapon key="gkw_svdex_5506.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="0.35" accuracy_factor="1" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="3.5" spread_range="0.15" magazine_size="20" can_shoot_standing="1" suppressed="0" name="SVD-EX-[Camellia's Vigil]" class="0" burst_shots="1" reload_one_at_a_time="0" sight_range_modifier="1.5" projectile_speed="210" barrel_offset="0.4" stance_accuracy_rate="1.5" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" last_burst_retrigger_time="-1" slot="0"/>
+	<specification retrigger_time="0.35" accuracy_factor="1" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="3.5" spread_range="0.15" magazine_size="20" can_shoot_standing="1" suppressed="0" name="Dragunov SVD-EX-[Camellia's Vigil]" class="0" burst_shots="1" reload_one_at_a_time="0" sight_range_modifier="1.5" projectile_speed="210" barrel_offset="0.4" stance_accuracy_rate="1.5" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" last_burst_retrigger_time="-1" slot="0"/>
 	<inventory buy_price="300.0" sell_price="300.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<animation state_key="hold_casual" animation_key="dancing, kazachok"/>
@@ -4613,7 +4613,7 @@
 </weapon>
 
 <weapon key="gkw_g43.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="0.6" sustained_fire_diminish_rate="1.5" magazine_size="10" can_shoot_standing="1" suppressed="0" name="G43" class="4" burst_shots="1" last_burst_retrigger_time="0.125" sight_range_modifier="2.5" projectile_speed="215.1" barrel_offset="0.4" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="0.6" sustained_fire_diminish_rate="1.5" magazine_size="10" can_shoot_standing="1" suppressed="0" name="Gewehr 43" spread_range="0.3" class="4" burst_shots="1" last_burst_retrigger_time="0.125" sight_range_modifier="2.5" projectile_speed="215.1" barrel_offset="0.4" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<inventory encumbrance="10.0" buy_price="8.0" sell_price="8.0"/>
 	<commonness value="0.2" in_stock="1" can_respawn_with="1"/>
 	<animation state_key="reload" animation_key="reloading, magazine rifle 1.2"/>
@@ -4628,7 +4628,8 @@
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="2.2" kill_probability_offset_on_successful_hit="4.0" kill_decay_start_time="1.16" kill_decay_end_time="1.933"/>
 	</projectile>
-	<stance state_key="walking" accuracy="0.3"/>
+	<stance state_key="running" accuracy="0.3"/>
+	<stance state_key="walking" accuracy="0.5"/>
 	<stance state_key="crouch_moving" accuracy="0.65"/>
 	<stance state_key="prone_moving" accuracy="0.7"/>
 	<stance state_key="standing" accuracy="0.85"/>
@@ -4639,7 +4640,51 @@
 	<tag name="rifle"/>
 	<inventory encumbrance="20.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<stance state_key="running" accuracy="1.0"/>
+	<modifier class="detectability" value="-0.1"/>
+	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
+	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
+	<target_factors tag="shotgun" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
+	<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
+	<target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
+	<target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
+	<animation key="recoil" animation_key="recoil1"/>
+	<animation key="recoil" animation_key="recoil2"/>
+	<animation key="recoil" animation_key="recoil3"/>
+	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
+	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
+	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
+	<animation state_key="celebrate_shoot" animation_key="celebrating, shooting"/>
+	<animation state_key="stabbing" animation_key="melee, quick knife"/>
+	<animation state_key="stabbing" animation_key="pistol whip 3"/>
+</weapon>
+
+<weapon key="gkw_g43_kurz.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+	<specification retrigger_time="0.03" accuracy_factor="1" sustained_fire_grow_step="0.2" sustained_fire_diminish_rate="1.5" spread_range="0.25" stance_accuracy_rate="4.0" magazine_size="30" can_shoot_standing="1" suppressed="0" name="Gewehr 43-[7.92 KURZ]" class="4" burst_shots="3" last_burst_retrigger_time="-1" sight_range_modifier="2.0" projectile_speed="200" barrel_offset="0.4" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<inventory encumbrance="10.0" buy_price="43.0" sell_price="43.0"/>
+	<commonness value="0" in_stock="0" can_respawn_with="1"/>
+	<animation state_key="reload" animation_key="reloading, magazine rifle 1.2"/>
+	<sound key="fire" fileref="g43_fire_FromPOSTSCRIPTUM.wav" pitch_variety="0.01" volume="1.0"/>
+	<sound key="cycle" fileref="g43_cycle_FromBF5.wav" volume="0.7"/>
+	<sound key="magazine_out" fileref="g43_mgz_out_FromBF5.wav" volume="0.6"/>
+	<sound key="magazine_in" fileref="g43_mgz_in_FromBF5.wav" volume="0.6"/>
+	<sound class="impact" fileref="rifle_drop.wav"/>
+	<model filename="gkw_rf_g43_kurz.xml"/>
+	<hud_icon filename="gkw_g43_kurz.png"/>
+	<weak_hand_hold offset="0.3"/>
+	<projectile file="bullet.projectile">
+	<result class="hit" kill_probability="1.9" kill_probability_offset_on_successful_hit="3.0" kill_decay_start_time="1.16" kill_decay_end_time="1.933"/>
+	</projectile>
+	<stance state_key="running" accuracy="0.3"/>
+	<stance state_key="walking" accuracy="0.675"/>
+	<stance state_key="crouch_moving" accuracy="0.75"/>
+	<stance state_key="standing" accuracy="0.85"/>
+	<stance state_key="crouching" accuracy="0.9"/>
+	<stance state_key="prone" accuracy="0.95"/>
+	<stance state_key="prone_moving" accuracy="0.85"/>
+	<stance state_key="over_wall" accuracy="0.95"/>
+	<modifier class="speed" value="0"/>
+	<tag name="rifle"/>
+	<capacity value="1" source="rank" source_value="0.0"/>
 	<modifier class="detectability" value="-0.1"/>
 	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
@@ -7340,7 +7385,7 @@
 
 <weapon key="gkw_mp40.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="smg"/>
-	<specification accuracy_factor="0.85" retrigger_time="0.12" barrel_offset="0.32" class="0" slot="0" magazine_size="32" carry_in_two_hands="1" name="MP40" projectile_speed="120" suppressed="0" burst_shots="1" spread_range="0.2" stance_accuracy_rate="2.0" sustained_fire_diminish_rate="1.5" sustained_fire_grow_step="0.3" stab_enabled="1"/>
+	<specification accuracy_factor="0.85" retrigger_time="0.12" barrel_offset="0.32" class="0" slot="0" magazine_size="32" carry_in_two_hands="1" name="Maschinenpistole 40" projectile_speed="120" suppressed="0" burst_shots="1" spread_range="0.2" stance_accuracy_rate="2.0" sustained_fire_diminish_rate="1.5" sustained_fire_grow_step="0.3" stab_enabled="1"/>
 	<commonness value="0.2" in_stock="1" can_respawn_with="1"/>
 	<inventory encumbrance="2.0" buy_price="15.0" sell_price="15.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -7404,7 +7449,8 @@
 	<hud_icon filename="gkw_pps43.png"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="1.5" kill_probability_offset_on_successful_hit="2.5" kill_decay_start_time="0.25" kill_decay_end_time="0.5"/>
+	<result class="hit" kill_probability="1.7" kill_probability_offset_on_successful_hit="2.8" kill_decay_start_time="0.3" kill_decay_end_time="0.5"/>
+	<trail probability="1.0" key="bullet_short"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_9mm"/>
 	<stance state_key="running" accuracy="0.5"/>
@@ -7449,7 +7495,7 @@
 
 <weapon key="gkw_m3.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="smg"/>
-	<specification accuracy_factor="0.85" barrel_offset="0.4" class="0" slot="0" magazine_size="30" carry_in_two_hands="1" name="M3" projectile_speed="125" retrigger_time="0.133" suppressed="1" burst_shots="1" sustained_fire_diminish_rate="1.8" sustained_fire_grow_step="0.45" stance_accuracy_rate="2.0" spread_range="0.2" stab_enabled="1"/>
+	<specification accuracy_factor="0.85" barrel_offset="0.4" class="0" slot="0" magazine_size="30" carry_in_two_hands="1" name="M3 Grease Gun" projectile_speed="125" retrigger_time="0.133" suppressed="1" burst_shots="1" sustained_fire_diminish_rate="1.8" sustained_fire_grow_step="0.45" stance_accuracy_rate="2.0" spread_range="0.2" stab_enabled="1"/>
 	<commonness value="0.2" in_stock="1" can_respawn_with="1"/>
 	<inventory encumbrance="2.0" buy_price="5.0" sell_price="5.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -7479,7 +7525,7 @@
 	<hud_icon filename="gkw_m3.png"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile file="bullet.projectile" can_be_detected_by_footmen="0">
-	<result class="hit" kill_probability="1.45" kill_probability_offset_on_successful_hit="5.1" kill_decay_start_time="0.24" kill_decay_end_time="0.4"/>
+	<result class="hit" kill_probability="1.5" kill_probability_offset_on_successful_hit="5.1" kill_decay_start_time="0.24" kill_decay_end_time="0.4"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_9mm"/>
 	<stance state_key="running" accuracy="0.6"/>
@@ -7501,7 +7547,7 @@
 </weapon>
 
 <weapon key="gkw_c96.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="0.2" accuracy_factor="1" sustained_fire_grow_step="0.45" sustained_fire_diminish_rate="2.0" magazine_size="10" suppressed="0" name="C96" class="0" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="120" projectiles_per_shot="1" burst_shots="1" stab_enabled="1" carry_in_two_hands="0" last_burst_retrigger_time="-1" slot="0"/>
+	<specification retrigger_time="0.2" accuracy_factor="1" sustained_fire_grow_step="0.45" sustained_fire_diminish_rate="2.0" magazine_size="10" suppressed="0" name="Mauser C96" class="0" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="120" projectiles_per_shot="1" burst_shots="1" stab_enabled="1" carry_in_two_hands="0" last_burst_retrigger_time="-1" slot="0"/>
 	<commonness value="0.2" in_stock="1" can_respawn_with="1"/>
 	<inventory buy_price="3.0" sell_price="3.0"/>
 	<sound key="fire" fileref="c96_Fire_FromBF1.wav" pitch_variety="0.05" volume="1"/>
@@ -7555,7 +7601,7 @@
 </weapon>
 
 <weapon key="gkw_c96mod3.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="0.0667" accuracy_factor="1.0" sustained_fire_grow_step="0.45" sustained_fire_diminish_rate="4.0" spread_range="0.35" magazine_size="20" suppressed="0" name="C96(MOD3)" class="0" reload_one_at_a_time="0" sight_range_modifier="1.25" projectile_speed="120" projectiles_per_shot="1" burst_shots="1" stab_enabled="1" carry_in_two_hands="0" last_burst_retrigger_time="-1" slot="0"/>
+	<specification retrigger_time="0.0667" accuracy_factor="1.0" sustained_fire_grow_step="0.45" sustained_fire_diminish_rate="4.0" spread_range="0.35" magazine_size="20" suppressed="0" name="Mauser C96(MOD3)" class="0" reload_one_at_a_time="0" sight_range_modifier="1.25" projectile_speed="120" projectiles_per_shot="1" burst_shots="1" stab_enabled="1" carry_in_two_hands="0" last_burst_retrigger_time="-1" slot="0"/>
 	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="10.0" buy_price="96.0" sell_price="96.0"/>
 	<sound key="fire" fileref="c96_Fire_FromBF1.wav" pitch_variety="0.05" volume="1"/>
@@ -8005,7 +8051,7 @@
 </weapon>
 
 <weapon key="gkw_wa2000.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="0.6" sustained_fire_diminish_rate="2.0" magazine_size="6" can_shoot_standing="1" suppressed="0" name="Walther WA2000" class="4" burst_shots="1" last_burst_retrigger_time="0.333" reload_one_at_a_time="0" sight_range_modifier="2.0" stance_accuracy_rate="1.0" projectile_speed="200" barrel_offset="0.4" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="0.6" sustained_fire_diminish_rate="2.0" spread_range="0.27" magazine_size="6" can_shoot_standing="1" suppressed="0" name="Walther WA2000" class="4" burst_shots="1" last_burst_retrigger_time="0.333" reload_one_at_a_time="0" sight_range_modifier="2.0" stance_accuracy_rate="1.0" projectile_speed="200" barrel_offset="0.4" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<inventory encumbrance="20.0" buy_price="10.0" sell_price="10.0"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 0.9"/>
 	<sound key="fire" fileref="wa2000_fire_FromCOD17.wav" volume="1.3"/>
@@ -8053,7 +8099,7 @@
 </weapon>
 
 <weapon key="gkw_wa2000_306.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="0.6" sustained_fire_diminish_rate="2.0" magazine_size="6" can_shoot_standing="1" suppressed="0" name="Walther WA2000-[Date in the Snow]" class="4" burst_shots="1" last_burst_retrigger_time="0.333" reload_one_at_a_time="0" sight_range_modifier="2.0" stance_accuracy_rate="1.0" projectile_speed="200" barrel_offset="0.4" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="0.6" sustained_fire_diminish_rate="2.0" spread_range="0.27" magazine_size="6" can_shoot_standing="1" suppressed="0" name="Walther WA2000-[Date in the Snow]" class="4" burst_shots="1" last_burst_retrigger_time="0.333" reload_one_at_a_time="0" sight_range_modifier="2.0" stance_accuracy_rate="1.0" projectile_speed="200" barrel_offset="0.4" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<inventory encumbrance="20.0" buy_price="10.0" sell_price="10.0"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 0.9"/>
 	<sound key="fire" fileref="wa2000_fire_FromCOD17.wav" volume="1.3"/>
@@ -8311,7 +8357,7 @@
 <weapon key="gkw_m99.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="rifle"/>
 	<tag name="antiarmor"/>
-	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="0" sustained_fire_diminish_rate="1.5" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="M99" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="2.25" projectile_speed="224.21" barrel_offset="0.65" projectiles_per_shot="1" last_burst_retrigger_time="0.5" burst_shots="1" stab_enabled="1" carry_in_two_hands="1"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="1.5" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="M99" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="2.25" projectile_speed="224.21" barrel_offset="0.65" projectiles_per_shot="1" last_burst_retrigger_time="0.5" burst_shots="1" stab_enabled="1" carry_in_two_hands="1"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="20.0" buy_price="300.0" sell_price="200.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -8433,7 +8479,7 @@
 	<hud_icon filename="gkw_m1928a1.png"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="1.45" kill_probability_offset_on_successful_hit="4.5" kill_decay_start_time="0.25" kill_decay_end_time="0.4"/>
+	<result class="hit" kill_probability="1.5" kill_probability_offset_on_successful_hit="4.5" kill_decay_start_time="0.25" kill_decay_end_time="0.4"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_9mm"/>
 	<stance state_key="running" accuracy="0.65"/>
@@ -8486,7 +8532,7 @@
 	<hud_icon filename="gkw_m1928a1_5703.png"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="1.45" kill_probability_offset_on_successful_hit="4.5" kill_decay_start_time="0.25" kill_decay_end_time="0.4"/>
+	<result class="hit" kill_probability="1.5" kill_probability_offset_on_successful_hit="4.5" kill_decay_start_time="0.25" kill_decay_end_time="0.4"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_9mm"/>
 	<stance state_key="running" accuracy="0.65"/>
@@ -10881,7 +10927,7 @@
 <weapon key="gkw_4type.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="has_bayonet"/>
 	<tag name="rifle"/>
-	<specification retrigger_time="0.125" accuracy_factor="0.99" sustained_fire_grow_step="0.0" sustained_fire_diminish_rate="1.7" magazine_size="10" can_shoot_standing="1" suppressed="0" name="4 Type" class="4" burst_shots="1" reload_one_at_a_time="1" projectile_speed="228.72" barrel_offset="0.6" projectiles_per_shot="1" slot="0"/>
+	<specification retrigger_time="0.125" accuracy_factor="0.99" sustained_fire_grow_step="0.0" sustained_fire_diminish_rate="1.7" magazine_size="10" can_shoot_standing="1" spread_range="0.28" suppressed="0" name="4 Type" class="4" burst_shots="1" reload_one_at_a_time="1" projectile_speed="228.72" barrel_offset="0.6" projectiles_per_shot="1" slot="0"/>
 	<animation key="cycle" animation_key="Brifle1"/>
 	<animation key="reload" animation_key="reloading, clip"/>
 	<weak_hand_hold offset="0.3"/>
@@ -10924,7 +10970,7 @@
 </weapon>
 
 <weapon key="gkw_carcano1891.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="0" sustained_fire_diminish_rate="0.8" magazine_size="6" can_shoot_standing="1" suppressed="0" name="Carcano M1891" class="2" reload_one_at_a_time="0" sight_range_modifier="2.8" projectile_speed="210.64" barrel_offset="0.4" stab_range="4.5" projectiles_per_shot="4" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="2.5" sustained_fire_diminish_rate="2.8" magazine_size="6" can_shoot_standing="1" suppressed="0" name="Carcano M1891" class="2" reload_one_at_a_time="0" sight_range_modifier="2.8" projectile_speed="210.64" barrel_offset="0.4" stab_range="4.5" projectiles_per_shot="4" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
 	<inventory encumbrance="20.0" buy_price="8.0" sell_price="8.0"/>
 	<animation key="cycle" animation_key="Brifle1.1"/>
 	<animation key="cycle" stance_key="prone" animation_key="Brifle1.1p"/>
@@ -10940,7 +10986,7 @@
 	<hud_icon filename="gkw_carcano1891.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="2.2" kill_probability_offset_on_successful_hit="3" kill_decay_start_time="1.448" kill_decay_end_time="2.414"/>
+	<result class="hit" kill_probability="2.5" kill_probability_offset_on_successful_hit="3" kill_decay_start_time="1.448" kill_decay_end_time="2.414"/>
 	</projectile>
 	<stance state_key="running" accuracy="1.2"/>
 	<stance state_key="walking" accuracy="1.2"/>
@@ -10991,7 +11037,7 @@
 	<hud_icon filename="gkw_carcano1938.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="4.6" kill_probability_offset_on_successful_hit="10" kill_decay_start_time="1.448" kill_decay_end_time="2.414"/>
+	<result class="hit" kill_probability="10" kill_probability_offset_on_successful_hit="6.5" kill_decay_start_time="1.448" kill_decay_end_time="2.414"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.3"/>
 	<stance state_key="walking" accuracy="0.65"/>
@@ -11118,7 +11164,7 @@
 </weapon>
 
 <weapon key="gkw_k31.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="0" sustained_fire_diminish_rate="0.8" magazine_size="6" can_shoot_standing="1" suppressed="0" name="K31" class="2" reload_one_at_a_time="0" sight_range_modifier="2.5" projectile_speed="239.66" barrel_offset="0.4" projectiles_per_shot="4" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="7.5" magazine_size="6" can_shoot_standing="1" suppressed="0" name="Schmidt–Rubin Kar. 31" class="2" reload_one_at_a_time="0" sight_range_modifier="2.0" projectile_speed="239.66" barrel_offset="0.4" projectiles_per_shot="4" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
 	<inventory encumbrance="10.0" buy_price="31.0" sell_price="31.0"/>
 	<next_in_chain key="gkw_k31_skill.weapon" share_ammo="1"/>
 	<animation key="cycle" animation_key="Brifle0.4"/>
@@ -11167,7 +11213,7 @@
 </weapon>
 
 <weapon key="gkw_k31_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" last_burst_retrigger_time="0.1" accuracy_factor="1.0" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="0.3" magazine_size="6" can_shoot_standing="1" suppressed="0" name="K31-[Emergency Speed]" class="4" burst_shots="1" spread_range="0.4" reload_one_at_a_time="0" sight_range_modifier="2.2" projectile_speed="239.66" barrel_offset="0.4" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<specification retrigger_time="-1.0" last_burst_retrigger_time="0.1" accuracy_factor="1.0" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="0.3" magazine_size="6" can_shoot_standing="1" suppressed="0" name="Schmidt–Rubin Kar. 31-[Emergency Speed]" class="4" burst_shots="1" spread_range="0.18" reload_one_at_a_time="0" sight_range_modifier="2.0" projectile_speed="239.66" barrel_offset="0.4" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<inventory buy_price="31.0" sell_price="31.0"/>
 	<next_in_chain key="gkw_k31.weapon" share_ammo="1"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 0.9"/>
@@ -11214,7 +11260,7 @@
 
 <weapon on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0" key="gkw_m1.weapon">
 	<tag name="rifle"/>
-	<specification retrigger_time="-1" last_burst_retrigger_time="0.125" accuracy_factor="1" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="1.5" magazine_size="8" can_shoot_standing="1" suppressed="0" name="M1 Garand" class="4" burst_shots="1" reload_one_at_a_time="0" sight_range_modifier="1.25" projectile_speed="180" barrel_offset="0.6" stance_accuracy_rate="1.8" projectiles_per_shot="1" slot="0" stab_enabled="1" stab_range="4.5"/>
+	<specification retrigger_time="-1" last_burst_retrigger_time="0.125" accuracy_factor="1" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="1.5" magazine_size="8" spread_range="0.27" can_shoot_standing="1" suppressed="0" name="M1 Garand" class="4" burst_shots="1" reload_one_at_a_time="0" sight_range_modifier="1.25" projectile_speed="180" barrel_offset="0.6" stance_accuracy_rate="1.8" projectiles_per_shot="1" slot="0" stab_enabled="1" stab_range="4.5"/>
 	<effect class="muzzle" ref="ejection_76251"/>
 	<next_in_chain key="gkw_m1_skill.weapon" share_ammo="0"/>
 	<animation key="cycle" animation_key="Brifle1"/>
@@ -11306,7 +11352,7 @@
 </weapon>
 
 <weapon key="gkw_m1a1.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification accuracy_factor="1" barrel_offset="0.6" class="4" burst_shots="1" slot="0" magazine_size="15" name="M1A1 Carbine" projectile_speed="175" retrigger_time="-1" last_burst_retrigger_time="0.1" suppressed="0" sustained_fire_diminish_rate="1.6" sustained_fire_grow_step="0.35" sight_range_modifier="1.25" stance_accuracy_rate="1.75" stab_enabled="1" carry_in_two_hands="1"/>
+	<specification accuracy_factor="1" barrel_offset="0.6" class="4" burst_shots="1" slot="0" magazine_size="15" name="M1A1 Carbine" spread_range="0.28" projectile_speed="175" retrigger_time="-1" last_burst_retrigger_time="0.1" suppressed="0" sustained_fire_diminish_rate="1.6" sustained_fire_grow_step="0.35" sight_range_modifier="1.25" stance_accuracy_rate="1.75" stab_enabled="1" carry_in_two_hands="1"/>
 	<inventory encumbrance="20.0" buy_price="10.0" sell_price="10.0"/>
 	<effect class="muzzle" ref="ejection_76251"/>
 	<animation state_key="reload" animation_key="reloading, magazine rifle 1.5"/>
@@ -11444,7 +11490,7 @@
 </weapon>
 
 <weapon key="gkw_psg1.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification accuracy_factor="1" barrel_offset="0.7" class="4" burst_shots="1" slot="0" magazine_size="5" name="PSG-1" projectile_speed="200" retrigger_time="-1" last_burst_retrigger_time="0.5" suppressed="0" sight_range_modifier="2.0" sustained_fire_grow_step="1.5" sustained_fire_diminish_rate="1.5" stance_accuracy_rate="1.0" stab_enabled="1" carry_in_two_hands="1"/>
+	<specification accuracy_factor="1" barrel_offset="0.7" class="4" burst_shots="1" slot="0" magazine_size="5" name="PSG-1" projectile_speed="200" spread_range="0.2" retrigger_time="-1" last_burst_retrigger_time="0.5" suppressed="0" sight_range_modifier="2.0" sustained_fire_grow_step="1.5" sustained_fire_diminish_rate="1.5" stance_accuracy_rate="1.0" stab_enabled="1" carry_in_two_hands="1"/>
 	<inventory encumbrance="10.0" buy_price="100.0" sell_price="100.0"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.5"/>
 	<sound key="fire" fileref="psg1_fire_FromCOD7.wav" pitch_variety="0.01" volume="1.3"/>
@@ -11628,10 +11674,10 @@
 </weapon>
 
 <weapon key="gkw_r93.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="1" sustained_fire_diminish_rate="1.3" magazine_size="4" can_shoot_standing="1" suppressed="0" name="R93" class="2" reload_one_at_a_time="0" sight_range_modifier="3" projectile_speed="239.66" barrel_offset="0.4" projectiles_per_shot="4" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="2.0" magazine_size="4" can_shoot_standing="1" suppressed="0" name="R93" class="2" reload_one_at_a_time="0" sight_range_modifier="2.0" projectile_speed="239.66" barrel_offset="0.4" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
 	<inventory encumbrance="10.0" buy_price="24.0" sell_price="24.0"/>
-	<animation key="cycle" animation_key="Brifle1.5"/>
-	<animation key="cycle" stance_key="prone" animation_key="Brifle1.5p"/>
+	<animation key="cycle" animation_key="Brifle0.8"/>
+	<animation key="cycle" stance_key="prone" animation_key="Brifle0.8p"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 0.9"/>
 	<sound key="fire" fileref="r93_fire_FromBLACKSQUAD.wav" pitch_variety="0.05" volume="1.2"/>
 	<sound key="cycle" fileref="r93_cycle_FromCF.wav" volume="0.7"/>
@@ -11644,16 +11690,16 @@
 	<hud_icon filename="gkw_r93.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="2.2" kill_probability_offset_on_successful_hit="2.4" kill_decay_start_time="1.448" kill_decay_end_time="2.414"/>
+	<result class="hit" kill_probability="15" kill_probability_offset_on_successful_hit="6.5" kill_decay_start_time="1.448" kill_decay_end_time="2.414"/>
 	</projectile>
-	<stance state_key="running" accuracy="1"/>
-	<stance state_key="walking" accuracy="1"/>
-	<stance state_key="crouch_moving" accuracy="1"/>
-	<stance state_key="prone_moving" accuracy="1"/>
-	<stance state_key="standing" accuracy="1"/>
-	<stance state_key="crouching" accuracy="1"/>
-	<stance state_key="prone" accuracy="1"/>
-	<stance state_key="over_wall" accuracy="1"/>
+	<stance state_key="running" accuracy="0.3"/>
+	<stance state_key="walking" accuracy="0.65"/>
+	<stance state_key="crouch_moving" accuracy="0.65"/>
+	<stance state_key="standing" accuracy="0.95"/>
+	<stance state_key="crouching" accuracy="1.0"/>
+	<stance state_key="prone" accuracy="1.1"/>
+	<stance state_key="prone_moving" accuracy="0.6"/>
+	<stance state_key="over_wall" accuracy="1.1"/>
 	<tag name="rifle"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="20.0" buy_price="1.0" sell_price="0.0"/>
@@ -13166,7 +13212,7 @@
 </weapon>
 
 <weapon key="gkw_svch.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="0.33" accuracy_factor="1.0" sustained_fire_grow_step="0.9" sustained_fire_diminish_rate="1.1" magazine_size="10" can_shoot_standing="1" suppressed="0" name="SVCh" class="4" burst_shots="1" reload_one_at_a_time="0" sight_range_modifier="2.0" stance_accuracy_rate="1.0" projectile_speed="200" barrel_offset="0.5" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<specification retrigger_time="0.33" accuracy_factor="1.0" sustained_fire_grow_step="0.9" sustained_fire_diminish_rate="1.1" spread_range="0.28" magazine_size="10" can_shoot_standing="1" suppressed="0" name="SVCh" class="4" burst_shots="1" reload_one_at_a_time="0" sight_range_modifier="2.0" stance_accuracy_rate="1.0" projectile_speed="200" barrel_offset="0.5" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<inventory encumbrance="20.0" buy_price="24.0" sell_price="24.0"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
 	<sound key="fire" fileref="svch_fire_FromCOD15.wav" pitch_variety="0.05" volume="1.3"/>
@@ -13210,7 +13256,7 @@
 </weapon>
 
 <weapon key="gkw_srs.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="1" sustained_fire_diminish_rate="1.3" magazine_size="5" can_shoot_standing="1" suppressed="0" name="SRS" class="2" reload_one_at_a_time="0" sight_range_modifier="3" projectile_speed="225.89" barrel_offset="0.4" projectiles_per_shot="4" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="1.5" stance_accuracy_rate="2.0" magazine_size="5" can_shoot_standing="1" suppressed="0" name="SRS" class="2" reload_one_at_a_time="0" sight_range_modifier="2.0" projectile_speed="220" barrel_offset="0.4" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
 	<inventory encumbrance="10.0" buy_price="24.0" sell_price="24.0"/>
 	<animation key="cycle" animation_key="Brifle1.5"/>
 	<animation key="cycle" stance_key="prone" animation_key="Brifle1.5p"/>
@@ -13226,16 +13272,17 @@
 	<hud_icon filename="gkw_srs.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="2.2" kill_probability_offset_on_successful_hit="2.2" kill_decay_start_time="1.448" kill_decay_end_time="2.414"/>
+	<result class="hit" kill_probability="15" kill_probability_offset_on_successful_hit="6.5" kill_decay_start_time="1.448" kill_decay_end_time="2.414"/>
 	</projectile>
-	<stance state_key="running" accuracy="1"/>
-	<stance state_key="walking" accuracy="1"/>
-	<stance state_key="crouch_moving" accuracy="1"/>
-	<stance state_key="prone_moving" accuracy="1"/>
-	<stance state_key="standing" accuracy="1"/>
-	<stance state_key="crouching" accuracy="1"/>
-	<stance state_key="prone" accuracy="1"/>
-	<stance state_key="over_wall" accuracy="1"/>
+	<stance state_key="running" accuracy="0.3"/>
+	<stance state_key="walking" accuracy="0.65"/>
+	<stance state_key="crouch_moving" accuracy="0.65"/>
+	<stance state_key="standing" accuracy="0.95"/>
+	<stance state_key="crouching" accuracy="1.0"/>
+	<stance state_key="prone" accuracy="1.1"/>
+	<stance state_key="prone_moving" accuracy="0.6"/>
+	<stance state_key="over_wall" accuracy="1.1"/>
+	<modifier class="speed" value="0.05"/>
 	<tag name="rifle"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="20.0" buy_price="1.0" sell_price="0.0"/>
@@ -15379,7 +15426,7 @@
 	<hud_icon filename="gkw_xm3.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="3.5" kill_probability_offset_on_successful_hit="0.3" kill_decay_start_time="1.448" kill_decay_end_time="2.414"/>
+	<result class="hit" kill_probability="3.7" kill_probability_offset_on_successful_hit="0.5" kill_decay_start_time="1.448" kill_decay_end_time="2.414"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_76251"/>
 	<stance state_key="running" accuracy="1.1"/>
@@ -15577,7 +15624,7 @@
 </weapon>
 
 <weapon key="gkw_m21.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="1.6" magazine_size="20" can_shoot_standing="1" suppressed="0" name="M21" class="4" burst_shots="1" last_burst_retrigger_time="0.125" reload_one_at_a_time="0" sight_range_modifier="2.2" projectile_speed="200" barrel_offset="0.6" projectiles_per_shot="1" stance_accuracy_rate="1.0" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="1.6" magazine_size="20" spread_range="0.28" can_shoot_standing="1" suppressed="0" name="M21" class="4" burst_shots="1" last_burst_retrigger_time="0.125" reload_one_at_a_time="0" sight_range_modifier="2.2" projectile_speed="200" barrel_offset="0.6" projectiles_per_shot="1" stance_accuracy_rate="1.0" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<inventory encumbrance="20.0" buy_price="21.0" sell_price="21.0"/>
 	<effect class="muzzle" ref="ejection_76251"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.8"/>
@@ -16291,7 +16338,7 @@
 	<hud_icon filename="gkw_vz61_only.png"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="1.35" kill_probability_offset_on_successful_hit="3.5" kill_decay_start_time="0.33" kill_decay_end_time="0.5"/>
+	<result class="hit" kill_probability="1.45" kill_probability_offset_on_successful_hit="3.5" kill_decay_start_time="0.33" kill_decay_end_time="0.5"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.45"/>
 	<stance state_key="walking" accuracy="0.5"/>
@@ -19350,7 +19397,7 @@
 </weapon>
 
 <weapon key="gkw_ballista.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="0.0" sustained_fire_diminish_rate="1.5" magazine_size="15" can_shoot_standing="1" suppressed="0" name="FN Ballista" class="2" reload_one_at_a_time="0" sight_range_modifier="3.5" projectile_speed="200" barrel_offset="0.65" stance_accuracy_rate="1.0" projectiles_per_shot="4" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="0.0" sustained_fire_diminish_rate="1.5" magazine_size="15" can_shoot_standing="1" suppressed="0" name="FN Ballista" class="2" reload_one_at_a_time="0" sight_range_modifier="2.25" projectile_speed="200" barrel_offset="0.65" stance_accuracy_rate="1.0" projectiles_per_shot="4" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
 	<inventory buy_price="204.0" sell_price="204.0"/>
 	<next_in_chain key="gkw_ballista_skill.weapon" share_ammo="0"/>
 	<animation key="cycle" animation_key="Brifle0.8"/>
@@ -19401,7 +19448,7 @@
 </weapon>
 
 <weapon key="gkw_ballista_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="0.02" burst_shots="2" last_burst_retrigger_time="1.8" accuracy_factor="1" sustained_fire_grow_step="0.0" sustained_fire_diminish_rate="1.5" magazine_size="16" can_shoot_standing="0" suppressed="0" name="FN Ballista-[Falcon Strike]" class="4" reload_one_at_a_time="0" sight_range_modifier="3.5" projectile_speed="250" barrel_offset="0.65" stance_accuracy_rate="1.0" projectiles_per_shot="4" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<specification retrigger_time="0.02" burst_shots="2" last_burst_retrigger_time="1.8" accuracy_factor="1" sustained_fire_grow_step="0.0" sustained_fire_diminish_rate="1.5" magazine_size="16" can_shoot_standing="0" suppressed="0" name="FN Ballista-[Falcon Strike]" class="4" reload_one_at_a_time="0" sight_range_modifier="2.5" projectile_speed="250" barrel_offset="0.65" stance_accuracy_rate="1.0" projectiles_per_shot="4" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<inventory buy_price="204.0" sell_price="204.0"/>
 	<next_in_chain key="gkw_ballista.weapon" share_ammo="0"/>
 	<animation key="cycle" animation_key="Brifle1.8"/>
@@ -20268,7 +20315,7 @@
 	<hud_icon filename="gkw_xm3mod3.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="4" kill_probability_offset_on_successful_hit="0.5" kill_decay_start_time="1.448" kill_decay_end_time="2.414"/>
+	<result class="hit" kill_probability="4.5" kill_probability_offset_on_successful_hit="1.1" kill_decay_start_time="1.448" kill_decay_end_time="2.414"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_76251"/>
 	<stance state_key="running" accuracy="1.1"/>
@@ -20410,7 +20457,7 @@
 
 <weapon key="gkw_delisle.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="rifle"/>
-	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="0" sustained_fire_diminish_rate="2.0" magazine_size="11" can_shoot_standing="1" carry_in_two_hands="1" suppressed="1" name="De lisle Carbine" class="2" slot="0" reload_one_at_a_time="0" sight_range_modifier="2.0" projectile_speed="130" barrel_offset="0.4" projectiles_per_shot="3" stab_enabled="1"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="1.6" sustained_fire_diminish_rate="4.0" magazine_size="11" can_shoot_standing="1" carry_in_two_hands="1" suppressed="1" name="De lisle Carbine" class="2" slot="0" reload_one_at_a_time="0" sight_range_modifier="2.0" projectile_speed="130" barrel_offset="0.4" projectiles_per_shot="3" stab_enabled="1"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="20.0" buy_price="45.0" sell_price="45.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -20458,7 +20505,7 @@
 
 <weapon key="gkw_delisle_6202.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="rifle"/>
-	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="0" sustained_fire_diminish_rate="2.0" magazine_size="11" can_shoot_standing="1" carry_in_two_hands="1" suppressed="1" name="De lisle Carbine-[Coyote Blues]" class="2" slot="0" reload_one_at_a_time="0" sight_range_modifier="2.0" projectile_speed="130" barrel_offset="0.4" projectiles_per_shot="3" stab_enabled="1"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="1.6" sustained_fire_diminish_rate="4.0" magazine_size="11" can_shoot_standing="1" carry_in_two_hands="1" suppressed="1" name="De lisle Carbine-[Coyote Blues]" class="2" slot="0" reload_one_at_a_time="0" sight_range_modifier="2.0" projectile_speed="130" barrel_offset="0.4" projectiles_per_shot="3" stab_enabled="1"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="20.0" buy_price="45.0" sell_price="45.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -20506,7 +20553,7 @@
 
 <weapon on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0" key="gkw_fn49.weapon">
 	<tag name="rifle"/>
-	<specification retrigger_time="-1" last_burst_retrigger_time="0.125" accuracy_factor="1" sustained_fire_grow_step="0.4" sustained_fire_diminish_rate="1.8" magazine_size="10" can_shoot_standing="1" suppressed="0" name="FN-49" class="4" burst_shots="1" reload_one_at_a_time="0" sight_range_modifier="2.5" projectile_speed="245" barrel_offset="0.6" projectiles_per_shot="1" slot="0" stab_enabled="1" stab_range="3"/>
+	<specification retrigger_time="-1" last_burst_retrigger_time="0.125" accuracy_factor="1" sustained_fire_grow_step="0.4" sustained_fire_diminish_rate="1.8" magazine_size="10" can_shoot_standing="1" spread_range="0.27" suppressed="0" name="FN-49" class="4" burst_shots="1" reload_one_at_a_time="0" sight_range_modifier="2.5" projectile_speed="245" barrel_offset="0.6" projectiles_per_shot="1" slot="0" stab_enabled="1" stab_range="3"/>
 	<effect class="muzzle" ref="ejection_76251"/>
 	<animation key="cycle" animation_key="Brifle1.1"/>
 	<animation key="cycle" stance_key="prone" animation_key="Brifle1.1p"/>
@@ -20550,7 +20597,7 @@
 
 <weapon on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0" key="gkw_fn49mod3.weapon">
 	<tag name="rifle"/>
-	<specification retrigger_time="-1" last_burst_retrigger_time="0.1" accuracy_factor="1" sustained_fire_grow_step="2" sustained_fire_diminish_rate="20" magazine_size="10" can_shoot_standing="1" suppressed="0" name="FN-49(MOD3)" class="4" burst_shots="1" reload_one_at_a_time="0" sight_range_modifier="2.0" projectile_speed="260" barrel_offset="0.6" projectiles_per_shot="2" slot="0" stab_enabled="1" stab_range="3.4"/>
+	<specification retrigger_time="-1" last_burst_retrigger_time="0.1" accuracy_factor="1" sustained_fire_grow_step="2" sustained_fire_diminish_rate="20" magazine_size="10" can_shoot_standing="1" spread_range="0.24" suppressed="0" name="FN-49(MOD3)" class="4" burst_shots="1" reload_one_at_a_time="0" sight_range_modifier="2.0" projectile_speed="260" barrel_offset="0.6" projectiles_per_shot="2" slot="0" stab_enabled="1" stab_range="3.4"/>
 	<effect class="muzzle" ref="ejection_76251"/>
 	<animation state_key="reload" animation_key="reloading, magazine rifle 1.2"/>
 	<next_in_chain key="gkw_fn49mod3_skill.weapon" share_ammo="1"/>
@@ -20696,7 +20743,8 @@
 	<weak_hand_hold offset="0.2"/>
 	<effect class="muzzle" ref="ejection_9mm"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="1.75" kill_probability_offset_on_successful_hit="2.7" kill_decay_start_time="0.2" kill_decay_end_time="0.45"/>
+	<result class="hit" kill_probability="1.75" kill_probability_offset_on_successful_hit="2.7" kill_decay_start_time="0.28" kill_decay_end_time="0.45"/>
+	<trail probability="1.0" key="bullet_short"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.5"/>
 	<stance state_key="walking" accuracy="0.6"/>
@@ -20752,7 +20800,8 @@
 	<weak_hand_hold offset="0.2"/>
 	<effect class="muzzle" ref="ejection_9mm"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="1.75" kill_probability_offset_on_successful_hit="2.7" kill_decay_start_time="0.2" kill_decay_end_time="0.45"/>
+	<result class="hit" kill_probability="1.75" kill_probability_offset_on_successful_hit="2.7" kill_decay_start_time="0.28" kill_decay_end_time="0.45"/>
+	<trail probability="1.0" key="bullet_short"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.5"/>
 	<stance state_key="walking" accuracy="0.6"/>
@@ -21825,7 +21874,7 @@
 
 <weapon on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0" key="gkw_m1_sf.weapon">
 	<tag name="rifle"/>
-	<specification retrigger_time="-1" last_burst_retrigger_time="0.15" accuracy_factor="1" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="3.0" magazine_size="30" stance_accuracy_rate="0.75" can_shoot_standing="1" suppressed="0" name="M1 Garand The Evil Corrupted" class="4" burst_shots="1" reload_one_at_a_time="0" sight_range_modifier="1.5" projectile_speed="180" barrel_offset="0.6" projectiles_per_shot="1" slot="0" stab_enabled="1" stab_range="4.5"/>
+	<specification retrigger_time="-1" last_burst_retrigger_time="0.15" accuracy_factor="1" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="3.0" magazine_size="30" spread_range="0.27" stance_accuracy_rate="0.75" can_shoot_standing="1" suppressed="0" name="M1 Garand The Evil Corrupted" class="4" burst_shots="1" reload_one_at_a_time="0" sight_range_modifier="1.5" projectile_speed="180" barrel_offset="0.6" projectiles_per_shot="1" slot="0" stab_enabled="1" stab_range="4.5"/>
 	<effect class="muzzle" ref="ejection_76251"/>
 	<next_in_chain key="gkw_m1_sf_skill.weapon" share_ammo="1"/>
 	<animation state_key="reload" animation_key="reloading, Machine gun 2.0"/>
@@ -21928,7 +21977,7 @@
 
 <weapon on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0" key="gkw_m1_sf_1106.weapon">
 	<tag name="rifle"/>
-	<specification retrigger_time="-1" last_burst_retrigger_time="0.15" accuracy_factor="1" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="3.0" magazine_size="30" stance_accuracy_rate="0.75" can_shoot_standing="1" suppressed="0" name="M1 Garand The Evil Corrupted" class="4" burst_shots="1" reload_one_at_a_time="0" sight_range_modifier="1.5" projectile_speed="180" barrel_offset="0.6" projectiles_per_shot="1" slot="0" stab_enabled="1" stab_range="4.5"/>
+	<specification retrigger_time="-1" last_burst_retrigger_time="0.15" accuracy_factor="1" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="3.0" magazine_size="30" spread_range="0.27" stance_accuracy_rate="0.75" can_shoot_standing="1" suppressed="0" name="M1 Garand The Evil Corrupted" class="4" burst_shots="1" reload_one_at_a_time="0" sight_range_modifier="1.5" projectile_speed="180" barrel_offset="0.6" projectiles_per_shot="1" slot="0" stab_enabled="1" stab_range="4.5"/>
 	<effect class="muzzle" ref="ejection_76251"/>
 	<next_in_chain key="gkw_m1_sf_1106_skill.weapon" share_ammo="1"/>
 	<animation state_key="reload" animation_key="reloading, Machine gun 2.0"/>
@@ -22084,7 +22133,7 @@
 </weapon>
 
 <weapon key="gkw_obr.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="0.6" sustained_fire_diminish_rate="1.5" magazine_size="20" stance_accuracy_rate="1.3" can_shoot_standing="1" suppressed="0" name="LaRue OBR" class="4" burst_shots="1" last_burst_retrigger_time="0.24" reload_one_at_a_time="0" sight_range_modifier="2.8" projectile_speed="230" barrel_offset="0.55" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="0.6" sustained_fire_diminish_rate="1.5" magazine_size="20" stance_accuracy_rate="1.3" can_shoot_standing="1" suppressed="0" name="LaRue OBR" spread_range="0.28" class="4" burst_shots="1" last_burst_retrigger_time="0.24" reload_one_at_a_time="0" sight_range_modifier="2.8" projectile_speed="230" barrel_offset="0.55" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<inventory encumbrance="20.0" buy_price="30.0" sell_price="30.0"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.8"/>
 	<sound key="fire" fileref="obr762_fire_FromMOH2012.wav" pitch_variety="0.01" volume="1.4"/>
@@ -22128,7 +22177,7 @@
 </weapon>
 
 <weapon key="gkw_obrmod3.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="0.45" sustained_fire_diminish_rate="1.7" magazine_size="20" stance_accuracy_rate="1.6" can_shoot_standing="1" suppressed="0" name="LaRue OBR(MOD3)" class="4" burst_shots="1" last_burst_retrigger_time="0.15" reload_one_at_a_time="0" sight_range_modifier="3.0" projectile_speed="230" barrel_offset="0.55" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="0.45" sustained_fire_diminish_rate="1.7" magazine_size="20" stance_accuracy_rate="1.6" can_shoot_standing="1" suppressed="0" name="LaRue OBR(MOD3)" spread_range="0.19" class="4" burst_shots="1" last_burst_retrigger_time="0.15" reload_one_at_a_time="0" sight_range_modifier="3.0" projectile_speed="230" barrel_offset="0.55" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<inventory encumbrance="20.0" buy_price="200.0" sell_price="200.0"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.5"/>
 	<sound key="fire" fileref="obr556_fire_FromCOD10.wav" pitch_variety="0.01" volume="1.1"/>
@@ -22279,7 +22328,7 @@
 </weapon>
 
 <weapon key="gkw_qbu88.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="1.5" magazine_size="10" can_shoot_standing="1" suppressed="0" name="QBU-88" class="4" burst_shots="1" last_burst_retrigger_time="0.125" reload_one_at_a_time="0" sight_range_modifier="3.0" projectile_speed="226.6" barrel_offset="0.55" stance_accuracy_rate="1.0" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="1.5" magazine_size="10" can_shoot_standing="1" suppressed="0" name="QBU-88" class="4" burst_shots="1" last_burst_retrigger_time="0.125" reload_one_at_a_time="0" sight_range_modifier="3.0" projectile_speed="226.6" barrel_offset="0.55" spread_range="0.28" stance_accuracy_rate="1.0" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<inventory encumbrance="10.0" buy_price="88.0" sell_price="88.0"/>
 	<next_in_chain key="gkw_qbu88_skill.weapon" share_ammo="1"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
@@ -22325,7 +22374,7 @@
 </weapon>
 
 <weapon key="gkw_qbu88_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="0.95" sustained_fire_grow_step="4.0" sustained_fire_diminish_rate="1.0" magazine_size="10" can_shoot_standing="1" suppressed="0" name="QBU-88-[Rushing Cloud]" class="4" burst_shots="1" last_burst_retrigger_time="0.5" reload_one_at_a_time="0" sight_range_modifier="3.0" projectile_speed="230" barrel_offset="0.55" stance_accuracy_rate="1.0" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="0.95" sustained_fire_grow_step="4.0" sustained_fire_diminish_rate="1.0" magazine_size="10" can_shoot_standing="1" suppressed="0" name="QBU-88-[Rushing Cloud]" class="4" burst_shots="1" last_burst_retrigger_time="0.5" reload_one_at_a_time="0" sight_range_modifier="3.0" projectile_speed="230" barrel_offset="0.55" spread_range="0.28" stance_accuracy_rate="1.0" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<inventory buy_price="88.0" sell_price="88.0"/>
 	<next_in_chain key="gkw_qbu88.weapon" share_ammo="1"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
@@ -22370,7 +22419,7 @@
 </weapon>
 
 <weapon key="gkw_qbu88_5502.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="1.5" magazine_size="10" can_shoot_standing="1" suppressed="0" name="QBU-88-[Dance of the Trumpet Vine]" class="4" burst_shots="1" last_burst_retrigger_time="0.125" reload_one_at_a_time="0" sight_range_modifier="3.0" projectile_speed="226.6" barrel_offset="0.55" stance_accuracy_rate="1.0" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="1.5" magazine_size="10" can_shoot_standing="1" suppressed="0" name="QBU-88-[Dance of the Trumpet Vine]" class="4" burst_shots="1" last_burst_retrigger_time="0.125" reload_one_at_a_time="0" sight_range_modifier="3.0" projectile_speed="226.6" barrel_offset="0.55" spread_range="0.28" stance_accuracy_rate="1.0" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<inventory encumbrance="10.0" buy_price="88.0" sell_price="88.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<next_in_chain key="gkw_qbu88_5502_skill.weapon" share_ammo="1"/>
@@ -22416,7 +22465,7 @@
 </weapon>
 
 <weapon key="gkw_qbu88_5502_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="0.95" sustained_fire_grow_step="4.0" sustained_fire_diminish_rate="1.0" magazine_size="10" can_shoot_standing="1" suppressed="0" name="QBU-88-[Dance of the Trumpet Vine]-[Rushing Cloud]" class="4" burst_shots="1" last_burst_retrigger_time="0.5" reload_one_at_a_time="0" sight_range_modifier="3.0" projectile_speed="230" barrel_offset="0.55" stance_accuracy_rate="1.0" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="0.95" sustained_fire_grow_step="4.0" sustained_fire_diminish_rate="1.0" magazine_size="10" can_shoot_standing="1" suppressed="0" name="QBU-88-[Dance of the Trumpet Vine]-[Rushing Cloud]" class="4" burst_shots="1" last_burst_retrigger_time="0.5" reload_one_at_a_time="0" sight_range_modifier="3.0" projectile_speed="230" barrel_offset="0.55" spread_range="0.28" stance_accuracy_rate="1.0" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<inventory buy_price="88.0" sell_price="88.0"/>
 	<next_in_chain key="gkw_qbu88_5502.weapon" share_ammo="1"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
@@ -23402,7 +23451,7 @@
 </weapon>
 
 <weapon key="gkw_scarh.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="1.4" magazine_size="20" can_shoot_standing="1" suppressed="0" name="FN SCAR-H" class="4" burst_shots="1" last_burst_retrigger_time="0.125" reload_one_at_a_time="0" sight_range_modifier="2.0" stance_accuracy_rate="1.0" projectile_speed="200" barrel_offset="0.55" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="1.4" magazine_size="20" can_shoot_standing="1" suppressed="0" name="FN SCAR-H" class="4" burst_shots="1" spread_range="0.3" last_burst_retrigger_time="0.125" reload_one_at_a_time="0" sight_range_modifier="2.0" stance_accuracy_rate="1.0" projectile_speed="200" barrel_offset="0.55" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<inventory buy_price="50.0" sell_price="50.0"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.8"/>
 	<sound key="fire" fileref="scar762_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.2"/>
@@ -23543,7 +23592,7 @@
 </weapon>
 
 <weapon key="gkw_tt33.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1" last_burst_retrigger_time="0.1" accuracy_factor="1.0" sustained_fire_grow_step="0.2" sustained_fire_diminish_rate="1.4" magazine_size="15" suppressed="0" name="Tokarev 33" class="4" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="105" projectiles_per_shot="1" burst_shots="1" stab_enabled="1" carry_in_two_hands="0" slot="0"/>
+	<specification retrigger_time="0.2" accuracy_factor="1.0" sustained_fire_grow_step="0.2" sustained_fire_diminish_rate="1.4" magazine_size="15" suppressed="0" name="Tokarev 33" class="0" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="105" projectiles_per_shot="1" burst_shots="1" stab_enabled="1" carry_in_two_hands="0" last_burst_retrigger_time="-1" slot="0"/>
 	<inventory buy_price="33.0" sell_price="33.0"/>
 	<sound key="fire" fileref="tt33_fire_FromCOD9.wav" pitch_variety="0.05" volume="1.6"/>
 	<sound key="magazine_out" fileref="tt33_mgz_out_FromSQUAD.wav" volume="0.9"/>
@@ -23554,7 +23603,8 @@
 	<effect class="muzzle" ref="ejection_9mm"/>
 	<weak_hand_hold offset="0.1"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="1.5" kill_probability_offset_on_successful_hit="3.5" kill_decay_start_time="0.3" kill_decay_end_time="0.35"/>
+	<result class="hit" kill_probability="1.7" kill_probability_offset_on_successful_hit="2.8" kill_decay_start_time="0.3" kill_decay_end_time="0.35"/>
+	<trail probability="1.0" key="bullet_short"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.8"/>
 	<stance state_key="walking" accuracy="0.9"/>
@@ -23597,7 +23647,7 @@
 </weapon>
 
 <weapon key="gkw_tt33_3204.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1" last_burst_retrigger_time="0.1" accuracy_factor="1.0" sustained_fire_grow_step="0.2" sustained_fire_diminish_rate="1.4" magazine_size="15" suppressed="0" name="Tokarev 33-[Griffon Dancer]" class="4" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="105" projectiles_per_shot="1" burst_shots="1" stab_enabled="1" carry_in_two_hands="0" slot="0"/>
+	<specification retrigger_time="0.2" accuracy_factor="1.0" sustained_fire_grow_step="0.2" sustained_fire_diminish_rate="1.4" magazine_size="15" suppressed="0" name="Tokarev 33-[Griffon Dancer]" class="0" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="105" projectiles_per_shot="1" burst_shots="1" stab_enabled="1" carry_in_two_hands="0" last_burst_retrigger_time="-1" slot="0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<inventory buy_price="33.0" sell_price="33.0"/>
 	<sound key="fire" fileref="tt33_fire_FromCOD9.wav" pitch_variety="0.05" volume="1.6"/>
@@ -23609,7 +23659,8 @@
 	<effect class="muzzle" ref="ejection_9mm"/>
 	<weak_hand_hold offset="0.1"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="1.5" kill_probability_offset_on_successful_hit="3.5" kill_decay_start_time="0.3" kill_decay_end_time="0.35"/>
+	<result class="hit" kill_probability="1.7" kill_probability_offset_on_successful_hit="2.8" kill_decay_start_time="0.3" kill_decay_end_time="0.35"/>
+	<trail probability="1.0" key="bullet_short"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.8"/>
 	<stance state_key="walking" accuracy="0.9"/>
@@ -23651,7 +23702,7 @@
 </weapon>
 
 <weapon key="gkw_m14_303.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="1.6" magazine_size="20" can_shoot_standing="1" suppressed="0" name="M14-[Xmas Parade]" class="4" burst_shots="1" last_burst_retrigger_time="0.125" reload_one_at_a_time="0" sight_range_modifier="1.25" projectile_speed="180" barrel_offset="0.6" projectiles_per_shot="1" stance_accuracy_rate="1.25" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="1.6" magazine_size="20" spread_range="0.28" can_shoot_standing="1" suppressed="0" name="M14-[Xmas Parade]" class="4" burst_shots="1" last_burst_retrigger_time="0.125" reload_one_at_a_time="0" sight_range_modifier="1.25" projectile_speed="180" barrel_offset="0.6" projectiles_per_shot="1" stance_accuracy_rate="1.25" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<inventory encumbrance="20.0" buy_price="14.0" sell_price="14.0"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.8"/>
 	<sound key="fire" fileref="m14_fire_FromDAYSGONE.wav" pitch_variety="0.01" volume="1.6"/>
@@ -23697,7 +23748,7 @@
 </weapon>
 
 <weapon key="gkw_m14mod3_303.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="1.9" magazine_size="20" can_shoot_standing="1" suppressed="0" name="M14(MOD3)-[Xmas Parade]" class="4" burst_shots="1" last_burst_retrigger_time="0.125" reload_one_at_a_time="0" sight_range_modifier="2" projectile_speed="200" barrel_offset="0.6" stance_accuracy_rate="1.5" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="1.9" magazine_size="20" spread_range="0.22" can_shoot_standing="1" suppressed="0" name="M14(MOD3)-[Xmas Parade]" class="4" burst_shots="1" last_burst_retrigger_time="0.125" reload_one_at_a_time="0" sight_range_modifier="2" projectile_speed="200" barrel_offset="0.6" stance_accuracy_rate="1.5" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<inventory buy_price="100.0" sell_price="100.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -23747,7 +23798,7 @@
 </weapon>
 
 <weapon key="gkw_m14mod3_303_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="0.75" sustained_fire_diminish_rate="3.0" magazine_size="20" can_shoot_standing="1" suppressed="0" name="M14(MOD3)--[Xmas Parade]-[Clear Fighting Spirit]" class="1" burst_shots="1" reload_one_at_a_time="0" sight_range_modifier="2.35" last_burst_retrigger_time="-1" stance_accuracy_rate="2.0" projectile_speed="200" barrel_offset="0.6" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="0.75" sustained_fire_diminish_rate="3.0" magazine_size="20" can_shoot_standing="1" suppressed="0" spread_range="0.22" name="M14(MOD3)--[Xmas Parade]-[Clear Fighting Spirit]" class="1" burst_shots="1" reload_one_at_a_time="0" sight_range_modifier="2.35" last_burst_retrigger_time="-1" stance_accuracy_rate="2.0" projectile_speed="200" barrel_offset="0.6" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<inventory buy_price="100.0" sell_price="100.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -24292,7 +24343,7 @@
 
 <weapon key="gkw_delisle_7801.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="rifle"/>
-	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="0" sustained_fire_diminish_rate="2.0" magazine_size="11" can_shoot_standing="1" carry_in_two_hands="1" suppressed="1" name="De lisle Carbine-[Weaving starlight]" class="2" slot="0" reload_one_at_a_time="0" sight_range_modifier="2.0" projectile_speed="130" barrel_offset="0.4" projectiles_per_shot="3" stab_enabled="1"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="1.6" sustained_fire_diminish_rate="4.0" magazine_size="11" can_shoot_standing="1" carry_in_two_hands="1" suppressed="1" name="De lisle Carbine-[Weaving starlight]" class="2" slot="0" reload_one_at_a_time="0" sight_range_modifier="2.0" projectile_speed="130" barrel_offset="0.4" projectiles_per_shot="3" stab_enabled="1"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="20.0" buy_price="45.0" sell_price="45.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -25364,7 +25415,8 @@
 	<hud_icon filename="gkw_64type.png"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="1.5" kill_probability_offset_on_successful_hit="2.3" kill_decay_start_time="0.2" kill_decay_end_time="0.5"/>
+	<result class="hit" kill_probability="1.7" kill_probability_offset_on_successful_hit="2.2" kill_decay_start_time="0.3" kill_decay_end_time="0.5"/>
+	<trail probability="1.0" key="bullet_short"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.5"/>
 	<stance state_key="walking" accuracy="0.6"/>
@@ -25420,7 +25472,8 @@
 	<hud_icon filename="gkw_64typemod3.png"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile file="bullet.projectile" can_be_detected_by_footmen="0">
-	<result class="hit" kill_probability="1.75" kill_probability_offset_on_successful_hit="2.5" kill_decay_start_time="0.2" kill_decay_end_time="0.5"/>
+	<result class="hit" kill_probability="1.75" kill_probability_offset_on_successful_hit="2.5" kill_decay_start_time="0.3" kill_decay_end_time="0.5"/>
+	<trail probability="1.0" key="bullet_short"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.5"/>
 	<stance state_key="walking" accuracy="0.6"/>
@@ -26287,7 +26340,7 @@
 	<hud_icon filename="testing.png"/>
 	<weak_hand_hold offset="0.1"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="1.55" kill_probability_offset_on_successful_hit="0.4" kill_decay_start_time="0.313" kill_decay_end_time="0.522"/>
+	<result class="hit" kill_probability="1.65" kill_probability_offset_on_successful_hit="0.4" kill_decay_start_time="0.313" kill_decay_end_time="0.522"/>
 	</projectile>
 	<tag name="pistol"/>
 	<capacity value="0" source="rank" source_value="0.0"/>
@@ -26329,11 +26382,11 @@
 </weapon>
 
 <weapon key="gkw_hvy_m2.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1" accuracy_factor="0.95" sight_range_modifier="4" sight_height_offset="6.0" sustained_fire_grow_step="6.0" sustained_fire_diminish_rate="2.0" magazine_size="1" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="0" suppressed="0" name="M2 Mortar" class="0" projectile_speed="100.0" barrel_offset="0.6" projectiles_per_shot="1" spread_range="0.05" slot="0"/>
+	<specification retrigger_time="-1" accuracy_factor="1.0" sight_range_modifier="4.0" sight_height_offset="6.0" sustained_fire_grow_step="6.0" sustained_fire_diminish_rate="2.0" magazine_size="1" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="0" suppressed="0" name="M2 Mortar" class="0" projectile_speed="100.0" barrel_offset="0.6" projectiles_per_shot="1" slot="0"/>
 	<next_in_chain key="gkw_m2_m1a1.weapon" share_ammo="0"/>
 	<animation state_key="recoil" animation_key="recoil, portable mortar"/>
 	<animation state_key="crouching" animation_key="crouch, still, portable mortar"/>
-	<animation state_key="reload" animation_key="reloading, portable mortar"/>
+	<animation state_key="reload" animation_key="reloading, m2 mortar"/>
 	<animation state_key="hold" animation_key="crouch, still, portable mortar"/>
 	<animation state_key="hold_on_wall" animation_key="crouch, still, portable mortar"/>
 	<animation state_key="still_against_wall" animation_key="crouch, still, portable mortar"/>
@@ -26348,13 +26401,13 @@
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<inventory encumbrance="50.0" buy_price="420.0" sell_price="420.0"/>
 	<commonness value="0.2" in_stock="1" can_respawn_with="1"/>
-	<model filename="gkw_hvy_m2mortar.xml"/>
+	<model filename="gkw_hvy_m2.xml"/>
 	<hud_icon filename="gkw_m2.png"/>
 	<capacity value="0" source="rank" source_value="0.0"/>
-	<capacity value="1" source="rank" source_value="3.457"/>
+	<capacity value="1" source="rank" source_value="3.28"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="standard_mortar.projectile"/>
-	<ballistics near_far_distance="1.0" speed_estimation_near="20.0" speed_estimation_far="40.0" max_speed="100.0" randomness="0.05" curve_height="20"/>
+	<projectile file="mortar_60mm.projectile"/>
+	<ballistics near_far_distance="1.0" speed_estimation_near="10.0" speed_estimation_far="50.0" max_speed="200.0" randomness="0.03"/>
 	<effect class="muzzle" ref="MusketMuzzle"/>
 	<effect class="muzzle" ref="UpDust"/>
 	<stance state_key="running" accuracy="1.0"/>
@@ -26374,55 +26427,11 @@
 	<target_factors tag="shield" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
 </weapon>
 
-<weapon key="gkw_hvy_m2_ai.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1" accuracy_factor="0.85" sight_range_modifier="5" sight_height_offset="4.9" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="0.3" magazine_size="1" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="0" suppressed="0" name="M2 Mortar" class="0" projectile_speed="100.0" barrel_offset="0.6" projectiles_per_shot="1" spread_range="0.05" slot="0"/>
-	<animation state_key="recoil" animation_key="recoil, portable mortar"/>
-	<animation state_key="crouching" animation_key="crouch, still, portable mortar"/>
-	<animation state_key="reload" animation_key="reloading, portable mortar"/>
-	<animation state_key="hold" animation_key="still, angled"/>
-	<animation state_key="hold_on_wall" animation_key="still, angled"/>
-	<animation state_key="still_against_wall" animation_key="still, angled"/>
-	<animation state_key="hold_casual" animation_key="still, angled"/>
-	<animation state_key="running" animation_key="walking, angled"/>
-	<animation state_key="walking" animation_key="walking, angled"/>
-	<animation state_key="walking_backwards" animation_key="walking backwards, angled"/>
-	<sound key="fire" fileref="m2_mortar_fire.wav" pitch_variety="0.1" volume="1.2"/>
-	<sound key="magazine_out" fileref="portable_mortar_reload.wav" volume="0.7"/>
-	<sound key="magazine_in" fileref="dry_fire.wav" volume="0.7"/>
-	<sound key="cycle" fileref="portable_mortar_reload.wav" volume="0.7"/>
-	<sound class="impact" fileref="rifle_drop.wav"/>
-	<inventory encumbrance="50.0" buy_price="420.0" sell_price="420.0"/>
-	<commonness value="0" in_stock="0" can_respawn_with="1"/>
-	<model filename="gkw_hvy_m2mortar.xml"/>
-	<hud_icon filename="gkw_m2.png"/>
-	<capacity value="0" source="rank" source_value="0.0"/>
-	<capacity value="1" source="rank" source_value="3.457"/>
-	<weak_hand_hold offset="0.3"/>
-	<projectile file="standard_mortar.projectile"/>
-	<ballistics near_far_distance="1.0" speed_estimation_near="20.0" speed_estimation_far="40.0" max_speed="100.0" randomness="0.05" curve_height="20"/>
-	<effect class="muzzle" ref="MusketMuzzle"/>
-	<effect class="muzzle" ref="UpDust"/>
-	<stance state_key="running" accuracy="0.3"/>
-	<stance state_key="walking" accuracy="0.4"/>
-	<stance state_key="crouch_moving" accuracy="0.3"/>
-	<stance state_key="prone_moving" accuracy="0.1"/>
-	<stance state_key="standing" accuracy="0.5"/>
-	<stance state_key="crouching" accuracy="1.0"/>
-	<stance state_key="prone" accuracy="1.0"/>
-	<stance state_key="over_wall" accuracy="1"/>
-	<tag name="bazooka"/>
-	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
-	<target_factors tag="heavy_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0"/>
-	<target_factors tag="light_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="6.0"/>
-	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="5.0"/>
-	<target_factors tag="shield" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
-</weapon>
-
 <weapon key="gkw_m2_m1a1.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification accuracy_factor="0.85" barrel_offset="0.8" class="4" burst_shots="1" slot="0" magazine_size="15" name="M1A1(m2)" projectile_speed="200.66" retrigger_time="-1" last_burst_retrigger_time="0.15" suppressed="0" sustained_fire_diminish_rate="1.6" sustained_fire_grow_step="0.6" sight_range_modifier="0.8" stab_enabled="1" carry_in_two_hands="1" spread_range="0.25" stance_accuracy_rate="4.0"/>
+	<specification accuracy_factor="0.85" barrel_offset="0.8" class="4" burst_shots="1" slot="0" magazine_size="15" name="M1A1(m2)" projectile_speed="200.66" retrigger_time="-1" last_burst_retrigger_time="0.15" suppressed="0" sustained_fire_diminish_rate="1.6" sustained_fire_grow_step="0.6" sight_range_modifier="1.0" stab_enabled="1" carry_in_two_hands="1" spread_range="0.25" stance_accuracy_rate="4.0"/>
 	<next_in_chain key="gkw_hvy_m2.weapon" share_ammo="0"/>
 	<inventory encumbrance="10.0" buy_price="420.0" sell_price="10.0"/>
-	<commonness in_stock="0" can_respawn_with="1"/>
+	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<animation state_key="reload" animation_key="reloading, magazine rifle 1.8"/>
 	<sound key="fire" fileref="m1a1_fire_FromPOSTSCRIPTUM.wav" pitch_variety="0.01" volume="1.2"/>
 	<sound key="magazine_out" fileref="m1a1_mgz_out_FromBF5.wav" volume="0.7"/>
@@ -26462,6 +26471,108 @@
 	<target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
 	<target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0"/>
 	<target_factors tag="commander" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0"/>
+</weapon>
+
+<weapon key="gkw_hvy_2b14.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+	<specification retrigger_time="-1" accuracy_factor="1.0" sight_range_modifier="4.0" sight_height_offset="6.0" sustained_fire_grow_step="6.0" sustained_fire_diminish_rate="2.0" magazine_size="1" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="0" suppressed="0" name="2B14 Podnos" class="0" projectile_speed="100.0" barrel_offset="0.6" projectiles_per_shot="1" slot="0"/>
+	<next_in_chain key="gkw_hvy_2b14_pdw.weapon" share_ammo="0"/>
+	<animation state_key="recoil" animation_key="recoil, portable mortar"/>
+	<animation state_key="crouching" animation_key="crouch, still, portable mortar"/>
+	<animation state_key="reload" animation_key="reloading, 2b14 mortar"/>
+	<animation state_key="hold" animation_key="crouch, still, portable mortar"/>
+	<animation state_key="hold_on_wall" animation_key="crouch, still, portable mortar"/>
+	<animation state_key="still_against_wall" animation_key="crouch, still, portable mortar"/>
+	<animation state_key="hold_casual" animation_key="crouch, still, portable mortar"/>
+	<animation state_key="running" animation_key="crouch, still, portable mortar"/>
+	<animation state_key="walking" animation_key="crouch, still, portable mortar"/>
+	<animation state_key="walking_backwards" animation_key="crouch, still, portable mortar"/>
+	<sound key="fire" fileref="GeneralPurposeMortar_fire_FromSQUAD.wav" pitch_variety="0.1" volume="1.6"/>
+	<sound key="magazine_out" fileref="portable_mortar_reload.wav" volume="0.7"/>
+	<sound key="magazine_in" fileref="dry_fire.wav" volume="0.7"/>
+	<sound key="cycle" fileref="portable_mortar_reload.wav" volume="0.7"/>
+	<sound class="impact" fileref="rifle_drop.wav"/>
+	<inventory encumbrance="50.0" buy_price="500.0" sell_price="500.0"/>
+	<commonness value="0.2" in_stock="1" can_respawn_with="1"/>
+	<model filename="gkw_hvy_2b14.xml"/>
+	<hud_icon filename="gkw_2b14.png"/>
+	<capacity value="0" source="rank" source_value="0.0"/>
+	<capacity value="1" source="rank" source_value="3.28"/>
+	<weak_hand_hold offset="0.3"/>
+	<projectile file="mortar_82mm.projectile"/>
+	<ballistics near_far_distance="1.0" speed_estimation_near="10.0" speed_estimation_far="50.0" max_speed="200.0" randomness="0.03"/>
+	<effect class="muzzle" ref="MusketMuzzle"/>
+	<effect class="muzzle" ref="UpDust"/>
+	<stance state_key="running" accuracy="1.0"/>
+	<stance state_key="walking" accuracy="1.0"/>
+	<stance state_key="crouch_moving" accuracy="1.0"/>
+	<stance state_key="prone_moving" accuracy="1.0"/>
+	<stance state_key="standing" accuracy="1.0"/>
+	<stance state_key="crouching" accuracy="1.0"/>
+	<stance state_key="prone" accuracy="1.0"/>
+	<stance state_key="over_wall" accuracy="1"/>
+	<modifier class="speed" value="-5.0"/>
+	<tag name="bazooka"/>
+	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
+	<target_factors tag="heavy_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0"/>
+	<target_factors tag="light_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="6.0"/>
+	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="5.0"/>
+	<target_factors tag="shield" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
+</weapon>
+
+<weapon key="gkw_hvy_2b14_pdw.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+	<specification retrigger_time="0.2" accuracy_factor="1.0" sustained_fire_grow_step="0.2" sustained_fire_diminish_rate="1.4" magazine_size="15" suppressed="0" name="Tokarev 33(2B14)" class="0" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="105" projectiles_per_shot="1" burst_shots="1" stab_enabled="1" carry_in_two_hands="0" last_burst_retrigger_time="-1" slot="0"/>
+	<commonness value="0" in_stock="0" can_respawn_with="1"/>
+	<next_in_chain key="gkw_hvy_2b14.weapon" share_ammo="0"/>
+	<inventory encumbrance="50.0" buy_price="500.0" sell_price="500.0"/>
+	<sound key="fire" fileref="tt33_fire_FromCOD9.wav" pitch_variety="0.05" volume="1.6"/>
+	<sound key="magazine_out" fileref="tt33_mgz_out_FromSQUAD.wav" volume="0.9"/>
+	<sound key="magazine_in" fileref="tt33_mgz_in_FromSQUAD.wav" volume="0.9"/>
+	<sound key="cycle" fileref="tt33_cycle_FromSQUAD.wav" volume="0.9"/>
+	<model filename="gkw_hg_m9.xml"/>
+	<hud_icon filename="gkw_tt33.png"/>
+	<effect class="muzzle" ref="ejection_9mm"/>
+	<weak_hand_hold offset="0.1"/>
+	<projectile file="bullet.projectile">
+	<result class="hit" kill_probability="1.7" kill_probability_offset_on_successful_hit="2.8" kill_decay_start_time="0.3" kill_decay_end_time="0.35"/>
+	<trail probability="1.0" key="bullet_short"/>
+	</projectile>
+	<stance state_key="running" accuracy="0.8"/>
+	<stance state_key="walking" accuracy="0.9"/>
+	<stance state_key="crouch_moving" accuracy="0.8"/>
+	<stance state_key="prone_moving" accuracy="0.8"/>
+	<stance state_key="standing" accuracy="0.9"/>
+	<stance state_key="crouching" accuracy="0.95"/>
+	<stance state_key="prone" accuracy="1"/>
+	<stance state_key="over_wall" accuracy="1"/>
+	<modifier class="speed" value="0.2"/>
+	<tag name="pistol"/>
+	<inventory encumbrance="2.0" buy_price="1.0" sell_price="0.0"/>
+	<capacity value="1" source="rank" source_value="0.0"/>
+	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
+	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
+	<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
+	<target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
+	<target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0"/>
+	<target_factors tag="commander" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0"/>
+	<animation state_key="recoil" animation_key="recoil, pistol 2"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil, pistol, prone"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil, overwall pistol"/>
+	<animation state_key="reload" animation_key="reloading, SA OHG 0.5"/>
+	<animation state_key="reload" animation_key="reloading2, SA OHG 0.5"/>
+	<animation state_key="hold" animation_key="still, pistol 2"/>
+	<animation state_key="hold_casual" animation_key="hold_casual, pistol 2"/>
+	<animation state_key="hold_on_wall" animation_key="hold, overwall pistol"/>
+	<animation state_key="still_against_wall" animation_key="hold_casual, pistol 4"/>
+	<animation state_key="running" animation_key="running, pistol 2"/>
+	<animation state_key="walking" animation_key="walking, pistol 2"/>
+	<animation state_key="walking_backwards" animation_key="walking backwards, pistol"/>
+	<animation state_key="crouching" animation_key="crouch, pistol 2"/>
+	<animation state_key="crouch_moving" animation_key="crouching forwards, single hand carry"/>
+	<animation state_key="crouch_moving_backwards" animation_key="crouching backwards, pistol 2"/>
+	<animation state_key="prone_still" animation_key="prone_still, pistol"/>
+	<animation state_key="changing_weapon_in" animation_key="change weapon in, single hand carry"/>
+	<animation state_key="stabbing" animation_key="pistol whip"/>
+	<animation state_key="stabbing" animation_key="pistol whip 3"/>
 </weapon>
 
 <weapon key="gkw_type100_banzai.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
@@ -27051,7 +27162,7 @@
 </weapon>
 
 <weapon key="gkw_supersassmod3.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="0.3" sustained_fire_diminish_rate="1.7" magazine_size="20" can_shoot_standing="1" suppressed="1" name="Super SASS(MOD3)" class="4" burst_shots="1" last_burst_retrigger_time="0.125" reload_one_at_a_time="0" sight_range_modifier="2.8" projectile_speed="230.5" barrel_offset="0.4" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="0.6" sustained_fire_diminish_rate="1.7" magazine_size="20" spread_range="0.15" can_shoot_standing="1" suppressed="1" name="Super SASS(MOD3)" class="4" burst_shots="1" last_burst_retrigger_time="0.125" reload_one_at_a_time="0" sight_range_modifier="2.5" projectile_speed="230.5" barrel_offset="0.4" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<next_in_chain key="gkw_supersassmod3_skill.weapon" share_ammo="0"/>
 	<inventory encumbrance="10.0" buy_price="120.0" sell_price="40.0"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.8"/>
@@ -28955,7 +29066,7 @@
 </weapon>
 
 <weapon key="gkw_m14mod3.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="1.9" magazine_size="20" can_shoot_standing="1" suppressed="0" name="M14(MOD3)" class="4" burst_shots="1" last_burst_retrigger_time="0.125" reload_one_at_a_time="0" sight_range_modifier="2" projectile_speed="200" barrel_offset="0.6" stance_accuracy_rate="1.5" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="1.9" magazine_size="20" spread_range="0.22" can_shoot_standing="1" suppressed="0" name="M14(MOD3)" class="4" burst_shots="1" last_burst_retrigger_time="0.125" reload_one_at_a_time="0" sight_range_modifier="2" projectile_speed="200" barrel_offset="0.6" stance_accuracy_rate="1.5" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<inventory buy_price="100.0" sell_price="100.0"/>
 	<commonness value="0.001" in_stock="0" can_respawn_with="1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -29005,7 +29116,7 @@
 </weapon>
 
 <weapon key="gkw_m14mod3_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="0.75" sustained_fire_diminish_rate="3.0" magazine_size="20" can_shoot_standing="1" suppressed="0" name="M14(MOD3)-[Clear Fighting Spirit]" class="1" burst_shots="1" reload_one_at_a_time="0" sight_range_modifier="2.35" last_burst_retrigger_time="-1" stance_accuracy_rate="2.0" projectile_speed="200" barrel_offset="0.6" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="0.75" sustained_fire_diminish_rate="3.0" magazine_size="20" can_shoot_standing="1" suppressed="0" spread_range="0.22" name="M14(MOD3)-[Clear Fighting Spirit]" class="1" burst_shots="1" reload_one_at_a_time="0" sight_range_modifier="2.35" last_burst_retrigger_time="-1" stance_accuracy_rate="2.0" projectile_speed="200" barrel_offset="0.6" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<inventory buy_price="100.0" sell_price="100.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -29972,7 +30083,7 @@
 	<hud_icon filename="gkw_ump45_410.png"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="1.45" kill_probability_offset_on_successful_hit="4.5" kill_decay_start_time="0.3" kill_decay_end_time="0.62"/>
+	<result class="hit" kill_probability="1.5" kill_probability_offset_on_successful_hit="4.5" kill_decay_start_time="0.3" kill_decay_end_time="0.62"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_9mm"/>
 	<stance state_key="running" accuracy="0.5"/>
@@ -30026,7 +30137,7 @@
 	<hud_icon filename="gkw_ump45_535.png"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="1.45" kill_probability_offset_on_successful_hit="4.5" kill_decay_start_time="0.3" kill_decay_end_time="0.62"/>
+	<result class="hit" kill_probability="1.5" kill_probability_offset_on_successful_hit="4.5" kill_decay_start_time="0.3" kill_decay_end_time="0.62"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_9mm"/>
 	<stance state_key="running" accuracy="0.5"/>
@@ -30080,7 +30191,7 @@
 	<hud_icon filename="gkw_ump45_3403.png"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="1.45" kill_probability_offset_on_successful_hit="4.5" kill_decay_start_time="0.3" kill_decay_end_time="0.62"/>
+	<result class="hit" kill_probability="1.5" kill_probability_offset_on_successful_hit="4.5" kill_decay_start_time="0.3" kill_decay_end_time="0.62"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_9mm"/>
 	<stance state_key="running" accuracy="0.5"/>
@@ -30298,7 +30409,7 @@
 </weapon>
 
 <weapon key="gkw_supersass_1407.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="0.5" sustained_fire_diminish_rate="1.4" magazine_size="20" can_shoot_standing="1" suppressed="1" name="Super SASS-[Wolfwalker]" class="4" burst_shots="1" last_burst_retrigger_time="0.125" reload_one_at_a_time="0" sight_range_modifier="2.8" projectile_speed="230.5" barrel_offset="0.4" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="0.5" sustained_fire_diminish_rate="1.4" spread_range="0.25" magazine_size="20" can_shoot_standing="1" suppressed="1" name="Super SASS-[Wolfwalker]" class="4" burst_shots="1" last_burst_retrigger_time="0.125" reload_one_at_a_time="0" sight_range_modifier="2.0" projectile_speed="230.5" barrel_offset="0.4" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<inventory encumbrance="10.0" buy_price="12.0" sell_price="12.0"/>
 	<commonness value="0" in_stock="0"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.8"/>
@@ -30669,7 +30780,7 @@
 	<hud_icon filename="gkw_fn57_1109.png"/>
 	<weak_hand_hold offset="0.1"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="2.00" kill_probability_offset_on_successful_hit="1.15" kill_decay_start_time="0.138" kill_decay_end_time="0.231"/>
+	<result class="hit" kill_probability="2.00" kill_probability_offset_on_successful_hit="4.3" kill_decay_start_time="0.236" kill_decay_end_time="0.3"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.8"/>
 	<stance state_key="walking" accuracy="0.85"/>
@@ -31914,7 +32025,7 @@
 <weapon key="gkw_m99_404.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="rifle"/>
 	<tag name="antiarmor"/>
-	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="0" sustained_fire_diminish_rate="1.5" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="M99-[Cyclamen]" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="2.25" projectile_speed="224.21" barrel_offset="0.65" projectiles_per_shot="1" last_burst_retrigger_time="0.5" burst_shots="1" stab_enabled="1" carry_in_two_hands="1"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="1.5" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="M99-[Cyclamen]" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="2.25" projectile_speed="224.21" barrel_offset="0.65" projectiles_per_shot="1" last_burst_retrigger_time="0.5" burst_shots="1" stab_enabled="1" carry_in_two_hands="1"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="20.0" buy_price="300.0" sell_price="200.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -31960,7 +32071,7 @@
 <weapon key="gkw_m99_1701.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="rifle"/>
 	<tag name="antiarmor"/>
-	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="0" sustained_fire_diminish_rate="1.5" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="M99-[Rabbit Squad]" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="2.25" projectile_speed="224.21" barrel_offset="0.65" projectiles_per_shot="1" last_burst_retrigger_time="0.5" burst_shots="1" stab_enabled="1" carry_in_two_hands="1"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="1.5" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="M99-[Rabbit Squad]" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="2.25" projectile_speed="224.21" barrel_offset="0.65" projectiles_per_shot="1" last_burst_retrigger_time="0.5" burst_shots="1" stab_enabled="1" carry_in_two_hands="1"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="20.0" buy_price="300.0" sell_price="200.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -32006,7 +32117,7 @@
 <weapon key="gkw_m99_3304.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="rifle"/>
 	<tag name="antiarmor"/>
-	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="0" sustained_fire_diminish_rate="1.5" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="M99-[White Rabbit's Summer Party]" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="2.25" projectile_speed="224.21" barrel_offset="0.65" projectiles_per_shot="1" last_burst_retrigger_time="0.5" burst_shots="1" stab_enabled="1" carry_in_two_hands="1"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="1.5" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="M99-[White Rabbit's Summer Party]" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="2.25" projectile_speed="224.21" barrel_offset="0.65" projectiles_per_shot="1" last_burst_retrigger_time="0.5" burst_shots="1" stab_enabled="1" carry_in_two_hands="1"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="20.0" buy_price="300.0" sell_price="200.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -35565,7 +35676,7 @@
 <weapon key="gkw_mp7_6806.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="smg"/>
 	<specification accuracy_factor="0.88" retrigger_time="0.070" barrel_offset="0.4" class="0" slot="0" magazine_size="40" carry_in_two_hands="0" name="MP7-[Fall of the Stars]" projectile_speed="190" stance_accuracy_rate="4.0" spread_range="0.1" suppressed="1" burst_shots="1" sustained_fire_diminish_rate="1.6" sustained_fire_grow_step="0.2" stab_enabled="1"/>
-	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
+	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="5.0" buy_price="70.0" sell_price="70.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<animation state_key="recoil" animation_key="recoil, pistol 2"/>
@@ -38378,7 +38489,7 @@
 
 <weapon on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0" key="gkw_m1_1106.weapon">
 	<tag name="rifle"/>
-	<specification retrigger_time="-1" last_burst_retrigger_time="0.125" accuracy_factor="1" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="1.5" magazine_size="8" can_shoot_standing="1" suppressed="0" name="M1 Garand-[Beach Princess]" class="4" burst_shots="1" reload_one_at_a_time="0" sight_range_modifier="1.25" projectile_speed="180" barrel_offset="0.6" stance_accuracy_rate="1.8" projectiles_per_shot="1" slot="0" stab_enabled="1" stab_range="4.5"/>
+	<specification retrigger_time="-1" last_burst_retrigger_time="0.125" accuracy_factor="1" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="1.5" magazine_size="8" spread_range="0.27" can_shoot_standing="1" suppressed="0" name="M1 Garand-[Beach Princess]" class="4" burst_shots="1" reload_one_at_a_time="0" sight_range_modifier="1.25" projectile_speed="180" barrel_offset="0.6" stance_accuracy_rate="1.8" projectiles_per_shot="1" slot="0" stab_enabled="1" stab_range="4.5"/>
 	<effect class="muzzle" ref="ejection_76251"/>
 	<next_in_chain key="gkw_m1_1106_skill.weapon" share_ammo="0"/>
 	<animation key="cycle" animation_key="Brifle1"/>
@@ -38575,7 +38686,7 @@
 
 <weapon on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0" key="gkw_fn49_4709.weapon">
 	<tag name="rifle"/>
-	<specification retrigger_time="-1" last_burst_retrigger_time="0.125" accuracy_factor="1" sustained_fire_grow_step="0.4" sustained_fire_diminish_rate="1.8" magazine_size="10" can_shoot_standing="1" suppressed="0" name="FN-49-[Umbrella Daydream]" class="4" burst_shots="1" reload_one_at_a_time="0" sight_range_modifier="2.5" projectile_speed="245" barrel_offset="0.6" projectiles_per_shot="1" slot="0" stab_enabled="1" stab_range="3"/>
+	<specification retrigger_time="-1" last_burst_retrigger_time="0.125" accuracy_factor="1" sustained_fire_grow_step="0.4" sustained_fire_diminish_rate="1.8" magazine_size="10" can_shoot_standing="1" spread_range="0.27" suppressed="0" name="FN-49-[Umbrella Daydream]" class="4" burst_shots="1" reload_one_at_a_time="0" sight_range_modifier="2.5" projectile_speed="245" barrel_offset="0.6" projectiles_per_shot="1" slot="0" stab_enabled="1" stab_range="3"/>
 	<effect class="muzzle" ref="ejection_76251"/>
 	<animation key="cycle" animation_key="Brifle1.1"/>
 	<animation key="cycle" stance_key="prone" animation_key="Brifle1.1p"/>
@@ -38618,7 +38729,7 @@
 </weapon>
 
 <weapon key="gkw_aa12_4401_only.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="0.167" accuracy_factor="1.0" sustained_fire_grow_step="2.1" sustained_fire_diminish_rate="0.45" magazine_size="20" can_shoot_standing="1" suppressed="0" name="AA-12-[Smokeless Lollipop]-[Frag-12 HE Round]" class="0" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="100" barrel_offset="0.5" projectiles_per_shot="1" spread_range="0.2" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0" use_basic_muzzle_smoke_effect="0"/>
+	<specification retrigger_time="0.167" accuracy_factor="1.0" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="1.0" magazine_size="20" can_shoot_standing="1" suppressed="0" name="AA-12-[Smokeless Lollipop]-[Frag-12 HE Round]" class="0" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="100" barrel_offset="0.5" projectiles_per_shot="1" spread_range="0.15" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0" use_basic_muzzle_smoke_effect="0"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.8"/>
 	<next_in_chain key="gkw_aa12_4401_only_skill.weapon" share_ammo="0"/>
 	<sound key="fire" fileref="aa12_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.2"/>
@@ -41588,7 +41699,7 @@
 	<hud_icon filename="gkw_ump45_410.png"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile file="bullet.projectile" can_be_detected_by_footmen="0">
-	<result class="hit" kill_probability="1.55" kill_probability_offset_on_successful_hit="5.0" kill_decay_start_time="0.3" kill_decay_end_time="0.62"/>
+	<result class="hit" kill_probability="1.65" kill_probability_offset_on_successful_hit="5.0" kill_decay_start_time="0.3" kill_decay_end_time="0.62"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_9mm"/>
 	<stance state_key="running" accuracy="0.65"/>
@@ -41642,7 +41753,7 @@
 	<hud_icon filename="gkw_ump45_535.png"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile file="bullet.projectile" can_be_detected_by_footmen="0">
-	<result class="hit" kill_probability="1.55" kill_probability_offset_on_successful_hit="5.0" kill_decay_start_time="0.3" kill_decay_end_time="0.62"/>
+	<result class="hit" kill_probability="1.65" kill_probability_offset_on_successful_hit="5.0" kill_decay_start_time="0.3" kill_decay_end_time="0.62"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_9mm"/>
 	<stance state_key="running" accuracy="0.65"/>
@@ -41696,7 +41807,7 @@
 	<hud_icon filename="gkw_ump45_3403.png"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile file="bullet.projectile" can_be_detected_by_footmen="0">
-	<result class="hit" kill_probability="1.55" kill_probability_offset_on_successful_hit="5.0" kill_decay_start_time="0.3" kill_decay_end_time="0.62"/>
+	<result class="hit" kill_probability="1.65" kill_probability_offset_on_successful_hit="5.0" kill_decay_start_time="0.3" kill_decay_end_time="0.62"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_9mm"/>
 	<stance state_key="running" accuracy="0.65"/>
@@ -41719,7 +41830,7 @@
 </weapon>
 
 <weapon key="gkw_supersassmod3_1407.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="0.3" sustained_fire_diminish_rate="1.7" magazine_size="20" can_shoot_standing="1" suppressed="1" name="Super SASS(MOD3)-[Wolfwalker]" class="4" burst_shots="1" last_burst_retrigger_time="0.125" reload_one_at_a_time="0" sight_range_modifier="2.8" projectile_speed="230.5" barrel_offset="0.4" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="0.6" sustained_fire_diminish_rate="1.7" magazine_size="20" spread_range="0.15" can_shoot_standing="1" suppressed="1" name="Super SASS(MOD3)-[Wolfwalker]" class="4" burst_shots="1" last_burst_retrigger_time="0.125" reload_one_at_a_time="0" sight_range_modifier="2.5" projectile_speed="230.5" barrel_offset="0.4" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<next_in_chain key="gkw_supersassmod3_1407_skill.weapon" share_ammo="0"/>
 	<inventory encumbrance="10.0" buy_price="120.0" sell_price="120.0"/>
 	<commonness value="0" in_stock="0"/>
@@ -41790,7 +41901,7 @@
 </weapon>
 
 <weapon key="gkw_supersassmod3_1407_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="0.5" sustained_fire_diminish_rate="1.7" magazine_size="20" can_shoot_standing="1" suppressed="1" name="Super SASS(MOD3)-[Wolfwalker]-[Snipers Pursuit]" class="4" burst_shots="1" last_burst_retrigger_time="0.125" reload_one_at_a_time="0" sight_range_modifier="2.8" projectile_speed="230.5" barrel_offset="0.4" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="0.6" sustained_fire_diminish_rate="1.7" magazine_size="20" spread_range="0.15" can_shoot_standing="1" suppressed="1" name="Super SASS(MOD3)-[Wolfwalker]-[Snipers Pursuit]" class="4" burst_shots="1" last_burst_retrigger_time="0.125" reload_one_at_a_time="0" sight_range_modifier="2.5" projectile_speed="230.5" barrel_offset="0.4" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<next_in_chain key="gkw_supersassmod3_1407.weapon" share_ammo="0"/>
 	<inventory encumbrance="10.0" buy_price="120.0" sell_price="120.0"/>
 	<commonness value="0" in_stock="0"/>
@@ -44709,7 +44820,7 @@
 
 <weapon on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0" key="gkw_fn49mod3_4709.weapon">
 	<tag name="rifle"/>
-	<specification retrigger_time="-1" last_burst_retrigger_time="0.1" accuracy_factor="1" sustained_fire_grow_step="2" sustained_fire_diminish_rate="20" magazine_size="10" can_shoot_standing="1" suppressed="0" name="FN-49(MOD3)-[Umbrella Daydream]" class="4" burst_shots="1" reload_one_at_a_time="0" sight_range_modifier="2.0" projectile_speed="260" barrel_offset="0.6" projectiles_per_shot="2" slot="0" stab_enabled="1" stab_range="3.4"/>
+	<specification retrigger_time="-1" last_burst_retrigger_time="0.1" accuracy_factor="1" sustained_fire_grow_step="2" sustained_fire_diminish_rate="20" magazine_size="10" can_shoot_standing="1" spread_range="0.24" suppressed="0" name="FN-49(MOD3)-[Umbrella Daydream]" class="4" burst_shots="1" reload_one_at_a_time="0" sight_range_modifier="2.0" projectile_speed="260" barrel_offset="0.6" projectiles_per_shot="2" slot="0" stab_enabled="1" stab_range="3.4"/>
 	<effect class="muzzle" ref="ejection_76251"/>
 	<animation state_key="reload" animation_key="reloading, magazine rifle 1.2"/>
 	<next_in_chain key="gkw_fn49mod3_4709_skill.weapon" share_ammo="1"/>
@@ -45210,7 +45321,7 @@
 </weapon>
 
 <weapon key="gkw_aa12_only.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="0.167" accuracy_factor="1.0" sustained_fire_grow_step="2.1" sustained_fire_diminish_rate="0.45" magazine_size="20" can_shoot_standing="1" suppressed="0" name="AA-12-[Frag-12 HE Round]" class="0" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="100" barrel_offset="0.5" projectiles_per_shot="1" spread_range="0.2" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0" use_basic_muzzle_smoke_effect="0"/>
+	<specification retrigger_time="0.167" accuracy_factor="1.0" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="1.0" magazine_size="20" can_shoot_standing="1" suppressed="0" name="AA-12-[Frag-12 HE Round]" class="0" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="100" barrel_offset="0.5" projectiles_per_shot="1" spread_range="0.15" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0" use_basic_muzzle_smoke_effect="0"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.8"/>
 	<next_in_chain key="gkw_aa12_only_skill.weapon" share_ammo="0"/>
 	<sound key="fire" fileref="aa12_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.2"/>
@@ -45324,7 +45435,7 @@
 </weapon>
 
 <weapon key="gkw_supersassmod3_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="0.5" sustained_fire_diminish_rate="1.7" magazine_size="20" can_shoot_standing="1" suppressed="1" name="Super SASS(MOD3)-[Snipers Pursuit]" class="4" burst_shots="1" last_burst_retrigger_time="0.125" reload_one_at_a_time="0" sight_range_modifier="2.8" projectile_speed="230.5" barrel_offset="0.4" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="0.6" sustained_fire_diminish_rate="1.7" magazine_size="20" spread_range="0.15" can_shoot_standing="1" suppressed="1" name="Super SASS(MOD3)-[Snipers Pursuit]" class="4" burst_shots="1" last_burst_retrigger_time="0.125" reload_one_at_a_time="0" sight_range_modifier="2.5" projectile_speed="230.5" barrel_offset="0.4" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<next_in_chain key="gkw_supersassmod3.weapon" share_ammo="0"/>
 	<animation key="reload" animation_key="magBrifleRSASS"/>
 	<animation key="reload" stance_key="prone" animation_key="magBrifleRpSASS"/>
@@ -47631,7 +47742,7 @@
 	<hud_icon filename="gkw_ump45mod3.png"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile file="bullet.projectile" can_be_detected_by_footmen="0">
-	<result class="hit" kill_probability="1.55" kill_probability_offset_on_successful_hit="3.0" kill_decay_start_time="0.25" kill_decay_end_time="0.6"/>
+	<result class="hit" kill_probability="1.65" kill_probability_offset_on_successful_hit="3.0" kill_decay_start_time="0.25" kill_decay_end_time="0.6"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_9mm"/>
 	<stance state_key="running" accuracy="0.85"/>
@@ -48346,17 +48457,20 @@
 	<tag name="rifle"/>
 	<tag name="antiarmor"/>
 	<tag name="elite"/>
-	<specification accuracy_factor="0.8" barrel_offset="0.5" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" class="4" slot="0" magazine_size="30" name="SF-Dreamer" projectile_speed="180" retrigger_time="-1" last_burst_retrigger_time="0.225" reload_one_at_a_time="0" sight_range_modifier="1.5" suppressed="0" sustained_fire_diminish_rate="2.0" sustained_fire_grow_step="0.75"/>
-	<animation state_key="recoil" animation_key="recoil, hip fire"/>
-	<animation state_key="hold" animation_key="hold, hip fire"/>
-	<animation state_key="crouching" animation_key="crouch, hold, hip fire"/>
-	<animation state_key="crouch_moving" animation_key="crouching forwards, hip fire"/>
-	<animation state_key="walking_backwards" animation_key="walking backwards, hip fire"/>
-	<animation state_key="hold_on_wall" animation_key="hold, hip fire"/>
-	<animation state_key="still_against_wall" animation_key="hold, hip fire"/>
-	<animation state_key="walking" animation_key="walking, hip fire"/>
-	<animation state_key="running" animation_key="walking, hip fire"/>
-	<animation state_key="reload" animation_key="pistol whip"/>
+	<specification accuracy_factor="0.95" barrel_offset="0.5" can_shoot_standing="1" can_shoot_crouching="0" can_shoot_prone="0" class="4" burst_time="1" slot="0" magazine_size="30" name="SF-Dreamer" projectile_speed="180" retrigger_time="-1" last_burst_retrigger_time="0.5" reload_one_at_a_time="0" sight_range_modifier="2.0" suppressed="0" sustained_fire_diminish_rate="2.0" sustained_fire_grow_step="0.75"/>
+	<animation state_key="recoil" animation_key="recoil2, dreamer"/>
+	<animation key="recoil" stance_key="over_wall" animation_key="recoil2, dreamer"/>
+	<animation key="recoil" stance_key="crouching" animation_key="recoil2, dreamer"/>
+	<animation key="reload" animation_key="reloading, dreamer1.0"/>
+	<animation state_key="walking" animation_key="walking, dreamer"/>
+	<animation state_key="walking_backwards" animation_key="walking backwards, dreamer"/>
+	<animation state_key="running" animation_key="rush, dreamer"/>
+	<animation state_key="hold" animation_key="hold, dreamer"/>
+	<animation state_key="crouching" animation_key="hold, dreamer"/>
+	<animation state_key="crouch_moving" animation_key="walking, dreamer"/>
+	<animation state_key="crouch_moving_backwards" animation_key="walking backwards, dreamer"/>
+	<animation state_key="hold_on_wall" animation_key="hold, dreamer"/>
+	<animation state_key="still_against_wall" animation_key="hold, dreamer"/>
 	<sound key="fire" fileref="dreamer_fire_FromTTF2.wav" pitch_variety="0.05" volume="2.7"/>
 	<sound key="magazine_out" fileref="kccoar_mgz_out_FromINS.wav" volume="0.8"/>
 	<sound key="magazine_in" fileref="kccoar_mgz_in_FromINS.wav" volume="0.8"/>
@@ -48368,7 +48482,7 @@
 	<weak_hand_hold offset="0.4"/>
 	<projectile file="mk153_HEAT.projectile">
 	<trail probability="1.0" key="laser_dreamer"/>
-	<result class="blast" radius="5" damage="4" decal="1" push="0.4" character_state="death" faction_compare="not_equal"/>
+	<result class="blast" radius="5" damage="5.0" decal="1" push="0.4" character_state="death" faction_compare="not_equal"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.55"/>
 	<stance state_key="walking" accuracy="0.65"/>
@@ -48378,7 +48492,7 @@
 	<stance state_key="crouching" accuracy="0.85"/>
 	<stance state_key="prone" accuracy="1"/>
 	<stance state_key="over_wall" accuracy="1"/>
-	<modifier class="speed" value="-0.3"/>
+	<modifier class="speed" value="0.1"/>
 	<commonness value="0.000001" in_stock="1" can_respawn_with="1"/>
 	<inventory encumbrance="0.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -50833,15 +50947,60 @@
 	<modifier class="speed" value="-0.2"/>
 </weapon>
 
+<weapon key="kcco_pkp.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+	<tag name="mg"/>
+	<tag name="elite"/>
+	<specification barrel_offset="0.5" retrigger_time="0.0923" accuracy_factor="0.98" sustained_fire_grow_step="0.6" sustained_fire_diminish_rate="1.0" magazine_size="100" suppressed="0" stance_accuracy_rate="0.5" name="KCCO Zircon Leader" class="0" projectile_speed="220" sight_range_modifier="1.2" slot="0" can_shoot_standing="0" can_shoot_crouching="0" can_shoot_prone="1" carry_in_two_hands="1" stab_enabled="1"/>
+	<commonness value="0.2" in_stock="1" can_respawn_with="1"/>
+	<inventory buy_price="40.0" sell_price="40.0"/>
+	<animation key="reload" animation_key="reloading, Machine gun 2.0"/>
+	<animation key="recoil" animation_key="recoil, hip fire"/>
+	<animation key="recoil" stance_key="prone" animation_key="recoil, hip fire"/>
+	<animation state_key="stabbing" animation_key="melee, quick knife"/>
+	<animation state_key="stabbing" animation_key="pistol whip 3"/>
+	<animation state_key="hold" animation_key="hold, lmg"/>
+	<animation state_key="hold_on_wall" animation_key="hold, lmg"/>
+	<animation state_key="running" animation_key="running, heavy_assault"/>
+	<animation state_key="walking" animation_key="walking, hip fire"/>
+	<animation state_key="walking_backwards" animation_key="walking backwards, hip fire"/>
+	<sound key="fire" fileref="qjy80_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.1"/>
+	<sound key="magazine_out" fileref="qjy80_mgz_out_FromCOD16.wav" volume="0.6"/>
+	<sound key="magazine_in" fileref="qjy80_mgz_in_FromCOD16.wav" volume="0.6"/>
+	<sound key="cycle" fileref="qjy80_cycle_FromCOD16.wav" volume="0.6"/>
+	<sound class="impact" fileref="rifle_drop.wav"/>
+	<model filename="kccow_pkm.xml"/>
+	<hud_icon filename="gkw_pkp.png"/>
+	<projectile file="bullet_kcco.projectile">
+	<result class="hit" kill_probability="2.0" kill_probability_offset_on_successful_hit="1.5" kill_decay_start_time="1.5" kill_decay_end_time="1.6"/>
+	</projectile>
+	<stance state_key="running" accuracy="0.5"/>
+	<stance state_key="walking" accuracy="0.55"/>
+	<stance state_key="crouch_moving" accuracy="0.65"/>
+	<stance state_key="standing" accuracy="0.6"/>
+	<stance state_key="crouching" accuracy="0.8"/>
+	<stance state_key="prone" accuracy="1.2"/>
+	<stance state_key="prone_moving" accuracy="0.5"/>
+	<stance state_key="over_wall" accuracy="1.2"/>
+	<modifier class="speed" value="0.25"/>
+	<tag name="machine gun"/>
+	<inventory encumbrance="20.0" buy_price="1.0" sell_price="0.0"/>
+	<capacity value="1" source="rank" source_value="0.0"/>
+	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
+	<target_factors tag="smg" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
+	<target_factors tag="melee" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
+	<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
+	<target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
+</weapon>
+
 <weapon key="parw_streletplus.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="autorifle"/>
-	<specification retrigger_time="0.2" accuracy_factor="1.0" sustained_fire_grow_step="1.5" sustained_fire_diminish_rate="0.7" magazine_size="10" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" suppressed="0" spread_range="0.1" name="Strelet Plus" class="0" barrel_offset="0.6" barrel_offset_3d="0 -0.1 0.6" projectile_speed="90.0" projectiles_per_shot="1" sight_range_modifier="1.2" ai_sight_range_modifier="1.0"/>
+	<specification retrigger_time="0.1" accuracy_factor="0.97" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="2.5" magazine_size="30" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" suppressed="0" spread_range="0.1" name="Strelet Plus" class="0" barrel_offset="0.6" barrel_offset_3d="0 -0.1 0.6" projectile_speed="90.0" projectiles_per_shot="1" sight_range_modifier="1.2" ai_sight_range_modifier="1.0"/>
 	<animation state_key="recoil" animation_key="recoil, hip fire"/>
 	<animation state_key="hold" animation_key="hold, hip fire"/>
 	<animation state_key="crouching" animation_key="crouch, hold, hip fire"/>
 	<animation state_key="crouch_moving" animation_key="crouching forwards, hip fire"/>
 	<animation state_key="walking_backwards" animation_key="walking backwards, hip fire"/>
-	<animation state_key="reload" animation_key="reloading, microgun" volume="0.7"/>
+	<animation state_key="reload" animation_key="reloading, magazine rifle 1.5"/>
 	<animation state_key="hold_on_wall" animation_key="hold, hip fire"/>
 	<animation state_key="still_against_wall" animation_key="hold, hip fire"/>
 	<animation state_key="walking" animation_key="walking, hip fire"/>
@@ -50857,15 +51016,15 @@
 	<projectile file="bullet_paradeus.projectile">
 	<result class="hit" kill_probability="1.75" kill_decay_start_time="0.7" kill_decay_end_time="0.7"/>
 	</projectile>
-	<stance state_key="running" accuracy="1.0"/>
-	<stance state_key="walking" accuracy="1.0"/>
-	<stance state_key="crouch_moving" accuracy="1.0"/>
-	<stance state_key="prone_moving" accuracy="1.0"/>
-	<stance state_key="standing" accuracy="1.0"/>
-	<stance state_key="crouching" accuracy="1.0"/>
-	<stance state_key="prone" accuracy="1.0"/>
-	<stance state_key="over_wall" accuracy="1.0"/>
-	<modifier class="speed" value="-0.2"/>
+	<stance state_key="running" accuracy="0.3"/>
+	<stance state_key="walking" accuracy="0.675"/>
+	<stance state_key="crouch_moving" accuracy="0.75"/>
+	<stance state_key="standing" accuracy="0.85"/>
+	<stance state_key="crouching" accuracy="0.9"/>
+	<stance state_key="prone" accuracy="0.95"/>
+	<stance state_key="prone_moving" accuracy="0.3"/>
+	<stance state_key="over_wall" accuracy="1"/>
+	<modifier class="speed" value="-0.1"/>
 	<commonness value="0.0001" in_stock="1" can_respawn_with="1"/>
 	<inventory encumbrance="0.0" price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -50892,13 +51051,7 @@
 	<projectile file="bullet_paradeus.projectile">
 	<result class="hit" kill_probability="1.5" kill_decay_start_time="0.3" kill_decay_end_time="0.6"/>
 	</projectile>
-	<modifier class="speed" value="-0.1"/>
-	<commonness value="0.0001" in_stock="1" can_respawn_with="1"/>
-	<inventory encumbrance="0.0" price="0.0"/>
-	<capacity value="1" source="rank" source_value="0.0"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
+	<modifier class="speed" value="0"/>
 	<stance state_key="running" accuracy="0.3"/>
 	<stance state_key="walking" accuracy="0.675"/>
 	<stance state_key="crouch_moving" accuracy="0.75"/>
@@ -50907,6 +51060,12 @@
 	<stance state_key="prone" accuracy="0.95"/>
 	<stance state_key="prone_moving" accuracy="0.3"/>
 	<stance state_key="over_wall" accuracy="1"/>
+	<commonness value="0.0001" in_stock="1" can_respawn_with="1"/>
+	<inventory encumbrance="0.0" price="0.0"/>
+	<capacity value="1" source="rank" source_value="0.0"/>
+	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
+	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
+	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
 </weapon>
 
 <weapon key="parw_alina.weapon" on_ground_up="0 0 1" time_to_live_out_in_the_open="0.0" drop_count_factor_on_death="0.0" player_death_drop_owner_lock_time="0">
@@ -51009,7 +51168,13 @@
 	<stance state_key="crouching" accuracy="1.0"/>
 	<stance state_key="prone" accuracy="1.0"/>
 	<stance state_key="over_wall" accuracy="1.0"/>
-	<modifier class="hit_success_probability" value="-0.2"/>
+	<shield offset="-0.55 0.0 0" extent="0.7 0.5 0.7"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
 	<commonness value="0.0001" in_stock="1" can_respawn_with="1"/>
 	<inventory encumbrance="0.0" price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -51064,7 +51229,7 @@
 <weapon key="parw_commander.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="rifle"/>
 	<tag name="commander"/>
-	<specification retrigger_time="1.0" accuracy_factor="1.0" sustained_fire_grow_step="0.4" sustained_fire_diminish_rate="1.2" magazine_size="5" suppressed="1" name="Pard-Commander" class="0" projectile_speed="150" barrel_offset="0.4"/>
+	<specification retrigger_time="1.0" accuracy_factor="1.0" sustained_fire_grow_step="0.4" sustained_fire_diminish_rate="1.2" magazine_size="5" suppressed="1" name="Pard-Murat" class="0" projectile_speed="150" sight_range_modifier="1.8" ai_sight_range_modifier="1.05" barrel_offset="0.4"/>
 	<animation key="recoil" animation_key="recoil1"/>
 	<animation key="recoil" animation_key="recoil2"/>
 	<animation key="recoil" animation_key="recoil3"/>
@@ -51632,7 +51797,7 @@
 <weapon key="parw_police.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="melee"/>
 	<tag name="shield"/>
-	<specification accuracy_factor="0.95" barrel_offset="0.5" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" carry_in_two_hands="0" class="0" burst_shots="1" slot="0" magazine_size="10" name="Police" projectile_speed="80" retrigger_time="0.5" suppressed="1" sustained_fire_diminish_rate="3.0" sustained_fire_grow_step="0.5" projectiles_per_shot="1"/>
+	<specification accuracy_factor="0.95" barrel_offset="0.5" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" carry_in_two_hands="0" class="0" burst_shots="1" slot="0" magazine_size="10" name="Sentinel" projectile_speed="80" retrigger_time="0.5" suppressed="1" sustained_fire_diminish_rate="3.0" sustained_fire_grow_step="0.5" projectiles_per_shot="1"/>
 	<animation state_key="recoil" animation_key="pistol whip"/>
 	<animation state_key="recoil" animation_key="pistol whip 2"/>
 	<animation state_key="recoil" stance_key="over_wall" animation_key="pistol whip 3"/>
@@ -51930,7 +52095,7 @@
 	<tag name="melee"/>
 	<tag name="metal_thin"/>
 	<tag name="mecha"/>
-	<specification retrigger_time="3.0" magazine_size="1000" can_shoot_standing="1" can_shoot_crouching="0" can_shoot_prone="0" carry_in_two_hands="0" name="Roarer" class="0" supperessed="0" use_basic_muzzle_smoke_effect="0" barrel_offset_3d="0 -0.6 0" stab_enabled="1" stab_range="3.0" barrel_offset="0.5"/>
+	<specification retrigger_time="3.0" magazine_size="1000" can_shoot_standing="1" can_shoot_crouching="0" can_shoot_prone="0" carry_in_two_hands="0" name="Gladiators" class="0" supperessed="0" use_basic_muzzle_smoke_effect="0" barrel_offset_3d="0 -0.6 0" stab_enabled="1" stab_range="3.0" barrel_offset="0.5"/>
 	<animation state_key="stabbing" animation_key="hit ground_big_unit"/>
 	<animation state_key="recoil" animation_key="still, large mecha"/>
 	<animation state_key="hold" animation_key="still, large mecha"/>
@@ -52246,7 +52411,7 @@
 	<animation key="reload" animation_key="reloading, m24"/>
 	<model filename="binoculars.xml"/>
 	<hud_icon filename="aimer.png"/>
-	<commonness value="0.0" can_respawn_with="1" in_stock="1"/>
+	<commonness value="0.0" can_respawn_with="1" in_stock="0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<inventory encumbrance="3.0" price="5.0"/>
 	<projectile file="binoculars.projectile"/>
@@ -52254,8 +52419,7 @@
 </weapon>
 
 <weapon key="vest_repair_quick.weapon" on_ground_up="1 0 0" radius="0.45" time_to_live_out_in_the_open="60.0">
-	<tag name="bandage"/>
-	<specification magazine_size="1" can_shoot_standing="0" can_shoot_crouching="1" carry_in_two_hands="0" name="Quick Restoration Contract" class="5" untransform_equipment_class="vest" untransform_count="16" consume="1" sight_range_modifier="1" slot="1"/>
+	<specification magazine_size="1" can_shoot_standing="0" can_shoot_crouching="1" carry_in_two_hands="0" name="Quick Restoration Contract" class="5" untransform_equipment_class="vest" untransform_count="20" consume="1" sight_range_modifier="1" slot="1"/>
 	<animation state_key="recoil" animation_key="repairing vest quick"/>
 	<animation state_key="hold" animation_key="still, single hand carry"/>
 	<animation state_key="hold_on_wall" animation_key="still, single hand carry"/>
@@ -52270,10 +52434,10 @@
 	<animation state_key="changing_weapon_in" animation_key="change weapon in, single hand carry"/>
 	<sound class="impact" fileref="medikit_drop.wav"/>
 	<model filename="vest_repair.xml"/>
-	<capacity value="2" source="rank" source_value="0.0"/>
+	<capacity value="1" source="rank" source_value="0.0"/>
 	<hud_icon filename="quick_repair.png"/>
 	<commonness value="0.0" can_respawn_with="0" in_stock="0"/>
-	<inventory encumbrance="2.0" price="30.0"/>
+	<inventory encumbrance="5.0" price="30.0"/>
 	<modifier class="speed" value="0.15"/>
 </weapon>
 
@@ -52541,76 +52705,6 @@
 	<sound class="impact" fileref="sandbag_drop.wav"/>
 </weapon>
 
-<weapon key="tank2_cannon.weapon">
-	<specification retrigger_time="0.5" accuracy_factor="0.85" sustained_fire_grow_step="0.8" sustained_fire_diminish_rate="0.8" sight_range_modifier="1.2" ai_sight_range_modifier="1.15" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="0" suppressed="0" name="D40mm-Flak-proto" class="0" projectile_speed="80.0" slot="2" barrel_offset="1.2" projectiles_per_shot="1" sight_height_offset="2.0"/>
-	<model mesh_filename="tank2_cannon.mesh" texture_filename="tank2.png"/>
-	<hud_icon filename="hud_patrol_ship_cannon.png"/>
-	<commonness value="0.0"/>
-	<projectile file="apc_hmg.projectile"/>
-	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
-	<target_factors tag="heavy_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="7.0"/>
-	<target_factors tag="apc" distance="1.0" direction="0.0" squad_command="1.0" base_score="10.0"/>
-	<target_factors tag="light_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="6.0"/>
-	<target_factors tag="defensive_at" distance="1.0" direction="0.0" squad_command="1.0" base_score="5.5"/>
-	<target_factors tag="tactical" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0"/>
-	<target_factors tag="bazooka" distance="1.0" direction="0.0" squad_command="1.0" base_score="6.5"/>
-	<effect class="muzzle" ref="BiggerMuzzle"/>
-	<sound class="operation" key="fire" fileref="ps_cannon_shot.wav"/>
-</weapon>
-
-<weapon key="tank2_mg.weapon">
-	<specification retrigger_time="0.04" accuracy_factor="1.0" sustained_fire_grow_step="0.17" sustained_fire_diminish_rate="1.1" spread_range="0.35" sight_range_modifier="1.0" ai_sight_range_modifier="1.15" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="0" suppressed="0" name="Minigun" class="0" projectile_speed="105.0" slot="2" barrel_offset="1.0" projectiles_per_shot="1" sight_height_offset="2.0"/>
-	/&gt;>
-	<animation key="recoil" ref="12"/>
-	<animation key="recoil" ref="13"/>
-	<animation key="recoil" ref="14"/>
-	<animation key="reload" ref="33"/>
-	<animation key="hold" ref="32"/>
-	<animation key="hold_on_wall" ref="1"/>
-	<animation key="walking" ref="31"/>
-	<sound key="fire" fileref="minigun_shot.wav" pitch_variety="0.05"/>
-	<sound key="magazine_out" fileref="mg_clip_out.wav"/>
-	<sound key="magazine_in" fileref="mg_clip_in.wav"/>
-	<sound key="cycle" fileref="rifle_chamber.wav"/>
-	<model filename=""/>
-	<hud_icon filename="hud_tank_mg.png"/>
-	<commonness value="0.05"/>
-	<inventory encumbrance="10.0" price="2.0"/>
-	<weak_hand_hold offset="0.4"/>
-	<projectile file="50cal_bullet.projectile">
-	<result class="hit" kill_probability="0.5" kill_decay_start_time="0.35" kill_decay_end_time="0.70"/>
-	</projectile>
-	<effect class="muzzle" ref="BigMuzzle"/>
-	<shield offset="0.3 -0.55 0." extent="0.2 0.8 0.3"/>
-	<shield offset="0.3 -0.3 0.3" extent="0.2 1.0 0.3"/>
-	<shield offset="0.3 -0.3 -0.3" extent="0.2 1.0 0.3"/>
-	<shield offset="0.9 -0.4 +0.6" extent="1.0 0.6 0.2"/>
-	<shield offset="0.9 -0.4 -0.6" extent="1.0 0.6 0.2"/>
-	<shield offset="1.5 0 0" extent="0.2 1.3 1.2"/>
-</weapon>
-
-<weapon key="tank2_missile_launcher.weapon">
-	<tag name="mortar"/>
-	<specification retrigger_time="6.0" accuracy_factor="0.9" sustained_fire_grow_step="0.4" sustained_fire_diminish_rate="0.1" sight_range_modifier="1.5" ai_sight_range_modifier="1.7" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="0" suppressed="0" name="Missile launcher" class="0" projectile_speed="85.0" slot="2" projectiles_per_shot="4" sight_height_offset="3.0"/>
-	/&gt;>
-	<ballistics curve_height="20.0" near_far_distance="20.0" speed_estimation_near="20.0" speed_estimation_far="40.0" max_speed="90.0" randomness="0.0" tweak_factor="1.5"/>
-	<sound key="fire" fileref="patrol_ship_mortar.wav" pitch_variety="0.1"/>
-	<model filename=""/>
-	<projectile file="sfw_architect_rocket.projectile"/>
-	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
-	<target_factors tag="heavy_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="9.0"/>
-	<target_factors tag="apc" distance="1.0" direction="0.0" squad_command="1.0" base_score="5.0"/>
-	<target_factors tag="light_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="6.0"/>
-	<target_factors tag="defensive_at" distance="1.0" direction="0.0" squad_command="1.0" base_score="7.0"/>
-	<target_factors tag="tactical" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0"/>
-	<target_factors tag="bazooka" distance="1.0" direction="0.0" squad_command="1.0" base_score="10"/>
-	<weak_hand_hold offset="0.3"/>
-	<hud_icon filename="hud_patrol_ship_mortar.png"/>
-	<commonness value="0.0"/>
-	<effect class="muzzle" ref="LawMuzzle"/>
-	<effect class="muzzle" ref="UpDust"/>
-</weapon>
-
 <weapon key="deployable_minig.weapon" ai_burst_time="3" ai_burst_time_variance="0.5" ai_burst_wait_time="1.0" ai_burst_wait_time_variance="0.5">
 	<specification retrigger_time="0.03" accuracy_factor="1.0" sustained_fire_grow_step="0.17" sustained_fire_diminish_rate="1.9" spread_range="0.35" sight_range_modifier="1.0" ai_sight_range_modifier="1.15" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="0" suppressed="0" name="Minigun" class="0" projectile_speed="125.0" slot="2" barrel_offset="0" barrel_offset_3d="0 0.2 1.1" projectiles_per_shot="1" sight_height_offset="2.0"/>
 	<model mesh_filename="deployable_migu.mesh" texture_filename="deployable_mg.png"/>
@@ -52628,14 +52722,7 @@
 </weapon>
 
 <weapon key="bunker_mg.weapon">
-	<specification slot="2" retrigger_time="0.072" accuracy_factor="0.80" spread_range="0.9" sustained_fire_grow_step="0.0" sustained_fire_diminish_rate="2.0" sight_range_modifier="1.8" ai_sight_range_modifier="1.05" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="0" suppressed="0" name="Bunker MG" class="0" projectile_speed="180.0"/>
-	<animation key="recoil" animation_key="recoil1"/>
-	<animation key="recoil" animation_key="recoil2"/>
-	<animation key="recoil" animation_key="recoil3"/>
-	<animation key="reload" animation_key="reloading, Machine gun 2.0"/>
-	<animation key="hold" animation_key="still, heavy weapon"/>
-	<animation key="hold_on_wall" animation_key="still"/>
-	<animation key="walking" animation_key="walking, heavy weapon"/>
+	<specification slot="2" retrigger_time="0.072" accuracy_factor="0.95" spread_range="0.3" sustained_fire_grow_step="0.3" sustained_fire_diminish_rate="2.0" sight_range_modifier="1.8" ai_sight_range_modifier="1.05" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="0" suppressed="0" name="Bunker MG" class="0" projectile_speed="180.0"/>
 	<sound key="fire" fileref="minigun_From_payday2.wav" pitch_variety="0.05" volume="0.1"/>
 	<sound key="magazine_out" fileref="mg_clip_out.wav"/>
 	<sound key="magazine_in" fileref="mg_clip_in.wav"/>
@@ -52646,57 +52733,12 @@
 	<commonness value="0.0"/>
 	<weak_hand_hold offset="0.4"/>
 	<projectile file="bullet_ai.projectile">
-	<result class="hit" kill_probability="1.45" kill_decay_start_time="2.00" kill_decay_end_time="3.60"/>
+	<result class="hit" kill_probability="3.0" kill_decay_start_time="2.00" kill_decay_end_time="3.60"/>
 	</projectile>
-	<shield offset="0.3 -0.6 0" extent="0.2 0.8 0.3" usable_for_cover="0"/>
-</weapon>
-
-<weapon key="bunker_base_mg.weapon">
-	<specification barrel_offset="0.5" retrigger_time="0.120" spread_range="0.15" magazine_size="-1" suppressed="0" name="Bunker MG2" class="0" projectile_speed="180" sight_range_modifier="1.6" ai_sight_range_modifier="1.05" can_shoot_standing="0" can_shoot_crouching="0" can_shoot_prone="1"/>
-	<animation key="recoil" animation_key="recoil1"/>
-	<animation key="recoil" animation_key="recoil2"/>
-	<animation key="recoil" animation_key="recoil3"/>
-	<animation key="reload" animation_key="reloading, Machine gun 2.0"/>
-	<animation key="hold" animation_key="still, heavy weapon"/>
-	<animation key="hold_on_wall" animation_key="still"/>
-	<animation key="walking" animation_key="walking, heavy weapon"/>
-	<sound key="fire" fileref="m2hbskill_fire_FromCOD16.wav" pitch_variety="0.05" volume="2.1"/>
-	<sound key="magazine_out" fileref="m2hb_mgz_out_FromSQUAD.wav" volume="2"/>
-	<sound key="magazine_in" fileref="m2hb_mgz_in_FromSQUAD.wav" volume="2"/>
-	<sound key="cycle" fileref="m2hb_cycle_FromSQUAD.wav" volume="2"/>
-	<sound class="impact" fileref="rifle_drop.wav"/>
-	<model filename=""/>
-	<hud_icon filename="gkw_v_LM5.png"/>
-	<commonness value="0.0"/>
-	<projectile file="bullet_ai.projectile">
-	<result class="blast" damage="2.0" radius="3.0" decal="1" push="0.3" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
-	<trail probability="1.0" key="BulletApTrail_ct"/>
-	<effect class="result" key="terrain" ref="BigBurst" use_surface_color="1"/>
-	<effect class="result" key="terrain" ref="LowDust"/>
-	<effect class="result" key="terrain" ref="Shine" lighting="0"/>
-	<effect class="result" key="terrain" ref="Godray" lighting="0"/>
-	<effect class="result" key="static_object" copy="terrain"/>
-	<effect class="result" key="vehicle" copy="terrain"/>
-	</projectile>
-	<stance state_key="running" accuracy="0.6"/>
-	<stance state_key="crouch_moving" accuracy="0.6"/>
-	<stance state_key="prone_moving" accuracy="0.6"/>
-	<stance state_key="standing" accuracy="0.6"/>
-	<stance state_key="crouching" accuracy="0.8"/>
-	<stance state_key="prone" accuracy="1"/>
-	<stance state_key="over_wall" accuracy="1"/>
-	<modifier class="speed" value="-0.3"/>
 </weapon>
 
 <weapon key="bunker_rocket0.weapon">
 	<specification slot="1" retrigger_time="5.8" accuracy_factor="0.60" sustained_fire_grow_step="-2.0" sustained_fire_diminish_rate="0.9" sight_range_modifier="1.2" ai_sight_range_modifier="1.0" barrel_offset_3d="10 0 0.8" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="0" suppressed="0" name="Bunker ROCKET" class="0" projectile_speed="180.0"/>
-	<animation key="recoil" animation_key="recoil1"/>
-	<animation key="recoil" animation_key="recoil2"/>
-	<animation key="recoil" animation_key="recoil3"/>
-	<animation key="reload" animation_key="reloading, Machine gun 2.0"/>
-	<animation key="hold" animation_key="still, heavy weapon"/>
-	<animation key="hold_on_wall" animation_key="still"/>
-	<animation key="walking" animation_key="walking, heavy weapon"/>
 	<sound key="fire" fileref="at4_fire_FromCOD16StrelaP.wav" pitch_variety="0.05"/>
 	<sound key="magazine_out" fileref="mg_clip_out.wav"/>
 	<sound key="magazine_in" fileref="mg_clip_in.wav"/>
@@ -52845,34 +52887,6 @@
 	<inventory encumbrance="10.0" price="1.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<modifier class="speed" value="-0.4"/>
-</weapon>
-
-<weapon key="humvee_mg.weapon">
-	<specification slot="2" retrigger_time="0.02" accuracy_factor="0.9" sustained_fire_grow_step="0.5" sustained_fire_diminish_rate="2.0" sight_range_modifier="1.0" ai_sight_range_modifier="1.15" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="0" suppressed="0" name="Humvee MG" class="0" projectile_speed="120.0"/>
-	<animation key="recoil" animation_key="recoil1"/>
-	<animation key="recoil" animation_key="recoil2"/>
-	<animation key="recoil" animation_key="recoil3"/>
-	<animation key="reload" animation_key="reloading, Machine gun 2.0"/>
-	<animation key="hold" animation_key="still, heavy weapon"/>
-	<animation key="hold_on_wall" animation_key="still"/>
-	<animation key="walking" animation_key="walking, heavy weapon"/>
-	<sound key="fire" fileref="minigun_From_payday2.wav" pitch_variety="0.05" volume="0.15"/>
-	<sound key="magazine_out" fileref="mg_clip_out.wav"/>
-	<sound key="magazine_in" fileref="mg_clip_in.wav"/>
-	<sound key="cycle" fileref="rifle_chamber.wav"/>
-	<sound class="impact" fileref="rifle_drop.wav"/>
-	<model filename=""/>
-	<hud_icon filename="gkw_v_LM5.png"/>
-	<commonness value="0.0"/>
-	<weak_hand_hold offset="0.4"/>
-	<projectile file="bullet_ai.projectile">
-	<result class="hit" kill_probability="1.45" kill_decay_start_time="1.933" kill_decay_end_time="3.222"/>
-	</projectile>
-	<shield offset="0.3 -0.6 0" extent="0.2 0.8 0.3"/>
-	<shield offset="0.3 -0.4 0.3" extent="0.2 1.0 0.3"/>
-	<shield offset="0.3 -0.4 -0.3" extent="0.2 1.0 0.3"/>
-	<shield offset="0.9 -0.5 +0.6" extent="1.5 0.3 0.2"/>
-	<shield offset="0.9 -0.5 -0.6" extent="1.5 0.3 0.2"/>
 </weapon>
 
 <weapon key="vehicle_smoke_spawner.weapon">

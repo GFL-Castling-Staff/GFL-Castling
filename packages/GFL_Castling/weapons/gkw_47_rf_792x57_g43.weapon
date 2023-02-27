@@ -9,7 +9,8 @@
 	magazine_size="10" 
 	can_shoot_standing="1" 
 	suppressed="0" 
-	name="G43" 
+	name="Gewehr 43" 
+    spread_range="0.3"
 	class="4" 
 	burst_shots="1"
 	last_burst_retrigger_time="0.125"
@@ -42,7 +43,8 @@
         kill_decay_end_time="1.933" />
     </projectile>
     <!--Accuracy, Movement speed-->
-    <stance state_key="walking" accuracy="0.3" />
+    <stance state_key="running" accuracy="0.3" />
+    <stance state_key="walking" accuracy="0.5" />
     <stance state_key="crouch_moving" accuracy="0.65" />
     <stance state_key="prone_moving" accuracy="0.7" />
     <stance state_key="standing" accuracy="0.85"/>

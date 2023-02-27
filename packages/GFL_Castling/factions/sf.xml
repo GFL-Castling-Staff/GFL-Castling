@@ -453,12 +453,11 @@
 			<carry_item key="sf_ar.carry_item" enabled="1" />
 			<weapon key="cover_deploy_enemy.weapon" enabled="1"/>
 			<weapon key="cover_deploy_2.weapon" enabled="1"/>	
-			<weapon key="sfw_m2g.weapon" enabled="1"/>
-			<projectile key="sf_ap_grenade.projectile" enabled="1" />
+			<weapon key="sfw_m2g.weapon" enabled="1"/>			
 		</resources>
 		<item_class_existence_config>
 			<item_class_existence class="weapon" slot="1" probability="0.4" />
-			<item_class_existence class="grenade" slot="0" probability="0.5" />
+			<item_class_existence class="grenade" slot="0" probability="0.3" />
 		</item_class_existence_config>
 	</soldier>
 	<soldier name="sf_vespid_swap" spawn_score="1.0" copy_from="default_spawn_ai">
@@ -469,50 +468,49 @@
 			<carry_item key="vest_15hp_elite.carry_item" enabled="1" />
 			<weapon key="cover_deploy_enemy.weapon" enabled="1"/>
 			<weapon key="sfw_m2g.weapon" enabled="1"/>
-			<projectile key="sf_ap_grenade.projectile" enabled="1" />
 			<call key="sf_assault.call" />
+			<call key="sf_trooper_small_scout.call" />
 		</resources>
 		<item_class_existence_config>
 			<item_class_existence class="weapon" slot="1" probability="0.75" />
-			<item_class_existence class="grenade" slot="0" probability="1.0" />
+			<item_class_existence class="grenade" slot="0" probability="0.75" />
 		</item_class_existence_config>	
 		<attribute_config class="rp">
 			<attribute weight="1.0" min="100.0" max="100.0" />
 			<attribute weight="0.3" min="300.0" max="500.0" />
+			<attribute weight="0.3" min="0.0" max="0.0" />
 		</attribute_config>			
 	</soldier>
 	<!-- ripper -->
 	<soldier name="sf_ripper" spawn_score="3.0" copy_from="default_spawn_ai">
 		<model filename="sfd_ripper.xml" />
-		<ai filename="default.ai" />
+		<ai filename="ripper.ai" />
 		<resources clear_weapons="1" clear_calls="1">
 			<weapon key="sfw_ripper.weapon" enabled="1"/>
 			<weapon key="sfw_m2g.weapon" enabled="1"/>
 			<carry_item key="sf_ar.carry_item" enabled="1" />
-			<projectile key="sf_ap_grenade.projectile" enabled="1" />
 		</resources>
 		<item_class_existence_config>
 			<item_class_existence class="weapon" slot="1" probability="0.3" />
-			<item_class_existence class="grenade" slot="0" probability="0.5" />
 		</item_class_existence_config>			
 	</soldier>
 	<soldier name="sf_ripper_swap" spawn_score="1.0" copy_from="default_spawn_ai">
 		<model filename="sfd_ripper_swap_from_dusk.xml" />
-		<ai filename="elite.ai" />
+		<ai filename="ripper_swap.ai" />
 		<resources clear_weapons="1" clear_calls="1">
 			<weapon key="sfw_ripper_swap.weapon" enabled="1"/>
 			<weapon key="sfw_m2g.weapon" enabled="1"/>
 			<carry_item key="vest_15hp_elite.carry_item" enabled="1" />
-			<projectile key="sf_ap_grenade.projectile" enabled="1" />
 			<call key="sf_assault.call" />
+			<call key="sf_trooper_small_assault.call" />
 		</resources>
 		<item_class_existence_config>
 			<item_class_existence class="weapon" slot="1" probability="0.6" />
-			<item_class_existence class="grenade" slot="0" probability="1.0" />
 		</item_class_existence_config>	
 		<attribute_config class="rp">
 			<attribute weight="1.0" min="100.0" max="100.0" />
 			<attribute weight="0.3" min="300.0" max="500.0" />
+			<attribute weight="0.3" min="0.0" max="0.0" />
 		</attribute_config>
 	</soldier>
 	<!-- guard -->
@@ -558,10 +556,12 @@
 			<weapon key="sfw_jaeger_swap.weapon" enabled="1"/>
 			<carry_item key="vest_15hp_elite.carry_item" enabled="1" />
 			<call key="sf_assault.call" />
+			<call key="sf_trooper_small_scout.call" />
 		</resources>
 		<attribute_config class="rp">
 			<attribute weight="1.0" min="100.0" max="100.0" />
 			<attribute weight="0.3" min="300.0" max="500.0" />
+			<attribute weight="0.3" min="0.0" max="0.0" />
 		</attribute_config>		
 	</soldier>
 	<!-- striker -->
@@ -571,8 +571,11 @@
 		<resources clear_weapons="1" clear_calls="1">
 			<weapon key="sfw_striker.weapon" enabled="1"/>
 			<carry_item key="sf_ar.carry_item" enabled="1" />
-			<projectile key="sf_ap_mine.projectile" enabled="1.0" />
+			<projectile key="sf_ap_grenade.projectile" enabled="1" />
 		</resources>
+		<item_class_existence_config>
+			<item_class_existence class="grenade" slot="0" probability="0.3" />
+		</item_class_existence_config>	
 	</soldier>
 	<soldier name="sf_striker_swap" spawn_score="0.75" copy_from="default_spawn_ai">
 		<ai filename="sf_striker.ai" />
@@ -581,15 +584,18 @@
 			<weapon key="sfw_striker_swap.weapon" enabled="1"/>
 			<weapon key="sfw_m2g.weapon" enabled="1"/>
 			<carry_item key="vest_15hp_elite.carry_item" enabled="1" />
-			<projectile key="sf_ap_mine.projectile" enabled="1.0" />
+			<projectile key="sf_ap_grenade.projectile" enabled="1" />
 			<call key="sf_assault.call" />
+			<call key="sf_trooper_small_assault.call" />
 		</resources>
 		<attribute_config class="rp">
 			<attribute weight="1.0" min="100.0" max="100.0" />
 			<attribute weight="0.3" min="300.0" max="500.0" />
+			<attribute weight="0.3" min="0.0" max="0.0" />
 		</attribute_config>			
 		<item_class_existence_config>
 			<item_class_existence class="weapon" slot="1" probability="0.25" />
+			<item_class_existence class="grenade" slot="0" probability="0.75" />
 		</item_class_existence_config>				
 	</soldier>
 	<!-- nemeum 钢狮 -->
@@ -640,7 +646,7 @@
 			<carry_item key="sf_lightmecha.carry_item" enabled="1" />
 		</resources>
 	</soldier>
-	<soldier name="sfw_prowler_sweap" spawn_score="1.0" copy_from="default_spawn_ai">
+	<soldier name="sfw_prowler_swap" spawn_score="1.0" copy_from="default_spawn_ai">
 		<character filename="sf_lightmecha.character"/>
 		<ai filename="eod_mecha.ai" >
 			<parameter class="burst_time" value="0.5" />
@@ -736,7 +742,7 @@
 	</soldier>
 
 	<!-- BOSS-hunter -->
-	<soldier name="sf_hunter" spawn_score="0.10" copy_from="default_spawn_ai">
+	<soldier name="sfw_hunter" spawn_score="0.10" copy_from="default_spawn_ai">
 		<character filename="default_sf.text_lines">
 			<sound key="death" fileref="Hunter_buhuo_RETREAT_JP.wav" pitch_variety="0.001" volume="0.8" />
 			<sound key="throw" fileref="Hunter_buhuo_SKILL01_JP.wav" pitch_variety="0.001" volume="0.8" />
@@ -750,6 +756,7 @@
 			<call key="sf_destroyer.call" />
 			<call key="sf_jaguar.call" />
 			<call key="sf_assualt.call" />
+			<call key="sf_trooper.call" />
 			<projectile key="sf_emp_mine.projectile"/>
 			<carry_item key="vest_50hp_enforcer.carry_item" enabled="1" />
 		</resources>
@@ -763,7 +770,7 @@
 	</soldier>
 
 	<!-- BOSS-architect -->
-	<soldier name="sf_architect" spawn_score="0.1" copy_from="default_spawn_ai">
+	<soldier name="sfw_architect" spawn_score="0.1" copy_from="default_spawn_ai">
 		<character filename="default_sf.text_lines">
 			<sound key="death" fileref="BossArchitect_buhuo_RETREAT_JP.wav" pitch_variety="0.001" volume="0.8" />
 			<sound key="throw" fileref="BossArchitect_buhuo_SKILL02_JP.wav" pitch_variety="0.001" volume="0.8" />
@@ -898,6 +905,7 @@
 		<resources clear_vehicles="1" clear_weapons="1" clear_calls="1" clear_carry_items="1">
 			<call key="sf_jaguar.call" />
 			<call key="sf_assualt.call" />
+			<call key="sf_trooper.call" />
 			<weapon key="sfw_excutioner_1.weapon" enabled="1"/>
 			<carry_item key="vest_50hp_enforcer.carry_item" enabled="1" />
 		</resources>
@@ -926,6 +934,7 @@
 		<resources clear_vehicles="1" clear_weapons="1" clear_calls="1" clear_carry_items="1">
 			<call key="sf_jaguar.call" />
 			<call key="sf_assualt.call" />
+			<call key="sf_trooper.call" />
 			<weapon key="sfw_excutioner_2.weapon" enabled="1"/>
 			<carry_item key="vest_50hp_enforcer.carry_item" enabled="1" />
 		</resources>
@@ -1094,6 +1103,7 @@
 			<carry_item key="vest_40hp.carry_item" enabled="1" />
 			<call key="sf_jaguar.call" />
 			<call key="sf_assualt.call" />
+			<call key="sf_trooper.call" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="500.0" max="500.05" />

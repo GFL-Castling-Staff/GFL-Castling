@@ -760,8 +760,10 @@
 
     <comment key="aa_emplacement.vehicle spotted, instructions" text="Destroy that Anti-Air weapon for additional Air support" />
     <comment key="aa_emplacement.vehicle destroyed" text="Target has been destroyed. Tactical fairy has established a connection with the support system" />
-    <comment key="sf_jupiter.vehicle spotted, instructions" text="Destroy that Anti-Air weapon for additional Air support" />
-    <comment key="sf_jupiter.vehicle destroyed" text="Target has been destroyed. Tactical fairy has established a connection with the support system" />
+    <comment key="sf_jupiter.vehicle spotted, instructions" text="Destroy that Jupiter for additional Air support" />
+    <comment key="sf_jupiter.vehicle destroyed" text="Jupiter has been destroyed. Tactical fairy has established a connection with the support system" />
+    <comment key="par_sentrytower.vehicle spotted, instructions" text="Destroy that Sentry Tower for additional Air support" />
+    <comment key="par_sentrytower.vehicle destroyed" text="Sentry Tower has been destroyed. Tactical fairy has established a connection with the support system" />
     <comment key="intel radio reminder" text="Don't forget to call tactical fairy support when needed" />
 
     <comment key="report very weak defense" text="Information shows that the &#37;base_name area is hardly fortified." />
@@ -864,5 +866,10 @@
     <comment key="Map105HandleAll" text="We have all evacuation nodes under control, please hold on. The Security's reinforcements are on the way!"/>
     <comment key="Map105WIN" text="*Something blow up loudly*"/>
     <comment key="Map105SFdown" text="Remaining S.F. troops have been repulsed! All echelon go to capture all evacuation nodes!"/>
+
+    <comment key="spawn_in_base_call, alerted, kcco_deploy_coeus.call" text="Our UAV detected enemy deploy a Coeus in &#37;base_name, be careful!"/>
+    <comment key="spawn_in_base_call, alerted, kcco_deploy_typhon.call" text="Our UAV detected enemy deploy a Typhon in &#37;base_name, be careful!"/>
+
+    
 
 </character>

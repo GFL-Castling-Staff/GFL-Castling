@@ -2,8 +2,8 @@
 <weapon key="gkw_hvy_m2.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<specification
 	retrigger_time="-1"
-	accuracy_factor="0.95"
-	sight_range_modifier="4"
+	accuracy_factor="1.0"
+	sight_range_modifier="4.0"
 	sight_height_offset="6.0"
 	sustained_fire_grow_step="6.0"
 	sustained_fire_diminish_rate="2.0"
@@ -17,12 +17,11 @@
 	projectile_speed="100.0"
 	barrel_offset="0.6"
 	projectiles_per_shot="1"
-	spread_range="0.05"
 	slot="0"/>
 	<next_in_chain key="gkw_m2_m1a1.weapon" share_ammo="0"/>
 	<animation state_key="recoil" animation_key="recoil, portable mortar"/>
 	<animation state_key="crouching" animation_key="crouch, still, portable mortar"/>
-	<animation state_key="reload" animation_key="reloading, portable mortar"/>
+	<animation state_key="reload" animation_key="reloading, m2 mortar"/>
 	<animation state_key="hold" animation_key="crouch, still, portable mortar"/>
 	<animation state_key="hold_on_wall" animation_key="crouch, still, portable mortar"/>
 	<animation state_key="still_against_wall" animation_key="crouch, still, portable mortar"/>
@@ -37,15 +36,15 @@
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<inventory encumbrance="50.0" buy_price="420.0" sell_price="420.0"/>
 	<commonness value="0.2" in_stock="1" can_respawn_with="1"/>
-	<model filename="gkw_hvy_m2mortar.xml"/>
+	<model filename="gkw_hvy_m2.xml"/>
 	<hud_icon filename="gkw_m2.png"/>
 
 	<capacity value="0" source="rank" source_value="0.0"/>
-	<capacity value="1" source="rank" source_value="3.457"/>
+	<capacity value="1" source="rank" source_value="3.28"/>
 
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="standard_mortar.projectile"/>
-	<ballistics near_far_distance="1.0" speed_estimation_near="20.0" speed_estimation_far="40.0" max_speed="100.0" randomness="0.05" curve_height="20"/>
+	<projectile file="mortar_60mm.projectile"/>
+	<ballistics near_far_distance="1.0" speed_estimation_near="10.0" speed_estimation_far="50.0" max_speed="200.0" randomness="0.03"/>
 	<effect class="muzzle" ref="MusketMuzzle"/>
 	<effect class="muzzle" ref="UpDust"/>
 	<stance state_key="running" accuracy="1.0"/>

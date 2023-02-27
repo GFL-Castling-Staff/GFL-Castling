@@ -746,8 +746,6 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		ScoredResource("ange_street.carry_item", "carry_item", 1.0f),
 		ScoredResource("gkw_kccoar.weapon","weapon",0.7f),
 		ScoredResource("upgrade_m1.carry_item","carry_item",0.5f),
-		ScoredResource("upgrade_fn49.carry_item","carry_item",1.0f),
-
 		ScoredResource("dandelion.carry_item", "carry_item", 1.0f),
 		ScoredResource("dima.carry_item", "carry_item", 1.0f),
 		ScoredResource("K309.carry_item", "carry_item", 0.7f),
@@ -756,6 +754,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		ScoredResource("bakery_jefuty.carry_item", "carry_item", 0.7f),
 		ScoredResource("gkw_ltlx7000_icecream.weapon", "weapon", 0.5f),
 		ScoredResource("gkw_consume_javelin.weapon", "weapon", 0.5f,5),
+		ScoredResource("vest_repair_quick.weapon", "weapon", 1.0f,3),
 		ScoredResource("woshieoe.carry_item", "carry_item", 0.7f),
 		ScoredResource("cc_sp_tyls.carry_item", "carry_item", 0.7f),
 		ScoredResource("bp_sp_naben.carry_item", "carry_item", 0.7f),

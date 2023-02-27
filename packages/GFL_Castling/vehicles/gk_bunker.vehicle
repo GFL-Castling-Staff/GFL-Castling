@@ -3,31 +3,17 @@
 	<tag name="target" />
 	<tire_set offset="0.5 0.0 0.5" radius="0.65" />
 	<tire_set offset="0.5 0.0 -0.5" radius="0.65" />
-	
 	<modifier class="blast_damage" value="-0.8" />
 	<modifier class="blast_range" value="-1.5" />
-	
 	<control max_speed="3.0" acceleration="1.0" max_reverse_speed="1.0" max_rotation="0.8" max_water_depth="1.0" />
 	<physics max_health="60" mass="3000" broken_mass="3000" extent="1.2 0.0 1.2" offset="0 0.0 0" top_offset="0 2 0" collision_model_pos="0 0.0 0" collision_model_extent="2.4 3.6 2.4" visual_offset="0 0.0 0" collision_response_factor="0.2" blast_push_threshold="10.0" vehicle_collision_damage_factor="0.0" />
-	
-    <turret offset="0 0.4 0" weapon_key="bunker_base_mg.weapon" weapon_offset="0.0 2.15 0.8" weapon_recoil="0.02" physics_recoil="0.0"  max_rotation_step="0.005" rotation="0" />
-	<!-- <turret offset="0.0 0.96 1.0" weapon_key="bunker_base_mg.weapon" weapon_offset="0 0.5 1.0" weapon_recoil="0.02" physics_recoil="0.0"  max_rotation_step="0.005" rotation="0" rotation_range="1.84" />	 -->
-	<!-- <turret offset="0.87 0.96 -0.5" weapon_key="bunker_base_mg.weapon" weapon_offset="0 0.5 1.0" weapon_recoil="0.02" physics_recoil="0.0"  max_rotation_step="0.005" rotation="2.10" rotation_range="1.84" />	 -->
-	<!-- <turret offset="-0.87 0.96 -0.5" weapon_key="bunker_base_mg.weapon" weapon_offset="0 0.5 1.0" weapon_recoil="0.02" physics_recoil="0.0"  max_rotation_step="0.005" rotation="-2.10" rotation_range="1.84" /> -->
-
-<!--<turret offset="0 0.4 0" weapon_key="bunker_mg2.weapon" weapon_offset="0.0 2.15 0.8" weapon_recoil="0.02" physics_recoil="0.0" max_rotation_step="0.005" rotation="0" /> -->
-
+	<turret offset="0 0.4 0" weapon_key="bunker_mg.weapon" weapon_offset="0.0 2.15 0.8" weapon_recoil="0.02" physics_recoil="0.0"  max_rotation_step="0.005" rotation="0" />
 	<turret offset="0 0 0" weapon_key="bunker_rocket0.weapon" weapon_offset="-1.0 2.6 -0.1" weapon_recoil="0.02" physics_recoil="0.0" max_rotation_step="0.005" rotation="0" />
 	<turret offset="0 0 0" weapon_key="bunker_rocket1.weapon" weapon_offset="-1.1 2.6 -0.1" weapon_recoil="0.02" physics_recoil="0.0" max_rotation_step="0.005" rotation="0" />
 	<turret offset="0 0 0" weapon_key="bunker_rocket2.weapon" weapon_offset="-1.0 2.7 -0.1" weapon_recoil="0.02" physics_recoil="0.0" max_rotation_step="0.005" rotation="0" />
-<!--<turret offset="0 0 0" weapon_key="bunker_rocket3.weapon" weapon_offset="-1.1 2.7 -0.1" weapon_recoil="0.02" physics_recoil="0.0" max_rotation_step="0.005" rotation="0" />
-	<turret offset="0 0 0" weapon_key="bunker_rocket4.weapon" weapon_offset="-1.0 2.8 -0.1" weapon_recoil="0.02" physics_recoil="0.0" max_rotation_step="0.005" rotation="0" />
-	<turret offset="0 0 0" weapon_key="bunker_rocket5.weapon" weapon_offset="-1.1 2.8 -0.1" weapon_recoil="0.02" physics_recoil="0.0" max_rotation_step="0.005" rotation="0" /> -->
-	<turret offset="0 0 0" weapon_key="bunker_hornet1.weapon" 	weapon_offset="1.0 2.4 0.0" weapon_recoil="0.02" physics_recoil="0.0" max_rotation_step="0.005" rotation="0" />
-	<turret offset="0 0 0" weapon_key="bunker_hornet2.weapon" 	weapon_offset="1.0 2.6 0.0" weapon_recoil="0.02" physics_recoil="0.0" max_rotation_step="0.005" rotation="0" />	
-	<turret offset="0 0 0" weapon_key="bunker_self_destruct.weapon" 	weapon_offset="0.0 -1.0 0.0" weapon_recoil="0.00" physics_recoil="0.0" max_rotation_step="0.005" rotation="0" />	
-	
-	
+	<turret offset="0 0 0" weapon_key="bunker_hornet1.weapon" weapon_offset="1.0 2.4 0.0" weapon_recoil="0.02" physics_recoil="0.0" max_rotation_step="0.005" rotation="0" />
+	<turret offset="0 0 0" weapon_key="bunker_hornet2.weapon" weapon_offset="1.0 2.6 0.0" weapon_recoil="0.02" physics_recoil="0.0" max_rotation_step="0.005" rotation="0" />
+	<turret offset="0 0 0" weapon_key="bunker_self_destruct.weapon" weapon_offset="0.0 -1.0 0.0" weapon_recoil="0.00" physics_recoil="0.0" max_rotation_step="0.005" rotation="0" />
 	<visual offset="0 -0.4 0" class="turret" turret_index="0" mesh_filename="fin_bunker_turret.mesh" texture_filename="deployable_mg.png" />
 	<visual class="chassis" mesh_filename="fin_bunker_base.mesh" texture_filename="deployable_mg.png" />
 	<visual class="chassis" key="broken" mesh_filename="fin_bunker_base.mesh" texture_filename="humvee_broken.png" />
@@ -37,18 +23,11 @@
 		<turret index="0" />
 		<turret index="1" />
 		<turret index="2" />
-		<turret index="3" />		
+		<turret index="3" />
 		<turret index="4" />
 		<turret index="5" />
-		<turret index="6" /> 
-		<!-- <turret index="7" /> -->
-		<!-- <turret index="8" /> -->
-		<!-- <turret index="9" /> -->
-		<!-- <turret index="10" /> -->
-		<!-- <turret index="11" /> -->
-		<!-- <turret index="12" /> -->
+		<turret index="6" />
 	</character_slot>
-
 	<!-- sound handling -->
 	<rev_sound filename="truck_rev0.wav" low_pitch="0.95" high_pitch="1.05" low_rev="0.0" high_rev="0.2" volume="1.0" />
 	<rev_sound filename="truck_rev3.wav" low_pitch="0.7" high_pitch="1.0" low_rev="0.05" high_rev="0.7" volume="1.0" />
@@ -68,7 +47,6 @@
 		<trigger class="spot" />
 		<result class="reward" rp="10.0" />
 	</event>
-
 	<event>
 		<trigger class="destroy" />
 		<result class="spawn" instance_class="visual_item" instance_key="burning_piece_radartower.visual_item" min_amount="3" max_amount="3" offset="0 2.0 0" position_spread="1.5 1.5" direction_spread="0.05 0.2" />

@@ -469,15 +469,6 @@
         <requirement class="weapon" key="gkw_hvy_m2.weapon" slot="0" />
     </model>
     <model filename="gkd_hvy_m2_1.xml">
-        <requirement class="weapon" key="gkw_hvy_m2_ai.weapon" slot="0" />
-    </model>
-    <model filename="gkd_hvy_m2_2.xml">
-        <requirement class="weapon" key="gkw_hvy_m2_ai.weapon" slot="0" />
-    </model>
-    <model filename="gkd_hvy_m2_3.xml">
-        <requirement class="weapon" key="gkw_hvy_m2_ai.weapon" slot="0" />
-    </model>
-    <model filename="gkd_hvy_m2_1.xml">
         <requirement class="weapon" key="gkw_m2_m1a1.weapon" slot="0" />
     </model>
     <model filename="gkd_hvy_m2_2.xml">
@@ -845,6 +836,9 @@
     </model>
     <model filename="gkd_rf_g43.xml">
         <requirement class="weapon" key="gkw_g43.weapon" slot="0" />
+    </model>
+    <model filename="gkd_rf_g43.xml">
+        <requirement class="weapon" key="gkw_g43_kurz.weapon" slot="0" />
     </model>
     <model filename="gkd_rf_gm6.xml">
         <requirement class="weapon" key="gkw_gm6.weapon" slot="0" />
@@ -2150,5 +2144,23 @@
     </model>
     <model filename="gkd_mg_lewis_5501.xml">
         <requirement class="weapon" key="gkw_lewis_5501_skill.weapon" slot="0" />
+    </model>
+    <model filename="gkd_hvy_2b14_1.xml">
+        <requirement class="weapon" key="gkw_hvy_2b14.weapon" slot="0" />
+    </model>
+    <model filename="gkd_hvy_2b14_2.xml">
+        <requirement class="weapon" key="gkw_hvy_2b14.weapon" slot="0" />
+    </model>
+    <model filename="gkd_hvy_2b14_3.xml">
+        <requirement class="weapon" key="gkw_hvy_2b14.weapon" slot="0" />
+    </model>
+    <model filename="gkd_hvy_2b14_1.xml">
+        <requirement class="weapon" key="gkw_hvy_2b14_pdw.weapon" slot="0" />
+    </model>
+    <model filename="gkd_hvy_2b14_2.xml">
+        <requirement class="weapon" key="gkw_hvy_2b14_pdw.weapon" slot="0" />
+    </model>
+    <model filename="gkd_hvy_2b14_3.xml">
+        <requirement class="weapon" key="gkw_hvy_2b14_pdw.weapon" slot="0" />
     </model>
 </models>

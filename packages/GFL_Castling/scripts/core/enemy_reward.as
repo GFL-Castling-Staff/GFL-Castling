@@ -21,6 +21,8 @@ dictionary RP_enemy_index = {
     {"kcco_teslatrooper",200},
     {"kcco_human_sniper",250},
     {"kcco_quartz_ranger",300},
+    {"kcco_zircon_squadleader",300},
+
 
     {"para_streletplus",20},
     {"para_streletplus_richman",20},
@@ -51,8 +53,8 @@ dictionary RP_enemy_index = {
     {"para_rodelero",80},
     
 
-    {"sf_hunter",300},
-    {"sf_architect",300},
+    {"sfw_hunter",300},
+    {"sfw_architect",300},
     {"sfw_Intruder",300},
     {"sfw_Dreamer",300},
     {"sfw_Alchemist",450},
@@ -90,6 +92,7 @@ dictionary XP_enemy_index = {
     {"kcco_teslatrooper",0.01},
     {"kcco_human_sniper",0.01},
     {"kcco_quartz_ranger",0.015},
+    {"kcco_zircon_squadleader",0.015},
 
     {"para_streletplus",0.002},
     {"para_streletplus_richman",0.002},
@@ -119,8 +122,8 @@ dictionary XP_enemy_index = {
     {"sfw_prowler_sweap",0.002},
     {"para_rodelero",0.002},
 
-    {"sf_hunter",0.02},
-    {"sf_architect",0.02},
+    {"sfw_hunter",0.02},
+    {"sfw_architect",0.02},
     {"sfw_Intruder",0.02},
     {"sfw_Dreamer",0.02},
     {"sfw_Alchemist",0.02},
@@ -148,8 +151,8 @@ string getRewardPool(string name) {
 }
 
 dictionary reward_pool_list= {
-    {"sf_hunter","boss"},
-    {"sf_architect","boss"},
+    {"sfw_hunter","boss"},
+    {"sfw_architect","boss"},
     {"sfw_Intruder","boss"},
     {"sfw_Dreamer","boss"},
     {"sfw_Alchemist","boss"},
@@ -166,6 +169,7 @@ dictionary reward_pool_list= {
     {"Nimogen","boss"},
     {"Narciss","boss"},
     {"kcco_quartz_ranger","boss"},
+    {"kcco_zircon_squadleader","boss"},
 
     {"alina","elite"},
     {"vanguard","elite"},
@@ -253,6 +257,9 @@ array<ScoredResource@> reward_pool_common ={
     ScoredResource("painting.drop_reward", "grenade", 0.6f),
     ScoredResource("gift_box_community_2.drop_reward", "grenade", 0.4f),
     ScoredResource("ct_gift_halloween.drop_reward", "grenade", 0.4f),
+    ScoredResource("416_grenade.drop_reward", "grenade", 1.0f),
+
+    
     ScoredResource("gift_box_1.drop_reward", "grenade", 1.0f)
 };
 
@@ -296,6 +303,8 @@ array<ScoredResource@> reward_pool_uncommon ={
     ScoredResource("painting.drop_reward", "grenade", 0.6f),
     ScoredResource("gift_box_community_2.drop_reward", "grenade", 0.4f),
     ScoredResource("ct_gift_halloween.drop_reward", "grenade", 0.4f),
+    ScoredResource("416_grenade.drop_reward", "grenade", 1.0f),
+
     ScoredResource("gift_box_1.drop_reward", "grenade", 1.0f)
 };
 
@@ -325,6 +334,8 @@ array<ScoredResource@> reward_pool_rare ={
     ScoredResource("painting.drop_reward", "grenade", 0.6f),
     ScoredResource("gift_box_community_2.drop_reward", "grenade", 0.4f),
     ScoredResource("ct_gift_halloween.drop_reward", "grenade", 0.4f),
+    ScoredResource("416_grenade.drop_reward", "grenade", 1.0f),
+
     ScoredResource("gift_box_1.drop_reward", "grenade", 1.0f)
 };
 
@@ -335,6 +346,7 @@ array<ScoredResource@> reward_pool_elite ={
     ScoredResource("forest_gifts.drop_reward", "grenade", 2.0f), 
     ScoredResource("gold_bar.drop_reward", "grenade", 0.1f),
     ScoredResource("underpants.drop_reward", "grenade", 0.2f),
+    ScoredResource("416_grenade.drop_reward", "grenade", 1.0f),
     ScoredResource("painting.drop_reward", "grenade", 0.1f)
 };
 
@@ -348,12 +360,13 @@ array<ScoredResource@> reward_pool_boss ={
     ScoredResource("painting.drop_reward", "grenade", 0.2f),
     ScoredResource("gift_box_community_2.drop_reward", "grenade", 0.05f),
     ScoredResource("ct_gift_halloween.drop_reward", "grenade", 0.05f),
+    ScoredResource("416_grenade.drop_reward", "grenade", 1.0f),
     ScoredResource("gift_box_1.drop_reward", "grenade", 0.4f)    
 };
 
 array<string> SFbossList ={
-    "sf_hunter",
-    "sf_architect",
+    "sfw_hunter",
+    "sfw_architect",
     "sfw_Intruder",
     "sfw_Dreamer",
     "sfw_Alchemist",

@@ -77,8 +77,11 @@
 			<sound class="launch" fileref="destroyer_firesupport_FromEFT.wav" volume="0.65" pitch_variety="0.0" />
 			<sound class="spawn" fileref="woosh1.wav" volume="0.2" />
 		</round>
-		<round instances="12" instance_class="grenade" instance_key="artillery_shell_destroyer.projectile" instance_spread="12 12 12" common_spread="3 0 3" launch_time="9.0" spawn_time="10.0" initial_speed_to_target="75.0">
-			<sound class="spawn" fileref="woosh1.wav" volume="0.2" />
+		<round instances="12" instance_class="grenade" instance_key="artillery_shell_destroyer.projectile" instance_spread="10 12 10" common_spread="2 0 2" launch_time="4.0" spawn_time="8.0" initial_speed_to_target="75.0">
+			<sound class="spawn" fileref="woosh1.wav" volume="0.3" />
+		</round>
+		<round instances="12" instance_class="grenade" instance_key="artillery_shell_destroyer.projectile" instance_spread="12 12 12" common_spread="3 0 3" launch_time="4.0" spawn_time="11.0" initial_speed_to_target="75.0">
+			<sound class="spawn" fileref="woosh1.wav" volume="0.3" />
 		</round>
 		<hud_icon filename="sf_call_destroyer.png" />
 		<capacity value="0" source="rank" source_value="0.0" />

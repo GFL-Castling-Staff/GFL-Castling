@@ -395,6 +395,8 @@
   <comment key="aa_emplacement.vehicle destroyed" text="防空炮已摧毁，战术妖精已与支援系统建立连接" />
   <comment key="sf_jupiter.vehicle spotted, instructions" text="摧毁木星才能让一部分战术妖精呼叫支援" />
   <comment key="sf_jupiter.vehicle destroyed" text="木星已摧毁，战术妖精已与支援系统建立连接" />
+  <comment key="par_sentrytower.vehicle spotted, instructions" text="摧毁哨戒指挥塔才能让一部分战术妖精呼叫支援" />
+  <comment key="par_sentrytower.vehicle destroyed" text="哨戒塔楼已摧毁，战术妖精已与支援系统建立连接" />
 
   <comment key="intel radio reminder" text="别忘了在需要的时候呼叫战术妖精支援" />
 
@@ -505,4 +507,11 @@
   <comment key="Map105WIN" text="*震耳欲聋的爆炸声*"/>
   <comment key="Map105SFdown" text="残余铁血部队已经被击退！全员梯队去占领所有的撤离节点！"/>
 
+
+  <comment key="spawn_in_base_call, alerted, kcco_deploy_coeus.call" text="我方UAV侦察到敌军在&#37;base_name部署了一辆 Typhon 提丰, 小心它的蓄力电磁炮！"/>
+  <comment key="spawn_in_base_call, alerted, kcco_deploy_typhon.call" text="我方UAV侦察到敌军在&#37;base_name部署了一辆 Coeus 奎乌, 部署反坦克小组！"/>
+  <comment key="spawn_in_base_call, alerted, para_deploy_uhlan.call" text="我方UAV侦察到敌军在&#37;base_name部署了一辆 Uhlan 枪骑兵, 做好冲击准备！"/>
+  <comment key="spawn_in_base_call, alerted, para_deploy_uhlan_nyto.call" text="我方UAV侦察到敌军在&#37;base_name部署了一辆 Uhlan 枪骑兵, 做好冲击准备！"/>
+
+  
 </character>

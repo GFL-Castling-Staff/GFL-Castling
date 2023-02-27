@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projectile key="elenusis_acid_bomb_spawn.projectile" class="grenade" name="Elenusis Acid Bomb" slot="2" pulldown_in_air="40" radius="0.4">
-    <result class="spawn" instance_class="projectile" instance_key="acid_bomb.projectile" min_amount="24" max_amount="24" offset="0 0.0 0" position_spread="6.5 0.5" direction_spread="0 -1"  damage_origin_vehicle="0"/>
+    <result class="spawn" instance_class="projectile" instance_key="acid_bomb.projectile" min_amount="24" max_amount="24" offset="0 1.0 0" position_spread="6.5 1.0" direction_spread="0 -1"  damage_origin_vehicle="0"/>
     <trigger class="time" time_to_live="0.1"/>
     <rotation class="motion" />
     <model mesh_filename=""/>

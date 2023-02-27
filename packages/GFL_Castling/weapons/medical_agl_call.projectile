@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<projectile class="grenade" name="30mm" slot="1" pulldown_in_air="26.0" key="medical_agl_call.projectile">
+<projectile class="grenade" name="30mm" slot="1" pulldown_in_air="26.0" radius="1.5" key="medical_agl_call.projectile">
     <tag name="grenade"/>
     <result class="blast" radius="6.0" damage="0.0" push="0.0" decal="0" character_state="unwound" faction_compare="equal" />
     <trigger class="impact" />

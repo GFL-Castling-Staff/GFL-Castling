@@ -5,8 +5,10 @@
 #include "query_helpers.as"
 #include "query_helpers2.as"
 #include "GFLhelpers.as"
+#include "GFLparameters.as"
 #include "mod3_doll.as"
 #include "girl_index.as"
+
 //id
 // 0 drop
 // 1 armory
@@ -14,64 +16,6 @@
 // 3 Stash
 // 4 Equiped
 //Author: NetherCrow
-
-dictionary itemDropFileIndex = {
-    // 空
-    {"",0},
-
-    {"firecontrol.carry_item",1},       // 火控核心
-    {"core_mask.carry_item",2},         // 真核面具  
-    {"upgrade_type88.carry_item",3},    // 汉阳造加速线圈
-    {"upgrade_aa12.carry_item",4},      // AA12独头弹
-    {"upgrade_m1.carry_item",5},      // M1加兰德弹鼓
-    {"upgrade_fg42.carry_item",6},      // FG42
-    {"upgrade_g41.carry_item",7},      // G41
-    {"upgrade_vz61.carry_item",8},      // vz61
-    {"upgrade_m1903_1.carry_item",9},      // 太太
-    {"upgrade_m1903_2.carry_item",10},      // 太太
-    {"upgrade_fn49.carry_item",11},      // FN49
-    {"upgrade_9a91.carry_item",12},      // 9A91
-    {"upgrade_m14.carry_item",13},
-    {"upgrade_g3.carry_item",14},
-    {"upgrade_m1897.carry_item",15},
-    {"upgrade_stg44.carry_item",16},
-    {"upgrade_wa2000.carry_item",17},
-    {"upgrade_pkp.carry_item",18},
-    {"upgrade_scarl.carry_item",19},
-    {"upgrade_scarh.carry_item",20},
-    {"upgrade_cso.carry_item",21},
-
-    {"666",0}
-};
-
-dictionary itemDropKeyIndex = {
-    // 空
-    {"",0},
-
-    {"mod3",1},                         // 火控核心
-    {"truecore",2},                     // 真核面具  
-    {"type88",3},                       // 汉阳造加速线圈
-    {"aa12",4},                         // AA12独头弹
-    {"m1garand",5},                     // M1加兰德弹鼓
-    {"fg42",6},                         // FG42
-    {"g41",7},                          // G41
-    {"vz61",8},                         // vz61
-    {"m1903_1",9},                      // m1903
-    {"m1903_2",10},                     // m1903
-    {"fn49",11},                        // fn49
-    {"9a91",12},                        // 9a91
-    {"m14",13},
-    {"g3",14},
-    {"m1897",15},
-    {"stg44",16},
-    {"wa2000",17},
-    {"pkp",18},
-    {"scarl",19},
-    {"scarh",20},
-    {"cso",21},
-
-    {"666",0}
-};
 
 class CraftQueue
 {
@@ -523,6 +467,11 @@ class ItemDropEvent : Tracker {
                         m_craftQueue.removeAt(findQueueIndex(pId,"stg44"));
                         playPrivateSound(m_metagame,"digimind_sfx2.wav",pId);
                     }
+                    else if (checkQueue(pId,"stg44") && (itemKey=="gkw_g43.weapon")){
+                        addItemInBackpack(m_metagame,cId,"weapon","gkw_g43_kurz.weapon");
+                        m_craftQueue.removeAt(findQueueIndex(pId,"stg44"));
+                        playPrivateSound(m_metagame,"digimind_sfx2.wav",pId);
+                    }                    
                     else if (checkQueue(pId,"wa2000") && (itemKey=="gkw_wa2000.weapon")){
                         addItemInBackpack(m_metagame,cId,"weapon","gkw_wa2000_only.weapon");
                         m_craftQueue.removeAt(findQueueIndex(pId,"wa2000"));
@@ -911,24 +860,3 @@ class ItemDropEvent : Tracker {
     }    
 }
 
-
-dictionary Tier6VestIndex = {
-    // 空
-    {"",0},
-
-    {"exchange_t6_ticket_1",1},
-    {"exchange_t6_ticket_2",2}, 
-    {"exchange_t6_ticket_3",3}, 
-    {"exchange_t6_ticket_4",4},     
-    {"exchange_t6_ticket_5",5}, 
-    {"exchange_t6_ticket_6",6}, 
-    {"exchange_t6_ticket_7",7}, 
-    {"exchange_t6_ticket_8",8}, 
-    {"exchange_t6_ticket_9",9}, 
-    {"exchange_t6_ticket_10",10}, 
-    {"exchange_t6_ticket_11",11}, 
-    {"exchange_t6_ticket_12",12}, 
-    {"exchange_t6_ticket_13",13}, 
-
-    {"666",0}
-};

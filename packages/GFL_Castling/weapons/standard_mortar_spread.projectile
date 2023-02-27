@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<projectile class="grenade" name="M2 mortar" slot="1" pulldown_in_air="58" key="standard_mortar_spread.projectile" >
+<projectile class="grenade" name="60mm mortar" slot="1" pulldown_in_air="58" key="standard_mortar_spread.projectile" >
     <tag name="grenade"/>
 
     <result class="blast" radius="7.5" damage="6" decal="1" character_state="death" push="0.8" faction_compare="not_equal" damage_origin_vehicle="0"/>
@@ -39,8 +39,5 @@
     <effect class="result" key="character" copy="terrain" />
 
     <effect class="activated" ref="Propulsion_gl" />
-
-    <!-- <effect class="activated" ref="FlareSparkle" post_processing="0" /> -->
-    <!-- <effect class="activated" ref="FlareFlash" post_processing="0" />      -->
 
 </projectile>

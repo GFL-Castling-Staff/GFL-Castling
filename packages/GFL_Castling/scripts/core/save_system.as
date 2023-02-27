@@ -105,20 +105,19 @@ void PlayerProfileSave(Metagame@ m_metagame,player_data@ player_info) {
         e.setIntAttribute("index", m_information.m_doll_index);
         e.setBoolAttribute("own", m_information.m_own);
 
-        if(m_information.m_skin_index.size() > 0){
-            for(uint i1 =0; i1<m_information.m_skin_index.size();i1++) {
-                XmlElement e1("skin");
-                e1.setIntAttribute("skin_index",m_information.m_skin_index[i1]);
-                e.appendChild(e1);
-            }
+        if(m_information.m_skin_index.size() <= 0){continue;}
+        for(uint i1 =0; i1<m_information.m_skin_index.size();i1++) {
+            XmlElement e1("skin");
+            e1.setIntAttribute("skin_index",m_information.m_skin_index[i1]);
+            e.appendChild(e1);
         }
+        
 
-        if(m_information.m_type.size() > 0){
-            for(uint i2 =0; i2<m_information.m_type.size();i2++) {
-                XmlElement e1("type");
-                e1.setStringAttribute("type_name",m_information.m_type[i2]);
-                e.appendChild(e1);
-            }
+        if(m_information.m_type.size() <= 0){continue;}
+        for(uint i2 =0; i2<m_information.m_type.size();i2++) {
+            XmlElement e1("type");
+            e1.setStringAttribute("type_name",m_information.m_type[i2]);
+            e.appendChild(e1);
         }
 
         subroot.appendChild(e);

@@ -367,6 +367,20 @@
 	<soldier name="default" spawn_score="0.0" firstnames_file="kcco_first.name" lastnames_file="kcco_last.name">
 		<character filename="default_kcco_human.character">
 			<parameter class="default_squad_config_index" value="0" />
+			<parameter class="being_stunned_steer_amount" value="-0.8" />
+			<animation key="stunned" target_key="tactial roll" />
+			<animation key="dive" target_key="tactial roll" />
+			<animation key="prone" target_key="crouch still" />
+			<animation key="prone, without weapon, 63" target_key="crouch still" />
+			<animation key="prone, moving forwards" target_key="crouch still" />
+			<animation key="leaving prone" target_key="crouch to stand" />
+			<animation key="going prone" target_key="crouch still" />
+			<parameter class="diving_steer_amount" value="0.6" />
+			<parameter class="diving_steer_amount_sliding_with_friction" value="0.05" />
+			<parameter class="diving_steer_amount_push" value="0.05" />
+			<parameter class="diving_steer_amount_jump" value="0.05" />
+			<parameter class="prone_moving_steer_amount" value="0" />
+			<parameter class="prone_moving_max_dot_to_move" value="0.1" />
 		</character>
 
 		<ai filename="elite.ai" />
@@ -377,7 +391,7 @@
 		<!-- <resources file="kcco_secondaries.resources" />  -->
 		<!-- <resources file="kcco_default.resources" />  -->
 		<resources>
-			<carry_item key="camouflage_suit.carry_item" enabled="1" />
+			<weapon key="kcco_pkp.weapon" enabled="1" />
 		</resources>
 		<item_class_existence_config>
 			<!-- secondaries -->
@@ -474,7 +488,8 @@
 			<weapon key="kcco_rpg7.weapon" enabled="1" />
 			<carry_item key="kcco_ar.carry_item" enabled="1" />
 			<projectile key="kcco_smartgrenade_1.projectile" enabled="1.0" />
-			<call key="kcco_assault.call" />			
+			<call key="kcco_assault.call" />
+			<call key="kcco_dog.call" />			
 		</resources>
 		<item_class_existence_config>
 			<item_class_existence class="weapon" slot="1" probability="0.25" />
@@ -499,6 +514,7 @@
 			<projectile key="kcco_ap_grenade.projectile" enabled="1.0" />
 			<call key="kcco_assault.call" />			
 			<call key="kcco_zircon.call" />
+			<call key="kcco_dog.call" />
 		</resources>
 		<item_class_existence_config>
 			<item_class_existence class="weapon" slot="1" probability="0.75" />
@@ -511,34 +527,6 @@
 			<attribute weight="4.0" min="300" max="600" />
 		</attribute_config>				
 	</soldier>
-	<!--赤铁矿通讯兵-->
-	<soldier name="kcco_ar_human_tel" spawn_score="0.15" copy_from="default_bot">
-		<ai filename="kcco_human_tel.ai" />
-		<character filename="default_kcco_human.character" />
-		<model filename="kccod_human_3.xml" />
-		<resources clear_weapons="1" clear_vehicles="1" clear_carry_items="1" clear_grenades="1">
-			<weapon key="kcco_fe2o3_svd.weapon" enabled="1" />
-			<weapon key="kcco_tracer_dart_accurate.weapon" enabled="1" /> 
-			<carry_item key="vest_15hp_elite.carry_item" enabled="1" />
-			<projectile key="kcco_tracer_dart_r.projectile" enabled="1.0" />
-			<projectile key="kcco_tracer_dart_a.projectile" enabled="1.0" />	
-			<call key="kcco_zircon.call" />
-			<call key="kcco_assault.call" />
-			<call key="kcco_deploy_coeus.call" />
-			<call key="kcco_deploy_typhon.call" />			
-		</resources>
-		<item_class_existence_config>
-			<item_class_existence class="weapon" slot="1" probability="0.75" />
-			<item_class_existence class="grenade" slot="0" probability="1.0" />
-		</item_class_existence_config>		
-		<attribute_config class="xp">
-			<attribute weight="1.0" min="1.0" max="4.0" />
-		</attribute_config>
-		<attribute_config class="rp">
-			<attribute weight="1.0" min="1000" max="2000" />
-			<attribute weight="0.5" min="3000" max="4000" />
-		</attribute_config>		
-	</soldier>	
 	<!-- sg -->
 	<soldier name="kcco_sg" spawn_score="1.5" copy_from="default_bot">
 		<model filename="kccod_cyclops_sg_remake.xml" />
@@ -706,7 +694,10 @@
 			<weapon key="kccow_tactical_sniper_rf.weapon" enabled="1" />
 			<carry_item key="vest_15hp_elite.carry_item" />
 			<call key="kcco_zircon.call" />
-			<call key="kcco_assault.call" />			
+			<call key="kcco_zircon1.call" />
+			<call key="kcco_assault.call" />	
+			<call key="kcco_quartz.call" />		
+			<call key="kcco_dog.call" />
 		</resources>
 		<item_class_existence_config>
 			<item_class_existence class="carry_item" slot="1" probability="1" />
@@ -725,7 +716,7 @@
 		<character filename="default_kcco_human.character" >
 			<animation key="stunned" target_key="stunned_sit 1.0" />
 		</character>
-		<model filename="kccod_human_5.xml" />
+		<model filename="kccod_human_sio2.xml" />
 		<ai filename="kcco_human_smg.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="kcco_aks74u.weapon" enabled="1" />
@@ -737,7 +728,9 @@
 			<call key="kcco_argo_puppis.call" />
 			<call key="kcco_argo_carina.call" />
 			<call key="kcco_zircon.call" />
-			<call key="kcco_assault.call" />			
+			<call key="kcco_zircon_1.call" />
+			<call key="kcco_assault.call" />	
+			<call key="kcco_dog.call" />		
 		</resources>
 		<item_class_existence_config>
 			<item_class_existence class="carry_item" slot="1" probability="1" />
@@ -745,50 +738,85 @@
 			<item_class_existence class="carry_item" slot="0" probability="0.001" />
 		</item_class_existence_config>
 		<attribute_config class="xp">
-			<attribute weight="1.0" min="0.01" max="0.01" />
+			<attribute weight="1.0" min="100" max="100" />
 		</attribute_config>
 		<attribute_config class="rp">
 			<attribute weight="1.0" min="3000" max="3000" />
 		</attribute_config>						
 	</soldier>
-	<!-- store -->
-	<!-- <soldier name="default_hg" spawn_score="0.0">
-		<resources file="gk_hg.resources" />
+	<!-- KCCO锆石小队指挥官 -->
+	<soldier name="kcco_zircon_squadleader" spawn_score="0.05" copy_from="default_bot">
+		<character filename="default_kcco_human.character" >
+			<animation key="stunned" target_key="stunned_sit 1.0" />
+			<animation key="dive" target_key="tactial roll" />
+			<animation key="prone" target_key="crouch still" />
+			<animation key="prone, without weapon, 63" target_key="crouch still" />
+			<animation key="prone, moving forwards" target_key="crouch still" />
+			<animation key="leaving prone" target_key="crouch to stand" />
+			<animation key="going prone" target_key="crouch still" />
+			<parameter class="diving_steer_amount" value="0.75" />
+			<parameter class="diving_steer_amount_sliding_with_friction" value="0.05" />
+			<parameter class="diving_steer_amount_push" value="0.05" />
+			<parameter class="diving_steer_amount_jump" value="0.05" />
+			<parameter class="prone_moving_steer_amount" value="0" />
+			<parameter class="prone_moving_max_dot_to_move" value="0.1" />
+		</character>
+		<model filename="kccod_human_zrsio4.xml" />
+		<ai filename="kcco_human_mg.ai" />
+		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
+			<weapon key="kcco_pkp.weapon" enabled="1" />
+			<carry_item key="vest_50hp_tank.carry_item" />
+			<call key="kcco_argo_vela.call" />
+			<call key="kcco_Hephaestus.call" />
+			<call key="kcco_argo_puppis.call" />
+			<call key="kcco_argo_carina.call" />
+			<call key="kcco_quartz.call" />
+			<call key="kcco_assault.call" />
+			<call key="kcco_dog.call" />			
+		</resources>
+		<item_class_existence_config>
+			<item_class_existence class="carry_item" slot="1" probability="1" />
+			<!-- note, always backpack items -->
+			<item_class_existence class="carry_item" slot="0" probability="0.001" />
+		</item_class_existence_config>
 		<attribute_config class="xp">
-			<attribute weight="1.0" min="0.0" max="0.05" />
+			<attribute weight="1.0" min="100" max="100" />
 		</attribute_config>
+		<attribute_config class="rp">
+			<attribute weight="1.0" min="3000" max="3000" />
+		</attribute_config>						
 	</soldier>
-	<soldier name="default_sg" spawn_score="0.0">
-		<resources file="gk_sg.resources" />
+	<!--赤铁矿通讯兵-->
+	<soldier name="kcco_ar_human_tel" spawn_score="0.15" copy_from="default_bot">
+		<ai filename="kcco_human_tel.ai" />
+		<character filename="default_kcco_human.character" />
+		<model filename="kccod_human_3.xml" />
+		<resources clear_weapons="1" clear_vehicles="1" clear_carry_items="1" clear_grenades="1">
+			<weapon key="kcco_fe2o3_svd.weapon" enabled="1" />
+			<weapon key="kcco_tracer_dart_accurate.weapon" enabled="1" /> 
+			<carry_item key="vest_15hp_elite.carry_item" enabled="1" />
+			<projectile key="kcco_tracer_dart_r.projectile" enabled="1.0" />
+			<projectile key="kcco_tracer_dart_a.projectile" enabled="1.0" />	
+			<call key="kcco_zircon.call" />
+			<call key="kcco_zircon_1.call" />
+			<call key="kcco_assault.call" />
+			<call key="kcco_quartz.call" />
+			<call key="kcco_deploy_coeus.call" />
+			<call key="kcco_deploy_typhon.call" />	
+			<call key="kcco_dog.call" />		
+		</resources>
+		<item_class_existence_config>
+			<item_class_existence class="weapon" slot="1" probability="0.75" />
+			<item_class_existence class="grenade" slot="0" probability="1.0" />
+		</item_class_existence_config>		
 		<attribute_config class="xp">
-			<attribute weight="1.0" min="0.0" max="0.05" />
+			<attribute weight="1.0" min="1.0" max="4.0" />
 		</attribute_config>
+		<attribute_config class="rp">
+			<attribute weight="1.0" min="1000" max="2000" />
+			<attribute weight="0.5" min="3000" max="4000" />
+		</attribute_config>		
 	</soldier>
-	<soldier name="default_smg" spawn_score="0.0">
-		<resources file="gk_smg.resources" />
-		<attribute_config class="xp">
-			<attribute weight="1.0" min="0.0" max="0.05" />
-		</attribute_config>
-	</soldier>
-	<soldier name="default_ar" spawn_score="0.0">
-		<resources file="gk_ar.resources" />
-		<attribute_config class="xp">
-			<attribute weight="1.0" min="0.0" max="0.05" />
-		</attribute_config>
-	</soldier>
-	<soldier name="default_rf" spawn_score="0.0">
-		<resources file="gk_rf.resources" />
-		<attribute_config class="xp">
-			<attribute weight="1.0" min="0.0" max="0.05" />
-		</attribute_config>
-	</soldier>
-	<soldier name="default_mg" spawn_score="0.0">
-		<resources file="gk_mg.resources" />
-		<attribute_config class="xp">
-			<attribute weight="1.0" min="0.0" max="0.05" />
-		</attribute_config>
-	</soldier> -->
-	<!-- icecream group -->
 	<soldier name="icecream" spawn_score="0.0">
 		<resources file="icecream.resources" />
 		<attribute_config class="xp">
