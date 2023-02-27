@@ -76,8 +76,8 @@
         <animation state_key="celebrate_shoot" animation_key="celebrating, shooting"/>
         <animation state_key="stabbing" animation_key="melee, quick knife"/>
         <animation state_key="stabbing" animation_key="pistol whip 3"/>
-        <animation key="cycle" animation_key="cycle_2h_hip_750rpm"/>
-        <animation key="cycle" stance_key="crouching" animation_key="cycle_2h_hip_900rpm"/>
+        <animation key="cycle" animation_key="cycle_2h_hip_600rpm"/>
+        <animation key="cycle" stance_key="crouching" animation_key="cycle_2h_hip_750rpm"/>
         <animation key="cycle" stance_key="prone" animation_key="cycle_2h_rifle_1200rpm_prone"/>
         <animation key="cycle" stance_key="over_wall" animation_key="cycle_2h_rifle_1200rpm"/>
 
@@ -87,12 +87,12 @@
         <sound key="fire" fileref="mg3_fire_FormCSOL.wav" pitch_variety="0.05" volume="0.75" />
         <sound key="magazine_out" fileref="mg3_mgz_out_FormSQUAD.wav" volume="1.0" />
         <sound key="magazine_in" fileref="mg3_mgz_in_FormSQUAD.wav" volume="1.0" />
-        <sound key="cycle" fileref="mg3_cycle_FormSQUAD.wav" volume="1.0" />
+        <sound key="cycle_out" fileref="mg3_cycle_FormSQUAD.wav" volume="1.0" />
         <sound class="impact" fileref="rifle_drop.wav" />
         <model filename="gkw_mg_mg3mod3.xml" />
         <hud_icon filename="gkw_mg3_3806.png" />
         <projectile file="bullet.projectile">
-            <result class="hit" kill_probability="3.0" kill_probability_offset_on_successful_hit="3.5" kill_decay_start_time="2.432" kill_decay_end_time="4.054" />
+            <result class="hit" kill_probability="3.0" kill_probability_offset_on_successful_hit="1.2" kill_decay_start_time="2.432" kill_decay_end_time="4.054" />
             <trail probability="1.0" key="BulletApTrail_ct"/>
         </projectile>
         <effect class="muzzle" ref="ejection_76251" />
