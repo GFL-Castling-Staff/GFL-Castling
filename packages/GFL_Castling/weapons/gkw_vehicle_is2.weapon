@@ -19,7 +19,7 @@
         slot="2" 
         barrel_offset="5.3" 
         projectiles_per_shot="1" />
-        <model mesh_filename="is2_m1895_cannon.mesh" texture_filename="is2_m1895_main.jpg" />
+        <model />
         <hud_icon filename="gkw_v_LM5.png" />
         <commonness value="0.0"/>
         <projectile file="cannon_is2_122mm.projectile">
@@ -114,7 +114,7 @@
         can_shoot_standing="0" 
         can_shoot_crouching="0" 
         suppressed="0" 
-        use_basic_muzzle_smoke_effect="0" 
+        use_basic_muzzle_smoke_effect="1" 
         name="Tank DT" 
         class="0" 
         projectile_speed="160.0" />
