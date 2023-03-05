@@ -16,6 +16,7 @@
 	projectile_speed="120" 
 	barrel_offset="0.4" 
     stance_accuracy_rate="0.9"
+    spread_range="0.3"
 	projectiles_per_shot="11"
 	 />
     <inventory encumbrance="10.0" buy_price="50.0" sell_price="50.0" />
@@ -42,7 +43,7 @@
         <result class="hit" 
         kill_probability="2.2"
         kill_probability_offset_on_successful_hit="0.25" 
-        kill_decay_start_time="0.03" 
+        kill_decay_start_time="0.25" 
         kill_decay_end_time="0.5" />
     </projectile>
     <!--Accuracy, Movement speed-->

@@ -1788,7 +1788,7 @@
 </weapon>
 
 <weapon key="gkw_sat8.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="0.9" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="0.9" magazine_size="8" can_shoot_standing="1" suppressed="0" name="S.A.T.8" class="4" last_burst_retrigger_time="0.25" reload_one_at_a_time="1" sight_range_modifier="1.0" projectile_speed="100" barrel_offset="0.4" projectiles_per_shot="19" spread_range="0.25" burst_shots="1" stab_enabled="1" carry_in_two_hands="1" slot="0" use_basic_muzzle_smoke_effect="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="1.5" magazine_size="8" can_shoot_standing="1" suppressed="1" name="S.A.T.8" class="4" last_burst_retrigger_time="0.25" reload_one_at_a_time="1" sight_range_modifier="1.0" projectile_speed="100" barrel_offset="0.4" projectiles_per_shot="20" spread_range="0.2" burst_shots="1" stab_enabled="1" carry_in_two_hands="1" slot="0" use_basic_muzzle_smoke_effect="0"/>
 	<inventory encumbrance="10.0" buy_price="20.0" sell_price="20.0"/>
 	<animation key="reload" animation_key="reloading, oaat"/>
 	<sound key="fire" fileref="sat8_fire_FromWF.WAV" volume="1.2"/>
@@ -1801,16 +1801,17 @@
 	<hud_icon filename="gkw_sat8.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="1.9" kill_decay_start_time="0.1" kill_decay_end_time="0.5"/>
+	<result class="hit" kill_probability="1.9" kill_probability_offset_on_successful_hit="0.5" kill_decay_start_time="0.25" kill_decay_end_time="0.65"/>
 	</projectile>
-	<stance state_key="running" accuracy="0.4"/>
-	<stance state_key="walking" accuracy="0.6"/>
-	<stance state_key="crouch_moving" accuracy="0.7"/>
-	<stance state_key="prone_moving" accuracy="0.7"/>
-	<stance state_key="standing" accuracy="0.7"/>
-	<stance state_key="crouching" accuracy="0.8"/>
+	<stance state_key="running" accuracy="0.8"/>
+	<stance state_key="walking" accuracy="0.8"/>
+	<stance state_key="crouch_moving" accuracy="0.8"/>
+	<stance state_key="prone_moving" accuracy="0.8"/>
+	<stance state_key="standing" accuracy="0.8"/>
+	<stance state_key="crouching" accuracy="0.9"/>
 	<stance state_key="prone" accuracy="0.9"/>
 	<stance state_key="over_wall" accuracy="0.9"/>
+	<modifier class="detectability" value="-0.1"/>
 	<tag name="shotgun"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
@@ -1841,11 +1842,27 @@
 </weapon>
 
 <weapon key="gkw_supershorty.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="0.9" sustained_fire_grow_step="0.6" sustained_fire_diminish_rate="2" magazine_size="4" can_shoot_standing="1" suppressed="0" name="Super Shorty" class="1" reload_one_at_a_time="1" sight_range_modifier="0.8" projectile_speed="96" barrel_offset="0.4" projectiles_per_shot="15" spread_range="0.4" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0" use_basic_muzzle_smoke_effect="0"/>
-	<inventory buy_price="33.0" sell_price="33.0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="4.0" sustained_fire_diminish_rate="4.0" magazine_size="4" can_shoot_standing="1" suppressed="0" name="Super Shorty" class="1" reload_one_at_a_time="1" sight_range_modifier="1.0" projectile_speed="100" barrel_offset="0.4" projectiles_per_shot="10" spread_range="0.3" stab_enabled="1" carry_in_two_hands="0" burst_shots="1" last_burst_retrigger_time="-1" slot="0" use_basic_muzzle_smoke_effect="0"/>
+	<inventory encumbrance="20.0" buy_price="33.0" sell_price="33.0"/>
 	<animation state_key="cycle" animation_key="Pshotgun0.3"/>
 	<animation state_key="cycle" stance_key="prone" animation_key="Pshotgun0.3p"/>
-	<animation key="reload" animation_key="reloading, oaat"/>
+	<animation key="reload" animation_key="reloading, oaat fast hand"/>
+	<animation state_key="recoil" animation_key="recoil, pistol 2"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil, smg1, prone"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil, overwall pistol"/>
+	<animation state_key="hold" animation_key="still, pistol 2"/>
+	<animation state_key="hold_casual" animation_key="hold_casual, pistol 2"/>
+	<animation state_key="hold_on_wall" animation_key="hold, overwall pistol"/>
+	<animation state_key="still_against_wall" animation_key="hold_casual, pistol 4"/>
+	<animation state_key="running" animation_key="running, pistol 2"/>
+	<animation state_key="walking" animation_key="walking, pistol 2"/>
+	<animation state_key="walking_backwards" animation_key="walking backwards, pistol"/>
+	<animation state_key="crouching" animation_key="crouch, pistol 2"/>
+	<animation state_key="crouch_moving" animation_key="crouching forwards, single hand carry"/>
+	<animation state_key="crouch_moving_backwards" animation_key="crouching backwards, pistol 2"/>
+	<animation state_key="prone_still" animation_key="prone_still, pistol"/>
+	<animation state_key="changing_weapon_in" animation_key="change weapon in, single hand carry"/>
+	<animation state_key="stabbing" animation_key="pistol whip 2"/>
 	<sound key="fire" fileref="supershorty_fire_FromCOD11.wav" pitch_variety="0.05" volume="1.1"/>
 	<sound key="cycle" fileref="supershorty_cycle_FromCOD11.wav" volume="0.6"/>
 	<sound key="reload_one" fileref="sg1_reload_FromREALLIFE.wav" volume="0.5"/>
@@ -1857,22 +1874,21 @@
 	<hud_icon filename="gkw_supershorty.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="1.8" kill_decay_start_time="0.09" kill_decay_end_time="0.700"/>
+	<result class="hit" kill_probability="2.4" kill_probability_offset_on_successful_hit="0.5" kill_decay_start_time="0.2" kill_decay_end_time="0.65"/>
 	</projectile>
 	<modifier class="speed" value="0.4"/>
-	<modifier class="hit_success_probability" value="-0.3"/>
-	<stance state_key="walking" accuracy="0.7"/>
+	<modifier class="hit_success_probability" value="-0.4"/>
+	<stance state_key="running" accuracy="0.8"/>
+	<stance state_key="walking" accuracy="0.8"/>
 	<stance state_key="crouch_moving" accuracy="0.8"/>
 	<stance state_key="prone_moving" accuracy="0.8"/>
-	<stance state_key="standing" accuracy="0.9"/>
-	<stance state_key="crouching" accuracy="0.9"/>
-	<stance state_key="prone" accuracy="0.85"/>
-	<stance state_key="over_wall" accuracy="1.0"/>
+	<stance state_key="standing" accuracy="0.8"/>
+	<stance state_key="crouching" accuracy="0.8"/>
+	<stance state_key="prone" accuracy="0.8"/>
+	<stance state_key="over_wall" accuracy="0.9"/>
 	<tag name="shotgun"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
-	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<stance state_key="running" accuracy="0.7"/>
 	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
@@ -1882,19 +1898,7 @@
 	<target_factors tag="melee" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
 	<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
 	<target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
-	<animation key="recoil" animation_key="recoil1"/>
-	<animation key="recoil" animation_key="recoil2"/>
-	<animation key="recoil" animation_key="recoil3"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
 	<effect class="muzzle" ref="muzzle_sg"/>
-	<animation state_key="hold_on_wall" animation_key="still"/>
-	<animation state_key="running" animation_key="running, bayonet"/>
-	<animation state_key="walking" animation_key="walking, hip fire"/>
-	<animation state_key="walking_backwards" animation_key="walking backwards, hip fire"/>
-	<animation state_key="celebrate_shoot" animation_key="celebrating, shooting"/>
-	<animation state_key="stabbing" animation_key="melee, bayonet"/>
 </weapon>
 
 <weapon key="gkw_aa12.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
@@ -18827,7 +18831,7 @@
 </weapon>
 
 <weapon key="gkw_m500mod3.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="1.5" sustained_fire_diminish_rate="2" magazine_size="9" can_shoot_standing="1" suppressed="0" name="Mossberg Model 500(MOD3)" class="1" reload_one_at_a_time="1" sight_range_modifier="1.5" projectile_speed="120" barrel_offset="0.4" projectiles_per_shot="12" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0" use_basic_muzzle_smoke_effect="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="1.5" sustained_fire_diminish_rate="2" magazine_size="9" can_shoot_standing="1" suppressed="0" name="Mossberg Model 500(MOD3)" class="1" reload_one_at_a_time="1" sight_range_modifier="1.5" projectile_speed="120" barrel_offset="0.4" projectiles_per_shot="12" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" spread_range="0.25" slot="0" use_basic_muzzle_smoke_effect="0"/>
 	<inventory encumbrance="20.0" buy_price="200.0" sell_price="200.0"/>
 	<commonness value="0.01" in_stock="0"/>
 	<animation state_key="cycle" animation_key="Pshotgun0.5"/>
@@ -18845,16 +18849,16 @@
 	<hud_icon filename="gkw_m500mod3.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="2.3" kill_probability_offset_on_successful_hit="0.55" kill_decay_start_time="0.06" kill_decay_end_time="0.5"/>
+	<result class="hit" kill_probability="2.3" kill_probability_offset_on_successful_hit="0.55" kill_decay_start_time="0.25" kill_decay_end_time="0.6"/>
 	</projectile>
-	<stance state_key="running" accuracy="0.4"/>
-	<stance state_key="walking" accuracy="0.75"/>
-	<stance state_key="crouch_moving" accuracy="0.7"/>
-	<stance state_key="prone_moving" accuracy="0.7"/>
-	<stance state_key="standing" accuracy="0.8"/>
+	<stance state_key="running" accuracy="0.55"/>
+	<stance state_key="walking" accuracy="0.65"/>
+	<stance state_key="crouch_moving" accuracy="0.6"/>
+	<stance state_key="prone_moving" accuracy="0.6"/>
+	<stance state_key="standing" accuracy="0.85"/>
 	<stance state_key="crouching" accuracy="0.9"/>
-	<stance state_key="prone" accuracy="1.0"/>
-	<stance state_key="over_wall" accuracy="1.0"/>
+	<stance state_key="prone" accuracy="0.9"/>
+	<stance state_key="over_wall" accuracy="0.95"/>
 	<modifier class="hit_success_probability" value="-0.5"/>
 	<modifier class="speed" value="0.1"/>
 	<tag name="shotgun"/>
@@ -18887,7 +18891,7 @@
 </weapon>
 
 <weapon key="gkw_m500mod3_3707.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="1.5" sustained_fire_diminish_rate="2" magazine_size="9" can_shoot_standing="1" suppressed="0" name="Mossberg Model 500(MOD3)-[Daydreaming]" class="1" reload_one_at_a_time="1" sight_range_modifier="1.5" projectile_speed="120" barrel_offset="0.4" projectiles_per_shot="12" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0" use_basic_muzzle_smoke_effect="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="1.5" sustained_fire_diminish_rate="2" magazine_size="9" can_shoot_standing="1" suppressed="0" name="Mossberg Model 500(MOD3)-[Daydreaming]" class="1" reload_one_at_a_time="1" sight_range_modifier="1.5" projectile_speed="120" barrel_offset="0.4" projectiles_per_shot="12" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" spread_range="0.25" slot="0" use_basic_muzzle_smoke_effect="0"/>
 	<inventory encumbrance="20.0" buy_price="200.0" sell_price="200.0"/>
 	<commonness value="0" in_stock="0"/>
 	<animation state_key="cycle" animation_key="Pshotgun0.5"/>
@@ -18905,16 +18909,16 @@
 	<hud_icon filename="gkw_m500_3707.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="2.3" kill_probability_offset_on_successful_hit="0.55" kill_decay_start_time="0.06" kill_decay_end_time="0.5"/>
+	<result class="hit" kill_probability="2.3" kill_probability_offset_on_successful_hit="0.55" kill_decay_start_time="0.25" kill_decay_end_time="0.6"/>
 	</projectile>
-	<stance state_key="running" accuracy="0.4"/>
-	<stance state_key="walking" accuracy="0.75"/>
-	<stance state_key="crouch_moving" accuracy="0.7"/>
-	<stance state_key="prone_moving" accuracy="0.7"/>
-	<stance state_key="standing" accuracy="0.8"/>
+	<stance state_key="running" accuracy="0.55"/>
+	<stance state_key="walking" accuracy="0.65"/>
+	<stance state_key="crouch_moving" accuracy="0.6"/>
+	<stance state_key="prone_moving" accuracy="0.6"/>
+	<stance state_key="standing" accuracy="0.85"/>
 	<stance state_key="crouching" accuracy="0.9"/>
-	<stance state_key="prone" accuracy="1.0"/>
-	<stance state_key="over_wall" accuracy="1.0"/>
+	<stance state_key="prone" accuracy="0.9"/>
+	<stance state_key="over_wall" accuracy="0.95"/>
 	<modifier class="hit_success_probability" value="-0.5"/>
 	<modifier class="speed" value="0.1"/>
 	<tag name="shotgun"/>
@@ -19599,7 +19603,7 @@
 </weapon>
 
 <weapon key="gkw_m590.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="0.9" sustained_fire_grow_step="1.3" sustained_fire_diminish_rate="2" magazine_size="6" can_shoot_standing="1" suppressed="0" name="Mossberg Model 590" class="1" reload_one_at_a_time="1" sight_range_modifier="1" projectile_speed="120" barrel_offset="0.4" projectiles_per_shot="14" spread_range="0.3" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0" use_basic_muzzle_smoke_effect="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="2.0" magazine_size="6" can_shoot_standing="1" suppressed="0" name="Mossberg Model 590" class="1" reload_one_at_a_time="1" sight_range_modifier="1" projectile_speed="120" barrel_offset="0.5" projectiles_per_shot="12" spread_range="0.3" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0" use_basic_muzzle_smoke_effect="0"/>
 	<inventory buy_price="50.0" sell_price="50.0"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<animation state_key="cycle" animation_key="Pshotgun0.5"/>
@@ -19616,20 +19620,20 @@
 	<hud_icon filename="gkw_m590.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="1.8" kill_decay_start_time="0.1" kill_decay_end_time="0.800"/>
+	<result class="hit" kill_probability="2.3" kill_probability_offset_on_successful_hit="0.5" kill_decay_start_time="0.25" kill_decay_end_time="0.55"/>
 	</projectile>
-	<modifier class="hit_success_probability" value="-0.2"/>
+	<modifier class="hit_success_probability" value="-0.45"/>
+	<stance state_key="running" accuracy="0.55"/>
 	<stance state_key="walking" accuracy="0.65"/>
 	<stance state_key="crouch_moving" accuracy="0.6"/>
 	<stance state_key="prone_moving" accuracy="0.6"/>
-	<stance state_key="standing" accuracy="0.7"/>
-	<stance state_key="crouching" accuracy="0.75"/>
-	<stance state_key="prone" accuracy="0.85"/>
-	<stance state_key="over_wall" accuracy="0.85"/>
+	<stance state_key="standing" accuracy="0.85"/>
+	<stance state_key="crouching" accuracy="0.9"/>
+	<stance state_key="prone" accuracy="0.9"/>
+	<stance state_key="over_wall" accuracy="0.95"/>
 	<tag name="shotgun"/>
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<stance state_key="running" accuracy="0.7"/>
 	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
@@ -19655,7 +19659,7 @@
 </weapon>
 
 <weapon key="gkw_m500.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="2" sustained_fire_diminish_rate="2" magazine_size="9" can_shoot_standing="1" suppressed="0" name="Mossberg Model 500" class="1" reload_one_at_a_time="1" sight_range_modifier="1" projectile_speed="120" barrel_offset="0.4" stance_accuracy_rate="0.9" projectiles_per_shot="11" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0" use_basic_muzzle_smoke_effect="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="2" sustained_fire_diminish_rate="2" magazine_size="9" can_shoot_standing="1" suppressed="0" name="Mossberg Model 500" class="1" reload_one_at_a_time="1" sight_range_modifier="1" projectile_speed="120" barrel_offset="0.4" stance_accuracy_rate="0.9" projectiles_per_shot="11" spread_range="0.3" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0" use_basic_muzzle_smoke_effect="0"/>
 	<inventory encumbrance="10.0" buy_price="50.0" sell_price="50.0"/>
 	<commonness value="0.2" in_stock="1" can_respawn_with="1"/>
 	<animation state_key="cycle" animation_key="Pshotgun0.5"/>
@@ -19673,7 +19677,7 @@
 	<effect class="muzzle" ref="muzzle_sg"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="2.2" kill_probability_offset_on_successful_hit="0.25" kill_decay_start_time="0.03" kill_decay_end_time="0.5"/>
+	<result class="hit" kill_probability="2.2" kill_probability_offset_on_successful_hit="0.25" kill_decay_start_time="0.25" kill_decay_end_time="0.5"/>
 	</projectile>
 	<modifier class="hit_success_probability" value="-0.4"/>
 	<stance state_key="running" accuracy="0.3"/>
@@ -26664,8 +26668,8 @@
 	<hud_icon filename="gkw_mk153.png"/>
 	<capacity value="0" source="rank" source_value="0.0"/>
 	<capacity value="1" source="rank" source_value="3.457"/>
-	<effect class="muzzle" ref="LawMuzzle"/>
-	<effect class="muzzle" ref="UpDust"/>
+	<effect class="muzzle" ref="muzzle_cannon_fire_smoke" lighting="0"/>
+	<effect class="muzzle" ref="muzzle_cannon_fire_light" lighting="0"/>
 	<stance state_key="running" accuracy="1.0"/>
 	<stance state_key="walking" accuracy="1.0"/>
 	<stance state_key="crouch_moving" accuracy="1.0"/>
@@ -26714,8 +26718,8 @@
 	<hud_icon filename="gkw_mk153.png"/>
 	<capacity value="0" source="rank" source_value="0.0"/>
 	<capacity value="1" source="rank" source_value="3.457"/>
-	<effect class="muzzle" ref="LawMuzzle"/>
-	<effect class="muzzle" ref="UpDust"/>
+	<effect class="muzzle" ref="muzzle_cannon_fire_smoke" lighting="0"/>
+	<effect class="muzzle" ref="muzzle_cannon_fire_light" lighting="0"/>
 	<stance state_key="running" accuracy="1.0"/>
 	<stance state_key="walking" accuracy="1.0"/>
 	<stance state_key="crouch_moving" accuracy="1.0"/>
@@ -31213,7 +31217,7 @@
 </weapon>
 
 <weapon key="gkw_sat8_1802.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="0.9" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="0.5" magazine_size="8" can_shoot_standing="1" suppressed="1" name="S.A.T.8-[Meihua yin]" class="4" last_burst_retrigger_time="0.25" reload_one_at_a_time="1" sight_range_modifier="0.75" projectile_speed="90" barrel_offset="0.55" projectiles_per_shot="19" spread_range="0.25" burst_shots="1" stab_enabled="1" carry_in_two_hands="1" slot="0" use_basic_muzzle_smoke_effect="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="1.5" magazine_size="8" can_shoot_standing="1" suppressed="1" name="S.A.T.8-[Meihua yin]" class="4" last_burst_retrigger_time="0.25" reload_one_at_a_time="1" sight_range_modifier="1.0" projectile_speed="100" barrel_offset="0.4" projectiles_per_shot="20" spread_range="0.2" burst_shots="1" stab_enabled="1" carry_in_two_hands="1" slot="0" use_basic_muzzle_smoke_effect="0"/>
 	<inventory encumbrance="10.0" buy_price="20.0" sell_price="20.0"/>
 	<commonness value="0" in_stock="0"/>
 	<animation key="reload" animation_key="reloading, oaat"/>
@@ -31227,16 +31231,17 @@
 	<hud_icon filename="gkw_sat8_1802.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="1.9" kill_decay_start_time="0.12" kill_decay_end_time="0.55"/>
+	<result class="hit" kill_probability="1.9" kill_probability_offset_on_successful_hit="0.5" kill_decay_start_time="0.25" kill_decay_end_time="0.65"/>
 	</projectile>
-	<stance state_key="running" accuracy="0.5"/>
-	<stance state_key="walking" accuracy="0.7"/>
+	<stance state_key="running" accuracy="0.8"/>
+	<stance state_key="walking" accuracy="0.8"/>
 	<stance state_key="crouch_moving" accuracy="0.8"/>
 	<stance state_key="prone_moving" accuracy="0.8"/>
 	<stance state_key="standing" accuracy="0.8"/>
 	<stance state_key="crouching" accuracy="0.9"/>
-	<stance state_key="prone" accuracy="0.95"/>
-	<stance state_key="over_wall" accuracy="0.95"/>
+	<stance state_key="prone" accuracy="0.9"/>
+	<stance state_key="over_wall" accuracy="0.9"/>
+	<modifier class="detectability" value="-0.1"/>
 	<tag name="shotgun"/>
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -31266,7 +31271,7 @@
 </weapon>
 
 <weapon key="gkw_sat8_2601.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="0.9" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="0.5" magazine_size="8" can_shoot_standing="1" suppressed="1" name="S.A.T.8-[Pumpkin Bunches]" class="4" last_burst_retrigger_time="0.25" reload_one_at_a_time="1" sight_range_modifier="0.75" projectile_speed="90" barrel_offset="0.55" projectiles_per_shot="19" spread_range="0.25" burst_shots="1" stab_enabled="1" carry_in_two_hands="1" slot="0" use_basic_muzzle_smoke_effect="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="1.5" magazine_size="8" can_shoot_standing="1" suppressed="1" name="S.A.T.8-[Pumpkin Bunches]" class="4" last_burst_retrigger_time="0.25" reload_one_at_a_time="1" sight_range_modifier="1.0" projectile_speed="100" barrel_offset="0.4" projectiles_per_shot="20" spread_range="0.2" burst_shots="1" stab_enabled="1" carry_in_two_hands="1" slot="0" use_basic_muzzle_smoke_effect="0"/>
 	<inventory encumbrance="10.0" buy_price="20.0" sell_price="20.0"/>
 	<commonness value="0" in_stock="0"/>
 	<animation key="reload" animation_key="reloading, oaat"/>
@@ -31280,16 +31285,17 @@
 	<hud_icon filename="gkw_sat8_2601.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="1.9" kill_decay_start_time="0.12" kill_decay_end_time="0.55"/>
+	<result class="hit" kill_probability="1.9" kill_probability_offset_on_successful_hit="0.5" kill_decay_start_time="0.25" kill_decay_end_time="0.65"/>
 	</projectile>
-	<stance state_key="running" accuracy="0.5"/>
-	<stance state_key="walking" accuracy="0.7"/>
+	<stance state_key="running" accuracy="0.8"/>
+	<stance state_key="walking" accuracy="0.8"/>
 	<stance state_key="crouch_moving" accuracy="0.8"/>
 	<stance state_key="prone_moving" accuracy="0.8"/>
 	<stance state_key="standing" accuracy="0.8"/>
 	<stance state_key="crouching" accuracy="0.9"/>
-	<stance state_key="prone" accuracy="0.95"/>
-	<stance state_key="over_wall" accuracy="0.95"/>
+	<stance state_key="prone" accuracy="0.9"/>
+	<stance state_key="over_wall" accuracy="0.9"/>
+	<modifier class="detectability" value="-0.1"/>
 	<tag name="shotgun"/>
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -31375,7 +31381,7 @@
 </weapon>
 
 <weapon key="gkw_m500_3707.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="2" sustained_fire_diminish_rate="2" magazine_size="9" can_shoot_standing="1" suppressed="0" name="Mossberg Model 500-[Daydreaming]" class="1" reload_one_at_a_time="1" sight_range_modifier="1" projectile_speed="120" barrel_offset="0.4" stance_accuracy_rate="0.9" projectiles_per_shot="11" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0" use_basic_muzzle_smoke_effect="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="2" sustained_fire_diminish_rate="2" magazine_size="9" can_shoot_standing="1" suppressed="0" name="Mossberg Model 500-[Daydreaming]" class="1" reload_one_at_a_time="1" sight_range_modifier="1" projectile_speed="120" barrel_offset="0.4" stance_accuracy_rate="0.9" spread_range="0.3" projectiles_per_shot="11" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0" use_basic_muzzle_smoke_effect="0"/>
 	<inventory encumbrance="10.0" buy_price="50.0" sell_price="50.0"/>
 	<commonness value="0" in_stock="0"/>
 	<animation state_key="cycle" animation_key="Pshotgun0.5"/>
@@ -31393,7 +31399,7 @@
 	<effect class="muzzle" ref="muzzle_sg"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="2.2" kill_probability_offset_on_successful_hit="0.25" kill_decay_start_time="0.03" kill_decay_end_time="0.5"/>
+	<result class="hit" kill_probability="2.2" kill_probability_offset_on_successful_hit="0.25" kill_decay_start_time="0.25" kill_decay_end_time="0.5"/>
 	</projectile>
 	<modifier class="hit_success_probability" value="-0.4"/>
 	<stance state_key="running" accuracy="0.3"/>
@@ -38171,7 +38177,7 @@
 </weapon>
 
 <weapon key="gkw_m590_1806.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="0.9" sustained_fire_grow_step="1.3" sustained_fire_diminish_rate="2" magazine_size="6" can_shoot_standing="1" suppressed="0" name="Mossberg Model 590-[Snowy Nil]" class="1" reload_one_at_a_time="1" sight_range_modifier="1" projectile_speed="120" barrel_offset="0.4" projectiles_per_shot="14" spread_range="0.3" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0" use_basic_muzzle_smoke_effect="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="2.0" magazine_size="6" can_shoot_standing="1" suppressed="0" name="Mossberg Model 590-[Snowy Nil]" class="1" reload_one_at_a_time="1" sight_range_modifier="1" projectile_speed="120" barrel_offset="0.5" projectiles_per_shot="12" spread_range="0.3" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0" use_basic_muzzle_smoke_effect="0"/>
 	<inventory buy_price="50.0" sell_price="50.0"/>
 	<commonness value="0.0" in_stock="0" can_respawn_with="1"/>
 	<animation state_key="cycle" animation_key="Pshotgun0.5"/>
@@ -38188,20 +38194,20 @@
 	<hud_icon filename="gkw_m590_1806.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="1.8" kill_decay_start_time="0.1" kill_decay_end_time="0.800"/>
+	<result class="hit" kill_probability="2.3" kill_probability_offset_on_successful_hit="0.5" kill_decay_start_time="0.25" kill_decay_end_time="0.55"/>
 	</projectile>
-	<modifier class="hit_success_probability" value="-0.2"/>
+	<modifier class="hit_success_probability" value="-0.45"/>
+	<stance state_key="running" accuracy="0.55"/>
 	<stance state_key="walking" accuracy="0.65"/>
 	<stance state_key="crouch_moving" accuracy="0.6"/>
 	<stance state_key="prone_moving" accuracy="0.6"/>
-	<stance state_key="standing" accuracy="0.7"/>
-	<stance state_key="crouching" accuracy="0.75"/>
-	<stance state_key="prone" accuracy="0.85"/>
-	<stance state_key="over_wall" accuracy="0.85"/>
+	<stance state_key="standing" accuracy="0.85"/>
+	<stance state_key="crouching" accuracy="0.9"/>
+	<stance state_key="prone" accuracy="0.9"/>
+	<stance state_key="over_wall" accuracy="0.95"/>
 	<tag name="shotgun"/>
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<stance state_key="running" accuracy="0.7"/>
 	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
@@ -53664,7 +53670,7 @@
 
 <weapon key="vehicle_is2_122mm.weapon">
 	<specification retrigger_time="7.5" accuracy_factor="0.9" spread_range="0.3" sustained_fire_grow_step="5.0" sustained_fire_diminish_rate="0.5" sight_range_modifier="2.5" ai_sight_range_modifier="0.7" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="0" suppressed="0" name="Tank 122mm" class="0" projectile_speed="200.0" slot="2" barrel_offset="5.3" projectiles_per_shot="1"/>
-	<model />
+	<model/>
 	<hud_icon filename="gkw_v_LM5.png"/>
 	<commonness value="0.0"/>
 	<projectile file="cannon_is2_122mm.projectile">
