@@ -1,107 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapons>
-<weapon file="two_hands_sg.animation_base" key="gkw_saiga12.weapon">
-    <!--Weapon specifications-->
-    <specification 
-	retrigger_time="-1.0" 
-	accuracy_factor="0.9" 
-	sustained_fire_grow_step="2.0" 
-	sustained_fire_diminish_rate="0.75" 
-	magazine_size="10" 
-	can_shoot_standing="1" 
-	suppressed="0" 
-	name="Saiga-12" 
-	class="4" 
-	reload_one_at_a_time="0"
-	sight_range_modifier="1.0" 
-	projectile_speed="100" 
-	barrel_offset="0.5" 
-	projectiles_per_shot="8"
-	burst_shots="1"
-	last_burst_retrigger_time="0.2"
-	spread_range="0.15"
-	 />
-    <inventory encumbrance="10.0" buy_price="60.0" sell_price="60.0" />
-    <next_in_chain key="gkw_saiga12_skill.weapon" share_ammo="1" />
-    <!--Animations-->
-    <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
-    <!--Sounds-->
-    <sound key="fire" fileref="saiga_fire_FromDAYSGONE.wav" pitch_variety="0.05" volume="1.3" />
-    <sound key="magazine_out" fileref="saiga12_mgz_out_FromBF4.wav" volume="0.8" />
-    <sound key="magazine_in" fileref="saiga12_mgz_in_FromBF4.wav" volume="0.8" />
-    <sound key="cycle" fileref="saiga12_cycle_FromEFT.wav" volume="0.8" />
-    <sound class="impact" fileref="rifle_drop.wav" />
-    <!--Model, Icon, Cost-->
-    <model filename="gkw_sg_saiga12.xml" />
-    <hud_icon filename="gkw_saiga12.png" />
-    <!--Ballistics-->
-    <weak_hand_hold offset="0.3" />
-    <projectile file="bullet.projectile">
-        <result class="hit" 
-        kill_probability="2.4" 
-        kill_decay_start_time="0.05" 
-        kill_decay_end_time="0.6" />
-    </projectile>
-    <!--Accuracy, Movement speed-->
-    <stance state_key="running" accuracy="0.6" />
-    <stance state_key="walking" accuracy="0.75" />
-    <stance state_key="crouch_moving" accuracy="0.75" />
-    <stance state_key="prone_moving" accuracy="0.75" />
-    <stance state_key="standing" accuracy="0.8"/>
-    <stance state_key="crouching" accuracy="0.9" />
-    <stance state_key="prone" accuracy="0.8" />
-    <stance state_key="over_wall" accuracy="1.0" />
-</weapon>
-<weapon file="two_hands_sg.animation_base" key="gkw_saiga12_skill.weapon">
-    <!--Weapon specifications-->
-    <specification 
-	retrigger_time="0.1" 
-    last_burst_retrigger_time="0.3"
-	accuracy_factor="0.9" 
-	sustained_fire_grow_step="1.25" 
-	sustained_fire_diminish_rate="0.75" 
-	magazine_size="10" 
-	can_shoot_standing="1" 
-	suppressed="0" 
-	name="Saiga-12-[Big Antelopes Horn]" 
-	class="4" 
-	reload_one_at_a_time="0"
-	sight_range_modifier="0.85" 
-	projectile_speed="100" 
-	barrel_offset="0.5" 
-	projectiles_per_shot="6"
-	burst_shots="3"
-	spread_range="0.2"
-	 />
-    <inventory buy_price="60.0" sell_price="60.0" />
-    <commonness  value="0" in_stock="0" can_respawn_with="1" />
-    <next_in_chain key="gkw_saiga12.weapon" share_ammo="1" />
-    <!--Animations-->
-    <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
-    <!--Sounds-->
-    <sound key="fire" fileref="saiga12_fire_FromEFT.wav" pitch_variety="0.05" volume="1.3" />
-    <sound key="magazine_out" fileref="saiga12_mgz_out_FromBF4.wav" volume="0.8" />
-    <sound key="magazine_in" fileref="saiga12_mgz_in_FromBF4.wav" volume="0.8" />
-    <sound key="cycle" fileref="saiga12_cycle_FromEFT.wav" volume="0.8" />
-    <sound class="impact" fileref="rifle_drop.wav" />
-    <!--Model, Icon, Cost-->
-    <model filename="gkw_sg_saiga12.xml" />
-    <hud_icon filename="gkw_saiga12_skill.png" />
-    <!--Ballistics-->
-    <weak_hand_hold offset="0.3" />
-    <projectile file="bullet.projectile" time_to_live="0.3">
-        <result class="blast" radius="1.5" damage="0.1" push="0.6" decal="1" faction_compare="not_equal"/>
-    </projectile>
-    <modifier class="speed" value="-0.3" />
-    <modifier class="detectability" value="0.35" />
-    <!--Accuracy, Movement speed-->
-    <stance state_key="running" accuracy="0.6" />
-    <stance state_key="walking" accuracy="0.75" />
-    <stance state_key="crouch_moving" accuracy="0.75" />
-    <stance state_key="prone_moving" accuracy="0.75" />
-    <stance state_key="standing" accuracy="0.8"/>
-    <stance state_key="crouching" accuracy="0.9" />
-    <stance state_key="prone" accuracy="0.8" />
-    <stance state_key="over_wall" accuracy="1.0" />
-</weapon>
+    <weapon file="two_hands_sg.animation_base" key="gkw_saiga12.weapon">
+        <!--Weapon specifications-->
+        <specification 
+        retrigger_time="0.2" 
+        accuracy_factor="1.0" 
+        sustained_fire_grow_step="2.0" 
+        sustained_fire_diminish_rate="5.0" 
+        magazine_size="20" 
+        can_shoot_standing="1" 
+        suppressed="0" 
+        name="Saiga-12" 
+        class="0" 
+        reload_one_at_a_time="0"
+        sight_range_modifier="1.0" 
+        projectile_speed="100" 
+        barrel_offset="0.5" 
+        projectiles_per_shot="12"
+        burst_shots="1"
+        spread_range="0.35"
+        />
+        <inventory encumbrance="10.0" buy_price="60.0" sell_price="60.0" />
+        <next_in_chain key="gkw_saiga12_skill.weapon" share_ammo="1" />
+        <!--Animations-->
+        <animation key="reload" animation_key="reloading, magazine rifle 1.5" />
+        <!--Sounds-->
+        <sound key="fire" fileref="saiga_fire_FromDAYSGONE.wav" pitch_variety="0.05" volume="1.3" />
+        <sound key="magazine_out" fileref="saiga12_mgz_out_FromBF4.wav" volume="0.8" />
+        <sound key="magazine_in" fileref="saiga12_mgz_in_FromBF4.wav" volume="0.8" />
+        <sound key="cycle" fileref="saiga12_cycle_FromEFT.wav" volume="0.8" />
+        <sound class="impact" fileref="rifle_drop.wav" />
+        <!--Model, Icon, Cost-->
+        <model filename="gkw_sg_saiga12.xml" />
+        <hud_icon filename="gkw_saiga12.png" />
+        <!--Ballistics-->
+        <weak_hand_hold offset="0.3" />
+        <projectile file="bullet.projectile">
+            <result class="hit" 
+            kill_probability="1.9" 
+            kill_probability_offset_on_successful_hit="0.5"
+            kill_decay_start_time="0.25" 
+            kill_decay_end_time="0.45" />
+        </projectile>
+        <!--Accuracy, Movement speed-->
+        <stance state_key="running" accuracy="0.8" />
+        <stance state_key="walking" accuracy="0.8" />
+        <stance state_key="crouch_moving" accuracy="0.8" />
+        <stance state_key="prone_moving" accuracy="0.8" />
+        <stance state_key="standing" accuracy="0.8"/>
+        <stance state_key="crouching" accuracy="0.9" />
+        <stance state_key="prone" accuracy="0.8" />
+        <stance state_key="over_wall" accuracy="0.8" />
+    </weapon>
+    <weapon file="two_hands_sg.animation_base" key="gkw_saiga12_skill.weapon">
+        <!--Weapon specifications-->
+        <specification 
+        retrigger_time="0.1" 
+        last_burst_retrigger_time="0.3"
+        accuracy_factor="1.0" 
+        sustained_fire_grow_step="2.0" 
+        sustained_fire_diminish_rate="10.0"
+        magazine_size="20" 
+        can_shoot_standing="1" 
+        suppressed="0" 
+        name="Saiga-12-[Big Antelopes Horn]" 
+        class="4" 
+        reload_one_at_a_time="0"
+        projectile_speed="100" 
+        barrel_offset="0.5" 
+        projectiles_per_shot="12"
+        burst_shots="3"
+        spread_range="0.2"
+        />
+        <inventory buy_price="60.0" sell_price="60.0" />
+        <commonness  value="0" in_stock="0" can_respawn_with="1" />
+        <next_in_chain key="gkw_saiga12.weapon" share_ammo="1" />
+        <!--Animations-->
+        <animation key="reload" animation_key="reloading, magazine rifle 1.5" />
+        <!--Sounds-->
+        <sound key="fire" fileref="saiga12_fire_FromEFT.wav" pitch_variety="0.05" volume="1.3" />
+        <sound key="magazine_out" fileref="saiga12_mgz_out_FromBF4.wav" volume="0.8" />
+        <sound key="magazine_in" fileref="saiga12_mgz_in_FromBF4.wav" volume="0.8" />
+        <sound key="cycle" fileref="saiga12_cycle_FromEFT.wav" volume="0.8" />
+        <sound class="impact" fileref="rifle_drop.wav" />
+        <!--Model, Icon, Cost-->
+        <model filename="gkw_sg_saiga12.xml" />
+        <hud_icon filename="gkw_saiga12_skill.png" />
+        <!--Ballistics-->
+        <weak_hand_hold offset="0.3" />
+        <projectile file="bullet.projectile">
+            <result class="hit" 
+            kill_probability="1.9" 
+            kill_probability_offset_on_successful_hit="0.5"
+            kill_decay_start_time="0.25" 
+            kill_decay_end_time="0.45" />
+        </projectile>
+        <modifier class="speed" value="-0.1" />
+        <!--Accuracy, Movement speed-->
+        <stance state_key="running" accuracy="0.8" />
+        <stance state_key="walking" accuracy="0.8" />
+        <stance state_key="crouch_moving" accuracy="0.8" />
+        <stance state_key="prone_moving" accuracy="0.8" />
+        <stance state_key="standing" accuracy="0.8"/>
+        <stance state_key="crouching" accuracy="0.9" />
+        <stance state_key="prone" accuracy="0.8" />
+        <stance state_key="over_wall" accuracy="0.8" />
+    </weapon>
 </weapons>
