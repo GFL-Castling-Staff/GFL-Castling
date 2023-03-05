@@ -331,13 +331,6 @@ material pump_flare_03_01 : add_base
         texture_unit{
             texture pump_flare_03_01.png 	
 }}}}
-material wand_smoke : alpha_blend_base
-{   
-    technique{
-    pass{
-        texture_unit{
-            texture wand_smoke.png 	
-}}}}
 material RainbowWave_pass : add_base
 {   
     technique{

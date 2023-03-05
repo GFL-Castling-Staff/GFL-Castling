@@ -318,7 +318,7 @@ particle_system activated_gl_shining_center_2 ： activated_gl_shining_center		/
 	common_up_vector 0 0 1
 	iteration_interval 0.01
 	
-emitter Point
+	emitter Point
 	{
 		angle 0
 		colour 0 0 0 0
@@ -710,6 +710,477 @@ particle_system activated_cannon_flysmoke
 		force_application add
 	}
 }
+
+particle_system general_weapon_result_blast_smoke_expanding				//GL 项目
+{
+	quota 200
+	emit_emitter_quota 50
+	material wand_smoke
+	particle_width 3
+	particle_height 3
+	renderer billboard
+	billboard_type perpendicular_common
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 0 0 1
+	iteration_interval 0
+	emitter Point		
+	{
+		angle 180
+		colour 0 0 0 0
+		direction 0 1 0
+		emission_rate 10
+		position 0 0 0
+		velocity_min 0.00001
+		velocity_max 0.0001
+		time_to_live 0.7
+		duration 0.1
+		emit_emitter tag1
+	}
+	emitter Ring
+	{
+		name tag1
+		angle 180
+		colour 0 0 0 0
+		direction 0 1 0
+		emission_rate 300
+		position 0 2 0
+		velocity 0.001
+		time_to_live 0.4
+		duration 0.1
+		width 14
+		height 14
+		depth 1
+		inner_width 0.8
+		inner_height 0.8
+	}
+	affector Scaler
+	{
+		rate 10
+	}
+		affector Rotator
+	{
+		rotation_speed_range_start	0
+		rotation_speed_range_end	0
+		rotation_range_start	0
+		rotation_range_end	0
+	}
+	affector ColourInterpolator
+	{
+		time0 0
+		colour0 0.5 0.5 0.5 0.3
+		time1 0.5
+		colour1 0.15 0.15 0.15 0.3
+		time2 1
+		colour2 0.15 0.15 0.15 0
+	}
+	affector LinearForce{
+		force_vector 0 0 0
+		force_application add
+	}
+	affector DirectionRandomiser 
+	{
+		randomness 0
+		scope 0
+		keep_velocity false
+	}
+}
+particle_system general_weapon_result_blast_smoke
+{
+	quota 400
+	emit_emitter_quota 50
+	material wand_smoke
+	particle_width 6
+	particle_height 6
+	renderer billboard
+	billboard_type point
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 0 0 1
+	iteration_interval 0
+	emitter Point		
+	{
+		angle 180
+		colour 0 0 0 0
+		direction 0 1 0
+		emission_rate 10
+		position 0 0 0
+		velocity_min 0.00001
+		velocity_max 0.0001
+		time_to_live 1
+		duration 0.1
+		emit_emitter tag1
+	}
+	emitter Ring
+	{
+		name tag1
+		angle 0
+		colour 0 0 0 0
+		direction 0 1 0
+		emission_rate 500
+		position 0 2 0
+		velocity_min 0.5
+		velocity_max 1.5
+		time_to_live 1
+		duration 0.1
+		width 10
+		height 10
+		depth 1
+		inner_width 0.8
+		inner_height 0.8
+	}
+	affector Scaler
+	{
+		rate 5
+	}
+		affector Rotator
+	{
+		rotation_speed_range_start	-90
+		rotation_speed_range_end	90
+		rotation_range_start	0
+		rotation_range_end	180
+	}
+	affector ColourInterpolator
+	{
+		time0 0
+		colour0 0.5 0.5 0.5 0.2
+		time1 0.5
+		colour1 0.35 0.35 0.35 0.3
+		time2 1
+		colour2 0.2 0.2 0.2 0
+	}
+	affector LinearForce{
+		force_vector 0 -3 0
+		force_application add
+	}
+	affector DirectionRandomiser 
+	{
+		randomness 0
+		scope 0
+		keep_velocity false
+	}
+}
+
+particle_system general_weapon_result_blast_ring
+{
+	quota 50
+	material lens_circle_08
+	particle_width 3
+	particle_height 3
+	renderer billboard
+	billboard_type perpendicular_common
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 0 0 1
+	iteration_interval 0.01
+	
+	emitter Point
+	{
+		angle 0
+		colour 0 0 0 0
+		direction 0 1 0
+		emission_rate 30
+		position 0 0.5 0
+		velocity 0.0001
+		time_to_live 0.35
+		duration 0.1
+	}
+	affector Scaler
+	{
+		rate 25
+	}
+		affector Rotator
+	{
+		rotation_speed_range_start	0
+		rotation_speed_range_end	0
+		rotation_range_start	0
+		rotation_range_end	180
+	}
+	affector ColourInterpolator
+	{
+		time0 0
+		colour0 1 0.3 0 1
+		time1 0.5
+		colour1 1 0.3 0 1
+		time2 1
+		colour2 0 0 0 0
+	}
+	affector LinearForce{
+		force_vector 0 0 0
+		force_application add
+	}
+	affector DirectionRandomiser 
+	{
+		randomness 0
+		scope 0
+		keep_velocity false
+	}
+}
+particle_system general_weapon_result_blast_ring_2 : general_weapon_result_blast_ring
+{
+material lens_circle_07
+}
+
+particle_system general_weapon_result_blast_spray_1
+{
+	quota 200
+	material point_hard_edge
+	particle_width 0.25
+	particle_height 1.5
+	renderer billboard
+	billboard_type oriented_self
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 0 0 1
+	iteration_interval 0
+	emitter Point
+	{
+		angle 90
+		colour 1 0.3 0 1
+		direction 0 1 0
+		emission_rate 200
+		position 0 0 0
+		velocity_min 50
+		velocity_max 60
+		time_to_live 0.2
+		duration 0.15
+	}
+	affector Scaler
+	{
+		rate 0
+	}
+		affector Rotator
+	{
+		rotation_speed_range_start	0
+		rotation_speed_range_end	0
+		rotation_range_start	0
+		rotation_range_end	0
+	}
+	affector ColourInterpolator
+	{
+		time0 0
+		colour0 1 0.3 0 1
+		time1 0.7
+		colour1 1 0.3 0 1
+		time2 1
+		colour2 0 0 0 0
+	}
+	affector LinearForce{
+		force_vector 0 0 0
+		force_application add
+	}
+	affector DirectionRandomiser 
+	{
+		randomness 0
+		scope 0
+		keep_velocity false
+	}
+}
+particle_system general_weapon_result_blast_spray_2 : general_weapon_result_blast_spray_1		//top
+{
+	quota 50
+	material point_hard_edge
+	particle_width 0.12
+	particle_height 1
+	renderer billboard
+	billboard_type oriented_self
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 0 0 1
+	iteration_interval 0
+	emitter Point
+	{
+		angle 10
+		colour 1 0.3 0 1
+		direction 0 1 0
+		emission_rate 120
+		position 0 0 0
+		velocity_min 40
+		velocity_max 50
+		time_to_live 0.3
+		duration 0.1
+	}
+}
+
+particle_system general_weapon_result_blast_fire
+{
+	quota 50
+	material fireball_10
+	particle_width 4
+	particle_height 4
+	renderer billboard
+	billboard_type point
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 0 0 1
+	iteration_interval 0
+	
+	emitter Ring
+	{
+		angle 0
+		colour 1 0.8 0.8 1
+		direction 0 1 0
+		emission_rate 80
+		position 0 0 0
+		velocity_min 2
+		velocity_max 4
+		time_to_live 0.6
+		duration 0.1
+		width 2
+		height 2
+		depth 1
+		inner_width 0.5
+		inner_height 0.5
+	}
+	affector Scaler
+	{
+		rate 2.5
+	}
+		affector Rotator
+	{
+		rotation_speed_range_start	-180
+		rotation_speed_range_end	180
+		rotation_range_start	0
+		rotation_range_end	180
+	}
+	affector ColourInterpolator
+	{
+		time0 0
+		colour0 1 0.8 0.8 1
+		time1 0.7
+		colour1 1 0.2 0.2 1
+		time2 1
+		colour2 0 0 0 0
+	}
+	affector LinearForce{
+		force_vector 0 0 0
+		force_application add
+	}
+	affector DirectionRandomiser 
+	{
+		randomness 0
+		scope 0
+		keep_velocity false
+	}
+}
+particle_system general_weapon_result_blast_fire_wave
+{
+	quota 50
+	material qiliu_circle
+	particle_width 5
+	particle_height 5
+	renderer billboard
+	billboard_type perpendicular_common
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 0 0 1
+	iteration_interval 0.01
+	
+	emitter Point
+	{
+		angle 0
+		colour 1 0.3 0 1
+		direction 0 1 0
+		emission_rate 10
+		position 0 1 0
+		velocity_min 0.01
+		velocity_max 0.01
+		time_to_live 0.5
+		duration 0.1
+	}
+	affector Scaler
+	{
+		rate 12
+	}
+		affector Rotator
+	{
+		rotation_speed_range_start	0
+		rotation_speed_range_end	0
+		rotation_range_start	0
+		rotation_range_end	180
+	}
+	affector ColourInterpolator
+	{
+		time0 0
+		colour0 1 0.3 0 1
+		time1 0.7
+		colour1 1 0 0 1
+		time2 1
+		colour2 0 0 0 0
+	}
+	affector LinearForce{
+		force_vector 0 0 0
+		force_application add
+	}
+	affector DirectionRandomiser 
+	{
+		randomness 0
+		scope 0
+		keep_velocity false
+	}
+}
+
+particle_system general_activated_at_smoke_trail
+{
+	quota 500
+	material rx1_smoke
+	particle_width 3
+	particle_height 3
+	renderer billboard
+	billboard_rotation_type vertex
+	iteration_interval 0.01
+	emitter Box
+	{
+		name rx1_linesmoke
+		angle 360
+		colour 1 1 1 0.1
+		direction 0 1 0
+		emission_rate 100
+		position 0 0 0
+		velocity_min 0.1
+		velocity_max 0.3
+		time_to_live 1
+		duration 1.5
+		width 3
+		height 3
+		depth 1
+		
+	}
+	affector Scaler
+	{
+		rate 1
+	}
+		affector Rotator
+	{
+		rotation_speed_range_start	-180
+		rotation_speed_range_end	180
+		rotation_range_start	0
+		rotation_range_end	360
+	}
+	affector ColourFader2
+	{
+		red1 	0
+		green1 	0
+		bule1 	0
+		alpha1 	0.1
+		red2 	-0
+		green2	-0
+		blue2	-0
+		alpha2	-0.3
+		state_change 0.5
+	}
+	affector LinearForce{
+		force_vector 0 0 0
+		force_application add
+	}
+}
 --------------------------------------material-----------------------------------
 material alpha_blend_base{
 	receive_shadows off
@@ -853,4 +1324,39 @@ material rx1_smoke : alpha_blend_base
     pass{
         texture_unit{
             texture rx1_smoke.png 	
+}}}}
+material lens_circle_07 : add_base
+{   
+    technique{
+    pass{
+        texture_unit{
+            texture lens_circle_07.png 	
+}}}}
+material lens_circle_08 : add_base
+{   
+    technique{
+    pass{
+        texture_unit{
+            texture lens_circle_08.png 	
+}}}}
+material point_hard_edge : add_base
+{   
+    technique{
+    pass{
+        texture_unit{
+            texture point_hard_edge.png 	
+}}}}
+material fireball_10 : add_base
+{   
+    technique{
+    pass{
+        texture_unit{
+            texture fireball_10.png 	
+}}}}
+material qiliu_circle : add_base
+{   
+    technique{
+    pass{
+        texture_unit{
+            texture qiliu_circle.png 	
 }}}}

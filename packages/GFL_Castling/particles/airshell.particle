@@ -254,10 +254,3 @@ material point_soft_edge_100 : add_base
         texture_unit{
             texture point_soft_edge_100.png 	
 }}}}
-material rx1_smoke : alpha_blend_base
-{   
-    technique{
-    pass{
-        texture_unit{
-            texture rx1_smoke.png 	
-}}}}
