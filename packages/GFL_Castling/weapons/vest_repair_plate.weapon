@@ -28,15 +28,14 @@
     
     <sound class="impact" fileref="medikit_drop.wav" />    
 
-    <model filename="vest_repair.xml" />
+    <model filename="gki_bulletplate.xml" />
 
-    <capacity value="4" source="rank" source_value="0.0" />
-    <capacity value="6" source="rank" source_value="3.28" />
-    <capacity value="8" source="rank" source_value="33.0" />
+    <capacity value="5" source="rank" source_value="0.0" />
+    <capacity value="8" source="rank" source_value="41.633" />
+    <capacity value="10" source="rank" source_value="302" />
 
-    <hud_icon filename="vest_repair.png" />
-    <commonness value="0.0" can_respawn_with="1" in_stock="1" />
-    <inventory encumbrance="2.5" buy_price="15.0" sell_price="0"/>
-    <modifier class="speed" value="0" />    
-
+    <hud_icon filename="gki_plate.png" />
+    <commonness value="0" can_respawn_with="1" in_stock="1" />
+    <inventory encumbrance="5.0" buy_price="20.0" sell_price="0"/>
+    <modifier class="speed" value="0.1" />
 </weapon>
