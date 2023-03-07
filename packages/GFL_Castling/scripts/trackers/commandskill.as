@@ -1076,7 +1076,7 @@ class CommandSkill : Tracker {
                         playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
                         playSoundAtLocation(m_metagame,"416mod3skill_Fire_FromL4D2.wav",factionid,c_pos,1.0);                      
                     }
-                    if(weaponname=="gkw_xm8.weapon") {
+                    if(weaponname=="gkw_xm8.weapon"||weaponname=="gkw_xm8_5606.weapon") {
                         array<string> Voice={
                             "XM8_ATTACK_JP.wav" 
                         };
@@ -1092,7 +1092,7 @@ class CommandSkill : Tracker {
                         playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
                         playSoundAtLocation(m_metagame,"416mod3skill_Fire_FromL4D2.wav",factionid,c_pos,1.0);                        
                     }
-                    if(weaponname=="gkw_m4sopmodii.weapon"|| weaponname=="gkw_m4sopmodii_531.weapon" || weaponname=="gkw_m4sopmodii_551.weapon" ) {
+                    if(weaponname=="gkw_m4sopmodii.weapon"|| weaponname=="gkw_m4sopmodii_531.weapon" || weaponname=="gkw_m4sopmodii_551.weapon"|| weaponname=="gkw_m4sopmodii_4507.weapon" ) {
                         array<string> Voice={
                             "sopmod1.wav",
                             "sopmod2.wav",
@@ -1144,7 +1144,9 @@ class CommandSkill : Tracker {
                     // _log("AA grenade ar spotted");
                     if(weaponname=="gkw_stg44.weapon") {
                         array<string> Voice={
-                            "STG44_ATTACK_JP.wav"
+                            "STG44_ATTACK_JP.wav",
+                            "STG44_SKILL2_JP.wav",
+                            "STG44_SKILL1_JP.wav"
                         };
                         playSoundAtLocation(m_metagame,"gp25_fire_FromSQUAD.wav",factionid,c_pos,1.0);
                         playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);                        
@@ -1162,6 +1164,15 @@ class CommandSkill : Tracker {
                             "K11_SKILL1_JP.wav",
                             "K11_SKILL2_JP.wav",
                             "K11_SKILL3_JP.wav"
+                        };
+                        playSoundAtLocation(m_metagame,"gp25_fire_FromSQUAD.wav",factionid,c_pos,1.0);
+                        playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);                        
+                    }
+                    if(weaponname=="gkw_56-1type.weapon") {
+                        array<string> Voice={
+                            "56-1type_SKILL1_JP.wav",
+                            "56-1type_SKILL2_JP.wav",
+                            "56-1type_SKILL3_JP.wav"
                         };
                         playSoundAtLocation(m_metagame,"gp25_fire_FromSQUAD.wav",factionid,c_pos,1.0);
                         playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);                        
@@ -1268,21 +1279,7 @@ class CommandSkill : Tracker {
         }
     }
     void excuteM870skill(int characterId,int playerId,SkillModifer@ modifer){
-        bool ExistQueue = false;
-        int j =-1;
-        for (uint i=0;i<SkillArray.length();i++){
-            if (InCooldown(characterId,modifer,SkillArray[i]) && SkillArray[i].m_weapontype=="M870") {
-                ExistQueue=true;
-                j=i;
-            }
-        }
-        if (ExistQueue){
-            dictionary a;
-            a["%time"] = ""+SkillArray[j].m_time;
-            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
-            //_log("skill cooldown" + SkillArray[j].m_time);
-            return;
-        }
+        if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"M870")) return;
         addCooldown("M870",30,characterId,modifer);
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         if (character !is null) {
@@ -1304,21 +1301,7 @@ class CommandSkill : Tracker {
         }
     }
     void excutePP19skill(int characterId,int playerId,SkillModifer@ modifer,bool mod3=false){
-        bool ExistQueue = false;
-        int j=-1;
-        for (uint i=0;i<SkillArray.length();i++){
-            if (InCooldown(characterId,modifer,SkillArray[i],mod3) && SkillArray[i].m_weapontype=="pp19") {
-                ExistQueue=true;
-                j=i;
-            }
-        }
-        if (ExistQueue){
-            dictionary a;
-            a["%time"] = ""+SkillArray[j].m_time;
-            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
-            //_log("skill cooldown" + SkillArray[j].m_time);
-            return;
-        }
+        if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"PP-19")) return;
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         if (character !is null) {
             const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
@@ -1358,7 +1341,7 @@ class CommandSkill : Tracker {
                         CreateProjectile_H(m_metagame,c_pos4,stringToVector3(target),"grenade_pp19_sub.projectile",characterId,factionid,40.0,6.0);
                     }
                     else{
-                        addCooldown("pp19",15,characterId,modifer);
+                        addCooldown("PP-19",15,characterId,modifer);
                         playSoundAtLocation(m_metagame,"grenade_throw1.wav",factionid,c_pos,0.9);
                         CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"grenade_pp19.projectile",characterId,factionid,40.0,6.0);
                     }
@@ -1368,21 +1351,7 @@ class CommandSkill : Tracker {
         }
     }    
     void excuteWerlodskill(int characterId,int playerId,SkillModifer@ modifer,bool mod3=false){
-        bool ExistQueue = false;
-        int j=-1;
-        for (uint i=0;i<SkillArray.length();i++){
-            if (InCooldown(characterId,modifer,SkillArray[i]) && SkillArray[i].m_weapontype=="welrod") {
-                ExistQueue=true;
-                j=i;
-            }
-        }
-        if (ExistQueue){
-            dictionary a;
-            a["%time"] = ""+SkillArray[j].m_time;
-            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
-            //_log("skill cooldown" + SkillArray[j].m_time);
-            return;
-        }
+        if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"WELROD")) return;
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         if (character !is null) {
             const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
@@ -1392,18 +1361,17 @@ class CommandSkill : Tracker {
                     Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
                     int factionid = character.getIntAttribute("faction_id");
                     array<string> Voice={
-                        ""
+                        "WelrodMod_ATTACK_JP.wav",
+                        "WelrodMod_SKILL3_JP.wav",
+                        "WelrodMod_DEFENSE_JP.wav"
                     };
                     playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
                     playAnimationKey(m_metagame,characterId,"throwing, upside",true,true);
                     c_pos = c_pos.add(Vector3(0,1,0));
-
                     Vector3 u_pos = getAimUnitPosition(c_pos,stringToVector3(target),1.2);
                     float ori4 = getAimOrientation4(c_pos,stringToVector3(target));
-
                     spawnVehicle(m_metagame,1,0,u_pos,Orientation(0,1,0,ori4),"gk_werlod_shelter.vehicle");		
-                    addCooldown("welrod",20,characterId,modifer);
-
+                    addCooldown("WELROD",20,characterId,modifer);
                 }
             }
         }   
