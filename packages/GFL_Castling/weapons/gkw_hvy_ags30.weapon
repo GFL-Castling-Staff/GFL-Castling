@@ -8,7 +8,7 @@
 	can_shoot_crouching="1"
 	can_shoot_prone="0"
 	class="4"
-    sight_range_modifier="1.75"
+    sight_range_modifier="1.5"
     slot="0" 
 	magazine_size="30" 
 	name="AGS-30 Atlant" 
@@ -16,7 +16,7 @@
 	retrigger_time="0.15" 
     last_burst_retrigger_time ="0.3"
     burst_shots="3"
-	suppressed="1" 
+	suppressed="0" 
 	sustained_fire_diminish_rate="1.5" 
 	sustained_fire_grow_step="0.7"
     stance_accuracy_rate="0.8"
@@ -44,7 +44,7 @@
     <capacity value="1" source="rank" source_value="10.0"/>
     <weak_hand_hold offset="0.3" />
     <projectile file="30mm_agl_ags.projectile"/>
-    <ballistics curve_height="18.0" near_far_distance="45.0" speed_estimation_near="10.0" speed_estimation_far="16.0" max_speed="150.0" randomness="0.0" tweak_factor="1.55"/>
+    <ballistics curve_height="18.0" near_far_distance="45.0" speed_estimation_near="60.0" speed_estimation_far="120.0" max_speed="150.0" randomness="0.0" tweak_factor="1.55"/>
     <modifier class="speed" value="-0.4"/>
     <modifier class="detectability" value="0.1"/>
     <tag name="bazooka"/>
@@ -63,7 +63,25 @@
     <target_factors tag="shield" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
 </weapon>
 <weapon key="gkw_hvy_ags30_fix.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification accuracy_factor="0.84" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="0" class="4" sight_range_modifier="1.75" slot="0" magazine_size="30" name="AGS-30 Atlant" projectile_speed="120" retrigger_time="0.15" last_burst_retrigger_time="0.25" burst_shots="3" suppressed="1" barrel_offset_3d="0 0.1 1.2" sustained_fire_diminish_rate="1.2" sustained_fire_grow_step="0.8" stance_accuracy_rate="0.8" carry_in_two_hands="0" spread_range="0.064"/>
+	<specification 
+	accuracy_factor="0.84"
+	can_shoot_standing="0"
+	can_shoot_crouching="1"
+	can_shoot_prone="0"
+	class="0"
+	sight_range_modifier="2.5"
+	slot="0"
+	magazine_size="30"
+	name="AGS-30 Atlant"
+	projectile_speed="120"
+	retrigger_time="0.12"
+	suppressed="0"
+	barrel_offset_3d="0 0.1 1.2"
+	sustained_fire_diminish_rate="1.2"
+	sustained_fire_grow_step="0.8"
+	stance_accuracy_rate="0.8"
+	carry_in_two_hands="0"
+	spread_range="0.2"/>
 	<next_in_chain key="gkw_hvy_ags30.weapon" share_ammo="0"/>
 	<inventory encumbrance="50.0" buy_price="450.0" sell_price="450.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
@@ -93,7 +111,7 @@
 	<capacity value="1" source="rank" source_value="10.0"/>
 	<weak_hand_hold offset="0.3"/>
     <projectile file="30mm_agl_ags.projectile" pulldown_in_air="49.0" />
-    <ballistics curve_height="15.0" near_far_distance="0.0" speed_estimation_near="60.0" speed_estimation_far="150.0" max_speed="150.0" randomness="0.0" tweak_factor="1.75"/>
+    <ballistics curve_height="18.0" near_far_distance="0.0" speed_estimation_near="60.0" speed_estimation_far="150.0" max_speed="150.0" randomness="0.0" tweak_factor="1.75"/>
 	<modifier class="speed" value="-2.5"/>
 	<modifier class="detectability" value="0.1"/>
 	<tag name="bazooka"/>

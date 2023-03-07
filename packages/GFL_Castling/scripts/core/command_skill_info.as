@@ -371,6 +371,10 @@ dictionary commandSkillIndex = {
 
         {"gkw_c96mod3.weapon",61},
 
+        {"gkw_hvy_ags30.weapon",62},
+        {"gkw_hvy_ags30_fix.weapon",62},
+
+
         // 下面这行是用来占位的，在这之上添加新的枪和index即可
         {"666",-1}
 };

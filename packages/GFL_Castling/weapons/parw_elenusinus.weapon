@@ -127,7 +127,7 @@
 	projectile_speed="100.0"
 	use_basic_muzzle_smoke_effect="0"
 	barrel_offset_3d="0 0.5 2.3"
-	cooldown_start="1.0"
+	cooldown_start="0.6"
 	cooldown_end="0.0"/>
 	<sound key="fire" fileref="1130_fire_FromSAM3.wav" pitch_variety="0.05" volume="0.8"/>
 	<sound key="magazine_out" fileref="mg_clip_out.wav"/>

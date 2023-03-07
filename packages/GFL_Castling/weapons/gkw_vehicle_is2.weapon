@@ -26,6 +26,8 @@
         </projectile>
         <target_factors tag="" distance="1.0" direction="0.0" squad_command="100.0" base_score="0.5" />
         <target_factors tag="heavy_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="5.0" />
+        <target_factors tag="apc" distance="1.0" direction="0.0" squad_command="1.0" base_score="10.0" />
+        <target_factors tag="tank" distance="1.0" direction="0.0" squad_command="1.0" base_score="10.0" />
         <target_factors tag="light_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0" />
         <target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0" />
         <target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0" />

@@ -204,7 +204,7 @@ class CommandSkill : Tracker {
                 case 18:{excuteAK15MOD3skill(cId,senderId,m_modifer);break;}
                 case 19:{excuteXM8MOD3skill(cId,senderId,m_modifer);break;}
                 case 20:{excuteStg44MOD3skill(cId,senderId,m_modifer);break;}
-                case 21:{excuteWerlodskill(cId,senderId,m_modifer,true);break;}
+                case 21:{excuteWerlodModskill(cId,senderId,m_modifer,true);break;}
                 case 22:{excuteFnFalskill(cId,senderId,m_modifer);break;}
                 case 23:{excuteM4SOPMODIIMOD3skill(cId,senderId,m_modifer);break;}
                 case 24:{excutePPSH41skill(cId,senderId,m_modifer);break;}
@@ -245,6 +245,7 @@ class CommandSkill : Tracker {
                 case 59:{excute64typemod3Skill(cId,senderId,m_modifer);break;}
                 case 60:{excuteZasM21Skill(cId,senderId,m_modifer);break;}
                 case 61:{excuteC96MODSkill(cId,senderId,m_modifer);break;}
+                case 62:{excute_AGS30_Skill(cId,senderId,m_modifer);break;}
 
                 default:
                     break;
@@ -1349,8 +1350,26 @@ class CommandSkill : Tracker {
                 }
             }
         }
-    }    
+    }
     void excuteWerlodskill(int characterId,int playerId,SkillModifer@ modifer,bool mod3=false){
+        if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"WELROD")) return;
+        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+        if (character is null) return;
+        Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
+        int factionid = character.getIntAttribute("faction_id");
+        array<string> Voice={
+            "WelrodMod_ATTACK_JP.wav",
+            "WelrodMod_SKILL3_JP.wav",
+            "WelrodMod_DEFENSE_JP.wav"
+        };
+        playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+        playAnimationKey(m_metagame,characterId,"throwing, upside",true,true);
+        addCooldown("WELROD",20,characterId,modifer);
+        array<const XmlElement@>@ characters = getCharactersNearPosition(m_metagame, c_pos, factionid, 20.0f);
+        if (characters is null) return;
+        GrenadeSupplyGroup(m_metagame,characters,2);
+    }
+    void excuteWerlodModskill(int characterId,int playerId,SkillModifer@ modifer,bool mod3=false){
         if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"WELROD")) return;
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         if (character !is null) {
@@ -1368,7 +1387,7 @@ class CommandSkill : Tracker {
                     playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
                     playAnimationKey(m_metagame,characterId,"throwing, upside",true,true);
                     c_pos = c_pos.add(Vector3(0,1,0));
-                    Vector3 u_pos = getAimUnitPosition(c_pos,stringToVector3(target),1.2);
+                    Vector3 u_pos = getAimUnitPosition(c_pos,stringToVector3(target),1.5);
                     float ori4 = getAimOrientation4(c_pos,stringToVector3(target));
                     spawnVehicle(m_metagame,1,0,u_pos,Orientation(0,1,0,ori4),"gk_werlod_shelter.vehicle");
                     addCooldown("WELROD",20,characterId,modifer);
@@ -3429,5 +3448,25 @@ class CommandSkill : Tracker {
                 }
             }
         }
-    }        
+    }
+    void excute_AGS30_Skill(int characterId,int playerId,SkillModifer@ modifer){
+        if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"AGS-30")) return;
+        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+        if (character is null) return;
+        const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+        if (player is null) return;
+        if (!player.hasAttribute("aim_target")) return;
+        addCooldown("AGS-30",30,characterId,modifer);
+        string target = player.getStringAttribute("aim_target");
+        Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
+        playSoundAtLocation(m_metagame,"ags30_fire_FromEFT.wav",factionid,c_pos,1.6);
+        int factionid = character.getIntAttribute("faction_id");
+        c_pos=c_pos.add(Vector3(0,1,0));
+        if (checkFlatRange(c_pos,stringToVector3(target),10)){
+            CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"30mm_agl_ags_skill.projectile",characterId,factionid,30);
+        }
+        else{
+            CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"30mm_agl_ags_skill.projectile",characterId,factionid,26.0,10.0);
+        }
+    }    
 }

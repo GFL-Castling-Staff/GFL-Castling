@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<projectile class="grenade" name="30mm" slot="1" pulldown_in_air="26.0" key="30mm_agl_ags_skill.projectile">
+    <tag name="grenade"/>
+    <result class="spawn" instance_class="projectile" instance_key="blast_heavy_rad12_damage10.projectile" min_amount="5" max_amount="5" offset="0 1.0 0" position_spread="0.5 0" direction_spread="0 0" />
+    <trigger class="impact" />
+    <rotation class="motion" />
+    <model mesh_filename="ags30_30mm.xml" />
+
+    <commonness value="0.0" />
+
+    <sound class="result" key="other" fileref="explosion_FromSQUAD_1.wav" volume="2.5" />
+    <sound class="result" key="other" fileref="explosion_FromSQUAD_2.wav" volume="2.5" />
+    <sound class="result" key="other" fileref="explosion_FromSQUAD_3.wav" volume="2.5" />
+
+    <sound class="result" key="vehicle" copy="other" />    
+    <sound class="result" key="vehicle" tag="metal_heavy" fileref="blast_metal_hit_01.wav" pitch_variety="0.2" volume="0.8" />
+    <sound class="result" key="vehicle" tag="metal_heavy" fileref="blast_metal_hit_02.wav" pitch_variety="0.2" volume="0.8" /> 
+    <sound class="result" key="vehicle" tag="metal_heavy" fileref="blast_metal_hit_03.wav" pitch_variety="0.2" volume="0.8" />           
+
+    <sound class="result" key="terrain" copy="other" />
+    <sound class="result" key="static_object" copy="other" />
+    <sound class="result" key="character" copy="other" />
+
+	<effect class="result" key="terrain" ref="real_ground_crater" lighting="1" post_processing="1"/>
+	<effect class="result" key="terrain" ref="real_up_dust_beam" lighting="1" post_processing="0"/>
+	<effect class="result" key="terrain" ref="real_up_dust_spread" lighting="1" post_processing="0"/>
+	<effect class="result" key="terrain" ref="real_up_dust_stone" lighting="1" post_processing="1"/>
+	<effect class="result" key="terrain" ref="real_up_smoke_1" lighting="1" post_processing="0"/>
+	<effect class="result" key="terrain" ref="shadow_real_up_smoke_leave" lighting="1" post_processing="1"/>
+	<effect class="result" key="terrain" ref="shadow_real_up_smoke_leave_2" lighting="1" post_processing="1"/>
+	<effect class="result" key="terrain" ref="real_up_smoke_beam" lighting="1" post_processing="0"/>
+	<effect class="result" key="terrain" ref="real_up_impact_spread" lighting="1" post_processing="0"/>
+	<effect class="result" key="terrain" ref="real_up_impact_spark" lighting="1" post_processing="0"/>
+	<effect class="result" key="terrain" ref="real_up_impact_spark_2" lighting="1" post_processing="0"/>
+	<effect class="result" key="terrain" ref="real_up_impact_spark_1" lighting="1" post_processing="0"/>
+	<effect class="result" key="terrain" ref="real_smoke_1" lighting="1" post_processing="1"/>
+	<effect class="result" key="terrain" ref="real_firesmoke_1" lighting="0" post_processing="0"/>
+	<effect class="result" key="terrain" ref="real_firesmoke_2" lighting="0" post_processing="0"/>
+	<effect class="result" key="terrain" ref="real_center_short_light" lighting="0" post_processing="0"/> 
+	<effect class="result" key="terrain" ref="real_center_ambient_light" lighting="0" post_processing="0"/> 
+	
+	<effect class="result" key="other" copy="terrain"/>
+	<effect class="result" key="static_object" copy="terrain" />
+	<effect class="result" key="character" copy="terrain" />
+	<effect class="result" key="shield" copy="terrain" />			
+	<effect class="result" key="vehicle" copy="terrain" />
+
+    <effect class="activated" ref="Propulsion_gl" />
+   	<effect class="activated" ref="FlareSparkle" post_processing="0" />
+    <effect class="activated" ref="FlareFlash" post_processing="0" />   
+
+</projectile>
