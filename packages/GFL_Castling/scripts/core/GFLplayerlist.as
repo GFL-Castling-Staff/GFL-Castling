@@ -137,10 +137,38 @@ int getPlayerCidFromList(int playerid) {
     return -1;
 }
 
+bool checkCharacterIdisPlayerOwn(int cid) {
+    if(GFL_playerlist_array.length()>0){
+        for(uint i=0;i<GFL_playerlist_array.length();i++){
+            if(GFL_playerlist_array[i].m_characterid == cid)
+                return true;
+        }
+    }
+    return false;
+}
+
 string getPlayerWeaponFromList(int playerid, int weaponnum) {
     if(GFL_playerlist_array.length()>0){
         for(uint i=0;i<GFL_playerlist_array.length();i++){
             if(GFL_playerlist_array[i].m_playerid == playerid){
+                switch(weaponnum){
+                    case 0:{return GFL_playerlist_array[i].m_weapon1key;}
+                    case 1:{return GFL_playerlist_array[i].m_weapon2key;}
+                    case 2:{return GFL_playerlist_array[i].m_weapon3key;}
+                    case 3:{return GFL_playerlist_array[i].m_vestkey;}
+                    case 4:{return GFL_playerlist_array[i].m_itemkey;}
+                    default:{return "-nan-";}
+                }
+            }
+        }
+    }
+    return "-nan-";
+}
+
+string getCharacterWeaponFromList(int characterId, int weaponnum) {
+    if(GFL_playerlist_array.length()>0){
+        for(uint i=0;i<GFL_playerlist_array.length();i++){
+            if(GFL_playerlist_array[i].m_characterid == characterId){
                 switch(weaponnum){
                     case 0:{return GFL_playerlist_array[i].m_weapon1key;}
                     case 1:{return GFL_playerlist_array[i].m_weapon2key;}

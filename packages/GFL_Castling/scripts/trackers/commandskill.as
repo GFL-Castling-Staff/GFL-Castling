@@ -1370,8 +1370,12 @@ class CommandSkill : Tracker {
                     c_pos = c_pos.add(Vector3(0,1,0));
                     Vector3 u_pos = getAimUnitPosition(c_pos,stringToVector3(target),1.2);
                     float ori4 = getAimOrientation4(c_pos,stringToVector3(target));
-                    spawnVehicle(m_metagame,1,0,u_pos,Orientation(0,1,0,ori4),"gk_werlod_shelter.vehicle");		
+                    spawnVehicle(m_metagame,1,0,u_pos,Orientation(0,1,0,ori4),"gk_werlod_shelter.vehicle");
                     addCooldown("WELROD",20,characterId,modifer);
+
+                    array<const XmlElement@>@ characters = getCharactersNearPosition(m_metagame, c_pos, factionid, 20.0f);
+                    if (characters is null) return;
+                    GrenadeSupplyGroup(m_metagame,characters,2);
                 }
             }
         }   

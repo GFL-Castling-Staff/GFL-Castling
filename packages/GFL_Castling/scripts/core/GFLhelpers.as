@@ -831,3 +831,52 @@ void setSpawnScore(Metagame@ metagame,int fId,string name,float spawnScore)
 	command.setFloatAttribute("spawn_score", spawnScore);
 	metagame.getComms().send(command);
 }
+
+void addItemToGrenadeSlot(Metagame@ metagame,int cid,uint num,string m_key,string m_type="projectile")
+{
+	XmlElement c ("command");
+	c.setStringAttribute("class", "update_inventory");
+	c.setIntAttribute("container_type_id",4);
+	c.setIntAttribute("character_id", cid); 
+	c.setIntAttribute("add",1);
+	XmlElement k("item");
+	k.setStringAttribute("class", m_type);
+	k.setStringAttribute("key", m_key);
+	for(uint i=0;i<num;i++){
+		c.appendChild(k);
+	}
+	metagame.getComms().send(c);
+}
+
+void deleteItemToGrenadeSlot(Metagame@ metagame,int cid,uint num,string m_key,string m_type="projectile")
+{
+	XmlElement c ("command");
+	c.setStringAttribute("class", "update_inventory");
+	c.setIntAttribute("container_type_id",4);
+	c.setIntAttribute("character_id", cid); 
+	c.setIntAttribute("add",0);
+	XmlElement k("item");
+	k.setStringAttribute("class", m_type);
+	k.setStringAttribute("key", m_key);
+	for(uint i=0;i<num;i++){
+		c.appendChild(k);
+	}
+	metagame.getComms().send(c);
+}
+
+void GrenadeSupply(Metagame@ metagame,int cid,uint num,string m_key,string m_type="projectile")
+{
+	if(resupply_grenade_list.find(m_key)==-1) return;
+	addItemToGrenadeSlot(metagame,cid,num,m_key,m_type);
+}
+
+void GrenadeSupplyGroup(Metagame@ metagame,array<const XmlElement@>@ characters,uint num,string m_type="projectile")
+{
+	for (uint i = 0; i < characters.length(); i++) {
+		int luckyhealguyid = characters[i].getIntAttribute("id");
+		if (!checkCharacterIdisPlayerOwn(luckyhealguyid)) continue;
+		string key = getCharacterWeaponFromList(luckyhealguyid,2);
+		if(key == "-nan-") continue;
+		GrenadeSupply(metagame,luckyhealguyid,num,key,m_type);
+	}
+}

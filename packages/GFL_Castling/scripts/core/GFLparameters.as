@@ -66,8 +66,16 @@
 
             // 下面这行是用来占位的，在这之上添加新的即可
             {"666",-1}
-    };    
+    };
 
+    array<string> resupply_grenade_list = {
+        "hand_grenade.projectile",
+        "hand_88grenade.projectile",
+        "hand_atgrenade.projectile",
+        "hand_golyat.throwable",
+        "hand_golyat_b.throwable",
+        "c4.projectile"
+    };
 
 // parameters for "ItemDropEvent.as":
 
