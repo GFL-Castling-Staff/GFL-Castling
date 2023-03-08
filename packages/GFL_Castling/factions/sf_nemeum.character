@@ -6,4 +6,7 @@
 	<parameter class="running_steer_amount" value="0.31" /> 
 	<parameter class="crouch_walking_steer_amount" value="0.31" />
 	<parameter class="crouch_walking_doing_something_steer_amount" value="0.31" />
+	<sound key="death" fileref="kill_sound_mechabot_01.wav" volume="0.5" pitch_variety="0.025" />
+	<sound key="death" fileref="kill_sound_mechabot_02.wav" volume="0.5" pitch_variety="0.025" />
+	<sound key="death" fileref="kill_sound_mechabot_03.wav" volume="0.5" pitch_variety="0.025" />
 </character>

@@ -4,7 +4,7 @@
 	
 	<parameter class="can_use_vehicles" value="0" /> 
 
-	<sound key="death" fileref="qwd_die.wav" volume="0.8" />
-	<sound key="footstep" fileref="qwd_walk1.wav" volume="0.9" />
-
+	<sound key="death" fileref="kill_sound_mechabot_01.wav" volume="0.5" pitch_variety="0.025" />
+	<sound key="death" fileref="kill_sound_mechabot_02.wav" volume="0.5" pitch_variety="0.025" />
+	<sound key="death" fileref="kill_sound_mechabot_03.wav" volume="0.5" pitch_variety="0.025" />
 </character>

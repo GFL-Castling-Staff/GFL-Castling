@@ -3,4 +3,7 @@
 	<tag name="meat_man" />
 	<parameter class="walking_steer_amount" value="0.4" />
 	<parameter class="running_steer_amount" value="0.4" />
+	<sound key="death" fileref="kill_sound_kcco_bot01.wav" volume="0.50" pitch_variety="0.025" />
+    <sound key="death" fileref="kill_sound_kcco_bot02.wav" volume="0.50" pitch_variety="0.025"/>
+    <sound key="death" fileref="kill_sound_kcco_bot03.wav" volume="0.50" pitch_variety="0.025"/>
 </character>

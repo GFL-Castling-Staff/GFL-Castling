@@ -3,8 +3,14 @@
 	<parameter class="walking_steer_amount" value="0.45" />
 	<parameter class="running_steer_amount" value="0.45" />
 
-	<sound key="footstep" fileref="qwd_walk1.wav" volume="1.2" />
-	<sound key="death" fileref="qwd_die.wav" volume="0.8" />
+	<sound key="death" fileref="kill_sound_mechabot_big_01.wav" volume="0.7" pitch_variety="0.025" />
+	<sound key="death" fileref="kill_sound_mechabot_big_02.wav" volume="0.7" pitch_variety="0.025" />
+	<sound key="death" fileref="kill_sound_mechabot_big_03.wav" volume="0.7" pitch_variety="0.025" />
+	<sound key="footstep" fileref="step_sound_mecha_small_01.wav" volume="0.9" />
+	<sound key="footstep" fileref="step_sound_mecha_small_02.wav" volume="0.9" />
+	<sound key="footstep" fileref="step_sound_mecha_small_03.wav" volume="0.9" />
+	<sound key="footstep" fileref="step_sound_mecha_small_04.wav" volume="0.9" />
+
 
 	<parameter class="throwing_self_over_initial_bounce" value="0.15" />
 	<parameter class="throwing_self_over_steer_amount" value="0.30" />

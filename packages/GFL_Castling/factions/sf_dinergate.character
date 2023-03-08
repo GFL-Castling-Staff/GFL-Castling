@@ -29,7 +29,9 @@
 
 	<parameter class="climbing_end_height_offset" value="0.25" />
 	<parameter class="climbing_with_jump_end_height_offset" value="0.25" />
-
+	<sound key="death" fileref="kill_sound_mechabot_01.wav" volume="0.5" pitch_variety="0.025" />
+	<sound key="death" fileref="kill_sound_mechabot_02.wav" volume="0.5" pitch_variety="0.025" />
+	<sound key="death" fileref="kill_sound_mechabot_03.wav" volume="0.5" pitch_variety="0.025" />
 	<!-- 动作定义 -->
 	<animation state_key="hold"  animation_key="still, dinergate" />
 	<animation state_key="hold_on_wall"  animation_key="still, dinergate" />

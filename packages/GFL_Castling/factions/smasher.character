@@ -1,10 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<character filename="default_infected.character">
+<character filename="default_base.character">
 	<tag name="meat_man" />
 
-	<sound key="footstep" fileref="qwd_walk1.wav" volume="0.9" />
-	<sound key="death" fileref="qwd_die.wav" volume="0.8" />
-	
+	<comment key="Open fire" text="!"/>
+	<comment key="Open fire" text="urgh"/>  
+	<comment key="Open fire" text="rawr"/>  
+	<comment key="Open fire" text=""/>
+	<comment key="Open fire" text=">w>!"/>
+	<comment key="enemy seen" text="!" /> 
+	<comment key="enemy seen" text="urgh!" />
+	<comment key="enemy seen" text="rawr!" />   
+    <comment key="enemy seen" text="blya" />  
+	<comment key="enemy seen" text="" />  
+
+	<parameter class="can_use_inventory" value="0" />  
+	<parameter class="can_use_vehicles" value="0" />  
+
+	<sound key="footstep" fileref="step_sound_meatman_big_01.wav" volume="0.9" />	
+	<sound key="footstep" fileref="step_sound_meatman_big_02.wav" volume="0.9" />	
+	<sound key="footstep" fileref="step_sound_meatman_big_03.wav" volume="0.9" />	
+	<sound key="death" fileref="kill_sound_zombie_big_001.wav" volume="0.7" />
+
 	<parameter class="throwing_self_over_initial_bounce" value="0.10" />
 	<parameter class="throwing_self_over_steer_amount" value="0.30" />
 	<parameter class="throwing_self_over_lift_up" value="0.10" />
@@ -25,17 +41,6 @@
 	<parameter class="can_use_vehicles" value="0" />  
 
 	<comment key="enemy seen" text="Chee..ki Bree..ki!" /> 
-
-	<!-- <parameter class="throwing_self_over_initial_bounce" value="0.05" />
-	<parameter class="throwing_self_over_steer_amount" value="0.15" />
-	<parameter class="throwing_self_over_lift_up" value="0.1" />
-    <parameter class="lifting_up_initial_bounce" value="0.2"/>
-    <parameter class="jumping_up_bounce" value="0.2"/>
-
-	<parameter class="ending_climbing_ladder_initial_bounce" value="0.05" />
-	<parameter class="ending_climbing_up_ladder_steer_amount" value="0.25" />
-	<parameter class="climbing_end_height_offset" value="0.05" />
-	<parameter class="climbing_with_jump_end_height_offset" value="0.05" /> -->
 
 	<animation state_key="hold"  animation_key="still_big_unit" />
 	<animation state_key="hold_on_wall"  animation_key="still_big_unit" />

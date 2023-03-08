@@ -11,16 +11,12 @@
     <animation key="crouching forwards" 	target_key="crouching forwards, no weapon, 61" />
     <animation key="change weapon in" target_key="recoil, barf" />
     <animation key="change weapon out" target_key="stabbing, zombie" />
-    <sound key="death" fileref="zomb_die1.wav" volume="0.75" />
-    <sound key="death" fileref="zomb_die2.wav" volume="0.75" />
-    <sound key="death" fileref="zomb_die3.wav" volume="0.75" />
-    <sound key="death" fileref="zomb_die4.wav" volume="0.75" />
-    <sound key="death" fileref="zomb_die5.wav" volume="0.75" />
-    <sound key="death" fileref="zomb_die6.wav" volume="0.75" />
-    <sound key="death" fileref="zomb_die7.wav" volume="0.75" />
-    <sound key="death" fileref="zomb_die8.wav" volume="0.75" />
-    <sound key="death" fileref="zomb_die9.wav" volume="0.75" />
-    <sound key="death" fileref="zomb_die10.wav" volume="0.75" />
+	<sound key="death" fileref="kill_sound_zombie_001.wav" volume="0.5" />
+	<sound key="death" fileref="kill_sound_zombie_002.wav" volume="0.5" />
+	<sound key="death" fileref="kill_sound_zombie_003.wav" volume="0.5" />
+	<sound key="death" fileref="kill_sound_zombie_004.wav" volume="0.5" />
+	<sound key="death" fileref="kill_sound_zombie_005.wav" volume="0.5" />
+	<sound key="death" fileref="kill_sound_zombie_006.wav" volume="0.5" />
     <sound key="stab" fileref="zomb_stab1.wav" volume="0.4" />
     <sound key="stab" fileref="zomb_stab2.wav" volume="0.4" />
     <sound key="stab" fileref="zomb_stab3.wav" volume="0.4" />

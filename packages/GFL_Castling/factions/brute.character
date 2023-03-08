@@ -4,4 +4,5 @@
 	<parameter class="walking_steer_amount" value="0.63" />
 	<parameter class="running_steer_amount" value="0.63" />
 	<parameter class="stopping_velocity_threshold" value="0.05" />
+	<sound key="death" fileref="kill_shot.wav" volume="0.5" pitch_variety="0.025" />
 </character>

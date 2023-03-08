@@ -2,7 +2,7 @@
 <character filename="default_base.character">
 	<tag name="metal_man" />
 
-	<sound key="death" fileref="kill_sound_kcco_qwd01.wav" volume="1.1" />
+	<sound key="death" fileref="kill_sound_kcco_qwd01.wav" volume="0.8" />
 	<sound key="footstep" fileref="qwd_walk1.wav" volume="0.9" />
 	<parameter class="can_use_vehicles" value="0" /> 
 
