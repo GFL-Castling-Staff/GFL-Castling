@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<projectile class="grenade" name="" key="skill_pa15_main.projectile" slot="2" pulldown_in_air="4">
+    <tag name="grenade"/>
+    <result class="notify_script" key="pa15_skill" />
+    <!-- <trigger class="impact">
+        <collider class="character" enabled="1" faction_compare="not_equal"/>
+    </trigger> -->
+
+    <trigger class="time" time_to_live="1.0"/>
+
+    <rotation class="motion" />
+    <model />
+    <commonness value="0.0" />
+    <sound class="result" key="other" fileref="explosion_FromSQUAD_1.wav" volume="2.5" />
+    <sound class="result" key="other" fileref="explosion_FromSQUAD_2.wav" volume="2.5" />
+    <sound class="result" key="other" fileref="explosion_FromSQUAD_3.wav" volume="2.5" />
+    <sound class="result" key="terrain" copy="other" />
+    <sound class="result" key="static_object" copy="other" />
+    <sound class="result" key="character" copy="other" />
+
+    <effect class="result" key="terrain" ref="pa15_result_lens_light" lighting="0"/> 
+    <effect class="result" key="terrain" ref="pa15_result_side_particle" lighting="0"/> 
+    <effect class="result" key="terrain" ref="pa15_result_center_spark" lighting="0"/> 
+    <effect class="result" key="terrain" ref="pa15_result_blast_shine_center_hollow" lighting="0"/> 
+    <effect class="result" key="terrain" ref="pa15_result_blast_shine_particle" lighting="0"/> 
+    
+    <effect class="activated" ref="pa15_activated_ring" lighting="0"/> 
+
+    <effect class="result" key="other" copy="terrain"/>
+    <effect class="result" key="static_object" copy="terrain" />
+    <effect class="result" key="character" copy="terrain" />
+    <effect class="result" key="vehicle" copy="terrain" />
+    <effect class="result" key="shield" copy="terrain" />
+    <effect class="result" key="vehicle" tag="sandbag" copy="terrain" use_surface_color="0" />
+    <effect class="result" key="vehicle" tag="deco_car" copy="terrain" use_surface_color="0" />
+    <effect class="result" key="vehicle" tag="metal_thin" copy="terrain" use_surface_color="0" />
+    <effect class="result" key="vehicle" tag="metal_heavy" copy="terrain" use_surface_color="0" />
+    <effect class="result" key="vehicle" tag="metal_dumpster" copy="terrain" use_surface_color="0" />
+</projectile>

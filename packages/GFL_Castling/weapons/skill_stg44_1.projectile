@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<projectile class="grenade" name="XM8 skillnade" key="skill_stg44_1.projectile" slot="0" radius="0.05">
+<projectile class="grenade" name="G.Pzgr40" key="skill_stg44_1.projectile" slot="0" radius="0.05" pulldown_in_air="-0.5">
 
 
     <result class="blast" radius="14" damage="10.0" push="0.5" decal="1" character_state="death" faction_compare="not_equal" />

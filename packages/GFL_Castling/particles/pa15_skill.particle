@@ -1,0 +1,371 @@
+author: RST
+2023.3.8
+PA15的技能特效
+尾迹和命中
+		<effect class="result" key="terrain" ref="pa15_result_lens_light" lighting="0"/> 
+		<effect class="result" key="terrain" ref="pa15_result_side_particle" lighting="0"/> 
+		<effect class="result" key="terrain" ref="pa15_result_center_spark" lighting="0"/> 
+		<effect class="result" key="terrain" ref="pa15_result_blast_shine_center_hollow" lighting="0"/> 
+		<effect class="result" key="terrain" ref="pa15_result_blast_shine_particle" lighting="0"/> 
+		
+		<effect class="activated" ref="pa15_activated_ring" lighting="0"/> 
+
+        <effect class="result" key="other" copy="terrain"/>
+		<effect class="result" key="static_object" copy="terrain" />
+		<effect class="result" key="character" copy="terrain" />
+		<effect class="result" key="vehicle" copy="terrain" />
+		<effect class="result" key="shield" copy="terrain" />
+		<effect class="result" key="vehicle" tag="sandbag" copy="terrain" use_surface_color="0" />
+		<effect class="result" key="vehicle" tag="deco_car" copy="terrain" use_surface_color="0" />
+		<effect class="result" key="vehicle" tag="metal_thin" copy="terrain" use_surface_color="0" />
+		<effect class="result" key="vehicle" tag="metal_heavy" copy="terrain" use_surface_color="0" />
+		<effect class="result" key="vehicle" tag="metal_dumpster" copy="terrain" use_surface_color="0" />
+
+particle_system pa15_activated_ring   //尾迹环
+{
+	quota 50
+	material lens_circle_03
+	particle_width 2
+	particle_height 4
+	renderer billboard
+	billboard_type point
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 0 0 1
+	iteration_interval 0.01
+	
+	
+	emitter Point
+	{
+		angle 0
+		colour 0 0 0 0
+		direction 0 1 0
+		emission_rate 80
+		position 0 0 0
+		velocity -5
+		time_to_live_min 0.05
+		time_to_live_max 0.05
+		duration 2
+	}
+    affector Scaler
+    {
+        rate -40
+    }
+	affector ColourInterpolator
+	{
+		time0 0
+		colour0 0.5 0.9 1 1
+		time1 0.7
+		colour1 0.5 0.9 1 1
+		time2 1
+		colour2 0 0 0 0
+	}
+}
+
+particle_system pa15_result_lens_light      //命中中心镜头光晕
+{
+	quota 50
+	material lens_light_explosive_pass
+	particle_width 15
+	particle_height 6
+	renderer billboard
+	billboard_type point
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 0 0 1
+	iteration_interval 0
+	
+	emitter Point
+	{
+		angle 0
+		colour 0 0 0 0
+		direction 0 1 0
+		emission_rate 10
+		position 0 0 0
+		velocity 0.0001
+		time_to_live 0.1
+		duration 0.1
+	}
+	affector Scaler
+	{
+		rate 200
+	}
+		affector Rotator
+	{
+		rotation_speed_range_start	0
+		rotation_speed_range_end	0
+		rotation_range_start	60
+		rotation_range_end	60
+	}
+	affector ColourInterpolator
+	{
+		time0 0
+		colour0 0 0.5 1 1
+		time1 0.5
+		colour1 0 0.5 1 1
+		time2 1
+		colour2 0 0 0 0
+	}
+}
+
+particle_system pa15_result_side_particle      //命中两侧飞溅碎片
+{
+	quota 50
+	material pa15_side_shockwave_pass
+	particle_width 6
+	particle_height 6
+	renderer billboard
+	billboard_type point
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 0 0 1
+	iteration_interval 0
+	
+	emitter Point
+	{
+		angle 0
+		colour 0 0 0 0
+		direction 0 1 0
+		emission_rate 10
+		position 0 0 0
+		velocity 0.0001
+		time_to_live 0.2
+		duration 0.1
+	}
+	affector Scaler
+	{
+		rate 60
+	}
+		affector Rotator
+	{
+		rotation_speed_range_start	0
+		rotation_speed_range_end	0
+		rotation_range_start	0
+		rotation_range_end	360
+	}
+	affector ColourInterpolator
+	{
+		time0 0
+		colour0 0 0.5 1 1
+		time1 0.7
+		colour1 0 0.5 1 1
+		time2 1
+		colour2 0 0 0 0
+	}
+}
+particle_system pa15_result_center_spark      //命中中心飞溅火花
+{
+	quota 500
+	material point_hard_edge
+	particle_width 0.1
+	particle_height 0.22
+	renderer billboard
+	billboard_type oriented_self
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 0 0 1
+	iteration_interval 0
+	
+    emitter Point
+	{
+		angle 180
+		colour 0 0 0 0
+		direction 1 0 0
+		emission_rate 100
+		position 0 0 0
+		velocity_min 6
+		velocity_max 9
+		time_to_live 0.5
+		duration 0.1
+	}
+	affector Scaler
+	{
+		rate -0.05
+	}
+	affector ColourInterpolator
+	{
+		time0 0
+		colour0 0 0.3 1 0
+		time1 0.7
+		colour1 0 0.3 1 0
+		time2 1
+		colour2 0 0 0 0
+	}
+	affector LinearForce{
+		force_vector 0 -4 0
+		force_application add
+	}
+	affector DeflectorPlane 
+	{
+		plane_point 0 4 0
+		plane_normal 0 1 0 
+		bounce 0.4
+	}
+}
+
+particle_system pa15_result_blast_shine_center_hollow		//爆炸辉光
+{
+	quota 1000
+	material hollow_blast_smoke_01
+	particle_width 0.1
+	particle_height 0.1
+	renderer billboard
+	billboard_rotation_type vertex
+	billboard_type point
+	
+	emitter Point
+	{
+		angle 0
+		colour 0 0 0 0
+		direction 0 1 0
+		emission_rate 30
+		position 0 0 0
+		velocity 0
+		time_to_live 0.2
+		duration 0.05
+	}
+	affector ColourInterpolator
+	{
+		time0 0
+		colour0 0 0.3 1 0
+		time1 0.7
+		colour1 0 0.3 1 0
+		time2 1
+		colour2 0 0 0 0
+	}
+	affector Scaler
+	{
+		rate 60
+	}
+	affector Rotator
+	{
+		rotation_speed_range_start -60
+		rotation_speed_range_end 60
+		rotation_range_start 0
+		rotation_range_end 360
+	}
+}
+particle_system pa15_result_blast_shine_particle		//爆炸碎片
+{
+	quota 1000
+	material bao_7_7_bw
+	particle_width 3
+	particle_height 3
+	renderer billboard
+	billboard_rotation_type vertex
+	billboard_type point
+	
+	emitter Point
+	{
+		angle 0
+		colour 0 0 0 0
+		direction 0 1 0
+		emission_rate 30
+		position 0 0 0
+		velocity 0
+		time_to_live 0.3
+		duration 0.05
+	}
+	affector ColourInterpolator
+	{
+		time0 0
+		colour0 0 0.3 1 0
+		time1 0.7
+		colour1 0 0.3 1 0
+		time2 1
+		colour2 0 0 0 0
+	}
+	affector Scaler
+	{
+		rate 10
+	}
+	affector Rotator
+	{
+		rotation_speed_range_start -60
+		rotation_speed_range_end 60
+		rotation_range_start 0
+		rotation_range_end 360
+	}
+}
+
+
+--------------------------------------material-----------------------------------
+material alpha_blend_base{
+	receive_shadows off
+	technique{
+		pass{
+			lighting off
+			fog_override true
+			depth_write off
+			scene_blend alpha_blend
+		}
+	}
+}
+
+material add_base{
+	receive_shadows off
+	technique{
+		pass{
+			lighting off
+			fog_override true
+			depth_write off
+			scene_blend add
+		}
+	}
+}
+
+material hollow_blast_smoke_01 : add_base
+{   
+    technique{
+    pass{
+        texture_unit{
+            texture hollow_blast_smoke_01.png 	
+}}}}
+material point_hard_edge : add_base
+{   
+    technique{
+    pass{
+        texture_unit{
+            texture point_hard_edge.png 	
+}}}}
+material lens_circle_03 : add_base
+{   
+    technique{
+    pass{
+        texture_unit{
+            texture lens_circle_03.png 	
+}}}}
+material lens_light_explosive_pass : add_base
+{   
+    technique{
+    pass{
+        depth_func always_pass
+        texture_unit{
+            texture lens_light_explosive.png 	
+}}}}
+material splash_anim_a_3 : add_base
+{   
+    technique{
+    pass{
+        texture_unit{
+            texture splash_anim_a_3.png 	
+}}}}
+material pa15_side_shockwave_pass : add_base
+{   
+    technique{
+    pass{
+        depth_func always_pass
+        texture_unit{
+            texture pa15_side_shockwave.png 	
+}}}}
+material bao_7_7_bw : add_base
+{   
+    technique{
+    pass{
+        texture_unit{
+            texture bao_7_7_bw.png 	
+}}}}

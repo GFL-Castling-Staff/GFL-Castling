@@ -249,6 +249,8 @@ class CommandSkill : Tracker {
                 case 63:{excute_QLZ04_Skill_Smoke(cId,senderId,m_modifer);break;}
                 case 64:{excute_QLZ04_Skill_Fire(cId,senderId,m_modifer);break;}
                 case 65:{excuteWerlodskill(cId,senderId,m_modifer);break;}
+                case 66:{excutePA15skill(cId,senderId,m_modifer);break;}
+                
 
                 default:
                     break;
@@ -3415,20 +3417,7 @@ class CommandSkill : Tracker {
         }
     }
     void excuteC96MODSkill(int characterId,int playerId,SkillModifer@ modifer){
-        bool ExistQueue = false;
-        int j=-1;
-        for (uint i=0;i<SkillArray.length();i++){
-            if (InCooldown(characterId,modifer,SkillArray[i]) && SkillArray[i].m_weapontype=="C96") {
-                ExistQueue=true;
-                j=i;
-            }
-        }
-        if (ExistQueue){
-            dictionary a;
-            a["%time"] = ""+SkillArray[j].m_time;
-            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
-            return;
-        }
+        if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"C96")) return;
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         if (character !is null) {
             const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
@@ -3440,7 +3429,9 @@ class CommandSkill : Tracker {
                     aim_pos = aim_pos.add(Vector3(0,12,0));
                     int factionid = character.getIntAttribute("faction_id");
                     array<string> Voice={
-                        "64typeMod_SKILL1_JP.wav"
+                        "C96Mod_SKILL1_JP.wav",
+                        "C96Mod_SKILL2_JP.wav",
+                        "C96Mod_SKILL3_JP.wav"
                     };
                     playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
                     playAnimationKey(m_metagame,characterId,"air thrust",false,false);
@@ -3530,4 +3521,32 @@ class CommandSkill : Tracker {
             CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"firenade_qlz04.projectile",characterId,factionid,35.0,8.0);
         }
     }
+    void excutePA15skill(int characterId,int playerId,SkillModifer@ modifer){
+        if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"PA15")) return;
+        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+        if (character !is null) {
+            const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+            if (player !is null){
+                if (player.hasAttribute("aim_target")) {
+                    string target = player.getStringAttribute("aim_target");
+                    Vector3 aim_pos = stringToVector3(target);
+                    Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
+                    aim_pos = aim_pos.add(Vector3(0,2.0,0));
+                    int factionid = character.getIntAttribute("faction_id");
+                    array<string> Voice={
+                        "PA15_SKILL1_JP.wav",
+                        "PA15_SKILL3_JP.wav",
+                        "PA15_ATTACK_JP.wav",
+                        "PA15_GOATTACK_JP.wav"
+                    };
+                    playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+                    playAnimationKey(m_metagame,characterId,"recoil, revolver",false,false);
+                    playSoundAtLocation(m_metagame,"grenade_throw1.wav",factionid,c_pos,1.0);
+                    c_pos=c_pos.add(Vector3(0,1.8,0));
+                    CreateDirectProjectile_T(m_metagame,c_pos,aim_pos,"Nytoportal_fire_FromCOD13.projectile",characterId,factionid,1.0);
+                    addCooldown("PA15",20,characterId,modifer);
+                }
+            }
+        }
+    }    
 }
