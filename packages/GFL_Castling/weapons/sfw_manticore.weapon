@@ -3,8 +3,7 @@
 	<tag name="mecha" />
 	<tag name="antiarmor" />
 	<tag name="metal_heavy" />
-
-    <specification 
+	<specification 
 	retrigger_time="0.5" 
 	accuracy_factor="0.75" 
 	  sustained_fire_grow_step="1.0" 
@@ -24,31 +23,27 @@
 	  barrel_offset="0.5"
 	  burst_shots="3"/>
 	  />
-
-	  <animation state_key="recoil"	animation_key="recoil 3, hydra and manticore" />
-	  <animation state_key="recoil" stance_key="prone" animation_key="recoil 3, hydra and manticore" />
-	  <animation state_key="recoil" stance_key="over_wall" animation_key="recoil 3, hydra and manticore" />.	
-	  <animation state_key="hold" animation_key="still 1, hydra and manticore" />
-	  <animation state_key="hold_on_wall" animation_key="still 1, hydra and manticore" />
-	  <animation state_key="hold_casual" animation_key="still 1, hydra and manticore" />
-      <animation state_key="still_against_wall" animation_key="still, hydra and manticore" />
-	  <animation state_key="walking" animation_key="walking 1, hydra and manticore" />
-	  <animation state_key="running" animation_key="running 1, hydra and manticore" />
-	  <animation state_key="crouching" animation_key="still 1, hydra and manticore" />
-	  <animation state_key="crouch_moving"		animation_key="walking 1, hydra and manticore" />
-	  <animation state_key="crouch_moving_backwards"	animation_key="walking 1, hydra and manticore" />
-	  <animation state_key="reload" animation_key="reload, hydra and manticore" />
-	  <animation key="stabbing" animation_key="stabbing, hydra and manticore" />
-	
-    <sound key="fire" fileref="Manticore_fire_FromSQUAD.wav" volume="1.8" />
-	<sound key="magazine_out" fileref="qwd_re.wav" volume="0.7"/> 
-    <sound key="cycle" fileref="mossberg500_cycle.wav" />
-    <sound key="reload_one" fileref="mossberg500_reload.wav" />
-    <sound class="impact" fileref="rifle_drop.wav" />
-    <model filename="" />
-
-    <hud_icon filename="sfw_manticore.png" />
-
+	<animation state_key="recoil"	animation_key="recoil 3, hydra and manticore" />
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil 3, hydra and manticore" />
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil 3, hydra and manticore" />.
+	<animation state_key="hold" animation_key="still 1, hydra and manticore" />
+	<animation state_key="hold_on_wall" animation_key="still 1, hydra and manticore" />
+	<animation state_key="hold_casual" animation_key="still 1, hydra and manticore" />
+	<animation state_key="still_against_wall" animation_key="still, hydra and manticore" />
+	<animation state_key="walking" animation_key="walking 1, hydra and manticore" />
+	<animation state_key="running" animation_key="running 1, hydra and manticore" />
+	<animation state_key="crouching" animation_key="still 1, hydra and manticore" />
+	<animation state_key="crouch_moving"		animation_key="walking 1, hydra and manticore" />
+	<animation state_key="crouch_moving_backwards"	animation_key="walking 1, hydra and manticore" />
+	<animation state_key="reload" animation_key="reload, hydra and manticore" />
+	<animation key="stabbing" animation_key="stabbing, hydra and manticore" />
+	<sound key="fire" fileref="Manticore_fire_FromSQUAD.wav" volume="1.8" />
+	<sound key="magazine_out" fileref="qwd_re.wav" volume="0.7"/>
+	<sound key="cycle" fileref="mossberg500_cycle.wav" />
+	<sound key="reload_one" fileref="mossberg500_reload.wav" />
+	<sound class="impact" fileref="rifle_drop.wav" />
+	<model filename="" />
+	<hud_icon filename="sfw_manticore.png" />
 	<shield offset="2.7 3.0 1.5" extent="0.3 5.0 4.0" usable_for_cover="0"/>
 	<!-- state modifiers for weapons are connected to shield impact events -->
 	<!-- deflects all bullets; death, stun, wound become none, doesn't consume -->
@@ -59,13 +54,11 @@
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0" />
 	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
 	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
-
-
-    <capacity value="1" source="rank" source_value="0.0" />
-
-    <projectile file="qwd.projectile">
+	<capacity value="1" source="rank" source_value="0.0" />
+	<projectile file="qwd.projectile">
     </projectile>
-    
+	<effect class="muzzle" ref="muzzle_cannon_fire_smoke" lighting="0"/> 
+	<effect class="muzzle" ref="muzzle_cannon_fire_light" lighting="0"/>
 	<stance state_key="running" accuracy="0.8" />
 	<stance state_key="walking" accuracy="0.8" />
 	<stance state_key="crouch_moving" accuracy="0.75" />
@@ -73,5 +66,5 @@
 	<stance state_key="standing" accuracy="0.8" />
 	<stance state_key="crouching" accuracy="0.85" />
 	<stance state_key="prone" accuracy="0.94" />
-    <modifier class="speed" value="-0.6" />    
+	<modifier class="speed" value="-0.6" />
 </weapon>

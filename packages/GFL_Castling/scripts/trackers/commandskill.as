@@ -248,6 +248,7 @@ class CommandSkill : Tracker {
                 case 62:{excute_AGS30_Skill(cId,senderId,m_modifer);break;}
                 case 63:{excute_QLZ04_Skill_Smoke(cId,senderId,m_modifer);break;}
                 case 64:{excute_QLZ04_Skill_Fire(cId,senderId,m_modifer);break;}
+                case 65:{excuteWerlodskill(cId,senderId,m_modifer);break;}
 
                 default:
                     break;
@@ -2245,7 +2246,7 @@ class CommandSkill : Tracker {
                             "SAF_SKILL3_JP.wav"
                         };
                         playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);                        
-                        playSoundAtLocation(m_metagame,"grenade_throw1.wav",factionid,c_pos,1.2);
+                        playSoundAtLocation(m_metagame,"grenade_throw1.wav",factionid,c_pos,1.4);
                         addCooldown("Grenade",15,characterId,modifer);
                         playAnimationKey(m_metagame,characterId,"throwing, upside",true,true);
                         c_pos=c_pos.add(Vector3(0,1,0));
@@ -3460,10 +3461,11 @@ class CommandSkill : Tracker {
         if (!player.hasAttribute("aim_target")) return;
         addCooldown("AGS-30",30,characterId,modifer);
         string target = player.getStringAttribute("aim_target");
+        int factionid = character.getIntAttribute("faction_id");
         Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
         playSoundAtLocation(m_metagame,"ags30_fire_FromEFT.wav",factionid,c_pos,1.6);
-        int factionid = character.getIntAttribute("faction_id");
         c_pos=c_pos.add(Vector3(0,1,0));
+        c_pos = getAimUnitPosition(c_pos,stringToVector3(target),0.8);
         if (checkFlatRange(c_pos,stringToVector3(target),10)){
             CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"30mm_agl_ags_skill.projectile",characterId,factionid,30);
         }
@@ -3498,10 +3500,11 @@ class CommandSkill : Tracker {
                         addCooldown("QLZ04",20,characterId,modifer,"constant"); 
                     }
                     string target = player.getStringAttribute("aim_target");
-                    playSoundAtLocation(m_metagame,"ags30_fire_FromEFT.wav",factionid,c_pos,1.6);
                     Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
                     int factionid = character.getIntAttribute("faction_id");
-                    c_pos=c_pos.add(Vector3(0,1.8,0));
+                    playSoundAtLocation(m_metagame,"ags30_fire_FromEFT.wav",factionid,c_pos,1.6);
+                    c_pos=c_pos.add(Vector3(0,1.0,0));
+                    c_pos = getAimUnitPosition(c_pos,stringToVector3(target),1.0);
                     CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"smoke_grenade.projectile",characterId,factionid,30.0,5.0);
                 }
             }
@@ -3517,9 +3520,9 @@ class CommandSkill : Tracker {
         addCooldown("QLZ04_FIRE",20,characterId,modifer);
         string target = player.getStringAttribute("aim_target");
         Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
-        playSoundAtLocation(m_metagame,"ags30_fire_FromEFT.wav",factionid,c_pos,1.6);
         int factionid = character.getIntAttribute("faction_id");
-        c_pos=c_pos.add(Vector3(0,1,0));
+        playSoundAtLocation(m_metagame,"ags30_fire_FromEFT.wav",factionid,c_pos,1.6);
+        c_pos=c_pos.add(Vector3(0,1.8,0));
         if (checkFlatRange(c_pos,stringToVector3(target),16)){
             CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"firenade_qlz04.projectile",characterId,factionid,30);
         }
