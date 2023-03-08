@@ -2,15 +2,15 @@
 <character filename="kcco.text_lines">
 	<tag name="metal_man" />
 
-	<sound key="death" fileref="kill_sound_mechabot_big_01.wav" volume="0.7" pitch_variety="0.025" />
-	<sound key="death" fileref="kill_sound_mechabot_big_02.wav" volume="0.7" pitch_variety="0.025" />
-	<sound key="death" fileref="kill_sound_mechabot_big_03.wav" volume="0.7" pitch_variety="0.025" />
-	<sound key="footstep" fileref="step_sound_mecha_medium_01.wav" volume="0.9" />
-	<sound key="footstep" fileref="step_sound_mecha_medium_02.wav" volume="0.9" />
-	<sound key="footstep" fileref="step_sound_mecha_medium_03.wav" volume="0.9" />
-	<sound key="footstep" fileref="step_sound_mecha_medium_04.wav" volume="0.9" />
-	<sound key="footstep" fileref="step_sound_mecha_medium_05.wav" volume="0.9" />
-	<sound key="footstep" fileref="step_sound_mecha_medium_06.wav" volume="0.9" />
+	<sound key="death" fileref="kill_sound_mechabot_big_01.wav" volume="0.5" pitch_variety="0.025" />
+	<sound key="death" fileref="kill_sound_mechabot_big_02.wav" volume="0.5" pitch_variety="0.025" />
+	<sound key="death" fileref="kill_sound_mechabot_big_03.wav" volume="0.5" pitch_variety="0.025" />
+	<sound key="footstep" fileref="step_sound_mecha_medium_01.wav" volume="1.4" />
+	<sound key="footstep" fileref="step_sound_mecha_medium_02.wav" volume="1.4" />
+	<sound key="footstep" fileref="step_sound_mecha_medium_03.wav" volume="1.4" />
+	<sound key="footstep" fileref="step_sound_mecha_medium_04.wav" volume="1.4" />
+	<sound key="footstep" fileref="step_sound_mecha_medium_05.wav" volume="1.4" />
+	<sound key="footstep" fileref="step_sound_mecha_medium_06.wav" volume="1.4" />
 
 	<parameter class="throwing_self_over_initial_bounce" value="0.10" />
 	<parameter class="throwing_self_over_steer_amount" value="0.30" />

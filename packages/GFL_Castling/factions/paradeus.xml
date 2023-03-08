@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- https://iopwiki.com/wiki/Enemy_Index -->
 <faction name="Paradeus" color="1 1 1" firstnames_file="Paradeus_first.name" lastnames_file="Paradeus_last.name" chat_icon_filename="par_chat_soldier.png" chat_icon_commander_filename="par_chat_commander.png" chat_icon_filename_supporter="par_chat_soldier_s.png" campaign_completion_icon_filename="campaign_win_gk.png" radio_queue_size="3">
 	<rank xp="0" name="10">
 		<hud_icon filename="lv_000.png" />
@@ -413,6 +412,11 @@
 	</soldier>
 	<soldier name="para_strelet" spawn_score="4.0" squad_size_xp_cap="0.5" copy_from="default_ai">
 		<ai filename="default.ai" />
+		<character filename="paradeus.text_lines">
+			<sound key="death" fileref="kill_sound_kcco_bot01.wav" volume="0.50" pitch_variety="0.025"/>
+			<sound key="death" fileref="kill_sound_kcco_bot02.wav" volume="0.50" pitch_variety="0.025"/>
+			<sound key="death" fileref="kill_sound_kcco_bot03.wav" volume="0.50" pitch_variety="0.025"/>
+		</character>
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="parw_strelet.weapon" enabled="1" />
 			<carry_item key="pard_ar.carry_item" />
@@ -426,6 +430,11 @@
 	<soldier name="para_streletplus" spawn_score="2.0" squad_size_xp_cap="0.5" copy_from="default_ai">
 		<model filename="pard_stretletplus_neo.xml" />
 		<ai filename="pard_streletplus.ai" />
+		<character filename="paradeus.text_lines">
+			<sound key="death" fileref="kill_sound_kcco_bot01.wav" volume="0.50" pitch_variety="0.025"/>
+			<sound key="death" fileref="kill_sound_kcco_bot02.wav" volume="0.50" pitch_variety="0.025"/>
+			<sound key="death" fileref="kill_sound_kcco_bot03.wav" volume="0.50" pitch_variety="0.025"/>
+		</character>
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="parw_streletplus.weapon" enabled="1" />
 			<weapon key="par_deploy_compass.weapon" enabled="1" />
@@ -465,6 +474,11 @@
 	</soldier>
 	<soldier name="parw_commander" spawn_score="0.8" squad_size_xp_cap="0.5" copy_from="default_ai">
 		<ai filename="commander.ai" />
+		<character filename="paradeus.text_lines">
+			<sound key="death" fileref="kill_sound_kcco_bot01.wav" volume="0.50" pitch_variety="0.025"/>
+			<sound key="death" fileref="kill_sound_kcco_bot02.wav" volume="0.50" pitch_variety="0.025"/>
+			<sound key="death" fileref="kill_sound_kcco_bot03.wav" volume="0.50" pitch_variety="0.025"/>
+		</character>		
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="parw_commander.weapon" enabled="1" />
 			<carry_item key="vest_40hp_15" />
@@ -486,6 +500,11 @@
 		  <parameter class="deployment_area_utilization_factor" value="0.99" />
 		  <parameter class="uses_vehicles" value="1.0" />
 		</ai>
+		<character filename="paradeus.text_lines">
+			<sound key="death" fileref="kill_sound_kcco_bot01.wav" volume="0.50" pitch_variety="0.025"/>
+			<sound key="death" fileref="kill_sound_kcco_bot02.wav" volume="0.50" pitch_variety="0.025"/>
+			<sound key="death" fileref="kill_sound_kcco_bot03.wav" volume="0.50" pitch_variety="0.025"/>
+		</character>		
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="parw_police.weapon" enabled="1" probability="1.0" />
 			<carry_item key="para_vest_15hp_elite.carry_item" />
@@ -511,6 +530,11 @@
 	</soldier>
 	<soldier name="parw_thrower" spawn_score="3.0" squad_size_xp_cap="0.5" copy_from="default_ai">
 		<ai filename="pard_thrower.ai" />
+		<character filename="paradeus.text_lines">
+			<sound key="death" fileref="kill_sound_kcco_bot01.wav" volume="0.50" pitch_variety="0.025"/>
+			<sound key="death" fileref="kill_sound_kcco_bot02.wav" volume="0.50" pitch_variety="0.025"/>
+			<sound key="death" fileref="kill_sound_kcco_bot03.wav" volume="0.50" pitch_variety="0.025"/>
+		</character>
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="parw_thrower.weapon" enabled="1" probability="1.0" />
 			<projectile key="parw_grenade.projectile" enabled="1" probability="1.0" />
