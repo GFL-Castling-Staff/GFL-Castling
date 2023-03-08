@@ -246,6 +246,8 @@ class CommandSkill : Tracker {
                 case 60:{excuteZasM21Skill(cId,senderId,m_modifer);break;}
                 case 61:{excuteC96MODSkill(cId,senderId,m_modifer);break;}
                 case 62:{excute_AGS30_Skill(cId,senderId,m_modifer);break;}
+                case 63:{excute_QLZ04_Skill_Smoke(cId,senderId,m_modifer);break;}
+                case 64:{excute_QLZ04_Skill_Fire(cId,senderId,m_modifer);break;}
 
                 default:
                     break;
@@ -3468,5 +3470,61 @@ class CommandSkill : Tracker {
         else{
             CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"30mm_agl_ags_skill.projectile",characterId,factionid,26.0,10.0);
         }
-    }    
+    }
+    void excute_QLZ04_Skill_Smoke(int characterId,int playerId,SkillModifer@ modifer){
+        bool ExistQueue = false;
+        int j=-1;
+        for (uint i=0;i<SkillArray.length();i++){
+            if (InCooldown(characterId,modifer,SkillArray[i],true) && SkillArray[i].m_weapontype=="QLZ04") {
+                ExistQueue=true;
+                j=i;
+                if (ExistQueue && SkillArray[j].m_charge >=3){
+                    dictionary a;
+                    a["%time"] = ""+SkillArray[j].m_time;
+                    sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+                    return;
+                }
+                if(SkillArray[j].m_charge <3){
+                    SkillArray[j].addCharge();
+                }                
+            }
+        }
+        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+        if (character !is null) {
+            const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+            if (player !is null){
+                if (player.hasAttribute("aim_target")) {
+                    if(!ExistQueue){
+                        addCooldown("QLZ04",20,characterId,modifer,"constant"); 
+                    }
+                    string target = player.getStringAttribute("aim_target");
+                    playSoundAtLocation(m_metagame,"ags30_fire_FromEFT.wav",factionid,c_pos,1.6);
+                    Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
+                    int factionid = character.getIntAttribute("faction_id");
+                    c_pos=c_pos.add(Vector3(0,1.8,0));
+                    CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"smoke_grenade.projectile",characterId,factionid,30.0,5.0);
+                }
+            }
+        }
+    }
+    void excute_QLZ04_Skill_Fire(int characterId,int playerId,SkillModifer@ modifer){
+        if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"QLZ04_FIRE")) return;
+        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+        if (character is null) return;
+        const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+        if (player is null) return;
+        if (!player.hasAttribute("aim_target")) return;
+        addCooldown("QLZ04_FIRE",20,characterId,modifer);
+        string target = player.getStringAttribute("aim_target");
+        Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
+        playSoundAtLocation(m_metagame,"ags30_fire_FromEFT.wav",factionid,c_pos,1.6);
+        int factionid = character.getIntAttribute("faction_id");
+        c_pos=c_pos.add(Vector3(0,1,0));
+        if (checkFlatRange(c_pos,stringToVector3(target),16)){
+            CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"firenade_qlz04.projectile",characterId,factionid,30);
+        }
+        else{
+            CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"firenade_qlz04.projectile",characterId,factionid,35.0,8.0);
+        }
+    }
 }
