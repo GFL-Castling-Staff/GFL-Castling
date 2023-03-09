@@ -26715,7 +26715,7 @@
 	<model filename="gkw_hvy_qlz04.xml"/>
 	<hud_icon filename="gkw_qlz04.png"/>
 	<capacity value="0" source="rank" source_value="0.0"/>
-	<capacity value="1" source="rank" source_value="3.457"/>
+	<capacity value="1" source="rank" source_value="10.0"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="st_agl.projectile">
 	<result class="blast" damage="4.5" radius="5" decal="1" push="0.4" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
@@ -26794,7 +26794,7 @@
 <weapon key="gkw_qlz04_peak79.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<specification accuracy_factor="0.95" barrel_offset="0.4" class="0" sight_range_modifier="1" magazine_size="20" name="PEAK79(qlz04)" projectile_speed="120" retrigger_time="0.12" suppressed="0" sustained_fire_diminish_rate="2.1" sustained_fire_grow_step="0.3" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
 	<next_in_chain key="gkw_hvy_qlz04.weapon" share_ammo="0"/>
-	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
+	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="50.0" buy_price="180.0" sell_price="180.0"/>
 	<sound key="fire" fileref="type79_fire_FromBF2.wav" pitch_variety="0.05" volume="1.2"/>
 	<sound key="magazine_out" fileref="type79_mgz_out_FromBF2.wav" volume="0.8"/>
@@ -27193,7 +27193,7 @@
 </weapon>
 
 <weapon key="gkw_type100_banzai.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification slot="0" retrigger_time="-1" accuracy_factor="0.85" sight_range_modifier="1" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="0.3" magazine_size="1" can_shoot_standing="1" can_shoot_crouching="0" can_shoot_prone="0" suppressed="0" name="Kamikaze" class="3" projectile_speed="800.0" barrel_offset="0.01" projectiles_per_shot="1" spread_range="0.0005"/>
+	<specification slot="0" retrigger_time="3.0" accuracy_factor="0.85" sight_range_modifier="1" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="0.3" magazine_size="1" can_shoot_standing="1" can_shoot_crouching="0" can_shoot_prone="0" suppressed="0" name="Kamikaze" class="3" projectile_speed="800.0" barrel_offset="0.01" projectiles_per_shot="1" spread_range="0.0005"/>
 	<next_in_chain key="gkw_type100_1.weapon" share_ammo="0"/>
 	<commonness value="0" in_stock="1" can_respawn_with="1"/>
 	<capacity value="0" source="rank" source_value="0.0"/>
@@ -27359,7 +27359,7 @@
 </weapon>
 
 <weapon key="gkw_hvy_ags30.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification accuracy_factor="0.85" barrel_offset="0.6" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" class="4" sight_range_modifier="1.5" slot="0" magazine_size="30" name="AGS-30 Atlant" projectile_speed="120" retrigger_time="0.15" last_burst_retrigger_time="0.3" burst_shots="3" suppressed="0" sustained_fire_diminish_rate="1.5" sustained_fire_grow_step="0.7" stance_accuracy_rate="0.8" spread_range="0.15"/>
+	<specification accuracy_factor="0.85" barrel_offset="0.6" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" class="4" sight_range_modifier="1.5" slot="0" magazine_size="30" name="AGS-30 Atlant" projectile_speed="120" retrigger_time="0.15" last_burst_retrigger_time="0.3" burst_shots="3" suppressed="0" sustained_fire_diminish_rate="3.0" sustained_fire_grow_step="1.0" stance_accuracy_rate="0.8" spread_range="0.15"/>
 	<next_in_chain key="gkw_hvy_ags30_fix.weapon" share_ammo="0"/>
 	<inventory encumbrance="50.0" buy_price="450.0" sell_price="450.0"/>
 	<commonness value="0.2" in_stock="1" can_respawn_with="1"/>
@@ -27403,7 +27403,7 @@
 </weapon>
 
 <weapon key="gkw_hvy_ags30_fix.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification accuracy_factor="0.84" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="0" class="0" sight_range_modifier="2.5" slot="0" magazine_size="30" name="AGS-30 Atlant" projectile_speed="120" retrigger_time="0.12" suppressed="0" barrel_offset_3d="0 0.1 1.2" sustained_fire_diminish_rate="1.2" sustained_fire_grow_step="0.8" stance_accuracy_rate="0.8" carry_in_two_hands="0" spread_range="0.2"/>
+	<specification accuracy_factor="0.95" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="0" class="0" sight_range_modifier="2.5" slot="0" magazine_size="30" name="AGS-30 Atlant" projectile_speed="120" retrigger_time="0.12" suppressed="0" barrel_offset_3d="0 0.1 1.2" sustained_fire_diminish_rate="6.0" sustained_fire_grow_step="1.0" stance_accuracy_rate="4.0" carry_in_two_hands="0" spread_range="0.2"/>
 	<next_in_chain key="gkw_hvy_ags30.weapon" share_ammo="0"/>
 	<inventory encumbrance="50.0" buy_price="450.0" sell_price="450.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
@@ -27437,14 +27437,14 @@
 	<modifier class="speed" value="-2.5"/>
 	<modifier class="detectability" value="0.1"/>
 	<tag name="bazooka"/>
-	<stance state_key="running" accuracy="0.1"/>
-	<stance state_key="walking" accuracy="0.15"/>
-	<stance state_key="crouch_moving" accuracy="0.3"/>
-	<stance state_key="standing" accuracy="0.4"/>
-	<stance state_key="crouching" accuracy="0.8"/>
-	<stance state_key="prone" accuracy="0.8"/>
-	<stance state_key="prone_moving" accuracy="0.8"/>
-	<stance state_key="over_wall" accuracy="0.8"/>
+	<stance state_key="running" accuracy="0.5"/>
+	<stance state_key="walking" accuracy="0.5"/>
+	<stance state_key="crouch_moving" accuracy="0.5"/>
+	<stance state_key="standing" accuracy="0.5"/>
+	<stance state_key="crouching" accuracy="0.75"/>
+	<stance state_key="prone" accuracy="1.0"/>
+	<stance state_key="prone_moving" accuracy="1.0"/>
+	<stance state_key="over_wall" accuracy="1.0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
 	<target_factors tag="heavy_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0"/>
 	<target_factors tag="light_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="6.0"/>
@@ -27612,7 +27612,7 @@
 
 <weapon key="gkw_consume_javelin.weapon" time_to_live_out_in_the_open="90.0" drop_count_factor_on_death="0.5" drop_count_factor_on_player_death="1.0" on_ground_up="0 0 1" drop_count_limit_in_range="2">
 	<tag name="bazooka"/>
-	<specification retrigger_time="-1" accuracy_factor="1.0" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="0.4" magazine_size="1" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="Javelin" class="3" consume="1" reload_one_at_a_time="1" sight_range_modifier="3.0" ai_sight_range_modifier="1.05" projectile_speed="400.0" slot="1" projectiles_per_shot="1" barrel_offset_3d="0 45.2 1.1"/>
+	<specification retrigger_time="3.0" accuracy_factor="1.0" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="0.4" magazine_size="1" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="Javelin" class="3" consume="1" reload_one_at_a_time="1" sight_range_modifier="3.0" ai_sight_range_modifier="1.05" projectile_speed="400.0" slot="1" projectiles_per_shot="1" barrel_offset_3d="0 45.2 1.1"/>
 	<animation key="recoil" animation_key="recoil, law"/>
 	<animation key="cycle" animation_key="Brifle1"/>
 	<animation key="reload" animation_key="reloading, m24"/>
@@ -27629,10 +27629,7 @@
 	<projectile file="javelin_locater_1.projectile"/>
 	<weak_hand_hold offset="0.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="0"/>
-	<capacity value="0" source="rank" source_value="0.0"/>
-	<capacity value="1" source="rank" source_value="0.15"/>
-	<capacity value="2" source="rank" source_value="0.25"/>
-	<capacity value="3" source="rank" source_value="0.5"/>
+	<capacity value="4" source="rank" source_value="0.0"/>
 	<hud_icon filename="hud_javelin.png"/>
 	<inventory encumbrance="30.0" buy_price="1000.0" sell_price="100.0"/>
 	<stance state_key="running" accuracy="1.0"/>
@@ -48712,6 +48709,8 @@
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<projectile file="qwd.projectile">
 	</projectile>
+	<effect class="muzzle" ref="muzzle_cannon_fire_smoke" lighting="0"/>
+	<effect class="muzzle" ref="muzzle_cannon_fire_light" lighting="0"/>
 	<stance state_key="running" accuracy="0.8"/>
 	<stance state_key="walking" accuracy="0.8"/>
 	<stance state_key="crouch_moving" accuracy="0.75"/>
@@ -48944,6 +48943,15 @@
 	<projectile file="bullet_sf.projectile">
 	<result class="blast" radius="2.0" damage="4.0" decal="1" push="0.15" character_state="death" faction_compare="not_equal"/>
 	<trail probability="1.0" key="BulletApTrail_ct"/>
+	<effect class="result" key="terrain" ref="result_cannon_blast_AmbientLight" lighting="0"/>
+	<effect class="result" key="terrain" ref="result_cannon_blast_smoke" lighting="0"/>
+	<effect class="result" type="splat_map" surface_tag="" size="2.0" atlas_index="0" layer="1"/>
+	<effect class="result" type="splat_map" surface_tag="" size="4.0" atlas_index="4" layer="0"/>
+	<effect class="result" type="splat_map" surface_tag="" size="5.0" atlas_index="0" layer="2" additive="0"/>
+	<effect class="result" key="other" copy="terrain"/>
+	<effect class="result" key="static_object" copy="terrain"/>
+	<effect class="result" key="vehicle" copy="terrain"/>
+	<effect class="result" key="character" copy="terrain"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.8"/>
 	<stance state_key="walking" accuracy="0.8"/>
@@ -48985,16 +48993,13 @@
 	<hud_icon filename="sfw_nemeum.png"/>
 	<projectile file="bullet_sf.projectile">
 	<result class="blast" radius="2.5" damage="7.0" decal="1" push="0.6" character_state="death" faction_compare="not_equal"/>
-	<trail probability="1.0" key="manticore"/>
-	<effect class="result" key="terrain" ref="SmokeBurst" post_processing="1"/>
-	<effect class="result" key="terrain" ref="BurstShine" lighting="0"/>
-	<effect class="result" key="terrain" ref="Godray" lighting="0"/>
+	<trail probability="1.0" key="laser_tiaotiao"/>
+	<effect class="result" key="terrain" ref="result_cannon_blast_AmbientLight" lighting="0"/>
+	<effect class="result" key="terrain" ref="result_cannon_blast_smoke" lighting="0"/>
 	<effect class="result" type="splat_map" surface_tag="" size="2.0" atlas_index="0" layer="1"/>
 	<effect class="result" type="splat_map" surface_tag="" size="4.0" atlas_index="4" layer="0"/>
 	<effect class="result" type="splat_map" surface_tag="" size="5.0" atlas_index="0" layer="2" additive="0"/>
-	<effect class="result" key="other" ref="SmokeBurst" post_processing="1"/>
-	<effect class="result" key="other" ref="BurstShine" lighting="0"/>
-	<effect class="result" key="other" ref="Godray" lighting="0"/>
+	<effect class="result" key="other" copy="terrain"/>
 	<effect class="result" key="static_object" copy="terrain"/>
 	<effect class="result" key="vehicle" copy="terrain"/>
 	<effect class="result" key="character" copy="terrain"/>

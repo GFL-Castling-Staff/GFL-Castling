@@ -984,7 +984,7 @@ class CommandSkill : Tracker {
                         "STG44Mod_SKILL2_JP.wav",
                         "STG44Mod_SKILL3_JP.wav"
                     };
-                    playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+                    playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1.3);
                     playAnimationKey(m_metagame,characterId,"recoil1, big",true,false);
                     c_pos=c_pos.add(Vector3(0,1,0));
                     if (checkFlatRange(c_pos,stringToVector3(target),15)){
@@ -3456,7 +3456,7 @@ class CommandSkill : Tracker {
         Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
         playSoundAtLocation(m_metagame,"ags30_fire_FromEFT.wav",factionid,c_pos,1.6);
         c_pos=c_pos.add(Vector3(0,1,0));
-        c_pos = getAimUnitPosition(c_pos,stringToVector3(target),0.8);
+        c_pos = getAimUnitPosition(c_pos,stringToVector3(target),1.3);
         if (checkFlatRange(c_pos,stringToVector3(target),10)){
             CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"30mm_agl_ags_skill.projectile",characterId,factionid,30);
         }
@@ -3541,9 +3541,9 @@ class CommandSkill : Tracker {
                     };
                     playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
                     playAnimationKey(m_metagame,characterId,"recoil, revolver",false,false);
-                    playSoundAtLocation(m_metagame,"grenade_throw1.wav",factionid,c_pos,1.0);
+                    playSoundAtLocation(m_metagame,"Nytoportal_fire_FromCOD13.wav",factionid,c_pos,1.0);
                     c_pos=c_pos.add(Vector3(0,1.8,0));
-                    CreateDirectProjectile_T(m_metagame,c_pos,aim_pos,"Nytoportal_fire_FromCOD13.projectile",characterId,factionid,1.0);
+                    CreateDirectProjectile_T(m_metagame,c_pos,aim_pos,"skill_pa15_main.projectile",characterId,factionid,1.0);
                     addCooldown("PA15",20,characterId,modifer);
                 }
             }
