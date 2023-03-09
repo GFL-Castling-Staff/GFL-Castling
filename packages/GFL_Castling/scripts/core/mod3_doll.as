@@ -24,9 +24,12 @@ dictionary MOD3craftList = {
     {"gkw_g36.weapon","gkw_g36mod3.weapon"},
     {"gkw_g36_1507.weapon","gkw_g36mod3_1507.weapon"},
     {"gkw_g36_6807.weapon","gkw_g36mod3_6807.weapon"},
+    {"gkw_g36_1904.weapon","gkw_g36mod3_1904.weapon"},
+
     {"gkw_g36_skill.weapon","gkw_g36mod3.weapon"},
     {"gkw_g36_1507_skill.weapon","gkw_g36mod3_1507.weapon"},
     {"gkw_g36_6807_skill.weapon","gkw_g36mod3_6807.weapon"},
+    {"gkw_g36_1904_skill.weapon","gkw_g36mod3_1904.weapon"},
 
     {"gkw_m4a1.weapon","gkw_m4a1mod3.weapon"},
     {"gkw_m4a1_530.weapon","gkw_m4a1mod3_530.weapon"},
