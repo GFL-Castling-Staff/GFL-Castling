@@ -464,14 +464,13 @@ class GFLskill : Tracker {
 			case 15: {// STG44炎风暴
 				int characterId = event.getIntAttribute("character_id");
 				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
-				if (character !is null) {
-					int factionid = character.getIntAttribute("faction_id");
-					Vector3 Pos_40mm = stringToVector3(event.getStringAttribute("position"));
-					Pos_40mm=Pos_40mm.add(Vector3(0,1.5,0));
-					spawnStaticProjectile(m_metagame,"skill_stg44_1.projectile",Pos_40mm,characterId,factionid);
-					spawnStaticProjectile(m_metagame,"skill_stg44_2.projectile",Pos_40mm,characterId,factionid);
-					spawnStaticProjectile(m_metagame,"skill_stg44_3.projectile",Pos_40mm,characterId,factionid);
-				}
+				if (character is null) return;
+				int factionid = character.getIntAttribute("faction_id");
+				Vector3 Pos_40mm = stringToVector3(event.getStringAttribute("position"));
+				Pos_40mm=Pos_40mm.add(Vector3(0,1.5,0));
+				spawnStaticProjectile(m_metagame,"skill_stg44_1.projectile",Pos_40mm,characterId,factionid);
+				spawnStaticProjectile(m_metagame,"skill_stg44_2.projectile",Pos_40mm,characterId,factionid);
+				spawnStaticProjectile(m_metagame,"skill_stg44_3.projectile",Pos_40mm,characterId,factionid);
 				break;			
 			}
 
