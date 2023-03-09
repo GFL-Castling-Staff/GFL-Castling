@@ -362,16 +362,21 @@ class ItemDropEvent : Tracker {
                         m_craftQueue.removeAt(findQueueIndex(pId,"aa12"));
                         playPrivateSound(m_metagame,"digimind_sfx2.wav",pId);
                     }
-                    else if (checkQueue(pId,"m1garand") && (itemKey=="gkw_m1.weapon")){
+                    else if (checkQueue(pId,"m1garand") && (itemKey=="gkw_m1.weapon" || itemKey=="gkw_m1_skill.weapon")){
                         addItemInBackpack(m_metagame,cId,"weapon","gkw_m1_sf.weapon");
                         m_craftQueue.removeAt(findQueueIndex(pId,"m1garand"));
                         playPrivateSound(m_metagame,"digimind_sfx2.wav",pId);
                     }
-                    else if (checkQueue(pId,"m1garand") && (itemKey=="gkw_m1_1106.weapon")){
+                    else if (checkQueue(pId,"m1garand") && (itemKey=="gkw_m1_1106.weapon" || itemKey=="gkw_m1_1106_skill.weapon")){
                         addItemInBackpack(m_metagame,cId,"weapon","gkw_m1_sf_1106.weapon");
                         m_craftQueue.removeAt(findQueueIndex(pId,"m1garand"));
                         playPrivateSound(m_metagame,"digimind_sfx2.wav",pId);
                     }
+                    else if (checkQueue(pId,"m1garand") && (itemKey=="gkw_m1_6907.weapon" || itemKey=="gkw_m1_6907_skill.weapon")){
+                        addItemInBackpack(m_metagame,cId,"weapon","gkw_m1_sf_6907.weapon");
+                        m_craftQueue.removeAt(findQueueIndex(pId,"m1garand"));
+                        playPrivateSound(m_metagame,"digimind_sfx2.wav",pId);
+                    }                    
                     else if (checkQueue(pId,"fg42") && (itemKey=="gkw_fg42.weapon" || itemKey=="gkw_fg42_skill.weapon")){
                         addItemInBackpack(m_metagame,cId,"weapon","gkw_fg42_only.weapon");
                         m_craftQueue.removeAt(findQueueIndex(pId,"fg42"));
