@@ -41,12 +41,13 @@ class ItemDropEvent : Tracker {
 
 	protected void handleItemDropEvent(const XmlElement@ event) 
 	{
-        if (event.getIntAttribute("target_container_type_id") == 3){
+        int type_id = event.getIntAttribute("target_container_type_id";
+        if (type_id == 3){
             int cId = event.getIntAttribute("character_id");
             string key = event.getStringAttribute("item_key");
             dealwithillegalitem(key,cId);
         }
-        if (event.getIntAttribute("target_container_type_id") == 1){
+        if (type_id == 1){
             string itemKey = event.getStringAttribute("item_key");
             int cId = event.getIntAttribute("character_id");
             int pId = event.getIntAttribute("player_id");     
