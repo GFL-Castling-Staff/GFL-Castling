@@ -41,7 +41,7 @@ class ItemDropEvent : Tracker {
 
 	protected void handleItemDropEvent(const XmlElement@ event) 
 	{
-        int type_id = event.getIntAttribute("target_container_type_id";
+        int type_id = event.getIntAttribute("target_container_type_id");
         if (type_id == 3){
             int cId = event.getIntAttribute("character_id");
             string key = event.getStringAttribute("item_key");
