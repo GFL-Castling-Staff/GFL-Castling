@@ -292,6 +292,40 @@ particle_system pa15_result_blast_shine_particle		//爆炸碎片
 	}
 }
 
+particle_system pa15_result_blast_stop		//停
+{
+	quota 250
+	material pa15_stop
+	particle_width 3.0
+	particle_height 3.0
+	renderer billboard
+	billboard_rotation_type vertex
+	billboard_type point
+	
+	emitter Point
+	{
+		angle 0
+		colour 0 0 0 0
+		direction 0 1 0
+		emission_rate 10
+		position 0 0 0
+		velocity 0
+		time_to_live 1.0
+		duration 0.1
+	}
+
+	affector ColourInterpolator
+	{
+		time0 0
+		colour0 0.9 0.32 0.3 1
+		time1 0.02
+		colour1 0 0 0 0
+		time2 0.05
+		colour2 0.9 0.32 0.3 1
+		time3 1
+		colour2 0 0 0 0
+	}
+}
 
 --------------------------------------material-----------------------------------
 material alpha_blend_base{
@@ -368,4 +402,11 @@ material bao_7_7_bw : add_base
     pass{
         texture_unit{
             texture bao_7_7_bw.png 	
+}}}}
+material pa15_stop : add_base
+{   
+    technique{
+    pass{
+        texture_unit{
+            texture pa15_stop.png 	
 }}}}

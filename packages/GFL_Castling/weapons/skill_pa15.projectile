@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<projectiles>
+    <projectile class="grenade" name="" key="skill_pa15_main.projectile" slot="2" pulldown_in_air="4">
+        <tag name="grenade"/>
+        <result class="notify_script" key="pa15_skill" />
+        <!-- <trigger class="impact">
+            <collider class="character" enabled="1" faction_compare="not_equal"/>
+        </trigger> -->
+    
+        <trigger class="time" time_to_live="1.0"/>
+    
+        <rotation class="motion" />
+        <model />
+        <commonness value="0.0" />
+        <sound class="result" key="other" fileref="explosion_FromSQUAD_1.wav" volume="2.5" />
+        <sound class="result" key="other" fileref="explosion_FromSQUAD_2.wav" volume="2.5" />
+        <sound class="result" key="other" fileref="explosion_FromSQUAD_3.wav" volume="2.5" />
+        <sound class="result" key="terrain" copy="other" />
+        <sound class="result" key="static_object" copy="other" />
+        <sound class="result" key="character" copy="other" />
+    
+        <effect class="result" key="terrain" ref="pa15_result_lens_light" lighting="0"/> 
+        <effect class="result" key="terrain" ref="pa15_result_side_particle" lighting="0"/> 
+        <effect class="result" key="terrain" ref="pa15_result_center_spark" lighting="0"/> 
+        <effect class="result" key="terrain" ref="pa15_result_blast_shine_center_hollow" lighting="0"/> 
+        <effect class="result" key="terrain" ref="pa15_result_blast_shine_particle" lighting="0"/> 
+        
+        <effect class="activated" ref="pa15_activated_ring" lighting="0"/> 
+    
+        <effect class="result" key="other" copy="terrain"/>
+        <effect class="result" key="static_object" copy="terrain" />
+        <effect class="result" key="character" copy="terrain" />
+        <effect class="result" key="vehicle" copy="terrain" />
+        <effect class="result" key="shield" copy="terrain" />
+        <effect class="result" key="vehicle" tag="sandbag" copy="terrain" use_surface_color="0" />
+        <effect class="result" key="vehicle" tag="deco_car" copy="terrain" use_surface_color="0" />
+        <effect class="result" key="vehicle" tag="metal_thin" copy="terrain" use_surface_color="0" />
+        <effect class="result" key="vehicle" tag="metal_heavy" copy="terrain" use_surface_color="0" />
+        <effect class="result" key="vehicle" tag="metal_dumpster" copy="terrain" use_surface_color="0" />
+    </projectile>
+    <projectile class="grenade" name="" key="skill_pa15_sub.projectile" slot="2" pulldown_in_air="4">
+        <result class="blast" radius="3.0" damage="5.0" push="0.2" decal="0" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0" />
+        <trigger class="time" time_to_live="0.5"/>
+        <rotation class="motion" />
+        <model />
+
+        <effect class="result" key="terrain" ref="pa15_result_blast_stop" lighting="0"/> 
+        <effect class="result" key="other" copy="terrain"/>
+        <effect class="result" key="static_object" copy="terrain" />
+        <effect class="result" key="character" copy="terrain" />
+        <effect class="result" key="vehicle" copy="terrain" />
+        <effect class="result" key="shield" copy="terrain" />
+    </projectile>
+    <projectile class="grenade" name="" key="skill_pa15_sub_big.projectile" slot="2" pulldown_in_air="4">
+        <result class="blast" radius="12.0" damage="10.0" push="0.5" decal="0" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0" />
+        <trigger class="time" time_to_live="0.0"/>
+        <rotation class="motion" />
+        <model />
+
+        <effect class="result" key="terrain" ref="pa15_result_blast_stop" lighting="0"/> 
+        <effect class="result" key="other" copy="terrain"/>
+        <effect class="result" key="static_object" copy="terrain" />
+        <effect class="result" key="character" copy="terrain" />
+        <effect class="result" key="vehicle" copy="terrain" />
+        <effect class="result" key="shield" copy="terrain" />
+    </projectile>
+    <projectile class="grenade" name="" key="skill_pa15_sub_stun.projectile" slot="2" pulldown_in_air="4">
+        <result class="blast" radius="12.0" damage="0.0" push="0.0" decal="0" character_state="stun" faction_compare="not_equal" damage_origin_vehicle="0" />
+        <trigger class="time" time_to_live="0.1"/>
+        <rotation class="motion" />
+        <model />
+    </projectile>    
+</projectiles>

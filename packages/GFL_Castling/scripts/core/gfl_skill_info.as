@@ -161,6 +161,8 @@ dictionary gameSkillIndex = {
 		// 白教回甲
 		{"para_heal",40},
 
+		{"pa15_skill",41},
+
         // 下面这行是用来占位的，在这之上添加新的技能key和index即可
         {"666",-1}
 };

@@ -668,7 +668,6 @@ class GFLskill : Tracker {
 					//获取技能影响的敌人数量
 					m_fnum = m_metagame.getFactionCount();
 					array<const XmlElement@> affectedCharacter;
-					_log("ff_alchemist Scan start successful");
 
 					uint num_jud = 0;
 					uint num_max_character = 10; //最多锁定目标数
@@ -699,9 +698,7 @@ class GFLskill : Tracker {
 								string luckyonepos = luckyoneC.getStringAttribute("position");
 								Vector3 luckyoneposV = stringToVector3(luckyonepos);
 								CreateDirectProjectile(m_metagame,luckyoneposV.add(Vector3(0,1,0)),luckyoneposV,"ff_alchemist_skill_kill.projectile",characterId,factionid,60);	
-								playSoundAtLocation(m_metagame,"alchemist_fire_FromHALOINFINTE.wav",factionid,luckyonepos,1.0);
-								_log("ff_alchemist kill successful");
-								
+								playSoundAtLocation(m_metagame,"alchemist_fire_FromHALOINFINTE.wav",factionid,luckyonepos,1.0);								
 							}				
 						}
 					}
@@ -1106,6 +1103,44 @@ class GFLskill : Tracker {
 					healRangedCharacters(m_metagame,grenade_pos,factionid,15,5,"para_heal",8);
 				}
 				break;			
+			}
+
+			case 41: {// PA15
+				int characterId = event.getIntAttribute("character_id");
+				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+				if (character is null) return;
+				int factionid = character.getIntAttribute("faction_id");
+				Vector3 Pos_40mm = stringToVector3(event.getStringAttribute("position"));
+				//获取技能影响的敌人数量
+				Pos_40mm = Pos_40mm.add(Vector3(0,0.5,0));
+				m_fnum= m_metagame.getFactionCount();
+				array<const XmlElement@> affectedCharacter;
+				for(uint i=0;i<m_fnum;i++) 
+					if(i!=factionid) {
+					array<const XmlElement@> affectedCharacter2;
+					affectedCharacter2 = getCharactersNearPosition(m_metagame,Pos_40mm,i,10.0f);
+					if (affectedCharacter2 !is null){
+						for(uint x=0;x<affectedCharacter2.length();x++){
+							affectedCharacter.insertLast(affectedCharacter2[x]);
+						}
+					}
+				}
+				if (affectedCharacter !is null || affectedCharacter.length() > 0)
+				{
+					for (uint i0=0;i0<affectedCharacter.length();i0++){
+						int luckyoneid = affectedCharacter[i0].getIntAttribute("id");
+						const XmlElement@ luckyoneC = getCharacterInfo(m_metagame, luckyoneid);
+						if (luckyoneC is null) continue;
+						if ((luckyoneC.getIntAttribute("id")==-1)) continue;
+						string luckyonepos = luckyoneC.getStringAttribute("position");
+						Vector3 luckyoneposV = stringToVector3(luckyonepos);
+						luckyoneposV = luckyoneposV.add(Vector3(0,1.5,0));
+						spawnStaticProjectile(m_metagame,"skill_pa15_sub.projectile",luckyoneposV,characterId,factionid);
+					}
+				}
+				spawnStaticProjectile(m_metagame,"skill_pa15_sub_big.projectile",Pos_40mm,characterId,factionid);
+				spawnStaticProjectile(m_metagame,"skill_pa15_sub_stun.projectile",Pos_40mm,characterId,factionid);
+				break;
 			}
 
             default:
