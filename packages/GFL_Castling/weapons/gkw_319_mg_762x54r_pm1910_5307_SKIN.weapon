@@ -3,17 +3,18 @@
     <tag name="machine gun" />
     <specification 
     barrel_offset="0.5" 
-    retrigger_time="0.1" 
+    retrigger_time="-1" 
     accuracy_factor="0.75" 
     sustained_fire_grow_step="1.0" 
     sustained_fire_diminish_rate="5.0"
+    spread_range="0.4"
     stab_enabled="1"
 	carry_in_two_hands="1"
 	burst_shots="1"
     magazine_size="250" 
     suppressed="0" 
     name="PM1910-[Queen's Tower Party]" 
-    class="0" 
+    class="1" 
     slot="0" 
     projectile_speed="175" 
     sight_range_modifier="1.5"
@@ -22,18 +23,13 @@
     <inventory encumbrance="100.0" buy_price="191.0" sell_price="191.0"/>
     <capacity value="1" source="rank" source_value="0.0" />
     <animation key="reload" animation_key="reloading, Machine gun 2.8" />
-    <animation state_key="recoil" animation_key="recoil, hip fire" />
-    <animation state_key="recoil" animation_key="recoil2, hip fire" />
-    <animation state_key="recoil" animation_key="recoil3, hip fire" />
-    <animation key="recoil" stance_key="over_wall" animation_key="recoil1" />
-    <animation key="recoil" stance_key="over_wall" animation_key="recoil2" />
-    <animation key="recoil" stance_key="over_wall" animation_key="recoil3" />
-    <animation key="recoil" stance_key="crouching" animation_key="recoil1" />
-    <animation key="recoil" stance_key="crouching" animation_key="recoil2" />
-    <animation key="recoil" stance_key="crouching" animation_key="recoil3" />
-    <animation key="recoil" stance_key="prone" animation_key="recoil1, prone" />
-    <animation key="recoil" stance_key="prone" animation_key="recoil2, prone" />
-    <animation key="recoil" stance_key="prone" animation_key="recoil3, prone" />
+    <animation state_key="recoil" animation_key="recoil_hip_unlimit"/>
+    <animation state_key="recoil" stance_key="over_wall" animation_key="recoil_unlimit"/>
+    <animation state_key="recoil" stance_key="prone" animation_key="recoil_prone_unlimit"/>
+    <animation key="cycle" animation_key="cycle_2h_hip_500rpm"/>
+    <animation key="cycle" stance_key="crouching" animation_key="cycle_2h_hip_500rpm"/>
+    <animation key="cycle" stance_key="prone" animation_key="cycle_2h_rifle_600rpm_prone"/>
+    <animation key="cycle" stance_key="over_wall" animation_key="cycle_2h_rifle_600rpm"/> 
     <animation state_key="hold" animation_key="hold, lmg" />
     <animation state_key="hold_on_wall" animation_key="still" />
     <animation state_key="walking" animation_key="walking, hip fire" />
@@ -44,7 +40,7 @@
     <sound key="fire" fileref="pm1910_fire_FromRO2.wav" pitch_variety="0.05" volume="1.2" />
     <sound key="magazine_out" fileref="pm1910_mgz_out_FromBF1.wav" volume="0.6" />
     <sound key="magazine_in" fileref="pm1910_mgz_in_FromBF1.wav" volume="0.6" />
-    <sound key="cycle" fileref="pm1910_cycle_FromBF1.wav" volume="0.6" />
+    <sound key="cycle_out" fileref="pm1910_cycle_FromBF1.wav" volume="0.6" />
     <sound class="impact" fileref="rifle_drop.wav" />
     <model filename="gkw_mg_pm1910.xml" />
     <hud_icon filename="gkw_pm1910_5307.png" />
