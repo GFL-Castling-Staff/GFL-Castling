@@ -556,7 +556,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 			stage.m_factions.insertLast(f);                                                                
 		}
 		{
-			Faction f(FactionConfig(2, "eild.xml", "E.I.L.D.", "0.3 0.17 0.11", "eild.xml"), createCommanderAiCommand(2, 0.80, 0.20,false));             
+			Faction f(FactionConfig(2, "elid.xml", "E.I.L.D.", "0.3 0.17 0.11", "elid.xml"), createCommanderAiCommand(2, 0.80, 0.20,false));             
 			f.m_overCapacity = 70;
             f.m_capacityOffset = 80;
 			f.m_capacityMultiplier = 0.001;
