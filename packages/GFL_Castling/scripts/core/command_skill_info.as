@@ -53,6 +53,7 @@ dictionary commandSkillIndex = {
         {"gkw_mp40.weapon",2},
         {"gkw_kp31mod3.weapon",2},
         {"gkw_kp31mod3_310.weapon",2},
+        {"gkw_kp31mod3_3101.weapon",2},
 
         // FF_JUSTICE
         {"ff_justice.weapon",3},
