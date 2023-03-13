@@ -192,8 +192,8 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		array<array<ScoredResource@>> rewardPasses = {
 			{
 		ScoredResource("upgrade_g41.carry_item", "carry_item", 0.1f),
-		ScoredResource("upgrade_fg42.carry_item", "carry_item", 0.1f),
-		ScoredResource("upgrade_vz61.carry_item", "carry_item", 0.1f),
+		// ScoredResource("upgrade_fg42.carry_item", "carry_item", 0.1f),
+		// ScoredResource("upgrade_vz61.carry_item", "carry_item", 0.1f),
 		ScoredResource("upgrade_m1903_1.carry_item", "carry_item", 0.1f),
 		ScoredResource("upgrade_m1903_2.carry_item", "carry_item", 0.1f),
 		ScoredResource("upgrade_wa2000.carry_item", "carry_item", 0.1f),
@@ -419,6 +419,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		ScoredResource("gkw_xm8_5606.weapon", "weapon", 1.0f),
 		ScoredResource("gkw_98k_4301.weapon", "weapon", 1.0f),
 		ScoredResource("gkw_m1_6907.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_grizzly_4303.weapon", "weapon", 1.0f),
 
 		ScoredResource("gkw_m870_3803.weapon", "weapon", 1.0f)
 			}
@@ -1855,6 +1856,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		ScoredResource("gkw_98k_4301.weapon", "weapon", 1.0f),
 		ScoredResource("gkw_m1_6907.weapon", "weapon", 1.0f),
 		ScoredResource("gkw_kp31_3101.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_grizzly_4303.weapon", "weapon", 1.0f),
 
 		ScoredResource("gkw_aps_4306.weapon","weapon",1.0f)
 			}
