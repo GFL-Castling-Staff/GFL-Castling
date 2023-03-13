@@ -7,7 +7,7 @@
 		class="0"
         slot="0" 
 		magazine_size="30" 
-		name="QBZ95-[Pure White Graduation Ceremony]" 
+		name="QBZ95-[Prairie Gentian and Her Season]" 
 		projectile_speed="200" 
 		retrigger_time="0.092" 
 		suppressed="0" 
@@ -47,7 +47,7 @@
 		class="0"
         slot="0" 
 		magazine_size="30" 
-		name="QBZ95-[Pure White Graduation Ceremony]-[Damage Focus T]" 
+		name="QBZ95-[Prairie Gentian and Her Season]-[Damage Focus T]" 
 		projectile_speed="200" 
 		retrigger_time="0.092" 
 		suppressed="0" 
@@ -63,7 +63,7 @@
         <sound class="impact" fileref="rifle_drop.wav" />
         <model filename="gkw_ar_95type_5604.xml" />
         <commonness value="0" in_stock="0" can_respawn_with="1" />
-        <hud_icon filename="gkw_95type_3702.png" />
+        <hud_icon filename="gkw_95type_5604.png" />
         <next_in_chain key="gkw_QBZ95_5604.weapon" share_ammo="1" />
         <weak_hand_hold offset="0.2" />
         <projectile file="bullet.projectile">
