@@ -432,7 +432,7 @@ class CommandSkill : Tracker {
             if(Trigger.m_specialkey1=="" ||
                Trigger.m_specialkey1=="immunity_thompson.carry_item"
             ){
-                Trigger.m_specialkey1="exo_t4.carry_item";
+                Trigger.m_specialkey1="exo_t5_16lab.carry_item";
             }
             editPlayerVest(m_metagame,Trigger.m_character_id,Trigger.m_specialkey1,4);
 
@@ -455,7 +455,7 @@ class CommandSkill : Tracker {
             if(Trigger.m_specialkey1=="" ||
                Trigger.m_specialkey1=="immunity_mp5.carry_item"
             ){
-                Trigger.m_specialkey1="exo_t4.carry_item";
+                Trigger.m_specialkey1="exo_t5_16lab.carry_item";
             }
             editPlayerVest(m_metagame,Trigger.m_character_id,Trigger.m_specialkey1,4);
             deleteItemInBackpack(m_metagame,Trigger.m_character_id,"carry_item","immunity_thompson.carry_item");
@@ -675,11 +675,11 @@ class CommandSkill : Tracker {
         if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"MP5")) return;
         addCooldown("MP5",29,characterId,modifer);
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
-        string vestkey="exo_t4.carry_item";
+        string vestkey="exo_t5_16lab.carry_item";
         if (character !is null) {
             vestkey = getPlayerEquipmentKey(m_metagame,characterId,4);
             if (vestkey=="immunity_mp5.carry_item" || vestkey==""){
-                vestkey="exo_t4.carry_item";
+                vestkey="exo_t5_16lab.carry_item";
             }
             XmlElement c ("command");
             c.setStringAttribute("class", "update_inventory");
@@ -709,11 +709,11 @@ class CommandSkill : Tracker {
         if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"MP5MOD3")) return;
         addCooldown("MP5MOD3",29,characterId,modifer);
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
-        string vestkey="exo_t4.carry_item";
+        string vestkey="exo_t5_16lab.carry_item";
         if (character !is null) {
             vestkey = getPlayerEquipmentKey(m_metagame,characterId,4);
             if (vestkey=="immunity_mp5.carry_item" || vestkey==""){
-                vestkey=="exo_t4.carry_item";
+                vestkey=="exo_t5_16lab.carry_item";
             }
             XmlElement c ("command");
             c.setStringAttribute("class", "update_inventory");
@@ -742,11 +742,11 @@ class CommandSkill : Tracker {
         if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"M1928A1")) return;
         addCooldown("M1928A1",25,characterId,modifer);
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
-        string vestkey="exo_t4.carry_item";
+        string vestkey="exo_t5_16lab.carry_item";
         if (character !is null) {
             vestkey = getPlayerEquipmentKey(m_metagame,characterId,4);
             if (vestkey=="immunity_thompson.carry_item" || vestkey==""){
-                vestkey="exo_t4.carry_item";
+                vestkey="exo_t5_16lab.carry_item";
             }
             XmlElement c ("command");
             c.setStringAttribute("class", "update_inventory");
@@ -1475,10 +1475,10 @@ class CommandSkill : Tracker {
                         " position='" + c_pos.toString() + "'"+
 				        " character_id='" + characterId + "' />";
                         m_metagame.getComms().send(command);		
-                        string vestkey="exo_t4.carry_item";
+                        string vestkey="exo_t5_16lab.carry_item";
                         vestkey = getPlayerEquipmentKey(m_metagame,characterId,4);
                         if (vestkey=="immunity_mp5.carry_item" || vestkey==""){
-                            vestkey=="exo_t4.carry_item";
+                            vestkey=="exo_t5_16lab.carry_item";
                         }
                             XmlElement c ("command");
                             c.setStringAttribute("class", "update_inventory");

@@ -629,7 +629,7 @@ class ItemDropEvent : Tracker {
                 {
                     XmlElement k("item");
                     k.setStringAttribute("class", "carry_item");
-                    k.setStringAttribute("key", "exo_t4.carry_item");
+                    k.setStringAttribute("key", "exo_t5_16lab.carry_item");
                     c.appendChild(k);
                 }
                 m_metagame.getComms().send(c);

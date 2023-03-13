@@ -377,7 +377,7 @@
 	<soldier name="Task_Medic" spawn_score="0.05" copy_from="default_spawn_ai">
 		<resources file="gk_ar.resources" clear_carry_items="1">
 			<weapon key="medikit.weapon" />
-			<carry_item key="exo_t4.carry_item" />
+			<carry_item key="exo_t5_16lab.carry_item" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="7.100" max="10.1" />
@@ -386,7 +386,6 @@
 
 	<soldier name="Task_MG" spawn_score="0.05" copy_from="default_spawn_ai">
 		<resources file="gk_sg.resources" clear_weapons="0" clear_carry_items="1">
-			<carry_item key="bp_t4.carry_item" />
 			<carry_item key="bp_t5_16lab.carry_item" />
 		</resources>
 		<attribute_config class="xp">
@@ -396,7 +395,6 @@
 
 	<soldier name="Task_SG" spawn_score="0.05" copy_from="default_spawn_ai">
 		<resources file="gk_mg.resources" clear_weapons="0" clear_carry_items="1">
-			<carry_item key="bp_t4.carry_item" />
 			<carry_item key="bp_t5_16lab.carry_item" />
 			<weapon key="medikit.weapon" />
 		</resources>
@@ -418,7 +416,7 @@
 		<resources file="gk_elite.resources">
 			<weapon key="gkw_idw.weapon" />
 			<weapon key="gkw_idwmod3.weapon" />
-			<carry_item key="exo_t4.carry_item" />
+			<carry_item key="exo_t5_16lab.carry_item" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="0.100" max="102.833" />
@@ -433,7 +431,7 @@
 		<resources file="gk_elite.resources">
 			<weapon key="gkw_vector.weapon" />
 			<weapon key="medikit.weapon" />
-			<carry_item key="exo_t4.carry_item" />
+			<carry_item key="exo_t5_16lab.carry_item" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="0.100" max="102.833" />
@@ -448,7 +446,7 @@
 		<resources file="gk_elite.resources">
 			<weapon key="gkw_ppsh41.weapon" />
 			<weapon key="medikit.weapon" />
-			<carry_item key="exo_t4.carry_item" />
+			<carry_item key="exo_t5_16lab.carry_item" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="0.100" max="102.833" />
@@ -462,7 +460,7 @@
 		</character>
 		<resources file="gk_elite.resources">
 			<weapon key="gkw_m1903.weapon" />
-			<carry_item key="cc_t4.carry_item" />
+			<carry_item key="cc_t5_16lab.carry_item" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="0.100" max="102.833" />
@@ -476,7 +474,7 @@
 		</character>
 		<resources file="gk_elite.resources">
 			<weapon key="gkw_m14.weapon" />
-			<carry_item key="cc_t4.carry_item" />
+			<carry_item key="cc_t5_16lab.carry_item" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="0.100" max="102.833" />
@@ -490,7 +488,7 @@
 		</character>
 		<resources file="gk_elite.resources">
 			<weapon key="gkw_svd.weapon" />
-			<carry_item key="cc_t4.carry_item" />
+			<carry_item key="cc_t5_16lab.carry_item" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="0.100" max="102.833" />
@@ -548,7 +546,7 @@
 			<weapon key="gkw_m16a1.weapon" />
 			<weapon key="medikit.weapon" />
 			<weapon key="gkw_consume_at4.weapon" />
-			<carry_item key="exo_t4.carry_item" />
+			<carry_item key="exo_t5_16lab.carry_item" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="0.100" max="102.833" />
@@ -564,7 +562,7 @@
 			<weapon key="gkw_m4a1.weapon" />
 			<weapon key="medikit.weapon" />
 			<weapon key="gkw_consume_at4.weapon" />
-			<carry_item key="exo_t4.carry_item" />
+			<carry_item key="exo_t5_16lab.carry_item" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="0.100" max="102.833" />
@@ -579,7 +577,7 @@
 		<resources file="gk_elite.resources">
 			<weapon key="gkw_m4a1mod3.weapon" />
 			<weapon key="gkw_consume_at4.weapon" />
-			<carry_item key="exo_t4.carry_item" />
+			<carry_item key="exo_t5_16lab.carry_item" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="7.622" max="102.833" />
@@ -595,7 +593,7 @@
 			<weapon key="gkw_m4sopmodiimod3.weapon" />
 			<weapon key="gkw_consume_at4.weapon" />
 			<weapon key="medikit.weapon" />
-			<carry_item key="exo_t4.carry_item" />
+			<carry_item key="exo_t5_16lab.carry_item" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="7.622" max="102.833" />
@@ -611,7 +609,7 @@
 			<weapon key="gkw_ar15.weapon" />
 			<weapon key="gkw_consume_at4.weapon" />
 			<weapon key="medikit.weapon" />
-			<carry_item key="cc_t4.carry_item" />
+			<carry_item key="cc_t5_16lab.carry_item" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="0.100" max="3.833" />
@@ -625,7 +623,7 @@
 		</character>
 		<resources file="gk_elite.resources">
 			<weapon key="gkw_ar15mod3.weapon" />
-			<carry_item key="exo_t4.carry_item" />
+			<carry_item key="exo_t5_16lab.carry_item" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="7.100" max="102.833" />
@@ -640,7 +638,7 @@
 		<resources file="gk_elite.resources">
 			<weapon key="gkw_ak47.weapon" />
 			<weapon key="medikit.weapon" />
-			<carry_item key="exo_t4.carry_item" />
+			<carry_item key="exo_t5_16lab.carry_item" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="0.100" max="102.833" />
@@ -656,7 +654,7 @@
 			<weapon key="gkw_asval.weapon" />
 			<weapon key="gkw_asvalmod3.weapon" />
 			<weapon key="medikit.weapon" />
-			<carry_item key="exo_t4.carry_item" />
+			<carry_item key="exo_t5_16lab.carry_item" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="0.100" max="102.833" />
@@ -671,7 +669,7 @@
 		<resources file="gk_elite.resources">
 			<weapon key="gkw_stg44.weapon" />
 			<weapon key="medikit.weapon" />
-			<carry_item key="exo_t4.carry_item" />
+			<carry_item key="exo_t5_16lab.carry_item" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="0.100" max="102.833" />
@@ -686,7 +684,7 @@
 		<resources file="gk_elite.resources">
 			<weapon key="gkw_hk416.weapon" />
 			<weapon key="medikit.weapon" />
-			<carry_item key="exo_t4.carry_item" />
+			<carry_item key="exo_t5_16lab.carry_item" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="0.100" max="102.833" />
@@ -700,7 +698,7 @@
 		</character>
 		<resources file="gk_elite.resources">
 			<weapon key="gkw_hk416mod3.weapon" />
-			<carry_item key="exo_t4.carry_item" />
+			<carry_item key="exo_t5_16lab.carry_item" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="7.622" max="102.833" />
@@ -715,7 +713,7 @@
 		<resources file="gk_elite.resources">
 			<weapon key="gkw_famas.weapon" />
 			<weapon key="medikit.weapon" />
-			<carry_item key="exo_t4.carry_item" />
+			<carry_item key="exo_t5_16lab.carry_item" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="0.100" max="102.833" />
@@ -729,7 +727,7 @@
 		</character>
 		<resources file="gk_elite.resources">
 			<weapon key="gkw_aug.weapon" />
-			<carry_item key="exo_t4.carry_item" />
+			<carry_item key="exo_t5_16lab.carry_item" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="0.100" max="102.833" />
@@ -743,7 +741,6 @@
 		</character>
 		<resources file="gk_elite.resources">
 			<weapon key="gkw_m2hb.weapon" />
-			<carry_item key="bp_t4.carry_item" />
 			<carry_item key="bp_t5_16lab.carry_item" />
 		</resources>
 		<attribute_config class="xp">
@@ -758,7 +755,6 @@
 		</character>
 		<resources file="gk_elite.resources">
 			<weapon key="gkw_m249saw.weapon" />
-			<carry_item key="bp_t4.carry_item" />
 			<carry_item key="bp_t5_16lab.carry_item" />
 		</resources>
 		<attribute_config class="xp">
@@ -773,7 +769,6 @@
 		</character>
 		<resources file="gk_elite.resources">
 			<weapon key="gkw_mg34.weapon" />
-			<carry_item key="bp_t4.carry_item" />
 			<carry_item key="bp_t5_16lab.carry_item" />
 		</resources>
 		<attribute_config class="xp">
@@ -788,7 +783,6 @@
 		</character>
 		<resources file="gk_elite.resources">
 			<weapon key="gkw_mg42.weapon" />
-			<carry_item key="bp_t4.carry_item" />
 			<carry_item key="bp_t5_16lab.carry_item" />
 		</resources>
 		<attribute_config class="xp">
@@ -818,7 +812,7 @@
 		<resources file="gk_elite.resources">
 			<weapon key="gkw_p7.weapon" />
 			<weapon key="medikit.weapon" />
-			<carry_item key="exo_t4.carry_item" />
+			<carry_item key="exo_t5_16lab.carry_item" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="14.100" max="102.833" />
@@ -833,7 +827,7 @@
 		<resources file="gk_elite.resources">
 			<weapon key="gkw_ump9.weapon" />
 			<weapon key="medikit.weapon" />
-			<carry_item key="exo_t4.carry_item" />
+			<carry_item key="exo_t5_16lab.carry_item" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="0.100" max="102.833" />
@@ -850,7 +844,7 @@
 			<weapon key="gkw_fal_308.weapon" />
 			<weapon key="gkw_fal_2406.weapon" />
 			<weapon key="medikit.weapon" />
-			<carry_item key="exo_t4.carry_item" />
+			<carry_item key="exo_t5_16lab.carry_item" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="0.100" max="102.833" />
@@ -865,7 +859,7 @@
 		<resources file="gk_elite.resources">
 			<weapon key="gkw_f2000.weapon" />
 			<weapon key="medikit.weapon" />
-			<carry_item key="exo_t4.carry_item" />
+			<carry_item key="exo_t5_16lab.carry_item" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="0.100" max="102.833" />
@@ -879,7 +873,7 @@
 		</character>
 		<resources file="gk_elite.resources">
 			<weapon key="gkw_fg42.weapon" />
-			<carry_item key="bp_t4.carry_item" />
+			<carry_item key="bp_t5_16lab.carry_item" />
 			<carry_item key="bp_t5_16lab.carry_item" />
 		</resources>
 		<attribute_config class="xp">
@@ -895,7 +889,7 @@
 		<resources file="gk_elite.resources">
 			<weapon key="gkw_ump40.weapon" />
 			<weapon key="medikit.weapon" />
-			<carry_item key="exo_t4.carry_item" />
+			<carry_item key="exo_t5_16lab.carry_item" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="0.100" max="102.833" />
@@ -910,7 +904,7 @@
 		<resources file="gk_elite.resources">
 			<weapon key="gkw_ump45.weapon" />
 			<weapon key="medikit.weapon" />
-			<carry_item key="exo_t4.carry_item" />
+			<carry_item key="exo_t5_16lab.carry_item" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="0.100" max="102.833" />
@@ -925,7 +919,7 @@
 		<resources file="gk_elite.resources">
 			<weapon key="gkw_9a91.weapon" />
 			<weapon key="medikit.weapon" />
-			<carry_item key="exo_t4.carry_item" />
+			<carry_item key="exo_t5_16lab.carry_item" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="0.100" max="102.833" />
@@ -939,7 +933,7 @@
 		</character>
 		<resources file="gk_elite.resources">
 			<weapon key="gkw_ots14.weapon" />
-			<carry_item key="exo_t4.carry_item" />
+			<carry_item key="exo_t5_16lab.carry_item" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="0.100" max="102.833" />
@@ -953,7 +947,7 @@
 		</character>
 		<resources file="gk_elite.resources">
 			<weapon key="gkw_g11.weapon" />
-			<carry_item key="exo_t4.carry_item" />
+			<carry_item key="exo_t5_16lab.carry_item" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="0.100" max="102.833" />
@@ -1008,7 +1002,7 @@
 		</character>
 		<resources file="gk_elite.resources">
 			<weapon key="gkw_fn57.weapon" />
-			<carry_item key="exo_t4.carry_item" />
+			<carry_item key="exo_t5_16lab.carry_item" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="0.100" max="102.833" />
@@ -1022,7 +1016,7 @@
 		</character>
 		<resources file="gk_elite.resources">
 			<weapon key="gkw_iws2000.weapon" />
-			<carry_item key="cc_t4.carry_item" />
+			<carry_item key="cc_t5_16lab.carry_item" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="0.100" max="102.833" />
@@ -1036,7 +1030,7 @@
 		</character>
 		<resources file="gk_elite.resources">
 			<weapon key="gkw_supershorty.weapon" />
-			<carry_item key="bp_t4.carry_item" />
+			<carry_item key="bp_t5_16lab.carry_item" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="0.100" max="102.833" />
@@ -1050,7 +1044,7 @@
 		</character>
 		<resources file="gk_elite.resources">
 			<weapon key="gkw_sat8.weapon" />
-			<carry_item key="bp_t4.carry_item" />
+			<carry_item key="bp_t5_16lab.carry_item" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="0.100" max="102.833" />
@@ -1064,7 +1058,7 @@
 		</character>
 		<resources file="gk_elite.resources">
 			<weapon key="gkw_aa12.weapon" />
-			<carry_item key="bp_t4.carry_item" />
+			<carry_item key="bp_t5_16lab.carry_item" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="0.100" max="102.833" />
@@ -1078,7 +1072,7 @@
 		</character>
 		<resources file="gk_elite.resources">
 			<weapon key="gkw_art556.weapon" />
-			<carry_item key="exo_t4.carry_item" />
+			<carry_item key="exo_t5_16lab.carry_item" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="0.100" max="102.833" />
@@ -1092,7 +1086,7 @@
 		</character>
 		<resources file="gk_elite.resources">
 			<weapon key="gkw_an94.weapon" />
-			<carry_item key="exo_t4.carry_item" />
+			<carry_item key="exo_t5_16lab.carry_item" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="0.100" max="102.833" />
@@ -1106,7 +1100,7 @@
 		</character>
 		<resources file="gk_elite.resources">
 			<weapon key="gkw_ak12.weapon" />
-			<carry_item key="exo_t4.carry_item" />
+			<carry_item key="exo_t5_16lab.carry_item" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="0.100" max="102.833" />
@@ -1120,7 +1114,7 @@
 		</character>
 		<resources file="gk_elite.resources">
 			<weapon key="gkw_m870.weapon" />
-			<carry_item key="bp_t4.carry_item" />
+			<carry_item key="bp_t5_16lab.carry_item" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="0.100" max="102.833" />
@@ -1134,7 +1128,7 @@
 		</character>
 		<resources file="gk_elite.resources">
 			<weapon key="gkw_ak15.weapon" />
-			<carry_item key="exo_t4.carry_item" />
+			<carry_item key="exo_t5_16lab.carry_item" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="0.100" max="102.833" />
@@ -1160,7 +1154,7 @@
 		</character>
 		<resources file="gk_elite.resources">
 			<weapon key="gkw_xm8.weapon" />
-			<carry_item key="exo_t4.carry_item" />
+			<carry_item key="exo_t5_16lab.carry_item" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="0.100" max="102.833" />
@@ -1174,7 +1168,7 @@
 		</character>
 		<resources file="gk_elite.resources">
 			<weapon key="gkw_m82a1.weapon" />
-			<carry_item key="cc_t4.carry_item" />
+			<carry_item key="cc_t5_16lab.carry_item" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="0.100" max="102.833" />
@@ -1189,7 +1183,7 @@
 		<resources file="gk_elite.resources">
 			<weapon key="gkw_js9.weapon" />
 			<weapon key="medikit.weapon" />
-			<carry_item key="exo_t4.carry_item" />
+			<carry_item key="exo_t5_16lab.carry_item" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="0.100" max="102.833" />
@@ -1204,7 +1198,7 @@
 		<resources file="gk_elite.resources">
 			<weapon key="gkw_p90.weapon" />
 			<weapon key="medikit.weapon" />
-			<carry_item key="exo_t4.carry_item" />
+			<carry_item key="exo_t5_16lab.carry_item" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="0.100" max="102.833" />
@@ -1219,7 +1213,7 @@
 		<resources file="gk_elite.resources">
 			<weapon key="gkw_hs2000.weapon" />
 			<weapon key="medikit.weapon" />
-			<carry_item key="exo_t4.carry_item" />
+			<carry_item key="exo_t5_16lab.carry_item" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="0.100" max="102.833" />
@@ -1233,7 +1227,7 @@
 		</character>
 		<resources file="gk_elite.resources">
 			<weapon key="gkw_m200.weapon" />
-			<carry_item key="cc_t4.carry_item" />
+			<carry_item key="cc_t5_16lab.carry_item" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="0.100" max="102.833" />
@@ -1247,7 +1241,7 @@
 		</character>
 		<resources file="gk_elite.resources">
 			<weapon key="gkw_desert_eagle_s.weapon" />
-			<carry_item key="exo_t4.carry_item" />
+			<carry_item key="exo_t5_16lab.carry_item" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="0.100" max="102.833" />
@@ -1261,7 +1255,7 @@
 		</character>
 		<resources file="gk_elite.resources">
 			<weapon key="gkw_kord.weapon" />
-			<carry_item key="bp_t4.carry_item" />
+			<carry_item key="bp_t5_16lab.carry_item" />
 			<carry_item key="bp_t5_16lab.carry_item" />
 		</resources>
 		<attribute_config class="xp">
@@ -1276,7 +1270,7 @@
 		</character>
 		<resources file="gk_elite.resources">
 			<weapon key="gkw_sl8.weapon" />
-			<carry_item key="cc_t4.carry_item" />
+			<carry_item key="cc_t5_16lab.carry_item" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="0.100" max="102.833" />
@@ -1290,7 +1284,7 @@
 		</character>
 		<resources file="gk_elite.resources">
 			<weapon key="gkw_vsk94.weapon" />
-			<carry_item key="cc_t4.carry_item" />
+			<carry_item key="cc_t5_16lab.carry_item" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="0.100" max="3.833" />
@@ -1304,7 +1298,7 @@
 		</character>
 		<resources file="gk_elite.resources">
 			<weapon key="gkw_gm6.weapon" />
-			<carry_item key="cc_t4.carry_item" />
+			<carry_item key="cc_t5_16lab.carry_item" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="0.100" max="102.833" />
@@ -1335,7 +1329,7 @@
 
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="ff_dinergate.weapon"/>
-			<carry_item key="exo_t4.carry_item" />
+			<carry_item key="exo_t5_16lab.carry_item" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="0.3" min="0.171" max="1.0" />
@@ -1373,7 +1367,7 @@
 		<ai filename="hydra.ai" />
 		<resources clear_vehicles="1" clear_weapons="1" clear_grenades="1" clear_carry_items="1">
 			<weapon key="ff_agent.weapon" />
-			<carry_item key="bp_t4.carry_item" />
+			<carry_item key="bp_t5_16lab.carry_item" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="0.3" min="57.433" max="122.833" />
@@ -1393,7 +1387,7 @@
 		<ai filename="dummy_scarecrow.ai" />
 		<resources clear_vehicles="1" clear_weapons="1" clear_grenades="1" clear_carry_items="1">
 			<weapon key="ff_scarecrow_dummy.weapon" />
-			<carry_item key="exo_t4.carry_item" />
+			<carry_item key="exo_t5_16lab.carry_item" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="0.3" min="0" max="0.1" />
@@ -1528,7 +1522,7 @@
 		<model filename="kccod_aegis.xml" />
 		<resources clear_calls="1" clear_grenades="1" clear_carry_items="1" clear_weapons="1" clear_vehicles="1">
 			<weapon key="kcco_aegis.weapon"/>
-			<carry_item key="bp_t4.carry_item"/>
+			<carry_item key="bp_t5_16lab.carry_item"/>
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="50.100" max="52.833" />
@@ -1543,7 +1537,7 @@
 		<model filename="kccod_cyclops_sg_remake.xml" />
 		<resources clear_calls="1" clear_grenades="1" clear_carry_items="1" clear_weapons="1" clear_vehicles="1">
 			<weapon key="kcco_sg.weapon"/>
-			<carry_item key="bp_t4.carry_item"/>
+			<carry_item key="bp_t5_16lab.carry_item"/>
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="50.100" max="52.833" />

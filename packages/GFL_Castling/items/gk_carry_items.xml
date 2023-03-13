@@ -2,30 +2,12 @@
 <carry_items>
 	<!-- I.O.P./16LAB -->
 
-	<carry_item file="bp_t4.carry_item" />
 	<carry_item file="bp_t5_16lab.carry_item" />
-
-	<carry_item file="cc_t4.carry_item" />
 	<carry_item file="cc_t5_16lab.carry_item" />
-
-	<carry_item file="exo_t4.carry_item" />
 	<carry_item file="exo_t5_16lab.carry_item" />
-
 	<carry_item file="exo_x_t4.carry_item" />
 	<carry_item file="exo_ai_only.carry_item" />
 
-
-	<carry_item file="exo_t6.carry_item"/>
-	<carry_item file="exo_x_t6.carry_item"/>
-	<carry_item file="acbp_t6.carry_item"/>
-	<carry_item file="chip_a_t6.carry_item"/>
-	<carry_item file="chip_b_t6.carry_item"/>
-	<carry_item file="bp_t6.carry_item" />
-	<carry_item file="cc_t6.carry_item" />
-	<carry_item file="ultra_bp_t6.carry_item" />
-	<carry_item file="srexo_t6.carry_item"/>
-	<carry_item file="tms_t6.carry_item" />
-	<carry_item file="lcc_t6.carry_item" />
 	
 	<!-- Only/MOD.3 Only -->
 	<carry_item file="gentiane.carry_item" />
@@ -48,6 +30,18 @@
 	<carry_item file="gk_persica.carry_item" />
 	<carry_item file="bp_sp_naben.carry_item" />
 	<carry_item file="cc_sp_tyls.carry_item" />
+
+	<carry_item file="exo_t6.carry_item"/>
+	<carry_item file="exo_x_t6.carry_item"/>
+	<carry_item file="acbp_t6.carry_item"/>
+	<carry_item file="chip_a_t6.carry_item"/>
+	<carry_item file="chip_b_t6.carry_item"/>
+	<carry_item file="bp_t6.carry_item" />
+	<carry_item file="cc_t6.carry_item" />
+	<carry_item file="ultra_bp_t6.carry_item" />
+	<carry_item file="srexo_t6.carry_item"/>
+	<carry_item file="tms_t6.carry_item" />
+	<carry_item file="lcc_t6.carry_item" />
 
 	<!-- 靶机 -->
 	<carry_item file="target.carry_item" />
