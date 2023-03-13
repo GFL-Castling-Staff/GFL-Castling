@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>\
 <weapons>
-    <weapon key="gkw_g36c_mod3.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+    <weapon key="gkw_g36c_mod3_3103.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
         <tag name="smg" />
         <specification 
 		accuracy_factor="0.98" 
@@ -8,7 +8,7 @@
 		class="0"
         slot="0" 
         carry_in_two_hands="1"
-		name="G36C(MOD3)" 
+		name="G36C(MOD3)-[You Who Takes the Step]" 
         magazine_size="30" 
 		projectile_speed="180" 
 		retrigger_time="0.08" 
@@ -19,7 +19,7 @@
         sustained_fire_diminish_rate="2.4"  
         burst_shots="1"
         stab_enabled="1"/>
-        <next_in_chain key="gkw_g36c_mod3_skill.weapon" share_ammo="1" />
+        <next_in_chain key="gkw_g36c_mod3_3103_skill.weapon" share_ammo="1" />
         <commonness value="0.0001" in_stock="0" can_respawn_with="1" />
         <inventory encumbrance="10.0" buy_price="240.0" sell_price="240.0" />
         <animation key="recoil" animation_key="recoil1" />
@@ -38,8 +38,8 @@
         <sound key="magazine_in" fileref="g36_mgz_in_FromCOD16.wav" volume="0.4" />
         <sound key="cycle" fileref="g36_cycle_FromCOD16.wav" volume="0.4" />
         <sound class="impact" fileref="rifle_drop.wav" volume="1"/>
-        <model filename="gkw_smg_g36c.xml" />
-        <hud_icon filename="gkw_g36cmod3.png" />
+        <model filename="gkw_smg_g36c_3103.xml" />
+        <hud_icon filename="gkw_g36c_3103.png" />
         <capacity value="1" source="rank" source_value="0.0" />
         <weak_hand_hold offset="0.2" />
         <projectile file="bullet.projectile">
@@ -63,7 +63,7 @@
         <target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0" />
         <target_factors tag="commander" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0" />
     </weapon>
-    <weapon key="gkw_g36c_mod3_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+    <weapon key="gkw_g36c_mod3_3103_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
         <tag name="smg" />
         <specification 
 		accuracy_factor="0.98" 
@@ -71,7 +71,7 @@
 		class="0"
         slot="0" 
         carry_in_two_hands="1"
-		name="G36C(MOD3)-[Protector's Accord]" 
+		name="G36C(MOD3)-[You Who Takes the Step]-[Protector's Accord]" 
         magazine_size="30" 
 		projectile_speed="180" 
 		retrigger_time="0.08" 
@@ -83,7 +83,7 @@
         sustained_fire_diminish_rate="2.4"  
         burst_shots="1"
         stab_enabled="1"/>
-        <next_in_chain key="gkw_g36c_mod3.weapon" share_ammo="1" />
+        <next_in_chain key="gkw_g36c_mod3_3103.weapon" share_ammo="1" />
         <commonness value="0" in_stock="0" can_respawn_with="1" />
         <inventory encumbrance="10.0" buy_price="240.0" sell_price="240.0" />
         <animation key="recoil" animation_key="recoil1" />
@@ -102,8 +102,8 @@
         <sound key="magazine_in" fileref="g36_mgz_in_FromCOD16.wav" volume="0.4" />
         <sound key="cycle" fileref="g36_cycle_FromCOD16.wav" volume="0.4" />
         <sound class="impact" fileref="rifle_drop.wav" volume="1"/>
-        <model filename="gkw_smg_g36c.xml" />
-        <hud_icon filename="gkw_g36cmod3_skill.png" />
+        <model filename="gkw_smg_g36c_3103.xml" />
+        <hud_icon filename="gkw_g36c_3103.png" />
         <capacity value="1" source="rank" source_value="0.0" />
         <weak_hand_hold offset="0.2" />
         <projectile file="bullet.projectile">

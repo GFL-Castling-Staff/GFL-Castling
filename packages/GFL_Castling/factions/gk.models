@@ -2246,5 +2246,14 @@
     <model filename="gkd_hg_grizzly_4303.xml">
         <requirement class="weapon" key="gkw_grizzly_4303.weapon" slot="0" />
     </model> 
-    
+    <model filename="gkd_smg_g36c_3103.xml">
+        <requirement class="weapon" key="gkw_g36c_3103.weapon" slot="0" />
+    </model>
+    <model filename="gkd_smg_g36c_3103.xml">
+        <requirement class="weapon" key="gkw_g36c_mod3_3103.weapon" slot="0" />
+    </model>
+    <model filename="gkd_smg_g36c_3103.xml">
+        <requirement class="weapon" key="gkw_g36c_mod3_3103_skill.weapon" slot="0" />
+    </model>
+
 </models>
