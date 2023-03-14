@@ -605,8 +605,9 @@ class ItemDropEvent : Tracker {
         if (type_id == 4){
 		    const XmlElement@ player = event.getFirstElementByTagName("player");
             string newPlayerName = player.getStringAttribute("name");
-            const GFL_playerInfo@ newPlayerInfo = getPlayerListInfoFromXML(m_metagame,player);
-            if(newPlayerInfo != default_playerInfo)changePlayerInfoInList(newPlayerName,newPlayerInfo); 
+            GFL_playerInfo@ newPlayerInfo = getPlayerListInfoFromXML(m_metagame,player);
+            if(newPlayerInfo.getPlayerCid()!=default_int)
+                changePlayerInfoInList(newPlayerName,newPlayerInfo); 
         }        
     }
 

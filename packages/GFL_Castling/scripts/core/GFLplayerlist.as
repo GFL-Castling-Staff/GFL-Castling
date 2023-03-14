@@ -73,7 +73,7 @@ class GFL_equipment{
     Vector3 getOldPos(){return m_old_pos;}
 }
 
-const GFL_equipment@ default_equipment = GFL_equipment(default_string,default_string,default_string,default_string);
+GFL_equipment@ default_equipment = GFL_equipment(default_string,default_string,default_string,default_string);
 class GFL_playerInfo{
 	int m_playerid;    //玩家id
     int m_characterid; //角色id
@@ -106,7 +106,7 @@ class GFL_playerInfo{
     }
 }
 
-const GFL_playerInfo@ default_playerInfo = GFL_playerInfo(default_int,default_int,default_equipment);
+GFL_playerInfo@ default_playerInfo = GFL_playerInfo(default_int,default_int,default_equipment);
 class GFL_playerlist_system : Tracker {
 	protected Metagame@ m_metagame;
     protected float m_time = 1.0; 
@@ -180,7 +180,7 @@ bool existPlayerInList(string player_name) {return CT_PlayerList.exists(player_n
 // 查 - 得到单个玩家信息
 GFL_playerInfo@ getPlayerInfoFromList(string player_name) {GFL_playerInfo@ yyy= cast<GFL_playerInfo>(CT_PlayerList[player_name]); return yyy;}    
 // 改 - 单个玩家
-void changePlayerInfoInList(string player_name,const GFL_playerInfo@ player_info){
+void changePlayerInfoInList(string player_name,GFL_playerInfo@ player_info){
     if(existPlayerInList(player_name)) CT_PlayerList[player_name] = player_info;
     else {addPlayerToList(player_name,player_info);}
     _log("GFL_playerlist_system: changePlayerInfoInList(): operation successful.");
@@ -193,25 +193,15 @@ void changePlayerEquipmentInList(string player_name,GFL_equipment@ equipment){
 }
 // 清空
 void clearPlayerList() {CT_PlayerList = dictionary();}
-// 根据xml制作equipment
-GFL_equipment@ getPlayerListEquipmentFromXML(array<const XmlElement@>@ item){
-    string weapon1key = item[0].getStringAttribute("key");
-    string weapon2key = item[1].getStringAttribute("key");
-    string grenadekey = item[3].getStringAttribute("key");
-    string armorkey = item[4].getStringAttribute("key");
-    GFL_equipment@ equipment;   equipment.setWeapon(weapon1key,weapon2key,grenadekey,armorkey);
-    _log("GFLplayerlist.as: getPlayerListEquipmentFromXML(): player equipment file spawn successful.");
-    return equipment;
-}
 // 根据xml制作player_info
-const GFL_playerInfo@ getPlayerListInfoFromXML(Metagame@ m_metagame, const XmlElement@ player){
+GFL_playerInfo@ getPlayerListInfoFromXML(Metagame@ m_metagame, const XmlElement@ player){
     // 录入基本信息（玩家名，pid，cid）
     string player_username = player.getStringAttribute("name");
     int player_playerid = player.getIntAttribute("player_id");
     const XmlElement@ info = getPlayerInfo(m_metagame, player_playerid);
 
     // 抗null处理
-    if(info is null)return default_playerInfo;
+    if(info is null){_log("null info.");return default_playerInfo;}
 
     int player_characterid = info.getIntAttribute("character_id");
     _log("GFLplayerlist.as: getPlayerListInfoFromXML(): player basic info login successful.");
@@ -219,15 +209,23 @@ const GFL_playerInfo@ getPlayerListInfoFromXML(Metagame@ m_metagame, const XmlEl
     const XmlElement@ info2 = getCharacterInfo2(m_metagame,player_characterid);
 
     // 抗null处理    
-    if(info2 is null)return default_playerInfo;
+    if(info2 is null){_log("null info2.");return default_playerInfo;}
 
-    array<const XmlElement@>@ equipment = info2.getElementsByTagName("item");
+    array<const XmlElement@>@ item = info2.getElementsByTagName("item");
+    if(item is null) 
+        return default_playerInfo;
     _log("GFLplayerlist.as: getPlayerListInfoFromXML(): player equipment login successful.");
     // 生成gfl_playerlist
-    GFL_playerInfo@ playerinfo;        GFL_equipment@ playerequipment;     
+    GFL_playerInfo@ playerinfo;        
+    GFL_equipment@ playerequipment;     
     playerinfo.setPlayerInfo(player_playerid,player_characterid);   
-    @playerequipment = getPlayerListEquipmentFromXML(equipment);
+    string weapon1key = item[0].getStringAttribute("key");
+    string weapon2key = item[1].getStringAttribute("key");
+    string grenadekey = item[2].getStringAttribute("key");
+    string armorkey = item[4].getStringAttribute("key"); 
+    playerequipment.setWeapon(weapon1key,weapon2key,grenadekey,armorkey);
     playerinfo.setPlayerEquipment(playerequipment);
+    _log("GFLplayerlist.as: getPlayerListEquipmentFromXML(): player equipment file spawn successful.");
     return playerinfo;
 }
 
