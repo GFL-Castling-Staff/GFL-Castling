@@ -66,8 +66,8 @@
 
             // 下面这行是用来占位的，在这之上添加新的即可
             {"666",-1}
-    };
-
+    };    
+    
     array<string> resupply_grenade_list = {
         "hand_grenade.projectile",
         "hand_88grenade.projectile",
@@ -77,6 +77,22 @@
         "c4.projectile"
     };
 
+// parameters for "GFLplayerlist.as"
+
+
+    // 以下是目前游戏内存在的物品，以后可能会增加当前状态，背包物品等等
+
+    // m_weapon1key;    //主武器key
+    // m_weapon2key;    //副武器key
+    // m_weapon3key;    //投掷物key
+    // m_armorkey;       //甲key
+    // m_itemkey;       //掉落物key
+
+    const int default_int = -1;
+    const float default_float = -0.114514;
+    const string default_string = "-nan-";
+    const Vector3 default_Vector3 = Vector3(1,1,1);
+    
 // parameters for "ItemDropEvent.as":
 
     dictionary itemDropFileIndex = {

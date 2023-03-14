@@ -12,6 +12,7 @@
 #include "event_system.as"
 #include "ManualCall.as"
 #include "command_skill_info.as"
+#include "GFLplayerlist.as"
 
 //Interface Author: NetherCrow
 //Contributor: SAIWA K309 Lappland
@@ -150,8 +151,8 @@ class CommandSkill : Tracker {
 			if (info is null) return;
             int cId = info.getIntAttribute("character_id");
             string pname = info.getStringAttribute("name");
-            string c_weaponType = getPlayerWeaponFromList(senderId,0);
-            string c_armorType = getPlayerWeaponFromList(senderId,3);
+            string c_weaponType = getPlayerWeaponFromList(pname,0);
+            string c_armorType = getPlayerWeaponFromList(pname,3);
 
             SkillModifer@ m_modifer=SkillModifer(senderId,pname);
             

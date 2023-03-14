@@ -311,13 +311,14 @@ class kill_event : Tracker {
             }
             
             int playerId = killer.getIntAttribute("player_id");
+            string killername = killer.getStringAttribute("player_name");
             if (playerId == -1) return;
             
             
             //只查询我方杀敌
             if (factionId==0 && characterId > 0){
-                string c_weaponType = getPlayerWeaponFromList(playerId,0);
-                string c_armorType = getPlayerWeaponFromList(playerId,3);
+                string c_weaponType = getPlayerWeaponFromList(killername,0);
+                string c_armorType = getPlayerWeaponFromList(killername,3);
                 int kill_to_heal_scale = 1;
                 if(reward_pool_key=="rare" || reward_pool_key=="elite")
                 {
@@ -420,17 +421,14 @@ class kill_event : Tracker {
 
             if (Solider_Name=="") return;
 
-            int GivenRP = getRPKillReward(Solider_Name);
-            float GivenXP = getXPKillReward(Solider_Name);
-            if(GivenRP>0){
-                givePlayerRPcount(playerId,GivenRP);
-            }
-            if(GivenXP>0){
-                givePlayerXPcount(playerId,GivenXP);
-            }
-            
-
-
+            // int GivenRP = getRPKillReward(Solider_Name);
+            // float GivenXP = getXPKillReward(Solider_Name);
+            // if(GivenRP>0){
+            //     givePlayerRPcount(playerId,GivenRP);
+            // }
+            // if(GivenXP>0){
+            //     givePlayerXPcount(playerId,GivenXP);
+            // }
         }
 	}
     protected void handlePlayerDieEvent(const XmlElement@ event){
