@@ -602,11 +602,11 @@ class ItemDropEvent : Tracker {
                 }
             }
         }
-        if (event.getIntAttribute("target_container_type_id") == 4){
+        if (type_id == 4){
 		    const XmlElement@ player = event.getFirstElementByTagName("player");
             string newPlayerName = player.getStringAttribute("name");
             const GFL_playerInfo@ newPlayerInfo = getPlayerListInfoFromXML(m_metagame,player);
-			changePlayerInfoInList(newPlayerName,newPlayerInfo); 
+            if(newPlayerInfo != default_playerInfo)changePlayerInfoInList(newPlayerName,newPlayerInfo); 
         }        
     }
 
