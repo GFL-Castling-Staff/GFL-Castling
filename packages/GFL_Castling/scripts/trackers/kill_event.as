@@ -358,9 +358,9 @@ class kill_event : Tracker {
                         }
                     }
                 }
-                if(startsWith(c_armorType,"srexo_t6")){
-                    updateHealByKillEvent(characterId,factionId,4,30,"vest",kill_to_heal_scale);
-                }
+                // if(startsWith(c_armorType,"srexo_t6")){
+                //     updateHealByKillEvent(characterId,factionId,4,30,"vest",kill_to_heal_scale);
+                // }
                 if(startsWith(c_armorType,"tms_t6")){
                     if (c_weaponType=="gkw_hawk97mod3.weapon" || c_weaponType =="gkw_hawk97mod3_5805.weapon")
                     {
