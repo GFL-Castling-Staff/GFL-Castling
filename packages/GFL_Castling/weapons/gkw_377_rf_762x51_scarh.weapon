@@ -21,7 +21,7 @@
 	barrel_offset="0.55" 
 	projectiles_per_shot="1" />
     <!--Animations-->
-    <inventory buy_price="50.0" sell_price="50.0" />
+    <inventory encumbrance="10.0" buy_price="50.0" sell_price="50.0" />
     <animation key="reload" animation_key="reloading, magazine rifle 1.8" />
     <!--Sounds-->
     <sound key="fire" fileref="scar762_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.2" />
