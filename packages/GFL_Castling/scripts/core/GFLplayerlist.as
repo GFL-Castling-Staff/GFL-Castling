@@ -45,10 +45,10 @@ class GFL_equipment{
 
     string getWeapon(int num){
         switch(num){
-            case 1:{return m_weapon1key;}
-            case 2:{return m_weapon2key;}
-            case 3:{return m_grenadekey;}
-            case 4:{return m_armorkey;}
+            case 0:{return m_weapon1key;}
+            case 1:{return m_weapon2key;}
+            case 2:{return m_grenadekey;}
+            case 3:{return m_armorkey;}
             default:{_log("WARN: GFLplayerlist: GFL_equipment(): invalid weapon number.");return default_string;}
         }
         return default_string;
@@ -193,7 +193,7 @@ void changePlayerInfoInList(string player_name,GFL_playerInfo@ player_info){
 void changePlayerEquipmentInList(string player_name,GFL_equipment@ equipment){
     GFL_playerInfo@ player = cast<GFL_playerInfo>(CT_PlayerList[player_name]);
     player.setPlayerEquipment(equipment);
-    CT_PlayerList[player_name] = player;
+    CT_PlayerList.set(player_name, player)
     _log("GFLplayerlist.as: changePlayerEquipmentInList(): operation successful.");
 }
 // 清空
