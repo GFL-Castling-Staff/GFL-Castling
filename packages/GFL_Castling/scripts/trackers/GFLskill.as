@@ -1109,7 +1109,7 @@ class GFLskill : Tracker {
 				int characterId = event.getIntAttribute("character_id");
 				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
 				if (character is null) return;
-				int factionid = character.getIntAttribute("faction_id");
+				uint factionid = character.getIntAttribute("faction_id");
 				Vector3 Pos_40mm = stringToVector3(event.getStringAttribute("position"));
 				//获取技能影响的敌人数量
 				Pos_40mm = Pos_40mm.add(Vector3(0,0.5,0));

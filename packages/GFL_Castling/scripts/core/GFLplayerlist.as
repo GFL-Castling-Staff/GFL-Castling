@@ -122,9 +122,12 @@ class GFL_playerlist_system : Tracker {
 	}
 
     // 更新
-    protected void update(float time) {
-        if(m_time>=0) {m_time -= time;}
-        else m_time = m_refresh_time;
+    void update(float time) {
+        m_time -= time;
+        if(m_time<0){
+            m_time = m_refresh_time;
+            refresh();
+        }
     }
 
 	protected void handlePlayerConnectEvent(const XmlElement@ event) {
@@ -169,10 +172,10 @@ class GFL_playerlist_system : Tracker {
 		// always on
 		return true;
 	}
+
+    void refresh(){}
 }
 
-// 增 - 单个玩家
-void addPlayerToList(string player_name,GFL_playerInfo@ player_info) {CT_PlayerList.set(player_name, player_info);}
 // 删 - 单个玩家
 void removePlayerFromList(string player_name) {CT_PlayerList.erase(player_name);}
 // 查 - 玩家数量
@@ -183,10 +186,9 @@ array<string> getPlayerKeysFromList() {return CT_PlayerList.getKeys();}
 bool existPlayerInList(string player_name) {return CT_PlayerList.exists(player_name);}
 // 查 - 得到单个玩家信息
 GFL_playerInfo@ getPlayerInfoFromList(string player_name) {GFL_playerInfo@ yyy= cast<GFL_playerInfo>(CT_PlayerList[player_name]); return yyy;}    
-// 改 - 单个玩家
+// 增改 - 单个玩家
 void changePlayerInfoInList(string player_name,GFL_playerInfo@ player_info){
-    if(existPlayerInList(player_name)) CT_PlayerList[player_name] = player_info;
-    else {addPlayerToList(player_name,player_info);}
+    CT_PlayerList.set(player_name, player_info);
     _log("GFL_playerlist_system: changePlayerInfoInList(): operation successful.");
 }
 // 改 - 单个玩家装备
