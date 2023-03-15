@@ -24,13 +24,13 @@
 	<visual class="turret" turret_index="2" mesh_filename="is2_m1895_dshk.mesh" texture_filename="is2_m1895_main.jpg" />
 
 	<visual class="track" mesh_filename="is2_m1895_track.mesh" offset="-1.57 0.6 -0.74" >
-		<part texture_filename="is2_m1895_track.jpg" texture_animation="translate" factor="-0.7" tire_binding="0" />
+		<part texture_filename="is2_m1895_track.jpg" texture_animation="translate" factor="-1" tire_binding="0" />
 		<part texture_filename="is2_m1895_wheel.jpg" texture_animation="rotate" tire_binding="0" />
 		<part texture_filename="is2_m1895_main.jpg" />
 	</visual>
 
 	<visual class="track" mesh_filename="is2_m1895_track.mesh" offset="1.57 0.6 -0.74" >
-		<part texture_filename="is2_m1895_track.jpg" texture_animation="translate" factor="-0.7" tire_binding="1" />
+		<part texture_filename="is2_m1895_track.jpg" texture_animation="translate" factor="-1" tire_binding="1" />
 		<part texture_filename="is2_m1895_wheel.jpg" texture_animation="rotate" tire_binding="1" />
 		<part texture_filename="is2_m1895_main.jpg" />
 	</visual>
