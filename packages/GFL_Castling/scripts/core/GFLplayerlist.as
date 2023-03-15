@@ -14,16 +14,16 @@
 dictionary CT_PlayerList;
 
 class GFL_equipment{
-    string m_weapon1key;
-    string m_weapon2key;
-    string m_grenadekey;
-    string m_armorkey;
-    float m_xp;
-    int m_rp;
-    Vector3 m_new_pos;
-    Vector3 m_old_pos;
+    string m_weapon1key = default_string;
+    string m_weapon2key = default_string;
+    string m_grenadekey = default_string;
+    string m_armorkey = default_string;
+    float m_xp = default_float;
+    int m_rp = default_int;
+    Vector3 m_new_pos = default_Vector3;
+    Vector3 m_old_pos = default_Vector3;
 
-    GFL_equipment(string weapon1key, string weapon2key, string grenadekey, string armorkey, float xp=default_float, int rp=default_int, Vector3 pos=default_Vector3){
+    GFL_equipment(string weapon1key, string weapon2key, string grenadekey, string armorkey, float xp, int rp, Vector3 pos){
         m_weapon1key = weapon1key;
         m_weapon2key = weapon2key;
         m_grenadekey = grenadekey;
@@ -33,6 +33,8 @@ class GFL_equipment{
         m_new_pos = pos;
         m_old_pos = pos;
     }
+
+    GFL_equipment(){}
 
     void setWeapon(string weapon1key=default_string, string weapon2key=default_string, string grenadekey=default_string, string armorkey=default_string){
         m_weapon1key = weapon1key;
@@ -73,7 +75,7 @@ class GFL_equipment{
     Vector3 getOldPos(){return m_old_pos;}
 }
 
-GFL_equipment@ default_equipment = GFL_equipment(default_string,default_string,default_string,default_string);
+GFL_equipment@ default_equipment = GFL_equipment(default_string,default_string,default_string,default_string,default_float,default_int,default_Vector3);
 class GFL_playerInfo{
 	int m_playerid;    //玩家id
     int m_characterid; //角色id
@@ -88,6 +90,8 @@ class GFL_playerInfo{
         @m_equipment = @equipment;
     }
 
+    GFL_playerInfo(){}
+
     // 增删改单个玩家装备(注意clearEquipment不是直接删除字典)
     void setPlayerInfo(int pid=default_int, int cid=default_int){
 	    m_playerid = pid;
@@ -99,8 +103,8 @@ class GFL_playerInfo{
     void setPlayerEquipment(GFL_equipment@ equipment){
         @m_equipment = @equipment;
         _log("GFLplayerlist.as: GFL_playerInfo.setPlayerEquipment(): player equipment set successful.");
-
     }
+
     GFL_equipment@ getPlayerEquipment(){
         return m_equipment;
     }
@@ -129,8 +133,8 @@ class GFL_playerlist_system : Tracker {
 		const XmlElement@ player = event.getFirstElementByTagName("player");
 		if (player !is null) {
  			string newPlayerName = player.getStringAttribute("name");
-            const GFL_playerInfo@ newPlayerInfo = getPlayerListInfoFromXML(m_metagame,player);
-			addPlayerToList(newPlayerName,newPlayerInfo);           
+            GFL_playerInfo@ newPlayerInfo = getPlayerListInfoFromXML(m_metagame,player);
+			changePlayerInfoInList(newPlayerName,newPlayerInfo);           
 		}
         _log("GFL_playerlist_system: handlePlayerConnectEvent(): player add successful.");
 	}
@@ -139,8 +143,8 @@ class GFL_playerlist_system : Tracker {
 		const XmlElement@ player = event.getFirstElementByTagName("player");
 		if (player !is null) {
  			string newPlayerName = player.getStringAttribute("name");
-            const GFL_playerInfo@ newPlayerInfo = getPlayerListInfoFromXML(m_metagame,player);
-			addPlayerToList(newPlayerName,newPlayerInfo);           
+            GFL_playerInfo@ newPlayerInfo = getPlayerListInfoFromXML(m_metagame,player);
+			changePlayerInfoInList(newPlayerName,newPlayerInfo);
 		}
         _log("GFL_playerlist_system: handlePlayerSpawnEvent(): player update successful.");
     }    
@@ -168,7 +172,7 @@ class GFL_playerlist_system : Tracker {
 }
 
 // 增 - 单个玩家
-void addPlayerToList(string player_name,const GFL_playerInfo@ player_info) {CT_PlayerList.set(player_name, player_info);}
+void addPlayerToList(string player_name,GFL_playerInfo@ player_info) {CT_PlayerList.set(player_name, player_info);}
 // 删 - 单个玩家
 void removePlayerFromList(string player_name) {CT_PlayerList.erase(player_name);}
 // 查 - 玩家数量
@@ -189,6 +193,7 @@ void changePlayerInfoInList(string player_name,GFL_playerInfo@ player_info){
 void changePlayerEquipmentInList(string player_name,GFL_equipment@ equipment){
     GFL_playerInfo@ player = cast<GFL_playerInfo>(CT_PlayerList[player_name]);
     player.setPlayerEquipment(equipment);
+    CT_PlayerList[player_name] = player;
     _log("GFLplayerlist.as: changePlayerEquipmentInList(): operation successful.");
 }
 // 清空
@@ -216,8 +221,8 @@ GFL_playerInfo@ getPlayerListInfoFromXML(Metagame@ m_metagame, const XmlElement@
         return default_playerInfo;
     _log("GFLplayerlist.as: getPlayerListInfoFromXML(): player equipment login successful.");
     // 生成gfl_playerlist
-    GFL_playerInfo@ playerinfo;        
-    GFL_equipment@ playerequipment;     
+    GFL_playerInfo@ playerinfo = GFL_playerInfo();        
+    GFL_equipment@ playerequipment = GFL_equipment();
     playerinfo.setPlayerInfo(player_playerid,player_characterid);   
     string weapon1key = item[0].getStringAttribute("key");
     string weapon2key = item[1].getStringAttribute("key");

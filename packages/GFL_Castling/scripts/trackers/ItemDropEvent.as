@@ -606,8 +606,7 @@ class ItemDropEvent : Tracker {
 		    const XmlElement@ player = event.getFirstElementByTagName("player");
             string newPlayerName = player.getStringAttribute("name");
             GFL_playerInfo@ newPlayerInfo = getPlayerListInfoFromXML(m_metagame,player);
-            if(newPlayerInfo.getPlayerCid()!=default_int)
-                changePlayerInfoInList(newPlayerName,newPlayerInfo); 
+            changePlayerInfoInList(newPlayerName,newPlayerInfo);
         }        
     }
 

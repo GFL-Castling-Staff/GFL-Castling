@@ -21,6 +21,7 @@
     stance_accuracy_rate="1.5"
 	projectiles_per_shot="1" />
     <inventory buy_price="300.0" sell_price="300.0" />
+    <commonness value="0" in_stock="0" can_respawn_with="1" />
     <!--Animations-->
     <animation state_key="hold_casual" animation_key="dancing, kazachok" />
     <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
