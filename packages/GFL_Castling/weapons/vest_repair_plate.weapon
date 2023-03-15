@@ -6,14 +6,15 @@
     can_shoot_standing="1" 
     can_shoot_crouching="1" 
     carry_in_two_hands="0" 
-    name="IOP Bulletproof Plates" 
+    name="I.O.P. Bulletproof Plates" 
     class="5" 
     untransform_equipment_class="vest"
     untransform_count="5"  
     consume="1" 
     sight_range_modifier="1" 
     slot="1" />
-    <animation state_key="recoil" 		animation_key="repairing vest" />
+
+    <animation state_key="recoil" 		animation_key="equip armor" />
     <animation state_key="hold"         animation_key="still, single hand carry" />
     <animation state_key="hold_on_wall"     animation_key="still, single hand carry" />
     <animation state_key="hold_casual"      animation_key="still, single hand carry" />
@@ -24,10 +25,11 @@
     <animation state_key="walking_backwards"    animation_key="walking backwards, single hand carry" />
     <animation state_key="crouch_moving"    animation_key="crouching forwards, single hand carry" />
     <animation state_key="crouch_moving_backwards"  animation_key="crouching backwards, single hand carry" />
-    <animation state_key="changing_weapon_in"   animation_key="change weapon in, single hand carry" />
     
     <sound class="impact" fileref="medikit_drop.wav" />    
+    <sound class="fire" fileref="plate_equip.wav" />    
 
+    
     <model filename="gki_bulletplate.xml" />
 
     <capacity value="5" source="rank" source_value="0.0" />

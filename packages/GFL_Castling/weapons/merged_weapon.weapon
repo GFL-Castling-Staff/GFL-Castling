@@ -27736,7 +27736,7 @@
 	<sound key="cycle" fileref="sass_cycle_FromCOD13.wav" volume="0.4"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_rf_m110.xml"/>
-	<hud_icon filename="gkw_m110.png"/>
+	<hud_icon filename="testing.png"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="bullet.projectile" can_be_detected_by_footmen="0">
@@ -29101,6 +29101,31 @@
 	<inventory encumbrance="1.0" price="1.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<modifier class="speed" value="-0.4"/>
+</weapon>
+
+<weapon key="vest_repair_plate.weapon" on_ground_up="1 0 0" radius="0.45" time_to_live_out_in_the_open="30.0">
+	<tag name="bandage"/>
+	<specification magazine_size="1" can_shoot_standing="1" can_shoot_crouching="1" carry_in_two_hands="0" name="I.O.P. Bulletproof Plates" class="5" untransform_equipment_class="vest" untransform_count="5" consume="1" sight_range_modifier="1" slot="1"/>
+	<animation state_key="recoil" animation_key="equip armor"/>
+	<animation state_key="hold" animation_key="still, single hand carry"/>
+	<animation state_key="hold_on_wall" animation_key="still, single hand carry"/>
+	<animation state_key="hold_casual" animation_key="still, single hand carry"/>
+	<animation state_key="still_against_wall" animation_key="still, single hand carry"/>
+	<animation state_key="crouching" animation_key="crouch, still, single hand carry"/>
+	<animation state_key="running" animation_key="running, single hand carry"/>
+	<animation state_key="walking" animation_key="walking, single hand carry"/>
+	<animation state_key="walking_backwards" animation_key="walking backwards, single hand carry"/>
+	<animation state_key="crouch_moving" animation_key="crouching forwards, single hand carry"/>
+	<animation state_key="crouch_moving_backwards" animation_key="crouching backwards, single hand carry"/>
+	<sound class="impact" fileref="medikit_drop.wav"/>
+	<model filename="gki_bulletplate.xml"/>
+	<capacity value="5" source="rank" source_value="0.0"/>
+	<capacity value="8" source="rank" source_value="41.633"/>
+	<capacity value="10" source="rank" source_value="302"/>
+	<hud_icon filename="gki_plate.png"/>
+	<commonness value="0" can_respawn_with="1" in_stock="1"/>
+	<inventory encumbrance="5.0" buy_price="20.0" sell_price="0"/>
+	<modifier class="speed" value="0.1"/>
 </weapon>
 
 <weapon key="gkw_supersassmod3.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
