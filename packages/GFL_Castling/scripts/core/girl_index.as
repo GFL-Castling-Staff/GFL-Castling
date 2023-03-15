@@ -380,6 +380,9 @@ dictionary tdoll_index = {
     {"377","gkw_scarh.weapon"},
     {"378","gkw_scarl.weapon"},
 
+
+    {"382","gkw_m110.weapon"},
+
     {"-1",""}
 
 };

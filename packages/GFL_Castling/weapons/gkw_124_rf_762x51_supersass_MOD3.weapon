@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapon file="designated_marksman_rifle.animation_base" key="gkw_supersassmod3.weapon">
-
-
     <!--Weapon specifications-->
-    
     <specification 
 	retrigger_time="-1.0" 
 	accuracy_factor="1" 
@@ -22,20 +19,15 @@
 	projectile_speed="230.5" 
 	barrel_offset="0.4" 
 	projectiles_per_shot="1" />
-
-	<next_in_chain key="gkw_supersassmod3_skill.weapon" share_ammo="0" />
-	<!--Animations-->
+    <next_in_chain key="gkw_supersassmod3_skill.weapon" share_ammo="0" />
+    <!--Animations-->
     <inventory encumbrance="10.0" buy_price="120.0" sell_price="40.0" />
-
-
-    <animation key="reload" animation_key="reloading, magazine rifle 1.8" />			
-	
-	<!--Sounds-->
-	
+    <animation key="reload" animation_key="reloading, magazine rifle 1.8" />
+    <!--Sounds-->
     <sound key="fire" fileref="sass_fire_FromCOD13.wav" pitch_variety="0.01" volume="1.1" />
     <sound key="magazine_out" fileref="sass_mgz_out_FromSQUAD.wav"  volume="0.55" />
     <sound key="magazine_in" fileref="sass_mgz_in_FromSQUAD.wav"  volume="0.55" />
-	<sound key="cycle" fileref="sass_cycle_FromCOD13.wav"  volume="0.4" />
+    <sound key="cycle" fileref="sass_cycle_FromCOD13.wav"  volume="0.4" />
     <sound key="cycle" fileref="SuperSASSMod_ATTACK_JP.wav" volume="1.0" pitch_variety="0"/>
     <sound key="cycle" fileref="sass_cycle_FromCOD13.wav"  volume="0.4" />
     <sound key="cycle" fileref="SuperSASSMod_BLACKACTION_JP.wav" volume="1.0" pitch_variety="0"/>
@@ -58,21 +50,11 @@
     <sound key="cycle" fileref="sass_cycle_FromCOD13.wav"  volume="0.4" />
     <sound key="cycle" fileref="SuperSASSMod_OPERATIONBEGIN_JP.wav" volume="1.0" pitch_variety="0"/>
     <sound class="impact" fileref="rifle_drop.wav" />
-   
-	<!--Model, Icon, Cost-->
-   
+    <!--Model, Icon, Cost-->
     <model filename="gkw_rf_supersassmod3.xml" />
     <hud_icon filename="gkw_supersassmod3.png" />
     <capacity value="1" source="rank" source_value="0.0" />
-    
-
-
-
-
-	
-	<!--Ballistics-->
-	
-    
+    <!--Ballistics-->
     <weak_hand_hold offset="0.3" />
     <projectile file="bullet.projectile" can_be_detected_by_footmen="0">
         <result class="hit" 
@@ -82,11 +64,9 @@
         kill_decay_end_time="2.414" />
     </projectile>
     <effect class="muzzle" ref="ejection_76251" />
-    
     <!--Accuracy, Movement speed-->
-    
     <stance state_key="running" accuracy="0.7" />
-	<stance state_key="walking" accuracy="0.8" />
+    <stance state_key="walking" accuracy="0.8" />
     <stance state_key="crouch_moving" accuracy="0.85" />
     <stance state_key="prone_moving" accuracy="0.85" />
     <stance state_key="standing" accuracy="0.95"/>
@@ -94,6 +74,5 @@
     <stance state_key="prone" accuracy="1" />
     <stance state_key="over_wall" accuracy="1" />
     <modifier class="detectability" value="-0.1"/>
-    <modifier class="speed" value="0" />   
-
+    <modifier class="speed" value="0" />
 </weapon>
