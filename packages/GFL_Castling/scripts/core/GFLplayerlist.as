@@ -137,9 +137,11 @@ class GFL_playerlist_system : Tracker {
 		if (player !is null) {
  			string newPlayerName = player.getStringAttribute("name");
             GFL_playerInfo@ newPlayerInfo = getPlayerListInfoFromXML(m_metagame,player);
-			changePlayerInfoInList(newPlayerName,newPlayerInfo);           
+			changePlayerInfoInList(newPlayerName,newPlayerInfo);  
+            _log("GFL_playerlist_system: handlePlayerConnectEvent(): player add successful.");  
+            return;       
 		}
-        _log("GFL_playerlist_system: handlePlayerConnectEvent(): player add successful.");
+        _log("GFL_playerlist_system: handlePlayerConnectEvent(): player add failed.");
 	}
 
     protected void handlePlayerSpawnEvent(const XmlElement@ event){
@@ -148,18 +150,24 @@ class GFL_playerlist_system : Tracker {
  			string newPlayerName = player.getStringAttribute("name");
             GFL_playerInfo@ newPlayerInfo = getPlayerListInfoFromXML(m_metagame,player);
 			changePlayerInfoInList(newPlayerName,newPlayerInfo);
+            _log("GFL_playerlist_system: handlePlayerConnectEvent(): player add successful.");
+            return;
 		}
-        _log("GFL_playerlist_system: handlePlayerSpawnEvent(): player update successful.");
+        _log("GFL_playerlist_system: handlePlayerSpawnEvent(): player update failed.");
     }    
 
     protected void handlePlayerDisconnectEvent(const XmlElement@ event) {
 		const XmlElement@ player = event.getFirstElementByTagName("player");
 		if (player !is null) {
 			string deletePlayerName = player.getStringAttribute("name");
-            if(CT_PlayerList.exists(deletePlayerName))removePlayerFromList(deletePlayerName);
-            else {_log("WARN: GFL_playerlist_system: handlePlayerDisconnectEvent(): no such player.");}
+            if(CT_PlayerList.exists(deletePlayerName)){
+                removePlayerFromList(deletePlayerName);
+                _log("GFL_playerlist_system: handlePlayerDisconnectEvent(): player delete successful.");   
+                return;  
+            }
+            else {_log("WARN: GFL_playerlist_system: handlePlayerDisconnectEvent(): no such player.");return;}
 		}	
-        _log("GFL_playerlist_system: handlePlayerDisconnectEvent(): player delete successful.");        	
+        _log("GFL_playerlist_system: handlePlayerDisconnectEvent(): player delete failed.");        	
 	}	
 
 	bool hasEnded() const {
@@ -173,7 +181,20 @@ class GFL_playerlist_system : Tracker {
 		return true;
 	}
 
-    void refresh(){}
+    void refresh(){
+        CT_PlayerList = dictionary();
+        array<const XmlElement@> nowPlayers = getPlayers(m_metagame);
+        if (nowPlayers !is null){
+            // 彻底删除一次并全部重新更新
+            for(uint i=0;i<nowPlayers.length();i++){
+                if (nowPlayers[i] is null) continue;
+                string newPlayerName = nowPlayers[i].getStringAttribute("name");
+                GFL_playerInfo@ newPlayerInfo = getPlayerListInfoFromXML(m_metagame,nowPlayers[i]);
+                changePlayerInfoInList(newPlayerName,newPlayerInfo);
+                _log("GFL_playerlist_system: refresh(): player add successful.");
+            }
+        }
+    }
 }
 
 // 删 - 单个玩家
@@ -208,7 +229,7 @@ GFL_playerInfo@ getPlayerListInfoFromXML(Metagame@ m_metagame, const XmlElement@
     const XmlElement@ info = getPlayerInfo(m_metagame, player_playerid);
 
     // 抗null处理
-    if(info is null){_log("null info.");return default_playerInfo;}
+    if(info is null){_log("WARN: GFLplayerlist.as: getPlayerListInfoFromXML(): null info, using default playerinfo.");return default_playerInfo;}
 
     int player_characterid = info.getIntAttribute("character_id");
     _log("GFLplayerlist.as: getPlayerListInfoFromXML(): player basic info login successful.");
@@ -216,11 +237,14 @@ GFL_playerInfo@ getPlayerListInfoFromXML(Metagame@ m_metagame, const XmlElement@
     const XmlElement@ info2 = getCharacterInfo2(m_metagame,player_characterid);
 
     // 抗null处理    
-    if(info2 is null){_log("null info2.");return default_playerInfo;}
+    if(info2 is null){_log("WARN: GFLplayerlist.as: getPlayerListInfoFromXML(): null info2, using default playerinfo.");return default_playerInfo;}
 
     array<const XmlElement@>@ item = info2.getElementsByTagName("item");
-    if(item is null) 
+    if(item is null) {
+        _log("WARN: GFLplayerlist.as: getPlayerListInfoFromXML(): invalid player item, using default equipment.");
         return default_playerInfo;
+    }
+        
     _log("GFLplayerlist.as: getPlayerListInfoFromXML(): player equipment login successful.");
     // 生成gfl_playerlist
     GFL_playerInfo@ playerinfo = GFL_playerInfo();        
@@ -237,17 +261,22 @@ GFL_playerInfo@ getPlayerListInfoFromXML(Metagame@ m_metagame, const XmlElement@
 }
 
 int getPlayerCidFromList(string player_name) {
-    if(!existPlayerInList(player_name))return default_int;
+    if(!existPlayerInList(player_name)){_log("WARN: GFLplayerlist.as: getPlayerCidFromList(): Player cid recieve failed.");return default_int;}
     return cast<GFL_playerInfo>(CT_PlayerList[player_name]).getPlayerCid();
 }
 
 string getPlayerWeaponFromList(string player_name, int weaponnum) {
-    if(!existPlayerInList(player_name))return default_string;
-    return cast<GFL_playerInfo>(CT_PlayerList[player_name]).getPlayerEquipment().getWeapon(weaponnum);
+    if(!existPlayerInList(player_name)){_log("WARN: GFLplayerlist.as: getPlayerWeaponFromList(): player weapon recieve failed.");return default_string;}
+    string weaponinfo = cast<GFL_playerInfo>(CT_PlayerList[player_name]).getPlayerEquipment().getWeapon(weaponnum);
+    if(weaponinfo == default_string)_log("WARN: GFLplayerlist.as: getPlayerWeaponFromList(): player weapon is nan.");
+    return weaponinfo;
 }
 
 bool checkCharacterIdisPlayerOwn(string player_name, int cid) {
-    if(!existPlayerInList(player_name))return false;
-    if(cast<GFL_playerInfo>(CT_PlayerList[player_name]).getPlayerCid()!=cid)return false;
+    if(!existPlayerInList(player_name)){_log("WARN: GFLplayerlist.as: checkCharacterIdisPlayerOwn(): player cid recieve failed.");return false;}
+    if(cast<GFL_playerInfo>(CT_PlayerList[player_name]).getPlayerCid()!=cid){
+        _log("WARN: GFLplayerlist.as: checkCharacterIdisPlayerOwn(): player cid not equal.");
+        return false;
+    }
     return true;
 }

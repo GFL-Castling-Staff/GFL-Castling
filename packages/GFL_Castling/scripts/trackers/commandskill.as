@@ -152,7 +152,9 @@ class CommandSkill : Tracker {
             int cId = info.getIntAttribute("character_id");
             string pname = info.getStringAttribute("name");
             string c_weaponType = getPlayerWeaponFromList(pname,0);
+            if(c_weaponType == default_string)_log("WARN: commandskill.as: handleChatEvent(): player weapon is nan.");
             string c_armorType = getPlayerWeaponFromList(pname,3);
+            if(c_armorType == default_string)_log("WARN: commandskill.as: handleChatEvent(): player weapon is nan.");
 
             SkillModifer@ m_modifer=SkillModifer(senderId,pname);
             
