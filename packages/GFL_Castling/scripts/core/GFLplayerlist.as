@@ -193,7 +193,7 @@ void changePlayerInfoInList(string player_name,GFL_playerInfo@ player_info){
 void changePlayerEquipmentInList(string player_name,GFL_equipment@ equipment){
     GFL_playerInfo@ player = cast<GFL_playerInfo>(CT_PlayerList[player_name]);
     player.setPlayerEquipment(equipment);
-    CT_PlayerList.set(player_name, player)
+    CT_PlayerList.set(player_name, player);
     _log("GFLplayerlist.as: changePlayerEquipmentInList(): operation successful.");
 }
 // 清空
