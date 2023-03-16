@@ -11,13 +11,29 @@
 
 #include "gamemode_invasion.as"
 #include "GFLhelpers.as"
+#include "GFLparameters.as"
 //Author: NetherCrow
+
+array<ScoredResource@> reinforce_resource = {
+	ScoredResource("deadzone_reinforce_assault.call", "call", 1.0f),
+	ScoredResource("deadzone_reinforce_eod.call", "call", 1.0f),
+	ScoredResource("deadzone_reinforce_3wheel.call", "call", 1.0f),
+	ScoredResource("deadzone_reinforce_3wheelplus.call", "call", 0.5f),
+	ScoredResource("deadzone_reinforce_nyto.call", "call", 0.5f),
+	ScoredResource("deadzone_reinforce_tank.call", "call", 0.5f)
+};
+
+array<ScoredResource@> tower_resource = {
+	ScoredResource("par_sentrytower_deadzone.vehicle", "vehicle", 1.0f)
+};
 
 class map_DeadZone_Phase : Tracker {
 	protected GameModeInvasion@ m_metagame;
 	protected PhaseControllerDeadZone@ m_controller;
 	protected bool m_started;
 	protected bool m_ended;
+
+
 
 	// --------------------------------------------
 	map_DeadZone_Phase(GameModeInvasion@ metagame, PhaseControllerDeadZone@ controller) {
@@ -47,6 +63,12 @@ class map_DeadZone_Phase : Tracker {
 		setSpawnScore(m_metagame,1,"Nimogen",0);
 		setSpawnScore(m_metagame,1,"Narciss",0);
 		setSpawnScore(m_metagame,1,"Thunder",0);
+		m_metagame.addTracker(SpawnAtNode(m_metagame, tower_resource, "deadzone_tower", 1, 3));	
+		resetFactionCallResources(m_metagame, 0, AllGKcallList, false, getCallSorting());
+		m_metagame.getComms().send(
+			"<command class='soldier_ai' faction='1'>" + 
+			"  <parameter class='willingness_to_charge' value='0.4' />" +
+			"</command>");
 	}
 
 	// --------------------------------------------
@@ -86,32 +108,60 @@ class map_DeadZone_Phase1 : map_DeadZone_Phase {
 	void start() {
 		map_DeadZone_Phase::start();
 		_log("Phase1 starting");
-		playSoundtrack(m_metagame,"Singularity_3.wav");
+		playSoundtrack(m_metagame,"Singularity_4.wav");
 	}
-	
-	protected void handleBaseOwnerChangeEvent(const XmlElement@ event) {
-		refresh();
-    }
 
-	protected void refresh() {
-		array<const XmlElement@> baseList = getBases(m_metagame);
-		int winner = -1;
-		bool pause = false;
-		for (uint i = 0; i < baseList.size(); ++i) {
-			const XmlElement@ base = baseList[i];
-			if (base.getBoolAttribute("capturable")) {
-				// assuming one capturable here
-				winner = base.getIntAttribute("owner_id");
-				if (winner!=0){
-					pause = true;
-					break;
-				}
+	protected float m_timer = 90.0;
+	protected float REFRESH_TIME = 90.0;
+	protected int m_killtime = 0;
+
+
+	string m_vehicleKey = "par_sentrytower_deadzone.vehicle";
+
+	protected void handleBaseOwnerChangeEvent(const XmlElement@ event) {
+		int owner = event.getIntAttribute("owner_id");		
+		string baseKey = event.getStringAttribute("base_key");
+		if (baseKey == "Crash part") {
+			if (owner == 0) 
+			{
+				m_metagame.getComms().send("<command class='update_base' base_key='Last Defence' capturable='0' />");
+				m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 1.0, 0, "Map105_3,last base safe"));
+				SetAttackTarget(m_metagame,1,"Crash part");
+			}
+			else
+			{
+				m_metagame.getComms().send("<command class='update_base' base_key='Last Defence' capturable='1' />");
+				m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 1.0, 0, "Map105_3,last base risk"));
+				SetAttackTarget(m_metagame,1,"Last Defence");
 			}
 		}
-		if(pause==false){
+    }
+
+	protected void handleVehicleDestroyEvent(const XmlElement@ event) {
+		string key = event.getStringAttribute("vehicle_key");
+		if (key == m_vehicleKey) {
+			m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 2.0, 0, "Map105_3,tower destoryed"));
+			m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 1.0, 0, "Map105_3,white rush"));			
+			m_metagame.addTracker(SpawnAtNode(m_metagame, reinforce_resource, "reinforce", 1, 4));
+			m_killtime++;
+		}
+		if(m_killtime >=3)
+		{
 			end();
 		}
 	}
+
+	void update(float time) {
+		m_timer -= time;
+		if (m_timer < 0.0) {
+			m_timer = REFRESH_TIME;
+			m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 1.0, 0, "Map105_3,white assault"));
+			m_metagame.addTracker(SpawnAtNode(m_metagame, reinforce_resource, "reinforce", 1, 1));		
+			m_metagame.getComms().send("<command class='commander_ai' faction='2' base_defense='0.6' border_defense='0.4'/>");
+			m_metagame.getComms().send("<command class='commander_ai' faction='3' base_defense='0.6' border_defense='0.4'/>");	
+		}
+	}
+
 };
 
 class map_DeadZone_Phase2 : map_DeadZone_Phase {
@@ -121,26 +171,19 @@ class map_DeadZone_Phase2 : map_DeadZone_Phase {
 	void start() {
 		map_DeadZone_Phase::start();
 		_log("Phase2 starting");
-		m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 3.0, 0, "Map105HandleAll"));
-		playSoundtrack(m_metagame,"Map105Defend.wav");
-		m_metagame.getComms().send("<command class='commander_ai' faction='0' base_defense='0.0' border_defense='0.05' />");
-
+		m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 3.0, 0, "Map105_3,all tower destoryed1"));
+		m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 3.0, 0, "Map105_3,all tower destoryed2"));
+		m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 3.0, 0, "Map105_3,all tower destoryed3"));
+		m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 3.0, 0, "Map105_3,all tower destoryed4"));
+		resetFactionCallResources(m_metagame, 0, AllGKcallList, true, getCallSorting());
+		array<const XmlElement@> baseList = getBases(m_metagame);
+		for (uint i = 0; i < baseList.size(); ++i) {
+			const XmlElement@ base = baseList[i];
+			string basekey = base.getStringAttribute("key");
+			m_metagame.getComms().send("<command class='update_base' base_key='" + basekey + "' capturable='1' />");
+		}		
 	}
 
-	protected void handleFactionLoseEvent(const XmlElement@ event) {
-		// if green lost a battle, start over
-		int factionId = -1;
-
-		const XmlElement@ loseCondition = event.getFirstElementByTagName("lose_condition");
-		if (loseCondition !is null) {
-			factionId = loseCondition.getIntAttribute("faction_id");
-		}
-
-		if (factionId == 2) {
-			// kcco倒了
-			m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 3.0, 0, "Map105WIN", dictionary(),2.0, "explosion3.wav"));
-		}
-	}
 };
 
 
@@ -210,22 +253,6 @@ class PhaseControllerDeadZone : PhaseController {
 	// --------------------------------------------
 	bool hasStarted() const {
 		return m_started;
-	}
-
-	protected void handleFactionLoseEvent(const XmlElement@ event) {
-		// if green lost a battle, start over
-		int factionId = -1;
-
-		const XmlElement@ loseCondition = event.getFirstElementByTagName("lose_condition");
-		if (loseCondition !is null) {
-			factionId = loseCondition.getIntAttribute("faction_id");
-		}
-
-		if (factionId == 1) {
-			// 铁血倒了
-			m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 3.0, 0, "Map105SFdown"));
-			playSoundtrack(m_metagame,"Singularity_2.wav");
-		}
 	}
 
 	void load(const XmlElement@ root) {}

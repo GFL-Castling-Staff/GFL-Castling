@@ -421,19 +421,19 @@ class MapRotatorInvasion : MapRotator {
 				*/
 
 				// intel objectives
-				if (stage.hasIntelManager()) {
-					m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 5.0, 0, "intel objectives", a));
-				}
+				// if (stage.hasIntelManager()) {
+				// 	m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 5.0, 0, "intel objectives", a));
+				// }
 				
-				// loot / cargo trucks?
-				if (stage.hasLootObjective()) {
-					m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 5.0, 0, "loot objective", a));
-				}
+				// // loot / cargo trucks?
+				// if (stage.hasLootObjective()) {
+				// 	m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 5.0, 0, "loot objective", a));
+				// }
 
-				// radio tower / truck?
-				if (stage.hasRadioObjective()) {
-					m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 5.0, 0, "radio tower or truck objective", a));
-				}
+				// // radio tower / truck?
+				// if (stage.hasRadioObjective()) {
+				// 	m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 5.0, 0, "radio tower or truck objective", a));
+				// }
 
 				// aa?
 				if (hasAaObjective()) {
@@ -450,6 +450,9 @@ class MapRotatorInvasion : MapRotator {
 				}
 				else if (stage.m_mapInfo.m_name == "Echo") {
 					sendMsgStart("Echo",5,a);
+				}
+				else if (stage.m_mapInfo.m_name == "Dead Zone") {
+					stage.announceStart(m_metagame);
 				}				
 				else{
 					// commander says something
@@ -468,11 +471,6 @@ class MapRotatorInvasion : MapRotator {
 					}
 					m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 0.0, 0, "map start, ending", a));
 				}
-
-				if (stage !is null) {
-					stage.announceStart(m_metagame);
-				}
-				
 
 			} else {
 				// completed, assuming friendly for now
@@ -523,7 +521,6 @@ class MapRotatorInvasion : MapRotator {
 			} else {
 			}
 		}
-
 		// finally enable "in game commander" radio, battle and event reports
 		m_metagame.getTaskSequencer().add(CallFloat(CALL_FLOAT(this.setCommanderAiReports), 1.0));
 	}

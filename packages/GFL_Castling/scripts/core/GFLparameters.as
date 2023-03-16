@@ -232,3 +232,35 @@
         {"EISEN",3110.0},
         {"NETHER_CROW",761.0}
     };
+
+	array<Resource@> GKcallList={
+		Resource("gk_airstrike_fairy.call", "call"),
+		Resource("gk_rocket_fairy.call", "call"),
+		Resource("gk_warrior_fairy.call", "call"),
+		Resource("gk_rampage_fairy_ac130.call", "call"),
+		Resource("gk_snipe_fairy.call", "call"),
+		Resource("gk_yaoren_fairy.call", "call"),
+		Resource("martina.call", "call"),
+		Resource("chiara.call", "call"),
+		Resource("pierre.call", "call"),
+		Resource("gk_repair_fairy.call", "call"),
+		Resource("target.call", "call")
+	};
+
+    array<Resource@> AllGKcallList={
+		Resource("gk_airdrop_supply.call", "call"),
+        Resource("gk_medic_agl.call", "call"),
+		Resource("gk_rescue_fairy.call", "call"),
+        Resource("gk_bombardment_fairy.call", "call"),
+		Resource("gk_airstrike_fairy.call", "call"),
+		Resource("gk_rocket_fairy.call", "call"),
+		Resource("gk_warrior_fairy.call", "call"),
+		Resource("gk_rampage_fairy_ac130.call", "call"),
+		Resource("gk_snipe_fairy.call", "call"),
+		Resource("gk_yaoren_fairy.call", "call"),
+		Resource("martina.call", "call"),
+		Resource("chiara.call", "call"),
+		Resource("pierre.call", "call"),
+		Resource("gk_repair_fairy.call", "call"),
+		Resource("target.call", "call")
+	};

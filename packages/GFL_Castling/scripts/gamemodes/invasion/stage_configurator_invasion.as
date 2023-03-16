@@ -185,7 +185,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 	// ------------------------------------------------------------------------------------------------
 	protected void setupNormalStages() {
-		// addStage(setupDeadZone());
+		addStage(setupDeadZone());
 		// addStage(setupStage1_rust());          // map2_?
 		// addStage(setupStageRace());          // DEJAHU
 		addStage(setupStage1());          // map2
@@ -532,7 +532,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.m_maxSoldiers = 80;
 		stage.m_playerAiCompensation = 3;
         stage.m_playerAiReduction = 0;
-		stage.m_finalBattle = true;
+		stage.m_finalBattle = false;
 		stage.m_fogOffset= 34;
 		stage.m_fogRange= 30;
 		stage.m_minRandomCrates = 1; 
@@ -540,6 +540,16 @@ class StageConfiguratorInvasion : StageConfigurator {
 		
 		stage.m_primaryObjective = "phases";
 		stage.addTracker(DeadZoneHack(m_metagame));
+		stage.addStartComment(Comment("Map105_3,start comment1", 2.5));
+		stage.addStartComment(Comment("Map105_3,start comment2", 2.5));
+		stage.addStartComment(Comment("Map105_3,start comment3", 2.5));
+		stage.addStartComment(Comment("Map105_3,start comment4", 2.5));
+		stage.addStartComment(Comment("Map105_3,start comment5", 2.5));
+		stage.addStartComment(Comment("Map105_3,start comment6", 2.5));
+		stage.addStartComment(Comment("Map105_3,start comment7", 2.5));
+		stage.addStartComment(Comment("Map105_3,start comment8", 2.5));
+		stage.addStartComment(Comment("Map105_3,start comment9", 2.5));
+
 
 		{
 			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0, 0.6, 0.2));                                            
@@ -556,14 +566,14 @@ class StageConfiguratorInvasion : StageConfigurator {
 			stage.m_factions.insertLast(f);                                                                
 		}
 		{
-			Faction f(FactionConfig(2, "elid.xml", "E.I.L.D.", "0.3 0.17 0.11", "elid.xml"), createCommanderAiCommand(2, 0.80, 0.20,false));             
+			Faction f(FactionConfig(2, "elid.xml", "E.L.I.D.", "0.3 0.17 0.11", "elid.xml"), createCommanderAiCommand(2, 0.80, 0.20));             
 			f.m_overCapacity = 70;
             f.m_capacityOffset = 80;
 			f.m_capacityMultiplier = 0.001;
 			stage.m_factions.insertLast(f);                                    
 		}
 		{
-			Faction f(FactionConfig(3, "sf.xml", "S.F.", "0.91 0.11 0.20", "sf.xml"), createCommanderAiCommand(3, 0.9, 0.1,false));
+			Faction f(FactionConfig(3, "sf.xml", "S.F.", "0.91 0.11 0.20", "sf.xml"), createCommanderAiCommand(3, 0.9, 0.1));
 			f.m_overCapacity = 70;                                             
             f.m_capacityOffset = 40;
 			f.m_capacityMultiplier = 0.001;
@@ -578,17 +588,10 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 			stage.m_extraCommands.insertLast(command);
 		}   
-		    
-		{
-			XmlElement command("command");
-			command.setStringAttribute("class", "faction_resources");
-			command.setIntAttribute("faction_id", 0);
-			command.setBoolAttribute("clear_calls", true);
-			stage.m_extraCommands.insertLast(command);
-		}
+		
 
 		// metadata
-		stage.m_primaryObjective = "koth";
+		stage.m_primaryObjective = "capture";
 		stage.m_kothTargetBase = "Escape";
 
 		return stage;

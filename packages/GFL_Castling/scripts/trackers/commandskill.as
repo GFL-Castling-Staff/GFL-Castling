@@ -2683,7 +2683,9 @@ class CommandSkill : Tracker {
             return;
         }
         const XmlElement@ characterinfo = getCharacterInfo(m_metagame, characterId);
+        if (characterinfo is null) return;
         const XmlElement@ playerinfo = getPlayerInfo(m_metagame, playerId);
+        if (playerinfo is null) return;
 
         if (playerinfo.hasAttribute("aim_target") && characterinfo !is null) {
             string target = playerinfo.getStringAttribute("aim_target");
@@ -2754,7 +2756,9 @@ class CommandSkill : Tracker {
             return;
         }
         const XmlElement@ characterinfo = getCharacterInfo(m_metagame, characterId);
+        if (characterinfo is null) return;
         const XmlElement@ playerinfo = getPlayerInfo(m_metagame, playerId);
+        if (playerinfo is null) return;
 
         if (playerinfo.hasAttribute("aim_target")) {
             string target = playerinfo.getStringAttribute("aim_target");
@@ -2927,7 +2931,9 @@ class CommandSkill : Tracker {
             return;
         }
         const XmlElement@ characterinfo = getCharacterInfo(m_metagame, characterId);
+        if (characterinfo is null) return;
         const XmlElement@ playerinfo = getPlayerInfo(m_metagame, playerId);
+        if (playerinfo is null) return;
 
         int index = findKillCountIndex(characterId,"carcano");
 
@@ -3017,7 +3023,9 @@ class CommandSkill : Tracker {
             return;
         }
         const XmlElement@ characterinfo = getCharacterInfo(m_metagame, characterId);
+        if (characterinfo is null) return;
         const XmlElement@ playerinfo = getPlayerInfo(m_metagame, playerId);
+        if (playerinfo is null) return;
         if (!playerinfo.hasAttribute("aim_target")) return;
         string target = playerinfo.getStringAttribute("aim_target");
         Vector3 c_pos = stringToVector3(characterinfo.getStringAttribute("position"));

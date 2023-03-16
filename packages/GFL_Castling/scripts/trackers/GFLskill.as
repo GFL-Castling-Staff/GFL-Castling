@@ -9,6 +9,8 @@
 #include "task_sequencer.as"
 #include "resource_helpers.as"
 #include "gfl_skill_info.as"
+#include "GFLparameters.as"
+
 //Author: NetherCrow
 //Author: SAIWA
 
@@ -19,19 +21,6 @@ class GFLskill : Tracker {
 	GFLskill(GameMode@ metagame) {
 		@m_metagame = @metagame;
 	}
-	protected array<Resource@> GKcallList={
-		Resource("gk_airstrike_fairy.call", "call"),
-		Resource("gk_rocket_fairy.call", "call"),
-		Resource("gk_warrior_fairy.call", "call"),
-		Resource("gk_rampage_fairy_ac130.call", "call"),
-		Resource("gk_snipe_fairy.call", "call"),
-		Resource("gk_yaoren_fairy.call", "call"),
-		Resource("martina.call", "call"),
-		Resource("chiara.call", "call"),
-		Resource("pierre.call", "call"),
-		Resource("gk_repair_fairy.call", "call"),
-		Resource("target.call", "call")
-	};
 
     protected array<XM8tracker@> XM8track;
 	protected array<HK416_tracker@> HK416_track;

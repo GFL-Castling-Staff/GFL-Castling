@@ -15,7 +15,7 @@
 		<round instances="2" instance_class="soldier" instance_key="para_rodelero" instance_spread="3 0 3" common_spread="0 0 0" launch_time="3.0" spawn_time="4.8" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="0.0" initial_speed_to_target="0.0">
 		</round>
 		<inventory encumbrance="0.0" price="300.0" />
-	</call>    
+	</call>
 
 	<call key="para_eod.call" radio_view_text="EOD Infanry" initiation_comment1="Request Sentinel Assemble" acknowledge_comment="Roger" notify_metagame="1" consume_rp="0" show_target_marker="0">
 		<tag name="reinforcements" />

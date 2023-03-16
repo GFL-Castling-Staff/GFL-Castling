@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<calls>
+	<call key="deadzone_reinforce_assault.call" acknowledge_time="0.0" launch_comment="">
+		<round instances="12" instance_class="soldier" instance_key="para_strelet" instance_spread="4 0 4" common_spread="0 0 0" launch_time="1.0" spawn_time="1.5" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="0.0" initial_speed_to_target="0.0">
+		</round>
+		<round instances="6" instance_class="soldier" instance_key="para_streletplus" instance_spread="3 0 3" common_spread="0 0 0" launch_time="1.0" spawn_time="1.5" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="0.0" initial_speed_to_target="0.0">
+		</round>
+		<round instances="4" instance_class="soldier" instance_key="para_rodelero" instance_spread="3 0 3" common_spread="0 0 0" launch_time="1.0" spawn_time="1.8" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="0.0" initial_speed_to_target="0.0">
+		</round>
+		<inventory encumbrance="0.0" price="300.0" />
+	</call>    
+	<call key="deadzone_reinforce_eod.call" acknowledge_time="0.0" launch_comment="">
+		<round instances="8" instance_class="soldier" instance_key="parw_police" instance_spread="4 0 4" common_spread="0 0 0" launch_time="1.0" spawn_time="1.5" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="0.0" initial_speed_to_target="0.0">
+		</round>
+		<round instances="6" instance_class="soldier" instance_key="parw_thrower" instance_spread="3 0 3" common_spread="0 0 0" launch_time="1.0" spawn_time="1.5" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="0.0" initial_speed_to_target="0.0">
+		</round>
+		<round instances="3" instance_class="soldier" instance_key="parw_dog" instance_spread="3 0 3" common_spread="0 0 0" launch_time="1.0" spawn_time="1.5" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="0.0" initial_speed_to_target="0.0">
+		</round>                
+		<inventory encumbrance="0.0" price="500.0" />
+	</call>
+	<call key="deadzone_reinforce_nyto.call" acknowledge_time="0.0" launch_comment="">
+		<round instances="4" instance_class="soldier" instance_key="alina" instance_spread="4 0 4" common_spread="0 0 0" launch_time="1.0" spawn_time="1.5" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="0.0" initial_speed_to_target="0.0">
+		</round>
+		<round instances="5" instance_class="soldier" instance_key="para_streletplus" instance_spread="3 0 3" common_spread="0 0 0" launch_time="1.0" spawn_time="1.5" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="0.0" initial_speed_to_target="0.0">
+		</round>
+		<round instances="5" instance_class="soldier" instance_key="para_rodelero" instance_spread="3 0 3" common_spread="0 0 0" launch_time="1.0" spawn_time="1.5" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="0.0" initial_speed_to_target="0.0">
+		</round>
+		<inventory encumbrance="0.0" price="500.0" />
+	</call>
+	<call key="deadzone_reinforce_tank.call" acknowledge_time="0.0" launch_comment="">
+		<round instances="1" instance_class="vehicle" instance_key="paradeus_uhlan.vehicle" instance_spread="0 0 0" common_spread="0 0 0" launch_time="1.0" spawn_time="1.5" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="0.0" initial_speed_to_target="0.0">
+		</round>
+		<round instances="4" instance_class="soldier" instance_key="para_strelet" instance_spread="3 0 3" common_spread="0 0 0" launch_time="1.0" spawn_time="1.8" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="0.0" initial_speed_to_target="0.0">
+		</round>		
+		<inventory encumbrance="0.0" price="1000.0" />
+	</call>
+	<call key="deadzone_reinforce_3wheel.call" acknowledge_time="0.0" launch_comment="">
+		<round instances="1" instance_class="vehicle" instance_key="par_aceso.vehicle" instance_spread="0 0 0" common_spread="0 0 0" launch_time="1.0" spawn_time="1.5" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="0.0" initial_speed_to_target="0.0">
+		</round>
+		<round instances="4" instance_class="soldier" instance_key="para_strelet" instance_spread="3 0 3" common_spread="0 0 0" launch_time="1.0" spawn_time="1.8" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="0.0" initial_speed_to_target="0.0">
+		</round>		
+		<inventory encumbrance="0.0" price="1000.0" />
+	</call>
+	<call key="deadzone_reinforce_3wheelplus.call" acknowledge_time="0.0" launch_comment="">
+		<round instances="1" instance_class="vehicle" instance_key="par_elenusinus.vehicle" instance_spread="0 0 0" common_spread="0 0 0" launch_time="1.0" spawn_time="1.5" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="0.0" initial_speed_to_target="0.0">
+		</round>
+		<round instances="4" instance_class="soldier" instance_key="para_strelet" instance_spread="3 0 3" common_spread="0 0 0" launch_time="1.0" spawn_time="1.8" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="0.0" initial_speed_to_target="0.0">
+		</round>		
+		<inventory encumbrance="0.0" price="1000.0" />
+	</call>
+</calls>

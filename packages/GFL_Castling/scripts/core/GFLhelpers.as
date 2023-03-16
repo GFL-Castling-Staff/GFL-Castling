@@ -736,7 +736,7 @@ void healCharacter(Metagame@ metagame,int characterId,int healnum) {
 	metagame.getComms().send(c);
 }
 
-void healRangedCharacters(Metagame@ metagame,Vector3 pos,int faction_id,float range,uint healnum,string special_key="none",int healcount=0) {
+void healRangedCharacters(Metagame@ metagame,Vector3 pos,int faction_id,float range,int healnum,string special_key="none",int healcount=0) {
 	array<const XmlElement@>@ characters = getCharactersNearPosition(metagame, pos, faction_id, range);
 	if(healcount==0) {
 		_log("No special heal count requirement.");
@@ -882,4 +882,13 @@ void GrenadeSupplyGroup(Metagame@ metagame,array<const XmlElement@>@ characters,
 		if(key == "-nan-") continue;
 		GrenadeSupply(metagame,luckyhealguyid,num,key,m_type);
 	}
+}
+
+void SetAttackTarget(Metagame@ metagame,int m_factionId ,string baseKey) {
+	_log("AttackTargetOrder, attackTo, faction=" + m_factionId + ", baseKey=" + baseKey, 1);
+	XmlElement command("command");
+	command.setStringAttribute("class", "commander_ai");
+	command.setIntAttribute("faction", m_factionId);
+	command.setStringAttribute("attack_target_base_key", baseKey);
+	metagame.getComms().send(command);
 }
