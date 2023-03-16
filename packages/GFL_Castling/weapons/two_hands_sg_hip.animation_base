@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+
+	<tag name="shotgun" />
+	<commonness value="0.2" in_stock="0" can_respawn_with="1" />
+	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
+	<capacity value="1" source="rank" source_value="0.0" />
+	<specification 
+	stab_enabled="1"
+	carry_in_two_hands="1"
+	burst_shots="1"
+	retrigger_time="-1" 
+	last_burst_retrigger_time="-1"
+	slot="0"
+	use_basic_muzzle_smoke_effect="0"
+	/>
+
+    <stance state_key="running" accuracy="0.7" />
+    <stance state_key="walking" accuracy="0.8" />
+    <stance state_key="crouch_moving" accuracy="0.85" />
+    <stance state_key="prone_moving" accuracy="0.85" />
+    <stance state_key="standing" accuracy="0.85"/>
+    <stance state_key="crouching" accuracy="0.9" />
+    <stance state_key="prone" accuracy="1.0" />
+    <stance state_key="over_wall" accuracy="1.0" />
+
+	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
+	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0" />
+	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0" />
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+
+	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0" />
+	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5" />
+    <target_factors tag="smg" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0" />
+	<target_factors tag="melee" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0" />
+    <target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0" />
+    <target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0" />
+	
+	<animation key="recoil" animation_key="recoil, hip fire"/>
+	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone" />
+	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone" />
+	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone" />
+	<effect class="muzzle" ref="muzzle_sg" />
+
+	<animation state_key="hold" animation_key="hold, hip fire" />
+	<animation state_key="hold_on_wall" animation_key="still" />
+	<animation state_key="running" animation_key="running, bayonet" />
+	<animation state_key="walking" animation_key="walking, hip fire" />
+    <animation state_key="walking_backwards" animation_key="walking backwards, hip fire" />
+	
+    <animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
+	
+	<animation state_key="stabbing" animation_key="melee, bayonet" />
+	<modifier class="hit_success_probability" value="-0.4" />
+</weapon>
