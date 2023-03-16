@@ -41,18 +41,20 @@
     <weak_hand_hold offset="0.3" />
     <projectile file="bullet.projectile">
         <result class="hit" 
-        kill_probability="1.8" 
-        kill_decay_start_time="0.09" 
-        kill_decay_end_time="0.800" />
+        kill_probability="2.0"
+        kill_probability_offset_on_successful_hit="0.6" 
+        kill_decay_start_time="0.3" 
+        kill_decay_end_time="0.5" />
     </projectile>
     <!--Accuracy, Movement speed-->
-    <stance state_key="walking" accuracy="0.5" />
-    <stance state_key="crouch_moving" accuracy="0.5" />
-    <stance state_key="prone_moving" accuracy="0.5" />
-    <stance state_key="standing" accuracy="0.6"/>
-    <stance state_key="crouching" accuracy="0.8" />
-    <stance state_key="prone" accuracy="0.8" />
-    <stance state_key="over_wall" accuracy="0.8" />
+    <stance state_key="running" accuracy="0.8" />
+    <stance state_key="walking" accuracy="0.8" />
+    <stance state_key="crouch_moving" accuracy="0.8" />
+    <stance state_key="prone_moving" accuracy="0.8" />
+    <stance state_key="standing" accuracy="0.8"/>
+    <stance state_key="crouching" accuracy="0.9" />
+    <stance state_key="prone" accuracy="0.9" />
+    <stance state_key="over_wall" accuracy="0.9" />
     <modifier class="hit_success_probability" value="-0.5" />
 </weapon>
 <weapon file="two_hands_sg.animation_base" key="gkw_ltlx7000_6702_skill.weapon">
@@ -98,13 +100,14 @@
         <result class="blast" radius="3.0" damage="0.0" push="0.0" decal="0" character_state="wound" faction_compare="not_equal"/> 
     </projectile>
     <!--Accuracy, Movement speed-->
-    <stance state_key="walking" accuracy="0.5" />
-    <stance state_key="crouch_moving" accuracy="0.5" />
-    <stance state_key="prone_moving" accuracy="0.5" />
-    <stance state_key="standing" accuracy="0.6"/>
-    <stance state_key="crouching" accuracy="0.8" />
-    <stance state_key="prone" accuracy="0.8" />
-    <stance state_key="over_wall" accuracy="0.8" />
+    <stance state_key="running" accuracy="0.8" />
+    <stance state_key="walking" accuracy="0.8" />
+    <stance state_key="crouch_moving" accuracy="0.8" />
+    <stance state_key="prone_moving" accuracy="0.8" />
+    <stance state_key="standing" accuracy="0.8"/>
+    <stance state_key="crouching" accuracy="0.9" />
+    <stance state_key="prone" accuracy="0.9" />
+    <stance state_key="over_wall" accuracy="0.9" />
     <modifier class="hit_success_probability" value="-0.5" />
 </weapon>
 </weapons>

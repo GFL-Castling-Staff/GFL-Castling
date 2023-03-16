@@ -20,6 +20,7 @@
     carry_in_two_hands="1"
     burst_shots="1"
     last_burst_retrigger_time="-1"
+    spread_range="0.3"
     slot="0"
     use_basic_muzzle_smoke_effect="0"/>
     <inventory encumbrance="30.0" buy_price="110.0" sell_price="110.0"/>
@@ -36,9 +37,9 @@
     <projectile file="bullet.projectile">
         <result class="hit" 
         kill_probability="2.0"
-        kill_probability_offset_on_successful_hit="0.5" 
-        kill_decay_start_time="0.12" 
-        kill_decay_end_time="0.8" />
+        kill_probability_offset_on_successful_hit="1.0" 
+        kill_decay_start_time="0.3" 
+        kill_decay_end_time="0.5" />
     </projectile>
     <stance state_key="running" accuracy="0.3"/>
     <stance state_key="walking" accuracy="0.5"/>
