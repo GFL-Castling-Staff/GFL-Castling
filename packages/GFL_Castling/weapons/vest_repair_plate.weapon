@@ -27,7 +27,7 @@
     <animation state_key="crouch_moving_backwards"  animation_key="crouching backwards, single hand carry" />
     
     <sound class="impact" fileref="medikit_drop.wav" />    
-    <sound class="fire" fileref="plate_equip.wav" />    
+	<sound key="effect" fileref="plate_equip.wav" volume="1.2" />
 
     
     <model filename="gki_bulletplate.xml" />
