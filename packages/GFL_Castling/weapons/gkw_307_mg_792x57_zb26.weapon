@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0" key="gkw_zb26.weapon">
+	<tag name="machine gun"/>
+	<specification 
+		barrel_offset="0.6"
+		retrigger_time="-1"
+		accuracy_factor="1.0"
+		sustained_fire_grow_step="0.7"
+		sustained_fire_diminish_rate="4.2"
+		spread_range="0.15"
+		magazine_size="20"
+		stance_accuracy_rate="1.1"
+		suppressed="0"
+		name="ZB vz.26"
+		class="1"
+		projectile_speed="220"
+		sight_range_modifier="1.5"
+		slot="0"
+		reload_one_at_a_time="0"
+		can_shoot_standing="1"
+		can_shoot_crouching="1"
+		can_shoot_prone="1"
+		carry_in_two_hands="1"
+		stab_enabled="1"
+		/>
+	<animation key="recoil" animation_key="recoil1"/>
+	<animation key="recoil" animation_key="recoil2"/>
+	<animation key="recoil" animation_key="recoil3"/>
+	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
+	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
+	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
+	<animation key="cycle" animation_key="cycle_2h_rifle_400rpm"/>
+	<animation key="cycle" stance_key="prone" animation_key="cycle_2h_rifle_500rpm_prone"/>
+	<animation key="cycle" stance_key="over_wall" animation_key="cycle_2h_rifle_500rpm"/>
+	<animation key="cycle" stance_key="crouching" animation_key="cycle_2h_rifle_450rpm"/>
+	<animation key="reload" animation_key="reloading, magazine rifle 0.9"/>
+	<animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
+    <animation state_key="stabbing" animation_key="pistol whip"/>
+    <animation state_key="stabbing" animation_key="pistol whip 3"/>
+	<sound key="stab" fileref="dagger_swing1_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab" fileref="dagger_swing2_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab" fileref="dagger_swing3_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab_hit" fileref="blade_impact_01_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
+	<sound key="stab_hit" fileref="blade_impact_02_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
+	<sound key="stab_hit" fileref="blade_impact_03_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
+	<sound key="stab_hit" fileref="blade_impact_04_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
+	<inventory encumbrance="20.0" buy_price="26.0" sell_price="26.0"/>
+	<sound key="fire" fileref="fg42_fire_FromPOSTSCRIPTUM.wav" pitch_variety="0.05" volume="1.15"/>
+    <sound key="magazine_out" fileref="m1918_mgz_out_FromRS2V.wav" volume="0.6" />
+    <sound key="magazine_in" fileref="m1918_mgz_in_FromRS2V.wav" volume="0.6" />
+    <sound key="cycle_out" fileref="m1918_cycle_FromRS2V.wav" volume="0.6" />
+	<sound class="impact" fileref="rifle_drop.wav" />
+	<model filename="gkw_mg_zb26.xml" />
+	<hud_icon filename="gkw_zb26.png" />
+	<projectile file="bullet.projectile">
+		<result class="hit" kill_probability="2.4" kill_probability_offset_on_successful_hit="2.5" kill_decay_start_time="2.432" kill_decay_end_time="4.054" />
+		<trail probability="1.0" key="BulletMgTrail"/>
+	</projectile>
+	<effect class="muzzle" ref="ejection_76251" />
+	<commonness value="0" in_stock="0" can_respawn_with="1" />
+	<stance state_key="running" accuracy="0.5" />
+	<stance state_key="walking" accuracy="0.65" />
+	<stance state_key="crouch_moving" accuracy="0.75" />
+	<stance state_key="prone_moving" accuracy="0.75" />
+	<stance state_key="standing" accuracy="0.9" />
+	<stance state_key="crouching" accuracy="0.95" />
+	<stance state_key="prone" accuracy="1" />
+	<stance state_key="over_wall" accuracy="0.98" />
+	<modifier class="speed" value="0.1" />
+</weapon>
