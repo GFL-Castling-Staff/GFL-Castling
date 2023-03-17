@@ -15,7 +15,7 @@
 	ai_driver_turns_to_target="1"
 	ai_abandon_when_unsteerable="0"
 	allow_owner_to_use_only="1"
-	ai_stop_to_fight="0" 
+	ai_stop_to_fight="1" 
 	>
 	<tag name="metal_heavy" />
 	<tag name="tank" />
@@ -61,7 +61,7 @@
 	<visual class="chassis" key="broken" mesh_filename="Pierre_Body.mesh" texture_filename="humvee_broken.png" />
 	<visual class="tire" mesh_filename="Pierre_Wheel.mesh" texture_filename="Pierre_Track.png" />
 	<character_slot type="driver" position="0.8 0.48 0.4" rotation="0" exit_rotation="1.57" hiding="1" animation_id="36" />
-	<character_slot type="gunner" seat_position="0.0 0.78 -0.25" enter_position="0 0 -2.72" rotation="0" exit_rotation="-1.57" hiding="1" animation_key="tank mg still" marker_offset="0 1.2 0">
+	<character_slot type="gunner" seat_position="0.0 0.78 -0.25" enter_position="0 0 -2.05" rotation="0" exit_rotation="3.14" hiding="1" animation_key="tank mg still" marker_offset="0 1.2 0">
 		<turret index="0" />
 		<turret index="1" />
 		<turret index="2" />
@@ -69,7 +69,7 @@
 		<turret index="4" />
 		<turret index="5" />
 	</character_slot>
-	<item_container class="armory" offset="0.0 0.78 -0.25" soldier_group="default_hvy"/>
+	<item_container class="armory" offset="0.0 0.78 -2.25" soldier_group="default_hvy"/>
 	<spawn_point />
 	<!-- sound handling -->
 	<rev_sound filename="truck_rev0.wav" low_pitch="0.95" high_pitch="1.05" low_rev="0.0" high_rev="0.2" volume="1.0" />

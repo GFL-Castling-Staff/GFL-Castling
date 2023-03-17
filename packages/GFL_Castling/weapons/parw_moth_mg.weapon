@@ -49,7 +49,7 @@
 	projectile_speed="100.0"
 	use_basic_muzzle_smoke_effect="0"
 	barrel_offset_3d="0 0.5 2.0"
-	cooldown_start="0.3"
+	cooldown_start="0.14"
 	cooldown_end="0.0"/>
 	<sound key="fire" fileref="1130_fire_FromSAM3.wav" pitch_variety="0.05" volume="1.0"/>
 	<sound key="magazine_out" fileref="mg_clip_out.wav"/>
@@ -64,11 +64,7 @@
 		<result class="blast" damage="0.1" radius="2.0" decal="1" push="0.1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
 		<trigger class="impact"/>
 		<effect class="result" key="terrain" ref="BigBurst" use_surface_color="1"/>
-		<effect class="result" key="terrain" ref="SmokeTop" post_processing="1"/>
-		<effect class="result" key="terrain" ref="Smoke" post_processing="1"/>
 		<effect class="result" key="terrain" ref="Shine" lighting="0"/>
-		<effect class="result" key="terrain" ref="Godray" lighting="0"/>
-		<effect class="result" key="terrain" ref="ShadowSmoke" shadow="1"/>
 	</projectile>
 	<shield offset="0.0 7.5 0.0" extent="2.4 2.4 2.4" usable_for_cover="0"/>
 </weapon>

@@ -316,8 +316,9 @@ int getAmosPosition(Metagame@ metagame, uint ownerid, Vector3 judgePos, float ra
 	return -1;	
 }
 
-int getNearByEnemyVehicle(Metagame@ metagame, uint ownerid, Vector3 judgePos, float radius) {
+int getNearByEnemyVehicle(Metagame@ metagame, uint ownerfid, Vector3 judgePos, float radius) {
 	for(uint f=0;f<4;f++){
+		if(f==ownerfid)continue;
 		if(f>=5){return -1;}
 		array<const XmlElement@>@ vehicles = getAllVehicles(metagame, f);
 		for(uint i=0;i<vehicles.length();i++){

@@ -59,13 +59,13 @@
 	<visual class="chassis" key="broken" mesh_filename="chara_ruin.mesh" texture_filename="humvee_broken.png" />
 	<!-- <visual class="tire" mesh_filename="Pierre_Wheel.mesh" texture_filename="Pierre_Track.png" /> -->
 	<character_slot type="driver" position="0.8 0.48 0.4" rotation="0" exit_rotation="1.57" hiding="1" animation_id="36" />
-	<character_slot type="gunner" seat_position="0.0 0.78 -0.25" enter_position="0 0 -2.72" rotation="0" exit_rotation="-1.57" hiding="1" animation_key="tank mg still" marker_offset="0 1.2 0">
+	<character_slot type="gunner" seat_position="0.0 0.78 -0.25" enter_position="0.0 0.0 -2.05" rotation="0" exit_rotation="3.14" hiding="1" animation_key="tank mg still" marker_offset="0 1.2 0">
 		<turret index="0" />
 		<turret index="1" />
 		<turret index="2" />
 		<turret index="3" />
 	</character_slot>
-	<item_container class="stash" offset="0.0 0.78 -0.25" soldier_group="default_hvy"/>
+	<item_container class="stash" offset="0.0 0.78 -2.25" soldier_group="default_hvy"/>
 	<spawn_point />
 	<!-- sound handling -->
 	<!--
