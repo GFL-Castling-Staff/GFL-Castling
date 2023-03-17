@@ -23,12 +23,9 @@
 		carry_in_two_hands="1"
 		stab_enabled="1"
 		/>
-	<animation key="recoil" animation_key="recoil1"/>
-	<animation key="recoil" animation_key="recoil2"/>
-	<animation key="recoil" animation_key="recoil3"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
+	<animation state_key="recoil" animation_key="recoil_unlimit"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil_unlimit"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil_prone_unlimit"/>
 	<animation key="cycle" animation_key="cycle_2h_rifle_400rpm"/>
 	<animation key="cycle" stance_key="prone" animation_key="cycle_2h_rifle_500rpm_prone"/>
 	<animation key="cycle" stance_key="over_wall" animation_key="cycle_2h_rifle_500rpm"/>

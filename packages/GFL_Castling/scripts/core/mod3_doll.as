@@ -197,5 +197,8 @@ dictionary MOD3craftList = {
     {"gkw_mlemk1_skill.weapon","gkw_mlemk1mod3.weapon"},
     {"gkw_mlemk1_604_skill.weapon","gkw_mlemk1mod3_604.weapon"},
 
+    {"gkw_rmb93.weapon","gkw_rmb93mod3.weapon"},
+    {"gkw_rmb93_4309.weapon","gkw_rmb93mod3_4309.weapon"},
+
     {"666","-1"}
 };

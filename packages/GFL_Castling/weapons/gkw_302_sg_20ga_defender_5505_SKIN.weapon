@@ -60,8 +60,9 @@
 	accuracy_factor="0.98" 
 	sustained_fire_grow_step="2.0" 
 	sustained_fire_diminish_rate="2.0" 
+    last_burst_retrigger_time="0.33"
 	magazine_size="8" 
-    burst_shot="8"
+    burst_shots="8"
 	can_shoot_standing="1" 
 	suppressed="0" 
 	name="Colt Defender-[Lily's Reverie]-[Fang Blossom]" 
@@ -70,7 +71,7 @@
 	sight_range_modifier="1" 
 	projectile_speed="90" 
 	barrel_offset="0.4" 
-    spread_range="0.1"
+    spread_range="0.2"
 	projectiles_per_shot="1"
 	/>
     <inventory encumbrance="10.0" buy_price="100.0" sell_price="100.0" />

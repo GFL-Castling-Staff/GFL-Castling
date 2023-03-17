@@ -160,7 +160,7 @@ dictionary tdoll_index = {
     {"156","gkw_supershorty.weapon"},
     {"157","gkw_ksg.weapon"},
     {"158","gkw_ks23.weapon"},
-    {"159",""},
+    {"159","gkw_rmb93.weapon"},
     {"160","gkw_saiga12.weapon"},
     {"161","gkw_hawk97.weapon"},
     {"162","gkw_spas12.weapon"},
@@ -307,7 +307,7 @@ dictionary tdoll_index = {
     {"304","gkw_saf.weapon"},
     {"305",""},
     {"306","gkw_akalfa.weapon"},
-    {"307",""},
+    {"307","gkw_zb26.weapon"},
     {"308","gkw_c14.weapon"},
     {"309",""},
     {"310",""},
@@ -368,7 +368,7 @@ dictionary tdoll_index = {
     {"365",""},
     {"366","gkw_spas15.weapon"},
     {"367","gkw_mk3a1.weapon"},
-    {"368",""},
+    {"368","gkw_uts15.weapon"},
     {"369",""},
     {"370",""},
     {"371",""},
@@ -381,7 +381,7 @@ dictionary tdoll_index = {
     {"378","gkw_scarl.weapon"},
 
 
-    {"382","gkw_m110.weapon"},
+    {"381","gkw_m110.weapon"},
 
     {"-1",""}
 
