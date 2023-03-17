@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<weapons>
 <weapon file="two_hands_sg.animation_base" key="gkw_defender_5505.weapon">
     <!--Weapon specifications-->
     <specification 
@@ -19,6 +20,7 @@
 	projectiles_per_shot="1"
 	/>
     <inventory encumbrance="10.0" buy_price="100.0" sell_price="100.0" />
+    <next_in_chain key="gkw_defender_5505_skill.weapon" share_ammo="1" />
     <!--Animations-->
     <commonness value="0" in_stock="0" can_respawn_with="1" />
     <animation state_key="cycle" animation_key="Pshotgun0.5" />
@@ -51,3 +53,58 @@
     <stance state_key="prone" accuracy="1.0" />
     <stance state_key="over_wall" accuracy="1.0" />
 </weapon>
+<weapon file="two_hands_sg.animation_base" key="gkw_defender_5505_skill.weapon">
+    <!--Weapon specifications-->
+    <specification 
+	retrigger_time="-1.0" 
+	accuracy_factor="0.98" 
+	sustained_fire_grow_step="2.0" 
+	sustained_fire_diminish_rate="2.0" 
+	magazine_size="8" 
+    burst_shot="8"
+	can_shoot_standing="1" 
+	suppressed="0" 
+	name="Colt Defender-[Lily's Reverie]-[Fang Blossom]" 
+	class="4" 
+	reload_one_at_a_time="1"
+	sight_range_modifier="1" 
+	projectile_speed="90" 
+	barrel_offset="0.4" 
+    spread_range="0.1"
+	projectiles_per_shot="1"
+	/>
+    <inventory encumbrance="10.0" buy_price="100.0" sell_price="100.0" />
+    <next_in_chain key="gkw_defender_5505.weapon" share_ammo="1" />
+    <!--Animations-->
+    <commonness value="0" in_stock="0" can_respawn_with="1" />
+    <animation state_key="cycle" animation_key="Pshotgun0.5" />
+    <animation state_key="cycle" stance_key="prone" animation_key="Pshotgun0.5p" />
+    <animation key="reload" animation_key="reloading, oaat" />
+    <!--Sounds-->
+    <sound key="fire" fileref="defender_fire_FromTTF2.wav" pitch_variety="0.05" volume="1.4" />
+    <sound key="cycle" fileref="" />
+    <sound key="reload_one" fileref="Liberator_reload_FromCODOLRanger.wav" volume="0.7" />
+    <sound class="impact" fileref="rifle_drop.wav" />
+    <!--Model, Icon, Cost-->
+    <model filename="gkw_sg_coltdefender.xml" />
+    <hud_icon filename="gkw_coltdefender_5505.png" />
+    <!--Ballistics-->
+    <weak_hand_hold offset="0.3" />
+    <projectile file="bullet.projectile" time_to_live="0.5">
+        <result class="hit" 
+        kill_probability="6.0" 
+        kill_probability_offset_on_successful_hit="12.0"
+        kill_decay_start_time="1.0" 
+        kill_decay_end_time="1.0" />
+    </projectile>
+    <!--Accuracy, Movement speed-->
+    <stance state_key="running" accuracy="0.7" />
+    <stance state_key="walking" accuracy="0.9" />
+    <stance state_key="crouch_moving" accuracy="1.0" />
+    <stance state_key="prone_moving" accuracy="1.0" />
+    <stance state_key="standing" accuracy="1.0"/>
+    <stance state_key="crouching" accuracy="1.0" />
+    <stance state_key="prone" accuracy="1.0" />
+    <stance state_key="over_wall" accuracy="1.0" />
+</weapon>
+</weapons>
