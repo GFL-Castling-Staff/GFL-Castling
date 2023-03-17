@@ -310,7 +310,7 @@ int getAmosPosition(Metagame@ metagame, uint ownerid, Vector3 judgePos, float ra
 		int vehicleid = vehicles[i].getIntAttribute("id");
 		const XmlElement@ vehicleInfo = getVehicleInfo(metagame, vehicleid);
 		if(vehicleInfo is null){continue;}  //载具不存在
-		if(vip_vehicles.find(vehicleInfo.getStringAttribute("key"))==-1){continue;} //载具不是VIP载具
+		if(vip_vehicles.find(vehicleInfo.getStringAttribute("key"))==-1){continue;} //载具是VIP载具
 		return 1;
 	}
 	return -1;	
@@ -329,7 +329,7 @@ int getNearByEnemyVehicle(Metagame@ metagame, uint ownerfid, Vector3 judgePos, f
 			const XmlElement@ vehicleInfo = getVehicleInfo(metagame, vehicleid);
 			if(vehicleInfo is null){continue;}  //载具不存在
 			if(vehicleInfo.getIntAttribute("health")==0){continue;}  //载具被击毁
-			if(unlockable_vehicles.find(vehicleInfo.getStringAttribute("key"))==-1) //载具是中立地图物件
+			if(unlockable_vehicles.find(vehicleInfo.getStringAttribute("key"))>-1){continue;} //载具是中立地图物件
 			_log("Get vehicle id successful.");
 			return vehicleid;			
 		}		
