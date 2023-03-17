@@ -211,9 +211,7 @@ class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 	
 	// --------------------------------------------
 	protected void setupTestingToolsTracker() {
-		if (getUserSettings().m_testingToolsEnabled) {
-			@m_testingToolsTracker = TestingToolsTracker(this);
-		}
+		@m_testingToolsTracker = TestingToolsTracker(this);
 	}
 
 	// --------------------------------------------

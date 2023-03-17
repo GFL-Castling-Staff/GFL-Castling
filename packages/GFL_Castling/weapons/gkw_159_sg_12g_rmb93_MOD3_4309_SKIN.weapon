@@ -17,13 +17,13 @@
     projectiles_per_shot="8"
     spread_range="0.3"
     stab_enabled="1"
-    carry_in_two_hands="0"
+    carry_in_two_hands="1"
     burst_shots="1"
     slot="0"
     use_basic_muzzle_smoke_effect="0"/>
 	<inventory encumbrance="20.0" buy_price="200.0" sell_price="200.0"/>
-	<animation state_key="cycle" animation_key="Pshotgun0.15"/>
-	<animation state_key="cycle" stance_key="prone" animation_key="Pshotgun0.15p"/>
+	<animation state_key="cycle" animation_key="Pshotgun0.3"/>
+	<animation state_key="cycle" stance_key="prone" animation_key="Pshotgun0.3p"/>
 
     <animation key="reload" animation_key="reloading, oaat"/>
     <animation key="recoil" animation_key="recoil1"/>

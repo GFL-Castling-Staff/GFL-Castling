@@ -28145,7 +28145,7 @@
 </weapon>
 
 <weapon key="gkw_rmb93.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="4.0" sustained_fire_diminish_rate="6.0" magazine_size="8" can_shoot_standing="1" suppressed="0" name="RMB-93" class="1" reload_one_at_a_time="1" sight_range_modifier="1.0" projectile_speed="100" barrel_offset="0.4" projectiles_per_shot="8" spread_range="0.45" stab_enabled="1" carry_in_two_hands="0" burst_shots="1" slot="0" use_basic_muzzle_smoke_effect="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="4.0" sustained_fire_diminish_rate="6.0" magazine_size="8" can_shoot_standing="1" suppressed="0" name="RMB-93" class="1" reload_one_at_a_time="1" sight_range_modifier="1.0" projectile_speed="100" barrel_offset="0.4" projectiles_per_shot="8" spread_range="0.45" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" slot="0" use_basic_muzzle_smoke_effect="0"/>
 	<inventory encumbrance="20.0" buy_price="33.0" sell_price="33.0"/>
 	<animation state_key="cycle" animation_key="Pshotgun0.3"/>
 	<animation state_key="cycle" stance_key="prone" animation_key="Pshotgun0.3p"/>
@@ -28202,7 +28202,7 @@
 </weapon>
 
 <weapon key="gkw_rmb93mod3.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="4.0" sustained_fire_diminish_rate="10.0" magazine_size="8" can_shoot_standing="1" suppressed="0" name="RMB-93(MOD3)" class="1" reload_one_at_a_time="1" sight_range_modifier="1.25" projectile_speed="100" barrel_offset="0.4" projectiles_per_shot="8" spread_range="0.3" stab_enabled="1" carry_in_two_hands="0" burst_shots="1" slot="0" use_basic_muzzle_smoke_effect="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="4.0" sustained_fire_diminish_rate="10.0" magazine_size="8" can_shoot_standing="1" suppressed="0" name="RMB-93(MOD3)" class="1" reload_one_at_a_time="1" sight_range_modifier="1.25" projectile_speed="100" barrel_offset="0.4" projectiles_per_shot="8" spread_range="0.3" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" slot="0" use_basic_muzzle_smoke_effect="0"/>
 	<inventory encumbrance="20.0" buy_price="200.0" sell_price="200.0"/>
 	<animation state_key="cycle" animation_key="Pshotgun0.15"/>
 	<animation state_key="cycle" stance_key="prone" animation_key="Pshotgun0.15p"/>
@@ -28259,7 +28259,7 @@
 </weapon>
 
 <weapon key="gkw_rmb93_4309.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="4.0" sustained_fire_diminish_rate="6.0" magazine_size="8" can_shoot_standing="1" suppressed="0" name="RMB-93-[Untouchable Moonlit Lover]" class="1" reload_one_at_a_time="1" sight_range_modifier="1.0" projectile_speed="100" barrel_offset="0.4" projectiles_per_shot="8" spread_range="0.45" stab_enabled="1" carry_in_two_hands="0" burst_shots="1" slot="0" use_basic_muzzle_smoke_effect="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="4.0" sustained_fire_diminish_rate="6.0" magazine_size="8" can_shoot_standing="1" suppressed="0" name="RMB-93-[Untouchable Moonlit Lover]" class="1" reload_one_at_a_time="1" sight_range_modifier="1.0" projectile_speed="100" barrel_offset="0.4" projectiles_per_shot="8" spread_range="0.45" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" slot="0" use_basic_muzzle_smoke_effect="0"/>
 	<inventory encumbrance="20.0" buy_price="33.0" sell_price="33.0"/>
 	<animation state_key="cycle" animation_key="Pshotgun0.3"/>
 	<animation state_key="cycle" stance_key="prone" animation_key="Pshotgun0.3p"/>
@@ -28316,7 +28316,7 @@
 </weapon>
 
 <weapon key="gkw_rmb93mod3_4309.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="4.0" sustained_fire_diminish_rate="10.0" magazine_size="8" can_shoot_standing="1" suppressed="0" name="RMB-93(MOD3)-[Untouchable Moonlit Lover]" class="1" reload_one_at_a_time="1" sight_range_modifier="1.25" projectile_speed="100" barrel_offset="0.4" projectiles_per_shot="8" spread_range="0.3" stab_enabled="1" carry_in_two_hands="0" burst_shots="1" slot="0" use_basic_muzzle_smoke_effect="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="4.0" sustained_fire_diminish_rate="10.0" magazine_size="8" can_shoot_standing="1" suppressed="0" name="RMB-93(MOD3)-[Untouchable Moonlit Lover]" class="1" reload_one_at_a_time="1" sight_range_modifier="1.25" projectile_speed="100" barrel_offset="0.4" projectiles_per_shot="8" spread_range="0.3" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" slot="0" use_basic_muzzle_smoke_effect="0"/>
 	<inventory encumbrance="20.0" buy_price="200.0" sell_price="200.0"/>
 	<animation state_key="cycle" animation_key="Pshotgun0.15"/>
 	<animation state_key="cycle" stance_key="prone" animation_key="Pshotgun0.15p"/>
@@ -50628,7 +50628,7 @@
 	<tag name="mecha"/>
 	<tag name="antiarmor"/>
 	<tag name="metal_heavy"/>
-	<specification retrigger_time="0.5" accuracy_factor="0.75" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="2.5" magazine_size="200" can_shoot_standing="1" can_shoot_crouching="0" can_shoot_prone="0" suppressed="0" name="SF-Manticore" class="4" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="135" carry_in_two_hands="1" stab_enabled="1" barrel_offset="0.5" burst_shots="3"/>
+	<specification retrigger_time="0.5" accuracy_factor="0.75" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="2.5" magazine_size="200" can_shoot_standing="1" can_shoot_crouching="0" can_shoot_prone="0" suppressed="0" name="SF-Manticore" class="4" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="135" carry_in_two_hands="1" stab_enabled="1" barrel_offset="1.0" burst_shots="3"/>
 	/&gt;>
 	<animation state_key="recoil" animation_key="recoil 3, hydra and manticore"/>
 	<animation state_key="recoil" stance_key="prone" animation_key="recoil 3, hydra and manticore"/>

@@ -181,7 +181,7 @@ class map_DeadZone_Phase2 : map_DeadZone_Phase {
 			const XmlElement@ base = baseList[i];
 			string basekey = base.getStringAttribute("key");
 			m_metagame.getComms().send("<command class='update_base' base_key='" + basekey + "' capturable='1' />");
-		}		
+		}
 	}
 
 };

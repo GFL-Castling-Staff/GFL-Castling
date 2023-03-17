@@ -26,6 +26,7 @@ array<string> BadAssMapList = {
 	"Route E30",
 	"Kanda jimbocho",
 	"Echo",
+	"Dead Zone",
 	"Swan River",
 	"Palo Island"
 };
@@ -220,7 +221,7 @@ class MapRotatorInvasion : MapRotator {
 			setStageCompleted(m_currentStageIndex);
 
 			string map_name = getMapName(m_currentStageIndex);
-			if (map_name=="Shock Zone" || map_name=="Zone Attack"){
+			if (map_name=="Shock Zone" || map_name=="Zone Attack"|| map_name=="Dead Zone"){
                 array<const XmlElement@> players = getPlayers(m_metagame);
                 if(players is null || players.size()<=0) return;
                 for (uint i = 0; i < players.size(); ++i) {
