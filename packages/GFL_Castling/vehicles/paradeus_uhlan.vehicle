@@ -55,14 +55,12 @@
     <visual class="chassis" mesh_filename="Uhlan_body.mesh" texture_filename="Uhlan_Body_Color.jpg" max_tilt="0.06" />
     <visual class="turret" turret_index="0" mesh_filename="Uhlan_turret.mesh" texture_filename="Uhlan_Turret_Color.jpg" offset="-0.00 -2.5 1.0" max_tilt="0.00"/>
     <visual class="track" mesh_filename="Uhlan_track_left.mesh" offset="-0.0 -0.0 0.0">
-        <part texture_filename="Uhlan_Track_Color.png" texture_animation="rotate" tire_binding="0" />
-        <part texture_filename="Uhlan_Track_Color.png" />
-        <part texture_filename="Uhlan_Track_Color.png" texture_animation="translate" tire_binding="0" />
+        <part texture_filename="Uhlan_Wheel.png" texture_animation="rotate" tire_binding="0" />
+        <part texture_filename="Uhlan_Track.png" texture_animation="translate" tire_binding="0" />
     </visual>
     <visual class="track" mesh_filename="Uhlan_track_right.mesh" offset="0.0 -0.0 0.0">
-        <part texture_filename="Uhlan_Track_Color.png" texture_animation="rotate" tire_binding="1" />
-        <part texture_filename="Uhlan_Track_Color.png" />
-        <part texture_filename="Uhlan_Track_Color.png" texture_animation="translate" tire_binding="1" />
+        <part texture_filename="Uhlan_Wheel.png" texture_animation="rotate" tire_binding="1" />
+        <part texture_filename="Uhlan_Track.png" texture_animation="translate" tire_binding="1" />
     </visual>
     <!-- broken -->
     <!-- class="track" dont work -->
