@@ -9,8 +9,8 @@ reserves_spawn_point="1">
 	<tag name="metal_heavy" />
 	<tag name="light_combat" />
 	<tag name="apc" />
-	<tire_set offset="0.96 0 1.568" radius="0.48" />
-	<tire_set offset="0.96 0 -1.968" radius="0.48" />
+	<tire_set offset="1 0 1.668" radius="0.48" />
+	<tire_set offset="1 0 -1.668" radius="0.48" />
 	<control 
 	max_speed="30" 
 	max_limiter_speed="15"
@@ -25,22 +25,24 @@ reserves_spawn_point="1">
 	blast_damage_threshold="1.0"
 	mass="4.5" 
 	extent="2.08 0.0 4.0" 
-	offset="0 0.0 -0.2" 
-	top_offset="0 4.0 0.23" 
-	collision_model_pos="0 0.8 -0.24" 
+	offset="0 0.0 0" 
+	top_offset="0 4.0 0" 
+	collision_model_pos="0 0.8 0" 
 	collision_model_extent="2.56 2.0 5.44" 
-	visual_offset="-0.05 1.04 0.2" 
+	visual_offset="-0.06 1.15 0.4" 
 	destroy_on_top_hit="1"
 	destroy_on_top_hit_time="2.0"
 	gravity="-70"
 	friction_offset="0.0" 
 	drag_offset="-0.05" />
 	<sky_diving chute_offset="0 2.55 0.0" trigger_height="20.0" gravity="-10" mesh_filename="chute_large.mesh" texture_filename="chute.png" />
-	<turret offset="0 1.8 -0.8" weapon_key="sfw_hmv_20mm.weapon" weapon_offset="0 0 0" weapon_recoil="0.1" max_rotation_step="0.00015" />
+
+	<turret offset="0 -1.0 -1.9" weapon_key="sfw_hmv_20mm.weapon" weapon_offset="0.0 3.65 0" weapon_recoil="0.1" max_rotation_step="0.00015" />
+
 	<visual class="chassis" mesh_filename="humvee_ct.mesh" texture_filename="humvee_sf.jpg" />
 	<visual class="chassis" key="broken" mesh_filename="humvee_ct.mesh" texture_filename="humvee_broken.png" />
 	<visual class="tire" mesh_filename="humvee_wheel.mesh" texture_filename="humvee.png" />
-	<visual class="turret" turret_index="0" mesh_filename="hmv_weapon_turret.mesh" texture_filename="gun_turrent.jpg" />
+	<visual offset="0 0 1" class="turret" turret_index="0" mesh_filename="hmv_weapon_turret.mesh" texture_filename="sf_humvee_turret.jpg" />
 	<character_slot type="driver" position="0.8 0.48 0.4" rotation="0" exit_rotation="1.57" hiding="1" animation_id="36" />
 	<character_slot type="gunner" seat_position="0.0 0.78 -0.15" enter_position="0 0 -2.72" rotation="0" exit_rotation="-1.57" hiding="1" animation_key="tank mg still" marker_offset="0 1.2 0">
 		<turret index="0" />
