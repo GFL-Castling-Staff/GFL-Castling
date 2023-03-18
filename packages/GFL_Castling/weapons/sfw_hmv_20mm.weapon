@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon key="sfw_hmv_20mm.weapon"
+ai_burst_time="3" 
+ai_burst_time_variance="1" 
+ai_burst_wait_time="1.0" 
+ai_burst_wait_time_variance="0.2">
+
+    <specification 
+    slot="2" 
+    retrigger_time="0.2"
+	accuracy_factor="0.95" 
+	sustained_fire_grow_step="0.7" 
+	sustained_fire_diminish_rate="0.7" 
+    spread_range="0.1"
+    sight_range_modifier="1.15"
+    ai_sight_range_modifier="0.75"
+    magazine_size="-1" 
+    can_shoot_standing="0" 
+    can_shoot_crouching="0" 
+    suppressed="0" 
+    name="20mm" 
+    class="0" 
+    projectile_speed="90.0" />
+    
+    <sound key="fire" fileref="Manticore_fire_FromSQUAD.wav" pitch_variety="0.1" volume="1.0" />
+    <sound key="magazine_out" fileref="mg_clip_out.wav" />
+    <sound key="magazine_in" fileref="mg_clip_in.wav" />
+    <sound key="cycle" fileref="rifle_chamber.wav" />
+    <sound class="impact" fileref="rifle_drop.wav" />
+    <model filename="hmv_weapon_gun.mesh" texture_filename="gun_turrent.jpg" />
+
+    <hud_icon filename="testing.png" />
+    <commonness value="0.0" />
+
+
+    <weak_hand_hold offset="0.4" />
+    <projectile file="bullet_sf.projectile">
+        <result class="hit" kill_probability="1.75" kill_decay_start_time="1.933" kill_decay_end_time="3.222" />
+        <trail probability="1.0" key="bullet_new_he" />
+
+        <effect class="result" key="terrain" ref="result_cannon_blast_AmbientLight" lighting="0"/>
+        <effect class="result" key="terrain" ref="result_cannon_blast_smoke" lighting="0"/>
+        <effect class="result" key="other" copy="terrain"/>
+        <effect class="result" key="static_object" copy="terrain" />
+        <effect class="result" key="character" copy="terrain" />
+        <effect class="result" key="shield" copy="terrain" />			
+        <effect class="result" key="vehicle" copy="terrain" />	
+    </projectile>
+
+    
+</weapon>

@@ -796,7 +796,7 @@ class BasicCommandHandler : Tracker {
 			spawnInstanceNearPlayer(senderId, "binoculars_aek999_spawn_fairy.weapon", "weapon", 0);        
 			spawnInstanceNearPlayer(senderId, "binoculars_wheelchair_spawn_fairy.weapon", "weapon", 0);        
 		} else  if(checkCommand(message, "humvee")) {
-			spawnInstanceNearPlayer(senderId, "humvee_gl_para.vehicle", "vehicle", 0);        
+			spawnInstanceNearPlayer(senderId, "sf_humvee.vehicle", "vehicle", 0);        
 		} else  if(checkCommand(message, "javelin")) {
 			spawnInstanceNearPlayer(senderId, "javelin_ap.weapon", "weapon", 0);        
 		} else  if(checkCommand(message, "vectorflame")) {
