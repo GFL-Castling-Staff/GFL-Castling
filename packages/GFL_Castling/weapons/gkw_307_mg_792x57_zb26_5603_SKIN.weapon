@@ -42,10 +42,10 @@
 	<sound key="stab_hit" fileref="blade_impact_03_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
 	<sound key="stab_hit" fileref="blade_impact_04_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
 	<inventory encumbrance="20.0" buy_price="26.0" sell_price="26.0"/>
-	<sound key="fire" fileref="fg42_fire_FromPOSTSCRIPTUM.wav" pitch_variety="0.05" volume="1.15"/>
-    <sound key="magazine_out" fileref="m1918_mgz_out_FromRS2V.wav" volume="0.6" />
-    <sound key="magazine_in" fileref="m1918_mgz_in_FromRS2V.wav" volume="0.6" />
-    <sound key="cycle_out" fileref="m1918_cycle_FromRS2V.wav" volume="0.6" />
+	<sound key="fire" fileref="zb26_fire_FromPOSTSCRIPTUM.wav" pitch_variety="0.05" volume="1.15"/>
+    <sound key="magazine_out" fileref="zb26_mgz_out_FromPOSTSCRIPTUM.wav" volume="0.6" />
+    <sound key="magazine_in" fileref="zb26_mgz_in_FromPOSTSCRIPTUM.wav" volume="0.6" />
+    <sound key="cycle_out" fileref="zb26_cycle_FromPOSTSCRIPTUM.wav" volume="0.6" />
 	<sound class="impact" fileref="rifle_drop.wav" />
 	<model filename="gkw_mg_zb26_5603.xml" />
 	<hud_icon filename="gkw_zb26_5603.png" />

@@ -24,10 +24,10 @@
     <inventory encumbrance="10.0" buy_price="120.0" sell_price="120.0" />
     <animation key="reload" animation_key="reloading, magazine rifle 1.5" />
     <!--Sounds-->
-    <sound key="fire" fileref="sass_fire_FromCOD13.wav" pitch_variety="0.01" volume="1.1" />
-    <sound key="magazine_out" fileref="sass_mgz_out_FromSQUAD.wav"  volume="0.55" />
-    <sound key="magazine_in" fileref="sass_mgz_in_FromSQUAD.wav"  volume="0.55" />
-    <sound key="cycle" fileref="sass_cycle_FromCOD13.wav"  volume="0.4" />
+    <sound key="fire" fileref="m110_fire_FromCOD19.wav" pitch_variety="0.01" volume="1.1" />
+    <sound key="magazine_out" fileref="m110_mgz_out_FromCOD19.wav"  volume="0.8" />
+    <sound key="magazine_in" fileref="m110_mgz_in_FromCOD19.wav"  volume="0.8" />
+    <sound key="cycle" fileref="m110_cycle_FromCOD19.wav"  volume="0.8" />
     <sound class="impact" fileref="rifle_drop.wav" />
     <!--Model, Icon, Cost-->
     <model filename="gkw_rf_m110.xml" />
