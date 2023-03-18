@@ -55979,6 +55979,7 @@
 	<effect class="muzzle" ref="LawMuzzle"/>
 	<effect class="muzzle" ref="UpDust"/>
 	<sound key="fire" fileref="hornet_shot.wav" volume="0.5"/>
+	<shield offset="0.0 2.4 0.0" extent="2.0 4.8 0.0" />
 </weapon>
 
 <weapon key="Jupiter_airstrike.weapon">

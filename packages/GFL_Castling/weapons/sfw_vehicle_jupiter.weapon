@@ -109,6 +109,7 @@
 			<effect class="result" key="static_object" copy="terrain" />
 			<effect class="result" key="vehicle" copy="terrain" />
 			<effect class="result" key="character" copy="terrain" />
+			<shield offset="0.0 2.4 0.0" extent="2.0 4.8 0.0" />
 		</projectile>
 		<!-- Scoring for target priority. Distance is between 0 and 1 based on range; direction is between 0 and 1 based on whether its near the barrel; squad_command is between 0 and on based on how close to the player's command order is, and base_score is a weight.. -->
 		<!-- These all add together and the highest 'score' is the new target, targets are rescanned every 2.5 seconds to see if a new higher-score target is in sight-range. -->
