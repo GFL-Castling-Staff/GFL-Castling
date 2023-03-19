@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<weapon on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0" key="gkw_m950amod3_702.weapon">
+<weapon on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0" key="gkw_m950amod3_4302.weapon">
     <tag name="pistol" />
     <!--Weapon specifications-->
     <specification
@@ -10,7 +10,7 @@
     spread_range="0.15"
 	magazine_size="50"
 	suppressed="0"
-	name="M950A(MOD3)-[Ace on Duty]"
+	name="M950A(MOD3)-[The Warbler And The Rose]"
 	class="0"
     slot="0"
     stance_accuracy_rate="3"
@@ -58,7 +58,7 @@
     <sound key="cycle" fileref="m950a_cycle_FromWF.wav" volume="0.65" />
     <!--Model, Icon, Cost-->
     <model filename="gkw_m950a_From_melondove.xml" />
-    <hud_icon filename="gkw_m950a_702.png" />
+    <hud_icon filename="gkw_m950a_4302.png" />
     <!--Ballistics-->
     <weak_hand_hold offset="0.1" />
     <projectile file="bullet.projectile">
