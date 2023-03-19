@@ -317,8 +317,8 @@ class kill_event : Tracker {
             
             //只查询我方杀敌
             if (factionId==0 && characterId > 0){
-                string c_weaponType = getPlayerWeaponFromList(killername,0);
-                string c_armorType = getPlayerWeaponFromList(killername,3);
+                string c_weaponType = getPlayerWeaponFromListByID(characterId,0);
+                string c_armorType = getPlayerWeaponFromListByID(characterId,3);
                 int kill_to_heal_scale = 1;
                 if(reward_pool_key=="rare" || reward_pool_key=="elite")
                 {

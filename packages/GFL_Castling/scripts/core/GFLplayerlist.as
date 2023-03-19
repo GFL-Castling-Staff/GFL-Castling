@@ -277,6 +277,23 @@ string getPlayerWeaponFromList(string player_name, int weaponnum) {
     return weaponinfo;
 }
 
+string getPlayerWeaponFromListByID(int pid, int weaponnum) {
+    string output = default_string;
+    int i0 = getPlayerNumFromList();
+    array<string> keys =  getPlayerKeysFromList();
+    for(int i=0;i<i0;i++)
+    {
+        string key = keys[i];
+        GFL_playerInfo@ info = cast<GFL_playerInfo>(CT_PlayerList[key]);
+        int id = info.getPlayerCid();
+        if (pid == id)
+        {
+            output = info.getPlayerEquipment().getWeapon(weaponnum);
+        }
+    }
+    return output;
+}
+
 bool checkCharacterIdisPlayerOwn(string player_name, int cid) {
     if(!existPlayerInList(player_name)){_log("WARN: GFLplayerlist.as: checkCharacterIdisPlayerOwn(): player cid recieve failed.");return false;}
     if(cast<GFL_playerInfo>(CT_PlayerList[player_name]).getPlayerCid()!=cid){
