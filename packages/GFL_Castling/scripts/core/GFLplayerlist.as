@@ -192,13 +192,15 @@ class GFL_playerlist_system : Tracker {
                 GFL_playerInfo@ newPlayerInfo = getPlayerListInfoFromXML(m_metagame,nowPlayers[i]);
                 changePlayerInfoInList(newPlayerName,newPlayerInfo);
                 _log("GFL_playerlist_system: refresh(): player add successful.");
-                string vest_key = newPlayerInfo.m_equipment.getWeapon(3);
-                if (startsWith(vest_key,'srexo_t6'))
-                {   
-                    healCharacter(m_metagame,newPlayerInfo.getPlayerCid(),1);
-                }
+                manageEventOfRefresh(newPlayerName);
             }
         }
+    }
+
+    void manageEventOfRefresh(string playername){
+        int cid = getPlayerCidFromList(playername); if(cid==-1)return;
+        string armor = getPlayerWeaponFromList(playername,3); if(armor==default_string)return;
+        if(startsWith(armor,"srexo_t6"))healCharacter(m_metagame,cid,1);
     }
 }
 
