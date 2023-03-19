@@ -737,13 +737,13 @@ void healCharacter(Metagame@ metagame,int characterId,int healnum) {
 	metagame.getComms().send(c);
 }
 
-void healRangedCharacters(Metagame@ metagame,Vector3 pos,int faction_id,float range,int healnum,string special_key="none",int healcount=0) {
+void healRangedCharacters(Metagame@ metagame,Vector3 pos,int faction_id,float range,int healnum,string special_key="none",uint healcount=0) {
 	array<const XmlElement@>@ characters = getCharactersNearPosition(metagame, pos, faction_id, range);
 	if(healcount==0) {
 		_log("No special heal count requirement.");
-		healcount = characters.length;
-	} else if (healcount>=characters.length) {
-		healcount = characters.length;
+		healcount = characters.size();
+	} else if (healcount>=characters.size()) {
+		healcount = characters.size();
 	}
 	for (int i = 0; i < healcount; i++) {
 		int luckyhealguyid = characters[i].getIntAttribute("id");
@@ -892,4 +892,27 @@ void SetAttackTarget(Metagame@ metagame,int m_factionId ,string baseKey) {
 	command.setIntAttribute("faction", m_factionId);
 	command.setStringAttribute("attack_target_base_key", baseKey);
 	metagame.getComms().send(command);
+}
+
+int getNumberedVehicle(Metagame@ metagame, uint ownerid, string key) {
+	
+	array<const XmlElement@>@ vehicles = getVehicles(metagame, ownerid, key);
+	if(vehicles is null) return -1;
+	int number = vehicles.size();
+	for(uint i=0;i<vehicles.length();i++){
+		int vid = vehicles[i].getIntAttribute("id");
+		const XmlElement@ vehicleInfo = getVehicleInfo(metagame,vid);
+		if ( vehicleInfo is null)
+		{
+			number -= 1;
+			continue;
+		}
+		int hp = vehicleInfo.getIntAttribute("health");
+		if (hp <= 0)
+		{
+			number -= 1;
+			continue;
+		}
+	}
+	return number;	
 }

@@ -338,6 +338,20 @@ class kill_event : Tracker {
                         }
                     }
                 }
+
+                if(c_weaponType=="gkw_m1895mod3_5309.weapon" 
+                || c_weaponType =="gkw_m1895mod3_5309_skill.weapon"
+                || c_weaponType =="gkw_m1895mod3_7107.weapon"
+                || c_weaponType =="gkw_m1895mod3_7107_skill.weapon"
+                || c_weaponType =="gkw_m1895mod3.weapon"
+                || c_weaponType =="gkw_m1895mod3_skill.weapon"
+                ){
+                    int i = findSkillIndex(characterId,"Nagant");
+                    if(i >=0){
+                        SkillArray[i].m_time-=2.0;
+                    }
+                }
+
                 if(startsWith(c_armorType,'acbp_t6')){
                     float scale = 1.0;
                     if(reward_pool_key=="rare" || reward_pool_key=="elite")
