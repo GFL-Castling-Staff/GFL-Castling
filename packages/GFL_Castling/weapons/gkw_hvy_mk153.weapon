@@ -100,7 +100,7 @@
         <sound class="impact" fileref="rifle_drop.wav"/>
         <model filename="gkw_hvy_mk153.xml"/>
         <ballistics near_far_distance="1000.0" speed_estimation_near="100.0" speed_estimation_far="100.0" max_speed="125.0" randomness="0.0"/>
-        <projectile file="mk153_HEAT.projectile" />
+        <projectile file="mk153_NE.projectile" />
         <weak_hand_hold offset="0.3"/>
         <hud_icon filename="gkw_mk153.png"/>
         <capacity value="0" source="rank" source_value="0.0"/>

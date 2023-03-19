@@ -5,6 +5,7 @@ max_character_collision_speed="20"
 character_leave_request_mode="friendly" 
 allow_ai_to_use="1"
 ai_abandon_when_unsteerable="1"
+minimum_fill_requirement="0.4"
 reserves_spawn_point="1">
 	<tag name="metal_heavy" />
 	<tag name="light_combat" />
@@ -37,12 +38,12 @@ reserves_spawn_point="1">
 	drag_offset="-0.05" />
 	<sky_diving chute_offset="0 2.55 0.0" trigger_height="20.0" gravity="-10" mesh_filename="chute_large.mesh" texture_filename="chute.png" />
 
-	<turret offset="0 -1.0 -1.9" weapon_key="sfw_hmv_20mm.weapon" weapon_offset="0.0 3.65 0" weapon_recoil="0.1" max_rotation_step="0.00015" />
+	<turret offset="0 1.27 -0.9" weapon_key="sfw_hmv_20mm.weapon" weapon_offset="0 0 0" weapon_recoil="0.05" max_rotation_step="0.00015" />
 
 	<visual class="chassis" mesh_filename="humvee_ct.mesh" texture_filename="humvee_sf.jpg" />
 	<visual class="chassis" key="broken" mesh_filename="humvee_ct.mesh" texture_filename="humvee_broken.png" />
 	<visual class="tire" mesh_filename="humvee_wheel.mesh" texture_filename="humvee.png" />
-	<visual offset="0 0 1" class="turret" turret_index="0" mesh_filename="hmv_weapon_turret.mesh" texture_filename="sf_humvee_turret.jpg" />
+	<visual offset="0 0 0" class="turret" turret_index="0" mesh_filename="hmv_weapon_turret.mesh" texture_filename="sf_humvee_turret.jpg" />
 	<character_slot type="driver" position="0.8 0.48 0.4" rotation="0" exit_rotation="1.57" hiding="1" animation_id="36" />
 	<character_slot type="gunner" seat_position="0.0 0.78 -0.15" enter_position="0 0 -2.72" rotation="0" exit_rotation="-1.57" hiding="1" animation_key="tank mg still" marker_offset="0 1.2 0">
 		<turret index="0" />

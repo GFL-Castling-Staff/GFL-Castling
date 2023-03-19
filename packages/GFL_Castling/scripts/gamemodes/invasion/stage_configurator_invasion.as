@@ -185,14 +185,13 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 	// ------------------------------------------------------------------------------------------------
 	protected void setupNormalStages() {
-		addStage(setupDeadZone());
 		// addStage(setupStage1_rust());          // map2_?
 		// addStage(setupStageRace());          // DEJAHU
 		addStage(setupStage1());          // map2
 		addStage(setupStage10());         // map10
 		addStage(setupStageXmas()); 
 		addStage(setupStage7());          // map6c by diling
-		addStage(setupStage20());
+		addStage(setupStage19());		  // map18    
 		addStage(setupStage6());          // map5
 		addStage(setupStage13());         // map16
 		addStage(setupStage8());          // map8
@@ -207,17 +206,18 @@ class StageConfiguratorInvasion : StageConfigurator {
 		addStage(setupStage106());		  // map106 E30 Route by diling
 		addStage(setupStage17());         // map17
 		addStage(setupStage15());         // map1_2
-		addStage(setupStage3());		  // map3 c
 		addStage(setupFinalStage1());     // map11
 		addStage(setupStage104()); 		  // map105_1 zoneAttack by diling
 		addStage(setupStage105()); 		  // map105_2 shockzone by diling
+		addStage(setupDeadZone());
+		addStage(setupStage3());		  // map3 c
 		addStage(setupStage16());         // map8_2
+		addStage(setupStage20());
 		// addStage(setupDeadZone());
 		// addStage(setupStage14());         // map6_2
 		// addStage(setupStage5());          // map1
 		addStage(setupStage108());		  // xiaoxieshen by diling
 		// addStage(setupStage11());         // map13
-		addStage(setupStage19());		  // map18    
 		addStage(setupStage4());          // map7
 	}
 

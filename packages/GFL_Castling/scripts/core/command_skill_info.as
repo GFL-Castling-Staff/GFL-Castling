@@ -150,6 +150,7 @@ dictionary commandSkillIndex = {
         {"gkw_m4sopmodiimod3.weapon",23},
         {"gkw_m4sopmodiimod3_531.weapon",23},
         {"gkw_m4sopmodiimod3_551.weapon",23},
+        {"gkw_m4sopmodiimod3_4507.weapon",23},
 
         // PPSH41, PPSH41MOD3
         {"gkw_ppsh41.weapon",24},

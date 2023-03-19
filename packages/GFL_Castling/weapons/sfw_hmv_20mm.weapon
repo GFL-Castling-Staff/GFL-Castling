@@ -21,6 +21,7 @@ ai_burst_wait_time_variance="0.2">
     suppressed="0" 
     name="20mm" 
     class="0" 
+    barrel_offset_3d="0 0.5 2.3"
     projectile_speed="90.0" />
     
     <sound key="fire" fileref="Manticore_fire_FromSQUAD.wav" pitch_variety="0.1" volume="1.0" />
@@ -28,7 +29,7 @@ ai_burst_wait_time_variance="0.2">
     <sound key="magazine_in" fileref="mg_clip_in.wav" />
     <sound key="cycle" fileref="rifle_chamber.wav" />
     <sound class="impact" fileref="rifle_drop.wav" />
-    <model filename="hmv_weapon_gun.mesh" texture_filename="sf_humvee_gun.jpg" />
+    <model  />
 
     <hud_icon filename="testing.png" />
     <commonness value="0.0" />
@@ -36,9 +37,8 @@ ai_burst_wait_time_variance="0.2">
 
     <weak_hand_hold offset="0.4" />
     <projectile file="bullet_sf.projectile">
-        <result class="hit" kill_probability="1.75" kill_decay_start_time="1.933" kill_decay_end_time="3.222" />
+		<result class="blast" damage="2.0" radius="2.0" decal="1" push="0.1" character_state="death" faction_compare="not_equal"/>
         <trail probability="1.0" key="bullet_new_he" />
-
         <effect class="result" key="terrain" ref="result_cannon_blast_AmbientLight" lighting="0"/>
         <effect class="result" key="terrain" ref="result_cannon_blast_smoke" lighting="0"/>
         <effect class="result" key="other" copy="terrain"/>
