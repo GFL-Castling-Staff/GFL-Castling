@@ -200,5 +200,10 @@ dictionary MOD3craftList = {
     {"gkw_rmb93.weapon","gkw_rmb93mod3.weapon"},
     {"gkw_rmb93_4309.weapon","gkw_rmb93mod3_4309.weapon"},
 
+    {"gkw_aps.weapon","gkw_apsmod3.weapon"},
+    {"gkw_aps_4306.weapon","gkw_apsmod3_4306.weapon"},
+    {"gkw_aps_6808.weapon","gkw_apsmod3_6808.weapon"},
+
+
     {"666","-1"}
 };

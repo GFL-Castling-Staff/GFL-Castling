@@ -13,7 +13,7 @@ dictionary tdoll_index = {
     {"4","gkw_python.weapon"},
     {"5","gkw_m1895.weapon"},
     {"6","gkw_tt33.weapon"},
-    // {"7","gkw_aps.weapon"},
+    {"7","gkw_aps.weapon"},
     {"8",""},
     {"9",""},
     {"10","gkw_ppk.weapon"},
