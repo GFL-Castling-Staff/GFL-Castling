@@ -2292,7 +2292,7 @@
         <requirement class="weapon" key="gkw_m110_skill.weapon" slot="0" />
     </model>
     <model filename="gkd_rf_m110.xml">
-        <requirement class="weapon" key="gkw_m110_skill_1.weapon" slot="0" />
+        <requirement class="weapon" key="gkw_m110_skill_2.weapon" slot="0" />
     </model>        
     <model filename="gkd_mg_zb26.xml">
         <requirement class="weapon" key="gkw_zb26.weapon" slot="0" />
@@ -2315,5 +2315,9 @@
     <model filename="gkd_sg_rmb93_4309.xml">
         <requirement class="weapon" key="gkw_rmb93mod3_4309.weapon" slot="0" />
     </model>
+    <model filename="gkd_hg_357_8107.xml">
+        <requirement class="weapon" key="gkw_357_8107.weapon" slot="0" />
+    </model>
+    
     
 </models>

@@ -17,21 +17,22 @@
     projectiles_per_shot="1"
     burst_shots="1"
     slot="0"
+    spread_range="0.1"
     stab_enabled="1"/>
-    <animation state_key="recoil" animation_key="recoil, revolver"/>
+    <animation state_key="recoil" animation_key="recoil, hip revolver"/>
     <animation state_key="recoil" stance_key="prone" animation_key="recoil, pistol, prone"/>
     <animation state_key="recoil" stance_key="over_wall" animation_key="recoil, overwall pistol"/>
     <animation state_key="cycle" animation_key="cycle, revolver"/>
     <animation state_key="cycle" stance_key="prone" animation_key="cycle, revolver, prone"/>
     <animation state_key="reload" animation_key="RevolverReload"/>
-    <animation state_key="hold" animation_key="hold, pistol"/>
+    <animation state_key="hold" animation_key="hold, hip revolver"/>
     <animation state_key="hold_casual" animation_key="dancing, kazachok"/>
     <animation state_key="hold_on_wall" animation_key="hold, overwall pistol"/>
     <animation state_key="still_against_wall" animation_key="hold_casual, pistol 4"/>
     <animation state_key="running" animation_key="running, pistol"/>
-    <animation state_key="walking" animation_key="walking, pistol"/>
-    <animation state_key="walking_backwards" animation_key="walking backwards, pistol"/>
-    <animation state_key="crouching" animation_key="crouch, pistol"/>
+    <animation state_key="walking" animation_key="walking, hip revolver"/>
+    <animation state_key="walking_backwards" animation_key="walking backwards, hip revolver"/>
+    <animation state_key="crouching" animation_key="crouch, hip revolver"/>
     <animation state_key="crouch_moving" animation_key="crouching forwards, single hand carry"/>
     <animation state_key="crouch_moving_backwards" animation_key="crouching backwards, single hand carry"/>
     <animation state_key="prone_still" animation_key="prone_still, pistol"/>
