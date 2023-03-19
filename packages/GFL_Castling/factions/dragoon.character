@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <character filename="default_sf.text_lines">
 	<tag name="metal_man" />
-	<sound key="death" fileref="kill_sound_mechabot_01.wav" volume="0.5" pitch_variety="0.025" />
-	<sound key="death" fileref="kill_sound_mechabot_02.wav" volume="0.5" pitch_variety="0.025" />
-	<sound key="death" fileref="kill_sound_mechabot_03.wav" volume="0.5" pitch_variety="0.025" />
+	<sound key="death" fileref="kill_sound_mechabot_01.wav" volume="0.4" pitch_variety="0.025" />
+	<sound key="death" fileref="kill_sound_mechabot_02.wav" volume="0.4" pitch_variety="0.025" />
+	<sound key="death" fileref="kill_sound_mechabot_03.wav" volume="0.4" pitch_variety="0.025" />
 	<parameter class="being_stunned_steer_amount" value="0.8" />
 	<animation key="stunned" target_key="rush jump" />
     <parameter class="can_use_vehicles" value="0" /> 

@@ -7,5 +7,5 @@
 	<parameter class="running_steer_amount" value="0.63" />
     <animation key="throwing, upside" target_key="leaping_throw_ninja" />
     <parameter class="stopping_velocity_threshold" value="0.05" />
-    <sound key="death" fileref="kill_headshot.wav" volume="0.5" pitch_variety="0.025" />
+    <sound key="death" fileref="kill_headshot.wav" volume="0.4" pitch_variety="0.025" />
 </character>

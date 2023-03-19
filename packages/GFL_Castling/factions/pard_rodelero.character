@@ -8,7 +8,7 @@
     <animation key="throwing, upside" target_key="hold, dreamer" />
     <animation key="dive" target_key="hold, dreamer" />
     <parameter class="stopping_velocity_threshold" value="0.05" />
-    <sound key="death" fileref="kill_sound_kcco_bot01.wav" volume="0.50" pitch_variety="0.025"/>
-    <sound key="death" fileref="kill_sound_kcco_bot02.wav" volume="0.50" pitch_variety="0.025"/>
-    <sound key="death" fileref="kill_sound_kcco_bot03.wav" volume="0.50" pitch_variety="0.025"/>
+    <sound key="death" fileref="kill_sound_kcco_bot01.wav" volume="0.4" pitch_variety="0.025"/>
+    <sound key="death" fileref="kill_sound_kcco_bot02.wav" volume="0.4" pitch_variety="0.025"/>
+    <sound key="death" fileref="kill_sound_kcco_bot03.wav" volume="0.4" pitch_variety="0.025"/>
 </character>

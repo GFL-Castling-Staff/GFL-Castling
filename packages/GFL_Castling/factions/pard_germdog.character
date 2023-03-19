@@ -5,9 +5,9 @@
 	<parameter class="can_use_vehicles" value="0" /> 
 	<parameter class="speed" value="1.4" />
 	
-	<sound key="death" fileref="kill_sound_mechabot_01.wav" volume="0.5" pitch_variety="0.025" />
-	<sound key="death" fileref="kill_sound_mechabot_02.wav" volume="0.5" pitch_variety="0.025" />
-	<sound key="death" fileref="kill_sound_mechabot_03.wav" volume="0.5" pitch_variety="0.025" />
+	<sound key="death" fileref="kill_sound_mechabot_01.wav" volume="0.4" pitch_variety="0.025" />
+	<sound key="death" fileref="kill_sound_mechabot_02.wav" volume="0.4" pitch_variety="0.025" />
+	<sound key="death" fileref="kill_sound_mechabot_03.wav" volume="0.4" pitch_variety="0.025" />
 
 	<parameter class="throwing_self_over_initial_bounce" value="0.25" />
 	<parameter class="throwing_self_over_steer_amount" value="1" />
