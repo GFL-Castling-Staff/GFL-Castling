@@ -247,7 +247,7 @@ GFL_playerInfo@ getPlayerListInfoFromXML(Metagame@ m_metagame, const XmlElement@
     if(info2 is null){_log("WARN: GFLplayerlist.as: getPlayerListInfoFromXML(): null info2, using default playerinfo.");return default_playerInfo;}
 
     array<const XmlElement@>@ item = info2.getElementsByTagName("item");
-    if(item is null) {
+    if(item is null || item.size()!=5) {
         _log("WARN: GFLplayerlist.as: getPlayerListInfoFromXML(): invalid player item, using default equipment.");
         return default_playerInfo;
     }
