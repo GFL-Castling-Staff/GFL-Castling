@@ -19,7 +19,7 @@
 	spread_range="0.2"
     stance_accuracy_rate="2.0"
 	/>
-    <inventory buy_price="150.0" sell_price="150.0" />
+    <inventory encumbrance="25.0" buy_price="150.0" sell_price="150.0" />
     <!--Animations-->
     <animation state_key="cycle" animation_key="Pshotgun0.5" />
     <animation state_key="cycle" stance_key="prone" animation_key="Pshotgun0.5p" />

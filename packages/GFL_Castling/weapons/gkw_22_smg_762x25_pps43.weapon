@@ -13,7 +13,7 @@
 		stance_accuracy_rate="2.5"
 		sustained_fire_diminish_rate="1.5" 
 		sustained_fire_grow_step="0.22" />
-	<inventory value="0.2" buy_price="3.0" sell_price="3.0" />
+	<inventory encumbrance="25.0" value="0.2" buy_price="3.0" sell_price="3.0" />
 	<animation state_key="hold_casual" animation_key="dancing, kazachok" />
 	<sound key="fire" fileref="pps43_fire_FromRO2.wav" pitch_variety="0.05" volume="2.1" />
 	<sound key="magazine_out" fileref="pps43_mgz_out_FromRO2.wav" volume="1.9" />

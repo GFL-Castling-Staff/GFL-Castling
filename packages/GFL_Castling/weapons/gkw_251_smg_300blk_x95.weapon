@@ -26,7 +26,7 @@
 	<model filename="gkw_smg_x95.xml"/>
 	<hud_icon filename="gkw_x95.png"/>
 	<commonness value="0.2" in_stock="0"/>
-	<inventory encumbrance="10.0" buy_price="15.0" sell_price="15.0"/>
+	<inventory encumbrance="25.0" buy_price="15.0" sell_price="15.0"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile file="bullet.projectile" can_be_detected_by_footmen="0">
 	<result class="hit" kill_probability="1.85" kill_probability_offset_on_successful_hit="1.45" kill_decay_start_time="1.0" kill_decay_end_time="1.6"/>

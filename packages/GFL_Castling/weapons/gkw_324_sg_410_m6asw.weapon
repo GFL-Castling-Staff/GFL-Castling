@@ -22,7 +22,7 @@
     spread_range="0.2"
 	 />
     <!--Animations-->
-    <inventory buy_price="75.0" sell_price="75.0" />
+    <inventory encumbrance="25.0" buy_price="75.0" sell_price="75.0" />
     <animation key="reload" animation_key="reloading, oaat" />
     <next_in_chain key="gkw_m6asw_skill.weapon" share_ammo="0" />
 
@@ -77,7 +77,7 @@
 	/>
     <next_in_chain key="gkw_m6asw.weapon" share_ammo="0" />
 
-    <inventory encumbrance="10.0" buy_price="75.0" sell_price="75.0" />
+    <inventory encumbrance="25.0" buy_price="75.0" sell_price="75.0" />
     <effect class="muzzle" ref="ejection_556" />
     <animation key="reload" animation_key="reloading, oaat" />
 	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone" />
