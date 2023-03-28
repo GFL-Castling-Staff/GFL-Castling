@@ -24,7 +24,7 @@
     <!--base-->
     <commonness value="0.2" in_stock="0" can_respawn_with="1" />
     <capacity value="1" source="rank" source_value="0.0" />
-    <inventory encumbrance="2.0" buy_price="20.0" sell_price="20.0" />
+    <inventory encumbrance="10.0" buy_price="20.0" sell_price="20.0" />
     <modifier class="speed" value="+1.0" />
     <target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0" />
     <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0" />

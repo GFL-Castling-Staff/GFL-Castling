@@ -18,7 +18,7 @@
     />
     <commonness value="0.2" in_stock="1" can_respawn_with="1" />
     <!--Animations-->
-    <inventory buy_price="3.0" sell_price="3.0" />
+    <inventory encumbrance="10.0" buy_price="3.0" sell_price="3.0" />
     <!--Sounds-->
     <sound key="fire" fileref="c96_Fire_FromBF1.wav" pitch_variety="0.05" volume="1" />
     <sound key="magazine_out" fileref="c96_mgz_out_FromBF1.wav" volume="0.6" />

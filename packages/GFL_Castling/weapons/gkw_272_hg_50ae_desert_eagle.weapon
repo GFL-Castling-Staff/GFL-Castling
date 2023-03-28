@@ -16,7 +16,7 @@
 	projectiles_per_shot="1"
 	burst_shots="1"
      />
-    <inventory buy_price="100.0" sell_price="100.0" />
+    <inventory encumbrance="10.0" buy_price="100.0" sell_price="100.0" />
     <sound key="fire" fileref="deserteagle_fire_FromCOD13.wav" pitch_variety="0.05" volume="1.15" />
     <sound key="magazine_out" fileref="DE_mgz_out_FromSAM4.wav" volume="0.5" />
     <sound key="magazine_in" fileref="DE_mgz_in_FromSAM4.wav" volume="0.5"/>
