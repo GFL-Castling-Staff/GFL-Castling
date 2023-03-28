@@ -53,30 +53,27 @@
         <!--Ballistics-->
         <weak_hand_hold offset="0.1" />
         <projectile file="bullet_sf.projectile">
-            <result class="hit" 
-        kill_probability="2.5" 
-        kill_probability_offset_on_successful_hit="1.4"
-        kill_decay_start_time="0.25" 
-        kill_decay_end_time="0.95" />
+            <result class="hit"  kill_probability="2.6"  kill_probability_offset_on_successful_hit="1.5" kill_decay_start_time="0.25"  kill_decay_end_time="0.95" />
         </projectile>
         <!--Accuracy, Movement speed-->
-        <stance state_key="running" accuracy="0.2" />
+        <stance state_key="running" accuracy="0.5" />
         <stance state_key="walking" accuracy="0.75" />
         <stance state_key="crouch_moving" accuracy="0.85" />
         <stance state_key="prone_moving" accuracy="0.95" />
         <stance state_key="standing" accuracy="0.9" />
         <stance state_key="crouching" accuracy="0.95" />
         <stance state_key="prone" accuracy="1" />
-        <modifier class="speed" value="+0.65" />
+        <modifier class="speed" value="0.65" />
     </weapon>
     <weapon file="gk_sf_boss.base_weapon" key="ff_hunter_skill.weapon">
         <!--Weapon specifications-->
         <specification
 		retrigger_time="0.05"
 		accuracy_factor="0.5"
-		sustained_fire_grow_step="2.0"
-		sustained_fire_diminish_rate="0.5"
+		sustained_fire_grow_step="1.5"
+		sustained_fire_diminish_rate="2.5"
 		magazine_size="20"
+        last_burst_retrigger_time="0.3"
 		can_shoot_standing="1"
 		carry_in_two_hands="0" 
 		suppressed="0"
@@ -84,8 +81,8 @@
 		class="4"
 		sight_range_modifier="0.75"
 		projectile_speed="180"
-		projectiles_per_shot="2"
-		burst_shots="20"
+		projectiles_per_shot="4"
+		burst_shots="5"
 		slot="0" 
 		stab_enabled="1"/>
         <next_in_chain key="ff_hunter.weapon" share_ammo="1" />
@@ -127,13 +124,13 @@
             <result class="blast" radius="2.5" damage="1.0" push="0.1" decal="1" faction_compare="not_equal" />
         </projectile>
         <!--Accuracy, Movement speed-->
-        <stance state_key="running" accuracy="0.2" />
+        <stance state_key="running" accuracy="0.5" />
         <stance state_key="walking" accuracy="0.75" />
         <stance state_key="crouch_moving" accuracy="0.85" />
         <stance state_key="prone_moving" accuracy="0.95" />
         <stance state_key="standing" accuracy="0.9" />
         <stance state_key="crouching" accuracy="0.95" />
         <stance state_key="prone" accuracy="1" />
-        <modifier class="speed" value="-0.5" />
+        <modifier class="speed" value="0" />
     </weapon>
 </weapons>
