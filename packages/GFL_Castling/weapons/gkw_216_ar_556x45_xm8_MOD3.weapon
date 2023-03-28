@@ -16,7 +16,7 @@
 	sustained_fire_grow_step="0.3" />
     <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
     <commonness value="0.00001" in_stock="0" can_respawn_with="1" />
-    <inventory encumbrance="10.0" buy_price="150.0" sell_price="150.0" />
+    <inventory encumbrance="35.0" buy_price="150.0" sell_price="150.0" />
     <sound key="fire" fileref="xm8_fire_FromWF.wav" pitch_variety="0.05" volume="1" />
     <sound key="magazine_out" fileref="xm8_mgz_out_FromCOD16.wav" volume="0.5" />
     <sound key="magazine_in" fileref="xm8_mgz_in_FromCOD16.wav" volume="0.5" />

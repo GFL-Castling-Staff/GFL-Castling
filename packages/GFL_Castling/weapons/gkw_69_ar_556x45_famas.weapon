@@ -13,7 +13,7 @@
 	sustained_fire_grow_step="0.35"
 	stab_enabled="1"
 	stab_range="4.0" />
-    <inventory buy_price="15.0" sell_price="15.0" />
+    <inventory encumbrance="35.0" buy_price="15.0" sell_price="15.0" />
     <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
     <animation state_key="stabbing" animation_key="melee, bayonet_9hp" />
     <sound key="fire" fileref="famas_fire_FromCOD17.wav" pitch_variety="0" volume="0.9" />

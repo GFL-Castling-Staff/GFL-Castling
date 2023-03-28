@@ -18,7 +18,7 @@
     <animation key="reload" animation_key="reloading, magazine rifle 1.5" />
     <commonness value="0" in_stock="0" can_respawn_with="1"/>
     <next_in_chain key="gkw_a545_6803_skill.weapon" share_ammo="1" />
-    <inventory buy_price="45.0" sell_price="45.0" />
+    <inventory encumbrance="35.0" buy_price="45.0" sell_price="45.0" />
     <sound key="fire" fileref="a545_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.2" />
     <sound key="magazine_out" fileref="a545_mgz_out_FromCOD17.wav" volume="0.5" />
     <sound key="magazine_in" fileref="a545_mgz_in_FromCOD17.wav" volume="0.5" />
@@ -58,7 +58,7 @@
     <animation state_key="hold_casual" animation_key="dancing, kazachok" />
     <animation key="reload" animation_key="reloading, magazine rifle 1.5" />
     <commonness value="0" in_stock="0" can_respawn_with="1"/>
-    <inventory buy_price="45.0" sell_price="45.0" />
+    <inventory encumbrance="35.0" buy_price="45.0" sell_price="45.0" />
     <next_in_chain key="gkw_a545_6803.weapon" share_ammo="1" />
     <sound key="fire" fileref="ak74m_fire_FromBF3.wav" pitch_variety="0.05" volume="1.2" />
     <sound key="magazine_out" fileref="ak74_mgz_out_FromCOD16.wav" volume="0.5" />

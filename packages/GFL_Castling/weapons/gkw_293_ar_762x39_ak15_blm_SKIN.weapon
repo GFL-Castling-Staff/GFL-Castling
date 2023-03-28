@@ -14,7 +14,7 @@
 		sustained_fire_grow_step="0.4"/>
     <animation state_key="hold_casual" animation_key="dancing, kazachok" />
     <animation key="reload" animation_key="reloading, magazine rifle 1.5" />
-    <inventory encumbrance="10.0" buy_price="45.0" sell_price="45.0" />
+    <inventory encumbrance="35.0" buy_price="45.0" sell_price="45.0" />
     <commonness value="0" in_stock="0" />
     <sound key="fire" fileref="ak15_fire_FromWF.wav" pitch_variety="0.02" volume="1.2" />
     <sound key="magazine_out" fileref="ak12_mgz_out_FromCOD16.wav" volume="0.6" />

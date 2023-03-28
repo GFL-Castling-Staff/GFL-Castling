@@ -13,7 +13,7 @@
             suppressed="0"
             sustained_fire_diminish_rate="1.8"
             sustained_fire_grow_step="0.3"/>
-        <inventory buy_price="7.0" sell_price="7.0" />
+        <inventory encumbrance="35.0" buy_price="7.0" sell_price="7.0" />
         <commonness value="0" in_stock="0" />
         <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
         <sound key="fire" fileref="t91_fire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.0" />
@@ -52,7 +52,7 @@
             suppressed="1"
             sustained_fire_diminish_rate="1.8"
             sustained_fire_grow_step="0.3"/>
-        <inventory encumbrance="10.0" buy_price="7.0" sell_price="7.0" />
+        <inventory encumbrance="35.0" buy_price="7.0" sell_price="7.0" />
         <commonness value="0" in_stock="0" />
         <animation key="reload" animation_key="reloading, magazine rifle 1.5" />
         <sound key="fire" fileref="m16a1_fire_FromINS.wav" pitch_variety="0.05" volume="1.0" />

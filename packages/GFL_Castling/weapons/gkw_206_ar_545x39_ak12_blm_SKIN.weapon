@@ -19,7 +19,7 @@
         <next_in_chain key="gkw_ak12_blm_skill.weapon" share_ammo="1" />
         <animation state_key="hold_casual" animation_key="dancing, kazachok" />
         <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
-        <inventory encumbrance="10.0" buy_price="8.0" sell_price="8.0" />
+        <inventory encumbrance="35.0" buy_price="8.0" sell_price="8.0" />
         <commonness value="0" in_stock="0" />
         <sound key="fire" fileref="ak12_fire_FromBFH.wav" pitch_variety="0.02" volume="1.2" />
         <sound key="magazine_out" fileref="ak12_mgz_out_FromCOD16.wav" volume="0.6" />
@@ -76,7 +76,7 @@
         <next_in_chain key="gkw_ak12_blm.weapon" share_ammo="1" />
         <animation state_key="hold_casual" animation_key="dancing, kazachok" />
         <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
-        <inventory encumbrance="10.0" buy_price="8.0" sell_price="8.0"/>
+        <inventory encumbrance="35.0" buy_price="8.0" sell_price="8.0"/>
         <commonness value="0" in_stock="0" />
         <sound key="fire" fileref="ak12_fire_FromCOD16.wav" pitch_variety="0.02" volume="1" />
         <sound key="magazine_out" fileref="ak12_mgz_out_FromCOD16.wav" volume="0.6" />

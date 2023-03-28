@@ -18,7 +18,7 @@
 		sight_range_modifier="1.25"/>
         <animation state_key="hold_casual" animation_key="dancing, zoufang" />
         <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
-        <inventory encumbrance="10.0" buy_price="8.0" sell_price="8.0" />
+        <inventory encumbrance="35.0" buy_price="8.0" sell_price="8.0" />
         <next_in_chain key="gkw_rfb_skill.weapon" share_ammo="1" />
         <sound key="fire" fileref="rfb_fire_FromEFT.wav" pitch_variety="0.05" volume="1.4" />
         <sound key="magazine_out" fileref="rfb_mgz_out_FromEFT.wav" volume="0.8" />
@@ -59,7 +59,7 @@
         sight_range_modifier="2.25"/>
         <animation state_key="hold_casual" animation_key="dancing, zoufang" />
         <animation key="reload" animation_key="reloading, magazine rifle 1.5" />
-        <inventory encumbrance="10.0" buy_price="8.0" sell_price="8.0" />
+        <inventory encumbrance="35.0" buy_price="8.0" sell_price="8.0" />
         <next_in_chain key="gkw_rfb.weapon" share_ammo="1" />
         <commonness value="0" in_stock="0" can_respawn_with="1" />
         <sound key="fire" fileref="rfb_fire_FromBF4.wav" pitch_variety="0.05" volume="1.2" />
