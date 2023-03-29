@@ -1334,7 +1334,7 @@ class CommandSkill : Tracker {
                     playAnimationKey(m_metagame,characterId,"throwing, upside",true,true);
                     c_pos=c_pos.add(Vector3(0,1,0));
                     if (mod3){
-                        addCooldown("pp19",45,characterId,modifer);
+                        addCooldown("PP-19",45,characterId,modifer);
                         CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"grenade_pp19.projectile",characterId,factionid,40.0,6.0);
                         Vector3 c_pos1 = c_pos.add(Vector3(3,0,3));
                         Vector3 c_pos2 = c_pos.add(Vector3(-3,0,-3));
@@ -1409,21 +1409,7 @@ class CommandSkill : Tracker {
         }   
     }  
     void excuteAK15MOD3skill(int characterId,int playerId,SkillModifer@ modifer){
-        bool ExistQueue = false;
-        int j=-1;
-        for (uint i=0;i<SkillArray.length();i++){
-            if (InCooldown(characterId,modifer,SkillArray[i]) && SkillArray[i].m_weapontype=="AK15MOD3") {
-                ExistQueue=true;
-                j=i;
-            }
-        }
-        if (ExistQueue){
-            dictionary a;
-            a["%time"] = ""+SkillArray[j].m_time;
-            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
-            //_log("skill cooldown" + SkillArray[j].m_time);
-            return;
-        }
+        if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"AK15MOD3")) return;
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         if (character !is null) {
             const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
@@ -1556,21 +1542,7 @@ class CommandSkill : Tracker {
         }
     }
     void excuteJusticeskill(int characterId,int playerId,SkillModifer@ modifer){
-        bool ExistQueue = false;
-        int j=-1;
-        for (uint i=0;i<SkillArray.length();i++){
-            if (InCooldown(characterId,modifer,SkillArray[i]) && SkillArray[i].m_weapontype=="justice") {
-                ExistQueue=true;
-                j=i;
-            }
-        }
-        if (ExistQueue){
-            dictionary a;
-            a["%time"] = ""+SkillArray[j].m_time;
-            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
-            //_log("skill cooldown" + SkillArray[j].m_time);
-            return;
-        }
+        if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"justice")) return;
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         if (character !is null) {
             const XmlElement@ player = getPlayerInfo(m_metagame, playerId);

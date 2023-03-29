@@ -388,9 +388,7 @@ class kill_event : Tracker {
                 updateHealByKillEvent(characterId,factionId,int(healOnKillWeaponList[c_weaponType]),15,"weapon",kill_to_heal_scale);
             }
 
-            if(SFbossList.find(Solider_Name)>-1 && characterId > 0){
-                addCustomStatToCharacter(m_metagame,"sfboss_kill",characterId);
-            }
+
 
             if(KillerWeaponKey=="gkw_ppkmod3.weapon" || KillerWeaponKey=="gkw_ppkmod3_3905.weapon"){
                 // 乌鸦是猪，望周知
@@ -435,14 +433,18 @@ class kill_event : Tracker {
 
             if (Solider_Name=="") return;
 
-            // int GivenRP = getRPKillReward(Solider_Name);
-            // float GivenXP = getXPKillReward(Solider_Name);
-            // if(GivenRP>0){
-            //     givePlayerRPcount(playerId,GivenRP);
-            // }
-            // if(GivenXP>0){
-            //     givePlayerXPcount(playerId,GivenXP);
-            // }
+            if(SFbossList.find(Solider_Name)>-1 && characterId > 0){
+                addCustomStatToCharacter(m_metagame,"sfboss_kill",characterId);
+            }
+            
+            int GivenRP = getRPKillReward(Solider_Name);
+            float GivenXP = getXPKillReward(Solider_Name);
+            if(GivenRP>0){
+                givePlayerRPcount(playerId,GivenRP);
+            }
+            if(GivenXP>0){
+                givePlayerXPcount(playerId,GivenXP);
+            }
         }
 	}
     protected void handlePlayerDieEvent(const XmlElement@ event){

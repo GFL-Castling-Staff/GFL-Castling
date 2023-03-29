@@ -169,6 +169,7 @@ void addRangeItemInBackpack(Metagame@ metagame, int factionId, string ItemType, 
         GFL_playerInfo@ singlePlayer = cast<GFL_playerInfo>(CT_PlayerList[playerKeys[i]]);
 		player_cId.insertLast(singlePlayer.m_characterid);
 	}
+	
 	array<const XmlElement@> affectedCharacter = getCharactersNearPosition(metagame,pos,factionId,range);
 	if (affectedCharacter is null){return;}
 	for(uint i=0;i<affectedCharacter.length();i++){
