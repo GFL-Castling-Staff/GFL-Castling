@@ -22,7 +22,7 @@
     stance_accuracy_rate="0.8"
 	spread_range="0.15" />
     <next_in_chain key="gkw_hvy_ags30_fix.weapon" share_ammo="0"/>
-    <inventory encumbrance="50.0" buy_price="450.0" sell_price="450.0"/>
+    <inventory encumbrance="100.0" buy_price="450.0" sell_price="450.0"/>
     <commonness value="0.2" in_stock="1" can_respawn_with="1"/>
     <animation key="recoil" animation_key="recoil1" />
     <animation key="recoil" animation_key="recoil2" />
@@ -83,7 +83,7 @@
 	carry_in_two_hands="0"
 	spread_range="0.2"/>
 	<next_in_chain key="gkw_hvy_ags30.weapon" share_ammo="0"/>
-	<inventory encumbrance="50.0" buy_price="450.0" sell_price="450.0"/>
+	<inventory encumbrance="100.0" buy_price="450.0" sell_price="450.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<animation key="reload" animation_key="reloading, agl 4.0"/>
 	<animation state_key="hold_casual" animation_key="crouch, pistol dual"/>
