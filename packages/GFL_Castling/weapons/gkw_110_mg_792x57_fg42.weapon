@@ -23,7 +23,7 @@
 		carry_in_two_hands="1"
 		stab_enabled="1"/>
 		<animation key="reload" animation_key="reloading, clip fg42"/>
-		<inventory encumbrance="20.0" buy_price="42.0" sell_price="42.0"/>
+		<inventory encumbrance="50.0" buy_price="42.0" sell_price="42.0"/>
 		<next_in_chain key="gkw_fg42_skill.weapon" share_ammo="1"/>
 		<sound key="fire" fileref="fg42_fire_FromPOSTSCRIPTUM.wav" pitch_variety="0.05" volume="1.15"/>
 		<sound key="cycle_out" fileref="fg42_cycle_FromPOSTSCRIPTUM.wav" volume="0.75"/>
@@ -87,7 +87,7 @@
 		stab_enabled="1"
 		/>
 		<animation key="reload" animation_key="reloading, Machine gun 0.8" />
-		<inventory encumbrance="20.0" buy_price="42.0" sell_price="42.0"/>
+		<inventory encumbrance="50.0" buy_price="42.0" sell_price="42.0"/>
 		<commonness value="0" in_stock="0" can_respawn_with="1" />
 		<next_in_chain key="gkw_fg42.weapon" share_ammo="1" />
 		<sound key="fire" fileref="fg42skill_fire_FromZA4.wav" pitch_variety="0.05" volume="0.9" />

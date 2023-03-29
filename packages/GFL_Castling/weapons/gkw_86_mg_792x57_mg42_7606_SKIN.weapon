@@ -24,7 +24,7 @@
         can_shoot_prone="1"
         slot="0"/>
         <animation key="reload" animation_key="reloading, Machine gun 1.6"/>
-        <inventory encumbrance="30.0" buy_price="42.0" sell_price="42.0" />
+        <inventory encumbrance="50.0" buy_price="42.0" sell_price="42.0" />
         <commonness value="0" in_stock="0" can_respawn_with="1"/>
         <next_in_chain key="gkw_mg42_7606_skill.weapon" share_ammo="0"/>
         <sound key="fire" fileref="mg42_fire_FromHELLLETLOOSE.wav" pitch_variety="0.05" volume="1.3"/>
@@ -94,7 +94,7 @@
         can_shoot_prone="1"
         slot="0"/>
         <animation key="reload" animation_key="reloading, Machine gun 4"/>
-        <inventory encumbrance="30.0" buy_price="42.0" sell_price="42.0" />
+        <inventory encumbrance="50.0" buy_price="42.0" sell_price="42.0" />
         <commonness value="0" in_stock="0" can_respawn_with="1"/>
         <next_in_chain key="gkw_mg42_7606.weapon" share_ammo="0"/>
         <sound key="fire" fileref="mg42skill_fire_FromFC5.wav" pitch_variety="0.05" volume="1.2"/>

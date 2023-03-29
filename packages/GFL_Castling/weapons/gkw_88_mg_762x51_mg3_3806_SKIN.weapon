@@ -17,7 +17,7 @@
         sight_range_modifier="1.3"/>
         <animation key="reload" animation_key="reloading, Machine gun 2.0" />
         <animation state_key="next_in_chain_out" animation_key="open tripod"/>
-        <inventory encumbrance="30.0" buy_price="30.0" sell_price="30.0" />
+        <inventory encumbrance="50.0" buy_price="30.0" sell_price="30.0" />
         <next_in_chain key="gkw_mg3_3806_skill.weapon" share_ammo="1" />
         <commonness value="0.2" in_stock="0" can_respawn_with="1" />
         <sound key="fire" fileref="mg3_fire_FormWF.wav" pitch_variety="0.05" volume="1" />
@@ -60,7 +60,7 @@
         can_shoot_prone="1"/>
         <animation key="reload" animation_key="reloading, Machine gun 2.0" />
         <animation state_key="next_in_chain_out" animation_key="close tripod"/>
-        <inventory encumbrance="30.0" buy_price="30.0" sell_price="30.0" />
+        <inventory encumbrance="50.0" buy_price="30.0" sell_price="30.0" />
         <commonness value="0" in_stock="0" can_respawn_with="1" />
         <next_in_chain key="gkw_mg3_3806.weapon" share_ammo="1" />
         <sound key="fire" fileref="mg3_fire_FormCSOL.wav" pitch_variety="0.05" volume="0.75" />

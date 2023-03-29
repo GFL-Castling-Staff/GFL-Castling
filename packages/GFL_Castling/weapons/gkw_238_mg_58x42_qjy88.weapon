@@ -14,7 +14,7 @@
 		projectile_speed="225" 
 		sight_range_modifier="1.5" />
 		<animation key="reload" animation_key="reloading, Machine gun 2.8" />
-		<inventory buy_price="88.0" sell_price="88.0" />
+		<inventory encumbrance="50.0" buy_price="88.0" sell_price="88.0" />
 		<next_in_chain key="gkw_qjy88_skill.weapon" share_ammo="1" />
 		<sound key="fire" fileref="type88_fire_FromBFBC1.wav" pitch_variety="0.05" volume="1.1" />
 		<sound key="magazine_out" fileref="type88_mgz_out_FromBF3.wav" volume="0.8" />
@@ -50,7 +50,7 @@
 		sight_range_modifier="2.5" 
 		can_shoot_crouching="0" />
 		<animation key="reload" animation_key="reloading, Machine gun 2.8" />
-		<inventory buy_price="88.0" sell_price="88.0" />
+		<inventory encumbrance="50.0" buy_price="88.0" sell_price="88.0" />
 		<commonness value="0" in_stock="0" />
 		<next_in_chain key="gkw_qjy88.weapon" share_ammo="1" />
 		<sound key="fire" fileref="type88_fire_FromBFBC1.wav" pitch_variety="0.05" volume="1.1" />

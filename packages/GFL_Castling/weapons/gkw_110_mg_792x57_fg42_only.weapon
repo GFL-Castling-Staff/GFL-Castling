@@ -46,7 +46,7 @@
         <sound key="stab_hit" fileref="blade_impact_03_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
         <sound key="stab_hit" fileref="blade_impact_04_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
 		
-        <inventory encumbrance="20.0" buy_price="142.0" sell_price="142.0"/>
+        <inventory encumbrance="50.0" buy_price="142.0" sell_price="142.0"/>
 		<next_in_chain key="gkw_fg42_only_skill.weapon" share_ammo="1" />
 		<sound key="fire" fileref="fg42_fire_FromPOSTSCRIPTUM.wav" pitch_variety="0.05" volume="1.15"/>
 		<sound key="cycle_out" fileref="fg42_cycle_FromPOSTSCRIPTUM.wav" volume="0.75"/>
@@ -123,7 +123,7 @@
         <sound key="stab_hit" fileref="blade_impact_03_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
         <sound key="stab_hit" fileref="blade_impact_04_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
 
-        <inventory encumbrance="20.0" buy_price="142.0" sell_price="142.0"/>
+        <inventory encumbrance="50.0" buy_price="142.0" sell_price="142.0"/>
 		<commonness value="0" in_stock="0" can_respawn_with="1" />
 		<next_in_chain key="gkw_fg42_only.weapon" share_ammo="1" />
 		<sound key="fire" fileref="fg42skill_fire_FromZA4.wav" pitch_variety="0.05" volume="0.9" />
