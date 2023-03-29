@@ -24,7 +24,7 @@
         burst_shots="1" />
         <next_in_chain key="gkw_iws2000_1403_skill.weapon" share_ammo="0" />
         <!--Animations-->
-        <inventory encumbrance="10.0" buy_price="340.0" sell_price="240.0" />
+        <inventory encumbrance="35.0" buy_price="340.0" sell_price="240.0" />
         <animation key="reload" animation_key="reloading, magazine rifle 2.1" />
         <!--Sounds-->
         <sound key="fire" fileref="iws2000_fire_FromSAMTSE.wav" pitch_variety="0.05" volume="1.4" />
@@ -97,7 +97,7 @@
         <animation state_key="crouch_moving"    animation_key="walking, 88typemod3_melee" />
         <animation state_key="crouch_moving_backwards"  animation_key="walking backwards, 88typemod3_melee" />
         <model filename="gkw_rf_iws2000_1403.xml" />
-        <inventory encumbrance="10.0" buy_price="340.0" sell_price="240.0" />
+        <inventory encumbrance="35.0" buy_price="340.0" sell_price="240.0" />
         <projectile file="teal.projectile">
             <result class="blast" radius="5.5" damage="3" decal="0" push="0.0" character_state="death" faction_compare="not_equal" make_vehicle_hit_sound="0" />
         </projectile>

@@ -18,7 +18,7 @@
         projectile_speed="255" 
         barrel_offset="0.6" 
         projectiles_per_shot="4" />
-        <inventory encumbrance="10.0" buy_price="450.0" sell_price="300.0" />
+        <inventory encumbrance="35.0" buy_price="450.0" sell_price="300.0" />
         <commonness value="0.01" in_stock="0" can_respawn_with="1" />
         <next_in_chain key="gkw_ksvkmod3_skill.weapon" share_ammo="0" />
         <!--Animations-->
@@ -108,7 +108,7 @@
         projectile_speed="200" 
         barrel_offset="0.6" 
         projectiles_per_shot="1" />
-        <inventory encumbrance="10.0" buy_price="450.0" sell_price="300.0" />
+        <inventory encumbrance="35.0" buy_price="450.0" sell_price="300.0" />
         <next_in_chain key="gkw_ksvkmod3.weapon" share_ammo="0" />
         <!--Animations-->
         <animation key="cycle" animation_key="Brifle1.8" />

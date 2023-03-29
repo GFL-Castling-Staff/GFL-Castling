@@ -19,7 +19,7 @@
     sustained_fire_grow_step="1.0"/>
     <next_in_chain key="gkw_k11_ar.weapon" share_ammo="0" />
     <!--Animations-->
-    <inventory buy_price="300.0" sell_price="300.0" />
+    <inventory encumbrance="35.0" buy_price="300.0" sell_price="300.0" />
     <animation key="reload" animation_key="reloading, magazine rifle 1.8" />
     <animation key="cycle" animation_key="Brifle0.4" />
     <animation key="cycle" stance_key="prone" animation_key="Brifle0.8p" />

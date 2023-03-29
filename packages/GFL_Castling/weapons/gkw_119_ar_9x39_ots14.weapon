@@ -16,7 +16,7 @@
         sight_range_modifier="1.2"/>
         <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
         <animation state_key="hold_casual" animation_key="dancing, kazachok" />
-        <inventory buy_price="9.0" sell_price="9.0" />
+        <inventory  encumbrance="35.0" buy_price="9.0" sell_price="9.0" />
         <next_in_chain key="gkw_ots14_skill.weapon" share_ammo="1" />
         <sound key="fire" fileref="ots14_fire_FromFC6.wav" pitch_variety="0.05" volume="1" />
         <sound key="magazine_out" fileref="ots14_mgz_out_FromCOD17.wav" volume="0.8" />
@@ -56,7 +56,7 @@
         sight_range_modifier="1.6"/>
         <animation key="reload" animation_key="reloading, magazine rifle 1.5" />
         <animation state_key="hold_casual" animation_key="dancing, kazachok" />
-        <inventory buy_price="9.0" sell_price="9.0" />
+        <inventory encumbrance="35.0" buy_price="9.0" sell_price="9.0" />
         <next_in_chain key="gkw_ots14.weapon" share_ammo="1" />
         <commonness value="0" in_stock="0" can_respawn_with="1" />
         <sound key="fire" fileref="ots14skill_fire_FromBF4.wav" pitch_variety="0.05" volume="1" />

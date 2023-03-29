@@ -14,7 +14,7 @@
 		sustained_fire_grow_step="0.35"
 		sight_range_modifier="2.0" />
     <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
-    <inventory encumbrance="10.0" buy_price="180.0" sell_price="180.0" />
+    <inventory encumbrance="35.0" buy_price="180.0" sell_price="180.0" />
     <commonness value="0.0001" in_stock="0" can_respawn_with="1" />
     <sound key="fire" fileref="stg44_fire_FromPOSTSCRIPTUM.wav" pitch_variety="0.05" volume="1.2" />
     <sound key="magazine_out" fileref="stg44_mgz_out_FromPOSTSCRIPTUM.wav" volume="0.7" />

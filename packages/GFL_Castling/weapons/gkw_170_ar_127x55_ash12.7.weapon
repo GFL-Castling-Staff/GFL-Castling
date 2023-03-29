@@ -15,7 +15,7 @@
         sustained_fire_grow_step="0.3" />
         <animation state_key="hold_casual" animation_key="dancing, kazachok" />
         <animation state_key="reload" animation_key="reloading, magazine rifle 0.9" />
-        <inventory buy_price="200.0" sell_price="200.0" />
+        <inventory encumbrance="35.0" buy_price="200.0" sell_price="200.0" />
         <next_in_chain key="gkw_ash127_skill.weapon" share_ammo="1" />
         <sound key="fire" fileref="ash12_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.1" />
         <sound key="magazine_out" fileref="ash12_mgz_out_FromCOD16.wav" volume="0.5" />
@@ -54,7 +54,7 @@
         sustained_fire_grow_step="0.3" />
         <animation state_key="hold_casual" animation_key="dancing, kazachok" />
         <animation key="reload" animation_key="reloading, magazine rifle 1.5" />
-        <inventory buy_price="200.0" sell_price="200.0" />
+        <inventory encumbrance="35.0" buy_price="200.0" sell_price="200.0" />
         <next_in_chain key="gkw_ash127.weapon" share_ammo="1" />
         <commonness value="0" in_stock="0" can_respawn_with="1" />
         <sound key="fire" fileref="ash127skill_fire_FromCF.wav" pitch_variety="0.05" volume="1" />

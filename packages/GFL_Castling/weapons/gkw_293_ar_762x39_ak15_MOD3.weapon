@@ -29,7 +29,7 @@
         <animation state_key="stabbing"   animation_key="ak15_stab" />
         <animation state_key="hold_casual" animation_key="dancing, kazachok" />
         <animation key="reload" animation_key="reloading, magazine rifle 0.9" />
-        <inventory encumbrance="10.0" buy_price="300.0" sell_price="300.0" />
+        <inventory encumbrance="35.0" buy_price="300.0" sell_price="300.0" />
         <capacity value="1" source="rank" source_value="0.0" />
         <next_in_chain key="gkw_ak15mod3_skill.weapon" share_ammo="1" />
         <commonness value="0.01" in_stock="0" can_respawn_with="1" />
@@ -106,7 +106,7 @@
         <animation state_key="stabbing"   animation_key="ak15_stab" />
         <animation state_key="hold_casual" animation_key="dancing, kazachok" />
         <animation key="reload" animation_key="reloading, Machine gun 0.6" />
-        <inventory encumbrance="10.0" buy_price="300.0" sell_price="300.0" />
+        <inventory encumbrance="35.0" buy_price="300.0" sell_price="300.0" />
         <capacity value="1" source="rank" source_value="0.0" />
         <commonness value="0" in_stock="0" can_respawn_with="1" />
         <next_in_chain key="gkw_ak15mod3.weapon" share_ammo="1" />

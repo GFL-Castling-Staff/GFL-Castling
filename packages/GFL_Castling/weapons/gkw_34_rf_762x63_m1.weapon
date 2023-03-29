@@ -67,7 +67,7 @@
 	<sound key="stab_hit" fileref="blade_impact_04_fromESV.wav" pitch_variety="0.05" volume="2.0" />
     <model filename="gkw_rf_m1_bt.xml" />
     <hud_icon filename="gkw_m1.png" />
-    <inventory encumbrance="10.0" price="100.0" />
+    <inventory encumbrance="35.0" price="100.0" />
     <capacity value="1" source="rank" source_value="0.0" />
     <projectile file="bullet.projectile">
         <result 
@@ -126,7 +126,7 @@
 
     <model filename="gkw_rf_m1_grenade.xml" />
     <hud_icon filename="gkw_m1.png" />
-    <inventory encumbrance="10.0" price="100.0" />
+    <inventory encumbrance="35.0" price="100.0" />
 
     <projectile file="m1_grenade.projectile"/>
 

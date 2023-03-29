@@ -15,7 +15,7 @@
     sustained_fire_grow_step="0.5" 
     sustained_fire_diminish_rate="1.5" />
     <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
-    <inventory buy_price="50.0" sell_price="50.0" />
+    <inventory  encumbrance="35.0" buy_price="50.0" sell_price="50.0" />
     <sound key="fire" fileref="scar556sd_fire_FromCOD19.wav" pitch_variety="0.05" volume="1.2" />
     <sound key="magazine_out" fileref="scar_mgz_out_FromCOD16.wav" volume="0.6" />
     <sound key="magazine_in" fileref="scar_mgz_in_FromCOD16.wav" volume="0.6" />

@@ -17,7 +17,7 @@
 	projectile_speed="239.66" 
 	barrel_offset="0.4" 
 	projectiles_per_shot="4" />
-    <inventory encumbrance="10.0" buy_price="31.0" sell_price="31.0" />
+    <inventory encumbrance="35.0" buy_price="31.0" sell_price="31.0" />
     <!--Animations-->
     <next_in_chain key="gkw_k31_skill.weapon" share_ammo="1"/>
     <animation key="cycle" animation_key="Brifle0.4" />
@@ -72,7 +72,7 @@
 	projectile_speed="239.66" 
 	barrel_offset="0.4" 
 	projectiles_per_shot="1" />
-    <inventory buy_price="31.0" sell_price="31.0" />
+    <inventory encumbrance="35.0" buy_price="31.0" sell_price="31.0" />
     <next_in_chain key="gkw_k31.weapon" share_ammo="1"/>
     <!--Animations-->
     <animation key="reload" animation_key="reloading, magazine rifle 0.9" />

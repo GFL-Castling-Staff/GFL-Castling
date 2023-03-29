@@ -17,7 +17,7 @@
         <next_in_chain key="gkw_g11mod3_skill_538.weapon" share_ammo="1" />
         <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
         <animation state_key="stabbing" animation_key="melee, bayonet" />
-        <inventory buy_price="300.0" sell_price="300.0" />
+        <inventory encumbrance="35.0" buy_price="300.0" sell_price="300.0" />
         <commonness value="0" in_stock="0" />
         <sound key="fire" fileref="g11_fire_FromCOD17.wav" pitch_variety="0" volume="1" />
         <sound key="magazine_out" fileref="g11_mgz_out_FromCOD17.wav" volume="0.8" />
@@ -63,7 +63,7 @@
         <commonness value="0" in_stock="0" can_respawn_with="1" />
         <animation key="reload" animation_key="reloading, magazine rifle 1.5" />
         <animation state_key="stabbing" animation_key="melee, bayonet" />
-        <inventory buy_price="300.0" sell_price="300.0" />
+        <inventory encumbrance="35.0" buy_price="300.0" sell_price="300.0" />
         <sound key="fire" fileref="g11skill_fire_FromCF.wav" pitch_variety="0" volume="1" />
         <sound key="magazine_out" fileref="g11_mgz_out_FromCOD17.wav" volume="0.8" />
         <sound key="magazine_in" fileref="g11_mgz_in_FromCOD7.wav" volume="0.8" />

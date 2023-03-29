@@ -16,7 +16,7 @@
 		sustained_fire_grow_step="0.75" />
     <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
     <next_in_chain key="gkw_g3mod3_skill.weapon" share_ammo="1" />
-    <inventory buy_price="150.0" sell_price="150.0" />
+    <inventory encumbrance="35.0" buy_price="150.0" sell_price="150.0" />
     <sound key="fire" fileref="g3_fire_FromCOD17.wav" pitch_variety="0.05" volume="1.2" />
     <sound key="magazine_out" fileref="g3_mgz_out_FromCOD17.wav" volume="0.4" />
     <sound key="magazine_in" fileref="g3_mgz_in_FromCOD17.wav" volume="0.4" />
@@ -58,7 +58,7 @@
 		sustained_fire_grow_step="0.6" />
     <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
     <next_in_chain key="gkw_g3mod3.weapon" share_ammo="1" />
-    <inventory buy_price="150.0" sell_price="150.0" />
+    <inventory encumbrance="35.0" buy_price="150.0" sell_price="150.0" />
     <sound key="fire" fileref="g3_fire_FromCOD17.wav" pitch_variety="0.05" volume="1.2" />
     <sound key="magazine_out" fileref="g3_mgz_out_FromCOD17.wav" volume="0.4" />
     <sound key="magazine_in" fileref="g3_mgz_in_FromCOD17.wav" volume="0.4" />

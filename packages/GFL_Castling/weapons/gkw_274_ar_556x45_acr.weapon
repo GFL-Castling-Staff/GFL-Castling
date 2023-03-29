@@ -14,7 +14,7 @@
             sight_range_modifier="1.25"
             sustained_fire_diminish_rate="1.8"
             sustained_fire_grow_step="0.3" />
-        <inventory encumbrance="5.0" buy_price="50.0" sell_price="50.0" />
+        <inventory encumbrance="35.0" buy_price="50.0" sell_price="50.0" />
         <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
         <sound key="fire" fileref="acr_fire_FromCOD17.wav" pitch_variety="0.05" volume="1.2" />
         <sound key="magazine_out" fileref="acr_mgz_out_FromCOD6R.wav" volume="0.6" />
@@ -55,7 +55,7 @@
             sight_range_modifier="1.75"
             sustained_fire_diminish_rate="1.8"
             sustained_fire_grow_step="0.1" />
-        <inventory encumbrance="5.0" buy_price="50.0" sell_price="50.0" />
+        <inventory encumbrance="35.0" buy_price="50.0" sell_price="50.0" />
         <animation key="reload" animation_key="reloading, magazine rifle 0.8" />
         <sound key="fire" fileref="acr_fire_FromDIVISION2.wav" pitch_variety="0.05" volume="1.2" />
         <sound key="magazine_out" fileref="acr_mgz_out_FromCOD6R.wav" volume="0.7" />

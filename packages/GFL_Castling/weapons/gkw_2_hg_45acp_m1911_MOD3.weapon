@@ -22,7 +22,7 @@
 	use_basic_muzzle_smoke_effect="0"
 	stab_enabled="1"/>
 	<commonness value="0.01" in_stock="0" can_respawn_with="1" />
-	<inventory encumbrance="6.0" buy_price="150.0" sell_price="50.0" />
+	<inventory encumbrance="10.0" buy_price="150.0" sell_price="50.0" />
     <capacity value="1" source="rank" source_value="0.0" />
 	<!--Animations-->
 	<animation state_key="recoil"	animation_key="recoil, pistol dual 1" />
@@ -81,7 +81,7 @@
     <stance state_key="standing" accuracy="0.9" />
     <stance state_key="crouching" accuracy="0.95" />
     <stance state_key="prone" accuracy="1" />
-	<modifier class="speed" value="1.2" />
+	<modifier class="speed" value="0.8" />
 	<modifier class="hit_success_probability" value="-0.2" />
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0" />
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0" />

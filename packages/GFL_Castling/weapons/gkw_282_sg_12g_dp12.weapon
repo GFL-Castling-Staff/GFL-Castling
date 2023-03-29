@@ -19,7 +19,7 @@
 	projectiles_per_shot="14"
     spread_range="0.3"
 	burst_shots="2" />
-    <inventory buy_price="75.0" sell_price="75.0" />
+    <inventory encumbrance="25.0" buy_price="75.0" sell_price="75.0" />
     <!--Animations-->
     <animation key="reload" animation_key="KSGR" />
     <animation key="reload" stance_key="prone" animation_key="KSGRp" />

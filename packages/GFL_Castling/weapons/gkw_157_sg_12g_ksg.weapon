@@ -19,7 +19,7 @@
         projectiles_per_shot="18"
         spread_range="0.3"
         />
-        <inventory buy_price="75.0" sell_price="75.0" />
+        <inventory encumbrance="25.0" buy_price="75.0" sell_price="75.0" />
         <next_in_chain key="gkw_ksg_skill.weapon" share_ammo="0" />
         <!--Animations-->
         <animation state_key="cycle" animation_key="Pshotgun0.5" />
@@ -72,7 +72,7 @@
         barrel_offset="0.4" 
         projectiles_per_shot="5"
         />
-        <inventory buy_price="75.0" sell_price="75.0" />
+        <inventory encumbrance="25.0" buy_price="75.0" sell_price="75.0" />
         <next_in_chain key="gkw_ksg.weapon" share_ammo="0" />
         <commonness value="0" in_stock="0" can_respawn_with="1" />
         <!--Animations-->

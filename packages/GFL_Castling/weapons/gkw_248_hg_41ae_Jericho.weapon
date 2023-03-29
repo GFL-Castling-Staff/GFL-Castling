@@ -20,7 +20,7 @@
 	burst_shots="1"
      />
     <!--Animations-->
-    <inventory buy_price="41.0" sell_price="41.0" />
+    <inventory encumbrance="10.0" buy_price="41.0" sell_price="41.0" />
     <commonness in_stock="0" />
     <animation state_key="recoil" animation_key="recoil, pistol" />
 	<animation state_key="recoil" stance_key="prone" animation_key="recoil, pistol, prone" />

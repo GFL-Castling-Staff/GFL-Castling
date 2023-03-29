@@ -15,7 +15,7 @@
 		sustained_fire_diminish_rate="2.0" 
 		sustained_fire_grow_step="0.3"/>
         <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
-        <inventory encumbrance="10.0" buy_price="8.0" sell_price="8.0" />
+        <inventory encumbrance="35.0" buy_price="8.0" sell_price="8.0" />
         <next_in_chain key="gkw_QBZ95_3702_skill.weapon" share_ammo="1" />
         <sound key="fire" fileref="type95_fire_FromBF4.wav" pitch_variety="0.05" volume="1.6" />
         <sound key="magazine_out" fileref="qbz95_mgz_in_FromCOD17.wav" volume="0.45" />
@@ -55,7 +55,7 @@
 		sustained_fire_diminish_rate="2.0" 
 		sustained_fire_grow_step="0.5"/>
         <animation key="reload" animation_key="reloading, magazine rifle 1.5" />
-        <inventory encumbrance="10.0" buy_price="8.0" sell_price="8.0" />
+        <inventory encumbrance="35.0" buy_price="8.0" sell_price="8.0" />
         <sound key="fire" fileref="qbz95skill_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.2" />
         <sound key="magazine_out" fileref="qbz95_mgz_in_FromCOD17.wav" volume="0.45" />
         <sound key="magazine_in" fileref="qbz95_mgz_in_FromCOD17.wav" volume="0.45" />

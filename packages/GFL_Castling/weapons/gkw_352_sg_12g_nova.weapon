@@ -24,7 +24,7 @@
     last_burst_retrigger_time="-1"
     slot="0"
     use_basic_muzzle_smoke_effect="0"/>
-    <inventory buy_price="66.0" sell_price="66.0"/>
+    <inventory encumbrance="25.0" buy_price="66.0" sell_price="66.0"/>
     <next_in_chain key="gkw_nova_skill.weapon" share_ammo="1" />
     <animation state_key="cycle" animation_key="Pshotgun0.5"/>
     <animation state_key="cycle" stance_key="prone" animation_key="Pshotgun0.5p"/>
@@ -53,7 +53,6 @@
     <stance state_key="over_wall" accuracy="0.9" />
     <tag name="shotgun"/>
     <commonness value="0.2" in_stock="0" can_respawn_with="1"/>
-    <inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
     <capacity value="1" source="rank" source_value="0.0"/>
     <shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
     <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
@@ -105,7 +104,7 @@
     last_burst_retrigger_time="-1"
     slot="0"
     use_basic_muzzle_smoke_effect="0"/>
-    <inventory buy_price="66.0" sell_price="66.0"/>
+    <inventory encumbrance="25.0" buy_price="66.0" sell_price="66.0"/>
     <next_in_chain key="gkw_nova.weapon" share_ammo="1" />
     <animation state_key="cycle" animation_key="Pshotgun0.7"/>
     <animation key="reload" animation_key="reloading, oaat"/>
@@ -133,7 +132,6 @@
     <stance state_key="over_wall" accuracy="0.9" />
     <tag name="shotgun"/>
     <commonness value="0" in_stock="0" can_respawn_with="1"/>
-    <inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
     <capacity value="1" source="rank" source_value="0.0"/>
     <shield offset="-1.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
 	<addon_model filename="gkd_sg_nova_shield.xml"/>

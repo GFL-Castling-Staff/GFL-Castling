@@ -14,7 +14,7 @@
 		sustained_fire_diminish_rate="2.0" 
 		sustained_fire_grow_step="0.30"/>
         <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
-        <inventory encumbrance="10.0" buy_price="8.0" sell_price="8.0" />
+        <inventory encumbrance="35.0" buy_price="8.0" sell_price="8.0" />
         <commonness value="0" in_stock="0" can_respawn_with="1" />
         <next_in_chain key="gkw_tar21_1305_skill.weapon" share_ammo="1" />
         <sound key="fire" fileref="tar21_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.1" />
@@ -62,7 +62,7 @@
         sustained_fire_diminish_rate="2.0" 
         sustained_fire_grow_step="0.40"/>
         <animation key="reload" animation_key="reloading, magazine rifle 1.5" />
-        <inventory encumbrance="10.0" buy_price="8.0" sell_price="8.0" />
+        <inventory encumbrance="35.0" buy_price="8.0" sell_price="8.0" />
         <next_in_chain key="gkw_tar21_1305.weapon" share_ammo="1" />
         <commonness value="0" in_stock="0" can_respawn_with="1" />
         <sound key="fire" fileref="tar21skill_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.1" />

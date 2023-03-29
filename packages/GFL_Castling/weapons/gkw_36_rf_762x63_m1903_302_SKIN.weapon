@@ -23,7 +23,7 @@
     burst_shots="1"
     last_burst_retrigger_time="-1"
     slot="0"/>
-	<inventory encumbrance="20.0" buy_price="19.03" sell_price="19.03"/>
+	<inventory encumbrance="35.0" buy_price="19.03" sell_price="19.03"/>
 	<animation key="cycle" animation_key="Brifle1"/>
 	<animation key="cycle" stance_key="prone" animation_key="Brifle0.8p"/>
 	<animation key="reload" animation_key="reloading, oaat"/>
@@ -92,7 +92,7 @@
     burst_shots="1"
     last_burst_retrigger_time="0.1"
     slot="0"/>
-	<inventory encumbrance="20.0" buy_price="19.03" sell_price="19.03"/>
+	<inventory encumbrance="35.0" buy_price="19.03" sell_price="19.03"/>
 	<animation state_key="reload" animation_key="reloading, magazine rifle 1.5" />
 	<sound key="fire" fileref="m1903exp_fire_FromCOD17.wav" pitch_variety="0.05" volume="1.3"/>
 	<sound key="cycle" fileref="m1903exp_cycle_FromBF1.wav" volume="0.6"/>
@@ -160,7 +160,7 @@
     burst_shots="1"
     last_burst_retrigger_time="-1"
     slot="0"/>
-	<inventory encumbrance="20.0" buy_price="19.03" sell_price="19.03"/>
+	<inventory encumbrance="35.0" buy_price="19.03" sell_price="19.03"/>
 	<animation key="cycle" animation_key="Brifle1"/>
 	<animation key="cycle" stance_key="prone" animation_key="Brifle0.8p"/>
 	<animation key="reload" animation_key="reloading, oaat"/>

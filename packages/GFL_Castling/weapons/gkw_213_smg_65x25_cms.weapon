@@ -3,7 +3,7 @@
 	<weapon key="gkw_cms.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 		<tag name="smg" />
 		<specification accuracy_factor="0.85" barrel_offset="0.32" class="0" slot="0" magazine_size="30" name="C-MS(CBJ)" carry_in_two_hands="0" projectile_speed="160" retrigger_time="0.085" sight_range_modifier="1" suppressed="0" burst_shots="1" sustained_fire_diminish_rate="1.5" sustained_fire_grow_step="0.3" stab_enabled="1" stance_accuracy_rate="3.0" spread_range="0.05"/>
-		<inventory encumbrance="2.0" buy_price="120.0" sell_price="120.0" />
+		<inventory encumbrance="25.0" buy_price="120.0" sell_price="120.0" />
 		<commonness value="0.2" in_stock="0" can_respawn_with="1" />
 		<capacity value="1" source="rank" source_value="0.0" />
 		<animation state_key="hold_casual" />
@@ -56,7 +56,7 @@
 	<weapon key="gkw_cms_aps.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 		<tag name="smg" />
 		<specification accuracy_factor="0.85" barrel_offset="0.4" class="0" slot="0"  magazine_size="30" name="C-MS(CBJ-APS)" carry_in_two_hands="0" projectile_speed="130" retrigger_time="0.085" sight_range_modifier="1.25" suppressed="1" burst_shots="1" sustained_fire_diminish_rate="1.5" sustained_fire_grow_step="0.25" stab_enabled="1" stance_accuracy_rate="3.0" spread_range="0.25"/>
-		<inventory encumbrance="2.0" buy_price="120.0" sell_price="120.0" />
+		<inventory encumbrance="25.0" buy_price="120.0" sell_price="120.0" />
 		<animation state_key="hold_casual" />
 		<commonness value="0" in_stock="0" can_respawn_with="1"/>
 		<capacity value="1" source="rank" source_value="0.0" />
@@ -110,7 +110,7 @@
 	<weapon key="gkw_cms_st.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 		<tag name="smg" />
 		<specification accuracy_factor="0.85" barrel_offset="0.32" class="0" slot="0" magazine_size="30" name="C-MS(CBJ-ST)" carry_in_two_hands="0" projectile_speed="130" retrigger_time="0.085" sight_range_modifier="1" suppressed="0" burst_shots="1" sustained_fire_diminish_rate="1.5" sustained_fire_grow_step="0.3" stab_enabled="1" stance_accuracy_rate="3.0" spread_range="0.25"/>
-		<inventory encumbrance="2.0" buy_price="120.0" sell_price="120.0" />
+		<inventory encumbrance="25.0" buy_price="120.0" sell_price="120.0" />
 		<animation state_key="hold_casual" />
 		<commonness value="0" in_stock="0" can_respawn_with="1"/>
 		<capacity value="1" source="rank" source_value="0.0" />

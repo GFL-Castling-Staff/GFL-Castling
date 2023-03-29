@@ -17,7 +17,7 @@
 	projectile_speed="220" 
 	barrel_offset="0.7" 
 	projectiles_per_shot="1" />
-    <inventory buy_price="10.0" sell_price="10.0" />
+    <inventory encumbrance="35.0" buy_price="10.0" sell_price="10.0" />
     <!--Animations-->
     <animation state_key="hold_casual" animation_key="dancing, kazachok" />
     <animation key="cycle" animation_key="Brifle1.3" />
