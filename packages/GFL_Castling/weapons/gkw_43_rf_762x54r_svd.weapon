@@ -21,7 +21,7 @@
 	barrel_offset="0.4" 
     stance_accuracy_rate="1.0"
 	projectiles_per_shot="1" />
-    <inventory encumbrance="10.0" buy_price="40.0" sell_price="40.0" />
+    <inventory encumbrance="35.0" buy_price="40.0" sell_price="40.0" />
     <next_in_chain key="gkw_svd_skill.weapon" share_ammo="1"/>
     <!--Animations-->
     <animation state_key="hold_casual" animation_key="dancing, kazachok" />
@@ -75,7 +75,7 @@
 	barrel_offset="0.4" 
     stance_accuracy_rate="1.0"
 	projectiles_per_shot="2" />
-    <inventory encumbrance="10.0" buy_price="40.0" sell_price="40.0" />
+    <inventory encumbrance="35.0" buy_price="40.0" sell_price="40.0" />
     <next_in_chain key="gkw_svd.weapon" share_ammo="1"/>
     <commonness value="0" in_stock="0" can_respawn_with="1" />
     <!--Animations-->

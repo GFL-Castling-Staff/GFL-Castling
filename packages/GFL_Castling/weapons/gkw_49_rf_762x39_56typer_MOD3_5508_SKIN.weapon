@@ -23,7 +23,7 @@
     stab_enabled="1"
     carry_in_two_hands="1"
     slot="0"/>
-	<inventory encumbrance="20.0" buy_price="56" sell_price="56"/>
+	<inventory encumbrance="35.0" buy_price="56" sell_price="56"/>
 	<next_in_chain key="gkw_56typermod3_5508_skill.weapon" share_ammo="1" />
 	<animation key="reload" animation_key="reloading, clip"/>
 	<sound key="fire" fileref="type56r_fire_FromCOD16.wav" pitch_variety="0.03" volume="1.1"/>
@@ -89,7 +89,7 @@
 	stab_range="5.0"
     carry_in_two_hands="1"
     slot="0"/>
-	<inventory encumbrance="20.0" buy_price="56" sell_price="56"/>
+	<inventory encumbrance="35.0" buy_price="56" sell_price="56"/>
 	<animation key="reload" animation_key="reloading, clip 10"/>
 	<next_in_chain key="gkw_56typermod3_5508.weapon" share_ammo="1" />
 	<sound key="fire" fileref="type56r_fire_FromCOD16.wav" pitch_variety="0.03" volume="1.1"/>

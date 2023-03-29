@@ -17,7 +17,7 @@
 	barrel_offset="0.55" 
     stab_range="2.5"
 	projectiles_per_shot="8" />
-        <inventory encumbrance="20.0"  buy_price="77.0" sell_price="77.0"/>
+        <inventory encumbrance="35.0"  buy_price="77.0" sell_price="77.0"/>
         <next_in_chain key="gkw_mlemk1_skill.weapon" share_ammo="1" />
         <animation key="cycle" animation_key="Brifle0.8"/>
         <animation key="cycle" stance_key="prone" animation_key="Brifle0.8p"/>
@@ -79,7 +79,7 @@
     burst_shots="1"
     last_burst_retrigger_time="-1"
     slot="0"/>
-        <inventory encumbrance="20.0"  buy_price="77.0" sell_price="77.0"/>
+        <inventory encumbrance="35.0"  buy_price="77.0" sell_price="77.0"/>
         <next_in_chain key="gkw_mlemk1.weapon" share_ammo="1"/>
         <animation key="cycle" animation_key="Brifle0.4"/>
         <animation key="cycle" stance_key="prone" animation_key="Brifle0.8p"/>

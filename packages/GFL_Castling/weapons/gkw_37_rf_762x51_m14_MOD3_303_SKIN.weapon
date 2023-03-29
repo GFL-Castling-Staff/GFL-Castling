@@ -23,7 +23,7 @@
         stab_enabled="1"
         carry_in_two_hands="1"
         slot="0"/>
-        <inventory buy_price="100.0" sell_price="100.0"/>
+        <inventory encumbrance="35.0" buy_price="100.0" sell_price="100.0"/>
         <commonness value="0" in_stock="0" can_respawn_with="1"/>
         <capacity value="1" source="rank" source_value="0.0"/>
         <next_in_chain key="gkw_m14mod3_303_skill.weapon" share_ammo="1"/>
@@ -50,7 +50,6 @@
         <stance state_key="over_wall" accuracy="1" />
         <modifier class="speed" value="0.05"/>
         <tag name="rifle"/>
-        <inventory encumbrance="20.0" buy_price="1.0" sell_price="0.0"/>
         <capacity value="1" source="rank" source_value="0.0"/>
         <modifier class="detectability" value="-0.1"/>
         <target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
@@ -94,7 +93,7 @@
         stab_enabled="1"
         carry_in_two_hands="1"
         slot="0"/>
-        <inventory buy_price="100.0" sell_price="100.0"/>
+        <inventory encumbrance="35.0" buy_price="100.0" sell_price="100.0"/>
         <commonness value="0" in_stock="0" can_respawn_with="1"/>
         <capacity value="1" source="rank" source_value="0.0"/>
         <next_in_chain key="gkw_m14mod3_303.weapon" share_ammo="1"/>
@@ -125,7 +124,6 @@
         <modifier class="speed" value="-0.35"/>
         <modifier class="detectability" value="-0.1"/>
         <tag name="rifle"/>
-        <inventory encumbrance="20.0" buy_price="1.0" sell_price="0.0"/>
         <capacity value="1" source="rank" source_value="0.0"/>
         <target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
         <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>

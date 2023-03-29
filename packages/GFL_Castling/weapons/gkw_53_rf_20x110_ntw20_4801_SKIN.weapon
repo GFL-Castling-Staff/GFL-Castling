@@ -18,7 +18,7 @@
 	projectile_speed="225" 
 	barrel_offset="0.6" 
 	projectiles_per_shot="3" />
-    <inventory buy_price="350.0" sell_price="250.0" />
+    <inventory encumbrance="35.0" buy_price="350.0" sell_price="250.0" />
     <commonness in_stock="0" value="0"/>
     <!--Animations-->
     <animation key="cycle" animation_key="Brifle1.8" />

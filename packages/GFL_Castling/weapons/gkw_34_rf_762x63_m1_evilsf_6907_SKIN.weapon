@@ -52,7 +52,7 @@
 	<sound key="stab_hit" fileref="blade_impact_04_fromESV.wav" pitch_variety="0.05" volume="2.0" />
     <model filename="gkw_rf_m1_sf.xml" />
     <hud_icon filename="gkw_m1_6907.png" />
-    <inventory encumbrance="10.0" price="498.0" />
+    <inventory encumbrance="35.0" price="498.0" />
     <capacity value="1" source="rank" source_value="0.0" />
     <projectile file="bullet_sf_player.projectile">
         <result 
@@ -127,7 +127,7 @@
 	<sound key="stab_hit" fileref="blade_impact_04_fromESV.wav" pitch_variety="0.05" volume="2.0" />
     <model filename="gkw_rf_m1_sf_2.xml" />
     <hud_icon filename="gkw_m1_6907.png" />
-    <inventory encumbrance="10.0" price="498.0" />
+    <inventory encumbrance="35.0" price="498.0" />
     <capacity value="1" source="rank" source_value="0.0" />
     <projectile file="bullet_sf_player.projectile">
         <result 

@@ -22,7 +22,7 @@
         burst_shots="1"
         last_burst_retrigger_time="-1"
         slot="0"/>
-        <inventory buy_price="198.0" sell_price="98.0"/>
+        <inventory encumbrance="35.0" buy_price="198.0" sell_price="98.0"/>
         <commonness value="0" in_stock="0" can_respawn_with="1"/>
         <next_in_chain key="gkw_sv98mod3_1906_skill.weapon" share_ammo="1"/>
         <animation state_key="hold_casual" animation_key="dancing, kazachok"/>
@@ -101,7 +101,7 @@
         <animation key="cycle" stance_key="prone" animation_key="Brifle1p"/>
         <animation key="reload" animation_key="reloading, magazine rifle 2.1"/>
         <animation state_key="next_in_chain_in" animation_key="change weapon in ssass"/>
-        <inventory buy_price="198.0" sell_price="98.0"/>
+        <inventory encumbrance="35.0" buy_price="198.0" sell_price="98.0"/>
         <sound key="fire" fileref="sv98skill_fire_FromWF.wav" pitch_variety="0.05" volume="1.3"/>
         <sound key="cycle" fileref="sv98_cycle_FromEFT.wav" volume="0.8"/>
         <sound key="magazine_out" fileref="sv98_mgz_out_FromWF.wav" volume="0.7"/>

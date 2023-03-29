@@ -28,7 +28,7 @@
 	<sound key="last_ammo" fileref="type4_ping_FromCOD14.wav" volume="1.0" />
 	<model filename="gkw_rf_4type.xml"/>
 	<hud_icon filename="gkw_4type.png"/>
-	<inventory encumbrance="10.0" price="5.0"/>
+	<inventory encumbrance="35.0" price="5.0"/>
 	<projectile file="bullet.projectile">
 		<result class="hit" kill_probability="2.2" kill_probability_offset_on_successful_hit="3.5" kill_decay_start_time="1.448" kill_decay_end_time="2.414"/>
 	</projectile>
@@ -43,7 +43,6 @@
 	<stance state_key="over_wall" accuracy="1" />
 	<modifier class="detectability" value="-0.1"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
-	<inventory encumbrance="20.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
 	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
