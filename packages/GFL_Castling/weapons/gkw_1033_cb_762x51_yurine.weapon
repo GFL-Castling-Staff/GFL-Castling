@@ -40,11 +40,11 @@
         <inventory price="200.0"/>
         <weak_hand_hold offset="0.4" />
         <projectile file="bullet.projectile">
-            <result class="hit"  kill_probability="2.0" kill_decay_start_time="1.933" kill_decay_end_time="3.222" />
+            <result class="hit"  kill_probability="2.0" kill_probability_offset_on_successful_hit="0.5" kill_decay_start_time="1.933" kill_decay_end_time="3.222" />
         </projectile>
         <effect class="muzzle" ref="ejection_76251" />
-        <modifier class="speed" value="-0.3" />
-        <modifier class="detectability" value="+0.3" />
+        <modifier class="speed" value="-0.2" />
+        <modifier class="detectability" value="+0.2" />
     </weapon>
     <weapon key="gkw_yurine_1.weapon" on_ground_up="0 0 1" time_to_live_out_in_the_open="0.0" drop_count_factor_on_death="0.0" drop_count_factor_on_player_death="0.0" >
         <tag name="melee" />
