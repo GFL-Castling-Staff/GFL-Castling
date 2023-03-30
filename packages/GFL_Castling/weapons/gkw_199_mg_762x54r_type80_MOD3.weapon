@@ -23,7 +23,7 @@
         stab_enabled="1"
         />
         <animation key="reload" animation_key="reloading, Machine gun 2.0" />
-        <inventory encumbrance="20.0" buy_price="240.0" sell_price="240.0" />
+        <inventory encumbrance="50.0" buy_price="240.0" sell_price="240.0" />
         <next_in_chain key="gkw_type80mod3_skill.weapon" share_ammo="1" />
         <sound key="fire" fileref="qjy80_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.1" />
         <sound key="magazine_out" fileref="qjy80_mgz_out_FromCOD16.wav" volume="0.6" />
@@ -69,7 +69,7 @@
         stab_enabled="1"
         />
         <animation key="reload" animation_key="reloading, Machine gun 4" />
-        <inventory encumbrance="20.0" buy_price="240.0" sell_price="240.0" />
+        <inventory encumbrance="50.0" buy_price="240.0" sell_price="240.0" />
         <next_in_chain key="gkw_type80mod3.weapon" share_ammo="1" />
         <sound key="fire" fileref="qjy80_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.1" />
         <sound key="magazine_out" fileref="qjy80_mgz_out_FromCOD16.wav" volume="0.6" />

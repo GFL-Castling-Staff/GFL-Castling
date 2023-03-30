@@ -17,7 +17,7 @@
     slot="0" 
     projectiles_per_shot="1" />
     <next_in_chain key="gkw_at4_tec-9.weapon" share_ammo="0" />
-    <inventory buy_price="100.0" sell_price="10.0" />
+    <inventory encumbrance="100.0" buy_price="100.0" sell_price="10.0" />
     <capacity value="0" source="rank" source_value="0.0" />
     <capacity value="1" source="rank" source_value="3.457" />
     <animation key="recoil" animation_key="recoil, law" />

@@ -25,7 +25,7 @@
         slot="0"/>
         <animation state_key="hold_casual" animation_key="dancing, kazachok"/>
         <animation key="reload" animation_key="reloading, Machine gun 1.6"/>
-        <inventory encumbrance="30.0" buy_price="44.0" sell_price="44.0"/>
+        <inventory encumbrance="50.0" buy_price="44.0" sell_price="44.0"/>
         <next_in_chain key="gkw_rpd_skill.weapon" share_ammo="1"/>
         <sound key="fire" fileref="rpd_fire_FromRS2V.wav" pitch_variety="0.02" volume="1.1"/>
         <sound key="magazine_out" fileref="rpd_mgz_out_FromCOD17.wav" volume="0.45"/>
@@ -98,7 +98,7 @@
         slot="0"/>
         <animation state_key="hold_casual" animation_key="dancing, kazachok"/>
         <animation key="reload" animation_key="reloading, Machine gun 1.2"/>
-        <inventory encumbrance="30.0" buy_price="44.0" sell_price="44.0"/>
+        <inventory encumbrance="50.0" buy_price="44.0" sell_price="44.0"/>
         <commonness value="0" in_stock="0" can_respawn_with="1"/>
         <next_in_chain key="gkw_rpd.weapon" share_ammo="1"/>
         <sound key="fire" fileref="rpdskill_Fire_FromCOD17.wav" pitch_variety="0.02" volume="1.1"/>
@@ -124,7 +124,6 @@
         <stance state_key="over_wall" accuracy="1.0"/>
         <modifier class="speed" value="-0.45"/>
         <tag name="machine gun"/>
-        <inventory encumbrance="30.0" buy_price="1.0" sell_price="0.0"/>
         <capacity value="1" source="rank" source_value="0.0"/>
         <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
         <target_factors tag="smg" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>

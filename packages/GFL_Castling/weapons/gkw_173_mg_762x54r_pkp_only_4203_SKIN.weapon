@@ -23,7 +23,7 @@
         stab_enabled="1"/>
         <animation state_key="hold_casual" animation_key="dancing, kazachok"/>
         <animation key="reload" animation_key="reloading, Machine gun 2.0"/>
-        <inventory encumbrance="20.0" buy_price="150.0" sell_price="150.0"/>
+        <inventory encumbrance="50.0" buy_price="150.0" sell_price="150.0"/>
         <next_in_chain key="gkw_pkp_4203_only_skill.weapon" share_ammo="1"/>
         <sound key="fire" fileref="qjy80_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.1" />
         <sound key="magazine_out" fileref="qjy80_mgz_out_FromCOD16.wav" volume="0.6" />
@@ -97,7 +97,7 @@
         stab_enabled="1"/>
         <animation state_key="hold_casual" animation_key="dancing, kazachok"/>
         <animation key="reload" animation_key="reloading, Machine gun 2.0"/>
-        <inventory encumbrance="20.0" buy_price="150.0" sell_price="150.0"/>
+        <inventory encumbrance="50.0" buy_price="150.0" sell_price="150.0"/>
         <next_in_chain key="gkw_pkp_4203_only.weapon" share_ammo="1"/>
         <sound key="fire" fileref="pkp_fire_FromINS.wav" pitch_variety="0.05" volume="1.35" />
         <sound key="magazine_out" fileref="qjy80_mgz_out_FromCOD16.wav" volume="0.6" />

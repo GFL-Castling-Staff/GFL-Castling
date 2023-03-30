@@ -20,7 +20,7 @@
         stab_enabled="1"            
         sight_range_modifier="1.5"/>
         <animation key="reload" animation_key="reloading, Machine gun 2.8" />
-        <inventory buy_price="46.0" sell_price="46.0" />	
+        <inventory encumbrance="50.0" buy_price="46.0" sell_price="46.0" />	
         <next_in_chain key="gkw_mk46_skill.weapon" share_ammo="1" />
         <sound key="fire" fileref="mk46_fire_FromDIVISION2.wav" pitch_variety="0.05" volume="1" />
         <sound key="magazine_out" fileref="mk48_mgz_out_FromCOD9.wav" volume="0.8" />
@@ -59,7 +59,7 @@
         can_shoot_crouching="0"
         can_shoot_prone="1"/>
         <animation key="reload" animation_key="reloading, Machine gun 2.8" />
-        <inventory buy_price="46.0" sell_price="46.0" />	
+        <inventory encumbrance="50.0" buy_price="46.0" sell_price="46.0" />	
         <next_in_chain key="gkw_mk46.weapon" share_ammo="1" />
         <commonness  value="0" in_stock="0" can_respawn_with="1" />
         <sound key="fire" fileref="mk46skill_fire_FromCOD8.wav" pitch_variety="0.05" volume="1" />

@@ -34,7 +34,7 @@
 	<sound key="magazine_in" fileref="dry_fire.wav" volume="0.7"/>
 	<sound key="cycle" fileref="portable_mortar_reload.wav" volume="0.7"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
-	<inventory encumbrance="50.0" buy_price="420.0" sell_price="420.0"/>
+	<inventory encumbrance="100.0" buy_price="420.0" sell_price="420.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<model filename="gkw_hvy_m2mortar.xml"/>
 	<hud_icon filename="gkw_m2.png"/>

@@ -24,7 +24,7 @@
         can_shoot_prone="1"
         slot="0"/>
         <animation key="reload" animation_key="reloading, Machine gun 2.0"/>
-        <inventory encumbrance="30.0" buy_price="100.0" sell_price="100.0"/>
+        <inventory encumbrance="50.0" buy_price="100.0" sell_price="100.0"/>
         <commonness value="0.2" in_stock="1" can_respawn_with="1"/>
         <next_in_chain key="gkw_lwmmg_skill.weapon" share_ammo="0"/>
         <sound key="fire" fileref="lwmmg_fire_FromARMA3.wav" pitch_variety="0.05" volume="1.25"/>
@@ -94,7 +94,7 @@
         can_shoot_prone="1"
         slot="0"/>
         <animation key="reload" animation_key="reloading, Machine gun 4"/>
-        <inventory encumbrance="30.0" buy_price="100.0" sell_price="100.0"/>
+        <inventory encumbrance="50.0" buy_price="100.0" sell_price="100.0"/>
         <commonness value="0" in_stock="0" can_respawn_with="1"/>
         <next_in_chain key="gkw_lwmmg.weapon" share_ammo="0"/>
         <sound key="fire" fileref="lwmmgskill_fire_FromBFBC2.wav" pitch_variety="0.05" volume="1.1"/>

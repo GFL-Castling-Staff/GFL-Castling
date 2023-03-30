@@ -26,7 +26,7 @@
     <animation state_key="hold_on_wall" animation_key="still" />
     <animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
     <animation state_key="stabbing" animation_key="melee, quick knife" />
-    <inventory encumbrance="10.0" buy_price="97.0" sell_price="97.0" />
+    <inventory encumbrance="50.0" buy_price="97.0" sell_price="97.0" />
     <sound key="fire" fileref="lewis_fire_FromBF5.wav" pitch_variety="0.05" volume="1.2" />
     <sound key="magazine_out" fileref="lewis_mgz_out_FromBF1.wav" volume="0.7" />
     <sound key="magazine_in" fileref="lewis_mgz_in_FromBF1.wav" volume="0.7" />
@@ -80,7 +80,7 @@
     <animation state_key="walking" animation_key="walking, heavy weapon" />
     <animation state_key="walking_backwards" animation_key="walking backwards, heavy weapon" />
 
-    <inventory encumbrance="10.0" buy_price="97.0" sell_price="97.0" />
+    <inventory encumbrance="50.0" buy_price="97.0" sell_price="97.0" />
     <sound key="fire" fileref="lewis_fire_FromBF5.wav" pitch_variety="0.05" volume="1.2" />
     <sound key="magazine_out" fileref="lewis_mgz_out_FromBF1.wav" volume="0.7" />
     <sound key="magazine_in" fileref="lewis_mgz_in_FromBF1.wav" volume="0.7" />

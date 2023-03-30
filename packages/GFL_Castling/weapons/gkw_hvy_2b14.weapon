@@ -35,7 +35,7 @@
 	<sound key="magazine_in" fileref="dry_fire.wav" volume="0.7"/>
 	<sound key="cycle" fileref="portable_mortar_reload.wav" volume="0.7"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
-	<inventory encumbrance="50.0" buy_price="500.0" sell_price="500.0"/>
+	<inventory encumbrance="100.0" buy_price="500.0" sell_price="500.0"/>
 	<commonness value="0.2" in_stock="1" can_respawn_with="1"/>
 	<model filename="gkw_hvy_2b14.xml"/>
 	<hud_icon filename="gkw_2b14.png"/>
@@ -82,7 +82,7 @@
      />
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<next_in_chain key="gkw_hvy_2b14.weapon" share_ammo="0"/>
-	<inventory encumbrance="50.0" buy_price="500.0" sell_price="500.0"/>
+	<inventory encumbrance="100.0" buy_price="500.0" sell_price="500.0"/>
     <sound key="fire" fileref="tt33_fire_FromCOD9.wav" pitch_variety="0.05" volume="1.6"/>
 	<sound key="magazine_out" fileref="tt33_mgz_out_FromSQUAD.wav" volume="0.9"/>
 	<sound key="magazine_in" fileref="tt33_mgz_in_FromSQUAD.wav" volume="0.9"/>
