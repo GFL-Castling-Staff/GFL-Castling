@@ -60,7 +60,7 @@
         <weak_hand_hold offset="0.3" />
         <projectile file="88type_laser.projectile">
             <trail probability="1.0" key="laser_hyz" />
-            <result class="blast" damage="2.0"  radius="4" decal="1" push="0.15" character_state="death" faction_compare="not_equal" />
+            <result class="blast" damage="2.0"  radius="5.5" decal="1" push="0.15" character_state="death" faction_compare="not_equal" />
         </projectile>
         <stance state_key="running" accuracy="1" />
         <stance state_key="walking" accuracy="1" />
