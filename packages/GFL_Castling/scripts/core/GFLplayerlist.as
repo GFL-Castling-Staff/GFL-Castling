@@ -153,8 +153,14 @@ class GFL_playerlist_system : Tracker {
         while(CT_PlayerList.length()>0){        
             int index_last = CT_PlayerList.length() -1;
             GFL_playerInfo@ player = CT_PlayerList[index_last];
-            GiveRP(m_metagame,player.m_characterid,player.m_rp);
-            GiveXP(m_metagame,player.m_characterid,player.m_xp);
+            if(player.m_rp >0)
+            {
+                GiveRP(m_metagame,player.m_characterid,player.m_rp);
+            }
+            if(player.m_xp >0)
+            {
+                GiveXP(m_metagame,player.m_characterid,player.m_xp);
+            }            
             CT_PlayerList.removeLast();
         }  
 
