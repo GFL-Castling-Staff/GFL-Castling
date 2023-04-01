@@ -70,7 +70,7 @@
         <specification
 		retrigger_time="0.05"
 		accuracy_factor="0.5"
-		sustained_fire_grow_step="1.5"
+		sustained_fire_grow_step="0.6"
 		sustained_fire_diminish_rate="2.5"
 		magazine_size="20"
         last_burst_retrigger_time="0.3"
@@ -81,7 +81,7 @@
 		class="4"
 		sight_range_modifier="0.75"
 		projectile_speed="180"
-		projectiles_per_shot="4"
+		projectiles_per_shot="2"
 		burst_shots="5"
 		slot="0" 
 		stab_enabled="1"/>
@@ -121,7 +121,7 @@
         <!--Ballistics-->
         <weak_hand_hold offset="0.1" />
         <projectile file="bullet_sf.projectile">
-            <result class="blast" radius="2.5" damage="1.0" push="0.1" decal="1" faction_compare="not_equal" />
+            <result class="blast" radius="2.5" damage="1.1" push="0.1" decal="1" faction_compare="not_equal" />
         </projectile>
         <!--Accuracy, Movement speed-->
         <stance state_key="running" accuracy="0.5" />

@@ -120,7 +120,7 @@
     <weak_hand_hold offset="0.4" />
 
     <projectile file="bullet_sf.projectile">
-		<result class="blast" damage="7.5"   radius="7.5" decal="1" push="0.2" character_state="death" faction_compare="not_equal"/>
+		<result class="blast" damage="15"   radius="5.5" decal="1" push="0.2" character_state="death" faction_compare="not_equal"/>
 		<trail probability="1.0" key="sf_long" />
     </projectile>
 
@@ -152,8 +152,8 @@
 	retrigger_time="0.0333" 
 	last_burst_retrigger_time="0.3"
 	suppressed="0" 
-	sustained_fire_diminish_rate="0.4"
-	sustained_fire_grow_step="0.2"
+	sustained_fire_diminish_rate="1.0"
+	sustained_fire_grow_step="0.1"
 	projectiles_per_shot="1"
     use_basic_muzzle_smoke_effect="0" />
 
@@ -186,7 +186,7 @@
 
     <weak_hand_hold offset="0.4" />
 	<projectile file="rocket_dreamer.projectile">
-		<result class="blast"  damage="0.6"  radius="4.5" decal="1" push="0.2" character_state="death"  faction_compare="not_equal" damage_as_probability="1"/>
+		<result class="blast"  damage="0.6"  radius="5.5" decal="1" push="0.2" character_state="death"  faction_compare="not_equal" damage_as_probability="1"/>
     </projectile>
     
 	<stance state_key="running" accuracy="0.85" />

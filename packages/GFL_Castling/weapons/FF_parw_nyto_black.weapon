@@ -54,7 +54,7 @@
     </projectile>
 
     
-    <modifier class="speed" value="-0.1" />
+    <modifier class="speed" value="0.0" />
 </weapon>
 <weapon file="gk_sf_boss.base_weapon" key="ff_parw_nyto_black_1.weapon">
 
@@ -108,11 +108,11 @@
 
     <weak_hand_hold offset="0.4" />
     <projectile file="bullet_paradeus.projectile">
-        <result class="blast"  damage="7" faction_compare="not_equal" radius="2.5" push="0.4"/>
+        <result class="blast"  damage="12" faction_compare="not_equal" radius="2.5" push="0.4"/>
         <trail key="paradeus_long" />
     </projectile>
 
     
-    <modifier class="speed" value="-0.3" />
+    <modifier class="speed" value="-0.1" />
 </weapon>
 </weapons>
