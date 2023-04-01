@@ -113,7 +113,7 @@
 	<hud_icon filename="gkw_aa12only_skill.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="dragons_breath2.projectile">
-		<result class="blast" radius="2.5" damage="1.1" push="0.0" decal="1" faction_compare="not_equal"/>
+		<result class="blast" radius="2.5" damage="1.1" push="0.1" decal="1" faction_compare="not_equal"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.5"/>
 	<stance state_key="walking" accuracy="0.7"/>
@@ -124,6 +124,7 @@
 	<stance state_key="prone" accuracy="0.85"/>
 	<stance state_key="over_wall" accuracy="0.9"/>
 	<modifier class="detectability" value="0.45"/>
+	<modifier class="speed" value="-0.1" />
 	<tag name="shotgun"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
