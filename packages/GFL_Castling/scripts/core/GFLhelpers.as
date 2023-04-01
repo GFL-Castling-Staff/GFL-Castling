@@ -162,14 +162,10 @@ void addItemInStash(Metagame@ metagame, int characterId, string ItemType, string
 
 void addRangeItemInBackpack(Metagame@ metagame, int factionId, string ItemType, string ItemKey,Vector3 pos,float range){
 	array<int> player_cId;
-	if (getPlayerNumFromList()<=0){return;}
-	_log("playerlist get.");
-	array<string> playerKeys = getPlayerKeysFromList();
-	for(int i=0;i<getPlayerNumFromList();i++){
-        GFL_playerInfo@ singlePlayer = cast<GFL_playerInfo>(CT_PlayerList[playerKeys[i]]);
-		player_cId.insertLast(singlePlayer.m_characterid);
+	if (CT_PlayerList.length()<=0){return;}
+	for(uint i=0;i<CT_PlayerList.length();i++){
+		player_cId.insertLast(CT_PlayerList[i].m_characterid);
 	}
-	
 	array<const XmlElement@> affectedCharacter = getCharactersNearPosition(metagame,pos,factionId,range);
 	if (affectedCharacter is null){return;}
 	for(uint i=0;i<affectedCharacter.length();i++){
@@ -742,11 +738,11 @@ void healRangedCharacters(Metagame@ metagame,Vector3 pos,int faction_id,float ra
 	array<const XmlElement@>@ characters = getCharactersNearPosition(metagame, pos, faction_id, range);
 	if(healcount==0) {
 		_log("No special heal count requirement.");
-		healcount = characters.size();
-	} else if (healcount>=characters.size()) {
-		healcount = characters.size();
+		healcount = characters.length;
+	} else if (healcount>=characters.length) {
+		healcount = characters.length;
 	}
-	for (int i = 0; i < healcount; i++) {
+	for (uint i = 0; i < healcount; i++) {
 		int luckyhealguyid = characters[i].getIntAttribute("id");
 		switch(int(specialHealIndex[special_key]))
 		{
@@ -878,9 +874,8 @@ void GrenadeSupplyGroup(Metagame@ metagame,array<const XmlElement@>@ characters,
 {
 	for (uint i = 0; i < characters.length(); i++) {
 		int luckyhealguyid = characters[i].getIntAttribute("id");
-		string luckyhealguyname = characters[i].getStringAttribute("name");
-		if (!checkCharacterIdisPlayerOwn(luckyhealguyname,luckyhealguyid)) continue;
-		string key = getPlayerWeaponFromList(luckyhealguyname,2);
+		if (!checkCharacterIdisPlayerOwn(luckyhealguyid)) continue;
+		string key = getPlayerWeaponFromListByID(luckyhealguyid,2);
 		if(key == "-nan-") continue;
 		GrenadeSupply(metagame,luckyhealguyid,num,key,m_type);
 	}

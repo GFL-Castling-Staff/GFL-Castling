@@ -407,7 +407,7 @@ class DelayAntiPersonSnipeRequest :Task{
 	DelayAntiPersonSnipeRequest(GameMode@ metagame, float time, int cId,int fId, string airstrike_key,Vector3 pos1,int target) {
 		@m_metagame = metagame;
 		m_time = time;
-		m_addtime = time + 0.2;
+		m_addtime = time + 0.1;
 		m_character_id = cId;
 		m_faction_id =fId;
 		m_pos_1=pos1;
@@ -433,22 +433,14 @@ class DelayAntiPersonSnipeRequest :Task{
 			if (characterinfo !is null){
 				m_pos_2 = stringToVector3(characterinfo.getStringAttribute("position"));
 				float dis = getFlatPositionDistance(m_pos_1,m_pos_2);
-				CreateDirectProjectile(m_metagame,m_pos_1,m_pos_2,m_bullet_key,m_character_id,m_faction_id,float(max(dis/0.2,40.0)));
+				CreateDirectProjectile(m_metagame,m_pos_1,m_pos_2,m_bullet_key,m_character_id,m_faction_id,float(max(dis/0.1,40.0)));
 				playSoundAtLocation(m_metagame,"BT_rifle.wav",m_faction_id,m_pos_1,2.0);
 				m_shoot = true;
 			}
 		}		
 		if (m_addtime < 0 && m_timeLeft < 0){
-			m_pos_2 = m_pos_2.add(Vector3(0,3,0));
-			string c = 
-				"<command class='create_instance'" +
-				" faction_id='"+ m_faction_id +"'" +
-				" instance_class='grenade'" +
-				" instance_key='" + m_airstrike_key + "'" +
-				" position='" + m_pos_2.toString() + "'"+
-				" character_id='" + m_character_id + "' />";
-			m_metagame.getComms().send(c);
-		}		
+			CreateDirectProjectile(m_metagame,m_pos_2.add(Vector3(0,6,0)),m_pos_2,m_airstrike_key,m_character_id,m_faction_id,100);
+		}
 	}
 
     bool hasEnded() const {
@@ -498,16 +490,8 @@ class DelayAntiTankSnipeRequest :Task{
 			m_shoot = true;
 		}		
 		if (m_addtime < 0 && m_timeLeft < 0){
-			m_pos_2.add(Vector3(0,0.3,0));
-			string c = 
-				"<command class='create_instance'" +
-				" faction_id='"+ m_faction_id +"'" +
-				" instance_class='grenade'" +
-				" instance_key='" + m_airstrike_key + "'" +
-				" position='" + m_pos_2.toString() + "'"+
-				" character_id='" + m_character_id + "' />";
-			m_metagame.getComms().send(c);
-		}		
+			CreateDirectProjectile(m_metagame,m_pos_2.add(Vector3(0,6,0)),m_pos_2,m_airstrike_key,m_character_id,m_faction_id,100);
+		}	
 	}
 
     bool hasEnded() const {
