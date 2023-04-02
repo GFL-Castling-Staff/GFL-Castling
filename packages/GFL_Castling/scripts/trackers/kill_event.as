@@ -90,6 +90,7 @@ class kill_event : Tracker {
         {"gkw_type100_1.weapon",3},
         {"gkw_type100_4004.weapon",3},
         {"gkw_sp9.weapon",3},
+        {"gkw_sp9_6303.weapon",3},
         {"gkw_vector.weapon",3},
         {"gkw_vector_549.weapon",3},
         {"gkw_vector_549_skill.weapon",3},
