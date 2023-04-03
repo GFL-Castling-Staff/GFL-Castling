@@ -80,8 +80,6 @@ array<const XmlElement@>@ getPlayers(const Metagame@ metagame) {
 const XmlElement@ getPlayerInfo(const Metagame@ metagame, int playerId) {
 	array<const XmlElement@> players = getGenericObjectList(metagame, "players", "player");
 
-	_log("players " + players.size(), 1);
-
 	const XmlElement@ player = null;
 	for (uint i = 0; i < players.size(); ++i) {
 		const XmlElement@ info = players[i];

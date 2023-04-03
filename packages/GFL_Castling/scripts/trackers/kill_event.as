@@ -449,7 +449,9 @@ class kill_event : Tracker {
 	}
     protected void handlePlayerDieEvent(const XmlElement@ event){
         if(KillCountArray.size()<=0) return;
-        int cId= event.getIntAttribute("character_id");
+        const XmlElement@ player = event.getFirstElementByTagName("target");
+        if(player is null) return;
+        int cId= player.getIntAttribute("character_id");
         if(cId==-1) return;
         int index=findKillCountIndex(cId);
         if(index==-1) return;

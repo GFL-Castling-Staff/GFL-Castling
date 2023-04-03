@@ -29,7 +29,6 @@ class TimeAnnouncerTask : Task {
 	// --------------------------------------------
 	void update(float time) {
 		m_timeLeft -= time;
-		_log("time announcer, waiting " + time + ", left " + m_timeLeft, 1);
 
 		if (m_timeLeft < m_nextBoundary &&
 			m_nextBoundary > 0) // don't say starting in 0 s
