@@ -1,39 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<weapon file="paradeus.base_weapon" key="parw_thrower.weapon">
+<weapon file="normal_sg.base" key="parw_thrower.weapon">
 	<tag name="shotgun" />
 	<!--Weapon specifications-->
 	<specification 
-	retrigger_time="0.3" 
-	accuracy_factor="0.85" 
-	sustained_fire_grow_step="2.0" 
+	retrigger_time="-1" 
+	accuracy_factor="0.8" 
+	sustained_fire_grow_step="4.0" 
 	sustained_fire_diminish_rate="1.0" 
-	magazine_size="6" 
+	magazine_size="8" 
 	can_shoot_standing="1" 
 	suppressed="0" 
 	name="Grenadier" 
 	class="4" 
-	burst_shots="3"
+	burst_shots="1"
 	last_burst_retrigger_time="1.0"
 	reload_one_at_a_time="0"
 	sight_range_modifier="1.0" 
-	projectile_speed="90" 
+	projectile_speed="85" 
 	barrel_offset="0.4" 
-	projectiles_per_shot="7"
-	spread_range="0.35"
+	projectiles_per_shot="8"
+	spread_range="0.25"
 	 />
 	<!--Animations-->
 	<inventory encumbrance="20.0" buy_price="0.0" sell_price="0.0" />
-	<animation key="recoil" animation_key="recoil1" />
-	<animation key="recoil" animation_key="recoil2" />
-	<animation key="recoil" animation_key="recoil3" />
-	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone" />
-	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone" />
-	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone" />
-	<animation key="reload" animation_key="reloading, magazine rifle 1.2" />
-	<animation state_key="hold_on_wall" animation_key="still" />
-	<animation state_key="walking" animation_key="walking, hip fire" />
-	<animation state_key="walking_backwards" animation_key="walking backwards, hip fire" />
-	<animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
+	<animation key="reload" animation_key="reloading, magazine rifle 1.5" />
 	<!--Sounds-->
 	<sound key="fire" fileref="Grenadier_fire_FromCOD13.wav" volume="1.05" />
 	<sound key="magazine_out" fileref="Grenadier_mgz_out_FromCOD13.wav" volume="0.4" />
@@ -45,19 +35,19 @@
 	<hud_icon filename="parw_grenadier.png" />
 	<!--Ballistics-->
 	<weak_hand_hold offset="0.3" />
-	<projectile file="bullet_paradeus.projectile">
+	<projectile file="bullet_paradeus.projectile" time_to_live="0.3">
 		<result class="hit" 
-        kill_probability="2" 
-		kill_decay_start_time="0.06" 
-        kill_decay_end_time="0.8" />
+        kill_probability="2.0" 
+		kill_decay_start_time="0.18" 
+        kill_decay_end_time="0.3" />
 	</projectile>
 	<!--Accuracy, Movement speed-->
-	<stance state_key="running" accuracy="0.5" />
-	<stance state_key="walking" accuracy="0.5" />
-	<stance state_key="crouch_moving" accuracy="0.4" />
-	<stance state_key="prone_moving" accuracy="0.4" />
-	<stance state_key="standing" accuracy="0.55"/>
-	<stance state_key="crouching" accuracy="0.6" />
-	<stance state_key="prone" accuracy="0.65" />
-	<stance state_key="over_wall" accuracy="0.65" />
+    <stance state_key="running" accuracy="0.7" />
+    <stance state_key="walking" accuracy="0.8" />
+    <stance state_key="crouch_moving" accuracy="0.85" />
+    <stance state_key="prone_moving" accuracy="0.85" />
+    <stance state_key="standing" accuracy="0.85"/>
+    <stance state_key="crouching" accuracy="0.9" />
+    <stance state_key="prone" accuracy="1.0" />
+    <stance state_key="over_wall" accuracy="1.0" />
 </weapon>
