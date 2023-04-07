@@ -2273,8 +2273,12 @@ class CommandSkill : Tracker {
                     playAnimationKey(m_metagame,characterId,"air thrust",false,true);
                     playSoundAtLocation(m_metagame,"dart_shot.wav",factionid,c_pos,1.75);
                     TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
-                    tasker.add(DelayAirstrikeRequest(m_metagame,2.0,characterId,factionid,stringToVector3(target),"a10_rocket_strafe",true));
-                    tasker.add(DelayAirstrikeRequest(m_metagame,3.0,characterId,factionid,stringToVector3(target),"a10_strafe"));
+                    // tasker.add(DelayAirstrikeRequest(m_metagame,2.0,characterId,factionid,stringToVector3(target),"a10_rocket_strafe",true));
+                    // tasker.add(DelayAirstrikeRequest(m_metagame,3.0,characterId,factionid,stringToVector3(target),"a10_strafe"));
+
+                    tasker.add(strafe_task_30mm(m_metagame,3.0,characterId,factionid,c_pos,stringToVector3(target)));
+                    tasker.add(strafe_task_30mm(m_metagame,3.0,characterId,factionid,c_pos,stringToVector3(target)));
+                    tasker.add(strafe_task_30mm(m_metagame,3.0,characterId,factionid,c_pos,stringToVector3(target)));
                     addCooldown("MG4MOD3",90,characterId,modifer);
                 }
             }
@@ -2521,67 +2525,39 @@ class CommandSkill : Tracker {
     }
 
     void excuteM200skill(int characterId,int playerId,SkillModifer@ modifer){
-        bool ExistQueue = false;
-        int j=-1;
-        for (uint i=0;i<SkillArray.length();i++){
-            if (InCooldown(characterId,modifer,SkillArray[i],true) && SkillArray[i].m_weapontype=="M200") {
-                ExistQueue=true;
-                j=i;
-            }
-        }
-        if (ExistQueue){
-            dictionary a;
-            a["%time"] = ""+SkillArray[j].m_time;
-            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
-            //_log("skill cooldown" + SkillArray[j].m_time);
-            return;
-        }
+        if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"M200",true)) return;
+        addCooldown("M200",25,characterId,modifer);
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
-        if (character !is null) {
-            const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
-            if (player !is null){
-                if (player.hasAttribute("aim_target")) {
-                    string target = player.getStringAttribute("aim_target");
-                    int factionid = character.getIntAttribute("faction_id");
-                    Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
-                    array<string> Voice={
-                        "M200_SKILL1_JP.wav",
-                        "M200_SKILL2_JP.wav",
-                        "M200_SKILL3_JP.wav",
-                        "M200_ATTACK_JP.wav"
-                    };
-                    playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),2.0);
-                    TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
-                    int flagId = m_DummyCallID + 20000;
-                    ManualCallTask@ FairyRequest = ManualCallTask(characterId,"",0.0,factionid,stringToVector3(target),"foobar");
-                    FairyRequest.setIndex(14);
-                    FairyRequest.setSize(0.5);
-                    FairyRequest.setDummyId(flagId);
-                    FairyRequest.setRange(80.0);
-                    FairyRequest.setIconTypeKey("call_marker_snipe_m200");
-                    addCastlingMarker(FairyRequest);
-                    GFL_event_array.insertLast(GFL_event(characterId,factionid,"sniper_m200",stringToVector3(target),2.0,-1.0,flagId));
-                    m_DummyCallID++;
-                    addCooldown("M200",60,characterId,modifer);
-                }
-            }
-        }
+        if (character is null) return;
+        const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+        if (player !is null) return;
+        if (player.hasAttribute("aim_target")) {
+            string target = player.getStringAttribute("aim_target");
+            int factionid = character.getIntAttribute("faction_id");
+            Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
+            array<string> Voice={
+                "M200_SKILL1_JP.wav",
+                "M200_SKILL2_JP.wav",
+                "M200_SKILL3_JP.wav",
+                "M200_ATTACK_JP.wav"
+            };
+            playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),2.0);
+            TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+            int flagId = m_DummyCallID + 20000;
+            ManualCallTask@ FairyRequest = ManualCallTask(characterId,"",0.0,factionid,stringToVector3(target),"foobar");
+            FairyRequest.setIndex(14);
+            FairyRequest.setSize(0.5);
+            FairyRequest.setDummyId(flagId);
+            FairyRequest.setRange(80.0);
+            FairyRequest.setIconTypeKey("call_marker_snipe_m200");
+            addCastlingMarker(FairyRequest);
+            GFL_event_array.insertLast(GFL_event(characterId,factionid,"sniper_m200",stringToVector3(target),2.0,-1.0,flagId));
+            m_DummyCallID++;
+        }        
     }
+
     void excuteCZ75skill(int characterId,int playerId,SkillModifer@ modifer){
-        bool ExistQueue = false;
-        int j=-1;
-        for (uint i=0;i<SkillArray.length();i++){
-            if (InCooldown(characterId,modifer,SkillArray[i]) && SkillArray[i].m_weapontype=="CZ75") {
-                ExistQueue=true;
-                j=i;
-            }
-        }
-        if (ExistQueue){
-            dictionary a;
-            a["%time"] = ""+SkillArray[j].m_time;
-            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
-            return;
-        }
+        if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"CZ75",true)) return;
         const XmlElement@ characterinfo = getCharacterInfo(m_metagame, characterId);
         const XmlElement@ playerinfo = getPlayerInfo(m_metagame, playerId);
 
@@ -2590,9 +2566,6 @@ class CommandSkill : Tracker {
             Vector3 c_pos = stringToVector3(characterinfo.getStringAttribute("position"));
             Vector3 s_pos = stringToVector3(target);
             int factionid = characterinfo.getIntAttribute("faction_id");
-            // c_pos=c_pos.add(Vector3(0,1,0));
-     
-
             int num_jud = 0;
             int num_max_character = 3;
             int m_fnum = m_metagame.getFactionCount();
@@ -2633,7 +2606,6 @@ class CommandSkill : Tracker {
                         num_jud-=1;	
                     }
                 }
-
                 addCooldown("CZ75",15,characterId,modifer);
             }
             
@@ -2641,20 +2613,7 @@ class CommandSkill : Tracker {
     }
 
     void excuteSniperSkill_Pos(int characterId,int playerId,SkillModifer@ modifer,string weapon_name){
-        bool ExistQueue = false;
-        int j=-1;
-        for (uint i=0;i<SkillArray.length();i++){
-            if (InCooldown(characterId,modifer,SkillArray[i]) && SkillArray[i].m_weapontype=="sniper") {
-                ExistQueue=true;
-                j=i;
-            }
-        }
-        if (ExistQueue){
-            dictionary a;
-            a["%time"] = ""+SkillArray[j].m_time;
-            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
-            return;
-        }
+        if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"sniper")) return;
         const XmlElement@ characterinfo = getCharacterInfo(m_metagame, characterId);
         if (characterinfo is null) return;
         const XmlElement@ playerinfo = getPlayerInfo(m_metagame, playerId);

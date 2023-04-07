@@ -80,6 +80,8 @@ dictionary airstrikeIndex = {
 
         {"zasm21",16},
 
+        {"30mm_strafe",17},
+
         // 下面这行是用来占位的，在这之上添加新的即可
         {"666",-1}
 };
@@ -312,7 +314,7 @@ class GFLairstrike : Tracker {
                         break;                        
                     }
                     case 5:{                        
-                        float strike_rand=4.0;
+                        float strike_rand=5.0;
                         playSoundAtLocation(m_metagame,"ntw20_fire_FromBF2042.wav",fid,end_pos,5.0);
                         for(int j=1;j<=4;j++)
                         {
@@ -342,7 +344,7 @@ class GFLairstrike : Tracker {
                             rand_x1 = rand(-strike_rand,strike_rand);
                             rand_y1 = rand(-strike_rand,strike_rand);
                             
-                            CreateDirectProjectile(m_metagame,start_pos.add(Vector3(rand_x1,0,rand_y1),end_pos.add(Vector3(rand_x1,0,rand_y1)),"ASW_A10_strafe.projectile",cid,fid,85);           
+                            CreateDirectProjectile(m_metagame,start_pos.add(Vector3(rand_x1,0,rand_y1)),end_pos.add(Vector3(rand_x1,0,rand_y1)),"ASW_A10_strafe.projectile",cid,fid,85);           
                         } 
 
                         Airstrike_strafe.removeAt(a);
@@ -499,7 +501,19 @@ class GFLairstrike : Tracker {
                         }
                         Airstrike_strafe.removeAt(a);
                         break;                        
-                    }                    
+                    }
+                    case 17:{
+                        float strike_rand=4.0;
+                        int projectile_num = rand(4,8);
+                        for(int j=1;j<=projectile_num;j++)
+                        {
+                            float rand_x = rand(-strike_rand,strike_rand);
+                            float rand_y = rand(-strike_rand,strike_rand);
+                            CreateDirectProjectile(m_metagame,start_pos,end_pos.add(Vector3(rand_x,0,rand_y)),"ASW_A10_strafe.projectile",cid,fid,100);
+                        } 
+                        Airstrike_strafe.removeAt(a);
+                        break;
+                    }   
                     default:
                         break;
                 }

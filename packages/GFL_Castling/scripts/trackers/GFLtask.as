@@ -203,71 +203,8 @@ class DelayMovingProjectileSet :Task{
 	}
 }
 
-class Jupiter_Airstrike_Task : Task {
-    protected GameMode@ m_metagame;
-	protected float reload_cycle;
-	protected float reload_time;
-    protected int activation;
-    protected int m_numLeft;
 
-	Jupiter_Airstrike_Task(GameMode@ metagame){
-		@m_metagame = @metagame;
-		reload_cycle = 10.0;
-		reload_time = 10.0;
-		activation = 1;
-		m_numLeft = 0;
-	}
 
-	void jupiterfire() {
-		array<const XmlElement@> players = getPlayers(m_metagame);
-
-		int luckyguyId = rand(1,players.length)-1;
-		const XmlElement@ playerinfo = getPlayerInfo(m_metagame, luckyguyId);
-		int characterId = playerinfo.getIntAttribute("character_id");
-		const XmlElement@ characterinfo = getCharacterInfo(m_metagame, characterId);
-		Vector3 c_pos = stringToVector3(characterinfo.getStringAttribute("position"));
-		// CreateProjectile(Metagame@ m_metagame,Vector3 startPos,Vector3 endPos,string key,int cId,int fId,float initspeed,float ggg){
-		CreateProjectile(m_metagame,c_pos.add(Vector3(0,10,0)),c_pos,"jupiter_airstrike_warning.projectile",-1,1,720,100);
-		CreateProjectile(m_metagame,c_pos.add(Vector3(0,120,0)),c_pos,"artillery_jupiter_420.projectile",-1,1,100,10);
-	}
-
-	void start(){
-		_log("Jupiter_Initialized: "+m_numLeft);
-	}
-
-    void update(float time) {
-		reload_time -= time;
-
-		if (reload_time < 0){
-			if(activation > 0){
-				jupiterfire();
-				_log("Jupiter_Activated:"+ m_numLeft);
-				m_numLeft++;
-				reload_time = reload_cycle;			
-			}
-			else{
-				_log("Jupiter_Deactivated:"+ m_numLeft);
-				m_numLeft++;				
-			}
-		}
-	}
-
-	void end() {
-		reload_time = reload_cycle;
-		activation = 0;
-		m_numLeft = 0;
-	}
-
-    bool hasEnded() const {
-		if (activation>0) {
-			return false;
-		}
-		else {
-		return true;
-		}
-	}
-}
-//弃用
 
 class DelayAirstrikeRequest :Task{
 	protected GameMode@ m_metagame;
@@ -543,5 +480,104 @@ class DelaySpawnSoldier : Task {
 			return true;
 		}
 		return false;
+	}
+}
+
+abstract class event_call_task : Task
+{
+	protected GameMode@ m_metagame;
+	protected float m_time; //延迟
+	protected float m_timeLeft; //延迟实例
+	protected float m_time_internal; //间隔
+	protected float m_timeLeft_internal; //间隔实例
+    protected int m_character_id;
+    protected int m_faction_id;
+	protected Vector3 s_pos; //初始发射坐标
+	protected Vector3 e_pos; //结束坐标
+	protected Vector3 m_pos1; //发射坐标
+	protected Vector3 m_pos2; //打击坐标
+	protected string m_mode; //空袭等级
+	protected string m_airstrike_key; //空袭key
+    protected int m_excute_time=0; //执行次数
+	protected int m_excute_Limit; //执行次数上限
+	protected bool m_end=false;
+	protected Vector3 strike_vector;
+	protected float strike_didis;	//偏移
+
+	event_call_task(GameMode@ metagame, float time, int cId,int fId,Vector3 start_pos,Vector3 target_pos,string mode="")
+	{
+		@m_metagame = @metagame;
+		m_time = time;
+		m_character_id = cId;
+		m_faction_id =fId;
+		s_pos=start_pos;
+		e_pos=target_pos;
+		m_mode=mode;
+	}
+
+	void start() {}
+	void update(float time) {}
+    bool hasEnded() const {
+		if (m_end) {
+			return true;
+		}
+		return false;
+	}	
+}
+
+class strafe_task_30mm : event_call_task {
+	protected int luckyGuyid = -1;
+
+	void start(){
+		float rand_angle = rand(-3.14,3.14);
+		float rand_x = 2*cos(rand_angle);
+		float rand_y = 2*sin(rand_angle);
+		e_pos = e_pos.add(Vector3(rand_x,0,rand_y));
+		rand_angle = rand(-3.14,3.14);
+		rand_x = cos(rand_angle);
+		rand_y = sin(rand_angle);  		
+		Vector3 e_pos2 = e_pos.add(Vector3(rand_x,0,rand_y));
+		luckyGuyid = getNearbyRandomLuckyGuyId(m_metagame,m_faction_id,e_pos,8.0f);
+		if(luckyGuyid!=-1){
+			const XmlElement@ luckyGuy = getCharacterInfo(m_metagame, luckyGuyid);
+			e_pos = stringToVector3(luckyGuy.getStringAttribute("position"));
+		}
+		luckyGuyid = getNearbyRandomLuckyGuyId(m_metagame,m_faction_id,e_pos,32.0f);
+		if(luckyGuyid!=-1){
+			const XmlElement@ luckyGuy = getCharacterInfo(m_metagame, luckyGuyid);
+			e_pos2 = stringToVector3(luckyGuy.getStringAttribute("position"));
+		}
+		m_timeLeft=m_time;
+		m_timeLeft_internal = 0;
+		strike_vector = getAimUnitVector(1,e_pos,e_pos2);
+		strike_didis = 4.0;
+		Vector3 pos_offset = strike_vector.add(getMultiplicationVector(strike_vector,Vector3(-40,0,-40))); 
+		pos_offset = pos_offset.add(Vector3(0,60,0));
+		Vector3 pos_1st = e_pos.add(getMultiplicationVector(strike_vector,Vector3(-15,0,-15)));
+		Vector3 pos_2nd = e_pos2.add(getMultiplicationVector(strike_vector,Vector3(10,0,10)));
+        m_excute_Limit = max(int(getAimUnitDistance(1,pos_1st,pos_2nd)/strike_didis),6);
+		m_pos1 = pos_1st.add(pos_offset);
+		m_pos2 = pos_1st;
+		CreateDirectProjectile(m_metagame,m_pos1.add(getMultiplicationVector(strike_vector,Vector3(-40,0,-40))),m_pos2.add(Vector3(0,20,0)),"a10_warthog_shadow.projectile",m_character_id,m_faction_id,70);
+		m_pos1 = m_pos1.add(getMultiplicationVector(strike_vector,Vector3(-30,0,-30)));
+		m_time_internal = 0.15;
+		m_airstrike_key = "30mm_strafe";
+	}
+
+	strafe_task_30mm(GameMode@ metagame, float time, int cId,int fId,Vector3 start_pos,Vector3 target_pos,string mode=""){
+		super(metagame,time,cId,fId,start_pos,target_pos,mode);
+	}
+
+	void update(float time) {
+		if(m_timeLeft >= 0){m_timeLeft -= time;return;}
+		if (m_timeLeft_internal >= 0){m_timeLeft_internal -= time;return;}
+		if (m_excute_time >= m_excute_Limit){m_end = true;return;}
+		m_excute_time++;
+		m_timeLeft_internal = m_time_internal;
+
+		insertCommonStrike(m_character_id,m_faction_id,m_airstrike_key,m_pos1,m_pos2);
+		m_pos1 = m_pos1.add(getMultiplicationVector(strike_vector,Vector3(strike_didis,0,strike_didis)));
+		m_pos1 = m_pos1.add(Vector3(0,-20*(sqrt(float(1/m_excute_Limit)*m_excute_time)),0));
+		m_pos2 = m_pos2.add(getMultiplicationVector(strike_vector,Vector3(strike_didis,0,strike_didis)));					
 	}
 }

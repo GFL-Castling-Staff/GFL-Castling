@@ -655,13 +655,11 @@ int getNearbyRandomLuckyGuyId(GameMode@ metagame, int factionid, Vector3 pos, fl
 		}
                 
     if (affectedCharacter.length()>0) {
-        // _log("Luckyguy locate successful");
         uint luckyGuyindex = rand(0,affectedCharacter.length()-1);
         uint luckyGuyid = affectedCharacter[luckyGuyindex].getIntAttribute("id");
         return luckyGuyid;
     }         
 	else {
-		// _log("Luckyguy locate failed");
 		return -1;
 	}
 }
