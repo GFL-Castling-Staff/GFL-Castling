@@ -16,12 +16,15 @@
 	<commonness value="0.0" can_respawn_with="0" in_stock="0"/>
 	<inventory encumbrance="10.0" price="100.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
+
 	<ballistics
-	near_far_distance="100.0"
-	speed_estimation_near="25.0"
-	speed_estimation_far="25.0"
-	max_speed="25.0" 
+	curve_height="15.0"
+	near_far_distance="15.0"
+	speed_estimation_near="-10.0"
+	speed_estimation_far="10.0"
+	max_speed="33.5"
 	randomness="0.05"
+	tweak_factor="1.5"
 	/> 
 	<projectile file="flamethrower_flame.projectile" pulldown_in_air="22.0">
 	<trigger class="impact"/>
@@ -34,7 +37,7 @@
 	<stance state_key="standing" accuracy="1.0"/>
 	<stance state_key="crouching" accuracy="1.0"/>
 	<stance state_key="prone" accuracy="1.0"/>
-	<modifier class="speed" value="-0.3"/>
+	<modifier class="speed" value="-0.45"/>
 	<commonness value="0.0001" in_stock="1" can_respawn_with="1"/>
 	<inventory encumbrance="0.0" price="0.0"/>
 </weapon>
