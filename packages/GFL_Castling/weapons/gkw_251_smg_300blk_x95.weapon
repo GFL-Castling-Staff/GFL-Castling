@@ -40,7 +40,8 @@
     <stance state_key="prone" accuracy="0.9" /> 
     <stance state_key="prone_moving" accuracy="0.5" />
     <stance state_key="over_wall" accuracy="1" />
-    <modifier class="speed" value="0.0" />
+    <modifier class="speed" value="0.1" />
+	<modifier class="hit_success_probability" value="-0.2" />
 	<tag name="autorifle"/>
 	<animation key="recoil" animation_key="recoil1"/>
 	<animation key="recoil" animation_key="recoil2"/>
