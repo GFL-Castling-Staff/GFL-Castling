@@ -4,7 +4,7 @@
     <tag name="bazooka" />
     <tag name="antiarmor" />
     <tag name="elite" />
-    <specification retrigger_time="7.0" accuracy_factor="1.0" sustained_fire_grow_step="0.4" sustained_fire_diminish_rate="0.1" magazine_size="10" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" suppressed="0" name="SF-Architect" class="0" sight_range_modifier="1.75" projectile_speed="85.0" slot="0" projectiles_per_shot="1" />
+    <specification retrigger_time="7.0" accuracy_factor="1.0" sustained_fire_grow_step="0.4" sustained_fire_diminish_rate="0.1" magazine_size="10" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" suppressed="0" name="SF-Architect" class="0" sight_range_modifier="2.5" projectile_speed="85.0" slot="0" projectiles_per_shot="1" />
     <animation key="recoil" animation_key="recoil, law" />
     <animation key="reload" animation_key="reloading, portable mortar" />
     <animation key="hold" animation_key="still, with law" />
@@ -30,6 +30,12 @@
     <capacity value="1" source="rank" source_value="0.0" />
     <effect class="muzzle" ref="LawMuzzle" />
     <effect class="muzzle" ref="UpDust" />
+    <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
+    <target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="10.0"/>
+    <target_factors tag="machine gun" distance="2.0" direction="0.0" squad_command="1.0" base_score="10.0"/>
+    <target_factors tag="shotgun" distance="1.0" direction="0.0" squad_command="1.0" base_score="10.0"/>
+    <target_factors tag="bazooka" distance="2.5" direction="0.0" squad_command="1.0" base_score="15.0"/>
+    <target_factors tag="punchme" distance="1.0" direction="0.0" squad_command="1.0" base_score="30.0"/>
 </weapon>
 <weapon file="sf.base_weapon" key="sfw_architect_at.weapon">
     <tag name="bazooka" />
@@ -83,9 +89,9 @@
     <effect class="muzzle" ref="LawMuzzle" />
     <effect class="muzzle" ref="UpDust" />
     <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
-    <target_factors tag="heavy_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="10.0"/>
+    <target_factors tag="heavy_combat" distance="2.0" direction="0.0" squad_command="1.0" base_score="10.0"/>
     <target_factors tag="light_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0"/>
-    <target_factors tag="tank" distance="1.0" direction="0.0" squad_command="1.0" base_score="10.0"/>
+    <target_factors tag="tank" distance="2.0" direction="0.0" squad_command="1.0" base_score="10.0"/>
     <target_factors tag="apc" distance="1.0" direction="0.0" squad_command="1.0" base_score="7.0"/>
     <target_factors tag="jeep" distance="1.0" direction="0.0" squad_command="1.0" base_score="5.0"/>
 </weapon>
