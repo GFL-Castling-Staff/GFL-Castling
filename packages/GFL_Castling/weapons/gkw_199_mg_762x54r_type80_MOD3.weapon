@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapons>
     <weapon file="lmg_mg.animation_base" key="gkw_type80mod3.weapon">
+    <tag name="machine gun"/>
+    <tag name="elite" />
         <specification 
         barrel_offset="0.5" 
         retrigger_time="0.075" 
@@ -47,6 +49,8 @@
         <stance state_key="over_wall" accuracy="1.2" />
     </weapon>
     <weapon file="lmg_mg.animation_base" key="gkw_type80mod3_skill.weapon">
+    <tag name="machine gun"/>
+    <tag name="elite" />
         <specification 
         barrel_offset="0.5" 
         retrigger_time="0.08" 

@@ -48,6 +48,7 @@
         <stance state_key="prone" accuracy="1.7"/>
         <stance state_key="over_wall" accuracy="1.7"/>
         <tag name="machine gun"/>
+        <tag name="elite" />
         <modifier class="speed" value="0.1" />
         <shield offset="-1.2 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
         <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0" />
@@ -122,6 +123,7 @@
         <stance state_key="over_wall" accuracy="1"/>
         <modifier class="speed" value="-0.25"/>
         <tag name="machine gun"/>
+        <tag name="elite" />
         <shield offset="-1.2 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
         <modifier class="speed" value="-0.25" />
         <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0" />

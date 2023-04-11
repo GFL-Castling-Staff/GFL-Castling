@@ -2,6 +2,7 @@
 <weapons>
     <weapon key="gkw_g36c_mod3_3103.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
         <tag name="smg" />
+        <tag name="elite" />
         <specification 
 		accuracy_factor="0.98" 
 		barrel_offset="0.4" 
@@ -65,6 +66,7 @@
     </weapon>
     <weapon key="gkw_g36c_mod3_3103_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
         <tag name="smg" />
+        <tag name="elite" />
         <specification 
 		accuracy_factor="0.98" 
 		barrel_offset="0.4" 

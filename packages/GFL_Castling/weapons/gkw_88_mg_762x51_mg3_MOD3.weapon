@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapons>
     <weapon file="heavy_mg_standing.animation_base" key="gkw_mg3mod3.weapon">
+    <tag name="machine gun"/>
+    <tag name="elite" />
         <specification 
         barrel_offset="0.65" 
         retrigger_time="0.0666" 
@@ -43,6 +45,8 @@
         <modifier class="speed" value="0.1" />
     </weapon>
     <weapon key="gkw_mg3mod3_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+    <tag name="machine gun"/>
+    <tag name="elite" />
         <specification 
         barrel_offset="0.65" 
         retrigger_time="-1"
