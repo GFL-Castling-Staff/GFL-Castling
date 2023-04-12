@@ -32,6 +32,9 @@
         <animation state_key="stabbing" animation_key="melee, quick knife" />
         <animation key="recoil" animation_key="recoil1, big"/>
         <animation key="recoil" stance_key="prone" animation_key="recoil1, big, prone" />
+        <animation state_key="running" animation_key="running, line infantry" />
+        <animation state_key="walking" animation_key="walking, line infantry" />     
+        <animation state_key="hold_casual" animation_key="hold_casual, line infantry" />
         <sound key="fire" fileref="kar98k_fire_FromPOSTSCRIPTUM.wav" volume="1.3"/>
         <sound key="cycle" fileref="kar98k_cycle_FromPOSTSCRIPTUM.wav" volume="0.7"/>
         <sound key="reload_one" fileref="Kar98K_reload_FromCOD16.wav" volume="1.0" />
@@ -95,6 +98,7 @@
         <animation state_key="stabbing"	animation_key="melee, bayonet_6hp" />
         <animation key="recoil" animation_key="recoil1, big"/>
         <animation key="recoil" stance_key="prone" animation_key="recoil1, big, prone" />
+        <animation state_key="hold_casual" animation_key="hold_casual, line infantry" />
         <sound key="stab" fileref="dagger_swing1_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
         <sound key="stab" fileref="dagger_swing2_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
         <sound key="stab" fileref="dagger_swing3_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>

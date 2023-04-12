@@ -23,6 +23,13 @@
         <animation key="cycle" stance_key="prone" animation_key="Brifle0.8p"/>
         <animation key="reload" animation_key="reloading, clip"/>
         <animation state_key="stabbing" animation_key="melee, quick knife" />
+        <animation key="recoil" animation_key="recoil1, big"/>
+        <animation key="recoil" stance_key="prone" animation_key="recoil1, big, prone" />
+        <animation state_key="running" animation_key="running, line infantry" />
+        <animation state_key="walking" animation_key="walking, line infantry" />     
+        <animation state_key="hold_casual" animation_key="hold_casual, line infantry" />
+        <animation state_key="hold" animation_key="hold_casual, line infantry" />
+        <animation state_key="hold_on_wall" animation_key="hold_casual, line infantry" />
         <sound key="fire" fileref="mlemk1_fire_FromPOSTSCRIPTUM.wav" pitch_variety="0.05" volume="1.4"/>
         <sound key="cycle" fileref="mlemk1_cycle_FromPOSTSCRIPTUM.wav" volume="0.7"/>
         <sound key="reload_one" fileref="mlemk1_reload_FromPOSTSCRIPTUM.wav" volume="0.7"/>
@@ -84,6 +91,17 @@
         <animation key="cycle" animation_key="Brifle0.4"/>
         <animation key="cycle" stance_key="prone" animation_key="Brifle0.8p"/>
         <animation key="reload" animation_key="reloading, clip"/>
+        <animation state_key="stabbing" animation_key="melee, bayonet_6hp"/>
+        <animation key="recoil" animation_key="recoil1, big"/>
+        <animation key="recoil" stance_key="prone" animation_key="recoil1, big, prone"/>
+        <animation state_key="hold_casual" animation_key="hold_casual, line infantry" />
+        <sound key="stab" fileref="dagger_swing1_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+        <sound key="stab" fileref="dagger_swing2_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+        <sound key="stab" fileref="dagger_swing3_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+        <sound key="stab_hit" fileref="blade_impact_01_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
+        <sound key="stab_hit" fileref="blade_impact_02_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
+        <sound key="stab_hit" fileref="blade_impact_03_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
+        <sound key="stab_hit" fileref="blade_impact_04_fromESV.wav" pitch_variety="0.05" volume="2.0"/>        
         <sound key="fire" fileref="mlemk1_fire_FromPOSTSCRIPTUM.wav" pitch_variety="0.05" volume="1.4"/>
         <sound key="cycle" fileref="mlemk1_cycle_FromPOSTSCRIPTUM.wav" volume="0.7"/>
         <sound key="reload_one" fileref="mlemk1_reload_FromPOSTSCRIPTUM.wav" volume="0.7"/>
@@ -114,15 +132,5 @@
         <target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
         <target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
         <target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
-        <animation state_key="stabbing" animation_key="melee, bayonet_6hp"/>
-        <animation key="recoil" animation_key="recoil1, big"/>
-        <animation key="recoil" stance_key="prone" animation_key="recoil1, big, prone"/>
-        <sound key="stab" fileref="dagger_swing1_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
-        <sound key="stab" fileref="dagger_swing2_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
-        <sound key="stab" fileref="dagger_swing3_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
-        <sound key="stab_hit" fileref="blade_impact_01_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
-        <sound key="stab_hit" fileref="blade_impact_02_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
-        <sound key="stab_hit" fileref="blade_impact_03_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
-        <sound key="stab_hit" fileref="blade_impact_04_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
     </weapon>
 </weapons>

@@ -5,7 +5,7 @@
     retrigger_time="-1.0"
     accuracy_factor="1"
     sustained_fire_grow_step="2.5"
-    sustained_fire_diminish_rate="2.5"
+    sustained_fire_diminish_rate="4.0"
     magazine_size="10"
     can_shoot_standing="1"
     suppressed="0"
@@ -37,7 +37,7 @@
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="bullet_56typer_mod3.projectile">
 	</projectile>
-    <stance state_key="running" accuracy="0.1" />
+    <stance state_key="running" accuracy="0.3" />
     <stance state_key="walking" accuracy="0.5" />
     <stance state_key="crouch_moving" accuracy="0.5" />
     <stance state_key="standing" accuracy="0.95" />

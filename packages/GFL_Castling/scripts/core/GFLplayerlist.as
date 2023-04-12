@@ -181,7 +181,7 @@ class GFL_playerlist_system : Tracker {
         if(cid==-1) return;
         GFL_equipment@ equipment = info.getPlayerEquipment();
         string armor = equipment.getWeapon(3);
-        if(startsWith(armor,"srexo_t6")) healCharacter(m_metagame,cid,1);
+        if(startsWith(armor,"srexo_t6")) healCharacter(m_metagame,cid,2);
     }
 }
 

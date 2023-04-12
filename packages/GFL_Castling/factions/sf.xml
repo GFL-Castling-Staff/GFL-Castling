@@ -715,7 +715,7 @@
 		</item_class_existence_config>
 	</soldier>
 
-	<soldier name="Brute" spawn_score="1.75" squad_size_xp_cap="0.5" copy_from="default_spawn_ai">
+	<soldier name="Brute" spawn_score="0.8" squad_size_xp_cap="0.5" copy_from="default_spawn_ai">
 		<ai filename="melee_nb.ai" />
 		<model filename="sfd_Brute_gua.xml" />
 		<character filename="brute.character" />
@@ -728,7 +728,7 @@
 		</attribute_config>
 	</soldier>
 
-	<soldier name="Brute_swap" spawn_score="0.75" squad_size_xp_cap="0.5" copy_from="default_spawn_ai">
+	<soldier name="Brute_swap" spawn_score="0.4" squad_size_xp_cap="0.5" copy_from="default_spawn_ai">
 		<ai filename="melee_nb.ai" />
 		<model filename="sfd_BruteSwap_gua_dusk.xml" />
 		<character filename="brute.character" />

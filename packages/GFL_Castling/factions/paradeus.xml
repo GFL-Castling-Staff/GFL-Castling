@@ -516,7 +516,7 @@
 			</attribute_config>
 		</resources>
 	</soldier>
-	<soldier name="parw_dog" spawn_score="1.25" copy_from="default_ai">
+	<soldier name="parw_dog" spawn_score="0.5" copy_from="default_ai">
 		<ai filename="para_dog.ai"/>
 		<model filename="pard_germdog.xml" />
 		<character filename="pard_germdog.character" />
