@@ -24,7 +24,7 @@
     slot="0"
     use_basic_muzzle_smoke_effect="0"/>
 	<inventory encumbrance="25.0" buy_price="70.0" sell_price="70.0"/>
-	<animation state_key="cycle" animation_key="Pshotgun0.15"/>
+	<animation state_key="cycle" animation_key="Pshotgun_hip0.15"/>
 	<animation state_key="cycle" stance_key="prone" animation_key="Pshotgun0.15p"/>
 	<animation key="reload" animation_key="reloading, oaat"/>
 	<sound key="fire" fileref="m37_fire_FromRS2V.wav" pitch_variety="0.05" volume="1.3"/>
