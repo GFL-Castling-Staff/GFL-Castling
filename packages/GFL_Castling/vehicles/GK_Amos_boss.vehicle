@@ -14,7 +14,7 @@
 	allow_owner_to_use_only="1" 
 	existence="one_per_faction" 
 	owner="faction" 
-	usable_for_cover="0" 
+	usable_for_cover="1" 
 	soldier_capacity_offset="10"
 	protectors="8" 
 	designated_squad_as_driver_only="0"
@@ -224,42 +224,8 @@
     <sound key="cleanup" filename="vehicle_explosion_1.wav" />
     <effect event_key="slide" type="splat_map" surface_tag="road" size="3.0" atlas_index="5" layer="0" />
     <effect event_key="slide_hard" type="splat_map" surface_tag="road" size="3.0" atlas_index="5" layer="0" />
-    <!-- <effect event_key="slide_hard" type="splat_map" surface_tag="road" size="0.5" atlas_index="2" layer="0" /> -->
     <effect event_key="slide" type="splat_map" surface_tag="dirt" size="2.0" atlas_index="2" layer="1" />
     <effect event_key="slide" type="particle" key="terrain" surface_tag="dirt" ref="Burst" use_surface_color="1" />
-    <!-- <effect event_key="slide_hard" type="particle" key="terrain" ref="Burst" use_surface_color="1" /> -->
-    <event key="receive_damage_xp_reward">
-        <trigger class="receive_damage" />
-        <result class="reward" xp="0.0015" />
-    </event>
-    <event key="spot_rp_reward">
-        <trigger class="spot" />
-        <result class="reward" rp="10.0" />
-    </event>
-    <event>
-        <trigger class="destroy" />
-        <result class="spawn" instance_class="visual_item" instance_key="burning_piece_jeep1.visual_item" min_amount="1" max_amount="3" offset="0 1.6 0" position_spread="1.5 1.5" direction_spread="0.15 0.3" />
-    </event>
-    <event>
-        <trigger class="destroy" />
-        <result class="spawn" instance_class="visual_item" instance_key="burning_piece_jeep2.visual_item" min_amount="0" max_amount="1" offset="0 1.6 0" position_spread="1.5 1.5" direction_spread="0.1 0.3" />
-    </event>
-    <event>
-        <trigger class="destroy" />
-        <result class="spawn" instance_class="visual_item" instance_key="burning_piece_jeep3.visual_item" min_amount="1" max_amount="2" offset="0 1.6 0" position_spread="1.5 1.5" direction_spread="0.1 0.25" />
-    </event>
-    <event>
-        <trigger class="destroy" />
-        <result class="spawn" instance_class="visual_item" instance_key="burning_piece_jeep4.visual_item" min_amount="1" max_amount="3" offset="0 1.6 0" position_spread="1.5 1.5" direction_spread="0.15 0.25" />
-    </event>
-    <event>
-        <trigger class="destroy" />
-        <result class="spawn" instance_class="visual_item" instance_key="burning_piece_jeep5.visual_item" min_amount="2" max_amount="3" offset="0 1.6 0" position_spread="1.5 1.5" direction_spread="0.1 0.3" />
-    </event>
-    <event>
-        <trigger class="destroy" />
-        <result class="spawn" instance_class="visual_item" instance_key="burning_piece_jeep6.visual_item" min_amount="2" max_amount="3" offset="0 1.6 0" position_spread="1.5 1.5" direction_spread="0.1 0.2" />
-    </event>
     <event>
         <trigger class="cleanup" />
         <result class="spawn" instance_class="visual_item" instance_key="burning_piece_cleanup.visual_item" min_amount="20" max_amount="30" offset="0 2.0 0" position_spread="1.5 1.5" direction_spread="0.1 0.1" />
