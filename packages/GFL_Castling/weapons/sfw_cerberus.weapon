@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon key="sfw_cerberus.weapon" on_ground_up="0 10 0" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+    
+    <tag name="mecha" />
+	<tag name="bazooka" />
+    <tag name="antiarmor"/>
+
+    <specification 
+    accuracy_factor="1.0" 
+    barrel_offset="0.5" 
+    class="4"
+    slot="0" 
+    magazine_size="6" 
+    name="sfw_cerberus" 
+    projectile_speed="90" 
+    retrigger_time="0.2"
+    burst_shots="3"
+    last_burst_retrigger_time="3.0" 
+    suppressed="0" 
+    stab_enabled="0"
+    projectiles_per_shot="1"
+    carry_in_two_hands="0"  
+    can_shoot_standing="1" 
+    can_shoot_crouching="0"
+    can_shoot_prone="0"
+    sight_range_modifier="1.2"
+    sustained_fire_diminish_rate="1.0"
+    sustained_fire_grow_step="1.0" />
+
+    <commonness value="0.1" in_stock="1" can_respawn_with="1" />
+    <capacity value="1" source="rank" source_value="0.0" />
+    <inventory encumbrance="0.0" buy_price="1.0" sell_price="0.0"/>
+
+    <animation state_key="recoil" animation_key="recoil, cerberus" />
+    <animation state_key="recoil" stance_key="over_wall" animation_key="recoil, cerberus" />
+    <animation state_key="reload" animation_key="reload, cerberus" />
+    <animation state_key="hold" animation_key="still, cerberus" />
+    <animation state_key="hold_on_wall" animation_key="still, cerberus" />
+    <animation state_key="still_against_wall" animation_key="still, cerberus" />
+    <animation state_key="walking" animation_key="walking, cerberus" />
+    <animation state_key="walking_backwards" animation_key="walking, cerberus" />  
+    <animation state_key="running" animation_key="running, cerberus" />
+    <animation state_key="changing_weapon_in" 	animation_key="still, cerberus" />
+    <animation state_key="prone_still" animation_key="still, cerberus" />
+    <animation state_key="crouching" animation_key="still, cerberus" />
+    <animation state_key="crouch_moving"		animation_key="walking, cerberus" />
+    <animation state_key="crouch_moving_backwards"	animation_key="walking, cerberus" />
+    <animation state_key="stabbing"	animation_key="stab, cerberus" />
+
+    
+
+    <sound key="fire" fileref="gp25_fire_FromSQUAD.wav" pitch_variety="0.05" volume="1.2" />
+    <sound key="magazine_out" fileref="gp25_mgz_out_FromSQUAD.wav" volume="0.8" />
+    <sound key="magazine_in" fileref="gp25_mgz_in_FromSQUAD.wav" volume="0.8" />
+    <sound key="cycle" fileref="gp25_cycle_FromSQUAD.wav" volume="0.8" />
+    <sound class="impact" fileref="rifle_drop.wav" />
+
+    <model filename="" />
+
+    <hud_icon filename="testing.png" />
+
+    <weak_hand_hold offset="0.2" />
+
+    <projectile file="sf_jaguar_shell.projectile"/>
+
+    <ballistics curve_height="60.0" near_far_distance="5.0" speed_estimation_near="15.0" speed_estimation_far="20.0" max_speed="80.0" randomness="0.0" tweak_factor="0.84" />
+
+	<stance state_key="running" accuracy="1.0" />
+	<stance state_key="walking" accuracy="1.0" />
+	<stance state_key="crouch_moving" accuracy="1.0" />
+	<stance state_key="standing" accuracy="1.0" />
+	<stance state_key="crouching" accuracy="1.0" />
+	<stance state_key="prone" accuracy="1.0" />
+	<stance state_key="prone_moving" accuracy="1.0" />
+	<stance state_key="over_wall" accuracy="1" />
+
+    <modifier class="speed" value="0.1" />
+</weapon>

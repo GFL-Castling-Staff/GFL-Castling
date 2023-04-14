@@ -368,7 +368,8 @@
 	<!-- player group -->
 
 	<soldier name="default" spawn_score="0.0">
-		<character filename="default_sf.text_lines"/>
+		<!-- <character filename="default_sf.text_lines"/> -->
+		<character filename="cerberus.character" />
 		<ai filename="default.ai" />
 
 		<model file="sfd_vespid.xml" />

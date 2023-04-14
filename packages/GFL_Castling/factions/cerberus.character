@@ -1,10 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <character filename="default_base.character">
 	<tag name="metal_man" />
+	<parameter class="throwing_self_over_initial_bounce" value="0.10" />
+	<parameter class="throwing_self_over_steer_amount" value="0.30" />
+	<parameter class="throwing_self_over_lift_up" value="0.10" />
+    <parameter class="lifting_up_initial_bounce" value="0.15"/>
+    <parameter class="jumping_up_bounce" value="0.15"/>
+	<parameter class="use_walk_animation_instead_of_run_speed_threshold" value="0.6" />
+
 	<parameter class="can_use_vehicles" value="0" /> 
-	<animation state_key="hold"  animation_key="relax, cerberus" />
-	<animation state_key="hold"  animation_key="relax2, cerberus" />
+
+	<parameter class="ending_climbing_ladder_initial_bounce" value="0.05" />
+	<parameter class="ending_climbing_up_ladder_steer_amount" value="0.15" />
+	<parameter class="climbing_end_height_offset" value="0.25" />
+	<parameter class="climbing_with_jump_end_height_offset" value="0.25" />
+
+	<parameter class="climbing_up_ladder" value="0.5" />
+	<parameter class="climbing_down_ladder" value="0.5" />
+	<parameter class="climbing_switch_steer" value="0.2" />
+	<parameter class="can_use_vehicles" value="0" /> 
+	<animation state_key="hold"  animation_key="still, cerberus" />
 	<animation state_key="hold_on_wall"  animation_key="still, cerberus" />
+	<animation state_key="hold_casual"  animation_key="relax, cerberus" />
+	<animation state_key="hold_casual"  animation_key="relax2, cerberus" add="1"/>
+
 	<animation key="still" target_key="still, cerberus" />
 	<animation key="still against wall" target_key="still, cerberus" />
 	<animation key="still, heavy weapon" target_key="still, cerberus" />
@@ -33,6 +52,7 @@
 	<animation key="swimming still" target_key="swim still, cerberus" />
 	<animation key="swimming forwards" target_key="swimming, cerberus" />
 	<animation key="surrender" target_key="wound, cerberus" />
+	<animation key="stabbing" target_key="stab, cerberus" />
 	<animation key="leaving_wounded" target_key="unwound, cerberus" />
 	<animation key="climbing ladder, still" target_key="climb still, cerberus" />
 	<animation key="climbing ladder" target_key="climb moving, cerberus" />
