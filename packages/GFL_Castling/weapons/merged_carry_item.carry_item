@@ -3750,7 +3750,7 @@
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
 	<modifier class="speed" value="0.4"/>
-	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="hit_success_probability" value="-1.45"/>
 </carry_item>
 
 <carry_item key="gk_persica_5" time_to_live_out_in_the_open="0" name="[Sugar Cubes]" transform_on_consume="gk_persica_6" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
@@ -3767,7 +3767,7 @@
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
 	<modifier class="speed" value="0.4"/>
-	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="hit_success_probability" value="-1.45"/>
 </carry_item>
 
 <carry_item key="gk_persica_6" time_to_live_out_in_the_open="0" name="[Sugar Cubes]" transform_on_consume="gk_persica_7" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
@@ -4833,7 +4833,7 @@
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
 	<modifier class="speed" value="0.5"/>
-	<modifier class="hit_success_probability" value="-1.15"/>
+	<modifier class="hit_success_probability" value="-1.45"/>
 </carry_item>
 
 <carry_item key="chip_a_t6_5" time_to_live_out_in_the_open="0" name="Tactical Chip Alpha" transform_on_consume="chip_a_t6_6" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
@@ -4850,7 +4850,7 @@
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
 	<modifier class="speed" value="0.5"/>
-	<modifier class="hit_success_probability" value="-1.15"/>
+	<modifier class="hit_success_probability" value="-1.45"/>
 </carry_item>
 
 <carry_item key="chip_a_t6_6" time_to_live_out_in_the_open="0" name="Tactical Chip Alpha" transform_on_consume="chip_a_t6_7" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
@@ -4996,7 +4996,7 @@
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
 	<modifier class="speed" value="0.0"/>
 	<modifier class="detectability" value="-0.25"/>
-	<modifier class="hit_success_probability" value="-1.1"/>
+	<modifier class="hit_success_probability" value="-1.45"/>
 </carry_item>
 
 <carry_item key="chip_b_t6_5" time_to_live_out_in_the_open="0" name="Tactical Chip Beta" transform_on_consume="chip_b_t6_6" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
@@ -5014,7 +5014,7 @@
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
 	<modifier class="speed" value="0.0"/>
 	<modifier class="detectability" value="-0.25"/>
-	<modifier class="hit_success_probability" value="-1.1"/>
+	<modifier class="hit_success_probability" value="-1.45"/>
 </carry_item>
 
 <carry_item key="chip_b_t6_6" time_to_live_out_in_the_open="0" name="Tactical Chip Beta" transform_on_consume="chip_b_t6_7" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
@@ -14440,6 +14440,7 @@
 	<commonness value="0" in_stock="0"/>
 	<capacity value="100" source="rank" source_value="0.0"/>
 	<inventory encumbrance="-0.5"/>
+	<commonness value="1.0" in_stock="0" can_respawn_with="0"/>
 </carry_item>
 
 <carry_item key="vest_40hp.carry_item" time_to_live_out_in_the_open="0" name="40HP Vest" transform_on_consume="vest_40hp_1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
