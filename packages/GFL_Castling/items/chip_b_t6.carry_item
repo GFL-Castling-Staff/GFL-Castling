@@ -83,7 +83,7 @@
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
         <modifier class="speed" value="0.0" />
         <modifier class="detectability" value="-0.25" />
-        <modifier class="hit_success_probability" value="-1.1" />
+        <modifier class="hit_success_probability" value="-1.45" />
     </carry_item>
     <carry_item key="chip_b_t6_5" time_to_live_out_in_the_open="0" name="Tactical Chip Beta" transform_on_consume="chip_b_t6_6" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
         <hud_icon filename="chip_b_t6_3.png"/>
@@ -100,7 +100,7 @@
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
         <modifier class="speed" value="0.0" />
         <modifier class="detectability" value="-0.25" />
-        <modifier class="hit_success_probability" value="-1.1" />
+        <modifier class="hit_success_probability" value="-1.45" />
     </carry_item>
     <carry_item key="chip_b_t6_6" time_to_live_out_in_the_open="0" name="Tactical Chip Beta" transform_on_consume="chip_b_t6_7" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
         <hud_icon filename="chip_b_t6_2.png"/>
