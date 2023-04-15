@@ -888,7 +888,7 @@ class BasicCommandHandler : Tracker {
 			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_mab38_oc.weapon");
 			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_saf_6607.weapon");
 			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_pa15_4202.weapon");
-			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_pa15_5802.weapon");		
+			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_vector_549.weapon");		
 			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_hk416_agent.weapon");			
 			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","sfw_m2g.weapon");			
 		} else if (checkCommand(message,"admintest")){

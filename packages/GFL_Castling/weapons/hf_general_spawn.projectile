@@ -14,13 +14,18 @@ can_be_detected_by_driver="1"
 blast_damage_threshold="50"
 time_to_live_out_in_the_open="0"
 player_death_drop_owner_lock_time="0"
-radius="0.5"
+radius="0.8"
 >
-
-    <collision class="sticky" />
+	<result class="spawn" instance_class="grenade" instance_key="hf_incinerator_damage.projectile" min_amount="2" max_amount="3" offset="0 0 0" position_spread="0.8 5" direction_spread="0.0 0.0" />
+	<collision class="sticky" />
 	<trigger class="impact" />	
     <rotation class="random" />
 	<commonness value="0" can_respawn_with="0" in_stock="0" /> 
 	<inventory encumbrance="0" price="0.0"/>
-
+	<trail probability="1.0" key="FlamethrowerTrail" />
+	<effect class="result" key="other" ref="BurnOut" post_processing="1" />
+    <effect class="result" key="terrain" copy="other" />
+    <effect class="result" key="static_object" copy="other" />
+    <effect class="result" key="vehicle" copy="other" />
+    <effect class="result" key="character" copy="other" />
 </projectile>
