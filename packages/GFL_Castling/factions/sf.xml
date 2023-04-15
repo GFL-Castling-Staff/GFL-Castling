@@ -1141,7 +1141,7 @@
 
 	<!-- dinergate兵蚁 -->
 	<soldier name="sf_dinergate" spawn_score="1.0">
-		<models filename="sf_dinergate.models" />
+		<model filename="sfd_dinergate_from_SAIWA.xml" />
 		<character filename="sf_dinergate.character" />
 		<ai filename="eod_mecha.ai" />
 
