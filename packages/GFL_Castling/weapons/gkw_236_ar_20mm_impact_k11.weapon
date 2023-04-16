@@ -14,15 +14,16 @@
     name="K11 weapon system-[Terror Grenades]" 
     projectile_speed="100" 
     suppressed="0" 
+    spread_range="0.05"
     sight_range_modifier="1.2" 
-    sustained_fire_diminish_rate="1.0" 
+    sustained_fire_diminish_rate="5.0" 
     sustained_fire_grow_step="1.0"/>
     <next_in_chain key="gkw_k11_ar.weapon" share_ammo="0" />
     <!--Animations-->
     <inventory encumbrance="35.0" buy_price="300.0" sell_price="300.0" />
     <animation key="reload" animation_key="reloading, magazine rifle 1.8" />
     <!--Sounds-->
-    <sound key="fire" fileref="k11skill_fire_FromBF2042.wav" pitch_variety="0.05" volume="1.3" />
+    <sound key="fire" fileref="k11skill_fire_FromBF2042.wav" pitch_variety="0.05" volume="1.6" />
     <sound key="magazine_out" fileref="js05_mgz_out_FromCOD17.wav" volume="0.7" />
     <sound key="magazine_in" fileref="js05_mgz_in_FromCOD17.wav" volume="0.7" />
     <sound key="cycle" fileref="js05_cycle_FromCOD17.wav" volume="0.6" />
@@ -34,7 +35,7 @@
     <!--Ballistics-->
     <weak_hand_hold offset="0.005" />
     <projectile file="k11_remote.projectile" />
-    <ballistics curve_height="2.0" near_far_distance="0.0" speed_estimation_near="55.0" speed_estimation_far="55.0" max_speed="60.0" randomness="0.0" tweak_factor="1.94" /> 
+    <ballistics curve_height="2.0" near_far_distance="0.0" speed_estimation_near="55.0" speed_estimation_far="55.0" max_speed="85.0" randomness="0.0" tweak_factor="1.94" /> 
     <!--Accuracy, Movement speed-->
     <effect class="muzzle" ref="LawMuzzle" />
     <effect class="muzzle" ref="UpDust" />
