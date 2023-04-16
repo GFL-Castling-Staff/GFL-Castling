@@ -41,6 +41,9 @@ dictionary GFL_Event_Index = {
         // 特工HK416奶包系统
         {"hk416_medicaid",10},
 
+        // 干扰者
+        {"intruder_spawn",11},
+
         // 下面这行是用来占位的，在这之上添加新的即可
         {"666",-1}
 };
@@ -88,6 +91,7 @@ class GFL_event_system : Tracker {
                             // case 8:{excuteIonStormFairy(m_metagame,GFL_event_array[a]);break;}
                             case 9:{excuteLightningStorm(m_metagame,GFL_event_array[a]);break;}
                             case 10:{excuteHK416Healevent(m_metagame,GFL_event_array[a]);break;}
+                            case 11:{excuteSFIntruderSkillevent(m_metagame,GFL_event_array[a]);break;}
 
                             default:
                                 break;
@@ -671,6 +675,15 @@ void excuteHK416Healevent(GameMode@ metagame,GFL_event@ eventinfo){
     // healRangedCharacters(Metagame@ metagame,Vector3 pos,int faction_id,float range,int healnum)
     eventinfo.m_phase++;
     if(eventinfo.m_phase>11){
+        eventinfo.m_enable=false;
+    }        
+}
+
+void excuteSFIntruderSkillevent(GameMode@ metagame,GFL_event@ eventinfo){
+    eventinfo.m_time=2.0;
+    spawnSoldier(metagame,9,eventinfo.m_factionid,eventinfo.m_pos,"sf_dinergate",4,4);
+    eventinfo.m_phase++;
+    if(eventinfo.m_phase>3){
         eventinfo.m_enable=false;
     }        
 }

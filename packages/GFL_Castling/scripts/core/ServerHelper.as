@@ -139,6 +139,7 @@ class ServerHelper : Tracker {
                 if(s=="paradog") spawnSoldier(m_metagame,1,1,target,"parw_dog");
                 if(s=="nyto") spawnSoldier(m_metagame,1,1,target,"alina");
                 if(s=="teal") spawnSoldier(m_metagame,1,1,target,"teal");
+                if(s=="int") spawnSoldier(m_metagame,1,1,target,"sfw_Intruder");
                 if(s=="bgd") spawnSoldier(m_metagame,1,1,target,"Paradeus_doppelsoldner");
                 //if(s=="mgnmsl") spawnSoldier(m_metagame,1,0,target,"default_mg");
                 if(s=="nbl2") spawnSoldier(m_metagame,1,1,target,"kcco_cerynitis_swap");

@@ -161,7 +161,11 @@ dictionary gameSkillIndex = {
 		// 白教回甲
 		{"para_heal",40},
 
+        // PA15技能
 		{"pa15_skill",41},
+
+        // 敌方干扰者技能
+		{"sf_boss_intruder_skill",42},
 
         // 下面这行是用来占位的，在这之上添加新的技能key和index即可
         {"666",-1}

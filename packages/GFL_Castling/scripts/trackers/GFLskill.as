@@ -209,7 +209,7 @@ class GFLskill : Tracker {
 						for(uint i=0;i<m_fnum;i++) 
 							if(i!=factionid) {
 							array<const XmlElement@> affectedCharacter2;
-							affectedCharacter2 = getCharactersNearPosition(m_metagame,Pos_40mm,i,7.0f);
+							affectedCharacter2 = getCharactersNearPosition(m_metagame,Pos_40mm,i,10.0f);
 							if (affectedCharacter2 !is null){
 								for(uint x=0;x<affectedCharacter2.length();x++){
 									affectedCharacter.insertLast(affectedCharacter2[x]);
@@ -1132,6 +1132,18 @@ class GFLskill : Tracker {
 				break;
 			}
 
+			case 42: {// 敌方干扰者技能
+				int characterId = event.getIntAttribute("character_id");
+				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+				if (character !is null) {
+					Vector3 grenade_pos = stringToVector3(event.getStringAttribute("position"));
+					int factionid = character.getIntAttribute("faction_id");
+					spawnVehicle(m_metagame,1,factionid,grenade_pos,Orientation(0,1,0,0.1),"sf_boss_intruder_skill.vehicle");
+					GFL_event_array.insertLast(GFL_event(characterId,factionid,int(GFL_Event_Index["intruder_spawn"]),grenade_pos));
+				}
+				break;			
+			}
+
             default:
                 break;
 		}
@@ -1227,7 +1239,7 @@ class GFLskill : Tracker {
 									" instance_key='firenade_sub_416.projectile'" +
 									" position='" + luckyonepos + "'"+
 									" character_id='" + HK416_track[a].m_characterId + "' />";
-								m_metagame.getComms().send(c);
+								m_metagame.getComms().send(c);								
 							}
 						}
 					}
