@@ -795,7 +795,7 @@
 	</soldier>
 
 	<!-- BOSS-Intruder -->
-	<soldier name="sfw_Intruder" spawn_score="1.10" copy_from="default_spawn_ai">
+	<soldier name="sfw_Intruder" spawn_score="0.10" copy_from="default_spawn_ai">
 		<character filename="default_sf.text_lines">
 			<sound key="death" fileref="Intruder_buhuo_DEAD02_JP.wav" pitch_variety="0.001" volume="0.8" />
 			<sound key="throw" fileref="Intruder_buhuo_SKILL03_JP.wav" pitch_variety="0.001" volume="0.8" />
