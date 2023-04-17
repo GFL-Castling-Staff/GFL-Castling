@@ -2345,4 +2345,10 @@
     <model filename="gkd_hg_m950a_4302.xml">
         <requirement class="weapon" key="gkw_m950amod3_4302.weapon" slot="0" />
     </model>
+    <model filename="gkd_ar_aug.xml">
+        <requirement class="weapon" key="gkw_aug.weapon" slot="0" />
+    </model>    
+    <model filename="gkd_ar_aug.xml">
+        <requirement class="weapon" key="gkw_aug_skill.weapon" slot="0" />
+    </model>
 </models>

@@ -21,21 +21,16 @@
     <commonness value="0" in_stock="0" can_respawn_with="1" />
     <inventory encumbrance="25.0" buy_price="45.0" sell_price="45.0" />
     <capacity value="1" source="rank" source_value="0.0" />
-    <animation key="recoil" animation_key="recoil1" />
-    <animation key="recoil" animation_key="recoil2" />
-    <animation key="recoil" animation_key="recoil3" />
-    <animation key="recoil" stance_key="over_wall" animation_key="recoil1" />
-    <animation key="recoil" stance_key="over_wall" animation_key="recoil2" />
-    <animation key="recoil" stance_key="over_wall" animation_key="recoil3" />
-    <animation key="recoil" stance_key="crouching" animation_key="recoil1" />
-    <animation key="recoil" stance_key="crouching" animation_key="recoil2" />
-    <animation key="recoil" stance_key="crouching" animation_key="recoil3" />
-    <animation key="recoil" stance_key="prone" animation_key="recoil1, prone" />
-    <animation key="recoil" stance_key="prone" animation_key="recoil2, prone" />
-    <animation key="recoil" stance_key="prone" animation_key="recoil3, prone" />
+	<animation key="recoil" animation_key="recoil, hip fire"/>
+	<animation key="recoil" stance_key="over_wall" animation_key="recoil1" />
+	<animation key="recoil" stance_key="over_wall" animation_key="recoil2" />
+	<animation key="recoil" stance_key="over_wall" animation_key="recoil3" />
+	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone" />
+	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone" />
+	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone" />
     <animation state_key="hold_on_wall" animation_key="still" />
     <animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
-    <animation state_key="reload" animation_key="reloading, magazine rifle 0.9" />
+    <animation state_key="reload" animation_key="reloading, magazine rifle 1.8" />
     <animation state_key="stabbing" animation_key="melee, quick knife" />
     <animation state_key="stabbing" animation_key="pistol whip 3" />
     <sound key="fire" fileref="thompson_fire_FromPOSTSCRIPTUM.wav" pitch_variety="0.05" volume="1.2" />
@@ -50,14 +45,14 @@
         <result class="hit" kill_probability="1.5" kill_probability_offset_on_successful_hit="4.5" kill_decay_start_time="0.25" kill_decay_end_time="0.4" />
     </projectile>
     <effect class="muzzle" ref="ejection_9mm"/>
-	<stance state_key="running" accuracy="0.65" />
-	<stance state_key="walking" accuracy="0.65" />
-	<stance state_key="standing" accuracy="0.65" />
-	<stance state_key="crouching" accuracy="0.75" />
-	<stance state_key="crouch_moving" accuracy="0.5" />
-	<stance state_key="prone" accuracy="0.75" />
-	<stance state_key="prone_moving" accuracy="0.5" />
-	<stance state_key="over_wall" accuracy="0.75" />
+    <stance state_key="running" accuracy="0.95" />
+    <stance state_key="walking" accuracy="0.95" />
+    <stance state_key="standing" accuracy="0.95" />
+    <stance state_key="crouching" accuracy="0.95" />
+    <stance state_key="crouch_moving" accuracy="0.95" />
+    <stance state_key="prone" accuracy="0.95" />
+    <stance state_key="prone_moving" accuracy="0.95" />
+    <stance state_key="over_wall" accuracy="0.95" />
 	<modifier class="speed" value="0.2" />
     <modifier class="hit_success_probability" value="-0.2" />
     <target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0" />

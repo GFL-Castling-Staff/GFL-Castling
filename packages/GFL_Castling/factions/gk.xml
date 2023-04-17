@@ -720,7 +720,7 @@
 			<attribute weight="1.0" min="0.100" max="102.833" />
 		</attribute_config>
 	</soldier>
-	<soldier name="ar_73_aug" spawn_score="0.0" copy_from="default_ar">
+	<soldier name="ar_73_aug" spawn_score="0.05" copy_from="default_ar">
 		<character filename="default_gk_pmc.text_lines">
 			<sound key="death" fileref="AUG_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
 			<sound key="throw" fileref="AUG_MEET_JP.wav" pitch_variety="0.01" volume="0.8" />

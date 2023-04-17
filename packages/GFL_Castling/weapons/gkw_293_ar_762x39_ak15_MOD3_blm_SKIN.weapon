@@ -138,7 +138,7 @@
         <stance state_key="crouching" accuracy="1.45" />
         <stance state_key="prone" accuracy="1.45" />
         <modifier class="hit_success_probability" value="-0.25" />
-        <modifier class="speed" value="0.1" />
+        <modifier class="speed" value="0.35" />
         <target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0" />
         <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0" />
         <target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0" />

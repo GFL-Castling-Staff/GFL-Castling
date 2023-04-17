@@ -370,8 +370,8 @@ dictionary commandSkillIndex = {
         {"gkw_hk416_agent_he.weapon",57},
         {"gkw_hk416_agent_sticky.weapon",57},
 
-        {"gkw_emp35.weapon",58},
-        {"gkw_emp35_8003.weapon",58},
+        // {"gkw_emp35.weapon",58},
+        // {"gkw_emp35_8003.weapon",58},
 
         {"gkw_64typemod3.weapon",59},
 
