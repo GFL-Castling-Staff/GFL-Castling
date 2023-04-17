@@ -479,16 +479,10 @@ class Stage {
 
 	// --------------------------------------------
 	void save(XmlElement@ root) {
-		if (m_intelManager !is null) {
-			m_intelManager.save(root);
-		}
 	}
 
 	// --------------------------------------------
 	void load(const XmlElement@ root) {
-		if (m_intelManager !is null) {
-			m_intelManager.load(root);
-		}
 	}
 }
 

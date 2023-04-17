@@ -351,6 +351,14 @@ class Vector3 {
 		return d;
 	}
 
+	float length() const {
+		float sum = 0;
+		for (uint i = 0; i < m_values.size(); ++i) {
+			sum += m_values[i] * m_values[i];
+		}
+		return sqrt(sum);
+	}
+
 	// --------------------------------------------
 	void set(float x, float y, float z) {
 		m_values[0] = x;

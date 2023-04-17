@@ -1,4 +1,4 @@
-<vehicle name="" map_view_atlas_index="-1" owner="faction" key="radio_jammer3.vehicle" respawn_time="36000" protectors="0" soldier_capacity_offset="0" usable_for_cover="0">
+<vehicle name="" map_view_atlas_index="-1" owner="faction" jams_enemy_radio="1" key="radio_jammer3.vehicle" respawn_time="36000" protectors="0" soldier_capacity_offset="0" usable_for_cover="0">
     <modifier class="blast_damage" value="-10000.0" />
 	<tire_set offset="1.0 0.0 1.0" radius="0.65" />
 	<tire_set offset="1.0 0.0 -1.0" radius="0.65" />

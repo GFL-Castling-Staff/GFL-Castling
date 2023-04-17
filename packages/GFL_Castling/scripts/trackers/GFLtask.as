@@ -376,7 +376,7 @@ class DelayAntiPersonSnipeRequest :Task{
 			}
 		}		
 		if (m_addtime < 0 && m_timeLeft < 0){
-			CreateDirectProjectile(m_metagame,m_pos_2.add(Vector3(0,6,0)),m_pos_2,m_airstrike_key,m_character_id,m_faction_id,100);
+			CreateDirectProjectile(m_metagame,m_pos_2.add(Vector3(0,9,0)),m_pos_2,m_airstrike_key,m_character_id,m_faction_id,90);
 		}
 	}
 

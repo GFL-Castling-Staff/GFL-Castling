@@ -21,7 +21,6 @@
 #include "autosaver.as"
 #include "prison_break_objective.as"
 #include "unlock_manager.as"
-#include "special_vehicle_manager.as"
 #include "penalty_manager.as"
 #include "generic_objective_instructor.as"
 #include "local_ban_manager.as"
@@ -60,8 +59,6 @@
 class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 	protected MapRotatorInvasion@ m_mapRotator;
 	protected UnlockManager@ m_unlockManager;
-	protected SpecialVehicleManager@ m_specialCrateManager;
-	protected SpecialVehicleManager@ m_specialCargoVehicleManager;
 	protected ItemDeliveryOrganizer@ m_itemDeliveryOrganizer;
 	protected PenaltyManager@ m_penaltyManager;
 	protected LocalBanManager@ m_localBanManager;
@@ -88,8 +85,6 @@ class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 
 		setupMapRotator();
 		setupUnlockManager();
-		setupSpecialCrateManager();
-		setupSpecialCargoVehicleManager();
 		setupItemDeliveryOrganizer();
 		setupPenaltyManager();
 		//setupLocalBanManager();
@@ -136,14 +131,6 @@ class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 				m_itemDeliveryOrganizer.init();
 				m_itemDeliveryOrganizer.matchStarted();
 			}
-
-			if (m_specialCrateManager !is null) {
-				m_specialCrateManager.init();
-			}
-
-			if (m_specialCargoVehicleManager !is null) {
-				m_specialCargoVehicleManager.init();
-			}
 		}
 
 	}
@@ -166,27 +153,6 @@ class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 	protected void setupUnlockManager() {
 		@m_unlockManager = UnlockManager(this, this);
 	}
-
-	// --------------------------------------------
-	protected void setupSpecialCrateManager() {
-		array<string> trackedCrates;
-		trackedCrates.push_back("special_crate_wood1.vehicle");
-		trackedCrates.push_back("special_crate_wood2.vehicle");
-		@m_specialCrateManager = SpecialVehicleManager(this, "special_crate_manager", trackedCrates);
-	}
-
-	// --------------------------------------------
-	protected void setupSpecialCargoVehicleManager() {
-		array<string> trackedVehicles;
-		trackedVehicles.push_back("special_cargo_vehicle1.vehicle");
-		trackedVehicles.push_back("special_cargo_vehicle2.vehicle");
-		trackedVehicles.push_back("special_cargo_vehicle3.vehicle");
-		trackedVehicles.push_back("special_cargo_vehicle4.vehicle");
-		trackedVehicles.push_back("special_cargo_vehicle5.vehicle");    
-
-		@m_specialCargoVehicleManager = SpecialVehicleManager(this, "special_cargo_vehicle_manager", trackedVehicles);
-	}
-
 	// --------------------------------------------
 	protected void setupItemDeliveryOrganizer() {
 		// we have multiple simultaneous enemy weapon delivery objectives handled by an organizer
@@ -245,16 +211,6 @@ class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 		// - usually it's good to add trackers only after match has started
 		addTracker(m_mapRotator);
 
-		if (m_specialCrateManager !is null) {
-			addTracker(m_specialCrateManager);
-			m_specialCrateManager.applyAvailability();
-		}
-
-		if (m_specialCargoVehicleManager !is null) {
-			addTracker(m_specialCargoVehicleManager);
-			m_specialCargoVehicleManager.applyAvailability();
-		}
-
 	}
 
 	// --------------------------------------------
@@ -278,13 +234,6 @@ class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 
 		setupVehicleDeliveryObjectives();
 		setupGenericObjectiveInstructions();
-
-		if (m_specialCargoVehicleManager !is null) {
-			// add special cargo vehicle related delivery tracker
-			array<string> targets = m_specialCargoVehicleManager.newTrackedVehicles();
-			VehicleDeliveryConfig config(targets, 0, 1000.0, 0.0, "special_vehicle_delivery_complete");
-			addTracker(VehicleDeliveryToArmoryManager(this, config));
-		}
 
 		if (m_itemDeliveryOrganizer !is null) {
 			// adds trackers

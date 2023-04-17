@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projectiles>
-<projectile class="grenade" name="" key="snipe_hit_40.projectile" pulldown_in_air="100" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0" can_be_disarmed="0" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" slot="0" radius="0.75" use_time_to_live="1" 
+<projectile class="grenade" name="" key="snipe_hit_40.projectile" pulldown_in_air="4" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0" can_be_disarmed="0" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" slot="0" radius="0.75" use_time_to_live="1" 
 time_to_live="2">
     <result class="hit" kill_probability="3.5" kill_probability_offset_on_successful_hit="40.0" kill_decay_start_time="6.0" kill_decay_end_time="6.01" />
     <trigger class="impact">
@@ -14,7 +14,7 @@ time_to_live="2">
     <hud_icon filename="88r.png" />
     <commonness value="0.0" can_respawn_with="0" in_stock="0" />
 </projectile>
-<projectile class="grenade" name="" key="snipe_hit_50.projectile" pulldown_in_air="100" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0" can_be_disarmed="0" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" slot="0" radius="0.75" use_time_to_live="1" 
+<projectile class="grenade" name="" key="snipe_hit_50.projectile" pulldown_in_air="4" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0" can_be_disarmed="0" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" slot="0" radius="0.75" use_time_to_live="1" 
 time_to_live="2">
     <result class="hit" kill_probability="3.5" kill_probability_offset_on_successful_hit="50.0" kill_decay_start_time="6.0" kill_decay_end_time="6.01" />
     <trigger class="impact">
@@ -28,7 +28,7 @@ time_to_live="2">
     <hud_icon filename="88r.png" />
     <commonness value="0.0" can_respawn_with="0" in_stock="0" />
 </projectile>
-<projectile class="grenade" name="" key="snipe_hit_30.projectile" pulldown_in_air="100" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0" can_be_disarmed="0" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" slot="0" radius="0.75" use_time_to_live="1" 
+<projectile class="grenade" name="" key="snipe_hit_30.projectile" pulldown_in_air="4" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0" can_be_disarmed="0" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" slot="0" radius="0.75" use_time_to_live="1" 
 time_to_live="2">
     <result class="hit" kill_probability="3.5" kill_probability_offset_on_successful_hit="30.0" kill_decay_start_time="6.0" kill_decay_end_time="6.01" />
     <trigger class="impact">
@@ -42,7 +42,7 @@ time_to_live="2">
     <hud_icon filename="88r.png" />
     <commonness value="0.0" can_respawn_with="0" in_stock="0" />
 </projectile>
-<projectile class="grenade" name="" key="snipe_hit_20.projectile" pulldown_in_air="100" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0" can_be_disarmed="0" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" slot="0" radius="0.75" use_time_to_live="1" 
+<projectile class="grenade" name="" key="snipe_hit_20.projectile" pulldown_in_air="4" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0" can_be_disarmed="0" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" slot="0" radius="0.75" use_time_to_live="1" 
 time_to_live="2">
     <result class="hit" kill_probability="3.5" kill_probability_offset_on_successful_hit="20.0" kill_decay_start_time="6.0" kill_decay_end_time="6.01" />
     <trigger class="impact">
@@ -56,7 +56,7 @@ time_to_live="2">
     <hud_icon filename="88r.png" />
     <commonness value="0.0" can_respawn_with="0" in_stock="0" />
 </projectile>
-<projectile class="grenade" name="" key="snipe_blast_15.projectile" pulldown_in_air="100" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0" can_be_disarmed="0" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" slot="0" radius="0.25">
+<projectile class="grenade" name="" key="snipe_blast_15.projectile" pulldown_in_air="4" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0" can_be_disarmed="0" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" slot="0" radius="0.25">
     <result class="blast" radius="7.5" damage="15.0" push="0.3" decal="1" faction_compare="not_equal" damage_origin_vehicles="0"/>
     <trigger class="time" time_to_live="0.0"/>
     <rotation class="motion" />
@@ -64,7 +64,7 @@ time_to_live="2">
     <hud_icon filename="88r.png" />
     <commonness value="0.0" can_respawn_with="0" in_stock="0" />
 </projectile>
-<projectile class="grenade" name="" key="snipe_blast_30.projectile" pulldown_in_air="100" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0" can_be_disarmed="0" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" slot="0" radius="0.25">
+<projectile class="grenade" name="" key="snipe_blast_30.projectile" pulldown_in_air="4" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0" can_be_disarmed="0" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" slot="0" radius="0.25">
     <result class="blast" radius="5.0" damage="30.0" push="0.6" decal="1" faction_compare="not_equal" damage_origin_vehicles="0"/>
     <trigger class="time" time_to_live="0.0"/>
     <rotation class="motion" />
@@ -79,7 +79,7 @@ time_to_live="2">
     <effect class="result" key="other" ref="Godray" lighting="0" />
     <effect class="result" key="other" ref="LowDust"/>
 </projectile>
-<projectile class="grenade" name="" key="snipe_blast_40.projectile" pulldown_in_air="100" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0" can_be_disarmed="0" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" slot="0" radius="0.25">
+<projectile class="grenade" name="" key="snipe_blast_40.projectile" pulldown_in_air="4" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0" can_be_disarmed="0" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" slot="0" radius="0.25">
     <result class="blast" radius="5.0" damage="40.0" push="0.6" decal="1" faction_compare="not_equal" damage_origin_vehicles="0"/>
     <trigger class="time" time_to_live="0.0"/>
     <rotation class="motion" />
@@ -94,7 +94,7 @@ time_to_live="2">
     <effect class="result" key="other" ref="Godray" lighting="0" />
     <effect class="result" key="other" ref="LowDust"/>
 </projectile>
-<projectile class="grenade" name="" key="snipe_blast_50.projectile" pulldown_in_air="100" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0" can_be_disarmed="0" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" slot="0" radius="0.25">
+<projectile class="grenade" name="" key="snipe_blast_50.projectile" pulldown_in_air="4" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0" can_be_disarmed="0" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" slot="0" radius="0.25">
     <result class="blast" radius="5.0" damage="50.0" push="0.6" decal="1" faction_compare="not_equal" damage_origin_vehicles="0"/>
     <trigger class="time" time_to_live="0.0"/>
     <rotation class="motion" />
@@ -109,7 +109,7 @@ time_to_live="2">
     <effect class="result" key="other" ref="Godray" lighting="0" />
     <effect class="result" key="other" ref="LowDust"/>
 </projectile>
-<projectile class="grenade" name="" key="snipe_hit_kennedy.projectile" pulldown_in_air="100" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0" can_be_disarmed="0" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" slot="0" radius="0.75" use_time_to_live="1" 
+<projectile class="grenade" name="" key="snipe_hit_kennedy.projectile" pulldown_in_air="4" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0" can_be_disarmed="0" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" slot="0" radius="0.75" use_time_to_live="1" 
 time_to_live="2">
     <result class="hit" kill_probability="45.0" kill_probability_offset_on_successful_hit="45.0" kill_decay_start_time="6.0" kill_decay_end_time="6.01" />
     <trigger class="impact">
@@ -123,7 +123,7 @@ time_to_live="2">
     <hud_icon filename="88r.png" />
     <commonness value="0.0" can_respawn_with="0" in_stock="0" />
 </projectile>
-<projectile class="grenade" name="" key="snipe_hit_60.projectile" pulldown_in_air="100" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0" can_be_disarmed="0" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" slot="0" radius="0.75" use_time_to_live="1" 
+<projectile class="grenade" name="" key="snipe_hit_60.projectile" pulldown_in_air="4" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0" can_be_disarmed="0" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" slot="0" radius="0.75" use_time_to_live="1" 
 time_to_live="2">
     <result class="hit" kill_probability="3.5" kill_probability_offset_on_successful_hit="60.0" kill_decay_start_time="6.0" kill_decay_end_time="6.01" />
     <trigger class="impact">
@@ -137,7 +137,7 @@ time_to_live="2">
     <hud_icon filename="88r.png" />
     <commonness value="0.0" can_respawn_with="0" in_stock="0" />
 </projectile>
-<projectile class="grenade" name="" key="snipe_hit_80.projectile" pulldown_in_air="100" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0" can_be_disarmed="0" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" slot="0" radius="0.75" use_time_to_live="1" 
+<projectile class="grenade" name="" key="snipe_hit_80.projectile" pulldown_in_air="4" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0" can_be_disarmed="0" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" slot="0" radius="0.75" use_time_to_live="1" 
 time_to_live="2">
     <result class="hit" kill_probability="3.5" kill_probability_offset_on_successful_hit="80.0" kill_decay_start_time="6.0" kill_decay_end_time="6.01" />
     <trigger class="impact">
