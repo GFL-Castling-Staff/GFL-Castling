@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapon key="gkw_vz61_only.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
     <tag name="smg" />
+    <tag name="elite" />
     <specification 
 		accuracy_factor="0.92" 
 		retrigger_time="0.075" 
@@ -57,7 +58,7 @@
     <model filename=""/>
     <hud_icon filename="gkw_vz61_only.png"/>
     <weak_hand_hold offset="0.2" />
-    <projectile file="bullet.projectile">
+    <projectile file="bullet.projectile" can_be_detected_by_footmen="1" can_be_detected_by_driver="1">
         <result class="hit"  kill_probability="1.45" kill_probability_offset_on_successful_hit="3.5" kill_decay_start_time="0.33" kill_decay_end_time="0.5" />
     </projectile>
     <stance state_key="running" accuracy="0.7" />
