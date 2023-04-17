@@ -6,13 +6,14 @@
     <effect event_key="destroy" key="other" ref="SmokeMinor" post_processing="1" />
     <effect event_key="destroy" key="other" ref="ShadowSmokeMinor" shadow="1" />
     <destroy_on_drive_over_tags>
-        <tag name="metal_heavy" /> 
+        <tag name="bulldozer" /> 
         <tag name="truck" />
         <tag name="jeep" />
         <tag name="armory" />
         <tag name="tank" />
         <tag name="apc" />
         <tag name="boat" />
+        <tag name="any_tank" /> 
     </destroy_on_drive_over_tags>
     <event>
         <trigger class="destroy" />

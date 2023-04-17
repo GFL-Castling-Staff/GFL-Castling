@@ -6,6 +6,7 @@
 
 	<destroy_on_drive_over_tags>
 		<tag name="bulldozer" /> 
+		<tag name="any_tank" /> 
 	</destroy_on_drive_over_tags>
 	
 	<effect event_key="destroy" key="other" ref="SmokeMinor" post_processing="1" />

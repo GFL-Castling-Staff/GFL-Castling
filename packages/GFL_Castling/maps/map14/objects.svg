@@ -11892,7 +11892,7 @@ static_object_type_key=hedgehog.static_object;</desc>
        inkscape:label="#mesh_template"
        transform="matrix(0.99974439,0.02260895,-0.02260895,0.99974439,0,0)">
       <desc
-         id="desc8739-3-3-8-0-0-9-1-6-0-2-2">name = concrete_barrier;static_object_type_key=concrete_barrier.static_object; mesh_name = concrete_barrier.mesh; texture0 = world_atlas1.png; texture0_atlas_cell = 4 3 32 32; collision_model_type = 1; collision_model_size = 1.10 1.10 2.3; appear_as_wall = 1;</desc>
+         id="desc8739-3-3-8-0-0-9-1-6-0-2-2">name = concrete_barrier;static_object_type_key=concrete_barrier.static_object; mesh_name = concrete_barrier.mesh;static_object_type_key=concrete_barrier.static_object; texture0 = world_atlas1.png; texture0_atlas_cell = 4 3 32 32; collision_model_type = 1; collision_model_size = 1.10 1.10 2.3; appear_as_wall = 1;</desc>
     </rect>
     <rect
        style="fill:#563a16;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1.95491481;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline;enable-background:new"
