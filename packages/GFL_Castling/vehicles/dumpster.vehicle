@@ -1,22 +1,19 @@
-<vehicle name="" key="dumpster.vehicle" map_view_atlas_index="-1" respawn_time="3600.0">
+<?xml version="1.0" encoding="utf-8"?>
+<vehicle name="" key="dumpster.vehicle" map_view_atlas_index="-1" respawn_time="36000.0">
   <tag name="metal_dumpster" />
 	<tire_set offset="1.0 0.0 1.0" radius="0.65" />
 	<tire_set offset="1.0 0.0 -1.0" radius="0.65" />
 
 	<control max_speed="20.0" acceleration="6.7" max_reverse_speed="6.0" max_rotation="0.8" max_water_depth="1.9" />
 
-	<physics max_health="15.0" mass="5.0" extent="2.0 0.0 1.5" offset="0 0.0 0" top_offset="0 3 0" collision_model_pos="0 0.2 0" collision_model_extent="2.8 3.0 1.9" visual_offset="0 0.0 0" /> 
+	<physics max_health="15.0" mass="10.0" extent="2.0 0.0 1.5" offset="0 0.0 0" top_offset="0 3 0" collision_model_pos="0 0.2 0" collision_model_extent="2.8 3.0 1.9" visual_offset="0 0.0 0" 	preserve_motion_on_impact_factor="0.5"
+	collision_response_factor="0.5" /> 
 
 	<visual class="chassis" mesh_filename="dumpster.mesh" texture_filename="dumpster.png" />
 
 	<sound key="hit" filename="thin_metal_impact1.wav" />
 	<sound key="hit" filename="thin_metal_impact2.wav" />
 	<sound key="hit" filename="thin_metal_impact3.wav" />
-
-	<event>
-		<trigger class="receive_damage" />
-		<result class="reward" xp="0.0" />
-	</event>
 
 	<effect event_key="destroy" key="other" ref="SmokeMinor" post_processing="1" />
 	<effect event_key="destroy" key="other" ref="ShadowSmokeMinor" shadow="1" />

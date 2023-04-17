@@ -36,6 +36,8 @@
 	top_offset="0 3.0 0" 	
 	friction_offset="0.05"
 	drag_offset="-0.05"
+	preserve_motion_on_impact_factor="0.5"
+	collision_response_factor="0.7"
 	destroy_on_top_hit="0"	/> 
 
 
