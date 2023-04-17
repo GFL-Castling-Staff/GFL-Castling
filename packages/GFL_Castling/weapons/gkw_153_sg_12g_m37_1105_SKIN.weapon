@@ -26,6 +26,7 @@
 	<inventory encumbrance="25.0" buy_price="70.0" sell_price="70.0"/>
 	<animation state_key="cycle" animation_key="Pshotgun_hip0.15"/>
 	<animation state_key="cycle" stance_key="prone" animation_key="Pshotgun0.15p"/>
+	<animation state_key="cycle" stance_key="over_wall" animation_key="Pshotgun0.15"/>
 	<animation key="reload" animation_key="reloading, oaat"/>
 	<sound key="fire" fileref="m37_fire_FromRS2V.wav" pitch_variety="0.05" volume="1.3"/>
 	<sound key="cycle" fileref="m37_cycle_FromCOD17.wav"/>
