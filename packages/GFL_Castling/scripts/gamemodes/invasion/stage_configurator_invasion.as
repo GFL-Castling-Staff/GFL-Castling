@@ -185,6 +185,9 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 	// ------------------------------------------------------------------------------------------------
 	protected void setupNormalStages() {
+		addStage(setupStage3());		  // map3 c
+		addStage(setupStage16());         // map8_2
+
 		// addStage(setupStage1_rust());          // map2_?
 		// addStage(setupStageRace());          // DEJAHU
 		addStage(setupStage1());          // map2
@@ -209,11 +212,10 @@ class StageConfiguratorInvasion : StageConfigurator {
 		addStage(setupFinalStage1());     // map11
 		addStage(setupStage104()); 		  // map105_1 zoneAttack by diling
 		addStage(setupStage105()); 		  // map105_2 shockzone by diling
-		addStage(setupDeadZone());
+		addStage(setupDeadZone());	      // map105_3 deadzone by diling
 		addStage(setupStage3());		  // map3 c
 		addStage(setupStage16());         // map8_2
 		addStage(setupStage20());
-		// addStage(setupDeadZone());
 		// addStage(setupStage14());         // map6_2
 		// addStage(setupStage5());          // map1
 		addStage(setupStage108());		  // xiaoxieshen by diling

@@ -1,0 +1,16 @@
+<vehicle name="" map_view_atlas_index="-1" owner="faction" key="radio_jammer3.vehicle" respawn_time="36000" protectors="0" soldier_capacity_offset="0" usable_for_cover="0">
+    <modifier class="blast_damage" value="-10000.0" />
+	<tire_set offset="1.0 0.0 1.0" radius="0.65" />
+	<tire_set offset="1.0 0.0 -1.0" radius="0.65" />
+
+	<control max_speed="20.0" acceleration="6.7" max_reverse_speed="6.0" max_rotation="0.8" max_water_depth="1.9" />
+                                                                                                                                                       
+	<physics max_health="50.0" mass="10000.0" blast_damage_threshold="3.0" extent="4.0 0.0 4.0" offset="0 0.0 0" top_offset="0 1 0" collision_model_pos="0 1.0 0" collision_model_extent="1.5 6.0 1.5" visual_offset="0 -1.0 0.0" /> 
+
+	<visual class="chassis" mesh_filename="radio_jammer.mesh" texture_filename="radar_tower.png" />
+	<visual class="chassis" key="broken" mesh_filename="radio_jammer_broken.mesh" texture_filename="radar_tower_broken.png" />
+  
+	<sound key="hit" filename="car_hit2.wav" />
+	<sound key="hit" filename="car_hit3.wav" />
+
+</vehicle>
