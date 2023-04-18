@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<projectile class="grenade" name="Fairy Command:Mine" key="fairy_command_mine.projectile" slot="0" pulldown_in_air="0.0" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" >
+	
+    <result class="notify_script" key="fc_mine" />
+    <trigger class="time" time_to_live="0.0"/>
+    <rotation class="random" />
+
+    <model filename="" />
+	<trail probability="0.0" />
+	<commonness value="0.0" can_respawn_with="1" in_stock="1"/>
+	<capacity value="2" source="rank" source_value="6.48" />
+	<hud_icon filename="fairy_command_target.png" />
+	<inventory encumbrance="1.0" price="400.0" />
+	<animation key="throw" animation_key="air thrust" />
+
+</projectile>

@@ -1144,6 +1144,23 @@ class GFLskill : Tracker {
 				break;			
 			}
 
+			case 43: {// 地雷妖精
+				int characterId = event.getIntAttribute("character_id");
+				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+				if (character is null) break;
+				int playerId = character.getIntAttribute("player_id");
+				const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+				if (player is null) break;
+				if (player.hasAttribute("aim_target")) {
+					Vector3 aimer_pos = stringToVector3(event.getStringAttribute("position"));
+					Vector3 aim_pos = stringToVector3(player.getStringAttribute("aim_target"));
+					int factionid = character.getIntAttribute("faction_id");
+					TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+					tasker.add(DelayCommonCallRequest(m_metagame,3,characterId,factionid,"mine_strafe",aimer_pos,aim_pos));
+				}
+				break;					
+			}
+
             default:
                 break;
 		}

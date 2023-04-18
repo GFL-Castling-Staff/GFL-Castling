@@ -82,7 +82,7 @@
             <collider class="vehicle" enabled="0" />
             <collider class="character" enabled="1" faction_compare="not_equal"/>
         </trigger>
-		<result class="spawn" instance_class="projectile" instance_key="claymore_blast.projectile" min_amount="3" max_amount="3" offset="0 0.2 0" position_spread="0 0" direction_spread="0 0" />
+		<result class="spawn" instance_class="projectile" instance_key="claymore_blast.projectile" min_amount="6" max_amount="6" offset="0 0.2 0" position_spread="0 0" direction_spread="0 0" />
         <model mesh_filename="claymore_offset.mesh" texture_filename="at_mine.png" />
         <hud_icon filename="hud_claymore.png" />
         <throwable curve_height="2.0" near_far_distance="2.0" speed_estimation_near="5.0" speed_estimation_far="5.0" max_speed="5.0" randomness="0.0" />

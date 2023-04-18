@@ -167,6 +167,9 @@ dictionary gameSkillIndex = {
         // 敌方干扰者技能
 		{"sf_boss_intruder_skill",42},
 
+        // 地雷妖精
+		{"fc_mine",43},
+
         // 下面这行是用来占位的，在这之上添加新的技能key和index即可
         {"666",-1}
 };
