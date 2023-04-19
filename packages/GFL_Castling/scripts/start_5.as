@@ -17,6 +17,8 @@ void main(dictionary@ inputData) {
         settings.m_completionVarianceEnabled = false;
         settings.m_journalEnabled = true;
 		settings.m_fellowDisableEnemySpawnpointsSoldierCountOffset = -1;
+        settings.m_continue = true;
+        
 		
         settings.m_fellowCapacityFactor = 1.0;
         settings.m_fellowAiAccuracyFactor = 0.85;

@@ -403,7 +403,6 @@ Vector3 stringToVector3(string s) {
 
 // --------------------------------------------
 float getPositionDistance(const Vector3@ pos1, const Vector3@ pos2) {
-	//_log("get_position_distance, pos1=" + $pos1[0] + ", " + $pos1[1] + ", " + $pos1[2] + ", pos2=" + $pos2[0] + ", " + $pos2[1] + ", " + $pos2[2]);
 	Vector3 d = pos1.subtract(pos2);
 
 	d.m_values[0] *= d.m_values[0];
@@ -411,8 +410,6 @@ float getPositionDistance(const Vector3@ pos1, const Vector3@ pos2) {
 	d.m_values[2] *= d.m_values[2];
 
 	float result = sqrt(d.m_values[0] + d.m_values[1] + d.m_values[2]);
-	_log("  result=" + result, 1);
-
 	return result;
 }
 

@@ -42,7 +42,7 @@ class SideBaseAttackHandler : Tracker {
 	// --------------------------------------------
 	protected void startDelayTimer() {
 		if (m_delayTimer < 0.0f) {
-			m_delayTimer = 3.0;
+			m_delayTimer = 5.0;
 		}
 	}
 	

@@ -256,7 +256,7 @@ class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 			addTracker(m_testingToolsTracker);
 		}
 
-		addTracker(PrisonBreakObjective(this, 0));
+		// addTracker(PrisonBreakObjective(this, 0));
 		setupDisableRadioAtMatchOver();
 		addTracker(AutoSaver(this));
 		addTracker(BasicCommandHandler(this));
@@ -274,9 +274,8 @@ class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 
 	// --------------------------------------------
 	protected void setupExperimentalFeatures() {
-		addTracker(GpsLaptop(this));
+		// addTracker(GpsLaptop(this));
 		addTracker(RepairCrane(this));
-		addTracker(SquadEquipmentKit(this)); 
 		addTracker(RangeFinder(this)); 
 		addTracker(GFLskill(this));
 		addTracker(kill_event(this,getUserSettings()));
@@ -354,9 +353,10 @@ class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 				"radar_truck.vehicle",
 				"radio_jammer.vehicle",
 				"radio_jammer2.vehicle",
-				"prison_bus.vehicle",
-				"prison_door.vehicle",
+
 				"aa_emplacement.vehicle",
+				"par_sentrytower.vehicle",
+				"par_sentrytower_deadzone.vehicle",
 				"sf_jupiter.vehicle"
 				};
 			addTracker(GenericDestroyObjectiveInstructor(this, vehicles));
@@ -430,7 +430,7 @@ class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 			
 			// interpolate players 1 -> 32
 			addTracker(SideBaseAttackHandler(this, i, 
-				1, 24, 
+				1, 20, 
 				0.05, 0.0,    // side base attack probability
 				0.0, 0.0)); // lonewolf spawn score
 		}
