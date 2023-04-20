@@ -730,7 +730,7 @@ class CommandSkill : Tracker {
                 c.appendChild(k);
             }            
             m_metagame.getComms().send(c);
-            SkillEffectTimer@ stimer = SkillEffectTimer(characterId,5,"MP5MOD3");
+            SkillEffectTimer@ stimer = SkillEffectTimer(characterId,10,"MP5MOD3");
             stimer.setSkey(vestkey);
             TimerArray.insertLast(stimer);
             array<string> Voice={

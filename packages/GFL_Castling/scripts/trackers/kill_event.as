@@ -48,6 +48,13 @@ class kill_event : Tracker {
 
         // 近战定位HG
         {"gkw_m1911_mod3.weapon",2},
+        {"gkw_m950amod3.weapon",3},
+        {"gkw_m950amod3_702.weapon",3},
+        {"gkw_m950amod3_4302.weapon",3},
+        {"gkw_apsmod3.weapon",3},
+        {"gkw_apsmod3_4306.weapon",3},
+        {"gkw_apsmod3_6808.weapon",3},
+        {"gkw_c96mod3.weapon",3},
         {"ff_alchemist.weapon",3},
         {"ff_alchemist_skill.weapon",3},
 
@@ -141,8 +148,6 @@ class kill_event : Tracker {
         {"gkw_emp35_8003.weapon",3},
         {"gkw_type79.weapon",3},
         {"gkw_type79_1402.weapon",3},
-
-        // SMG——4kills
         {"gkw_ppsh41.weapon",3},
         {"gkw_ppsh41mod3.weapon",3},
         {"gkw_ppsh41_602.weapon",3},
@@ -178,7 +183,7 @@ class kill_event : Tracker {
         {"gkw_vp1915.weapon",3},
         {"gkw_vp1915_6604.weapon",3},
 
-        //短突 5kill
+        //短突
         {"gkw_ak74u.weapon",5},
         {"gkw_ak74u_3002.weapon",5},
         {"gkw_ak74u_skill.weapon",3},
@@ -197,6 +202,8 @@ class kill_event : Tracker {
         {"gkw_g36c_mod3_3103_skill.weapon",3},
         {"gkw_x95.weapon",4},
         {"gkw_ar57.weapon",4},
+
+        //SG 5kill
         {"gkw_hawk97mod3.weapon",5},
         {"gkw_hawk97mod3_5805.weapon",5},
 
