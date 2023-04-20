@@ -112,7 +112,7 @@
 	<model filename="gkw_sg_aa12.xml"/>
 	<hud_icon filename="gkw_aa12only_skill.png"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="dragons_breath2.projectile" time_to_live="0.35">
+	<projectile file="dragons_breath2.projectile" time_to_live="0.25">
 		<result class="blast" radius="2.5" damage="1.1" push="0.1" decal="1" faction_compare="not_equal"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.5"/>

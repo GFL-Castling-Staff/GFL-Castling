@@ -140,8 +140,8 @@
         <hud_icon filename="gkw_ks23.png" />
         <!--Ballistics-->
         <weak_hand_hold offset="0.3" />
-        <projectile file="dragons_breath2.projectile" time_to_live="0.3">
-            <result class="blast" radius="2.5" damage="2.1" push="0.2" decal="1" faction_compare="not_equal"/>
+        <projectile file="dragons_breath2.projectile" time_to_live="0.45">
+            <result class="blast" radius="2.5" damage="4.1" push="0.2" decal="1" faction_compare="not_equal"/>
         </projectile>
         <!--Accuracy, Movement speed-->
         <stance state_key="running" accuracy="1" />
@@ -159,9 +159,9 @@
         <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0" />
-        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0" />
-        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
         <target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0" />
         <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5" />
         <target_factors tag="smg" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0" />
