@@ -128,35 +128,35 @@ class GiftItemDeliveryRandomRewarder : ItemDeliveryRewarder {
 	}
 
 	// ------------------------------------------------------------------------------------------------
-	void doDelayedReward(int playerId, int characterId) {
+	// void doDelayedReward(int playerId, int characterId) {
 
-		if (playerId >= 0) {
-			const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
-			if (player !is null) {
-				dictionary a;
-				a["%player_name"] = player.getStringAttribute("name");
+	// 	if (playerId >= 0) {
+	// 		const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+	// 		if (player !is null) {
+	// 			dictionary a;
+	// 			a["%player_name"] = player.getStringAttribute("name");
 
-				for (uint i = 0; i < m_rewardItemPasses.size(); ++i) {
-					array<ScoredResource@>@ rewardItems = @m_rewardItemPasses[i];
+	// 			for (uint i = 0; i < m_rewardItemPasses.size(); ++i) {
+	// 				array<ScoredResource@>@ rewardItems = @m_rewardItemPasses[i];
 
-					ScoredResource@ r = getRandomScoredResource(rewardItems);
-					// for (int k = 0; k < r.m_amount; ++k) {
-					// 	addItemInBackpack(m_metagame, characterId, r);
-					// }
-					addMutilItemInBackpack(m_metagame,characterId,r,r.m_amount);
+	// 				ScoredResource@ r = getRandomScoredResource(rewardItems);
+	// 				// for (int k = 0; k < r.m_amount; ++k) {
+	// 				// 	addItemInBackpack(m_metagame, characterId, r);
+	// 				// }
+	// 				addMutilItemInBackpack(m_metagame,characterId,r,r.m_amount);
 
-					string name = getResourceName(m_metagame, r.m_key, r.m_type);
-					a["%item_name" + formatInt(i+1)] = name;
-				}
+	// 				string name = getResourceName(m_metagame, r.m_key, r.m_type);
+	// 				a["%item_name" + formatInt(i+1)] = name;
+	// 			}
 
-				//sendFactionMessageKey(m_metagame, 0, "gift box delivery, reward", a);
-				sendPrivateMessageKey(m_metagame, playerId, "gift box delivery, reward", a);
-			} else {
-				// no such player, break
-				return;
-			}
-		}
-	}
+	// 			//sendFactionMessageKey(m_metagame, 0, "gift box delivery, reward", a);
+	// 			sendPrivateMessageKey(m_metagame, playerId, "gift box delivery, reward", a);
+	// 		} else {
+	// 			// no such player, break
+	// 			return;
+	// 		}
+	// 	}
+	// }
 
 	// ------------------------------------------------------------------------------------------------
 	void rewardPiece(int playerId, int characterId, int acceptedAmount, const Resource@ targetItem) {

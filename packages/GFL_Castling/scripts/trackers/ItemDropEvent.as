@@ -56,7 +56,7 @@ class ItemDropEvent : Tracker {
             {
                 case 1:{
                     if(checkQueue(pId,"mod3")){
-                        failedUpgrade(cId, pId, "firecontrol.carry_item")
+                        failedUpgrade(cId, pId, "firecontrol.carry_item");
                     }
                     else{
                         startQueue(pId,"mod3");
@@ -67,7 +67,7 @@ class ItemDropEvent : Tracker {
                 }
                 case 2:{
                     if(checkQueue(pId,"truecore")){
-                        failedUpgrade(cId, pId, "core_mask.carry_item")
+                        failedUpgrade(cId, pId, "core_mask.carry_item");
                     }
                     else{
                         startQueue(pId,"truecore");
@@ -78,7 +78,7 @@ class ItemDropEvent : Tracker {
                 }
                 case 3:{
                     if(checkQueue(pId,"type88")){
-                        failedUpgrade(cId, pId, "upgrade_type88.carry_item")
+                        failedUpgrade(cId, pId, "upgrade_type88.carry_item");
                     }
                     else{
                         startQueue(pId,"type88");
@@ -89,7 +89,7 @@ class ItemDropEvent : Tracker {
                 }
                 case 4:{
                     if(checkQueue(pId,"aa12")){
-                        failedUpgrade(cId, pId, "upgrade_aa12.carry_item")
+                        failedUpgrade(cId, pId, "upgrade_aa12.carry_item");
                     }
                     else{
                         startQueue(pId,"aa12");
@@ -100,7 +100,7 @@ class ItemDropEvent : Tracker {
                 }
                 case 5:{
                     if(checkQueue(pId,"m1garand")){
-                        failedUpgrade(cId, pId, "upgrade_m1.carry_item")
+                        failedUpgrade(cId, pId, "upgrade_m1.carry_item");
                     }
                     else{
                         startQueue(pId,"m1garand");
@@ -111,7 +111,7 @@ class ItemDropEvent : Tracker {
                 } 
                 case 6:{
                     if(checkQueue(pId,"fg42")){
-                        failedUpgrade(cId, pId, "upgrade_fg42.carry_item")
+                        failedUpgrade(cId, pId, "upgrade_fg42.carry_item");
                     }
                     else{
                         startQueue(pId,"fg42");
@@ -122,7 +122,7 @@ class ItemDropEvent : Tracker {
                 }
                 case 7:{
                     if(checkQueue(pId,"g41")){
-                        failedUpgrade(cId, pId, "upgrade_g41.carry_item")
+                        failedUpgrade(cId, pId, "upgrade_g41.carry_item");
                     }
                     else{
                         startQueue(pId,"g41");
@@ -133,7 +133,7 @@ class ItemDropEvent : Tracker {
                 }
                 case 8:{
                     if(checkQueue(pId,"vz61")){
-                        failedUpgrade(cId, pId, "upgrade_vz61.carry_item")
+                        failedUpgrade(cId, pId, "upgrade_vz61.carry_item");
                     }
                     else{
                         startQueue(pId,"vz61");
@@ -144,7 +144,7 @@ class ItemDropEvent : Tracker {
                 }
                 case 9:{
                     if(checkQueue(pId,"m1903_1")){
-                        failedUpgrade(cId, pId, "upgrade_m1903_1.carry_item")
+                        failedUpgrade(cId, pId, "upgrade_m1903_1.carry_item");
                     }
                     else{
                         startQueue(pId,"m1903_1");
@@ -155,7 +155,7 @@ class ItemDropEvent : Tracker {
                 }
                 case 10:{
                     if(checkQueue(pId,"m1903_2")){
-                        failedUpgrade(cId, pId, "upgrade_m1903_2.carry_item")
+                        failedUpgrade(cId, pId, "upgrade_m1903_2.carry_item");
                     }
                     else{
                         startQueue(pId,"m1903_2");
@@ -166,7 +166,7 @@ class ItemDropEvent : Tracker {
                 }   
                 case 11:{
                     if(checkQueue(pId,"fn49")){
-                        failedUpgrade(cId, pId, "upgrade_fn49.carry_item")
+                        failedUpgrade(cId, pId, "upgrade_fn49.carry_item");
                     }
                     else{
                         startQueue(pId,"fn49");
@@ -177,7 +177,7 @@ class ItemDropEvent : Tracker {
                 }     
                 case 12:{
                     if(checkQueue(pId,"9a91")){
-                        failedUpgrade(cId, pId, "upgrade_9a91.carry_item")
+                        failedUpgrade(cId, pId, "upgrade_9a91.carry_item");
                     }
                     else{
                         startQueue(pId,"9a91");
@@ -188,7 +188,7 @@ class ItemDropEvent : Tracker {
                 }
                 case 13:{
                     if(checkQueue(pId,"m14")){
-                        failedUpgrade(cId, pId, "upgrade_m14.carry_item")
+                        failedUpgrade(cId, pId, "upgrade_m14.carry_item");
                     }
                     else{
                         startQueue(pId,"m14");
@@ -199,7 +199,7 @@ class ItemDropEvent : Tracker {
                 }
                 case 14:{
                     if(checkQueue(pId,"g3")){
-                        failedUpgrade(cId, pId, "upgrade_g3.carry_item")
+                        failedUpgrade(cId, pId, "upgrade_g3.carry_item");
                     }
                     else{
                         startQueue(pId,"g3");
@@ -210,7 +210,7 @@ class ItemDropEvent : Tracker {
                 }             
                 case 15:{
                     if(checkQueue(pId,"m1897")){
-                        failedUpgrade(cId, pId, "upgrade_m1897.carry_item")
+                        failedUpgrade(cId, pId, "upgrade_m1897.carry_item");
                     }
                     else{
                         startQueue(pId,"m1897");
@@ -221,7 +221,7 @@ class ItemDropEvent : Tracker {
                 }
                 case 16:{
                     if(checkQueue(pId,"stg44")){
-                        failedUpgrade(cId, pId, "upgrade_stg44.carry_item")
+                        failedUpgrade(cId, pId, "upgrade_stg44.carry_item");
                     }
                     else{
                         startQueue(pId,"stg44");
@@ -232,7 +232,7 @@ class ItemDropEvent : Tracker {
                 }   
                 case 17:{
                     if(checkQueue(pId,"wa2000")){
-                        failedUpgrade(cId, pId, "upgrade_wa2000.carry_item")
+                        failedUpgrade(cId, pId, "upgrade_wa2000.carry_item");
                     }
                     else{
                         startQueue(pId,"wa2000");
@@ -243,7 +243,7 @@ class ItemDropEvent : Tracker {
                 }
                 case 18:{
                     if(checkQueue(pId,"pkp")){
-                        failedUpgrade(cId, pId, "upgrade_pkp.carry_item")
+                        failedUpgrade(cId, pId, "upgrade_pkp.carry_item");
                     }
                     else{
                         startQueue(pId,"pkp");
@@ -254,7 +254,7 @@ class ItemDropEvent : Tracker {
                 }
                 case 19:{
                     if(checkQueue(pId,"scarl")){
-                        failedUpgrade(cId, pId, "upgrade_scarl.carry_item")
+                        failedUpgrade(cId, pId, "upgrade_scarl.carry_item");
                     }
                     else{
                         startQueue(pId,"scarl");
@@ -265,7 +265,7 @@ class ItemDropEvent : Tracker {
                 }
                 case 20:{
                     if(checkQueue(pId,"scarh")){
-                        failedUpgrade(cId, pId, "upgrade_scarh.carry_item")
+                        failedUpgrade(cId, pId, "upgrade_scarh.carry_item");
                     }
                     else{
                         startQueue(pId,"scarh");
@@ -276,7 +276,7 @@ class ItemDropEvent : Tracker {
                 }
                 case 21:{
                     if(checkQueue(pId,"cso")){
-                        failedUpgrade(cId, pId, "upgrade_cso.carry_item")
+                        failedUpgrade(cId, pId, "upgrade_cso.carry_item");
                     }
                     else{
                         startQueue(pId,"cso");
@@ -296,10 +296,9 @@ class ItemDropEvent : Tracker {
                             a["%doll_name"] = getResourceName(m_metagame, itemKey, "weapon");
                             sendPrivateMessageKey(m_metagame, pId, "digimindupdatesuccess",a);
                             playPrivateSound(m_metagame,"digimind_sfx2.wav",pId);
-                            GiveRP(m_metagame,cId,-499);
                         }
                         else{
-                            addItemInBackpack(m_metagame,cId,"carry_item","firecontrol.carry_item");
+                            addItemInBackpack(m_metagame,cId,"carry_item","firecontrol.carry_item");;
                             addItemInBackpack(m_metagame,cId,"weapon",itemKey);
                             m_craftQueue.removeAt(findQueueIndex(pId,"mod3"));
                             sendPrivateMessageKey(m_metagame, pId, "digimindupdatefailed");
@@ -307,113 +306,112 @@ class ItemDropEvent : Tracker {
                         }
                     }
                     else if (checkQueue(pId,"type88") && (itemKey=="gkw_88typemod3.weapon" || itemKey=="gkw_88typemod3_skill.weapon")){
-                        giveDigimindItem(cId, pId, "gkw_88typemod3_6503.weapon", "type88")
+                        giveDigimindItem(cId, pId, "gkw_88typemod3_6503.weapon", "type88");
                     }
                     else if (checkQueue(pId,"aa12") && (itemKey=="gkw_aa12.weapon" || itemKey=="gkw_aa12_skill.weapon")){
-                        giveDigimindItem(cId, pId, "gkw_aa12_only.weapon", "aa12")
+                        giveDigimindItem(cId, pId, "gkw_aa12_only.weapon", "aa12");
                     }
                     else if (checkQueue(pId,"aa12") && (itemKey=="gkw_aa12_4401.weapon" || itemKey=="gkw_aa12_4401_skill.weapon")){
-                        giveDigimindItem(cId, pId, "gkw_aa12_4401_only.weapon", "aa12")
+                        giveDigimindItem(cId, pId, "gkw_aa12_4401_only.weapon", "aa12");
                     }
                     else if (checkQueue(pId,"m1garand") && (itemKey=="gkw_m1.weapon" || itemKey=="gkw_m1_skill.weapon")){
-                        giveDigimindItem(cId, pId, "gkw_m1_sf.weapon", "m1garand")
+                        giveDigimindItem(cId, pId, "gkw_m1_sf.weapon", "m1garand");
                     }
                     else if (checkQueue(pId,"m1garand") && (itemKey=="gkw_m1_1106.weapon" || itemKey=="gkw_m1_1106_skill.weapon")){
-                        giveDigimindItem(cId, pId, "gkw_m1_sf_1106.weapon", "m1garand")
+                        giveDigimindItem(cId, pId, "gkw_m1_sf_1106.weapon", "m1garand");
                     }
                     else if (checkQueue(pId,"m1garand") && (itemKey=="gkw_m1_6907.weapon" || itemKey=="gkw_m1_6907_skill.weapon")){
-                        giveDigimindItem(cId, pId, "gkw_m1_sf_6907.weapon", "m1garand")
+                        giveDigimindItem(cId, pId, "gkw_m1_sf_6907.weapon", "m1garand");
                     }                    
                     else if (checkQueue(pId,"fg42") && (itemKey=="gkw_fg42.weapon" || itemKey=="gkw_fg42_skill.weapon")){
-                        giveDigimindItem(cId, pId, "gkw_fg42_only.weapon", "fg42")
+                        giveDigimindItem(cId, pId, "gkw_fg42_only.weapon", "fg42");
                     }
                     else if (checkQueue(pId,"g41") && (itemKey=="gkw_g41.weapon" || itemKey=="gkw_g41_skill.weapon")){
-                        giveDigimindItem(cId, pId, "gkw_g41_only.weapon", "g41")
+                        giveDigimindItem(cId, pId, "gkw_g41_only.weapon", "g41");
                     }
                     else if (checkQueue(pId,"g41") && (itemKey=="gkw_g41_2401.weapon" || itemKey=="gkw_g41_2401_skill.weapon")){
-                        giveDigimindItem(cId, pId, "gkw_g41_2401_only.weapon", "g41")
+                        giveDigimindItem(cId, pId, "gkw_g41_2401_only.weapon", "g41");
                     }
                     else if (checkQueue(pId,"g41") && (itemKey=="gkw_g41_7406.weapon" || itemKey=="gkw_g41_7406_skill.weapon")){
-                        giveDigimindItem(cId, pId, "gkw_g41_7406_only.weapon", "g41")
+                        giveDigimindItem(cId, pId, "gkw_g41_7406_only.weapon", "g41");
                     }
                     else if (checkQueue(pId,"vz61") && (itemKey=="gkw_vz61.weapon")){
-                        giveDigimindItem(cId, pId, "gkw_vz61_only.weapon", "vz61")
+                        giveDigimindItem(cId, pId, "gkw_vz61_only.weapon", "vz61");
                     }
                     else if (checkQueue(pId,"m1903_1") && (itemKey=="gkw_m1903.weapon")){
-                        giveDigimindItem(cId, pId, "gkw_m1903_only.weapon", "m1903_1")
+                        giveDigimindItem(cId, pId, "gkw_m1903_only.weapon", "m1903_1");
                     }
                     else if (checkQueue(pId,"m1903_2") && (itemKey=="gkw_m1903.weapon")){
-                        giveDigimindItem(cId, pId, "gkw_m1903_exp.weapon", "m1903_2")
+                        giveDigimindItem(cId, pId, "gkw_m1903_exp.weapon", "m1903_2");
                     }
                     else if (checkQueue(pId,"m1903_1") && (itemKey=="gkw_m1903_302.weapon")){
-                        giveDigimindItem(cId, pId, "gkw_m1903_302_only.weapon", "m1903_1")
+                        giveDigimindItem(cId, pId, "gkw_m1903_302_only.weapon", "m1903_1");
                     }
                     else if (checkQueue(pId,"m1903_2") && (itemKey=="gkw_m1903_302.weapon")){
-                        giveDigimindItem(cId, pId, "gkw_m1903_302_exp.weapon", "m1903_2")
+                        giveDigimindItem(cId, pId, "gkw_m1903_302_exp.weapon", "m1903_2");
                     }                    
                     else if (checkQueue(pId,"fn49") && (itemKey=="gkw_fn49.weapon")){
-                        giveDigimindItem(cId, pId, "gkw_fn49mod3.weapon", "fn49")
+                        giveDigimindItem(cId, pId, "gkw_fn49mod3.weapon", "fn49");
                     }                                        
                     else if (checkQueue(pId,"fn49") && (itemKey=="gkw_fn49_4709.weapon")){
-                        giveDigimindItem(cId, pId, "gkw_fn49mod3_4709.weapon", "fn49")
+                        giveDigimindItem(cId, pId, "gkw_fn49mod3_4709.weapon", "fn49");
                     }           
                     else if (checkQueue(pId,"9a91") && (itemKey=="gkw_9a91.weapon" || itemKey=="gkw_9a91_skill.weapon" )){
-                        giveDigimindItem(cId, pId, "gkw_9a91_only.weapon", "9a91")
+                        giveDigimindItem(cId, pId, "gkw_9a91_only.weapon", "9a91");
                     }   
                     else if (checkQueue(pId,"9a91") && (itemKey=="gkw_9a91_1302.weapon" || itemKey=="gkw_9a91_1302_skill.weapon" )){
-                        giveDigimindItem(cId, pId, "gkw_9a91_1302_only.weapon", "9a91")
+                        giveDigimindItem(cId, pId, "gkw_9a91_1302_only.weapon", "9a91");
                     }
                     else if (checkQueue(pId,"m14") && (itemKey=="gkw_m14.weapon")){
-                        giveDigimindItem(cId, pId, "gkw_m14mod3.weapon", "m14")
+                        giveDigimindItem(cId, pId, "gkw_m14mod3.weapon", "m14");
                     }
                     else if (checkQueue(pId,"m14") && (itemKey=="gkw_m14_303.weapon")){
-                        giveDigimindItem(cId, pId, "gkw_m14mod3_303.weapon", "m14")
+                        giveDigimindItem(cId, pId, "gkw_m14mod3_303.weapon", "m14");
                     }                    
                     else if (checkQueue(pId,"g3") && (itemKey=="gkw_g3.weapon")){
-                        giveDigimindItem(cId, pId, "gkw_g3mod3.weapon", "g3")
+                        giveDigimindItem(cId, pId, "gkw_g3mod3.weapon", "g3");
                     }
                     else if (checkQueue(pId,"g3") && (itemKey=="gkw_g3_1303.weapon")){
-                        giveDigimindItem(cId, pId, "gkw_g3mod3_1303.weapon", "g3")
+                        giveDigimindItem(cId, pId, "gkw_g3mod3_1303.weapon", "g3");
                     }
                     else if (checkQueue(pId,"m1897") && (itemKey=="gkw_m1897.weapon" || itemKey=="gkw_m1897_skill.weapon")){
-                        giveDigimindItem(cId, pId, "gkw_m1897mod3.weapon", "m1897")
+                        giveDigimindItem(cId, pId, "gkw_m1897mod3.weapon", "m1897");
                     }         
                     else if (checkQueue(pId,"stg44") && (itemKey=="gkw_stg44.weapon")){
-                        giveDigimindItem(cId, pId, "gkw_stg44mod3.weapon", "stg44")
+                        giveDigimindItem(cId, pId, "gkw_stg44mod3.weapon", "stg44");
                     }
                     else if (checkQueue(pId,"stg44") && (itemKey=="gkw_g43.weapon")){
+                        giveDigimindItem(cId, pId, "gkw_g43_kurz.weapon", "stg44");
                     }                    
                     else if (checkQueue(pId,"wa2000") && (itemKey=="gkw_wa2000.weapon")){
-                        giveDigimindItem(cId, pId, "gkw_wa2000_only.weapon", "wa2000")
+                        giveDigimindItem(cId, pId, "gkw_wa2000_only.weapon", "wa2000");
                     }
                     else if (checkQueue(pId,"wa2000") && (itemKey=="gkw_wa2000_306.weapon")){
-                        giveDigimindItem(cId, pId, "gkw_wa2000_306_only.weapon", "wa2000")
+                        giveDigimindItem(cId, pId, "gkw_wa2000_306_only.weapon", "wa2000");
                     }        
                     else if (checkQueue(pId,"pkp") && (itemKey=="gkw_pkp.weapon" || itemKey=="gkw_pkp_skill.weapon")){
-                        giveDigimindItem(cId, pId, "gkw_pkp_only.weapon", "pkp")
+                        giveDigimindItem(cId, pId, "gkw_pkp_only.weapon", "pkp");
                     }
                     else if (checkQueue(pId,"pkp") && (itemKey=="gkw_pkp_4203.weapon" || itemKey=="gkw_pkp_4203_skill.weapon")){
-                        giveDigimindItem(cId, pId, "gkw_pkp_4203_only.weapon", "pkp")
+                        giveDigimindItem(cId, pId, "gkw_pkp_4203_only.weapon", "pkp");
                     }        
                     else if (checkQueue(pId,"scarl") && (itemKey=="gkw_scarl.weapon")){
-                        giveDigimindItem(cId, pId, "gkw_scarl_only.weapon", "scarl")
+                        giveDigimindItem(cId, pId, "gkw_scarl_only.weapon", "scarl");
                     }
                     else if (checkQueue(pId,"scarh") && (itemKey=="gkw_scarh.weapon")){
-                        giveDigimindItem(cId, pId, "gkw_scarh_only.weapon", "scarh")
+                        giveDigimindItem(cId, pId, "gkw_scarh_only.weapon", "scarh");
                     }
                     else if (checkQueue(pId,"cso") && (itemKey=="gkw_svd.weapon" || itemKey=="gkw_svd_skill.weapon")){
-                        giveDigimindItem(cId, pId, "gkw_svdex.weapon", "cso")
-
+                        giveDigimindItem(cId, pId, "gkw_svdex.weapon", "cso");
                     }                    
                     else if (checkQueue(pId,"cso") && (itemKey=="gkw_svd_5506.weapon" || itemKey=="gkw_svd_5506_skill.weapon")){
-                        giveDigimindItem(cId, pId, "gkw_svdex_5506.weapon", "cso")
+                        giveDigimindItem(cId, pId, "gkw_svdex_5506.weapon", "cso");
                     }   
                     else if (checkQueue(pId,"cso") && (itemKey=="gkw_ak47.weapon" || itemKey=="gkw_ak47_skill.weapon")){
-                        giveDigimindItem(cId, pId, "gkw_ak47_60r.weapon", "cso")
+                        giveDigimindItem(cId, pId, "gkw_ak47_60r.weapon", "cso");
                     }
                     else if (checkQueue(pId,"cso") && (itemKey=="gkw_ak47_501.weapon" || itemKey=="gkw_ak47_501_skill.weapon")){
-                         giveDigimindItem(cId, pId, "gkw_ak47_60r_501.weapon", "cso")
-
+                         giveDigimindItem(cId, pId, "gkw_ak47_60r_501.weapon", "cso");
                     }                    
                     break;
                 }
@@ -528,9 +526,9 @@ class ItemDropEvent : Tracker {
                 c.setIntAttribute("container_type_id", 4);
                 c.setIntAttribute("character_id", cId); 
                 {
-                    XmlElement k("item");
-                    k.setStringAttribute("class", "carry_item");
-                    k.setStringAttribute("key", "exo_t5_16lab.carry_item");
+                    XmlElement k("item");;
+                    k.setStringAttribute("class", "carry_item");;
+                    k.setStringAttribute("key", "exo_t5_16lab.carry_item");;
                     c.appendChild(k);
                 }
                 m_metagame.getComms().send(c);
@@ -553,7 +551,7 @@ class ItemDropEvent : Tracker {
                 int cId=player.getIntAttribute("character_id");
                 string itemKey= getGFLkey(s);
                 if (itemKey==""){
-                    addItemInBackpack(m_metagame,cId,"carry_item","core_mask.carry_item");
+                    addItemInBackpack(m_metagame,cId,"carry_item","core_mask.carry_item");;
                     sendPrivateMessageKey(m_metagame, senderId, "truemask_failed");
                     playPrivateSound(m_metagame,"sfx_failed.wav",senderId);                    
                 }
@@ -609,87 +607,87 @@ class ItemDropEvent : Tracker {
                         switch(jud_num) // 此处是判断是否超过时限，从而返还玩家物品
                         {
                             case 1:{ // mod3
-                                upgradeTimeout(cId, pId, "firecontrol.carry_item")
+                                upgradeTimeout(cId, pId, "firecontrol.carry_item");
                                 break;
                             }
                             case 2:{ // truecore
-                                upgradeTimeout(cId, pId, "core_mask.carry_item")
+                                upgradeTimeout(cId, pId, "core_mask.carry_item");
                                 break;
                             }
                             case 3:{ // type88
-                                upgradeTimeout(cId, pId, "upgrade_type88.carry_item")
+                                upgradeTimeout(cId, pId, "upgrade_type88.carry_item");
                                 break;
                             }
                             case 4:{ // aa12
-                                upgradeTimeout(cId, pId, "upgrade_aa12.carry_item")
+                                upgradeTimeout(cId, pId, "upgrade_aa12.carry_item");
                                 break;
                             }
                             case 5:{ // m1
-                                upgradeTimeout(cId, pId, "upgrade_m1.carry_item")
+                                upgradeTimeout(cId, pId, "upgrade_m1.carry_item");
                                 break;
                             }
                             case 6:{ // fg42
-                                upgradeTimeout(cId, pId, "upgrade_fg42.carry_item")
+                                upgradeTimeout(cId, pId, "upgrade_fg42.carry_item");
                                 break;
                             }
                             case 7:{ // g41
-                                upgradeTimeout(cId, pId, "upgrade_g41.carry_item")
+                                upgradeTimeout(cId, pId, "upgrade_g41.carry_item");
                                 break;
                             }
                             case 8:{ // vz61
-                                upgradeTimeout(cId, pId, "upgrade_vz61.carry_item")
+                                upgradeTimeout(cId, pId, "upgrade_vz61.carry_item");
                                 break;
                             }
                             case 9:{ // m1903
-                                upgradeTimeout(cId, pId, "upgrade_m1903_1.carry_item")
+                                upgradeTimeout(cId, pId, "upgrade_m1903_1.carry_item");
                                 break;
                             }
                             case 10:{ // m1903
-                                upgradeTimeout(cId, pId, "upgrade_m1903_2.carry_item")
+                                upgradeTimeout(cId, pId, "upgrade_m1903_2.carry_item");
                                 break;
                             }                    
                             case 11:{
-                                upgradeTimeout(cId, pId, "upgrade_fn49.carry_item")
+                                upgradeTimeout(cId, pId, "upgrade_fn49.carry_item");
                                 break;
                             }
                             case 12:{
-                                upgradeTimeout(cId, pId, "upgrade_9a91.carry_item")
+                                upgradeTimeout(cId, pId, "upgrade_9a91.carry_item");
                                 break;
                             }   
                             case 13:{
-                                upgradeTimeout(cId, pId, "upgrade_m14.carry_item")
+                                upgradeTimeout(cId, pId, "upgrade_m14.carry_item");
                                 break;
                             }
                             case 14:{
-                                upgradeTimeout(cId, pId, "upgrade_g3.carry_item")
+                                upgradeTimeout(cId, pId, "upgrade_g3.carry_item");
                                 break;
                             }
                             case 15:{
-                                upgradeTimeout(cId, pId, "upgrade_m1897.carry_item")
+                                upgradeTimeout(cId, pId, "upgrade_m1897.carry_item");
                                 break;
                             }     
                             case 16:{
-                                upgradeTimeout(cId, pId, "upgrade_stg44.carry_item")
+                                upgradeTimeout(cId, pId, "upgrade_stg44.carry_item");
                                 break;
                             }         
                             case 17:{
-                                upgradeTimeout(cId, pId, "upgrade_wa2000.carry_item")
+                                upgradeTimeout(cId, pId, "upgrade_wa2000.carry_item");
                                 break;
                             }
                             case 18:{
-                                upgradeTimeout(cId, pId, "upgrade_pkp.carry_item")
+                                upgradeTimeout(cId, pId, "upgrade_pkp.carry_item");
                                 break;
                             }   
                             case 19:{
-                                upgradeTimeout(cId, pId, "upgrade_scarl.carry_item")
+                                upgradeTimeout(cId, pId, "upgrade_scarl.carry_item");
                                 break;
                             }
                             case 20:{
-                                upgradeTimeout(cId, pId, "upgrade_scarh.carry_item")
+                                upgradeTimeout(cId, pId, "upgrade_scarh.carry_item");
                                 break;
                             }                 
                             case 21:{
-                                upgradeTimeout(cId, pId, "upgrade_cso.carry_item")
+                                upgradeTimeout(cId, pId, "upgrade_cso.carry_item");
                                 break;
                             }                                                                                              
                             default:
