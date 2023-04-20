@@ -85,7 +85,7 @@ class RepairCrane : Tracker {
 					int vehicleId = vehicles[i].getIntAttribute("id");
 					const XmlElement@ vehicleInfo = getVehicleInfo(m_metagame, vehicleId);
 					if (vehicleInfo !is null) {
-						string key2 = vehicleInfo.getStringAttribute("key");
+						string vehicleKey = vehicleInfo.getStringAttribute("key");
 
 						float vehicleHealth = vehicleInfo.getFloatAttribute("health");
 						if (vehicleHealth <= 0.0) continue;
