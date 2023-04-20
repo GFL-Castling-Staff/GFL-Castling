@@ -1175,7 +1175,7 @@ class CommandSkill : Tracker {
                             "K11_SKILL2_JP.wav",
                             "K11_SKILL3_JP.wav"
                         };
-                        playSoundAtLocation(m_metagame,"gp25_fire_FromSQUAD.wav",factionid,c_pos,1.0);
+                        playSoundAtLocation(m_metagame,"gp25_fire_FromSQUAD.wav",factionid,c_pos,1.15);
                         playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);                        
                     }
                     if(weaponname=="gkw_56-1type.weapon") {
