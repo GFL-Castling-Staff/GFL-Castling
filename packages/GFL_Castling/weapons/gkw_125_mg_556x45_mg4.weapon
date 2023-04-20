@@ -28,12 +28,12 @@
         <trail probability="1.0" key="bullet_new_deep"/>
     </projectile>
     <effect class="muzzle" ref="ejection_556" />
-    <stance state_key="running" accuracy="0.70" />
-    <stance state_key="walking" accuracy="0.70" />
-    <stance state_key="crouch_moving" accuracy="0.70" />
-    <stance state_key="standing" accuracy="0.70" />
-    <stance state_key="crouching" accuracy="0.90" />
-    <stance state_key="prone" accuracy="1.2" /> 
-    <stance state_key="prone_moving" accuracy="0.7" />
-    <stance state_key="over_wall" accuracy="1.2" /> 
+    <stance state_key="running" accuracy="0.25"/>
+    <stance state_key="walking" accuracy="0.5"/>
+    <stance state_key="crouch_moving" accuracy="0.35"/>
+    <stance state_key="prone_moving" accuracy="0.35"/>
+    <stance state_key="standing" accuracy="0.5"/>
+    <stance state_key="crouching" accuracy="0.85"/>
+    <stance state_key="prone" accuracy="1.5"/>
+    <stance state_key="over_wall" accuracy="1.5"/>
 </weapon>

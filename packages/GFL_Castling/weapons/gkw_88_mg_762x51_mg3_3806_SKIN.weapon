@@ -32,13 +32,13 @@
             <trail probability="1.0" key="bullet_new_deep"/>
         </projectile>
         <effect class="muzzle" ref="ejection_76251" />
-	    <stance state_key="running" accuracy="0.3" />
-        <stance state_key="walking" accuracy="0.5" />
-        <stance state_key="crouch_moving" accuracy="0.75" />
-        <stance state_key="standing" accuracy="0.7" />
-        <stance state_key="crouching" accuracy="0.85" />
+	    <stance state_key="running" accuracy="0.2" />
+        <stance state_key="walking" accuracy="0.45" />
+        <stance state_key="crouch_moving" accuracy="0.35" />
+        <stance state_key="prone_moving" accuracy="0.35" />
+        <stance state_key="standing" accuracy="0.55" />
+        <stance state_key="crouching" accuracy="0.8" />
         <stance state_key="prone" accuracy="1.0" /> 
-        <stance state_key="prone_moving" accuracy="1.0" />
         <stance state_key="over_wall" accuracy="1.0" />
     </weapon>
     <weapon file="heavy_mg.animation_base" key="gkw_mg3_3806_skill.weapon">
@@ -76,13 +76,13 @@
         </projectile>
         <effect class="muzzle" ref="ejection_76251" />
         <effect class="muzzle" ref="muzzle_yellow" />
-        <stance state_key="running" accuracy="1.0" />
-        <stance state_key="walking" accuracy="1.0" />
-        <stance state_key="crouch_moving" accuracy="1.0" />
-        <stance state_key="standing" accuracy="1.0" />
-        <stance state_key="crouching" accuracy="1.0" />
-        <stance state_key="prone" accuracy="1.0" />
-        <stance state_key="prone_moving" accuracy="1.0" />
+        <stance state_key="running" accuracy="0.2" />
+        <stance state_key="walking" accuracy="0.45" />
+        <stance state_key="crouch_moving" accuracy="0.35" />
+        <stance state_key="prone_moving" accuracy="0.35" />
+        <stance state_key="standing" accuracy="0.55" />
+        <stance state_key="crouching" accuracy="0.8" />
+        <stance state_key="prone" accuracy="1.0" /> 
         <stance state_key="over_wall" accuracy="1.0" />
         <modifier class="speed" value="-0.15" />
     </weapon>
