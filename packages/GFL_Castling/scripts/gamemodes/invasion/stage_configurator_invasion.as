@@ -185,8 +185,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 	// ------------------------------------------------------------------------------------------------
 	protected void setupNormalStages() {
-				addStage(setupStage8());          // map8
-
+		addStage(setupStage13());         // map16
 		// addStage(setupStage1_rust());          // map2_?
 		// addStage(setupStageRace());          // DEJAHU
 		addStage(setupStage1());          // map2
@@ -1872,7 +1871,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.m_mapInfo.m_path = "media/packages/GFL_Castling/maps/map16";
 		stage.m_mapInfo.m_id = "map16";
 
-		stage.m_maxSoldiers = 18 * 13;
+		stage.m_maxSoldiers = 18 * 15;
 		stage.m_playerAiCompensation = 2 + m_playerAiCompensation_offset;                                       // was 4 (test4)
 		stage.m_playerAiReduction = 2;                                            // was 1.5 (test3)
 
@@ -1887,7 +1886,6 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 		{
 			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0, 0.53, 0.3));   // was 0.45 0.3
-			f.m_overCapacity = 5;                                               // was 0 (test3)
 			f.m_bases = 1;
 			f.m_capacityMultiplier = 1.0;                                       // was 0.9 (test2)
 			stage.m_factions.insertLast(f);
@@ -1901,7 +1899,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		}
 		{
 			Faction f(getFactionConfigs()[FactionIndex[1]], createCommanderAiCommand(2, 0.65, 0.1));          
-			f.m_overCapacity = 40;
+			f.m_overCapacity = 50;
 			f.m_capacityOffset = 5;                                                             
 			f.m_capacityMultiplier = 1.0; 
 			stage.m_factions.insertLast(f);
