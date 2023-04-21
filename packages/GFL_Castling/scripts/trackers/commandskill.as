@@ -3201,8 +3201,7 @@ class CommandSkill : Tracker {
                         "smokelauncher_fire_FromCOD16.wav",
                     };
                     playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
-                    playSoundAtLocation(m_metagame,"grenade_throw1.wav",factionid,c_pos,1.0);
-                    playAnimationKey(m_metagame,characterId,"air thrust",false,true);
+                    playAnimationKey(m_metagame,characterId,"isc reload, large mecha",false,true);
 
                     Vector3 strike_vector = getAimUnitVector(4,c_pos,stringToVector3(target)); 
                     Vector3 strike_posofffset_1 = getRotatedVector(1.046,strike_vector);

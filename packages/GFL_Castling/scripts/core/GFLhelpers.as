@@ -152,12 +152,32 @@ void addItemInBackpack(Metagame@ metagame, int characterId, string ItemType, str
 	metagame.getComms().send(c);
 }
 
-void addItemInStash(Metagame@ metagame, int characterId, string ItemType, string ItemKey) {
-	string c = 
-		"<command class='update_inventory' character_id='" + characterId + "' container_type_class='stash'>" + 
-			"<item class='" + ItemType + "' key='" + ItemKey + "' />" +
-		"</command>";
-	metagame.getComms().send(c);
+void addItemInStash(Metagame@ metagame, int characterId, string ItemType, string ItemKey){
+	XmlElement c ("command");
+	c.setStringAttribute("class", "update_inventory");
+	c.setStringAttribute("container_type_class", "stash");
+	c.setIntAttribute("character_id", characterId); 
+	c.setIntAttribute("add",1);
+	XmlElement k("item");
+	k.setStringAttribute("class", ItemType);
+	k.setStringAttribute("key", ItemKey);
+	c.appendChild(k);
+	metagame.getComms().send(c);	
+}
+
+void addListItemInStash(Metagame@ metagame, int characterId, array<Resource@>@ resources){
+	XmlElement c ("command");
+	c.setStringAttribute("class", "update_inventory");
+	c.setStringAttribute("container_type_class", "stash");
+	c.setIntAttribute("character_id", characterId); 
+	c.setIntAttribute("add",1);
+	for(uint i=0;i<resources.size();i++){
+		XmlElement k("item");
+		k.setStringAttribute("class", resources[i].m_type);
+		k.setStringAttribute("key", resources[i].m_key);
+		c.appendChild(k);
+	}
+	metagame.getComms().send(c);	
 }
 
 void addRangeItemInBackpack(Metagame@ metagame, int factionId, string ItemType, string ItemKey,Vector3 pos,float range){

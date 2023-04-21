@@ -7,7 +7,7 @@
 #include "gamemode.as"
 #include "GFLhelpers.as"
 //Originally created by NetherCrow
-
+//Deprecated & moved to Map_rotator_invasion.as
 class MatchCompleteReward : Tracker {
 	protected Metagame@ m_metagame;
 

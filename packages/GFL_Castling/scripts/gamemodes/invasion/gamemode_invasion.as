@@ -48,7 +48,7 @@
 #include "commandskill.as"
 #include "ItemDropEvent.as"
 #include "vehicle_spawn_handler.as"
-#include "MatchCompleteReward.as"
+// #include "MatchCompleteReward.as"
 #include "GFLairstrike.as"
 #include "shared_reward.as"
 #include "enemy_reward.as"
@@ -285,7 +285,7 @@ class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 		addTracker(CommandSkill(this));
 		addTracker(ItemDropEvent(this));
 		addTracker(vehicle_spawn(this));
-		addTracker(MatchCompleteReward(this));
+		// addTracker(MatchCompleteReward(this));
 		addTracker(GFLairstrike(this));
 		addTracker(GFL_event_system(this));
 		addTracker(SharedReward(this));
