@@ -200,7 +200,7 @@ class MapRotatorInvasion : MapRotator {
 
 	// --------------------------------------------
 	protected void handleMatchEndEvent(const XmlElement@ event) {
-		// prepare for lost battle, grey won
+		// prepare for lost battle, grey won1
 		int factionId = 1;
 
 		const XmlElement@ winCondition = event.getFirstElementByTagName("win_condition");
@@ -212,6 +212,7 @@ class MapRotatorInvasion : MapRotator {
 
 		_log("faction " + factionId + " won");
 
+
 		if (factionId == 0) {
 			bool campaignCompleted = false;
 			// friendly faction won, advance to next map
@@ -221,27 +222,41 @@ class MapRotatorInvasion : MapRotator {
 			setStageCompleted(m_currentStageIndex);
 
 			string map_name = getMapName(m_currentStageIndex);
-			if (map_name=="Shock Zone" || map_name=="Zone Attack"|| map_name=="Dead Zone"){
-                array<const XmlElement@> players = getPlayers(m_metagame);
-                if(players is null || players.size()<=0) return;
-                for (uint i = 0; i < players.size(); ++i) {
-                    int characterId = players[i].getIntAttribute("character_id");
-                    if (characterId >= 0) {
-                        addItemInStash(m_metagame,characterId,"carry_item","complete_box_singularity.carry_item");
-                    }                    
-                }				
+
+			array<const XmlElement@> players = getPlayers(m_metagame);
+			if(players !is null && players.size() > 0)
+			{
+				array<Resource@> rewardlist = {
+					Resource("complete_box.carry_item","carry_item")
+				};
+
+				if(rand(1,5)==1){
+					sendFactionMessageKey(m_metagame, 0,"celebrateXB");
+					playSound(m_metagame, "winwin.wav", 0,1.0);
+					rewardlist.insertLast(Resource("complete_box_xb.carry_item","carry_item"));
+				}
+
+				if (map_name=="Shock Zone" || map_name=="Zone Attack"|| map_name=="Dead Zone"){		
+					rewardlist.insertLast(Resource("complete_box_singularity.carry_item","carry_item"));
+				}
+
+				if (BadAssMapList.find(map_name)>-1){
+					rewardlist.insertLast(Resource("complete_box_hardcore.carry_item","carry_item"));
+				}
+
+				for (uint i = 0; i < players.size(); ++i) {
+					int characterId = players[i].getIntAttribute("character_id");
+					if (characterId >= 0) {
+						GiveRP(m_metagame,characterId,2000);
+						GiveXP(m_metagame,characterId,0.1);
+						addListItemInStash(m_metagame,characterId,rewardlist);
+					}
+				}
 			}
-			if (BadAssMapList.find(map_name)>-1){
-                array<const XmlElement@> players = getPlayers(m_metagame);
-                if(players is null || players.size()<=0) return;
-                for (uint i = 0; i < players.size(); ++i) {
-                    int characterId = players[i].getIntAttribute("character_id");
-                    if (characterId >= 0) {
-                        addItemInStash(m_metagame,characterId,"carry_item","complete_box_hardcore.carry_item");
-                    }                    
-                }
-			}
+
+
 			addCustomStatToAllPlayers(m_metagame,"match_complete");
+			
 			if (m_world !is null) {
 				// now, update world view, declare the area ours
 				m_world.refresh(m_stages, m_stagesCompleted, m_currentStageIndex);

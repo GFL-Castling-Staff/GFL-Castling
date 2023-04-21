@@ -103,6 +103,10 @@ class GiftItemDeliveryRandomRewarder : ItemDeliveryRewarder {
 				command.setIntAttribute("character_id", characterId);
 				command.setStringAttribute("container_type_class", "backpack");
 
+				int max_message_num = 10;
+				int massage_num = 0;
+				bool last_message = false;
+
 				for (uint j =0;j<acceptednum;j++){
 					for (uint i = 0; i < m_rewardItemPasses.size(); ++i) {
 						array<ScoredResource@>@ rewardItems = @m_rewardItemPasses[i];
@@ -117,7 +121,16 @@ class GiftItemDeliveryRandomRewarder : ItemDeliveryRewarder {
 						string name = getResourceName(m_metagame, r.m_key, r.m_type);
 						a["%item_name" + formatInt(i+1)] = name;
 					}
-					sendPrivateMessageKey(m_metagame, playerId, "gift box delivery, reward", a);
+					if (massage_num < 10)
+					{
+						sendPrivateMessageKey(m_metagame, playerId, "gift box delivery, reward", a);
+						massage_num++;
+					}
+					else if (!last_message)
+					{
+						sendPrivateMessageKey(m_metagame, playerId, "gift box delivery, max", a);
+						last_message = true;
+					}
 				}
 				m_metagame.getComms().send(command);
 			}
