@@ -23,36 +23,11 @@ player_death_drop_owner_lock_time="0"
      <collider class="vehicle" enabled="1" /> 
      <collider class="character" enabled="1" />
     </trigger> 
-    <result class="blast" radius="2.5" damage="0.8" push="0.1" decal="1" character_state="death" make_vehicle_hit_sound="0" damage_origin_vehicle="0" faction_compare="not_equal" damage_as_probability="1"/>
-    	
-    <effect class="result" type="splat_map" surface_tag="" size="3.0" atlas_index="0" layer="1" />
-    <effect class="result" type="splat_map" surface_tag="" size="4.0" atlas_index="4" layer="0" />
-    <effect class="result" type="splat_map" surface_tag="" size="5.0" atlas_index="0" layer="2" additive="0" />
+    <result class="blast" radius="2.5" damage="0.8" push="0.0" decal="1" character_state="death" make_vehicle_hit_sound="0" damage_origin_vehicle="0" faction_compare="not_equal" damage_as_probability="1"/>
 
     <rotation class="random" />
 	<commonness value="0.0" can_respawn_with="0" in_stock="0"/>		
     <capacity value="0" source="rank" source_value="0" />
 
     <inventory encumbrance="0.5" price="0.0" />
-
-	<sound class="result" key="other" fileref="burn.wav" volume="0.7" />
-    <sound class="result" key="vehicle" fileref="burn.wav" volume="0.7" />
-    <sound class="result" key="terrain" copy="other" />
-    <sound class="result" key="static_object" copy="other" />
-    <sound class="result" key="character" copy="other" />
-    <effect class="result" key="other" ref="FlamePropulsion" lighting="0" />
-    <effect class="result" key="other" ref="FlameSparkle" lighting="0" />
-    <effect class="result" key="other" ref="SmokePropulsion" />
-    <effect class="result" key="other" ref="FlameSparkle_Big" lighting="0" />
-    <effect class="result" key="other" ref="SmokePropulsionEnd" />
-    <effect class="result" key="other" ref="FlamePropulsion" lighting="0" />
-    <effect class="result" key="other" ref="FlameSparkle_Big_End" lighting="0" />
-       <!-- <effect class="result" type="splat_map" surface_tag="" size="3.0" atlas_index="0" layer="1" /> -->
-    <effect class="result" type="splat_map" surface_tag="" size="2.0" atlas_index="4" layer="0" />
-    <effect class="result" key="terrain" copy="other" />
-    <effect class="result" key="static_object" copy="other" />
-    <effect class="result" key="vehicle" copy="other" />
-    <effect class="result" key="character" copy="other" />
-	<!-- <trail probability="1.0" key="FlamethrowerTrail" /> -->
-	
 </projectile>
