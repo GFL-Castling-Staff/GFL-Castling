@@ -3,7 +3,7 @@
 	<carry_item key="bp_t5_16lab.carry_item" time_to_live_out_in_the_open="0" name="16LAB Advanced Armor Plate" transform_on_consume="bp_t5_16lab_1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="bp_t5.png"/>
 		<capacity value="1" source="rank" source_value="0"/>
-		<commonness value="0.001" in_stock="1" can_respawn_with="1"/>
+		<commonness value="1" in_stock="1" can_respawn_with="1"/>
 		<inventory encumbrance="100" price="30"/>
 		<model />
 		<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" />

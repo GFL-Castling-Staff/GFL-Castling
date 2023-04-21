@@ -448,7 +448,7 @@ void excuteRampageFairyAC130(GameMode@ metagame,GFL_event@ eventinfo){
     if( (ac130_flyby_interval == 0) && ((ac130_strike_num-eventinfo.m_phase)>(voice_phase_interval-4))){
         _log("current phase: " + eventinfo.m_phase);
         ac130_flyby_interval == 6;
-        playSoundAtLocation(metagame,"ac130_flyby.wav",eventinfo.m_factionid,eventinfo.m_pos,3.0);
+        playSoundAtLocation(metagame,"ac130_flyby.wav",eventinfo.m_factionid,eventinfo.m_pos,2.75);
     }
 
     int luckyGuyid;
@@ -526,12 +526,23 @@ void excuteRampageFairyAC130(GameMode@ metagame,GFL_event@ eventinfo){
             if(ac130_voice_interval<=0){
                 switch(attacknum)
                 {
-                    case 5:{playRandomSoundArray(metagame,AC130ShotgunVoice,eventinfo.m_factionid,eventinfo.m_pos.toString(),3.5);break;}
-                    case 6:{playRandomSoundArray(metagame,AC130MinigunVoice,eventinfo.m_factionid,eventinfo.m_pos.toString(),3.5);break;}
-                    case 7:{playRandomSoundArray(metagame,AC130M202Voice,eventinfo.m_factionid,eventinfo.m_pos.toString(),3.5);break;}
+                    case 5:{
+                        playRandomSoundArray(metagame,AC130ShotgunVoice,eventinfo.m_factionid,eventinfo.m_pos.toString(),3.2);
+                        ac130_voice_interval = 3;
+                        break;
+                    }
+                    case 6:{
+                        playRandomSoundArray(metagame,AC130MinigunVoice,eventinfo.m_factionid,eventinfo.m_pos.toString(),3.2);
+                        ac130_voice_interval = 8;
+                        break;
+                    }
+                    case 7:{
+                        playRandomSoundArray(metagame,AC130M202Voice,eventinfo.m_factionid,eventinfo.m_pos.toString(),3.2);
+                        ac130_voice_interval = 2;
+                        break;
+                    }
                     default:    break;
                 }           
-                ac130_voice_interval = 2;
             }
         }
         else if(ac130_voice_interval<=0){
