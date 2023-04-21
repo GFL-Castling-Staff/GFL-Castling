@@ -39,7 +39,7 @@
     <animation state_key="changing_weapon_in" animation_key="change weapon in, single hand carry"/>
     <animation state_key="stabbing" animation_key="pistol whip"/>
     <animation state_key="stabbing" animation_key="pistol whip 3"/>
-    <inventory encumbrance="10.0" buy_price="10.0" sell_price="10.0"/>
+    <inventory encumbrance="5.0" buy_price="10.0" sell_price="10.0"/>
     <sound key="fire" fileref="m1873_fire_FromCOD15.wav" pitch_variety="0.05" volume="3.0"/>
     <sound key="magazine_out" fileref="python_mgz_out_FromINS.wav" volume="1.5"/>
     <sound key="magazine_in" fileref="python_mgz_in_FromINS.wav" volume="1"/>
