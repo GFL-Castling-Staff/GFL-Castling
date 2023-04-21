@@ -24,7 +24,7 @@
         <sound class="impact" fileref="rifle_drop.wav" />
         <model filename="gkw_mg_aek999.xml" />
         <hud_icon filename="gkw_aek999.png" />
-        <projectile file="bullet.projectile" can_be_detected_by_footmen="0">
+        <projectile file="bullet.projectile" can_be_detected_by_footmen="0" can_be_detected_by_driver="0">
             <result class="hit" kill_probability="2.4" kill_probability_offset_on_successful_hit="1.0" kill_decay_start_time="3.273" kill_decay_end_time="5.455" />
         </projectile>
         <stance state_key="running" accuracy="0.6" />
@@ -64,7 +64,7 @@
         <sound class="impact" fileref="rifle_drop.wav" />
         <model filename="gkw_mg_aek999.xml" />
         <hud_icon filename="gkw_aek999_skill.png" />
-        <projectile file="bullet.projectile" can_be_detected_by_footmen="0">
+        <projectile file="bullet.projectile" can_be_detected_by_footmen="0" can_be_detected_by_driver="0">
             <result class="hit" kill_probability="2.4" kill_probability_offset_on_successful_hit="2.3" kill_decay_start_time="3.273" kill_decay_end_time="5.455" />
             <trail probability="1.0" key="BulletApTrail_ct" />
         </projectile>
