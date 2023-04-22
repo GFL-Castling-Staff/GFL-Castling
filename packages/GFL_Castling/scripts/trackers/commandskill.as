@@ -2530,7 +2530,7 @@ class CommandSkill : Tracker {
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         if (character is null) return;
         const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
-        if (player !is null) return;
+        if (player is null) return;
         if (player.hasAttribute("aim_target")) {
             string target = player.getStringAttribute("aim_target");
             int factionid = character.getIntAttribute("faction_id");
