@@ -21,7 +21,7 @@
     burst_shots="1"
     slot="0"
     use_basic_muzzle_smoke_effect="0"/>
-    <inventory encumbrance="25.0"  buy_price="20.0" sell_price="10.0"/>
+    <inventory encumbrance="12.5"  buy_price="20.0" sell_price="10.0"/>
     <animation state_key="cycle" animation_key="recoil,m1887" />
     <animation key="reload" animation_key="RevolverReload"/>
     <sound key="fire" fileref="m1897_fire_FromCOD5.wav" pitch_variety="0.05" volume="1"/>

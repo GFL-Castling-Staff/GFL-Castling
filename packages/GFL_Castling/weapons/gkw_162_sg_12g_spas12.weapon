@@ -23,7 +23,7 @@
 		last_burst_retrigger_time="-1"
 		slot="0"
 		use_basic_muzzle_smoke_effect="0"/>
-		<inventory encumbrance="25.0" buy_price="76.0" sell_price="76.0"/>
+		<inventory encumbrance="12.5" buy_price="76.0" sell_price="76.0"/>
 		<next_in_chain key="gkw_spas12_skill.weapon" share_ammo="1"/>
 		<animation state_key="cycle" animation_key="Pshotgun0.5"/>
 		<animation state_key="cycle" stance_key="prone" animation_key="Pshotgun0.5p"/>
@@ -157,7 +157,7 @@
 		burst_shots="1"
 		last_burst_retrigger_time="0.2"
 		/>
-		<inventory encumbrance="25.0" buy_price="76.0" sell_price="76.0" />
+		<inventory encumbrance="12.5" buy_price="76.0" sell_price="76.0" />
 		<next_in_chain key="gkw_spas12.weapon" share_ammo="1"/>
 		<commonness value="0" in_stock="0" can_respawn_with="1"/>
 		<animation key="reload" animation_key="reloading, oaat"/>

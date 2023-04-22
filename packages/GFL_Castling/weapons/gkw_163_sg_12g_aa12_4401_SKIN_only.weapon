@@ -31,7 +31,7 @@
     <sound key="cycle" fileref="aa12_cycle_FromCOD16.wav" volume="0.35" />
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<commonness value="0" in_stock="0"/>
-	<inventory encumbrance="25.0" buy_price="75.0" sell_price="75.0"/>
+	<inventory encumbrance="12.5" buy_price="75.0" sell_price="75.0"/>
     <model filename="gkw_sg_aa12_4401.xml" />
 	<hud_icon filename="gkw_aa12_4401.png"/>
 	<weak_hand_hold offset="0.3"/>
@@ -48,6 +48,7 @@
 	<stance state_key="over_wall" accuracy="1.0"/>
 	<modifier class="detectability" value="0.45"/>
 	<tag name="shotgun"/>
+	<tag name="elite"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
@@ -108,7 +109,7 @@
     <sound key="cycle" fileref="aa12_cycle_FromCOD16.wav" volume="0.35" />
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<commonness value="0" in_stock="0"/>
-	<inventory encumbrance="25.0" buy_price="75.0" sell_price="75.0"/>
+	<inventory encumbrance="12.5" buy_price="75.0" sell_price="75.0"/>
     <model filename="gkw_sg_aa12_4401.xml" />
 	<hud_icon filename="gkw_aa12only_skill.png"/>
 	<weak_hand_hold offset="0.3"/>
@@ -126,6 +127,7 @@
 	<modifier class="detectability" value="0.45"/>
 	<modifier class="speed" value="-0.1" />
 	<tag name="shotgun"/>
+	<tag name="elite"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>

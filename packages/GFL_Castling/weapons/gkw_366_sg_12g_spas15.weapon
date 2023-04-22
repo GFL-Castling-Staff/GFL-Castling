@@ -23,7 +23,7 @@
         last_burst_retrigger_time="-1"
         slot="0"
         use_basic_muzzle_smoke_effect="0"/>
-        <inventory encumbrance="25.0" buy_price="86" sell_price="86"/>
+        <inventory encumbrance="12.5" buy_price="86" sell_price="86"/>
         <next_in_chain key="gkw_spas15_skill.weapon" share_ammo="1"/>
         <animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
         <animation state_key="cycle" animation_key="Pshotgun0.5" />
@@ -108,7 +108,7 @@
         last_burst_retrigger_time="0.25"
         slot="0"
         use_basic_muzzle_smoke_effect="0"/>
-        <inventory encumbrance="25.0" buy_price="86" sell_price="86"/>
+        <inventory encumbrance="12.5" buy_price="86" sell_price="86"/>
         <next_in_chain key="gkw_spas15.weapon" share_ammo="1"/>
         <animation key="reload" animation_key="reloading, magazine rifle 1.8"/>
         <sound key="fire" fileref="spas15_fire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.3"/>
