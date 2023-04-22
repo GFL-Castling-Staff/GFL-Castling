@@ -54,10 +54,10 @@
     <effect class="muzzle" ref="ejection_556" />
     <stance state_key="running" accuracy="0.3" />
     <stance state_key="walking" accuracy="0.55" />
-    <stance state_key="crouch_moving" accuracy="0.85" />
-    <stance state_key="prone_moving" accuracy="0.85" />
-    <stance state_key="standing" accuracy="0.85" />
-    <stance state_key="crouching" accuracy="1.2" />
+    <stance state_key="crouch_moving" accuracy="0.35" />
+    <stance state_key="prone_moving" accuracy="0.35" />
+    <stance state_key="standing" accuracy="0.65" />
+    <stance state_key="crouching" accuracy="0.85" />
     <stance state_key="prone" accuracy="1.2" />
     <stance state_key="over_wall" accuracy="1.2" />
     <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5" />

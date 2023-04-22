@@ -219,12 +219,12 @@
         slot="0" 
         on_ground_up="0 1 0" 
         radius="1.2" 
-        can_be_disarmed="1" 
+        can_be_disarmed="0" 
         can_be_detected_by_driver="0" 
         can_be_detected_by_footmen="0" 
         time_to_live_out_in_the_open="0.0" 
         visible_height="-2.4" 
-        blast_damage_threshold="10.0"
+        blast_damage_threshold="20.0"
         use_time_to_live="1" 
         time_to_live="180" >
         <collision class="sticky" />
@@ -235,11 +235,11 @@
             <collider class="character" enabled="1" faction_compare="not_equal"/>
         </trigger>
     	<result class="spawn" instance_class="projectile" instance_key="mon200_blast.projectile" min_amount="10" max_amount="10" offset="0 0.2 0" position_spread="0 0" direction_spread="0 0" />
-        <model mesh_filename="at_mine.mesh" texture_filename="at_mine_BOOM.png" />
-        <hud_icon filename="hud_claymore.png" />
-        <throwable curve_height="1.0" near_far_distance="2.0" speed_estimation_near="5.0" speed_estimation_far="5.0" max_speed="5.0" randomness="0.0" />
+        <model mesh_filename="at_mine.mesh" texture_filename="at_mine.png" />
+        <hud_icon filename="hud_at_mine.png" />
+        <throwable curve_height="2.0" near_far_distance="2.0" speed_estimation_near="5.0" speed_estimation_far="5.0" max_speed="5.0" randomness="0.01" />
         <commonness value="1" in_stock="1" can_respawn_with="1" />
-        <inventory encumbrance="4.0" price="5.0" />
+        <inventory encumbrance="4.0" price="25.0" />
         <capacity value="8" source="rank" source_value="0.0" />
         <sound class="result" key="other" fileref="explosion_FromCOD16_1.wav" volume="2.8" />
         <sound class="result" key="other" fileref="explosion_FromCOD16_2.wav" volume="2.8" />

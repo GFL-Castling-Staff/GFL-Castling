@@ -88,7 +88,7 @@
         carry_in_two_hands="1"
         burst_shots="1"
         last_burst_retrigger_time="-1"
-        can_shoot_standing="1"
+        can_shoot_standing="0"
         can_shoot_crouching="1"
         can_shoot_prone="1"/>
         <inventory encumbrance="50.0" buy_price="60.0" sell_price="60.0"/>
@@ -127,8 +127,8 @@
         <animation state_key="celebrate_shoot" animation_key="celebrating, shooting"/>
         <animation state_key="stabbing" animation_key="melee, quick knife"/>
         <animation state_key="stabbing" animation_key="pistol whip 3"/>
-        <animation key="cycle" animation_key="cycle_2h_hip_300rpm"/>
-        <animation key="cycle" stance_key="crouching" animation_key="cycle_2h_hip_500rpm"/>
+        <animation key="cycle" animation_key="cycle_2h_hip_600rpm"/>
+        <animation key="cycle" stance_key="crouching" animation_key="cycle_2h_hip_600rpm"/>
         <animation key="cycle" stance_key="prone" animation_key="cycle_2h_rifle_600rpm_prone"/>
         <animation key="cycle" stance_key="over_wall" animation_key="cycle_2h_rifle_600rpm"/>
     </weapon>
