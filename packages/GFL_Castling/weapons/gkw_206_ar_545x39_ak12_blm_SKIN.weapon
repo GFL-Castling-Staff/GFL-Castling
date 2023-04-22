@@ -42,7 +42,7 @@
         <sound key="cycle" fileref="AK12_MEET_JP.wav" volume="0.9" pitch_variety="0"/>
         <sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6" />
         <sound class="impact" fileref="rifle_drop.wav" />
-        <model filename="gkw_ar_ak12_2402.xml" />
+        <model filename="gkw_ar_ak12.xml" />
         <hud_icon filename="gkw_ak12_blm.png" />
         <weak_hand_hold offset="0.2" />
         <projectile file="bullet.projectile">
@@ -93,7 +93,7 @@
         <sound key="cycle" fileref="AK12_SKILL3_JP.wav" volume="0.9" pitch_variety="0"/>
         <sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6" />
         <sound class="impact" fileref="rifle_drop.wav" />
-        <model filename="gkw_ar_ak12_2402.xml" />
+        <model filename="gkw_ar_ak12.xml" />
         <hud_icon filename="gkw_ak12_blm.png" />
         <weak_hand_hold offset="0.2" />
         <projectile file="bullet.projectile">

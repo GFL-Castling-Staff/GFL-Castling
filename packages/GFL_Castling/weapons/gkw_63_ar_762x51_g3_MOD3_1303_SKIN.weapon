@@ -49,7 +49,7 @@
 		class="4"
         slot="0" 
 		magazine_size="20" 
-		name="G3(MOD3)-[Parsty Cook on Battlefield] - Semi Auto" 
+		name="G3(MOD3)-[Parsty Cook on Battlefield] - G3SG1" 
 		projectile_speed="240" 
 		retrigger_time="-1"
         last_burst_retrigger_time="0.2" 
@@ -65,7 +65,7 @@
     <sound key="magazine_in" fileref="g3_mgz_in_FromCOD17.wav" volume="0.4" />
     <sound key="cycle" fileref="g3_cycle_FromCOD17.wav" volume="0.4" />
     <sound class="impact" fileref="rifle_drop.wav" />
-    <model filename="gkw_ar_g3.xml" />
+    <model filename="gkw_ar_g3sg1.xml" />
     <hud_icon filename="gkw_g3_1303.png" />
     <commonness value="0" in_stock="0" />
     <capacity value="1" source="rank" source_value="0.0" />
