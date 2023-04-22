@@ -109,7 +109,7 @@
         <sound key="cycle_out" fileref="sv98_cycle_out_FromEFT.wav" volume="0.8"/>
         <sound key="cycle_in" fileref="sv98_cycle_in_FromEFT.wav" volume="0.8"/>
         <sound class="impact" fileref="rifle_drop.wav" volume="1"/>
-        <model filename="gkw_rf_sv-98_mod3 98.xml"/>
+        <model filename="gkw_rf_sv98mod3.xml"/>
         <hud_icon filename="gkw_sv98_1906.png"/>
         <capacity value="1" source="rank" source_value="0.0"/>
         <commonness value="0" in_stock="0" can_respawn_with="1"/>
