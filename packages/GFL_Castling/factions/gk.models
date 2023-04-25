@@ -2355,4 +2355,22 @@
         <requirement class="weapon" key="gkw_savage99.weapon" slot="0" />
     </model>
 
+    <model filename="gkd_smg_vector_agent.xml">
+        <requirement class="weapon" key="gkw_vector_agent_hpi.weapon" slot="0" />
+    </model>
+    <model filename="gkd_smg_vector_agent.xml">
+        <requirement class="weapon" key="gkw_vector_agent_fmj.weapon" slot="0" />
+    </model>
+    <model filename="gkd_smg_vector_agent.xml">
+        <requirement class="weapon" key="gkw_vector_agent_sticky.weapon" slot="0" />
+    </model>
+    <model filename="gkd_ar_hk416_agent.xml">
+        <requirement class="weapon" key="gkw_hk416_agent_hv.weapon" slot="0" />
+    </model>
+    <model filename="gkd_ar_hk416_agent.xml">
+        <requirement class="weapon" key="gkw_hk416_agent_fmj.weapon" slot="0" />
+    </model>
+    <model filename="gkd_ar_hk416_agent.xml">
+        <requirement class="weapon" key="gkw_hk416_agent_sticky.weapon" slot="0" />
+    </model>
 </models>
