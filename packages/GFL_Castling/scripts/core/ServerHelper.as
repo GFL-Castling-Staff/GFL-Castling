@@ -115,93 +115,37 @@ class ServerHelper : Tracker {
             if (player is null) {return;}
             if (player.hasAttribute("aim_target")) {
                 string target = player.getStringAttribute("aim_target");
-                switch (s){
-                    //if(s=="mgnmsl") spawnSoldier(m_metagame,1,0,target,"default_mg");
-
-                    case "qwd":
-                        spawnSoldier(m_metagame,1,1,target,"sf_manticore");
-                        break;
-                    case "hydra":
-                        spawnSoldier(m_metagame,1,1,target,"kcco_Hydra");
-                        break;
-                    case "vespid":
-                        spawnSoldier(m_metagame,1,1,target,"sf_vespid");
-                        break;
-                    case "guard":
-                        spawnSoldier(m_metagame,1,1,target,"sf_guard");
-                        break;
-                    case "jaeger":
-                        spawnSoldier(m_metagame,1,1,target,"sf_jaeger");break;
-                    case "gangshi":
-                        spawnSoldier(m_metagame,1,1,target,"sfw_nemeum");break;
-                    case "longqi":
-                        spawnSoldier(m_metagame,1,1,target,"sfw_dragoon");break;
-                    case "m16":
-                        spawnSoldier(m_metagame,1,1,target,"sfw_M16A1");break;
-                    case "baka":
-                        spawnSoldier(m_metagame,1,1,target,"sfw_Destroyer");
-                        break;
-                    case "diner":
-                        spawnSoldier(m_metagame,1,1,target,"sf_dinergate");
-                        break;
-                    case "xfj":
-                        spawnSoldier(m_metagame,1,1,target,"sf_scouts");
-                        break;
-                    case "aegis": spawnSoldier(m_metagame,1,1,target,"kcco_aegis");
-                        break;
-                    case "nbl":
-                        spawnSoldier(m_metagame,1,1,target,"kcco_cerynitis");
-                        break;
-                    case "archer":
-                        spawnSoldier(m_metagame,1,1,target,"kcco_archer");
-                        break;
-                    case "kccodog":
-                        spawnSoldier(m_metagame,1,1,target,"kcco_dog");
-                        break;
-                    case "lhh":
-                        spawnSoldier(m_metagame,1,1,target,"kcco_teslatrooper");
-                        break;
-                    case "kccoar":
-                        spawnSoldier(m_metagame,1,1,target,"kcco_ar");
-                        break;
-                    case "paraar":
-                        spawnSoldier(m_metagame,1,1,target,"para_strelet");
-                        break;
-                    case "tiaotiao":
-                        spawnSoldier(m_metagame,1,1,target,"para_rodelero");
-                        break;
-                    case "zhs":
-                        spawnSoldier(m_metagame,1,1,target,"parw_commander");
-                        break;
-                    case "police":
-                        spawnSoldier(m_metagame,1,1,target,"parw_police");
-                        break;
-                    case "paradog": spawnSoldier(m_metagame,1,1,target,"parw_dog");
-                        break;
-                    case "nyto":
-                        spawnSoldier(m_metagame,1,1,target,"alina");
-                        break;
-                    case "teal":
-                        spawnSoldier(m_metagame,1,1,target,"teal");
-                        break;
-                    case "int":
-                        spawnSoldier(m_metagame,1,1,target,"sfw_Intruder");
-                        break;
-                    case "bgd":
-                        spawnSoldier(m_metagame,1,1,target,"Paradeus_doppelsoldner");
-                        break;
-                    case "nbl2":
-                        spawnSoldier(m_metagame,1,1,target,"kcco_cerynitis_swap");
-                        break;
-                    case "daoniang":
-                        spawnSoldier(m_metagame,1,1,target,"Brute");
-                        break;
-                    case "daoniang_s":
-                        spawnSoldier(m_metagame,1,1,target,"Brute_swap");
-                        break;
-                    case "njie":
-                        spawnSoldier(m_metagame,1,1,target,"Narciss");
-                        break;
+                if(s=="qwd") spawnSoldier(m_metagame,1,1,target,"sf_manticore");
+                if(s=="hydra") spawnSoldier(m_metagame,1,1,target,"kcco_Hydra");
+                if(s=="vespid") spawnSoldier(m_metagame,1,1,target,"sf_vespid");
+                if(s=="guard") spawnSoldier(m_metagame,1,1,target,"sf_guard");
+                if(s=="jaeger") spawnSoldier(m_metagame,1,1,target,"sf_jaeger");
+                if(s=="gangshi") spawnSoldier(m_metagame,1,1,target,"sfw_nemeum");
+                if(s=="longqi") spawnSoldier(m_metagame,1,1,target,"sfw_dragoon");
+                if(s=="m16") spawnSoldier(m_metagame,1,1,target,"sfw_M16A1");
+                if(s=="baka") spawnSoldier(m_metagame,1,1,target,"sfw_Destroyer");
+                if(s=="diner") spawnSoldier(m_metagame,1,1,target,"sf_dinergate");
+                if(s=="xfj") spawnSoldier(m_metagame,1,1,target,"sf_scouts");
+                if(s=="aegis") spawnSoldier(m_metagame,1,1,target,"kcco_aegis");
+                if(s=="nbl") spawnSoldier(m_metagame,1,1,target,"kcco_cerynitis");
+                if(s=="archer") spawnSoldier(m_metagame,1,1,target,"kcco_archer");
+                if(s=="kccodog") spawnSoldier(m_metagame,1,1,target,"kcco_dog");
+                if(s=="lhh") spawnSoldier(m_metagame,1,1,target,"kcco_teslatrooper");
+                if(s=="kccoar") spawnSoldier(m_metagame,1,1,target,"kcco_ar");
+                if(s=="paraar") spawnSoldier(m_metagame,1,1,target,"para_strelet");
+                if(s=="tiaotiao") spawnSoldier(m_metagame,1,1,target,"para_rodelero");
+                if(s=="zhs") spawnSoldier(m_metagame,1,1,target,"parw_commander");
+                if(s=="police") spawnSoldier(m_metagame,1,1,target,"parw_police");
+                if(s=="paradog") spawnSoldier(m_metagame,1,1,target,"parw_dog");
+                if(s=="nyto") spawnSoldier(m_metagame,1,1,target,"alina");
+                if(s=="teal") spawnSoldier(m_metagame,1,1,target,"teal");
+                if(s=="int") spawnSoldier(m_metagame,1,1,target,"sfw_Intruder");
+                if(s=="bgd") spawnSoldier(m_metagame,1,1,target,"Paradeus_doppelsoldner");
+                //if(s=="mgnmsl") spawnSoldier(m_metagame,1,0,target,"default_mg");
+                if(s=="nbl2") spawnSoldier(m_metagame,1,1,target,"kcco_cerynitis_swap");
+                if(s=="daoniang") spawnSoldier(m_metagame,1,1,target,"Brute");
+                if(s=="daoniang_s") spawnSoldier(m_metagame,1,1,target,"Brute_swap");
+                if(s=="njie") spawnSoldier(m_metagame,1,1,target,"Narciss");
                 }
             }   
         }
