@@ -6,12 +6,11 @@ array<const XmlElement@>@ getAllVehicles(const Metagame@ metagame, int factionId
 			dictionary = { {"TagName", "data"}, {"class", "vehicles"}, {"faction_id", factionId}}}));
 
 	const XmlElement@ doc = metagame.getComms().query(query);
-	if (doc !is null) {
+	if (doc) {
 		return doc.getElementsByTagName("vehicle");
-	} else {
-		array<const XmlElement@> empty;
-		return @empty;
 	}
+	array<const XmlElement@> empty;
+	return @empty;
 }
 
 // --------------------------------------------------------
@@ -29,11 +28,10 @@ const XmlElement@ getCharacterInfo2(const Metagame@ metagame, int characterId) {
 			dictionary = { {"TagName", "data"}, {"class", "character"}, {"id", characterId}, {"include_equipment", 1}}}));
 
 	const XmlElement@ doc = metagame.getComms().query(query);
-	if (doc !is null) {
+	if (doc) {
 		return doc.getFirstElementByTagName("character"); //.getElementsByTagName("item")
-	} else {
-		return null;
 	}
+	return null;
 }
 
 // ----------------------------------------------------
@@ -42,10 +40,9 @@ array<const XmlElement@>@ getSoldierGroups(Metagame@ metagame, int factionId) {
 		makeQuery(metagame, array<dictionary> = {
 			dictionary = { {"TagName", "data"}, {"class", "soldier_groups"}, {"faction_id", factionId}}}));
 	const XmlElement@ doc = metagame.getComms().query(query);
-	if (doc !is null) {
+	if (doc) {
 	return doc.getElementsByTagName("soldier_group");
-	} else {
-		array<const XmlElement@> empty;
-		return @empty;
 	}
+	array<const XmlElement@> empty;
+	return @empty;
 }

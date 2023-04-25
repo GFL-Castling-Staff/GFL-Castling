@@ -19,11 +19,10 @@ const XmlElement@ getGenericObjectInfo(const Metagame@ metagame, string classNam
 		}));
 
 	const XmlElement@ doc = metagame.getComms().query(query);
-	if (doc !is null) {
+	if (doc) {
 		return doc.getFirstElementByTagName(className);
-	} else {
-		return null;
 	}
+	return null;
 }
 
 // --------------------------------------------------------
@@ -33,12 +32,11 @@ array<const XmlElement@>@ getGenericObjectList(const Metagame@ metagame, string 
 			dictionary = { {"TagName", "data"}, {"class", queryClassName} } }));
 
 	const XmlElement@ doc = metagame.getComms().query(query);
-	if (doc !is null) {
+	if (doc) {
 		return doc.getElementsByTagName(className);
-	} else {
-		array<const XmlElement@> empty;
-		return @empty;
 	}
+	array<const XmlElement@> empty;
+	return @empty;
 }
 
 // --------------------------------------------------------
@@ -53,12 +51,11 @@ array<const XmlElement@>@ getVehicles(const Metagame@ metagame, int factionId, s
 			dictionary = { {"TagName", "data"}, {"class", "vehicles"}, {"faction_id", factionId}, {"key", vehicleKey} } }));
 
 	const XmlElement@ doc = metagame.getComms().query(query);
-	if (doc !is null) {
+	if (doc) {
 		return doc.getElementsByTagName("vehicle");
-	} else {
-		array<const XmlElement@> empty;
-		return @empty;
 	}
+	array<const XmlElement@> empty;
+	return @empty;
 }
 
 // --------------------------------------------------------
@@ -158,7 +155,7 @@ const XmlElement@ getClosestBase(const Metagame@ metagame, const Vector3@ positi
 		float closestDistance = -1.0f;
 		for (uint i = 0; i < baseList.size(); ++i) {
 			const XmlElement@ base = baseList[i];
-			if (unacceptedBaseKeys !is null && unacceptedBaseKeys.find(base.getStringAttribute("key")) >= 0) {
+			if (unacceptedBaseKeys && unacceptedBaseKeys.find(base.getStringAttribute("key")) >= 0) {
 				// not accepted
 				continue;
 			}
@@ -259,11 +256,10 @@ const XmlElement@ getGeneralInfo(const Metagame@ metagame) {
 			dictionary = { {"TagName", "data"}, {"class", "general"} } }));
 
 	const XmlElement@ doc = metagame.getComms().query(query);
-	if (doc !is null) {
+	if (doc) {
 		return doc.getFirstElementByTagName("general");
-	} else {
-		return null;
 	}
+	return null;
 }
 
 // --------------------------------------------------------
@@ -302,12 +298,11 @@ array<const XmlElement@>@ getCharacters(const Metagame@ metagame, int factionId)
 			dictionary = { {"TagName", "data"}, {"class", "characters"}, {"faction_id", factionId} } }));
 
 	const XmlElement@ doc = metagame.getComms().query(query);
-	if (doc !is null) {
+	if (doc) {
 		return doc.getElementsByTagName("character");
-	} else {
-		array<const XmlElement@> empty;
-		return @empty;
 	}
+	array<const XmlElement@> empty;
+	return @empty;
 }
 
 // --------------------------------------------------------
@@ -324,12 +319,12 @@ array<const XmlElement@>@ getCharactersInBlocks(const Metagame@ metagame, int fa
 		}));
 
 	const XmlElement@ doc = metagame.getComms().query(query);
-	if (doc !is null) {
+	if (doc) {
 		return doc.getElementsByTagName("character");
-	} else {
-		array<const XmlElement@> empty;
-		return @empty;
 	}
+	array<const XmlElement@> empty;
+	return @empty;
+
 }
 
 // --------------------------------------------------------
@@ -341,12 +336,13 @@ array<const XmlElement@>@ getGenericNodes(const Metagame@ metagame, string layer
 		}));
 
 	const XmlElement@ doc = metagame.getComms().query(query);
-	if (doc !is null) {
+	// just write:
+	// if doc {}
+	if (doc) {
 		return doc.getElementsByTagName("generic_node");
-	} else {
-		array<const XmlElement@> empty;
-		return @empty;
 	}
+	array<const XmlElement@> empty;
+	return @empty;
 }
 
 
@@ -527,13 +523,12 @@ array<const XmlElement@>@ getHitboxes(const Metagame@ metagame) {
 			dictionary = { {"TagName", "data"}, {"class", "hitboxes"} } }));
 	
 	const XmlElement@ doc = metagame.getComms().query(query);
-	if (doc !is null) {
+	if (doc) {
 		array<const XmlElement@> hitboxes = doc.getElementsByTagName("hitbox");
 		return hitboxes;
-	} else {
-		array<const XmlElement@> empty;
-		return @empty;
 	}
+	array<const XmlElement@> empty;
+	return @empty;
 }
 
 array<const XmlElement@>@ getVehiclePoint(const Metagame@ metagame) {
@@ -542,13 +537,12 @@ array<const XmlElement@>@ getVehiclePoint(const Metagame@ metagame) {
 			dictionary = { {"TagName", "data"}, {"class", "spawns"} } }));
 	
 	const XmlElement@ doc = metagame.getComms().query(query);
-	if (doc !is null) {
+	if (doc) {
 		array<const XmlElement@> hitboxes = doc.getElementsByTagName("spawn");
 		return hitboxes;
-	} else {
-		array<const XmlElement@> empty;
-		return @empty;
 	}
+	array<const XmlElement@> empty;
+	return @empty;
 }
 
 // -------------------------------------------------------
@@ -558,7 +552,7 @@ array<const XmlElement@>@ getArmoryHitboxes(const Metagame@ metagame, int factio
 			dictionary = { {"TagName", "data"}, {"class", "hitboxes"}, {"faction_id", factionId} } }));
 
 	const XmlElement@ doc = metagame.getComms().query(query);
-	if (doc !is null) {
+	if (doc) {
 		array<const XmlElement@> armoryList = doc.getElementsByTagName("hitbox");
 
 		// go through the list and only leave the ones in we're interested of, i.e. weapon racks = armories
@@ -579,10 +573,9 @@ array<const XmlElement@>@ getArmoryHitboxes(const Metagame@ metagame, int factio
 		}
 		_log("* " + armoryList.size() + " armories found", 1);
 		return armoryList;
-	} else {
-		array<const XmlElement@> empty;
-		return @empty;
 	}
+	array<const XmlElement@> empty;
+	return @empty;
 }
 
 // -------------------------------------------------------
@@ -592,7 +585,7 @@ array<const XmlElement@>@ getArmoryList(const Metagame@ metagame, int factionId)
 			dictionary = { {"TagName", "data"}, {"class", "item_containers"}, {"faction_id", factionId} } }));
 
 	const XmlElement@ doc = metagame.getComms().query(query);
-	if (doc !is null) {
+	if (doc) {
 		array<const XmlElement@> armoryList = doc.getElementsByTagName("item_container");
 
 		// go through the list and only leave the ones in we're interested of, i.e. weapon racks = armories
@@ -613,10 +606,9 @@ array<const XmlElement@>@ getArmoryList(const Metagame@ metagame, int factionId)
 		}
 		_log("* " + armoryList.size() + " armories found", 1);
 		return armoryList;
-	} else {
-		array<const XmlElement@> empty;
-		return @empty;
 	}
+	array<const XmlElement@> empty;
+	return @empty;
 }
 
 // --------------------------------------------------------
@@ -629,13 +621,12 @@ array<const XmlElement@>@ getCharactersNearPosition(const Metagame@ metagame, co
 						   {"position", position.toString()}, {"range", range} } }));
 
 	const XmlElement@ doc = metagame.getComms().query(query);
-	if (doc !is null) {
+	if (doc) {
 		characters = doc.getElementsByTagName("character");
 		return characters;
-	} else {
-		array<const XmlElement@> empty;
-		return @empty;
 	}
+	array<const XmlElement@> empty;
+	return @empty;
 }
 
 array<const XmlElement@>@ getCharactersNearPosition2(const Metagame@ metagame, const Vector3@ position,float range = 80.0f) {
@@ -647,13 +638,12 @@ array<const XmlElement@>@ getCharactersNearPosition2(const Metagame@ metagame, c
 						   {"position", position.toString()}, {"range", range} } }));
 
 	const XmlElement@ doc = metagame.getComms().query(query);
-	if (doc !is null) {
+	if (doc) {
 		characters = doc.getElementsByTagName("character");
 		return characters;
-	} else {
-		array<const XmlElement@> empty;
-		return @empty;
 	}
+	array<const XmlElement@> empty;
+	return @empty;
 }
 
 // --------------------------------------------------------
@@ -661,7 +651,7 @@ array<const XmlElement@>@ getCharactersNearVehicle(const Metagame@ metagame, int
 	array<const XmlElement@>@ characters;
 
 	const XmlElement@ vehicleInfo = getVehicleInfo(metagame, vehicleId);
-	if (vehicleInfo !is null) {
+	if (vehicleInfol) {
 		Vector3 position = stringToVector3(vehicleInfo.getStringAttribute("position"));
 		@characters = getCharactersNearPosition(metagame, position, factionId);
 	} else {
@@ -695,7 +685,7 @@ array<const XmlElement@>@ getFactionResources(const Metagame@ metagame, int fact
 	const XmlElement@ doc = metagame.getComms().query(query);
 
 	array<const XmlElement@> list;
-	if (doc !is null) {
+	if (doc) {
 		list = doc.getElementsByTagName(typeStr1);
 		_log("* " + list.size() + " " + typeStr1 + " resources found in faction " + factionId + ", soldierg group " + soldierGroup, 1);
 	}
@@ -717,7 +707,7 @@ const XmlElement@ getResource(const Metagame@ metagame, string key, string typeS
 	const XmlElement@ doc = metagame.getComms().query(query);
 	
 	const XmlElement@ r = null;
-	if (doc !is null) {
+	if (doc) {
 		@r = doc.getFirstElementByTagName(typeStr1);
 	}
 
@@ -728,7 +718,7 @@ const XmlElement@ getResource(const Metagame@ metagame, string key, string typeS
 string getResourceName(const Metagame@ metagame, string key, string typeStr1) {
 	string name = "";
 	const XmlElement@ r = getResource(metagame, key, typeStr1);
-	if (r !is null) {
+	if (r) {
 		name = r.getStringAttribute("name");
 	}
 	return name;
@@ -804,9 +794,9 @@ array<string>@ loadStringsFromFile(const Metagame@ metagame, string filename, st
 			dictionary = { {"TagName", "data"}, {"class", "saved_data"}, {"filename", filename}, {"location", "app_data"} } }));
 	const XmlElement@ doc = metagame.getComms().query(query);
 
-	if (doc !is null) {
+	if (doc) {
 		const XmlElement@ root = doc.getFirstChild();
-		if (root !is null) {
+		if (root) {
 			array<const XmlElement@> items = root.getElementsByTagName(itemName);
 			for (uint i = 0; i < items.size(); ++i) {
 				const XmlElement@ item = items[i];
@@ -824,9 +814,9 @@ array<string>@ loadStringsFromSaveFile(const Metagame@ metagame, string filename
 			dictionary = { {"TagName", "data"}, {"class", "saved_data"}, {"filename", filename} } }));
 	const XmlElement@ doc = metagame.getComms().query(query);
 
-	if (doc !is null) {
+	if (doc) {
 		const XmlElement@ root = doc.getFirstChild();
-		if (root !is null) {
+		if (root) {
 			array<const XmlElement@> items = root.getElementsByTagName(itemName);
 			for (uint i = 0; i < items.size(); ++i) {
 				const XmlElement@ item = items[i];
@@ -913,11 +903,10 @@ void playObjectiveCompleteSound(const Metagame@ metagame, int factionId) {
 // --------------------------------------------
 bool hasFactionComms(const Metagame@ metagame, int factionId) {
 	const XmlElement@ faction = getFactionInfo(metagame, factionId);
-	if (faction !is null) {
+	if (faction) {
 		return faction.getBoolAttribute("comms_status");
-	} else {
-		return true;
 	}
+	return true;
 }
 
 // --------------------------------------------

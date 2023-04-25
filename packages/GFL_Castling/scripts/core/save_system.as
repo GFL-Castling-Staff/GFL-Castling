@@ -26,10 +26,8 @@ class player_data
         if((m_corenum-num) <0){
             return false;
         }
-        else{
-            m_corenum -= num;
-            return true;
-        }
+        m_corenum -= num;
+        return true;
     }
 
     bool checkTdollAvailable(int doll_index){

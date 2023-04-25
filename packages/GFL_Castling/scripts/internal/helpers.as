@@ -162,7 +162,7 @@ class XmlElement {
 			m_data.get("Children", @childrenData);
 		}
 
-		if (childrenData !is null) {
+		if (childrenData) {
 			childrenData.insertLast(child.toDictionary());
 		}
 	}

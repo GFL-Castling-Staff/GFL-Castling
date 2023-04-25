@@ -3,7 +3,7 @@ string getGFLkey(string num) {
     if (key!=""){
         return key;
     } 
-    else return "";
+    return "";
 }
 
 dictionary tdoll_index = {
