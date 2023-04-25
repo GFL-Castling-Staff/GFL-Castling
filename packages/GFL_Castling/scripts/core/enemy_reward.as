@@ -5,9 +5,8 @@ int getRPKillReward(string name) {
         int key = int(RP_enemy_index[name]);
         return key;
     }
-    else{
-        return 0;
-    }
+    return 0;
+
 }
 
 dictionary RP_enemy_index = {
@@ -76,9 +75,7 @@ float getXPKillReward(string name) {
         float key = float(XP_enemy_index[name]);
         return key;
     }
-    else{
-        return 0.0;
-    }
+    return 0.0;
 }
 
 dictionary XP_enemy_index = {

@@ -1074,10 +1074,9 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 			for (uint j = 0; j < own.size(); ++j) {
 				const XmlElement@ ownNode = own[j];
 				string ownKey = ownNode.getStringAttribute("key");
-				if (r.m_key != ownKey) {
-					// no match, continue searching
-				} else {
-					// we already have this, skip it
+				// This one is kinda strange
+				// just find and break instead of making if else check
+				if (r.m_key == ownKey) {
 					add = false;
 					break;
 				}
