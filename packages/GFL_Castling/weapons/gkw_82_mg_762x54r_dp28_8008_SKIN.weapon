@@ -76,7 +76,7 @@
     <sound class="impact" fileref="rifle_drop.wav"/>
     <model filename="gkw_kulakov.xml"/>
 
-    <ballistics curve_height="1.8" near_far_distance="10.0" speed_estimation_near="14.0" speed_estimation_far="18.0" max_speed="47.0" randomness="0.0" tweak_factor="1.55" /> 
+    <ballistics curve_height="1.8" near_far_distance="10.0" speed_estimation_near="14.0" speed_estimation_far="18.0" max_speed="47.0" randomness="0.0" /> 
     
     <projectile file="firenade_dp28.projectile"/>
     <weak_hand_hold offset="0.3"/>

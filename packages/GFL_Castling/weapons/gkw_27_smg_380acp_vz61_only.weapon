@@ -59,7 +59,7 @@
     <hud_icon filename="gkw_vz61_only.png"/>
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet.projectile" can_be_detected_by_footmen="1" can_be_detected_by_driver="1">
-        <result class="hit"  kill_probability="1.45" kill_probability_offset_on_successful_hit="3.5" kill_decay_start_time="0.33" kill_decay_end_time="0.5" />
+        <result class="hit"  kill_probability="1.45" kill_probability_offset_on_successful_hit="5.5" kill_decay_start_time="0.33" kill_decay_end_time="0.5" />
     </projectile>
     <stance state_key="running" accuracy="0.7" />
     <stance state_key="walking" accuracy="0.7" />
