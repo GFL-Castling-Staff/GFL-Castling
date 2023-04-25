@@ -312,7 +312,7 @@ class GFLairstrike : Tracker {
                 }
                 case 4:{
                     CreateDirectProjectile(m_metagame,start_pos.add(Vector3(0,60,0)),end_pos,"m200_snipe.projectile",cid,fid,400);
-                    playSoundAtLocation(m_metagame,"m200_fire_snipe.wav",fid,end_pos,2.4);
+                    playSoundAtLocation(m_metagame,"m200_fire_snipe.wav",fid,end_pos,2.0);
                     Airstrike_strafe.removeAt(a);
                     break;                        
                 }

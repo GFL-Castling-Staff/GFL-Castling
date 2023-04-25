@@ -189,7 +189,7 @@ void excuteSniperFairy(GameMode@ metagame,GFL_event@ eventinfo){
 }
 
 void excuteSniperM200(GameMode@ metagame,GFL_event@ eventinfo){
-    eventinfo.m_time=1.5;
+    eventinfo.m_time=1.3;
     int luckyGuyid = getNearbyRandomLuckyGuyId(metagame,eventinfo.m_factionid,eventinfo.m_pos,40.0f);
     if(luckyGuyid!=-1){
         const XmlElement@ luckyGuy = getCharacterInfo(metagame, luckyGuyid);
@@ -197,25 +197,16 @@ void excuteSniperM200(GameMode@ metagame,GFL_event@ eventinfo){
         insertCommonStrike(eventinfo.m_characterId,eventinfo.m_factionid,4,getRandomOffsetVector(eventinfo.m_pos,70.0),luckyGuyPos);                        
     }
     eventinfo.m_phase++;
-    if(eventinfo.m_phase>=6){
+    if(eventinfo.m_phase>7){
         eventinfo.m_enable=false;
     }
 }
 
 void excuteUMP45MOD3event(GameMode@ metagame,GFL_event@ eventinfo){
-    eventinfo.m_time=2.0;
-    // array<const XmlElement@>@ characters = getCharactersNearPosition(metagame, eventinfo.m_pos, eventinfo.m_factionid, 10.0f);
-    // for (uint i = 0; i < characters.length; i++) {
-    //     int soldierId = characters[i].getIntAttribute("id");
-    //     XmlElement c ("command");
-    //     c.setStringAttribute("class", "update_inventory");
-    //     c.setIntAttribute("character_id", soldierId); 
-    //     c.setIntAttribute("untransform_count", 5);
-    //     metagame.getComms().send(c);
-    // }
+    eventinfo.m_time=3.0;
     CreateDirectProjectile(metagame,eventinfo.m_pos.add(Vector3(0,6,0)),eventinfo.m_pos.add(Vector3(0,6.1,0)),'ump45mod3_skill.projectile',eventinfo.m_characterId,eventinfo.m_factionid,10);
     eventinfo.m_phase++;
-    if(eventinfo.m_phase>9){
+    if(eventinfo.m_phase>6){
         eventinfo.m_enable=false;
     }
 }

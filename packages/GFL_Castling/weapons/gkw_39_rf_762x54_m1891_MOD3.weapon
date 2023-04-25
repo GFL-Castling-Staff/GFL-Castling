@@ -77,6 +77,7 @@
     carry_in_two_hands="0"
     burst_shots="1"
     last_burst_retrigger_time="-1"
+    stab_range="2.0"
     slot="0"/>
     <inventory encumbrance="35.0" buy_price="189.1" sell_price="189.1" />	
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -89,15 +90,16 @@
 	<animation state_key="walking"	animation_key="walking, pistol" />
     <animation state_key="walking_backwards" animation_key="walking backwards, pistol" />
     <animation state_key="changing_weapon_in" 	animation_key="change weapon in, single hand carry" />
+    <animation state_key="next_in_chain_in" animation_key="change weapon in, single hand carry"/>
     <animation state_key="crouching"	animation_key="crouch, pistol" />
     <animation state_key="still_against_wall"	animation_key="hold, pistol" />
     <animation state_key="recoil"	animation_key="recoil, pistol" />
     <animation state_key="stabbing" animation_key="stabbing, shovel" />
     <animation state_key="stabbing" animation_key="stabbing, shovel 2" />
+    <animation key="reload" animation_key="reloading, 2oaat fast hand" />	
     <sound key="stab" fileref="wrath_hammer_1.wav" pitch_variety="0.03" volume="1.0" />
     <sound key="stab" fileref="wrath_hammer_2.wav" pitch_variety="0.03" volume="1.0" />
     
-    <animation key="reload" animation_key="reloading, oaat fast handoaat" />	
 	<sound key="fire" fileref="m1891_fire_FromCOD14.wav" volume="1.5"/>
 	<sound key="cycle" fileref="m1891_cycle_FromSQUAD.wav" volume="0.6" /> 
     <sound key="reload_one" fileref="m1891_reload_FromSQUAD.wav" volume="0.5" />
@@ -110,7 +112,7 @@
     <sound key="stab_hit_any" fileref="melee_impact_flesh1_fromFO4.wav" pitch_variety="0.05" volume="1.6" />
     <sound key="stab_hit_any" fileref="melee_impact_flesh2_fromFO4.wav" pitch_variety="0.05" volume="1.6" />
     <sound key="stab_hit_any" fileref="melee_impact_flesh3_fromFO4.wav" pitch_variety="0.05" volume="1.6" />
-	<model filename="gkw_rf_m1891mod3.xml"/>
+	<model filename="gkw_rf_obrez.xml"/>
 	<hud_icon filename="gkw_m1891mod3_skill.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="bullet.projectile" can_be_detected_by_footmen="0" time_to_live="0.25">
