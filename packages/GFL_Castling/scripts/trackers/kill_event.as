@@ -67,6 +67,8 @@ class kill_event : Tracker {
         {"gkw_ar15mod3_skill.weapon",3},
         {"gkw_ar15mod3_532_skill.weapon",3},
         {"gkw_ar15mod3_30001_skill.weapon",3},
+        {"gkw_hk416_agent_hv.weapon",3},
+        {"gkw_hk416_agent_fmj.weapon",3},
 
         // SMG——3kills
         {"gkw_ump40.weapon",3},
@@ -80,6 +82,8 @@ class kill_event : Tracker {
         {"gkw_ump45mod3_410.weapon",3},
         {"gkw_ump45mod3_535.weapon",3},
         {"gkw_ump45mod3_3403.weapon",3},
+        {"gkw_vector_agent_hpi.weapon",3},
+        {"gkw_vector_agent_fmj.weapon",3},
 
         {"gkw_ump45_5405.weapon",3},
         {"gkw_ump45mod3_5405.weapon",3},
