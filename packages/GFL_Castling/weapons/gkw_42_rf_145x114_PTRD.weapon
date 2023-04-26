@@ -48,6 +48,7 @@
         character_state="death"
         faction_compare="not_equal"
 		/>
+        <trail probability="1" key="BulletApTrail_rf"/>
     </projectile>
     <!--Accuracy, Movement speed-->
     <modifier class="speed" value="-0.15" />

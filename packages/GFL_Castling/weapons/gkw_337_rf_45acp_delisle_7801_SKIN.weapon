@@ -52,6 +52,7 @@
     <weak_hand_hold offset="0.3" />
     <projectile file="bullet.projectile" can_be_detected_by_footmen="0">
         <result class="hit" kill_probability="2.0" kill_probability_offset_on_successful_hit="3.0" kill_decay_start_time="0.085" kill_decay_end_time="0.75" />
+        <trail probability="1" key="BulletApTrail_rf"/>
     </projectile>
     <!--Accuracy, Movement speed-->
     <stance state_key="running" accuracy="1.2" />

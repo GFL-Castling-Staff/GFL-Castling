@@ -41,7 +41,7 @@
         <weak_hand_hold offset="0.3"/>
         <projectile file="bullet.projectile" can_be_detected_by_footmen="0">
             <result class="blast" radius="1.6" damage="1.1" push="0.05" decal="0" character_state="death" faction_compare="not_equal" />
-            <trail probability="1.0" key="BulletApTrail_ct"/>
+            <trail probability="1" key="BulletApTrail_rf"/>
         </projectile>
         <stance state_key="running" accuracy="1.0"/>
         <stance state_key="walking" accuracy="1.0"/>
@@ -113,6 +113,7 @@
         <weak_hand_hold offset="0.3"/>
         <projectile file="bullet.projectile" can_be_detected_by_footmen="0">
             <result class="hit" kill_probability="2.4" kill_probability_offset_on_successful_hit="2.5" kill_decay_start_time="1.895" kill_decay_end_time="3.158"/>
+            <trail probability="1" key="BulletApTrail_rf"/>
         </projectile>
         <stance state_key="running" accuracy="1.0"/>
         <stance state_key="walking" accuracy="1.0"/>

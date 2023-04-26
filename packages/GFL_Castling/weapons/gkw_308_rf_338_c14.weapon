@@ -42,6 +42,7 @@
         kill_decay_start_time="1.448" 
         kill_decay_end_time="2.414" />
         <trail probability="1.0"/>
+        <trail probability="1" key="BulletApTrail_rf"/>
     </projectile>
     <!--Accuracy, Movement speed-->
     <stance state_key="running" accuracy="0.1" />

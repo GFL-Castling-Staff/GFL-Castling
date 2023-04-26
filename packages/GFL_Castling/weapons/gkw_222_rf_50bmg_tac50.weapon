@@ -57,7 +57,7 @@
 		<rotation class="motion" />
 		<collision class="sticky" />
     </projectile>
-    <effect class="muzzle" ref="at_bullet_smoke_trail" lighting="0"/> 
+    <trail probability="1" key="BulletApTrail_rf"/>
     <!--Accuracy, Movement speed-->
     <stance state_key="running" accuracy="0.9" />
     <stance state_key="walking" accuracy="1.1" />
