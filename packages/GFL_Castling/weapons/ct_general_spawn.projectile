@@ -1,27 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<projectile class="grenade" key="88typeGUNDAM_rocket.projectile" name="88HEAT" slot="2" pulldown_in_air="150" >
-    <tag name="rocket"/>
-	
-    <result class="spawn" instance_class="projectile" instance_key="m32a1_grenade.projectile" min_amount="4" max_amount="4" offset="0 1 0" position_spread="1 0" direction_spread="0.1 0" />
-	<trigger class="impact" />
-	<rotation class="motion" />
-    <model mesh_filename="88HEAT.xml" />
+<projectile  
+class="bullet" 
+name="General Spawn projectile" 
+key="ct_general_spawn.projectile"
+slot="0"
+pulldown_in_air="6.0"
+on_ground_up="0 1 0"
+use_time_to_live="1"
+time_to_live="60"
+can_be_disarmed="0"
+can_be_detected_by_footmen="1"
+can_be_detected_by_driver="1"
+blast_damage_threshold="50"
+time_to_live_out_in_the_open="0"
+player_death_drop_owner_lock_time="0"
+radius="0.5"
+>
+    <collision class="sticky" />
+	<trigger class="impact" />	
+    <rotation class="random" />
+	<commonness value="0" can_respawn_with="0" in_stock="0" /> 
+	<inventory encumbrance="0" price="0.0"/>
+	<sound class="result" key="other" fileref="explosion_FromSQUAD_1.wav" volume="2.0" />
+    <sound class="result" key="other" fileref="explosion_FromSQUAD_2.wav" volume="2.0" />
+    <sound class="result" key="other" fileref="explosion_FromSQUAD_3.wav" volume="2.0" />
 
-    <commonness value="0.0" />
-
-    <sound class="result" key="other" fileref="explosion_RPG_FromSQUAD_1.wav" volume="2.9" />
-    <sound class="result" key="other" fileref="explosion_RPG_FromSQUAD_2.wav" volume="2.9" />
-
-    <sound class="result" key="vehicle" copy="other" />    
     <sound class="result" key="vehicle" tag="metal_heavy" fileref="blast_metal_hit_01.wav" pitch_variety="0.2" volume="0.8" />
     <sound class="result" key="vehicle" tag="metal_heavy" fileref="blast_metal_hit_02.wav" pitch_variety="0.2" volume="0.8" /> 
     <sound class="result" key="vehicle" tag="metal_heavy" fileref="blast_metal_hit_03.wav" pitch_variety="0.2" volume="0.8" />           
 
     <sound class="result" key="terrain" copy="other" />
     <sound class="result" key="static_object" copy="other" />
-
     <sound class="result" key="character" copy="other" />
-
+    <sound class="result" key="vehicle" copy="other" />    
+    
    	<effect class="result" key="vehicle" tag="metal_heavy" ref="HitTank" lighting="1" />
    	<effect class="result" key="vehicle" tag="metal_heavy" ref="HitTankSparks" />
     <effect class="result" key="vehicle" tag="metal_heavy" ref="SmokeBurst" post_processing="1" />  
@@ -34,20 +46,15 @@
     <effect class="result" key="terrain" ref="Shine" lighting="0" />
     <effect class="result" key="terrain" ref="Godray" lighting="0" />
     <effect class="result" key="terrain" ref="ShadowSmoke" shadow="1" />
-    <effect class="result" type="splat_map" surface_tag="" size="5.0" atlas_index="0" layer="1" />
-    <effect class="result" type="splat_map" surface_tag="" size="6.5" atlas_index="4" layer="0" />
-    <effect class="result" type="splat_map" surface_tag="" size="8.0" atlas_index="0" layer="2" additive="0" /> <!-- remove top snow everywhere -->
-
-    <effect class="result" key="other" ref="SmokeTop" post_processing="1" />
-    <effect class="result" key="other" ref="Smoke" post_processing="1" />
-    <effect class="result" key="other" ref="Shine" lighting="0" />
-    <effect class="result" key="other" ref="Godray" lighting="0" />
-    <effect class="result" key="other" ref="ShadowSmoke" shadow="1" />
+    <effect class="result" key="terrain" ref="woosh" post_processing="0" shadow="0" />     
+    <effect class="result" type="splat_map" surface_tag="" size="3.0" atlas_index="0" layer="1" />
+    <effect class="result" type="splat_map" surface_tag="" size="5.0" atlas_index="4" layer="0" />
+    <effect class="result" type="splat_map" surface_tag="" size="6.0" atlas_index="0" layer="2" additive="0" /> <!-- remove top snow everywhere -->
 
     <effect class="result" key="static_object" copy="terrain" />
     <effect class="result" key="vehicle" copy="terrain" />     
     <effect class="result" key="character" copy="terrain" />
-
-    <effect class="activated" ref="Propulsion" />
-	<trail probability="1.0" key="FlamethrowerTrail" />
+    <effect class="result" key="other" copy="terrain" />
+    
+    <effect class="activated" ref="Propulsion_gl" />
 </projectile>

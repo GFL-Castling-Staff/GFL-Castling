@@ -58,8 +58,8 @@
     <capacity value="0" source="rank" source_value="0.0" />
 	<capacity value="1" source="rank" source_value="1.500" />
 
-    <projectile file="m32a1_grenade.projectile" pulldown_in_air="44.75" can_be_detected_by_footmen="0" time_to_live="3" can_be_detected_by_driver="0" can_be_disarmed="0"> 
-    <result class="spawn" instance_class="projectile" instance_key="m32a1_grenade.projectile" min_amount="20" max_amount="20" offset="0 1 0" position_spread="1 0" direction_spread="0.1 0" />
+    <projectile file="ct_general_spawn.projectile" pulldown_in_air="44.75" can_be_detected_by_footmen="0" time_to_live="3" can_be_detected_by_driver="0" can_be_disarmed="0"> 
+    <result class="spawn" instance_class="projectile" instance_key="m32a1_grenade.projectile" min_amount="4" max_amount="4" offset="0 1 0" position_spread="1 0" direction_spread="0.1 0" />
 		<trigger class="impact" />
 		<rotation class="motion" />
     </projectile>

@@ -16,40 +16,9 @@ time_to_live_out_in_the_open="150"
 player_death_drop_owner_lock_time="120"
 >
     <collision class="sticky" />
-	<result class="blast" radius="5" damage="8.5" push="0.2" decal="0" character_state="death" faction_compare="not_equal"/>
+	<result class="blast" radius="7.5" damage="10.1" push="0.2" decal="0" character_state="death" faction_compare="not_equal"/>
 	<trigger class="time" time_to_live="0" />	
     <rotation class="random" />
 	<model mesh_filename="ags30_30mm.xml" />
 	<commonness value="0.0" can_respawn_with="0" in_stock="0"/>
-	<sound class="result" key="other" fileref="explosion_FromSQUAD_1.wav" volume="2" />
-    <sound class="result" key="other" fileref="explosion_FromSQUAD_2.wav" volume="2" />
-    <sound class="result" key="other" fileref="explosion_FromSQUAD_3.wav" volume="2" />
-    <sound class="result" key="vehicle" copy="other" />
-    <sound class="result" key="vehicle" tag="metal_heavy" fileref="blast_metal_hit_01.wav" pitch_variety="0.2" volume="0.8" />
-    <sound class="result" key="vehicle" tag="metal_heavy" fileref="blast_metal_hit_02.wav" pitch_variety="0.2" volume="0.8" />
-    <sound class="result" key="vehicle" tag="metal_heavy" fileref="blast_metal_hit_03.wav" pitch_variety="0.2" volume="0.8" />
-    <sound class="result" key="terrain" copy="other" />
-    <sound class="result" key="static_object" copy="other" />
-    <sound class="result" key="character" copy="other" />
-    <effect class="result" key="vehicle" tag="metal_heavy" ref="HitTank" lighting="1" />
-    <effect class="result" key="vehicle" tag="metal_heavy" ref="HitTankSparks" />
-    <effect class="result" key="vehicle" tag="metal_heavy" ref="SmokeBurst" post_processing="1" />
-    <effect class="result" key="vehicle" tag="metal_heavy" ref="BurstShine" lighting="0" />
-    <effect class="result" key="vehicle" tag="metal_heavy" ref="Godray" lighting="0" />
-    <effect class="result" key="terrain" ref="BigBurst" use_surface_color="1" />
-    <effect class="result" key="terrain" ref="SmokeTop" post_processing="1" />
-    <effect class="result" key="terrain" ref="Smoke" post_processing="1" />
-    <effect class="result" key="terrain" ref="Shine" lighting="0" />
-    <effect class="result" key="terrain" ref="Godray" lighting="0" />
-    <effect class="result" key="terrain" ref="ShadowSmoke" shadow="1" />
-    <effect class="result" key="terrain" ref="woosh" post_processing="0" shadow="0" />
-    <effect class="result" type="splat_map" surface_tag="" size="3.0" atlas_index="0" layer="1" />
-    <effect class="result" type="splat_map" surface_tag="" size="5.0" atlas_index="4" layer="0" />
-    <effect class="result" type="splat_map" surface_tag="" size="6.0" atlas_index="0" layer="2" additive="0" />
-    <!-- remove top snow everywhere -->
-    <effect class="result" key="static_object" copy="terrain" />
-    <effect class="result" key="vehicle" copy="terrain" />
-    <effect class="result" key="character" copy="terrain" />
-    <effect class="result" key="other" copy="terrain" />
-    <effect class="activated" ref="Propulsion_gl" />
 </projectile>
