@@ -217,7 +217,7 @@
         name="Mon-200" 
         key="mon200.projectile" 
         slot="0" 
-        on_ground_up="0 1 0" 
+        on_ground_up="0 0.2 0" 
         radius="1.2" 
         can_be_disarmed="0" 
         can_be_detected_by_driver="0" 

@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<weapon file="heavy_anti_materiel_rifle.animation_base" key="gkw_ntw20.weapon">
+<weapon key="gkw_ntw20.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+    <tag name="rifle" />
+	<tag name="antiarmor" />
     <!--Weapon specifications-->
     <specification 
 	retrigger_time="2.0" 
@@ -13,13 +15,27 @@
 	suppressed="0" 
 	name="NTW-20" 
 	class="2"
-	reload_one_at_a_time="0" 
-	sight_range_modifier="2.25" 
-	projectile_speed="225" 
-	barrel_offset="0.6" 
-	projectiles_per_shot="3" />
+	class="2" 
+    slot="0"
+    reload_one_at_a_time="0" 
+    sight_range_modifier="2.25"  
+    projectile_speed="215.75" 
+    barrel_offset="0.6" 
+    projectiles_per_shot="1"
+    stab_enabled="1"
+    stab_range="4"
+	carry_in_two_hands="1" />
     <inventory encumbrance="35.0" buy_price="350.0" sell_price="250.0" />
     <!--Animations-->
+    <animation state_key="recoil" animation_key="recoil1, big" />
+	<animation key="recoil" stance_key="prone" animation_key="recoil1, big, prone" />
+	<animation key="hold" animation_key="still, heavy weapon" />
+	<animation state_key="hold_casual"	animation_key="still, carrying load" />
+    <animation state_key="running" animation_key="running, line infantry" />
+    <animation state_key="walking" animation_key="walking, line infantry" />
+    <animation state_key="walking_backwards" animation_key="walking, line infantry" />
+    <animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
+	<animation state_key="stabbing" animation_key="stabbing, bat" />
     <animation key="cycle" animation_key="Brifle1.8" />
     <animation key="cycle" stance_key="prone" animation_key="Brifle1.8p" />
     <animation key="reload" animation_key="reloading, magazine rifle 2.1" />
@@ -69,8 +85,22 @@
     <!-- <inventory encumbrance="10.0" price="4.0" /> -->
     <!--Ballistics-->
     <weak_hand_hold offset="0.3" />
-    <projectile file="ntw.projectile" >
-        <result class="blast" damage="16" radius="3" decal="1" push="1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0" />
-    </projectile> 
+    <projectile file="at_rf_spawn.projectile" pulldown_in_air="4" can_be_detected_by_footmen="1" can_be_detected_by_driver="1" can_be_disarmed="0" radius="0.7"> 
+	<result class="spawn" instance_class="projectile" instance_key="ntw20_ap.projectile" min_amount="3" max_amount="3" offset="0 0.5 0" position_spread="0.5 0" direction_spread="0 0" />	
+	<trigger class="impact" time_to_live="0.2"  />
+	<rotation class="motion" />
+	<collision class="sticky" />
+    </projectile>
+    <trail probability="1" key="BulletApTrail_rf"/>
     <!--Accuracy, Movement speed-->
+    <stance state_key="running" accuracy="0.5" />
+    <stance state_key="walking" accuracy="0.7" />
+    <stance state_key="crouch_moving" accuracy="0.7" />
+    <stance state_key="prone_moving" accuracy="0.7" />
+    <stance state_key="standing" accuracy="0.85"/>
+    <stance state_key="crouching" accuracy="0.85" />
+    <stance state_key="prone" accuracy="1.1" />
+    <stance state_key="over_wall" accuracy="1.1" />
+    <modifier class="speed" value="-0.15" />
+    <modifier class="detectability" value="-0.1"/>
 </weapon>

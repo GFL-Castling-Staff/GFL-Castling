@@ -130,13 +130,16 @@
 	<projectile file="elenusis_acid_bomb.projectile"/>	
 	<projectile file="elenusis_acid_bomb_spawn.projectile"/>	
 
-	<projectile file="mon200_blast.projectile"/>	
+	<projectile file="mon200_blast.projectile"/>
+	<!-- 特工系列弹头 -->	
 	<projectile file="agent_arrow_bomb_blast.projectile"/>
 	<projectile file="agent_p017_missile.projectile"/>
 	<projectile file="m32a1_grenade.projectile"/>
 	<projectile file="ct_general_spawn.projectile"/>
+	<!-- 反器材狙击步枪分弹头 -->
 	<projectile file="at_rf_spawn.projectile"/>
 	<projectile file="tac50_ap.projectile"/>
+	<projectile file="ntw20_ap.projectile"/>
 
 	<!-- 载具用烟雾弹 -->
 	<projectile file="smoke_grenade_v.projectile" />

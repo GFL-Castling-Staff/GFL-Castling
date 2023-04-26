@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<weapons>
-    <weapon file="heavy_anti_materiel_rifle.animation_base" key="gkw_ntw20mod3_4801.weapon">
+    <weapon key="gkw_ntw20mod3_4801.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+    <tag name="rifle" />
+	<tag name="antiarmor" />
+    <tag name="elite" />
         <!--Weapon specifications-->
         <specification 
         retrigger_time="-1" 
@@ -14,15 +16,27 @@
         suppressed="0" 
         name="NTW-20(MOD3)-[Black Iron Heart]" 
         class="2" 
+        slot="0"
         reload_one_at_a_time="0" 
-        sight_range_modifier="2.25" 
-        projectile_speed="255.75" 
+        sight_range_modifier="2.25"  
+        projectile_speed="215.75" 
         barrel_offset="0.6" 
-        projectiles_per_shot="3" />
+        projectiles_per_shot="1"
+        stab_enabled="1"
+        stab_range="4"
+	    carry_in_two_hands="1" />
         <inventory encumbrance="35.0" buy_price="550.0" sell_price="450.0" />
         <commonness value="0.0" in_stock="0" can_respawn_with="1" />
         <!--Animations-->
-        <next_in_chain key="gkw_ntw20mod3_4801_skill.weapon" share_ammo="0"/>
+        <animation state_key="recoil" animation_key="recoil1, big" />
+	    <animation key="recoil" stance_key="prone" animation_key="recoil1, big, prone" />
+	    <animation key="hold" animation_key="still, heavy weapon" />
+	    <animation state_key="hold_casual"	animation_key="still, carrying load" />
+        <animation state_key="running" animation_key="running, line infantry" />
+        <animation state_key="walking" animation_key="walking, line infantry" />
+        <animation state_key="walking_backwards" animation_key="walking, line infantry" />
+        <animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
+	    <animation state_key="stabbing" animation_key="stabbing, bat" />
         <animation key="cycle" animation_key="Brifle1.8" />
         <animation key="cycle" stance_key="prone" animation_key="Brifle1.8p" />
         <animation key="reload" animation_key="reloading, magazine rifle 2.1" />
@@ -72,71 +86,22 @@
         <capacity value="1" source="rank" source_value="0.0" />
         <!--Ballistics-->
         <weak_hand_hold offset="0.3" />
-        <projectile file="ntw.projectile" >
-            <result class="blast" damage="18.0" radius="3" decal="1" push="1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0" />
+        <projectile file="at_rf_spawn.projectile" pulldown_in_air="4" can_be_detected_by_footmen="1" can_be_detected_by_driver="1" can_be_disarmed="0" radius="0.7"> 
+		<result class="spawn" instance_class="projectile" instance_key="ntw20_ap.projectile" min_amount="10" max_amount="10" offset="0 0.5 0" position_spread="0.5 0" direction_spread="0 0" />	
+		<trigger class="impact" time_to_live="0.2"  />
+		<rotation class="motion" />
+		<collision class="sticky" />
         </projectile>
+        <trail probability="1" key="BulletApTrail_rf"/>
         <!--Accuracy, Movement speed-->
+        <stance state_key="running" accuracy="0.5" />
+        <stance state_key="walking" accuracy="0.7" />
+        <stance state_key="crouch_moving" accuracy="0.7" />
+        <stance state_key="prone_moving" accuracy="0.7" />
+        <stance state_key="standing" accuracy="0.85"/>
+        <stance state_key="crouching" accuracy="0.85" />
+        <stance state_key="prone" accuracy="1.1" />
+        <stance state_key="over_wall" accuracy="1.1" />
+        <modifier class="speed" value="-0.15" />
+        <modifier class="detectability" value="-0.1"/>
     </weapon>
-    <weapon file="heavy_anti_materiel_rifle.animation_base" key="gkw_ntw20mod3_4801_skill.weapon">
-        <!--Weapon specifications-->
-        <specification 
-        retrigger_time="0.01"
-        burst_shots="1"
-        accuracy_factor="1.0" 
-        sustained_fire_grow_step="5" 
-        sustained_fire_diminish_rate="1.2" 
-        magazine_size="1" 
-        can_shoot_standing="0" 
-        can_shoot_crouching="0"
-        can_shoot_prone="1"
-        suppressed="0" 
-        name="NTW-20(MOD3)-[Black Iron Heart]-[Hunter's Mania]" 
-        class="4"
-        last_burst_retrigger_time="1.8"
-        reload_one_at_a_time="0" 
-        sight_range_modifier="2.25"  
-        projectile_speed="255.75" 
-        barrel_offset="0.6" 
-        projectiles_per_shot="6" />
-        <inventory encumbrance="35.0" buy_price="550.0" sell_price="450.0" />
-        <!--Animations-->
-        <next_in_chain key="gkw_ntw20mod3_4801.weapon" share_ammo="0"/>
-        <animation key="reload" animation_key="magBrifleRntw" />
-        <animation key="reload" stance_key="prone" animation_key="magBrifleRpntw" />
-        <animation state_key="next_in_chain_in" animation_key="change weapon in ntw" />
-        <!--Sounds-->
-        <sound key="fire" fileref="ntw20_fire_FromBF2042.wav" volume="1.6" />
-        <sound key="cycle" fileref="ntw20_cycle_FromBF5.wav" volume="0.6"/>
-        <sound key="cycle" fileref="ntw20_cycle_FromBF5.wav" volume="0.6"/>
-        <sound key="cycle" fileref="ntw20_cycle_FromBF5.wav" volume="0.8" pitch_variety="0"/>
-        <sound key="cycle" fileref="ntw20_cycle_FromBF5.wav" volume="0.8" pitch_variety="0"/>
-        <sound key="cycle" fileref="NTW20_ATTACK_JP.wav" volume="0.8" pitch_variety="0"/>
-        <sound key="cycle" fileref="ntw20_cycle_FromBF5.wav" volume="0.8" pitch_variety="0"/>
-        <sound key="cycle" fileref="ntw20_cycle_FromBF5.wav" volume="0.8" pitch_variety="0"/>
-        <sound key="cycle" fileref="NTW20_SKILL1_JP.wav" volume="0.8" pitch_variety="0"/>
-        <sound key="cycle" fileref="ntw20_cycle_FromBF5.wav" volume="0.8" pitch_variety="0"/>
-        <sound key="cycle" fileref="ntw20_cycle_FromBF5.wav" volume="0.8" pitch_variety="0"/>
-        <sound key="cycle" fileref="NTW20_SKILL2_JP.wav" volume="0.8" pitch_variety="0"/>
-        <sound key="cycle" fileref="ntw20_cycle_FromBF5.wav" volume="0.8" pitch_variety="0"/>
-        <sound key="cycle" fileref="ntw20_cycle_FromBF5.wav" volume="0.8" pitch_variety="0"/>
-        <sound key="cycle" fileref="NTW20_SKILL3_JP.wav" volume="0.8" pitch_variety="0"/>
-        <sound key="magazine_out" fileref="ntw20_mgz_out_FromBF2042.wav" volume="0.7"/>
-        <sound key="magazine_in" fileref="ntw20_mgz_in_FromBF2042.wav" volume="0.7"/>
-        <sound key="cycle_out" fileref="ntw20_cycle_out_FromBF5.wav" volume="0.6"/>
-        <sound key="cycle_in" fileref="ntw20_cycle_in_FromBF5.wav" volume="0.6"/>
-        <sound class="impact" fileref="rifle_drop.wav" />
-        <!--Model, Icon, Cost-->
-        <model filename="gkw_rf_ntw20_4801fromIAQS.xml" />
-        <hud_icon filename="gkw_ntw20_4801.png" />
-        <capacity value="1" source="rank" source_value="0.0" />
-        <commonness value="0" in_stock="0" can_respawn_with="1" />
-        <!-- <inventory encumbrance="10.0" price="4.0" /> -->
-        <!--Ballistics-->
-        <weak_hand_hold offset="0.3" />
-        <projectile file="ntw.projectile" >
-            <result class="blast" damage="22" radius="4" decal="1" push="1.0" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0" />
-        </projectile>
-        <!--Accuracy, Movement speed-->
-        <modifier class="speed" value="-0.3" />
-    </weapon>
-</weapons>
