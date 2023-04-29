@@ -266,6 +266,8 @@ class GFLskill : Tracker {
 						|| startsWith(vestkey,'woshieoe')
 						|| startsWith(vestkey,'cc_t6') 
 						|| startsWith(vestkey,'lcc_t6')
+						|| startsWith(vestkey,'exo_x_t4')
+						|| startsWith(vestkey,'exo_x_t6')
 						){
 							CreateProjectile(m_metagame,pos_smartgrenade,luckyGuyPos,"kcco_smartgrenade_3_1.projectile",characterId,factionid,120,0.01);
 						}
@@ -890,7 +892,6 @@ class GFLskill : Tracker {
 					if (now_character !is null) {
 						Vector3 c_pos = stringToVector3(now_character.getStringAttribute("position"));
 						c_pos = c_pos.add(Vector3(0,1,0));
-						_log("ff_weaver Scan start successful");
 
 						for (uint i0=1;i0<=num_max_kill;){
 							if(affectedCharacter.length()>0){
