@@ -19,11 +19,7 @@
 	<vehicle key="mobile_armory.vehicle" />
 
 	<vehicle key="rubber_boat.vehicle" />
-	<vehicle key="patrol_ship.vehicle" />
 
-	<vehicle key="atv_armory.vehicle" />
-
-	<vehicle key="bgm71_tow.vehicle" />
 
 	<vehicle key="cover1.vehicle" />
 	<vehicle key="cover2.vehicle" />
@@ -31,6 +27,7 @@
 	<vehicle key="deployed_mortar.vehicle" />
 
 	<vehicle key="mortar_truck.vehicle" />
+	<vehicle key="bgm71_tow.vehicle" />
 	<vehicle key="hornet_ct.vehicle" />
 
 	
@@ -96,11 +93,8 @@
 	<vehicle key="racing_car7.vehicle" />
 	<vehicle key="racing_car8.vehicle" />
 
-	<vehicle key="jeep_ee.vehicle" />
-
 	<vehicle key="dumpster.vehicle" />
 	<vehicle key="tractor.vehicle" />
-	<vehicle key="flare_checkpoint.vehicle" />
 	<vehicle key="heli_extraction_broken.vehicle" />
 	<vehicle key="heli_broken1.vehicle" />
 	<vehicle key="heli_broken2.vehicle" />
@@ -116,127 +110,10 @@
 	<vehicle key="special_cargo_vehicle4.vehicle" />
 	<vehicle key="special_cargo_vehicle5.vehicle" />
 
-	<vehicle key="special_crate1.vehicle" />
-	<vehicle key="special_crate2.vehicle" />
-	<vehicle key="special_crate3.vehicle" />
-	<vehicle key="special_crate4.vehicle" />
-	<vehicle key="special_crate5.vehicle" />
-	<vehicle key="special_crate6.vehicle" />
-	<vehicle key="special_crate7.vehicle" />
-	<vehicle key="special_crate8.vehicle" />
-	<vehicle key="special_crate9.vehicle" />
-	<vehicle key="special_crate10.vehicle" />
-	<vehicle key="special_crate11.vehicle" />
-	<vehicle key="special_crate12.vehicle" />
-	<vehicle key="special_crate13.vehicle" />
-	<vehicle key="special_crate14.vehicle" />
-	<vehicle key="special_crate15.vehicle" />
-	<vehicle key="special_crate16.vehicle" />
-	<vehicle key="special_crate17.vehicle" />
-	<vehicle key="special_crate18.vehicle" />
-	<vehicle key="special_crate19.vehicle" />
-	<vehicle key="special_crate20.vehicle" />
-	<vehicle key="special_crate21.vehicle" />
-	<vehicle key="special_crate22.vehicle" />
-	<vehicle key="special_crate23.vehicle" />
-	<vehicle key="special_crate24.vehicle" />
-	<vehicle key="special_crate25.vehicle" />
-	<vehicle key="special_crate26.vehicle" />
-	<vehicle key="special_crate27.vehicle" />
-	<vehicle key="special_crate28.vehicle" />
-	<vehicle key="special_crate29.vehicle" />
-	<vehicle key="special_crate30.vehicle" />
-	<vehicle key="special_crate31.vehicle" />
-	<vehicle key="special_crate32.vehicle" />
-	<vehicle key="special_crate33.vehicle" />
-	<vehicle key="special_crate34.vehicle" />
-	<vehicle key="special_crate35.vehicle" />
-	<vehicle key="special_crate36.vehicle" />
-	<vehicle key="special_crate37.vehicle" />
-	<vehicle key="special_crate38.vehicle" />
-	<vehicle key="special_crate39.vehicle" />
-	<vehicle key="special_crate40.vehicle" />
-	<vehicle key="special_crate41.vehicle" />
-
-	<vehicle key="special_crate_wood1.vehicle" />
-	<vehicle key="special_crate_wood2.vehicle" />
-	<vehicle key="special_crate_wood3.vehicle" />
-	<vehicle key="special_crate_wood4.vehicle" />
-	<vehicle key="special_crate_wood5.vehicle" />
-	<vehicle key="special_crate_wood6.vehicle" />
-	<vehicle key="special_crate_wood7.vehicle" />
-	<vehicle key="special_crate_wood8.vehicle" />
-	<vehicle key="special_crate_wood9.vehicle" />
-	<vehicle key="special_crate_wood10.vehicle" />
-
 	<vehicle key="radar_tank.vehicle" />
 	<vehicle key="radar_tank2.vehicle" />
 
-	<vehicle key="banana_car.vehicle" />
-	<vehicle key="banana_car_spawn.vehicle" />
-	<vehicle key="banana_car_para.vehicle" />
-	<vehicle key="banana_peel_spawner.vehicle" />
-
-	<vehicle key="emp.vehicle" />
-	<vehicle key="guntruck.vehicle" />
-	<vehicle key="guntruck_para.vehicle" />
-	<vehicle key="guntruck_spawn.vehicle" />
-	<vehicle key="hornet.vehicle" />
-	<vehicle key="hornet_2.vehicle" />
 	<vehicle key="icecream.vehicle" />
-	
-	
-	<!-- 垃圾/箱子 -->
-	<!-- <carry_item key="cigars.carry_item" />
-	<carry_item key="beer_can.carry_item" />
-	<carry_item key="lighter.carry_item" />   
-	<carry_item key="steroids.carry_item" />  
-	<carry_item key="teddy.carry_item" />    
-
-	<carry_item key="gold_bar.carry_item" />
-
-	<carry_item key="bible.carry_item" /> 
-	<carry_item key="koran.carry_item" /> 
-	<carry_item key="chewing_gum.carry_item" />
-	<carry_item key="bizarre_rubber_bullet.carry_item" />
-	<carry_item key="chocolate.carry_item" />
-	<carry_item key="dollars_300.carry_item" /> 
-	<carry_item key="energy_drink.carry_item" />
-	<carry_item key="fancy_sunglasses.carry_item" />
-	<carry_item key="radio.carry_item" />
-	<carry_item key="razor.carry_item" />   
-	<carry_item key="sheaths.carry_item" />
-	<carry_item key="sheaths_xxl.carry_item" />  
-	<carry_item key="sunglasses.carry_item" /> 
-	<carry_item key="ipoo_player_blue.carry_item" /> 
-	<carry_item key="ipoo_player_red.carry_item" />
-	<carry_item key="ipoo_player_white.carry_item" />     
-	<carry_item key="ipoo_player_silver.carry_item" />
-	<carry_item key="ipoo_player_yellow.carry_item" />
-	<carry_item key="ipoo_player_green.carry_item" />
-	<carry_item key="ipoo_player_pink.carry_item" />   
-	<carry_item key="playing_cards.carry_item" />   
-
-	<carry_item key="suitcase.carry_item" />
-
-
-	<carry_item key="underpants.carry_item" /> 
-	<carry_item key="kamasutra.carry_item" /> 
-	<carry_item key="cd.carry_item" /> 
-
-	<carry_item key="whiskey_bottle.carry_item" />
-	<carry_item key="cigarettes.carry_item" />
-	<carry_item key="dollars.carry_item" />
-	<carry_item key="gamingdevice.carry_item" />
-	<carry_item key="gem.carry_item" />
-	<carry_item key="painting.carry_item" />
-	<carry_item key="horny_magazine.carry_item" />
-	<carry_item key="comic_book.carry_item" />
-	<carry_item key="rwr_handbook.carry_item" />
-	<carry_item key="oscar_statue.carry_item" />
-	<carry_item key="laptop.carry_item" />   -->
-
-
 
 	<!-- 制作组盒子 -->
 	<carry_item key="ak12_box.carry_item" />

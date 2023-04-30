@@ -5,7 +5,7 @@
 
 	<control max_speed="20.0" acceleration="6.7" max_reverse_speed="6.0" max_rotation="0.8" max_water_depth="1.9" />
                                                                                                                                                        
-	<physics max_health="3.0" mass="18" broken_mass="8" extent="2.0 0.0 1.5" offset="0 0.0 0" top_offset="0 6 0" collision_model_pos="0 0.8 0" collision_model_extent="2.2 2.0 4.7" visual_offset="0 0.1 0.1" /> 
+	<physics max_health="3.0" mass="20" broken_mass="20" collision_response_factor="0.5" extent="2.0 0.0 1.5" offset="0 0.0 0" top_offset="0 6 0" collision_model_pos="0 0.8 0" collision_model_extent="2.2 2.0 4.7" visual_offset="0 0.1 0.1" /> 
 
 	<visual class="chassis" mesh_filename="van.mesh" texture_filename="car_atlas1.png" texture_atlas_cell="3 1 4 4" />
 	<visual class="chassis" key="broken" mesh_filename="van_broken.mesh" texture_filename="car_atlas1_broken.png" texture_atlas_cell="3 1 4 4" />
