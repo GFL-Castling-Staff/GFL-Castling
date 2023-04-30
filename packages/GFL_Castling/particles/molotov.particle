@@ -1,0 +1,195 @@
+
+author: Rst
+2022.6.17
+该粒子公共授权使用，二次修改使用需要授权
+调用代码
+    <effect class="result" key="terrain" ref="molotov_fire_01"/>
+    <effect class="result" key="terrain" ref="molotov_fire_02"/>
+    <effect class="result" key="terrain" ref="molotov_smoke"/>
+	<effect class="result" key="other" copy="terrain"/>
+    <effect class="result" key="static_object" copy="terrain" />
+    <effect class="result" key="character" copy="terrain" />
+    <effect class="result" key="vehicle" copy="terrain" />
+	
+abstract emitter molotov_base		//自定义燃烧持续时长 单位/秒
+{
+	duration 1.1
+}
+
+particle_system molotov_fire_01 
+{
+	quota 50
+	material fire_01
+	particle_width 1
+	particle_height 1
+	renderer billboard	
+	billboard_rotation_type vertex
+	billboard_origin center
+	billboard_type oriented_self
+	emitter Ring : molotov_base
+	{
+		angle 30
+        colour 1 0.3 0 1
+		direction 0 1 0
+		emission_rate 100
+		position 0 1 0
+		velocity_min 3
+		velocity_max 5
+		time_to_live_min 0.3
+		time_to_live_max 0.5
+		width 5
+		depth 1
+		height 5
+		inner_wifth 0.001
+		inner_height 0.001
+	}
+	affector Scaler{rate 15}
+	affector ColourFader2
+	{
+		red1 	6
+		green1 	1.5
+		blue1 	0
+		alpha1 	10	
+		red2	-3
+		green2	-6
+		blue2	-6
+		alpha2	-4
+		state_change	0.3
+	}
+	affector Rotator{
+		rotation_speed_range_start	-15
+		rotation_speed_range_end	15
+		rotation_range_start	0
+		rotation_range_end	15
+	}
+	affector LinearForce
+	{
+		force_vector 0 3 0 
+		force_application add
+	}
+}
+
+particle_system molotov_fire_02  : particle_system molotov_fire_01 
+{
+	material fire_02
+	particle_width 4
+	particle_height 1
+	billboard_type point
+	emitter Ring
+	{
+		colour 0 0.3 1 0.01
+		angle 90
+		velocity_min 0.001
+		velocity_max 0.001
+		duration 0.3
+		time_to_live_min 0.2
+		time_to_live_max 0.5
+		width 5
+		depth 1
+		height 5
+	}
+	affector Scaler{rate 10}
+	affector ColourFader2
+	{
+		red1 	0
+		green1 	1.6
+		blue1 	3
+		alpha1 	0	
+		red2	-2
+		green2	-2
+		blue2	-2
+		alpha2	-2
+		state_change	0.5
+	}
+}
+particle_system molotov_smoke 
+{
+	quota 100
+	renderer billboard	
+	billboard_rotation_type vertex
+	material pump_smoke_01
+	particle_width 2
+	particle_height 2
+	billboard_type point
+	emitter Ring : molotov_base
+	{
+		angle 15
+        colour 0.3 0.3 0.3 0.6
+		direction 0 1 0
+		emission_rate 100
+		position 0 2 0
+		velocity_min 6
+		velocity_max 8
+		time_to_live_min 0.4
+		time_to_live_max 0.8
+		width 5
+		depth 1
+		height 5
+	}
+	affector Scaler{rate 5}
+	affector ColourFader2
+	{
+		red1 	0.2
+		green1 	0.1
+		blue1 	0.05
+		alpha1 	1	
+		red2	-0.5
+		green2	-0.5
+		blue2	-0.5
+		alpha2	-1
+		state_change	1
+	}
+	affector Rotator{
+		rotation_speed_range_start	-45
+		rotation_speed_range_end	45
+		rotation_range_start	0
+		rotation_range_end	45
+	}
+}
+
+--------------------------------material-----------------------------
+material pump_smoke_01{
+	receive_shadows off
+	technique{
+		pass{
+			lighting off
+			fog_override true
+			depth_write off
+			scene_blend alpha_blend
+			texture_unit
+			{
+			texture pump_smoke_01.png
+			}
+		}
+	}
+}
+material fire_01{
+	receive_shadows off
+	technique{
+		pass{
+			lighting off
+			fog_override true
+			depth_write off
+			scene_blend add
+			texture_unit
+			{
+			texture rst_molotov_fire_01.png
+			}
+		}
+	}
+}
+material fire_02{
+	receive_shadows off
+	technique{
+		pass{
+			lighting off
+			fog_override true
+			depth_write off
+			scene_blend add
+			texture_unit
+			{
+			texture rst_molotov_fire_02.png
+			}
+		}
+	}
+}

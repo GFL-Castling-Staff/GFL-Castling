@@ -28,8 +28,6 @@
         <animation state_key="running" animation_key="running, line infantry" />
         <animation state_key="walking" animation_key="walking, line infantry" />     
         <animation state_key="hold_casual" animation_key="hold_casual, line infantry" />
-        <animation state_key="hold" animation_key="hold_casual, line infantry" />
-        <animation state_key="hold_on_wall" animation_key="hold_casual, line infantry" />
         <sound key="fire" fileref="mlemk1_fire_FromPOSTSCRIPTUM.wav" pitch_variety="0.05" volume="1.4"/>
         <sound key="cycle" fileref="mlemk1_cycle_FromPOSTSCRIPTUM.wav" volume="0.7"/>
         <sound key="reload_one" fileref="mlemk1_reload_FromPOSTSCRIPTUM.wav" volume="0.7"/>
