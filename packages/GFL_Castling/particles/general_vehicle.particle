@@ -1,0 +1,232 @@
+particle_system ct_vehicle_slide_spark
+{
+	quota 500
+	material point_hard_edge
+	particle_width 0.15
+	particle_height 0.4
+	renderer billboard
+	billboard_type oriented_self
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 0 0 1
+	iteration_interval 0
+	
+	emitter Point
+	{
+		angle 30
+		colour 1 0.3 0 0
+		direction 1 0 0
+		emission_rate 50
+		position 0 0 0
+		velocity_min 1
+		velocity_max 6
+		time_to_live 1.0
+		duration 0.1
+	}
+	affector Scaler
+	{
+		rate -0.05
+	}
+	affector ColourInterpolator
+	{
+		time0 0
+		colour0 1 0.3 0 0
+		time1 0.7
+		colour1 1 0.3 0 0
+		time2 1
+		colour2 0 0 0 0
+	}
+	affector LinearForce{
+		force_vector 0 -4 0
+		force_application add
+	}
+	affector DeflectorPlane 
+	{
+		plane_point 0 4 0
+		plane_normal 0 1 0 
+		bounce 0.4
+	}
+}
+
+particle_system ct_uhlan_slide_spark
+{
+	quota 500
+	material point_hard_edge
+	particle_width 0.15
+	particle_height 0.4
+	renderer billboard
+	billboard_type oriented_self
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 0 0 1
+	iteration_interval 0
+	
+	emitter Point
+	{
+		angle 30
+		colour 0.08 0.65 1 0
+		direction 1 0 0
+		emission_rate 50
+		position 0 0 0
+		velocity_min 1
+		velocity_max 6
+		time_to_live 1.0
+		duration 0.1
+	}
+	affector Scaler
+	{
+		rate -0.05
+	}
+	affector ColourInterpolator
+	{
+		time0 0
+		colour0 0.08 0.65 1 0
+		time1 0.7
+		colour1 0.08 0.65 1 0
+		time2 1
+		colour2 0 0 0 0
+	}
+	affector LinearForce{
+		force_vector 0 -4 0
+		force_application add
+	}
+	affector DeflectorPlane 
+	{
+		plane_point 0 4 0
+		plane_normal 0 1 0 
+		bounce 0.4
+	}
+}
+
+particle_system ct_vehicle_tire_smoke
+{
+	quota 500
+	particle_width 0.2
+	particle_height 0.2
+	renderer billboard
+	billboard_type point
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 0 0 1
+	iteration_interval 0
+	
+	emitter Point
+	{
+		angle 50
+		colour 1 1 1 0
+		direction 1 0 0
+		emission_rate 10
+		position 0 0 0
+		velocity_min 0.1
+		velocity_max 1
+		time_to_live 2
+		duration 0.1
+	}
+
+	affector Scaler
+	{
+		rate 2
+	}
+
+	affector Rotator
+	{
+		rotation_speed_range_start	-45
+		rotation_speed_range_end	45
+		rotation_range_start	-30
+		rotation_range_end	30
+	}
+
+	affector ColourInterpolator
+	{
+		time0 0
+		colour0 0.8 0.8 0.8 0.4
+		time1 0.7
+		colour1 0.8 0.8 0.8 0.05
+		time2 1
+		colour2 1 1 1 0
+	}
+
+	affector LinearForce{
+		force_vector 0 0.5 0
+		force_application add
+	}
+}
+
+particle_system ct_vehicle_tire_smoke_1 : ct_vehicle_tire_smoke
+{
+	material tire_smoke_1
+	particle_width 0.13
+	particle_height 0.13
+}
+
+particle_system ct_vehicle_tire_smoke_2 : ct_vehicle_tire_smoke
+{
+	material tire_smoke_2
+}
+
+particle_system ct_vehicle_tire_smoke_3 : ct_vehicle_tire_smoke
+{
+	material tire_smoke_3
+}
+
+
+//--------------------------------------material-----------------------------------
+
+material alpha_blend_base{
+	receive_shadows off
+	technique{
+		pass{
+			lighting off
+			fog_override true
+			depth_write off
+			scene_blend alpha_blend
+		}
+	}
+}
+
+material add_base{
+	receive_shadows off
+	technique{
+		pass{
+			lighting off
+			fog_override true
+			depth_write off
+			scene_blend add
+		}
+	}
+}
+
+material point_hard_edge : add_base
+{   
+    technique{
+    pass{
+        texture_unit{
+            texture point_hard_edge.png 	
+}}}}
+
+material tire_smoke_1 : alpha_blend_base
+{   
+    technique{
+    pass{
+        texture_unit{
+            texture ct_common_smoke2.png 	
+}}}}
+
+material tire_smoke_2 : alpha_blend_base
+{   
+    technique{
+    pass{
+        texture_unit{
+            texture rx1_smoke.png 	
+}}}}
+
+material tire_smoke_3 : alpha_blend_base
+{   
+    technique{
+    pass{
+        texture_unit{
+            texture wand_smoke.png 	
+}}}}

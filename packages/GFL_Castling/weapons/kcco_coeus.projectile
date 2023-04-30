@@ -2,7 +2,7 @@
 <projectile class="grenade" name="rocket" slot="2" pulldown_in_air="0.5" radius="0.4">
     <tag name="rocket"/>
 	
-    <result class="blast" radius="5.0" damage="20" push="0.5" decal="1" faction_compare="not_equal"/>
+    <result class="blast" radius="5.0" damage="20" push="0.5" decal="1" faction_compare="not_equal" damage_origin_vehicles="0" />
  
     <trigger class="impact" />
     <rotation class="motion" />

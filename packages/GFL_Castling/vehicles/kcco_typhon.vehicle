@@ -17,8 +17,8 @@
     <visual class="chassis" key="broken" mesh_filename="Typhoon_body.mesh" texture_filename="tank_2_broken.png" />
     <visual class="turret" turret_index="0" mesh_filename="" texture_filename="balloon.png" />
     <visual class="turret" key="broken" mesh_filename="Typhoon_turret.mesh" texture_filename="tank_2_broken.png" />
-    <character_slot type="driver" position="1.5 0.2 0" rotation="0" exit_rotation="1.57" hiding="1" animation_id="36" />
-    <character_slot type="gunner" position="-1.5 0.2 0" rotation="0" exit_rotation="-1.57" hiding="1" animation_id="37">
+    <character_slot type="driver" enter_position="1.5 0.2 0" seat_position="0.5 -0.5 0" rotation="0" exit_rotation="1.57" hiding="1" animation_id="36" />
+    <character_slot type="gunner" enter_position="-1.5 0.2 0" seat_position="-0.5 -0.5 0" rotation="0" exit_rotation="-1.57" hiding="1" animation_id="37">
         <turret index="0" />
         <turret index="1" />
         <turret index="2" />
@@ -47,6 +47,9 @@
     <effect event_key="destroyed" ref="SmallFireRepeat" offset="0.0 2.4 -1.8" />
     <effect event_key="destroy" key="other" ref="woosh" post_processing="0" shadow="0" />
     <effect event_key="cleanup" key="other" ref="woosh" post_processing="0" shadow="0" />
+    <effect event_key="drive" type="particle" key="terrain" ref="ct_vehicle_tire_smoke_1" use_surface_color="1" />
+    <effect event_key="slide" type="particle" key="terrain" surface_tag="road" ref="ct_vehicle_tire_smoke_1" use_surface_color="1" />
+	<effect event_key="slide_hard" type="particle" key="terrain" surface_tag="road" ref="ct_vehicle_tire_smoke_1" use_surface_color="1" />
     <event key="receive_damage_xp_reward">
         <trigger class="receive_damage" />
         <result class="reward" xp="0.0200" />
