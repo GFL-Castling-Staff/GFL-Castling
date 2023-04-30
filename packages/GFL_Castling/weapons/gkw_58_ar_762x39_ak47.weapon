@@ -2,23 +2,24 @@
 <weapons>
     <weapon file="two_hands_ar.animation_base" key="gkw_ak47.weapon">
         <specification 
-		accuracy_factor="0.98" 
+		accuracy_factor="1.0" 
 		barrel_offset="0.4" 
 		class="0"
         slot="0" 
 		magazine_size="30" 
 		name="AK-47" 
+        spread_range="0.4"
         sight_range_modifier="1.25"
-		projectile_speed="185" 
+		projectile_speed="200" 
 		retrigger_time="0.1" 
 		suppressed="0" 
-		sustained_fire_diminish_rate="2" 
-		sustained_fire_grow_step="0.7" />
-        <animation state_key="hold_casual"			animation_key="dancing, kazachok" />
+        stance_accuracy_rate="1.8"
+		sustained_fire_diminish_rate="2.0" 
+		sustained_fire_grow_step="0.5" />
+        <animation state_key="hold_casual" animation_key="dancing, kazachok" />
         <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
         <inventory encumbrance="35.0" buy_price="7.0" sell_price="7.0" />
-        <next_in_chain key="gkw_ak47_skill.weapon" share_ammo="1" />
-        <sound key="fire" fileref="ak47_fire_FromRE5.wav" pitch_variety="0.05" volume="1.3" />
+        <sound key="fire" fileref="ak47_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.2" />
         <sound key="magazine_out" fileref="ak12_mgz_out_FromCOD16.wav" volume="0.6" />
         <sound key="magazine_in" fileref="ak12_mgz_in_FromCOD16.wav" volume="0.6" />
         <sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6" />
@@ -28,59 +29,18 @@
         <commonness value="0.2" in_stock="1" can_respawn_with="1" />
         <weak_hand_hold offset="0.2" />
         <projectile file="bullet.projectile">
-            <result class="hit" kill_probability="1.85" kill_probability_offset_on_successful_hit="1.8" kill_decay_start_time="0.881" kill_decay_end_time="1.469" />
-        </projectile>
-        <effect class="muzzle" ref="ejection_76239" />
-        <stance state_key="running" accuracy="0.3" />
-        <stance state_key="walking" accuracy="0.7" />
-        <stance state_key="crouch_moving" accuracy="0.8" />
-        <stance state_key="prone_moving" accuracy="0.8" />
-        <stance state_key="standing" accuracy="0.85" />
-        <stance state_key="crouching" accuracy="0.9" />
-        <stance state_key="prone" accuracy="1" />
-        <modifier class="detectability" value="0.0" />
-    </weapon>
-    <weapon file="two_hands_ar.animation_base" key="gkw_ak47_skill.weapon">
-        <specification 
-        accuracy_factor="0.98" 
-        barrel_offset="0.4" 
-        class="0"
-        slot="0" 
-        magazine_size="30" 
-        name="AK-47-[Raid Focus]" 
-        sight_range_modifier="2.0"
-        projectile_speed="185" 
-        retrigger_time="0.1" 
-        suppressed="0" 
-        sustained_fire_diminish_rate="2" 
-		sustained_fire_grow_step="0.32" />
-        <animation state_key="hold_casual" animation_key="dancing, kazachok" />
-        <animation key="reload" animation_key="reloading, magazine rifle 1.5" />
-        <inventory encumbrance="35.0" buy_price="7.0" sell_price="7.0" />
-        <commonness value="0" in_stock="0" can_respawn_with="1" />
-        <next_in_chain key="gkw_ak47.weapon" share_ammo="1" />
-        <sound key="fire" fileref="ak47_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.2" />
-        <sound key="magazine_out" fileref="ak12_mgz_out_FromCOD16.wav" volume="0.6" />
-        <sound key="magazine_in" fileref="ak12_mgz_in_FromCOD16.wav" volume="0.6" />
-        <sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6" />
-        <sound class="impact" fileref="rifle_drop.wav" />
-        <model filename="gkw_ar_ak47.xml" />
-        <hud_icon filename="gkw_ak47_skill.png" />
-        <weak_hand_hold offset="0.2" />
-        <projectile file="bullet.projectile">
-            <result class="hit" kill_probability="2.4" kill_probability_offset_on_successful_hit="1.8" kill_decay_start_time="0.881" kill_decay_end_time="1.469" />
+            <result class="hit" kill_probability="3.0" kill_probability_offset_on_successful_hit="3.0" kill_decay_start_time="0.881" kill_decay_end_time="1.469" />
         </projectile>
         <effect class="muzzle" ref="muzzle_big_yellow"/>
         <effect class="muzzle" ref="ejection_76239" />
-        <stance state_key="running" accuracy="0.85" />
-        <stance state_key="walking" accuracy="0.85" />
-        <stance state_key="crouch_moving" accuracy="0.85" />
-        <stance state_key="prone_moving" accuracy="0.85" />
-        <stance state_key="standing" accuracy="0.85" />
-        <stance state_key="crouching" accuracy="0.9" />
+        <stance state_key="running" accuracy="0.2" />
+        <stance state_key="walking" accuracy="0.5" />
+        <stance state_key="crouch_moving" accuracy="0.9" />
+        <stance state_key="prone_moving" accuracy="0.9" />
+        <stance state_key="standing" accuracy="0.9" />
+        <stance state_key="crouching" accuracy="0.95" />
         <stance state_key="prone" accuracy="1" />
-        <modifier class="speed" value="-0.2" />
+        <stance state_key="over_wall" accuracy="1" /> 
         <modifier class="detectability" value="0.0" />
-        <modifier class="hit_success_probability" value="+0.3" />
     </weapon>
 </weapons>

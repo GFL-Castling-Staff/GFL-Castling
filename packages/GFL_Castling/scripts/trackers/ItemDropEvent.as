@@ -407,10 +407,10 @@ class ItemDropEvent : Tracker {
                     else if (checkQueue(pId,"cso") && (itemKey=="gkw_svd_5506.weapon" || itemKey=="gkw_svd_5506_skill.weapon")){
                         giveDigimindItem(cId, pId, "gkw_svdex_5506.weapon", "cso");
                     }   
-                    else if (checkQueue(pId,"cso") && (itemKey=="gkw_ak47.weapon" || itemKey=="gkw_ak47_skill.weapon")){
+                    else if (checkQueue(pId,"cso") && (itemKey=="gkw_ak47.weapon")){
                         giveDigimindItem(cId, pId, "gkw_ak47_60r.weapon", "cso");
                     }
-                    else if (checkQueue(pId,"cso") && (itemKey=="gkw_ak47_501.weapon" || itemKey=="gkw_ak47_501_skill.weapon")){
+                    else if (checkQueue(pId,"cso") && (itemKey=="gkw_ak47_501.weapon")){
                          giveDigimindItem(cId, pId, "gkw_ak47_60r_501.weapon", "cso");
                     }                    
                     break;
