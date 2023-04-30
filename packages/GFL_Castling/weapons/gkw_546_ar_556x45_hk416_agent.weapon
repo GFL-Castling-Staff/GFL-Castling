@@ -10,7 +10,7 @@
     slot="0" 
     barrel_offset_3d="2.0 0.0 0.0"
 	magazine_size="30" 
-    carry_in_two_hands="1"
+    carry_in_two_hands="0"
 	name="HK416 Agent-[HV]" 
     sight_range_modifier="1.5" 
 	projectile_speed="197.66" 
@@ -21,21 +21,27 @@
     stab_enabled="1"/>
 	
     <commonness value="0" in_stock="1" can_respawn_with="1" />
-    <inventory encumbrance="35.0" buy_price="750.0" sell_price="750.0"/>
+    <inventory encumbrance="35.0" buy_price="1250.0" sell_price="700.0"/>
     <capacity value="1" source="rank" source_value="0.0" />
     <next_in_chain key="gkw_hk416_agent_fmj.weapon" share_ammo="0" />
 
     <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
-    <animation key="recoil" animation_key="recoil1" />
-    <animation key="recoil" animation_key="recoil2" />
-    <animation key="recoil" animation_key="recoil3" />
-    <animation key="recoil" stance_key="prone" animation_key="recoil1, prone" />
-    <animation key="recoil" stance_key="prone" animation_key="recoil2, prone" />
-    <animation key="recoil" stance_key="prone" animation_key="recoil3, prone" />
-    <animation state_key="hold_on_wall" animation_key="still" />
-    <animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
-    <animation state_key="stabbing" animation_key="melee, quick knife" />
-    <animation state_key="stabbing" animation_key="pistol whip 3" />
+    <animation state_key="recoil" animation_key="recoil, pistol 2" />
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil, smg1, prone" />
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil, overwall pistol" />	
+	<animation state_key="hold"					animation_key="still, pistol 2" />
+  	<animation state_key="hold_casual"			animation_key="hold_casual, pistol 2" />
+	<animation state_key="hold_on_wall"			animation_key="hold, overwall pistol" />
+  	<animation state_key="still_against_wall"	animation_key="hold_casual, pistol 4" />
+	<animation state_key="running"				animation_key="running, pistol 2" />
+	<animation state_key="walking"				animation_key="walking, pistol 2" />
+    <animation state_key="walking_backwards" 	animation_key="walking backwards, pistol" />
+	<animation state_key="crouching"			animation_key="crouch, pistol 2" />
+	<animation state_key="crouch_moving"		animation_key="crouching forwards, single hand carry" />
+	<animation state_key="crouch_moving_backwards"	animation_key="crouching backwards, pistol 2" />
+    <animation state_key="prone_still" 			animation_key="prone_still, pistol" />
+    <animation state_key="changing_weapon_in" 	animation_key="change weapon in, single hand carry" />
+    <animation state_key="stabbing" 			animation_key="pistol whip 2" />
 	
 	<sound key="fire" fileref="hk416_agent_fire_FromDIVISION2.wav" pitch_variety="0.05" volume="0.8" />
     <sound key="magazine_out" fileref="hk416_agent_mgz_out_FromDIVISION2.wav" volume="0.7" />
@@ -48,11 +54,11 @@
     
     <weak_hand_hold offset="0.3" />
     <projectile file="bullet.projectile">
-        <result class="hit" kill_probability="1.75" kill_probability_offset_on_successful_hit="4.0" kill_decay_start_time="1.142" kill_decay_end_time="1.904" />
+        <result class="hit" kill_probability="1.7" kill_probability_offset_on_successful_hit="4.2" kill_decay_start_time="1.142" kill_decay_end_time="1.904" />
     </projectile>
     <effect class="muzzle" ref="ejection_556" />
     <stance state_key="running" accuracy="0.3" />
-    <stance state_key="walking" accuracy="0.75" />
+    <stance state_key="walking" accuracy="0.65" />
     <stance state_key="crouch_moving" accuracy="0.9" />
     <stance state_key="prone_moving" accuracy="0.9" />
     <stance state_key="standing" accuracy="0.93" />
@@ -60,12 +66,6 @@
     <stance state_key="prone" accuracy="1.1" />
     <stance state_key="over_wall" accuracy="1.1" />
     <modifier class="speed" value="0.1" />
-	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0" />
-	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0" />
-    <target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0" />
-    <target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0" />
-    <target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0" />
-	<target_factors tag="commander" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0" />
 </weapon>
 
 <!--5.56mm全金属被甲弹加十字军步枪盾，正面推进压制对枪-->
@@ -89,7 +89,7 @@
     stab_enabled="1"/>
 	
     <commonness value="0" in_stock="0" can_respawn_with="1" />
-    <inventory encumbrance="35.0" buy_price="750.0" sell_price="750.0"/>
+    <inventory encumbrance="35.0" buy_price="1250.0" sell_price="700.0"/>
     <capacity value="1" source="rank" source_value="0.0" />
     <next_in_chain key="gkw_hk416_agent_sticky.weapon" share_ammo="0" />
 
@@ -127,20 +127,14 @@
     <stance state_key="crouching" accuracy="1" />
     <stance state_key="prone" accuracy="1.1" />
     <stance state_key="over_wall" accuracy="1.1" />
-    <modifier class="speed" value="-0.1" />
-    <shield offset="-0.55 0.0 0" extent="0.7 0.5 0.7" />
+    <modifier class="speed" value="-0.15" />
+    <shield offset="-0.55 0.0 0" extent="0.7 0.5 0.7" usable_for_cover="0"/>
     <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0" />
     <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
     <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
     <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" consumes_item="0" />
     <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
     <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0" />
-	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0" />
-    <target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0" />
-    <target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0" />
-    <target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0" />
-	<target_factors tag="commander" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0" />
 </weapon>
 
 <weapon key="gkw_hk416_agent_sticky.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
@@ -183,7 +177,7 @@
     <!-- <animation state_key="next_in_chain_in" animation_key="change weapon in 416" /> -->
     <next_in_chain key="gkw_hk416_agent_hv.weapon" share_ammo="0" />
     <commonness value="0" in_stock="0" can_respawn_with="1" />
-	<inventory encumbrance="35.0" buy_price="750.0" sell_price="700.0"/>
+	<inventory encumbrance="35.0" buy_price="1250.0" sell_price="700.0"/>
 	<capacity value="1" source="rank" source_value="0.0" />
 
     <sound key="fire" fileref="hk416_agent_skill_fire_FromDIVISION2.wav" pitch_variety="0.05" volume="1.3" />
@@ -209,11 +203,5 @@
     <stance state_key="crouching" accuracy="0.95" />
     <stance state_key="prone" accuracy="0.98" />
     <stance state_key="over_wall" accuracy="1" />
-    <target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0" />
-	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0" />
-    <target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0" />
-    <target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0" />
-    <target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0" />
-	<target_factors tag="commander" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0" />
 </weapon>
 </weapons>

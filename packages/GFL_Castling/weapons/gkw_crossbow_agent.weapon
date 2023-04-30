@@ -46,7 +46,11 @@
     <hud_icon filename="testing.png" />
     <!--Ballistics-->
     <weak_hand_hold offset="0.3" />
-    <projectile file="agent_arrow_bomb_blast.projectile" pulldown_in_air="4" can_be_detected_by_footmen="0"  can_be_detected_by_driver="0">
+    <projectile file="agent_firebolt_spawn.projectile" pulldown_in_air="4" can_be_detected_by_footmen="1" can_be_detected_by_driver="1" can_be_disarmed="0" radius="0.7"> 
+		<result class="spawn" instance_class="projectile" instance_key="firebolt_incinerator_damage.projectile" min_amount="15" max_amount="15" offset="0 5.0 0" position_spread="5.0 0" direction_spread="0 0" />	
+		<trigger class="impact" time_to_live="0.2"  />
+		<rotation class="motion" />
+		<collision class="sticky" />
     </projectile>
     <!--Accuracy, Movement speed-->
     <stance state_key="running" accuracy="1" />
